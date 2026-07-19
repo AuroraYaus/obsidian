@@ -1,0 +1,8 @@
+SchedulingRequestConfig field descriptions
+"dsr-TransMaxParameter for SR transmission in TS 36.321 [6], clause 5.4.4. The value n4 corresponds to 4 transmissions, n8 corresponds to 8 transmissions and so on. EUTRAN configures the same value for all serving cells for which this field is configured."
+"dssr-TransMaxParameter for SPUCCH SR transmission in TS 36.321 [6], clause 5.4.4. EUTRAN configures the same value for all serving cells for which this field is configured."
+"sr-ConfigIndex, sr-ConfigIndexSlot, sr-ConfigIndexSubslotParameter. See TS 36.213 [23], clause 10.1. The values 156 and 157 are not applicable for Release 8."
+"sr-PUCCH-ResourceIndex, sr-PUCCH-ResourceIndexP1Parameter:  for antenna port P0 and for antenna port P1 respectively, see TS 36.213 [23], clause 10.1. E-UTRAN configures sr-PUCCH-ResourceIndexP1 only if sr-PUCCHResourceIndex is configured."
+"sr-SlotSPUCCH-IndexFHResource configuration for SR using slot-SPUCCH when frequency hopping is enabled, see TS 36.213 [23], clause 10.1.5."
+"sr-SlotSPUCCH-IndexNoFHResource configuration for SR using slot-SPUCCH when frequency hopping is disabled, see TS 36.213 [23], clause 10.1.5."
+"sr-SubslotSPUCCH-ResourceListResource configuration for SR using subslot-SPUCCH, see TS 36.213 [23], clause 10.1.5."

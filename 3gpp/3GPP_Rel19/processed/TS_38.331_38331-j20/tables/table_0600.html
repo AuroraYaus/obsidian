@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <td>SSB-Configuration field descriptions</td>
+  </tr>
+  <tr>
+    <td>halfFrameIndexIndicates whether SSB is in the first half or the second half of the frame. Value zero indicates the first half and value 1 indicates the second half.</td>
+  </tr>
+  <tr>
+    <td>integerSubframeOffsetIndicates the subframe boundary offset of the cell in which SSB is transmited.</td>
+  </tr>
+  <tr>
+    <td>sfn0-OffsetIndiactes the time offset of the SFN0 slot 0 for the cell with respect to SFN0 slot 0 of serving cell.</td>
+  </tr>
+  <tr>
+    <td>sfn-OffsetSpecifies the SFN offset between the cell in which SSB is transmited and serving cell. The offset corresponds to the number of full radio frames counted from the beginning of a radio frame #0 of serving cell to the beginning of the closest subsequent radio frame #0 of the cell in which SSB is transmitted.</td>
+  </tr>
+  <tr>
+    <td>sfn-SSB-OffsetIndicates the SFN offset of the transmitted SSB relative to the start of the SSB period. Value 0 indicates that the SSB is transmitted in the first system frame, value 1 indicates that SSB is transmitted in the second system frame and so on. The network configures this field according to the field ssb-Periodicity such that the indicated system frame does not exceed the configured SSB periodicity.</td>
+  </tr>
+  <tr>
+    <td>ssb-FreqIndicates the frequency of the SSB.</td>
+  </tr>
+  <tr>
+    <td>ss-PBCH-BlockPowerAverage EPRE of the resources elements that carry secondary synchronization signals in dBm that the NW used for SSB transmission, see TS 38.213 [13], clause 7.</td>
+  </tr>
+  <tr>
+    <td>ssb-PeriodicityIndicates the periodicity of the SSB. If the field is absent, the UE applies the value ms5. (see TS 38.213 [13], clause 4.1)</td>
+  </tr>
+  <tr>
+    <td>ssbSubcarrierSpacingSubcarrier spacing of SSB.Only the following values are applicable depending on the used frequency:FR1/FR1-NTN:    15 or 30 kHzFR2-1/FR2-NTN:  120 or 240 kHzFR2-2:  120, 480, or 960 kHz</td>
+  </tr>
+</table>

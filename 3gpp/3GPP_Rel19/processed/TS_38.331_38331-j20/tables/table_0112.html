@@ -1,0 +1,62 @@
+<table>
+  <tr>
+    <td>SIB5 field descriptions</td>
+  </tr>
+  <tr>
+    <td>carrierFreqListEUTRAList of carrier frequencies of E-UTRA. If the carrierFreqListEUTRA-v1610/ carrierFreqListEUTRA-v1700/ carrierFreqListEUTRA-v1800 is present, it shall contain the same number of entries, listed in the same order as in the carrierFreqListEUTRA (without suffix).</td>
+  </tr>
+  <tr>
+    <td>dummyThis field is not used in the specification. If received it shall be ignored by the UE.</td>
+  </tr>
+  <tr>
+    <td>eutra-ExcludedCellListList of exclude-listed E-UTRA neighbouring cells.</td>
+  </tr>
+  <tr>
+    <td>eutra-FreqNeighHSDN-CellListList of neighbouring EUTRA HSDN cells as specified in TS 36.304 [27].</td>
+  </tr>
+  <tr>
+    <td>eutra-multiBandInfoListIndicates the list of frequency bands in addition to the band represented by carrierFreq for which cell reselection parameters are common, and a list of additionalPmax and additionalSpectrumEmission values, as defined in TS 36.101 [22], table 6.2.4-1, for the frequency bands in eutra-multiBandInfoList</td>
+  </tr>
+  <tr>
+    <td>highSpeedEUTRACarrierIf the field is present, the UE shall apply the enhanced NR-EUTRA inter-RAT measurement requirements to support high speed up to 500 km/h as specified in TS 38.133 [14] to the E-UTRA carrier.</td>
+  </tr>
+  <tr>
+    <td>idleModeMeasVoiceFallbackIndicates whether E-UTRA idle/inactive measurements and reporting for EPS fallback can be used.</td>
+  </tr>
+  <tr>
+    <td>p-MaxEUTRAThe maximum allowed transmission power in dBm on the (uplink) carrier frequency, see TS 36.304 [27].</td>
+  </tr>
+  <tr>
+    <td>q-QualMinParameter &quot;Qqualmin&quot; in TS 36.304 [27]. Actual value Qqualmin = field value [dB].</td>
+  </tr>
+  <tr>
+    <td>q-QualMinOffsetCellParameter &quot;Qqualminoffsetcell&quot; in TS 36.304 [27]. Actual value Qqualminoffsetcell = field value [dB].</td>
+  </tr>
+  <tr>
+    <td>q-RxLevMinParameter &quot;Qrxlevmin&quot; in TS 36.304 [27]. Actual value Qrxlevmin = field value * 2 [dBm].</td>
+  </tr>
+  <tr>
+    <td>q-RxLevMinOffsetCellParameter &quot;Qrxlevminoffsetcell&quot; in TS 36.304 [27]. Actual value Qrxlevminoffsetcell = field value * 2 [dB].</td>
+  </tr>
+  <tr>
+    <td>t-ReselectionEUTRAParameter &quot;TreselectionEUTRA&quot; in TS 38.304 [20].</td>
+  </tr>
+  <tr>
+    <td>threshX-HighParameter &quot;ThreshX, HighP&quot; in TS 38.304 [20].</td>
+  </tr>
+  <tr>
+    <td>threshX-HighQParameter &quot;ThreshX, HighQ&quot; in TS 38.304 [20].</td>
+  </tr>
+  <tr>
+    <td>threshX-LowParameter &quot;ThreshX, LowP&quot; in TS 38.304 [20].</td>
+  </tr>
+  <tr>
+    <td>threshX-LowQParameter &quot;ThreshX, LowQ&quot; in TS 38.304 [20].</td>
+  </tr>
+  <tr>
+    <td>tn-AreaIdListList of TN area identifiers. The associated coverage information is provided in SIB25.</td>
+  </tr>
+  <tr>
+    <td>t-ReselectionEUTRA-SFParameter &quot;Speed dependent ScalingFactor for TreselectionEUTRA&quot; in TS 38.304 [20]. If the field is absent, the UE behaviour is specified in TS 38.304 [20].</td>
+  </tr>
+</table>

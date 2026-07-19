@@ -1,0 +1,4 @@
+VisitedCellInfoList field descriptions
+"scgActiveDurationThis field indicates the accumulated SCG active duration of stay in the PSCell. Value in seconds. If the duration of activation exceeds 4095 seconds, the UE shall set it to 4095 seconds."
+"timeSpentThis field indicates the duration of stay in the cell or in any cell selection state and/or camped on any cell state in NR or E-UTRA approximated to the closest second. If included in VisitedPSCellInfo, it indicates the duration of stay in the PSCell or without any PSCell. If the duration of stay exceeds 4095s, the UE shall set it to 4095s."
+visitedCellIdThis field indicates the visited cell id including NR and E-UTRA cells.

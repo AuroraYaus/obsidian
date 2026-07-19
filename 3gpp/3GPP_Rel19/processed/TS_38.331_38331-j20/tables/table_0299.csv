@@ -1,0 +1,4 @@
+FrequencyInfoDL-SIB field descriptions
+"offsetToPointARepresents the offset to Point A as defined in TS 38.211 [16], clause 4.4.4.2."
+"frequencyBandListList of one or multiple frequency bands to which this carrier(s) belongs. If frequencyBandList-v1760 is present, it shall contain the same number of entries, listed in the same order as in frequencyBandList (without suffix)."
+"scs-SpecificCarrierListA set of carriers for different subcarrier spacings (numerologies). Defined in relation to Point A (see TS 38.211 [16], clause 5.3). The network configures this for all SCSs that are used in DL BWPs in this serving cell."

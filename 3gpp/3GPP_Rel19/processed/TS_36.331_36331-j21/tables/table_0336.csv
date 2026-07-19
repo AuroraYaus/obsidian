@@ -1,0 +1,3 @@
+RRCConnectionResume-NB field descriptions
+drb-ContinueROHCThis field indicates whether to continue or reset the header compression protocol context for the DRBs configured with the header compression protocol. Presence of the field indicates that the header compression protocol context continues while absence indicates that the header compression protocol context is reset.
+fullConfigIndicates that the full configuration option is applicable for the RRCConnectionResume-NB message.

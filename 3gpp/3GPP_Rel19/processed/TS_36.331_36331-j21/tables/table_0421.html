@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td>UE-RadioPagingInfo-NB field descriptions</td>
+  </tr>
+  <tr>
+    <td>groupWakeUpSignalIndicates whether the UE in RRC_IDLE supports GWUS without group resource alternation for paging in DRX in FDD as specified in TS 36.211 [21], TS 36.213 [23] and TS 36.304 [4]. If this field is included, the minimum gap between GWUS and associated PO for DRX is fixed as 40 ms.</td>
+  </tr>
+  <tr>
+    <td>groupWakeUpSignalAlternationIndicates whether the UE in RRC_IDLE supports GWUS with group resource alternation for paging in DRX in FDD as specified in TS 36.211 [21], TS 36.213 [23] and TS 36.304 [4]. If this field is included, the minimum gap between GWUS and associated PO for DRX is fixed as 40 ms.</td>
+  </tr>
+  <tr>
+    <td>mixedOperationModeIndicates whether the UE supports multi-carrier operation with mixed operation mode, standalone or inband/guardband, between the anchor carrier and non-anchor carrier for unicast, paging, and random access, as specified in TS 36.300 [9].</td>
+  </tr>
+  <tr>
+    <td>multiCarrierPagingIndicates whether the UE supports paging on non-anchor carriers as defined in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>multiCarrierPagingTDDIndicates whether the UE supports paging on non-anchor carriers for TDD as defined in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>ue-Category-NBUE NB-IoT category as defined in TS 36.306 [5]. Value nb1 corresponds to UE category NB1, value nb2 corresponds to UE category NB2.A UE shall always include the field ue-Category-NB-r13 in this version of the specification.</td>
+  </tr>
+  <tr>
+    <td>wakeUpSignalIndicates whether the UE supports WUS for paging in DRX in FDD as specified in TS 36.304 [4]. If this field is included, the minimum gap between WUS and associated PO for DRX is fixed as 40 ms.</td>
+  </tr>
+  <tr>
+    <td>wakeUpSignalMinGap-eDRXIndicates the minimum gap the UE supports between WUS or GWUS and associated PO in case of eDRX in FDD, as specified in TS 36.304 [4]. Value ms40 corresponds to 40 ms, value ms240 corresponds to 240 ms and so on.If this field is included, the UE shall also indicate support for WUS or GWUS for paging in DRX.</td>
+  </tr>
+</table>

@@ -1,0 +1,266 @@
+<table>
+  <tr>
+    <td>Timer</td>
+    <td>Start</td>
+    <td>Stop</td>
+    <td>At expiry</td>
+  </tr>
+  <tr>
+    <td>T300</td>
+    <td>Upon transmission of RRCSetupRequest.</td>
+    <td>Upon reception of RRCSetup or RRCReject message, cell re-selection, relay (re)selection or cell selection by a L2 U2N Remote UE, and upon abortion of connection establishment by upper layers.</td>
+    <td>Perform the actions as specified in 5.3.3.7.</td>
+  </tr>
+  <tr>
+    <td>T301</td>
+    <td>Upon transmission of RRCReestabilshmentRequest</td>
+    <td>Upon reception of RRCReestablishment or RRCSetup message as well as when the selected cell becomes unsuitable or the (re)selected L2 U2N Relay UE becomes unsuitable, upon reception of NotificationMessageSidelink indicating relayUE-HO or relayUE-CellReselection.</td>
+    <td>Go to RRC_IDLE</td>
+  </tr>
+  <tr>
+    <td>T302</td>
+    <td>Upon reception of RRCReject while performing RRC connection establishment or resume, upon reception of RRCRelease with waitTime.</td>
+    <td>Upon entering RRC_CONNECTED or RRC_IDLE, upon cell re-selection, upon cell change due to relay (re)selection or cell selection by a L2 U2N Remote UE, and upon reception of RRCReject message.</td>
+    <td>Inform upper layers about barring alleviation as specified in 5.3.14.4</td>
+  </tr>
+  <tr>
+    <td>T304</td>
+    <td>Upon reception of RRCReconfiguration message including reconfigurationWithSync for the MCG which does not include sl-PathSwitchConfig, or upon reception of RRCReconfiguration message including reconfigurationWithSync for the SCG not indicated as deactivated in the NR or E-UTRA message containing the RRCReconfiguration message or upon conditional reconfiguration execution i.e. when applying a stored RRCReconfiguration message including reconfigurationWithSync.Also, for the MCG and SCG upon an indication from lower layer that an LTM cell switch procedure is triggered and, for the MCG, upon performing an LTM cell switch procedure following cell selection performed while timer T311 is running.</td>
+    <td>Upon successful completion of random access on the corresponding SpCell.Upon receiving an indication from lower layers of successful completion of Rach-less handover, or upon receiving an indication from lower layers of successful completion of an LTM RACH-less cell switch.For T304 of SCG, upon SCG release.</td>
+    <td>For T304 of MCG, in case of the handover from NR or intra-NR handover, or path switch from a L2 U2N Relay UE to a NR cell, or an LTM cell switch procedure, initiate the RRC re-establishment procedure; In case of handover to NR, perform the actions defined in the specifications applicable for the source RAT. If any DAPS bearer is configured and if there is no RLF in source PCell, initiate the failure information procedure.For T304 of SCG, inform network about the reconfiguration with sync failure by initiating the SCG failure information procedure as specified in 5.7.3.</td>
+  </tr>
+  <tr>
+    <td>T310</td>
+    <td>Upon detecting physical layer problems for the SpCell i.e. upon receiving N310 consecutive out-of-sync indications from lower layers.</td>
+    <td>Upon receiving N311 consecutive in-sync indications from lower layers for the SpCell, upon receiving RRCReconfiguration with reconfigurationWithSync for that cell group, upon reception of MobilityFromNRCommand, upon the reconfiguration of rlf-TimersAndConstant, upon initiating the connection re-establishment procedure, upon conditional reconfiguration execution i.e. when applying a stored RRCReconfiguration message including reconfigurationWithSync for that cell group, upon an indication from lower layers that an LTM cell switch procedure is triggered, and upon initiating the MCG failure information procedure.Upon SCG release, if the T310 is kept in SCG.</td>
+    <td>If the T310 is kept in MCG: If AS security is not activated: go to RRC_IDLE else: initiate the MCG failure information procedure as specified in 5.7.3b or the connection re-establishment procedure as specified in 5.3.7 or the procedure as specified in 5.3.10.3 if any DAPS bearer is configured.If the T310 is kept in SCG, Inform E-UTRAN/NR about the SCG radio link failure by initiating the SCG failure information procedure as specified in 5.7.3.</td>
+  </tr>
+  <tr>
+    <td>T311</td>
+    <td>Upon initiating the RRC connection re-establishment procedure</td>
+    <td>Upon selection of a suitable NR cell, or upon selection of a suitable L2 U2N Relay UE, or a cell using another RAT.</td>
+    <td>Enter RRC_IDLE</td>
+  </tr>
+  <tr>
+    <td>T312</td>
+    <td>If T312 is configured in MCG: Upon triggering a measurement report for a measurement identity for which T312 has been configured and useT312 has been set to true, while T310 in PCell is running.If T312 is configured in SCG and useT312 has been set to true: Upon triggering a measurement report for a measurement identity for which T312 has been configured, while T310 in PSCell is running.</td>
+    <td>Upon receiving N311 consecutive in-sync indications from lower layers for the SpCell, receiving RRCReconfiguration with reconfigurationWithSync for that cell group, upon reception of MobilityFromNRCommand, upon initiating the connection re-establishment procedure, upon the reconfiguration of rlf-TimersAndConstant, upon initiating the MCG failure information procedure, upon conditional reconfiguration execution i.e. when applying a stored RRCReconfiguration message including reconfigurationWithSync for that cell group, upon an indication from lower layers that an LTM cell switch procedure is triggered, and upon the expiry of T310 in corresponding SpCell.Upon SCG release, if the T312 is kept in SCG</td>
+    <td>If the T312 is kept in MCG, initiate the MCG failure information procedure as specified in 5.7.3b or the connection re-establishment procedure.If the T312 is kept in SCG, Inform E-UTRAN/NR about the SCG radio link failure by initiating the SCG failure information procedure.as specified in 5.7.3.</td>
+  </tr>
+  <tr>
+    <td>T316</td>
+    <td>Upon transmission of the MCGFailureInformation message</td>
+    <td>Upon receiving RRCRelease,  RRCReconfiguration with reconfigurationwithSync for the PCell, MobilityFromNRCommand, or upon initiating the re-establishment procedure</td>
+    <td>Perform the actions as specified in 5.7.3b.5.</td>
+  </tr>
+  <tr>
+    <td>T319</td>
+    <td>Upon transmission of RRCResumeRequest or RRCResumeRequest1 when the resume procedure is not initiated for SDT.</td>
+    <td>Upon reception of RRCResume, RRCSetup, RRCRelease, RRCRelease with suspendConfig or RRCReject message, upon cell re-selection or upon relay (re)selection.</td>
+    <td>Perform the actions as specified in 5.3.13.5.</td>
+  </tr>
+  <tr>
+    <td>T319a</td>
+    <td>Upon transmission of RRCResumeRequest or RRCResumeRequest1 when the resume procedure is initiated for SDT.</td>
+    <td>Upon reception of RRCResume, RRCSetup, RRCRelease, RRCReject message or upon failure to resume RRC connection for SDT as specified in 5.3.13.5 or upon cell reselection.</td>
+    <td>Perform the actions as specified in 5.3.13.5.</td>
+  </tr>
+  <tr>
+    <td>T320</td>
+    <td>Upon reception of t320 or upon cell (re)selection to NR from another RAT with validity time configured for dedicated priorities (in which case the remaining validity time is applied).</td>
+    <td>Upon entering RRC_CONNECTED, upon reception of RRCRelease, when PLMN selection or SNPN selection is performed on request by NAS, when the UE enters RRC_IDLE from RRC_INACTIVE, or upon cell (re)selection to another RAT (in which case the timer is carried on to the other RAT).</td>
+    <td>Discard the cell reselection priority information provided by dedicated signalling.</td>
+  </tr>
+  <tr>
+    <td>T321</td>
+    <td>Upon receiving measConfig including a reportConfig with the reportType set to reportCGI</td>
+    <td>Upon acquiring the information needed to set all fields of cgi-info, upon receiving measConfig that includes removal of the reportConfig with the reportType set to reportCGI and upon detecting that a cell is not broadcasting SIB1.</td>
+    <td>Initiate the measurement reporting procedure, stop performing the related measurements.</td>
+  </tr>
+  <tr>
+    <td>T322</td>
+    <td>Upon receiving measConfig including reportConfigNR with the reportType set to reportSFTD and drx-SFTD-NeighMeas is set to true.</td>
+    <td>Upon acquiring the SFTD measurement results, upon receiving measConfig that includes removal of the reportConfig with the reportType set to reportSFTD.</td>
+    <td>Initiate the measurement reporting procedure, stop performing the related measurements.</td>
+  </tr>
+  <tr>
+    <td>T325</td>
+    <td>Upon reception of RRCRelease message with deprioritisationTimer.</td>
+    <td>When PLMN selection or SNPN selection is performed on request by NAS according to TS 38.304 [20].</td>
+    <td>Stop deprioritisation of all frequencies or NR signalled by RRCRelease and discard the stored deprioritisation request(s).</td>
+  </tr>
+  <tr>
+    <td>T330</td>
+    <td>Upon receiving LoggedMeasurementConfiguration message</td>
+    <td>Upon log volume exceeding the suitable UE memory, upon initiating the release of LoggedMeasurementConfiguration procedure</td>
+    <td>Perform the actions specified in 5.5a.1.4</td>
+  </tr>
+  <tr>
+    <td>T331</td>
+    <td>Upon receiving RRCRelease message with measIdleDuration</td>
+    <td>Upon receiving RRCSetup, RRCResume, RRCRelease with idle/inactive measurement configuration, upon cell selection/reselection to a cell that does not belong to the validityArea (if configured), or upon cell re-selection to another RAT.</td>
+    <td>Perform the actions as specified in 5.7.8.3.</td>
+  </tr>
+  <tr>
+    <td>T342</td>
+    <td>Upon transmitting UEAssistanceInformation message with DelayBudgetReport.</td>
+    <td>Upon releasing delayBudgetReportingConfig during the connection re-establishment/resume procedures, and upon receiving delayBudgetReportingConfig set to release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T345</td>
+    <td>Upon transmitting UEAssistanceInformation message with overheatingAssistance</td>
+    <td>Upon releasing overheatingAssistanceConfig during the connection re-establishment procedure, upon initiating the connection resumption procedure, and upon receiving overheatingAssistanceConfig set to release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346a (The UE maintains one instance of this timer per cell group)</td>
+    <td>Upon transmitting UEAssistanceInformation message with drx-Preference.</td>
+    <td>Upon releasing drx-PreferenceConfig during the connection re-establishment/resume procedures, upon receiving drx-PreferenceConfig set to release, or upon performing MR-DC release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346b (The UE maintains one instance of this timer per cell group)</td>
+    <td>Upon transmitting UEAssistanceInformation message with maxBW-Preference.</td>
+    <td>Upon releasing maxBW-PreferenceConfig during the connection re-establishment/resume procedures, upon receiving maxBW-PreferenceConfig set to release, or upon performing MR-DC release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346c (The UE maintains one instance of this timer per cell group)</td>
+    <td>Upon transmitting UEAssistanceInformation message with maxCC-Preference.</td>
+    <td>Upon releasing maxCC-PreferenceConfig during the connection re-establishment/resume procedures, upon receiving maxCC-PreferenceConfig set to release, or upon performing MR-DC release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346d (The UE maintains one instance of this timer per cell group)</td>
+    <td>Upon transmitting UEAssistanceInformation message with maxMIMO-LayerPreference.</td>
+    <td>Upon releasing maxMIMO-LayerPreferenceConfig during the connection re-establishment/resume procedures, upon receiving maxMIMO-LayerPreferenceConfig set to release, or upon performing MR-DC release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346e (The UE maintains one instance of this timer per cell group)</td>
+    <td>Upon transmitting UEAssistanceInformation message with minSchedulingOffsetPreference.</td>
+    <td>Upon releasing minSchedulingOffsetPreferenceConfig during the connection re-establishment/resume procedures, upon receiving minSchedulingOffsetPreferenceConfig set to release, or upon performing MR-DC release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346f</td>
+    <td>Upon transmitting UEAssistanceInformation message with releasePreference.</td>
+    <td>Upon releasing releasePreferenceConfig during the connection re-establishment/resume procedures, or upon receiving releasePreferenceConfig set to release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346g</td>
+    <td>Upon transmitting UEAssistanceInformation message with musim-PreferredRRC-State.</td>
+    <td>Upon receiving RRCRelease, or upon receiving musim-LeaveAssistanceConfig set to release.</td>
+    <td>Perform the actions as specified in 5.3.8.6.</td>
+  </tr>
+  <tr>
+    <td>T346h</td>
+    <td>Upon transmitting UEAssistanceInformation message with musim-GapPreferenceList and/or musim-GapPriorityPreferenceList and/or musim-GapKeepPreference Information.</td>
+    <td>Upon releasing musim-GapAssistanceConfig during the connection re-establishment/resume procedures, or upon receiving musim-GapAssistanceConfig set to release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346i</td>
+    <td>Upon transmitting UEAssistanceInformation message with scg-DeactivationPreference</td>
+    <td>Upon releasing scg-DeactivationPreferenceConfig during RRC connection re-establishment/resume or upon receiving scg-DeactivationPreferenceConfig set to release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346j (The UE maintains one instance of this timer per cell group)</td>
+    <td>Upon transmitting UEAssistanceInformation message with rlm-RelaxationReportingConfig.</td>
+    <td>Upon releasing rlm-RelaxationReportingConfig during the connection re-establishment/resume procedures, upon receiving rlm-RelaxationReportingConfig set to release, or upon performing MR-DC release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346k (The UE maintains one instance of this timer per cell group)</td>
+    <td>Upon transmitting UEAssistanceInformation message with bfd-RelaxationReportingConfig.</td>
+    <td>Upon releasing bfd-RelaxationReportingConfig during the connection re-establishment/resume procedures, upon receiving bfd-RelaxationReportingConfig set to release, or upon performing MR-DC release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346l(The UE maintains one instance of this timer per QoS flow)</td>
+    <td>Upon transmitting UEAssistanceInformation message with ul-TrafficInfo for the concerned QoS flow.</td>
+    <td>Upon releasing ul-TrafficInfoReportingConfig during the connection re-establishment/resume procedures, or upon receiving ul-TrafficInfoReportingConfig set to release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346m</td>
+    <td>Upon transmitting UEAssistanceInformation message with multiRx-PreferenceFR2.</td>
+    <td>Upon releasing multiRx-PreferenceReportingConfigFR2 during the connection re-establishment/resume procedures, upon receiving multiRx-PreferenceReportingConfigFR2 set to release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346n</td>
+    <td>Upon transmission of MUSIM temporary restriction of musim-CapRestriction for affected bands or combination of bands and/or avoided band(s) or combination of bands.</td>
+    <td>Upon releasing musim-CapabilityRestrictionConfig during the connection re-establishment/resume procedures, or upon receiving musim-CapabilityRestrictionConfig set to release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346o</td>
+    <td>Upon transmission of UEAssistanceInformation message with gapOccasionCancelRatio.</td>
+    <td>Upon releasing gapOccasionCancelRatioReportConfig during the connection re-establishment/resume procedure or upon receiving gapOccasionCancelRatioReportConfig set to release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346p (The UE maintains one instance of this timer per cell group)</td>
+    <td>Upon transmitting UEAssistanceInformation message with lpwus-OffsetPreference.</td>
+    <td>Upon releasing lpwus-OffsetPreferenceConfig during the connection re-establishment/resume procedures, upon receiving lpwus-OffsetPreferenceConfig set to release, or upon performing MR-DC release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T346q</td>
+    <td>Upon transmitting UEAssistanceInformation message with fbs-Preference.</td>
+    <td>Upon releasing fbs-PreferenceReportingConfig during the connection re-establishment/resume procedures, upon receiving fbs-PreferenceReportingConfig set to release.</td>
+    <td>No action.</td>
+  </tr>
+  <tr>
+    <td>T348</td>
+    <td>Upon transmission of MUSIM temporary restriction of musim-CapRestriction for serving cell(s) with capabilities restricted, release of SCell or PSCell or release of SCG.</td>
+    <td>Upon reception of RRCReconfiguration message that does not exceed UE temporary capability restriction indicated via musim-CapRestriction.</td>
+    <td>UE may apply the temporary UE capability restriction in accordance with the one indicated in the last transmission of the UEAssistanceInformation message including musim-CapRestriction. UE may apply the temporary capability restriction that SCG is not supported if ServCellIndex of PSCell was included in indicated MUSIM-CellToRelease-r18.</td>
+  </tr>
+  <tr>
+    <td>T350</td>
+    <td>Upon transmitting DedicatedSIBRequest message with requestedSIB-List and/or  requestedPosSIB-List or requestedPeriodicAD-PosSIB-List.</td>
+    <td>Upon acquiring the requested SIB(s) or posSIB(s), upon releasing onDemandSIB-Request during the connection re-establishment procedures, upon receiving onDemandSIB-Request set to release, upon reception of RRCRelease or upon successful change of PCell while in RRC_CONNECTED.</td>
+    <td>No action</td>
+  </tr>
+  <tr>
+    <td>T380</td>
+    <td>Upon reception of t380 in RRCRelease.</td>
+    <td>Upon reception of RRCResume, RRCSetup or RRCRelease.</td>
+    <td>Perform the actions as specified in 5.3.13.</td>
+  </tr>
+  <tr>
+    <td>T390</td>
+    <td>When access attempt is barred at access barring check for an Access Category. The UE maintains one instance of this timer per Access Category.</td>
+    <td>Upon cell (re)selection, upon relay (re)selection, upon entering RRC_CONNECTED, upon reception of RRCReconfiguration including reconfigurationWithSync, upon change of PCell while in RRC_CONNECTED, upon reception of MobilityFromNRCommand, or upon reception of RRCRelease.</td>
+    <td>Perform the actions as specified in 5.3.14.4.</td>
+  </tr>
+  <tr>
+    <td>T400</td>
+    <td>Upon transmission of RRCReconfigurationSidelink</td>
+    <td>Upon reception of RRCReconfigurationFailureSidelink or RRCReconfigurationCompleteSidelink</td>
+    <td>Perform the Sidelink radio link failure related actions as specified in 5.8.9.3.</td>
+  </tr>
+  <tr>
+    <td>T420</td>
+    <td>Upon reception of the RRCReconfiguration message including sl-PathSwitchConfig where sl-IndirectPathMaintain is not included in reconfigurationWithSync</td>
+    <td>Upon successfully sending RRCReconfigurationComplete message (i.e., PC5 RLC acknowledgement is received from target L2 U2N Relay UE)</td>
+    <td>Perform the RRC re-establishment procedure as specified in 5.3.7.</td>
+  </tr>
+  <tr>
+    <td>T421</td>
+    <td>Upon reception of the RRCReconfiguration message including sl-IndirectPathAddChange where sl-IndirectPathMaintain is not included in reconfigurationWithSync</td>
+    <td>Upon successfully sending RRCReconfigurationComplete message (i.e., PC5 RLC acknowledgement is received from target L2 U2N Relay UE) if split SRB1 with duplication is configured, or upon reception of RRCReconfigurationCompleteSidelink if split SRB1 with duplication is not configured, or upon initiation of indirect path failure information procedure.</td>
+    <td>Perform the Failure Information Reporting as specified in 5.7.3c.</td>
+  </tr>
+  <tr>
+    <td>T430</td>
+    <td>Start or restart from the subframe indicated by epochTime upon reception of SIB19, or upon reception of RRCReconfiguration message for the target cell including reconfigurationWithSync, or upon conditional reconfiguration execution i.e. when applying a stored RRCReconfiguration message for the target cell including reconfigurationWithSync, or upon satellite switch with resynchronization.</td>
+    <td>Stop T430, if it is running, for the source cell upon reception of RRCReconfiguration message including reconfigurationWithSync, or upon conditional reconfiguration execution i.e. when applying a stored RRCReconfiguration message including reconfigurationWithSync, or upon satellite switch with resynchronization.</td>
+    <td>Perform the actions as specified in 5.2.2.6.</td>
+  </tr>
+</table>

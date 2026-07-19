@@ -1,0 +1,30 @@
+<table>
+  <tr>
+    <td>Conditional Presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>FDM</td>
+    <td>This field is optionally present, need R, if idc-AssistanceConfig-r16 or idc-FDM-AssistanceConfig is setup. Otherwise, it is absent, need R.</td>
+  </tr>
+  <tr>
+    <td>maxBW</td>
+    <td>This field is optionally present, need R, if maxBW-PreferenceConfig-r16 is setup; otherwise it is absent, need R.</td>
+  </tr>
+  <tr>
+    <td>maxMIMO</td>
+    <td>This field is optionally present, need R, if maxMIMO-LayerPreferenceConfig-r16 is setup; otherwise it is absent, need R.</td>
+  </tr>
+  <tr>
+    <td>minOffset</td>
+    <td>This field is optionally present, need R, if minSchedulingOffsetPreferenceConfig-r16 is setup; otherwise it is absent, need R.</td>
+  </tr>
+  <tr>
+    <td>musimGapConfig</td>
+    <td>This field is optionally present, need R, if musim-GapAssistanceConfig-r17 is setup; otherwise it is absent, need R.</td>
+  </tr>
+  <tr>
+    <td>SCG</td>
+    <td>This field is optionally present, need M, in an RRCReconfiguration message not within mrdc-SecondaryCellGroup and received, either via SRB3 within DLInformationTransferMRDC or via SRB1. Otherwise, it is absent.</td>
+  </tr>
+</table>

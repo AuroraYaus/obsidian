@@ -1,0 +1,128 @@
+<table>
+  <tr>
+    <td>Definitions for parameters</td>
+    <td>Per</td>
+    <td>M</td>
+    <td>FDD-TDDDIFF</td>
+    <td>FR1-FR2DIFF</td>
+  </tr>
+  <tr>
+    <td>configuredUL-GrantType1-r16Indicates whether the UE supports Type 1 PUSCH transmissions with configured grant as specified in TS 38.214 [12] with UL-TWG-repK value of one in shared spectrum channel access.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>configuredUL-GrantType2-r16Indicates whether the UE supports Type 2 PUSCH transmissions with configured grant as specified in TS 38.214 [12] with UL-TWG-repK value of one in shared spectrum channel access.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>downlinkSPS-r16Indicates whether the UE supports PDSCH reception based on semi-persistent scheduling. One SPS configuration is supported per cell group in shared spectrum channel access.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>dynamicSFI-r16Indicates whether the UE supports monitoring for DCI format 2_0 and determination of slot formats via DCI format 2_0 in shared spectrum channel access.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>mux-HARQ-ACK-PUSCH-DiffSymbol-r16Indicates whether the UE supports HARQ-ACK piggyback on a PUSCH with/without aperiodic CSI once per slot when the starting OFDM symbol of the PUSCH is different from the starting OFDM symbols of the PUCCH resource that HARQ-ACK would have been transmitted on in shared spectrum channel access.This feature is mandatory if UE supports any of the deployment scenarios A.2, B, C, D and E in Annex B.3 of TS 38.300 [28].</td>
+    <td>UE</td>
+    <td>CY</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>mux-SR-HARQ-ACK-CSI-PUCCH-MultiPerSlot-r16Indicates whether the UE supports multiplexing SR, HARQ-ACK and CSI on a PUCCH or piggybacking on a PUSCH more than once per slot when SR, HARQ-ACK and CSI are supposed to be sent with the same or different starting symbol in a slot in shared spectrum channel access.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>mux-SR-HARQ-ACK-CSI-PUCCH-OncePerSlot-r16sameSymbol indicates the UE supports multiplexing SR, HARQ-ACK and CSI on a PUCCH or piggybacking on a PUSCH once per slot, when SR, HARQ-ACK and CSI are supposed to be sent with the same starting symbols on the PUCCH resources in a slot. diffSymbol indicates the UE supports multiplexing SR, HARQ-ACK and CSI on a PUCCH or piggybacking on a PUSCH once per slot, when SR, HARQ-ACK and CSI are supposed to be sent with the different starting symbols in a slot in shared spectrum channel access.If the UE indicates sameSymbol in this field and does not support mux-HARQ-ACK-PUSCH-DiffSymbol-r16, the UE supports HARQ-ACK/CSI piggyback on PUSCH once per slot, when the starting OFDM symbol of the PUSCH is the same as the starting OFDM symbols of the PUCCH resource(s) that would have been transmitted on.If the UE indicates sameSymbol in this field and supports mux-HARQ-ACK-PUSCH-DiffSymbol-r16, the UE supports HARQ-ACK/CSI piggyback on PUSCH once per slot for which case the starting OFDM symbol of the PUSCH is the different from the starting OFDM symbols of the PUCCH resource(s) that would have been transmitted on.The UE is mandated to support the multiplexing and piggybacking features indicated by sameSymbol for mux-SR-HARQ-ACK-CSI-PUCCH-OncePerSlot-r16 if UE supports any of the deployment scenarios A.2, B, C, D and E in Annex B.3 of TS 38.300 [28].</td>
+    <td>UE</td>
+    <td>CY</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>mux-SR-HARQ-ACK-PUCCH-r16Indicates whether the UE supports multiplexing SR and HARQ-ACK on a PUCCH or piggybacking on a PUSCH once per slot, when SR and HARQ-ACK are supposed to be sent with the different starting symbols in a slot in shared spectrum channel access.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>pdsch-RepetitionMultiSlots-r16Indicates whether the UE supports receiving PDSCH scheduled by DCI format 1_1 when configured with pdsch-AggregationFactor &gt; 1, as defined in 5.1.2.1 of TS 38.214 [12] in shared spectrum channel access.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>pre-EmptIndication-DL-r16Indicates whether the UE supports interrupted transmission indication for PDSCH reception based on reception of DCI format 2_1 as defined in TS 38.213 [11] in shared spectrum channel access.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>pusch-RepetitionMultiSlots-r16Indicates whether the UE supports transmitting PUSCH scheduled by DCI format 0_1 when configured with pusch-AggregationFactor &gt; 1, as defined in clause 6.1.2.1 of TS 38.214 [12] in shared spectrum channel access. This feature is mandatory if UE supports any of the deployment scenarios A.2, B, C, D and E in Annex B.3 of TS 38.300 [28].</td>
+    <td>UE</td>
+    <td>CY</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>pucch-Repetition-F1-3-4-r16Indicates whether the UE supports transmission of a PUCCH format 1 or 3 or 4 over multiple slots with the repetition factor 2, 4 or 8 in shared spectrum channel access. This feature is mandatory if UE supports any of the deployment scenarios A.2(whenever PUCCH is supported on shared spectrum channel access cell), B, C, D and E in Annex B.3 of TS 38.300 [28].</td>
+    <td>UE</td>
+    <td>CY</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>sp-CSI-ReportPUCCH-r16Indicates whether UE supports semi-persistent CSI reporting using PUCCH formats 2, 3 and 4 in shared spectrum channel access.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>sp-CSI-ReportPUSCH-r16Indicates whether UE supports semi-persistent CSI reporting using PUSCH in shared spectrum channel access.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>ss-SINR-Meas-r16Indicates whether the UE can perform SS-SINR measurement in shared spectrum channel access as specified in TS 38.215 [13].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>type1-PUSCH-RepetitionMultiSlots-r16Indicates whether the UE supports Type 1 PUSCH transmissions with configured grant in shared spectrum channel access as specified in TS 38.214 [12] with UL-TWG-repK value equal to 2, 4, or 8 with a single repetition of the transport block within each slot, and redundancy version pattern as indicated by UL-TWG-RV-rep. A UE supporting this feature shall also support Type 1 PUSCH transmissions with configured grant as specified in TS 38.214 [12] with UL-TWG-repK value of one.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>type2-PUSCH-RepetitionMultiSlots-r16Indicates whether the UE supports Type 2 PUSCH transmissions with configured grant in shared spectrum channel access as specified in TS 38.214 [12] with UL-TWG-repK value equal to 2, 4, or 8 with a single repetition of the transport block within each slot, and redundancy version pattern as indicated by UL-TWG-RV-rep. A UE supporting this feature shall also support Type 2 PUSCH transmissions with configured grant as specified in TS 38.214 [12] with UL-TWG-repK value of one.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+</table>

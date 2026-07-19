@@ -1,0 +1,101 @@
+<table>
+  <tr>
+    <td>CodebookConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>codebookModeCodebookMode as specified in TS 38.214 [19], clause 5.2.2.2.</td>
+  </tr>
+  <tr>
+    <td>codebookTypeCodebookType including possibly sub-types and the corresponding parameters for each (see TS 38.214 [19], clause 5.2.2.2).</td>
+  </tr>
+  <tr>
+    <td>cri-TypeI-SinglePanelN1-N2-CBSRNumber of antenna ports in first (n1) and second (n2) dimension and resource-specific codebook subset restriction for codebookType set to typeI-SinglePanel (see TS 38.214 [19] clause 5.2.1.4.2). Value no-cbsr means no codebook subset restriction is configured for the n1-n2 pair.If a codebook subset restriction is configured for the n1-n2 pair, the number of elements in cbsr-list is up to the number of elements of nzp-CSI-RS-Resources in NZP-CSI-RS-ResourceSet(s) indicated by nzp-CSI-RS-ResourceSetList in the CSI-ResourceConfig indicated by resourcesForChannelMeasurement in the CSI-ReportConfig in which the CodebookConfig is included. An element in the list corresponds to the element at the same position in nzp-CSI-RS-Resources.</td>
+  </tr>
+  <tr>
+    <td>cri-TypeI-SinglePanelRI-RestrictionResource-specific RI restriction for codebookType set to typeI-SinglePanel (see TS 38.214 [19], clause 5.2.1.4.2).</td>
+  </tr>
+  <tr>
+    <td>cri-TypeII-N1-N2-CBSRNumber of antenna ports in first (n1) and second (n2) dimension and resource-specific codebook subset restriction for codebookType set to typeII-r16 (see TS 38.214 [19] clause 5.2.1.4.2). Value no-cbsr means no codebook subset restriction is configured for the n1-n2 pair.If a codebook subset restriction is configured for the n1-n2 pair, the number of elements in cbsr-list is up to the number of elements of nzp-CSI-RS-Resources in NZP-CSI-RS-ResourceSet(s) indicated by nzp-CSI-RS-ResourceSetList in the CSI-ResourceConfig indicated by resourcesForChannelMeasurement in the CSI-ReportConfig in which the CodebookConfig is included. An element in the list corresponds to the element at the same position in nzp-CSI-RS-Resources.</td>
+  </tr>
+  <tr>
+    <td>cri-TypeII-RI-RestrictionResource-specific RI restriction for codebookType set to typeII-r16 (see TS 38.214 [19], clause 5.2.1.4.2).</td>
+  </tr>
+  <tr>
+    <td>n1-n2-codebookSubsetRestriction, n1-n2-codebookSubsetRestrictionListNumber of antenna ports in first (n1) and second (n2) dimension and codebook subset restriction (see TS 38.214 [19] clause 5.2.2.2.3). Value no-cbsr means no codebook subset restriction is configured for the n1-n2 pair.If a codebook subset restriction is configured for the n1-n2 pair, the number of elements in cbsr-list in n1-n2-codebookSubSetRestrictionList is up to the number of elements of nzp-CSI-RS-Resources in NZP-CSI-RS-ResourceSet(s) indicated by nzp-CSI-RS-ResourceSetList in the CSI-ResourceConfig indicated by resourcesForChannelMeasurement in the CSI-ReportConfig in which the CodebookConfig is included. An element in the list corresponds to the element at the same position in nzp-CSI-RS-Resources.</td>
+  </tr>
+  <tr>
+    <td>n1-n2Number of antenna ports in first (n1) and second (n2) dimension and codebook subset restriction (see TS 38.214 [19] clause 5.2.2.2).</td>
+  </tr>
+  <tr>
+    <td>ng-n1-n2Values of Ng, N1, N2 and codebook subset restriction for Type I Multi-panel codebook (see TS 38.214 [19], clause 5.2.2.2).</td>
+  </tr>
+  <tr>
+    <td>numberOfBeamsNumber of beams, L, used for linear combination.</td>
+  </tr>
+  <tr>
+    <td>numberOfPMI-SubbandsPerCQI-SubbandField indicates how PMI subbands are defined per CQI subband according to TS 38.214 [19], clause 5.2.2.2.</td>
+  </tr>
+  <tr>
+    <td>paramCombination, paramCombination-CJT-r18, paramCombination-CJT-L-r18, paramCombination-CJT-PS-r18, paramCombination-CJT-PS-alpha, paramCombinationDoppler-r18, paramCombinationDoppler-PS-r18, paramCombination-r19, paramCombinationDoppler-r19Field describes supported parameter combination (M, , ) as specified in TS 38.214 [19] Clause 5.2.2. For fields paramCombination-CJT-L-r18 or paramCombination-CJT-PS-alpha the number of elements is 1, 2 or 4, and the values are configured according to the number of nzp-CSI-RS-Resources in NZP-CSI-RS-ResourceSet elements from Tables 5.2.2.2.8-1 and 5.2.2.2.9-1 in TS 38.214 [19], respectively. The allowed configuration combinations for paramCombination-CJT-r18 and paramCombination-CJT-L-r18 are given in Table 5.2.2.2.8-3 in TS 38.214 [19]. The allowed configuration combinations for paramCombination-CJT-PS-r18 and paramCombination-CJT-PS-alpha-r18 are given in Table 5.2.2.2.9-3 in TS 38.214 [19]. The allowed configuration combinations for paramCombination-r19 and paramCombinationDoppler-r19 are specified in clause 5.2.2 of TS 38.214 [19].</td>
+  </tr>
+  <tr>
+    <td>phaseAlphabetSizeThe size of the PSK alphabet, QPSK or 8-PSK.</td>
+  </tr>
+  <tr>
+    <td>portSelectionSamplingSizeThe size of the port selection codebook (parameter d), see TS 38.214 [19] clause 5.2.2.2.6.</td>
+  </tr>
+  <tr>
+    <td>predictionDelayPrediction delay for Doppler and Doppler port selection codebooks see TS 38.214 [19], Clause 5.2.1.4. The first value m0 means that the first slot for which the CSI corresponds to is the slot where the CSI reference resource is located at.For the other three candidate values (n0, n1, n2), then the first slot for which the CSI corresponds to is given by l= n+delta, where delta can take on values of 0, 1, 2 and n the slot in which CSI is reported.</td>
+  </tr>
+  <tr>
+    <td>restrictedCMR-SelectionEnabling CSI-RS resource (CMR) restriction, (see TS 38.214 [19], clause 5.2.2.2.8)</td>
+  </tr>
+  <tr>
+    <td>ri-RestrictionRestriction for RI for TypeI-MultiPanel-RI-Restriction (see TS 38.214 [19], clause 5.2.2.2).</td>
+  </tr>
+  <tr>
+    <td>subbandAmplitudeIf subband amplitude reporting is activated (true).</td>
+  </tr>
+  <tr>
+    <td>twoTX-CodebookSubsetRestrictionCodebook subset restriction for 2TX codebook (see TS 38.214 [19] clause 5.2.2.2.1).</td>
+  </tr>
+  <tr>
+    <td>typeI-CodebookSubsetRestrictionCodebook subset restriction for codebook typeI-SinglePanel-r19 where the size of the bit string is related to the values configured in n1-n2 and (X1, X2) values as defined in TS 38.214 [19] clause 5.2.2.2.1a. Value twentyFour is used when n1-n2 is set to eight-three or six-four, value thirtyTwo is used when n1-n2 is set to sixteen-two or eight-four and value sixtyFour is used when n1-n2 is set to sixteen-four or eight-eight.</td>
+  </tr>
+  <tr>
+    <td>typeI-SinglePanel-codebookSubsetRestriction-i2i2 codebook subset restriction for Type I Single-panel codebook used when reportQuantity is CRI/Ri/i1/CQI (see TS 38.214 [19] clause 5.2.2.2.1).</td>
+  </tr>
+  <tr>
+    <td>typeI-SinglePanel-ri-RestrictionRestriction for RI for TypeI-SinglePanel-RI-Restriction (see TS 38.214 [19], clause 5.2.2.2.1 and clause 5.2.2.2.1a).</td>
+  </tr>
+  <tr>
+    <td>typeI-SinglePanel-Group1, typeI-SinglePanel-Group2Configures codebooks for CSI calculation when UE is configured with two CMR Groups with CMRGroupingAndPairing in the NZP-CSI-RS-ResourceSet associated with the CSI-ReportConfig. Network configures the same number of ports for both codebooks.</td>
+  </tr>
+  <tr>
+    <td>typeI-SinglePanel-ri-RestrictionSDM, typeI-SinglePanel-ri-RestrictionSTRPRestriction for RI for N Resource Pairs when two CMR Groups are configured with CMRGroupingAndPairing in the NZP-CSI-RS-ResourceSet associated with the CSI-ReportConfig (see TS 38.214 [19], clause 5.2.1.4.2).</td>
+  </tr>
+  <tr>
+    <td>typeI-SoftScalingRankPower scaling for codebook typeI-SinglePanel-r19 where the size of the bit string is related to the values configured in n1-n2 and (X1, X2) values as defined in TS 38.214 [19] clause 5.2.2.2.1a. Value twentyFour is used when n1-n2 is set to eight-three or six-four, value thirtyTwo is used when n1-n2 is set to sixteen-two or eight-four and value sixtyFour is used when n1-n2 is set to sixteen-four or eight-eight.</td>
+  </tr>
+  <tr>
+    <td>typeII-CodebookSubsetRestrictionCodebook subset restriction for codebook eTypeII-r19 and typeII-Doppler-r19 where the size of the bit string is related to the values configured in n1-n2 and (X1, X2) values as defined in TS 38.214 [19] clause 5.2.2.2.5. Value twentyFour is used when n1-n2 is set to eight-three or six-four, value thirtyTwo is used when n1-n2 is set to sixteen-two or eight-four and value sixtyFour is used when n1-n2 is set to sixteen-four or eight-eight.</td>
+  </tr>
+  <tr>
+    <td>typeII-PortSelectionRI-RestrictionRestriction for RI for TypeII-PortSelection-RI-Restriction (see TS 38.214 [19], clauses 5.2.2.2.4, 5.2.2.2.6 and 5.2.2.2.7).</td>
+  </tr>
+  <tr>
+    <td>typeII-RI-RestrictionRestriction for RI for TypeII-RI-Restriction (see TS 38.214 [19], clause 5.2.2.2).</td>
+  </tr>
+  <tr>
+    <td>valueOfNField provides the value of parameter N as specified in TS 38.214 [19], clause 5.2.2.2. The field is present only when M=2 set by paramCombination, see TS 38.214 [19].</td>
+  </tr>
+  <tr>
+    <td>valueOfO3O3: oversampling factor for frequency-domain basis selection offsetOnly applicable when CodebookMode = &#x27;Mode1&#x27;.</td>
+  </tr>
+  <tr>
+    <td>valueOfN-CJTField describes the size of the window of FD basis for FeType-II port selection codebook for multi-TRP CJT. For M=2, N=2,4 (see TS 38.214 [19], clause 5.2.2.2.9)</td>
+  </tr>
+  <tr>
+    <td>valueOfN-DopplerField describes the size of the window of FD basis for FeType-II port selection codebook for Doppler CSI. For M=2, N=2,4 (see TS 38.214 [19], clause 5.2.2.2.9)</td>
+  </tr>
+</table>

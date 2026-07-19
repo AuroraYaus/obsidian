@@ -1,0 +1,40 @@
+<table>
+  <tr>
+    <td></td>
+    <td>Physical Channel Combination</td>
+    <td>Transport Channel Combination</td>
+    <td>Mandatory dependent on UE radio access capabilities</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>PSDCH</td>
+    <td>SL-DCH</td>
+    <td>Mandatory for UE supporting sidelink discovery</td>
+    <td>The UE supporting sidelink discovery transmits sidelink discovery messages on the camped cell (idle) or PCell (connected).</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>PSBCH</td>
+    <td>SL-BCH</td>
+    <td>Mandatory for UE supporting sidelink communication or V2X sidelink communication</td>
+    <td>The UE supporting sidelink communication or V2X sidelink communication transmits MasterInformationBlock-SL messages in PSBCH on one preconfigured frequency.</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>PSSCH</td>
+    <td>SL-SCH</td>
+    <td>Mandatory for UE supporting sidelink communication or V2X sidelink communication</td>
+    <td>The UE supporting sidelink communication or V2X sidelink communication transmits sidelink data in PSSCH on one preconfigured frequency.</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>PSCCH</td>
+    <td>N/A</td>
+    <td>Mandatory for UE supporting sidelink communication or V2X sidelink communication</td>
+    <td>The UE supporting sidelink communication or V2X sidelink communication transmits sidelink control information in PSCCH on one preconfigured frequency.</td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE:Depending on the UE capability, the UE may be able to perform simultaneous Uplink and Sidelink transmissions. If the UE is unable to perform simultaneous Uplink and Sidelink transmissions, transmissions are prioritized according to TS 36.321 [12].NOTE:Depending on the UE capability, the UE may be able to perform simultaneous sidelink communication transmissions (PSBCH or PSSCH or PSCCH) and sidelink discovery transmission (PSDCH). If the UE is unable to perform simultaneous transmission of sidelink communication and discovery, transmissions are prioritized according to TS 36.321 [12].</td>
+  </tr>
+</table>

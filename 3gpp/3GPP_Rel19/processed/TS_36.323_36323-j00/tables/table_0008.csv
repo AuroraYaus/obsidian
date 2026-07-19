@@ -1,0 +1,3 @@
+Bit,Description
+0,Indicates that the SDU need not to be transferred to the local cache entity
+1,Indicates that the SDU may be transferred to the local cache entity.

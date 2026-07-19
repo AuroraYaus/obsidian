@@ -1,0 +1,10 @@
+Name,Value,NB-IoT,Semantics description,Ver
+RLC configuration CHOICE,am,am,,
+ul-RLC-Config>t-PollRetransmit>pollPDU>pollByte>maxRetxThreshold,ms45infinityinfinityt4,ms25000N/AN/At4,,
+dl-RLC-Config>t-Reordering>t-StatusProhibit>enableStatusReportSN-Gap,ms35ms0N/A,releasedN/Adisabled,,
+Logical channel configuration,,,,
+priority,1,1,Highest priority,
+prioritisedBitRate,infinity,N/A,,
+bucketSizeDuration,N/A,N/A,,
+logicalChannelGroup,0,N/A,,
+logicalChannelSR-Prohibit,N/A,TRUE,,

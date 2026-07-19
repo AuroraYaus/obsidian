@@ -1,0 +1,8 @@
+Field,Bit width,,,,,
+,2 antenna ports,,4 antenna ports,,,
+,Rank = 1,Rank = 2,Rank = 1,Rank = 2,Rank = 3,Rank = 4
+Wide-band CQI codeword 0,4,4,4,4,4,4
+Subband differential CQI codeword 0,,,,,,
+Wide-band CQI codeword 1,0,4,0,4,4,4
+Subband differential CQI codeword 1,0,,0,,,
+Subband precoding matrix indicator,,,,,,

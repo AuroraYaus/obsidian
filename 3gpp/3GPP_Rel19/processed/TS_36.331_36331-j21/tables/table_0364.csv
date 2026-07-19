@@ -1,0 +1,18 @@
+SystemInformationBlockType14-NB field descriptions
+"ab-BarringBitmapAccess class barring for AC 0-9. The first/ leftmost bit is for AC 0, the second bit is for AC 1, and so on."
+ab-BarringForExceptionDataIndicates whether ExceptionData is subject to access barring.
+"ab-BarringForSpecialACAccess class barring for AC 11-15. The first/ leftmost bit is for AC 11, the second bit is for AC 12, and so on."
+"ab-CategoryIndicates the category of UEs for which AB applies. Value a corresponds to all UEs, value b corresponds to the UEs that are neither in their HPLMN nor in a PLMN that is equivalent to it, and value c corresponds to the UEs that are neither in the PLMN listed as most preferred PLMN of the country where the UEs are roaming in the operator-defined PLMN selector list on the USIM, nor in their HPLMN nor in a PLMN that is equivalent to their HPLMN, see TS 22.011 [10]."
+ab-CommonThe AB parameters applicable for all PLMN(s).
+ab-ParamThe AB parameters for connectivity to EPC
+"ab-PerNRSRPAccess barring per NRSRP. Value thresh1 corresponds to the first entry configured in rsrp-ThresholdsPrachInfoList, value thresh2 corresponds to the second entry configured in rsrp-ThresholdsPrachInfoList."
+"ab-PerPLMN-ListThe AB parameters per PLMN, listed in the same order as the PLMN(s) occur in plmn-IdentityList in SystemInformationBlockType1-NB."
+"uac-AC1-SelectAssistInfoInformation used to determine whether Access Category 1 applies to the UE, as defined in TS 22.261 [96]. The field is forwarded to upper layers, if present."
+uac-accessCategoryThe Access Category according to TS 22.261 [96].
+uac-BarringCommonThe UAC parameters applicable for all PLMN(s).
+uac-BarringFactorRepresents the probability that access attempt would be allowed during access barring check.
+"uac-BarringForAccessIdentityIndicates whether access attempt is allowed for each Access Identity. The leftmost bit, bit 0 in the bit string corresponds to Access Identity 1, bit 1 in the bit string corresponds to Access Identity 2, bit 2 in the bit string corresponds to Access Identity 11, bit 3 in the bit string corresponds to Access Identity 12, and so on. Value 0 means that access attempt is allowed for the corresponding access identity."
+uac-BarringPerCatListAccess control parameters for each access category for the specific PLMN.
+"uac-BarringPerPLMN-ListThe UAC parameters per PLMN, listed in the same order as the PLMN(s) occur in plmn-IdentityList in SystemInformationBlockType1-NB."
+"uac-BarringTimeThe average time in seconds before a new access attempt is to be performed after an access attempt was barred at access barring check for the same access category, see 5.3.16.5."
+uac-ParamThe UAC parameters for connectivity to 5GC.

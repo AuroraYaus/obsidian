@@ -1,0 +1,457 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+06/2017,RAN2#98,R2-1704810,,,,First version,0.0.1
+06/2017,RAN2#NR2,R2-1707386,,,,,0.0.2
+08/2017,RAN2#99,R2-1708750,,,,,0.0.3
+12/2017,RAN2#100,R2-1712587,,,,,0.0.4
+12/2017,RAN2#100,R2-1714141,,,,,0.0.5
+12/2017,RAN2#100,R2-1714271,,,,,0.1.0
+12/2017,RP-78,RP-172521,,,,Submitted to RAN#78 for approval,1.0.0
+12/2017,RP-78,,,,,Upgraded to Rel-15,15.0.0
+03/2018,RP-79,RP-180440,0003,3,F,Updates on UE capabilities,15.1.0
+06/2018,RP-80,RP-181216,0009,2,B,Introduce ANR in NR,15.2.0
+,RP-80,RP-181216,0012,1,F,Miscellaneous corrections,15.2.0
+,RP-80,RP-181216,0013,-,B,Delay budget report and MAC CE adaptation for NR for TS 38.306,15.2.0
+09/2018,RP-81,RP-181940,0008,4,F,Correction on total layer2 buffer size,15.3.0
+,RP-81,RP-181942,0024,1,F,Introduction of UE capability constraints,15.3.0
+,RP-81,RP-181942,0030,-,F,38.306 corrections and cleanup,15.3.0
+12/2018,RP-82,RP-182651,0016,4,F,Clarification for Interruption-based and gap-based SFTD measurement,15.4.0
+,RP-82,RP-182653,0033,1,F,Timer based BWP switching,15.4.0
+,RP-82,RP-182652,0035,2,F,Additional UE capabilities for NR standalone,15.4.0
+,RP-82,RP-182651,0037,1,F,Clarification to UE capability of independentGapConfig for inter-RAT NR measurement not yet configured with EN-DC,15.4.0
+,RP-82,RP-182661,0038,2,F,Update of L2 capability parameters,15.4.0
+,RP-82,RP-182660,0047,2,F,Clarification on physical layer parameters of UE capability,15.4.0
+,RP-82,RP-182666,0050,3,F,Introduce RRC buffer size in NR,15.4.0
+,RP-82,RP-182664,0051,2,F,Clarification of multipleConfiguredGrants,15.4.0
+,RP-82,RP-182664,0052,2,F,CR to 38.306 for PDCP CA duplication for SRB,15.4.0
+,RP-82,RP-182661,0054,1,F,UE capability handling for FDD/TDD and FR1/FR2,15.4.0
+,RP-82,RP-182663,0057,1,F,Clarify for per CC UL/DL modulation order capabilities,15.4.0
+,RP-82,RP-182664,0058,1,F,Inter-frequency handover capability,15.4.0
+,RP-82,RP-182665,0060,3,F,UE capability on PA architecture,15.4.0
+,RP-82,RP-182661,0062,1,F,CR on signaling contiguous and non-contiguous EN-DC capability,15.4.0
+,RP-82,RP-182813,0063,6,F,Update of UE capabilities,15.4.0
+,RP-82,RP-182662,0065,2,F,Introduction of SRS switching capability,15.4.0
+,RP-82,RP-182667,0068,2,B,CR on introduction of UE overheating support in NR SA scenario,15.4.0
+,RP-82,RP-182664,0071,-,F,Introduction of SRS switching capability,15.4.0
+03/2019,RP-83,RP-190634,0073,1,F,Capability for aperiodic CSI-RS triggering with different numerology between PDCCH and CSI-RS,15.5.0
+,RP-83,RP-190542,0074,1,F,Layer-1 capability update,15.5.0
+,RP-83,RP-190545,0075,2,F,CR to 38.306 on introducing nr-CGI-Reporting-ENDC,15.5.0
+,RP-83,RP-190545,0086,2,F,CR to clarify intra-NR handover capabilities,15.5.0
+,RP-83,RP-190546,0088,3,F,Clarification for PDSCHs and PUSCHs per slot for different TBs for UE capable of processing time capability 1,15.5.0
+,RP-83,RP-190542,0092,2,F,Correction to mandatory supported capability signaling,15.5.0
+,RP-83,RP-190542,0097,2,F,Miscellaneous corrections,15.5.0
+,RP-83,RP-190545,0098,2,F,Correction on supportedBandwidthCombinationSetEUTRA-v1530 usage,15.5.0
+,RP-83,RP-190543,0099,-,F,Clarification on signaling the bandwidth class,15.5.0
+,RP-83,RP-190545,0100,1,F,Clarification on Frequency Separation Class,15.5.0
+,RP-83,RP-190544,0101,-,F,CR on Processing delay requirements for RRC Resume procedures in TS 38.306,15.5.0
+06/2019,RP-84,RP-191375,0094,1,F,CR to clarify ul-TimingAlignmentEUTRA-NR,15.6.0
+,RP-84,RP-191373,0108,-,F,"Layer-1, RF and RRM capability updates",15.6.0
+,RP-84,RP-191373,0109,-,F,Clarification on UE capability of lch-ToSCellRestriction,15.6.0
+,RP-84,RP-191379,0110,2,F,Correction on description of additionalActiveSpatialRelationPUCCH,15.6.0
+,RP-84,RP-191378,0111,1,F,Clarification on csi-RS-CFRA-ForHO,15.6.0
+,RP-84,RP-191379,0114,2,F,CR on capability of maxUplinkDutyCycle for FR2,15.6.0
+,RP-84,RP-191380,0115,2,F,38.306 miscellaneous corrections,15.6.0
+,RP-84,RP-191378,0116,1,B,38.306 CR for late drop,15.6.0
+,RP-84,RP-191381,0118,4,F,Clarification on supported modulation order capability,15.6.0
+,RP-84,RP-191374,0119,-,F,Correction to PDCP parameters,15.6.0
+,RP-84,RP-191381,0121,3,F,Corrections to UE Capability definitions,15.6.0
+,RP-84,RP-191378,0122,1,F,38.306 Clarification on multiple TA capabilities,15.6.0
+,RP-84,RP-191379,0123,2,F,CR to clarify non-codebook based PUSCH transmission,15.6.0
+,RP-84,RP-191380,0124,3,F,Clarification on pdsch-ProcessingType2,15.6.0
+,RP-84,RP-191378,0125,1,F,Clarification on present of tci-StatePDSCH,15.6.0
+,RP-84,RP-191378,0126,1,F,Clarification on SA fallback BC support,15.6.0
+,RP-84,RP-191375,0128,-,F,Correction to Beam Correspondence for CA,15.6.0
+,RP-84,RP-191379,0130,2,F,Correction on the number of DRB in UE Capability Constraints,15.6.0
+,RP-84,RP-191379,0132,1,F,CR to capture UE supported DL/UL bandwidths,15.6.0
+,RP-84,RP-191376,0133,-,F,UE capability signalling for FD-MIMO processing capabilities for EN-DC,15.6.0
+,RP-84,RP-191376,0134,-,F,Modified UE capability on different numerologies within the same PUCCH group,15.6.0
+,RP-84,RP-191554,0135,-,F,"Removal of ""Capability for aperiodic CSI-RS triggering with different numerology between PDCCH and CSI-RS""",15.6.0
+09/2019,RP-85,RP-192196,0136,1,C,Additional capability signalling for 1024QAM support,15.7.0
+,RP-85,RP-192191,0142,1,B,Introduction of SFTD measurement to neighbour cells for NR SA,15.7.0
+,RP-85,RP-192193,0146,1,F,MR-DC measurement gap pattern capability,15.7.0
+,RP-85,RP-192194,0151,3,F,Clarifying UE capability freqHoppingPUCCH-F0-2 and freqHoppingPUCCH-F1-3-4,15.7.0
+,RP-85,RP-192190,0152,-,F,Clarification to dynamic power sharing capability,15.7.0
+,RP-85,RP-192192,0153,2,F,Miscellaneous corrections,15.7.0
+,RP-85,RP-192190,0154,-,F,Capability of measurement gap patterns,15.7.0
+,RP-85,RP-192193,0155,2,F,Correction to IMS capability,15.7.0
+,RP-85,RP-192194,0156,3,F,UE Capabilities covering across all serving cells,15.7.0
+,RP-85,RP-192190,0167,-,F,Clarification on UE capability on different numerologies within the same PUCCH group,15.7.0
+,RP-85,RP-192193,0168,1,F,Correction on CA parameters in NR-DC,15.7.0
+,RP-85,RP-192346,0169,-,C,Introduction of UE capability for NR-DC with SFN synchronization between PCell and PSCell,15.7.0
+12/2019,RP-86,RP-192934,0185,1,F,Clarification on the restriction of maximum SRS resource sets configuration for uplink beam management.,15.8.0
+,RP-86,RP-192936,0186,3,F,Miscellaneous corrections on UE capability fields,15.8.0
+,RP-86,RP-192935,0191,1,F,Corrections on PDCCH blind decoding in NR-DC,15.8.0
+,RP-86,RP-192937,0200,1,F,Clarification on ne-DC capability,15.8.0
+,RP-86,RP-192935,0202,1,F,Correction to channelBWs,15.8.0
+,RP-86,RP-192936,0204,1,F,Use of splitSRB-WithOneUL-Path capability (38.306),15.8.0
+,RP-86,RP-192935,0205,-,F,Correction to pdsch-RepetitionMultiSlots and pusch-RepetitionMultiSlots,15.8.0
+,RP-86,RP-192937,0215,1,F,Correction on initial BWP bandwidth capabilities,15.8.0
+,RP-86,RP-192937,0216,1,F,NE-DC dynamic power sharing capability,15.8.0
+,RP-86,RP-192935,0219,-,F,Clarification on crossCarrierScheduling-OtherSCS in R15,15.8.0
+,RP-86,RP-192937,0220,-,F,Correction on ambiguity of UE FDD/TDD FR1/FR2 capabilities,15.8.0
+03/2020,RP-87,RP-200334,0194,2,F,Correction on parameter description of beamManagementSSB-CSI-RS,15.9.0
+,RP-87,RP-200335,0208,3,F,CR on BWCS for inter-ENDC BC with intra-ENDC BC (38.306),15.9.0
+,RP-87,RP-200335,0209,5,F,CR to 38.306 on support of 70MHz channel bandwidth,15.9.0
+,RP-87,RP-200334,0236,-,F,Correction on SRB capability in NR-DC,15.9.0
+,RP-87,RP-200335,0248,2,F,Data rate for the case of single carrier standalone operation,15.9.0
+,RP-87,RP-200334,0254,1,F,CR on the maximum stored number of deprioritisation frequencies,15.9.0
+,RP-87,RP-200335,0255,2,F,Miscellaneous Corrections to UE capability parameters,15.9.0
+,RP-87,RP-200335,0259,1,F,UE capability of intra-band requirements for inter-band EN-DC/NE-DC,15.9.0
+03/2020,RP-87,RP-200356,0145,1,F,CR on capability of maxUplinkDutyCycle for inter-band EN-DC PC2 UE,16.0.0
+,RP-87,RP-200335,0214,2,F,Correction on beamSwitchTiming values of 224 and 336,16.0.0
+,RP-87,RP-200335,0223,1,C,Inclusion of 90MHz UE Bandwidth,16.0.0
+,RP-87,RP-200358,0226,2,B,Introducing autonomous gap in CGI reporting,16.0.0
+,RP-87,RP-200357,0229,-,B,UE capability for IDC,16.0.0
+,RP-87,RP-200340,0230,-,B,Introduction of Cross Link Interference (CLI) handling and Remote Interference Management (RIM),16.0.0
+,RP-87,RP-200358,0233,1,C,Introduction of EPS voice fallback enhancement,16.0.0
+,RP-87,RP-200350,0235,-,B,Introduction of SRVCC from 5G to 3G,16.0.0
+,RP-87,RP-200358,0243,1,B,Introduction of DL RRC segmentation,16.0.0
+,RP-87,RP-200358,0258,1,B,Introduction of downgraded configuration for SRS antenna switching,16.0.0
+,RP-87,RP-200359,0260,-,B,Recommended Bit Rate/Query for FLUS and MTSI,16.0.0
+,RP-87,RP-200358,0261,-,B,Introduction of UE capability indicator of supporting inter-RAT handover from NR to EN-DC in 38.306.,16.0.0
+07/2020,RP-88,RP-201163,0288,2,A,Correction to the serving cell number for ENDC power class,16.1.0
+,RP-88,RP-201187,0289,3,A,CR on introduction of BCS to asymmetric channel bandwidths (38.306),16.1.0
+,RP-88,RP-201160,0295,1,A,SRS Capability report for SRS only Scell,16.1.0
+,RP-88,RP-201159,0299,-,A,Clarification on L1 feature of NGEN-DC and NE-DC,16.1.0
+,RP-88,RP-201161,0304,2,A,Default values for UE capability,16.1.0
+,RP-88,RP-201163,0312,1,A,Invalidating bandwidth class F for FR1,16.1.0
+,RP-88,RP-201163,0318,1,A,"Missing ""Optional features without UE radio access capability parameters""",16.1.0
+,RP-88,RP-201163,0320,1,A,Missing UE capability requirements,16.1.0
+,RP-88,RP-201198,0321,1,C,Introduction of secondary DRX group CR 38.306,16.1.0
+,RP-88,RP-201164,0324,2,A,Correction on UE capability constraints,16.1.0
+,RP-88,RP-201183,0328,2,B,UE capability of supporting UL Tx switching,16.1.0
+,RP-88,RP-201217,0329,2,B,"Release-16 UE capabilities based on RAN1, RAN4 feature lists and RAN2",16.1.0
+,RP-88,RP-201163,0330,1,A,Corrections on the number of DRBs,16.1.0
+,RP-88,RP-201166,0333,1,F,On the capability of Basic CSI feedback (2-32),16.1.0
+,RP-88,RP-201162,0339,1,A,Clarification on the support of IMS voice over split bearer for NR-DC and NE-DC,16.1.0
+,RP-88,RP-201162,0343,1,A,Clarification on maximum number of supported PDSCH Resource Element mapping patterns,16.1.0
+,RP-88,RP-201164,0344,2,A,Introduction of CGI reporting capabilities,16.1.0
+,RP-88,RP-201165,0346,2,A,UE Capability Enhancement for FR1(TDD/FDD) / FR2 CA and DC,16.1.0
+,RP-88,RP-201161,0353,-,A,CR on unnecessary XDD FRX differentiation,16.1.0
+,RP-88,RP-201162,0355,-,A,Clarification to maxUplinkDutyCycle-FR2,16.1.0
+,RP-88,RP-201162,0357,-,A,Clarification on L2 and RAN4 feature of NGEN-DC and NE-DC,16.1.0
+,RP-88,RP-201163,0360,1,A,Correction on UE capability signalling for simultaneous SRS antenna and carrier switching,16.1.0
+,RP-88,RP-201163,0362,-,A,Correction on UE capabilities with xDD and FRx differentiations,16.1.0
+,RP-88,RP-201166,0363,-,C,Missing reportAddNeighMeas in periodic measurement reporting,16.1.0
+09/2020,RP-89,RP-201932,0370,2,B,"Release-16 UE capabilities based on RAN1, RAN4 feature lists and RAN2 corrections",16.2.0
+,RP-89,RP-201938,0378,1,A,Corrections on UE capability constraints,16.2.0
+,RP-89,RP-201932,0382,1,F,Correction on beamSwitchTiming values of 224 and 336,16.2.0
+,RP-89,RP-201924,0383,2,F,Update to IAB-MT capabilities,16.2.0
+,RP-89,RP-201937,0387,1,F,Clarification on PDSCH rate-matching capabilities,16.2.0
+,RP-89,RP-201937,0389,2,A,Corrections on the capabilities associated with multiple bands/Cells,16.2.0
+,RP-89,RP-201989,0393,2,F,Correction on PRS measurement gap capability,16.2.0
+,RP-89,RP-201938,0402,2,F,Clarification on the extended capability of NGEN-DC,16.2.0
+,RP-89,RP-201962,0407,1,F,Miscellaneous corrections on UL Tx switching,16.2.0
+,RP-89,RP-201922,0408,-,F,NR-DC UE capabilities,16.2.0
+12/2020,RP-90,RP-202790,0419,2,A,CR to clarify UE capability in case of Cross-Carrier operation,16.3.0
+,RP-90,RP-202778,0422,1,B,"Release-16 UE capabilities based on RAN1, RAN4 feature lists and RAN2 corrections",16.3.0
+,RP-90,RP-202767,0424,3,F,Correction on description for extendedRAR-Window,16.3.0
+,RP-90,RP-202789,0439,1,F,Clarification on the inter-frequency handover capability,16.3.0
+,RP-90,RP-202789,0441,-,A,Clarification on NE-DC for bandwidth combination set,16.3.0
+,RP-90,RP-202790,0453,1,A,Removing contradiction on number of FSpUCC and FSpDCC,16.3.0
+,RP-90,RP-202789,0461,-,F,Clarification on UE capabilities with FDD/TDD differentiation,16.3.0
+,RP-90,RP-202771,0472,4,F,Introduction of capability bit for multi-CC simultaneous TCI activation with multi-TRP,16.3.0
+,RP-90,RP-202770,0476,-,A,Dummify UE capability of crossCarrierScheduling-OtherSCS,16.3.0
+,RP-90,RP-202789,0479,1,A,Clarification for multipleCORESET,16.3.0
+,RP-90,RP-202882,0481,-,A,CR to 38.306 on handling of fallbacks for FR2 CA,16.3.0
+03/2021,RP-91,RP-210689,0482,-,F,Update on V2X UE capability,16.4.0
+,RP-91,RP-210693,0483,1,F,CR for the supported max date rate for uplink Tx switching,16.4.0
+,RP-91,RP-210697,0485,-,F,UE capability of NR to UTRA-FDD CELL_DCH CS handover,16.4.0
+,RP-91,RP-210697,0489,2,A,Correction on beamSwitchTiming capability,16.4.0
+,RP-91,RP-210697,0490,1,F,Correction on beamSwitchTiming-r16 capability,16.4.0
+,RP-91,RP-210697,0491,1,F,Correction on TPMI grouping capability,16.4.0
+,RP-91,RP-210692,0501,-,F,Dummifying intraFreqMultiUL-TransmissionDAPS-r16 capability,16.4.0
+,RP-91,RP-210694,0502,1,F,Corrections on UE capability for NR-U,16.4.0
+,RP-91,RP-210703,0503,2,F,Release with Redirect for connection resume triggered by NAS,16.4.0
+,RP-91,RP-210703,0505,2,A,Clarification to LCP restrictions,16.4.0
+,RP-91,RP-210691,0506,1,F,Introduction of the UE Capability for SpCell BFR Enhancement,16.4.0
+,RP-91,RP-210697,0509,2,F,Clarification on UE capabilities with FDD/TDD differentiation,16.4.0
+,RP-91,RP-210805,0512,3,B,Support of 35 MHz and 45 MHz channel bandwidth for FR1,16.4.0
+,RP-91,RP-210697,0513,1,F,Clarification on UE capabilities for enhanced MIMO,16.4.0
+,RP-91,RP-210703,0516,2,A,CR on the SupportedBandwidth and channelBWs(R16),16.4.0
+,RP-91,RP-210695,0520,2,F,Correction to PUSCH skipping with UCI without LCH-based prioritization,16.4.0
+,RP-91,RP-210697,0521,1,F,CR on the Capability of PUCCH Transmissions for HARQ-ACK-38306,16.4.0
+,RP-91,RP-210703,0523,2,F,Clarfication on FDD-TDD differentiation for SUL band,16.4.0
+,RP-91,RP-210702,0525,1,A,Clarification on single uplink operation capability report,16.4.0
+,RP-91,RP-210697,0528,-,F,Addition of TEI16 features,16.4.0
+,RP-91,RP-210702,0529,-,A,CR to clarify the definition of fallback per CC feature set,16.4.0
+,RP-91,RP-210697,0530,-,F,Capability for dormant BWP switching of multiple SCells,16.4.0
+,RP-91,RP-210702,0533,-,A,Dummy the capability bit v2x-EUTRA,16.4.0
+,RP-91,RP-210703,0534,2,A,Clarification on the capability of supportedNumberTAG,16.4.0
+,RP-91,RP-210701,0537,1,A,Clarification on the supportedBandwidthCombinationSetIntraENDC capability,16.4.0
+,RP-91,RP-210697,0538,-,B,Release-16 UE capabilities based on updated RAN1 and RAN4 feature lists,16.4.0
+,RP-91,RP-210693,0539,-,B,Uplink Tx DC location reporting for two carrier uplink CA,16.4.0
+06/2021,RP-92,RP-211487,0526,5,C,Redirection with MPS Indication [Redirect_MPS_I],16.5.0
+,RP-92,RP-211480,0541,4,F,Miscellaneous corrections to Rel-16 UE capabilities,16.5.0
+,RP-92,RP-211475,0542,3,F,Correction on Capability of two PUCCH transmission,16.5.0
+,RP-92,RP-211470,0543,3,F,Correction on V2X UE capability,16.5.0
+,RP-92,RP-211483,0545,2,A,CR on UE capability in case of Cross-Carrier operation,16.5.0
+,RP-92,RP-211470,0547,2,F,Addition of total L2 buffer size and RLC RTT for NR SL,16.5.0
+,RP-92,RP-211483,0550,2,A,Correction to BWP capabilities,16.5.0
+,RP-92,RP-211482,0566,2,A,CR on the supportedBandwidthCombinationSet-R16,16.5.0
+,RP-92,RP-211477,0568,3,A,CR on the 35M45M supporting-R16,16.5.0
+,RP-92,RP-211484,0571,2,F,UL Config Grant capability differentiation for FR1(TDD/FDD) / FR2,16.5.0
+,RP-92,RP-211474,0572,2,F,Corrections on the UE capability of indication on supporting the extension of SRS resourceID,16.5.0
+,RP-92,RP-211478,0573,3,B,Release-16 UE capabilities based on RAN1 and RAN4 feature lists,16.5.0
+,RP-92,RP-211480,0575,3,F,Corrections to directional collision handling in half-duplex operation,16.5.0
+,RP-92,RP-211478,0578,1,F,Introduction of the intra-NR and inter-RAT HST Capabilities,16.5.0
+,RP-92,RP-211483,0594,-,A,Correction to the use of simultaneous CSI-RS resources,16.5.0
+,RP-92,RP-211478,0596,1,A,Clarification on BCS of a fallback band combination,16.5.0
+,RP-92,RP-211478,0599,1,A,Further clarification on supportedNumberTAG,16.5.0
+,RP-92,RP-211478,0608,1,A,Clarification on maximum number of TCI-state for PDSCH,16.5.0
+,RP-92,RP-211475,0609,-,F,Capability bit for extending search space switching trigger configuration,16.5.0
+,RP-92,RP-211471,0610,1,C,NR-DC Cell Group capability filtering,16.5.0
+09/2021,RP-93,RP-212439,0518,4,A,CR on the Intra-band and Inter-band EN-DC Capabilities -R16,16.6.0
+,RP-93,RP-212439,0562,3,A,Clarification on the simultaneousRxTxInterBandCA capability in NR-DC,16.6.0
+,RP-93,RP-212438,0613,1,A,Correction to the description of additionalActiveTCI-StatePDCCH,16.6.0
+,RP-93,RP-212439,0619,1,A,Definition of fallback per CC feature set,16.6.0
+,RP-93,RP-212443,0626,1,F,Miscellaneous corrections to UE capability descriptions,16.6.0
+,RP-93,RP-212439,0631,1,A,Support of newly introduced 100M bandwidth for band n40,16.6.0
+,RP-93,RP-212438,0633,-,A,Correction on fallback band combination for SUL,16.6.0
+,RP-93,RP-212440,0641,-,F,FR1/FR2 differentiation for enhanced UL grant skipping capabilities,16.6.0
+,RP-93,RP-212597,0643,2,C,Distinguishing support of extended band n77,16.6.0
+12/2021,RP-94,RP-213341,0640,2,A,Simultaneous Rx/Tx UE capability per band pair,16.7.0
+,RP-94,RP-213344,0645,2,F,Updates based on RAN1 NR positioning features list,16.7.0
+,RP-94,RP-213342,0646,1,C,Duty cycle signalling for power class 1.5,16.7.0
+,RP-94,RP-213343,0647,1,F,Correction on R16 UE capability of supportedSINR-meas-r16,16.7.0
+,RP-94,RP-213341,0656,1,A,Clarification on intraAndInterF-MeasAndReport capability,16.7.0
+,RP-94,RP-213341,0658,-,A,Miscellaneous corrections for Rel-15 UE capabilities,16.7.0
+,RP-94,RP-213346,0659,-,F,Miscellaneous corrections for Rel-16 UE capabilities,16.7.0
+,RP-94,RP-213345,0660,1,C,CR on 38.306 for introducing UE capability of txDiversity,16.7.0
+,RP-94,RP-213346,0661,1,F,Clarification on UL MIMO layer reporting for 1Tx-2Tx switching,16.7.0
+,RP-94,RP-213346,0664,-,F,Correction on two HARQ-ACK codebooks capability,16.7.0
+03/2022,RP-95,RP-220835,0635,3,F,Adding UE capability of UL MIMO coherence for UL Tx switching,16.8.0
+,RP-95,RP-220473,0677,1,F,Correction on DAPS capability,16.8.0
+,RP-95,RP-220473,0688,1,F,Introduction of sidelink power class capability indication,16.8.0
+,RP-95,RP-220473,0695,1,F,Correction on ssb-csirs-SINR-measurement-r16 capability,16.8.0
+03/2022,RP-95,RP-220499,0532,2,C,Remove the maximum number of MIMO layers restrictions for SUL,17.0.0
+,RP-95,RP-220837,0650,2,B,Introduction of mobility-state-based cell reselection for NR HSDN [NR_HSDN],17.0.0
+,RP-95,RP-220921,0667,2,C,Pi/2-BPSK specification updates for the merger of 5Gi into 3GPP,17.0.0
+,RP-95,RP-220472,0679,1,F,Correction on PO determination for UE in inactive state,17.0.0
+,RP-95,RP-220838,0685,1,B,Release-17 UE capabilities based on R1 and R4 feature lists (TS38.306),17.0.0
+,RP-95,RP-220506,0686,1,D,Inclusive Language Review for TS 38.306,17.0.0
+,RP-95,RP-220510,0698,1,B,Capability for Explicit Indication of SI Scheduling window position [SI-SCHEDULING],17.0.0
+06/2022,RP-96,RP-221721,0690,2,B,CR on the CBM/IBM reporting-38306,17.1.0
+,RP-96,RP-221756,0703,2,B,Release-17 UE capabilities based on R1 and R4 feature lists (TS38.306),17.1.0
+,RP-96,RP-221756,0710,1,A,Clarification on simultaneous Rx/Tx capability per band pair,17.1.0
+,RP-96,RP-221736,0714,2,C,Distinguishing support of band n77 restrictions in Canada [n77 Canada],17.1.0
+,RP-96,RP-221756,0715,1,F,Correction on the UE capability of extension of TDRA indication for Configured UL Grant type 1,17.1.0
+,RP-96,RP-221756,0716,1,A,Correction on the UE capability description of the overlapping PDSCH,17.1.0
+,RP-96,RP-221756,0731,1,C,Adding UE capability of CSI reporting cross PUCCH SCell group,17.1.0
+,RP-96,RP-221756,0733,1,A,Clarification on miscellaneous UE capabilities,17.1.0
+,RP-96,RP-221756,0741,1,A,Clarification on the applicability of mixed numerology on UE capability maxNumberCSI-RS-RRM-RS-SINR,17.1.0
+,RP-96,RP-221756,0743,-,A,Correction to multi-DCI multi-TRP and new UE capability to limit PDCCH monitoring,17.1.0
+,RP-96,RP-221756,0744,-,A,Clarification on configuredUL-GrantType1-v1650,17.1.0
+,RP-96,RP-221756,0746,1,C,Introduction UE capability for CHO with SCG configuration [CHOwithDCkept],17.1.0
+,RP-96,RP-221736,0747,1,B,Introduction of gNB ID length reporting in the NR CGI report [gNB_ID_Length],17.1.0
+,RP-96,RP-221756,0750,-,C,Introduction of uplink RRC Segmentation capability,17.1.0
+,RP-96,RP-221756,0751,-,A,bwp-SwitchingDelay conditionally mandatory capability,17.1.0
+,RP-96,RP-221792,0756,2,A,HARQ-ACK multiplexing on PUSCH in the absence of PUCCH,17.1.0
+09/2022,RP-97,RP-222519,0761,1,A,Clarification on power sharing UE capability,17.2.0
+,RP-97,RP-222527,0764,1,B,Release-17 UE capabilities based on R1 and R4 feature lists (TS38.306),17.2.0
+,RP-97,RP-222526,0769,-,F,Corrections to the description of gNB ID length reporting capabilities [gNB_ID_Length],17.2.0
+,RP-97,RP-222526,0774,1,B,38306 CR for Early measurement for EPS fallback [IdleMeaEPSFB],17.2.0
+,RP-97,RP-222521,0781,1,A,Correction for the capability of SRS-PeriodicityAndOffset,17.2.0
+,RP-97,RP-222519,0786,1,A,Correction on crossCarrierA-CSI-trigDiffSCS-r16 (38.306),17.2.0
+,RP-97,RP-222526,0788,1,F,Ensuring consistent support of capability bits and associated NS-values in n77 in USA and Canada,17.2.0
+,RP-97,RP-222520,0790,1,A,Correction on PDCCH blind detection capability in CA,17.2.0
+,RP-97,RP-222520,0792,1,A,Clarification on pusch-RepetitionTypeA-r16 capability,17.2.0
+,RP-97,RP-222518,0798,2,A,Correction on sidelink capability,17.2.0
+,RP-97,RP-222526,0802,-,B,Start drx-HARQ-RTT-TimerUL after last repetition [ulHARQ_RTT_Timer],17.2.0
+,RP-97,RP-222522,0803,-,F,Corrections on CRS-IM network assistance information,17.2.0
+,RP-97,RP-222552,0805,1,B,38.306 CR for introduction of MBS PDSCH FDM capabilities,17.2.0
+12/2022,RP-98,RP-223408,0699,2,A,Corrections to SON/MDT capabilities,17.3.0
+,RP-98,RP-223413,0811,1,A,Correction to definition of dualPA-Architecture capability indication,17.3.0
+,RP-98,RP-223414,0822,2,C,Introduction of capabilities for emergency service related fallback [CellSelection_EmergencyFallback],17.3.0
+,RP-98,RP-223415,0831,2,B,Release-17 UE capabilities based on R1 and R4 feature lists (TS38.306),17.3.0
+,RP-98,RP-223417,0840,1,C,Higher granularity for per-FR gap capability [MaxCCPerFRGap],17.3.0
+,RP-98,RP-223404,0845,1,A,Clarification on 400MHz channel bandwidth,17.3.0
+,RP-98,RP-223409,0852,-,F,Correction to support repetition on PDSCH time domain resource allocation for DCI format 1-2,17.3.0
+03/2023,RP-99,RP-230687,0847,3,A,Clarification on capabilities reported in different granularity with prerequisite,17.4.0
+,RP-99,RP-230690,0853,1,F,IOT bit for inter satellite measurement (38.306),17.4.0
+,RP-99,RP-230690,0856,-,F,Correction to Enhanced RRM requirements for NTN measurements in IDLE and INACTIVE,17.4.0
+,RP-99,RP-230688,0859,2,F,Release-17 UE capabilities updates/corrections based on latest R1 and R4 feature lists (TS38.306),17.4.0
+,RP-99,RP-230691,0860,1,F,Correction on the capability for 1024QAM,17.4.0
+,RP-99,RP-230685,0863,-,A,Correction on Duty Cycle capability for PC1.5,17.4.0
+,RP-99,RP-230691,0868,2,F,Clarification on BWP capabilities of RedCap UEs,17.4.0
+,RP-99,RP-230686,0870,1,A,Clarification on supportedCellGrouping capability,17.4.0
+,RP-99,RP-230685,0873,1,A,CR on the intraBandFreqSeparationUL-AggBW-GapBW-r16 _R17,17.4.0
+,RP-99,RP-230690,0877,-,F,Correction on NCSG gap pattern capability,17.4.0
+,RP-99,RP-230694,0879,2,F,Band differentiation for capability pusch-RepetitionTypeA-r16,17.4.0
+,RP-99,RP-230689,0882,1,F,Correction on codebook mode configuration for Rel-17 NCJT CSI measurement,17.4.0
+,RP-99,RP-230694,0885,-,F,Introducing deriveSSB-IndexFromCellInter capability for non-NCSG UEs,17.4.0
+,RP-99,RP-230693,0886,3,F,UE capability for NCD SSB for REDCAP for SDT,17.4.0
+,RP-99,RP-230690,0887,-,B,Release-17 MBS UE capabilities based on latest R1 feature list (TS 38.306),17.4.0
+06/2023,RP-100,RP-231418,0888,1,F,Correction on NR NTN UE capabilities,17.5.0
+,RP-100,RP-231413,0893,1,F,Corrections on the eIAB related capabilities,17.5.0
+,RP-100,RP-231418,0894,4,F,Correction on missing referencing of the NTN spec in 38.306,17.5.0
+,RP-100,RP-231409,0897,2,A,Miscellaneous Correction on UE capability-R17,17.5.0
+,RP-100,RP-231410,0899,1,A,Correction on PDCCH Blind Detection-R17,17.5.0
+,RP-100,RP-231418,0900,2,F,Miscellaneous Correction on UE capability-R17,17.5.0
+,RP-100,RP-231410,0902,1,A,Correction on pusch-RepetitionTypeB capability,17.5.0
+,RP-100,RP-231410,0904,1,A,Corrections on NR-DC capabilities,17.5.0
+,RP-100,RP-231414,0908,1,F,Correction on MBS capabilities,17.5.0
+,RP-100,RP-231417,0914,-,F,Corrections to signaling of Rel-17 channel bandwidths in FR1,17.5.0
+,RP-100,RP-231415,0916,1,F,Correction on the capability of RedCap UE,17.5.0
+,RP-100,RP-231409,0919,1,A,Clarification on SRS Tx switching capability,17.5.0
+,RP-100,RP-231418,0921,1,F,Missing reference to cell reselection requirements for NTN UEs in RRC INACTIVE,17.5.0
+,RP-100,RP-231414,0925,-,F,Alignment with RAN1 feature list update on MBS,17.5.0
+,RP-100,RP-231417,0930,1,F,UE capability for releasing crossCarrierSchedulingConifig,17.5.0
+09/2023,RP-101,RP-232565,0929,1,A,Introduction of intra-band EN-DC contiguous capability for UL,17.6.0
+,RP-101,RP-232565,0942,2,A,Correction on the interpretation of the UE capability field simultaneousRxTxInterBandENDC,17.6.0
+,RP-101,RP-232570,0949,1,F,Miscellaneous corrections on UE capabilities,17.6.0
+,RP-101,RP-232697,0952,1,F,Correction to SCell PRACH power scaling for UL CA,17.6.0
+12/2023,RP-102,RP-233888,0678,5,B,Introduction of FR2 FBG2 CA BW classes,17.7.0
+,RP-102,RP-233884,0946,3,A,Update to interBandMRDC-WithOverlapDL-Bands-r16,17.7.0
+,RP-102,RP-233889,0957,1,F,Correction on Type1 HARQ-ACK codebook generation,17.7.0
+,RP-102,RP-233888,0962,2,F,Clarification on UplinkTxSwitchingBandParameters,17.7.0
+,RP-102,RP-233887,0967,1,F,Correction to disabling scaling factor for Cross-carrier scheduling,17.7.0
+,RP-102,RP-233888,0977,-,F,Removal of ambiguous term 'legacy',17.7.0
+,RP-102,RP-233884,0987,-,A,Correction on the interpretation of the UE capability field simultaneousRxTxInterBandCA,17.7.0
+,RP-102,RP-233890,0989,1,F,Clarifications on the applicability of independent gap UE capabilities,17.7.0
+,RP-102,RP-233884,0996,1,A,Miscellaneous non-controversial rapporteur corrections on rel-17 38.306,17.7.0
+,RP-102,RP-233940,1000,1,F,Correction on UE capabilities of FR2-2 and IIoT,17.7.0
+,RP-102,RP-233888,1003,1,F,Correction on multipleCORESET for RedCap UEs,17.7.0
+,RP-102,RP-233889,1009,-,F,Correction to support higher power limit capability for inter-band UL EN-DC,17.7.0
+,RP-102,RP-233890,1012,-,F,Miscellaneous non-controversial rapporteur corrections on rel-17 38.306,17.7.0
+,RP-102,RP-233884,1013,1,F,Simultaneous PUSCH and PUCCH transmissions of same priority on different inter-band cells [SimultaneousPUSCH-PUCCH],17.7.0
+,RP-102,RP-233888,1014,1,F,Clarification on supportedModulationOrderDL for Redcap for FR1,17.7.0
+12/2023,RP-102,RP-233881,0907,3,C,Capabilities of L2 UE-to-network relay UEs for positioning [PosL2RemoteUE],18.0.0
+,RP-102,RP-233882,0978,2,B,MUSIM paging cause forwarding [MUSIMpagingCause],18.0.0
+,RP-102,RP-233940,1015,-,B,Introduction of Rel-18 UE capabilities,18.0.0
+03/2024,RP-103,RP-240667,0994,3,B,UE capability for Enhanced channel raster,18.1.0
+,RP-103,RP-240653,1022,1,A,Introduction of maximum aggregated bandwidth for FR1 CA and for FR2 intra-band CA,18.1.0
+,RP-103,RP-240655,1025,-,A,Correction on the UE capability of survival time,18.1.0
+,RP-103,RP-240654,1030,-,A,Clarification on capabilities of mixed codebook,18.1.0
+,RP-103,RP-240655,1043,1,A,"Corrections on usage of LEO, GEO, GSO and NGSO",18.1.0
+,RP-103,RP-240651,1051,1,A,Update on UE capability AsyncIntraBandENDC,18.1.0
+,RP-103,RP-240859,1052,6,B,Introduction of 2Rx XR UEs [2Rx_XR_Device],18.1.0
+,RP-103,RP-240708,1056,1,B,"Corrections and Updates to UE capabilities for Rel-18 WIs, including TEI18 [HARQ-ACK MUX on PUSCH], [LCID-extension], [RA-SDT_BeamFailure]",18.1.0
+,RP-103,RP-240658,1057,2,B,Introduction of TxDiversity for 2Tx capability,18.1.0
+06/2024,RP-104,RP-241549,1020,2,A,Correction on prerequisite feature for csi-ReportingCrossPUCCH-Grp-r16,18.2.0
+,RP-104,RP-241554,1061,3,A,CEF and RLF reporting for (e)RedCap UEs,18.2.0
+,RP-104,RP-241552,1076,1,A,Clarification on the srs-AntennaSwitchingBeyond4RX-r17,18.2.0
+,RP-104,RP-241551,1078,2,A,Correction on the supportedBandwidthDL/UL-v1780 for the NR-DC (r18),18.2.0
+,RP-104,RP-241551,1081,1,A,Correction to BCS5 bandwidth capabilities,18.2.0
+,RP-104,RP-241553,1083,1,A,Clarification on usage of LEO or NGSO,18.2.0
+,RP-104,RP-241551,1085,4,A,Introduction of new intra-band EN-DC capabilities for inter-band EN-DC,18.2.0
+,RP-104,RP-241550,1086,3,A,Missing Conditionally mandatory features without UE radio access capability parameters for 80ms scheduling offset for positioning SI acquisition,18.2.0
+,RP-104,RP-241549,1103,1,A,Clarification on the SRS Carrier Switching for the PUSCH-less Cell (r18),18.2.0
+,RP-104,RP-241549,1107,3,A,Clarification on the parallel Tx Capability (r18),18.2.0
+,RP-104,RP-241543,1110,1,B,Enhancements to measurement report [meas_report_enh],18.2.0
+,RP-104,RP-241543,1111,1,B,Clarification for RedCap UE supporting MBS broadcast [RedCapMBS_Bcast],18.2.0
+,RP-104,RP-241542,1113,1,F,Mandating the capability mux-HARQ-ACK-withoutPUCCH-onPUSCH-r16,18.2.0
+,RP-104,RP-241559,1115,-,F,Clarification to the band pair reporting,18.2.0
+,RP-104,RP-241549,1119,1,A,Clarification on xDD differentiation for SDL bands,18.2.0
+,RP-104,RP-241551,1121,1,A,Clarification on srs-SwitchingAffectedBandsListNR,18.2.0
+,RP-104,RP-241555,1123,1,A,Correction on 3Tx SAR for inter-band CA with PC1.5,18.2.0
+,RP-104,RP-241552,1128,1,A,UE capability for misclassification of RLF reports as Too Early HO failure,18.2.0
+,RP-104,RP-241553,1130,2,A,Correction on multicast DRX to support NTN,18.2.0
+,RP-104,RP-241542,1131,1,B,"Updates and Introduction of UE capabilities for Rel-18 WIs, including [HARQ-ACK MUX on PUSCH]",18.2.0
+,RP-104,RP-241542,1132,-,B,Corrections and Updates to UE capabilities for RAN1 feature group 55-6,18.2.0
+09/2024,RP-105,RP-242238,1134,2,F,Correction on the capabilities on PTM retransmission [PTM_ReTx_Mcast_HARQ_Disb],18.3.0
+,RP-105,RP-242234,1140,1,A,Clarification on increasedNumberofCSIRSPerMO,18.3.0
+,RP-105,RP-242233,1145,-,A,Clarification on the Prerequisite of the ssb-AndCSI-RS-RLM (r18),18.3.0
+,RP-105,RP-242237,1146,-,F,Correction to 38.306 on SON reports,18.3.0
+,RP-105,RP-242240,1148,-,B,Introduction of a UE capability for the barring exemption for emergency call [EM_Call_Exemption],18.3.0
+,RP-105,RP-242236,1150,-,A,Corrections to UE capabilities related to Rel-17 URLLC and RedCap,18.3.0
+,RP-105,RP-242239,1151,-,F,Corrections on some features application to (e)RedCap UE,18.3.0
+,RP-105,RP-242233,1156,-,A,Correction to Parallel Tx capabilities,18.3.0
+,RP-105,RP-242230,1159,-,B,Updates and Introduction of UE capabilities for Rel-18 WIs,18.3.0
+12/2024,RP-106,RP-243232,1158,4,F,Mandatory support of Enhanced channel raster by (e)RedCap UE,18.4.0
+,RP-106,RP-243219,1166,2,F,Corrections on capabilities for eRedCap,18.4.0
+,RP-106,RP-243216,1173,1,A,Corrections on parallelTx capabilities for inter-band and intra-band,18.4.0
+,RP-106,RP-243219,1174,2,B,Introduction of new capability for intra-band EN-DC channel spacing [Intra-Band_EN-DC_Channelspacing],18.4.0
+,RP-106,RP-243218,1176,3,A,Correction on UE capabilities for TCI state indication,18.4.0
+,RP-106,RP-243228,1177,1,F,Correction on BWP operation without bandwidth restriction,18.4.0
+,RP-106,RP-243219,1182,1,F,Clarification for UE capability on UL traffic information,18.4.0
+,RP-106,RP-243219,1188,6,F,Clarification on inter-band handover enhancements capabilities,18.4.0
+,RP-106,RP-243224,1191,3,A,Correction on PHR for mTRP PUSCH repetition,18.4.0
+,RP-106,RP-243232,1197,1,F,Clarification on the definition of eRedCap UEs,18.4.0
+,RP-106,RP-243219,1199,2,F,Correction on UE capability for multi-carrier enhancements,18.4.0
+,RP-106,RP-243219,1201,-,F,Correction on MT-SDT Capability for NR-NTN Case,18.4.0
+,RP-106,RP-243227,1203,1,A,Introduction of network signalling of maximum number of UL segments [Max-RRC-SegUL],18.4.0
+,RP-106,RP-243230,1205,2,F,Miscellaneous updates for Rel-18 WIs,18.4.0
+,RP-106,RP-243233,1206,2,F,Clarification on the UE feature for cell reselection from TN to NTN,18.4.0
+,RP-106,RP-243218,1208,1,A,Correction on Capability Reporting in FR1-NTN,18.4.0
+,RP-106,RP-243218,1211,1,A,Guidelines on implementing FRx/xDD differentiation in per UE capability,18.4.0
+,RP-106,RP-243219,1212,1,F,Correction for the UE capability on posSRS-BWA-RRC-Inactive,18.4.0
+,RP-106,RP-243229,1220,-,F,Correction on the Less than 5M Bandwidth,18.4.0
+,RP-106,RP-243229,1221,-,F,Correction in the optionality of NR-U related information,18.4.0
+,RP-106,RP-243230,1222,-,F,Scope of interFreqL1-MeasConfig-r18,18.4.0
+,RP-106,RP-243229,1223,-,F,Correction on UE receiver features,18.4.0
+03/2025,RP-107,RP-250655,1225,1,B,Capability updates for MC and RAN1 feature list,18.5.0
+,RP-107,RP-250660,1228,-,F,Correction on the mandatory features for IAB-MT and NCR-MT,18.5.0
+,RP-107,RP-250661,1229,1,F,Removal of the prerequisite for ltm-FastProcessingConfig-r18,18.5.0
+,RP-107,RP-250657,1232,-,A,Correction to simultaneous BWP switch across CCs,18.5.0
+,RP-107,RP-250658,1234,2,A,Clarification on FRx_xDD Differentiation in per UE Capability for NTN bands,18.5.0
+,RP-107,RP-250658,1239,1,A,UE Capability for SCell activation with TCI activation configuration,18.5.0
+,RP-107,RP-250660,1240,1,F,Clarification to lower MSD capability,18.5.0
+,RP-107,RP-250660,1241,1,F,Correction on UE capability for BWP_Wor,18.5.0
+,RP-107,RP-250662,1243,1,F,Clarification on FRx Differentiation in per UE Capability for NTN bands,18.5.0
+,RP-107,RP-250661,1247,-,F,Dummy the capability bit nonDRB-NCR-r18,18.5.0
+06/2025,RP-108,RP-251688,1196,4,F,Clarification on capability for inter-frequency configuration for less than 5MHz,18.6.0
+,RP-108,RP-251695,1200,2,F,Correction on NTN in FR2-NTN bands,18.6.0
+,RP-108,RP-251688,1249,2,F,Correction on UE capability for L1-RSRP measurement in LTM,18.6.0
+,RP-108,RP-251688,1250,1,F,Correction on UE capability for SIB17bis,18.6.0
+,RP-108,RP-251691,1253,2,A,Type clarification for interBandMRDC-WithOverlapDL-Bands-r16,18.6.0
+,RP-108,RP-251696,1254,2,F,Type clarification for intraBandNR-CA-non-collocated-r18,18.6.0
+,RP-108,RP-251692,1256,1,A,Corrections to location-based measurement initiation,18.6.0
+,RP-108,RP-251690,1261,1,A,Correction to pdsch-256QAM-FR1 for IAB-MT,18.6.0
+,RP-108,RP-251695,1263,2,F,Correction to Rel-18 NR NTN CHO with only location/time-based trigger,18.6.0
+,RP-108,RP-251693,1266,2,A,Correction to ul-GapFR2-r17,18.6.0
+,RP-108,RP-251688,1271,3,F,Correction on SRS capability reporting,18.6.0
+,RP-108,RP-251695,1273,1,F,Miscellaneous non-controversial rapporteur corrections,18.6.0
+,RP-108,RP-251688,1274,1,F,Clarification on PDCCH ordered RACH capabilities for LTM,18.6.0
+,RP-108,RP-251688,1279,-,F,Correction to UE capability for retx-less CG,18.6.0
+,RP-108,RP-251688,1282,1,A,Capability for SMTC adjustment in RRC_IDLE and RRC_INACTIVE,18.6.0
+,RP-108,RP-251688,1283,-,F,Corrections on eDSS capability descriptions,18.6.0
+,RP-108,RP-251688,1284,1,F,Corrections on Multicarrier enhancements capability descriptions,18.6.0
+,RP-108,RP-251688,1285,1,F,Correction on NCR-MT capability,18.6.0
+,RP-108,RP-251696,1286,1,F,Correction on the field descriptions of less than 5Mhz,18.6.0
+,RP-108,RP-251692,1295,1,A,Clarification on support of DCP in NTN,18.6.0
+,RP-108,RP-251688,1298,1,F,Correction on SL-U Power Class Capability,18.6.0
+,RP-108,RP-251689,1303,-,A,Correction on pdcp-DuplicationSRB for NR-DC,18.6.0
+,RP-108,RP-251688,1309,-,F,Correction to R18 sidelink relay capability prerequisite,18.6.0
+,RP-108,RP-251689,1318,1,A,Correction on servingCellMO configuration for SSB-less SCell,18.6.0
+09/2025,RP-109,RP-252765,1313,2,A,Corrections on simultaneous Rx-Tx capability for TDD-SDL band combination,18.7.0
+,RP-109,RP-252768,1322,1,F,"Corrections on Rel-18 UE capability descriptions, including [HARQ-ACK MUX on PUSCH]",18.7.0
+,RP-109,RP-252768,1330,2,F,UE capability for support of event A4 based CHO for ATG,18.7.0
+,RP-109,RP-252765,1332,2,A,Clarifications on the applicability of independent gap UE capability,18.7.0
+,RP-109,RP-252768,1338,-,F,Correction to scellWithoutSSB,18.7.0
+,RP-109,RP-252765,1345,1,A,Correction on intraF-NeighMeasForSCellWithoutSSB capability,18.7.0
+09/2025,RP-109,RP-252925,1258,4,B,Introduction of 7MHz channel bandwidth,19.0.0
+,RP-109,RP-252796,1264,3,B,Introduction of ANR reporting of HSDN cells [ANR_HSDN],19.0.0
+,RP-109,RP-252797,1296,3,B,Introduction of Multi-path Relay Enhancement [N3C_M_Relay],19.0.0
+,RP-109,RP-252788,1307,2,B,Introduce UE capability signalling for NTN less than 5MHz,19.0.0
+,RP-109,RP-252798,1319,1,B,Introduction of UAV mobility enhancements [UAV_Mobility],19.0.0
+,RP-109,RP-252764,1321,2,B,"Introduction of Rel-19 UE capability, including [TN32HARQ], [Pos_SRSHop], [SRTrig_SSSGSwitch], [SRSCS_ULTxSwitch], [SimCSI_count], [SimCSI_countNES], [TxSwitch_R19]",19.0.0
+,RP-109,RP-252798,1323,3,B,Introduction of control parameters for on-demand posSIB request [OdPosSIB_Req],19.0.0
+,RP-109,RP-252797,1348,1,B,Introduction of redirection from NR TN to NR NTN to 38.306 [NR_TN_NTN_redir],19.0.0
+,RP-109,RP-252808,1350,-,B,Introduction of UE capability on 6 DL MIMO layers,19.0.0
+,RP-109,RP-252798,1352,1,B,Introduction of UE assistance information for cell DTX/DRX [UAI_cellDTRX],19.0.0
+12/2025,RP-110,RP-253720,1358,1,A,Correction on UE capability for MP split,19.1.0
+,RP-110,RP-253719,1360,1,A,Correction on UL Tx switching MIMO coherence capabilities,19.1.0
+,RP-110,RP-253718,1364,3,A,Corrections on Rel-18 UE capabilities for LTM,19.1.0
+,RP-110,RP-253717,1366,1,A,Correction on R18 8Rx UE receiver capability definition,19.1.0
+,RP-110,RP-253740,1367,2,B,Introducing SR resources in LTM cell switch MAC CE [LTM_enh_SR],19.1.0
+,RP-110,RP-253720,1373,1,A,Correction on UE capability for UTW in positioning SRS frequency hopping in 38306-r19,19.1.0
+,RP-110,RP-253718,1375,1,A,Corrections on NR-DC UE capabilities for LTM,19.1.0
+,RP-110,RP-253772,1377,1,F,Clarification on Type 2 and Type 4 UE Capabilities,19.1.0
+,RP-110,RP-253744,1380,1,B,Introduction of UE capability to support early CSI acquisition for L3 handover [EarlyCSI_L3HO],19.1.0
+,RP-110,RP-253744,1381,2,B,"Updates of Rel-19 UE capability, including [Simul_SRSCS], [Common_PDCCH_rep_TN], [Pos_SRSHop]",19.1.0
+,RP-110,RP-253718,1387,1,A,Correction on per-band UE capabilities for LTM,19.1.0
+,RP-110,RP-253740,1389,1,B,Asisstance info for NR NTN to IoT NTN Cell Selection [IoT_NR_NTN_CellSelect],19.1.0
+,RP-110,RP-253740,1395,-,B,Adding Mobility State in RRC_CONNECTED [SpeedStatePars],19.1.0
+,RP-110,RP-253744,1397,1,F,Corrections on UE capability for eventD2,19.1.0
+,RP-110,RP-253718,1400,1,A,Clarification on early RACH capabilities for LTM,19.1.0
+03/2026,RP-111,RP-260672,1403,2,A,Clarification on simultaneous transmission capabilities in inter-band CA,19.2.0
+,RP-111,RP-260662,1407,-,A,Clarification on NR uplink transmission duty cycle,19.2.0
+,RP-111,RP-260668,1412,1,F,Corrections on Per band and Per band combination,19.2.0
+,RP-111,RP-260674,1413,1,F,Corrections on UE capabilities for R1/4 features,19.2.0
+,RP-111,RP-260667,1414,-,F,Corrections on LTM recovery for NR-DC UE capability,19.2.0
+,RP-111,RP-260673,1416,2,A,Correction on dynamic waveform switch capability,19.2.0
+,RP-111,RP-260668,1417,-,B,Introduction of FR1-NTN terminology,19.2.0
+,RP-111,RP-260666,1419,1,A,Clarification to appliedFreqBandListFilter for LTM capabilities,19.2.0
+,RP-111,RP-260672,1422,2,A,Clarification on coarse location reporting capability in NTN,19.2.0
+,RP-111,RP-260670,1423,2,F,Correction to NTN-NTN redirection [NR_TN_NTN_redir],19.2.0

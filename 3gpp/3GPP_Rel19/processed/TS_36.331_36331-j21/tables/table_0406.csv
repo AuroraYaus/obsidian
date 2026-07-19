@@ -1,0 +1,5 @@
+Conditional presence,Explanation
+DRB-Setup,The field is mandatory present if the corresponding DRB is being set up; otherwise it is not present.
+DRB-Setup-5GC,The field is mandatory present if the corresponding DRB is being set up when connected to 5GC; otherwise it is not present.
+DRB-Setup-EPC,The field is mandatory present if the corresponding DRB is being set up when connected to EPC; otherwise it is not present.
+Setup,"The field is mandatory present if the corresponding SRB/DRB is being setup; otherwise the field is optionally present, need ON."

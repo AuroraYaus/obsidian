@@ -1,0 +1,8 @@
+TDD-UL-DL-Pattern field descriptions
+"dl-UL-TransmissionPeriodicityPeriodicity of the DL-UL pattern, see TS 38.213 [13], clause 11.1. If the dl-UL-TransmissionPeriodicity-v1530 is signalled, UE shall ignore the dl-UL-TransmissionPeriodicity (without suffix)."
+"nrofDownlinkSlotsNumber of consecutive full DL slots at the beginning of each DL-UL pattern, see TS 38.213 [13], clause 11.1. In this release, the maximum value for this field is 320."
+"nrofDownlinkSymbolsNumber of consecutive DL symbols in the beginning of the slot following the last full DL slot (as derived from nrofDownlinkSlots). The value 0 indicates that there is no partial-downlink slot. (see TS 38.213 [13], clause 11.1)."
+"nrofUplinkSlotsNumber of consecutive full UL slots at the end of each DL-UL pattern, see TS 38.213 [13], clause 11.1. In this release, the maximum value for this field is 320."
+"nrofUplinkSymbolsNumber of consecutive UL symbols in the end of the slot preceding the first full UL slot (as derived from nrofUplinkSlots). The value 0 indicates that there is no partial-uplink slot. (see TS 38.213 [13], clause 11.1)."
+"sbfd-StartingSlotIndex, sbfd-EndingSlotIndexConfigures the starting slot index and the ending slot index of SBFD subbands within a TDD-UL-DL period."
+"sbfd-StartingSymbolIndex, sbfd-EndingSymbolIndexConfigures the starting symbol index within the starting slot, the ending symbol index within the ending slot of SBFD subbands within a TDD-UL-DL period."

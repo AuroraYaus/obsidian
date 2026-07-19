@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>SIB20 field descriptions</td>
+  </tr>
+  <tr>
+    <td>cfr-ConfigMCCH-MTCHCommon frequency resource used for MCCH and MTCH reception. If the field is absent, the CFR for broadcast has the same location and size as CORESET#0 and PDSCH configuration of MCCH is the same as PDSCH configuration provided in initialDownlinkBWP in SIB1.</td>
+  </tr>
+  <tr>
+    <td>cfr-ConfigMCCH-MTCH-RedCapCommon frequency resource used for MCCH and MTCH reception for (e)RedCap UEs. If the field is absent, the (e)RedCap UE can use cfr-ConfigMCCH-MTCH if the UE supports the configured bandwidth.</td>
+  </tr>
+  <tr>
+    <td>mcch-ConfigRedcapIndicates MBS broadcast MCCH configuration for (e)Redcap UEs. If the field is absent, the (e)RedCap UE can use mcch-Config if the UE supports the bandwidth configured by cfr-ConfigMCCH-MTCH.</td>
+  </tr>
+  <tr>
+    <td>mcch-ModificationPeriodDefines periodically appearing boundaries, i.e. radio frames for which SFN mod mcch-ModificationPeriod = 0. The contents of different transmissions of MCCH information can only be different if there is at least one such boundary in-between them. Value rf2 corresponds to two radio frames, value rf4 corresponds to four radio frames and so on.</td>
+  </tr>
+  <tr>
+    <td>mcch-RepetitionPeriodAndOffsetDefines the length and the offset of the MCCH repetition period. rf1 corresponds to a repetition period length of one radio frame, rf2 corresponds to a repetition period length of two radio frames and so on. The corresponding integer value indicates the offset of the repetition period in the number of radio frames. MCCH is scheduled in the MCCH transmission window starting from each radio frame for which: SFN mod repetition period length = offset of the repetition period.</td>
+  </tr>
+  <tr>
+    <td>mcch-WindowDurationIndicates, starting from the slot indicated by mcch-WindowStartSlot, the duration in slots during which MCCH may be scheduled. Absence of this field means that MCCH is only scheduled in the slot indicated by mcch-WindowStartSlot. The network always configures mcch-WindowDuration to be shorter or equal to the length of MCCH repetition period.</td>
+  </tr>
+  <tr>
+    <td>mcch-WindowStartSlotIndicates the slot in which MCCH transmission window starts.</td>
+  </tr>
+</table>

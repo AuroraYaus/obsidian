@@ -1,0 +1,25 @@
+item,notation
+multiply product,"cross sign, e.g.  ab"
+matrix product,"dot sign, e.g. ab"
+scalar product (product of a matrix by a scalar),"dot sign, scalar should precede matrix e.g."
+matrix dimensioning,"number of rows  number of column, e.g.:RC"
+Kronecker product,ab
+"bracketing of sets (all elements of same type, not ordered elements)","curly brackets {}, e.g. {a1, a2, …,ap}, or"
+"bracketing of lists (all elements not necessary of same type, ordered elements)","round brackets (), e.g. (A, u, x)"
+"bracketing of sequences (all elements of same type, ordered elements)","angle brackets, e.g. <a1, a2, …,ap> or"
+bracketing of function argument,"round brackets, e.g. f(x)"
+bracketing of array index,"square brackets, e.g. a[x]"
+bracketing of matrix or vector,"square brackets [], e.g. , , or"
+Separation of indexes,"use a comma : e.g. Ni,j"
+use of italic for symbols,"a symbol should be either in italic or in normal font, but mixing up should be avoided."
+bracketing of arithmetic expression to force precedence of operations,round brackets : e.g.
+necessity of bracketing arithmetic expressions,When only + and  bracketing is not necessary. When the mod operator is used explicit bracketing of mod operands and possibly result should be done.
+number type,"in a context of non negative integer numbers, some notes should stress when a number is signed, or possibly fractional."
+binary xor and and,"respectively use + or . If no ""mod 2"" is explicitly in the expression some text should stress that the operation is modulo 2."
+matrix or vector transpose,vT
+11 matrices,implicitly cast to its unique element.
+vector dot product,"uTv for column vectors, and uvT for line vectors"
+complex conjugate,v*
+matrix or vector Hermitian transpose,vH
+real part and imaginary part of complex numbers.,Re(x) and Im(x)
+Modulo operation (including negative value)r ≡a mod N,"Let  be the integer quotient of  and ,is integer, is remainder then , where for all and (Note that  is floor operation to round the elements of  to the nearest integers towards minus infinity)qaNZrq∈Za=N×q+r q=aNaN"

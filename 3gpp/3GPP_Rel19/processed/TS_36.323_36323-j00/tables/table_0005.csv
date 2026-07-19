@@ -1,0 +1,3 @@
+Bit,Description
+0,"PDCP SDU with PDCP SN = (FMS + bit position) modulo (Maximum_PDCP_SN + 1) is missing in the receiver. The bit position of Nth bit in the Bitmap is N, i.e., the bit position of the first bit in the Bitmap is 1."
+1,"PDCP SDU with PDCP SN = (FMS + bit position) modulo (Maximum_PDCP_SN + 1) does not need to be retransmitted. The bit position of Nth bit in the Bitmap is N, i.e., the bit position of the first bit in the Bitmap is 1."

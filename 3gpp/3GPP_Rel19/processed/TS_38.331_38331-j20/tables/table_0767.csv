@@ -1,0 +1,4 @@
+SL-ZoneConfigMCR field descriptions
+sl-TransRangeIndicates the communication range requirement for the corresponding sl-ZoneConfigMCR-Index. The unit is meter.
+sl-ZoneConfigIndicates the zone configuration for the corresponding sl-ZoneConfigMCR-Index.
+sl-ZoneConfigMCR-IndexIndicates the codepoint of the communication range requirement field in SCI.

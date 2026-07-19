@@ -1,0 +1,9 @@
+Channel or signal,OFDM symbol number relative to the start of an SS/PBCH block,Subcarrier number relative to the start of an SS/PBCH block
+PSS,0,"56, 57, …, 182"
+SSS,2,"56, 57, …, 182"
+Set to 0,0,"0, 1, …, 55, 183, 184, …, 239"
+,2,"48, 49, …, 55, 183, 184, …, 191"
+PBCH,"1, 3","0, 1, …, 239"
+,2,"0, 1, …, 47, 192, 193, …, 239"
+DM-RS for PBCH,"1, 3",
+,2,

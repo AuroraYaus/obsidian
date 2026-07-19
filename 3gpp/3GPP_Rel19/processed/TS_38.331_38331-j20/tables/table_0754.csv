@@ -1,0 +1,3 @@
+SL-RelayUE-Config field descriptions
+threshHighRelayIndicates the upper threshold of Uu RSRP for a UE that is in network coverage to evaluate AS layer conditions for U2N relay UE or Last U2N Relay UE operation.
+threshLowRelayIndicates the lower threshold of Uu RSRP for a UE that is in network coverage to evaluate AS layer conditions for U2N relay UE or Last U2N Relay UE operation.

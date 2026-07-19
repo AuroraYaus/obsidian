@@ -1,0 +1,4 @@
+ConditionalReconfiguration field descriptions
+"attemptCondReconfIf present, the UE shall perform conditional reconfiguration if selected cell is a target candidate cell and it is the first cell selection after failure as described in 5.3.7.3."
+"condReconfigurationToAddModListList of conditional reconfigurations (i.e. conditional handover, conditional PSCell addition or inter-SN conditional PSCell change) to add and/or modify."
+"condReconfigurationToRemoveListList of conditional reconfigurations (i.e. conditional handover, conditional PSCell addition or inter-SN conditional PSCell change) to remove."

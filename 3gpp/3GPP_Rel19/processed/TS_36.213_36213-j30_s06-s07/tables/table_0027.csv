@@ -1,0 +1,10 @@
+Transmission mode,DCI format,Search Space,Transmission scheme of PDSCH corresponding to MPDCCH
+Mode 1,6-1A,Type0-Common,"Single-antenna port, port 0 (see Clause 7.1.1)"
+,6-1A or 6-1B,UE specific by C-RNTI,
+Mode 2,6-1A,Type0-Common,Transmit diversity (see Clause 7.1.2)
+,6-1A or 6-1B,UE specific by C-RNTI,
+Mode 6,6-1A,Type0-Common,Transmit diversity (see Clause 7.1.2)
+,6-1A,UE specific by C-RNTI,Closed-loop spatial multiplexing (see Clause 7.1.4) using a single transmission layer
+Mode 9,6-1A,Type0-Common,"If the number of PBCH antenna ports is one, Single-antenna port, port 0 is used (see Clause 7.1.1), otherwise Transmit diversity (see Clause 7.1.2)"
+,6-1A,UE specific by C-RNTI,"Single-antenna port, port 7 or 8 (see Clause 7.1.1)"
+,6-1B,UE specific by C-RNTI,"Single-antenna port, port 7 (see Clause 7.1.1)"

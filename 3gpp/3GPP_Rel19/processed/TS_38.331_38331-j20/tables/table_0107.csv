@@ -1,0 +1,6 @@
+Conditional Presence,Explanation
+HSDN,"The field is optionally present, Need R, if speedStateReselectionPars is present; otherwise the field is not present."
+SharedSpectrum,"This field is mandatory present if this intra-frequency operates with shared spectrum channel access in FR1. Otherwise, it is absent, Need R."
+SharedSpectrum2,"This field is optionally present if this intra-frequency operates with shared spectrum channel access in FR2-2, Need R. Otherwise, it is absent, Need R."
+SupportLR-OnLPSS,This field is mandatory present for the cell supporting OOK based LP-WUR or OFDM based LP-WUR measuring on LP-SS. It is absent otherwise.
+SupportLR-OnSSB,This field is mandatory present for the cell supporting OFDM based LP-WUR measuring on SSB. It is absent otherwise.

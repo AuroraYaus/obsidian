@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td>NTN-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>ephemerisInfoThis field provides satellite ephemeris either in format of position and velocity state vector or in format of orbital parameters. This field is excluded when determining changes in system information, i.e. changes to ephemerisInfo should neither result in system information change notifications nor in a modification of valueTag in SIB1.</td>
+  </tr>
+  <tr>
+    <td>epochTimeIf this field is absent for the NTN serving cell, the epoch time is the end of SI window where this SIB19 or SIB28 is scheduled. This field is mandatory present when ntn-Config is provided in dedicated configuration. If this field is absent in ntn-Config provided via NTN-NeighCellConfig or SatSwitchWithReSync or NTN-NeighCellConfigIoT in an NTN cell, the UE uses epoch time of the serving cell, otherwise the field is based on the timing of the serving cell, i.e. the SFN and sub-frame number indicated in this field refers to the SFN and sub-frame of the serving cell. If this field is absent in ntn-Config provided via NTN-NeighCellConfig in a TN cell, the epoch time is the end of SI window where this SIB19 is scheduled. In case of satellite switch with resynchronization, this field is based on the timing of the cell served by the source satellite. This field is excluded when determining changes in system information, i.e. changes to epochTime should neither result in system information change notifications nor in a modification of valueTag in SIB1.</td>
+  </tr>
+  <tr>
+    <td>cellSpecificKoffsetScheduling offset used for the timing relationships that are modified for NTN (see TS 38.213 [13]). The unit of the field K_offset is number of slots for a given subcarrier spacing of 15 kHz. If the field is absent UE assumes value 0.</td>
+  </tr>
+  <tr>
+    <td>kmacScheduling offset provided by network if downlink and uplink frame timing are not aligned at gNB. If the field is absent UE assumes value 0. The unit of kmac is number of slots for a given subcarrier spacing of 15 kHz.</td>
+  </tr>
+  <tr>
+    <td>ntn-PolarizationDLIf present, this parameter indicates polarization information for downlink transmission on service link: including Right hand, Left hand circular polarizations (RHCP, LHCP) and Linear polarization.</td>
+  </tr>
+  <tr>
+    <td>ntn-PolarizationULIf present, this parameter indicates Polarization information for uplink service link.If not present and ntn-PolarizationDL is present, UE assumes the same polarization for UL and DL. If both ntn-PolarizationUL and ntn-PolarizationDL are not present, the UE releases any stored value.</td>
+  </tr>
+  <tr>
+    <td>ntn-UlSyncValidityDurationA validity duration configured by the network for assistance information (i.e. Serving and/or neighbour satellite ephemeris and Common TA parameters) which indicates the maximum time duration (from epochTime) during which the UE can apply assistance information without having acquired new assistance information.The unit of ntn-UlSyncValidityDuration is second. Value s5 corresponds to 5 s, value s10 indicate 10 s and so on. If this field is absent in ntn-Config provided via NTN-NeighCellConfig, SatSwitchWithReSync, or NTN-NeighCellConfigIoT in an NTN cell, the UE uses validity duration from the serving cell assistance information. If this field is absent in ntn-Config provided via NTN-NeighCellConfig in a TN cell, how the UE sets the validity duration is left to UE implementation. This field is excluded when determining changes in system information, i.e. changes of ntn-UlSyncValidityDuration should neither result in system information change notifications nor in a modification of valueTag in SIB1. ntn-UlSyncValidityDuration is only updated when at least one of epochTime, ta-Info, ephemerisInfo is updated.</td>
+  </tr>
+  <tr>
+    <td>ta-Common, ta-CommonIoTNetwork-controlled common timing advance value and it may include any timing offset considered necessary by the network. ta-Common with value of 0 is supported. The granularity of ta-Common is 4.072 × 10^(-3) μs. Values are given in unit of corresponding granularity. This field is excluded when determining changes in system information, i.e. changes of ta-Common should neither result in system information change notifications nor in a modification of valueTag in SIB1. ta-CommonIoT is network-controlled common time advanced value as defined in TS 36.213 [81]. Unit of μs, Step of 32.55208 ×10-3 μs. If ta-CommonIoT is absent, the UE uses the (default) value of 0</td>
+  </tr>
+  <tr>
+    <td>ta-CommonDrift, ta-CommonDriftIoTIndicate drift rate of the common TA. ta-CommonDriftIoT is the drift rate as defined in TS 36.213 [81]. The granularity of ta-CommonDrift is 0.2 × 10^(-3) μs⁄s. Values are given in unit of corresponding granularity. This field is excluded when determining changes in system information, i.e. changes of ta-CommonDrift or ta-CommonDriftIoT should neither result in system information change notifications nor in a modification of valueTag in SIB1.</td>
+  </tr>
+  <tr>
+    <td>ta-CommonDriftVariant, ta-CommonDriftVariantIoTIndicate drift rate variation of the common TA. ta-CommonDriftVariantIoT is the drift rate variation as defined in TS 36.213 [81]. The granularity of ta-CommonDriftVariant is 0.2×10^(-4) μs⁄s^2. Values are given in unit of corresponding granularity. This field is excluded when determining changes in system information, i.e. changes of ta-CommonDriftVariant should neither result in system information change notifications nor in a modification of valueTag in SIB1. If the field is absent, the UE uses the (default) value of 0.</td>
+  </tr>
+  <tr>
+    <td>ta-Info, ta-InfoIoTIndicate network-controlled common timing advanced related information. ta-InfoIoT is used for access to IoT via NTN. ta-InfoIoT is only included in SIB28.</td>
+  </tr>
+  <tr>
+    <td>ta-ReportWhen this field is included in SIB19, it indicates reporting of timing advance is enabled during Random Access due to RRC connection establishment or RRC connection resume, and during RRC connection reestablishment. When configured, the UE may include TA report during the SDT procedure for CG-SDT. When this field is included in ServingCellConfigCommon within dedicated signalling, it indicates TA reporting is enabled during reconfiguration with sync (see TS 38.321 [3], clause 5.4.8).</td>
+  </tr>
+</table>

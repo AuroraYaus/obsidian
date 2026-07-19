@@ -1,0 +1,3 @@
+UCI-OnPUSCH field descriptions
+"betaOffsetsSelection between and configuration of dynamic and semi-static beta-offset for DCI formats other than DCI format 0_2. If the field is not configured, the UE applies the value 'semiStatic' (see TS 38.213 [13], clause 9.3)."
+"scalingIndicates a scaling factor to limit the number of resource elements assigned to UCI on PUSCH for DCI formats other than DCI format 0_2. Value f0p5 corresponds to 0.5, value f0p65 corresponds to 0.65, and so on. The value configured herein is applicable for PUSCH with configured grant (see TS 38.212 [17], clause 6.3)."

@@ -1,0 +1,43 @@
+Procedure title:,E-UTRAN -> UE,UE -> E-UTRAN,N,Notes
+RRC Connection Control Procedures,,,,
+RRC connection establishment,RRCConnectionSetup or RRCConnectionResume,RRCConnectionSetupComplete or RRCConnectionResumeComplete,15 or 3,"N = 3 applies for the case of reception of RRCConnectionResume if reducedCP-LatencyEnabled is configured, the UE supports reduced CP latency, and the RRC message only includes MAC and PHY (re-)configurations and does not include (re-)configurations of DRX, SPS, SCells, and MIMO. Further, the UL grant is sent using PDCCH DCI format 0 in common search space. In this scenario, the RRC procedure delay can extend beyond the reception of the UL grant, up to 7 ms.For other cases N = 15 applies."
+RRC connection release,RRCConnectionRelease,,NA,
+"RRC connection re-configuration (radio resource configuration, possibly including configuration of conditional reconfigurations)",RRCConnectionReconfiguration,RRCConnectionReconfigurationComplete,15,"Same requirement is applicable regardless of the number of target candidates being configured, if conditional reconfigurations are included in the message,"
+RRC connection re-configuration (measurement configuration),RRCConnectionReconfiguration,RRCConnectionReconfigurationComplete,15,
+RRC connection re-configuration (intra-LTE mobility),RRCConnectionReconfiguration,RRCConnectionReconfigurationComplete,15,
+RRC connection reconfiguration (SCell addition/release),RRCConnectionReconfiguration,RRCConnectionReconfigurationComplete,20,
+"RRC connection reconfiguration (SCG establishment/ release, SCG cell addition/ release)",RRCConnectionReconfiguration,RRCConnectionReconfigurationComplete,20,
+RRC connection re-configuration (NR measurement configuration),RRCConnectionReconfiguration,RRCConnectionReconfigurationComplete,15,
+RRC connection reconfiguration (NR SCG establishment/ /modification/release),RRCConnectionReconfiguration,RRCConnectionReconfigurationComplete,20,
+RRC connection re-configuration (intra-LTE mobility with NR SCG establishment/ /modification/release),RRCConnectionReconfiguration,RRCConnectionReconfigurationComplete,20,
+RRC connection re-configuration,DLDedicatedMessageSegment,RRCConnectionReconfigurationComplete,20+( Nseg-1)*10,Nsegis number of RRC segments
+RRC connection re-establishment,RRCConnectionReestablishment,RRCConnectionReestablishmentComplete,15,
+Initial security activation,SecurityModeCommand,SecurityModeCommandComplete/SecurityModeCommandFailure,10,
+Initial security activation + RRC connection re-configuration (RB establishment),"SecurityModeCommand, RRCConnectionReconfiguration",RRCConnectionReconfigurationComplete,20,The two DL messages are transmitted in the same TTI
+EDT or transmission using PUR,RRCEarlyDataComplete or RRCConnectionRelease,,NA,
+Paging,Paging,,NA,
+RRC connection resume (SCG establishment/ restoration/release),RRCConnectionResume,RRCConnectionResumeComplete,20,
+RRC connection resume (MCG SCell addition/restoration/release),RRCConnectionResume,RRCConnectionResumeComplete,20,
+RRC connection resume,DLDedicatedMessageSegment,RRCConnectionResumeComplete,20+( Nseg-1)*10,Nsegis number of RRC segments
+Inter RAT mobility,,,,
+Handover to E-UTRA,RRCConnectionReconfiguration (sent by other RAT),RRCConnectionReconfigurationComplete,NA,"The performance of this procedure is specified in TS 45.010 [50] in case of handover from GSM and TS 25.133 [29], TS 25.123 [30] in case of handover from UTRA, and TS 38.133 [84] in case of handover from NR."
+Handover from E-UTRA,MobilityFromEUTRACommand,,NA,The performance of this procedure is specified in TS 36.133 [16]
+Handover from E-UTRA to CDMA2000,HandoverFromEUTRAPreparationRequest (CDMA2000),,NA,Used to trigger the handover preparation procedure with a CDMA2000 RAT.The performance of this procedure is specified in TS 36.133 [16]
+Measurement procedures,,,,
+Measurement Reporting,,MeasurementReport,NA,
+Other procedures,,,,
+UE capability transfer,UECapabilityEnquiry,UECapabilityInformation,10/ 80,N = 80 applies in case the UE has to report at least one of the following UE capabilities.-MR-DC band combinations.-NR band combinations-EUTRA feature sets
+UE capability transfer,UECapabilityEnquiry,ULDedicatedMessageSegment,80,Applicable when UL RRC segmentation is enabled by the field rrc-SegAllowed.
+UE capability transfer,UECapabilityEnquiry,ULDedicatedMessageSegment,"560+max (0, Nseg-7)*80",Applicable when UL RRC segmentation is enabled by the field rrc-MaxCapaSegAllowed.Nseg is the value indicated by rrc-MaxCapaSegAllowed.
+Counter check,CounterCheck,CounterCheckResponse,10,
+Proximity indication,,ProximityIndication,NA,
+UE information,UEInformationRequest,UEInformationResponse,15,
+MBMS counting,MBMSCountingRequest,MBMSCountingResponse,NA,
+MBMS interest indication,,MBMSInterestIndication,NA,
+In-device coexistence indication,,InDeviceCoexIndication,NA,
+UE assistance information,,UEAssistanceInformation,NA,
+SCG failure information,,SCGFailureInformation,NA,
+NR SCG failure information,,SCGFailureInformationNR,NA,
+Sidelink UE information,,SidelinkUEInformation,NA,
+WLAN Connection Status Reporting,,WLANConnectionStatusReport,NA,
+PUR Configuration Request,,PURConfigurationRequest,NA,

@@ -1,0 +1,10 @@
+CSI-LogMeasReport field descriptions
+"cellIdThis field indicates the CGI of the cell in which the logging of the measurements included within csi-LogMeasInfoList was performed. If the CGI is not available, this field indicates the PCI-ARFCN-NR of the cell."
+csi-MoreLogMeasAvailableThis field is included if the UE has additional logged L1 radio measurements available for transmission.
+csi-RS-MeasResultListList of logged L1 radio measurement results associated to CSI-RS resources.
+"l1-RSRPIndicates the measured L1 RSRP associated to the resourceId, if included within CSI-RS-MeasResult. Indicates the measured L1 RSRP associated to the ssb-Id, if included within SSB-MeasResult."
+refCSI-LoggedMeasurementConfigIdReference to the instance of CSI-LoggedMeasurementConfig associated to the L1 radio measurement results reported in csi-RS-MeasResultList and/or ssb-MeasResultList.
+resourceIdIndicates the NZP-CSI-RS-ResourceId associated to which the UE has logged L1 radio measurement results.
+ssb-IdIndicates the SSB-Index associated to which the UE has logged L1 radio measurement results.
+ssb-MeasResultListList of logged L1 radio measurement results associated to SSBs.
+"timeGapIndicates that there was a time gap, longer than the logging periodicity, between the reported measurement results in this instance of csi-LogMeasInfoList and the previous instance of csi-LogMeasInfoList with the same refCSI-LoggedMeasurementConfigId for the same serving cell."

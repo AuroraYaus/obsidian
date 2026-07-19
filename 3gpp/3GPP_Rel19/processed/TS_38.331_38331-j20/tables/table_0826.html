@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <td>Counter</td>
+    <td>Reset</td>
+    <td>Incremented</td>
+    <td>When reaching max value</td>
+  </tr>
+  <tr>
+    <td>N310</td>
+    <td>Upon reception of &quot;in-sync&quot; indication from lower layers;upon receiving RRCReconfiguration with reconfigurationWithSync for that cell group;upon initiating the connection re-establishment procedure.</td>
+    <td>Upon reception of &quot;out-of-sync&quot; from lower layer while the timer T310 is stopped.</td>
+    <td>Start timer T310</td>
+  </tr>
+  <tr>
+    <td>N311</td>
+    <td>Upon reception of &quot;out-of-sync&quot; indication from lower layers;upon receiving RRCReconfiguration with reconfigurationWithSync for that cell group;upon initiating the connection re-establishment procedure.</td>
+    <td>Upon reception of the &quot;in-sync&quot; from lower layer while the timer T310 is running.</td>
+    <td>Stop the timer T310.</td>
+  </tr>
+</table>

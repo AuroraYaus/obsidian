@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td>SatSwitchWithReSync field descriptions</td>
+  </tr>
+  <tr>
+    <td>ssb-TimeOffsetIndicates the time offset of the SSB from target satellite at its uplink time synchronization reference point with respect to the SSB from source satellite at its uplink time synchronization reference point. The starting boundaries of SFN0 of the source satellite and the target satellite are aligned at the uplink time synchronization reference point. The value is given in number of subframes and can only be configured as 5 subframes or multiples of 5 subframes. This field is included only for soft satellite switch with re-synchronization.</td>
+  </tr>
+  <tr>
+    <td>t-ServiceStartIndicates the time information on when the target satellite is going to start serving the area currently covered by the serving satellite. The field indicates a time in multiples of 10 ms after 00:00:00 on Gregorian calendar date 1st January 1900 (midnight between Sunday, December 31, 1899, and Monday, January 1, 1900). The exact start time is between the time indicated by the value of this field minus 1 and the time indicated by the value of this field. The reference point for t-ServiceStart is the uplink time synchronization reference point of the serving satellite.</td>
+  </tr>
+</table>

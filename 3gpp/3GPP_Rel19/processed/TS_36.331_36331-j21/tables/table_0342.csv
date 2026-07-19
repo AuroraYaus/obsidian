@@ -1,0 +1,3 @@
+RRCEarlyDataComplete-NB field descriptions
+cbp-IndexIndex to the coverage-based paging configuration. Value 1 corresponds to the first entry in cbp-ConfigList and value 2 corresponds to the second entry in cbp-ConfigList in SystemInformationBlockType22-NB.
+extendedWaitTimeValue in seconds.

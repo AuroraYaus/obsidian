@@ -1,0 +1,15 @@
+L1-MeasConfigNRDC field descriptions
+maxCellsSSB-L1-MeasInterFreqSCGIndicates the maximum number of RRC configured LTM candidate cells inter-frequency L1 measurement.
+"maxCellsSSB-L1-MeasIntraFreqSCG, maxCellL1-CSI-RS-MeasIntraFreqSCGIndicates the maximum number of RRC configured LTM candidate cells for intra-frequency L1 measurement."
+maxCellsL1-MeasNoGapSCGIndicates the maximum number of neighbour cells UE can measure per frequency layer for intra-frequency or inter-frequency L1 measurements without measurement gaps.
+maxCellsL1-MeasWithGapSCGIndicates the maximum number of neighbour cells UE can measure per frequency layer for inter-frequency L1 measurements with measurement gaps.
+maxL1-MeasNoGapSCGIndicates the maximum number of frequency layers UE can measure for intra- and inter-frequency L1 measurements without measurement gaps.
+maxL1-MeasWithGapSCGIndicates the maximum number of frequency layers UE can measure for inter-frequency L1 measurements with measurement gaps.
+"maxReportConfigsAperiodicSSB, maxReportConfigsAperiodicCSI-RS, maxReportConfigsAperiodicSP-CSI-RSIndicates the maximum number of aperiodic LTM CSI report configurations."
+"maxReportConfigsPeriodicSSB, maxReportConfigsPeriodicCSI-RSIndicates the maximum number of periodic LTM CSI report configurations."
+"maxReportConfigsSemiPersistentSSB, maxReportConfigsSemiPersistentCSI-RS, maxReportConfigsSemiPersistentSP-CSI-RSIndicates the maximum number of semi-persistent LTM CSI report configurations."
+maxResourcesL1-MeasSCG-CSI-RSIndicates the maximum number of max number of CSI-RS resources for L1-RSRP measurement that UE can measure within a slot.
+"maxSSBsL1-MeasNoGapSCG, maxSSBsL1-MeasNoGapSCGExtIndicates the maximum number of SSB resources UE can measure per frequency layer for intra-frequency or inter-frequency L1 measurements without measurement gaps. If the field maxSSBsL1-MeasNoGapSCGExt is included, the field maxSSBsL1-MeasNoGapSCG is not present."
+maxSSBsL1-MeasWithGapSCGIndicates the maximum number of SSB resources UE can measure per frequency layer for inter-frequency L1 measurements with measurement gaps.
+"maxTotalCellsL1-MeasNoGapSCGIndicates the maximum total number of cells, including serving cells and neighboring cells, across all frequency layers of intra-frequency and inter-frequency L1 measurements, UE can measure without measurement gaps."
+"maxTotalSSBsL1-MeasNoGapSCGIndicates the maximum total number of SSB resources, including serving cells and neighboring cells, across all frequency layers of intra-frequency and inter-frequency L1 measurements, UE can measure without measurement gaps."

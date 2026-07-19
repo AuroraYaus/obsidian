@@ -1,0 +1,38 @@
+<table>
+  <tr>
+    <td>SystemInformationBlockType32 field descriptions</td>
+  </tr>
+  <tr>
+    <td>carrierFreqListIncludes a list of E-UTRA frequencies, see TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>elevationAngleLeft, elevationAngleRightLeftmost and rightmost (with reference to the satellite direction) elevation angle. Unit in degree.Step of 5 degree. Actual value = field value * 5.If the field elevationAngleLeft is absent, the leftmost elevation angle is equal to the value of field elevationAngleRight.</td>
+  </tr>
+  <tr>
+    <td>footprintInfoSatellite footprint.E-UTRAN may configure elevationAngles and/or radius for earth moving cell.E-UTRAN may configure referencePoint and radius for quasi-earth fixed cell.</td>
+  </tr>
+  <tr>
+    <td>latitudeLatitude of the reference point. Unit in degree.Step of 360 / 262144 degree. Actual value = field value * (360 / 262144).</td>
+  </tr>
+  <tr>
+    <td>longitudeLongitude of the reference point. Unit in degree.Step of 360 / 262144 degree. Actual value = field value * (360 / 262144).</td>
+  </tr>
+  <tr>
+    <td>radiusDistance between the reference point and the edge of the satellite or beam coverage. Unit in km.Step of 10 km. Actual value = field value * 10.</td>
+  </tr>
+  <tr>
+    <td>satelliteIdThe satellite ID applicable to a specific satellite, used to associate with the satellite assistance information for prediction of the discontinuous coverage.</td>
+  </tr>
+  <tr>
+    <td>satelliteInfoListList of satellite information. If E-UTRAN includes satelliteInfoList-v1830, it includes the same number of entries, and listed in the same order, as in satelliteInfoList-r17.In this version of the specification, E-UTRAN does not include satelliteInfoList-v1800.</td>
+  </tr>
+  <tr>
+    <td>serviceInfoInformation on when the satellite will provide coverage.E-UTRAN always configures tle-EphemerisParameters for a satellite with earth moving cell(s) and always configures t-ServiceStart for a quasi-earth fixed cell.</td>
+  </tr>
+  <tr>
+    <td>tle-EphemerisParametersMean values of the satellite orbital parameters based on the TLE set format for estimating in-coverage and out-of-coverage periods for a satellite with earth moving cell(s), see TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>t-ServiceStartTime information on when the incoming satellite is going to start serving the area for quasi-earth fixed cell.</td>
+  </tr>
+</table>

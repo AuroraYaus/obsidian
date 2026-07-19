@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <td>SIB17bis field descriptions</td>
+  </tr>
+  <tr>
+    <td>segmentContainerThis field includes a segment of the encoded SIB17bis-IEs. The size of the included segment in this container should be small enough that the SIB message size is less than or equal to the maximum size of a NR SI, i.e. 2976 bits when SIB17bis is broadcast.</td>
+  </tr>
+  <tr>
+    <td>segmentNumberThis field identifies the sequence number of a segment of SIB17bis-IEs. A segment number of zero corresponds to the first segment, a segment number of one corresponds to the second segment, and so on.</td>
+  </tr>
+  <tr>
+    <td>segmentTypeThis field indicates whether the included segment is the last segment or not.</td>
+  </tr>
+  <tr>
+    <td>trs-ResourceSetConfigRS configuration of TRS occasion(s) for idle/inactive UE(s), in terms of a list of N&gt;=1 NZP TRS resource set(s). The maximum number of TRS resource sets configured by higher layer is 64. If a TRS resource is configured, the L1 based availability indication is always enabled based on that configuration. A UE which acquired SIB17bis with a TRS configuration but did not yet receive an associated L1-based availability indication considers the configured TRS as unavailable. If SIB scheduling indicates that SIB17bis has changed, the UE considers its configured TRS(s) from SIB17bis as unavailable until it receives the associated L1-based availability indication(s).</td>
+  </tr>
+  <tr>
+    <td>validityDurationThe valid time duration for L1 availability indication, time unit is one default paging cycle. When the field is absent, UE assumes a default time duration to be 2 default paging cycles. The field is only valid while the UE has a valid SIB17bis.</td>
+  </tr>
+</table>

@@ -1,0 +1,4 @@
+UERadioPagingInformation field descriptions
+accessStratumReleaseIndicates that the UE supports reception of accessType-r16 in the Paging message.
+supportedBandListEUTRAForPagingIndicates the UE supported frequency bands which is derived by the eNB from UE-EUTRA-Capability.
+ue-RadioPagingInfoThe field is used to transfer UE capability information used for paging. The eNB generates the ue-RadioPagingInfo and the contained UE capability information is absent when not supported by the UE.

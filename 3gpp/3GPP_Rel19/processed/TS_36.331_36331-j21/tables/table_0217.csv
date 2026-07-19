@@ -1,0 +1,4 @@
+PreRegistrationInfoHRPD field descriptions
+preRegistrationAllowedTRUE indicates that a UE shall perform a CDMA2000 HRPD pre-registration if the UE does not have a valid / current pre-registration. FALSE indicates that the UE is not allowed to perform CDMA2000 HRPD pre-registration in the current cell.
+"preRegistrationZoneIDColorCode (see C.S0024 [26], C.S0087 [44]) of the CDMA2000 Reference Cell corresponding to the HRPD sector under the HRPD AN that is configured for this LTE cell. It is used to control when the UE should register or re-register."
+"secondaryPreRegistrationZoneIdListList of SecondaryColorCodes (see C.S0024 [26], C.S0087 [44]) of the CDMA2000 Reference Cell corresponding to the HRPD sector under the HRPD AN that is configured for this LTE cell. They are used to control when the UE should re-register."

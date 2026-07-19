@@ -1,0 +1,3 @@
+Conditional Presence,Explanation
+SpCellAdd,"The field is mandatory present if this FrequencyInfoDL is for SpCell. Otherwise the field is optionally present, Need S."
+SSBlessSCell,"The field is optionally present, Need S, if the inter-band SSB-less SCell is configured for this cell and absoluteFrequencySSB is absent. It is absent otherwise, Need R."

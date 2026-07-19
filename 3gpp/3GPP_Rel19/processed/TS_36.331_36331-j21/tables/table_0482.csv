@@ -1,0 +1,11 @@
+Parameter,Description,Value,NB-IoT
+#DRBs,The number of DRBs that a UE shall support,"8, 15NOTE2NOTE3","(0, 1, 2)NOTE1"
+#RLC-AM,The number of RLC AM entities that a UE shall support,"10, 17","(2, 3)NOTE1"
+#minCellperMeasObjectEUTRA,The minimum number of neighbour cells (excluding exclude-listed cells) that a UE shall be able to store within a MeasObjectEUTRA. NOTE.,32,N/A
+#minExcludedCellRangesperMeasObjectEUTRA,The minimum number of exclude-listed cell PCI ranges that a UE shall be able to store within a MeasObjectEUTRA,32,N/A
+#minCellperMeasObjectUTRA,The minimum number of neighbour cells that a UE shall be able to store within a MeasObjectUTRA. NOTE.,32,N/A
+#minCellperMeasObjectGERAN,The minimum number of neighbour cells that a UE shall be able to store within a measObjectGERAN. NOTE.,32,N/A
+#minCellperMeasObjectCDMA2000,The minimum number of neighbour cells that a UE shall be able to store within a measObjectCDMA2000. NOTE.,32,N/A
+#minExcludedCellperMeasObjectNR,The minimum number of exclude-listed cells that a UE shall be able to store within a MeasObjectNR,32,N/A
+#minCellTotal,The minimum number of neighbour cells (excluding exclude-listed cells) that UE shall be able to store in total in all measurement objects configured,256,N/A
+"NOTE:In case of CGI reporting, the limit regarding the cells E-UTRAN can configure includes the cell for which the UE is requested to report CGI i.e. the amount of neighbour cells that can be included is at most (# minCellperMeasObjectRAT - 1), where RAT represents EUTRA/UTRA/GERAN/CDMA2000 respectively.NOTE 1:#DRBs based on UE capability, #RLC-AM =#DRBs + 2.NOTE 2:'15' applies when the UE supports extendedNumberOfDRBs-r15. For one MAC entity, the maximum number of DRBs configured with PDCP duplication and with RLC entity(ies) associated with this MAC entity is 8.NOTE 3:The requirement is applicable in EN-DC, NGEN-DC and LTE standalone.",,,

@@ -1,0 +1,8 @@
+PRACH configuration period (msec),Association period (number of PRACH configuration periods)
+10,"{1, 2, 4, 8, 16, 32, 64}"
+20,"{1, 2, 4, 8, 16, 32}"
+40,"{1, 2, 4, 8, 16}"
+80,"{1, 2, 4, 8}"
+160,"{1, 2, 4}"
+320,"{1, 2}"
+640,{1}

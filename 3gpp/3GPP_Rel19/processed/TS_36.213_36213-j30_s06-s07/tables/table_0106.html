@@ -1,0 +1,667 @@
+<table>
+  <tr>
+    <td rowspan="3">PUCCH Reporting Type</td>
+    <td rowspan="3">Reported</td>
+    <td rowspan="3">Mode State</td>
+    <td colspan="4">PUCCH Reporting Modes</td>
+  </tr>
+  <tr>
+    <td>Mode 1-1</td>
+    <td>Mode 2-1</td>
+    <td>Mode 1-0</td>
+    <td>Mode 2-0</td>
+  </tr>
+  <tr>
+    <td>(bits/BP*)</td>
+    <td>(bits/BP*)</td>
+    <td>(bits/BP*)</td>
+    <td>(bits/BP*)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">1</td>
+    <td rowspan="2">Sub-bandCQI</td>
+    <td>RI = 1</td>
+    <td>NA</td>
+    <td>4+L</td>
+    <td>NA</td>
+    <td>4+L</td>
+  </tr>
+  <tr>
+    <td>RI &gt; 1</td>
+    <td>NA</td>
+    <td>7+L</td>
+    <td>NA</td>
+    <td>4+L17+L2</td>
+  </tr>
+  <tr>
+    <td rowspan="8">1a</td>
+    <td rowspan="8">Sub-band CQI / second PMI</td>
+    <td>8 antenna ports or 8/12/16/20/24/28/32 antenna ports with codebookConfig={2,3,4}, RI = 1</td>
+    <td>NA</td>
+    <td>8+L</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports or 8/12/16/20/24/28/32 antenna ports with codebookConfig={2,3,4}, 1 &lt; RI &lt; 5</td>
+    <td>NA</td>
+    <td>9+L</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports or 8/12/16/20/24/28/32 antenna ports with codebookConfig={1,2,3,4} RI &gt; 4</td>
+    <td>NA</td>
+    <td>7+L</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8/12/16/20/24/28/32 antenna ports with codebookConfig=1, RI = 1</td>
+    <td>NA</td>
+    <td>6+L</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8/12/16/20/24/28/32 antenna ports with codebookConfig=1, RI = 2</td>
+    <td>NA</td>
+    <td>9+L</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8/12/16/20/24/28/32 antenna ports with codebookConfig=1, 2&lt;RI&lt;5</td>
+    <td>NA</td>
+    <td>8+L</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports RI=1</td>
+    <td>NA</td>
+    <td>8+L</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports 1&lt;RI4</td>
+    <td>NA</td>
+    <td>9+L</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td rowspan="12">2</td>
+    <td rowspan="12">Wideband CQI/PMI</td>
+    <td>2 antenna ports RI = 1</td>
+    <td>6</td>
+    <td>6</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports RI = 1, Note5</td>
+    <td>8</td>
+    <td>8</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>2 antenna ports RI &gt; 1</td>
+    <td>8</td>
+    <td>8</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports RI &gt; 1, Note5</td>
+    <td>11</td>
+    <td>11</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports RI = 1, Note6</td>
+    <td>7</td>
+    <td>7</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports RI = 2, Note6</td>
+    <td>10</td>
+    <td>10</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports RI = 3, Note6</td>
+    <td>9</td>
+    <td>9</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports RI = 4, Note6</td>
+    <td>8</td>
+    <td>8</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports RI = 1</td>
+    <td>8</td>
+    <td>8</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports 1&lt;RI&lt;4</td>
+    <td>11</td>
+    <td>11</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports RI = 4</td>
+    <td>10</td>
+    <td>10</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports RI &gt; 4</td>
+    <td>7</td>
+    <td>7</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td rowspan="14">2a</td>
+    <td rowspan="14">Wideband first PMI</td>
+    <td>8 antenna ports RI &lt; 3</td>
+    <td>NA</td>
+    <td>4</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports 2 &lt; RI &lt; 8</td>
+    <td>NA</td>
+    <td>2</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports RI = 8</td>
+    <td>NA</td>
+    <td>0</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports 1RI2</td>
+    <td>NA</td>
+    <td>4</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports 2RI4</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8/12/16/20/24/28/32 antenna ports with codebookConfig=1, 1RI8</td>
+    <td>Note3</td>
+    <td>Note3</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8/12/16/20/24/28/32 antenna ports with codebookConfig={2,3,4}</td>
+    <td>Note4</td>
+    <td>Note4</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports with advancedCodebookEnabled =True, 1RI2</td>
+    <td>3</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports with advancedCodebookEnabled =True, 3RI4</td>
+    <td>0</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports with advancedCodebookEnabled =True, 1RI2</td>
+    <td>6</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports with advancedCodebookEnabled =True, 3RI7</td>
+    <td>2</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports with advancedCodebookEnabled =True, RI=8</td>
+    <td>0</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8/12/16/20/24/28/32 antenna ports with advancedCodebookEnabled =True and eMIMO-Type is set to &#x27;CLASS A&#x27;, 1RI8</td>
+    <td>Note7</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8/12/16/20/24/28/32 antenna ports, eMIMO-Type and eMIMO-Type2 configured by higher layers, eMIMO-Type is set to &#x27;CLASS A&#x27;, eMIMO-Type2 is set to &#x27;CLASS B&#x27;, and maximum 1 or 2 layers are supported by the UE</td>
+    <td>Note8</td>
+    <td>Note8</td>
+    <td>Note8</td>
+    <td>Note8</td>
+  </tr>
+  <tr>
+    <td rowspan="11">2b</td>
+    <td rowspan="11">Wideband CQI / second PMI</td>
+    <td>8 antenna ports or 8/12/16/20/24/28/32 antenna ports with codebookConfig = {2,3,4}, RI = 1</td>
+    <td>8</td>
+    <td>8</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports or 8/12/16/20/24/28/32 antenna ports with codebookConfig = {2,3,4}, 1 &lt; RI &lt; 4</td>
+    <td>11</td>
+    <td>11</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports or 8/12/16/20/24/28/32 antenna ports with codebookConfig = {2,3,4}, RI = 4</td>
+    <td>10</td>
+    <td>10</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports or 8/12/16/20/24/28/32 antenna ports with codebookConfig = {1,2,3,4}, RI &gt; 4</td>
+    <td>7</td>
+    <td>7</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports RI=1</td>
+    <td>8</td>
+    <td>8</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna port 1&lt;RI4</td>
+    <td>11</td>
+    <td>11</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8/12/16/20/24/28/32 antenna ports with codebookConfig=1, RI = 1</td>
+    <td>6</td>
+    <td>6</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8/12/16/20/24/28/32 antenna ports with codebookConfig=1, RI = 2</td>
+    <td>9</td>
+    <td>9</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8/12/16/20/24/28/32 antenna ports with codebookConfig=1, 2&lt;RI&lt;5</td>
+    <td>8</td>
+    <td>8</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4/8 antenna ports with advancedCodebookEnabled =True or 8/12/16/20/24/28/32 antenna ports with advancedCodebookEnabled =True and eMIMO-Type is set to &#x27;CLASS A&#x27;, RI = 1</td>
+    <td>10</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4/8 antenna ports with advancedCodebookEnabled =True or 8/12/16/20/24/28/32 antenna ports with advancedCodebookEnabled =True and eMIMO-Type is set to &#x27;CLASS A&#x27;, RI = 2</td>
+    <td>11</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td rowspan="6">2c</td>
+    <td rowspan="6">Wideband CQI / first PMI / second PMI</td>
+    <td>8 antenna ports RI = 1</td>
+    <td>8</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports 1 &lt; RI  4</td>
+    <td>11</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports 4 &lt; RI  7</td>
+    <td>9</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports RI = 8</td>
+    <td>7</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports RI=1</td>
+    <td>8</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna port 1&lt;RI4</td>
+    <td>11</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td rowspan="8">3</td>
+    <td rowspan="8">RI</td>
+    <td>2/4 antenna ports, 2-layer spatial multiplexing</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports, 2-layer spatial multiplexing</td>
+    <td>1</td>
+    <td>NA</td>
+    <td>NA112</td>
+    <td>NA112</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports, 4-layer spatial multiplexing</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports, 4-layer spatial multiplexing</td>
+    <td>2</td>
+    <td>NA</td>
+    <td>NA122</td>
+    <td>NA122</td>
+  </tr>
+  <tr>
+    <td>8-layer spatial multiplexing</td>
+    <td>3</td>
+    <td>NA</td>
+    <td>NA132</td>
+    <td>NA132</td>
+  </tr>
+  <tr>
+    <td>12/16/20/24/28/32 antenna ports, 2-layer spatial multiplexing</td>
+    <td>1</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>12/16/20/24/28/32 antenna ports, 4-layer spatial multiplexing</td>
+    <td>2</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>12/16/20/24/28/32 antenna ports, 8-layer spatial multiplexing</td>
+    <td>3</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td rowspan="3">4</td>
+    <td rowspan="3">Wideband CQI</td>
+    <td>RI = 1 or RI&gt;1, without PMI/RI reporting</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>4</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>RI = 1 without PMI reporting</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>4</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>RI&gt;1 without PMI reporting</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>7</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td rowspan="5">5</td>
+    <td rowspan="5">RI/ first PMI</td>
+    <td>8 antenna ports, 2-layer spatial multiplexing</td>
+    <td>4</td>
+    <td rowspan="4">NA</td>
+    <td rowspan="4">NA</td>
+    <td rowspan="4">NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports, 4 and 8-layer spatial multiplexing</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports, 2-layer spatial multiplexing</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports, 4-layer spatial multiplexing</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>8/12/16/20/24/28/32 antenna ports, eMIMO-Type and eMIMO-Type2 configured by higher layers, eMIMO-Type is set to &#x27;CLASS A&#x27;, eMIMO-Type2 is set to &#x27;CLASS B&#x27;, and maximum 4 or 8 layers are supported by the UE</td>
+    <td>Note9</td>
+    <td>Note9</td>
+    <td>Note9</td>
+    <td>Note9</td>
+  </tr>
+  <tr>
+    <td rowspan="8">6</td>
+    <td rowspan="8">RI/PTI</td>
+    <td>8 antenna ports, 2-layer spatial multiplexing</td>
+    <td>NA</td>
+    <td>2</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports, 4-layer spatial multiplexing</td>
+    <td>NA</td>
+    <td>3</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8 antenna ports, 8-layer spatial multiplexing</td>
+    <td>NA</td>
+    <td>4</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports, 2-layer spatial multiplexing</td>
+    <td>NA</td>
+    <td>2</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 antenna ports, 4-layer spatial multiplexing</td>
+    <td>NA</td>
+    <td>3</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>12/16/20/24/28/32 antenna ports, 2-layer spatial multiplexing</td>
+    <td>NA</td>
+    <td>2</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>12/16/20/24/28/32 antenna ports, 4-layer spatial multiplexing</td>
+    <td>NA</td>
+    <td>3</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>12/16/20/24/28/32 antenna ports, 8-layer spatial multiplexing</td>
+    <td>NA</td>
+    <td>4</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td rowspan="3">7</td>
+    <td rowspan="3">CRI/RI</td>
+    <td>2-layer spatial multiplexing</td>
+    <td>k+1</td>
+    <td>k+1</td>
+    <td>k+1</td>
+    <td>k+1</td>
+  </tr>
+  <tr>
+    <td>4-layer spatial multiplexing</td>
+    <td>k+2</td>
+    <td>k+2</td>
+    <td>k+2</td>
+    <td>k+2</td>
+  </tr>
+  <tr>
+    <td>8-layer spatial multiplexing</td>
+    <td>k+3</td>
+    <td>k+3</td>
+    <td>k+3</td>
+    <td>k+3</td>
+  </tr>
+  <tr>
+    <td rowspan="2">8</td>
+    <td rowspan="2">CRI/RI/first PMI</td>
+    <td>2-layer spatial multiplexing</td>
+    <td>k+4</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4 and 8-layer spatial multiplexing</td>
+    <td>k+5</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td rowspan="3">9</td>
+    <td rowspan="3">CRI/RI/PTI</td>
+    <td>2-layer spatial multiplexing</td>
+    <td>NA</td>
+    <td>k+2</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4-layer spatial multiplexing</td>
+    <td>NA</td>
+    <td>k+3</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8-layer spatial multiplexing</td>
+    <td>NA</td>
+    <td>k+4</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>CRI</td>
+    <td>Without PMI/RI reporting</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>k</td>
+    <td>k</td>
+  </tr>
+  <tr>
+    <td rowspan="3">11</td>
+    <td rowspan="3">RI/RPI</td>
+    <td>2-layer spatial multiplexing</td>
+    <td>3</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>4-layer spatial multiplexing</td>
+    <td>4</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>8-layer spatial multiplexing</td>
+    <td>5</td>
+    <td>NA</td>
+    <td>NA</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td colspan="7">NOTE *:For wideband CQI reporting types, the stated payload size applies to the full bandwidth.NOTE 1:Without PMI/RI reportingNOTE 2:Without PMI reporting and without csi-RS-NZP-mode,  where is the number of configured CSI-RS resources or without PMI reporting and with higher layer parameter csi-RS-NZP-mode set to &#x27;multiShot&#x27; and activatedResources&gt;1,  where N is the number of activated CSI-RS resources.NOTE 3:Sum of Wideband first PMI i1,1 bit width and Wideband first PMI i1,2 bit width in Table 5.2.3.3.2-3B-1 of [4] with PTI=0NOTE 4:Sum of Wideband first PMI i1,1 bit width and Wideband first PMI i1,2 bit width in Table 5.2.3.3.2-3B-2 of [4] with PTI=0NOTE 5:Not configured with parameter eMIMO-Type by higher-layersNOTE 6:Configured with parameter eMIMO-Type by higher-layers Note 7:Sum of Wideband first PMI i1,1 bit width, Wideband first PMI i1,2 bit width, Wideband first PMI i1,3 bit width in Table 5.2.3.3.1-4C of [4]NOTE 8:Sum of Wideband first PMI i1,1 bit width and Wideband first PMI i1,2 bit width in Table 5.2.3.3.1-4D of [4] with Max 1 or 2 layers.NOTE 9:Sum of Wideband first PMI i1,1 bit width, Wideband first PMI i1,2 bit width and RI bit width in Table 5.2.3.3.1-4D of [4] with Max 4 or 8 layers.</td>
+  </tr>
+</table>

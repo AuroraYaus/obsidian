@@ -1,0 +1,2 @@
+SystemInformationBlockType13 field descriptions
+notificationConfigIndicates the MBMS notification related configuration parameters. The UE shall ignore this field when dl-Bandwidth included in MasterInformationBlock is set to n6.

@@ -1,0 +1,3 @@
+Conditional Presence,Explanation
+ODssbAOssb,"The field is mandatory present, when absoluteFrequencySSB of the serving cell is absent. It is optionally present, Need R, otherwise."
+MACCE,"The field is optionally present, Need R, when od-SSB-ActivationStatus is absent. It is absent otherwise."

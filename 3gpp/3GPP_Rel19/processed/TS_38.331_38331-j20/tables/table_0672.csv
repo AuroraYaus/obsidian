@@ -1,0 +1,2 @@
+SidelinkParametersEUTRA field descriptions
+"sl-ParametersEUTRA1, sl-ParametersEUTRA2, sl-ParametersEUTRA3This field includes IE of SL-Parameters-v1430 (where v2x-eNB-Scheduled-r14 and V2X-SupportedBandCombination-r14 shall not be included), SL-Parameters-v1530 (where V2X-SupportedBandCombination-r1530 shall not be included) and SL-Parameters-v1540 respectively defined in 36.331 [10]. It is used for reporting the per-UE capability for V2X sidelink communication."

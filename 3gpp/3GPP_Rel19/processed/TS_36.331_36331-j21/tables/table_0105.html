@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td>SystemInformationBlockType31 field descriptions</td>
+  </tr>
+  <tr>
+    <td>distanceThreshDistance from the serving cell reference location and is used in location-based measurement initiation in RRC_IDLE (as specified in TS 36.304 [4]) and RRC_CONNECTED. Each step represents 50m.</td>
+  </tr>
+  <tr>
+    <td>epochTimeEpoch time of the satellite ephemeris data and common TA parameters, see TS 36.213 [23]. This field also indicates the epoch time for the reference location of earth moving cells if present. The reference point for epoch time of the serving satellite ephemeris and Common TA parameters is the uplink time synchronization reference point of the serving cell.epochTime is the starting time of a DL subframe indicated by startSFN and startSubframe. For serving cell, the epochTime is no earlier than the frame where the last repetition of the message indicating the epochTime is transmitted.If the field is absent, the epoch time is the starting time of the DL subframe corresponding to the end of the SI window during which the SI message carrying SIB31(-NB) is transmitted.E-UTRAN always includes epochTime when SIB31(-NB) is provided through dedicated signalling.In case of handover or conditional handover, this field is based on the timing of the target cell, i.e. the startSFN and startSubFrame number indicated in this field refers to the SFN and sub-frame of the target cell, and UE considers the target cell epoch time (indicated by the startSFN and startSubFrame in this field) to be the frame nearest to the frame where RRCConnectionReconfiguration message is received. In case of handover or conditional handover, the reference point for epoch time of the target NTN payload ephemeris and Common TA parameters is the uplink time synchronization reference point of the target cell.</td>
+  </tr>
+  <tr>
+    <td>k-MacScheduling offset used when downlink and uplink frame timing are not aligned at the eNB, see TS 36.213 [23]. Unit in ms.If the field if absent, the UE uses the (default) value of 0.</td>
+  </tr>
+  <tr>
+    <td>k-OffsetScheduling offset used in the timing relationships in NTN, see TS 36.213 [23]. Unit in ms.</td>
+  </tr>
+  <tr>
+    <td>nta-CommonNetwork-controlled common TA, see TS 36.213 [23]. Unit of μs.Step of 32.55208 ×10-3 μs. Actual value = field value * 32.55208 ×10-3.If the field is absent, the UE uses the (default) value of 0.</td>
+  </tr>
+  <tr>
+    <td>nta-CommonDriftDrift rate of the common TA, see TS 36.213 [23]. Unit of μs/s.Step of 0.2 ×10-3 μs/s. Actual value = field value * 0.2 ×10-3.If the field is absent, the UE uses the (default) value of 0.</td>
+  </tr>
+  <tr>
+    <td>nta-CommonDriftVariationDrift rate variation of the common TA, see TS 36.213 [23]. Unit of μs/s2.Step of 0.2 ×10-4 μs/s2. Actual value = field value * 0.2 ×10-4.If the field is absent, the UE uses the (default) value of 0.</td>
+  </tr>
+  <tr>
+    <td>orbitalParametersInstantaneous values of the satellite orbital parameters. The signalled values are valid at least for the duration as defined by ul-SyncValidityDuration and epochTime.</td>
+  </tr>
+  <tr>
+    <td>referenceLocationReference location of the NTN (quasi-)earth fixed cell or earth moving cell, used in location-based measurement initiation in RRC_IDLE (as specified in TS 36.304 [4]) and RRC_CONNECTED if distanceThresh is also configured. If configured by an earth moving cell, the broadcast reference location corresponds to the epoch time and is also used in the evaluation of Event D2 and CondEvent D2, and the UE derives the real-time reference location based on the serving satellite ephemeris, see TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>stateVectorsInstantaneous values of the satellite state vectors. The signalled values are valid at least for the duration as defined by ul-SyncValidityDuration and epochTime.</td>
+  </tr>
+  <tr>
+    <td>t-ModeSwitchingIf sf-OperationMode is present in SIB1, this field indicates the time information on when an NTN cell is going to switch from the Store and Forward Satellite operation mode to the normal mode; otherwise, this field indicates the time information on when an NTN cell is going to switch from the normal mode to the Store and Forward Satellite operation mode.</td>
+  </tr>
+  <tr>
+    <td>ul-SyncValidityDurationValidity duration of the satellite ephemeris data and common TA parameters, i.e. maximum time duration (from epochTime) during which the UE can apply the satellite ephemeris without acquiring new satellite ephemeris, see TS 36.213 [23]. Unit in second.Value s5 corresponds to 5 seconds, value s10 corresponds to 10 seconds and so on.The ul-SyncValidityDuration is only updated when at least one of epochTime, nta-CommonParameters, ephemerisInfo is updated.</td>
+  </tr>
+</table>

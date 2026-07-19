@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <td>SCellConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>goodServingCellEvaluationBFDIndicates the criterion for a UE to detect the good serving cell quality for BFD relaxation in an SCell in RRC_CONNECTED. This field is always configured when the network enables BFD relaxation for the UE in this SCell. This field is absent if failureDetectionSetN is present for the SCell.</td>
+  </tr>
+  <tr>
+    <td>preConfGapStatusIndicates whether the pre-configured measurement gaps (i.e. the gaps configured with preConfigInd) are activated or deactivated while this SCell is deactivated. If this field is configured, the UE shall apply network-controlled mechanism for activation and deactivation of the pre-configured measurement gaps, otherwise the UE shall apply the autonomous activation/deactivation mechanism, as specified in TS 38.133 [14]. The first/leftmost bit corresponds to the measurement gap with gap ID 1, the second bit corresponds to measurement gap with gap ID 2, and so on. Value 0 indicates that the corresponding pre-configured measurement gap is deactivated while value 1 indicates that the corresponding pre-configured measurement gap is activated. The UE shall ignore the bit if the corresponding measurement gap is not a pre-configured measurement gap.</td>
+  </tr>
+  <tr>
+    <td>sCellStateIndicates whether the SCell shall be considered to be in activated state upon SCell configuration. If the field is included for an SCell configured with TRS for fast activation of the SCell, such TRS is not used for the corresponding SCell.</td>
+  </tr>
+  <tr>
+    <td>secondaryDRX-GroupConfigThe field is used to indicate whether the SCell belongs to the secondary DRX group. All serving cells in the secondary DRX group shall belong to one Frequency Range and all serving cells in the default DRX group shall belong to another Frequency Range. If drx-ConfigSecondaryGroup is configured, the field is optionally present. The network always includes the field if the field was previously configured for this SCell and the SCell remains in the secondary DRX group. Removal of an individual SCell from the secondary DRX group is supported by using an SCell release and addition. Otherwise, if drx-ConfigSecondaryGroup is not configured, the field is absent and the UE shall release the field. The UE shall also release the field if drx-ConfigSecondaryGroup is released without including sCellToAddModList.</td>
+  </tr>
+  <tr>
+    <td>smtcThe SSB periodicity/offset/duration configuration of target cell for NR SCell addition. The network sets the periodicityAndOffset to indicate the same periodicity as ssb-periodicityServingCell in sCellConfigCommon. The smtc is based on the timing of the SpCell of associated cell group. In case of inter-RAT handover to NR, the timing reference is the NR PCell. In case of intra-NR PCell change (standalone NR) or NR PSCell change (EN-DC), the timing reference is the target SpCell. If the field is absent and absoluteFrequencySSB is included, the UE uses the SMTC in the measObjectNR having the same SSB frequency and subcarrier spacing, as configured before the reception of the RRC message. If the SCell is an SSB-less SCell, this field is absent.</td>
+  </tr>
+</table>

@@ -1,0 +1,3 @@
+RadioBearerConfig field descriptions
+"securityConfigIndicates the security algorithm and key to use for the signalling and data radio bearers configured with the list in this IE RadioBearerConfig. When the field is not included after AS security has been activated, the UE shall continue to use the currently configured keyToUse and security algorithm for the radio bearers reconfigured with the lists in this IE RadioBearerConfig. The field is not included when configuring SRB1 before AS security is activated."
+srb3-ToReleaseRelease SRB3. SRB3 release can only be done over SRB1 and only at SCG release and reconfiguration with sync.

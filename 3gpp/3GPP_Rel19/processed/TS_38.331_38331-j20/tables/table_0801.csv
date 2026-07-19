@@ -1,0 +1,6 @@
+MBS-NonServingInfoList field descriptions
+freqInfoMBSIndicates MBS frequency of interest and the frequency band of the non-serving cell for MBS broadcast reception as specified in clause 5.9.4.3.
+cfr-infoMBSIndicates the CFR information of the non-serving cell for MBS broadcast reception. It is up to UE implementation to choose cfr-Bandwidth or cfr-LocationAndBW as the reported CFR information.
+cfr-BandwidthIndicates the CFR bandwidth of the non-serving cell for MBS broadcast reception.
+cfr-LocationAndBWIndicates the CFR location and bandwidth of the non-serving cell for MBS broadcast reception.
+subcarrierSpacingIndicates the subcarrier spacing of the CORESET#0 of the non-serving cell for MBS broadcast reception.

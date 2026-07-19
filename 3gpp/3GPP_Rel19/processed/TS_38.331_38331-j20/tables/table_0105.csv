@@ -1,0 +1,3 @@
+ULInformationTransferMRDC field descriptions
+"ul-DCCH-MessageNRIncludes the UL-DCCH-Message. In this version of the specification, the field is only used to transfer the NR RRC MeasurementReport, RRCReconfigurationComplete, UEAssistanceInformation, FailureInformation, and IABOtherInformation messages when sent via SRB1 and to transfer the NR MCGFailureInformation message when sent via SRB3."
+"ul-DCCH-MessageEUTRAIncludes the UL-DCCH-Message. In this version of the specification, the field is only used to transfer the E-UTRA RRC MeasurementReport message when sent via SRB1 and to transfer the E-UTRA MCGFailureInformation message when sent via SRB3."

@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <td>ServingCellConfigCommonSIB field descriptions</td>
+  </tr>
+  <tr>
+    <td>channelAccessModeIf present, this field indicates which channel access procedures to apply for operation with shared spectrum channel access as defined in TS 37.213 [48]. If the field is configured as &quot;semiStatic&quot;, the UE shall apply the channel access procedures for semi-static channel occupancy as described in clause 4.3 in TS 37.213. If the field is configured as &quot;dynamic&quot;, the UE shall apply the channel access procedures as defined in TS 37.213, clause 4.1 and 4.2.</td>
+  </tr>
+  <tr>
+    <td>channelAccessMode2If present, this field indicates that the UE shall apply channel access procedures for operation with shared spectrum channel access in accordance with TS 37.213 [48], clause 4.4 for FR2-2. If absent, the UE shall not apply any channel access procedure. The network always configures this field if channel access procedures are required for the serving cell within this region by regulations.</td>
+  </tr>
+  <tr>
+    <td>discoveryBurstWindowLengthIndicates the window length of the discovery burst in ms (see TS 37.213 [48]). The field discoveryBurstWindowLength-v1700 is applicable to SCS 480 kHz and SCS 960 kHz.</td>
+  </tr>
+  <tr>
+    <td>enhancedMeasurementNGSOIf the field is present and UE supports the enhanced cell reselection requirements for NTN NGSO in RRC_IDLE/RRC_INACTIVE, the UE shall apply the enhanced cell reselection requirements for NTN NGSO as specified in TS 38.133 [14], clauses 4.2C.2.3 and 4.2C.2.4.</td>
+  </tr>
+  <tr>
+    <td>groupPresenceThis field is present when maximum number of SS/PBCH blocks per half frame equals to 64 as defined in TS 38.213 [13], clause 4.1. The first/leftmost bit corresponds to the SS/PBCH index 0-7, the second bit corresponds to SS/PBCH block 8-15, and so on. Value 0 in the bitmap indicates that the SSBs according to inOneGroup are absent. Value 1 indicates that the SS/PBCH blocks are transmitted in accordance with inOneGroup.</td>
+  </tr>
+  <tr>
+    <td>inOneGroupWhen maximum number of SS/PBCH blocks per half frame equals to 4 as defined in TS 38.213 [13], clause 4.1, only the 4 leftmost bits are valid; the UE ignores the 4 rightmost bits. When maximum number of SS/PBCH blocks per half frame equals to 8 as defined in TS 38.213 [13], clause 4.1, all 8 bits are valid. The first/ leftmost bit corresponds to SS/PBCH block index 0, the second bit corresponds to SS/PBCH block index 1, and so on. When maximum number of SS/PBCH blocks per half frame equals to 64 as defined in TS 38.213 [13], clause 4.1, all 8 bit are valid; The first/ leftmost bit corresponds to the first SS/PBCH block index in the group (i.e., to SSB index 0, 8, and so on); the second bit corresponds to the second SS/PBCH block index in the group (i.e., to SSB index 1, 9, and so on), and so on. Value 0 in the bitmap indicates that the corresponding SS/PBCH block is not transmitted while value 1 indicates that the corresponding SS/PBCH block is transmitted.</td>
+  </tr>
+  <tr>
+    <td>n-TimingAdvanceOffsetThe N_TA-Offset to be applied for random access on this serving cell. If the field is absent, the UE applies the value defined for the duplex mode and frequency range of this serving cell. See TS 38.133 [14], table 7.1.2-2/table 7.1C.2-4.</td>
+  </tr>
+  <tr>
+    <td>ra-ChannelAccessIf present, this field indicates that the UE shall apply channel access procedures before msg1/msgA transmission for operation with shared spectrum channel access in accordance with TS 37.213 [48], clause 4.4.5 for FR2-2.</td>
+  </tr>
+  <tr>
+    <td>ssb-PositionsInBurstTime domain positions of the transmitted SS-blocks in an SS-burst as defined in TS 38.213 [13], clause 4.1.For operation with shared spectrum channel access in FR1, only inOneGroup is used and the UE interprets this field same as mediumBitmap in ServingCellConfigCommon. The UE assumes that a bit in inOneGroup at position k &gt;  is 0, where  is obtained from MIB as specified in TS 38.213 [13], clause 4.1. For operation with shared spectrum channel access in FR2-2, the m-th bit in groupPresence is set to 0 for m &gt; /8, where  is obtained from MIB as specified in TS 38.213 [13], clause 4.1.NSSBQCLNSSBQCLNSSBQCLNSSBQCL</td>
+  </tr>
+  <tr>
+    <td>ss-PBCH-BlockPowerAverage EPRE of the resources elements that carry secondary synchronization signals in dBm that the NW used for SSB transmission, see TS 38.213 [13], clause 7.</td>
+  </tr>
+</table>

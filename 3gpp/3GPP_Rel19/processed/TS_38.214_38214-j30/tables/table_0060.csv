@@ -1,0 +1,9 @@
+Layers,typeI-codebookMode-r19 = 'modeB'
+υ=1,"Wm11,m21,c1(1)=1PCSI-RSvm11,m21φc1vm11,m21"
+υ=2,"Wm11,m12,m21,m22,c1,c2(2)=12PCSI-RSvm11,m21vm12,m22φc1vm11,m21φc2vm12,m22"
+υ=3,"Wm11,m12,m13,m21,m22,m23,c1,c2,c3(3)=13PCSI-RSvm11,m21vm12,m22vm13,m23φc1vm11,m21φc2vm12,m22φc3vm13,m23"
+υ=4,"Wm11,m12,m13,m14,m21,m22,m23,m24,c1,c2,c3,c4(4)=14PCSI-RSvm11,m21vm12,m22vm13,m23vm14,m24φc1vm11,m21φc2vm12,m22φc3vm13,m23φc4vm14,m24"
+υ=5,"Wm11,m12,m13,m21,m22,m23,c1,c2,c3,c4,c5(5)=15PCSI-RSvm11,m21vm11,m21vm12,m22vm12,m22vm13,m23φc1vm11,m21φc2vm11,m21φc3vm12,m22φc4vm12,m22φc5vm13,m23"
+υ=6,"Wm11,m12,m13,m21,m22,m23,c1,c2,c3,c4,c5,c6(6)=16PCSI-RSvm11,m21vm11,m21vm12,m22vm12,m22vm13,m23vm13,m23φc1vm11,m21φc2vm11,m21φc3vm12,m22φc4vm12,m22φc5vm13,m23φc6vm13,m23"
+υ=7,"Wm11,m12,m13,m14,m21,m22,m23,m24,c1,c2,c3,c4,c5,c6,c77=17PCSI-RSvm11,m21vm11,m21vm12,m22vm13,m23vm13,m23vm14,m24φc1vm11,m21φc2vm11,m21φc3vm12,m22φc4vm13,m23φc5vm13,m23φc6vm14,m24vm14,m24φc7vm14,m24"
+υ=8,"Wm11,m12,m13,m14,m21,m22,m23,m24,c1,c2,c3,c4,c5,c6,c7,c88=18PCSI-RSvm11,m21vm11,m21vm12,m22vm12,m22vm13,m23vm13,m23φc1vm11,m21φc2vm11,m21φc3vm12,m22φc4vm12,m22φc5vm13,m23φc6vm13,m23vm14,m24vm14,m24φc7vm14,m24φc8vm14,m24"

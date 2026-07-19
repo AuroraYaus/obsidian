@@ -1,0 +1,4 @@
+Conditional presence,Explanation
+non-anchor-inband,The field is mandatory present if the non-anchor carrier is an inband carrier; otherwise it is not present.
+anchor-guardband-or-standalone,"The field is mandatory present, if operationModeInfo is set to guardband or standalone in the MIB; otherwise it is not present."
+TDD,"The field is optionally present, Need OR, for TDD; otherwise the field is not present and the UE shall delete any existing value for this field."

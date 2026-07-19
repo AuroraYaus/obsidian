@@ -1,0 +1,82 @@
+<table>
+  <tr>
+    <td>Features</td>
+    <td>Condition</td>
+  </tr>
+  <tr>
+    <td>Acquisition of positioning SI messages with 80 milliseconds offset position compared to SI messages in schedulingInfoList</td>
+    <td>It is mandatory to support acquisition of positioning SI messages with 80 milliseconds offset position compared to SI messages in schedulingInfoList for UEs which support the acquisition of the posSIB types in posSchedulingInfoList as specified in TS 38.331 [9].</td>
+  </tr>
+  <tr>
+    <td>Acquisition of SI messages with explicit SI window positions</td>
+    <td>It is mandatory to support acquisition of SI messages with explicit SI window positions for UEs which support the SIB types in schedulingInfoList2 as specified in TS 38.331 [9].</td>
+  </tr>
+  <tr>
+    <td>AS layer memory size for QoE paused measurement reports</td>
+    <td>It is mandatory to support the minimum AS layer memory size of 64KB for QoE paused measurement reports for UEs which support qoe-Streaming-MeasReport-r17, qoe-MTSI-MeasReport-r17 or qoe-VR-MeasReport-r17.</td>
+  </tr>
+  <tr>
+    <td>AS layer memory size for QoE measurement reports in RRC_IDLE and RRC_INACTIVE</td>
+    <td>It is mandatory to support the minimum AS layer memory size of 64KB for QoE measurement reports stored in RRC_IDLE/RRC_INACTIVE for UEs which support qoe-IdleInactiveMeasReport-r18 and any of qoe-Streaming-MeasReport-r17 or qoe-MTSI-MeasReport-r17 or qoe-VR-MeasReport-r17. This memory size is additional to &quot;AS layer memory size for QoE paused measurement reports&quot;</td>
+  </tr>
+  <tr>
+    <td>ATG specific P-max</td>
+    <td>It is mandatory to support the ATG specific P-max configured by network for UEs supporting airToGroundNetwork-r18.</td>
+  </tr>
+  <tr>
+    <td>Downlink SDAP header</td>
+    <td>Either NAS reflective QoS or as-ReflectiveQoS is supported.</td>
+  </tr>
+  <tr>
+    <td>Extended values for drx-HARQ-RTT-TimerDL/UL</td>
+    <td>It is mandatory for UEs which support FR2-2 bands with SCS 480kHz and/or 960kHz.</td>
+  </tr>
+  <tr>
+    <td>IMS emergency call</td>
+    <td>It is mandatory to support IMS emergency call over PLMN for UEs which are IMS voice capable in NR.It is mandatory to support IMS emergency call over SNPN for UEs that are SNPN capable and IMS voice capable over SNPNs.</td>
+  </tr>
+  <tr>
+    <td>Logged measurements suspension due to IDC interference</td>
+    <td>It is mandatory to support Logged measurements suspension due to IDC interference for UEs which are supporting logged measurements in RRC_IDLE and RRC_INACTIVE upon request from the network and in-device coexistence indication as specified in TS 38.331 [9].</td>
+  </tr>
+  <tr>
+    <td>MAC subheaders with LX field</td>
+    <td>It is mandatory to support MAC subheaders with LX field for UEs supporting MAC SDU(s) using the LCID value(s) as specified in Table 6.2.1-2c in TS 38.321 [8].</td>
+  </tr>
+  <tr>
+    <td>MAC subheaders with one-octet eLCID field</td>
+    <td>It is mandatory to support MAC subheaders with one-octet eLCID field for UEs/IAB-MTs/NCR-MTs supporting MAC CEs using extended LCID values as specified in TS 38.321 [8].</td>
+  </tr>
+  <tr>
+    <td>Paging cause in RAN paging message</td>
+    <td>It is mandatory for a UE to support paging cause in RAN paging if UE supports paging cause in CN paging.</td>
+  </tr>
+  <tr>
+    <td>Receiving PSCCH/PSSCH from 2nd starting symbol in a slot</td>
+    <td>It is mandatory for a UE supporting NR sidelink in shared spectrum and when shared spectrum channel access must be used to support receiving PSCCH/PSSCH transmitted from 2nd starting symbol in a slot in addition to the first starting symbol and monitor a total up to the number reported in pscch-RxSidelink-r16 of PSCCHs in a slot in the 1st and 2nd starting symbols.A UE supporting this feature shall indicate support of sl-Reception-r16.</td>
+  </tr>
+  <tr>
+    <td>Receiving UE to UE COT sharing information</td>
+    <td>It is mandatory for a UE supporting NR SL in shared spectrum where shared spectrum channel access must be used to support monitoring SCI to read COT sharing information and transmitting NR SL based on COT sharing information subject to COT sharing conditions.A UE supporting this feature shall indicate support of sl-DynamicChannelAccess-r18.</td>
+  </tr>
+  <tr>
+    <td>SON report in PNI-NPN</td>
+    <td>It is mandatory for a UE to support a SON report in PNI-NPN if UE supports PNI-NPN and supports the SON report in PLMN.</td>
+  </tr>
+  <tr>
+    <td>Skipping UL configured grant if no data to transmit, as specified in release-15 version of TS 38.321 [8].</td>
+    <td>Either configuredUL-GrantType1 or configuredUL-GrantType1-v1650 or configuredUL-GrantType2 or configuredUL-GrantType2-v1650 is supported.</td>
+  </tr>
+  <tr>
+    <td>TA reporting during initial access</td>
+    <td>It is mandatory to support TA reporting during initial access for UEs supporting uplink-TA-Reporting-r17 or uplinkTA-ReportingATG-r18 as specified in TS 38.321 [8].</td>
+  </tr>
+  <tr>
+    <td>Inter-frequency configuration for less than 5MHz in SIB4</td>
+    <td>It is mandatory to support configuration of dl-CarrierFreq-r18 and frequencyBandList-r18 as specified in TS 38.331 [9] for UEs supporting support5MHz-ChannelBW-20PRB-CORESET0-r18, support3MHz-ChannelBW-Symmetric-r18 or support3MHz-ChannelBW-Asymmetric-r18.</td>
+  </tr>
+  <tr>
+    <td>Relaxation of serving cell and further relaxation of neighbouring cell RRM measurements and offloading of serving cell RRM measurements</td>
+    <td>It is mandatory to support relaxation of serving cell and neighbouring cell RRM measurements as specified in clause 5.2.4.12.1 in TS 38.304 [21] and offloading of serving cell RRM measurements as specified in clause 5.2.4.12.3 in TS 38.304 [21] if a UE supports reception of LP-WUS in RRC_IDLE/RRC_INACTIVE. A UE supporting this feature shall also indicate the support at least one of lpwus-OOK-r19 and lpwus-OFDM-r19.</td>
+  </tr>
+</table>

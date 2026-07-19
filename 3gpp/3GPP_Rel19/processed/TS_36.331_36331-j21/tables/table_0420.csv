@@ -1,0 +1,80 @@
+UE-Capability-NB field descriptions,FDD/TDD appl,FDD/TDD diff
+accessStratumReleaseThis field indicates the release supported by the UE.,FDD/TDD,No
+additionalTransmissionSIB1Indicates whether the UE supports additional SIB1 transmission as specified in TS 36.213 [23].,FDD,-
+anr-ReportIndicates whether the UE supports ANR measurements in RRC_IDLE.,FDD/TDD,No
+"connModeMeasIntraFreq, connModeMeasInterFreqIndicates whether the UE in RRC_CONNECTED supports neighbour cell measurements.",FDD/TDD,No
+coverageBasedPagingIndicates whether the UE in RRC_IDLE supports coverage based paging carrier selection as defined in TS 36.304 [4].,FDD/TDD,No
+dataInactMonIndicates whether the UE supports the data inactivity monitoring as specified in TS 36.321 [6].,FDD/TDD,No
+dl-ChannelQualityReporting-r16Indicates whether the UE supports DL channel quality reporting in connected mode as specified in TS 36.321 [6].,FDD,-
+dummyThis field is not used in the specification. It shall not be sent by the UE.,NA,NA
+"earlyData-UP, earlyData-UP-5GCIndicates whether the UE supports EDT for User plane CIoT EPS/5GS optimisations, as defined in TS 24.301 [35] and TS 24.501 [95] respectively.",FDD,-
+earlySecurityReactivationIndicates whether the UE supports early security reactivation when resuming a suspended RRC connection.,FDD/TDD,No
+interferenceRandomisationFor FDD: Indicates whether the UE supports interference randomisation in connected mode as defined in TS.36.211 [21].,FDD,-
+locationInfoIndicates whether the UE supports reporting of locationInfo in RLF report.,FDD/TDD,No
+"maxNumberROHC-ContextSessionsSet to the maximum number of concurrently active ROHC contexts supported by the UE, excluding context sessions that leave all headers uncompressed. cs2 corresponds with 2 (context sessions), cs4 corresponds with 4 and so on. The network ignores this field if the UE supports none of the ROHC profiles in supportedROHC-Profiles.",FDD/TDD,No
+"mixedOperationModeDefines whether the UE supports multi-carrier operation with mixed operation mode, standalone or inband/guardband, between the anchor carrier and the non-anchor carrier for unicast, paging, and random access as specified in TS 36.300 [9].",FDD,-
+multiCarrierDefines whether the UE supports multi -carrier operation.,FDD/TDD,Yes
+multicarrier-NPRACHDefines whether the UE supports NPRACH on non-anchor carrier as specified in TS 36.321 [6].,FDD/TDD,Yes
+multipleDRBDefines whether the UE supports multiple DRBs.,FDD/TDD,No
+multiNS-PmaxDefines whether the UE supports the mechanisms defined for NB-IoT cells broadcasting NS-PmaxList-NB.,FDD/TDD,No
+"multiTB-HARQ-AckBundlingIndicates whether the UE supports HARQ ACK bundling for interleaved transmission for DL.If multiTB-HARQ-AckBundling is included, the UE shall also indicate support for npdsch-MultiTB-Interleaving.",FDD,-
+multiToneDefines whether the UE supports UL multi-tone transmissions on NPUSCH.,FDD/TDD,Yes
+npdsch-16QAMIndicates whether the UE supports 16QAM for DL unicast as defined in TS 36.213 [23].,FDD/TDD,Yes
+"npdsch-MultiTBIndicates whether the UE supports multiple TBs scheduling in RRC_CONNECTED for DL.If npdsch-MultiTB is included, the UE shall also indicate support for twoHARQ-Processes.",FDD,-
+npdsch-MultiTB-InterleavingIndicates whether the UE supports interleaved transmission when multiple TBs is scheduled in RRC_CONNECTED for DL.,FDD,-
+nprach-Format2Defines whether the UE supports NPRACH resources using preamble format 2.,FDD,-
+npusch-16QAMIndicates whether the UE supports 16QAM for UL unicast on the band as defined in TS 36.213 [23].,FDD/TDD,No
+npusch-3dot75kHz-SCS-TDDIndicates whether the UE supports NPUSCH with 3.75kHz SCS for TDD.,TDD,-
+"npusch-MultiTBIndicates whether the UE supports multiple TBs scheduling in RRC_CONNECTED for UL.If npusch-MultiTB is included, the UE shall also indicate support for twoHARQ-Processes.",FDD,-
+npusch-MultiTB-InterleavingIndicates whether the UE supports interleaved transmission when multiple TBs is scheduled in RRC_CONNECTED for UL.,FDD,-
+ntn-Autonomous-GNSS-FixThis field indicates whether the UE supports autonomous GNSS position fix in RRC_CONNECTED.,FDD,-
+"ntn-Connectivity-EPCIndicates whether the UE supports NTN access when connected to EPC. If the UE indicates this capability, the UE shall support all NTN essential features as specified in TS 36.306 [5].",FDD,-
+ntn-DCI-HarqDisableMultiTBThis field indicates whether the UE supports DCI-based HARQ feedback disabling for downlink transmission when HARQ feedback disabling per HARQ process for downlink transmission is not configured by RRC and when configured with npdsch-MultiTB-Config.,FDD,-
+ntn-DCI-HarqDisableSingleTBThis field indicates whether the UE supports DCI-based HARQ feedback disabling for downlink transmission when HARQ feedback disabling per HARQ process for downlink transmission is not configured by RRC.,FDD,-
+"ntn-GNSS-EnhScenarioSupportThis field indicates whether the UE supports GNSS measurement and UL transmission extension enhancements in RRC_CONNECTED for only GSO or NGSO scenario. If this field is not included, the GNSS measurement and UL transmission extension enhancements in RRC_CONNECTED that are indicated as supported are applicable for both GSO and NGSO scenario.",FDD,-
+"ntn-HarqEnhScenarioSupportThis field indicates whether the UE supports UL and DL HARQ process enhancements for only GSO or NGSO scenario. If this field is not included, the UL and DL HARQ process enhancements that are indicated as supported are applicable for both GSO and NGSO scenario.",FDD,-
+ntn-LocationBasedMeasTrigger-EFCThis field indicates whether the UE supports location-based measurement trigger in RRC_CONNECTED in earth fixed cell.,FDD,-
+ntn-LocationBasedMeasTrigger-EMCThis field indicates whether the UE supports location-based measurement trigger in RRC_CONNECTED in earth moving cell.,FDD,-
+ntn-MO-CB-Msg3-EDT-UPThis field indicates whether the UE supports contention-based Msg3 EDT for User Plane CIoT EPS optimizations.,FDD,-
+"ntn-OCC-EnhScenarioSupportThis field indicates whether the OCC enhancements in RRC_CONNECTED that are indicated as supported are applicable in GSO scenario or NGSO scenario for UE indicating support of both GSO and NGSO scenarios. If this field is not included, the OCC enhancements in RRC_CONNECTED that are indicated as supported are applicable in both GSO and NGSO scenarios.",FDD,-
+ntn-OCC-SingleTone-khz15This field indicates whether the UE supports OCC for single-tone NPUSCH format 1 with 15 kHz SCS in RRC_CONNECTED.,FDD,-
+ntn-OCC-SingleTone-khz3dot75This field indicates whether the UE supports OCC for single-tone NPUSCH format 1 with 3.75 kHz SCS in RRC_CONNECTED.,FDD,-
+ntn-OffsetTimingEnhIndicates whether the UE supports timing relationship enhancement using Differential Koffset as specified in TS 36.321 [6] and TS 36.213 [23].,FDD,-
+ntn-OverriddenHarqDisableMultiTBThis field indicates whether the UE supports DCI-based HARQ feedback disabling for downlink transmission by overriding the RRC configuration when configured with npdsch-MultiTB-Config.,FDD,-
+ntn-OverriddenHarqDisableSingleTBThis field indicates whether the UE supports DCI-based HARQ feedback disabling for downlink transmission by overriding the RRC configuration.,FDD,-
+"ntn-PUR-TimerDelayIndicates whether the UE supports delaying the start of the pur-ResponseWindowTimer for NTN, see TS 36.321 [6].",FDD,
+ntn-RedirectionIndicates whether the UE supports redirection from a terrestrial network to a non-terrestrial network.,FDD/TDD,No
+ntn-RRC-HarqDisableMultiTBThis field indicates whether the UE supports HARQ feedback disabling per HARQ process for downlink transmission by RRC configuration when configured with npdsch-MultiTB-Config.,FDD,-
+ntn-RRC-HarqDisableSingleTBThis field indicates whether the UE supports HARQ feedback disabling per HARQ process for downlink transmission by RRC configuration.,FDD,-
+"ntn-SegmentedPrecompensationGapsIndicates the minimum supported gap length between segments for segmented uplink transmission. Value sym1 corresponds to 1 symbol, value sl1 corresponds to 1 slot, value sl2 corresponds to 2 slots.",FDD,-
+"ntn-ScenarioSupportIndicates whether the UE supports NTN features for only GSO or NGSO scenario. If a UE does not include this field but includes ntn-Connectivity-EPC-r17, the UE supports the NTN features for both GSO and NGSO scenarios.",FDD,-
+ntn-SF-ModeThis field indicates whether the UE supports Store and Forward Satellite operation mode.,FDD,-
+"ntn-TA-reportIndicates whether the UE supports timing advance reporting in RRC_CONNECTED, see TS 36.321 [6].",FDD,-
+ntn-TimeBasedMeasTriggerThis field indicates whether the UE supports time-based measurement trigger in RRC_CONNECTED.,FDD,-
+ntn-Triggered-GNSS-FixThis field indicates whether the UE supports network triggered GNSS position fix in RRC_CONNECTED.,FDD,-
+ntn-UplinkHarq-ModeB-MultiTBThis field indicates whether the UE supports HARQ Mode B when scheduled with uplink transmission of multiple TBs.,FDD,-
+ntn-UplinkHarq-ModeB-SingleTBThis field indicates whether the UE supports HARQ Mode B.,FDD,-
+ntn-UplinkTxExtensionThis field indicates whether the UE supports to perform UL transmission in a duration after original GNSS validity duration expires without GNSS re-acquisition.,FDD,-
+powerBoostingNBThis field indicates whether the UE supports Power Class 2 transmitted output power boosting in the NB-IoT NTN UL band as specified in TS 36.102 [113].,FDD/TDD,No
+"powerClassNB-14dBmDefines whether the UE supports power class 14dBm in all the bands supported by the UE as specified in TS 36.101 [42].If powerClassNB-20dBm is included, the UE shall not include the field powerClassNB-14dBm.",FDD/TDD,No
+"powerClassNB-20dBmDefines whether the UE supports power class 20dBm in NB-IoT for the band, as specified in TS 36.101 [42] and TS 36.102 [113] for NTN capable UE. If neither powerClassNB-14dBm nor powerClassNB-20dBm is included, UE supports power class 23 dBm in the NB-IoT band.",FDD/TDD,No
+"pur-CP-EPC, pur-CP-5GCIndicates whether the UE supports transmission using PUR for Control plane CIoT EPS/5GS optimisations, as defined in TS 24.301 [35] and TS 24.501 [95] respectively.",FDD,-
+"pur-CP-L1AckIndicates whether UE supports L1 acknowledgement in response to CP transmission using PUR.If pur-CP-L1Ack is included, the UE shall also indicate support for pur-CP-EPC or pur-CP-5GC.",FDD,-
+"pur-NRSRP-ValidationIndicates whether UE supports serving cell NRSRP for TA validation for transmission using PUR.If pur-NRSRP-Validation is included, the UE shall also indicate support for pur-CP-EPC, pur-CP-5GC, pur-UP-EPC or pur-CP-5GC.",FDD,-
+"pur-UP-EPC, pur-UP-5GCIndicates whether the UE supports transmission using PUR for User plane CIoT EPS/5GS optimisations, as defined in TS 24.301 [35] and TS 24.501 [95] repectively.",FDD,-
+"pws-SupportThis field indicates whether the UE supports the reception of PWS message including ETWS, CMAS, KPAS, EU-Alert in RRC_IDLE.",FDD/TDD,No
+rach-ReportIndicates whether the UE supports delivery of rach-Report.,FDD/TDD,No
+rai-SupportDefines whether the UE supports release assistance indication (RAI) as specified in TS 36.321 [6].,FDD/TDD,No
+rai-SupportEnhIndicates whether the UE supports AS Release Assistance Indication via the DCQR and AS RAI MAC CE when connected to EPC as specified in TS 36.321 [6].,FDD/TDD,No
+rlc-UMDefines whether the UE supports RLC UM as specified in TS 36.322 [7].,FDD/TDD,No
+"slotSymbolResourceResvDLIndicates whether the UE supports slot/symbol-level time-domain DL resource reservation, e.g. for NB-IoT coexistence with NR.If slotSymbolResourceResvDL is included, the UE shall also indicate support for subframeResourceResvDL.",FDD/TDD,Yes
+"slotSymbolResourceResvULIndicates whether the UE supports slot/symbol-level time-domain UL resource reservation, e.g. for NB-IoT coexistence with NR.If slotSymbolResourceResvUL is included, the UE shall also indicate support for subframeResourceResvUL.",FDD/TDD,Yes
+"supportedBandList, supportedBandList-v1710Includes the supported NB-IoT bands as defined in TS 36.101 [42] and TS 36.102 [113] for NTN capable UE. If supportedBandList-v1710 is included, the UE shall include the same number of entries, and listed in the same order, as in supportedBandList-r13.",FDD/TDD,No
+sr-SPS-BSRDefines whether the UE supports SR using SPS BSR as specified in TS 36.321 [6].,FDD,-
+sr-withHARQ-ACKDefines whether the UE supports physical layer SR with HARQ ACK as specified in TS 36.213 [23].,FDD,-
+sr-withoutHARQ-ACKDefines whether the UE supports physical layer SR without HARQ ACK as specified in TS 36.211 [21] and TS 36.213 [23].,FDD,-
+"subframeResourceResvDLIndicates whether the UE supports subframe-level time-domain DL resource reservation, e.g. for NB-IoT coexistence with NR.",FDD/TDD,Yes
+"subframeResourceResvULIndicates whether the UE supports subframe-level time-domain UL resource reservation, e.g. for NB-IoT coexistence with NR.",FDD/TDD,Yes
+supportedROHC-ProfilesList of supported ROHC profiles as defined in TS 36.323 [8].,FDD/TDD,No
+twoHARQ-ProcessesDefines whether the UE supports two HARQ processes operation in DL and UL as specified in TS 36.212 [22] and TS 36.213 [23].,FDD/TDD,Yes
+"ue-Category-NBUE category as defined in TS 36.306 [5]. Value nb1 corresponds to UE category NB1, value nb2 corresponds to UE category NB2.A UE shall always include the field ue-Category-NB-r13 in this version of the specification.",FDD/TDD,Yes

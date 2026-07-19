@@ -1,0 +1,2 @@
+BCCH-Config field descriptions
+"modificationPeriodCoeffActual modification period, expressed in number of radio frames m = modificationPeriodCoeff * defaultPagingCycle, see clause 5.2.2.2.2. n2 corresponds to value 2, n4 corresponds to value 4, and so on."

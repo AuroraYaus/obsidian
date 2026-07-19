@@ -1,0 +1,233 @@
+<table>
+  <tr>
+    <td>Index of indicator (bit number)</td>
+    <td>Definition(description of the supported functionality, if indicator set to one)</td>
+    <td>Notes</td>
+    <td>If indicated &quot;Yes&quot; the feature shall be implemented and successfully tested for this version of the specification</td>
+    <td>FDD/ TDD diff</td>
+  </tr>
+  <tr>
+    <td>33 (leftmost bit)</td>
+    <td>Inter-RAT ANR features for UTRAN FDD (including the case of (NG)EN-DC wherein MN and SN have the same DRX cycle and on-duration configured by MN completely contains on-duration configured by SN) including:- Inter-RAT periodical measurement reporting where triggerType is set to periodical and purpose is set to reportStrongestCellsForSON- Inter-RAT periodical measurement reporting where triggerType is set to periodical and purpose is set to reportCGI</td>
+    <td>- can only be set to 1 if the UE has set bit number 5 and bit number 22 to 1.</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>Inter-RAT ANR features for GERAN (including the case of (NG)EN-DC wherein MN and SN have the same DRX cycle and on-duration configured by MN completely contains on-duration configured by SN) including:- Inter-RAT periodical measurement reporting where triggerType is set to periodical and purpose is set to reportStrongestCells- Inter-RAT periodical measurement reporting where triggerType is set to periodical and purpose is set to reportCGI</td>
+    <td>- can only be set to 1 if the UE has set bit number 5 and bit number 23 to 1.</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>Inter-RAT ANR features for 1xRTT (including the case of (NG)EN-DC wherein MN and SN have the same DRX cycle and on-duration configured by MN completely contains on-duration configured by SN) including:- Inter-RAT periodical measurement reporting where triggerType is set to periodical and purpose is set to reportStrongestCellsForSON- Inter-RAT periodical measurement reporting where triggerType is set to periodical and purpose is set to reportCGI</td>
+    <td>- can only be set to 1 if the UE has set bit number 5 and bit number 24 to 1.</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>Inter-RAT ANR features for HRPD (including the case of (NG)EN-DC wherein MN and SN have the same DRX cycle and on-duration configured by MN completely contains on-duration configured by SN) including:- Inter-RAT periodical measurement reporting where triggerType is set to periodical and purpose is set to reportStrongestCellsForSON- Inter-RAT periodical measurement reporting where triggerType is set to periodical and purpose is set to reportCGI</td>
+    <td>- can only be set to 1 if the UE has set bit number 5 and bit number 26 to 1.</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>37</td>
+    <td>Inter-RAT ANR features for UTRAN TDD (including the case of (NG)EN-DC wherein MN and SN have the same DRX cycle and on-duration configured by MN completely contains on-duration configured by SN) including:- Inter-RAT periodical measurement reporting where triggerType is set to periodical and purpose is set to reportStrongestCellsForSON- Inter-RAT periodical measurement reporting where triggerType is set to periodical and purpose is set to reportCGI</td>
+    <td>- can only be set to 1 if the UE has set bit number 5 and at least one of the bit number 22 (for UEs supporting only UTRA TDD) or the bit number 39 to 1.</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>38</td>
+    <td>- EUTRA RRC_CONNECTED to UTRA TDD CELL_DCH PS handover, if the UE supports both UTRAN FDD and UTRAN TDD</td>
+    <td>- can only be set to 1 if the UE has set bit number 39 to 1</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>39</td>
+    <td>- UTRAN TDD measurements, reporting and measurement reporting event B2 in E-UTRA connected mode, if the UE supports both UTRAN FDD and UTRAN TDD</td>
+    <td>- If a category M1 or M2 UE does not support this feature group, this bit shall be set to 0.</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>40</td>
+    <td>- EUTRA RRC_CONNECTED to UTRA TDD CELL_DCH CS handover, if the UE supports both UTRAN FDD and UTRAN TDD</td>
+    <td>- related to SR-VCC- can only be set to 1 if the UE has set bit number 38 to 1</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>41</td>
+    <td>Measurement reporting event: Event B1 – Neighbour &gt; threshold for UTRAN FDD, if the UE supports UTRAN FDD and has set bit number 22 to 1</td>
+    <td>- If a category M1 or M2 UE does not support this feature group, this bit shall be set to 0.</td>
+    <td>Yes for FDD, unless UE has set bit number 15 to 1</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>42</td>
+    <td>- DCI format 3a (TPC commands for PUCCH and PUSCH with single bit power adjustments)</td>
+    <td>- If a category M1 or M2UE supports this feature group, this bit shall be set to 1. For a UE of all other categories, this bit shall be set to 0.</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>43</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>47</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>48</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>49</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>50</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>51</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>52</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>53</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>54</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>55</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>57</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>58</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>59</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>60</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>61</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>62</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>63</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>64</td>
+    <td>Undefined</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>

@@ -1,0 +1,8 @@
+SL-MeasConfigInfo field descriptions
+sl-MeasIdToAddModListList of sidelink measurement identities to add and/or modify.
+sl-MeasIdToRemoveListList of sidelink measurement identities to remove.
+sl-MeasObjectToAddModListList of sidelink measurement objects to add and/or modify.
+sl-MeasObjectToRemoveListList of sidelink measurement objects to remove.
+sl-QuantityConfigIndicates the layer 3 filtering coefficient for sidelink measurement.
+sl-ReportConfigToAddModListList of sidelink measurement reporting configurations to add and/or modify.
+sl-ReportConfigToRemoveListList of sidelink measurement reporting configurations to remove.

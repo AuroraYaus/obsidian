@@ -1,0 +1,5 @@
+SL-RLC-BearerConfig field descriptions
+sl-MAC-LogicalChannelConfigThe field is used to configure MAC SL logical channel parameters.
+"sl-RLC-BearerConfigIndexThe index of the RLC bearer configuration. If the field sl-RLC-BearerConfigIndex-v1800 is present, the UE shall ignore the sl-RLC-BearerConfigIndex-r16 field."
+"sl-RLC-ConfigDetermines the RLC mode (UM, AM) and provides corresponding parameters."
+"sl-ServedRadioBearerAssociates the sidelink RLC Bearer with a sidelink DRB. It indicates the index of SL radio bearer configuration, which is corresponding to the RLC bearer configuration."

@@ -1,0 +1,2 @@
+SL-ThresPSSCH-RSRP-List field descriptions
+"SL-ThresPSSCH-RSRPValue 0 corresponds to minus infinity dBm, value 1 corresponds to -128dBm, value 2 corresponds to -126dBm, value n corresponds to (-128 + (n-1)*2) dBm and so on, value 66 corresponds to infinity dBm."

@@ -1,0 +1,122 @@
+<table>
+  <tr>
+    <td>SearchSpace field descriptions</td>
+  </tr>
+  <tr>
+    <td>commonConfigures this search space as common search space (CSS) and DCI formats to monitor.</td>
+  </tr>
+  <tr>
+    <td>controlResourceSetIdThe CORESET applicable for this SearchSpace. Value 0 identifies the common CORESET#0 configured in MIB and in ServingCellConfigCommon. Values 1..maxNrofControlResourceSets-1 identify CORESETs configured in System Information or by dedicated signalling. The CORESETs with non-zero controlResourceSetId are configured in the same BWP as this SearchSpace except commonControlResourceSetExt which is configured by SIB20. If the field controlResourceSetId-r16 is present, UE shall ignore the controlResourceSetId (without suffix).</td>
+  </tr>
+  <tr>
+    <td>dummy1, dummy2This field is not used in the specification. If received it shall be ignored by the UE.</td>
+  </tr>
+  <tr>
+    <td>dci-Format0-0-AndFormat1-0If configured, the UE monitors the DCI formats 0_0 and 1_0 according to TS 38.213 [13], clause 10.1.</td>
+  </tr>
+  <tr>
+    <td>dci-Format2-0If configured, UE monitors the DCI format 2_0 according to TS 38.213 [13], clause 10.1, 11.1.1.</td>
+  </tr>
+  <tr>
+    <td>dci-Format2-1If configured, UE monitors the DCI format 2_1 according to TS 38.213 [13], clause 10.1, 11.2.</td>
+  </tr>
+  <tr>
+    <td>dci-Format2-2If configured, UE monitors the DCI format 2_2 according to TS 38.213 [13], clause 10.1, 11.3.</td>
+  </tr>
+  <tr>
+    <td>dci-Format2-3If configured, UE monitors the DCI format 2_3 according to TS 38.213 [13], clause 10.1, 11.4</td>
+  </tr>
+  <tr>
+    <td>dci-Format2-4If configured, UE monitors the DCI format 2_4 according to TS 38.213 [13], clause 11.2A.</td>
+  </tr>
+  <tr>
+    <td>dci-Format2-5If configured, IAB-MT monitors the DCI format 2_5 according to TS 38.213 [13], clause 14.</td>
+  </tr>
+  <tr>
+    <td>dci-Format2-6If configured, UE monitors the DCI format 2_6 according to TS 38.213 [13], clause 10.1, 10.3. DCI format 2_6 can only be configured on the SpCell.</td>
+  </tr>
+  <tr>
+    <td>dci-Format2-7If configured, UE monitors the DCI format 2_7 according to TS 38.213 [13], clause 10.1, 10.4A.</td>
+  </tr>
+  <tr>
+    <td>dci-Format2-9If configured, UE monitors the DCI format 2_9 according to TS 38.213 [13], clause 10.1, 11.5. DCI format 2_9 can be configured on only one cell in the cell group.</td>
+  </tr>
+  <tr>
+    <td>dci-Format4-0If configured, the UE monitors the DCI format 4_0 with CRC scrambled by MCCH-RNTI/G-RNTI according to TS 38.213 [13], clause [10.1].</td>
+  </tr>
+  <tr>
+    <td>dci-Format4-1-AndFormat4-2If configured, the UE monitors the DCI format 4_1 and 4_2 with CRC scrambled by G-RNTI/G-CS-RNTI according to TS 38.213 [13], clause [11.1].</td>
+  </tr>
+  <tr>
+    <td>dci-Format4-1If configured, the UE monitors the DCI format 4_1 with CRC scrambled by G-RNTI/G-CS-RNTI according to TS 38.213 [13], clause [10.1].</td>
+  </tr>
+  <tr>
+    <td>dci-Format4-2If configured, the UE monitors the DCI format 4_2 with CRC scrambled by G-RNTI/G-CS-RNTI according to TS 38.213 [13], clause [10.1].</td>
+  </tr>
+  <tr>
+    <td>dci-FormatsIndicates whether the UE monitors in this USS for DCI formats 0-0 and 1-0 or for formats 0-1 and 1-1.</td>
+  </tr>
+  <tr>
+    <td>dci-FormatsExtIf this field is present, the field dci-Formats is ignored and dci-FormatsExt is used instead to indicate whether the UE monitors in this USS for DCI format 0_2 and 1_2 or formats 0_1 and 1_1 and 0_2 and 1_2 (see TS 38.212 [17], clause 7.3.1 and TS 38.213 [13], clause 10.1). This field is not configured for operation with shared spectrum channel access in this release.</td>
+  </tr>
+  <tr>
+    <td>dci-FormatsMCIndicates whether the UE monitors in this USS for DCI format 0_3 or for format 1_3 or for formats 0_3 and 1_3. Separate search space sets for DCI formats in this field and the DCI formats in ue-Specific (without suffix) are independently configured.NOTE:This parameter is used only for SearchSpace configured to the scheduling cell, while another SearchSpace configured to the reference scheduled cell (if any) configures only nrofCandidates (i.e., all other optional fields are absent) with same searchSpaceId with that for scheduling cell.</td>
+  </tr>
+  <tr>
+    <td>dci-Formats-MTIndicates whether the IAB-MT monitors the DCI formats 2-5 according to TS 38.213 [13], clause 14.</td>
+  </tr>
+  <tr>
+    <td>dci-FormatsNCRIndicates whether the NCR-MT monitors the DCI formats 2-8 according to TS 38.213 [13], clause 20.</td>
+  </tr>
+  <tr>
+    <td>dci-FormatsSLIndicates whether the UE monitors in this USS for DCI formats 0-0 and 1-0 or for formats 0-1 and 1-1 or for format 3-0 or for format 3-1 or for formats 3-0 and 3-1. If this field is present, the field dci-Formats is ignored and dci-FormatsSL is used.</td>
+  </tr>
+  <tr>
+    <td>dci-FormatsSL-PRSIndicates whether the UE monitors in this USS for DCI formats 3-2 or for formats 3-0 and 3-2 or for formats 3-0 and 3-1 and 3-2 or for formats3-1 and 3-2. If this field is present, the field dci-Formats is ignored and dci-FormatsSL-PRS is used.</td>
+  </tr>
+  <tr>
+    <td>durationNumber of consecutive slots that a SearchSpace lasts in every occasion, i.e., upon every period as given in the periodicityAndOffset. If the field is absent, the UE applies the value 1 slot, except for DCI format 2_0. The UE ignores this field for DCI format 2_0. The maximum valid duration is periodicity-1 (periodicity as given in the monitoringSlotPeriodicityAndOffset).For SCS 480 kHz and SCS 960 kHz, duration-r17 is used, and the configured duration is restricted to be an integer multiple of L slots and smaller than periodicity, where L is the configured length of the bitmap monitoringSlotsWithinSlotGroup-r17. If duration-r17 is absent, the UE assumes the duration in slots is equal to L. The maximum valid duration is periodicity-L.For IAB-MT, duration indicates number of consecutive slots that a SearchSpace lasts in every occasion, i.e., upon every period as given in the periodicityAndOffset. If the field is absent, the IAB-MT applies the value 1 slot, except for DCI format 2_0 and DCI format 2_5. The IAB-MT ignores this field for DCI format 2_0 and DCI format 2_5. The maximum valid duration is periodicity-1 (periodicity as given in the monitoringSlotPeriodicityAndOffset).</td>
+  </tr>
+  <tr>
+    <td>freqMonitorLocationsDefines an association of the search space to multiple monitoring locations in the frequency domain and indicates whether the pattern configured in the associated CORESET is replicated to a specific RB set, see TS 38.213, clause 10.1. Each bit in the bitmap corresponds to one RB set, and the leftmost (most significant) bit corresponds to RB set 0 in the BWP. A bit set to 1 indicates that a frequency domain resource allocation replicated from the pattern configured in the associated CORESET is mapped to the RB set.</td>
+  </tr>
+  <tr>
+    <td>monitoringSlotPeriodicityAndOffsetSlots for PDCCH Monitoring configured as periodicity and offset.For SCS 15, 30, 60, and 120 kHz and if the UE is configured to monitor:- DCI format 2_1, only the values &#x27;sl1&#x27;, &#x27;sl2&#x27; or &#x27;sl4&#x27; are applicable.- DCI format 2_0, only the values ′sl1′, ′sl2′, ′sl4′, ′sl5′, ′sl8′, ′sl10′, ′sl16′, and ′sl20′ are applicable (see TS 38.213 [13], clause 10).- DCI format 2_4, only the values &#x27;sl1&#x27;, &#x27;sl2&#x27;, &#x27;sl4&#x27;, &#x27;sl5&#x27;, &#x27;sl8&#x27; and &#x27;sl10&#x27; are applicable.For SCS 480 kHz and if the UE is configured to monitor:- DCI format 2_0, only the values &#x27;sl4&#x27;, &#x27;sl8&#x27;, &#x27;sl16&#x27;, &#x27;sl20&#x27;, &#x27;sl32&#x27;, &#x27;sl40&#x27;, &#x27;sl64&#x27;, and &#x27;sl80&#x27; are applicable.- DCI format 2_1, only the values ′sl4′, ′sl8′, and ′sl16′ are applicable.- DCI format 2_4, only the values &#x27;sl4&#x27;, &#x27;sl8&#x27;, &#x27;sl16&#x27;, &#x27;sl20&#x27;, &#x27;sl32&#x27;, &#x27;sl40&#x27; are applicable.For SCS 960 kHz and if the UE is configured to monitor:- DCI format 2_0, only the values &#x27;sl8&#x27;, &#x27;sl16&#x27;, &#x27;sl32&#x27;, &#x27;sl40&#x27;, &#x27;sl64&#x27;, &#x27;sl80&#x27;, &#x27;sl128&#x27;, and &#x27;sl160&#x27; are applicable.- DCI format 2_1, only the values ′sl8′, ′sl16′, and &#x27;sl32&#x27; are applicable.- DCI format 2_4, only the values &#x27;sl8&#x27;, &#x27;sl16&#x27;, &#x27;sl32&#x27;, &#x27;sl40&#x27;, &#x27;sl64&#x27;, &#x27;sl80&#x27; are applicable.For SCS 480 kHz and SCS 960 kHz, and the configured periodicity and offset are restricted to be an integer multiple of L slots, where L is the configured length of the bitmap provided by monitoringSlotsWithinSlotGroup-r17, i.e. for a given periodicity, the offset has a range of {0, L, 2*L, …, L*FLOOR(1/L*(periodicity-1))}.For IAB-MT, If the IAB-MT is configured to monitor DCI format 2_1, only the values &#x27;sl1&#x27;, &#x27;sl2&#x27; or &#x27;sl4&#x27; are applicable. If the IAB-MT is configured to monitor DCI format 2_0 or DCI format 2_5, only the values ′sl1′, ′sl2′, ′sl4′, ′sl5′, ′sl8′, ′sl10′, ′sl16′, and ′sl20′ are applicable (see TS 38.213, clause 10).If monitoringSlotPeriodicityAndOffset-v1710 is present, any previously configured monitoringSlotPeriodicityAndOffset is released, and if monitoringSlotPeriodicityAndOffset is present, any previously configured monitoringSlotPeriodicityAndOffset-v1710 is released.</td>
+  </tr>
+  <tr>
+    <td>monitoringSlotsWithinSlotGroupIndicates which slot(s) within a slot group are configured for multi-slot PDCCH monitoring. The first (leftmost, most significant) bit represents the first slot in the slot group, the second bit represents the second slot in the slot group, and so on. A bit set to &#x27;1&#x27; indicates that the corresponding slot is configured for multi-slot PDCCH monitoring (see TS 38.213 [13], clause 10). The number of slots for multi-slot PDCCH monitoring is configured according to clause 10 in TS 38.213 [13].</td>
+  </tr>
+  <tr>
+    <td>monitoringSymbolsWithinSlotThe first symbol(s) for PDCCH monitoring in the slots configured for (multi-slot) PDCCH monitoring (see monitoringSlotPeriodicityAndOffset and duration). The most significant (left) bit represents the first OFDM in a slot, and the second most significant (left) bit represents the second OFDM symbol in a slot and so on. The bit(s) set to one identify the first OFDM symbol(s) of the control resource set within a slot. If the cyclic prefix of the BWP is set to extended CP, the last two bits within the bit string shall be ignored by the UE or IAB-MT.For DCI format 2_0, the first one symbol applies if the duration of CORESET (in the IE ControlResourceSet) identified by controlResourceSetId indicates 3 symbols, the first two symbols apply if the duration of CORESET identified by controlResourceSetId indicates 2 symbols, and the first three symbols apply if the duration of CORESET identified by controlResourceSetId indicates 1 symbol.See TS 38.213 [13], clause 10.For IAB-MT: For DCI format 2_0 or DCI format 2_5, the first one symbol applies if the duration of CORESET (in the IE ControlResourceSet) identified by controlResourceSetId indicates 3 symbols, the first two symbols apply if the duration of CORESET identified by controlResourceSetId indicates 2 symbols, and the first three symbols apply if the duration of CORESET identified by controlResourceSetId indicates 1 symbol.See TS 38.213 [13], clause 10.</td>
+  </tr>
+  <tr>
+    <td>nrofCandidates-CIThe number of PDCCH candidates specifically for format 2-4 for the configured aggregation level. If an aggregation level is absent, the UE does not search for any candidates with that aggregation level. The network configures only one aggregationLevel and the corresponding number of candidates (see TS 38.213 [13], clause 10.1). In this release of the specification, only value n1 is valid.</td>
+  </tr>
+  <tr>
+    <td>nrofCandidates-PEIThe number of PDCCH candidates specifically for format 2-7 for the configured aggregation level.</td>
+  </tr>
+  <tr>
+    <td>nrofCandidates-SFIThe number of PDCCH candidates specifically for format 2-0 for the configured aggregation level. If an aggregation level is absent, the UE does not search for any candidates with that aggregation level. The network configures only one aggregationLevel and the corresponding number of candidates (see TS 38.213 [13], clause 11.1.1). For a search space configured with freqMonitorLocations-r16, only value ′n1′ is valid.</td>
+  </tr>
+  <tr>
+    <td>nrofCandidatesNumber of PDCCH candidates per aggregation level. The number of candidates and aggregation levels configured here applies to all formats unless a particular value is specified or a format-specific value is provided (see inside searchSpaceType). If configured in the SearchSpace of a cross carrier scheduled cell, this field determines the number of candidates and aggregation levels to be used on the linked scheduling cell (see TS 38.213 [13], clause 10).</td>
+  </tr>
+  <tr>
+    <td>searchSpaceGroupIdList-r16, searchSpaceGroupIdList-r17List of search space group IDs which the search space is associated with. The network configures at most 2 search space groups per BWP where the group ID is either 0 or 1 if searchSpaceGroupIdList-r16 is included. The network configures at most 3 search space groups per BWP where the group ID is either 0, 1 or 2 if searchSpaceGroupIdList-r17 is included. And if searchSpaceGroupIdList-r17 is included, searchSpaceGroupIdList-r16 is ignored.</td>
+  </tr>
+  <tr>
+    <td>searchSpaceIdIdentity of the search space. SearchSpaceId = 0 identifies the searchSpaceZero configured via PBCH (MIB) or ServingCellConfigCommon and may hence not be used in the SearchSpace IE. The searchSpaceId is unique among the BWPs of a Serving Cell. In case of cross carrier scheduling, search spaces with the same searchSpaceId in scheduled cell and scheduling cell are linked to each other. The UE applies the search space for the scheduled cell only if the DL BWPs in which the linked search spaces are configured in scheduling cell and scheduled cell are both active.For an IAB-MT, the search space defines how/where to search for PDCCH candidates for an IAB-MT where each search space is associated with one ControlResearchSet and for a scheduled cell in the case of cross carrier scheduling, except for nrofCandidates, all the optional fields are absent.</td>
+  </tr>
+  <tr>
+    <td>SearchSpaceLinkingIdThis parameter is used to link two search spaces of same type in the same BWP. If two search spaces have the same SearchSpaceLinkingId UE assumes these search spaces are linked to PDCCH repetition REF. When PDCCH repetition is monitored in two linked search space (SS) sets, the UE does not expect a third monitored SS set to be linked with any of the two linked SS sets. The two linked SS sets have the same SS set type (USS/CSS). The two linked SS sets have the same DCI formats to monitor. For intra-slot PDCCH repetition: The two SS sets should have the same periodicity and offset (monitoringSlotPeriodicityAndOffset), and the same duration. For linking monitoring occasions across the two SS sets that exist in the same slot: The two SS sets have the same number of monitoring occasions within a slot and n-th monitoring occasion of one SS set is linked to n-th monitoring occasion of the other SS set. The following SS sets cannot be linked with another SS set for PDCCH repetition: SS set 0, searchSpaceSIB1, searchSpaceOtherSystemInformation, pagingSearchSpace, ra-SearchSpace, searchSpaceMCCH, searchSpaceMTCH, peiSearchSpace, and sdt-SearchSpace. SS set configured by recoverySearchSpaceId cannot be linked to another SS set for PDCCH repetition. When a scheduled serving cell is configured to be cross-carrier scheduled by a scheduling serving cell, two PDCCH candidates (with the same AL and candidate index associated with the scheduled serving cell) are linked only if the corresponding two SS sets in the scheduling serving cell are linked and two SS sets in the scheduled serving cell with the same SS set IDs are also linked.This parameter is not applicable to search space configured with dci-FormatsSL for monitoring format 3-0 or format 3-1 or for monitoring formats 3-0 and format 3-1.This parameter is not applicable to search space configured with dci-FormatsSL-PRS for monitoring format 3-2 or for monitoring formats 3-0 and 3-2 or for monitoring formats 3-0 and 3-1 and 3-2 or for monitoring formats 3-1 and 3-2.</td>
+  </tr>
+  <tr>
+    <td>searchSpaceLinkingId-CEThis parameter is used to link two search spaces of same type in the same BWP. If two search spaces have the same searchSpaceLinkingId-CE UE assumes these two search spaces are linked to PDCCH repetition. When PDCCH repetition is monitored in two linked search space (SS) sets, the UE does not expect a third monitored SS set to be linked with any of the two linked SS sets. The two linked SS sets have the same CSS set type other than Type-0 CSS and other than Type-3 CSS for common search spaces other than SearchSpaceZero. The two linked SS sets have the same DCI formats to monitor. The two linked SS sets are configured with the same controlResourceSetId. For intra-slot PDCCH repetition: The two SS sets should have the same periodicity and offset (monitoringSlotPeriodicityAndOffset), and the same duration. The starting symbol of monitoring occasion of the second SS is located right after the ending symbol of monitoring occasion of the first SS. For linking monitoring occasions across the two SS sets that exist in the same slot: The two SS sets have the same number of monitoring occasions within a slot and n-th monitoring occasion of one SS set is linked to n-th monitoring occasion of the other SS set.</td>
+  </tr>
+  <tr>
+    <td>searchSpaceTypeIndicates whether this is a common search space (present) or a UE specific search space as well as DCI formats to monitor for.</td>
+  </tr>
+  <tr>
+    <td>ue-SpecificConfigures this search space as UE specific search space (USS). The UE monitors the DCI format with CRC scrambled by C-RNTI, CS-RNTI (if configured), and SP-CSI-RNTI (if configured)</td>
+  </tr>
+</table>

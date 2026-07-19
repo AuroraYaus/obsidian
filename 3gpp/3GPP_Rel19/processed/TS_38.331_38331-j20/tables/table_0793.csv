@@ -1,0 +1,6 @@
+SL-UE-SelectedConfig field descriptions
+"sl-PrioritizationThresIndicates the SL priority threshold, which is used to determine whether SL TX is prioritized over UL TX, as specified in TS 38.321 [3]. Network does not configure the sl-PrioritizationThres and the ul-PrioritizationThres to the UE separately."
+sl-ProbResourceKeepIndicates the probability with which the UE keeps the current resource when the resource reselection counter reaches zero for sensing based UE autonomous resource selection (see TS 38.321 [3]).
+"sl-PSSCH-TxConfigListIndicates PSSCH TX parameters such as MCS, sub-channel number, retransmission number, associated to different UE absolute speeds and different synchronization reference types for UE autonomous resource selection."
+sl-ReselectAfterIndicates the number of consecutive skipped transmissions before triggering resource reselection for sidelink communication (see TS 38.321 [3]).
+"ul-PrioritizationThresIndicates the UL priority threshold, which is used to determine whether SL TX is prioritized over UL TX, as specified in TS 38.321 [3]. Network does not configure the sl-PrioritizationThres and the ul-PrioritizationThres to the UE separately."

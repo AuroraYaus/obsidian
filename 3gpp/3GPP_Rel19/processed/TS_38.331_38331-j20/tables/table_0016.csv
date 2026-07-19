@@ -1,0 +1,5 @@
+IAB-IP-AddressPrefixReq-IEs field descriptions
+all-Traffic-PrefixReqThis field is used to request the IPv6 address prefix for all traffic. The length of allocated IPv6 prefix is fixed to 64.
+f1-C-Traffic-PrefixReqThis field is used to request the IPv6 address prefix for F1-C traffic. The length of allocated IPv6 prefix is fixed to 64.
+f1-U-Traffic-PrefixReqThis field is used to request the IPv6 address prefix for F1-U traffic. The length of allocated IPv6 prefix is fixed to 64.
+non-F1-Traffic-PrefixReqThis field is used to request the IPv6 address prefix for non-F1 traffic. The length of allocated IPv6 prefix is fixed to 64.

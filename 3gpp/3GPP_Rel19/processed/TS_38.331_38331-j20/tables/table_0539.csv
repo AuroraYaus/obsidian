@@ -1,0 +1,6 @@
+EventTriggerConfigNR-SL field descriptions
+"cN-ThresholdThreshold used for events C1 and C2 specified in clauses 5.5.4.11 and 5.5.4.12, respectively."
+eventIdChoice of NR event triggered reporting criteria.
+reportAmounNumber of measurement reports applicable for eventTriggered as well as for periodical report types.
+"reportQuantityThe sidelink measurement quantities to be included in the measurement report. In this release, this is set as the CBR measurement result."
+timeToTriggerTime during which specific criteria for the event needs to be met in order to trigger a measurement report.

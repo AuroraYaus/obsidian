@@ -1,0 +1,77 @@
+<table>
+  <tr>
+    <td>PUR-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>alphaParameter: αc(3). See TS 36.213 [23], clause 5.1.1.1.</td>
+  </tr>
+  <tr>
+    <td>hsfn-LSB-InfoIndicates the LSB of the H-SFN corresponding to the last subframe of the first transmission of RRCConnectionRelease message containing pur-Config.</td>
+  </tr>
+  <tr>
+    <td>locationCE-ModeBPRB location within the narrowband when PUSCH sub-PRB resource allocation is enabled for PUR grant in CE mode B.</td>
+  </tr>
+  <tr>
+    <td>mpdcch-FreqHoppingFrequency hopping activation/deactivation for MPDCCH. See TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>mpdcch-NarrowbandIndicates the index of a narrowband on which the UE monitors for MPDCCH, see TS 36.213 [23], clause 9.1.5. Field values (1..maxAvailNarrowBands-r13) correspond to narrowband indices (0..maxAvailNarrowBands-r13-1) as specified in TS 36.211 [21].</td>
+  </tr>
+  <tr>
+    <td>mpdcch-NumRepetitionMaximum number of repetitions levels for UE-SS for MPDCCH, see TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>mpdcch-Offset-PUR-SSFractional period offset of starting subframe for an MPDCCH PUR search space, see TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>mpdcch-PRB-PairsConfigIndicates the configuration of physical resource-block pairs used for MPDCCH. See TS 36.213 [23]. mpdcch-PRB-Pairs indicates the number of PRB pairs. Value n2 corresponds to 2 PRB pairs; n4 corresponds to 4 PRB pairs and so on. resourceBlockAssignment indicates the index to a specific combination of PRB pair for MPDCCH set. See TS 36.213 [23], clause 9.1.4.4.</td>
+  </tr>
+  <tr>
+    <td>mpdcch-StartSF-UESSStarting subframe configuration for an MPDCCH PUR search space, see TS 36.213 [23]. Value v1 corresponds to 1, value v1dot5 corresponds to 1.5, and so on.</td>
+  </tr>
+  <tr>
+    <td>n1PUCCH-ANIndicates UE-specific PUCCH AN resource offset, see TS 36.213 [23], clause 10.1.</td>
+  </tr>
+  <tr>
+    <td>p0-UE-PUSCHParameter: P0_UE_PUSCH,c (3). See TS 36.213 [23], clause 5.1.1.1, unit dB.</td>
+  </tr>
+  <tr>
+    <td>pucch-NumRepetitionCE-Format1Number of PUCCH repetitions for PUCCH format 1/1a, see TS 36.211 [21] and TS 36.213 [23]. When pur-GrantInfo is set to ce-ModeA, value n1 corresponds to 1 repetition, value n2 corresponds to 2 repetitions, and so on. When pur-GrantInfo is set to ce-ModeB, actual value corresponds to 4 * indicated value.</td>
+  </tr>
+  <tr>
+    <td>pusch-CyclicShiftParameter:  See TS 36.211 [21] clause 5.5.2.1.1. Value n0 corresponds to 0 and n6 corresponds to 6.ncs,λ.</td>
+  </tr>
+  <tr>
+    <td>pusch-NB-MaxTBSActivation of 2984 bits maximum PUSCH TBS in 1.4 MHz in CE mode A, see TS 36.212 [22] and TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>pur-GrantInfoIndicates UL grant for transmission using PUR. Field set to ce-ModeA indicates the PUR grant is for CE Mode A and the field set to ce-ModeB indicates the PUR grant is for CE Mode B. numRUs indicates DCI field for PUSCH number of resource units, see TS 36.213 [23] clause 8.1.6. prbAllocationInfo indicates DCI field for PUSCH resource block assignment, see TS 36.212 [22], clause 5.3.3.1.10 (CE Mode A) and clause 5.3.3.1.11 (CE Mode B). mcs indicates DCI field for PUSCH modulation and coding scheme, see TS 36.213 [23] clause 8.6. numRepetitions indicates DCI field for PUSCH repetition number, see TS 36.213 [23] clause 8.0.For CE Mode A, numRUs set to &#x27;00&#x27; indicates use of full-PRB resource allocation, otherwise sub-PRB resource allocation as defined in TS 36.213 [23], clause 8.1.6. For CE Mode B, subPRB-Allocation indicates whether sub-PRB resource allocation is used.</td>
+  </tr>
+  <tr>
+    <td>pur-ImplicitReleaseAfterNumber of consecutive PUR occasions that can be skipped before implicit release, as specified in 5.3.3.20. Value n2 corresponds to 2 PUR occasions, value n4 corresponds to 4 PUR occasions and so on.</td>
+  </tr>
+  <tr>
+    <td>pur-NumOccasionsNumber of PUR occasions. Value one corresponds to 1 PUR occasion, and value infinite corresponds to an infinite number of PUR occasions.</td>
+  </tr>
+  <tr>
+    <td>pur-PDSCH-FreqHoppingFrequency hopping activation/deactivation for PDSCH. See TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>pur-PDSCH-maxTBSActivation/deactivation of DL TBS of 1736 bits for HD-FDD BL UE in CE mode A, see TS 36.213 [23], clause 7.1.7.2.</td>
+  </tr>
+  <tr>
+    <td>pur-PeriodicityAndOffsetIndicates the periodicity for the PUR occasions and time offset until the first PUR occasion.</td>
+  </tr>
+  <tr>
+    <td>pur-PUSCH-FreqHoppingFrequency hopping activation/deactivation for PUSCH. See TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>pur-ResponseWindowTimerPUR MPDCCH search space window duration. See TS 36.321 [6] and TS 36.213 [23]. Value in subframes. Value sf240 corresponds to 240 subframes, value sf480 corresponds to 480 subframes and so on.</td>
+  </tr>
+  <tr>
+    <td>pur-RSRP-ChangeThresholdIndicates the threshold(s) of change in serving cell RSRP in dB for TA validation. Value dB4 corresponds to 4 dB, value dB6 corresponds to 6 dB and so on. When pur-RSRP-ChangeThreshold is set to setup, if decreaseThresh is absent the value of increaseThresh is also used for decreaseThresh.</td>
+  </tr>
+  <tr>
+    <td>pur-TimeAlignmentTimerIndicates the idle mode TA timer in seconds for TA validation. Actual value = indicated value * PUR periodicity.</td>
+  </tr>
+</table>

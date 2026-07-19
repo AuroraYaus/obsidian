@@ -1,0 +1,3 @@
+Definitions for parameters,Per,M,FDD-TDDDIFF,FR1-FR2DIFF
+"drb-IAB-r16Indicates whether the IAB-MT supports DRB configuration including split DRB with one UL path, (de)ciphering on DRB and PDCP status reporting.",IAB-MT,No,No,No
+"non-DRB-IAB-r16Indicates whether the IAB-MT supports SRB2 configuration without a DRB, as specified in TS 38.331 [9].",IAB-MT,No,No,No

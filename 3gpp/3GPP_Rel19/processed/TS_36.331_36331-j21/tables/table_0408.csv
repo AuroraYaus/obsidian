@@ -1,0 +1,3 @@
+Conditional presence,Explanation,
+Bitmap1,"The field is optional present, need OR, if value of slotBitmap corresponditing to at least one subrame is '01'; otherwise the field is not present.",
+Bitmap2,"The field is optional present, need OR, if value of slotBitmap corresponditing to at least one subrame is '10'; otherwise the field is not present.",

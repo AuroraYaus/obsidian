@@ -1,0 +1,100 @@
+<table>
+  <tr>
+    <td>Definitions for parameters</td>
+    <td>Per</td>
+    <td>M</td>
+    <td>FDD-TDD DIFF</td>
+    <td>FR1-FR2 DIFF</td>
+  </tr>
+  <tr>
+    <td>sl-ContiguousRB-TxRx-r18Indicates whether the UE supports contiguous RB-based PSCCH/PSSCH transmission/reception and resource (re-)selection for contiguous RB-based PSCCH/PSSCH transmission.A UE supporting this feature shall also support of at least one of sl-CrossCarrierScheduling-r16, sl-TransmissionMode2-r16, sl-TransmissionMode2-PartialSensing-r17, and sl-TransmissionMode2- RandomResourceSelection-r17.NOTE 1:If UE supports sl-CrossCarrierScheduling-r16, the UE is not required to support PT-RS transmission in FR2 and monitoring DCI format 3_0 for NR sidelink dynamic scheduling and configured grant type 2 on the same carrier as sidelink in sl-TransmissionMode1-r16.NOTE 2:If UE supports sl-TransmissionMode2-r16, the UE is not required to support PT-RS transmission in FR2 and transmission using 120 kHz subcarrier spacing with normal CP FR2 in sl-TransmissionMode2-r16.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-DynamicChannelAccess-r18Indicates whether the UE supports the following components in a band where shared spectrum channel access is used:-SL Type 1 channel access and contention window size adjustment-SL Type 2A channel access-SL Type 2B channel access-SL Type 2C channel access-20MHz LBT bandwidth-CP extension up to 1 symbol in 15kHz SCS if the UE supports 15 kHz SCS-CP extension up to 2 symbols in 30kHz SCS-CP extension up to 2 symbols if the UE supports 60kHz SCS when regions without OCB requirements.For UE supports NR SL in shared spectrum and when shared spectrum channel access must be used for a band, UE must support this feature.A UE supporting this feature shall also indicate support of at least one of sl-CrossCarrierScheduling-r16, sl-TransmissionMode2-r16, sl-TransmissionMode2-RandomResourceSelection-r17, and sl-TransmissionMode2-PartialSensing-r17.</td>
+    <td>Band</td>
+    <td>CY</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-DynamicMultiChannelAccess-r18Indicates the number of channels with 20MHz LBT bandwidth for multi-channel access procedures for PSCCH/PSSCH/S-SSB/PSFCH transmission(s) in multiple RB sets in a slot.A UE supporting this feature shall also indicate support of sl-DynamicChannelAccess-r18.NOTE:Support of S-SSB/PSFCH transmission(s) in multiple RB-sets in a slot is according to the support of {sl-PSFCH-MultiContiguousRB-r18, sl-PSFCH-MultiNonContiguousRB-r18} and {S-SSB transmissions in multiple contiguous RB sets, S-SSB transmissions in multiple non-contiguous RB sets }.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-Interlace-RB-TxRx-r18Indicates whether the UE supports interlace RB-based SL transmissions for the physical layer channels that it is capable of transmit and interlace RB-based SL receptions for the physical layer channels that it is capable of receive.A UE supporting this feature shall also indicate support of at least one of sl-CrossCarrierScheduling-r16, sl-TransmissionMode2-r16, sl-TransmissionMode2-RandomResourceSelection-r17, and sl-TransmissionMode2-PartialSensing-r17.The UE supports NR sidelink in shared spectrum where PSD and/or OCB requirements are defined by regulation must support this feature.</td>
+    <td>Band</td>
+    <td>CY</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-LBT-Option1-r18Indicates whether the UE supports to avoid selection of N consecutive resource(s) before a reserved resource when the L1 SL priority value for the transmission is higher than the L1 SL priority value of the reserved resource and avoid selection of M consecutive resource(s) after a reserved resource when the transmitting symbols of the reserved resource overlap with LBT of the selected resource.It is up to UE whether to do it.A UE supporting this feature shall also indicate support of sl-DynamicChannelAccess-r18.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-LBT-Option2-r18Indicates whether the UE supports to prioritize / select resource(s) in the slot(s) for transmission if transmission in slot(s) at least T_proc,0 before a reserved resource is able to share its initiated COT to the reservation. It is up to UE whether to do it.A UE supporting this feature shall also indicate support of sl-DynamicChannelAccess-r18.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-MultiplePRB-CommonInterlacePSFCH-r18Indicates whether the UE supports transmissions/receptions of multiple dedicated PRBs in common interlace-based PSFCH.This capability signalling comprises the following parameters:-tx-TotalPRB-PSFCH-r18 indicates the maximum total number of dedicated PRBs for PSFCH in a slot that a UE can transmit PSFCH(s), in addition to common PRBs.-rx-TotalPRB-PSFCH-r18 indicates the maximum total number of dedicated PRBs for PSFCH in a slot that a UE can receive PSFCH(s).For UE supports NR sidelink in shared spectrum, where PSD and/or OCB requirements are defined by regulation, UE must support this feature.A UE supporting this feature shall also indicate support of sl-Interlace-RB-TxRx-r18.</td>
+    <td>Band</td>
+    <td>CY</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-MultiplePRB-DedicatedInterlacePSFCH-r18Indicates whether the UE supports transmissions/receptions of multiple dedicated PRBs in dedicated interlace-based PSFCH.This capability signalling comprises the following parameters:-tx-TotalPRB-PSFCH-r18 indicates the maximum total number of dedicated interlaces for PSFCH in a slot that a UE can transmit PSFCH(s).-rx-TotalPRB-PSFCH-r18 indicates the maximum total number of dedicated interlaces for PSFCH in a slot that a UE can receive PSFCH(s).A UE supporting this feature shall also indicate support of sl-Interlace-RB-TxRx-r18.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-PowerClassUnlicensed-r18Indicates the supported power class of UE for this band used for sidelink unlicensed. If the field is absent, the UE supports the default power class in TS 38.101-1 [2], Table 6.2E.1F-1.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>sl-PSFCH-MultiContiguousRB-r18Indicates whether the UE supports PSFCH transmissions in multiple contiguous RB sets.A UE supporting this feature shall at least indicate support of sl-DynamicMultiChannelAccess-r18 or support transmitting PSFCH/S-SSB on a subset of the intended number of RB sets based on the outcome of channel access on individual RB sets.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-PSFCH-MultiNonContiguousRB-r18Indicates whether the UE supports PSFCH transmissions in multiple non-contiguous RB sets.A UE supporting this feature shall also indicate support of sl-PSFCH-MultiContiguousRB-r18.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-PSFCH-MultiOccasion-r18Indicates the number of PSFCH occasion(s) per PSCCH/PSSCH that a UE supports for PSFCH transmission/reception.A UE supporting this feature shall also indicate support of psfch-FormatZeroSidelink-r16.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-ResourceAllocMode1-r18Indicates whether the UE supports monitoring DCI format 3_0 on a licensed band for NR sidelink dynamic scheduling and configured grant type 2 for transmitting PSCCH/PSSCH on a shared spectrum and reporting NACK to gNB when transmitting PSCCH/PSSCH on scheduled resource(s) is failed due to LBT failure.A UE supporting this feature shall also indicate support of sl-DynamicChannelAccess-r18.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+</table>

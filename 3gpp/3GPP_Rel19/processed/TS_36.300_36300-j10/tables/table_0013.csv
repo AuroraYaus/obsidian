@@ -1,0 +1,6 @@
+,Ciphering,Integrity Protection
+NAS Signalling,Required and terminated in MME,Required and terminated in MME
+U-Plane Data,Required and terminated in eNB,Terminated in eNB(NOTE 1)
+RRC Signalling (AS),Required and terminated in eNB,Required and terminated in eNB
+MAC Signalling (AS),Not required,Not required
+NOTE 1:User Plane Integrity Protection may be supported by UEs capable of EN-DC operation. This version of the specifications does not provide UPIP support for other UEs when using E-UTRA.,,

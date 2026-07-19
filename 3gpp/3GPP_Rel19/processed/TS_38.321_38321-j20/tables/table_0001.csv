@@ -1,0 +1,8 @@
+MAC function,Downlink,Uplink,Sidelink TX,Sidelink RX
+Mapping between logical channels and transport channels,X,X,X,X
+Multiplexing,,X,X,
+Demultiplexing,X,,,X
+Scheduling information reporting,,X,X,
+Error correction through HARQ,X,X,X,X
+Logical Channel prioritization,,X,X,
+Radio resource selection,,,X,

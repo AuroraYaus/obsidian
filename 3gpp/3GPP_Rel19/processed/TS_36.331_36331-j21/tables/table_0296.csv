@@ -1,0 +1,3 @@
+Conditional presence,Explanation
+TDD-OR,"The field is optional present for TDD, need OR; it is not present for FDD."
+Tx,The field is mandatory present when included in discTxPoolDedicated or discTxPoolCommon. Otherwise the field is not present.

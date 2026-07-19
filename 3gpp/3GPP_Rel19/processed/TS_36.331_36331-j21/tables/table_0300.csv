@@ -1,0 +1,7 @@
+SL-HoppingConfig field descriptions
+"aPer cell parameter:  see TS 36.213 [23], clause 14.3.1."
+"bPer UE parameter:  see TS 36.213 [23], clause 14.3.1."
+"cPer cell parameter:  see TS 36.213 [23], clause 14.3.1."
+"hoppingParameterAffects the hopping performed as specificed in TS 36.213 [23], clauses 14.1.1.2 and 14.1.1.4. In case value 504 is received, the value used by the UE is 510."
+"numSubbandsParameter: Nsb see TS 36.211 [21], clause 9.3.6."
+"rb-OffsetParameter: , see TS 36.211 [21], clause 9.3.6."

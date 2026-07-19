@@ -1,0 +1,8 @@
+SL-ConfigDedicatedNR field descriptions
+"sl-LBT-SchedulingRequestIdIndicates the scheduling request configuration applicable for Sidelink consistent LBT failure report, as specified in TS 38.321 [3]."
+sl-MaxTransPowerCAThe maximum total transmit power to be used by the UE across all sidelink carriers.
+sl-MeasConfigInfoToAddModListThis field indicates the RSRP measurement configurations for unicast destinations to add and/or modify.
+sl-MeasConfigInfoToReleaseListThis field indicates the RSRP measurement configurations for unicast destinations to remove.
+sl-PHY-MAC-RLC-ConfigThis field indicates the lower layer sidelink radio bearer configurations.
+sl-RadioBearerToAddModListThis field indicates one or multiple sidelink radio bearer configurations to add and/or modify. This field is not configured to the PC5 connection used for L2 U2N relay operation.
+sl-RadioBearerToReleaseListThis field indicates one or multiple sidelink radio bearer configurations to remove. This field is not configured to the PC5 connection used for L2 U2N relay operation.

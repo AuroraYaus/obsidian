@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <td>Cases</td>
+    <td>First Phase</td>
+    <td>Second Phase</td>
+    <td>T2 expired</td>
+  </tr>
+  <tr>
+    <td>UE returns to the same cell</td>
+    <td>Continue as if no radio problems occurred</td>
+    <td>Activity is resumed by means of explicit signalling between UE and eNB</td>
+    <td>Go via RRC_IDLE</td>
+  </tr>
+  <tr>
+    <td>UE selects a different cell from the same eNB</td>
+    <td>N/A</td>
+    <td>Activity is resumed by means of explicit signalling between UE and eNB</td>
+    <td>Go via RRC_IDLE</td>
+  </tr>
+  <tr>
+    <td>UE selects a cell of a prepared eNB (NOTE)</td>
+    <td>N/A</td>
+    <td>Activity is resumed by means of explicit signalling between UE and eNB</td>
+    <td>Go via RRC_IDLE</td>
+  </tr>
+  <tr>
+    <td>UE selects a cell of a different eNB that is not prepared (NOTE)</td>
+    <td>N/A</td>
+    <td>Go via RRC_IDLE</td>
+    <td>Go via RRC_IDLE</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE:a prepared eNB is an eNB which has admitted the UE during an earlier executed HO preparation phase, or obtains the UE context during the Second Phase.</td>
+  </tr>
+</table>

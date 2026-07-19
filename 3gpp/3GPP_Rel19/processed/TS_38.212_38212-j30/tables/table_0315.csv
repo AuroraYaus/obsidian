@@ -1,0 +1,5 @@
+Value of 2nd-stage SCI format field,2nd-stage SCI format
+00,SCI format 2-A
+01,SCI format 2-B; orreserved if higher layer parameter sl-TransmissionStructureForPSCCHandPSSCH in SL-BWP-Config is configured
+10,SCI format 2-C; orreserved if higher layer parameter sl-TransmissionStructureForPSCCHandPSSCH in SL-BWP-Config is configured and the COT sharing flag field is set to '1'
+11,SCI format 2-D; orreserved if higher layer parameter sl-TransmissionStructureForPSCCHandPSSCH in SL-BWP-Config is configured

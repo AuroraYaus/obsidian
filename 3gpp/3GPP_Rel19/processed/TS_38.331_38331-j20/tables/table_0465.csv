@@ -1,0 +1,4 @@
+PUCCH-SpatialRelationInfo field descriptions
+"pucch-PathLossReferenceRS-IdWhen pucch-PathLossReferenceRS-Id-v1610 is configured, the UE shall ignore pucch-PathLossReferenceRS-Id (without suffix)."
+"pucch-SpatialRelationInfoIdWhen pucch-SpatialRelationInfoId-v1610 is configured, the UE shall ignore pucch-SpatialRelationInfoId (without suffix). If pucch-SpatialRelationInfoId-v1610 is absent, the UE shall use the pucch-SpatialRelationInfoId (without suffix)."
+"servingCellIdIf the field is absent, the UE applies the ServCellId of the serving cell in which this PUCCH-SpatialRelationInfo is configured"

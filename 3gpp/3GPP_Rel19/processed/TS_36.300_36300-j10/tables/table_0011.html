@@ -1,0 +1,62 @@
+<table>
+  <tr>
+    <td>Target RAT</td>
+    <td>Solutions</td>
+    <td>Release</td>
+    <td>UE Capability</td>
+    <td>FGI Index</td>
+  </tr>
+  <tr>
+    <td rowspan="3">CS fallback to UMTS</td>
+    <td>RRC Connection Release with Redirection without Sys Info</td>
+    <td>Rel-8</td>
+    <td>(NOTE 1)Mandatory for UEs supporting CS fallback to UMTS</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>RRC Connection Release with Redirection with Sys Info</td>
+    <td>Rel-9</td>
+    <td>(NOTE 1)e-RedirectionUTRA</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>PS handover with DRB(s)</td>
+    <td>Rel-8</td>
+    <td>(NOTE 1)Mandatory for UEs supporting CS fallback to UMTS</td>
+    <td>FGI8, FGI22</td>
+  </tr>
+  <tr>
+    <td rowspan="5">CS fallback to GSM</td>
+    <td>RRC Connection Release with Redirection without Sys Info</td>
+    <td>Rel-8</td>
+    <td>(NOTE 2)Mandatory for UEs supporting CS fallback to GSM</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>RRC Connection Release with Redirection with Sys Info</td>
+    <td>Rel-9</td>
+    <td>(NOTE 2)Mandatory for UEs supporting CS fallback to GSM</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Cell change order without NACC</td>
+    <td>Rel-8</td>
+    <td>(NOTE 2)Mandatory for UEs supporting CS fallback to GSM</td>
+    <td>FGI10</td>
+  </tr>
+  <tr>
+    <td>Cell change order with NACC</td>
+    <td>Rel-8</td>
+    <td>(NOTE 2)Mandatory for UEs supporting CS fallback to GSM</td>
+    <td>FGI10</td>
+  </tr>
+  <tr>
+    <td>PS handover</td>
+    <td>Rel-8</td>
+    <td>(NOTE 2)interRAT-PS-HO-ToGERAN</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE 1:All CS fallback to UMTS capable UE shall indicate that it supports UTRA FDD or TDD and supported band list in the UE capability.NOTE 2:All CS fallback to GSM capable UE shall indicate that it supports GERAN and supported band list in the UE capability.NOTE 3:The measurement may be performed before any of the above CS fallback solution is triggered to select the target cell or frequency layer more accurately based on eNB decision. eNB may trigger any of above CS fallback solutions blindly.</td>
+  </tr>
+</table>

@@ -1,0 +1,24 @@
+UE UL Category,Maximum number of UL-SCH transport block bits transmitted within a TTI,Maximum number of bits of an UL-SCH transport block transmitted within a TTI,Support for 64QAM in UL,Support for 256QAM in UL
+UL Category M1(Note 1),1000 or 2984,1000 or 2984,No,No
+UL Category M2,6968,6968,No,No
+UL Category 0,1000,1000,No,No
+UL Category 1bis,5160,5160,No,No
+UL Category 3,51024,51024,No,No
+UL Category 5,75376,75376,Yes,No
+UL Category 7,102048,51024,No,No
+UL Category 8,1497760,149776,Yes,No
+UL Category 13,150752,75376,Yes,No
+UL Category 14,9585664,149776,Yes,No
+UL Category 15,226128,75376,Yes,No
+UL Category 16,105528,105528,Yes,Yes
+UL Category 17,2119360,211936,Yes,Yes
+UL Category 18,211056,105528,Yes,Yes
+UL Category 19,13563904,211936,Yes,Yes
+UL Category 20,316584,105528,Yes,Yes
+UL Category 21,301504,75376,Yes,No
+UL Category 22,422112,105528,Yes,Yes
+UL Category 23,527640,105528,Yes,Yes
+UL Category 24,633168,105528,Yes,Yes
+UL Category 25,738696,105528,Yes,Yes
+UL Category 26,844224,105528,Yes,Yes
+"NOTE 1:The UE supports ""Maximum number of UL-SCH transport block bits transmitted within a TTI"" and ""Maximum number of bits of an UL-SCH transport block transmitted within a TTI"" of 2984 bits if the UE indicates support of ce-PUSCH-NB-MaxTBS-r14. Otherwise the UE supports 1000 bits.",,,,

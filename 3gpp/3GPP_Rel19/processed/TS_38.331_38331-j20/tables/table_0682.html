@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td>AppLayerMeasConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>appLayerMeasPriorityThe field indicates the priority of the application layer measurement configuration, where a higher value indicates lower priority. If the field is not configured, the application layer measurement configuration has the lowest priority.</td>
+  </tr>
+  <tr>
+    <td>idleInactiveReportAllowedThe field indicates whether transmission of application layer measurement configurations and reports for application layer measurements applicable to RRC_IDLE and/or RRC_INACTIVE is allowed in the cell where the field is received. If the field is not configured, transmission of application layer measurement reports and configurations for RRC_IDLE/RRC_INACTIVE is not allowed.</td>
+  </tr>
+  <tr>
+    <td>measConfigAppLayerContainerThe field contains configuration of application layer measurements, see Annex L (normative) in TS 26.247 [68], clause 16.5 in TS 26.114 [69] and clause 9.4 in TS 26.118 [70].</td>
+  </tr>
+  <tr>
+    <td>measConfigAppLayerIdThe field contains the identity of the application layer measurements. When application layer measurements are configured for an SCG, the measConfigAppLayerId is obtained according to TS 38.423 [37], clauses 8.3.1 and 8.3.3.</td>
+  </tr>
+  <tr>
+    <td>pauseReportingThe field indicates whether the transmission of measReportAppLayerContainer is paused or not. Value true indicates the transmission of measReportAppLayerContainer is paused; value false indicates the transmission of measReportAppLayerContainer is not paused.</td>
+  </tr>
+  <tr>
+    <td>ran-VisibleParametersThe field indicates whether RAN visible application layer measurements shall be reported or not.</td>
+  </tr>
+  <tr>
+    <td>ran-VisibleReportingSRBThe field indicates the SRB to be used for transmission of RAN visible application layer measurement reports.</td>
+  </tr>
+  <tr>
+    <td>reportingSRBThe field indicates the SRB to be used for transmission of encapsulated application layer measurement reports.</td>
+  </tr>
+  <tr>
+    <td>rrc-SegAllowedSRB4This field indicates that RRC segmentation of MeasurementReportAppLayer is enabled on SRB4. The field is only configured for an MCG. It may be present only if the UE supports RRC segmentation of the MeasurementReportAppLayer message.</td>
+  </tr>
+  <tr>
+    <td>rrc-SegAllowedSRB5This field indicates that RRC segmentation of MeasurementReportAppLayer is enabled on SRB5. The field is only configured for an SCG. It may be present only if the UE supports RRC segmentation of the MeasurementReportAppLayer message.</td>
+  </tr>
+  <tr>
+    <td>serviceTypeIndicates the type of application layer measurement. Value streaming indicates Quality of Experience Measurement Collection for streaming services (see TS 26.247 [68]), value mtsi indicates Quality of Experience Measurement Collection for MTSI (see TS 26.114 [69]) and value vr indicates Quality of Experience Measurement Collection for VR service (see TS 26.118 [70]). The network always configures serviceType when application layer measurements are initially configured and at fullConfig.</td>
+  </tr>
+  <tr>
+    <td>transmissionOfSessionStartStopValue true indicates that the UE shall transmit indications when the measurement session in the application layer starts and stops. Value false indicates that the UE shall not transmit any session status indications. The UE transmits a session start indication upon configuration of this field set to value true if a session already has started in the application layer.</td>
+  </tr>
+</table>

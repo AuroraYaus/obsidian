@@ -1,0 +1,2 @@
+Conditional Presence,Explanation
+PI2-BPSK,"The field is optionally present, Need R, if format3 and/or format4 are configured and pi2BPSK is configured in each of them. It is absent, Need R otherwise."

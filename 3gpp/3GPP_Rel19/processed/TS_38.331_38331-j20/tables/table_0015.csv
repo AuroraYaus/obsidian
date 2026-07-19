@@ -1,0 +1,5 @@
+IAB-IP-AddressNumReq-IEs field descriptions
+all-Traffic-NumReqThis field is used to request the numbers of IP address for all traffic.
+f1-C-Traffic-NumReqThis field is used to request the numbers of IP address for F1-C traffic.
+f1-U-Traffic-NumReqThis field is used to request the numbers of IP address for F1-U traffic.
+non-F1-Traffic-NumReqThis field is used to request the numbers of IP address for non-F1 traffic.

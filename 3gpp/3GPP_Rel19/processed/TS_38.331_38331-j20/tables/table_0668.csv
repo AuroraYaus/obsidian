@@ -1,0 +1,3 @@
+Phy-ParametersFRX-Diff field descriptions
+"csi-RS-IM-ReceptionForFeedback/ csi-RS-ProcFrameworkForSRS/ csi-ReportFrameworkThese fields are optionally present in fr1-fr2-Add-UE-NR-Capabilities in UE-NR-Capability. They shall not be set in any other instance of the IE Phy-ParametersFRX-Diff. If the network configures the UE with serving cells on both FR1 and FR2 bands, these parameters, if present, limit the corresponding parameters in MIMO-ParametersPerBand."
+dummy-EnableTx-RxDuringMeasGapThe field is not used in the specification and the network ignores the received value.

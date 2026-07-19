@@ -1,0 +1,49 @@
+<table>
+  <tr>
+    <td>RNTI</td>
+    <td>PDCCH search space</td>
+    <td>pusch-ConfigCommon includes pusch-TimeDomainAllocationList</td>
+    <td>pusch-Config includes pusch-TimeDomainAllocationList</td>
+    <td>PUSCH time domain resource allocation to apply</td>
+  </tr>
+  <tr>
+    <td rowspan="2" colspan="2">PUSCH scheduled by MAC RAR as described in clause 8.2 of [6, TS 38.213] or MAC fallbackRAR as described in clause 8.2A of [6, 38.213] or for MsgA PUSCH transmission</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Default A</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td></td>
+    <td>pusch-TimeDomainAllocationList provided in pusch-ConfigCommon</td>
+  </tr>
+  <tr>
+    <td rowspan="2">C-RNTI, MCS-C-RNTI, TC-RNTI, CS-RNTI</td>
+    <td rowspan="2">Any common search space associated with CORESET 0</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Default A</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td></td>
+    <td>pusch-TimeDomainAllocationList provided in pusch-ConfigCommon</td>
+  </tr>
+  <tr>
+    <td rowspan="3">C-RNTI, MCS-C-RNTI, TC-RNTI, CS-RNTI</td>
+    <td rowspan="3">Any common search space not associated with CORESET 0,DCI format 0_0 inUE specific search space</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Default A</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>No</td>
+    <td>pusch-TimeDomainAllocationList provided in pusch-ConfigCommon</td>
+  </tr>
+  <tr>
+    <td>No/Yes</td>
+    <td>Yes</td>
+    <td>pusch-TimeDomainAllocationList provided in pusch-Config</td>
+  </tr>
+</table>

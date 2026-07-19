@@ -1,0 +1,165 @@
+%%{init: {'theme': 'default', 'themeVariables': {'fontSize': '18px'}, 'flowchart': {'nodeSpacing': 15, 'rankSpacing': 40}}}%%
+flowchart TD
+    ROOT["📚 3GPP 译码知识库 — 关系图谱"]:::root
+
+    ROOT --> L0["L0 术语表"]:::L0
+    ROOT --> L1["L1 数学基础"]:::L1
+    ROOT --> L2["L2 协议与算法"]:::L2
+    ROOT --> L3["L3 工程实现"]:::L3
+    ROOT --> SPEC["3GPP_Rel19<br/>协议原文"]:::spec
+    ROOT --> SIM["sim 仿真验证"]:::sim
+
+    L0 --> L0_G["3GPP LTE NR<br/>译码术语全称对照表"]:::L0
+
+    L1 --> L1_M1_GF2算术["M1 GF(2)算术"]:::L1m
+    L1_M1_GF2算术 --> L1_T0_1_LTE_NR_decoder_protocol_reading_map["Lte Nr Decoder Protocol"]:::L1n
+    L1_M1_GF2算术 --> L1_T1_1_GF2_binary_arithmetic_for_decoders["Gf2 Binary Arithmetic For"]:::L1n
+    L1_M1_GF2算术 --> L1_T1_2_GF2_polynomials_crc_remainders["Gf2 Polynomials Crc Remainders"]:::L1n
+    L1_M1_GF2算术 --> L1_T1_3_GF2_vectors_matrices["Gf2 Vectors Matrices"]:::L1n
+    L1_M1_GF2算术 --> L1_T1_4_probability_bayes_soft_decoding["Probability Bayes Soft Decoding"]:::L1n
+    L1_M1_GF2算术 --> L1_T1_5_LLR_soft_decision["Llr Soft Decision"]:::L1n
+    L1_M1_GF2算术 --> L1_T1_6_information_theory_minimum_for_decoding["Information Theory Minimum For"]:::L1n
+    L1 --> L1_M2_软解调与信道["M2 软解调与信道"]:::L1m
+    L1_M2_软解调与信道 --> L1_T2_1_AWGN_noise_scaling["Awgn Noise Scaling"]:::L1n
+    L1_M2_软解调与信道 --> L1_T2_2_BPSK_QPSK_soft_demapping["Bpsk Qpsk Soft Demapping"]:::L1n
+    L1_M2_软解调与信道 --> L1_T2_3_QAM_Max_Log_MAP_demapping["Qam Max Log Map"]:::L1n
+    L1_M2_软解调与信道 --> L1_T2_4_fading_channel_LLR_reliability["Fading Channel Llr Reliability"]:::L1n
+    L1_M2_软解调与信道 --> L1_T2_5_LLR_clipping_scaling_quantization["Llr Clipping Scaling Quantization"]:::L1n
+    L1 --> L1_M3_CRC与分段["M3 CRC与分段"]:::L1m
+    L1_M3_CRC与分段 --> L1_T3_1_LTE_NR_CRC_families["Lte Nr Crc Families"]:::L1n
+    L1_M3_CRC与分段 --> L1_T3_2_transport_code_block_filler_bits["Transport Code Block Filler"]:::L1n
+    L1_M3_CRC与分段 --> L1_T3_3_LTE_Turbo_segmentation_rules["Lte Turbo Segmentation Rules"]:::L1n
+    L1_M3_CRC与分段 --> L1_T3_4_NR_LDPC_segmentation_rules["Nr Ldpc Segmentation Rules"]:::L1n
+    L1_M3_CRC与分段 --> L1_T3_5_NR_Polar_segmentation_crc["Nr Polar Segmentation Crc"]:::L1n
+    L1 --> L1_M4_译码工程概念["M4 译码工程概念"]:::L1m
+    L1_M4_译码工程概念 --> L1_T4_1_iterative_decoding_extrinsic_information["Iterative Decoding Extrinsic Information"]:::L1n
+    L1_M4_译码工程概念 --> L1_T4_2_graphs_trellises_trees_for_decoding["Graphs Trellises Trees For"]:::L1n
+    L1_M4_译码工程概念 --> L1_T4_3_HARQ_soft_combining_basics["Harq Soft Combining Basics"]:::L1n
+    L1_M4_译码工程概念 --> L1_T4_4_early_stopping_crc_gated_control["Early Stopping Crc Gated"]:::L1n
+    L1_M4_译码工程概念 --> L1_T4_5_decoder_performance_metrics["Decoder Performance Metrics"]:::L1n
+    L1_M4_译码工程概念 --> L1_T4_6_decoder_interface_contracts["Decoder Interface Contracts"]:::L1n
+    L1 --> L1_M5_RTL前置知识["M5 RTL前置知识"]:::L1m
+    L1_M5_RTL前置知识 --> L1_T5_1_fixed_point_numbers_for_LLR["Fixed Point Numbers For"]:::L1n
+    L1_M5_RTL前置知识 --> L1_T5_2_memory_banking_buffering_basics["Memory Banking Buffering Basics"]:::L1n
+    L1_M5_RTL前置知识 --> L1_T5_3_throughput_latency_parallelism["Throughput Latency Parallelism"]:::L1n
+    L1_M5_RTL前置知识 --> L1_T5_4_RTL_state_machine_handshake_basics["Rtl State Machine Handshake"]:::L1n
+    L1_M5_RTL前置知识 --> L1_T5_5_decoder_hardware_verification_mindset["Decoder Hardware Verification Mindset"]:::L1n
+    L2 --> L2_T6_Turbo译码链["T6 Turbo译码链"]:::L2m
+    L2_T6_Turbo译码链 --> L2_T6_1_LTE_Turbo_decoder_chain_overview[".1 Lte Turbo Decoder"]:::L2n
+    L2_T6_Turbo译码链 --> L2_T6_2_RSC_code_foundation[".2 Rsc Code Foundation"]:::L2n
+    L2_T6_Turbo译码链 --> L2_T6_3_LTE_Turbo_encoder_trellis_termination[".3 Lte Turbo Encoder"]:::L2n
+    L2_T6_Turbo译码链 --> L2_T6_4_LTE_Turbo_internal_interleaver[".4 Lte Turbo Internal"]:::L2n
+    L2_T6_Turbo译码链 --> L2_T6_5_BCJR_MAP_decoding_intuition[".5 Bcjr Map Decoding"]:::L2n
+    L2_T6_Turbo译码链 --> L2_T6_6_Log_MAP_Max_Log_MAP_Turbo[".6 Log Map Max"]:::L2n
+    L2_T6_Turbo译码链 --> L2_T6_7_Turbo_iteration_extrinsic_stopping[".7 Turbo Iteration Extrinsic"]:::L2n
+    L2_T6_Turbo译码链 --> L2_T6_8_LTE_Turbo_decoder_numeric_walkthrough[".8 Lte Turbo Decoder"]:::L2n
+    L2 --> L2_T7_Turbo速率匹配["T7 Turbo速率匹配"]:::L2m
+    L2_T7_Turbo速率匹配 --> L2_T7_1_LTE_Turbo_de_rate_matching_overview[".1 Lte Turbo De"]:::L2n
+    L2_T7_Turbo速率匹配 --> L2_T7_2_LTE_subblock_deinterleaver_circular_buffer[".2 Lte Subblock Deinterleaver"]:::L2n
+    L2_T7_Turbo速率匹配 --> L2_T7_3_LTE_HARQ_soft_buffer_RV[".3 Lte Harq Soft"]:::L2n
+    L2_T7_Turbo速率匹配 --> L2_T7_4_LTE_code_block_reassembly_TB_CRC[".4 Lte Code Block"]:::L2n
+    L2_T7_Turbo速率匹配 --> L2_T7_5_LTE_DL_UL_decoding_differences[".5 Lte Dl Ul"]:::L2n
+    L2_T7_Turbo速率匹配 --> L2_T7_6_LTE_Turbo_decoder_edge_cases[".6 Lte Turbo Decoder"]:::L2n
+    L2 --> L2_T8_LDPC译码链["T8 LDPC译码链"]:::L2m
+    L2_T8_LDPC译码链 --> L2_T8_0_TS38212_chapter5_decoder_side_map[".0 Ts38212 Chapter5 Decoder"]:::L2n
+    L2_T8_LDPC译码链 --> L2_T8_1_NR_LDPC_decoder_chain_overview[".1 Nr Ldpc Decoder"]:::L2n
+    L2_T8_LDPC译码链 --> L2_T8_2_NR_LDPC_BG_selection_formula_evidence[".2 Nr Ldpc Bg"]:::L2n
+    L2_T8_LDPC译码链 --> L2_T8_2_NR_LDPC_base_graph_selection[".2 Nr Ldpc Base"]:::L2n
+    L2_T8_LDPC译码链 --> L2_T8_3_NR_LDPC_lifting_QC_matrix[".3 Nr Ldpc Lifting"]:::L2n
+    L2_T8_LDPC译码链 --> L2_T8_4_LDPC_Tanner_graph_message_passing[".4 Ldpc Tanner Graph"]:::L2n
+    L2_T8_LDPC译码链 --> L2_T8_5_LDPC_sum_product_BP[".5 Ldpc Sum Product"]:::L2n
+    L2_T8_LDPC译码链 --> L2_T8_6_LDPC_MS_NMS_OMS[".6 Ldpc Ms Nms"]:::L2n
+    L2_T8_LDPC译码链 --> L2_T8_7_layered_LDPC_decoding_schedule[".7 Layered Ldpc Decoding"]:::L2n
+    L2_T8_LDPC译码链 --> L2_T8_8_NR_LDPC_decoder_numeric_walkthrough[".8 Nr Ldpc Decoder"]:::L2n
+    L2 --> L2_T9_LDPC速率匹配["T9 LDPC速率匹配"]:::L2m
+    L2_T9_LDPC速率匹配 --> L2_T9_0_TS38214_MCS_TBS_decoder_descriptor[".0 Ts38214 Mcs Tbs"]:::L2n
+    L2_T9_LDPC速率匹配 --> L2_T9_1_NR_LDPC_rate_recovery_overview[".1 Nr Ldpc Rate"]:::L2n
+    L2_T9_LDPC速率匹配 --> L2_T9_2_NR_LDPC_circular_buffer_states[".2 Nr Ldpc Circular"]:::L2n
+    L2_T9_LDPC速率匹配 --> L2_T9_3_NR_LDPC_HARQ_soft_buffer_RV_k0[".3 Nr Ldpc Harq"]:::L2n
+    L2_T9_LDPC速率匹配 --> L2_T9_4_NR_LDPC_bit_interleaving_formula_evidence[".4 Nr Ldpc Bit"]:::L2n
+    L2_T9_LDPC速率匹配 --> L2_T9_4_NR_LDPC_bit_deinterleaving[".4 Nr Ldpc Bit"]:::L2n
+    L2_T9_LDPC速率匹配 --> L2_T9_5_NR_LDPC_reassembly_TB_CRC[".5 Nr Ldpc Reassembly"]:::L2n
+    L2_T9_LDPC速率匹配 --> L2_T9_6_NR_LDPC_decoder_edge_cases[".6 Nr Ldpc Decoder"]:::L2n
+    L2 --> L2_T10_Polar译码链["T10 Polar译码链"]:::L2m
+    L2_T10_Polar译码链 --> L2_T10_1_NR_Polar_decoder_chain_overview[".1 Nr Polar Decoder"]:::L2n
+    L2_T10_Polar译码链 --> L2_T10_2_channel_polarization_frozen_bits[".2 Channel Polarization Frozen"]:::L2n
+    L2_T10_Polar译码链 --> L2_T10_3_NR_Polar_reliability_sequence[".3 Nr Polar Reliability"]:::L2n
+    L2_T10_Polar译码链 --> L2_T10_4_Polar_SC_decoding[".4 Polar Sc Decoding"]:::L2n
+    L2_T10_Polar译码链 --> L2_T10_5_Polar_SCL_decoding[".5 Polar Scl Decoding"]:::L2n
+    L2_T10_Polar译码链 --> L2_T10_6_CRC_aided_SCL_control_reliability[".6 Crc Aided Scl"]:::L2n
+    L2_T10_Polar译码链 --> L2_T10_7_NR_Polar_rate_recovery[".7 Nr Polar Rate"]:::L2n
+    L2_T10_Polar译码链 --> L2_T10_8_NR_Polar_decoder_edge_cases[".8 Nr Polar Decoder"]:::L2n
+    L2 --> L2_T11_三码对比["T11 三码对比"]:::L2m
+    L2_T11_三码对比 --> L2_T11_1_Turbo_LDPC_Polar_algorithm_comparison[".1 Turbo Ldpc Polar"]:::L2n
+    L2_T11_三码对比 --> L2_T11_2_LTE_NR_rate_matching_comparison[".2 Lte Nr Rate"]:::L2n
+    L2_T11_三码对比 --> L2_T11_3_HARQ_soft_buffer_comparison[".3 Harq Soft Buffer"]:::L2n
+    L2_T11_三码对比 --> L2_T11_4_decoder_hardware_tradeoff_comparison[".4 Decoder Hardware Tradeoff"]:::L2n
+    L2_T11_三码对比 --> L2_T11_5_decoder_selection_by_channel_type[".5 Decoder Selection By"]:::L2n
+    L3 --> L3_T12_浮点黄金模型["T12 浮点黄金模型"]:::L3m
+    L3_T12_浮点黄金模型 --> L3_T12_1_python_golden_model_project_layout[".1 Python Golden Model"]:::L3n
+    L3_T12_浮点黄金模型 --> L3_T12_2_LTE_Turbo_float_sim_plan[".2 Lte Turbo Float"]:::L3n
+    L3_T12_浮点黄金模型 --> L3_T12_3_NR_LDPC_float_sim_plan[".3 Nr Ldpc Float"]:::L3n
+    L3_T12_浮点黄金模型 --> L3_T12_4_NR_Polar_float_sim_plan[".4 Nr Polar Float"]:::L3n
+    L3_T12_浮点黄金模型 --> L3_T12_5_BER_BLER_curve_reporting[".5 Ber Bler Curve"]:::L3n
+    L3 --> L3_T13_定点化模型["T13 定点化模型"]:::L3m
+    L3_T13_定点化模型 --> L3_T13_1_fixed_point_decoder_requirements[".1 Fixed Point Decoder"]:::L3n
+    L3_T13_定点化模型 --> L3_T13_2_LTE_Turbo_fixed_point_model_plan[".2 Lte Turbo Fixed"]:::L3n
+    L3_T13_定点化模型 --> L3_T13_3_NR_LDPC_fixed_point_model_plan[".3 Nr Ldpc Fixed"]:::L3n
+    L3_T13_定点化模型 --> L3_T13_4_NR_Polar_fixed_point_model_plan[".4 Nr Polar Fixed"]:::L3n
+    L3_T13_定点化模型 --> L3_T13_5_SIMD_memory_layout_decoders[".5 Simd Memory Layout"]:::L3n
+    L3_T13_定点化模型 --> L3_T13_6_bit_exact_regression_harness[".6 Bit Exact Regression"]:::L3n
+    L3 --> L3_T14_RTL微架构["T14 RTL微架构"]:::L3m
+    L3_T14_RTL微架构 --> L3_T14_1_LTE_Turbo_RTL_microarchitecture[".1 Lte Turbo Rtl"]:::L3n
+    L3_T14_RTL微架构 --> L3_T14_2_NR_LDPC_RTL_microarchitecture[".2 Nr Ldpc Rtl"]:::L3n
+    L3_T14_RTL微架构 --> L3_T14_3_NR_Polar_RTL_microarchitecture[".3 Nr Polar Rtl"]:::L3n
+    L3_T14_RTL微架构 --> L3_T14_4_unified_decoder_subsystem_architecture[".4 Unified Decoder Subsystem"]:::L3n
+    L3_T14_RTL微架构 --> L3_T14_5_soft_buffer_HARQ_memory_architecture[".5 Soft Buffer Harq"]:::L3n
+    L3_T14_RTL微架构 --> L3_T14_6_decoder_register_map_configuration_flow[".6 Decoder Register Map"]:::L3n
+    L3 --> L3_T15_验证与综合["T15 验证与综合"]:::L3m
+    L3_T15_验证与综合 --> L3_T15_1_decoder_testbench_architecture[".1 Decoder Testbench Architecture"]:::L3n
+    L3_T15_验证与综合 --> L3_T15_2_protocol_vector_corner_case_suite[".2 Protocol Vector Corner"]:::L3n
+    L3_T15_验证与综合 --> L3_T15_3_coverage_regression_strategy[".3 Coverage Regression Strategy"]:::L3n
+    L3_T15_验证与综合 --> L3_T15_4_DC_synthesis_flow_decoders[".4 Dc Synthesis Flow"]:::L3n
+    L3_T15_验证与综合 --> L3_T15_5_timing_closure_decoder_critical_paths[".5 Timing Closure Decoder"]:::L3n
+    L3_T15_验证与综合 --> L3_T15_6_final_decoder_verification_evidence_report[".6 Final Decoder Verification"]:::L3n
+
+    SPEC --> SPEC1["TS 36.211<br/>LTE PHY"]:::spec
+    SPEC --> SPEC2["TS 36.212<br/>LTE MUX CH"]:::spec
+    SPEC --> SPEC3["TS 36.213<br/>LTE Procedure"]:::spec
+    SPEC --> SPEC4["TS 38.211<br/>NR PHY"]:::spec
+    SPEC --> SPEC5["TS 38.212<br/>NR MUX CH"]:::spec
+    SPEC --> SPEC6["TS 38.213<br/>NR Procedure"]:::spec
+    SPEC --> SPEC7["TS 38.214<br/>NR Data"]:::spec
+
+    SIM --> SIM1["gf2.py<br/>GF(2)运算库"]:::sim
+    SIM --> SIM2["crc.py<br/>CRC计算"]:::sim
+    SIM --> SIM3["test_gf2.py<br/>单元测试"]:::sim
+    SIM --> SIM4["test_crc.py<br/>单元测试"]:::sim
+
+    L1_M4_译码工程概念 -.->|概念基础| L2_T10_Polar译码链
+    L1_M3_CRC与分段 -.->|概念基础| L2_T8_LDPC译码链
+    L1_M3_CRC与分段 -.->|概念基础| L2_T6_Turbo译码链
+    L1_M1_GF_2_算术 -.->|数学基础| L2_T8_LDPC译码链
+    L1_M5_RTL前置知识 -.->|前置知识| L3_T14_RTL微架构
+    L2_T8_LDPC译码链 -.->|算法基础| L3_T13_定点化模型
+    L2_T6_Turbo译码链 -.->|算法基础| L3_T12_浮点黄金模型
+    L2_T10_Polar译码链 -.->|算法基础| L3_T13_定点化模型
+    L2_T11_三码对比 -.->|对比分析| L3_T14_RTL微架构
+    SPEC -.->|协议依据| L2
+    SPEC -.->|协议依据| L1
+    SIM -.->|验证| L3
+
+    classDef root fill:#ECEFF1,stroke:#263238,stroke-width:3px,color:#000
+    classDef L0 fill:#C5CAE9,stroke:#283593,stroke-width:2px,color:#1A237E,font-size:16px
+    classDef L1 fill:#81C784,stroke:#2E7D32,stroke-width:2px,color:#1B5E20,font-size:20px
+    classDef L1m fill:#C8E6C9,stroke:#66BB6A,stroke-width:1px,color:#2E7D32,font-size:18px
+    classDef L1n fill:#E8F5E9,stroke:#A5D6A7,stroke-width:1px,color:#1B5E20,font-size:16px
+    classDef L2 fill:#FFB74D,stroke:#E65100,stroke-width:2px,color:#BF360C,font-size:20px
+    classDef L2m fill:#FFCC80,stroke:#FF9800,stroke-width:1px,color:#E65100,font-size:18px
+    classDef L2n fill:#FFF3E0,stroke:#FFE0B2,stroke-width:1px,color:#BF360C,font-size:16px
+    classDef L3 fill:#BA68C8,stroke:#6A1B9A,stroke-width:2px,color:#4A148C,font-size:20px
+    classDef L3m fill:#CE93D8,stroke:#AB47BC,stroke-width:1px,color:#6A1B9A,font-size:18px
+    classDef L3n fill:#F3E5F5,stroke:#E1BEE7,stroke-width:1px,color:#4A148C,font-size:16px
+    classDef sim fill:#BDBDBD,stroke:#616161,stroke-width:2px,color:#212121,font-size:16px
+    classDef spec fill:#90CAF9,stroke:#1565C0,stroke-width:2px,color:#0D47A1,font-size:16px
+

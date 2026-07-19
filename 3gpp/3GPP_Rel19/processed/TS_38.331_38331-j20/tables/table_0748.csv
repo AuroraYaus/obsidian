@@ -1,0 +1,5 @@
+SL-QoS-Profile field descriptions
+sl-GFBRIndicate the guaranteed bit rate for a GBR QoS flow. The unit is: Kbit/s
+sl-MFBRIndicate the maximum bit rate for a GBR QoS flow. The unit is: Kbit/s
+sl-PQIThis field indicates either the PQI for standardized PQI or non-standardized QoS parameters.
+"sl-RangeThis field indicates the range parameter of the Qos flow, as defined in clause 5.4.1.1.1, TS 23.287 [55]. It is present only for groupcast. The unit is meter."

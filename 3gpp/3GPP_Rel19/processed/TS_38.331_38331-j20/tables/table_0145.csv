@@ -1,0 +1,14 @@
+OD-SIB1-Config field descriptions
+carrierFreqIdentifies the ARFCN for the SSB of the cell for which this configuration is valid.
+"controlResourceSetZeroDetermines a common ControlResourceSet (CORESET) with ID #0, see TS 38.213, clause 13."
+frequencyBandListList of one or multiple frequency bands to which this carrier(s) belongs.
+"k-SSBIndication of the quantity K_SSB (defined in TS 38.211 as subcarrier offset from subcarrier 0 in common resource block N_CRB^SSB to the lowest-numbered subcarrier of the SS/PBCH block) of the cell indicated by physCellId in IE OD-SIB1-CellConfig for OD-SIB1 transmission, see TS 38.213 [13], clause 23. For FR2, network does not configure values larger than 11."
+od-SIB1-WindowDurationIndicate the duration of the time window of type 0 PDCCH monitoring occasions for SIB1 after transmission of SIB1 request.
+od-SIB1-WindowStartOffsetIndicate the time offset between the reference time point and the starting time for the time window of on-demand SIB1.
+"offsetToPointARepresents the offset to Point A as defined in TS 38.211 [16], clause 4.4.4.2."
+"searchSpaceZeroParameters of the common SearchSpace#0, see TS 38.213 [13], clause 13."
+"sib1-TDD-UL-DL-ConfigurationCommonA cell-specific TDD UL/DL configuration, see TS 38.213 [13], clause 11.1."
+"ss-PBCH-BlockPowerAverage EPRE of the resources elements that carry secondary synchronization signals in dBm that the NW used for SSB transmission, see TS 38.213 [13], clause 7."
+ssb-PeriodicityThe SSB periodicity in ms for at least the purpose of RO validation determination for SIB1 request transmission.
+"ssb-PositionsInBurstTime domain positions of the transmitted SS-blocks in an SS-burst as defined in TS 38.213 [13], clause 4.1."
+validSIB26-CellsIdentifies the physical cell Id(s) for which this configuration is applied.

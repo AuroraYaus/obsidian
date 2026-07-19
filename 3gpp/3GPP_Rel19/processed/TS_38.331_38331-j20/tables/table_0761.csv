@@ -1,0 +1,3 @@
+Conditional Presence,Explanation
+SL-RSRP-Thresh,"This field is mandatory present if sl-RSRP-Thresh is included. Otherwise, the field is absent, Need R."
+ThreshHighRemote,"This field is mandatory present if threshHighRemote is included. Otherwise, the field is absent, Need R."

@@ -1,0 +1,893 @@
+{"source": "36300-j10.docx", "section": "650", "title": "Route des Lucioles - Sophia Antipolis", "paragraph_index": 23, "style": "FP"}
+{"source": "36300-j10.docx", "section": "", "title": "Foreword", "paragraph_index": 934, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "1Scope", "paragraph_index": 945, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "2References", "paragraph_index": 947, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "3Definitions, symbols and abbreviations", "paragraph_index": 1048, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "3.1Definitions", "paragraph_index": 1049, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "3.2Abbreviations", "paragraph_index": 1145, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4Overall architecture", "paragraph_index": 1477, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "4.0General", "paragraph_index": 1478, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.1Functional Split", "paragraph_index": 1486, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.2Void", "paragraph_index": 1544, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.2.1Void", "paragraph_index": 1545, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.2.2Void", "paragraph_index": 1546, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.3Radio Protocol architecture", "paragraph_index": 1547, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.3.0General", "paragraph_index": 1548, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.3.1User plane", "paragraph_index": 1550, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.3.2Control plane", "paragraph_index": 1555, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.4Synchronization", "paragraph_index": 1576, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.5IP fragmentation", "paragraph_index": 1578, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6Support of HeNBs", "paragraph_index": 1581, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.1Architecture", "paragraph_index": 1582, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.2Functional Split", "paragraph_index": 1606, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.3Interfaces", "paragraph_index": 1654, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.3.1Protocol Stack for S1 User Plane", "paragraph_index": 1655, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.3.2Protocol Stacks for S1 Control Plane", "paragraph_index": 1662, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.3.3Protocol Stack for S5 interface", "paragraph_index": 1671, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.3.4Protocol Stack for SGi interface", "paragraph_index": 1673, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.3.5Protocol Stack for X2 User Plane and X2 Control Plane", "paragraph_index": 1675, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.4Void", "paragraph_index": 1677, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.5Support of LIPA with HeNB", "paragraph_index": 1678, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.6Support of X2 GW", "paragraph_index": 1699, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.6.1Enhanced TNL Address Discovery", "paragraph_index": 1711, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.6.2Routing of X2AP messages", "paragraph_index": 1715, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.6.3(H)eNB unavailability", "paragraph_index": 1717, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.6.6.4(H)eNB registration", "paragraph_index": 1719, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7Support for relaying", "paragraph_index": 1721, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.1General", "paragraph_index": 1722, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.2Architecture", "paragraph_index": 1729, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.3S1 and X2 user plane aspects", "paragraph_index": 1737, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.4S1 and X2 control plane aspects", "paragraph_index": 1745, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.5Radio protocol aspects", "paragraph_index": 1755, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.6Signalling procedures", "paragraph_index": 1767, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.6.1RN attach procedure", "paragraph_index": 1768, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.6.2E-RAB activation/modification", "paragraph_index": 1778, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.6.3RN startup procedure", "paragraph_index": 1782, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.6.4RN detach procedure", "paragraph_index": 1789, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.6.5Neighbouring Information Transfer", "paragraph_index": 1797, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.6.6Mobility to or from RN", "paragraph_index": 1799, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.7Relay Node OAM Aspects", "paragraph_index": 1803, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.7.1Architecture", "paragraph_index": 1804, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.7.2OAM Traffic QoS Requirements", "paragraph_index": 1809, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.7.3Security Aspects", "paragraph_index": 1814, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.7.4Void", "paragraph_index": 1816, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.7.5OAM Requirements for Configuration Parameters", "paragraph_index": 1817, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.7.7.5.1Parameters Associated with Relay Bearer Mapping", "paragraph_index": 1818, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "4.8Support of SIPTO at the Local Network", "paragraph_index": 1820, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.8.1General", "paragraph_index": 1821, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.8.2SIPTO at the Local Network with collocated L-GW", "paragraph_index": 1823, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.8.3Support for SIPTO@LN with Stand-Alone Gateway", "paragraph_index": 1842, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.9Support for Dual Connectivity", "paragraph_index": 1850, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.9.1General", "paragraph_index": 1851, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.9.2Radio Protocol Architecture", "paragraph_index": 1854, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.9.3Network Interfaces", "paragraph_index": 1859, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "4.9.3.1E-UTRAN Control Plane for Dual Connectivity", "paragraph_index": 1860, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.9.3.2E-UTRAN User Plane for Dual Connectivity", "paragraph_index": 1866, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.9.3.3Support of HeNBs for Dual Connectivity", "paragraph_index": 1875, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.9.3.4Support of SIPTO@LN and LIPA for Dual Connectivity", "paragraph_index": 1882, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "4.10NB-IoT", "paragraph_index": 1900, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.11Support for UE assistance information for local cache", "paragraph_index": 1904, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "4.12Support of Non-Terrestrial Networks", "paragraph_index": 1907, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "5Physical Layer for E-UTRA", "paragraph_index": 1930, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "5.0Frame structures and channels", "paragraph_index": 1931, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1Downlink Transmission Scheme", "paragraph_index": 2015, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.1Basic transmission scheme based on OFDM", "paragraph_index": 2016, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.1aBasic transmission scheme based on OFDM for NB-IoT", "paragraph_index": 2029, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.2Physical-layer processing", "paragraph_index": 2031, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.3Physical downlink control channels", "paragraph_index": 2041, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.4Downlink Reference signal and synchronization signals", "paragraph_index": 2071, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.4aDownlink Reference signal and synchronization signals for NB-IoT", "paragraph_index": 2077, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.5Downlink multi-antenna transmission", "paragraph_index": 2081, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.5aDownlink multi-antenna transmission for NB-IoT", "paragraph_index": 2090, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.6MBSFN transmission", "paragraph_index": 2092, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.7Physical layer procedure", "paragraph_index": 2094, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.7.1Link adaptation", "paragraph_index": 2095, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.7.2Power Control", "paragraph_index": 2097, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.7.3Cell search", "paragraph_index": 2099, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.7.3aCell search for NB-IoT", "paragraph_index": 2104, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.8Physical layer measurements definition", "paragraph_index": 2106, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.9Coordinated Multi-Point transmission", "paragraph_index": 2122, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.10Wake-up signal for NB-IoT", "paragraph_index": 2127, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.1.11Wake-up signal for BL UE or UE in enhanced coverage", "paragraph_index": 2129, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2Uplink Transmission Scheme", "paragraph_index": 2131, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.1Basic transmission scheme", "paragraph_index": 2132, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.1aBasic transmission scheme for NB-IoT", "paragraph_index": 2140, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.2Physical-layer processing", "paragraph_index": 2147, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.3Physical uplink control channel", "paragraph_index": 2155, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.3aUplink control information for NB-IoT", "paragraph_index": 2167, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.4Uplink Reference signal", "paragraph_index": 2173, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.4aUplink Reference signal for NB-IoT", "paragraph_index": 2185, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.5Random access preamble", "paragraph_index": 2197, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.5aRandom access preamble for NB-IoT", "paragraph_index": 2200, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.6Uplink multi-antenna transmission", "paragraph_index": 2202, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.7Physical channel procedure", "paragraph_index": 2206, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.7.1Link adaptation", "paragraph_index": 2207, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.7.2Uplink Power control", "paragraph_index": 2213, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.7.3Uplink timing control", "paragraph_index": 2215, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "5.2.8Coordinated Multi-Point reception", "paragraph_index": 2218, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.3Transport Channels", "paragraph_index": 2221, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "5.3.0Transport channel types", "paragraph_index": 2222, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.3.1Mapping between transport channels and physical channels", "paragraph_index": 2272, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.3.1aMapping between transport channels and narrowband physical channels", "paragraph_index": 2280, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.4E-UTRA physical layer model", "paragraph_index": 2286, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "5.4.1Void", "paragraph_index": 2288, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.4.2Void", "paragraph_index": 2289, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.5Carrier Aggregation", "paragraph_index": 2290, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "5.5.0General", "paragraph_index": 2291, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.5.1SRS switching between component carriers", "paragraph_index": 2308, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.5aMulti-carrier operation for NB-IoT", "paragraph_index": 2310, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "5.6Sidelink", "paragraph_index": 2321, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "5.6.0General", "paragraph_index": 2322, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.6.1Basic transmission scheme", "paragraph_index": 2324, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.6.2Physical-layer processing", "paragraph_index": 2326, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.6.3Physical Sidelink control channel", "paragraph_index": 2330, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.6.4Sidelink reference signals", "paragraph_index": 2333, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.6.5Physical channel procedure", "paragraph_index": 2336, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.6.5.1Sidelink power control", "paragraph_index": 2337, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "5.6.6Physical layer measurements definition", "paragraph_index": 2339, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.7Licensed-Assisted Access", "paragraph_index": 2345, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "5.7.0General", "paragraph_index": 2346, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.7.1Channel Access Priority Classes", "paragraph_index": 2356, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.7.2Multiplexing of data", "paragraph_index": 2361, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "5.8Short Processing Time", "paragraph_index": 2367, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "5.9Short Transmission Time Interval", "paragraph_index": 2369, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "6Layer 2", "paragraph_index": 2378, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "6.0Overview", "paragraph_index": 2379, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "6.1MAC Sublayer", "paragraph_index": 2394, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "6.1.0General", "paragraph_index": 2395, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "6.1.1Services and Functions", "paragraph_index": 2397, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "6.1.2Logical Channels", "paragraph_index": 2412, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "6.1.2.0General", "paragraph_index": 2413, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "6.1.2.1Control Channels", "paragraph_index": 2420, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "6.1.2.2Traffic Channels", "paragraph_index": 2438, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "6.1.3Mapping between logical channels and transport channels", "paragraph_index": 2448, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "6.1.3.1Mapping in Uplink", "paragraph_index": 2449, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "6.1.3.2Mapping in Downlink", "paragraph_index": 2457, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "6.1.3.3Mapping in Sidelink", "paragraph_index": 2473, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "6.2RLC Sublayer", "paragraph_index": 2479, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "6.2.0General", "paragraph_index": 2480, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "6.2.1Services and Functions", "paragraph_index": 2484, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "6.2.2PDU Structure", "paragraph_index": 2495, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "6.3PDCP Sublayer", "paragraph_index": 2504, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "6.3.0General", "paragraph_index": 2505, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "6.3.1Services and Functions", "paragraph_index": 2507, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "6.3.2PDU Structure", "paragraph_index": 2535, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "6.4Carrier Aggregation", "paragraph_index": 2543, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "6.5Dual Connectivity", "paragraph_index": 2554, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7RRC", "paragraph_index": 2562, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "7.0General", "paragraph_index": 2563, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7.1Services and Functions", "paragraph_index": 2565, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7.2RRC protocol states & state transitions", "paragraph_index": 2593, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3Transport of NAS messages", "paragraph_index": 2627, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3aCIoT signalling reduction optimisations", "paragraph_index": 2633, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3a.1General", "paragraph_index": 2634, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3a.2Control Plane CIoT EPS/5GS optimisation", "paragraph_index": 2637, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3a.3User Plane CIoT EPS/5GS optimisations", "paragraph_index": 2649, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3bMO-EDT", "paragraph_index": 2694, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3b.1General", "paragraph_index": 2695, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3b.2MO-EDT for Control Plane CIoT EPS/5GS optimisations", "paragraph_index": 2701, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3b.3MO-EDT for User Plane CIoT EPS/5GS optimisations", "paragraph_index": 2732, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3cMT-EDT", "paragraph_index": 2795, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3c.1General", "paragraph_index": 2796, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3c.2MT-EDT for Control Plane CIoT EPS Optimisation", "paragraph_index": 2808, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3c.3MT-EDT for User Plane CIoT EPS Optimisation", "paragraph_index": 2819, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3dTransmission using PUR", "paragraph_index": 2831, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3d.1General", "paragraph_index": 2832, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3d.2PUR Configuration Request and PUR configuration", "paragraph_index": 2838, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3d.3Transmission using PUR for Control Plane CIoT EPS/5GS Optimisations", "paragraph_index": 2848, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.3d.4Transmission using PUR for User Plane CIoT EPS/5GS Optimisations", "paragraph_index": 2867, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "7.4System Information", "paragraph_index": 2889, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7.5Carrier Aggregation", "paragraph_index": 2954, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7.6Dual Connectivity", "paragraph_index": 2972, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "7.7Segmentation of RRC messages", "paragraph_index": 2999, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "8E-UTRAN identities", "paragraph_index": 3002, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "8.1E-UTRA related UE identities", "paragraph_index": 3003, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "8.2Network entity related Identities", "paragraph_index": 3024, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "8.3Sidelink communication and V2X Sidelink Communication related identities", "paragraph_index": 3040, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "8.4MBMS related identities", "paragraph_index": 3048, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "9ARQ and HARQ", "paragraph_index": 3053, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "9.0General", "paragraph_index": 3054, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "9.1HARQ principles", "paragraph_index": 3056, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "9.2ARQ principles", "paragraph_index": 3090, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "9.3Void", "paragraph_index": 3095, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "10Mobility", "paragraph_index": 3096, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "10.0General", "paragraph_index": 3097, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1Intra E-UTRAN", "paragraph_index": 3117, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.0General", "paragraph_index": 3118, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.1Mobility Management in ECM-IDLE", "paragraph_index": 3121, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.1.1Cell selection", "paragraph_index": 3122, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.1.2Cell reselection", "paragraph_index": 3135, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.1.3Void", "paragraph_index": 3155, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.1.4Void", "paragraph_index": 3156, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.1.5Void", "paragraph_index": 3157, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2Mobility Management in ECM-CONNECTED/CM-CONNECTED", "paragraph_index": 3158, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.0General", "paragraph_index": 3159, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.1Handover", "paragraph_index": 3181, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.1.0General", "paragraph_index": 3182, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.1.1C-plane handling", "paragraph_index": 3205, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.1.2U-plane handling", "paragraph_index": 3248, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.1aConditional Handover", "paragraph_index": 3290, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.1a.1General", "paragraph_index": 3291, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.1a.2C-plane handling", "paragraph_index": 3302, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.1a.3U-plane handling", "paragraph_index": 3323, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.1a.4Data Forwarding", "paragraph_index": 3325, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.2Path Switch", "paragraph_index": 3328, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.2.1Path Switch upon handover", "paragraph_index": 3329, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.2.2Path Update upon Dual Connectivity specific activities", "paragraph_index": 3336, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.2.3Path Switch upon UE context resume", "paragraph_index": 3340, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.3Data forwarding", "paragraph_index": 3342, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.3.1For RLC-AM DRBs", "paragraph_index": 3343, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.3.2For RLC-UM DRBs", "paragraph_index": 3359, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.3.3SRB handling", "paragraph_index": 3362, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.3.4User data forwarding for Dual Connectivity", "paragraph_index": 3366, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.3.5For DRBs configured with DAPS Handover", "paragraph_index": 3368, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.4Void", "paragraph_index": 3374, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.5Void", "paragraph_index": 3375, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.6Void", "paragraph_index": 3376, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.7Timing Advance", "paragraph_index": 3377, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.8Dual Connectivity operation", "paragraph_index": 3394, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.8.1SeNB Addition", "paragraph_index": 3395, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.8.2SeNB Modification", "paragraph_index": 3411, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.8.2.1Intra-MeNB handover involving SCG change", "paragraph_index": 3441, "style": "Heading6"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.8.3SeNB Release", "paragraph_index": 3453, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.8.4Change of SeNB", "paragraph_index": 3477, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.8.5MeNB to eNB Change", "paragraph_index": 3491, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.8.6SCG change", "paragraph_index": 3507, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.8.7eNB to MeNB change", "paragraph_index": 3509, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.8.8Inter-MeNB handover without SeNB change", "paragraph_index": 3526, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.8.9Addition of a hybrid HeNB as the SeNB", "paragraph_index": 3546, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.9LWA mobility", "paragraph_index": 3560, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.9.1Inter-eNB handover without WT change", "paragraph_index": 3561, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.2.10EN-DC Operation", "paragraph_index": 3586, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.3Measurements", "paragraph_index": 3588, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.3.0General", "paragraph_index": 3589, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.3.1Intra-frequency neighbour (cell) measurements", "paragraph_index": 3636, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.3.2Inter-frequency neighbour (cell) measurements", "paragraph_index": 3639, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.4Paging and C-plane establishment", "paragraph_index": 3642, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.5Random Access Procedure", "paragraph_index": 3687, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.5.0General", "paragraph_index": 3688, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.5.1Contention based random access procedure", "paragraph_index": 3712, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.5.2Non-contention based random access procedure", "paragraph_index": 3772, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.5.3Interaction model between L1 and L2/3 for Random Access Procedure", "paragraph_index": 3796, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.6Radio Link Failure", "paragraph_index": 3800, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.7Radio Access Network Sharing", "paragraph_index": 3839, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.8Handling of Roaming and Area Restrictions for UEs in ECM-CONNECTED", "paragraph_index": 3846, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.8aHandling of Roaming and Access Restrictions for UEs in ECM-CONNECTED", "paragraph_index": 3848, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.9Mobility in RRC_INACTIVE", "paragraph_index": 3850, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.9.1Overview", "paragraph_index": 3851, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.9.2Cell Reselection", "paragraph_index": 3854, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.9.3RAN-Based Notification Area", "paragraph_index": 3858, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.9.4State Transitions", "paragraph_index": 3860, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.9.4.1UE triggered transition from RRC_INACTIVE to RRC_CONNECTED", "paragraph_index": 3861, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.9.4.2Network triggered transition from RRC_INACTIVE to RRC_CONNECTED", "paragraph_index": 3864, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.1.9.5RNA update", "paragraph_index": 3868, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2Inter RAT", "paragraph_index": 3871, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.0General", "paragraph_index": 3872, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.1Cell reselection", "paragraph_index": 3874, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.2Handover", "paragraph_index": 3894, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.2aInter-RAT cell change order to GERAN with NACC", "paragraph_index": 3911, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.2bInter-RAT handovers from E-UTRAN", "paragraph_index": 3913, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.2b.1Data forwarding", "paragraph_index": 3914, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.2b.1.1For RLC-AM bearers", "paragraph_index": 3915, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.2b.1.2For RLC-UM bearers", "paragraph_index": 3926, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.2cIntra-EUTRA inter-system Handover", "paragraph_index": 3932, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.3Measurements", "paragraph_index": 3934, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.3.1Inter-RAT handovers from E-UTRAN", "paragraph_index": 3935, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.3.2Inter-RAT handovers to E-UTRAN", "paragraph_index": 3938, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.3.3Inter-RAT cell reselection from E-UTRAN", "paragraph_index": 3942, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.3.4Limiting measurement load at UE", "paragraph_index": 3944, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.3.5Inter-RAT measurements in RRC_IDLE or RRC_INACTIVE", "paragraph_index": 3950, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.4Network Aspects", "paragraph_index": 3952, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.5CS fallback", "paragraph_index": 3959, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.6Idle mode Inter-RAT Cell Selection to/from NB-IoT", "paragraph_index": 3963, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.2.7Inter-RAT cell reselection and redirection from TN to NR NTN", "paragraph_index": 3965, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3Mobility between E-UTRAN and Non-3GPP radio technologies", "paragraph_index": 3967, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.1UE Capability Configuration", "paragraph_index": 3968, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2Mobility between E-UTRAN and cdma2000 network", "paragraph_index": 3970, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.1Tunnelling of cdma2000 Messages over E-UTRAN between UE and cdma2000 Access Nodes", "paragraph_index": 3972, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.2Mobility between E-UTRAN and HRPD", "paragraph_index": 3982, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.2.1Mobility from E-UTRAN to HRPD", "paragraph_index": 3983, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.2.1.1HRPD System Information Transmission in E-UTRAN", "paragraph_index": 3984, "style": "Heading6"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.2.1.2Measuring HRPD from E-UTRAN", "paragraph_index": 3986, "style": "Heading6"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.2.1.2.1Idle Mode Measurement Control", "paragraph_index": 3988, "style": "Heading7"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.2.1.2.2Active Mode Measurement Control", "paragraph_index": 3991, "style": "Heading7"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.2.1.2.3Active Mode Measurement", "paragraph_index": 3994, "style": "Heading7"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.2.1.3Pre-registration to HRPD Procedure", "paragraph_index": 3996, "style": "Heading6"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.2.1.4E-UTRAN to HRPD Cell Re-selection", "paragraph_index": 4001, "style": "Heading6"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.2.1.5E-UTRAN to HRPD Handover", "paragraph_index": 4006, "style": "Heading6"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.2.2Mobility from HRPD to E-UTRAN", "paragraph_index": 4010, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.3Mobility between E-UTRAN and cdma2000 1xRTT", "paragraph_index": 4012, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.3.1Mobility from E-UTRAN to cdma2000 1xRTT", "paragraph_index": 4013, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.3.1.1cdma2000 1xRTT System Information Transmission in E-UTRAN", "paragraph_index": 4014, "style": "Heading6"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.3.1.2Measuring cdma2000 1xRTT from E-UTRAN", "paragraph_index": 4016, "style": "Heading6"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.3.1.3E-UTRAN to cdma2000 1xRTT Cell Re-selection", "paragraph_index": 4026, "style": "Heading6"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.3.1.4E-UTRAN to cdma2000 1xRTT Handover", "paragraph_index": 4029, "style": "Heading6"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.3.2Mobility from cdma2000 1xRTT to E-UTRAN", "paragraph_index": 4033, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.2.3.31xRTT CS Fallback", "paragraph_index": 4035, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "10.3.3CDMA2000 interworking in LTE shared networks", "paragraph_index": 4056, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.4Area Restrictions", "paragraph_index": 4058, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "10.4aRoaming and Access Restrictions", "paragraph_index": 4060, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "10.5Mobility to and from CSG and Hybrid cells", "paragraph_index": 4069, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "10.5.0Principles for idle-mode mobility with CSG cells", "paragraph_index": 4070, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.5.0.1Intra-frequency mobility", "paragraph_index": 4071, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.5.0.2Inter-frequency mobility", "paragraph_index": 4073, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.5.0.3Inter-RAT Mobility", "paragraph_index": 4075, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.5.1Inbound mobility to CSG cells", "paragraph_index": 4077, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.5.1.1RRC_IDLE", "paragraph_index": 4078, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.5.1.2RRC_CONNECTED", "paragraph_index": 4087, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.5.2Outbound mobility from CSG cells", "paragraph_index": 4124, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.5.2.1RRC_IDLE", "paragraph_index": 4125, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.5.2.2RRC_CONNECTED", "paragraph_index": 4127, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.6Measurement Model", "paragraph_index": 4129, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "10.7Hybrid Cells", "paragraph_index": 4140, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "10.7.0General", "paragraph_index": 4141, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.7.1RRC_IDLE", "paragraph_index": 4144, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.7.2RRC_CONNECTED", "paragraph_index": 4149, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "10.7.2.1Inbound Mobility", "paragraph_index": 4150, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "10.7.2.2Outbound Mobility", "paragraph_index": 4152, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "11Scheduling and Rate Control", "paragraph_index": 4154, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "11.0General", "paragraph_index": 4155, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "11.1Basic Scheduler Operation", "paragraph_index": 4158, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "11.1.1Downlink Scheduling", "paragraph_index": 4181, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "11.1.2Uplink Scheduling", "paragraph_index": 4194, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "11.2Activation/Deactivation Mechanism", "paragraph_index": 4216, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "11.3Measurements to Support Scheduler Operation", "paragraph_index": 4227, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "11.4Rate Control of GBR, MBR and UE-AMBR", "paragraph_index": 4235, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "11.4.1Downlink", "paragraph_index": 4236, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "11.4.2Uplink", "paragraph_index": 4238, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "11.4.3UE-AMBR for Dual Connectivity", "paragraph_index": 4247, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "11.5CQI reporting for Scheduling", "paragraph_index": 4252, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "11.6Explicit Congestion Notification", "paragraph_index": 4265, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "11.7DL channel quality reporting", "paragraph_index": 4268, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "12DRX in RRC_CONNECTED", "paragraph_index": 4279, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "13QoS", "paragraph_index": 4307, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "13.0General", "paragraph_index": 4308, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "13.1Bearer service architecture", "paragraph_index": 4312, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "13.2QoS parameters", "paragraph_index": 4326, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "13.3QoS support in Hybrid Cells", "paragraph_index": 4339, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "14Security", "paragraph_index": 4346, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "14.1Overview and Principles", "paragraph_index": 4347, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "14.2Security termination points", "paragraph_index": 4389, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "14.3State Transitions and Mobility", "paragraph_index": 4397, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "14.3.1RRC_IDLE to RRC_CONNECTED", "paragraph_index": 4398, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "14.3.2RRC_CONNECTED to RRC_IDLE", "paragraph_index": 4400, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "14.3.3Intra E-UTRAN Mobility", "paragraph_index": 4405, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "14.3.4SeNB Removal", "paragraph_index": 4416, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "14.4AS Key Change in RRC_CONNECTED", "paragraph_index": 4420, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "14.5Security Interworking", "paragraph_index": 4423, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "14.6RN integrity protection for DRB(s)", "paragraph_index": 4427, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15MBMS", "paragraph_index": 4430, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "15.0MBMS-Specific Definitions", "paragraph_index": 4431, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.1General", "paragraph_index": 4442, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.1.0Overview", "paragraph_index": 4443, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.1.1E-MBMS Logical Architecture", "paragraph_index": 4456, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.1.2E-MBMS User Plane Protocol Architecture", "paragraph_index": 4491, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.1.3E-MBMS Control Plane Protocol Architecture", "paragraph_index": 4496, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.2MBMS Cells", "paragraph_index": 4501, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.2.1MBMS-dedicated cell", "paragraph_index": 4502, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.2.2MBMS/Unicast-mixed cell", "paragraph_index": 4507, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.2.2.1FeMBMS/Unicast-mixed cell", "paragraph_index": 4513, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.3MBMS Transmission", "paragraph_index": 4518, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.3.1General", "paragraph_index": 4519, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.3.2Single-cell transmission", "paragraph_index": 4521, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.3.3Multi-cell transmission", "paragraph_index": 4539, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.3.4MBMS Reception States", "paragraph_index": 4583, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.3.5MCCH Structure", "paragraph_index": 4586, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.3.5aSC-MCCH structure", "paragraph_index": 4600, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.3.6MBMS signalling on BCCH", "paragraph_index": 4617, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.3.7MBMS User Data flow synchronisation", "paragraph_index": 4627, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.3.8Synchronisation of MCCH Update Signalling via M2", "paragraph_index": 4642, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.3.9IP Multicast Distribution", "paragraph_index": 4645, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.4Service Continuity", "paragraph_index": 4650, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.5Network sharing", "paragraph_index": 4685, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.6Network Functions for Support of Multiplexing", "paragraph_index": 4687, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.7Procedures", "paragraph_index": 4693, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.7.1Procedures for Broadcast mode", "paragraph_index": 4694, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.7.1.1Session Start procedure", "paragraph_index": 4695, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.7.1.2Session Stop procedure", "paragraph_index": 4716, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.7aM1 Interface", "paragraph_index": 4729, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.7a.1M1 User Plane", "paragraph_index": 4730, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8M2 Interface", "paragraph_index": 4735, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.1M2 Control Plane", "paragraph_index": 4736, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.2M2 Interface Functions", "paragraph_index": 4743, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.2.1General", "paragraph_index": 4744, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.2.2MBMS Session Handling Function", "paragraph_index": 4754, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.2.3MBMS Scheduling Information Provision Function", "paragraph_index": 4756, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.2.4M2 Interface Management Function", "paragraph_index": 4758, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.2.5M2 Configuration Function", "paragraph_index": 4763, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.2.6MBMS Service Counting Function", "paragraph_index": 4765, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.2.7MBMS Service Suspension and Resumption Function", "paragraph_index": 4767, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.2.8MBMS Overload Notification Function", "paragraph_index": 4770, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3M2 Interface Signalling Procedures", "paragraph_index": 4772, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.1General", "paragraph_index": 4773, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.2MBMS Session signalling procedure", "paragraph_index": 4775, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.3MBMS Scheduling Information procedure", "paragraph_index": 4777, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.4M2 Interface Management procedures", "paragraph_index": 4780, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.4.1Reset procedure", "paragraph_index": 4781, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.4.2Error Indication procedure", "paragraph_index": 4783, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.5M2 Configuration procedures", "paragraph_index": 4785, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.5.1M2 Setup procedure", "paragraph_index": 4786, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.5.2eNB Configuration Update procedure", "paragraph_index": 4788, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.5.3MCE Configuration Update procedure", "paragraph_index": 4790, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.6MBMS Service Counting procedures", "paragraph_index": 4792, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.6.1MBMS Service Counting procedure", "paragraph_index": 4793, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.6.2MBMS Service Counting Results Report procedure", "paragraph_index": 4795, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "15.8.3.7MBMS Overload Notification procedure", "paragraph_index": 4797, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9M3 Interface", "paragraph_index": 4799, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.1M3 Control Plane", "paragraph_index": 4800, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.2M3 Interface Functions", "paragraph_index": 4807, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.2.1General", "paragraph_index": 4808, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.2.2MBMS Session Handling Function", "paragraph_index": 4816, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.2.3M3 Interface Management Function", "paragraph_index": 4819, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.2.4M3 Configuration Function", "paragraph_index": 4824, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.3M3 Interface Signalling Procedures", "paragraph_index": 4826, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.3.1General", "paragraph_index": 4827, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.3.2MBMS Session signalling procedure", "paragraph_index": 4829, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.3.3M3 Interface Management procedures", "paragraph_index": 4833, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.3.3.1Reset procedure", "paragraph_index": 4834, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.3.3.2Error Indication procedure", "paragraph_index": 4836, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.3.4M3 Configuration procedures", "paragraph_index": 4838, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.3.4.1M3 Setup procedure", "paragraph_index": 4839, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "15.9.3.4.2MCE Configuration Update procedure", "paragraph_index": 4841, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "15.10MBMS Counting", "paragraph_index": 4843, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "15.10.1General", "paragraph_index": 4844, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.10.2Counting Procedure", "paragraph_index": 4851, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "15.11MBMS service reception using Receive Only Mode", "paragraph_index": 4860, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "16Radio Resource Management aspects", "paragraph_index": 4862, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "16.0General", "paragraph_index": 4863, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1RRM functions", "paragraph_index": 4865, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.1Radio Bearer Control (RBC)", "paragraph_index": 4866, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.2Radio Admission Control (RAC)", "paragraph_index": 4869, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.3Connection Mobility Control (CMC)", "paragraph_index": 4872, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.4Dynamic Resource Allocation (DRA) - Packet Scheduling (PS)", "paragraph_index": 4875, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.5Inter-cell Interference Coordination (ICIC)", "paragraph_index": 4878, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.5.0General", "paragraph_index": 4879, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.5.1UE configurations for time domain ICIC", "paragraph_index": 4888, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.5.2OAM requirements for time domain ICIC", "paragraph_index": 4895, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.5.2.1Configuration for CSG cell", "paragraph_index": 4896, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.5.2.2Configuration for interfering non-CSG cell", "paragraph_index": 4898, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.6Load Balancing (LB)", "paragraph_index": 4904, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.7Inter-RAT Radio Resource Management", "paragraph_index": 4907, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.8Subscriber Profile ID for RAT/Frequency Priority", "paragraph_index": 4909, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.9Inter-eNB CoMP", "paragraph_index": 4915, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.10Cell on/off and cell discovery", "paragraph_index": 4920, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.1.11Resource reservation", "paragraph_index": 4923, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.2RRM architecture", "paragraph_index": 4926, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "16.2.1Centralised Handling of certain RRM Functions", "paragraph_index": 4927, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.2.2De-Centralised RRM", "paragraph_index": 4929, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.2.2.1UE History Information", "paragraph_index": 4930, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "16.2.3Void", "paragraph_index": 4934, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "16.3UE assistance information for RRM, and UE power optimisations and UE overheating", "paragraph_index": 4935, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "17Void", "paragraph_index": 4948, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "17.1Void", "paragraph_index": 4949, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "18UE capabilities", "paragraph_index": 4950, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "19S1 Interface", "paragraph_index": 4968, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "19.1S1 User plane", "paragraph_index": 4969, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2S1 Control Plane", "paragraph_index": 4974, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.0General", "paragraph_index": 4975, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1S1 Interface Functions", "paragraph_index": 4991, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.0General", "paragraph_index": 4992, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.1S1 Paging function", "paragraph_index": 5025, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.2S1 UE Context Management function", "paragraph_index": 5028, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.3Initial Context Setup Function", "paragraph_index": 5030, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.3aUE Context Modification Function", "paragraph_index": 5033, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.3bUE Context Resume Function", "paragraph_index": 5035, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.4Mobility Functions for UEs in ECM-CONNECTED", "paragraph_index": 5037, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.4.1Intra-LTE Handover", "paragraph_index": 5038, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.4.2Inter-3GPP-RAT Handover", "paragraph_index": 5040, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.5E-RAB Service Management function", "paragraph_index": 5042, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.6NAS Signalling Transport function", "paragraph_index": 5045, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.7NAS Node Selection Function (NNSF)", "paragraph_index": 5047, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.8S1-interface management functions", "paragraph_index": 5054, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.9MME Load balancing Function", "paragraph_index": 5058, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.10Location Reporting Function", "paragraph_index": 5063, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.11Warning Message Transmission function", "paragraph_index": 5065, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.12Overload Function", "paragraph_index": 5067, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.13RAN Information Management Function", "paragraph_index": 5071, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.14S1 CDMA2000 Tunnelling function", "paragraph_index": 5073, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.15Configuration Transfer Function", "paragraph_index": 5075, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.16LPPa Signalling Transport function", "paragraph_index": 5077, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.17Trace Function", "paragraph_index": 5079, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.18UE Radio Capability Match", "paragraph_index": 5081, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.19Retrieve UE Information Function", "paragraph_index": 5083, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.20UE Information Transfer Function", "paragraph_index": 5085, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.21Report of Secondary RAT data volumes Function", "paragraph_index": 5087, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.1.22UE Radio Capability ID Mapping Function", "paragraph_index": 5089, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2S1 Interface Signalling Procedures", "paragraph_index": 5091, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.0General", "paragraph_index": 5093, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.1Paging procedure", "paragraph_index": 5094, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.2S1 UE Context Release procedure", "paragraph_index": 5099, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.2.0General", "paragraph_index": 5100, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.2.1S1 UE Context Release (EPC triggered)", "paragraph_index": 5102, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.2.2S1 UE Context Release Request (eNB triggered)", "paragraph_index": 5108, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.3Initial Context Setup procedure", "paragraph_index": 5115, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.3aUE Context Modification procedure", "paragraph_index": 5124, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.4E-RAB signalling procedures", "paragraph_index": 5134, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.4.1E-RAB Setup procedure", "paragraph_index": 5135, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.4.2E-RAB Modification procedure", "paragraph_index": 5148, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.4.3E-RAB Release procedure", "paragraph_index": 5160, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.4.4E-RAB Release Indication procedure", "paragraph_index": 5170, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.4.5E-RAB Modification Indication procedure", "paragraph_index": 5174, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.5Handover signalling procedures", "paragraph_index": 5180, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.5.0General", "paragraph_index": 5181, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.5.1Handover Preparation procedure", "paragraph_index": 5191, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.5.2Handover Resource Allocation procedure", "paragraph_index": 5201, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.5.3Handover Notification procedure", "paragraph_index": 5209, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.5.4Handover Cancellation", "paragraph_index": 5214, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.5.5Path Switch procedure", "paragraph_index": 5220, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.5.6Message sequence diagrams", "paragraph_index": 5227, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.5.7eNB Status Transfer procedure", "paragraph_index": 5256, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.5.8MME Status Transfer procedure", "paragraph_index": 5260, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.6NAS transport procedures", "paragraph_index": 5264, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.7S1 interface Management procedures", "paragraph_index": 5297, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.7.1Reset procedure", "paragraph_index": 5298, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.7.1aeNB initiated Reset procedure", "paragraph_index": 5300, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.7.1bMME initiated Reset procedure", "paragraph_index": 5305, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.7.2Error Indication functions and procedures", "paragraph_index": 5310, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.7.2aeNB initiated error indication", "paragraph_index": 5312, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.7.2bMME initiated error indication", "paragraph_index": 5316, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.7.3S1 Removal procedure", "paragraph_index": 5320, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.8S1 Setup procedure", "paragraph_index": 5327, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.9eNB Configuration Update procedure", "paragraph_index": 5335, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.9aeNB Configuration Transfer procedure", "paragraph_index": 5343, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.10MME Configuration Update procedure", "paragraph_index": 5348, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.10aMME Configuration Transfer procedure", "paragraph_index": 5356, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.11Location Reporting procedures", "paragraph_index": 5361, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.11.0General", "paragraph_index": 5362, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.11.1Location Reporting Control procedure", "paragraph_index": 5370, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.11.2Location Report procedure", "paragraph_index": 5376, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.11.3Location Report Failure Indication procedure", "paragraph_index": 5380, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.12Overload procedure", "paragraph_index": 5384, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.12.1Overload Start procedure", "paragraph_index": 5385, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.12.2Overload Stop procedure", "paragraph_index": 5391, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.13Write-Replace Warning procedure", "paragraph_index": 5397, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.14eNB Direct Information Transfer procedure", "paragraph_index": 5407, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.15MME Direct Information Transfer procedure", "paragraph_index": 5412, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.16S1 CDMA2000 Tunnelling procedures", "paragraph_index": 5417, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.16.1Downlink S1 CDMA2000 Tunnelling procedure", "paragraph_index": 5421, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.16.2Uplink S1 CDMA2000 Tunnelling procedure", "paragraph_index": 5425, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.17Kill procedure", "paragraph_index": 5430, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.18LPPa Transport procedures", "paragraph_index": 5437, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.18.0General", "paragraph_index": 5438, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.18.1Downlink UE Associated LPPa Transport procedure", "paragraph_index": 5445, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.18.2Uplink UE Associated LPPa Transport procedure", "paragraph_index": 5449, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.18.3Downlink Non UE Associated LPPa Transport procedure", "paragraph_index": 5453, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.18.4Uplink Non UE Associated LPPa Transport procedure", "paragraph_index": 5457, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.19Trace procedures", "paragraph_index": 5461, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.19.0General", "paragraph_index": 5462, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.19.1Trace Start procedure", "paragraph_index": 5469, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.19.2Trace Failure Indication procedure", "paragraph_index": 5473, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.19.3Deactivate Trace procedure", "paragraph_index": 5477, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.19.4Cell Traffic Trace procedure", "paragraph_index": 5481, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.20UE Capability Info Indication procedure", "paragraph_index": 5485, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.21UE Radio Capability Match procedure", "paragraph_index": 5489, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.22PWS Restart Indication procedure", "paragraph_index": 5493, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.23PWS Failure Indication procedure", "paragraph_index": 5499, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.24UE Context Modification Indication procedure", "paragraph_index": 5504, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.25Connection Establishment Indication procedure", "paragraph_index": 5510, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.26UE Context Suspend procedure", "paragraph_index": 5521, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.27UE Context Resume procedure", "paragraph_index": 5528, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.28Retrieve UE Information procedure", "paragraph_index": 5532, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.29UE Information Transfer procedure", "paragraph_index": 5536, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.30eNB CP Relocation Indication", "paragraph_index": 5540, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.31MME CP Relocation Indication", "paragraph_index": 5547, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.32Secondary RAT Report", "paragraph_index": 5552, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "19.2.2.33UE Radio Capability ID Mapping procedure", "paragraph_index": 5556, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20X2 Interface", "paragraph_index": 5563, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "20.1User Plane", "paragraph_index": 5564, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "20.1.1Flow Control Functions", "paragraph_index": 5570, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2Control Plane", "paragraph_index": 5572, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.0X2-CP Overview", "paragraph_index": 5573, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.1X2-CP Functions", "paragraph_index": 5580, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2X2-CP Procedures", "paragraph_index": 5610, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.0Overview of X2-CP procedures", "paragraph_index": 5611, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.1Handover Preparation procedure", "paragraph_index": 5613, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.2Handover Cancel procedure", "paragraph_index": 5621, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.2aSeNB Addition Preparation procedure", "paragraph_index": 5626, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.2bSeNB Reconfiguration Completion procedure", "paragraph_index": 5633, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.2cMeNB initiated SeNB Modification Preparation procedure", "paragraph_index": 5639, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.2dSeNB initiated SeNB Modification procedure", "paragraph_index": 5646, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.2eMeNB initiated SeNB Release procedure", "paragraph_index": 5652, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.2fSeNB initiated SeNB Release procedure", "paragraph_index": 5656, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.2gSeNB Counter Check procedure", "paragraph_index": 5660, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.3UE Context Release procedure", "paragraph_index": 5664, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.4SN Status Transfer procedure", "paragraph_index": 5673, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.5Error Indication procedure", "paragraph_index": 5684, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.6Load Indication procedure", "paragraph_index": 5692, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.7X2 Setup procedure", "paragraph_index": 5700, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.8eNB Configuration Update procedure", "paragraph_index": 5704, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.9Reset procedure", "paragraph_index": 5708, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.10Resource Status Reporting Initiation procedure", "paragraph_index": 5716, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.11Resource Status Reporting procedure", "paragraph_index": 5720, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.12Radio Link Failure Indication procedure", "paragraph_index": 5724, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.13Handover Report procedure", "paragraph_index": 5730, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.14Mobility Settings Change procedure", "paragraph_index": 5737, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.15Cell Activation procedure", "paragraph_index": 5741, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.16X2 Release procedure", "paragraph_index": 5745, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.17X2AP Message Transfer procedure", "paragraph_index": 5749, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.18X2 Removal procedure", "paragraph_index": 5753, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.19Retrieve UE Context", "paragraph_index": 5757, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.20SgNB Addition Preparation procedure", "paragraph_index": 5772, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.21SgNB Reconfiguration Completion procedure", "paragraph_index": 5779, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.22MeNB initiated SgNB Modification Preparation procedure", "paragraph_index": 5785, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.23SgNB initiated SgNB Modification Preparation procedure", "paragraph_index": 5792, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.24MeNB initiated SgNB Release procedure", "paragraph_index": 5798, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.25SgNB initiated SgNB Release procedure", "paragraph_index": 5803, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.26SgNB initiated SgNB Change procedure", "paragraph_index": 5807, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.27SgNB Counter Check procedure", "paragraph_index": 5813, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.28EN-DC X2 Setup procedure", "paragraph_index": 5817, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.29EN-DC Configuration Update procedure", "paragraph_index": 5823, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.30EN-DC Cell Activation procedure", "paragraph_index": 5829, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.31E-UTRA - NR Cell Resource Coordination procedure", "paragraph_index": 5833, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.32Partial Reset procedure for EN-DC", "paragraph_index": 5839, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.2.33UE Radio Capability ID Mapping procedure", "paragraph_index": 5845, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "20.2.3Void", "paragraph_index": 5849, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "21Void", "paragraph_index": 5850, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "21.1Void", "paragraph_index": 5851, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "21.2Void", "paragraph_index": 5852, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "21.3Void", "paragraph_index": 5853, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22Support for self-configuration and self-optimisation", "paragraph_index": 5854, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "22.1Definitions", "paragraph_index": 5855, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22.2UE Support for self-configuration and self-optimisation", "paragraph_index": 5870, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3Self-configuration", "paragraph_index": 5874, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.1Dynamic configuration of the S1-MME interface", "paragraph_index": 5875, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.1.1Prerequisites", "paragraph_index": 5876, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.1.2SCTP initialization", "paragraph_index": 5880, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.1.3Application layer initialization", "paragraph_index": 5883, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.2Dynamic Configuration of the X2 interface", "paragraph_index": 5889, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.2.1Prerequisites", "paragraph_index": 5890, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.2.2SCTP initialization", "paragraph_index": 5894, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.2.3Application layer initialization", "paragraph_index": 5897, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.2aAutomatic Neighbour Relation Function", "paragraph_index": 5906, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.3Intra-LTE/frequency Automatic Neighbour Relation Function", "paragraph_index": 5923, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.4Inter-RAT/Inter-frequency Automatic Neighbour Relation Function", "paragraph_index": 5938, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.4aAutomatic Neighbour Relation Function towards NR", "paragraph_index": 5953, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.4bAutomatic Neighbour Relation Function in NB-IoT", "paragraph_index": 5963, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.5Framework for PCI Selection", "paragraph_index": 5981, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.6TNL address discovery", "paragraph_index": 5989, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.6.1TNL address discovery of candidate eNB via S1 interface", "paragraph_index": 5990, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.6.2TNL address discovery of a candidate en-gNB via the S1 interface", "paragraph_index": 5996, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.6.3TNL address discovery of a candidate en-gNB via inter-system signalling", "paragraph_index": 6008, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.7Dynamic configuration of the Xw-C interface", "paragraph_index": 6010, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.7.1Prerequisites", "paragraph_index": 6011, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.7.2SCTP initialization", "paragraph_index": 6015, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.3.7.3Application layer initialization", "paragraph_index": 6017, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4Self-optimisation", "paragraph_index": 6022, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.1Support for Mobility Load Balancing", "paragraph_index": 6023, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.1.1General", "paragraph_index": 6024, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.1.2Load reporting", "paragraph_index": 6035, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.1.2.1Load reporting for intra-LTE scenario", "paragraph_index": 6037, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.1.2.2Load reporting for inter-RAT scenario", "paragraph_index": 6046, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.1.2.3Load reporting for EN-DC scenario", "paragraph_index": 6054, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.1.2.4Load reporting for inter-system load balancing", "paragraph_index": 6062, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.1.3Load balancing action based on handovers", "paragraph_index": 6072, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.1.4Adapting handover and/or reselection configuration", "paragraph_index": 6074, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.2Support for Mobility Robustness Optimisation", "paragraph_index": 6078, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.2.1General", "paragraph_index": 6079, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.2.2Connection failure due to intra-LTE mobility", "paragraph_index": 6086, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.2.2aConnection failure due to inter-RAT mobility", "paragraph_index": 6144, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.2.3Unnecessary HO to another RAT", "paragraph_index": 6160, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.2.4O&M Requirements", "paragraph_index": 6172, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.2.5Inter-RAT ping-pong", "paragraph_index": 6179, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.2.6Dynamic coverage configuration changes", "paragraph_index": 6192, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.2.7Connection failure due to Radio Link Failure in NB-IoT", "paragraph_index": 6196, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.2.8Inter-system Ping-Pong", "paragraph_index": 6214, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.2.9PSCell addition/change failure", "paragraph_index": 6221, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.3Support for RACH Optimisation", "paragraph_index": 6223, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.3.1General", "paragraph_index": 6224, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.3.2Solution description", "paragraph_index": 6228, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.3.2.1E-UTRA cell case", "paragraph_index": 6229, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.3.2.2NR cell in EN-DC case", "paragraph_index": 6242, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.4Support for Energy Saving", "paragraph_index": 6245, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.4.1General", "paragraph_index": 6246, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.4.2Solution description", "paragraph_index": 6251, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.4.2.1E-UTRA cell case", "paragraph_index": 6252, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.4.2.2EN-DC cell case", "paragraph_index": 6258, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.4.2.3NR cell case", "paragraph_index": 6263, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.4.3O&M requirements", "paragraph_index": 6265, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22.4.5Radio Link Failure report", "paragraph_index": 6274, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22.5Void", "paragraph_index": 6280, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22.6Void", "paragraph_index": 6281, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22ALTE-WLAN Aggregation and RAN Controlled LTE-WLAN Interworking", "paragraph_index": 6282, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1LTE-WLAN Aggregation", "paragraph_index": 6283, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.1General", "paragraph_index": 6284, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.2Radio Protocol Architecture", "paragraph_index": 6291, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.3Network Interfaces", "paragraph_index": 6308, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.3.1General", "paragraph_index": 6309, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.3.2User Plane", "paragraph_index": 6313, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.3.3Control Plane", "paragraph_index": 6321, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.4Mobility", "paragraph_index": 6338, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.5WLAN Measurements", "paragraph_index": 6342, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.6Procedure for WLAN Connection Status Reporting", "paragraph_index": 6349, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.7LTE-WLAN Aggregation Operation", "paragraph_index": 6358, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.7.1WT Addition", "paragraph_index": 6359, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.7.2WT Modification", "paragraph_index": 6371, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.7.3WT Release", "paragraph_index": 6391, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.7.4Change of WT", "paragraph_index": 6413, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.1.8WLAN Authentication", "paragraph_index": 6415, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2RAN Controlled LTE WLAN Interworking", "paragraph_index": 6422, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2.1General", "paragraph_index": 6423, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2.2Network Interfaces", "paragraph_index": 6428, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2.2.1General", "paragraph_index": 6429, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2.2.2User Plane Plane", "paragraph_index": 6431, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2.2.3Control Plane", "paragraph_index": 6433, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2.3Mobility", "paragraph_index": 6435, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2.4WLAN Measurements", "paragraph_index": 6437, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2.5Procedure for WLAN Connection Status Reporting", "paragraph_index": 6439, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2.6Traffic Steering Operation", "paragraph_index": 6444, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2.6.1Traffic Steering from E-UTRAN to WLAN", "paragraph_index": 6445, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.2.6.2Traffic Steering from WLAN to E-UTRAN", "paragraph_index": 6453, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.3LTE/WLAN Radio Level Integration with IPsec Tunnel", "paragraph_index": 6460, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.3.0General", "paragraph_index": 6461, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.3.1LWIP Operation", "paragraph_index": 6487, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.3.1.1LWIP Tunnel Setup and Data Bearer Configuration", "paragraph_index": 6488, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.3.1.2Reconfiguration to Remove WLAN Resources from Data Bearer", "paragraph_index": 6504, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.3.1.3LWIP Tunnel Release", "paragraph_index": 6514, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.3.2Network Interfaces", "paragraph_index": 6524, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.3.2.1General", "paragraph_index": 6525, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.3.2.2User Plane", "paragraph_index": 6527, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22A.3.2.3Control Plane", "paragraph_index": 6529, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22BXw Interface", "paragraph_index": 6540, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.1User Plane", "paragraph_index": 6541, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2Control Plane", "paragraph_index": 6547, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.0General", "paragraph_index": 6548, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.1Xw-CP Functions", "paragraph_index": 6552, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2Xw-CP Procedures", "paragraph_index": 6554, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.1WT Addition Preparation procedure", "paragraph_index": 6556, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.2WT Association Confirmation procedure", "paragraph_index": 6563, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.3eNB initiated WT Modification Preparation procedure", "paragraph_index": 6567, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.4WT initiated WT Modification procedure", "paragraph_index": 6574, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.5eNB initiated WT Release procedure", "paragraph_index": 6580, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.6WT initiated WT Release procedure", "paragraph_index": 6584, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.7WT Status Reporting Initiation", "paragraph_index": 6590, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.8WT Status Reporting", "paragraph_index": 6597, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.9Xw Setup procedure", "paragraph_index": 6601, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.10WT Configuration Update procedure", "paragraph_index": 6608, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.11Error Indication procedure", "paragraph_index": 6615, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.11.0General", "paragraph_index": 6616, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.11.1WT initiated error indication", "paragraph_index": 6618, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.11.2eNB initiated error indication", "paragraph_index": 6622, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.12Reset procedure", "paragraph_index": 6626, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.12.0General", "paragraph_index": 6627, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.12.1WT initiated reset", "paragraph_index": 6629, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.12.2eNB initiated reset", "paragraph_index": 6634, "style": "Heading5"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.13LWIP Addition Preparation procedure", "paragraph_index": 6639, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.14eNB initiated LWIP Modification Preparation procedure", "paragraph_index": 6646, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.15eNB initiated LWIP Release procedure", "paragraph_index": 6653, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "22B.2.2.16LWIP-SeGW initiated LWIP Release procedure", "paragraph_index": 6657, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23Others", "paragraph_index": 6663, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "23.1Support for real time IMS services", "paragraph_index": 6664, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.1.1IMS Emergency Call", "paragraph_index": 6665, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.2Subscriber and equipment trace", "paragraph_index": 6669, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.2.0General", "paragraph_index": 6670, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.2.1Signalling activation", "paragraph_index": 6672, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.2.2Management activation", "paragraph_index": 6682, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.3E-UTRAN Support for Warning Systems", "paragraph_index": 6685, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.3.0General", "paragraph_index": 6686, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.3.1Earthquake and Tsunami Warning System", "paragraph_index": 6688, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.3.2Commercial Mobile Alert System", "paragraph_index": 6690, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.3.3Korean Public Alert System", "paragraph_index": 6692, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.3.4EU-Alert", "paragraph_index": 6694, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.4Interference avoidance for in-device coexistence", "paragraph_index": 6696, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.4.1Problems", "paragraph_index": 6697, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.4.2Solutions", "paragraph_index": 6699, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.5TDD Enhanced Interference Management and Traffic Adaptation (eIMTA)", "paragraph_index": 6720, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.6RAN assisted WLAN interworking", "paragraph_index": 6729, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.6.0General", "paragraph_index": 6730, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.6.1General principles", "paragraph_index": 6732, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.6.2Access network selection and traffic steering rules", "paragraph_index": 6744, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.7Support of Low Complexity UEs", "paragraph_index": 6747, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.7aSupport of Bandwidth Reduced Low Complexity UEs", "paragraph_index": 6753, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.7bSupport of UEs in Enhanced Coverage", "paragraph_index": 6762, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.8Support for Radio Interface based Synchronization", "paragraph_index": 6772, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.9Network-assisted interference cancellation/suppression", "paragraph_index": 6774, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.10Support for sidelink communication", "paragraph_index": 6777, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.10.1General", "paragraph_index": 6778, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.10.2Radio Protocol Architecture", "paragraph_index": 6793, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.10.2.0General", "paragraph_index": 6794, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.10.2.1User plane", "paragraph_index": 6796, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.10.2.2Control plane", "paragraph_index": 6809, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.10.3Radio resource allocation", "paragraph_index": 6817, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.10.3.0General", "paragraph_index": 6818, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.10.3.1Resource Pool for sidelink control information", "paragraph_index": 6853, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.10.3.2Resource Pool for sidelink data", "paragraph_index": 6861, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.10.4Sidelink Communication via ProSe UE-to-Network Relay", "paragraph_index": 6866, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.11Support for sidelink discovery", "paragraph_index": 6883, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.11.1General", "paragraph_index": 6884, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.11.2Radio Protocol Architecture", "paragraph_index": 6896, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.11.3Radio resource allocation", "paragraph_index": 6902, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.12Resource usage reporting for shared networks", "paragraph_index": 6951, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.13Optimising signalling load and resource usage for paging", "paragraph_index": 6956, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.13.1General paging optimisation", "paragraph_index": 6957, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.13.2Paging optimisation for UEs in enhanced coverage", "paragraph_index": 6961, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.14Support for V2X services", "paragraph_index": 6963, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.14.1General", "paragraph_index": 6964, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.14.1.0Overview", "paragraph_index": 6965, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.14.1.1Support for V2X sidelink communication", "paragraph_index": 6968, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.14.1.2Support for V2X communication via Uu", "paragraph_index": 7012, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.14.1.3Void", "paragraph_index": 7017, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.15Support for MMTEL voice and video enhancements", "paragraph_index": 7018, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.15.1RAN-assisted codec adaptation", "paragraph_index": 7019, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.15.2MMTEL signalling optimisation", "paragraph_index": 7030, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.15.3MMTEL voice quality/coverage enhancements", "paragraph_index": 7033, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.16Application Layer Measurement Collection", "paragraph_index": 7039, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.17Support for Aerial UE communication", "paragraph_index": 7042, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.17.1General", "paragraph_index": 7043, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.17.2Subscription based identification of Aerial UE function", "paragraph_index": 7051, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.17.3Height based reporting for Aerial UE communication", "paragraph_index": 7055, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.17.4Interference detection and mitigation for Aerial UE communication", "paragraph_index": 7057, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.17.5Flight path information reporting", "paragraph_index": 7060, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.17.6Location reporting for Aerial UE communication", "paragraph_index": 7062, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.17.7BRID and DAA Support via A2X Communication", "paragraph_index": 7064, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.18PDCP packet duplication", "paragraph_index": 7066, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.19E-UTRAN control for NR sidelink communication", "paragraph_index": 7075, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.20Support for Multi-USIM devices", "paragraph_index": 7079, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.20.1General", "paragraph_index": 7080, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.20.2Paging Collision Avoidance", "paragraph_index": 7083, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21Support for BL UEs, UEs in enhanced coverage and NB-IoT UEs over Non-Terrestrial Networks", "paragraph_index": 7087, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.1General", "paragraph_index": 7088, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.2Timing and synchronization", "paragraph_index": 7096, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.2.1Scheduling timing", "paragraph_index": 7097, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.2.2Timing Advance and Frequency Pre-compensation", "paragraph_index": 7112, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.3Support of discontinuous coverage", "paragraph_index": 7122, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.4Mobility Management", "paragraph_index": 7126, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.4.1Mobility Management in ECM-IDLE", "paragraph_index": 7127, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.4.2Mobility Management in ECM-CONNECTED", "paragraph_index": 7134, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.4.3Measurements", "paragraph_index": 7146, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.5Switchover", "paragraph_index": 7161, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.5.1Definitions", "paragraph_index": 7162, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.5.2Assumptions", "paragraph_index": 7165, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.5.3Procedures", "paragraph_index": 7170, "style": "Heading4"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.6Signalling", "paragraph_index": 7173, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.7MME(Re-)Selection by eNB", "paragraph_index": 7184, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.8O&M Requirements", "paragraph_index": 7188, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.9Coarse UE location reporting", "paragraph_index": 7190, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "23.21.10S1 Removal", "paragraph_index": 7193, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "24Support for 5GC", "paragraph_index": 7196, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "24.1General", "paragraph_index": 7197, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "24.2Radio Protocol Architecture", "paragraph_index": 7212, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "24.2.1User Plane", "paragraph_index": 7213, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "24.2.2Control Plane", "paragraph_index": 7220, "style": "Heading3"}
+{"source": "36300-j10.docx", "section": "", "title": "24.3Layer 2", "paragraph_index": 7234, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "24.4CN Selection", "paragraph_index": 7246, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "24.5Mobility", "paragraph_index": 7248, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "24.6Slicing", "paragraph_index": 7261, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "24.7Access Control", "paragraph_index": 7263, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "24.8Radio access network sharing", "paragraph_index": 7267, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "24.9Sidelink", "paragraph_index": 7274, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "24.10Minimization of Service Interruption", "paragraph_index": 7276, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex A (informative):NAS Overview", "paragraph_index": 7280, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "A.1Services and Functions", "paragraph_index": 7282, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "A.2NAS protocol states & state transitions", "paragraph_index": 7288, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex B (informative):MAC and RRC Control", "paragraph_index": 7301, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "B.1Difference between MAC and RRC control", "paragraph_index": 7303, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "B.2Void", "paragraph_index": 7308, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex C (informative):Void", "paragraph_index": 7310, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex D (informative):Void", "paragraph_index": 7312, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex E (informative):Void", "paragraph_index": 7314, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex F (informative):Void", "paragraph_index": 7316, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex G (informative):Guideline for E-UTRAN UE capabilities", "paragraph_index": 7318, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex H (informative):Void", "paragraph_index": 7333, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex I (informative):SPID ranges and mapping of SPID values to cell reselection and inter-RAT/inter frequency handover priorities", "paragraph_index": 7335, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "I.1SPID ranges", "paragraph_index": 7337, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "I.2Reference SPID values", "paragraph_index": 7341, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex J (informative):Carrier Aggregation", "paragraph_index": 7355, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "J.1Deployment Scenarios", "paragraph_index": 7356, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "J.2Void", "paragraph_index": 7362, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "J.3Void", "paragraph_index": 7364, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "J.4Void", "paragraph_index": 7366, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "J.5Void", "paragraph_index": 7368, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "J.6Void", "paragraph_index": 7370, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex K (informative):Time domain ICIC", "paragraph_index": 7372, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "K.1Deployment scenarios", "paragraph_index": 7374, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "K.1.1CSG scenario", "paragraph_index": 7376, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "K.1.2Pico scenario", "paragraph_index": 7382, "style": "Heading2"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex L (informative):Void", "paragraph_index": 7388, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex M (informative):Dual Connectivity", "paragraph_index": 7391, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "M.1Dual Connectivity operation", "paragraph_index": 7392, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "M.2Operation Overview", "paragraph_index": 7395, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex N (informative):Sidelink communication", "paragraph_index": 7399, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "N.1Deployment Scenarios", "paragraph_index": 7400, "style": "Heading1"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex O (informative):E-UTRAN Architecture for Radio Access Network Sharing with multiple cell ID broadcast", "paragraph_index": 7404, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex P (informative):Example implementation of Non-Terrestrial Networks", "paragraph_index": 7414, "style": "Heading8"}
+{"source": "36300-j10.docx", "section": "", "title": "Annex Q (informative):Change history", "paragraph_index": 7438, "style": "Heading8"}

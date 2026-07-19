@@ -1,0 +1,10 @@
+Definitions for parameters,Per,M,FDD-TDDDIFF,FR1-FR2DIFF
+fr1fdd-FR1TDD-CA-SpCellOnFR1FDDIndicates whether the UE supports an FR1 FDD SpCell (and possibly SCells) when configured with an FR1 TDD SCell.,UE,No,No,No
+fr1fdd-FR1TDD-CA-SpCellOnFR1TDDIndicates whether the UE supports an FR1 TDD SpCell (and possibly SCells) when configured with an FR1 FDD SCell.,UE,No,No,No
+fr1fdd-FR1TDD-FR2TDD-CA-SpCellOnFR1FDDIndicates whether the UE supports an FR1 FDD SpCell (and possibly SCells) when configured with an FR1 TDD SCell and an FR2 TDD SCell.,UE,No,No,No
+fr1fdd-FR1TDD-FR2TDD-CA-SpCellOnFR1TDDIndicates whether the UE supports an FR1 TDD SpCell (and possibly SCells) when configured with an FR1 FDD SCell and an FR2 TDD SCell.,UE,No,No,No
+fr1fdd-FR1TDD-FR2TDD-CA-SpCellOnFR2TDDIndicates whether the UE supports an FR2 TDD SpCell (and possibly SCells) when configured with an FR1 FDD SCell and an FR1 TDD SCell.,UE,No,No,No
+fr1fdd-FR2TDD-CA-SpCellOnFR1FDDIndicates whether the UE supports an FR1 FDD SpCell (and possibly SCells) when configured with an FR2 TDD SCell.,UE,No,No,No
+fr1fdd-FR2TDD-CA-SpCellOnFR2TDDIndicates whether the UE supports an FR2 TDD SpCell (and possibly SCells) when configured with an FR1 FDD SCell.,UE,No,No,No
+fr1tdd-FR2TDD-CA-SpCellOnFR1TDDIndicates whether the UE supports an FR1 TDD SpCell (and possibly SCells) when configured with an FR2 TDD SCell.,UE,No,No,No
+fr1tdd-FR2TDD-CA-SpCellOnFR2TDDIndicates whether the UE supports an FR2 TDD SpCell (and possibly SCells) when configured with an FR1 TDD SCell.,UE,No,No,No

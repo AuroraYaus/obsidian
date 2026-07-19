@@ -1,0 +1,6 @@
+,Physical Channel Combination,Transport Channel Combination,Mandatory dependent on UE radio access capabilities,Comment
+1,PSDCH,SL-DCH,Mandatory for UE supporting sidelink discovery,
+2,PSBCH,SL-BCH,Mandatory for UE supporting sidelink communication or V2X sidelink communication,
+3,PSSCH,SL-SCH,Mandatory for UE supporting sidelink communication or V2X sidelink communication,
+4,PSCCH,N/A,Mandatory for UE supporting sidelink communication or V2X sidelink communication,
+"NOTE:For sidelink communication, the UE shall be able to perform simultaneous Downlink and sidelink communication reception. For sidelink discovery, depending on the UE capability, the UE may be able to perform simultaneous Downlink and sidelink discovery receptions. If the UE is unable to perform simultaneous Downlink and sidelink discovery receptions, receptions are prioritized according to TS 36.321 [12]. For V2X sidelink communication, the UE shall be able to perform simultaneous Downlink and V2X sidelink communication reception. NOTE:If the configured resources for reception of sidelink communication and sidelink discovery are overlapped, receptions are prioritized according to TS 36.321 [12].",,,,

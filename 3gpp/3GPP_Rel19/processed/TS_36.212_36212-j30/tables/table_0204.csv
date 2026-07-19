@@ -1,0 +1,3 @@
+Bit field mapped to index,Message
+0,Precoding according to the indicated TPMI in the TPMI information field
+1,"Precoding using the precoder(s) according to PMI(s) indicated in the latest aperiodic CSI report.For aperiodic CSI mode 2-2:  - Precoding of scheduled resource blocks belonging to the reported preferred M subband(s), use precoder(s) according to the preferred M subband PMI(s) indicated in the latest aperiodic CSI report;  - Precoding of scheduled resource blocks not belonging to the reported preferred M subband(s), precoding using a precoder according to the wideband PMI indicated in the latest aperiodic CSI report."

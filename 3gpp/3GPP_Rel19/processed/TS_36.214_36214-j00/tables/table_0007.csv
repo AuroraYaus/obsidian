@@ -1,0 +1,2 @@
+Definition,"The received wide band power, including thermal noise and noise generated in the receiver, within the bandwidth defined by the receiver pulse shaping filter. The reference point for the measurement shall be the antenna connector of the UE. If receiver diversity is in use by the UE, the reported value shall not be lower than the corresponding UTRA carrier RSSI of any of the individual receive antenna branches."
+Applicable for,"RRC_IDLE inter-RAT,RRC_CONNECTED inter-RAT"

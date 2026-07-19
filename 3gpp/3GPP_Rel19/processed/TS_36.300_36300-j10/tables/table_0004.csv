@@ -1,0 +1,5 @@
+,Anchor Carrier,,,
+,,In-band,Guard-band,Standalone
+Non-Anchor Carrier,In-band,Valid (Note 1),Valid (Note 1),"Valid (Note 2, Note 3)"
+,Guard-band,Valid (Note 1),"Valid (Note 1, Note 4)","Valid (Note 2, Note 3)"
+,Standalone,"Valid (Note 2, Note 3)","Valid (Note 2, Note 3)","Valid (Note 2, Note 4)"

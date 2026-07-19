@@ -1,0 +1,128 @@
+<table>
+  <tr>
+    <td colspan="2">MAC-MainConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td colspan="3">ce-ETWS-CMAS-RxInConnIndicates UE shall monitor for ETWS/CMAS notification on control channels associated with the shared data channel in RRC_CONNECTED as specified in TS 36.213 [23], clause 7.1.</td>
+  </tr>
+  <tr>
+    <td colspan="2">dl-PathlossChangeDL Pathloss Change and the change of the required power backoff due to power management (as allowed by P-MPRc, see TS 36.101 [42] and TS 36.102 [113] for NTN capable UE) for PHR reporting in TS 36.321 [6]. Value in dB. Value dB1 corresponds to 1 dB, dB3 corresponds to 3 dB and so on. The same value applies for each serving cell (although the associated functionality is performed independently for each cell).</td>
+  </tr>
+  <tr>
+    <td colspan="2">dormantSCellDeactivationTimerSCell deactivation timer for UEs supporting dormant state as specified in TS 36.321 [6]. Value in number of radio frames. Value rf4 corresponds to 4 radio frames, value rf8 corresponds to 8 radio frames and so on. E-UTRAN only configures the field if the UE is configured with one or more SCells other than the PSCell and PUCCH SCell. The same value applies for each SCell of a Cell Group (i.e. MCG or SCG) (although the associated functionality is performed independently for each SCell). Field dormantSCellDeactivationTimer does not apply for the PUCCH SCell.</td>
+  </tr>
+  <tr>
+    <td colspan="2">drx-ConfigUsed to configure DRX as specified in TS 36.321 [6]. E-UTRAN configures the values in DRX-Config-v1130 only if the UE indicates support for IDC indication. E-UTRAN configures drx-Config-v1130, drx-Config-v1310 and drx-Config-r13 only if drx-Config (without suffix) is configured. E-UTRAN configures drx-Config-r13 only if UE supports CE or if the UE is configured with uplink of an LAA SCell.</td>
+  </tr>
+  <tr>
+    <td colspan="2">drx-InactivityTimerTimer for DRX in TS 36.321 [6]. Value in number of PDCCH sub-frames. Value psf0 corresponds to 0 PDCCH sub-frame and behaviour as specified in 7.3.2 applies, value psf1 corresponds to 1 PDCCH sub-frame, psf2 corresponds to 2 PDCCH sub-frames and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">drx-RetransmissionTimerTimer for DRX in TS 36.321 [6]. Value in number of PDCCH sub-frames. Value psf0 corresponds to 0 PDCCH sub-frame and behaviour as specified in 7.3.2 applies, value psf1 corresponds to 1 PDCCH sub-frame, psf2 corresponds to 2 PDCCH sub-frames and so on. In case drx-RetransmissionTimer-v1130 or drx-RetransmissionTimer-v1310 is signalled, the UE shall ignore drx-RetransmissionTimer (i.e. without suffix).</td>
+  </tr>
+  <tr>
+    <td colspan="2">drx-RetransmissionTimerShortTTITimer for DRX in TS 36.321 [6]. Value in number of short TTIs when short TTI is configured. Value tti10 corresponds to 10 TTIs, value tti20 corresponds to 20 TTIs and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">drx-ULRetransmissionTimerTimer for DRX in TS 36.321 [6]. Value in number of PDCCH sub-frames. Value psf0 correponds to 0 PDCCH sub-frame and behaviour as specified in 7.3.2 applies, value psf1 corresponds to 1 PDCCH sub-frame, psf2 corresponds to 2 PDCCH sub-frames and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">drx-UL-RetransmissionTimerShortTTITimer for DRX in TS 36.321 [6]. Value in number of short TTIs when short TTI is configured. Value tti0 corresponds to 0 TTIs and behaviour as specified in 7.3.2 applies, value tti1 corresponds to 1 TTI and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">drxShortCycleTimerTimer for DRX in TS 36.321 [6]. Value in multiples of shortDRX-Cycle. A value of 1 corresponds to shortDRX-Cycle, a value of 2 corresponds to 2 * shortDRX-Cycle and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">dualConnectivityPHRIndicates if power headroom shall be reported using Dual Connectivity Power Headroom Report MAC Control Element defined in TS 36.321 [6] (value setup). For both LTE DC and (NG)EN-DC, if PHR functionality is configured, E-UTRAN always configures the value setup for this field and configures phr-Config and dualConnectivityPHR. For LTE DC, E-UTRAN configures the field for both CGs while for (NG)EN-DC, E-UTRAN configures the field only for MCG. E-UTRAN does not configure this field when a DAPS bearer is configured.</td>
+  </tr>
+  <tr>
+    <td colspan="2">e-HARQ-PatternTRUE indicates that enhanced HARQ pattern for TTI bundling is enabled for FDD. E-UTRAN enables this field only when ttiBundling is set to TRUE.</td>
+  </tr>
+  <tr>
+    <td colspan="2">eDRX-Config-CycleStartOffsetIndicates longDRX-Cycle and drxStartOffset in TS 36.321 [6]. The value of longDRX-Cycle is in number of sub-frames. The value of drxStartOffset, in number of subframes, is indicated by the value of eDRX-Config-CycleStartOffset multiplied by 2560 plus the offset value configured in longDRX-CycleStartOffset. E-UTRAN only configures value setup when the value in longDRX-CycleStartOffset is sf2560.</td>
+  </tr>
+  <tr>
+    <td colspan="2">extendedBSR-SizesIf value setup is configured, the BSR index indicates extended BSR size levels as defined in TS 36.321 [6], Table 6.1.3.1-2.</td>
+  </tr>
+  <tr>
+    <td colspan="2">extendedPHRIndicates if power headroom shall be reported using the Extended Power Headroom Report MAC control element defined in TS 36.321 [6] (value setup). E-UTRAN always configures the value setup if more than one and up to eight Serving Cell(s) with uplink is configured and none of the serving cells with uplink configured has a servingCellIndex higher than seven and if PUCCH on SCell is not configured and if dual connectivity is not configured. E-UTRAN configures extendedPHR only if phr-Config is configured. E-UTRAN does not configure this field when a DAPS bearer is configured. The UE shall release extendedPHR if phr-Config is released.</td>
+  </tr>
+  <tr>
+    <td colspan="2">extendedPHR2Indicates if power headroom shall be reported using the Extended Power Headeroom Report MAC Control Element defined in TS 36.321 [6] (value setup). E-UTRAN always configures the value setup if any of the serving cells with uplink configured has a servingCellIndex higher than seven in case dual connectivity is not configured or if PUCCH SCell (with any number of serving cells with uplink configured) is configured. E-UTRAN configures extendedPHR2 only if phr-Config is configured. E-UTRAN does not configure this field when a DAPS bearer is configured. The UE shall release extendedPHR2 if phr-Config is released.</td>
+  </tr>
+  <tr>
+    <td colspan="2">logicalChannelSR-ProhibitTimerTimer used to delay the transmission of an SR for logical channels enabled by logicalChannelSR-Prohibit. Value sf20 corresponds to 20 subframes, sf40 corresponds to 40 subframes, and so on. See TS 36.321 [6].</td>
+  </tr>
+  <tr>
+    <td colspan="2">longDRX-CycleStartOffsetlongDRX-Cycle and drxStartOffset in TS 36.321 [6] unless eDRX-Config-CycleStartOffset is configured. The value of longDRX-Cycle is in number of sub-frames. Value sf10 corresponds to 10 sub-frames, sf20 corresponds to 20 sub-frames and so on. If shortDRX-Cycle is configured, the value of longDRX-Cycle shall be a multiple of the shortDRX-Cycle value. The value of drxStartOffset value is in number of sub-frames. In case longDRX-CycleStartOffset-v1130 is signalled, the UE shall ignore longDRX-CycleStartOffset (i.e. without suffix). In case longDRX-CycleStartOffset-v1310 is signalled, the UE shall ignore longDRX-CycleStartOffset (i.e. without suffix).</td>
+  </tr>
+  <tr>
+    <td colspan="2">maxHARQ-TxMaximum number of transmissions for UL HARQ in TS 36.321 [6].</td>
+  </tr>
+  <tr>
+    <td>mpdcch-UL-HARQ-ACK-FeedbackConfigTRUE indicates E-UTRAN may send UL HARQ-ACK feedback or UL grant corresponding to a new transmission for early termination of PUSCH transmission, or positive acknowledgement of completed PUSCH transmissions as specified in TS 36.321 [6] and TS 36.212 [22]. In case of acknowledgement of RRC Connection Release, MPDCCH monitoring is terminated.</td>
+  </tr>
+  <tr>
+    <td colspan="3">offsetThresholdTAOffset for TA reporting as specified in TS 36.321 [6]. Value ms0dot5 corresponds to 0.5 millisecond, value ms1 corresponds to 1 millisecond and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">onDurationTimerTimer for DRX in TS 36.321 [6]. Value in number of PDCCH sub-frames. Value psf1 corresponds to 1 PDCCH sub-frame, psf2 corresponds to 2 PDCCH sub-frames and so on. In case onDurationTimer-v1310 is signalled, the UE shall ignore onDurationTimer (i.e. without suffix).</td>
+  </tr>
+  <tr>
+    <td colspan="2">periodicBSR-TimerTimer for BSR reporting in TS 36.321 [6]. Value in number of sub-frames. Value sf10 corresponds to 10 sub-frames, sf20 corresponds to 20 sub-frames and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">periodicPHR-TimerTimer for PHR reporting in TS 36.321 [6]. Value in number of sub-frames. Value sf10 corresponds to 10 subframes, sf20 corresponds to 20 subframes and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">phr-ModeOtherCGIndicates the mode (i.e. real or virtual) used for the PHR of the activated cells that are part of the other Cell Group (i.e. MCG or SCG), when DC is configured.</td>
+  </tr>
+  <tr>
+    <td colspan="2">proc-TimelineMinimum processing timeline for short TTI with subslot operation. Value nplus4set1 indicates processing time n+4 for set 1, value nplus6set1 indicates processing time n+6 for set 1, value nplus6set2 indicates processing time n+6 for set and value nplus8set2 indicates processing time n+8 for set 2. See also UE capability min-Proc-TimelineSubslot for sTTI.</td>
+  </tr>
+  <tr>
+    <td colspan="2">prohibitPHR-TimerTimer for PHR reporting in TS 36.321 [6]. Value in number of sub-frames. Value sf0 corresponds to 0 subframes and behaviour as specified in 7.3.2 applies, sf100 corresponds to 100 subframes and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">rai-ActivationActivation of release assistance indication (RAI) in TS 36.321 [6] for BL UEs.</td>
+  </tr>
+  <tr>
+    <td colspan="2">retxBSR-TimerTimer for BSR reporting in TS 36.321 [6]. Value in number of sub-frames. Value sf640 corresponds to 640 sub-frames, sf1280 corresponds to 1280 sub-frames and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">sCellDeactivationTimerSCell deactivation timer in TS 36.321 [6]. Value in number of radio frames. Value rf4 corresponds to 4 radio frames, value rf8 corresponds to 8 radio frames and so on. E-UTRAN only configures the field if the UE is configured with one or more SCells other than the PSCell and PUCCH SCell. If the field is absent, the UE shall delete any existing value for this field and assume the value to be set to infinity. The same value applies for each SCell of a Cell Group (i.e. MCG or SCG) (although the associated functionality is performed independently for each SCell). Field sCellDeactivationTimer does not apply for the PUCCH SCell.</td>
+  </tr>
+  <tr>
+    <td colspan="2">sCellHibernationTimerSCell hibernation timer for UEs supporting dormant SCell state as specified in TS 36.321 [6]. Value in number of radio frames. Value rf4 corresponds to 4 radio frames, value rf8 corresponds to 8 radio frames and so on. E-UTRAN only configures the field if the UE is configured with one or more SCells other than the PSCell and PUCCH SCell. The same value applies for each SCell of a Cell Group (i.e. MCG or SCG) (although the associated functionality is performed independently for each SCell). Field sCellHibernationTimer does not apply for the PUCCH SCell.</td>
+  </tr>
+  <tr>
+    <td colspan="2">shortDRX-CycleShort DRX cycle in TS 36.321 [6]. Value in number of sub-frames. Value sf2 corresponds to 2 sub-frames, sf5 corresponds to 5 subframes and so on. In case shortDRX-Cycle-v1130 is signalled, the UE shall ignore shortDRX-Cycle (i.e. without suffix). Short DRX cycle is not configured for UEs in CE.</td>
+  </tr>
+  <tr>
+    <td colspan="2">skipUplinkTxDynamicIf configured, the UE skips UL transmissions for an uplink grant other than a configured uplink grant if no data is available for transmission in the UE buffer as described in TS 36.321 [6].</td>
+  </tr>
+  <tr>
+    <td colspan="2">skipUplinkTxSPSIf configured, the UE skips UL transmissions for a configured uplink grant if no data is available for transmission in the UE buffer as described in TS 36.321 [6]. E-UTRAN always configures skipUplinkTxSPS when there is at least one SPS configuration with semiPersistSchedIntervalUL shorter than sf10 or when at least one SPS-ConfigUL-STTI is configured for the cell group.</td>
+  </tr>
+  <tr>
+    <td colspan="2">sr-ProhibitTimerTimer for SR transmission on PUCCH in TS 36.321 [6]. Value in number of SR period(s) of shortest SR period of any serving cell with PUCCH. Value 0 means that behaviour as specified in 7.3.2 applies. Value 1 corresponds to one SR period, Value 2 corresponds to 2*SR periods and so on. SR period is defined in TS 36.213 [23], table 10.1.5-1.If sr-ProhibitTimerOffset is present, actual value of sr-ProhibitTimer = CEIL (sr-ProhibitTimerOffset/ SR period) + signalled value of sr-ProhibitTimer.</td>
+  </tr>
+  <tr>
+    <td colspan="2">sr-ProhibitTimerOffsetTime offset for SR transmission on PUCCH. Value in milliseconds. Value ms90 corresponds to 90 ms, value ms180 corresponds to 180 ms and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">ssr-ProhibitTimerTimer for prohibiting SR transmission on SPUCCH in TS 36.321 [6]. Value in number of SR period(s) of shortest SR period of any serving cell with SPUCCH. Value 0 means that behaviour as specified in 7.3.2 applies. Value 1 corresponds to one SR period, value 2 corresponds to 2 SR periods and so on. SR period is defined in TS 36.213 [23], table 10.1.5-1.</td>
+  </tr>
+  <tr>
+    <td colspan="2">stag-IdIndicates the TAG of an SCell, see TS 36.321 [6]. Uniquely identifies the TAG within the scope of a Cell Group (i.e. MCG or SCG). If the field is not configured for an SCell (e.g. absent in MAC-MainConfigSCell), the SCell is part of the PTAG.</td>
+  </tr>
+  <tr>
+    <td colspan="2">stag-ToAddModList, stag-ToReleaseListUsed to configure one or more STAGs. E-UTRAN ensures that a STAG contains at least one SCell with configured uplink. If, due to SCell release a reconfiguration would result in an &#x27;empty&#x27; TAG, E-UTRAN includes release of the concerned TAG.</td>
+  </tr>
+  <tr>
+    <td colspan="2">timeAlignmentTimerSTAGIndicates the value of the time alignment timer for an STAG, see TS 36.321 [6].</td>
+  </tr>
+  <tr>
+    <td colspan="2">ttiBundlingTRUE indicates that TTI bundling TS 36.321 [6] is enabled while FALSE indicates that TTI bundling is disabled. TTI bundling can be enabled for FDD and for TDD for configurations 0, 1 and 6 and additionally for configurations 2 and 3 when symPUSCH-UpPTS-r14 is configured. The functionality is performed independently per Cell Group (i.e. MCG or SCG), but E-UTRAN does not configure TTI bundling for the SCG. For a TDD PCell, E-UTRAN does not simultaneously enable TTI bundling and semi-persistent scheduling in this release of specification. Furthermore, for a Cell Group, E-UTRAN does not simultaneously configure TTI bundling and SCells with configured uplink, and E-UTRAN does not simultaneously configure TTI bundling and eIMTA.</td>
+  </tr>
+</table>

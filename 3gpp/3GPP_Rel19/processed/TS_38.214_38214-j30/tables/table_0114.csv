@@ -1,0 +1,6 @@
+rvid indicated by the DCI scheduling the PUSCH,rvid to be applied on the transmission occasions in the mh OCC group,,,
+,m mod 4 = 0,m mod 4 = 1,m mod 4 = 2,m mod 4 = 3
+0,0,2,3,1
+2,2,3,1,0
+3,3,1,0,2
+1,1,0,2,3

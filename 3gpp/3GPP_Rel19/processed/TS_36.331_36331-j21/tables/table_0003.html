@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <td>Abbreviation</td>
+    <td>Meaning</td>
+  </tr>
+  <tr>
+    <td>Cond conditionTag(Used in downlink only)</td>
+    <td>Conditionally presentA field for which the need is specified by means of conditions. For each conditionTag, the need is specified in a tabular form following the ASN.1 segment. In case, according to the conditions, a field is not present, the UE takes no action and where applicable shall continue to use the existing value (and/ or the associated functionality) unless explicitly stated otherwise (e.g. in the conditional presence table or in the description of the field itself).</td>
+  </tr>
+  <tr>
+    <td>Need OP(Used in downlink only)</td>
+    <td>Optionally presentA field that is optional to signal. For downlink messages, the UE is not required to take any special action on absence of the field beyond what is specified in the procedural text or the field description table following the ASN.1 segment. The UE behaviour on absence should be captured either in the procedural text or in the field description.</td>
+  </tr>
+  <tr>
+    <td>Need ON(Used in downlink only)</td>
+    <td>Optionally present, No actionA field that is optional to signal. If the message is received by the UE, and in case the field is absent, the UE takes no action and where applicable shall continue to use the existing value (and/ or the associated functionality).</td>
+  </tr>
+  <tr>
+    <td>Need OR(Used in downlink only)</td>
+    <td>Optionally present, ReleaseA field that is optional to signal. If the message is received by the UE, and in case the field is absent, the UE shall discontinue/ stop using/ delete any existing value (and/ or the associated functionality).</td>
+  </tr>
+</table>

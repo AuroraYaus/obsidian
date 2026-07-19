@@ -1,0 +1,56 @@
+<table>
+  <tr>
+    <td>RRCConnectionResume field descriptions</td>
+  </tr>
+  <tr>
+    <td>drb-ContinueROHCThis field indicates whether to continue or reset the header compression protocol context for the DRBs configured with EUTRA PDCP and the header compression protocol. Presence of the field indicates that the header compression protocol context continues while absence indicates that the header compression protocol context is reset.</td>
+  </tr>
+  <tr>
+    <td>fullConfigIndicates that the full configuration option is applicable for the RRCConnectionResume message.</td>
+  </tr>
+  <tr>
+    <td>idleModeMeasurementReqThis field indicates that the UE shall report the idle/inactive measurements to the network in the RRCConnectionResumeComplete message</td>
+  </tr>
+  <tr>
+    <td>p-MaxEUTRAIndicates the maximum power available for E-UTRA.</td>
+  </tr>
+  <tr>
+    <td>p-MaxUE-FR1The maximum total transmit power to be used by the UE across all serving cells in frequency range 1 (FR1) across all cell groups. The maximum transmit power that the UE may use may be additionally limited on cell- or cell-group level.</td>
+  </tr>
+  <tr>
+    <td>nr-RadioBearerConfig1, nr-RadioBearerConfig2Includes the NR RadioBearerConfig IE as specified in TS 38.331 [82]. The field includes the configuration of RBs configured with NR PDCP.</td>
+  </tr>
+  <tr>
+    <td>nr-SecondaryCellGroupConfigIncludes the NR RRCReconfiguration message as specified in TS 38.331 [82]. In this version of the specification, the NR RRC message only includes fields secondaryCellGroup, with at least reconfigurationWithSync, otherConfig and/ or measConfig.</td>
+  </tr>
+  <tr>
+    <td>restoreMCG-ScellsIndicates that the UE shall restore the MCG Scell configurations from the UE AS Context or UE Inactive AS Context, if configured.</td>
+  </tr>
+  <tr>
+    <td>restoreSCGIf included, the UE shall restore the SCG configurations from the UE AS Context or UE Inactive AS Context.</td>
+  </tr>
+  <tr>
+    <td>sCellGroupToAddModListIndicates the SCell group to be added or modified.</td>
+  </tr>
+  <tr>
+    <td>sCellGroupToReleaseListIndicates the SCell group to be released.</td>
+  </tr>
+  <tr>
+    <td>sCellToAddModListList of SCells to be added or modified.</td>
+  </tr>
+  <tr>
+    <td>sCellToReleaseListList of SCells to be released.</td>
+  </tr>
+  <tr>
+    <td>scg-StateIndicates that the SCG is deactivated. If the field is absent, the UE behavior is specified in TS 38.331 [82], clause 5.3.5.3.</td>
+  </tr>
+  <tr>
+    <td>sk-CounterA one-shot counter used upon initial configuration of S-KgNB as well as upon refresh of S-KgNB. E-UTRAN provides this field when the UE is configured with an (SN-terminated) RB using S-KgNB or NR SCG is configured.</td>
+  </tr>
+  <tr>
+    <td>tdm-PatternConfigThis field is used when power control or IMD issues require single UL transmission in (NG)EN-DC as specified in TS 38.101-3 [101] and TS 38.213 [88].</td>
+  </tr>
+  <tr>
+    <td>tdm-PatternConfig2This field is used for dual UL transmission in EN-DC with LTE FDD PCell and for single UL transmission in EN-DC with LTE FDD/TDD PCell, as specified in TS 38.101-3 [101] and TS 38.213 [88].The network sets at most one of tdm-PatternConfig and tdm-PatternConfig2 to setup.When this field is configured in EN-DC with LTE TDD PCell, it is not applicable if TDD configuration is sa0 or sa6 in SIB1.</td>
+  </tr>
+</table>

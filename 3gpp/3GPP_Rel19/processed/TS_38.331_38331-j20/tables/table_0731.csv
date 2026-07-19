@@ -1,0 +1,2 @@
+Conditional Presence,Explanation
+CONNECTED,"This field is optionally present, Need M, in an RRCReconfiguration message, for a SL DRB with additional sidelink RLC bearer being configured. The field is absent otherwise."

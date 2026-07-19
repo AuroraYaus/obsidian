@@ -1,0 +1,5 @@
+SIB23 field descriptions
+"segmentContainerThis field includes a segment of the encoded SIB23-IEs. The size of the included segment in this container should be small enough that the SI message size is less than or equal to the maximum size of a NR SI, i.e. 2976 bits when SIB23 is broadcast."
+"segmentNumberThis field identifies the sequence number of a segment of SIB23-IEs. A segment number of zero corresponds to the first segment, a segment number of one corresponds to the second segment, and so on."
+segmentTypeThis field indicates whether the included segment is the last segment or not.
+sl-PosConfigCommonNRThis field indicates the NR sidelink positioning configuration.

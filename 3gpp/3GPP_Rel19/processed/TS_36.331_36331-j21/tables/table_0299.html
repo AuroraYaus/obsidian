@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>SL-GapConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td colspan="2">gapOffsetIndicates the offset from the start of SFN 0 to the start of the first gapPeriod. If the SFN period is not an integer multiple of gapPeriod, no subframes within this period (i.e. from SFN 0 to offset) are considered part of the gap.</td>
+  </tr>
+  <tr>
+    <td colspan="2">gapPeriodIndicates the period by which gapSubframeBitmap is repeated.</td>
+  </tr>
+  <tr>
+    <td>gapSubframeBitmapIndicates the subframes of one or more individual gaps, not only covering the subframes of the associated discovery resources but also including e.g. re-tuning and synchronisation delays. The UE and E-UTRAN signal bit strings of valid sizes only i.e. sizes equal to or less than gapPeriod. Value 1 indicates that the UE is allowed to use the subframe for sidelink discovery.</td>
+  </tr>
+</table>

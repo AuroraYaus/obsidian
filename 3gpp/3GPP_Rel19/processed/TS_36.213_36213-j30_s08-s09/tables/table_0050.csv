@@ -1,0 +1,19 @@
+SRS Configuration Index ISRS,SRS Periodicity  (ms),SRS Subframe Offset
+0,2,"0, 1"
+1,2,"0, 2"
+2,2,"1, 2"
+3,2,"0, 3"
+4,2,"1, 3"
+5,2,"0, 4"
+6,2,"1, 4"
+7,2,"2, 3"
+8,2,"2, 4"
+9,2,"3, 4"
+10 – 14,5,ISRS – 10
+15 – 24,10,ISRS – 15
+25 – 44,20,ISRS – 25
+45 – 84,40,ISRS – 45
+85 – 164,80,ISRS – 85
+165 – 324,160,ISRS – 165
+325 – 644,320,ISRS – 325
+645 – 1023,reserved,reserved

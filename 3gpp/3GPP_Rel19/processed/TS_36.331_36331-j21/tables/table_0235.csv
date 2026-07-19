@@ -1,0 +1,27 @@
+MeasIdleConfig field descriptions
+"allowedMeasBandwidthIf absent, the value corresponding to the downlink bandwidth indicated by the dl-Bandwidth included in MasterInformationBlock of serving cell applies."
+beamMeasConfigIdleIndicates the beam level measurement configuration.
+carrierFreqIndicates the E-UTRA carrier frequency to be used for measurements during RRC_IDLE or RRC_INACTIVE.
+carrierFreqNRIndicates the NR carrier frequency to be used for measurements during RRC_IDLE or RRC_INACTIVE.
+frequencyBandListIndicates the list of frequency bands for which the NR idle/inactive measurement parameters apply. The UE shall select the first listed band which it supports in the frequencyBandList field to represent the NR neighbour carrier frequency.
+"deriveSSB-IndexFromCellThe field indicates whether the UE may use, to derive the SSB index of a cell on the indicated SSB frequency and subcarrier spacing, the timing of any detected cell with the same SSB frequency and subcarrier spacing. If this field is set to TRUE, the UE assumes SFN and frame boundary alignment across cells on the same NR carrier frequency as specified in TS 36.133 [16]."
+maxReportRS-IndexMax number of beam indices to include in the idle/inactive measurement result.
+maxRS-IndexCellQualNumber of SS blocks to average for cell measurement derivation. Corresponds to the parameter nrofSS-BlocksToAverage in TS 38.304 [92].
+measCellListIndicates the list of E-UTRA cells which the UE is requested to measure and report for idle/inactive measurements.
+measCellListNRIndicates the list of NR cells which the UE is requested to measure and report for idle/inactive measurements.
+measIdleCarrierListEUTRAIndicates the E-UTRA carriers to be measured during RRC_IDLE or RRC_INACTIVE.
+measIdleCarrierListNRIndicates the NR carriers to be measured during RRC_IDLE or RRC_INACTIVE.
+"measIdleDurationIndicates the duration for performing measurements during RRC_IDLE or RRC_INACTIVE for measurements assigned via RRCConnectionRelease. Value sec10 correspond to 10 seconds, value sec30 to 30 seconds and so on."
+"measTimingConfigUsed to configure the NR measurement timing configurations, i.e., timing occasions at which the UE measures SSBs. If the field is absent in VarMeasConfig, the UE assumes that SSB periodicity is 5ms in this frequency."
+qualityThresholdIndicates the quality thresholds for reporting the measured cells for idle/inactive E-UTRA measurements.
+qualityThresholdNRIndicates the quality thresholds for reporting the measured cells for idle/inactive NR measurements.
+"reportQuantitiesIndicates which E-UTRA measurement quantities the UE is requested to report in the idle/inactive measurement report. In this version of the specification, E-UTRAN always configures the value 'both'."
+reportQuantitiesNRIndicates which NR measurement quantities the UE is requested to report in the idle/inactive measurement report.
+reportQuantityRS-IndexNRIndicates which measurement information per beam index the UE shall include in the NR idle/inactive measurement results.
+reportRS-IndexResultsNRIndicates whether or not the UE shall include beam measurements in the NR idle/inactive measurement results.
+"ss-RSSI-MeasurementIndicates the SSB-based RSSI measurement configuration. If the field is absent in VarMeasConfig, the UE behaviour is defined in TS 38.215 [89], clause 5.1.3."
+"ssb-ToMeasureThe set of SS blocks to be measured within the SMTC measurement duration (see TS 38.215 [89]). When the field is absent in VarMeasConfig, the UE measures on all SS-blocks."
+"subcarrierSpacingSSBIndicates subcarrier spacing of SSB of NR frequency. If subcarrierSpacingSSB-r17 is present, the UE shall ignore subcarrierSpacingSSB-r16."
+threshRS-IndexList of thresholds for consolidation of L1 measurements per RS index. Corresponds to the parameter absThreshSS-BlocksConsolidation in TS 38.304 [92].
+"validityAreaIndicates the list of cells within which UE is requested to do measurements during RRC_IDLE or RRC_INACTIVE. If the UE reselects to a cell whose physical cell identity does not match any entry in validityArea for the corresponding carrier frequency, the measurements are no longer required. E-UTRAN configures this field only in RRCConnectionRelease."
+"validityAreaListIndicates the list of frequencies and optionally, for each frequency, a list of cells within which the UE is required to perform measurements during RRC_IDLE or RRC_INACTIVE. E-UTRAN configures this field only in RRCConnectionRelease. A UE can be configured either with validityArea or validityAreaList, but not both."

@@ -1,0 +1,14 @@
+Bit field mapped to index,"Transform precoder is enabled, or maxRank = 1 if transform precoder is disabled",Bit field mapped to index,transform precoder is disabled and maxRank = 2,Bit field mapped to index,transform precoder is disabled and maxRank = 3,Bit field mapped to index,transform precoder is disabled and maxRank = 4
+0,1 layer: TPMI=0,0,1 layer: TPMI=0,0,1 layer: TPMI=0,0,1 layer: TPMI=0
+…,…,…,…,…,…,…,…
+31,1 layer: TPMI=31,31,1 layer: TPMI=31,31,1 layer: TPMI=31,31,1 layer: TPMI=31
+,,32,2 layers: TPMI=0,32,2 layers: TPMI=0,32,2 layers: TPMI=0
+,,…,…,…,…,…,…
+,,303,2 layers: TPMI=271,303,2 layers: TPMI=271,303,2 layers: TPMI=271
+,,303-511,reserved,304,3 layers: TPMI=0,304,3 layers: TPMI=0
+,,,,…,…,…,…
+,,,,567,3 layers: TPMI=263,567,3 layers: TPMI=263
+,,,,568-1023,reserved,568,4 layers: TPMI=0
+,,,,,,…,…
+,,,,,,635,4 layers: TPMI=67
+,,,,,,636-1023,reserved

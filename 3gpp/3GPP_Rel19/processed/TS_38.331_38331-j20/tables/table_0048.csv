@@ -1,0 +1,10 @@
+SDT-MAC-PHY-CG-Config field descriptions
+"cg-MT-SDT-MaxDurationToNextCG-OccasionThe maximum duration until the next CG-SDT occasion as specified in TS 38.321 [3] for MT-SDT. If configured, the CG-SDT resource can only be used for the initial CG-SDT transmission if the duration between the initiation of the CG-SDT procedure and the next CG-SDT occasion is less than the value configured by this field."
+"cg-SDT-ConfigInitialBWP-DLDownlink BWP configuration for CG-SDT. If a UE is an (e)RedCap UE and if the initialDownlinkBWP-RedCap is configured in downlinkConfigCommon in SIB1, this field is configured for initialDownlinkBWP-RedCap, otherwise it is configured for initialDownlinkBWP."
+"cg-SDT-ConfigInitialBWP-NULUL BWP configuration for CG-SDT on NUL carrier. If a UE is an (e)RedCap UE and if the initialUplinkBWP-RedCap is configured in uplinkConfigCommon in SIB1, this field is configured for initialUplinkBWP-RedCap, otherwise it is configured for initialUplinkBWP for NUL."
+cg-SDT-ConfigInitialBWP-SULUL BWP configuration for CG-SDT on SUL carrier configured for the initialUplinkBWP for SUL.
+"cg-SDT-ConfigLCH-RestrictionToAddModList, cg-SDT-ConfigLCH-RestrictionToAddModListExt, cg-SDT-ConfigLCH-RestrictionToReleaseListLists for adding and releasing logical channel mapping restrictions for CG-SDT. If the network includes cg-SDT-ConfigLCH-RestrictionToAddModListExt, it includes the same number of entries, and listed in the same order, as in cg-SDT-ConfigLCH-RestrictionToAddModList."
+cg-SDT-CS-RNTIThe CS-RNTI value for CG-SDT as specified in TS 38.321 [3].
+cg-SDT-RSRP-ThresholdSSBAn RSRP threshold configured for SSB selection for CG-SDT as specified in TS 38.321 [3].
+"cg-SDT-TA-ValidationConfigConfiguration for the RSRP based TA validation. If this field is not configured, then the UE does not perform RSRP based TA validation."
+cg-SDT-timeAlignmentTimerTAT value for CG-SDT as specified in TS 38.321 [3]. The network always configures this field when sdt-MAC-PHY-CG-Config is configured. This field is associated with the PTAG indicated by tag-Id.

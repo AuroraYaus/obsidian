@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>CFRA field descriptions</td>
+  </tr>
+  <tr>
+    <td>msg1-RepetitionNumIndicates the MSG1 repetition number used for contention free 4-step random access type in TS 38.321 [3]. If this field is absent, the UE performs contention free 4-step random access without MSG1-Repetitions.</td>
+  </tr>
+  <tr>
+    <td>occasionsRA occasions for contention free random access. If the field is absent, the UE uses the RA occasions configured in RACH-ConfigCommon in the first active UL BWP.</td>
+  </tr>
+  <tr>
+    <td>ra-ssb-OccasionMaskIndexExplicitly signalled PRACH Mask Index for RA Resource selection in TS 38.321 [3]. The mask is valid for all SSB resources signalled in ssb-ResourceList. The UE shall ignore this field if the field msg1-RepetitionNum included in CFRA is configured.</td>
+  </tr>
+  <tr>
+    <td>rach-ConfigGenericConfiguration of contention free random access occasions for CFRA. The UE shall ignore preambleReceivedTargetPower, preambleTransMax, powerRampingStep, ra-ResponseWindow signaled within this field and use the corresponding values provided in RACH-ConfigCommon.</td>
+  </tr>
+  <tr>
+    <td>ra-OccasionTypeIndicates that SBFD aware UE (see TS 38.300 [2], clause 23.1) shall use the second PRACH occasions (see TS 38.213 [13], clause 8) for CFRA or for the fallback CBRA, as specified in clause 5.1.2 in TS 38.321 [3]. If absent, the first PRACH occasions shall be used.</td>
+  </tr>
+  <tr>
+    <td>ssb-perRACH-OccasionNumber of SSBs per RACH occasion.</td>
+  </tr>
+  <tr>
+    <td>totalNumberOfRA-PreamblesTotal number of preambles used for contention free random access in the RACH resources defined in CFRA, excluding preambles used for other purposes (e.g. for SI request). If the field is absent but the field occasions is present, the UE may assume all the 64 preambles are for RA. The setting should be consistent with the setting of ssb-perRACH-Occasion, if present, i.e. it should be a multiple of the number of SSBs per RACH occasion.</td>
+  </tr>
+</table>

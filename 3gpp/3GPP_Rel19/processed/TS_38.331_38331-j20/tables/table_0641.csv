@@ -1,0 +1,3 @@
+Conditional Presence,Explanation
+SUL-Only,"The field is optionally present, Need R, if supplementaryUplink is configured in ServingCellConfig. It is absent otherwise."
+SymbolPeriodicity,"This field is mandatory present if the configured UL CI monitoring periodicity indicated by monitoringSlotPeriodicityAndOffset for DCI format 2_4 is 1 slot with more than one monitoring occasion, otherwise absent."

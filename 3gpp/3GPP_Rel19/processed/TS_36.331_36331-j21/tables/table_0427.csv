@@ -1,0 +1,4 @@
+VarShortINACTIVE-MAC-Input field descriptions
+cellIdentityAn input variable used to calculate the shortResume-MAC-I. Set to CellIdentity included in cellIdentity (without suffix) in SIB1 of the current cell.
+c-RNTISet to C-RNTI that the UE had in the PCell it was connected to prior to suspension of the RRC connection.
+physCellIdSet to the physical cell identity of the PCell the UE was connected to prior to suspension of the RRC connection.

@@ -1,0 +1,10 @@
+LogMeasResultListWLAN field descriptions
+bssidBasic Service Set Identifier (BSSID) defined in IEEE 802.11-2012 [50].
+hessidHomogenous Extended Service Set Identifier (HESSID) defined in IEEE 802.11-2012 [50].
+"rssiWLANMeasured WLAN RSSI result in dBm. The IE WLAN-RSSI-Range specifies the value range used in WLAN RSSI measurements and thresholds. Integer value for WLAN RSSI measurements is according to mapping table in TS 36.133 [40]. Value 0 corresponds to –infinity, value 1 to -100dBm, value 2 to -99dBm, and so on (i.e. in steps of 1dBm) until value 140, which corresponds to 39dBm, while value 141 corresponds to +infinity."
+"rtt-WLANThis field provides the measured roundtrip time between the target device and WLAN AP and optionally the accuracy expressed as the standard deviation of the delay. Units for each of these are 1000ns, 100ns, 10ns, 1ns, and 0.1ns as defined in TS 37.355 [49]."
+rttValueThis field specifies the Round Trip Time (RTT) measurement between the target device and WLAN AP in units given by the field rttUnits as defined in TS 37.355 [49].
+"rttUnitsThis field specifies the Units for the fields rttValue and rttAccuracy. The available Units are 1000ns, 100ns, 10ns, 1ns, and 0.1ns as defined in TS 37.355 [49]."
+rttAccuracyThis field provides the estimated accuracy of the provided rttValue expressed as the standard deviation in units given by the field rttUnits as defined in TS 37.355 [49].
+ssidService Set Identifier (SSID) defined in IEEE 802.11-2012 [50].
+wlan-IdentifiersIndicates the WLAN parameters used for identification of the WLAN for which the measurement results are applicable.

@@ -1,0 +1,8 @@
+MeasObjectUTRA field descriptions
+carrierFreqIdentifies UTRA carrier frequency for which this configuration is valid. E-UTRAN does not configure more than one measurement object for the same physical frequency regardless of the ARFCN used to indicate this.
+cellIndexEntry index in the neighbouring cell list.
+cellsToAddModListUTRA-FDDList of UTRA FDD cells to add/ modify in the neighbouring cell list.
+cellsToAddModListUTRA-TDDList of UTRA TDD cells to add/modify in the neighbouring cell list.
+cellsToRemoveListList of cells to remove from the neighbouring cell list.
+csg-allowedReportingCellsOne or more ranges of physical cell identities for which UTRA-FDD reporting is allowed.
+"reducedMeasPerformanceIf set to TRUE the UTRA carrier frequency is configured for reduced measurement performance, otherwise it is configured for normal measurement performance, see TS 36.133 [16]."

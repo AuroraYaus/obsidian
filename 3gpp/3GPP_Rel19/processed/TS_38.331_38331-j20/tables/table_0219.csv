@@ -1,0 +1,5 @@
+CHO-WithCandidateSCGInfo field descriptions
+firstFulfilledConfigThis field indicates if the execution conditions for conditional handover or conditional PSCell change/addition was fulfilled first.
+"fulfilledConfigWhenChoOnlyThis field indicates if the execution conditions for conditional handover or conditional PSCell change/addition was fulfilled at the time of receiving a complementary conditional reconfiguration i.e., a conditional reconfiguration for a candidate PCell for which at least one CHO with candidate SCG is already configured."
+timeBetweenFulfillmentThis field logs the time between fulfilment of conditional handover and conditional PSCell change or addition execution conditions.
+timeBetweenLastFulfillmentAndFailureThis field logs the time between the latest fulfilment of either conditional handover or conditional PSCell change or addition execution conditions and failure for RLF and SCG failure.

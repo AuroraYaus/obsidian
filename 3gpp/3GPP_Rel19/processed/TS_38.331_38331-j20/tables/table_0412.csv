@@ -1,0 +1,4 @@
+Conditional Presence,Explanation
+LTM,"The field is optionally present, Need R, in an LTM-Candidate IE. Otherwise, the field is absent."
+Periodic,"The field is optionally present, Need M, for periodic NZP-CSI-RS-Resources (as indicated in CSI-ResourceConfig). The field is absent otherwise."
+PeriodicOrSemiPersistent,"The field is optionally present, Need M, for periodic and semi-persistent NZP-CSI-RS-Resources (as indicated in CSI-ResourceConfig). The field is absent otherwise."

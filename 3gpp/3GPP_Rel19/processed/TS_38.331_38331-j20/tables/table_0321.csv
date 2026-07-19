@@ -1,0 +1,3 @@
+LTM-EventTriggeredPeriodicReport field descriptions
+reportIntervalThis field defines the periodicity of the event-triggered periodic measurement report as specified in TS 38.321 [3].
+"reportAmountNumber of measurement reports needs to be transmitted after the event is triggered as specified in TS 38.321 [3]. Value 'r2' means the report is sent twice, ’r3’ means the report is sent three times, and so on."

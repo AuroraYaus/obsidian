@@ -1,0 +1,5 @@
+"Uplink Control Information size including CRC, if present",Channel code
+1,Repetition code
+2,Simplex code
+3-11,Reed Muller code
+>11,Polar code

@@ -1,0 +1,4 @@
+UE Category,Maximum number of DL-SCH transport block bits received within a TTI,Maximum number of bits of a DL-SCH transport block received within a TTI,Total number of soft channel bits
+Category NB1,680,680,2112
+Category NB2 (Note 1),2536 or 4968,2536 or 4968,6400 or 12800
+"NOTE 1:The UE supports ""Maximum number of DL-SCH transport block bits received within a TTI"" and ""Maximum number of bits of a DL-SCH transport block received within a TTI"" of 4968 bits and ""Total number of soft channel bits"" of 12800 bits if the UE indicates support of npdsch-16QAM-r17. Otherwise the UE supports ""Maximum number of DL-SCH transport block bits received within a TTI"" and ""Maximum number of bits of a DL-SCH transport block received within a TTI"" of 2536 bits and ""Total number of soft channel bits"" of 6400 bits.",,,

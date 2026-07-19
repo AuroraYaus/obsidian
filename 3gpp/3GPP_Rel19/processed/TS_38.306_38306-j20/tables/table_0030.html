@@ -1,0 +1,56 @@
+<table>
+  <tr>
+    <td>Features</td>
+    <td>Index</td>
+    <td>Feature group</td>
+    <td>Components</td>
+    <td>Additional information</td>
+  </tr>
+  <tr>
+    <td>0. General</td>
+    <td>N/A</td>
+    <td>IAB procedures</td>
+    <td>1) Routing using BAP protocol, as specified in TS 38.340 [23]2) Bearer mapping using BAP protocol, as specified in TS 38.340 [23]3) IAB-node IP address signalling over RRC, as specified in TS 38.331 [9]</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1. PDCP</td>
+    <td>1-0</td>
+    <td>Basic PDCP procedures</td>
+    <td>1) (de)Ciphering on SRB2) Integrity protection on SRB3) Timer based SDU discard4) Re-ordering and in-order delivery6) Duplicate discarding7) 18bits SN</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">2. RLC</td>
+    <td>2-0</td>
+    <td>Basic RLC procedures</td>
+    <td>1) RLC TM2) RLC AM with 18bits SN3) SDU discard</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2-4</td>
+    <td>NR RLC SN size for SRB</td>
+    <td>NR RLC SN size for SRB</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>3. MAC</td>
+    <td>3-0</td>
+    <td>Basic MAC procedures</td>
+    <td>1) RA procedure on PCell2) IAB-MT initiated RA procedure (including for beam recovery purpose)3) NW initiated RA procedure (i.e. based on PDCCH)4) Support of ssb-Threshold and association between preamble/PRACH occasion and SSB5) Preamble grouping6) UL single TA maintenance7) HARQ operation for DL and UL8) LCH prioritization9) Prioritized bit rate10) Multiplexing11) SR with single SR configuration12) BSR13) PHR14) 8bits and 16bits L field</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">9. RRC</td>
+    <td>9-1</td>
+    <td>RRC buffer size</td>
+    <td>Maximum overall RRC configuration size</td>
+    <td>45 Kbytes</td>
+  </tr>
+  <tr>
+    <td>9-2</td>
+    <td>RRC processing time</td>
+    <td>1) RRC connection establishment2) RRC connection resume without SCell addition/release and SCG establishment/modification/release3) RRC connection reconfiguration without SCell addition/release and SCG establishment/modification/release4) RRC connection re-establishment.5) RRC connection reconfiguration with sync procedure6) RRC connection reconfiguration with SCell addition/release or SCG establishment/modification/release7) RRC connection resume8) Initial security activation9) Counter check10) UE capability transfer</td>
+    <td>1) to 3) 10ms4) 10ms5): 10ms + additional delay (cell search time and synchronization) defined in TS 38.1336) and 7) 16ms7) 10 or 6ms(See details in clause 12, TS 38.331)8) and 9) 5ms10) 80ms</td>
+  </tr>
+</table>

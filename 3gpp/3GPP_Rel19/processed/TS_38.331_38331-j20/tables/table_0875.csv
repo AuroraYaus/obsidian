@@ -1,0 +1,9 @@
+ResourceConfigPerFR field descriptions
+bm-MaxNumberAperiodicCSI-RS-ResourceIndicates the maximum number of aperiodic CSI-RS resources that the SCG is allowed to configure for the UE to measure L1-RSRP. Corresponds to the UE capability maxNumberAperiodicCSI-RS-Resource in beamManagementSSB-CSI-RS.
+bm-MaxNumberCSI-RS-ResourceIndicates the maximum total number of NZP-CSI-RS resources that can be configured for the UE to measure L1-RSRP. Corresponds to the UE capability maxNumberCSI-RS-Resource in beamManagementSSB-CSI-RS.
+cg-MaxNumberConfigsAllCCIndicates the maximum number of active configured grant configurations. Corresponds to the UE capability maxNumberConfigsAllCC-r16 in activeConfiguredGrant-r16.
+maxNumberCSI-RS-BFDIndicates the maximal number of different CSI-RS resources for the UE to monitor PDCCH quality. Corresponds to the UE capability maxNumberCSI-RS-BFD.
+maxNumberCSI-RS-SSB-CBDIndicates the maximal number of different CSI-RS (and/or SSB) resources for new beam identifications. Corresponds to the UE capability maxNumberCSI-RS-SSB-CBD.
+maxNumberSSB-BFDIndicates the maximal number of different SSBs for the UE to monitor PDCCH quality. Corresponds to the UE capability maxNumberSSB-BFD.
+sps-MaxNumberConfigsAllCCIndicates the maximum number of SPS configurations. Corresponds to the UE capability maxNumberConfigsAllCC-r16 in sps-r16.
+trs-MaxConfResourceSetsAllCCIndicates the maximum configured CSI-RS for tracking (i.e. TRS) resource sets. Corresponds to the UE capability maxConfiguredResourceSetsAllCC in csi-RS-ForTracking.

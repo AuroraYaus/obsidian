@@ -1,0 +1,555 @@
+Change history,,,,,,,
+Date,TSG #,TSG Doc.,CR,Rev,Cat,Subject/Comment,New version
+2007-06,RAN2#58bis,R2-072710,,,,MAC Protocol Specification Baseline,
+2007-06,RAN2#58bis,R2-072912,,,,Text Proposal for UL HARQ (Tdoc R2-072708)Text Proposal for DL HARQ (Tdoc R2-072707)Text Proposal for RACH procedure (Tdoc R2-072640)Text Proposal for Logical Channel prioritization (Tdoc R2-072643),0.1.0
+2007-06,RAN2#58bis,R2-072994,,,,Basic MAC PDU structure (Tdoc R2-072983) with updatesAgreements on time-frequency resource configuration (Tdoc R2-072993)Agreement on RA-RNTI association (Tdoc R2-072993)Clarification on RA Response reception (Tdoc R2-072993),0.1.1
+2007-08,RAN2#59,R2-073715,,,,Removed reference to non-existing table (Tdoc R2-073473)Incorrect mapping of logical to transport channel (Tdoc R2-073473)Un-necessary error checking in HARQ process procedure (Tdoc R2-073473)Removal of reference to timing relation for HARQ feedback (Tdoc R2-073473)Correction of Internal variable name (Tdoc R2-073473)Correction of procedure in case of successful HARQ reception (Tdoc R2-073473),0.2.0
+2007-09,RAN2#59,R2-073885,,,,Text proposal for Random Access procedureText proposal on HARQ clarification for TDDText proposal on HARQ for grants,0.2.1
+2007-09,RAN#37,RP-070688,,,,Clean version for information,1.0.0
+2007-10,RAN2#59bis,R2-074530,,,,Editorial update with Editor's notes (Tdoc R2-074211).,1.1.0
+2007-11,RAN2#60,R2-075093,,,,Agreements on MAC PDU format (R2-074536)Corrections on Random Access Procedure (R2-074536),1.1.1
+2007-11,RAN2#60,R2-075243,,,,Endorsement of v1.1.1Removal of FFS on DL CCCH existence,1.2.0
+2007-11,RAN2#60,R2-075488,,,,"Agreement on identity used Random Access Response (R2-075038)Agreement on Local Nack1 (R2-074949)PUCCH Resource handling (R2-075432)UL HARQ agreements (R2-075432)Agreements on semi-persistent scheduling (R2-075432, 36.300)Agreements on BSR/SR triggers (R2-075432)Agreements on BSR contents (R2-075432)Agreements on Timing Advance principles (36.300)Agreements on DRX control (36.300)Handling of P-BCH, D-BCH, PCH (R2-075246)",1.3.0
+2007-11,RP-38,RP-070917,,,,"Clean version, presented at TSG RAN-38 for approval",2.0.0
+2007-12,RP-38,-,,,,Approved at TSG RAN-38 and placed under change control,8.0.0
+2008-03,RP-39,RP-080162,0001,2,,CR to 36.321 with E-UTRA MAC protocol specification update,8.1.0
+2008-05,RP-40,RP-080410,0002,1,,36.321 CR covering agreements of RAN2 #61bis and RAN2#62,8.2.0
+2008-09,RP-41,RP-080690,0003,-,,Clarification on data available for transmission for BSR triggering,8.3.0
+,RP-41,RP-080690,0004,-,,CR to 36.321 on failure indication after maximum number of HARQ transmissions,8.3.0
+,RP-41,RP-080690,0005,4,,"Clarifications and Corrections of DL and UL Data Transfer (SCH, RACH and SR)",8.3.0
+,RP-41,RP-080690,0006,-,,CR to 36.321 on Buffer size levels for BSR,8.3.0
+,RP-41,RP-080690,0007,-,,Clarifications on DRX,8.3.0
+,RP-41,RP-080690,0008,-,,Clarification on UE behavior for DRX and configured measurement gaps,8.3.0
+,RP-41,RP-080690,0009,3,,Correction to MAC Padding BSR,8.3.0
+,RP-41,RP-080690,0010,-,,Correction to UE transmission power headroom report for LTE,8.3.0
+,RP-41,RP-080690,0011,-,,Corrections on BSR,8.3.0
+,RP-41,RP-080690,0012,-,,CR to 36.321 REL-8 on Format of UL grant in Message 2,8.3.0
+,RP-41,RP-080690,0015,-,,CR to 36.321 REL-8 on PUSCH PUCCH Power Control RNTIs,8.3.0
+,RP-41,RP-080690,0016,-,,CR to 36.321 REL-8 on RACH uniform random backoff,8.3.0
+,RP-41,RP-080690,0017,1,,E-UTRA MAC protocol specification update,8.3.0
+,RP-41,RP-080690,0020,-,,TP for number of HARQ processes and MIMO,8.3.0
+,RP-41,RP-080690,0022,-,,Update of MAC dedicated preamble expiry,8.3.0
+,RP-41,RP-080690,0027,-,,Handling of Semi-Persistent grants and assignments,8.3.0
+,RP-41,RP-080690,0051,1,,Corrections relating to RACH,8.3.0
+,RP-41,RP-080690,0058,1,,UL Channel Prioritisation,8.3.0
+,RP-41,RP-080690,0071,2,,Corrections relating to RACH partitioning,8.3.0
+,RP-41,RP-080690,0091,-,,Correction on Random Access Response reception behaviour,8.3.0
+,RP-41,RP-080690,0103,-,,Upper limit of logical channel id,8.3.0
+,RP-41,RP-080690,0104,-,,Clarifications and Corrections for HARQ operation at TAT expiry and RACH contention resolution,8.3.0
+2008-12,RP-42,RP-081018,0105,-,,CR0105 to 36.321 [Rel-8] on PHR Periodic Timer Start,8.4.0
+,RP-42,RP-081018,0106,1,,Proposed R1 of CR0106 to 36.321 [Rel-8] on PHR Reference,8.4.0
+,RP-42,RP-081018,0107,1,,CR 0107 to 36.321 Interactions between measurement gap and Msg3 transmission,8.4.0
+,RP-42,RP-081018,0108,2,,Proposed R1 of CR0108 to 36.321 [Rel-8] on PHR Reporting Values,8.4.0
+,RP-42,RP-081018,0109,-,,Correction relating to equal priorities,8.4.0
+,RP-42,RP-081018,0110,-,,CR 0110 to 36.321 on Correction to PHR,8.4.0
+,RP-42,RP-081018,0112,1,,CR0112r1 to 36.321 [Rel-8] Correction to BCCH Reception procedure,8.4.0
+,RP-42,RP-081018,0113,-,,Contention Resolution Timer,8.4.0
+,RP-42,RP-081018,0114,-,,PCH reception,8.4.0
+,RP-42,RP-081018,0115,-,,Correction to reception of assignments and grants,8.4.0
+,RP-42,RP-081018,0116,-,,Correction on Contention Resolution,8.4.0
+,RP-42,RP-081018,0117,2,,Proposed R1 of CR0117 to 36.321 [Rel-8] on on SR Clarifications and Repetitions,8.4.0
+,RP-42,RP-081078,0118,2,,Clarification on Padding value,8.4.0
+,RP-42,RP-081018,0119,-,,CR 0119 to 36.321 Correction and Clarification on TTI Bundling,8.4.0
+,RP-42,RP-081018,0120,1,,Clarification of DRX Active Time,8.4.0
+,RP-42,RP-081018,0121,4,,Text Proposal for Dedicated Preamble Assignment,8.4.0
+,RP-42,RP-081018,0122,-,,CR0122 to 36.321 [Rel-8] on Message 3 Definition,8.4.0
+,RP-42,RP-081018,0123,1,,Correction to prevent wrong contention resolution by adaptive retransmission command,8.4.0
+,RP-42,RP-081018,0124,-,,Bucket Size Parameter,8.4.0
+,RP-42,RP-081018,0125,2,,CR0125r2 to 36.321 [Rel-8] Correction to Multiple BSR,8.4.0
+,RP-42,RP-081018,0127,-,,CR0127 to 36.321 [Rel-8] RACH preambles labelling,8.4.0
+,RP-42,RP-081018,0128,1,,CR0128r1 to 36.321 [Rel-8] merging CR0126r0 and CR0128r0,8.4.0
+,RP-42,RP-081018,0129,1,,CR0129r1 to 36.321 [Rel-8] Correction to PDU Format,8.4.0
+,RP-42,RP-081018,0130,-,,CQI/ SRS/PMI/RI transmission during active time,8.4.0
+,RP-42,RP-081018,0131,1,,NDI and Msg4 Carrying Contention Resolution ID,8.4.0
+,RP-42,RP-081018,0132,1,,CR0132 to 36.321 [Rel-8] on MAC BSR trigger,8.4.0
+,RP-42,RP-081018,0133,-,,Clarification about Restarting the Periodic BSR Timer,8.4.0
+,RP-42,RP-081018,0134,-,,Correction to RA procedure initiated by eNB PDCCH order,8.4.0
+,RP-42,RP-081018,0135,1,,Correction on PHR triggering condition,8.4.0
+,RP-42,RP-081018,0136,-,,CR 0136 to 36.321 on Correction to UL HARQ Process for the transmission of Msg3,8.4.0
+,RP-42,RP-081018,0137,2,,SPS occasions,8.4.0
+,RP-42,RP-081018,0138,-,,Robustness of Buffer Status Reporting,8.4.0
+,RP-42,RP-081018,0139,-,,Proposed CR to 36.321 [Rel-8] on UL HARQ and Measurement Gaps,8.4.0
+,RP-42,RP-081018,0142,1,,TAT and RACH procedure,8.4.0
+,RP-42,RP-081018,0143,1,,SRS and CQI Resources Release upon TAT Expiry,8.4.0
+,RP-42,RP-081018,0157,1,,Proposed CR to 36.321 Correction to RACH procedure,8.4.0
+,RP-42,RP-081018,0162,1,,BSR format for reporting empty buffers,8.4.0
+,RP-42,RP-081018,0165,-,,TTI Bundling Configuration,8.4.0
+,RP-42,RP-081018,0166,1,,Corrections to semi-persistent scheduling,8.4.0
+,RP-42,RP-081018,0167,2,,Priotitization of MAC control elements,8.4.0
+,RP-42,RP-081018,0168,-,,Correction to starting of TA timer,8.4.0
+,RP-42,RP-081018,0173,1,,Proposed CR to 36.321 SPS implicit release on UL,8.4.0
+,RP-42,RP-081018,0174,-,,Proposed CR to 36.321 Measurement gaps and SPS,8.4.0
+,RP-42,RP-081018,0175,-,,Proposed CR to 36.321 Setting reserved bits to zero,8.4.0
+,RP-42,RP-081018,0185,-,,Proposed CR to 36.321 [Rel-8] MAC ResetReconfig Option 2,8.4.0
+,RP-42,RP-081018,0188,2,,RV setting,8.4.0
+,RP-42,RP-081018,0189,-,,Corrections to Random Access Procedure,8.4.0
+,RP-42,RP-081018,0198,-,,Number of HARQ processes for MIMO,8.4.0
+,RP-42,RP-081018,0201,-,,Corrections to power control and random access,8.4.0
+,RP-42,RP-081018,0206,-,,Correction on the definition of the PDCCH-subframe,8.4.0
+,RP-42,RP-081018,0211,1,,Correction to the coexist of SPS-RNTI and SI-RNTI or RA-RNTI,8.4.0
+,RP-42,RP-081018,0220,-,,Explicit release of SPS,8.4.0
+,RP-42,RP-081018,0225,2,,Linking HARQ process ID with the SPS resource,8.4.0
+,RP-42,RP-081018,0231,-,,Bucket Parameter Update,8.4.0
+,RP-42,RP-081018,0232,1,,"Clarification on ""PDCCH indicates a new transmission"" for DRX",8.4.0
+,RP-42,RP-081018,0233,1,,Editorial corrections to MAC,8.4.0
+,RP-42,RP-081018,0236,-,,RB suspension and BSR contents,8.4.0
+,RP-42,RP-081018,0239,-,,RV setting,8.4.0
+,RP-42,RP-081018,0240,2,,Preamble group selection,8.4.0
+,RP-42,RP-081018,0241,-,,Use of dedicated preambles after HO complete,8.4.0
+,RP-42,RP-081018,0242,-,,Introduction of HARQ RTT Timer,8.4.0
+,RP-42,RP-081018,0243,-,,Correction to DRX configuration,8.4.0
+2009-03,RP-43,RP-090128,0245,-,,CR to 36.321 on BSR clarification,8.5.0
+,RP-43,RP-090128,0246,2,,Freeing of reserved RNTIs,8.5.0
+,RP-43,RP-090128,0247,-,,Correction to MAC reset,8.5.0
+,RP-43,RP-090128,0248,-,,Correction to Initialization of Prioritization,8.5.0
+,RP-43,RP-090128,0249,-,,Local NACKing Optionality MAC CR,8.5.0
+,RP-43,RP-090128,0250,1,,Position of the Backoff Indicator subheader,8.5.0
+,RP-43,RP-090128,0251,-,,Missing reserved bit setting,8.5.0
+,RP-43,RP-090128,0252,-,,Expired TAT and PUSCH transmission,8.5.0
+,RP-43,RP-090128,0253,-,,Expired TAT and HARQ feedback,8.5.0
+,RP-43,RP-090128,0254,1,,Counter proposal to R2-090969 on Management for HARQ buffer with TAT,8.5.0
+,RP-43,RP-090128,0255,-,,HARQ Feedback and Contention Resolution,8.5.0
+,RP-43,RP-090128,0256,-,,Corrections to redundancy version control for system information,8.5.0
+,RP-43,RP-090128,0257,-,,Mapping of the RNTIs to different transport channels,8.5.0
+,RP-43,RP-090128,0258,-,,DRX and UL Retransmissions,8.5.0
+,RP-43,RP-090128,0259,-,,Definition of DRX Short Cycle Timer,8.5.0
+,RP-43,RP-090128,0260,-,,Small corrections to RACH,8.5.0
+,RP-43,RP-090128,0261,-,,Processing of contention resolution message,8.5.0
+,RP-43,RP-090128,0262,-,,Corrections to power control and random access,8.5.0
+,RP-43,RP-090128,0263,-,,Missing condition for unsuccessful reception of Msg2,8.5.0
+,RP-43,RP-090128,0264,1,,Corrections relating to Random Access required inputs,8.5.0
+,RP-43,RP-090128,0265,-,,Bucket Parameter Update,8.5.0
+,RP-43,RP-090128,0266,2,,Correction to Handling of triggered PHR,8.5.0
+,RP-43,RP-090128,0267,-,,SPS resource release on D-SR failure,8.5.0
+,RP-43,RP-090128,0269,2,,NDI handling when measurement gap and SPS occassion collide,8.5.0
+,RP-43,RP-090128,0270,-,,Correction relating to PDCCH order,8.5.0
+,RP-43,RP-090128,0271,-,,Error Handling,8.5.0
+,RP-43,RP-090128,0272,-,,Various clarifications/corrections to TS36.321,8.5.0
+,RP-43,RP-090128,0273,1,,"Disassembly, Demultiplexing and Multiplexing functions",8.5.0
+,RP-43,RP-090128,0274,1,,Miscellaneous corrections to MAC,8.5.0
+,RP-43,RP-090128,0275,2,,CR on Interactions between Msg3 transmission and TTI bundling,8.5.0
+,RP-43,RP-090128,0276,-,,TTI Bundling,8.5.0
+,RP-43,RP-090128,0278,1,,Correction to BSR trigger at serving cell change,8.5.0
+,RP-43,RP-090128,0279,1,,Correction to Release of SPS,8.5.0
+,RP-43,RP-090128,0280,2,,Usage of RRC Parameters,8.5.0
+,RP-43,RP-090128,0281,-,,Clarification of MAC Timer status,8.5.0
+,RP-43,RP-090128,0282,1,,Correction on MAC PDU subheader description,8.5.0
+,RP-43,RP-090128,0283,1,,UE behaviour at CURRENT_TX_NB reaches maximum value,8.5.0
+,RP-43,RP-090128,0285,-,,Reporting During DRX,8.5.0
+,RP-43,RP-090128,0289,-,,NDI handling after random access procedure,8.5.0
+,RP-43,RP-090128,0290,1,,Dedicated preamble handling after random access failure,8.5.0
+,RP-43,RP-090128,0292,-,,NDI and grant in Message 2,8.5.0
+,RP-43,RP-090128,0293,1,,Correction relating to BCCH HARQ,8.5.0
+,RP-43,RP-090128,0300,1,,Corrections to Msg3 definition and usage,8.5.0
+,RP-43,RP-090128,0303,-,,PRACH selection must use prach-ConfigurationIndex,8.5.0
+,RP-43,RP-090128,0305,-,,Clarification on RETX_BSR_TIMER,8.5.0
+,RP-43,RP-090128,0307,3,,MAC Structure in UE Side,8.5.0
+,RP-43,RP-090128,0308,-,,Clarification on Random Access Procedure,8.5.0
+,RP-43,RP-090128,0314,-,,Clarification on the CR timer,8.5.0
+,RP-43,RP-090128,0316,-,,Correction on BSR,8.5.0
+,RP-43,RP-090128,0318,1,,Clarification on MAC reconfiguration of timers and counters,8.5.0
+,RP-43,RP-090128,0320,-,,"HARQ feedback, CQI/PMI/RI and SRS transmissions and measurement gaps",8.5.0
+,RP-43,RP-090128,0324,-,,MAC PDU subheader corresponding to padding,8.5.0
+,RP-43,RP-090128,0333,-,,CR On Backoff table,8.5.0
+,RP-43,RP-090128,0334,3,,TTI Bundling Operation,8.5.0
+,RP-43,RP-090128,0341,1,,Enforcing new transmission after flushing HARQ process,8.5.0
+2009-06,RP-44,RP-090513,0342,-,,Correction on HARQ feedback transmission,8.6.0
+,RP-44,RP-090513,0343,1,,Clarification on the DL assignment/UL grant reception in SPS,8.6.0
+,RP-44,RP-090513,0344,1,,PHR timer handling after handover,8.6.0
+,RP-44,RP-090513,0346,2,,MAC PDU for Msg2,8.6.0
+,RP-44,RP-090513,0347,2,,MAC Error handling,8.6.0
+,RP-44,RP-090513,0348,-,,Correction on SR cancellation,8.6.0
+,RP-44,RP-090513,0349,1,,Correction to RETX_BSR_TIMER,8.6.0
+,RP-44,RP-090513,0350,1,,CR to 36.321 on UL SPS Implicit Release,8.6.0
+,RP-44,RP-090513,0351,2,,Various correction to MAC,8.6.0
+,RP-44,RP-090513,0369,-,,Correction to Uplink grant by temporary C-RNTI,8.6.0
+,RP-44,RP-090513,0370,-,,Clarification on simultaneous reception of RA-RNTI and C-RNTI,8.6.0
+,RP-44,RP-090513,0374,-,,Correction on timeAlignmentTimer validity in MAC,8.6.0
+,RP-44,RP-090513,0376,1,,CR for MAC padding,8.6.0
+,RP-44,RP-090513,0377,-,,Correction to duplicate reception of TA command (2nd method),8.6.0
+2009-09,RP-45,RP-090906,0379,-,,Correction to NDI semantics,8.7.0
+,RP-45,RP-090906,0380,1,,Minor corrections to 36.321,8.7.0
+,RP-45,RP-090906,0381,2,,UE behaviour when MBSFN subframe and a configured downlink assignment collide,8.7.0
+,RP-45,RP-090906,0399,-,,Correction to HARQ process ID for DL SPS retransmissions,8.7.0
+2009-09,RP-45,RP-090934,0390,3,,Improvement of cancellation of SR,9.0.0
+,RP-45,RP-090934,0396,-,,Periodic CQI/PMI/RI masking,9.0.0
+2009-12,RP-46,RP-091341,0401,2,,Capturing MBMS agreements in MAC,9.1.0
+,RP-46,RP-091314,0403,2,,Clarification on BSR trigger,9.1.0
+,RP-46,RP-091346,0404,-,,Correction on HARQ Process ID for DL SPS and DRX,9.1.0
+,RP-46,RP-091314,0406,-,,RNTI for CCCH,9.1.0
+,RP-46,RP-091346,0407,1,,SR prohibit mechanism for UL SPS,9.1.0
+,RP-46,RP-091346,0409,-,,Clarification on monitoring of PDCCH,9.1.0
+,RP-46,RP-091346,0410,-,,Introduction of SR prohibit timer,9.1.0
+2010-03,RP-47,RP-100305,0414,-,,Correction to MBMS scheduling terminology,9.2.0
+,RP-47,RP-100305,0415,-,,Corrections to TS 36.321 on MBMS,9.2.0
+,RP-47,RP-100305,0421,1,,Error handling for MBMS PDU,9.2.0
+,RP-47,RP-100308,0422,-,,Renaming CR as consequence of ASN.1 review,9.2.0
+2010-06,RP-48,RP-100536,0424,-,,Clarification on UE behaviour w.r.t DRX cycle change and onDurationTimer test (Procedural change),9.3.0
+,RP-48,RP-100554,0425,1,,Correction to MBMS description,9.3.0
+,RP-48,RP-100556,0426,-,,Correction to PHR triggering,9.3.0
+,RP-48,RP-100536,0430,-,,Processing of contention resolution message,9.3.0
+2010-12,RP-50,RP-101226,0436,2,,Introduction of Carrier Aggregation,10.0.0
+,RP-50,RP-101228,0437,1,,Introduction of relays in MAC,10.0.0
+,RP-50,RP-101225,0447,-,,HARQ operation for UL multiple antenna transmission,10.0.0
+2011-03,RP-51,RP-110280,0449,-,,PHR Trigger for Power Reduction Due to Power Management,10.1.0
+,RP-51,RP-110289,0450,1,,Power Headroom Reporting,10.1.0
+,RP-51,RP-110289,0451,-,,Cancellation of BSR,10.1.0
+,RP-51,RP-110289,0453,1,,Counterproposal to Corrections to the Carrier Aggregation functionality in MAC,10.1.0
+,RP-51,RP-110280,0454,-,,Adding a Power Management indication in PHR,10.1.0
+,RP-51,RP-110289,0457,2,,CR on SCell Activation,10.1.0
+,RP-51,RP-110289,0461,2,,Unification of Extended PHR MAC CE formats,10.1.0
+,RP-51,RP-110289,0465,1,,Clarification for CA and TTI bundling in MAC,10.1.0
+2011-06,RP-52,RP-110846,0466,-,,CQI reporting and deactivation timer,10.2.0
+,RP-52,RP-110846,0467,2,,Miscellaneous Corrections,10.2.0
+,RP-52,RP-110846,0468,-,,"Pcmax,c reporting for type 2 PH",10.2.0
+,RP-52,RP-110848,0469,-,,Type-1-triggered SRS transmission independent of DRX,10.2.0
+,RP-52,RP-110839,0470,-,,UL transmissions when the timeAlignmentTimer is not running,10.2.0
+,RP-52,RP-110846,0478,1,,Clarifications to Ci field in MAC CE on CA,10.2.0
+,RP-52,RP-110846,0488,-,,Clarification of padding BSR behaviour,10.2.0
+,RP-52,RP-110834,0489,-,,SPS reception in MBSFN subframes,10.2.0
+,RP-52,RP-110839,0490,-,,Power management related PHR triggering condition,10.2.0
+,RP-52,RP-110839,0491,-,,Clarifications on PHR Power Management trigger,10.2.0
+2011-09,RP-53,RP-111280,0494,1,,Clarifications on MCH reception and Stop MTCH,10.3.0
+,RP-53,RP-111283,0496,-,,Configuration of extenededBSR-sizes,10.3.0
+,RP-53,RP-111297,0502,-,,CR to 36.321 on Small correction of PHR parameter,10.3.0
+,RP-53,RP-111283,0503,1,,"Corrections to PCMAX,c field in Extended PHR",10.3.0
+2011-12,RP-54,RP-111714,0516,1,,UE soft buffer handling in MAC,10.4.0
+,RP-54,RP-111716,0523,-,,Correction on determining SPS occasions,10.4.0
+,RP-54,RP-111605,0526,1,,CSI/SRS reporting at DRX state transitions,10.4.0
+,RP-54,RP-111606,0527,-,,CSI/SRS reporting at unexpected Active Time stopping,10.4.0
+2012-03,RP-55,RP-120321,0539,-,,Correction to multiplexing and assembly,10.5.0
+2012-09,RP-57,RP-121395,0559,-,,P bit in Extended PHR MAC CE,10.6.0
+,RP-57,RP-121395,0577,1,,Deadlock of PHR transmission,10.6.0
+,RP-57,RP-121382,0558,-,,Clarification on Measurement Gap,11.0.0
+,RP-57,RP-121377,0572,1,,Introduction of CA Enhancements in MAC,11.0.0
+,RP-57,RP-121382,0581,-,,Clarification of TA value maintenance at TA timer expiry,11.0.0
+2012-12,RP-58,RP-121936,0583,-,,Clarification on DRX for Relay,11.1.0
+,RP-58,RP-121936,0585,-,,Clarification on V field in Extended PHR MAC CE,11.1.0
+,RP-58,RP-121951,0586,1,,Clarification related to CA enhancement in MAC,11.1.0
+,RP-58,RP-121957,0588,-,,Clarification of the Note in 5.2,11.1.0
+,RP-58,RP-121951,0590,-,,TAG Acronym,11.1.0
+,RP-58,RP-121951,0594,-,,Corrections for CA-enhancement in MAC,11.1.0
+,RP-58,RP-121956,0599,-,,CR on MAC layer support of ePDCCH,11.1.0
+,RP-58,RP-121957,0624,2,,CR to 36.321 on Annex for DRX Timers,11.1.0
+2013-03,RP-59,RP-130248,0629,2,,Removing optionality on CSI/SRS transmission during transient state,11.2.0
+,RP-59,RP-130245,0630,-,,Clarification on the PDCCH-subframe for half-duplex TDD UE,11.2.0
+,RP-59,RP-130248,0649,-,,Draft CR to 36 321 for Clarification of PDCCH-subframe definition in Rel-11,11.2.0
+,RP-59,RP-130241,0659,-,,Correction for TM10 unicast support in MBSFN subframes,11.2.0
+,RP-59,RP-130291,0661,-,,Clarification of DRX timers for TDD,11.2.0
+2013-06,RP-60,RP-130805,0663,2,,HARQ RTT Timer,11.3.0
+,RP-60,RP-130808,0664,-,,Clarification on the PDCCH-subframe definition for TDD UE,11.3.0
+,RP-60,RP-130809,0665,-,,Correction to the definition of drxRetransmissionTimer,11.3.0
+,RP-60,RP-130809,0667,-,,Further issues on removing optionality of CSI/SRS transmission during transient state,11.3.0
+,RP-60,RP-130804,0670,-,,Rel-11 CR on SCell activation timing,11.3.0
+2013-12,RP-62,RP-131989,0687,-,,Clarification on the HARQ feedback for SCell activation/deactivation command MAC CE,11.4.0
+,RP-62,RP-132002,0690,-,,Clarification on Power Headroom MAC CE,12.0.0
+2014-03,RP-63,RP-140355,0709,-,,BCCH reception for MBMS on any configured or configurable SCell,12.1.0
+,RP-63,RP-140362,0705,1,,Long DRX Command MAC Control Element,12.1.0
+2014-06,RP-64,RP-140888,0714,-,,Alternative 1: Introduction of FDD/TDD CA into 36.321,12.2.0
+,RP-64,RP-140884,0713,1,,Introduction of TDD eITMA,12.2.0
+,RP-64,-,-,-,,Editorial updates,12.2.1
+2014-09,RP-65,RP-141506,0732,1,,Introduction of low complexity UEs in TS 36.321,12.3.0
+2014-12,RP-66,RP-142129,0739,-,,Category 0 report in Msg3,12.4.0
+,RP-66,RP-142140,0749,-,,Correction on DRX Operation,12.4.0
+,RP-66,RP-142140,0748,-,,Prohibit timer for SR,12.4.0
+,RP-66,RP-142135,0740,1,,Introduction of dual connectivity in MAC,12.4.0
+2015-03,RP-67,RP-150373,0751,-,,Clarification on the Logical channel prioritization in DC,12.5.0
+,RP-67,RP-150375,0762,1,,Introduction of MBMS congestion management for Public Safety Group Call,12.5.0
+,RP-67,RP-150374,0755,1,,Introduction of ProSe in MAC,12.5.0
+,RP-67,RP-150371,0763,2,,Uplink transmission time difference,12.5.0
+2015-06,RP-68,RP-150921,0764,-,,SL-DCH transmission for autonomous resource allocation mode,12.6.0
+,RP-68,RP-150921,0766,-,,Minor corrections for ProSe,12.6.0
+,RP-68,RP-150921,0767,-,,Clarification on deactivation operation,12.6.0
+,RP-68,RP-150916,0768,-,,Handling of erroneous PDU on MCH,12.6.0
+,RP-68,RP-150921,0769,-,,Corrections on 36.321 for ProSe,12.6.0
+,RP-68,RP-150921,0772,-,,Correction to the figure of MAC structure overview for sidelink,12.6.0
+,RP-68,RP-150923,0782,-,,Prohibit timer for SR,12.6.0
+,RP-68,RP-150921,0783,-,,Resource selection for SL-DCH,12.6.0
+2015-09,RP-69,RP-151438,0799,1,,Correction on Type 2 PH reporting,12.7.0
+,RP-69,RP-151441,0795,1,,Corrections for reporting and cancellation of SL BSR,12.7.0
+,RP-69,RP-151441,0785,1,,Corrections to Sidelink in MAC,12.7.0
+,RP-69,RP-151441,0790,1,,Miscellaneous corrections on Sidelink,12.7.0
+2015-12,RP-70,RP-152055,0801,-,,Correction on transparent MAC PDU,12.8.0
+,RP-70,RP-152053,0802,-,,Correction on MAC header for SL-SCH,12.8.0
+,RP-70,RP-152053,0805,-,,Corrections for sidelink in TS 36.321,12.8.0
+2015-12,RP-70,RP-152071,0811,2,,Introduction of Carrier Aggregation enhancements beyond 5 CCs,13.0.0
+,RP-70,RP-152072,0806,2,,Introduction of eD2D,13.0.0
+,RP-70,RP-152078,0821,2,,Introduction of LAA in MAC,13.0.0
+,RP-70,RP-152080,0815,2,,Introduction of SC-PTM in MAC,13.0.0
+2016-03,RP-71,RP-160470,0825,1,,Power headroom reporting of carrier aggregation enhancement beyond 5 CCs,13.1.0
+,RP-71,RP-160454,0837,1,,Corrections for sidelink,13.1.0
+,RP-71,RP-160462,0844,-,,Correction to Pcmax and PH field in PHR MAC CE,13.1.0
+,RP-71,RP-160453,0845,2,,Introduction of low complexity UE and enhanced coverage features,13.1.0
+,RP-71,RP-160467,0852,-,,Maximum UL Transmission timing difference in dual connectivity,13.1.0
+,RP-71,RP-160470,0853,1,,Corrections on SC-PTM MAC specification,13.1.0
+2016-06,RP-72,RP-161080,0854,-,,Corrections to MTCe in TS 36.321,13.2.0
+,RP-72,RP-161080,0855,1,,Corrections to Logical Channel Prioritisation,13.2.0
+,RP-72,RP-161080,0856,-,,Correction to MAC procedures for MTC,13.2.0
+,RP-72,RP-161080,0857,3,,Functional extension for U-plane C-IoT optimisation,13.2.0
+,RP-72,RP-161080,0858,2,,Corrections for sidelink logical channel prioritization,13.2.0
+,RP-72,RP-161080,0859,-,,HARQ RTT Timers in eMTC,13.2.0
+,RP-72,RP-161080,0860,-,,Asynchronous UL HARQ protocol operation,13.2.0
+,RP-72,RP-161080,0861,1,,UL SPS and Sidelink discovery gap,13.2.0
+,RP-72,RP-161080,0862,-,,Correction of BCCH reception for LC-MTC,13.2.0
+,RP-72,RP-161080,0864,1,,Corrections on asynchronous UL HARQ operation,13.2.0
+,RP-72,RP-161080,0866,-,,Clarification on PDCCH sub-frame for SC-PTM,13.2.0
+,RP-72,RP-161080,0867,-,,Correction on preamble group selection and RA-RNTI value range,13.2.0
+,RP-72,RP-161080,0868,1,,Correction on DL HARQ retransmission and UL transmission repetitions within a bundle,13.2.0
+,RP-72,RP-161080,0869,2,,Correction on IR version for UL HARQ,13.2.0
+,RP-72,RP-161080,0870,-,,Correction on HARQ process selection for UL asynchronous HARQ,13.2.0
+,RP-72,RP-161080,0873,-,,Correction to eMTC message classes and logical channels,13.2.0
+,RP-72,RP-161080,0875,-,,Correction on Random Access CE-level ramp-up for CE mode A UEs,13.2.0
+,RP-72,RP-161080,0876,1,,Correction to random access procedure for eMTC,13.2.0
+,RP-72,RP-161080,0877,2,,Minor corrections to MAC for eMTC,13.2.0
+,RP-72,RP-161080,0878,-,,PRACH preamble power for eMTC,13.2.0
+,RP-72,RP-161080,0879,1,,SPS support for eMTC UEs,13.2.0
+,RP-72,RP-161080,0880,1,,SR prohibit timer for eMTC UEs,13.2.0
+,RP-72,RP-161080,0881,-,,Starting CE level for PDCCH order and HO,13.2.0
+,RP-72,RP-161080,0882,-,,Clarification on RA-RNTI determination for PRACH in TDD,13.2.0
+,RP-72,RP-161081,0883,4,,Introduction of NB-IoT to 36.321,13.2.0
+,RP-72,RP-161080,0884,2,,Correction on the DRX operation for UL asynchronous HARQ,13.2.0
+,RP-72,RP-161080,0885,-,,Corrections on Support of CRI reporting in MAC,13.2.0
+,RP-72,RP-161080,0886,-,,Correction on the intended UE behaviour for DRX Timers,13.2.0
+2016-09,RP-73,RP-161752,0887,1,,Corrections to Destination Indexing,13.3.0
+,RP-73,RP-161755,0888,2,,Clarification on BCCH reception for eMTC,13.3.0
+,RP-73,RP-161762,0889,1,,Clarification on DRX in SC-PTM,13.3.0
+,RP-73,RP-161753,0893,-,,DRX operation for LAA cells,13.3.0
+,RP-73,RP-161752,0901,2,,Correction to Sidelink Discovery Gap for Transmission,13.3.0
+,RP-73,RP-161755,0902,1,,Clarification on RA preamble groups for eMTC,13.3.0
+,RP-73,RP-161758,0907,2,,Correction on MAC procedure and DRX related issues,13.3.0
+,RP-73,RP-161758,0917,2,,Clarification of the Random Access procedure for NB-IoT,13.3.0
+,RP-73,RP-161758,0918,2,,onDurationTimer start for NB-IoT,13.3.0
+,RP-73,RP-161755,0921,-,,Repetition transmissions within a bundle in DL for MTC,13.3.0
+2016-09,RP-73,RP-161747,0920,-,,Introduction of L2 Latency reduction techniques,14.0.0
+,RP-73,RP-161745,0922,-,,Introducing eLAA in MAC,14.0.0
+,RP-73,RP-161746,0923,1,,Support for V2V services based on LTE sidelink,14.0.0
+2016-12,RP-74,RP-162314,0924,-,,Correction to MAC RAR,14.1.0
+,RP-74,RP-162314,0929,-,,Clarification on NB-IoT,14.1.0
+,RP-74,RP-162315,0931,1,,Clarification on SC-PTM reception,14.1.0
+,RP-74,RP-162317,0933,-,,Clarification on HARQ feedback on PSCell and PUCCH SCell,14.1.0
+,RP-74,RP-162328,0947,-,,Miscellaneous corrections for V2V in TS 36.321,14.1.0
+,RP-74,RP-162313,0950,1,,Correction on mac-ContentionResolutionTimer for eMTC and NB-IoT,14.1.0
+,RP-74,RP-162313,0952,-,,Correction on DRX for SPS in eMTC,14.1.0
+,RP-74,RP-162314,0959,1,,Correction to TS36.321,14.1.0
+,RP-74,RP-162324,0960,2,,Introduction of SRS switching for LTE,14.1.0
+,RP-74,RP-162321,0962,1,,PDCCH-subframe definition for LAA,14.1.0
+,RP-74,RP-162321,0963,1,,Monitoring of PUSCH trigger B while not in Active Time,14.1.0
+,RP-74,RP-162321,0964,-,,Clarification of PUSCH trigger B reception and inactivity timer starting,14.1.0
+,RP-74,RP-162314,0968,-,,Correction to translation of timers specified in PDCCH periods,14.1.0
+,RP-74,RP-162313,0969,1,,Correction to when follow-on DRX actions are initiated in coverage enhanced mode,14.1.0
+,RP-74,RP-162321,0970,-,,Type2 PHR for eLAA,14.1.0
+,RP-74,RP-162328,0975,1,,Introducing Shorter Resource Reservation Periodicities for V2X,14.1.0
+,RP-74,RP-162328,0976,2,,Miscellaneous V2V corrections,14.1.0
+,RP-74,RP-162329,0977,1,,SkipUplinkTxSPS correction to enable adaptive retransmissions,14.1.0
+,RP-74,RP-162314,0985,,,Further clarification for PDCCH order in NB-IoT,14.1.0
+,RP-74,RP-162314,0987,1,,Clarification of NPRACH resources for UE supporting multi-tone MSG3,14.1.0
+,RP-74,RP-162313,0989,-,,Correction on definition of HARQ RTT Timer,14.1.0
+,RP-74,RP-162329,0990,,,CR on RV setting with UL skipping,14.1.0
+2017-03,RP-75,RP-170636,0991,3,B,Introducing Rel-14 NB-IoT enhancements and SC-PTM for NB-IoT and eMTC,14.2.0
+,RP-75,RP-170655,0994,-,A,Correction on channel bandwidth definition for NB-IoT,14.2.0
+,RP-75,RP-170626,0995,-,F,Correction on HARQ operations for eLAA,14.2.0
+,RP-75,RP-170643,0996,2,F,Correction for V2V resource selection procedure in TS 36.321,14.2.0
+,RP-75,RP-170643,0999,2,F,Corrections to Resource Reselection Procedure in MAC,14.2.0
+,RP-75,RP-170653,1002,1,A,Clarification on DRX handling for eMTC and NB-IoT,14.2.0
+,RP-75,RP-170643,1003,1,F,Definition of destination index for V2X slidelink communication,14.2.0
+,RP-75,RP-170655,1006,-,A,Clarification on Logical Channel Group Id for NB-IoT,14.2.0
+,RP-75,RP-170656,1009,1,A,Clarification on DPR MAC CE,14.2.0
+,RP-75,RP-170642,1012,1,B,Introduction of data inactivity timer,14.2.0
+,RP-75,RP-170653,1014,1,A,IOT indication for unicast MPDCCH/PDSCH/PUSCH frequency hopping,14.2.0
+,RP-75,RP-170635,1017,1,B,Introduction of LTE-based V2X services,14.2.0
+,RP-75,RP-170638,1018,3,B,Introduction of Voice and Video Coverage Enhancements,14.2.0
+,RP-75,RP-170629,1021,1,B,Introducing Activation/Deactivation CSI-RS MAC CE for eFD-MIMO,14.2.0
+,RP-75,RP-170633,1024,-,B,Additional SI-RNTI to support dedicated FeMBMS system broadcasting,14.2.0
+,RP-75,RP-170653,1030,1,F,Correction on RV setting for eMTC,14.2.0
+,RP-75,RP-170630,1035,4,B,Introduction of preallocated uplink grant in MAC,14.2.0
+,RP-75,RP-170656,1037,-,A,Preamble group selection after contention resolution failure,14.2.0
+,RP-75,RP-170653,1014,1,A,Corrected an implementation error in CR1014r1,14.2.1
+2017-06,RP-76,RP-171226,1038,3,F,Introducing a new resource reselection trigger for V2X sidelink communication,14.3.0
+,RP-76,RP-171233,1053,2,F,Clarification for the UE Contention Resolution Identity MAC Control Element,14.3.0
+,RP-76,RP-171224,1062,3,F,Small corrections to random access procedure and DRX for REL-14 NB-IoT Enhancements,14.3.0
+,RP-76,RP-171223,1063,1,F,Alignment of the parameter names for SC-PTM DRX for SC-MCCH and SC-MTCH,14.3.0
+,RP-76,RP-171224,1068,2,D,Editorial corrections for MAC,14.3.0
+,RP-76,RP-171244,1072,3,A,Configuration of preamble groups for CE levels and preamble groups A/B – Alt2,14.3.0
+,RP-76,RP-171231,1076,2,F,Clarification on the UE behaviour when the validity of PUSCH trigger A expires,14.3.0
+,RP-76,RP-171227,1088,1,F,Miscellaneous corrections to V2X in TS 36.321,14.3.0
+,RP-76,RP-171232,1094,1,F,Remaining issues in Activation/Deactivation of CSI-RS resources MAC CE for eFD-MIMO,14.3.0
+,RP-76,RP-171224,1096,-,F,Stop condition for the drx-retransmissionTimer for NB-IoT,14.3.0
+,RP-76,RP-171224,1097,-,F,Correction to maximum number of HARQ processes for NB-IoT,14.3.0
+,RP-76,RP-171223,1105,1,F,Action upon reception of SC-PTM stop indication,14.3.0
+,RP-76,RP-171228,1108,-,F,Correction of L2 latency reduction,14.3.0
+,RP-76,RP-171221,1109,-,F,SI-RNTI number correction for feMBMS,14.3.0
+,RP-76,RP-171224,1113,2,F,Resources selection for PRACH triggered by a PDCCH order in eNB-IoT(Option2),14.3.0
+,RP-76,RP-171244,1114,-,A,Correction on terminology of SI for eMTC,14.3.0
+,RP-76,RP-171244,1116,1,A,RAR reception for eMTC,14.3.0
+,RP-76,RP-171243,1123,-,A,Corrections to Sidelink Discovery Gap for Transmission,14.3.0
+2017-09,RP-77,RP-171913,1143,-,F,Miscellaneous corrections for NB-IoTenh and feMTC,14.4.0
+,RP-77,RP-171913,1144,2,F,Correction on TAT in RACH-less handover,14.4.0
+,RP-77,RP-171914,1147,2,F,Corrections to random selection for P2X related V2X sidelink communication,14.4.0
+,RP-77,RP-171918,1155,-,A,Correction on SR prohibit,14.4.0
+,RP-77,RP-171913,1156,-,F,Correction on eLAA,14.4.0
+,RP-77,RP-171919,1160,1,F,RAR reception for NB-IoT,14.4.0
+,RP-77,RP-171913,1164,1,F,Clarification on UE behaviour for Contention Resolution with Padding,14.4.0
+,RP-77,RP-171920,1176,1,A,Corrections on TS 36.321 for Rel-13 MTC,14.4.0
+,RP-77,RP-171911,1178,-,F,Corrections to references,14.4.0
+,RP-77,RP-171915,1181,1,F,Correction to contention free random access,14.4.0
+,RP-77,RP-171913,1182,2,C,Introduction of Release Assistance Indication,14.4.0
+,RP-77,RP-171917,1184,1,A,Clarification on TAT restart without valid TA value,14.4.0
+2017-12,RP-78,RP-172617,1186,1,F,Removal of FFS for RAI in 36.321,14.5.0
+,RP-78,RP-172616,1187,1,F,Minor correction on the IE of pusch-EnhancementsConfig in feMTC,14.5.0
+,RP-78,RP-172617,1188,4,F,Clarification on carrier index in PDCCH order,14.5.0
+,RP-78,RP-172722,1189,2,F,Correction of reference for kPHICH value,14.5.0
+,RP-78,RP-172617,1190,2,F,Corrections to V2X functionality,14.5.0
+,RP-78,RP-172616,1194,2,F,Change to actions upon mac-ContentionResolutionTimer expiry for FeMTC and eNB-IoT,14.5.0
+,RP-78,RP-172617,1199,1,F,Correction to random access power control in 36.321,14.5.0
+,RP-78,RP-172616,1202,1,F,Clarification on averaging window for RAN assisted codec rate adaptation,14.5.0
+2017-12,RP-78,RP-172614,1196,2,B,EN-DC impacts to LTE MAC,15.0.0
+2018-03,RP-79,RP-180443,1213,1,A,Correction on SI-RNTI value for FeMBMS,15.1.0
+,RP-79,RP-180445,1218,1,A,Correct introduction of multiple HARQ processes for NB-IoT,15.1.0
+,RP-79,RP-180444,1230,1,A,Clarification to Sidelink Booking Processes,15.1.0
+,RP-79,RP-180443,1239,1,A,Removal of Type3 PH for single serving cell case,15.1.0
+,RP-79,RP-180441,1242,-,A,MAC Corrections for RRC Resume,15.1.0
+2018-07,RP-80,RP-181218,1203,3,B,Introduction of shortened TTI and processing time for LTE,15.2.0
+,RP-80,RP-181230,1228,2,A,Correction to MAC Entity modelling,15.2.0
+,RP-80,RP-181232,1243,5,A,Clarification for DPR Update,15.2.0
+,RP-80,RP-181215,1247,2,F,Clarification on PHR in EN-DC,15.2.0
+,RP-80,RP-181252,1249,4,B,Introduction of EDT for eMTC and NB-IoT in Rel-15 TS 36.321,15.2.0
+,RP-80,RP-181214,1262,2,F,Clarification of introducing SUO case1,15.2.0
+,RP-80,RP-181248,1267,3,B,Introduction of eV2X in 36.321,15.2.0
+,RP-80,RP-181252,1272,2,B,Introduction of further NB-IoT enhancements in TS 36.321,15.2.0
+,RP-80,RP-181224,1273,3,B,Running Rel-15 36.321 CR for eMTC (excluding EDT),15.2.0
+,RP-80,RP-181250,1274,3,B,MAC functionality for euCA,15.2.0
+,RP-80,RP-181233,1279,1,A,Clarification on Random Access Procedure initiation with RACH-less configurations,15.2.0
+,RP-80,RP-181216,1281,1,F,Correction on PHR trigger for EN-DC,15.2.0
+,RP-80,RP-181235,1283,-,A,Correction to enhanced random access power control,15.2.0
+,RP-80,RP-181236,1285,1,A,Flush HARQ buffer upon skipping a UL transmission,15.2.0
+,RP-80,RP-181254,1286,1,B,Introduction of increased number of E-UTRAN data bearers,15.2.0
+,RP-80,RP-181214,1287,-,F,PHR format with EN-DC,15.2.0
+,RP-80,RP-181234,1289,1,A,Corrections to UL and SL SPS V-RNTI,15.2.0
+,RP-80,RP-181249,1290,1,B,Introduce feLAA in TS 36.321,15.2.0
+,RP-80,RP-181234,1293,1,A,Correction to MAC PDU reception in sidelink,15.2.0
+,RP-80,RP-181232,1297,2,A,Clarification on DRX timer counting,15.2.0
+,RP-80,RP-181232,1300,2,F,Clarifying PDCCH Period Definition,15.2.0
+,RP-80,RP-181235,1302,2,A,Correction on RA-RNTI Range for Non Anchor Carrier,15.2.0
+,RP-80,RP-181247,1305,1,B,Introduction of Ultra Reliable Low Latency Communication for LTE,15.2.0
+2018-09,RP-81,RP-181962,1309,1,A,Correction on MCS selection,15.3.0
+,RP-81,RP-181948,1311,1,F,CR to clarify the aggregating carriers for PC5 CA synchronization in Mode 3 (Opt1),15.3.0
+,RP-81,RP-181948,1312,1,F,Correction on transmission format selection in TS 36.321 (Opt1),15.3.0
+,RP-81,RP-181963,1321,-,A,Correction to enhanced random access power control,15.3.0
+,RP-81,RP-181940,1322,1,F,Clarification on Dual Connectivity PHR MAC CE for EN-DC,15.3.0
+,RP-81,RP-181945,1323,1,F,Corrections to TDD in 36.321,15.3.0
+,RP-81,RP-181945,1324,2,F,Correction to SR with SPS BSR in 36.321,15.3.0
+,RP-81,RP-181945,1325,1,F,Correction to NPRACH range enhancements in 36.321,15.3.0
+,RP-81,RP-181961,1327,1,F,Defining PDCCH-Subframes for NB-IoT UE,15.3.0
+,RP-81,RP-181943,1328,1,F,Correction on HARQ RTT Timers,15.3.0
+,RP-81,RP-181948,1330,-,F,Correction on the logical channel selection in sidelink LCP,15.3.0
+,RP-81,RP-181945,1336,1,F,Clarification to trigger for SR,15.3.0
+,RP-81,RP-181949,1337,-,F,Miscellaneous editorial corrections to Ultra Reliable Low Latency Communication,15.3.0
+,RP-81,RP-181949,1338,1,F,Conflict handling for multiple UL SPS configurations,15.3.0
+,RP-81,RP-181949,1340,1,C,Alignment of MAC CEs between LTE and NR,15.3.0
+,RP-81,RP-181962,1343,-,A,Corrections to handling of SL unknown protocol data,15.3.0
+,RP-81,RP-181946,1351,1,F,Miscellaneous correction to FeLAA in TS 36.321,15.3.0
+2018-12,RP-82,RP-182678,1355,3,F,Flushing HARQ buffer for carrier reselection,15.4.0
+,RP-82,RP-182678,1357,5,F,eV2X clean-up except for UL and SL priotirization in TS 36.321,15.4.0
+,RP-82,RP-182671,1359,4,F,MPDCCH monitoring for receiving HARQ ACK feedback,15.4.0
+,RP-82,RP-182674,1361,2,F,Corrections to euCA,15.4.0
+,RP-82,RP-182681,1362,2,F,Corrections to random access power control for TDD in 36.321,15.4.0
+,RP-82,RP-182681,1363,4,F,"Corrections to EDT for definition, Msg3, preambles, and MAC header structure",15.4.0
+,RP-82,RP-182678,1365,3,F,Correction on V2X sidelink communication in TS 36.321,15.4.0
+,RP-82,RP-182674,1366,2,F,Correction to MAC PDU subheaders including eLCID,15.4.0
+,RP-82,RP-182681,1370,4,F,Correction of fallback cases in UP-EDT,15.4.0
+,RP-82,RP-182678,1383,4,F,UL and SL prioritization in TS 36.321- alt2,15.4.0
+,RP-82,RP-182681,1384,2,F,Msg3 buffer handling for EDT in 36.321,15.4.0
+,RP-82,RP-182680,1386,1,A,Correction on HARQ re-transmission resource selection,15.4.0
+,RP-82,RP-182681,1387,2,F,Correction to start of RAR window for NPRACH fmt2 in 36.321,15.4.0
+,RP-82,RP-182679,1389,-,F,Correction on FeLAA in TS 36.321,15.4.0
+,RP-82,RP-182680,1392,1,F,HARQ process ID for synchronous HARQ operation,15.4.0
+,RP-82,RP-182653,1393,-,F,Correction on Dual Connectivity MAC CE,15.4.0
+,RP-82,RP-182653,1394,-,F,Clarification on HARQ RTT for SUO case 1,15.4.0
+,RP-82,RP-182678,1395,1,F,Clarification to Mode-3 Procedures,15.4.0
+,RP-82,RP-182678,1396,2,F,Clarification to Sidelink PDCP Duplication,15.4.0
+,RP-82,RP-182678,1397,2,F,Clarification to TX Carrier (re)-Selection for V2X Sidelink Communication,15.4.0
+,RP-82,RP-182680,1400,1,A,CR to TS 36.321 to correct the ambiguity on bit rate recommendation for index 0,15.4.0
+,RP-82,RP-182667,1404,4,F,Correction to PHR procedures in EN-DC,15.4.0
+2019-03,RP-83,RP-190551,1407,3,F,Correction on TX capability limitation and other miscellaneous issues,15.5.0
+,RP-83,RP-190551,1408,-,F,Corrections to UL HARQ ACK Feedback,15.5.0
+,RP-83,RP-190551,1412,3,F,Clarification on EDT preambles,15.5.0
+,RP-83,RP-190551,1415,1,F,Correction on the dormantSCellDeactivationTimer,15.5.0
+,RP-83,RP-190551,1420,1,F,Correction to ContentionResolutionTimer in EDT,15.5.0
+,RP-83,RP-190549,1423,2,F,Correction on Recommended bit rate MAC Control Element,15.5.0
+,RP-83,RP-190552,1424,-,F,Correction on NDI toggling in FeLAA,15.5.0
+,RP-83,RP-190549,1427,1,A,Correction of DRX for SC-PTM,15.5.0
+,RP-83,RP-190552,1428,1,F,Clear SPS resources for Scell,15.5.0
+,RP-83,RP-190551,1429,-,F,Correction to Activation/Deactivation of SCells,15.5.0
+,RP-83,RP-190551,1432,1,F,CR on PDCP duplication related operations in sidelink LCP procedure and resource reselection procedure,15.5.0
+,RP-83,RP-190540,1433,1,F,Clarification on PH omitting of dynamic power sharing incapable UE,15.5.0
+2019-06,RP-84,RP-191383,1411,2,A,Correction to handling of preallocated UL grants during RACH-less HO,15.6.0
+,RP-84,RP-191385,1440,1,F,Correction on TX carrier selection,15.6.0
+,RP-84,RP-191385,1441,1,F,Correction to DELTA_PREAMBLE for NPRACH resource format 2,15.6.0
+,RP-84,RP-191385,1442,-,F,Correction on resource selection,15.6.0
+,RP-84,RP-191382,1443,5,F,Correction to Minimum Length of DL and UL HARQ RTT Timer,15.6.0
+,RP-84,RP-191384,1446,-,F,Correction on Random Access Preamble groups for EDT,15.6.0
+,RP-84,RP-191375,1447,1,F,Correction on PHR for late drop,15.6.0
+,RP-84,RP-191385,1450,1,F,Clarification of Length field for DPR,15.6.0
+,RP-84,RP-191383,1452,1,A,Clarification of configured carrier,15.6.0
+2019-09,RP-85,RP-192198,1453,1,F,Normative Annex of CRs Containing Early Implementable Features and Corrections,15.7.0
+2019-12,RP-86,RP-192940,1457,4,A,Clarification on RA and Msg3 with PUSCH Enhancements,15.8.0
+,RP-86,RP-192941,1459,2,F,Clarification of PDCCH monitoring when not fully aligned with PDCCH periods,15.8.0
+,RP-86,RP-192935,1462,-,F,Correction to PHR procedures in DC configuration,15.8.0
+2020-03,RP-87,RP-200362,1461,3,B,Introduction of Power headroom reporting for Additional SRS,16.0.0
+,RP-87,R2-200364,1463,2,B,Introducation of even further mobility enhancement in E-UTRAN,16.0.0
+,RP-87,RP-200359,1464,1,B,Recommended Bit Rate/Query for FLUS and MTSI,16.0.0
+,RP-87,RP-200360,1465,1,B,Introduction of further enhancements for eMTC,16.0.0
+,RP-87,RP-200361,1466,1,B,Introduction of additional enhancements for NB-IoT,16.0.0
+,RP-87,RP-200346,1467,1,B,Introduction of 5G V2X with NR Sidelink,16.0.0
+2020-07,RP-88,RP-201193,1472,2,F,Corrections to MAC for Rel-16 NB-IoT,16.1.0
+,RP-88,RP-201193,1473,2,F,Corrections to MAC for Rel-16 eMTC,16.1.0
+,RP-88,RP-201195,1474,1,B,CR on 36.321 for even further mobility enhancement in E-UTRAN,16.1.0
+,RP-88,RP-201168,1479,1,A,Clarification on PHR report for power class 14dBm UE,16.1.0
+,RP-88,RP-201168,1483,1,A,Clarification for dedicated SR with HARQ-ACK,16.1.0
+,RP-88,RP-201176,1484,-,F,Corrections to 5G V2X with NR Sidelink,16.1.0
+2020-09,RP-89,RP-201927,1485,3,F,Corrections to 5G V2X with NR Sidelink,16.2.0
+,RP-89,RP-201928,1495,1,F,Editorial changes,16.2.0
+,RP-89,RP-201935,1501,-,A,Correction on PDU generation for UL spatial multiplexing – Option 1,16.2.0
+,RP-89,RP-201928,1503,2,F,MAC corrections for PUR,16.2.0
+2020-12,RP-90,RP-202780,1512,2,A,Correction on lch-CellRestriction,16.3.0
+,RP-90,RP-202769,1516,1,F,Corrections to UL/SL Prioritization for 5G V2X with NR Sidelink,16.3.0
+2021-03,RP-91,RP-210698,1517,1,F,PDCCH-based HARQ-ACK for a specific HARQ process with multi-TB scheduling,16.4.0
+,RP-91,RP-210698,1518,1,F,Clarification on TA validation for PUR,16.4.0
+,RP-91,RP-210700,1521,1,F,Recommended bit rate query handling at MAC Reset,16.4.0
+2021-06,RP-92,RP-211479,1524,1,F,MAC clarifications for PUR,16.5.0
+,RP-92,RP-211473,1525,-,F,CR on LCP of the source MAC entity,16.5.0
+2021-09,RP-93,RP-212441,1526,-,F,Correction on UL/SL prioritization,16.6.0
+2022-03,RP-95,RP-220473,1534,-,F,Correction to pur-ResponseWindowTimer and removal of pur-ResponseWindowSize,16.7.0
+,RP-95,RP-220472,1535,1,F,Introduction of carrier specific NRSRP thresholds for NPRACH resource selection,16.7.0
+2022-03,RP-95,RP-220507,1536,-,B,Introduction of Rel-17 enhancements for NB-IoT and eMTC,17.0.0
+,RP-95,RP-220983,1537,3,B,Introducing Non-Terrestrial Network in NB-IoT and eMTC,17.0.0
+2022-06,RP-96,RP-221712,1540,1,A,Correction on calculating number of TBs for multi-TB scheduling,17.1.0
+,RP-96,RP-221737,1541,-,F,Corrections for Supporting Non-Terrestrial Network in NB-IoT and eMTC,17.1.0
+2022-09,RP-97,RP-222522,1547,-,F,Corrections for Supporting Non-Terrestrial Network in NB-IoT and eMTC,17.2.0
+2022-12,RP-98,RP-223409,1556,2,F,Corrections for Supporting Non-Terrestrial Network in NB-IoT and eMTC,17.3.0
+2023-03,RP-99,RP-230696,1559,-,F,Misc corrections on MAC for IoT NTN,17.4.0
+,RP-99,RP-230696,1561,1,F,Correction on figure clarifying HARQ RTT timer,17.4.0
+,RP-99,RP-230696,1562,1,F,Clarification on the generation of TA reporting for IoT NTN,17.4.0
+,RP-99,RP-230696,1563,-,F,Correction for IoT NTN,17.4.0
+2023-06,RP-100,RP-231417,1560,3,F,MAC correction on TDD support for IoT NTN,17.5.0
+,RP-100,RP-231417,1565,2,F,Clarification on UL operation upon validity timer expiry for IoT NTN,17.5.0
+2023-09,RP-101,RP-232568,1567,2,F,Miscellaneous MAC corrections for IoT NTN,17.6.0
+2023-12,RP-102,RP-233886,1569,3,A,Correction on drx-InactivityTimer for NB-IOT UE,17.7.0
+,RP-102,RP-233887,1573,2,F,Correction to 36.321 on Koffset handling during MAC reset,17.7.0
+,RP-102,RP-233886,1575,1,A,Correction on the UL HARQ RTT timer length,17.7.0
+,RP-102,RP-233886,1577,-,A,Correction on drx-InactivityTimer definition for NB-IoT UE,17.7.0
+2023-12,RP-102,RP-233891,1580,1,B,Introduction of further enhancements for IoT-NTN,18.0.0
+2024-03,RP-103,RP-240660,1583,-,F,Corrections to IoT NTN,18.1.0
+2024-06,RP-104,RP-241556,1585,3,F,Corrections on UE behaviour on DRX for IoT NTN,18.2.0
+2024-09,RP-105,RP-242237,1588,1,F,Miscellaneous MAC correction for IoT NTN,18.3.0
+2025-03,RP-107,RP-250660,1589,2,F,Correction on drx-inactivityTimer,18.4.0
+,RP-107,RP-250660,1590,-,F,Correction on HARQ process,18.4.0
+2025-09,RP-109,RP-252769,1596,1,F,Correction on UL spatial multiplexing,18.5.0
+2025-09,RP-109,RP-252792,1591,1,B,Introduction of IoT NTN enhancements phase 3,19.0.0
+,RP-109,RP-252795,1592,1,B,Introduction of IoT NTN TDD mode,19.0.0
+,RP-109,RP-252794,1593,2,B,Introduction of LTE-based 5G Broadcast Phase 2,19.0.0
+2025-12,RP-110,RP-253743,1597,1,F,Correction to SPS and preallocated uplink grant for TDD,19.1.0
+,RP-110,RP-253736,1599,3,F,Corrections for CB-MSG3 EDT,19.1.0
+,RP-110,RP-253739,1600,1,F,Corrections on IoT NTN TDD for CB-Msg3 EDT and DRX,19.1.0
+2026-03,RP-111,RP-260669,1601,1,F,Corrections for CB-MSG3-EDT,19.2.0
+,RP-111,RP-260669,1602,1,F,Corrections to valid uplink subframes for IoT NTN TDD,19.2.0

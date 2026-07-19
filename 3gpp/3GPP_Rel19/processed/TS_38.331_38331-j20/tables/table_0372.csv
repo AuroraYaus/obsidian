@@ -1,0 +1,3 @@
+MsgA-ConfigCommon field descriptions
+"msgA-PUSCH-ConfigConfiguration of cell-specific MsgA PUSCH parameters which the UE uses for contention-based MsgA PUSCH transmission of this BWP. If the field is not configured for the selected UL BWP, the UE shall use the MsgA PUSCH configuration of initial UL BWP."
+rach-ConfigCommonTwoStepRAConfiguration of cell specific random access parameters which the UE uses for contention based and contention free 2-step random access type procedure as well as for 2-step RA type contention based beam failure recovery in this BWP.

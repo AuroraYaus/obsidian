@@ -1,0 +1,8 @@
+EPDCCH format,"Number of ECCEs for one EPDCCH,",,,
+,Case A,,Case B,
+,Localized transmission,Distributed transmission,Localized transmission,Distributed transmission
+0,2,2,1,1
+1,4,4,2,2
+2,8,8,4,4
+3,16,16,8,8
+4,-,32,-,16

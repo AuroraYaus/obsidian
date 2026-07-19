@@ -1,0 +1,4 @@
+Name,Value,Semantics description,Ver
+SL SRAP Config,,,
+>sl-LocalIdentity,Undefined,SRAP PDUs with any local identity will be submitted to the SRB1 PDCP entity.,
+>sl-RemoteUE-RB-Identity,SRB1,,

@@ -1,0 +1,18 @@
+MeasResultNR field descriptions
+"averageDelayIndicates average delay for the packets during the reporting period, as specified in TS 38.314 [53]. Value 0 corresponds to 0 millisecond, value 1 corresponds to 0.1 millisecond, value 2 corresponds to 0.2 millisecond, and so on."
+cellResultsCell level measurement results.
+cellsMetReportOnLeaveListThis field indicates the list of cells which met the event leaving condition.
+choCandidateThis field indicates whether the associated cell is a candidate target cell for conditional handover or conditional PSCell change or addition. This field may be included only in the SuccessHO-Report or SuccessPSCell-Report within UEInformationResponse message.
+"choConfigIf the associated cell is a candidate target cell for conditional handover, this field indicates the conditional handover execution condition for each measId within condTriggerConfig associated to the cell. This field may be included only in the rlf-report within UEInformationResponse message."
+"distanceFromReference2This field indicates the distance between UE and the moving reference locations of associated neighbour cell if the conditional handover is based on condEventD2. Each step represents 50m. The actual measured distance shall be rounded down to the nearest lower or equal step value (i.e., FLOOR(actual distance[m] / 50)). The maximum value is 65535, which indicates a distance equal to or greater than 65535 multiplied by 50m."
+"drb-IdIndicates DRB value for which uplink PDCP delay ratio or value is provided, according to TS 38.314 [53]."
+enteringThis field indicates if the event entering condition for the cell is satisfied and the cell has been just added within cellsTriggeredList.
+firstTriggeredEventThis field indicates the first fulfilled conditional execution condition. This field may be included in rlf-report within UEInformationResponse message or in SCGFailureInformation message.
+locationInfoPositioning related information and measurements.
+physCellIdThe physical cell identity of the NR cell for which the reporting is being performed.
+resultsSSB-CellCell level measurement results based on SS/PBCH related measurements.
+resultsSSB-IndexesBeam level measurement results based on SS/PBCH related measurements.
+resultsCSI-RS-CellCell level measurement results based on CSI-RS related measurements.
+resultsCSI-RS-IndexesBeam level measurement results based on CSI-RS related measurements.
+rsIndexResultsBeam level measurement results.
+"timeBetweenEventsIndicates the time elapsed between fulfilling the conditional execution conditions. Value in milliseconds. The maximum value 1023 means 1023ms or longer. This field may be included in the reports associated to UEInformationResponse message, e.g., rlf-Report or in the SCGFailureInformation message."

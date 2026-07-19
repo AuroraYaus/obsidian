@@ -1,0 +1,4 @@
+SRS-RSRP-MeasResourceSet field descriptions
+aperiodicTriggeringOffsetIndicates a slot offset between the slot containing the DCI that triggers a set of aperiodic SRS-RSRP resources and the slot in which the SRS-RSRP resource set is measured.
+srs-RSRP-MeasResourceIdListIndicates the SRS-RSRP measurement resources associated with this SRS-RSRP measurement resource set.
+srs-RSRP-MeasResourceSetIdIndicates ID of SRS-RSRP measurement resource set.

@@ -1,0 +1,13 @@
+Supported Combinations,Comment
+j x A,Note 1
+k x B,Note 2
+(Ci=1pmi)×,"Note 3, Note 4, Note 10"
+p' x D,"Note 3, Note 5"
+A + Bj×k×,Note 6
+A + Cj×(i=1pmi)×,"Note 6, Note 10"
+A + Dj×p'×,Note 6
+B + Ck×(i=1pmi)×,"Note 8, Note 10"
+B + C (i=1p'mi') ×,"Note 9, Note 10"
+B + Dk×p'×,Note 7
+C + D (i=1pmi) ×p'×,"Note 7, Note 10"
+"Note 1:The number of cell groups j in the supported combination is subject to UE capability.Note 2:The number of PUCCH groups k in the supported combination is subject to UE capability. Note 3:The number of carriers p, and p' in the supported combinations are subject to UE capability. Note 4:In the case there is one SUL carrier, then p-1 would be supported.Note 5:UE may be configured with p' but may also have capability to simultaneously sound less than this number. Note 6:Simultaneous PRACH with PUCCH (or PUSCH or SRS) is supported only in the case of inter-band CA, with , , , and ' depending on the configuration, and subject to UE capability for parallel transmission.Note 7:Simultaneous SRS with PUCCH (or PUSCH) is supported only in the case of inter-band CA, with , , and ' depending on the configuration, and subject to UE capability for parallel transmission. Note 8:Simultaneous PUCCH and PUSCH(s) for the case that multiple PUCCH groups are configured and the respective PUCCH and PUSCH(s) are transmitted in the different PUCCH groups, with  and .  and  are subject to UE capability for supported number of PUCCH groups and UL carriers, respectively.  and  depend on configuration.Note 9:Simultaneous PUCCH and PUSCH(s) within the same PUCCH group in the case of inter-band CA, depending on the configuration, and subject to UE capability for parallel transmission of PUCCH and PUSCH within the same PUCCH group.Note 10: Simultaneous transmission of up to 2 PUSCHs within the same active UL BWP, with depending on the configuration,  equal to 1 or 2, subject to UE capability for parallel transmission of PUSCH and PUSCH within the same active UL BWP.j≤jk≤kp≤pp'≤pk≤kp≤pp'≤pk<kp≤pkpkpp' p, p,  p,  p' mi, mi, mi, mi'",

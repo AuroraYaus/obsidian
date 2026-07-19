@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>BFR-CSIRS-Resource field descriptions</td>
+  </tr>
+  <tr>
+    <td>csi-RSThe ID of a NZP-CSI-RS-Resource configured in the CSI-MeasConfig of this serving cell. This reference signal determines a candidate beam for beam failure recovery (BFR).</td>
+  </tr>
+  <tr>
+    <td>ra-OccasionListRA occasions that the UE shall use when performing BFR upon selecting the candidate beam identified by this CSI-RS. The network ensures that the RA occasion indexes provided herein are also configured by prach-ConfigurationIndex and msg1-FDM. Per PRACH occasions type as specified in TS 38.213 [13] clause 8, each RACH occasion is sequentially numbered, first, in increasing order of frequency resource indexes for frequency multiplexed PRACH occasions; second, in increasing order of time resource indexes for time multiplexed PRACH occasions within a PRACH slot and Third, in increasing order of indexes for PRACH slots.If the field is absent the UE uses the RA occasion associated with the SSB that is QCLed with this CSI-RS.</td>
+  </tr>
+  <tr>
+    <td>ra-PreambleIndexThe RA preamble index to use in the RA occasions associated with this CSI-RS. If the field is absent, the UE uses the preamble index associated with the SSB that is QCLed with this CSI-RS.</td>
+  </tr>
+</table>

@@ -1,0 +1,8 @@
+IABOtherInformation-IEs field descriptions
+dummyThis field is not used in the specification and network ignores the received value.
+"iab-IPv4-AddressNumReqThis field is used to request the numbers of IPv4 address per specific usage. The specific usages include F1-C traffic, F1-U traffic, non-F1 traffic and all traffic."
+"iab-IPv4-AddressReportThis field is used to report the IPv4 address per specific usage assigned by OAM for IAB-DU. The specific usages include F1-C traffic, F1-U traffic, non-F1 traffic and all traffic."
+"iab-IPv6-AddressNumReqThis field is used to request the numbers of IPv6 address per specific usage. The specific usages include F1-C traffic, F1-U traffic, non-F1 traffic and all traffic."
+"iab-IPv6-AddressPrefixReqThis field is used to request the prefix of IPv6 address per specific usage. The specific usages include F1-C traffic, F1-U traffic, non-F1 traffic and all traffic."
+"iab-IPv6-AddressReportThis field is used to report the IPv6 address per specific usage assigned by OAM for IAB-DU. The specific usages include F1-C traffic, F1-U traffic, non-F1 traffic and all traffic."
+"iab-IPv6-PrefixReportThis field is used to report the prefix of IPv6 address per specific usage assigned by OAM for IAB-DU. The specific usages include F1-C traffic, F1-U traffic, non-F1 traffic and all traffic."

@@ -1,0 +1,3 @@
+LogMeasResultListBT field descriptions
+bt-AddrThis field indicates the Bluetooth public address of the Bluetooth beacon as defined in TS 37.355 [49].
+rssi-BTThis field provides the beacon received signal strength indicator (RSSI) in dBm as defined in TS 37.355 [49].

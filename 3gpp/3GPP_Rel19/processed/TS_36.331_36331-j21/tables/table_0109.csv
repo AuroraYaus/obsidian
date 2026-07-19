@@ -1,0 +1,4 @@
+Conditional presence,Explanation
+TM,"The field is mandatory present if the transmissionMode is set to tm3, tm4, tm5 or tm6. Otherwise the field is not present and the UE shall delete any existing value for this field."
+TM8,"The field is optional present, need OR, if AntennaInfoDedicated is included and transmissionMode is set to tm8. If AntennaInfoDedicated is included and transmissionMode is set to a value other than tm8, the field is not present and the UE shall delete any existing value for this field. Otherwise the field is not present."
+TMX,"The field is mandatory present if the transmissionMode-r10 is set to tm3, tm4, tm5 or tm6. The field is optionally present, need OR, if the transmissionMode-r10 is set to tm8 or tm9. Otherwise the field is not present and the UE shall delete any existing value for this field."

@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <td>SL-SDAP-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>sl-DefaultRBIndicates whether or not this is the default sidelink DRB for this NR sidelink communication transmission destination. Among all configured instances of SL-SDAP-Config for this destination, this field shall be set to true in at most one instance of SL-SDAP-Config and to false in all other instances.</td>
+  </tr>
+  <tr>
+    <td>sl-MappedQoS-FlowsIndicates QoS flows to be mapped to the sidelink DRB. If the field is included in dedicated signalling, it is set to sl-MappedQoS-FlowsListDedicated; otherwise, it is set to sl-MappedQoS-FlowsList.</td>
+  </tr>
+  <tr>
+    <td>sl-MappedQoS-FlowsListIndicates the list of QoS profiles of the NR sidelink communication transmission destination mapped to this sidelink DRB.</td>
+  </tr>
+  <tr>
+    <td>sl-MappedQoS-FlowsToAddListIndicates the list of SL QoS flows ID of the NR sidelink communication transmission destination to be additionally mapped to this sidelink DRB.</td>
+  </tr>
+  <tr>
+    <td>sl-MappedQoS-FlowsToReleaseListIndicates the list of SL QoS flows ID of the NR sidelink communication transmission destination to be released from existing QoS flow to SLRB mapping of this sidelink DRB.</td>
+  </tr>
+  <tr>
+    <td>sl-SDAP-HeaderIndicates whether or not a SDAP header is present on this sidelink DRB. The field cannot be changed after a sidelink DRB is established. This field is set to present if the field sl-DefaultRB is set to true.</td>
+  </tr>
+</table>

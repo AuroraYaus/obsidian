@@ -1,0 +1,12 @@
+Parameter in clause 5.5.2.1,,PSSCH,
+,,Sidelink transmission modes 1 and 2,Sidelink transmission modes 3 and 4
+Group hopping,,enabled,enabled
+,,,
+,,,first DM-RS symbol in a slot second DM-RS symbol in a slot
+,,,
+Sequence hopping,,disabled,disabled
+Cyclic shift,,,
+Orthogonal sequence,,,
+Reference signal length,,,
+Number of layers,,1,1
+Number of antenna ports,,1,1

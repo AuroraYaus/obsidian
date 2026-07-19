@@ -1,0 +1,15 @@
+Bit field mapped to index,Message
+0,1 layer: TPMI=0
+1,1 layer: TPMI=1
+…,…
+23,1 layer: TPMI=23
+24,2 layers: TPMI=0
+25,2 layers: TPMI=1
+…,…
+39,2 layers: TPMI=15
+40,3 layers: TPMI=0
+41,3 layers: TPMI=1
+…,…
+51,3 layers: TPMI=11
+52,4 layers: TPMI=0
+53-63,reserved

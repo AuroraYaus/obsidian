@@ -1,0 +1,47 @@
+<table>
+  <tr>
+    <td>BandCombination field descriptions</td>
+  </tr>
+  <tr>
+    <td>BandCombinationList-v1540, BandCombinationList-v1550, BandCombinationList-v1560, BandCombinationList-v1570, BandCombinationList-v1580, BandCombinationList-v1590, BandCombinationList-v15g0, BandCombinationList-v15n0, BandCombinationList-v1610, BandCombinationList-v1630, BandCombinationList-v1640, BandCombinationList-v1650, BandCombinationList-v1680, BandCombinationList-v1690, BandCombinationList-v16a0, BandCombinationList-v16j0, BandCombinationList-v1700, BandCombinationList-v1720, BandCombinationList-v1730, BandCombinationList-v1760, BandCombinationList-v1780, BandCombinationList-v1790, BandCombinationList-v17b0, BandCombinationList-v1800, BandCombinationList-v1830, BandCombinationList-v1840, BandCombinationList-v1860, BandCombinationList-v1900The UE shall include the same number of entries, and listed in the same order, as in BandCombinationList (without suffix). If the field is included in supportedBandCombinationListNEDC-Only-v1610, the UE shall include the same number of entries, and listed in the same order, as in BandCombinationList of supportedBandCombinationListNEDC-Only (without suffix) field.If the field is included in supportedBandCombinationListNEDC-Only-v15a0, the UE shall include the same number of entries, and listed in the same order, as in BandCombinationList (without suffix) of supportedBandCombinationListNEDC-Only (without suffix) field.</td>
+  </tr>
+  <tr>
+    <td>BandCombinationList-UplinkTxSwitch-r16, BandCombinationList-UplinkTxSwitch-v1630, BandCombinationList-UplinkTxSwitch-v1640, BandCombinationList-UplinkTxSwitch-v1650, BandCombinationList-UplinkTxSwitch-v1690, BandCombinationList-UplinkTxSwitch-v16a0, BandCombinationList-UplinkTxSwitch-v16e0, BandCombinationList-UplinkTxSwitch-v16j0, BandCombinationList-UplinkTxSwitch-v1700, BandCombinationList-UplinkTxSwitch-v1720, BandCombinationList-UplinkTxSwitch-v1730, BandCombinationList-UplinkTxSwitch-v1760, BandCombinationList-UplinkTxSwitch-v1780, BandCombinationList-UplinkTxSwitch-v1790, BandCombinationList-UplinkTxSwitch-v17b0, BandCombinationList-UplinkTxSwitch-v1800, BandCombinationList-UplinkTxSwitch-v1830, BandCombinationList-UplinkTxSwitch-v1840, BandCombinationList-UplinkTxSwitch-v1860, BandCombinationList-UplinkTxSwitch-v1900The UE shall include the same number of entries, and listed in the same order, as in BandCombinationList-UplinkTxSwitch-r16.For the field of supportedBandCombinationList-UplinkTxSwitch-v1700, if the UE does not support 2Tx-2Tx switching for a given band combination, the field of supportedBandPairListNR-v1700 in the corresponding entry is absent.</td>
+  </tr>
+  <tr>
+    <td>ca-ParametersNRDCIf the field (without suffix) is included for a band combination in the NR capability container, the field (without suffix) indicates support of NR-DC. Otherwise, the field is absent. If a version of the field (with suffix) is absent for a band combination, ca-ParametersNR field version in BandCombination corresponding to the ca-ParametersNR-ForDC field version in the field (with suffix) is applicable to the UE configured with NR-DC for the band combination.</td>
+  </tr>
+  <tr>
+    <td>featureSetCombinationDAPSIf this field is present for a band combination, it reports the feature set combination supported for the band combination when any DAPS bearer is configured.</td>
+  </tr>
+  <tr>
+    <td>featureSetCombinationLowBandSwitchingIf this field is present for a band combination, it reports the feature set combination supported for the band combination for low band CA via switching as defined in TS 38.101-1 [15].</td>
+  </tr>
+  <tr>
+    <td>ne-DC-BCIf the field is included for a band combination in the MR-DC capability container, the field indicates support of NE-DC. Otherwise, the field is absent.</td>
+  </tr>
+  <tr>
+    <td>supportedBandPairListNR-r16, supportedBandPairListNR-v1700, supportedBandPairListNR-v1900Indicates a list of band pair supporting UL Tx switching as defined in TS 38.101-1 [15] for a given band combination.A UE supporting 2Tx-2Tx switching should include both of supportedBandPairListNR-r16 and supportedBandPairListNR-v1700. And the UE shall include the same number of entries listed in the same order as in supportedBandPairListNR-r16.If the UE does not support 2Tx-2Tx switching for a given band pair, the field of uplinkTxSwitchingPeriod2T2T in the corresponding entry is absent.A 3Tx UE supporting Tx switching between 2 UL bands with up to 2Tx per band should indicate both of supportedBandPairListNR-r16 and supportedBandPairListNR-v1900. And the UE shall include the same number of entries listed in the same order as in supportedBandPairListNR-r16.</td>
+  </tr>
+  <tr>
+    <td>supportedBandPairListNR-r18, supportedBandPairListNR-v1840Indicates a list of band pair supporting UL Tx switching up to 4 bands as defined in TS 38.101-1 [15] for a given band combination. The UE shall include all the possible band pairs among the UL band entries (e.g. if the UE supports this feature in a band combination with UL support on bands A, B, C and D, the UE shall include the band pairs A+B, A+C, A+D, B+C, B+D and C+D). If supportedBandPairListNR-v1840 is included, the UE shall include the same number of entries listed in the same order as in supportedBandPairListNR-r18.For a band pair only supporting 1Tx-1Tx switching, the UE should include switchingPeriodFor1T in ULTxSwitchingBandPair-r18.For a band pair supporting 1Tx-2Tx switching, the UE always supports 1Tx-1Tx switching, and the UE should include switchingPeriodFor1T in ULTxSwitchingBandPair-r18.For a band pair supporting 2Tx-2Tx switching, the UE always supports 1Tx-2Tx switching and 1Tx-1Tx switching, the UE should include switchingPeriodFor2T as well as switchingPeriodFor1T in ULTxSwitchingBandPair-r18.</td>
+  </tr>
+  <tr>
+    <td>srs-SwitchingSimultaneousListIndicates, for a particular pair of NR bands, the RF retuning time when switching between a NR carrier corresponding to this band entry and another (PUSCH-less) NR carrier corresponding to the band entry in the order indicated below:-For the first NR band, the UE shall include the same number of entries for NR bands as in bandList, i.e. first entry corresponds to first NR band in bandList and so on,-For the second NR band, the UE shall include one entry less, i.e. first entry corresponds to the second NR band in bandList and so on-And so on</td>
+  </tr>
+  <tr>
+    <td>srs-SwitchingTimesListNRIndicates, for a particular pair of NR bands, the RF retuning time when switching between a NR carrier corresponding to this band entry and another (PUSCH-less) NR carrier corresponding to the band entry in the order indicated below:-For the first NR band, the UE shall include the same number of entries for NR bands as in bandList, i.e. first entry corresponds to first NR band in bandList and so on,-For the second NR band, the UE shall include one entry less, i.e. first entry corresponds to the second NR band in bandList and so on-And so on</td>
+  </tr>
+  <tr>
+    <td>srs-SwitchingTimesListEUTRAIndicates, for a particular pair of E-UTRA bands, the RF retuning time when switching between an E-UTRA carrier corresponding to this band entry and another (PUSCH-less) E-UTRA carrier corresponding to the band entry in the order indicated below:-For the first E-UTRA band, the UE shall include the same number of entries for E-UTRA bands as in bandList, i.e. first entry corresponds to first E-UTRA band in bandList and so on,-For the second E-UTRA band, the UE shall include one entry less, i.e. first entry corresponds to the second E-UTRA band in bandList and so on -And so on</td>
+  </tr>
+  <tr>
+    <td>srs-TxSwitchIndicates supported SRS antenna switch capability for the associated band. If the UE indicates support of SRS-SwitchingTimeNR, the UE is allowed to set this field for a band with associated FeatureSetUplinkId set to 0 for SRS carrier switching.</td>
+  </tr>
+  <tr>
+    <td>supportedIntraENDC-BandCombinationListIndicates BCS and/or spectrum contiguity capability for each entry in a list of intra-band (NG)EN-DC components in an inter-band (NG)EN-DC band combination. The UE shall include the entries in the order corresponding to the order of NR band entries of the intra-band (NG)EN-DC components in the bandList in the inter-band (NG)EN-DC band combination (i.e., BandCombination without suffix).</td>
+  </tr>
+  <tr>
+    <td>uplinkTxSwitchingBandParametersList-v1700, uplinkTxSwitchingBandParametersList-v1900Indicates a list of per band per band combination capabilities for UL Tx switching.</td>
+  </tr>
+</table>

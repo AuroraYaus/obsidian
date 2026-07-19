@@ -1,0 +1,8 @@
+SchedulingInfo2 field descriptions
+encryptedThe presence of this field indicates that the pos-sib-type is encrypted as specified in TS 37.355 [49].
+gnss-idThe presence of this field indicates that the positioning SIB type is for a specific GNSS. Indicates a specific GNSS (see also TS 37.355 [49])
+posSibTypeThe posSIBs as defined in TS 37.355 [49] mapped to SI for scheduling using schedulingInfoList2.
+sbas-idThe presence of this field indicates that the positioning SIB type is for a specific SBAS. Indicates a specific SBAS (see also TS 37.355 [49]).
+"si-WindowPositionThis field indicates the SI window position of the associated SI-message. The network provides si-WindowPosition in an ascending order, i.e. si-WindowPosition in the subsequent entry in schedulingInfoList2 has always value higher than in the previous entry of schedulingInfoList2. The network configures this field in a way that ensures that SI messages scheduled by schedulingInfoList and/or posSchedulingInfoList do not overlap with SI messages scheduled by schedulingInfoList2."
+sib-MappingInfoIndicates which SIBs or posSIBs are contained in the SI message.
+sibTypeThe type of SIB(s) mapped to SI for scheduling using schedulingInfoList2. Value type1 indicates SIBs and value type2 indicates posSIBs.

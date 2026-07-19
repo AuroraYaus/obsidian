@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td>SlotFormatIndicator field descriptions</td>
+  </tr>
+  <tr>
+    <td>availableRB-SetsToAddModListA list of AvailableRB-SetsPerCell objects (see TS 38.213 [13], clause 11.1.1).</td>
+  </tr>
+  <tr>
+    <td>co-DurationsPerCellToAddModListA list of CO-DurationsPerCell objects. If not configured, the UE uses the slot format indicator (SFI), if available, to determine the channel occupancy duration (see TS 38.213 [13], clause 11.1.1).</td>
+  </tr>
+  <tr>
+    <td>co-DurationsPerCellToReleaseListA list of CO-DurationsPerCell objects to be released. An entry created using co-DurationsPerCellToAddModList-r16 or co-DurationsPerCellToAddModList-r17 can be deleted using co-DurationsPerCellToReleaseList.</td>
+  </tr>
+  <tr>
+    <td>dci-PayloadSizeTotal length of the DCI payload scrambled with SFI-RNTI (see TS 38.213 [13], clause 11.1.1).</td>
+  </tr>
+  <tr>
+    <td>sfi-RNTIRNTI used for SFI on the given cell (see TS 38.213 [13], clause 11.1.1).</td>
+  </tr>
+  <tr>
+    <td>slotFormatCombToAddModListA list of SlotFormatCombinations for the UE&#x27;s serving cells (see TS 38.213 [13], clause 11.1.1).</td>
+  </tr>
+  <tr>
+    <td>switchTriggerToAddModList, switchTriggerToAddModListSizeExtA list of SearchSpaceSwitchTrigger objects. Each SearchSpaceSwitchTrigger object provides position in DCI of the bit field indicating search space switching flag for a serving cell or, if cellGroupsForSwitchList is configured, group of serving cells (see TS 38.213 [13], clause 10.4). If cellGroupsForSwitchList is configured, only one of the cells belonging to the same cell group is added/modified, and the configuration applies to all cells belonging to the cellGroupsForSwitchList (see TS 38.213 [13], clause 10.4). The network configures more than 4 SearchSpaceSwitchTrigger objects only if cellGroupsForSwitchList is not configured. The UE shall consider entries in switchTriggerToAddModList and in switchTriggerToAddModListSizeExt as a single list, i.e. an entry created using switchTriggerToAddModList can be modifed using switchTriggerToAddModListSizeExt and vice-versa.</td>
+  </tr>
+  <tr>
+    <td>switchTriggerToReleaseModList, switchTriggerToReleaseListSizeExtA list of SearchSpaceSwitchTriggers to be released. If cellGroupsForSwitchList is configured, the SearchSpaceSwitchTrigger is released for all serving cells belonging to the same CellGroupForSwitch. The UE shall consider entries in switchTriggerToReleaseList and in switchTriggerToReleaseListSizeExt as a single list, i.e. an entry created using switchTriggerToAddModList or switchTriggerToAddModListSizeExt can be deleted using switchTriggerToReleaseList or switchTriggerToReleaseListSizeExt.</td>
+  </tr>
+</table>

@@ -1,0 +1,5 @@
+SL-PRS-PowerControl field descriptions
+dl-P0-SL-PRSIndicates P0 value for DL pathloss based open loop power control for SL PRS transmission in dedicated SL PRS resource pool.
+dl-Alpha-SL-PRSIndicates alpha value for DL pathloss based open loop power control for SL PRS transmission in dedicated SL PRS resource pool.
+sl-P0-SL-PRSIndicates P0 value for SL pathloss based open loop power control for SL PRS transmission in dedicated SL PRS resource pool.
+sl-Alpha-SL-PRSIndicates alpha value for SL pathloss based open loop power control for SL PRS transmission in dedicated SL PRS resource pool. When the field is absent the UE applies the value 1.

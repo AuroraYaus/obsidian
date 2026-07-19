@@ -1,0 +1,6 @@
+SL-U2U-Info field descriptions
+"sl-CapabilityInformationTargetRemoteUEIncludes the UECapabilityInformationSidelink message (which can be also included in ueCapabilityInformationSidelink-r16 in UECapabilityEnquirySidelink from the target L2 U2U Remote UE) received from the target L2 U2U Remote UE. In this version of the specification, only outOfOrderDeliverySidelink-r16 and accessStratumReleaseSidelink-r16 are included in the UECapabilityInformationSidelink message."
+sl-E2E-QoS-InfoListThis field is used by L2 U2U Remote UE to indicate a list of end-to-end QoS info.
+sl-PerHop-QoS-InfoListThis field is used by L2 U2U Remote UE to indicate a list of split QoS info for the first hop.
+"sl-PerSLRB-QoS-InfoListThis field is used by L2 U2U Relay UE to indicate a list of split QoS info for the second hop in per-SLRB level, with each entry in accordance with an end-to-end SLRB."
+"sl-U2U-IdentityThis field is to identify an end-to-end PC5 link. For a L2 U2U Remote UE acting as source UE it includes sl-TargetUE-Identity to indicate the target L2 U2U Remote UE on the second hop, and for a L2 U2U Relay UE, it includes sl-SourceUE-Identity to indicate the source L2 U2U Remote UE on the first hop."

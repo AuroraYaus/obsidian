@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <td>Conditional Presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>2StepOnly</td>
+    <td>The field is mandatory present in msgA-ConfigCommon field in BWP-UplinkCommon if rach-ConfigCommon field is absent in this BWP-UplinkCommon, otherwise the field is optionally present in msgA-ConfigCommon field in BWP-UplinkCommon, Need S.The field is mandatory present in msgA-ConfigCommon in AdditionalRACH-Config if rach-ConfigCommon field is absent in this AdditionalRACH-Config, otherwise the field is optionally present in msgA-ConfigCommon field in AdditionalRACH-Config, Need S.</td>
+  </tr>
+  <tr>
+    <td>2StepOnlyNoCFRA</td>
+    <td>The field is mandatory present if RACH-ConfigGenericTwoStepRA is included in the RACH-ConfigCommonTwoStepRA and there are no 4-step random access configurations configured in the BWP (i.e only 2-step random access type configured in the BWP), otherwise (i.e. 4-step random access configuration also exists in the BWP) the field is optionally present, Need S. When RACH-ConfigGenericTwoStepRA is included in the RACH-ConfigDedicated, this field is absent.</td>
+  </tr>
+  <tr>
+    <td>NoCFRA</td>
+    <td>The field is mandatory present if msgB-ResponseWindow-r17 is absent and RACH-ConfigGenericTwoStepRA is not included in CFRA-TwoStep in RACH-ConfigDedicated, otherwise the field is absent, Need S.</td>
+  </tr>
+  <tr>
+    <td>NoCFRA2</td>
+    <td>The field is mandatory present if msgB-ResponseWindow-r16 is absent and RACH-ConfigGenericTwoStepRA is not included in CFRA-TwoStep in RACH-ConfigDedicated, otherwise the field is absent, Need S.</td>
+  </tr>
+</table>

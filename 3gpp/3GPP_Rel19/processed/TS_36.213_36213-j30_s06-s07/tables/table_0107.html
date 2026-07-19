@@ -1,0 +1,46 @@
+<table>
+  <tr>
+    <td>Transmissionmode</td>
+    <td>Transmission scheme of PDSCH</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Single-antenna port, port 0</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Transmit diversity</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Transmit diversity if the associated rank indicator is 1, otherwise large delay CDD</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Closed-loop spatial multiplexing</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Multi-user MIMO</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Closed-loop spatial multiplexing with a single transmission layer</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>If the number of PBCH antenna ports is one, Single-antenna port, port 0; otherwise Transmit diversity</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>If the UE is configured without PMI/RI reporting: if the number of PBCH antenna ports is one, single-antenna port, port 0; otherwise transmit diversity.If the UE is configured with PMI/RI reporting: closed-loop spatial multiplexing.</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>For activated serving cells, and a non-BL/CE UE, if the UE is configured without PMI/RI reporting: if the number of PBCH antenna ports is one, single-antenna port, port 0; otherwise transmit diversity. For activated serving cells, and a non-BL/CE UE, if the UE is configured with PMI/RI reporting or without PMI reporting: if the number of CSI-RS ports is one, single-antenna port, port 7; otherwise up to 8 layer transmission, ports 7-14 (see Clause 7.1.5B). For activated serving cells, and a BL/CE UE, if the UE is not configured with periodic CSI reporting mode 1-1: if the number of PBCH antenna ports is one, single-antenna port, port 0; otherwise transmit diversity.For activated serving cells, and a BL/CE UE, if the UE is configured with periodic CSI reporting mode 1-1: if the number of PBCH antenna ports is one, single-antenna port, port 0; otherwise closed-loop spatial multiplexing with a single transmission layer.For dormant serving cells: if the number of PBCH antenna ports is one, single-antenna port, port 0; otherwise transmit diversity.</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>For activated serving cells, if a CSI process of the UE is configured without PMI/RI reporting: if the number of CSI-RS ports is one, single-antenna port, port7; otherwise transmit diversity.For activated serving cells, and if a CSI process of the UE is configured with PMI/RI reporting or without PMI reporting: if the number of CSI-RS ports is one, single-antenna port, port 7; otherwise up to 8 layer transmission, ports 7-14 (see Clause 7.1.5B). For dormant serving cells: if the number of PBCH antenna ports is one, single-antenna port, port 0; otherwise transmit diversity.</td>
+  </tr>
+</table>

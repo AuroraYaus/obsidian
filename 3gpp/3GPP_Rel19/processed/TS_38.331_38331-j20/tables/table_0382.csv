@@ -1,0 +1,4 @@
+Conditional Presence,Explanation
+aperiodic,This field is mandatory present in case of aperiodic MUSIM gap configuration. Otherwise it is absent.
+gapSetup,"The field is mandatory present upon configuration of a new MUSIM gap. The field is optionally present, Need M, otherwise."
+periodic,This field is mandatory present in case of periodic MUSIM gap configuration. Otherwise it is absent.

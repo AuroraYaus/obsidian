@@ -1,0 +1,15 @@
+SC-MTCH-InfoList-NB field descriptions
+dl-CarrierConfigDownlink carrier used for SC-MTCH. E-UTRAN cannot configure a downlink carrier operating in mixed operation mode.
+"dl-CarrierIndexIndex to a downlink carrier signalled in system information. Value '0' corresponds to the anchor carrier, value '1' corresponds to the first entry in dl-ConfigList in SystemInformationBlockType22-NB, value '2' corresponds to the second entry in dl-ConfigList and so on."
+"drx-InactivityTimerSCPTMTimer for SC-MTCH reception in TS 36.321 [6]. Value in number of NPDCCH periods. Value pp1 corresponds to 1 NPDCCH period, pp2 corresponds to 2 NPDCCH periods and so on."
+g-RNTIG-RNTI used to scramble the scheduling and transmission of a SC-MTCH.
+mbmsSessionInfoIndicates the ongoing MBMS session in a SC-MTCH.
+"npdcch-NPDSCH-MaxTBS-SC-MTCHMaximum NPDSCH TBS for the SC-MTCH, see TS 36.213 [23]. Value n680 corresponds to 680 bits and value n2536 corresponds to 2536 bits."
+"npdcch-NumRepetition-SC-MTCHThe maximum number of NPDCCH repetitions the UE needs to monitor for SC-MTCH multicast search space, see TS 36.213 [23]."
+"npdcch-Offset-SC-MTCHFractional period offset of starting subframe for NPDCCH multicast search space for SC-MTCH, see TS 36.213 [23]."
+"npdcch-startSF-SC-MTCHStarting subframes configuration of the NPDCCH multicast search space for SC-MTCH, see TS 36.213 [23]. Value v1dot5 corresponds to 1.5, value 2 corresponds to 2 and so on.For IoT NTN TDD mode, value v4 corresponds to 4*11.25 and value v8 corresponds to 8*11.25."
+"onDurationTimerSCPTMTimer for SC-MTCH reception in TS 36.321 [6]. Value in number of NPDCCH periods. Value pp1 corresponds to 1 NPDCCH period, pp2 corresponds to 2 NPDCCH periods and so on."
+"schedulingPeriodStartOffsetSCPTMSCPTM-SchedulingCycle and SCPTM-SchedulingOffset in TS 36.321 [6]. The value of SCPTM-SchedulingCycle is in number of sub-frames. Value sf10 corresponds to 10 sub-frames, sf20 corresponds to 20 sub-frames and so on. The value of SCPTM-SchedulingOffset is in number of sub-frames."
+sc-mtch-CarrierConfigDownlink carrier that is used for SC-MTCH.
+"sc-mtch-NeighbourCellIndicates neighbour cells which also provide this service on SC-MTCH. The first bit is set to 1 if the service is provided on SC-MTCH in the first cell in scptmNeighbourCellList, otherwise it is set to 0. The second bit is set to 1 if the service is provided on SC-MTCH in the second cell in scptmNeighbourCellList, and so on. If this field is absent, the UE shall assume that this service is not available on SC-MTCH in any neighbour cell."
+"sc-mtch-SchedulingInfoDRX information for the SC-MTCH.If this field is absent, DRX is not used for the SC-MTCH."

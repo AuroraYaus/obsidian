@@ -1,0 +1,272 @@
+<table>
+  <tr>
+    <td>OtherConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>aerial-FlightPathAvailabilityConfigConfiguration for the UE to indicate the availability of flight path information for Aerial UE operation.</td>
+  </tr>
+  <tr>
+    <td>applicabilityConfigCellIdIndicates the serving cell that the applicabilitySetConfigCSI-ToAddModList and applicabilitySetConfigCSI-ToReleaseList refer to.</td>
+  </tr>
+  <tr>
+    <td>applicabilityConfigToAddModListIndicates the list of sets of prediction related parameters configured for UE applicability reporting in the serving cell.</td>
+  </tr>
+  <tr>
+    <td>applicabilityReportConfigConfiguration for the UE to indicate the applicability of configurations subject to the applicability determination procedure.</td>
+  </tr>
+  <tr>
+    <td>applicabilitySetConfigIdIndicates the ID of a set of prediction related parameters.</td>
+  </tr>
+  <tr>
+    <td>applicabilitySetConfigCSI-ToAddModListIndicates for each serving cell the list of sets of prediction related parameters configured for UE applicability reporting.</td>
+  </tr>
+  <tr>
+    <td>bfd-RelaxationReportingConfigConfiguration for the UE to report the relaxation state of BFD measurements.</td>
+  </tr>
+  <tr>
+    <td>btNameListConfiguration for the UE to report measurements from specific Bluetooth beacons. NG-RAN configures the field if includeBT-Meas is configured for one or more measurements.</td>
+  </tr>
+  <tr>
+    <td>candidateBandwidthIndicates the bandwidth of the candidate frequency range around the center frequency.</td>
+  </tr>
+  <tr>
+    <td>candidateCenterFreqIndicates the center frequency of the candidate frequency range.</td>
+  </tr>
+  <tr>
+    <td>candidateServingFreqListNRIndicates for each candidate NR serving cells, the center frequency around which UE is requested to report IDC issues.</td>
+  </tr>
+  <tr>
+    <td>candidateServingFreqRangeListNRIndicates the candidate frequency range with the combination of the center frequency and the candidate bandwidth, around which the UE is requested to report IDC issues.</td>
+  </tr>
+  <tr>
+    <td>closestLocsToReportIndicates the number of closest reference locations the UE shall indicate for assisted SMTC and measurement gap configuration in RRC_CONNECTED state.</td>
+  </tr>
+  <tr>
+    <td>codebookConfigCodebook configuration. If this field is included, its codebookType can only be set to typeII-Doppler-r18.</td>
+  </tr>
+  <tr>
+    <td>connectedReportingIndicates that the UE can report a preference to remain in RRC_CONNECTED state following a report to leave RRC_CONNECTED state. If absent, the UE cannot report a preference to stay in RRC_CONNECTED state.</td>
+  </tr>
+  <tr>
+    <td>dataCollectionCandidateConfigIdIndicates the ID of a candidate configuration for UE-side data collection.</td>
+  </tr>
+  <tr>
+    <td>dataCollectionCandidateConfigToAddModListIndicates for each serving cell the list of candidate radio resources configured for UE-side data collection. The UE is not expected to perform measurements solely based on the configurations provided by this IE.</td>
+  </tr>
+  <tr>
+    <td>dataCollectionPreferenceConfigConfiguration for the UE to report its preference to be configured with radio resources for UE-side data collection.</td>
+  </tr>
+  <tr>
+    <td>dataCollectionServCellIndexIndex of the serving cell that the dataCollectionCandidateConfigParameterToAddModList and dataCollectionCandidateConfigParameterToReleaseList refer to.</td>
+  </tr>
+  <tr>
+    <td>delayBudgetReportingProhibitTimerProhibit timer for delay budget reporting. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot4 means prohibit timer is set to 0.4 seconds, and so on.</td>
+  </tr>
+  <tr>
+    <td>disableApplicabilityCSI-ReportConfigIf present, the UE does not report the applicability for configured reportConfigId associated to a CSI-ReportConfig including configurationForBM-PredictionAndDataCollection with reportQuantity-r19 set to p-CRI or p-SSB-Index or p-CRI-RSRP or p-SSB-Index-RSRP.NOTE:The network implementation is expected to ensure that the UE is able to report applicability updates for the configured reportConfigId associated to a CSI-ReportConfig including configurationForBM-PredictionAndDataCollection with reportQuantity-r19 set to p-CRI or p-SSB-Index or p-CRI-RSRP or p-SSB-Index-RSRP.</td>
+  </tr>
+  <tr>
+    <td>drx-PreferenceConfigConfiguration for the UE to report assistance information to inform the gNB about the UE&#x27;s DRX preferences for power saving.</td>
+  </tr>
+  <tr>
+    <td>drx-PreferenceProhibitTimerProhibit timer for DRX preferences assistance information reporting. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>fbs-PreferenceReportingConfigConfiguration for the UE to report its preference on L3 fast beam sweeping operation. Network only configures this field when the UE is configured with fbs-Config.</td>
+  </tr>
+  <tr>
+    <td>fbs-PreferenceReportingConfigProhibitTimerProhibit timer for UE preference reporting on L3 fast beam sweeping operation. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>gapOccasionCancelRatioProhibitTimerProhibit timer for transmitting the assistance information of gap occasion cancellation ratio. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>gapOccasionCancelRatioReportConfigConfiguration for the UE to report preference for gap occasion cancellation ratio.</td>
+  </tr>
+  <tr>
+    <td>idc-AssistanceConfigConfiguration for the UE to report assistance information to inform the gNB about UE detected IDC problem.</td>
+  </tr>
+  <tr>
+    <td>loggedDataCollectionAssistanceConfigConfiguration for the UE to report assistance information related to logging of radio measurements for network-side data collection. When configured with loggedDataCollectionAssistanceConfig the UE reports that it has logged radio measurements for network-side data collection when the memory reserved for logging of radio measurements for network-side data collection has become full and it reports when it determines that it has entered a low power state.</td>
+  </tr>
+  <tr>
+    <td>loggedDataCollectionMemoryThresholdMemory threshold for the UE to report that it has logged radio measurements for network-side data collection, if the amount of data in the memory reserved for logging of radio measurements for network-side data collection has become equal to or above this threshold. Value kB16 means the threshold is set to 16 kB and so on.</td>
+  </tr>
+  <tr>
+    <td>lpwus-OffsetPreferenceConfigConfiguration for the UE to report assistance information to inform the gNB about the UE’s preferred time offset for LP-WUS monitoring for RRC_CONNECTED mode.</td>
+  </tr>
+  <tr>
+    <td>lpwus-OffsetPreferenceProhibitTimerProhibit timer for offset preferences assistance information reporting for LP-WUS monitoring. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>maxBW-PreferenceConfigConfiguration for the UE to report assistance information to inform the gNB about the UE&#x27;s preferred bandwidth for power saving.</td>
+  </tr>
+  <tr>
+    <td>maxBW-PreferenceProhibitTimerProhibit timer for preferred bandwidth assistance information reporting. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>maxCC-PreferenceConfigConfiguration for the UE to report assistance information to inform the gNB about the UE&#x27;s preferred number of carriers for power saving.</td>
+  </tr>
+  <tr>
+    <td>maxBW-PreferenceConfigFR2-2Configuration for the UE to report assistance information to inform the gNB about the UE&#x27;s preferred bandwidth for power saving for FR2-2.</td>
+  </tr>
+  <tr>
+    <td>maxCC-PreferenceProhibitTimerProhibit timer for preferred number of carriers assistance information reporting. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>maxMIMO-LayerPreferenceConfigConfiguration for the UE to report assistance information to inform the gNB about the UE&#x27;s preferred number of MIMO layers for power saving.</td>
+  </tr>
+  <tr>
+    <td>maxMIMO-LayerPreferenceConfigFR2-2Configuration for the UE to report assistance information to inform the gNB about the UE&#x27;s preferred number of MIMO layers for power saving for FR2-2.</td>
+  </tr>
+  <tr>
+    <td>maxMIMO-LayerPreferenceProhibitTimerProhibit timer for preferred number of number of MIMO layers assistance information reporting. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>minSchedulingOffsetPreferenceConfigConfiguration for the UE to report assistance information to inform the gNB about the UE&#x27;s preferred minimumSchedulingOffset value for cross-slot scheduling for power saving.</td>
+  </tr>
+  <tr>
+    <td>minSchedulingOffsetPreferenceConfigExtConfiguration for the UE to report assistance information to inform the gNB about the UE&#x27;s preferred minimumSchedulingOffset value for cross-slot scheduling for power saving for SCS 480 kHz and/or 960 kHz.</td>
+  </tr>
+  <tr>
+    <td>minSchedulingOffsetPreferenceProhibitTimerProhibit timer for preferred minimumSchedulingOffset assistance information reporting. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>multiRx-PreferenceReportingConfigFR2Configuration for the UE to report assistance information to inform gNB about the UE&#x27;s preference on multi-Rx operation for FR2.</td>
+  </tr>
+  <tr>
+    <td>multiRx-PreferenceReportingConfigFR2ProhibitTimerProhibit timer for multi-Rx operation preference reporting for FR2. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>musim-CandidateBandListA list of candidate bands that the network intends to use, e.g., for serving cells and for which the UE is requested to provide information on temporary restricted capabilities for MUSIM operation as specified in clause 5.7.4.3.</td>
+  </tr>
+  <tr>
+    <td>musim-GapAssistanceConfigConfiguration for the UE to report assistance information for gap preference.</td>
+  </tr>
+  <tr>
+    <td>musim-GapPriorityAssistanceConfigIndicates the UE is allowed to provide MUSIM assistance information for gap(s) priority and/or MUSIM gaps keep preference.</td>
+  </tr>
+  <tr>
+    <td>musim-GapProhibitTimerProhibit timer for MUSIM assistance information reporting for gap preference.</td>
+  </tr>
+  <tr>
+    <td>musim-LeaveAssistanceConfigConfiguration for the UE to report assistance information for leaving RRC_CONNECTED for MUSIM purpose.</td>
+  </tr>
+  <tr>
+    <td>musim-LeaveWithoutResponseTimerIndicates the timer for the UE to enter RRC_IDLE for MUSIM purpose as defined in clause 5.3.8.6.</td>
+  </tr>
+  <tr>
+    <td>musim-ProhibitTimerIndicates the prohibit timer for UE temporary restricted capabilities for MUSIM operation. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot1 means prohibit timer is set to 0.1 seconds and so on.</td>
+  </tr>
+  <tr>
+    <td>musim-WaitTimerIndicates the wait timer for UE temporary restricted capabilities for MUSIM operation. Value in milliseconds. Value ms10 means wait timer is set to 10 milliseconds, value ms20 means wait timer is set to 20 milliseconds and so on.</td>
+  </tr>
+  <tr>
+    <td>obtainCommonLocationRequests the UE to attempt to have detailed location information available using GNSS. NR configures the field if includeCommonLocationInfo is configured for one or more measurements.</td>
+  </tr>
+  <tr>
+    <td>overheatingAssistanceConfigConfiguration for the UE to report assistance information to inform the gNB about UE detected internal overheating.</td>
+  </tr>
+  <tr>
+    <td>overheatingIndicationProhibitTimerProhibit timer for overheating assistance information reporting. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>parametersIndicates the parameters for a candidate UE-side data collection configuration.</td>
+  </tr>
+  <tr>
+    <td>parametersForBMIndicates the parameters for a candidate UE-side data collection configuration for beam management.</td>
+  </tr>
+  <tr>
+    <td>parametersForCSI-InferencePredictionIndicates the parameters for a candidate UE-side data collection configuration for CSI prediction.</td>
+  </tr>
+  <tr>
+    <td>pdu-SessionsToReportUL-TrafficInfoListA list of PDU sessions for which the UE shall report UL traffic information.</td>
+  </tr>
+  <tr>
+    <td>propDelayDiffReportConfigConfiguration for the UE to report service link propagation delay difference between serving cell and neighbour cell(s).</td>
+  </tr>
+  <tr>
+    <td>qfi-ToReportUL-TrafficInfoListA list of QFIs of a PDU session for which the UE shall report UL traffic information.</td>
+  </tr>
+  <tr>
+    <td>referenceTimePreferenceReportingIf present, the field indicates the UE is configured to provide reference time assistance information.</td>
+  </tr>
+  <tr>
+    <td>refLocListA list of reference locations for assisted SMTC and measurement gap configuration in RRC_CONNECTED state. If this field is absent when closestLocsToReport is signalled, the UE uses the refLocList provided in SIB19, if available.</td>
+  </tr>
+  <tr>
+    <td>releasePreferenceConfigConfiguration for the UE to report assistance information to inform the gNB about the UE&#x27;s preference to leave RRC_CONNECTED state.</td>
+  </tr>
+  <tr>
+    <td>releasePreferenceProhibitTimerProhibit timer for release preference assistance information reporting. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on. Value infinity means that once a UE has reported a release preference, the UE cannot report a release preference again during the RRC connection.</td>
+  </tr>
+  <tr>
+    <td>rlm-RelaxationReportingConfigConfiguration for the UE to report the relaxation state of RLM measurements.</td>
+  </tr>
+  <tr>
+    <td>s-SearchDeltaP-StationaryParameter &quot;SSearchDeltaP-StationaryConnected&quot; in 5.7.4.4. Value dB2 corresponds to 2 dB, dB3 corresponds to 3 dB and so on.</td>
+  </tr>
+  <tr>
+    <td>scg-DeactivationPreferenceConfigConfiguration of the UE to indicate its preference for SCG deactivation.</td>
+  </tr>
+  <tr>
+    <td>scg -StatePreferenceProhibitTimerProhibit timer for UE indication of its preference for SCG deactivation. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>sensorNameListConfiguration for the UE to report measurements from specific sensors. NG-RAN configures the field if includeSensor-Meas is configured for one or more measurements.</td>
+  </tr>
+  <tr>
+    <td>sl-AssistanceConfigNRIndicate whether UE is configured to provide configured grant assistance information for NR sidelink communication.</td>
+  </tr>
+  <tr>
+    <td>sl-PRS-AssistanceConfigNRIndicate whether UE is configured to provide configured grant assistance information for NR sidelink positioning.</td>
+  </tr>
+  <tr>
+    <td>sn-InitiatedPSCellChangeThis field indicates whether the PSCell change procedure or the CPC included in the RRCReconfiguration message is SN initiated or not. In case of SN initiated inter-SN PSCell change procedure or SN configured inter-SN CPC, MN includes this field in the MCG RRC Reconfiguration message. In case of intra-SN PSCell change, or intra-SN CPC, source SN includes the field in the SCG RRC Reconfiguration.</td>
+  </tr>
+  <tr>
+    <td>sourceDAPS-FailureReportingThis field indicates whether the UE shall generate the SHR upon successfully completing the DAPS handover to the target cell and if a radio link failure was experienced in the source PCell while executing the DAPS handover. This field is set in the otherConfig configured by the source cell of the DAPS handover.</td>
+  </tr>
+  <tr>
+    <td>successHO-ConfigConfiguration for the UE to report the successful handover information to the network.</td>
+  </tr>
+  <tr>
+    <td>successPSCell-ConfigConfiguration for the UE to report the successful PSCell change or addition information to the network. When this field is configured in CG-Config, the thresholdPercentageT304-SCG is absent.</td>
+  </tr>
+  <tr>
+    <td>t-SearchDeltaP-StationaryParameter &quot;TSearchDeltaP-StationaryConnected&quot; in 5.7.4.4. Value in seconds. Value s5 means 5 seconds, value s10 means 10 seconds and so on.</td>
+  </tr>
+  <tr>
+    <td>thresholdPercentageT304This field indicates the threshold for the ratio in percentage between the elapsed T304 timer and the configured value of the T304 timer. Value p40 corresponds to 40%, value p60 corresponds to 60% and so on. This field is set in the otherConfig configured by the target cell of the handover.</td>
+  </tr>
+  <tr>
+    <td>thresholdPercentageT310This field indicates the threshold for the ratio in percentage between the elapsed T310 timer and the configured value of the T310 timer. Value p40 corresponds to 40%, value p60 corresponds to 60% and so on. This field is set in the otherConfig configured by the source cell of the handover.</td>
+  </tr>
+  <tr>
+    <td>thresholdPercentageT312This field indicates the threshold for the ratio in percentage between the elapsed T312 timer and the configured value(s) of the T312 timer. Value p20 corresponds to 20%, value p40 corresponds to 40% and so on. This field is set in the otherConfig configured by the source cell of the handover.</td>
+  </tr>
+  <tr>
+    <td>thresholdPercentageT304-SCGThis field indicates the threshold for the ratio in percentage between the elapsed T304 timer associated to the target PSCell and the configured value of the T304 timer. Value p40 corresponds to 40%, value p60 corresponds to 60% and so on. This field is set in the otherConfig configured by the target PSCell of the PSCell change or addition.</td>
+  </tr>
+  <tr>
+    <td>thresholdPercentageT310-SCGThis field indicates the threshold for the ratio in percentage between the elapsed T310 timer associated to the source PSCell and the configured value of the T310 timer. Value p40 corresponds to 40%, value p60 corresponds to 60% and so on. This field is set in the otherConfig configured by the source PSCell of the PSCell change or CPC, or in the otherConfig configured by the PCell for the PSCell change or CPC. This field is not configured at the time of PSCell change via SRB3.</td>
+  </tr>
+  <tr>
+    <td>thresholdPercentageT312-SCGThis field indicates the threshold for the ratio in percentage between the elapsed T312 timer associated to the measurement identity of the target PSCell and the configured value of the T312 timer. Value p20 corresponds to 20%, value p40 corresponds to 40% and so on. This field is set in the otherConfig configured by the source PSCell of the PSCell change or CPC, or in the otherConfig configured by the PCell for the PSCell change or CPC. This field is not configured at the time of PSCell change via SRB3.</td>
+  </tr>
+  <tr>
+    <td>threshPropDelayDiffThreshold for one-way service link propagation delay difference report as specified in 5.7.4.2.</td>
+  </tr>
+  <tr>
+    <td>ul-GapFR2-PreferenceConfigIndicates whether UE is configured to request for FR2 UL gap activation/deactivation and preferred FR2 UL gap pattern.</td>
+  </tr>
+  <tr>
+    <td>wlanNameListConfiguration for the UE to report measurements from specific WLAN APs. NG-RAN configures the field if includeWLAN-Meas is configured for one or more measurements.</td>
+  </tr>
+  <tr>
+    <td>ul-TrafficInfoProhibitTimerProhibit timer for UL traffic information reporting. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>ul-TrafficInfoReportingConfigConfiguration for the UE to report UL traffic information.</td>
+  </tr>
+</table>

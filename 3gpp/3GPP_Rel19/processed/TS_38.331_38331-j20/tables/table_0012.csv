@@ -1,0 +1,2 @@
+Conditional Presence,Explanation
+ClockQualityDetailsLevel,"Field eventID-TSS is mandatory present if clockQualityDetailsLevel is present. Otherwise, the field is optionally present, Need M."

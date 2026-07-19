@@ -1,0 +1,3 @@
+AvailabilityCombinationRB-Groups field descriptions
+rb-SetGroupsIndicates the RB set groups configured for the availability combination. Each group includes consecutive RB sets.
+rb-SetsIndicates the one or more RB set indexes associated to one or more RB sets configured for one RB set group.

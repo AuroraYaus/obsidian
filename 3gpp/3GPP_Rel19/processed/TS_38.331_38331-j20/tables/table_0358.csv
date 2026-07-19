@@ -1,0 +1,6 @@
+MeasObjectUTRA-FDD field descriptions
+carrierFreqIdentifies UTRA-FDD carrier frequency for which this configuration is valid. NR does not configure more than one measurement object for the same physical frequency regardless of the ARFCN used to indicate this.
+cellIndexUTRA-FDDEntry index in the neighbouring cell list.
+cellsToAddModListList of UTRA-FDD cells to add/modify in the neighbouring cell list.
+cellsToRemoveListList of cells to remove from the neighbouring cell list.
+utra-FDD-Q-OffsetRangeUsed to indicate a frequency specific offset to be applied when evaluating triggering conditions for measurement reporting. The value is in dB.

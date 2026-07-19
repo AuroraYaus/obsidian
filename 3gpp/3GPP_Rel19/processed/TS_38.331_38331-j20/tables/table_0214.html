@@ -1,0 +1,74 @@
+<table>
+  <tr>
+    <td>Conditional Presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>2Tx</td>
+    <td>The field is optionally present, Need R, if uplinkTxSwitching is configured; otherwise it is absent, Need R.</td>
+  </tr>
+  <tr>
+    <td>3Tx</td>
+    <td>The field is optionally present, Need R, if uplinkTxSwitching is configured; otherwise it is absent, Need R.</td>
+  </tr>
+  <tr>
+    <td>BWP-Reconfig</td>
+    <td>The field is optionally present, Need N, if the BWPs are reconfigured or if serving cells are added or removed. Otherwise it is absent.</td>
+  </tr>
+  <tr>
+    <td>DirectToIndirect-PathSwitch</td>
+    <td>The field is mandatory present for the L2 U2N remote UE at path switch to the target L2 U2N Relay UE (including direct to indirect path switch, single-hop indirect to single-hop indirect path switch, multi-hop indirect to single-hop indirect path switch and direct/single-hop indirect to multi-hop indirect path switch). It is absent otherwise.Note:the target L2 U2N Relay UE should not be the same as serving L2 U2N Relay UE for inter-gNB indirect to indirect path switch.</td>
+  </tr>
+  <tr>
+    <td>LTM</td>
+    <td>This field is optionally present, Need N, if reconfigurationWithSync is included within ltm-CandidateConfig. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>MP</td>
+    <td>This field is optionally present, Need N, if a L2 U2N remote UE is configured to perform MP direct path addition during indirect-to-direct path swith procedure, or to perform MP direct path release during direct-to-indirect path switch procedure. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>NCR</td>
+    <td>The field is optionally present, Need M, for NCR-MT. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>ODssbAOssb</td>
+    <td>The field is mandatory present, when absoluteFrequencySSB of the serving cell is absent or when absoluteFrequencySSB of the serving cell is present but OD-SSB, when activated, is to be transmitted with a frequency different than this frequency in the serving cell. It is absent, Need R, otherwise.</td>
+  </tr>
+  <tr>
+    <td>ODssbOnly</td>
+    <td>The field is optionally present, Need R, when absoluteFrequencySSB of the serving cell is absent. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>PreConfigMG</td>
+    <td>The field is optionally present, Need R, if there is at least one per UE gap configured with preConfigInd or there is at least one per FR gap of the same FR which the SCell belongs to and configured with preConfigInd. It is absent, Need R, otherwise.</td>
+  </tr>
+  <tr>
+    <td>ReconfWithSync</td>
+    <td>The field is mandatory present in the RRCReconfiguration message:-in each configured CellGroupConfig for which the SpCell changes,-in the masterCellGroup:-at change of AS security key derived from KgNB,-in an RRCReconfiguration message contained in a DLInformationTransferMRDC message,-path switch of L2 U2N remote UE to the target PCell,-path switch of L2 U2N remote UE to the target L2 U2N Relay UE,-in the secondaryCellGroup at:-PSCell addition,-SCG resume with NR-DC or (NG)EN-DC,-update of required SI for PSCell,-change of AS security key derived from S-KgNB in NR-DC while the UE is configured with at least one radio bearer with keyToUse set to secondary and that is not released by this RRCReconfiguration message,-MN handover in (NG)EN-DC.Otherwise, it is optionally present, need M. The field is absent in the masterCellGroup in RRCResume and RRCSetup messages and is absent in the masterCellGroup in RRCReconfiguration messages if source configuration is not released during DAPS handover.</td>
+  </tr>
+  <tr>
+    <td>SCellAdd</td>
+    <td>The field is mandatory present upon SCell addition; otherwise it is absent, Need M.</td>
+  </tr>
+  <tr>
+    <td>SCellAddMod</td>
+    <td>The field is mandatory present upon SCell addition; otherwise it is optionally present, need M.</td>
+  </tr>
+  <tr>
+    <td>SCellAddSync</td>
+    <td>The field is optionally present, Need N:-in the masterCellGroup at-SCell addition,-reconfiguration with sync,-resume of an RRC connection.-in the secondaryCellGroup, when the SCG is not indicated as deactivated at:-SCG activation while the SCG was previously deactivated,-SCell addition,-reconfiguration with sync.It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>SCG</td>
+    <td>The field is mandatory present in an SpCellConfig for the PSCell. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>SCellSIB20-Opt</td>
+    <td>This field is optionally present, Need M, if the field sCellSIB20 is configured. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>SCG-Opt</td>
+    <td>The field is optionally present, Need M, in an SpCellConfig for the PSCell. It is absent otherwise.</td>
+  </tr>
+</table>

@@ -1,0 +1,3 @@
+Conditional Presence,Explanation
+SIB12,"This field is optional present if included within SIB12, need R. Otherwise, the field is absent."
+notSIB12,"The field is absent in SIB12. Otherwise, it is optional present, Need R"

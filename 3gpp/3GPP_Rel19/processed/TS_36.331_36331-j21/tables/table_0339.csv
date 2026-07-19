@@ -1,0 +1,6 @@
+RRCConnectionResumeRequest-NB field descriptions
+anr-InfoAvailableIndicates the availability of ANR measurement information when the UE is perfoming UP-EDT.
+earlyContentionResolutionValue TRUE indicates UE supports MAC PDU containing the UE contention resolution identity MAC control element without RRC response message. This field is always set to TRUE in this version of the specification.
+resumeCauseProvides the resume cause for the RRC connection resume request as provided by the upper layers.eNB is not expected to reject a RRCConnectionResumeRequest due to unknown cause value being used by the UE.
+resumeIDUE identity to facilitate UE context retrieval at eNB.
+shortResumeMAC-IAuthentication token to facilitate UE authentication at eNB.

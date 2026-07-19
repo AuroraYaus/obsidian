@@ -1,0 +1,4 @@
+UE Category,Total layer 2 buffer size [bytes]
+Category NB1,4000
+Category NB2 (Note 1),8000 or 12000
+"NOTE 1:The UE supports ""Total layer 2 buffer size"" of 12000 bytes if the UE indicates support of npdsch-16QAM-r17. Otherwise the UE supports 8000 bytes.",

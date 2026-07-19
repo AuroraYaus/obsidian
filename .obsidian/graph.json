@@ -1,0 +1,275 @@
+{
+  "collapse-filter": true,
+  "search": "-path:3gpp/3GPP_Rel19",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#crc",
+      "color": {
+        "a": 1,
+        "rgb": 14427686
+      }
+    },
+    {
+      "query": "tag:#harq",
+      "color": {
+        "a": 1,
+        "rgb": 14753096
+      }
+    },
+    {
+      "query": "tag:#redundancy-version",
+      "color": {
+        "a": 1,
+        "rgb": 14362487
+      }
+    },
+    {
+      "query": "tag:#soft-buffer",
+      "color": {
+        "a": 1,
+        "rgb": 5195493
+      }
+    },
+    {
+      "query": "tag:#llr",
+      "color": {
+        "a": 1,
+        "rgb": 165063
+      }
+    },
+    {
+      "query": "tag:#transport-block",
+      "color": {
+        "a": 1,
+        "rgb": 14251782
+      }
+    },
+    {
+      "query": "tag:#code-block",
+      "color": {
+        "a": 1,
+        "rgb": 15357964
+      }
+    },
+    {
+      "query": "tag:#cbg",
+      "color": {
+        "a": 1,
+        "rgb": 13273604
+      }
+    },
+    {
+      "query": "tag:#segmentation",
+      "color": {
+        "a": 1,
+        "rgb": 366185
+      }
+    },
+    {
+      "query": "tag:#rate-matching",
+      "color": {
+        "a": 1,
+        "rgb": 889992
+      }
+    },
+    {
+      "query": "tag:#ldpc",
+      "color": {
+        "a": 1,
+        "rgb": 1483594
+      }
+    },
+    {
+      "query": "tag:#turbo",
+      "color": {
+        "a": 1,
+        "rgb": 9647082
+      }
+    },
+    {
+      "query": "tag:#polar",
+      "color": {
+        "a": 1,
+        "rgb": 12592851
+      }
+    },
+    {
+      "query": "tag:#early-stopping",
+      "color": {
+        "a": 1,
+        "rgb": 6660877
+      }
+    },
+    {
+      "query": "tag:#index",
+      "color": {
+        "a": 1,
+        "rgb": 2450411
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L0",
+      "color": {
+        "a": 1,
+        "rgb": 6583435
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L1/T1.",
+      "color": {
+        "a": 1,
+        "rgb": 561586
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L1/T2.",
+      "color": {
+        "a": 1,
+        "rgb": 4674921
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L1/T3.",
+      "color": {
+        "a": 1,
+        "rgb": 14427686
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L1/T4.",
+      "color": {
+        "a": 1,
+        "rgb": 14753096
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L1/T5.",
+      "color": {
+        "a": 1,
+        "rgb": 3359061
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L2/T6.",
+      "color": {
+        "a": 1,
+        "rgb": 9647082
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L2/T7.",
+      "color": {
+        "a": 1,
+        "rgb": 15357964
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L2/T8.",
+      "color": {
+        "a": 1,
+        "rgb": 1483594
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L2/T9.",
+      "color": {
+        "a": 1,
+        "rgb": 889992
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L2/T10.",
+      "color": {
+        "a": 1,
+        "rgb": 12592851
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L2/T11.",
+      "color": {
+        "a": 1,
+        "rgb": 8141549
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L3/T12.",
+      "color": {
+        "a": 1,
+        "rgb": 2450411
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L3/T13.",
+      "color": {
+        "a": 1,
+        "rgb": 14251782
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L3/T14.",
+      "color": {
+        "a": 1,
+        "rgb": 8141549
+      }
+    },
+    {
+      "query": "path:3gpp/docs/L3/T15.",
+      "color": {
+        "a": 1,
+        "rgb": 366185
+      }
+    },
+    {
+      "query": "path:3gpp/docs/audits",
+      "color": {
+        "a": 1,
+        "rgb": 10033947
+      }
+    },
+    {
+      "query": "[type:channel]",
+      "color": {
+        "a": 1,
+        "rgb": 4674921
+      }
+    },
+    {
+      "query": "[type:spec]",
+      "color": {
+        "a": 1,
+        "rgb": 3359061
+      }
+    },
+    {
+      "query": "[type:algorithm]",
+      "color": {
+        "a": 1,
+        "rgb": 16347926
+      }
+    },
+    {
+      "query": "[type:definition]",
+      "color": {
+        "a": 1,
+        "rgb": 13273604
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 2.25,
+  "close": true
+}

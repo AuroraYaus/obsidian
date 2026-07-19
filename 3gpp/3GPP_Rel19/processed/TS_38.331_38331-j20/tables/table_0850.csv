@@ -1,0 +1,3 @@
+CG-CandidateInfo field descriptions
+cg-CandidateInfoIdSSB frequency and Physical Cell Identity of the candidate target cell.
+candidateCG-ConfigCG-Config message corresponding to the cell indicated by cg-CandidateInfoId.

@@ -1,0 +1,4 @@
+Conditional Presence,Explanation
+AsyncCA,"This field is mandatory present when configuring and reconfiguring FR2 gap pattern to UE in:-(NG)EN-DC or NR SA with asynchronous CA involving FR2 carrier(s);-NE-DC or NR-DC with asynchronous CA involving FR2 carrier(s), if the field refServCellIndicator is set to mcg-FR2.Otherwise, it is absent, Need R."
+NEDCorNRDC,"This field is mandatory present when configuring and reconfiguring gap pattern to UE in NE-DC or NR-DC. Otherwise, it is absent, Need R."
+PRS,"This field is optionally present, Need R, when configuring gap pattern to UE for measurements of DL-PRS configured via LPP (TS 37.355 [49]). Otherwise, it is absent."

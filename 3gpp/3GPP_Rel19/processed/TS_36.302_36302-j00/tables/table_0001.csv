@@ -1,0 +1,9 @@
+,Physical Channel Combination,Transport Channel Combination,Mandatory dependent on UE radio access capabilities,Comment
+1,q x PUSCH,UL-SCH,Mandatory,"Note 1, Note 2, Note 6"
+2,k x PRACH,RACH,Mandatory,Note 4
+3,j x k x PUCCH,N/A,Mandatory,"CSI (not on SPUCCH) and Scheduling Requests are provided to Layer 2. Note 4, Note5, Note 6"
+4,q x PUSCH+ j x k x PUCCH,UL-SCH,Mandatory for UEs supporting simultaneous transmission of PUSCH and PUCCH,"Note1, Note 2, Note 4, Note5, Note 6"
+5,k x PRACH+(q-k) x PUSCH,RACHUL-SCH,Mandatory for UEs supporting multiple TAGs,"Note 1, Note 2, Note 3, Note 4, Note 6"
+6,k x PRACH + j x k x PUCCH,RACH,Mandatory for UEs supporting multiple TAGs,"Note 3, Note 4, Note5, Note 6"
+7,k x PRACH+(q-k) x PUSCH+ j x k x PUCCH,RACHUL-SCH,Mandatory for UEs supporting simultaneous transmission of PUSCH and PUCCH and multiple TAGs,"Note 1, Note 2, Note 3, Note 4, Note5, Note 6"
+"Note 1:One PUSCH per UL CC.Note 2:q is the number of UL CCs supported by the UE. q = 1 implies non-CA capable UE.Note 3:PRACH and PUSCH/PUCCH/SPUCCH are from cells in different Timing Advance Groups, see TS 36.321 [12].Note 4:k is the number of CGs supported by the UE. k = 1 implies non-DC capable UE. k = 2 implies DC capable UE, and one PUCCH/SPUCCH and one PRACH per CG.Note 5:j is the number of PUCCH groups supported by the UE. j = 1 implies PUCCH/SPUCCH transmission is supported only on PCell. j = 2 implies PUCCH/SPUCCH transmission is supported on PCell and an SCell.Note 6:Short TTI capable UEs shall support this Physical Channel Combination also for the subslot/slot equivalent of the mentioned channels (if existing).",,,,

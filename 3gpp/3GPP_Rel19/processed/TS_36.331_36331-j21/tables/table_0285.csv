@@ -1,0 +1,9 @@
+SC-MTCH-InfoList field descriptions
+"drx-InactivityTimerSCPTMTimer for SC-MTCH in TS 36.321 [6]. Value in number of PDCCH sub-frames. Value psf0 corresponds to 0 PDCCH sub-frame and behaviour as specified in 7.3.2 applies, psf1 corresponds to 1 PDCCH sub-frame, psf2 corresponds to 2 PDCCH sub-frames and so on."
+g-RNTIG-RNTI used to scramble the scheduling and transmission of a SC-MTCH.
+mbmsSessionInfoIndicates the ongoing MBMS session in a SC-MTCH.
+"onDurationTimerSCPTMTimer for SC-MTCH reception in TS 36.321 [6]. Value in number of PDCCH sub-frames. Value psf1 corresponds to 1 PDCCH sub-frame, psf2 corresponds to 2 PDCCH sub-frames and so on."
+"p-aParameter: , for the SC-MTCH per G-RNTI, see TS 36.213 [23], clause 5.2. Value dB-6 corresponds to -6 dB, dB-4dot77 corresponds to -4.77 dB etc."
+"schedulingPeriodStartOffsetSCPTMSCPTM-SchedulingCycle and SCPTM-SchedulingOffset in TS 36.321 [6]. The value of SCPTM-SchedulingCycle is in number of sub-frames. Value sf10 corresponds to 10 sub-frames, sf20 corresponds to 20 sub-frames and so on. The value of SCPTM-SchedulingOffset is in number of sub-frames. The E-UTRAN does not configure a maximum value 2048 for sf2048, 4096 for sf4096 or 8192 for sf8192."
+"sc-mtch-neighbourCellIndicates neighbour cells which also provide this service on SC-MTCH. The first bit is set to 1 if the service is provided on SC-MTCH in the first cell in scptmNeighbourCellList, otherwise it is set to 0. The second bit is set to 1 if the service is provided on SC-MTCH in the second cell in scptmNeighbourCellList, and so on. If this field is absent, the UE shall assume that this service is not available on SC-MTCH in any neighbour cell."
+"sc-mtch-schedulingInfoDRX information for the SC-MTCH. If this field is absent, the SC-MTCH may be scheduled in any subframe."

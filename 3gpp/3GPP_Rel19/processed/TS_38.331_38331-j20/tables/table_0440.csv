@@ -1,0 +1,3 @@
+Conditional Presence,Explanation
+Format1-2,"In pdsch-TimeDomainAllocationListDCI-1-2, this field is optionally present, Need R. It is absent, Need R, otherwise."
+Formats1-0_1-1_4-0_4-1_4-2,"In pdsch-TimeDomainAllocationListDCI-1-2, pdsch-TimeDomainAllocationListForMultiPDSCH, and SIB20, this field is absent.Otherwise, in pdsch-TimeDomainResourceAllocationList-r16, this field is optionally present, Need R."

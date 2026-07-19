@@ -1,0 +1,128 @@
+Change history after change control,,,,,,,
+Date,TSG,TSG Doc.,CR,Rev,Cat,Subject/Comment,New version
+2007-12,RP-38,RP-070919,-,-,,Approved at TSG-RAN #38 and placed under Change Control,8.0.0
+2008-03,RP-39,RP-080197,0001,-,,CR to 36.323 with Update of E-UTRAN PDCP specification,8.1.0
+2008-05,RP-40,RP-080412,0002,-,,Clarification of the BSR calculation,8.2.0
+,RP-40,RP-080412,0003,1,,PDCP minor changes,8.2.0
+,RP-40,RP-080387,0004,3,,Addition of a duplicate discard window,8.2.0
+,RP-40,RP-080412,0006,-,,Reference to ROHCv2 profiles,8.2.0
+,RP-40,RP-080412,0010,-,,Bitmap in the DL PDCP status report,8.2.0
+,-,-,-,-,,"Corrections to clauses 5.5.1.1, 5.5.1.2.1 and 5.8 to correctly implement CR0004 Rev 3 (instead of CR0004 Rev 2 of RP-080412).",8.2.1
+2008-09,RP-41,RP-080692,0013,-,,Restructuring of PDCP specification,8.3.0
+,RP-41,RP-080692,0016,-,,Miscellaneous PDCP corrections,8.3.0
+,RP-41,RP-080692,0023,-,,Correction to the PDCP structure,8.3.0
+,RP-41,RP-080692,0033,-,,Initial TX_HFN and RX_HFN values,8.3.0
+2008-12,RP-42,RP-081020,0038,-,,Clarification with regards to the PDCP state variables,8.4.0
+,RP-42,RP-081020,0039,-,,CR 0039 to 36.323 on Correction to PDCP functional view,8.4.0
+,RP-42,RP-081020,0040,-,,"PDCP ""in-sequence delivery and duplicate elimination"" always on",8.4.0
+,RP-42,RP-081020,0041,-,,Proposed CR to 36.323 on Processing of PDCP SDU received from upper layer,8.4.0
+,RP-42,RP-081020,0042,-,,Error in AM receive window behaviour,8.4.0
+,RP-42,RP-081020,0047,-,,Proposed CR on the described scope of Last_Submitted_PDCP_RX_SN,8.4.0
+,RP-42,RP-081020,0048,-,,Proposed CR to move DIRECTION from parameters provided by upper layer,8.4.0
+,RP-42,RP-081020,0049,-,,Clarification on COUNT,8.4.0
+,RP-42,RP-081020,0050,-,,Correction to PDCP procedure for SRB,8.4.0
+,RP-42,RP-081020,0052,-,,Correction to the PDCP re-establishment procedure,8.4.0
+,RP-42,RP-081020,0054,-,,Correction to PDCP functional view,8.4.0
+,RP-42,RP-081020,0055,-,,Miscellaneous PDCP corrections,8.4.0
+,RP-42,RP-081020,0057,-,,Proposed CR for error handling,8.4.0
+,RP-42,RP-081020,0060,-,,Proposed CR to 36.323 on Correction to PDCP Control PDU description,8.4.0
+,RP-42,RP-081020,0061,1,,Corrections to PDCP STATUS REPORT,8.4.0
+2009-03,RP-43,RP-090130,0064,-,,CR to specify maximum PDCP SDU size,8.5.0
+,RP-43,RP-090130,0065,-,,CR with correction on PDCP function of maintaining SNs,8.5.0
+,RP-43,RP-090130,0066,-,,Miscellaneous corrections to 36.323,8.5.0
+,RP-43,RP-090130,0067,-,,Minor issues on PDCP,8.5.0
+,RP-43,RP-090130,0068,-,,Security related corrections,8.5.0
+,RP-43,RP-090130,0069,-,,CR to 36.323 on RRC Parameters,8.5.0
+,RP-43,RP-090130,0070,1,,Corrections on BSR reporting and transmission/ retransmission after an Handover,8.5.0
+,RP-43,RP-090130,0071,-,,Corrections on PDCP services and functions,8.5.0
+,RP-43,RP-090130,0077,-,,PDCP Control PDU as Data Available for transmission in PDCP,8.5.0
+2009-06,RP-44,RP-090515,0078,1,,PDCP Status Report,8.6.0
+,RP-44,RP-090515,0079,1,,Correction to PDCP PDU submission condition in lower layer re-establishment,8.6.0
+,RP-44,RP-090515,0080,2,,Minor correction and clarification to 36.323,8.6.0
+2009-12,RP-46,-,-,,,Upgrade to the Release 9 - no technical change,9.0.0
+2010-12,RP-50,-,-,,,Upgrade to the Release 10 - no technical change,10.0.0
+2011-03,RP-51,RP-110280,0086,-,,Clarification on the number of ROHC instances in a PDCP entity,10.1.0
+,RP-51,RP-110291,0087,-,,Addition of integrity protection of DRBs in PDCP for RNs,10.1.0
+2012-03,RP-57,RP-121377,0099,1,,Introduction of Carrier aggregation enhancements,11.0.0
+2012-12,RP-58,RP-121959,0100,-,,CR to 36.323 on introducing ROHC context continue for intra-ENB handover,11.1.0
+,RP-58,RP-121959,0104,1,,ROHC mode upon handover,11.1.0
+,RP-58,RP-121936,0106,-,,Prevention of HFN de-synchronization due to PDCP SN over-allocation,11.1.0
+2013-03,RP-59,RP-130248,0109,-,,ROHC mode upon handover in UM DRB,11.2.0
+2014-06,RP-64,RP-140869,0113,-,,Clarification of CID reuse,11.3.0
+,RP-64,RP-140892,0123,-,,ROHC Feedback Handling,12.0.0
+2014-09,RP-65,RP-141498,0126,-,,Clarification of the decompressor state and mode after PDCP re-establishment,12.1.0
+2014-12,RP-66,RP-142135,0128,1,,Introduction of dual connectivity in PDCP,12.2.0
+2015-03,RP-67,RP-150373,0133,-,,Reconfiguration of PDCP reordering timer,12.3.0
+,RP-67,RP-150374,0135,-,,Introduction of ProSe Direct Communication,12.3.0
+2015-06,RP-68,RP-150921,0137,-,,COUNT derivation in ProSe,12.4.0
+,RP-68,RP-150921,0138,-,,Miscellaneous corrections for DC,12.4.0
+,RP-68,RP-150921,0139,-,,BSR Triggering for Split Bearers,12.4.0
+2015-12,RP-70,RP-152053,0145,-,,Corrections to Sidelink,12.5.0
+,RP-70,RP-152053,0144,1,,Update to Services expected from Lower Layers in DC,12.5.0
+2015-12,RP-70,RP-152074,0146,-,,Introduction of UL split bearer in PDCP,13.0.0
+,RP-70,RP-152071,0148,1,,Introduction of enhanced CA in PDCP,13.0.0
+,RP-70,RP-152072,0149,2,,Introducing enhanced ProSe,13.0.0
+2016-03,RP-71,RP-160454,0155,-,,Correction for KD-sess Identity in 36.323,13.1.0
+,RP-71,RP-160457,0158,4,,Introduction of LWA into PDCP specification,13.1.0
+2016-06,RP-72,RP-161080,0160,-,,Clarification on LWA,13.2.0
+,RP-72,RP-161078,0162,1,,Data available for transmission due to PDCP data recovery,13.2.0
+,RP-72,RP-161080,0163,-,,Correction for sidelink,13.2.0
+,RP-72,RP-161078,0165,-,,Corrections on RoHC description,13.2.0
+,RP-72,RP-161080,0166,1,,Clarification on Control PDU for LWA,13.2.0
+,RP-72,RP-161080,0169,-,,Polling for LWA status report,13.2.0
+,RP-72,RP-161091,0171,4,,Introduction of NB-IoT functionality to PDCP protocol,13.2.0
+,RP-72,RP-161080,0172,-,,PDCP CR to capture C-IoT optimizations for non-NB-IoT UEs,13.2.0
+2016-06,RP-72,RP-161080,0160,-,,Missing changes from CR0160 (Clarification on LWA) added,13.2.1
+2016-09,RP-73,RP-161756,0175,1,,Addition of COUNT determination for the purpose of HRW setting,13.3.0
+,RP-73,RP-161756,0177,1,,Clarification on NMP in LWA status report,13.3.0
+,RP-73,RP-161756,0179,-,,Corrections to PDCP Status Reporting,13.3.0
+2016-09,RP-73,-,-,-,,MCC cleanup and missing text from v13.2.1 added,13.3.1
+2016-09,RP-73,RP-161746,0174,2,,Introduction of PC5 V2V for 36.323,14.0.0
+2016-09,RP-73,-,-,-,,MCC cleanup,14.0.1
+2016-12,RP-74,RP-162318,0182,-,,Correction of security handling upon connection suspension,14.1.0
+,RP-74,RP-162317,0185,1,,Corrections to handling of uplink split,14.1.0
+2017-03,RP-75,RP-170655,0188,-,A,Correction on channel bandwidth definition for NB-IoT,14.2.0
+,RP-75,RP-170643,0189,-,F,Corrections on V2V in TS 36.323,14.2.0
+,RP-75,RP-170628,0191,2,B,Introduction of Enhanced LTE-WLAN Aggregation (eLWA),14.2.0
+,RP-76,RP-171225,0197,1,F,Update of ROHC profile reference,14.3.0
+,RP-76,RP-171225,0198,-,B,Enable Uplink-Only RoHC operations,14.3.0
+,RP-76,RP-171244,0199,-,A,Clarification on polling,14.3.0
+2017-09,RP-77,RP-171915,0200,3,C,Support of RLC UM for LWA bearer,14.4.0
+2017-12,RP-78,RP-172617,0210,-,F,Correction to RLC UM for LWA,14.5.0
+,RP-78,RP-172617,0216,1,F,Deliver stored PDCP SDUs for LWA bearer with RLC UM at PDCP re-establishment,14.5.0
+2018-07,RP-80,RP-181221,0211,4,B,Running 36.323 CR to introduce assistance information for local cache,15.0.0
+,RP-80,RP-181226,0217,3,B,Introduction of DEFLATE based UDC Solution,15.0.0
+,RP-80,RP-181252,0231,2,B,Introduction of further NB-IoT enhancements in 36.323,15.0.0
+,RP-80,RP-181248,0232,2,B,Introduction of V2X duplication to TS 36.323,15.0.0
+,RP-80,RP-181247,0235,-,B,Introduction of Ultra Reliable Low Latency Communication for LTE,15.0.0
+2018-09,RP-81,RP-181955,0237,1,F,Calculation of checksum,15.1.0
+,RP-81,RP-181955,0238,-,F,Correction to description for UDC-only PDU,15.1.0
+,RP-81,RP-181949,0241,-,F,Deliver stored PDCP SDUs for UM DRB at PDCP re-establishment,15.1.0
+2018-12,RP-82,RP-182678,0243,2,F,CR on supporting of the ROHC for PDCP duplication,15.2.0
+,RP-82,RP-182678,0249,3,F,Correction on PDCP for eV2X,15.2.0
+,RP-82,RP-182679,0255,4,F,Correction on PDCP duplication,15.2.0
+,RP-82,RP-182678,0264,1,F,Correction to SLRB and state variables for sidelink transmission,15.2.0
+,RP-82,RP-182678,0265,-,F,Header Decompression for SLRB,15.2.0
+2019-03,RP-83,RP-190552,0266,1,F,Correction on UDC data format,15.3.0
+,RP-83,RP-190551,0270,1,F,CR on ROHC for V2X,15.3.0
+,RP-83,RP-190552,0271,1,F,CR on PDCP structure for split bearer and LWA bearer,15.3.0
+2019-06,RP-84,RP-191385,0272,1,F,CR on HFN maintainance,15.4.0
+,RP-84,RP-191387,0273,-,F,Clarification of the PDCP structure,15.4.0
+2019-12,RP-86,RP-192941,0277,-,F,Specify UDC Header is part of Data Field,15.5.0
+2020-03,RP-87,RP-200450,0278,1,B,Introducing EHC in LTE PDCP,16.0.0
+,RP-87,RP-200364,0279,2,B,Introduction of DAPS handover,16.0.0
+2020-07,RP-88,RP-201168,0281,2,A,Correction on SRB duplication,16.1.0
+,RP-88,RP-201195,0282,3,C,CR on 36.323 for LTE feMob,16.1.0
+,RP-88,RP-201168,0284,1,A,CR on RLC out-of-order delivery configuration,16.1.0
+,RP-88,RP-201181,0286,1,F,LTE PDCP corrections for NR IIOT,16.1.0
+2020-09,RP-89,RP-201933,0287,1,F,Correction for PDCP status report,16.2.0
+,RP-89,RP-201963,0290,1,F,CR on LTE PDCP re-establishment when t-Reordering is used,16.2.0
+2020-12,RP-90,RP-202773,0291,1,F,CR on LTE PDCP re-establishment for UM DRB when t-Reordering is used,16.3.0
+2021-09,RP-93,RP-212442,0296,1,F,CR for LTE PDCP operation after DAPS release,16.4.0
+2021-12,RP-94,RP-213343,0298,2,A,Clarification on Security Coverage,16.5.0
+2022-03,RP-95,,,,,"Upgraded to Rel-17, no technical change",17.0.0
+2022-06,RP-96,RP-221713,0301,1,A,CR for EHC decompression,17.1.0
+2022-12,RP-98,RP-223416,0304,1,F,Correction on PDCP Control PDU for UDC feedback,17.2.0
+,RP-98,RP-223406,0309,1,A,Data available transmission for DAPS,17.2.0
+2024-03,RP-103,,,,,"Upgraded to Rel-18, no technical change",18.0.0
+2025-09,RP-109,,,,,"Upgraded to Rel-19, no technical change",19.0.0

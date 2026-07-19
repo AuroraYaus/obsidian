@@ -1,0 +1,430 @@
+Change history,,,,,,,
+Date,TSG #,TSG Doc.,CR,Rev,Subject/Comment,Old,New
+2006-09,,,,,Draft version created,,0.0.0
+2006-10,,,,,Endorsed by RAN1,0.0.0,0.1.0
+2007-01,,,,,Inclusion of decisions from RAN1#46bis and RAN1#47,0.1.0,0.1.1
+2007-01,,,,,Endorsed by RAN1,0.1.1,0.2.0
+2007-02,,,,,Inclusion of decisions from RAN1#47bis,0.2.0,0.2.1
+2007-02,,,,,Endorsed by RAN1,0.2.1,0.3.0
+2007-02,,,,,Editor's version including decisions from RAN1#48 & RAN1#47bis,0.3.0,0.3.1
+2007-03,,,,,Updated Editor's version,0.3.1,0.3.2
+2007-03,RAN-35,RP-070171,,,For information at RAN#35,0.3.2,1.0.0
+2007-03,,,,,Random access text modified to better reflect RAN1 scope,1.0.0,1.0.1
+2007-03,,,,,Updated Editor's version,1.0.1,1.0.2
+2007-03,,,,,Endorsed by RAN1,1.0.2,1.1.0
+2007-05,,,,,Updated Editor's version,1.1.0,1.1.1
+2007-05,,,,,Updated Editor's version,1.1.1,1.1.2
+2007-05,,,,,Endorsed by RAN1,1.1.2,1.2.0
+2007-08,,,,,Updated Editor's version,1.2.0,1.2.1
+2007-08,,,,,Updated Editor's version – uplink power control from RAN1#49bis,1.2.1,1.2.2
+2007-08,,,,,Endorsed by RAN1,1.2.2,1.3.0
+2007-09,,,,,Updated Editor's version reflecting RAN#50 decisions,1.3.0,1.3.1
+2007-09,,,,,Updated Editor's version reflecting comments,1.3.1,1.3.2
+2007-09,,,,,Updated Editor's version reflecting further comments,1.3.2,1.3.3
+2007-09,,,,,Updated Editor's version reflecting further comments,1.3.3,1.3.4
+2007-09,,,,,Updated Editor's version reflecting further comments,1.3.4,1.3.5
+2007-09,RAN-37,RP-070731,,,Endorsed by RAN1,1.3.5,2.0.0
+2007-09,RAN-37,RP-070737,,,For approval at RAN#37,2.0.0,2.1.0
+12/09/07,RP-37,RP-070737,-,-,Approved version,2.1.0,8.0.0
+28/11/07,RP-38,RP-070949,0001,2,Update of 36.213,8.0.0,8.1.0
+05/03/08,RP-39,RP-080145,0002,-,Update of TS 36.213 according to changes listed in cover sheet,8.1.0,8.2.0
+28/05/08,RP-40,RP-080434,0003,1,PUCCH timing and other formatting and typo corrections,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0006,1,PUCCH power control for non-unicast information,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0008,-,UE ACK/NACK Procedure,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0009,-,UL ACK/NACK timing for TDD,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0010,-,Specification of UL control channel assignment,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0011,-,Precoding Matrix for 2Tx Open-loop SM,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0012,-,Clarifications on UE selected CQI reports,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0013,1,UL HARQ Operation and Timing,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0014,-,SRS power control,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0015,1,Correction of UE PUSCH frequency hopping procedure,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0017,4,Blind PDCCH decoding,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0019,1,Tx Mode vs DCI format is clarified,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0020,-,Resource allocation for distributed VRB,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0021,2,Power Headroom,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0022,-,Clarification for RI reporting in PUCCH and PUSCH reporting modes,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0025,-,Correction of the description of PUSCH power control for TDD,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0026,-,UL ACK/NACK procedure for TDD,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0027,-,Indication of radio problem detection,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0028,-,Definition of Relative Narrowband TX Power Indicator,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0029,-,Calculation of ΔTF(i) for UL-PC,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0030,-,"CQI reference and set S definition, CQI mode removal, and Miscellanious",8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0031,-,Modulation order and TBS determination for PDSCH and PUSCH,8.2.0,8.3.0
+28/05/08,RP-40,RP-080434,0032,-,On Sounding RS,8.2.0,8.3.0
+28/05/08,RP-40,RP-080426,0033,-,Multiplexing of rank and CQI/PMI reports on PUCCH,8.2.0,8.3.0
+28/05/08,RP-40,RP-080466,0034,-,Timing advance command responding time,8.2.0,8.3.0
+09/09/08,RP-41,RP-080670,37,2,SRS hopping pattern for closed loop antenna selection,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,39,2,Clarification on uplink power control,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,41,-,Clarification on DCI formats using resource allocation type 2,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,43,2,Clarification on tree structure of CCE aggregations,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,46,2,Correction of the description of PUCCH power control for TDD,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,47,1,Removal of CR0009,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,48,1,Correction of mapping of cyclic shift value to PHICH modifier,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,49,-,TBS disabling for DCI formats 2 and 2A,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,50,-,Correction of maximum TBS sizes,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,51,-,Completion of the table specifying the number of bits for the periodic feedback,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,54,-,Clarification of RNTI for PUSCH/PUCCH power control with DCI formats 3/3A,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,55,1,Clarification on mapping of Differential CQI fields,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,59,1,PUSCH Power Control,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,60,-,RB restriction and modulation order for CQI-only transmission on PUSCH,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,61,-,Modulation order determination for uplink retransmissions,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,62,2,Introducing missing L1 parameters into 36.213,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,63,2,Correcting the range and representation of delta_TF_PUCCH,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,64,1,Adjusting TBS sizes to for VoIP,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,67,-,Correction to the downlink resource allocation,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,68,-,Removal of special handling for PUSCH mapping in PUCCH region,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,69,-,Correction to the formulas for uplink power control,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,70,1,Definition of Bit Mapping for DCI Signalling,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,71,-,Clarification on PUSCH TPC commands,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,72,1,Reference for CQI/PMI Reporting Offset,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,74,-,Correction to the downlink/uplink timing,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,75,-,Correction to the time alignment command,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,77,1,Correction of offset signalling of UL Control information MCS,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,78,2,DCI format1C,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,80,-,Correction to Precoder Cycling for Open-loop Spatial Multiplexing,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,81,1,Clarifying Periodic CQI Reporting using PUCCH,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,84,1,CQI reference measurement period,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,86,-,Correction on downlink multi-user MIMO,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,87,-,PUCCH Reporting,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,88,1,Handling of Uplink Grant in Random Access Response,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,89,-,Correction to UL Hopping operation,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,90,-,DRS EPRE,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,92,-,Uplink ACK/NACK mapping for TDD,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,93,-,UL SRI Parameters Configuration,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,94,-,Miscellaneous updates for 36.213,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,95,-,Clarifying Requirement for Max PDSCH Coding Rate,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,96,-,UE Specific SRS Configuration,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,97,-,DCI Format 1A changes needed for scheduling Broadcast Control,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,98,-,Processing of TPC bits in the random access response,8.3.0,8.4.0
+09/09/08,RP-41,RP-080670,100,1,Support of multi-bit ACK/NAK transmission in TDD,8.3.0,8.4.0
+03/12/08,RP-42,RP-081075,82,3,Corrections to RI for CQI reporting,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,83,2,Moving description of large delay CDD to 36.211,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,102,3,Reception of DCI formats,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,105,8,Alignment of RAN1/RAN2 specification,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,107,1,General correction of reset of power control and random access response message,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,108,2,Final details on codebook subset restrictions,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,109,-,Correction on the definition of Pmax,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,112,2,CQI/PMI reference measurement periods,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,113,-,Correction of introduction of shortened SR,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,114,-,RAN1/2 specification alignment on HARQ operation,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,115,-,Introducing other missing L1 parameters in 36.213,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,116,-,PDCCH blind decoding,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,117,-,PDCCH search space,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,119,-,Delta_TF for PUSCH,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,120,-,Delta_preamble_msg3 parameter values and TPC command in RA response,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,122,1,Correction of offset signaling of uplink control information MCS,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,124,-,Miscellaneous Corrections,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,125,-,Clarification of the uplink index in TDD mode,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,126,-,Clarification of the uplink transmission configurations,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,127,2,Correction to the PHICH index assignment,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,128,-,Clarification of type-2 PDSCH resource allocation for format 1C,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,129,-,Clarification of uplink grant in random access response,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,130,-,UE sounding procedure,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,134,-,Change for determining DCI format 1A TBS table column indicator for broadcast control,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,135,-,Clarifying UL VRB Allocation,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,136,1,Correction for Aperiodic CQI,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,137,1,Correction for Aperiodic CQI Reporting,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,138,1,Correction to PUCCH CQI reporting mode for N^DL_RB <= 7,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,140,1,On sounding procedure in TDD,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,141,1,Alignment of RAN1/RAN3 specification,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,143,1,TTI bundling,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,144,1,ACK/NACK transmission on PUSCH for LTE TDD,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,145,1,Timing relationship between PHICH and its associated PUSCH,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,147,1,Definition of parameter for downlink reference signal transmit power,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,148,1,Radio link monitoring,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,149,1,Correction in 36.213 related to TDD downlink HARQ processes,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,151,-,Nominal PDSCH-to-RS EPRE Offset for CQI Reporting,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,152,1,Support of UL ACK/NAK repetition in Rel-8,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,155,-,Clarification of misconfiguration of aperiodic CQI and SR,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,156,1,Correction of control information multiplexing in subframe bundling mode,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,157,-,Correction to the PHICH index assignment,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,158,1,UE transmit antenna selection,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,159,-,Clarification of spatial different CQI for CQI reporting Mode 2-1,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,160,1,Corrections for TDD ACK/NACK bundling and multiplexing,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,161,-,Correction to RI for Open-Loop Spatial Multiplexing,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,162,-,Correction of differential CQI,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,163,-,Inconsistency between PMI definition and codebook index,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,164,-,PDCCH validation for semi-persistent scheduling,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,165,1,Correction to the UE behavior of PUCCH CQI piggybacked on PUSCH,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,166,-,Correction on SRS procedure when shortened PUCCH format is used,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,167,1,Transmission overlapping of physical channels/signals with PDSCH for transmission mode 7,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,169,-,Clarification of SRS and SR transmission,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,171,-,Clarification on UE behavior when skipping decoding,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,172,1,PUSCH Hopping operation corrections,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,173,-,Clarification on message 3 transmission timing,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,174,-,MCS handling for DwPTS,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,175,-,Clarification of UE-specific time domain position for SR transmission,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,176,1,Physical layer parameters for CQI reporting,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,177,-,A-periodic CQI clarification for TDD UL/DL configuration 0,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,179,1,Correction to the definitions of rho_A and rho_B (downlink power allocation),8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,180,-,Clarification of uplink A/N resource indication,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,181,-,PDCCH format 0 for message 3 adaptive retransmission and transmission of control information in message 3 during contention based random access procedure,8.4.0,8.5.0
+03/12/08,RP-42,RP-081075,182,-,To Fix the Discrepancy of Uplink Power Control and Channel Coding of Control Information in PUSCH,8.4.0,8.5.0
+03/12/08,RP-42,RP-081122,183,1,CQI reporting for antenna port 5,8.4.0,8.5.0
+03/12/08,RP-42,RP-081110,168,1,Clarification on path loss definition,8.4.0,8.5.0
+04/03/09,RP-43,RP-090236,184,1,Corrections to Transmitted Rank Indication,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,185,4,Corrections to transmission modes,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,186,2,Delta_TF configuration for control only PUSCH,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,187,1,Correction to concurrent SRS and ACK/NACK transmission,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,191,1,PDCCH release for semi-persistent scheduling,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,192,1,Correction on ACKNACK transmission on PUSCH for LTE TDD,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,193,-,Correction to subband differential CQI value to offset level mapping for aperiodic CQI reporting,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,194,-,Correction for DRS Collision handling,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,196,2,Alignment of RAN1/RAN4 specification on UE maximum output power,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,197,-,Transmission scheme for transmission mode 7 with SPS C-RNTI,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,198,-,Clarifying bandwidth parts for periodic CQI reporting and CQI refererence period,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,199,2,Correction to the ACK/NACK bundling in case of transmission mode 3 and 4,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,200,-,ACK/NAK repetition for TDD ACK/NAK multiplexing,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,201,-,Clarifying UL ACK/NAK transmission in TDD,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,202,-,Corrections to UE Transmit Antenna Selection,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,203,-,Correction to UE PUSCH hopping procedure,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,204,-,Correction to PHICH resource association in TTI bundling,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,205,-,Clarification of the length of resource assignment,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,206,-,Correction on ACK/NACK transmission for downlink SPS resource release,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,207,-,Introduction of additional values of wideband CQI/PMI periodicities,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,208,2,Correction to CQI/PMI/RI reporting field,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,209,2,Correction to rho_A definition for CQI calculation,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,210,-,Correction to erroneous cases in PUSCH linear block codes,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,211,1,Removing RL monitoring start and stop,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,214,1,Correction to type-1 and type-2 PUSCH hopping,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,215,-,Contradicting statements on determination of CQI subband size,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,216,-,Corrections to SRS,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,219,2,Miscellaneous corrections on TDD ACKNACK,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,221,1,CR for Redundancy Version mapping function for DCI 1C,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,223,-,Scrambling of PUSCH corresponding to Random Access Response Grant,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,225,-,Removal of SRS with message 3,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,226,3,PRACH retransmission timing,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,227,-,Clarifying error handling of PDSCH and PUSCH assignments,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,228,-,Clarify PHICH index mapping,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,229,-,Correction of CQI timing,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,230,-,Alignment of CQI parameter names with RRC,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,231,1,Removal of 'Off' values for periodic reporting in L1,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,232,-,Default value of RI,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,233,1,Clarification of uplink timing adjustments,8.5.0,8.6.0
+04/03/09,RP-43,RP-090236,234,-,Clarification on ACK/NAK repetition,8.5.0,8.6.0
+27/05/09,RP-44,RP-090529,235,1,Correction to the condition of resetting accumulated uplink power correction,8.6.0,8.7.0
+27/05/09,RP-44,RP-090529,236,-,Correction to the random access channel parameters received from higher layer,8.6.0,8.7.0
+27/05/09,RP-44,RP-090529,237,-,Correction on TDD ACKNACK,8.6.0,8.7.0
+27/05/09,RP-44,RP-090529,238,1,Correction on CQI reporting,8.6.0,8.7.0
+27/05/09,RP-44,RP-090529,239,-,Correction on the HARQ process number,8.6.0,8.7.0
+27/05/09,RP-44,RP-090529,241,1,CR correction of the description on TTI-bundling,8.6.0,8.7.0
+27/05/09,RP-44,RP-090529,242,1,"Clarify latest and initial PDCCH for PDSCH and PUSCH transmissions, and NDI for SPS activation",8.6.0,8.7.0
+27/05/09,RP-44,RP-090529,243,-,Clarify DRS EPRE,8.6.0,8.7.0
+27/05/09,RP-44,RP-090529,244,1,Clarification on TPC commands for SPS,8.6.0,8.7.0
+15/09/09,RP-45,RP-090888,245,1,Correction to PUSCH hopping and PHICH mapping procedures,8.7.0,8.8.0
+15/09/09,RP-45,RP-090888,246,-,Clarification on subband indexing in periodic CQI reporting,8.7.0,8.8.0
+15/09/09,RP-45,RP-090888,247,2,Correction to DVRB operation in TDD transmission mode 7,8.7.0,8.8.0
+15/09/09,RP-45,RP-090888,249,-,Clarification of concurrent ACKNACK and periodic PMI/RI transmission on PUCCH for TDD,8.7.0,8.8.0
+15/09/09,RP-45,RP-090888,250,-,Clarify Inter-cell synchronization text,8.7.0,8.8.0
+01/12/09,RP-46,RP-091172,248,1,Introduction of LTE positioning,8.8.0,9.0.0
+01/12/09,RP-46,RP-091172,254,-,Clarification of PDSCH and PRS in combination for LTE positioning,8.8.0,9.0.0
+01/12/09,RP-46,RP-091177,255,5,Editorial corrections to 36.213,8.8.0,9.0.0
+01/12/09,RP-46,RP-091257,256,1,Introduction of enhanced dual layer transmission,8.8.0,9.0.0
+01/12/09,RP-46,RP-091177,257,1,Add shorter SR periodicity,8.8.0,9.0.0
+01/12/09,RP-46,RP-091256,258,-,Introduction of LTE MBMS,8.8.0,9.0.0
+17/12/09,RP-46,RP-091257,256,1,Correction by MCC due to wrong implementation of CR0256r1 – Sentence is added to Single-antenna port scheme subclause 7.1.1,9.0.0,9.0.1
+16/03/10,RP-47,RP-100211,259,3,UE behavior when collision of antenna port 7/8 with PBCH or SCH happened and when distributed VRB is used with antenna port 7,9.0.1,9.1.0
+16/03/10,RP-47,RP-100210,260,1,MCCH change notification using DCI format 1C,9.0.1,9.1.0
+16/03/10,RP-47,RP-100211,263,-,Correction on PDSCH EPRE and UE-specific RS EPRE for Rel-9 enhanced DL transmissions,9.0.1,9.1.0
+01/06/10,RP-48,RP-100589,265,-,Clarification for TDD when multiplexing ACK/NACK with SR of ACK/NACK with CQI/PMI or RI,9.1.0,9.2.0
+01/06/10,RP-48,RP-100590,268,1,Clarification of PRS EPRE,9.1.0,9.2.0
+14/09/10,RP-49,RP-100900,269,-,Clarification on Extended CP support with Transmission Mode 8,9.2.0,9.3.0
+07/12/10,RP-50,RP-101320,270,-,Introduction of Rel-10 LTE-Advanced features in 36.213,9.3.0,10.0.0
+27/12/10,-,-,-,-,Editorial change to correct a copy/past error in subclause 7.2.2,10.0.0,10.0.1
+15/03/11,RP-51,RP-110255,271,1,A clarification for redundancy version of PMCH,10.0.1,10.1.0
+15/03/11,RP-51,RP-110258,272,-,RLM Procedure with restricted measurements,10.0.1,10.1.0
+15/03/11,RP-51,RP-110256,273,-,Corrections to Rel-10 LTE-Advanced features in 36.213,10.0.1,10.1.0
+01/06/11,RP-52,RP-110819,274,3,Correction to HARQ-ACK procedure for TDD mode b with M=2,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,275,3,Determination of PUSCH A/N codebook size for TDD,10.1.0,10.2.0
+01/06/11,RP-52,RP-110823,276,-,The triggering of aperiodic SRS in DCI formats 2B and 2C,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,278,3,Corrections to power headroom,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,279,1,Removal of square brackets for PUCCH format 3 ACK/NACK,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,281,1,Correction of AN repetition and PUCCH format 3,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,282,2,Correction to timing for secondary cell activation and deactivation,10.1.0,10.2.0
+01/06/11,RP-52,RP-110823,283,1,Correction to MCS offset for multiple TBs,10.1.0,10.2.0
+01/06/11,RP-52,RP-110820,286,1,Miscellaneous Corrections,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,288,1,Corrections on UE procedure for determining PUCCH Assignment,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,289,2,Correction to Multi-cluster flag in DCI format 0,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,290,2,Joint transmission of ACK/NACK and SR with PUCCH format 3,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,291,3,Correction of uplink resource allocation type 1,10.1.0,10.2.0
+01/06/11,RP-52,RP-110821,292,1,Correction on CSI-RS configuration,10.1.0,10.2.0
+01/06/11,RP-52,RP-110818,294,-,ACK/NACK and CQI simultaneous transmission in ACK/NACK bundling in TDD,10.1.0,10.2.0
+01/06/11,RP-52,RP-110823,295,-,UE specific disabling of UL DMRS sequence hopping,10.1.0,10.2.0
+01/06/11,RP-52,RP-110821,296,-,PDSCH transmission in MBSFN subframes,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,297,-,Introduction of PCMAX for PUSCH power scaling,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,298,-,Power control for SR and ACK/NACK with PUCCH format 3,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,299,2,CR on power control for HARQ-ACK transmission on PUCCH,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,300,2,Correction to handling of search space overlap,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,301,1,Correction to simultaneous transmission of SRS and PUCCH format 2/2a/2b,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,302,1,Correction for Simultaneous PUCCH and SRS Transmissions on CA,10.1.0,10.2.0
+01/06/11,RP-52,RP-110821,303,-,Correction on 8Tx Codebook Sub-sampling for PUCCH Mode 1-1,10.1.0,10.2.0
+01/06/11,RP-52,RP-110821,304,1,Corrections on CQI type in PUCCH mode 2-1 and clarification on simultaneous PUCCH and PUSCH transmission for UL-SCH subframe bundling,10.1.0,10.2.0
+01/06/11,RP-52,RP-110818,305,1,Correction on UE behaviour upon reporting periodic CSI using PUCCH Mode1-1,10.1.0,10.2.0
+01/06/11,RP-52,RP-110818,306,-,Clarification for the definition of CQI,10.1.0,10.2.0
+01/06/11,RP-52,RP-110818,307,-,Clarification for the definition of Precoding Matrix Indicator,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,308,-,Simultaneous SRS transmissions in more than one cell,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,310,1,Miscellaneous Corrections for TS 36.213,10.1.0,10.2.0
+01/06/11,RP-52,RP-110821,311,1,Configuration of pmi-RI-Report,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,312,1,Correction on the support of PUCCH format 3 and channel selection,10.1.0,10.2.0
+01/06/11,RP-52,RP-110821,313,-,Correction on UE behaviour during DM-RS transmission on subframes carrying synchronization signals,10.1.0,10.2.0
+01/06/11,RP-52,RP-110820,314,1,36.213 CR on antenna selection,10.1.0,10.2.0
+01/06/11,RP-52,RP-110823,316,1,Number of HARQ process for UL spatial multiplexing,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,317,-,PUCCH format 3 Fallback procedure in TDD,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,318,-,Clarification on CSI reporting under an invalid downlink subframe,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,320,-,Multiple Aperiodic SRS Triggers for Same Configuration,10.1.0,10.2.0
+01/06/11,RP-52,RP-110823,321,-,UE antenna switch in UL MIMO,10.1.0,10.2.0
+01/06/11,RP-52,RP-110819,322,-,UE behaviour for PDSCH reception with limited soft buffer in CA,10.1.0,10.2.0
+01/06/11,RP-52,RP-110859,323,-,Joint transmission of ACK/NACK and SR or CSI with PUCCH format 3 and channel selection,10.1.0,10.2.0
+15/09/11,RP-53,RP-111229,277,1,Correction to reception of PRS in MBSFN subframes,10.2.0,10.3.0
+15/09/11,RP-53,RP-111230,325,3,Corrections on UE procedure for reporting HARQ-ACK,10.2.0,10.3.0
+15/09/11,RP-53,RP-111230,326,2,Corrections on Physical Uplink Control Channel Procedure,10.2.0,10.3.0
+15/09/11,RP-53,RP-111231,331,1,Correction to uplink transmission scheme usage for random access response and PHICH-triggered retransmissions,10.2.0,10.3.0
+15/09/11,RP-53,RP-111229,336,-,Corrections on transmission mode 9,10.2.0,10.3.0
+15/09/11,RP-53,RP-111230,339,-,Corrections on HARQ-ACK codebook size determination,10.2.0,10.3.0
+15/09/11,RP-53,RP-111230,340,-,Corrections on TDD PUCCH format 1b with channel selection and HARQ-ACK transmission on PUSCH,10.2.0,10.3.0
+15/09/11,RP-53,RP-111230,341,-,Corrections on NACK generation,10.2.0,10.3.0
+15/09/11,RP-53,RP-111230,342,-,Corrections on power headroom reporting,10.2.0,10.3.0
+15/09/11,RP-53,RP-111229,346,-,Correction on TBS translation table,10.2.0,10.3.0
+15/09/11,RP-53,RP-111229,347,2,Correction to the condition of enabling PMI feedback,10.2.0,10.3.0
+15/09/11,RP-53,RP-111232,348,-,Miscellaneous corrections to 36.213,10.2.0,10.3.0
+15/09/11,RP-53,RP-111229,349,-,Corrections on PUSCH and PUCCH modes,10.2.0,10.3.0
+15/09/11,RP-53,RP-111231,350,1,CR on UL HARQ ACK determination,10.2.0,10.3.0
+15/09/11,RP-53,RP-111231,351,1,Correction on UL DMRS resources for PHICH-triggered retransmission,10.2.0,10.3.0
+15/09/11,RP-53,RP-111230,352,-,Clarification on the common search space description,10.2.0,10.3.0
+15/09/11,RP-53,RP-111232,353,1,Clarification on ambiguous DCI information between UE-specific search space and common search space for DCI formats 0 and 1A,10.2.0,10.3.0
+15/09/11,RP-53,RP-111229,354,-,Clarification of Reference PDSCH Power for CSI-RS based CSI Feedback,10.2.0,10.3.0
+15/09/11,RP-53,RP-111230,355,2,Corrections on reporting Channel State Information,10.2.0,10.3.0
+05/12/11,RP-54,RP-111669,324,3,Accumulation of power control commands from DCI format 3/3A,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,357,1,Miscellaneous corrections on uplink power control,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,358,-,Corrections on N_c^{received},10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,359,-,Corrections on TDD PUCCH format 1b with channel selection and two configured serving cells,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,360,-,Corrections on the notation of k and k_m,10.3.0,10.4.0
+05/12/11,RP-54,RP-111668,361,1,Corrections on PUCCH mode 2-1,10.3.0,10.4.0
+05/12/11,RP-54,RP-111668,362,3,A correction to PDSCH transmission assumption for CQI calculation,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,363,1,Corrections on PUCCH Resource Notation,10.3.0,10.4.0
+05/12/11,RP-54,RP-111667,364,-,Correction on the notation of SRS transmission comb,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,365,-,Clarification on the HARQ-ACK procedure of TDD UL-DL configuration 5,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,366,2,Clarification on the determination of resource for PUCCH Format 1b with channel selection in TDD mode,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,367,1,Correction on HARQ-ACK procedure,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,368,-,"Correction for A/N on PUSCH with W=1,2 in case of TDD channel selection",10.3.0,10.4.0
+05/12/11,RP-54,RP-111668,369,-,Clarification of PUCCH 2-1 Operation,10.3.0,10.4.0
+05/12/11,RP-54,RP-111668,370,1,Correction on PMI index,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,371,2,Correction to periodic CSI reports for carrier aggregation,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,373,1,Removal of square bracket in HARQ-ACK procedure,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,374,1,Clarification on UE's capability of supporting PUCCH format 3,10.3.0,10.4.0
+05/12/11,RP-54,RP-111666,375,1,Clarifications of UE behavior on PUSCH power control,10.3.0,10.4.0
+28/02/12,RP-55,RP-120286,376,1,RNTI Configuration associated with DL Resource Allocation Type 2,10.4.0,10.5.0
+28/02/12,RP-55,RP-120283,377,2,Correction for ACK/NACK related procedure in case of TDD UL-DL configuration 0,10.4.0,10.5.0
+13/06/12,RP-56,RP-120737,378,3,Correction of FDD channel selection HARQ-ACK and SR transmission,10.5.0,10.6.0
+13/06/12,RP-56,RP-120738,379,-,Removal of description with square brackets,10.5.0,10.6.0
+13/06/12,RP-56,RP-120738,381,-,Correction on transmission mode 9 with a single antenna port transmission,10.5.0,10.6.0
+04/09/12,RP-57,RP-121265,382,-,Clarification of codebook subsampling for PUCCH 2-1,10.6.0,10.7.0
+04/09/12,RP-57,RP-121266,383,-,Correction to UE transmit antenna selection,10.6.0,10.7.0
+04/09/12,RP-57,RP-121264,384,-,TDD HARQ-ACK procedure for PUCCH format 1b with channel selection in carrier aggregation,10.6.0,10.7.0
+04/09/12,RP-57,RP-121265,385,-,Corrections for Handling CSI-RS patterns,10.6.0,10.7.0
+04/09/12,RP-57,RP-121264,386,1,Reference serving cell for pathloss estimation,10.6.0,10.7.0
+04/09/12,RP-57,RP-121264,387,-,Power control for PUCCH format 3 with single configured cell,10.6.0,10.7.0
+04/09/12,RP-57,RP-121264,388,-,ACK/NACK resource in case of channel selection,10.6.0,10.7.0
+04/09/12,RP-57,RP-121274,380,4,Introduction of an additional special subframe configuration,10.7.0,11.0.0
+04/09/12,RP-57,RP-121272,389,-,Introduction of Rel-11 features,10.7.0,11.0.0
+04/12/12,RP-58,RP-121839,393,-,Correction to the parameter ue-Category-v10xy,11.0.0,11.1.0
+04/12/12,RP-58,RP-121837,395,-,Correction of reference signal scrambling sequence initialization for SPS in transmission mode 7,11.0.0,11.1.0
+04/12/12,RP-58,RP-121846,396,-,Finalisation for introducing Rel-11 features,11.0.0,11.1.0
+26/02/13,RP-59,RP-130254,398,-,Correction on UE procedure for reporting HARQ-ACK,11.1.0,11.2.0
+26/02/13,RP-59,RP-130252,400,-,Corrections for SRS power scaling in UpPTS,11.1.0,11.2.0
+26/02/13,RP-59,RP-130252,403,-,CR on UE specific search and Common search space overlap on PDCCH,11.1.0,11.2.0
+26/02/13,RP-59,RP-130358,404,-,Additional clarifications/corrections for introducing Rel-11 features,11.1.0,11.2.0
+11/06/13,RP-60,RP-130752,405,-,Correction to EPDCCH monitoring in case of cross-carrier scheduling,11.2.0,11.3.0
+11/06/13,RP-60,RP-130751,407,1,Correction on the RI bit width,11.2.0,11.3.0
+11/06/13,RP-60,RP-130750,408,-,Correction on parallel reception of PDSCH and Msg 2,11.2.0,11.3.0
+11/06/13,RP-60,RP-130747,409,-,Correction on zero power CSI-RS resource configuration,11.2.0,11.3.0
+11/06/13,RP-60,RP-130750,410,1,Corrections on different TDD UL-DL configurations on different bands,11.2.0,11.3.0
+11/06/13,RP-60,RP-130752,411,-,Correction on EPDCCH PRB pair indication,11.2.0,11.3.0
+11/06/13,RP-60,RP-130752,412,-,Correction on EPDCCH hashing function,11.2.0,11.3.0
+11/06/13,RP-60,RP-130752,413,-,Correction on PUCCH resource determination for FDD EPDCCH,11.2.0,11.3.0
+11/06/13,RP-60,RP-130752,414,2,CR on ambiguity in EPDCCH decoding candidates under two overlapped EPDCCH resource sets,11.2.0,11.3.0
+11/06/13,RP-60,RP-130749,415,-,Removal of the case for spatial domain bundling in TDD UL/DL configuration 0,11.2.0,11.3.0
+11/06/13,RP-60,RP-130752,416,-,Corrections to EPDCCH PRB pair indication,11.2.0,11.3.0
+11/06/13,RP-60,RP-130753,417,1,Correction to PUSCH/PUCCH transmit power after PRACH power ramping,11.2.0,11.3.0
+11/06/13,RP-60,RP-130747,418,-,CR on RI-Reference CSI Process with Subframe Sets,11.2.0,11.3.0
+11/06/13,RP-60,RP-130747,420,-,Correction on UE-specific RS scrambling for SPS PDSCH in TM10,11.2.0,11.3.0
+11/06/13,RP-60,RP-130747,421,-,CR on resolving ambiguous UE capability signaling for CoMP,11.2.0,11.3.0
+11/06/13,RP-60,RP-130750,422,-,Correction of valid downlink subframe,11.2.0,11.3.0
+11/06/13,RP-60,RP-130749,424,-,Correction on HARQ-ACK transmission for a UE configured with PUCCH format 3,11.2.0,11.3.0
+11/06/13,RP-60,RP-130750,425,-,Correction of PHICH resource for half duplex TDD UE,11.2.0,11.3.0
+11/06/13,RP-60,RP-130750,426,-,Correction on n_{HARQ} for TDD CA with different UL-DL configurations,11.2.0,11.3.0
+11/06/13,RP-60,RP-130750,427,-,Correction on implicit HARQ-ACK resource determination for PUCCH format 1b with channel selection for TDD CA with different UL-DL configurations,11.2.0,11.3.0
+11/06/13,RP-60,RP-130750,428,-,Correction on SRS power scaling with multiple TAGs,11.2.0,11.3.0
+11/06/13,RP-60,RP-130747,429,-,Correction on MBSFN subframe configuration,11.2.0,11.3.0
+11/06/13,RP-60,RP-130749,430,-,CR on SCell activation timing,11.2.0,11.3.0
+03/09/13,,,,,MCC clean-up,11.3.0,11.4.0
+03/09/13,RP-61,RP-131249,432,-,Correction for EPDCCH Search Space,11.3.0,11.4.0
+03/09/13,RP-61,RP-131250,433,-,Correction to QCL behaviour on CRS,11.3.0,11.4.0
+03/09/13,RP-61,RP-131250,434,-,Correction on PUCCH power control,11.3.0,11.4.0
+03/09/13,RP-61,RP-131248,435,-,Correction on the ratio of PDSCH EPRE to CRS EPRE for TM10,11.3.0,11.4.0
+03/09/13,RP-61,RP-131249,436,-,CR on EPDCCH Search Space for Cross-Carrier Scheduling,11.3.0,11.4.0
+03/09/13,RP-61,RP-131249,437,-,Correction to the UE behaviour in case of collision between PRS and EPDCCH in different CP case,11.3.0,11.4.0
+03/09/13,RP-61,RP-131249,438,-,On correction to higher layer parameter name for EPDCCH resource mapping,11.3.0,11.4.0
+03/09/13,RP-61,RP-131248,439,-,Correction to PDSCH mapping for CoMP,11.3.0,11.4.0
+03/12/13,RP-62,RP-131893,440,1,Correction on parameter ue-Category,11.4.0,11.5.0
+03/12/13,RP-62,RP-131892,442,1,Correction on determination of modulation order and transport block size,11.4.0,11.5.0
+03/12/13,RP-62,RP-132024,445,3,Correction on CSI reporting type and parameters,11.4.0,11.5.0
+03/12/13,RP-62,RP-131894,446,-,Correction on deriving the length of the non-MBSFN region,11.4.0,11.5.0
+03/12/13,RP-62,RP-131896,431,5,Introduction of Rel 12 feature for Downlink MIMO Enhancement,11.5.0,12.0.0
+03/03/14,RP-63,RP-140286,447,-,Correction to CSI Reporting,12.0.0,12.1.0
+03/03/14,RP-63,RP-140291,448,-,Clarification on PUCCH Mode 1-1 for 4Tx Dual Codebook,12.0.0,12.1.0
+03/03/14,RP-63,RP-140287,450,1,Common search space monitoring for MBMS,12.0.0,12.1.0
+03/03/14,RP-63,RP-140290,452,-,Introduction of new UE categories,12.0.0,12.1.0
+03/03/14,RP-63,RP-140288,455,1,Modification to I_SRS = 0 for trigger type 1 SRS and TDD,12.0.0,12.1.0
+03/03/14,RP-63,RP-140289,458,-,Correction to CSI processing in TM10,12.0.0,12.1.0
+10/06/14,RP-64,RP-140858,459,1,Clarification on PUCCH reporting type payload size,12.1.0,12.2.0
+10/06/14,RP-64,RP-140858,461,-,Clarification on SRS colliding with PUCCH in the same cell when the UE is configured with multiple TAGs,12.1.0,12.2.0
+10/06/14,RP-64,RP-140858,462,1,Clarification on SRS antenna switching,12.1.0,12.2.0
+10/06/14,RP-64,RP-140862,463,-,Introduction of Rel-12 LTE-Advanced features in 36.213,12.1.0,12.2.0
+10/09/14,RP-65,RP-141479,464,-,Correction on SRS transmission for TDD-FDD CA,12.2.0,12.3.0
+10/09/14,RP-65,RP-141478,465,-,Correction on beta_{offset}^{HARQ-ACK} determination for a UE configured with two uplink power control subframe sets,12.2.0,12.3.0
+10/09/14,RP-65,RP-141478,466,-,Corrections for TDD eIMTA,12.2.0,12.3.0
+10/09/14,RP-65,RP-141479,467,3,CR on HARQ-ACK Multiplexing in PUSCH for TDD-FDD CA,12.2.0,12.3.0
+10/09/14,RP-65,RP-141474,469,-,Correction to UCI embedding in case of a single serving cell and simultaneous PUSCH and PUCCH transmission,12.2.0,12.3.0
+10/09/14,RP-65,RP-141478,470,-,Corrections on UL-reference UL/DL configuration,12.2.0,12.3.0
+10/09/14,RP-65,RP-141473,471,-,CR for Clarification of special subframe and usage alignment,12.2.0,12.3.0
+10/09/14,RP-65,RP-141485,472,-,Introduction of low-cost MTC and 256QAM features,12.2.0,12.3.0
+08/12/14,RP-66,RP-142104,482,5,"Introduction of Dual Connectivity, Small Cell Enhancements, NAICS, eIMTA, and TDD-FDD CA features",12.3.0,12.4.0
+08/12/14,RP-66,RP-142097,487,1,Clarification of periodic CSI feedback for subband CQI and PMI,12.3.0,12.4.0
+08/12/14,RP-66,RP-142100,491,-,Correction of the parameter CSIProcessIndex,12.3.0,12.4.0
+09/03/15,RP-67,RP-150366,492,2,Introduction of D2D feature into 36.213,12.4.0,12.5.0
+09/03/15,RP-67,RP-150363,494,1,Correction to PUCCH procedures in case of FDD Pcell and TDD Scell in TDD-FDD CA,12.4.0,12.5.0
+09/03/15,RP-67,RP-150364,498,-,Correction on higher layer parameter names for 256QAM,12.4.0,12.5.0
+09/03/15,RP-67,RP-150359,500,-,TM10 CSI-IM Interference Measurements,12.4.0,12.5.0
+09/03/15,RP-67,RP-150358,502,-,Clarification on common search reception related to MBMS,12.4.0,12.5.0
+09/03/15,RP-67,RP-150364,503,-,Correction to Discovery in Small Cell Enhancement feature,12.4.0,12.5.0
+09/03/15,RP-67,RP-150365,504,1,Corrections to Dual Connectivity feature,12.4.0,12.5.0
+15/06/15,RP-68,RP-150931,493,2,Clarification on HARQ-ACK repetition,12.5.0,12.6.0
+15/06/15,RP-68,RP-150932,497,3,Clarification on PUCCH Format 3 Resource Derivation for TDD UL/DL Configuration 5,12.5.0,12.6.0
+15/06/15,RP-68,RP-150933,506,-,Clarification on the PRACH power in subframe i2-1 for PCM2,12.5.0,12.6.0
+15/06/15,RP-68,RP-150933,507,-,Clarification on the MTA operation in PCM1,12.5.0,12.6.0
+15/06/15,RP-68,RP-150933,512,-,Correction of higher layer parameter names in dual connectivity,12.5.0,12.6.0
+15/06/15,RP-68,RP-150935,513,1,Correction on UE procedure of determining subframe pool for PSCCH and PSSCH in ProSe,12.5.0,12.6.0
+15/06/15,RP-68,RP-150935,514,1,Correction on UE procedure of transmitting PSCCH in ProSe,12.5.0,12.6.0
+15/06/15,RP-68,RP-150933,515,1,Correction on UL Power Control for Synchronous Dual Connectivity,12.5.0,12.6.0
+15/06/15,RP-68,RP-150933,516,1,Correction on UL Power Control for Asynchronous Dual Connectivity,12.5.0,12.6.0
+15/06/15,RP-68,RP-150937,517,-,Correction to Rel-12 UE category signal name,12.5.0,12.6.0
+15/06/15,RP-68,RP-150936,520,-,Corrections on eIMTA RRC parameter naming,12.5.0,12.6.0
+15/06/15,RP-68,RP-150933,521,-,Correction on Closed Loop Antenna Selection for Dual Connectivity,12.5.0,12.6.0
+15/06/15,RP-68,RP-150935,523,-,Alignment of Prose parameter names,12.5.0,12.6.0
+14/09/15,RP-69,RP-151470,525,-,UE processing time relaxation on Type 2 Power Headroom Reporting,12.6.0,12.7.0
+14/09/15,RP-69,RP-151468,527,-,Correction of ProSe parameters,12.6.0,12.7.0
+14/09/15,RP-69,RP-151471,528,2,Clarification on power control for PCM2,12.6.0,12.7.0
+07/12/15,RP-70,RP-152034,530,1,Clarification of PUCCH resource allocation related to EPDCCH SCells,12.7.0,12.8.0
+07/12/15,RP-70,RP-152037,531,-,Clarification on the parameter notations for eIMTA,12.7.0,12.8.0
+07/12/15,RP-70,RP-152037,534,-,Correction on aperiodic CSI transmission without UL-SCH according to table 7.2.1-1C,12.7.0,12.8.0
+07/12/15,RP-70,RP-152038,535,1,Introduction of new maximum TBS for TM9/10,12.7.0,12.8.0
+07/12/15,RP-70,RP-152034,542,-,Clarification of PHICH resource assignement related to EPDCCH scheduled PUSCH,12.7.0,12.8.0
+07/12/15,RP-70,RP-152036,543,1,Modify max TA for dual connectivity,12.7.0,12.8.0
+07/12/15,RP-70,RP-152125,533,3,eD2D CR for 36.213,12.8.0,13.0.0
+07/12/15,RP-70,RP-152031,536,-,Introduction of Rel 13 features for SC-PTM,12.8.0,13.0.0
+07/12/15,RP-70,RP-152026,537,2,Introduction of LAA (PHY layer aspects),12.8.0,13.0.0
+07/12/15,RP-70,RP-152026,538,5,Introduction of LAA (eNB Channel Access Procedures),12.8.0,13.0.0
+07/12/15,RP-70,RP-152027,539,1,Introduction of Enhanced CA in Release 13,12.8.0,13.0.0
+07/12/15,RP-70,RP-152025,541,1,Introduction of EB/FD-MIMO,12.8.0,13.0.0
+26/01/16,Post RP-70,,,,MCC update to show correct version of the spec in the headers of all subparts and get all of them aligned with coversheet,13.0.0,13.0.1

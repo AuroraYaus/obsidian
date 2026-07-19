@@ -1,0 +1,34 @@
+<table>
+  <tr>
+    <td>Conditional Presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>LCH-Setup</td>
+    <td>This field is mandatory present upon creation of a new logical channel for a DRB or a multicast MRB or SRB4 or SRB5 or SRB6. This field is optionally present, Need S, upon creation of a new logical channel for an SRB except SRB4 and SRB5. It is optionally present, Need M, otherwise.</td>
+  </tr>
+  <tr>
+    <td>LCH-SetupModMRB</td>
+    <td>This field is optionally present upon creation of a new logical channel for PTM reception for a multicast MRB. If this field is included upon creation of a new logical channel for PTM reception for a multicast MRB, it shall be present when modifying this logical channel. The field is absent for logical channels configured for an SRB and a DRB.</td>
+  </tr>
+  <tr>
+    <td>LCH-SetupOnly</td>
+    <td>This field is mandatory present upon creation of a new logical channel for a DRB or an SRB (servedRadioBearer). It is absent, Need M otherwise.</td>
+  </tr>
+  <tr>
+    <td>LCH-SetupOnlyMRB</td>
+    <td>This field is mandatory present upon creation of a new logical channel for a multicast MRB and upon modification of MRB-Identity of the served MRB. It is absent, Need M otherwise.</td>
+  </tr>
+  <tr>
+    <td>LCH-SetupOnlySRB4</td>
+    <td>This field is mandatory present upon creation of a new logical channel for SRB4 (servedRadioBearerSRB4). It is absent, Need M otherwise.</td>
+  </tr>
+  <tr>
+    <td>LCH-SetupOnlySRB5</td>
+    <td>This field is mandatory present upon creation of a new logical channel for SRB5 (servedRadioBearerSRB5). It is absent, Need M otherwise.</td>
+  </tr>
+  <tr>
+    <td>LCH-SetupOnlySRB6</td>
+    <td>This field is mandatory present upon creation of a new logical channel for SRB6 (servedRadioBearerSRB6). It is absent, Need M otherwise.</td>
+  </tr>
+</table>

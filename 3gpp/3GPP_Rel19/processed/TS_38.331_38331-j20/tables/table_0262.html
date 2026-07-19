@@ -1,0 +1,8 @@
+<table>
+  <tr>
+    <td>CSI-SSB-ResourceSet field descriptions</td>
+  </tr>
+  <tr>
+    <td>servingAdditionalPCIListIndicates the physical cell IDs (PCI) of the SSBs in the csi-SSB-ResourceList. If present, the list has the same number of entries as csi-SSB-ResourceList. The first entry of the list indicates the value of the PCI for the first entry of csi-SSB-ResourceList, the second entry of this list indicates the value of the PCI for the second entry of csi-SSB-ResourceList, and so on. For each entry, the following applies:- If the value is zero, the PCI is the PCI of the serving cell in which this CSI-SSB-ResourceSet is defined;- otherwise, the value is additionalPCIIndex-r17 of an SSB-MTC-AdditionalPCI-r17 configured using the additionalPCI-ToAddModList-r17 in ServingCellConfig, and the PCI is the additionalPCI-r17 in this SSB-MTC-AdditionalPCI-r17.</td>
+  </tr>
+</table>

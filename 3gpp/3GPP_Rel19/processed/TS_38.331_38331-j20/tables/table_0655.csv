@@ -1,0 +1,4 @@
+ZP-CSI-RS-Resource field descriptions
+"periodicityAndOffsetPeriodicity and slot offset for periodic/semi-persistent ZP-CSI-RS (see TS 38.214 [19], clause 5.1.4.2). Network always configures the UE with a value for this field for periodic and semi-persistent ZP-CSI-RS resource (as indicated in PDSCH-Config)."
+resourceMappingOFDM symbol and subcarrier occupancy of the ZP-CSI-RS resource within a slot.
+"zp-CSI-RS-ResourceIdZP CSI-RS resource configuration ID (see TS 38.214 [19], clause 5.1.4.2)."

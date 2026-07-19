@@ -1,0 +1,3 @@
+RRCConnectionReject-NB field descriptions
+extendedWaitTimeValue in seconds.
+"rrc-SuspendIndicationIf present, this field indicates that the UE should remain suspended and not release its stored context."

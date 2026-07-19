@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <td>CFRA-TwoStep field descriptions</td>
+  </tr>
+  <tr>
+    <td>msgA-CFRA-PUSCHPUSCH resource configuration(s) for msgA CFRA.</td>
+  </tr>
+  <tr>
+    <td>msgA-TransMaxMax number of MsgA preamble transmissions performed before switching to 4-step type random access (see TS 38.321 [3], clauses 5.1.1). This field is only applicable when 2-step and 4-step RA type are configured and switching to 4-step type RA is supported. If the field is absent in cfra-TwoStep, switching from 2-step RA type to 4-step RA type is not allowed.</td>
+  </tr>
+  <tr>
+    <td>occasionsTwoStepRARA occasions for contention free random access. If the field is absent, the UE uses the RA occasions configured in RACH-ConfigCommonTwoStepRA in the first active UL BWP.</td>
+  </tr>
+  <tr>
+    <td>ra-SSB-OccasionMaskIndexExplicitly signalled PRACH Mask Index for RA Resource selection in TS 38.321 [3]. The mask is valid for all SSB resources signalled in ssb-ResourceList.</td>
+  </tr>
+  <tr>
+    <td>rach-ConfigGenericTwoStepRAConfiguration of contention free random access occasions for CFRA 2-step random access type.</td>
+  </tr>
+  <tr>
+    <td>ssb-PerRACH-OccasionTwoStepNumber of SSBs per RACH occasion for 2-step random access type.</td>
+  </tr>
+</table>

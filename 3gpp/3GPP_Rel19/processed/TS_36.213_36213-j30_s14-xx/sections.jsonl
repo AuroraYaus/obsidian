@@ -1,0 +1,71 @@
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14UE procedures related to Sidelink", "paragraph_index": 1, "style": "Heading1"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1Physical Sidelink Shared Channel related procedures", "paragraph_index": 26, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1UE procedure for transmitting the PSSCH", "paragraph_index": 27, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.1UE procedure for determining subframes for transmitting PSSCH for sidelink transmission mode 1", "paragraph_index": 58, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.1.1Determination of subframe indicator bitmap", "paragraph_index": 62, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.2UE procedure for determining resource blocks for transmitting PSSCH for sidelink transmission mode 1", "paragraph_index": 72, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.2.1PSSCH resource allocation for sidelink transmission mode 1", "paragraph_index": 74, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.2.2PSSCH frequency hopping for sidelink transmission mode 1", "paragraph_index": 84, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.3UE procedure for determining subframes for transmitting PSSCH for sidelink transmission mode 2", "paragraph_index": 97, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.4UE procedure for determining resource blocks for transmitting PSSCH for sidelink transmission mode 2", "paragraph_index": 107, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.4AUE procedure for determining subframes and resource blocks for transmitting PSSCH for sidelink transmission mode 3", "paragraph_index": 113, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.4BUE procedure for determining subframes and resource blocks for transmitting PSSCH and reserving resources for sidelink transmission mode 4", "paragraph_index": 116, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.4CUE procedure for determining subframes and resource blocks for PSSCH transmission associated with an SCI format 1", "paragraph_index": 123, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.5UE procedure for PSSCH power control", "paragraph_index": 151, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.6UE procedure for determining the subset of resources to be reported to higher layers in PSSCH resource selection in sidelink transmission mode 4 and in sensing measurement in sidelink transmission mode 3", "paragraph_index": 171, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.1.7Conditions for selecting resources when the number of HARQ transmissions is two in sidelink transmission mode 4", "paragraph_index": 211, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.2UE procedure for receiving the PSSCH", "paragraph_index": 213, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.3UE procedure for determining resource block pool and subframe pool for sidelink transmission mode 2", "paragraph_index": 218, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.1.5UE procedure for determining resource block pool and subframe pool for sidelink transmission mode 3 and 4", "paragraph_index": 231, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.2Physical Sidelink Control Channel related procedures", "paragraph_index": 248, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.2.1UE procedure for transmitting the PSCCH", "paragraph_index": 256, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.2.1.1UE procedure for determining subframes and resource blocks for transmitting PSCCH for sidelink transmission mode 1", "paragraph_index": 301, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.2.1.2UE procedure for determining subframes and resource blocks for transmitting PSCCH for sidelink transmission mode 2", "paragraph_index": 306, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.2.1.3UE procedure for PSCCH power control", "paragraph_index": 308, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.2.2UE procedure for receiving the PSCCH", "paragraph_index": 328, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.2.3UE procedure for determining resource block pool and subframe pool for PSCCH", "paragraph_index": 333, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "14.2.4UE procedure for determining resource block pool for PSCCH in sidelink transmission mode 3 and 4", "paragraph_index": 345, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "15Void", "paragraph_index": 407, "style": "Heading1"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16UE Procedures related to narrowband IoT", "paragraph_index": 409, "style": "Heading1"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.1Synchronization procedures", "paragraph_index": 423, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.1.1Cell search", "paragraph_index": 424, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.1.2Timing synchronization", "paragraph_index": 429, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.2Power control", "paragraph_index": 441, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.2.1Uplink power control", "paragraph_index": 442, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.2.1.1Narrowband physical uplink shared channel", "paragraph_index": 444, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.2.1.1.1UE behaviour", "paragraph_index": 445, "style": "Heading5"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.2.1.1.2Power headroom", "paragraph_index": 464, "style": "Heading5"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.2.1.2SR", "paragraph_index": 469, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.2.1.2.1UE behaviour", "paragraph_index": 470, "style": "Heading5"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.2.2Downlink power allocation", "paragraph_index": 480, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.3Random access procedure", "paragraph_index": 496, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.3.1Physical non-synchronized random access procedure", "paragraph_index": 499, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.3.2Timing", "paragraph_index": 507, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.3.3Narrowband random access response grant", "paragraph_index": 521, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.4Narrowband physical downlink shared channel related procedures", "paragraph_index": 548, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.4.1UE procedure for receiving the narrowband physical downlink shared channel", "paragraph_index": 563, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.4.1.1Single-antenna port scheme", "paragraph_index": 625, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.4.1.2Transmit diversity scheme", "paragraph_index": 627, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.4.1.3Resource allocation", "paragraph_index": 629, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.4.1.4NPDSCH starting position", "paragraph_index": 658, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.4.1.5Modulation order and transport block size determination", "paragraph_index": 670, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.4.1.5.1Transport blocks not mapped for SystemInformationBlockType1-NB", "paragraph_index": 696, "style": "Heading5"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.4.1.5.2Transport blocks mapped for SystemInformationBlockType1-NB", "paragraph_index": 705, "style": "Heading5"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.4.2UE procedure for reporting ACK/NACK", "paragraph_index": 713, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.5Narrowband physical uplink shared channel related procedures", "paragraph_index": 739, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.5.1UE procedure for transmitting format 1 narrowband physical uplink shared channel", "paragraph_index": 753, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.5.1.1Resource allocation", "paragraph_index": 802, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.5.1.2Modulation order, redundancy version and transport block size determination", "paragraph_index": 827, "style": "Heading4"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.5.2UE procedure for NPUSCH retransmission", "paragraph_index": 863, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.5.3UE procedure for transmitting SR", "paragraph_index": 865, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.6Narrowband physical downlink control channel related procedures", "paragraph_index": 868, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.6.1NPDCCH starting position", "paragraph_index": 967, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.6.2NPDCCH control information procedure", "paragraph_index": 975, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.6.3NPDCCH validation for semi-persistent scheduling", "paragraph_index": 977, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.6.4Preconfigured uplink resource ACK/fallback procedure", "paragraph_index": 989, "style": "Heading3"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.7Assumptions independent of physical channel related to narrowband IoT", "paragraph_index": 991, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.8UE procedure for acquiring cell-specific reference signal sequence and raster offset", "paragraph_index": 993, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.9UE procedure for receiving narrowband wake up signal", "paragraph_index": 997, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "16.10GNSS measurement gap related procedures", "paragraph_index": 1003, "style": "Heading2"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "17Wake-up signal related procedures for BL/CE UE", "paragraph_index": 1010, "style": "Heading1"}
+{"source": "36213-j30_s14-xx.docx", "section": "", "title": "18GNSS measurement gap related procedures for BL/CE UE", "paragraph_index": 1015, "style": "Heading1"}

@@ -1,0 +1,3 @@
+Conditional presence,Explanation
+idc-Ind,"The field is optionally present if idc-Indication is present, need OR. Otherwise the field is not present."
+overheating,"The field is optionally present, need ON, if the UE is configured with overheatingAssistanceConfig; if overheatingAssistanceConfig is included and set to release, the UE shall delete any existing value for this field; otherwise, the field is not present."

@@ -1,0 +1,4 @@
+WLAN-RTT field descriptions
+rttValueThis field specifies the Round Trip Time (RTT) measurement between the target device and WLAN AP in units given by the field rttUnits as defined in TS 36.355 [54].
+"rttUnitsThis field specifies the Units for the fields rttValue and rttAccuracy. The available Units are 1000ns, 100ns, 10ns, 1ns, and 0.1ns as defined in TS 36.355 [54]."
+rttAccuracyThis field provides the estimated accuracy of the provided rttValue expressed as the standard deviation in units given by the field rttUnits as defined in TS 36.355 [54].

@@ -1,0 +1,7 @@
+Layers,
+,
+υ=1,"Wq1,q2, n1, n2,n3,1,n4,1,p1(1),p12,φ1,t,ι(1)=Wq1,q2, n1, n2,n3,1,n4,1,p1(1),p12,φ1,t,ι1"
+υ=2,"Wq1,q2, n1, n2,n3,1,n4,1,p1(1),p12,φ1, n3,2,n4,2,p2(1),p22,φ2,t,ι(2)=12Wq1,q2, n1, n2,n3,1,n4,1,p1(1),p12,φ1,t,ι1  Wq1,q2, n1, n2,n3,2,n4,2,p2(1),p22,φ2,t,ι2"
+υ=3,"Wq1,q2, n1, n2,n3,1,n4,1,p1(1),p12,φ1,n3,2,n4,2,p2(1),p22,φ2,n3,3,n4,3,p3(1),p32,φ3,t,ι(3)=13Wq1,q2, n1, n2,n3,1,n4,1,p1(1),p12,φ1,t,ι1  Wq1,q2, n1, n2,n3,2,n4,2,p2(1),p22,φ2,t,ι2  Wq1,q2, n1, n2,n3,3,n4,3,p3(1),p32,φ3,t,ι3"
+υ=4,"Wq1,q2, n1, n2,n3,1,n4,1,p1(1),p12,φ1,n3,2,n4,2,p2(1),p22,φ2,n3,3,n4,3,p3(1),p32,φ3,n3,4,n4,4,p4(1),p42,φ4,t,ι(4)=12Wq1,q2, n1, n2,n3,1,n4,1,p11,p12,φ1,t,ι1  Wq1,q2, n1, n2,n3,2,n4,2,p21,p22,φ2,t,ι2  Wq1,q2, n1, n2,n3,3,n4,3,p31,p32,φ3,t,ι3Wq1,q2, n1, n2,n3,4,n4,4,p4(1),p42,φ4,t,ι4"
+"Where and the mappings from  to , , , , , , , , , , ,  and from  to , , , , , , , , , , ,  are as described above, including the ranges of the constituent indices of  and . Wq1,q2, n1, n2,n3,l,n4,l,pl(1),pl2,φl,t,ιl=1N1N2γt,ι,li=0L-1vm1i,m2(i)pl,0(1)f=0Mυ-1yt,l(f)τ=0Q-1zι,l(τ)pl,i,f,τ(2)φl,i,f,τi=0L-1vm1i,m2(i)pl,1(1)f=0Mυ-1yt,l(f)τ=0 Q-1zι,l(τ)pl,i+L,f,τ(2)φl,i+L,f,τ,γt,ι,l=i=02L-1pl,iL12f=0Mυ-1yt,l(f)τ=0Q-1zι,l(τ)pl,i,f,τ(2)φl,i,f,τ2,  l=1,2,3,4i1q1q2n1n2n3,1n3,2n3,3n3,4n4,1n4,2n4,3n4,4i2p1(1)p2(1)p3(1)p4(1)p1(2)p2(2)p3(2)p4(2)φ1φ2φ3φ4i1i2",

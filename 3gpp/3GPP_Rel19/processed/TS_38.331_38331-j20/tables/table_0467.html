@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>Conditional Presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>PDCCH-OfSpcell</td>
+    <td>The field is mandatory present if the PUCCH-TPC-CommandConfig is provided in the PDCCH-Config for the SpCell. Otherwise, the field is absent, Need R.</td>
+  </tr>
+  <tr>
+    <td>PDCCH-ofSpCellOrPUCCH-SCell</td>
+    <td>The field is mandatory present if the PUCCH-TPC-CommandConfig is provided in the PDCCH-Config for the PUCCH-SCell.The field is optionally present, need R, if the UE is configured with a PUCCH SCell in this cell group and if the PUCCH-TPC-CommandConfig is provided in the PDCCH-Config for the SpCell.Otherwise, the field is absent, Need R.</td>
+  </tr>
+  <tr>
+    <td>twoPUCCHgroup</td>
+    <td>This field is optionally present, Need R, if secondary PUCCH group is configured. It is absent otherwise.</td>
+  </tr>
+</table>

@@ -1,0 +1,6 @@
+,Ciphering,Integrity Protection
+NAS Signalling,Required and terminated in MME,Required and terminated in MME
+U-Plane Data for MCG bearers,Required and terminated in MeNB,Not Required
+U-Plane Data for SCG bearers,Required and terminated in SeNB,Not Required
+U-Plane Data for split bearers,Required and terminated in MeNB,Not Required
+RRC Signalling (AS),Required and terminated in MeNB,Required and terminated in MeNB

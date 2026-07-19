@@ -1,0 +1,46 @@
+<table>
+  <tr>
+    <td>Conditional presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>cb-msg3-config</td>
+    <td>This field is mandatory present, if the field ul-ConfigList is present and at least one of the carriers in ul-ConfigList is configured for CB-Msg3-EDT. Otherwise the field is not present and only the anchor carrier is used for CB-Msg3-EDT.</td>
+  </tr>
+  <tr>
+    <td>dl-ConfigList</td>
+    <td>This field is optionally present, Need OR, if the field dl-ConfigList is present. Otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>EDT</td>
+    <td>The field is optionally present, Need OR, if edt-Parameters in SystemInformationBlockType2-NB is present; otherwise the field is not present and the UE shall delete any existing value for this field.</td>
+  </tr>
+  <tr>
+    <td>GWUS</td>
+    <td>This field is optionally present, Need OR, if gwus-Config-r16 is present in SystemInformationBlockType2-NB. Otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>pcch-config</td>
+    <td>This field is optionally present, Need OP, if the field dl-ConfigList is present and at least one of the carriers in dl-ConfigList is configured for paging. Otherwise the field is not present and only the anchor carrier is used for paging.</td>
+  </tr>
+  <tr>
+    <td>pcch-config2</td>
+    <td>This field is optionally present, need OR, if the field pcch-Config-r14 is not present for the same carrier and coverageBasedPagingConfig is present. Otherwise the field is not present and the UE shall delete any existing value for this field.</td>
+  </tr>
+  <tr>
+    <td>nprach-config</td>
+    <td>This field is mandatory present, if the field ul-ConfigList is present and at least one of the carriers in ul-ConfigList is configured for random access. Otherwise the field is not present and only the anchor carrier is used for random access.</td>
+  </tr>
+  <tr>
+    <td>TDD</td>
+    <td>This field is optionally present, Need OR, for TDD. Otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>ul-ConfigList</td>
+    <td>This field is optionally present, Need OR, if the field ul-ConfigList is present. Otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>WUS</td>
+    <td>This field is mandatory present, if the field wus-Config is present in SystemInformationBlockType2-NB. Otherwise the field is not present, Need OR.</td>
+  </tr>
+</table>

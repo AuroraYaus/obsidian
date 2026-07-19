@@ -1,0 +1,5 @@
+MeasReportAppLayer field descriptions
+"appLayerSessionStatusIndicates that an application layer measurement session in the application layer starts or ends. For application layer measurements applicable to RRC_IDLE or RRC_INACTIVE, the UE transmits appLayerSessionStatus upon transfer to RRC_CONNECTED if transmissionOfSessionStartStop is set to true for the application layer measurement configuration."
+"measReportAppLayerContainerThe field contains the application layer measurement report container, see Annex L (normative) in TS 26.247 [68], clause 16.5 in TS 26.114 [69] and clause 9.4 in TS 26.118 [70]."
+"measReportAppLayerContainerListThe field contains a list of application layer measurement report containers for each measConfigAppLayerId, see Annex L (normative) in TS 26.247 [68], clause 16.5 in TS 26.114 [69] and clause 9.4 in TS 26.118 [70]."
+ran-VisibleMeasurementsThe field contains the RAN visible application layer measurement report.

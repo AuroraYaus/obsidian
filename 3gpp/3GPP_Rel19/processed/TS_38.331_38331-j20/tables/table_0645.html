@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td>Uplink-PowerControl, Uplink-powerControlExt field descriptions</td>
+  </tr>
+  <tr>
+    <td>p0AlphaSetforPUSCH, p0AlphaSetforPUCCH, p0AlphaSetforSRSConfigures power control parameters for PUSCH, PUCCH and SRS (see TS 38.213 [13], clause 7.2). When the field alpha is absent in p0AlphaSetforPUSCH, the UE applies the value 1 for PUSCH power control. When the field alpha is absent in p0AlphaSetforSRS, the UE applies the value 1 for SRS power control. In p0AlphaSetForPUCCH, the field alpha is absent (not used). If srs-TwoSeparatePowerControlAdjustmentStates is configured and srs-PowerControlAdjustmentStates is set to separateClosedLoop, the field closedLoopIndex in p0AlphaSetforSRS indicates one of the separate SRS power control adjustment states i.e. value of i0 and i1 refer to the first and the second power control adjustment state separate from PUSCH, respectively.</td>
+  </tr>
+  <tr>
+    <td>p0AlphaSetforPUSCH-SBFD, p0AlphaSetforPUCCH-SBFD, p0AlphaSetforSRS-SBFDConfigures separate UL power control parameters for PUSCH, PUCCH and SRS transmissions in SBFD symbols (see TS 38.213 [13], clause 6 and clause 7). When the field alpha is absent in p0AlphaSetforPUSCH-SBFD, the UE applies the value 1 for PUSCH power control. When the field alpha is absent in p0AlphaSetforSRS-SBFD, the UE applies the value 1 for SRS power control. In p0AlphaSetforPUCCH-SBFD, the field alpha is absent (not used).</td>
+  </tr>
+</table>

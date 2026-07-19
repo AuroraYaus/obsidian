@@ -1,0 +1,6 @@
+Field,Bitwidth,,,
+,Rank = 1,Rank = 2,Rank = 3,Rank = 4
+Wideband CQI codeword 0,4,4,4,4
+Wideband CQI codeword 1,0,4,4,4
+Wideband first PMI i1,4,4,0,0
+Wideband second PMI i2,4,4,4,4

@@ -1,0 +1,68 @@
+<table>
+  <tr>
+    <td>MeasResults field descriptions</td>
+  </tr>
+  <tr>
+    <td>coarseLocationInfoThis field indicates the coarse location information reported by the UE. This field is coded as the Ellipsoid-Point defined in TS 37.355 [49]. The first/leftmost bit of the first octet contains the most significant bit. The least significant bits of degreesLatitude and degreesLongitude are set to 0 to meet the accuracy requirement corresponds to a granularity of approximately 2 km.It is up to UE implementation how many LSBs are set to 0 to meet the accuracy requirement</td>
+  </tr>
+  <tr>
+    <td>excessDelayIndicates the ratio of packets in UL per DRB exceeding the configured delay threshold among the UL PDCP SDUs, according to the UL PDCP Excess Packet Delay per DRB mapping table, as defined in TS 38.314 [53], Table 4.3.1.e-1.</td>
+  </tr>
+  <tr>
+    <td>measIdIdentifies the measurement identity for which the reporting is being performed.</td>
+  </tr>
+  <tr>
+    <td>measQuantityResultsThe value sinr is not included when it is used for LogMeasReport-r16.</td>
+  </tr>
+  <tr>
+    <td>measResultCellListSFTD-NRSFTD measurement results between the PCell and the NR neighbour cell(s) in NR standalone.</td>
+  </tr>
+  <tr>
+    <td>measResultCLICLI measurement results.</td>
+  </tr>
+  <tr>
+    <td>measResultEUTRAMeasured results of an E-UTRA cell.</td>
+  </tr>
+  <tr>
+    <td>measResultForRSSIIncludes measured RSSI result in dBm (see TS 38.215 [9]) and channelOccupancy which is the percentage of samples when the RSSI was above the configured channelOccupancyThreshold for the associated reportConfig.</td>
+  </tr>
+  <tr>
+    <td>measResultListEUTRAList of measured results for the maximum number of reported best cells for an E-UTRA measurement identity.</td>
+  </tr>
+  <tr>
+    <td>measResultListNRList of measured results for the maximum number of reported best cells for an NR measurement identity.</td>
+  </tr>
+  <tr>
+    <td>measResultListUTRA-FDDList of measured results for the maximum number of reported best cells for a UTRA-FDD measurement identity.</td>
+  </tr>
+  <tr>
+    <td>measResultNRMeasured results of an NR cell.</td>
+  </tr>
+  <tr>
+    <td>measResultServFreqListEUTRA-SCGMeasured results of the E-UTRA SCG serving frequencies: the measurement result of PSCell and each SCell, if any, and of the best neighbouring cell on each E-UTRA SCG serving frequency.</td>
+  </tr>
+  <tr>
+    <td>measResultServFreqListNR-SCGMeasured results of the NR SCG serving frequencies: the measurement result of PSCell and each SCell, if any, and of the best neighbouring cell on each NR SCG serving frequency.</td>
+  </tr>
+  <tr>
+    <td>measResultServingMOListMeasured results of measured cells with reference signals indicated in the serving cell measurement objects including measurement results of SpCell, configured SCell(s) and best neighbouring cell within measured cells with reference signals indicated in on each serving cell measurement object. If the sending of the MeasurementReport message is triggered by a measurement configured by the field sl-ConfigDedicatedForNR received within an E-UTRA RRCConnectionReconfiguration message (i.e. CBR measurements), this field is not applicable and its contents is ignored by the network.</td>
+  </tr>
+  <tr>
+    <td>measResultSFTD-EUTRASFTD measurement results between the PCell and the E-UTRA PScell in NE-DC.</td>
+  </tr>
+  <tr>
+    <td>measResultSFTD-NRSFTD measurement results between the PCell and the NR PScell in NR-DC.</td>
+  </tr>
+  <tr>
+    <td>measResultsSLCBR measurements results for NR sidelink communication/discovery/positioning.</td>
+  </tr>
+  <tr>
+    <td>measResultUTRA-FDDMeasured result of a UTRA-FDD cell.</td>
+  </tr>
+  <tr>
+    <td>sl-MeasResultsCandRelayMeasurement result(s) of candiate L2 U2N relay UE(s).</td>
+  </tr>
+  <tr>
+    <td>sl-MeasResultServingRelayMeasurement result of serving L2 U2N relay UE.</td>
+  </tr>
+</table>

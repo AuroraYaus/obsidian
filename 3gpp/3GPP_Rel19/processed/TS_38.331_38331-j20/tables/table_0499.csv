@@ -1,0 +1,5 @@
+RACH-ConfigDedicated field descriptions
+"cfraParameters for contention free random access to a given target cell. If this field and cfra-TwoStep are absent, the UE performs contention based random access."
+"cfra-TwoStepParameters for contention free 2-step random access type to a given target cell. Network ensures that cfra and cfra-TwoStep are not configured at the same time. If this field and cfra are absent, the UE performs contention based random access."
+"ra-prioritizationParameters which apply for prioritized random access procedure to a given target cell (see TS 38.321 [3], clause 5.1.1)."
+"ra-PrioritizationTwoStepParameters which apply for prioritized 2-step random access type procedure to a given target cell (see TS 38.321 [3], clause 5.1.1)."

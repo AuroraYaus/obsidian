@@ -1,0 +1,6 @@
+MCGFailureInformation field descriptions
+measResultFreqListThe field contains available results of measurements on NR frequencies the UE is configured to measure by the measConfig associated with the MCG.
+measResultFreqListEUTRAThe field contains available results of measurements on E-UTRA frequencies the UE is configured to measure by measConfig associated with the MCG.
+measResultFreqListUTRA-FDDThe field contains available results of measurements on UTRA FDD frequencies the UE is configured to measure by measConfig associated with the MCG.
+measResultSCGThe field contains the MeasResultSCG-Failure IE which includes available measurement results on NR frequencies the UE is configured to measure by the measConfig associated with the SCG.
+measResultSCG-EUTRAThe field contains the EUTRA MeasResultSCG-FailureMRDC IE which includes available results of measurements on E-UTRA frequencies the UE is configured to measure by the E-UTRA RRCConnectionReconfiguration message as specified in TS 36.331 [10].

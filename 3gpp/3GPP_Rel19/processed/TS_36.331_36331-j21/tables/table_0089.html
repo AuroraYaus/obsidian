@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td>SystemInformationBlockType16 field descriptions</td>
+  </tr>
+  <tr>
+    <td>dayLightSavingTimeIt indicates if and how daylight saving time (DST) is applied to obtain the local time. The semantics is the same as the semantics of the Daylight Saving Time IE in TS 24.301 [35] and TS 24.008 [49]. The first/leftmost bit of the bit string contains the b2 of octet 3, i.e. the value part of the Daylight Saving Time IE, and the second bit of the bit string contains b1 of octet 3.</td>
+  </tr>
+  <tr>
+    <td>leapSecondsNumber of leap seconds offset between GPS Time and UTC. UTC and GPS time are related i.e. GPS time -leapSeconds = UTC time.</td>
+  </tr>
+  <tr>
+    <td>localTimeOffsetOffset between UTC and local time in units of 15 minutes. Actual value = field value * 15 minutes. Local time of the day is calculated as UTC time + localTimeOffset.</td>
+  </tr>
+  <tr>
+    <td>timeInfoUTCCoordinated Universal Time corresponding to the SFN boundary at or immediately after the ending boundary of the SI-window in which SystemInformationBlockType16 is transmitted. In an NTN cell, the indicated time is referenced at the uplink time synchronization reference point (RP), i.e., UE should take into account the propagation delay between UE and RP when determining the UTC time at the UE. The field counts the number of UTC seconds in 10 ms units since 00:00:00 on Gregorian calendar date 1 January, 1900 (midnight between Sunday, December 31, 1899 and Monday, January 1, 1900). NOTE 1.This field is excluded when estimating changes in system information, i.e. changes of timeInfoUTC should neither result in system information change notifications nor in a modification of systemInfoValueTag in SIB1.</td>
+  </tr>
+</table>

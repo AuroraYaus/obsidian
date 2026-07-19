@@ -1,0 +1,4 @@
+SSB-InfoNCell field descriptions
+physicalCellIdThis field specifies the physical cell ID of the neighbour cell or NCD-SSB of the serving cell for which SSB configuration is provided.
+"ssb-IndexNcellThis field specifies the index of the SSB for a neighbour cell or NCD-SSB of the serving cell. See TS 38.213 [13]. If this field is absent, the UE determines the ssb-IndexNcell of the physicalCellIdbased on its SSB measurement from the cell."
+"ssb-ConfigurationThis field specifies the full configuration of the SSB. If this field is absent, the UE obtains the configuration for the SSB from nr-SSB-Config received as part of DL-PRS assistance data in LPP, see TS 37.355 [49], by looking up the corresponding SSB configuration using the field physicalCellId."

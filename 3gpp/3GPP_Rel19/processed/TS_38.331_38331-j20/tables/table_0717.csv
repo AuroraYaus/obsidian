@@ -1,0 +1,4 @@
+SL-DRX-Config field descriptions
+"sl-DRX-ConfigGC-BCThis field indicates the sidelink DRX configurations for groupcast and broadcast communication, as specified in TS 38.321 [3]."
+sl-DRX-ConfigUC-ToReleaseListThis field indicates the sidelink DRX configurations for corresponding unicast destinations to remove.
+sl-DRX-ConfigUC-ToAddModListThis field indicates the sidelink DRX configurations for corresponding unicast destinations to add and/or modify.

@@ -1,0 +1,6 @@
+TDD/FDD/IoT NTN TDD mode,Preamble format,Number of NPRACH repetitions,X
+FDD/IoT NTN TDD,0 or 1,>= 64,41
+FDD/IoT NTN TDD,0 or 1,< 64,4
+FDD,2,>= 16,41
+FDD,2,< 16,4
+TDD,Any,Any,4

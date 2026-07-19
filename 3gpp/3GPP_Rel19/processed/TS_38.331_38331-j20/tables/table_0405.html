@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <td>NR-DL-PRS-PDC-ResourceSet field descriptions</td>
+  </tr>
+  <tr>
+    <td>dl-PRS-ResourceBandwidthThis field specifies the number of PRBs allocated for all the DL-PRS Resource (allocated DL-PRS bandwidth) in multiples of 4 PRBs in this resource set. All DL-PRS Resources of the DL-PRS-PDC Resource Set have the same bandwidth. Integer value 1 corresponds to 24 PRBs, value 2 corresponds to 28 PRBs, value 3 corresponds to 32 PRBs and so on.</td>
+  </tr>
+  <tr>
+    <td>dl-PRS-StartPRBThis field specifies the start PRB index defined as offset with respect to subcarrier 0 in common resource block 0 for the DL-PRS Resource. All DL-PRS Resources of the DL-PRS-PDC Resource Set have the same value of dl-PRS-StartPRB.</td>
+  </tr>
+  <tr>
+    <td>numSymbolsThis field specifies the number of symbols per DL-PRS Resource within a slot. The UE does not expect to be configured for PDC with a PRS with numSymbols equals to n1 unless an SSB index is provided as a typeC or typeC-plus-typeD QCL source, or another PRS resource with numSymbols more than n1 is provided as QCL source.</td>
+  </tr>
+  <tr>
+    <td>periodicityAndOffsetThis field specifies the periodicity of DL-PRS allocation in slots and the slot offset with respect to SFN #0 slot #0 in the PCell where the DL-PRS-PDC Resource Set is configured (i.e., slot where the first DL-PRS Resource of DL-PRS-PDC Resource Set occurs).</td>
+  </tr>
+  <tr>
+    <td>repFactorAndTimeGapIf this field is absent, the value for repetitionFactor is 1 (i.e., no resource repetition).</td>
+  </tr>
+</table>

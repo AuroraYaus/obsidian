@@ -1,0 +1,4 @@
+DownlinkConfigCommon field descriptions
+frequencyInfoDLBasic parameters of a downlink carrier and transmission thereon.
+initialDownlinkBWPThe initial downlink BWP configuration for a serving cell. The network configures the locationAndBandwidth so that the initial downlink BWP contains the entire CORESET#0 of this serving cell in the frequency domain.
+"initialDownlinkBWP-RedCapIf present, (e)RedCap UEs use this DL BWP instead of initialDownlinkBWP.If absent, (e)RedCap UEs use initialDownlinkBWP provided that it does not exceed the (e)RedCap UE maximum bandwidth (see also clause 5.2.2.4.2)."

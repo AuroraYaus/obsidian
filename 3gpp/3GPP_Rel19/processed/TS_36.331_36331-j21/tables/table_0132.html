@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <td>GWUS-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>commonSequencePresence of the field indicates common WUS sequence is configured. Value g0 indicates common WUS sequence for the shared WUS resource corresponds to g = 0, and value g126 indicates common WUS sequence for the shared WUS resource corresponds to g = 126, see TS 36.211 [21].</td>
+  </tr>
+  <tr>
+    <td>groupAlternationPresence of the field enables WUS group alternation between the two or more WUS resources for the gap type, see TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>groupNarrowBandListList indicating which paging narrowbands support group WUS see TS 36.304 [4]. First entry in the list indicates WUS support for first paging narrowband, second entry in the list indicates WUS support for second paging narrowband, and so on. If E-UTRAN includes groupNarrowBandList, the number of entries is equal to the value of paging-narrowBands. If this list is absent, group WUS is supported on all paging narrowbands.E-UTRAN does not configure this field when RRC_INACTIVE is used in the cell.</td>
+  </tr>
+  <tr>
+    <td>groupsForServiceListNumber of WUS groups for each paging probability group see TS 36.304 [4]. The first entry corresponds to the first probability group, the second entry corresponds to the second paging probability group, and so on. Total number of WUS groups in this list cannot be more than the total number of WUS groups in numGroupsList. If E-UTRAN includes groupsForServiceList, it includes the same number of entries and listed in the same order as in probThreshList.</td>
+  </tr>
+  <tr>
+    <td>numGroupsListList of WUS groups for each WUS resource see TS 36.304 [4]. First entry corresponds to the first resource, second entry corresponds to the second resource, and so on. numGroupsList is mandatory present in resourceConfigDRX. If numGroupsList is not present in resourceConfig-eDRX-Short, parameter for DRX WUS resource applies for short eDRX WUS resource. If numGroupsList is not present in resourceConfig-eDRX-Long, parameter for short eDRX WUS resource applies for long eDRX WUS resource.</td>
+  </tr>
+  <tr>
+    <td>probThreshListPaging probability thresholds corresponding to the paging probability groups, see TS 36.304 [4]. Value p20 corresponds to 20%, value p30 corresponds to 30%, and so on.</td>
+  </tr>
+  <tr>
+    <td>resourceConfigDRX, resourceConfig-eDRX-Short, resourceConfig-eDRX-LongWUS resource configured for each gap type see TS 36.304 [4]. If resourceConfig-eDRX-Short is not present, DRX WUS parameters apply for short eDRX WUS resource. If resourceConfig-eDRX-Long is not present, short eDRX WUS parameters apply for long eDRX WUS resource.</td>
+  </tr>
+  <tr>
+    <td>resourceMappingPatternIdentifies the WUS resource mapping to time/frequency as defined in TS 36.304 [4]. If wus-Config-r15 is present in SystemInformationBlockType2, the field is set to value resourceLocationWithWUS; otherwise the field is set to value resourceLocationWithoutWUS.</td>
+  </tr>
+  <tr>
+    <td>timeParametersTime domain WUS configuration information. For individual field descriptions, see WUS-Config. If the field is absent, the parameters in wus-Config apply.</td>
+  </tr>
+</table>

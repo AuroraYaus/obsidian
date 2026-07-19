@@ -1,0 +1,2 @@
+Conditional Presence,Explanation
+InitialBWPConfig,"The field is mandatory present when MsgA-ConfigCommon is configured for the initial uplink BWP, or when MsgA-ConfigCommon is configured for a non-initial uplink BWP and MsgA-ConfigCommon is not configured for the initial uplink BWP, otherwise the field is optionally present, Need S."

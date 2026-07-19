@@ -1,0 +1,16 @@
+Value of HARQ-ACK information bits,,,,PUCCH resource
+{0},"{0,0}","{0,0,0}","{0,0,0,0}",1st PUCCH resource from resourceList/n1PUCCH-AN/sps-PUCCH-AN-ListMulticast
+,"{1,0}","{1,0,0}","{1,0,0,0}",2nd PUCCH resource from resourceList/sps-PUCCH-AN-ListMulticast
+,"{0,1}","{0,1,0}","{0,1,0,0}",3rd PUCCH resource from resourceList/sps-PUCCH-AN-ListMulticast
+,,"{1,1,0}","{1,1,0,0}",4th PUCCH resource from resourceList
+,,"{0,0,1}","{0,0,1,0}",5th PUCCH resource from resourceList
+,,"{1,0,1}","{1,0,1,0}",6th PUCCH resource from resourceList
+,,"{0,1,1}","{0,1,1,0}",7th PUCCH resource from resourceList
+,,,"{1,1,1,0}",8th PUCCH resource from resourceList
+,,,"{0,0,0,1}",9th PUCCH resource from resourceList
+,,,"{1,0,0,1}",10th PUCCH resource from resourceList
+,,,"{0,1,0,1}",11th PUCCH resource from resourceList
+,,,"{1,1,0,1}",12th PUCCH resource from resourceList
+,,,"{0,0,1,1}",13th PUCCH resource from resourceList
+,,,"{1,0,1,1}",14th PUCCH resource from resourceList
+,,,"{0,1,1,1}",15th PUCCH resource from resourceList

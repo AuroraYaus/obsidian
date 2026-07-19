@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td>RN-SubframeConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>demodulationRSIndicates which reference signals are used for R-PDCCH demodulation according to TS 36.216 [55], clause 7.4.1. Value interleaving corresponds to cross-interleaving and value noInterleaving corresponds to no cross-interleaving according to TS 36.216 [55], clauses 7.4.2 and 7.4.3.</td>
+  </tr>
+  <tr>
+    <td>n1PUCCH-AN-ListParameter: , see TS 36.216, [55], clause 7.5.1. This parameter is only applicable for TDD. Configures PUCCH HARQ-ACK resources if the RN is configured to use HARQ-ACK channel selection, HARQ-ACK multiplexing or HARQ-ACK bundling.</td>
+  </tr>
+  <tr>
+    <td>n1PUCCH-AN-P0, n1PUCCH-AN-P1Parameter: , for antenna port P0 and for antenna port P1 respectively, see TS 36.216, [55], clause 7.5.1, for FDD and [55], clause 7.5.2 for TDD.</td>
+  </tr>
+  <tr>
+    <td>pdsch-StartParameter: DL-StartSymbol, see TS 36.216 [55], Table 5.4-1.</td>
+  </tr>
+  <tr>
+    <td>resourceAllocationTypeRepresents the resource allocation used: type 0, type 1 or type 2 according to TS 36.213 [23], clause 7.1.6. Value type0 corresponds to type 0, value type1 corresponds to type 1, value type2Localized corresponds to type 2 with localized virtual resource blocks and type2Distributed corresponds to type 2 with distributed virtual resource blocks.</td>
+  </tr>
+  <tr>
+    <td>resourceBlockAssignmentIndicates the resource block assignment bits according to TS 36.213 [23], clause 7.1.6. Value type01 corresponds to type 0 and type 1, and the value type2 corresponds to type 2. Value nrb6 corresponds to a downlink system bandwidth of 6 resource blocks, value nrb15 corresponds to a downlink system bandwidth of 15 resource blocks, and so on.</td>
+  </tr>
+  <tr>
+    <td>subframeConfigPatternFDDParameter: SubframeConfigurationFDD, see TS 36.216 [55], Table 5.2-1. Defines the DL subframe configuration for eNB-to-RN transmission, i.e. those subframes in which the eNB may indicate downlink assignments for the RN. The radio frame in which the pattern starts (i.e. the radio frame in which the first bit of the subframeConfigPatternFDD corresponds to subframe #0) occurs when SFN mod 4 = 0.</td>
+  </tr>
+  <tr>
+    <td>subframeConfigPatternTDDParameter: SubframeConfigurationTDD, see TS 36.216 [55], Table 5.2-2. Defines the DL and UL subframe configuration for eNB-RN transmission.</td>
+  </tr>
+</table>

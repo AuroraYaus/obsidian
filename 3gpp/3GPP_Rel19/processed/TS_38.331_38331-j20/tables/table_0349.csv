@@ -1,0 +1,7 @@
+CellsToAddMod field descriptions
+cellIndividualOffsetCell individual offsets applicable to a specific cell.
+ntn-NeighbourCellInfoIncludes satellite assistance information of an NTN neighbour cell.
+"ntn-PolarizationDLIf present, this parameter indicates polarization information for downlink transmission on service link: including Right hand, Left hand circular polarizations (RHCP, LHCP) and Linear polarization."
+"ntn-PolarizationULIn this version of the specification, the network does not include this field."
+physCellIdPhysical cell identity of a cell in the cell list.
+referenceLocationReference location of a neighbor NTN Earth-moving cell for the evaluation of the trigger criteria of an associated ReportConfig which contains EventD2 or condEventD2.

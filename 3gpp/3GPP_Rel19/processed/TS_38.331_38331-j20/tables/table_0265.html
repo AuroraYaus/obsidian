@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td>DMRS-BundlingPUCCH-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>pucch-DMRS-BundlingIndicates whether DMRS bundling and time domain window for PUCCH are jointly enabled.</td>
+  </tr>
+  <tr>
+    <td>pucch-FrequencyHoppingIntervalConfigures the number of consecutive slots for the UE to perform inter-slot frequency hopping with inter-slot bundling for PUCCH. When both inter-frequency hopping and DMRS bundling are enabled for PUCCH repetitions, the UE is expected to be configured with at least one pucch-FrequencyHoppingInterval-r17 and pucch-TimeDomainWindowLength-r17. When DMRS bundling for PUCCH is enabled by pucch-DMRS-Bundling-r17, PUCCH frequency hopping interval is only determined by the configuration of PUCCH hopping interval if PUCCH hopping interval is configured. If the field is absent, the number of consecutive slots for the UE to perform inter-slot PUCCH frequency hopping is indicated by pucch-TimeDomainWindowLength-r17.</td>
+  </tr>
+  <tr>
+    <td>pucch-TimeDomainWindowLengthConfigures the length of a nominal time domain window in slots for DMRS bundling for PUCCH. The value shall not exceed the maximum duration for DMRS bundling for PUCCH as specified in TS 38.306 [26]. If this field is absent, the UE shall apply the default value that is the minimum value in the unit of consecutive slots of the time duration for the transmission of all PUCCH repetitions and the maximum duration for DMRS bundling for PUCCH as specified in TS 38.306 [26].</td>
+  </tr>
+  <tr>
+    <td>pucch-WindowRestartIndicates whether UE bundles PUCCH DMRS remaining in a nominal time domain window after event(s) triggered by DCI or MAC CE that violate power consistency and phase continuity requirements is enabled (see TS 38.214 [19], clause 6.1.7).NOTE:Events, which are triggered by DCI or MAC CE, but do not require UE capability to resume maintaining power consistency and/or phase continuity as specified in clause 6.1.7 of TS 38.214 [19], are excluded.</td>
+  </tr>
+</table>

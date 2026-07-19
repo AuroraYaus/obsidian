@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>CSI-ResourceConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>bwp-IdThe DL BWP which the CSI-RS or CLI measurement resources associated with this CSI-ResourceConfig are located in (see TS 38.214 [19], clause 5.2.1.2.</td>
+  </tr>
+  <tr>
+    <td>cli-MeasResourceSetListList of references to SRS-RSRP measurement resource set(s) or CLI-RSSI measurement resource set(s) used for L1 SRS-RSRP measurement and reporting or L1 CLI-RSSI measurement and reporting (see TS 38.214 [19], clause 5). Value cli-RSSI-MeasResourceSetList contains up to maxNrofCLI-RSSI-MeasResourceSetsPerConfig resource sets if resourceType is &#x27;aperiodic&#x27; and 1 otherwise. Value srs-RSRP-MeasResourceSetList contains up to maxNrofSRS-RSRP-MeasResourceSetsPerConfig resource sets if resourceType is &#x27;aperiodic&#x27; and 1 otherwise. If this field is configured, the UE shall ignore the field csi-RS-ResourceSetList.</td>
+  </tr>
+  <tr>
+    <td>csi-IM-ResourceSetListList of references to CSI-IM resources used for CSI measurement and reporting in a CSI-RS resource set. Contains up to maxNrofCSI-IM-ResourceSetsPerConfig resource sets if resourceType is &#x27;aperiodic&#x27; and 1 otherwise (see TS 38.214 [19], clause 5.2.1.2).</td>
+  </tr>
+  <tr>
+    <td>csi-ResourceConfigIdUsed in CSI-ReportConfig to refer to an instance of CSI-ResourceConfig.</td>
+  </tr>
+  <tr>
+    <td>csi-SSB-ResourceSetList, csi-SSB-ResourceSetListExtList of references to SSB resources used for CSI measurement and reporting in a CSI-RS resource set (see TS 38.214 [19], clause 5.2.1.2). The csi-SSB-ResourceSetListExt provides additional references and can only be configured if csi-SSB-ResourceSetList is configured and groupBasedBeamReporting-v1710 is configured in the CSI-ReportConfig that indicates this CSI-ResourceConfig as resourcesForChannelMeasurement. If groupBasedBeamReporting-v1710 is configured in the IE CSI-ReportConfig that indicates this CSI-ResourceConfig as resourcesForChannelMeasurement, the network configures 2 resource sets, which may be two CSI SSB resource sets (see TS 38.214 [19], clause 5.2.1.2 and 5.2.1.4.2). In this case, in TS 38.212 [17] Table 6.3.1.1.2-8B, the first resource set is indicated by a resource set indicator set to 0 and the second resource set by a resource set indicator set to 1.</td>
+  </tr>
+  <tr>
+    <td>nzp-CSI-RS-ResourceSetListList of references to NZP CSI-RS resources used for beam measurement and reporting in a CSI-RS resource set.If resourceType is set to &#x27;aperiodic&#x27;, the network configures up to maxNrofNZP-CSI-RS-ResourceSetsPerConfig resource sets. If resourceType is is set to &#x27;periodic&#x27; or &#x27;semiPersistent&#x27; and groupBasedBeamReporting-v1710 is not configured in IE CSI-ReportConfig, the network configures 1 resource set. If resourceType is set to &#x27;periodic&#x27; or &#x27;semiPersistent&#x27; and groupBasedBeamReporting-v1710 is configured, the network configures 2 resource sets, which may be two NZP CSI-RS resource sets (see TS 38.214 [19], clause 5.2.1.2 and 5.2.1.4.2). In this case, in TS 38.212 [17] Table 6.3.1.1.2-8B, the first resource set is indicated by a resource set indicator set to 0 and the second resource set by a resource set indicator set to 1. If resourceType is set to &#x27;periodic&#x27; and reportQuantity is set to &#x27;TDCP&#x27;, the network configures up to 3 resource sets, see TS 38.214 [19] clause 5.2.1.2.</td>
+  </tr>
+  <tr>
+    <td>resourceTypeTime domain behavior of resource configuration (see TS 38.214 [19], clause 5.2.1.2). It does not apply to resources provided in the csi-SSB-ResourceSetList. If the associated csi-ResourceConfigId is included in CSI-LoggedMeasurementConfig, it is set to &#x27;periodic&#x27;.</td>
+  </tr>
+</table>

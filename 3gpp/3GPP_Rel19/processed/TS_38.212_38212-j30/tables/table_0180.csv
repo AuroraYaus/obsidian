@@ -1,0 +1,6 @@
+Value,Number of DMRS CDM group(s) without data,DMRS port(s),Number of front-load symbols
+0,2,0-2,1
+1,2,"0,1,4",2
+2,2,"2,3,6",2
+3,2,"0,2,3",1
+4-15,Reserved,Reserved,Reserved

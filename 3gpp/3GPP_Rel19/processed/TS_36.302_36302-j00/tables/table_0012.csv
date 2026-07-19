@@ -1,0 +1,97 @@
+Change history,,,,,,,
+Date,TSG #,TSG Doc.,CR,Rev,Cat,Subject/Comment,New version
+11/2006,RP-34,RP-060795,-,,,First version : presented at TSG-RAN #34 and TSG-RAN WG2 #56 (11/2006),0.0.0
+05/2007,RP-36,RP-xyztu,,,,Update including physical layer modelling: submitted at TSG-RAN WG2 #58 (05/2006),0.0.1
+06/2007,RP-37,R2-072502,,,,Update including physical Services and functions of the Physical Layer: presented and TSG-RAN WG2 #58bis (06/2006),0.0.2
+06/2007,RP-37,R2-072931,,,,Update after presentation at TSG-RAN WG2 #58bis : physical channel channel terminology used,0.1.0
+09/2007,RP-37,RP-070686,,,,Removal of editor's notes. Presented at TSG-RAN #37 for information,1.0.0
+10/2007,R2-59bis,R2-074579,,,,"Agreements in RAN1 LS received at RAN2#59 have to be implemented in the specification (by RAN2#59bis): Parallel reception of Physical Broadcast Channel (PBCH) and DL-SCH in the same TTI is feasible; 2 new measurements were introduced for LTE, UE measurement ""Reference Signal Received Quality (RSRQ)""  and eNode B measurement ""DL RS TX power"".",1.0.2
+10/2007,R2-59bis,R2-074584,,,,Removal of incorrect Parallel reception of physical channels,1.0.3
+11/2007,RP-38,RP-070914,,,,Submission to RAN for RAN#38 approval,2.0.0
+12/2007,RP-38,-,,,,Apprpved at TSG RAN-38 and placed under change control,8.0.0
+03/2009,RP-43,RP-090124,0002,-,,Proposed CR on Parallel reception in LTE,8.1.0
+,RP-43,RP-090124,0004,-,,Correction of out-of-date information,8.1.0
+06/2009,RP-44,RP-090509,0005,1,,Correction of MBMS,8.2.0
+,RP-44,RP-090509,0006,-,,Downlink reception types,8.2.0
+,RP-44,RP-090509,0009,-,,Simultaneous reception of transport channels in the LTE,8.2.0
+,RP-44,RP-090509,0010,-,,Clarification on the parallel receptions for PDSCHs,8.2.0
+12/2009,RP-46,RP-091341,0011,-,,Addition of MBMS reception types,9.0.0
+,RP-46,RP-091346,0012,-,,Remove FFSs from RAN2 specifications,9.0.0
+,RP-46,RP-091345,0014,-,,Proposed CR to 36.302 on Introduction of CMAS,9.0.0
+03/2010,RP-47,RP-100308,0019,1,,Correction to RSRP and RSRQ definition with Receiver Diversity to align with TS 36.214,9.1.0
+06/2010,RP-48,RP-100556,0020,-,,Correction to RSRQ definition to align with TS 36.214,9.2.0
+12/2010,RP-50,RP-101226,0021,3,,Introduction of CA to TS36.302,10.0.0
+03/2011,RP-51,RP-110289,0022,1,,Correction to parallel reception and transmission for CA,10.1.0
+,RP-51,RP-110270,0025,-,,Corrections to TS36.302 on MBMS,10.1.0
+,RP-51,RP-110289,0026,-,,Update and correction to TS36.302 for CA,10.1.0
+06/2011,RP-52,RP-110839,0028,-,,DL Assignment in MBSFN Subframe,10.2.0
+12/2011,RP-54,RP-111716,0029,-,,Corrections to  channel model,10.3.0
+03/2012,RP-55,RP-120326,0030,1,,Correction to the combination of physical uplink channels,10.4.0
+09/2012,RP-57,RP-121350,0031,-,,Introduction of parallel PRACH and PUSCH/PUCCH/SRS transmission,11.0.0
+12/2012,RP-58,RP-121951,0036,-,,"Correction to parallel PRACH, SRS and PUSCH/PUCCH transmission",11.1.0
+,RP-58,RP-121956,0037,-,,Introduction of EPDCCH in TS 36.302,11.1.0
+03/2013,RP-59,RP-130245,0041,-,,Correction to parallel SRS and PUSCH/PUCCH transmission,11.2.0
+06/2013,RP-60,RP-130808,0043,-,,Clarification on EPDCCH reception in MBSFN subframes,11.3.0
+,RP-60,RP-130808,0044,-,,Correction on downlink reception type combinations for UEs supporting multiple TAGs,11.3.0
+,RP-60,RP-130808,0045,-,,Downlink Reception Type Combinations for MBMS capable UE,11.3.0
+09/2013,RP-61,RP-131311,0047,-,,Miscellaneous correction to 36.302,11.4.0
+03/2014,RP-63,RP-140355,0049,-,,MBMS reception on any configured or configurable SCell,11.5.0
+06/2014,RP-64,RP-140884,0050,-,,Introduction of the Downlink Reception Types for TDD eIMTA,12.0.0
+,RP-64,RP-140892,0051,-,,Correction on simultaneous DL physical channels for idle UE,12.0.0
+09/2014,RP-65,RP-141506,0054,1,,"Updates for low complexity UEs, and the improvements for the representation of the reception requirements",12.1.0
+12/2014,RP-66,RP-142135,0056,-,,Introduction of dual connectivity,12.2.0
+03/2015,RP-67,RP-150376,0059,-,,Removal of unnecessary requirement to receive MIB on SCell,12.3.0
+06/2015,RP-68,RP-150921,0060,-,,Introduction of ProSe,12.4.0
+09/2015,RP-69,RP-151443,0061,1,,TS36.302 rapporteur's cleanup,12.5.0
+12/2015,RP-70,RP-152053,0062,-,,Corrections to Sidelink in TS 36.302,12.6.0
+12/2015,RP-70,RP-152071,0063,-,,Introduction of PUCCH on SCell in CA,13.0.0
+,RP-70,RP-152080,0064,1,,Introduction of SC-PTM,13.0.0
+03/2016,RP-71,RP-160470,0065,1,,Correction on CA enhancement,13.1.0
+,RP-71,RP-160453,0066,2,,The introduction of eMTC features,13.1.0
+06/2016,RP-72,RP-161078,0070,-,,Corrections on the data modulation of Downlink-Shared Channel,13.2.0
+,RP-72,RP-161080,0071,1,,Correction for sidelink,13.2.0
+,RP-72,RP-161080,0072,1,,Corrections on sidelink related description in TS36.302,13.2.0
+,RP-72,RP-161080,0073,-,,SC-PTM reception on non-Pcell,13.2.0
+,RP-72,RP-161080,0074,-,,Improvements for the representation of eMTC features,13.2.0
+,RP-72,RP-161081,0076,1,,Introduction of NB-IoT in 36.302,13.2.0
+09/2016,RP-73,RP-161758,0078,-,,Corrections to NB-IoT downlink reception type combinations,13.3.0
+,RP-73,RP-161753,0079,1,,Introduction of LAA,13.3.0
+,RP-73,RP-161751,0082,1,,Introduction of MBSFN measurements,13.3.0
+,RP-73,RP-161762,0083,1,,Introduction of RS-SINR measurement to 36.302,13.3.0
+,RP-73,RP-161755,0084,-,,Miscellaneous corrections on DL reception types,13.3.0
+09/2016,RP-73,RP-161746,0077,2,,Introducing V2V to TS 36.302,14.0.0
+,RP-73,RP-161745,0080,1,,Introduction of eLAA,14.0.0
+12/2016,RP-74,RP-162318,0086,-,,Miscellaneous corrections to TS 36.302,14.1.0
+,RP-74,RP-162328,0087,2,,Corrections on V2V descriptions in TS 36.302,14.1.0
+,RP-74,RP-162324,0090,1,,Inroduce the new RNTIs for SRS Carrier Based Switching,14.1.0
+,RP-74,RP-162315,0091,1,,Clarification on Reception Type for SC-PTM,14.1.0
+03/2017,RP-75,RP-170643,0092,-,F,Correction on the definition of sidelink in 36.302,14.2.0
+,RP-75,RP-170656,0094,1,A,Correction for MAC SDU and PDU for BCH in NB-IoT,14.2.0
+,RP-75,RP-170655,0096,-,A,Correction on channel bandwidth definition for NB-IoT,14.2.0
+,RP-75,RP-170637,0097,2,B,Introduction of Rel-14 NB-IoTEnhancements,14.2.0
+,RP-75,RP-170636,0098,2,B,Introduction of Rel-14 FeMTC,14.2.0
+,RP-75,RP-170633,0099,1,B,Introduction of FeMBMS to 36.302,14.2.0
+,RP-75,RP-170635,0103,1,B,Introducing V2X to TS 36.302,14.2.0
+06/2017,RP-76,RP-171223,0105,2,F,Correction to SC-MCCH and SC-MTCH reception type,14.3.0
+,RP-76,RP-171234,0107,1,F,Correction on the data modulation of Uplink Shared Channel,14.3.0
+,RP-76,RP-171244,0109,1,A,Correction to downlink reception types for BL UEs and UEs in CE,14.3.0
+,RP-76,RP-171221,0112,1,F,Correction to Downlink Reception Type Combinations for FeMBMS,14.3.0
+12/2017,RP-78,RP-172617,0114,2,F,Correction to V2X descriptions in TS 36.302,14.4.0
+,RP-78,RP-172616,0115,3,F,Correction on downlink reception type combination for SC-PTM in feMTC,14.4.0
+,RP-78,RP-172624,0117,1,A,Correction to description of uplink and downlink shared channel physical layer model for MTC and NB-IoT.,14.4.0
+,RP-78,RP-172615,1191,1,F,Table 8.2-2 correction of the remarks for DL reception type of Sidelink and FeMBMS and move of EPDCCH remark to the bottom of the table,14.4.0
+06/2018,RP-80,RP-181218,1192,2,B,Introduction of shortened TTI and processing time for LTE,15.0.0
+,RP-80,RP-181252,1193,1,B,Introduction of Rel-15 NB-IoT enhancementsin 36.302,15.0.0
+,RP-80,RP-181224,1194,-,B,Introduction of Rel-15 eMTC enhancements in 36.302,15.0.0
+12/2018,RP-82,RP-182671,1195,2,F,Minor corrections to services provided by physical layer,15.1.0
+,RP-82,RP-182678,1196,2,F,Correction on MCS for V2X sidelink communication in TS 36.302,15.1.0
+03/2019,RP-83,RP-190549,1198,2,F,Number of PDCCH/EPDCCH/SPDCCH received parallel,15.2.0
+,RP-83,RP-190552,1199,1,F,Correction on PDCCH order,15.2.0
+,RP-83,RP-190549,1201,-,A,Correction on PDCCH reception type combinations on CSS,15.2.0
+03/2020,RP-87,RP-200361,1202,1,B,Introduction of additional enhancements for NB-IoT in TS 36.302,16.0.0
+,RP-87,RP-200360,1203,1,B,Introduction of additional enhancements for R16 eMTC,16.0.0
+07/2020,RP-88,RP-201167,1207,1,A,Correction on reception type combination for eMTC,16.1.0
+,RP-88,RP-201168,1210,-,A,Adding Reception Type for uplink HARQ ACK feedback for Rel-15 eMTC,16.1.0
+03/2022,RP-95,RP-220507,1211,1,B,Introduction of Rel-17 enhancements for NB-IoT and eMTC,17.0.0
+03/2024,RP-103,,,,,"Upgraded to Rel-18, no technical change",18.0.0
+09/2025,RP-109,,,,,"Upgraded to Rel-19, no technical change",19.0.0

@@ -1,0 +1,8 @@
+Field,Bit width,,,,,
+,4 antenna ports,,,,,
+,Rank = 1,,Rank = 2,,Rank = 3,Rank=4
+,PTI=0,PTI=1,PTI=0,PTI=1,PTI=1,PTI=1
+Wide-band CQI,0,4,0,4,4,4
+Spatial differential CQI,0,0,0,3,3,3
+i1,4,0,4,0,0,0
+Wide-band i2,0,4,0,4,4,4

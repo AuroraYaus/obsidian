@@ -1,0 +1,12 @@
+MasterInformationBlock-NB field descriptions
+ab-EnabledValue TRUE indicates that access barring is enabled for UEs connected to EPC.
+ab-Enabled-5GCValue TRUE indicates that access barring is enabled for UEs connected to 5GC.
+"additionalTransmissionSIB1Value TRUE indicates that additional SIB1-NB transmissions are present. See TS 36.211 [21] and TS 36.213 [23].E-UTRAN only configures additionalTransmissionSIB1 to TRUE if schedulingInfoSIB1 indicates that the number of NPDSCH repetitions is 16, see TS 36.213 [23], Table 16.4.1.3-3."
+"earfcn-LSBIndicates the 2 least significant bits of the EARFCN for NTN bands where 100 kHz raster is used, see TS 36.102 [113]."
+eutra-CRS-SequenceInfoInformation of the carrier containing NPSS/NSSS/NPBCH.Each value is associated with an E-UTRA PRB index as an offset from the middle of the LTE system sorted out by channel raster offset. See TS 36.211[21] and TS 36.213 [23].
+"eutra-NumCRS-PortsNumber of E-UTRA CRS antenna ports, either the same number of ports as NRS or 4 antenna ports. See TS 36.211 [21], TS 36.212 [22], and TS 36.213 [23]."
+hyperSFN-LSBIndicates the 2 least significant bits of hyper SFN. The remaining bits are present in SystemInformationBlockType1-NB.
+operationModeInfoDeployment scenario (in-band/guard-band/standalone) and related information. See TS 36.211 [21] and TS 36.213 [23].Inband-SamePCI indicates an in-band deployment and that the NB-IoT and LTE cell share the same physical cell id and have the same number of NRS and CRS ports.Inband-DifferentPCI indicates an in-band deployment and that the NB-IoT and LTE cell have different physical cell id.guardband indicates a guard-band deployment.standalone indicates a standalone deployment.
+"schedulingInfoSIB1This field contains an index to a table specified in TS 36.213 [23], Table 16.4.1.3-3, that defines SystemInformationBlockType1-NB scheduling information."
+"systemFrameNumber-MSBDefines the 4 most significant bits of the SFN. As indicated in TS 36.211 [21], the 6 least significant bits of the SFN are acquired implicitly by decoding the NPBCH."
+"systemInfoValueTagCommon for all SIBs other than MIB-NB, SIB10-NB, SIB11-NB, SIB12-NB, SIB14-NB, SIB16-NB, SIB31-NB and SIB33-NB."

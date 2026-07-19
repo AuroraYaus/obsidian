@@ -1,0 +1,98 @@
+<table>
+  <tr>
+    <td>PDCP-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>bufferSizeIndicates the buffer size applied for UDC specified in TS 36.323 [8]. Value kbyte2 means 2048 bytes, kbyte4 means 4096 bytes and so on.</td>
+  </tr>
+  <tr>
+    <td>dictionaryIndicates which pre-defined dictionary is used for UDC as specified in TS 36.323 [8]. The value sip-SDP means that UE shall prefill the buffer with standard dictionary for SIP and SDP defined in TS 36.323 [8], and the value operator means that UE shall prefill the buffer with operator-defined dictionary.</td>
+  </tr>
+  <tr>
+    <td>discardTimerIndicates the discard timer value specified in TS 36.323 [8]. Value in milliseconds. Value ms50 means 50 ms, ms100 means 100 ms and so on.</td>
+  </tr>
+  <tr>
+    <td>discardTimerExtIndicates the discard timer value specified in TS 36.323 [8]. Value in milliseconds. Value ms2000 means 2000 ms.The UE shall use the extended value discardTimerExt, if present, and ignore the value signaled by discardTimer.</td>
+  </tr>
+  <tr>
+    <td>drb-ContinueEHC-DLIndicates whether the PDCP entity continues or resets the downlink EHC header compression protocol during PDCP re-establishment, as specified in TS 36.323 [8]. The field is configured only in case of resuming an RRC connection or reconfiguration with sync, where the PDCP termination point is not changed and the fullConfig is not indicated.</td>
+  </tr>
+  <tr>
+    <td>drb-ContinueEHC-ULIndicates whether the PDCP entity continues or resets the uplink EHC header compression protocol during PDCP re-establishment, as specified in TS 36.323 [8]. The field is configured only in case of resuming an RRC connection or reconfiguration with sync, where the PDCP termination point is not changed and the fullConfig is not indicated.</td>
+  </tr>
+  <tr>
+    <td>ehc-CID-LengthIndicates the length of the CID field for EHC packet. Once the field ethernetHeaderCompression-r16 is configured for a DRB, the value of the field ehc-CID-Length for this DRB is not reconfigured to a different value.</td>
+  </tr>
+  <tr>
+    <td>ehc-CommonIndicates the configurations that apply for both downlink and uplink.</td>
+  </tr>
+  <tr>
+    <td>ehc-DownlinkIndicates the configurations that apply for only downlink. If the field is configured, then Ethernet header compression is configured for downlink. Otherwise, it is not configured for downlink.</td>
+  </tr>
+  <tr>
+    <td>ehc-UplinkIndicates the configurations that apply for only uplink. If the field is configured, then Ethernet header compression is configured for uplink. Otherwise, it is not configured for uplink.</td>
+  </tr>
+  <tr>
+    <td>ethernetHeaderCompressionThis field configures Ethernet Header Compression. This field can only be configured for DRB.E-UTRAN does not reconfigure ethernetHeaderCompression for an MCG DRB except for upon handover and upon the first reconfiguration after RRC connection re-establishment. E-UTRAN does not reconfigure ethernetHeaderCompression for a SCG DRB except for upon SCG change involving PDCP re-establishment.E-UTRAN does not configure this field if uplinkDataCompression is configured. E-UTRAN does not configure this field for split and LWA DRBs.</td>
+  </tr>
+  <tr>
+    <td>headerCompressionE-UTRAN does not reconfigure header compression for an MCG DRB except for upon handover and upon the first reconfiguration after RRC connection re-establishment, and without any drb-ContinueROHC. E-UTRAN does not reconfigure header compression for a SCG DRB except for upon SCG change involving PDCP re-establishment. E-UTRAN does not configure header compression while t-Reordering is configured except for DAPS bearers. E-UTRAN only configures this field when neither uplinkOnlyHeaderCompression nor uplinkDataCompression is configured.If headerCompression is configured, the UE shall apply the configured ROHC profile(s) in both uplink and downlink. ROHC and EHC can be both configured simultaneously for a DRB.</td>
+  </tr>
+  <tr>
+    <td>maxCIDIndicates the value of the MAX_CID parameter as specified in TS 36.323 [8]. The total value of MAX_CIDs across all bearers for the UE should be less than or equal to the value of maxNumberROHC-ContextSessions parameter as indicated by the UE.</td>
+  </tr>
+  <tr>
+    <td>maxCID-EHC-ULIndicates the value of the MAX_CID_EHC_UL parameter as specified in TS 36.323 [8]. The total value of MAX_CID_EHC_UL across all bearers for the UE should be less than or equal to the value of maxNumberEHC-Contexts parameter as indicated by the UE.</td>
+  </tr>
+  <tr>
+    <td>pdcp-DuplicationParameter for configuring PDCP duplication as specified in TS 36.323 [8]. Value configured indicates that PDCP duplication is configured but initially deactivated and value activated indicates that PDCP duplication is configured and activated upon configuration. For EN-DC, E-UTRAN configures PDCP duplication for MCG DRB only if PDCP duplication is not configured for any split DRB. PDCP duplication is not supported during a DAPS handover.</td>
+  </tr>
+  <tr>
+    <td>pdcp-SN-SizeIndicates the PDCP Sequence Number length in bits. For RLC UM: value len7bits means that the 7-bit PDCP SN format is used and len12bits means that the 12-bit PDCP SN format is used. For RLC AM: value len15bits means that the 15-bit PDCP SN format is used, value len18bits means that the 18-bit PDCP SN format is used, otherwise if the field is not included upon setup of the PCDP entity 12-bit PDCP SN format is used, as specified in TS 36.323 [8].</td>
+  </tr>
+  <tr>
+    <td>profilesThe profiles used by both compressor and decompressor in both UE and E-UTRAN. The field indicates which of the ROHC profiles specified in TS 36.323 [8] are supported, i.e. value true indicates that the profile is supported. Profile 0x0000 shall always be supported when the use of ROHC is configured. If support of two ROHC profile identifiers with the same 8 LSB&#x27;s is signalled, only the profile corresponding to the highest value shall be applied.</td>
+  </tr>
+  <tr>
+    <td>statusFeedbackIndicates whether the UE shall send PDCP Status Report periodically or by E-UTRAN polling as specified in TS 36.323 [8]. E-UTRAN configures this field only for LWA DRB.</td>
+  </tr>
+  <tr>
+    <td>statusPDU-TypeForPollingIndicates the PDCP Control PDU option when it is triggered by E-UTRAN polling. Value type1 indicates using the legacy PDCP Control PDU for PDCP status reporting and value type2 indicates using the LWA specific PDCP Control PDU for LWA status reporting as specified in TS 36.323 [8].</td>
+  </tr>
+  <tr>
+    <td>statusPDU-Periodicity-Type1Indicates the value of the PDCP Status reporting periodicity for type1 Status PDU, as specified in TS 36.323 [8]. Value in milliseconds. Value ms5 means 5 ms, ms10 means 10 ms and so on.</td>
+  </tr>
+  <tr>
+    <td>statusPDU-Periodicity-Type2Indicates the value of the PDCP Status reporting periodicity for type2 Status PDU, as specified in TS 36.323 [8]. Value in milliseconds. Value ms5 means 5 ms, ms10 means 10 ms and so on.</td>
+  </tr>
+  <tr>
+    <td>statusPDU-Periodicity-OffsetIndicates the value of the offset for type2 Status PDU periodicity, as specified in TS 36.323 [8]. Value in milliseconds. Value ms1 means 1 ms, ms2 means 2 ms and so on.</td>
+  </tr>
+  <tr>
+    <td>t-ReorderingIndicates the value of the reordering timer, as specified in TS 36.323 [8]. Value in milliseconds. Value ms0 means 0 ms and behaviour as specified in 7.3.2 applies, ms20 means 20 ms and so on.</td>
+  </tr>
+  <tr>
+    <td>rn-IntegrityProtectionIndicates that integrity protection or verification shall be applied for all subsequent packets received and sent by the RN on the DRB.</td>
+  </tr>
+  <tr>
+    <td>statusReportRequiredIndicates whether or not the UE shall send a PDCP Status Report upon re-establishment of the PDCP entity, upon PDCP data recovery, upon uplink data switching during DAPS handover and upon release of the source cell after DAPS handover as specified in TS 36.323 [8]. If the UE supports DAPS handover, for RLC UM radio bearers, the field has the value FALSE if it has not been configured.</td>
+  </tr>
+  <tr>
+    <td>ul-DataSplitDRB-ViaSCGIndicates whether the UE shall send PDCP PDUs via SCG as specified in TS 36.323 [8]. E-UTRAN only configures the field (i.e. indicates value TRUE) for split DRBs. For PDCP duplication, if this field is set to TRUE, the primary RLC entity is SCG RLC entity and the secondary RLC entity is MCG RLC entity. If this field is not configured or set to FALSE, the primary RLC entity is MCG RLC entity and the secondary RLC entity is SCG RLC entity.</td>
+  </tr>
+  <tr>
+    <td>ul-DataSplitThresholdIndicates the threshold value for uplink data split operation specified in TS 36.323 [8]. Value b100 means 100 Bytes, b200 means 200 Bytes and so on. E-UTRAN only configures this field for split DRBs.</td>
+  </tr>
+  <tr>
+    <td>ul-LWA-DRB-ViaWLANIndicates whether the UE shall send PDCP PDUs via the LWAAP entity as specified in TS 36.323 [8]. EUTRAN only configures this field (i.e. indicates value TRUE) for LWA DRBs.</td>
+  </tr>
+  <tr>
+    <td>ul-LWA-DataSplitThresholdIndicates the threshold value for uplink data split operation as specified in TS 36.323 [8]. Value b0 means 0 Bytes, b100 means 100 Bytes and so on. E-UTRAN only configures this field for LWA DRBs.</td>
+  </tr>
+  <tr>
+    <td>uplinkDataCompressionIndicates the UDC configuration that the UE shall apply. E-UTRAN does not configure uplinkDataCompression for a DRB, if ethernetHeaderCompression, headerCompression or uplinkOnlyHeaderCompression is already configured for the DRB. E-UTRAN does not configure uplinkDataCompression for the split and LWA DRBs.The maximum number of DRBs where uplinkDataCompression can be applied is two. In this version of the specification, for existing DRBs, E-UTRAN can only (re)configure uplinkDataCompression via handover procedure or the first RRCConnectionReconfiguration message after RRC connection re-establishment.</td>
+  </tr>
+  <tr>
+    <td>uplinkOnlyHeaderCompressionIndicates the ROHC configuration that the UE shall apply uplink-only ROHC operations, see TS 36.323 [8]. E-UTRAN only configures this field when headerCompression is not configured.E-UTRAN does not reconfigure header compression for an MCG DRB except for upon handover and upon the first reconfiguration after RRC connection re-establishment. E-UTRAN does not reconfigure header compression for a SCG DRB except for upon SCG change involving PDCP re-establishment. For split and LWA DRBs E-UTRAN configures only notUsed.</td>
+  </tr>
+</table>

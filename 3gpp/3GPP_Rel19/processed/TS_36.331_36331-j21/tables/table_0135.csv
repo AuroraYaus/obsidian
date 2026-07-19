@@ -1,0 +1,3 @@
+Conditional presence,Explanation
+SRmask,"The field is optionally present if ul-SpecificParameters is present, need OR; otherwise it is not present."
+UL,The field is mandatory present for UL logical channels; otherwise it is not present.

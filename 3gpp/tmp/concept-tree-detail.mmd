@@ -1,0 +1,333 @@
+%%{init: {"theme":"default","themeVariables":{"fontSize":"14px"},"flowchart":{"nodeSpacing":10,"rankSpacing":20}}}%%
+flowchart TD
+    N1["3GPP LTE/NR 信道译码知识体系"]:::root
+    subgraph SG_01_数学基础["01 数学基础"]
+        N2["01 数学基础"]:::domain
+        N3["GF(2) 伽罗瓦域"]:::clssubdomain
+        N4["加法 XOR / 乘法 AND"]:::clsleaf
+        N5["GF(2) 多项式"]:::clssubdomain
+        N6["系数→二进制串对应 / 次数 / 不可约多项式"]:::clsdeep
+        N7["GF(2) 多项式除法"]:::clssubdomain
+        N8["长除法与余数 / LFSR移位寄存器"]:::clsdeep
+        N9["GF(2) 向量与矩阵"]:::clssubdomain
+        N10["向量空间 / 生成矩阵G / 校验矩阵H / 校验子"]:::clsdeep
+        N11["概率与统计基础"]:::clssubdomain
+        N12["条件概率 / 贝叶斯定理 / 先验vs后验 / MAP准则"]:::clsdeep
+        N13["LLR 对数似然比"]:::clssubdomain
+        N14["LLR=ln[P(x=0|y)/P(x=1|y)] / 符号→硬判决 / 幅度→可信度 / 加性对称性"]:::clsdeep
+        N15["信息论最小集"]:::clssubdomain
+        N16["熵H(X) / 互信息I(X;Y) / 信道容量C / 香农限"]:::clsdeep
+    end
+    subgraph SG_02_信道与软解调["02 信道与软解调"]
+        N17["02 信道与软解调"]:::domain
+        N18["AWGN 加性高斯白噪声"]:::clssubdomain
+        N19["σ² / Eb/N0 vs Es/N0 vs SNR / 噪声缩放→LLR"]:::clsdeep
+        N20["调制星座"]:::clssubdomain
+        N21["BPSK 1bit / QPSK 2bit / 16QAM 4bit / 64QAM 6bit / 256QAM 8bit"]:::clsdeep
+        N22["软解调"]:::clssubdomain
+        N23["硬vs软判决 / Max-Log-MAP近似 / 逐比特LLR→星座点 / LLR裁剪缩放量化"]:::clsdeep
+        N24["衰落信道"]:::clssubdomain
+        N25["瑞利/莱斯 / 信道估计误差 / 均衡后LLR可信度"]:::clsdeep
+    end
+    subgraph SG_03_CRC_循环冗余校验["03 CRC 循环冗余校验"]
+        N26["03 CRC 循环冗余校验"]:::domain
+        N27["CRC 基本原理"]:::clssubdomain
+        N28["模2除法求余数 / LFSR反馈移位寄存器"]:::clsdeep
+        N29["CRC 生成多项式 (7种)"]:::clssubdomain
+        N30["CRC24A: D²⁴+D²³+D¹⁸+D¹⁷+D¹⁴+D¹¹+D¹⁰+D⁷+D⁶+D⁵+D⁴+D³+D+1"]:::clsdeep
+        N31["CRC24B: D²⁴+D²³+D⁶+D⁵+D+1"]:::clsdeep
+        N32["CRC24C: D²⁴+D²³+D²¹+D²⁰+D¹⁷+D¹⁵+D¹³+D¹²+D⁸+D⁴+D²+D+1"]:::clsdeep
+        N33["CRC16: D¹⁶+D¹²+D⁵+1"]:::clsdeep
+        N34["CRC11: D¹¹+D¹⁰+D⁹+D⁵+1"]:::clsdeep
+        N35["CRC8: D⁸+D⁷+D⁴+D³+D+1"]:::clsdeep
+        N36["CRC6: D⁶+D⁵+1"]:::clsdeep
+        N37["LTE CRC应用"]:::clssubdomain
+        N38["CRC24A: TB级 PDSCH/PUSCH / CRC24B: CB级 Turbo / CRC16: 短TB / CRC8: PDCCH"]:::clsdeep
+        N39["NR CRC应用"]:::clssubdomain
+        N40["CRC24C: TB级 PDSCH / CRC24B: CB级 LDPC / CRC16: 短TB / CRC11: Polar DCI / CRC6: Polar短"]:::clsdeep
+        N41["CRC 译码侧应用"]:::clssubdomain
+        N42["Pass/Fail / EarlyStopping / CA-SCL路径选择 / TB+CB双重保护 / 漏检vs虚警"]:::clsdeep
+    end
+    subgraph SG_04_传输块TB与码块CB["04 传输块TB与码块CB"]
+        N43["04 传输块TB与码块CB"]:::domain
+        N44["传输块 TB"]:::clssubdomain
+        N45["MAC→PHY数据单元 / TBS大小(MCS表/公式) / TB CRC附加"]:::clsdeep
+        N46["码块分割"]:::clssubdomain
+        N47["Kmax: Turbo=6144 LDPC_BG1=8448 LDPC_BG2=3840 / 三码分割公式 / K+K-码块大小"]:::clsdeep
+        N48["填充位 Filler Bits"]:::clssubdomain
+        N49["填充值&amp;lt;NULL&amp;gt; / 编码器插入 / 译码器LLR=0"]:::clsdeep
+        N50["码块 CB"]:::clssubdomain
+        N51["CB CRC附加(Turbo:24B LDPC:24B Polar:11/6) / 编号r=0..C-1 / 码块级联"]:::clsdeep
+        N52["码块重组"]:::clssubdomain
+        N53["独立译码后级联 / TB CRC最终校验 / 任一CB失败→整TB失败"]:::clsdeep
+    end
+    subgraph SG_05_HARQ_混合自动重传["05 HARQ 混合自动重传"]
+        N54["05 HARQ 混合自动重传"]:::domain
+        N55["HARQ 协议基础"]:::clssubdomain
+        N56["Stop-and-Wait / LTE 8进程 / NR 16进程 / 同步vs异步"]:::clsdeep
+        N57["冗余版本 RV"]:::clssubdomain
+        N58["RV0,RV1,RV2,RV3 / LTE RV序[0,2,1,3] / NR RV序[0,2,3,1] / k₀起始位置 / 自解码vs非自解码"]:::clsdeep
+        N59["软合并类型"]:::clssubdomain
+        N60["Chase Combining: LLR直接相加 / Incremental Redundancy: 新增校验位 / CC vs IR增益"]:::clsdeep
+        N61["循环缓存 Circular Buffer"]:::clssubdomain
+        N62["系统位前校验位后 / Puncturing打孔 / Shortening缩短 / Repetition重复 / 输出长度E"]:::clsdeep
+        N63["NR CBG 码块组"]:::clssubdomain
+        N64["CBG定义 / CBG级重传 / HARQ-ACK bitmap / maxCodeBlockGroupsPerTB"]:::clsdeep
+        N65["软缓存管理"]:::clssubdomain
+        N66["N_soft总容量 / N_IR计算 / LBRM有限缓存 / SRAM bank事务提交"]:::clsdeep
+    end
+    subgraph SG_06_LLR量化与定点表示["06 LLR量化与定点表示"]
+        N67["06 LLR量化与定点表示"]:::domain
+        N68["定点数 Qm.n格式 / 2s complement / 动态范围vs精度"]:::clssubdomain
+        N69["LLR量化: 均匀vs非均匀 / 裁剪阈值 / 位宽4/5/6bit / 量化→BLER"]:::clssubdomain
+    end
+    subgraph SG_07_迭代译码与外信息["07 迭代译码与外信息"]
+        N70["07 迭代译码与外信息"]:::domain
+        N71["迭代原理: Turbo双SISO交替 / LDPC校验↔变量 / 外信息公式 / 迭代vs性能功耗"]:::clssubdomain
+        N72["停止准则: CRC通过 / 最大迭代上限 / HDA准则 / 提前终止功耗节省"]:::clssubdomain
+    end
+    subgraph SG_08_速率匹配与速率恢复["08 速率匹配与速率恢复"]
+        N73["08 速率匹配与速率恢复"]:::domain
+        N74["目的: 适配TB→物理资源 / 母码→打孔缩短重复→码字 / 码率R=K/E"]:::clssubdomain
+        N75["LTE Turbo: 子块交织(系统+校验1+校验2) / BitCollection→CircBuf / BitSelection&amp;Pruning"]:::clssubdomain
+        N76["NR LDPC: BG升降→QC矩阵 / k₀起始+E长度 / BitInterleaving / LBRM限制"]:::clssubdomain
+    end
+    subgraph SG_09_译码性能与验证["09 译码性能与验证"]
+        N77["09 译码性能与验证"]:::domain
+        N78["指标: BER / BLER / 吞吐率Mbps / 延迟μs / 面积mm²功耗mW / EbN0→BLER瀑布曲线"]:::clssubdomain
+        N79["验证: GoldenModel→BitExact / corner case / 覆盖率line/toggle/branch/FSM / DC综合→时序→签核"]:::clssubdomain
+    end
+    N1 --> N2
+    N1 --> N17
+    N1 --> N26
+    N1 --> N43
+    N1 --> N54
+    N1 --> N67
+    N1 --> N70
+    N1 --> N73
+    N1 --> N77
+    N2 --> N3
+    N3 --> N4
+    N3 --> N5
+    N5 --> N6
+    N3 --> N7
+    N7 --> N8
+    N3 --> N9
+    N9 --> N10
+    N2 --> N11
+    N11 --> N12
+    N2 --> N13
+    N13 --> N14
+    N2 --> N15
+    N15 --> N16
+    N17 --> N18
+    N18 --> N19
+    N17 --> N20
+    N20 --> N21
+    N17 --> N22
+    N22 --> N23
+    N17 --> N24
+    N24 --> N25
+    N26 --> N27
+    N27 --> N28
+    N26 --> N29
+    N29 --> N30
+    N29 --> N31
+    N29 --> N32
+    N29 --> N33
+    N29 --> N34
+    N29 --> N35
+    N29 --> N36
+    N26 --> N37
+    N37 --> N38
+    N26 --> N39
+    N39 --> N40
+    N26 --> N41
+    N41 --> N42
+    N43 --> N44
+    N44 --> N45
+    N43 --> N46
+    N46 --> N47
+    N43 --> N48
+    N48 --> N49
+    N43 --> N50
+    N50 --> N51
+    N43 --> N52
+    N52 --> N53
+    N54 --> N55
+    N55 --> N56
+    N54 --> N57
+    N57 --> N58
+    N54 --> N59
+    N59 --> N60
+    N54 --> N61
+    N61 --> N62
+    N54 --> N63
+    N63 --> N64
+    N54 --> N65
+    N65 --> N66
+    N67 --> N68
+    N67 --> N69
+    N70 --> N71
+    N70 --> N72
+    N73 --> N74
+    N73 --> N75
+    N73 --> N76
+    N77 --> N78
+    N77 --> N79
+    L_N4_T1_1_GF2_binary["T1_1_GF2_binary_arithmetic_f"]:::lecture
+    N4 -.->|📄| L_N4_T1_1_GF2_binary
+    L_N6_T1_2_GF2_polyno["T1_2_GF2_polynomials_crc_rem"]:::lecture
+    N6 -.->|📄| L_N6_T1_2_GF2_polyno
+    L_N8_T1_2_GF2_polyno["T1_2_GF2_polynomials_crc_rem"]:::lecture
+    N8 -.->|📄| L_N8_T1_2_GF2_polyno
+    L_N10_T1_3_GF2_vector["T1_3_GF2_vectors_matrices"]:::lecture
+    N10 -.->|📄| L_N10_T1_3_GF2_vector
+    L_N12_T1_4_probabilit["T1_4_probability_bayes_soft_"]:::lecture
+    N12 -.->|📄| L_N12_T1_4_probabilit
+    L_N14_T1_5_LLR_soft_d["T1_5_LLR_soft_decision"]:::lecture
+    N14 -.->|📄| L_N14_T1_5_LLR_soft_d
+    L_N16_T1_6_informatio["T1_6_information_theory_mini"]:::lecture
+    N16 -.->|📄| L_N16_T1_6_informatio
+    L_N19_T2_1_AWGN_noise["T2_1_AWGN_noise_scaling"]:::lecture
+    N19 -.->|📄| L_N19_T2_1_AWGN_noise
+    L_N21_T2_2_BPSK_QPSK_["T2_2_BPSK_QPSK_soft_demappin"]:::lecture
+    N21 -.->|📄| L_N21_T2_2_BPSK_QPSK_
+    L_N21_T2_3_QAM_Max_Lo["T2_3_QAM_Max_Log_MAP_demappi"]:::lecture
+    N21 -.->|📄| L_N21_T2_3_QAM_Max_Lo
+    L_N23_T2_2_BPSK_QPSK_["T2_2_BPSK_QPSK_soft_demappin"]:::lecture
+    N23 -.->|📄| L_N23_T2_2_BPSK_QPSK_
+    L_N23_T2_3_QAM_Max_Lo["T2_3_QAM_Max_Log_MAP_demappi"]:::lecture
+    N23 -.->|📄| L_N23_T2_3_QAM_Max_Lo
+    L_N23_T2_5_LLR_clippi["T2_5_LLR_clipping_scaling_qu"]:::lecture
+    N23 -.->|📄| L_N23_T2_5_LLR_clippi
+    L_N25_T2_4_fading_cha["T2_4_fading_channel_LLR_reli"]:::lecture
+    N25 -.->|📄| L_N25_T2_4_fading_cha
+    L_N28_T1_2_GF2_polyno["T1_2_GF2_polynomials_crc_rem"]:::lecture
+    N28 -.->|📄| L_N28_T1_2_GF2_polyno
+    L_N28_T3_1_LTE_NR_CRC["T3_1_LTE_NR_CRC_families"]:::lecture
+    N28 -.->|📄| L_N28_T3_1_LTE_NR_CRC
+    L_N30_T3_1_LTE_NR_CRC["T3_1_LTE_NR_CRC_families"]:::lecture
+    N30 -.->|📄| L_N30_T3_1_LTE_NR_CRC
+    L_N31_T3_1_LTE_NR_CRC["T3_1_LTE_NR_CRC_families"]:::lecture
+    N31 -.->|📄| L_N31_T3_1_LTE_NR_CRC
+    L_N32_T3_1_LTE_NR_CRC["T3_1_LTE_NR_CRC_families"]:::lecture
+    N32 -.->|📄| L_N32_T3_1_LTE_NR_CRC
+    L_N33_T3_1_LTE_NR_CRC["T3_1_LTE_NR_CRC_families"]:::lecture
+    N33 -.->|📄| L_N33_T3_1_LTE_NR_CRC
+    L_N34_T3_1_LTE_NR_CRC["T3_1_LTE_NR_CRC_families"]:::lecture
+    N34 -.->|📄| L_N34_T3_1_LTE_NR_CRC
+    L_N35_T3_1_LTE_NR_CRC["T3_1_LTE_NR_CRC_families"]:::lecture
+    N35 -.->|📄| L_N35_T3_1_LTE_NR_CRC
+    L_N36_T3_1_LTE_NR_CRC["T3_1_LTE_NR_CRC_families"]:::lecture
+    N36 -.->|📄| L_N36_T3_1_LTE_NR_CRC
+    L_N38_T3_1_LTE_NR_CRC["T3_1_LTE_NR_CRC_families"]:::lecture
+    N38 -.->|📄| L_N38_T3_1_LTE_NR_CRC
+    L_N38_T3_3_LTE_Turbo_["T3_3_LTE_Turbo_segmentation_"]:::lecture
+    N38 -.->|📄| L_N38_T3_3_LTE_Turbo_
+    L_N40_T3_1_LTE_NR_CRC["T3_1_LTE_NR_CRC_families"]:::lecture
+    N40 -.->|📄| L_N40_T3_1_LTE_NR_CRC
+    L_N40_T3_4_NR_LDPC_se["T3_4_NR_LDPC_segmentation_ru"]:::lecture
+    N40 -.->|📄| L_N40_T3_4_NR_LDPC_se
+    L_N40_T3_5_NR_Polar_s["T3_5_NR_Polar_segmentation_c"]:::lecture
+    N40 -.->|📄| L_N40_T3_5_NR_Polar_s
+    L_N42_T4_4_early_stop["T4_4_early_stopping_crc_gate"]:::lecture
+    N42 -.->|📄| L_N42_T4_4_early_stop
+    L_N42_T6_7_Turbo_iter["T6_7_Turbo_iteration_extrins"]:::lecture
+    N42 -.->|📄| L_N42_T6_7_Turbo_iter
+    L_N42_T10_6_CRC_aided["T10_6_CRC_aided_SCL_control_"]:::lecture
+    N42 -.->|📄| L_N42_T10_6_CRC_aided
+    L_N45_T3_2_transport_["T3_2_transport_code_block_fi"]:::lecture
+    N45 -.->|📄| L_N45_T3_2_transport_
+    L_N45_T9_0_TS38214_MC["T9_0_TS38214_MCS_TBS_decoder"]:::lecture
+    N45 -.->|📄| L_N45_T9_0_TS38214_MC
+    L_N47_T3_2_transport_["T3_2_transport_code_block_fi"]:::lecture
+    N47 -.->|📄| L_N47_T3_2_transport_
+    L_N47_T3_3_LTE_Turbo_["T3_3_LTE_Turbo_segmentation_"]:::lecture
+    N47 -.->|📄| L_N47_T3_3_LTE_Turbo_
+    L_N47_T3_4_NR_LDPC_se["T3_4_NR_LDPC_segmentation_ru"]:::lecture
+    N47 -.->|📄| L_N47_T3_4_NR_LDPC_se
+    L_N49_T3_2_transport_["T3_2_transport_code_block_fi"]:::lecture
+    N49 -.->|📄| L_N49_T3_2_transport_
+    L_N51_T3_3_LTE_Turbo_["T3_3_LTE_Turbo_segmentation_"]:::lecture
+    N51 -.->|📄| L_N51_T3_3_LTE_Turbo_
+    L_N51_T3_4_NR_LDPC_se["T3_4_NR_LDPC_segmentation_ru"]:::lecture
+    N51 -.->|📄| L_N51_T3_4_NR_LDPC_se
+    L_N51_T3_5_NR_Polar_s["T3_5_NR_Polar_segmentation_c"]:::lecture
+    N51 -.->|📄| L_N51_T3_5_NR_Polar_s
+    L_N53_T7_4_LTE_code_b["T7_4_LTE_code_block_reassemb"]:::lecture
+    N53 -.->|📄| L_N53_T7_4_LTE_code_b
+    L_N53_T9_5_NR_LDPC_re["T9_5_NR_LDPC_reassembly_TB_C"]:::lecture
+    N53 -.->|📄| L_N53_T9_5_NR_LDPC_re
+    L_N56_T4_3_HARQ_soft_["T4_3_HARQ_soft_combining_bas"]:::lecture
+    N56 -.->|📄| L_N56_T4_3_HARQ_soft_
+    L_N56_T7_3_LTE_HARQ_s["T7_3_LTE_HARQ_soft_buffer_RV"]:::lecture
+    N56 -.->|📄| L_N56_T7_3_LTE_HARQ_s
+    L_N56_T9_3_NR_LDPC_HA["T9_3_NR_LDPC_HARQ_soft_buffe"]:::lecture
+    N56 -.->|📄| L_N56_T9_3_NR_LDPC_HA
+    L_N58_T7_3_LTE_HARQ_s["T7_3_LTE_HARQ_soft_buffer_RV"]:::lecture
+    N58 -.->|📄| L_N58_T7_3_LTE_HARQ_s
+    L_N58_T9_3_NR_LDPC_HA["T9_3_NR_LDPC_HARQ_soft_buffe"]:::lecture
+    N58 -.->|📄| L_N58_T9_3_NR_LDPC_HA
+    L_N60_T4_3_HARQ_soft_["T4_3_HARQ_soft_combining_bas"]:::lecture
+    N60 -.->|📄| L_N60_T4_3_HARQ_soft_
+    L_N60_T11_3_HARQ_soft["T11_3_HARQ_soft_buffer_compa"]:::lecture
+    N60 -.->|📄| L_N60_T11_3_HARQ_soft
+    L_N62_T7_2_LTE_subblo["T7_2_LTE_subblock_deinterlea"]:::lecture
+    N62 -.->|📄| L_N62_T7_2_LTE_subblo
+    L_N62_T9_2_NR_LDPC_ci["T9_2_NR_LDPC_circular_buffer"]:::lecture
+    N62 -.->|📄| L_N62_T9_2_NR_LDPC_ci
+    L_N64_T9_3_NR_LDPC_HA["T9_3_NR_LDPC_HARQ_soft_buffe"]:::lecture
+    N64 -.->|📄| L_N64_T9_3_NR_LDPC_HA
+    L_N66_T14_5_soft_buff["T14_5_soft_buffer_HARQ_memor"]:::lecture
+    N66 -.->|📄| L_N66_T14_5_soft_buff
+    L_N68_T5_1_fixed_poin["T5_1_fixed_point_numbers_for"]:::lecture
+    N68 -.->|📄| L_N68_T5_1_fixed_poin
+    L_N68_T13_1_fixed_poi["T13_1_fixed_point_decoder_re"]:::lecture
+    N68 -.->|📄| L_N68_T13_1_fixed_poi
+    L_N69_T2_5_LLR_clippi["T2_5_LLR_clipping_scaling_qu"]:::lecture
+    N69 -.->|📄| L_N69_T2_5_LLR_clippi
+    L_N69_T13_1_fixed_poi["T13_1_fixed_point_decoder_re"]:::lecture
+    N69 -.->|📄| L_N69_T13_1_fixed_poi
+    L_N71_T4_1_iterative_["T4_1_iterative_decoding_extr"]:::lecture
+    N71 -.->|📄| L_N71_T4_1_iterative_
+    L_N71_T6_7_Turbo_iter["T6_7_Turbo_iteration_extrins"]:::lecture
+    N71 -.->|📄| L_N71_T6_7_Turbo_iter
+    L_N71_T8_4_LDPC_Tanne["T8_4_LDPC_Tanner_graph_messa"]:::lecture
+    N71 -.->|📄| L_N71_T8_4_LDPC_Tanne
+    L_N72_T4_4_early_stop["T4_4_early_stopping_crc_gate"]:::lecture
+    N72 -.->|📄| L_N72_T4_4_early_stop
+    L_N72_T6_7_Turbo_iter["T6_7_Turbo_iteration_extrins"]:::lecture
+    N72 -.->|📄| L_N72_T6_7_Turbo_iter
+    L_N74_T7_1_LTE_Turbo_["T7_1_LTE_Turbo_de_rate_match"]:::lecture
+    N74 -.->|📄| L_N74_T7_1_LTE_Turbo_
+    L_N74_T9_1_NR_LDPC_ra["T9_1_NR_LDPC_rate_recovery_o"]:::lecture
+    N74 -.->|📄| L_N74_T9_1_NR_LDPC_ra
+    L_N75_T7_2_LTE_subblo["T7_2_LTE_subblock_deinterlea"]:::lecture
+    N75 -.->|📄| L_N75_T7_2_LTE_subblo
+    L_N76_T9_2_NR_LDPC_ci["T9_2_NR_LDPC_circular_buffer"]:::lecture
+    N76 -.->|📄| L_N76_T9_2_NR_LDPC_ci
+    L_N76_T9_4_NR_LDPC_bi["T9_4_NR_LDPC_bit_deinterleav"]:::lecture
+    N76 -.->|📄| L_N76_T9_4_NR_LDPC_bi
+    L_N78_T4_5_decoder_pe["T4_5_decoder_performance_met"]:::lecture
+    N78 -.->|📄| L_N78_T4_5_decoder_pe
+    L_N78_T5_3_throughput["T5_3_throughput_latency_para"]:::lecture
+    N78 -.->|📄| L_N78_T5_3_throughput
+    L_N78_T12_5_BER_BLER_["T12_5_BER_BLER_curve_reporti"]:::lecture
+    N78 -.->|📄| L_N78_T12_5_BER_BLER_
+    L_N79_T5_5_decoder_ha["T5_5_decoder_hardware_verifi"]:::lecture
+    N79 -.->|📄| L_N79_T5_5_decoder_ha
+    L_N79_T13_6_bit_exact["T13_6_bit_exact_regression_h"]:::lecture
+    N79 -.->|📄| L_N79_T13_6_bit_exact
+    L_N79_T15_1_decoder_t["T15_1_decoder_testbench_arch"]:::lecture
+    N79 -.->|📄| L_N79_T15_1_decoder_t
+    L_N79_T15_4_DC_synthe["T15_4_DC_synthesis_flow_deco"]:::lecture
+    N79 -.->|📄| L_N79_T15_4_DC_synthe
+
+    classDef root fill:#1A237E,stroke:#000,stroke-width:5px,color:#fff,font-size:22px
+    classDef domain fill:#1565C0,stroke:#0D47A1,stroke-width:3px,color:#fff,font-size:20px
+    classDef clssubdomain fill:#42A5F5,stroke:#1E88E5,stroke-width:2px,color:#fff,font-size:17px
+    classDef clsdeep fill:#E3F2FD,stroke:#90CAF9,stroke-width:1px,color:#1565C0,font-size:14px
+    classDef clsleaf fill:#BBDEFB,stroke:#64B5F6,stroke-width:1.5px,color:#0D47A1,font-size:15px
+    classDef lecture fill:#FAFAFA,stroke:#E0E0E0,stroke-width:0.5px,color:#9E9E9E,font-size:11px
+

@@ -1,0 +1,46 @@
+<table>
+  <tr>
+    <td>Conditional presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>5GC</td>
+    <td>The field is optionally present, Need ON, if the UE is connected to 5GC; otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>BLCE-IDLEeDRX</td>
+    <td colspan="2">The field is optionally present, Need OR, if the UE is a BL UE or UE in CE and the UE is connected to 5GC and IDLE mode eDRX is configured and ran-PagingCycle-r15 is absent; otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>EARFCN-max</td>
+    <td>The field is mandatory present if the corresponding carrierFreq (i.e. without suffix) is set to maxEARFCN. Otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>EarlySec</td>
+    <td colspan="2">When the UE is connected to 5GC, the field is mandatory present. When the UE is connected to EPC, the field is optionally present, Need ON, if the UE supports UP-EDT or UP transmission using PUR or early security reactivation and releaseCause is set to rrc-Suspend; otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>IdleInfoEUTRA</td>
+    <td>The field is optionally present, Need OP, if the IdleModeMobilityControlInfo (i.e. without suffix) is included and includes freqPriorityListEUTRA; otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>INACTIVE</td>
+    <td>The field is mandatory present in this release.</td>
+  </tr>
+  <tr>
+    <td>NoRedirect-r8</td>
+    <td>The field is optionally present, Need OP, if the redirectedCarrierInfo (i.e. without suffix) is not included; otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>Redirection</td>
+    <td>The field is optionally present, Need ON, if the redirectedCarrierInfo is included and set to geran, utra-FDD, utra-TDD or utra-TDD-r10; otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>Redirection2</td>
+    <td>The field is optionally present, Need OR, if redirectedCarrierInfo is included; otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>UP-EDTorPUR</td>
+    <td>The field is optionally present, Need ON, if the UE supports UP-EDT or UP transmission using PUR and releaseCause is set to rrc-Suspend; otherwise the field is not present.</td>
+  </tr>
+</table>

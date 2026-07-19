@@ -1,0 +1,10 @@
+ANR-MeasReport-NB field descriptions
+carrierFreqIndicates the carrier frequency of the reported cell.
+cgi-infoBroadcast information of the reported cell.
+measResultMeasured result of the reported cell.
+measResultListList of measured results for the maximum number of reported carrier frequencies.
+measResultLastServCellThe last measurement results taken in the serving cell when the measured results of the reported cell is stored.
+measResultServingCellMeasurement results taken in the serving cell when the configuration of the measurements is received.
+plmn-IdentityListThe list of PLMN Identity read from the broadcast information of the reported cell.
+"relativeTimeStampIndicates the time when the ANR measurements are complete, measured relative to the time when the configuration of the measurements was received. Value in hours."
+"servingCellIdentityIndicates the cell where the measurement configuration was received.If the field is absent, it is the same as the current serving cell."

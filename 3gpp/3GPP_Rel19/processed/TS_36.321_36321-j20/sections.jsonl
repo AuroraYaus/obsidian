@@ -1,0 +1,173 @@
+{"source": "36321-j20.docx", "section": "650", "title": "Route des Lucioles - Sophia Antipolis", "paragraph_index": 24, "style": "FP"}
+{"source": "36321-j20.docx", "section": "", "title": "Foreword", "paragraph_index": 215, "style": "Heading1"}
+{"source": "36321-j20.docx", "section": "", "title": "1Scope", "paragraph_index": 226, "style": "Heading1"}
+{"source": "36321-j20.docx", "section": "", "title": "2References", "paragraph_index": 228, "style": "Heading1"}
+{"source": "36321-j20.docx", "section": "", "title": "3Definitions and abbreviations", "paragraph_index": 258, "style": "Heading1"}
+{"source": "36321-j20.docx", "section": "", "title": "3.1Definitions", "paragraph_index": 259, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "3.2Abbreviations", "paragraph_index": 324, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "4General", "paragraph_index": 397, "style": "Heading1"}
+{"source": "36321-j20.docx", "section": "", "title": "4.1Introduction", "paragraph_index": 398, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "4.2MAC architecture", "paragraph_index": 401, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "4.2.1MAC Entities", "paragraph_index": 404, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "4.3Services", "paragraph_index": 430, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "4.3.1Services provided to upper layers", "paragraph_index": 431, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "4.3.2Services expected from physical layer", "paragraph_index": 435, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "4.4Functions", "paragraph_index": 442, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "4.5Channel structure", "paragraph_index": 457, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "4.5.1Transport Channels", "paragraph_index": 459, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "4.5.2Logical Channels", "paragraph_index": 463, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "4.5.3Mapping of Transport Channels to Logical Channels", "paragraph_index": 469, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "4.5.3.1Uplink mapping", "paragraph_index": 471, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "4.5.3.2Downlink mapping", "paragraph_index": 477, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "4.5.3.3Sidelink mapping", "paragraph_index": 483, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5MAC procedures", "paragraph_index": 489, "style": "Heading1"}
+{"source": "36321-j20.docx", "section": "", "title": "5.1Random Access procedure", "paragraph_index": 490, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.1.1Random Access Procedure initialization", "paragraph_index": 491, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.1.2Random Access Resource selection", "paragraph_index": 568, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.1.3Random Access Preamble transmission", "paragraph_index": 619, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.1.4Random Access Response reception", "paragraph_index": 643, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.1.5Contention Resolution", "paragraph_index": 731, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.1.6Completion of the Random Access procedure", "paragraph_index": 805, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.1aCB-Msg3-EDT Procedure", "paragraph_index": 812, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.1a.1CB-Msg3-EDT initialization", "paragraph_index": 813, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.1a.2CB-Msg3 transmission", "paragraph_index": 846, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.1a.3CB-Msg4 reception", "paragraph_index": 869, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.2Maintenance of Uplink Time Alignment", "paragraph_index": 911, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.2aMaintenance of UL Synchronization", "paragraph_index": 954, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.3DL-SCH data transfer", "paragraph_index": 960, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.3.1DL Assignment reception", "paragraph_index": 961, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.3.2HARQ operation", "paragraph_index": 1022, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.3.2.1HARQ Entity", "paragraph_index": 1023, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.3.2.2HARQ process", "paragraph_index": 1037, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.3.3Disassembly and demultiplexing", "paragraph_index": 1082, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4UL-SCH data transfer", "paragraph_index": 1084, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.1UL Grant reception", "paragraph_index": 1085, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.2HARQ operation", "paragraph_index": 1169, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.2.1HARQ entity", "paragraph_index": 1170, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.2.2HARQ process", "paragraph_index": 1229, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.3Multiplexing and assembly", "paragraph_index": 1304, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.3.1Logical channel prioritization", "paragraph_index": 1305, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.3.2Multiplexing of MAC Control Elements and MAC SDUs", "paragraph_index": 1350, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.4Scheduling Request", "paragraph_index": 1352, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.5Buffer Status Reporting", "paragraph_index": 1402, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.5aData Volume and Power Headroom Reporting", "paragraph_index": 1445, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.6Power Headroom Reporting", "paragraph_index": 1452, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.7Preconfigured Uplink Resource", "paragraph_index": 1510, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.7.1Transmission using PUR", "paragraph_index": 1511, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.7.2Maintenance of PUR Uplink Time Alignment", "paragraph_index": 1552, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.8Access Stratum Release Assistance Indication", "paragraph_index": 1572, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.9Timing Advance Reporting", "paragraph_index": 1576, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.4.10GNSS Validity Duration Reporting", "paragraph_index": 1589, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.5PCH reception", "paragraph_index": 1600, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.6BCH reception", "paragraph_index": 1606, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.7Discontinuous Reception (DRX)", "paragraph_index": 1611, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.7aDiscontinuous Reception (DRX) for SC-PTM", "paragraph_index": 1726, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.8MAC reconfiguration", "paragraph_index": 1745, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.9MAC Reset", "paragraph_index": 1752, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.10Semi-Persistent Scheduling", "paragraph_index": 1782, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.10.1Downlink", "paragraph_index": 1794, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.10.2Uplink", "paragraph_index": 1802, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.11Handling of unknown, unforeseen and erroneous protocol data", "paragraph_index": 1827, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.12MCH reception", "paragraph_index": 1833, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.13Activation/Deactivation of SCells", "paragraph_index": 1847, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14SL-SCH Data transfer", "paragraph_index": 1889, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.1SL-SCH Data transmission", "paragraph_index": 1890, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.1.1SL Grant reception and SCI transmission", "paragraph_index": 1891, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.1.2Sidelink HARQ operation", "paragraph_index": 1999, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.1.2.1Sidelink HARQ Entity", "paragraph_index": 2000, "style": "Heading5"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.1.2.2Sidelink process", "paragraph_index": 2013, "style": "Heading5"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.1.3Multiplexing and assembly", "paragraph_index": 2036, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.1.3.1Logical channel prioritization", "paragraph_index": 2040, "style": "Heading5"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.1.3.2Multiplexing of MAC SDUs", "paragraph_index": 2059, "style": "Heading5"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.1.4Buffer Status Reporting", "paragraph_index": 2061, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.1.5TX carrier (re-)selection for V2X sidelink communication", "paragraph_index": 2093, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.2SL-SCH Data reception", "paragraph_index": 2114, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.2.1SCI reception", "paragraph_index": 2115, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.2.2Sidelink HARQ operation", "paragraph_index": 2127, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.2.2.1Sidelink HARQ Entity", "paragraph_index": 2128, "style": "Heading5"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.2.2.2Sidelink process", "paragraph_index": 2139, "style": "Heading5"}
+{"source": "36321-j20.docx", "section": "", "title": "5.14.2.3Disassembly and demultiplexing", "paragraph_index": 2156, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.15SL-DCH data transfer", "paragraph_index": 2158, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.15.1SL-DCH data transmission", "paragraph_index": 2159, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.15.1.1Resource allocation", "paragraph_index": 2160, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.15.1.2Sidelink HARQ operation", "paragraph_index": 2176, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.15.1.2.1Sidelink HARQ Entity", "paragraph_index": 2177, "style": "Heading5"}
+{"source": "36321-j20.docx", "section": "", "title": "5.15.1.2.2Sidelink process", "paragraph_index": 2185, "style": "Heading5"}
+{"source": "36321-j20.docx", "section": "", "title": "5.15.2SL-DCH data reception", "paragraph_index": 2207, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.15.2.1Sidelink HARQ operation", "paragraph_index": 2208, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "5.15.2.1.1Sidelink HARQ Entity", "paragraph_index": 2209, "style": "Heading5"}
+{"source": "36321-j20.docx", "section": "", "title": "5.15.2.1.2Sidelink process", "paragraph_index": 2218, "style": "Heading5"}
+{"source": "36321-j20.docx", "section": "", "title": "5.16SL-BCH data transfer", "paragraph_index": 2235, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.16.1SL-BCH data transmission", "paragraph_index": 2236, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.16.2SL-BCH data reception", "paragraph_index": 2240, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "5.17Data inactivity monitoring", "paragraph_index": 2245, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.18Recommended Bit Rate", "paragraph_index": 2252, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.19Activation/Deactivation of CSI-RS resources", "paragraph_index": 2266, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.20Preallocated uplink grant", "paragraph_index": 2270, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.21SC-PTM Stop Indication", "paragraph_index": 2280, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.22Entering Dormant SCell state", "paragraph_index": 2285, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.23Autonomous Uplink", "paragraph_index": 2323, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.24Activation/Deactivation of PDCP duplication", "paragraph_index": 2338, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.25Transmission of Downlink Channel Quality Report", "paragraph_index": 2345, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.26Update of Differential Koffset", "paragraph_index": 2363, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.27GNSS measurement", "paragraph_index": 2368, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "5.28UL Transmission Extension", "paragraph_index": 2375, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "6Protocol Data Units, formats and parameters", "paragraph_index": 2380, "style": "Heading1"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1Protocol Data Units", "paragraph_index": 2381, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.1General", "paragraph_index": 2382, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.2MAC PDU (DL-SCH and UL-SCH except transparent MAC and Random Access Response, MCH, CB-Msg4)", "paragraph_index": 2386, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3MAC Control Elements", "paragraph_index": 2405, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.1Buffer Status Report MAC Control Elements", "paragraph_index": 2406, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.1aSidelink BSR MAC Control Elements", "paragraph_index": 2422, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.2C-RNTI MAC Control Element", "paragraph_index": 2436, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.3DRX Command MAC Control Element", "paragraph_index": 2442, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.4UE Contention Resolution Identity MAC Control Element", "paragraph_index": 2445, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.5Timing Advance Command MAC Control Element", "paragraph_index": 2450, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.6Power Headroom Report MAC Control Element", "paragraph_index": 2457, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.6aExtended Power Headroom Report MAC Control Elements", "paragraph_index": 2465, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.6bDual Connectivity Power Headroom Report MAC Control Element", "paragraph_index": 2487, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.7MCH Scheduling Information MAC Control Element", "paragraph_index": 2500, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.7aExtended MCH Scheduling Information MAC Control Element", "paragraph_index": 2506, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.8Activation/Deactivation MAC Control Elements", "paragraph_index": 2516, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.9Long DRX Command MAC Control Element", "paragraph_index": 2528, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.10Data Volume and Power Headroom Report MAC Control Element", "paragraph_index": 2531, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.11SPS confirmation MAC Control Element", "paragraph_index": 2547, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.12SC-PTM Stop Indication MAC Control Element", "paragraph_index": 2550, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.13Recommended bit rate MAC Control Element", "paragraph_index": 2553, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.14Activation/Deactivation of CSI-RS resources MAC Control Element", "paragraph_index": 2566, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.15Hibernation MAC Control Elements", "paragraph_index": 2574, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.16AUL confirmation MAC Control Element", "paragraph_index": 2590, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.17PDCP Duplication Activation/Deactivation MAC Control Element", "paragraph_index": 2600, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.18Downlink Channel Quality Report Command MAC Control Element", "paragraph_index": 2605, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.19Downlink Channel Quality Report and AS RAI MAC Control Element", "paragraph_index": 2608, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.20Timing Advance Report MAC Control Element", "paragraph_index": 2618, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.21Differential Koffset MAC Control Element", "paragraph_index": 2625, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.22GNSS Measurement Command MAC Control Element", "paragraph_index": 2632, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.23GNSS Validity Duration Report MAC Control Element", "paragraph_index": 2642, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.3.24UL Transmission Extension Update MAC Control Element", "paragraph_index": 2649, "style": "Heading4"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.4MAC PDU (transparent MAC)", "paragraph_index": 2652, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.5MAC PDU (Random Access Response)", "paragraph_index": 2656, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.6MAC PDU (SL-SCH)", "paragraph_index": 2677, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.1.7MAC PDU (CB-Msg4)", "paragraph_index": 2697, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.2Formats and parameters", "paragraph_index": 2719, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "6.2.1MAC header for DL-SCH, UL-SCH and MCH", "paragraph_index": 2720, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.2.2MAC header for Random Access Response", "paragraph_index": 2746, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.2.3MAC payload for Random Access Response", "paragraph_index": 2755, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.2.4MAC header for SL-SCH", "paragraph_index": 2763, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.2.5MAC header for CB-Msg4", "paragraph_index": 2778, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "6.2.6MAC payload for CB-Msg4", "paragraph_index": 2791, "style": "Heading3"}
+{"source": "36321-j20.docx", "section": "", "title": "7Variables and constants", "paragraph_index": 2802, "style": "Heading1"}
+{"source": "36321-j20.docx", "section": "", "title": "7.1RNTI values", "paragraph_index": 2803, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "7.2Backoff Parameter values", "paragraph_index": 2812, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "7.3PRACH Mask Index values", "paragraph_index": 2825, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "7.4Subframe_Offset values", "paragraph_index": 2828, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "7.5TTI_BUNDLE_SIZE value", "paragraph_index": 2832, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "7.6DELTA_PREAMBLE values", "paragraph_index": 2834, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "7.7HARQ RTT Timers", "paragraph_index": 2843, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "7.8DL_REPETITION_NUMBER value", "paragraph_index": 2871, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "7.9UL_REPETITION_NUMBER value", "paragraph_index": 2873, "style": "Heading2"}
+{"source": "36321-j20.docx", "section": "", "title": "Annex A (normative):Handling of measurement gaps", "paragraph_index": 2875, "style": "Heading8"}
+{"source": "36321-j20.docx", "section": "", "title": "Annex B (normative):Contention resolution for RACH access", "paragraph_index": 2878, "style": "Heading8"}
+{"source": "36321-j20.docx", "section": "", "title": "Annex C (informative):Intended UE behaviour for DRX Timers", "paragraph_index": 2886, "style": "Heading8"}
+{"source": "36321-j20.docx", "section": "", "title": "Annex D (normative):List of CRs Containing Early Implementable Features and Corrections", "paragraph_index": 2897, "style": "Heading8"}
+{"source": "36321-j20.docx", "section": "", "title": "Annex E (informative):Change history", "paragraph_index": 2901, "style": "Heading8"}

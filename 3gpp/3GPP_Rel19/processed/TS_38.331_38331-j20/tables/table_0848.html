@@ -1,0 +1,53 @@
+<table>
+  <tr>
+    <td>SL-PreconfigurationNR field descriptions</td>
+  </tr>
+  <tr>
+    <td>sl-DRX-PreConfig-GC-BCThis field indicates the sidelink DRX configuration for groupcast and broadcast communication, as specified in TS 38.321 [3].</td>
+  </tr>
+  <tr>
+    <td>sl-OffsetDFNIndicates the timing offset for the UE to determine DFN timing when GNSS is used for timing reference. Value 1 corresponds to 0.001 milliseconds, value 2 corresponds to 0.002 milliseconds, and so on. If the field is absent, no offset is applied.</td>
+  </tr>
+  <tr>
+    <td>sl-PosPreconfigFreqInfoList, sl-PosPreconfigFreqInfoListExtThis field indicates the NR sidelink positioning carrier frequencies of SL-PRS dedicated resource pool for SL-PRS transmission and reception. In this release, only one entry of SL-FreqConfigCommon is included in the list. If network includes sl-PosPreconfigFreqInfoListExt, it includes the same number of entries, and listed in the same order, as in sl-PosPreconfigFreqInfoList. The first entry in sl-PosPreconfigFreqInfoListExt corresponds to the AdditionalSpectrumEmission of the frequency of first entry in sl-PosPreconfigFreqInfoList.</td>
+  </tr>
+  <tr>
+    <td>sl-PreconfigDiscConfigThis field indicates the configuration for discovery message transmission used by NR sidelink U2N Remote UE, used by NR sidelink U2U Relay UE or used by NR sidelink U2U Remote UE.</td>
+  </tr>
+  <tr>
+    <td>sl-PreconfigEUTRA-AnchorCarrierFreqListThis field indicates the EUTRA anchor carrier frequency list, which can provide the NR sidelink communication configuration.</td>
+  </tr>
+  <tr>
+    <td>sl-PreconfigFreqInfoList, sl-PreconfigFreqInfoListSizeExt, sl-PreconfigFreqInfoListExtThis field indicates the NR sidelink communication and/ or NR sidelink discovery configuration some carrier frequency(ies). In this release, only one SL-FreqConfig can be configured in sl-PreconfigFreqInfoList. More entries of SL-FreqConfig can be configured in sl-PreconfigFreqInfoListSizeExt. If sl-PreconfigFreqInfoListExt is included, it contains the same number of entries, and listed in the same order, as in sl-PreconfigFreqInfoList together with sl-PreconfigFreqInfoListSizeExt. The first entry corresponds to the AdditionalSpectrumEmission of the frequency of first entry in sl-PreconfigFreqInfoList, the second entry corresponds to the AdditionalSpectrumEmission of the frequency of first entry in sl-PreconfigFreqInfoListSizeExt, the third entry corresponds to the AdditionalSpectrumEmission of the frequency of second entry in sl-PreconfigFreqInfoListSizeExt and so on.</td>
+  </tr>
+  <tr>
+    <td>sl-PreconfigNR-AnchorCarrierFreqListThis field indicates the NR anchor carrier frequency list, which can provide the NR sidelink communication configuration.</td>
+  </tr>
+  <tr>
+    <td>sl-RadioBearerPreConfigListThis field indicates one or multiple sidelink radio bearer configurations.</td>
+  </tr>
+  <tr>
+    <td>sl-RLC-BearerPreConfigList, sl-RLC-BearerPreConfigListSizeExtThis field indicates one or multiple sidelink RLC bearer configurations.</td>
+  </tr>
+  <tr>
+    <td>sl-RoHC-ProfilesThis field indicates the supported RoHC profiles for NR sidelink communications.</td>
+  </tr>
+  <tr>
+    <td>sl-SSB-PriorityNRThis field indicates the priority of NR sidelink SSB transmission and reception.</td>
+  </tr>
+  <tr>
+    <td>sl-SyncFreqListIndicates a list of candidate carrier frequencies that can be used for the synchronisation of NR sidelink communication. For SL-Freq-Id-r16, the value 1 corresponds to the frequency of first entry in sl-PreconfigFreqInfoList, the value 2 corresponds to the frequency of first entry in sl-PreconfigFreqInfoListSizeExt, the value 3 corresponds to the frequency of second entry in sl-PreconfigFreqInfoListSizeExt and so on.</td>
+  </tr>
+  <tr>
+    <td>sl-SyncTxMultiFreqIndicates that the UE transmits S-SSB on multiple carrier frequencies for NR sidelink communication. If this field is absent, the UE transmits S-SSB only on the synchronisation carrier frequency.</td>
+  </tr>
+  <tr>
+    <td>sl-TxProfileListList of one or multiple Tx profiles, indicating the compatibility of supporting SL DRX as specified in TS 38.321 [3]. Value drx-Compatible means SL DRX is supported, and value drx-Incompatible means SL DRX is not supported. It is up to the UE implementation whether/how to apply this field.</td>
+  </tr>
+  <tr>
+    <td>t400Indicates the value for timer T400 as described in clause 7.1. Value ms100 corresponds to 100 ms, value ms200 corresponds to 200 ms and so on.</td>
+  </tr>
+  <tr>
+    <td>t400-U2UIndicates the value for timer T400 to be applied for end-to-end PC5 connection in sidelink U2U relay operation as described in clause 7.1. Value ms200 corresponds to 200 ms, value ms400 corresponds to 400 ms and so on.</td>
+  </tr>
+</table>

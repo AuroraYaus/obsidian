@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <td>CSI-RS-ConfigNonPrecoded field descriptions</td>
+  </tr>
+  <tr>
+    <td>codebookConfigIndicates a sub-set of the codebook entry, see TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>codebookConfigNxIndicates the number of antenna ports per polarization in dimension x as used for transmission of CSI reference signals. Value n1 corresponds to 1, value n2 corresponds to 2 and so on, see TS 36.213 [23]. E-UTRAN configures the field in accordance with the restrictions as specified in TS 36.213 [23]. If codebookConfigNx in CSI-RS-ConfigNonPrecoded-v1480 is configured, the UE shall ignore the field codebookConfigNx in CSI-RS-ConfigNonPrecoded-r13.</td>
+  </tr>
+  <tr>
+    <td>codebookOverSamplingRateConfig-OxIndicates the spatial over-sampling rate in dimension x as used for transmission of CSI reference signals. Value n4 corresponds to 4 and value n8 corresponds to 8, see TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>csi-IM-ConfigId(List)E-UTRAN configures the field csi-IM-ConfigIdList only if the IE is included in CSI-Process is configured (i.e. when TM10 is configured for the serving cell).</td>
+  </tr>
+  <tr>
+    <td>csi-RS-ConfigNZP-EMIMOThe field is used to configure NZP configurations additional to the one defined by the original NZP configuration as included in CSI-RS-Config/ CSI-Process when using more than 8 ports CSI-RS as defined in TS 36.211 [21], table 6.10.5-1.</td>
+  </tr>
+</table>

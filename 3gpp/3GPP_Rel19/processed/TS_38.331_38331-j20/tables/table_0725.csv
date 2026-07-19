@@ -1,0 +1,4 @@
+SL-FreqSelectionConfig field descriptions
+sl-priorityListIndicates the list of sidelink logical channel priority which is associated with the configurations in sl-threshCBR-FreqReselection and in sl-threshCBR-FreqKeeping.
+sl-threshCBR-FreqReselectionIndicates the CBR threshold based on which UE determines whether the carrier frequency can be (re)selected for the transmission of NR sidelink. See TS 38.321 [3].
+sl-threshCBR-FreqKeepingIndicates the CBR threshold based on which UE determines whether the UE can keep using the carrier which was selected for the transmission of NR sidelink. See TS 38.321 [3].

@@ -1,0 +1,5 @@
+Constant,Usage
+N310,"Maximum number of consecutive ""out-of-sync"" or ""early-out-of-sync"" indications for the PCell received from lower layers"
+N311,"Maximum number of consecutive ""in-sync"" or ""early-in-sync"" indications for the PCell received from lower layers"
+N313,"Maximum number of consecutive ""out-of-sync"" indications for the PSCell received from lower layers"
+N314,"Maximum number of consecutive ""in-sync"" indications for the PSCell received from lower layers"

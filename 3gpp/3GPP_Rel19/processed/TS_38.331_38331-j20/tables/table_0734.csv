@@ -1,0 +1,2 @@
+Conditional Presence,Explanation
+FirstRRCReconfig,"This field is mandatory present in the first RRCReconfiguration for L2 U2N Remote UE when PCell is on indirect path, i.e. MP configuration is not present. Otherwise the field is absent."

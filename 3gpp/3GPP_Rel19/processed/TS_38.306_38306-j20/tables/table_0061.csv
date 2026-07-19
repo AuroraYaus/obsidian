@@ -1,0 +1,3 @@
+Definitions for parameters,Per,M,FDD-TDDDIFF,FR1-FR2DIFF
+cef-ReportRedCap-r17Indicates whether the (e)RedCap UE supports the storage of connection establishment failure or connection resume failure information and the reporting in UEInformationResponse message as specified in TS 38.331 [9]. It is mandatory with capability signalling for (e)RedCap UEs.,UE,CY,No,No
+rlf-ReportRedCap-r17Indicates whether the (e)RedCap UE supports the storage of radio link failure information or handover failure information and the reporting in UEInformationResponse message as specified in TS 38.331 [9]. It is mandatory with capability signalling for (e)RedCap UEs.,UE,CY,No,No

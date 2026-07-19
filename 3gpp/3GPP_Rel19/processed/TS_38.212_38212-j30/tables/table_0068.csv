@@ -1,0 +1,5 @@
+UCIs for transmission on a PUCCH,UCI for encoding,Value of EUCI
+"HARQ-ACK of priority index 1, HARQ-ACK of priority index 0",HARQ-ACK of priority index 1,"EUCI=minEtot,OACK-HP+L/RUCImax-HP/Qm∙Qm"
+,HARQ-ACK of priority index 0,"EUCI=Etot-minEtot,OACK-HP+L/RUCImax-HP/Qm∙Qm"
+"HARQ-ACK of priority index 1, SR of priority index 1, HARQ-ACK of priority index 0","HARQ-ACK of priority index 1, SR of priority index 1","EUCI=minEtot,OACK-HP+OSR-HP+L/RUCImax-HP/Qm∙Qm"
+,HARQ-ACK of priority index 0,"EUCI=Etot-minEtot,OACK-HP+OSR-HP+L/RUCImax-HP/Qm∙Qm"

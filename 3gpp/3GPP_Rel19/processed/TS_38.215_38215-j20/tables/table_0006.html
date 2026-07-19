@@ -1,0 +1,10 @@
+<table>
+  <tr>
+    <td>Definition</td>
+    <td>CSI reference signal received quality (CSI-RSRQ) is defined as the ratio of N×CSI-RSRP to CSI-RSSI, where N is the number of resource blocks in the CSI-RSSI measurement bandwidth. The measurements in the numerator and denominator shall be made over the same set of resource blocks.CSI Received Signal Strength Indicator (CSI-RSSI), comprises the linear average of the total received power (in [W]) observed only in OFDM symbols of measurement time resource(s), in the measurement bandwidth, over N number of resource blocks from all sources, including co-channel serving and non-serving cells, adjacent channel interference, thermal noise etc. The measurement time resource(s) for CSI-RSSI corresponds to OFDM symbols containing configured CSI-RS occasions.For CSI-RSRQ determination CSI reference signals transmitted on antenna port 3000 according to TS 38.211 [3] shall be used.For intra-frequency CSI-RSRQ measurements, if the measurement gap is not configured, UE is not expected to measure the CSI-RS resource(s) outside of the active downlink bandwidth part.For frequency range 1, the reference point for the CSI-RSRQ shall be the antenna connector of the UE. For frequency range 2, CSI-RSSI shall be measured based on the combined signal from antenna elements corresponding to a given receiver branch, where the combining for CSI-RSSI shall be the same as the one used for CSI-RSRP measurements. For frequency range 1 and 2, if receiver diversity is in use by the UE, the reported CSI-RSRQ value shall not be lower than the corresponding CSI-RSRQ of any of the individual receiver branches.</td>
+  </tr>
+  <tr>
+    <td>Applicable for</td>
+    <td>RRC_CONNECTED intra-frequency,RRC_CONNECTED inter-frequency</td>
+  </tr>
+</table>

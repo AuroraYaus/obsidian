@@ -1,0 +1,6 @@
+CSI report number,CSI fields
+CSI report #n,The reference TRS resource set index for delay offset as in Table 6.3.2.1.2-11.
+,The reference TRS resource set index for frequency offset as in Table 6.3.2.1.2-12.
+,"The delay offset for each TRS resource set configured for the CSI report as in Table 6.3.2.1.2-11, except that indicated by reference TRS resource set, ordered from the lowest to highest CSI-RS resource set ID."
+,"The inside/outside CP indicator for each TRS resource set configured for the CSI report as in Table 6.3.2.1.2-11, except that indicated by reference TRS resource set, ordered from the lowest to highest CSI-RS resource set ID."
+,"The frequency offset for each TRS resource set configured for the CSI report as in Table 6.3.2.1.2-12, except that indicated by reference TRS resource set, ordered from the lowest to highest CSI-RS resource set ID."

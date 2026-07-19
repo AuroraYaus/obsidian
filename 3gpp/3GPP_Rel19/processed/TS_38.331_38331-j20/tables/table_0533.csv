@@ -1,0 +1,6 @@
+ReportSFTD-NR field descriptions
+cellForWhichToReportSFTDIndicates the target NR neighbour cells for SFTD measurement between PCell and NR neighbour cells.
+drx-SFTD-NeighMeasIndicates that the UE shall use available idle periods (i.e. DRX off periods) for the SFTD measurement in NR standalone. The network only includes drx-SFTD-NeighMeas field when reprtSFTD-NeighMeas is set to true.
+reportSFTD-MeasIndicates whether UE is required to perform SFTD measurement between PCell and NR PSCell in NR-DC.
+reportSFTD-NeighMeasIndicates whether UE is required to perform SFTD measurement between PCell and NR neighbour cells in NR standalone. The network does not include this field if reportSFTD-Meas is set to true.
+"reportRSRPIndicates whether UE is required to include RSRP result of NR PSCell or NR neighbour cells in SFTD measurement result, derived based on SSB. If it is set to true, the network should ensure that ssb-ConfigMobility is included in the measurement object for NR PSCell or NR neighbour cells."

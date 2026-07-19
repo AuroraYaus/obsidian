@@ -1,0 +1,5 @@
+SL-PSCCH-Config field descriptions
+sl-FreqResourcePSCCHIndicates the number of PRBs for PSCCH in a resource pool where it is not greater than the number PRBs of the subchannel.
+sl-DMRS-ScrambleIDIndicates the initialization value for PSCCH DMRS scrambling.
+sl-NumReservedBitsIndicates the number of reserved bits in first stage SCI.
+sl-TimeResourcePSCCHIndicates the number of symbols of PSCCH in a resource pool.

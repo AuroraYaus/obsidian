@@ -1,0 +1,18 @@
+Name,Value,Semantics description,Ver
+PDCP configuration,,,
+>t-Reordering,Undefined,"Selected by the receiving UE, up to UE implementation",
+>pdcp-SN-Size,12,For broadcast and groupcast of NR sidelink communication,
+>maxCID,15,For broadcast and groupcast of NR sidelink communication,
+>profiles,,,
+RLC configuration,,"For broadcast and groupcast of NR sidelink communication, uni-directional UM RLCUM window size is set to 32",
+>t-Reassembly,Undefined,"Selected by the receiving UE, up to Up to UE implementation",
+>sn-FieldLength,6,For broadcast and groupcast of NR sidelink communication,
+>logicalChannelIdentity,Undefined,"Selected by the transmitting UE, up to UE implementation",
+MAC configuration,,,
+>priority,,,
+Additional RLC configuration,,"For broadcast and groupcast of NR sidelink communication, uni-directional UM RLCUM window size is set to 32This RLC is used for PDCP duplication",v1810
+>t-Reassembly,Undefined,"Selected by the receiving UE, up to Up to UE implementation",v1810
+>sn-FieldLength,6,For broadcast and groupcast of NR sidelink communication,v1810
+>logicalChannelIdentity,Undefined,"Selected by the transmitting UE, up to UE implementation",v1810
+MAC configuration associated to additional RLC configuration,,,
+>priority,,,

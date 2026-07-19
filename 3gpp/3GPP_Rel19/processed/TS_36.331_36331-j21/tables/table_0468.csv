@@ -1,0 +1,10 @@
+AS-Context field descriptions
+idc-IndicationIncluding information used for handling the IDC problems.
+maxSCH-TB-BitsXLIndicates the maximum DL-SCH/UL-SCH TB bits that may be scheduled in a TTI during DAPS HO. Specified as a percentage of the value defined for the applicable UE category.
+reestablishmentInfoIncluding information needed for the RRC connection re-establishment.
+"sourceContextEN-DC(NG)EN-DC related context information, in particular regarding the UE capability coordination, as defined by the ConfigRestrictInfoSCG IE specified in TS 38.331 [82]."
+selectedBandCombinationInfoEN-DCIncluding the BandCombinationInfoSN IE specified in TS 38.331 [82]. See NOTE 1.
+sidelinkUEInformationNRIncluding sidelink UE information as defined by the SidelinkUEInformationNR message specified in TS 38.331 [82].
+"ueAssistanceInformationIncluding UE assistance information as defined by the UEAssistanceInformation message e.g. concerning power preference, overheating."
+ueAssistanceInformationNRIncluding sidelink UE assistance information as defined by the UEAssistanceInformation message specified in TS 38.331 [82].
+"ueAssistanceInformationNR-SCGIncludes for each UE assistance feature associated with the NR SCG as specified in TS 38.331 [82], the information last reported by the UE in the NR UEAssistanceInformation message for the NR SCG, if any."

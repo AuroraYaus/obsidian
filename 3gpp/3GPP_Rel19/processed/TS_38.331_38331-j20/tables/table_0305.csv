@@ -1,0 +1,4 @@
+Conditional Presence,Explanation
+SCellOnly,"The field is optionally present, Need R, in ServingCellConfigCommon of an SCell. It is absent otherwise."
+SpCellOnly,"The field is optionally present, Need R, in ServingCellConfigCommonSIB or in the ServingCellConfigCommon of an SpCell. It is absent otherwise."
+SpCellOnly2,"The field is optionally present, Need R, in ServingCellConfigCommon of an SpCell. It is absent otherwise."

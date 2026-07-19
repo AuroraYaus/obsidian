@@ -1,0 +1,53 @@
+<table>
+  <tr>
+    <td>SL-ConfiguredGrantConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>rrc-ConfiguredSidelinkGrantConfiguration for &quot;sidelink configured grant&quot; transmission with fully RRC-configured SL grant (Type1). If this field is not configured, the UE uses SL grant configured by DCI addressed to SL-CS-RNTI (Type2).</td>
+  </tr>
+  <tr>
+    <td>sl-ConfigIndexCGThis field indicates the ID to identify sidelink configured grant.</td>
+  </tr>
+  <tr>
+    <td>sl-CG-MaxTransNumListThis field indicates the maximum number of times that a TB can be transmitted using the resources provided by the sidelink configured grant. sl-Priority corresponds to the logical channel priority.</td>
+  </tr>
+  <tr>
+    <td>sl-FreqResourceCG-Type1Indicates the frequency resource location of sidelink configured grant type 1. An index giving valid combinations of one or two starting sub-channel and length (jointly encoded) as resource indicator value (RIV), as defined in TS 38.214 [19].</td>
+  </tr>
+  <tr>
+    <td>sl-HARQ-ProcID-OffsetIndicates the offset used in deriving the HARQ process ID for sidelink configured grant type 1 or sidelink configured grant type 2, see TS 38.321 [3], clause 5.8.3.</td>
+  </tr>
+  <tr>
+    <td>sl-N1PUCCH-ANThis field indicates the PUCCH resource for HARQ feedback for sidelink configured grant type 1. The actual PUCCH-Resource is configured in sl-PUCCH-Config and referred to by its ID.</td>
+  </tr>
+  <tr>
+    <td>sl-N1PUCCH-AN-Type2This field indicates the PUCCH resource for HARQ feedback for PSCCH/PSSCH transmissions without a corresponding PDCCH on sidelink configured grant type 2. The actual PUCCH-Resource is configured in sl-PUCCH-Config and referred to by its ID.</td>
+  </tr>
+  <tr>
+    <td>sl-NrOfHARQ-ProcessesThis field indicates the number of HARQ processes configured for a specific sidelink configured grant. It applies for both type 1 and type 2.</td>
+  </tr>
+  <tr>
+    <td>sl-PeriodCGThis field indicates the period of sidelink configured grant in the unit of ms.</td>
+  </tr>
+  <tr>
+    <td>sl-PSFCH-ToPUCCH-CG-Type1This field, for sidelink configured grant type 1, indicates slot offset between the PSFCH associated with the last PSSCH resource of each period and the PUCCH occasion used for reporting sidelink HARQ.</td>
+  </tr>
+  <tr>
+    <td>sl-ResourcePoolIDIndicates the resource pool in which the sidelink configured grant type 1 is applied.</td>
+  </tr>
+  <tr>
+    <td>sl-StartRBsetCG-Type1Indicates starting RB set index of the initial PSSCH transmission of the sidelink configured grant Type 1 for interlace RB-based PSSCH transmission.</td>
+  </tr>
+  <tr>
+    <td>sl-StartSubchannelCG-Type1This field indicates the starting sub-channel of sidelink configured grant type 1. An index giving valid sub-channel index.</td>
+  </tr>
+  <tr>
+    <td>sl-TimeOffsetCG-Type1This field indicates the slot offset with respect to logical slot defined by sl-TimeReferenceSFN-Type1, as specified in TS 38.321 [3].</td>
+  </tr>
+  <tr>
+    <td>sl-TimeReferenceSFN-Type1Indicates SFN used for determination of the offset of a resource in time domain. If it is present, the UE uses the 1st logical slot of associated resource pool after the starting time of the closest SFN with the indicated number preceding the reception of the sidelink configured grant configuration type 1 as reference logical slot, see TS 38.321 [3], clause 5.8.3. If it is not present, the reference SFN is 0.</td>
+  </tr>
+  <tr>
+    <td>sl-TimeResourceCG-Type1This field indicates the time resource location of sidelink configured grant type 1. An index giving valid combinations of up to two slot positions (jointly encoded) as time resource indicator value (TRIV), as defined in TS 38.212 [17].</td>
+  </tr>
+</table>

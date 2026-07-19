@@ -1,0 +1,65 @@
+MeasResults field descriptions
+availableAdmissionCapacityWLANIndicates the available admission capacity of WLAN as defined in IEEE 802.11-2012 [67].
+"averageDelayIndicates average delay for the packets during the reporting period, as specified in TS 38.314 [103]. Value 0 corresponds to 0 millisecond, value 1 corresponds to 0.1 millisecond, value 2 corresponds to 0.2 millisecond, and so on."
+"backhaulDL-BandwidthWLANIndicates the backhaul available downlink bandwidth of WLAN, equal to Downlink Speed times Downlink Load defined in Wi-Fi Alliance Hotspot 2.0 [76]."
+"backhaulUL-BandwidthWLANIndicates the backhaul available uplink bandwidth of WLAN, equal to Uplink Speed times Uplink Load defined in Wi-Fi Alliance Hotspot 2.0 [76]."
+bandWLANIndicates the WLAN band.
+"carrierFreqIndicates the E-UTRA carrier frequency. Within MeasResultIdleListEUTRA-r15, UE only includes measurements with the same carrier frequency."
+carrierFreqNRIndicates the NR carrier frequency.
+carrierInfoWLANIndicates the WLAN channel information.
+"cbr-PSSCHIndicates the CBR measurement results on the PSSCH of the pool indicated by poolIdentity. If adjacencyPSCCH-PSSCH is set to TRUE for the pool indicated by pooIIdentity, this field indicates the CBR measurement of both the PSSCH and PSCCH resources which are measured together."
+cbr-PSCCHIndicates the CBR measurement results on the PSCCH of the pool indicated by poolIdentity. This field is only included if adjacencyPSCCH-PSSCH is set to FALSE for the pool indicated by pooIIdentity.
+channelOccupancyIndicates the percentage of samples when the RSSI was above the configured channelOccupancyThreshold for the associated reportConfig.
+channelUtilizationWLANIndicates WLAN channel utilization as defined in IEEE 802.11-2012 [67].
+coarseLocationInfoThis field indicates the coarse location information reported by the UE. This field is coded as the Ellipsoid-Point IE defined in TS 37.355 [109]. The first/leftmost bit of the first octet contains the most significant bit. The least significant bits of degreesLatitude and degreesLongitude are set to 0 to meet the accuracy requirement which corresponds to a granularity of approximately 2 km.It is up to UE implementation as to how many LSBs are set to 0 to meet the accuracy requirement.
+connectedWLANIndicates whether the UE is connected to the WLAN for which the measurement results are applicable.
+csg-MemberStatusIndicates whether or not the UE is a member of the CSG of the neighbour cell.
+currentSFNIndicates the current system frame number when receiving the UE Rx-Tx time difference measurement results from lower layer.
+"drb-IdIndicates the identity of DRB for which UL PDCP Packet Delay value is provided, according to TS 38.314 [103]."
+"excessDelayIndicates excess queueing delay ratio in UL, according to excess delay ratio measurement report mapping table, as defined in TS 36.314 [71], Table 4.2.1.1.1-1."
+gNB-ID-LengthIndicates the length of the gNB ID corresponding to the associated entry in the PLMN-IdentityInfoNR.
+"heightUEIndicates height of the UE in meters relative to the sea level. Value 0 corresponds to sea level (i.e., negative value indicates depth of the UE below sea level). Value -400 corresponds to -400 m, value -399 corresponds to -399 m and so on."
+hsdn-CellContains hsdn-Cell field acquired by the UE from SIB1 of the cell for which report CGI procedure was requested by the network.
+"locationAreaCodeA fixed length code identifying the location area within a PLMN, as defined in TS 23.003 [27]."
+"measIdIdentifies the measurement identity for which the reporting is being performed. If the measId-v1250 is included, the measId (i.e. without a suffix) is ignored by eNB."
+measIdleResultNRIdle/inactive measurement results for an NR cell (optionally including beam level measurements).
+"measResultMeasured result of an EUTRA cell;Measured result of a UTRA cell;Measured result of a GERAN cell or frequency;Measured result of a CDMA2000 cell;Measured result of a WLAN;Measured result of UE Rx–Tx time difference;Measured result of UE SFN, radio frame and subframe timing difference; orMeasured result of RSSI and channel occupancy."
+measResultCSI-RS-ListMeasured results of the CSI-RS resources in discovery signals measurement.
+measResultListCDMA2000List of measured results for the maximum number of reported best cells for a CDMA2000 measurement identity.
+"measResultListEUTRAList of measured results for the maximum number of reported best cells for an EUTRA measurement identity. For UE supporting CE Mode B, when CE mode B is not restricted by upper layers, measResult-v1360 is reported if the measured RSRP is less than -140 dBm."
+measResultListGERANList of measured results for the maximum number of reported best cells or frequencies for a GERAN measurement identity.
+measResultListIdleList of measured results for E-UTRA idle/inactive measurements.
+measResultListIdleNRList of measured results for NR idle/inactive measurements.
+measResultListSFTDList of measured SFTD results for the reported cells for a NR measurement identity.
+measResultListUTRAList of measured results for the maximum number of reported best cells for a UTRA measurement identity.
+"measResultListWLANList of measured results for the maximum number of reported best WLAN outside the WLAN mobility set and connected WLAN, if any, for a WLAN measurement identity."
+"measResultPCellMeasured result of the PCell. For BL UEs or UEs in CE, when operating in CE Mode B, measResultPCell-v1360 is reported if the measured RSRP is less than -140 dBm. If sending of the MeasurementReport message is triggered by a measurement configured by the field sl-ConfigDedicatedEUTRA that was received within an NR RRCReconfiguration message (i.e. CBR measurements), measResultPCell is not applicable, its contents is invalid and ignored by the network."
+measResultsCDMA2000Contains the CDMA2000 HRPD pre-registration status and the list of CDMA2000 measurements.
+"measResultServFreqListMeasured results of the serving frequencies: the measurement result of each SCell, if any, and of the best neighbouring cell on each serving frequency. For UE supporting CE Mode B, when CE mode B is not restricted by upper layers, measResultBestNeighCell-v1360 is reported if the measured RSRP is less than -140 dBm."
+"measResultServingCellMeasured results of the serving cell (i.e., PCell) from idle/inactive measurements."
+measResultsPerCellListIdleNRList of idle/inactive measured results for the maximum number of reported best cells for a given NR carrier.
+noSIB1Contains ssb-SubcarrierOffset and pdcch-ConfigSIB1 fields acquired by the UE from MIB of the cell for which report CGI procedure was requested by the network in case SIB1 was not broadcast by the cell.
+"pilotPnPhaseIndicates the arrival time of a CDMA2000 pilot, measured relative to the UE's time reference in units of PN chips, see C.S0005 [25]. This information is used in either SRVCC handover or enhanced 1xRTT CS fallback procedure to CDMA2000 1xRTT."
+"pilotStrengthCDMA2000 Pilot Strength, the ratio of pilot power to total power in the signal bandwidth of a CDMA2000 Forward Channel. See C.S0005 [25] for CDMA2000 1xRTT and C.S0024 [26] for CDMA2000 HRPD."
+poolIdentityThe identity of the transmission resource pool which is corresponding to the poolReportId configured in a resource pool for V2X sidelink communication.
+plmn-IdentityListThe list of PLMN Identity read from broadcast information when the multiple PLMN Identities are broadcast.
+preRegistrationStatusHRPDSet to TRUE if the UE is currently pre-registered with CDMA2000 HRPD. Otherwise set to FALSE. This can be ignored by the eNB for CDMA2000 1xRTT.
+"qci-IdIndicates QCI value for which excessDelay is provided, according to TS 36.314 [71]."
+"resourceIndexIndicates the available resource candidates within the [T1, T2] window as specified in TS 36.213 [23]. clause 14.1.1.6. Value 1 indicates the resource candidate on the subframe indicated by sl-SubframeRef, from subchannel 0 to sensingSubchannelNumber-1. Value 2 indicates the resource candidate on the first subframe following the subframe indicated by sl-SubframeRef, from subchannel 0 to sensingSubchannelNumber-1 (Value 101 indicates the resource candidate on the subframe indicated by sl-SubframeRef, from subchannel 1 to sensingSubchannelNumber, if the numSubchannel of the resource pool is larger than sensingSubchannelNumber) and so on."
+"resultRS-IndexListBeam level measurement results (indexes and optionally, beam measurements)."
+"routingAreaCodeThe RAC identity read from broadcast information, as defined in TS 23.003 [27]."
+rsrpResultMeasured RSRP result of an EUTRA cell.The rsrpResult is only reported if configured by the eNB.
+rsrpResultNRMeasured RSRP result of an NR cell.The rsrpResultNR is only reported if configured by the eNB.
+"rsrqResultMeasured RSRQ result of an EUTRA cell.The rsrqResult is only reported if configured by the eNB.If the measurement is performed in RRC_CONNECTED and measurements based on RSS is enabled in the cell in measRSS-DedicatedConfig-r16, E-UTRAN ignores rsrqResult."
+rsrqResultNRMeasured RSRQ result of an NR cell.The rsrqResultNR is only reported if configured by the eNB.
+"rssiGERAN Carrier RSSI. RXLEV is mapped to a value between 0 and 63, TS 45.008 [28]. When mapping the RXLEV value to the RSSI bit string, the first/leftmost bit of the bit string contains the most significant bit."
+rssi-ResultMeasured RSSI result in dBm.
+rs-sinr-ResultMeasured RS-SINR result of an EUTRA or NR cell. The rs-sinr-Result is only reported if configured by the eNB.
+rssiWLANMeasured WLAN RSSI result in dBm.
+"sl-SubframeRefIndicates the subframe corresponding to n+T1 used to obtain the sensing measurement results (see TS 36.213 [23]). Specifically, the value indicates the timing offset with respect to subframe#0 of DFN#0 in milliseconds."
+stationCountWLANIndicates the total number stations currently associated with this WLAN as defined in IEEE 802.11-2012 [67].
+"ue-RxTxTimeDiffResultUE Rx-Tx time difference measurement result of the PCell, provided by lower layers. If ue-RxTxTimeDiffPeriodicalTDD-r13 is set to TRUE, the measurement mapping is according to EUTRAN TDD UE Rx-Tx time difference report mapping in TS 36.133 [16] and measurement result includes NTAoffset, else the measurement mapping is according to EUTRAN FDD UE Rx-Tx time difference report mapping in TS 36.133 [16]."
+uncomBarPreMeasResultThis field provides barometric pressure measurements as Sensor-MeasurementInformation defined in TS 37.355 [109]. The first/leftmost bit of the first octet contains the most significant bit.
+utra-EcN0According to CPICH_Ec/No in TS 25.133 [29] for FDD. Fourteen spare values. The field is not present for TDD.
+utra-RSCPAccording to CPICH_RSCP in TS 25.133 [29] for FDD and P-CCPCH_RSCP in TS 25.123 [30] for TDD. Thirty-one spare values.
+wlan-IdentifiersIndicates the WLAN parameters used for identification of the WLAN for which the measurement results are applicable.

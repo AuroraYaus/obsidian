@@ -1,0 +1,3 @@
+UE-CapabilityRAT-Request field descriptions
+"capabilityRequestFilterInformation by which the network requests the UE to filter the UE capabilities.For rat-Type set to nr or eutra-nr: the encoding of the capabilityRequestFilter is defined in UE-CapabilityRequestFilterNR.For rat-Type set to eutra: the encoding of the capabilityRequestFilter is defined by UECapabilityEnquiry message defined in TS36.331 [10], in which RAT-Type in UE-CapabilityRequest includes only 'eutra'."
+rat-TypeThe RAT type for which the NW requests UE capabilities.

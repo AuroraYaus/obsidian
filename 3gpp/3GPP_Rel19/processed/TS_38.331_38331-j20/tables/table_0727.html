@@ -1,0 +1,56 @@
+<table>
+  <tr>
+    <td>SL-InterUE-CoordinationScheme1 field descriptions</td>
+  </tr>
+  <tr>
+    <td>sl-Condition1-A-2Indicates disabling the use of condition of excluding from preferred resource set resource(s) in slot(s) where UE-A, when it is intended receiver of UE-B, does not expect to perform SL reception from UE-B due to half duplex operation.</td>
+  </tr>
+  <tr>
+    <td>sl-ContainerCoordInfoIndicates whether a SCI format 2-C can be used as the container of inter-UE coordination information transmission from UE-A to UE-B in Scheme 1 in addition to using MAC CE.</td>
+  </tr>
+  <tr>
+    <td>sl-ContainerRequestIndicates whether a SCI format 2-C can be used as the container of an explicit request for inter-UE coordination information transmission from UE-B to UE-A in Scheme 1 in addition to using MAC CE.</td>
+  </tr>
+  <tr>
+    <td>sl-DetermineResourceTypeIndicates how to determine the resource set type to be provided by inter-UE coordination information transmission. Value &quot;uea&quot; means the resource set type is determined by UE-A&#x27;s implementation. Value &quot;ueb&quot; means the resource set type is determined by UE-B&#x27;s request.</td>
+  </tr>
+  <tr>
+    <td>sl-IUC-ConditionIndicates whether inter-UE coordination information triggered by a condition is enabled or not other than explicit request reception.</td>
+  </tr>
+  <tr>
+    <td>sl-IUC-ExplicitIndicates whether inter-UE coordination information triggered by an explicit request is enabled or not.</td>
+  </tr>
+  <tr>
+    <td>sl-MaxSlotOffsetTRIVIndicates the maximum value of logical slot offset with respect to a reference slot that is used for representing the first resource location of each TRIV to indicate the set of resources in Scheme 1 as specified in TS 38.214 [19].</td>
+  </tr>
+  <tr>
+    <td>sl-NumSubCH-PreferredResousrceSetIndicates the number of sub-channels used for determining the preferred resource set in Scheme 1 when the inter-UE coordination information transmission is triggered by a condition other than explicit request reception.</td>
+  </tr>
+  <tr>
+    <td>sl-PriorityCoordInfoConditionParameter used to determine the priority values for the purpose defined in TS 38.213 [13] and TS 38.214 [19] including, the priority value for sensing and candidate resource (re-)selection for transmitting the TB carrying the IUC MAC CE and the priority value in the SCI Format 1-A corresponding to the TB carrying the IUC MAC CE, triggered by a condition other than explicit request reception in Scheme 1. The priority value of IUC MAC CE used in LCP procedure (see TS 38.321 [3]) is fixed as &quot;1&quot;.</td>
+  </tr>
+  <tr>
+    <td>sl-PriorityCoordInfoExplicitParameter used to determine the priority values for the purpose defined in TS 38.213 [13] and TS 38.214 [19] including, the priority value for sensing and candidate resource (re-)selection for transmitting the TB carrying the IUC MAC CE and the priority value in the SCI Format 1-A corresponding to the TB carrying the IUC MAC CE, triggered by an explicit request in Scheme 1. The priority value of IUC MAC CE used in LCP procedure (see TS 38.321 [3]) is fixed as &quot;1&quot;.</td>
+  </tr>
+  <tr>
+    <td>sl-PriorityPreferredResourceSetIndicates the priority value used for determining the preferred resource set in Scheme 1 when the inter-UE coordination information transmission is triggered by a condition other than explicit request reception.</td>
+  </tr>
+  <tr>
+    <td>sl-PriorityRequestParameter used to determine the priority values for the purpose defined in TS 38.213 [13] and TS 38.214 [19] including, the priority value for sensing and candidate resource (re-)selection for transmitting the TB carrying the IUC request MAC CE and the priority value in the SCI Format 1-A corresponding to the TB carrying the IUC request MAC CE, in an explicit request for inter-UE coordination information in Scheme 1. The priority value of IUC request MAC CE used in LCP procedure (see TS 38.321 [3]) is fixed as &quot;1&quot;.</td>
+  </tr>
+  <tr>
+    <td>sl-ReservedPeriodPreferredResourceSetIndicates the resource reservation interval used for determining the preferred resource set in Scheme 1 when the inter-UE coordination information transmission is triggered by a condition, by means of an index to the corresponding entry of sl-ResourceReservePeriodList-r16.</td>
+  </tr>
+  <tr>
+    <td>sl-TriggerConditionCoordInfoIndicates the additional alternative trigger condition of inter-UE coordination information triggered by a condition rather than request reception for data transmission in Scheme-1 from UE-A to UE-B. This field is also used to indicate the additional alternative trigger condition of inter-UE coordination information triggered by a condition rather than request reception for SL-PRS transmission in a shared SL PRS resource pool in Scheme-1 from UE-A to UE-B. Value 0 means inter-UE coordination information is triggered by UE-A&#x27;s implementation. Value 1 means inter-UE coordination information can be triggered only when UE-A has data to be transmitted together with the inter-UE coordination information to UE-B.</td>
+  </tr>
+  <tr>
+    <td>sl-TriggerConditionRequestIndicates the trigger condition of an explicit request from UE-B to UE-A for data transmission. This field is also used to indicate the trigger condition of an explicit request from UE-B to UE-A for SL-PRS transmission in a shared SL PRS resource pool. Value 0 means the explicit request is triggered by UE-B&#x27;s implementation. Value 1 means the explicit request can be triggered only when UE-B has data or SL-PRS to be transmitted to UE-A.</td>
+  </tr>
+  <tr>
+    <td>sl-ThresholdRSRP-Condition1-B-1-Option1ListIndicates the RSRP threshold used to determine reserved resource(s) of other UE(s) whose RSRP measurement is larger than it as the set of resource(s) non-preferred for UE-B&#x27;s transmission for Condition 1-B-1 of Scheme 1, as specified in TS 38.214 [19]. Value 0 corresponds to minus infinity dBm, value 1 corresponds to -128dBm, value 2 corresponds to -126dBm, value n corresponds to (-128 + (n-1)*2) dBm and so on, value 66 corresponds to infinity dBm.</td>
+  </tr>
+  <tr>
+    <td>sl-ThresholdRSRP-Condition1-B-1-Option2ListIndicates the RSRP threshold used to determine reserved resource(s) of other UE(s) whose RSRP measurement is smaller than it as the set of resource(s) non-preferred for UE-B&#x27;s transmission for Condition 1-B-1 of Scheme 1, as specified in TS 38.214 [19]. Value 0 corresponds to minus infinity dBm, value 1 corresponds to -128dBm, value 2 corresponds to -126dBm, value n corresponds to (-128 + (n-1)*2) dBm and so on, value 66 corresponds to infinity dBm.</td>
+  </tr>
+</table>

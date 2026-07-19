@@ -1,0 +1,53 @@
+<table>
+  <tr>
+    <td>EPDCCH-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>csi-NumRepetitionCENumber of subframes for CSI reference resource, see TS 36.213 [23]. Value sf1 corresponds to 1 subframe, sf2 corresponds to 2 subframes and so on.</td>
+  </tr>
+  <tr>
+    <td>csi-RS-ConfigZPId2Indicates the rate matching parameters in addition to those indicated by re-MappingQCL-ConfigId. E-UTRAN configures this field only when tm10 is configured.</td>
+  </tr>
+  <tr>
+    <td>dmrs-ScramblingSequenceIntThe DMRS scrambling sequence initialization parameter  or  defined in TS 36.211 [21], clause 6.10.3A.1.</td>
+  </tr>
+  <tr>
+    <td>EPDCCH-SetConfigProvides EPDCCH configuration set. See TS 36.213 [23], clause 9.1.4. E-UTRAN configures at least one EPDCCH-SetConfig when EPDCCH-Config is configured. For BL UEs or UEs in CE, EUTRAN does not configure more than one EPDCCH-SetConfig.</td>
+  </tr>
+  <tr>
+    <td>mpdcch-NarrowbandParameter: , see TS 36.211 [21], clause 6.8B.5. Field values (1..maxAvailNarrowBands-r13) correspond to narrowband indices (0..maxAvailNarrowBands-r13-1) as specified in TS 36.211 [21].</td>
+  </tr>
+  <tr>
+    <td>mpdcch-NumRepetitionMaximum numbers of repetitions for UE-SS for MPDCCH, see TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>mpdcch-pdsch-HoppingConfigFrequency hopping activation/deactivation for unicast MPDCCH/PDSCH, see TS 36.211 [21]. E-UTRAN does not configure the value on if freqHoppingParametersDL is not present in SystemInformationBlockType1.</td>
+  </tr>
+  <tr>
+    <td>mpdcch-StartSF-UESSStarting subframe configuration for an MPDCCH UE-specific search space, see TS 36.213 [23]. Value v1 corresponds to 1, value v1dot5 corresponds to 1.5, and so on.</td>
+  </tr>
+  <tr>
+    <td>numberPRB-PairsIndicates the number of physical resource-block pairs used for the EPDCCH set. Value n2 corresponds to 2 physical resource-block pairs; n4 corresponds to 4 physical resource-block pairs and so on. Value n8 is not supported if dl-Bandwidth is set to 6 resource blocks. EUTRAN only configures values up to n6 for BL UEs or UEs in CE. Value n6 is only applicable to BL UEs or UEs in CE.</td>
+  </tr>
+  <tr>
+    <td>pucch-ResourceStartOffsetPUCCH format 1a, 1b and 3 resource starting offset for the EPDCCH set. See TS 36.213 [23], clause 10.1.</td>
+  </tr>
+  <tr>
+    <td>re-MappingQCL-ConfigIdIndicates the starting OFDM symbol, the related rate matching parameters and quasi co-location assumption for EPDCCH when the UE is configured with tm10. This field provides the identity of a configured PDSCH-RE-MappingQCL-Config. E-UTRAN configures this field only when tm10 is configured.</td>
+  </tr>
+  <tr>
+    <td>resourceBlockAssignmentIndicates the index to a specific combination of physical resource-block pair for EPDCCH set. See TS 36.213 [23], clause 9.1.4.4. The size of resourceBlockAssignment is specified in TS 36.213 [23], clause 9.1.4.4, and based on numberPRB-Pairs and the signalled value of dl-Bandwidth. If numberPRB-Pairs-v1310 field is present, the total number of physical resource-block pairs is 6 and it is composed of one subset of 2 physical resource-block pairs and another subset of 4 physical resource-block pairs, and the resourceBlockAssignment field defines the subset of 2 physical resource-block pairs.</td>
+  </tr>
+  <tr>
+    <td>setConfigIdIndicates the identity of the EPDCCH configuration set.</td>
+  </tr>
+  <tr>
+    <td>startSymbolIndicates the OFDM starting symbol for any EPDCCH and PDSCH scheduled by EPDCCH on the same cell, see TS 36.213 [23], clause 9.1.4.1. If not present, the UE shall release the configuration and shall derive the starting OFDM symbol of EPDCCH and PDSCH scheduled by EPDCCH from PCFICH. Values 1, 2, and 3 are applicable for dl-Bandwidth greater than 10 resource blocks. Values 2, 3, and 4 are applicable otherwise. E-UTRAN does not configure the field for UEs configured with tm10.</td>
+  </tr>
+  <tr>
+    <td>subframePatternConfigConfigures the subframes which the UE shall monitor the UE-specific search space on EPDCCH, except for pre-defined rules in TS 36.213 [23], clause 9.1.4. If the field is not configured when EPDCCH is configured, the UE shall monitor the UE-specific search space on EPDCCH in all subframes except for pre-defined rules in TS 36.213 [23], clause 9.1.4.</td>
+  </tr>
+  <tr>
+    <td>transmissionTypeIndicates whether distributed or localized EPDCCH transmission mode is used as defined in TS 36.211 [21], clause 6.8A.1.</td>
+  </tr>
+</table>

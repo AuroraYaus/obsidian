@@ -1,0 +1,26 @@
+topic,rat,spec,release,version_package,inner_files,official_url,zip_size_bytes,sha256
+物理层总体描述,LTE,TS 36.201,Rel-19,36201-j00.zip,36201-j00.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.201/36201-j00.zip,157083,d1e6a5966d5d01f477bbc3f3ddf7434660c85eeeb83251d10fc47a589d1a8571
+物理层总体描述,NR,TS 38.201,Rel-19,38201-j00.zip,38201-j00.doc,https://www.3gpp.org/ftp/Specs/archive/38_series/38.201/38201-j00.zip,114736,06704d6df219cca13c6c955906a52f47cbc3c502c4e7353337e0e34470bdc4b8
+PHY 服务,LTE,TS 36.302,Rel-19,36302-j00.zip,36302-j00.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.302/36302-j00.zip,2509926,5d9199911dde4520686c407ac7481888a2238b08d16ca2a7b9198742b94911ed
+PHY 服务,NR,TS 38.202,Rel-19,38202-j00.zip,38202-j00.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.202/38202-j00.zip,1029341,b1dc198e58492eb64024483ae9eafc99009168d42c544bde5207bf8e09dfeea9
+物理信道与调制,LTE,TS 36.211,Rel-19,36211-j30.zip,36211-j30_cover.docx; 36211-j30_s00-s05.docx; 36211-j30_s06-s08.docx; 36211-j30_s09-sxx.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.211/36211-j30.zip,7629041,c1b132375361596e713dc51bfa20afbe4bf4c92bf1992c829a775f59a2ece5a1
+物理信道与调制,NR,TS 38.211,Rel-19,38211-j30.zip,38211-j30.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.211/38211-j30.zip,1251970,c80b516b987b4732f8dbd9e783e4071059f2396048c206dbd05a3da60b275f47
+复用与信道编码,LTE,TS 36.212,Rel-19,36212-j30.zip,36212-j30.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.212/36212-j30.zip,1420921,06a40a3b3214d372b0a6008ee1c885cd025ed30aef6399c9ea76a1d4593a1450
+复用与信道编码,NR,TS 38.212,Rel-19,38212-j30.zip,38212-j30.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.212/38212-j30.zip,2111728,89275220eabea854a4aff5e0982cc78be830edb31a6a637abc99c17812a4d443
+物理层过程,LTE,TS 36.213,Rel-19,36213-j30.zip,36213-j30_cover.docx; 36213-j30_s00-s05.docx; 36213-j30_s06-s07.docx; 36213-j30_s08-s09.docx; 36213-j30_s10-s13.docx; 36213-j30_s14-xx.docx; 36213-j30_sAnnexes.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.213/36213-j30.zip,4596044,16d461903a2f614620532e74ffff28867ac7d53212918964923c3b844ac093c8
+物理层过程,NR,TS 38.213,Rel-19,38213-j30.zip,38213-j30.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.213/38213-j30.zip,1332589,25e29ce93e6f87b64927b8be0837601eee5068f6d5912678bccd8cfdb985dcb9
+物理层过程,NR,TS 38.214,Rel-19,38214-j30.zip,38214-j30.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.214/38214-j30.zip,3147069,a8f929709cbf5dd4a2b1941eb29c0978ed680a7e830d333174306945a805cdda
+物理层测量,LTE,TS 36.214,Rel-19,36214-j00.zip,36214-j00.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.214/36214-j00.zip,139391,d40edb171ea3784c1f4be02709b219a20b11c7afc790dbb260bd3669df1f6408
+物理层测量,NR,TS 38.215,Rel-19,38215-j20.zip,38215-j20.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.215/38215-j20.zip,186967,8c0a2a7bec42a165e344442ad884f392c2d59fd45f283db5f2ae88d3db9076a6
+总体架构,LTE,TS 36.300,Rel-19,36300-j10.zip,36300-j10.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.300/36300-j10.zip,10102639,f0088301e7024d779fb988f773c86950e5415d66e4f862e074beb3aeef4ada56
+总体架构,NR,TS 38.300,Rel-19,38300-j20.zip,38300-j20.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.300/38300-j20.zip,7874648,214311b6f5992c0144fe3963c5c107edcae3903ffda06971c068a21aa3891a7d
+UE 能力,LTE,TS 36.306,Rel-19,36306-j20.zip,36306-j20.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.306/36306-j20.zip,527920,aedfb67842b488bfc1517ef4f5ce66f7afa3731d58f425877c48426990378bd0
+UE 能力,NR,TS 38.306,Rel-19,38306-j20.zip,38306-j20.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.306/38306-j20.zip,1252503,bddd936fe6a3658ffae1ee110a2b0b0042f6ce0f822f26fa07918c40fc38c2d3
+MAC,LTE,TS 36.321,Rel-19,36321-j20.zip,36321-j20.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.321/36321-j20.zip,2166663,6b1b642dd348fbc743ab8f77fa95d9f99630f67ed41de574eead3de739cad31e
+MAC,NR,TS 38.321,Rel-19,38321-j20.zip,38321-j20.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.321/38321-j20.zip,3249493,5834183c304f2b01b0ab5805501c77b9a1daeb179b3935ac7ed9a01714a682ab
+RLC,LTE,TS 36.322,Rel-19,36322-j00.zip,36322-j00.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.322/36322-j00.zip,1500210,02f39b57c91c572549c6b95ed920456e03cc0e71085c53ed30c25197e9327e6f
+RLC,NR,TS 38.322,Rel-19,38322-j20.zip,38322-j20.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.322/38322-j20.zip,771002,a45ee8a900b0005d85d78918296aaf36feffc7206a171ff247b83f335100f065
+PDCP,LTE,TS 36.323,Rel-19,36323-j00.zip,36323-j00.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.323/36323-j00.zip,991451,23f8d8d1e251feef7c0e87b7f834725aa0e36e3a38babb8381768a28874e6d6d
+PDCP,NR,TS 38.323,Rel-19,38323-j10.zip,38323-j10.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.323/38323-j10.zip,958627,22912a94c0e6b7ddd8cdafd3de2994bbb1ddfb704bb72d409fab8e168a7844c2
+RRC,LTE,TS 36.331,Rel-19,36331-j21.zip,36331-j21.docx,https://www.3gpp.org/ftp/Specs/archive/36_series/36.331/36331-j21.zip,3827861,efe84a99b2016b97f55aafc2a6af00a4da0a5eae56e77d678631ddf8a1068429
+RRC,NR,TS 38.331,Rel-19,38331-j20.zip,38331-j20.docx,https://www.3gpp.org/ftp/Specs/archive/38_series/38.331/38331-j20.zip,4593441,2ea3c13011abc11554201fc85d6e0b281bcbf617fbee0caa41307d0d33556e78

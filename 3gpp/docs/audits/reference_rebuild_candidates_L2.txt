@@ -1,0 +1,544 @@
+REFERENCE_REBUILD_AUDIT_CANDIDATES
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:16: [formula_ref] 本节只做总览，不把信道极化、可靠性序列、SC/SCL 公式、CA-SCL path metric 或 Polar rate recovery 的每个索引一次性写完。T10.2 到 T10.7 会逐项展开；T10.8 会把边界案例整理成调试清单。
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:51: [table_or_figure] | TS 38.212 Table 5.3-2 | `tables/table_0010.csv/html` | 控制信息到编码方案的总览映射：DCI 使用 Polar，UCI 可使用 block code 或 Polar。 |
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:52: [formula_ref] | TS 38.212 §5.2.1 | `content.md:665-715` | Polar code block segmentation and CRC attachment 总入口；公式抽取缺符号，本节只用流程语义。 |
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:61: [unverified] 证据边界：`content.md` 对若干公式符号抽取不完整，因此本节不声称复现了 §5.2.1、§5.3.1、§5.4.1 的全部 bit-exact 公式。涉及完整可靠性序列、sub-block interleaver pattern、puncturing/shortening/repetition 索引和 CA-SCL 路径度量时，分别由 T10.3、T10.7、T10.4-T10.6 复现和推导。
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:68: [unverified] | `tables/table_0011.csv` | `8e02409e9af34d772f60f9d387f3fe7ed17cbad14504fbe7481bba3b7e67475c` | 本节只作为 interleaving pattern 证据，不复现完整表。 |
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:90: [table_or_figure] TS 38.212 Table 5.3-2 给出控制信息与编码方案的顶层映射。本地 `table_0010.csv/html` 已核验，复现如下：
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:123: [unverified] 本节先不推导 SC 的 $f/g$ 函数，也不展开 $N=4/N=8$ 的完整树遍历。T10.2 会从这个直觉继续讲 frozen bit、information bit 和 Polar 变换；T10.4 会完整推导 SC。
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:186: [unverified] | Modulation/resource mapping | TS 38.211/38.213 背景 | demapper 输出 LLR，交给 Polar 链路 | 本节不展开物理资源映射，只使用译码输入。 |
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:198: [unverified] PUSCH 上复用 UCI 时，TS 38.212 §6.3.2 有对应的 bit sequence generation、CRC attachment、channel coding 和 rate matching 章节。本节只定位这些入口，不展开 PUSCH 资源元素映射和 UCI 与 UL-SCH multiplexing 细节；这些属于控制/资源映射背景，只有影响 $A/K/E/N$、CRC 和 interleaver flag 时才进入 Polar decoder descriptor。
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:287: [formula_ref] 这段伪代码省略 SC/SCL 内部公式，但保留接收链路的真实边界：先反速率匹配，再按 frozen/info mask 译码，再做 CRC/RNTI selector。
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:311: [formula_ref] 该 toy 只验证 selector 逻辑：CRC/RNTI 失败路径即使 PM 更好也不能输出；多个通过者按 PM 选择。真实 CRC 多项式和 RNTI scrambling 由 T3.1/T3.5/T10.6 承接。
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:359: [formula_ref] | LaTeX/图形审计 | 跑公式渲染和图片边界检查。 | 无渲染失败，无裁切、遮挡、箭头压字。 |
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:378: [table_or_figure] | T10.3 | TS 38.212 Table 5.3.1.2-1 可靠性序列核验、复现、info/frozen mask 生成。 |
+docs/L2/T10.1_NR_Polar_decoder_chain_overview.md:405: [table_or_figure] | DCI 使用 Polar，UCI 可使用 block code 或 Polar | TS 38.212 Table 5.3-2 | `tables/table_0010.csv/html` |
+docs/L2/T10.2_channel_polarization_frozen_bits.md:49: [table_or_figure] | TS 38.212 Table 5.3.1.2-1 | `tables/table_0012.csv/html` | 完整可靠性序列由 T10.3 复现，本节只引用其存在和排序方向。 |
+docs/L2/T10.2_channel_polarization_frozen_bits.md:52: [unverified] 边界说明：本节是理论基础课，不复现完整 NR reliability sequence，也不处理 rate matching 后的 puncturing/shortening/repetition 如何改变信息集合。完整可靠性序列、索引筛选和 NR construction 规则由 T10.3 承接；Polar rate recovery 由 T10.7 承接。本节不省略协议证据，只是不把后续章节的表格提前展开。
+docs/L2/T10.3_NR_Polar_reliability_sequence.md:5: [table_or_figure] 本节讲 NR 极化码（Polar Code）的可靠性序列，以及接收端如何由可靠性排序生成 information set 和 frozen set。可靠性序列不是随便写的一串下标，也不是仿真程序的私有参数；TS 38.212 Table 5.3.1.2-1 给出一张标准化的 Polar sequence，工程实现通常把它做成只读存储器（Read-Only Memory, ROM）或常量表。对数似然比（Log-Likelihood Ratio, LLR）、循环冗余校验（Cyclic Redundancy Check, CRC）、上行控制信息（Uplink Control Information, UCI）、下行控制信息（Downlink Control Information, DCI）、寄存器传输级（Register Transfer Level, RTL）和专用集成电路（Application-Specific Integrated Circuit, ASIC）在本节继续作为接收端和工程实现边界出现。
+docs/L2/T10.3_NR_Polar_reliability_sequence.md:32: [table_or_figure] | 精读 Table 5.3.1.2-1 | “资料与协议边界”“完整表图复现” | 核验 CSV/HTML、生成完整表图。 |
+docs/L2/T10.3_NR_Polar_reliability_sequence.md:35: [formula_ref] | 如何根据 K 选择信息位 | “信息位选择规则” | 给步骤和公式。 |
+docs/L2/T10.3_NR_Polar_reliability_sequence.md:47: [table_or_figure] | TS 38.212 Table 5.3.1.2-1 | `tables/table_0012.csv/html` | 本节完整图片化复现。 |
+docs/L2/T10.3_NR_Polar_reliability_sequence.md:123: [table_or_figure] | 协议层 | NR 统一使用哪张排序表？ | TS 38.212 Table 5.3.1.2-1。 |
+docs/L2/T10.3_NR_Polar_reliability_sequence.md:126: [formula_ref] 因此，可靠性序列不是 decoder core 的可调参数。若软件 golden model 使用一张表，RTL ROM 使用另一张表，SC/SCL 内部公式即使完全正确，也会在不同位置分裂路径，最终表现为 CRC fail。这也是本节要求记录 `table_version_hash`、`info_set_hash` 和 `frozen_set_hash` 的原因。
+docs/L2/T10.3_NR_Polar_reliability_sequence.md:142: [table_or_figure] ![TS 38.212 Table 5.3.1.2-1 Polar sequence](assets/T10.3_TS38.212_Table_5.3.1.2-1_Polar_sequence.png)
+docs/L2/T10.3_NR_Polar_reliability_sequence.md:370: [table_or_figure] | Table 5.3.1.2-1 给出 1024 项 Polar sequence | TS 38.212 Table 5.3.1.2-1 | `tables/table_0012.csv/html`；图 T10.3-1 |
+docs/L2/T10.3_NR_Polar_reliability_sequence.md:379: [table_or_figure] | Prompt 对齐 | 覆盖可靠性序列定义、Table 5.3.1.2-1 核验、排序方向、索引基准、信息位选择、$A/K$ 边界、toy 例子、伪代码、ROM 映射和常见错误。 |
+docs/L2/T10.4_Polar_SC_decoding.md:48: [table_or_figure] | TS 38.212 Table 5.3.1.2-1 | `tables/table_0012.csv/html` | information/frozen mask 由 T10.3 完整复现，本节直接使用 mask。 |
+docs/L2/T10.4_Polar_SC_decoding.md:543: [table_or_figure] | 完整可靠性序列表由 Table 5.3.1.2-1 给出 | TS 38.212 Table 5.3.1.2-1 | `tables/table_0012.csv/html`；T10.3 已图片化复现 |
+docs/L2/T10.5_Polar_SCL_decoding.md:49: [table_or_figure] | TS 38.212 Table 5.3.1.2-1 | `tables/table_0012.csv/html` | 完整可靠性序列由 T10.3 复现，本节直接使用 frozen/information mask。 |
+docs/L2/T10.5_Polar_SCL_decoding.md:52: [formula_ref] 协议边界说明：TS 38.212 规定 Polar 编码、构造、速率匹配和控制信息链路，但不规定接收机必须使用 SC、SCL 或某个具体 PM 公式。本节讲的是 NR Polar 接收端常用算法形态和硬件实现边界，不把 list size、sorter 结构、PM 近似或路径复制策略写成 3GPP 强制规则。
+docs/L2/T10.5_Polar_SCL_decoding.md:465: [table_or_figure] | 完整可靠性序列表由 Table 5.3.1.2-1 给出 | TS 38.212 Table 5.3.1.2-1 | `tables/table_0012.csv/html`；T10.3 已图片化复现 |
+docs/L2/T10.5_Polar_SCL_decoding.md:466: [formula_ref] | SCL、PM 公式、sorter 和路径复制是接收端实现策略 | 协议未规定具体译码器实现 | 本节作为工程算法讲义，保持协议/实现边界 |
+docs/L2/T10.6_CRC_aided_SCL_control_reliability.md:25: [formula_ref] | CRC 基础 | 知道 CRC pass/fail 来自 GF(2) 多项式余数检查。 |
+docs/L2/T10.6_CRC_aided_SCL_control_reliability.md:53: [unverified] 证据边界：`content.md` 对部分公式符号抽取不完整，因此本节不重新复现 CRC 多项式细节；CRC 多项式家族由 T3.1 复现。本节只精读影响 CA-SCL 选择逻辑的协议事实：UCI/ DCI 是否带 CRC、CRC 长度、DCI 的 RNTI 边界，以及 CRC 后进入 Polar 编码链路。
+docs/L2/T10.6_CRC_aided_SCL_control_reliability.md:67: [formula_ref] CA-SCL 的来源不是“CRC 会让树译码公式变成另一套 $f/g$”。$f/g$、partial sum 和 path split 仍然是 SCL 的译码主体；CRC 只是在候选路径形成后提供额外约束。可以把 SCL 看成“提出多个答案”，把 CRC 看成“用控制信息自带的检错规则淘汰不合格答案”。
+docs/L2/T10.6_CRC_aided_SCL_control_reliability.md:87: [formula_ref] 这个直观模型解释了后续公式：先构造 pass 集合，再在 pass 集合里取 PM 最优。
+docs/L2/T10.6_CRC_aided_SCL_control_reliability.md:243: [formula_ref] 这个式子只是直觉估计，不是完整链路误检公式。真实误检还与候选路径相关性、RNTI context、blind detection 次数、信道条件和实现细节有关。
+docs/L2/T10.6_CRC_aided_SCL_control_reliability.md:285: [formula_ref] 这段代码故意不实现 CRC 多项式计算，因为 T3.1 已复现 CRC 家族，本节关注 CA-SCL final selector 的决策边界。工程实现中 `crc_ok` 必须由真实 CRC checker 产生，`rnti_ok` 必须来自 DCI 的 RNTI context 检查。
+docs/L2/T10.6_CRC_aided_SCL_control_reliability.md:314: [unverified] | PM | 沿用 T10.5 的 PM 位宽、饱和和 tie-break。 | PM 饱和导致多个 pass 路径并列，若 tie-break 不稳定则输出不复现。 |
+docs/L2/T10.7_NR_Polar_rate_recovery.md:14: [table_or_figure] - 复现 TS 38.212 Table 5.4.1.1-1 的 32 项 sub-block interleaver pattern，并解释每列含义。
+docs/L2/T10.7_NR_Polar_rate_recovery.md:35: [table_or_figure] | sub-block deinterleaving | “Sub-block deinterleaving” | 复现 Table 5.4.1.1-1。 |
+docs/L2/T10.7_NR_Polar_rate_recovery.md:50: [table_or_figure] | TS 38.212 Table 5.4.1.1-1 | `tables/table_0019.csv/html` | 本节复现 32 项 sub-block interleaver pattern。 |
+docs/L2/T10.7_NR_Polar_rate_recovery.md:60: [table_or_figure] | `tables/table_0019.csv` | `f5e4f0204280dc2d9a57793e4e4b2719711485824f56161501e33ea25f8f8aff` | Table 5.4.1.1-1 的 CSV 抽取。 |
+docs/L2/T10.7_NR_Polar_rate_recovery.md:61: [table_or_figure] | `tables/table_0019.html` | `53f9d3df14d5754bbc5777d4bb44c5cc24e34ce59bb4ba5585fe598266a33d82` | Table 5.4.1.1-1 的 HTML 抽取。 |
+docs/L2/T10.7_NR_Polar_rate_recovery.md:63: [table_or_figure] 证据纠错记录：`tables/table_0013.csv` 是 LDPC lifting size set，不是 Polar sub-block interleaver pattern。本节使用 Word XML caption 附近核验，确认 Table 5.4.1.1-1 对应 `table_0019.csv/html`。
+docs/L2/T10.7_NR_Polar_rate_recovery.md:97: [table_or_figure] TS 38.212 Table 5.4.1.1-1 的 32 项 pattern 本地复现如下：
+docs/L2/T10.7_NR_Polar_rate_recovery.md:142: [formula_ref] 这里 $L_{\max}$ 是实现定义的正饱和值，表示“非常确信该位置为 0”。式 (3) 是接收端工程语义，不等同于协议公式逐字重写；它把协议的 bit selection 结果翻译成 decoder input LLR。
+docs/L2/T10.7_NR_Polar_rate_recovery.md:229: [table_or_figure] | sub-block pattern | 用 Table 5.4.1.1-1 生成置换和反置换。 | 反置换后回到原序列。 |
+docs/L2/T10.7_NR_Polar_rate_recovery.md:253: [table_or_figure] | sub-block deinterleaver | 使用 Table 5.4.1.1-1 反置换 32 个 sub-block。 | `subblk_in`, `subblk_out`, `pi_inv` |
+docs/L2/T10.7_NR_Polar_rate_recovery.md:262: [table_or_figure] | Table 5.4.1.1-1 完整性 | `table_0019.csv`。 | 32 个 $j,\Pi(j)$，覆盖 0-31。 |
+docs/L2/T10.7_NR_Polar_rate_recovery.md:273: [table_or_figure] | Table 5.4.1.1-1 用错表 | sub-block 位置整体错乱。 | 检查是否误用 LDPC `table_0013`。 |
+docs/L2/T10.7_NR_Polar_rate_recovery.md:285: [table_or_figure] 5. 本节确认 Table 5.4.1.1-1 对应哪个本地表文件？
+docs/L2/T10.7_NR_Polar_rate_recovery.md:302: [table_or_figure] | Polar coded bits 被分成 32 个 sub-block，pattern 来自 Table 5.4.1.1-1 | TS 38.212 §5.4.1.1 | `content.md:1023-1039`; `tables/table_0019.csv/html` |
+docs/L2/T10.8_NR_Polar_decoder_edge_cases.md:50: [formula_ref] | TS 38.212 §5.1 | `3GPP_Rel19/processed/TS_38.212_38212-j30/content.md:637-657` | CRC calculation 总入口；本节只使用 CRC pass/fail 语义，多项式细节由 T3.1 承接。 |
+docs/L2/T10.8_NR_Polar_decoder_edge_cases.md:52: [table_or_figure] | TS 38.212 §5.3.1/§5.3.1.2 | `content.md` 对应 Polar coding 和 Table 5.3.1.2-1；`tables/table_0012.csv/html` | information/frozen set 和 reliability sequence 来源；完整表复现由 T10.3 完成。 |
+docs/L2/T10.8_NR_Polar_decoder_edge_cases.md:179: [formula_ref] 4. 若 CRC fail 但 PM 正常，优先检查 mask，而不是先改 CRC 多项式。
+docs/L2/T10.8_NR_Polar_decoder_edge_cases.md:213: [formula_ref] 如果真实 payload 在 bit 5 位置需要 1，正确路径会在 bit 5 直接消失。末端看到的是所有候选 CRC fail，但根因不是 CRC 多项式，也不是 PM 位宽，而是 mask。最短定位证据是：
+docs/L2/T10.8_NR_Polar_decoder_edge_cases.md:345: [formula_ref] | 所有 CRC fail 就改 CRC 多项式 | 忽略 rate recovery 和 mask。 | 先查 descriptor、LLR 初始化、info/frozen set。 |
+docs/L2/T10.8_NR_Polar_decoder_edge_cases.md:381: [table_or_figure] | reliability sequence 和 mask 由 T10.3 承接 | TS 38.212 Table 5.3.1.2-1 | `tables/table_0012.csv/html` |
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:5: [formula_ref] 本节是对比课，不重新推导 T6、T8、T10 已经展开过的全部公式，而是把三类译码器放到同一个接收端视角下比较。先统一本篇缩写：Turbo 码（Turbo Code）是 LTE 数据传输主线使用的并行级联卷积码；低密度奇偶校验码（Low-Density Parity-Check Code, LDPC）是 NR 数据传输主线使用的稀疏校验矩阵码；极化码（Polar Code）是 NR 控制信息主线使用的短块编码方案；对数似然比（Log-Likelihood Ratio, LLR）是三类译码器共同消费的软信息；循环冗余校验（Cyclic Redundancy Check, CRC）用于检查候选比特是否满足错误检测规则；块错误率（Block Error Rate, BLER）用于链路性能验证；媒体接入控制层（Medium Access Control, MAC）是物理层译码结果上交或反馈的上层边界；传输块（Transport Block, TB）是最终交付给 MAC 的业务块；码块（Code Block, CB）是译码核心逐块处理的对象；混合自动重传请求（Hybrid Automatic Repeat Request, HARQ）负责重传和软信息保留；上行共享信道（Uplink Shared Channel, UL-SCH）、下行共享信道（Downlink Shared Channel, DL-SCH）、上行控制信息（Uplink Control Information, UCI）和下行控制信息（Downlink Control Information, DCI）用于标识协议使用位置；寄存器传输级（Register Transfer Level, RTL）和专用集成电路（Application-Specific Integrated Circuit, ASIC）用于描述硬件实现边界。
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:44: [formula_ref] 本节是对比讲义，详细公式推导分别承接 T6、T8、T10；本节的验收重点是能讲清差异背后的协议和工程原因。
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:50: [table_or_figure] TS 36.212 Rel-19 §5.1.3 说明不同传输信道和控制信息类型使用的编码方案由 Table 5.1.3-1 和 Table 5.1.3-2 给出。`content.md` 行 693-705 给出表格入口；行 719-723 进入 Turbo coding，并说明 Turbo encoder 是并行级联卷积码，包含两个 8-state constituent encoders 和一个内部交织器，码率为 1/3。
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:69: [table_or_figure] TS 36.212 Table 5.1.3-2 给出控制信息编码方案，本地 `tables/table_0008.csv` 抽取如下：
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:83: [table_or_figure] TS 38.212 Rel-19 §5.3 行 807-813 说明 Table 5.3-1 给出传输信道编码方案，Table 5.3-2 给出控制信息编码方案。§5.3.1 是 Polar coding 入口；§5.4.1 是 Polar rate matching；§5.4.2 是 LDPC rate matching；§6.3.1.2.1 和 §7.3.3 给出 UCI/DCI 调用 Polar 的控制信息分支。
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:85: [table_or_figure] 本地 `tables/table_0009.csv` 抽取 Table 5.3-1。原表存在合并单元格，下面按协议语义复现：
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:94: [table_or_figure] 本地 `tables/table_0010.csv` 抽取 Table 5.3-2，复现如下：
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:124: [formula_ref] 一个变量节点代表一个编码比特，一个校验节点代表一条偶校验方程。变量节点把来自信道和其他校验节点的证据汇总后发给某个校验节点；校验节点根据“这条方程必须偶校验”的约束，反过来给每个变量节点发送外部约束消息。
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:161: [formula_ref] | LDPC Tanner graph | 稀疏偶校验方程约束。 | VN/CN 消息传递，syndrome 检查。 | 高并行、长块吞吐友好、QC 结构硬件友好。 | 消息存储、bank conflict、layer 调度复杂。 |
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:203: [formula_ref] 式 (3) 回答的问题是：某条校验方程根据其他变量的证据，对目标变量给出什么约束。它保留 SPA 校验节点的符号乘积和最小幅度结构，硬件上可做 min1/min2 优化。
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:246: [formula_ref] 这就是三类算法的根本差异：Turbo 的核心对象是状态路径和外信息，LDPC 的核心对象是稀疏校验方程和边消息，Polar 的核心对象是路径列表和 frozen/CRC 约束。
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:409: [formula_ref] 4. 优先检查 PM 定点位宽、饱和计数、tie-break 规则、path id 稳定性、sorter 比较方向、CRC state 复制和 frozen mask；不要先改信道 LLR 或 CRC 多项式。
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:415: [table_or_figure] | LTE TrCH 编码方案表给出 Turbo coding 用于 UL-SCH、DL-SCH、PCH、MCH、SL-SCH、SL-DCH 等，BCH/SL-BCH 为 tail biting convolutional coding。 | TS 36.212 Rel-19 `36212-j30` §5.1.3, Table 5.1.3-1。 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md:693-705`; `tables/table_0007.csv/html`。 |
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:417: [table_or_figure] | LTE 控制信息不是本节 Polar 对比主线。 | TS 36.212 Table 5.1.3-2。 | `tables/table_0008.csv/html`。 |
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:418: [table_or_figure] | NR TrCH 编码方案表给出 UL-SCH/DL-SCH/PCH 使用 LDPC，BCH 使用 Polar code。 | TS 38.212 Rel-19 `38212-j30` §5.3, Table 5.3-1。 | `3GPP_Rel19/processed/TS_38.212_38212-j30/content.md:807-813`; `tables/table_0009.csv/html`。 |
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:419: [table_or_figure] | NR 控制信息表给出 DCI 使用 Polar code，UCI 可使用 block code 或 Polar code。 | TS 38.212 §5.3, Table 5.3-2。 | `content.md:807-813`; `tables/table_0010.csv/html`。 |
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:429: [table_or_figure] | 表格复现 | 正文复现 TS 36.212 Table 5.1.3-1/2 和 TS 38.212 Table 5.3-1/2 的本节使用子集，并说明 CSV 合并单元格抽取限制。 |
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:436: [paper_citation] 1. [Arikan, 2009] Erdal Arikan, “Channel Polarization: A Method for Constructing Capacity-Achieving Codes for Symmetric Binary-Input Memoryless Channels,” *IEEE Transactions on Information Theory*, 2009.
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:437: [paper_citation] 2. [Berrou et al., 1993] Claude Berrou, Alain Glavieux, and Punya Thitimajshima, “Near Shannon Limit Error-Correcting Coding and Decoding: Turbo-Codes,” *Proceedings of ICC*, 1993.
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:438: [paper_citation] 3. [Gallager, 1962] Robert G. Gallager, “Low-Density Parity-Check Codes,” *IRE Transactions on Information Theory*, 1962.
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:439: [table_or_figure] 4. [3GPP, 2026] 3GPP TS 36.212 Rel-19 `36212-j30`, “Evolved Universal Terrestrial Radio Access (E-UTRA); Multiplexing and channel coding,” §5.1.3, Table 5.1.3-1, Table 5.1.3-2.
+docs/L2/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md:440: [table_or_figure] 5. [3GPP, 2026] 3GPP TS 38.212 Rel-19 `38212-j30`, “NR; Multiplexing and channel coding,” §5.3, §5.3.1, §5.4.1, §5.4.2, §6.3.1, §7.3, Table 5.3-1, Table 5.3-2.
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:43: [formula_ref] | 定点 repeated LLR 累加和饱和 | “定点化策略” | 给饱和公式和计数器。 |
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:56: [table_or_figure] | TS 36.212 §5.1.4.1.1 | `content.md:791-815`; `tables/table_0010.csv/html` | LTE Turbo sub-block interleaver 和 Table 5.1.4-1。 |
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:69: [unverified] - TS 38.212 Table 5.4.2.1-2 的 `k0` 表在当前 `table_0021.csv/html` 抽取件中数值为空，说明公式/表格抽取不完整。本节只使用“`k0` 由 RV 和 LDPC base graph 对应表确定”这一已在 `content.md:1289-1309` 看到的协议事实，不凭记忆补表值。
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:114: [table_or_figure] TS 36.212 Table 5.1.4-1 的 32 列置换表复现如下，本节只用于提醒 LTE Turbo 有自己的 sub-block interleaver，不和 Polar pattern 混用：
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:139: [unverified] LDPC 的 `k0` 表值本节不复现。当前本地 `table_0021.csv/html` 只保留了表头和 RV 行，数值为空；因此正文不使用具体 `k0` 数字。工程实现若需要 bit-exact，应把 `k0` 表作为配置 ROM 或常量表，并用协议重建结果生成。
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:153: [table_or_figure] TS 38.212 Table 5.4.1.1-1 的 Polar sub-block interleaver pattern 复现如下：
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:166: [table_or_figure] 这里 $j$ 是原 sub-block index，$\Pi(j)$ 是 interleaver pattern 给出的目标 sub-block index。接收端 deinterleaving 使用反置换，不使用 LTE Turbo 的 Table 5.1.4-1。
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:183: [formula_ref] | $N_{cb}$ | TS 36.212 也有 soft buffer/code block 限制相关 `Ncb`。 | LDPC circular buffer length。 | 不作为 Polar 主坐标。 | 名字相似但协议公式不同，不能直接共享。 |
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:186: [table_or_figure] | interleaver | 三路 sub-block interleaver，Table 5.1.4-1。 | bit interleaving 与 $Q_m$。 | sub-block pattern + coded-bit interleaving。 | 不共享表。 |
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:206: [formula_ref] ## 公式化的反向映射
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:292: [table_or_figure] - LTE Turbo：地址序列属于 circular buffer 域，恢复后还要拆成三路流，再按 Table 5.1.4-1 反置换。`short` 不应解释为 Polar shortening；如果它是 `<NULL>`，就应删除或跳过。
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:397: [formula_ref] | address generator | modulo counter、RV field、trace FIFO。 | `K_w`、`Ncb`、`N` 的协议公式，RV/k0 表，skip 规则。 |
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:401: [table_or_figure] 共享抽象的边界必须非常清楚。可以共享“地址生成器会产生写地址和事件类型”这个接口，但不能让同一个地址生成 ROM 同时服务 LTE Turbo Table 5.1.4-1、NR LDPC `k0` 表和 NR Polar Table 5.4.1.1-1。协议规则不同，表的方向也不同，硬复用会把错误隐藏到 CRC fail 之后才暴露。
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:454: [table_or_figure] 5. 可共享 LLR ingress、trace FIFO、mask RAM 物理形态、soft combine read-modify-write 和饱和加法器；不能共享 LTE Table 5.1.4-1、NR LDPC `k0`/bit interleaver、NR Polar Table 5.4.1.1-1、puncturing/shortening/`<NULL>` 的语义规则。
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:461: [table_or_figure] | LTE Turbo sub-block interleaver 使用 32 列 inter-column permutation pattern。 | TS 36.212 §5.1.4.1.1, Table 5.1.4-1。 | `content.md:791-815`; `tables/table_0010.csv/html`。 |
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:464: [table_or_figure] | NR Polar sub-block interleaver pattern 来自 Table 5.4.1.1-1。 | TS 38.212 §5.4.1.1, Table 5.4.1.1-1。 | `content.md:1023-1039`; `tables/table_0019.csv/html`。 |
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:477: [table_or_figure] | 表格复现 | 正文复现 TS 36.212 Table 5.1.4-1 的 32 列置换表和 TS 38.212 Table 5.4.1.1-1 的 Polar sub-block pattern。TS 38.212 Table 5.4.2.1-2 的 `k0` 数值当前抽取为空，已明确不使用具体值并记录关闭条件。 |
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:480: [unverified] | 证据边界 | 本节是速率匹配对比，不重建 NR LDPC `k0` 表具体值、不展开完整 LDPC BG/Zc 表、不重写 T7/T9/T10 的所有 rate recovery 细节；这些由对应专题章节和后续 bit-exact 表重建任务承接。 |
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:484: [table_or_figure] 1. [3GPP, 2026] 3GPP TS 36.212 Rel-19 `36212-j30`, “Evolved Universal Terrestrial Radio Access (E-UTRA); Multiplexing and channel coding,” §5.1.4.1, §5.1.4.1.1, §5.1.4.1.2, Table 5.1.4-1.
+docs/L2/T11.2_LTE_NR_rate_matching_comparison.md:485: [table_or_figure] 2. [3GPP, 2026] 3GPP TS 38.212 Rel-19 `38212-j30`, “NR; Multiplexing and channel coding,” §5.4.1, §5.4.1.1, §5.4.1.2, §5.4.1.3, §5.4.2, §5.4.2.1, §5.4.2.2, Table 5.4.1.1-1, Table 5.4.2.1-1, Table 5.4.2.1-2.
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:43: [formula_ref] | 讨论定点饱和和 saturation counter | “定点化策略” | 给饱和公式、正负计数器、禁止补码回绕。 |
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:57: [formula_ref] | TS 36.213 §8.6/§8.6.1 | `content.md:1227-1395` | LTE UL-SCH modulation order、RV 和 TBS 字段来源；不替代 TS 36.212 的 rate matching 地址公式。 |
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:66: [unverified] - 本节不复现 TS 38.212 Table 5.4.2.1-2 的具体 `k0` 数值。当前本地抽取表存在公式/数值空洞；T9.3 已给出人工核验后的公式形式。本节只使用 `k0` 作为“RV 到 circular buffer 起点”的抽象字段，例子使用 toy 地址。
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:67: [unverified] - 本节不展开 TS 36.213/TS 38.214 的全部调度、HARQ-ACK timing、RRC 配置树和 DCI 格式细节。只保留会进入译码 descriptor 或 soft buffer 状态机的字段。
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:110: [unverified] 这就是“调度细节只保留影响译码器状态的部分”的含义。符号、时隙、搜索空间、HARQ-ACK 资源等如果不改变上述状态，在本节只作为背景，不展开成调度教程。
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:153: [table_or_figure] | RV 字段 | `rvidx` 进入 TS 36.212 Turbo bit selection。 | `rvidx` 进入 TS 38.212 LDPC Table 5.4.2.1-2 的 `k0` 起点选择。 |
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:181: [formula_ref] CBG 不改变 LDPC 校验矩阵，也不改变单个 CB 的 Min-Sum 或 BP 译码公式。它改变的是 HARQ 重传和 soft buffer 更新控制。TS 38.214 对 PDSCH/PUSCH CBG 都说明：CBGTI 的 bit 从最高有效位开始映射到 CBG#0，`0` 表示对应 CBG 不传输，`1` 表示传输。PDSCH 还可能有 CBGFI：`0` 表示早前同 CBG 实例可能损坏，不能简单合并；`1` 表示可合并。
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:205: [formula_ref] | `k0` | 可由 LTE 公式/窗口生成或记录 | 由 RV/BG/`Ncb`/`Zc` 表生成 | 调试 RV mismatch 的最小证据。 |
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:368: [formula_ref] 合并公式是：
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:491: [unverified] 5. 本节不展开搜索空间、PUCCH 资源、完整 HARQ-ACK timing 等不会直接改变 soft buffer 的细节；保留 `ndi`、`rvidx`、CBGTI、CBGFI、TBS/CB 分段、CRC 结果等会决定清空、写回、合并、保持或释放的字段。
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:497: [formula_ref] | LTE Turbo rate matching 使用 circular buffer、`Ncb`、`E`、`rvidx` | TS 36.212 §5.1.4.1.2 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md:817-965` | 已核验文本；公式抽取有空白，T7.3 已补主线公式证据。 |
+docs/L2/T11.3_HARQ_soft_buffer_comparison.md:517: [table_or_figure] | 审计命令 | `python3 tools/audit_lesson_terms.py docs/L2/T11.3_HARQ_soft_buffer_comparison.md` -> `LESSON_TERM_AUDIT_OK`；`python3 tools/audit_markdown_headings.py docs/L2/T11.3_HARQ_soft_buffer_comparison.md` -> `MARKDOWN_HEADING_AUDIT_OK`；`python3 tools/audit_lesson_depth.py --strict docs/L2/T11.3_HARQ_soft_buffer_comparison.md` -> `LESSON_DEPTH_AUDIT_OK`；`python3 tools/audit_latex_render.py docs/L2/T11.3_HARQ_soft_buffer_comparison.md` -> `LATEX_RENDER_AUDIT_OK formulas=13`；`python3 tools/audit_reference_rebuilds.py docs/L2/T11.3_HARQ_soft_buffer_comparison.md` -> `REFERENCE_REBUILD_AUDIT_CANDIDATES`，候选项已在正文边界中说明：本节不使用 TS 38.212 Table 5.4.2.1-2 具体 `k0` 表值。 |
+docs/L2/T11.4_decoder_hardware_tradeoff_comparison.md:16: [formula_ref] 如果只记一件事：**LDPC 高吞吐友好不是因为“公式更少”，而是因为稀疏图和 QC 结构能映射成宽并行；Polar SCL 延迟敏感不是因为块长大，而是因为路径分裂后的排序和状态复制很难在短控制时限内隐藏。**
+docs/L2/T11.4_decoder_hardware_tradeoff_comparison.md:55: [table_or_figure] | TS 38.212 §5.3.2 | `content.md:947-989` | LDPC 编码、BG1/BG2、QC 提升和基图表入口，说明 LDPC 硬件并行结构来源。 |
+docs/L2/T11.4_decoder_hardware_tradeoff_comparison.md:62: [table_or_figure] - 本节使用 T11.1 已复现的 TS 36.212 Table 5.1.3-1/2 和 TS 38.212 Table 5.3-1/2 结论，不重复复现协议表。
+docs/L2/T11.4_decoder_hardware_tradeoff_comparison.md:83: [formula_ref] 这张表比“谁的公式复杂”更重要。硬件并行度首先由数据依赖决定，其次才由乘加、比较器、查表或 SRAM 端口数量决定。Turbo 的 trellis 递推让 SISO 核心内部存在前后向时间依赖；LDPC 的稀疏图把大问题拆成许多局部消息更新；Polar SCL 则把短块可靠性问题变成路径搜索和状态管理问题。
+docs/L2/T11.4_decoder_hardware_tradeoff_comparison.md:172: [formula_ref] | 校验 | CRC wrapper、CRC 多项式单元的部分封装、结果上报接口。 | CRC 调用时机和候选选择策略完全共享。 |
+docs/L2/T11.4_decoder_hardware_tradeoff_comparison.md:390: [table_or_figure] | NR TrCH 和控制信息编码方案由 Table 5.3-1/5.3-2 给出 | TS 38.212 §5.3 | `3GPP_Rel19/processed/TS_38.212_38212-j30/content.md:807-813` | 已核验文本；T11.1 已复现相关使用表。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:46: [table_or_figure] 本节是协议映射和接收端系统设计课。它复用 T11.1 已复现的 TS 36.212 Table 5.1.3-1/2 和 TS 38.212 Table 5.3-1/2，不重复完整重建大表；本节新增的是接收端选择逻辑、descriptor 字段、边界案例和验证方法。
+docs/L2/T11.5_decoder_selection_by_channel_type.md:53: [table_or_figure] | TS 36.212 Table 5.1.3-1 | `3GPP_Rel19/processed/TS_36.212_36212-j30/tables/table_0007.csv/html` | LTE TrCH 到 Turbo/TBCC 的映射；T11.1 已复现。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:54: [table_or_figure] | TS 36.212 Table 5.1.3-2 | `tables/table_0008.csv/html` | LTE DCI/CFI/HI/UCI/SCI 控制信息编码方案；T11.1 已复现。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:58: [table_or_figure] | TS 38.212 Table 5.3-1 | `3GPP_Rel19/processed/TS_38.212_38212-j30/tables/table_0009.csv/html` | NR UL-SCH/DL-SCH/PCH 到 LDPC，BCH 到 Polar；T11.1 已复现。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:59: [table_or_figure] | TS 38.212 Table 5.3-2 | `tables/table_0010.csv/html` | NR DCI 到 Polar，UCI 到 Block code/Polar；T11.1 已复现。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:66: [unverified] - 本节讨论译码器家族选择，不展开调度器、搜索空间、PDCCH/PUCCH/PUSCH 资源映射或 TS 38.213/38.214 的完整控制信道流程。
+docs/L2/T11.5_decoder_selection_by_channel_type.md:69: [unverified] - NR BCH 在 TS 38.212 Table 5.3-1 中使用 Polar，但本路线图重点是 LTE/NR 数据和控制译码，因此仅在速查表中列边界，不展开 PBCH 课程。
+docs/L2/T11.5_decoder_selection_by_channel_type.md:100: [unverified] | NR | BCH | Polar code | Polar | PBCH 边界，本路线图不展开。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:108: [table_or_figure] LTE 的 DL-SCH 和 UL-SCH 都属于数据传输主线。TS 36.212 Table 5.1.3-1 给出 UL-SCH、DL-SCH、PCH、MCH、SL-SCH、SL-DCH 使用 Turbo coding，码率 1/3。TS 36.212 §5.2.2.3 进一步说明 UL-SCH 的每个 code block individually turbo encoded according to §5.1.3.2。
+docs/L2/T11.5_decoder_selection_by_channel_type.md:120: [table_or_figure] LTE 的 DCI 和 UCI 不应因为也来自物理层控制信道就被送进 Turbo 数据 core。TS 36.212 Table 5.1.3-2 显示 LTE DCI 使用 tail biting convolutional coding，CFI 使用 block code，HI 使用 repetition code，UCI 使用 block code 或 tail biting convolutional coding。也就是说 LTE 控制信息需要 LTE control decoder 分支，而不是 NR Polar 分支。
+docs/L2/T11.5_decoder_selection_by_channel_type.md:124: [table_or_figure] NR 的 DL-SCH、UL-SCH 和 PCH 在 TS 38.212 Table 5.3-1 中映射到 LDPC。TS 38.212 §6.2.4 说明 UL-SCH 的 code blocks individually LDPC encoded according to §5.3.2；DL-SCH 对应 §7.2 链路也使用 LDPC 处理。
+docs/L2/T11.5_decoder_selection_by_channel_type.md:142: [table_or_figure] DCI 在 TS 38.212 Table 5.3-2 中映射为 Polar code。TS 38.212 §7.3.2 给 DCI CRC attachment，§7.3.3 说明 DCI information bits are encoded via Polar coding according to §5.3.1。接收端对 DCI 的关键不是“Polar 解出一个 bit 串”就结束，而是要在 PDCCH 盲检背景下检查 CRC/RNTI。RNTI 背景不同，同一组 payload/CRC bit 的通过条件就可能不同。
+docs/L2/T11.5_decoder_selection_by_channel_type.md:144: [table_or_figure] UCI 在 TS 38.212 Table 5.3-2 中映射为 Block code / Polar code。TS 38.212 §6.3.1 覆盖 UCI on PUCCH，§6.3.2 覆盖 UCI on PUSCH。UCI 的关键边界是：同一个 PUSCH 可能同时携带 UL-SCH 数据和 UCI 控制信息，但这不意味着整条 PUSCH 只有一个译码器。UL-SCH 数据仍按 LDPC 数据链路处理，UCI 控制比特按 UCI 的 block/Polar 分支处理，然后在资源映射和解复用层面汇合。
+docs/L2/T11.5_decoder_selection_by_channel_type.md:259: [table_or_figure] | A | `rat=LTE, channel_type=DL-SCH, payload_type=data, rv=2, harq_id=5` | LTE + 数据 TrCH，查 TS 36.212 Table 5.1.3-1。 | `decoder_type=TURBO`，要求 LTE Turbo rate recovery 和 HARQ soft buffer。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:260: [table_or_figure] | B | `rat=NR, channel_type=UL-SCH, payload_type=data, BG=2, Zc=64, rv=1` | NR + 数据 TrCH，查 TS 38.212 Table 5.3-1。 | `decoder_type=LDPC`，要求 BG/Zc/Ncb/k0/HARQ context。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:261: [table_or_figure] | C | `rat=NR, payload_type=DCI, dci_format=1_1, rnti_type=C-RNTI` | NR + DCI，查 TS 38.212 Table 5.3-2 和 §7.3.2/§7.3.3。 | `decoder_type=POLAR`，要求 DCI payload size、CRC/RNTI 和 search-space 背景。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:314: [table_or_figure] | 图像和文档证据 | T11.5 图表、协议表复用、审计命令。 | 图片无裁切、无遮挡、文字居中；审计脚本通过。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:358: [table_or_figure] | LTE TrCH 编码方案由 Table 5.1.3-1 给出，DL-SCH/UL-SCH 使用 Turbo | TS 36.212 §5.1.3, Table 5.1.3-1 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md:683-705`; `tables/table_0007.csv/html` | 已核验；T11.1 已复现表格语义，本节复用。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:360: [unverified] | LTE DCI 是 CRC/RNTI + TBCC + rate matching 分支 | TS 36.212 §5.3.3.2-§5.3.3.4 | `content.md:5551-5581` | 已核验文本；本节不展开 LTE 控制译码公式。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:361: [table_or_figure] | NR TrCH 编码方案由 Table 5.3-1 给出，DL-SCH/UL-SCH/PCH 使用 LDPC，BCH 使用 Polar | TS 38.212 §5.3, Table 5.3-1 | `3GPP_Rel19/processed/TS_38.212_38212-j30/content.md:807-813`; `tables/table_0009.csv/html` | 已核验；T11.1 已复现表格语义，本节复用。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:362: [table_or_figure] | NR 控制信息编码方案由 Table 5.3-2 给出，DCI 使用 Polar，UCI 使用 Block code / Polar | TS 38.212 §5.3, Table 5.3-2 | `content.md:807-813`; `tables/table_0010.csv/html` | 已核验；T11.1 已复现表格语义，本节复用。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:373: [table_or_figure] | 协议表复用 | TS 36.212 Table 5.1.3-1/2 已由 T11.1 复现；TS 38.212 Table 5.3-1/2 已由 T11.1 复现；本节复用并补 selector 逻辑。 |
+docs/L2/T11.5_decoder_selection_by_channel_type.md:380: [unverified] | 审计结果 | `LESSON_TERM_AUDIT_OK`；`MARKDOWN_HEADING_AUDIT_OK`；`LESSON_DEPTH_AUDIT_OK`；`LATEX_RENDER_AUDIT_OK formulas=0`；引用重建审计输出 `REFERENCE_REBUILD_AUDIT_CANDIDATES`，候选项已在正文标注为复用 T11.1 已复现协议表、仅列边界不展开 PBCH/调度器，或本节新增自绘 selector 图。 |
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:30: [unverified] 本节围绕 TS 36.212 Rel-19 `36212-j30` 精读，但它只讲接收侧链路总览，不展开 Log-MAP 算法内部公式。协议定位如下：
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:36: [table_or_figure] | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.1，Figure 5.1.3-2 | 同上，`sections.jsonl` paragraph 403；Word XML 邻近段落和 `media/image79.wmf` 经关系表定位 | Turbo 编码器三路输出是接收端三路软输入的来源。 |
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:37: [table_or_figure] | TS 36.212 Rel-19 `36212-j30` §5.1.4.1，Figure 5.1.4-1 | 同上，`content.md` lines 777-789 | Turbo 编码传输信道的速率匹配流程：三路流子块交织、比特收集、循环缓存、选择发送。 |
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:38: [table_or_figure] | TS 36.212 Rel-19 `36212-j30` §5.1.4.1.1，Table 5.1.4-1 | `tables/table_0010.csv` 和 `tables/table_0010.html` | 子块交织列置换和 `<NULL>` 来源；本节只说明它在逆流程中的位置。 |
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:52: [formula_ref] 这个公式回答的问题是“译码链路最早看到的数据是什么”。其中 $E$ 是本次传输实际承载的编码比特数，$L_j$ 是第 $j$ 个接收编码比特的软可靠度。$E$ 不是原始 TB 长度，也不是某个 CB 的 Turbo 母码长度，因为速率匹配可能打孔、重复和选择不同冗余版本。
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:54: [table_or_figure] 接收端逆流程可以用以下图表示：
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:144: [table_or_figure] | $K_r$ | 当前 CB 编码输入长度 | TS 36.212 §5.1.2 分段结果和 Table 5.1.3-3 块长集合。 |
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:201: [table_or_figure] 本仓库当前没有要求新增该脚本，所以本节只给出计划。真正的完整链路仿真应在后续 L3 任务中实现，并与 TS 36.212 的 Table 5.1.3-3、Table 5.1.4-1 和速率匹配规则逐项对齐。
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:222: [formula_ref] 式 (6) 是工程实现公式，不是 TS 36.212 的强制公式。它回答“同一编码位置多次收到软证据时怎样合成一个软输入”。`sat` 表示限制到定点范围内，防止溢出。
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:290: [table_or_figure] | 图表核验 | Figure 5.1.3-2 通过 `sections.jsonl` paragraph 403、Word XML 邻近段落和 relationship `rId87 -> media/image79.wmf` 定位；T6.3 已用 `tools/figures/render_lte_turbo_encoder_structure.py` 重建为 `docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png`，本节使用链路总览 Mermaid 图并引用该重建资产作为编码器结构证据。 |
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:291: [table_or_figure] | 表格核验 | Table 5.1.4-1 通过 `tables/table_0010.csv/html` 定位；本节未复现完整表，只使用其列置换和 NULL 背景。 |
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:298: [table_or_figure] | Turbo 编码用于上行共享信道（Uplink Shared Channel, UL-SCH）、下行共享信道（Downlink Shared Channel, DL-SCH）、PCH、MCH、SL-SCH、SL-DCH 等传输信道，编码率为 1/3 | §5.1.3，Table 5.1.3-1 | `tables/table_0007.csv`，`content.md` lines 693-705 |
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:300: [table_or_figure] | Turbo 编码器是两个 8 状态组成编码器和一个内部交织器构成的并行级联结构 | §5.1.3.2.1，Figure 5.1.3-2 | `sections.jsonl` paragraph 403，`media/image79.wmf`；T6.3 本地重建图 `docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png` |
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:301: [table_or_figure] | Turbo rate matching 包含三路流交织、比特收集和循环缓存 | §5.1.4.1，Figure 5.1.4-1 | `content.md` lines 777-789 |
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:302: [table_or_figure] | 子块交织使用 32 列置换表 | §5.1.4.1.1，Table 5.1.4-1 | `tables/table_0010.csv`，`tables/table_0010.html` |
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:308: [paper_citation] - [Bahl, 1974] L. R. Bahl, J. Cocke, F. Jelinek, and J. Raviv, "Optimal decoding of linear codes for minimizing symbol error rate", IEEE Transactions on Information Theory, 1974.
+docs/L2/T6.1_LTE_Turbo_decoder_chain_overview.md:309: [paper_citation] - [Berrou, 1993] C. Berrou, A. Glavieux, and P. Thitimajshima, "Near Shannon limit error-correcting coding and decoding: Turbo-codes", IEEE International Conference on Communications, 1993.
+docs/L2/T6.2_RSC_code_foundation.md:5: [formula_ref] 本节讲递归系统卷积码（Recursive Systematic Convolutional code, RSC）。RSC 是理解 LTE Turbo 码（Turbo Code）的最小结构单元：Turbo 编码器不是一个神秘的大公式，而是两个 RSC 组成编码器、一个内部交织器和网格终止规则组合起来的并行级联卷积码。
+docs/L2/T6.2_RSC_code_foundation.md:37: [table_or_figure] | TS 36.212 Rel-19 `36212-j30` Figure 5.1.3-2 | Word XML 邻近段落和 relationship `rId87 -> media/image79.wmf` | 作为 LTE 组成编码器结构的协议图证据；本节用文字和 Mermaid 教学图重建概念。 |
+docs/L2/T6.2_RSC_code_foundation.md:169: [formula_ref] ## 生成多项式的直觉
+docs/L2/T6.2_RSC_code_foundation.md:171: [formula_ref] 卷积码常用生成多项式描述抽头。对零基础读者，可以先把多项式看成“哪些寄存器参与异或”的清单。若写成：
+docs/L2/T6.2_RSC_code_foundation.md:180: [formula_ref] RSC 与普通前馈卷积码的差别是还有反馈多项式。可以抽象为：
+docs/L2/T6.2_RSC_code_foundation.md:187: [formula_ref] 式 (10) 回答“RSC 的系统路和校验路怎样同时表示”。方括号里的 1 表示系统输出原样保留输入；分式表示校验路由前馈多项式 $g_p(D)$ 和反馈多项式 $g_f(D)$ 共同决定。分式不是普通实数除法，而是二进制多项式意义下的递归滤波表示。
+docs/L2/T6.2_RSC_code_foundation.md:211: [table_or_figure] | 人工定义的反馈和校验抽头 | Figure 5.1.3-2 中规定的反馈和校验连接 |
+docs/L2/T6.2_RSC_code_foundation.md:353: [table_or_figure] | 图证据 | Figure 5.1.3-2 通过 Word XML 邻近段落和 relationship `rId87 -> media/image79.wmf` 定位；T6.3 已用 `tools/figures/render_lte_turbo_encoder_structure.py` 重建为 `docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png`，本节保留玩具 RSC 图用于理论入门。 |
+docs/L2/T6.2_RSC_code_foundation.md:364: [table_or_figure] | Turbo 编码器为 PCCC，含两个 8 状态组成编码器和内部交织器 | §5.1.3.2.1，Figure 5.1.3-2 | `sections.jsonl` paragraph 403，`media/image79.wmf`；T6.3 本地重建图 `docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png` |
+docs/L2/T6.2_RSC_code_foundation.md:370: [paper_citation] - [Bahl, 1974] L. R. Bahl, J. Cocke, F. Jelinek, and J. Raviv, "Optimal decoding of linear codes for minimizing symbol error rate", IEEE Transactions on Information Theory, 1974.
+docs/L2/T6.2_RSC_code_foundation.md:371: [paper_citation] - [Berrou, 1993] C. Berrou, A. Glavieux, and P. Thitimajshima, "Near Shannon limit error-correcting coding and decoding: Turbo-codes", IEEE International Conference on Communications, 1993.
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:5: [table_or_figure] 本节讲 LTE Turbo 码（Turbo Code）编码器的协议结构和网格终止。上一节已经用玩具递归系统卷积码（Recursive Systematic Convolutional code, RSC）解释了状态、寄存器和校验输出；本节把这些概念放回 TS 36.212 Rel-19 `36212-j30` 的 Figure 5.1.3-2 和 §5.1.3.2.2。
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:37: [table_or_figure] | TS 36.212 Rel-19 `36212-j30` Figure 5.1.3-2 | Word XML 邻近段落和 relationship `rId87 -> media/image79.wmf` | 协议结构图证据；本节使用 Mermaid 重建教学结构。 |
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:39: [table_or_figure] | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.3，Table 5.1.3-3 | `tables/table_0009.csv/html` | 内部交织器块长参数背景，详细讲解放在 T6.4。 |
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:47: [formula_ref] 从零基础角度看，终止解决的是“故事结尾是否确定”的问题。没有结尾约束时，最后几步路径会出现多个解释；有结尾约束时，不满足终态的解释会被压低。这个定义直接带来工程后果：Turbo 译码器的后向递推、尾比特 LLR、解速率匹配母码长度和 CRC 早停都必须共享同一个终止边界。推导上，$D=K+4$ 不是任意补长，而是协议把终止输出复用到三路母码流后的每路长度；实现若跳过这一步，后续公式即使写对也会在数组边界处失效。
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:66: [table_or_figure] 这张图是教学重建。协议 Figure 5.1.3-2 还画出了终止时开关位置，说明普通信息编码阶段和终止阶段的连接不同。
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:68: [table_or_figure] 图 T6.3-1 是对 TS 36.212 Figure 5.1.3-2 的本地图片化重建。它不是从 WMF 文件直接截图，而是依据协议文本和 `media/image79.wmf` 的结构关系重画：上半部分展示信息编码阶段的三路母码流，下半部分展示 trellis termination 阶段的虚线尾比特路径。
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:70: [table_or_figure] ![TS 36.212 Figure 5.1.3-2 重建图](assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png)
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:72: [table_or_figure] 图 T6.3-1：由 `tools/figures/render_lte_turbo_encoder_structure.py` 生成的 TS 36.212 Figure 5.1.3-2 本地重建图。读图时先看实线路径：CB 输入一路直接形成系统路 $d^{(0)}$，一路进入第一 8 状态组成编码器形成 $d^{(1)}$，一路经 Turbo 内部交织器后进入第二 8 状态组成编码器形成 $d^{(2)}$。再看虚线路径：所有信息比特编码结束后，从组成编码器反馈端取尾比特；前 3 个尾比特终止第一组成编码器，后 3 个尾比特终止第二组成编码器。
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:115: [formula_ref] 这个公式回答“每个编码输出流有多长”。$K$ 是 Turbo 编码器输入比特数，也就是当前 CB 的编码输入长度；$D$ 是每一路输出流的长度。$+4$ 来自终止相关输出在三路流中的排列结果，而不是表示每个组成编码器只有 4 个状态。
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:157: [table_or_figure] 为什么是 3 个尾比特？因为 LTE 组成编码器是 8 状态，含 3 个寄存器。每个终止输入可以控制一次状态更新，3 次足以把 3 个记忆单元清到已知状态。这个解释是编码器状态机直觉；具体尾比特如何从反馈取出由协议 Figure 5.1.3-2 的开关结构定义。
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:245: [table_or_figure] | 输入 | 若干小 $K$ 教学块和一个协议合法 $K$，例如 Table 5.1.3-3 中的 $K=40$。 |
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:255: [table_or_figure] 本次阶段 4 已新增 `tools/figures/render_lte_turbo_encoder_structure.py`，把协议 Figure 5.1.3-2 的主体结构和终止虚线路径重建为图片。后续若实现 bit-exact Turbo encoder，还应进一步把开关位置转成可执行状态转移，并明确每个尾部输出位进入 $d^{(0)}$、$d^{(1)}$、$d^{(2)}$ 的索引。
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:354: [table_or_figure] | 图证据 | Figure 5.1.3-2 通过 Word XML 邻近段落和 relationship `rId87 -> media/image79.wmf` 定位；已用 `tools/figures/render_lte_turbo_encoder_structure.py` 重建为 `docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png`，并目检无文字遮挡。 |
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:355: [table_or_figure] | 表格证据 | Table 5.1.3-3 通过 `tables/table_0009.csv/html` 定位，用于合法 $K$ 背景。 |
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:363: [table_or_figure] | Turbo 编码器为 PCCC，含两个 8 状态组成编码器和一个内部交织器 | §5.1.3.2.1，Figure 5.1.3-2 | `sections.jsonl` paragraph 403，`content.md` lines 721-745，`media/image79.wmf`；本地重建图 `docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png` |
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:371: [paper_citation] - [Bahl, 1974] L. R. Bahl, J. Cocke, F. Jelinek, and J. Raviv, "Optimal decoding of linear codes for minimizing symbol error rate", IEEE Transactions on Information Theory, 1974.
+docs/L2/T6.3_LTE_Turbo_encoder_trellis_termination.md:372: [paper_citation] - [Berrou, 1993] C. Berrou, A. Glavieux, and P. Thitimajshima, "Near Shannon limit error-correcting coding and decoding: Turbo-codes", IEEE International Conference on Communications, 1993.
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:10: [formula_ref] - 读懂 TS 36.212 Rel-19 `36212-j30` §5.1.3.2.3 中的地址公式。
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:11: [table_or_figure] - 解释 Table 5.1.3-3 中 $i$、$K$、$f_1$、$f_2$ 的含义。
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:12: [formula_ref] - 手算一个小型二次置换多项式交织器地址表，并写出解交织地址。
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:15: [formula_ref] 如果只记住一句话：LTE Turbo 内部交织器由块长 $K$ 选择一组 $f_1,f_2$，再用二次公式为每个输入索引生成输出位置；接收端必须生成同一张地址映射和反向映射，否则两个组成译码器交换的外信息会对错比特。
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:35: [table_or_figure] | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.1，Figure 5.1.3-2 | `sections.jsonl` paragraph 403，relationship `rId87 -> media/image79.wmf`；T6.3 重建图 `docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png` | 说明内部交织器位于两个 8 状态组成编码器之间。 |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:36: [formula_ref] | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.3 | `content.md` lines 761-773，`sections.jsonl` paragraph 428 | 内部交织器输入输出符号和地址公式来源。 |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:37: [table_or_figure] | TS 36.212 Rel-19 `36212-j30` Table 5.1.3-3 | `tables/table_0009.csv` 和 `tables/table_0009.html` | 完整 $i/K/f_1/f_2$ 参数表的本地抽取证据。 |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:38: [table_or_figure] | T3.3 协议表重建图 | `docs/L1/assets/T3.3_TS36.212_Table_5.1.3-3.png` | 这是 Table 5.1.3-3 的协议表完整重建图，本节可引用以辅助阅读。 |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:40: [formula_ref] 边界声明：TS 36.212 规定内部交织器公式和参数表；接收端如何缓存地址、是否在线计算、是否分 bank、是否预生成查找表，是工程实现选择。只要生成的置换和反置换与协议一致，实现方式可以不同。
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:48: [table_or_figure] 从推导角度看，Table 5.1.3-3 不是一张普通配置表，而是地址公式的参数空间。每个 $K$ 只允许选择对应的 $f_1,f_2$，因为这些参数必须让式 (1) 在 $0..K-1$ 上形成置换。若置换定义不成立，就会出现某个输入位置被读两次、另一个输入位置完全丢失的问题；接收端随后再多迭代也无法恢复这种地址级错误。
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:52: [table_or_figure] 下图来自既有课程资产 `docs/L1/assets/T3.3_TS36.212_Table_5.1.3-3.png`。它是 TS 36.212 Rel-19 `36212-j30` Table 5.1.3-3 的协议表完整重建图，不是截图裁剪，也不是只摘录若干行。原表抽取证据为 `3GPP_Rel19/processed/TS_36.212_36212-j30/tables/table_0009.csv` 和 `table_0009.html`。
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:54: [table_or_figure] ![TS 36.212 Table 5.1.3-3 完整重建图](../L1/assets/T3.3_TS36.212_Table_5.1.3-3.png)
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:58: [table_or_figure] ## Table 5.1.3-3 的字段含义
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:60: [table_or_figure] Table 5.1.3-3 每一组参数包含四个字段：
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:64: [formula_ref] | $i$ | 表内序号，从 1 到 188 | 便于引用某一行，不参与地址公式。 |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:66: [formula_ref] | $f_1$ | 二次置换多项式的一次项系数 | 参与交织地址计算。 |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:67: [formula_ref] | $f_2$ | 二次置换多项式的二次项系数 | 参与交织地址计算。 |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:84: [formula_ref] 这里 $K$ 必须来自协议允许的集合。若某个 CB 分段结果不是表中允许的 $K$，说明上游分段或查表已经出错。$i$ 不是数组索引公式里的变量；地址公式里的索引通常用 $j$ 或 $k$ 表示，避免和表内序号混淆。
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:86: [formula_ref] ## 内部交织器地址公式
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:88: [formula_ref] TS 36.212 §5.1.3.2.3 规定内部交织器输入比特可记为 $c_0,c_1,\ldots,c_{K-1}$，输出比特可记为 $c'_0,c'_1,\ldots,c'_{K-1}$。交织关系可用二次置换多项式表达：
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:205: [table_or_figure] lookup f1, f2 by K in Table 5.1.3-3
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:248: [table_or_figure] | 输入 | Table 5.1.3-3 全部 188 组 $K/f_1/f_2$ 参数，以及玩具 $K=8$。 |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:280: [formula_ref] 二次公式可递推生成。由：
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:302: [formula_ref] | 在线公式计算 | 少存储，支持所有 $K$ | 乘法、取模和流水线控制复杂。 |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:318: [formula_ref] 验证内部交织器要覆盖协议表、地址公式、反向映射和硬件访问。
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:328: [formula_ref] 代表性用例 1：$K=40$、$f_1=3$、$f_2=10$。输入为长度 40 的递增整数向量。输出为交织向量和解交织恢复向量。边界条件是表内最小 $K$。验证方式是置换和往返断言。失败案例是把表内 $i$ 当公式索引。
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:336: [formula_ref] | 把表内 $i$ 用进地址公式 | 混淆序号和索引 | 全部地址错误。 |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:344: [table_or_figure] 1. Table 5.1.3-3 中 $i$ 和地址公式中的索引有什么区别？
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:351: [formula_ref] 1. $i$ 是协议表行号，只用于查表和引用；地址公式中的索引是 $j$，范围为 $0\le j<K$。
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:373: [table_or_figure] | 交织参数 $f_1$ 和 $f_2$ 随 $K$ 选择 | §5.1.3.2.3，Table 5.1.3-3 | `content.md` lines 771-773，`tables/table_0009.csv/html` |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:374: [table_or_figure] | 最小表项为 $i=1,K=40,f_1=3,f_2=10$ | Table 5.1.3-3 | `tables/table_0009.csv` row 2 |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:375: [table_or_figure] | 最大表项为 $i=188,K=6144,f_1=263,f_2=480$ | Table 5.1.3-3 | `tables/table_0009.csv` final row |
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:380: [paper_citation] - [Berrou, 1993] C. Berrou, A. Glavieux, and P. Thitimajshima, "Near Shannon limit error-correcting coding and decoding: Turbo-codes", IEEE International Conference on Communications, 1993.
+docs/L2/T6.4_LTE_Turbo_internal_interleaver.md:381: [paper_citation] - [Sun, 2008] J. Sun and O. Y. Takeshita, "Interleavers for turbo codes using permutation polynomials over integer rings", IEEE Transactions on Information Theory, 2008.
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:12: [formula_ref] - 解释 BCJR/MAP 是 LTE Turbo 译码实现的算法背景，不是 3GPP 强制实现公式。
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:29: [formula_ref] TS 36.212 Rel-19 `36212-j30` 规定 LTE Turbo 编码结构、CRC 计算、码块分段和内部交织器参数，但没有规定接收机必须使用 BCJR、Log-MAP 或 Max-Log-MAP 的哪一种译码公式。本节把 BCJR/MAP 作为算法背景讲解，用来解释 LTE Turbo 译码器为什么需要前向、后向和分支度量。
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:33: [table_or_figure] | LTE Turbo 编码结构 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.1、Figure 5.1.3-2 | 协议锚点：PCCC、两个 8 状态组成编码器、1/3 码率和内部交织器是发送侧结构，译码器按同一网格约束反向推断。 |
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:36: [paper_citation] | BCJR/MAP 递推公式 | [Bahl, 1974]、[McEliece, 1998] | 算法背景：不是 3GPP 强制公式，属于接收机实现选择。 |
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:38: [table_or_figure] 本节只把 Figure 5.1.3-2 作为 BCJR/MAP 网格来源的结构锚点，不在本文重复展开协议图。协议图本地证据为 `media/image79.wmf`；T6.3 已用 `tools/figures/render_lte_turbo_encoder_structure.py` 重建为 `docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png`，并解释两个 8 状态组成编码器、内部交织器和终止虚线路径。
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:52: [formula_ref] 这个公式回答的问题是：接收机当前是否应该相信 $u_k=0$。如果两个概率相等，接收机没有倾向；如果 $P(u_k=0\mid \mathbf{y})$ 大很多，接收机倾向判 0。为了避免直接比较很小的概率，译码器通常输出后验 LLR：
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:90: [formula_ref] 这个公式回答的问题是：若第 $k$ 步真的选择分支 $(s',s)$，接收机看到 $\mathbf{y}_k$ 的可能性有多大。
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:112: [formula_ref] 这个公式回答的问题是：所有能从上一时刻某状态 $s'$ 走到当前状态 $s$ 的分支，合起来支持当前状态 $s$ 的程度是多少。
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:132: [formula_ref] 这个公式回答的问题是：当前状态 $s$ 之后所有合法未来路径，与后续接收证据匹配得如何。
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:152: [formula_ref] 这个公式回答的问题是：在整段观测 $\mathbf{y}$ 下，经过输入 0 分支的所有合法路径总概率，与经过输入 1 分支的所有合法路径总概率谁更大。
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:162: [formula_ref] 式 (9) 是本节最重要的公式。它的每一项都有工程含义：
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:220: [formula_ref] 以下伪代码是教学实现框架，不是 3GPP 规范公式。
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:294: [formula_ref] | 把 BCJR 公式写成 3GPP 强制要求 | 协议证据链不严谨 | 明确标注为算法背景和实现选择。 |
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:301: [formula_ref] 4. 若 CRC 失败，能否直接判断分支度量公式错误？还需要哪些内部证据？
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:317: [formula_ref] 5. LTE Turbo 编码结构、尾比特、CRC 和码块分段锚定到 TS 36.212；BCJR/MAP 递推公式来自算法文献，是接收机实现背景，不是 3GPP 强制公式。
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:325: [table_or_figure] | Turbo 编码结构 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.1、Figure 5.1.3-2 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md`；`docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png` | LTE Turbo 使用 PCCC、两个 8 状态组成编码器、内部交织器和 1/3 码率输出。 |
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:327: [paper_citation] | BCJR/MAP 公式 | 非 3GPP 强制公式 | [Bahl, 1974]、[McEliece, 1998] | 本节作为算法背景讲解，不能写成协议要求。 |
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:343: [paper_citation] - [Bahl, 1974] L. R. Bahl, J. Cocke, F. Jelinek, and J. Raviv, "Optimal Decoding of Linear Codes for Minimizing Symbol Error Rate", IEEE Transactions on Information Theory, 1974.
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:344: [paper_citation] - [Berrou, 1993] C. Berrou, A. Glavieux, and P. Thitimajshima, "Near Shannon Limit Error-Correcting Coding and Decoding: Turbo-Codes", IEEE International Conference on Communications, 1993.
+docs/L2/T6.5_BCJR_MAP_decoding_intuition.md:345: [paper_citation] - [McEliece, 1998] R. J. McEliece, D. J. C. MacKay, and J.-F. Cheng, "Turbo Decoding as an Instance of Pearl's Belief Propagation Algorithm", IEEE Journal on Selected Areas in Communications, 1998.
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:9: [formula_ref] - 从概率域 MAP 公式推导到对数域 Log-MAP。
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:13: [formula_ref] - 明确 Log-MAP/Max-Log-MAP 是 LTE Turbo 译码实现算法背景，不是 TS 36.212 强制公式。
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:31: [formula_ref] TS 36.212 Rel-19 `36212-j30` 规定 LTE Turbo 编码器结构、尾比特和内部交织器；规范不规定接收机内部必须采用 Log-MAP、Max-Log-MAP、SOVA 或其他译码算法。因此，本节所有 Log-MAP 和 Max-Log-MAP 方程均为算法背景和工程实现知识，不能当成 3GPP 强制公式。
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:35: [table_or_figure] | LTE Turbo 发送侧结构 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.1、Figure 5.1.3-2 | 协议锚点：两个 8 状态组成编码器、内部交织器和 1/3 码率定义了译码网格来源。 |
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:37: [table_or_figure] | 内部交织器 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.3、Table 5.1.3-3 | 协议锚点：两个译码器交换外信息时必须按协议交织/解交织地址对齐。 |
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:38: [paper_citation] | Log-MAP/Max-Log-MAP | [Robertson, 1995]、[Hagenauer, 1996] | 算法背景：接收机实现选择，不是协议强制。 |
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:40: [table_or_figure] 本节不重复展开 TS 36.212 Figure 5.1.3-2 或 Table 5.1.3-3 参数表，只引用它们作为 Log-MAP/Max-Log-MAP 的协议结构锚点。Figure 5.1.3-2 已在 T6.3 用 `tools/figures/render_lte_turbo_encoder_structure.py` 重建为 `docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png`；Table 5.1.3-3 的长表复现由 T3.3 承接。若后续要生成 LTE 全块译码向量，还需要把 T6.4 的交织器参数、T7 的 rate recovery 和 T3 的 CRC/分段规则合成 bit-exact 流程。
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:102: [formula_ref] 这个公式回答的问题是：如果概率域有两个候选概率，取对数后怎样准确地求它们的总概率。把较大的数提出来，假设 $a\ge b$：
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:164: [formula_ref] ## Log-MAP 递推方程
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:364: [table_or_figure] | Turbo 编码结构 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.1、Figure 5.1.3-2 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md`；`docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png` | LTE Turbo 网格来自两个 8 状态组成编码器和内部交织器。 |
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:366: [table_or_figure] | 内部交织器 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.3、Table 5.1.3-3 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md` | 外信息交换必须按协议交织关系对齐。 |
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:367: [paper_citation] | Log-MAP/Max-Log-MAP | 非 3GPP 强制公式 | [Robertson, 1995]、[Hagenauer, 1996] | 算法模式属于接收机实现选择。 |
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:383: [paper_citation] - [Berrou, 1993] C. Berrou, A. Glavieux, and P. Thitimajshima, "Near Shannon Limit Error-Correcting Coding and Decoding: Turbo-Codes", IEEE International Conference on Communications, 1993.
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:384: [paper_citation] - [Hagenauer, 1996] J. Hagenauer, E. Offer, and L. Papke, "Iterative Decoding of Binary Block and Convolutional Codes", IEEE Transactions on Information Theory, 1996.
+docs/L2/T6.6_Log_MAP_Max_Log_MAP_Turbo.md:385: [paper_citation] - [Robertson, 1995] P. Robertson, E. Villebrun, and P. Hoeher, "A Comparison of Optimal and Sub-Optimal MAP Decoding Algorithms Operating in the Log Domain", IEEE International Conference on Communications, 1995.
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:35: [formula_ref] | CRC 计算 | TS 36.212 Rel-19 `36212-j30` §5.1.1 | 协议锚点：候选硬判决比特通过对应 CRC 多项式检查，作为译码结果接受依据。 |
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:39: [table_or_figure] | 内部交织器 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.3、Table 5.1.3-3 | 协议锚点：外信息交换必须使用与发送侧一致的交织映射。 |
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:42: [formula_ref] 本节只把 CRC 和 LTE Turbo 结构作为协议锚点；外信息公式、早停策略、调度图和硬件队列设计均为接收端工程实现说明。
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:183: [formula_ref] 式 (11) 是接收机实现策略，不是 3GPP 强制停止公式。协议锚点是 TS 36.212 §5.1.1 规定 CRC 计算，§5.1.2 规定码块分段和码块 CRC 附加；接收机可以利用这些协议定义的校验关系判断候选硬判决是否可接受。
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:196: [formula_ref] 式 (12) 回答的是多 CB 汇总条件。它不是协议原文公式，而是接收端对码块 CRC 结果的工程汇总表达。若某个 CB 到达最大迭代仍 CRC 失败，TB 通常不能上交为正确数据，媒体接入控制层（Medium Access Control, MAC）后续会结合混合自动重传请求（Hybrid Automatic Repeat Request, HARQ）过程处理重传或合并。
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:228: [formula_ref] 随机仿真建议固定种子 `20260619`，记录码块长度、交织参数、算法模式、最大迭代次数、早停开关和 CRC 多项式。
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:250: [table_or_figure] | 交织地址生成 | 生成 $\pi(k)$ 和反向映射 | 与 TS 36.212 Table 5.1.3-3 参数一致。 |
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:262: [formula_ref] 式 (13) 是工程估算，不是协议公式。$I_{\mathrm{used}}$ 是实际迭代次数；早停降低平均 $I_{\mathrm{used}}$，但最坏情况仍由 $I_{\max}$ 决定。
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:294: [formula_ref] 2. 外信息公式中要扣除哪两类旧证据？
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:313: [table_or_figure] | Turbo 编码结构 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.1、Figure 5.1.3-2 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md`；`docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png` | 双 SISO 结构来自两个 8 状态组成编码器和内部交织器。 |
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:315: [table_or_figure] | 内部交织器 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.3、Table 5.1.3-3 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md` | 外信息交织/解交织必须与发送侧地址映射一致。 |
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:332: [paper_citation] - [Berrou, 1993] C. Berrou, A. Glavieux, and P. Thitimajshima, "Near Shannon Limit Error-Correcting Coding and Decoding: Turbo-Codes", IEEE International Conference on Communications, 1993.
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:333: [paper_citation] - [Hagenauer, 1996] J. Hagenauer, E. Offer, and L. Papke, "Iterative Decoding of Binary Block and Convolutional Codes", IEEE Transactions on Information Theory, 1996.
+docs/L2/T6.7_Turbo_iteration_extrinsic_stopping.md:334: [paper_citation] - [Robertson, 1995] P. Robertson, E. Villebrun, and P. Hoeher, "A Comparison of Optimal and Sub-Optimal MAP Decoding Algorithms Operating in the Log Domain", IEEE International Conference on Communications, 1995.
+docs/L2/T6.8_LTE_Turbo_decoder_numeric_walkthrough.md:33: [table_or_figure] | LTE Turbo 编码结构 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.1、Figure 5.1.3-2；T6.3 重建图 `docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png` | 协议锚点：真实 LTE 使用 PCCC、两个 8 状态组成编码器和内部交织器。 |
+docs/L2/T6.8_LTE_Turbo_decoder_numeric_walkthrough.md:35: [table_or_figure] | 内部交织器 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.3、Table 5.1.3-3 | 协议锚点：真实交织参数随块长选择，本节使用手工 3 比特交织器。 |
+docs/L2/T6.8_LTE_Turbo_decoder_numeric_walkthrough.md:378: [table_or_figure] | $\pi(k)$ | 交织地址生成器输出 | 定位 Table 5.1.3-3 参数使用错误。 |
+docs/L2/T6.8_LTE_Turbo_decoder_numeric_walkthrough.md:424: [formula_ref] 5. CRC 是二进制多项式除法校验，输入必须是硬比特序列；LLR 是软可靠度数字，不能直接作为 CRC 比特。
+docs/L2/T6.8_LTE_Turbo_decoder_numeric_walkthrough.md:432: [table_or_figure] | LTE Turbo 编码结构 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.1、Figure 5.1.3-2 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md`；`docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png` | 真实 LTE 使用 PCCC、两个 8 状态组成编码器和 1/3 码率三路输出。 |
+docs/L2/T6.8_LTE_Turbo_decoder_numeric_walkthrough.md:434: [table_or_figure] | 内部交织器 | TS 36.212 Rel-19 `36212-j30` §5.1.3.2.3、Table 5.1.3-3 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md` | 真实交织参数依赖块长，本例使用手工 $\pi=[1,2,0]$。 |
+docs/L2/T6.8_LTE_Turbo_decoder_numeric_walkthrough.md:451: [paper_citation] - [Berrou, 1993] C. Berrou, A. Glavieux, and P. Thitimajshima, "Near Shannon Limit Error-Correcting Coding and Decoding: Turbo-Codes", IEEE International Conference on Communications, 1993.
+docs/L2/T6.8_LTE_Turbo_decoder_numeric_walkthrough.md:452: [paper_citation] - [Hagenauer, 1996] J. Hagenauer, E. Offer, and L. Papke, "Iterative Decoding of Binary Block and Convolutional Codes", IEEE Transactions on Information Theory, 1996.
+docs/L2/T6.8_LTE_Turbo_decoder_numeric_walkthrough.md:453: [paper_citation] - [Robertson, 1995] P. Robertson, E. Villebrun, and P. Hoeher, "A Comparison of Optimal and Sub-Optimal MAP Decoding Algorithms Operating in the Log Domain", IEEE International Conference on Communications, 1995.
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:37: [table_or_figure] | TS 36.212 Rel-19 Figure 5.1.4-1 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md` 段落 777-789 | 确认结构图标题和处理顺序；抽取文本未还原图像细节，本节用 Mermaid 重建教学信号流。 |
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:38: [table_or_figure] | TS 36.212 Rel-19 §5.1.4.1.1 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md` 段落 791-815 | 确认子块交织器步骤、`<NULL>` padding 和 Table 5.1.4-1。 |
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:39: [table_or_figure] | TS 36.212 Rel-19 Table 5.1.4-1 | `3GPP_Rel19/processed/TS_36.212_36212-j30/tables/table_0010.csv`、`table_0010.html` | 核验 32 列置换模式，本节只概述，T7.2 完整展开。 |
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:59: [table_or_figure] Figure 5.1.4-1 是发送端图，本节的 Mermaid 是接收端教学反向图。它不是协议原图复制，而是把协议前向步骤转换成工程接收流程。
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:77: [table_or_figure] 本节只建立抽象地址模型：`<NULL>` 会让扫描指针 $j$ 和接收序号 $k$ 不再一一相等，循环缓存会让地址在末尾回到开头。T7.2 会把这个抽象模型落到 TS 36.212 Table 5.1.4-1 的列置换、三路子块交织和 bit collection 细节上；因此读本节时只需先记住“收到的第 $k$ 个 LLR 不一定写到地址 $k$，而是写到协议扫描得到的有效循环缓存地址”。
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:88: [formula_ref] 这个公式回答的问题是：接收端第 $k$ 个软信息应该写回哪里。$k_0$ 由 `rvidx` 和协议中的行数等参数决定；$K_w$ 是 circular buffer 的可寻址长度；取模表示地址走到末尾后回到开头。实际 LTE 发送端还会跳过 `<NULL>`，因此工程实现通常用一个循环扫描指针 $j$，只有当前地址不是 `<NULL>` 时才消费一个输出位置。
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:208: [formula_ref] 吞吐瓶颈通常不是公式，而是存储访问。若同一周期要写入多个 LLR，地址生成器必须保证写端口数量足够，或用队列调度。若同一地址在短时间内重复出现，读改写需要旁路，否则第二次累加可能读到旧值。
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:268: [table_or_figure] | 图证据 | 已定位 Figure 5.1.4-1 标题和处理顺序；抽取物未提供可直接复现的完整图像语义，本节以 Mermaid 重建接收端教学流程。 |
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:269: [formula_ref] | 公式边界 | `content.md` 和段落抽取中的部分协议公式符号缺失；本节公式为接收端教学模型，并显式标注协议来源与实现边界。 |
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:281: [table_or_figure] | 32 列置换表属于 sub-block interleaver | TS 36.212 Rel-19 `36212-j30` Table 5.1.4-1 | `tables/table_0010.csv`、`table_0010.html` |
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:285: [paper_citation] - [Berrou, 1993] C. Berrou, A. Glavieux, and P. Thitimajshima, "Near Shannon Limit Error-Correcting Coding and Decoding: Turbo-Codes," IEEE International Conference on Communications, 1993.
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:286: [table_or_figure] - [ETSI, 2026] 3GPP TS 36.212 V19.3.0, "E-UTRA; Multiplexing and channel coding," Release 19, `36212-j30`, §5.1.4.1, §5.1.4.1.1, §5.1.4.1.2, Figure 5.1.4-1, Table 5.1.4-1.
+docs/L2/T7.1_LTE_Turbo_de_rate_matching_overview.md:287: [paper_citation] - [Lin, 2004] S. Lin and D. J. Costello, "Error Control Coding," 2nd edition, Pearson, 2004.
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:37: [table_or_figure] 本节依据 TS 36.212 Rel-19 `36212-j30` §5.1.4.1.1 和 Table 5.1.4-1。协议文本规定 sub-block interleaver 的输入为长度 $D$ 的比特序列，矩阵列数为 32，行数取能容纳输入长度的最小整数；若矩阵容量大于 $D$，前面补入 `<NULL>`；随后按 Table 5.1.4-1 执行列间置换，再按列读出。
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:42: [table_or_figure] | TS 36.212 Rel-19 Table 5.1.4-1 | `3GPP_Rel19/processed/TS_36.212_36212-j30/tables/table_0010.csv`、`table_0010.html` | 32 列置换模式，正文复现。 |
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:63: [table_or_figure] C --> D[按 Table 5.1.4-1 置换列]
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:74: [table_or_figure] TS 36.212 Rel-19 Table 5.1.4-1 给出列数为 32 时的 inter-column permutation pattern。协议文字说明 $P(j)$ 是第 $j$ 个置换后列对应的原始列位置。也就是说，置换后矩阵的第 $j$ 列，来自置换前矩阵的第 $P(j)$ 列。
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:127: [formula_ref] 式 (5) 的作用是把“按列读出”翻译成地址公式。$q$ 是交织输出序号，$q\bmod R_{\mathrm{sub}}$ 给出行号，$\lfloor q/R_{\mathrm{sub}}\rfloor$ 给出置换后列号，再用 $P(\cdot)$ 找到原始列。
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:221: [table_or_figure] P[0:31]           Table 5.1.4-1 列置换
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:280: [table_or_figure] | `perm_rom` | 保存 32 个 $P(j)$ | ROM 内容必须等于 Table 5.1.4-1。 |
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:308: [table_or_figure] 2. Table 5.1.4-1 中 $P(16)=1$ 表示哪个列来自哪个列？
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:322: [table_or_figure] 2. 用 Table 5.1.4-1 说明置换后第 5 列来自原始第几列。
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:340: [formula_ref] | 公式边界 | 协议抽取文本中的部分公式符号缺失；正文使用可审计的教学公式重建矩阵行列和反地址关系。 |
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:341: [table_or_figure] | 审计结果 | T7 全量已通过 `LESSON_TERM_AUDIT_OK`、`MARKDOWN_HEADING_AUDIT_OK`、`LESSON_DEPTH_AUDIT_OK`、`LATEX_RENDER_AUDIT_OK formulas=434`；引用重建审计输出 `REFERENCE_REBUILD_AUDIT_CANDIDATES`，本节已在正文复现 Table 5.1.4-1。 |
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:351: [table_or_figure] | 32 列置换模式为正文复现的序列 | TS 36.212 Rel-19 `36212-j30` Table 5.1.4-1 | `tables/table_0010.csv`、`table_0010.html` |
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:355: [paper_citation] - [Berrou, 1993] C. Berrou, A. Glavieux, and P. Thitimajshima, "Near Shannon Limit Error-Correcting Coding and Decoding: Turbo-Codes," IEEE International Conference on Communications, 1993.
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:356: [table_or_figure] - [ETSI, 2026] 3GPP TS 36.212 V19.3.0, "E-UTRA; Multiplexing and channel coding," Release 19, `36212-j30`, §5.1.4.1.1, §5.1.4.1.2, Table 5.1.4-1.
+docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md:357: [paper_citation] - [Lin, 2004] S. Lin and D. J. Costello, "Error Control Coding," 2nd edition, Pearson, 2004.
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:55: [formula_ref] | TS 36.212 Rel-19 §5.1.4.1.2 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md` 行 817-923 及后续 bit selection 段；`source.docx` 中 `rId155-rId177` 对应公式图片 | 确认 circular buffer、`NIR`、`Ncb`、`E`、`rvidx`、$k_0$、`<NULL>` 跳过和下行共享信道（Downlink Shared Channel, DL-SCH）/PCH 的 RV 取值范围。 |
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:56: [formula_ref] | TS 36.213 Rel-19 §8.3、§8.6、§8.6.1 | `3GPP_Rel19/processed/TS_36.213_36213-j30_s08-s09/content.md` 行 1121-1171、1227-1389 | 作为 HARQ-ACK 关联、ACK/NACK 上交、上行共享信道（Uplink Shared Channel, UL-SCH）调制阶数/RV/传输块大小（Transport Block Size, TBS）字段来源的系统边界证据；不替代 TS 36.212 的 rate matching 公式。 |
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:87: [formula_ref] 图 T7.3-1 使用教学参数把这个关系画成一个长图。它不是规范测试向量；规范公式在后文“协议公式与接收端推导”中复原。本图用于直观看清四件事：RV0、RV1、RV2、RV3 是同一环上的四个窗口；每个 RV 会产生一串顺序 LLR；接收端按环地址写回 HARQ soft buffer；四次传输后覆盖区域逐步扩大。
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:120: [formula_ref] 这也是本节不把 TS 36.213/TS 36.321 细节强行写成 rate matching 公式的原因：T7.3 的译码器核心责任是“给定 `rvidx`、$E$、`Ncb` 和 LLR，正确更新 soft buffer”。TS 36.213/TS 36.321 的已核验证据只说明 HARQ 过程、ACK/NACK、RV 字段来源和 MAC soft buffer 行为确实属于外围控制边界。
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:159: [formula_ref] ## 协议公式与接收端推导
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:163: [formula_ref] TS 36.212 §5.1.4.1.2 的关键点不是单独一个公式，而是一条从“UE soft buffer 能力”到“每个接收 LLR 写到哪个环地址”的链条：
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:189: [unverified] 也就是说，这些场景不按式 (1) 用 DL soft-buffer 能力预算裁剪每个 CB 的 circular-buffer 长度。UE category 0 在若干 DL-SCH/PCH 场景也有 $N_{\mathrm{cb}}=K_w$ 的例外，本节不展开 UE category 细则，只强调实现必须把 transport-channel/context 输入带入 `Ncb` 计算。
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:191: [formula_ref] 对 DL-SCH/PCH，transport block soft buffer size 的主体公式为：
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:276: [formula_ref] 上面的公式从发送侧描述 $e_k$ 如何生成。接收端把它反过来理解：收到的第 $k$ 个 LLR 应写回到 $w_{(k_0+j)\bmod N_{\mathrm{cb}}}$ 对应的 soft buffer 地址，前提是该地址不是 `<NULL>`。
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:495: [formula_ref] 本节已经复原 DL-SCH/PCH 主线所需的 `Ncb`、`NIR`、`E`、`k0` 和 `<NULL>` 跳过公式。Rel-19 中还包含 MCH 配置 `pmch-TimeInterleavingN` 时的 `NIR` 分支，以及 `Nsoft`/`KC` 的更多 UE category 分支；这些是协议完整实现需要覆盖的能力配置细节，但不改变本节 HARQ soft combining 的核心地址语义。后续若做 bit-exact 规范模型，应把这些分支作为配置表驱动，不应硬编码成单一 DL-SCH 公式。
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:654: [formula_ref] | 公式重建 | 已复原 DL-SCH/PCH 主线的 `Ncb`、`NIR`、`E`、`k0` 和 `<NULL>` 跳过公式；本地 Word 证据为 `source.docx` 中 `word/_rels/document.xml.rels` 的 `rId155-rId177` 映射，关键公式图包括 `word/media/image147.wmf`、`image148.wmf`、`image151.wmf`、`image156.wmf`、`image157.wmf`、`image161.wmf`、`image165.wmf`、`image166.wmf`；并用 ETSI TS 36.212 V14.5.1 PDF 文本交叉核对公式形态。 |
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:657: [formula_ref] | 审核经理复核 | Critical = 0；`k0/NIR/Ncb` 公式重建 Important 项已关闭；TS 36.213/36.321 精确 HARQ/MAC 锚点已在阶段 4 核验并补入证据表，后续若扩展完整调度器章节再展开对应表格。 |
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:664: [table_or_figure] | 子块交织会引入 `<NULL>` 并使用 Table 5.1.4-1 的列置换 | TS 36.212 Rel-19 `36212-j30` §5.1.4.1.1 | `content.md` 行 791-815；`tables/table_0010.csv/html` |
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:669: [formula_ref] | DL-SCH/PCH 的 `NIR` 主体公式由 `Nsoft`、`KC`、`KMIMO`、`MDL_HARQ`、`Mlimit` 和 Rel-19 时长系数构成 | TS 36.212 Rel-19 `36212-j30` §5.1.4.1.2 | `source.docx` 内 `rId159 -> word/media/image151.wmf`；`content.md` 行 845-921 |
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:683: [paper_citation] - [Berrou, 1993] C. Berrou, A. Glavieux, and P. Thitimajshima, "Near Shannon Limit Error-Correcting Coding and Decoding: Turbo-Codes," IEEE International Conference on Communications, 1993.
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:684: [table_or_figure] - [ETSI, 2026] 3GPP TS 36.212 V19.3.0, "E-UTRA; Multiplexing and channel coding," Release 19, `36212-j30`, §5.1.4.1, §5.1.4.1.1, §5.1.4.1.2, Figure 5.1.4-1, Table 5.1.4-1.
+docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md:685: [paper_citation] - [Lin, 2004] S. Lin and D. J. Costello, "Error Control Coding," 2nd edition, Pearson, 2004.
+docs/L2/T7.4_LTE_code_block_reassembly_TB_CRC.md:32: [formula_ref] | TS 36.212 Rel-19 `36212-j30` §5.1.1 | `3GPP_Rel19/processed/TS_36.212_36212-j30/content.md` | CRC 计算和 CRC 多项式来源。 |
+docs/L2/T7.4_LTE_code_block_reassembly_TB_CRC.md:283: [unverified] | TS 36.212 §5.1.2 | CB 分段、CB CRC、filler 和 $r$ 顺序。 | `content.md` 中部分公式抽取不完整，尺寸公式承接 T3.3 已核验讲义。 |
+docs/L2/T7.4_LTE_code_block_reassembly_TB_CRC.md:286: [table_or_figure] | T3.3 | $K_-$ 在前、$K_+$ 在后和 filler 删除规则。 | 本节不重新复现 Table 5.1.3-3 图片。 |
+docs/L2/T7.4_LTE_code_block_reassembly_TB_CRC.md:302: [paper_citation] - [Berrou et al., 1993] Claude Berrou, Alain Glavieux, and Punya Thitimajshima, "Near Shannon Limit Error-Correcting Coding and Decoding: Turbo-Codes," *Proceedings of ICC 1993*, 1993.
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:14: [unverified] - 解释 TS 36.213 和 TS 36.321 在本节中为什么作为边界影响译码器，而不展开成调度器设计。
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:52: [formula_ref] 一个容易犯的错误是把 DL/UL 差异理解成“一个是下行公式，一个是上行公式”。更准确的理解是：共同的数学核心在不同系统边界里被调用，外围 descriptor 和状态管理不同。
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:96: [unverified] 本节不展开 PUSCH 调度器或上行功控，但这些控制背景必须进入 descriptor 或外围状态。
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:160: [table_or_figure] | Turbo interleaver 参数 | Turbo core 地址 | 是，§5.1.3.2.3/Table 5.1.3-3 | 实现查表和验证。 |
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:195: [formula_ref] 如果把式 (3) 的 `ue_id` 去掉，两个 UE 同时使用 `harq_id=3` 时就可能访问同一 soft buffer 条目。Turbo core 仍然会正常运行，但输入已经来自错误历史软信息，因此 CB CRC 或 TB CRC fail 是外围上下文错误的结果，不是 Turbo 递推公式本身突然失效。
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:280: [formula_ref] 这些案例共同说明：DL/UL 的很多失败不是 Turbo core 公式问题，而是外围上下文字段不完整或锁存时机错误。
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:442: [formula_ref] | TS 36.212 §5.1.1 | CRC 是 UL/DL TB/CB 错误检测的共同基础。 | CRC 多项式细节不在本节展开。 |
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:447: [unverified] | TS 36.212 §5.3.2 | DL-SCH 使用相同类型的处理链。 | PCH/MCH 不在本节展开；DL 控制信息不展开。 |
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:448: [unverified] | TS 36.213 §8.3 | HARQ-ACK 与 PUSCH 传输存在时序关联，ACK/NACK 会向高层交付。 | 本节只用作反馈时序和边界证据，不展开 PHICH 资源映射表。 |
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:449: [table_or_figure] | TS 36.213 §8.6、§8.6.1 | UL-SCH 的调制阶数、RV 和 TBS 由物理层控制字段与相关表确定。 | 表 8.6.1-1/3 的完整复现留给调度/MCS 专题；本节只说明 descriptor 字段来源。 |
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:461: [unverified] | 边界声明 | TS 36.213/36.321 的精确锚点已核验；本节只把它们作为 HARQ/PHY/MAC 系统边界和 descriptor 字段来源，不展开完整调度器或 MAC HARQ entity 设计。 |
+docs/L2/T7.5_LTE_DL_UL_decoding_differences.md:465: [formula_ref] | 审核经理复核 | Critical = 0；TS 36.213/36.321 精确锚点已在阶段 4 补入，相关结论限定为系统边界和参数来源，不作为 TS 36.212 译码公式替代。 |
+docs/L2/T7.6_LTE_Turbo_decoder_edge_cases.md:65: [table_or_figure] | `K_r` | 第 $r$ 个 CB 长度 | TS 36.212 §5.1.2 和 Table 5.1.3-3 | 校验 Turbo 交织器参数和解码输出长度。 |
+docs/L2/T7.6_LTE_Turbo_decoder_edge_cases.md:411: [unverified] | TS 36.212 §5.1.1 | CRC 用于 TB/CB 错误检测，误通过风险需要工程审计。 | 本节不展开 CRC 多项式细节，CRC 算术见 T1/T3。 |
+docs/L2/T7.6_LTE_Turbo_decoder_edge_cases.md:416: [unverified] | TS 36.213 §8.3 | HARQ-ACK 与 PUSCH 传输的关联，以及 ACK/NACK 向高层交付。 | 用于解释 timeout/ACK/NACK 边界，不展开 PHICH 表格。 |
+docs/L2/T7.6_LTE_Turbo_decoder_edge_cases.md:417: [unverified] | TS 36.213 §8.6、§8.6.1 | UL-SCH 的 MCS/RV/TBS 字段来源。 | 用于解释 RV mismatch 的控制面来源，不复现 MCS 表。 |
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:26: [formula_ref] | T4.1 迭代译码 | 知道迭代译码会反复更新软信息，但本节不要求掌握具体更新公式。 |
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:54: [formula_ref] | Parity-check | 码字必须满足一组奇偶校验方程。每条方程要求若干比特的 GF(2) 异或结果满足约束。 |
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:55: [formula_ref] | Low-density | 校验矩阵里的 `1` 很少，大多数位置是 `0`。每个校验方程只连接少量比特。 |
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:85: [formula_ref] | TS 38.212 §5.1 CRC calculation | 同上，行 637-661 | 作为 TB CRC 和 CB CRC 的通用计算入口；多项式细节由 T3.1 已复现。 |
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:87: [table_or_figure] | TS 38.212 §5.3.2 Low density parity check coding | 同上，行 945-989 | 确认 LDPC 编码后的长度、BG1/BG2 矩阵尺寸、QC-LDPC 展开和 Table 5.3.2-1/2/3 入口。 |
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:91: [unverified] | TS 38.214 §5.1.7/§6.1.5 | `3GPP_Rel19/processed/TS_38.214_38214-j30/content.md`，§5.1.7 行 2407-2437；§6.1.5 行 7099-7125 | 作为 PDSCH/PUSCH CBG、CBGTI、MCS/RV/TBS 调度背景；本节不复现 MCS/TBS 表，T9/T11 使用具体表值时重建。 |
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:153: [formula_ref] 这个表有一个重要后果：接收端不能只凭 LLR 数组长度猜配置。BG、Zc、CB 数、每个 CB 的 $E_r$、filler 数、RV、CBG 是否发送，都必须来自同一个调度和协议上下文。只要上下文不同步，后续所有公式都会在错误对象上运行。
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:262: [formula_ref] | `crc_type` | TS 38.212 §5.1/§6.2.1/§7.2.1 | 选择 CRC 长度和多项式 | CRC pass/fail 无意义。 |
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:304: [formula_ref] 这段伪代码刻意从接收端写起。TS 38.212 的发送端 bit sequence 公式是基准，但工程实现的控制流必须围绕“收到的 LLR 如何变成可验证 TB”组织。
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:444: [table_or_figure] | 图表资产 | 新增 `tools/figures/render_nr_ldpc_decoder_chain_overview.py`，输出 `docs/L2/assets/T8.1_NR_LDPC_decoder_chain_overview.png`；图片用于教学重建，不是协议原图；已目检无文字遮挡、无裁切、箭头未压字，文本框尺寸协调。 |
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:452: [paper_citation] - [ETSI, 2026] 3GPP TS 38.212 V19.3.0, "NR; Multiplexing and channel coding," Release 19, `38212-j30`, §5.1, §5.2.2, §5.3.2, §5.4.2, §6.2, §7.2.
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:453: [paper_citation] - [ETSI, 2026] 3GPP TS 38.214 V19.3.0, "NR; Physical layer procedures for data," Release 19, `38214-j30`, §5.1.7, §6.1.5.
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:454: [paper_citation] - [Gallager, 1962] R. G. Gallager, "Low-Density Parity-Check Codes," IRE Transactions on Information Theory, 1962.
+docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md:455: [paper_citation] - [Richardson and Urbanke, 2008] T. Richardson and R. Urbanke, *Modern Coding Theory*, Cambridge University Press, 2008.
+docs/L2/T8.2_NR_LDPC_base_graph_selection.md:56: [table_or_figure] | TS 38.212 §5.3.2 Low density parity check coding | 同上，行 945-989 | 说明 BG1/BG2 的基矩阵尺寸、完整 $H$ 的准循环构造和 Table 5.3.2-1/2/3 入口。 |
+docs/L2/T8.2_NR_LDPC_base_graph_selection.md:60: [unverified] 本地 `content.md` 对 §6.2.2 和 §7.2.2 的公式抽取不完整：行 1375 和行 3751 只保留了 “if , or if  and , or if , LDPC base graph 2 is used” 的文本骨架。已用 `source.docx` 的 Word XML 核验公式位置，并把段落号、关系 ID、媒体文件、SHA-256 和人工转写条件固化在 `docs/audits/T8.2_NR_LDPC_BG_selection_formula_evidence.md`。因此正文复现选择条件时，不只依赖 `content.md` 的空壳文本，而是使用 Word XML/media 证据链加人工转写记录。
+docs/L2/T8.2_NR_LDPC_base_graph_selection.md:73: [table_or_figure] | 提升层 | $Z_c$ | 从 TS 38.212 Table 5.3.2-1 的 lifting size set 中选择。 | 决定一个基图元素扩展为多大的子矩阵，也决定地址周期。 |
+docs/L2/T8.2_NR_LDPC_base_graph_selection.md:132: [table_or_figure] 图 T8.2-1：由 `tools/figures/render_nr_ldpc_base_graph_selection.py` 生成的 BG 选择流程图。读图顺序是：输入 $A$、$R$ 和方向上下文；三条 BG2 分支任一命中则输出 BG2；三条均不命中则输出 BG1；输出 `bg_id` 后进入 descriptor、基图表、lifting 规则、shift ROM 和地址生成器。
+docs/L2/T8.2_NR_LDPC_base_graph_selection.md:350: [formula_ref] | UL-SCH 的 BG 选择由 TS 38.212 §6.2.2 规定 | §6.2.2 指出 initial transmission 和 subsequent re-transmission of the same TB 按条件使用 BG1/BG2，$R$ 来自 TS 38.214 §6.1.4.1，$A$ 来自 §6.2.1 | `content.md` 行 1371-1379；Word XML 段落 P8989-P8993，公式 OLE/WMF 见 P8991。 |
+docs/L2/T8.2_NR_LDPC_base_graph_selection.md:351: [formula_ref] | DL-SCH/PCH 的 BG 选择由 TS 38.212 §7.2.2 规定 | §7.2.2 指出 initial transmission 和 subsequent re-transmission of the same TB 按条件使用 BG1/BG2，$R$ 来自 TS 38.214 §5.1.3.1，$A$ 来自 §7.2.1 | `content.md` 行 3747-3755；Word XML 段落 P14032-P14036，公式 OLE/WMF 见 P14034。 |
+docs/L2/T8.2_NR_LDPC_base_graph_selection.md:352: [formula_ref] | BG2 条件为 $A \le 292$、$A \le 3824 \land R \le 0.67$、$R \le 0.25$ | TS 38.212 §6.2.2/§7.2.2 的基图选择条款 | `content.md` 抽取公式文本不完整；`docs/audits/T8.2_NR_LDPC_BG_selection_formula_evidence.md` 已记录 Word XML 段落、关系 ID、媒体 SHA-256 和人工转写映射。 |
+docs/L2/T8.2_NR_LDPC_base_graph_selection.md:366: [formula_ref] | Word XML 公式证据 | UL §6.2.2：P8991，`oleObject555.bin`-`oleObject558.bin`，`media/image391.wmf`-`media/image394.wmf`；DL §7.2.2：P14034，`oleObject1715.bin`-`oleObject1718.bin`，`media/image982.wmf`/`image392.wmf`/`image393.wmf`/`image394.wmf`；详见 `docs/audits/T8.2_NR_LDPC_BG_selection_formula_evidence.md`。 |
+docs/L2/T8.2_NR_LDPC_base_graph_selection.md:367: [table_or_figure] | 图表资产 | `tools/figures/render_nr_ldpc_base_graph_selection.py` 生成 `docs/L2/assets/T8.2_NR_LDPC_base_graph_selection_flow.png`。 |
+docs/L2/T8.2_NR_LDPC_base_graph_selection.md:369: [table_or_figure] | 待后续章节展开 | T8.3 复现 Table 5.3.2-1/2/3 的 lifting 和 BG shift 表；T9.1/T9.2 展开 rate recovery 与 circular buffer；T9/T11 使用 TS 38.214 具体 MCS/TBS/RV/CBG 表值时重建相关表格子集。 |
+docs/L2/T8.2_NR_LDPC_base_graph_selection.md:370: [table_or_figure] | 审核经理复核 | Critical=0、Important=2、Minor=2；已修复公式证据链不够可复核、图表面板贴边、PCH 漏写和 $K_b$ 未定义。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:5: [table_or_figure] 本节讲 NR 低密度奇偶校验码（Low-Density Parity-Check Code, LDPC）从“基图模板”变成“译码器真正使用的奇偶校验矩阵”的过程。T8.2 已经解决选 Base Graph 1 还是 Base Graph 2；本节继续回答三个问题：提升大小 $Z_c$ 是什么，准循环 LDPC（Quasi-Cyclic LDPC, QC-LDPC）为什么适合硬件，TS 38.212 Table 5.3.2-1/2/3 如何共同定义完整校验矩阵 $H$。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:11: [table_or_figure] - 读懂 TS 38.212 Table 5.3.2-1/2/3：set index、lifting size set、row index、column index、shift value 分别是什么。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:38: [table_or_figure] | 讲解基矩阵 | “基图表与完整矩阵的层级” | 区分 BG/base matrix、shift table 和完整 $H$。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:42: [table_or_figure] | Table 5.3.2-1/2/3 复现前必须核验 | “协议表格复现与列含义” | 核验 `table_0013/0014/0015.csv/html`，记录行列数、哈希、图片化复现和每列含义。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:54: [table_or_figure] | TS 38.212 §5.3.2 | 同上，行 948-989 | 说明 set index、BG1/BG2 基矩阵尺寸、完整 $H$ 的替换规则和 Table 5.3.2-1/2/3。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:55: [table_or_figure] | Table 5.3.2-1 | `tables/table_0013.csv` 和 `tables/table_0013.html` | Sets of LDPC lifting size；CSV 9 行 2 列，SHA-256 `33e89127015ae60d5b37ffadc462898c1b522b0f8d1b3613ce86e7b13316754d`。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:56: [table_or_figure] | Table 5.3.2-2 | `tables/table_0014.csv` 和 `tables/table_0014.html` | BG1 的 row/column/set-index shift values；CSV 161 行 20 列，SHA-256 `448285df830773ae5309d82cd19ad9f1f1a9dd29409343ffea39d1d3d9fbff24`。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:57: [table_or_figure] | Table 5.3.2-3 | `tables/table_0015.csv` 和 `tables/table_0015.html` | BG2 的 row/column/set-index shift values；CSV 102 行 20 列，SHA-256 `ee675184e14d49e777d9c6bb06bf0d0cc6e06acd010d74d313a451644c060133`。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:59: [table_or_figure] 抽取边界要明确：`content.md` 对 §5.2.2 和 §5.3.2 的部分公式符号有丢失，例如行 771 和 951-977 的变量名不完整。本节涉及的协议表格已从 CSV/HTML 核验并图片化复现；涉及公式时，正文会用协议语义重建符号关系，并把完整表格证据作为可复核来源。T8.3 不重建 Table 5.3.2-2/3 的每个 shift value 为 Markdown 文本，因为协议原表很长；正文插入完整图片化复现，并解释每列含义和读表方法。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:90: [table_or_figure] ## Table 5.3.2-1 的本地复现
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:92: [table_or_figure] Table 5.3.2-1 给出 set index $i_{\mathrm{LS}}$ 和允许的 $Z_c$ 集合。协议流程先找到包含当前 $Z_c$ 的 set，再用这个 set index 去 Table 5.3.2-2 或 Table 5.3.2-3 查 shift value。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:114: [table_or_figure] ## Table 5.3.2-2/3 的本地复现与列含义
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:116: [table_or_figure] Table 5.3.2-2 和 Table 5.3.2-3 是本节最重要的协议表。它们不是完整 $H$，而是“基图中哪些位置有 1，以及每个 set index 下该位置的循环移位值”。本地复现如下：
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:118: [table_or_figure] ![TS 38.212 Table 5.3.2-2 BG1 shift table](assets/T8.3_TS38.212_Table_5.3.2-2_BG1_shift_table.png)
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:120: [table_or_figure] 图 T8.3-1：TS 38.212 Table 5.3.2-2 的本地图片化复现。输入来自 `tables/table_0014.csv/html`，脚本为 `tools/figures/render_nr_ldpc_lifting_qc_matrix.py`。该表用于 LDPC Base Graph 1。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:122: [table_or_figure] ![TS 38.212 Table 5.3.2-3 BG2 shift table](assets/T8.3_TS38.212_Table_5.3.2-3_BG2_shift_table.png)
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:124: [table_or_figure] 图 T8.3-2：TS 38.212 Table 5.3.2-3 的本地图片化复现。输入来自 `tables/table_0015.csv/html`，脚本为 `tools/figures/render_nr_ldpc_lifting_qc_matrix.py`。该表用于 LDPC Base Graph 2。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:135: [table_or_figure] 表中数值 `0` 是有效 shift value，表示不移位的单位矩阵，不是“没有连接”。没有连接的位置不在表中列出；从完整基矩阵角度看，这些未列出的位置是 0 元素，展开为全零子矩阵。正文和图里有时用 `-1` 表示教学基矩阵中的“无连接/零矩阵”，这是工程和教学常用写法；协议 Table 5.3.2-2/3 原表并不靠 `-1` 单元列出所有无连接位置，而是只列非零连接。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:153: [table_or_figure] 式 (3) 和式 (4) 回答的问题是：基图中的一个元素如何变成完整 $H$ 的一个子块。$\mathbf{0}_{Z_c \times Z_c}$ 是全零矩阵；$P^{V_{i,j}}$ 是把 $Z_c \times Z_c$ 单位矩阵向右循环移位 $V_{i,j}$ 次得到的循环置换矩阵。$V_{i,j}$ 来自 Table 5.3.2-2 或 5.3.2-3，具体取哪一列由 $i_{\mathrm{LS}}$ 决定。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:155: [formula_ref] 把循环移位写成元素公式更清楚。令 $P^p$ 是大小为 $Z_c$ 的右循环移位单位矩阵，则：
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:262: [table_or_figure] | `BG` | T8.2 基图选择 | 选择 Table 5.3.2-2 或 5.3.2-3 | BG 表错用，行列组数和 shift value 全错。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:264: [table_or_figure] | `iLS` | Table 5.3.2-1 | 选择 shift table 的 set index 列 | 同一 row/column 连接取错移位值。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:267: [table_or_figure] | `shift_value` | Table 5.3.2-2/3 | 循环移位地址生成 | shift 方向或数值错导致 syndrome 不收敛。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:272: [table_or_figure] 2. 在 Table 5.3.2-1 中找到包含 `Zc` 的 `iLS`。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:273: [table_or_figure] 3. 根据 `BG` 选择 Table 5.3.2-2 或 Table 5.3.2-3。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:317: [table_or_figure] 这段检查说明两件事：每个 bit-level 行连接两个变量节点；前 4 列因为基图中第 0 列有两个有效子块，所以列权重为 2，后 8 列各只有一个有效子块，所以列权重为 1。真实 NR 的行列权重由 Table 5.3.2-2/3 决定，不能拿玩具权重类推真实性能。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:325: [table_or_figure] | Table 5.3.2-1 解析 | 遍历所有 $Z_c$，确认每个值只属于一个 set index。 | `Zc -> iLS` 唯一。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:355: [table_or_figure] | `zc_ils_lut` | `Zc` | `iLS` | Table 5.3.2-1 完整覆盖，非法 `Zc` 断言。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:368: [table_or_figure] | `Zc` 选错 | decoder 输入长度、syndrome 维度、地址周期全错 | `BG`、`Zc`、`iLS`、CB size、filler count | 先查 Table 5.3.2-1，再核对 §5.2.2 的 $K_b$ 逻辑。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:372: [table_or_figure] | BG 表错用 | BG1/BG2 row/column group 数不匹配 | `BG`、table id、row count、col count | BG1 用 Table 5.3.2-2，BG2 用 Table 5.3.2-3。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:379: [table_or_figure] 2. Table 5.3.2-1 的 set index 和 $Z_c$ 是什么关系？
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:380: [table_or_figure] 3. Table 5.3.2-2/3 中的数值 `0` 表示没有连接吗？
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:388: [table_or_figure] 2. Table 5.3.2-1 把允许的 $Z_c$ 分成 8 个 set。先由 $Z_c$ 找到唯一 set index $i_{\mathrm{LS}}$，再用 $i_{\mathrm{LS}}$ 去 Table 5.3.2-2/3 选择 shift value 列。
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:398: [table_or_figure] | $Z_c$ 来自 lifting size set | TS 38.212 §5.2.2/§5.3.2，Table 5.3.2-1 | `tables/table_0013.csv/html`，9 行 2 列，已全文复现。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:401: [table_or_figure] | BG1 使用 Table 5.3.2-2 的 row/column/shift values | TS 38.212 §5.3.2 | `tables/table_0014.csv/html`，161 行 20 列，图 T8.3-1。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:402: [table_or_figure] | BG2 使用 Table 5.3.2-3 的 row/column/shift values | TS 38.212 §5.3.2 | `tables/table_0015.csv/html`，102 行 20 列，图 T8.3-2。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:403: [table_or_figure] | 基图 0 元素替换为全零矩阵，有效元素替换为循环移位单位矩阵 | TS 38.212 §5.3.2 | `content.md` 行 977-989；正文式 (3)-(5) 复述。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:411: [table_or_figure] | 协议来源 | TS 38.212 Rel-19 `38212-j30` §5.2.2、§5.3.2、Table 5.3.2-1/2/3。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:413: [table_or_figure] | 图表资产 | `tools/figures/render_nr_ldpc_lifting_qc_matrix.py` 生成 `docs/L2/assets/T8.3_TS38.212_Table_5.3.2-2_BG1_shift_table.png`、`docs/L2/assets/T8.3_TS38.212_Table_5.3.2-3_BG2_shift_table.png`、`docs/L2/assets/T8.3_NR_LDPC_toy_QC_expansion.png`。 |
+docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md:419: [table_or_figure] 1. 3GPP TS 38.212 Rel-19 `38212-j30`, “NR; Multiplexing and channel coding”, §5.2.2, §5.3.2, Table 5.3.2-1, Table 5.3.2-2, Table 5.3.2-3.
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:9: [formula_ref] - 解释奇偶校验矩阵 $H$ 的每一行是一条校验方程，每一列对应一个候选码字比特。
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:18: [formula_ref] 本节是 T8.5 置信传播公式推导的准备课。这里重点是“图和消息方向”；校验节点的 $\tanh/\operatorname{atanh}$ 公式、Min-Sum 近似和 layered schedule 分别留到 T8.5、T8.6 和 T8.7 展开。
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:38: [formula_ref] | 讲解校验节点 | “变量节点与校验节点” | 定义 check node，说明它对应一条奇偶校验方程。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:40: [formula_ref] | 讲解 syndrome | “syndrome 的定义”和“GF(2) 手算例子” | 给出公式、手算三行 syndrome，并展示单比特错误。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:57: [formula_ref] | BP/SPA、Min-Sum、layered schedule | 接收机实现策略 | 本节只讲消息方向和接口，公式推导留到后续小节。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:66: [table_or_figure] | Table 5.3.2-1 | `tables/table_0013.csv/html` | lifting size set；T8.3 已全文复现。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:67: [table_or_figure] | Table 5.3.2-2 | `tables/table_0014.csv/html` | BG1 shift table；T8.3 已图片化完整复现。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:68: [table_or_figure] | Table 5.3.2-3 | `tables/table_0015.csv/html` | BG2 shift table；T8.3 已图片化完整复现。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:94: [formula_ref] 若 $H$ 的第 $i$ 行在列集合 $\mathcal{N}(i)$ 上为 1，则第 $i$ 条校验方程是：
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:107: [table_or_figure] Tanner 图是 Robert Tanner 在 1981 年提出的二分图表示方式。二分图表示节点分成两类，边只连接不同类型的节点。对 LDPC 来说：
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:112: [formula_ref] | 校验节点（check node, CN） | $H$ 的一行 | 一条奇偶校验方程，要求相连变量的异或为 0。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:113: [formula_ref] | 边（edge） | $H_{i,j}=1$ | 变量节点 $v_j$ 参与校验节点 $c_i$ 的方程。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:114: [formula_ref] | 无边 | $H_{i,j}=0$ | 该变量不参与该校验方程。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:134: [formula_ref] | 校验节点 | 校验方程 | 图上的边 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:158: [formula_ref] 这张表的重点不是具体函数形式，而是排除自身消息。例如 $c_0$ 给 $v_0$ 回消息时，只能看 $v_1$ 和 $v_3$ 在同一条校验方程上的消息，不能把 $v_0$ 刚发给 $c_0$ 的消息又带回 $v_0$。具体 $r_{i\to j}$ 如何由这些输入计算，T8.5 会用 BP/SPA 公式推导。
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:162: [formula_ref] syndrome 可译为“校验综合”或“伴随式”。在译码语境中，它是把候选硬判决代入所有奇偶校验方程后得到的结果：
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:183: [formula_ref] 说明至少有一条校验方程失败。syndrome 的第 $i$ 个分量 $s_i$ 就对应 Tanner 图上的第 $i$ 个校验节点。
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:254: [formula_ref] 这个例子说明 syndrome 能定位“哪些校验方程不满足”，但它不直接告诉接收端“哪一个比特一定错了”。一个变量节点通常连接多个校验节点，译码器需要通过多轮软信息消息传递来改变最可能出错的硬判决。
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:283: [formula_ref] Tanner 图上的迭代译码不是一次性求逆，而是让变量节点和校验节点沿边交换软信息。完整 BP/SPA 公式留到 T8.5，本节先建立消息方向。
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:288: [formula_ref] | variable-to-check | $q_{j\to i}$ | 变量节点 $v_j$ | 校验节点 $c_i$ | 变量节点给某条校验方程的当前信念。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:289: [formula_ref] | check-to-variable | $r_{i\to j}$ | 校验节点 $c_i$ | 变量节点 $v_j$ | 该校验方程基于其他变量推回来的外信息。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:320: [unverified] 下面的伪代码强调结构和边界，不展开 T8.5 的具体 check-node 公式。
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:329: [table_or_figure] edge_table              # derived from TS 38.212 Table 5.3.2-2/3
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:358: [formula_ref] 还要注意 LLR 符号约定采用 $L=\log(P(b=0)/P(b=1))$，所以 posterior 非负判为 0。若工程实现采用相反符号，hard decision 和所有消息公式必须一致调整。
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:442: [table_or_figure] | BG 表错用 | 大量 syndrome 不收敛，地址越界或边数错 | `BG`、table id、edge count | BG1 用 Table 5.3.2-2，BG2 用 Table 5.3.2-3。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:457: [formula_ref] 1. 变量节点对应 $H$ 的列，也就是候选码字比特位置；校验节点对应 $H$ 的行，也就是一条奇偶校验方程。
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:458: [formula_ref] 2. 应在校验节点 $c_i$ 和变量节点 $v_j$ 之间画一条边，表示变量 $\hat{x}_j$ 参与第 $i$ 条校验方程。
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:459: [formula_ref] 3. LDPC 校验方程是二元有限域上的奇偶关系，加法等价于异或；普通整数加法得到的是 1 的个数，syndrome 需要的是奇偶性。
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:472: [formula_ref] | $H$ 由基图元素替换为全零矩阵或循环置换矩阵得到 | TS 38.212 §5.3.2 | `content.md` 行 977-989；T8.3 已展开公式和图。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:473: [table_or_figure] | BG1/BG2 的非零位置和 shift value 来自 Table 5.3.2-2/3 | TS 38.212 §5.3.2 | `tables/table_0014.csv/html`、`tables/table_0015.csv/html`；T8.3 已图片化完整复现。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:483: [table_or_figure] | 协议来源 | TS 38.212 Rel-19 `38212-j30` §5.2.2、§5.3.2、§5.4.2.1、Table 5.3.2-1/2/3。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:485: [table_or_figure] | 图表资产 | `tools/figures/render_ldpc_tanner_syndrome.py` 生成 `docs/L2/assets/T8.4_LDPC_Tanner_syndrome_toy.png`。 |
+docs/L2/T8.4_LDPC_Tanner_graph_message_passing.md:493: [table_or_figure] 1. 3GPP TS 38.212 Rel-19 `38212-j30`, “NR; Multiplexing and channel coding”, §5.2.2, §5.3.2, §5.4.2.1, Table 5.3.2-1, Table 5.3.2-2, Table 5.3.2-3.
+docs/L2/T8.5_LDPC_sum_product_BP.md:11: [formula_ref] - 从“同一条校验方程要求偶校验成立”的概率直觉，理解校验节点更新为什么是非线性的。
+docs/L2/T8.5_LDPC_sum_product_BP.md:12: [formula_ref] - 写出 LLR 域变量节点更新、校验节点更新、后验 LLR 和 syndrome 检查公式。
+docs/L2/T8.5_LDPC_sum_product_BP.md:30: [formula_ref] 如果 $\tanh$ 和 $\operatorname{atanh}$ 还陌生，先把它们理解成“把校验方程的概率约束转换成 LLR 消息的函数”。本节会解释它们为什么出现，T8.6 再讲工程上如何避开昂贵函数。
+docs/L2/T8.5_LDPC_sum_product_BP.md:36: [formula_ref] | 推导 LLR 域 LDPC 置信传播 | “变量节点更新推导”和“校验节点更新推导” | 从概率/外信息直觉过渡到 LLR 域公式。 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:37: [formula_ref] | 包括变量节点更新 | “变量节点更新推导” | 给 $q_{j\to i}$ 和 posterior LLR 的求和公式。 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:38: [formula_ref] | 包括校验节点更新 | “校验节点更新推导” | 给 $\tanh/\operatorname{atanh}$ 公式和符号/幅度直觉。 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:49: [formula_ref] 本节算法依据来自 LDPC 的 Tanner 图和概率图模型，协议锚点来自 TS 38.212 Rel-19 `38212-j30` §5.3.2。协议定义的是码结构，不定义译码算法；因此本文中的 BP/SPA 公式是接收机实现理论，不是 3GPP 逐条强制流程。
+docs/L2/T8.5_LDPC_sum_product_BP.md:54: [table_or_figure] | Table 5.3.2-1 | `3GPP_Rel19/processed/TS_38.212_38212-j30/tables/table_0013.csv/html` | lifting size set；T8.3 已全文复现。 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:55: [table_or_figure] | Table 5.3.2-2/3 | 同目录 `table_0014.csv/html` 和 `table_0015.csv/html` | BG1/BG2 shift table；T8.3 已图片化完整复现。 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:104: [formula_ref] | $q_{j\to i}^{(t)}$ | 变量到校验消息 | $v_j\to c_i$ | 变量节点给某条校验方程的外信息。 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:105: [formula_ref] | $r_{i\to j}^{(t)}$ | 校验到变量消息 | $c_i\to v_j$ | 校验方程基于其他变量给 $v_j$ 的外信息。 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:108: [formula_ref] 外信息原则贯穿全部公式：给某条边发消息时，不把这条边刚送来的消息再带回去。
+docs/L2/T8.5_LDPC_sum_product_BP.md:173: [formula_ref] 这说明校验节点输出的符号来自其他输入符号的组合，输出幅度受其他输入中最不可靠证据的限制。严格的 SPA 公式不是简单取最小值，而是用 $\tanh/\operatorname{atanh}$ 精确表达概率求和；T8.6 的 Min-Sum 正是对这个精确公式的近似。
+docs/L2/T8.5_LDPC_sum_product_BP.md:190: [formula_ref] 式 (9) 回答的问题是：在第 $i$ 条偶校验方程必须成立的前提下，其他变量节点的软信息会给 $x_j$ 带来什么外信息。公式里有三个关键点。
+docs/L2/T8.5_LDPC_sum_product_BP.md:226: [formula_ref] 它对应两个校验方程：
+docs/L2/T8.5_LDPC_sum_product_BP.md:400: [formula_ref] 下面的 Python 片段复现图 T8.5-1 的数值。它可以作为公式和手算的最小 golden check。
+docs/L2/T8.5_LDPC_sum_product_BP.md:492: [formula_ref] | 局部约束 | RSC 编码器状态转移 | 奇偶校验方程 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:523: [formula_ref] SPA 精确公式对硬件不友好，主要有四个风险：
+docs/L2/T8.5_LDPC_sum_product_BP.md:538: [table_or_figure] | $\tanh/\operatorname{atanh}$ | 若保留 SPA，用查找表（Look-Up Table, LUT）或分段线性近似；若资源紧，转 T8.6 的 Min-Sum/NMS/OMS。 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:557: [formula_ref] 实际 NR LDPC 高吞吐实现通常不会采用朴素 flooding SPA，因为 message memory 和非线性函数代价高。常见路线是 layered schedule 加 Min-Sum 或归一化/偏移 Min-Sum；这些是 T8.6 和 T8.7 的主题。本节仍然重要，因为 Min-Sum 是从 SPA 校验节点公式近似出来的，不理解式 (9)，就很难理解 Min-Sum 为什么“符号相乘、幅度取最小”。
+docs/L2/T8.5_LDPC_sum_product_BP.md:585: [formula_ref] 3. 校验节点表达偶校验约束，需要在其他变量所有满足约束的组合上做概率求和；转到 LLR 域后形成 $\tanh/\operatorname{atanh}$ 非线性公式，而不是简单相加。
+docs/L2/T8.5_LDPC_sum_product_BP.md:595: [table_or_figure] | NR LDPC 的 $H$ 由 BG、$Z_c$ 和 shift table 构造 | TS 38.212 §5.3.2 | `content.md` 行 948-989；T8.3 已重建 Table 5.3.2-1/2/3。 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:607: [table_or_figure] | 图表资产 | `tools/figures/render_ldpc_bp_spa_round.py` 生成 `docs/L2/assets/T8.5_LDPC_BP_SPA_one_round.png`。 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:608: [formula_ref] | 图片目检 | 已检查图 T8.5-1：Tanner 图、公式框、数值表和底部检测点无文字遮挡、无裁切，底部卡片已加高避免文本贴边。 |
+docs/L2/T8.5_LDPC_sum_product_BP.md:616: [table_or_figure] 1. 3GPP TS 38.212 Rel-19 `38212-j30`, “NR; Multiplexing and channel coding”, §5.3.2, §5.4.2.1, Table 5.3.2-1, Table 5.3.2-2, Table 5.3.2-3.
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:5: [formula_ref] 本节讲低密度奇偶校验码（Low-Density Parity-Check Code, LDPC）译码中最常见的校验节点近似算法：Min-Sum、归一化 Min-Sum（Normalized Min-Sum, NMS）和偏移 Min-Sum（Offset Min-Sum, OMS）。T8.5 已经给出和积算法（Sum-Product Algorithm, SPA）的精确校验节点公式：
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:37: [formula_ref] | T8.5 BP/SPA | 知道校验节点精确公式里有 $\tanh/\operatorname{atanh}$，且输出给某条边时要排除自身输入。 |
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:43: [formula_ref] 如果 T8.5 的 SPA 公式还不熟，先抓住一句话：Min-Sum 不是重新定义 LDPC 码，而是在同一个 Tanner 图上用更便宜的方式近似校验节点输出。
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:50: [formula_ref] | 讲解符号乘积 | “符号规则” | 给符号公式，并说明硬件中用符号位异或。 |
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:52: [formula_ref] | 讲解归一化 Min-Sum | “归一化 Min-Sum” | 给 $\alpha$ 缩放公式，说明 $\alpha<1$ 用于降低过度自信。 |
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:53: [formula_ref] | 讲解偏移 Min-Sum | “偏移 Min-Sum” | 给 $\beta$ 偏移公式，说明 offset 太大会压掉弱消息。 |
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:58: [formula_ref] 这张表只表示最低覆盖。正文还会把 Min-Sum 的硬件 min1/min2 实现、饱和策略和失败定位单独展开，避免只停留在公式层面。
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:75: [table_or_figure] | Table 5.3.2-1 | `tables/table_0013.csv/html` | lifting size set；T8.3 已全文复现。 |
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:76: [table_or_figure] | Table 5.3.2-2/3 | `tables/table_0014.csv/html`、`tables/table_0015.csv/html` | BG1/BG2 shift table；T8.3 已图片化完整复现。 |
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:82: [formula_ref] 先回看 SPA 校验节点公式。对校验节点 $c_i$，输出给变量 $v_j$ 的消息是：
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:167: [formula_ref] 用公式写为：
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:379: [formula_ref] RTL bit-exact 验证要单独覆盖 min1/min2，因为这是与数学公式最容易脱节的地方。建议生成包含 `inputs`、`target_edge`、`sign_all`、`sign_excluding_target`、`min1`、`idx_min1`、`min2`、`selected_min`、`scaled_or_offset_value`、`saturated_output` 的 dump。
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:383: [formula_ref] 1. Min-Sum 从 SPA 校验节点公式中保留了哪两个核心结构？
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:416: [table_or_figure] | 图表资产 | `tools/figures/render_ldpc_min_sum_variants.py` 生成 `docs/L2/assets/T8.6_LDPC_MS_NMS_OMS_compare.png`。 |
+docs/L2/T8.6_LDPC_MS_NMS_OMS.md:425: [table_or_figure] 1. 3GPP TS 38.212 Rel-19 `38212-j30`, “NR; Multiplexing and channel coding”, §5.3.2, Table 5.3.2-1, Table 5.3.2-2, Table 5.3.2-3.
+docs/L2/T8.7_layered_LDPC_decoding_schedule.md:26: [formula_ref] | T8.4 Tanner 图 | 知道 $H$ 的一行是一条校验方程，一列是变量节点，$H_{i,j}=1$ 是边。 |
+docs/L2/T8.7_layered_LDPC_decoding_schedule.md:46: [formula_ref] 这张表只表示最低覆盖。正文还会补 syndrome/CRC 边界、Zc 地址公式、伪代码和常见错误。
+docs/L2/T8.7_layered_LDPC_decoding_schedule.md:55: [table_or_figure] | Table 5.3.2-1 | `tables/table_0013.csv/html` | lifting size set；T8.3 已全文复现。 |
+docs/L2/T8.7_layered_LDPC_decoding_schedule.md:56: [table_or_figure] | Table 5.3.2-2/3 | `tables/table_0014.csv/html`、`tables/table_0015.csv/html` | BG1/BG2 shift table；T8.3 已图片化完整复现。 |
+docs/L2/T8.7_layered_LDPC_decoding_schedule.md:130: [formula_ref] 一个 row group 不是一条 bit-level 校验方程，而是一组 $Z_c$ 条规律相似的校验行。若某个 row group 连接多个 column group，每个连接都有一个 shift value。处理该 layer 时，硬件会对 local index：
+docs/L2/T8.7_layered_LDPC_decoding_schedule.md:188: [unverified] 下面的伪代码以 layered Min-Sum 为例，强调调度和存储，不展开 T8.6 的 min1/min2 内部细节。
+docs/L2/T8.7_layered_LDPC_decoding_schedule.md:283: [table_or_figure] | layer 顺序错 | syndrome 曲线异常，特定 BG/Zc 才失败 | `layer`、row group、edge list | 与设计选定的 layer order 以及 TS Table 5.3.2-2/3 的 row/column/shift 连接关系对齐；不要把 TS 表行序写成协议强制译码顺序。 |
+docs/L2/T8.7_layered_LDPC_decoding_schedule.md:316: [table_or_figure] | $Z_c$ 和 shift value 决定 layer 内 bit-level 地址 | TS 38.212 §5.3.2、Table 5.3.2-1/2/3 | T8.3 已重建 lifting set 和 BG shift table。 |
+docs/L2/T8.7_layered_LDPC_decoding_schedule.md:324: [table_or_figure] | 协议来源 | TS 38.212 Rel-19 `38212-j30` §5.3.2、Table 5.3.2-1/2/3；本节调度为实现策略。 |
+docs/L2/T8.7_layered_LDPC_decoding_schedule.md:325: [table_or_figure] | 图表资产 | `tools/figures/render_ldpc_layered_schedule.py` 生成 `docs/L2/assets/T8.7_LDPC_layered_schedule_flow.png`。 |
+docs/L2/T8.7_layered_LDPC_decoding_schedule.md:332: [table_or_figure] 1. 3GPP TS 38.212 Rel-19 `38212-j30`, “NR; Multiplexing and channel coding”, §5.3.2, Table 5.3.2-1, Table 5.3.2-2, Table 5.3.2-3.
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:14: [formula_ref] - 用含 2 个元素的伽罗瓦域（Galois Field with 2 elements, GF(2)）syndrome 判断哪些校验方程失败。
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:34: [formula_ref] 如果只记一件事：本节每个数字都代表一条“证据”。LLR 的符号告诉译码器更相信 0 还是 1，LLR 的幅度告诉译码器有多相信，CN 消息告诉某个校验方程对某个比特的外部约束，syndrome 告诉硬判决是否满足所有校验方程。
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:59: [table_or_figure] | Table 5.3.2-1 | `3GPP_Rel19/processed/TS_38.212_38212-j30/tables/table_0013.csv/html` | lifting size set；T8.3 已全文复现。 |
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:60: [table_or_figure] | Table 5.3.2-2/3 | `3GPP_Rel19/processed/TS_38.212_38212-j30/tables/table_0014.csv/html`、`table_0015.csv/html` | BG1/BG2 shift table；T8.3 已图片化完整复现。 |
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:88: [formula_ref] | CN | 连接的 VN | 对应校验方程 |
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:146: [formula_ref] 这里 $v_2$ 的 LLR 为 $+0.4$，虽然判成 0，但幅度小，表示这个 0 不够可靠；$v_5$ 的 LLR 为 $-0.5$，判成 1，也不算很可靠。Min-Sum 后面会用校验方程给这些弱位置补充外信息。
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:157: [formula_ref] 式 (5) 的意思是：每一行校验方程把连接到的 hard bits 做异或；结果为 0 表示这一行满足偶校验，结果为 1 表示这一行失败。
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:192: [formula_ref] $w_H(\mathbf{s})$ 是 syndrome weight，也就是 syndrome 中 1 的个数。初始 syndrome weight 为 2，说明 3 条校验方程中有 2 条不满足，译码器不能 early stop。
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:198: [formula_ref] 一般多轮 Min-Sum CN 更新公式应写成 VN-to-CN 消息形式：
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:436: [formula_ref] 在这个 toy decoder 中，syndrome 为 0 表示当前 hard decision 满足所有 LDPC 校验方程，可以 syndrome early stop。真实接收链路还不能只凭 syndrome 交付数据：信息位抽取、filler removal、码块（Code Block, CB）循环冗余校验（Cyclic Redundancy Check, CRC）条件检查、CB 拼接和传输块（Transport Block, TB）CRC 仍然有各自边界。
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:630: [formula_ref] 4. CN 给某条边的消息必须是外信息，只能使用同一校验方程中其他变量的证据；使用 $v_2$ 自己会把自身证据绕回自身。
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:639: [table_or_figure] | 真实 NR LDPC $H$ 来自 BG、$Z_c$ 和 shift table | TS 38.212 §5.3.2 | `content.md` 行 948-989；T8.3 已重建 Table 5.3.2-1/2/3。 |
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:651: [table_or_figure] | 图表资产 | `tools/figures/render_ldpc_numeric_walkthrough.py` 生成 `docs/L2/assets/T8.8_LDPC_numeric_walkthrough.png`。 |
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:655: [formula_ref] | 审核经理复核 | 初审 Critical=0、Important=3；已修复“列空间”数学术语误用、CRC mask 控制信道语境混入数据信道排查、CN 公式容易误解为每轮只用 channel LLR，以及图片说明拆行问题。复核确认 Critical=0、Important=0；图片 Minor 已关闭。 |
+docs/L2/T8.8_NR_LDPC_decoder_numeric_walkthrough.md:660: [table_or_figure] 1. 3GPP TS 38.212 Rel-19 `38212-j30`, “NR; Multiplexing and channel coding”, §5.3.2, Table 5.3.2-1, Table 5.3.2-2, Table 5.3.2-3.
+docs/L2/T9.1_NR_LDPC_rate_recovery_overview.md:41: [table_or_figure] | 冗余版本 | “RV 起点与窗口选择” | 解释 RV 改变扫描起点，不在本节完整复现 Table 5.4.2.1-2 数值。 |
+docs/L2/T9.1_NR_LDPC_rate_recovery_overview.md:66: [unverified] - 当前 `content.md` 在 §5.4.2.1 的若干公式符号抽取不完整，因此本节只使用已核验的章节语义和本地行号。`k_0` 具体表值、Table 5.4.2.1-1/2 的完整重建留给后续需要 bit-exact 表值的章节。
+docs/L2/T9.1_NR_LDPC_rate_recovery_overview.md:139: [unverified] 本节不展开具体 interleaver 公式的每个索引，T9.2 会继续细化。这里要先建立边界：**bit deinterleaver 只改变这 $E$ 个 LLR 的内部顺序，不决定它们属于 circular buffer 的哪些地址；地址由 bit selection/RV 扫描决定。**
+docs/L2/T9.1_NR_LDPC_rate_recovery_overview.md:184: [unverified] 本节不复现 Table 5.4.2.1-2 的具体起点数值，因为本地 `content.md` 的公式符号抽取不完整。后续若 T9.3 要使用具体 RV 起点表，会先从 `source.docx`、表格 HTML/CSV 或 Word XML 重建表格，再写入正文。
+docs/L2/T9.1_NR_LDPC_rate_recovery_overview.md:454: [formula_ref] 定点化关注的不是公式本身，而是证据累积是否被错误量化。
+docs/L2/T9.1_NR_LDPC_rate_recovery_overview.md:537: [unverified] | 编码后比特写入 circular buffer | TS 38.212 Rel-19 §5.4.2.1 | `3GPP_Rel19/processed/TS_38.212_38212-j30/content.md:1179-1183` | 已核验语义，公式符号抽取不完整。 |
+docs/L2/T9.1_NR_LDPC_rate_recovery_overview.md:538: [formula_ref] | `E_r` 与 CB scheduling/CBGTI、层数、调制阶数和可用 coded bits 相关 | TS 38.212 Rel-19 §5.4.2.1 | `3GPP_Rel19/processed/TS_38.212_38212-j30/content.md:1251-1287` | 已核验语义，具体公式需 Word XML 复核后重建。 |
+docs/L2/T9.1_NR_LDPC_rate_recovery_overview.md:539: [table_or_figure] | RV 取值 0/1/2/3 并决定起点表 | TS 38.212 Rel-19 §5.4.2.1 Table 5.4.2.1-2 | `3GPP_Rel19/processed/TS_38.212_38212-j30/content.md:1289-1309` | 已核验章节存在；表值未在本节复现。 |
+docs/L2/T9.2_NR_LDPC_circular_buffer_states.md:55: [formula_ref] | 解释 repetition | “Repetition 与 LLR 累加” | 给浮点和定点饱和公式。 |
+docs/L2/T9.2_NR_LDPC_circular_buffer_states.md:81: [table_or_figure] - 本节不重建 Table 5.4.2.1-1/2 的具体数值。涉及具体 RV 起点和 HARQ 生命周期的表格重建留给 T9.3。
+docs/L2/T9.2_NR_LDPC_circular_buffer_states.md:95: [formula_ref] 式 (1) 回答的问题是：第 $t$ 个被接收并反交织后的 LLR 应写回哪个 circular buffer 地址。$k_0$ 是 RV 相关起点，$s_t$ 是扫描过程中跳过不可发送或 filler 位置后的有效步数，$N_{\mathrm{cb}}$ 是实际 circular buffer 长度。真实协议公式比这个抽象式更细，本节只用它解释接收端对象关系。
+docs/L2/T9.2_NR_LDPC_circular_buffer_states.md:478: [unverified] | LDPC 分段包含 lifting size、filler bits 插入入口 | TS 38.212 Rel-19 §5.2.2 | `3GPP_Rel19/processed/TS_38.212_38212-j30/content.md:717-805` | 已核验语义；部分公式变量抽取不完整。 |
+docs/L2/T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md:64: [table_or_figure] | TS 38.212 §5.4.2.1 | `3GPP_Rel19/processed/TS_38.212_38212-j30/content.md:1179-1309` | LDPC bit selection、`Ncb`、`E_r`、CBGTI 未调度 CB、`rvid` 取值和 Table 5.4.2.1-2 `k0` 起点。 |
+docs/L2/T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md:75: [unverified] - TS 38.212 的 `content.md` 对 Table 5.4.2.1-2 的公式符号抽取不完整，`tables/table_0016.csv` 和 `table_0017.csv` 也未能保留完整公式内容。因此本节复现的是人工核验后的协议公式形式，并把真实数值例子写成 toy 参数，不冒充 bit-exact 3GPP 向量。
+docs/L2/T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md:155: [table_or_figure] TS 38.212 §5.4.2.1 把 `rvid` 定义为本次 transmission 的 redundancy version number，取值为 `0,1,2,3`。协议随后用 Table 5.4.2.1-2 根据 `rvid` 和 LDPC base graph 给出 starting position `k0`。接收端把这个过程反过来理解：`rvidx` 先决定 `k0`，`k0` 再决定本次接收 LLR 应回填到 circular buffer 的哪段地址。
+docs/L2/T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md:157: [table_or_figure] 人工复核后的 Table 5.4.2.1-2 公式形式如下。这里的 $N_{\mathrm{cb}}$ 是当前 CB 的 circular buffer 长度，$Z_c$ 是 lifting size，$\lfloor\cdot\rfloor$ 表示向下取整。`k0` 需要按 $Z_c$ 对齐；如果漏掉 $Z_c$，`k0` 可能不是 lifting size 的整数倍，RV 起点会落在错误的 lifted column 边界上。
+docs/L2/T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md:200: [formula_ref] CBG partial retransmission 是本节区别于 LTE T7.3 的重点。它不改变单个 CB 的 rate recovery 公式，而是在 rate recovery 之前先决定“哪些 CB 本次有 LLR 输入”。
+docs/L2/T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md:581: [table_or_figure] | `rvid` 取值为 0、1、2、3，并按 Table 5.4.2.1-2 和 base graph 给出 `k0` | TS 38.212 §5.4.2.1 | `3GPP_Rel19/processed/TS_38.212_38212-j30/content.md:1289-1309`；`source.docx` 中 Table 5.4.2.1-2 原表 |
+docs/L2/T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md:596: [unverified] | 协议表复现 | 已在正文修正并复现 Table 5.4.2.1-2 的 `rvid/BG/k0` 公式形式，包含 $Z_c$ 对齐项；本地 `content.md` 和 `table_0016/0017` 抽取不完整，因此使用人工复核公式并保留本地证据说明。 |
+docs/L2/T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md:600: [formula_ref] | 审核经理 | 首轮审查结论 `Critical=1, Important=3, Minor=2`；已修复 `k0` 公式缺 $Z_c$、toy repeat 不自洽、CBGFI 边界遗漏、`held_cbg_count` 统计歧义。复审剩余 `Important=1` 为读图说明旧地址残留，已修正为 RV2 覆盖地址 3-6、addr3 重复。 |
+docs/L2/T9.4_NR_LDPC_bit_deinterleaving.md:38: [formula_ref] | 精读 TS 38.212 bit interleaving/rate matching | “资料与协议边界”“协议公式与接收端反操作” | 给出 §5.4.2.2 索引关系和接收端逆关系。 |
+docs/L2/T9.4_NR_LDPC_bit_deinterleaving.md:62: [unverified] - TS 38.212 的 `content.md` 对 §5.4.2.2 的数学符号抽取不完整，但文字保留了“bit sequence interleaved to bit sequence, where value is modulation order”的结构。这里按 38.212 的标准索引关系重写为清晰公式，并用 toy 例子验证。
+docs/L2/T9.4_NR_LDPC_bit_deinterleaving.md:63: [formula_ref] - 式 (4)/(5) 的人工转写证据已固化到 `docs/audits/T9.4_NR_LDPC_bit_interleaving_formula_evidence.md`：该文件记录 `source.docx`/`document.xml` SHA-256、`sections.jsonl` 的 `paragraph_index=684`、`document.xml` 段落 8955-8959 和旧式公式对象关系 ID `rId887/rId621/rId890/rId892/rId894/rId896/rId898/rId900`。当前 extractor 未自动转出旧式 Equation.3 公式，因此正文公式标注为人工复核重建。
+docs/L2/T9.4_NR_LDPC_bit_deinterleaving.md:64: [unverified] - 本节不复现 TS 38.214 MCS 表值。MCS 表如何把索引变成 $Q_m$ 在模块 11 或系统配置章节再展开；本节只要求 descriptor 给出的 $Q_m$ 正确。
+docs/L2/T9.4_NR_LDPC_bit_deinterleaving.md:80: [formula_ref] ## 协议公式与接收端反操作
+docs/L2/T9.4_NR_LDPC_bit_deinterleaving.md:392: [formula_ref] | §5.4.2.2 公式按 Word 段落和旧式公式对象人工复核重建 | TS 38.212 §5.4.2.2 | `docs/audits/T9.4_NR_LDPC_bit_interleaving_formula_evidence.md` |
+docs/L2/T9.4_NR_LDPC_bit_deinterleaving.md:406: [formula_ref] | 审核经理 | 首轮复核 Critical=0、Important=1、Minor=2；Important 为 §5.4.2.2 公式证据链不足，已新增 `docs/audits/T9.4_NR_LDPC_bit_interleaving_formula_evidence.md` 并回链正文；Minor 图中文字和记录状态已修复，待复审确认。 |
+docs/L2/T9.5_NR_LDPC_reassembly_TB_CRC.md:28: [formula_ref] | T3.1 CRC 家族 | 知道 CRC 是 GF(2) 多项式余数检查，CRC pass 不等于所有上下文一定正确。 |
+docs/L2/T9.5_NR_LDPC_reassembly_TB_CRC.md:386: [formula_ref] 这个 toy 不实现真实 CRC 多项式。真实 CRC 计算已在 T3.1 复现；本节只验证输入边界和拼接顺序。
+docs/L2/T9.6_NR_LDPC_decoder_edge_cases.md:139: [formula_ref] \rightarrow \mathrm{wrong\ check\ equations}
+docs/L2/T9.6_NR_LDPC_decoder_edge_cases.md:303: [formula_ref] 如果地址正确，这个公式表示“同一个 bit 的独立证据相加”。如果地址错误，它就变成“不同 bit 的证据被强行相加”。定点饱和会让这种错误更难诊断，因为错误累加后的幅度可能很大，译码器会以很高置信度相信一个错误位置。
+docs/L2/T9.6_NR_LDPC_decoder_edge_cases.md:330: [table_or_figure] | Zc 选择边界 | $K'$ 刚好跨过 lifting size set 门限 | 矩阵尺寸、layer count、地址深度错；可能越界或 syndrome 异常 | `Zc`, `iLS`, `Kb`, `K`, `filler_count`, table id | 对照 T8.3 Table 5.3.2-1/2/3 复算 | 修正 Zc 选择和 shift table 列选择。 |
+docs/L2/T9.6_NR_LDPC_decoder_edge_cases.md:373: [table_or_figure] 2. 对照 T8.3 Table 5.3.2-1 重算 `Zc` 和 `iLS`。
+docs/L2/T9.6_NR_LDPC_decoder_edge_cases.md:374: [table_or_figure] 3. 对照 BG1/BG2 shift table 检查使用的是 Table 5.3.2-2 还是 Table 5.3.2-3。
+docs/L2/T9.6_NR_LDPC_decoder_edge_cases.md:392: [formula_ref] 2. 用 T9.3 的 k0 公式生成 expected address trace。
+docs/L2/T9.6_NR_LDPC_decoder_edge_cases.md:540: [table_or_figure] | NR LDPC H 来自 BG、Zc 和 shift table | TS 38.212 §5.3.2 | `content.md:948-989`；T8.3 已复现 Table 5.3.2-1/2/3 |

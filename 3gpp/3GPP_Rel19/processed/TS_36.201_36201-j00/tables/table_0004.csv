@@ -1,0 +1,55 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2006-10,-,-,-,,,Draft version created,0.0.1
+2006-10,-,-,-,,,Endorsed by RAN1,0.1.0
+2006-11,-,-,-,,,Editors version at RAN1#47,0.1.1
+2006-11,-,-,-,,,Revised editors version at RAN1#47,0.1.2
+2007-02,-,-,-,,,Editors version at RAN1#48,0.2.1
+2007-02,-,-,-,,,Endorsed by RAN1#48,0.3.0
+2007-02,-,-,-,,,Editors version after RAN1#48,0.3.1
+2007-02,-,-,-,,,Editors version after RAN1#48,0.3.2
+2007-03,RAN#35,RP-070168,-,,,For information at RAN#35,1.0.0
+2007-05,-,-,-,,,Editors version at RAN1#49,1.0.1
+2007-05,-,-,-,,,Editors version at RAN1#49,1.0.2
+2007-05,-,-,-,,,Endorsed by RAN1#49,1.1.0
+2007-05,-,-,-,,,Editors version after RAN1#49,1.1.1
+2007-06,-,-,-,,,Endorsed by RAN1#49bis,1.2.0
+2007-09,-,-,-,,,Editors version after RAN1#50,1.2.1
+2007-09,-,-,-,,,Editors version after RAN1#50,1.2.2
+2007-09,RAN#37,RP-070728,-,,,For approval at RAN#37,2.0.0
+2007-09,RAN#37,RP-070728,,,,Approved version,8.0.0
+2007-11,RAN#38,RP-070949,0001,1,,Alignment of 36.201 with other LTE L1 specifications,8.1.0
+2008-12,RAN#42,RP-080981,0002,-,,Clarification of modular operation,8.2.0
+2009-03,RAN#43,RP-090233,0003,-,,Removing inverse modulo operation,8.3.0
+2009-12,RAN#46,RP-091177,0004,1,,Editorial corrections to 36.201,9.0.0
+2010-03,RAN#47,RP-100210,0005,1,,Introduction of LTE MBMS,9.1.0
+2010-12,RAN#50,RP-101320,0006,-,,Introduction of Rel-10 LTE-Advanced features in 36.201,10.0.0
+2012-09,SP#57,-,-,-,,Update to Rel-11 version (MCC),11.0.0
+2012-12,RAN#58,RP-121846,0007,-,,Introduction of Rel-11 features,11.1.0
+2014-09,SP#65,-,-,-,,Update to Rel-12 version (MCC),12.0.0
+2014-12,RAN#66,RP-142104,0008,3,,"Introduction of TDD-FDD CA, Small-Cell Enhancements, Dual Connectivity, eIMTA, WLAN/3GPP interworking",12.1.0
+2015-03,RAN#67,RP-150366,0009,2,,Introduction of ProSe,12.2.0
+2015-12,RAN#70,RP-152027,0012,-,,Introduction of Rel-13 eCA,13.0.0
+2015-12,RAN#70,RP-152025,0013,-,,Introduction of EB/FD-MIMO,13.0.0
+2015-12,RAN#70,RP-152026,0010,3,,Introduction of LAA,13.0.0
+2016-03,RAN#71,RP-160361,0011,1,B,Introduction of LC/EC MTC,13.1.0
+2016-06,RAN#72,RP-161067,0014,1,B,Introduction of NB-IoT,13.2.0
+2016-09,RAN#73,RP-161571,0015,-,B,Introduction of eLAA,14.0.0
+2016-09,RAN#73,RP-161570,0016,1,B,Introduction of V2V,14.0.0
+2017-03,RAN#75,RP-170605,0017,-,B,Introduction of Uplink Capacity Enhancements for LTE,14.1.0
+2017-03,RAN#75,RP-170607,0018,-,B,Introduction of eFD-MIMO,14.1.0
+2017-03,RAN#75,RP-170608,0019,-,B,Introduction of eMBMS enhancements for LTE,14.1.0
+2017-03,RAN#75,RP-170613,0020,-,F,Corrections for V2V,14.1.0
+2017-03,RAN#75,RP-170610,0022,-,A,Correction for NB-IoT channel coding,14.1.0
+2018-03,RAN#79,RP-180197,0023,-,B,Introduction of shortened processing time and shortened TTI into TS36.201,15.0.0
+2018-06,RAN#80,RP-181180,0024,1,B,Introduction of Enhancements to LTE operation in unlicensed spectrum into 36.201,15.1.0
+2018-06,RAN#80,RP-181173,0025,1,B,Introduction of Downlink 1024QAM into 36.201,15.1.0
+2018-06,RAN#80,RP-181176,0026,-,B,Introduction of V2X Phase 2 enhancements into 36.201,15.1.0
+2018-12,RAN#82,RP-182524,0027,-,F,Introduction of Even Further Enhanced MTC for LTE into 36.201,15.2.0
+2018-12,RAN#82,RP-182519,0028,-,F,Introduction of NB-IoT TDD into 36.201,15.2.0
+2020-03,RAN#87-e,RP-200181,0029,-,F,Correction to measurements for inter-RAT handover,15.3.0
+2020-03,RAN#87-e,RP-200178,0030,-,F,"Inclusion of NWUS, MWUS, and RSS in TS 36.201",15.3.0
+2020-06,RAN#88-e,RP-200701,0031,1,B,Corrections to LTE-based 5G terrestrial broadcast,16.0.0
+2022-03,SA#95-e,-,-,-,-,Update to Rel-17 version (MCC),17.0.0
+2024-03,SA#103,-,-,-,-,Update to Rel-18 version (MCC),18.0.0
+2025-09,SA#109,-,-,-,-,Update to Rel-19 version (MCC),19.0.0

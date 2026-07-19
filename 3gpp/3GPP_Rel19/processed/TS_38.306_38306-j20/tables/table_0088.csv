@@ -1,0 +1,25 @@
+UE-NR-Capability orUE-MRDC-Capability,Classification
+eventA-MeasAndReport,PSCell
+dl-SchedulingOffset-PDSCH-TypeA (Note3),Associated serving cells
+dl-SchedulingOffset-PDSCH-TypeB (Note3),Associated serving cells
+dynamicSFI (Note3),Associated serving cells
+handoverInterF,PCell
+handoverLTE-EPC,PCell
+handoverLTE-5GC,PCell
+intraAndInterF-MeasAndReport,PSCell
+logicalChannelSR-DelayTimer(Note2),Associated serving cells
+longDRX-Cycle,All serving cells
+multipleConfiguredGrants(Note1),Associated serving cells
+multipleSR-Configurations,Per serving cell
+secondaryDRX-Group-r16,All serving cells
+sftd-MeasNR-Cell,PCell
+sftd-MeasNR-Neigh,PCell
+sftd-MeasNR-Neigh-DRX,PCell
+sftd-MeasPSCell,PCell
+sftd-MeasPSCell-NEDC,PCell
+shortDRX-Cycle,All serving cells
+skipUplinkTxDynamic,Per serving cell
+twoDifferentTPC-Loop-PUCCH (Note3),Associated serving cells
+twoDifferentTPC-Loop-PUSCH (Note3),Associated serving cells
+ul-SchedulingOffset (Note3),Associated serving cells
+"NOTE 1:The associated serving cells including the serving cell(s) configured with configured grant.NOTE 2:For a given logical channel, the associated serving cells including the PUCCH cell(s) associated with this logical channel (via schedulingRequestID).NOTE 3:The associated serving cells including both the cell sending the command and the cell applying the command.",

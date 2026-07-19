@@ -1,0 +1,10 @@
+<table>
+  <tr>
+    <td>Definition</td>
+    <td>CSI reference signal received power (CSI-RSRP), is defined as the linear average over the power contributions (in [W]) of the resource elements of the antenna port(s) that carry CSI reference signals configured for RSRP measurements within the considered measurement frequency bandwidth in the configured CSI-RS occasions.For CSI-RSRP determination CSI reference signals transmitted on antenna port 3000 according to TS 38.211 [3] shall be used. If CSI-RSRP is used for L1-RSRP, CSI reference signals transmitted on antenna ports 3000, 3001 can be used for CSI-RSRP determination.For intra-frequency CSI-RSRP measurements, if the measurement gap is not configured, UE is not expected to measure the CSI-RS resource(s) outside of the active downlink bandwidth part.For frequency range 1, the reference point for the CSI-RSRP shall be the antenna connector of the UE. For frequency range 2, CSI-RSRP shall be measured based on the combined signal from antenna elements corresponding to a given receiver branch. For frequency range 1 and 2, if receiver diversity is in use by the UE, the reported CSI-RSRP value shall not be lower than the corresponding CSI-RSRP of any of the individual receiver branches.</td>
+  </tr>
+  <tr>
+    <td>Applicable for</td>
+    <td>If CSI-RSRP is used for L1-RSRP or predicted RSRP,RRC_CONNECTED intra-frequency.Otherwise,RRC_CONNECTED intra-frequency,RRC_CONNECTED inter-frequency</td>
+  </tr>
+</table>

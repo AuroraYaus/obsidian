@@ -1,0 +1,2 @@
+Conditional presence,Explanation
+ul-FreqMax,The field is mandatory present if ul-CarrierFreq (i.e. without suffix) is present and set to maxEARFCN. Otherwise the field is not present.

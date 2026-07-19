@@ -1,0 +1,10 @@
+CSI report number,CSI fields
+CSI report #n,CRI or SSBRI #1 as in Table 6.3.1.1.2-6
+,"CRI or SSBRI #2 as in Table 6.3.1.1.2-6, if reported"
+,…
+,"CRI or SSBRI #  as in Table 6.3.1.1.2-6, if reportedM"
+,RSRP #1 as in Table 6.3.1.1.2-6
+,"Differential RSRP #2 as in Table 6.3.1.1.2-6, if reported"
+,…
+,"Differential RSRP #  as in Table 6.3.1.1.2-6, if reported M"
+"NOTE: The value of  is configured by the higher layer parameter nrofReportedRS. If  is equal to the number of SSB/CSI-RS resources in the corresponding resource set for channel measurement, Differential RSRP #, , corresponds to the ()-th SSB/CSI-RS resources among the remaining  SSB/CSI-RS resources other than the resource corresponding to CRI/SSBRI#1 in the resource set.MMmm=2,…,Mm-1M-1",

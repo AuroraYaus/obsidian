@@ -1,0 +1,4 @@
+Conditional presence,Explanation
+cdma2000-1XRTT,"The field is optionally present, need ON, if the cdma2000-Type = type1XRTT; otherwise it is not present."
+cdma2000-Type,The field is mandatory present if the cdma2000-Type = type1XRTT; otherwise it is not present.
+dualRxTxRedirect,"The field is optionally present, need ON, if dualRxTxRedirectIndicator is present; otherwise it is not present."

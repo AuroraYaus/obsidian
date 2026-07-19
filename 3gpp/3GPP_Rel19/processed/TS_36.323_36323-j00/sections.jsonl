@@ -1,0 +1,151 @@
+{"source": "36323-j00.docx", "section": "650", "title": "Route des Lucioles - Sophia Antipolis", "paragraph_index": 25, "style": "FP"}
+{"source": "36323-j00.docx", "section": "", "title": "Foreword", "paragraph_index": 192, "style": "Heading1"}
+{"source": "36323-j00.docx", "section": "", "title": "1Scope", "paragraph_index": 203, "style": "Heading1"}
+{"source": "36323-j00.docx", "section": "", "title": "2References", "paragraph_index": 205, "style": "Heading1"}
+{"source": "36323-j00.docx", "section": "", "title": "3Definitions and abbreviations", "paragraph_index": 229, "style": "Heading1"}
+{"source": "36323-j00.docx", "section": "", "title": "3.1Definitions", "paragraph_index": 230, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "3.2Abbreviations", "paragraph_index": 236, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "4General", "paragraph_index": 289, "style": "Heading1"}
+{"source": "36323-j00.docx", "section": "", "title": "4.1Introduction", "paragraph_index": 290, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "4.2PDCP architecture", "paragraph_index": 292, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "4.2.1PDCP structure", "paragraph_index": 293, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "4.2.2PDCP entities", "paragraph_index": 303, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "4.3Services", "paragraph_index": 356, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "4.3.1Services provided to upper layers", "paragraph_index": 357, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "4.3.2Services expected from lower layers", "paragraph_index": 366, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "4.4Functions", "paragraph_index": 374, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "4.5Data available for transmission", "paragraph_index": 393, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5PDCP procedures", "paragraph_index": 446, "style": "Heading1"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1PDCP Data Transfer Procedures", "paragraph_index": 447, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.1UL Data Transfer Procedures", "paragraph_index": 448, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2DL Data Transfer Procedures", "paragraph_index": 464, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.1Procedures for DRBs", "paragraph_index": 465, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.1.1Void", "paragraph_index": 466, "style": "Heading5"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.1.2Procedures for DRBs mapped on RLC AM when the reordering function is not used", "paragraph_index": 467, "style": "Heading5"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.1.2aRN procedures for DRBs mapped on RLC AM", "paragraph_index": 506, "style": "Heading5"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.1.3Procedures for DRBs mapped on RLC UM when the reordering function is not used", "paragraph_index": 509, "style": "Heading5"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.1.3aRN procedures for DRBs mapped on RLC UM", "paragraph_index": 520, "style": "Heading5"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.1.4Procedures for DRBs mapped on RLC AM or RLC UM, for LWA bearers and SLRB when the reordering function is used", "paragraph_index": 523, "style": "Heading5"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.1.4.1Procedures when a PDCP PDU is received from the lower layers", "paragraph_index": 535, "style": "Heading6"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.1.4.2Procedures when t-Reordering expires", "paragraph_index": 587, "style": "Heading6"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.1.4.3Procedures when the value of t-Reordering is reconfigured", "paragraph_index": 596, "style": "Heading6"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.2Procedures for SRBs", "paragraph_index": 600, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.2.1Procedures for SRBs when the reordering function is not used", "paragraph_index": 601, "style": "Heading5"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.2.2.2Procedures for SRBs when the reordering function is used", "paragraph_index": 619, "style": "Heading5"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.3SL Data Transmission Procedures", "paragraph_index": 623, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.1.4SL Data Reception Procedures", "paragraph_index": 633, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2Re-establishment procedure", "paragraph_index": 641, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2.1UL Data Transfer Procedures", "paragraph_index": 643, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2.1.1Procedures for DRBs mapped on RLC AM", "paragraph_index": 645, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2.1.2Procedures for DRBs mapped on RLC UM", "paragraph_index": 660, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2.1.3Procedures for SRBs", "paragraph_index": 670, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2.2DL Data Transfer Procedures", "paragraph_index": 675, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2.2.1Procedures for DRBs mapped on RLC AM while the reordering function is not used", "paragraph_index": 676, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2.2.1aProcedures for DRBs mapped on RLC AM while the reordering function is used", "paragraph_index": 684, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2.2.2Procedures for DRBs mapped on RLC UM when the reordering function is not used", "paragraph_index": 693, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2.2.2aProcedures for DRBs mapped on RLC UM when the reordering function is used", "paragraph_index": 701, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2.2.3Procedures for SRBs", "paragraph_index": 710, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.2.2.4Procedures for LWA bearers", "paragraph_index": 716, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.3PDCP Status Report", "paragraph_index": 724, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.3.1Transmit operation", "paragraph_index": 725, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.3.2Receive operation", "paragraph_index": 732, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.4PDCP discard", "paragraph_index": 736, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.4aDuplicate PDCP discard", "paragraph_index": 739, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.5Robust Header Compression and Decompression", "paragraph_index": 751, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.5.1Supported header compression protocols and profiles", "paragraph_index": 752, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.5.2Configuration of ROHC", "paragraph_index": 759, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.5.3Protocol parameters", "paragraph_index": 761, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.5.4Header compression using ROHC", "paragraph_index": 773, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.5.5Header decompression using ROHC", "paragraph_index": 782, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.5.6PDCP Control PDU for interspersed ROHC feedback packet", "paragraph_index": 785, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.5.6.1Transmit Operation", "paragraph_index": 786, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.5.6.2Receive Operation", "paragraph_index": 789, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.6Ciphering and Deciphering", "paragraph_index": 792, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.6.0General", "paragraph_index": 793, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.6.1SL Ciphering and Deciphering for one-to-many communication", "paragraph_index": 803, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.6.2SL Ciphering and Deciphering for one-to-one communication", "paragraph_index": 809, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.6.3Handling of LWA end-marker PDCP Control PDU", "paragraph_index": 813, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.6.3.1Transmit operation", "paragraph_index": 814, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.6.3.2Receive Operation", "paragraph_index": 820, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.7Integrity Protection and Verification", "paragraph_index": 824, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.8Handling of unknown, unforeseen and erroneous protocol data", "paragraph_index": 838, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.9PDCP Data Recovery procedure", "paragraph_index": 841, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.10Status report for LWA", "paragraph_index": 846, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.10.1Transmit operation", "paragraph_index": 847, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.10.2LWA status report", "paragraph_index": 871, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.10.3Receive operation", "paragraph_index": 877, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.11Uplink Data compression and decompression", "paragraph_index": 880, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.11.1UDC protocol", "paragraph_index": 881, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.11.2Configuration of UDC", "paragraph_index": 885, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.11.3UDC header", "paragraph_index": 887, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.11.4Uplink data compression", "paragraph_index": 889, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.11.5Pre-defined dictionary", "paragraph_index": 893, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.11.6UDC buffer reset procedure", "paragraph_index": 895, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.11.7UDC checksum error handling", "paragraph_index": 897, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.11.8PDCP Control PDU for UDC feedback", "paragraph_index": 899, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.12Uplink data switching", "paragraph_index": 902, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.13PDCP Reconfiguration", "paragraph_index": 912, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.14Ethernet header compression and decompression", "paragraph_index": 922, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "5.14.1Supported header compression protocols", "paragraph_index": 923, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.14.2Configuration of EHC", "paragraph_index": 925, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.14.3Protocol parameters", "paragraph_index": 927, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.14.4Header compression using EHC", "paragraph_index": 930, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.14.5Header decompression using EHC", "paragraph_index": 936, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.14.6PDCP Control PDU for EHC feedback packet", "paragraph_index": 938, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "5.14.6.1Transmit Operation", "paragraph_index": 939, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.14.6.2Receive Operation", "paragraph_index": 942, "style": "Heading4"}
+{"source": "36323-j00.docx", "section": "", "title": "5.14.7Simultaneous configuration of ROHC and EHC", "paragraph_index": 945, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6Protocol data units, formats and parameters", "paragraph_index": 951, "style": "Heading1"}
+{"source": "36323-j00.docx", "section": "", "title": "6.1Protocol data units", "paragraph_index": 952, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "6.1.1PDCP Data PDU", "paragraph_index": 953, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.1.2PDCP Control PDU", "paragraph_index": 964, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2Formats", "paragraph_index": 971, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.1General", "paragraph_index": 972, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.2Control plane PDCP Data PDU", "paragraph_index": 975, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.3User plane PDCP Data PDU with long PDCP SN (12 bits)", "paragraph_index": 979, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.4User plane PDCP Data PDU with short PDCP SN (7 bits)", "paragraph_index": 985, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.5PDCP Control PDU for interspersed ROHC feedback packet", "paragraph_index": 989, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.6PDCP Control PDU for PDCP status report", "paragraph_index": 993, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.7Void", "paragraph_index": 1002, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.8RN user plane PDCP Data PDU with integrity protection", "paragraph_index": 1004, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.9User plane PDCP Data PDU with extended PDCP SN (15 bits)", "paragraph_index": 1009, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.10User plane PDCP Data PDU for SLRB", "paragraph_index": 1013, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.11User plane PDCP Data PDU with further extended PDCP SN (18 bits)", "paragraph_index": 1020, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.12PDCP Control PDU for LWA status report", "paragraph_index": 1024, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.13PDCP Control PDU for LWA end-marker packet", "paragraph_index": 1032, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.14User plane PDCP Data PDU with long PDCP SN (12 bits) for UDC", "paragraph_index": 1040, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.15User plane PDCP Data PDU with extended PDCP SN (15 bits) for UDC", "paragraph_index": 1044, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.16User plane PDCP Data PDU with further extended PDCP SN (18 bits) for UDC", "paragraph_index": 1048, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.17PDCP Control PDU for UDC feedback packet", "paragraph_index": 1052, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.2.18PDCP Control PDU for EHC feedback packet", "paragraph_index": 1056, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3Parameters", "paragraph_index": 1060, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.1General", "paragraph_index": 1061, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.2PDCP SN", "paragraph_index": 1064, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.3Data", "paragraph_index": 1068, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.4MAC-I", "paragraph_index": 1075, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.5COUNT", "paragraph_index": 1079, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.6R", "paragraph_index": 1086, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.7D/C", "paragraph_index": 1089, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.8PDU type", "paragraph_index": 1093, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.9FMS", "paragraph_index": 1097, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.10Bitmap", "paragraph_index": 1100, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.11Interspersed ROHC feedback packet", "paragraph_index": 1107, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.12PGK Index", "paragraph_index": 1110, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "5", "title": "LSBs of PGK Identity as specified in TS 33.303 [13].", "paragraph_index": 1112, "style": null}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.13PTK Identity", "paragraph_index": 1113, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.14SDU Type", "paragraph_index": 1116, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.15KD-sess ID", "paragraph_index": 1121, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.16NMP", "paragraph_index": 1124, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.17HRW", "paragraph_index": 1127, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.18P", "paragraph_index": 1130, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.19LSN", "paragraph_index": 1135, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.21FU", "paragraph_index": 1143, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.22FR", "paragraph_index": 1148, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.23Checksum", "paragraph_index": 1153, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "6.3.24FE", "paragraph_index": 1161, "style": "Heading3"}
+{"source": "36323-j00.docx", "section": "", "title": "7Variables, constants and timers", "paragraph_index": 1166, "style": "Heading1"}
+{"source": "36323-j00.docx", "section": "", "title": "7.1State variables", "paragraph_index": 1167, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "7.2Timers", "paragraph_index": 1184, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "7.3Constants", "paragraph_index": 1196, "style": "Heading2"}
+{"source": "36323-j00.docx", "section": "", "title": "Annex A (informative):An example of UDC Checksum calculation", "paragraph_index": 1206, "style": "Heading8"}
+{"source": "36323-j00.docx", "section": "", "title": "Annex B (informative):Change history", "paragraph_index": 1212, "style": "Heading8"}

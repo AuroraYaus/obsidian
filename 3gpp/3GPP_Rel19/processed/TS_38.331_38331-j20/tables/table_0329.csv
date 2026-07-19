@@ -1,0 +1,6 @@
+LTM-TCI-Info field descriptions
+"ltm-NZP-CSI-RS-ResourceSetToAddModListWhen the field ltm-NZP-CSI-RS-ResourceSetToAddModList is configured within an LTM-Candidate IE, this field is absent"
+"ltm-NZP-CSI-RS-ResourceSetToReleaseListWhen the field ltm-NZP-CSI-RS-ResourceSetToReleaseList is configured within an LTM-Candidate IE, this field is absent"
+"ltm-NZP-CSI-RS-ResourceToAddModListWhen the field ltm-NZP-CSI-RS-ResourceToAddModList is configured within an LTM-Candidate IE, this field is absent"
+"ltm-NZP-CSI-RS-ResourceToReleaseListWhen the field ltm-NZP-CSI-RS-ResourceToReleaseList is configured within an LTM-Candidate IE, this field is absent"
+unifiedTCI-StateTypeIndicates the unified TCI states type the UE is configured for this LTM candidate configuration. The value separate means this LTM candidate configuration is configured with ltm-DL-OrJointTCI-StateToAddModList for DL TCI states and ltm-UL-TCI-StateToAddModList for UL TCI states. The value joint means this LTM candidate configuration is configured with ltm-DL-OrJointTCI-StateToAddModList for joint TCI states for UL and DL operation. The network always configures this field.

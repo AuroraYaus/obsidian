@@ -1,0 +1,6 @@
+Field,Bitwidth
+Rank Indicator,"min2,log2nRI"
+Wide-band CQI,4
+Subband differential CQI,2
+"Indicator of the total number of non-zero coefficients summed across all layers, and all CSI-RS resources if configured, KNZ",if max allowed rank is 1;otherwiselog22βM1Lmaxlog222βM1Lmax
+"NOTE: is the number of allowed rank indicator values according to Clause 5.2.2.2.8 TS 38.214 [6], is the maximum of  for all  configured  combinations, where, , and  are given by Clause 5.2.2.2.8 in TS 38.214 [6]. The values of the rank indicator field are mapped to allowed rank indicator values with increasing order, where '0' is mapped to the smallest allowed rank indicator value. The values of the  indicator field are mapped to the allowed values of , according to Clause 5.2.2.2.8 TS 38.214 [6], with increasing order, where '0' is mapped to .nRI Lmaxn=1NTRPLnNLLn Lnn=1,…, NTRPM1βKNZKNZKNZ=1",

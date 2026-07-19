@@ -1,0 +1,71 @@
+<table>
+  <tr>
+    <td>PRACH-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>edt-PRACH-ParametersListCEConfigures PRACH parameters for each CE level applicable to a UE performing EDT. If included, the number of entries is same as number of entries in prach-ParametersListCE. The first entry in the list is the PRACH parameters for CE level 0, the second entry in the list is the PRACH parameters for CE level 1, and so on. The parameters maxNumPreambleAttemptCE, numRepetitionPerPreambleAttempt, mpdcch-NumRepetition-RA, prach-HoppingConfig included in prach-ParametersListCE for CE level X are also applicable for EDT.</td>
+  </tr>
+  <tr>
+    <td>initial-CE-levelIndicates initial PRACH CE level at random access, see TS 36.321 [6]. If not configured, UE selects PRACH CE level based on measured RSRP level, see TS 36.321 [6].</td>
+  </tr>
+  <tr>
+    <td>highSpeedFlagParameter: High-speed-flag, see TS 36.211 [21], clause 5.7.2]. TRUE corresponds to Restricted set and FALSE to Unrestricted set.</td>
+  </tr>
+  <tr>
+    <td>maxNumPreambleAttemptCEMaximum number of preamble transmission attempts per CE level. See TS 36.321 [6].If the field is absent, the UE shall use the default value n3.</td>
+  </tr>
+  <tr>
+    <td>mpdcch-NarrowbandsToMonitorNarrowbands to monitor for MPDCCH for RAR, see TS 36.213 [23], clause 6.2. Field values (1..maxAvailNarrowBands-r13) correspond to narrowband indices (0..maxAvailNarrowBands-r13-1) as specified in TS 36.211 [21].</td>
+  </tr>
+  <tr>
+    <td>mpdcch-NumRepetition-RAMaximum number of repetitions for MPDCCH common search space (CSS) for RAR, Msg3 and Msg4, see TS 36.211 [21].</td>
+  </tr>
+  <tr>
+    <td>mpdcch-startSF-CSS-RAStarting subframe configuration for MPDCCH common search space (CSS), including RAR, Msg3 retransmission, PDSCH with contention resolution and PDSCH with CCCH MAC SDU, see TS 36.211 [21] and TS 36.213 [23]. Value v1 corresponds to 1, value v1dot5 corresponds to 1.5, and so on.</td>
+  </tr>
+  <tr>
+    <td>numRepetitionPerPreambleAttemptNumber of PRACH repetitions per attempt for each CE level, See TS 36.211 [21].</td>
+  </tr>
+  <tr>
+    <td>prach-ConfigIndexParameter: prach-ConfigurationIndex, see TS 36.211 [21], clause 5.7.1.</td>
+  </tr>
+  <tr>
+    <td>prach-ConfigIndexHighSpeedParameter: prach-ConfigurationIndexHighSpeed, see TS 36.211 [21], clause 5.7.1. If this field is present, the UE shall ignore prach-ConfigIndex.</td>
+  </tr>
+  <tr>
+    <td>prach-FreqOffsetParameter: prach-FrequencyOffset, see TS 36.211 [21], clause 5.7.1. For TDD the value range is dependent on the value of prach-ConfigIndex.</td>
+  </tr>
+  <tr>
+    <td>prach-FreqOffsetHighSpeedParameter: prach-FrequencyOffsetHighSpeed, see TS 36.211 [21], clause 5.7.1. For TDD the value range is dependent on the value of prach-ConfigIndexHighSpeed. If this field is present, the UE shall ignore prach-FreqOffset.</td>
+  </tr>
+  <tr>
+    <td>prach-HoppingConfigCoverage level specific frequency hopping configuration for PRACH.</td>
+  </tr>
+  <tr>
+    <td>prach-HoppingOffsetParameter: PRACH frequency hopping offset, expressed as a number of resource blocks, see TS 36.211 [21], clause 5.7.1.</td>
+  </tr>
+  <tr>
+    <td>prach-ParametersListCEConfigures PRACH parameters for each CE level. The first entry in the list is the PRACH parameters of CE level 0, the second entry in the list is the PRACH parameters of CE level 1, and so on.</td>
+  </tr>
+  <tr>
+    <td>prach-StartingSubframePRACH starting subframe periodicity, expressed in number of subframes available for preamble transmission (PRACH opportunities), see TS 36.211 [21]. Value sf2 corresponds to 2 subframes, sf4 corresponds to 4 subframes and so on. EUTRAN configures the PRACH starting subframe periodicity larger than or equal to the number of PRACH repetitions per attempt for each CE level (numRepetitionPerPreambleAttempt).If the field is absent, the value is determined implicitly in TS 36.211 [21], clause 5.7.1.</td>
+  </tr>
+  <tr>
+    <td>prach-TxDurationDuration of PRACH segment transmission in NTN transmission, see TS 36.213 [23]. Unit in duration of one preamble transmission including guard period (TCP+TSEQ+TGP).Value n1 corresponds to the duration of 1 preamble transmission, value n2 corresponds to the duration of 2 preambles transmission and so on.</td>
+  </tr>
+  <tr>
+    <td>rootSequenceIndexParameter: RACH_ROOT_SEQUENCE, see TS 36.211 [21], clause 5.7.1.</td>
+  </tr>
+  <tr>
+    <td>rootSequenceIndexHighSpeedThe field indicates starting logical root sequence index used to derive the 64 random access preambles based on restricted set type B in high speed scenario, see TS 36.211 [21], clause 5.7.2. If this field is present, the UE shall generate random access preambles based on restricted set type B and ignore rootSequenceIndex.</td>
+  </tr>
+  <tr>
+    <td>rsrp-ThresholdsPrachInfoListThe criterion for BL UEs and UEs in CE to select PRACH resource set. Up to 3 RSRP threshold values are signalled to determine the CE level for PRACH, see TS 36.213 [23]. The first element corresponds to RSRP threshold of CE level 1, the second element corresponds to RSRP threshold of CE level 2 and so on, see TS 36.321 [6]. The UE shall ignore this field if only one CE level, i.e. CE level 0, is configured in prach-ParametersListCE. The number of RSRP thresholds present in rsrp-ThresholdsPrachInfoList is equal to the number of CE levels configured in prach-ParametersListCE minus one.A UE that supports powerClass-14dBm shall correct the RSRP threshold values before applying them as follows:RSRP threshold = Signalled RSRP threshold - min{0, (14-min(23, P-Max))} where P-Max is the value of p-Max field in SystemInformationBlockType1-BR.</td>
+  </tr>
+  <tr>
+    <td>zeroCorrelationZoneConfigParameter: NCS configuration, see TS 36.211 [21], clause 5.7.2: table 5.7.2-2, for preamble format 0..3 and TS 36.211 [21], clause 5.7.2: table 5.7.2-3, for preamble format 4.</td>
+  </tr>
+  <tr>
+    <td>zeroCorrelationZoneConfigHighSpeedThe field indicates NCS configuration for the restricted set type B in high speed scenario, see TS 36.211 [21], clause 5.7.2. If this field is present, the UE shall generate random access preambles based on restricted set type B and ignore zeroCorrelationZoneConfig.</td>
+  </tr>
+</table>

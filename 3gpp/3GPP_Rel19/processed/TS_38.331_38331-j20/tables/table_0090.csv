@@ -1,0 +1,13 @@
+UEInformationRequest-IEs field descriptions
+coarseLocationRequestThis field is used to request UE to report coarse location information.
+connEstFailReportReqThis field is used to indicate whether the UE shall report information about the connection failure.
+csi-LogMeasReportReqThis field is used to indicate whether the UE shall report information about CSI radio measurements logged in RRC_CONNECTED for network-side data collection.
+"flightPathInfoReqThis field is used to indicate whether the UE shall report the flight path information, if available, and to specify the flight path information report configuration."
+"idleModeMeasurementReqThis field indicates that the UE shall report the idle/inactive measurement information, if available, to the network in the UEInformationResponse message."
+logMeasReportReqThis field is used to indicate whether the UE shall report information about logged measurements.
+mobilityHistoryReportReqThis field is used to indicate whether the UE shall report information about mobility history information.
+ra-ReportReqThis field is used to indicate whether the UE shall report information about the random access procedure.
+"reselectionMeasurementReqThis field indicates that the UE shall report the reselection measurement information, if available, to the network in the UEInformationResponse message."
+rlf-ReportReqThis field is used to indicate whether the UE shall report information about the radio link failure.
+successHO-ReportReqThis field is used to indicate whether the UE shall report information about the successful handover report.
+successPSCell-ReportReqThis field is used to indicate whether the UE shall report information about the successful PSCell change or addition report.

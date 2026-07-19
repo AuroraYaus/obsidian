@@ -1,0 +1,65 @@
+<table>
+  <tr>
+    <td>Definitions for parameters</td>
+    <td>Per</td>
+    <td>M</td>
+    <td>FDD-TDDDIFF</td>
+    <td>FR1-FR2DIFF</td>
+  </tr>
+  <tr>
+    <td>bwp-WithoutCD-SSB-OrNCD-SSB-RedCap-r17Indicates support of RRC-configured DL BWP without CD-SSB or NCD-SSB. The UE can include this field only if the UE supports supportOfRedCap-r17 or supportOfERedCap-r18.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>dl-PRS-MeasurementWithRxFH-RRC-ConnectedForRedCap-r18Indicates whether UE supports DL-PRS measurement with Rx frequency hopping within a MG and measurement reporting in RRC_CONNECTED for RedCap UEs and comprises the following parameters:-maximumPRS-BandwidthAcrossAllHopsFR1-r18 indicates the maximum DL PRS bandwidth across all hops in MHz for FR1, which is supported and reported by UE.-maximumPRS-BandwidthAcrossAllHopsFR2-r18 indicates the maximum DL PRS bandwidth across all hops in MHz for FR2, which is supported and reported by UE.-maximumFH-Hops-r18 indicates the maximum number of hops, which is supported and reported by UE.-processingDuration-r18 indicates the duration of DL PRS symbols N3 in units of ms a UE can process every T3 ms.-processingPRS-SymbolsDurationN3-r18 indicates the values for N3. Enumerated values indicate 0.125, 0.25, 0.5, 1, 2, 4, 6, 8, 12, 16, 20, 25, 30, 32, 35, 40, 45, 50 ms.-processingDurationT3-r18 indicates the values for T3. Enumerated values indicate 8, 16, 20, 30, 40, 80, 160, 320, 640, 1280ms.-rf-RxRetuneTimeFR1-r18 indicates the RF Rx retune times between consecutive hops for FR1. Enumerated values indicate 70, 140, 210µs.-rf-RxRetuneTimeFR2-r18 indicates the RF Rx retune times between consecutive hops for FR2. Enumerated values indicate 35, 70, 140µs.-numOfOverlappingPRB-r18 indicates the overlapping PRB(s) between adjacent hops. Enumerated values indicate 0,1,2,4 PRBs.UE indicating support of this feature shall also indicate support of supportedBandwidthPRS-r16, dl-PRS-BufferType-r16, durationOfPRS-Processing-r16, maxNumOfDL-PRS-ResProcessedPerSlot-r16 defined in TS 37.355 [22] and one of supportOfRedCap-r17 and supportOfERedCap-r18 defined in TS 38.331 [35].NOTE 1:The maximum DL-PRS bandwidth per hop follows component 1 of supportedBandwidthPRS-r16 defined in TS 37.355 [22].NOTE 2:DL PRS buffering capability follows component 2 of dl-PRS-BufferType-r16 defined in TS 37.355 [22].</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>dl-PRS-MeasurementWithRxFH-RRC-IdleForRedCap-r18Indicates whether UE supports PRS measurement with Rx frequency hopping in RRC_IDLE for RedCap UEs.A UE supporting this feature shall also indicate the support of dl-PRS-MeasurementWithRxFH-RRC-ConnectedForRedCap-r18.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>dl-PRS-MeasurementWithRxFH-RRC-InactiveForRedCap-r18Indicates whether UE supports PRS measurement with Rx frequency hopping in RRC_INACTIVE for RedCap UEs.A UE supporting this feature shall also indicate the support of dl-PRS-MeasurementWithRxFH-RRC-ConnectedForRedCap-r18 and prs-ProcessingRRC-Inactive-r17.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>halfDuplexFDD-TypeA-RedCap-r17Indicates support of Half-duplex FDD operation (instead of full-duplex FDD operation) type A for (e)RedCap UE. The UE can include this field only if the UE supports supportOfRedCap-r17 or supportOfERedCap-r18.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>FDD only</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>posSRS-TxFH-RRC-ConnectedForRedCap-r18Indicates whether UE supports positioning SRS with Tx frequency hopping in RRC_CONNECTED for RedCap UEs and comprises the following parameters:-maximumSRS-BandwidthAcrossAllHopsFR1-r18 indicates the maximum positioning SRS bandwidth across all hops in MHz for FR1, which is supported and reported by UE.-maximumSRS-BandwidthAcrossAllHopsFR2-r18 indicates the maximum positioning SRS bandwidth across all hops in MHz for FR2, which is supported and reported by UE.-maximumTxFH-Hops-r18 indicates the maximum number of transmission hops, which is supported and reported by UE.-rf-TxRetuneTimeFR1-r18 indicates the RF Tx retune times between consecutive hops for FR1. Enumerated values indicate 70, 140, 210µs.-rf-TxRetuneTimeFR2-r18 indicates the RF Tx retune times between consecutive hops for FR2. Enumerated values indicate 35, 70, 140µs.-switchTimeBetweenActiveBWP-FrequencyHop-r18 indicates the switching time between active BWP and frequency hop. Enumerated values indicate 100, 140, 200, 300, 500µs.-numOfOverlappingPRB-r18 indicates the overlapping PRB(s) between adjacent hops. Enumerated values indicate 0,1,2,4 PRBs.-maximumSRS-ResourcePeriodic-r18 indicates the maximum number of periodic positioning SRS resources with Tx frequency hopping.-maximumSRS-ResourceAperiodic-r18 indicates the maximum number of aperiodic positioning SRS resources with Tx frequency hopping.-maximumSRS-ResourceSemipersistent-r18 indicates maximum number of Semi-persistent positioning SRS resources with Tx frequency hopping.UE indicating support of this feature shall also indicate the support of SRS-AllPosResources-r16 and one of supportOfRedCap-r17 and supportOfERedCap-r18.NOTE:No additional UE requirements shall be specified for the case of Tx hopping with non-overlapping hops compared to the case of Tx hopping with overlapping hops, e.g., a UE is not responsible for keeping phase continuity across the hops in either case of overlapping or non-overlapping hops.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>posSRS-TxFH-RRC-InactiveForRedCap-r18Indicates the UE capability for support of positioning SRS with Tx frequency hopping in RRC_INACTIVE for RedCap UEs and comprises the following parameters:-maximumSRS-BandwidthAcrossAllHopsFR1-r18 indicates the maximum positioning SRS bandwidth across all hops in MHz for FR1, which is supported and reported by UE.-maximumSRS-BandwidthAcrossAllHopsFR2-r18 indicates the maximum positioning SRS bandwidth across all hops in MHz for FR2, which is supported and reported by UE.-maximumTxFH-Hops-r18 indicates the maximum number of transmission hops, which is supported and reported by UE.-rf-TxRetuneTimeFR1-r18 indicates the RF Tx retune times between consecutive hops for FR1. Enumerated values indicate 70, 140, 210µs.-rf-TxRetuneTimeFR2-r18 indicates the RF Tx retune times between consecutive hops for FR2. Enumerated values indicate 35, 70, 140µs.-switchTimeBetweenActiveBWP-FrequencyHop-r18 indicates the switching time between active BWP and frequency hop. Enumerated values indicate 100, 140, 200, 300, 500µs.-numOfOverlappingPRB-r18 indicates the overlapping PRB(s) between adjacent hops. Enumerated values indicate 0,1,2,4 PRBs.-maximumSRS-ResourcePeriodic-r18 indicates the maximum number of periodic positioning SRS resources with Tx frequency hopping.-maximumSRS-ResourceSemipersistent-r18 indicates maximum number of Semi-persistent positioning SRS resources with Tx frequency hopping.UE indicating support of this feature shall also indicate the support of posSRS-RRC-Inactive-OutsideInitialUL-BWP-r17 and one of supportOfRedCap-r17 and supportOfERedCap-r18.NOTE:No additional UE requirements shall be specified for the case of Tx hopping with non-overlapping hops compared to the case of Tx hopping with overlapping hops, e.g., a UE is not responsible for keeping phase continuity across the hops in either case of overlapping or non-overlapping hops.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>posSRS-TxFH-WithTimeWindowForRedCap-r18Indicates whether the UE supports the UL Time Window and transmission of SRS for positioning with Tx Frequency hopping within the window for RedCap UEs.A UE indicating support of this feature shall also indicate support of posSRS-TxFH-RRC-ConnectedForRedCap-r18.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+</table>

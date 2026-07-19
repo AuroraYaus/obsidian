@@ -1,0 +1,89 @@
+<table>
+  <tr>
+    <td>MeasIdleConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>absThreshSS-BlocksConsolidationThreshold for consolidation of L1 measurements per RS index.</td>
+  </tr>
+  <tr>
+    <td>beamMeasConfigIdleIndicates the beam level measurement configuration.</td>
+  </tr>
+  <tr>
+    <td>carrierFreqIndicates the NR carrier frequency to be used for measurements during RRC_IDLE or RRC_INACTIVE.</td>
+  </tr>
+  <tr>
+    <td>carrierFreqEUTRAIndicates the E-UTRA carrier frequency to be used for measurements during RRC_IDLE or RRC_INACTIVE.</td>
+  </tr>
+  <tr>
+    <td>deriveSSB-IndexFromCellThis field indicates whether the UE may use the timing of any detected cell on that frequency to derive the SSB index of all neighbour cells on that frequency. If this field is set to true, the UE assumes SFN and frame boundary alignment across cells on the neighbor frequency as specified in TS 38.133 [14].</td>
+  </tr>
+  <tr>
+    <td>frequencyBandListIndicates the list of frequency bands for which the NR idle/inactive measurement parameters apply. The UE shall select the first listed band which it supports in the frequencyBandList field to represent the NR neighbour carrier frequency.</td>
+  </tr>
+  <tr>
+    <td>includeBeamMeasurementsIndicates whether or not the UE shall include beam measurements in the NR idle/inactive measurement results.</td>
+  </tr>
+  <tr>
+    <td>maxNrofRS-IndexesToReportMax number of beam indices to include in the idle/inactive measurement result.</td>
+  </tr>
+  <tr>
+    <td>measCellListEUTRAIndicates the list of E-UTRA cells which the UE is requested to measure and report for idle/inactive measurements.</td>
+  </tr>
+  <tr>
+    <td>measCellListNRIndicates the list of NR cells which the UE is requested to measure and report for idle/inactive measurements.</td>
+  </tr>
+  <tr>
+    <td>measIdleCarrierListEUTRAIndicates the E-UTRA carriers to be measured during RRC_IDLE or RRC_INACTIVE.</td>
+  </tr>
+  <tr>
+    <td>measIdleCarrierListNRIndicates the NR carriers to be measured during RRC_IDLE or RRC_INACTIVE.</td>
+  </tr>
+  <tr>
+    <td>measIdleCarrierListNR-LessThan5MHzIndicates the NR carriers to be measured during RRC_IDLE or RRC_INACTIVE for the cell(s) supporting 12 PRB, 15 PRB or 20 PRB transmission bandwidth configuration as defined in TS 38.101-1 [15], TS 38.211 [16] and TS 38.213 [13]. Total number of MeasIdleCarrierNR included in measIdleCarrierListNR and measIdleCarrierListNR-LessThan5MHz does not exceed maxFreqIdle-r16.</td>
+  </tr>
+  <tr>
+    <td>measIdleDurationIndicates the duration for performing idle/inactive measurements while in RRC_IDLE or RRC_INACTIVE. Value sec10 correspond to 10 seconds, value sec30 to 30 seconds and so on.</td>
+  </tr>
+  <tr>
+    <td>measIdleValidityDuration, measReselectionValidityDurationIndicates time values for UE to determine validity of reported idle/inactive and reselection measurements as defined in TS 38.133[14]. Value s5 correspond to 5 seconds, value s10 correspond to 10 seconds and so on.</td>
+  </tr>
+  <tr>
+    <td>measReselectionCarrierListNRIndicates the NR carriers for reselection measurement reporting.</td>
+  </tr>
+  <tr>
+    <td>measReselectionCarrierListNR-LessThan5MHzIndicates the NR carriers for reselection measurement reporting for the cell(s) supporting 12 PRB, 15 PRB or 20 PRB transmission bandwidth configuration as defined in TS 38.101-1 [15], TS 38.211 [16] and TS 38.213 [13]. Total number of MeasReselectionCarrierNR included in measReselectionCarrierListNR and measReselectionCarrierListNR-LessThan5MHz does not exceed maxFreqIdle-r16.</td>
+  </tr>
+  <tr>
+    <td>nrofSS-BlocksToAverageNumber of SS blocks to average for cell measurement derivation.</td>
+  </tr>
+  <tr>
+    <td>qualityThresholdIndicates the quality thresholds for reporting the measured cells for idle/inactive NR measurements.</td>
+  </tr>
+  <tr>
+    <td>qualityThresholdEUTRAIndicates the quality thresholds for reporting the measured cells for idle/inactive E-UTRA measurements.</td>
+  </tr>
+  <tr>
+    <td>reportQuantitiesIndicates which measurement quantities UE is requested to report in the idle/inactive measurement report.</td>
+  </tr>
+  <tr>
+    <td>reportQuantitiesEUTRAIndicates which E-UTRA measurement quantities the UE is requested to report in the idle/inactive measurement report.</td>
+  </tr>
+  <tr>
+    <td>reportQuantityRS-IndexesIndicates which measurement information per beam index the UE shall include in the NR idle/inactive measurement results.</td>
+  </tr>
+  <tr>
+    <td>smtcIndicates the measurement timing configuration for inter-frequency measurement. If this field is absent in VarMeasIdleConfig, the UE assumes that SSB periodicity is 5 ms in this frequency.</td>
+  </tr>
+  <tr>
+    <td>ssbSubcarrierSpacingIndicates subcarrier spacing of SSB.Only the following values are applicable depending on the used frequency:FR1:    15 or 30 kHzFR2-1:  120 or 240 kHzFR2-2:  120, 480, or 960 kHz</td>
+  </tr>
+  <tr>
+    <td>ssb-ToMeasureThe set of SS blocks to be measured within the SMTC measurement duration (see TS 38.215 [9]). When the field is absent in VarMeasIdleConfig, the UE measures on all SS-blocks.</td>
+  </tr>
+  <tr>
+    <td>ss-RSSI-MeasurementIndicates the SSB-based RSSI measurement configuration. If the field is absent in VarMeasIdleConfig, the UE behaviour is defined in TS 38.215 [89], clause 5.1.3.</td>
+  </tr>
+  <tr>
+    <td>validityAreaListIndicates the list of frequencies and optionally, for each frequency, a list of cells within which the UE is required to perform measurements while in RRC_IDLE and RRC_INACTIVE.</td>
+  </tr>
+</table>

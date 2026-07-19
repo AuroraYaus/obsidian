@@ -1,0 +1,18 @@
+SCG-ConfigInfo field descriptions
+drb-ToAddModListSCGIncludes DRBs the SeNB is requested to establish or modify (DRB type change).
+drb-ToReleaseListSCGIncludes DRBs the SeNB is requested to release.
+makeBeforeBreakSCG-ReqTo request the target eNB to add the makeBeforeBreakSCG indication in the mobilityControlInfoSCG in case of intra-frequency SCG change.
+maxSCH-TB-BitsXLIndicates the maximum DL-SCH/UL-SCH TB bits that may be scheduled in a TTI. Specified as a percentage of the value defined for the applicable UE category.
+measGapConfigIncludes the current measurement gap configuration.
+measResultListRSSI-SCGIncludes RSSI measurement results of SCG (serving) cells
+measResultSSTDIncludes measurement results of UE SFN and Subframe Timing Difference between the PCell and the PSCell.
+measResultServCellListSCGIncludes measurement results of SCG (serving) cells.
+radioResourceConfigDedMCGIncludes the current dedicated MCG radio resource configuration.
+"sCellIndexIf sCellIndex-r13 is present, sCellIndex-r12 shall be ignored."
+"sCellToAddModListMCG, sCellToAddModListMCG-ExtIncludes the current MCG SCell configuration. Field sCellToAddModListMCG is used to add the first 4 SCells with sCellIndex-r10 while sCellToAddModListMCG-Ext is used to add the rest."
+"sCellToAddModListSCG, sCellToAddModListSCG-ExtIncludes SCG cells the SeNB is requested to establish. Measurement results may be provided for these cells. Field sCellToAddModListSCG is used to add the first 4 SCells with sCellIndex-r12 while sCellToAddModListSCG-Ext is used to add the rest."
+"sCellToReleaseListSCG, sCellToReleaseListSCG-ExtIncludes SCG cells the SeNB is requested to release."
+scg-RadioConfigIncludes the current dedicated SCG configuration.
+scg-ConfigRestrictInfoIncludes fields for which MeNB explictly indicates the restriction to be observed by SeNB.
+"servCellIdIf servCellId-r13 is present, servCellId-r12 shall be ignored."
+p-MaxCell specific value i.e. as broadcast by PCell.

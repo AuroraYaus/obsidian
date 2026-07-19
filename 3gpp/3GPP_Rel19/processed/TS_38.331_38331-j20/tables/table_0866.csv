@@ -1,0 +1,2 @@
+Conditional Presence,Explanation
+SN-AddMod,"The field is mandatory present upon SN addition and SN change. It is optionally present upon SN modification and inter-MN handover without SN change. Otherwise, the field is absent."

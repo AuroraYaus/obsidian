@@ -1,0 +1,2 @@
+RRCConnectionSetup-NB field descriptions
+dedicatedInfoNASDownlink NAS PDU in case of mobile terminated CP-EDT. E-UTRAN may include this field only if the RRCConnectionSetup is in response to RRCEarlyDataRequest with establishment cause mt-Access.

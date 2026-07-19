@@ -1,0 +1,56 @@
+<table>
+  <tr>
+    <td></td>
+    <td>PCell</td>
+  </tr>
+  <tr>
+    <td colspan="2">1. RRC_IDLE</td>
+  </tr>
+  <tr>
+    <td>1.1 All UEs</td>
+    <td>A or G or H</td>
+  </tr>
+  <tr>
+    <td>1.2 UEs supporting SC-PTM</td>
+    <td>A or G or H or (D1 + H1)</td>
+  </tr>
+  <tr>
+    <td>1.3 UEs supporting MWUS</td>
+    <td>A or G or H or L</td>
+  </tr>
+  <tr>
+    <td>1.4 UEs supportingPUR</td>
+    <td>A or G or H or ((P + (O or H2)) or N)</td>
+  </tr>
+  <tr>
+    <td colspan="2">2. RRC_CONNECTED</td>
+  </tr>
+  <tr>
+    <td rowspan="2">2.1 All UEs</td>
+    <td>A or ((((J or E or B) + (I or F or B1)) or C or D) + K) or G or H</td>
+  </tr>
+  <tr>
+    <td>Remarks: The combination for Random Access procedure is only required, related to G and H.Remarks: B1 is only applicable for UEs supporting uplink HARQ ACK feedback.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">2.2 UEs supporting FS2</td>
+    <td>A or ((((J or E or B) + (I or F or B1)) or C or D) + I + K) or G or H</td>
+  </tr>
+  <tr>
+    <td>Remarks:For TDD UL/DL configuration 0, two MPDCCHs can be received in the same subframe for UL-SCH in two different uplink subframes, which is only applicable for UEs configured with CE mode A with no repetitions.Remarks: The combination for Random Access procedure is only required, related to G and H.Remarks: B1 is only applicable for UEs supporting uplink HARQ ACK feedback.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">2.3 UEs supporting ETWS and CMAS</td>
+    <td>A or ((((J or E or B) + (I or F)) or C or D or M) + K) or G or H</td>
+  </tr>
+  <tr>
+    <td>Remarks: The combination for Random Access procedure is only required, related to G and H.Remarks: The combination is not applicable for BL UE.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">2.4 ETWS and CMAS UEs supporting FS2</td>
+    <td>A or ((((J or E or B) + (I or F)) or C or D or M) + I + K) or G or H</td>
+  </tr>
+  <tr>
+    <td>Remarks:For TDD UL/DL configuration 0, two MPDCCHs can be received in the same subframe for UL-SCH in two different uplink subframes, which is only applicable for UEs configured with CE mode A with no repetitions.Remarks: The combination for Random Access procedure is only required, related to G and H.Remarks: The combination is not applicable for BL UE.</td>
+  </tr>
+</table>

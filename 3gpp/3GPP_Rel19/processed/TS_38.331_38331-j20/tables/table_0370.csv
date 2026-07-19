@@ -1,0 +1,3 @@
+MeasWindowConfig field descriptions
+"windowDurationValue windowDuration is the measurement window length in ms of effective measurement window. Value ms2 corresponds to 2 ms, value ms5 corresponds to 5 ms, and Value ms5dot5 corresponds to 5.5 ms."
+windowOffsetPeriodicityIndicates the periodicity and offset of effective measurement window. The choice determines the periodicity (periodicityMs40 for 40ms and periodicityMs80 for 80 ms). The field value indicates the offset in ms.

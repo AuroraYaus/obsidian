@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <td>CellAccessRelatedInfo field descriptions</td>
+  </tr>
+  <tr>
+    <td>cellReservedForFutureUseIndicates whether the cell is reserved, as defined in 38.304 [20] for future use. The field is applicable to all PLMNs and NPNs. This field is ignored by IAB-MT and NCR-MT.</td>
+  </tr>
+  <tr>
+    <td>cellReservedForOtherUseIndicates whether the cell is reserved, as defined in 38.304 [20]. The field is applicable to all PLMNs. This field is ignored by IAB-MT and NCR-MT for cell barring determination, but still considered by NPN capable IAB-MT and NPN capable NCR-MT for determination of an NPN-only cell.</td>
+  </tr>
+  <tr>
+    <td>npn-IdentityInfoListThe npn-IdentityInfoList is used to configure a set of NPN-IdentityInfo elements. Each of those elements contains a list of one or more NPN Identities and additional information associated with those NPNs. The total number of PLMNs (identified by a PLMN identity in plmn -IdentityList), PNI-NPNs (identified by a PLMN identity and a CAG-ID), and SNPNs (identified by a PLMN identity and a NID) together in the PLMN-IdentityInfoList and NPN-IdentityInfoList does not exceed 12, except for the NPN-only cells. A PNI-NPN and SNPN can be included only once, and in only one entry of the NPN-IdentityInfoList. In case of NPN-only cells the PLMN-IdentityList contains a single element that does not count to the limit of 12 and the cellIdentity of the first entry of the PLMN-IdentityInfoList is set to the same value as the cellIdentity-r16 of the first entry of the NPN-IdentityInfoList. The NPN index is defined as B+c1+c2+…+c(n-1)+d1+d2+…+d(m-1)+e(i) for the NPN identity included in the n-th entry of NPN-IdentityInfoList and in the m-th entry of npn-Identitylist within that NPN-IdentityInfoList entry, and the i-th entry of its corresponding NPN-Identity, where- B is the index used for the last PLMN in the PLMN-IdentittyInfoList; in NPN-only cells B is considered 0;- c(j) is the number of NPN index values used in the j-th NPN-IdentityInfoList entry;- d(k) is the number of NPN index values used in the k-th npn-IdentityList entry within the n-th NPN-IdentityInfoList entry;- e(i) is    - i if the n-th entry of NPN-IdentityInfoList entry is for SNPN(s);    - 1 if the n-th entry of NPN-IdentityInfoList entry is for PNI-NPN(s).</td>
+  </tr>
+  <tr>
+    <td>plmn-IdentityInfoListThe plmn-IdentityInfoList is used to configure a set of PLMN-IdentityInfo elements. Each of those elements contains a list of one or more PLMN Identities and additional information associated with those PLMNs. A PLMN-identity can be included only once, and in only one entry of the PLMN-IdentityInfoList. The PLMN index is defined as b1+b2+…+b(n-1)+i for the PLMN included at the n-th entry of PLMN-IdentityInfoList and the i-th entry of its corresponding PLMN-IdentityInfo, where b(j) is the number of PLMN-Identity entries in each PLMN-IdentityInfo, respectively.</td>
+  </tr>
+  <tr>
+    <td>snpn-AccessInfoListThis list provides access related information for each SNPN in npn-IdentityInfoList, see TS 23.501 [32]. The n-th entry of the list contains the access related information of the n-th SNPN in npn-IdentityInfoList.</td>
+  </tr>
+</table>

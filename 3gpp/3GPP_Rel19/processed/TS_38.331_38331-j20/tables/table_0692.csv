@@ -1,0 +1,7 @@
+Conditional Presence,Explanation
+FDM,"This field is optionally present, need R, if idc-AssistanceConfig-r16 or idc-FDM-AssistanceConfig is setup. Otherwise, it is absent, need R."
+maxBW,"This field is optionally present, need R, if maxBW-PreferenceConfig-r16 is setup; otherwise it is absent, need R."
+maxMIMO,"This field is optionally present, need R, if maxMIMO-LayerPreferenceConfig-r16 is setup; otherwise it is absent, need R."
+minOffset,"This field is optionally present, need R, if minSchedulingOffsetPreferenceConfig-r16 is setup; otherwise it is absent, need R."
+musimGapConfig,"This field is optionally present, need R, if musim-GapAssistanceConfig-r17 is setup; otherwise it is absent, need R."
+SCG,"This field is optionally present, need M, in an RRCReconfiguration message not within mrdc-SecondaryCellGroup and received, either via SRB3 within DLInformationTransferMRDC or via SRB1. Otherwise, it is absent."

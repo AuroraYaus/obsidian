@@ -1,0 +1,9 @@
+Transmission mode,DCI format,Search Space,Transmission scheme of PDSCH corresponding to SPDCCH
+Mode 1,DCI format 7-1A,UE specific by C-RNTI,"Single-antenna port, port 0 (see Clause 7.1.1)"
+Mode 2,DCI format 7-1A,UE specific by C-RNTI,Transmit diversity (see Clause 7.1.2)
+Mode 3,DCI format 7-1B,UE specific by C-RNTI,Transmit diversity (see Clause 7.1.2)
+Mode 4,DCI format 7-1C,UE specific by C-RNTI,Transmit diversity (see Clause 7.1.2)
+Mode 6,DCI format 7-1D,UE specific by C-RNTI,Transmit diversity (see Clause 7.1.2)
+Mode 8,DCI format 7-1E,UE specific by C-RNTI,"Single-antenna port, port 7 or 8 (see Clause 7.1.1)"
+Mode 9,DCI format 7-1F,UE specific by C-RNTI,"Transmit diversity, port 7-8, (see Clause 7.1.2) if UE is configured with higher layer parameter semiOpenLoopSTTI.Transmit diversity, port 7-8, (see Clause 7.1.2) or single antenna port, port 7 or 8, (see Clause 7.1.1) if UE is configured with higher layer parameter slotSubslotPDSCH-TXDiv-2layer-TM9/10 or slotSubslotPDSCH-TXDiv-4layer-TM9/10 (3GPP TS 36.331 [11]).Single-antenna port, port 7 or 8, (see Clause 7.1.1) otherwise."
+Mode 10,DCI format 7-1G,UE specific by C-RNTI,"Transmit diversity, port 7-8, (see Clause 7.1.2) if UE is configured with higher layer parameter semiOpenLoopSTTI.Transmit diversity, port 7-8, (see Clause 7.1.2) or single antenna port, port 7 or 8, (see Clause 7.1.1) if UE is configured with higher layer parameter slotSubslotPDSCH-TXDiv-2layer-TM9/10 or slotSubslotPDSCH-TXDiv-4layer-TM9/10 (3GPP TS 36.331 [11]).Single-antenna port, port 7 or 8, (see Clause 7.1.1) otherwise."

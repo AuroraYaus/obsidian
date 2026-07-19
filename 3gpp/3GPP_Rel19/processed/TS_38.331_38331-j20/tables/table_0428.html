@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>EthernetHeaderCompression field descriptions</td>
+  </tr>
+  <tr>
+    <td>drb-ContinueEHC-DLIndicates whether the PDCP entity continues or resets the downlink EHC header compression protocol during PDCP re-establishment, as specified in TS 38.323 [5]. The field is configured only in case of resuming an RRC connection or reconfiguration with sync, where the PDCP termination point is not changed and the fullConfig is not indicated.</td>
+  </tr>
+  <tr>
+    <td>drb-ContinueEHC-ULIndicates whether the PDCP entity continues or resets the uplink EHC header compression protocol during PDCP re-establishment, as specified in TS 38.323 [5]. The field is configured only in case of resuming an RRC connection or reconfiguration with sync, where the PDCP termination point is not changed and the fullConfig is not indicated.</td>
+  </tr>
+  <tr>
+    <td>ehc-CID-LengthIndicates the length of the CID field for EHC packet. The value bits7 indicates the length is 7 bits, and the value bits15 indicates the length is 15 bits. Once the field ethernetHeaderCompression-r16 is configured for a DRB or a multicast MRB, the value of the field ehc-CID-Length for this DRB or multicast MRB is not reconfigured to a different value.</td>
+  </tr>
+  <tr>
+    <td>ehc-CommonIndicates the configurations that apply for both downlink and uplink.</td>
+  </tr>
+  <tr>
+    <td>ehc-DownlinkIndicates the configurations that apply for only downlink. If the field is configured, then Ethernet header compression is configured for downlink. Otherwise, it is not configured for downlink.</td>
+  </tr>
+  <tr>
+    <td>ehc-UplinkIndicates the configurations that apply for only uplink. If the field is configured, then Ethernet header compression is configured for uplnik. Otherwise, it is not configured for uplink.</td>
+  </tr>
+  <tr>
+    <td>maxCID-EHC-ULIndicates the value of the MAX_CID_EHC_UL parameter as specified in TS 38.323 [5]. The total value of MAX_CID_EHC_UL across all bearers for the UE should be less than or equal to the value of maxNumberEHC-Contexts parameter as indicated by the UE.</td>
+  </tr>
+</table>

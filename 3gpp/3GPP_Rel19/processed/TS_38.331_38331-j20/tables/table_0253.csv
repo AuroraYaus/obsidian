@@ -1,0 +1,5 @@
+PortIndexFor8Ranks field descriptions
+"portIndex8Port-Index configuration for up to rank 8. If present, the network configures port indexes for at least one of the ranks."
+"portIndex4Port-Index configuration for up to rank 4. If present, the network configures port indexes for at least one of the ranks."
+"portIndex2Port-Index configuration for up to rank 2. If present, the network configures port indexes for at least one of the ranks."
+portIndex1Port-Index configuration for rank 1.

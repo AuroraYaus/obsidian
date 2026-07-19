@@ -1,0 +1,6 @@
+CFR-ConfigMulticast field descriptions
+"locationAndBandwidthMulticastFrequency domain location and bandwidth for MBS multicast. The value of the field shall be interpreted as resource indicator value (RIV) as defined in TS 38.214 [19] with assumptions as described in TS 38.213 [13], clause 12, i.e. setting  N^size_BWP=275. The first PRB is a PRB determined by subcarrierSpacing of the associated BWP and offsetToCarrier corresponding to this subcarrier spacing. If not configured, the UE applies the value of locationAndBandwidth of the DL BWP in which the cfr-ConfigMulticast is configured."
+pdcch-ConfigMulticastUE specific group-common PDCCH configuration for MBS multicast for one CFR.
+pdsch-ConfigMulticastUE specific group-common PDSCH configuration for MBS multicast for one CFR.
+sps-ConfigMulticastToAddModListIndicates a list of one or more DL SPS configurations for MBS multicast.
+sps-ConfigMulticastToReleaseListIndicates a list of one or more DL SPS configurations to be released. The NW may release a SPS configuration at any time.

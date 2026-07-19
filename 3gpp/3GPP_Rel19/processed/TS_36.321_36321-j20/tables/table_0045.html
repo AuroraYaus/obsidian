@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td>DRX Timers</td>
+    <td>Intended UE behaviour ([x, y] means including subframe x and y)</td>
+  </tr>
+  <tr>
+    <td>drx-InactivityTimer</td>
+    <td>The MAC entity monitors PDCCH in PDCCH-subframes during the subframes [n+1, n+m].The MAC entity starts or restarts drxShortCycleTimer, and uses Short DRX Cycle in the subframe n+m+1, if configured.</td>
+  </tr>
+  <tr>
+    <td>drx-InactivityTimerSCPTM</td>
+    <td>The MAC entity monitors PDCCH in PDCCH-subframes during the subframes [n+1, n+m].</td>
+  </tr>
+  <tr>
+    <td>mac-ContentionResolutionTimer or mac-ContentionResolutionTimer for the corresponding enhanced coverage level, if it exists</td>
+    <td>The MAC entity monitors PDCCH in PDCCH-subframes during the subframes [n+1, n+X].</td>
+  </tr>
+  <tr>
+    <td>drx-RetransmissionTimer or drx-ULRetransmissionTimer</td>
+    <td>The MAC entity monitors PDCCH in PDCCH-subframes during the subframes [n, n+m-1].</td>
+  </tr>
+  <tr>
+    <td>onDurationTimer or onDurationTimerSCPTM</td>
+    <td>The MAC entity monitors PDCCH in PDCCH-subframes during the subframes [n, n+m-1].</td>
+  </tr>
+  <tr>
+    <td>drxShortCycleTimer</td>
+    <td>The MAC entity uses the Short DRX Cycle during the subframes [n, n+X-1].The MAC entity starts to use the Long DRX Cycle in the subframe n+X.</td>
+  </tr>
+  <tr>
+    <td>HARQ RTT Timer</td>
+    <td>The MAC entity starts drx-RetransmissionTimer in the subframe n+X, if needed.</td>
+  </tr>
+  <tr>
+    <td>UL HARQ RTT Timer</td>
+    <td>The MAC entity starts drx-ULRetransmissionTimer in the subframe n+X, if needed.</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:For FDD, m is equal to X; for TDD, m is equal to the minimum number of subframes so that X PDCCH-subframes are included during the subframes [x, y].NOTE 2:A MAC entity configured with eIMTA monitors PDCCH in some subframe(s) in addition to PDCCH-subframes, as specified in clause 5.7.NOTE 3:For BL UE or UE in enhanced coverage, m is equal to the minimum number of subframes so that X PDCCH-subframes are included during the subframes [x, y].</td>
+  </tr>
+</table>

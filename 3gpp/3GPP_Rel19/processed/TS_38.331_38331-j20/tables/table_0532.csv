@@ -1,0 +1,11 @@
+PeriodicalReportConfig field descriptions
+coarseLocationRequestThis field is used to request UE to report coarse location information.
+maxNrofRS-IndexesToReportMax number of RS indexes to include in the measurement report.
+maxReportCellsMax number of non-serving cells to include in the measurement report.
+reportAddNeighMeasIndicates that the UE shall include the best neighbour cells per serving frequency.
+reportAmountNumber of measurement reports applicable for eventTriggered as well as for periodical report types
+reportQuantityCellThe cell measurement quantities to be included in the measurement report.
+reportQuantityRS-IndexesIndicates which measurement information per RS index the UE shall include in the measurement report.
+"ul-DelayValueConfigIndicates that the UE shall perform the actual UL PDCP Packet Average Delay measurement per DRB as specified in TS 38.314 [53] and the UE shall ignore the fields reportQuantityCell and maxReportCells. The applicable values for the corresponding reportInterval are (one of the) {ms120, ms240, ms480, ms640, ms1024, ms2048, ms5120, ms10240, ms20480, ms40960, min1,min6, min12, min30}. The reportInterval indicates the periodicity for performing and reporting of UL PDCP Packet Average Delay per DRB measurement as specified in TS 38.314 [53]."
+"ul-ExcessDelayConfigIndicates that the UE shall perform the actual UL PDCP Excess Packet Delay per DRB measurement as specified in TS 38.314 [53] and the UE shall ignore the fields reportQuantityCell and maxReportCells. The applicable values for the corresponding reportInterval are (one of the) {ms120, ms240, ms480, ms640, ms1024, ms2048, ms5120, ms10240, ms20480, ms40960, min1,min6, min12, min30}. The reportInterval indicates the periodicity for performing and reporting of UL PDCP Excess Packet Delay per DRB measurement as specified in TS 38.314 [53]."
+useAllowedCellListIndicates whether only the cells included in the allow-list of the associated measObject are applicable as specified in 5.5.4.1.

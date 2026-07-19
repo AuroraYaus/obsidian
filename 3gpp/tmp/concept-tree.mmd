@@ -1,0 +1,455 @@
+%%{init: {'theme': 'default', 'themeVariables': {'fontSize': '17px'}, 'flowchart': {'nodeSpacing': 5, 'rankSpacing': 20}}}%%
+flowchart TD
+
+    N1["3GPP LTE/NR 信道译码知识体系"]:::root
+    N2["01 数学基础"]:::domain
+    N1 --> N2
+    N3["GF(2) 伽罗瓦域"]:::subdomain
+    N2 --> N3
+    N4["GF(2) 二元运算"]:::leaf_concept
+    N3 -->|包含| N4
+    L5["T1_1_GF2_binary_arithmetic_for"]:::lecture
+    N4 -.->|📄| L5
+    N6["GF(2) 多项式与CRC"]:::leaf_concept
+    N3 -->|包含| N6
+    L7["T1_2_GF2_polynomials_crc_remai"]:::lecture
+    N6 -.->|📄| L7
+    N8["GF(2) 向量矩阵与校验子"]:::leaf_concept
+    N3 -->|包含| N8
+    L9["T1_3_GF2_vectors_matrices"]:::lecture
+    N8 -.->|📄| L9
+    N10["概率与信息论"]:::subdomain
+    N2 --> N10
+    N11["条件概率与贝叶斯推断"]:::leaf_concept
+    N10 -->|包含| N11
+    L12["T1_4_probability_bayes_soft_de"]:::lecture
+    N11 -.->|📄| L12
+    N13["LLR 对数似然比"]:::leaf_concept
+    N10 -->|包含| N13
+    L14["T1_5_LLR_soft_decision"]:::lecture
+    N13 -.->|📄| L14
+    N15["信息论最小集"]:::leaf_concept
+    N10 -->|包含| N15
+    L16["T1_6_information_theory_minimu"]:::lecture
+    N15 -.->|📄| L16
+    N17["02 信道与软解调"]:::domain
+    N1 --> N17
+    N18["信道模型"]:::subdomain
+    N17 --> N18
+    N19["AWGN 与 Eb/N0"]:::leaf_concept
+    N18 -->|包含| N19
+    L20["T2_1_AWGN_noise_scaling"]:::lecture
+    N19 -.->|📄| L20
+    N21["衰落信道与LLR可信度"]:::leaf_concept
+    N18 -->|包含| N21
+    L22["T2_4_fading_channel_LLR_reliab"]:::lecture
+    N21 -.->|📄| L22
+    N23["软解调"]:::subdomain
+    N17 --> N23
+    N24["BPSK/QPSK 软解调"]:::leaf_concept
+    N23 -->|包含| N24
+    L25["T2_2_BPSK_QPSK_soft_demapping"]:::lecture
+    N24 -.->|📄| L25
+    N26["QAM Max-Log-MAP解调"]:::leaf_concept
+    N23 -->|包含| N26
+    L27["T2_3_QAM_Max_Log_MAP_demapping"]:::lecture
+    N26 -.->|📄| L27
+    N28["LLR 裁剪/缩放/量化"]:::leaf_concept
+    N23 -->|包含| N28
+    L29["T2_5_LLR_clipping_scaling_quan"]:::lecture
+    N28 -.->|📄| L29
+    N30["03 协议结构"]:::domain
+    N1 --> N30
+    N31["CRC 错误检测"]:::subdomain
+    N30 --> N31
+    N32["LTE/NR CRC家族"]:::leaf_concept
+    N31 -->|包含| N32
+    L33["T3_1_LTE_NR_CRC_families"]:::lecture
+    N32 -.->|📄| L33
+    N34["生成多项式与整除规则"]:::leaf_concept
+    N31 -->|包含| N34
+    L35["T1_2_GF2_polynomials_crc_remai"]:::lecture
+    N34 -.->|📄| L35
+    N36["传输块与码块"]:::subdomain
+    N30 --> N36
+    N37["传输块/码块/填充位"]:::leaf_concept
+    N36 -->|包含| N37
+    L38["T3_2_transport_code_block_fill"]:::lecture
+    N37 -.->|📄| L38
+    N39["LTE Turbo 分段规则"]:::leaf_concept
+    N36 -->|包含| N39
+    L40["T3_3_LTE_Turbo_segmentation_ru"]:::lecture
+    N39 -.->|📄| L40
+    N41["NR LDPC 分段规则"]:::leaf_concept
+    N36 -->|包含| N41
+    L42["T3_4_NR_LDPC_segmentation_rule"]:::lecture
+    N41 -.->|📄| L42
+    N43["NR Polar 分段规则"]:::leaf_concept
+    N36 -->|包含| N43
+    L44["T3_5_NR_Polar_segmentation_crc"]:::lecture
+    N43 -.->|📄| L44
+    N45["04 通用译码工程概念"]:::domain
+    N1 --> N45
+    N46["迭代与图模型"]:::subdomain
+    N45 --> N46
+    N47["迭代译码与外信息"]:::leaf_concept
+    N46 -->|包含| N47
+    L48["T4_1_iterative_decoding_extrin"]:::lecture
+    N47 -.->|📄| L48
+    N49["因子图/Tanner图/网格图"]:::leaf_concept
+    N46 -->|包含| N49
+    L50["T4_2_graphs_trellises_trees_fo"]:::lecture
+    N49 -.->|📄| L50
+    N51["HARQ与译码控制"]:::subdomain
+    N45 --> N51
+    N52["HARQ 软合并基础"]:::leaf_concept
+    N51 -->|包含| N52
+    L53["T4_3_HARQ_soft_combining_basic"]:::lecture
+    N52 -.->|📄| L53
+    N54["早停与CRC门控"]:::leaf_concept
+    N51 -->|包含| N54
+    L55["T4_4_early_stopping_crc_gated_"]:::lecture
+    N54 -.->|📄| L55
+    N56["性能与接口"]:::subdomain
+    N45 --> N56
+    N57["译码器性能指标"]:::leaf_concept
+    N56 -->|包含| N57
+    L58["T4_5_decoder_performance_metri"]:::lecture
+    N57 -.->|📄| L58
+    N59["译码器接口契约"]:::leaf_concept
+    N56 -->|包含| N59
+    L60["T4_6_decoder_interface_contrac"]:::lecture
+    N59 -.->|📄| L60
+    N61["05a LTE Turbo 译码"]:::domain
+    N1 --> N61
+    N62["Turbo 编码器基础"]:::subdomain
+    N61 --> N62
+    N63["Turbo译码链路总览"]:::leaf_concept
+    N62 -->|包含| N63
+    L64["T6_1_LTE_Turbo_decoder_chain_o"]:::lecture
+    N63 -.->|📄| L64
+    N65["RSC分量码基础"]:::leaf_concept
+    N62 -->|包含| N65
+    L66["T6_2_RSC_code_foundation"]:::lecture
+    N65 -.->|📄| L66
+    N67["编码器与网格终止"]:::leaf_concept
+    N62 -->|包含| N67
+    L68["T6_3_LTE_Turbo_encoder_trellis"]:::lecture
+    N67 -.->|📄| L68
+    N69["内部交织器"]:::leaf_concept
+    N62 -->|包含| N69
+    L70["T6_4_LTE_Turbo_internal_interl"]:::lecture
+    N69 -.->|📄| L70
+    N71["Turbo 译码算法"]:::subdomain
+    N61 --> N71
+    N72["BCJR与MAP译码直觉"]:::leaf_concept
+    N71 -->|包含| N72
+    L73["T6_5_BCJR_MAP_decoding_intuiti"]:::lecture
+    N72 -.->|📄| L73
+    N74["Log-MAP与Max-Log-MAP"]:::leaf_concept
+    N71 -->|包含| N74
+    L75["T6_6_Log_MAP_Max_Log_MAP_Turbo"]:::lecture
+    N74 -.->|📄| L75
+    N76["迭代/外信息交换/停止"]:::leaf_concept
+    N71 -->|包含| N76
+    L77["T6_7_Turbo_iteration_extrinsic"]:::lecture
+    N76 -.->|📄| L77
+    N78["Turbo译码数值走读"]:::leaf_concept
+    N71 -->|包含| N78
+    L79["T6_8_LTE_Turbo_decoder_numeric"]:::lecture
+    N78 -.->|📄| L79
+    N80["Turbo 速率匹配与HARQ"]:::subdomain
+    N61 --> N80
+    N81["解速率匹配总览"]:::leaf_concept
+    N80 -->|包含| N81
+    L82["T7_1_LTE_Turbo_de_rate_matchin"]:::lecture
+    N81 -.->|📄| L82
+    N83["子块解交织与循环缓存"]:::leaf_concept
+    N80 -->|包含| N83
+    L84["T7_2_LTE_subblock_deinterleave"]:::lecture
+    N83 -.->|📄| L84
+    N85["HARQ软缓存与冗余版本"]:::leaf_concept
+    N80 -->|包含| N85
+    L86["T7_3_LTE_HARQ_soft_buffer_RV"]:::lecture
+    N85 -.->|📄| L86
+    N87["码块重组与TB CRC"]:::leaf_concept
+    N80 -->|包含| N87
+    L88["T7_4_LTE_code_block_reassembly"]:::lecture
+    N87 -.->|📄| L88
+    N89["DL/UL译码差异"]:::leaf_concept
+    N80 -->|包含| N89
+    L90["T7_5_LTE_DL_UL_decoding_differ"]:::lecture
+    N89 -.->|📄| L90
+    N91["Turbo译码边界案例"]:::leaf_concept
+    N80 -->|包含| N91
+    L92["T7_6_LTE_Turbo_decoder_edge_ca"]:::lecture
+    N91 -.->|📄| L92
+    N93["05b NR LDPC 译码"]:::domain
+    N1 --> N93
+    N94["LDPC 结构与基图"]:::subdomain
+    N93 --> N94
+    N95["TS38.212 Ch5 接收侧地图"]:::leaf_concept
+    N94 -->|包含| N95
+    L96["T8_0_TS38212_chapter5_decoder_"]:::lecture
+    N95 -.->|📄| L96
+    N97["LDPC译码链路总览"]:::leaf_concept
+    N94 -->|包含| N97
+    L98["T8_1_NR_LDPC_decoder_chain_ove"]:::lecture
+    N97 -.->|📄| L98
+    N99["基图选择 BG1/BG2"]:::leaf_concept
+    N94 -->|包含| N99
+    L100["T8_2_NR_LDPC_base_graph_select"]:::lecture
+    N99 -.->|📄| L100
+    N101["提升大小与QC矩阵"]:::leaf_concept
+    N94 -->|包含| N101
+    L102["T8_3_NR_LDPC_lifting_QC_matrix"]:::lecture
+    N101 -.->|📄| L102
+    N103["LDPC 译码算法"]:::subdomain
+    N93 --> N103
+    N104["Tanner图与消息传递"]:::leaf_concept
+    N103 -->|包含| N104
+    L105["T8_4_LDPC_Tanner_graph_message"]:::lecture
+    N104 -.->|📄| L105
+    N106["和积/置信传播"]:::leaf_concept
+    N103 -->|包含| N106
+    L107["T8_5_LDPC_sum_product_BP"]:::lecture
+    N106 -.->|📄| L107
+    N108["Min-Sum/NMS/OMS"]:::leaf_concept
+    N103 -->|包含| N108
+    L109["T8_6_LDPC_MS_NMS_OMS"]:::lecture
+    N108 -.->|📄| L109
+    N110["分层译码调度"]:::leaf_concept
+    N103 -->|包含| N110
+    L111["T8_7_layered_LDPC_decoding_sch"]:::lecture
+    N110 -.->|📄| L111
+    N112["LDPC译码数值走读"]:::leaf_concept
+    N103 -->|包含| N112
+    L113["T8_8_NR_LDPC_decoder_numeric_w"]:::lecture
+    N112 -.->|📄| L113
+    N114["LDPC 速率恢复"]:::subdomain
+    N93 --> N114
+    N115["MCS/TBS到译码Descriptor"]:::leaf_concept
+    N114 -->|包含| N115
+    L116["T9_0_TS38214_MCS_TBS_decoder_d"]:::lecture
+    N115 -.->|📄| L116
+    N117["速率恢复总览"]:::leaf_concept
+    N114 -->|包含| N117
+    L118["T9_1_NR_LDPC_rate_recovery_ove"]:::lecture
+    N117 -.->|📄| L118
+    N119["循环缓存/打孔/缩短/重复"]:::leaf_concept
+    N114 -->|包含| N119
+    L120["T9_2_NR_LDPC_circular_buffer_s"]:::lecture
+    N119 -.->|📄| L120
+    N121["HARQ软缓存RV与CBG"]:::leaf_concept
+    N114 -->|包含| N121
+    L122["T9_3_NR_LDPC_HARQ_soft_buffer_"]:::lecture
+    N121 -.->|📄| L122
+    N123["Bit解交织与LLR放置"]:::leaf_concept
+    N114 -->|包含| N123
+    L124["T9_4_NR_LDPC_bit_deinterleavin"]:::lecture
+    N123 -.->|📄| L124
+    N125["LDPC 重组与边界"]:::subdomain
+    N93 --> N125
+    N126["码块重组与TB CRC"]:::leaf_concept
+    N125 -->|包含| N126
+    L127["T9_5_NR_LDPC_reassembly_TB_CRC"]:::lecture
+    N126 -.->|📄| L127
+    N128["LDPC译码边界案例"]:::leaf_concept
+    N125 -->|包含| N128
+    L129["T9_6_NR_LDPC_decoder_edge_case"]:::lecture
+    N128 -.->|📄| L129
+    N130["05c NR Polar 译码"]:::domain
+    N1 --> N130
+    N131["Polar 极化与序列"]:::subdomain
+    N130 --> N131
+    N132["Polar译码链路总览"]:::leaf_concept
+    N131 -->|包含| N132
+    L133["T10_1_NR_Polar_decoder_chain_o"]:::lecture
+    N132 -.->|📄| L133
+    N134["信道极化与冻结位"]:::leaf_concept
+    N131 -->|包含| N134
+    L135["T10_2_channel_polarization_fro"]:::lecture
+    N134 -.->|📄| L135
+    N136["可靠性序列"]:::leaf_concept
+    N131 -->|包含| N136
+    L137["T10_3_NR_Polar_reliability_seq"]:::lecture
+    N136 -.->|📄| L137
+    N138["Polar 译码算法"]:::subdomain
+    N130 --> N138
+    N139["SC 逐次抵消译码"]:::leaf_concept
+    N138 -->|包含| N139
+    L140["T10_4_Polar_SC_decoding"]:::lecture
+    N139 -.->|📄| L140
+    N141["SCL 列表译码"]:::leaf_concept
+    N138 -->|包含| N141
+    L142["T10_5_Polar_SCL_decoding"]:::lecture
+    N141 -.->|📄| L142
+    N143["CRC辅助SCL"]:::leaf_concept
+    N138 -->|包含| N143
+    L144["T10_6_CRC_aided_SCL_control_re"]:::lecture
+    N143 -.->|📄| L144
+    N145["Polar 速率与边界"]:::subdomain
+    N130 --> N145
+    N146["Polar速率恢复"]:::leaf_concept
+    N145 -->|包含| N146
+    L147["T10_7_NR_Polar_rate_recovery"]:::lecture
+    N146 -.->|📄| L147
+    N148["Polar译码边界案例"]:::leaf_concept
+    N145 -->|包含| N148
+    L149["T10_8_NR_Polar_decoder_edge_ca"]:::lecture
+    N148 -.->|📄| L149
+    N150["06 RTL/ASIC 前置基础"]:::domain
+    N1 --> N150
+    N151["定点数与LLR表示"]:::subdomain
+    N150 --> N151
+    L152["T5_1_fixed_point_numbers_for_L"]:::lecture
+    N151 -.->|📄| L152
+    N153["存储Bank与缓存基础"]:::subdomain
+    N150 --> N153
+    L154["T5_2_memory_banking_buffering_"]:::lecture
+    N153 -.->|📄| L154
+    N155["吞吐/延迟/并行度"]:::subdomain
+    N150 --> N155
+    L156["T5_3_throughput_latency_parall"]:::lecture
+    N155 -.->|📄| L156
+    N157["硬件状态机与握手"]:::subdomain
+    N150 --> N157
+    L158["T5_4_RTL_state_machine_handsha"]:::lecture
+    N157 -.->|📄| L158
+    N159["译码硬件验证思维"]:::subdomain
+    N150 --> N159
+    L160["T5_5_decoder_hardware_verifica"]:::lecture
+    N159 -.->|📄| L160
+    N161["07 三码综合对比"]:::domain
+    N1 --> N161
+    N162["Turbo/LDPC/Polar算法对比"]:::subdomain
+    N161 --> N162
+    L163["T11_1_Turbo_LDPC_Polar_algorit"]:::lecture
+    N162 -.->|📄| L163
+    N164["LTE/NR速率匹配对比"]:::subdomain
+    N161 --> N164
+    L165["T11_2_LTE_NR_rate_matching_com"]:::lecture
+    N164 -.->|📄| L165
+    N166["HARQ与软缓存对比"]:::subdomain
+    N161 --> N166
+    L167["T11_3_HARQ_soft_buffer_compari"]:::lecture
+    N166 -.->|📄| L167
+    N168["硬件架构取舍对比"]:::subdomain
+    N161 --> N168
+    L169["T11_4_decoder_hardware_tradeof"]:::lecture
+    N168 -.->|📄| L169
+    N170["按信道类型选译码器"]:::subdomain
+    N161 --> N170
+    L171["T11_5_decoder_selection_by_cha"]:::lecture
+    N170 -.->|📄| L171
+    N172["08 浮点 Golden Model"]:::domain
+    N1 --> N172
+    N173["Python工程布局"]:::subdomain
+    N172 --> N173
+    L174["T12_1_python_golden_model_proj"]:::lecture
+    N173 -.->|📄| L174
+    N175["LTE Turbo浮点仿真"]:::subdomain
+    N172 --> N175
+    L176["T12_2_LTE_Turbo_float_sim_plan"]:::lecture
+    N175 -.->|📄| L176
+    N177["NR LDPC浮点仿真"]:::subdomain
+    N172 --> N177
+    L178["T12_3_NR_LDPC_float_sim_plan"]:::lecture
+    N177 -.->|📄| L178
+    N179["NR Polar浮点仿真"]:::subdomain
+    N172 --> N179
+    L180["T12_4_NR_Polar_float_sim_plan"]:::lecture
+    N179 -.->|📄| L180
+    N181["BER/BLER曲线报告"]:::subdomain
+    N172 --> N181
+    L182["T12_5_BER_BLER_curve_reporting"]:::lecture
+    N181 -.->|📄| L182
+    N183["09 定点化模型"]:::domain
+    N1 --> N183
+    N184["定点译码器需求"]:::subdomain
+    N183 --> N184
+    L185["T13_1_fixed_point_decoder_requ"]:::lecture
+    N184 -.->|📄| L185
+    N186["Turbo定点模型"]:::subdomain
+    N183 --> N186
+    L187["T13_2_LTE_Turbo_fixed_point_mo"]:::lecture
+    N186 -.->|📄| L187
+    N188["LDPC定点模型"]:::subdomain
+    N183 --> N188
+    L189["T13_3_NR_LDPC_fixed_point_mode"]:::lecture
+    N188 -.->|📄| L189
+    N190["Polar定点模型"]:::subdomain
+    N183 --> N190
+    L191["T13_4_NR_Polar_fixed_point_mod"]:::lecture
+    N190 -.->|📄| L191
+    N192["SIMD与内存布局"]:::subdomain
+    N183 --> N192
+    L193["T13_5_SIMD_memory_layout_decod"]:::lecture
+    N192 -.->|📄| L193
+    N194["Bit-Exact回归框架"]:::subdomain
+    N183 --> N194
+    L195["T13_6_bit_exact_regression_har"]:::lecture
+    N194 -.->|📄| L195
+    N196["10 RTL 微架构"]:::domain
+    N1 --> N196
+    N197["LTE Turbo RTL"]:::subdomain
+    N196 --> N197
+    L198["T14_1_LTE_Turbo_RTL_microarchi"]:::lecture
+    N197 -.->|📄| L198
+    N199["NR LDPC RTL"]:::subdomain
+    N196 --> N199
+    L200["T14_2_NR_LDPC_RTL_microarchite"]:::lecture
+    N199 -.->|📄| L200
+    N201["NR Polar RTL"]:::subdomain
+    N196 --> N201
+    L202["T14_3_NR_Polar_RTL_microarchit"]:::lecture
+    N201 -.->|📄| L202
+    N203["统一译码子系统架构"]:::subdomain
+    N196 --> N203
+    L204["T14_4_unified_decoder_subsyste"]:::lecture
+    N203 -.->|📄| L204
+    N205["HARQ软缓存存储架构"]:::subdomain
+    N196 --> N205
+    L206["T14_5_soft_buffer_HARQ_memory_"]:::lecture
+    N205 -.->|📄| L206
+    N207["寄存器表与配置流"]:::subdomain
+    N196 --> N207
+    L208["T14_6_decoder_register_map_con"]:::lecture
+    N207 -.->|📄| L208
+    N209["11 验证与综合签核"]:::domain
+    N1 --> N209
+    N210["Testbench架构"]:::subdomain
+    N209 --> N210
+    L211["T15_1_decoder_testbench_archit"]:::lecture
+    N210 -.->|📄| L211
+    N212["协议向量与边界案例"]:::subdomain
+    N209 --> N212
+    L213["T15_2_protocol_vector_corner_c"]:::lecture
+    N212 -.->|📄| L213
+    N214["覆盖率与回归方案"]:::subdomain
+    N209 --> N214
+    L215["T15_3_coverage_regression_stra"]:::lecture
+    N214 -.->|📄| L215
+    N216["DC综合流程"]:::subdomain
+    N209 --> N216
+    L217["T15_4_DC_synthesis_flow_decode"]:::lecture
+    N216 -.->|📄| L217
+    N218["时序收敛与关键路径"]:::subdomain
+    N209 --> N218
+    L219["T15_5_timing_closure_decoder_c"]:::lecture
+    N218 -.->|📄| L219
+    N220["最终验证证据报告"]:::subdomain
+    N209 --> N220
+    L221["T15_6_final_decoder_verificati"]:::lecture
+    N220 -.->|📄| L221
+
+    N1 -.->|📄| L_MAP["T0.1 LTE/NR译码协议阅读地图"]:::lecture
+    N1 -.->|📄| L_GLOSS["L0 3GPP译码术语全称对照表"]:::lecture
+
+    classDef root fill:#263238,stroke:#000,stroke-width:4px,color:#fff,font-size:22px
+    classDef domain fill:#1565C0,stroke:#0D47A1,stroke-width:3px,color:#fff,font-size:20px
+    classDef subdomain fill:#42A5F5,stroke:#1E88E5,stroke-width:2px,color:#fff,font-size:18px
+    classDef concept fill:#90CAF9,stroke:#64B5F6,stroke-width:1.5px,color:#0D47A1,font-size:16px
+    classDef leaf_concept fill:#E3F2FD,stroke:#90CAF9,stroke-width:1.5px,color:#1565C0,font-size:15px
+    classDef lecture fill:#F5F5F5,stroke:#BDBDBD,stroke-width:1px,color:#616161,font-size:12px
+

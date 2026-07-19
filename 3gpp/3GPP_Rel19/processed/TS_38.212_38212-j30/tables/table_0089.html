@@ -1,0 +1,55 @@
+<table>
+  <tr>
+    <td>CSI report number</td>
+    <td>CSI fields</td>
+  </tr>
+  <tr>
+    <td rowspan="15">CSI report #n</td>
+    <td>CSI report configuration indicator as in Table 6.3.2.1.2-14, if reported</td>
+  </tr>
+  <tr>
+    <td>CRI or SSBRI #1 as in Table 6.3.2.1.2-14</td>
+  </tr>
+  <tr>
+    <td>CRI or SSBRI #2 as in Table 6.3.2.1.2-14, if reported</td>
+  </tr>
+  <tr>
+    <td>CRI or SSBRI #3 as in Table 6.3.2.1.2-14, if reported</td>
+  </tr>
+  <tr>
+    <td>CRI or SSBRI #4 as in Table 6.3.2.1.2-14, if reported</td>
+  </tr>
+  <tr>
+    <td>RSRP #1 as in Table 6.3.2.1.2-14</td>
+  </tr>
+  <tr>
+    <td>Differential RSRP #2 as in Table 6.3.2.1.2-14, if reported</td>
+  </tr>
+  <tr>
+    <td>Differential RSRP #3 as in Table 6.3.2.1.2-14, if reported</td>
+  </tr>
+  <tr>
+    <td>Differential RSRP #4 as in Table 6.3.2.1.2-14, if reported</td>
+  </tr>
+  <tr>
+    <td>Condition met indicator #1 in Table 6.3.2.1.2-14, if reported</td>
+  </tr>
+  <tr>
+    <td>Condition met indicator #2 in Table 6.3.2.1.2-14, if reported</td>
+  </tr>
+  <tr>
+    <td>Condition met indicator #3 in Table 6.3.2.1.2-14, if reported</td>
+  </tr>
+  <tr>
+    <td>Condition met indicator #4 in Table 6.3.2.1.2-14, if reported</td>
+  </tr>
+  <tr>
+    <td>RSRP as in Table 6.3.2.1.2-14 for the reference signal in the indicated TCI state or the SS/PBCH block which is QCLed with the reference signal in the indicated TCI state if eventType is set to ‘event1’ and enabledCurrentBeamReport is configured;Differentatial RSRP as in Table 6.3.2.1.2-14 for the reference signal in the indicated TCI state or the SS/PBCH block which is QCLed with the reference signal in the indicated TCI state if eventType is set to ‘event2’ and if enabledCurrentBeamReport is configured;Differentatial RSRP as in Table 6.3.2.1.2-14 for the reference signal with the valueOfQ highest L1-RSRP out of reference signals among the activated TCI states or the SS/PBCH block which is QCLed with the reference signal with the valueOfQ highest L1-RSRP out of refence signals among the activated TCI states if eventType is set to ‘event7’ and if enabledCurrentBeamReport is configured;</td>
+  </tr>
+  <tr>
+    <td>Zero padding bits , if neededOP</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE:The CSI report configuration indicator with value  indicates the (+1)-th CSI report configuration among the CSI report configurations associated with a same PUCCH resource configured by firstPUCCHResourceConfig-UEIBR, which are ordered in ascending order of CSI-ReportConfigID. The condition met indicators are reported only when the UE is configured with higher layer parameter PresenceOfConditionMetIndicator. If the reference signal associated with CRI or SSBRI #j satisfies the condition for transmitting UEIRI as defined in Clause 5.2.1.5.4.1 in [6, TS 38.214] when eventDetectionTimeWindowLength is configured, the value of the condition met indicator #j is set to 1; otherwise set to 0.ii</td>
+  </tr>
+</table>

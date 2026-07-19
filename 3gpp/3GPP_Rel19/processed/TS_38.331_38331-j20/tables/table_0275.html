@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td>SubgroupConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>subgroupsNumPerPOTotal number of subgroups per Paging Occasion (PO) for UE to read subgroups indication from PEI signaling. The field represents the sum of CN-assigned and UEID-based subgroups supported by for PEI the network. When PEI-Config is configured, there is always at least one subgroup (UEID-based subgroup or CN-assigned subgroup) configured.</td>
+  </tr>
+  <tr>
+    <td>subgroupsNumForUEIDNumber of subgroups per Paging Occasion (PO) for UE to read subgroups indication from PEI signaling, for UEID-based subgrouping method for PEI. When present, the field is set to an integer smaller than or equal to subgroupsNumPerPO. subgroupsNumPerPO equals to subgroupsNumForUEID when the network does not configure CN-assigned subgrouping for PEI. When pei-Config is configured, the field is absent when the network only configures CN-assigned subgrouping. Both this field and subgroupsNumPerPO are equal to 1 when the network does not configure subgrouping for PEI. When pei-Config is configured, if the field is absent, the UE uses subgrouping according to TS 38.304 [20], clause 7.3.0.</td>
+  </tr>
+</table>

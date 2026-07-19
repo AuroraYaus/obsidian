@@ -1,0 +1,2 @@
+NeedForInterruptionNR field descriptions
+interruptionIndicationIndicates whether interruption is needed for the UE to perform SSB based measurements without measurement gap. Value no-gap-with-interruption indicates that interruption is needed. Value no-gap-no-interruption indicates interruption is not needed.

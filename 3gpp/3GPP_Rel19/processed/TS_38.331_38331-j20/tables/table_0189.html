@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>Conditional Presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>2TA</td>
+    <td>This field is mandatory present if tag2 is present in the SpCellConfig in ltm-CandidateConfig and unifiedTCI-StateType in the ltm-TCI-Info within LTM-Candidate is set to joint. It is absent, Need R, otherwise.</td>
+  </tr>
+  <tr>
+    <td>Joint</td>
+    <td>This field is mandatory present, if unifiedTCI-StateType in the ltm-TCI-Info within LTM-Candidate is set to joint. It is absent, Need R, otherwise.</td>
+  </tr>
+  <tr>
+    <td>Joint2</td>
+    <td>This field is mandatory present if unifiedTCI-StateType in the ltm-TCI-Info within LTM-Candidate is set to joint and ul-powerControl is not configured in any BWP-Uplink-Dedicated of the SpCellConfig in ltm-CandidateConfig. It is absent, Need R, otherwise.</td>
+  </tr>
+</table>

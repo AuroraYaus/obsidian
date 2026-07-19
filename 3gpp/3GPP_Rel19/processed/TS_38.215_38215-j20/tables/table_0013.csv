@@ -1,0 +1,2 @@
+Definition,"The relative timing difference between the E-UTRA neighbour cell j and the E-UTRA reference cell i, defined as TSubframeRxj – TSubframeRxi, where: TSubframeRxj is the time when the UE receives the start of one subframe from E-UTRA cell j TSubframeRxi is the time when the UE receives the corresponding start of one subframe from E-UTRA cell i that is closest in time to the subframe received from E-UTRA cell j. The reference point for the observed subframe time difference shall be the antenna connector of the UE."
+Applicable for,RRC_CONNECTED inter-RAT

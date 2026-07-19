@@ -1,0 +1,9 @@
+Conditional Presence,Explanation
+DedicatedOnly,"In PDCCH-Config, the field is optionally present, Need R. Otherwise it is absent, Need R."
+Setup,"This field is mandatory present upon creation of a new SearchSpace. It is optionally present, Need M, otherwise."
+Setup2,"This field is mandatory present when a new SearchSpace is set up, if the same SearchSpace ID is not included in searchSpacesToAddModListExt-r16/searchSpacesToAddModListExt-v1700/searchSpacesToAddModListExt-v1800 of the parent IE with the field searchSpaceType-r16 or searchSpaceType-r17 or searchSpaceType-r18 included. This field is absent if the same SearchSpace ID is included in searchSpacesToAddModListExt-v1800 of the parent IE with the field searchSpaceType-r18 included and set to dci-FormatsMC-r18. Otherwise it is optionally present, Need M."
+Setup3,"This field is mandatory present when a new SearchSpace is set up, if the same SearchSpace ID is not included in searchSpacesToAddModListExt (without suffix) of the parent IE with the field searchSpaceType (without suffix) included.  Otherwise it is optionally present, Need M."
+Setup4,"This field is mandatory present upon creation of a new SearchSpace if monitoringSlotPeriodicityAndOffset-v1710 is not included. It is optionally present, Need M, otherwise."
+Setup5,"This field is mandatory present upon creation of a new SearchSpace if monitoringSlotPeriodicityAndOffset (without suffix) is not included. It is optionally present, Need M, otherwise."
+SetupOnly,"This field is mandatory present upon creation of a new SearchSpace. It is absent, Need M, otherwise."
+SetupOnly2,"In PDCCH-Config, the field is optionally present upon creation of a new SearchSpace and absent, Need M upon reconfiguration of an existing SearchSpace.In PDCCH-ConfigCommon, the field is absent."

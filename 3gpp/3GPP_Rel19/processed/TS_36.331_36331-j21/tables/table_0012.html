@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <td>LoggedMeasurementConfiguration field descriptions</td>
+  </tr>
+  <tr>
+    <td>absoluteTimeInfoIndicates the absolute time in the current cell.</td>
+  </tr>
+  <tr>
+    <td>areaConfigurationUsed to restrict the area in which the UE performs measurement logging to cells broadcasting either one of the included cell identities or one of the included tracking area codes/ identities.</td>
+  </tr>
+  <tr>
+    <td>eventTypeThe value outOfCoverage indicates the UE to perform logging of measurements when the UE enters any cell selection state, and the value eventL1 indicates the UE to perform logging of measurements when the triggering condition (similar as event A2 as specified in 5.5.4.3) as configured in the event is met for the camping cell in camped normally state.</td>
+  </tr>
+  <tr>
+    <td>measUncomBarPreIf configured, the UE attempts to perform the uncompensated Barometeric pressure measurement in RRC_IDLE as defined in TS 37.355 [109].</td>
+  </tr>
+  <tr>
+    <td>plmn-IdentityListIndicates a set of PLMNs defining when the UE performs measurement logging as well as the associated status indication and information retrieval i.e. the UE performs these actions when the RPLMN is part of this set of PLMNs.</td>
+  </tr>
+  <tr>
+    <td>sigLoggedMeasTypeIf included, the field indicates a signalling based logged measurement configuration (See TS 37.320 [60]).</td>
+  </tr>
+  <tr>
+    <td>targetMBSFN-AreaListUsed to indicate logging of MBSFN measurements and further restrict the area and frequencies for which the UE performs measurement logging for MBSFN. If both MBSFN area id and carrier frequency are present, a specific MBSFN area is indicated. If only carrier frequency is present, all MBSFN areas on that carrier frequency are indicated. If there is no entry in the list, any MBSFN area is indicated.</td>
+  </tr>
+  <tr>
+    <td>tce-IdParameter Trace Collection Entity Id: See TS 32.422 [58].</td>
+  </tr>
+  <tr>
+    <td>traceRecordingSessionRefParameter Trace Recording Session Reference: See TS 32.422 [58]</td>
+  </tr>
+</table>

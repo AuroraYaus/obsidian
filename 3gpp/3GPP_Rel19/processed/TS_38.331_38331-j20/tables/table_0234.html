@@ -1,0 +1,42 @@
+<table>
+  <tr>
+    <td>Conditional Presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>LCH-BasedPrioritization</td>
+    <td>This field is optionally present, Need R, if lch-BasedPrioritization is configured in the MAC entity. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>RACH-LessHO</td>
+    <td>The field is optionally present, Need N, if rach-LessHO is present in reconfigurationWithSync. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>RepTypeB</td>
+    <td>The field is optionally present if pusch-RepTypeIndicator is set to pusch-RepTypeB, Need S, and absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>CG-List</td>
+    <td>The field is mandatory present when included in configuredGrantConfigToAddModList-r16, otherwise the field is absent.</td>
+  </tr>
+  <tr>
+    <td>CG-IndexMAC</td>
+    <td>The field is mandatory present if at least one configured grant is configured by configuredGrantConfigToAddModList-r16 in any BWP of this MAC entity, otherwise it is optionally present, need R.</td>
+  </tr>
+  <tr>
+    <td>CG-SDT1</td>
+    <td>This field is optionally present, Need R, if cg-SDT-Configuration is configured, otherwise it is absent.</td>
+  </tr>
+  <tr>
+    <td>CG-SDT2</td>
+    <td>This field is optionally present, Need S, if cg-SDT-PeriodicityExt is configured, otherwise it is absent.</td>
+  </tr>
+  <tr>
+    <td>LTM</td>
+    <td>The field is optionally present, Need R, in an RRCReconfiguration message within the LTM-Config IE. Otherwise, the field is absent.</td>
+  </tr>
+  <tr>
+    <td>SRSsets</td>
+    <td>This field is mandatory present when UE is configured with two SRS sets configured in either srs-ResourceSetToAddModList or srs-ResourceSetToAddModListDCI-0-2 with usage codebook or non-codebook and none of multipanelSchemeSDM or multipanelSchemeSFN or sTx-2Panel is configured. Otherwise it is absent, Need R</td>
+  </tr>
+</table>

@@ -1,0 +1,4 @@
+LowBandCA-Switching field descriptions
+"gapDurationPCelltoSCellIndicates the duration of the switching gap for the switching from PCell to the SCell, in the unit of 15KHz SCS symbol. NW ensures that the switching gap is enough to cover at least the switching period."
+"gapDurationSCelltoPCellIndicates the duration of switching gap for the switching from the SCell to PCell, in the unit of 15KHz SCS symbol. NW ensures that the switching gap is enough to cover at least the switching period and TA."
+"switchingPatternIndicates which carrier is configured for the corresponding slot for low NR band carrier aggregation via switching between FDD and supplementary downlink (SDL) carrier. ‘0’ indicates FDD carrier (PCell), and ‘1’ indicates SDL carrier (SCell). The pattern starts from the beginning of SFN 0 of PCell."

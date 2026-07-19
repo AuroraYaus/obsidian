@@ -1,0 +1,10 @@
+in symbolsld,DM-RS positions l,,,,,,,,,,,
+,PUSCH mapping type A,,,,,,,,PUSCH mapping type Bl0=0,,,
+,l0=2,,,,l0=3,,,,,,,
+,dmrs-AdditionalPosition,,,,dmrs-AdditionalPosition,,,,dmrs-AdditionalPosition,,,
+,pos0,,pos1,,pos0,,pos1,,pos0,,pos1,
+,1sthop,2ndhop,1sthop,2ndhop,1sthop,2ndhop,1sthop,2ndhop,1sthop,2ndhop,1sthop,2ndhop
+≤3,-,-,-,-,-,-,-,-,0,0,0,0
+4,2,0,2,0,3,0,3,0,0,0,0,0
+"5, 6",2,0,2,"0, 4",3,0,3,"0, 4",0,0,"0, 4","0, 4"
+7,2,0,"2, 6","0, 4",3,0,3,"0, 4",0,0,"0, 4","0, 4"

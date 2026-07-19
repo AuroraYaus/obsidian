@@ -1,0 +1,16 @@
+MeasConfig field descriptions
+cssf-ConfigUsed to enable or disable the CSSF optimization feature.
+"cssf-MeasMO-ListUsed to indicate which measurement object associated to SCell (i.e. SCC MO) is measured as defined in TS 38.133 [14]. At most one SCC MO per band is configured in this list. The SCC MO for a given band is indicated only if there are more than one SCC MO configured with SSB based measurement in the band, and neither PCell nor PSCell is configured in the band."
+effectiveMeasWindowConfigUsed to setup and release effective measurement window in NR for E-UTRA measurements.
+"fbs-ConfigIndicates the configuration of triggering condition for L3 fast beam sweeping operation. If the measured PCell RSRP is below fbs-ThresholdP (if configured) and the measured PCell RSRQ is below fbs-ThresholdQ (if configured), UE activates L3 fast beam sweeping operation as specified in TS 38.133 [14]."
+"interFrequencyConfig-NoGap-r16If the field is set to true, UE is configured to perform SSB based inter-frequency measurement without measurement gaps when the inter-frequency SSB is completely contained in the active DL BWP of the UE, as specified in TS 38.133 [14], clause 9.3. Otherwise, the SSB based inter-frequency measurement is performed within measurement gaps. In NR-DC, the field can only be configured in the measConfig associated with MCG, and when configured, it applies to all the inter-frequency measurements configured by MN and SN."
+measGapConfigUsed to setup and release measurement gaps in NR.
+measGapSharingConfigSpecifies the measurement gap sharing scheme and controls setup/ release of measurement gap sharing.
+measIdToAddModListList of measurement identities to add and/or modify.
+measIdToRemoveListList of measurement identities to remove.
+measObjectToAddModListList of measurement objects to add and/or modify.
+measObjectToRemoveListList of measurement objects to remove.
+reportConfigToAddModListList of measurement reporting configurations to add and/or modify.
+reportConfigToRemoveListList of measurement reporting configurations to remove.
+s-MeasureConfigThreshold for NR SpCell RSRP measurement controlling when the UE is required to perform measurements on non-serving cells. Choice of ssb-RSRP corresponds to cell RSRP based on SS/PBCH block and choice of csi-RSRP corresponds to cell RSRP of CSI-RS. This field is also applicable to L1 measurements configured with ltm-CSI-ResourceConfigToAddModList-r18. This field is not configured to a UE configured with event(s) related to the L2 U2N Relay UE.
+timeToTrigger-SFIndicates a scaling factor for timeToTrigger in ReportConfigNR and ReportConfigInterRAT. The timeToTrigger is multiplied with the scaling factor applicable for the UE's speed state.

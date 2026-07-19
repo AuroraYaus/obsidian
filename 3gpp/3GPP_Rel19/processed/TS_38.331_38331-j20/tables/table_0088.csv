@@ -1,0 +1,4 @@
+GapOccasionCancelRatio field descriptions
+"fr1, fr2Includes the UE's preference for gap occasion cancellation ratio for the configured per FR measurement gap under measGapConfig."
+gapConfigRatioListIncludes the UE's preference for gap occasion cancellation ratio for the configured measurement gap with measGapId in gapToAddModList under measGapConfig.
+perUEIncludes the UE's perference for gap occasion cancellation ratio for the configured per UE measurement gap under measGapConfig.

@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>SIB8 field descriptions</td>
+  </tr>
+  <tr>
+    <td>dataCodingSchemeIdentifies the alphabet/coding and the language applied variations of a CMAS notification.</td>
+  </tr>
+  <tr>
+    <td>messageIdentifierIdentifies the source and type of CMAS notification.</td>
+  </tr>
+  <tr>
+    <td>serialNumberIdentifies variations of a CMAS notification.</td>
+  </tr>
+  <tr>
+    <td>warningAreaCoordinatesSegmentCarries a segment, with one or more octets, of the geographical area where the CMAS warning message is valid as defined in [28]. The first octet of the first warningAreaCoordinatesSegment is equivalent to the first octet of Warning Area Coordinates IE defined in and encoded according to TS 23.041 [29] and so on.</td>
+  </tr>
+  <tr>
+    <td>warningMessageSegmentCarries a segment, with one or more octets, of the Warning Message Contents IE defined in TS 38.413 [42]. The first octet of the Warning Message Contents IE is equivalent to the first octet of the CB data IE defined in and encoded according to TS 23.041 [29], clause 9.4.2.2.5, and so on.</td>
+  </tr>
+  <tr>
+    <td>warningMessageSegmentNumberSegment number of the CMAS warning message segment contained in the SIB. A segment number of zero corresponds to the first segment, one corresponds to the second segment, and so on. If warning area coordinates are provided for the warning message, then this field applies to both warning message segment and warning area coordinates segment.</td>
+  </tr>
+  <tr>
+    <td>warningMessageSegmentTypeIndicates whether the included CMAS warning message segment is the last segment or not. If warning area coordinates are provided for the warning message, then this field applies to both warning message segment and warning area coordinates segment.</td>
+  </tr>
+</table>

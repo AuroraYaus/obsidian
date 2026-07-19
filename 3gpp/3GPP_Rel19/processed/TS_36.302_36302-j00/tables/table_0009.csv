@@ -1,0 +1,10 @@
+,PCell
+1. RRC_IDLE,
+1.1 All UEs,A or C or D or E
+,"Remarks:The combination for Random Access procedure is only required, related to D."
+1.2 UEs supporting SC-PTM,A or C or D or E or D1
+1.3 UEs supporting NWUS,A or C or D or E or H
+1.4 UEs supporting transmission using PUR,A or C or D or E or K or L or M
+2. RRC_CONNECTED,
+2.1 All UEs,A or B or D or F or G or E
+2.2 UEs supporting SR with SPS BSR,A or B or D or F or G or E or I or J

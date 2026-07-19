@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <td>RepetitionSchemeConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>fdm-TDMConfigures UE with a repetition scheme among fdmSchemeA, fdmSchemeB and tdmSchemeA as specified in clause 5.1 of TS 38.214 [19]. The network does not set this field to release. Upon reception of this field in RepetitionSchemeConfig-r16, the UE shall release slotBased if previously configured in the same instance of RepetitionSchemeConfig-r16.</td>
+  </tr>
+  <tr>
+    <td>sequenceOffsetForRVFor slot-based repetition scheme, selected RV sequence is applied to transmission occasions associated to the first TCI state. The RV sequence associated to the second TCI state is determined by a RV offset from that selected RV sequence.</td>
+  </tr>
+  <tr>
+    <td>slotBasedConfigures UE with slot-based repetition scheme. Network always configures this field when the parameter repetitionNumber is present in IE PDSCH-TimeDomainResourceAllocationList. The network does not set this field to release. Upon reception of this field in RepetitionSchemeConfig-r16, the UE shall release fdm-TDM if previously configured in the same instance of RepetitionSchemeConfig-r16.</td>
+  </tr>
+  <tr>
+    <td>startingSymbolOffsetKThe starting symbol of the second transmission occasion has K symbol offset relative to the last symbol of the first transmission occasion. When UE is configured with tdmSchemeA, the parameter startingSymbolOffsetK is present, otherwise absent.</td>
+  </tr>
+  <tr>
+    <td>tciMappingEnables TCI state mapping method to PDSCH transmission occasions.</td>
+  </tr>
+</table>

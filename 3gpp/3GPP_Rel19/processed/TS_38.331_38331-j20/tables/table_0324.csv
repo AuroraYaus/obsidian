@@ -1,0 +1,3 @@
+LTM-SSB-ResourceSet field descriptions
+"ltm-CandidateIdListThis field indicates the LTM candidate configuration IDs related to the SSBs in the ltm-SSB-ResourceList. The list has the same number of entries as ltm-SSB-ResourceList. The first entry in this list shall be associated to the first entry in ltm-SSB-ResourceList, the second entry of this list shall be associated to the second entry in ltm-SSB-ResourceList, and so on."
+ltm-SSB-ResourceListThis field is used to indicate on SS/PBCH block resources from one or more LTM candidate cells.

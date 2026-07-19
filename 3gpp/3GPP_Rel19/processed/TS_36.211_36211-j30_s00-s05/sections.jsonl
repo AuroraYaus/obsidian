@@ -1,0 +1,89 @@
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "Foreword", "paragraph_index": 1, "style": "Heading1"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "1Scope", "paragraph_index": 12, "style": "Heading1"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "2References", "paragraph_index": 14, "style": "Heading1"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "3Symbols and abbreviations", "paragraph_index": 33, "style": "Heading1"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "3.1Symbols", "paragraph_index": 34, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "3.2Abbreviations", "paragraph_index": 187, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "4Frame structure", "paragraph_index": 236, "style": "Heading1"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "4.1Frame structure type 1 for FDD", "paragraph_index": 244, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "4.2Frame structure type 2", "paragraph_index": 255, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "4.3Frame structure type 3", "paragraph_index": 278, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "4.4Frame structure type 1 for IoT NTN TDD", "paragraph_index": 281, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5Uplink", "paragraph_index": 286, "style": "Heading1"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.1Overview", "paragraph_index": 287, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.1.1Physical channels", "paragraph_index": 289, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.1.2Physical signals", "paragraph_index": 295, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.2Slot structure and physical resources", "paragraph_index": 298, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.2.1Resource grid", "paragraph_index": 299, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.2.2Resource elements", "paragraph_index": 310, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.2.3Resource blocks", "paragraph_index": 312, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.2.4Narrowbands and widebands", "paragraph_index": 322, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.2.5Guard period for narrowband and wideband retuning", "paragraph_index": 333, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.3Physical uplink shared channel", "paragraph_index": 362, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.3.1Scrambling", "paragraph_index": 374, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.3.2Modulation", "paragraph_index": 400, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.3.2ALayer mapping", "paragraph_index": 404, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.3.2A.1Layer mapping for transmission on a single antenna port", "paragraph_index": 406, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.3.2A.2Layer mapping for spatial multiplexing", "paragraph_index": 410, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.3.3Transform precoding", "paragraph_index": 414, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.3.3APrecoding", "paragraph_index": 421, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.3.3A.1Precoding for transmission on a single antenna port", "paragraph_index": 423, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.3.3A.2Precoding for spatial multiplexing", "paragraph_index": 427, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.3.4Mapping to physical resources", "paragraph_index": 443, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4Physical uplink control channel", "paragraph_index": 536, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4.1PUCCH formats 1, 1a and 1b", "paragraph_index": 546, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4.2PUCCH formats 2, 2a and 2b", "paragraph_index": 577, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4.2APUCCH format 3", "paragraph_index": 597, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4.2BPUCCH format 4", "paragraph_index": 614, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4.2CPUCCH format 5", "paragraph_index": 624, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4.3Mapping to physical resources", "paragraph_index": 639, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4AShort Physical Uplink Control Channel", "paragraph_index": 674, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4A.1General", "paragraph_index": 675, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4A.2SPUCCH formats 1,1a,1b", "paragraph_index": 684, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4A.2.1Slot-SPUCCH", "paragraph_index": 685, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4A.2.2Subslot-SPUCCH", "paragraph_index": 694, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4A.3SPUCCH format 3", "paragraph_index": 706, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4A.3.1Slot-SPUCCH", "paragraph_index": 707, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4A.4SPUCCH format 4", "paragraph_index": 716, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4A.4.1Slot-SPUCCH", "paragraph_index": 717, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4A.4.2Subslot-SPUCCH", "paragraph_index": 726, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.4A.5Mapping to physical resources", "paragraph_index": 732, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5Reference signals", "paragraph_index": 755, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.1Generation of the reference signal sequence", "paragraph_index": 760, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.1.1Base sequences of length  or larger", "paragraph_index": 771, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.1.2Base sequences of length less than", "paragraph_index": 779, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.1.3Group hopping", "paragraph_index": 793, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.1.4Sequence hopping", "paragraph_index": 804, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.1.5Determining virtual cell identity for sequence generation", "paragraph_index": 812, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2Demodulation reference signal", "paragraph_index": 826, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.1Demodulation reference signal for PUSCH", "paragraph_index": 827, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.1.1Reference signal sequence", "paragraph_index": 828, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.1.2Mapping to physical resources", "paragraph_index": 882, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.1ADemodulation reference signal for PUSCH with sub-PRB allocations", "paragraph_index": 900, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.1A.1Reference signal sequence using modulation schemes other than π/2-BPSK", "paragraph_index": 901, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.1A.2Reference signal sequence using π/2-BPSK modulation scheme", "paragraph_index": 916, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.1A.3Group hopping", "paragraph_index": 927, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.1A.4Mapping to physical resources", "paragraph_index": 940, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.2Demodulation reference signal for PUCCH", "paragraph_index": 947, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.2.1Reference signal sequence", "paragraph_index": 948, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.2.2Mapping to physical resources", "paragraph_index": 983, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.3Demodulation reference signal for SPUCCH", "paragraph_index": 990, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.3.1Reference signal sequence", "paragraph_index": 991, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.2.3.2Mapping to physical resources", "paragraph_index": 1001, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.3Sounding reference signal", "paragraph_index": 1007, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.3.1Sequence generation", "paragraph_index": 1012, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.3.1.1Sequence generation for basic SRS", "paragraph_index": 1013, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.3.1.2Sequence generation for additional SRS", "paragraph_index": 1017, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.3.2Mapping to physical resources", "paragraph_index": 1027, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.3.2.1Mapping to physical resources for basic SRS", "paragraph_index": 1028, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.3.2.2Mapping to physical resources for additional SRS", "paragraph_index": 1059, "style": "Heading5"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.5.3.3Sounding reference signal subframe configuration", "paragraph_index": 1075, "style": "Heading4"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.6SC-FDMA baseband signal generation", "paragraph_index": 1081, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.6ASC-FDMA baseband signal generation for PUSCH using sub-PRB allocations", "paragraph_index": 1097, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.6A.1Modulation schemes other than π/2-BPSK", "paragraph_index": 1098, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.6A.2Modulation scheme π/2-BPSK", "paragraph_index": 1100, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.7Physical random access channel", "paragraph_index": 1111, "style": "Heading2"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.7.1Time and frequency structure", "paragraph_index": 1112, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.7.2Preamble sequence generation", "paragraph_index": 1149, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.7.3Baseband signal generation", "paragraph_index": 1192, "style": "Heading3"}
+{"source": "36211-j30_s00-s05.docx", "section": "", "title": "5.8Modulation and upconversion", "paragraph_index": 1198, "style": "Heading2"}

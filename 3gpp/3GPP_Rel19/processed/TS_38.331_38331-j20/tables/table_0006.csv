@@ -1,0 +1,4 @@
+DedicatedSIBRequest field descriptions
+requestedPeriodicAD-PosSIB-ListContains a list of posSIB(s) the UE may request with periodic control parameter while in RRC_CONNECTED.
+requestedPosSIB-ListContains a list of posSIB(s) the UE requests while in RRC_CONNECTED.
+requestedSIB-ListContains a list of SIB(s) the UE requests while in RRC_CONNECTED.

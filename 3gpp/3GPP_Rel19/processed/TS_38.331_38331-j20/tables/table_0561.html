@@ -1,0 +1,194 @@
+<table>
+  <tr>
+    <td>ServingCellConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>additionalPCI-ToAddModListList of information for the additional SSB with different PCI than the serving cell PCI. The additional SSBs with different PCIs are not used for serving cell quality derivation.</td>
+  </tr>
+  <tr>
+    <td>additionalTDDConfig-perPCI-ToAddModListList of TDD-UL-DL configurations for the additional PCIs. When the network releases an additional PCI of a serving cell, the network also explicitly releases the associated TDD-UL-DL configuration for the additional PCI.</td>
+  </tr>
+  <tr>
+    <td>bwp-InactivityTimerThe duration in ms after which the UE falls back to the default Bandwidth Part (see TS 38.321 [3], clause 5.15). When the network releases the timer configuration, the UE stops the timer without switching to the default BWP.</td>
+  </tr>
+  <tr>
+    <td>ca-SlotOffsetSlot offset between the primary cell (PCell/PSCell) and the SCell in unaligned frame boundary with slot alignment and partial SFN alignment inter-band CA. Based on this field, the UE determines the time offset of the SCell as specified in clause 4.5 of TS 38.211 [16]. The granularity of this field is determined by the reference SCS for the slot offset (i.e. the maximum of PCell/PSCell lowest SCS among all the configured SCSs in DL/UL SCS-SpecificCarrierList in ServingCellConfigCommon or ServingCellConfigCommonSIB and this serving cell&#x27;s lowest SCS among all the configured SCSs in DL/UL SCS-SpecificCarrierList in ServingCellConfigCommon or ServingCellConfigCommonSIB).The Network configures at most single non-zero offset duration in ms (independent on SCS) among CCs in the unaligned CA configuration. If the field is absent, the UE applies the value of 0. The slot offset value can only be changed with SCell release and add.</td>
+  </tr>
+  <tr>
+    <td>cbg-TxDiffTBsProcessingType1, cbg-TxDiffTBsProcessingType2Indicates whether processing types 1 and 2 based CBG based operation is enabled according to Rel-16 UE capabilities.</td>
+  </tr>
+  <tr>
+    <td>cellDTX-DRX-ConfigUsed to configure cell DTX/DRX for the serving cell, as specified in TS 38.321 [3]. A maximum of two cell DTX/DRX patterns can be configured per MAC entity for different serving cells. The two configured patterns are aligned, that the start and slot offset are common and the periodicity of one pattern is an integer multiple of the other. Cell DTX is configured only when connected mode DRX is configured.</td>
+  </tr>
+  <tr>
+    <td>cellDTX-DRX-L1activationIndicates whether this serving cell has enabled L1 signaling based on DCI 2_9 for dynamic activation/deactivation of cell DTX/DRX configuration.</td>
+  </tr>
+  <tr>
+    <td>cjt-Scheme-PDSCH, cjt-Scheme-PDSCH-v1900This field is used to configure CJT Tx scheme cjtSchemeA or cjtSchemeB, cjt-SchemeC, cjt-SchemeD or cjt-SchemeE for PDSCH reception, see TS 38.214 [19] clause 5.1.5. The network does not configure cjt-Scheme-PDSCH and cjt-Scheme-PDSCH-v1900 simultaneously.</td>
+  </tr>
+  <tr>
+    <td>channelAccessConfigList of parameters used for access procedures of operation with shared spectrum channel access (see TS 37.213 [48).</td>
+  </tr>
+  <tr>
+    <td>channelAccessMode2If present, this field indicates that the UE shall apply channel access procedures for operation with shared spectrum channel access in accordance with TS 37.213 [48], clause 4.4 for FR2-2. If absent, the UE does not apply these channel access procedures. The network always configures this field if channel access procedures are required for the serving cell within this region by regulations.Overwrites the corresponding field in ServingCellConfigCommon or ServingCellConfigCommonSIB for this serving cell.</td>
+  </tr>
+  <tr>
+    <td>crossCarrierSchedulingConfigIndicates whether this serving cell is cross-carrier scheduled by another serving cell or whether it cross-carrier schedules another serving cell. If the field other is configured for an SpCell (i.e., the SpCell is cross-carrier scheduled by another serving cell), the SpCell can be additionally scheduled by the PDCCH on the SpCell.</td>
+  </tr>
+  <tr>
+    <td>crossCarrierSchedulingConfigReleaseIf this field is included, the UE shall release the cross carrier scheduling configuration configured by crossCarrierSchedulingConfig. The network may only include either crossCarrierSchedulingConfigRelease or crossCarrierSchedulingConfig at a time.</td>
+  </tr>
+  <tr>
+    <td>crs-RateMatch-PerCORESETPoolIndexIndicates how UE performs rate matching when both lte-CRS-PatternList1-r16 and lte-CRS-PatternList2-r16 are configured or when both lte-CRS-PatternList3-r18 and lte-CRS-PatternList4-r18 are configured as specified in TS 38.214 [19], clause 5.1.4.2.</td>
+  </tr>
+  <tr>
+    <td>csi-RS-ValidationWithDCIIndicates how the UE performs periodic and semi-persistent CSI-RS reception in a slot. The presence of this field indicates that the UE uses DCI detection to validate whether to receive CSI-RS (see TS 38.213 [13], clause 11.1).</td>
+  </tr>
+  <tr>
+    <td>defaultDownlinkBWP-IdThe initial bandwidth part is referred to by BWP-Id = 0. ID of the downlink bandwidth part to be used upon expiry of the BWP inactivity timer. This field is UE specific. When the field is absent the UE uses the initial BWP as default BWP. (see TS 38.213 [13], clause 12 and TS 38.321 [3], clause 5.15).</td>
+  </tr>
+  <tr>
+    <td>directionalCollisionHandlingIndicates that this serving cell is using directional collision handling between a reference and other cell(s) for half-duplex operation in TDD CA with same SCS as specified in TS 38.213 [13], clause 11.1. The half-duplex operation only applies within the same frequency range and cell group.The network only configures this field for TDD serving cells that are using the same SCS.</td>
+  </tr>
+  <tr>
+    <td>directionalCollisionHandling-DCFor the IAB-MT, it indicates that this serving cell is using directional collision handling between a reference and other cell(s) for half-duplex operation in TDD NR-DC with same SCS within same cell group or cross different cell groups.</td>
+  </tr>
+  <tr>
+    <td>dormantBWP-ConfigThe dormant BWP configuration for an SCell. This field can be configured only for a (non-PUCCH) SCell.</td>
+  </tr>
+  <tr>
+    <td>downlinkBWP-ToAddModListList of additional downlink bandwidth parts to be added or modified. (see TS 38.213 [13], clause 12).</td>
+  </tr>
+  <tr>
+    <td>downlinkBWP-ToReleaseListList of additional downlink bandwidth parts to be released. (see TS 38.213 [13], clause 12).</td>
+  </tr>
+  <tr>
+    <td>downlinkChannelBW-PerSCS-ListA set of UE specific channel bandwidth and location configurations for different subcarrier spacings (numerologies). Defined in relation to Point A. The UE uses the configuration provided in this field only for the purpose of channel bandwidth and location determination. If absent, UE uses the configuration indicated in scs-SpecificCarrierList in DownlinkConfigCommon / DownlinkConfigCommonSIB. Network only configures channel bandwidth that corresponds to the channel bandwidth values defined in TS 38.101-1 [15], TS 38.101-2 [39], and TS 38.101-5 [75]. If the UE is an (e)RedCap UE and needs to autonomously switch to its initial downlink bandwidth part to perform a random access procedure but its current UE specific channel bandwidth does not cover the initial downlink bandwidth part, the UE autonomously changes its UE specific channel bandwidth to cover the initial downlink bandwidth part. In that case, after completion of the random access procedure, the network ensures that the UE specific channel bandwidth fully covers the UE&#x27;s active downlink bandwidth part in subsequent bandwidth part switch operations.</td>
+  </tr>
+  <tr>
+    <td>dummy1, dummy 2This field is not used in the specification. If received it shall be ignored by the UE.</td>
+  </tr>
+  <tr>
+    <td>enableBeamSwitchTimingIndicates the aperiodic CSI-RS triggering with beam switching triggering behaviour as defined in clause 5.2.1.5.1 of TS 38.214 [19].</td>
+  </tr>
+  <tr>
+    <td>enableDefaultTCI-StatePerCoresetPoolIndexPresence of this field indicates the UE shall follow the release 16 behavior of default TCI state per CORESETPoolindex when the UE is configured by higher layer parameter PDCCH-Config that contains two different values of CORESETPoolIndex in ControlResourceSet is enabled.</td>
+  </tr>
+  <tr>
+    <td>enableTwoDefaultTCI-StatesPresence of this field indicates the UE shall follow the release 16 behavior of two default TCI states for PDSCH when at least one TCI codepoint is mapped to two TCI states is enabled</td>
+  </tr>
+  <tr>
+    <td>fdmed-ReceptionMulticastIndicates the Type-1 HARQ codebook generation as specified in TS 38.213 [13], clause 9.1.2.1.</td>
+  </tr>
+  <tr>
+    <td>firstActiveDownlinkBWP-IdIf configured for an SpCell, this field contains the ID of the DL BWP to be activated or to be used for RLM, BFD and measurements if included in an RRCReconfiguration message contained in an NR or E-UTRA RRC message indicating that the SCG is deactivated, upon performing the RRC (re-)configuration. If the field is absent, the RRC (re-)configuration does not impose a BWP switch. If the field is absent for the PSCell at SCG deactivation, the UE considers the previously activated DL BWP as the BWP to be used for RLM, BFD and measurements. If the field is absent for the PSCell at SCG activation, the DL BWP to be activated is the DL BWP previously to be used for RLM, BFD and measurements.If configured for an SCell, this field contains the ID of the downlink bandwidth part to be used upon activation of an SCell. The initial bandwidth part is referred to by BWP-Id = 0.Upon reconfiguration with reconfigurationWithSync, the network sets the firstActiveDownlinkBWP-Id and firstActiveUplinkBWP-Id to the same value.</td>
+  </tr>
+  <tr>
+    <td>initialDownlinkBWPThe dedicated (UE-specific) configuration for the initial downlink bandwidth-part (i.e., DL BWP#0). If any of the optional IEs are configured within this IE, the UE considers the BWP#0 to be an RRC configured BWP (from UE capability viewpoint). Otherwise, the UE does not consider the BWP#0 as an RRC configured BWP (from UE capability viewpoint). Network always configures the UE with a value for this field if no other BWPs are configured. NOTE1</td>
+  </tr>
+  <tr>
+    <td>intraCellGuardBandsDL-List, intraCellGuardBandsUL-ListList of intra-cell guard bands in a serving cell for operation with shared spectrum channel access in FR1. If not configured, the guard bands are defined according to 38.101-1 [15], see TS 38.214 [19], clause 7. For operation in licensed spectrum, this field is absent, and no UE action is required.</td>
+  </tr>
+  <tr>
+    <td>lte-CRS-PatternList1A list of LTE CRS patterns around which the UE shall do rate matching for PDSCH. The LTE CRS patterns in this list shall be non-overlapping in frequency. The network does not configure this field and lte-CRS-ToMatchAround simultaneously.</td>
+  </tr>
+  <tr>
+    <td>lte-CRS-PatternList2A list of LTE CRS patterns around which the UE shall do rate matching for PDSCH scheduled with a DCI detected on a CORESET with CORESETPoolIndex configured with 1. This list is configured only if CORESETPoolIndex configured with 1. The first LTE CRS pattern in this list shall be fully overlapping in frequency with the first LTE CRS pattern in lte-CRS-PatternList1, The second LTE CRS pattern in this list shall be fully overlapping in frequency with the second LTE CRS pattern in lte-CRS-PatternList1, and so on. Network configures this field only if the field lte-CRS-ToMatchAround is not configured and there is at least one ControlResourceSet in one DL BWP of this serving cell with coresetPoolIndex set to 1.</td>
+  </tr>
+  <tr>
+    <td>lte-CRS-PatternList3A list of LTE CRS patterns around which the UE shall do rate matching for PDSCH. The LTE CRS patterns in this list shall be non-overlapping in frequency. The network does not configure this field and lte-CRS-ToMatchAround, or this field and lte-CRS-PatternList1, or this field and lte-CRS-PatternList2 simultaneously.</td>
+  </tr>
+  <tr>
+    <td>lte-CRS-PatternList4A list of LTE CRS patterns around which the UE shall do rate matching for PDSCH. The LTE CRS patterns in this list shall be non-overlapping in frequency. The first LTE CRS pattern in this list shall be fully overlapping in frequency with the first LTE CRS pattern in lte-CRS-PatternList3. The second LTE CRS pattern in this list shall be fully overlapping in frequency with the second LTE CRS pattern in lte-CRS-PatternList3, and so on. Network configures this field only if the field lte-CRS-ToMatchAround is not configured and the field lte-CRS-PatternList3 is configured.</td>
+  </tr>
+  <tr>
+    <td>lte-CRS-ToMatchAroundParameters to determine an LTE CRS pattern that the UE shall rate match around.</td>
+  </tr>
+  <tr>
+    <td>lte-NeighCellsCRS-AssistInfoListA list of LTE neighbour cells configuration information which is used to assist the UE to perform CRS interference mitigation (CRS-IM) in scenarios with overlapping spectrum for LTE and NR (see TS 38.101-4 [59]). If the field is included, it replaces any previous list, i.e. all the entries of the list are replaced and each of the LTE-NeighCellsCRS-AssistInfo entries is considered to be newly created and the conditions and Need codes for setup of the entry apply.</td>
+  </tr>
+  <tr>
+    <td>lte-NeighCellsCRS-AssumptionsIf the field is not configured, the following default network configuration assumptions are valid for all LTE neighbour cells for the purpose of CRS interference mitigation (CRS-IM) in scenarios with overlapping spectrum for LTE and NR (see TS 38.101-4 [59]).-The CRS port number is the same as the one indicated in RateMatchPatternLTE-CRS if configured for the serving cell.-The CRS port number is 4 if RateMatchPatternLTE-CRS is not configured for the serving cell.-The channel bandwidth and centre frequency are the same as the ones indicated in RateMatchPatternLTE-CRS if configured for the serving cell.-The MBSFN configuration is the same as the one indicated in RateMatchPatternLTE-CRS if configured for the serving cell. If RateMatchPatternLTE-CRS is not configured for the serving cell, MBSFN subframe is not configured.-Network-based CRS interference mitigation (i.e., CRS muting), as in crs-IntfMitigConfig specified in TS 36.331 [10], is not enabled.If the field is configured (i.e. false) and LTE-NeighCellsCRS-AssistInfoList is configured, the configuration provided in LTE-NeighCellsCRS-AssistInfoList overrides the default network configuration assumptions.If the field is configured (i.e. false) and LTE-NeighCellsCRS-AssistInfoList is not configured, it is up to the UE implementation whether to apply CRS-IM operation.</td>
+  </tr>
+  <tr>
+    <td>mc-DCI-SetOfCellsToAddModList, mc-DCI-SetOfCellsToAddModListExtList of up to N (N&lt;=4) configurations of set(s) of cells for multi-cell PDSCH/PUSCH scheduling from the serving cell, where N is reported as UE capability and up to 4 sets of cells can be configured per PUCCH group. When this field is configured to a SCell, PCell cannot be included in either ScheduledCellListDCI-1-3 or ScheduledCellListDCI-0-3. If mc-DCI-SetOfCellsToAddModListExt is present, it contains the same number of entries, and listed in the same order, as in mc-DCI-SetOfCellsToAddModList.</td>
+  </tr>
+  <tr>
+    <td>mc-DCI-SetOfCellsToReleaseListList of cell set configurations to release.</td>
+  </tr>
+  <tr>
+    <td>multiPDSCH-PerSlotType1-CBConfigures the UE behaviour for Type1 codebook HARQ ACK generation regarding the number of PDSCHs per slot on a serving cell as specified in TS 38.213 [13], clause 9.1.2.1.When this parameter is configured and set to disabled for a serving cell, the network does not schedule UE with more than one PDSCH in a slot on the serving cell if HARQ-ACKs of any two PDSCHs in the slot on the serving cell are supposed to be reported on one PUCCH resource in the same PUCCH slot. If two coresetPoolIndex values are configured, the number of received PDSCHs is per coresetPoolIndex value per slot for a serving cell. If the UE generates two HARQ-ACK codebooks for two priorities, the number of received PDSCHs is per priority per slot for a serving cell. If fdmed-ReceptionMulticast is configured, the number of received PDSCHs is per traffic type (unicast / multicast) per slot for a serving cell.</td>
+  </tr>
+  <tr>
+    <td>nr-dl-PRS-PDC-InfoConfigures the DL PRS for propagation delay compensation. When configured, the UE measures the UE Rx-Tx time difference based on the reference signals configured in this field.</td>
+  </tr>
+  <tr>
+    <td>nrofHARQ-BundlingGroupsIndicates the number of HARQ bundling groups for type2 HARQ-ACK codebook.</td>
+  </tr>
+  <tr>
+    <td>ntn-RedcapPrioritizeUL-DynamicFor HD-FDD (e)RedCap NTN UEs, this field indicates that UL is prioritized for DL-UL collisions when dynamically scheduled DL reception collides with dynamically scheduled UL transmission other than collisions with PDSCH scheduled by Type 0/0A/1/2 PDCCH in CSS or PDCCH ordered PRACH (see TS 38.213 [13], clause 17.2).</td>
+  </tr>
+  <tr>
+    <td>ntn-RedcapPrioritizeUL-SemistaticFor HD-FDD (e)RedCap NTN UEs, this field indicates that UL is prioritized for DL-UL collisions when semi-static DL reception collides with semi-static UL transmission) other than collisions with Type 0/0A/1/2 PDCCH in CSS (see TS 38.213 [13], clause 17.2).</td>
+  </tr>
+  <tr>
+    <td>pathlossReferenceLinkingIndicates whether UE shall apply as pathloss reference either the downlink of SpCell (PCell for MCG or PSCell for SCG) or of SCell that corresponds with this uplink (see TS 38.213 [13], clause 7).</td>
+  </tr>
+  <tr>
+    <td>pdcch-CandidateReceptionWithCRS-OverlapPresence of this field indicates the UE shall monitor PDCCH candidates that overlap with LTE CRS RE(s).</td>
+  </tr>
+  <tr>
+    <td>pdsch-ServingCellConfigPDSCH related parameters that are not BWP-specific.</td>
+  </tr>
+  <tr>
+    <td>positionInDCI-cellDTRXThe starting bit position of an information block of DCI format 2_9 for this serving cell (see TS 38.212 [17], clause 7.3.1.3.10).</td>
+  </tr>
+  <tr>
+    <td>rateMatchPatternToAddModListResources patterns which the UE should rate match PDSCH around. The UE rate matches around the union of all resources indicated in the rate match patterns. Rate match patterns defined here on cell level apply only to PDSCH of the same numerology. See TS 38.214 [19], clause 5.1.4.1. If a RateMatchPattern with the same RateMatchPatternId is configured in both ServingCellConfig/ServingCellConfigCommon and in SIB20/MCCH, the entire RateMatchPattern configuration shall be the same, including the set of RBs/REs indicated by the patterns for the rate matching around, and they are counted as a single rate match pattern in the total configured rate match patterns as defined in TS 38.214 [19].</td>
+  </tr>
+  <tr>
+    <td>sCellDeactivationTimerSCell deactivation timer in TS 38.321 [3]. If the field is absent, the UE applies the value infinity.</td>
+  </tr>
+  <tr>
+    <td>sfnSchemePDCCHThis parameter is used to configure single frequency network scheme for PDCCH: sfnSchemeA or sfnSchemeB as specified (see TS 38.214 [19], clause 5.1). If network includes both sfnSchemePDCCH and sfnSchemePDSCH, same value shall be configured.</td>
+  </tr>
+  <tr>
+    <td>sfnSchemePDSCHThis parameter is used to configure single frequency network scheme for PDSCH: sfnSchemeA or sfnSchemeB as specified (see TS 38.214 [19], clause 5.1). If network includes both sfnSchemePDCCH and sfnSchemePDSCH, same value shall be configured. The network does not configure this parameter and repetitionSchemeConfig in PDSCH-Config simultaneously in the same serving cell.</td>
+  </tr>
+  <tr>
+    <td>semiStaticChannelAccessConfigUEWhen this field is configured and when channelAccessMode-r16 (see IE ServingCellConfigCommon and IE ServingCellConfigCommonSIB) is configured to semiStatic, the UE operates in semi-static channel access mode and can initiate a channel occupancy periodically (see TS 37.213 [48], Clause 4.3).The period can be configured independently from period configured in SemiStaticChannelAccessConfig-r16 if the UE indicates the corresponding capability. Otherwise, the periodicity configured by periodUE-r17 is an integer multiple of or an integer factor of the periodicity indicated by period in SemiStaticChannelAccessConfig-r16.</td>
+  </tr>
+  <tr>
+    <td>servingCellMOmeasObjectId of the MeasObjectNR in MeasConfig which is associated to the serving cell. If the serving cell is configured with absoluteFrequencySSB, the following relationship applies between the corresponding MeasObjectNR and frequencyInfoDL in ServingCellConfigCommon/ServingCellConfigCommonSIB of the serving cell: if ssbFrequency is configured, its value is the same as the absoluteFrequencySSB and if csi-rs-ResourceConfigMobility is configured, the value of its subcarrierSpacing is present in one entry of the scs-SpecificCarrierList, csi-RS-CellListMobility includes an entry corresponding to the serving cell (with cellId equal to physCellId in ServingCellConfigCommon) and the frequency range indicated by the csi-rs-MeasurementBW of the entry in csi-RS-CellListMobility is included in the frequency range indicated by in the entry of the scs-SpecificCarrierList.If the serving cell is an SSB-less SCell, the carrier frequency indicated by ssbFrequency of the corresponding MeasObjectNR, if configured, is within the frequency range indicated by any entry of the scs-SpecificCarrierList.</td>
+  </tr>
+  <tr>
+    <td>servingCellMO-ODmeasObjectId of the MeasObjectNR in MeasConfig which is associated to the serving cell instead of servingCellMO in IE ServingCellConfig.</td>
+  </tr>
+  <tr>
+    <td>supplementaryUplinkNetwork may configure this field only when supplementaryUplinkConfig is configured in ServingCellConfigCommon or supplementaryUplink is configured in ServingCellConfigCommonSIB.</td>
+  </tr>
+  <tr>
+    <td>supplementaryUplinkReleaseIf this field is included, the UE shall release the uplink configuration configured by supplementaryUplink. The network only includes either supplementaryUplinkRelease or supplementaryUplink at a time.</td>
+  </tr>
+  <tr>
+    <td>tag-IdTiming Advance Group ID, as specified in TS 38.321 [3], which this cell or set of TCI-States of this cell are associated with.</td>
+  </tr>
+  <tr>
+    <td>tag2This field is used to indicate the second TAG information for the serving cell. It is optionally configured in a serving cell if coresetPoolIndex for a BWP is configured with more than one value. The network always configures this field if twoTA-Without-MultiDCI-MultiTRP is configured for a BWP.</td>
+  </tr>
+  <tr>
+    <td>tci-ActivatedConfigIf configured for an SCell, or if configured for the PSCell when the SCG is being activated upon the reception of the containing message, the UE shall consider the TCI states provided in this field as the activated TCI states for PDCCH/PDSCH reception on this serving cell.If configured for the PSCell when the SCG is indicated as deactivated in the containing message:- the UE shall consider the TCI states provided in this field as the TCI states to be activated for PDCCH/PDSCH reception upon a later SCG activation in which tci-ActivatedConfig is absent- if bfd-and-RLM is configured and no RS is configured in RadioLinkMonitoringConfig for RLM, respectively for BFD, the UE shall use the TCI states provided in this field for PDCCH as RS for RLM, respectively for BFD.When this field is absent for the PSCell and the SCG is being deactivated:- the UE shall consider the previously activated TCI states as the TCI states to be activated for PDCCH/PDSCH reception upon a later SCG activation in which tci-ActivatedConfig is absent- if bfd-and-RLM is configured and no RS is configured in RadioLinkMonitoringConfig for RLM, respectively for BFD, the UE shall use the previously activated TCI states for PDCCH as RS for RLM, respectively for BFD.</td>
+  </tr>
+  <tr>
+    <td>tdd-UL-DL-ConfigurationDedicated-IAB-MTResource configuration per IAB-MT D/U/F overrides all symbols (with a limitation that effectively only flexible symbols can be overwritten in Rel-16) per slot over the number of slots as provided by TDD-UL-DL ConfigurationCommon.</td>
+  </tr>
+  <tr>
+    <td>unifiedTCI-StateTypeIndicates the unified TCI state type the UE is configured for this serving cell. The value separate means this serving cell is configured with dl-OrJointTCI-StateList for DL TCI state and ul-TCI-StateList for UL TCI state. The value joint means this serving cell is configured with dl-OrJointTCI-StateList for joint TCI state for UL and DL operation.</td>
+  </tr>
+  <tr>
+    <td>uplinkConfigNetwork may configure this field only when uplinkConfigCommon is configured in ServingCellConfigCommon or ServingCellConfigCommonSIB. Addition or release of this field can only be done upon SCell addition or release (respectively).</td>
+  </tr>
+  <tr>
+    <td>uplink-PowerControlToAddModList, uplink-PowerControlToAddModListExtConfigures UL power control parameters for PUSCH, PUCCH and SRS when field unifiedTCI-StateType is configured for this serving cell. If the network includes uplink-PowerControlToAddModListExt, it includes the same number of entries, and listed in the same order, as in uplink-PowerControlToAddModList.</td>
+  </tr>
+</table>

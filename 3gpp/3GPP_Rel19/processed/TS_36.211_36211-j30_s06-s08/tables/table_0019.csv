@@ -1,0 +1,7 @@
+Subframe,Number of OFDM symbols for PDCCH when,Number of OFDM symbols for PDCCH when
+Subframe 1 and 6 for frame structure type 2 or a subframe for frame structure type 3 with the same duration as the DwPTS duration of a special subframe configuration,"1, 2",2
+MBSFN subframes with  and configured with 1 or 2 cell-specific antenna ports,"1, 2",2
+MBSFN subframes with  and configured with 4 cell-specific antenna ports,2,2
+"MBSFN subframes with  kHz or MBSFN slots with kHz∆f∈7.5, 2.5, 1.25∆f≈0.37",0,0
+Non-MBSFN subframes (except subframe 6 for frame structure type 2) configured with positioning reference signals,"1, 2, 3","2, 3"
+All other cases,"1, 2, 3","2, 3, 4"

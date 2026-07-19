@@ -1,0 +1,17 @@
+Index,O,Number of search space sets per slot,M,First symbol index
+0,0,1,1,0
+1,0,2,1/2,"{0, if  is even}, {7, if  is odd}ii"
+2,X,1,1,0
+3,X,2,1/2,"{0, if  is even}, {7, if  is odd}ii"
+4,5,1,1,0
+5,5,2,1/2,"{0, if  is even}, {7, if  is odd}ii"
+6,0,2,1/2,"{0, if  is even}, {, if  is odd}iNsymbCORESETi"
+7,X,2,1/2,"{0, if  is even}, {, if  is odd}iNsymbCORESETi"
+8,5,2,1/2,"{0, if  is even}, {, if  is odd}iNsymbCORESETi"
+9,5+X,1,1,0
+10,5+X,2,1/2,"{0, if  is even}, {7, if  is odd}ii"
+11,5+X,2,1/2,"{0, if  is even}, {, if  is odd}iNsymbCORESETi"
+12,0,1,2,0
+13,5,1,2,0
+14,Reserved,,,
+15,Reserved,,,

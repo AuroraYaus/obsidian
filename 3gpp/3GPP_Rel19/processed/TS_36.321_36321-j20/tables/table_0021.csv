@@ -1,0 +1,24 @@
+Codepoint/Index,LCID values
+00000,CCCH
+00001-01010,Identity of the logical channel
+01011-01100,Reserved
+01101,UL Transmission Extension Update
+01110,GNSS Measurement Command
+01111,Differential Koffset
+10000,Extended logical channel ID field
+10001,DCQR Command
+10010,Activation/Deactivation of PDCP Duplication
+10011,Hibernation (1 octet)
+10100,Hibernation (4 octets)
+10101,Activation/Deactivation of CSI-RS
+10110,Recommended bit rate
+10111,SC-PTM Stop Indication
+11000,Activation/Deactivation (4 octets)
+11001,"SC-MCCH, SC-MTCH (see note)"
+11010,Long DRX Command
+11011,Activation/Deactivation (1 octet)
+11100,UE Contention Resolution Identity
+11101,Timing Advance Command
+11110,DRX Command
+11111,Padding
+NOTE: Both SC-MCCH and SC-MTCH cannot be multiplexed with other logical channels in the same MAC PDU except for Padding and SC-PTM Stop Indication,

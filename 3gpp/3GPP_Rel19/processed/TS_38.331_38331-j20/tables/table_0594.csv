@@ -1,0 +1,6 @@
+SRS-Config field descriptions
+dci-TriggeringPosResourceSetLinkIndicates whether the single DCI-triggering SRS positioning resource sets across the linked carriers is enabled or not for bandwidth aggregation.
+"srs-ClosedLoopIndexIndicatorInDCI-1-1Enables the presence of 1-bit SRS closed loop index indicator in DCI format 1_1 (see TS 38.212 [17], clause 7.3.1). This field is only present if srs-TwoSeparatePowerControlAdjustmentStates is configured."
+"srs-TwoSeparatePowerControlAdjustmentStatesIndicates that two separate SRS power control adjustment states are configured (see TS 38.213 [13], clause 7.3.1)."
+"tpc-AccumulationIf the field is absent, UE applies TPC commands via accumulation. If disabled, UE applies the TPC command without accumulation (this applies to SRS when a separate closed loop is configured for SRS) (see TS 38.213 [13], clause 7.3)."
+"tpc-OfSRS-ClosedLoopIndexInDCI-1-1Enables the presence of 2-bit TPC command for separate SRS closed loop adjustment state(s) in DCI format 1_1 (see TS 38.212 [17], clause 7.3.1)."

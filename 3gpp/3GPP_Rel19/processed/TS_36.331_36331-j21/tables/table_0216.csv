@@ -1,0 +1,2 @@
+Conditional presence,Explanation
+MCC,"This IE is mandatory when PLMN-Identity is included in CellGlobalIdEUTRA, in CellGlobalIdUTRA, in CellGlobalIdGERAN or in RegisteredMME. This IE is also mandatory in the first occurrence of the IE PLMN-Identity within the IE PLMN-IdentityList. Otherwise it is optional, need OP."

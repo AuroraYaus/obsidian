@@ -1,0 +1,5 @@
+RRCConnectionRequest field descriptions
+"establishmentCauseProvides the establishment cause for the RRC connection request as provided by the upper layers. W.r.t. the cause value names: highPriorityAccess concerns AC11..AC15, 'mt' stands for 'Mobile Terminating' and 'mo' for 'Mobile Originating. eNB is not expected to reject a RRCConnectionRequest due to unknown cause value being used by the UE. The cause value of delayTolerantAccess is not used for E-UTRA/5GC in this release."
+randomValueInteger value in the range 0 to 240  1.
+ng-5G-S-TMSI-Part1The rightmost 40 bits of 5G-S-TMSI.
+ue-IdentityUE identity included to facilitate contention resolution by lower layers.

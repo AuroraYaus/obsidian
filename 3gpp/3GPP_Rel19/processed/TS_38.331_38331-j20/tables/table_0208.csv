@@ -1,0 +1,4 @@
+ReportUplinkTxDirectCurrentMoreCarrier field descriptions
+"IntraBandCC-CombinationIndicates the state of the carriers and BWPs indexes of the carriers in a CC combination, each carrier in this combination corresponds to an entry in servCellIndexList with same order. This IE shall have the same size as servCellIndexList."
+IntraBandCC-CombinationReqListIndicates the list of the requested carriers/BWPs combinations for an intra-band CA component.
+servCellIndexListindicates the list of cell index for an intra-band CA component.

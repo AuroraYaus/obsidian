@@ -1,0 +1,2 @@
+Conditional presence,Explanation
+setup,"The field is mandatory present if CRS-ChEstMPDCCH-ConfigDedicated is set to setup and this field has not been configured in CRS-ChEstMPDCCH-ConfigCommon; otherwise the field is optional, need ON."

@@ -1,0 +1,4 @@
+Conditional Presence,Explanation
+MsgAConfigCommon,"The field is optionally present, Need S, if FeatureCombinationPreambles is included in RACH-ConfigCommonTwoStepRA. Otherwise, it is absent. If the field is absent in FeatureCombinationPreambles included in RACH-ConfigCommonTwoStepRA, the UE applies MsgA-PUSCH-Config included in the corresponding MsgA-ConfigCommon."
+Msg1Rep2,"The field is mandatory present, if msg1-Repetitions is included in FeatureCombination for this concerned FeatureCombinationPreambles. Otherwise, it is absent."
+Msg1Rep3,"The field is optionally present, Need S, if msg1-Repetitions is included in FeatureCombination for this concerned FeatureCombinationPreambles. Otherwise, it is absent."

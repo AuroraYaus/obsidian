@@ -1,0 +1,88 @@
+<table>
+  <tr>
+    <td rowspan="3">Field</td>
+    <td colspan="5">Bitwidth</td>
+  </tr>
+  <tr>
+    <td rowspan="2">1 antenna port</td>
+    <td rowspan="2">2 antenna ports</td>
+    <td rowspan="2">4 antenna ports</td>
+    <td colspan="2">&gt;4 antenna ports</td>
+  </tr>
+  <tr>
+    <td>Rank1~4</td>
+    <td>Rank5~8</td>
+  </tr>
+  <tr>
+    <td>Rank Indicator</td>
+    <td>0</td>
+    <td>min(1,log2 nRI,sTRP)</td>
+    <td>min(2,log2 nRI,sTRP)</td>
+    <td>log2 nRI,sTRP</td>
+    <td>log2 nRI,sTRP</td>
+  </tr>
+  <tr>
+    <td>Layer Indicator</td>
+    <td>0</td>
+    <td>log2v</td>
+    <td>min⁡(2, log2v)</td>
+    <td>min⁡(2, log2v)</td>
+    <td>min⁡(2, log2v)</td>
+  </tr>
+  <tr>
+    <td>Wide-band CQI for the first TB</td>
+    <td>4</td>
+    <td>4</td>
+    <td>4</td>
+    <td>4</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Wideband CQI for the second TB</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Subband differential CQI for the first TB</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Subband differential CQI for the second TB</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>CRI if csi-ReportMode= Mode 1 and numberOfSingleTRP-CSI-Mode1 = 1</td>
+    <td>log2M1+M2</td>
+    <td>log2M1+M2</td>
+    <td>log2M1+M2</td>
+    <td>log2M1+M2</td>
+    <td>log2M1+M2</td>
+  </tr>
+  <tr>
+    <td>CRI if csi-ReportMode= Mode 1 and numberOfSingleTRP-CSI-Mode1 = 2</td>
+    <td>for the first CRI; for the second CRIlog2M1log2M2</td>
+    <td>for the first CRI; for the second CRIlog2M1log2M2</td>
+    <td>for the first CRI; for the second CRIlog2M1log2M2</td>
+    <td>for the first CRI; for the second CRIlog2M1log2M2</td>
+    <td>for the first CRI; for the second CRIlog2M1log2M2</td>
+  </tr>
+  <tr>
+    <td>CRI if csi-ReportMode= Mode 2</td>
+    <td>log2M1+M2+N</td>
+    <td>log2M1+M2+N</td>
+    <td>log2M1+M2+N</td>
+    <td>log2M1+M2+N</td>
+    <td>log2M1+M2+N</td>
+  </tr>
+</table>

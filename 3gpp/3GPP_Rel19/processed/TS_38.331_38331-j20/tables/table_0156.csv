@@ -1,0 +1,6 @@
+ApplicabilityReportList field descriptions
+applicabilityCellIdIndex of the serving cell that the ApplicabilityReport refers to.
+applicabilityInfoReportIdIndicates the ID of a configuration subject to the applicability determination procedure.
+"applicabilityInfoReportListIndicates the list of applicability reports, each associatied with a configuration ID for a configuration subject to the applicability determination procedure."
+applicabilityStatusIndicates whether the configuration associated to applicabilityInfoReportId is applicable or inapplicable.
+"releaseConfigurationPreferenceIndicates the UE's preference to release the configuration associated to applicabilityInfoReportId (e.g. due to model unavailability), if the applicabilityStatus is set to inapplicable."

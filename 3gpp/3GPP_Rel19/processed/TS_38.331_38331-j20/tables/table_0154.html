@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td>AdvancedReceiver-MU-MIMO field descriptions</td>
+  </tr>
+  <tr>
+    <td>advReceiver-MU-MIMO-DCI-1-1Configure the presence of the co-scheduled UE information field in DCI format 1_1 (see TS 38.212 [17], clause 7.3.1.2.2).</td>
+  </tr>
+  <tr>
+    <td>mcs-TableIndicates the MCS table with the highest modulation order among all MCS tables configured to the co-scheduled UE(s), which has the same DMRS sequence as the target UE.</td>
+  </tr>
+  <tr>
+    <td>pdsch-TimeDomainAllocationIf the field is set to true, the UE can assume the time domain resource assignment for PDSCH symbols of all the co-scheduled UE(s), which has the same DMRS sequence as the target UE, is same as the target UE.If the field is set to false, the UE can not assume the time domain resource assignment for PDSCH symbols of all the co-scheduled UE(s), which has the same DMRS sequence as the target UE, is same as the target UE.</td>
+  </tr>
+  <tr>
+    <td>precodingAndResourceAllocationIf the field is set to true, the UE can assume the precoding and resource allocation of the co-scheduled UE are the same in the PRG-level grid configured to the target UE when PRG=2 or 4, when the target UE and any co-scheduled UEs are in different CDM groups and with the same DMRS sequence.If the field is set to false, the UE can not assume the precoding or resource allocation of the co-scheduled UE is the same in the PRG-level grid configured to the target UE when PRG=2 or 4, when the target UE and any co-scheduled UEs are in different CDM groups and with the same DMRS sequence.</td>
+  </tr>
+</table>

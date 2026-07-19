@@ -1,0 +1,229 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2017-05,RAN1#89,R1-1707082,,,,Draft skeleton,0.0.0
+2017-07,AH_NR2,R1-1712014,,,,Inclusion of LDPC related agreements,0.0.1
+2017-08,RAN1#90,R1-1714564,,,,Inclusion of Polar coding related agreements,0.0.2
+2017-08,RAN1#90,R1-1714659,,,,Endorsed version by RAN1#90 as basis for further updates,0.1.0
+2017-09,RAN1#90,R1-1715322,,,,Capturing additional agreements on LDPC and Polar code from RAN1 #90,0.1.1
+2017-09,RAN#77,RP-171991,,,,For information to plenary,1.0.0
+2017-09,RAN1#90b,R1-1716928,,,,Capturing additional agreements on LDPC and Polar code from RAN1 NR AH#3,1.0.1
+2017-10,RAN1#90b,R1-1719106,,,,Endorsed as v1.1.0,1.1.0
+2017-11,RAN1#91,R1-1719225,,,,"Capturing additional agreements on channel coding, etc.",1.1.1
+2017-11,RAN1#91,R1-1719245,,,,"Capturing additional agreements on DCI format, channel coding, etc.",1.1.2
+2017-11,RAN1#91,R1-1721049,,,,Endorsed as v1.2.0,1.2.0
+2017-12,RAN1#91,R1-1721342,,,,"Capturing additional agreements on UCI, DCI, channel coding, etc.",1.2.1
+2017-12,RAN#78,RP-172668,,,,Endorsed version for approval by plenary.,2.0.0
+2017-12,RAN#78,,,,,Approved by plenary - Rel-15 spec under change control,15.0.0
+2018-03,RAN#79,RP-180200,0001,-,F,CR capturing the Jan18 ad-hoc and RAN1#92 meeting agreements,15.1.0
+2018-04,RAN#79,,,,,MCC: correction of typo in DCI format 0_1 (time domain resource assignment) - higher layer parameter should be pusch-AllocationList,15.1.1
+2018-06,RAN#80,RP-181172,0002,1,F,CR to 38.212 capturing the RAN1#92bis and RAN1#93 meeting agreements,15.2.0
+2018-06,RAN#80,RP-181257,0003,-,B,CR to 38.212 capturing the RAN1#92bis and RAN1#93 meeting agreements related to URLLC,15.2.0
+2018-09,RAN#81,RP-181789,0004,-,F,CR to 38.212 capturing the RAN1#94 meeting agreements,15.3.0
+2018-12,RAN#82,RP-182523,0005,3,F,Combined CR of all essential corrections to 38.212 from RAN1#94bis and RAN1#95,15.4.0
+2019-03,RAN#83,RP-190448,0006,-,F,Correction of wrong implementation on frequency domain resource assignment bitwidth,15.5.0
+2019-03,RAN#83,RP-190448,0008,-,F,Correction to UCI multiplexing,15.5.0
+2019-03,RAN#83,RP-190448,0009,-,F,Correction on DCI format 2_3 for SUL cell in TS 38.212,15.5.0
+2019-03,RAN#83,RP-190448,0010,-,F,Corrections to TS38.212,15.5.0
+2019-03,RAN#83,RP-190448,0011,-,F,On bitwidth calculation for DCI fields using RRC parameter indicating maximum number of MIMO layers per serving cell,15.5.0
+2019-03,RAN#83,RP-190448,0012,-,F,CR on zero-padding of DCI 1_1 in cross-carrier scheduling case,15.5.0
+2019-03,RAN#83,RP-190448,0013,-,F,Clarification on UL_SUL indicator field and SRS request field,15.5.0
+2019-06,RAN#84,RP-191282,0014,-,F,CR on correction to bitwidth of NNZC indicator,15.6.0
+2019-06,RAN#84,RP-191282,0015,-,F,Correction on DCI size alignment in TS 38.212,15.6.0
+2019-06,RAN#84,RP-191282,0016,-,F,Correction on UL/SUL indicator in DCI format 0_0,15.6.0
+2019-06,RAN#84,RP-191282,0017,-,F,Corrections to 38.212 including alignment of terminology across specifications,15.6.0
+2019-06,RAN#84,RP-191282,0018,-,F,CR on maximum modulation order configured for serving cell,15.6.0
+2019-06,RAN#84,RP-191282,0019,1,F,Corrections to 38.212 including alignment of terminology across specifications from RAN1#97,15.6.0
+2019-09,RAN#85,RP-191941,0020,-,F,Corrections to 38.212 including alignment of terminology across specifications in RAN1#98,15.7.0
+2019-12,RAN#86,RP-192625,0021,-,F,CR on UL/SUL indicator in DCI format 0_1,15.8.0
+2019-12,RAN#86,RP-192625,0022,-,F,Corrections to 38.212 including alignment of terminology across specifications in RAN1#98bis and RAN1#99,15.8.0
+2019-12,RAN#86,RP-192636,0023,-,B,Introduction of NR based access to unlicensed spectrum into 38.212,16.0.0
+2019-12,RAN#86,RP-192637,0024,-,B,Introduction of IAB into 38.212,16.0.0
+2019-12,RAN#86,RP-192638,0025,-,B,Introduction of 5G V2X sidelink features into TS 38.212,16.0.0
+2019-12,RAN#86,RP-192639,0026,-,B,Introduction of Physical Layer Enhancements for NR URLLC,16.0.0
+2019-12,RAN#86,RP-192641,0027,-,B,Introduction of Enhancements on NR MIMO,16.0.0
+2019-12,RAN#86,RP-192642,0028,-,B,Introduction of power saving in 38.212,16.0.0
+2019-12,RAN#86,RP-192645,0029,-,B,Introduction of MR DC/CA,16.0.0
+2019-12,RAN#86,RP-192643,0030,-,B,Introduction of NR positioning support,16.0.0
+2019-12,RAN#86,RP-192635,0031,-,B,Introduction of two-step RACH,16.0.0
+2020-03,RAN#87-e,RP-200185,0032,-,F,Corrections for Rel-16 NR-U after RAN1#100-e,16.1.0
+2020-03,RAN#87-e,RP-200190,0033,-,F,Corrections for NR MIMO after RAN1#100-e,16.1.0
+2020-03,RAN#87-e,RP-200188,0034,-,F,Corrections for URLLC after RAN1#100-e,16.1.0
+2020-03,RAN#87-e,RP-200191,0035,-,F,Corrections for power saving after RAN1#100-e,16.1.0
+2020-03,RAN#87-e,RP-200187,0036,-,F,Corrections on 5G V2X sidelink features after RAN1#100-e,16.1.0
+2020-06,RAN#88-e,RP-200683,0038,-,A,CR on L1-RSRP report on PUSCH,16.2.0
+2020-06,RAN#88-e,RP-200693,0039,1,F,Corrections for power saving,16.2.0
+2020-06,RAN#88-e,RP-200689,0040,1,F,Corrections on 5G V2X sidelink features after RAN1#100bis-e and RAN1#101-e,16.2.0
+2020-06,RAN#88-e,RP-200694,0041,1,F,Corrections in TS 38.212 for NR positioning,16.2.0
+2020-06,RAN#88-e,RP-200692,0042,1,F,Corrections in TS 38.212 for NR MIMO,16.2.0
+2020-06,RAN#88-e,RP-200696,0043,-,F,Corrections for Rel-16 MR-DC/CA after RAN1#100bis-e,16.2.0
+2020-06,RAN#88-e,RP-200690,0044,1,F,Corrections on NR eURLLC,16.2.0
+2020-06,RAN#88-e,RP-200687,0045,1,F,Corrections for Rel-16 NR-U,16.2.0
+2020-06,RAN#88-e,RP-200688,0046,-,F,Corrections for NR IAB,16.2.0
+2020-09,RAN#89-e,RP-201814,0047,-,F,Correction on UCI bit sequence generation,16.3.0
+2020-09,RAN#89-e,RP-201803,0049,-,A,CR on PTRS for TS 38.212,16.3.0
+2020-09,RAN#89-e,RP-201810,0050,-,F,Alignment of RRC parameter ps-RNTI,16.3.0
+2020-09,RAN#89-e,RP-201813,0051,-,F,CR to 38.212 on RRC parameter alignment for SCell dormancy,16.3.0
+2020-09,RAN#89-e,RP-201807,0052,-,F,Corrections on 5G V2X sidelink features,16.3.0
+2020-09,RAN#89-e,RP-201809,0053,-,F,Corrections to MIMO enhancements,16.3.0
+2020-09,RAN#89-e,RP-201805,0054,-,F,Corrections to MIMO enhancements,16.3.0
+2020-09,RAN#89-e,RP-201808,0055,-,F,Corrections on NR eURLLC,16.3.0
+2020-12,RAN#90-e,RP-202390,0056,-,F,RRC IE name fix to dynamic frequency domain resource allocation type selection (Rel-15 origin),16.4.0
+2020-12,RAN#90-e,RP-202384,0057,-,F,Correction on Transmission configuration indication in DCI format 1_2,16.4.0
+2020-12,RAN#90-e,RP-202398,0058,-,F,Alignment CR for TS 38.212,16.4.0
+2021-03,RAN#91-e,RP-210052,0059,-,F,CR on DMRS,16.5.0
+2021-03,RAN#91-e,RP-210049,0060,-,F,Correction to description of FDRA field size in DCI 0_0,16.5.0
+2021-03,RAN#91-e,RP-210049,0061,-,F,Correction to description of FDRA field interpretation in DCI 0_1,16.5.0
+2021-03,RAN#91-e,RP-210050,0062,-,F,Correction on Sidelink Broadcast channel,16.5.0
+2021-03,RAN#91-e,RP-210049,0063,-,F,Correction on LBT Type and CP Extension Indication for Semi-Static Channel Occupancy,16.5.0
+2021-03,RAN#91-e,RP-210059,0064,-,F,Alignment CR for TS 38.212,16.5.0
+2021-06,RAN#92-e,RP-211252,0066,-,F,38.212 CR on DAI size determination for DCI format 1_1/1-2 in CA,16.6.0
+2021-06,RAN#92-e,RP-211236,0067,-,F,Corrections on parameter of MCS table set to qam256,16.6.0
+2021-06,RAN#92-e,RP-211234,0068,-,D,Alignment CR for TS 38.212 (post RAN1#104bis-e),16.6.0
+2021-06,RAN#92-e,RP-211234,0069,-,F,Correction on HARQ-ACK codebook RRC parameter,16.6.0
+2021-06,RAN#92-e,RP-211236,0070,-,F,Correction on SRS resource set configuration in TS 38.212,16.6.0
+2021-06,RAN#92-e,RP-211243,0071,-,F,Alignment CR for TS 38.212 (post RAN1#105-e),16.6.0
+2021-09,RAN#93-e,RP-211843,0072,-,F,Correction on SRS resource set configuration for DCI format 0_2 in TS 38.212,16.7.0
+2021-09,RAN#93-e,RP-211841,0074,-,A,Rel-15 editorial corrections for TS 38.212 (mirrored to Rel-16),16.7.0
+2021-09,RAN#93-e,RP-211850,0075,-,F,Alignment CR for TS 38.212,16.7.0
+2021-12,RAN#94-e,RP-212959,0076,-,F,Correction on mapping between priority field value and priority value in SCI format 1-A,16.8.0
+2021-12,RAN#94-e,RP-212961,0077,-,F,Changes of channel access types tables in TS 38.212,16.8.0
+2021-12,RAN#94-e,RP-212961,0078,-,F,Corrections on CG-UCI multiplexing in TS38.212,16.8.0
+2021-12,RAN#94-e,RP-212958,0080,-,A,Clarify UCI bitwidth and UCI mapping order for non-PMI based CSI feedback,16.8.0
+2021-12,RAN#94-e,RP-213238,0081,-,F,Clarification on KNZ to codepoint mapping for eType II CSI,16.8.0
+2021-12,RAN#94-e,RP-212958,0083,-,A,Rel-15 editorial corrections for TS 38.212 (mirrored to Rel-16),16.8.0
+2021-12,RAN#94-e,RP-212964,0084,-,F,Alignment CR for TS 38.212,16.8.0
+2021-12,RAN#94-e,RP-212967,0085,-,B,Introduction of features to extend current NR operation to 71 GHz,17.0.0
+2021-12,RAN#94-e,RP-212982,0086,-,B,Introduction of NR DL 1024QAM for FR1,17.0.0
+2021-12,RAN#94-e,RP-212973,0087,-,B,Introduction of Coverage Enhancements,17.0.0
+2021-12,RAN#94-e,RP-212979,0088,-,B,Introduction of NR Multicast and Broadcast Services,17.0.0
+2021-12,RAN#94-e,RP-212966,0089,-,B,Introduction of Further enhancements on MIMO for NR,17.0.0
+2021-12,RAN#94-e,RP-212969,0090,-,B,Introduction of NR non-terrestrial networks (NTN),17.0.0
+2021-12,RAN#94-e,RP-212972,0091,-,B,Introduction of Rel-17 UE power saving enhancements,17.0.0
+2021-12,RAN#94-e,RP-212968,0092,-,B,Introduction of Rel-17 enhanced IIoT and URLLC,17.0.0
+2021-12,RAN#94-e,RP-212980,0093,-,B,Introduction of NR dynamic spectrum sharing enhancements,17.0.0
+2021-12,RAN#94-e,RP-212978,0094,-,B,Introduction of NR sidelink enhancement,17.0.0
+2022-03,RAN#95-e,RP-220269,0096,-,A,Correction of NZC partitioning in eType II CSI,17.1.0
+2022-03,RAN#95-e,RP-220248,0098,-,A,Correction on Rel-16 UE dormancy adaptation,17.1.0
+2022-03,RAN#95-e,RP-220252,0099,-,F,Corrections on enhanced IIoT and URLLC in 38.212,17.1.0
+2022-03,RAN#95-e,RP-220262,0100,-,F,Corrections on NR sidelink enhancement in 38.212,17.1.0
+2022-03,RAN#95-e,RP-220257,0101,-,F,Corrections on coverage enhancements in 38.212,17.1.0
+2022-03,RAN#95-e,RP-220263,0102,-,F,Corrections on NR Multicast and Broadcast Services in 38.212,17.1.0
+2022-03,RAN#95-e,RP-220256,0103,-,F,Corrections on UE power saving enhancements in 38.212,17.1.0
+2022-03,RAN#95-e,RP-220251,0104,-,F,Correction on extension of current NR operation to 71 GHz in 38.212,17.1.0
+2022-03,RAN#95-e,RP-220264,0105,-,F,Corrections on NR dynamic spectrum sharing enhancements in 38.212,17.1.0
+2022-03,RAN#95-e,RP-220250,0106,-,F,Corrections on Further enhancements on MIMO for NR in TS 38.212,17.1.0
+2022-06,RAN#96,RP-221617,0108,-,A,Clarification of TPMI indication for UL full power transmission,17.2.0
+2022-06,RAN#96,RP-221602,0109,-,F,Corrections on enhanced IIoT and URLLC in 38.212,17.2.0
+2022-06,RAN#96,RP-221612,0110,-,F,Corrections on NR Multicast and Broadcast Services in 38.212,17.2.0
+2022-06,RAN#96,RP-221606,0111,-,F,Corrections on UE power saving enhancements in 38.212,17.2.0
+2022-06,RAN#96,RP-221601,0112,-,F,Correction on extension of current NR operation to 71 GHz in 38.212,17.2.0
+2022-06,RAN#96,RP-221600,0113,-,F,Corrections on Further enhancements on MIMO for NR in TS 38.212,17.2.0
+2022-06,RAN#96,RP-221599,0115,-,A,Rel-16 editorial corrections for TS 38.212 (mirrored to Rel-17),17.2.0
+2022-09,RAN#97-e,RP-222403,0116,1,F,CR on DCI size for Rel-17 NTN HARQ in 38.212,17.3.0
+2022-09,RAN#97-e,RP-222400,0117,-,F,CR on the description of the SRS resource set indication for PUSCH repetition,17.3.0
+2022-09,RAN#97-e,RP-222401,0118,-,F,CR on ChannelAccess-Cpext in Fallback DCI,17.3.0
+2022-09,RAN#97-e,RP-222413,0119,-,F,CR on DCI size alignment for Cross-carrier scheduling from SCell to PCell,17.3.0
+2022-09,RAN#97-e,RP-222406,0120,-,F,Corrections on UE Power Saving Enhancements for NR in TS 38.212,17.3.0
+2022-09,RAN#97-e,RP-222412,0121,-,F,Corrections on NR Multicast and Broadcast Services in 38.212,17.3.0
+2022-09,RAN#97-e,RP-222411,0122,-,F,Correction on NR sidelink enhancement,17.3.0
+2022-09,RAN#97-e,RP-222422,0123,-,F,Rel-17 editorial corrections for TS 38.212,17.3.0
+2022-12,RAN#98-e,RP-222863,0124,-,F,Corrections on resource pool index,17.4.0
+2022-12,RAN#98-e,RP-222853,0125,-,F,CR on channel access type indication in non-fallback DCI,17.4.0
+2022-12,RAN#98-e,RP-222853,0126,-,F,Correction to support up to 32 HARQ process numbers for FR2-2,17.4.0
+2022-12,RAN#98-e,RP-222853,0127,-,F,Correction on TDRA for multiple PUSCH scheduling in TS 38.212,17.4.0
+2022-12,RAN#98-e,RP-222854,0128,-,F,CR on priority of CG-UCI,17.4.0
+2022-12,RAN#98-e,RP-222864,0129,-,F,CR on number of HARQ-ACK codebooks configurable for multicast,17.4.0
+2022-12,RAN#98-e,RP-222865,0130,-,F,CR on DCI size alignment for Cross-carrier schduling from SCell to PCell,17.4.0
+2022-12,RAN#98-e,RP-222868,0131,1,F,Rel-17 editorial corrections for TS 38.212,17.4.0
+2022-12,RAN#98-e,RP-222858,0132,-,F,Correction on the short message indicator when TRS availability indication is present,17.4.0
+2022-12,RAN#98-e,RP-222864,0133,-,F,CR on format 4_0 DCI size alignment in SCell,17.4.0
+2022-12,RAN#98-e,RP-222870,0134,-,F,CR on CSI reporting,17.4.0
+2023-03,RAN#99,RP-230451,0135,-,F,CR on aligning DCI sizes when configuring two HARQ-ACK codebooks for multicast,17.5.0
+2023-03,RAN#99,RP-230443,0136,-,F,Corrections on intra-UE multiplexing and semi-static channel occupancy,17.5.0
+2023-03,RAN#99,RP-230442,0137,-,F,CR on DCI field sizes for multiple PDSCHs scheduled by single DCI,17.5.0
+2023-03,RAN#99,RP-230442,0138,-,F,Corrections to ChanneAccess-CPext field in DCI formats x_2 in TS38.212,17.5.0
+2023-03,RAN#99,RP-230440,0140,-,A,Rel-16 editorial corrections for TS 38.212 (mirrored to Rel-17),17.5.0
+2023-03,RAN#99,RP-230453,0141,-,F,Rel-17 editorial corrections for TS 38.212,17.5.0
+2023-09,RAN#101,RP-232445,0142,-,F,Correction for the mapping of rank combination value for Rel-17 NCJT CSI,17.6.0
+2023-09,RAN#101,RP-232531,0143,-,F,Rel-17 editorial corrections for TS 38.212,17.6.0
+2023-09,RAN#101,RP-232471,0144,-,B,Introduction of Rel-18 Multi-carrier enhancements,18.0.0
+2023-09,RAN#101,RP-232458,0145,-,B,Introduction of Rel-18 MIMO Evolution for Downlink and Uplink,18.0.0
+2023-09,RAN#101,RP-232473,0146,-,B,Introduction of Rel-18 Further NR mobility enhancements,18.0.0
+2023-09,RAN#101,RP-232474,0147,-,B,Introduction of Rel-18 NR NTN enhancements,18.0.0
+2023-09,RAN#101,RP-232480,0148,-,B,Introduction of NR positioning enhancement in Rel-18,18.0.0
+2023-09,RAN#101,RP-232469,0149,-,B,Introduction of Rel-18 NR sidelink evolution,18.0.0
+2023-09,RAN#101,RP-232479,0150,-,B,Introduction of Rel-18 network controlled repeaters,18.0.0
+2023-09,RAN#101,RP-232481,0151,-,B,Introduction of Rel-18 network energy saving for NR,18.0.0
+2023-09,RAN#101,RP-232472,0152,-,B,Introduction of Rel-18 further NR Coverage enhancement,18.0.0
+2023-09,RAN#101,RP-232477,0154,-,B,Introduction of Rel-18 NR support for dedicated spectrum less than 5MHz for FR1,18.0.0
+2023-09,RAN#101,RP-232482,0155,-,B,Introduction of Rel-18 XR enhancements for NR,18.0.0
+2023-12,RAN#102,RP-233703,0158,1,A,Correction on the rate matching when HARQ-ACK multiplexed with CG-PUSCH,18.1.0
+2023-12,RAN#102,RP-233727,0160,-,A,Correction on CSI reporting for 1 CSI-RS port,18.1.0
+2023-12,RAN#102,RP-233728,0162,-,A,Rel-17 editorial corrections for TS 38.212 (mirrored to Rel-18),18.1.0
+2023-12,RAN#102,RP-233719,0163,-,F,Corrections on NR positioning enhancement in 38.212,18.1.0
+2023-12,RAN#102,RP-233706,0164,-,F,Corrections on Rel-18 NR sidelink evolution in 38.212,18.1.0
+2023-12,RAN#102,RP-233709,0165,-,F,Corrections on Rel-18 further NR Coverage enhancement in 38.212,18.1.0
+2023-12,RAN#102,RP-233710,0166,-,F,Corrections on Rel-18 Further NR mobility enhancements in 38.212,18.1.0
+2023-12,RAN#102,RP-233705,0167,-,F,Corrections on Rel-18 MIMO Evolution for Downlink and Uplink in 38.212,18.1.0
+2023-12,RAN#102,RP-233708,0168,-,F,Corrections on Rel-18 Multi-carrier enhancements in 38.212,18.1.0
+2023-12,RAN#102,RP-233720,0169,-,F,Corrections on Rel-18 network energy saving for NR in 38.212,18.1.0
+2023-12,RAN#102,RP-233714,0170,-,F,Corrections on Rel-18 NR NTN enhancements in 38.212,18.1.0
+2023-12,RAN#102,RP-233721,0171,-,F,Corrections on Rel-18 XR enhancements for NR in 38.212,18.1.0
+2023-12,RAN#102,RP-233729,0172,-,B,Introduction of Rel-18 NR demodulation performance evoluation,18.1.0
+2023-12,RAN#102,RP-233733,0173,-,B,Introduction of Rel-18 enhancements of NR Multicast and Broadcast Services,18.1.0
+2023-12,RAN#102,RP-233718,0174,-,F,Corrections on Rel-18 network controlled repeaters in 38.212,18.1.0
+2024-03,RAN#103,RP-240534,0176,-,A,Clarification on typeA SRS TPC commands for SUL,18.2.0
+2024-03,RAN#103,RP-240515,0178,-,A,CR on reportQuantity for RSRP/SINR in TS38.212,18.2.0
+2024-03,RAN#103,RP-240530,0179,-,F,Correction of RRC parameter names for UTO-UCI indication,18.2.0
+2024-03,RAN#103,RP-240536,0181,-,A,Rel-16 editorial corrections for TS 38.212 (mirrored to Rel-18),18.2.0
+2024-03,RAN#103,RP-240537,0183,-,F,Rel-18 editorial corrections for TS 38.212,18.2.0
+2024-03,RAN#103,RP-240520,0184,-,F,Corrections on Rel-18 Multi-carrier enhancements in 38.212,18.2.0
+2024-03,RAN#103,RP-240518,0185,-,F,Corrections on Rel-18 MIMO Evolution for Downlink and Uplink in 38.212,18.2.0
+2024-03,RAN#103,RP-240528,0186,-,F,Corrections on NR positioning enhancement in 38.212,18.2.0
+2024-03,RAN#103,RP-240519,0187,-,F,Corrections on Rel-18 NR sidelink evolution in 38.212,18.2.0
+2024-06,RAN#104,RP-241068,0188,-,F,Correction on UL/SUL field in DCI format 1_0 in LTM,18.3.0
+2024-06,RAN#104,RP-241064,0191,-,A,Correction to maxRank configuration restriction with fullpowerMode1 and transform precoding ‘enabled’,18.3.0
+2024-06,RAN#104,RP-241067,0192,-,F,Corrections on PRACH association indicator in PDCCH order in 38.212,18.3.0
+2024-06,RAN#104,RP-241067,0193,-,F,Corrections for Transmission with more than 4 Layers for 8TX UE,18.3.0
+2024-06,RAN#104,RP-241075,0194,-,F,CR for 38.212 on TRS occasions for idle/inactive UEs,18.3.0
+2024-06,RAN#104,RP-241067,0195,-,F,Correction on PTRS-DMRS association field in DCI format 0_1 and DCI format 0_2,18.3.0
+2024-06,RAN#104,RP-241066,0196,-,F,Corrections on Rel-18 Multi-carrier enhancements in 38.212,18.3.0
+2024-06,RAN#104,RP-241060,0199,-,F,Rel-18 editorial corrections for TS 38.212,18.3.0
+2024-06,RAN#104,RP-241067,0200,-,F,Corrections on Rel-18 MIMO Evolution for Downlink and Uplink in 38.212,18.3.0
+2024-06,RAN#104,RP-241058,0202,-,A,Rel-16 editorial corrections for TS 38.212 (mirrored to Rel-18),18.3.0
+2024-06,RAN#104,RP-241059,0203,-,A,Rel-17 editorial corrections for TS 38.212 (mirrored to Rel-18),18.3.0
+2024-09,RAN#105,RP-242209,0204,-,F,CR on PTRS-DMRS Association for 8 Tx UL MIMO,18.4.0
+2024-09,RAN#105,RP-242213,0205,-,F,Correction on SL-U COT sharing flag indication,18.4.0
+2024-09,RAN#105,RP-242204,0206,-,F,Rel-18 editorial corrections for TS 38.212,18.4.0
+2024-12,RAN#106,RP-242932,0208,-,F,Correction on PTRS-DMRS Association,18.5.0
+2024-12,RAN#106,RP-242925,0209,1,F,Rel-18 editorial corrections for TS 38.212,18.5.0
+2025-03,RAN#107,RP-250234,0210,-,F,Corrections on determination of DCI format 0_3 in case of dormancy,18.6.0
+2025-03,RAN#107,RP-250231,0212,-,A,Correction on LBRM TBS determination for UE indicating 1024QAM rank restricted capability,18.6.0
+2025-03,RAN#107,RP-250227,0213,-,F,CR on the PRACH retransmission indicator field included in the PDCCH order,18.6.0
+2025-03,RAN#107,RP-250226,0214,-,F,Rel-18 editorial corrections for TS 38.212,18.6.0
+2025-06,RAN#108,RP-251562,0224,-,A,Rel-17 editorial corrections for TS 38.212 (mirrored to Rel-18),18.7.0
+2025-06,RAN#108,RP-251563,0225,-,F,Rel-18 editorial corrections for TS 38.212,18.7.0
+2025-06,RAN#108,RP-251571,0215,-,B,Introduction of Rel-19 enhancements of network energy savings for NR,19.0.0
+2025-06,RAN#108,RP-251572,0216,-,B,Introduction of Rel-19 AI/ML for NR Air Interface,19.0.0
+2025-06,RAN#108,RP-251577,0217,-,B,Introduction of Rel-19 low-power Wake-up Signal for NR,19.0.0
+2025-06,RAN#108,RP-251836,0218,-,B,Introduction of Rel-19 evolution of NR duplex operation,19.0.0
+2025-06,RAN#108,RP-251578,0219,-,B,Introduction of Rel-19 Multi-carrier enhancements,19.0.0
+2025-06,RAN#108,RP-251580,0220,-,B,Introduction of Rel-19 NR MIMO Phase 5,19.0.0
+2025-06,RAN#108,RP-251582,0221,-,B,Introduction of Rel-19 NR mobility enhancements Phase 4 in 38.212,19.0.0
+2025-06,RAN#108,RP-251583,0226,-,B,Introduction of Rel-19 NR NTN Phase 3 in 38.212,19.0.0
+2025-06,RAN#108,RP-251588,0227,-,B,Introduction of Rel-19 XR enhancements for NR,19.0.0
+2025-09,RAN#109,RP-252634,0222,1,B,Introduction of 32 HARQ process numbers in Rel-19 [TN32HARQ],19.1.0
+2025-09,RAN#109,RP-252629,0228,-,F,Corrections on Rel-19 low-power Wake-up Signal for NR,19.1.0
+2025-09,RAN#109,RP-252627,0229,-,F,Corrections on Rel-19 AI/ML for NR Air Interface,19.1.0
+2025-09,RAN#109,RP-252630,0230,-,F,Corrections on Rel-19 Multi-carrier enhancements,19.1.0
+2025-09,RAN#109,RP-252631,0231,-,F,Corrections on Rel-19 NR MIMO Phase 5,19.1.0
+2025-12,RAN#110,RP-253034,0233,-,A,Rel-18 editorial corrections for TS 38.212 (mirrored to Rel-19),19.2.0
+2025-12,RAN#110,RP-253020,0234,-,F,Correction on Rel-19 evolution of NR duplex operation,19.2.0
+2025-12,RAN#110,RP-253027,0235,-,B,Introduction of Rel-19 less than 5MHz for NTN,19.2.0
+2025-12,RAN#110,RP-253016,0236,-,B,Introduction of Rel-19 early CSI acquisition for L3 handover to TS 38.212 [EarlyCSI_L3HO],19.2.0
+2025-12,RAN#110,RP-253019,0237,-,F,Corrections on Rel-19 NR MIMO Phase 5,19.2.0
+2025-12,RAN#110,RP-253022,0238,-,F,Correction on Rel-19 enhancements of network energy savings for NR,19.2.0
+2025-12,RAN#110,RP-253036,0242,-,A,Rel-16 editorial corrections for TS 38.212 (mirrored to Rel-19),19.2.0
+2026-03,RAN#111,RP-260168,0243,-,F,Corrections on R19 NES adaptation of common channel/signals,19.3.0
+2026-03,RAN#111,RP-260172,0244,-,F,CR on UEIRI multiplexed into PUSCH in TS 38.212,19.3.0
+2026-03,RAN#111,RP-260171,0245,-,F,Rel-19 editorial corrections for TS 38.212,19.3.0

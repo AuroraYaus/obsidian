@@ -1,0 +1,9 @@
+SystemInformationBlockType15 field descriptions
+carrierTypeIndicates whether the carrier is pre-Rel-14 MBMS carrier (mbms) or FeMBMS/Unicast mixed carrier (fembmsMixed) or MBMS-dedicated carrier (fembmsDedicated).
+"frameOffsetFor MBMS-dedicated carrier, the frameOffset gives the radio frame which contains PBCH by SFN mod 4 = frameOffset."
+mbms-InterFreqCarrierTypeListIndicates whether this is an feMBMS carrier. The field is included only if mbms-SAI-InterFreqList-r11 is included. The number of entries is the same in both fields and carrier type relates to the frequency indicated in mbms-SAI-InterFreqList-r11 in the corresponding entry index.
+"mbms-IntraFreqCarrierTypeContains indication whether the carrier is pre-Rel-14 MBMS carrier, FeMBMS/Unicast mixed carrier or MBMS-dedicated carrier."
+"mbms-SAI-InterFreqListContains a list of neighboring frequencies including additional bands, if any, that provide MBMS services and the corresponding MBMS SAIs."
+"mbms-SAI-IntraFreqContains the list of MBMS SAIs for the current frequency. A duplicate MBMS SAI indicates that this and all following SAIs are not offered by this cell but only by neighbour cells on the current frequency. For MBMS service continuity, the UE shall use all MBMS SAIs listed in mbms-SAI-IntraFreq to derive the MBMS frequencies of interest."
+mbms-SAI-ListContains a list of MBMS SAIs for a specific frequency.
+multiBandInfoListA list of additional frequency bands applicable for the cells participating in the MBSFN transmission.

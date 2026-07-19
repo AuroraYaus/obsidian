@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td>SystemInformationBlockType23-NB field descriptions</td>
+  </tr>
+  <tr>
+    <td>nprach-ParametersListFmt2, nprach-ParametersListFmt2EDTConfigures NPRACH parameters for each NPRACH resource format 2 on one UL carrier. Up to three NPRACH resources can be configured on one carrier. Each NPRACH resource is associated with a different number of NPRACH repetitions.E-UTRAN includes the same number of entries, and listed in the same order, as in nprach-ParametersList in SystemInformationBlockType2-NB.The NPRACH resources in nprach-ParametersListFmt2EDT are used to initiate EDT. Each NPRACH resource is associated with a TBS signalled in the corresponding entry of edt-TBS-InfoList.E-UTRAN configures the NPRACH resources format 2 so that they do not overlap in time domain with the NPRACH resources configured in nprach-ParametersList and nprach-ParametersListEDT on the same UL carrier.If there is no NPRACH resource in nprach-ParametersListFmt2 (respectively nprach-ParametersListFmt2EDT) on any UL carrier, including the anchor carrier, for one NPRACH repetition level, the UE uses the NPRACH resources in nprach-ParametersList (respectively nprach-ParametersListEDT) for this NPRACH repetition level. Otherwise, the UE uses only NPRACH resources in nprach-ParametersListFmt2 (respectively nprach-ParametersListFmt2EDT).If E-UTRAN configures NPRACH resources format 2 in one NPRACH repetition level, the E-UTRAN configures NPRACH resources format 2 in all NPRACH repetition levels upwards.</td>
+  </tr>
+  <tr>
+    <td>ul-ConfigList, ul-ConfigListMixedul-ConfigList (respectively ul-ConfigListMixed) is parallel to ul-ConfigList (respectively ul-ConfigListMixed) in SystemInformationBlockType22-NB.E-UTRAN includes the same number of entries and in the same order in ul-ConfigList (respectively ul-ConfigListMixed) in SystemInformationBlockType23-NB as in ul-ConfigList (respectively ul-ConfigListMixed) in SystemInformationBlockType22-NB. The UE combines each entry in ul-ConfigList (respectively ul-ConfigListMixed) in SystemInformationBlockType23-NB with the corresponding entry in ul-ConfigList (respectively ul-ConfigListMixed) in SystemInformationBlockType22-NB.</td>
+  </tr>
+</table>

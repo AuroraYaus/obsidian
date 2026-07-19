@@ -1,0 +1,3 @@
+CarrierFreq-NB field descriptions
+"carrierFreqProvides the ARFCN applicable for the NB-IoT carrier frequency as defined in TS 36.101 [42], Table 5.7.3-1 and TS 36.108 [114], Table 5.4A.2-1."
+"carrierFreqOffsetOffset of the NB-IoT channel number to EARFCN as defined in TS 36.101 [42], clause 5.7.3F and TS 36.108 [114], clause 5.4B.2. Value v-10 means -10, v-9 means -9, and so on. E-UTRAN may configure the values v-8dot5, v-4dot5, v3dot5 and v7dot5 only for a carrier in a TDD band.For TDD, the UE shall use the value signalled in carrierFreqOffset-v1550, if present, and ignore the value signaled in carrierFreqOffset-r13."

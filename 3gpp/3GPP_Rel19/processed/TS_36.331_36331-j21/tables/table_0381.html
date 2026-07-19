@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <td>DL-CarrierConfigCommon-NB field descriptions</td>
+  </tr>
+  <tr>
+    <td>dl-CarrierFreqDL carrier frequency. The downlink carrier is not in a E-UTRA PRB which contains E-UTRA PSS/SSS/PBCH.</td>
+  </tr>
+  <tr>
+    <td>dl-GapNonAnchorDownlink transmission gap configuration for the non-anchor carrier, see TS 36.211 [21], clause 10.2.3.4.E-UTRAN may configure dl-GapNonAnchor-v1530 only if dl-GapNonAnchor-r14 is set to explicitGapConfiguration.</td>
+  </tr>
+  <tr>
+    <td>downlinkBitmapNonAnchorFor FDD: NB-IoT downlink subframe configuration for downlink transmission on the non-anchor carrier. See TS 36.213 [23], clause 16.4.For TDD: NB-IoT downlink, uplink and special subframes configuration for transmission on the anchor/ non-anchor carrier. See TS 36.213 [23], clause 16.4.For IoT NTN TDD mode, this field is set to useNoBitmap-r14.</td>
+  </tr>
+  <tr>
+    <td>eutraControlRegionSizeIndicates the control region size of the E-UTRA cell for the in-band operation mode, see TS 36.213 [23]. Unit is in number of OFDM symbols. If operationModeInfo in MIB-NB is set to inband-SamePCI or inband-DifferentPCI, it should be set to the value broadcast in SIB1-NB.</td>
+  </tr>
+  <tr>
+    <td>eutra-NumCRS-PortsNumber of E-UTRA CRS antenna ports, either the same number of ports as NRS or 4 antenna ports. See TS 36.211 [21], TS 36.212 [22], and TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>inbandCarrierInfoProvides the configuration of a non-anchor inband carrier.</td>
+  </tr>
+  <tr>
+    <td>indexToMidPRBThe PRB index is signaled by offset from the middle of the EUTRA system.</td>
+  </tr>
+  <tr>
+    <td>nrs-PowerOffsetNonAnchorProvides the downlink narrowband reference-signal EPRE offset of the non-anchor carrier relative to the downlink narrowband reference-signal EPRE of the anchor carrier, unit in dB. Value dB-12 corresponds to -12 dB, dB-10 corresponds to -10 dB and so on. See TS 36.213 [23], clause 16.2.2.</td>
+  </tr>
+  <tr>
+    <td>samePCI-IndicatorThis parameter specifies whether the non-anchor carrier reuses the same PCI as the EUTRA carrier.</td>
+  </tr>
+</table>

@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>SL-SCCH-CarrierSetConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>sl-AllowedCarrierFreqSet1, sl-AllowedCarrierFreqSet2Indicates the set of carrier frequencies applicable for the transmission of the MAC SDUs from the sidelink SRB logical channels whose associated destination is included in sl-destinationList. If present, network ensures sl-AllowedCarrierFreqSet1 and sl-AllowedCarrierFreqSet2 do not include the same carrier frequency. The value 1 corresponds to the frequency of first entry in sl-FreqInfoList broadcast in SIB12, the value 2 corresponds to the frequency of first entry in sl-FreqInfoListSizeExt broadcast in SIB12, the value 3 corresponds to the frequency of second entry in sl-FreqInfoListSizeExt broadcast in SIB12 and so on.</td>
+  </tr>
+  <tr>
+    <td>sl-DestinationListThis field indicates the list of destination identify that the sl-AllowedCarrierFreqSet1 and sl-AllowedCarrierFreqSet2 apply. Only destination identity for unicast link can be included in this field.</td>
+  </tr>
+  <tr>
+    <td>sl-SRB-IdentityThis field indicates the list of sidelink SRB identities that the sl-AllowedCarrierFreqSet1 and sl-AllowedCarrierFreqSet2 apply.</td>
+  </tr>
+</table>

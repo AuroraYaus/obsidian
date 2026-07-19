@@ -1,0 +1,6 @@
+PDCCH format,Number of CCEs,Number of resource-element groups,Number of PDCCH bits
+0,1,9,72
+1,2,18,144
+2,4,36,288
+3,8,72,576
+4,16,144,1152

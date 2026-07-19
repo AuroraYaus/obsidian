@@ -1,0 +1,3 @@
+SBFD-RACH-DualConfig field descriptions
+"sbfd-AdditionalRACH-ConfigIndicates the additional RACH configuration for random access operation in the second PRACH occasions, see RACH configuration for SBFD random access operation in clause 5 in TS 38.211 [16] and clause 8 in TS 38.213 [13]."
+sbfd-RACH-DualConfig-ValidRO-AcrossSymbolTypesIndicates whether a configured RO starting from SBFD symbol and ending in non-SBFD symbol either in the same slot or across different slots is valid.

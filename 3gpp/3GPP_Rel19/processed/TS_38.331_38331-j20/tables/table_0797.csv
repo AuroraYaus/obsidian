@@ -1,0 +1,2 @@
+Conditional Presence,Explanation
+NotSIB1CommonControlResource,"The field is optional present in case commonControlResourceSet is not configured in SIB1, Need R, otherwise it is absent."

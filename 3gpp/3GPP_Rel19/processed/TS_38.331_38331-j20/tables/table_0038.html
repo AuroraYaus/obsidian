@@ -1,0 +1,170 @@
+<table>
+  <tr>
+    <td>RRCReconfiguration-IEs field descriptions</td>
+  </tr>
+  <tr>
+    <td>appLayerMeasConfigThis field is used to configure application layer measurements. This field is absent when the UE is configured to operate with shared spectrum channel access or if sl-L2RemoteUE-Config-r17 is configured or not released.</td>
+  </tr>
+  <tr>
+    <td>bap-ConfigThis field is used to configure the BAP entity for IAB nodes.</td>
+  </tr>
+  <tr>
+    <td>bap-AddressIndicates the BAP address of an IAB-node. The BAP address of an IAB-node cannot be changed once configured for the cell group to the BAP entity.</td>
+  </tr>
+  <tr>
+    <td>conditionalReconfigurationConfiguration of candidate target SpCell(s) and execution condition(s) for conditional handover, conditional PSCell addition or conditional PSCell change. The field is absent if any DAPS bearer is configured, if the sl-L2RemoteUE-Config or sl-L2RelayUE-Config is configured, or if the RRCReconfiguration message is contained within condRRCReconfig. When the masterCellGroup and/or secondaryCellGroup includes ReconfigurationWithSync, if this field is present, it only includes configurations/fields specific to subsequent CPAC. The RRCReconfiguration message contained in DLInformationTransferMRDC cannot contain the field conditionalReconfiguration for conditional PSCell change or for conditional PSCell addition. The network does not include this field in an RRCReconfiguration message contained within a LTM-Config IE.</td>
+  </tr>
+  <tr>
+    <td>daps-SourceReleaseIndicates to UE that the source cell part of DAPS operation is to be stopped and the source cell part of DAPS configuration is to be released.</td>
+  </tr>
+  <tr>
+    <td>dedicatedNAS-MessageListThis field is used to transfer UE specific NAS layer information between the network and the UE. The RRC layer is transparent for each PDU in the list.</td>
+  </tr>
+  <tr>
+    <td>dedicatedPagingDeliveryThis field is used to transfer Paging message for the associated L2 U2N Remote UE to the L2 U2N Relay UE in case of single hop or to L2 Last U2N Relay UE in RRC_CONNECTED.</td>
+  </tr>
+  <tr>
+    <td>dedicatedPosSysInfoDeliveryThis field is used to transfer SIBPos to the UE in RRC_CONNECTED. This field may contain multiple posSIB segments of the same posSIB type. When the number of segments of posSIB of the same posSIB type exceeds the maximum number of posSIBs of this field (i.e., 32), the posSIB segments of the same posSIB type may be delivered in multiple RRCReconfiguration messages.</td>
+  </tr>
+  <tr>
+    <td>dedicatedSIB1-DeliveryThis field is used to transfer SIB1 to the UE (including L2 U2N Remote UE). The field has the same values as the corresponding configuration in servingCellConfigCommon.</td>
+  </tr>
+  <tr>
+    <td>dedicatedSystemInformationDeliveryThis field is used to transfer SIB6, SIB7, SIB8, SIB19, SIB20, SIB21, SIB25, SIB26, SIB27 to the UE with an active BWP with no common search space configured or the L2 U2N Remote UE in RRC_CONNECTED. For UEs in RRC_CONNECTED (including L2 U2N Remote UE), this field is also used to transfer the SIBs requested on-demand.</td>
+  </tr>
+  <tr>
+    <td>defaultUL-BAP-RoutingIDThis field is used for IAB-node to configure the default uplink Routing ID, which is used by IAB-node during IAB-node bootstrapping, migration, IAB-MT RRC resume and IAB-MT RRC re-establishment for F1-C and non-F1 traffic. The defaultUL-BAP-RoutingID can be (re-)configured when IAB-node IP address for F1-C related traffic changes. This field is mandatory only for IAB-node bootstrapping.</td>
+  </tr>
+  <tr>
+    <td>defaultUL-BH-RLC-ChannelThis field is used for IAB-nodes to configure the default uplink BH RLC channel, which is used by IAB-node during IAB-node bootstrapping, migration, IAB-MT RRC resume and IAB-MT RRC re-establishment for F1-C and non-F1 traffic. The defaultUL-BH-RLC-Channel can be (re-)configured when IAB-node IP address for F1-C related traffic changes, and the new IP address is anchored at a different IAB-donor-DU. This field is mandatory for IAB-node bootstrapping. If the IAB-MT is operating in EN-DC, the default uplink BH RLC channel is referring to an RLC channel on the SCG; Otherwise, it is referring to an RLC channel either on the MCG or on the SCG depending on whether the MN or the SN configures this field.</td>
+  </tr>
+  <tr>
+    <td>flowControlFeedbackTypeThis field is only used for IAB-node that support hop-by-hop flow control to configure the type of flow control feedback. Value perBH-RLC-Channel indicates that the IAB-node shall provide flow control feedback per BH RLC channel, value perRoutingID indicates that the IAB-node shall provide flow control feedback per routing ID, and value both indicates that the IAB-node shall provide flow control feedback both per BH RLC channel and per routing ID.</td>
+  </tr>
+  <tr>
+    <td>fullConfigIndicates that the full configuration option is applicable for the RRCReconfiguration message for intra-system intra-RAT HO. For inter-RAT HO from E-UTRA to NR, fullConfig indicates whether or not delta signalling of SDAP/PDCP from source RAT is applicable. This field is absent if any DAPS bearer is configured or when the RRCReconfiguration message is transmitted on SRB3, and in an RRCReconfiguration message for SCG contained in another RRCReconfiguration message (or RRCConnectionReconfiguration message, see TS 36.331 [10]) transmitted on SRB1.</td>
+  </tr>
+  <tr>
+    <td>iab-IP-AddressThis field is used to provide the IP address information for IAB-node.</td>
+  </tr>
+  <tr>
+    <td>iab-IP-AddressIndexThis field is used to identify a configuration of an IP address.</td>
+  </tr>
+  <tr>
+    <td>iab-IP-AddressToAddModListList of IP addresses allocated for IAB-node to be added and modified.</td>
+  </tr>
+  <tr>
+    <td>iab-IP-AddressToReleaseListList of IP address allocated for IAB-node to be released.</td>
+  </tr>
+  <tr>
+    <td>iab-IP-UsageThis field is used to indicate the usage of the assigned IP address. If this field is not configured, the assigned IP address is used for all traffic.</td>
+  </tr>
+  <tr>
+    <td>iab-donor-DU-BAP-AddressThis field is used to indicate the BAP address of the IAB-donor-DU where the IP address is anchored.</td>
+  </tr>
+  <tr>
+    <td>keySetChangeIndicatorIndicates whether UE shall derive a new KgNB. If reconfigurationWithSync is included, value true indicates that a KgNB key is derived from a KAMF key taken into use through the latest successful NAS SMC procedure, or N2 handover procedure with KAMF change, as described in TS 33.501 [11] for KgNB re-keying. Value false indicates that the new KgNB key is obtained from the current KgNB key or from the NH as described in TS 33.501 [11].</td>
+  </tr>
+  <tr>
+    <td>ltm-ConfigThe network does not configure this field in an RRCReconfiguration message within an LTM-Config IE and ConditionalReconfiguration IE.</td>
+  </tr>
+  <tr>
+    <td>ltm-ConfigNRDCThis field contains LTM candidate configurations for LTM on the SCG, including the SCG and the MCG configurations. The network does not configure this field in an RRCReconfiguration message contained in nr-SCG or transmitted on SRB3. The network does not configure this field in an RRCReconfiguration message in an LTM-Config IE or in a ConditionalReconfiguration IE.</td>
+  </tr>
+  <tr>
+    <td>masterCellGroupConfiguration of master cell group.</td>
+  </tr>
+  <tr>
+    <td>mrdc-ReleaseAndAddThis field indicates that the current SCG configuration is released and a new SCG is added at the same time. The network always includes this field in an mrdc-SecondaryCellGroup set to setup which is included in an RRCReconfiguration message within an LTM-Config IE.</td>
+  </tr>
+  <tr>
+    <td>mrdc-SecondaryCellGroupIncludes an RRC message for SCG configuration in NR-DC or NE-DC.For NR-DC (nr-SCG), mrdc-SecondaryCellGroup contains the RRCReconfiguration message as generated (entirely) by SN gNB. In this version of the specification, the RRC message can only include fields secondaryCellGroup, otherConfig, conditionalReconfiguration, ltm-Config, measConfig, bap-Config, IAB-IP-AddressConfigurationList and appLayerMeasConfig.For NE-DC (eutra-SCG), mrdc-SecondaryCellGroup includes the E-UTRA RRCConnectionReconfiguration message as specified in TS 36.331 [10]. In this version of the specification, the E-UTRA RRC message can only include the field scg-Configuration.</td>
+  </tr>
+  <tr>
+    <td>mrdc-SecondaryCellGroupConfigThis field is used to configure and release an SCG in NR-DC and NE-DC.</td>
+  </tr>
+  <tr>
+    <td>musim-GapConfigIndicates the MUSIM gap configuration and controls setup/release of MUSIM gaps. In this version of the specification, the network does not configure MUSIM gap together preconfigured measurement gap for positioning. For the UE supporting musim-GapPriorityPreference, the network can configure MUSIM gap together with concurrent measurement gap. Otherwise, the network does not configure MUSIM gap together with concurrent measurement gap.</td>
+  </tr>
+  <tr>
+    <td>n3c-ExtIndirectPathAddChangeThis field indicates the configuration of one or more relay UEs via N3C link. The network does not configure this field together with n3c-IndirectPathAddChange.</td>
+  </tr>
+  <tr>
+    <td>nas-ContainerThis field is used to transfer UE specific NAS layer information between the network and the UE. The RRC layer is transparent for this field, although it affects activation of AS  security after inter-system handover to NR. The content is defined in TS 24.501 [23].</td>
+  </tr>
+  <tr>
+    <td>needForGapsConfigNRConfiguration for the UE to report measurement gap requirement information of NR target bands in the RRCReconfigurationComplete and RRCResumeComplete message.</td>
+  </tr>
+  <tr>
+    <td>needForGapNCSG-ConfigEUTRAConfiguration for the UE to report measurement gap and NCSG requirement information of EUTRA target bands in the RRCReconfigurationComplete and RRCResumeComplete message.</td>
+  </tr>
+  <tr>
+    <td>needForGapNCSG-ConfigNRConfiguration for the UE to report measurement gap and NCSG requirement information of NR target bands in the RRCReconfigurationComplete and RRCResumeComplete message.</td>
+  </tr>
+  <tr>
+    <td>needForInterruptionConfigNRIndicates whether the UE shall report interruption requirement information of NR target bands in the RRCReconfigurationComplete and RRCResumeComplete message. The network sets this field to enabled only if the needForGapsConfigNR is configured. The network sets this field to disabled if the needForGapsConfigNR is released.</td>
+  </tr>
+  <tr>
+    <td>nextHopChainingCountParameter NCC: See TS 33.501 [11]</td>
+  </tr>
+  <tr>
+    <td>onDemandPosSIB-RequestCtrlParamIndicates whether the UE is enabled to request periodic delivery of posSIB(s) while in RRC_CONNECTED. This field can only be present when the field onDemandSIB-Request is present.</td>
+  </tr>
+  <tr>
+    <td>onDemandSIB-RequestIndicates that the UE is allowed to request SIB(s) on-demand while in RRC_CONNECTED according to clause 5.2.2.3.5.</td>
+  </tr>
+  <tr>
+    <td>onDemandSIB-RequestProhibitTimerProhibit timer for requesting SIB(s) on-demand while in RRC_CONNECTED according to clause 5.2.2.3.5. Value in seconds. Value s0 means prohibit timer is set to 0 seconds, value s0dot5 means prohibit timer is set to 0.5 seconds, value s1 means prohibit timer is set to 1 second and so on.</td>
+  </tr>
+  <tr>
+    <td>otherConfigContains configuration related to other configurations. When configured for the SCG, only fields drx-PreferenceConfig, maxBW-PreferenceConfig, maxBW-PreferenceConfigFR2-2, maxCC-PreferenceConfig, maxMIMO-LayerPreferenceConfig, maxMIMO-LayerPreferenceConfigFR2-2, minSchedulingOffsetPreferenceConfig, minSchedulingOffsetPreferenceConfigExt, rlm-RelaxationReportingConfig, bfd-RelaxationReportingConfig, btNameList, wlanNameList, sensorNameList, obtainCommonLocation, idc-AssistanceConfig, multiRx-PreferenceReportingConfigFR2, ul-TrafficInfoReportingConfig, n3c-RelayUE-InfoReportConfig, successPSCell-Config, sn-InitiatedPSCellChange, gapOccasionCancelRatioReportConfig, lpwus-OffsetPreferenceConfig, applicabilityReportConfig and dataCollectionPreferenceConfig can be included.</td>
+  </tr>
+  <tr>
+    <td>radioBearerConfigConfiguration of Radio Bearers (DRBs, SRBs, multicast MRBs) including SDAP/PDCP. In (NG)EN-DC this field may only be present if the RRCReconfiguration is transmitted over SRB3. SRB4 should not be configured if sl-L2RemoteUE-Config-r17 is configured or not released.</td>
+  </tr>
+  <tr>
+    <td>radioBearerConfig2Configuration of Radio Bearers (DRBs, SRBs) including SDAP/PDCP. This field can only be used if the UE supports NR-DC or NE-DC.</td>
+  </tr>
+  <tr>
+    <td>retainLoggedMeasurementsIf present, it indicates that the UE shall retain the logged measurements available in VarCSI-LogMeasReport upon execution of this RRCReconfiguration message including the reconfigurationWithSync.</td>
+  </tr>
+  <tr>
+    <td>scg-StateIndicates that the SCG is in deactivated state.This field is not used-in an RRCReconfiguration message received:-within mrdc-SecondaryCellGroup, or-in an E-UTRA RRCConnectionReconfiguration message, or-in an E-UTRA RRCConnectionResume message or-in an RRCReconfiguration message received via SRB3, except if the RRCReconfiguration message is included in DLInformationTransferMRDC.The field is absent if CPA, CPC, or subsequent CPAC is configured for the UE, or if the RRCReconfiguration message is contained in CondRRCReconfig, or PSCell is configured with tag2, or if the RRCReconfiguration message is included within an LTM-Config IE.</td>
+  </tr>
+  <tr>
+    <td>sl-L2RelayUE-ConfigContains L2 U2N relay operation related configurations used by a UE acting as or to be acting as a L2 U2N Relay UE or L2 U2U relay operation related configuration used by a UE acting as a L2 U2U Relay UE. In case of L2 U2N relay operation, the field is absent if conditionalReconfiguration is configured for CHO.</td>
+  </tr>
+  <tr>
+    <td>sl-L2RemoteUE-ConfigContains L2 U2N relay operation related configurations used by a UE acting as or to be acting as a L2 U2N Remote UE or L2 U2U relay operation related configuration used by a UE acting as a L2 U2U Remote UE. In case of L2 U2N relay operation, the field is absent if conditionalReconfiguration is configured for CHO, or if appLayerMeasConfig or SRB4 is configured/not released.</td>
+  </tr>
+  <tr>
+    <td>secondaryCellGroupConfiguration of secondary cell group ((NG)EN-DC or NR-DC).</td>
+  </tr>
+  <tr>
+    <td>sk-CounterA counter used upon initial configuration of S-KgNB or S-KeNB, as well as upon refresh of S-KgNB or S-KeNB. This field is always included either upon initial configuration of an NR SCG or upon configuration of the first RB with keyToUse set to secondary, whichever happens first. This field is absent if there is neither any NR SCG nor any RB with keyToUse set to secondary, or if the RRCReconfiguration message is contained in condRRCReconfig for subsequent CPAC, or if the RRCReconfiguration message is contained in ltm-CandidateConfig within ltm-ConfigNRDC.</td>
+  </tr>
+  <tr>
+    <td>sl-ConfigDedicatedEUTRA-InfoThis field includes the E-UTRA RRCConnectionReconfiguration as specified in TS 36.331 [10]. In this version of the specification, the E-UTRA RRCConnectionReconfiguration can only includes sidelink related fields for V2X sidelink communication, i.e. sl-V2X-ConfigDedicated, sl-V2X-SPS-Config, measConfig and/or otherConfig.</td>
+  </tr>
+  <tr>
+    <td>sl-ConfigDedicatedNRThis field is used to provide the dedicated configurations for NR sidelink communication/discovery/positioning.</td>
+  </tr>
+  <tr>
+    <td>sl-TimeOffsetEUTRAThis field indicates the possible time offset to (de)activation of V2X sidelink transmission after receiving DCI format 3_1 used for scheduling V2X sidelink communication. Value ms0dpt75 corresponds to 0.75ms, ms1 corresponds to 1ms and so on. The network includes this field only when sl-ConfigDedicatedEUTRA is configured.</td>
+  </tr>
+  <tr>
+    <td>srs-PosResourceSetAggBW-CombinationListThis field indicates the SRS resource sets across two or three carriers which are linked for SRS bandwidth aggregation in RRC_CONNECTED state as defined in clause 6.2.1.4 of TS 38.214 [19].</td>
+  </tr>
+  <tr>
+    <td>targetCellSMTC-SCGThe SSB periodicity/offset/duration configuration of target cell for NR PSCell addition and SN change. When UE receives this field, UE applies the configuration based on the timing reference of NR PCell for PSCell addition and PSCell change for the case of no reconfiguration with sync of MCG, and UE applies the configuration based on the timing reference of target NR PCell for the case of reconfiguration with sync of MCG. If both this field and the smtc in secondaryCellGroup -&gt; SpCellConfig -&gt; reconfigurationWithSync are absent, the UE uses the SMTC in the measObjectNR having the same SSB frequency and subcarrier spacing, as configured before the reception of the RRC message.</td>
+  </tr>
+  <tr>
+    <td>t316Indicates the value for timer T316 as described in clause 7.1. Value ms50 corresponds to 50 ms, value ms100 corresponds to 100 ms and so on. This field can be configured only if the UE is configured with split SRB1 or SRB3.</td>
+  </tr>
+  <tr>
+    <td>ue-TxTEG-RequestUL-TDOA-ConfigConfigures the periodicity of UE reporting for the association between Tx TEG and SRS Positioning resources. When configured with oneShot UE reports the association only one time. When configured with periodicReporting UE reports the association periodically and the periodicReporting indicates the periodicity. Value ms160 corresponds to 160ms, value ms320 corresponds to 320ms and so on.</td>
+  </tr>
+  <tr>
+    <td>ul-GapFR2-ConfigIndicates the FR2 UL gap configuration to UE. In EN-DC and NGEN-DC, the SN decides and configures the FR2 UL gap pattern. In NE-DC, the MN decides and configures the FR2 UL gap pattern. In NR-DC without FR2-FR2 band combination, the network entity which is configured with FR2 serving cell(s) decides and configures the FR2 UL gap pattern.</td>
+  </tr>
+</table>

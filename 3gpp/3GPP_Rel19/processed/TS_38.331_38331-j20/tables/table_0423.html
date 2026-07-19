@@ -1,0 +1,71 @@
+<table>
+  <tr>
+    <td>PDCCH-ConfigCommon field descriptions</td>
+  </tr>
+  <tr>
+    <td>applyIndicatedTCI-StateThis field indicates, for PDCCH reception in CORESET #0, if UE applies the first, the second, both or none of the &quot;indicated&quot; DL only TCI or joint TCI as specified in TS 38.213 [13], clause 10.1. Value both is not configured if the CORESET is associated with searchSpaceZero for Type 0/0A/2 common search space and can be configured only if sfnSchemePDCCH is configured in the serving cell.</td>
+  </tr>
+  <tr>
+    <td>commonControlResourceSetAn additional common control resource set which may be configured and used for any common or UE-specific search space. If the network configures this field, it uses a ControlResourceSetId other than 0 for this ControlResourceSet. The network configures the commonControlResourceSet in SIB1 so that it is contained in the bandwidth of CORESET#0. If the RedCap-specific initial downlink BWP does not contain the entire CORESET#0, the network configures the commonControlResourceSet in the RedCap-specific initial downlink BWP in SIB1 for (e)RedCap such that it does not have to be contained in the bandwidth of CORESET#0.</td>
+  </tr>
+  <tr>
+    <td>commonSearchSpaceList, commonSearchSpaceListExt, commonSearchSpaceListExt2A list of additional common search spaces. If the network configures this field, it uses the SearchSpaceIds other than 0. If the field is included, it replaces any previous list, i.e. all the entries of the list are replaced and each of the SearchSpace entries is considered to be newly created and the conditions and Need codes for setup of the entry apply. If the network includes commonSearchSpaceListExt/commonSearchSpaceListExt2, it includes the same number of entries, and listed in the same order, as in commonSearchSpaceList.</td>
+  </tr>
+  <tr>
+    <td>controlResourceSetZeroParameters of the common CORESET#0 which can be used in any common or UE-specific search spaces. The values are interpreted like the corresponding bits in MIB pdcch-ConfigSIB1. Even though this field is only configured in the initial BWP (BWP#0) controlResourceSetZero can be used in search spaces configured in other DL BWP(s) than the initial DL BWP if the conditions defined in TS 38.213 [13], clause 10 are satisfied.</td>
+  </tr>
+  <tr>
+    <td>firstPDCCH-MonitoringOccasionOfPEI-OOffset, in number of symbols, from the start of the reference frame for PEI-O to the start of the first PDCCH monitoring occasion of PEI-O on this BWP, see TS 38.213 [13], clause 10.4A. For the case po-NumPerPEI is smaller than Ns, UE applies the (floor(i_s/po-NumPerPEI)+1)-th value out of (N_s/po-NumPerPEI) configured values in firstPDCCH-MonitoringOccasionOfPEI-O for the symbol-level offset. When po-NumPerPEI is one or multiple of Ns, UE applies the first configured value in firstPDCCH-MonitoringOccasionOfPEI-O for the symbol-level offset.</td>
+  </tr>
+  <tr>
+    <td>firstPDCCH-MonitoringOccasionOfPOIndicates the first PDCCH monitoring occasion of each PO of the PF on this BWP, see TS 38.304 [20]. The field sCS120KHZquarterT-SCS60KHZoneEighthT-SCS30KHZoneSixteenthT, sCS120KHZoneEighthT-SCS60KHZoneSixteenthT and sCS120KHZoneSixteenthT can be applied for SCS 480kHz, corresponding to sCS480KHZoneT-SCS120KHZquarterT-SCS60KHZoneEighthT-SCS30KHZoneSixteenthT, sCS480KHZhalfT-SCS120KHZoneEighthT-SCS60KHZoneSixteenthT and sCS480KHZquarterT-SCS120KHZoneSixteenthT in IE DownlinkConfigCommonSIB respectively.</td>
+  </tr>
+  <tr>
+    <td>followUnifiedTCI-StateWhen set to enabled, for PDCCH reception in CORESET #0, the UE applies the &quot;indicated&quot; DL only TCI or joint TCI as specified in TS 38.214 [19], clause 5.1.5.</td>
+  </tr>
+  <tr>
+    <td>pagingAdaptFirstPDCCH-MonitoringOccasionOfPEI-OOffset, in number of symbols, from the start of the reference frame for PEI-O to the start of the first PDCCH monitoring occasion of PEI-O on this BWP for paging adaptation, see TS 38.213 [13], clause 10.4A. For the case po-NumPerPEI is smaller than Ns, UE applies the (floor(i_s/po-NumPerPEI)+1)-th value out of (N_s/po-NumPerPEI) configured values in pagingAdaptFirstPDCCH-MonitoringOccasionOfPEI-O for the symbol-level offset. When po-NumPerPEI is one or multiple of Ns, UE applies the first configured value in pagingAdaptFirstPDCCH-MonitoringOccasionOfPEI-O for the symbol-level offset. If pagingAdaptPEI-Config is configured in DownlinkConfigCommonSIB, this field is configured.</td>
+  </tr>
+  <tr>
+    <td>pagingAdaptFirstPDCCH-MonitoringOccasionOfPOIndicates the first PDCCH monitoring occasion of each PO of the PF on this BWP for paging adaptation, see TS 38.304 [20].</td>
+  </tr>
+  <tr>
+    <td>pagingAdaptPagingSearchSpaceID of the search space for paging adaptation (see TS 38.213 [13], clause 10.1). If the field is absent, the UE does not receive paging in this BWP (see TS 38.213 [13], clause 10). This field is absent for the RedCap-specific initial downlink BWP, if it does not include CD-SSB and the entire CORESET#0. In that case, an (e)RedCap UE in RRC_INACTIVE while SDT procedure is ongoing and T319a is not running, if CG-SDT is selected and if extended CG-SDT periodicity is configured (i.e. cg-SDT-PeriodicityExt is configured), or an (e)RedCap UE in RRC_IDLE or RRC_INACTIVE while SDT procedure is not ongoing, shall monitor paging in the initial DL BWP that includes CORESET#0.</td>
+  </tr>
+  <tr>
+    <td>pagingSearchSpaceID of the search space for paging (see TS 38.213 [13], clause 10.1). If the field is absent, the UE does not receive paging in this BWP (see TS 38.213 [13], clause 10). This field is absent for the RedCap-specific initial downlink BWP, if it does not include CD-SSB and the entire CORESET#0. In that case, an (e)RedCap UE in RRC_INACTIVE while SDT procedure is ongoing and T319a is not running, if CG-SDT is selected and if extended CG-SDT periodicity is configured (i.e. cg-SDT-PeriodicityExt is configured), or an (e)RedCap UE in RRC_IDLE or RRC_INACTIVE while SDT procedure is not ongoing, shall monitor paging in the initial DL BWP that includes CORESET#0.</td>
+  </tr>
+  <tr>
+    <td>pei-ConfigBWPProvides the configuration for PEI reception in this BWP. If the field is absent, the UE does not receive PEI in this BWP. For the initialDownlinkBWP-RedCap not including CD-SSB and the entire CORESET#0, an (e)RedCap UE in RRC_IDLE or RRC_INACTIVE while SDT procedure is not ongoing monitors PEI in the initialDownlinkBWP that includes CORESET#0, if the initialDownlinkBWP is configured with pei-ConfigBWP.</td>
+  </tr>
+  <tr>
+    <td>pei-SearchSpaceID of dedicated search space for PEI. It can be configured to one of up to 4 common SS sets configured by commonSearchSpaceList with SearchSpaceId &gt; 0. The CCE aggregation levels and maximum number of PDCCH candidates per CCE aggregation level follows Table 10.1-1 of TS38.213 [13]. SearchSpaceId = 0 can be configured for the case of SS/PBCH block and CORESET multiplexing pattern 2 or 3.</td>
+  </tr>
+  <tr>
+    <td>ra-SearchSpaceID of the Search space for random access procedure (see TS 38.213 [13], clause 10.1). If the field is absent, the UE does not receive RAR in this BWP. This field is mandatory present in the DL BWP(s) if the conditions described in TS 38.321 [3], clause 5.15 are met.</td>
+  </tr>
+  <tr>
+    <td>sdt-SearchSpaceCommon search space for CG-SDT and RA-SDT (see TS 38.213 [13]). If an existingSearchSpace is used, the network only signals the search space ID of the ra-SearchSpace.</td>
+  </tr>
+  <tr>
+    <td>searchSpaceMCCHID of the search space for MCCH. If the field is absent, the UE does not receive MCCH in this BWP (see TS 38.213 [13], clause 10). This field is absent for the RedCap-specific initial downlink BWP, if it does not include CD-SSB and the entire CORESET#0. In that case, the (e)RedCap UE in RRC_IDLE or RRC_INACTIVE may receive MCCH using searchSpaceMCCH in the initial DL BWP that includes CD-SSB and the entire CORESET#0.</td>
+  </tr>
+  <tr>
+    <td>searchSpaceMTCHID of the search space for MTCH of MBS broadcast. If the field is absent, the UE applies searchSpaceMCCH also for MTCH, (see TS 38.213 [13], clause 10). This field is absent for the RedCap-specific initial downlink BWP, if it does not include CD-SSB and the entire CORESET#0. In that case, the (e)RedCap UE in RRC_IDLE or RRC_INACTIVE may receive MTCH using searchSpaceMTCH in the initial DL BWP that includes CD-SSB and the entire CORESET#0.</td>
+  </tr>
+  <tr>
+    <td>searchSpaceMulticastMCCHID of the search space for multicast MCCH. If the field is absent, the UE does not receive multicast MCCH in this BWP (see TS 38.213 [13], clause 10). This field is absent for the RedCap-specific initial downlink BWP, if it does not include CD-SSB and the entire CORESET#0.</td>
+  </tr>
+  <tr>
+    <td>searchSpaceMulticastMTCHID of the search space for multicast MTCH. If the field is absent, the UE applies searchSpaceMulticastMCCH also for multicast MTCH, (see TS 38.213 [13], clause 10). This field is absent for the RedCap-specific initial downlink BWP, if it does not include CD-SSB and the entire CORESET#0.</td>
+  </tr>
+  <tr>
+    <td>searchSpaceOtherSystemInformationID of the Search space for other system information, i.e., SIB2 and beyond (see TS 38.213 [13], clause 10.1). If the field is absent, the UE does not receive other system information in this BWP. This field is absent for the RedCap-specific initial DL BWP, if it does not include CD-SSB and the entire CORESET#0. In that case, an (e)RedCap UE in RRC_IDLE or RRC_INACTIVE shall monitor PDCCH to receive other system information using searchSpaceOtherSystemInformation in the initial DL BWP that includes CD-SSB and the entire CORESET#0.</td>
+  </tr>
+  <tr>
+    <td>searchSpaceSIB1ID of the search space for SIB1 message. In the initial DL BWP of the UE′s PCell, the network sets this field to 0. If the field is absent, the UE does not receive SIB1 in this BWP. (see TS 38.213 [13], clause 10). This field is absent for the RedCap-specific initial DL BWP, if it does not include CD-SSB and the entire CORESET#0. In that case, an (e)RedCap UE in RRC_IDLE or RRC_INACTIVE shall monitor PDCCH to receive SIB1 using searchSpaceSIB1 in the initial DL BWP that includes CD-SSB and the entire CORESET#0.</td>
+  </tr>
+  <tr>
+    <td>searchSpaceZeroParameters of the common SearchSpace#0. The values are interpreted like the corresponding bits in MIB pdcch-ConfigSIB1. Even though this field is only configured in the initial BWP (BWP#0), searchSpaceZero can be used in search spaces configured in other DL BWP(s) than the initial DL BWP if the conditions described in TS 38.213 [13], clause 10, are satisfied.</td>
+  </tr>
+</table>

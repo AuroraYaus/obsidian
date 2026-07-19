@@ -1,0 +1,2 @@
+SCG-Config field descriptions
+"scg-RadioConfig-r12Includes the change of the dedicated SCG configuration and, upon addition of an SCG cell, the common SCG configuration.The SeNB only includes a new SCG cell in response to a request from MeNB, but may include release of an SCG cell release or release of the SCG part of an SCG/Split DRB without prior request from MeNB. The SeNB does not use this field to initiate release of the SCG."

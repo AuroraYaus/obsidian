@@ -1,0 +1,9 @@
+TDoc Number (RP-xxxxxx): CR Title,CR Number(s),CR Revision Number(s),Earliest Implementable Release,Additional Information
+RP-181232: Clarifying PDCCH Period Definition,1300,2,Release 13,
+RP-181961: Defining PDCCH-Subframes for NB-IoT UE,1327,1,Release 13,
+RP-191385: Clarification of Length field for DPR,1450,1,Release 13,
+RP-192941: Clarification of PDCCH monitoring when not fully aligned with PDCCH periods,1459,2,Release 13,
+RP-210700: Recommended bit rate query handling at MAC reset,1521,1,Release 14,
+RP-220472: Introduction of carrier specific NRSRP thresholds for NPRACH resource selection,1535,1,Release 14,
+RP-253743: Correction to SPS and preallocated uplink grant for TDD,1597,1,Release 14,
+"NOTE 1:In case a CR has mirror CR(s), the mirror CR(s) are not listed.NOTE 2:The Additional Information column briefly describes the content of a CR in cases where the CR title may not be descriptive enough. If the CR is descriptive enough, then the Additional Information column may be left blank.",,,,

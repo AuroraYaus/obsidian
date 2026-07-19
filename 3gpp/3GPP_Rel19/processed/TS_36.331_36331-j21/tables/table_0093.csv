@@ -1,0 +1,4 @@
+Conditional presence,Explanation
+ThreshHigh,The field is mandatory present if threshHigh is included in the corresponding IE. Otherwise the field is not present and UE shall delete any existing value for this field.
+ThreshLow,The field is mandatory present if threshLow is included. Otherwise the field is not present UE shall delete any existing value for this field.
+Tx,"The field is mandatory present if discTxPoolCommon is included. Otherwise the field is optional present, need OR."

@@ -1,0 +1,5 @@
+ANR-MeasConfig-NB field descriptions
+anr-CarrierListList of NB-IoT carriers to be measured for ANR.
+anr-QualityThresholdIndicates the quality threshold for reporting the CGI of the strongest cell.
+carrierFreqIndexIndex of the carrier frequency in interFreqCarrierFreqList in SystemInformationBlockType5-NB.
+excludedCellListList of exclude-listed neighbouring cells for ANR reporting.

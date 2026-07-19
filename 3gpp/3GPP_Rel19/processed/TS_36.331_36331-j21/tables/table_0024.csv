@@ -1,0 +1,3 @@
+ProximityIndication field descriptions
+"carrierFreqIndicates the RAT and frequency of the CSG member cell(s), for which the proximity indication is sent. For E-UTRA and UTRA frequencies, the UE shall set the ARFCN according to a band it previously considered suitable for accessing (one of) the CSG member cell(s), for which the proximity indication is sent."
+typeUsed to indicate whether the UE is entering or leaving the proximity of CSG member cell(s).

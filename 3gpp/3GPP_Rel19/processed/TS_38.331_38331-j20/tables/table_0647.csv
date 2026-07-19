@@ -1,0 +1,3 @@
+Conditional Presence,Explanation
+RelayLCH-Setup,"This field is mandatory present upon creation of a new logical channel for a Uu Relay RLC channel. It is optionally present, Need M, otherwise."
+RelayLCH-SetupOnly,This field is mandatory present upon creation of a new logical channel for a Uu Relay RLC channel. It is absent otherwise.

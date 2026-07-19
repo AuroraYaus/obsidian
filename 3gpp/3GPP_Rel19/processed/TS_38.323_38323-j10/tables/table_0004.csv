@@ -1,0 +1,7 @@
+Bit,Description
+000,PDCP status report
+001,Interspersed ROHC feedback
+010,EHC feedback
+011,UDC feedback
+100,PDCP SN gap report
+101-111,Reserved

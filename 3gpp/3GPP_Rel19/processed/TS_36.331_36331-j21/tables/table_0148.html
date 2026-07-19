@@ -1,0 +1,86 @@
+<table>
+  <tr>
+    <td>Conditional presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>AI-r8</td>
+    <td>The field is optionally present, need ON, if antennaInfoDedicated-r10 is absent. Otherwise the field is not present</td>
+  </tr>
+  <tr>
+    <td>AI-r10</td>
+    <td>The field is optionally present, need ON, if antennaInfoDedicated is absent. Otherwise the field is not present</td>
+  </tr>
+  <tr>
+    <td>AperiodicSRS</td>
+    <td>If soundingRS-UL-ConfigDedicatedAperiodic-r10 is absent, the field is optional, Need ON. Otherwise the field is not present and the UE shall delete any existing value for this field.</td>
+  </tr>
+  <tr>
+    <td>AperiodicSRSExt</td>
+    <td>If soundingRS-UL-ConfigDedicatedAperiodicUpPTsExt-r13 is absent, the field is optional, Need ON. Otherwise the field is not present and the UE shall delete any existing value for this field.</td>
+  </tr>
+  <tr>
+    <td>AUL</td>
+    <td>The field is optionally present, need ON, if aul-config-r15 is present. Otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>CommonUL</td>
+    <td>The field is mandatory present if ul-Configuration of RadioResourceConfigCommonSCell-r10 is present; otherwise it is optional, need ON.</td>
+  </tr>
+  <tr>
+    <td>CQI-r8</td>
+    <td>The field is optionally present, need ON, if cqi-ReportConfig-r10 is absent. Otherwise the field is not present</td>
+  </tr>
+  <tr>
+    <td>CQI-r10</td>
+    <td>The field is optionally present, need ON, if cqi-ReportConfig is absent. Otherwise the field is not present</td>
+  </tr>
+  <tr>
+    <td>Cross-Carrier-Config</td>
+    <td>The field is optionally present, need ON, if crossCarrierSchedulingConfig-r10 is absent. Otherwise the field is not present</td>
+  </tr>
+  <tr>
+    <td>Cross-Carrier-ConfigUL</td>
+    <td>The field is optionally present, need ON, if crossCarrierSchedulingConfig-r10 and crossCarrierSchedulingConfig-r13 are absent or schedulingCellInfo is set to &#x27;own&#x27;. Otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>NTN</td>
+    <td>The field is optionally present, Need ON, for NTN. Otherwise, the field is not present and the UE shall delete any existing value for this field.</td>
+  </tr>
+  <tr>
+    <td>PeriodicSRS</td>
+    <td>If soundingRS-UL-ConfigDedicated-r10 is absent, the field is optional, Need ON. Otherwise the field is not present and the UE shall delete any existing value for this field.</td>
+  </tr>
+  <tr>
+    <td>PeriodicSRSPCell</td>
+    <td>If soundingRS-UL-ConfigDedicated is absent, the field is optional, Need ON. Otherwise the field is not present and the UE shall delete any existing value for this field.</td>
+  </tr>
+  <tr>
+    <td>PeriodicSRSExt</td>
+    <td>If soundingRS-UL-ConfigDedicatedUpPTsExt-r13 is absent, the field is optional, Need ON. Otherwise the field is not present and the UE shall delete any existing value for this field.</td>
+  </tr>
+  <tr>
+    <td>PUCCH-Format4or5</td>
+    <td>The field is mandatory present with pucch-Format-v1370 set to setup if pucch-ConfigDedicated-r13 is configured and pucch-ConfigDedicated-r13 indicates PUCCH format 4 or PUCCH format 5; otherwise it is not present and the UE shall delete any existing value for this field.</td>
+  </tr>
+  <tr>
+    <td>PUCCH-SCell1</td>
+    <td>The field is optionally present, need OR, for SCell not configured with pucch-configDedicated-r13. Otherwise it is not present.</td>
+  </tr>
+  <tr>
+    <td>PUSCH-SCell</td>
+    <td>The field is optionally present, need ON, if pusch-ConfigDedicatedSCell-r10 and pusch-ConfigDedicated-v1130 are absent. Otherwise the field is not present</td>
+  </tr>
+  <tr>
+    <td>PUSCH-SCell1</td>
+    <td>The field is optionally present, need ON, for SCell not configured with pucch-configDedicated-r13. Otherwise it is not present.</td>
+  </tr>
+  <tr>
+    <td>SCellAdd</td>
+    <td>The field is mandatory present if cellIdentification is present; otherwise it is optional, need ON.</td>
+  </tr>
+  <tr>
+    <td>SRS-Trigger-TypeA</td>
+    <td>The field is mandatory present if typeA-SRS-TPC-PDCCH-Group-r14 is present. Otherwise the field is not present and the UE shall delete any existing value for this field.</td>
+  </tr>
+</table>

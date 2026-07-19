@@ -1,0 +1,2 @@
+Definition,"Received Signal Code Power, the received power on one code measured on the Primary CPICH. The reference point for the RSCP shall be the antenna connector of the UE. If Tx diversity is applied on the Primary CPICH the received code power from each antenna shall be separately measured and summed together in [W] to a total received code power on the Primary CPICH. If receiver diversity is in use by the UE, the reported value shall not be lower than the corresponding CPICH RSCP of any of the individual receive antenna branches."
+Applicable for,RRC_CONNECTED inter-RAT

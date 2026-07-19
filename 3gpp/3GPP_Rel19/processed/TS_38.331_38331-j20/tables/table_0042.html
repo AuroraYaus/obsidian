@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <td>RRCRelease-IEs field descriptions</td>
+  </tr>
+  <tr>
+    <td>cellReselectionPrioritiesDedicated priorities to be used for cell reselection as specified in TS 38.304 [20]. The maximum number of NR carrier frequencies that the network can configure through FreqPriorityListNR and FreqPriorityListDedicatedSlicing together is eight. If the same frequency is configured in both FreqPriorityListNR and FreqPriorityListDedicatedSlicing, the frequency is only counted once.</td>
+  </tr>
+  <tr>
+    <td>cnTypeIndicate that the UE is redirected to EPC or 5GC.</td>
+  </tr>
+  <tr>
+    <td>deprioritisationReqIndicates whether the current frequency or RAT is to be de-prioritised.</td>
+  </tr>
+  <tr>
+    <td>deprioritisationTimerIndicates the value for timer T325 (see clause 5.3.8.3 and TS 38.304 [20]). Value minN corresponds to N minutes.</td>
+  </tr>
+  <tr>
+    <td>srs-PosRRC-InactiveEnhancedContains the SRS for positioning configuration in RRC_INACTIVE state that is applicable for a validity area. The field also contains bandwidth aggregation (see TS 38.214 [19], clause 6.2.1.4.2) and frequency hopping configurations (see TS 38.214 [19], clause 6.2.1.4.1) for SRS for positioning in RRC_INACTIVE state.</td>
+  </tr>
+  <tr>
+    <td>measIdleConfigIndicates measurement configuration to be stored and used by the UE while in RRC_IDLE or RRC_INACTIVE.</td>
+  </tr>
+  <tr>
+    <td>mpsPriorityIndicationIndicates the UE can set the establishment cause to mps-PriorityAccess for a new connection following a redirect to NR or set the resume cause to mps-PriorityAccess for a resume following a redirect to NR. If the target RAT is E-UTRA, see TS 36.331 [10]. The gNB sets the indication only for UEs authorized to receive MPS treatment as indicated by ARP and/or QoS characteristics at the gNB, and it is applicable only for this instance of release with redirection to carrier/RAT included in the redirectedCarrierInfo field in the RRCRelease message.</td>
+  </tr>
+  <tr>
+    <td>multicastConfigInactiveIndicates whether the UE is configured to receive MBS multicast in RRC_INACTIVE. The presence of this field indicates the UE is configured to receive MBS multicast in RRC_INACTIVE; otherwise, the UE is not configured to receive MBS multicast in RRC_INACTIVE.</td>
+  </tr>
+  <tr>
+    <td>noLastCellUpdatePresence of the field indicates that the last used cell for PEI shall not be updated. When the field is absent, the PEI-capable UE shall update its last used cell with the current cell. The UE shall not update its last used cell with the current cell if the AS security is not activated.</td>
+  </tr>
+  <tr>
+    <td>redirectedCarrierInfoIndicates a carrier frequency (downlink for FDD) and is used to redirect the UE to an NR or an inter-RAT carrier frequency, by means of cell selection at transition to RRC_IDLE or RRC_INACTIVE as specified in TS 38.304 [20]. Based on UE capability, the network may include redirectedCarrierInfo in RRCRelease message with suspendConfig if this message is sent in response to an RRCResumeRequest or an RRCResumeRequest1 which is triggered by the NAS layer (see 5.3.1.4 in TS 24.501 [23]). nr-v1900 is used to redirect a UE to an NTN.</td>
+  </tr>
+  <tr>
+    <td>srs-PosRRC-InactiveContains the SRS for positioning configuration in RRC_INACTIVE state.</td>
+  </tr>
+  <tr>
+    <td>suspendConfigIndicates configuration for the RRC_INACTIVE state. The network does not configure suspendConfig when the network redirect the UE to an inter-RAT carrier frequency or if the UE is configured with a DAPS bearer.</td>
+  </tr>
+  <tr>
+    <td>voiceFallbackIndicationIndicates the RRC release is triggered by EPS fallback for IMS voice as specified in TS 23.502 [43].</td>
+  </tr>
+</table>

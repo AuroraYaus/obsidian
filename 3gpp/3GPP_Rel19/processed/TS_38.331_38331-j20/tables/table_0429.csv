@@ -1,0 +1,3 @@
+UplinkDataCompression field descriptions
+"bufferSizeThis field indicates the buffer size applied for UDC as specified in TS 38.323 [5]. Value kbyte2 means 2048 bytes, kbyte4 means 4096 bytes and so on."
+"dictionaryThis field indicates which pre-defined dictionary is used for UDC as specified in TS 38.323 [5]. The value sip-SDP means that UE shall prefill the buffer with standard dictionary for SIP and SDP defined in TS 38.323 [5], and the value operator means that UE shall prefill the buffer with operator-defined dictionary."

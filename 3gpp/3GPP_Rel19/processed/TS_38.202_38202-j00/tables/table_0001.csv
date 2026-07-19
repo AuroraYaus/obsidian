@@ -1,0 +1,6 @@
+"""Transmission Type""",Physical Channel or SRS,AssociatedTransport Channel,Comment
+A,PRACH,RACH,"Note 1, Note 3"
+B,PUCCH,N/A,
+C,PUSCH,UL-SCH,"Note 2, Note 3"
+D,SRS,N/A,
+"Note 1:RACH corresponds to contention based.Note 2:UCI on PUSCH without UL-SCH is possible. Note 3:For SCell, MsgA PRACH and MsgA PUSCH is not supported.",,,

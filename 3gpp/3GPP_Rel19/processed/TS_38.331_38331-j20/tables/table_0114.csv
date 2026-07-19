@@ -1,0 +1,5 @@
+SIB6 field descriptions
+messageIdentifierIdentifies the source and type of ETWS notification.
+serialNumberIdentifies variations of an ETWS notification.
+warningAreaCoordinatesIndicates the geographical area where the ETWS warning message is valid as defined in TS 23.041 [29].
+warningTypeIdentifies the warning type of the ETWS primary notification and provides information on emergency user alert and UE popup.

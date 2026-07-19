@@ -1,0 +1,4 @@
+PHICH duration,Non-MBSFN subframes,,,MBSFN subframes
+,Subframes 1 and 6 in case of frame structure type 2,Subframe with the same duration as the DwPTS duration of a specifial subframe configuration in case of frame structure type 3,All other cases,
+Normal,1,1,1,1
+Extended,2,2,3,2

@@ -1,0 +1,14 @@
+UE Category,Maximum number of DL-SCH transport block bits received within a TTI (Note 1),Maximum number of bits of a DL-SCH transport block received within a TTI,Total number of soft channel bits,Maximum number of supported layers for spatial multiplexing in DL
+Category 1,10296,10296,250368,1
+Category 2,51024,51024,1237248,2
+Category 3,102048,75376,1237248,2
+Category 4,150752,75376,1827072,2
+Category 5,299552,149776,3667200,4
+Category 6,301504,"149776 (4 layers, 64QAM)75376 (2 layers, 64QAM)",3654144,2 or 4
+Category 7,301504,"149776 (4 layers, 64QAM)75376 (2 layers, 64QAM)",3654144,2 or 4
+Category 8,2998560,299856,35982720,8
+Category 9,452256,"149776 (4 layers, 64QAM)75376 (2 layers, 64QAM)",5481216,2 or 4
+Category 10,452256,"149776 (4 layers, 64QAM)75376 (2 layers, 64QAM)",5481216,2 or 4
+Category 11,603008,"149776 (4 layers, 64QAM)195816 (4 layers, 256QAM)75376 (2 layers, 64QAM)97896 (2 layers, 256QAM)",7308288,2 or 4
+Category 12,603008,"149776 (4 layers, 64QAM)195816 (4 layers, 256QAM)75376 (2 layers, 64QAM)97896 (2 layers, 256QAM)",7308288,2 or 4
+"NOTE 1:In carrier aggregation operation, the DL-SCH processing capability can be shared by the UE with that of MCH received from a serving cell. If the total eNB scheduling for DL-SCH and an MCH in one serving cell at a given TTI is larger than the defined processing capability, the prioritization between DL-SCH and MCH is left up to UE implementation.",,,,

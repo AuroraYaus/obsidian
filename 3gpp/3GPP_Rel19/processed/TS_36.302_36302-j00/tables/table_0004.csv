@@ -1,0 +1,39 @@
+"""Reception Type""",Physical Channel(s),MonitoredRNTI,AssociatedTransport Channel
+A,PBCH,N/A,BCH
+B,PDCCH+PDSCH,SI-RNTI,DL-SCH
+B1,PDCCH+PDSCH,SI-RNTI (Note 11),DL-SCH
+C,PDCCH+PDSCH,P-RNTI,PCH
+D,PDCCH+PDSCH,RA-RNTI (Note 3),DL-SCH
+,,Temporary C-RNTI (Note 3) (Note 4),DL-SCH
+,((PDCCH+SPDCCH)/EPDCCH) +(PDSCH/slot/subslot PDSCH),C-RNTI and Semi-Persistent Scheduling C-RNTI,DL-SCH
+,((PDCCH+SPDCCH)/EPDCCH) +(PDSCH+subslot/slot PDSCH)(Note 14),C-RNTI and Semi-Persistent Scheduling C-RNTI,DL-SCH
+D1,((PDCCH+SPDCCH)/EPDCCH) +(PDSCH/subslot/slot PDSCH)(Note 9),C-RNTI,DL-SCH
+,"((PDCCH+SPDCCH)/EPDCCH) +(PDSCH+subslot/slot PDSCH)(Note 9, Note 14)",C-RNTI,DL-SCH
+D2,PDCCH+PDSCH,SC-RNTI,DL-SCH
+,,G-RNTI,DL-SCH
+D3,((PDCCH+SPDCCH) /EPDCCH) +(PDSCH/subslot/slot PDSCH),C-RNTI and Semi-Persistent Scheduling C-RNTI,DL-SCH
+,((PDCCH+SPDCCH)/EPDCCH) +(PDSCH+subslot/slot PDSCH)(Note 14),C-RNTI and Semi-Persistent Scheduling C-RNTI,DL-SCH
+,PDCCH+PDSCH,SC-RNTI,DL-SCH
+,,G-RNTI,DL-SCH
+E,PDCCH/EPDCCH(Note 1),C-RNTI,N/A
+F,PDCCH,Temporary C-RNTI (Note 5),UL-SCH
+,(PDCCH+SPDCCH)/EPDCCH,C-RNTI and Semi-Persistent Scheduling C-RNTI,UL-SCH
+F1,(PDCCH+SPDCCH)/EPDCCH(Note 9),C-RNTI,UL-SCH
+G,PDCCH,TPC-PUCCH-RNTI,N/A
+H,PDCCH,TPC-PUSCH-RNTI,N/A
+I,(PDCCH+SPDCCH)/EPDCCH,Semi-Persistent Scheduling C-RNTI (Note 6),N/A
+J,(PDCCH+SPDCCH)/EPDCCH,Semi-Persistent Scheduling C-RNTI (Note 7),N/A
+K,PDCCH,M-RNTI (Note 8),N/A
+K1,PDCCH,SC-N-RNTI,N/A
+K2,PDCCH,M-RNTI,N/A
+L,PMCH,N/A (Note 8),MCH
+M,PDCCH,eIMTA-RNTI,N/A
+N,PDCCH/EPDCCH,SL-RNTI,SL-SCH
+N1,PDCCH/EPDCCH,SL-V-RNTI,SL-SCH
+N2,PDCCH/EPDCCH,SL Semi-Persistent Scheduling V-RNTI,SL-SCH
+O,PDCCH,CC-RNTI,N/A
+P,PDCCH,SRS-TPC-RNTI (Note 10),N/A
+Q,PDCCH/EPDCCH,UL Semi-Persistent Scheduling V-RNTI,UL-SCH
+Q1,PDCCH/EPDCCH,UL Semi-Persistent Scheduling V-RNTI (Note 12),N/A
+R,PDCCH/EPDCCH,SL Semi-Persistent Scheduling V-RNTI (Note 13),N/A
+"Note 1:PDCCH or EPDCCH is used to convey PDCCH order for Random Access.Note 2:Void.Note 3:RA-RNTI and Temporary C-RNTI are mutually exclusive and only applicable during Random Access procedure.Note 4:Temporary C-RNTI is only applicable when no valid C-RNTI is available.Note 5:Temporary C-RNTI is only applicable during contention-based Random Access procedure.Note 6:Semi-Persistent Scheduling C-RNTI is used for DL Semi-Persistent Scheduling release.Note 7:Semi-Persistent Scheduling C-RNTI is used for UL Semi-Persistent Scheduling release.Note 8:In MBSFN subframes onlyNote 9:DL-SCH reception corresponding to D1, and UL-SCH transmission corresponding to F1, are only applicable to SCells.Note 10:SRS-TPC-RNTI is used to trigger group SRS and TPC for SRS-only SCells. Up to 2 SRS-TPC-RNTI can be concurrently configured.Note 11:For MBMS-dedicated carrier, SI-RNTI may be assigned with two values which may be used in same subframe.Note 12:Used for release of an UL Semi-Persistent Scheduling associated with UL Semi-Persistent Scheduling V-RNTI.Note 13:Used for release of an SL Semi-Persistent Scheduling associated with SL Semi-Persistent Scheduling V-RNTI.Note 14:For a UE indicating the capability of decoding PDSCH and subslot/slot PDSCH assigned with C-RNTI/SPS C-RNTI in the same subframe for a given carrier.",,,

@@ -1,0 +1,6 @@
+DL-PPW-PreConfig field descriptions
+dl-PPW-IDIndicates the pre-configured ID for DL-PRS processing window configuration.
+dl-PPW-PeriodicityAndStartSlotIndicates the periodicity in slots and the offset of the starting slot with respect to SFN #0 slot #0 of the serving cell where the DL-PRS processing window is configured.
+"lengthIndicates the length of DL-PRS processing window in slots. Value 1 indicates length of one slot, value 2 indicates length of two slots and so on."
+priorityIndicates the priority between PDCCH/PDSCH/CSI-RS and PRS as specified in TS 38.214 [19].
+typeIndicates the DL-PRS processing window type as specified in TS 38.214 [19].

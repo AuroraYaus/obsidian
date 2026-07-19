@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <td>SL-LogicalChannelConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>sl-AllowedCarriersIf present, SL MAC SDUs from this logical channel can only be mapped to the sidelink carriers indicated in this list. Otherwise, SL MAC SDUs from this logical channel can be mapped to any configured sidelink carriers. The value 1 corresponds to the frequency of first entry in sl-FreqInfoList broadcast in SIB12, the value 2 corresponds to the frequency of first entry in sl-FreqInfoListSizeExt broadcast in SIB12, the value 3 corresponds to the frequency of second entry in sl-FreqInfoListSizeExt broadcast in SIB12 and so on.</td>
+  </tr>
+  <tr>
+    <td>sl-AllowedCG-ListThis restriction applies only when the SL grant is a configured grant. If present, SL MAC SDUs from this logical channel can only be mapped to the indicated configured grant configuration. If the size of the sequence is zero, then SL MAC SDUs from this logical channel cannot be mapped to any configured grant configurations. If the field is not present, SL MAC SDUs from this logical channel can be mapped to any configured grant configurations. If the field sl-ConfiguredGrantType1Allowed is present, only those sidelink configured grant type 1 configurations indicated in this sequence are allowed for use by this sidelink logical channel; otherwise, this sequence shall not include any sidelink configured grant type 1 configuration. Corresponds to &quot;sl-AllowedCG-List&quot; as specified in TS 38.321 [3].</td>
+  </tr>
+  <tr>
+    <td>sl-AllowedSCS-ListIf present, it indicates the numerology of UL-SCH resources that this sidelink logical channel is mapped to, when checking the SR trigger condition. Corresponds to &#x27; sl-AllowedSCS-List&#x27; in TS 38.321 [3].</td>
+  </tr>
+  <tr>
+    <td>sl-BucketSizeDurationValue in ms. ms5 corresponds to 5 ms, value ms10 corresponds to 10 ms, and so on.</td>
+  </tr>
+  <tr>
+    <td>sl-ChannelAccessPriorityIndicates the Channel Access Priority Class (CAPC), as specified in TS 38.300 [2], to be used on sidelink transmissions for operation with shared spectrum channel access in FR1. The network configures this field only for DRBs.</td>
+  </tr>
+  <tr>
+    <td>sl-ConfiguredGrantType1AllowedIf present and set to true, or if the capability lcp-RestrictionSidelink as specified in TS 38.306 [26] is not indicated, SL MAC SDUs from this sidelink logical channel can be transmitted on a sidelink configured grant type 1. Otherwise, SL MAC SDUs from this logical channel cannot be transmitted on a sidelink configured grant type 1. Corresponds to &#x27;sl-configuredGrantType1Allowed&#x27; in TS 38.321 [3].</td>
+  </tr>
+  <tr>
+    <td>sl-HARQ-FeedbackEnabledNetwork always includes this field. It indicates the HARQ feedback enabled/disabled restriction in LCP for this sidelink logical channel. If set to enabled, the sidelink logical channel will be multiplexed only with a logical channel which enabling the HARQ feedback. If set to disabled, the sidelink logical channel cannot be multiplexed with a logical channel which enabling the HARQ feedback. Corresponds to &#x27;sl-HARQ-FeedbackEnabled&#x27; in TS 38.321 [3]. If this field of at least one sidelink logical channel for the UE is set to enabled, sl-PSFCH-Config should be mandatory present in configuration SL-ResourcePool of at least one of the sidelink resource pools.</td>
+  </tr>
+  <tr>
+    <td>sl-LogicalChannelGroupID of the sidelink logical channel group, as specified in TS 38.321 [3], which the sidelink logical channel belongs to.</td>
+  </tr>
+  <tr>
+    <td>sl-LogicalChannelSR-DelayTimerAppliedIndicates whether to apply the delay timer for SR transmission for this sidelink logical channel. Set to false if logicalChannelSR-DelayTimer is not included in sl-BSR-Config.</td>
+  </tr>
+  <tr>
+    <td>sl-MaxPUSCH-DurationIf present, it indicates the maximum PUSCH duration of UL-SCH resources that this sidelink logical channel is mapped to, when checking the SR trigger condition. Corresponds to &quot;sl-MaxPUSCH-Duration&quot; in TS 38.321 [3].</td>
+  </tr>
+  <tr>
+    <td>sl-PrioritisedBitRateValue in kiloBytes/s. Value kBps0 corresponds to 0 kiloBytes/s, value kBps8 corresponds to 8 kiloBytes/s, value kBps16 corresponds to 16 kiloBytes/s, and so on.</td>
+  </tr>
+  <tr>
+    <td>sl-PrioritySidelink logical channel priority, as specified in TS 38.321 [3].</td>
+  </tr>
+  <tr>
+    <td>sl-SchedulingRequestIdIf present, it indicates the scheduling request configuration applicable for this sidelink logical channel, as specified in TS 38.321 [3].</td>
+  </tr>
+</table>

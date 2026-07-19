@@ -1,0 +1,7 @@
+UL-PTRS-power /,The number of PUSCH layers ()nlayerPUSCH,,
+,1-8,,
+,CodebookTypeUL =‘codebook1’,CodebookTypeUL =‘codebook2’ or ‘codebook3’,CodebookTypeUL =‘codebook4’ and non-codebook based
+00,10log10nlayerPUSCH,10log10LxQp,10log10Qp
+01,10log10nlayerPUSCH,10log10nlayerPUSCH,10log10nlayerPUSCH
+10,Reserved,,
+11,Reserved,,

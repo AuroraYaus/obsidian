@@ -1,0 +1,8 @@
+Field,Bitwidth
+CRI,log2(KsCSI-RS)
+SSBRI,log2(KsSSB)
+RSRP,7
+Differential RSRP,4
+CSI report configuration indicator,log2(KsCSI_config)
+Condition met indicator,1
+"NOTE: is the number of CSI-RS resources in the corresponding resource set,   is the configured number of SS/PBCH blocks in the corresponding resource set for reporting 'ssb-Index-RSRP' or 'ssb-Index-RSRP-Index',  is the number of CSI report configurations associated with a same PUCCH resource configured by firstPUCCHResourceConfig-UEIBR.KsCSI-RSKsSSBKsCSI_config",

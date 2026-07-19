@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td>HandoverPreparationInformation field descriptions</td>
+  </tr>
+  <tr>
+    <td>as-ConfigThe radio resource configuration. Applicable in case of intra-E-UTRA handover, resume or re-establishment. If the target receives an incomplete MeasConfig and/or RadioResourceConfigDedicated in the as-Config, the target eNB may decide to apply the full configuration option based on the ue-ConfigRelease.</td>
+  </tr>
+  <tr>
+    <td>as-ContextLocal E-UTRAN context required by the target eNB.</td>
+  </tr>
+  <tr>
+    <td>makeBeforeBreakReqTo request the target eNB to add the makeBeforeBreak indication in the mobilityControlInfo in case of intra-frequency handover.</td>
+  </tr>
+  <tr>
+    <td>rrm-ConfigLocal E-UTRAN context used depending on the target node&#x27;s implementation, which is mainly used for the RRM purpose. May also be provided at inter-RAT handover from NR.</td>
+  </tr>
+  <tr>
+    <td>sourceRB-ConfigIntra5GCNR radio bearer config used at intra5GC handover, resume or re-establishment, as defined by RadioBearerConfig IE in TS 38.331 [82].</td>
+  </tr>
+  <tr>
+    <td>ue-ConfigReleaseIndicates the RRC protocol release or version applicable for the current UE configuration. This could be used by target eNB to decide if the full configuration approach should be used. If this field is not present, the target assumes that the current UE configuration is based on the release 8 version of RRC protocol. NOTE 1.</td>
+  </tr>
+  <tr>
+    <td>ue-RadioAccessCapabilityInfoFor E-UTRA radio access capabilities, it is up to E-UTRA how the backward compatibility among supportedBandCombinationReduced, supportedBandCombination and supportedBandCombinationAdd is ensured. If supportedBandCombinationReduced and supportedBandCombination/supportedBandCombinationAdd are included into ueCapabilityRAT-Container, it can be assumed that the value of fields, requestedBands, reducedIntNonContCombRequested and requestedCCsXL are consistend with all supported band combination fields. NOTE 2</td>
+  </tr>
+  <tr>
+    <td>ue-SupportedEARFCNIncludes UE supported EARFCN of the handover target E-UTRA cell if the target E-UTRA cell belongs to multiple frequency bands.</td>
+  </tr>
+</table>

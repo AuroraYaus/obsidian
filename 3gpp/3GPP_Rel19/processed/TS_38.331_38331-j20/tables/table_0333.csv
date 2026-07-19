@@ -1,0 +1,3 @@
+QoS-FlowIdentity field descriptions
+qfiIdentifier of the QoS flow for which bit rate query or bit rate control is enabled.
+pdu-SessionIDIdentifier of the PDU session to which the QoS flow identified by the field qfi belongs.

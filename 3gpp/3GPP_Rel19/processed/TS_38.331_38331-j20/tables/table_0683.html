@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>RAN-VisibleParameters field descriptions</td>
+  </tr>
+  <tr>
+    <td>numberOfBufferLevelEntriesThe field contains the maximum number of buffer level entries that can be reported for RAN visible application layer measurements. This field is also used by application layer to calculate the interval of RAN visible buffer level measurement, which is equal to the periodicity of RAN visible application layer measurements reporting divided by numberOfBufferLevelEntries.</td>
+  </tr>
+  <tr>
+    <td>ran-VisiblePeriodicityThe field indicates the periodicity of RAN visible application layer measurements reporting. Value ms120 indicates 120 ms, value ms240 indicates 240 ms and so on. If this field is absent, the periodicity of RAN visible application layer measurements reporting is the same as the reporting periodicity indicated in measConfigAppLayerContainer.</td>
+  </tr>
+  <tr>
+    <td>reportPlayoutDelayForMediaStartupThe field indicates whether the UE shall report Playout Delay for Media Startup for RAN visible application layer measurements.</td>
+  </tr>
+</table>

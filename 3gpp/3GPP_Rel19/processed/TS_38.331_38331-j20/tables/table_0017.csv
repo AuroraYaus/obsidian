@@ -1,0 +1,5 @@
+IAB-IP-AddressAndTraffic-IEs field descriptions
+all-Traffic-IAB-IP-AddressThis field is used to report to IAB-donor-CU the IP address(es) or IPv6 address prefix for all traffic.
+f1-C-Traffic-IP-AddressThis field is used to report to IAB-donor-CU the IP address(es) or IPv6 address prefix for F1-C traffic.
+f1-U-Traffic-IP-AddressThis field is used to report to IAB-donor-CU the IP address(es) or IPv6 address prefix for F1-U traffic.
+non-F1-Traffic-IP-AddressThis field is used to report to IAB-donor-CU the IP address(es) or IPv6 address prefix for non-F1 traffic.

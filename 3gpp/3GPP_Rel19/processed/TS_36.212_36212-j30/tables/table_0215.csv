@@ -1,0 +1,18 @@
+"One Codeword:Codeword 0 enabled,Codeword 1 disabled",,"Two Codewords:Codeword 0 enabled,Codeword 1 enabled",
+Value,Message,Value,Message
+0,"1 layer, port 7, nSCID=0 (OCC=2)",0,"2 layer, port 7-8, nSCID=0 (OCC=2)"
+1,"1 layer, port 7, nSCID=1 (OCC=2)",1,"2 layer, port 7-8, nSCID=1 (OCC=2)"
+2,"1 layer, port 8, nSCID=0 (OCC=2)",2,"2 layer, port 7-8, nSCID=0 (OCC=4)"
+3,"1 layer, port 8, nSCID=1 (OCC=2)",3,"2 layer, port 7-8, nSCID=1 (OCC=4)"
+4,"1 layer, port 7, nSCID=0 (OCC=4)",4,"2 layer, port 11,13, nSCID=0 (OCC=4)"
+5,"1 layer, port 7, nSCID=1 (OCC=4)",5,"2 layer, port 11,13, nSCID=1 (OCC=4)"
+6,"1 layer, port 8, nSCID=0 (OCC=4)",6,"3 layer, port 7-9"
+7,"1 layer, port 8, nSCID=1 (OCC=4)",7,"4 layer, port 7-10"
+8,"1 layer, port 11, nSCID=0 (OCC=4)",8,"5 layer, port 7-11"
+9,"1 layer, port 11, nSCID=1 (OCC=4)",9,"6 layer, port 7-12"
+10,"1 layer, port 13, nSCID=0 (OCC=4)",10,"7 layers, ports 7-13"
+11,"1 layer, port 13, nSCID=1 (OCC=4)",11,"8 layers, ports 7-14"
+12,"2 layers, ports 7-8",12,"3 layers, ports 7, 8,11,  nSCID=0 (OCC=4)"
+13,"3 layers, ports 7-9",13,"4 layers, ports 7, 8,11,13, nSCID=0 (OCC=4)"
+14,"4 layers, ports 7-10",14,Reserved
+15,Reserved,15,Reserved

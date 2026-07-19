@@ -1,0 +1,119 @@
+<table>
+  <tr>
+    <td>ReportConfigEUTRA field descriptions</td>
+  </tr>
+  <tr>
+    <td>a3-Offset/ a6-Offset/ c2-OffsetOffset value to be used in EUTRA measurement report triggering condition for event a3/ a6/ c2, or to be used in conditional reconfiguration trigger condition for cond event a3. The actual value is field value * 0.5 dB.</td>
+  </tr>
+  <tr>
+    <td>a5-Threshold1/ a5-Threshold2Threshold value associated to the selected trigger quantity (e.g. RSRP, RSRQ, SINR) to be used in conditional reconfiguration trigger condition for cond event a5. In the same condeventA5, the network configures the same quantity for the TriggerQuantity of the a5-Threshold1 and for the MeasTriggerQuantity of the a5-Threshold2.</td>
+  </tr>
+  <tr>
+    <td>alternativeTimeToTriggerIndicates the time to trigger applicable for cells specified in altTTT-CellsToAddModList of the associated measurement object, if configured</td>
+  </tr>
+  <tr>
+    <td>aN-ThresholdM/ cN-ThresholdMThreshold to be used in EUTRA measurement report triggering condition for event number aN/ cN. If multiple thresholds are defined for event number aN/ cN, the thresholds are differentiated by M. E-UTRAN configures aN-Threshold1 only for events A1, A2, A4, A5 and a5-Threshold2 only for event A5.</td>
+  </tr>
+  <tr>
+    <td>c1-ReportOnLeave/ c2-ReportOnLeaveIndicates whether or not the UE shall initiate the measurement reporting procedure when the leaving condition is met for a CSI-RS resource in csi-RS-TriggeredList, as specified in 5.5.4.1.</td>
+  </tr>
+  <tr>
+    <td>c2-RefCSI-RSIdentity of the CSI-RS resource from the measCSI-RS-ToAddModList of the associated measObject, to be used as the reference CSI-RS resource in EUTRA measurement report triggering condition for event c2.</td>
+  </tr>
+  <tr>
+    <td>channelOccupancyThresholdRSSI threshold which is used for channel occupancy evaluation.</td>
+  </tr>
+  <tr>
+    <td>coarseLocationReqIf this field is set to true, the UE shall report coarse loaction information if available.</td>
+  </tr>
+  <tr>
+    <td>condEventIdChoice of conditional reconfiguration event triggered criteria.</td>
+  </tr>
+  <tr>
+    <td>condReconfigurationTriggerEUTRAEvent configured for conditional reconfiguration. If this field is configured, the UE shall ignore the configuration of triggerType, reportQuantity, maxReportCells, reportInterval, and reportAmount.</td>
+  </tr>
+  <tr>
+    <td>distanceThreshFromReference1, distanceThreshFromReference2Threshold value associated to the distance from a reference location. Each step represents 50m.</td>
+  </tr>
+  <tr>
+    <td>durationThis field is used for defining the leaving condition T1-2 for conditional HO event condEventT1. Each step represents 100ms.</td>
+  </tr>
+  <tr>
+    <td>eventIdChoice of EUTRA event triggered reporting criteria. EUTRAN may set this field to eventC1 or eventC2 only if measDS-Config is configured in the associated measObject with one or more CSI-RS resources. The eventC1 and eventC2 are not applicable for the eventId if RS-SINR is configured as triggerQuantity or reportQuantity.</td>
+  </tr>
+  <tr>
+    <td>h1-Hysteresis, h2-HysteresisThis parameter is used within the entry and leave condition of an event triggered reporting condition for event H1 and event H2. The actual value is field value. If this field is configured UE shall ignore parameter hysteresis.</td>
+  </tr>
+  <tr>
+    <td>h1-ThresholdOffset, h2-ThresholdOffsetAn offset value to heightThreshRef to obtain the threshold to be used in EUTRA height report triggering condition for event H1 and event H2. The value for h1-ThresholdOffset and h2-ThresholdOffset is expressed in meters such that granularity is 2meters. Value 0 corresponds to offset value 0m, value 1 corresponds to offset value 2m, value 2 correspond to offset value 4m, and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">includeMultiBandInfoIf this field is present, the UE shall acquire and include multi band information in the measurement report.</td>
+  </tr>
+  <tr>
+    <td>maxReportCellsMax number of cells, excluding the serving cell, to include in the measurement report concerning CRS, and max number of CSI-RS resources to include in the measurement report concerning CSI-RS.</td>
+  </tr>
+  <tr>
+    <td>measRSSI-ReportConfigIf this field is present, the UE shall perform measurement reporting for RSSI and channel occupancy and ignore the triggerQuantity, reportQuantity and maxReportCells fields. E-UTRAN sets this field to true only when setting triggerType to periodical and purpose to reportStrongestCells.</td>
+  </tr>
+  <tr>
+    <td>numberOfTriggeringCellsIndicates the number of cells detected that are required to fulfill an event for a measurement report to be triggered. This field is set only for the events concerning neighbor cells, i.e. eventA3, eventA4, eventA5.</td>
+  </tr>
+  <tr>
+    <td>referenceLocation1, referenceLocation2For eventD1 or condEventD1, the referenceLocation1 is associated to serving cell. For eventD1, the referenceLocation2 is associated to neighbour cell. For condEventD1, the referenceLocation2 is associated to candidate target cell.</td>
+  </tr>
+  <tr>
+    <td>reportAmountNumber of measurement reports applicable for triggerType event as well as for triggerType periodical. In case purpose is set to reportCGI or reportSSTD-Meas is set to true, only value 1 applies.</td>
+  </tr>
+  <tr>
+    <td>reportCRS-MeasIf this field is set to TRUE the UE shall include rsrp, rsrq together with csi-rsrp in the measurement report, if possible.</td>
+  </tr>
+  <tr>
+    <td>reportOnLeave/ a6-ReportOnLeave/ a4-a5-ReportOnLeaveIndicates whether or not the UE shall initiate the measurement reporting procedure when the leaving condition is met for a cell in cellsTriggeredList, or when the leaving condition is met for eventD1 or eventD2, as specified in 5.5.4.1.</td>
+  </tr>
+  <tr>
+    <td>reportQuantityThe quantities to be included in the measurement report. The value both means that both the rsrp and rsrq quantities are to be included in the measurement report. The value rsrpANDsinr and rsrqANDsinr mean that both rsrp and rs-sinr quantities, and both rsrq and rs-sinr quantities are to be included respectively in the measurement report. The value all means that rsrp, rsrq and rs-sinr are to be included in the measurement report. In case triggerQuantityCSI-RS is set to TRUE, only value sameAsTriggerQuantity applies. If reportQuantity-v1310 is configured, the UE only considers this extension (and ignores reportQuantity i.e. without suffix).</td>
+  </tr>
+  <tr>
+    <td>reportSSTD-MeasIf this field is set to true, the UE shall measure SSTD between the PCell and the PSCell as specified in TS 36.214 [48] and ignore the triggerQuantity, reportQuantity and maxReportCells fields. E-UTRAN sets this field to true only when setting triggerType to periodical and purpose to reportStrongestCells.</td>
+  </tr>
+  <tr>
+    <td>reportStrongestCSI-RSsIndicates that periodical CSI-RS measurement report is performed. EUTRAN configures value TRUE only if measDS-Config is configured in the associated measObject with one or more CSI-RS resources.</td>
+  </tr>
+  <tr>
+    <td>si-RequestForHOThe field applies to the reportCGI functionality, and when the field is included, the UE is allowed to use autonomous gaps in acquiring system information from the neighbour cell, applies a different value for T321, and includes different fields in the measurement report.</td>
+  </tr>
+  <tr>
+    <td>ThresholdEUTRAFor RSRP: RSRP based threshold for event evaluation. The actual value is field value – 140 dBm.For RSRQ: RSRQ based threshold for event evaluation. The actual value is (field value – 40)/2 dB.For RS-SINR: RS-SINR based threshold for event evaluation. The actual value is (field value -46)/2 dB.For CSI-RSRP: CSI-RSRP based threshold for event evaluation. The actual value is field value – 140 dBm.EUTRAN configures the same threshold quantity for all the thresholds of an event.</td>
+  </tr>
+  <tr>
+    <td>timeToTriggerTime during which specific criteria for the event needs to be met in order to trigger a measurement report, or to execute the conditional reconfiguration evaluation.</td>
+  </tr>
+  <tr>
+    <td>triggerQuantityThe quantity used to evaluate the triggering condition for the event concerning CRS. EUTRAN sets the value according to the quantity of the ThresholdEUTRA for this event. The values rsrp, rsrq and sinr correspond to Reference Signal Received Power (RSRP), Reference Signal Received Quality (RSRQ) and Reference Signal Signal to Noise and Interference Ratio (RS-SINR), see TS 36.214 [48]. If triggerQuantity-v1310 is configured, the UE only considers this extension (and ignores triggerQuantity i.e. without suffix).</td>
+  </tr>
+  <tr>
+    <td>triggerQuantityCSI-RSThe quantity used to evaluate the triggering condition for the event concerning CSI-RS. The value TRUE corresponds to CSI Reference Signal Received Power (CSI-RSRP), see TS 36.214 [48]. E-UTRAN configures value TRUE if and only if the measurement reporting event concerns CSI-RS.</td>
+  </tr>
+  <tr>
+    <td>ue-RxTxTimeDiffPeriodicalIf this field is present, the UE shall perform UE Rx-Tx time difference measurement reporting and ignore the fields triggerQuantity, reportQuantity and maxReportCells. If the field is present, the only applicable values for the corresponding triggerType and purpose are periodical and reportStrongestCells respectively.</td>
+  </tr>
+  <tr>
+    <td>ue-RxTxTimeDiffPeriodicalTDDIf this field is set to TRUE, the UE shall perform UE Rx-Tx time difference measurement reporting according to EUTRAN TDD UE Rx-Tx time difference report mapping in TS 36.133 [16]. If the field is configured, the ue-RxTxTimeDiffPeriodical shall be configured. The field is applicable for TDD only.</td>
+  </tr>
+  <tr>
+    <td>useAllowedCellListIndicates whether only the cells included in the list of allow-listed cells of the associated measObject are applicable as specified in 5.5.4.1. E-UTRAN does not configure the field for events A1, A2, C1, C2, D1 and D2.</td>
+  </tr>
+  <tr>
+    <td>usePSCellIf this field is set to TRUE the UE shall use the PSCell instead of the PCell. E-UTRAN configures value TRUE only for events A3 and A5, see 5.5.4.4 and 5.5.4.6.</td>
+  </tr>
+  <tr>
+    <td>useT312If value TRUE is configured, the UE shall use the timer T312 with the value t312 as specified in the corresponding measObject. If the corresponding measObject does not include the timer T312 then the timer T312 is considered as not configured. E-UTRAN configures value TRUE only if triggerType is set to event.</td>
+  </tr>
+  <tr>
+    <td>ul-DelayConfigIf the field is present, E-UTRAN configures UL PDCP Packet Delay per QCI measurement and the UE shall ignore the fields triggerQuantity and maxReportCells. The applicable values for the corresponding triggerType and reportInterval are periodical and (one of the) ms1024, ms2048, ms5120 or ms10240 respectively.The reportInterval indicates the periodicity for performing and reporting of UL PDCP Delay per QCI measurement as specified in TS 36.314 [71].</td>
+  </tr>
+  <tr>
+    <td colspan="2">ul-DelayValueConfigIf the field is present, the UE shall perform the UL PDCP Packet Delay measurement per DRB as specified in TS 38.314 [103] and the UE shall ignore the fields reportQuantityCell and maxReportCells. The applicable values for the corresponding reportInterval are (one of the) { ms120, ms240, ms480, ms640, ms1024, ms2048, ms5120, ms10240, min1, min6, min12, min30, min60}. The reportInterval indicates the periodicity for performing and reporting of UL PDCP Packet Delay per DRB measurement as specified in TS 38.314 [103].</td>
+  </tr>
+</table>

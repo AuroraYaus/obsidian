@@ -1,0 +1,8 @@
+CLI-RSSI-MeasResource field descriptions
+cli-RSSI-MeasResourceIdIdentifies a CLI-RSSI measurement resource.
+"cli-RSSI-PeriodicityAndOffsetIndicates the periodicity and slot offset for this CLI-RSSI-MeasResource, with the same value range as CSI-ResourcePeriodicityAndOffset."
+nrofPRBsIndicates the allowed size of the BW for L1 CLI-RSSI measurement.
+nrofSymbolsIndicates the number of symbols for L1 CLI-RSSI measurement within a slot.
+qcl-InfoPeriodic-CLI-RSSI-MeasResourceIndicates a reference to one TCI-State in TCI-States for providing the QCL source and QCL type for a target periodic CLI-RSSI-MeasResource
+startPRBIndicates the starting PRB index of the measurement bandwidth.
+startSymbolIndicates the starting symbol of the CLI-RSSI-MeasurementResource within a slot

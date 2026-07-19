@@ -1,0 +1,3 @@
+RRCConnectionReconfiguration-NB field descriptions
+dedicatedInfoNASListThis field is used to transfer UE specific NAS layer information between the network and the UE. The RRC layer is transparent for each PDU in the list.
+fullConfigIndicates the full configuration option is applicable for the RRC Connection Reconfiguration message.

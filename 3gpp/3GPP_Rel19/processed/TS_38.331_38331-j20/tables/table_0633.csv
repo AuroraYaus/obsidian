@@ -1,0 +1,3 @@
+UAC-BarringPerPLMN-List field descriptions
+uac-ACBarringListTypeAccess control parameters for each access category valid only for a specific PLMN or SNPN. UE behaviour upon absence of this field is specified in clause 5.3.14.2.
+plmn-IdentityIndexIndex of the PLMN or SNPN across the plmn-IdentityInfoList and npn-IdentityInfoList fields included in SIB1.

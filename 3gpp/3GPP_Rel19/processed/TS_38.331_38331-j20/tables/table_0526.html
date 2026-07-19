@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <td>CondTriggerConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>a3-OffsetOffset value(s) to be used in NR conditional reconfiguration or CLTM triggering condition for cond event a3. The actual value is field value * 0.5 dB.</td>
+  </tr>
+  <tr>
+    <td>a4-ThresholdThreshold value associated to the selected trigger quantity (e.g. RSRP, RSRQ, SINR) per RS Type (e.g. SS/PBCH block, CSI-RS) to be used in NR conditional reconfiguration triggering condition for cond event a4.</td>
+  </tr>
+  <tr>
+    <td>a5-Threshold1/ a5-Threshold2Threshold value associated to the selected trigger quantity (e.g. RSRP, RSRQ, SINR) per RS Type (e.g. SS/PBCH block, CSI-RS) to be used in NR conditional reconfiguration or CLTM triggering condition for cond event a5. In the same condeventA5, the network configures the same quantity for the MeasTriggerQuantity of the a5-Threshold1 and for the MeasTriggerQuantity of the a5-Threshold2.</td>
+  </tr>
+  <tr>
+    <td>condEventIdChoice of NR conditional reconfiguration or CLTM event triggered criteria.</td>
+  </tr>
+  <tr>
+    <td>distanceThreshFromReference1, distanceThreshFromReference2Distance from a fixed reference location configured with referenceLocation1 or referenceLocation2 for condEventD1. Distance from a moving reference location determined by the UE based on the serving cell movingReferenceLocation broadcast in SIB19 or referenceLocation and the corresponding epoch time and satellite ephemeris configured within the MeasObjectNR associated to the event for condEventD2. Each step represents 50m.</td>
+  </tr>
+  <tr>
+    <td>durationThis field is used for defining the leaving condition T1-2 for conditional HO event condEventT1. Each step represents 100ms.</td>
+  </tr>
+  <tr>
+    <td>nesEventIndicates the event is a NES-specific CHO event and the event is only considered to be satisfied if indication from lower layers is received indicating the applicability of NES-specific CHO event and the related entry condition(s) is fulfilled. This field can only be configured for condEventA3, condEventA4 or condEventA5. This field cannot be configured for CPAC.</td>
+  </tr>
+  <tr>
+    <td>referenceLocation1, referenceLocation2The referenceLocation1 is associated to serving cell and referenceLocation2 is associated to candidate target cell.</td>
+  </tr>
+  <tr>
+    <td>t1-ThresholdThe field counts the number of UTC seconds in 10 ms units since 00:00:00 on Gregorian calendar date 1 January, 1900 (midnight between Sunday, December 31, 1899 and Monday, January 1, 1900).</td>
+  </tr>
+  <tr>
+    <td>timeToTriggerTime during which specific criteria for the event needs to be met in order to execute the conditional reconfiguration evaluation.</td>
+  </tr>
+</table>

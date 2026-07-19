@@ -1,0 +1,8 @@
+PDSCH-ConfigDCI-1-3 field descriptions
+"enabledDefaultBeamForMultiCellSchedulingThis field indicates whether default beam selection for DCI format 1_3 scheduled PDSCH or aperiodic CSI-RS is enabled (see TS 38.214 [19], clause 5.1.5 and clause 5.2.1.5)."
+"harq-ProcessNumberSizeDCI-1-3Configure the number of bits for the field ""HARQ process number"" in DCI format 1_3 (see TS 38.212 [17], clause 7.3.1). Only one of this field and harq-ProcessNumberSizeDCI-1-3-Ext is configured by network."
+"harq-ProcessNumberSizeDCI-1-3-ExtConfigure the number of bits for the field ""HARQ process number"" in DCI format 1_3 in TN (see TS 38.212 [17], clause 7.3.1). This field can only be configured when the maximum number of layers configured for PDSCH is no more than 4. Only one of this field and harq-ProcessNumberSizeDCI-1-3 is configured by network."
+"numberOfBitsForRV-DCI-1-3Configures the number of bits for ""Redundancy version"" in the DCI format 1_3 (see TS 38.212 [17], clause 7.3.1 and TS 38.214 [19], clause 5.1.2.1)."
+"rbg-SizeDCI-1-3Selection among config 1, config 2 and config 3 for RBG size for PDSCH scheduled by DCI format 1_3. The UE ignores this field if resourceAllocationDCI-1-3 is set to resourceAllocationType1. (see TS 38.214 [19], clause 5.1.2.2.1)."
+"resourceAllocationDCI-1-3Configuration of resource allocation type 0 and resource allocation type 1 for DCI format 1_3 (see TS 38.214 [19], clause 5.1.2.2)."
+"resourceAllocationType1GranularityDCI-1-3Configure the scheduling granularity applicable for both the starting point and length indication for resource allocation type 1 in DCI format 1_3. If this field is absent, the granularity is 1 PRB (see TS 38.214 [19], clause 5.1.2.2.2)."

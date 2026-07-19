@@ -1,0 +1,16 @@
+MobilityFromEUTRACommand field descriptions
+bandIndicatorIndicates how to interpret the ARFCN of the BCCH carrier.
+carrierFreqcontains the carrier frequency of the target GERAN cell.
+cs-FallbackIndicatorValue true indicates that the CS fallback procedure to UTRAN or GERAN is triggered.
+messageContCDMA2000-1XRTTThis field contains a message specified in CDMA2000 1xRTT standard that either tells the UE to move to specific 1xRTT target cell(s) or indicates a failure to allocate resources for the enhanced CS fallback to CDMA2000 1xRTT.
+messageContCDMA2000-HRPDThis field contains a message specified in CDMA2000 HRPD standard that either tells the UE to move to specific HRPD target cell(s) or indicates a failure to allocate resources for the handover to CDMA2000 HRPD.
+mobilityCDMA2000-HRPDThis field indicates whether or not mobility to CDMA2000 HRPD is to be performed by the UE and it also indicates the type of mobility to CDMA2000 HRPD that is to be performed; If this field is not present the UE shall perform only the enhanced CS fallback to CDMA2000 1xRTT.
+"nas-SecurityParamFromEUTRAIf the targetRAT-Type is set to ""eutra"" and the source CN is 5GC, this field is used to deliver the key synchronisation and key freshness for the Key freshness for the 5GS to EPS handovers as specified in TS 33.501 [86] and the content of the parameter is defined in TS 24.501 [95]. Otherwise, this field is used to deliver the key synchronisation and Key freshness for the E-UTRAN to UTRAN handovers as specified in TS 33.401 [32] and the content of the parameter is defined in TS24.301 [35]."
+networkControlOrderParameter NETWORK_CONTROL_ORDER in TS 44.060 [36].
+"purposeIndicates which type of mobility procedure the UE is requested to perform. EUTRAN always applies value e-CSFB in case of enhanced CS fallback to CDMA2000 (e.g. also when that procedure results in handover to CDMA2000 1XRTT only, in handover to CDMA2000 HRPD only or in redirection to CDMA2000 HRPD only),"
+redirectCarrierCDMA2000-HRPDThe redirectCarrierCDMA2000-HRPD indicates a CDMA2000 carrier frequency and is used to redirect the UE to a HRPD carrier frequency.
+"smtcThe SSB periodicity/offset/duration configuration of target cell for inter-RAT handover to NR. It is based on timing reference of EUTRA PCell. If the field is absent, the UE uses the SMTC in the measObjectNR having the same SSB frequency and subcarrier spacing, as configured before the reception of the RRC message."
+"SystemInfoListGERANIf purpose = CellChangeOrder and if the field is not present, the UE has to acquire SI/PSI from the GERAN cell."
+"t304Timer T304 as described in clause 7.3. Value ms100 corresponds with 100 ms, ms200 corresponds with 200 ms and so on. EUTRAN includes extended value ms10000-v1310 only when UE supports CE."
+targetRAT-TypeIndicates the target RAT type.
+"targetRAT-MessageContainerThe field contains a message specified in another standard, as indicated by the targetRAT-Type, and carries information about the target cell identifier(s) and radio parameters relevant for the target radio access technology. NOTE 1.A complete message is included, as specified in the other standard."

@@ -1,0 +1,3 @@
+Counter,Reset,Incremented,When reaching max value
+N310,"Upon reception of ""in-sync"" indication from lower layers;upon receiving RRCReconfiguration with reconfigurationWithSync for that cell group;upon initiating the connection re-establishment procedure.","Upon reception of ""out-of-sync"" from lower layer while the timer T310 is stopped.",Start timer T310
+N311,"Upon reception of ""out-of-sync"" indication from lower layers;upon receiving RRCReconfiguration with reconfigurationWithSync for that cell group;upon initiating the connection re-establishment procedure.","Upon reception of the ""in-sync"" from lower layer while the timer T310 is running.",Stop the timer T310.

@@ -1,0 +1,58 @@
+<table>
+  <tr>
+    <td>Definitions for parameters</td>
+    <td>Per</td>
+    <td>M</td>
+    <td>FDD-TDDDIFF</td>
+    <td>FR1-FR2DIFF</td>
+  </tr>
+  <tr>
+    <td>rx-Sidelink-r16Indicates whether the UE supports sidelink reception on the band.For NR sidelink, this field is only applicable if the UE supports sl-Reception-r16 on the band.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>rx-sidelinkPSFCH-r17Indicates whether UE can receive PSFCH with HARQ-ACK information in NR sidelink and also the maximum number of PSFCH(s) resources N in a slot. If UE reports more than one of psfch-FormatZeroSidelink-r16, rx-sidelinkPSFCH-r17and rx-IUC-Scheme2-Mode2Sidelink-r17, the reported value N is the total number and the same among psfch-FormatZeroSidelink-r16, rx-sidelinkPSFCH-r17 and rx-IUC-Scheme2-Mode2Sidelink-r17.UE supporting this feature shall support receiving NR sidelink of S-SSB and at least one of sl-TransmissionMode1-r16 or sl-TransmissionMode2-r16 or sl-TransmissionMode2-RandomResourceSelection-r17 or sl-TransmissionMode2-PartialSensing-r17.NOTE:Configuration by NR Uu is not required to be supported in a band indicated with only the PC5 interface in TS 38.101-1 [2] Table 5.2E.1-1.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-CrossCarrierScheduling-r16Indicates whether the UE supports monitoring DCI format 3_0 on a different carrier from sidelink for NR sidelink dynamic scheduling and configured grant type 2. If the UE indicates support for sl-TransmissionMode1-r16 in a band indicated with only the PC5 interface in Table 5.2E.1-1 of TS 38.101-1 [2], the UE shall indicate that sl-CrossCarrierScheduling-r16 is supported for a band combination with that band.For NR sidelink, this field is only applicable if the UE supports sl-TransmissionMode1-r16 on the band.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>sl-TransmissionMode2-PartialSensing-r17Indicates transmitting NR sidelink mode 2 with partial sensing is supported. If supported, this parameter indicates the support of the capabilities and includes the parameters as follows:-UE can transmit PSCCH/PSSCH using NR sidelink mode 2 with partial sensing configured by NR Uu or preconfiguration.-harq-TxProcessModeTwoSidelink-r17, which indicates the number of sidelink HARQ processes across all links that the UE supports for NR PSSCH transmission using mode 2. Value n8 corresponds to 8, n16 corresponds to 16.-UE can transmit PSSCH according to the normal 64QAM MCS table.-UE supports PT-RS transmission in FR2.-UE can perform periodic-based partial sensing and resource allocation operation.-UE can perform contiguous partial sensing and resource allocation operation.-scs-CP-PatternTxSidelinkModeTwo-r17, the subcarrier spacing with normal CP and the corresponding bandwidth that the UE supports for NR sidelink communication transmission using NR sidelink mode 2 with partial sensing. Value scs-15kHz corresponds to 15kHz, scs-30kHz corresponds to 30kHz, and so on. For FR1, the bits in scs-XXkHz starting from the leading / leftmost bit indicate 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90 and 100MHz. For FR2, the bits in scs-XXkHz starting from the leading / leftmost bit indicate 50, 100 and 200MHz. This capability is not required to be signalled in a band indicated with only the PC5 interface in TS 38.101-1 [2], Table 5.2E.1-1. Otherwise, it is mandatory. For a band indicated with only the PC5 interface in TS 38.101-1 [2], Table 5.2E.1-1, UE supports transmission using 30 kHz subcarrier spacing with normal CP in FR1, 120 kHz subcarrier spacing with normal CP in FR2.-extendedCP-Mode2PartialSensing-r17, which indicates whether the UE supports 60 kHz subcarrier spacing with extended CP length for NR sidelink communication transmission using mode 2 with partial sensing.-UE supports 14-symbol SL slot with all DMRS patterns corresponding to the number of PSSCH symbols = {12, 9} for slots with and without PSFCH. If UE signals support of extended CP, support 12-symbol SL slot with all DMRS patterns corresponding to the number of PSSCH symbols = {10,7} for slots with and without PSFCH.-dl-openLoopPC-Sidelink-r17, which indicates whether UE supports DL pathloss based open loop power control when mode 2 is configured by NR Uu, if the band is indicated with only the PC5 interface in TS 38.101-1 [2], Table 5.2E.1-1. Otherwise, it is mandatory.UE supporting this feature shall support receiving NR sidelink of S-SSB or indicate support of sync-Sidelink-r16 or sync-Sidelink-v1710.If a band combination is included in supportedBandCombinationListSL-NonRelayDiscovery-r17, supportedBandCombinationListSL-RelayDiscovery-r17 or supportedBandCombinationListSL-U2U-RelayDiscovery-r18, it indicates whether transmitting NR sidelink mode 2 with partial sensing is supported for non-relay/relay NR sidelink discovery.NOTE 1:Configuration by NR Uu is not required to be supported in a band indicated with only the PC5 interface in TS 38.101-1 [2] Table 5.2E.1-1.NOTE 2:If UE reports more than one feature of sl-TransmissionMode2-r16, sl-TransmissionMode2-PartialSensing-r17 and sl-TransmissionMode2-RandomResourceSelection-r17, the reported value of harq-TxProcessModeTwoSidelink in each FG is the total number of SL processes and the same among those FGs.NOTE 3:Random selection in the exceptional pool is supported.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>tx-IUC-Scheme1-Mode2Sidelink-r17Indicates whether UE supports transmission of inter-UE coordination scheme 1 for NR sidelink for mode 2. If supported, this parameter indicates the support of the capabilities as follows:-UE can transmit inter-UE coordination information of preferred resource set/non-preferred resource set in NR sidelink mode 2.-UE can receive an explicit request for inter-UE coordination information of both preferred resource set and non-preferred resource set.UE supporting this feature shall support receiving NR sidelink of S-SSB or indicate support of sync-Sidelink-r16 or sync-Sidelink-v1710.NOTE:Configuration by NR Uu is not required to be supported in a band indicated with only the PC5 interface in TS 38.101-1 [2] Table 5.2E.1-1.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>tx-IUC-Scheme2-Mode2Sidelink-r17Indicates whether UE supports transmission of inter-UE coordination scheme 2 for NR sidelink for mode 2. If supported, this parameter indicates the support of the capabilities and includes the parameters as follows:-UE can transmit inter-UE coordination information of presence of expected/potential resource conflict in NR sidelink mode 2.-UE can transmit up to M PSFCH(s) resources in a slot where M takes the values of {4, 8, 16}If UE reports both psfch-FormatZeroSidelink-r16 and tx-IUC-Scheme2-Mode2Sidelink-r17, the reported value M is the total number and the same in both psfch-FormatZeroSidelink-r16 and tx-IUC-Scheme2-Mode2Sidelink-r17.UE supporting this feature shall indicate support of rx-IUC-Scheme2-Mode2Sidelink-r17 and indicate support of at least one among sync-Sidelink-r16, sync-Sidelink-v1710 and receiving NR sidelink of S-SSB.NOTE:Configuration by NR Uu is not required to be supported in a band indicated with only the PC5 interface in TS 38.101-1 [2] Table 5.2E.1-1.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>tx-Sidelink-r16Indicates whether the UE supports sidelink transmission on the band.For NR sidelink, this field is only applicable if the UE supports at least one of sl-TransmissionMode1-r16 and sl-TransmissionMode2-r16 on the band.</td>
+    <td>Band</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+</table>

@@ -1,0 +1,9 @@
+Field,Bit width,
+,1 transport block,2 transport blocks
+AUL C-RNTI,16,16
+HARQ process number,4,4
+Redundancy version,2,2
+New data indicator,1,2
+PUSCH starting symbol,1,1
+PUSCH ending symbol,1,1
+Channel Occupancy Time (COT) sharing indication,1,1

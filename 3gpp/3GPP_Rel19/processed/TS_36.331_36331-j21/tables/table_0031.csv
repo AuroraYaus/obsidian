@@ -1,0 +1,6 @@
+RRCConnectionReject field descriptions
+deprioritisationReqIndicates whether the current frequency or RAT is to be de-prioritised. The UE shall be able to store a depriotisation request for up to 8 frequencies (applicable when receiving another frequency specific deprioritisation request before T325 expiry).
+deprioritisationTimerIndicates the period for which either the current carrier frequency or E-UTRA is deprioritised. Value minN corresponds to N minutes.
+extendedWaitTimeValue in seconds for the wait time for Delay Tolerant access requests.
+"rrc-SuspendIndicationIf present, this field indicates that the UE should remain suspended and not release its stored context."
+waitTimeWait time value in seconds.

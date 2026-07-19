@@ -1,0 +1,167 @@
+Change history,,,,,,,
+Date,TSG #,TSG Doc.,CR,Rev,Subject/Comment,Old,New
+2006-09,,,,,Skeleton,,0.0.0
+2006-10,,,,,Updated skeleton,0.0.0,0.0.1
+2006-10,,,,,Endorsed skeleton,0.0.1,0.1.0
+2006-11,,,,,"Added TC. Added Broadcast, Paging and MBMS transport channels in Table 4.2-1.",0.1.0,0.1.1
+2006-11,,,,,Endorsed v 0.2.0,0.1.1,0.2.0
+2006-12,,,,,Added CC. Added type of coding for each transport channel or control information.,0.2.0,0.2.1
+2007-01,,,,,Editor's version,0.2.1,0.2.2
+2007-01,,,,,Endorsed v 0.3.0,0.2.2,0.3.0
+2007-02,,,,,Added QPP turbo Interleaver description.,0.3.0,0.3.1
+2007-02,,,,,Editor's version,0.3.1,0.3.2
+2007-02,,,,,Endorsed v 0.4.0,0.3.2,0.4.0
+2007-02,,,,,"Added CRC details for PDSCH, PDCCH and PUSCH. Added QPP turbo-interleaver parameters. Set Z to 6144. Added details on code block segmentation.",0.4.0,0.4.1
+2007-02,,,,,Editor's version,0.4.1,0.4.2
+2007-03,RAN#35,RP-070170,,,For information at RAN#35,0.4.2,1.0.0
+2007-03,,,,,Editor's version,1.0.0,1.0.1
+2007-03,,,,,Editor's version,1.0.1,1.1.0
+2007-05,,,,,Editor's version,1.1.0,1.1.1
+2007-05,,,,,Editor's version,1.1.1,1.1.2
+2007-05,,,,,Editor's version,1.1.2,1.2.0
+2007-06,,,,,Added circular buffer rate matching for PDSCH and PUSCH. Miscellaneous changes.,1.2.0,1.2.1
+2007-06,,,,,Editor's version,1.2.1,1.2.2
+2007-07,,,,,Editor's version,1.2.2,1.2.3
+2007-07,,,,,Endorsed by email following decision taken at RAN1#49b,1.2.3,1.3.0
+2007-08,,,,,Editor's version including decision from RAN1#49bis.,1.3.0,1.3.1
+2007-08,,,,,Editor's version,1.3.1,1.3.2
+2007-08,,,,,Editor's version,1.3.2,1.4.0
+2007-09,,,,,Editor's version with decisions from RAN1#50,"1,4.0","1,4,1"
+2007-09,,,,,Editor's version,1.4.1,1.4.2
+10/09/07,RAN#37,RP-070730,-,-,For approval at RAN#37,1.4.2,2.0.0
+12/09/07,RAN_37,RP-070730,-,-,Approved version,2.0.0,8.0.0
+28/11/07,RAN_38,RP-070949,0001,-,Update of 36.212,8.0.0,8.1.0
+05/03/08,RAN_39,RP-080145,0002,-,Update to 36.212 incorporating decisions from RAN1#51bis and RAN1#52,8.1.0,8.2.0
+28/05/08,RAN_40,RP-080433,0003,-,Joint coding of CQI and ACK on PUCCH,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0004,1,ACK insertion into PUSCH,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0005,1,Introduction of format 1C,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0006,1,Miscellaneous fixes to 36.212,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0008,1,On multiplexing scheme for indicators,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0009,1,On the soft buffer split of MIMO and TDD,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0010,-,Resource assignment field for distributed VRB,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0011,-,Clarifying the use of the different DCI formats,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0012,1,Clarifying the value of NL,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0013,-,Payload size for DCI formats 3 and 3A,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0014,-,Coding of ACK on PUSCH,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0015,1,Coding of RI on PUSCH and mapping,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0016,-,CRC for control information on PUSCH,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0017,-,Introduction of Downlink Assignment Index,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0018,-,Coding of CQI/PMI on PUSCH coming from PUCCH,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0019,-,Simultaneous transmission of aperiodic CQI and UL control,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0020,-,Encoding of antenna indicator on DCI format 0,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0021,-,PDCCH coverage in narrow bandwidths,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080433,0022,-,Closed-loop and open-loop spatial multiplexing,8.2.0,8.3.0
+28/05/08,RAN_40,RP-080457,0023,-,Formula for linkage between PUSCH MCS and amount of resources used for control,8.2.0,8.3.0
+09/09/08,RAN_41,RP-080669,0026,-,Correction to PUSCH Channel Interleaver,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0028,-,Correction of mapping of ACK/NAK to binary bit values,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0029,-,"Correction to bit collection, selection and transmission",8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0030,-,Padding one bit to DCI format 1 when format 1 and format 0/1A have the same size,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0031,-,Modification of M_limit,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0032,-,Definition of Formats 2 and 2A,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0033,2,Corrections to DCI formats,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0035,1,Format 1B confirmation flag,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0036,-,Corrections to Rank information scrambling in Uplink Shared Channel,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0037,2,Clarification of TPC commands signaled in DCI formats 3/3A,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0038,-,Clarification on UE transmit antenna selection mask,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0039,1,Linking of control resources in PUSCH to data MCS,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0041,-,Definition of Bit Mapping for DCI signalling,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0042,1,Clarification on resource allocation in DCI format 1/2/2A,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0043,-,DCI Format 1A changes needed for scheduling Broadcast Control,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0044,-,DCI format1C,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0045,-,Miscellaneous corrections,8.3.0,8.4.0
+11/09/08,RAN_41,RP-080736,0046,1,Correction on downlink multi-user MIMO,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0047,-,Corrections to DL DCI Formats In case of Ambiguous Payload Sizes,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0048,-,CR for RE provisioning for the control information in case of CQI-only transmission on PUSCH,8.3.0,8.4.0
+09/09/08,RAN_41,RP-080669,0091,2,Coding and multiplexing of multiple ACK/NACK in PUSCH,8.3.0,8.4.0
+03/12/08,RAN_42,RP-080983,0050,2,Clarification of input bits corresponding to 2-bit HARQ-ACK and 2-bit RI,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0053,-,Editorial corrections to 36.212,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0055,-,Miscellaneous Corrections,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0057,-,Clarification of mapping of information bits,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0058,-,"Completion of 36.212 CR47 (R1-083421) for ""new"" DCI Formats",8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0059,-,Change for determining DCI format 1A TBS table column indicator for broadcast control,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0061,2,Defining DCI format 1A for downlink data arrival,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0063,1,ACK/NACK transmission on PUSCH for LTE TDD,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0065,-,Correction in 36.212 related to TDD downlink HARQ processes,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0067,1,Correction of control MCS offset and SRS symbol puncturing,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0068,1,DCI format 2/2A,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0069,-,Correction to zero padding in DCI format 1,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0071,-,Clarification of RI bit field mapping for PUCCH,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0072,-,Clarifying RNTI bit mapping for PDCCH CRC scrambling,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0073,-,Clarification on BCH transport block size,8.4.0,8.5.0
+03/12/08,RAN_42,RP-080983,0076,-,Clarification on the number of PUCCH-based CQI/PMI bits when reported on PUSCH,8.4.0,8.5.0
+04/03/09,RAN_43,RP-090235,77,1,Corrections to Transmitted Rank Indication,8.5.0,8.6.0
+04/03/09,RAN_43,RP-090235,79,1,Correction to the bundled ACK/NACK and DAI transmission,8.5.0,8.6.0
+04/03/09,RAN_43,RP-090235,80,2,Corrections to transmission modes,8.5.0,8.6.0
+04/03/09,RAN_43,RP-090235,81,1,Correction on ACKNACK transmission on PUSCH for LTE TDD,8.5.0,8.6.0
+04/03/09,RAN_43,RP-090235,82,2,Corrections to CQI and RI fields description,8.5.0,8.6.0
+04/03/09,RAN_43,RP-090235,83,-,Clarifying DCI format 1A and DCI Format 1B,8.5.0,8.6.0
+04/03/09,RAN_43,RP-090235,92,1,Clarification on channel coding for UCI HARQ-ACK,8.5.0,8.6.0
+27/05/09,RAN_44,RP-090528,87,-,Clarify some parameters for determining control resources on PUSCH,8.6.0,8.7.0
+01/12/09,RAN_46,RP-091168,89,-,Clarification on bitwidth of RI,8.7.0,8.8.0
+01/12/09,RAN_46,RP-091168,94,-,Correction to Channel interleaver for PUSCH RE Mapping,8.7.0,8.8.0
+01/12/09,RAN_46,RP-091177,88,1,Editorial corrections to 36.212,8.8.0,9.0.0
+01/12/09,RAN_46,RP-091257,95,1,Introduction of enhanced dual layer transmission,8.8.0,9.0.0
+16/03/10,RAN_47,RP-100210,96,1,MCCH change notification using DCI format 1C,9.0.0,9.1.0
+16/03/10,RAN_47,RP-100211,97,-,Addition of missing reference to DCI format 2B + typo corrections,9.0.0,9.1.0
+01/06/10,RAN_48,RP-100589,98,-,Correction to TBS determination for DCI format 1C,9.1.0,9.2.0
+14/09/10,RAN_49,RP-100899,99,-,Clarify soft buffer size determination for MCH,9.2.0,9.3.0
+07/12/10,RAN_50,RP-101320,100,-,Introduction of Rel-10 LTE-Advanced features in 36.212,9.3.0,10.0.0
+15/03/11,RAN_51,RP-110254,101,-,Correction on UE behavior upon receiving DCI format 1B,10.0.0,10.1.0
+15/03/11,RAN_51,RP-110256,102,-,Corrections to Rel-10 LTE-Advanced features in 36.212,10.0.0,10.1.0
+01/06/11,RAN_52,RP-110819,103,3,Correction of DCI format 0 and 4 resource allocation,10.1.0,10.2.0
+01/06/11,RAN_52,RP-110819,104,2,Correction to Multi-cluster flag in DCI format 0,10.1.0,10.2.0
+01/06/11,RAN_52,RP-110819,107,2,Corrections on HARQ-ACK Channel Coding in the PUSCH,10.1.0,10.2.0
+01/06/11,RAN_52,RP-110820,108,3,A clarification for DCI format payload size,10.1.0,10.2.0
+01/06/11,RAN_52,RP-110819,110,1,Correction the search space and RNTI for CQI and SRS request flag,10.1.0,10.2.0
+01/06/11,RAN_52,RP-110819,111,-,Resource dimensioning for CQI only PUSCH transmission,10.1.0,10.2.0
+01/06/11,RAN_52,RP-110820,112,1,Correction on bit representations of transport block processing for UL-SCH,10.1.0,10.2.0
+01/06/11,RAN_52,RP-110818,113,-,Clarification on PMI indication in DCI format1B and format 2,10.1.0,10.2.0
+01/06/11,RAN_52,RP-110820,114,1,Rate maching parameters for CA,10.1.0,10.2.0
+01/06/11,RAN_52,RP-110819,116,-,HARQ-ACK on PUSCH for TDD with channel selection configured for 2 serving cells,10.1.0,10.2.0
+01/06/11,RAN_52,RP-110823,117,-,Single codeword multiple layer transmission in uplink,10.1.0,10.2.0
+15/09/11,RAN_53,RP-111228,119,1,Corrections on transport block processing for UL-SCH,10.2.0,10.3.0
+15/09/11,RAN_53,RP-111230,120,2,On correction of channel coding of control information,10.2.0,10.3.0
+15/09/11,RAN_53,RP-111230,122,1,"Size adjustment of DCI format 0, 1A and 1",10.2.0,10.3.0
+15/09/11,RAN_53,RP-111232,123,1,Corrections on Nsrs,10.2.0,10.3.0
+15/09/11,RAN_53,RP-111232,124,2,Corrections on DCI format 1B/1D,10.2.0,10.3.0
+15/09/11,RAN_53,RP-111228,125,-,Minor Correction on DCI Format 1 Description,10.2.0,10.3.0
+15/09/11,RAN_53,RP-111226,127,-,Correction on ACK/NACK mapping,10.2.0,10.3.0
+15/09/11,RAN_53,RP-111231,128,-,Corrections on channel coding of control information and DCI Format 4.,10.2.0,10.3.0
+15/09/11,RAN_53,RP-111229,129,-,Clarification and correction to configuration signalling condition for channel quality information formats,10.2.0,10.3.0
+05/12/11,RAN_54,RP-111667,130,1,Corrections on codebook index indication in DCI format 4,10.3.0,10.4.0
+05/12/11,RAN_54,RP-111666,131,-,HARQ-ACK on UCI-only PUSCH without UL-SCH data,10.3.0,10.4.0
+28/02/12,RAN_55,RP-120283,132,2,Corrections on payload size adjustment for DCI format 1A and 1,10.4.0,10.5.0
+28/02/12,RAN_55,RP-120283,133,1,Correction of two HARQ-ACK feedback on PUSCH,10.4.0,10.5.0
+28/02/12,RAN_55,RP-120285,134,1,Miscellaneous corrections,10.4.0,10.5.0
+13/06/12,RAN_56,RP-120739,136,-,Correction to Data and control multiplexing,10.5.0,10.6.0
+13/06/12,RAN_56,RP-120737,138,-,Correction to CSI request field size in DCI format 0 and DCI format 4,10.5.0,10.6.0
+04/09/12,RAN_57,RP-121272,139,-,Introduction of Rel-11 LTE-Advanced features in 36.212,10.6.0,11.0.0
+04/12/12,RAN_58,RP-121839,143,-,Correction to the parameter ue-Category-v10xy,11.0.0,11.1.0
+04/12/12,RAN_58,RP-121846,144,-,Finalisation for introducing Rel-11 features,11.0.0,11.1.0
+26/02/13,RAN_59,RP-130255,145,-,Additional clarifications/corrections for introducing Rel-11 features,11.1.0,11.2.0
+11/06/13,RAN_60,RP-130751,147,2,Correction on the RI bit width,11.2.0,11.3.0
+11/06/13,RAN_60,RP-130747,148,-,CR on DCI Format 4 payload size,11.2.0,11.3.0
+11/06/13,RAN_60,RP-130752,149,-,Correction on the time span of the DCI,11.2.0,11.3.0
+11/06/13,RAN_60,RP-130752,150,-,Correction on ARO bit setting for DL DCIs carried by EPDCCH,11.2.0,11.3.0
+11/06/13,RAN_60,RP-130750,151,-,Clarification on DL DAI usage in inter-band TDD CA,11.2.0,11.3.0
+11/06/13,RAN_60,RP-130749,153,-,Correction to bit padding of DCI format 1A for secondary cell without uplink component carrier,11.2.0,11.3.0
+03/12/13,RAN_62,RP-131893,155,1,Correction on parameter ue-Category,11.3.0,11.4.0
+03/12/13,RAN_62,RP-131896,154,3,Introduction of Rel 12 feature for Downlink MIMO Enhancement,11.4.0,12.0.0
+10/06/14,RAN_64,RP-140858,156,-,Clarification on UE antenna port based CRC masking,12.0.0,12.1.0
+10/06/14,RAN_64,RP-140859,157,1,Correction on UCI multiplexing on PUSCH,12.0.0,12.1.0
+10/06/14,RAN_64,RP-140862,158,-,Introduction of Rel 12 features of TDD-FDD CA and eIMTA,12.0.0,12.1.0
+10/06/14,RAN_64,RP-140858,159,-,Clarification of downlink subframes,12.0.0,12.1.0
+10/09/14,RAN_65,RP-141485,161,-,CR for 36.212 on 256QAM and LC-MTC,12.1.0,12.2.0
+08/12/14,RAN_66,RP-142106,163,3,CR for 36.212 on 256QAM and LC-MTC,12.2.0,12.3.0
+08/12/14,RAN_66,RP-142098,164,3,Clarification of PUSCH rate matching with SRS,12.2.0,12.3.0
+08/12/14,RAN_66,RP-142107,166,-,Introduction of Dual Connectivity feature into 36.212,12.2.0,12.3.0
+09/03/15,RAN_67,RP-150366,162,3,Introduction of D2D feature into 36.212,12.3.0,12.4.0
+15/06/15,RAN_68,RP-150936,169,-,Corrections on eIMTA RRC parameter naming,12.4.0,12.5.0
+15/06/15,RAN_68,RP-150937,171,1,Correction for 36.212 on soft buffer assumption,12.4.0,12.5.0
+14/09/15,RAN_69,RP-151466,174,1,Introducing 4-layer MIMO transmission in TM3 and TM4,12.5.0,12.6.0
+14/09/15,RAN_69,RP-151467,175,2,Introduction of MIMO capability signalling for intra-band contiguous CA,12.50,12.6.0
+07/12/15,RAN_70,RP-152038,177,-,Correction on rank indication bit widths,12.6.0,12.7.0
+07/12/15,RAN_70,RP-152027,178,1,Introduction of Rel 13 feature of eCA,12.7.0,13.0.0
+07/12/15,RAN_70,RP-152025,179,1,Introduction of EB/FD-MIMO,12.7.0,13.0.0
+07/12/15,RAN_70,RP-152026,180,2,Introduction of Rel 13 feature of LAA,12.7.0,13.0.0
+07/12/15,RAN_70,RP-152031,182,-,Introduction of Rel 13 features for SC-PTM,12.7.0,13.0.0

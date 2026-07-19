@@ -1,0 +1,7 @@
+Name,Value,Semantics description,Ver
+PDCP configuration,,,
+>t-Reordering,ms0,,
+>pdcp-SN-SizeDL,18,,
+RLC configuration,,UM RLC,
+>sn-FieldLength,12,,
+>t-Reassembly,ms0,,

@@ -1,0 +1,3 @@
+MeasObjectGERAN field descriptions
+"ncc-PermittedField encoded as a bit map, where bit N is set to ""0"" if a BCCH carrier with NCC = N-1 is not permitted for monitoring and set to ""1"" if a BCCH carrier with NCC = N-1 is permitted for monitoring; N = 1 to 8; bit 1 of the bitmap is the leading bit of the bit string."
+"carrierFreqsIf E-UTRAN includes cellForWhichToReportCGI, it includes only one GERAN ARFCN value in carrierFreqs."

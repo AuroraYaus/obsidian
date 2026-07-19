@@ -1,0 +1,50 @@
+Codepoint,Index,LCID values
+0 to 207,64 to 271,Reserved
+208,272,On-demand SSB Activation/Deactivation (one octet Ci field)
+209,273,On-demand SSB Activation/Deactivation (four octet Ci field)
+210,274,SP CLI Measurement Resource Set Activation/Deactivation
+211,275,UL Rate Control
+212,276,Pathloss Offset Update
+213,277,SP CSI-RS/CSI-IM Resource Set Activation/Deactivation for Candidate Cell
+214,278,Enhanced LTM Cell Switch Command
+215,279,LTM Candidate Timing Advance Command
+216,280,Aggregated SP Positioning SRS Activation/Deactivation
+217,281,Enhanced SP CSI reporting on PUCCH Activation/Deactivation
+218,282,Cross-RRH TCI State Indication for UE-specific PDCCH
+219,283,LTM Cell Switch Command
+220,284,Candidate Cell TCI States Activation/Deactivation
+221,285,PSI-Based SDU Discard Activation/Deactivation
+222,286,Enhanced Unified TCI states Activation/Deactivation MAC CE for Joint TCI States
+223,287,Enhanced Unified TCI states Activation/Deactivation MAC CE for Separate TCI States
+224,288,NCR Access Link Beam Indication
+225,289,NCR Downlink Backhaul Link Beam Indication
+226,290,NCR Uplink Backhaul Link Beam Indication
+227,291,Serving Cell Set based SRS TCI State Indication
+228,292,SP/AP SRS TCI State Indication
+229,293,BFD-RS Indication
+230,294,Differential Koffset
+231,295,Enhanced SCell Activation/Deactivation (one octet Ci field)
+232,296,Enhanced SCell Activation/Deactivation (four octet Ci field)
+233,297,Unified TCI States Activation/Deactivation
+234,298,PUCCH Power Control Set Update for multiple TRP PUCCH repetition
+235,299,PUCCH spatial relation Activation/Deactivation for multiple TRP PUCCH repetition
+236,300,Enhanced TCI States Indication for UE-specific PDCCH
+237,301,Positioning Measurement Gap Activation/Deactivation Command
+238,302,PPW Activation/Deactivation Command
+239,303,DL Tx Power Adjustment
+240,304,Timing Case Indication
+241,305,Child IAB-DU Restricted Beam Indication
+242,306,Case-7 Timing advance offset
+243,307,Provided Guard Symbols for Case-6 timing
+244,308,Provided Guard Symbols for Case-7 timing
+245,309,Serving Cell Set based SRS Spatial Relation Indication
+246,310,PUSCH Pathloss Reference RS Update
+247,311,SRS Pathloss Reference RS Update
+248,312,Enhanced SP/AP SRS Spatial Relation Indication
+249,313,Enhanced PUCCH Spatial Relation Activation/Deactivation
+250,314,Enhanced TCI States Activation/Deactivation for UE-specific PDSCH
+251,315,Duplication RLC Activation/Deactivation
+252,316,Absolute Timing Advance Command
+253,317,SP Positioning SRS Activation/Deactivation
+254,318,Provided Guard Symbols
+255,319,Timing Delta

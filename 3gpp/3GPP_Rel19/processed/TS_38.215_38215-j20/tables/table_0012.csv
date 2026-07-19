@@ -1,0 +1,2 @@
+Definition,"The IEEE 802.11 WLAN RSSI as used in RRC specification [10] refers to RSSI as defined in IEEE 802.11 specification [11] , measured from Beacon, DMG Beacon or FILS discovery frames (in passive scanning mode) or from probe response frames (in active scanning mode)."
+Applicable for,"RRC_CONNECTED inter-RAT,RRC_INACTIVE inter-RAT,RRC_IDLE inter-RAT"

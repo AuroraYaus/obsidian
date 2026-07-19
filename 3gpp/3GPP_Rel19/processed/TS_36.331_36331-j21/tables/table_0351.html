@@ -1,0 +1,68 @@
+<table>
+  <tr>
+    <td>SystemInformationBlockType2-NB field descriptions</td>
+  </tr>
+  <tr>
+    <td>additionalSpectrumEmissionThe UE requirements related to IE AdditionalSpectrumEmission are defined in TS 36.101 [42], clause 6.2.4F and TS 36.102 [113], clause 6.2B.3 for NTN capable UE.</td>
+  </tr>
+  <tr>
+    <td>cp-CB-Msg3-EDTThis field indicates whether the UE is allowed to initiate CP-EDT using the CB-Msg3-EDT procedure in NTN, see 5.3.3.1b.</td>
+  </tr>
+  <tr>
+    <td>cp-EDTFor FDD: This field indicates whether the UE is allowed to initiate CP-EDT when connected to EPC, see 5.3.3.1b.</td>
+  </tr>
+  <tr>
+    <td>cp-EDT-5GCFor FDD: This field indicates whether the UE is allowed to initiate CP-EDT when connected to 5GC, see 5.3.3.1b.</td>
+  </tr>
+  <tr>
+    <td>cp-PUR-5GCFor FDD: Indicates whether CP transmission using PUR is allowed in the cell when connected to 5GC, see 5.3.3.1c.</td>
+  </tr>
+  <tr>
+    <td>cp-PUR-EPCFor FDD: Indicates whether CP transmission using PUR is allowed in the cell when connected to EPC, see 5.3.3.1c.</td>
+  </tr>
+  <tr>
+    <td>cp-ReestablishmentThis field indicates if the NB-IoT UE is allowed to trigger RRC connection re-establishment when AS security has not been activated.</td>
+  </tr>
+  <tr>
+    <td>cqi-ReportingFor FDD: This field indicates if downlink channel quality reporting in RRCConnectionReestablishmentRequest-NB, RRCConnectionRequest-NB, RRCConnectionResumeRequest-NB and RRCEarlyDataRequest-NB message is allowed.</td>
+  </tr>
+  <tr>
+    <td>earlySecurityReactivationIndicates that early security reactivation when resuming a suspended RRC connection as specified in 5.3.3.18 is supported.</td>
+  </tr>
+  <tr>
+    <td>enhancedPHRFor FDD: This field indicates if the NB-IoT UE is allowed to report enhanced PHR in MSG3 as specified in TS 36.321 [6].</td>
+  </tr>
+  <tr>
+    <td>gnss-PositionFixDurationReportingIf present, this field indicates that UEs capable of performing GNSS position fix in RRC_CONNECTED are configured to include the time duration required to acquire a GNSS position in RRCConnectionSetupComplete-NB, RRCConnectionResumeComplete-NB, and RRCConnectionReestablishmentComplete-NB.</td>
+  </tr>
+  <tr>
+    <td>multiBandInfoListA list of additionalSpectrumEmission i.e. one for each additional frequency band included in multiBandInfoList in SystemInformationBlockType1-NB, listed in the same order.</td>
+  </tr>
+  <tr>
+    <td>rai-ActivationEnhIndicates whether the UE is allowed to report the AS Release Assistance Indication using the DCQR and AS RAI MAC CE as specified in TS 36.321 [6] when connected to EPC.</td>
+  </tr>
+  <tr>
+    <td>servingCellMeasInfoThis field indicates if serving cell idle mode measurement reporting in RRCConnectionReestablishmentComplete-NB, RRCConnectionResumeComplete-NB and RRCConnectionSetupComplete-NB is allowed.</td>
+  </tr>
+  <tr>
+    <td>tdd-UL-DL-AlignmentOffsetIndicates the offset between the UL carrier frequency center with respect to DL carrier frequency center for the anchor carrier.</td>
+  </tr>
+  <tr>
+    <td>ul-CarrierFreqFor FDD: Uplink carrier frequency as defined in TS 36.101 [42], clause 5.7.3F and TS 36.102 [113], clause 5.4B.2. If operationModeInfo in the MIB-NB is set to standalone and the field is absent, the value of the carrier frequency is determined by the TX-RX frequency separation defined in TS 36.101 [42], table 5.7.4-1 and TS 36.102 [113], table 5.4B.3-1, and the value of the carrier frequency offset is 0. If operationModeInfo in the MIB-NB is not set to standalone, the field is mandatory present.For TDD: This field is absent and the uplink carrier frequency is same as the downlink frequency.</td>
+  </tr>
+  <tr>
+    <td>up-CB-Msg3-EDTThis field indicates whether the UE is allowed to initiate UP-EDT using the CB-Msg3-EDT procedure in NTN, see 5.3.3.1b.</td>
+  </tr>
+  <tr>
+    <td>up-EDTFor FDD: This field indicates whether the UE is allowed to initiate UP-EDT when connected to EPC, see 5.3.3.1b.</td>
+  </tr>
+  <tr>
+    <td>up-EDT-5GCFor FDD: This field indicates whether the UE is allowed to initiate UP-EDT when connected to 5GC, see 5.3.3.1b.</td>
+  </tr>
+  <tr>
+    <td>up-PUR-5GCFor FDD: Indicates whether UP transmission using PUR is allowed in the cell when connected to 5GC, see 5.3.3.1c.</td>
+  </tr>
+  <tr>
+    <td>up-PUR-EPCFor FDD: Indicates whether UP transmission using PUR is allowed in the cell when connected to EPC, see 5.3.3.1c.</td>
+  </tr>
+</table>

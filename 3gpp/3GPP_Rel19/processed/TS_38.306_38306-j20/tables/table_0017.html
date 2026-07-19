@@ -1,0 +1,709 @@
+<table>
+  <tr>
+    <td>Definitions for parameters</td>
+    <td>Per</td>
+    <td>M</td>
+    <td>FDD-TDDDIFF</td>
+    <td>FR1-FR2DIFF</td>
+  </tr>
+  <tr>
+    <td>additionalTime-CB-8TxPUSCH-r18Indicates whether the UE supports 8Tx PUSCH additional timeline for codebook based 8TxPUSCH.A UE supporting this feature shall also indicate support of codebook-8TxBasic-r18.NOTE:UE reports the processing capability independently for each SCS in unit of symbols, where SCS is the minimum between SCS of the scheduling DCI and SCS of the scheduled PUSCH. This capability is reported by UE only when UE reports {5,6,7,8} as the maximum number of PUSCH MIMO layers.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>additionalTime-NonCB-8TxPUSCH-r18Indicates whether the UE supports 8Tx PUSCH additional timeline for non-codebook based 8TxPUSCH.A UE supporting this feature shall also indicate support of nonCodebook-8TxPUSCH-r18.NOTE:UE reports the processing capability independently for each SCS in unit of symbols, where SCS is the minimum between SCS of the scheduling DCI and SCS of the scheduled PUSCH. This capability is reported by UE only when UE reports {5,6,7,8} as the maximum number of PUSCH MIMO layers.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>scalingFactorIndicates the scaling factor to be applied to the band in the max data rate calculation as defined in 4.1.2. Value f0p4 indicates the scaling factor 0.4, f0p75 indicates 0.75, and so on. If absent, the scaling factor 1 is applied to the band in the max data rate calculation.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>cbgPUSCH-ProcessingType1-DifferentTB-PerSlot-r16Defines whether the UE capable of processing time capability 1 supports CBG based transmission with one or with up to two or with up to four or with up to seven unicast PUSCHs per slot per CC.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>cbgPUSCH-ProcessingType2-DifferentTB-PerSlot-r16Defines whether the UE capable of processing time capability 2 supports CBG based transmission with one or with up to two or with up to four or with up to seven unicast PUSCHs per slot per CC.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>crossCarrierSchedulingProcessing-DiffSCS-r16Indicates the UE cross carrier scheduling processing capability for UL carrier aggregation processing up to X unicast DCI scheduling for UL per scheduled CC. X is based on pair of (scheduling CC SCS, scheduled CC SCS) where a pair of (15,120), (15,60), (30,120) kHz SCS can have X = {1,2,4} while a pair of (15,30), (30,60), (60,120) kHz SCS can have X = {2}, and X applies per slot of scheduling CC.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>dynamicSwitchSULIndicates whether the UE supports supplemental uplink with dynamic switch (DCI based selection of PUSCH carrier). The UE supports this among a carrier on a band X and a band Y if it sets this capability parameter for both band X and band Y.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>extendedDC-LocationReport-r17Indicates whether the UE supports extended DC location reporting (based on indicated default DC location) for at least 2 UL CCs in one band. A UE that supports this feature also supports extended DC location reporting for 1 UL CC in one band.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>featureSetListPerUplinkCCIndicates which features the UE supports on the individual UL carriers of the feature set (and hence of a band entry that refer to the feature set) by FeatureSetUplinkPerCC-Id. The order of the elements in this list is not relevant, i.e., the network may configure any of the carriers in accordance with any of the FeatureSetUplinkPerCC-Id in this list. A fallback per CC feature set resulting from the reported feature set per UL CC is not signalled but the UE shall support it.</td>
+    <td>FS</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>interSubslotFreqHopping-PUCCH-r17Indicates whether the UE supports inter-subslot frequency hopping for PUCCH repetitions comprised of the following functional components:-Inter-subslot frequency hopping for PUCCH repetition operation of PUCCH Formats 0, 1, 2, 3 and 4 for 7OS slot-based PUCCH configurations;-Inter-subslot frequency hopping for PUCCH repetition operation of PUCCH Format 0 and Format 2 for 2OS slot-based PUCCH configurations.The UE indicating support of this feature shall also indicate the support of pucch-Repetition-F0-1-2-3-4-RRC-Config-r17.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>intraBandFreqSeparationUL, intraBandFreqSeparationUL-v1620Indicates UL frequency separation class the UE supports, which indicates a maximum frequency separation between lower edge of lowest CC and upper edge of highest CC in a frequency band, for intra-band non-contiguous CA. The UE sets the same value in the FeatureSetUplink of each band entry within a band. The values mhzX corresponds to the values XMHz defined in TS 38.101-2 [3]. It is mandatory to report for UE which supports UL non-contiguous CA in FR2.If the UE sets the field intraBandFreqSeparationUL-v1620 it shall set intraBandFreqSeparationUL (without suffix) to the nearest smaller value.</td>
+    <td>FS</td>
+    <td>CY</td>
+    <td>N/A</td>
+    <td>FR2 only</td>
+  </tr>
+  <tr>
+    <td>intraFreqDAPS-UL-r16Indicates whether UE supports enhanced uplink capabilities for intra-frequency DAPS handover. The UE only includes this capability signalling if intraFreqDAPS-r16 is included in the FeatureSetDownlink for the same FeatureSet. The capability signalling comprises of the following parameter:-intraFreqTwoTAGs-DAPS-r16 indicates whether the UE supports different timing advance groups in source PCell and intra-frequency target PCell. It is mandatory with capability signalling.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>maxDelayValueBeyondD-Basic-r18Indicates whether the UE supports maximum delay value larger than D_basic =1 slot. Value sl2 denotes 2 slots, value sl3 denotes 3 slots, value sl4 denotes 4 slots, value sl5 denotes 5 slots, value sl6 denotes 6 slots, value sl10 denotes 10 slots.A UE supporting this feature shall also indicate support of tdcp-Report-r18.NOTE:10 slots is only applicable for SCS &gt;= 30 kHz, and 6 slots is maximum for SCS = 15 kHz.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>maxNumberTDCP-PerBWP-r18Indicates the maximum number of CSI-ReportConfig with reportQuantity configured as &quot;tdcp&quot;, configured with resourcesForChannelMeasurement linked to a same BWP ID.A UE supporting this feature shall also indicate support of tdcp-Report-r18.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>maxNumberTRS-ResourceSet-r18Indicates the maximum number of TRS resource sets in a single CSI-RS resource setting.A UE supporting this feature shall also indicate support of tdcp-Report-r18.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>mTRP-PUCCH-IntraSlot-r17Indicates whether the UE supports PUCCH repetition scheme 3 (intra-slot repetition) with sequential mapping for repetitions larger than 2 and cyclic mapping for 2 repetitions by indicating the supported PUCCH formats for this scheme. The UE indicating this feature shall also support up to two PUCCH power control parameter sets/spatial relation info per PUCCH resource.Power control parameter sets feature is applicable to FR1 only (without spatial relation info) and spatial relation info is applicable to FR2 only.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>mTRP-PUSCH-TypeA-CB-r17Indicates the support of multi-TRP PUSCH repetition based on codebook with PUSCH repetition type A. The value indicates the supported number of SRS resources in one SRS resource set.This feature includes the following features:-sequential mapping for repetitions larger than 2.-cyclic mapping for 2 repetitions.-two SRS resource sets with usage set to &#x27;codebook&#x27;.The UE indicating support of this feature shall also indicate the support of mimo-CB-PUSCH. If the value of supported number of SRS resources is 4 then the UE shall also indicate support of ul-FullPwrMode2-MaxSRS-ResInSet set to n4.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>mTRP-PUSCH-TypeA-CB-3Port-r19Indicates whether the UE supports codebook-based multi-TRP PUSCH repetition for 3-antenna-port PUSCH transmission with type A. The value indicates the supported number of SRS resources in one SRS resource set.This feature includes the following features:-sequential mapping for repetitions larger than 2.-cyclic mapping for 2 repetitions.-two SRS resource sets with usage set to &#x27;codebook&#x27;.A UE supporting this feature shall also indicate support of codebook-3TxPUSCH-SingleTRP-r19.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>mTRP-PUSCH-RepetitionTypeA-r17Indicates whether the UE supports multi-TRP PUSCH repetition for non-codebook based PUSCH repetition type A with sequential mapping for repetitions larger than 2 and cyclic mapping for 2 repetitions by indicating the supported number of SRS resources in one SRS resource set. The UE indicating this feature shall also support two SRS resource sets with usage set to &#x27;nonCodebook&#x27;.The UE indicating this feature shall indicate support of maxNumberMIMO-LayersNonCB-PUSCH and mimo-NonCB-PUSCH.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>mTRP-PUSCH-RepetitionTypeA-3Port-r19Indicates whether the UE supports non-codebook based multi-TRP PUSCH repetition for 3-antenna-port PUSCH transmission with type A with sequential mapping for repetitions larger than 2 and cyclic mapping for 2 repetitions by indicating the supported number of SRS resources in one SRS resource set. The UE indicating this feature shall also support two SRS resource sets with usage set to &#x27;nonCodebook&#x27;.The UE indicating this feature shall also indicate support of nonCodebook-3TxPUSCH-SingleTRP-r19.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>multiPUCCH-r16Indicates whether the UE supports more than one PUCCH for HARQ-ACK transmission within a slot. This field includes the following parameters:-sub-SlotConfig-NCP-r16 indicates the sub-slot configuration for NCP;-sub-SlotConfig-ECP-r16 indicates the sub-slot configuration for ECP.For NCP, the value set1 denotes 7-symbol*2, and set2 denotes 2-symbol*7 and 7-symbol*2.For ECP, the value set1 denotes 6-symbol*2, and set2 denotes 2-symbol*6 and 6-symbol*2.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>mux-SR-HARQ-ACK-r16Indicates whether the UE supports SR/HARQ-ACK multiplexing once per subslot using a PUCCH (or HARQ-ACK piggybacked on a PUSCH) when SR/HARQ-ACK are supposed to be sent with different starting symbols in a subslot.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>nonCodebook-CSI-RS-SRS-Enh-r19Indicates whether the UE supports association between {48, 64, 128} CSI-RS ports and SRS resource set for non-codebook-based PUSCH.A UE supporting this feature shall also indicate support of maxNumberMIMO-LayersNonCB-PUSCH, mimo-NonCB-PUSCH and nonCodebook-CSI-RS-SRS-PerBC-Enh-r19.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>offsetSRS-CB-PUSCH-Ant-Switch-fr1-r16Indicates whether UE requires minimum of 19 symbols offset between aperiodic SRS triggering and transmission for SRS for codebook based PUSCH and antenna switching.UE indicating support of this shall indicate support of supportedSRS-Resources.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>offsetSRS-CB-PUSCH-PDCCH-MonitorSingleOcc-fr1-r16Indicates whether UE requires minimum of 19 symbols offset between aperiodic SRS triggering and transmission for SRS for codebook based PUSCH and antenna switching for the case of PDCCH monitoring on any span of up to 3 consecutive OFDM symbols of a slot.UE indicating support of this shall indicate support of supportedSRS-Resources.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>offsetSRS-CB-PUSCH-PDCCH-MonitorAnyOccWithoutGap-fr1-r16Indicates whether UE requires minimum of 19 symbols offset between aperiodic SRS triggering and transmission for the case of PDCCH search space monitoring occasions in any symbol of the slot for Type 1-PDCCH common search space configured by dedicated RRC signalling, for a Type 3-PDCCH common search space, or for a UE-specific search space with the capability of supporting at least 44, 36, 22, and 20 blind decodes in a slot for 15 kHz, 30 kHz, 60kHz, and 120 kHz subcarrier spacing values respectively.UE indicating support of this shall indicate support of supportedSRS-Resources.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>offsetSRS-CB-PUSCH-PDCCH-MonitorAnyOccWithGap-fr1-r16Indicates whether UE requires minimum of 19 symbols offset between aperiodic SRS triggering and transmission for SRS for codebook based PUSCH and antenna switching for the case of PDCCH search space monitoring occasions in any symbol of the slot with minimum time separation of two OFDM symbols for 15 kHz, four OFDM symbols for 30 kHz, seven OFDM symbols for 60 kHz with NCP, and 14OFDM symbols for 120kHz between two consecutive transmissions of PDCCH scrambled with C-RNTI, MCS-C-RNTI, or CS-RNTI for Type 1-PDCCH common search space configured by dedicated RRC signalling, for a Type 3-PDCCH common search space, or for a UE-specific search space, with the capability of supporting at least 44, 36, 22, and 20 blind decodes in a slot for 15 kHz, 30 kHz, 60kHz, and 120 kHz subcarrier spacing values respectively.UE indicating support of this shall indicate support of pdcch-MonitoringAnyOccasions with value withDCI-Gap and supportedSRS-Resources.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>offsetSRS-CB-PUSCH-PDCCH-MonitorAnyOccWithSpanGap-fr1-r16Indicates whether UE requires minimum of 19 symbols offset between aperiodic SRS triggering and transmission for the case of PDCCH search space monitoring occasions in any symbol of the slot with minimum time separation between two consecutive transmissions of PDCCH with span up to two OFDM symbols for two OFDM symbols or span up to three OFDM symbols for four and seven OFDM symbols. Value set1 indicates the supported value set (X,Y) is (7,3), value set2 indicates the supported value set (X,Y) is (4,3) and (7,3) and value set 3 indicates the supported value set (X,Y) is (2,2), (4,3) and (7,3).UE indicating support of this shall indicate support of supportedSRS-Resources.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>pa-PhaseDiscontinuityImpactsIndicates incapability motivated by impacts of PA phase discontinuity with overlapping transmissions with non-aligned starting or ending times or hop boundaries across carriers for intra-band (NG)EN-DC/NE-DC, intra-band CA and FDM based ULSUP.This capability applies to:-Intra-band (NG)EN-DC/NE-DC combination without additional inter-band NR and LTE CA component;-Intra-band (NG)EN-DC/NE-DC combination supporting both UL and DL intra-band (NG)EN-DC/NE-DC parts with additional inter-band NR/LTE CA component;-Inter-band (NG)EN-DC/NE-DC combination, where the frequency range of the E-UTRA band is a subset of the frequency range of the NR band (as specified in Table 5.5B.4.1-1 of TS 38.101-3 [4]).If this capability is included in an &quot;Intra-band (NG)EN-DC/NE-DC combination supporting both UL and DL intra-band (NG)EN-DC/NE-DC parts with additional inter-band NR/LTE CA component&quot;, this capability applies to the intra-band (NG)EN-DC/NE-DC BC part.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>partialCancellationPUCCH-PUSCH-PRACH-TX-r16Indicates whether UE supports the partial cancellation of the configured PUCCH or PUSCH or PRACH transmission in set of symbols of a slot due to:-Detection of a DCI format 2_0 with a slot format value other than 255 that indicates a slot format with a subset of symbols from the set of symbols as downlink or flexible;-DCI format 2_0 being configured but not detected, when either a subset of symbols from the set of symbols are indicated as flexible by tdd-UL-DL-ConfigurationCommon, and tdd-UL-DL-ConfigurationDedicated if provided, or tdd-UL-DL-ConfigurationCommon and tdd-UL-DL-ConfigurationDedicated are not provided to the UE;-Detection of a DCI format 1_0, DCI format 1_1, DCI format 1_2 or DCI format 0_1 and DCI format 0_2 indicating to the UE to receive CSI-RS or PDSCH in a subset of symbols from the set of symbols.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>phaseReportMoreThanOne-r18Indicates whether the UE supports phase report for Y&gt;=1.A UE supporting this feature shall also indicate support of tdcp-Report-r18.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>phy-PrioritizationHighPriorityDG-LowPriorityCG-r17Indicates whether the UE supports PHY prioritization of overlapping high-priority DG-PUSCH and low-priority CG-PUSCH comprised of the following functional components:-PHY prioritization of overlapping high-priority dynamic grant PUSCH and low-priority configured grant PUSCH on a BWP of a serving cell;-Configuration of PHY priority level for CG PUSCH, and dynamic indication of priority level for dynamic PUSCH with a single DCI format.The capability signalling comprises the following parameters:-pusch-PreparationLowPriority-r17 indicates additional number of symbols (d1) needed beyond the PUSCH preparation time for cancelling a low priority UL transmission;-additionalCancellationTime-r17 indicates additional number of symbols (d3) needed on top of Rel-16 cancellation time (which results N2+d1+d3 in total cancellation time);-maxNumberCarriers-r17 indicates maximum number of supported carriers on the band across a set of contiguous carriers for the reported FS of that band.The value sym0 denotes 0 symbol, sym1 denotes one symbol, and so on.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>phy-PrioritizationLowPriorityDG-HighPriorityCG-r17Indicates whether the UE supports PHY prioritization of overlapping low-priority DG-PUSCH and high-priority CG-PUSCH comprised of the following functional components:-PHY prioritization for the case where low-priority DG-PUSCH collides with high-priority CG-PUSCH;-Configuration of PHY priority level for CG PUSCH, and dynamic indication of priority level for dynamic PUSCH with a single DCI format.The value indicates maximum number of supported carriers on the band across a set of contiguous carriers for the reported FS of that band.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>posSRS-BWA-AffectedBandList-r18Indicates which other bands in the band combination are affected due to the need of a guard period.UE indicating support of this shall indicate support one of posSRS-BWA-IndependentCA-RRC-Connected-r18 and posSRS-BWA-RRC-Inactive-r18.NOTE 1:Guard period is needed before and after the aggregated SRS transmissions when SRS resource is configured within a CC without PUSCH/PUCCH is linked for aggregation with an SRS resource configured within an UL active BWP of a UL communication CC.NOTE 2:UE may indicate no other bands in the band combination are affected by the SRS switch, in which case, only the band with the aggregated SRS transmissions is affected.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>posSRS-BWA-IndependentCA-RRC-Connected-r18Indicates whether the UE supports positioning SRS bandwidth aggregation independent from UL communication CA in RRC_CONNECTED and the support of the same SRS power reduction across aggregated carriers. The capability signalling comprises the following parameters:-numOfCarriersIntraBandContiguous-r18 indicates the number of supported aggregated carriers in intra band contiguous carriers, which is supported and reported by UE.-maximumAggregatedBW-TwoCarriersFR1-r18 indicates the maximum aggregated SRS bandwidth in MHz for two aggregated carriers for FR1, which is supported and reported by UE.-maximumAggregatedBW-TwoCarriersFR2-r18 indicates the maximum aggregated SRS bandwidth in MHz for two aggregated carriers for FR2, which is supported and reported by UE.-maximumAggregatedBW-ThreeCarriersFR1-r18 indicates the maximum aggregated SRS bandwidth in MHz for three aggregated carriers for FR1, which is supported and reported by UE.-maximumAggregatedBW-ThreeCarriersFR2-r18 indicates the maximum aggregated SRS bandwidth in MHz for three aggregated carriers for FR2, which is supported and reported by UE.-maximumAggregatedResourceSet-r18 indicates the max number of aggregated SRS resource sets for positioning supported by UE for SRS bandwidth aggregation, which is supported and reported by UE.-maximumAggregatedResourcePeriodic-r18 indicates the maximum number of aggregated periodic SRS resources for bandwidth aggregation, which is supported and reported by UE.-maximumAggregatedResourceAperiodic-r18 indicates the maximum number of aggregated aperiodic SRS resources for bandwidth aggregation, which is supported and reported by UE.-maximumAggregatedResourceSemi-r18 indicates the maximum number of aggregated semi-persistent SRS resources for bandwidth aggregation, which is supported and reported by UE.-maximumAggregatedResourcePeriodicPerSlot-r18 indicates the maximum number of aggregated periodic SRS resources for bandwidth aggregation per slot, which is supported and reported by UE.-maximumAggregatedResourceAperiodicPerSlot-r18 indicates the maximum number of aggregated aperiodic SRS resources for bandwidth aggregation per slot, which is supported and reported by UE.-maximumAggregatedResourceSemiPerSlot-r18 indicates the maximum number of aggregated semi-persistent SRS resources for bandwidth aggregation per slot, which is supported and reported by UE.-guardPeriod-r18 indicates the guard period in microseconds before and after aggregated SRS transmission.-powerClassForTwoAggregatedCarriers-r18 indicates the power class of supported two aggregated carriers in intra band contiguous carriers.-powerClassForThreeAggregatedCarriers-r18 indicates the power class of supported three aggregated carriers in intra band contiguous carriers.UE indicating support of this feature shall indicate the support of SRS-AllPosResources-r16.NOTE 1:The UE supports the simultaneous transmission in a coherent manner of 2 or 3 SRS resources in 2 or 3 intra-band contiguous CCs.NOTE 2:Each two or three linked SRS resources are counted as 1 resourceNOTE 3:Void.NOTE 4:Guard period is needed before and after the aggregated SRS transmissions when SRS resource is configured within a CC without PUSCH/PUCCH is linked for aggregation with an SRS resource configured within an UL active BWP of a UL communication CC.NOTE 5:For a given band, independent of the band combination, the UE must signal the same guard period.NOTE 6:The power class is only applicable for FR1 bands.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>posSRS-BWA-RRC-Connected-r18Indicates whether the UE supports positioning SRS bandwidth aggregation in RRC_CONNECTED and the support of the same SRS power reduction across aggregated carriers. The capability signalling comprises the following parameters:-numOfCarriersIntraBandContiguous-r18 indicates the number of supported aggregated carriers in intra band contiguous carriers, which is supported and reported by UE.-maximumAggregatedBW-TwoCarriers-FR1-r18 indicates the maximum aggregated SRS bandwidth in MHz for two aggregated carriers for FR1, which is supported and reported by UE.-maximumAggregatedBW-TwoCarriers-FR2-r18 indicates the maximum aggregated SRS bandwidth in MHz for two aggregated carriers for FR2, which is supported and reported by UE.-maximumAggregatedBW-ThreeCarriers-FR1-r18 indicates the maximum aggregated SRS bandwidth in MHz for three aggregated carriers for FR1, which is supported and reported by UE.-maximumAggregatedBW-ThreeCarriers-FR2-r18 indicates the maximum aggregated SRS bandwidth in MHz for three aggregated carriers for FR2, which is supported and reported by UE.-maximumAggregatedResourceSet-r18 indicates the max number of aggregated SRS resource sets for positioning supported by UE for SRS bandwidth aggregation, which is supported and reported by UE.-maximumAggregatedResourcePeriodic-r18 indicates the maximum number of aggregated periodic SRS resources for bandwidth aggregation, which is supported and reported by UE.-maximumAggregatedResourceAperiodic-r18 indicates the maximum number of aggregated aperiodic SRS resources for bandwidth aggregation, which is supported and reported by UE.-maximumAggregatedResourceSemi-r18 indicates the maximum number of aggregated semi-persistent SRS resources for bandwidth aggregation, which is supported and reported by UE.-maximumAggregatedResourcePeriodicPerSlot-r18 indicates the maximum number of aggregated periodic SRS resources for bandwidth aggregation per slot, which is supported and reported by UE.-maximumAggregatedResourceAperiodicPerSlot-r18 indicates the maximum number of aggregated aperiodic SRS resources for bandwidth aggregation per slot, which is supported and reported by UE.-maximumAggregatedResourceSemiPerSlot-r18 indicates the maximum number of aggregated semi-persistent SRS resources for bandwidth aggregation per slot, which is supported and reported by UE.UE indicating support of this feature shall indicate the support of SRS-AllPosResources-r16 and supportedBandCombinationList.NOTE 1:The UE supports the simultaneous transmission in a coherent manner of 2 or 3 SRS resources in 2 or 3 intra-band contiguous CCs.NOTE 2:Each two or three linked SRS resources are counted as 1 resourceNOTE 3:A UE that supports SRS-PosResourceAP-r16 must signal a non-zero value for maximumAggregatedResourceAperiodic-r18 and maximumAggregatedResourceAperiodicPerSlot-r18;NOTE 4:Void.NOTE 5:For numOfCarriersIntraBandContiguous-r18, it shall be less than or equal to the maximum number of the component carrier associated with ca-BandwidthClassUL-NR in TS 38.331 [9].NOTE 6:For maximum aggregated UL SRS bandwidth, it shall be less than or equal to the maximum aggregated transmission bandwidth associated with ca-BandwidthClassUL-NR in TS 38.331 [9]. Additionally, it shall be less than or equal to the maximum aggregated bandwidth for the supported CA configuration in Table 5.5A.1-1 in TS 38.101-1 [2] for FR1 bands or Table 5.5A.1-1 in TS 38.101-2 [3] for FR2 bands for the band where aggregated SRS CCs is configured.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>powerBoosting-pi2BPSK-QPSK-r18Indicates whether the UE supports power boosting for DFT-s-OFDM pi/2 BPSK and QPSK without modified spectrum flatness requirement for PC3 and PC2 MPR reduction, when applicable as defined in 6.2 of TS 38.101-1 [2]. The power boosting is only enabled when signalled via powerBoostPi2BPSK-r18 for BPSK and powerBoostQPSK-r18 for QPSK.A UE supporting this feature shall also indicate the support of pusch-HalfPi-BPSK and pucch-F3-4-HalfPi-BPSK.This capability can be supported in any or all scenarios below:-Case 1: FR1 single band with single uplink CC configured in the band where power boosting capability is indicated in this band.-Case 2: FR1 DL CA with a single uplink CC configured in a band where power boosting capability is indicated. The power boosting feature can be configured in this FR1 NR band.-Case 3: FR1 inter-band UL CA/DC, where a single CC is configured in the uplink bands where power boosting capability is indicated. The power boosting feature can be configured only in one of the bands where capability is indicated.-Case 4: FR1+FR2 UL CA, FR1+FR2 DC, where a single CC is configured in the uplink bands where power boosting capability is indicated. The power boosting feature can be configured in the FR1 NR band.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>powerBoosting-pi2BPSK-QPSK-Modified-r18Indicates whether the UE supports power boosting for DFT-s-OFDM pi/2 BPSK and QPSK with modified spectrum flatness requirement for PC3 and PC2 MPR reduction, when applicable as defined in 6.2 of TS 38.101-1 [2]. The power boosting is only enabled when signalled via powerBoostPi2BPSK-r18 for BPSK and powerBoostQPSK-r18 for QPSK.A UE supporting this feature shall also indicate the support of pusch-HalfPi-BPSK and pucch-F3-4-HalfPi-BPSK.This capability can be supported in any or all scenarios below:-Case 1: FR1 single band with single uplink CC configured in the band where power boosting capability is indicated in this band.-Case 2: FR1 DL CA with a single uplink CC configured in a band where power boosting capability is indicated. The power boosting feature can be configured in this FR1 NR band.-Case 3: FR1 inter-band UL CA/DC, where a single CC is configured in the uplink bands where power boosting capability is indicated. The power boosting feature can be configured only in one of the bands where capability is indicated.-Case 4: FR1+FR2 UL CA, FR1+FR2 DC, where a single CC is configured in the uplink bands where power boosting capability is indicated. The power boosting feature can be configured in the FR1 NR band.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>pucch-Repetition-F0-1-2-3-4-DynamicIndication-r17Indicates whether the UE supports repetitions for PUCCH format 0, 1, 2, 3 and 4 over multiple PUCCH subslots based on dynamic repetition indication.The UE indicating support of this feature shall also indicate the support of pucch-Repetition-F0-1-2-3-4-RRC-Config-r17.NOTE:Dynamic PUCCH repetition factor indication is only supported for HARQ-ACK.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>pucch-Repetition-F0-1-2-3-4-RRC-Config-r17Indicates whether the UE supports repetitions for PUCCH format 0, 1, 2, 3 and 4 over multiple PUCCH subslots with RRC configured repetition factor K = 2, 4, 8.A UE supporting this feature shall also indicate support of pucch-Repetition-F1-3-4 and multiPUCCH-r16.NOTE:The support of this feature does not imply an increase of the maximum number of PUCCHs per slot that is supported by the UE.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>pucch-SingleDCI-STx2P-SFN-r18Indicates whether the UE supports single-DCI based STx2P SFN scheme for PUCCH and the supported PUCCH formats for STx2P SFN scheme.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR2 only</td>
+  </tr>
+  <tr>
+    <td>pusch-DMRS8Tx-r18Indicates whether the UE supports DMRS port configuration for PUSCH with 8Tx for Rel-15 and Rel-18. Value rel15 indicates the UE supports Rel-15 DMRS. Value both indicates the UE supports Rel-15 DMRS and Rel-18 DMRS.NOTE:A UE supporting 8Tx must support this feature.</td>
+    <td>FS</td>
+    <td>CY</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>pusch-DMRS-TypeEnh-r18Indicates the DMRS type for Rel-18 enhanced DMRS ports for PUSCH. This capability signalling comprises the following parameters:-dmrs-Type-r18 indicates the DMRS type for Rel-18 enhanced DMRS ports for PUSCH. Value etype1 indicates the UE supports eType1 DMRS type. Value both indicates the UE supports both eType1 and eType2 DMRS type.-pusch-TypeA-DMRS-r18 comprises of the following parameters:-dmrs-TypeA-r18 indicates whether the UE supports enhanced DMRS ports for PUSCH for scheduling mapping of type A for enhanced DMRS ports, including support of 1 symbol FL DMRS without additional symbol(s), support of 1 symbol FL DMRS and 1 additional DMRS symbols and support of 1 symbol FL DMRS and 2 additional DMRS symbols for one port.-pusch-2SymbolFL-DMRS-r18 indicates whether the UE supports 2 symbols FL-DMRS for enhanced DMRS ports for PUSCH.-pusch-2SymbolFL-DMRS-Addition2Symbol-r18 indicates whether the UE supports 2-symbol FL DMRS + one additional 2-symbols DMRS for enhanced DMRS ports for PUSCH.-pusch-1SymbolFL-DMRS-Addition3Symbol-r18 indicates whether the UE supports 1 symbol FL DMRS and 3 additional DMRS symbols for enhanced DMRS ports for PUSCH.-pusch-1SymbolFL-DMRS-BeyondOnePort-r18 indicates whether the UE supports 1 symbol FL DMRS and 2 additional DMRS symbols for more than one port for enhanced DMRS ports for PUSCH.NOTE:Void-pusch-TypeB-DMRS-r18 indicates whether the UE supports basic feature of Rel-18 enhanced DMRS ports for PUSCH for scheduling mapping of type B for Rel-18 enhanced DMRS ports, including support of 1 symbol FL DMRS without additional symbol(s) and support of 1 symbol FL DMRS and 1 additional DMRS symbol.-pusch-rank-1-4-1Port-r18 indicates whether the UE supports 1 port UL PTRS for Rel-18 enhanced DMRS ports for PUSCH with rank 1-4. A UE supporting this feature shall indicate support of at least one of dmrs-TypeA-r18 and pusch-TypeB-DMRS-r18.-pusch-rank-5-8-1Port-r18 indicates whether the UE supports 1 port UL PTRS for Rel-18 enhanced DMRS ports for PUSCH with rank 5-8. A UE supporting this feature shall indicate support of at least one of dmrs-TypeA-r18 and pusch-TypeB-DMRS-r18.-pusch-rank-1-4-2Port-r18 indicates whether the UE supports 2 port UL PTRS for Rel-18 enhanced DMRS ports for PUSCH with rank 1-4. A UE supporting this feature shall indicate support of at least one of dmrs-TypeA-r18 and pusch-TypeB-DMRS-r18.-pusch-rank-5-8-2Port-r18 indicates whether the UE supports 2 port UL PTRS for Rel-18 enhanced DMRS ports for PUSCH with rank 5-8. A UE supporting this feature shall indicate support of at least one of dmrs-TypeA-r18 and pusch-TypeB-DMRS-r18.</td>
+    <td>FS</td>
+    <td>CY</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>pusch-ProcessingType1-DifferentTB-PerSlotIndicates whether the UE capable of processing time capability 1 supports transmission of up to two, four or seven unicast PUSCHs for several transport blocks in one serving cell within the same slot per CC that are multiplexed in time domain only.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>pusch-ProcessingType2Indicates whether the UE supports PUSCH processing capability 2. The UE supports it only if all serving cells are self-scheduled and if all serving cells in one band on which the network configured processingType2 use the same subcarrier spacing. This capability signalling comprises the following parameters for each sub-carrier spacing supported by the UE.-fallback indicates whether the UE supports PUSCH processing capability 2 when the number of configured carriers is larger than numberOfCarriers for a reported value of differentTB-PerSlot. If fallback = &#x27;sc&#x27;, UE supports capability 2 processing time on lowest cell index among the configured carriers in the band where the value is reported, if fallback = &#x27;cap1-only&#x27;, UE supports only capability 1, in the band where the value is reported;-differentTB-PerSlot indicates whether the UE supports processing type 2 for 1, 2, 4 and/or 7 unicast PUSCHs for different transport blocks per slot per CC; and if so, it indicates up to which number of CA serving cells the UE supports that number of unicast PUSCHs for different TBs. The UE shall include at least one of numberOfCarriers for 1, 2, 4 or 7 transport blocks per slot in this field if pusch-ProcessingType2 is indicated.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>pusch-RepetitionTypeB-r16, pusch-RepetitionTypeB-v16d0Indicates whether the UE supports PUSCH repetition type B, as specified in 6.1.2 of TS 38.214 [12].The maxNumberPUSCH-Tx-r16 in pusch-RepetitionTypeB-r16 indicates the supported maximum number of PUSCH transmissions within a slot for all TB(s) for processing capability 1 if pusch-ProcessingType2 is not included, or for both processing capability 1 and processing capability 2 if pusch-ProcessingType2 is included. The maxNumberPUSCH-Tx-Cap1-r16 and maxNumberPUSCH-Tx-Cap2-r16 in pusch-RepetitionTypeB-v16d0 are for processing capability 1 and processing capability 2 separately, which are only included when different values are supported for the processing capabilities. The maxNumberPUSCH-Tx-r16 will be ignored by the network if the pusch-RepetitionTypeB-v16d0 is included.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>pusch-SeparationWithGapIndicates whether the UE supports separation of two unicast PUSCHs with a gap, applicable to Sub-carrier spacings of 15 kHz, 30 kHz and 60 kHz only. For any two consecutive slots n and n+1, if there are more than 1 unicast PUSCH in either slot, the minimum time separation between starting time of any two unicast PUSCHs within the duration of these slots is 2 OFDM symbols for 15kHz, 4 OFDM symbols for 30kHz and 7 OFDM symbols for 60kHz.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>rach-EarlyTA-BandList-r18Indicates whether the UE supports simultaneous transmission to handle the overlap between UL transmission on serving cell(s) and PRACH on candidate cell(s).A UE supporting this feature shall also indicate support of rach-EarlyTA-Measurement-r18.Each source-target pair indicates the band pair between the band under UE&#x27;s current band combination and the target band for RACH transmission.The target bands only consist of the NR bands indicated in appliedFreqBandListFilter. They are listed in the same order as in appliedFreqBandListFilter and the first NR band entry correspond to the first entry on appliedFreqBandListFilter and so on.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>searchSpaceSharingCA-ULDefines whether the UE supports UL PDCCH search space sharing for carrier aggregation operation.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>semiStaticHARQ-ACK-CodebookSub-SlotPUCCH-r17Indicates whether the UE supports Semi-static (Type 1) HARQ-ACK codebook for sub-slot based PUCCH configuration.A UE supporting this feature shall also indicate support of semiStaticHARQ-ACK-Codebook and multiPUCCH-r16.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>simultaneous-2-1-HARQ-ACK-CB-r18Indicates whether the UE supports two HARQ-ACK codebooks with different priorities to be simultaneously constructed with the restriction up to one sub-slot based HARQ-ACK codebook. This capability also indicates support of separate PUCCH configuration for different HARQ-ACK codebooks, 2-level priority of HARQ-ACK for dynamically scheduled PDSCH and SPS PDSCH, a DCI format 1_3 scheduling PDSCH with different HARQ-ACK priorities when only DCI format 0_3/1_3 is configured per BWP, separate configuration of parameters pdsch-HARQ-ACK-Codebook, uci-OnPUSCH and codeBlockGroupTransmission for different HARQ-ACK codebooks, maximum number of actual PUCCH transmissions for HARQ-ACK within a slot and intra-UE multiplexing/prioritization of UL overlapping channels/signals with two priority levels for HARQ-ACK.The supported maximum number of actual PUCCH transmissions for HARQ-ACK within a slot is indicated by sub-SlotConfig-NCP-r16 for NCP for 2-symbol*7 sub-slot configuration, and sub-SlotConfig-ECP-r16 for ECP for 2-symbol*6 sub-slot configuration. For sub-SlotConfig-NCP-r16 and sub-SlotConfig-ECP-r16, if a UE also supports twoHARQ-ACK-Codebook-type1-r16, the UE reports the same values as in twoHARQ-ACK-Codebook-type1-r16.If a UE reports both multiPUCCH-r16 and this capability, it can support two slot-based HARQ-ACK codebooks, and one slot-based and one-sub-slot-based HARQ-ACK codebooks. If a UE reports this capability but not multiPUCCH-r16, it can only support two slot-based HARQ-ACK codebooks.The number of PUCCHs for CSI reporting per slot is not impacted compared with Rel-15 by introducing the new HARQ-ACK CBs.simultaneous-2-1-HARQ-ACK-CB-r18 is applied to the sub-slot HARQ-ACK codebook and only 1 actual PUCCH transmission for HARQ-ACK within a slot for slot-based HARQ-ACK codebook is assumed. It is indicated for 2-symbol*7 sub-slot configuration. For 7-symbol*2 sub-slot configuration, the value of simultaneous-2-1-HARQ-ACK-CB-r18 is {2} for both NCP and ECP cases.The value indicated in simultaneous-2-1-HARQ-ACK-CB-r18 has no meaning for &quot;slot-based + slot based&quot;.A UE supporting this feature shall also indicate support of at least one of multiCell-PDSCH-DCI-1-3-SameSCS-r18 and multiCell-PDSCH-DCI-1-3-DiffSCS-r18.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>simultaneous-2-1-HARQ-ACK-CB-Diff-r19Indicates whether the UE supports two HARQ-ACK codebooks with different priorities to be simultaneously constructed with the restriction up to one sub-slot based HARQ-ACK codebook with different SCS and/or different carrier type. This capability also indicates support of separate PUCCH configuration for different HARQ-ACK codebooks, 2-level priority of HARQ-ACK for dynamically scheduled PDSCH and SPS PDSCH, a DCI format 1_3 scheduling PDSCH with different HARQ-ACK priorities when only DCI format 0_3/1_3 is configured per BWP, separate configuration of parameters pdsch-HARQ-ACK-Codebook, uci-OnPUSCH and codeBlockGroupTransmission for different HARQ-ACK codebooks, maximum number of actual PUCCH transmissions for HARQ-ACK within a slot and intra-UE multiplexing/prioritization of UL overlapping channels/signals with two priority levels for HARQ-ACK.The supported maximum number of actual PUCCH transmissions for HARQ-ACK within a slot is indicated by sub-SlotConfig-NCP-r16 for NCP for 2-symbol*7 sub-slot configuration, and sub-SlotConfig-ECP-r16 for ECP for 2-symbol*6 sub-slot configuration. For sub-SlotConfig-NCP-r16 and sub-SlotConfig-ECP-r16, if a UE also supports twoHARQ-ACK-Codebook-type1-r16, the UE reports the same values as in twoHARQ-ACK-Codebook-type1-r16.If a UE reports both multiPUCCH-r16 and this capability, it can support two slot-based HARQ-ACK codebooks, and one slot-based and one-sub-slot-based HARQ-ACK codebooks. If a UE reports this capability but not multiPUCCH-r16, it can only support two slot-based HARQ-ACK codebooks.The number of PUCCHs for CSI reporting per slot is not impacted compared with Rel-15 by introducing the new HARQ-ACK CBs.simultaneous-2-1-HARQ-ACK-CB-Diff-r19 is applied to the sub-slot HARQ-ACK codebook and only 1 actual PUCCH transmission for HARQ-ACK within a slot for slot-based HARQ-ACK codebook is assumed. It is indicated for 2-symbol*7 sub-slot configuration. For 7-symbol*2 sub-slot configuration, the value of simultaneous-2-1-HARQ-ACK-CB-Diff-r19 is {2} for both NCP and ECP cases.The value indicated in simultaneous-2-1-HARQ-ACK-CB-Diff-r19 has no meaning for &quot;slot-based + slot based&quot;.A UE supporting this feature shall also indicate support of multiCell-PDSCH-DCI-1-3-DiffSCS-DiffCC-r19.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>simultaneous-2-2-HARQ-ACK-CB-r18Indicates whether the UE supports two subslot based HARQ-ACK codebooks with different priorities to be simultaneously constructed. This capability also indicates support of separate PUCCH configuration for different HARQ-ACK codebooks, 2-level priority of HARQ-ACK for dynamically scheduled PDSCH and SPS PDSCH, a DCI format 1_3 scheduling PDSCH with different HARQ-ACK priorities when only DCI format 0_3/1_3 is configured in USS per BWP, separate configuration of parameters pdsch-HARQ-ACK-Codebook, uci-OnPUSCH and codeBlockGroupTransmission for different HARQ-ACK codebooks, and maximum number of actual PUCCH transmissions for HARQ-ACK within a slot.The supported maximum number of actual PUCCH transmissions for HARQ-ACK within a slot is indicated by sub-SlotConfig-NCP-r16 for NCP for 2-symbol*7 sub-slot configuration, and sub-SlotConfig-ECP-r16 for ECP for 2-symbol*6 sub-slot configuration. For sub-SlotConfig-NCP-r16 and sub-SlotConfig-ECP-r16, if a UE also supports twoHARQ-ACK-Codebook-type2-r16, the UE reports the same values as in twoHARQ-ACK-Codebook-type2-r16.The number of PUCCHs for CSI reporting per slot is not impacted compared with Rel-15 by introducing the new HARQ-ACK CBs.simultaneous-2-2-HARQ-ACK-CB-r18 is applied to the two sub-slot HARQ-ACK codebooks, respectively.simultaneous-2-2-HARQ-ACK-CB-r18 is reported for 2-symbol*7 sub-slot configuration. For 7-symbol*2 sub-slot configuration, the value of simultaneous-2-2-HARQ-ACK-CB-r18 is {2} for both NCP and ECP cases.A UE supporting this feature shall also indicate support of multiPUCCH-r16 and simultaneous-2-1-HARQ-ACK-CB-r18.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>simultaneous-2-2-HARQ-ACK-CB-Diff-r19Indicates whether the UE supports two subslot based HARQ-ACK codebooks with different priorities to be simultaneously constructed. This capability also indicates support of separate PUCCH configuration for different HARQ-ACK codebooks, 2-level priority of HARQ-ACK for dynamically scheduled PDSCH and SPS PDSCH, a DCI format 1_3 scheduling PDSCH with different HARQ-ACK priorities when only DCI format 0_3/1_3 is configured in USS per BWP, separate configuration of parameters pdsch-HARQ-ACK-Codebook, uci-OnPUSCH and codeBlockGroupTransmission for different HARQ-ACK codebooks, and maximum number of actual PUCCH transmissions for HARQ-ACK within a slot.The supported maximum number of actual PUCCH transmissions for HARQ-ACK within a slot is indicated by sub-SlotConfig-NCP-r16 for NCP for 2-symbol*7 sub-slot configuration, and sub-SlotConfig-ECP-r16 for ECP for 2-symbol*6 sub-slot configuration. For sub-SlotConfig-NCP-r16 and sub-SlotConfig-ECP-r16, if a UE also supports twoHARQ-ACK-Codebook-type2-r16, the UE reports the same values as in twoHARQ-ACK-Codebook-type2-r16.The number of PUCCHs for CSI reporting per slot is not impacted compared with Rel-15 by introducing the new HARQ-ACK CBs.simultaneous-2-2-HARQ-ACK-CB-Diff-r19 is applied to the two sub-slot HARQ-ACK codebooks, respectively.simultaneous-2-2-HARQ-ACK-CB-Diff-r19 is reported for 2-symbol*7 sub-slot configuration. For 7-symbol*2 sub-slot configuration, the value of simultaneous-2-2-HARQ-ACK-CB-r18 is {2} for both NCP and ECP cases.A UE supporting this feature shall also indicate support of multiPUCCH-r16 and simultaneous-2-1-HARQ-ACK-CB-Diff-r19.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>simultaneousTxSUL-NonSULIndicates whether the UE supports simultaneous transmission of SRS on an SUL/non-SUL carrier and PUSCH/PUCCH/SRS on the other UL carrier in the same cell. The UE supports simultaneous transmission on an SUL band X and a Non-SUL band Y if it sets this capability parameter for both band X and band Y.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>srs-AntennaSwitching2SP-1Periodic-r17Indicates whether the UE supports maximum 2 SP SRS resource sets and maximum 1 periodic SRS resource set for antenna switching.The UE indicating support of this shall indicate support of supportedSRS-Resources.NOTE:-Applies for all supported xTyR where y&lt;=8;-For xTyR where y&gt;4, if UE does not support this feature, UE supports maximum one SRS resource set for periodic SRS and maximum one SRS resource set for semi-persistent SRS;-For xTyR where y&lt;=4, if UE does not support this feature, UE follows Rel-15 on the number of resource sets for periodic and semi-persistent SRS.The two SP-SRS resource sets are not activated at the same time.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>srs-AntennaSwitching3T3R2SP-1Periodic-r19Indicates whether the UE supports maximum 2 SP SRS resource sets and maximum 1 periodic SRS resource set for 3T3R antenna switching.If UE does not support this feature, the UE only supports maximum one SRS resource set for periodic SRS and maximum one SRS resource set for semi-persistent SRS for 3T3R.A UE supporting this feature shall also indicate support of srs-AntennaSwitching3T3R-r19.NOTE :The two SP-SRS resource sets are not activated at the same time.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>srs-AntennaSwitching3T6R2SP-1Periodic-r19Indicates whether the UE supports maximum 2 SP SRS resource sets and maximum 1 periodic SRS resource set for 3T6R antenna switching.If UE does not support this feature, the UE only supports maximum one SRS resource set for periodic SRS and maximum one SRS resource set for semi-persistent SRS for 3T6R is supported.A UE supporting this feature shall also indicate support of srs-AntennaSwitching3T6R-r19.NOTE :The two SP-SRS resource sets are not activated at the same time.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>srs-AntennaSwitching8T8R2SP-1Periodic-r18Indicates whether the UE supports maximum 2 SP SRS resource sets and maximum 1 periodic SRS resource set for 8T8R antenna switching.A UE supporting this feature shall also indicate support of srs-AntennaSwitching8T8R-r18.NOTE 1:If UE does not support this feature, support maximum one SRS resource set for periodic SRS and maximum one SRS resource set for semi-persistent SRS.NOTE 2:The two SP-SRS resource sets are not activated at the same time. The UE is only allowed to set this field for a band with associated FeatureSetUplinkId set to 0 and when srs-CarrierSwitch is supported on the band.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>srs-ExtensionAperiodicSRS-r17Indicates whether the UE supports 4 aperiodic SRS resource sets for 1T4R and 2 aperiodic resource sets for 1T2R/2T4R.The UE indicating support of this shall indicate support of srs-TxSwitch and supportedSRS-Resources.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>srs-OneAP-SRS-r17Indicates whether the UE supports 1 aperiodic SRS resource sets for 1T4R.The UE indicating support of this feature shall also indicate the support of srs-StartAnyOFDM-Symbol-r16 and srs-TxSwitch.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>srs-PosResources-r16Indicates support of SRS for positioning. UE supporting this feature should also support open loop power control for positioning SRS based on SSB from the serving cell. The capability signalling comprises the following parameters:-maxNumberSRS-PosResourceSetPerBWP-r16 Indicates the max number of SRS Resource Sets for positioning supported by UE per BWP;-maxNumberSRS-PosResourcesPerBWP-r16 indicates the max number of SRS resources for positioning supported by UE per BWP, including periodic, semi-persistent, and aperiodic SRS;-maxNumberSRS-ResourcesPerBWP-PerSlot-r16 indicates the max number of SRS resources configured by SRS-Resource and SRS-PosResource-r16 supported by UE per BWP, including periodic, semi-persistent, and aperiodic SRS;-maxNumberPeriodicSRS-PosResourcesPerBWP-r16 indicates the max number of periodic SRS resources for positioning supported by UE per BWP;-maxNumberPeriodicSRS-PosResourcesPerBWP-PerSlot-r16 indicates the max number of periodic SRS resources for positioning supported by UE per BWP per slot.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>srs-PosResourceAP-r16Indicates support of aperiodic SRS for positioning. The UE can include this field only if the UE supports srs-PosResources-r16. Otherwise, the UE does not include this field. The capability signalling comprises the following parameters:-maxNumberAP-SRS-PosResourcesPerBWP-r16 indicates the max number of aperiodic SRS resources for positioning supported by UE per BWP;-maxNumberAP-SRS-PosResourcesPerBWP-PerSlot-r16 indicates the max number of aperiodic SRS resources for positioning supported by UE per BWP per slot.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>srs-PosResourceSP-r16Indicates support of semi-persistent SRS for positioning. The UE can include this field only if the UE supports srs-PosResources-r16. Otherwise, the UE does not include this field. The capability signalling comprises the following parameters:-maxNumberSP-SRS-PosResourcesPerBWP-r16 indicates the max number of semi-persistent SRS resources for positioning supported by UE per BWP;-maxNumberSP-SRS-PosResourcesPerBWP-PerSlot-r16 indicates the max number of semi-persistent SRS resources for positioning supported by UE per BWP per slot</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>supportedSRS-ResourcesDefines support of SRS resources. The capability signalling comprising indication of:-maxNumberAperiodicSRS-PerBWP indicates supported maximum number of aperiodic SRS resources that can be configured for the UE per each BWP-maxNumberAperiodicSRS-PerBWP-PerSlot indicates supported maximum number of aperiodic SRS resources per slot in the BWP-maxNumberPeriodicSRS-PerBWP indicates supported maximum number of periodic SRS resources per BWP-maxNumberPeriodicSRS-PerBWP-PerSlot indicates supported maximum number of periodic SRS resources per slot in the BWP-maxNumberSemiPersistentSRS-PerBWP indicate supported maximum number of semi-persistent SRS resources that can be configured for the UE per each BWP-maxNumberSemiPersistentSRS-PerBWP-PerSlot indicates supported maximum number of semi-persistent SRS resources per slot in the BWP-maxNumberSRS-Ports-PerResource indicates supported maximum number of SRS antenna port per each SRS resource.If this field is not included, the UE supports one periodic, one aperiodic, no semi-persistent SRS resources per BWP and one periodic, one aperiodic, no semi-persistent SRS resources per BWP per slot and one SRS antenna port per SRS resource.</td>
+    <td>FS</td>
+    <td>FD</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>tdcp-NumberDelayValue-r18Indicates whether the UE supports number Y&gt;1 of delay values for which TDCP is reported.A UE supporting this feature shall also indicate support of tdcp-Report-r18.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>threePortsPTRS-PUSCH-r19Indicates the number of supported PTRS ports for 3-antenna-port PUSCH transmission.A UE supporting this feature shall also indicate support of nonCodebook-3TxPUSCH-SingleTRP-r19 or codebook-3TxPUSCH-SingleTRP-r19.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoHARQ-ACK-Codebook-type1-r16Indicates whether the UE supports two HARQ-ACK codebooks with up to one subslot based HARQ-ACK codebook (i.e. slot-based + slot-based, or slot-based + subslot based) simultaneously constructed for supporting HARQ-ACK codebooks with different priorities at a UE. The capability signalling comprises the following parameters:-sub-SlotConfig-NCP-r16 indicates the maximum number of actual PUCCH transmissions for HARQ-ACK within a slot for NCP with 2-symbol*7 sub-slot configuration;-sub-SlotConfig-ECP-r16 indicates the maximum number of actual PUCCH transmissions for HARQ-ACK within a slot for ECP with 2-symbol*6 sub-slot configuration;For the 7-symbol*2 sub-slot configuration of NCP or the 6-symbol*2 sub-slot configuration of ECP, the value of the maximum number of actual PUCCH transmissions for HARQ-ACK within a slot is {2}.NOTE 1:If the UE indicates support of this feature and is simultaneously configured with two slot-based HARQ-ACK codebooks:-whether the UE supports two PUCCH of format 0 or 2 in consecutive symbols in the same slot for each HARQ-ACK codebook is subject to the capability reported by twoPUCCH-F0-2-ConsecSymbols.-whether the UE supports one PUCCH format 0 or 2 and one PUCCH format 1, 3 or 4 in the same slot for each HARQ-ACK codebook is subject to the capability reported by onePUCCH-LongAndShortFormat.-whether the UE supports two PUCCH transmissions in the same slot for each HARQ-ACK codebook not covered by twoPUCCH-F0-2-ConsecSymbols and onePUCCH-LongAndShortFormat is subject to the capability reported by twoPUCCH-AnyOthersInSlot.NOTE 2:If a UE reports both multiPUCCH-r16 and twoHARQ-ACK-Codebook-type1-r16, it can support two slot-based HARQ-ACK codebooks, and one slot-based and one-sub-slot-based HARQ-ACK codebooks. If a UE reports twoHARQ-ACK-Codebook-type1-r16 but does not report multiPUCCH-r16, it can only support two slot-based HARQ-ACK codebooks.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoHARQ-ACK-Codebook-type2-r16Indicates whether the UE supports two subslot based HARQ-ACK codebooks simultaneously constructed for supporting HARQ-ACK codebooks with different priorities at a UE. The capability signalling comprises the following parameters:-sub-SlotConfig-NCP-r16 indicates the maximum number of actual PUCCH transmissions for HARQ-ACK within a slot for NCP with 2-symbol*7 sub-slot configuration;-sub-SlotConfig-ECP-r16 indicates the maximum number of actual PUCCH transmissions for HARQ-ACK within a slot for ECP with 2-symbol*6 sub-slot configuration;For the 7-symbol*2 sub-slot configuration of NCP or the 6-symbol*2 sub-slot configuration of ECP, the value of the maximum number of actual PUCCH transmissions for HARQ-ACK within a slot is {2}.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-GroupIndicates whether two PUCCH group in CA with a same numerology across CCs for data and control channel [at a given time] is supported by the UE. For NR CA, two PUCCH group is supported with the same numerology across NR carriers for data and control channel at a given time. For (NG)EN-DC/NE-DC, two PUCCH group is supported with the same numerology across NR carriers for data and control channel at a given time, wherein an NR PUCCH group is configured in FR1 and another NR PUCCH group is configured in FR2. The UE supports two PUCCH groups with PUCCH on a band X and a band Y if it sets this capability parameter for both band X and band Y.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-Type1-r16Indicates whether the UE supports two PUCCH of format 0 or 2 in the same subslot for a single 7*2-symbol subslot based HARQ-ACK codebook.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-Type2-r16Indicates whether the UE supports two PUCCH of format 0 or 2 in consecutive symbols in the same subslot for a single 2*7-symbol subslot based HARQ-ACK codebook.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-Type3-r16Indicates whether the UE supports one PUCCH format 0 or 2 and one PUCCH format 1, 3 or 4 in the same subslot for a single 2*7-symbol HARQ-ACK codebook.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-Type4-r16Indicates whether the UE supports two PUCCH transmissions in the same subslot for a single 2*7-symbol HARQ-ACK codebook which are not covered by twoPUCCH-Type2-r16 and twoPUCCH-Type3-r16.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-Type5-r16Indicates whether the UE supports two PUCCH of format 0 or 2 for two HARQ-ACK codebooks with one 7*2-symbol subslot based HARQ-ACK codebook and one slot based HARQ-ACK codebook.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-Type6-r16Indicates whether the UE supports two PUCCH of format 0 or 2 in consecutive symbols in the same subslot for two HARQ-ACK codebooks with one 2*7-symbol subslot based HARQ-ACK codebook and one slot based HARQ-ACK codebook.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-Type7-r16Indicates whether the UE supports two PUCCH of format 0 or 2 in consecutive symbols in the same subslot for two subslot based HARQ-ACK codebooks.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-Type8-r16Indicates whether the UE supports one PUCCH format 0 or 2 and one PUCCH format 1, 3 or 4 in the same subslot for two HARQ-ACK codebooks with one 2*7-symbol subslot based HARQ-ACK codebook and one slot based HARQ-ACK codebook.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-Type9-r16Indicates whether the UE supports one PUCCH format 0 or 2 and one PUCCH format 1, 3 or 4 in the same subslot for two subslot based HARQ-ACK codebooks.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-Type10-r16Indicates whether the UE supports two PUCCH transmissions in the same subslot for two HARQ-ACK codebooks with one 2*7-symbol subslot and one slot based HARQ-ACK codebook which are not covered by twoPUCCH-Type6-r16 and twoPUCCH-Type8-r16.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>twoPUCCH-Type11-r16Indicates whether the UE supports two PUCCH transmissions in the same subslot for two subslot based HARQ-ACK codebooks which are not covered by twoPUCCH-Type7-r16 and twoPUCCH-Type9-r16.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>txDiversity2Tx-r18Indicates whether the UE supports 2Tx Tx diversity for the band configured.This capability is applicable for both single band (non-CA) case and CA case.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>txDiversity4Tx-r18Indicates whether the UE supports 4Tx Tx diversity for the band configured.This capability is applicable for both single band (non-CA) case and CA case.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>tx-Support-UL-GapFR2-r17Indicates whether the UE supports UL transmission in FR2 bands within an FR2 UL gap when the FR2 UL gap is activated in inter-band UL CA. The UE which indicates support for tx-Support-UL-GapFR2-r17 shall also indicate support for ul-GapFR2-r17 in an FR2 band.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>No</td>
+    <td>FR2 only</td>
+  </tr>
+  <tr>
+    <td>ue-PowerClassPerBandPerBC-r17, ue-PowerClassPerBandPerBC-v1820Indicates the UE power class per band per band combination.NOTE:Void.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>ul-CancellationCrossCarrier-r16Indicates whether the UE supports UL cancellation scheme for cross-carrier comprised of the following functional components:-Supports group common DCI (i.e. DCI format 2_4) for cancellation indication on a different DL CC than that scheduling PUSCH or SRS;-UL cancellation for PUSCH. Cancellation is applied to each PUSCH repetition individually in case of PUSCH repetitions;-UL cancellation for SRS symbols that overlap with the cancelled symbols.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-CancellationSelfCarrier-r16Indicates whether the UE supports UL cancellation scheme for self-carrier comprised of the following functional components:-Supports group common DCI (i.e. DCI format 2_4) for cancellation indication on the same DL CC as that scheduling PUSCH or SRS;-UL cancellation for PUSCH. Cancellation is applied to each PUSCH repetition individually in case of PUSCH repetitions;-UL cancellation for SRS symbols that overlap with the cancelled symbols.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-DMRS-SingleDCI-M-TRP-r18Indicates whether the UE supports UL DMRS with Single-DCI based M-TRP.A UE supporting this feature shall also indicate support of dmrs-TypeA-r18 or pusch-TypeB-DMRS-r18.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-DMRS-M-DCI-M-TRP-r18Indicates whether the UE supports UL DMRS with M-DCI based M-TRP.A UE supporting this feature shall also indicate support of dmrs-TypeA-r18 or pusch-TypeB-DMRS-r18.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-FullPwrMode-3Port-r19Indicates whether the UE supports full-power Mode 0 for codebook-based for 3 Tx operation.A UE supporting this feature shall also indicate support of codebook-3TxPUSCH-SingleTRP-r19.NOTE:If a UE does not support this feature, Rel-15 power scaling procedures apply.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-FullPwrMode-r16Indicates the UE support of UL full power transmission mode of fullpower as specified in clause 7.1 of TS 38.213 [11]. If the UE indicates this capability the UE also indicates the support of codebook based PUSCH MIMO transmission using mimo-CB-PUSCH and the support of PUSCH codebook coherency subset using pusch-TransCoherence.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-FullPwrMode1-r16Indicates the UE support of UL full power transmission mode of fullpowerMode1. If the UE indicates this capability the UE also indicates the support of codebook based PUSCH MIMO transmission using mimo-CB-PUSCH and the support of PUSCH codebook coherency subset using pusch-TransCoherence.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-FullPwrMode2-MaxSRS-ResInSet-r16Indicates the UE support of the maximum number of SRS resources in one SRS resource set with usage set to &#x27;codebook&#x27; for uplink full power Mode 2 operation. If the UE indicates this capability the UE also indicates the support of codebook based PUSCH MIMO transmission using mimo-CB-PUSCH and the support of PUSCH codebook coherency subset using pusch-TransCoherence. A UE supports this feature shall support at least full power operation with single port.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-FullPwrMode2-SRSConfig-diffNumSRSPorts-r16Indicates the UE supported SRS configuration with different number of antenna ports per SRS resource for uplink full power Mode 2 operation. The possible different number of antenna ports that can be configured for a SRS resource are as follow:-value p1-2 means that each SRS resource can be configured with 1 port or 2 ports-value p1-4 means that each SRS resource can be configured with 1 port or 4 ports-value p1-2-4 means that each SRS resource can be configured with 1 port or 2 ports or 4 portsUE indicates support of this feature shall also indicate support of ul-FullPwrMode2-MaxSRS-ResInSet.NOTE:The values p1-2, p1-4 or p1-2-4 can be used if ul-FullPwrMode2-MaxSRS-ResInSet is reported as n2 or n4.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-FullPwrMode2-TPMIGroup-r16Indicates the UE supported TPMI group(s) which delivers full power. The capability signalling comprises the following values:-twoPorts-r16 indicates a 2-bit bitmap, where the leading / leftmost bit (bit 0) corresponds to {TPMI index = 0}. The next bit (bit 1) corresponds to {TPMI index = 1} and the TPMI index is as specified in Table 6.3.1.5-1 of TS 38.211 [6]-fourPortsNonCoherent-r16 indicates the TPMI groups {G0-3}-fourPortsPartialCoherent-r16 indicates the TPMI groups {G0-6}UE indicates support of this feature shall also indicate support of ul-FullPwrMode2-MaxSRS-ResInSet.Definition of G0~G6 can be found in the table below:IDTPMI groupsG0,G1, , ,G2, , , , G3, ,, G4, ,G5, ,, ,, G6, ,,, ,, , ,,NOTE 1:When a full coherent UE operates in mode 2, it reports TPMIs the same as a partial-coherent UE.NOTE 2:For 4 port partial-coherent or full-coherent UE, UE can report: 2-port {2-bit bitmap} and one of 4-port non-coherent {G0~G3} and one of 4-port partial-coherent {G0~G6}For 4 port non-coherent UE, UE can report: 2-port {2-bit bitmap} and one of 4-port non-coherent {G0~G3}For 2 port UE, UE can report: 2-port {2-bit bitmap}NOTE 3:A UE that supports this feature must report at least one of the values.1210001210001200101210000100121000120100120010,121000010012100100001200100100,12100010001000121000010012100100001200100100121000100010001210101210-10,1210j01210-j0,12100001001210101210-10,1210j01210-j0121000010012100100001200100100121000100010001210101210-10,1210j01210-j0 12010112010-1,12010j12010-j12100100001210000100121000000112001001001200100001, 1200001001,12100010001000</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-IntraUE-Mux-r16Indicates whether the UE supports intra-UE multiplexing/prioritization of overlapping PUCCH/PUCCH and PUCCH/PUSCH with two priority levels in the physical layer. This field includes the following parameters:-pusch-PreparationLowPriority-r16 indicates the additional number of symbols needed beyond the PUSCH preparation time for cancelling a low priority UL transmission;-pusch-PreparationHighPriority-r16 indicates the additional number of the preparation time needed for the high priority UL transmission that cancels a low priority UL transmission.The value sym0 denotes 0 symbol, sym1 denotes one symbol, and so on.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-IntraUE-MuxEnh-r18Indicates whether the UE supports intra-UE multiplexing/prioritization of overlapping PUCCH/PUCCH and PUCCH/PUSCH with two priority levels in physical layer for DCI format 1_3/0_3, including-Configuration of PHY priority level for CG PUSCH and SR, and dynamic indication of priority level for dynamic PUSCH with a single DCI format 0_3-Multiplexing/prioritization between UL channels/signals with the same PHY priority level-Prioritization between UL channels/signals with different PHY priority levels.The capability signalling comprises the following parameters:-pusch-PreparationLowPriority-r18 indicates the additional number of symbols needed beyond the PUSCH preparation time for cancelling a low priority UL transmission. The UE reports the same value as pusch-PreparationLowPriority-r16 if the UE also supports ul-IntraUE-Mux-r16;-pusch-PreparationHighPriority-r18 indicates the additional number of symbols of the preparation time needed for the high priority UL transmission that cancels a low priority UL transmission. The UE reports the same value as pusch-PreparationHighPriority-r16 if the UE also supports ul-IntraUE-Mux-r16.The value sym0 denotes 0 symbol, sym1 denotes one symbol, and so on.A UE supporting this feature shall also indicate support of at least one of multiCell-PDSCH-DCI-1-3-SameSCS-r18, multiCell-PDSCH-DCI-1-3-DiffSCS-r18, multiCell-PUSCH-DCI-0-3-SameSCS-r18, and multiCell-PUSCH-DCI-0-3-DiffSCS-r18.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-IntraUE-MuxEnh-Diff-r19Indicates whether the UE supports intra-UE multiplexing/prioritization of overlapping PUCCH/PUCCH and PUCCH/PUSCH with two priority levels in physical layer for DCI format 1_3/0_3, including-Configuration of PHY priority level for CG PUSCH and SR, and dynamic indication of priority level for dynamic PUSCH with a single DCI format 0_3-Multiplexing/prioritization between UL channels/signals with the same PHY priority level-Prioritization between UL channels/signals with different PHY priority levels.The capability signalling comprises the following parameters:-pusch-PreparationLowPriority-r19 indicates the additional number of symbols needed beyond the PUSCH preparation time for cancelling a low priority UL transmission. The UE reports the same value as pusch-PreparationLowPriority-r16 if the UE also supports ul-IntraUE-Mux-r16;-pusch-PreparationHighPriority-r19 indicates the additional number of symbols of the preparation time needed for the high priority UL transmission that cancels a low priority UL transmission. The UE reports the same value as pusch-PreparationHighPriority-r16 if the UE also supports ul-IntraUE-Mux-r16.The value sym0 denotes 0 symbol, sym1 denotes one symbol, and so on.A UE supporting this feature shall also indicate support of at least one of multiCell-PDSCH-DCI-1-3-DiffSCS-DiffCC-r19 and multiCell-PUSCH-DCI-0-3-DiffSCS-DiffCC-r19.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ul-MCS-TableAlt-DynamicIndicationIndicates whether the UE supports dynamic indication of MCS table using MCS-C-RNTI for PUSCH.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>zeroSlotOffsetAperiodicSRSIndicates whether the UE supports 0 slot offset between aperiodic SRS triggering and transmission, for SRS for CB PUSCH and antenna switching on FR1.</td>
+    <td>FS</td>
+    <td>No</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+</table>

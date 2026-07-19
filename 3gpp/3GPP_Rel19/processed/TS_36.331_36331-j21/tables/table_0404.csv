@@ -1,0 +1,5 @@
+Conditional presence,Explanation
+EnhPowerControl,"This field is optional present, Need OR, if PowerRampingParameters-NB-v1450 is included in SIB2-NB. Otherwise the field is not present."
+NTN,"The field is mandatory present for NTN. Otherwise, the field is not present."
+TDD,"The field is optionally present, Need OR, for TDD; otherwise the field is not present and the UE shall delete any existing value for this field."
+TDD1,The field is mandatory present for TDD; otherwise the field is not present and the UE shall delete any existing value for this field.

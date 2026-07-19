@@ -1,0 +1,9 @@
+Field,Bit width,,,
+,Rank = 1,,Rank = 2,
+,PTI=0,PTI=1,PTI=0,PTI=1
+Wide-band CQI,4,0,4,0
+Sub-band CQI,0,4,0,4
+Spatial differential CQI,0,0,3,3
+Wide-band i2,0,0,0,0
+Sub-band i2,0,0,0,0
+Sub-band label,0,1 or 2,0,1 or 2

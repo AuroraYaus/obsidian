@@ -1,0 +1,1945 @@
+Change history,,,,,,,
+Date,TSG #,TSG Doc.,CR,Rev,Cat,Subject/Comment,New version
+12/2007,RP-38,RP-070920,-,,,Approved at TSG-RAN #38 and placed under Change Control,8.0.0
+03/2008,RP-39,RP-080163,0001,4,,CR to 36.331 with Miscellaneous corrections,8.1.0
+03/2008,RP-39,RP-080164,0002,2,,CR to 36.331 to convert RRC to agreed ASN.1 format,8.1.0
+05/2008,RP-40,RP-080361,0003,1,,CR to 36.331 on Miscellaneous clarifications/ corrections,8.2.0
+09/2008,RP-41,RP-080693,0005,-,,CR on Miscellaneous corrections and clarifications,8.3.0
+12/2008,RP-42,RP-081021,0006,-,,Miscellaneous corrections and clarifications,8.4.0
+03/2009,RP-43,RP-090131,0007,-,,Correction to the Counter Check procedure,8.5.0
+,RP-43,RP-090131,0008,-,,CR to 36.331-UE Actions on Receiving SIB11,8.5.0
+,RP-43,RP-090131,0009,1,,Spare usage on BCCH,8.5.0
+,RP-43,RP-090131,0010,-,,Issues in handling optional IE upon absence in GERAN NCL,8.5.0
+,RP-43,RP-090131,0011,-,,CR to 36.331 on Removal of useless RLC re-establishment at RB release,8.5.0
+,RP-43,RP-090131,0012,1,,Clarification to RRC level padding at PCCH and BCCH,8.5.0
+,RP-43,RP-090131,0013,-,,Removal of Inter-RAT message,8.5.0
+,RP-43,RP-090131,0014,-,,Padding of the SRB-ID for security input,8.5.0
+,RP-43,RP-090131,0015,-,,Validity of ETWS SIB,8.5.0
+,RP-43,RP-090131,0016,1,,Configuration of the Two-Intervals-SPS,8.5.0
+,RP-43,RP-090131,0017,-,,Corrections on Scaling Factor Values of Qhyst,8.5.0
+,RP-43,RP-090131,0018,1,,Optionality of srsMaxUppts,8.5.0
+,RP-43,RP-090131,0019,-,,CR for discussion on field name for common and dedicated IE,8.5.0
+,RP-43,RP-090131,0020,-,,Corrections to Connected mode mobility,8.5.0
+,RP-43,RP-090131,0021,-,,Clarification regarding the measurement reporting procedure,8.5.0
+,RP-43,RP-090131,0022,1,,Corrections on s-Measure,8.5.0
+,RP-43,RP-090131,0023,1,,R1 of CR0023 (R2-091029) on combination of SPS and TTI bundling for TDD,8.5.0
+,RP-43,RP-090131,0024,-,,L3 filtering for path loss measurements,8.5.0
+,RP-43,RP-090131,0025,1,,S-measure handling for reportCGI,8.5.0
+,RP-43,RP-090131,0026,1,,Measurement configuration clean up,8.5.0
+,RP-43,RP-090131,0027,-,,Alignment of measurement quantities for UTRA,8.5.0
+,RP-43,RP-090131,0028,-,,CR to 36.331 on L1 parameters ranges alignment,8.5.0
+,RP-43,RP-090131,0029,-,,Default configuration for transmissionMode,8.5.0
+,RP-43,RP-090131,0030,-,,"CR to 36.331 on RRC Parameters for MAC, RLC and PDCP",8.5.0
+,RP-43,RP-090131,0031,1,,CR to 36.331 - Clarification on Configured PRACH Freq Offset,8.5.0
+,RP-43,RP-090131,0032,-,,Clarification on TTI bundling configuration,8.5.0
+,RP-43,RP-090131,0033,1,,Update of R2-091039 on Inter-RAT UE Capability,8.5.0
+,RP-43,RP-090133,0034,-,,Feature Group Support Indicators,8.5.0
+,RP-43,RP-090131,0036,-,,Corrections to RLF detection,8.5.0
+,RP-43,RP-090131,0037,-,,Indication of Dedicated Priority,8.5.0
+,RP-43,RP-090131,0038,2,,Security Clean up,8.5.0
+,RP-43,RP-090131,0039,-,,Correction of TTT value range,8.5.0
+,RP-43,RP-090131,0040,-,,Correction on CDMA measurement result IE,8.5.0
+,RP-43,RP-090131,0041,1,,Clarification of Measurement Reporting,8.5.0
+,RP-43,RP-090131,0042,-,,Spare values in DL and UL Bandwidth in MIB and SIB2,8.5.0
+,RP-43,RP-090131,0044,1,,Clarifications to System Information Block Type 8,8.5.0
+,RP-43,RP-090131,0045,-,,Reception of ETWS secondary notification,8.5.0
+,RP-43,RP-090131,0046,1,,Validity time for ETWS message Id and Sequence No,8.5.0
+,RP-43,RP-090131,0047,-,,CR for Timers and constants values used during handover to E-UTRA,8.5.0
+,RP-43,RP-090131,0048,-,,Inter-RAT Security Clarification,8.5.0
+,RP-43,RP-090131,0049,-,,CR to 36.331 on consistent naming of 1xRTT identifiers,8.5.0
+,RP-43,RP-090131,0050,-,,Capturing RRC behavior regarding NAS local release,8.5.0
+,RP-43,RP-090131,0051,-,,Report CGI before T321 expiry and UE null reporting,8.5.0
+,RP-43,RP-090131,0052,-,,System Information and 3 hour validity,8.5.0
+,RP-43,RP-090131,0053,1,,Inter-Node AS Signalling,8.5.0
+,RP-43,RP-090131,0054,-,,"Set of values for the parameter ""messagePowerOffsetGroupB""",8.5.0
+,RP-43,RP-090131,0055,-,,CR to paging reception for ETWS capable UEs in RRC_CONNECTED,8.5.0
+,RP-43,RP-090131,0056,1,,CR for CSG related items in 36.331,8.5.0
+,RP-43,RP-090131,0057,1,,SRS common configuration,8.5.0
+,RP-43,RP-090131,0058,-,,RRC processing delay,8.5.0
+,RP-43,RP-090131,0059,-,,CR for HNB Name,8.5.0
+,RP-43,RP-090131,0060,3,,Handover to EUTRA delta configuration,8.5.0
+,RP-43,RP-090131,0063,-,,Delivery of Message Identifier and Serial Number to upper layers for ETWS,8.5.0
+,RP-43,RP-090131,0066,-,,Clarification on the maximum size of cell lists,8.5.0
+,RP-43,RP-090131,0067,-,,Missing RRC messages in 'Protection of RRC messages',8.5.0
+,RP-43,RP-090131,0069,1,,Clarification on NAS Security Container,8.5.0
+,RP-43,RP-090131,0071,-,,Extension of range of CQI/PMI configuration index,8.5.0
+,RP-43,RP-090131,0072,1,,Access barring alleviation in RRC connection establishment,8.5.0
+,RP-43,RP-090367,0077,6,,Corrections to feature group support indicators,8.5.0
+,RP-43,RP-090131,0078,-,,CR from email discussion to capture DRX and TTT handling,8.5.0
+,RP-43,RP-090131,0079,1,,Need Code handling on BCCH messages,8.5.0
+,RP-43,RP-090131,0080,-,,Unification of T300 and T301 and removal of miscallaneous FFSs,8.5.0
+,RP-43,RP-090131,0084,1,,Proposed CR modifying the code-point definitions of neighbourCellConfiguration,8.5.0
+,RP-43,RP-090131,0087,2,,Remove Redundant Optionality in SIB8,8.5.0
+,RP-43,RP-090131,0089,-,,Corrections to the generic error handling,8.5.0
+,RP-43,RP-090131,0090,-,,Configurability of T301,8.5.0
+,RP-43,RP-090131,0091,1,,Correction related to TTT,8.5.0
+,RP-43,RP-090131,0095,-,,CR for 36.331 on SPS-config,8.5.0
+,RP-43,RP-090131,0096,2,,CR for Deactivation of periodical measurement,8.5.0
+,RP-43,RP-090131,0099,2,,SMC and reconfiguration,8.5.0
+,RP-43,RP-090131,0101,-,,TDD handover,8.5.0
+,RP-43,RP-090131,0102,-,,Corrections to system information acquisition,8.5.0
+,RP-43,RP-090131,0106,-,,Some Corrections and Clarifications to 36.331,8.5.0
+,RP-43,RP-090131,0109,-,,Clarification on the Maximum number of ROHC context sessions parameter,8.5.0
+,RP-43,RP-090131,0110,-,,Transmission of rrm-Config at Inter-RAT Handover,8.5.0
+,RP-43,RP-090131,0111,1,,Use of SameRefSignalsInNeighbor parameter,8.5.0
+,RP-43,RP-090131,0112,-,,Default serving cell offset for measurement event A3,8.5.0
+,RP-43,RP-090131,0114,-,,dl-EARFCN missing in HandoverPreparationInformation,8.5.0
+,RP-43,RP-090131,0115,-,,Cleanup of references to 36.101,8.5.0
+,RP-43,RP-090131,0117,-,,Correction to the value range of UE-Categories,8.5.0
+,RP-43,RP-090131,0122,1,,Correction on RRC connection re-establishment,8.5.0
+,RP-43,RP-090131,0124,-,,Performing Measurements to report CGI for CDMA2000,8.5.0
+,RP-43,RP-090131,0125,-,,CDMA2000-SystemTimeInfo in VarMeasurementConfiguration,8.5.0
+,RP-43,RP-090131,0126,-,,UE Capability Information for CDMA2000 1xRTT,8.5.0
+,RP-43,RP-090131,0127,-,,CDMA2000 related editorial changes,8.5.0
+,RP-43,RP-090131,0128,-,,Draft CR to 36.331 on State mismatch recovery at re-establishment,8.5.0
+,RP-43,RP-090131,0129,1,,Draft CR to 36.331 on Renaming of AC barring related IEs,8.5.0
+,RP-43,RP-090131,0130,2,,Draft CR to 36.331 on Inheriting of dedicated priorities at inter-RAT reselection,8.5.0
+,RP-43,RP-090131,0135,-,,"Proposed CR to 36.331 Description alignment for paging parameter, nB",8.5.0
+,RP-43,RP-090131,0139,2,,Miscellaneous corrections and clarifications resulting from ASN.1 review,8.5.0
+,RP-43,RP-090131,0141,1,,Correction regarding Redirection Information fo GERAN,8.5.0
+,RP-43,RP-090131,0142,-,,Further ASN.1 review related issues,8.5.0
+,RP-43,RP-090131,0143,-,,Periodic measurements,8.5.0
+,RP-43,RP-090131,0144,1,,"Further analysis on code point ""OFF"" for ri-ConfigIndex",8.5.0
+,RP-43,RP-090131,0145,1,,Adding and deleting same measurement or configuration in one message,8.5.0
+,RP-43,RP-090131,0147,-,,Corrections to IE dataCodingScheme in SIB11,8.5.0
+,RP-43,RP-090131,0148,-,,Clarification on Mobility from E-UTRA,8.5.0
+,RP-43,RP-090131,0149,-,,"36.331 CR related to ""not applicable""",8.5.0
+,RP-43,RP-090131,0150,1,,UE radio capability transfer,8.5.0
+,RP-43,RP-090131,0151,-,,CR to 36.331 on value of CDMA band classes,8.5.0
+,RP-43,RP-090131,0152,-,,Corrections to DRB modification,8.5.0
+,RP-43,RP-090131,0153,-,,Correction to presence condition for pdcp-config,8.5.0
+,RP-43,RP-090131,0155,-,,TDD HARQ-ACK feedback mode,8.5.0
+,RP-43,RP-090275,0157,-,,Corrections regarding use of carrierFreq for CDMA (SIB8) and GERAN (measObject),8.5.0
+,RP-43,RP-090321,0156,1,,Sending of GERAN SI/PSI information at Inter-RAT Handover,8.5.0
+,RP-43,RP-090339,0158,-,,Clarification of CSG support,8.5.0
+06/2009,RP-44,RP-090516,0159,-,,Octet alignment of VarShortMAC-Input,8.6.0
+,RP-44,RP-090516,0160,3,,Minor corrections to the feature grouping,8.6.0
+,RP-44,RP-090516,0161,-,,Security clarification,8.6.0
+,RP-44,RP-090516,0162,1,,Sending of GERAN SI/PSI information at Inter-RAT Handover,8.6.0
+,RP-44,RP-090516,0163,1,,Correction of UE measurement model,8.6.0
+,RP-44,RP-090516,0164,-,,Restricting the reconfiguration of UM RLC SN field size,8.6.0
+,RP-44,RP-090516,0165,1,,36.331 CR on Clarification on cell change order from GERAN to E-UTRAN,8.6.0
+,RP-44,RP-090516,0166,-,,36.331 CR - Handling of expired TAT and failed D-SR,8.6.0
+,RP-44,RP-090516,0167,1,,Proposed CR to 36.331 Clarification on mandatory information in AS-Config,8.6.0
+,RP-44,RP-090516,0168,2,,Miscellaneous small corrections,8.6.0
+,RP-44,RP-090516,0173,-,,Clarification on the basis of delta signalling,8.6.0
+,RP-44,RP-090516,0177,-,,CR on Alignment of CCCH and DCCH handling of missing mandatory field,8.6.0
+,RP-44,RP-090516,0180,2,,Handling of Measurement Context During HO Preparation,8.6.0
+,RP-44,RP-090516,0181,-,,Clarification of key-eNodeB-Star in AdditionalReestabInfo,8.6.0
+,RP-44,RP-090516,0182,1,,UE Capability Transfer,8.6.0
+,RP-44,RP-090516,0186,1,,Clarification regarding mobility from E-UTRA in-between SMC and SRB2/DRB setup,8.6.0
+,RP-44,RP-090516,0188,1,,Correction and completion of specification conventions,8.6.0
+,RP-44,RP-090516,0195,2,,RB combination in feature group indicator,8.6.0
+,RP-44,RP-090516,0196,1,,CR for need code for fields in mobilityControlInfo,8.6.0
+,RP-44,RP-090497,0197,-,,Alignment of pusch-HoppingOffset with 36.211,8.6.0
+,RP-44,RP-090570,0198,-,,Explicit srb-Identity values for SRB1 and SRB2,8.6.0
+,RP-44,RP-090516,0199,-,,Removing use of defaultValue for mac-MainConfig,8.6.0
+09/2009,RP-45,RP-090906,0200,-,,Proposed update of the feature grouping,8.7.0
+,RP-45,RP-090906,0201,-,,Clarification on measurement object configuration for serving frequency,8.7.0
+,RP-45,RP-090906,0202,-,,Correction regarding SRVCC,8.7.0
+,RP-45,RP-090906,0203,-,,Indication of DRB Release during HO,8.7.0
+,RP-45,RP-090906,0204,1,,Correction regarding application of dedicated resource configuration upon handover,8.7.0
+,RP-45,RP-090906,0205,-,,REL-9 protocol extensions in RRC,8.7.0
+,RP-45,RP-090906,0206,-,,In-order delivery of NAS PDUs at RRC connection reconfiguration,8.7.0
+,RP-45,RP-090906,0207,-,,Correction on Threshold of Measurement Event,8.7.0
+,RP-45,RP-090906,0210,-,,Clarification on dedicated resource of RA procedure,8.7.0
+,RP-45,RP-090906,0213,1,,Cell barring when MasterInformationBlock or SystemInformationBlock1 is missing,8.7.0
+,RP-45,RP-090915,0218,-,,Security threat with duplicate detection for ETWS,8.7.0
+,RP-45,RP-090906,0224,-,,Clarification on supported handover types in feature grouping,8.7.0
+,RP-45,RP-090906,0250,1,,Handling of unsupported / non-comprehended frequency band and emission requirement,8.7.0
+,RP-45,RP-090906,0251,-,,RB combinations in feature group indicator 20,8.7.0
+09/2009,RP-45,RP-090934,0220,1,,Introduction of Per-QCI radio link failure timers (option 1),9.0.0
+,RP-45,RP-090926,0222,-,,Null integrity protection algorithm,9.0.0
+,RP-45,RP-090926,0223,-,,Emergency Support Indicator in BCCH,9.0.0
+,RP-45,RP-090934,0230,2,,CR to 36.331 for Enhanced CSFB to 1xRTT with concurrent PS handover,9.0.0
+,RP-45,RP-090934,0243,-,,REL-9 on Miscellaneous editorial corrections,9.0.0
+,RP-45,RP-090934,0247,-,,Periodic CQI/PMI/RI masking,9.0.0
+,RP-45,RP-090933,0252,-,,Introduction of CMAS,9.0.0
+12/2009,RP-46,RP-091346,0253,1,,(Rel-9)-clarification on the description of redirectedCarrierInfo,9.1.0
+,RP-46,RP-091346,0254,1,,Adding references to RRC processing delay for inter-RAT mobiltiy messages,9.1.0
+,RP-46,RP-091314,0256,-,,Alignment of srs-Bandwidth with 36.211,9.1.0
+,RP-46,RP-091341,0257,5,,Baseline CR capturing eMBMS agreements,9.1.0
+,RP-46,RP-091343,0258,3,,Capturing agreements on inbound mobility,9.1.0
+,RP-46,RP-091314,0260,-,,Clarification of preRegistrationZoneID/secondaryPreRegistrationZoneID,9.1.0
+,RP-46,RP-091346,0261,-,,Clarification on NCC for IRAT HO,9.1.0
+,RP-46,RP-091314,0263,-,,Clarification on P-max,9.1.0
+,RP-46,RP-091314,0265,1,,Clarification on the definition of maxCellMeas,9.1.0
+,RP-46,RP-091346,0266,-,,Correction of q-RxLevMin reference in SIB7,9.1.0
+,RP-46,RP-091346,0267,-,,Correction on SPS-Config field descriptions,9.1.0
+,RP-46,RP-091346,0268,1,,correction on the definition of CellsTriggeredList,9.1.0
+,RP-46,RP-091345,0269,-,,Correction relating to CMAS UE capability,9.1.0
+,RP-46,RP-091314,0271,1,,Feature grouping bit for SRVCC handover,9.1.0
+,RP-46,RP-091314,0272,1,,Correction and completion of extension guidelines,9.1.0
+,RP-46,RP-091344,0273,-,,RACH optimization Stage-3,9.1.0
+,RP-46,RP-091345,0274,-,,Stage 3 correction for CMAS,9.1.0
+,RP-46,RP-091346,0276,1,,SR prohibit mechanism for UL SPS,9.1.0
+,RP-46,RP-091346,0277,-,,Parameters used for enhanced 1xRTT CS fallback,9.1.0
+,RP-46,RP-091346,0281,-,,Correction on UTRAN UE Capability transfer,9.1.0
+,RP-46,RP-091346,0285,-,,Maximum number of CDMA2000 neighbors in SIB8,9.1.0
+,RP-46,RP-091340,0288,1,,Introduction of UE Rx-Tx Time Difference measurement,9.1.0
+,RP-46,RP-091346,0297,-,,Introduction of SR prohibit timer,9.1.0
+,RP-46,RP-091346,0298,-,,Remove FFSs from RAN2 specifications,9.1.0
+,RP-46,RP-091343,0301,1,,Renaming Allowed CSG List (36.331 Rel-9),9.1.0
+,RP-46,RP-091346,0305,-,,Re-introduction of message segment discard time,9.1.0
+,RP-46,RP-091346,0306,1,,Application of ASN.1 extension guidelines,9.1.0
+,RP-46,RP-091346,0309,1,,Support for Dual Radio 1xCSFB,9.1.0
+,RP-46,RP-091346,0311,-,,Shorter SR periodicity,9.1.0
+,RP-46,RP-091342,0316,-,,CR to 36.331 for Introduction of Dual Layer Transmission,9.1.0
+,RP-46,RP-091343,0318,1,,Draft CR to 36.331 on Network ordered SI reporting,9.1.0
+,RP-46,RP-091346,0322,-,,UE e1xcsfb capabilities correction,9.1.0
+,RP-46,RP-091331,0327,1,,Clarification on coding of ETWS related IEs,9.1.0
+03/2010,RP-47,RP-100285,0331,-,,Clarification of CGI reporting,9.2.0
+,RP-47,RP-100305,0332,-,,Clarification on MCCH change notification,9.2.0
+,RP-47,RP-100308,0333,-,,Clarification on measurement for serving cell only,9.2.0
+,RP-47,RP-100306,0334,-,,Clarification on proximity indication configuraiton in handover to E-UTRA,9.2.0
+,RP-47,RP-100308,0335,-,,Clarification on radio resource configuration in handover to E-UTRA procedure,9.2.0
+,RP-47,RP-100308,0336,-,,Clarification on UE maximum transmission power,9.2.0
+,RP-47,RP-100308,0337,-,,Correction to field descriptions of UE-EUTRA-Capability,9.2.0
+,RP-47,RP-100305,0338,-,,Correction to MBMS scheduling terminology,9.2.0
+,RP-47,RP-100308,0339,-,,Corrections to SIB8,9.2.0
+,RP-47,RP-100306,0340,-,,CR 36.331 R9 for Unifying SI reading for ANR and inbound mobility,9.2.0
+,RP-47,RP-100308,0341,1,,CR to 36.331 for 1xRTT pre-registration information in SIB8,9.2.0
+,RP-47,RP-100305,0342,-,,CR to 36.331 on corrections for MBMS,9.2.0
+,RP-47,RP-100306,0343,1,,CR to 36.331 on CSG identity reporting,9.2.0
+,RP-47,RP-100308,0344,2,,CR to 36.331 on Optionality of Rel-9 UE features,9.2.0
+,RP-47,RP-100308,0345,1,,CR to 36.331 on Service Specific Acces Control (SSAC),9.2.0
+,RP-47,RP-100308,0346,-,,Introduction of power-limited device indication in UE capability.,9.2.0
+,RP-47,RP-100305,0347,-,,Missing agreement in MCCH change notification.,9.2.0
+,RP-47,RP-100305,0348,1,,Corrections related to MCCH change notification and value ranges,9.2.0
+,RP-47,RP-100306,0349,2,,Prohibit timer for proximity indication,9.2.0
+,RP-47,RP-100306,0350,1,,Proximity Indication after handover and re-establishment,9.2.0
+,RP-47,RP-100305,0351,-,,Specifying the exact mapping of notificationIndicator in SIB13 to PDCCH bits,9.2.0
+,RP-47,RP-100308,0352,-,,Corrections out of ASN.1 review scope,9.2.0
+,RP-47,RP-100308,0353,-,,CR on clarification of system information change,9.2.0
+,RP-47,RP-100285,0358,-,,Measurement Result CDMA2000 Cell,9.2.0
+,RP-47,RP-100304,0361,-,,Correction on the range of UE Rx-Tx time difference measurement result,9.2.0
+,RP-47,RP-100305,0362,-,,Small clarifications regarding MBMS,9.2.0
+,RP-47,RP-100308,0363,-,,Introduction of REL-9 indication within field accessStratumRelease,9.2.0
+,RP-47,RP-100306,0364,-,,Extending mobility description to cover inbound mobility,9.2.0
+,RP-47,RP-100308,0365,1,,Clarification regarding enhanced CSFB to 1XRTT,9.2.0
+,RP-47,RP-100308,0368,-,,Handling of dedicated RLF timers,9.2.0
+,RP-47,RP-100305,0370,1,,Clarification on UE's behavior of receiving MBMS service,9.2.0
+,RP-47,RP-100305,0371,-,,MBMS Service ID and Session ID,9.2.0
+,RP-47,RP-100305,0372,1,,Inclusion of non-MBSFN region length in SIB13,9.2.0
+,RP-47,RP-100309,0374,1,,CR to 36.331 for e1xCSFB access class barring parameters in SIB8,9.2.0
+,RP-47,RP-100308,0375,-,,Multiple 1xRTT/HRPD target cells in MobilityFromEUTRACommand,9.2.0
+,RP-47,RP-100308,0376,-,,Independent support indicators for Dual-Rx CSFB and S102 in SIB8,9.2.0
+,RP-47,RP-100285,0378,-,,Clarification on DRX StartOffset for TDD,9.2.0
+,RP-47,RP-100308,0379,1,,Miscellaneous corrections from REL-9 ASN.1 review,9.2.0
+,RP-47,RP-100308,0381,-,,Need codes and missing conventions,9.2.0
+,RP-47,RP-100308,0383,1,,Introduction of Full Configuration Handover for handling earlier eNB releases,9.2.0
+,RP-47,RP-100308,0385,-,,Clarification to SFN reference in RRC,9.2.0
+,RP-47,RP-100308,0390,-,,RSRP and RSRQ based Thresholds,9.2.0
+,RP-47,RP-100189,0392,3,,Redirection enhancements to GERAN,9.2.0
+,RP-47,RP-100308,0398,-,,Cell reselection enhancements CR for 36.331,9.2.0
+,RP-47,RP-100307,0401,3,,CR on UE-originated RLFreporting for MRO SON use case,9.2.0
+,RP-47,RP-100309,0402,3,,CR to 36.331 on Redirection enhancements to UTRAN,9.2.0
+,RP-47,RP-100306,0403,2,,Proximity status indication handling at mobility,9.2.0
+,RP-47,RP-100305,0404,-,,Upper layer aspect of MBSFN area id,9.2.0
+,RP-47,RP-100308,0405,-,,Redirection for enhanced 1xRTT CS fallback with concurrent PSHO,9.2.0
+,RP-47,RP-100301,0406,-,,Avoiding interleaving transmission of CMAS notifications,9.2.0
+,RP-47,RP-100308,0407,1,,Introduction of UE GERAN DTM capability indicator,9.2.0
+,RP-47,RP-100381,0408,2,,Introducing provisions for late ASN.1 corrections,9.2.0
+,RP-47,RP-100245,0411,-,,Correction/ alignment of REL-9 UE capability signalling,9.2.0
+06/2010,RP-48,RP-100553,0412,-,,Clarification for mapping between warning message and CB-data,9.3.0
+,RP-48,RP-100556,0413,-,,Clarification of radio link failure related actions,9.3.0
+,RP-48,RP-100554,0414,-,,Clarification on UE actions upon leaving RRC_CONNECTED,9.3.0
+,RP-48,RP-100553,0415,-,,Correction on CMAS system information,9.3.0
+,RP-48,RP-100554,0416,1,,Corrections to MBMS,9.3.0
+,RP-48,RP-100536,0418,-,,Decoding of unknown future extensions,9.3.0
+,RP-48,RP-100556,0419,1,,Miscellaneous small corrections and clarifications,9.3.0
+,RP-48,RP-100551,0420,-,,Prohibit timer for proximity indication,9.3.0
+,RP-48,RP-100556,0421,-,,RLF report for MRO correction,9.3.0
+,RP-48,RP-100546,0423,1,,Missing UTRA bands in IRAT-ParametersUTRA-FDD,9.3.0
+,RP-48,RP-100556,0424,-,,Correction on handling of dedicated RLF timers,9.3.0
+,RP-48,RP-100556,0431,1,,Protection of RRC messages,9.3.0
+,RP-48,RP-100556,0433,-,,Handling missing Essential system information,9.3.0
+,RP-48,RP-100551,0434,1,,Clarification on UMTS CSG detected cell reporting in LTE,9.3.0
+,RP-48,RP-100556,0436,-,,Introducing provisions for late corrections,9.3.0
+,RP-48,RP-100556,0437,-,,Clarification regarding / alignment of REL-9 UE capabilities,9.3.0
+09/2010,RP-49,RP-100845,0440,-,,Correction to 3GPP2 reference for interworking with cdma2000 1x,9.4.0
+,RP-49,RP-100851,0441,-,,Clarification on UL handover preparation transfer,9.4.0
+,RP-49,RP-100851,0442,1,,Clarifications regarding fullConfiguration,9.4.0
+,RP-49,RP-100851,0443,-,,Clarifications regarding handover to E-UTRAN,9.4.0
+,RP-49,RP-100854,0444,-,,Correction on the table of conditionally mandatory Release 9 features,9.4.0
+,RP-49,RP-100851,0445,-,,Corrections to TS36.331 on MeasConfig IE,9.4.0
+,RP-49,RP-100853,0446,2,,CR to 36.331 on clarification for MBMS PTM RBs,9.4.0
+,RP-49,RP-100851,0447,-,,Introduction of late corrections container for E-UTRA UE capabilities,9.4.0
+,RP-49,RP-100851,0448,-,,Renaming of containers for late non-critical extensions,9.4.0
+,RP-49,RP-100851,0452,-,,Clarifications Regarding Redirection from LTE,9.4.0
+,RP-49,RP-100845,0456,-,,Description of multi-user MIMO functionality in feature group indicator table,9.4.0
+,RP-49,RP-100845,0458,-,,Correct the PEMAX_H to PEMAX,9.4.0
+,RP-49,RP-100851,0460,-,,Clarification for feature group indicator bit 11,9.4.0
+,RP-49,RP-100851,0465,1,,Clarification of FGI setting for inter-RAT features not supported by the UE,9.4.0
+,RP-49,RP-101008,0475,1,,FGI settings in Rel-9,9.4.0
+12/2010,RP-50,RP-101197,0483,-,,Clarification on Meaning of FGI Bits,9.5.0
+,RP-50,RP-101197,0485,-,,Clarification regarding reconfiguration of the quantityConfig,9.5.0
+,RP-50,RP-101210,0486,1,,Corrections to the presence of IE regarding DRX and CQI,9.5.0
+,RP-50,RP-101210,0493,-,,The field descriptions of MeasObjectEUTRA,9.5.0
+,RP-50,RP-101197,0498,1,,Clarification of FGI settings non ANR periodical measurement reporting,9.5.0
+,RP-50,RP-101209,0500,-,,Corrections to RLF Report,9.5.0
+,RP-50,RP-101206,0519,1,,T321 timer fix,9.5.0
+,RP-50,RP-101197,0524,-,,Restriction of AC barring parameter setting,9.5.0
+,RP-50,RP-101210,0525,-,,Removal of SEQUENCE OF SEQUENCE in UEInformationResponse,9.5.0
+,RP-50,RP-101197,0526,1,,Clarification regarding default configuration value N/A,9.5.0
+,RP-50,RP-101431,0532,-,,Splitting FGI bit 3,9.5.0
+,RP-50,RP-101183,0476,4,,36.331 CR on Introduction of Minimization of Drive Tests,10.0.0
+,RP-50,RP-101293,0477,4,,AC-Barring for Mobile Originating CSFB call,10.0.0
+,RP-50,RP-101214,0478,-,,Addition of UE-EUTRA-Capability descriptions,10.0.0
+,RP-50,RP-101214,0481,-,,Clarification on Default Configuration for CQI-ReportConfig,10.0.0
+,RP-50,RP-101215,0487,-,,CR to 36.331 adding e1xCSFB support for dual Rx/Tx UE,10.0.0
+,RP-50,RP-101227,0488,1,,Introduction of Carrier Aggregation and UL/ DL MIMO,10.0.0
+,RP-50,RP-101228,0489,1,,Introduction of relays in RRC,10.0.0
+,RP-50,RP-101214,0490,1,,Priority indication for CSFB with re-direction,10.0.0
+,RP-50,RP-101214,0491,-,,SIB Size Limitations,10.0.0
+,RP-50,RP-101214,0513,-,,Combined Quantity Report for IRAT measurement of UTRAN,10.0.0
+,RP-50,RP-101214,0527,1,,UE power saving and Local release,10.0.0
+,RP-50,RP-101429,0530,1,,Inclusion of new UE categories in Rel-10,10.0.0
+03/2011,RP-51,RP-110282,0533,-,,36331_CRxxx_Protection of Logged Measurements Configuration,10.1.0
+,RP-51,RP-110294,0534,1,,Stage-3 CR for MBMS enhancement,10.1.0
+,RP-51,RP-110282,0535,-,,Clean up MDT-related text,10.1.0
+,RP-51,RP-110282,0536,-,,Clear MDT configuration and logs when the UE is not registered,10.1.0
+,RP-51,RP-110280,0537,-,,Correction to the field description of nB,10.1.0
+,RP-51,RP-110289,0538,-,,CR on impact on UP with remove&add approach_2,10.1.0
+,RP-51,RP-110282,0539,-,,CR to 36.331 on corrections for MDT,10.1.0
+,RP-51,RP-110290,0543,-,,Introduction of CA/MIMO capability signalling and measurement capability signalling in CA,10.1.0
+,RP-51,RP-110282,0544,-,,MDT PDU related clarifications,10.1.0
+,RP-51,RP-110282,0545,-,,Correction on release of logged measurement configuration while in another RAT,10.1.0
+,RP-51,RP-110289,0546,-,,Miscellaneous Corrections for CA Running RRC CR,10.1.0
+,RP-51,RP-110280,0547,1,,Miscellaneous small clarifications and corrections,10.1.0
+,RP-51,RP-110293,0548,4,,Necessary changes for RLF reporting enhancements,10.1.0
+,RP-51,RP-110282,0549,1,,Memory size for logged measurements capable UE,10.1.0
+,RP-51,RP-110289,0550,-,,Parameters confusion of non-CA and CA configurations,10.1.0
+,RP-51,RP-110272,0553,-,,Presence condition for cellSelectionInfo-v920 in SIB1,10.1.0
+,RP-51,RP-110282,0554,1,,Removal of MDT configuration at T330 expiry,10.1.0
+,RP-51,RP-110289,0556,1,,Signalling aspects of existing LTE-A parameters,10.1.0
+,RP-51,RP-110280,0557,1,,Some Corrections on measurement,10.1.0
+,RP-51,RP-110291,0558,-,,Stored system information for RNs,10.1.0
+,RP-51,RP-110291,0559,-,,Support of Integrity Protection for Relay,10.1.0
+,RP-51,RP-110290,0561,2,,Updates of L1 parameters for CA and UL/DL MIMO,10.1.0
+,RP-51,RP-110291,0571,1,,Note for Dedicated SIB for RNs,10.1.0
+,RP-51,RP-110272,0579,-,,Correction to cs-fallbackIndicator field description,10.1.0
+,RP-51,RP-110289,0580,-,,Clarification to the default configuration of sCellDeactivationTimer,10.1.0
+,RP-51,RP-110289,0581,-,,Miscellaneous corrections to TS 36.331 on Carrier Aggregation,10.1.0
+,RP-51,RP-110280,0584,-,,Correction of configuration description in SIB2,10.1.0
+,RP-51,RP-110265,0587,-,,Clarification of band indicator in handover from E-UTRAN to GERAN,10.1.0
+,RP-51,RP-110285,0588,1,,36331_CRxxxx Support of Delay Tolerant access requests,10.1.0
+,RP-51,RP-110292,0590,-,,Update of R2-110807 on CSI measurement resource restriction for time domain ICIC,10.1.0
+,RP-51,RP-110292,0591,-,,Update of R2-110821 on RRM/RLM resource restriction for time domain ICIC,10.1.0
+,RP-51,RP-110290,0592,-,,Corrections on UE capability related parameters,10.1.0
+,RP-51,RP-110282,0596,-,,Validity time for location information in Immediate MDT,10.1.0
+,RP-51,RP-110280,0597,-,,CR to 36.331 adding UE capability indicator for dual Rx/Tx e1xCSFB,10.1.0
+,RP-51,RP-110289,0598,-,,Miscellaneous corrections to CA,10.1.0
+,RP-51,RP-110280,0599,-,,Further correction to combined measurement report of UTRAN,10.1.0
+,RP-51,RP-110280,0600,-,,Correction to the reference of ETWS,10.1.0
+,RP-51,RP-110269,0602,1,,Introduction of OTDOA inter-freq RSTD measurement indication procedure,10.1.0
+,RP-51,RP-110280,0603,-,,Correction of use of RRCConnectionReestablishment message for contention resolution,10.1.0
+,RP-51,RP-110282,0604,-,,CR to 36.331 on MDT neighbour cell measurements logging,10.1.0
+,RP-51,RP-110272,0609,-,,Minor ASN.1 corrections for the UEInformationResponse message,10.1.0
+,RP-51,RP-110280,0613,-,,Clarification regarding dedicated RLF timers and constants,10.1.0
+,RP-51,RP-110282,0615,-,,Release of Logged Measurement Configuration,10.1.0
+,RP-51,RP-110280,0616,-,,Some corrections on TS 36.331,10.1.0
+,RP-51,RP-110280,0623,-,,AC barring procedure clean up,10.1.0
+,RP-51,RP-110282,0624,-,,Counter proposal to R2-110826 on UE capabilities for MDT,10.1.0
+,RP-51,RP-110280,0628,1,,UE information report for RACH,10.1.0
+,RP-51,RP-110289,0629,2,,Measurement on the deactivated SCells,10.1.0
+,RP-51,RP-110282,0632,1,,Trace configuration paremeters for Logged MDT,10.1.0
+,RP-51,RP-110282,0635,-,,Clarification on stop condition for timer T3330,10.1.0
+,RP-51,RP-110282,0637,-,,User consent for MDT,10.1.0
+,RP-51,RP-110280,0638,-,,Correction on the range of CQI resource index,10.1.0
+,RP-51,RP-110272,0640,1,,Small corrections to ETWS & CMAS system information,10.1.0
+,RP-51,RP-110290,0641,1,,"UE capability signaling structure w.r.t carrier aggregation, MIMO and measurement gap",10.1.0
+,RP-51,RP-110289,0642,1,,Normal PHR and the multiple uplink carriers,10.1.0
+,RP-51,RP-110280,0643,1,,Corrections to TS36.331 on SIB2 handling,10.1.0
+,RP-51,RP-110280,0644,1,,Adding a Power Management indication in PHR,10.1.0
+,RP-51,RP-110289,0646,1,,Clarification for CA and TTI bundling in RRC,10.1.0
+,RP-51,RP-110443,0648,1,,Updates to FGI settings,10.1.0
+06/2011,RP-52,RP-110836,0651,-,,Add MBMS counting procedure to processing delay requirement for RRC procedure clause 11.2,10.2.0
+,RP-52,RP-110830,0653,-,,Add pre Rel-10 procedures to processing delay requirement for RRC procedure clause 11.2,10.2.0
+,RP-52,RP-110847,0654,1,,Addition of a specific reference for physical configuration fields,10.2.0
+,RP-52,RP-110839,0656,-,,Clarification of inter-frequency RSTD measurement indication procedure,10.2.0
+,RP-52,RP-110830,0658,-,,Clarification of optionality of UE features without capability,10.2.0
+,RP-52,RP-110839,0660,-,,Clarification on the definition of maxCellBlack,10.2.0
+,RP-52,RP-110839,0661,-,,Clarification on upper layer requested connection release,10.2.0
+,RP-52,RP-110850,0662,3,,Clarification regarding eICIC measurements,10.2.0
+,RP-52,RP-110839,0663,-,,CR for s-measure handling,10.2.0
+,RP-52,RP-110851,0664,1,,CR on clarification of RLF Report in Carrier Aggregation,10.2.0
+,RP-52,RP-110830,0669,-,,FGI bit for handover between LTE FDD/TDD,10.2.0
+,RP-52,RP-110847,0670,2,,Further updates on L1 parameters,10.2.0
+,RP-52,RP-110839,0671,2,,General error handling for extension fields,10.2.0
+,RP-52,RP-110851,0672,2,,Additional information for RLF report,10.2.0
+,RP-52,RP-110843,0673,-,,Introduction of TCE ID for logged MDT,10.2.0
+,RP-52,RP-110670,0674,4,,Miscellaneous corrections (related to review in preparation for ASN.1 freeze),10.2.0
+,RP-52,RP-110843,0675,-,,PLMN check for MDT logging,10.2.0
+,RP-52,RP-110839,0677,-,,UE actions upon leaving RRC_CONNECTED,10.2.0
+,RP-52,RP-110847,0678,-,,Clarification on bandEUTRA-r10 and supportedBandListEUTRA,10.2.0
+,RP-52,RP-110837,0679,-,,Updated value range for the Extended Wait Timer,10.2.0
+,RP-52,RP-110839,0680,1,,Value range of DRX-InactivityTimer,10.2.0
+,RP-52,RP-110828,0693,1,,Correction for SR-VCC and QCI usage,10.2.0
+,RP-52,RP-110847,0694,-,,Restructuring of CQI-ReportConfig-r10,10.2.0
+,RP-52,RP-110839,0695,2,,Correction on DL allocations in MBSFN subframes,10.2.0
+,RP-52,RP-110850,0700,-,,Reference SFN for MeasSubframePattern,10.2.0
+,RP-52,RP-110846,0701,-,,Clarifications to CA related field descriptions,10.2.0
+,RP-52,RP-110847,0702,-,,Corrections to codebookSubsetRestriction and SRS parameters,10.2.0
+,RP-52,RP-110834,0704,-,,Corrections to the handling of ri-ConfigIndex for TM9,10.2.0
+,RP-52,RP-110715,0710,2,,UE capabilities for Rel-10 LTE features with eICIC measurement restrictions as FGI (Alt.1),10.2.0
+,RP-52,RP-110839,0713,-,,CR to 36.331 on redirected utra-TDD carrier frequency,10.2.0
+,RP-52,RP-110839,0714,-,,Explicit AS signalling for mapped PTMSI/GUTI,10.2.0
+,RP-52,RP-110847,0718,-,,Counter proposal for Updates of mandatory information in AS-Config,10.2.0
+,RP-52,RP-110839,0719,-,,CR for Reconfiguration of discardTimer in PDCP-Config,10.2.0
+,RP-52,RP-110847,0723,-,,On the missing multiplicity of UE capability parameters,10.2.0
+,RP-52,RP-110830,0735,-,,Radio frame alignment of CSA and MSP,10.2.0
+,RP-52,RP-110847,0740,-,,Reconfiguration involving critically extended IEs (using fullFieldConfig i.e. option 2),10.2.0
+,RP-52,RP-110839,0744,-,,Counter proposal to R2-112753 on CR to remove CSG Identity validity limited to CSG cell,10.2.0
+,RP-52,RP-110839,0746,1,,Increase of prioritisedBitRate,10.2.0
+,RP-52,RP-110847,0747,-,,CA and MIMO Capabilities in LTE Rel-10,10.2.0
+09/2011,RP-53,RP-111297,0752,-,,TS36.331 Correction,10.3.0
+,RP-53,RP-111297,0754,-,,maxNumberROHC-ContextSessions when no ROHC profile is supported,10.3.0
+,RP-53,RP-111280,0757,-,,Correction to Subframe Allocation End in PMCH-Info,10.3.0
+,RP-53,RP-111288,0761,-,,Correction on PUCCH configuration for Un interface,10.3.0
+,RP-53,RP-111297,0762,-,,Miscellaneous corrections to 36.331,10.3.0
+,RP-53,RP-111278,0764,2,,36.331 correction on CSG identity validity to allow introduction of CSG RAN sharing,10.3.0
+,RP-53,RP-111283,0770,2,,AdditionalSpectrumEmissions in CA,10.3.0
+,RP-53,RP-111297,0773,-,,CR to 36.331 on Small correction of PHR parameter,10.3.0
+,RP-53,RP-111283,0775,2,,Clarifications to P-max on CA,10.3.0
+,RP-53,RP-111280,0784,-,,Clarification on for which subframes signalling MCS applies,10.3.0
+,RP-53,RP-111283,0792,-,,Corrections in RRC,10.3.0
+,RP-53,RP-111297,0793,-,,Replace the tables with exception list in 10.5 AS-Config,10.3.0
+,RP-53,RP-111297,0796,-,,Corrections to the field descriptions,10.3.0
+,RP-53,RP-111283,0798,-,,Configuration of simultaneous PUCCH&PUSCH,10.3.0
+,RP-53,RP-111297,0806,-,,Corrections to release of csi-SubframePatternConfig and cqi-Mask,10.3.0
+,RP-53,RP-111272,0810,-,,GERAN SI format for cell change order&PS handover& enhanced redirection to GERAN,10.3.0
+,RP-53,RP-111283,0811,-,,Corrections to PUCCH-Config field descriptions,10.3.0
+12/2011,RP-54,RP-111711,0812,1,,Clarification of PCI range for CSG cells,10.4.0
+,RP-54,RP-111716,0813,-,,Clarifications to Default Radio Configurations,10.4.0
+,RP-54,RP-111716,0814,1,,Corrections to enhancedDualLayerTDD,10.4.0
+,RP-54,RP-111716,0815,-,,Miscellaneous small corrections,10.4.0
+,RP-54,RP-111716,0816,1,,Correction on notation of SRS transmission comb,10.4.0
+,RP-54,RP-111706,0823,1,,36.331 CR SPS reconfiguration,10.4.0
+,RP-54,RP-111716,0827,2,,Clarification of list sizes in measurement configuration stored by UE,10.4.0
+,RP-54,RP-111706,0835,-,,Clarification of the event B1 and ANR related FGI bits,10.4.0
+,RP-54,RP-111714,0840,1,,Clarification on MBSFN and measurement resource restrictions,10.4.0
+,RP-54,RP-111706,0845,-,,Clarification on parallel message transmission upon connection re-establishment,10.4.0
+03/2012,RP-55,RP-120326,0855,1,,Limiting MBMS counting responses to within the PLMN,10.5.0
+,RP-55,RP-120321,0857,-,,CR to 36.331 on cdma2000 band classes and references,10.5.0
+,RP-55,RP-120326,0862,1,,Clarification on MBSFN and measurement resource restrictions,10.5.0
+,RP-55,RP-120325,0871,-,,On SIB10/11 Reception Timing,10.5.0
+,RP-55,RP-120326,0875,1,,Clarification on MBMS counting for uncipherable services,10.5.0
+,RP-55,RP-120325,0876,-,,Minor correction regarding limited service access on non-CSG-member cell,10.5.0
+,RP-55,RP-120326,0894,-,,Time to keep RLF Reporting logs,10.5.0
+,RP-55,RP-120356,0895,1,,Introducing means to signal different FDD/TDD Capabilities/FGIs for Dual-xDD UE,10.5.0
+,RP-55,RP-120321,0899,-,,Clarification on SRB2 resumption upon connection re-establishment (parallel message transmission),10.5.0
+,RP-55,RP-120321,0900,1,,Duplicated ASN.1 naming correction,10.5.0
+06/2012,RP-56,RP-120805,0909,-,,SPS Reconfiguration,10.6.0
+,RP-56,RP-120805,0912,1,,Change in Scheduling Information for ETWS,10.6.0
+,RP-56,RP-120807,0914,-,,Clarification of mch-SchedulingPeriod configuration,10.6.0
+,RP-56,RP-120808,0916,1,,Change in Scheduling Information for CMAS,10.6.0
+,RP-56,RP-120814,0919,1,,Introducing means to signal different REL-10 FDD/TDD Capabilities/FGIs for Dual-xDD UE,10.6.0
+,RP-56,RP-120812,0920,1,,Clarification on setting of dedicated NS value for CA by E-UTRAN,10.6.0
+,RP-56,RP-120808,0931,-,,T321 value for UTRA SI acquisition,10.6.0
+,RP-56,RP-120813,0957,1,,Korean Public Alert System (KPAS) in relation to CMAS,10.6.0
+,RP-56,RP-120812,0969,1,,Introduction of supported bandwidth combinations for CA,10.6.0
+,RP-56,RP-120734,0970,1,,Introduction of multiple frequency band indicator,10.6.0
+,RP-56,RP-120825,0934,-,,Introduction of a new security algorithm ZUC,11.0.0
+,RP-56,RP-120813,0973,1,,EU-Alert in relation to CMAS,11.0.0
+09/2012,RP-57,RP-121371,0982,1,,Introduction of EAB,11.1.0
+,RP-57,RP-121381,0990,-,,Additional special subframe configuration related correction,11.1.0
+,RP-57,RP-121423,1000,4,,36.331 CR introducing In-Device Coexistence (IDC),11.1.0
+,RP-57,RP-121359,1008,-,,Voice support Capabilities,11.1.0
+,RP-57,RP-121361,1013,-,,Differentiating UTRAN modes in FGIs,11.1.0
+,RP-57,RP-121368,1022,1,,Introduction of absolute priority based measurements and reselection in CELL_FACH State in 36.331,11.1.0
+,RP-57,RP-121370,1024,-,,Introducing MDT enhancements for REL-11,11.1.0
+,RP-57,RP-121349,1025,2,,Introducing Carrier aggregation enhancements for REL-11,11.1.0
+,RP-57,RP-121375,1026,-,,Introducing MBMS enhancements for REL-11,11.1.0
+,RP-57,RP-121376,1052,2,,Signaling support for CRS interference management in eICIC,11.1.0
+,RP-57,RP-121395,1055,-,,CR on scell measurement cycle,11.1.0
+,RP-57,RP-121395,1056,-,,CR on measurement report,11.1.0
+,RP-57,RP-121378,1057,3,,Introduction of 'Power preference indication',11.1.0
+,RP-57,RP-121280,1060,-,,Correction for PUCCH/SRS Release,11.1.0
+12/2012,RP-58,RP-121933,1063,-,,Correction related to differentiating UTRAN modes in FGIs,11.2.0
+,RP-58,RP-121936,1065,-,,Processing delay for RRCConnectionReconfiguration,11.2.0
+,RP-58,RP-121953,1066,2,,Addition of the stage-3 agreements on IDC,11.2.0
+,RP-58,RP-121951,1067,3,,Carrier Aggregation Enhancement RAN1 parameters,11.2.0
+,RP-58,RP-121957,1068,1,,Clarification of SR period,11.2.0
+,RP-58,RP-121957,1069,1,,Clarification on HandoverCommand message,11.2.0
+,RP-58,RP-121957,1070,-,,Clarification on mobility related issues,11.2.0
+,RP-58,RP-121946,1071,1,,Correction of the signaling for Uncertainty and Confidence,11.2.0
+,RP-58,RP-121940,1072,2,,Corrections to MBMS Service Continuity,11.2.0
+,RP-58,RP-121940,1073,-,,CR to 36.331 on SIB15 acquisition,11.2.0
+,RP-58,RP-121957,1074,1,,Handling of 1xCSFB failure,11.2.0
+,RP-58,RP-121957,1075,-,,Miscellaneous corrections,11.2.0
+,RP-58,RP-121958,1076,1,,RAN overload control using RRC connection Rejection,11.2.0
+,RP-58,RP-121954,1077,-,,RRC support for CoMP in UL,11.2.0
+,RP-58,RP-121951,1078,-,,Some clarification to Carrier aggregation enhancements,11.2.0
+,RP-58,RP-121939,1079,1,,Validity of EAB SIB and acquisition of SIB1,11.2.0
+,RP-58,RP-121922,1085,-,,Clarification for Multiple Frequency Band Indicators feature,11.2.0
+,RP-58,RP-121924,1089,1,,Moving the TM5 capability,11.2.0
+,RP-58,RP-121959,1093,1,,CR to 36.331 on introducing ROHC context continue for intra-ENB handover,11.2.0
+,RP-58,RP-121946,1100,-,,Correction on MDT multi-PLMN support,11.2.0
+,RP-58,RP-121953,1102,-,,Clarification and alignment of handling of other configuration,11.2.0
+,RP-58,RP-121970,1103,6,,Introducing support for Coordinated Multi-Point (CoMP) operation,11.2.0
+,RP-58,RP-121922,1105,2,,Introducing further UE aspects regarding multi band cells,11.2.0
+,RP-58,RP-121947,1120,-,,CR to 36.331 on additional information in RLF report for inter-RAT MRO,11.2.0
+,RP-58,RP-121952,1125,1,,Correction on Power preference indication,11.2.0
+,RP-58,RP-121950,1127,1,,SIB1 provisioning via dedicated signalling,11.2.0
+,RP-58,RP-121936,1128,2,,Measurement reporting of Scells,11.2.0
+,RP-58,RP-121956,1129,1,,Introduction of EPDCCH parameters in TS 36.331,11.2.0
+,RP-58,RP-121961,1130,2,,Introduction of Rel-11 UE capabilities,11.2.0
+,RP-58,RP-121958,1131,-,,Introducion of wideband RSRQ measurements,11.2.0
+,RP-58,RP-121958,1146,-,,Introduction of network sharing for CDMA2000 inter-working,11.2.0
+,RP-58,RP-121960,1157,-,,Broadcast of Time Info by Using a New SIB,11.2.0
+,RP-58,RP-121957,1175,-,,GERAN measurement object at ANR,11.2.0
+03/2013,RP-59,RP-130246,1182,2,,Miscellaneous corrections from review preceeding ASN.1 freeze,11.3.0
+,RP-59,RP-130243,1186,2,,DL COMP capability related correction,11.3.0
+,RP-59,RP-130231,1193,1,,Mandatory supporting of B1 measurement to UMTS FDD (FGI bit 15),11.3.0
+,RP-59,RP-130241,1197,-,,Clarification on MBMS Service Continuity,11.3.0
+,RP-59,RP-130241,1198,-,,IDC Problem Reporting,11.3.0
+,RP-59,RP-130247,1210,-,,Corrections on definition of CSG member cell,11.3.0
+,RP-59,RP-130237,1211,-,,Extension of FBI and EARFCN,11.3.0
+,RP-59,RP-130228,1220,-,,Invalidation of ETWS with security feature,11.3.0
+,RP-59,RP-130225,1224,-,,Invalid measurement configuration with different (E)ARFCN,11.3.0
+,RP-59,RP-130241,1231,2,,PPI and IDC indication upon handover,11.3.0
+,RP-59,RP-130227,1235,1,,Correcting further UE aspects regarding multi band cells,11.3.0
+,RP-59,RP-130248,1236,1,,Behaviour in case of excessive dedicated priority information,11.3.0
+,RP-59,RP-130225,1241,-,,Clarification on EARFCN signalling in Mobility control info,11.3.0
+,RP-59,RP-130241,1244,-,,IDC-SubframePattern length for FDD,11.3.0
+,RP-59,RP-130249,1252,-,,Introduction of wideband RSRQ measurements in RRC_IDLE,11.3.0
+,RP-59,RP-130240,1255,-,,Optional support of RLF report for inter-RAT MRO,11.3.0
+,RP-59,RP-130233,1258,2,,The presence of bandcombination for non-CA capable UEs,11.3.0
+,RP-59,RP-130248,1259,-,,Correction for event A5,11.3.0
+,RP-59,RP-130332,1265,-,,"Mandating the settings of FGI bit 14, 27 and 28 to true",11.3.0
+06/2013,RP-60,RP-130805,1267,-,,Clarification on the redirection to UTRA-TDD frequency in case of CSFB High Priority,11.4.0
+,RP-60,RP-130804,1269,1,,Correction of wrong reference,11.4.0
+,RP-60,RP-130809,1270,-,,Clarification to support of deprioritisation feature,11.4.0
+,RP-60,RP-130809,1271,-,,Clarification on KASME key usage,11.4.0
+,RP-60,RP-130808,1272,-,,Correction on multi-TA capability,11.4.0
+,RP-60,RP-130808,1273,-,,MBMS interest indication upon handover/ re-establishment,11.4.0
+,RP-60,RP-130808,1274,-,,Conditions RI reference inheriting CSI process (DL CoMP),11.4.0
+,RP-60,RP-130808,1275,-,,Clarification on NZP CSI-RS resource configuration for UE supporting 1 CSI process,11.4.0
+,RP-60,RP-130808,1276,-,,Corrections to field description of pdsch-Start-r11,11.4.0
+,RP-60,RP-130809,1277,-,,Need code corrections in Rel-11 RRC,11.4.0
+,RP-60,RP-130808,1278,-,,Miscellanous small corrections,11.4.0
+,RP-60,RP-130809,1279,1,,FDD/TDD diff column correction for FGI31,11.4.0
+,RP-60,RP-130804,1282,-,,measCycleSCell upon SCell configuration,11.4.0
+,RP-60,RP-130809,1294,-,,Clarification on RRC Connection Reconfiguration with Critical Extension,11.4.0
+,RP-60,RP-130802,1298,-,,Security key generation in case of MFBI,11.4.0
+,RP-60,RP-130804,1303,1,,Clarification on inclusion of non-CA band combinations,11.4.0
+,RP-60,RP-130809,1308,-,,CR on ROHC parameter configuration in Rel-11 RRC,11.4.0
+,RP-60,RP-130804,1315,2,,Clarification on UE CA capability,11.4.0
+,RP-60,RP-130809,1321,-,,Updating 3GPP2 specification references,11.4.0
+,RP-60,RP-130805,1323,-,,Clarification on the configuration of the extended PHR,11.4.0
+,RP-60,RP-130805,1324,-,,Clarifications on SystemTimeInfoCDMA2000 IE,11.4.0
+,RP-60,RP-130808,1325,-,,MFBI impact on MBMS service continuity,11.4.0
+,RP-60,RP-130819,1329,1,,MFBI aspects for dedicated signalling,11.4.0
+09/2013,RP-61,RP-131311,1335,-,,Clarification on PhysCellIdRange,11.5.0
+,RP-61,RP-131311,1339,1,,Correction on the first subframe of the measurement gap,11.5.0
+,RP-61,RP-131319,1340,1,,Correction for MFBI in SIB15 and SIB6,11.5.0
+,RP-61,RP-131319,1343,-,,Clarification of MFBI impact on MBMS service continuity,11.5.0
+,RP-61,RP-131238,1344,2,,Clarification of UE action for otherwise in conditions,11.5.0
+,RP-61,RP-131311,1348,-,,Corrections to the 3GPP2 specification references in 36.331,11.5.0
+,RP-61,RP-131318,1353,-,,"Clarifications regarding the usage of ""rlf-Cause"" in case of handover failure",11.5.0
+12/2013,RP-62,RP-131986,1366,-,,Introduction of capability bit for UTRA MFBI,11.6.0
+,RP-62,RP-131984,1368,1,,Addition of inter-frequency RSTD measurement capability indicator for OTDOA,11.6.0
+,RP-62,RP-131989,1370,-,,Clarification on supportedBand,11.6.0
+,RP-62,RP-132003,1371,-,,Capturing mandatory/optional agreements on Rel-11 UE features,11.6.0
+,RP-62,RP-131995,1372,-,,Clarification on otherwise behaviour,11.6.0
+,RP-62,RP-131995,1373,-,,Corrections of the 3GPP2 references in TS 36.331,11.6.0
+,RP-62,RP-131991,1374,-,,measResultLastServCell for SON-HOF report,11.6.0
+,RP-62,RP-131729,1375,1,,Clarification to timeInfoUTC field in SIB16,11.6.0
+,RP-62,RP-131991,1389,-,,Clarification on eRedirection to UMTS TDD with multiple UMTS TDD frequencies,11.6.0
+,RP-62,RP-131995,1390,-,,Delta signalling for critical extension,11.6.0
+,RP-62,RP-132005,1391,-,,Capability signalling for CSI processes,11.6.0
+,RP-62,RP-131991,1395,1,,Clarifications on Measurement,11.6.0
+,RP-62,RP-131984,1397,-,,Correction to InterFreqRSTDMeasurementIndication field descriptions,11.6.0
+,RP-62,RP-131984,1404,-,,Correction of Inter-frequency RSTD indication for multiple frequencies,11.6.0
+,RP-62,RP-131993,1405,1,,Enabling SRVCC from GERAN without forwarding UE-EUTRA-Capability,11.6.0
+,RP-62,RP-131995,1409,1,,System information and change monitoring procedure,11.6.0
+,RP-62,RP-131991,1410,1,,Correction on presence of codebookSubsetRestriction-r10,11.6.0
+,RP-62,RP-131998,1376,-,,Introducing UE support for inbound mobility to a shared CSG cell,12.0.0
+,RP-62,RP-132002,1378,2,,Introduction of support of further DL MIMO enhancement,12.0.0
+,RP-62,RP-131988,1379,-,,CR for SSAC in CONNECTED,12.0.0
+,RP-62,RP-132002,1406,-,,Update of CMAS reference to E-UTRAN specific clauses in TS23.041,12.0.0
+03/2014,RP-63,RP-140359,1424,1,,CR on introduction of Cell-specific time-to-trigger,12.1.0
+,RP-63,RP-140346,1435,-,,UE autonomous modification of cellsTriggered upon serving cell addition/ release,12.1.0
+,RP-63,RP-140359,1436,1,,Introduction of T312,12.1.0
+,RP-63,RP-140362,1439,1,,Introduction of UE-supported EARFCN list in handover preparation information for MFBI,12.1.0
+,RP-63,RP-140352,1442,-,,Correction of Connection Establishement Failure Report,12.1.0
+,RP-63,RP-140356,1450,1,,Clarification on the presence of TDD special subframe,12.1.0
+,RP-63,RP-140359,1453,-,,Introduction of UE mobility history reporting (option 2),12.1.0
+,RP-63,RP-140340,1455,1,,"Clarification regarding need codes, conditions and ASN.1 defaults for extension fields",12.1.0
+,RP-63,RP-140340,1456,-,,ASN.1 issue with inter-node signalling (AS-Config),12.1.0
+,RP-63,RP-140357,1457,1,,Clarification for the SIB occurrence in a single SI message,12.1.0
+,RP-63,RP-140364,1462,-,,New UE categories for DL 450Mbps class,12.1.0
+,RP-63,RP-140354,1463,-,,IoT indication for inter-band TDD CA with different UL/DL configuration,12.1.0
+06/2014,RP-64,RP-140869,1471,-,,Removal of comment line from EUTRA-UE-Variables imports,12.2.0
+,RP-64,RP-140871,1475,-,,Correction on measObjectList in VarMeasConfig,12.2.0
+,RP-64,RP-140879,1477,-,,Minor correction inbound mobility to shared CSG cell,12.2.0
+,RP-64,RP-140873,1478,-,,Clarificaton on precedence of SCell SI provided dedicately,12.2.0
+,RP-64,RP-140887,1479,-,,Support of the enhancement for TTI bundling for FDD,12.2.0
+,RP-64,RP-140885,1490,-,,Corrections on timer T312,12.2.0
+,RP-64,RP-140885,1486,-,,Correction to the description of physCellIdRange in MeasObjectEUTRA,12.2.0
+,RP-64,RP-140885,1506,-,,Corrections to UE mobility history information,12.2.0
+,RP-64,RP-140873,1489,-,,ACK/NACK feedback mode on PUSCH,12.2.0
+,RP-64,RP-140878,1556,-,,SIB15 enhancement for service availability information,12.2.0
+,RP-64,RP-140888,1557,-,,Introduction of FDD/TDD CA UE capability,12.2.0
+,RP-64,RP-140871,1545,-,,Clarification of E-UTRA MFBI signalling,12.2.0
+,RP-64,RP-140892,1520,1,,Extended RLC LI field,12.2.0
+,RP-64,RP-140873,1517,1,,Network-requested CA Band Combination Capability Signalling,12.2.0
+,RP-64,RP-140873,1554,1,,Allowing TDD/FDD split for FGI111 and FGI112,12.2.0
+,RP-64,RP-140871,1551,1,,Inter-RAT ANR capability signalling in FGI33 when UE supports UTRA TDD only,12.2.0
+,RP-64,RP-140884,1495,1,,Introduction of TDD eIMTA,12.2.0
+,RP-64,RP-140885,1499,1,,Minor Corrections to T312,12.2.0
+,RP-64,RP-140892,1510,1,,Introduction of RRC Connection Establishment failure temporary Qoffset handling,12.2.0
+,RP-64,RP-140849,1555,2,,Introduction of UE capability for eMBMS reception on SCell and Non-Serving Cell,12.2.0
+09/2014,RP-65,RP-141494,1632,-,,FDD&TDD split for CA,12.3.0
+,RP-65,RP-141505,1599,-,,UE capabilities for Hetnet mobility in TS 36.331,12.3.0
+,RP-65,RP-141499,1584,-,,Introduction of UE eIMTA capabilities,12.3.0
+,RP-65,RP-141511,1567,-,,Corrections to extended RLC LI field,12.3.0
+,RP-65,RP-141511,1603,-,,TAI reporting of last serving cell,12.3.0
+,RP-65,RP-141498,1630,1,,Correction to Network-requested CA Band Combination Capability Signalling,12.3.0
+,RP-65,RP-141496,1577,1,,Clarification on double indication of SAI in SIB15,12.3.0
+,RP-65,RP-141496,1597,-,,Clarification on MBMSCountingResponse,12.3.0
+,RP-65,RP-141496,1623,-,,Clarification on the setting of SupportedBandCombination-v1130,12.3.0
+,RP-65,RP-141489,1574,1,,Correction of E-UTRAN UE capabilities description in HandoverPreparationInformation message field descriptions,12.3.0
+,RP-65,RP-141507,1570,-,,Introducing MBSFN measurement by extension of logged measurements,12.3.0
+,RP-65,RP-141510,1572,1,,Introduction of ACB skip for MMTEL voice/video and SMS,12.3.0
+,RP-65,RP-141496,1615,1,,Clarification on determining MBMS frequencies of interest in MBMSInterestIndication,12.3.0
+,RP-65,RP-141506,1579,1,,Introduction of signaling support for low complexity UEs,12.3.0
+,RP-65,RP-141499,1601,1,,Rel-12 ASN.1 correction,12.3.0
+,RP-65,RP-141511,1560,1,,Introduction of shorter MCH scheduling period,12.3.0
+,RP-65,RP-141493,1611,-,,Clarification for time-domain resource restriction pattern applicable to neighbour cell RSRQ measurements,12.3.0
+,RP-65,RP-141511,1559,2,,"Correction to stop condition for ""Chiba offset""",12.3.0
+,RP-65,RP-141115,1636,-,,Mandating the FGI bit 31 to true,12.3.0
+,RP-65,RP-141618,1566,2,,Connected mode procedures and RRC signaling of WLAN/3GPP Radio Interworking for LTE,12.3.0
+12/2014,RP-66,RP-142122,1643,-,,Clarification on WLAN interworking,12.4.0
+,RP-66,RP-142122,1644,-,,Correction on handling of dedicated parameters during re-establishment,12.4.0
+,RP-66,RP-142122,1645,-,,Corrections to WLAN/3GPP Radio Interworking for LTE,12.4.0
+,RP-66,RP-142122,1646,-,,Reduction of possible values for WLAN backhaul rate thresholds in LTE,12.4.0
+,RP-66,RP-142140,1648,-,,PDCP SN size change during HO for RLC-UM mode bearers,12.4.0
+,RP-66,RP-142124,1651,-,,Support of TTI bundling without resource allocation restriction for LTE coverage enhancements for Rel-12,12.4.0
+,RP-66,RP-142123,1652,-,,Corrections to eIMTA capabilities,12.4.0
+,RP-66,RP-142140,1653,-,,"ACB, ACB-skip, CSFB and SSAC signalling per PLMN",12.4.0
+,RP-66,RP-142122,1642,1,,Minor corrections regarding WLAN interworking,12.4.0
+,RP-66,RP-142115,1659,-,,Correction of remaining TBD for Rel-10 FGIs,12.4.0
+,RP-66,RP-142117,1663,-,,New UE categories for DL 600Mbps,12.4.0
+,RP-66,RP-142135,1687,-,,Introduction of Dual Connectivity,12.4.0
+,RP-66,RP-142140,1697,1,,Prohibit timer for SR,12.4.0
+,RP-66,RP-142133,1666,-,,Support of 256QAM in TS 36.331 (per band 256QAM capability report),12.4.0
+,RP-66,RP-142128,1690,1,,Introduction of increased number of frequencies to monitor,12.4.0
+,RP-66,RP-142140,1696,2,,Introduction of extended RSRQ value range and new RSRQ definition,12.4.0
+,RP-66,RP-142115,1650,1,,Introduction of signalling for serving cell interruptions,12.4.0
+,RP-66,RP-142123,1655,-,,Correction for p0-Persistent-SubframeSet2 Handling,12.4.0
+,RP-66,RP-142134,1681,-,,Introduction of missing Rel-12 UE capabilities,12.4.0
+,RP-66,RP-142140,1647,1,,Extended RLC LI field correction,12.4.0
+,RP-66,RP-142140,1656,-,,Outstanding Need OP for non-critical extension removal,12.4.0
+,RP-66,RP-142140,1669,2,,Clarification on statusReportRequired handling,12.4.0
+,RP-66,RP-142131,1698,2,,MCH BLER and RSRQ update for MBSFN MDT,12.4.0
+,RP-66,RP-142130,1699,1,,Optionality support of UE mandatory features for Category 0 UEs,12.4.0
+,RP-66,RP-142123,1661,-,,Further Clarifications on eIMTA and eICIC,12.4.0
+,RP-66,RP-142113,1686,1,,UE capability for modified MPR behavior,12.4.0
+,RP-66,RP-142132,1664,1,,Support of Discovery Signals measurement in TS 36.331,12.4.0
+,RP-66,RP-142139,1670,2,,RRC Parameters for NAICS,12.4.0
+,RP-66,RP-141979,1700,-,,UE capability signaling for WLAN/3GPP radio interworking,12.4.0
+,RP-66,-,-,-,,MCC editorial update,12.4.1
+03/2015,RP-67,RP-150373,1737,-,,Clarification on the setting of measScaleFactor without reducedMeasPerformance,12.5.0
+,RP-67,RP-150371,1747,-,,Clarification on Measurement Configuration handling,12.5.0
+,RP-67,RP-150371,1765,-,,Clarification to usage of field deltaTxD-OffsetPUCCH-Format1bCS-r11 in dedicated uplink power control parameter signalling,12.5.0
+,RP-67,RP-150370,1751,-,,Clarification on CSI measurement subframe set,12.5.0
+,RP-67,RP-150368,1795,-,,The absence of supportedMIMO-CapabilityUL-r10,12.5.0
+,RP-67,RP-150370,1798,-,,Presence of codebookSubsetRestriction,12.5.0
+,RP-67,RP-150377,1768,2,,Miscellaneous changes resulting from review for REL-12 ASN.1 freeze,12.5.0
+,RP-67,RP-150374,1770,2,,Introduction of ProSe,12.5.0
+06/2015,RP-68,RP-150921,1800,-,,Correction field description of networkControlledSyncTx,12.6.0
+,RP-68,RP-150921,1801,-,,Clarification on SCG reconfiguration,12.6.0
+,RP-68,RP-150921,1802,-,,Correction for aperiodic CSI trigger,12.6.0
+,RP-68,RP-150920,1804,-,,Correction on handling of wlan-OffloadConfigDedicated upon leaving RRC_CONNECTED,12.6.0
+,RP-68,RP-150921,1805,-,,Reconfiguration of SPS,12.6.0
+,RP-68,RP-150916,1809,-,,CR on Aperiodic CSI Reporting for 1.4MHz cell,12.6.0
+,RP-68,RP-150921,1815,-,,Clarification on PDCP reconfiguration,12.6.0
+,RP-68,RP-150921,1816,-,,Correction to SCG change,12.6.0
+,RP-68,RP-150921,1817,-,,Minor corrections for PSCell configuration in DC,12.6.0
+,RP-68,RP-150921,1818,-,,CR on ROHC for split bearer,12.6.0
+,RP-68,RP-150921,1819,-,,Clarification on FDD/TDD differentiation of FGIs/capabilities in TDD-FDD CA,12.6.0
+,RP-68,RP-150921,1803,1,,Correction to SCG and split bearer configuration,12.6.0
+,RP-68,RP-150921,1810,1,,Clarifications on use of preconfigComm for direct communication,12.6.0
+,RP-68,RP-150921,1811,1,,Miscellaneous corrections (a.o. Sidelink),12.6.0
+,RP-68,RP-150921,1813,1,,Conditions for establishing RRC Connection for sidelink transmission,12.6.0
+,RP-68,RP-150921,1814,1,,Correction on field description on SL-TF-ResourceConfig,12.6.0
+,RP-68,RP-150917,1806,1,,Mandatory present of supportedMIMO-CapabilityDL-r10,12.6.0
+,RP-68,RP-150923,1853,-,,Clarification on Cell barring for downlink only bands,12.6.0
+,RP-68,RP-150917,1852,-,,Clarification regarding no MBMS sessions ongoing,12.6.0
+,RP-68,RP-150917,1827,1,,Correction to additionalSpectrumEmission,12.6.0
+,RP-68,RP-150923,1820,4,,Clarification on extended RSRQ range support,12.6.0
+,RP-68,RP-150917,1838,-,,Restriction to CA capability signalling,12.6.0
+,RP-68,RP-150921,1823,-,,Clarification on PUCCH and SRS,12.6.0
+,RP-68,RP-150926,1849,-,,Introduction of new DL UE categories 15&16,12.6.0
+,RP-68,RP-150923,1824,-,,Clean-up corrections to TS 36.331,12.6.0
+,RP-68,RP-150918,1846,1,,Correction to IDC signalling,12.6.0
+,RP-68,RP-150921,1822,1,,Change of LCID upon DC-specific DRB reconfiguration,12.6.0
+,RP-68,RP-150921,1832,1,,Correction to PHR format,12.6.0
+,RP-68,RP-150921,1842,1,,Correction on conditions for sidelink operation,12.6.0
+,RP-68,RP-150811,1834,2,,Correction on the SL-TF-IndexPair values for ProSe Direct Discovery,12.6.0
+09/2015,RP-69,RP-151443,1866,-,,Correction on UE band combinition capability,12.7.0
+,RP-69,RP-151438,1869,-,,Correction on Restriction to CA capability signalling,12.7.0
+,RP-69,RP-151443,1884,-,,The support of UL64QAM,12.7.0
+,RP-69,RP-151442,1889,-,,Small corrections concerning RadioResourceConfig,12.7.0
+,RP-69,RP-151441,1900,-,,Sidelink discovery related corrections,12.7.0
+,RP-69,RP-151440,1905,2,,Clarification of Beacon RSSI Encoding,12.7.0
+,RP-69,RP-151439,1911,1,,CR for IDC signalling enhancement for UL CA,12.7.0
+,RP-69,RP-151440,1880,2,,Clarification on cell selection sequence upon leaving RRC_CONNECTED,12.7.0
+,RP-69,RP-151438,1908,-,,Correction to additionalSpectrumEmission - Option 1,12.7.0
+,RP-69,RP-151439,1879,1,,Correction on the reference of EPDCCH,12.7.0
+,RP-69,RP-151441,1891,1,,Introducing general handling and guidelines concerning critical extensions within a release,12.7.0
+,RP-69,RP-151443,1909,1,,Applicability of longCodeState1XRTT for 1xRTT IRAT ANR,12.7.0
+,RP-69,RP-151441,1912,1,,Sidelink terminology alignment in TS 36.331,12.7.0
+,RP-69,RP-151442,1906,2,,Clarification for NAICS capability signalling,12.7.0
+,RP-69,RP-151467,1861,2,,Additional MIMO/CSI capability for intra-band contiguous CA,12.7.0
+,RP-69,RP-151466,1887,2,,Signalling for 4-layer MIMO with TM3 and TM4,12.7.0
+,RP-69,RP-151625,1914,2,,Allowing NAICS with TM10,12.7.0
+12/2015,RP-70,RP-152053,1916,-,,Correction on SCG release,12.8.0
+,RP-70,RP-152053,1932,-,,Clarification to SCG RLF timers and constants reconfiguration,12.8.0
+,RP-70,RP-152053,1933,-,,Correction to triggerQuantityCSI-RS,12.8.0
+,RP-70,RP-152053,1946,-,,Correction to NAICS field descriptions,12.8.0
+,RP-70,RP-152055,1947,-,,Correction of need code definition terminology,12.8.0
+,RP-70,RP-152050,1964,-,,Clarification on FDD/TDD difference for UL CA IDC indication,12.8.0
+,RP-70,RP-152046,1975,-,,Correction to SystemTimeInfoCDMA2000 IE,12.8.0
+,RP-70,RP-152053,1928,1,,"highPriorityAccess for MMTEL voice, MMTEL video and SMS",12.8.0
+,RP-70,RP-152053,1986,1,,Correction to the support of Mobility State reporting,12.8.0
+,RP-70,RP-152046,1971,1,,MaxLayerMIMO in HandoverPreparationInformation,12.8.0
+,RP-70,RP-152046,1987,-,,Correction to ASN.1 field names for 4-layer TM3/4,12.8.0
+,RP-70,RP-152053,1969,1,,Correction on measurement identity autonomous removal in dual connectivity,12.8.0
+,RP-70,RP-152053,1979,1,,Clarification on tdd-FDD-CA-PCellDuplex,12.8.0
+,RP-70,RP-152049,1919,2,,Alternative new maximum transport block sizes for DL 64QAM and 256QAM in TM9/10,12.8.0
+,RP-70,RP-152050,1934,1,,Some general RRC issues,12.8.0
+,RP-70,RP-152055,1965,1,,Correction on capability rsrq-OnAllSymbols,12.8.0
+,RP-70,RP-152056,1931,2,,Addition of establishment cause for mobile-originating VoLTE calls and network indication in SIB2,12.8.0
+,RP-70,RP-152048,1927,2,,CR to correct UE messages to be sent only after security activation,12.8.0
+,RP-70,RP-152053,1973,3,,Clarification of MCG,12.8.0
+,RP-70,RP-152113,1923,4,,Enabling multiple NS and P-Max operation per cell,12.8.0
+12/2015,RP-70,RP-152084,1917,-,,MCCH acquisition for 1.4MHz MBSFN,13.0.0
+,RP-70,RP-152084,1937,-,,Paging optimization,13.0.0
+,RP-70,RP-152084,1972,-,,White-list of cells for EUTRA measurement reporting,13.0.0
+,RP-70,RP-152074,1920,1,,Intdroduction of Dual Connectivity enhancements in Rel-13,13.0.0
+,RP-70,RP-152078,1983,2,,Introduction of Licensed-Assisted Access using LTE,13.0.0
+,RP-70,RP-152075,1952,1,,Extension of Frequency Priorities,13.0.0
+,RP-70,RP-152075,1949,1,,Introduction of RS-SINR measurements using non critical extension,13.0.0
+,RP-70,RP-152079,1961,2,,Introducing EBF FD MIMO parameters,13.0.0
+,RP-70,RP-152081,1935,1,,Removing SCG change restrictions regarding upon handover,13.0.0
+,RP-70,RP-152066,1984,1,,Introduction of Application specific Congestion control for Data Communication in LTE,13.0.0
+,RP-70,RP-152071,1872,6,,36331 CR for capturing B5C and SCell on PUCCH,13.0.0
+,RP-70,RP-152073,1953,2,,Introducing CRS interference mitigation on SCell,13.0.0
+,RP-70,RP-152080,1939,3,,Introduction of SC-PTM,13.0.0
+,RP-70,RP-152082,1941,2,,Introduction of Rel-13 MDT enhancements,13.0.0
+,RP-70,RP-152075,1955,3,,Introduction of load redistribution in RRC_IDLE,13.0.0
+,RP-70,RP-152076,1988,-,,Introducing extended DRX,13.0.0
+,RP-70,RP-152084,1957,3,,Clarification on FGI bits setting for MCPTT,13.0.0
+,RP-70,RP-152072,1936,2,,Introducing eSL,13.0.0
+03/2016,RP-71,RP-160454,2001,2,,eD2D changes resulting from review for ASN.1 freeze,13.1.0
+,RP-71,RP-160468,2002,2,,Miscellaneous changes resulting from review for ASN.1 freeze,13.1.0
+,RP-71,RP-160470,2005,1,,Corrections and missing agreement on the eCA,13.1.0
+,RP-71,RP-160470,2006,2,,corrections on RSSI measurment,13.1.0
+,RP-71,RP-160457,2008,3,,Introduction of LTE-WLAN Aggregation,13.1.0
+,RP-71,RP-160470,2010,2,,Corrections on SC-PTM,13.1.0
+,RP-71,RP-160470,2016,-,,Support of extended RLC AM SN for SCG,13.1.0
+,RP-71,RP-160470,2017,1,,Miscellaneous corrections for SC-PTM,13.1.0
+,RP-71,RP-160519,2020,2,,EBF/FD-MIMO changes related to remaining issues,13.1.0
+,RP-71,RP-160467,2022,1,,Correction on the RRC signalling configuration for 4Tx MIMO,13.1.0
+,RP-71,RP-160462,2039,2,,Applicability of longCodeState1XRTT,13.1.0
+,RP-71,RP-160470,2040,1,,Further clarifications on Rel-13 MDT enhancements,13.1.0
+,RP-71,RP-160470,2042,3,,Capability for CA enhancement,13.1.0
+,RP-71,RP-160470,2043,1,,Some corrections on CA enhancement,13.1.0
+,RP-71,RP-160460,2048,1,,The introduction of UE capability concerning extended E-UTRA frequency priorities,13.1.0
+,RP-71,RP-160457,2051,2,,Introduction of RAN controlled LTE-WLAN interworking,13.1.0
+,RP-71,RP-160459,2054,4,,Stage-3 text updates for bearer Identification within IPsec Tunnel and IPsec establishment parameters,13.1.0
+,RP-71,RP-160459,2055,4,,Introduction of LWIP UE capabilities,13.1.0
+,RP-71,RP-160460,2061,1,,UE capabilities for LAA,13.1.0
+,RP-71,RP-160470,2062,1,,Minor corrections for CA enhancements,13.1.0
+,RP-71,RP-160467,2066,1,,Maximum UL timing difference for DC,13.1.0
+,RP-71,RP-160467,2068,1,,T321 for Category 0 UE,13.1.0
+,RP-71,RP-160503,2069,3,,Addition of low complexity UEs and coverage enhancement features,13.1.0
+,RP-71,RP-160454,2070,2,,eD2D Capability,13.1.0
+,RP-71,RP-160470,2072,1,,SC-PTM corrections following ASN.1 review,13.1.0
+,RP-71,RP-160467,2074,1,,Procedural clarification on PSCell change involving PSCell release,13.1.0
+,RP-71,RP-160464,2075,2,,Modification of network requested CA band combination retrieval for intra-band non-contiguous CA,13.1.0
+,RP-71,RP-160470,2087,1,,ANR in case of MFBI,13.1.0
+,RP-71,RP-160467,2090,-,,Clarification on the leftmost bit for the supportedCellGrouping,13.1.0
+,RP-71,RP-160467,2094,-,,Clarification on the value range of guaranteed power for the MeNB and SeNB,13.1.0
+,RP-71,RP-160455,2096,-,,36.331 CR on TM10 CRS-IM UE capability report signalling introduction,13.1.0
+,RP-71,RP-160456,2097,2,,Miscelanous corrections to TS 36.331 related to eDRX,13.1.0
+,RP-71,RP-160470,2098,-,,Guideline on handling of uplink spare values,13.1.0
+,RP-71,RP-160465,2100,-,,In-Device Coexistence for UL CA change of victim system,13.1.0
+,RP-71,RP-160470,2101,-,,Clarification on initial RSSI measurement reporting,13.1.0
+,RP-71,RP-160470,2102,-,,Introduction of capability on PDSCH collision handling,13.1.0
+,RP-71,RP-160470,2103,1,,Introduction of the extension of measObjectId range,13.1.0
+,RP-71,RP-160470,2105,1,,The correction on the description of 5.5.4.1,13.1.0
+,RP-71,RP-160470,2106,-,,Introduction of sf60 DRX cycle,13.1.0
+,RP-71,RP-160467,2109,1,,Clarification on NAICS subset capability,13.1.0
+,RP-71,RP-160470,2110,-,,SC-PTM reception on non-Pcell,13.1.0
+,RP-71,RP-160470,2111,-,,MBMS interest indication by SC-PTM capable UE,13.1.0
+,RP-71,RP-160460,2112,1,,Additional Layer 1 capabilities for Rel-13 CA enhancements,13.1.0
+06/2016,RP-72,RP-161080,2114,-,,Corrections to MTCe in TS 36.331,13.2.0
+,RP-72,RP-161080,2115,2,,Miscellaneous corrections to TS 36.331,13.2.0
+,RP-72,RP-161080,2116,1,,Inter-node signalling,13.2.0
+,RP-72,RP-161080,2117,-,,Clarification on SC-PTM,13.2.0
+,RP-72,RP-161076,2118,1,,UE capability of an additional Rx and Tx requirement for a CA band combination,13.2.0
+,RP-72,RP-161073,2125,-,,drb-identity change in full configuration,13.2.0
+,RP-72,RP-161080,2126,-,,Miscellaneous correction for sidelink,13.2.0
+,RP-72,RP-161080,2127,-,,Corrections for conditions of sidelink operation,13.2.0
+,RP-72,RP-161080,2130,1,,Correction on conditions for establishing RRC Connection for sidelink communication,13.2.0
+,RP-72,RP-161080,2131,1,,Corrections for sidelink communication transmission,13.2.0
+,RP-72,RP-161080,2132,1,,Correction to WLAN measurements,13.2.0
+,RP-72,RP-161080,2133,1,,Small corrections to LWIP,13.2.0
+,RP-72,RP-161080,2134,1,,Small eSL related corrections,13.2.0
+,RP-72,RP-161080,2135,1,,Alignment of RCLWI configuration,13.2.0
+,RP-72,RP-161080,2136,1,,Configuration of LWA and LWIP upon handover,13.2.0
+,RP-72,RP-161080,2137,1,,Introducing EBF/FD-MIMO capabilities,13.2.0
+,RP-72,RP-161077,2140,-,,Clarification regarding IDC indication upon change of UL CA affecting GNSS,13.2.0
+,RP-72,RP-161080,2143,3,,Correction of periodic CSI reporting and clarification on p-C and CBSR signalling,13.2.0
+,RP-72,RP-161080,2144,-,,CR on SI window combining for MTC,13.2.0
+,RP-72,RP-161080,2145,-,,Avoiding simultaneous configuration of LWA and DC for a UE,13.2.0
+,RP-72,RP-161080,2146,-,,Miscellaneous RRC corrections for LWA,13.2.0
+,RP-72,RP-161080,2147,1,,Autonomous WLAN measurement ID removal,13.2.0
+,RP-72,RP-161080,2149,1,,Correction to channel number range,13.2.0
+,RP-72,RP-161080,2150,-,,Correction of backhaul bandwidth description,13.2.0
+,RP-72,RP-161080,2151,1,,Correction on frequency hopping signaling,13.2.0
+,RP-72,RP-161075,2152,1,,Support of CRS-Assistance signaling for the DL Control Channel IM,13.2.0
+,RP-72,RP-161078,2154,-,,Correction on condition nonFullConfig in dual connectivity,13.2.0
+,RP-72,RP-161080,2159,1,,Correction on system information handling in eMTC,13.2.0
+,RP-72,RP-161080,2160,1,,Correction on essential system information missing,13.2.0
+,RP-72,RP-161080,2162,-,,Steering command during T350,13.2.0
+,RP-72,RP-161080,2163,1,,UE behaviours while configured with steeringCommandWLAN (release),13.2.0
+,RP-72,RP-161077,2166,1,,"Correction of IE name ""systemInformationBlockType1Dedicated""",13.2.0
+,RP-72,RP-161080,2167,-,,Clarification of timer description for MCLD,13.2.0
+,RP-72,RP-161080,2169,-,,Clarification on the usage of threshold conditions for sidelink relay UE,13.2.0
+,RP-72,RP-161080,2170,-,,Corrections to LWA,13.2.0
+,RP-72,RP-161080,2171,-,,Variable Handling for RCLWI,13.2.0
+,RP-72,RP-161080,2174,1,,Correction on configuration of PRACH and MPDCCH for RA procedure for BL UEs or UEs in CE,13.2.0
+,RP-72,RP-161080,2175,-,,Clarification on LWA,13.2.0
+,RP-72,RP-161080,2176,1,,Miscellaneous corrections,13.2.0
+,RP-72,RP-161080,2180,-,,Correction on FDD/TDD differentiation for Rel-13 capabilities,13.2.0
+,RP-72,RP-161080,2181,1,,Correction on the definition of sc-mcch-duration,13.2.0
+,RP-72,RP-161080,2182,-,,System information acquisition for SC-PTM reception on non-Pcell,13.2.0
+,RP-72,RP-161080,2183,-,,Corrections on capability report for eCA,13.2.0
+,RP-72,RP-161080,2185,1,,Corrections to RS-SINR configuration,13.2.0
+,RP-72,RP-161080,2186,1,,UL UE Categories support for 64 QAM,13.2.0
+,RP-72,RP-161080,2188,1,,Correction on SI update for eDRX,13.2.0
+,RP-72,RP-161080,2189,-,,Add the field description for mpdcch-NarrowbandsToMonitor-r13,13.2.0
+,RP-72,RP-161080,2192,-,,WLAN measurements and user preference,13.2.0
+,RP-72,RP-161080,2193,1,,Miscellaneous corrections resulting from REL-13 ASN.1 review,13.2.0
+,RP-72,RP-161080,2195,-,,Correction to eMTC message classes and logical channels,13.2.0
+,RP-72,RP-161080,2198,-,,Some eCA related corrections,13.2.0
+,RP-72,RP-161080,2199,1,,PUCCH SCell corrections,13.2.0
+,RP-72,RP-161080,2200,1,,Small corrections of timer description for Sidelink,13.2.0
+,RP-72,RP-161080,2201,-,,Clarification of use of extended timer values for UEs that support CE mode B,13.2.0
+,RP-72,RP-161080,2202,2,,Correction to UL SPS operation,13.2.0
+,RP-72,RP-161080,2203,1,,UE Power Class in UE capability signaling,13.2.0
+,RP-72,RP-161080,2204,-,,Correction to FD-MIMO field descriptions,13.2.0
+,RP-72,RP-161080,2205,1,,Miscellaneous eMTC corrections,13.2.0
+,RP-72,RP-161080,2206,-,,Further miscellaneous eMTC corrections,13.2.0
+,RP-72,RP-161080,2207,-,,Correction to Initial CE Level,13.2.0
+,RP-72,RP-161080,2209,2,,Feature Group Indicators and UE capabilities for eMTC,13.2.0
+,RP-72,RP-161080,2210,2,,CR to capture CIoT optimizations for non-NB-IoT UEs,13.2.0
+,RP-72,RP-161080,2211,-,,Valid subframes for FDD and TDD DL transmissions,13.2.0
+,RP-72,RP-161080,2216,1,,Avoiding conflict between rel13 LWA/LWIP and rel12 RALWI,13.2.0
+,RP-72,RP-161078,2220,-,,Clarification on the presence of ul-64QAM-r12 for DL-only bands,13.2.0
+,RP-72,RP-161080,2221,-,,Correction on keeping SCG upon inter eNB handove,13.2.0
+,RP-72,RP-161080,2222,-,,The granularity of LWAAP entity,13.2.0
+,RP-72,RP-161080,2223,-,,Clarification on WLAN measurment,13.2.0
+,RP-72,RP-161080,2224,-,,The handling of WLAN status monitoring,13.2.0
+,RP-72,RP-161080,2226,1,,Clarification on the handover from the MeNB to the SeNB,13.2.0
+,RP-72,RP-161080,2230,1,,Restricting Unattended Data Traffic,13.2.0
+,RP-72,RP-161211,2231,7,,Introduction of NB-IoTin 36.331,13.2.0
+,RP-72,RP-161080,2233,-,,Correction to T302 and T308 conflict issue,13.2.0
+,RP-72,RP-161080,2234,1,,Various corrections to MTCe related ASN.1 code and field descriptions,13.2.0
+,RP-72,RP-161080,2235,-,,Clarification to field description for the timer T360,13.2.0
+,RP-72,RP-161080,2236,-,,Clarification to ordering of Rel13 Frequency priority lists,13.2.0
+,RP-72,RP-161080,2238,1,,Introduction of LWIP counter,13.2.0
+,RP-72,RP-161080,2239,1,,Clarification on EpdcchSetConfig for eMTC,13.2.0
+,RP-72,RP-161080,2240,2,,"Skipping fallback ""2DL + 1UL"" CA in UE capability report in Rel 13",13.2.0
+,RP-72,RP-161270,2241,3,,NAS timer settings for eMTC,13.2.0
+09/2016,RP-73,RP-161758,2242,1,,Correction to access barring checking for network sharing case,13.3.0
+,RP-73,RP-161757,2244,1,,Correction to LWIP and LWA,13.3.0
+,RP-73,RP-161754,2245,2,,Backward compatibility of CA band combination signalling,13.3.0
+,RP-73,RP-161756,2248,1,,Correction on measurement reporting for WLAN,13.3.0
+,RP-73,RP-161756,2249,1,,Correction on WLAN authentication,13.3.0
+,RP-73,RP-161756,2250,2,,"Corrections to simultaneous configuration of LWA, RCLWI and LWIP",13.3.0
+,RP-73,RP-161756,2253,-,,Correction on WLAN connection management,13.3.0
+,RP-73,RP-161758,2254,1,,Corrections to TS36.331,13.3.0
+,RP-73,RP-161758,2258,2,,Issue on resume procedure,13.3.0
+,RP-73,RP-161758,2262,-,,Corrections to NB-IoT in 36.331,13.3.0
+,RP-73,RP-161758,2263,-,,Cleanup of the NB-IoT ASN.1,13.3.0
+,RP-73,RP-161758,2266,3,,Miscellaneous corrections to clause 4 and 5 for NB-IoT,13.3.0
+,RP-73,RP-161751,2268,3,,Clarification to intra-band contiguous CA capabilities,13.3.0
+,RP-73,RP-161759,2269,-,,Clarification on RRC processing delay for CIoT,13.3.0
+,RP-73,RP-161759,2270,2,,Supporting new UE Rx – Tx time difference mapping table,13.3.0
+,RP-73,RP-161758,2272,1,,Alignment of procedure when handling up-CIoT-EPS-Optimisation,13.3.0
+,RP-73,RP-161754,2273,1,,Simplification of UE capability reporting procedure,13.3.0
+,RP-73,RP-161752,2274,2,,Corrections on system information acquisition for Sidelink discovery,13.3.0
+,RP-73,RP-161756,2275,1,,Small corrections regarding (WLAN) measurement reporting,13.3.0
+,RP-73,RP-161758,2279,-,,Correction on cell reslection procedure while T300 is running,13.3.0
+,RP-73,RP-161758,2280,1,,Correction on full configuration,13.3.0
+,RP-73,RP-161758,2281,1,,Correction on SRB addition and modification,13.3.0
+,RP-73,RP-161756,2282,1,,Clarifications on RCLWI,13.3.0
+,RP-73,RP-161758,2283,1,,Introduction of DelayTolerantAccess establishment cause in NB-IoT,13.3.0
+,RP-73,RP-161762,2284,1,,Maximum number of simultaneous UL PDCP delay measurements for FeMDT,13.3.0
+,RP-73,RP-161762,2287,2,,Clarification on DRX cycle used by the UE,13.3.0
+,RP-73,RP-161755,2288,1,,Invalidation of stored system information in connected mode,13.3.0
+,RP-73,RP-161755,2289,1,,Clarification on bit mapping of fdd-DownlinkOrTddSubframeBitmapLC and fdd-UplinkSubframeBitmapLC,13.3.0
+,RP-73,RP-161759,2290,-,,Correction on C-IoT optimizations for non-NB-IoT UE,13.3.0
+,RP-73,RP-161749,2295,1,,Clarification on timer handling for zero value,13.3.0
+,RP-73,RP-161759,2299,-,,Measurement configuration during RRC resume in CIoT,13.3.0
+,RP-73,RP-161755,2301,1,,Correction on UEPagingCoverageInformation,13.3.0
+,RP-73,RP-161749,2305,1,,DRB re-setup in Full Configuration,13.3.0
+,RP-73,RP-161755,2306,1,,Rel-13 correction for eMTC parameter values,13.3.0
+,RP-73,RP-161753,2307,1,,CR on forwarding LAA measurement results for DC,13.3.0
+,RP-73,RP-161756,2309,1,,Clarification on associationTimer,13.3.0
+,RP-73,RP-161756,2310,-,,Clarification on PDCP-Config and statusFeedback for LWA,13.3.0
+,RP-73,RP-161756,2311,1,,Order of addition and removal of WLAN-Identifiers,13.3.0
+,RP-73,RP-161756,2313,-,,Multiple WLAN measurement objects on the same frequency,13.3.0
+,RP-73,RP-161755,2315,-,,Correction about eMTC frequency hopping parameters,13.3.0
+,RP-73,RP-161753,2317,1,,Handling of tdd-Config-r10 for LAA Scell,13.3.0
+,RP-73,RP-161760,2318,1,,Introduction of 1.2Gbps and 1.6Gbps UE categories in Rel-13,13.3.0
+,RP-73,RP-161755,2320,2,,Extended T310 timer values for eMTC,13.3.0
+,RP-73,RP-161761,2323,1,,Introducing UE capability of Rel 13 CCH IM,13.3.0
+,RP-73,RP-161761,2324,1,,Introducing UE capability of CRS-IM for TM 1-9,13.3.0
+,RP-73,RP-161827,2325,2,,Continuous uplink transmission in eMTC,13.3.0
+,RP-73,RP-161755,2328,1,,Correction on PUSCH repetition numbers for CE Mode A,13.3.0
+,RP-73,RP-161755,2329,-,,Frequency hopping configuration for paging,13.3.0
+,RP-73,RP-161758,2334,2,,Reservation of RA resources in NB-IoT,13.3.0
+,RP-73,RP-161754,2336,1,,Extended PHR corrections,13.3.0
+,RP-73,RP-161756,2337,1,,Corrections for LWA/LWIP,13.3.0
+,RP-73,RP-161762,2338,3,,Correction on 12/16-port CSI-RS resource configuration for FD-MIMO,13.3.0
+,RP-73,RP-161755,2339,2,,Corrections in Rel-13 eMTC SI acquisition,13.3.0
+,RP-73,RP-161758,2342,-,,Correction of downlink gap applicability for NB-IoT,13.3.0
+,RP-73,RP-161751,2344,1,,Indication of the maxLayersMIMO,13.3.0
+,RP-73,RP-161758,2346,-,,nrs-Power signaling for NB-IoT non-anchor carrier,13.3.0
+09/2016,RP-73,RP-161746,2261,1,,Introducing V2V to TS 36.331,14.0.0
+,RP-73,RP-161745,2340,1,,Introduction of enhanced LAA for LTE,14.0.0
+,RP-73,RP-161747,2341,-,,Introduction of L2 Latency reduction techniques,14.0.0
+12/2016,RP-74,RP-162318,2362,-,,Clarification on the RRC connection resume procedure,14.1.0
+,RP-74,RP-162313,2364,1,,Clarification on AS-Config,14.1.0
+,RP-74,RP-162316,2366,1,,Corrections to LWA release,14.1.0
+,RP-74,RP-162327,2373,1,,Signalling of LWIP aggregation,14.1.0
+,RP-74,RP-162318,2375,1,,Miscellaneous corrections to TS 36.331,14.1.0
+,RP-74,RP-162317,2377,-,,Clarification on valid value range of codebookConfigNx fields,14.1.0
+,RP-74,RP-162321,2378,-,,Miscellaneous corrections to eLAA,14.1.0
+,RP-74,RP-162311,2381,-,,FDD&TDD diff for mbms-AsyncDC,14.1.0
+,RP-74,RP-162316,2386,-,,Corrections to WLAN status monitoring,14.1.0
+,RP-74,RP-162314,2389,-,,Clarification to the security mode command procedure for NB-IoT,14.1.0
+,RP-74,RP-162318,2391,-,,Clarification on UE power class 2 indication,14.1.0
+,RP-74,RP-162312,2394,-,,Correction on UE behavior in Paging procedure,14.1.0
+,RP-74,RP-162314,2396,-,,Corrections to NB-IoT SystemInformationBlockType2 handling,14.1.0
+,RP-74,RP-162314,2398,1,,Data available for transmission,14.1.0
+,RP-74,RP-162315,2400,1,,Correction on Downlink power allocation for SC-PTM,14.1.0
+,RP-74,RP-162328,2402,-,,Corrections on V2V in TS 36.331,14.1.0
+,RP-74,RP-162314,2403,-,,Correction on field description of up/cp-CIoT-EPS-Optimisation,14.1.0
+,RP-74,RP-162327,2404,-,,Extension of PollByte,14.1.0
+,RP-74,RP-162317,2407,-,,Clarification on Rel-13 CCH-IM UE capability,14.1.0
+,RP-74,RP-162317,2411,-,,Configuration of DMTC for neighbour and serving cells in LAA carrier frequency,14.1.0
+,RP-74,RP-162314,2413,-,,Clarification on uplink carrier frequency,14.1.0
+,RP-74,RP-162314,2415,-,,NB-IoT RRC Processing Delays,14.1.0
+,RP-74,RP-162314,2420,1,,Correction of connection suspension related aspects,14.1.0
+,RP-74,RP-162317,2422,-,,Clarification regarding on CSI-RS resource configuration for FD-MIMO,14.1.0
+,RP-74,RP-162316,2424,-,,Clearing of measurements upon reporting WLAN unavailability,14.1.0
+,RP-74,RP-162313,2428,-,,Minor changes regarding UE category,14.1.0
+,RP-74,RP-162309,2435,1,,Correction of NOTE 3 in UE-EUTRA-Capability related to multiple CA-MIMO-ParametersDL/UL,14.1.0
+,RP-74,RP-162311,2441,1,,Clarification on reporting of the plmn-IdentityList,14.1.0
+,RP-74,RP-162317,2446,2,,Correction on SSTD Measurement Reporting,14.1.0
+,RP-74,RP-162322,2448,1,,Introduce Enhancements for High Speed in 36.331,14.1.0
+,RP-74,RP-162312,2451,-,,System information update for eDRX UEs,14.1.0
+,RP-74,RP-162317,2453,1,,Correction on ACDC handling,14.1.0
+,RP-74,RP-162328,2457,1,,Correction and Clarification to TS 36.331,14.1.0
+,RP-74,RP-162313,2459,1,,Correction to frequecy hopping configuration,14.1.0
+,RP-74,RP-162314,2461,-,,Correction to non-anchor carrier configuration,14.1.0
+,RP-74,RP-162329,2462,1,,UE capabilities for Latency Reduction,14.1.0
+,RP-74,RP-162311,2466,1,,Conrrections on sidelink pre-configurations and default configurations,14.1.0
+,RP-74,RP-162317,2469,-,,Minor corrections for Rel-13 eD2D,14.1.0
+,RP-74,RP-162324,2471,3,,Introduction of SRS switching for LTE,14.1.0
+,RP-74,RP-162325,2473,1,,Introduction of MUST,14.1.0
+,RP-74,RP-162314,2474,-,,Clarification on system information acquisition for NB-IoT,14.1.0
+,RP-74,RP-162314,2476,-,,Editorial correction for NB-IoT,14.1.0
+,RP-74,RP-162314,2478,-,,Acknowledgement delay of RRCConnectionRelease message in NB-IoT,14.1.0
+,RP-74,RP-162320,2484,-,,Introduction of new UL category in Rel-13,14.1.0
+,RP-74,RP-162327,2485,-,,Addition of eCall over IMS Indication in SIB1,14.1.0
+,RP-74,RP-162313,2488,-,,DMRS scrambling sequence initialization parameter for MPDCCH,14.1.0
+,RP-74,RP-162313,2490,-,,RSRP threshold when only CE level 0 is used,14.1.0
+,RP-74,RP-162313,2492,-,,Correction on fdd-DownlinkOrTddSubframeBitmapBR,14.1.0
+,RP-74,RP-162313,2495,-,,Correction to presence of uplink frequency hopping interval parameter,14.1.0
+,RP-74,RP-162315,2497,1,,Correction to SC-PTM scheduling period start offset,14.1.0
+,RP-74,RP-162316,2504,-,,Correction to WLAN measurement configuration,14.1.0
+,RP-74,RP-162328,2509,1,,Introducing Shorter Resource Reservation Periodicities for V2X,14.1.0
+,RP-74,RP-162313,2519,1,,Acknowledgement delay of RRCConnectionRelease message for eMTC UEs,14.1.0
+,RP-74,RP-162314,2525,-,,Correction on channel bandwidth definition for NB-IoT,14.1.0
+,RP-74,RP-162316,2534,1,,Clarifications on empty WLAN identifiers,14.1.0
+,RP-74,RP-162316,2542,1,,Clarifications on empty WLAN identifiers in Mobility Set for RCLWI,14.1.0
+,RP-74,RP-162350,2546,-,,timeInfoUTC in SIB16,14.1.0
+,RP-74,RP-162313,2547,-,,Clarification on fdd-DownlinkOrTddSubframeBitmapBR,14.1.0
+,RP-74,RP-162321,2548,2,,Introduction of capabilities for eLAA,14.1.0
+,RP-74,RP-162309,2552,-,,Clarification on prioritization of multiple Pmax values,14.1.0
+,RP-74,RP-162329,2553,-,,CR on RV setting with UL skipping,14.1.0
+,RP-74,RP-162314,2555,1,,Correction of default physical channel configuration for NB-IoT,14.1.0
+03/2017,RP-75,RP-170639,2559,2,A,Signalling of 1Rx UE category,14.2.0
+,RP-75,RP-170636,2560,1,B,Introducing Rel-14 FeMTC into RRC,14.2.0
+,RP-75,RP-170643,2563,1,F,Correction on V2X sidelink communication in TS 36.331,14.2.0
+,RP-75,RP-170668,2565,1,B,Introduction of a new special subframe configuration,14.2.0
+,RP-75,RP-170652,2576,1,A,Providing SIB1-BR via dedicated RRC signalling,14.2.0
+,RP-75,RP-170641,2577,1,B,Introduction of eDECOR,14.2.0
+,RP-75,RP-170636,2578,1,B,Introduction of SC-PTM for feMTC and NB-IoT enhancements,14.2.0
+,RP-75,RP-170629,2580,1,B,Introducing RRC parameters for eFD-MIMO (REL-14),14.2.0
+,RP-75,RP-170657,2582,1,A,Indication of S1-U data transfer,14.2.0
+,RP-75,RP-170650,2585,1,A,Addition of extended EARFCNs in SCGFailureInformation message,14.2.0
+,RP-75,RP-170652,2587,-,A,Clarification on the configuration of the extended values for nB,14.2.0
+,RP-75,RP-170652,2589,-,A,Clarification on the support of FGI 42 for category M1 UE,14.2.0
+,RP-75,RP-170656,2591,1,A,Miscellaneous corrections to NB-IoT,14.2.0
+,RP-75,RP-170643,2592,1,F,Corrections to resource reservation period for V2X,14.2.0
+,RP-75,RP-170651,2598,-,A,Correction on the initiation of WLAN connection status report,14.2.0
+,RP-75,RP-170654,2600,-,A,Correction on longDRX-CycleStartOffset,14.2.0
+,RP-75,RP-170643,2601,2,F,Correction and Clarification to TS 36.331,14.2.0
+,RP-75,RP-170653,2603,2,A,Correction on mpdcch-pdsch-HoppingConfig,14.2.0
+,RP-75,RP-170636,2613,3,B,FeMTC UE CE mode and maximum PDSCH/PUSCH BW preference indication,14.2.0
+,RP-75,RP-170635,2615,2,B,Introduce V2X in TS 36.331,14.2.0
+,RP-75,RP-170643,2616,2,F,Introduce a new parameter for V2X resource reselection,14.2.0
+,RP-75,RP-170656,2622,2,A,Extension of QRxLevMin value range,14.2.0
+,RP-75,RP-170655,2624,-,A,Clarification on prioritization of multiple Pmax values,14.2.0
+,RP-75,RP-170637,2625,2,B,Introduction of NB-IoT Enhancements other than Multicast,14.2.0
+,RP-75,RP-170651,2627,1,A,Corrections to WLAN status monitoring,14.2.0
+,RP-75,RP-170642,2635,1,B,Introduction of data inactivity timer,14.2.0
+,RP-75,RP-170654,2637,-,A,Correction of reference to GERAN specification,14.2.0
+,RP-75,RP-170652,2641,1,A,IOT indication for unicast MPDCCH/PDSCH/PUSCH frequency hopping,14.2.0
+,RP-75,RP-170632,2642,3,B,Introducing 256QAM in UL,14.2.0
+,RP-75,RP-170654,2644,-,A,Correction CIoT cell indications to UE NAS,14.2.0
+,RP-75,RP-170633,2645,1,B,Introduction of FeMBMS to 36.331,14.2.0
+,RP-75,RP-170643,2646,1,F,Corrections to the exceptional pool,14.2.0
+,RP-75,RP-170653,2651,2,A,New S-criteria for enhanced coverage in idle mode,14.2.0
+,RP-75,RP-170651,2655,-,A,Corrections in UE capability reporting,14.2.0
+,RP-75,RP-170642,2660,2,C,Functional modification of retrieving different UE capabilities for a fallback band combination,14.2.0
+,RP-75,RP-170638,2663,2,B,Introduction of Voice and Video enhancements for LTE,14.2.0
+,RP-75,RP-170654,2665,1,A,The support of UL 64QAM,14.2.0
+,RP-75,RP-170645,2666,1,F,Miscellaneous Corrections on SRS Switching,14.2.0
+,RP-75,RP-170646,2667,1,B,Introduction of SRS switching capability for LTE,14.2.0
+,RP-75,RP-170652,2671,-,A,Clarification for pucch-NumRepetitionCE-format2-r13 for CE mode B,14.2.0
+,RP-75,RP-170643,2673,-,F,Correction on the preconfigured power control parameter for V2X sidelink communication,14.2.0
+,RP-75,RP-170653,2675,2,A,Correction of pusch-hoppingOffset,14.2.0
+,RP-75,RP-170628,2676,3,B,Introduction of Enhanced LTE-WLAN Aggregation (eLWA),14.2.0
+,RP-75,RP-170651,2678,-,A,Need behaviour of availableAdmissionCapacityRequestWLAN,14.2.0
+,RP-75,RP-170644,2685,1,B,Addition of geographical location reporting in 36.331,14.2.0
+,RP-75,RP-170630,2689,3,B,Introduction of mobility enhancement solutions in RRC,14.2.0
+,RP-75,RP-170651,2694,-,A,Clarification on data handling for LWA bearer,14.2.0
+,RP-75,RP-170634,2696,2,B,CR for introduction of NCSG and per CC measurement gap,14.2.0
+,RP-75,RP-170634,2697,1,B,"CR for introduction of NCSG, short measurement gaps and configuration of CC measurement gap",14.2.0
+,RP-75,RP-170321,2698,-,F,Correction to PRACH resource configuration for high speed scenario,14.2.0
+,RP-75,RP-170807,2701,1,A,Feature optionality for Cat.1bis UE,14.2.0
+,RP-75,RP-170656,2703,-,A,Extension of timer T311,14.2.0
+,RP-75,,,,,"Fixed ASN.1 syntax check error (""PLMN-IdentityList-MBMS-14"" -> ""PLMN-IdentityList-MBMS-r14"")",14.2.1
+,RP-75,,,,,Updated the version number on the cover sheet,14.2.2
+06/2017,RP-76,RP-171226,2705,2,F,Correction to exceptional pool usage in TS 36.331,14.3.0
+,RP-76,RP-171237,2706,1,F,Support eDECOR for NB-IoT,14.3.0
+,RP-76,RP-171231,2709,1,F,Correction on UE capabilities for eLAA,14.3.0
+,RP-75,RP-171243,2711,3,A,Correction on WLAN connection status report monitoring for LWIP,14.3.0
+,RP-76,RP-171236,2712,3,F,Correction on eLWA,14.3.0
+,RP-76,RP-171225,2713,2,B,Introduction of new Transport Block Size for DL 256QAM,14.3.0
+,RP-76,RP-171236,2714,2,F,UE capabilities for eLWA,14.3.0
+,RP-76,RP-171227,2715,2,B,Introducing a new SL master information block for V2X sidelink communication,14.3.0
+,RP-76,RP-171236,2720,2,F,Clarifications to eLWA,14.3.0
+,RP-76,RP-171247,2728,2,B,Introduction of a new UL UE category for 300Mbps with 64QAM,14.3.0
+,RP-76,RP-171425,2872,3,F,Miscellaneous general corrections and clarifications resulting from ASN.1 review,14.3.0
+,RP-76,RP-171223,2734,2,F,Introduction of SFN indication in handover message,14.3.0
+,RP-76,RP-171224,2737,1,F,Correction to SIB-Type-NB,14.3.0
+,RP-76,RP-171233,2741,5,F,Clarification of intra-frequency applicability of makeBeforeBreak HO,14.3.0
+,RP-76,RP-171224,2745,3,F,Correction to the value range of ce-AuthorisationOffset,14.3.0
+,RP-76,RP-171224,2746,2,C,Introduction of Overload Control for Control plane data only,14.3.0
+,RP-76,RP-171223,2748,2,F,SC-MCCH information change notification for FeMTC and NB-IoT enhancements,14.3.0
+,RP-76,RP-171223,2749,1,F,Alignment of the parameter names for SC-PTM DRX for SC-MCCH and SC-MTCH,14.3.0
+,RP-76,RP-171233,2752,3,F,Corrections to RACH-less handover and SCG change,14.3.0
+,RP-76,RP-171222,2759,7,F,Corrections to per-CC measurement gap configuration and add the support for UE reporting of numFreqEffectiveReduced when frequencies are configured for reduced measurement performance,14.3.0
+,RP-76,RP-171233,2760,1,F,Corrections to make before break mobility,14.3.0
+,RP-76,RP-171243,2768,2,F,Clarification regarding requesting fallback combinations with different capabilities,14.3.0
+,RP-76,RP-171226,2771,1,F,Leap second change for DFN timing,14.3.0
+,RP-76,RP-171244,2773,1,A,Correction to RACH CE level info list,14.3.0
+,RP-76,RP-171223,2775,2,C,CE mode configuration/deconfiguration without handover,14.3.0
+,RP-76,RP-171227,2791,3,F,Correction on V2X Rx pool for inter-frequency configuration in 36.331,14.3.0
+,RP-76,RP-171248,2795,1,A,Entry-Level UE Support UL 64QAM,14.3.0
+,RP-76,RP-171235,2797,1,F,FDD TDD difference for VoLTE capability,14.3.0
+,RP-76,RP-171242,2804,1,A,Setting of FGI 107 and 108 in case of TDD-FDD CA,14.3.0
+,RP-76,RP-171226,2813,1,F,Correction of RRCConnectionReconfiguration reception for V2X,14.3.0
+,RP-76,RP-171227,2820,-,F,CR on V2X miscellaneous RRC corrections,14.3.0
+,RP-76,RP-171224,2823,2,B,Introduction of RRC connection re-establishment for NB-IoT control plane,14.3.0
+,RP-76,RP-171243,2826,-,A,Miscellaneous corrections to CA enhancements,14.3.0
+,RP-76,RP-171244,2828,2,A,Clarification to MIB repetitions,14.3.0
+,RP-76,RP-171243,2830,3,A,LAA/WiFi sharing indiction,14.3.0
+,RP-76,RP-171225,2831,-,B,Enable Uplink-Only RoHC operations,14.3.0
+,RP-76,RP-171245,2833,1,A,Clarification on contention based random access for NB-IoT,14.3.0
+,RP-76,RP-171245,2836,-,A,Editorial correction on ab-Barring parameter,14.3.0
+,RP-76,RP-171223,2842,-,F,Correction to FGI 25,14.3.0
+,RP-76,RP-171223,2844,1,F,Correction to InterFreqRSTDMeasurementIndication message,14.3.0
+,RP-76,RP-171223,2845,2,B,Introduction of enhanced RLM reporting,14.3.0
+,RP-76,RP-171245,2848,1,A,Correction on the UE AS context handling,14.3.0
+,RP-76,RP-171245,2849,1,A,Correction on attach without PDN connectivity,14.3.0
+,RP-76,RP-171233,2851,1,F,Miscellaneous RRC corrections on mobility enhancement,14.3.0
+,RP-76,RP-171245,2853,1,A,Clarification on logicalChannelSR-ProhibitTimer for NB-IOT,14.3.0
+,RP-76,RP-171223,2854,2,F,Correction to SC-MCCH and SC-MTCH configuration without delta configuration,14.3.0
+,RP-76,RP-171230,2869,1,F,Correction of SRS switching,14.3.0
+,RP-76,RP-171223,2870,2,F,Miscellaneous feMTC corrections and clarifications resulting from ASN.1 review,14.3.0
+,RP-76,RP-171237,2871,-,F,Miscellaneous eDECOR corrections and clarifications resulting from ASN.1 review,14.3.0
+,RP-76,RP-171221,2873,1,F,Miscellaneous feMBMS corrections and clarifications resulting from ASN.1 review,14.3.0
+,RP-76,RP-171221,2874,1,B,UE capabilities for feMBMS,14.3.0
+,RP-76,RP-171224,2876,1,F,Long DRX values with regular wake-up cycle – Option 1,14.3.0
+,RP-76,RP-171244,2879,-,A,Correction on terminology of SI for eMTC,14.3.0
+,RP-76,RP-171223,2882,1,F,Correction on the descritption of ce-srsEnhancement for FeMTC,14.3.0
+,RP-76,RP-171223,2883,2,B,Measurement gap sharing for FeMTC intra- and inter-frequency measurement,14.3.0
+,RP-76,RP-171223,2884,1,F,Minor correction in TS 36.331 for feMTC,14.3.0
+,RP-76,RP-171223,2885,2,F,Corrections on reconfiguration between CE mode and normal mode in eMTC,14.3.0
+,RP-76,R2-1705852,2887,1,F,Clarification regarding eFD-MIMO configuration (REL-14),14.3.0
+,RP-76,RP-171235,2889,1,F,Correction of issues related to ASN.1 review for eVoLTE,14.3.0
+,RP-76,RP-171230,2890,1,F,Merging of retuningTimeBandPairList with regular supported BC capabilites (ASN.1 review issue S.059),14.3.0
+,RP-76,RP-171222,2891,-,F,Consistent gap pattern configuration for serving cells,14.3.0
+,RP-76,RP-171407,2903,2,B,Introduction of UE capability for V2X in 36.331,14.3.0
+,RP-76,RP-171227,2905,1,F,Correction on V2X behavior in 36.331,14.3.0
+,RP-76,RP-171246,2912,2,B,EUTRAN sharing enhancement,14.3.0
+,RP-76,RP-171244,2919,-,A,Clarification on additionalSpectrumEmission for eMTC,14.3.0
+,RP-76,RP-171245,2920,-,A,Clarification on additionalSpectrumEmission for NB-IoT,14.3.0
+,RP-76,RP-171224,2927,-,F,Correction to CarrierConfigDedicated-NB,14.3.0
+,RP-76,RP-171224,2929,2,F,Miscellaneous NB-IoT corrections and clarifications resulting from ASN.1 review,14.3.0
+,RP-76,RP-171245,2931,2,A,Extension of SIntraSearchP value range,14.3.0
+,RP-76,RP-171223,2932,-,F,Maximum PDSCH/PUSCH BW preference indication handling for handover,14.3.0
+,RP-76,RP-171225,2938,3,F,Revert PDCP state variable HFN and SN back to the values used in the source cell,14.3.0
+,RP-76,RP-171236,2942,1,F,ASN.1 corrections for eLWA,14.3.0
+,RP-76,RP-171241,2943,-,A,Clarification on UE capability and early feature support,14.3.0
+,RP-76,RP-171243,2944,-,A,Clarification regarding EBF-FDMIMO configuration (REL-13),14.3.0
+,RP-76,RP-171245,2945,1,A,"Generic clarification of ""first bit"" as leftmost bit",14.3.0
+,RP-76,RP-171229,2948,-,B,Introduction of UE capabilities for high speed,14.3.0
+,RP-76,RP-171229,2949,-,F,Correction of high speed,14.3.0
+,RP-76,RP-171227,2950,-,F,CR on reduction of SIB21 size,14.3.0
+,RP-76,RP-171244,2952,1,A,Configuration of preamble groups for CE levels and preamble groups A/B,14.3.0
+,RP-76,RP-171244,2954,1,A,Extension of RSRP range for eMTC,14.3.0
+,RP-76,RP-171169,2958,-,C,FeMBMS/unicast-mixed carrier flag in measurement object,14.3.0
+09/2017,RP-77,RP-171919,2807,4,A,Correction to PUCCH-ConfigDedication,14.4.0
+,RP-77,RP-171914,2961,2,F,Correction on SPS assistance information in TS 36.331,14.4.0
+,RP-77,RP-171914,2977,1,F,Miscellaneous correction to V2X in TS 36.331,14.4.0
+,RP-77,RP-171914,2978,2,B,Introduction of new NS values for V2X sidelink communication,14.4.0
+,RP-77,RP-171918,2980,3,A,Adding abstract syntax notation one chapter of sidelink pre-configuration.,14.4.0
+,RP-77,RP-171914,2983,1,F,Correction on TTI bundling for TDD configurations 2 and 3,14.4.0
+,RP-77,RP-171911,2984,2,F,Corrections on the use of plmn-IdentityList in field descriptions,14.4.0
+,RP-77,RP-171915,2985,2,F,RRC Connection Re-establishment for Control Plane CIoT EPS Optimization,14.4.0
+,RP-77,RP-171919,2989,-,A,Clarification that DL only bands are not supported in NB-IoT,14.4.0
+,RP-77,RP-171915,2990,1,F,Cleanup for NB-IoT Enhancements,14.4.0
+,RP-77,RP-171920,2992,2,A,Clarification on SI repetition pattern,14.4.0
+,RP-77,RP-171914,2993,2,F,CR on conditon for RRC connection establishment and condition for sidelink UE information for V2X sidelink communication,14.4.0
+,RP-77,RP-171913,2994,2,F,Correction on RACH-less SeNB Change,14.4.0
+,RP-77,RP-171915,2995,-,F,Corrections on eVoLTE,14.4.0
+,RP-77,RP-171914,2997,2,F,Corrections to random selection for P2X related V2X sidelink communication,14.4.0
+,RP-77,RP-171916,3002,2,A,additionalSpectrumEmission extension,14.4.0
+,RP-77,RP-171915,3008,1,F,Correction of field descriptions for recommendedBitRate and recommendedBitRateQuery,14.4.0
+,RP-77,RP-171919,3014,2,A,RRM Measurement Clarification on Discovery Signals for LAA,14.4.0
+,RP-77,RP-171919,3018,-,A,Correction in PUSCH Config description,14.4.0
+,RP-77,RP-171913,3022,-,F,Cat-M1 indication by Cat-M2 UE,14.4.0
+,RP-77,RP-171920,3025,1,A,Clarification on the freqHoppingParametersDL during handover,14.4.0
+,RP-77,RP-171920,3027,1,A,Clarification on rsrp-ThresholdsPrachInfoList during handover,14.4.0
+,RP-77,RP-171913,3028,-,F,Clarification on systemInformationBlockType2Dedicated,14.4.0
+,RP-77,RP-171920,3030,2,A,Clarification on Bandwidth Reduced operation,14.4.0
+,RP-77,RP-171915,3036,-,F,Correction for connEstFailOffset,14.4.0
+,RP-77,RP-171911,3040,-,F,Clarification on LWIP aggregation,14.4.0
+,RP-77,RP-171913,3041,1,F,Correction to eLAA configuration,14.4.0
+,RP-77,RP-171914,3042,2,C,Packet Reordering for Sidelink,14.4.0
+,RP-77,RP-171920,3044,1,A,Corrections on TS 36.331 for Rel-13 MTC,14.4.0
+,RP-77,RP-171913,3047,-,F,Corrections on Bandwidth preference indication for Rel-14 MTC,14.4.0
+,RP-77,RP-171913,3048,1,F,Corrections on TS 36.331 for Rel-14 MTC,14.4.0
+,RP-77,RP-171914,3051,2,F,Clarification on NCSG UE capability,14.4.0
+,RP-77,RP-171914,3052,1,F,Corrections to UL 256 QAM capability field descriptions,14.4.0
+,RP-77,RP-171914,3054,1,F,Clarification on per CC measurement gap,14.4.0
+,RP-77,RP-171915,3055,1,C,Introduction of RLC UM support for LWA,14.4.0
+,RP-77,RP-171919,3057,-,A,Correction on eCA with Dual Connectivity,14.4.0
+,RP-77,RP-171913,3059,-,F,Clarification of the PTAG value for the RACH-less handover,14.4.0
+,RP-77,RP-171920,3063,1,A,Clarification on number of RACH CE levels vs number of RSRP thresholds,14.4.0
+,RP-77,RP-171915,3064,1,F,Correction to contention free random access,14.4.0
+,RP-77,RP-171913,3065,2,C,Introduction of Release Assistance Indication,14.4.0
+,RP-77,RP-171920,3067,2,A,TM9 capabilities in CE mode,14.4.0
+,RP-77,RP-171915,3068,1,F,Introduction of interference randomisation in NB-IoT,14.4.0
+,RP-77,RP-171919,3070,-,A,Clarification on PUCCH SCell change,14.4.0
+12/2017,RP-78,RP-172615,2968,5,F,Cleaning up CQI and CSI-RS-related configurations (related to Rel-14 ASN.1 review issue N.099),14.5.0
+,RP-78,RP-172615,2982,8,B,Introduction of the overheating indication,14.5.0
+,RP-78,RP-172616,3037,4,F,Target cell optional PBCH repetition status indication,14.5.0
+,RP-78,RP-172624,3046,3,A,Corrections on paging monitoring in RRC_CONNECTED in Rel-13 eMTC,14.5.0
+,RP-78,RP-172721,3071,3,B,Introduction of DL 2Gbps Category,14.5.0
+,RP-78,RP-172617,3072,3,F,Correction to Inter-frequency reception for V2X sidelink communication,14.5.0
+,RP-78,RP-172617,3073,4,F,CR on SIB21 reading,14.5.0
+,RP-78,RP-172622,3081,2,A,UE capabilities for Tx antenna selection,14.5.0
+,RP-78,RP-172617,3084,3,F,Transmission of P2X sidelink communication in Exceptional Pool,14.5.0
+,RP-78,RP-172617,3085,2,F,Correction on SubframeBitmap Configuration in Band 47,14.5.0
+,RP-78,RP-172616,3088,1,F,Correction on SRS switching capabilities field description,14.5.0
+,RP-78,RP-172617,3090,2,F,Clarification on Interference Randomisation in NB-IoT in 36.331,14.5.0
+,RP-78,RP-172616,3091,1,F,MUST capability,14.5.0
+,RP-78,RP-172624,3096,4,A,Corrections on field description of cellSelectionInfoCE for eMTC,14.5.0
+,RP-78,RP-172617,3107,2,F,Correction to UE capabilities,14.5.0
+,RP-78,RP-172623,3108,1,A,Define requirement for reception of number of simultaneous SC-PTM services,14.5.0
+,RP-78,RP-172616,3110,3,B,Signaling of NCSG Support for Inter-F Measurement,14.5.0
+,RP-78,RP-172623,3112,2,A,Clarification on csi-RS-ConfigNZPId,14.5.0
+,RP-78,RP-172617,3113,4,F,Correction to UE-Capability-NB extension and provision for late rel-13 corrections,14.5.0
+,RP-78,RP-172624,3120,1,F,Alignment of FGI4 (Short DRX) for Cat M1 and M2,14.5.0
+,RP-78,RP-172616,3127,-,F,UE capability for support of SRS enhancements without support of comb 4,14.5.0
+,RP-78,RP-172624,3129,1,F,MBSFN subframes for target cell during handover to CE cell,14.5.0
+,RP-78,RP-172615,3132,3,C,Reject of unprotected redirect to GERAN,14.5.0
+,RP-78,RP-172616,3135,2,F,Correction to actions related to InterFreqRSTDMeasurementIndication message,14.5.0
+,RP-78,RP-172616,3137,1,F,Clarification on srs-UpPtsAdd in SRS coverage enhancement,14.5.0
+,RP-78,RP-172616,3138,1,F,Scheduling information of SIB1-BR when skipping MIB during HO,14.5.0
+,RP-78,RP-172624,3140,1,A,Introducing a definition for the term UE in CE,14.5.0
+,RP-78,RP-172617,3153,2,F,NRS-CRS power offset configuration for NB-IoT,14.5.0
+,RP-78,RP-172617,3154,3,C,Introduction of relaxed monitoring in NB-IoT,14.5.0
+,RP-78,RP-172617,3157,1,F,Successful acknowledgement of RRCConnectionRelease,14.5.0
+,RP-78,RP-172624,3160,1,A,TM6 capabilities in CE mode,14.5.0
+,RP-78,RP-172616,3169,1,F,Correction on the field description of ce-PDSCH-TenProcesses,14.5.0
+,RP-78,RP-172617,3175,1,F,"Small corrections to CarrierConfigDedicated, T322 and t-reordering default configuration",14.5.0
+,RP-78,RP-172617,3176,1,F,Correction to random access power control in 36.331,14.5.0
+,RP-78,RP-172616,3180,1,B,Introduction of a new configuration for ssp10 with less CRS,14.5.0
+,RP-78,RP-172617,3184,-,F,Correction on zone configuration in transmission pool selection,14.5.0
+,RP-78,RP-172622,3190,-,A,DCI monitoring subframes for eIMTA,14.5.0
+,RP-78,RP-172623,3194,-,F,SFN desynchronizaion between eNB and eDRX UE,14.5.0
+12/2017,RP-78,RP-172614,3115,3,B,"Introducing support for NR, changes relevant for NSA",15.0.0
+01/2018,,,,,,Removed ASN.1 errors to make it pass the syntax check,15.0.1
+03/2018,RP-79,RP-180491,3208,2,F,Miscellaneous corrections from review in preparation for ASN.1 freeze,15.1.0
+,RP-79,RP-180443,3217,-,A,Correction on SRS carrier switching,15.1.0
+,RP-79,RP-180443,3222,-,A,Correction to field description for HARQ-ACK delay for Rel-14 MTC,15.1.0
+,RP-79,RP-180445,3224,1,A,Correction to RRCConnectionReestablishment message in 36.331,15.1.0
+,RP-79,RP-180448,3245,2,A,Introduction of LTE DL 1.4Gbps Category,15.1.0
+,RP-79,RP-180442,3256,1,A,Correction to handling of p-Max procedure for high-power UEs,15.1.0
+,RP-79,RP-180446,3263,2,A,Correction on Override of the highPriorityAccess Establishment Cause by the mo-VoiceCall value,15.1.0
+,RP-79,RP-180442,3267,1,A,Different power class support for band combinations,15.1.0
+,RP-79,RP-180444,3272,1,A,Clarifications on V2X resource selection in the absence of positioning information,15.1.0
+,RP-79,RP-180446,3274,1,A,Correction to GERAN redirection without security,15.1.0
+,RP-79,RP-180441,3277,1,A,Correction to pucch-ConfigDedicated for fallback configuration,15.1.0
+,RP-79,RP-180446,3279,2,A,Signalling for reading shared PLMN information from non-CSG cells,15.1.0
+,RP-79,RP-180443,3282,-,A,Clarification to PUCCH Configuration for LAA SCells,15.1.0
+,RP-79,RP-180441,3296,2,A,Clarification on the NPRACH starting subcarrier partitioning for multi-tone Msg3 transmission,15.1.0
+,RP-79,RP-180443,3297,2,A,Introduction of support of relaxed monitoring for BL and CE UE,15.1.0
+,RP-79,RP-180444,3301,1,A,Correction on Sl-offsetIndicator for the sidelink resource pool,15.1.0
+,RP-79,RP-180441,3306,-,A,RRC Corrections for RRC Resume,15.1.0
+06/2018,RP-80,RP_181230,3293,2,A,Removal of the FDD/TDD diff restriction for crs-InterfHandl IE,15.2.0
+,RP-80,RP-181171,3303,5,C,"Qualcomm Incorporated, Gemalto N.V",15.2.0
+,RP-80,RP-181235,3307,3,A,Small correction on PhysicalConfigDedicated-NB,15.2.0
+,RP-80,RP-181234,3312,2,A,Correction on SPS assistance information in TS 36.331,15.2.0
+,RP-80,RP-181233,3324,1,F,Successful acknowledgement of RRCConnectionRelease for BL and CE UE,15.2.0
+,RP-80,RP-181230,3357,2,A,Correction for IDC hardware sharing problems,15.2.0
+,RP-80,RP-181234,3360,2,A,Corrections to syncOffsetIndicator Configuration,15.2.0
+,RP-80,RP-181236,3365,3,A,Correction on UE capabilities,15.2.0
+,RP-80,RP-181231,3370,1,A,Clarification on ue-TxAntennaSelectionSupported when bandParameterList-v1380 is included,15.2.0
+,RP-80,RP-181216,3386,3,F,Miscellaneous EN-DC related corrections,15.2.0
+,RP-80,RP-181229,3394,1,F,Handling of Pmax for PC2 and uplink intra-band contiguous CA capable UEs,15.2.0
+,RP-80,RP-181236,3396,1,A,Correction for support of alternative TBS indices,15.2.0
+,RP-80,RP-181233,3399,1,A,Clarification on RACH-less configuration release,15.2.0
+,RP-80,RP-181233,3426,-,A,Clarification on RRC reconfiguration without handover for switching EC to NC,15.2.0
+,RP-80,RP-181233,3427,-,A,Correction on extended RSRP measurement reporting for BL UE or UE in CE,15.2.0
+,RP-80,RP-181232,3430,1,A,Correction to handling of p-Max procedure for high-power UEs,15.2.0
+,RP-80,RP-181236,3433,-,A,Clarification on cellIdentity for shortMAC-I,15.2.0
+,RP-80,RP-181236,3439,2,A,Introduction of DL Channel Quality reporting,15.2.0
+,RP-80,RP-181235,3441,1,A,Introduction of serving cell idle mode measurements reporting in 36.331,15.2.0
+,RP-80,RP-181235,3442,1,A,Correction to T310 timer description and editorials,15.2.0
+,RP-80,RP-181234,3454,1,A,Corrections to CBR Measurement Report Triggering,15.2.0
+,RP-80,RP-181224,3466,1,A,Correction on delta-RxLevMinCE1,15.2.0
+,RP-80,RP-181234,3468,1,A,Introduce the short value of sc-mcch repetition period and sc-mcch modification period out of 'br-BCCH-Config-r14'.,15.2.0
+,RP-80,RP-181233,3470,-,A,"Merged CR: UE capabilities for handling of multiple numerologies in FeMBMS, SRS carrier switching, and advanced CSI in FD-MIMO",15.2.0
+,RP-80,RP-181416,3406,2,A,Corrections to additionalSpectrumEmission extension,15.2.0
+,RP-80,,,,,Added <CR> to UE-EUTRA-Capability-v1520-IEs ASN.1 structure to make it pass the syntax,15.2.1
+,RP-80,,,,,"Corrects ASN.1 consistency problems between releases 13, 14 and 15.",15.2.2
+09/2018,RP-81,RP-181953,3144,3,B,Introduction of QoE Measurement Collection for LTE,15.3.0
+,RP-81,RP-181951,3178,6,B,Introduce assistance information for local cache 36.331 CR,15.3.0
+,RP-81,RP-181939,3186,8,B,"Introducing support for NR, changes only relevant for SA",15.3.0
+,RP-81,RP-182130,3202,9,B,Introduction of shortened TTI and processing time for LTE,15.3.0
+,RP-81,RP-181955,3211,7,B,Introduction of DEFLATE based UDC Solution,15.3.0
+,RP-81,RP-181960,3226,10,B,Enhancement of SRS antenna switching in TS 36.331,15.3.0
+,RP-81,RP-181947,3227,6,B,Support of 1024QAM in TS 36.331,15.3.0
+,RP-81,RP-181964,3251,6,B,Introduction of further enhancements to CoMP,15.3.0
+,RP-81,RP-181945,3333,8,B,Introduction of further NB-IoT enhancements other than EDT in TS 36.331,15.3.0
+,RP-81,RP-181949,3341,6,B,Introduction of time reference provision,15.3.0
+,RP-81,RP-182000,3342,7,B,Introduction of Bluetooth and WLAN measurement collection in MDT,15.3.0
+,RP-81,RP-181960,3343,5,B,Running 36.331 CR for HSDN,15.3.0
+,RP-81,RP-181944,3389,4,B,Introduction of EDT for eMTC and NB-IoT enhancements,15.3.0
+,RP-81,RP-182081,3390,5,B,Introduction of Rel-15 eMTC enhancements (other than EDT),15.3.0
+,RP-81,RP-182006,3391,8,B,Signalling for euCA (Enhancing LTE CA Utilization),15.3.0
+,RP-81,RP-182146,3397,3,B,Advanced CSI CBSR CBSR parameter and related capability for FD-MIMO,15.3.0
+,RP-81,RP-181960,3407,1,B,Avoiding FGI20 limitation,15.3.0
+,RP-81,RP-182119,3408,6,B,Implementing network-based CRS interference mitigation,15.3.0
+,RP-81,RP-181992,3423,5,B,Introduction of eV2X in TS 36.331,15.3.0
+,RP-81,RP-181962,3436,2,A,Correction on the field description of enable256QAM,15.3.0
+,RP-81,RP-182005,3437,7,B,Introduction of Release-15 Aerial functionality,15.3.0
+,RP-81,RP-181961,3445,1,A,Clarification to Security mode failure in NB-IoT,15.3.0
+,RP-81,RP-181958,3446,2,B,Introduction of increased number of E-UTRAN data bearers,15.3.0
+,RP-81,RP-181952,3450,3,B,Addition of broadcast of positioning assistance data,15.3.0
+,RP-81,RP-181960,3453,4,B,Control Plane latency reduction,15.3.0
+,RP-81,RP-181946,3473,4,B,Introduce feLAA in TS 36.331,15.3.0
+,RP-81,RP-181949,3474,3,B,Introduction of Ultra Reliable Low Latency Communication for LTE,15.3.0
+,RP-81,RP-181950,3475,2,B,Capture NR agreements into 36.331 for E-UTRA connected to 5GC,15.3.0
+,RP-81,RP-181939,3481,1,F,Miscellaneous EN-DC related corrections,15.3.0
+,RP-81,RP-181961,3489,-,A,Correcting a typo in aperiodicCSI-Trigger,15.3.0
+,RP-81,RP-181945,3491,2,F,Correcting inconsistent ASN.1 for NB-IoT,15.3.0
+,RP-81,RP-181963,3497,1,A,Correction to RRC Connection Re-establishment for the control plane,15.3.0
+,RP-81,RP-181960,3499,1,B,Introduction of modulation enhancements,15.3.0
+,RP-81,RP-181961,3502,1,A,Radio resource configuration handling when resuming a suspended RRC connection,15.3.0
+,RP-81,RP-181962,3516,1,A,Correction to the description of UE capability for V2X sidelink communication,15.3.0
+,RP-81,RP-181962,3518,-,A,Correction on the duplex mode configuration for Rx pool,15.3.0
+,RP-81,RP-181960,3523,1,C,Introduction of Geofencing information in CMAS,15.3.0
+,RP-81,RP-181962,2531,-,A,Correction on V2X TX pool selection,15.3.0
+,RP-81,RP-181962,3533,1,A,CR on Clarification of Configuring codebookConfigNx for Rel-15,15.3.0
+,RP-81,RP-181962,3538,-,A,Clarification for the asynchronous HARQ with the LTE mobility enhancements,15.3.0
+,RP-81,RP-181962,3539,-,A,Correction for Zoning,15.3.0
+,RP-81,RP-181960,3541,-,B,UE UL categories for 1024QAM,15.3.0
+12/2018,RP-82,RP-182681,3495,3,A,Editorial restructuring of NPRACH resource configuration,15.4.0
+,RP-82,RP-182674,3506,5,F,CR for T312 on LTE HetNet mobility,15.4.0
+,RP-82,RP-182655,3525,3,F,Introdcution of including EUTRA UE capability for MRDC usage,15.4.0
+,RP-82,RP-182680,3544,3,F,Correction for sidelink measurement periodical triggering condition,15.4.0
+,RP-82,RP-182678,3548,3,F,Correction on UE capability for eV2X,15.4.0
+,RP-82,RP-182675,3551,2,F,Clarification on RRC state transition,15.4.0
+,RP-82,RP-182675,3553,1,F,Addition of RAN specific Access Category,15.4.0
+,RP-82,RP-182675,3554,1,F,Clarification to no barring configuration for Implicit UAC,15.4.0
+,RP-82,RP-182675,3555,1,F,Correction to Access Category and barring config determination for Implicit UAC,15.4.0
+,RP-82,RP-182679,3557,3,A,Correction on maximum symbols for PUSCH transmission in UpPTS,15.4.0
+,RP-82,RP-182674,3560,3,F,Corrections on the IDLE state measurement,15.4.0
+,RP-82,RP-182677,3563,4,A,Corrections to eCA configuration,15.4.0
+,RP-82,RP-182677,3566,4,F,Clarification to UE capabilities for CA,15.4.0
+,RP-82,RP-182674,3567,1,F,Corrections to euCA,15.4.0
+,RP-82,RP-182679,3572,2,F,Correction on SPS configuration for HRLLC,15.4.0
+,RP-82,RP-182655,3576,3,F,Correction to DRB release,15.4.0
+,RP-82,RP-182652,3577,2,F,Correction to inter-RAT measurement for NR,15.4.0
+,RP-82,RP-182655,3578,1,F,Clarification on capabilities transferring,15.4.0
+,RP-82,RP-182681,3580,2,F,Corrections to random access power control for TDD in 36.331,15.4.0
+,RP-82,RP-182681,3581,2,F,Miscellaneous corrections and cleanup for NB-IoT Rel-15,15.4.0
+,RP-82,RP-182681,3582,3,F,Corrections to EDT in 36.331,15.4.0
+,RP-82,RP-182650,3583,2,F,CR for security handling upon handover to eLTE in 36.331,15.4.0
+,RP-82,RP-182678,3584,4,F,Miscellaneous corrections in TS 36.331 on eV2X,15.4.0
+,RP-82,RP-182681,3585,1,F,Update description of consecutive precoders used for NSSS,15.4.0
+,RP-82,RP-182676,3586,2,F,Miscellaneous corrections on E-UTRA connected to 5GCN,15.4.0
+,RP-82,RP-182675,3587,1,F,Open issues on E-UTRA connected to 5GC for UAC,15.4.0
+,RP-82,RP-182675,3588,2,F,Open issues on E-UTRA connected to 5GC for INACTIVE,15.4.0
+,RP-82,RP-182676,3589,3,F,TS36.331 CR on UE capabilities for mobility and E-UTRA/5GC,15.4.0
+,RP-82,RP-182652,3592,2,F,[E201] CR to 36.331 on handling of mapped GUMMEI/GUAMI at idle mode mobility between 5GS and EPS,15.4.0
+,RP-82,RP-182676,3593,2,F,Access barring check after handover for eLTE,15.4.0
+,RP-82,RP-182672,3596,4,C,SI message scheduling enhancement to avoid conflicts between legacy and positioning System Information,15.4.0
+,RP-82,RP-182657,3597,5,F,Corrections for handover between NR and E-UTRA in TS36.331,15.4.0
+,RP-82,RP-182652,3599,2,F,UE capabilty for IDC mechanism for EN-DC operation,15.4.0
+,RP-82,RP-182655,3600,2,F,Cleanup on handover to EUTRA procedure,15.4.0
+,RP-82,RP-182675,3601,2,F,Correction of CN type indication for RRC Redirection from E-UTRA/5GC to E-UTRA/5GC or E-UTRAN,15.4.0
+,RP-82,RP-182651,3602,2,F,RSRP result in SFTD measurement report,15.4.0
+,RP-82,RP-182681,3605,4,F,Corrections and clarifications for MO EDT,15.4.0
+,RP-82,RP-182674,3607,2,F,Small correction to pos-schedulingInfoList in SIB1-BR (RIL Z107),15.4.0
+,RP-82,RP-182675,3614,2,F,Correction on system information blocks acquisition,15.4.0
+,RP-82,RP-182679,3616,2,F,Clarification on UDC configuration,15.4.0
+,RP-82,RP-182681,3619,3,F,Correction to additional SIB1 in eFeNB-IoT,15.4.0
+,RP-82,RP-182653,3622,2,F,UE context handling during handover to LTE-5GC,15.4.0
+,RP-82,RP-182652,3628,2,F,CR to 36.331 on addition of CGI reporting timer T321 for NR,15.4.0
+,RP-82,RP-182653,3629,2,F,Corrections regarding RLC failure reporting,15.4.0
+,RP-82,RP-182656,3634,2,F,Some NR SA related corrections,15.4.0
+,RP-82,RP-182662,3638,3,F,Correction on sorting for reporting of NR cell measurements,15.4.0
+,RP-82,RP-182671,3642,2,F,Clarifications on system information acquisition time enhancements in Rel-15,15.4.0
+,RP-82,RP-182680,3643,2,F,Various sTTI corrections,15.4.0
+,RP-82,RP-182671,3647,2,F,Corrections on paging monitoring and SI acquisition in RRC_CONNECTED for BL UEs and UEs in CE,15.4.0
+,RP-82,RP-182679,3651,3,F,Correction on Bluetooth and WLAN measurement collection in MDT,15.4.0
+,RP-82,RP-182679,3652,1,F,Correction on SRB4 for QoE measurement collection,15.4.0
+,RP-82,RP-182675,3653,2,F,Corrections for E-UTRA connected to 5GC,15.4.0
+,RP-82,RP-182679,3654,2,F,Corrections on time reference information,15.4.0
+,RP-82,RP-182679,3655,2,F,Correction on UE behaviour about referenceSFN,15.4.0
+,RP-82,RP-182674,3656,1,F,Correction on flight path information,15.4.0
+,RP-82,RP-182674,3657,1,F,Correction on measurement triggering based on number of cells,15.4.0
+,RP-82,RP-182674,3658,2,F,Correction on triggering idle mode measurement,15.4.0
+,RP-82,RP-182680,3660,2,F,SPS for TDD sTTI,15.4.0
+,RP-82,RP-182680,3661,3,F,skipUplinkTxSPS for short TTI option 1,15.4.0
+,RP-82,RP-182680,3663,2,F,correction on power control,15.4.0
+,RP-82,RP-182678,3665,4,F,Clarification for SLSS_TxDisabled,15.4.0
+,RP-82,RP-182680,3666,2,F,Correction for sTTI,15.4.0
+,RP-82,RP-182682,3673,4,F,CR to 36.331 on the ambiguity of CellIdentity in Resume/Short MAC-I calculation,15.4.0
+,RP-82,RP-182653,3674,1,F,Correction to FDD/TDD Diff for NR PDCP Capabilities,15.4.0
+,RP-82,RP-182678,3675,3,F,Removal of redefinition of MCS-PSSCH-Range-r15,15.4.0
+,RP-82,RP-182679,3676,1,F,Corrections to multiple SPS configurations after sTTI and HRLLC merge,15.4.0
+,RP-82,RP-182650,3678,1,F,Clarification on measObjectNR of SFTD between PCell and PSCell,15.4.0
+,RP-82,RP-182656,3679,2,F,Clarification on B events in EN-DC,15.4.0
+,RP-82,RP-182671,3680,1,F,Correction on the measurement gaps for dense PRS,15.4.0
+,RP-82,RP-182672,3681,2,F,Normative Annex of CRs Containing Early Implementable Features and Corrections,15.4.0
+,RP-82,RP-182680,3687,2,A,Discard the AS context and ResumeId when initiating the establishment of a RRC Connection,15.4.0
+,RP-82,RP-182676,3691,1,F,Clarification of features not supported in NB-IoT,15.4.0
+,RP-82,RP-182681,3692,2,F,Additional Corrections to EDT in 36.331,15.4.0
+,RP-82,RP-182675,3695,,F,Corrections to procedure upon Reception of the RRCConnectionSetup,15.4.0
+,RP-82,RP-182682,3697,,A,Clarification for additional SRS symbols,15.4.0
+,RP-82,RP-182649,3698,,F,Correction for E-UTRA connected to 5GC Procedures,15.4.0
+,RP-82,RP-182678,3700,1,F,CR on carrier frequency indication in SidelinkUEInformation,15.4.0
+,RP-82,RP-182679,3707,1,F,Support of multiple UL SPS configurations and configuration of repetition,15.4.0
+,RP-82,RP-182674,3708,1,F,Clarification on s-Measure for IDLE mode measurements,15.4.0
+,RP-82,RP-182681,3709,2,F,Indications of RRC connection resumption and establishment to upper layers during EDT,15.4.0
+,RP-82,RP-182671,3712,1,F,Exclusion of 1.4 MHz system bandwidth for flexible starting PRB,15.4.0
+,RP-82,RP-182676,3713,2,F,TS36.331 CR on [103bis#43][LTE/eLTE] Capture NR agreements,15.4.0
+,RP-82,RP-182651,3714,,F,MO configuration with SSB SCS for a given SSB frequency,15.4.0
+,RP-82,RP-182677,3717,,A,UL power control information for PUCCH format 4/5 in SIB,15.4.0
+,RP-82,RP-182676,3718,1,F,Ignore NCC on reception of resume message,15.4.0
+,RP-82,RP-182674,3727,,A,Clarification on csi-RS-ConfigNZP-EMIMO configuration,15.4.0
+,RP-82,RP-182662,3728,1,F,Frequency band indication in MeasObjectNR,15.4.0
+,RP-82,RP-182679,3729,,F,Correction on FeLAA in TS 36.331,15.4.0
+,RP-82,RP-182677,3734,1,A,n1PUCCH-AN-CS-ListP1-r13 ASN.1 error correction,15.4.0
+,RP-82,RP-182679,3739,1,F,Correction of field descriptions for NW based CRS interference mitigation,15.4.0
+,RP-82,RP-182666,3740,2,F,Clarification for setting of maxLayersMIMO in LTE during EN-DC operation,15.4.0
+,RP-82,RP-182666,3741,4,F,Alternative signalling option for SupportedBandListNR,15.4.0
+,RP-82,RP-182676,3745,2,F,Supporting MME and AMF overload control,15.4.0
+,RP-82,RP-182675,3746,1,F,Corrections for Inter-system intra-E-UTRA handover in TS36.331,15.4.0
+,RP-82,RP-182676,3747,3,F,Corrections for handover preparation in 36.331,15.4.0
+,RP-82,RP-182659,3749,1,F,EN-DC configurations upon re-establishment,15.4.0
+,RP-82,RP-182680,3750,,F,Correction of SPSConfigDL-STTI,15.4.0
+,RP-82,RP-182679,3751,,F,RRC corrections for URLLC,15.4.0
+,RP-82,RP-182679,3752,2,F,Clarification of primary and secondary RLC entity,15.4.0
+,RP-82,RP-182680,3755,,F,Clarification for cqi-ReportPeriodic,15.4.0
+,RP-82,RP-182674,3758,,F,Correction on T331 description,15.4.0
+,RP-82,RP-182674,3759,,F,Correction on validityArea description,15.4.0
+,RP-82,RP-182680,3763,,F,Correction on interFreqNeighCellList,15.4.0
+,RP-82,RP-182666,3764,2,F,CR to 36.331 on corrections related to inter-RAT CGI reporting towards NR,15.4.0
+,RP-82,RP-182671,3769,3,F,Correction on the use of PRACH resource pool for EDT,15.4.0
+,RP-82,RP-182667,3775,2,F,Correction concerning IDC reporting,15.4.0
+,RP-82,RP-182672,3776,1,B,MBMS reception in Receive Only Mode (ROM),15.4.0
+,RP-82,RP-182667,3778,4,F,Various NR carrier frequency definiton corrections,15.4.0
+,RP-82,RP-182668,3779,2,F,Correction to UE capability procedures in 36.331,15.4.0
+,RP-82,RP-182654,3781,,F,CR to 36.331 on reporting of NR serving frequencies which the UE is not configured to measure,15.4.0
+,RP-82,RP-182666,3787,2,F,Correction to description of parameter CarrierFreq,15.4.0
+,RP-82,RP-182675,3789,,F,Correction on the usage of delayTolerantAcess,15.4.0
+,RP-82,RP-182676,3794,1,F,Introducing PDCP suspend procedure,15.4.0
+,RP-82,RP-182681,3796,1,F,Clarification to UE states for EDT,15.4.0
+,RP-82,RP-182667,3799,2,F,CR on PSCell (SPCell of SN) change (36.331),15.4.0
+,RP-82,RP-182674,3800,3,F,Signalling of CRS IM and CCH-IM for UE cat 1bis and cat M2,15.4.0
+,RP-82,RP-182672,3803,5,B,Support for Logging of 'Any cell selection' state,15.4.0
+,RP-82,RP-182663,3805,2,F,Addition of selected BC in AS-Context for EN-DC,15.4.0
+,RP-82,RP-182662,3807,,F,Correction on the terminology scg-ChangeFailure,15.4.0
+,RP-82,RP-182662,3808,,F,CR to 36331 on release after completion of inter-RAT HO,15.4.0
+,RP-82,RP-182662,3809,,F,Clarification on supportedMIMO-CapabilityDL-r15,15.4.0
+,RP-82,RP-182663,3810,,F,CR to 36.331 on alignment of use of fullI-RNTI and I-RNTI in paging and InactiveConfig (Alt.2),15.4.0
+,RP-82,RP-182667,3811,1,F,Clarification on the candidateCellInfoListNR in RRM-Config,15.4.0
+,RP-82,RP-182676,3812,,F,TS36.331 CR on [104#23][LTE/5GC] Capture NR agreements,15.4.0
+,RP-82,RP-182679,3813,,F,Addition of SRB duplication in SCG,15.4.0
+03/2019,RP-83,RP-190553,3785,3,F,CR to mandate FGI 103 and 104,15.5.0
+,RP-83,RP-190550,3818,2,F,Clarification on RRC connection resume,15.5.0
+,RP-83,RP-190550,3820,2,F,Clarification on RRC connection establishment,15.5.0
+,RP-83,RP-190637,3821,3,F,CR to 36.331 on clarification of autonomous gap in EN-DC,15.5.0
+,RP-83,RP-190546,3824,3,F,CR on adding ssb-ToMeasure in SIB24 and MeasObjectNR,15.5.0
+,RP-83,RP-190542,3825,1,F,Clarification for EN-DC SN change scenario,15.5.0
+,RP-83,RP-190542,3826,1,F,Clarification on UE Capability Request Filtering,15.5.0
+,RP-83,RP-190551,3833,1,F,Clarification to MeasResults for IDLE mode measurements,15.5.0
+,RP-83,RP-190551,3834,2,F,Corrections to SCell group handling,15.5.0
+,RP-83,RP-190551,3836,1,F,Clarification of mode 3 sensing parameter in TS 36.331,15.5.0
+,RP-83,RP-190549,3839,1,A,Correction to systemInformationBlockType2Dedicated,15.5.0
+,RP-83,RP-190551,3840,1,F,Corrections to mpdcch-UL-HARQ-ACK-FeedbackConfig,15.5.0
+,RP-83,RP-190547,3843,1,A,Missing inter-node SCG field,15.5.0
+,RP-83,RP-190542,3849,1,F,NR UE capability filtering in E-UTRAN,15.5.0
+,RP-83,RP-190551,3857,3,F,Removal of parameter alpha in WUS configuration,15.5.0
+,RP-83,RP-190550,3858,1,F,Miscellaneous Corrections for eLTE,15.5.0
+,RP-83,RP-190549,3860,-,A,Correction on UE capability signalling for simultaneous antenna and carrier switching,15.5.0
+,RP-83,RP-190553,3861,1,F,UE capability for eLCID support,15.5.0
+,RP-83,RP-190542,3866,1,F,Corrections on NR NS-Pmax and frequency band list configuration in SIB24,15.5.0
+,RP-83,RP-190552,3872,1,F,Correction on SPUCCH-Config,15.5.0
+,RP-83,RP-190550,3873,-,F,Correction on the field description of h1-ThresholdOffset,15.5.0
+,RP-83,RP-190552,3874,1,F,Correction on QoE measurement collection for LTE,15.5.0
+,RP-83,RP-190549,3875,1,A,Clarification to Permitted MaxCID for ROHC and Uplink-Only ROHC,15.5.0
+,RP-83,RP-190550,3878,2,F,Small corrections on TS 36.331,15.5.0
+,RP-83,RP-190551,3879,2,F,Clarifications on mixed operation mode,15.5.0
+,RP-83,RP-190551,3882,-,F,Corrections to TDD parameters - Option 2,15.5.0
+,RP-83,RP-190551,3883,1,F,Correction to carrierFreqOffset in TDD,15.5.0
+,RP-83,RP-190553,3886,1,F,Corrections for MBMS reception in Receive Only Mode (ROM),15.5.0
+,RP-83,RP-190542,3887,1,F,Minor NR related changes to 36331,15.5.0
+,RP-83,RP-190550,3890,1,F,Introduction of UE capabilities on DMRS overhead reduction,15.5.0
+,RP-83,RP-190540,3891,-,F,Correction to Q-QualMin value range,15.5.0
+,RP-83,RP-190542,3892,1,F,Supporting bearer type change with LCID change,15.5.0
+,RP-83,RP-190551,3897,3,F,Correction to field description in IE RSS-Config,15.5.0
+,RP-83,RP-190546,3889,2,F,Changes related to CA and or DC duplication,15.5.0
+,RP-83,RP-190548,3899,2,F,Update description of ack-NACK-NumRepetitions,15.5.0
+,RP-83,RP-190548,3900,2,F,Corrections of NB-IoT Access Barring,15.5.0
+,RP-83,RP-190543,3902,1,F,Release and addition of the DRB,15.5.0
+,RP-83,RP-190550,3908,2,F,Clarification on counter check procedure for eLTE,15.5.0
+,RP-83,RP-190551,3910,1,F,Miscellaneous CRs for euCA,15.5.0
+,RP-83,RP-190549,3912,-,A,Clarification on ssp mapping rules for ssp10-CRS-LessDwPTS,15.5.0
+,RP-83,RP-190550,3913,1,F,Correction to simultaneous configuration of altCQI-Table-1024QAM and altCQI-Table,15.5.0
+,RP-83,RP-190550,3914,-,F,DL 1024QAM capabiity in FeatureSetsEUTRA,15.5.0
+,RP-83,RP-190550,3918,3,F,Correction to fallback to the RRC connection establishment,15.5.0
+,RP-83,RP-190550,3929,3,F,Addition of missing condition in SCell release,15.5.0
+,RP-83,RP-190542,3932,1,F,Clearing of SFTD measurements at handover and re-establishment,15.5.0
+,RP-83,RP-190543,3937,2,F,Introducation of tdm-PatternConfig and p-MaxEUTRA in AS-Config,15.5.0
+,RP-83,RP-190541,3938,-,F,Corrections on FeatureSetDL-PerCC-Id and FeatureSetUL-PerCC-Id,15.5.0
+,RP-83,RP-190549,3940,-,A,UE capability for support of special subframe configuration 10 with TDD-only CA,15.5.0
+,RP-83,RP-190543,3941,-,F,CR to 36.331 on clarification of gap release during HO,15.5.0
+,RP-83,RP-190550,3942,-,F,Capture NR agreements into eLTE,15.5.0
+04/2019,RP-83,,,,,Correction to the implementation of CR#3913,15.5.1
+06/2019,RP-84,RP-191378,3947,3,F,Corrections to SIB24 configuration on SS-RSSI measurements,15.6.0
+,RP-84,RP-191375,3953,3,F,CR to 36.331 on SFTD measurement,15.6.0
+,RP-84,RP-191385,3956,2,F,Correction of TDD UL DL Alignment offset,15.6.0
+,RP-84,RP-191386,3957,2,F,Correction to sTTI field,15.6.0
+,RP-84,RP-191381,3958,5,F,Alignment of definition of upperLayerIndication with the definition in the GSMA 5GSI LS,15.6.0
+,RP-84,RP-191377,3962,1,F,CR to 36.331 on clarification of ANR FGIs and capability under EN-DC,15.6.0
+,RP-84,RP-191385,3963,4,F,Corrections on the idle mode measurement,15.6.0
+,RP-84,RP-191383,3967,1,A,UE capability signalling for FD-MIMO processing capabilities,15.6.0
+,RP-84,RP-191374,3968,-,F,RRC processing delay for UE capability transfer,15.6.0
+,RP-84,RP-191377,3969,1,F,Handling of SMTC configuration,15.6.0
+,RP-84,RP-191374,3970,-,F,Clarification on filters used to generate FeatureSets (36.331),15.6.0
+,RP-84,RP-191383,3972,-,A,Correction to NPRACH resource default configuration,15.6.0
+,RP-84,RP-191385,3973,-,F,Corrections to NSSS-based RRM measurements,15.6.0
+,RP-84,RP-191385,3974,-,F,Correction to sourceDL-CarrierFreq in TDD,15.6.0
+,RP-84,RP-191384,3975,2,F,Correction to conditions for initiating EDT,15.6.0
+,RP-84,RP-191383,3980,-,A,Additional UE capability signalling for SRS carrier switching,15.6.0
+,RP-84,RP-191384,3981,-,F,Miscellaneous Corrections for UAC in eLTE,15.6.0
+,RP-84,RP-191384,3982,1,F,Capture NR agreements in eLTE,15.6.0
+,RP-84,RP-191380,3984,2,F,LTE changes for FullConfig for Inter-RAT intra-system HO,15.6.0
+,RP-84,RP-191381,3990,4,F,Correction on intra-band fallback behavior with FeatureSetsPerCC,15.6.0
+,RP-84,RP-191384,3991,1,F,Correction on cell reselection while T302 is running,15.6.0
+,RP-84,RP-191384,3992,2,F,Correction on leaving RRC_CONNECTED,15.6.0
+,RP-84,RP-191384,3993,2,F,Correction on inter-RAT cell reseletion in RRC_INACTIVE,15.6.0
+,RP-84,RP-191378,3994,1,F,Minor NR related changes to 36.331,15.6.0
+,RP-84,RP-191387,3995,1,F,Editorial/ minor corrections collected by Rapporteur,15.6.0
+,RP-84,RP-191381,3996,2,F,Corrections regarding EN-DC terminology,15.6.0
+,RP-84,RP-191381,3998,1,F,Clarification on inter-RAT mobility,15.6.0
+,RP-84,RP-191382,4001,1,A,Correction to dual connectivity,15.6.0
+,RP-84,RP-191378,4002,2,B,Introducing NR changes for late drop (resulting from ASN1 review),15.6.0
+,RP-84,RP-191384,4003,-,F,Correction on edt-LastPreamble field description,15.6.0
+,RP-84,RP-191384,4006,2,F,Clarification to the description of cellSelectionInfoCE,15.6.0
+,RP-84,RP-191385,4008,1,F,Correct reference for serving cell relaxation with WUS,15.6.0
+,RP-84,RP-191387,4009,1,F,"Missing messages in ""Protection of RRC messages"" table",15.6.0
+,RP-84,RP-191382,4010,1,A,Correction in the field description of aperiodicCSI-Trigger,15.6.0
+,RP-84,RP-191383,4015,1,A,Corrections on UE capability for eFD-MIMO,15.6.0
+,RP-84,RP-191378,4017,1,F,Correction on UE Capability Transfer for Featureset in EN-DC,15.6.0
+,RP-84,RP-191382,4020,2,F,SI update notification and access barring in NB-IoT,15.6.0
+,RP-84,RP-191384,4022,1,F,Correction on Idle mode measurement in RRC_INACTIVE,15.6.0
+,RP-84,RP-191384,4023,1,F,Power boost values for MWUS,15.6.0
+,RP-84,RP-191385,4025,-,F,CR on carrier frequency selection for V2X SL communication transmission,15.6.0
+09/2019,RP-85,RP-192195,3986,3,F,Correction on handling of SCell(s) during Make Before Break handover,15.7.0
+,RP-85,RP-192197,4028,2,F,Clarification for mixed operation mode,15.7.0
+,RP-85,RP-192197,4030,1,F,Correction on the field description of nprach-SubCarrierIndex,15.7.0
+,RP-85,RP-192298,4031,-,C,Additional capability signalling for 1024QAM support,15.7.0
+,RP-85,RP-192196,4032,-,F,Correcting algorithm key derivation for LTE/5GC in connection resume,15.7.0
+,RP-85,RP-192194,4034,1,F,Clarification to fullConfig in EN-DC,15.7.0
+,RP-85,RP-192192,4035,1,F,Clarification on mobility of UE configured with SN terminated DRB without SCG,15.7.0
+,RP-85,RP-192192,4038,1,F,Missing reportAddNeighMeas in ReportConfigInterRAT,15.7.0
+,RP-85,RP-192196,4042,2,F,Intra-E-UTRA inter-system HO,15.7.0
+,RP-85,RP-192196,4043,-,F,Support of Idle mode measurement in E-UTRA/5GC,15.7.0
+,RP-85,RP-192196,4044,-,F,PDU session release indication to upper layers during Full Configuration in eLTE,15.7.0
+,RP-85,RP-192192,4055,1,F,Correction of the condition HO-toEUTRAN,15.7.0
+,RP-85,RP-192198,4056,2,F,Editorial/ minor corrections collected by Rapporteur,15.7.0
+,RP-85,RP-192192,4058,1,F,Correction to s-Measure for NE-DC (36.331),15.7.0
+,RP-85,RP-192190,4061,-,F,Correction of security algorithms at inter-RAT handover to LTE-5GC (Alt1),15.7.0
+,RP-85,RP-192193,4062,1,F,Adding P-EUTRA for supporting power coordination in NE-DC,15.7.0
+,RP-85,RP-192195,4064,1,A,Correction to the description of of DL channel quality,15.7.0
+,RP-85,RP-192197,4066,-,F,Correction to table references for SIB1 scheduling in TDD,15.7.0
+,RP-85,RP-192197,4068,-,F,Correction to the field description of numDRX-CyclesRelaxed in WUS-Config-NB,15.7.0
+,RP-85,RP-192190,4070,-,F,Support of SUO case1 in NE-DC,15.7.0
+,RP-85,RP-192196,4071,-,F,Clarification on inter-node message,15.7.0
+,RP-85,RP-192197,4072,1,F,Correction to sTTI and sPT capability reporting,15.7.0
+,RP-85,RP-192196,4073,-,F,Correction to ROHC handling,15.7.0
+,RP-85,RP-192194,4077,3,F,AS-ConfigNR at handover with (NG)EN-DC,15.7.0
+,RP-85,RP-192192,4079,1,F,Miscellaneous Corrections on 36.331 for MR-DC,15.7.0
+,RP-85,RP-192190,4080,-,F,Correction on 36.331 for reconfiguration of SCG part of DRBs in NE-DC,15.7.0
+,RP-85,RP-192194,4081,2,F,Support of LCID change for (NG)EN-DC and NE-DC,15.7.0
+,RP-85,RP-192198,4086,1,F,Corrections to SIB12 for CMAS geo-fencing,15.7.0
+,RP-85,RP-192196,4091,1,F,Correction on RRC connection release indication after handover,15.7.0
+,RP-85,RP-192196,4092,1,F,Correction on stop condition of T380,15.7.0
+,RP-85,RP-192194,4097,1,F,Correction on overheating indication and RLM report,15.7.0
+,RP-85,RP-192279,4098,1,F,CR to introduce NR SS-SINR measurement capability in LTE,15.7.0
+,RP-85,RP-192193,4100,-,F,MR-DC measurement gap pattern capability,15.7.0
+12/2019,RP-86,RP-192940,4113,1,A,Correction on T322,15.8.0
+,RP-86,RP-192935,4115,1,F,Reconfiguration failure in NE-DC,15.8.0
+,RP-86,RP-192936,4117,3,F,Miscellaneuous corrections for late drop,15.8.0
+,RP-86,RP-192934,4119,2,F,Corrections to power limitations in (NG)EN-DC,15.8.0
+,RP-86,RP-192941,4120,4,F,Correction to SIB5 acquisition for idle mode measurements,15.8.0
+,RP-86,RP-192938,4128,2,F,Correction to field conditions in NE-DC,15.8.0
+,RP-86,RP-192941,4142,1,F,Corrections to Application layer measurement reporting and UE capability signalling,15.8.0
+,RP-86,RP-192941,4143,1,F,Allow Delta Configuration of ParametersListFmt2 and ParametersListEDTFmt2 in SIB2-NB,15.8.0
+,RP-86,RP-192940,4144,1,F,Stop using redirectedCarrierOffsetDedicated after reselection to another frequency.,15.8.0
+,RP-86,RP-192937,4145,1,F,Correction to AS security key update,15.8.0
+,RP-86,RP-192936,4148,1,F,On performing L3 filtering of NR related measurements,15.8.0
+,RP-86,RP-192941,4150,-,F,Correction to nonCriticalExtension of RRCConnectionRelease,15.8.0
+,RP-86,RP-192939,4160,2,A,Clarification on sCellIndex and SCell lists,15.8.0
+,RP-86,RP-192941,4161,2,F,Correction to early measurement reporting results,15.8.0
+,RP-86,RP-192941,4177,2,F,Clarification on UE Inactive AS context,15.8.0
+,RP-86,RP-192941,4183,-,F,Restoring SDAP and RoHC contexts during Resumption,15.8.0
+,RP-86,RP-192936,4185,-,F,Correction for the establishment of LTE RLC bearers for (NG)EN-DC and NE-DC,15.8.0
+03/2020,RP-87,RP-200338,4041,4,C,Security requirement for UE capability enquiry for LTE,15.9.0
+,RP-87,RP-200338,4104,5,F,Clarification on default configuration and SRB1 for UP-EDT and RRC_INACTIVE,15.9.0
+,RP-87,RP-200338,4151,3,F,Correction to full configuration,15.9.0
+,RP-87,RP-200334,4168,2,F,Clarification on candidate NR frequencies for IDC in EN-DC,15.9.0
+,RP-87,RP-200338,4195,1,F,Correction on LTE early measurement,15.9.0
+,RP-87,RP-200338,4198,1,F,Corrections to T312 and Discovery Signals measurement,15.9.0
+,RP-87,RP-200338,4199,-,F,Introduction of provisions for late non-critical extensions,15.9.0
+,RP-87,RP-200334,4210,-,F,Correction of UE assistance information,15.9.0
+,RP-87,RP-200338,4211,2,F,Minor corrections collected by Rapporteur,15.9.0
+,RP-87,RP-200337,4213,1,A,Clarification on gap sharing configuration at handover and re-establishment,15.9.0
+03/2020,RP-87,RP-200367,4026,3,C,Addition of broadcast of barometric pressure assistance data,16.0.0
+,RP-87,RP-200368,4049,2,B,Introduction of RLOS support indicator and RLOS request indicator,16.0.0
+,RP-87,RP-200366,4095,4,B,Introduction of RRC parameters and UE capabilities for enhanced high speed scenario,16.0.0
+,RP-87,RP-200358,4099,2,F,NAS handling error of nas-Container for security key derivation,16.0.0
+,RP-87,RP-200367,4103,2,C,Correction on H1 and H2 events,16.0.0
+,RP-87,RP-200357,4114,2,B,Introduction of a second SMTC for inter-RAT cell reselection,16.0.0
+,RP-87,RP-200367,4134,3,C,Broadcast of TBS assistance data,16.0.0
+,RP-87,RP-200357,4136,2,C,Introduction of voice fallback indication,16.0.0
+,RP-87,RP-200365,4137,6,B,CR of TS 36.331 for introducing NavIC in LTE – core part,16.0.0
+,RP-87,RP-200357,4167,2,B,Early security re-activation at RRC Connection Resume,16.0.0
+,RP-87,RP-200367,4172,3,C,Correction on non-3GPP paging,16.0.0
+,RP-87,RP-200358,4187,2,B,Autonomous gap support for CGI reading,16.0.0
+,RP-87,RP-200351,4189,1,B,Introduction of UECapabilityInformation segmentation in 36.331,16.0.0
+,RP-87,RP-200363,4190,1,B,Introduction of LTE-based 5G terrestrial broadcast,16.0.0
+,RP-87,RP-200360,4191,1,B,Introduction of Rel-16 eMTC enhancements,16.0.0
+,RP-87,RP-200361,4192,1,B,Introduction of additional enhancements for NB-IoT in TS 36.331,16.0.0
+,RP-87,RP-200358,4200,1,B,Introduction of DL RRC segmentation,16.0.0
+,RP-87,RP-200364,4205,1,B,Introduction of Even further Mobility enhancement in E-UTRAN,16.0.0
+,RP-87,RP-200345,4215,-,B,Introduction of PPP-RTK (SSR),16.0.0
+,RP-87,RP-200348,4216,3,B,CR for 36.331 for CA&DC enh,16.0.0
+,RP-87,RP-200354,4218,2,B,CR on enhancements on LTE MDT and SON,16.0.0
+,RP-87,RP-200362,4219,1,B,Introduction of DL MIMO efficiency enhancement,16.0.0
+,RP-87,RP-200357,4220,-,B,Introduction of wideband PRG size,16.0.0
+,RP-87,RP-200357,4221,1,C,UDC reconfiguration for RRC connection re-establishment case,16.0.0
+,RP-87,RP-200346,4222,1,B,Introduction of 5G V2X with NR Sidelink in TS 36.331,16.0.0
+,RP-87,RP-200352,4228,1,B,Introduction of NR IIoT,16.0.0
+,RP-87,RP-200359,4230,-,B,Recommended Bit Rate/Query for FLUS and MTSI,16.0.0
+,RP-87,RP-200358,4232,-,B,Support of inter-RAT handover from NR to EN-DC in TS 36.331,16.0.0
+,RP-87,RP-200349,4233,-,B,36.331 CR on Integrated Access and Backhaul,16.0.0
+,RP-87,RP-200347,4234,-,B,Introduction of NR Mobility enhancements,16.0.0
+07/2020,RP-88,RP-201166,4197,5,B,Introduction of NeedForGap capability for NR measurement,16.1.0
+,RP-88,RP-201191,4229,6,B,Introduce of alternative cell reselection priority for EN-DC,16.1.0
+,RP-88,RP-201191,4236,2,F,Correction on establishment cause value upon enhanced EPS voice fallback,16.1.0
+,RP-88,RP-201192,4239,3,F,Miscellaneous Rel-16 eMTC corrections,16.1.0
+,RP-88,RP-201168,4240,2,A,CR on RLC out-of-order delivery configuration,16.1.0
+,RP-88,RP-201174,4245,2,B,CR for 36.331 for Power Savings,16.1.0
+,RP-88,RP-201180,4256,2,F,Correction to transfer of UE capabilities at HO for RACS and correction of ASN.1 review issues [N012] [N013],16.1.0
+,RP-88,RP-201169,4258,2,A,Clarification on avoiding keystream repeat due to COUNT reuse,16.1.0
+,RP-88,RP-201194,4259,2,F,Correction on the configuration of subframe #0 and #5 for MCH in MBMS dedicated cell,16.1.0
+,RP-88,RP-201178,4260,2,F,CR for 36.331 on CA/DC Enhancements,16.1.0
+,RP-88,RP-201166,4262,3,F,Allowing PDCP version change without handover,16.1.0
+,RP-88,RP-201172,4263,3,B,Mobility to NR operating with shared spectrum access,16.1.0
+,RP-88,RP-201166,4266,3,C,upperLayerIndication enhancements,16.1.0
+,RP-88,RP-201178,4283,2,B,Introduction of UE capabilities for eDCCA,16.1.0
+,RP-88,RP-201193,4287,3,F,Miscellaneous corrections to 36.331 for Rel-16 NB-IoT,16.1.0
+,RP-88,RP-201160,4289,1,A,UE measurement capability requirements for NR,16.1.0
+,RP-88,RP-201195,4290,2,F,Updates for R16 LTE Mobility Enhancements and LTE updates for R16 NR Mobility Enhancements,16.1.0
+,RP-88,RP-201159,4293,-,A,Avoiding security risk for RLC AM and RLC UM bearers during termination point change,16.1.0
+,RP-88,RP-201186,4294,1,B,CR to 36.331 on introduction of mandatory gap patterns in Rel-16,16.1.0
+,RP-88,RP-201181,4299,2,B,IIOT capabilities introduction to TS 36.331,16.1.0
+,RP-88,RP-201181,4300,-,F,Correction of NR IIoT,16.1.0
+,RP-88,RP-201169,4305,2,A,Correction to the LTE Rel-15 TDD/FDD capability differentiation,16.1.0
+,RP-88,RP-201195,4306,1,B,UE Capability for Rel-16 LTE even further mobility enhancement,16.1.0
+,RP-88,RP-201194,4307,-,F,MBMS UE capabilities per band for subcarrier spacing of 2.5 kHz and 0.37 kHz,16.1.0
+,RP-88,RP-201190,4315,3,F,General changes resulting from ASN.1 review for LTE RRC REL-16,16.1.0
+,RP-88,RP-201169,4321,1,A,Corrections on the number of DRBs,16.1.0
+,RP-88,RP-201184,4323,3,F,Corrections on MDT and SON,16.1.0
+,RP-88,RP-201191,4324,1,F,36.331 CR for overheating in (NG)EN-DC and NR-DC,16.1.0
+,RP-88,RP-201185,4326,2,B,Introduction of signalling for high-speed train scenarios,16.1.0
+,RP-88,RP-201197,4334,1,B,Introduction of UE capabilities for DL MIMO efficiency enhancement,16.1.0
+,RP-88,RP-201194,4335,-,F,Correction on MCCH configuration for 0.37kHz SCS,16.1.0
+,RP-88,RP-201176,4336,2,F,Corrections on V2X functionalities in TS 36.331,16.1.0
+,RP-88,RP-201168,4342,2,A,Minor changes collected by Rapporteur,16.1.0
+,RP-88,RP-201168,4343,1,A,Correction of AUL HARQ process,16.1.0
+,RP-88,RP-201192,4344,-,F,Relaxed serving cell measurement for UEs using WUS,16.1.0
+,RP-88,RP-201176,4345,-,B,CR for NR V2X UE capability,16.1.0
+,RP-88,RP-201165,4346,2,A,Introduction of CGI reporting capability,16.1.0
+,RP-88,,,,,"Removal of a double ""v1610"" suffix to make ASN.1 to pass the syntax check",16.1.1
+09/2020,RP-89,RP-201927,4349,1,B,CR for V2X UE capability,16.2.0
+,RP-89,RP-201933,4353,2,F,Corretion on the RLF for LTE DAPS,16.2.0
+,RP-89,RP-201933,4357,1,F,Correction on NB-IoT process under conditionalReconfiguration,16.2.0
+,RP-89,RP-201928,4358,1,F,Clarification on resource reservation for eMTC,16.2.0
+,RP-89,RP-201933,4359,1,F,Correction to conditional configurations,16.2.0
+,RP-89,RP-201922,4361,1,F,Add tdm-PatternConfig2 in the inter-node message,16.2.0
+,RP-89,RP-201933,4362,2,F,Correction on LTE MOB capability,16.2.0
+,RP-89,RP-201938,4364,2,F,Correction on the Presence Condition for drb-ToAddModList,16.2.0
+,RP-89,RP-201922,4366,1,F,Correction on the Configuration of sCellState for 36.331,16.2.0
+,RP-89,RP-201927,4371,2,F,Correction on cross-RAT V2X functionality in TS 36.331,16.2.0
+,RP-89,RP-201930,4374,-,F,Time misalignment in DAPS DRB configuration (Alt.2),16.2.0
+,RP-89,RP-201927,4376,1,F,Addition of the missing NR anchor carrier pre-configuration for V2X SL communication in TS 36.331,16.2.0
+,RP-89,RP-201923,4379,1,F,CR to 36.331 on F1-C traffic over LTE,16.2.0
+,RP-89,RP-201928,4380,2,F,Corrections for Rel-16 NB-IoT and eMTC,16.2.0
+,RP-89,RP-201936,4383,1,A,Clarification on UL 256QAM,16.2.0
+,RP-89,RP-201933,4384,-,F,Correction on TS 36.331 for DAPS UE capabilities,16.2.0
+,RP-89,RP-201933,4385,-,F,Incorrect restriction for RLC UM radio bearers,16.2.0
+,RP-89,RP-201922,4391,1,F,Misc corrections for Rel-16 DCCA,16.2.0
+,RP-89,RP-201921,4393,2,F,Correction regarding placement of cell specific SSB QCL information,16.2.0
+,RP-89,RP-201930,4396,-,F,Correction to update of CHO configuration,16.2.0
+,RP-89,RP-201933,4404,2,F,Timer handling upon initiation of RRC re-establishment,16.2.0
+,RP-89,RP-201933,4406,-,F,No support of DAPS HO for a CHO candidate cell,16.2.0
+,RP-89,RP-201933,4409,1,F,Correction on TS36.331 for CHO,16.2.0
+,RP-89,RP-201933,4411,-,F,Correction for SRB handling of DAPS HOF (36.331),16.2.0
+,RP-89,RP-201933,4414,1,F,Minor changes collected by Rapporteur,16.2.0
+,RP-89,RP-201927,4416,1,F,Miscellaneous corrections on TS 36.331,16.2.0
+,RP-89,RP-201932,4418,1,F,Correction to RRC connection release procedure without security for EN-DC cell reselection,16.2.0
+,RP-89,RP-201923,4419,-,F,Correction of on the IP address requesting in EN-DC,16.2.0
+,RP-89,RP-201938,4421,1,A,Correction for Qrxlevmin description in SIB24,16.2.0
+,RP-89,RP-201963,4422,2,F,CR on LTE EHC configuration,16.2.0
+,RP-89,RP-201933,4425,2,F,CR to 36.331 on SLSS ID,16.2.0
+,RP-89,RP-201933,4426,-,F,drb-continueROHC for DAPS,16.2.0
+,RP-89,RP-201928,4433,-,F,Correction on RRC Connection re-establishment,16.2.0
+,RP-89,RP-201928,4434,1,F,Corrections to connection to 5GC for eMTC,16.2.0
+,RP-89,RP-201927,4435,-,F,Adding a note for joint success and failure in crossRAT SL,16.2.0
+,RP-89,RP-201923,4436,-,F,Corrections on the BH RLF failure for IAB to TS 36.331,16.2.0
+,RP-89,RP-201929,4437,1,F,Misc. corrections CR for 36.331 for Power Savings,16.2.0
+,RP-89,RP-201931,4438,-,F,Correction to SON features,16.2.0
+,RP-89,RP-201924,4439,-,F,Miscellaneous IAB Corrections,16.2.0
+,RP-89,RP-201933,4440,-,F,Restructuring DAPS capabilities,16.2.0
+,RP-89,RP-201939,4445,-,C,Modification of SI scheduling for extended SIBs,16.2.0
+,RP-89,RP-201936,4447,-,A,System support for Wake Up Signal,16.2.0
+,RP-89,RP-201928,4448,-,F,TA timer corrections for PUR,16.2.0
+,RP-89,,,,,Two left-over revision marks removed,16.2.1
+12/2020,RP-90,RP-202780,4390,5,A,"Corrections to the field descriptions for TDD/FDD capability differentiation, and to nMaxResource value range",16.3.0
+,RP-90,RP-202784,4431,3,A,Clarification to UE capabilities for non-contiguous intra-band CA,16.3.0
+,RP-90,RP-202769,4449,1,B,Update on V2X UE capability,16.3.0
+,RP-90,RP-202787,4452,-,A,Removal of DelayBudgetReport message in stage 3,16.3.0
+,RP-90,RP-202779,4453,-,F,Corrections to UE capabilities and SIB25,16.3.0
+,RP-90,RP-202777,4454,-,F,Correction on UAI during handover,16.3.0
+,RP-90,RP-202770,4456,1,F,Correction to 36.331 on UE capability of direct SCell activation,16.3.0
+,RP-90,RP-202772,4459,1,F,Miscellaneous corrections to TS 36.331 for IAB,16.3.0
+,RP-90,RP-202770,4463,1,F,Capability for beam level NR early measurement reporting,16.3.0
+,RP-90,RP-202780,4471,2,A,Correction on ROHC configuration,16.3.0
+,RP-90,RP-202780,4472,1,F,Minor changes collected by Rapporteur,16.3.0
+,RP-90,RP-202780,4481,-,F,Correction to CP RRC Connection Reestablishment in 5GC,16.3.0
+,RP-90,RP-202779,4482,1,F,Addition of missing RSS capability for eMTC,16.3.0
+,RP-90,RP-202782,4486,1,F,Clarification on no support of CA or DC with DAPS,16.3.0
+,RP-90,RP-202789,4488,2,F,Correction on uac-AC1-SelectAssistInfo,16.3.0
+,RP-90,RP-202783,4489,1,F,Miscellaneous corrections on overheating assistance information for NR SCG,16.3.0
+,RP-90,RP-202770,4492,1,F,Misc corrections for Rel-16 DCCA,16.3.0
+,RP-90,RP-202770,4493,1,F,Correction on early measurement capabilities and descriptions,16.3.0
+,RP-90,RP-202783,4494,2,F,Correction regarding overheating assistance for SCG,16.3.0
+,RP-90,RP-202770,4495,1,F,Correction on SCG-related fields in RRCConnection Resume,16.3.0
+,RP-90,RP-202770,4496,-,C,Processing delay requirements for RRC resume,16.3.0
+,RP-90,RP-202772,4501,-,F,Support of Rel-16 features for SCG in EN-DC,16.3.0
+,RP-90,RP-202769,4508,1,F,Miscellaneous corrections on TS 36.331,16.3.0
+,RP-90,RP-202782,4516,-,F,Restriction on PHR for DAPS,16.3.0
+,RP-90,RP-202782,4517,3,F,Introducing power sharing for DAPS handover,16.3.0
+,RP-90,RP-202775,4522,-,F,Correction on T321 for autonomous gap based CGI in FR2,16.3.0
+,RP-90,RP-202782,4530,-,F,Miscellaneous corrections for conditional reconfiguration,16.3.0
+,RP-90,RP-202782,4531,-,F,UE capability corrections to Mobility Enhancements (LTE),16.3.0
+,RP-90,RP-202782,4532,-,F,Miscellaneous corrections for DAPS (LTE),16.3.0
+,RP-90,RP-202786,4534,1,A,Clarification for SIBs scheduled in schedulingInfoListExt and posSchedulingInfoList,16.3.0
+,RP-90,RP-202785,4536,-,A,Capturing ul-256QAM-r15 capability,16.3.0
+,RP-90,RP-202776,4538,-,F,RRC corrections on NR and LTE SON and MDT,16.3.0
+03/2021,RP-91,RP-210700,4458,2,A,Correction to RRC resume and re-establishment,16.4.0
+,RP-91,RP-210698,4480,3,F,Clarification on TA validation for PUR,16.4.0
+,RP-91,RP-210698,4483,4,F,Clarification to the DRX cycle in RRC_IDLE and RRC_INACTIVE,16.4.0
+,RP-91,RP-210690,4542,1,F,Correction on the Handling of Reconfiguration within RRC Resume,16.4.0
+,RP-91,RP-210690,4543,1,F,Clarification on Fast MCG Link Recovery,16.4.0
+,RP-91,RP-210703,4549,1,F,Minor changes collected by Rapporteur for Rel-16,16.4.0
+,RP-91,RP-210699,4551,1,F,BufferSize reconfiguration for UDC after RRC connection re-establishment,16.4.0
+,RP-91,RP-210698,4555,1,F,Clarification on SIB change notification in RRC_INACTIVE,16.4.0
+,RP-91,RP-210698,4556,1,F,Correction on paging narrowband selection,16.4.0
+,RP-91,RP-210703,4557,-,F,Correction to measResultPCell impacting EN-DC,16.4.0
+,RP-91,RP-210698,4562,1,F,Dummifying intraFreqMultiUL-TransmissionDAPS-r16 capability,16.4.0
+,RP-91,RP-210698,4563,1,F,Correction to UAC parameters acquisition,16.4.0
+,RP-91,RP-210698,4564,-,F,Correction to SIB29 acquisition,16.4.0
+,RP-91,RP-210700,4566,-,A,Correction to the applicability of CRS muting configuration,16.4.0
+,RP-91,RP-210698,4567,1,F,Correction on Drb-ContinueROHC for UP-PUR,16.4.0
+,RP-91,RP-210690,4568,1,F,Misc corrections for Rel-16 DCCA,16.4.0
+,RP-91,RP-210699,4572,1,F,LTE RRC processing time with segmentation,16.4.0
+,RP-91,RP-210692,4573,2,F,Correction on LTE Mobility Enhancement,16.4.0
+,RP-91,RP-210698,4583,-,F,Corrections to DAPS handover in LTE,16.4.0
+,RP-91,RP-210699,4584,1,F,Correction on handling of overheatingAssistanceConfigForSCG when SCG is released,16.4.0
+,RP-91,RP-210691,4588,-,F,Corrections on the P-max for IAB,16.4.0
+,RP-91,RP-210693,4589,3,F,Corrections on EUTRA MDT and SON (Rapporteur CR),16.4.0
+,RP-91,RP-210700,4593,1,A,Correction on NPRACH resources in SIB2-NB and SIB23-NB,16.4.0
+,RP-91,RP-210701,4596,-,A,Reconfiguring RoHC and setting the drb-ContinueROHC simultaneously,16.4.0
+,RP-91,RP-210701,4597,-,A,Correction on IDC indication,16.4.0
+,RP-91,RP-210693,4599,-,D,Editorial corrections on SON and MDT,16.4.0
+,RP-91,RP-210689,4602,-,F,Protection of sidelinkUEInformation and ULInformationTransferIRAT,16.4.0
+,RP-91,RP-210698,4603,-,F,Correction on LTE Mobility Enhancement,16.4.0
+,RP-91,RP-210698,4604,1,F,Note to clarify UE handling of non-DAPS bearer,16.4.0
+,RP-91,RP-210690,4605,-,F,CR on serving cell reporting,16.4.0
+06/2021,RP-92,RP-211487,4579,6,C,Redirection with MPS Indication [Redirect_MPS_I],16.5.0
+,RP-92,RP-211481,4612,2,A,Corrections on the acquisition of a posSI message,16.5.0
+,RP-92,RP-211471,4622,2,F,Misc corrections for Rel-16 DCCA,16.5.0
+,RP-92,RP-211479,4627,1,F,CR on T312 handling in DAPS HO,16.5.0
+,RP-92,RP-211479,4628,2,F,CR on configuration release in DAPS HO,16.5.0
+,RP-92,RP-211470,4631,3,F,Miscellaneous corrections on TS 36.331 for NR V2X,16.5.0
+,RP-92,RP-211472,4633,2,F,Miscellaneous corrections on F1 over LTE for IAB,16.5.0
+,RP-92,RP-211484,4641,2,A,Correction on T325,16.5.0
+,RP-92,RP-211479,4644,1,F,"Transmission of InDeviceCoexistence, UEAssistanceInformation, MBMSInterestIndication, or SidelinkUEInformation after conditional handover",16.5.0
+,RP-92,RP-211482,4647,1,A,CR on RRC processing delay,16.5.0
+,RP-92,RP-211472,4649,1,F,IAB LTE changes,16.5.0
+,RP-92,RP-211481,4651,1,F,Clarification on the initiation of RNA update,16.5.0
+,RP-92,RP-211475,4654,1,F,Inter-RAT RRM measurement on NR-U,16.5.0
+,RP-92,RP-211481,4657,1,A,Corrections to Positioning SI message scheduling for eMTC and NB-IoT,16.5.0
+,RP-92,RP-211479,4658,1,F,36.331 Correction on Failure Recovery via CHO for Inter-RAT Handover Failure,16.5.0
+,RP-92,RP-211470,4659,1,F,Clarification on priority of LTE PSSS/SSSS/PSBCH,16.5.0
+,RP-92,RP-211481,4668,1,F,Clarify systemInfoUnchanged-BR also transmitted in RSS,16.5.0
+,RP-92,RP-211479,4679,1,F,Add ack-NACK-NumRepetitions for PUR-Config-NB,16.5.0
+,RP-92,RP-211486,4681,1,A,Clarification on RRC full config for PSCell change,16.5.0
+,RP-92,RP-211481,4684,2,A,Minor changes collected by Rapporteur for Rel-16,16.5.0
+,RP-92,RP-211479,4686,-,F,Miscellaneous corrections to DAPS handover,16.5.0
+,RP-92,RP-211471,4689,-,F,SON-MDT Changes agreed in RAN2#114 meeting,16.5.0
+09/2021,RP-93,RP-212441,4690,2,F,Miscellaneous corrections on TS 36.331,16.6.0
+,RP-93,RP-212443,4697,-,F,Corrections on RLF Report Storage in 36.331,16.6.0
+,RP-93,RP-212439,4701,1,A,Correction on the Release Cause for RRC_INACTVE UE,16.6.0
+,RP-93,RP-212441,4706,1,F,Modification of measId for conditional reconfiguration,16.6.0
+,RP-93,RP-212443,4711,-,F,On PDCP queuing delay value measurement,16.6.0
+,RP-93,RP-212441,4713,1,F,Correction on ULInformationTransferMRDC,16.6.0
+,RP-93,RP-212440,4714,-,F,Correction on Redirection with MPS Indication,16.6.0
+,RP-93,RP-212441,4715,1,F,Corrections on RRC reconfiguration for fast MCG link recovery,16.6.0
+,RP-93,RP-212437,4719,1,A,Minor changes collected by Rapporteur,16.6.0
+,RP-93,RP-212441,4720,1,F,36.331 Correction on ReportConfigEUTRA for CHO/CPAC,16.6.0
+,RP-93,RP-212441,4721,-,F,No support for CHO with SCG configuration,16.6.0
+,RP-93,RP-212440,4722,2,F,CR to 36.331 on correcting Rel-15 failure type definition,16.6.0
+,RP-93,RP-212596,4723,2,C,Distinguishing support of extended band n77,16.6.0
+12/2021,RP-94,RP-213340,4692,2,A,Addition of scheduling restrictions of positioning SI messages for eMTC,16.7.0
+,RP-94,RP-213345,4725,1,F,Discard of received segments of RRC messages,16.7.0
+,RP-94,RP-213342,4734,1,F,Correction to DL Multi-TB scheduling in NB-IoT,16.7.0
+,RP-94,RP-213342,4736,1,F,Correction on condReconfigurationToApply field description,16.7.0
+,RP-94,RP-213345,4744,1,F,SCG Overheating termination indication in EN-DC,16.7.0
+,RP-94,RP-213342,4748,-,F,Removal of RSS based RSRQ measurements,16.7.0
+03/2022,RP-95,RP-220472,4754,1,A,Dummify empty sequence in FlightPathInfoReport-r15 and other corrections,16.8.0
+,RP-95,RP-220473,4764,-,F,Correction on conditional reconfiguraiton execution for only one triggered cell,16.8.0
+,RP-95,RP-220473,4766,1,F,Minor changes collected by Rapporteur,16.8.0
+,RP-95,RP-220472,4777,1,F,Introduction of carrier specific NRSRP thresholds for NPRACH resource selection,16.8.0
+,RP-95,RP-220472,4779,-,F,Correction on delta configuration for UAI overheating in EN-DC,16.8.0
+03/2022,RP-95,RP-220506,4600,2,D,Inclusive Language Review for TS 36.331,17.0.0
+,RP-95,RP-220835,4729,4,F,Addition of NR-U RSSI/CO measurement UE capability,17.0.0
+,RP-95,RP-220837,4730,1,B,Introduction of mobility-state-based cell reselection for NR HSDN [NR_HSDN],17.0.0
+,RP-95,RP-220508,4750,2,B,Introduction of new bands and bandwidth allocation for LTE-based 5G terrestrial broadcast,17.0.0
+,RP-95,RP-220837,4752,-,B,Introduction of event-based trigger for LTE MDT logging [LTE-Event-MDT],17.0.0
+,RP-95,RP-220837,4755,1,B,Introduction of MINT [MINT],17.0.0
+,RP-95,RP-220837,4756,1,B,On introducing height information reporting in MDT reports [LTE-Height-MDT],17.0.0
+,RP-95,RP-220472,4759,1,F,Correction on PO determination for UE in inactive state,17.0.0
+,RP-95,RP-220507,4760,1,B,Introduction of NB-IoT/eMTC Enhancements,17.0.0
+,RP-95,RP-220479,4762,2,B,Introduction of R17 PositioningEnh in LTE RRC spec,17.0.0
+,RP-95,RP-220495,4763,1,B,Introducing support of UP IP for EPC connected architectures using NR PDCP,17.0.0
+,RP-95,RP-220488,4769,1,B,Introduction of MUSIM for LTE,17.0.0
+,RP-95,RP-220509,4771,1,B,Support of Non-Terrestrial Network in NB-IoT and eMTC,17.0.0
+,RP-95,RP-220485,4774,1,B,Introduction of further multi-RAT dual-connectivity enhancements,17.0.0
+,RP-95,RP-220475,4778,-,B,UE capabilities for the support of NR 71GHz,17.0.0
+,RP-95,RP-220508,4780,-,B,UE capabilities for new bands and bandwidth allocation for LTE-based 5G terrestrial broadcast,17.0.0
+06/2022,RP-96,RP-221758,4781,2,F,Introduction of UE capability for Rel-17 sidelink,17.1.0
+,RP-96,RP-221712,4783,-,A,Correction on per-FS capability,17.1.0
+,RP-96,RP-221738,4794,1,F,Corrections on the general ASN.1 issues,17.1.0
+,RP-96,RP-221737,4798,1,B,Addition of missing functionalities and corrections to support of Non-Terrestrial Network in NB-IoT and eMTC,17.1.0
+,RP-96,RP-221738,4799,2,C,Distinguishing support of band n77 restrictions in Canada [n77 Canada],17.1.0
+,RP-96,RP-221757,4803,1,F,Corrections to R17 NB-IoT/eMTC Enhancements,17.1.0
+,RP-96,RP-221714,4806,1,A,Correction to application layer measurement and reporting,17.1.0
+,RP-96,RP-221730,4808,1,F,Corrections on MUSIM in LTE,17.1.0
+,RP-96,RP-221738,4810,1,B,Introducing single-bit approach for MINT [MINT],17.1.0
+,RP-96,RP-221728,4813,2,F,Corrections for further MRDC enhancements,17.1.0
+,RP-96,RP-221715,4820,2,F,Overheating assistance info for FR2-2 in (NG)EN-DC - RIL E801,17.1.0
+,RP-96,RP-221738,4821,1,B,Introduction of gNB ID length reporting in the NR CGI report [gNB_ID_Length],17.1.0
+,RP-96,RP-221730,4822,-,F,Correction on UE behavior for NAS-based busy indication in RRC_INACTIVE,17.1.0
+,RP-96,RP-221738,4823,-,C,Support of CHO with SCG configuration - 36331 [CHOwithDCkept],17.1.0
+,RP-96,RP-221758,4824,-,F,Introduction of capability filter for Rel-17 sidelink,17.1.0
+,RP-96,RP-221758,4826,-,C,Introduction of uplink RRC Segmentation capability,17.1.0
+09/2022,RP-97,RP-222522,4832,1,F,Miscellaneous corrections to TS 36.331 for IoT NTN,17.2.0
+,RP-97,RP-222517,4837,1,A,Clarification on schedulingInfoList in NB-IoT,17.2.0
+,RP-97,RP-222518,4846,1,A,Corrections on CHO recovery,17.2.0
+,RP-97,RP-222516,4850,-,A,Correction on NR serving frequency results reporting for event-triggered measurement (R17),17.2.0
+,RP-97,RP-222521,4855,1,A,Correction of overheating for NR SCG,17.2.0
+,RP-97,RP-222528,4859,-,F,Clarification on NR sidelink relay related configuration,17.2.0
+,RP-97,RP-222519,4862,1,A,Miscellaneous changes collected by Rapporteur,17.2.0
+,RP-97,RP-222519,4865,2,A,SPS deactivation upon carrier reconfiguration,17.2.0
+,RP-97,RP-222522,4866,1,F,Correction on npusch-MCS field description,17.2.0
+,RP-97,RP-222522,4867,3,F,Corrections for further MR-DC enhancements,17.2.0
+,RP-97,RP-222525,4869,3,F,MeasConfig corrections for above 71 GHz operation,17.2.0
+,RP-97,RP-222521,4871,-,A,Correction on mpsPriorityIndication,17.2.0
+12/2022,RP-98,RP-223414,4878,2,F,Correction to disasterRoamingFromAnyPLMN [MINT],17.3.0
+,RP-98,RP-223409,4884,2,F,Miscellaneous corrections to TS 36.331 for IoT NTN,17.3.0
+,RP-98,RP-223408,4887,-,A,Correction on inclusion of reconnectCellId (36.331),17.3.0
+,RP-98,RP-223414,4889,-,F,Correction on ue-ConfigRelease,17.3.0
+,RP-98,RP-223404,4896,-,A,Clarification on p-maxNR,17.3.0
+,RP-98,RP-223405,4899,-,F,Support of Multiple CSI Subframe Sets on CQI-ReportPeriodicScell,17.3.0
+03/2023,RP-99,RP-230696,4900,2,F,Miscellaneous corrections to TS 36.331 for IoT NTN,17.4.0
+,RP-99,RP-230688,4903,-,F,CR to 36.331 on NPUSCH-ConfigDedicated-NB-v1700,17.4.0
+,RP-99,RP-230696,4908,-,F,Correction on handling of T317 timer during HO,17.4.0
+,RP-99,RP-230687,4910,2,A,Corrections in TS 36.331 on IFRI handling by IAB-MT for eIAB,17.4.0
+,RP-99,RP-230687,4912,2,A,Introduction of cell-specific offset for inter-RAT measurement in LTE for NR neighbors [CIO-IRAT-HO-ToNR],17.4.0
+,RP-99,RP-230687,4915,1,A,Correction on UL RRC segmentation processing delay requirements,17.4.0
+,RP-99,RP-230696,4919,-,F,Correction for T317 in the Timers table,17.4.0
+06/2023,RP-100,RP-231412,4920,3,F,Correction on scg-State in RRCConnectionReconfiguration including the mobilityControlInfo,17.5.0
+,RP-100,RP-231417,4928,4,F,CR to 36.331 on T317 and T318,17.5.0
+,RP-100,RP-231417,4930,5,F,Alignment of NPRACH preamble descriptions with RAN1 specification for IoT-NTN parameters,17.5.0
+,RP-100,RP-231417,4933,1,F,Correction on definition of ta-Report,17.5.0
+,RP-100,RP-231412,4935,3,F,Correction on QoE configuration release,17.5.0
+,RP-100,RP-231417,4936,-,F,IoT NTN RRC Correction on PUCCH TX duration,17.5.0
+09/2023,RP-101,RP-232570,4917,6,F,Addition of extended number range for NS value,17.6.0
+,RP-101,RP-232568,4937,3,F,Clarify the reference point for timing info in SIB16(-NB) and DLInformationTransfer in IoT NTN,17.6.0
+,RP-101,RP-232566,4940,1,A,Correction to NS-value utilization,17.6.0
+,RP-101,RP-232568,4945,2,F,Miscellaneous RRC corrections for IoT NTN,17.6.0
+,RP-101,RP-232568,4952,1,F,RRC Correction on including GNSS validity duration and dedicated SIB31,17.6.0
+,RP-101,RP-232567,4954,1,A,Redirection with MPS correction for resume cause,17.6.0
+,RP-101,RP-232565,4958,-,A,Correction on location configuration for WLAN and BT for SON and MDT features,17.6.0
+12/2023,RP-102,RP-233885,4966,1,A,Corrections to inter-node RRC messages for 5GC,17.7.0
+,RP-102,RP-233890,4968,1,F,Introduction of UE capability for inter-RAT NR FR2 measurements without measurement gap,17.7.0
+,RP-102,RP-233887,4972,1,F,Correction on SIB31 signalling only in NTN cell,17.7.0
+,RP-102,RP-233887,4975,-,F,Clarification on ul-SyncValidityDuration in SIB31,17.7.0
+,RP-102,RP-233887,4978,1,F,Corrections to SystemInformationBlockType31 for IoT NTN,17.7.0
+,RP-102,RP-233888,4979,2,F,Correction on transmission of SSR Assistance Data based on BDS B1C,17.7.0
+12/2023,RP-102,RP-233915,4929,6,B,Introduction of measurements without gap with interruption,18.0.0
+,RP-102,RP-233883,4931,4,B,GNSS LOS/NLOS posSIB broadcast assistance information [GNSS LOS/NLOS],18.0.0
+,RP-102,RP-233883,4955,2,C,SSR Satellite PCV Residuals [Rel18PCV],18.0.0
+,RP-102,RP-233884,4959,2,F,Correction to flightPathInfoAvailable when connected to 5GC,18.0.0
+,RP-102,RP-233891,4964,1,B,Introduction of IoT NTN enhancements,18.0.0
+,RP-102,RP-233892,4967,1,B,Introduction of Enhanced LTE Support for UAV (Uncrewed Aerial Vehicles),18.0.0
+,RP-102,RP-233883,4970,1,B,Network support and clarification of redirection to 3G [REDIRECTION to 3G],18.0.0
+,RP-102,RP-233883,4971,1,B,Protection against improper reselection to GERAN/UTRAN [RESELECTION_TO GSM_AND_UTRAN],18.0.0
+,RP-102,RP-233909,4973,1,B,CR to 36331 for introducing SON/MDT features in Rel-18,18.0.0
+,RP-102,RP-233909,4974,-,B,CR to 36.331 for UE capability for R18 SONMDT,18.0.0
+03/2024,RP-103,RP-240654,4985,-,A,Removal of references to unknown RAN4 specification,18.1.0
+,RP-103,RP-240651,4988,1,F,"Correction on Event A3, A4 and A5 for LTE CHO",18.1.0
+,RP-103,RP-240674,4989,1,F,Corrections to TS 36.331 for R18 SONMDT,18.1.0
+,RP-103,RP-240660,4990,1,F,Corrections to IOT NTN,18.1.0
+,RP-103,RP-240683,4991,1,B,Lower MSD capability for EN-DC,18.1.0
+,RP-103,RP-240661,4992,1,F,Corrections for Enhanced LTE Support for UAV (Uncrewed Aerial Vehicles),18.1.0
+,RP-103,RP-240704,4993,1,B,Introduction of mIAB Inter-RAT cell reselection enhancements for 36.331 [TEI18_MIAB_IRAT],18.1.0
+,RP-103,RP-240652,4997,3,A,Correction on UE location information in NB-IoT RLF report,18.1.0
+06/2024,RP-104,RP-241584,4983,4,B,Introduction of NR support for dedicated spectrum less than 5MHz for FR1,18.2.0
+,RP-104,RP-241546,5000,1,F,Correction on redirection to GERAN [Redirect_to_GERAN],18.2.0
+,RP-104,RP-241557,5004,3,F,Corrections to Enhanced LTE Support for UAV (Uncrewed Aerial Vehicles),18.2.0
+,RP-104,RP-241556,5021,1,F,Corrections to IOT NTN,18.2.0
+,RP-104,RP-241575,5022,1,F,Corrections to TS 36.331 for R18 SONMDT,18.2.0
+,RP-104,RP-241544,5027,3,F,Miscellaneous Corrections for TS 36.331,18.2.0
+09/2024,RP-105,RP-242235,5035,-,A,Correction on the field of scg-State,18.3.0
+,RP-105,RP-242231,5040,1,F,Correction to UE capabilities and configuration,18.3.0
+,RP-105,RP-242232,5046,2,A,Correction to MIB-MBMS systemFrameNumber field description,18.3.0
+,RP-105,RP-242237,5049,1,F,Miscellaneous corrections to TS 36.331 for IoT NTN,18.3.0
+,RP-105,,,,,Added one missing carriage return,18.3.1
+12/2024,RP-106,RP-243228,5052,3,F,Corrections on location based measurements and need code for IoT NTN,18.4.0
+,RP-106,RP-243228,5054,1,F,Miscellaneous corrections to TS 36.331 for IoT NTN,18.4.0
+,RP-106,RP-243231,5062,2,F,Correction on QoE measurements release at successful handover from LTE/5GC to NR,18.4.0
+,RP-106,RP-243229,5063,1,F,Miscellaneous corrections on R18 SONMDT for 36.331,18.4.0
+,RP-106,RP-243233,5064,1,F,Supporting R17 early implementation of R18 measurement gap enhancements,18.4.0
+,RP-106,RP-243228,5066,2,F,Correction on SI Reception in RRC CONNECTED,18.4.0
+,RP-106,RP-243230,5069,2,F,Correction to NR Beam Reporting in LTE RRC,18.4.0
+,RP-106,RP-243228,5076,1,F,Correction on SIB33(-NB) for IoT NTN,18.4.0
+,RP-106,RP-243233,5080,1,F,Addition of reference to 38.304 for Qoffsettemp handling,18.4.0
+,RP-106,RP-243228,5081,-,F,Correction to satellite ID in system infromation,18.4.0
+,RP-106,RP-243220,5082,-,F,Capability on measurement gap enhancements,18.4.0
+,RP-106,RP-243227,5084,1,A,Introduction of network signalling of maximum number of UL segments [Max-RRC-SegUL],18.4.0
+03/2025,RP-107,RP-250657,5087,2,A,Correction on MPDCCH parameter in PUR-Config,18.5.0
+,RP-107,RP-250659,5089,1,A,Corrections on network signalling of maximum number of UL segments [Max-RRC-SegUL],18.5.0
+,RP-107,RP-250658,5092,3,A,Clarification on Inclination value description,18.5.0
+,RP-107,RP-250660,5100,-,F,Clarification on the mapping of RSRP thresholds to CE levels,18.5.0
+,RP-107,RP-250660,5101,1,F,Correction on GNSS procedure,18.5.0
+06/2025,RP-108,RP-251696,5105,2,F,Correction on SIB33 reception in RRC_CONNECTED,18.6.0
+,RP-108,RP-251692,5109,2,A,Correction on timeUntilReconnection in RLF report,18.6.0
+,RP-108,RP-251688,5116,2,A,Correction to NeedForGap capability,18.6.0
+,RP-108,RP-251688,5120,-,A,Introducing UE capability for A4 A5 ReportOnLeave,18.6.0
+,RP-108,RP-251693,5128,1,A,Correction to explicit indication of epoch in SIB31,18.6.0
+,RP-108,RP-251691,5133,1,A,Miscellaneous non-controversial corrections,18.6.0
+09/2025,RP-109,RP-252769,5121,2,F,Corrections on IoT NTN SIB33,18.7.0
+,RP-109,RP-252769,5125,2,F,Correction on MBMS Interest Indication,18.7.0
+,RP-109,RP-252766,5136,1,A,Correction on LTE RLF report logging,18.7.0
+,RP-109,RP-252769,5146,3,F,Clarification on UTC time offset in IoT NTN,18.7.0
+,RP-109,RP-252767,5148,2,A,Correction on inter-RAT FR2 measurement capabilities,18.7.0
+,RP-109,RP-252769,5152,1,F,Clarification of satellite identifiers,18.7.0
+09/2025,RP-109,RP-252793,5065,7,B,Introduction of LTE TN to NR NTN IDLE mode mobility,19.0.0
+,RP-109,RP-252796,5110,3,B,Introduction of ANR reporting of HSDN cells [ANR_HSDN],19.0.0
+,RP-109,RP-252792,5137,2,B,Introduction of IoT NTN Ph3,19.0.0
+,RP-109,RP-252795,5138,1,B,Introduction of IoT NTN TDD mode,19.0.0
+,RP-109,RP-252797,5139,2,B,Introduction of CAS muting in LTE-based 5G broadcast [5GB_CASMuting],19.0.0
+,RP-109,RP-252796,5140,-,B,Introduction of NB-IoT satellite information in E-UTRAN [EUTRAN-to-NBIoTNTN],19.0.0
+,RP-109,RP-252794,5143,1,B,Introduction of LTE-based 5G Broadcast Phase 2,19.0.0
+,RP-109,RP-252783,5150,2,B,Introduction of R19 SONMDT features in TS 36.331,19.0.0
+,RP-109,RP-252797,5156,2,B,Introduction of IoT TN to NTN redirection [IoT_TN_NTN_redir],19.0.0
+12/2025,RP-110,RP-253736,5160,4,F,Rapporteur correction on IoT NTN Ph3,19.1.0
+,RP-110,RP-253739,5161,5,F,Rapporteur correction on IoT NTN TDD,19.1.0
+,RP-110,RP-253742,5162,2,F,Rapporteur correction on CAS muting for LTE based 5G broadcast [5GB_CASMuting],19.1.0
+,RP-110,RP-253738,5168,3,F,Corrections to LTE-based 5G Broadcast Phase 2 after ASN.1 review,19.1.0
+,RP-110,RP-253735,5171,6,B,Introduction of MINT in EPS,19.1.0
+,RP-110,RP-253742,5173,2,F,Correction for the redirection from E-UTRAN TN to NB-IoT NTN [IoT_TN_NTN_redir],19.1.0
+,RP-110,RP-253737,5174,1,F,Corrections on LTE TN to NR NTN IDLE mode mobility in TS 36.331,19.1.0
+,RP-110,RP-253742,5175,3,F,[S906][V218] RRC RIL corrections on TEI19 on TN-NTN mobility [EUTRAN-to-NBIOTNTN] [IoT_TN_NTN_redir],19.1.0
+,RP-110,RP-253716,5178,2,A,Clarification on TA Report in IoT NTN and Including RAN4 Spec References,19.1.0
+,RP-110,RP-253742,5182,2,B,Assistance info for IoT NTN to NR-NTN Cell Selection [IoT_NR_NTN_CellSelect],19.1.0
+,RP-110,RP-253742,5183,1,F,Indication of supported NB-IoT NTN band list in E-UTRAN [IoT_TN_NTN_redir],19.1.0
+,RP-110,RP-253733,5184,1,F,Correction on R19 SONMDT in TS 36.331,19.1.0
+,RP-110,RP-253738,5186,3,F,Clarification on Notification Configuration,19.1.0
+03/2026,RP-111,RP-260665,5189,2,A,Corrections on EphemerisOrbitalParameters in IoT NTN,19.2.0
+,RP-111,RP-260668,5191,2,F,Correction on R19 SONMDT for TS 36.331,19.2.0
+,RP-111,RP-260669,5192,2,F,Rapporteur correction on IoT NTN Ph3,19.2.0
+,RP-111,RP-260669,5193,2,F,Rapporteur correction on IoT NTN TDD,19.2.0
+,RP-111,RP-260663,5196,2,A,Correction on disaster roaming access barring check for emergency call [MINT],19.2.0
+,RP-111,RP-260669,5197,1,F,Introduction of the extended k-Mac for IoT NTN TDD,19.2.0
+,RP-111,RP-260669,5198,-,F,Support of power boost in Rel-19 NB-IoT NTN,19.2.0
+,RP-111,RP-260669,5199,-,F,Correction to LTE TN to NR NTN mobility,19.2.0
+03/2026,,,,,,Problem with 36.331 v19.2.0 zip-file. No changes to spec contents.,19.2.1

@@ -1,0 +1,4 @@
+MN RAT,SN RAT,NR capabilities,E-UTRA capabilities,MR-DC capabilities
+E-UTRA,NR,Need not be included if the UE Radio Capability ID as specified in 23.502 [43] is used. Included otherwise,Not included,Need not be included if the UE Radio Capability ID as specified in 23.502 [43] is used. Included otherwise
+NR,E-UTRA,Not included,Need not be included if the UE Radio Capability ID as specified in 23.502 [43] is used. Included otherwise,Need not be included if the UE Radio Capability ID as specified in 23.502 [43] is used. Included otherwise
+NR,NR,Need not be included if the UE Radio Capability ID as specified in 23.502 [43] is used. Included otherwise,Not included,Not included

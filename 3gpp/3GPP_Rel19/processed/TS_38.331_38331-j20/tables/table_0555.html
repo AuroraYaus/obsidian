@@ -1,0 +1,38 @@
+<table>
+  <tr>
+    <td>Conditional Presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>DedicatedOnly</td>
+    <td>In PDCCH-Config, the field is optionally present, Need R. Otherwise it is absent, Need R.</td>
+  </tr>
+  <tr>
+    <td>Setup</td>
+    <td>This field is mandatory present upon creation of a new SearchSpace. It is optionally present, Need M, otherwise.</td>
+  </tr>
+  <tr>
+    <td>Setup2</td>
+    <td>This field is mandatory present when a new SearchSpace is set up, if the same SearchSpace ID is not included in searchSpacesToAddModListExt-r16/searchSpacesToAddModListExt-v1700/searchSpacesToAddModListExt-v1800 of the parent IE with the field searchSpaceType-r16 or searchSpaceType-r17 or searchSpaceType-r18 included. This field is absent if the same SearchSpace ID is included in searchSpacesToAddModListExt-v1800 of the parent IE with the field searchSpaceType-r18 included and set to dci-FormatsMC-r18. Otherwise it is optionally present, Need M.</td>
+  </tr>
+  <tr>
+    <td>Setup3</td>
+    <td>This field is mandatory present when a new SearchSpace is set up, if the same SearchSpace ID is not included in searchSpacesToAddModListExt (without suffix) of the parent IE with the field searchSpaceType (without suffix) included.  Otherwise it is optionally present, Need M.</td>
+  </tr>
+  <tr>
+    <td>Setup4</td>
+    <td>This field is mandatory present upon creation of a new SearchSpace if monitoringSlotPeriodicityAndOffset-v1710 is not included. It is optionally present, Need M, otherwise.</td>
+  </tr>
+  <tr>
+    <td>Setup5</td>
+    <td>This field is mandatory present upon creation of a new SearchSpace if monitoringSlotPeriodicityAndOffset (without suffix) is not included. It is optionally present, Need M, otherwise.</td>
+  </tr>
+  <tr>
+    <td>SetupOnly</td>
+    <td>This field is mandatory present upon creation of a new SearchSpace. It is absent, Need M, otherwise.</td>
+  </tr>
+  <tr>
+    <td>SetupOnly2</td>
+    <td>In PDCCH-Config, the field is optionally present upon creation of a new SearchSpace and absent, Need M upon reconfiguration of an existing SearchSpace.In PDCCH-ConfigCommon, the field is absent.</td>
+  </tr>
+</table>

@@ -1,0 +1,149 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2016-03,RAN#71,RP-160361,0181,3,B,Introduction of Rel-13 features of eMTC in 36.212,13.1.0
+2016-03,RAN#71,RP-160358,0185,-,F,CR on mismatch between 36.212 and 36.331,13.1.0
+2016-03,RAN#71,RP-160358,0186,-,F,Clarification on Class B CSI report,13.1.0
+2016-03,RAN#71,RP-160365,0189,-,A,Correction to RI reporting for UE category with MIMO capability of 1 layer,13.1.0
+2016-03,RAN#71,RP-160358,0191,-,F,CR on CRI-RI payload restriction for non-eCA UE,13.1.0
+2016-06,RAN#72,RP-161067,0192,3,B,Introduction of Rel-13 feature of NB-IoT in 36.212,13.2.0
+2016-06,RAN#72,RP-161062,0194,-,F,Correction on aperiodic CSI reporting mode 1-0 and 1-1,13.2.0
+2016-06,RAN#72,RP-161063,0195,-,F,Correction to S1 and S2 definition and i2 bit width,13.2.0
+2016-06,RAN#72,RP-161066,0196,1,F,MCS field in DCI format 6-2 for paging for MTC,13.2.0
+2016-06,RAN#72,RP-161062,0197,-,F,Coding of higher layer parameter codebooksizeDetermination-r13,13.2.0
+2016-06,RAN#72,RP-161065,0198,-,F,CR on subframe configuration for LAA,13.2.0
+2016-06,RAN#72,RP-161063,0199,-,F,Correction on the description of DMRS table,13.2.0
+2016-06,RAN#72,RP-161065,0200,-,F,Clarification on the applicability of DL procedures for LAA SCell,13.2.0
+2016-06,RAN#72,RP-161062,0201,-,F,Correction on DAI Presence in DCI formats for eCA,13.2.0
+2016-06,RAN#72,RP-161066,0202,-,F,Identify MPDCCH order in CE mode B in TS 36.212 (Solution 2),13.2.0
+2016-06,RAN#72,RP-161063,0203,-,F,CR on missing CRI-only table (36.212),13.2.0
+2016-06,RAN#72,RP-161062,0205,-,F,Correction on citations to a DAI bits table,13.2.0
+2016-06,RAN#72,RP-161066,0206,1,F,Frequency hopping flag definition in DCI formats for BL/CE UE,13.2.0
+2016-06,RAN#72,RP-161066,0207,-,F,Correction on the DCI payload size for eMTC in TS 36.212,13.2.0
+2016-06,RAN#72,RP-161066,0208,-,F,Channel interleaver correction for eMTC,13.2.0
+2016-09,RAN#73,RP-161563,0211,-,F,Correction on BCH rate matching in TS 36.212,13.3.0
+2016-09,RAN#73,RP-161560,0213,-,F,Correction on bitwidth of CLASS A codebook,13.3.0
+2016-09,RAN#73,RP-161560,0214,-,F,Corrections on CRI bit width in 36.212,13.3.0
+2016-09,RAN#73,RP-161562,0215,-,F,Subband CQI report and TM6,13.3.0
+2016-09,RAN#73,RP-161562,0216,1,F,CR for clarification of DCI sizes for format 6-1A (TM6 and TM9) in TS 36.212,13.3.0
+2016-09,RAN#73,RP-161569,0219,-,F,Correction on SRS request field in DCI format 1A for Rel-13 LAA,13.3.0
+2016-09,RAN#73,RP-161925,0220,-,F,Introduction of 1.2Gbps and 1.6Gbps UE categories in Rel-13,13.3.0
+2016-09,RAN#73,RP-161570,0217,-,B,Introduction of V2V into TS36.212,14.0.0
+2016-09,RAN#73,RP-161571,0218,-,B,Introduction of eLAA into TS36.212,14.0.0
+2016-12,RAN#74,RP-162368,0221,-,F,Corrections to RV in eLAA DCI definitions,14.1.0
+2016-12,RAN#74,RP-162368,0222,-,D,CR on DCI formats related with LAA in TS 36.212,14.1.0
+2016-12,RAN#74,RP-162368,0223,-,F,Clarification of PUSCH start position for eLAA,14.1.0
+2016-12,RAN#74,RP-162368,0224,-,F,CR on RI transmission on PUSCH for LAA SCells,14.1.0
+2016-12,RAN#74,RP-162359,0231,1,A,Correction on DCI Format N1 in 36.212,14.1.0
+2016-12,RAN#74,RP-162366,0232,-,F,Miscellaneous corrections for V2V in 36.212,14.1.0
+2016-12,RAN#74,RP-162368,0233,-,F,CR on correction to the PUSCH start position reference and relative timing offset in UL DCI for LAA,14.1.0
+2016-12,RAN#74,RP-162368,0234,-,F,Corrections to bit padding of DCI format 1A for eLAA in TS36.212,14.1.0
+2016-12,RAN#74,RP-162368,0235,-,F,CR on UL resource allocation for 10MHz LAA SCell,14.1.0
+2016-12,RAN#74,RP-162368,0236,-,F,Corrections to bit padding of DCI format 0B for eLAA in TS36.212,14.1.0
+2016-12,RAN#74,RP-162364,0237,-,B,Introduction of SRS switching into 36.212,14.1.0
+2016-12,RAN#74,RP-162365,0238,-,B,Introduction of Multiuser Superposition Transmission (MUST),14.1.0
+2016-12,RAN#74,RP-162366,0239,-,F,Correction to DCI format 5A,14.1.0
+2017-01,,,,,,MCC clean-up to correct corruption in text formatting (wrong line spacing),14.1.1
+2017-03,RAN#75,RP-170605,0240,1,B,Introduction of uplink capacity enhancements in 36.212,14.2.0
+2017-03,RAN#75,RP-170608,0241,1,B,Introduction of FeMBMS in 36.212,14.2.0
+2017-03,RAN#75,RP-170612,0243,-,A,Correction on soft buffer calculation for UE category 17 in Rel-14,14.2.0
+2017-03,RAN#75,RP-170609,0245,-,A,DAI in eMTC,14.2.0
+2017-03,RAN#75,RP-170615,0246,-,F,CR for SRS switching in 36.212,14.2.0
+2017-03,RAN#75,RP-170622,0247,-,B,Introduction of V2X into 36.212,14.2.0
+2017-03,RAN#75,RP-170623,0248,-,B,Introduction of FeMTC in 36.212,14.2.0
+2017-03,RAN#75,RP-170624,0249,-,B,Introduction of Rel-14 NB-IoT enhancements in 36.212,14.2.0
+2017-03,RAN#75,RP-170607,0250,-,B,Introduction of eFD-MIMO into 36.212,14.2.0
+2017-03,RAN#75,RP-170625,0251,-,B,Introduction of voice and video enhancement in 36.212,14.2.0
+2017-06,RAN#76,RP-171193,0253,-,A,CR for applicability of spatial bundling for PUCCH format 3 with FDD PCell,14.3.0
+2017-06,RAN#76,RP-171209,0255,-,A,Corrections on bit width of PMI for wideband CQI reports in 36.212,14.3.0
+2017-06,RAN#76,RP-171204,0256,-,F,Clarification of resource allocation for PDSCH in CE mode B,14.3.0
+2017-06,RAN#76,RP-171194,0257,-,F,Corrections on bit width of UCI fields for advanced CSI reporting in 36.212,14.3.0
+2017-06,RAN#76,RP-171194,0258,-,F,Correction on RI and CRI reporting for aperiodic and multi-shot CSI-RS,14.3.0
+2017-06,RAN#76,RP-171210,0259,-,F,CR on higher-layer parameters for 36.212,14.3.0
+2017-06,RAN#76,RP-171204,0260,-,F,Clarification of resource allocation for PDSCH with maximum 5 MHz channel bandwidth in CE mode A,14.3.0
+2017-06,RAN#76,RP-171204,0263,-,F,Corrections on total number of soft channel bits for UE Cat M1 and M2 in 36.212,14.3.0
+2017-09,RAN#77,RP-171646,0264,3,F,Correction on NB-IoT DCI format N1 in 36.212,14.4.0
+2017-09,RAN#77,RP-171647,0265,-,F,CR on UE assumption on co-scheduled DMRS ports for MUST in 36.212,14.4.0
+2017-12,RAN#78,RP-172686,0266,1,F,Correction to multi-carrier NPRACH IE name in PDCCH order DCI format N1,14.5.0
+2017-12,RAN#78,RP-172678,0270,-,A,Clarification for DAI for eCA,14.5.0
+2017-12,RAN#78,RP-172685,0271,-,F,Correction of section references for feMTC,14.5.0
+2017-12,RAN#78,RP-172692,0272,-,F,Correction of section reference for eVoLTE,14.5.0
+2017-12,RAN#78,RP-172682,0273,-,F,Correction on deriving number of available symbols for PUSCH,14.5.0
+2017-12,RAN#78,RP-172690,0276,-,A,Correction on number of SRS symbol for UCI multiplexing,14.5.0
+2017-12,RAN#78,RP-172686,0277,-,F,Clarification on 2 HARQ process applicability to UE-specific search space,14.5.0
+2017-12,RAN#78,RP-172693,0278,-,B,Introduction of shortened processing time and shortened TTI into 36.212,15.0.0
+2018-01,,,,,,MCC to correct missing 5G logo on spec cover sheet,15.0.1
+2018-03,RAN#79,RP-180195,0268,1,B,Introduction of FeCoMP into 36.212,15.1.0
+2018-03,RAN#79,RP-180201,0279,1,B,Introduction of EN-DC into 36.212,15.1.0
+2018-06,RAN#80,RP-181170,0280,2,F,Corrections on shortened processing time and shortened TTI in 36.212,15.2.0
+2018-06,RAN#80,RP-181162,0283,-,A,Ordering of P-CSI plus SR in eCA,15.2.0
+2018-06,RAN#80,RP-181173,0284,1,B,Introduction of high capacity stationary wireless link and 1024QAM into 36.212,15.2.0
+2018-06,RAN#80,RP-181166,0285,-,F,Clarification on CRC attachment for DL-SCH and PCH transport channels in NB-IoT,15.2.0
+2018-06,RAN#80,RP-181165,0286,-,A,Correction on TPC field in DCI format 6-1A,15.2.0
+2018-06,RAN#80,RP-181165,0288,-,A,Fallback DCI for eMTC,15.2.0
+2018-06,RAN#80,RP-181180,0290,2,B,Introduction of FeLAA into 36.212,15.2.0
+2018-06,RAN#80,RP-181182,0291,-,F,Introduce definition of non-BL/CE in Definitions section,15.2.0
+2018-06,RAN#80,RP-181174,0292,-,B,Introduction of even further enhanced MTC for LTE in 36.212,15.2.0
+2018-06,RAN#80,RP-181166,0293,-,B,Introduction of further enhancements to NB-IoT in 36.212,15.2.0
+2018-06,RAN#80,RP-181176,0294,-,B,Introduction of V2X Phase 2 based on LTE,15.2.0
+2018-06,RAN#80,RP-181177,0295,-,B,Introduction of HRLLC into 36.212,15.2.0
+2018-06,RAN#80,RP-181182,0296,-,B,Introduction of modulation enhancements,15.2.0
+2018-07,,,,,,MCC correction to remove duplication of DMRS position indicator statement for format 7-1F (clause 5.3.3.1.22) and format 7-1G (clause 5.3.3.1.23).,15.2.1
+2018-09,RAN#81,RP-181795,0297,1,F,Correction on the interpretation of HARQ-ACK bitmap for FeLAA in 36.212,15.3.0
+2018-09,RAN#81,RP-181782,0299,-,A,Correction on DCI for HARQ-ACK bundling,15.3.0
+2018-09,RAN#81,RP-181795,0300,-,F,Correction on the partial PUSCH mode field for FeLAA in 36.212,15.3.0
+2018-09,RAN#81,RP-181790,0301,-,F,Correction of RRC parameter name for 1024QAM rate matching,15.3.0
+2018-09,RAN#81,RP-181799,0303,-,A,Corrections to modulation signalling in MUST,15.3.0
+2018-09,RAN#81,RP-181787,0304,-,F,Corrections on shortened processing time and shortened TTI in 36.212,15.3.0
+2018-09,RAN#81,RP-181791,0305,-,F,Corrections to Even further enhanced MTC for LTE,15.3.0
+2018-09,RAN#81,RP-181783,0306,-,F,Corrections to Further Enhancements of NB-IoT,15.3.0
+2018-09,RAN#81,RP-181793,0307,-,D,Corrections on HRLLC in 36.212,15.3.0
+2018-12,RAN#82,RP-182518,0308,-,A,Correction on aperiodic CSI-RS in 36.212,15.4.0
+2018-12,RAN#82,RP-182524,0310,-,F,Corrections to Even further enhanced MTC for LTE,15.4.0
+2019-03,RAN#83,RP-190440,0311,-,F,Correction on rate matching for 1024QAM,15.5.0
+2019-03,RAN#83,RP-190446,0312,-,F,Introduction of SUO Case 1 for NE-DC as Rel-15 late drop,15.5.0
+2019-03,RAN#83,RP-190435,0313,-,F,Correction on NPRACH format 2 configuration presence,15.5.0
+2019-03,RAN#83,RP-190445,0315,-,A,Correction for DCI 0C and special subframe configuration 10,15.5.0
+2019-06,RAN#84,RP-191270,0316,-,F,Indentation Correction for DCI Format 6-0B in LTE-MTC,15.6.0
+2019-06,RAN#84,RP-191276,0319,-,A,Clarification on the bitwidth of report type 1a for FD-MIMO Class A,15.6.0
+2019-06,RAN#84,RP-191275,0322,-,A,Spatial bundling for PUCCH format 3 with more than 5 CC,15.6.0
+2019-09,RAN#85,RP-191946,0323,-,F,CR on Correction of a reference to 'COT sharing indication for AUL',15.7.0
+2019-09,RAN#85,RP-191945,0324,1,F,Correction on higher layer parameter configuring short TTI length in 36.212,15.7.0
+2019-12,RAN#86,RP-192631,0327,-,A,Correction on DCI format N0,15.8.0
+2019-12,RAN#86,RP-192647,0328,-,B,Introduction of Rel-16 eMTC features in 36.212,16.0.0
+2019-12,RAN#86,RP-192648,0329,-,B,Introduction of Rel-16 NB-IoT features in 36.212,16.0.0
+2019-12,RAN#86,RP-192649,0330,-,B,Introduction of Rel-16 DL MIMO EE features in 36.212,16.0.0
+2019-12,RAN#86,RP-192645,0331,-,B,Introduction of Rel-16 MR DC/CA features in 36.212,16.0.0
+2020-03,RAN#87-e,RP-200179,0334,-,A,Corrections on the indication value for the transport blocks in a bundle for HD-FDD eMTC UEs,16.1.0
+2020-03,RAN#87-e,RP-200196,0335,-,F,Miscellaneous corrections for Rel-16 eMTC features in 36.212,16.1.0
+2020-03,RAN#87-e,RP-200197,0336,-,F,Miscellaneous corrections for Rel-16 NB-IoT features in 36.212,16.1.0
+2020-06,RAN#88-e,RP-200699,0337,1,F,Miscellaneous corrections for Rel-16 NB-IoT features in 36.212,16.2.0
+2020-06,RAN#88-e,RP-200700,0338,-,F,Miscellaneous corrections for Rel-16 DL MIMO EE features in 36.212,16.2.0
+2020-06,RAN#88-e,RP-200698,0339,-,F,Miscellaneous corrections for Rel-16 eMTC features in 36.212,16.2.0
+2020-06,RAN#88-e,RP-200702,0342,-,A,Correction to define the values of SPS activation/release in DCI format 5A,16.2.0
+2020-06,RAN#88-e,RP-200697,0343,-,F,Correction to remove the term 'compact' for DCI format 6-1A,16.2.0
+2020-09,RAN#89-e,RP-201802,0346,-,A,Applicability of fields to CSS in eMTC,16.3.0
+2020-09,RAN#89-e,RP-201816,0347,-,F,Correction on terms and higher layer parameters for NB-IoT in 36.212,16.3.0
+2020-09,RAN#89-e,RP-201816,0348,-,F,Correction on PUR-RNTI for NB-IoT in 36.212,16.3.0
+2020-12,RAN#90-e,RP-202400,0350,-,A,Corrections on preamble format indicator presence in NPDCCH order in TS 36.212,16.4.0
+2020-12,RAN#90-e,RP-202392,0351,-,F,Clarification on usage of NDI,16.4.0
+2020-12,RAN#90-e,RP-202397,0352,-,F,Alignment corrections for Rel-16 features,16.4.0
+2020-12,RAN#90-e,RP-202391,0353,-,F,Correction on explicit feedback for multi-TB scheduling in LTE-MTC,16.4.0
+2020-12,RAN#90-e,RP-202392,0354,-,F,Corrections on the NPUSCH repetition adjustment field,16.4.0
+2021-03,RAN#91-e,RP-210062,0358,-,A,CR on clarification of TPC command for PUCCH,16.5.0
+2021-03,RAN#91-e,RP-210061,0360,-,A,Corrections on UCI multiplexing for partial PUSCH mode 1,16.5.0
+2021-03,RAN#91-e,RP-210056,0361,1,F,PUR correction on PUSCH Repetition Adjustment and Zero Padding Procedures,16.5.0
+2021-03,RAN#91-e,RP-210057,0362,-,F,PUR correction on DCI size alignment,16.5.0
+2021-06,RAN#92-e,RP-211241,0365,-,F,Correction on bundling parameter for multi-TB scheduling for LTE-M,16.6.0
+2021-06,RAN#92-e,RP-211240,0366,-,F,Correction of erroneous references,16.6.0
+2021-06,RAN#92-e,RP-211243,0368,-,F,Alignment of EN-DC/NE-DC parameter names,16.6.0
+2021-12,RAN#94-e,RP-212965,0370,-,A,Fallback DCI for eMTC,16.7.0
+2021-12,RAN#94-e,RP-212974,0371,-,B,Introduction of Rel-17 NB-IoT and eMTC features,17.0.0
+2022-03,RAN#95-e,RP-220258,0373,-,F,Correction to additional enhancements for NB-IoT and LTE-MTC,17.1.0
+2023-09,RAN#101,RP-232475,0374,-,B,Introduction of IoT NTN enhancements,18.0.0
+2024-12,RAN#106,RP-242934,0375,-,F,Alignment corrections for 36.212 RRC parameters,18.1.0
+2025-06,RAN#108,RP-251570,0376,-,B,Introduction of Rel-19 LTE-based 5G Broadcast Phase 2,19.0.0
+2025-06,RAN#108,RP-251589,0377,-,B,Introduction of Rel-19 OCC for IoT-NTN for LTE,19.0.0
+2025-09,RAN#109,RP-252638,0378,-,F,Corrections for Rel-19 OCC for IoT-NTN for LTE,19.1.0
+2025-09,RAN#109,RP-252625,0379,-,F,Corrections for Rel-19 LTE-based 5G Broadcast Phase 2,19.1.0
+2025-12,RAN#110,RP-253028,0380,-,F,Corrections for Rel-19 EDT for IoT-NTN for LTE,19.2.0
+2026-03,RAN#111,RP-260583,0381,-,F,RRC parameter name alignment for Rel-19 LTE-based 5G Broadcast Phase 2,19.3.0

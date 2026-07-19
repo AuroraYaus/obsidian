@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>DormantBWP-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>dormancyGroupWithinActiveTimeThis field contains the ID of an SCell group for Dormancy within active time, to which this SCell belongs. The use of the Dormancy within active time for SCell groups is specified in TS 38.213 [13].</td>
+  </tr>
+  <tr>
+    <td>dormancyGroupOutsideActiveTimeThis field contains the ID of an SCell group for Dormancy outside active time, to which this SCell belongs. The use of the Dormancy outside active time for SCell groups is specified in TS 38.213 [13].</td>
+  </tr>
+  <tr>
+    <td>dormantBWP-IdThis field contains the ID of the downlink bandwidth part to be used as dormant BWP. If this field is configured, its value is different from defaultDownlinkBWP-Id, and at least one of the withinActiveTimeConfig and outsideActiveTimeConfig should be configured.</td>
+  </tr>
+  <tr>
+    <td>firstOutsideActiveTimeBWP-IdThis field contains the ID of the downlink bandwidth part to be activated when receiving a DCI indication for SCell dormancy outside active time.</td>
+  </tr>
+  <tr>
+    <td>firstWithinActiveTimeBWP-IdThis field contains the ID of the downlink bandwidth part to be activated when receiving a DCI indication for SCell dormancy within active time.</td>
+  </tr>
+  <tr>
+    <td>outsideActiveTimeConfigThis field contains the configuration to be used for SCell dormancy outside active time, as specified in TS 38.213 [13]. The field can only be configured when the cell group the SCell belongs to is configured with dcp-Config.</td>
+  </tr>
+  <tr>
+    <td>withinActiveTimeConfigThis field contains the configuration to be used for SCell dormancy within active time, as specified in TS 38.213 [13].</td>
+  </tr>
+</table>

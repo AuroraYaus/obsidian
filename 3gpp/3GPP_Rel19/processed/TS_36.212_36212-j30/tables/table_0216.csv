@@ -1,0 +1,5 @@
+Bit field,Message
+00,No interference presence
+01,Interference is present with QPSK
+10,Interference is present with 16QAM
+11,Interference is present with 64QAM or 256QAM

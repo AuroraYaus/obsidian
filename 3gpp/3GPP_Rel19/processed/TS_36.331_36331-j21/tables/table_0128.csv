@@ -1,0 +1,4 @@
+CSI-RS-ConfigZP field descriptions
+"CSI-RS-ConfigZP-ApListIndicates the aperiodic zero power CSI-RS present in a given subframe. See 36.213 [23], Table 7.1.9-2. First entry in the list corresponds to aperiodic trigger 00, second entry in the list corresponds to aperiodic trigger 01 and so on."
+"resourceConfigListParameter: ZeroPowerCSI-RS, see TS 36.213 [23], clause 7.2.7."
+"subframeConfigParameter: , see TS 36.211 [21], table 6.10.5.3-1."

@@ -1,0 +1,4 @@
+CounterCheckResponse field descriptions
+"count-DownlinkIf configured with E-UTRA PDCP, it indicates the value of downlink COUNT associated to this DRB. If configured with NR PDCP, it indicates the value of RX_NEXT – 1 (specified in TS 38.323 [83]) associated to this DRB."
+"count-UplinkIf configured with E-UTRA PDCP, it indicates the value of uplink COUNT associated to this DRB. If configured with NR PDCP, it indicates the value of TX_NEXT – 1 (specified in TS 38.323 [83]) associated to this DRB."
+drb-CountInfoListIndicates the COUNT values of the DRBs.

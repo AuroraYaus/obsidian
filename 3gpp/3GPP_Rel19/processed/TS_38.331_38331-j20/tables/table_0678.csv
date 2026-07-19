@@ -1,0 +1,2 @@
+UE-MRDC-Capability field descriptions
+featureSetCombinationsA list of FeatureSetCombination:s for supportedBandCombinationList and supportedBandCombinationListNEDC-Only in UE-MRDC-Capability. The FeatureSetDownlink:s and FeatureSetUplink:s referred to from these FeatureSetCombination:s are defined in the featureSets list in UE-NR-Capability.

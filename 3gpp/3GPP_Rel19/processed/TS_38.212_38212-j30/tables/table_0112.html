@@ -1,0 +1,67 @@
+<table>
+  <tr>
+    <td rowspan="3">Field</td>
+    <td colspan="4">Bitwidth</td>
+  </tr>
+  <tr>
+    <td rowspan="2">2 antenna ports</td>
+    <td rowspan="2">4 antenna ports</td>
+    <td colspan="2">&gt;4 antenna ports</td>
+  </tr>
+  <tr>
+    <td>Rank1~4</td>
+    <td>Rank5~8</td>
+  </tr>
+  <tr>
+    <td>Rank Indicator</td>
+    <td>min1,log2nRI</td>
+    <td>min2,log2nRI</td>
+    <td>log2nRI</td>
+    <td>log2nRI</td>
+  </tr>
+  <tr>
+    <td>Layer Indicator</td>
+    <td>log2υ</td>
+    <td>min2,log2υ</td>
+    <td>min2,log2υ</td>
+    <td>min2,log2υ</td>
+  </tr>
+  <tr>
+    <td>Wide-band CQI for the first TB</td>
+    <td>4</td>
+    <td>4</td>
+    <td>4</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Wideband CQI for the second TB</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Subband differential CQI for the first TB</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Subband differential CQI for the second TB</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>CRI</td>
+    <td>log2KSCSI-RS-MR</td>
+    <td>log2KSCSI-RS-MR</td>
+    <td>log2KSCSI-RS-MR</td>
+    <td>log2KSCSI-RS-MR</td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE: is the number of allowed rank indicator values according to Clause 5.2.2.2.1 [6, TS 38.214].  is the value of the rank. The value of  is the number of CSI-RS resources in the corresponding resource set,  is the number of CSI-RS resources that are configured to report their corresponding CSI (except CRI), and is set to 0 if higher layer parameter mrSelectedResources is not configured for the CSI report. The values of the rank indicator field are mapped to allowed rank indicator values with increasing order, where &#x27;0&#x27; is mapped to the smallest allowed rank indicator value.nRIυKSCSI-RSMR</td>
+  </tr>
+</table>

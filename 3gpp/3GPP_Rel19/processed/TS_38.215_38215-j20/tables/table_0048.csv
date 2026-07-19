@@ -1,0 +1,2 @@
+Definition,"Sidelink PRS Channel Occupancy Ratio (SL PRS-CR) evaluated at slot n is defined as the total number of SL PRS resource in the dedicated SL PRS resource pool used for its transmissions in slots [n-a, n-1] and granted in slots [n, n+b] divided by the total number of configured SL PRS resources in the transmission pool over [n-a, n+b]."
+Applicable for,sidelink

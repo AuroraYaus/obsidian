@@ -1,0 +1,42 @@
+<table>
+  <tr>
+    <td>DCI field &#x27;Multi-TB HARQ-ACK bundling size&#x27;</td>
+    <td>NTB=1</td>
+    <td>NTB=2</td>
+    <td>NTB=4</td>
+    <td>NTB=6</td>
+    <td>NTB=8</td>
+  </tr>
+  <tr>
+    <td>00</td>
+    <td>A1={TB0}</td>
+    <td>A1=TB0A2=TB1</td>
+    <td>A1=TB0A2=TB1A3=TB2A4=TB3</td>
+    <td>A1=TB0A2=TB1A3=TB2A4=TB3A5=TB4A6=TB5</td>
+    <td>A1=TB0A2=TB1A3=TB2A4=TB3A5=TB4A6=TB5A7=TB6A8=TB7</td>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>-</td>
+    <td>A1=TB0, TB1</td>
+    <td>A1=TB0, TB1A2=TB2, TB3</td>
+    <td>A1=TB0, TB1A2=TB2, TB3A3=TB4, TB5</td>
+    <td>A1=TB0, TB1A2=TB2, TB3A3=TB4, TB5A4=TB6, TB7</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>-</td>
+    <td>-</td>
+    <td>A1=TB0, TB1A2=TB2A3=TB3</td>
+    <td>A1=TB0, TB1,TB2A2=TB3, TB4,TB5</td>
+    <td>A1=TB0, TB1,TB2A2=TB3, TB4,TB5A3=TB6, TB7</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>-</td>
+    <td>-</td>
+    <td>A1=TB0, TB1,TB2, TB3</td>
+    <td>A1=TB0, TB1,TB2,TB3A2=TB4, TB5</td>
+    <td>A1=TB0, TB1,TB2,TB3A2=TB4, TB5,TB6,TB7</td>
+  </tr>
+</table>

@@ -1,0 +1,13 @@
+Conditional presence,Explanation
+BW-reduced,"The field is optional present, Need OR, if schedulingInfoSIB1-BR in MIB is set to a value greater than 0. Otherwise the field is not present."
+FBI-max,The field is mandatory present if freqBandIndicator (i.e. without suffix) is set to maxFBI. Otherwise the field is not present.
+mFBI,"The field is optional present, Need OR, if multiBandInfoList is present. Otherwise the field is not present."
+mFBI-max,"The field is mandatory present if one or more entries in multiBandInfoList (i.e. without suffix, introduced in -v8h0) is set to maxFBI. Otherwise the field is not present."
+RSRQ,"The field is mandatory present if SIB3 is being broadcast and threshServingLowQ is present in SIB3; otherwise optionally present, Need OP."
+RSRQ2,The field is mandatory present if q-QualMinRSRQ-OnAllSymbols is present in SIB3; otherwise it is not present and the UE shall delete any existing value for this field.
+Hopping,"The field is mandatory present if si-HoppingConfigCommon field is broadcasted and set to on. Otherwise the field is optionally present, need OP."
+QrxlevminCE1,"The field is optionally present, Need OR, if q-RxLevMinCE1-r13 is set below -140 dBm. Otherwise the field is not present."
+TDD,This field is mandatory present for TDD; it is not present for FDD and the UE shall delete any existing value for this field.
+TDD-OR,"The field is optional present for TDD, need OR; it is not present for FDD."
+WB-RSRQ,"The field is optionally present, need OP if the measurement bandwidth indicated by allowedMeasBandwidth in systemInformationBlockType3 is 50 resource blocks or larger; otherwise it is not present."
+SI-BR,The field is mandatory present if schedulingInfoSIB1-BR is included in MIB with a value greater than 0. Otherwise the field is not present.

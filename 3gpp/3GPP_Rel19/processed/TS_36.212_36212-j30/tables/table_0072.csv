@@ -1,0 +1,16 @@
+Field,Bit width,,,,,
+,2 antenna ports,,4 antenna ports,,,
+,Rank = 1,Rank = 2,Rank = 1,Rank =2,Rank =3,Rank =4
+Wideband CQI codeword 0,4,4,4,4,4,4
+Subband differential CQI codeword 0,,,,,,
+Wideband CQI codeword 1,0,4,0,4,4,4
+Subband differential CQI codeword 1,0,,0,,,
+Precoding matrix indicator,2,1,3,3,2,1
+Field,Bit width,,,,,
+,8 antenna ports,,,,,
+,Rank = 1,Rank = 2,Rank = 3,Rank =4,Rank =5 to Rank = 8,
+Wideband CQI codeword 0,4,4,4,4,4,
+Subband differential CQI codeword 0,,,,,,
+Wideband CQI codeword 1,0,4,4,4,4,
+Subband differential CQI codeword 1,0,,,,,
+Precoding matrix indicator,4,4,4,3,0,

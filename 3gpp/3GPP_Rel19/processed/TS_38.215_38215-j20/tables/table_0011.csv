@@ -1,0 +1,2 @@
+Definition,"The number of carrier-phase cycles (integer and fractional parts) of the ith GNSS satellite signal, measured since locking onto the signal. Also called Accumulated Delta Range (ADR). The reference point for the GNSS carrier phase shall be the antenna connector of the UE."
+Applicable for,Void (this measurement is not related to NG-RAN/E-UTRAN/UTRAN/GSM signals; its applicability is therefore independent of the UE RRC state)

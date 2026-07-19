@@ -1,0 +1,7 @@
+SRS-CarrierSwitching field descriptions
+"monitoringCellsA set of serving cells for monitoring PDCCH conveying SRS DCI format with CRC scrambled by TPC-SRS-RNTI (see TS 38.212 [17], TS 38.213 [13], clause 7.3.1, 11.4)."
+srs-SwitchFromCarrierThe UE ignores this field in case of independent SRS power control from that of PUSCH.
+"srs-SwitchFromServCellIndexIndicates the serving cell whose UL transmission may be interrupted during SRS transmission on a PUSCH-less SCell. During SRS transmission on a PUSCH-less SCell, the UE may temporarily suspend the UL transmission on a serving cell with PUSCH in the same CG to allow the PUSCH-less SCell to transmit SRS. (see TS 38.214 [19], clause 6.2.1.3)."
+"srs-TPC-PDCCH-GroupNetwork configures the UE with either typeA-SRS-TPC-PDCCH-Group or typeB-SRS-TPC-PDCCH-Group, if any."
+"typeAType A trigger configuration for SRS transmission on a PUSCH-less SCell, or for SRS transmission on a serving cell with independent SRS power control from that of PUSCH (see TS 38.213 [13], clause 11.4). In this release, the network configures at most one entry (the first entry) of typeA, and the first entry corresponds to the serving cell in which the SRS-CarrierSwitching field is configured. SRS carrier switching to SUL carrier is not supported in this version of the specification."
+"typeBType B trigger configuration for SRS transmission on a PUSCH-less SCell, or for SRS transmission on a serving cell with independent SRS power control from that of PUSCH (see TS 38.213 [13], clause 11.4)."

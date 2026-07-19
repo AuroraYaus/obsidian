@@ -1,0 +1,7 @@
+RRCConnectionReestablishmentRequest-NB field descriptions
+earlyContentionResolutionValue TRUE indicates UE supports MAC PDU containing the UE contention resolution identity MAC control element without RRC response message. This field is always set to TRUE in this version of the specification.
+reestablishmentCauseIndicates the failure cause that triggered the re-establishment procedure.eNB is not expected to reject a RRCConnectionReestablishmentRequest due to unknown cause value being used by the UE.
+truncated5G-S-TMSIFor description of this field see TS 23.003 [27].
+ue-IdentityUE identity included to retrieve UE context and to facilitate contention resolution by lower layers.
+"ul-NAS-CountFor description of this field see TS 33.401 [32] for EPC, and TS 33.501 [86] for 5GC."
+"ul-NAS-MACFor description of this field see TS 33.401 [32] for EPC, and TS 33.501 [86] for 5GC."

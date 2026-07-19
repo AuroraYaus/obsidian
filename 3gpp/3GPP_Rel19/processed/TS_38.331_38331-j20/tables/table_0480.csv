@@ -1,0 +1,5 @@
+SRI-PUSCH-PowerControl field descriptions
+sri-P0-PUSCH-AlphaSetIdThe ID of a P0-PUSCH-AlphaSet as configured in p0-AlphaSets in PUSCH-PowerControl.
+sri-PUSCH-ClosedLoopIndexThe index of the closed power control loop associated with this SRI-PUSCH-PowerControl.
+sri-PUSCH-PathlossReferenceRS-IdThe ID of PUSCH-PathlossReferenceRS as configured in the pathlossReferenceRSToAddModList in PUSCH-PowerControl.
+sri-PUSCH-PowerControlIdThe ID of this SRI-PUSCH-PowerControl configuration. It is used as the codepoint (payload) in the SRI DCI field.

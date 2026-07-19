@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td>SchedulingRequestConfig-NB field descriptions</td>
+  </tr>
+  <tr>
+    <td>alphaParameter: αc. Fractional power control parameter for SR without HARQ-ACK. See TS 36.213 [23], clause 16.2.1.2.1, where value al0 corresponds to 0, value al04 corresponds to 0.4, value al05 to 0.5, value al06 to 0.6, value al07 to 0.7, value al08 to 0.8, value al09 to 0.9 and value al1 corresponds to 1.</td>
+  </tr>
+  <tr>
+    <td>nprach-CarrierIndexIndex of the carrier in the list of UL non anchor carriers in SystemInformationBlockType22-NB. The first entry in the list has index &#x27;1&#x27;, the second entry has index &#x27;2&#x27; and so on. Value &#x27;0&#x27; indicates the anchor carrier.</td>
+  </tr>
+  <tr>
+    <td>nprach-ResourceIndexIndex of the NPRACH resource in the list of NPRACH resources in NPRACH-ParametersList or NPRACH-ParametersList-Fmt2 for the UL carrier indicated by nprach-CarrierIndex. The first entry in the list has index &#x27;1&#x27;, the second entry has index &#x27;2&#x27; and so on.E-UTRAN configures a NPRACH resource in NPRACH-ParametersList-Fmt2 only to UEs that have reported support of NPRACH resource Format2.</td>
+  </tr>
+  <tr>
+    <td>nprach-SubCarrierIndexIndex of the subcarrier in the NPRACH resource in NPRACH-ParametersList or or NPRACH-ParametersList-Fmt2 for the indicated UL carrier.E-UTRAN does not configure nprach-SubcarrierIndex to a smaller value than nprach-SubcarrierOffset + nprach-NumCBRA-StartSubcarriers for the indicated NPRACH resource.</td>
+  </tr>
+  <tr>
+    <td>p0-SRParameter:. Target power for SR without HARQ-ACK. See TS 36.213 [23], clause 16.2.1.2.1, unit dBm.</td>
+  </tr>
+  <tr>
+    <td>semiPersistSchedC-RNTISemi-persistent Scheduling C-RNTI, see TS 36.321 [6].</td>
+  </tr>
+  <tr>
+    <td>semiPersistSchedIntervalULSemi-persistent scheduling interval in uplink, see TS 36.321 [6]. Value in number of sub-frames. Value sf128 corresponds to 128 sub-frames, value sf256 corresponds to 256 sub-frames and so on.</td>
+  </tr>
+  <tr>
+    <td>sr-NPRACH-ResourceNPRACH resource for physical layer SR without HARQ-ACK, see TS 36.211 [21] and TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>sr-ProhibitTimerTimer for SR transmission on the NPRACH resource for SR in TS 36.321 [6]. Value in number of SR period, where the SR period is equal to the field nprach-Periodicity of the NPRACH resource. Value 0 means that behaviour as specified in 7.3.2 applies. Value 1 corresponds to one SR period, Value 2 corresponds to 2*SR period and so on.If sr-ProhibitTimerOffset is present, actual value of sr-ProhibitTimer = CEIL (sr-ProhibitTimerOffset/ SR period) + signalled value of sr-ProhibitTimer.</td>
+  </tr>
+  <tr>
+    <td>sr-ProhibitTimerOffsetTime offset for SR transmission on the NPRACH resource for SR in TS 36.321 [6]. Value in milliseconds. Value ms90 corresponds to 90 ms, value ms180 corresponds to 180 ms and so on.</td>
+  </tr>
+  <tr>
+    <td>sr-WithHARQ-ACK-ConfigActivation of physical layer SR with HARQ ACK, see TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>sr-WithoutHARQ-ACK-ConfigActivation of physical layer SR without HARQ ACK, see TS 36.211 [21] and TS 36.213 [23].E-UTRAN cannot configure sr-WithoutHARQ-ACK-Config together with sr-SPS-BSR-Config.</td>
+  </tr>
+</table>

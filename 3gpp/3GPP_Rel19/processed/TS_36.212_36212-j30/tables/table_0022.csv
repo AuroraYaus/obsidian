@@ -1,0 +1,6 @@
+Field,Bit width,,,
+,2 antenna ports,,4 antenna ports,
+,Rank = 1,Rank = 2,Rank = 1,Rank > 1
+Wideband CQI codeword 0,4,4,4,4
+Wideband CQI codeword 1,0,4,0,4
+Precoding matrix indicator,,,,

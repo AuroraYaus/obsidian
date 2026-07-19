@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>TCI-State field descriptions</td>
+  </tr>
+  <tr>
+    <td>additionalPCIIndicates the physical cell IDs (PCI) of the SSBs when referenceSignal is configured as SSB for both QCL-Type1 and QCL-Type2. In case the cell is present, the additionalPCI refers to a PCI value configured in the list configured using additionalPCI-ToAddModList in the serving cell indicated by the field cell. Otherwise, it refers to a PCI value configured in a list additionalPCI-ToAddModList configured in the serving cell where the TCI-State is applied by the UE. When this field is present the cell for qcl-Type1 and qcl-Type2 is configured with same value, if present.</td>
+  </tr>
+  <tr>
+    <td>pathlossOffsetIndicates the pathloss offset applied to the TCI state of an UL TRP (see TS 38.213 [13], clause 7). Value dB-12 corresponds to -12 dB, dB-8 corresponds to -8 dB and so on.</td>
+  </tr>
+  <tr>
+    <td>pathlossReferenceRS-IdThe ID of the reference signal (e.g. a CSI-RS or an SS block) used for PUSCH, PUCCH and SRS path loss estimation. This field refers to an element in the list configured using pathlossReferenceRSToAddModList in the serving cell and UL BWP where the TCI State is applied by the UE.</td>
+  </tr>
+  <tr>
+    <td>qcl-Type1, qcl-Type2QCL information for the TCI state as specified in TS 38.214 [19] clause 5.1.5.</td>
+  </tr>
+  <tr>
+    <td>tag-Id-ptrIt indicates the TAG that is associated with this TCI state, value n0 means the TCI state associate with the TAG indicated by tag-Id, value n1 means this TCI state associated with the TAG indicated by tag2-Id. The tag-Id-ptr refers to the TAG of the serving cell where the TCI state is applied.</td>
+  </tr>
+  <tr>
+    <td>tci-StateIdID number of the TCI state.</td>
+  </tr>
+  <tr>
+    <td>ul-PowerControlConfigures power control parameters for PUCCH, PUSCH and SRS for this TCI state. The field is present here only if ul-powerControl is not configured in any BWP-Uplink-Dedicated of this serving cell. This field refers to an element in the list configured using uplink-PowerControlToAddModList in the serving cell where the dl-OrJointTCI-StateToAddModList is configured. For each serving cell, ul-powerControl is either configured in each TCI-State configured or referred to in dl-OrJointTCI-StateList in each DL BWP, or it is not configured in any TCI-State configured or referred to in dl-OrJointTCI-StateList in any DL BWP.</td>
+  </tr>
+</table>

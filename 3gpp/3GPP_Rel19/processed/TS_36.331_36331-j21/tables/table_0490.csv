@@ -1,0 +1,2 @@
+Conditional presence,Explanation
+ConfigF,"The field is optional present, need OR, in case of chIE2-ConfigurableFeature is included and set to ""setup""; otherwise the field is not present and the UE shall delete any existing value for this field."

@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td>SIB18 field descriptions</td>
+  </tr>
+  <tr>
+    <td>gin-ElementListThe gin-ElementList contains one or more GIN elements. Each GIN element contains either one GIN, which is identified by a PLMN ID and a NID, or multiple GINs that share the same PLMN ID. The total number of GINs indicated does not exceed maxGIN-r17. The GIN index m is defined as d1+d2+…+d(n-1)+i for the GIN included in the n-th entry of the gin-ElementList and the i-th entry of its corresponding GIN-Element, where d(k) is the number of GIN index values used in the k-th gin-ElementList entry.</td>
+  </tr>
+  <tr>
+    <td>gins-PerSNPN-ListIndicates the supported GINs for each SNPN. The network includes the same number of entries as the number of SNPNs in snpn-AccessInfoList in provided in SIB1, and the n-th entry in this list corresponds to the n-th SNPN listed in snpn-AccessInfoList provided in SIB1. The network configures this field only if the cell broadcasts more than one SNPN in SIB1. If this field is absent, as in case of a single SNPN broadcasted in SIB1, the UE shall associate all GINs in gin-ElementList to that SNPN.</td>
+  </tr>
+</table>

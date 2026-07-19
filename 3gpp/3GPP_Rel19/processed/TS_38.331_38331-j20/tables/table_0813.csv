@@ -1,0 +1,6 @@
+MeasurementReportSidelink field descriptions
+sl-MeasIdIdentifies the sidelink measurement identity for which the reporting is being performed.
+sl-MeasResultMeasured RSRP results of a unicast destination.
+sl-RSRP-DedicatedSL-PRS-RPMeasured SL PRS-based filtered RSRP.
+sl-RelayIndicationMPIndicate the reported L2 U2N Relay UE supports RRC connection establishment/resume for MP operation triggered by receiving RemoteUEInformationSidelink containing the connectionForMP as specified in 5.3.3.1a and 5.3.13.1a in Rel-18.
+sl-RelayUE-HopTypeIndicates the hop type as single-hop if the relay service offered by the concerned L2 U2N Relay UE is single hop relay service or as multi-hop if the relay service offered by the concerned L2 U2N Relay UE is multi hop relay service.

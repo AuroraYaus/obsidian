@@ -1,0 +1,7 @@
+Conditional Presence,Explanation
+Msg1Rep1,"This field is optionally present, Need R, if the set(s) of Random Access resources with MSG1 repetition indication are configured in the BWP-UplinkCommon. It is absent otherwise."
+Msg3Rep,"This field is optionally present, Need S, if the set(s) of Random Access resources with MSG3 repetition indication are configured in the BWP-UplinkCommon. It is absent otherwise."
+RA-PrioSliceAI,"The field is optionally present in SIB1, Need R, if both parameters ra-PrioritizationForAccessIdentity and the ra-PrioritizationForSlicing/ra-PrioritizationForSlicingTwoStep are present in SIB1. It is absent otherwise."
+SpCellOnly2,"The field is optionally present, Need M, in the BWP-UplinkCommon of an SpCell. It is absent otherwise."
+2TA-Only,"The field is optionally present, Need N in the BWP-UplinkCommon if additionalPCI-ToAddModList is present in ServingCellConfig and if tag2 is present in ServingCellConfig. It is absent otherwise."
+NoSingleConfig,"This field is optionally present, Need R, if sbfd-RACH-Config in BWP-UplinkCommon is set to sbfd-RACH-DualConfig. It is absent otherwise."

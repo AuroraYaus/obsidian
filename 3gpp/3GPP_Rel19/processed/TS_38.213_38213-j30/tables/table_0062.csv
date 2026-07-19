@@ -1,0 +1,17 @@
+Index,PDCCH monitoring occasions (SFN and slot number),"First symbol index(k = 0, 1, …, 7)"
+0,"or SFNc=SFNSSB,inc=nSSB,inc=nSSB,i-1","0, 1, 2, 3, 0, 1 in , , , , ,  ()12, 13 in ,  ()i=8ki=8k+1i=8k+2i=8k+3i=8k+6i=8k+7nc=nSSB,ii=8k+4i=8k+5nc=nSSB,i-1"
+1,Reserved,
+2,Reserved,
+3,Reserved,
+4,Reserved,
+5,Reserved,
+6,Reserved,
+7,Reserved,
+8,Reserved,
+9,Reserved,
+10,Reserved,
+11,Reserved,
+12,Reserved,
+13,Reserved,
+14,Reserved,
+15,Reserved,

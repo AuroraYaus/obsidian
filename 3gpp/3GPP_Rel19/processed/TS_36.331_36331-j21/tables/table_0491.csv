@@ -1,0 +1,65 @@
+Message,P,,A-I,A-C,Comment
+CSFBParametersRequestCDMA2000,+,,-,-,
+CSFBParametersResponseCDMA2000,+,,-,-,
+CounterCheck,-,,-,-,
+CounterCheckResponse,-,,-,-,
+DLDedicatedMessageSegment,NOTE 1,,,,
+DLInformationTransfer,+,,-,-,
+FailureInformation,-,,-,-,
+HandoverFromEUTRAPreparationRequest (CDMA2000),-,,-,-,
+InDeviceCoexIndication,-,,-,-,
+InterFreqRSTDMeasurementIndication,-,,-,-,
+LoggedMeasurementsConfiguration,,-,-,-,
+MasterInformationBlock,+,,+,+,
+MasterInformationBlock-MBMS,+,,+,+,
+MBMSCountingRequest,+,,+,+,
+MBMSCountingResponse,-,,-,-,
+MBMSInterestIndication,+,,-,-,
+MBSFNAreaConfiguration,+,,+,+,
+MeasReportAppLayer,-,,-,-,
+MeasurementReport,-,,-,-,"Measurement configuration may be sent prior to security activation. But: In order to protect privacy of UEs, MEASUREMENT REPORT is only sent from the UE after successful security activation."
+MCGFailureInformation,-,,-,-,
+MobilityFromEUTRACommand,-,,-,-,
+Paging,+,,+,+,
+ProximityIndication,-,,-,-,
+PURConfigurationRequest,+,,-,-,"Except if the UE is using Control plane CIoT EPS/5GS optimisation, the message is only sent from the UE after successful security activation."
+RNReconfiguration,-,,-,-,
+RNReconfigurationComplete,-,,-,-,
+RRCConnectionReconfiguration,+,,-,-,"The message shall not be sent unprotected before security activation if it is used to perform handover or to establish SRB2, SRB4 and DRBs"
+RRCConnectionReconfigurationComplete,+,,-,-,"Unprotected, if sent as response to RRCConnectionReconfiguration which was sent before security activation"
+RRCConnectionReestablishment,-,,+,+,This message is not protected by PDCP operation.
+RRCConnectionReestablishmentComplete,-,,-,-,
+RRCConnectionReestablishmentReject,-,,+,+,"One reason to send this may be that the security context has been lost, therefore sent as unprotected."
+RRCConnectionReestablishmentRequest,-,,-,+,"This message is not protected by PDCP operation. However, a short MAC-I is included."
+RRCConnectionReject,+,,+,+,"Except for resumption of an RRC connection after early security reactivation in accordance with conditions in 5.3.3.18, A-I and A-C are NA."
+RRCConnectionRelease,+,,-,-,"Justification for P: If the RRC connection only for signalling not requiring DRBs or ciphered messages, or the signalling connection has to be released prematurely, this message is sent as unprotected.For resumption of an RRC connection after early security reactivation in accordance with conditions in 5.3.3.18, the message is only sent after successful security activation.RRCConnectionRelease message sent before security activation cannot include rrc-InactiveConfig, redirectedCarrierInfo, idleModeMobilityControlInfo information fields when UE is connected to 5GC."
+RRCConnectionRequest,+,,NA,NA,
+RRCConnectionResume,-,,-,+,"When this message is transmitted, security is activated but suspended. Integrity verification is done after the message received by RRC.For resumption of an RRC connection after early security reactivation in accordance with conditions in 5.3.3.18, the message is only sent after successful security activation.For RRC_INACTIVE state or after early security reactivation, the message is protected with both integrity and ciphering."
+RRCConnectionResumeRequest,-,,-,+,"This message is not protected by PDCP operation. However, a short MAC-I is included."
+RRCConnectionResumeComplete,-,,-,-,
+RRCConnectionSetup,+,,NA,NA,
+RRCConnectionSetupComplete,+,,NA,NA,
+RRCEarlyDataRequest,+,,NA,NA,
+RRCEarlyDataComplete,+,,NA,NA,
+SCGFailureInformation,-,,-,-,
+SCGFailureInformationNR,-,,-,-,
+SCPTMConfiguration,+,,+,+,
+SecurityModeCommand,+,,NA,NA,"Integrity protection applied, but no ciphering (integrity verification done after the message received by RRC)"
+SecurityModeComplete,-,,NA,NA,"Integrity protection applied, but no ciphering. Ciphering is applied after completing the procedure."
+SecurityModeFailure,+,,NA,NA,Neither integrity protection nor ciphering applied.
+SidelinkUEInformation,+,,-,-,
+SystemInformation,+,,+,+,
+SystemInformationBlockType1,+,,+,+,
+SystemInformationBlockType1-MBMS,+,,+,+,
+UEAssistanceInformation,-,,-,-,
+UECapabilityEnquiry,+,,-,-,"Except if the UE is using Control plane CIoT EPS optimisation, E-UTRAN should retrieve UE capabilities only after AS security activation."
+UECapabilityInformation,+,,-,-,
+UEInformationRequest,-,,-,-,
+UEInformationResponse,-,,-,-,"In order to protect privacy of UEs, UEInformationResponse is only sent from the UE after successful security activation"
+ULDedicatedMessageSegment,+,,-,-,
+ULHandoverPreparationTransfer (CDMA2000),-,,-,-,This message should follow HandoverFromEUTRAPreparationRequest
+ULInformationTransfer,+,,-,-,
+ULInformationTransferIRAT,NOTE 2,,,,
+ULInformationTransferMRDC,-,,-,-,
+WLANConnectionStatusReport,-,,-,-,
+NOTE 1:This message type carries segments of other RRC messages. The protection of an instance of this message is the same as for the message which this message is carrying.NOTE 2:This message type carries other RRC messages. The protection of an instance of this message is the same as for the message which this message is carrying.,,,,,

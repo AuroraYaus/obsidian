@@ -1,0 +1,4 @@
+LTM-NZP-CSI-RS-ResourceSet field descriptions
+"ltm-CandidateIdListThis field indicates the LTM candidate configuration IDs related to the NZP CSI-RS resource in the ltm-CSI-RS-ResourceList. The list has the same number of entries as ltm-CSI-RS-ResourceList. The first entry in this list is associated to the first entry in ltm-CSI-RS-ResourceList, the second entry of this list is associated to the second entry in ltm-CSI-RS-ResourceList, and so on."
+"ltm-NZP-CSI-RS-ResourceListThis field is used to indicate on NZP CSI-RS resources from one or more LTM candidate cells. If the resource type of the NZP-CSI-RS resource is semi-persistent, the ltm-ReportConfigType within LTM-CSI-ReportConfig that this resource set is associated with cannot be configured as eventTriggered."
+"repetitionIndicates that repetition is off for the indicated NZP CSI-RS resources (see TS 38.214 [19], clause 5.2.1.2)."

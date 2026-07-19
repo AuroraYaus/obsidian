@@ -1,0 +1,582 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New Version
+2017.03,RAN2 97bis,R2-1702627,-,-,-,First version.,0.1.0
+2017.04,RAN2 97bis,R2-1703825,-,-,-,Editorial Updates:- Stage 2 Details of ARQ operation marked as FFS- Placeholder for CU/DU Split overview added- Outdated editor notes removed- Protocol Architecture updated- NG-RAN terminology aligned- Header placement in the L2 overview put as FFS,0.1.1
+2017.04,RAN2 97bis,R2-1703952,-,-,-,Editorial Updates:- description of measurements for mobility clarified- some cell reselection details put FFS- outdated references removed,0.1.2
+2017.04,RAN2 98,R2-1704296,-,-,-,Editorial updates:- NG interfaces naming aligned to RAN3- 5GC used consistently- Statement on lossless delivery removed from 9.3.2- Overview of PDCP function for CP detailed,0.1.3
+2017.05,RAN2 98,R2-1704298,-,-,-,"Agreements of RAN2#97bis captured:- overview of duplication operation- RLC modes for DRBs and SRBs- Condition for lossless mobility- L2 handling at handover- RLF triggers- Measurement details (filtering, beams, quality…)- QoS flow handling in DC- RACH procedure message usage for on-demand SI- Random Access Procedure triggers- DRX baseline",0.2.0
+2017.05,RAN2 98,R2-1704452,-,-,-,RAN3 agreements captured (R3-171329)5G logo and specification title updated,0.2.1
+2017.05,RAN2 98,R2-1705994,-,-,-,RLC failure for RLF generalized.,0.3.0
+2017.06,RAN2 98,R2-1706204,-,-,-,Agreements of RAN2#98 captured:- Duplication Control- RLC mode for SRB0 and System Info- Provision of Assistance Info for AMF Selection- QoS Handling from R2-1706011- Beam measurements combining- MSG1 request details for on-demand SI- RNA and RLAU terminology introduced for INACTIVE- Skipping of SPS resources when nothing to transmit- Duplication detection at RLC only for AM- Provision of access category by NAS for connection controlEditorial updates in addition:- QFI used consistently,0.3.1
+2017.06,RAN2 98,R2-1706205,-,-,-,RAN3 agreements captured (R3-171932),0.4.0
+2017.06,RAN2 98,R2-1706206,-,-,-,Corrections:- provision of AC in INACTIVE is FFS- agreements on measurement moved from 9.2.1.1 to 9.2.4,0.4.1
+2017.06,NR Adhoc 2,R2-1706540,-,-,-,Editorial correctionsAgreement on RLC Segmentation capturedDuplicated statement in 9.2.1.1. and 7.3 removed,0.5.0
+2017.08,RAN2 99,R2-1707748,-,-,-,Agreements of RAN2 NR June Adhoc captured:- TP on Security in R2-1707466- TP on Measurement Model in R2-1707480- NCR Acronym addition- Duplication control details- UE capabilities and band combinations- Disabling of PDPC reordering as PDCP function- On-Demand SI and RACH details- Measurement Report Characteristics- Mapping rules update handling- UE Capabilities and Band Combination handlingIn addition:- ARQ overview aligned with Stage 3 agreements- L2 Data Flow aligned with Stage 3 agreements- References updatedRAN3 TP incorporated (R3-172610),0.6.0
+2017.08,RAN2 99,R2-1709937,-,-,-,Agreements of RAN2 99 captured:- QoS update in R2-1709830- Description of the RRC states in R2-1707690- Correction on RRC_INACTIVE state in R2-1709833- LCP description in R2-1709829- Baseline HO procedure update in R2-1709850 with corrections- UE identities in R2-1709868- Radio Link Failure handling in R2-1709870- RAN3 agreements on roaming restrictions in R3-172655- Integrity protection configurable on a per DRB basis- Various Acronyms added- Slicing details- PWS basic principles- UE capability restrictions,0.7.0
+2017.09,RAN 77,RP-171730,-,-,-,Provided for information to RAN,1.0.0
+2017.10,RAN2 99bis,R2-1710693,-,-,-,Editorial Updates and Corrections:- inter RAT mobility in 9.3.2 restructured- SON promoted to top clause level (as it is not a vertical)- Obsolete clauses 14 and 15 removed.- Description of paging in idle aligned with 23.501- I-RNTI suggested for INACTIVE- Missing agreement from RAN2 99 on INACTIVE captured,1.0.1
+2017.10,RAN2 99bis,R2-1711936,-,-,-,Clean version,1.1.0
+2017.10,RAN2 99bis,R2-1711972,-,-,-,"Corrections:- Container for mobility in 9.2.3.2.1- ""HO"" changed to ""handover"" for consistencyAgreements from RAN2 99bis captured:- URLLC text in R2-1710253- Clarification on RRC States in R2-1710074- Resume ID terminology in R2-1711778- Slicing clarifications in R2-1712034- Usage of SRB0 and SRB1 in INACTIVE- Prioritisation of RACH resources for handover- SPS configuration per SCell in CA- Enabling / Disabling IP on DRB via handover only- First agreements on Supplementary Uplink- Maximum supported data rate calculationRAN3 agreements:- R3-173639 on Rapporteur updates to RAN3-related clauses- R3-174162 on AMF discovery by NG-RAN- R3-174187 on RAN paging failure handling in RRC_INACTIVE- R3-174188 on Unreachability in RAN Inactive State- R3-174225 on Inter System Handover- R3-174230 on RRC Inactive Assistant InformationRAN agreement:- RP-172113 on UE categories.",1.1.1
+2017.11,RAN2 100,R2-1712266,-,-,-,Clean version,1.2.0
+2017.11,RAN2 100,R2-1712355,-,-,-,Editorial Clean Up:- Editor's Notes & relevant FFS moved to R2-17112357- Protocol stack figures for NG interface updated- Dual Connectivity changed to Multi-RAT connectivity- Details about SI handling added to tackle RMSI- Access Control updated and reference to 22.261 added- DC specific details removed (37.340 is used instead)- Notes numbered wherever required,1.2.1
+2017.12,RAN2 100,R2-174079,-,-,-,Agreements from RAN2 100 captured:- QoS update in R2-1714230- Updates to stage 2 QoS flow in R2-1712687- BWP Description in R2-172360- Transition from INACTIVE to CONNECTED in R2-173937- SUL overview- Removal of DC related definitions- BWP agreements- SPS terminology changed to CS to cover both typesRAN3 agreements in R3-175011RAN1 agreements in R1-1721728,1.2.2
+2017.12,RAN2 100,R2-1714252,-,-,-,Clean version,1.3.0
+2017.12,RP-78,RP-172496,-,-,-,Provided for approval to RAN,2.0.0
+2017/12,RP-78,,,,,Upgraded to Rel-15 (MCC),15.0.0
+2018/03,RP-79,RP-180440,0009,1,F,Miscellaneous Corrections & Additions,15.1.0
+2018/06,RP-80,RP-181214,0010,1,F,Clarification on NR Carrier Aggregation,15.2.0
+,RP-80,RP-181214,0011,2,F,Miscellaneous Corrections,15.2.0
+,RP-80,RP-181214,0012,1,F,Paging Mechanisms,15.2.0
+,RP-80,RP-181214,0013,2,F,Security Update,15.2.0
+,RP-80,RP-181214,0014,1,F,UE Identities,15.2.0
+,RP-80,RP-181214,0015,1,F,Corrections on deactivation of PUCCH SCell,15.2.0
+,RP-80,RP-181214,0022,2,F,Clarification on count wrap around,15.2.0
+,RP-80,RP-181214,0024,1,F,Slicing assistance information,15.2.0
+,RP-80,RP-181214,0025,-,F,Physical Layer Update,15.2.0
+,RP-80,RP-181214,0026,1,F,Default DRB & QoS Remapping,15.2.0
+,RP-80,RP-181214,0027,1,F,SSB Clarifications,15.2.0
+,RP-80,RP-181217,0029,2,B,CR on U-plane handling for handover,15.2.0
+,RP-80,RP-181217,0030,2,B,CR on message content in inter-RAT handover,15.2.0
+,RP-80,RP-181215,0032,1,F,Clarifications on (de)activation of Duplication and (de)activation of SCells,15.2.0
+,RP-80,RP-181216,0033,2,B,Introduce ANR in NR,15.2.0
+,RP-80,RP-181215,0036,1,F,Corrections to Unified Access Control,15.2.0
+,RP-80,RP-181215,0040,-,F,Correction to TS 38.300 on Open Issues for Handover,15.2.0
+,RP-80,RP-181216,0041,-,B,Baseline CR for June version of RAN2 TS 38.300 (RAN3 part) covering agreements of RAN3#100,15.2.0
+,RP-80,RP-181216,0042,-,B,Delay budget report and MAC CE adaptation for NR for TS 38.300,15.2.0
+2018/09,RP-81,RP-181941,0035,3,B,ECN support in NR,15.3.0
+,RP-81,RP-181938,0043,2,D,Miscellaneous Clean Up and Corrections,15.3.0
+,RP-81,RP-181938,0045,1,F,Mobility Call Flows,15.3.0
+,RP-81,RP-181938,0046,2,F,QoS Handling Corrections,15.3.0
+,RP-81,RP-181938,0047,4,F,MDBV Enforcement,15.3.0
+,RP-81,RP-181939,0050,1,F,Completion of description of power saving,15.3.0
+,RP-81,RP-181940,0051,1,F,Correction to description of bandwidth adaptation,15.3.0
+,RP-81,RP-181939,0053,1,F,Clarification of PDCP functionality,15.3.0
+,RP-81,RP-181939,0062,2,F,Clarification on number of CC for NR CA,15.3.0
+,RP-81,RP-181938,0070,1,F,"Beam management, failure detection and recovery",15.3.0
+,RP-81,RP-181941,0071,-,F,System Information Handling in TS38.300,15.3.0
+,RP-81,RP-181941,0072,1,F,Correction on RRC Resume procedure,15.3.0
+,RP-81,RP-181940,0077,-,F,CR on RACH configuration during HO,15.3.0
+,RP-81,RP-181941,0078,1,F,Missing Call Flows,15.3.0
+,RP-81,RP-181942,0079,1,F,CN type indication for Redirection from NR to E-UTRA,15.3.0
+,RP-81,RP-181942,0080,1,F,QoS Flow to DRB Remapping during Handover,15.3.0
+,RP-81,RP-181941,0081,1,F,NR Corrections (38.300 Baseline CR covering RAN3-101 agreements),15.3.0
+2018/10,-,-,-,-,-,Changes of CR0035 rev 3 were undone since this CR was actually not approved by RAN #81 as it was not submitted to RAN #81,15.3.1
+2018/12,RP-82,RP-182656,0028,5,F,Slice Aware Access Control,15.4.0
+,RP-82,RP-182649,0035,4,B,ECN support in NR,15.4.0
+,RP-82,RP-182653,0074,2,F,Corrections to System Information,15.4.0
+,RP-82,RP-182655,0075,2,F,Stage2 Corrections on UE capability,15.4.0
+,RP-82,RP-182657,0083,3,F,Clarifications on dynamic scheduling,15.4.0
+,RP-82,RP-182658,0084,2,F,Clarification of AMF Switch in RRC_INACTIVE,15.4.0
+,RP-82,RP-182657,0086,2,F,Correction to the system information in Handover Request message,15.4.0
+,RP-82,RP-182654,0087,2,F,Capture signalling flows where the last serving gNB moves the UE to RRC_IDLE,15.4.0
+,RP-82,RP-182649,0088,2,F,Scheduling Request Overview,15.4.0
+,RP-82,RP-182649,0089,1,F,System Information Provisioning,15.4.0
+,RP-82,RP-182657,0090,3,F,Transport of NAS Messages,15.4.0
+,RP-82,RP-182649,0091,2,F,SON Overview,15.4.0
+,RP-82,RP-182649,0093,2,F,RDI handling for data forwarding at handover,15.4.0
+,RP-82,RP-182656,0095,2,F,Clarification on basic voice support,15.4.0
+,RP-82,RP-182659,0096,2,F,Relation between SSB and SS-Burst,15.4.0
+,RP-82,RP-182659,0097,3,F,Defining inter-system and intra-system handover,15.4.0
+,RP-82,RP-182659,0099,3,F,Correction regarding key deletion at state transition to RRC_IDLE,15.4.0
+,RP-82,RP-182656,0102,2,F,"Clarification on SSB-based BM, RLM and BFD",15.4.0
+,RP-82,RP-182653,0103,1,F,Correction to beam failure detection in Stage-2,15.4.0
+,RP-82,RP-182655,0106,2,F,Random Access Triggers,15.4.0
+,RP-82,RP-182649,0107,-,F,Correction of BWP adaptation,15.4.0
+,RP-82,RP-182657,0108,1,F,Notification Control,15.4.0
+,RP-82,RP-182665,0109,1,F,PDU Session AMBR,15.4.0
+,RP-82,RP-182649,0110,-,F,Logical channel restrictions clarifications and correction,15.4.0
+,RP-82,RP-182666,0111,2,F,CORESET#0,15.4.0
+,RP-82,RP-182659,0115,2,F,Corrections to activation of SCells,15.4.0
+,RP-82,RP-182657,0116,1,F,Description of RLM aspects,15.4.0
+,RP-82,RP-182651,0120,-,F,Minor corrections to paging,15.4.0
+,RP-82,RP-182659,0125,1,F,Clarification on power ramping counter,15.4.0
+,RP-82,RP-182658,0127,1,F,Corrections on the descriptions of active BWP,15.4.0
+,RP-82,RP-182653,0131,-,F,Stage 2 Correction on Mobility in RRC_IDLE,15.4.0
+,RP-82,RP-182660,0133,1,F,Stage 2 CR on Measurement gap configuration scenarios,15.4.0
+,RP-82,RP-182659,0134,1,F,CR on the carrier selection for random access,15.4.0
+,RP-82,RP-182659,0137,1,F,Corrections on Multi-Radio dual connectivity,15.4.0
+,RP-82,RP-182670,0138,2,F,Inter-system HO,15.4.0
+,RP-82,RP-182787,0139,-,F,Baseline CR for TS 38.300,15.4.0
+,RP-82,RP-182799,0140,-,B,Addition of Annex X for SPID ranges,15.4.0
+2019/03,RP-83,RP-190542,0142,2,F,RRC Reject Handling for MPS and MCS,15.5.0
+,RP-83,RP-190540,0143,-,F,Misalignments with other Specifications,15.5.0
+,RP-83,RP-190543,0146,2,F,RLF triggering when RLC reaches maximum number of retransmission,15.5.0
+,RP-83,RP-190543,0147,1,F,Correction on RLC modes for duplication,15.5.0
+,RP-83,RP-190545,0148,1,F,Correction of Data Forwarding over Xn,15.5.0
+,RP-83,RP-190544,0149,-,F,Correction to RNAU without context relocation,15.5.0
+,RP-83,RP-190544,0150,-,F,Correction of handling of PDCP SN during Data Forwarding,15.5.0
+,RP-83,RP-190545,0151,1,F,Correction of stage 2 for slicing,15.5.0
+,RP-83,RP-190544,0152,-,F,Energy Saving Support in R15,15.5.0
+2019/06,RP-84,RP-191373,0154,-,F,CQI and MCS for URLLC,15.6.0
+,RP-84,RP-191373,0155,1,F,Miscellaneous Corrections,15.6.0
+,RP-84,RP-191373,0156,1,F,CA Clarifications - RACH and Timing Advance,15.6.0
+,RP-84,RP-191373,0157,-,F,Cross Carrier Scheduling,15.6.0
+,RP-84,RP-191379,0159,1,F,CR on 38.300 for SRB cell mapping for CA duplication,15.6.0
+,RP-84,RP-191380,0160,1,F,Support of ongoing re-mapping on source side during SDAP mobility,15.6.0
+,RP-84,RP-191379,0161,-,F,Correction of data forwarding,15.6.0
+,RP-84,RP-191379,0162,-,F,Slicing information during handover,15.6.0
+,RP-84,RP-191380,0163,-,F,Corrections for support of data forwarding for reestablishment UE,15.6.0
+,RP-84,RP-191380,0164,-,F,Correction of QoS flow re-mapping before handover,15.6.0
+,RP-84,RP-191380,0165,-,F,Correction of NAS PDU,15.6.0
+,RP-84,RP-191380,0168,-,F,Support for network sharing,15.6.0
+2019/09,RP-85,RP-192191,0171,1,F,Correction on 5GC to EPC inter-RAT inter-system handover,15.7.0
+2019/12,RP-86,RP-192934,0173,2,F,Clarification on measurement gap configuration in NR SA,15.8.0
+,RP-86,RP-192934,0174,1,F,KgNB derivation upon mobility,15.8.0
+,RP-86,RP-192934,0178,-,F,Correction on PUCCH transform precoding,15.8.0
+,RP-86,RP-192935,0181,-,F,Correction on mini-slot scheduling,15.8.0
+,RP-86,RP-192937,0182,-,F,Independent migration to IPv6 on NG-U,15.8.0
+,RP-86,RP-192938,0183,-,F,Correction of QoS flow re-mapping before handover,15.8.0
+,RP-86,RP-192944,0184,-,B,CR TS 38.300 Remote Interference Management,16.0.0
+,RP-86,RP-192942,0185,-,B,Introduction of direct data forwarding for inter-system HO between EPS and 5GS,16.0.0
+2020/03,RP-87,RP-200349,0153,8,B,CR to 38.300 on Integrated Access and Backhaul for NR,16.1.0
+,RP-87,RP-200347,0172,3,B,Introduction of NR mobility enhancement,16.1.0
+,RP-87,RP-200360,0175,3,B,Introduction of additional enhancements for eMTC,16.1.0
+,RP-87,RP-200361,0176,3,B,Introduction of additional enhancements for NB-IoT,16.1.0
+,RP-87,RP-200350,0186,2,B,Introduction of SRVCC from 5G to 3G,16.1.0
+,RP-87,RP-200351,0187,1,B,Introduction of RACS and DL RRC segmentation,16.1.0
+,RP-87,RP-200335,0189,2,A,Security and RRC Resume Request,16.1.0
+,RP-87,RP-200357,0190,-,B,Introduction of NR IDC solution,16.1.0
+,RP-87,RP-200344,0193,2,B,Introduction of UE Power Saving in NR,16.1.0
+,RP-87,RP-200341,0194,2,B,Introduction of on-demand SI procedure in RRC_CONNECTED,16.1.0
+,RP-87,RP-200353,0195,2,B,Non-Public Networks,16.1.0
+,RP-87,RP-200342,0197,1,B,Introduction of 2-step RACH,16.1.0
+,RP-87,RP-200348,0198,2,B,CR for 38.300 for CA/DC enhancements,16.1.0
+,RP-87,RP-200341,0199,2,B,Introduction of NR operation with Shared Spectrum Access to Stage 2,16.1.0
+,RP-87,RP-200343,0200,1,B,Introduction of NR eURLLC,16.1.0
+,RP-87,RP-200340,0201,2,B,Introduction of cross link interference management,16.1.0
+,RP-87,RP-200352,0203,-,B,Introduction of NR Industrial IoT features,16.1.0
+,RP-87,RP-200346,0204,-,B,Introduction of 5G V2X with NR Sidelink,16.1.0
+,RP-87,RP-200334,0207,-,A,Propagation of Roaming and Access Restriction information in NG-RAN in non-homogenous NG-RAN node deployments,16.1.0
+,RP-87,RP-200345,0209,-,B,RAN1 stage 2 agreements related to positioning,16.1.0
+2020/07,RP-88,RP-201165,0191,3,B,Introduction of NeedForGap capability for NR measurement,16.2.0
+,RP-88,RP-201177,0211,2,F,Corrections to Mobility Enhancements,16.2.0
+,RP-88,RP-201173,0214,1,F,4-step RA type figure description,16.2.0
+,RP-88,RP-201181,0215,1,F,Stage-2 updates for IIOT,16.2.0
+,RP-88,RP-201171,0217,4,F,CLI Corrections,16.2.0
+,RP-88,RP-201179,0220,1,C,CR to 38.300 on Integrated Access and Backhaul for NR,16.2.0
+,RP-88,RP-201161,0222,1,A,Clarification on pdcp-Duplication at RRC Reconfiguration,16.2.0
+,RP-88,RP-201164,0224,1,A,Correction on bandwidth adaptation,16.2.0
+,RP-88,RP-201182,0225,2,F,Miscellaneous corrections to NPN,16.2.0
+,RP-88,RP-201175,0227,1,F,Missing SIB for positioning,16.2.0
+,RP-88,RP-201172,0229,1,F,Miscellaneous corrections for NR operation with shared spectrum,16.2.0
+,RP-88,RP-201177,0230,2,F,Corrections on NR mobility enhancements,16.2.0
+,RP-88,RP-201178,0236,2,F,Clarification of DAPS configuration in MR-DC,16.2.0
+,RP-88,RP-201176,0237,1,F,Introduction of on-demand SIB(s) procedure in RRC_CONNECTED,16.2.0
+,RP-88,RP-201190,0239,-,C,Introduction of eCall over IMS for NR,16.2.0
+,RP-88,RP-201176,0245,1,F,Correction for NR sidelink communication,16.2.0
+,RP-88,RP-201165,0246,-,A,Global Cell Identities and Global NG-RAN Node Identities when NR access is shared,16.2.0
+,RP-88,RP-201176,0248,1,B,Support for Alternative QoS profiles,16.2.0
+,RP-88,RP-201211,0249,1,C,Introduction of Inter-gNB CSI-RS Based Mobility,16.2.0
+,RP-88,RP-201165,0251,-,A,Correction of NAS NON Delivery,16.2.0
+,RP-88,RP-201177,0252,1,B,Baseline CR for introducing Rel-16 NR mobility enhancement,16.2.0
+,RP-88,RP-201181,0253,-,B,NRIIOT Higher Layer Multi-Connectivity,16.2.0
+,RP-88,RP-201182,0254,1,B,Introduction of Non Public Networks,16.2.0
+,RP-88,RP-201179,0255,-,B,Mapping of Uplink Traffic to Backhaul RLC Channels,16.2.0
+,RP-88,RP-201354,0256,-,B,Addition of SON features,16.2.0
+2020/09,RP-89,RP-201937,0232,1,A,Clarification for KPAS and EU-alert,16.3.0
+,RP-89,RP-201931,0258,1,F,Drafting Rules in Subclause 15 on SON,16.3.0
+,RP-89,RP-201928,0259,-,F,Missing RACH Figure,16.3.0
+,RP-89,RP-201937,0260,-,F,Clarification on NCGI,16.3.0
+,RP-89,RP-201963,0263,1,F,Stage-2 CR for clarifications of Rel-16 PDCP Duplication,16.3.0
+,RP-89,RP-201926,0265,-,F,Correction on CSI-RS Based Intra-frequency and Inter-frequency Measurement Definition,16.3.0
+,RP-89,RP-201930,0274,-,F,Various corrections to NR Mobility enhancements description,16.3.0
+,RP-89,RP-201930,0278,-,F,DAPS handover corrections,16.3.0
+,RP-89,RP-201922,0284,1,F,Misc corrections for Rel-16 DCCA,16.3.0
+,RP-89,RP-201932,0285,1,F,Mandatory support of full rate user plane integrity protection,16.3.0
+,RP-89,RP-201922,0286,1,F,Correction on UL behaviours in the dormant BWP,16.3.0
+,RP-89,RP-201923,0293,1,F,CR to 38.300 on Integrated Access and Backhaul for NR,16.3.0
+,RP-89,RP-201921,0294,1,F,Correction of CAPC for NR-U,16.3.0
+,RP-89,RP-201929,0295,-,F,Correction on prioritization between DCP and RAR to C-RNTI for CFRA BFR,16.3.0
+,RP-89,RP-201928,0296,-,F,Correction of NPN CAG cells and non-CAG cells,16.3.0
+2020/12,RP-90,RP-202776,0299,1,F,Stage-2 description of MPE reporting,16.4.0
+,RP-90,RP-202771,0300,3,F,Description of Multi-TRP operation,16.4.0
+,RP-90,RP-202774,0305,1,F,Miscellaneous corrections to Mobility Enhancements,16.4.0
+,RP-90,RP-202774,0307,1,F,"Clarification on no support of CA, DC or multi-TRP with DAPS",16.4.0
+,RP-90,RP-202771,0310,1,F,BFR on SCell,16.4.0
+,RP-90,RP-202776,0317,3,F,Dynamic UMTS Radio Capability impact on SRVCC and RACS,16.4.0
+,RP-90,RP-202772,0318,1,F,Corrections on non DRB operation for IAB-MT,16.4.0
+,RP-90,RP-202774,0322,1,F,Correction to RLF in case of DAPS HO,16.4.0
+,RP-90,RP-202769,0323,-,F,Stage-2 corrections for NR sidelink communication,16.4.0
+,RP-90,RP-202771,0324,-,F,Clarifying the use of PNI-NPN term in RAN specifications,16.4.0
+,RP-90,RP-202777,0325,1,F,Clarification on the indication of eCall over IMS,16.4.0
+,RP-90,RP-202777,0326,1,F,Secondary DRX group description is missing,16.4.0
+,RP-90,RP-202774,0327,-,F,CHO in stage-2,16.4.0
+,RP-90,RP-202769,0328,-,F,Corrections on AQP for notification control,16.4.0
+,RP-90,RP-202774,0330,-,F,Correction for NR CHO and Full Configuration,16.4.0
+,RP-90,RP-202767,0331,-,F,Update the deployment scenarios in Annex B.3,16.4.0
+2021/03,RP-91,RP-210701,0302,2,A,UE Capabilities Description,16.5.0
+,RP-91,RP-210692,0333,1,F,Clarification on no support of SUL with DAPS,16.5.0
+,RP-91,RP-210691,0337,1,F,Miscellaneous Stage-2 corrections of IAB in 38.300,16.5.0
+,RP-91,RP-210695,0338,2,F,Release with Redirect for connection resume triggered by NAS,16.5.0
+,RP-91,RP-210702,0339,1,A,Clarification of data forwarding upon intra-system HO using full configuration,16.5.0
+,RP-91,RP-210692,0340,2,F,Addition of releasing the source part of DAPS DRBS upon DAPS release,16.5.0
+,RP-91,RP-210689,0343,-,F,Correction on uplink transmission allowed without TA,16.5.0
+,RP-91,RP-210689,0346,1,F,Clarification on DAPS HO configuration,16.5.0
+,RP-91,RP-210694,0347,-,F,PDCP SN issue for EPC to 5GC handover,16.5.0
+2021-06,RP-92,RP-211475,0352,2,F,Addition of size limitation for SRVCC,16.6.0
+,RP-92,RP-211473,0353,2,F,Transmissions to the source that continue upon DAPS UL switching,16.6.0
+,RP-92,RP-211473,0354,1,F,Removing ambiguous legacy and normal terms from handover descriptions,16.6.0
+,RP-92,RP-211472,0359,1,F,Updated description of multi-TRP,16.6.0
+,RP-92,RP-211484,0364,3,A,SRB PDCP handling upon handover,16.6.0
+,RP-92,RP-211472,0366,3,F,Missing IAB SA mode for QoS description,16.6.0
+,RP-92,RP-211473,0368,1,F,Clarification on RLF detection of source PCell,16.6.0
+,RP-92,RP-211473,0370,1,F,Miscellaneous corrections to DAPS handover,16.6.0
+,RP-92,RP-211480,0373,1,F,Miscellaneous Corrections,16.6.0
+,RP-92,RP-211471,0379,-,F,Correction of MRO in stage 2,16.6.0
+,RP-92,RP-211484,0380,-,F,Supporting use of UE Radio Capability for Paging in RRC_INACTIVE,16.6.0
+2021-09,RP-93,RP-212443,0381,1,F,Correction to Rel-16 HARQ description,16.7.0
+,RP-93,RP-212442,0387,1,F,Miscellaneous corrections to eURLLC for 38.300,16.7.0
+,RP-93,RP-212440,0388,1,F,NAS PDU handling,16.7.0
+2021-12,RP-94,RP-213343,0391,1,F,Miscellaneous Corrections,16.8.0
+,RP-94,RP-213343,0398,-,F,Handling of mobility and dual connectivity in mixed PNI-NPN/PLMN cell scenarios,16.8.0
+2022-03,RP-95,RP-220484,0342,10,B,Introduction of NR MBS,17.0.0
+,RP-95,RP-220487,0357,7,B,Introduction of SDT,17.0.0
+,RP-95,RP-220486,0389,4,B,Introduction of IAB enhancements,17.0.0
+,RP-95,RP-220477,0400,1,B,Introduction of NR dynamic spectrum sharing,17.0.0
+,RP-95,RP-220506,0401,1,D,Inclusive Language Review for TS 38.300,17.0.0
+,RP-95,RP-220837,0402,1,B,Introduction of MINT [MINT],17.0.0
+,RP-95,RP-220491,0403,2,B,Introduction of Sidelink Relay,17.0.0
+,RP-95,RP-220476,0405,1,B,Introduction of eSL in TS 38.300,17.0.0
+,RP-95,RP-220837,0407,1,B,Introduction of RACH triggers for T_ADV in NR E-CID [NRTADV],17.0.0
+,RP-95,RP-220475,0408,1,B,Introduction of NR operation up to 71GHz,17.0.0
+,RP-95,RP-220499,0411,1,B,Stage 2 CR for UL Tx switching enhancement,17.0.0
+,RP-95,RP-220478,0412,1,B,Introduction of NR coverage enhancements,17.0.0
+,RP-95,RP-220490,0413,1,B,RAN enhancements in the support of slicing,17.0.0
+,RP-95,RP-220493,0414,2,B,"Introducing NPN enhancements: Credential Holders, Onboarding, IMS emergency, and PWS support in SNPNs",17.0.0
+,RP-95,RP-220489,0415,-,B,Introduction of the support for UDC in NR,17.0.0
+,RP-95,RP-220481,0416,1,B,Introduction of Rel-17 IIoT/URLLC to TS 38.300,17.0.0
+,RP-95,RP-220960,0417,2,B,Introduction of UE power saving enhancements In 38.300,17.0.0
+,RP-95,RP-220496,0420,1,B,Introduction of DL 1024 QAM in NR,17.0.0
+,RP-95,RP-220480,0421,2,B,Introduction of RedCap in TS 38.300,17.0.0
+,RP-95,RP-220488,0422,1,B,Running CR to 38300 for Multi-USIM devices support,17.0.0
+,RP-95,RP-220482,0423,2,B,Support of Non-Terrestrial Networks,17.0.0
+,RP-95,RP-220494,0424,-,B,38.300 CR for Introduction of QoE measurements in NR,17.0.0
+,RP-95,RP-220510,0426,-,B,Introduction of Local NG-RAN Node IDs for RRC_INACTIVE [RRCInactive],17.0.0
+,RP-95,RP-220510,0427,1,C,UE Security Capabilities signaling in NG-RAN [UE_Sec_Caps],17.0.0
+,RP-95,RP-220839,0431,-,B,Addition of SON features enhancement,17.0.0
+,RP-95,RP-220474,0439,-,B,Introduction of feMIMO,17.0.0
+2022-06,RP-96,RP-221728,0362,2,B,Introduction of further MRDC enhancements,17.1.0
+,RP-96,RP-221732,0440,1,F,Correction on stage 2 for sidelink relay,17.1.0
+,RP-96,RP-221735,0441,1,F,38.300 CR Correction for Introduction of QoE measurements in NR,17.1.0
+,RP-96,RP-221715,0447,1,F,Stage-2 corrections for 71 GHz,17.1.0
+,RP-96,RP-221727,0458,2,F,Corrections to UE power saving enhancements In 38.300,17.1.0
+,RP-96,RP-221719,0462,-,C,Updates for RAN Slicing from RAN2#118,17.1.0
+,RP-96,RP-221716,0464,1,F,Corrections on RedCap in TS 38.300,17.1.0
+,RP-96,RP-221729,0465,1,F,Corrections on SDT,17.1.0
+,RP-96,RP-221729,0466,2,F,Introduction of RACH partitioning,17.1.0
+,RP-96,RP-221762,0469,2,F,Miscellaneous Corrections to eSL,17.1.0
+,RP-96,RP-221724,0472,-,F,Correction for NR coverage enhancements,17.1.0
+,RP-96,RP-221736,0474,1,B,Introduction of gNB ID length reporting in the NR CGI report [gNB_ID_Length],17.1.0
+,RP-96,RP-221718,0476,-,F,Various corrections to IAB enhancements,17.1.0
+,RP-96,RP-221726,0477,-,F,Corrections for IIoT on simultaneous PUCCH and PUSCH transmission,17.1.0
+,RP-96,RP-221717,0478,-,F,Corrections to stage 2 for NR NTN,17.1.0
+,RP-96,RP-221714,0480,-,A,Inter-system direct data forwarding between source SgNB and target gNB,17.1.0
+,RP-96,RP-221754,0483,-,F,Correction on NR MBS,17.1.0
+,RP-96,RP-221754,0484,1,F,Correction of MBS data forwarding,17.1.0
+,RP-96,RP-221729,0485,-,F,Correction on RA-SDT overall procedures,17.1.0
+,RP-96,RP-221717,0486,-,F,Corrections for NR NTN,17.1.0
+,RP-96,RP-221733,0487,-,F,Correction on R17 SON MDT for 38.300,17.1.0
+,RP-96,RP-221727,0488,-,F,"Correction of the ""last used cell"" in UE Context Release Complete",17.1.0
+,RP-96,RP-221754,0490,-,F,Correction on NR MBS mobility for 38300,17.1.0
+,RP-96,RP-221733,0491,-,F,TS 38.300 corrections for CCO,17.1.0
+,RP-96,RP-221754,0492,-,F,Corrections on MBS,17.1.0
+2022-09,RP-97,RP-222524,0509,2,F,Rel-17 NTN related Rapporteur's corrections to TS 38.300,17.2.0
+,RP-97,RP-222516,0515,1,A,NR Correction related to RNA,17.2.0
+,RP-97,RP-222525,0519,1,F,Corrections on SDT,17.2.0
+,RP-97,RP-222523,0524,-,F,Clarification on PUCCH cell switching for TDD cells,17.2.0
+,RP-97,RP-222525,0535,2,F,Corrections on RedCap in TS 38.300,17.2.0
+,RP-97,RP-222524,0543,2,F,Stage-2 corrections to Rel-17 QoE,17.2.0
+,RP-97,RP-222522,0546,1,F,Miscellaneous Corrections,17.2.0
+,RP-97,RP-222524,0547,1,F,38.300 corrections for sidelink enhancements,17.2.0
+,RP-97,RP-222522,0548,-,F,Stage-2 corrections on MUSIM,17.2.0
+,RP-97,RP-222525,0549,1,F,Corrections on TS 38.300 for RAN Slicing,17.2.0
+,RP-97,RP-222524,0550,2,F,Correction on stage 2 for sidelink relay,17.2.0
+,RP-97,RP-222525,0552,-,F,Corrections to UE power saving enhancements in TS 38.300,17.2.0
+,RP-97,RP-222523,0553,-,F,Correction to Rel-17 SON features,17.2.0
+,RP-97,RP-222523,0555,-,F,Correction of MBS stage 2,17.2.0
+,RP-97,RP-222519,0557,-,A,CAG access control without mobility restrictions,17.2.0
+,RP-97,RP-222523,0558,-,F,Completion of the missing descripition of SCG MRO handling,17.2.0
+,RP-97,RP-222525,0559,-,F,Correction on Slice Group Configuration,17.2.0
+,RP-97,RP-222526,0561,-,F,Support for flexible gNB ID length [gNB_ID_Length],17.2.0
+2022-12,RP-98,RP-223406,0564,2,F,Corrections on MBS,17.3.0
+,RP-98,RP-223411,0572,4,F,Corrections to TS 38.300 for Rel-17 NR NTN,17.3.0
+,RP-98,RP-223412,0583,2,F,Miscellaneous corrections on TS 38.300 for NR sidelink,17.3.0
+,RP-98,RP-223411,0587,2,F,Miscellaneous RedCap corrections in stage-2,17.3.0
+,RP-98,RP-223413,0595,1,F,Clarifications for SDT Stage-2,17.3.0
+,RP-98,RP-223410,0596,1,F,Clarification on BFD-RS set based BFR,17.3.0
+,RP-98,RP-223412,0598,1,F,Correction on SL relay,17.3.0
+,RP-98,RP-223413,0599,1,D,Clarification on PDCCH skipping,17.3.0
+,RP-98,RP-223404,0601,1,A,Clarification for ePWS,17.3.0
+,RP-98,RP-223410,0602,-,F,CR to TS 38.300 on IAB-topology definition,17.3.0
+,RP-98,RP-223412,0603,-,F,Correction on NSAG,17.3.0
+,RP-98,RP-223412,0604,-,F,NSAG for cell reselection and random access,17.3.0
+,RP-98,RP-223406,0605,-,F,Minimization of data loss and duplication avoidance during mobility from MBS non upporting gNB to supporting gNB,17.3.0
+,RP-98,RP-223410,0607,-,F,Correction of UE History Information for CHO,17.3.0
+,RP-98,RP-223410,0608,-,F,SHR correction,17.3.0
+,RP-98,RP-223411,0609,1,F,CR to TS 38.300 on RAN visible QoE,17.3.0
+,RP-98,RP-223412,0610,-,F,Clarification on slice group information provided by NAS,17.3.0
+2023-03,RP-99,RP-230690,0611,1,F,Correction on Stage-2 descriptions for NR NTN,17.4.0
+,RP-99,RP-230690,0613,2,F,MBS corrections for multicast configuration and service continuity,17.4.0
+,RP-99,RP-230691,0614,-,F,Corrections to description of RAN Visible QoE Measurements,17.4.0
+,RP-99,RP-230691,0619,2,F,Clarification of UE Behaviour upon Pause of QoE Reporting,17.4.0
+,RP-99,RP-230689,0621,1,F,Removal of editor's note on sequence length 1151 for PRACH usage,17.4.0
+,RP-99,RP-230692,0627,-,F,Correction to 38.300 on SRAP operation,17.4.0
+,RP-99,RP-230688,0628,2,F,Correction on RRCReject handling for SDT,17.4.0
+,RP-99,RP-230685,0639,1,A,Clarification on the PDCCH Ordered RACH for SCell in 38.300,17.4.0
+,RP-99,RP-230692,0642,2,F,Miscellaneous corrections on TS 38.300 for NR sidelink,17.4.0
+,RP-99,RP-230686,0644,-,A,Corrections on PSBCH Symbols number for NR sidelink,17.4.0
+2023-06,RP-100,RP-231418,0647,5,F,NTN stage-2 correction,17.5.0
+,RP-100,RP-231416,0656,2,F,Miscellaneous corrections for Stage 2 NR sidelink relay,"17.5,0"
+,RP-100,RP-231415,0666,1,F,Clarification on the application of slice-based RACH configuration,17.5.0
+,RP-100,RP-231414,0672,-,F,Miscellaneous Corrections,17.5.0
+,RP-100,RP-231416,0673,2,F,Miscellaneous corrections on TS 38.300 for NR sidelink,17.5.0
+,RP-100,RP-231415,0678,1,F,Corrections on eDRX and RRM measurement relaxation for RedCap,17.5.0
+,RP-100,RP-231415,0684,2,F,Corrections to Security Issues for MO-SDT,17.5.0
+,RP-100,RP-231413,0686,-,F,Correction of QoE stage-2 description,17.5.0
+,RP-100,RP-231415,0687,1,F,Introduction of Hashed UE Identity Index Value for RRC_INATIVE with eDRX,17.5.0
+,RP-100,RP-231415,0688,-,F,Correction to Security Issues for MO-SDT,17.5.0
+2023-09,RP-101,RP-232570,0691,3,F,Correction on SDT,17.6.0
+,RP-101,RP-232667,0697,1,F,Correction on gap requirement for inter-RAT LTE measurement,17.6.0
+,RP-101,RP-232566,0701,1,A,Miscellaneous stage 2 corrections for sidelink,17.6.0
+,RP-101,RP-232566,0705,-,A,Stage2 correction on UE Identities,17.6.0
+,RP-101,RP-232570,0707,-,F,Correction on SDT Triggering,17.6.0
+,RP-101,RP-232667,0708,1,F,RedCap specific SDT configuration,17.6.0
+,RP-101,RP-232667,0709,-,F,Rapporteur Miscellaneous Stage 2 Corrections,17.6.0
+,RP-101,RP-232570,0710,-,F,Correction on R17 MO SDT termination,17.6.0
+2023-12,RP-102,RP-233890,0726,1,F,Miscellaneous Corrections,17.7.0
+,RP-102,RP-233890,0735,1,F,Clarification for Mission Critical UEs,17.7.0
+,RP-102,RP-233885,0738,1,A,Correction on NR SL Stage 2,17.7.0
+,RP-102,RP-233888,0744,1,F,Correction on the SidelinkUEInformationNR message,17.7.0
+,RP-102,RP-233889,0747,-,F,Correction of Paging with PEI,17.7.0
+,RP-102,RP-233887,0749,-,F,Correction on SHR for intra-NR mobility,17.7.0
+2023-12,RP-102,RP-233905,0680,5,B,Introduction of In-Device Co-existence (IDC) enhancements for NR,18.0.0
+,RP-102,RP-233898,0685,5,B,Introducing support for Network-Controlled Repeaters to 38.300,18.0.0
+,RP-102,RP-233900,0689,7,B,Introduction of Network Energy Savings,18.0.0
+,RP-102,RP-233902,0711,2,B,Introduction of MT-SDT in Stage-2,18.0.0
+,RP-102,RP-233956,0721,1,B,Introduction of support for BWP operation without restriction,18.0.0
+,RP-102,RP-233901,0722,2,B,Introduction of sidelink positioning in 38300,18.0.0
+,RP-102,RP-233912,0723,1,B,Introduction of R18 eNPN for TS 38.300,18.0.0
+,RP-102,RP-233908,0724,1,B,Introduction of XR Enhancements,18.0.0
+,RP-102,RP-233933,0727,2,B,Introduction of Mobile IAB,18.0.0
+,RP-102,RP-233897,0728,1,B,Introduction of NR Sidelink Evolution,18.0.0
+,RP-102,RP-233899,0729,1,B,Introduction of eRedCap in TS 38.300,18.0.0
+,RP-102,RP-233911,0730,2,B,Introduction of Timing Resiliency and URLLC enhancements,18.0.0
+,RP-102,RP-233913,0731,-,B,Introduction on UE preference for multi-Rx operation in UAI,18.0.0
+,RP-102,RP-233907,0732,2,B,Introduction of eMBS in TS 38.300,18.0.0
+,RP-102,RP-233895,0733,1,B,Introduction of Further NR coverage enhancements to 38.300,18.0.0
+,RP-102,RP-233906,0734,1,B,Introduction of NTN enhancements,18.0.0
+,RP-102,RP-233932,0736,1,B,Introduction of NR Support for Uncrewed Aerial Vehicles,18.0.0
+,RP-102,RP-233916,0740,1,B,Introduction of NR ATG in TS 38.300,18.0.0
+,RP-102,RP-233903,0741,1,B,Introduction of NR MUSIM enhancements in TS 38.300,18.0.0
+,RP-102,RP-233896,0742,1,B,Introduction of MIMO evolution for Downlink and Uplink,18.0.0
+,RP-102,RP-233882,0743,1,B,Introduction of maximum time duration to initiate CG-SDT in Stage-2 [CG-SDT-Enh],18.0.0
+,RP-102,RP-233882,0748,-,B,Support of oversize UL SDT Data Arrival [Large SDT Uplink Data],18.0.0
+,RP-102,RP-233902,0751,-,B,Introduction on MT-SDT,18.0.0
+,RP-102,RP-233882,0753,-,B,Introduction of RedCap UE MBS Broadcast reception [RedcapMBS],18.0.0
+,RP-102,RP-233935,0754,-,B,Enhancement of RAN Slicing for NR,18.0.0
+,RP-102,RP-233934,0756,-,B,AI/ML for NG-RAN,18.0.0
+,RP-102,RP-233909,0757,-,B,Addition of SON features enhancement,18.0.0
+,RP-102,RP-233936,0766,1,B,Introduction of NR support for dedicated spectrum less than 5MHz for FR1,18.0.0
+,RP-102,RP-233910,0768,1,B,Introduction of R18 QoE enhancement in TS 38.300,18.0.0
+,RP-102,RP-233894,0769,-,B,Introduction of Multi-carier enhancements,18.0.0
+,RP-102,RP-233930,0770,-,B,Introduction of NR further mobility enhancements in TS 38.300,18.0.0
+,RP-102,RP-233904,0771,3,B,Introduction of NR sidelink relay enhancements,18.0.0
+2024-03,RP-103,RP-240655,0773,1,A,Correction in TS 38.300 to support Simultaneous PUSCH and PUCCH transmissions of same priority on different inter-band cells [SimultaneousPUSCH-PUCCH],18.1.0
+,RP-103,RP-240697,0777,1,F,Stage-2 CR for Rel-18 NR QoE enhancement,18.1.0
+,RP-103,RP-240666,0780,1,F,Miscellaneous corrections on TS 38.300 for BWP operation without restriction,18.1.0
+,RP-103,RP-240698,0782,-,F,Handover for Reduced Capability,18.1.0
+,RP-103,RP-240705,0783,-,F,Misellaneous Corrections,18.1.0
+,RP-103,RP-240702,0784,2,F,Miscellaneous XR corrections,18.1.0
+,RP-103,RP-240700,0785,3,F,Introduction of NR sidelink relay enhancements,18.1.0
+,RP-103,RP-240701,0789,2,F,Corrections to NR Support for Uncrewed Aerial Vehicles,18.1.0
+,RP-103,RP-240676,0793,1,F,Correction on UAI for URLLC,18.1.0
+,RP-103,RP-240699,0795,1,F,Miscellaneous Stage 2 Corrections for NR Sidelink Evolution,18.1.0
+,RP-103,RP-240655,0797,-,A,Correction on service link types for GSO,18.1.0
+,RP-103,RP-240688,0798,4,F,Corrections to TS 38.300 for MBS,18.1.0
+,RP-103,RP-240670,0801,1,F,Corrections to TS 38.300 for R18 MUSIM,18.1.0
+,RP-103,RP-240694,0806,-,A,RACH resources while SDT procedure is ongoing,18.1.0
+,RP-103,RP-240703,0807,1,F,Resume indication in RRCRelease [SDT_ReleaseEnh],18.1.0
+,RP-103,RP-240662,0811,-,F,Clarification of cell DTX/DRX operation with TRP,18.1.0
+,RP-103,RP-240695,0812,2,F,38.300 NR NTN Corrections,18.1.0
+,RP-103,RP-240707,0813,2,B,Introduction of 2Rx XR UEs [2Rx_XR_Device],18.1.0
+,RP-103,RP-240701,0814,1,F,Correction on TS 38300 for UAV,18.1.0
+,RP-103,RP-240659,0816,-,F,Resource handling for Alternative S-NSSAIs,18.1.0
+,RP-103,RP-240676,0817,-,F,Correction of network timing synchronization status monitoring,18.1.0
+,RP-103,RP-240694,0820,-,F,Add a new tigger condition for MT-SDT in TS38.300,18.1.0
+,RP-103,RP-240698,0821,-,F,Correction of Redcap RAN Paging Request,18.1.0
+,RP-103,RP-240695,0822,1,F,Correction of timer-based conditional handover for NR NTN,18.1.0
+,RP-103,RP-240674,0823,-,F,Correction on MRO,18.1.0
+,RP-103,RP-240673,0824,2,B,Introduction of new SPID value for 2RX XR UE [2Rx_XR_Device],18.1.0
+,RP-103,RP-240674,0825,-,F,Stage 2 correction for NR-U,18.1.0
+,RP-103,RP-240674,0826,-,F,Corrections on stage 2 descriptions for SON,18.1.0
+,RP-103,RP-240664,0827,-,F,Corrections on AI for RAN stage 2,18.1.0
+,RP-103,RP-240702,0828,-,F,Transfer PDU Set Information during data forwarding for Xn handover,18.1.0
+,RP-103,RP-240702,0829,-,F,Support of mixed PDUs handling in Non-Homogeneous deployment,18.1.0
+,RP-103,RP-240702,0830,-,F,Correction on ECN marking for L4S and data forwarding,18.1.0
+,RP-103,RP-240697,0831,1,F,Corrections on R18 QoE enhancements,18.1.0
+,RP-103,RP-240689,0832,1,B,Correction to 38.300 for multi-cell scheduling,18.1.0
+,RP-103,RP-240692,0833,-,F,Stage-2 Corrections to LTM,18.1.0
+2024-06,RP-104,RP-241544,0799,4,B,RACH-less support generalization [RACH-lessHO],18.2.0
+,RP-104,RP-241563,0808,3,F,Clarification to Network-Controlled Repeaters Stage-2 description,18.2.0
+,RP-104,RP-241544,0836,3,F,Correction on TRS for idle and inactive UEs,18.2.0
+,RP-104,RP-241583,0837,1,D,Miscellaneous corrections on TS 38.300 for BWP operation without restriction,18.2.0
+,RP-104,RP-241562,0838,3,F,Miscellaneous Rapporteur Stage 2 Corrections for NR Sidelink Evolution,18.2.0
+,RP-104,RP-241550,0841,2,A,Clarification on the combination of HST and RRM measurement relaxation,18.2.0
+,RP-104,RP-241574,0842,3,F,Stage-2 corrections for LTM,18.2.0
+,RP-104,RP-241549,0846,2,A,Correction to UE capability description for fallback BC behavior,18.2.0
+,RP-104,RP-241543,0848,1,F,Correction for resumeIndication [SDT_ReleaseEnh],18.2.0
+,RP-104,RP-241577,0853,2,F,Clarification on supporting two logical DUs and connecting via stationary IAB node,18.2.0
+,RP-104,RP-241569,0857,2,F,Corrections on NR sidelink relay enhancements,18.2.0
+,RP-104,RP-241558,0858,3,F,Stage-2 corrections on NR NTN,18.2.0
+,RP-104,RP-241544,0859,1,F,Correcting Figures,18.2.0
+,RP-104,RP-241573,0860,1,F,Miscellaneous XR Corrections,18.2.0
+,RP-104,RP-241553,0862,-,A,Terminology alignment on the types of NR NTN deployment,18.2.0
+,RP-104,RP-241543,0864,2,B,Clarifications for MBS RedCap CFR [RedCapMBS_Bcast],18.2.0
+,RP-104,RP-241553,0866,-,A,Reference for User Service Description,18.2.0
+,RP-104,RP-241571,0867,-,F,Miscellaneous UAV-related Stage-2 Corrections,18.2.0
+,RP-104,RP-241561,0868,-,F,Clarification of PDCCH ordered CFRA for 2TA,18.2.0
+,RP-104,RP-241575,0869,1,F,SON/MDT corrections for 38.300,18.2.0
+,RP-104,RP-241565,0870,-,F,Miscellaneous stage-2 corrections for network energy savings,18.2.0
+,RP-104,RP-241564,0871,-,F,Correction on the MT communication handling procedure,18.2.0
+,RP-104,RP-241543,0872,-,B,Correction on SDT RRC Release with resume indication [SDT_ReleaseEnh],18.2.0
+,RP-104,RP-241573,0873,-,F,Clarification on non-homogeneous deployment,18.2.0
+,RP-104,RP-241573,0874,-,F,Correction on DL PSI based discard,18.2.0
+,RP-104,RP-241573,0875,-,F,Correction on burst arrival time in handover,18.2.0
+,RP-104,RP-241580,0876,-,F,Correction of Slice Availability and Support,18.2.0
+,RP-104,RP-241575,0877,-,F,Addition of SON for fast MCG recovery in stage 2,18.2.0
+,RP-104,RP-241578,0878,-,F,Stage 2 update on AI/ML for NG-RAN,18.2.0
+,RP-104,RP-241544,0879,-,F,Correction on Inter-system MRO,18.2.0
+,RP-104,RP-241578,0880,-,F,Stage 2 corrections for AI/ML for NG-RAN,18.2.0
+,RP-104,RP-241566,0881,-,F,Corrections to TS 38.300 for SL positioning,18.2.0
+2024-09,RP-105,RP-242233,0882,1,A,Alignment of mps-PriorityAccess cause in RRC Resume,18.3.0
+,RP-105,RP-242240,0884,1,B,Introduction of barring exemption for emergency call [EM_Call_Exemption],18.3.0
+,RP-105,RP-242239,0885,1,B,Introduction of unknown SCell activation enhancement,18.3.0
+,RP-105,RP-242239,0886,1,F,Miscellaneous Stage-2 corrections on R18 QoE,18.3.0
+,RP-105,RP-242237,0887,1,F,Corrections to TS 38.300 for R18 MUSIM,18.3.0
+,RP-105,RP-242233,0892,-,A,Correction on Transport Channels,18.3.0
+,RP-105,RP-242240,0893,1,F,Rapporteur Stage 2 Corrections for NR Sidelink Evolution,18.3.0
+,RP-105,RP-242238,0894,-,F,Correction on broadcast reception for eRedcap UE,18.3.0
+,RP-105,RP-242240,0896,-,F,Correction for discarding operation for XR,18.3.0
+,RP-105,RP-242240,0897,2,F,Corrections on NR sidelink relay enhancements,18.3.0
+,RP-105,RP-242238,0901,-,F,Correction on MIMO with 2TAs in LTM,18.3.0
+,RP-105,RP-242237,0902,-,F,Stage-2 corrections for NR NTN,18.3.0
+2024-12,RP-106,RP-243233,0903,2,F,Correction on coexistence between CHO and satellite switching with re-synchronization,18.4.0
+,RP-106,RP-243223,0908,2,A,Gap requirement for CSI-RS based measurements and inter-RAT measurements,18.4.0
+,RP-106,RP-243225,0910,1,A,Correction on location based measurements in NR NTN,18.4.0
+,RP-106,RP-243230,0911,3,F,Misc Stage-2 corrections for LTM mobility,18.4.0
+,RP-106,RP-243233,0917,2,F,Stage 2 correction on additional buffer size table,18.4.0
+,RP-106,RP-243231,0919,3,F,Correction on priority-based QoE measurements in TS 38.300,18.4.0
+,RP-106,RP-243219,0920,3,F,Clarification of UE capability restrictions in MUSIM,18.4.0
+,RP-106,RP-243233,0922,3,F,Miscellaneous corrections to NR NTN,18.4.0
+,RP-106,RP-243232,0923,2,F,Miscellaneous and editorial changes for NR sidelink relay enhancement,18.4.0
+,RP-106,RP-243225,0925,1,A,Clarification on MII usage,18.4.0
+,RP-106,RP-243221,0929,-,A,Maximum number of configured CCs,18.4.0
+,RP-106,RP-243230,0937,-,F,Coexistence of NCR and CPAC with (e)RedCap,18.4.0
+,RP-106,RP-243231,0938,1,F,Miscellaneous corrections for Positioning,18.4.0
+,RP-106,RP-243225,0943,-,A,Correction on TDD support in NTN,18.4.0
+,RP-106,RP-243232,0944,1,F,"U2U Relays, Local ID Assignment",18.4.0
+,RP-106,RP-243233,0945,-,F,Correction on AI/ML Terminology,18.4.0
+,RP-106,RP-243233,0946,-,F,OAM Requirements on Energy Cost index,18.4.0
+,RP-106,RP-243233,0947,-,F,Stage 2 correction for AI/ML for NG-RAN,18.4.0
+,RP-106,RP-243231,0948,-,F,QoE measurement handling in idle mode,18.4.0
+,RP-106,RP-243233,0949,-,F,Corrections to Stage-2 for XR awareness,18.4.0
+2025-03,RP-107,RP-250656,0953,-,A,Correction on L3 beam filtering,18.5.0
+,RP-107,RP-250663,0954,-,F,Correction on the content of event Hy measurement report,18.5.0
+,RP-107,RP-250659,0959,-,A,Minor correction in the description of RAN Visible QoE Measurements,18.5.0
+,RP-107,RP-250662,0960,1,F,Clean-up corrections on stage 2 description of QMC,18.5.0
+,RP-107,RP-250662,0962,1,F,Corrections to NTN mobility,18.5.0
+,RP-107,RP-250663,0964,-,F,Correction on UE assistance information for XR,18.5.0
+,RP-107,RP-250662,0966,2,F,Correction on 38.300 for MCSt,18.5.0
+,RP-107,RP-250662,0967,-,F,Correction on PQI-CAPC mapping table,18.5.0
+,RP-107,RP-250661,0968,-,F,Correction of mobility latency for LTM,18.5.0
+,RP-107,RP-250661,0969,-,F,Clarification of the chapter title to match the description of the UE History Information,18.5.0
+,RP-107,RP-250661,0970,1,F,Stage 2 correction for network slice support during XN handover,18.5.0
+,RP-107,RP-250660,0971,1,F,Stage 2 correction on DL LBT failure information,18.5.0
+,RP-107,RP-250663,0972,-,F,Correction on handover failure due to unavailable candidate relay UE,18.5.0
+,RP-107,RP-250656,0976,-,A,Clarification on supported features on the PSCell,18.5.0
+2025-06,RP-108,RP-251695,0904,4,F,Correction on RACH-less HO Use Case [RACH-lessHO],18.6.0
+,RP-108,RP-251690,0985,1,A,Corrections on DCP,18.6.0
+,RP-108,RP-251697,0986,1,F,Correction on SON for NPN in TS 38.300,18.6.0
+,RP-108,RP-251692,0993,-,F,Correction on cell type specific cell reselection prioritisation [NR_HSDN],18.6.0
+,RP-108,RP-251696,0994,1,F,Correction on NCR-Fwd functionality,18.6.0
+,RP-108,RP-251689,0998,1,A,Correction on servingCellMO configuration for SSB-less SCell,18.6.0
+,RP-108,RP-251693,1000,-,A,Correction of Emergency Call and eDRX,18.6.0
+,RP-108,RP-251695,1001,-,F,Correction of NTN OAM Assistance information,18.6.0
+2025-09,RP-109,RP-252769,0989,2,F,Correction to PDCP duplication description for L2 MP using SL relay or N3C indirect path,18.7.0
+,RP-109,RP-252769,1010,1,F,Correction to the description of PDU set QoS parameter,18.7.0
+,RP-109,RP-252767,1026,1,A,Correction on DCP considering MUSIM gaps,18.7.0
+,RP-109,RP-252767,1030,-,A,Clarification on emergency call back and UE RRC state,18.7.0
+2025-09,RP-109,RP-252796,0957,2,B,ProSe support in NPN [ProSe_NPN],19.0.0
+,RP-109,RP-252797,0991,2,B,Introduction of Multi-path Relay Enhancement [N3C_M_Relay],19.0.0
+,RP-109,RP-252798,1004,1,B,Introduction of UAV mobility enhancements [UAV_Mobility],19.0.0
+,RP-109,RP-252775,1005,1,B,Stage 2 CR for Rel-19 Multi-carrier enhancements,19.0.0
+,RP-109,RP-252772,1006,1,B,Introduction of AI/ML for NR Air interface feature in TS38.300,19.0.0
+,RP-109,RP-252779,1007,1,B,Introduction of XR Enhancements Phase 3,19.0.0
+,RP-109,RP-252771,1008,1,B,Introduction of Rel-19 Evolution of NR duplex operation (SBFD),19.0.0
+,RP-109,RP-252798,1009,3,B,Introduction of control parameters for on-demand posSIB request [OdPosSIB_Req],19.0.0
+,RP-109,RP-252777,1011,4,B,Introduction of NR mobility enhancements Phase 4 in TS 38.300,19.0.0
+,RP-109,RP-252789,1012,1,B,Introduction of low NR band carrier aggregation via switching,19.0.0
+,RP-109,RP-252774,1013,2,B,Introduction of Network Energy Savings Enhancements,19.0.0
+,RP-109,RP-252773,1015,1,B,Introduction of Low-Power Wake-Up Signal and Receiver for NR,19.0.0
+,RP-109,RP-252770,1021,2,B,Introduction of Rel-19 MIMO Phase 5,19.0.0
+,RP-109,RP-252776,1022,1,B,Introduction of Ambient IoT,19.0.0
+,RP-109,RP-252778,1023,2,B,Introduction of NR NTN phase 3,19.0.0
+,RP-109,RP-252868,1024,-,B,Restriction on RAT utilization,19.0.0
+,RP-109,RP-252787,1027,1,B,Introduction of Secondary Cell Measurement Skipping for NR ATG,19.0.0
+,RP-109,RP-252780,1028,2,B,Introduction of NR sidelink multi-hop U2N Relay,19.0.0
+,RP-109,RP-252868,1031,-,B,Support Aerial UE Flight Information Reporting,19.0.0
+,RP-109,RP-252798,1032,-,B,Recovery of N3mb path failure for unicast transport of multicast session,19.0.0
+,RP-109,RP-252817,1033,-,B,Support of enhancements on AI/ML for NG-RAN,19.0.0
+,RP-109,RP-252783,1034,-,B,Addition of SON enhancements,19.0.0
+,RP-109,RP-252818,1035,-,B,Introduction of NR Femto Architecture and Protocol Aspects,19.0.0
+,RP-109,RP-252818,1036,-,B,Support for Wireless Access Backhaul,19.0.0
+2025-12,RP-110,RP-253728,1040,2,F,Miscellaneous corrections for stage-2 in Rel-19 Mobility Enhancements,19.1.0
+,RP-110,RP-253726,1042,2,F,Network Energy Savings Enhancements miscellaneous stage-2 corrections,19.1.0
+,RP-110,RP-253717,1044,1,A,Correction on UE transmissions during Cell DRX,19.1.0
+,RP-110,RP-253725,1046,3,F,Miscellaneous corrections for LP-WUS,19.1.0
+,RP-110,RP-253729,1047,4,F,Miscellaneous Stage 2 corrections for NR NTN phase 3,19.1.0
+,RP-110,RP-253720,1048,1,A,"U2U Relays, Peer Remote UE Control Plane Procedures",19.1.0
+,RP-110,RP-253714,1053,1,A,Clarification of the single SCS per frequency restriction,19.1.0
+,RP-110,RP-253740,1054,1,B,Introducing SR resources in LTM cell switch MAC CE [LTM_enh_SR],19.1.0
+,RP-110,RP-253740,1055,1,B,Introduction of redirection from NR TN to NR NTN [NR_TN_NTN_redir],19.1.0
+,RP-110,RP-253724,1056,1,F,Corrections on RO type selection for both CFRA and CBRA,19.1.0
+,RP-110,RP-253722,1057,2,F,Correction on AI for NR Air interface feature in TS38.300,19.1.0
+,RP-110,RP-253740,1058,1,B,Introduction of common PDCCH repetition (Rel-19 NTN) for TN [Common_PDCCH_rep_TN],19.1.0
+,RP-110,RP-253740,1059,1,B,Assistance info for NR-NTN to IoT-NTN Cell Selection [IoT_NR_NTN_CellSelect],19.1.0
+,RP-110,RP-253733,1060,1,F,Corrections for SON/MDT,19.1.0
+,RP-110,RP-253733,1062,-,F,Correcting SCG activation time after CHO,19.1.0
+,RP-110,RP-253771,1063,-,F,Correction of NR Femtos functions,19.1.0
+,RP-110,RP-253728,1064,-,F,Early Data Forwarding for subsequent inter-CU LTM,19.1.0
+,RP-110,RP-253729,1065,-,F,Correction of O&M requirements for NTN,19.1.0
+,RP-110,RP-253730,1067,-,F,Correction on PDU set handling during handover,19.1.0
+,RP-110,RP-253770,1068,1,F,Support for Continuous Management-based MDT,19.1.0
+,RP-110,RP-253728,1069,-,F,Corrections for Rel-19 LTM,19.1.0
+,RP-110,RP-253771,1070,-,F,Correction on sending GW release indication,19.1.0
+,RP-110,RP-253727,1071,-,F,Correction on A-IoT related Network Identities,19.1.0
+,RP-110,RP-253727,1072,-,F,Correction on A-IoT Inventory and Command procedure figures,19.1.0
+,RP-110,RP-253716,1075,-,A,Correction on Paging Loss issue,19.1.0
+,RP-110,RP-253725,1076,-,F,Allocation of subgroup IDs for LP-WUS,19.1.0
+,RP-110,RP-253771,1077,-,F,Correction of WAB,19.1.0
+,RP-110,RP-253730,1078,-,F,Correction on Burst Size for XR,19.1.0
+,RP-110,RP-253728,1079,-,F,Removal of Request for CSI-RS resource configuration for Early CSI acquisition,19.1.0
+,RP-110,RP-253724,1080,-,F,Clarification to UE-to-UE CLI mitigation in SBFD operation,19.1.0
+,RP-110,RP-253728,1081,-,F,Corrections on L2 reset ID,19.1.0
+,RP-110,RP-253725,1082,1,F,On introducing LP-WUS disabling indication,19.1.0
+,RP-110,RP-253741,1083,-,F,Clarification for propagation of roaming and access restrictions,19.1.0
+,RP-110,RP-253723,1084,1,F,Correction of Rel-19 MIMO Phase 5,19.1.0
+2026-03,RP-111,RP-260670,1085,1,F,Introduction of SIB1 PDSCH repetition for FR1 TN [Common_PDCCH_rep_TN],19.2.0
+,RP-111,RP-260668,1090,1,F,Correction on PEI and LP-WUS subgrouping,19.2.0
+,RP-111,RP-260668,1093,1,F,Supporting SBFD with CA and clarification on SBFD RO for two TA RACH case,19.2.0
+,RP-111,RP-260667,1102,-,F,Miscellaneous corrections for LP-WUS,19.2.0
+,RP-111,RP-260667,1103,-,F,Correction to XR Enhancements Phase 3,19.2.0
+,RP-111,RP-260668,1104,1,F,Correction of Rel-19 MIMO Phase 5,19.2.0
+,RP-111,RP-260670,1105,1,F,Correction to NTN-NTN redirection [NR_TN_NTN_redir],19.2.0
+,RP-111,RP-260667,1106,1,F,Miscellaneous Stage 2 corrections for NR NTN phase 3,19.2.0
+,RP-111,RP-260668,1107,1,F,Network Energy Saving Enhancements rapporteur corrections,19.2.0
+,RP-111,RP-260666,1109,-,A,Correction of time-based handover for NR NTN,19.2.0
+,RP-111,RP-260668,1110,-,F,Correction on the description of NG Control Plane,19.2.0
+,RP-111,RP-260666,1113,-,A,UE Context Retention for NG – Stage 2,19.2.0
+,RP-111,RP-260664,1116,-,A,Corrections on Ephemeris orbital parameters and epoch time provided by O&M for NR NTN,19.2.0
+,RP-111,RP-260668,1117,-,F,Correction on Aerial UE location Reporting,19.2.0
+,RP-111,RP-260667,1118,-,F,Correction for Cell Switch execution,19.2.0
+,RP-111,RP-260667,1119,-,F,Support for Handover Cancel from the source gNB for LTM,19.2.0

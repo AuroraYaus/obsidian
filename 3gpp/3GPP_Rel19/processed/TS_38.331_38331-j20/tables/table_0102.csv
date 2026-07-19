@@ -1,0 +1,6 @@
+UEPositioningAssistanceInfo field descriptions
+associatedSRS-PosResourceIdListThis field indicates list of SRS for Positioning Resources which are associated to the ue-TxTEG-ID.
+nr-TimeStampThis field specifies the latest time instance at which the association is valid prior to the reporting.
+servCellIDThis field indicates the serving cell information of SRS for positioning resources associated to the UE Tx TEG report.
+ue-TxTEG-IDIdentifies the ID of UE Tx TEG.
+"ue-TxTEG-TimingErrorMarginValueThis field specifies the UE Tx TEG timing error margin value of all the UE Tx TEGs within one UEPositioningAssistanceInfo. Value tc0 corresponds to 0 Tc, tc2 corresponds to 2 Tc and so on (see TS 37.355 [49])."

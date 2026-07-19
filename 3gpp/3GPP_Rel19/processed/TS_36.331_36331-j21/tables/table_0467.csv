@@ -1,0 +1,25 @@
+AS-Config field descriptions
+antennaInfoCommonThis field provides information about the number of antenna ports in the source PCell.
+p-MaxEUTRAIndicates the p-MaxEUTRA in the source PCell.
+scg-StateIndicates that the SCG is deactivated.
+"sourceOtherConfigSN-NROther NR config set by SN (cell group, measurements) in case of (NG)EN-DC i.e. as defined by the RRCReconfiguration message in TS 38.331 [82]."
+"sourceRB-ConfigNRNR radio bearer config, as defined by RadioBearerConfig IE in TS 38.331 [82]. The field may e.g. be set by MN in case of (NG)EN-DC, by source eNB connected to 5GCN."
+"sourceRB-ConfigSN-NRNR radio bearer config set by SN in case of (NG)EN-DC or of SN terminated RB without SCG, as defined by RadioBearerConfig IE in TS 38.331 [82]."
+"sourceDL-CarrierFreqProvides the parameter Downlink EARFCN in the source PCell, see TS 36.101 [42] and TS 36.102 [113]. If the source eNB provides AS-Config-v9e0, it sets sourceDl-CarrierFreq (i.e. without suffix) to maxEARFCN."
+sourceLWA-ConfigLWA configuration in the source PCell when handover is triggered.
+sourceOtherConfigProvides other configuration in the source PCell.
+sourceMasterInformationBlockMasterInformationBlock transmitted in the source PCell.
+sourceMeasConfigMeasurement configuration in the source cell. The measurement configuration for all measurements existing in the source eNB when handover is triggered shall be included. See 10.5.
+sourceRCLWI-ConfigurationRCLWI Configuration in the source PCell.
+sourceSL-CommConfigThis field covers the sidelink communication configuration.
+sourceSL-DiscConfigThis field covers the sidelink discovery configuration.
+sourceRadioResourceConfigRadio configuration in the source PCell. The radio resource configuration for all radio bearers existing in the source PCell when handover is triggered shall be included. See 10.5.
+sourceSCellConfigListRadio resource configuration (common and dedicated) of the SCells configured in the source eNB.
+sourceSCG-ConfiguredNRValue true indicates that the UE is configured with NR SCG in source configuration. The field is included only if sourceOtherConfigSN-NR is not included.
+sourceSecurityAlgorithmConfigThis field provides the AS integrity protection (SRBs) and AS ciphering (SRBs and DRBs) algorithm configuration used in the source PCell.
+sourceSystemInformationBlockType1SystemInformationBlockType1 (or SystemInformationBlockType1-BR) transmitted in the source PCell.
+sourceSystemInformationBlockType2SystemInformationBlockType2 transmitted in the source PCell.
+sourceSL-V2X-CommConfigIndicates the V2X sidelink communication related configurations configured in the source eNB.
+sourceWLAN-MeasResultWLAN measurement results in the source PCell when handover is triggered.
+tdm-PatternConfigIndicates the tdm-PatternConfig configured to the UE in the source PCell.
+tdm-PatternConfig2Indicates the tdm-PatternConfig2 configured to the UE in the source PCell.

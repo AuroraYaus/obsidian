@@ -1,0 +1,13 @@
+PUSCH-ServingCellConfig field descriptions
+"codeBlockGroupTransmissionEnables and configures code-block-group (CBG) based transmission (see TS 38.214 [19], clause 6.1.5).The network does not configure this field if the SCS of at least one UL BWP configured in the cell is 480 or 960 kHz."
+"maxMIMO-LayersIndicates the maximum MIMO layer to be used for PUSCH in all BWPs of the corresponding UL of this serving cell (see TS 38.212 [17], clause 5.4.2.1). If present, the network sets maxRank to the same value. The field maxMIMO-Layers refers to DCI format 0_1. If network configures maxMIMO-Layers-v1810 the UE ignores maxMIMO-Layers (without suffix)."
+maxMIMO-LayersforSDMParameter to indicate maximal number of MIMO layers of each panel for PUSCH with SDM scheme for NCB PUSCH
+maxMIMO-LayersforSDM-DCI-0-2Parameter to indicate maximal number of MIMO layers of each panel for PUSCH with SDM scheme for DCI format 0_2 for NCB PUSCH
+maxMIMO-LayersforSFNParameter to indicate maximal number of MIMO layers of each panel for PUSCH with SFN scheme for NCB PUSCH
+maxMIMO-LayersforSFN-DCI-0-2Parameter to indicate maximal number of MIMO layers of each panel for PUSCH with SFN scheme for DCI format 0_2 for NCB PUSCH
+"nrofHARQ-ProcessesForPUSCHThe number of HARQ processes to be used on the PUSCH of a serving cell. Value n32 corresponds to 32 HARQ processes. If the field is absent, the UE uses 16 HARQ processes (see TS 38.214 [19], clause 6.1)."
+"processingType2EnabledEnables configuration of advanced processing time capability 2 for PUSCH (see 38.214 [19], clause 6.4)."
+"rateMatchingEnables LBRM (Limited buffer rate-matching). When the field is absent the UE applies FBRM (Full buffer rate-matchingLBRM) (see TS 38.212 [17], clause 5.4.2)."
+"xOverheadIf the field is absent, the UE applies the value 0 (see TS 38.214 [19], clause 6.1.4.2)."
+"maxMIMO-LayersDCI-0-2Indicates the maximum MIMO layer to be used for PUSCH for DCI format 0_2 in all BWPs of the corresponding UL of this serving cell (see TS 38.212 [17], clause 5.4.2.1). If present, the network sets maxRankDCI-0-2 to the same value."
+"uplinkHARQ-modeUsed to set the HARQ mode per HARQ process ID, see TS 38.321 [3]. The first/leftmost bit corresponds to HARQ process ID 0, the next bit to HARQ process ID 1 and so on. Bits corresponding to HARQ process IDs that are not configured shall be ignored. A bit set to one identifies a HARQ process with HARQmodeA and a bit set to zero identifies a HARQ process with HARQ modeB. This field applies for SRBs and DRBs."

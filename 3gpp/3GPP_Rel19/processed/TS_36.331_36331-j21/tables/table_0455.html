@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>SL-Preconfiguration field descriptions</td>
+  </tr>
+  <tr>
+    <td>carrierFreqIndicates the carrier frequency for out of coverage sidelink communication and sidelink discovery. In case of FDD it is uplink carrier frequency and the corresponding downlink frequency can be determined from the default TX-RX frequency separation defined in TS 36.101 [42], table 5.7.3-1.</td>
+  </tr>
+  <tr>
+    <td>additionalSpectrumEmissionThe UE requirements related to IE AdditionalSpectrumEmission are defined in TS 36.101 [42], clause 6.2.4. If additionalSpectrumEmissionExt-r14 is configured, the UE only considers additionalSpectrumEmissionExt-r14 (and ignores additionalSpectrumEmission-r12).</td>
+  </tr>
+  <tr>
+    <td>commRxPoolListIndicates a list of reception pools for sidelink communication in addition to the resource pools indicated by preconfigComm.</td>
+  </tr>
+  <tr>
+    <td>commTxPoolListIndicates a list of transmission pools for sidelink communication in addition to the first resource pool within preconfigComm.</td>
+  </tr>
+  <tr>
+    <td>preconfigCommIndicates a list of resource pools. The first resource pool in the list is used for both reception and transmission of sidelink communication. The other resource pools, if present, are only used for reception of sidelink communication.</td>
+  </tr>
+  <tr>
+    <td>syncRefDiffHystHysteresis when evaluating a SyncRef UE using relative comparison. Value dB0 corresponds to 0 dB, dB3 to 3 dB and so on, value dBinf corresponds to infinite dB.</td>
+  </tr>
+  <tr>
+    <td>syncRefMinHystHysteresis when evaluating a SyncRef UE using absolute comparison. Value dB0 corresponds to 0 dB, dB3 to 3 dB and so on.</td>
+  </tr>
+</table>

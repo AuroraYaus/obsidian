@@ -1,0 +1,26 @@
+Bit field mapped to index,maxRank = 5,Bit field mapped to index,maxRank = 6,Bit field mapped to index,maxRank = 7,Bit field mapped to index,maxRank = 8
+0,1 layer: TPMI=0,0,1 layer: TPMI=0,0,1 layer: TPMI=0,0,1 layer: TPMI=0
+…,…,…,…,…,…,…,…
+15,1 layer: TPMI=15,15,1 layer: TPMI=15,15,1 layer: TPMI=15,15,1 layer: TPMI=15
+16,2 layers: TPMI=0,16,2 layers: TPMI=0,16,2 layers: TPMI=0,16,2 layers: TPMI=0
+…,…,…,…,…,…,…,…
+119,2 layers: TPMI=103,119,2 layers: TPMI=103,119,2 layers: TPMI=103,119,2 layers: TPMI=103
+120,3 layers: TPMI=0,120,3 layers: TPMI=0,120,3 layers: TPMI=0,120,3 layers: TPMI=0
+…,…,…,…,…,…,…,…
+423,3 layers: TPMI=303,423,3 layers: TPMI=303,423,3 layers: TPMI=303,423,3 layers: TPMI=303
+424,4 layers: TPMI=0,424,4 layers: TPMI=0,424,4 layers: TPMI=0,424,4 layers: TPMI=0
+…,…,…,…,…,…,…,…
+703,4 layers: TPMI=279,703,4 layers: TPMI=279,703,4 layers: TPMI=279,703,4 layers: TPMI=279
+704,5 layers: TPMI=0,704,5 layers: TPMI=0,704,5 layers: TPMI=0,704,5 layers: TPMI=0
+…,…,…,…,…,…,…,…
+863,5 layers: TPMI=159,863,5 layers: TPMI=159,863,5 layers: TPMI=159,863,5 layers: TPMI=159
+864-1023,reserved,864,6 layers: TPMI=0,864,6 layers: TPMI=0,864,6 layers: TPMI=0
+,,…,…,…,…,…,…
+,,943,6 layers: TPMI=79,943,6 layers: TPMI=79,943,6 layers: TPMI=79
+,,944-1023,reserved,944,7 layers: TPMI=0,944,7 layers: TPMI=0
+,,,,…,…,…,…
+,,,,975,7 layers: TPMI=31,975,7 layers: TPMI=31
+,,,,976-1023,reserved,976,8 layers: TPMI=0
+,,,,,,…,…
+,,,,,,991,8 layers: TPMI=15
+,,,,,,992-1023,reserved

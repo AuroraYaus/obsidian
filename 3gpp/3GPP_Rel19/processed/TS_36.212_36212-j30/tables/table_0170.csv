@@ -1,0 +1,9 @@
+Field,Bit width,,,
+,2 antenna ports,,4 antenna ports,
+,Rank = 1,Rank = 2,Rank = 1,Rank > 1
+Wide-band CQI,0,0,0,0
+Sub-band CQI,4,4,4,4
+Spatial differential CQI,0,3,0,3
+Wide-band i2,0,0,0,0
+Sub-band i2,0,0,0,0
+Sub-band label,1 or 2,1 or 2,1 or 2,1 or 2

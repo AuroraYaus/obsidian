@@ -1,0 +1,30 @@
+MAC-CellGroupConfig field descriptions
+"additionalBS-TableAllowedIndicates whether a UE is allowed to utilize the refined buffer size levels, as specified in TS 38.321 [3], for a certain Logical Channel Group. The leftmost bit corresponds to LCG ID=0, second leftmost bit to LCG ID=1 and so on. The UE is allowed to utilize the refined buffer size levels for a Logical Channel Group only when the corresponding bit is set to 1."
+"allowCSI-SRS-Tx-MulticastDRX-ActiveUsed to control the CSI/SRS transmission during MBS multicast DRX ActiveTime, see TS 38.321 [3]."
+"csi-MaskIf set to true, the UE limits CSI reports to the on-duration period of the DRX cycle, see TS 38.321 [3]. Network does not configure csi-Mask when lpwus-PDCCH-MonitoringTimer is configured (see TS 38.321 [3])."
+"dataInactivityTimerReleases the RRC connection upon data inactivity as specified in clause 5.3.8.5 and in TS 38.321 [3]. Value s1 corresponds to 1 second, value s2 corresponds to 2 seconds, and so on."
+"drx-Config, drx-ConfigExt, drx-ConfigExt2Used to configure DRX as specified in TS 38.321 [3]. Network only configures drx-ConfigExt or drx-ConfigExt2 when drx-Config is configured."
+drx-ConfigSecondaryGroupUsed to configure DRX related parameters for the second DRX group as specified in TS 38.321 [3]. The network does not configure secondary DRX group with DCP simultaneously nor secondary DRX group with a dormant BWP simultaneously.
+"drx-ConfigSLUsed to configure additional DRX parameters for the UE performing sidelink operation with resource allocation mode 1, as specified in TS 38.321 [3]. Network only configures this field if sl-ScheduledConfig is configured and drx-Config is configured."
+"drx-LastTransmissionULIf this field is present, the start of the drx-HARQ-RTT-TimerUL is after the last transmission within a bundle, see TS 38.321 [3]."
+dsr-ConfigToAddModListList of LCG-specific DSR configurations to add or modify.
+dsr-ConfigToReleaseListList of LCG-specific DSR configurations to release.
+g-RNTI-ConfigToAddModListList of G-RNTI configurations to add or modify. Up to 8 G-RNTIs can be configured in total in this release based on the UE capability.
+g-RNTI-ConfigToReleaseListList of G-RNTI configurations to release.
+g-CS-RNTI-ConfigToAddModListList of G-CS-RNTI configurations to add or modify. Up to 8 G-CS-RNTIs can be configured in total in this release based on the UE capability.
+g-CS-RNTI-ConfigToReleaseListList of G-CS-RNTI configurations to release.
+intraCG-PrioritizationUsed to enable HARQ process ID selection based on LCH-priority for one CG as specified in TS 38.321 [3].
+"lch-BasedPrioritizationIf this field is present, the corresponding MAC entity of the UE is configured with prioritization between overlapping grants and between scheduling request and overlapping grants based on LCH priority, see TS 38.321 [3]. The network does not configure lch-BasedPrioritization with enhancedSkipUplinkTxDynamic simultaneously nor lch-BasedPrioritization with enhancedSkipUplinkTxConfigured simultaneously."
+"posMG-RequestIndicates whether UE is configured to send UL MAC CE for Positioning Measurement Gap Activation/Deactivation Request, as specified in TS 38.321 [3]."
+"schedulingRequestID-BFR-SCellIndicates the scheduling request configuration applicable for BFR on SCell, as specified in TS 38.321 [3]."
+schedulingRequestID-BFRIndicates the scheduling request configuration (SchedulingRequestConfig) that the UE shall use upon detecting a beam failure on the detection resources configured in failureDetectionSet1 of a serving cell while beam failure is not detected on resources configured in failureDetectionSet2 of the same serving cell.
+schedulingRequestID-BFR2Indicates the scheduling request configuration (SchedulingRequestConfig) that the UE shall use upon detecting a beam failure on the detection resources configured in failureDetectionSet2 of a serving cell while beam failure is not detected on resources configured in failureDetectionSet1 of the same serving cell.
+"schedulingRequestID-LBT-SCellIndicates the scheduling request configuration applicable for consistent uplink LBT recovery on SCell, as specified in TS 38.321 [3]."
+"schedulingRequestID-LTMIndicates the scheduling request configuration applicable for event-triggered measurement report by MAC CE, as specified in TS 38.321 [3]."
+"schedulingRequestID-PosMG-RequestIndicates the scheduling request configuration applicable for Positioning Measurement Gap Activation/Deactivation Request, as specified in TS 38.321 [3]."
+"skipUplinkTxDynamic, enhancedSkipUplinkTxDynamic, enhancedSkipUplinkTxConfiguredIf set to true, the UE skips UL transmissions as described in TS 38.321 [3]. If the UE is configured with enhancedSkipUplinkTxDynamic or enhancedSkipUplinkTxConfigured with value true, REPETITION_NUMBER (as specified in TS 38.321 [3], clause 5.4.2.1) of the corresponding PUSCH transmission of the uplink grant shall be equal to 1. The network does not configure enhancedSkipUplinkTxDynamic or enhancedSkipUplinkTxConfigured with value true together with numberOfSlotsTBoMS-r17. The network does not configure skipUplinkTxDynamic with value true if eventTypeUE-Initiated is configured for a serving cell in the corresponding MAC entity."
+tag-ConfigThe field is used to configure parameters for a time-alignment group. The field is not present if any DAPS bearer is configured.
+ul-RateControlConfigListIncludes the list of QoS flows for which the UL rate control is enabled.
+ul-RateQueryConfigListIncludes the list of QoS flows for which the UL rate query is enabled.
+"ul-RateQueryProhibitTimerThis timer is used for uplink bit rate query as specified in TS 38.321 [3]. Value s0 means 0 s, s0dot1 means 0.1 s and so on."
+"usePreBSRIf set to true, the MAC entity of the IAB-MT may use the Pre-emptive BSR, see TS 38.321 [3]."

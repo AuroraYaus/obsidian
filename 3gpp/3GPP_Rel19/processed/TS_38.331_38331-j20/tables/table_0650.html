@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <td>UplinkTxDirectCurrentMoreCarrierList and CC-Group field descriptions</td>
+  </tr>
+  <tr>
+    <td>CC-GroupThe contiguous carriers sharing the same PA in an intra-band UL CA configuration. The UE shall report only one DC location for an intra-band CC combination with one active uplink carrier in case DefaultDC-Location is set to activeCarrier or activeBWP.</td>
+  </tr>
+  <tr>
+    <td>defaultDC-LocationIndicates the default DC location derivation option. The default Tx Direct Current is located at the mathematical center of the UE bandwidth, i.e. between the lower edge of the lowest subcarrier of the lowest frequency component and the upper edge of the highest subcarrier of the highest frequency component, rounded to the subcarrier grid of the lowest SCS defined for the component carrier on which the default Direct Current is located. The lowest and highest frequency components used for derivation of mathematical center are indicated by FrequencyComponent in the associated CC-Group, where the lowest frequency component and the highest frequency component may be the same. If the mathematical center of the UE bandwidth lands on frequencies where there is no subcarrier grid defined, the subcarrier grid of the lowest SCS of the nearest lower frequency component carrier shall be extended to cover the frequency of the mathematical default Direct Current location.</td>
+  </tr>
+  <tr>
+    <td>offsetToDefaultIndicates the DC location offset to the default DC location derived from defaultDC-Location. The lowest SCS in the CC group is used as the offset granularity. Value 0 respresents no offset.offsetValue is used in case DefaultDC-Location is set to configuredCarrier or configuredBWP. offsetlist is used in case DefaultDC-Location is set to activeCarrier or activeBWP. Each entity in this list corresponds to the entry in carriers combination in IntraBandCC-CombinationReqList of the intra-band CA component. For each CC group, the UE shall include the same number of entries, and listed in the same order as in CC-CombinationList. If DefaultDC-Location is set the activeCarrier, same offsetValue is signalled for all requested carriers combinations with same active carriers states(regardless of the active BWP index).</td>
+  </tr>
+  <tr>
+    <td>servCellIndexHigherIndicates the serving cell index of the highest edge of the CC-Group. If asbsent, there is only one carrier in this group indicated by servCellIndexLower.</td>
+  </tr>
+  <tr>
+    <td>servCellIndexLowerIndicates the serving cell index of the lowest edge of the CC-Group.</td>
+  </tr>
+  <tr>
+    <td>shift7dot5kHzIndicates whether there is 7.5 kHz shift or not. 7.5 kHz shift is applied if the field is set to true, otherwise 7.5 kHz shift is not applied.</td>
+  </tr>
+</table>

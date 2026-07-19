@@ -1,0 +1,4 @@
+Definitions for parameters,Per,M,FDD-TDDDIFF,FR1-FR2DIFF
+lcg-ExtensionIAB-r17Indicates whether the IAB-MT supports extended logical channel group as specified in TS 38.321 [8]. A UE supporting this feature shall also support Extended Buffer Status Report formats and Extended Pre-emptive BSR formats (if preEmptiveBSR-r16 is supported).,IAB-MT,No,No,No
+"lcid-ExtensionIAB-r16Indicates whether the IAB-MT supports extended Logical Channel ID space using two-octet eLCID, as specified in TS 38.321 [8].",IAB-MT,No,No,No
+preEmptiveBSR-r16Indicates whether the IAB-MT supports Pre-emptive BSR as specified in TS 38.321 [8].,IAB-MT,No,No,No

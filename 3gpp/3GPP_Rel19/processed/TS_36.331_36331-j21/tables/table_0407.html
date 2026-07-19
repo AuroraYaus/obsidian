@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td>ResourceReservationConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>periodicityPeriodicity of the reserved resource. Value ms10 corresponds to 10 milliseconds, value ms20 corresponds to 20 milliseconds, and so on.</td>
+  </tr>
+  <tr>
+    <td>slotPattern10ms, slotPattern40msFor FDD: Downlink slot-level resource reservation configuration over 10ms or 40ms.Parameter slot-reserved-resource-config-DL in TS 36.211 [21] and TS 36.213 [23]The first/leftmost 2-bits corresponds to the subframe #0 of the radio frame satisfying SFN mod x = startPosition, where x is the periodicity of the reserved resource divided by 10. Two bits for each subframe coded as:00: both slots are not reserved01: the first slot is not reserved, the second slot is reserved10: the first slot is reserved, the second slot is not reserved11: both slots are reserved</td>
+  </tr>
+  <tr>
+    <td>startPositionStart time of the resource reservation pattern in one period. Unit in multiple of 10 milliseconds.E-UTRAN configures the value of startPosition such as startPosition * 10 &lt; periodicity.</td>
+  </tr>
+  <tr>
+    <td>subframePattern10ms, subframePattern40msFor FDD: Downlink subframe-level resource reservation configuration over 10ms or 40ms.Parameters valid-subframe-config-DL in TS 36.211 [21] and TS 36.213 [23].The first/leftmost bit corresponds to the subframe #0 of the radio frame satisfying SFN mod x = startPosition, where x is the periodicity of the reserved resource divided by 10. Value 0 indicates that the corresponding subframe is not reserved, value 1 indicates that the corresponding subframe is reserved.</td>
+  </tr>
+  <tr>
+    <td>symbolBitmapSymbol-level resource reservation for one subframe.E-UTRAN configures symbolConfigFddDl for a DL FDD NB-IoT carrier.  E-UTRAN configures symbolConfigFddULOrTdd for an UL FDD NB-IoT carrier or a TDD NB-IoT carrier.</td>
+  </tr>
+  <tr>
+    <td colspan="2">symbolBitmap1, symbolBitmap2Symbol-level resource reservation over the first or the second slot of one subframe, see TS 36.211 [21].The first/leftmost bit corresponds to the symbol #0 in the slot. Value 0 indicates that the corresponding symbol is not reserved, value 1 indicates that the corresponding symbol is reserved.If symbolBitmap1 is absent, value &#x27;01&#x27; in the slotBitmap corresponds to the second slot being reserved.If symbolBitmap2 is absent, value &#x27;10&#x27; in the slotBitmap corresponds to the first slot being reserved.</td>
+  </tr>
+  <tr>
+    <td>symbolBitmapFddDlFor FDD: Downlink symbol-level resource reservation over the first and the second slot of one subframe, see TS 36.211 [21].Symbols that carry NRS are not reserved.</td>
+  </tr>
+  <tr>
+    <td>symbolBitmapFddUlOrTddFor FDD: Uplink symbol-level resource reservation over the first and the second slot of one subframe, see TS 36.211 [21].For TDD: Uplink or downlink symbol-level resource reservation over the first and the second slot of one subframe, see TS 36.211 [21].Symbols that carry NRS are not reserved.</td>
+  </tr>
+</table>

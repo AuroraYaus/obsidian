@@ -1,0 +1,18 @@
+RRCResume-IEs field descriptions
+appLayerMeasConfigThis field is used to configure application layer measurements. This field is absent when the UE is configured to operate with shared spectrum channel access.
+"idleModeMeasurementReqThis field indicates that the UE shall report the idle/inactive measurements, if available, to the network in the RRCResumeComplete message"
+masterCellGroupConfiguration of the master cell group.
+"mrdc-SecondaryCellGroupIncludes an RRC message for SCG configuration in NR-DC or NE-DC.For NR-DC (nr-SCG), mrdc-SecondaryCellGroup contains the RRCReconfiguration message as generated (entirely) by SN gNB. In this version of the specification, the RRC message can only include fields secondaryCellGroup (with at least reconfigurationWithSync), otherConfig and measConfig.For NE-DC (eutra-SCG), mrdc-SecondaryCellGroup includes the E-UTRA RRCConnectionReconfiguration message as specified in TS 36.331 [10]. In this version of the specification, the E-UTRA RRC message only include the field scg-Configuration with at least mobilityControlInfoSCG."
+needForGapsConfigNRConfiguration for the UE to report measurement gap requirement information of NR target bands in the RRCReconfigurationComplete and RRCResumeComplete message.
+needForGapNCSG-ConfigEUTRAConfiguration for the UE to report measurement gap and NCSG requirement information of EUTRA target bands in the RRCReconfigurationComplete and RRCResumeComplete message.
+needForGapNCSG-ConfigNRConfiguration for the UE to report measurement gap and NCSG requirement information of NR target bands in the RRCReconfigurationComplete and RRCResumeComplete message.
+needForInterruptionConfigNRIndicates whether the UE shall report interruption requirement information of NR target bands in the RRCReconfigurationComplete and RRCResumeComplete message. The network sets this field to enabled only if the needForGapsConfigNR is configured. The network sets this field to disabled if the needForGapsConfigNR is released.
+"radioBearerConfigConfiguration of Radio Bearers (DRBs, SRBs, multicast MRBs) including SDAP/PDCP."
+"radioBearerConfig2Configuration of Radio Bearers (DRBs, SRBs) including SDAP/PDCP. This field can only be used if the UE supports NR-DC or NE-DC."
+"reselectionMeasurementReqThis field indicates that the UE shall report the reselection measurements, if available, to the network in the RRCResumeComplete message."
+"restoreMCG-SCellsIndicates that the UE shall restore the MCG SCells from the UE Inactive AS Context, if stored."
+"restoreSCGIndicates that the UE shall restore the SCG configurations from the UE Inactive AS Context, if stored."
+scg-StateIndicates that the SCG is in deactivated state.
+sk-CounterA counter used to derive S-KgNB or S-KeNB based on the newly derived KgNB during RRC Resume. The field is only included when there is one or more RB with keyToUse set to secondary or mrdc-SecondaryCellGroup is included.
+sl-ConfigDedicatedNRThis field is used to provide the dedicated configurations for NR sidelink communication/discovery used by L2 U2N Remote UE.
+sl-L2RemoteUE-ConfigContains L2 U2N relay operation related configurations used by L2 U2N Remote UE. The field is absent if appLayerMeasConfig or SRB4 is configured/not released.

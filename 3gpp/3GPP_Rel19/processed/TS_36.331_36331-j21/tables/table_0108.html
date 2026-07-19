@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <td>AntennaInfo field descriptions</td>
+  </tr>
+  <tr>
+    <td>alternativeCodebookEnabledFor4TXIndicates whether code book in TS 36.213 [23] Table 7.2.4-0A to Table 7.2.4-0D is being used for deriving CSI feedback and reporting. E-UTRAN only configures the field if the UE is configured with a) tm8 with 4 CRS ports, tm9 or tm10 with 4 CSI-RS ports and b) PMI/RI reporting.</td>
+  </tr>
+  <tr>
+    <td>antennaPortsCountParameter represents the number of cell specific antenna ports where an1 corresponds to 1, an2 to 2 antenna ports etc. see TS 36.211 [21], clause 6.2.1.</td>
+  </tr>
+  <tr>
+    <td>ce-ue-TxAntennaSelection-configConfiguration of UL closed-loop transmit antenna selection for non-BL UE in CE Mode A, see TS 36.212 [22].</td>
+  </tr>
+  <tr>
+    <td>codebookSubsetRestrictionParameter: codebookSubsetRestriction, see TS 36.213 [23], clause 7.2 and TS 36.211 [21], clause 6.3.4.2.3. The number of bits in the codebookSubsetRestriction for applicable transmission modes is defined in TS 36.213 [23], Table 7.2-1b. If the UE is configured with transmissionMode tm8, E-UTRAN configures the field codebookSubsetRestriction if PMI/RI reporting is configured. If the UE is configured with transmissionMode tm9, E-UTRAN configures the field codebookSubsetRestriction if PMI/RI reporting is configured and if the number of CSI-RS ports is greater than 1. E-UTRAN does not configure the field codebookSubsetRestriction in other cases where the UE is configured with transmissionMode tm8 or tm9. Furthermore, E-UTRAN does not configure the field codebookSubsetRestriction if the UE is configured with eMIMO-Type unless it is set to beamformed, alternativeCodebookEnabledBeamformed is set to FALSE and csi-RS-ConfigNZPIdListExt is not configured.</td>
+  </tr>
+  <tr>
+    <td>maxLayersMIMOIndicates the maximum number of layers for spatial multiplexing used to determine the rank indication bit width and Kc determination of the soft buffer size for the corresponding serving cell according to TS 36.212 [22]. EUTRAN configures this field only when transmissionMode is set to tm3, tm4, tm9 or tm10 for the corresponding serving cell. When configuring the field for a serving cell which transmissionMode is set to tm3 or tm4, EUTRAN only configures value fourLayers: For a serving cell which transmissionMode is set to tm9 or tm10, EUTRAN only configures the field only if intraBandContiguousCC-InfoList or FeatureSetDL-PerCC is indicated for the band and the band combination of the corresponding serving cell or the UE supports maxLayersMIMO-Indication.</td>
+  </tr>
+  <tr>
+    <td>maxLayersMIMO-STTIIndicates the maximum number of layers, for each serving cell, to be used when determining if the shifted DMRS pattern is applicable TS 36.211 [21], clause 6.10.3.2.</td>
+  </tr>
+  <tr>
+    <td>slotSubslotPDSCH-TxDiv-2Layer, slotSubslotPDSCH-TxDiv-4LayerIndicates the table to be used in case of dynamic TX diversity fallback for TM9 and 10 for up to 2-layer/4-layer slot or subslot PDSCH operation, see TS 36.212 [22], clause 5.3.3.1.22.</td>
+  </tr>
+  <tr>
+    <td>transmissionModePoints to one of Transmission modes defined in TS 36.213 [23], clause 7.1, where tm1 refers to transmission mode 1, tm2 to transmission mode 2 etc.</td>
+  </tr>
+  <tr>
+    <td>transmissionModeDL-MBSFNIndicates, for MBSFN, the transmission mode as defined in TS 36.213 [23], clause 7.1, where tm1 refers to transmission mode 1, tm2 to transmission mode 2 etc for slot or subslot operation. In case of FDD, TM8 is not applicable.</td>
+  </tr>
+  <tr>
+    <td>transmissionModeDL-nonMBSFNIndicates, for non-MBSFN, the transmission mode as defined in TS 36.213 [23], clause 7.1, where tm1 refers to transmission mode 1, tm2 to transmission mode 2 etc. for slot or subslot operation. In case of FDD, TM8 is not applicable.</td>
+  </tr>
+  <tr>
+    <td>ue-TransmitAntennaSelectionFor value setup, the field indicates whether UE transmit antenna selection control is closed-loop or open-loop as described in TS 36.213 [23], clause 8.7.</td>
+  </tr>
+  <tr>
+    <td>ue-TxAntennaSelection-SRS-1T4R-ConfigConfiguration of UL closed-loop transmit antenna selection for UE to select one antenna among four antennas to transmit SRS for the corresponding serving cell as described in TS 36.213 [23]. When ue-TxAntennaSelection-SRS-1T4R-Config and ue-TransmitAntennaSelection are configured simultaneously for a given serving cell, the UE selects one of the first two antennas for PUSCH transmission and selects one antenna among four antennas at each SRS instance for SRS transmission for the corresponding serving cell as described in TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>ue-TxAntennaSelection-SRS-2T4R-NrOfPairsPresence of the field indicates configuration of UL closed-loop transmit antenna selection for UE to select two antennas among four antennas to transmit SRS simultaneously for the corresponding serving cell as described in TS 36.213 [23]. Further, the field indicates the number of antenna pairs to select from for SRS transmission for a given serving cell as described in TS 36.213 [23]. Value two indicates the UE to select one antenna pair between two antenna pairs to transmit SRS simultaneously at each SRS instance for the corresponding serving cell. Value three indicates the UE to select one antenna pair among three antenna pairs to transmit SRS simultaneously at each SRS instance for the corresponding serving cell. EUTRAN does not simultaneously configure ue-TransmitAntennaSelection and ue-TxAntennaSelection-SRS-2T4R-NrOfPairs for a given serving cell.</td>
+  </tr>
+</table>

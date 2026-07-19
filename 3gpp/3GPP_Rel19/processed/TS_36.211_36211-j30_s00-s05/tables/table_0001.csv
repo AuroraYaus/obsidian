@@ -1,0 +1,5 @@
+Subslot number,0,1,2,3,4,5
+Slot number,2i,,,2i+1,,
+Uplink subslot pattern,"0, 1, 2","3, 4","5, 6","0, 1","2, 3","4, 5, 6"
+Downlink subslot pattern 1,"0, 1, 2","3, 4","5, 6","0, 1","2, 3","4, 5, 6"
+Downlink subslot pattern 2,"0, 1","2, 3, 4","5, 6","0, 1","2, 3","4, 5, 6"

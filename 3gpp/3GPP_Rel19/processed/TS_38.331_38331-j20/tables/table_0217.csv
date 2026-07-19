@@ -1,0 +1,4 @@
+CGI-InfoNR field descriptions
+cellReservedForOtherUseContains cellReservedForOtherUse field acquired by the UE that supports nr-CGI-Reporting-NPN from SIB1 of the cell for which report CGI procedure was requested by the network.
+hsdn-CellContains hsdn-Cell field acquired by the UE that supports nr-CGI-Reporting-HSDN from SIB1 of the cell for which report CGI procedure was requested by the network.
+noSIB1Contains ssb-SubcarrierOffset and pdcch-ConfigSIB1 fields acquired by the UE from MIB of the cell for which report CGI procedure was requested by the network in case SIB1 was not broadcast by the cell.

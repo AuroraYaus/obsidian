@@ -1,0 +1,6 @@
+RF-ParametersMRDC field descriptions
+"appliedFreqBandListFilterIn this field the UE mirrors the FreqBandList that the NW provided in the capability enquiry, if any. The UE filtered the band combinations in the supportedBandCombinationList in accordance with this appliedFreqBandListFilter."
+"dummy1, dummy2The fields are not used in the specification and the network ignores the received values."
+"supportedBandCombinationListA list of band combinations that the UE supports for (NG)EN-DC, or both (NG)EN-DC and NE-DC. The FeatureSetCombinationId:s in this list refer to the FeatureSetCombination entries in the featureSetCombinations list in the UE-MRDC-Capability IE."
+"supportedBandCombinationListNEDC-Only, supportedBandCombinationListNEDC-Only-v1610, supportedBandCombinationListNEDC-Only-v1780A list of band combinations that the UE supports only for NE-DC. The FeatureSetCombinationId:s in this list refer to the FeatureSetCombination entries in the featureSetCombinations list in the UE-MRDC-Capability IE."
+supportedBandCombinationList-UplinkTxSwitchA list of band combinations that the UE supports dynamic UL Tx switching for (NG)EN-DC. The FeatureSetCombinationId:s in this list refer to the FeatureSetCombination entries in the featureSetCombinations list in the UE-MRDC-Capability IE.

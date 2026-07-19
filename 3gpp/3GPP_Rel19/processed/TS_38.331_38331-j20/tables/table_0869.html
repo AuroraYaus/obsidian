@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>MeasurementTimingConfiguration field descriptions</td>
+  </tr>
+  <tr>
+    <td>campOnFirstSSBValue true indicates that the SSB indicated in the first instance of MeasTiming in the measTiming list can be used for camping and for a PCell configuration (i.e. in spCellConfigCommon of the masterCellGroup) and to indicate which neighbour cell SSB is CD-SSB and which one is NCD-SSB in use.</td>
+  </tr>
+  <tr>
+    <td>csi-RS-CellMobilityIndicates the CSI-RS configuration of the cell for which this message is included. The timing of the CSI-RS resources is based on the SSB indicated by refSSBFreq.</td>
+  </tr>
+  <tr>
+    <td>csi-RS-SubcarrierSpacingIndicates the subcarrier spacing of the CSI-RS resources included in csi-rs-CellMobility.</td>
+  </tr>
+  <tr>
+    <td>measTimingA list of SMTC information, SSB RSSI measurement information and associated NR frequency exchanged via EN-DC X2 Setup, EN-DC Configuration Update, Xn Setup and NG-RAN Node Configuration Update procedures, or F1 messages between gNB DU and gNB CU.</td>
+  </tr>
+  <tr>
+    <td>physCellIdPhysical Cell Identity of the SSB on the ARFCN indicated by carrierFreq.</td>
+  </tr>
+  <tr>
+    <td>psCellOnlyOnFirstSSBValue true indicates that only the SSB indicated in the first instance of MeasTiming in the measTiming list can be used for a PSCell configuration (i.e. in spCellConfigCommon of the secondaryCellGroup).</td>
+  </tr>
+  <tr>
+    <td>ssb-ToMeasureThe set of SS blocks to be measured within the SMTC measurement duration (see TS 38.215 [9]).</td>
+  </tr>
+</table>

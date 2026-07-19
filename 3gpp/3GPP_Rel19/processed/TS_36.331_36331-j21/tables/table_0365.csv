@@ -1,0 +1,5 @@
+SystemInformationBlockType15-NB field descriptions
+"mbms-SAI-InterFreqListContains a list of neighboring frequencies including additional frequency bands, if any, that provide MBMS services and the corresponding MBMS SAIs."
+"mbms-SAI-IntraFreqContains the list of MBMS SAIs for the current frequency. A duplicate MBMS SAI indicates that this and all following SAIs are not offered by this cell but only by neighbour cells on the current frequency. For MBMS service continuity, the UE shall use all MBMS SAIs listed in mbms-SAI-IntraFreq to derive the MBMS frequencies of interest."
+mbms-SAI-ListContains a list of MBMS SAIs for a specific frequency.
+multiBandInfoListA list of additional frequency bands applicable for the cells participating in the SC-PTM transmission.

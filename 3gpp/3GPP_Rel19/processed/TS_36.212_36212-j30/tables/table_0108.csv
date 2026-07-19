@@ -1,0 +1,19 @@
+Field,Bit width for CRI=0 or 1,,,
+,2 antenna ports,,4 antenna ports,
+,Rank = 1,Rank = 2,Rank = 1,Rank > 1
+Wide-band CQI codeword 0,4,4,4,4
+Subband differential CQI codeword 0,2,2,2,2
+Wide-band CQI codeword 1,0,4,0,4
+Subband differential CQI codeword 1,0,2,0,2
+Position of the M selected subbands,,,,
+Precoding matrix indicator,4,2,8,8
+Field,Bit width for CRI=2,,,
+,2 antenna ports,,4 antenna ports,
+,Rank = 1,Rank = 2,Rank = 1,Rank > 1
+Wide-band CQI codeword 0,4,4,4,4
+Subband differential CQI codeword 0,2,2,2,2
+Wide-band CQI codeword 1,4,4,4,4
+Subband differential CQI codeword 1,2,2,2,2
+Position of the M selected subbands,,,,
+Precoding matrix indicator codeword 0,4,2,8,8
+Precoding matrix indicator codeword 1,4,2,8,8

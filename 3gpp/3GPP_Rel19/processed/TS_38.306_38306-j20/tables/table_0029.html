@@ -1,0 +1,150 @@
+<table>
+  <tr>
+    <td>Features</td>
+    <td>Index</td>
+    <td>Feature group</td>
+    <td>Components</td>
+    <td>Additional information</td>
+  </tr>
+  <tr>
+    <td rowspan="3">0. Waveform, modulation, subcarrier spacings, and CP</td>
+    <td>0-1</td>
+    <td>CP-OFDM waveform for DL and UL</td>
+    <td>1) CP-OFDM for DL2) CP -OFDM for UL</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>0-3</td>
+    <td>DL modulation scheme</td>
+    <td>1) QPSK modulation2) 16QAM modulation3) 64QAM modulation for FR1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>0-4</td>
+    <td>UL modulation scheme</td>
+    <td>1) QPSK modulation2) 16QAM modulation</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">1. Initial access and mobility</td>
+    <td>1-1</td>
+    <td>Basic initial access channels and procedures</td>
+    <td>1) RACH preamble format2) SS block based RRM measurement3) Broadcast SIB reception including RMSI/OSI and paging</td>
+    <td>Only 1 preamble for component 1), component 2), component 3) except paging</td>
+  </tr>
+  <tr>
+    <td>1-3</td>
+    <td>SS block based RLM</td>
+    <td>SS-SINR measurement</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="10">2. MIMO</td>
+    <td>2-1</td>
+    <td>Basic PDSCH reception</td>
+    <td>1) Data RE mapping2) Single layer transmission3) Support one TCI state</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2-5</td>
+    <td>Basic downlink DMRSfor scheduling type A</td>
+    <td>1) Support 1 symbol FL DMRS without additional symbol(s)2) Support 1 symbol FL DMRS and 1 additional DMRS symbol3) Support 1 symbol FL DMRS and 2 additional DMRS symbols for at least one port.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2-6</td>
+    <td>Basic downlink DMRSfor scheduling type B</td>
+    <td>1) Support 1 symbol FL DMRS without additional symbol(s)2) Support 1 symbol FL DMRS and 1 additional DMRS symbol</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2-12</td>
+    <td>Basic PUSCH transmission</td>
+    <td>Data RE mappingSingle layer (single Tx) transmissionSingle port, single resource SRS transmission (SRS set use is configured as for codebook)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2-16</td>
+    <td>Basic uplink DMRS (uplink) for scheduling type A</td>
+    <td>1) Support 1 symbol FL DMRS without additional symbol(s)2) Support 1 symbol FL DMRS and 1 additional DMRS symbols3) Support 1 symbol FL DMRS and 2 additional DMRS symbols</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2-16a</td>
+    <td>Basic uplink DMRSfor scheduling type B</td>
+    <td>1) Support 1 symbol FL DMRS without additional symbol(s)2) Support 1 symbol FL DMRS and 1 additional DMRS symbol</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2-22</td>
+    <td>Aperiodic beam report</td>
+    <td>Support aperiodic report on PUSCH</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2-32</td>
+    <td>Basic CSI feedback</td>
+    <td>1) Type I single panel codebook based PMI (further discuss which mode or both to be supported as mandatory)2) 2Tx codebook for FR1 and FR23) 4Tx codebook for FR14) 8Tx codebook for FR1 when configured as wideband CSI report7) a-CSI on PUSCH (at least Z value &gt;= 14 symbols, detail processing time to be discussed separately)further check a-CSI on p-CSI-RS and/or SP-CSI-RS from component-7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2-50</td>
+    <td>Basic TRS</td>
+    <td>1) Support of TRS (mandatory)2) All the periodicity are supported.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2-52</td>
+    <td>Basic SRS</td>
+    <td>1) Support 1 port SRS transmission2) Support periodic/aperiodic SRS transmission</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>3. DL control channel and procedure</td>
+    <td>3-1</td>
+    <td>Basic DL control channel</td>
+    <td>1) One configured CORESET per BWP per cell in addition to CORESET0- CORESET resource allocation of 6RB bit-map and duration of 1 – 3 OFDM symbols for FR1- For type 1 CSS without dedicated RRC configuration and for type 0, 0A, and 2 CSSs, CORESET resource allocation of 6RB bit-map and duration 1-3 OFDM symbols for FR2- For type 1 CSS with dedicated RRC configuration and for type 3 CSS, UE specific SS, CORESET resource allocation of 6RB bit-map and duration 1-2 OFDM symbols for FR2- REG-bundle sizes of 2/3 RBs or 6 RBs- Interleaved and non-interleaved CCE-to-REG mapping- Precoder-granularity of REG-bundle size- PDCCH DMRS scrambling determination- TCI state(s) for a CORESET configuration2) CSS and UE-SS configurations for unicast PDCCH transmission per BWP per cell- PDCCH aggregation levels 1, 2, 4, 8, 16- UP to 3 search space sets in a slot for a scheduled SCell per BWPThis search space limit is before applying all dropping rules.- For type 1 CSS with dedicated RRC configuration, type 3 CSS, and UE-SS, the monitoring occasion is within the first 3 OFDM symbols of a slot- For type 1 CSS without dedicated RRC configuration and for type 0, 0A, and 2 CSS, the monitoring occasion can be any OFDM symbol(s) of a slot, with the monitoring occasions for any of Type 1- CSS without dedicated RRC configuration, or Types 0, 0A, or 2 CSS configurations within a single span of three consecutive OFDM symbols within a slot3) Monitoring DCI formats 0_0, 1_0, 0_1, 1_14) Number of PDCCH blind decodes per slot with a given SCS follows Case 1-1 table5) Processing one unicast DCI scheduling DL and one unicast DCI scheduling UL per slot per scheduled CC for FDD</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">4. UL control channel and procedure</td>
+    <td>4-1</td>
+    <td>Basic UL control channel</td>
+    <td>1) PUCCH format 0 over 1 OFDM symbols once per slot2) PUCCH format 0 over 2 OFDM symbols once per slot with frequency hopping as &quot;enabled&quot;3) PUCCH format 1 over 4 – 14 OFDM symbols once per slot with intra-slot frequency hopping as &quot;enabled&quot;5) One SR configuration per PUCCH group6) HARQ-ACK transmission once per slot with its resource/timing determined by using the DCI7)SR/HARQ multiplexing once per slot using a PUCCH when SR/HARQ-ACK are supposed to be sent by overlapping PUCCH resources with the same starting symbols in a slot8) HARQ-ACK piggyback on PUSCH with/without aperiodic CSI once per slot when the starting OFDM symbol of the PUSCH is the same as the starting OFDM symbols of the PUCCH resource that HARQ-ACK would have been transmitted on9) Semi-static beta-offset configuration for HARQ-ACK10) Single group of overlapping PUCCH/PUCCH and overlapping PUCCH/PUSCH s per slot per PUCCH cell group for control multiplexing</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>4-10</td>
+    <td>Dynamic HARQ-ACK codebook</td>
+    <td>Dynamic HARQ-ACK codebook</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>5. Scheduling/HARQ operation</td>
+    <td>5-1</td>
+    <td>Basic scheduling/HARQ operation</td>
+    <td>1) Frequency-domain resource allocation- RA Type 0 only and Type 1 only for PDSCH without interleaving- RA Type 1 for PUSCH without interleaving2) Time-domain resource allocation- 1-14 OFDM symbols for PUSCH once per slot- One unicast PDSCH per slot- Starting symbol, and duration are determined by using the DCI- PDSCH mapping type A with 7-14 OFDM symbols- PUSCH mapping type A and type B- For type 1 CSS without dedicated RRC configuration and for type 0, 0A, and 2 CSS, PDSCH mapping type A with {4-14} OFDM symbols and type B with {2, 4, 7} OFDM symbols3) TBS determination4) Nominal UE processing time for N1 and N2 (Capability #1)5) HARQ process operation with configurable number of DL HARQ processes of up to 166) Cell specific RRC configured UL/DL assignment for TDD7) Dynamic UL/DL determination based on L1 scheduling DCI with/without cell specific RRC configured UL/DL assignment9) In TDD support at most one switch point per slot for actual DL/UL transmission(s)10) DL scheduling slot offset K0=012) UL scheduling slot offset K2&lt;=12For type 1 CSS without dedicated RRC configuration and for type 0, 0A, and 2 CSS, interleaving for VRB-to-PRB mapping for PDSCH</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>6. CA/DC, BWP, SUL</td>
+    <td>6-1</td>
+    <td>Basic BWP operation with restriction</td>
+    <td>1) 1 UE-specific RRC configured DL BWP per carrier2) 1 UE-specific RRC configured UL BWP per carrier3) RRC reconfiguration of any parameters related to BWP4) BW of a UE-specific RRC configured BWP includes BW of CORESET#0 (if CORESET#0 is present) and SSB for PCell/PSCell (if configured) and BW of the UE-specific RRC configured BWP includes SSB for SCell if there is SSB on SCell</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>7. Channel coding</td>
+    <td>7-1</td>
+    <td>Channel coding</td>
+    <td>1) LDPC encoding and associated functions for data on DL and UL2) Polar encoding and associated functions for PBCH, DCI, and UCI3) Coding for very small blocks</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>8. UL TPC</td>
+    <td>8-3</td>
+    <td>Basic power control operation</td>
+    <td>1) Accumulated power control mode for closed loop2) 1 TPC command loop for PUSCH, PUCCH respectively3) One or multiple DL RS configured for pathloss estimation4) One or multiple p0-alpha values configured for open loop PC5) PUSCH power control6) PUCCH power control7) PRACH power control8) SRS power control9) PHR</td>
+    <td></td>
+  </tr>
+</table>

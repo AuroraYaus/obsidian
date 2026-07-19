@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <td>TRS-ResourceSet field descriptions</td>
+  </tr>
+  <tr>
+    <td>firstOFDMSymbolInTimeDomainThe index of the first OFDM symbol in the PRB used for TRS in a slot. The field indicates the first symbol in a slot for the first TRS resource within the slot, and the symbol for the second TRS resource in the same slot can be derived implicitly with symbol index as firstOFDMSymbolInTimeDomain+4.</td>
+  </tr>
+  <tr>
+    <td>frequencyDomainAllocationIndicates the offset of the first RE to RE#0 in a RB in row1 in table 7.4.1.5.3-1 for frequency domain allocation within a physical resource block (TS 38.211 [16], clause 7.4.1.5.3).</td>
+  </tr>
+  <tr>
+    <td>indBitIDThe index of the associated bit in TRS availability indication field in DCI. Each TRS resource set is configured with an ID i for the association with (i+1)-th indication bit in TRS availability indication field in DCI.</td>
+  </tr>
+  <tr>
+    <td>nrofRBsNumber of PRBs across which corresponding TRS resource spans.</td>
+  </tr>
+  <tr>
+    <td>nrofResourcesThe number of TRS resources for a TRS resource set.</td>
+  </tr>
+  <tr>
+    <td>periodicityAndOffsetThe periodicity and slot offset (slot) for periodic TRS. It is used to determine the location of the first slot of TRS resource set. The periodicity value slots10 corresponds to 10 slots, value slots20 corresponds to 20 slots, and so on. Only the following values of the periodicity are used: 10 slots (SCS 15 kHz), 20 slots (SCS 15 and 30 kHz), 40 slots (SCS 15, 30 and 60 kHz), 80 slots (SCS 15, 30, 60 and 120 kHz), 160 slots (SCS 30, 60 and 120 kHz), 320 slots (SCS 60 and 120 kHz), and 640 slots (SCS 120 kHz).</td>
+  </tr>
+  <tr>
+    <td>powerControlOffsetSSPower offset (dB) of NZP CSI-RS RE to SSS RE.</td>
+  </tr>
+  <tr>
+    <td>scramblingID-InfoOne or more scrambling IDs are configured for a TRS resource set. If a common scrambling ID is configured, it applies to all the TRS resources within the TRS resource set. Otherwise, each TRS resource within the TRS resource set is provided with a scrambling ID. If the number of TRS resources for the TRS resource set is 2, scramblingIDperResourceListWith2-r18 is configured, while scramblingIDperResourceListWith4-r18 is configured for the case that the number of TRS resources for the TRS resource set is 4.</td>
+  </tr>
+  <tr>
+    <td>ssb-IndexThe index of reference SSB with which quasi-collocation information is provided as specified in TS 38.214 [19] clause 5.1.5.</td>
+  </tr>
+  <tr>
+    <td>startingRBThe PRB index where corresponding TRS resource starts in relation to common resource block #0 (CRB#0) on the common resource block grid.</td>
+  </tr>
+</table>

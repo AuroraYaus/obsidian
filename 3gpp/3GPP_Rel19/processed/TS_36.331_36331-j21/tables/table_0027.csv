@@ -1,0 +1,15 @@
+Conditional presence,Explanation
+EARFCN-max,The field is mandatory present if dl-CarrierFreq-r10 is included and set to maxEARFCN. Otherwise the field is not present.
+FDD-PCell,"This field is optionally present, need ON, for a FDD PCell if there is no SCell with configured uplink. Otherwise, the field is not present."
+FDD-PSCell,"This field is optionally present, need ON, for a FDD PSCell if there is no SCell with configured uplink. Otherwise, the field is not present."
+fullConfig,"This field is mandatory present for handover within E-UTRA when the fullConfig is included; otherwise it is optionally present, Need OP."
+HO,The field is mandatory present in case of handover within E-UTRA or to E-UTRA and in a message contained in a NR DLInformationTransferMRDC message; otherwise the field is not present. The field is not present if source PCell resources after a DAPS handover have not been released.
+HO-Reestab,"The field is mandatory present in case of inter-system handover within E-UTRA or handover from NR to E-UTRA/EPC; it is optionally present, need ON, in case of intra-system handover within E-UTRA or upon the first reconfiguration after RRC connection re-establishment; or for intra-system handover from NR to E-UTRA, otherwise the field is not present."
+HO-5GC,"The field is mandatory present in case of handover within E-UTRA/5GC, handover to E-UTRA/5GC, handover from NR to E-UTRA/EPC, or handover from E-UTRA/5GC to E-UTRA/EPC, otherwise the field is not present."
+HO-toEPC,"The field is mandatory present in case of handover within E-UTRA/EPC or to E-UTRA/EPC, except handover from NR or E-UTRA/5GC, otherwise the field is not present."
+HO-toEUTRA,"The field is mandatory present in case of handover to E-UTRA or for reconfigurations when fullConfig is included; otherwise the field is optionally present, need ON."
+nonFullConfig,"The field is not present when the fullConfig is included or in case of handover to E-UTRA; otherwise it is optional present, need ON."
+nonHO,"The field is not present in case of handover within E-UTRA or to E-UTRA; otherwise it is optional present, need ON."
+NTN,"The field is mandatory present in case of handover to a NTN cell. Otherwise the field is optionally present, Need ON, in a NTN cell."
+SCellAdd,The field is mandatory present upon SCell addition; otherwise it is not present.
+SCellAdd2,"The field is mandatory present upon SCell addition; otherwise it is optionally present, need ON."

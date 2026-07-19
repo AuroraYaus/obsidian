@@ -1,0 +1,5 @@
+PDSCH mapping type,Normal cyclic prefix,,,Extended cyclic prefix,,
+,S,L,S+L,S,L,S+L
+Type A,"{0,1,2,3}(Note 1)","{3,…,14}","{3,…,14}","{0,1,2,3}(Note 1)","{3,…,12}","{3,…,12}"
+Type B,"{0,…,12}","{2,…,13}","{2,…,14}","{0,…,10}","{2,4,6}","{2,…,12}"
+Note 1:S = 3 is applicable only if dmrs-TypeA-Position = 3,,,,,,

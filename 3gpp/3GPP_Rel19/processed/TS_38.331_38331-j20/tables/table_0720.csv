@@ -1,0 +1,7 @@
+SL-DRX-ConfigUC field descriptions
+sl-drx-CycleStartOffsetsl-drx-Cycle in ms and sl-drx-StartOffset in multiples of 1 ms.
+"sl-drx-HARQ-RTT-Timer1, sl-drx-HARQ-RTT-Timer2Value in number of slot lengths of the BWP where the transport block was received. Value sl0 corresponds to 0 slots, sl1 corresponds to 1 slot, sl2 corresponds to 2 slots, and so on. sl-drx-HARQ-RTT-Timer1 is used for HARQ feedback enabled sidelink retransmission if SCI does not indicate retransmission resource(s). sl-drx-HARQ-RTT-Timer2 is used for HARQ feedback disabled sidelink retransmission in resource pool configured with PSFCH if SCI does not indicate retransmission resource(s)."
+"sl-drx-InactivityTimerValue in number of slot lengths of the BWP where the transport block was received, sl0 corresponds to 0, sl1 corresponds to 1 slot, sl2 corresponds to 2 slots, and so on."
+"sl-drx-onDurationTimerValue in multiples of 1/32 ms (subMilliSeconds) or in ms (milliSecond). For the latter, value ms1 corresponds to 1 ms, value ms2 corresponds to 2 ms, and so on."
+"sl-drx-RetransmissionTimerValue in number of slot lengths of the BWP where the transport block was received. Value sl0 corresponds to 0 slots, sl1 corresponds to 1 slot, sl2 corresponds to 2 slots, and so on."
+"sl-drx-SlotOffsetValue in 1/32 ms. Value 0 corresponds to 0 ms, value 1 corresponds to 1/32 ms, value 2 corresponds to 2/32 ms, and so on."

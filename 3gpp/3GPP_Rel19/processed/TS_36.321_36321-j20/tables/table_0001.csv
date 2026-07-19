@@ -1,0 +1,16 @@
+MAC function,UE,eNB,Downlink,Uplink,Sidelink tx,Sidelink rx
+Mapping between logical channels and transport channels,X,,X,X,X,X
+,,X,X,X,,
+Multiplexing,X,,,X,X,
+,,X,X,,,
+Demultiplexing,X,,X,,,X
+,,X,,X,,
+Error correction through HARQ,X,,X,X,X,X
+,,X,X,X,,
+Transport Format Selection,,X,X,X,,
+,X,X,,,X,
+Priority handling between UEs,,X,X,X,,
+Priority handling between logical channels of one MAC entity,,X,X,X,,
+Logical Channel prioritisation,X,,,X,X,
+Scheduling information reporting,X,,,X,,
+Radio Resource Selection,X,,,,X,

@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <td>OD-SSB-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>od-SSB-ActivationStatusIndicates the activation status of this OD-SSB pattern upon configuration. Only one OD-SSB pattern can be activated at one point of time.</td>
+  </tr>
+  <tr>
+    <td>od-SSB-HalfFrameIndexIndicates whether OD-SSB is in the first half or the second half of the frame. If the field is absent, the UE applies the value zero.</td>
+  </tr>
+  <tr>
+    <td>od-SSB-NrofBurstsIndicates the number of OD-SSB bursts to be transmitted after OD-SSB is activated. Network only configures this field when od-SSB-ActivationStatus is absent. For FR1, the value range is {5, 10, 15, 20, 25, 30, 40, 50}. For FR2, the value range is {25, 30, 40, 50, 75, 100, 150, 200}.</td>
+  </tr>
+  <tr>
+    <td>od-SSB-PeriodicityThe SSB periodicity for the OD-SSB in ms. If absoluteFrequencySSB is configured in servingCellConfigCommon, the network may only configure values smaller than or equal to the periodicity associated for the absoluteFrequencySSB (ssb-periodicityServingCell configured in ServingCellConfigCommon).</td>
+  </tr>
+  <tr>
+    <td>od-SSB-PositionsInBurstIndicates the time domain positions of the transmitted SS-blocks for OD-SSB in a half frame with SS/PBCH blocks as defined in TS 38.213 [13], clause 4.1. If absent, UE applies the value ssb-PositionsInBurst provided in ServingCellConfigCommon.</td>
+  </tr>
+  <tr>
+    <td>od-SSB-SFN-OffsetIndicates SFN offset, where SFN refers to the SFN of this serving cell (see TS 38.213 [13], clause 4.4). The network configures this field according to the field od-SSB-Periodicity such that the indicated system frame does not exceed the OD-SSB periodicity. If the field is absent, the UE applies the value 0.</td>
+  </tr>
+</table>

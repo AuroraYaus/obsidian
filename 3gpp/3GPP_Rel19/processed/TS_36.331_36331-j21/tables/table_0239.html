@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>Conditional presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>always</td>
+    <td>The field is mandatory present.</td>
+  </tr>
+  <tr>
+    <td>Moving</td>
+    <td>The field is mandatory present if one of the associated reportConfigEUTRA contains EventD2 or condEventD2. Otherwise it is optionally present, need OR.</td>
+  </tr>
+  <tr>
+    <td>WB-RSRQ</td>
+    <td>The field is optionally present, need ON, if the measurement bandwidth indicated by allowedMeasBandwidth is 50 resource blocks or larger; otherwise it is not present and the UE shall delete any existing value for this field, if configured.</td>
+  </tr>
+</table>

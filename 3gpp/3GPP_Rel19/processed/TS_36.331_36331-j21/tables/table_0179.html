@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <td>SRS-TPC-PDCCH-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>cc-IndexInOneCC-SetIndicates the CC index in one CC set for Type A associated with the group DCI with SRS request field (optional) and TPC commands for a PUSCH-less SCell</td>
+  </tr>
+  <tr>
+    <td>cc-SetIndexIndicates the CC set index for Type A associated with the group DCI with SRS request field (optional) and TPC commands for a PUSCH-less SCell.</td>
+  </tr>
+  <tr>
+    <td>fieldTypeFormat3BThe type of a field within the group DCI with SRS request fields (optional) and TPC commands for a PUSCH-less SCell, which indicates how many bits in the field are for SRS request (0 or 1/2) and how many bits in the field are for TPC (1 or 2). Note that for Type A, there is a common SRS request field for all SCells in the set, but each SCell has its own TPC command bits. See TS 36.212 [22], clause 5.3.3.1.7A. EUTRAN configures this field with the same value for all PUSCH-less SCells.</td>
+  </tr>
+  <tr>
+    <td>srs-CC-SetIndexlistIndicates the index of the SRS-TPC-PDCCH-Config for Type A trigger by the group DCI with SRS request field (optional) and TPC commands for a PUSCH-less SCell. Each set may contain at most 8 CCs.</td>
+  </tr>
+  <tr>
+    <td>srs-TPC-RNTIRNTI for SRS trigger and power control using DCI format 3B, see TS 36.212 [22], clause 5.1.3.1.</td>
+  </tr>
+  <tr>
+    <td>startingBitOfFormat3BThe starting bit position of a block within the group DCI with SRS request fields (optional) and TPC commands for a PUSCH-less SCell.</td>
+  </tr>
+</table>

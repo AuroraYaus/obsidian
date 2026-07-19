@@ -1,0 +1,29 @@
+CSI report number,CSI fields
+CSI report #n,"Time instance indicator, if reported"
+,Predicted CRI or SSBRI #1 as in Table 6.3.1.1.2-6C of time instance #1
+,"Predicted CRI or SSBRI #2 as in Table 6.3.1.1.2-6C of time instance #1, if reported"
+,…
+,"Predicted CRI or SSBRI # as in Table 6.3.1.1.2-6C of time instance #1, if reportedK"
+,"Predicted CRI or SSBRI #1 as in Table 6.3.1.1.2-6C of time instance #2, if reported"
+,"Predicted CRI or SSBRI #2 as in Table 6.3.1.1.2-6C of time instance #2, if reported"
+,…
+,"Predicted CRI or SSBRI # as in Table 6.3.1.1.2-6C of time instance #2, if reportedK"
+,…
+,"Predicted CRI or SSBRI #1 as in Table 6.3.1.1.2-6C of time instance #, if reportedN"
+,"Predicted CRI or SSBRI #2 as in Table 6.3.1.1.2-6C of time instance #, if reportedN"
+,…
+,"Predicted CRI or SSBRI # as in Table 6.3.1.1.2-6C of time instance #, if reportedKN"
+,"Predicted RSRP #1 as in Table 6.3.1.1.2-6C of time instance #1, if reported"
+,"Differential predicted RSRP #2 as in Table 6.3.1.1.2-6C of time instance #1, if reported"
+,…
+,"Differential predicted RSRP # as in Table 6.3.1.1.2-6C of time instance #1, if reportedK"
+,"Differential predicted RSRP #1 as in Table 6.3.1.1.2-6C of time instance #2, if reported"
+,"Differential predicted RSRP #2 as in Table 6.3.1.1.2-6C of time instance #2, if reported"
+,…
+,"Differential predicted RSRP # as in Table 6.3.1.1.2-6C of time instance #2, if reportedK"
+,…
+,"Differential predicted RSRP #1 as in Table 6.3.1.1.2-6C of time instance #, if reportedN"
+,"Differential predicted RSRP #2 as in Table 6.3.1.1.2-6C of time instance #, if reportedN"
+,…
+,"Differential predicted RSRP # as in Table 6.3.1.1.2-6C of time instance #, if reportedKN"
+"NOTE: is the number of predicted CRI or predicted SSBRI to be reported for a time instance configured by the higher layer parameter nrofreportedpredictedrs.  is the number of time instances for prediction and the value of  is configured by the higher layer parameter nroftimeinstance. Time instance indicator is reported only when  is larger than 1. The  time instances for prediction are ordered in ascending order in time domain. The time instance indicator with value , , indicates the (n+1)-th time instance among the  time instances. Time instance #1 corresponds to the time instance indicated by the time instance indicator among the  time instances if  is larger than 1, and corresponds to the time instance for prediction otherwise. Time instance # , , corresponds to the (-1)-th time instance among the remaining  time instances. KNNNNnn=0,1,…,N-1NNNii=2,3,…,NiN-1",

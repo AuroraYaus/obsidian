@@ -1,0 +1,3 @@
+DCI format,Search Space,Transmission scheme of PDSCH corresponding to PDCCH
+DCI format 1A,Common and UE specific by Temporary C-RNTI,"If the number of PBCH antenna port is one, Single-antenna port, port 0 is used (see Clause 7.1.1), otherwise Transmit diversity (see Clause 7.1.2)"
+DCI format 1,UE specific by Temporary C-RNTI,"If the number of PBCH antenna port is one, Single-antenna port, port 0 is used (see Clause 7.1.1), otherwise Transmit diversity (see Clause 7.1.2)"

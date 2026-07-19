@@ -1,0 +1,3 @@
+SCPTM-NeighbourCellList-NB field descriptions
+physCellIdPhysical Cell Identity of the neighbour cell.
+carrierFreqCarrier frequency of the neighbour cell.Absence of the IE means that the neighbour cell is on the same frequency as the current cell.

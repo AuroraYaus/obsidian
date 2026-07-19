@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>SystemInformationBlockType11 field descriptions</td>
+  </tr>
+  <tr>
+    <td>dataCodingSchemeIdentifies the alphabet/coding and the language applied variations of an ETWS notification. The octet (which is equivalent to the octet of the equivalent IE defined in TS 36.413 [39], clause 9.2.1.52), contains the octet of the equivalent IE defined in TS 23.041 [37], clause 9.4.3.2.3, and encoded according to TS 23.038 [38].</td>
+  </tr>
+  <tr>
+    <td>messageIdentifierIdentifies the source and type of ETWS notification. The leading bit (which is equivalent to the leading bit of the equivalent IE defined in TS 36.413 [39], clause 9.2.1.44), contains bit 7 of the first octet of the equivalent IE, defined in and encoded according to TS 23.041 [37], clause 9.4.3.2.1, while the trailing bit contains bit 0 of second octet of the same equivalent IE.</td>
+  </tr>
+  <tr>
+    <td>serialNumberIdentifies variations of an ETWS notification. The leading bit (which is equivalent to the leading bit of the equivalent IE defined in TS 36.413 [39], clause 9.2.1.45) contains bit 7 of the first octet of the equivalent IE, defined in and encoded according to TS 23.041 [37], clause 9.4.3.2.2, while the trailing bit contains bit 0 of second octet of the same equivalent IE.</td>
+  </tr>
+  <tr>
+    <td>warningAreaCoordinatesSegmentIf present, carries a segment, with one or more octets, of the geographical area where the ETWS secondary notification is valid as defined in [98]. The first octet of the first warningAreaCoordinatesSegment is equivalent to the first octet of Warning Area Coordinates IE defined in and encoded according to TS 23.041 [37] and so on.</td>
+  </tr>
+  <tr>
+    <td>warningMessageSegmentCarries a segment of the Warning Message Contents IE defined in TS 36.413 [39], clause 9.2.1.53. The first octet of the Warning Message Contents IE is equivalent to the first octet of the CB data IE defined in and encoded according to TS 23.041 [37], clause 9.4.2.2.5, and so on.</td>
+  </tr>
+  <tr>
+    <td>warningMessageSegmentNumberSegment number of the ETWS warning message segment contained in the SIB. A segment number of zero corresponds to the first segment, one corresponds to the second segment, and so on.</td>
+  </tr>
+  <tr>
+    <td>warningMessageSegmentTypeIndicates whether the included ETWS warning message segment is the last segment or not.</td>
+  </tr>
+</table>

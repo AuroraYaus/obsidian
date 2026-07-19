@@ -1,0 +1,9 @@
+CSI report number,CSI fields
+CSI report #n,"CRI as in Tables 6.3.1.1.2-3/4, if reported"
+,"Rank Indicator as in Tables 6.3.1.1.2-3/3C/4, if reported"
+,"Layer Indicator as in Tables 6.3.1.1.2-3/3C/4, if reported"
+,"Zero padding bits , if needed"
+,"PMI wideband information fields , from left to right as in Tables 6.3.1.1.2-1/1A/1B/2/2A, if reported"
+,"PMI wideband information fields , from left to right as in Tables 6.3.1.1.2-1/1A/1B/2/2A, or codebook index for 2 antenna ports according to Clause 5.2.2.2.1 in [6, TS38.214], if reported"
+,"Wideband CQI for the first TB as in Tables 6.3.1.1.2-3/3C/4, if reported"
+,"Wideband CQI for the second TB as in Tables 6.3.1.1.2-3/3C/4, if reported"

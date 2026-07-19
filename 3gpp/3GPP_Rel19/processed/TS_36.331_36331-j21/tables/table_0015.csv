@@ -1,0 +1,3 @@
+MBMSCountingResponse field descriptions
+"countingResponseListList of MBMS services which the UE is receiving or interested to receive. Value 0 for field countingResponseService corresponds to the first entry in countingRequestList within MBMSCountingRequest, value 1 corresponds to the second entry in this list and so on."
+"mbsfn-AreaIndexIndex of the entry in field mbsfn-AreaInfoList within SystemInformationBlockType13. Value 0 corresponds to the first entry in 1st mbsfn-AreaInfoList within SystemInformationBlockType13, value 1 corresponds to the second entry in the same list, or when no more entry are present within the same mbsfn-AreaInfoList, then the first entry in the subsequent mbsfn-AreaInfoList within the same SystemInformationBlockType13 and so on."

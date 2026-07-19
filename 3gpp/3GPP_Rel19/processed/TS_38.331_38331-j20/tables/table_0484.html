@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>Conditional Presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>Format01-02</td>
+    <td>In pusch-TimeDomainAllocationListForMultiPUSCH-r16, the field is absent.In pusch-TimeDomainAllocationListDCI-0-1 and in pusch-TimeDomainAllocationListDCI-0-2, the field is mandatory present.</td>
+  </tr>
+  <tr>
+    <td>Format01-02-For-TypeA</td>
+    <td>In pusch-TimeDomainAllocationListForMultiPUSCH-r16, the field is absent.In pusch-TimeDomainAllocationListDCI-0-1, the field is optionally present if pusch-RepTypeIndicatorDCI-0-1 is not set to pusch-RepTypeB, Need R. It is absent otherwise, Need R.In pusch-TimeDomainAllocationListDCI-0-2, the field is optionally present if pusch-RepTypeIndicatorDCI-0-2 is not set to pusch-RepTypeB, Need R. It is absent otherwise, Need R.</td>
+  </tr>
+  <tr>
+    <td>NotFormat01-02-Or-TypeA</td>
+    <td>In pusch-TimeDomainAllocationListForMultiPUSCH-r16, the field is mandatory present.In pusch-TimeDomainAllocationListDCI-0-1, the field is mandatory present if pusch-RepTypeIndicatorDCI-0-1 is not set to pusch-RepTypeB. It is absent otherwise, Need R.In pusch-TimeDomainAllocationListDCI-0-2, the field is mandatory present if pusch-RepTypeIndicatorDCI-0-2 is not set to pusch-RepTypeB. It is absent otherwise, Need R.</td>
+  </tr>
+  <tr>
+    <td>RepTypeB</td>
+    <td>In pusch-TimeDomainAllocationListForMultiPUSCH-r16, the field is absent.In pusch-TimeDomainAllocationListDCI-0-1, the field is mandatory present if pusch-RepTypeIndicatorDCI-0-1 is set to pusch-RepTypeB. It is absent otherwise, Need R.In pusch-TimeDomainAllocationListDCI-0-2, the field is mandatory present if pusch-RepTypeIndicatorDCI-0-2 is set to pusch-RepTypeB. It is absent otherwise, Need R.</td>
+  </tr>
+  <tr>
+    <td>MultiPUSCH</td>
+    <td>In case size of puschAllocationList is higher than 1, the field extendedK2(n) corresponding to k2 of the n-th PUSCH, n&gt;1, is mandatory present for all n, if any two consecutive PUSCHs are non-contiguous. Otherwise, it is optionally present, Need S.</td>
+  </tr>
+</table>

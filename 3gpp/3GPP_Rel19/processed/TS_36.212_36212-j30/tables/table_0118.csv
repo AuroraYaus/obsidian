@@ -1,0 +1,28 @@
+Field,Bit width,,,
+,Rank = 1,Rank = 2,Rank = 3,Rank = 4
+Wide-band CQI codeword 0,4,4,4,4
+Subband differential CQI codeword 0,2,2,2,2
+Wide-band CQI codeword 1,0,4,4,4
+Subband differential CQI codeword 1,0,2,2,2
+Position of the M selected subbands,,,,
+"Wideband first PMI i1,1-1",,,,
+"Wideband first PMI i1,2-1",,,,
+"Wideband first PMI i1,1-2",,,0,0
+"Wideband first PMI i1,2-2",,,0,0
+"Wideband first PMI i1,p-2",2,2,0,0
+Wideband second PMI i2,6,12,1,1
+Subband second PMI i2,6,12,1,1
+Field,Bit width,,,
+,Rank = 5,Rank = 6,Rank = 7,Rank = 8
+Wide-band CQI codeword 0,4,4,4,4
+Subband differential CQI codeword 0,2,2,2,2
+Wide-band CQI codeword 1,4,4,4,4
+Subband differential CQI codeword 1,2,2,2,2
+Position of the M selected subbands,,,,
+"Wideband first PMI i1,1-1",,,,
+"Wideband first PMI i1,2-1",,,,
+"Wideband first PMI i1,1-2",0,0,0,0
+"Wideband first PMI i1,2-2",0,0,0,0
+"Wideband first PMI i1,p-2",0,0,0,0
+Wideband second PMI i2,0,0,0,0
+Subband second PMI i2,0,0,0,0

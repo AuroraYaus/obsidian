@@ -1,0 +1,10 @@
+"One codeword: Codeword 0 enabled, Codeword 1 disabled",,"Two codewords: Codeword 0 enabled, Codeword 1 enabled",
+Bit field mapped to index,Message,Bit field mapped to index,Message
+0,2 layers: Transmit diversity,0,2 layers: Precoding corresponding to precoder matrix
+1,1 layer: Precoding corresponding to precoding vector,1,2 layers: Precoding corresponding to precoder matrix
+2,1 layer: Precoding corresponding to precoder vector,2,"2 layers: Precoding according to the latest PMI report on PUSCH, using the precoder(s) indicated by the reported PMI(s)"
+3,1 layer: Precoding corresponding to precoder vector,3,reserved
+4,1 layer: Precoding corresponding to precoder vector,4,reserved
+5,"1 layer: Precoding according to the latest PMI report on PUSCH, using the precoder(s) indicated by the reported PMI(s),if RI=2 was reported, using 1st column multiplied by of all precoders implied by the reported PMI(s)",5,reserved
+6,"1 layer:Precoding according to the latest PMI report on PUSCH, using the precoder(s) indicated by the reported PMI(s),if RI=2 was reported, using 2nd column multiplied by of all precoders implied by the reported PMI(s)",6,reserved
+7,reserved,7,reserved

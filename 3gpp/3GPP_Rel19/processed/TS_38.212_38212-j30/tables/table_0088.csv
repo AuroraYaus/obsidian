@@ -1,0 +1,7 @@
+CSI report number,CSI fields
+CSI report #n,The reference CSI-RS resource index as in Table 6.3.2.1.2-13.
+,"Subband phase offsets for CSI-RS resource #0 as in Table 6.3.2.1.2-13 if subband reporting is configured, with increasing order of subband number; otherwise, wideband phase offset for CSI-RS resource #0 as in Table 6.3.2.1.2-13."
+,"Subband phase offsets for CSI-RS resource #1 as in Table 6.3.2.1.2-13 if subband reporting is configured, with increasing order of subband number; otherwise, wideband phase offset for CSI-RS resource #1 as in Table 6.3.2.1.2-13."
+,…
+,"Subband phase offsets for CSI-RS resource # as in Table 6.3.2.1.2-13 if subband reporting is configured, with increasing order of subband number; otherwise, wideband phase offset for CSI-RS resource # as in Table 6.3.2.1.2-13.(NTRP-1)(NTRP-1)"
+"NOTE:      The CSI-RS resources are ordered from the lowest to highest CSI-RS resource ID, except that indicated by reference CSI-RS resource index.  is the number of CSI-RS resources configured for the CSI report.NTRP",

@@ -1,0 +1,3 @@
+CandidateBeamRS field descriptions
+candidateBeamConfigIndicates the resource (i.e. SSB or CSI-RS) defining this beam resource.
+"servingCellIdIf the field is absent, the RS belongs to the serving cell in which BeamFailureRecoveryRSConfig is configured."

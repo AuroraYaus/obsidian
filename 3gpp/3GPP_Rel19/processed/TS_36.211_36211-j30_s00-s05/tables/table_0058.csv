@@ -1,0 +1,5 @@
+SPUCCH format,,Frequency hopping,
+Slot,"1, 1a, 1b",Enabled or disabled,see  in clause 5.4A.2
+,3,Disabled,see  for PUCCH format 3 in clause 5.5.2.2.1 and determining  and  in clause 5.4A.3.1
+,4,Enabled,see  for PUCCH format 4 in clause 5.5.2.2.1
+Subslot,4,Disabled,see  for PUCCH format 4 in clause 5.5.2.2.1

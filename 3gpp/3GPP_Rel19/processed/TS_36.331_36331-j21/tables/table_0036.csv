@@ -1,0 +1,5 @@
+Conditional presence,Explanation
+EarlySec,"For EPC, the field is optionally present, Need ON, if the UE supports early security reactivation; otherwise the field is not present.For 5GC, the field is optionally present, Need ON."
+RestoreSCG,"The field is mandatory present if restoreSCG is configured. It is optionally present, Need ON, otherwise.For EPC, this field can be present only if the UE supports early security reactivation."
+FDD-PCell,"This field is optionally present, need ON, for an FDD PCell if there is no SCell with configured uplink. Otherwise, the field is not present, need OR."
+SCG,"This field is optionally present, need OR, if nr-SecondaryCellGroupConfig is present, otherwise it is absent, need OR."

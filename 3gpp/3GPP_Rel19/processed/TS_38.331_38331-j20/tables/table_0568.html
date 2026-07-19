@@ -1,0 +1,65 @@
+<table>
+  <tr>
+    <td>ServingCellConfigCommon field descriptions</td>
+  </tr>
+  <tr>
+    <td>channelAccessModeIf present, this field indicates which channel access procedures to apply for operation with shared spectrum channel access as defined in TS 37.213 [48]. If the field is configured as &quot;semiStatic&quot;, the UE shall apply the channel access procedures for semi-static channel occupancy as described in clause 4.3 in TS 37.213. If the field is configured as &quot;dynamic&quot;, the UE shall apply the channel access procedures as defined in TS 37.213, clause 4.1 and 4.2.</td>
+  </tr>
+  <tr>
+    <td>channelAccessMode2If present, the UE shall apply channel access procedures for operation with shared spectrum channel access in accordance with TS 37.213 [48], clause 4.4 for FR2-2. If absent, the UE shall not apply any channel access procedure. The network always configures this field if channel access procedures are required for the serving cell within this region by regulations.</td>
+  </tr>
+  <tr>
+    <td>dmrs-TypeA-PositionPosition of (first) DM-RS for downlink (see TS 38.211 [16], clause 7.4.1.1.1) and uplink (TS 38.211 [16], clause 6.4.1.1.3).</td>
+  </tr>
+  <tr>
+    <td>downlinkConfigCommonThe common downlink configuration of the serving cell, including the frequency information configuration and the initial downlink BWP common configuration. The parameters provided herein should match the parameters configured by MIB and SIB1 (if provided) of the serving cell, with the exception of controlResourceSetZero and searchSpaceZero which can be configured in ServingCellConfigCommon even if MIB indicates that they are absent.</td>
+  </tr>
+  <tr>
+    <td>discoveryBurstWindowLengthIndicates the window length of the discovery burst in ms (see TS 37.213 [48]). The field discoveryBurstWindowLength-r17 is applicable to SCS 480 kHz and SCS 960 kHz.</td>
+  </tr>
+  <tr>
+    <td>featurePrioritiesIndicates priorities for features, such as (e)RedCap, Slicing, SDT, MSG1-Repetitions, and MSG3-Repetitions for Coverage Enhancements. These priorities are used to determine which FeatureCombinationPreambles the UE shall use when a feature maps to more than one FeatureCombinationPreambles, as specified in TS 38.321 [3]. A lower value means a higher priority. The network does not signal the same priority for more than one feature. The network signals a priority for all feature that map to at least one FeatureCombinationPreambles.</td>
+  </tr>
+  <tr>
+    <td>longBitmapBitmap when maximum number of SS/PBCH blocks per half frame equals to 64 as defined in TS 38.213 [13], clause 4.1.</td>
+  </tr>
+  <tr>
+    <td>lte-CRS-ToMatchAroundParameters to determine an LTE CRS pattern that the UE shall rate match around.</td>
+  </tr>
+  <tr>
+    <td>mediumBitmapBitmap when maximum number of SS/PBCH blocks per half frame equals to 8 as defined in TS 38.213 [13], clause 4.1.</td>
+  </tr>
+  <tr>
+    <td>n-TimingAdvanceOffsetThe N_TA-Offset to be applied for all uplink transmissions on this serving cell if n-TimingAdvanceOffset2 is not configured. If tag2 is configured for this serving cell, this field is to be applied to all uplink transmissions associated to tag-id configured for this serving cell. If the field is absent, the UE applies the value defined for the duplex mode and frequency range of this serving cell. See TS 38.133 [14], table 7.1.2-2/table 7.1C.2-4.</td>
+  </tr>
+  <tr>
+    <td>ra-ChannelAccessIf present, this field indicates that the UE shall apply channel access procedures before msg1/msgA transmission for operation with shared spectrum channel access in accordance with TS 37.213 [48], clause 4.4.5 for FR2-2.</td>
+  </tr>
+  <tr>
+    <td>rateMatchPatternToAddModListResources patterns which the UE should rate match PDSCH around. The UE rate matches around the union of all resources indicated in the rate match patterns. Rate match patterns defined here on cell level apply only to PDSCH of the same numerology (see TS 38.214 [19], clause 5.1.4.1). If a RateMatchPattern with the same RateMatchPatternId is configured in both ServingCellConfig/ServingCellConfigCommon and in SIB20/MCCH, the entire RateMatchPattern configuration, including the set of RBs/REs indicated by the patterns for the rate matching around, shall be the same and they are counted as a single rate match pattern in the total configured rate match patterns as defined in TS 38.214 [19].</td>
+  </tr>
+  <tr>
+    <td>shortBitmapBitmap when maximum number of SS/PBCH blocks per half frame equals to 4 as defined in TS 38.213 [13], clause 4.1.</td>
+  </tr>
+  <tr>
+    <td>ss-PBCH-BlockPowerAverage EPRE of the resources elements that carry secondary synchronization signals in dBm that the NW used for SSB transmission, see TS 38.213 [13], clause 7.</td>
+  </tr>
+  <tr>
+    <td>ssb-periodicityServingCellThe SSB periodicity in ms for the rate matching purpose. If the field is absent, the UE applies the value ms5. (see TS 38.213 [13], clause 4.1)</td>
+  </tr>
+  <tr>
+    <td>ssb-PositionQCLIndicates the QCL relation between SSB positions for this serving cell as specified in TS 38.213 [13], clause 4.1.</td>
+  </tr>
+  <tr>
+    <td>ssb-PositionsInBurstFor operation in licensed spectrum, indicates the time domain positions of the transmitted SS-blocks in a half frame with SS/PBCH blocks as defined in TS 38.213 [13], clause 4.1. The first/leftmost bit corresponds to SS/PBCH block index 0, the second bit corresponds to SS/PBCH block index 1, and so on. Value 0 in the bitmap indicates that the corresponding SS/PBCH block is not transmitted while value 1 indicates that the corresponding SS/PBCH block is transmitted. The network configures the same pattern in this field as in the corresponding field in ServingCellConfigCommonSIB.For operation with shared spectrum channel access, the UE assumes that one or more SS/PBCH blocks indicated by ssb-PositionsInBurst may be transmitted within the discovery burst transmission window and have candidate SS/PBCH blocks indexes corresponding to SS/PBCH block indexes provided by ssb-PositionsInBurst (see TS 38.213 [13], clause 4.1). If the k-th bit of ssb-PositionsInBurst is set to 1, the UE assumes that one or more SS/PBCH blocks within the discovery burst transmission window with candidate SS/PBCH block indexes corresponding to SS/PBCH block index equal to k – 1 may be transmitted; if the kt-th bit is set to 0, the UE assumes that the corresponding SS/PBCH block(s) are not transmitted. The k-th bit is set to 0, where k &gt; ssb-PositionQCL and the number of actually transmitted SS/PBCH blocks is not larger than the number of 1&#x27;s in the bitmap. The network configures the same pattern in this field as in the corresponding field in ServingCellConfigCommonSIB. For operation with shared spectrum channel access in FR1, only mediumBitmap is used, and for FR2-2, longBitmap is used.</td>
+  </tr>
+  <tr>
+    <td>ssbSubcarrierSpacingSubcarrier spacing of SSB.Only the following values are applicable depending on the used frequency:FR1/FR1-NTN:   15 or 30 kHzFR2-1/FR2-NTN:  120 or 240 kHzFR2-2:  120, 480, or 960 kHz</td>
+  </tr>
+  <tr>
+    <td>supplementaryUplinkConfigThe network configures this field only if uplinkConfigCommon is configured. If this field is absent, the UE shall release the supplementaryUplinkConfig and the supplementaryUplink configured in ServingCellConfig of this serving cell, if configured.</td>
+  </tr>
+  <tr>
+    <td>tdd-UL-DL-ConfigurationCommonA cell-specific TDD UL/DL configuration, see TS 38.213 [13], clause 11.1.</td>
+  </tr>
+</table>

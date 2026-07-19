@@ -1,0 +1,11 @@
+Conditional presence,Explanation
+cb-msg3-config,"This field is mandatory present, if the field ul-ConfigList is present and at least one of the carriers in ul-ConfigList is configured for CB-Msg3-EDT. Otherwise the field is not present and only the anchor carrier is used for CB-Msg3-EDT."
+dl-ConfigList,"This field is optionally present, Need OR, if the field dl-ConfigList is present. Otherwise the field is not present."
+EDT,"The field is optionally present, Need OR, if edt-Parameters in SystemInformationBlockType2-NB is present; otherwise the field is not present and the UE shall delete any existing value for this field."
+GWUS,"This field is optionally present, Need OR, if gwus-Config-r16 is present in SystemInformationBlockType2-NB. Otherwise the field is not present."
+pcch-config,"This field is optionally present, Need OP, if the field dl-ConfigList is present and at least one of the carriers in dl-ConfigList is configured for paging. Otherwise the field is not present and only the anchor carrier is used for paging."
+pcch-config2,"This field is optionally present, need OR, if the field pcch-Config-r14 is not present for the same carrier and coverageBasedPagingConfig is present. Otherwise the field is not present and the UE shall delete any existing value for this field."
+nprach-config,"This field is mandatory present, if the field ul-ConfigList is present and at least one of the carriers in ul-ConfigList is configured for random access. Otherwise the field is not present and only the anchor carrier is used for random access."
+TDD,"This field is optionally present, Need OR, for TDD. Otherwise the field is not present."
+ul-ConfigList,"This field is optionally present, Need OR, if the field ul-ConfigList is present. Otherwise the field is not present."
+WUS,"This field is mandatory present, if the field wus-Config is present in SystemInformationBlockType2-NB. Otherwise the field is not present, Need OR."

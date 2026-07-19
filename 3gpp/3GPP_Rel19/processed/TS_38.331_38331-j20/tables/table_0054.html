@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td>SuspendConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>ncd-SSB-RedCapInitialBWP-SDTIndicates that the UE uses the RedCap-specific initial DL BWP associated with the NCD-SSB for SDT. The network configures this field if an (e)RedCap UE is configured with SDT in the RedCap-specific initial DL BWP not associated with CD-SSB. If configured, the NCD-SSB indicated by this field can only be used during the SDT procedure for CG-SDT or RA-SDT. In the MIB associated with this NCD-SSB, the systemFrameNumber field indicates the frame boundary and frame number of the NCD-SSB. The subCarrierSpacingCommon and dmrs-TypeA-Position field in the MIBs associated with CD-SSB and NCD-SSB in the same cell are configured with the same values, respectively.</td>
+  </tr>
+  <tr>
+    <td>ran-ExtendedPagingCycleThe extended DRX (eDRX) cycle for RAN-initiated paging to be applied by the UE as defined in TS 38.304 [20]. Value rf256 corresponds to 256 radio frames, value rf512 corresponds to 512 radio frames and so on. Value of the field indicates an eDRX cycle which is shorter or equal to the IDLE mode eDRX cycle configured for the UE.</td>
+  </tr>
+  <tr>
+    <td>ran-ExtendedPagingCycleConfigThe extended DRX (eDRX) configuraiton for RAN-initiated paging to be applied by the UE when the eDRX cycle for RAN-initiated paging is longer than 10.24s.</td>
+  </tr>
+  <tr>
+    <td>ran-NotificationAreaInfoNetwork ensures that the UE in RRC_INACTIVE always has a valid ran-NotificationAreaInfo.</td>
+  </tr>
+  <tr>
+    <td>ran-PagingCycleRefers to the UE specific cycle for RAN-initiated paging. Value rf32 corresponds to 32 radio frames, value rf64 corresponds to 64 radio frames and so on.</td>
+  </tr>
+  <tr>
+    <td>resumeIndicationIndicates that the UE shall trigger the RRC connection resume procedure after receiving this RRCRelease message, as specified in clause 5.3.8.3. The network only includes this field in the RRCRelease message used to terminate an ongoing SDT procedure.</td>
+  </tr>
+  <tr>
+    <td>sl-UEIdentityRemoteIndicates the C-RNTI to the L2 U2N Remote UE.</td>
+  </tr>
+  <tr>
+    <td>t380Refers to the timer that triggers the periodic RNAU procedure in UE. Value min5 corresponds to 5 minutes, value min10 corresponds to 10 minutes and so on.</td>
+  </tr>
+</table>

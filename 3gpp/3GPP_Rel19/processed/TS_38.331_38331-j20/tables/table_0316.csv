@@ -1,0 +1,2 @@
+Conditional Presence,Explanation
+LTM-MCG,"This field is optional present for the MCG, Need R, if the UE is configured with at least one LTM candidate configuration in an ltm-Config for LTM on the MCG. Otherwise the field is absent."

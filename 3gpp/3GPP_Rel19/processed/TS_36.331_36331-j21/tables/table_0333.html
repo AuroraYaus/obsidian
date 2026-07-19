@@ -1,0 +1,38 @@
+<table>
+  <tr>
+    <td>RRCConnectionRelease-NB field descriptions</td>
+  </tr>
+  <tr>
+    <td>cbp-IndexIndex to the coverage-based paging configuration. Value 1 corresponds to the first entry in cbp-ConfigList and value 2 corresponds to the second entry in cbp-ConfigList in SystemInformationBlockType22-NB.</td>
+  </tr>
+  <tr>
+    <td>drb-ContinueROHCThis field indicates whether to continue or reset the header compression protocol context for the DRBs configured with the header compression protocol. Presence of the field indicates that the header compression protocol context continues when UE initiates UP-EDT in the same cell, while absence indicates that the header compression protocol context is reset.</td>
+  </tr>
+  <tr>
+    <td>extendedWaitTimeValue in seconds.</td>
+  </tr>
+  <tr>
+    <td>extendedWaitTime-CPdataWait time for data transfer using the Control Plane CIoT EPS optimisation. Value in seconds. See TS 24.301 [35].</td>
+  </tr>
+  <tr>
+    <td>noLastCellUpdatePresence of the field indicates that the last used cell for (G)WUS shall not be updated.</td>
+  </tr>
+  <tr>
+    <td>redirectedCarrierInfoThe redirectedCarrierInfo indicates a carrier frequency (downlink for FDD) and is used to redirect the UE to a NB-IoT carrier frequency, by means of the cell selection upon leaving RRC_CONNECTED as specified in TS 36.304 [4]. redirectedCarrierInfo-v1900 is used for redirection from a terrestrial to a non-terrestrial frequency.</td>
+  </tr>
+  <tr>
+    <td>redirectedCarrierOffsetDedicatedParameter &quot;Qoffsetdedicatedfrequency&quot; in TS 36.304 [4]. For NB-IoT carrier frequencies, a UE that supports multi-band cells considers the redirectedCarrierOffsetDedicated to be common for all overlapping bands (i.e. regardless of the EARFCN that is used).</td>
+  </tr>
+  <tr>
+    <td>releaseCauseThe releaseCause is used to indicate the reason for releasing the RRC Connection.E-UTRAN should not set the releaseCause to loadBalancingTAURequired if the extendedWaitTime is present and/or if the UE is connected to 5GC.</td>
+  </tr>
+  <tr>
+    <td>resumeIdentityUE identity to facilitate UE context retrieval at eNB. E-UTRAN configures resumeIdentity-r13 only when the UE is connected to EPC and configures resumeIdentity-r16 only when the UE is connected to 5GC.</td>
+  </tr>
+  <tr>
+    <td>satAssistanceInfoListList of satellite ID(s), used to associate with the satellite assistance information for neighbour cell measurements on this frequency for the purpose of redirection. Each satellite ID included in this list corresponds to a satelliteId configured in neighSatelliteInfoList via SystemInformationBlockType33-NB.</td>
+  </tr>
+  <tr>
+    <td>t322Timer T322 as described in clause 7.3. Value minN corresponds to N minutes.</td>
+  </tr>
+</table>

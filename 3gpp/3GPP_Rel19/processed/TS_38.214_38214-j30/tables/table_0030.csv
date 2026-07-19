@@ -1,0 +1,5 @@
+,DCI format 0_1/0_2
+HARQ process number(if present),set to all '0's
+Modulation and coding scheme,set to all '1's
+Resource block assignment,"If higher layer configures RA type 0 only, set to all '0's;If higher layer configures RA type 1 only, set to all '1's;If higher layer configures dynamic switch between RA type 0 and 1, then if MSB is'0', set to all '0's; else, set to all '1's For DCI 0_1, if higher layer configures RA type 2, set to all '1's if µ = 0; set to all '0's if µ = 1"
+Redundancy version(if present),set to all '0's

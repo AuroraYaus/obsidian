@@ -1,0 +1,4 @@
+LTM-EventTriggeredReportContent field descriptions
+allowReportAnyBeamIndicates whether the UE can report the measurement results for the beams not satisfying the conditions of the events at least for the time duration configured by timeToTrigger as specified in TS 38.321 [3].
+maxNumberOfReportedBeamsThis field defines maximum number of beams whose measurements results can be reported in the event-triggered measurement report by MAC CE as specified in TS 38.321 [3].
+reportCurrentBeamIndicates whether the UE is required to report the measurement result of the current beam as specified in TS 38.321 [3].

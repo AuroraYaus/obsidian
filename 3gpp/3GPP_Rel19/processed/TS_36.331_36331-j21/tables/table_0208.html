@@ -1,0 +1,34 @@
+<table>
+  <tr>
+    <td>Conditional presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>FDD</td>
+    <td>The field is mandatory with default value (the default duplex distance defined for the concerned band, as specified in TS 36.101 [42] and TS 36.108 [114]) in case of &quot;FDD&quot;; otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>HO</td>
+    <td>This field is optionally present, need OP, in case of handover within E-UTRA when the fullConfig is not included; otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>HO-SFNsynced</td>
+    <td>This field is optionally present, need OP, in case of source E-UTRA and target E-UTRA cells are SFN synchronised.</td>
+  </tr>
+  <tr>
+    <td>HO-toEUTRA</td>
+    <td>The field is mandatory present in case of inter-RAT handover to E-UTRA; otherwise the field is optionally present, need ON.</td>
+  </tr>
+  <tr>
+    <td>HO-toEUTRA2</td>
+    <td>The field is absent if carrierFreq-v9e0 is present. Otherwise it is mandatory present in case of inter-RAT handover to E-UTRA and optionally present, need ON, in all other cases.</td>
+  </tr>
+  <tr>
+    <td>NotFullConfigHO</td>
+    <td>This field is optionally present, Need OR, in case of handover within E-UTRA when the fullConfig is not included in the RRCConnectionReconfiguration message. Otherwise the field is not present.</td>
+  </tr>
+  <tr>
+    <td>SCGEst</td>
+    <td>This field is mandatory present in case of SCG establishment; otherwise the field is optionally present, need ON.</td>
+  </tr>
+</table>

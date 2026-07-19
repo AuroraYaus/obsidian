@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td>SIB15 field descriptions</td>
+  </tr>
+  <tr>
+    <td>commonPLMNsWithDisasterConditionA list of PLMN(s) for which disaster condition applies and that disaster inbound roaming is accepted, which can be commonly applicable to the PLMNs sharing the cell.</td>
+  </tr>
+  <tr>
+    <td>applicableDisasterInfoListA list indicating the applicable disaster roaming information for the networks indicated in plmn-IdentityInfoList and npn-IdentityInfoList-r16. The network indicates in this list one entry for each entry of plmn-IdentityInfoList, followed by one entry for each entry of npn-IdentityInfoList-r16, meaning that this list will have as many entries as the number of entries of the combination of plmn-IdentityInfoList and npn-IdentityInfoList-r16. The first entry in this list indicates the disaster roaming information applicable for the network(s) in the first entry of plmn-IdentityInfoList/npn-IdentityInfoList-r16, the second entry in this list indicates the disaster roaming information applicable for the network(s) in the second entry of plmn-IdentityInfoList/npn-IdentityInfoList-r16, and so on. Each entry in this list can either be having the value noDisasterRoaming, disasterRelatedIndication, commonPLMNs, or dedicatedPLMNs. If an entry in this list takes the value noDisasterRoaming, disaster inbound roaming is not allowed in this network(s). If an entry in this list takes the value disasterRelatedIndication, the meaning of this field for this network(s) is as specified for &quot;disaster related indication&quot; in TS 23.122 [74], clause 4.4.3.1.1. If an entry in this list takes the value commonPLMNs, the PLMN(s) with disaster conditions indicated in the field commonPLMNsWithDisasterCondition apply for this network(s). If an entry in this list contains the value dedicatedPLMNs, the listed PLMN(s) are the PLMN(s) with disaster conditions that the network(s) corresponding to this entry accepts disaster inbound roamers from. For SNPNs, the network indicates the value noDisasterRoaming.</td>
+  </tr>
+</table>

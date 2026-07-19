@@ -1,0 +1,3 @@
+Bit field,PRACH resource indicator
+0,The PRACH resource configured by rach-Config-Adapt is not available for the PRACH transmission initiated by the PDCCH order
+1,The PRACH resource configured by rach-Config-Adapt is available for the PRACH transmission initiated by the PDCCH order

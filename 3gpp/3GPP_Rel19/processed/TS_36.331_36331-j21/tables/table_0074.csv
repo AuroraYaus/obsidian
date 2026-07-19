@@ -1,0 +1,4 @@
+Conditional presence,Explanation
+RSRQ,The field is mandatory present if the threshServingLowQ is present in systemInformationBlockType3; otherwise it is not present.
+UTRA-FDD,"The field is optionally present, need OR, if the carrierFreqListUTRA-FDD is present. Otherwise it is not present."
+UTRA-TDD,"The field is optionally present, need OR, if the carrierFreqListUTRA-TDD is present. Otherwise it is not present."

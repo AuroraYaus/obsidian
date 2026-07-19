@@ -1,0 +1,10 @@
+UEInformationResponse-NB field descriptions
+anr-MeasReportIndicates the ANR measurement information.
+"contentionDetectedValue TRUE indicates that contention was detected for at least one of the transmitted preambles, see TS 36.321 [6]."
+"edt-FallbackValue TRUE indicates that EDT fallback indication was received from the lower layers, see TS 36.321 [6]."
+failedPCellIdIndicates the PCell in which RLF is detected.
+initialNRSRP-LevelIndicates the NRSRP level of the NPRACH resource selected for the first preamble transmission.
+"measResultLastServCellRefers to the last measurement results taken in the PCell, where radio link failure happened."
+numberOfPreamblesSentIndicates the number of RACH preambles that were transmitted. Corresponds to parameter PREAMBLE_TRANSMISSION_COUNTER in TS 36.321 [6].
+reestablishmentCellIdIndicates the cell in which the re-establishment attempt was made after connection failure.
+timeSinceFailureIndicates the time that elapsed since the connection failure. Value in seconds. The maximum value 172800 means 172800s or longer.

@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>BWP field descriptions</td>
+  </tr>
+  <tr>
+    <td>cyclicPrefixIndicates whether to use the extended cyclic prefix for this bandwidth part. If not set, the UE uses the normal cyclic prefix. Normal CP is supported for all subcarrier spacings and slot formats. Extended CP is supported only for 60 kHz subcarrier spacing. (see TS 38.211 [16], clause 4.2). Except for SUL, the network ensures the same cyclic prefix length is used in active DL BWP and active UL BWP within a serving cell. If RedCap-specific initial DL BWP is configured, the network ensures the same cyclic prefix length is configured for initial DL BWP and RedCap-specific initial DL BWP.</td>
+  </tr>
+  <tr>
+    <td>locationAndBandwidthFrequency domain location and bandwidth of this bandwidth part. The value of the field shall be interpreted as resource indicator value (RIV) as defined TS 38.214 [19] with assumptions as described in TS 38.213 [13], clause 12, i.e. setting =275. The first PRB is a PRB determined by subcarrierSpacing of this BWP and offsetToCarrier (configured in SCS-SpecificCarrier contained within FrequencyInfoDL / FrequencyInfoUL / FrequencyInfoUL-SIB / FrequencyInfoDL-SIB within ServingCellConfigCommon / ServingCellConfigCommonSIB) corresponding to this subcarrier spacing. In case of TDD, a BWP-pair (UL BWP and DL BWP with the same bwp-Id) must have the same center frequency (see TS 38.213 [13], clause 12)</td>
+  </tr>
+  <tr>
+    <td>subcarrierSpacingSubcarrier spacing to be used in this BWP for all channels and reference signals unless explicitly configured elsewhere. Corresponds to subcarrier spacing according to TS 38.211 [16], table 4.2-1. The value kHz15 corresponds to µ=0, value kHz30 corresponds to µ=1, and so on.Only the following values are applicable depending on the used frequency:FR1/FR1-NTN:    15, 30, or 60 kHzFR2-1/FR2-NTN:  60 or 120 kHzFR2-2:  120, 480, or 960 kHzFor the initial DL BWP and operation in licensed spectrum this field has the same value as the field subCarrierSpacingCommon in MIB of the same serving cell. Except for SUL, the network ensures the same subcarrier spacing is used in active DL BWP and active UL BWP within a serving cell. For the initial DL BWP and operation with shared spectrum channel access, the value of this field corresponds to the subcarrier spacing of the SSB associated to the initial DL BWP. If RedCap-specific initial DL BWP is configured, the network ensures the same subcarrier spacing is configured for initial DL BWP and RedCap-specific initial DL BWP.</td>
+  </tr>
+</table>

@@ -1,0 +1,4 @@
+Conditional presence,Explanation
+NSSS-RRM,"This field is optionally present, Need OR, when nsss-RRM-Config is present in InterFreqCarrierFreqInfo. Otherwise, the field is not present, and the UE shall delete any existing value for this field."
+Qrxlevmin,"This field is optionally present, Need OR, if q-RxLevMin is set to the minimum value. Otherwise the field is not present."
+TDD,"The field is optionally present, Need OR, in TDD. Otherwise, the field is not present."

@@ -1,0 +1,14 @@
+Procedure title:,E-UTRAN -> UE,UE -> E-UTRAN,N,Notes
+RRC Connection Control Procedures,,,,
+RRC connection establishment,RRCConnectionSetup-NB or RRCConnectionResume-NB,RRCConnectionSetupComplete-NB or RRCConnectionResumeComplete-NB,45,
+RRC connection release,RRCConnectionRelease-NB,,NA,
+RRC connection re-configuration (radio resource configuration),RRCConnectionReconfiguration-NB,RRCConnectionReconfigurationComplete-NB,45,
+RRC connection re-establishment,RRCConnectionReestablishment-NB,RRCConnectionReestablishmentComplete-NB,45,
+Initial security activation,SecurityModeCommand,SecurityModeCommandComplete/SecurityModeCommandFailure,35,
+Initial security activation + RRC connection re-configuration (RB establishment),"SecurityModeCommand, RRCConnectionReconfiguration-NB",RRCConnectionReconfigurationComplete-NB,55,The two DL messages are transmitted in the same TTI
+EDT or transmission using PUR,RRCEarlyDataComplete-NB or RRCConnectionRelease-NB,,NA,
+Paging,Paging-NB,,NA,
+Other procedures,,,,
+UE capability transfer,UECapabilityEnquiry-NB,UECapabilityInformation-NB,35,
+UE information,UEInformationRequest-NB,UEInformationResponse-NB,45,
+PUR Configuration Request,,PURConfigurationRequest-NB,NA,

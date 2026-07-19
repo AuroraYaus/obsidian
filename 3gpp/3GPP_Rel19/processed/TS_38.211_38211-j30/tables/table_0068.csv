@@ -1,0 +1,6 @@
+PUCCH format,Length in OFDM symbols,Number of bits
+0,1 – 2,≤2
+1,4 – 14,≤2
+2,1 – 2,>2
+3,4 – 14,>2
+4,4 – 14,>2

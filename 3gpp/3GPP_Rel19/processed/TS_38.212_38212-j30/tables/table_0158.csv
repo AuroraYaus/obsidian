@@ -1,0 +1,18 @@
+Bit field mapped to index,maxRank = 2,Bit field mapped to index,maxRank = 3,Bit field mapped to index,maxRank = 4
+0,1 layer: TPMI=0,0,1 layer: TPMI=0,0,1 layer: TPMI=0
+…,…,…,…,…,…
+7,1 layer: TPMI=7,7,1 layer: TPMI=7,7,1 layer: TPMI=7
+8,2 layers: TPMI=8,8,2 layers: TPMI=8,8,2 layers: TPMI=8
+…,…,…,…,…,…
+35,2 layers: TPMI=35,35,2 layers: TPMI=35,35,2 layers: TPMI=35
+36,1 layer: TPMI=255,36,3 layers: TPMI=36,36,3 layers: TPMI=36
+37,2 layers: TPMI=256,…,…,…,…
+38-63,reserved,91,3 layers: TPMI=91,91,3 layers: TPMI=91
+,,92,1 layer: TPMI=255,92,4 layers: TPMI=92
+,,93,2 layers: TPMI=256,…,…
+,,94,3 layers: TPMI=257,161,4 layers: TPMI=161
+,,95-127,reserved,162,1 layer: TPMI=255
+,,,,163,2 layers: TPMI=256
+,,,,164,3 layers: TPMI=257
+,,,,165,4 layers: 258
+,,,,166-255,reserved

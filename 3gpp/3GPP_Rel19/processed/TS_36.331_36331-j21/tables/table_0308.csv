@@ -1,0 +1,4 @@
+SL-SyncAllowed field descriptions
+"enb-SyncIf configured, the (pre-) configured resources can be used if the UE is directly or indirectly synchronized to eNB (i.e., synchronized to a reference UE which is directly synchronized to eNB)."
+"gnss-SyncIf configured, the (pre-) configured resources can be used if the UE is directly or indirectly synchronized to GNSS (i.e. synchronized to a reference UE which is directly synchronized to GNSS)."
+"ue-SyncIf configured, the (pre-) configured resources can be used if the UE is synchronized to a reference UE which is synchronized to neither GNSS nor eNB directly or indirectly."

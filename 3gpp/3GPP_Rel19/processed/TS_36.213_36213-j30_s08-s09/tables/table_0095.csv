@@ -1,0 +1,5 @@
+,DCI format 6-0A,DCI format 6-1A
+HARQ process number,set to '000',Set to all '0's
+Redundancy version,set to '00',set to '00'
+TPC command for scheduled PUSCH,set to '00',N/A
+TPC command for scheduled PUCCH,N/A,set to '00'

@@ -1,0 +1,14 @@
+Field,Bit width,,,
+,Rank = 1,Rank = 2,Rank =3,Rank =4
+Wideband CQI codeword 0,4,4,4,4
+Wideband CQI codeword 1,0,4,4,4
+"Wideband first PMI i1,1",,,,
+"Wideband first PMI i1,2",,,,
+Subband second PMI i2,,,,
+Field,Bit width,,,
+,Rank = 5,Rank = 6,Rank =7,Rank =8
+Wideband CQI codeword 0,4,4,4,4
+Wideband CQI codeword 1,4,4,4,4
+"Wideband first PMI i1,1",,,,
+"Wideband first PMI i1,2",,,,
+Subband second PMI i2,0,0,0,0

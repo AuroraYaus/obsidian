@@ -1,0 +1,92 @@
+<table>
+  <tr>
+    <td>Procedure title:</td>
+    <td>E-UTRAN -&gt; UE</td>
+    <td>UE -&gt; E-UTRAN</td>
+    <td>N</td>
+    <td>Notes</td>
+  </tr>
+  <tr>
+    <td colspan="5">RRC Connection Control Procedures</td>
+  </tr>
+  <tr>
+    <td>RRC connection establishment</td>
+    <td>RRCConnectionSetup-NB or RRCConnectionResume-NB</td>
+    <td>RRCConnectionSetupComplete-NB or RRCConnectionResumeComplete-NB</td>
+    <td>45</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>RRC connection release</td>
+    <td>RRCConnectionRelease-NB</td>
+    <td></td>
+    <td>NA</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>RRC connection re-configuration (radio resource configuration)</td>
+    <td>RRCConnectionReconfiguration-NB</td>
+    <td>RRCConnectionReconfigurationComplete-NB</td>
+    <td>45</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>RRC connection re-establishment</td>
+    <td>RRCConnectionReestablishment-NB</td>
+    <td>RRCConnectionReestablishmentComplete-NB</td>
+    <td>45</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Initial security activation</td>
+    <td>SecurityModeCommand</td>
+    <td>SecurityModeCommandComplete/SecurityModeCommandFailure</td>
+    <td>35</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Initial security activation + RRC connection re-configuration (RB establishment)</td>
+    <td>SecurityModeCommand, RRCConnectionReconfiguration-NB</td>
+    <td>RRCConnectionReconfigurationComplete-NB</td>
+    <td>55</td>
+    <td>The two DL messages are transmitted in the same TTI</td>
+  </tr>
+  <tr>
+    <td>EDT or transmission using PUR</td>
+    <td>RRCEarlyDataComplete-NB or RRCConnectionRelease-NB</td>
+    <td></td>
+    <td>NA</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Paging</td>
+    <td>Paging-NB</td>
+    <td></td>
+    <td>NA</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="5">Other procedures</td>
+  </tr>
+  <tr>
+    <td>UE capability transfer</td>
+    <td>UECapabilityEnquiry-NB</td>
+    <td>UECapabilityInformation-NB</td>
+    <td>35</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>UE information</td>
+    <td>UEInformationRequest-NB</td>
+    <td>UEInformationResponse-NB</td>
+    <td>45</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>PUR Configuration Request</td>
+    <td></td>
+    <td>PURConfigurationRequest-NB</td>
+    <td>NA</td>
+    <td></td>
+  </tr>
+</table>

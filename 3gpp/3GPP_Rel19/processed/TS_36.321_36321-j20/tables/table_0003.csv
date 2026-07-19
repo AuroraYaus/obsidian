@@ -1,0 +1,13 @@
+Logical channel name,Acronym,Control channel,Traffic channel
+Broadcast Control Channel,BCCH,X,
+Bandwidth Reduced Broadcast Control Channel,BR-BCCH,X,
+Paging Control Channel,PCCH,X,
+Common Control Channel,CCCH,X,
+Dedicated Control Channel,DCCH,X,
+Multicast Control Channel,MCCH,X,
+Single Cell Multicast Control Channel,SC-MCCH,X,
+Dedicated Traffic Channel,DTCH,,X
+Multicast Traffic Channel,MTCH,,X
+Single-Cell Multicast Traffic Channel,SC-MTCH,,X
+Sidelink Traffic Channel,STCH,,X
+Sidelink Broadcast Control Channel,SBCCH,X,

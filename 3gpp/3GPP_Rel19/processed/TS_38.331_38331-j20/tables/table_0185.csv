@@ -1,0 +1,3 @@
+Conditional Presence,Explanation
+NoTCI-PC,"The field is mandatory present if unifiedTCI-StateType is configured for this serving cell and ul-powerControl is not configured for any UL TCI state or joint TCI state of this serving cell. Otherwise it is absent, Need R"
+SpCellOnly,"The field is optionally present, Need M, in the BWP-UplinkDedicated of an SpCell. It is absent otherwise."

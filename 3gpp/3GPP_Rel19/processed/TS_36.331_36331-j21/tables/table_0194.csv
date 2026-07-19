@@ -1,0 +1,4 @@
+CellGlobalIdNR field descriptions
+cellIdentityIdentity of the cell within the context of the PLMN.
+plmn-IdentityIdentifies the PLMN of the cell as given by the first PLMN entry in the plmn-IdentityInfoList in SIB1.
+trackingAreaCodeIndicates Tracking Area Code to which the cell indicated by cellIdentity field belongs.

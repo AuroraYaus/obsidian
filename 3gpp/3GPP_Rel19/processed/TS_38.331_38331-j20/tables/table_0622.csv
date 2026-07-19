@@ -1,0 +1,5 @@
+Conditional Presence,Explanation
+2TA,"This field is mandatory present if tag2 is present for the serving cell and the serving cell is configured with unifiedTCI-StateType set to joint. It is absent, Need R, otherwise."
+CSI-RS-Indicated,"This field is mandatory present if csi-rs is included and unifiedTCI-StateType is not configured. This field is optionally present, Need R, if csi-rs is included and unifiedTCI-StateType is configured. Otherwise, it is absent, Need R."
+JointTCI,"This field is optionally present, Need R, if this serving cell is configured with unifiedTCI-StateType set to 'joint'. It is absent, Need R, otherwise."
+JointTCI1,"This field is mandatory present, if this serving cell is configured with unifiedTCI-StateType set to 'joint'. It is absent, Need R, otherwise."

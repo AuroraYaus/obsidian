@@ -1,0 +1,15 @@
+Value,Number of DMRS CDM group(s) without data,DMRS port(s),Number of front-load symbols,Orthogonal sequence index for OCC length =2,Orthogonal sequence index for OCC length =4
+0,2,"0, nSCID= 0",1,0,0
+1,2,"0, nSCID= 1",1,1,1
+2,2,"2, nSCID= 0",1,0,2
+3,2,"2, nSCID= 1",1,1,3
+4,2,"0, nSCID= 0",2,0,0
+5,2,"0, nSCID= 1",2,1,1
+6,2,"2, nSCID= 0",2,0,2
+7,2,"2, nSCID= 1",2,1,3
+8,2,"4, nSCID= 0",2,0,0
+9,2,"4, nSCID= 1",2,1,1
+10,2,"6, nSCID= 0",2,0,2
+11,2,"6, nSCID= 1",2,1,3
+12-15,Reserved,Reserved,Reserved,Reserved,Reserved
+"NOTE:The two columns for orthogonal sequence index in this table are applicable only when OCC length 2 or 4 is indicated by the field of Time domain resource assignment in DCI format 0_1 or DCI format 0_2. The corresponding orthogonal sequence of an orthogonal sequence index is as defined in Table 6.3.2.5A-1 or Table 6.3.2.5A-2 of [4, TS 38.211].",,,,,

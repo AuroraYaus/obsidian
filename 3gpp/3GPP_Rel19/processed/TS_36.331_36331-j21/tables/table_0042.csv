@@ -1,0 +1,2 @@
+Conditional presence,Explanation
+IdleInfoEUTRA,"The field is optionally present, Need OP, if the IdleModeMobilityControlInfo-r15 is included and includes freqPriorityListEUTRA; otherwise the field is not present."

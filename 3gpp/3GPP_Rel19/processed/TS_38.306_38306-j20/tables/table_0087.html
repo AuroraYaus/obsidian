@@ -1,0 +1,50 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Description</td>
+    <td>Value</td>
+  </tr>
+  <tr>
+    <td>#DRBs</td>
+    <td>The number of DRBs that a UE shall support.</td>
+    <td>8 per UE, for (e)RedCap UEs.16 per UE, otherwise.NOTE 1NOTE 3NOTE 4</td>
+  </tr>
+  <tr>
+    <td>#minCellperMeasObjectNR</td>
+    <td>The minimum number of neighbour cells (excluding exclude-list cells) that a UE shall be able to store associated with a MeasObjectNR.</td>
+    <td>32NOTE 2</td>
+  </tr>
+  <tr>
+    <td>#minExcludedCellRangesperMeasObjectNR</td>
+    <td>The minimum number of exclude-list cell PCI ranges that a UE shall be able to store associated with a MeasObjectNR.</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>#minExcludedCellperMeasObjectEUTRA</td>
+    <td>The minimum number of exclude-list cells that a UE shall be able to store associated with a MeasObjectEUTRA.</td>
+    <td>32</td>
+  </tr>
+  <tr>
+    <td>#minCellperMeasObjectEUTRA</td>
+    <td>The minimum number of neighbour cells that a UE shall be able to store associated with a MeasObjectEUTRA.</td>
+    <td>32NOTE 2</td>
+  </tr>
+  <tr>
+    <td>#minCellTotal</td>
+    <td>The minimum number of neighbour cells (excluding exclude-list cells) that UE shall be able to store in total from all measurement objects configured.</td>
+    <td>256 with counting CSI-RS and SSB as 2.</td>
+  </tr>
+  <tr>
+    <td>#maxDeprioritisationFreq</td>
+    <td>The UE shall be able to store a depriotisation request for up to 8 frequencies (applicable when receiving another frequency specific deprioritisation request via RRCRelease before T325 expiry).</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>#minCellperMeasObjectUTRA-FDD</td>
+    <td>The minimum number of neighbour cells that a UE shall be able to store associated with a MeasObjectUTRA-FDD.</td>
+    <td>32</td>
+  </tr>
+  <tr>
+    <td colspan="3">NOTE 1:For one MAC entity, the maximum number of DRBs configured with PDCP duplication and with RLC entity(ies) associated with this MAC entity is 8.NOTE 2:In case of CGI reporting, the limit regarding the cells configured includes the cell for which the UE is requested to report CGI i.e. the amount of neighbour cells that can be included is at most (# minCellperMeasObjectRAT - 1), where RAT represents NR and EUTRA.NOTE 3:This requirement is applicable in NR SA, NR-DC and NE-DC.NOTE 4:The value of parameter #DRBs defines the total number of multicast MRBs and DRBs, and each multicast MRB associated with two RLC entities is counted as two RBs.</td>
+  </tr>
+</table>

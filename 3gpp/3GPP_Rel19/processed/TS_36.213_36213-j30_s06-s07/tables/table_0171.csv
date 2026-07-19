@@ -1,0 +1,9 @@
+'HARQ-ACK delay' field in DCI,HARQ-ACK delay value when 'ce-SchedulingEnhancement' set to 'range1',"HARQ-ACK delay value when 'ce-SchedulingEnhancement' set to 'range2', or 'ce-SchedulingEnhancement' is not configured and 'ce-HARQ-AckBundling' is set"
+000,4,4
+001,5,5
+010,7,6
+011,9,7
+100,11,8
+101,13,9
+110,15,10
+111,17,11

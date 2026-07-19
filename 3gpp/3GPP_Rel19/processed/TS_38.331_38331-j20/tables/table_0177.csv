@@ -1,0 +1,3 @@
+TCI-InDCI field descriptions
+"applyIndicatedTCI-StateDCI-1-0This field indicates, for PDSCH reception scheduled or activated by DCI format 1_0, if the UE applies the first, the second or both ""indicated"" DL only TCI or joint TCI as specified in TS 38.214 [19], clause 5.1.5."
+tci-SelectionPresentInDCIUsed as specified in TS 38.214 [19] clause 5.1.5 and TS 38.212 [17] clauses 7.3.1.2.2 and 7.3.1.2.3.

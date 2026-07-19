@@ -1,0 +1,4 @@
+UplinkConfigCommonSIB field descriptions
+frequencyInfoULAbsolute uplink frequency configuration and subcarrier specific virtual carriers.
+"InitialUplinkBWPThe initial uplink BWP configuration for a PCell (see TS 38.213 [13], clause 12)."
+"initialUplinkBWP-RedCapIf present, (e)RedCap UEs use this UL BWP instead of initialUplinkBWP.If absent, (e)RedCap UEs use initialUplinkBWP provided that it does not exceed the (e)RedCap UE maximum bandwidth (see also clause 5.2.2.4.2)."

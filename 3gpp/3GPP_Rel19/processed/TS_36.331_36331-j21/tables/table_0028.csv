@@ -1,0 +1,6 @@
+RRCConnectionReconfigurationComplete field descriptions
+numFreqEffectiveThis field is used to indicate the number of effective frequencies that a UE measures in series according to TS 36.133 [16]. Simultaneous measurement in parallel on multiple frequencies can be equivalent to a single effective frequency. The frequencies configured for reduced measurement performance should not be included.
+numFreqEffectiveReducedThis field is used to indicate the number of effective frequencies that a UE measures in series according to TS 36.133 [16] for frequencies configured for reduced measurement performance. Simultaneous measurement in parallel on multiple frequencies can be equivalent to a single effective frequency.
+perCC-GapIndicationListThis field is used to indicate per CC measurement gap preference by the UE.
+scg-ConfigResponseNRIncludes the NR RRCReconfigurationComplete message as defined in TS 38.331 [82].
+selectedCondReconfigurationToApplyThis field indicates the selected conditional RRC connection reconfiguration the UE applied upon the execution of CPA or inter-SN CPC.

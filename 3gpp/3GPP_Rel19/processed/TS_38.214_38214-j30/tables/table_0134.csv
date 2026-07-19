@@ -1,0 +1,7 @@
+UL-PTRS-power /,,The number of PUSCH layers ( ),,,,,,
+,1,2,,3,,4,,
+,All cases,Full coherent,Partial and non- coherent and non-codebook based,Full coherent,Partial and non- coherent and non-codebook based,Full coherent,Partial coherent,Non-coherent and non-codebook based
+00,0,3,3Qp-3,4.77,3Qp-3,6,3Qp,3Qp-3
+01,0,3,3,4.77,4.77,6,6,6
+10,Reserved,,,,,,,
+11,Reserved,,,,,,,

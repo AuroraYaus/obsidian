@@ -1,0 +1,9 @@
+MBS-RNTI-SpecificConfig field descriptions
+drx-ConfigPTMUsed to configure DRX for PTM transmission as specified in TS 38.321 [3].
+g-CS-RNTIUsed to scramble the SPS group-common PDSCH and activation/deactivation of SPS group-common PDSCH for one or more MBS multicast services.
+g-RNTIUsed to scramble the scheduling and transmission of PTM for one or more MBS multicast services.
+groupCommon-RNTIUsed to configure g-RNTI or g-CS-RNTI.
+"harq-FeedbackEnablerMulticastIndicates whether the UE shall provide HARQ feedback for MBS multicast. Value dci-enabler means that whether the UE shall provide HARQ feedback for MBS multicast is indicated by DCI as specified in TS 38.213 [13]. Value enabled means the UE shall always provide HARQ feedback for MBS multicast. When the field is absent, the UE behavior is specified in TS 38.213 [13]."
+harq-FeedbackOptionMulticastIndicates the feedback mode for MBS multicast dynamically scheduled PDSCH or SPS PDSCH.
+mbs-RNTI-SpecificConfigIdAn identifier of the RNTI specific configuration for MBS multicast.
+"pdsch-AggregationFactorNumber of repetitions for dynamically scheduled MBS multicast data (see TS 38.214 [19], clause 5.1.2.1). When the field is absent and groupCommon-RNTI is set to g-RNTI, the UE applies the value 1."

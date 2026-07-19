@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>AS-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>rrcReconfigurationContains the RRCReconfiguration configuration as generated entirely by the MN. If the TMGI-r17 is included in the MRB-ToAddMod-r17 in the RadioBearerConfig, the plmn-Index is replaced by the PLMN ID, if needed.</td>
+  </tr>
+  <tr>
+    <td>sdt-ConfigContains the IE SDT-Config as generated entirely by the last serving gNB. This field is only used during the SDT procedure and the RNA update procedure with UE context relocation as defined in TS 38.300 [2], clause 18.2 and 9.2.2.5 respectively.</td>
+  </tr>
+  <tr>
+    <td>sourceRB-SN-ConfigContains the IE RadioBearerConfig as generated entirely by the SN. This field is only used when the UE is configured with SN terminated RB(s).</td>
+  </tr>
+  <tr>
+    <td>sourceSCG-ConfiguredValue true indicates that the UE is configured with NR or EUTRA SCG in source configuration. The field is only used in NR-DC and NE-DC and is included only if the fields sourceSCG-NR-Config and sourceSCG-EUTRA-Config are absent.</td>
+  </tr>
+  <tr>
+    <td>sourceSCG-EUTRA-ConfigContains the current dedicated SCG configuration in RRCConnectionReconfiguration message as specified in TS 36.331 [10] and generated entirely by the SN. In this version of the specification, the E-UTRA RRCConnectionReconfiguration message can only include the field scg-Configuration . This field is only used in NE-DC.</td>
+  </tr>
+  <tr>
+    <td>sourceSCG-NR-ConfigContains the current dedicated SCG configuration in RRCReconfiguration message as generated entirely by the SN. In this version of the specification, the RRCReconfiguration message can only include fields secondaryCellGroup, measConfig, and conditionalReconfiguration. This field is only used in NR-DC.</td>
+  </tr>
+  <tr>
+    <td>srs-PosRRC-InactiveValidityAreaPreConfigListContains the IE SRS-PosRRC-InactiveValidityAreaPreConfigList as generated entirely by the last serving gNB. This field is only used UE is preconfigured with SRS for positioning with validity area and during the RNA update procedure with UE context relocation as defined in TS 38.300 [2], clause 18.2 and 9.2.2.5 respectively.</td>
+  </tr>
+</table>

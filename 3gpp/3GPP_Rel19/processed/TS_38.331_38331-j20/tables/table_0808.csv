@@ -1,0 +1,7 @@
+PDSCH-ConfigBroadcast field descriptions
+lte-CRS-ToMatchAroundParameters to determine an LTE CRS pattern that the UE shall rate match around.
+pdschConfigListList of PDSCH parameters which can be configured per G-RNTI. Only one entry is allowed to be configured if included in SIB20 or SIB24.
+"pdsch-TimeDomainAllocationListList of time-domain configurations for timing of DL assignment to DL data.The field pdsch-TimeDomainAllocationList applies to DCI format 4_0 (see table 5.1.2.1.1-1 in TS 38.214 [19]). When the field is absent, the UE follows PDSCH time domain resource allocation determination rule as specified in TS 38.214 [19], clause 5.1.2.1.1."
+"rateMatchPatternToAddModListResources patterns which the UE should rate match PDSCH around. The UE rate matches around the union of all resources indicated in the rate match patterns (see TS 38.214 [19], clause 5.1.4.1)."
+"mcs-TableIndicates which MCS table the UE shall use for PDSCH. If the field is absent the UE applies the value 64QAM. The field mcs-Table applies to DCI format 4_0 with CRC scrambled by MCCH-RNTI/G-RNTI for MBS broadcast or by Multicast MCCH-RNTI for MBS multicast in RRC_INACTIVE, and applies to DCI format 4_1 with CRC scrambled by G-RNTI for MBS multicast in RRC_INACTIVE (see TS 38.214 [19], clause 5.1.3.1)."
+"xOverheadAccounts for an overhead from CSI-RS, CORESET, etc. If the field is absent, the UE applies value xOh0 (see TS 38.214 [19], clause 5.1.3.2)."

@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <td>CQI-ReportBoth field descriptions</td>
+  </tr>
+  <tr>
+    <td>csi-IM-ConfigToAddModListFor a serving frequency E-UTRAN configures one or more CSI-IM-Config only when transmission mode 10 is configured for the serving cell on this carrier frequency.</td>
+  </tr>
+  <tr>
+    <td>csi-ProcessToAddModListFor a serving frequency E-UTRAN configures one or more CSI-Process only when transmission mode 10 is configured for the serving cell on this carrier frequency.</td>
+  </tr>
+  <tr>
+    <td>cqi-ReportModeAperiodicParameter: reporting mode. Value rm12 corresponds to Mode 1-2, rm20 corresponds to Mode 2-0, rm22 corresponds to Mode 2-2 etc. PUSCH reporting modes are described in TS 36.213 [23], clause 7.2.1. The UE shall ignore cqi-ReportModeAperiodic-r10 when transmission mode 10 is configured for the serving cell on this carrier frequency. The UE shall ignore cqi-ReportModeAperiodic-r10 configured for the PCell/ PSCell when the transmission bandwidth of the PCell/PSCell in downlink is 6 resource blocks.</td>
+  </tr>
+  <tr>
+    <td>pmi-RI-ReportSee TS 36.213 [23], clause 7.2. The presence of this field means PMI/RI reporting is configured; otherwise the PMI/RI reporting is not configured. EUTRAN configures this field only when transmissionMode is set to tm8, tm9 or tm10. The UE shall ignore pmi-RI-Report-r9/ pmi-RI-Report-r10 when transmission mode 10 is configured for the serving cell on this carrier frequency.</td>
+  </tr>
+  <tr>
+    <td>ri-Ref-CSI-ProcessIdCSI process whose RI value the UE inherits when reporting RI, in the same subframe, for CSI reporting. E-UTRAN ensures that the CSI process that inherits the RI value is configured in accordance with the conditions specified in TS 36.213 [23], clauses 7.2.1 and 7.2.2.</td>
+  </tr>
+</table>

@@ -1,0 +1,17 @@
+UE-NR-Capability,Classification
+absoluteTPC-Command (Note2),Associated serving cells
+dl-SchedulingOffset-PDSCH-TypeA (Note2),Associated serving cells
+dl-SchedulingOffset-PDSCH-TypeB (Note2),Associated serving cells
+drx-Adaptation-r16,PCell
+dynamicSFI (Note2),Associated serving cells
+handoverInterF,PCell
+handoverLTE-EPC,PCell
+handoverLTE-5GC,PCell
+tpc-PUCCH-RNTI (Note2),Associated serving cells
+tpc-PUSCH-RNTI (Note2),Associated serving cells
+tpc-SRS-RNTI (Note2),Associated serving cells
+twoDifferentTPC-Loop-PUCCH (Note2),Associated serving cells
+twoDifferentTPC-Loop-PUSCH (Note2),Associated serving cells
+ul-SchedulingOffset (Note2),Associated serving cells
+voiceOverNR (Note1),Associated serving cells.
+"NOTE 1:For a UE that does not support lch-ToSCellRestriction capability, the associated serving cells includes all serving cells in the CG; for a UE that supports lch-ToSCellRestriction capability, the associated serving cells includes the serving cells indicated by allowedServingCells for the LCH.NOTE 2:The associated serving cells including both the cell sending the command and the cell applying the command.",

@@ -1,0 +1,7 @@
+Control Information,Coding scheme,Coding rate
+DCI,Tail biting convolutional coding,1/3
+CFI,Block code,1/16
+HI,Repetition code,1/3
+UCI,Block code,variable
+,Tail biting convolutional coding,1/3
+SCI,Tail biting convolutional coding,1/3

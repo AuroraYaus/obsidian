@@ -1,0 +1,6 @@
+rvid indicated by the DCI scheduling the PUSCH,rvid to be applied to nth transmission occasion (repetition Type A) or nth actual repetition (repetition Type B),,,
+,n mod 4 = 0,n mod 4 = 1,n mod 4 = 2,n mod 4 = 3
+0,(0+ rvs) mod 4,(2+ rvs) mod 4,(3+ rvs) mod 4,(1+ rvs) mod 4
+2,(2+ rvs) mod 4,(3+ rvs) mod 4,(1+ rvs) mod 4,(0+ rvs) mod 4
+3,(3+ rvs) mod 4,(1+ rvs) mod 4,(0+ rvs) mod 4,(2+ rvs) mod 4
+1,(1+ rvs) mod 4,(0+ rvs) mod 4,(2+ rvs) mod 4,(3+ rvs) mod 4

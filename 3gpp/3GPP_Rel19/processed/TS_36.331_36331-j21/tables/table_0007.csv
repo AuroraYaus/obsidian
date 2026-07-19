@@ -1,0 +1,4 @@
+FailureInformation field descriptions
+"cellGroupIndicationThis field indicates the cell group (MCG, SCG) of the RLC entity for which the PDCP duplication failure occurred."
+failureTypeThis field indicates the type of failure reported. Value duplication indicates that a radio link failure for one of the RLC entities configured with PDCP duplication has been detected. Value dapsHO-failure indicates that timer T304 expired during a DAPS HO.
+"logicalChannelIdentity, logicalChannelIdentityExtThis field indicates the logical channel identity of the RLC entity for which the PDCP duplication failure occurred."

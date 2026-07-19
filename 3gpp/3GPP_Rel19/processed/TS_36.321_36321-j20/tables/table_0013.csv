@@ -1,0 +1,9 @@
+Index,Data Volume (DV) value [bytes],Index,Data Volume (DV) value [bytes]
+0,DV = 0,8,67 < DV <= 91
+1,0 < DV <= 10,9,91 < DV <= 125
+2,10 < DV <= 14,10,125 < DV <= 171
+3,14 < DV <= 19,11,171 < DV <= 234
+4,19 < DV <= 26,12,234 < DV <= 321
+5,26 < DV <= 36,13,321 < DV <= 768
+6,36 < DV <= 49,14,768 < DV <= 1500
+7,49 < DV <= 67,15,DV > 1500

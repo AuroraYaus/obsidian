@@ -1,0 +1,4 @@
+CLI-PeriodicalReportConfig field descriptions
+maxReportCLIMax number of CLI measurement resource to include in the measurement report.
+reportAmountNumber of measurement reports.
+reportQuantityCLIThe CLI measurement quantities to be included in the measurement report.

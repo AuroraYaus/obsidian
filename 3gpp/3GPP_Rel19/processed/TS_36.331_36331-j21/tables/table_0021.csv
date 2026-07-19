@@ -1,0 +1,6 @@
+Conditional presence,Explanation
+concHO,"The field is mandatory present if the mobilityCDMA2000-HRPD is set to ""handover""; otherwise the field is optional present, need ON."
+concRedir,"The field is mandatory present if the mobilityCDMA2000-HRPD is set to ""redirection""; otherwise the field is not present."
+GERAN,"The field should be present if the purpose is set to ""handover"" and the targetRAT-Type is set to ""geran""; otherwise the field is not present"
+PSHO,"The field is mandatory present in case of PS handover toward GERAN; otherwise the field is optionally present, but not used by the UE"
+UTRAGERANEPC,"The field is mandatory present if the targetRAT-Type is set to ""utra"" or ""geran"" or if the targetRAT-Type is set to ""eutra"" and the source CN is 5GC; otherwise the field is not present"

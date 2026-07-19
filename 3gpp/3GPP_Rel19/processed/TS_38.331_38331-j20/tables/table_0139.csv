@@ -1,0 +1,4 @@
+SIB22 field descriptions
+"atg-ConfigProvides parameters needed for ATG access such as ATG gNB location information, cell Specific Koffset, TA Report indication."
+atg-NeighCellConfigListProvides ATG assistance information of ATG neighbour cells.
+hs-ATG-CellReselectionSetIndicates whether the UE applies high speed inter-frequency measurements requirements for inter-frequency cell reselection in RRC_IDLE and RRC_INACTIVE states as specified in TS 38.133 [14]. If the field is absent UE applies only the NR cell reselection requirements as specified in TS 38.133 [14].

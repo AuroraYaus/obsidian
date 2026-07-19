@@ -1,0 +1,62 @@
+<table>
+  <tr>
+    <td>SystemInformationBlockType3-NB field descriptions</td>
+  </tr>
+  <tr>
+    <td>ce-AuthorisationOffsetParameter &quot;Qoffsetauthorization&quot; in TS 36.304 [4]. Value in dB. Value dB5 corresponds to 5 dB, dB10 corresponds to 10 dB and so on.If the field is absent, the UE applies the value of ce-authorisationOffset in SystemInformationBlockType1-NB.</td>
+  </tr>
+  <tr>
+    <td>multiBandInfoListA list of additionalPmax and additionalSpectrumEmission values as defined in TS 36.101 [42], clause 6.2.4F and TS 36.102 [113], clause 6.2B.3 for NTN capable UE, applicable for the intra-frequency neighbouring NB-IoT cells if the UE selects the frequency band from freqBandIndicator in SystemInformationBlockType1-NB.</td>
+  </tr>
+  <tr>
+    <td>npbch-RRM-ConfigFor FDD: Configuration for NPBCH-based RRM measurements. See TS 36.214 [24].If enabled, NPBCH can be used in addition to NRS for RRM measurements for serving cell.</td>
+  </tr>
+  <tr>
+    <td>nsss-RRM-ConfigFor FDD: Configuration for NSSS-based RRM measurements for the serving cell.</td>
+  </tr>
+  <tr>
+    <td>powerClass14dBm-OffsetParameter &quot;Poffset&quot; in TS 36.304 [4], only applicable for UE supporting powerClassNB-14dBm. Value in dB. Value dB-6 corresponds to -6 dB, dB-3 corresponds to -3 dB and so on. If the field is absent, the UE applies the (default) value of 0 dB for &quot;Poffset&quot; in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>p-MaxValue applicable for the intra-frequency neighbouring E-UTRA cells. If absent the UE applies the maximum power according to the UE capability.</td>
+  </tr>
+  <tr>
+    <td>q-HystParameter Qhyst in TS 36.304 [4], Value in dB. Value dB1 corresponds to 1 dB, dB2 corresponds to 2 dB and so on.</td>
+  </tr>
+  <tr>
+    <td>q-QualMinParameter &quot;Qqualmin&quot; in TS 36.304 [4], applicable for intra-frequency neighbour cells. If the field is not present, the UE applies the (default) value of negative infinity for Qqualmin.</td>
+  </tr>
+  <tr>
+    <td>q-RxLevMin, delta-RxLevMinParameter &quot;Qrxlevmin&quot; in TS 36.304 [4], applicable for intra-frequency neighbour cells. If delta-RxLevMin is not included, actual value Qrxlevmin = q-RxLevMin * 2 [dBm]. If delta-RxLevMin is included, actual value Qrxlevmin = (q-RxLevMin + delta-RxLevMin) * 2 [dBm].</td>
+  </tr>
+  <tr>
+    <td>s-IntraSearchPParameter &quot;SIntraSearchP&quot; in TS 36.304 [4].In case s-IntraSearchP-v1360 is included, the UE shall ignore s-IntraSearchP (i.e. without suffix).</td>
+  </tr>
+  <tr>
+    <td>s-MeasureDeltaPThreshold of change in serving cell NRSRP to trigger neighbour cell measurement in RRC_CONNECTED state.</td>
+  </tr>
+  <tr>
+    <td>s-MeasureInterNRSRP threshold to trigger inter-frequency neighbour cell measurement in RRC_CONNECTED state. If the field is absent in connMeasConfig, the UE applies the value of s-MeasureIntra.</td>
+  </tr>
+  <tr>
+    <td>s-MeasureIntraNRSRP threshold to trigger intra-frequency neighbour cell measurement in RRC_CONNECTED state.</td>
+  </tr>
+  <tr>
+    <td>s-NonIntraSearchParameter &quot;SnonIntraSearchP&quot; in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>s-SearchDeltaPParameter &quot;SSearchDeltaP&quot; in TS 36.304 [4]. This parameter is only applicable for UEs supporting relaxed monitoring as specified in TS 36.306 [5]. Value dB6 corresponds to 6 dB, dB9 corresponds to 9 dB and so on.</td>
+  </tr>
+  <tr>
+    <td>satelliteAssistanceInfoList of satellite ID(s), used to associate with the satellite assistance information in SystemInformationBlockType31-NB and SystemInformationBlockType33-NB for intra-frequency neighbour cell measurements.</td>
+  </tr>
+  <tr>
+    <td>t-MeasureDeltaPDuration after which the UE is not required to perfom neighbour cell measurement in RRC_CONNECTED when s-MeasureDeltaP criterion is fulfilled.</td>
+  </tr>
+  <tr>
+    <td>t-ReselectionParameter &quot;TreselectionNB-IoT_Intra&quot; in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>t-ServiceTime information on when an NTN cell is going to stop serving the area it is currently covering. This field applies for service link switches in NTN quasi-Earth fixed cells and feeder link switches for both NTN quasi-Earth fixed and earth-moving cells.</td>
+  </tr>
+</table>

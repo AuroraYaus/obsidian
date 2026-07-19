@@ -1,0 +1,34 @@
+MeasObjectEUTRA field descriptions
+allowedCellsToAddModListList of cells to add/modify in the list of allow-listed cells.
+allowedCellsToRemoveListList of cells to remove from the list of allow-listed cells.
+"altTTT-CellsToAddModListList of cells to add/ modify in the cell list for which the alternative time to trigger specified by alternativeTimeToTrigger in reportConfigEUTRA, if configured, applies."
+altTTT-CellsToRemoveListList of cells to remove from the list of cells for alternative time to trigger.
+"carrierFreqIdentifies EUTRA carrier frequency for which this configuration is valid. E-UTRAN does not configure more than one measurement object for the same physical frequency regardless of the E-ARFCN used to indicate this. CarrierFreq-r13 is included only when the extension list measObjectToAddModListExt-r13 is used. If carrierFreq-r13 is present, carrierFreq (i.e., without suffix) shall be set to value maxEARFCN."
+"cellIndexEntry index in the cell list. An entry may concern a range of cells, in which case this value applies to the entire range."
+"cellIndividualOffsetCell individual offset applicable to a specific cell. Value dB-24 corresponds to -24 dB, dB-22 corresponds to -22 dB and so on."
+"cellsToAddModListList of cells to add/ modify in the cell list. cellsToAddModList-v1610 indicates list of RSS assistance information which is used for the corresponding physCellId. If E-UTRAN includes cellsToAddModList-v1610 and/or cellsToAddModList-v1810, it includes the same number of entries, and listed in the same order, as in cellsToAddModList (i.e. without suffix)."
+cellsToRemoveListList of cells to remove from the cell list.
+"epochTimeEpoch time of the satellite ephemeris data and reference location for earth moving cells. This field is based on the timing of the serving cell, i.e. the startSFN and startSubFrame number indicated in this field refers to the SFN and sub-frame of the serving cell, and startSFN indicates the current SFN or the next upcoming SFN after the frame where the message indicating the epochTime is received. The reference point for epoch time is the uplink time synchronization reference point of the serving cell."
+excludedCellsToAddModListList of cells to add/ modify in the list of exclude-listed cells.
+excludedCellsToRemoveListList of cells to remove from the list of exclude-listed cells.
+"fembms-MixedCarrierIf this field is set to TRUE, the cells on the carrier frequency indicated by the measObject are FeMBMS/Unicast-mixed cells."
+"measCycleSCellThe parameter is used only when an SCell is configured on the frequency indicated by the measObject and is in deactivated state, see TS 36.133 [16], clause 8.3.3. E-UTRAN configures the parameter whenever an SCell is configured on the frequency indicated by the measObject, but the field may also be signalled when an SCell is not configured. Value sf160 corresponds to 160 sub-frames, sf256 corresponds to 256 sub-frames and so on."
+measDS-ConfigParameters applicable to discovery signals measurement on the carrier frequency indicated by carrierFreq.
+"measDurationNumber of consecutive symbols for which the Physical Layer reports samples of RSSI, see TS 36.214 [48]. Value sym1 corresponds to one symbol, sym14 corresponds to 14 symbols, and so on."
+measRSS-DedicatedConfigThe field indicates whether measurements based on RSS in RRC_CONNECTED is enabled and provides neighbour cell RSS information.
+measSubframeCellListList of cells for which measSubframePatternNeigh is applied.
+"measSubframePatternNeighTime domain measurement resource restriction pattern applicable to neighbour cell RSRP and RSRQ measurements on the carrier frequency indicated by carrierFreq. For cells in measSubframeCellList the UE shall assume that the subframes indicated by measSubframePatternNeigh are non-MBSFN subframes, and have the same special subframe configuration as PCell."
+"offsetFreqOffset value applicable to the carrier frequency. Value dB-24 corresponds to -24 dB, dB-22 corresponds to -22 dB and so on."
+physCellIdPhysical cell identity of a cell in the cell list.
+physCellIdRangePhysical cell identity or a range of physical cell identities.
+"reducedMeasPerformanceIf set to TRUE, the EUTRA carrier frequency is configured for reduced measurement performance, otherwise it is configured for normal measurement performance, see TS 36.133 [16]."
+referenceLocationReference location associated with a neighbour cell for eventD2 or a candidate target cell for condEventD2.
+rmtc-ConfigParameters applicable to RSSI and channel occupancy measurement on the carrier frequency indicated by carrierFreq.
+"rmtc-PeriodIndicates the RSSI measurement timing configuration (RMTC) periodicity for this frequency. Value ms40 corresponds to 40 ms periodicity, ms80 corresponds to 80 ms periodicity and so on, see TS 36.214 [48]."
+"rmtc-SubframeOffsetIndicates the RSSI measurement timing configuration (RMTC) subframe offset for this frequency. The value of rmtc-SubframeOffset should be smaller than the value of rmtc-Period, see TS 36.214 [48]. For inter-frequency measurements, this field is optional present and if it is not configured, the UE chooses a random value as rmtc-SubframeOffset for measDuration which shall be selected to be between 0 and the configured rmtc-Period with equal probability."
+"rss-ConfigCarrierInfoRSS configurations for this carrier frequency. If absent, RSS is collocated (time and frequency domain) in all cells."
+"satelliteIdThe satellite ID applicable to a specific cell, used to associate with the satellite assistance information for neighbour cell measurements."
+"t312The value of timer T312. Value ms0 represents 0 ms, ms50 represents 50 ms and so on."
+"tx-ResourcePoolToAddListList of transmission pools identities to be added to the list of pools configured for CBR measurements and for which poolReportId is included in SL-V2X-ConfigDedicated, SystemInformationBlockType21 or SystemInformationBlockType26."
+"tx-ResourcePoolToRemoveListList of transmission resource pools identities to be removed from the list of pools configured for CBR measurements and for which poolReportId is included in SL-V2X-ConfigDedicated, SystemInformationBlockType21 or SystemInformationBlockType26."
+"widebandRSRQ-MeasIf this field is set to TRUE, the UE shall, when performing RSRQ measurements, use a wider bandwidth in accordance with TS 36.133 [16]."

@@ -1,0 +1,38 @@
+<table>
+  <tr>
+    <td>CSI-RS-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>advancedCodebookEnabledValue TRUE indicates that the UE should use the advanced code book defined in TS 36.213 [23]. EUTRAN does not configure the field when the UE is configured with eMIMO-Type is set to beamformed, when the UE is configured with eMIMO-Hybrid or when the UE is configured with semiOpenLoop.</td>
+  </tr>
+  <tr>
+    <td>antennaPortsCountParameter represents the number of antenna ports used for transmission of CSI reference signals where value an1 corresponds to 1 antenna port, an2 to 2 antenna ports and so on, see TS 36.211 [21], clause 6.10.5.</td>
+  </tr>
+  <tr>
+    <td>ds-ZeroTxPowerCSI-RSParameter for additional zeroTxPowerCSI-RS for a serving cell, concerning the CSI-RS included in discovery signals.</td>
+  </tr>
+  <tr>
+    <td>dummyThis field is not used in the specification. If received it shall be ignored by the UE.</td>
+  </tr>
+  <tr>
+    <td>eMIMO-TypeParameter: eMIMO-Type, see TS 36.213 [23], TS 36.211 [21]. If eMIMO-Type is set to nonPrecoded, the codebooks used for deriving CSI feedback are in TS 36.213 [23], Table 7.2.4-10 to Table 7.2.4-17. Choice values nonPrecoded and beamformed correspond to &#x27;CLASS A&#x27; and &#x27;CLASS B&#x27; respectively, see TS 36.212 [22] and TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>p-CParameter: , see TS 36.213 [23], clause 7.2.5. The UE shall ignore p-C-r10 if configured with eMIMO-Type unless it is set to beamformed, alternativeCodebookEnabledBeamformed (in CSI-RS-ConfigBeamformed) is set to FALSE and csi-RS-ConfigNZPIdListExt is not configured.</td>
+  </tr>
+  <tr>
+    <td>resourceConfigParameter: CSI reference signal configuration, see TS 36.211 [21], tables 6.10.5.2-1 and 6.10.5.2-2.</td>
+  </tr>
+  <tr>
+    <td>subframeConfigParameter: , see TS 36.211 [21], table 6.10.5.3-1.</td>
+  </tr>
+  <tr>
+    <td>zeroTxPowerCSI-RS2Parameter for additional zeroTxPowerCSI-RS for a serving cell. E-UTRAN configures the field only if csi-MeasSubframeSets-r12 and TM 1 – 9 are configured for the serving cell.</td>
+  </tr>
+  <tr>
+    <td>zeroTxPowerResourceConfigListParameter: ZeroPowerCSI-RS, see TS 36.213 [23], clause 7.2.7.</td>
+  </tr>
+  <tr>
+    <td>zeroTxPowerSubframeConfigParameter: , see TS 36.211 [21], table 6.10.5.3-1.</td>
+  </tr>
+</table>

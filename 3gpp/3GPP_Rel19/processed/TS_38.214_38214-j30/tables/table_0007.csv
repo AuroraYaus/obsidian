@@ -1,0 +1,44 @@
+RNTI,PDCCH search space,SS/PBCH block and CORESET multiplexing pattern,PDSCH-ConfigCommon includes pdsch-TimeDomainAllocationList,PDSCH-Config includes pdsch-TimeDomainAllocationList,pdsch-ConfigMCCH / pdsch-ConfigMTCH  includes pdsch-TimeDomainAllocationListOr pdsch-ConfigMulticast includes pdsch-TimeDomainAllocationList,PDSCH-Config includes pdsch-TimeDomainAllocationListForMultiPDSCH,PDSCH time domain resource allocation to apply
+SI-RNTI,Type0 common,1,-,-,-,-,Default A for normal CP
+,,2,-,-,-,-,Default B
+,,3,-,-,-,-,Default C
+SI-RNTI,Type0A common,1,No,-,-,-,Default A
+,,2,No,-,-,-,Default B
+,,3,No,-,-,-,Default C
+,,"1,2,3",Yes,-,-,-,Pdsch-TimeDomainAllocationList provided in PDSCH-ConfigCommon
+"RA-RNTI, MSGB-RNTI, TC-RNTI",Type1 common,"1,2,3",No,-,-,-,Default A
+,,"1,2,3",Yes,-,-,-,Pdsch-TimeDomainAllocationList provided in PDSCH-ConfigCommon
+P-RNTI,Type2 common,1,No,-,-,-,Default A
+,,2,No,-,-,-,Default B
+,,3,No,-,-,-,Default C
+,,"1,2,3",Yes,-,-,-,Pdsch-TimeDomainAllocationList provided in PDSCH-ConfigCommon
+MCCH-RNTI,Type 0/0B/3 common for broadcast,1,No,-,No,-,Default A
+,,2,No,-,No,-,Default B
+,,3,No,-,No,-,Default C
+,,"1,2,3",Yes,-,No,-,pdsch-TimeDomainAllocationList provided in PDSCH-ConfigCommon
+,,"1,2,3",No/Yes,-,Yes,-,pdsch-TimeDomainAllocationList provided in pdsch-ConfigMCCH
+Multicast-MCCH-RNTI,Type 0/0B common for multicast,1,No,-,No,-,Default A
+,,2,No,-,No,-,Default B
+,,3,No,-,No,-,Default C
+,,"1,2,3",Yes,-,No,-,pdsch-TimeDomainAllocationList provided in PDSCH-ConfigCommon
+,,"1,2,3",No/Yes,-,Yes,-,pdsch-TimeDomainAllocationList provided in pdsch-ConfigMCCH for multicast for RRC_INACTIVE
+G-RNTI for broadcast,Type 0/0B/3 common for broadcast,1,No,-,No,-,Default A
+,,2,No,-,No,-,Default B
+,,3,No,-,No,-,Default C
+,,"1,2,3",Yes,-,No,-,pdsch-TimeDomainAllocationList provided in PDSCH-ConfigCommon
+,,"1,2,3",No/Yes,-,Yes,-,"pdsch-TimeDomainAllocationList provided in pdsch-ConfigMTCH, if configured, otherwise pdsch-TimeDomainAllocationList provided in pdsch-ConfigMCCH"
+G-RNTI for multicast in RRC_INACTIVE,Type 0/0B common for multicast,1,No,-,No,-,Default A
+,,2,No,-,No,-,Default B
+,,3,No,-,No,-,Default C
+,,"1,2,3",Yes,-,No,-,pdsch-TimeDomainAllocationList provided in PDSCH-ConfigCommon
+,,"1,2,3",No/Yes,-,Yes,-,"pdsch-TimeDomainAllocationList provided in pdsch-ConfigMTCH-r18, if configured, otherwise pdsch-TimeDomainAllocationList provided in pdsch-ConfigMCCH for multicast for RRC_INACTIVE (Note 1a)"
+"C-RNTI, MCS-C-RNTI, CS-RNTI",Any common search space associated with CORESET 0,"1, 2, 3",No,-,-,-,Default A
+,,"1, 2, 3",Yes,-,-,-,pdsch-TimeDomainAllocationList provided in PDSCH-ConfigCommon
+"C-RNTI, MCS-C-RNTI, CS-RNTI",Any common search space not associated with CORESET 0UE specific search space,"1,2,3",No,No,-,-,Default A
+,,"1,2,3",Yes,No,-,-,pdsch-TimeDomainAllocationList provided in PDSCH-ConfigCommon
+,,"1,2,3",No/Yes,Yes,-,-,pdsch-TimeDomainAllocationList provided in PDSCH-Config
+,,"1,2,3",No/Yes,-,-,Yes,pdsch-TimeDomainAllocationListForMultiPDSCH provided in PDSCH-Config (Note 2)
+"G-RNTI for multicast, G-CS-RNTI",Type 3 common search space for multicast,"1,2,3",No,-,No,-,Default A
+,,"1,2,3",Yes,-,No,-,pdsch-TimeDomainAllocationList provided in PDSCH-ConfigCommon (Note 1)
+,,"1,2,3",No/Yes,-,Yes,-,pdsch-TimeDomainAllocationList provided in pdsch-ConfigMulticast(Note 1)
+"Note 1:For a UE that supports multicast, the same TDRA table applies to all G-RNTIs and G-CS-RNTIs (configured for multicast in RRC_CONNECTED) if configured on a given serving cell.Note 1a:For a UE that supports multicast in RRC_INACTIVE, the same TDRA table applies to all G-RNTIs (configured for multicast in RRC_INACTIVE) if configured on a given serving cell.Note 2:If pdsch-TimeDomainAllocationListForMultiPDSCH is provided, it is applicable to DCI format 1_1 only.",,,,,,,

@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td>TDD-UL-DL-SlotConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>nrofDownlinkSymbolsNumber of consecutive DL symbols in the beginning of the slot identified by slotIndex. If the field is absent the UE assumes that there are no leading DL symbols. (see TS 38.213 [13], clause 11.1).</td>
+  </tr>
+  <tr>
+    <td>nrofUplinkSymbolsNumber of consecutive UL symbols in the end of the slot identified by slotIndex. If the field is absent the UE assumes that there are no trailing UL symbols. (see TS 38.213 [13], clause 11.1).</td>
+  </tr>
+  <tr>
+    <td>slotIndexIdentifies a slot within a slot configuration period given in tdd-UL-DL-configurationCommon, see TS 38.213 [13], clause 11.1.</td>
+  </tr>
+  <tr>
+    <td>symbolsThe direction (downlink or uplink) for the symbols in this slot. Value allDownlink indicates that all symbols in this slot are used for downlink; value allUplink indicates that all symbols in this slot are used for uplink; value explicit indicates explicitly how many symbols in the beginning and end of this slot are allocated to downlink and uplink, respectively.</td>
+  </tr>
+</table>

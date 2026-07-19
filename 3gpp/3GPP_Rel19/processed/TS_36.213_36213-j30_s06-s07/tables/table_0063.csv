@@ -1,0 +1,8 @@
+,Number of bits,,
+,2 antenna ports,4 antenna ports,8 antenna ports
+Transmission mode 3,2,4,
+Transmission mode 4,6,64,
+Transmission mode 5,4,16,
+Transmission mode 6,4,16,
+Transmission mode 8,6,"64 with alternativeCodeBookEnabledFor4TX-r12=TRUE configured, otherwise 32",
+Transmission modes 9 and 10,6,"96 with alternativeCodeBookEnabledFor4TX-r12=TRUE configured, otherwise 64",109

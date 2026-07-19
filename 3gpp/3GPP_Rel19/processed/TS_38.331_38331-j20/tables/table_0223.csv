@@ -1,0 +1,5 @@
+TD-DD-Config field descriptions
+"aperiodicResourceOffsetOffset m (in slots) between two consecutive aperiodic CSI-RS resources. See TS 38.214 [19], clause 5.2.1.4."
+"tdCQINumber of TD CQIs (X) in each SB and ref slot(s) + ref W2(s).1-1: 1 TD CQI, ref = 1st slot and 1st W21-2: 1 TD CQI, ref = 1st and last slots, and 1st and last W22: 2 TD CQIs(see TS 38.214 [19], clause 5.2.1.4)."
+"unitDurationDDDD/TD unit duration (in slots), for AP-CSI-RS only. Note: For P/SP-CSI-RS, d is set to CSI-RS periodicity (see TS 38.214 [19], clause 5.2.1.4). If the value of aperiodicResourceOffset is '1', network configures value 'm1' for this field. Value m1 corresponds to 1 slot and value m2 corresponds to 2 slots."
+"vectorLengthDDDoppler-/time-domain (DD/TD) basis vector length; See TS 38.214 [19], clause 5.2.1.4."

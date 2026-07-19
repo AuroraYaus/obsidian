@@ -1,0 +1,20 @@
+SIB5 field descriptions
+"carrierFreqListEUTRAList of carrier frequencies of E-UTRA. If the carrierFreqListEUTRA-v1610/ carrierFreqListEUTRA-v1700/ carrierFreqListEUTRA-v1800 is present, it shall contain the same number of entries, listed in the same order as in the carrierFreqListEUTRA (without suffix)."
+dummyThis field is not used in the specification. If received it shall be ignored by the UE.
+eutra-ExcludedCellListList of exclude-listed E-UTRA neighbouring cells.
+eutra-FreqNeighHSDN-CellListList of neighbouring EUTRA HSDN cells as specified in TS 36.304 [27].
+"eutra-multiBandInfoListIndicates the list of frequency bands in addition to the band represented by carrierFreq for which cell reselection parameters are common, and a list of additionalPmax and additionalSpectrumEmission values, as defined in TS 36.101 [22], table 6.2.4-1, for the frequency bands in eutra-multiBandInfoList"
+"highSpeedEUTRACarrierIf the field is present, the UE shall apply the enhanced NR-EUTRA inter-RAT measurement requirements to support high speed up to 500 km/h as specified in TS 38.133 [14] to the E-UTRA carrier."
+idleModeMeasVoiceFallbackIndicates whether E-UTRA idle/inactive measurements and reporting for EPS fallback can be used.
+"p-MaxEUTRAThe maximum allowed transmission power in dBm on the (uplink) carrier frequency, see TS 36.304 [27]."
+"q-QualMinParameter ""Qqualmin"" in TS 36.304 [27]. Actual value Qqualmin = field value [dB]."
+"q-QualMinOffsetCellParameter ""Qqualminoffsetcell"" in TS 36.304 [27]. Actual value Qqualminoffsetcell = field value [dB]."
+"q-RxLevMinParameter ""Qrxlevmin"" in TS 36.304 [27]. Actual value Qrxlevmin = field value * 2 [dBm]."
+"q-RxLevMinOffsetCellParameter ""Qrxlevminoffsetcell"" in TS 36.304 [27]. Actual value Qrxlevminoffsetcell = field value * 2 [dB]."
+"t-ReselectionEUTRAParameter ""TreselectionEUTRA"" in TS 38.304 [20]."
+"threshX-HighParameter ""ThreshX, HighP"" in TS 38.304 [20]."
+"threshX-HighQParameter ""ThreshX, HighQ"" in TS 38.304 [20]."
+"threshX-LowParameter ""ThreshX, LowP"" in TS 38.304 [20]."
+"threshX-LowQParameter ""ThreshX, LowQ"" in TS 38.304 [20]."
+tn-AreaIdListList of TN area identifiers. The associated coverage information is provided in SIB25.
+"t-ReselectionEUTRA-SFParameter ""Speed dependent ScalingFactor for TreselectionEUTRA"" in TS 38.304 [20]. If the field is absent, the UE behaviour is specified in TS 38.304 [20]."

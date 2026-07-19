@@ -1,0 +1,113 @@
+<table>
+  <tr>
+    <td>SystemInformationBlockType8 field descriptions</td>
+  </tr>
+  <tr>
+    <td>ac-BarringConfig1XRTTContains the access class barring parameters the UE uses to calculate the access class barring factor, see C.S0097 [53].</td>
+  </tr>
+  <tr>
+    <td>ac-Barring0to9Parameter used for calculating the access class barring factor for access overload classes 0 through 9. It is the parameter &quot;PSIST&quot; in C.S0004 [34] for access overload classes 0 through 9.</td>
+  </tr>
+  <tr>
+    <td>ac-BarringEmgParameter used for calculating the access class barring factor for emergency calls and emergency message transmissions for access overload classes 0 through 9. It is the parameter &quot;PSIST_EMG&quot; in C.S0004 [34].</td>
+  </tr>
+  <tr>
+    <td>ac-BarringMsgParameter used for modifying the access class barring factor for message transmissions. It is the parameter &quot;MSG_PSIST&quot; in C.S0004 [34].</td>
+  </tr>
+  <tr>
+    <td>ac-BarringNParameter used for calculating the access class barring factor for access overload class N (N = 10 to 15). It is the parameter &quot;PSIST&quot; in C.S0004 [34] for access overload class N.</td>
+  </tr>
+  <tr>
+    <td>ac-BarringRegParameter used for modifying the access class barring factor for autonomous registrations. It is the parameter &quot;REG_PSIST&quot; in C.S0004 [34].</td>
+  </tr>
+  <tr>
+    <td>bandClassIdentifies the Frequency Band in which the Carrier can be found. Details can be found in C.S0057 [24], Table 1.5.</td>
+  </tr>
+  <tr>
+    <td>bandClassListList of CDMA2000 frequency bands.</td>
+  </tr>
+  <tr>
+    <td>cellReselectionParameters1XRTTCell reselection parameters applicable only to CDMA2000 1xRTT system.</td>
+  </tr>
+  <tr>
+    <td>cellReselectionParameters1XRTT-ExtCell reselection parameters applicable for cell reselection to CDMA2000 1XRTT system.</td>
+  </tr>
+  <tr>
+    <td>cellReselectionParameters1XRTT-v920Cell reselection parameters applicable for cell reselection to CDMA2000 1XRTT system. The field is not present if cellReselectionParameters1XRTT is not present; otherwise it is optionally present.</td>
+  </tr>
+  <tr>
+    <td>cellReselectionParametersHRPDCell reselection parameters applicable for cell reselection to CDMA2000 HRPD system</td>
+  </tr>
+  <tr>
+    <td>cellReselectionParametersHRPD-ExtCell reselection parameters applicable for cell reselection to CDMA2000 HRPD system.</td>
+  </tr>
+  <tr>
+    <td>cellReselectionParametersHRPD-v920Cell reselection parameters applicable for cell reselection to CDMA2000 HRPD system. The field is not present if cellReselectionParametersHRPD is not present; otherwise it is optionally present.</td>
+  </tr>
+  <tr>
+    <td>csfb-DualRxTxSupportValue TRUE indicates that the network supports dual Rx/Tx enhanced 1xCSFB, which enables UEs capable of dual Rx/Tx enhanced 1xCSFB to switch off their 1xRTT receiver/transmitter while camped in E-UTRAN [51].</td>
+  </tr>
+  <tr>
+    <td>csfb-RegistrationParam1XRTTContains the parameters the UE will use to determine if it should perform a CDMA2000 1xRTT Registration/Re-Registration. This field is included if either CSFB or enhanced CS fallback to CDMA2000 1xRTT is supported.</td>
+  </tr>
+  <tr>
+    <td>csfb-SupportForDualRxUEsValue TRUE indicates that the network supports dual Rx CSFB [51].</td>
+  </tr>
+  <tr>
+    <td>longCodeState1XRTTThe state of long code generation registers in CDMA2000 1XRTT system as defined in C.S0002 [12], clause 1.3, at ms, where t equals to the cdma-SystemTime. This field is required for reporting CGI for 1xRTT, SRVCC handover and enhanced CS fallback to CDMA2000 1xRTT operation. Otherwise this IE is not needed. This field is excluded when estimating changes in system information, i.e. changes of longCodeState1XRTT should neither result in system information change notifications nor in a modification of systemInfoValueTag in SIB1.</td>
+  </tr>
+  <tr>
+    <td>neighCellListList of CDMA2000 neighbouring cells. The total number of neighbouring cells in neighCellList for each RAT (1XRTT or HRPD) is limited to 32.</td>
+  </tr>
+  <tr>
+    <td>neighCellList-v920Extended List of CDMA2000 neighbouring cells. The combined total number of CDMA2000 neighbouring cells in both neighCellList and neighCellList-v920 is limited to 32 for HRPD and 40 for 1xRTT.</td>
+  </tr>
+  <tr>
+    <td>neighCellsPerFreqListList of carrier frequencies and neighbour cell ids in each frequency within a CDMA2000 Band, see C.S0002 [12] or C.S0024 [26].</td>
+  </tr>
+  <tr>
+    <td>neighCellsPerFreqList-v920Extended list of neighbour cell ids, in the same CDMA2000 Frequency Band as the corresponding instance in &quot;NeighCellListCDMA2000&quot;.</td>
+  </tr>
+  <tr>
+    <td>parameters1XRTTParameters applicable for interworking with CDMA2000 1XRTT system.</td>
+  </tr>
+  <tr>
+    <td>parametersCDMA2000Provides the corresponding SIB8 parameters for the CDMA2000 network associated with the PLMN indicated in plmn-Identity. A choice is used to indicate whether for this PLMN the parameters are signalled explicitly or set to the (default) values common for all PLMNs i.e. the values not included in sib8-PerPLMN-List.</td>
+  </tr>
+  <tr>
+    <td>parametersHRPDParameters applicable only for interworking with CDMA2000 HRPD systems.</td>
+  </tr>
+  <tr>
+    <td>physCellIdListIdentifies the list of CDMA2000 cell ids, see C.S0002 [12] or C.S0024 [26].</td>
+  </tr>
+  <tr>
+    <td>physCellIdList-v920Extended list of CDMA2000 cell ids, in the same CDMA2000 ARFCN as the corresponding instance in &quot;NeighCellsPerBandclassCDMA2000&quot;.</td>
+  </tr>
+  <tr>
+    <td>plmn-IdentityIndicates the PLMN associated with this CDMA2000 network. Value 1 indicates the PLMN listed 1st in the 1st plmn-IdentityList included in SIB1, value 2 indicates the PLMN listed 2nd in the same plmn-IdentityList, or when no more PLMN are present within the same plmn_identityList, then the PLMN listed 1st in the subsequent plmn-IdentityList within the same SIB1 and so on. A PLMN which identity is not indicated in the sib8-PerPLMN-List, does not support inter-working with CDMA2000.</td>
+  </tr>
+  <tr>
+    <td>preRegistrationInfoHRPDThe CDMA2000 HRPD Pre-Registration Information tells the UE if it should pre-register with the CDMA2000 HRPD network and identifies the Pre-registration zone to the UE.</td>
+  </tr>
+  <tr>
+    <td>searchWindowSizeThe search window size is a CDMA2000 parameter to be used to assist in searching for the neighbouring pilots. For values see C.S0005 [25], Table 2.6.6.2.1-1, and C.S0024 [26], Table 8.7.6.2-4. This field is required for a UE with rx-ConfigHRPD= single and/ or rx-Config1XRTT= single to perform handover, cell re-selection, UE measurement based redirection and enhanced 1xRTT CS fallback from E-UTRAN to CDMA2000 according to this specification and TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>sib8-PerPLMN-ListThis field provides the values for the interworking CDMA2000 networks corresponding, if any, to the UE&#x27;s RPLMN.</td>
+  </tr>
+  <tr>
+    <td>systemTimeInfoInformation on CDMA2000 system time. This field is required for a UE with rx-ConfigHRPD= single and/ or rx-Config1XRTT= single to perform handover, cell re-selection, UE measurement based redirection and enhanced 1xRTT CS fallback from E-UTRAN to CDMA2000 according to this specification and TS 36.304 [4]. This field is excluded when estimating changes in system information, i.e. changes of systemTimeInfo should neither result in system information change notifications nor in a modification of systemInfoValueTag in SIB1.For the field included in ParametersCDMA2000, a choice is used to indicate whether for this PLMN the parameters are signalled explicitly or set to the (default) value common for all PLMNs i.e. the value not included in sib8-PerPLMN-List.</td>
+  </tr>
+  <tr>
+    <td>threshX-HighParameter &quot;ThreshX, HighP&quot; in TS 36.304 [4]. This specifies the high threshold used in reselection towards this CDMA2000 band class expressed as an unsigned binary number equal to FLOOR (-2 x 10 x log10 Ec/Io) in units of 0.5 dB, as defined in C.S0005 [25].</td>
+  </tr>
+  <tr>
+    <td>threshX-LowParameter &quot;ThreshX, LowP&quot; in TS 36.304 [4]. This specifies the low threshold used in reselection towards this CDMA2000 band class expressed as an unsigned binary number equal to FLOOR (-2 x 10 x log10 Ec/Io) in units of 0.5 dB, as defined in C.S0005 [25].</td>
+  </tr>
+  <tr>
+    <td>t-ReselectionCDMA2000Parameter &quot;TreselectionCDMA_HRPD&quot; or &quot;TreselectionCDMA_1xRTT&quot; in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>t-ReselectionCDMA2000-SFParameter &quot;Speed dependent ScalingFactor for TreselectionCDMA-HRPD&quot; or TreselectionCDMA-1xRTT&quot; in TS 36.304 [4]. If the field is not present, the UE behaviour is specified in TS 36.304 [4].</td>
+  </tr>
+</table>

@@ -1,0 +1,6 @@
+HARQ-ACK(0),HARQ-ACK(1),,
+ACK,ACK,,"1,1"
+ACK,NACK/DTX,,"1,1"
+NACK/DTX,ACK,,"0,0"
+NACK,NACK/DTX,,"0,0"
+DTX,NACK/DTX,No Transmission,

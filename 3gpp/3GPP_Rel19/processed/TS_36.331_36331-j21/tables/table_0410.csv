@@ -1,0 +1,2 @@
+Conditional presence,Explanation
+twoHARQ,"The field is mandatory present if twoHARQ-ProcessesConfig is set to TRUE. Otherwise, the field is not present and, if previously configured, the timer is released."

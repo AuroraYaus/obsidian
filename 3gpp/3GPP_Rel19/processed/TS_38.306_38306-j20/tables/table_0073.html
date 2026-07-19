@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <td>Definitions for parameters</td>
+    <td>Per</td>
+    <td>M</td>
+    <td>FDD-TDD DIFF</td>
+    <td>FR1-FR2 DIFF</td>
+  </tr>
+  <tr>
+    <td>applicabilityReportingCSI-r19Indicates whether the UE supports applicability reporting and/or its updates based on inference configuration provided via CSI-ReportConfig, as specified in TS 38.331 [9].It is mandatory if UE supports at least one of aiml-BM-Case1-r19, aiml-BM-Case2-r19 and aiml-CSI-Prediction-r19, aiml-CSI-PredictionPerBC-r19.</td>
+    <td>UE</td>
+    <td>CY</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>applicabilityReportingOther-r19Indicates whether the UE supports applicability reporting and/or its updates based on inference related parameters configuration provided via OtherConfig, as specified in TS 38.331 [9].It is mandatory if UE supports at least one of aiml-BM-Case1-r19 and aiml-BM-Case2-r19.</td>
+    <td>UE</td>
+    <td>CY</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>dataThresholdAvailabilityIndication-r19Indicates whether the UE supports triggering data availability indication via UEAssistanceInformation message when the amount of logged data for network-side data collection reaches a configured threshold.A UE supporting this feature shall also indicate support of loggedDataCollection-r19.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>eventBasedLoggedDataCollection-r19Indicates whether the UE supports L3 measurement event-triggered logging of measurements for network-side data collection, as specified in TS 38.331 [9].A UE supporting this feature shall also indicate support of loggedDataCollection-r19 and dataThresholdAvailabilityIndication-r19.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>loggedDataCollection-r19Indicates whether the UE supports logged measurements for network-side data collection, as specified in TS 38.331 [9]. The UE supporting this feature also supports periodical logging and providing full memory indication and low power indication via UEAssistanceInformation message.The minimum memory size for storing of logged measurement of network-side data collection is 64kB.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+</table>

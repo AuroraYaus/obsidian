@@ -1,0 +1,3 @@
+CA-ParametersNR field description
+"codebookParametersPerBCFor a given supported band combination, this field indicates the alternative list of SupportedCSI-RS-Resource supported for each codebook type, amongst the supported CSI-RS resources included in codebookParametersPerBand in MIMO-ParametersPerBand."
+dummyThe field is not used in the specification and the network ignores the received value.

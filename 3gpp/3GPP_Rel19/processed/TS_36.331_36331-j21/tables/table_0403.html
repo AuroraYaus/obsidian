@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <td>RadioResourceConfigCommonSIB-NB field descriptions</td>
+  </tr>
+  <tr>
+    <td>cb-Msg3-ConfigSIB-NBConfiguration for CB-Msg3-EDT.</td>
+  </tr>
+  <tr>
+    <td>defaultPagingCycleDefault paging cycle, used to derive &#x27;T&#x27; in TS 36.304 [4]. Value rf128 corresponds to 128 radio frames, rf256 corresponds to 256 radio frames and so on.</td>
+  </tr>
+  <tr>
+    <td>dl-GapDownlink transmission gap configuration for the anchor carrier. See TS 36.211 [21], clause 10.2.3.4. If the field is absent, there is no gap.</td>
+  </tr>
+  <tr>
+    <td>gwus-ConfigFor FDD: GWUS Configuration.</td>
+  </tr>
+  <tr>
+    <td>modificationPeriodCoeffActual modification period, expressed in number of radio frames= modificationPeriodCoeff * defaultPagingCycle. n16 corresponds to value 16, n32 corresponds to value 32, and so on. The BCCH modification period should be larger or equal to 40.96s.</td>
+  </tr>
+  <tr>
+    <td>nBParameter: nB is used as one of parameters to derive the Paging Frame and Paging Occasion according to TS 36.304 [4]. Value in multiples of &#x27;T&#x27; as defined in TS 36.304 [4]. A value of fourT corresponds to 4 * T, a value of twoT corresponds to 2 * T and so on.</td>
+  </tr>
+  <tr>
+    <td>npdcch-NumRepetitionPagingMaximum number of repetitions for NPDCCH common search space (CSS) for paging, see TS 36.213 [23], clause 16.6.</td>
+  </tr>
+  <tr>
+    <td>npusch-TxDurationDuration of NPUSCH segment transmission in NTN transmission, see TS 36.213 [23]. This field is not signalled in IoT NTN TDD mode.</td>
+  </tr>
+  <tr>
+    <td>nrs-NonAnchorConfigFor FDD: Indicates if NRS are present on non-anchor paging carriers even when no paging NPDCCH is transmitted, see TS 36.211 [21], clause 10.2.6.</td>
+  </tr>
+  <tr>
+    <td>t318The value of timer T318. Value ms0 corresponds with 0 ms, ms50 corresponds with 50 ms and so on.</td>
+  </tr>
+  <tr>
+    <td colspan="2">ta-ReportWhen this field is included in SystemInformationBlockType2-NB, it indicates reporting of timing advance is enabled during Random Access due to RRC connection establishment, RRC connection resume or RRC connection reestablishment, see TS 36.321 [6], clause 5.4.9. When configured, the UE may include TA report during transmission using PUR.</td>
+  </tr>
+  <tr>
+    <td>ue-SpecificDRX-CycleMinMinimum UE specific DRX cycle in the cell, see TS 36.304 [4], clause 7.1. Value rf32 corresponds to 32 radio frames, rf64 corresponds to 64 radio frames and so on.If present, E-UTRAN ensures PCCH configuration does not lead to CSS overlap for ue-SpecificDRX-CycleMin.If the field is not present, use of UE specific DRX cycle is not allowed in the cell.</td>
+  </tr>
+  <tr>
+    <td>wus-ConfigFor FDD: WUS Configuration.</td>
+  </tr>
+</table>

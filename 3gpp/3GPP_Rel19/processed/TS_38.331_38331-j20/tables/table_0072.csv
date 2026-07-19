@@ -1,0 +1,9 @@
+Conditional Presence,Explanation
+2RxXR,"This field is mandatory present if cellBarred2RxXR is present, otherwise it is absent, Need R."
+EDRX-RC,"The field is optionally present, Need R, in a cell that enables eDRX-AllowedIdle, otherwise it is absent."
+EM-Barring,"The field is optionally present, Need R, in a cell that supports (e)RedCap or 2Rx XR UEs, otherwise it is absent."
+MINT,"The field is optionally present, Need R, in a cell that provides a configuration for disaster roaming, otherwise it is absent, Need R."
+MT-SDT1,"This field is optionally present, Need S, in a cell that supports MT-SDT if sdt-ConfigCommon-r17 is not present, otherwise it is absent."
+MT-SDT2,"This field is mandatory present in a cell that supports MT-SDT if sdt-ConfigCommon-r17 is not present, otherwise it is absent."
+NTN,"The field is optionally present, Need S, in a cell where cellBarredNTN is included with value notBarred, otherwise it is absent."
+Standalone,"The field is mandatory present in a cell that supports standalone operation, otherwise it is absent."

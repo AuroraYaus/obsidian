@@ -1,0 +1,32 @@
+RNTI,Usage,Transport Channel,Logical Channel
+P-RNTI,Paging and System Information change notification,PCH,PCCH
+SI-RNTI,Broadcast of System Information,DL-SCH,"BCCH, BR-BCCH"
+M-RNTI,MCCH Information change notification,N/A,N/A
+RA-RNTI,Random Access Response,DL-SCH,N/A
+eIMTA-RNTI,eIMTA TDD UL/DL configuration notification,N/A,N/A
+Temporary C-RNTI,Contention Resolution(when no valid C-RNTI is available),DL-SCH,"CCCH, DCCH"
+Temporary C-RNTI,Msg3 transmission,UL-SCH,"CCCH, DCCH, DTCH"
+C-RNTI,Dynamically scheduled unicast transmission,UL-SCH,"DCCH, DTCH"
+C-RNTI,Dynamically scheduled unicast transmission,DL-SCH,"CCCH, DCCH, DTCH"
+C-RNTI,Triggering of PDCCH ordered random access,N/A,N/A
+Semi-Persistent Scheduling C-RNTI,"Semi-Persistently scheduled unicast transmission(activation, reactivation and retransmission)","DL-SCH, UL-SCH","DCCH, DTCH"
+Semi-Persistent Scheduling C-RNTI,Semi-Persistently scheduled unicast transmission(deactivation),N/A,N/A
+TPC-PUCCH-RNTI,Physical layer Uplink power control,N/A,N/A
+TPC-PUSCH-RNTI,Physical layer Uplink power control,N/A,N/A
+SL-RNTI,Dynamically scheduled sidelink transmission for sidelink communication,SL-SCH,STCH
+SC-RNTI,Dynamically scheduled SC-PTM control information,DL-SCH,SC-MCCH
+G-RNTI,Dynamically scheduled SC-PTM transmission,DL-SCH,SC-MTCH
+SC-N-RNTI,SC-MCCH Information change notification,N/A,N/A
+CC-RNTI,Providing common control PDCCH information,N/A,N/A
+SL-V-RNTI,Dynamically scheduled sidelink transmission for V2X sidelink communication,SL-SCH,STCH
+UL Semi-Persistent Scheduling V-RNTI,"Semi-Persistently scheduled uplink transmission for V2X communication(activation, reactivation and retransmission)",UL-SCH,"DCCH, DTCH"
+UL Semi-Persistent Scheduling V-RNTI,Semi-Persistently scheduled uplink transmission for V2X communication(deactivation),N/A,N/A
+SL Semi-Persistent Scheduling V-RNTI,"Semi-Persistently scheduled sidelink transmission for V2X sidelink communication(activation, reactivation and retransmission)",SL-SCH,STCH
+SL Semi-Persistent Scheduling V-RNTI,Semi-Persistently scheduled sidelink transmission for V2X sidelink communication(deactivation),N/A,N/A
+SRS-TPC-RNTI,SRS and TPC for the PUSCH-less SCells,N/A,N/A
+AUL C-RNTI,Autonomous Uplink C-RNTI unicast transmission (activation and reactivation),UL-SCH,"DCCH, DTCH"
+AUL C-RNTI,Autonomous Uplink C-RNTI unicast transmission (deactivation),N/A,N/A
+PUR-RNTI,Transmission using Preconfigured Uplink Resource,"DL-SCH, UL-SCH","CCCH, DCCH, DTCH"
+PUR-RNTI,Transmission using Preconfigured Uplink Resource (L1 ACK or fallback indication),N/A,N/A
+CB-RNTI,CB-Msg3 transmission,UL-SCH,"CCCH, DTCH"
+CB-RNTI,CB-Msg4,DL-SCH,"CCCH, DCCH,DTCH"

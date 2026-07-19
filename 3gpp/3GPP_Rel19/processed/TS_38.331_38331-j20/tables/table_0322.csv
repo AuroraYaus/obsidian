@@ -1,0 +1,4 @@
+Conditional Presence,Explanation
+EarlyCSI,"This field if mandatory present in case ltm-CSI-ReportConfig is present within an LTM-Candidate IE. Otherwise, it is absent."
+LTM2,"This field is mandatory in case the eventId is configured as eventLTM2. Otherwise, it is optionally present, need R."
+notEventLTM2,"This field is not present when the eventId is configured as eventLTM2. Otherwise, it is optionally present, need S."

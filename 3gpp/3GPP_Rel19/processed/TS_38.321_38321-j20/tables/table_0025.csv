@@ -1,0 +1,43 @@
+Codepoint,Index,LCID values
+0 to 214,64 to 278,Reserved
+215,279,Multiple Entry Delay Status Report
+216,280,UL Rate Control
+217,281,Event Triggered L1 Measurement Report
+218,282,Truncated Event Triggered L1 Measurement Report
+219,283,Enhanced Multiple Entry PHR for multiple TRP STx2P (four octets Ci)
+220,284,Enhanced Multiple Entry PHR for multiple TRP STx2P (one octets Ci)
+221,285,Enhanced Single Entry PHR for multiple TRP STx2P
+222,286,SL LBT Failure
+223,287,Multiple Entry PHR with assumed PUSCH (four octets Ci)
+224,288,Multiple Entry PHR with assumed PUSCH (one octets Ci)
+225,289,Single Entry PHR with assumed PUSCH
+226,290,SL-PRS Resource Request
+227,291,Refined Long BSR
+228,292,Single Entry Delay Status Report
+229,293,Enhanced Multiple Entry PHR for multiple TRP (four octets Ci)
+230,294,Enhanced Multiple Entry PHR for multiple TRP (one octets Ci)
+231,295,Enhanced Single Entry PHR for multiple TRP
+232,296,Enhanced Multiple Entry PHR (four octets Ci)
+233,297,Enhanced Multiple Entry PHR (one octets Ci)
+234,298,Enhanced Single Entry PHR
+235,299,Enhanced BFR (one octet Ci)
+236,300,Enhanced BFR (four octet Ci)
+237,301,Truncated Enhanced BFR (four octet Ci)
+238,302,Positioning Measurement Gap Activation/Deactivation Request
+239,303,IAB-MT Recommended Beam Indication
+240,304,Desired IAB-MT PSD range
+241,305,Desired DL Tx Power Adjustment
+242,306,Case-6 Timing Request
+243,307,Desired Guard Symbols for Case 6 timing
+244,308,Desired Guard Symbols for Case 7 timing
+245,309,Extended Short Truncated BSR
+246,310,Extended Long Truncated BSR
+247,311,Extended Short BSR
+248,312,Extended Long BSR
+249,313,Extended Pre-emptive BSR
+250,314,BFR (four octets Ci)
+251,315,Truncated BFR (four octets Ci)
+252,316,Multiple Entry Configured Grant Confirmation
+253,317,Sidelink Configured Grant Confirmation
+254,318,Desired Guard Symbols
+255,319,Pre-emptive BSR

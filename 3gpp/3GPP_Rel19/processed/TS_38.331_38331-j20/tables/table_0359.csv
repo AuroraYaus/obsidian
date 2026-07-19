@@ -1,0 +1,3 @@
+MeasResultCellSFTD-NR field descriptions
+sfn-OffsetResultIndicates the SFN difference between the PCell and the NR cell as an integer value according to TS 38.215 [9].
+frameBoundaryOffsetResultIndicates the frame boundary difference between the PCell and the NR cell as an integer value according to TS 38.215 [9].

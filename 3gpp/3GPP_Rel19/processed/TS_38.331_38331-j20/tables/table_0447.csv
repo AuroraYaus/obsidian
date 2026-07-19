@@ -1,0 +1,10 @@
+Conditional Presence,Explanation
+MCG-Only,"This field is optionally present, Need R, in the PhysicalCellGroupConfig of the MCG. It is absent otherwise."
+NCR,"This field is optionally present, Need M for NCR-MT. It is absent otherwise."
+SCG-Only,"This field is optionally present, Need S, in the PhysicalCellGroupConfig of the SCG in (NG)EN-DC as defined in TS 38.213 [13]. It is absent otherwise."
+twoPUCCHgroup,"This field is optionally present, Need R, if secondary PUCCH group is configured. It is absent otherwise, Need R."
+FR1-Only,This field is mandatory present for an FR1 carrier frequency. It is absent otherwise.
+FR2-Only,This field is mandatory present for an FR2 carrier frequency. It is absent otherwise.
+Option1-1,"This field is mandatory present for LP-WUS operation option 1-1, i.e., the UE is configured to start drx-onDurationTimer after LP-WUS reception as specified in TS 38.321 [3]. It is absent otherwise."
+Option1-2,"This field is mandatory present for LP-WUS operation option 1-2, i.e., the UE is configured to start a PDCCH monitoring timer for LP-WUS after LP-WUS reception as specified in TS 38.321 [3]. It is absent otherwise."
+DRX-SecondaryGroup,"This field is mandatory present, if drx-ConfigSecondaryGroup is configured. It is absent otherwise."

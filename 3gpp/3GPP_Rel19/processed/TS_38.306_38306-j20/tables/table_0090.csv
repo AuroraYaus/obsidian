@@ -1,0 +1,4 @@
+Sidelink Parameter,Classification
+logicalChannelSR-DelayTimerSidelink(Note1),Associated serving cells
+multipleSR-ConfigurationsSidelink,Per serving cell
+"NOTE 1:For a given logical channel, the associated serving cells including the PUCCH cell(s) associated with this logical channel (via schedulingRequestID).",

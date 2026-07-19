@@ -1,0 +1,5 @@
+A,HARQ-ACK(j),,,
+,HARQ-ACK(0),HARQ-ACK(1),HARQ-ACK(2),HARQ-ACK(3)
+2,TB1 Primary cell,TB1 Secondary cell,NA,NA
+3,TB1 Serving cell1,TB2 Serving cell1,TB1 Serving cell2,NA
+4,TB1 Primary cell,TB2 Primary cell,TB1 Secondary cell,TB2 Secondary cell

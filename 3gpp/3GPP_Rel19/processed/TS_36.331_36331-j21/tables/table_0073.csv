@@ -1,0 +1,16 @@
+SystemInformationBlockType6 field descriptions
+"carrierFreqListUTRA-FDDList of carrier frequencies of UTRA FDD. E-UTRAN does not configure more than one entry for the same physical frequency regardless of the ARFCN used to indicate this. If E-UTRAN includes carrierFreqListUTRA-FDD-v8h0 and/or carrierFreqListUTRA-FDD-v1250, it includes the same number of entries, and listed in the same order, as in carrierFreqListUTRA-FDD (i.e. without suffix). See Annex D for more descriptions."
+carrierFreqListUTRA-FDD-ExtList of additional carrier frequencies of UTRA FDD. E-UTRAN does not configure more than one entry for the same physical frequency regardless of the ARFCN used to indicate this. EUTRAN may include carrierFreqListUTRA-FDD-Ext even if carrierFreqListUTRA-FDD (i.e without suffix) does not include maxUTRA-FDD-Carrier entries.
+"carrierFreqListUTRA-TDDList of carrier frequencies of UTRA TDD. E-UTRAN does not configure more than one entry for the same physical frequency regardless of the ARFCN used to indicate this If E-UTRAN includes carrierFreqListUTRA-TDD-v1250, it includes the same number of entries, and listed in the same order, as in carrierFreqListUTRA-TDD (i.e. without suffix)."
+carrierFreqListUTRA-TDD-ExtList of additional carrier frequencies of UTRA TDD. E-UTRAN does not configure more than one entry for the same physical frequency regardless of the ARFCN used to indicate this. EUTRAN may include carrierFreqListUTRA-TDD-Ext even if carrierFreqListUTRA-TDD (i.e without suffix) does not include maxUTRA-TDD-Carrier entries.
+multiBandInfoListIndicates the list of frequency bands in addition to the band represented by carrierFreq in the CarrierFreqUTRA-FDD for which UTRA cell reselection parameters are common.
+"p-MaxUTRAThe maximum allowed transmission power on the (uplink) carrier frequency, see TS 25.304 [40]. In dBm"
+"q-QualMinParameter ""Qqualmin"" in TS 25.304 [40]. Actual value = field value [dB]."
+"q-RxLevMinParameter ""Qrxlevmin"" in TS 25.304 [40]. Actual value = field value * 2+1 [dBm]."
+"reducedMeasPerformanceValue TRUE indicates that the UTRA carrier frequency is configured for reduced measurement performance, see TS 36.133 [16]. If the field is not included, the UTRA carrier frequency is configured for normal measurement performance, see TS 36.133 [16]."
+"t-ReselectionUTRAParameter ""TreselectionUTRAN"" in TS 36.304 [4]."
+"t-ReselectionUTRA-SFParameter ""Speed dependent ScalingFactor for TreselectionUTRA"" in TS 36.304 [4]. If the field is not present, the UE behaviour is specified in TS 36.304 [4]."
+"threshX-HighParameter ""ThreshX, HighP"" in TS 36.304 [4]."
+"threshX-HighQParameter ""ThreshX, HighQ"" in TS 36.304 [4]."
+"threshX-LowParameter ""ThreshX, LowP"" in TS 36.304 [4]."
+"threshX-LowQParameter ""ThreshX, LowQ"" in TS 36.304 [4]."

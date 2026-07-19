@@ -1,0 +1,14 @@
+MPDCCH PRB set,R,,,,,
+,,L'=2,L'=4,L'=8,L'=16,L'=24
+2 PRB set in 2+4 PRB set,r1,0,0,1,0,0
+4 PRB set in 2+4 PRB set,,0,0,0,1,0
+Both PRB sets in 2+4 PRB set,,0,0,0,0,1
+2 PRB set in 2+4 PRB set,r2,0,0,1,0,0
+4 PRB set in 2+4 PRB set,,0,0,0,1,0
+Both PRB sets in 2+4 PRB set,,0,0,0,0,1
+2 PRB set in 2+4 PRB set,r3,0,0,1,0,0
+4 PRB set in 2+4 PRB set,,0,0,0,1,0
+Both PRB sets in 2+4 PRB set,,0,0,0,0,1
+2 PRB set in 2+4 PRB set,r4,0,0,1,0,0
+4 PRB set in 2+4 PRB set,,0,0,0,1,0
+Both PRB sets in 2+4 PRB set,,0,0,0,0,1

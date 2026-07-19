@@ -1,0 +1,110 @@
+<table>
+  <tr>
+    <td>SystemInformationBlockType24 field descriptions</td>
+  </tr>
+  <tr>
+    <td>allowedCellListNRList of allow-listed neighbouring NR cells.</td>
+  </tr>
+  <tr>
+    <td>carrierFreqListNRList of carrier frequencies of NR carriers. These frequencies correspond to GSCN values as specified in TS 38.101 [85]. If the carrierFreqListNR-v1610, carrierFreqListNR-v1700, carrierFreqListNR-v1720, carrierFreqListNR-v1810 or carrierFreqListNR-v1900 is present, it contains the same number of entries, listed in the same order as in the carrierFreqListNR (without suffix).For a neighbouring carrier frequency when carrierFreq-r18 is included, the network sets the corresponding value of carrierFreq-r15 to 250, and the UE applies carrierFreq-r18 instead of carrierFreq-r15. In such case, if the UE does not support the GSCN value corresponding to the carrierFreq-r18, it ignores the corresponding neighbour cell.</td>
+  </tr>
+  <tr>
+    <td>cellReselectionPriorityThe field concerns the absolute priority of the concerned carrier frequency as used by the cell reselection procedure. Corresponds with parameter &quot;priority&quot; in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>deriveSSB-IndexFromCellThe field indicates whether the UE may use, to derive the SSB index of a cell on the indicated SSB frequency and subcarrier spacing, the timing of any detected cell with the same SSB frequency and subcarrier spacing. If this field is set to TRUE, the UE assumes SFN and frame boundary alignment across cells on the same NR carrier frequency as specified in TS 36.133 [16].</td>
+  </tr>
+  <tr>
+    <td>highSpeedCarrierNRIf the field is present, the UE shall apply the enhanced inter-RAT NR measurement requirements to support high speed up to 500 km/h as specified in TS 36.133 [16] to the NR carrier.</td>
+  </tr>
+  <tr>
+    <td>maxRS-IndexCellQualNumber of SS blocks to average for cell measurement derivation. Corresponds to the parameter nrofSS-BlocksToAverage in TS 38.304 [92].</td>
+  </tr>
+  <tr>
+    <td>measTimingConfigUsed to configure measurement timing configurations, i.e., timing occasions at which the UE measures SSBs. If the field is absent, the UE assumes that SSB periodicity is 5ms in this frequency. If field satAssistanceInfoList is configured for the corresponding entry, the offset (derived from parameter periodicityAndOffset) is based on the assumption that the UE&#x27;s propagation delay difference between UE-serving cell at eNB and UE-neighbour cells at gNB equals to 0 ms, and UE can adjust the offset based on the actual propagation delay.</td>
+  </tr>
+  <tr>
+    <td>mobileIAB-CellListList of neighbouring mobile IAB cells as specified in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>mobileIAB-FreqIf present, it indicates that a mobile IAB node may be deployed on the NR frequency.</td>
+  </tr>
+  <tr>
+    <td>multiBandInfoListIndicates the list of frequency bands for which the NR cell reselection parameters apply. The UE shall select the first listed band which it supports in the multiBandInfoList field to represent the NR neighbour carrier frequency. The network always includes multiBandInfoList-r15.For a neighbouring carrier frequency when multiBandInfoList-r18 is included, the network sets the corresponding value of FreqBandIndicatorNR-r15 in multiBandInfoList-r15 to 200, and the UE applies multBandInfoList-r18 instead of multiBandInfoList-r15.</td>
+  </tr>
+  <tr>
+    <td>multiBandInfoListAerialIndicates the list of frequency bands for which the NR cell reselection parameters apply. The aerial UE shall select the first listed band which it supports in the multiBandInfoListAerial field to represent the NR neighbour carrier frequency.</td>
+  </tr>
+  <tr>
+    <td>multiBandInfoListSULIndicates the list of frequency bands for which the NR cell reselection parameters apply. The UE shall select the first listed band which it supports in the multiBandInfoListSUL field to represent the NR neighbour carrier frequency.</td>
+  </tr>
+  <tr>
+    <td>multiBandNsPmaxListNRIndicates the NS-PmaxListNR configuration for the NR frequency band(s) listed in multiBandInfoList. The first entry corresponds to the second listed band in multiBandInfoList, and second entry corresponds to the third listed band in multiBandInfoList, and so on.</td>
+  </tr>
+  <tr>
+    <td>multiBandNsPmaxListNR-AerialIndicates the NS-PmaxListNR-Aerial configuration for the NR frequency band(s) listed in multiBandInfoListAerial. The first entry corresponds to the second listed band in multiBandInfoListAerial, and second entry corresponds to the third listed band in multiBandInfoListAerial, and so on.</td>
+  </tr>
+  <tr>
+    <td>multiBandNsPmaxListNR-SULIndicates the NS-PmaxListNR configuration for the NR SUL frequency band(s) listed in multiBandInfoListSUL. The first entry corresponds to the first listed band in multiBandInfoListSUL, and second entry corresponds to the second listed band in multiBandInfoListSUL, and so on.</td>
+  </tr>
+  <tr>
+    <td>nr-FreqNeighHSDN-CellListList of neighbouring NR HSDN cells as specified in TS 38.304 [92].</td>
+  </tr>
+  <tr>
+    <td>ns-PmaxListNRIndicates a list of additionalPmax and additionalSpectrumEmission, corresponds to the first listed band in the multiBandInfoList.</td>
+  </tr>
+  <tr>
+    <td>ns-PmaxListNR-AerialIndicates a list of additionalPmax and additionalSpectrumEmission for aerial UE, corresponds to the first listed band in the multiBandInfoListAerial.</td>
+  </tr>
+  <tr>
+    <td>p-MaxNRIndicates the maximum power for NR (see TS 38.104 [91]).</td>
+  </tr>
+  <tr>
+    <td>q-QualMinParameter &quot;Qqualmin&quot; in TS 36.304 [4], applicable for NR neighbour cells. If the field is not present, the UE applies the (default) value of negative infinity for Qqualmin. The actual value Qqualmin = field value [dB].</td>
+  </tr>
+  <tr>
+    <td>q-RxLevMinParameter &quot;Qrxlevmin&quot; in TS 38.304 [92], applicable for NR neighbour cells. The actual value Qrxlevmin = field value * 2 [dBm].</td>
+  </tr>
+  <tr>
+    <td>q-RxLevMinSULParameter &quot;Qrxlevmin&quot; in TS 38.304 [92], applicable for NR neighbouring cells. The actual value Qrxlevmin = field value * 2 [dBm].</td>
+  </tr>
+  <tr>
+    <td>satAssistanceInfoListList of satellite ID(s), used to associate with the satellite assistance information for neighbour cell measurements on this frequency. Each satellite ID included in this list corresponds to a satelliteId configured in neighSatelliteInfoListNR via SystemInformationBlockType33. If the field is not present for a frequency and neighSatelliteInfoListNR is broadcast in SystemInformationBlockType33, the UE considers the cells on the frequency to be terrestrial cells.</td>
+  </tr>
+  <tr>
+    <td>smtc2-LPMeasurement timing configuration for inter-RAT neighbour cells in NR with a Long Periodicity (LP) indicated by periodicity in smtc2-LP. The timing offset and duration are equal to the offset and duration indicated in measTimingConfig in CarrierFreqNR. The periodicity in smtc2-LP can only be set to a value strictly larger than the periodicity in measTimingConfig in CarrierFreqNR (e.g. if measTimingConfig indicates sf20 the Long Periodicity can only be set to sf40, sf80 or sf160, if measTimingConfig indicates sf160, smtc2-LP cannot be configured). The pci-List, if present, includes the physical cell identities of the inter-RAT neighbour cells with Long Periodicity. If smtc2-LP is absent, the UE assumes that there are no inter-RAT neighbour cells with a Long Periodicity.</td>
+  </tr>
+  <tr>
+    <td>ssb-PositionQCL-CommonNRIndicates the QCL relationship between SS/PBCH blocks for NR neighbor cells on the indicated frequency as specified in TS 38.213 [88], clause 4.1. If ssb-PositionQCL-CommonNR-r17 is present, the UE ignores ssb-PositionQCL-CommonNR-r16.</td>
+  </tr>
+  <tr>
+    <td>ssb-ToMeasureThe set of SS blocks to be measured within the SMTC measurement duration (see TS 38.215 [89]). When the field is absent the UE measures on all SS-blocks.</td>
+  </tr>
+  <tr>
+    <td>ss-RSSI-MeasurementsIndicates the SSB-based RSSI measurement configuration. If the field is absent, the UE behaviour is defined in TS 38.215 [89], clause 5.1.3.</td>
+  </tr>
+  <tr>
+    <td>subcarrierSpacingSSBIndicates the subcarrier spacing of SSB of NR frequency. Only the values 15 kHz or 30 kHz (FR1), 120 kHz or 240 kHz (FR2-1), 120 kHz or 480 kHz (FR2-2) are applicable. If subcarrierSpacingSSB-r17 is present, the UE ignores subcarrierSpacingSSB-r15.</td>
+  </tr>
+  <tr>
+    <td>threshRS-IndexList of thresholds for consolidation of L1 measurements per RS index. Corresponds to the parameter absThreshSS-BlocksConsolidation in TS 38.304 [92].</td>
+  </tr>
+  <tr>
+    <td>threshX-HighParameter &quot;ThreshX, HighP&quot; in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>threshX-HighQParameter &quot;ThreshX, HighQ&quot; in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>threshX-LowParameter &quot;ThreshX, LowP&quot; in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>threshX-LowQParameter &quot;ThreshX, LowQ&quot; in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>t-ReselectionNRParameter &quot;TreselectionNR&quot; in TS 36.304 [4].</td>
+  </tr>
+  <tr>
+    <td>t-ReselectionNR-SFParameter &quot;Speed dependent ScalingFactor for TreselectionNR&quot; in TS 36.304 [4]. If the field is not present, the UE behaviour is specified in TS 36.304 [4].</td>
+  </tr>
+</table>

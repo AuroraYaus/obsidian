@@ -1,0 +1,8 @@
+Conditional Presence,Explanation
+Aperiodic,"The field is mandatory present if the NZP-CSI-RS-Resources in the associated resourceSet have the resourceType aperiodic and unifiedTCI-StateType is not configured. The field is optionally present, Need R, if the NZP-CSI-RS-Resources in the associated resourceSet have the resourceType aperiodic and unifiedTCI-StateType is configured. The field is absent otherwise."
+ApplyIndicatedTCI,"The field is optionally present, need R, if resourceForChannel has aperiodic CSI-RS and unifiedTCI-StateType is configured. This field is absent otherwise."
+CJTC,"This field is absent if resourcesForChannel2 or resourcesForChannelTDCP is configured. It is optionally present, Need R, otherwise."
+CSI-IM-ForInterference,This field is mandatory present if the CSI-ReportConfig identified by reportConfigId is configured with csi-IM-ResourcesForInterference; otherwise it is absent.
+NZP-CSI-RS-ForInterference,This field is mandatory present if the CSI-ReportConfig identified by reportConfigId is configured with nzp-CSI-RS-ResourcesForInterference; otherwise it is absent.
+SecondCSICMR,This field is mandatory present if resourcesForChannel2 is configured with aperiodic CSI-RS and applyIndicatedTCI-State is configured. It is absent otherwise.
+TDCP,"This field is absent if resourcesForChannel2 or resourcesForChannelCJTC is configured. It is optionally present, Need R, otherwise."

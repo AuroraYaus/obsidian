@@ -1,0 +1,4 @@
+PUCCH format type,Normal cyclic prefix,,Extended cyclic prefix,
+,,,,
+Normal PUCCH format,6,6,5,5
+Shortened PUCCH format,6,5,5,4

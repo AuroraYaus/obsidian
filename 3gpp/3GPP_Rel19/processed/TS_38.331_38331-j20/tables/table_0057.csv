@@ -1,0 +1,5 @@
+Conditional Presence,Explanation
+L2RemoteUE,The field is mandatory present for L2 U2N Remote UE's RNAU; otherwise it is absent.
+RANPaging,"This field is optionally present, Need R, if the UE is configured with IDLE eDRX, see TS 24.501 [23]; otherwise the field is not present."
+Redirection2,"The field is optionally present, Need R, if redirectedCarrierInfo is included; otherwise the field is not present."
+SIB19,"The field is mandatory present, if SIB19 is not configured in the cell; otherwise the field is optionally present, Need R."

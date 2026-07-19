@@ -1,0 +1,3 @@
+Bit field mapped to index,"Minimum applicable K0 for the active DL BWP, if minimumSchedulingOffsetK0 is configured for the DL BWP","Minimum applicable K2 for the active UL BWP, if minimumSchedulingOffsetK2 is configured for the UL BWP"
+0,The first value configured by minimumSchedulingOffsetK0 for the active DL BWP,The first value configured by minimumSchedulingOffsetK2 for the active UL BWP
+1,The second value configured by minimumSchedulingOffsetK0 for the active DL BWP if the second value is configured; 0 otherwise,The second value configured by minimumSchedulingOffsetK2 for the active UL BWP if the second value is configured; 0 otherwise

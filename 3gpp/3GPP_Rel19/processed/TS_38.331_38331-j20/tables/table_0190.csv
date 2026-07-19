@@ -1,0 +1,7 @@
+CandidateTCI-UL-State field descriptions
+csi-RS-IndexIndicates an NZP-CSI-RS-Resource of the LTM candidate that includes this CandidateTCI-UL-State.
+"pathlossReferenceRS-IdIndicates a PathlossReferenceRS of the LTM candidate that includes this CandidateTCI-UL-State and it refers to one of the PathlossReferenceRS configured within LTM-TCI-Info. In this version of the specification, only SSB can be included as reference signal when PathlossReferenceRS is included within a CandidateTCI-UL-State IE."
+referenceSignalReference signal with which spatial relation information is provided. The field csi-RS-Index refers to one of the NZP-CSI-RS-Resource configured within LTM-TCI-Info.
+ssb-IndexThe index of a SSB/PBCH block as indicated in ltm-SSB-Config of the LTM candidate that includes this CandidateTCI-UL-State.
+tci-UL-StateIDThe ID number of the uplink TCI state.
+"ul-PowerControlIndicates the UL power control parameters for PUSCH, PUCCH, and SRS of the candidate that includes this CandidateTCI-UL-State. This field refers to an element in the list configured using uplink-PowerControlToAddModList in the SpCellConfig of the ltm-CandidateConfig in the LTM-Candidate where the ltm-TCI-Info is configured."

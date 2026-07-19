@@ -1,0 +1,5 @@
+SL-RadioBearerConfig field descriptions
+sl-PDCP-ConfigThis field indicates the PDCP parameters for the sidelink DRB.
+sl-SDAP-ConfigThis field indicates how to map sidelink QoS flows to sidelink DRB.
+slrb-Uu-ConfigIndexThis field indicates the index of sidelink DRB configuration.
+sl-TransRangeThis field indicates the transmission range of the sidelink DRB. The unit is meter.

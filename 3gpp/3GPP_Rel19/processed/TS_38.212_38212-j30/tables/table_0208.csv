@@ -1,0 +1,4 @@
+Value,DMRS port
+0,1st DMRS port which shares the actual PTRS port
+1,2nd DMRS port which shares the actual PTRS port
+"Note: -The actual PTRS port is PTRS port 0 if txConfig = codebook-The actual PTRS port is the PTRS port associated with more than one SRS resources indidcated by SRS resource indicator, if txConfig = nonCodeBook",

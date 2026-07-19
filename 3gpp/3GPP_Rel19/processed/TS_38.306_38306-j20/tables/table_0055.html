@@ -1,0 +1,86 @@
+<table>
+  <tr>
+    <td>Definitions for parameters</td>
+    <td>Per</td>
+    <td>M</td>
+    <td>FDD-TDD DIFF</td>
+    <td>FR1-FR2 DIFF</td>
+  </tr>
+  <tr>
+    <td>qoe-AdditionalMemoryMeasReport-r18Indicates the minimum AS layer memory size the UE supports for QoE measurement in RRC_IDLE and RRC_INACTIVE in addition to the &quot;AS layer memory size for QoE paused measurement reports&quot;. Value kB128 means the UE supports at least 128 kilobytes for this purpose, and so on. A UE supporting this feature shall also support qoe-IdleInactiveMeasReport-r18.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>qoe-IdleInactiveMeasReport-r18Indicates whether the UE supports NR QoE Measurement Collection in RRC_IDLE and RRC_INACTIVE states for the services indicated withqoe-Streaming-MeasReport-r17 or qoe-MTSI-MeasReport-r17 or qoe-VR-MeasReport-r17.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>qoe-MTSI-MeasReport-r17Indicates whether the UE supports NR QoE Measurement Collection for MTSI services, see TS 26.114 [30].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>qoe-NRDC-MeasReport-r18Indicates whether the UE supports to receive QoE configuration(s) via SRB1 and/or SRB3 (if supported) from SN, and send the corresponding QoE report(s) via SRB4 and/or SRB5 (if the UE supports srb5). A UE supporting this feature shall also support qoe-Streaming-MeasReport-r17 or qoe-MTSI-MeasReport-r17 or qoe-VR-MeasReport-r17.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>qoe-PriorityBasedDiscarding-r18Indicates whether the UE supports to discard QoE report(s) stored during QoE pause for UE in RRC_CONNECTED and stored in RRC_IDLE/RRC_INACTIVE based on the priority information gNB provides. A UE supporting this feature shall also support qoe-Streaming-MeasReport-r17 or qoe-MTSI-MeasReport-r17 or qoe-VR-MeasReport-r17, and conditionally support qoe-IdleInactiveMeasReport-r18 for QoE measurement reports in RRC_IDLE/RRC_INACTIVE.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>qoe-Streaming-MeasReport-r17Indicates whether the UE supports NR QoE Measurement Collection for streaming services, see TS 26.247 [29].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>qoe-VR-MeasReport-r17Indicates whether the UE supports NR QoE Measurement Collection for VR services, see TS 26.118 [31].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>ran-VisibleQoE-Streaming-MeasReport-r17Indicates whether the UE supports RAN visible QoE Measurement Collection for streaming services. A UE supporting this feature shall also support qoe-Streaming-MeasReport-r17.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>ran-VisibleQoE-VR-MeasReport-r17Indicates whether the UE supports RAN visible QoE Measurement Collection for VR services. A UE supporting this feature shall also support qoe-VR-MeasReport-r17.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>srb5-r18Indicates whether the UE supports SRB5 which is a direct SRB between the SN and the UE as specified in TS 37.340 [7]. A UE supporting this feature shall also indicate support of qoe-NRDC-MeasReport-r18.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>ul-MeasurementReportAppLayer-Seg-r17Indicates whether the UE supports RRC segmentation of the MeasurementReportAppLayer message in UL over SRB4 and SRB5 (if supported), as specified in TS 38.331 [9].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+</table>

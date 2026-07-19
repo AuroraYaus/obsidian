@@ -1,0 +1,10 @@
+Subframe index,Number of NPDSCH repetitions,,Starting radio frame number for SystemInformationBlockType1-NB repetitions (nf mod 256)
+0,4,mod 4 = 0,1
+,,mod 4 = 1,17
+,,mod 4 = 2,33
+,,mod 4 = 3,49
+0,8,mod 2 = 0,1
+,,mod 2 = 1,17
+0,16,Any,nf mod 256 = 1
+4,16,mod 2 = 0,nf mod 256 = 0
+,,mod 2 = 1,nf mod 256 = 1

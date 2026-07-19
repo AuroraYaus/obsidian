@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td>Bit field mapped to index</td>
+    <td>Co-scheduled UE information</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>In all the PRBs allocated to the UE, there is no co-scheduled UE or there is co-scheduled UE but with a different root DMRS sequence</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>In all the PRBs allocated to the UE, all the co-scheduled UE(s), if any, which have the same root DMRS sequence as the UE, are scheduled with modulation scheme QPSK</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>In all the PRBs allocated to the UE, all the co-scheduled UE(s), if any, which have the same root DMRS sequence as the UE, are scheduled with modulation scheme 16QAM</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>In all the PRBs allocated to the UE, all the co-scheduled UE(s), if any, which have the same root DMRS sequence as the UE, are scheduled with modulation scheme 64QAM</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>In all the PRBs allocated to the UE, all the co-scheduled UE(s), if any, which have the same root DMRS sequence as the UE, are scheduled with modulation scheme 256QAM</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>In all the PRBs allocated to the UE, all the co-scheduled UE(s), if any, which have the same root DMRS sequence as the UE, are scheduled with modulation scheme 1024QAM</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>In each individual PRB allocated to the UE, all the co-scheduled UE(s), which have the same root DMRS sequence as the UE, are scheduled with the same modulation scheme, except the cases corresponding to index 0~5</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>All cases not covered above</td>
+  </tr>
+  <tr>
+    <td colspan="2">Note:Root DMRS sequence is as defined in clause 7.4.1.1.1 of [4, TS 38.211]rn</td>
+  </tr>
+</table>

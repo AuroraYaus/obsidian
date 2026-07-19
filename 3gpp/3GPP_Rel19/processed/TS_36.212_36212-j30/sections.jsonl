@@ -1,0 +1,144 @@
+{"source": "36212-j30.docx", "section": "650", "title": "Route des Lucioles – Sophia Antipolis", "paragraph_index": 24, "style": "FP"}
+{"source": "36212-j30.docx", "section": "", "title": "Foreword", "paragraph_index": 184, "style": "Heading1"}
+{"source": "36212-j30.docx", "section": "", "title": "1Scope", "paragraph_index": 195, "style": "Heading1"}
+{"source": "36212-j30.docx", "section": "", "title": "2References", "paragraph_index": 197, "style": "Heading1"}
+{"source": "36212-j30.docx", "section": "", "title": "3Definitions, symbols and abbreviations", "paragraph_index": 211, "style": "Heading1"}
+{"source": "36212-j30.docx", "section": "", "title": "3.1Definitions", "paragraph_index": 212, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "3.2Symbols", "paragraph_index": 216, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "3.3Abbreviations", "paragraph_index": 229, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "4Mapping to physical channels", "paragraph_index": 286, "style": "Heading1"}
+{"source": "36212-j30.docx", "section": "", "title": "4.1Uplink", "paragraph_index": 288, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "4.2Downlink", "paragraph_index": 294, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "4.3Sidelink", "paragraph_index": 300, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "5Channel coding, multiplexing and interleaving", "paragraph_index": 306, "style": "Heading1"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1Generic procedures", "paragraph_index": 308, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.1CRC calculation", "paragraph_index": 310, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.2Code block segmentation and code block CRC attachment", "paragraph_index": 327, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.3Channel coding", "paragraph_index": 380, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.3.1Tail biting convolutional coding", "paragraph_index": 394, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.3.2Turbo coding", "paragraph_index": 402, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.3.2.1Turbo encoder", "paragraph_index": 403, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.3.2.2Trellis termination for turbo encoder", "paragraph_index": 421, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.3.2.3Turbo code internal interleaver", "paragraph_index": 428, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.4Rate matching", "paragraph_index": 437, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.4.1Rate matching for turbo coded transport channels", "paragraph_index": 438, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.4.1.1Sub-block interleaver", "paragraph_index": 447, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.4.1.2Bit collection, selection and transmission", "paragraph_index": 465, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.4.2Rate matching for convolutionally coded transport channels and control information", "paragraph_index": 541, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.4.2.1Sub-block interleaver", "paragraph_index": 550, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.4.2.2Bit collection, selection and transmission", "paragraph_index": 564, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.1.5Code block concatenation", "paragraph_index": 578, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2Uplink transport channels and control information", "paragraph_index": 591, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.1Random access channel", "paragraph_index": 595, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2Uplink shared channel", "paragraph_index": 597, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.1Transport block CRC attachment", "paragraph_index": 609, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.2Code block segmentation and code block CRC attachment", "paragraph_index": 613, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.3Channel coding of UL-SCH", "paragraph_index": 617, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.4Rate matching", "paragraph_index": 620, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.5Code block concatenation", "paragraph_index": 623, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.6Channel coding of control information", "paragraph_index": 627, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.6.1Channel quality information formats for wideband CQI reports", "paragraph_index": 939, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.6.2Channel quality information formats for higher layer configured subband CQI reports", "paragraph_index": 1059, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.6.3Channel quality information formats for UE selected subband CQI reports", "paragraph_index": 1186, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.6.4Channel coding for CQI/PMI information in PUSCH", "paragraph_index": 1269, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.6.5Channel coding for more than 11 bits of HARQ-ACK information", "paragraph_index": 1278, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.6AChannel coding of AUL-UCI", "paragraph_index": 1297, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.7Data and control multiplexing", "paragraph_index": 1314, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.7AData and control multiplexing for Partial PUSCH Mode 1", "paragraph_index": 1330, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.7BData and control multiplexing for AUL PUSCH", "paragraph_index": 1347, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.2.8Channel interleaver", "paragraph_index": 1365, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.3Uplink control information on PUCCH", "paragraph_index": 1483, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.3.1Channel coding for UCI HARQ-ACK on PUCCH", "paragraph_index": 1494, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.3.1AChannel coding for UCI HARQ-ACK on SPUCCH", "paragraph_index": 1634, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.3.2Channel coding for UCI scheduling request", "paragraph_index": 1680, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.3.3Channel coding for UCI channel quality information", "paragraph_index": 1682, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.3.3.1Channel quality information formats for wideband reports", "paragraph_index": 1691, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.3.3.2Channel quality information formats for UE-selected sub-band reports", "paragraph_index": 1794, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.3.4Channel coding for UCI channel quality information and HARQ-ACK", "paragraph_index": 1893, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.4Uplink control information on PUSCH without UL-SCH data", "paragraph_index": 1909, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.4.1Channel coding of control information", "paragraph_index": 1914, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.4.2Control information mapping", "paragraph_index": 1941, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.2.4.3Channel interleaver", "paragraph_index": 1950, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3Downlink transport channels and control information", "paragraph_index": 1952, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.1Broadcast channel", "paragraph_index": 1956, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.1.1Transport block CRC attachment", "paragraph_index": 1964, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.1.2Channel coding", "paragraph_index": 1972, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.1.3Rate matching", "paragraph_index": 1975, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.2Downlink shared channel, Paging channel and Multicast channel", "paragraph_index": 1978, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.2.1Transport block CRC attachment", "paragraph_index": 1988, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.2.2Code block segmentation and code block CRC attachment", "paragraph_index": 1992, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.2.3Channel coding", "paragraph_index": 1996, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.2.4Rate matching", "paragraph_index": 1999, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.2.5Code block concatenation", "paragraph_index": 2002, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3Downlink control information", "paragraph_index": 2007, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1DCI formats", "paragraph_index": 2017, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.1Format 0", "paragraph_index": 2020, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.1AFormat 0A", "paragraph_index": 2062, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.1BFormat 0B", "paragraph_index": 2112, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.1CFormat 0C", "paragraph_index": 2152, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.2Format 1", "paragraph_index": 2182, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.3Format 1A", "paragraph_index": 2212, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.3AFormat 1B", "paragraph_index": 2267, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.4Format 1C", "paragraph_index": 2299, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.4AFormat 1D", "paragraph_index": 2325, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.5Format 2", "paragraph_index": 2354, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.5AFormat 2A", "paragraph_index": 2402, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.5BFormat 2B", "paragraph_index": 2439, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.5CFormat 2C", "paragraph_index": 2474, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.5DFormat 2D", "paragraph_index": 2520, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.6Format 3", "paragraph_index": 2559, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.7Format 3A", "paragraph_index": 2566, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.7AFormat 3B", "paragraph_index": 2572, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.8Format 4", "paragraph_index": 2585, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.8AFormat 4A", "paragraph_index": 2634, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.8BFormat 4B", "paragraph_index": 2683, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.9Format 5", "paragraph_index": 2728, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.9AFormat 5A", "paragraph_index": 2738, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.10Format 6-0A", "paragraph_index": 2752, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.11Format 6-0B", "paragraph_index": 2815, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.12Format 6-1A", "paragraph_index": 2862, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.13Format 6-1B", "paragraph_index": 2962, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.14Format 6-2", "paragraph_index": 3028, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.15Format 7-0A", "paragraph_index": 3043, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.16Format 7-0B", "paragraph_index": 3069, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.17Format 7-1A", "paragraph_index": 3100, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.18Format 7-1B", "paragraph_index": 3124, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.19Format 7-1C", "paragraph_index": 3134, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.20Format 7-1D", "paragraph_index": 3147, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.21Format 7-1E", "paragraph_index": 3160, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.22Format 7-1F", "paragraph_index": 3171, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.1.23Format 7-1G", "paragraph_index": 3187, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.2CRC attachment", "paragraph_index": 3198, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.3Channel coding", "paragraph_index": 3210, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.3.4Rate matching", "paragraph_index": 3213, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.4Control format indicator", "paragraph_index": 3216, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.4.1Channel coding", "paragraph_index": 3221, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.5HARQ indicator (HI)", "paragraph_index": 3225, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.3.5.1Channel coding", "paragraph_index": 3230, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.4Sidelink transport channels and control information", "paragraph_index": 3234, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "5.4.1Sidelink broadcast channel", "paragraph_index": 3235, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.4.1.1Transport block CRC attachment", "paragraph_index": 3243, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.4.1.2Channel coding", "paragraph_index": 3247, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.4.1.3Rate matching", "paragraph_index": 3250, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.4.2Sidelink shared channel", "paragraph_index": 3253, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.4.3Sidelink control information", "paragraph_index": 3258, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "5.4.3.1SCI formats", "paragraph_index": 3263, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "5.4.3.1.1SCI format 0", "paragraph_index": 3266, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.4.3.1.2SCI format 1", "paragraph_index": 3280, "style": "Heading5"}
+{"source": "36212-j30.docx", "section": "", "title": "5.4.4Sidelink discovery channel", "paragraph_index": 3291, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "6Narrowband IoT", "paragraph_index": 3297, "style": "Heading1"}
+{"source": "36212-j30.docx", "section": "", "title": "6.1Mapping to physical channels", "paragraph_index": 3298, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "6.2Generic procedures", "paragraph_index": 3306, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "6.3Uplink transport channels and control information", "paragraph_index": 3313, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "6.3.1Random access channel", "paragraph_index": 3314, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "6.3.2Uplink shared channel", "paragraph_index": 3316, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "6.3.3Uplink control information on NPUSCH without UL-SCH data", "paragraph_index": 3326, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "6.3.4Scheduling request", "paragraph_index": 3333, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "6.4Downlink transport channels and control information", "paragraph_index": 3335, "style": "Heading2"}
+{"source": "36212-j30.docx", "section": "", "title": "6.4.1Broadcast channel", "paragraph_index": 3336, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "6.4.2Downlink shared channel and Paging channel", "paragraph_index": 3342, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "6.4.3Downlink control information", "paragraph_index": 3350, "style": "Heading3"}
+{"source": "36212-j30.docx", "section": "", "title": "6.4.3.1DCI Format N0", "paragraph_index": 3352, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "6.4.3.2DCI Format N1", "paragraph_index": 3381, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "6.4.3.3DCI Format N2", "paragraph_index": 3411, "style": "Heading4"}
+{"source": "36212-j30.docx", "section": "", "title": "Annex A (informative):Change history", "paragraph_index": 3427, "style": "Heading8"}

@@ -1,0 +1,5 @@
+"DAIMSB, LSB",or,Number of subframes/slots with PDSCH transmission and with PDCCH/EPDC/SPDCCH CH indicating DL SPS release
+"0,0",1,1 or 5 or 9
+"0,1",2,2 or 6 or 10
+"1,0",3,3 or 7
+"1,1",4,0 or 4 or 8

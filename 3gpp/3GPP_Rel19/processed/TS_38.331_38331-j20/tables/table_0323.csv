@@ -1,0 +1,5 @@
+LTM-CSI-ResourceConfig field descriptions
+"ltm-CSI-IM-ResourceSetThis field indicates the resource set for LTM interference measurements. This field is absent if ltm-NZP-CSI-RS-ResourceSet is configured. When the field is present, the UE shall ignore the field ltm-SSB-ResourceSet."
+"ltm-NZP-CSI-RS-ResourceSetThis field indicates the resource set for LTM measurement based on CSI-RS. When the field is present, the UE shall ignore the field ltm-SSB-ResourceSet."
+ltm-SSB-ResourceSetThis field indicates the resource set for LTM measurement based on SSB.
+"resourceTypeTime domain behavior of LTM CSI resource (see TS 38.214 [19], clause 5.2.1.2)."

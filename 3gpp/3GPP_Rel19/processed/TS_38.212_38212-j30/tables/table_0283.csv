@@ -1,0 +1,5 @@
+Bit field,NPUCCHrepeat
+00,First repetition factor configured by numberOfMsg4HARQ-ACK-Repetitions
+01,Second repetition factor configured by numberOfMsg4HARQ-ACK-Repetitions
+10,"Third repetition factor configured by numberOfMsg4HARQ-ACK-Repetitions if provided, otherwise reserved"
+11,"Fourth repetition factor configured by numberOfMsg4HARQ-ACK-Repetitions if provided, otherwise reserved"

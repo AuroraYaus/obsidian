@@ -1,0 +1,74 @@
+<table>
+  <tr>
+    <td>Conditional presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>DRB</td>
+    <td>This field is mandatory present when the corresponding DRB/multicast MRB is being set up, absent for SRBs. Otherwise this field is optionally present, need M.</td>
+  </tr>
+  <tr>
+    <td>DRB2</td>
+    <td>This field is optionally present in case of DRB, need M. Otherwise, it is absent for SRBs and MRBs.</td>
+  </tr>
+  <tr>
+    <td>Drb-Duplication</td>
+    <td>For SRBs, this field is absent. For DRBs, this field is absent if duplication is not configured. Otherwise, this field is optional, need R.</td>
+  </tr>
+  <tr>
+    <td>MoreThanOneRLC</td>
+    <td>This field is mandatory present upon RRC reconfiguration with setup of a PDCP entity for a radio bearer (except for multicast MRB) with more than one associated logical channel and upon RRC reconfiguration with the association of additional logical channels to the PDCP entity.The field is also mandatory present in case the field moreThanTwoRLC-DRB is included in PDCP-Config.Upon RRC reconfiguration when a PDCP entity is associated with multiple logical channels, this field is optionally present need M. Otherwise, this field is absent. Need R.</td>
+  </tr>
+  <tr>
+    <td>MoreThanTwoRLC-DRB</td>
+    <td>For SRBs, this field is absent.For DRBs, this field is mandatory present upon RRC reconfiguration with setup of a PDCP entity for a radio bearer with more than two associated logical channels and upon RRC reconfiguration with the association of one or more additional logical channel(s) to the PDCP entity so that the PDCP entity has more than two associated logical channels.Upon RRC reconfiguration when a PDCP entity is associated with more than two logical channels, this field is optionally present, Need M. Otherwise, the field is absent, Need R.</td>
+  </tr>
+  <tr>
+    <td>Rlc-AM</td>
+    <td>For RLC AM, the field is optionally present, need M. Otherwise, the field is absent.</td>
+  </tr>
+  <tr>
+    <td>Rlc-AM-UM</td>
+    <td>In case of DRB, for RLC UM (if the UE supports DAPS handover) or RLC AM, the field is optionally present, need R. In case of multicast MRB, if multicast MRB is associated with at least one RLC AM entity, the field is optionally present, need R. Otherwise, the field is absent.</td>
+  </tr>
+  <tr>
+    <td>Setup</td>
+    <td>The field is mandatory present in case of DRB setup. Otherwise the field is optionally present, need M.</td>
+  </tr>
+  <tr>
+    <td>SplitBearer</td>
+    <td>The field is absent for SRBs. Otherwise, the field is optional present, need M, in case of radio bearer with more than one associated RLC mapped to different cell groups.</td>
+  </tr>
+  <tr>
+    <td>SplitBearer2</td>
+    <td>The field is mandatory present, in case of a split bearer except MP split bearer with primary path on direct path. Otherwise the field is absent.</td>
+  </tr>
+  <tr>
+    <td>SplitBearerMP</td>
+    <td>The field is absent for SRBs. Otherwise, the field is optionally present, need R, when MP is configured.</td>
+  </tr>
+  <tr>
+    <td>ConnectedTo5GC</td>
+    <td>The field is optionally present, need R, if the UE is connected to 5GC. Otherwise the field is absent.</td>
+  </tr>
+  <tr>
+    <td>ConnectedTo5GC1</td>
+    <td>The field is optionally present, need R, if the UE is connected to NR/5GC or if the UE supports user plane integrity protection when connected to E-UTRA/EPC (as specified in TS 33.401 [30]). Otherwise the field is absent.</td>
+  </tr>
+  <tr>
+    <td>Setup1</td>
+    <td>This field is mandatory present in case of DRB setup for RLC-AM and RLC-UM. Otherwise, this field is absent, Need M.</td>
+  </tr>
+  <tr>
+    <td>Setup2</td>
+    <td>This field is mandatory present in case for radio bearer setup for RLC-AM and RLC-UM. Otherwise, this field is absent, Need M.</td>
+  </tr>
+  <tr>
+    <td>MRB-Initialization</td>
+    <td>This field is mandatory present in case of multicast MRB setup or in case UE configured with multicast reception in RRC_INACTIVE resumes the RRC connection. In case of PDCP re-establishment for multicast MRB, this field is optionally present, Need N. Otherwise, this field is absent, Need N.</td>
+  </tr>
+  <tr>
+    <td>RLC-AM</td>
+    <td>For RLC AM, this field is optionally present, need R; Otherwise, the field is absent.</td>
+  </tr>
+</table>

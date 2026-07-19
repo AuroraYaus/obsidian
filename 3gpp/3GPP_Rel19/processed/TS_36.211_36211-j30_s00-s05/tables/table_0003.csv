@@ -1,0 +1,9 @@
+Uplink-downlink configuration,Downlink-to-Uplink Switch-point periodicity,Subframe number,,,,,,,,,
+,,0,1,2,3,4,5,6,7,8,9
+0,5 ms,D,S,U,U,U,D,S,U,U,U
+1,5 ms,D,S,U,U,D,D,S,U,U,D
+2,5 ms,D,S,U,D,D,D,S,U,D,D
+3,10 ms,D,S,U,U,U,D,D,D,D,D
+4,10 ms,D,S,U,U,D,D,D,D,D,D
+5,10 ms,D,S,U,D,D,D,D,D,D,D
+6,5 ms,D,S,U,U,U,D,S,U,U,D

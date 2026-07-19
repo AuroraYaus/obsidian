@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <td>Conditional presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>GNSS-ID-SBAS</td>
+    <td>The field is mandatory present if gnss-id is set to sbas. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>MSG-1</td>
+    <td>The field is optionally present, Need R, if posSI-BroadcastStatus is set to notBroadcasting for any SI-message included in posSchedulingInfoList or if si-BroadcastStatus is set to notBroadcasting for any SI-message containing type2 SIB included in schedulingInfoList2. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>SUL-MSG-1</td>
+    <td>The field is optionally present, Need R, if supplementaryUplink is configured in ServingCellConfigCommonSIB, and if posSI-BroadcastStatus is set to notBroadcasting for any SI-message included in posSchedulingInfoList or if si-BroadcastStatus is set to notBroadcasting for any SI-message containing type2 SIB included in schedulingInfoList2. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>REDCAP-MSG-1</td>
+    <td>The field is optionally present, Need R, if initialUplinkBWP-RedCap is configured in UplinkConfigCommonSIB, and if posSI-BroadcastStatus is set to notBroadcasting for any SI-message included in posSchedulingInfoList or if si-BroadcastStatus is set to notBroadcasting for any SI-message containing type2 SIB included in schedulingInfoList2. It is absent otherwise.</td>
+  </tr>
+</table>

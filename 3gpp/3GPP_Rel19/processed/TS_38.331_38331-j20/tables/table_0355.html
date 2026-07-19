@@ -1,0 +1,46 @@
+<table>
+  <tr>
+    <td>Conditional Presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>AssociatedGapCSIRS</td>
+    <td>This field is optionally present, Need R if associatedMeasGapCSIRS is configured, otherwise, it is absent.</td>
+  </tr>
+  <tr>
+    <td>AssociatedGapSSB</td>
+    <td>This field is optionally present, Need R if associatedMeasGapSSB is configured, otherwise, it is absent.</td>
+  </tr>
+  <tr>
+    <td>CSI-RS</td>
+    <td>This field is mandatory present if csi-rs-ResourceConfigMobility is configured, otherwise, it is absent.</td>
+  </tr>
+  <tr>
+    <td>IntraFreqConnected</td>
+    <td>This field is optionally present, Need R if the UE is configured with a serving cell for which (absoluteFrequencySSB, subcarrierSpacing) in ServingCellConfigCommon is equal to (ssbFrequency, ssbSubcarrierSpacing) in this MeasObjectNR, otherwise, it is absent.</td>
+  </tr>
+  <tr>
+    <td>SCellMO</td>
+    <td>This field is optionallly present, Need R, in the MeasObjectNR associated with an SCell. Otherwise the field is absent.</td>
+  </tr>
+  <tr>
+    <td>SCG</td>
+    <td>This field is optionallly present, Need R, in the measConfig associated with the SCG. It is absent in the measConfig associated with the MCG.</td>
+  </tr>
+  <tr>
+    <td>NeighbourCell</td>
+    <td>This field is mandatory present if this MeasObject is configured by the serving cell for a neighbour cell served by a NTN Earth-moving cell and is associated with a ReportConfig which contains EventD2 or condEventD2. Otherwise, it is optional, Need R.</td>
+  </tr>
+  <tr>
+    <td>SharedSpectrum</td>
+    <td>This field is mandatory present if this MeasObject is for a frequency which operates with shared spectrum channel access in FR1. Otherwise, it is absent, Need R.</td>
+  </tr>
+  <tr>
+    <td>SharedSpectrum2</td>
+    <td>This field is optionally present if this MeasObject is for a frequency which operates with shared spectrum channel access in FR2-2, Need R. Otherwise, it is absent, Need R.</td>
+  </tr>
+  <tr>
+    <td>SSBorAssociatedSSB</td>
+    <td>This field is mandatory present if ssb-ConfigMobility is configured or associatedSSB is configured in at least one cell. Otherwise, it is absent, Need R.</td>
+  </tr>
+</table>

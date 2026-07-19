@@ -1,0 +1,15 @@
+"One Codeword:Codeword 0 enabled,Codeword 1 disabled",,
+Value,Number of DMRS CDM group(s) without data,DMRS port(s)
+0,1,0
+1,1,1
+2,1,"0,1"
+3,2,0
+4,2,1
+5,2,2
+6,2,3
+7,2,"0,1"
+8,2,"2,3"
+9,2,0-2
+10,2,0-3
+11,2,"0,2"
+12-15,Reserved,Reserved

@@ -1,0 +1,4 @@
+Conditional presence,Explanation,
+Bitmap1,"The field is optionally present, need OR, if value of slotBitmap corresponding to at least one subframe is '01'; otherwise the field is not present.",
+Bitmap2,"The field is optionally present, need OR, if value of slotBitmap corresponding to at least one subframe is '10'; otherwise the field is not present.",
+FDDandTDDnoDL,"The field is mandatory present for TDD when resource reservation for DL is not configured, and for FDD; otherwise the field is optionally present, need OP.",

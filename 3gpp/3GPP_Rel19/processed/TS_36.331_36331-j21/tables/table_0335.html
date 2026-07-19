@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <td>RRCConnectionRequest-NB field descriptions</td>
+  </tr>
+  <tr>
+    <td>earlyContentionResolutionValue TRUE indicates UE supports MAC PDU containing the UE contention resolution identity MAC control element without RRC response message. This field is always set to TRUE in this version of the specification.</td>
+  </tr>
+  <tr>
+    <td>establishmentCauseProvides the establishment cause for the RRC connection request as provided by the upper layers.eNB is not expected to reject a RRCConnectionRequest due to unknown cause value being used by the UE.</td>
+  </tr>
+  <tr>
+    <td>multiCarrierSupportIf present, this field indicates that the UE supports multi-carrier operation in the mode, FDD or TDD, used for access.</td>
+  </tr>
+  <tr>
+    <td>multiToneSupportIf present, this field indicates that the UE supports UL multi-tone transmissions on NPUSCH in the mode, FDD or TDD, used for access.</td>
+  </tr>
+  <tr>
+    <td>randomValueInteger value in the range 0 to 248  1.</td>
+  </tr>
+  <tr>
+    <td>ue-IdentityUE identity included to facilitate contention resolution by lower layers.</td>
+  </tr>
+</table>

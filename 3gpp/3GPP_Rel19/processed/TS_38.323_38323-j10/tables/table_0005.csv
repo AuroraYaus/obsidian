@@ -1,0 +1,3 @@
+Bit,Description
+0,PDCP SDU with COUNT = (FMC + bit position) modulo 232 is missing.
+1,PDCP SDU with COUNT = (FMC + bit position) modulo 232 is correctly received.

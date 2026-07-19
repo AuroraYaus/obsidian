@@ -1,0 +1,7 @@
+Index,LCID values
+00000,MCCH (see note)
+00001-11100,MTCH
+11101,Reserved
+11110,MCH Scheduling Information or Extended MCH Scheduling Information
+11111,Padding
+"NOTE: If there is no MCCH on MCH, an MTCH could use this value.",

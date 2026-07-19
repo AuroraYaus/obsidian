@@ -1,0 +1,7 @@
+AppLayerIdleInactiveConfig field descriptions
+appLayerBufferLevelListThe field defines whether the buffer level for DASH streaming and VR service types can be collected as a RAN visible QoE metric from the UE.
+qoe-AreaScopeThe field contains the area where the application layer measurement shall start if an application layer session starts.
+qoe-MeasurementTypeIndicates whether the application layer measurement is signalling based or management based.
+"qoe-ReferenceIndicates the QoE Reference as defined in TS 28.405 [80], clause 5.2."
+mce-idThe field contains the Measurement Collection Entity ID.
+playoutDelayForMediaStartupThe field defines whether the playout delay for DASH streaming and VR service types can be collected as a RAN visible QoE metric from the UE.

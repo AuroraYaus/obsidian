@@ -1,0 +1,7 @@
+Bit,Description
+000,IP
+001,Non-IP
+010,Ethernet
+011,Unstructured
+100,ARP
+101-111,Reserved

@@ -1,0 +1,33 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2017-04,RAN2#97bis,R2-1703648,,,,Skeleton of NR RLC specification,x.y.z
+2017-05,RAN2#98,R2-1705513,,,,Initial draft TS capturing outcome of email discussion [97bis#25],0.0.2
+2017-06,RAN#98,R2-1707257,,,,Draft TS capturing outcome of email discussion [98#36],0.1.0
+2017-07,RAN2 NR AH#2,R2-1707508,,,,Draft TS capturing outcome of email discussion [NR-AH2#06],0.2.0
+2017-08,RAN2#99,R2-1709752,,,,Draft TS capturing outcome of email discussion [99#11],0.3.0
+2017-09,RAN#77,RP-171883,,,,Submitted to RAN for information,1.0.0
+2017-10,RAN2#99bis,R2-1712478,,,,Draft TS capturing outcome of email discussion [99bis#13],1.1.0
+2017-12,RAN2#100,R2-1714261,,,,Draft TS capturing outcome of email discussion [100#21],1.2.0
+2017-12,RP-78,RP-172322,,,,Submitted to RAN for approval,2.0.0
+2017-12,RP-78,,,,,Upgraded to Rel-15,15.0.0
+2018-03,RP-79,RP-180440,0003,-,F,Corrections for RLC specification,15.1.0
+2018-06,RP-80,RP-181214,0009,1,F,CR on updating POLL_SN value and selecting the RLC SDU for retransmission,15.2.0
+2018-09,RP-81,RP-181939,0018,1,F,Remaining corrections on TS 38.322,15.3.0
+2018-12,RP-82,RP-182658,0028,1,F,Ambiguity of POLL_SN update timing,15.4.0
+2019-03,RP-83,RP-190540,0029,1,D,Corrections on RLC state variables,15.5.0
+2020-03,RP-87,RP-200346,0030,1,B,CR for 38.322 for NR V2X,16.0.0
+2020-07,RP-88,RP-201179,0036,1,F,Correction on RLC spec to support the BAP as upper layer,16.1.0
+2020-12,RP-90,RP-202772,0037,1,F,CR to 38.322 on Backhaul RLC Channel,16.2.0
+2022-03,RP-95,RP-220484,0045,1,B,Introduction of NR MBS into 38.322,17.0.0
+,RP-95,RP-220491,0046,1,B,Introduction of SL Relay in 38.322,17.0.0
+2022-06,RP-96,RP-221732,0048,1,F,Correction on RLC for SL relay,17.1.0
+,RP-96,RP-221712,0049,-,A,Corrections on the receiving RLC entity establishment for SL-SRB0/SL-SRB1,17.1.0
+2022-12,RP-98,RP-223412,0050,4,F,RLC correction for SL relay,17.2.0
+2023-06,RP-100,RP-231416,0052,1,F,Clarification on the maximum Data field size for L2 U2N relay,17.3.0
+2023-12,RP-102,RP-233908,0053,1,B,Introduction of XR Enhancements,18.0.0
+,RP-102,RP-233904,0054,3,B,Introduction of NR sidelink relay enhancements,18.0.0
+2024-06,RP-104,RP-241574,0056,-,B,Clarification on RETX_COUNT during an LTM cell switch,18.1.0
+2024-12,RP-106,RP-243232,0063,1,F,RLC correction for multi-path relay with N3C,18.2.0
+2025-09,RP-109,RP-252779,0065,1,B,Introduction of R19 XR enhancements for RLC spec.,19.0.0
+2025-12,RP-110,RP-253730,0066,2,F,Miscellaneous corrections on RLC for R19 XR,19.1.0
+2026-03,RP-111,RP-260667,0067,2,F,Miscellaneous corrections on RLC for R19 XR,19.2.0

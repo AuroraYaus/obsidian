@@ -1,0 +1,3 @@
+CellGlobalIdUTRA field descriptions
+cellIdentityUTRA Cell Identifier which is unique within the context of the identified PLMN as defined in TS 25.331 [19].
+"plmn-IdentityIdentifies the PLMN of the cell as given by the common PLMN broadcast in the MIB, as defined in TS 25.331 [19]."

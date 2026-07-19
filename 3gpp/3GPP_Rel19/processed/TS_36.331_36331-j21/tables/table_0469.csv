@@ -1,0 +1,4 @@
+Conditional presence,Explanation
+HO,The field is mandatory present in case of handover within E-UTRA; otherwise the field is not present.
+HO2,The field is optional present in case of handover within E-UTRA; otherwise the field is not present.
+HO3,"The field is optional present in case of handover within E-UTRA, or handover from NR to E-UTRA; otherwise the field is not present."

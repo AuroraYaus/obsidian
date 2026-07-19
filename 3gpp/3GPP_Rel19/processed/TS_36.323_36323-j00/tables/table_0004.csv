@@ -1,0 +1,8 @@
+Bit,Description
+000,PDCP status report
+001,Interspersed ROHC feedback packet
+010,LWA status report
+011,LWA end-marker packet
+100,UDC feedback packet
+101,EHC feedback packet
+110-111,reserved

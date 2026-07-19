@@ -1,0 +1,5 @@
+Definitions for parameters,Per,M,FDD-TDDDIFF,FR1-FR2DIFF
+"bapHeaderRewriting-Rerouting-r17Indicates whether the IAB-MT supports BAP header rewriting for inter-donor-DU re-routing, as specified in TS 38.340 [23] and TS 38.300 [28]. IAB-donor-DUs can belong to the same or different IAB-donor CUs.",IAB-MT,No,No,No
+"bapHeaderRewriting-Routing-r17Indicates whether the IAB-MT supports BAP header rewriting for inter-donor CU partial migration, inter-donor-CU RLF recovery and inter-donor-CU topology redundancy, as specified in TS 38.340 [23] and TS 38.300 [28].",IAB-MT,No,No,No
+"flowControlBH-RLC-ChannelBased-r16Indicates whether the IAB-MT supports flow control procedures and flow control feedback per backhaul RLC channel, as specified in TS 38.340 [23].",IAB-MT,No,No,No
+"flowControlRouting-ID-Based-r16Indicates whether the IAB-MT supports flow control procedures and flow control feedback per Routing ID, as specified in TS 38.340 [23].",IAB-MT,No,No,No

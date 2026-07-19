@@ -1,0 +1,59 @@
+<table>
+  <tr>
+    <td>SIB1-RequestConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>absoluteFrequencyPointAAbsolute frequency of the reference resource block (Common RB 0). Its lowest subcarrier is also known as Point A (see TS 38.211 [16], clause 4.4.4.2).</td>
+  </tr>
+  <tr>
+    <td>carrierBandwidthWidth of this carrier in number of PRBs (using the subcarrierSpacing defined for this carrier) (see TS 38.211 [16], clause 4.4.2). For the case that 12PRB/20 PRB transmission bandwidth is used as specified in TS 38.101-1 [15], TS 38.211[16] and TS 38.213[13], the network shall configure the carrierBandwidth to 15 PRB (for the 12 PRB case) and 25 PRB (for the 20 PRB case) respectively and the UE shall use 12 PRB/20 PRB as the transmission bandwidth respectively.</td>
+  </tr>
+  <tr>
+    <td>locationAndBandwidthFrequency domain location and bandwidth of this bandwidth part. The value of the field shall be interpreted as resource indicator value (RIV) as defined TS 38.214 [19] with assumptions as described in TS 38.213 [13], clause 12, i.e. setting =275. The first PRB is a PRB determined by offsetToCarrier configured in IE OD-SIB1-Config and subcarrierSpacing of this BWP. In case of TDD, a BWP-pair (UL BWP and DL BWP with the same bwp-Id) must have the same center frequency (see TS 38.213 [13], clause 12)</td>
+  </tr>
+  <tr>
+    <td>msg1-SubcarrierSpacingSubcarrier spacing of PRACH (see TS 38.211 [16], clause 5.3.2) used for SIB1 request transmission.</td>
+  </tr>
+  <tr>
+    <td>n-TimingAdvanceOffsetThe N_TA-Offset to be applied for random access on this cell. If the field is absent, the UE applies the value defined for the duplex mode and frequency range of this cell. See TS 38.133, table 7.1.2-2.</td>
+  </tr>
+  <tr>
+    <td>offsetToCarrierOffset in frequency domain between Point A (lowest subcarrier of common RB 0) and the lowest usable subcarrier on this carrier in number of PRBs (using the subcarrierSpacing defined for this carrier). The maximum value corresponds to 275*8-1. See TS 38.211 [16], clause 4.4.2.</td>
+  </tr>
+  <tr>
+    <td>p-MaxValue in dBm applicable for the cell. If absent the UE applies the maximum power according to TS 38.101-1[57] in case of an FR1 cell or TS 38.101-2 [39] in case of an FR2 cell. In this release of the specification, if p-Max is present on a carrier frequency in FR2, the UE shall ignore the field and applies the maximum power according to TS 38.101-2 [39]. This field is ignored by IAB-MT, the IAB-MT applies output power and emissions requirements, as specified in TS 38.174 [63].</td>
+  </tr>
+  <tr>
+    <td>prach-RootSequenceIndexPRACH root sequence index (see TS 38.211 [16], clause 6.3.3.1) to be used for SIB1 request transmission.</td>
+  </tr>
+  <tr>
+    <td>ra-SearchSpaceID of the Search space for random access procedure (see TS 38.213 [13], clause 10.1).</td>
+  </tr>
+  <tr>
+    <td>sib1-PDCCH-RestrictionToPRACHIndicates whether the UE can assume that, in the OD-SIB1 window, PDCCH for an OD-SIB1 message is transmitted in PDCCH monitoring occasions corresponding only to the SSB associated with the PRACH for SIB1 request.</td>
+  </tr>
+  <tr>
+    <td>sib1-RequestPeriodPeriodicity of the SIB1-Request configuration in number of association periods.</td>
+  </tr>
+  <tr>
+    <td>sib1-RequestResourcesResources for SIB1 request</td>
+  </tr>
+  <tr>
+    <td>sib1-RestrictedSetConfigConfiguration of an unrestricted set or one of two types of restricted sets, see TS 38.211 [16], clause 6.3.3.1.</td>
+  </tr>
+  <tr>
+    <td>sib1-RSRP-ThresholdSSBL1-RSRP threshold used for determining whether a candidate beam may be used by the UE to attempt to transmit SIB1 request, see TS 38.321 [3].</td>
+  </tr>
+  <tr>
+    <td>ssb-perRACH-OccasionNumber of SSBs per RACH occasion for OD-SIB1</td>
+  </tr>
+  <tr>
+    <td>totalNumberOfRA-PreamblesTotal number of preambles used for contention based and contention free 4-step or 2-step random access in the RACH resources configured in the corresponding OD-SIB1-Config, excluding preambles used for other purposes (e.g. for SI request, or SIB1 request).</td>
+  </tr>
+  <tr>
+    <td>ul-FrequencyBandListProvides the frequency band indicator and a list of additionalPmax and additionalSpectrumEmission values for UL operation as defined in TS 38.101-1 [15], table 6.2.3.1-1, TS 38.101-2 [39], table 6.2.3.1-2, and TS 38.101-5 [75], table 6.2.3.1-1. The UE shall apply the first listed band which it supports in the ul-FrequencyBandList field.</td>
+  </tr>
+  <tr>
+    <td>ul-SubCarrierSpacingIndicates the reference SCS for msg1-FrequencyStart-r19, offsetToCarrier-r19, carrierBandwidth-r19, and locationAndBandwidth-r19.</td>
+  </tr>
+</table>

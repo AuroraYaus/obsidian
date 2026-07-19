@@ -1,0 +1,50 @@
+<table>
+  <tr>
+    <td>PUSCH-PowerControl field descriptions</td>
+  </tr>
+  <tr>
+    <td>deltaMCSIndicates whether to apply delta MCS. When the field is absent, the UE applies Ks = 0 in delta_TFC formula for PUSCH (see TS 38.213 [13], clause 7.1).</td>
+  </tr>
+  <tr>
+    <td>dummyThis field is not used in the specification. If received it shall be ignored by the UE.</td>
+  </tr>
+  <tr>
+    <td>msg3-AlphaDedicated alpha value for msg3 PUSCH (see TS 38.213 [13], clause 7.1). When the field is absent the UE applies the value 1.</td>
+  </tr>
+  <tr>
+    <td>msg3-Alpha-SBFDConfigures separate dedicated alpha value for msg3 PUSCH in SBFD symbols. When the field is absent, msg3-Alpha configured for msg3 PUSCH transmission in non-SBFD symbols is used if msg3 PUSCH transmission is transmitted in SBFD symbols.</td>
+  </tr>
+  <tr>
+    <td>olpc-ParameterSetDCI-0-1, olpc-ParameterSetDCI-0-2Configures the number of bits for Open-loop power control parameter set indication for DCI format 0_1/0_2 in case SRI is not configured in the DCI. 2 bits is applicable only if SRI is not present in the DCI format 0_1. The field olpc-ParameterSetDCI-0-1 applies to DCI format 0_1 and the field olpc-ParameterSetDCI-0-2 applies to DCI format 0_2 (see TS 38.212 [17], clause 7.3.1 and TS 38.213 [13], clause 11).</td>
+  </tr>
+  <tr>
+    <td>p0-AlphaSetsConfiguration {p0-pusch, alpha} sets for PUSCH (except msg3 and msgA PUSCH), i.e., { {p0,alpha,index1}, {p0,alpha,index2},...} (see TS 38.213 [13], clause 7.1). When no set is configured, the UE uses the P0-nominal for msg3/msgA PUSCH, P0-UE is set to 0 and alpha is set according to either msg3-Alpha or msgA-Alpha (see TS 38.213 [13], clause 7.1). This field is not configured if unifiedTCI-StateType is configured for the serving cell.</td>
+  </tr>
+  <tr>
+    <td>p0-NominalWithoutGrantP0 value for UL grant-free/SPS based PUSCH. Value in dBm. Only even values (step size 2) allowed (see TS 38.213 [13], clause 7.1).</td>
+  </tr>
+  <tr>
+    <td>p0-PUSCH-SetListConfigure one additional P0-PUSCH-Set per SRI. If present, the one bit or 2 bits in the DCI is used to dynamically indicate among the P0 value from the existing P0-PUSCH-AlphaSet and the P0 value(s) from the P0-PUSCH-Set (See TS 38.212 [17], clause 7.3.1 and TS 38.213 [13], clause 17).</td>
+  </tr>
+  <tr>
+    <td>p0-PUSCH-SetList2For indicating per-TRP OLPC set in DCI format 0_1/0_2 with the open-loop power control parameter set indication field, a second p0-PUSCH-SetList-r16 is used. When this field is present the p0-PUSCH-SetList-r16 corresponds to the first SRS resource set (see TS 38.213 [13]).</td>
+  </tr>
+  <tr>
+    <td>pathlossReferenceRSToAddModList, pathlossReferenceRSToAddModListSizeExtA set of Reference Signals (e.g. a CSI-RS config or a SS block) to be used for PUSCH path loss estimation. The set consists of Reference Signals configured using pathLossReferenceRSToAddModList and Reference Signals configured using pathlossReferenceRSToAddModListSizeExt. Up to maxNrofPUSCH-PathlossReferenceRSs may be configured (see TS 38.213 [13], clause 7.1). No elements in the list pathLossReferenceRSToAddModList nor pathlossReferenceRSToAddModListSizeExt are configured if unifiedTCI-StateType is configured for the serving cell.</td>
+  </tr>
+  <tr>
+    <td>pathlossReferenceRSToReleaseList, pathlossReferenceRSToReleaseListSizeExtLists of reference signals for PUSCH path loss estimation to be released by the UE.</td>
+  </tr>
+  <tr>
+    <td>sri-PUSCH-MappingToAddModListA list of SRI-PUSCH-PowerControl elements among which one is selected (see TS 38.213 [13], clause 7.1). No elements in this list are configured if unifiedTCI-StateType is configured for the serving cell.</td>
+  </tr>
+  <tr>
+    <td>sri-PUSCH-MappingToAddModList2A list of SRI-PUSCH-PowerControl elements for second SRS-resource set, among which one is selected by the SRI field in DCI (see TS 38.213 [13], clause 7.1). When this field is present the sri-PUSCH-MappingToAddModList corresponds to the first SRS resource set for PUSCH. No elements in this list are configured if unifiedTCI-StateType is configured for the serving cell.</td>
+  </tr>
+  <tr>
+    <td>tpc-AccumulationIf enabled, UE applies TPC commands via accumulation. If not enabled, UE applies the TPC command without accumulation. If the field is absent, TPC accumulation is enabled (see TS 38.213 [13], clause 7.1).</td>
+  </tr>
+  <tr>
+    <td>twoPUSCH-PC-AdjustmentStatesNumber of PUSCH power control adjustment states maintained by the UE (i.e., fc(i)). If the field is present (n2) the UE maintains two power control states (i.e., fc(i,0) and fc(i,1)). If the field is absent, it maintains one power control state (i.e., fc(i,0)) (see TS 38.213 [13], clause 7.1).</td>
+  </tr>
+</table>

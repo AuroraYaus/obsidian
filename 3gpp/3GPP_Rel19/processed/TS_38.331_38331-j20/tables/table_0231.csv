@@ -1,0 +1,4 @@
+CG-COT-Sharing field descriptions
+"channelAccessPriorityIndicates the Channel Access Priority Class that the gNB can assume when sharing the UE initiated COT (see 37.213 [48], clause 4.1.3)."
+"durationIndicates the number of DL transmission slots within UE initiated COT (see 37.213 [48], clause 4.1.3)."
+"offsetIndicates the number of DL transmission slots from the end of the slot where CG-UCI is detected after which COT sharing can be used (see 37.213 [48], clause 4.1.3)."

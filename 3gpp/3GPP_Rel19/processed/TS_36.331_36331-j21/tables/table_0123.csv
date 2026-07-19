@@ -1,0 +1,12 @@
+CSI-RS-Config field descriptions
+"advancedCodebookEnabledValue TRUE indicates that the UE should use the advanced code book defined in TS 36.213 [23]. EUTRAN does not configure the field when the UE is configured with eMIMO-Type is set to beamformed, when the UE is configured with eMIMO-Hybrid or when the UE is configured with semiOpenLoop."
+"antennaPortsCountParameter represents the number of antenna ports used for transmission of CSI reference signals where value an1 corresponds to 1 antenna port, an2 to 2 antenna ports and so on, see TS 36.211 [21], clause 6.10.5."
+"ds-ZeroTxPowerCSI-RSParameter for additional zeroTxPowerCSI-RS for a serving cell, concerning the CSI-RS included in discovery signals."
+dummyThis field is not used in the specification. If received it shall be ignored by the UE.
+"eMIMO-TypeParameter: eMIMO-Type, see TS 36.213 [23], TS 36.211 [21]. If eMIMO-Type is set to nonPrecoded, the codebooks used for deriving CSI feedback are in TS 36.213 [23], Table 7.2.4-10 to Table 7.2.4-17. Choice values nonPrecoded and beamformed correspond to 'CLASS A' and 'CLASS B' respectively, see TS 36.212 [22] and TS 36.213 [23]."
+"p-CParameter: , see TS 36.213 [23], clause 7.2.5. The UE shall ignore p-C-r10 if configured with eMIMO-Type unless it is set to beamformed, alternativeCodebookEnabledBeamformed (in CSI-RS-ConfigBeamformed) is set to FALSE and csi-RS-ConfigNZPIdListExt is not configured."
+"resourceConfigParameter: CSI reference signal configuration, see TS 36.211 [21], tables 6.10.5.2-1 and 6.10.5.2-2."
+"subframeConfigParameter: , see TS 36.211 [21], table 6.10.5.3-1."
+zeroTxPowerCSI-RS2Parameter for additional zeroTxPowerCSI-RS for a serving cell. E-UTRAN configures the field only if csi-MeasSubframeSets-r12 and TM 1 – 9 are configured for the serving cell.
+"zeroTxPowerResourceConfigListParameter: ZeroPowerCSI-RS, see TS 36.213 [23], clause 7.2.7."
+"zeroTxPowerSubframeConfigParameter: , see TS 36.211 [21], table 6.10.5.3-1."

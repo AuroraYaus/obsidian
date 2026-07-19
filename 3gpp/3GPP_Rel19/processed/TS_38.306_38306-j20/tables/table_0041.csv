@@ -1,0 +1,3 @@
+Definitions for parameters,Per,M,FDD-TDDDIFF,FR1-FR2DIFF
+"f1c-OverNR-RRC-r17Indicates whether the IAB-MT supports F1-C signalling over DLInformationTransfer and ULInformationTransfer messages via MN when IAB-MT operates in NR-DC and MN is the non-F1-termination node or via SN when IAB-MT operates in NR-DC and SN is the non-F1-termination node, as specified in TS 38.401 [33] and TS 37.340 [7].",IAB-MT,No,No,No
+simultaneousRxTx-IAB-MultipleParents-r17Indicates the support of simultaneous transmission and reception of an IAB-node from multiple parent nodes.,BC,No,No,No

@@ -1,0 +1,7 @@
+Definitions for parameters,Per,M,FDD-TDDDIFF,FR1-FR2DIFF
+"drx-OnSidelink-r17Indicates whether UE supports sidelink DRX for unicast, groupcast and broadcast.",UE,No,No,No
+lcp-RestrictionSidelink-r16Indicates whether UE supports the selection of logical channels for each SL grant based on RRC configured restriction.,UE,No,No,No
+logicalChannelSR-DelayTimerSidelink-r16Indicates whether the UE supports the logicalChannelSR-DelayTimer as specified in TS 38.321 [8] for sidelink logical channel(s).,UE,No,Yes,No
+multipleSR-ConfigurationsSidelink-r16Indicates whether the UE supports 8 SR configurations per PUCCH cell group as specified in TS 38.321 [8] for sidelink.,UE,No,Yes,No
+"multipleConfiguredGrantsSidelink-r16Indicates whether UE supports 8 sidelink configured grant configurations (including both Type 1 and Type 2) in a resource pool. If absent, for each resource pool, the UE only supports one sidelink configured grant configuration.",UE,No,No,No
+"sl-LBT-FailureDectectionRecovery-r18Indicates whether the UE supports sidelink consistent LBT detection and recovery, as specified in TS 38.321 [8], for shared spectrum channel access.",UE,No,No,No

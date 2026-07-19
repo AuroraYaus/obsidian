@@ -1,0 +1,17 @@
+LTM-CSI-ReportConfig field descriptions
+eventIdType of LTM event for triggering event-triggered measurement report as specified in TS 38.321 [3].
+"eventTriggeredFor CLTM, network can only configure events eventLTM3 and eventLTM5."
+"eventTriggeredReportConfigIf this field is included, the LTM-CSI-ReportConfig is for L1 measurement and event-triggered reporting as specified in TS 38.321 [3] clause 5.35. Otherwise, the LTM-CSI-ReportConfig is to configure execution conditions for LTM as specified in TS 38.321 [3] clause 5.36."
+hysteresisHysteresis when evaluating the entering/leaving conditions for an LTM event.
+ltm-CandidateReportConfigListList of report configurations for LTM candidate IDs. If the field is absent the UE shall measure all the LTM candidate cells associated to the field ltm-ResourcesForChannelMeasurement.
+"ltm-EventTriggeredPeriodicReportThis field indicates when an LTM event is triggered, whether the event-triggered measurement report is sent periodically. If the field is absent, the event-triggered measurement report is sent once, as specified in TS 38.321 [3]."
+ltm-EventTriggeredReportContentThis field indicates what to include in a measurement report when an LTM event is triggered.
+"ltm-ReportConfigTypeThis field specifies how the UE shall report the measurement results for LTM either by gNB-scheduled measurement report or by event-triggered measurement report by MAC CE, or to configure execution conditions for LTM. The UE shall ignore this field if LTM-CSI-ReportConfig is configured in a LTM-Candidate IE. The value eventTriggered can only be configured in the SpCell."
+ltm-ReportContentThis field defines the content of the LTM L1 measurement report. The UE shall ignore ltm-ReportContent-r18 if the field ltm-ReportConfigType is set to eventTriggered.
+"ltm-ResourcesForChannelMeasurement, ltm-ResourceForInterferenceMeasurementsThis field indicates the index of SSB or CSI-RS in the field LTM-CSI-ResourceConfig."
+"ltm2-Threshold, ltm4-Threshold, ltm5-Threshold1, ltm5-Threshold2Thresholds defined in the entering/leaving conditions for different LTM events."
+ltm3-OffsetOffset for the entering/leaving condition for event LTM3. The actual value is field value * 0.5 dB.
+"reportOnLeaveIndicates whether the event-triggered measurement report by MAC CE shall be triggered when leaving condition is satisfied, as specified in TS 38.321 [3]."
+"reportSlotConfigPeriodicity and slot offset (see TS 38.214 [19], clause 5.2.1.4). The UE shall ignore the offset provided by this field in case semiPersistentOnPUSCH is configured."
+"reportSlotOffsetList, reportSlotOffsetListDCI-0-1, reportSlotOffsetListDCI-0-2Timing offset Y for semi persistent reporting using PUSCH and aperiodic reporting."
+"servingSpecificOffsetSOffset for event condition that is applicable for all the reference signals belonging to serving cell. If the field is absent, the value '0dB' is applied."

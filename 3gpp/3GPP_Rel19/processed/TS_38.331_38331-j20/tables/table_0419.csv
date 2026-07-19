@@ -1,0 +1,3 @@
+PCI-Range field descriptions
+"rangeIndicates the number of physical cell identities in the range (including start). Value n4 corresponds with 4, value n8 corresponds with 8 and so on. The UE shall apply value 1 in case the field is absent, in which case only the physical cell identity value indicated by start applies."
+startIndicates the lowest physical cell identity in the range.

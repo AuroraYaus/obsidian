@@ -1,0 +1,3 @@
+SIB21 field descriptions
+"mbs-FSAI-InterFreqListContains a list of neighboring frequencies including additional bands, if any, that provide MBS services and the corresponding MBS FSAIs."
+"mbs-FSAI-IntraFreqContains the list of MBS FSAIs for the current frequency. For MBS service continuity, the UE shall use all MBS FSAIs listed in mbs-FSAI-IntraFreq to derive the MBS frequencies of interest."

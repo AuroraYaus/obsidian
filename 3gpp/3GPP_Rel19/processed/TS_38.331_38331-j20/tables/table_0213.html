@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td>UplinkTxSwitchingBandPairConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>bandInfoUL1, bandInfoUL2Indicates the band index for a band pair. The value n indicates the band included at the n-th entry of uplinkTxSwitchingBandList.</td>
+  </tr>
+  <tr>
+    <td>switching2T-ModeIndicates 2Tx-2Tx switching mode is configured to the band pair.If this field is absent when uplink Tx switching is configured, it is interpreted that 1Tx-2Tx/1Tx-1Tx UL Tx switching is configured as specified in TS 38.214 [19].</td>
+  </tr>
+  <tr>
+    <td>switchingOptionConfigForBandPairIndicates the switching option for the band pair as specified in TS 38.214 [19], clause 6.1.6.</td>
+  </tr>
+  <tr>
+    <td>switchingPeriodConfigForBandPairIndicates the value of switching period for the band pair as specified in TS 38.214 [19], clause 6.1.6. Value n35us represents 35 us, n140us represents 140us. If the field is absent, 210 us is applied.</td>
+  </tr>
+</table>

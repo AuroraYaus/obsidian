@@ -1,0 +1,4 @@
+PDSCH-ConfigPTM field descriptions
+"dataScramblingIdentityPDSCHIdentifier(s) used to initialize data scrambling (c_init) for PDSCH as specified in TS 38.211 [16], clause 7.3.1.1. When the field is absent the UE applies the value physCellId configured for this serving cell."
+"dmrs-ScramblingID0DL DMRS scrambling initialization (see TS 38.211 [16], clause 7.4.1.1.1). When the field is absent the UE applies the value physCellId configured for this serving cell."
+"pdsch-AggregationFactorNumber of repetitions for dynamic scheduling of MBS broadcast data for MTCH PDSCH (see TS 38.214 [19], clause 5.1.2.1). When the field is absent the UE applies the value 1."

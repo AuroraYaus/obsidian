@@ -1,0 +1,7 @@
+System bandwidth NRBDL,Shift of narrowband i
+6,0
+15,-1 for narrowband #0;0 for narrowband #1
+25,"0 for narrowbands 0, 1;- 1 for narrowband 2, 3"
+50,- 1 for all narrowbands
+75,"-1 for narrowbands 0, 1, …, 5;0 for narrowbands 6, 7, …, 11"
+100,-2 for all narrowbands.

@@ -1,0 +1,163 @@
+%%{init: {'theme': 'default', 'themeVariables': {'fontSize': '14px'}, 'flowchart': {'nodeSpacing': 5, 'rankSpacing': 25}}}%%
+flowchart LR
+
+    subgraph DOM_math["数学基础"]
+        C_GF2_伽罗瓦域["GF(2) 伽罗瓦域"]:::c_math
+        L_T1_1_GF2_binary_arithmetic_for_decoders["从比特到校验规则"]:::f_l1
+        L_T1_2_GF2_polynomials_crc_remainders["整除规则与错误检测"]:::f_l1
+        L_T1_3_GF2_vectors_matrices["校验约束与校验子"]:::f_l1
+        L_T0_1_LTE_NR_decoder_protocol_reading_map["T0.1 LTE/NR 译码协议阅读地图"]:::f_l1
+        C_LLR_对数似然比["LLR 对数似然比"]:::c_math
+        L_T1_5_LLR_soft_decision["软信息的符号、幅度与译码器输入语义"]:::f_l1
+        L_T2_1_AWGN_noise_scaling["$E_b/N_0$ 到译码器软信息"]:::f_l1
+        L_T2_2_BPSK_QPSK_soft_demapping["从星座点到逐比特软信息"]:::f_l1
+        L_T2_5_LLR_clipping_scaling_quantization["浮点 LLR 到定点译码器输入的表示转换"]:::f_l1
+        L_T5_1_fixed_point_numbers_for_LLR["从浮点可靠度到硬件可保存的有符号数"]:::f_l1
+        C_贝叶斯推断["贝叶斯推断"]:::c_math
+        L_T1_4_probability_bayes_soft_decoding["噪声信道下的信念更新"]:::f_l1
+        L_T1_5_LLR_soft_decision["软信息的符号、幅度与译码器输入语义"]:::f_l1
+        C_信息论基础["信息论基础"]:::c_math
+        L_T1_6_information_theory_minimum_for_decoding["不确定性、码率和可靠通信边界"]:::f_l1
+        L_T4_5_decoder_performance_metrics["错误率、速度、能耗与面积取舍"]:::f_l1
+        C_生成多项式["生成多项式"]:::c_math
+        L_T1_2_GF2_polynomials_crc_remainders["整除规则与错误检测"]:::f_l1
+        L_T3_1_LTE_NR_CRC_families["从错误检测到译码通过/失败判决"]:::f_l1
+        C_校验矩阵["校验矩阵"]:::c_math
+        L_T1_3_GF2_vectors_matrices["校验约束与校验子"]:::f_l1
+        L_T8_3_NR_LDPC_lifting_QC_matrix["T8.3 NR LDPC 提升大小与 QC-…"]:::f_l1
+    end
+    subgraph DOM_chan["信道与信号"]
+        C_AWGN_信道模型["AWGN 信道模型"]:::c_chan
+        L_T2_1_AWGN_noise_scaling["$E_b/N_0$ 到译码器软信息"]:::f_l1
+        L_T2_4_fading_channel_LLR_reliability["均衡输出幅度与可信度差异"]:::f_l1
+        C_BPSK_QPSK_软解调["BPSK/QPSK 软解调"]:::c_chan
+        L_T2_2_BPSK_QPSK_soft_demapping["从星座点到逐比特软信息"]:::f_l1
+        L_T1_5_LLR_soft_decision["软信息的符号、幅度与译码器输入语义"]:::f_l1
+        C_QAM_软解调["QAM 软解调"]:::c_chan
+        L_T2_3_QAM_Max_Log_MAP_demapping["16QAM 手算与高阶近似"]:::f_l1
+        L_T2_2_BPSK_QPSK_soft_demapping["从星座点到逐比特软信息"]:::f_l1
+        C_Max_Log_MAP_近似["Max-Log-MAP 近似"]:::c_chan
+        L_T2_3_QAM_Max_Log_MAP_demapping["16QAM 手算与高阶近似"]:::f_l1
+        L_T6_6_Log_MAP_Max_Log_MAP_Turbo["T6.6 Log-MAP 与 Max-Log…"]:::f_l1
+        C_Eb_N0_噪声缩放["Eb/N0 噪声缩放"]:::c_chan
+        L_T2_1_AWGN_noise_scaling["$E_b/N_0$ 到译码器软信息"]:::f_l1
+        L_T4_5_decoder_performance_metrics["错误率、速度、能耗与面积取舍"]:::f_l1
+        C_衰落信道与LLR可信度["衰落信道与LLR可信度"]:::c_chan
+        L_T2_4_fading_channel_LLR_reliability["均衡输出幅度与可信度差异"]:::f_l1
+        L_T2_5_LLR_clipping_scaling_quantization["浮点 LLR 到定点译码器输入的表示转换"]:::f_l1
+    end
+    subgraph DOM_prot["协议结构"]
+        C_CRC_错误检测["CRC 错误检测"]:::c_prot
+        L_T3_1_LTE_NR_CRC_families["从错误检测到译码通过/失败判决"]:::f_l1
+        L_T4_4_early_stopping_crc_gated_control["用校验结果节省迭代、延迟和功耗"]:::f_l1
+        L_T10_6_CRC_aided_SCL_control_reliability["T10.6 CRC 辅助 SCL 与控制信道…"]:::f_l2p
+        C_TB_CB_传输块与码块["TB/CB 传输块与码块"]:::c_prot
+        L_T3_2_transport_code_block_filler_bits["LTE/NR 分段流程的接收侧语义"]:::f_l1
+        L_T7_4_LTE_code_block_reassembly_TB_CRC["T7.4 LTE 码块重组与传输块 CRC"]:::f_l1
+        L_T9_5_NR_LDPC_reassembly_TB_CRC["T9.5 NR LDPC 码块重组与传输块 …"]:::f_l1
+        C_码块分割规则["码块分割规则"]:::c_prot
+        L_T3_3_LTE_Turbo_segmentation_rules["码块 CRC、填充位与并行译码边界"]:::f_l1
+        L_T3_4_NR_LDPC_segmentation_rules["基图、提升大小、码块 CRC 与填充位"]:::f_l1
+        L_T3_5_NR_Polar_segmentation_crc["控制信息的短块保护与路径选择"]:::f_l1
+        C_基图与提升大小["基图与提升大小"]:::c_prot
+        L_T8_2_NR_LDPC_base_graph_selection["T8.2 NR LDPC 基图选择"]:::f_l1
+        L_T8_3_NR_LDPC_lifting_QC_matrix["T8.3 NR LDPC 提升大小与 QC-…"]:::f_l1
+        C_可靠性序列["可靠性序列"]:::c_prot
+        L_T10_3_NR_Polar_reliability_sequence["T10.3 NR Polar 可靠性序列"]:::f_l2p
+        L_T10_2_channel_polarization_frozen_bits["T10.2 信道极化、冻结位与信息位"]:::f_l2p
+        C_MCS_TBS_描述符["MCS/TBS 描述符"]:::c_prot
+        L_T9_0_TS38214_MCS_TBS_decoder_descriptor["T9.0 TS 38.214 MCS/TBS…"]:::f_l1
+        L_T8_1_NR_LDPC_decoder_chain_overview["T8.1 NR LDPC 译码链路总览"]:::f_l1
+    end
+    subgraph DOM_algo["译码算法"]
+        C_BCJR_MAP_译码["BCJR/MAP 译码"]:::c_algo
+        L_T6_5_BCJR_MAP_decoding_intuition["T6.5 BCJR 与 MAP 译码直觉"]:::f_l1
+        L_T6_6_Log_MAP_Max_Log_MAP_Turbo["T6.6 Log-MAP 与 Max-Log…"]:::f_l1
+        L_T1_4_probability_bayes_soft_decoding["噪声信道下的信念更新"]:::f_l1
+        C_Turbo_迭代与外信息["Turbo 迭代与外信息"]:::c_algo
+        L_T6_7_Turbo_iteration_extrinsic_stopping["T6.7 Turbo 迭代、外信息交换与停止"]:::f_l1
+        L_T4_1_iterative_decoding_extrinsic_information["多次更新置信度的接收端方法"]:::f_l1
+        C_Tanner_图与因子图["Tanner 图与因子图"]:::c_algo
+        L_T4_2_graphs_trellises_trees_for_decoding["译码约束的三种可视化语言"]:::f_l1
+        L_T8_4_LDPC_Tanner_graph_message_passing["T8.4 LDPC Tanner 图与消息传递"]:::f_l1
+        C_和积_置信传播["和积/置信传播"]:::c_algo
+        L_T8_5_LDPC_sum_product_BP["T8.5 LDPC 和积置信传播"]:::f_l1
+        L_T8_4_LDPC_Tanner_graph_message_passing["T8.4 LDPC Tanner 图与消息传递"]:::f_l1
+        C_Min_Sum_及其变体["Min-Sum 及其变体"]:::c_algo
+        L_T8_6_LDPC_MS_NMS_OMS["T8.6 LDPC Min-Sum、归一化 …"]:::f_l1
+        L_T8_5_LDPC_sum_product_BP["T8.5 LDPC 和积置信传播"]:::f_l1
+        C_分层_LDPC_调度["分层 LDPC 调度"]:::c_algo
+        L_T8_7_layered_LDPC_decoding_schedule["T8.7 LDPC 分层译码调度"]:::f_l1
+        L_T8_6_LDPC_MS_NMS_OMS["T8.6 LDPC Min-Sum、归一化 …"]:::f_l1
+        C_Polar_SC_SCL_译码["Polar SC/SCL 译码"]:::c_algo
+        L_T10_4_Polar_SC_decoding["T10.4 Polar SC 译码"]:::f_l2p
+        L_T10_5_Polar_SCL_decoding["T10.5 Polar SCL 译码"]:::f_l2p
+        L_T10_6_CRC_aided_SCL_control_reliability["T10.6 CRC 辅助 SCL 与控制信道…"]:::f_l2p
+        C_信道极化与冻结位["信道极化与冻结位"]:::c_algo
+        L_T10_2_channel_polarization_frozen_bits["T10.2 信道极化、冻结位与信息位"]:::f_l2p
+        L_T10_3_NR_Polar_reliability_sequence["T10.3 NR Polar 可靠性序列"]:::f_l2p
+        C_RSC_码与网格终止["RSC 码与网格终止"]:::c_algo
+        L_T6_2_RSC_code_foundation["T6.2 递归系统卷积码基础"]:::f_l1
+        L_T6_3_LTE_Turbo_encoder_trellis_termination["T6.3 LTE Turbo 编码器与网格终止"]:::f_l1
+        C_内部交织器["内部交织器"]:::c_algo
+        L_T6_4_LTE_Turbo_internal_interleaver["T6.4 LTE Turbo 内部交织器"]:::f_l1
+        L_T6_7_Turbo_iteration_extrinsic_stopping["T6.7 Turbo 迭代、外信息交换与停止"]:::f_l1
+        C_HARQ_与软合并["HARQ 与软合并"]:::c_algo
+        L_T4_3_HARQ_soft_combining_basics["跨重传累积译码证据"]:::f_l1
+        L_T7_3_LTE_HARQ_soft_buffer_RV["T7.3 LTE HARQ 软缓存与冗余版本"]:::f_l1
+        L_T9_3_NR_LDPC_HARQ_soft_buffer_RV_k0["T9.3 NR LDPC HARQ 软缓存、…"]:::f_l1
+        L_T11_3_HARQ_soft_buffer_comparison["T11.3 LTE/NR HARQ 与软缓存对比"]:::f_l2x
+        C_早停与CRC门控["早停与CRC门控"]:::c_algo
+        L_T4_4_early_stopping_crc_gated_control["用校验结果节省迭代、延迟和功耗"]:::f_l1
+        L_T6_7_Turbo_iteration_extrinsic_stopping["T6.7 Turbo 迭代、外信息交换与停止"]:::f_l1
+    end
+    subgraph DOM_hw["硬件实现"]
+        C_定点数表示["定点数表示"]:::c_hw
+        L_T5_1_fixed_point_numbers_for_LLR["从浮点可靠度到硬件可保存的有符号数"]:::f_l1
+        L_T13_1_fixed_point_decoder_requirements["浮点实验到整数模型规格"]:::f_l3b
+        C_吞吐_延迟_并行度["吞吐/延迟/并行度"]:::c_hw
+        L_T5_3_throughput_latency_parallelism["译码器每秒能处理多少比特"]:::f_l1
+        L_T4_5_decoder_performance_metrics["错误率、速度、能耗与面积取舍"]:::f_l1
+        L_T11_4_decoder_hardware_tradeoff_comparison["T11.4 Turbo、LDPC、Polar…"]:::f_l2x
+        C_存储Bank与缓存["存储Bank与缓存"]:::c_hw
+        L_T5_2_memory_banking_buffering_basics["译码器并行访问为何受存储结构约束"]:::f_l1
+        L_T14_5_soft_buffer_HARQ_memory_architecture["从协议身份到 SRAM bank、事务提交和…"]:::f_l3c
+        C_状态机与握手["状态机与握手"]:::c_hw
+        L_T5_4_RTL_state_machine_handshake_basics["译码模块如何接收、处理和输出一个块"]:::f_l1
+        L_T14_6_decoder_register_map_configuration_flow["从协议参数到硬件任务描述符"]:::f_l3c
+        C_Golden_Model["Golden Model"]:::c_hw
+        L_T12_1_python_golden_model_project_layout["让三类译码仿真可复现、可追踪、可回放"]:::f_l3a
+        L_T12_2_LTE_Turbo_float_sim_plan["从协议比特链路到可复现 BLER 曲线"]:::f_l3a
+        L_T12_3_NR_LDPC_float_sim_plan["从基图、提升与速率恢复到可比较 BLER 曲线"]:::f_l3a
+        L_T12_4_NR_Polar_float_sim_plan["从可靠性序列、速率恢复到 CA-SCL 列表扫描"]:::f_l3a
+        C_SIMD与内存布局["SIMD与内存布局"]:::c_hw
+        L_T13_5_SIMD_memory_layout_decoders["从协议顺序到缓存友好数组"]:::f_l3b
+        L_T13_1_fixed_point_decoder_requirements["浮点实验到整数模型规格"]:::f_l3b
+        C_Bit_Exact_回归["Bit-Exact 回归"]:::c_hw
+        L_T13_6_bit_exact_regression_harness["从协议向量到 Python/C++/RTL …"]:::f_l3b
+        L_T15_1_decoder_testbench_architecture["从协议向量到 RTL 通过/失败判定"]:::f_l3d
+        L_T5_5_decoder_hardware_verification_mindset["从 golden model 到 bit-e…"]:::f_l1
+        C_DC_综合["DC 综合"]:::c_hw
+        L_T15_4_DC_synthesis_flow_decoders["从译码 RTL 到时序、面积和功耗报告"]:::f_l3d
+        L_T15_5_timing_closure_decoder_critical_paths["从负 slack 到可验证的架构修复"]:::f_l3d
+        C_时序收敛["时序收敛"]:::c_hw
+        L_T15_5_timing_closure_decoder_critical_paths["从负 slack 到可验证的架构修复"]:::f_l3d
+        L_T14_4_unified_decoder_subsystem_architecture["从三类译码引擎到共享 DMA、软缓存和状态中断"]:::f_l3c
+    end
+
+    classDef c_math fill:#C8E6C9,stroke:#2E7D32,stroke-width:2.5px,color:#1B5E20,font-size:16px
+    classDef c_chan fill:#B3E5FC,stroke:#0277BD,stroke-width:2.5px,color:#01579B,font-size:16px
+    classDef c_prot fill:#FFE0B2,stroke:#E65100,stroke-width:2.5px,color:#BF360C,font-size:16px
+    classDef c_algo fill:#E1BEE7,stroke:#7B1FA2,stroke-width:2.5px,color:#4A148C,font-size:16px
+    classDef c_hw fill:#FFCDD2,stroke:#C62828,stroke-width:2.5px,color:#B71C1C,font-size:16px
+
+    classDef f_l1 fill:#E8F5E9,stroke:#A5D6A7,stroke-width:1px,color:#1B5E20,font-size:13px
+    classDef f_l2t fill:#FBE9E7,stroke:#FFAB91,stroke-width:1px,color:#BF360C,font-size:13px
+    classDef f_l2l fill:#E3F2FD,stroke:#90CAF9,stroke-width:1px,color:#0D47A1,font-size:13px
+    classDef f_l2p fill:#F3E5F5,stroke:#CE93D8,stroke-width:1px,color:#4A148C,font-size:13px
+    classDef f_l2x fill:#FFFDE7,stroke:#FFF176,stroke-width:1px,color:#827717,font-size:13px
+    classDef f_l3a fill:#EDE7F6,stroke:#B39DDB,stroke-width:1px,color:#311B92,font-size:13px
+    classDef f_l3b fill:#E1F5FE,stroke:#81D4FA,stroke-width:1px,color:#01579B,font-size:13px
+    classDef f_l3c fill:#E0F2F1,stroke:#80CBC4,stroke-width:1px,color:#004D40,font-size:13px
+    classDef f_l3d fill:#FFF3E0,stroke:#FFCC80,stroke-width:1px,color:#BF360C,font-size:13px
+

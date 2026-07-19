@@ -1,0 +1,5 @@
+Source,Target,Notes
+eNB or any HeNB,open access HeNB,
+"eNB, or any HeNB",hybrid access HeNB,
+hybrid access HeNB or closed access HeNB,closed access HeNB,"Only applies for same CSG ID and PLMN, and if the UE is a member of the CSG cell."
+Any HeNB,eNB,

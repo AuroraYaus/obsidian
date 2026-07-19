@@ -1,0 +1,4 @@
+AS-Config-NB field descriptions
+"sourceDL-CarrierFreqProvides the parameter Downlink EARFCN in the source PCell, see TS 36.101 [42] and TS 36.102 [113]."
+sourceRadioResourceConfigRadio configuration in the source PCell. The radio resource configuration for all radio bearers existing in the source PCell shall be included. See 10.9.
+sourceSecurityAlgorithmConfigThis field provides the AS integrity protection (SRBs) and AS ciphering (SRBs and DRBs) algorithm configuration used in the source PCell.

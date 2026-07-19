@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <td>MulticastConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>pdsch-HARQ-ACK-CodebookListMulticastA list of configurations for one or two HARQ-ACK codebooks for MBS multicast. Each configuration in the list is defined in the same way as pdsch-HARQ-ACK-Codebook (see TS 38.212 [17], clause 7.3.1.2.2 and TS 38.213 [13], clauses 7.2.1, 9.1.2, 9.1.3 and 9.2.1). If this field is present, the field pdsch-HARQ-ACK-Codebook is ignored. If this field is present, the value of this field is applied for primary PUCCH group and for secondary PUCCH group (if configured).</td>
+  </tr>
+  <tr>
+    <td>type1CodebookGenerationModeIndicates the mode of Type-1 HARQ-ACK codebook generation, as specified in TS 38.213 [13]. Mode 1 is based on the k1 values that are in the intersection of K1 set for unicast and K1 set for multicast. Mode 2 is based on the k1 values that are in the union of K1 set for unicast and K1 set for multicast.</td>
+  </tr>
+</table>

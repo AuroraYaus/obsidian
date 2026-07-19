@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>SystemInformationBlockType18 field descriptions</td>
+  </tr>
+  <tr>
+    <td>commRxPoolIndicates the resources by which the UE is allowed to receive sidelink communication while in RRC_IDLE and while in RRC_CONNECTED.</td>
+  </tr>
+  <tr>
+    <td>commSyncConfigIndicates the configuration by which the UE is allowed to receive and transmit synchronisation information. E-UTRAN configures commSyncConfig including txParameters when configuring UEs by dedicated signalling to transmit synchronisation information.</td>
+  </tr>
+  <tr>
+    <td>commTxAllowRelayCommonIndicates whether the UE is allowed to transmit relay related sidelink communication data using the transmission pools included in SystemInformationBlockType18 i.e. either via commTxPoolNormalCommon, commTxPoolNormalCommonExt or via commTxPoolExceptional.</td>
+  </tr>
+  <tr>
+    <td>commTxPoolExceptionalIndicates the resources by which the UE is allowed to transmit sidelink communication in exceptional conditions, as specified in 5.10.4.</td>
+  </tr>
+  <tr>
+    <td>commTxPoolNormalCommonIndicates the resources by which the UE is allowed to transmit sidelink communication while in RRC_IDLE or when in RRC_CONNECTED while transmitting sidelink via a frequency other than the primary.</td>
+  </tr>
+  <tr>
+    <td>commTxPoolNormalCommonExtIndicates transmission resource pool(s) in addition to the pool(s) indicated by field commTxPoolNormalCommon, by which the UE is allowed to transmit sidelink communication while in RRC_IDLE or when in RRC_CONNECTED while transmitting sidelink via a frequency other than the primary. E-UTRAN configures commTxPoolNormalCommonExt only when it configures commTxPoolNormalCommon.</td>
+  </tr>
+  <tr>
+    <td>commTxResourceUC-ReqAllowedIndicates whether the UE is allowed to request transmission pools for non-relay related one-to-one sidelink communication.</td>
+  </tr>
+</table>

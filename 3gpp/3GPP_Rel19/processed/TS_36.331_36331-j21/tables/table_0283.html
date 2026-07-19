@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <td>MBSFN-SubframeConfig field descriptions</td>
+  </tr>
+  <tr>
+    <td>fourFramesA bit-map indicating MBSFN subframe allocation in four consecutive radio frames, &quot;1&quot; denotes that the corresponding subframe is allocated for MBSFN. The bitmap is interpreted as follows:FDD: Starting from the first radioframe and from the first/leftmost bit in the bitmap, the allocation applies to subframes #1, #2, #3, #6, #7, and #8 in the sequence of the four radio-frames.TDD: Starting from the first radioframe and from the first/leftmost bit in the bitmap, the allocation applies to subframes #3, #4, #7, #8, and #9 in the sequence of the four radio-frames. The last four bits are not used. E-UTRAN allocates uplink subframes only if eimta-MainConfig is configured.</td>
+  </tr>
+  <tr>
+    <td>fourFrames-v1430, fourFrames-v1610A bit-map indicating MBSFN subframe allocation in four consecutive radio frames, &quot;1&quot; denotes that the corresponding subframe is allocated for MBSFN. The bitmap is interpreted as follows:FDD: Starting from the first radioframe and from the first/leftmost bit in the bitmap, the allocation indicated by fourFrames-v1430 applies to subframes #4 and #9 in the sequence of the four radio-frames. Starting from the first radioframe and from the first/leftmost bit in the bitmap, the allocation indicated by fourFrames-v1610, if present, applies to subframes #0 and #5 in the sequence of the four radio-frames.</td>
+  </tr>
+  <tr>
+    <td>oneFrame&quot;1&quot; denotes that the corresponding subframe is allocated for MBSFN. The following mapping applies:FDD: The first/leftmost bit defines the MBSFN allocation for subframe #1, the second bit for #2, third bit for #3, fourth bit for #6, fifth bit for #7, sixth bit for #8.TDD: The first/leftmost bit defines the allocation for subframe #3, the second bit for #4, third bit for #7, fourth bit for #8, fifth bit for #9. E-UTRAN allocates uplink subframes only if eimta-MainConfig is configured. The last bit is not used.</td>
+  </tr>
+  <tr>
+    <td>oneFrame-v1430, oneFrame-v1610&quot;1&quot; denotes that the corresponding subframe is allocated for MBSFN. The following mapping applies:FDD: The first/leftmost bit indicated by oneFrame-v1430 defines the MBSFN allocation for subframe #4 and the second bit for #9. The first/leftmost bit indicated by oneFrame-v1610, if present, defines the MBSFN allocation for subframe #0 and the second bit for #5.</td>
+  </tr>
+  <tr>
+    <td>radioFrameAllocationPeriod, radioFrameAllocationOffsetRadio-frames that contain MBSFN subframes occur when equation SFN mod radioFrameAllocationPeriod = radioFrameAllocationOffset is satisfied. Value n1 for radioframeAllocationPeriod denotes value 1, n2 denotes value 2, and so on. When fourFrames is used for subframeAllocation, the equation defines the first radio frame referred to in the description below. Values n1 and n2 are not applicable when fourFrames is used.</td>
+  </tr>
+  <tr>
+    <td>subframeAllocationDefines the subframes that are allocated for MBSFN within the radio frame allocation period defined by the radioFrameAllocationPeriod and the radioFrameAllocationOffset.</td>
+  </tr>
+</table>

@@ -1,0 +1,8 @@
+Name,Value,NB-IoT,Semantics description,Ver
+MAC main configuration,,,,
+maxHARQ-tx,n5,N/A,,
+periodicBSR-Timer,infinity,pp8,,
+retxBSR-Timer,sf2560,infinity,,
+ttiBundling,FALSE,N/A,,
+drx-Config,release,N/A,,
+phr-Config,release,N/A,,

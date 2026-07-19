@@ -1,0 +1,21 @@
+Field,Bitwidth for CRI=0 or 1,,,
+,Rank = 1,Rank = 2,Rank = 3,Rank = 4
+Wideband CQI codeword 0,4,4,4,4
+Wideband CQI codeword 1,0,4,4,4
+Wideband first PMI i1,4,4,2,2
+Wideband second PMI i2,4,4,4,3
+,,,,
+Field,Bitwidth for CRI=0 or 1,,,
+,Rank = 5,Rank = 6,Rank = 7,Rank = 8
+Wideband CQI codeword 0,4,4,4,4
+Wideband CQI codeword 1,4,4,4,4
+Wideband first PMI i1,2,2,2,0
+Wideband second PMI i2,0,0,0,0
+Field,Bitwidth for CRI=2,,,
+,Rank = 1,Rank = 2,Rank = 3,Rank = 4
+Wideband CQI codeword 0,4,4,4,4
+Wideband CQI codeword 1,4,4,4,4
+Wideband first PMI i1 codeword 0,4,4,2,2
+Wideband second PMI i2 codeword 0,4,4,4,3
+Wideband first PMI i1 codeword 1,4,4,2,2
+Wideband second PMI i2 codeword 1,4,4,4,3

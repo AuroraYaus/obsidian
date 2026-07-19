@@ -1,0 +1,10 @@
+Bit field mapped to index,codebookSubset = partialAndNonCoherent,Bit field mapped to index,codebookSubset= nonCoherent
+0,1 layer: TPMI=0,0,1 layer: TPMI=0
+…,…,…,…
+14,1 layer: TPMI=14,3,1 layer: TPMI=3
+15,1 layer: TPMI=15,4,1 layer: TPMI=13
+0,2 layers: TPMI=0,5-7,1 layer: reserved
+…,…,0,2 layers: TPMI=0
+13,2 layers: TPMI=13,…,…
+14-15,2 layers: reserved,6,2 layers: TPMI=6
+,,7,2 layers: reserved

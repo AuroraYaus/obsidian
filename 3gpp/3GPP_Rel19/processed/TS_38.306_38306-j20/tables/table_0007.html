@@ -1,0 +1,387 @@
+<table>
+  <tr>
+    <td>Definitions for parameters</td>
+    <td>Per</td>
+    <td>M</td>
+    <td>FDD-TDD DIFF</td>
+    <td>FR1-FR2 DIFF</td>
+  </tr>
+  <tr>
+    <td>additionalBS-Table-r18Indicates whether the UE supports using the refined buffer size table for BSR and, if delayStatusReport-r18 is supported, DSR, as specified in TS 38.321 [8] and TS 38.331 [9].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>autonomousTransmission-r16Indicates whether the UE supports autonomous transmission of the MAC PDU generated for a deprioritized configured uplink grant as specified in TS 38.321 [8]. A UE supporting this feature shall also support lch-priorityBasedPrioritization-r16.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>cg-RetransmissionMonitoringDisabling-r18Indicates whether the UE supports disabling drx-HARQ-RTT-TimerUL for PUSCH transmissions using configured grants corresponding to a ConfiguredGrantConfig as specified in TS 38.321 [8] and TS 38.331 [9].A UE supporting this feature shall also indicate support of at least one of configuredUL-GrantType1, configuredUL-GrantType2, configuredUL-GrantType1-v1650, configuredUL-GrantType2-v1650, configuredUL-GrantType1-r16, configuredUL-GrantType2-r16.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>delayStatusReport-r18Indicates whether the UE supports the delay status report of the buffered data as specified in TS 38.321 [8], TS 38.331 [9], TS 38.323 [16] and TS 38.322 [36].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>delayStatusReportNonDelayReportingData-r19Indicates whether the UE supports including non-delay-reporting data ahead of delay-reporting data in the data volume calculation for delay status report using reporting threshold(s), as specified in TS 38.321 [8], TS 38.331 [9], TS 38.323 [16] and TS 38.322 [36]. A UE supporting this feature shall also indicate support of multipleEntryDelayStatusReport-r19.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>directMCG-SCellActivation-r16, directMCG-SCellActivation-r17Indicates whether the UE supports direct NR MCG SCell activation, as specified in TS 38.321 [8], upon SCell addition, upon reconfiguration with sync of the MCG, as specified in TS 38.331 [9].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Yes (Incl FR2-2 DIFF)</td>
+  </tr>
+  <tr>
+    <td>directMCG-SCellActivationResume-r16, directMCG-SCellActivationResume-r17Indicates whether the UE supports direct NR MCG SCell activation, as specified in TS 38.321 [8], upon reception of an RRCResume message, as specified in TS 38.331 [9].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Yes (Incl FR2-2 DIFF)</td>
+  </tr>
+  <tr>
+    <td>directSCellActivationWithTCI-r17Indicates whether the UE supports direct NR SCell activation with activated TCI states configuration (i.e. tci-ActivatedConfig).A UE supporting this feature shall also indicate support of at least one of directMCG-SCellActivation-r16, directMCG-SCellActivation-r17, directMCG-SCellActivationResume-r16, directMCG-SCellActivationResume-r17, directSCG-SCellActivation-r16, directSCG-SCellActivation-r17, directSCG-SCellActivationResume-r16, and directSCG-SCellActivationResume-r17.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>directSCG-SCellActivation-r16, directSCG-SCellActivation-r17Indicates whether the UE supports direct NR SCG SCell activation, as specified in TS 38.321 [8], upon SCell addition and upon reconfiguration with sync of the SCG, both performed via an RRCReconfiguration message received via SRB3 or contained in an RRC(Connection)Reconfiguration message received via SRB1, as specified in TS 38.331 [9] and TS 36.331 [17].A UE indicating support of directSCG-SCellActivation-r16 shall indicate support of EN-DC or support of NGEN-DC as specified in TS 36.331 [17] or support of NR-DC as specified in TS 38.331 [9].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Yes (Incl FR2-2 DIFF)</td>
+  </tr>
+  <tr>
+    <td>directSCG-SCellActivationResume-r16, directSCG-SCellActivationResume-r17Indicates whether the UE supports direct NR SCG SCell activation, as specified in TS 38.321 [8]:-upon reception of an RRCReconfiguration included in an RRCConnectionResume message, as specified in TS 38.331 [9] and TS 36.331 [17], if the UE indicates support of EN-DC or NGEN-DC, and support of resumeWithSCG-Config-r16 as specified in TS 36.331 [17],-upon reception of an RRCReconfiguration included in an RRCResume message, as specified in TS 38.331 [9], if the UE indicates support of NR-DC and of resumeWithSCG-Config-r16 as specified in TS 38.331 [9].A UE indicating support of directSCG-SCellActivationResume-r16 shall indicate support of EN-DC or NGEN-DC and support of resumeWithSCG-Config-r16 as specified in TS 36.331 [17] or indicate support of NR-DC and of resumeWithSCG-Config-r16 as specified in TS 38.331 [9].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Yes (Incl FR2-2 DIFF)</td>
+  </tr>
+  <tr>
+    <td>drx-Adaptation-r16, drx-Adaptation-r17Indicates whether the UE supports DRX adaptation comprised of the following functional components:-Configured ps-Offset for the detection of DCI format 2_6 with CRC scrambling by ps-RNTI and reported MinTimeGap or MinTimeGapFR2-2 before the start of drx-onDurationTimer of Long DRX-Indication of UE whether or not to start drx-onDurationTimer for the next Long DRX cycle by detection of DCI format 2_6-Configured UE wakeup or not when DCI format 2_6 is not detected at all monitoring occasions outside Active Time-Configured periodic CSI report apart from L1-RSRP (ps-TransmitOtherPeriodicCSI) when impacted by DCI format 2_6 that drx-onDurationTimer does not start for the next Long DRX cycle-Configured periodic L1-RSRP report (ps-TransmitPeriodicL1-RSRP) when impacted by DCI format 2_6 that drx-onDurationTimer does not start for the next Long DRX cycleThe capability signalling includes the minimum time gap between the end of the slot of last DCI format 2_6 monitoring occasion and the beginning of the slot where the UE would start the drx-onDurationTimer of Long DRX for each SCS. The value sl1 indicates 1 slot. The value sl2 indicates 2 slots, and so on. Support of this feature is reported for licensed and unlicensed bands, respectively. When drx-Adaptation-r16 is reported, either of sharedSpectrumChAccess-r16 or non-SharedSpectrumChAccess-r16 shall be reported, at least. When drx-Adaptation-r17 is reported, either of sharedSpectrumChAccess-r17 or non-SharedSpectrumChAccess-r17 shall be reported, at least.In this version of the specification, this feature is not applicable in NTN.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Yes(Incl FR2-2 DIFF)</td>
+  </tr>
+  <tr>
+    <td>enhancedSkipUplinkTxConfigured-r16Indicates whether the UE supports skipping UL transmission for a configured uplink grant only if no data is available for transmission and no UCI is multiplexed on the corresponding PUSCH of the uplink grant as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>enhancedSkipUplinkTxDynamic-r16Indicates whether the UE supports skipping UL transmission for an uplink grant addressed to a C-RNTI only if no data is available for transmission and no UCI is multiplexed on the corresponding PUSCH of the uplink grant as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>enhancedUuDRX-forSidelink-r17Indicates whether UE supports sidelink related Uu-DRX mechanisms for PDCCH monitoring. This field is only applicable if the UE supports sl-TransmissionMode1-r16.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>extendedDRX-CycleInactive-r17Indicates whether UE supports the extended DRX in RRC_INACTIVE with values of 256, 512 and 1024 radio frames as specified in TS 38.331 [9]. The UE may indicate support for extended DRX in RRC_INACTIVE only if it supports extended DRX in RRC_IDLE.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>extendedDRX-CycleInactive-r18Indicates whether UE supports the extended DRX in RRC_INACTIVE with values above 1024 radio frames as specified in TS 38.331 [9] and TS 38.304 [21]. The UE may indicate support of this capability only if it supports extended DRX in RRC_IDLE.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>harq-FeedbackDisabled-r17Indicates whether the UE supports disabled HARQ feedback for downlink transmission. A UE supporting this feature shall also indicate the support of nonTerrestrialNetwork-r17.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>harq-RTT-TimerDL-ForNTN-MulticastMBS-r17Indicates whether the UE supports the NTN extension of the drx-HARQ-RTT-TimerDL-PTM and drx-HARQ-RTT-TimerDL for MBS Multicast DRX in RRC connected mode.A UE supporting this feature shall also indicate the support of nonTerrestrialNetwork-r17, dynamicMulticastPCell-r17, and at least one of the following features:-ack-NACK-FeedbackForMulticast-r17-ack-NACK-FeedbackForSPS-Multicast-r17-nack-OnlyFeedbackForMulticast-r17-nack-OnlyFeedbackForSPS-Multicast-r17</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>intraCG-Prioritization-r17Indicates whether the UE supports the HARQ process ID selection based on LCH priority as specified in TS 38.321 [8]. A UE supporting this feature shall also support jointPrioritizationCG-Retx-Timer-r17.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>jointPrioritizationCG-Retx-Timer-r17Indicates whether the UE supports simultaneous configuration of LCH based prioritization and cg-RetransmissionTimer-r16 as specified in TS 38.321 [8]. A UE supporting this feature shall also support lch-priorityBasedPrioritization-r16 and configuredGrantWithReTx-r16.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>lastTransmissionUL-r17Indicates whether the UE supports starting the drx-HARQ-RTT-TimerUL after the end of the last transmission within a bundle as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>lch-PriorityBasedPrioritization-r16Indicates whether the UE supports prioritization between overlapping grants and between scheduling request and overlapping grants based on LCH priority as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>lch-ToConfiguredGrantMapping-r16Indicates whether the UE supports restricting data transmission from a given LCH to a configured (sub-) set of configured grant configurations (see allowedCG-List-r16 in LogicalChannelConfig in TS 38.331 [9]) as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>lch-ToGrantPriorityRestriction-r16Indicates whether the UE supports restricting data transmission from a given LCH to a configured (sub-) set of dynamic grant priority levels (see allowedPHY-PriorityIndex-r16 in LogicalChannelConfig in TS 38.331 [9]) as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>lch-ToSCellRestrictionIndicates whether the UE supports restricting data transmission from a given LCH to a configured (sub-) set of serving cells (see allowedServingCells in LogicalChannelConfig). A UE supporting pdcp-DuplicationMCG-OrSCG-DRB or pdcp-DuplicationSRB (see PDCP-Config) shall also support lch-ToSCellRestriction.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>lcp-PriorityAdjustment-r19Indicates whether the UE supports logical channel priority adjustment based on remaining time of buffered data, as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>lcp-RestrictionIndicates whether UE supports the selection of logical channels for each UL grant based on RRC configured restriction using RRC parameters allowedSCS-List, maxPUSCH-Duration, and configuredGrantType1Allowed as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>logicalChannelSR-DelayTimerIndicates whether the UE supports the logicalChannelSR-DelayTimer as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>longDRX-CycleIndicates whether UE supports long DRX cycle as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>mg-ActivationCommPRS-Meas-r17Indicates whether UE supports preconfiguration of MGs in RRC signalling for PRS measurements and the use of DL MAC CE from the gNB, as specified in TS 38.321 [8], to activate/deactivate the preconfigured MG for PRS measurements.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>mg-ActivationRequestPRS-Meas-r17Indicates whether UE supports preconfiguration of MGs in RRC signalling for PRS measurements and supports the use of UL MAC CE, as specified in TS 38.321 [8], to request the activation/deactivation of the preconfigured MG for PRS measurements. The UE can include this field only if the UE supports mg-ActivationCommPRS-Meas-r17.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>mTRP-PUSCH-PHR-Type1-Reporting-r17Indicates whether UE supports reporting of Type 1 power headroom information only for the case where the Serving Cell is configured with multiple TRP PUSCH repetitions and the MAC entity this Serving Cell belongs to is configured with twoPHRMode as specified in TS 38.321[8].This feature is mandatory if the UE supports mTRP-PUSCH-twoPHR-Reporting-r17 for at least one frequency band.</td>
+    <td>UE</td>
+    <td>CY</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>multipleConfiguredGrantsIndicates whether UE supports more than one configured grant configurations (including both Type 1 and Type 2) in a cell group. For each cell, the UE supports at most one configured grant per BWP and the maximum number of configured grant configurations per cell group is 2. If absent, for each configured cell group, the UE only supports one configured grant configuration on one serving cell.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>multipleEntryDelayStatusReport-r19Indicates whether the UE supports the delay status report of the buffered data using reporting threshold(s), as specified in TS 38.321 [8], TS 38.331 [9], TS 38.323 [16] and TS 38.322 [36].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>multipleSR-ConfigurationsIndicates whether the UE supports 8 SR configurations per PUCCH cell group as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>non-IntegerDRX-r18Indicates whether the UE supports non-integer DRX periodicity as specified in TS 38.331 [9] and TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>recommendedBitRateIndicates whether the UE supports the bit rate recommendation message from the gNB to the UE as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>recommendedBitRateMultiplier-r16Indicates whether the UE supports the bit rate multiplier for recommended bit rate MAC CE as specified in TS 38.321 [8], clause 6.1.3.20. This field is only applicable if the UE supports recommendedBitRate.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>recommendedBitRateQueryIndicates whether the UE supports the bit rate recommendation query message from the UE to the gNB as specified in TS 38.321 [8]. This field is only applicable if the UE supports recommendedBitRate.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>secondaryDRX-Group-r16Indicates whether UE supports secondary DRX group as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>shortDRX-CycleIndicates whether UE supports short DRX cycle as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>simultaneousSR-PUSCH-DiffPUCCH-groups-r17Indicates whether the UE supports simultaneous transmission of SR and PUSCH in different PUCCH groups as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>singlePHR-P-r16Indicates whether UE supports the P bit in single PHR MAC CE as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>skipUplinkTxDynamicIndicates whether the UE supports skipping of UL transmission for an uplink grant indicated on PDCCH if no data is available for transmission as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>spCell-BFR-CBRA-r16Indicates whether the UE supports sending BFR MAC CE for SpCell BFR as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>srs-ResourceId-Ext-r16Indicates whether the UE supports the extended 6-bit (Positioning) SRS resource ID in SP Positioning SRS Activation/Deactivation MAC CE, as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>sr-TriggeredBy-TA-Report-r17Indicates whether the UE supports triggering of SR when a TA report is triggered and there are no available UL-SCH resources. A UE supporting this feature shall also indicate the support of nonTerrestrialNetwork-r17.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>sr-TriggeredByTA-ReportATG-r18Indicates whether the UE supports triggering of SR when a TA report is triggered and there are no available UL-SCH resources. A UE supporting this feature shall also indicate the support of uplinkTA-ReportingATG-r18.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>FR1 only</td>
+  </tr>
+  <tr>
+    <td>survivalTime-r17Indicates whether the UE supports services with survival time requirement using configured grant resource and PDCP duplication, as specified in TS 38.321 [8]. A UE supporting this feature shall support pdcp-DuplicationMCG-orSCG-DRB or pdcp-DuplicationSplitDRB. A UE supporting this feature shall also support of at least one of configuredUL-GrantType1, configuredUL-GrantType2, configuredUL-GrantType1-v1650 or configuredUL-GrantType2-v1650.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>tdd-MPE-P-MPR-Reporting-r16Indicates whether the UE supports P-MPR reporting for Maximum Permissible Exposure, as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>TDD only</td>
+    <td>FR2 only</td>
+  </tr>
+  <tr>
+    <td>ul-LBT-FailureDetectionRecovery-r16Indicates whether the UE supports consistent uplink LBT detection and recovery, as specified in TS 38.321 [8], for cells operating with shared spectrum channel access.This field applies to all serving cells with which the UE is configured with shared spectrum channel access.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>ul-RateControl-r19Indicates whether the UE supports UL Rate Control MAC CE from the gNB to the UE, as specified in TS 38.321 [8].</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>ul-RateQuery-r19Indicates whether the UE supports transmission of bit rate query in UL Rate Control MAC CE to the gNB, as specified in TS 38.321 [8]. A UE supporting this feature shall also indicate support of ul-RateControl-r19.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>uplink-Harq-ModeB-r17Indicates whether the UE supports HARQ Mode B and the corresponding LCP restrictions for uplink transmission. A UE supporting this feature shall also indicate the support of nonTerrestrialNetwork-r17.</td>
+    <td>UE</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+</table>

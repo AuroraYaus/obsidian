@@ -1,0 +1,167 @@
+<table>
+  <tr>
+    <td>&quot;Reception Type&quot;</td>
+    <td>Physical Channel(s)</td>
+    <td>MonitoredRNTI</td>
+    <td>AssociatedTransport Channel</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>PBCH</td>
+    <td>N/A</td>
+    <td>BCH</td>
+  </tr>
+  <tr>
+    <td>B</td>
+    <td>MPDCCH (Note 1)</td>
+    <td>C-RNTI</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>B1</td>
+    <td>MPDCCH (Note 10)</td>
+    <td>C-RNTI</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>C</td>
+    <td>MPDCCH</td>
+    <td>TPC-PUCCH-RNTI</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>D</td>
+    <td>MPDCCH</td>
+    <td>TPC-PUSCH-RNTI</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">D1</td>
+    <td rowspan="2">MPDCCH (Note 7)</td>
+    <td>SC-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td>G-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td>E</td>
+    <td>MPDCCH</td>
+    <td>Semi-Persistent Scheduling C-RNTI (Note 2)</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>F</td>
+    <td>MPDCCH</td>
+    <td>Semi-Persistent Scheduling C-RNTI (Note 3)</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="4">G</td>
+    <td rowspan="4">MPDCCH (Note 4)</td>
+    <td>RA-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td>Temporary C-RNTI</td>
+    <td>UL-SCH</td>
+  </tr>
+  <tr>
+    <td>Temporary C-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td>P-RNTI</td>
+    <td>PCH</td>
+  </tr>
+  <tr>
+    <td rowspan="4">H</td>
+    <td rowspan="4">PDSCH (Note 5)</td>
+    <td>SI-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td>P-RNTI</td>
+    <td>PCH</td>
+  </tr>
+  <tr>
+    <td>Temporary C-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td>RA-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td rowspan="2">H1</td>
+    <td rowspan="2">PDSCH (Note 7)</td>
+    <td>SC-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td>G-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td>H2</td>
+    <td>PDSCH</td>
+    <td>PUR-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td rowspan="2">I</td>
+    <td rowspan="2">MPDCCH</td>
+    <td>Temporary C-RNTI (Note 6)</td>
+    <td>UL-SCH</td>
+  </tr>
+  <tr>
+    <td>C-RNTI and Semi-Persistent Scheduling C-RNTI</td>
+    <td>UL-SCH</td>
+  </tr>
+  <tr>
+    <td>J</td>
+    <td>MPDCCH</td>
+    <td>C-RNTI and Semi-Persistent Scheduling C-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td>K</td>
+    <td>PDSCH (Note 5)</td>
+    <td>C-RNTI and Semi-Persistent Scheduling C-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td>L</td>
+    <td>MWUS</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>M</td>
+    <td>MPDCCH (Note 8)</td>
+    <td>SI-RNTI</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>N</td>
+    <td>MPDCCH (Note 9)</td>
+    <td>PUR-RNTI</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>O</td>
+    <td>MPDCCH</td>
+    <td>PUR-RNTI</td>
+    <td>DL-SCH</td>
+  </tr>
+  <tr>
+    <td>P</td>
+    <td>MPDCCH</td>
+    <td>PUR-RNTI</td>
+    <td>UL-SCH</td>
+  </tr>
+  <tr>
+    <td colspan="4">Note 1:MPDCCH is used to convey PDCCH order for Random Access.Note 2:Semi-Persistent Scheduling C-RNTI is used for DL Semi-Persistent Scheduling release.Note 3:Semi-Persistent Scheduling C-RNTI is used for UL Semi-Persistent Scheduling release.Note 4:RA-RNTI, P-RNTI, and Temporary C-RNTI are not required to be simultaneously monitored.Note 5:All RNTIs listed in the reception type are mutually exclusive.Note 6:Temporary C-RNTI is only applicable during contention-based Random Access procedure.Note 7:SC-RNTI and G-RNTI are not required to be simultaneously monitored.Note 8:MPDCCH with SI-RNTI is used for ETWS/CMAS notification indication in RRC_CONNECTED, which is not applicable for BL UE.Note 9:MPDCCH is used to terminate transmission using PUR.Note 10:MPDCCH is used to convey uplink HARQ ACK feedback.</td>
+  </tr>
+</table>

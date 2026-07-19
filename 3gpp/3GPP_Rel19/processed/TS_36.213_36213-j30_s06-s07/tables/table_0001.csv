@@ -1,0 +1,12 @@
+DCI contents,CEmodeA,CEmodeB
+Msg3 PUSCH narrowband index,,2
+Msg3 PUSCH Resource allocation,4,3
+Number of Repetitions for Msg3 PUSCH,2,3
+MCS,3,0
+TBS,0,2
+TPC,3,0
+CSI request,1,0
+UL delay,1,0
+Msg3/4 MPDCCH narrowband index,2,2
+Zero padding,4 -,0
+Total Nr-bits,20,12

@@ -1,0 +1,6 @@
+SRS-PosResourceSetLinkedForAggBW field descriptions
+freqInfoIndicates the SRS Positioning Resource set carrier frequency that is linked for bandwidth aggregation.
+scs-SpecificCarrierA set of UE specific channel bandwidth and location configurations for different subcarrier spacings (numerologies). Defined in relation to Point A and to be used for SRS for positioning bandwidth aggregation.
+servingCellAndBWP-IdProvides the serving cell and BWP config for SRS for positioning transmission using aggregated bandwidth in RRC_CONNECTED state.
+srs-LinkedConfigProvides the linked bandwidth aggregation configuration for RRC_CONNECTED or RRC_INACTIVE state for the SRS for positioning transmission.
+srs-PosResourceSetLinkedIndicates the SRS Positioning Resource set that is linked for bandwidth aggregation.

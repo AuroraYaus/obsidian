@@ -1,0 +1,10 @@
+CSI report number,CSI fields
+CSI report #n,Predicted CRI or SSBRI #1 as in Table 6.3.1.1.2-6C
+,"Predicted CRI or SSBRI #2 as in Table 6.3.1.1.2-6C, if reported"
+,…
+,"Predicted CRI or SSBRI # as in Table 6.3.1.1.2-6C, if reportedK"
+,"Predicted RSRP #1 as in Table 6.3.1.1.2-6C, if reported"
+,"Differential predicted RSRP #2 as in Table 6.3.1.1.2-6C, if reported"
+,…
+,"Differential predicted RSRP # as in Table 6.3.1.1.2-6C, if reportedK"
+NOTE: is the number of predicted CRI or predicted SSBRI to be reported configured by nrofreportedpredictedrs.K,

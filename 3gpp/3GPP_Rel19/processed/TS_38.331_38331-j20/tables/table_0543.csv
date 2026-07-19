@@ -1,0 +1,10 @@
+RLC-Config field descriptions
+"maxRetxThresholdParameter for RLC AM in TS 38.322 [4]. Value t1 corresponds to 1 retransmission, value t2 corresponds to 2 retransmissions and so on."
+"pollByteParameter for RLC AM in TS 38.322 [4]. Value kB25 corresponds to 25 kBytes, value kB50 corresponds to 50 kBytes and so on. infinity corresponds to an infinite amount of kBytes."
+"pollPDUParameter for RLC AM in TS 38.322 [4]. Value p4 corresponds to 4 PDUs, value p8 corresponds to 8 PDUs and so on. infinity corresponds to an infinite number of PDUs."
+"sn-FieldLengthIndicates the RLC SN field size, see TS 38.322 [4], in bits. Value size6 means 6 bits, value size12 means 12 bits, value size18 means 18 bits. The value of sn-FieldLength of an RLC entity for the DRB/multicast MRB shall be changed only using reconfiguration with sync. The network configures only value size12 in SN-FieldLengthAM for SRB."
+stopReTxDiscardedSDUIndicates whether the Tx side of the RLC entity should stop retransmission of the RLC SDUs or (re-)transmission of its segments when discard indication of the SDU is received from the PDCP layer as specified in TS 38.323 [5].
+"t-PollRetransmitTimer for RLC AM in TS 38.322 [4], in milliseconds. Value ms5 means 5 ms, value ms10 means 10 ms and so on."
+"t-Reassembly, t-ReassemblyExtTimer for reassembly in TS 38.322 [4], in milliseconds. Value ms0 means 0 ms, value ms5 means 5 ms and so on. If t-ReassemblyExt-r17 is configured, the UE shall ignore t-Reassembly (without suffix)."
+"t-RxDiscardTimer for the AMD RLC PDU(s) discard at the Rx side of the RLC entity, see TS 38.322 [4]. For the value of the IE T-RxDiscard, value ms10 means 10 milliseconds, value ms20 means 20 milliseconds, and so on. The value of the field should not be lower than that configured by the field t-Reassembly or t-ReassemblyExt."
+"t-StatusProhibitTimer for status reporting in TS 38.322 [4], in milliseconds. Value ms0 means 0 ms, value ms5 means 5 ms and so on. If t-StatusProhibit-v1610 is present, the UE shall ignore t-StatusProhibit (without suffix)."

@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <td>RMTC-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>measDurationSymbolsNumber of consecutive symbols for which the Physical Layer reports samples of RSSI (see TS 38.215 [9], clause 5.1.21). Value sym1 corresponds to one symbol, sym14or12 corresponds to 14 symbols of the reference numerology for NCP and 12 symbols for ECP, and so on.If measDurationSymbols-v1700 is signalled, the UE ignores measDurationSymbols-r16.</td>
+  </tr>
+  <tr>
+    <td>ref-BWPIdIndicates the reference BWP for the TCI state indicated in tci-StateInfo. Network includes this field if tci-StateInfo is present. This field is only applicable for operation with shared spectrum channel access in FR2-2 and network does not configure this if the UE does not have any serving cells in FR2-2.</td>
+  </tr>
+  <tr>
+    <td>ref-SCS-CPIndicates a reference subcarrier spacing and cyclic prefix to be used for RSSI measurements (see TS 38.215 [9]). Value kHz15 corresponds to 15kHz, kHz30 corresponds to 30 kHz, value kHz60-NCP corresponds to 60 kHz using normal cyclic prefix (NCP), and kHz60-ECP corresponds to 60 kHz using extended cyclic prefix (ECP).If ref-SCS-CP-v1700 is signalled, the UE ignores ref-SCS-CP-r16.</td>
+  </tr>
+  <tr>
+    <td>ref-ServCellIdIndicates the FR2-2 reference serving cell index for the TCI state. Network includes this field if tci-StateInfo is present. This field is only applicable for operation with shared spectrum channel access in FR2-2 and network does not configure this if the UE does not have any serving cells in FR2-2.</td>
+  </tr>
+  <tr>
+    <td>rmtc-BandwidthIndicates the bandwidth for the RSSI measurement (see TS 38. 215 [9], clause 5.1.21).</td>
+  </tr>
+  <tr>
+    <td>rmtc-FrequencyIndicates the center frequency of the measured bandwidth for a frequency which operates with shared spectrum channel access (see TS 38. 215 [9], clause 5.1.21).</td>
+  </tr>
+  <tr>
+    <td>rmtc-PeriodicityIndicates the RSSI measurement timing configuration (RMTC) periodicity (see TS 38.215 [9], clause 5.1.21).</td>
+  </tr>
+  <tr>
+    <td>rmtc-SubframeOffsetIndicates the RSSI measurement timing configuration (RMTC) subframe offset for this frequency (see TS 38.215 [9], clause 5.1.21). For inter-frequency measurements, this field is optional present and if it is not configured, the UE chooses a random value as rmtc-SubframeOffset for measDurationSymbols which shall be selected to be between 0 and the configured rmtc-Periodicity with equal probability.</td>
+  </tr>
+  <tr>
+    <td>tci-StateIdIndicates the TCI state to be used for RSSI measurements. This field is only applicable for shared spectrum channel access in FR2-2. Network does not configure this if the UE does not have any serving cells in FR2-2 and in such a case, it is up to UE implementation how to determine the spatial domain filter for the inter-frequency RSSI measurement in FR2-2.</td>
+  </tr>
+</table>

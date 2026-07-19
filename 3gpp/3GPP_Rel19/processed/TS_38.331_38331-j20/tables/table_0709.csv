@@ -1,0 +1,5 @@
+SL-CBR-CommonTxConfigList field descriptions
+"sl-CBR-RangeConfigListEach entry in sl-CBR-RangeConfigList is SL-CBR-LevelsConfig containing the list of CBR ranges. The values within each SL-CBR-LevelsConfig indicate the upper bound of the each CBR range (and implicitly indicate the lower bound of next CBR range) and are configured in ascending order. For the first CBR range of each SL-CBR-LevelsConfig, the lower bound of the CBR range is 0. Value 0 corresponds to 0, value 1 to 0.01, value 2 to 0.02, and so on."
+"sl-CR-LimitIndicates the maximum limit on the occupancy ratio. Value 0 corresponds to 0, value 1 to 0.0001, value 2 to 0.0002, and so on (i.e. in steps of 0.0001) until value 10000, which corresponds to 1."
+"sl-CBR-PSSCH-TxConfigListIndicates the list of available PSSCH transmission parameters (such as MCS, sub-channel number, retransmission number and CR limit) configurations."
+sl-TxParametersIndicates PSSCH transmission parameters.

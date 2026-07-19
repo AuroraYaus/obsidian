@@ -1,0 +1,7 @@
+MBMSInterestIndication field descriptions
+"mbms-BandwidthIndicates the UE received MBMS service frequency bandwidth configuration, NRB in downlink, see TS 36.101 [42], table 5.6-1. n6 corresponds to 6 resource blocks, n15 to 15 resource blocks and so on."
+mbms-FreqListList of MBMS frequencies on which the UE is receiving or interested to receive MBMS via an MRB or SC-MRB.
+"mbms-PriorityIndicates whether the UE prioritises MBMS reception above unicast reception. The field is present (i.e. value true), if the UE prioritises reception of all listed MBMS frequencies above reception of any of the unicast bearers. Otherwise the field is absent."
+mbms-ROM-FreqThe value indicates the carrier frequency used by the UE to receive MBMS service(s) in receive only mode.
+mbms-ROM-InfoListList of receive only mode MBMS service(s) related parameters which the UE is receiving or interested to receive.
+"mbms-ROM-SubcarrierSpacingThe value indicates subcarrier spacing for MBSFN subframes received by UE in receive only mode and kHz15 refers to 15kHz, kHz7dot5 refers to 7.5kHz subcarrier spacing and so on as defined in TS 36.211 [21], clause 6.12."

@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <td>CSI-RS-ConfigBeamformed field descriptions</td>
+  </tr>
+  <tr>
+    <td>ace-For4Tx-PerResourceConfigListThe field indicates the alternativeCodeBookEnabledFor4TX-r12 per CSI-RS resource. E-UTRAN configures the field only if csi-RS-ConfigNZPIdListExt is configured.</td>
+  </tr>
+  <tr>
+    <td>activatedResourcesThe number of activated CSI-RS resources, which concerns a subset of the aperiodic CSI-RS resources (for both semi-persistent and aperiodic mode). E-UTRAN configures at most the minimum between nMaxResource as configured by MIMO-UE-ParametersPerTM-r1430 and the number of resources as configured by csi-RS-ConfigNZP-ApList-r14.</td>
+  </tr>
+  <tr>
+    <td>alternativeCodebookEnabledBeamformedThe field indicates whether code book in TS 36.213 [23], Table 7.2.4-18 to Table 7.2.4-20, is being used for deriving CSI feedback and reporting for a CSI process. E-UTRAN configures the field only for a process referring to a single RS configuration using non-zero power transmission (i.e a process for which csi-RS-ConfigNZPIdListExt is not configured). Field alternativeCodebookEnabledBeamformed corresponds to parameter alternativeCodebookEnabledCLASSB_K1 in TS 36.212 [22] and TS 36.213 [23].</td>
+  </tr>
+  <tr>
+    <td>csi-IM-ConfigIdListE-UTRAN configures the field csi-IM-ConfigIdList only if the IE is included in CSI-Process is configured (i.e. when TM10 is configured for the serving cell).</td>
+  </tr>
+  <tr>
+    <td>CSI-RS-ConfigBeamformedIf csi-RS-ConfigNZPIdListExt-r13 is configured, E-UTRAN configures the same total number of entries for NZP, csi-IM-ConfigIdList-r13 and p-C-AndCBSR-PerResourceConfigList-r13.</td>
+  </tr>
+  <tr>
+    <td>csi-RS-ConfigNZP-ApListThe field is used to configure NZP configurations for aperiodic or semi-persistent CSI RS reporting for which MAC controls activation. EUTRAN configures this field only when the UE is configured to use 2, 4 or and 8 ports CSI-RS, in which case EUTRAN configures the number of entries to be the same as the number of NZP resource configurations. For all these entries the UE shall ignore field subframeConfig. EUTRAN always configures this field together with csi-RS-NZP-Activation. Furthermore, for a given process, E-UTRAN does not simultaneously configure the periodic NZP configuration(s) and NZP CSI RS configurations for aperiodic or semi-persistent reporting.</td>
+  </tr>
+  <tr>
+    <td>csi-RS-ConfigNZP-EMIMOThe field is used to configure NZP configurations additional to the one defined by the original NZP configuration as included in CSI-RS-Config/ CSI-Process when using 12 and 16 ports CSI-RS.</td>
+  </tr>
+  <tr>
+    <td>csi-RS-ConfigNZPIdListExt (in CSI-RS-ConfigBeamformed)Indicates the NZP configuration(s)in addition to the original NZP configuration, as defined by csi-RS-Config-r10 (TM9) or csi-RS-ConfigNZPId-r11 (TM10). I.e. extends the size of the NZP configuration list (originally a single entry i.e. list of size 1) using the general principles specified in 5.1.2.</td>
+  </tr>
+  <tr>
+    <td>p-C-AndCBSR-PerResourceConfigListE-UTRAN does not configure the field p-C-AndCBSR-PerResourceConfigList if the UE is configured with eMIMO-Type set to beamformed, alternativeCodebookEnabledBeamformed is set to FALSE and csi-RS-ConfigNZPIdListExt is not configured.</td>
+  </tr>
+</table>

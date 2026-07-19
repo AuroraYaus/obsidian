@@ -1,0 +1,74 @@
+<table>
+  <tr>
+    <td>RRCReconfigurationSidelink field descriptions</td>
+  </tr>
+  <tr>
+    <td>sl-AbsoluteFrequencyPointAAbsolute frequency of the reference resource block (Common RB 0). Its lowest subcarrier is also known as Point A.</td>
+  </tr>
+  <tr>
+    <td>sl-CarrierToAddModListIndicate the carrier(s) to be added/modified for transmission by UE transmitting RRCReconfigurationSidelink message, corresponding to the frequency in sl-FreqInfoListSizeExt broadcast in SIB12 or corresponding to the frequency in sl-PreconfigFreqInfoListSizeExt in SL-PreconfigurationNR.</td>
+  </tr>
+  <tr>
+    <td>sl-CarrierToReleaseListIndicate the carrier(s) to be released for the transmission by UE transmitting RRCReconfigurationSidelink message.</td>
+  </tr>
+  <tr>
+    <td>sl-CSI-RS-FreqAllocationIndicates the frequency domain position for sidelink CSI-RS.</td>
+  </tr>
+  <tr>
+    <td>sl-CSI-RS-FirstSymbolIndicates the position of first symbol of sidelink CSI-RS.</td>
+  </tr>
+  <tr>
+    <td>sl-DRX-ConfigUC-PC5Indicates the NR sidelink DRX configuration for unicast communication, as specified in TS 38.321 [3]</td>
+  </tr>
+  <tr>
+    <td>sl-LatencyBoundCSI-ReportIndicates the latency bound of SL CSI report from the associated SL CSI triggering in terms of number of slots.</td>
+  </tr>
+  <tr>
+    <td>sl-LatencyBoundIUC-ReportIndicates the latency bound of SL Inter-UE coordination report from the associated SL Inter-UE coordination explicit request triggering in terms of number of slots.</td>
+  </tr>
+  <tr>
+    <td>sl-LocalID-PairListIndicate a list of local ID pair which is assigned for one end-to-end PC5 connection by the L2 U2U Relay UE.</td>
+  </tr>
+  <tr>
+    <td>sl-LogicalChannelIdentityIndicates the identity of the sidelink logical channel, as specified in TS 38.321 [3], clause 6.2.4. If the sl-LogicalChannelIdentity-v1800 is present, the UE shall ignore the sl-LogicalChannelIndentity-r16 field.</td>
+  </tr>
+  <tr>
+    <td>sl-MappedQoS-FlowsToAddListIndicate the QoS flows to be mapped to the configured sidelink DRB. Each entry is indicated by the SL-PQFI, which is used between UEs, as defined in TS 23.287 [55].</td>
+  </tr>
+  <tr>
+    <td>sl-MappedQoS-FlowsToReleaseListIndicate the QoS flows to be released from the configured sidelink DRB. Each entry is indicated by the SL-PQFI, which is used between UEs, as defined in TS 23.287 [55].</td>
+  </tr>
+  <tr>
+    <td>sl-MeasConfigIndicates the sidelink measurement configuration for the unicast destination.</td>
+  </tr>
+  <tr>
+    <td>sl-OffsetToCarrierOffset in frequency domain between Point A (lowest subcarrier of common RB 0) and the lowest usable subcarrier on this carrier in number of PRBs (using the subcarrierSpacing defined for this carrier). The maximum value corresponds to 275*8-1. See TS 38.211 [16], clause 4.4.2.</td>
+  </tr>
+  <tr>
+    <td>sl-OutOfOrderDeliveryIndicates whether or not outOfOrderDelivery specified in TS 38.323 [5] is configured. This field should be either always present or always absent, after the sidelink radio bearer is established.</td>
+  </tr>
+  <tr>
+    <td>sl-PDCP-SN-SizeIndicates the PDCP SN size of the configured sidelink DRB.</td>
+  </tr>
+  <tr>
+    <td>sl-ResetconfigIndicates that the full configuration should be applicable for the RRCReconfigurationSidelink message.</td>
+  </tr>
+  <tr>
+    <td>sl-RLC-BearerToAddModListIndicate the additional Sidelink RLC bearer to be added / modified for the configured sidelink SRB/DRB.</td>
+  </tr>
+  <tr>
+    <td>sl-RLC-BearerToReleaseListIndicate the additional Sidelink RLC bearer to be released for the configured sidelink SRB/DRB.</td>
+  </tr>
+  <tr>
+    <td>sl-SDAP-HeaderIndicates whether or not a SDAP header is present on this sidelink DRB.</td>
+  </tr>
+  <tr>
+    <td>sl-SFN-DFN-OffsetIndicates the SFN-DFN offset to be used for determining the SFN timeline based on the DFN timeline.</td>
+  </tr>
+  <tr>
+    <td>sl-SRB-IdentityWithDuplicationIndicate the sidelink SRB for which duplication is configured.</td>
+  </tr>
+  <tr>
+    <td>slrb-PC5-ConfigIndexIndicates the identity of the configuration of a sidelink DRB. In case of L2 U2U relay, only value 4-31 can be signaled for an end-to-end sidelink DRB, and all other values are reserved.</td>
+  </tr>
+</table>

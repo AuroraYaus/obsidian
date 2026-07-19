@@ -1,0 +1,12 @@
+Physical channel or signal,Index,Antenna port number  as a function ofthe number of antenna ports configured for the respective physical channel/signal,,
+,,1,2,4
+PUSCH,0,10,20,40
+,1,-,21,41
+,2,-,-,42
+,3,-,-,43
+SRS,0,10,20,40
+,1,-,21,41
+,2,-,-,42
+,3,-,-,43
+"PUCCH, SPUCCH",0,100,200,-
+,1,-,201,-

@@ -1,0 +1,128 @@
+%%{init: {'theme': 'default', 'themeVariables': { 'fontSize': '14px' }}}%%
+flowchart TD
+    %% ===== 协议源头层 =====
+    subgraph SOURCE["📜 协议源头层 — 3GPP_Rel19/"]
+        direction LR
+        S1["TS 36.211<br/>LTE PHY"]:::spec
+        S2["TS 36.212<br/>LTE MUX/CH"]:::spec
+        S3["TS 36.213<br/>LTE Procedure"]:::spec
+        S4["TS 38.211<br/>NR PHY"]:::spec
+        S5["TS 38.212<br/>NR MUX/CH"]:::spec
+        S6["TS 38.213<br/>NR Procedure"]:::spec
+        S7["TS 38.214<br/>NR Data"]:::spec
+        EXTRACT["📦 processed/<br/>content.md + tables + equations"]:::tool
+        S1 & S2 & S3 & S4 & S5 & S6 & S7 --> EXTRACT
+    end
+
+    %% ===== 知识核心层 =====
+    subgraph CORE["🧠 知识核心层 — docs/ (94篇讲义)"]
+        direction TB
+
+        subgraph L0["L0 术语表"]
+            L0a["缩写全称对照"]:::defn
+            L0b["协议术语定义"]:::defn
+        end
+
+        subgraph L1["L1 数学基础 (27篇)"]
+            direction LR
+            M1["M1 GF(2)算术"]:::math
+            M2["M2 软解调/信道"]:::math
+            M3["M3 CRC/分段"]:::math
+            M4["M4 译码工程概念"]:::math
+            M5["M5 RTL前置知识"]:::math
+        end
+
+        subgraph L2["L2 协议与算法"]
+            direction LR
+            A1["LDPC译码算法"]:::algo
+            A2["Turbo译码算法"]:::algo
+            A3["Polar译码算法"]:::algo
+            A4["速率匹配/交织"]:::algo
+            A5["HARQ与重传"]:::algo
+        end
+
+        subgraph L3["L3 工程实现"]
+            direction LR
+            E1["定点化模型"]:::engine
+            E2["RTL微架构"]:::engine
+            E3["验证策略"]:::engine
+            E4["DC综合流程"]:::engine
+            E5["时序收敛"]:::engine
+        end
+
+        L0 --> L1 --> L2 --> L3
+    end
+
+    %% ===== 仿真验证层 =====
+    subgraph SIM["🔬 仿真验证层 — sim/"]
+        direction LR
+        PY1["gf2.py<br/>GF(2)运算库"]:::code
+        PY2["crc.py<br/>CRC计算"]:::code
+        PY3["ldpc.py<br/>LDPC编解码"]:::code
+        PY4["polar.py<br/>Polar编解码"]:::code
+        PY5["turbo.py<br/>Turbo编解码"]:::code
+        TEST["test_*.py<br/>单元测试"]:::code
+        PY1 & PY2 & PY3 & PY4 & PY5 --> TEST
+    end
+
+    %% ===== 质量保障层 =====
+    subgraph QA["🛡️ 质量保障层 — tools/"]
+        direction LR
+        T1["audit_latex_render.py<br/>公式可渲染检查"]:::tool
+        T2["audit_lesson_terms.py<br/>术语合规检查"]:::tool
+        T3["audit_figure_*.py<br/>图片质量审计"]:::tool
+        T4["normalize_*.py<br/>缩写规范化"]:::tool
+        T5["audit_lesson_depth.py<br/>层级深度审计"]:::tool
+        T6["extract_3gpp_word.py<br/>协议文档抽取"]:::tool
+    end
+
+    %% ===== 图谱呈现层 =====
+    subgraph GRAPH["🗺️ 图谱呈现层 — .obsidian/"]
+        direction LR
+        G1["graph CSS snippets<br/>四类节点配色"]:::config
+        G2["color group queries<br/>type分组筛选"]:::config
+        G3["tag-based navigation<br/>domain × layer × maturity"]:::config
+    end
+
+    %% ===== 跨层标签体系 =====
+    subgraph TAGS["🏷️ 跨层标签体系 (frontmatter)"]
+        direction LR
+        TAG1["type: spec | channel<br/>algorithm | definition"]:::meta
+        TAG2["layer: L0 | L1 | L2 | L3"]:::meta
+        TAG3["domain: math | codec<br/>rtl | verification"]:::meta
+        TAG4["maturity: draft<br/>reviewed | stable"]:::meta
+        TAG5["source_spec: TS xx.xxx"]:::meta
+    end
+
+    %% ===== 核心关系 =====
+    EXTRACT -->|"📥 原料输入"| L1
+    EXTRACT -->|"📥 原料输入"| L2
+
+    M3 -.->|"实现验证"| PY2
+    A1 -.->|"实现验证"| PY3
+    A3 -.->|"实现验证"| PY4
+    A2 -.->|"实现验证"| PY5
+
+    CORE -->|"审计扫描"| QA
+    QA -.->|"修复反馈"| CORE
+
+    TAGS -.->|"标注"| CORE
+    TAGS -.->|"标注"| SOURCE
+
+    G1 -.->|"渲染"| CORE
+    G2 -.->|"查询"| CORE
+    G3 -.->|"导航"| CORE
+
+    SIM -.->|"验证结果反馈"| L3
+    TEST -->|"bit-exact验证"| E1
+
+    %% ===== 样式定义 =====
+    classDef spec fill:#BBDEFB,stroke:#1565C0,stroke-width:2px,color:#0D47A1
+    classDef math fill:#C8E6C9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20
+    classDef algo fill:#FFE0B2,stroke:#E65100,stroke-width:2px,color:#BF360C
+    classDef engine fill:#E1BEE7,stroke:#6A1B9A,stroke-width:2px,color:#4A148C
+    classDef defn fill:#B3E5FC,stroke:#0277BD,stroke-width:2px,color:#01579B
+    classDef code fill:#F5F5F5,stroke:#616161,stroke-width:2px,color:#212121
+    classDef tool fill:#FFCDD2,stroke:#B71C1C,stroke-width:2px,color:#7F0000
+    classDef config fill:#FFF9C4,stroke:#F57F17,stroke-width:2px,color:#827717
+    classDef meta fill:#D7CCC8,stroke:#4E342E,stroke-width:2px,color:#3E2723

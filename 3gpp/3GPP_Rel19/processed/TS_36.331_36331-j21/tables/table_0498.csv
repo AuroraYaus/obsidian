@@ -1,0 +1,25 @@
+UE-EUTRA-Capability,Classification
+crossCarrierScheduling,All serving cells
+e-CSFB-1XRTT,PCell
+e-CSFB-ConcPS-Mob1XRTT,PCell
+e-CSFB-dual-1XRTT,PCell
+ePDCCH,Per serving cell
+e-RedirectionUTRA,PCell
+e-RedirectionUTRA-TDD,PCell
+inDeviceCoexInd,All serving cells
+interFreqRSTD-Measurement,PCell
+interFreqSI-AcquisitionForHO,PCell
+interRAT-PS-HO-ToGERAN,PCell
+intraFreqSI-AcquisitionForHO,PCell
+mbms-Scell,SCell
+mbms-NonServingCell,SCell
+multiACK-CSIreporting,PCell
+multiClusterPUSCH-WithinCC,Per serving cell
+otdoa-UE-Assisted,PCell
+pmi-Disabling,Per serving cell
+rsrqMeasWideband,Per serving cell
+simultaneousPUCCH-PUSCH,All serving cells
+ss-CCH-InterfHandl,PCell
+txDiv-PUCCH1b-ChSelect,PCell
+ue-TxAntennaSelectionSupported,All serving cells
+utran-SI-AcquisitionForHO,PCell

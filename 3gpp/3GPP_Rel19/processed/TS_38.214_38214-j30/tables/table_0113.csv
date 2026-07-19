@@ -1,0 +1,6 @@
+rvid indicated by the DCI scheduling the PUSCH,rvid to be applied to nth transmission occasion (repetition Type A) or TB processing over multiple slots) or nth actual repetition (repetition Type B),,,
+,((n-(n mod N))/N) mod 4 = 0,((n-(n mod N))/N) mod 4 = 1,((n-(n mod N))/N) mod 4 = 2,((n-(n mod N))/N) mod 4 = 3
+0,0,2,3,1
+2,2,3,1,0
+3,3,1,0,2
+1,1,0,2,3

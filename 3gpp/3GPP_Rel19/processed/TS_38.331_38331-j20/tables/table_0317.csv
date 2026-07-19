@@ -1,0 +1,3 @@
+LTM-CandidateReportConfig field descriptions
+"candidateSpecificOffsetOffset for event condition that is applicable for all the reference signals belonging to the candidate cell with the candidate cell ID ltm-CandidateReportConfigId. If the field is absent, the value '0dB' is applied."
+ltm-CandidateReportConfigIdLTM candidate cell ID for which the UE is required to measure reference signal and perform LTM event evaluation as specified in TS 38.321 [3].

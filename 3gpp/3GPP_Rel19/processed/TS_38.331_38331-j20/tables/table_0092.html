@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td>UEInformationResponse-IEs field descriptions</td>
+  </tr>
+  <tr>
+    <td>coarseLocationInfoParameter type Ellipsoid-Point defined in TS 37.355 [49]. The first/leftmost bit of the first octet contains the most significant bit. The least significant bits of degreesLatitude and degreesLongitude are set to 0 to meet the accuracy requirement corresponds to a granularity of approximately 2 km.It is up to UE implementation how many LSBs are set to 0 to meet the accuracy requirement.</td>
+  </tr>
+  <tr>
+    <td>connEstFailReportThis field is used to provide connection establishment failure or connection resume failure information.</td>
+  </tr>
+  <tr>
+    <td>connEstFailReportListThis field is used to provide the list of connEstFailReport that are stored by the UE for the past up to maxCEFReport-r17.</td>
+  </tr>
+  <tr>
+    <td>csi-LogMeasReportThis field is used to provide the logged measurement results for network-side data collection, stored by the UE in accordance with the CSI-LoggedMeasurementConfig.</td>
+  </tr>
+  <tr>
+    <td>flightPathInfoReportThis field is used to provide the flight path information as list of waypoints and, if available, corresponding timestamps. List of size zero indicates the previously provided flight path information is no longer valid.</td>
+  </tr>
+  <tr>
+    <td>logMeasReportThis field is used to provide the measurement results stored by the UE associated to logged MDT.</td>
+  </tr>
+  <tr>
+    <td>measResultIdleEUTRAEUTRA measurement results performed during RRC_INACTIVE or RRC_IDLE.</td>
+  </tr>
+  <tr>
+    <td>measResultIdleNRNR measurement results performed during RRC_INACTIVE or RRC_IDLE.</td>
+  </tr>
+  <tr>
+    <td>ra-ReportListThis field is used to provide the list of RA reports that is stored by the UE for up to maxRAReport-r16 number of random access procedures. If the UE is an eRedCap UE, this field is used to provide the list of RA reports that is stored by the UE for up to 2 number of random access procedures.</td>
+  </tr>
+  <tr>
+    <td>rlf-ReportThis field is used to indicate the RLF report related contents.</td>
+  </tr>
+  <tr>
+    <td>successHO-ReportThis field is used to provide the successful handover report if triggered based on the successful handover configuration.</td>
+  </tr>
+  <tr>
+    <td>successPSCell-ReportThis field is used to provide the successful PSCell change or addition report if triggered based on the successful PSCell change or addition report configuration.</td>
+  </tr>
+</table>

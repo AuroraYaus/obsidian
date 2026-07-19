@@ -1,0 +1,5 @@
+SL-SRAP-ConfigU2U field descriptions
+"sl-MappingToAddMod-U2U-ListIndicates the list of mappings between the end-to-end sidelink DRB of a given L2 U2U Remote UE and the egress PC5 Relay RLC channel used by L2 U2U Remote UE and L2 U2U Relay UE when acting as Tx UE, as specified in TS 38.351 [66] to be added or modified."
+sl-MappingToRelease-U2U-ListIndicates the list of mappings between the end-to-end sidelink DRB of a given L2 U2U Remote UE and the egress PC5 Relay RLC channel as specified in TS 38.351 [66] to be released.
+sl-EgressRLC-ChannelPC5Indicates the egress PC5 Relay RLC channel for sidelink transmissions at the L2 U2U Relay UE and at the L2 U2U Remote UE.
+sl-RemoteUE-SLRB-IdentityIdentity of the end-to-end sidelink DRB of the L2 U2U Remote UE.

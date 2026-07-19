@@ -1,0 +1,210 @@
+{"source": "38214-j30.docx", "section": "650", "title": "Route des Lucioles - Sophia Antipolis", "paragraph_index": 22, "style": "FP"}
+{"source": "38214-j30.docx", "section": "", "title": "Foreword", "paragraph_index": 248, "style": "Heading1"}
+{"source": "38214-j30.docx", "section": "", "title": "1Scope", "paragraph_index": 260, "style": "Heading1"}
+{"source": "38214-j30.docx", "section": "", "title": "2References", "paragraph_index": 262, "style": "Heading1"}
+{"source": "38214-j30.docx", "section": "", "title": "3Definitions of terms, symbols and abbreviations", "paragraph_index": 288, "style": "Heading1"}
+{"source": "38214-j30.docx", "section": "", "title": "3.1Terms", "paragraph_index": 289, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "3.2Symbols", "paragraph_index": 291, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "3.3Abbreviations", "paragraph_index": 293, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "4Power control", "paragraph_index": 371, "style": "Heading1"}
+{"source": "38214-j30.docx", "section": "", "title": "4.1Power allocation for downlink", "paragraph_index": 373, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "5Physical downlink shared channel related procedures", "paragraph_index": 390, "style": "Heading1"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1UE procedure for receiving the physical downlink shared channel", "paragraph_index": 391, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.1Transmission schemes", "paragraph_index": 462, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.1.1Transmission scheme 1", "paragraph_index": 464, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.2Resource allocation", "paragraph_index": 466, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.2.1Resource allocation in time domain", "paragraph_index": 467, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.2.1.1Determination of the resource allocation table to be used for PDSCH", "paragraph_index": 518, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.2.1aResource allocation in time domain for SBFD", "paragraph_index": 534, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.2.2Resource allocation in frequency domain", "paragraph_index": 540, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.2.2.1Downlink resource allocation type 0", "paragraph_index": 546, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.2.2.2Downlink resource allocation type 1", "paragraph_index": 557, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.2.2.3Downlink resource allocation type 1 for multicast/broadcast", "paragraph_index": 581, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.2.3Physical resource block (PRB) bundling", "paragraph_index": 594, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.3Modulation order, target code rate, redundancy version and transport block size determination", "paragraph_index": 617, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.3.1Modulation order and target code rate determination", "paragraph_index": 668, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.3.2Transport block size determination", "paragraph_index": 735, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.4PDSCH resource mapping", "paragraph_index": 783, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.4.1PDSCH resource mapping with RB symbol level granularity", "paragraph_index": 790, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.4.2PDSCH resource mapping with RE level granularity", "paragraph_index": 803, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.5Antenna ports quasi co-location", "paragraph_index": 831, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6UE procedure for receiving reference signals", "paragraph_index": 962, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6.1CSI-RS reception procedure", "paragraph_index": 963, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6.1.1CSI-RS for tracking", "paragraph_index": 972, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6.1.2CSI-RS for L1-RSRP and L1-SINR computation", "paragraph_index": 1017, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6.1.3CSI-RS for mobility", "paragraph_index": 1020, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6.2DM-RS reception procedure", "paragraph_index": 1033, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6.3PT-RS reception procedure", "paragraph_index": 1097, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6.4SRS reception procedure for CLI", "paragraph_index": 1127, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6.5PRS reception procedure", "paragraph_index": 1129, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6.5.1PRS receiver frequency hopping", "paragraph_index": 1231, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6.5.2PRS for carrier phase positioning", "paragraph_index": 1233, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.6.5.3PRS bandwidth aggregation for positioning measurements", "paragraph_index": 1242, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.7Code block group based PDSCH transmission", "paragraph_index": 1251, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.7.1UE procedure for grouping of code blocks to code block groups", "paragraph_index": 1253, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.1.7.2UE procedure for receiving code block group based transmissions", "paragraph_index": 1259, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2UE procedure for reporting channel state information (CSI)", "paragraph_index": 1267, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1Channel state information framework", "paragraph_index": 1269, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.1Reporting settings", "paragraph_index": 1274, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.2Resource settings", "paragraph_index": 1279, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.3(void)", "paragraph_index": 1302, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4Reporting configurations", "paragraph_index": 1303, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.1Resource Setting configuration", "paragraph_index": 1361, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.2Report quantity configurations", "paragraph_index": 1405, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.3L1-RSRP Reporting", "paragraph_index": 1544, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.3aP-CRI, P-SSBRI, and P-L1-RSRP reporting", "paragraph_index": 1554, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.3bRS-PAI Reporting", "paragraph_index": 1567, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.4L1-SINR Reporting", "paragraph_index": 1577, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.5TDCP Reporting", "paragraph_index": 1587, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.6CSI-PAI reporting", "paragraph_index": 1598, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.7L1-SRS-RSRP Reporting", "paragraph_index": 1615, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.8L1-CLI-RSSI Reporting", "paragraph_index": 1619, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.9CJTC-Dd reporting of delay offset", "paragraph_index": 1626, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.10CJTC-F reporting of frequency offset", "paragraph_index": 1633, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.4.11CJTC-P reporting of phase offset", "paragraph_index": 1640, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.5Triggering/activation of CSI Reports and CSI-RS", "paragraph_index": 1652, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.5.1Aperiodic CSI Reporting/Aperiodic CSI-RS when the triggering PDCCH and the CSI-RS have the same numerology", "paragraph_index": 1653, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.5.1aAperiodic CSI Reporting/Aperiodic CSI-RS when the triggering PDCCH and the CSI-RS have different numerologies", "paragraph_index": 1709, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.5.2Semi-persistent CSI/Semi-persistent CSI-RS", "paragraph_index": 1743, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.5.3Aperiodic CSI-RS for tracking for fast SCell activation", "paragraph_index": 1759, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.5.4UE Initiated reporting", "paragraph_index": 1764, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.1.6CSI processing criteria", "paragraph_index": 1821, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2Channel state information", "paragraph_index": 1888, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.1Channel quality indicator (CQI)", "paragraph_index": 1889, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.1.1(void)", "paragraph_index": 1917, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2Precoding matrix indicator (PMI)", "paragraph_index": 1918, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.1Type I Single-Panel Codebook", "paragraph_index": 1919, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.1aRefined Type I Single-Panel Codebook", "paragraph_index": 1962, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.2Type I Multi-Panel Codebook", "paragraph_index": 2018, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.2aRefined Type I Multi-Panel Codebook", "paragraph_index": 2058, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.3Type II Codebook", "paragraph_index": 2095, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.4Type II Port Selection Codebook", "paragraph_index": 2186, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.5Enhanced Type II Codebook", "paragraph_index": 2223, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.5aRefined eType II Codebook", "paragraph_index": 2335, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.6Enhanced Type II Port Selection Codebook", "paragraph_index": 2351, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.7Further enhanced Type II port selection codebook", "paragraph_index": 2374, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.8Enhanced Type II codebook for CJT", "paragraph_index": 2454, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.9Further enhanced Type II port selection codebook for CJT", "paragraph_index": 2552, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.9aRefined FeType II Port Selection Codebook", "paragraph_index": 2649, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.10Enhanced Type II codebook for predicted PMI", "paragraph_index": 2659, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.11Further enhanced Type II port selection codebook for predicted PMI", "paragraph_index": 2736, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.2.11aRefined eType II Codebook for predicted PMI", "paragraph_index": 2745, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.3Reference signal (CSI-RS)", "paragraph_index": 2757, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.3.1NZP CSI-RS", "paragraph_index": 2758, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.4Channel State Information – Interference Measurement (CSI-IM)", "paragraph_index": 2783, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.5CSI reference resource definition", "paragraph_index": 2795, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.5.1UE assumptions for CQI/PMI/RI calculation", "paragraph_index": 2829, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.5.1aUE assumptions for CQI/PMI/RI calculation for NCJT", "paragraph_index": 2864, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.5.1bUE assumptions for CQI/PMI/RI calculation for CJT", "paragraph_index": 2870, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.5.1cUE assumptions for CQI/PMI/RI calculation for predicted CSI", "paragraph_index": 2876, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.6SRS-RSRP measurement resource", "paragraph_index": 2878, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.2.7CLI-RSSI measurement resource", "paragraph_index": 2891, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.3CSI reporting using PUSCH", "paragraph_index": 2907, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.4CSI reporting using PUCCH", "paragraph_index": 2982, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.4aCSIReporting for LTM and handover", "paragraph_index": 2991, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.2.5Priority rules for CSI reports", "paragraph_index": 3008, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.3UE PDSCH processing procedure time", "paragraph_index": 3025, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "5.3.1Application delay of the minimum scheduling offset restriction", "paragraph_index": 3061, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "5.4UE CSI computation time", "paragraph_index": 3067, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "5.5UE PDSCH reception preparation time with different subcarrier spacings for PDCCH and PDSCH in different cells", "paragraph_index": 3106, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "6Physical uplink shared channel related procedure", "paragraph_index": 3113, "style": "Heading1"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1UE procedure for transmitting the physical uplink shared channel", "paragraph_index": 3115, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.1Transmission schemes", "paragraph_index": 3152, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.1.1Codebook based UL transmission", "paragraph_index": 3154, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.1.2Non-Codebook based UL transmission", "paragraph_index": 3196, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.1.3UL transmission for SBFD", "paragraph_index": 3217, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2Resource allocation", "paragraph_index": 3226, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.1Resource allocation in time domain", "paragraph_index": 3227, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.1.1Determination of the resource allocation table to be used for PUSCH", "paragraph_index": 3391, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.1aResource allocation in time domain for SBFD", "paragraph_index": 3411, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.2Resource allocation in frequency domain", "paragraph_index": 3428, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.2.1Uplink resource allocation type 0", "paragraph_index": 3434, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.2.2Uplink resource allocation type 1", "paragraph_index": 3457, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.2.3Uplink resource allocation type 2", "paragraph_index": 3488, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.3Resource allocation for uplink transmission with configured grant", "paragraph_index": 3506, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.3.1Transport Block repetition for uplink transmissions of PUSCH repetition Type A with a configured grant", "paragraph_index": 3538, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.3.2Transport Block repetition for uplink transmissions of PUSCH repetition Type B with a configured grant", "paragraph_index": 3561, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.3.3Transport Block repetition for uplink transmissions of TB processing over multiple slots with a configured grant", "paragraph_index": 3573, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.2.4Resource allocation with muting", "paragraph_index": 3586, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.3UE procedure for applying transform precoding on PUSCH", "paragraph_index": 3595, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.4Modulation order, redundancy version and transport block size determination", "paragraph_index": 3612, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.4.1Modulation order and target code rate determination", "paragraph_index": 3643, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.4.2Transport block size determination", "paragraph_index": 3716, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.5Code block group based PUSCH transmission", "paragraph_index": 3751, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.5.1UE procedure for grouping of code blocks to code block groups", "paragraph_index": 3753, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.5.2UE procedure for transmitting code block group based transmissions", "paragraph_index": 3759, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.6Uplink switching", "paragraph_index": 3765, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.6.1Uplink switching for EN-DC", "paragraph_index": 3795, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.6.2Uplink switching for carrier aggregation", "paragraph_index": 3809, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.6.2.0Uplink switching with two uplink bands", "paragraph_index": 3810, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.6.2.1void", "paragraph_index": 3823, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.6.2.2Uplink switching with 3 or 4 uplink bands", "paragraph_index": 3824, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.6.3Uplink switching with two uplink bands for supplementary uplink", "paragraph_index": 3837, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.1.7UE procedure for determining time domain windows for bundling DM-RS", "paragraph_index": 3842, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2UE reference signal (RS) procedure", "paragraph_index": 3893, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.1UE sounding procedure", "paragraph_index": 3894, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.1.1UE SRS frequency hopping procedure", "paragraph_index": 3984, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.1.2UE sounding procedure for DL CSI acquisition", "paragraph_index": 3989, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.1.3UE sounding procedure between component carriers", "paragraph_index": 4035, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.1.4UE sounding procedure for positioning purposes", "paragraph_index": 4075, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.1.4.1SRS frequency hopping for positioning", "paragraph_index": 4096, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.1.4.2SRS bandwidth aggregation for positioning measurements", "paragraph_index": 4121, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.1.5UE sounding procedure for SBFD", "paragraph_index": 4134, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.2UE DM-RS transmission procedure", "paragraph_index": 4147, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.3UE PT-RS transmission procedure", "paragraph_index": 4180, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.3.1UE PT-RS transmission procedure when transform precoding is not enabled", "paragraph_index": 4182, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.2.3.2UE PT-RS transmission procedure when transform precoding is enabled", "paragraph_index": 4225, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "6.3UE PUSCH frequency hopping procedure", "paragraph_index": 4235, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "6.3.1Frequency hopping for PUSCH repetition Type A and for TB processing over multiple slots", "paragraph_index": 4236, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.3.2Frequency hopping for PUSCH repetition Type B", "paragraph_index": 4258, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.3.3Frequency hopping for SBFD", "paragraph_index": 4272, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "6.4UE PUSCH preparation procedure time", "paragraph_index": 4290, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "7UE procedures for transmitting and receiving on a carrier with intra-cell guard bands", "paragraph_index": 4309, "style": "Heading1"}
+{"source": "38214-j30.docx", "section": "", "title": "8Physical sidelink shared channel related procedures", "paragraph_index": 4318, "style": "Heading1"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1UE procedure for transmitting the physical sidelink shared channel", "paragraph_index": 4346, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.1Transmission schemes", "paragraph_index": 4408, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.2Resource allocation", "paragraph_index": 4411, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.2.1Resource allocation in time domain", "paragraph_index": 4414, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.2.2Resource allocation in frequency domain", "paragraph_index": 4437, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.3Modulation order, target code rate, redundancy version and transport block size determination", "paragraph_index": 4448, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.3.1Modulation order and target code rate determination", "paragraph_index": 4450, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.3.2Transport block size determination", "paragraph_index": 4458, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.4UE procedure for determining the subset of resources to be reported to higher layers in PSSCH resource selection in sidelink resource allocation mode 2", "paragraph_index": 4475, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.4AUE procedure for determining a set of preferred or non-preferred resources for another UE's transmission", "paragraph_index": 4595, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.4BVoid", "paragraph_index": 4619, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.4CUE procedure for using a received non-preferred resource set", "paragraph_index": 4620, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.5UE procedure for determining slots and resource blocks for PSSCH transmission associated with an SCI format 1-A", "paragraph_index": 4626, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.5AUE procedure for determining slots and resource blocks indicated by a preferred or non-preferred resource set", "paragraph_index": 4668, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.6Sidelink congestion control in sidelink resource allocation mode 2", "paragraph_index": 4683, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.1.7UE procedure for determining the number of logical slots for a reservation period", "paragraph_index": 4693, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.2UE procedure for transmitting sidelink reference signals", "paragraph_index": 4697, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "8.2.1CSI-RS transmission procedure", "paragraph_index": 4698, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.2.2PSSCH DM-RS transmission procedure", "paragraph_index": 4707, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.2.3PT-RS transmission procedure", "paragraph_index": 4711, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.2.4SL PRS transmission procedure", "paragraph_index": 4717, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.2.4.1Resource allocation", "paragraph_index": 4725, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.2.4.1.1Resource allocation in time domain", "paragraph_index": 4732, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "8.2.4.1.2Resource allocation in frequency domain", "paragraph_index": 4752, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "8.2.4.2UE procedure for determining the subset of resources to be reported to higher layers in SL PRS resource selection in a dedicated SL PRS resource pool in sidelink resource allocation mode 2", "paragraph_index": 4755, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.2.4.2AUE procedure for determining slots and SL PRS resource(s) associated with an SCI format 1-B in a dedicated SL PRS resource pool", "paragraph_index": 4781, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.2.4.3Sidelink congestion control in a dedicated SL PRS resource pool in sidelink resource allocation mode 2", "paragraph_index": 4799, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.3UE procedure for receiving the physical sidelink shared channel", "paragraph_index": 4806, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "8.4UE procedure for receiving reference signals", "paragraph_index": 4811, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "8.4.1CSI-RS reception procedure", "paragraph_index": 4812, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.4.2DM-RS reception procedure for RSRP computation", "paragraph_index": 4814, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.4.3PT-RS reception procedure", "paragraph_index": 4819, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.4.4SL PRS reception procedure", "paragraph_index": 4824, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.5UE procedure for reporting channel state information (CSI)", "paragraph_index": 4840, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "8.5.1Channel state information framework", "paragraph_index": 4841, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.5.1.1Reporting configurations", "paragraph_index": 4843, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.5.1.2Triggering of sidelink CSI reports", "paragraph_index": 4850, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.5.2Channel state information", "paragraph_index": 4854, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.5.2.1CSI reporting quantities", "paragraph_index": 4855, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.5.2.1.1Channel quality indicator (CQI)", "paragraph_index": 4856, "style": "Heading5"}
+{"source": "38214-j30.docx", "section": "", "title": "8.5.2.2Reference signal (CSI-RS)", "paragraph_index": 4869, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.5.2.3CSI reference resource definition", "paragraph_index": 4874, "style": "Heading4"}
+{"source": "38214-j30.docx", "section": "", "title": "8.5.3CSI reporting", "paragraph_index": 4891, "style": "Heading3"}
+{"source": "38214-j30.docx", "section": "", "title": "8.6UE PSSCH preparation procedure time", "paragraph_index": 4893, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "9UE procedures for transmitting and receiving for RTT-based propagation delay compensation", "paragraph_index": 4903, "style": "Heading1"}
+{"source": "38214-j30.docx", "section": "", "title": "9.1PRS reception procedure for RTT-based propagation delay compensation", "paragraph_index": 4911, "style": "Heading2"}
+{"source": "38214-j30.docx", "section": "", "title": "Annex A (informative):Change history", "paragraph_index": 4933, "style": "Heading8"}

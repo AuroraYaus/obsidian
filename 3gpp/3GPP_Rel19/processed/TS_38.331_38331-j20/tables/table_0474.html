@@ -1,0 +1,22 @@
+<table>
+  <tr>
+    <td>Conditional Presence</td>
+    <td>Explanation</td>
+  </tr>
+  <tr>
+    <td>codebookBased</td>
+    <td>The field is mandatory present if txConfig is set to codebook and absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>RepTypeB</td>
+    <td>The field is optionally present, Need S, if pusch-RepTypeIndicatorDCI-0-1 is set to pusch-RepTypeB. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>RepTypeB2</td>
+    <td>The field is optionally present, Need S, if pusch-RepTypeIndicatorDCI-0-1 or pusch-RepTypeIndicatorDCI-0-2 is set to pusch-RepTypeB. It is absent otherwise.</td>
+  </tr>
+  <tr>
+    <td>SRSsets</td>
+    <td>This field is mandatory present when UE is configured with two SRS sets in either srs-ResourceSetToAddModList or srs-ResourceSetToAddModListDCI-0-2 with usage codebook or non-codebook and none of multipanelSchemeSDM or multipanelSchemeSFN or sTx-2Panel is configured. It is absent otherwise.</td>
+  </tr>
+</table>

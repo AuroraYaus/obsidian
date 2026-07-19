@@ -1,0 +1,5 @@
+Bit field mapped to index,Scheduled cell set
+0,The cell set with the smallest set ID configured by mc-DCI-SetofCellsToAddModList
+1,The cell set with the 2nd smallest set ID configured by mc-DCI-SetofCellsToAddModList
+2,"The cell set with the 3rd smallest set ID configured by mc-DCI-SetofCellsToAddModList, if any"
+3,"The cell set with the 4th smallest set ID configured by mc-DCI-SetofCellsToAddModList, if any"

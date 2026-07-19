@@ -1,0 +1,48 @@
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8Physical uplink shared channel related procedures", "paragraph_index": 1, "style": "Heading1"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.0UE procedure for transmitting the physical uplink shared channel", "paragraph_index": 26, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.0.1Single-antenna port scheme", "paragraph_index": 413, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.0.2Closed-loop spatial multiplexing scheme", "paragraph_index": 415, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.1Resource allocation for PDCCH/EPDCCH/SPDCCH with uplink DCI format", "paragraph_index": 417, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.1.1Uplink resource allocation type 0", "paragraph_index": 424, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "1", "title": "and shall not exceed .", "paragraph_index": 437, "style": "B1"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.1.2Uplink resource allocation type 1", "paragraph_index": 447, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.1.3Uplink resource allocation type 2", "paragraph_index": 452, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.1.4Uplink resource allocation type 3", "paragraph_index": 458, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.1.5Uplink resource allocation type 4", "paragraph_index": 469, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.1.5.1UL Resource Block Groups", "paragraph_index": 480, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.1.6Uplink resource allocation type 5", "paragraph_index": 485, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.2UE sounding procedure", "paragraph_index": 500, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.3UE HARQ-ACK procedure", "paragraph_index": 648, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.3AAutonomous uplink feedback procedure", "paragraph_index": 677, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.4UE PUSCH hopping procedure", "paragraph_index": 685, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.4.1Type 1 PUSCH hopping", "paragraph_index": 700, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.4.2Type 2 PUSCH hopping", "paragraph_index": 705, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.5UE Reference Symbol (RS) procedure", "paragraph_index": 709, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.6Modulation order, redundancy version and transport block size determination", "paragraph_index": 712, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.6.1Modulation order and redundancy version determination", "paragraph_index": 731, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.6.2Transport block size determination", "paragraph_index": 833, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.6.3Control information MCS offset determination", "paragraph_index": 932, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.7UE transmit antenna selection", "paragraph_index": 951, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "8.8Transmission timing adjustments", "paragraph_index": 963, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9Physical downlink control channel procedures", "paragraph_index": 969, "style": "Heading1"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1UE procedure for determining physical downlink control channel assignment", "paragraph_index": 975, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.1PDCCH assignment procedure", "paragraph_index": 976, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.2PHICH assignment procedure", "paragraph_index": 1051, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.3Control Format Indicator (CFI) assignment procedure", "paragraph_index": 1089, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.4EPDCCH assignment procedure", "paragraph_index": 1102, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.4.1EPDCCH starting position", "paragraph_index": 1198, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.4.2Antenna ports quasi co-location for EPDCCH", "paragraph_index": 1218, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.4.3Resource mapping parameters for EPDCCH", "paragraph_index": 1226, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.4.4PRB-pair indication for EPDCCH", "paragraph_index": 1235, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.5MPDCCH assignment procedure", "paragraph_index": 1242, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.5.1MPDCCH starting position", "paragraph_index": 1365, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.5.2Antenna ports quasi co-location for MPDCCH", "paragraph_index": 1372, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.5.3Preconfigured Uplink Resource ACK/fallback procedure", "paragraph_index": 1374, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.6SPDCCH assignment procedure", "paragraph_index": 1378, "style": "Heading3"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.6.1Resource mapping parameters for SPDCCH", "paragraph_index": 1413, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.6.2PRB-pair indication for SPDCCH", "paragraph_index": 1416, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.6.3Physical Resource Block (PRB) bundling for DMRS-based SPDCCH", "paragraph_index": 1419, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.1.6.4Antenna ports quasi co-location for DMRS-based SPDCCH", "paragraph_index": 1421, "style": "Heading4"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.2PDCCH/EPDCCH/MPDCCH/SPDCCH validation for semi-persistent scheduling", "paragraph_index": 1429, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.2APDCCH/EPDCCH validation for autonomous uplink transmissions", "paragraph_index": 1461, "style": "Heading2"}
+{"source": "36213-j30_s08-s09.docx", "section": "", "title": "9.3PDCCH/EPDCCH/MPDCCH/SPDCCH control information procedure", "paragraph_index": 1472, "style": "Heading2"}

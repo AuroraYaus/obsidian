@@ -1,0 +1,36 @@
+Name,Value,Semantics description,Ver
+PDCP configuration,,,
+>t-Reordering,Undefined,"Selected by the receiving UE, up to UE implementation",
+>pdcp-SN-Size,12,,
+SRAP configuration,,"Specified for L2 U2U relay operation, which is used for U2U Remote UE's SL-SRB3 with the peer U2U Remote UE.",
+>sl-RemoteUE-SLRB-Identity,3,This parameter is only applicable to L2 U2U relay operation.,
+RLC configuration,,AM RLC,
+>sn-FieldLength,12,,
+>t-Reassembly,Undefined,"Selected by the receiving UE, up to UE implementation",
+>t-PollRetransmit,Undefined,"Selected by the transmitting UE, up to UE implementation",
+>pollPDU,Undefined,"Selected by the transmitting UE, up to UE implementation",
+>pollByte,Undefined,"Selected by the transmitting UE, up to UE implementation",
+>maxRetxThreshold,Undefined,"Selected by the transmitting UE, up to UE implementation",
+>t-StatusProhibit,Undefined,"Selected by the receiving UE, up to UE implementation",
+>logicalChannelIdentity,3,,
+MAC configuration,,,
+>priority,1,,
+>prioritisedBitRate,infinity,,
+>logicalChannelGroup,0,,
+>schedulingRequestId,0,The scheduling request configuration with this value is applicable for this SCCH if configured by the network.,
+>sl-HARQ-FeedbackEnabled,Undefined,"Selected by the transmitting UE, up to UE implementation",
+Additional RLC configuration,,AM RLCThis RLC is used for PDCP duplication,v1800
+>sn-FieldLength,12,,v1800
+>t-Reassembly,Undefined,"Selected by the receiving UE, up to UE implementation",v1800
+>t-PollRetransmit,Undefined,"Selected by the transmitting UE, up to UE implementation",v1800
+>pollPDU,Undefined,"Selected by the transmitting UE, up to UE implementation",v1800
+>pollByte,Undefined,"Selected by the transmitting UE, up to UE implementation",v1800
+>maxRetxThreshold,Undefined,"Selected by the transmitting UE, up to UE implementation",v1800
+>t-StatusProhibit,Undefined,"Selected by the receiving UE, up to UE implementation",v1800
+>logicalChannelIdentity,22,,v1800
+MAC configuration associated to additional RLC configuration,,This logical channel is used for PDCP duplication,v1800
+>priority,1,,v1800
+>prioritisedBitRate,infinity,,v1800
+>logicalChannelGroup,0,,v1800
+>schedulingRequestId,0,The scheduling request configuration with this value is applicable for this SCCH if configured by the network.,v1800
+>sl-HARQ-FeedbackEnabled,Undefined,"Selected by the transmitting UE, up to UE implementation",v1800

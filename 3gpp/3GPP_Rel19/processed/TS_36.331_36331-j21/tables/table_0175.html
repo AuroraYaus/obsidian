@@ -1,0 +1,47 @@
+<table>
+  <tr>
+    <td>SPDCCH-Config field descriptions</td>
+  </tr>
+  <tr>
+    <td>al-StartingPointSPDCCHIndicates the starting SCCE index for an aggregation level, see TS 36.213 [23], clause 9.1.6.</td>
+  </tr>
+  <tr>
+    <td>dci7-CandidatesNumber of candidates in each aggregation level for DCI format 7. The number of PDCCH/SPDCCH candidate(s) M_DCI format 7^((L)) at aggregation level L for monitoring DCI format 7 in PDCCH and SPDCCH region shall conform to the following restriction:•less than or equal to 2 for aggregation level 4 and 8,•less than or equal to 6 for aggregation level 1 and 2</td>
+  </tr>
+  <tr>
+    <td>dci7-CandidatesPerAL-SPDCCHSPDCCH candidates configured per aggregation level in SPDCCH region</td>
+  </tr>
+  <tr>
+    <td>dmrs-ScramblingSeqSPDCCHThe DMRS scrambling sequence initialization parameter defined in TS 36.211 [21], clause 6.10.3A.1.</td>
+  </tr>
+  <tr>
+    <td>numberRB-InFreq-domainIndicates the number of resource-blocks in the frequency domain used for the SPDCCH set. There is no restriction on the number of RBs in the frequency domain that can be configured to an SPDCCH resouce set (up to 100), but at least two need to be configured to contain at least one SCCE. The granularity of resource block allocation in frequency domain for configuring an SPDCCH resource set is one in case spdcch-SetReferenceSig-r15 is set to crs. The granularity of resource block allocation for configuring an SPDCCH resource set is two in case sPDCCH-SetReferenceSig-r15 is set to dmrs.</td>
+  </tr>
+  <tr>
+    <td>rateMatchingModeIndicates, per resource-set, the mode of SPDCCH rate-matching operation•Mode 1: UE rate-matches only around the DCI format 7 scheduling the slot or subslot PDSCH (if transmitted in theSPDCCH resouce-set), otherwise no rate-matching is performed for the RB set.•Mode 2: UE rate-matches around the whole SPDCCH resource set•Mode 3: UE rate-matches around the whole SPDCCH resource set if DCI format 7 scheduling the slot or subslot PDSCH is found in the resource-set, otherwise no rate-matching is performed for the RB set.•Mode 4: UE rate-matches around the whole SPDCCH resource set if DCI format 7 scheduling the slot or subslot PDSCH is not found in the resource-set, otherwise UE rate-matches only around the DCI format 7 scheduling the slot or subslot PDSCH (if transmitted in the SPDCCH resource-set)If the DCI format 7 scheduling the slot or subslot PDSCH is found on a candidate belonging to two SPDCCH resource sets, the DCI format 7 is assumed to be found in both resource sets.</td>
+  </tr>
+  <tr>
+    <td>resourceBlockAssignmentIndicates the index to a specific combination of physical resource block in frequency for SPDCCH set, see TS 36.213 [23], clause 9.1.4.4. The value range is dependent on the combinatorial number defined in 36.213 [23], clause 9.1.4.4 with the assumption of no limitation in the number of RBs in frequency domain configured by the set.</td>
+  </tr>
+  <tr>
+    <td>spdcch-NoOfSymbolsIndicates the number of OFDM symbols that the CRS based SPDCCH is mapped over.</td>
+  </tr>
+  <tr>
+    <td>spdcch-L1-ReuseIndicationFor the up to two resource sets configured with the same subframeType applicability, the SPDCCH-L1-ReuseIndication defines the allowed combinations for the two resource sets: {1,1}, {2,0} or {0,2} corresponding to the values n0, n1 and n2 repsectively. In case one resource set is configured, the allowed combinations are {2, 0} or {0,2} corresponding to n1 or n2. EUTRAN does not configure n0 in case one resource set is configured.</td>
+  </tr>
+  <tr>
+    <td>spdcch-SetConfigIdIndicates the ID of the SPDCCH set configured in SPDCCH-Elements. Maximum two sets can be configured for MBSFN and two for non-MBSFN.</td>
+  </tr>
+  <tr>
+    <td>spdcch-SetReferenceSigIndicates CRS or DMRS based SPDCCH set.</td>
+  </tr>
+  <tr>
+    <td>subframeTypeIndicates applicable subframe type(s) for the SPDCCH set. CRS-based SPDCCH is only applied to non-MBSFN subframe.</td>
+  </tr>
+  <tr>
+    <td>subslotApplicabilityIndicates the set of subslots within the subframe where SPDCCH candidate set per aggregation levels applies, see DCI7-CandidateSetsPerAL-SPDCCH. The bitmap applies to the 5 DL subslot indices in a DL subframe. The first element in the sequence DCI7-CandidateSetsPerAL-SPDCCH applies to the indicated subslotApplicability. The second element in the sequence (if present) applies to the complement of the subslotApplicability.</td>
+  </tr>
+  <tr>
+    <td>transmissionTypeIndicates whether distributed or localized SPDCCH transmission mode is used as defined in TS 36.211 [21], clause 6.8A.1.</td>
+  </tr>
+</table>

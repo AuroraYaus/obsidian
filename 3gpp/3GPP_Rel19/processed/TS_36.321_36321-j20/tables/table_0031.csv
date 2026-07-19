@@ -1,0 +1,12 @@
+Value (hexa-decimal),RNTI
+0000,N/A
+0001-09600001-1000 (Note 3),"RA-RNTI, C-RNTI, Semi-Persistent Scheduling C-RNTI, Temporary C-RNTI, eIMTA-RNTI, TPC-PUCCH-RNTI, TPC-PUSCH-RNTI, SL-RNTI (see note), G-RNTI, SL-V-RNTI, UL Semi-Persistent Scheduling V-RNTI, SL Semi-Persistent Scheduling V-RNTI, SRS-TPC-RNTI, AUL C-RNTI, and PUR-RNTI"
+0961-FFF31001-FFF3 (Note 3),"C-RNTI, Semi-Persistent Scheduling C-RNTI, eIMTA-RNTI, Temporary C-RNTI, TPC-PUCCH-RNTI, TPC-PUSCH-RNTI, SL-RNTI, G-RNTI, SL-V-RNTI, UL Semi-Persistent Scheduling V-RNTI, SL Semi-Persistent Scheduling V-RNTI, SRS-TPC-RNTI, AUL C-RNTI, CB-RNTI, and PUR-RNTI"
+FFF4-FFF8,Reserved for future use
+FFF9,SI-RNTI
+FFFA,SC-N-RNTI
+FFFB,SC-RNTI
+FFFC,CC-RNTI
+FFFD,M-RNTI
+FFFE,P-RNTI
+FFFF,SI-RNTI

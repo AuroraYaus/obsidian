@@ -1,0 +1,7 @@
+SL-PosConfigCommonNR field descriptions
+"sl-PosFreqInfoList, sl-PosFreqInfoListExtThis field indicates the NR sidelink positioning carrier frequencies for SL-PRS transmission and reception. In this release, only one entry of SL-FreqConfigCommon is included in the list. If network includes sl-PosFreqInfoListExt, it includes the same number of entries, and listed in the same order, as in sl-PosFreqInfoList. The first entry in the sl-PosFreqInfoListExt corresponds to the AdditionalSpectrumEmission of the frequency of first entry in sl-PosFreqInfoList broadcast in SIB23."
+sl-PosMeasConfigCommonThis field indicates the measurement configurations (e.g. RSRP) for NR sidelink positioning.
+"sl-PosNR-AnchorCarrierFreqListThis field indicates the NR anchor carrier frequency list, which can provide the NR sidelink positioning configurations."
+"sl-PosOffsetDFNIndicates the timing offset for the UE to determine DFN timing when GNSS is used for timing reference. Value 1 corresponds to 0.001 milliseconds, value 2 corresponds to 0.002 milliseconds, and so on."
+sl-PosSSB-PriorityNRThis field indicates the priority of NR sidelink SSB transmission and reception.
+sl-PosUE-SelectedConfigIndicates the configuration used for UE autonomous resource selection.

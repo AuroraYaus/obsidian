@@ -1,0 +1,4 @@
+SliceInfo field descriptions
+"sliceAllowedCellListNRList of allow-listed cells for slicing. If present, the cells listed in this list support the corresponding nsag-frequency pair, and the cells not listed in this list do not support the corresponding nsag-frequency pair, according to TS 38.304 [20], clause 5.2.4.11."
+"sliceCellListNRContains either the list of allow-listed or exclude-listed cells for slicing. If absent, it implies all the cells support the corresponding nsag-frequency pair, according to 38.304 [20], clause 5.2.4.11."
+"sliceExcludedCellListNRList of exclude-listed cells for slicing. If present, the cells listed in this list do not support the corresponding nsag-frequency pair, and the cells not listed in this list support the corresponding nsag-frequency pair, according to TS 38.304 [20], clause 5.2.4.11."

@@ -1,0 +1,1095 @@
+<table>
+  <tr>
+    <td colspan="8">Change history</td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td>TSG #</td>
+    <td>TSG Doc.</td>
+    <td>CR</td>
+    <td>Rev</td>
+    <td>Cat</td>
+    <td>Subject/Comment</td>
+    <td>New version</td>
+  </tr>
+  <tr>
+    <td>2007-06</td>
+    <td>RAN2#58bis</td>
+    <td>R2-072715</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>First version;Endorsed as v0.1.0.</td>
+    <td>0.1.0</td>
+  </tr>
+  <tr>
+    <td>2007-06</td>
+    <td>RAN2#58bis</td>
+    <td>R2-072910</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Added definition for Data field element and RLC SDU segment;Removed Editor&#x27;s note on non-byte-aligned RLC SDUs;Added description for Data field for AMD PDU;Added Align Info for AMD PDU header element;Added description on extension part of AMD PDU header at concatenation;Added figure for AMD PDU;Added Segment Offset and Length Field for AMD PDU segment header element;Added Editor&#x27;s note for STATUS PDU;Added general text on parameters;Added description for Extension bit, Length Indicator, Align Info, Segment Offset and Last Segment Flag;Removed Editor&#x27;s note on Length Indicator.</td>
+    <td>0.1.1</td>
+  </tr>
+  <tr>
+    <td>2007-06</td>
+    <td>RAN2#58bis</td>
+    <td>R2-072995</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Moved description of Data field for AMD PDU and TMD PDU to the clause dedicated to Data field;Changed terminology for Align Info to Segmentation Info;Added Segmentation Info for UMD PDU header element;Removed figure for AMD PDU;Corrected error for AMD PDU segment header element (replaced Length Field by Last Segment Flag);Added place holders to specify the number of bits for the individual RLC header elements;Modified description for Extension bit, Segmentation Info and Last Segment Flag using tables.</td>
+    <td>0.1.2</td>
+  </tr>
+  <tr>
+    <td>2007-06</td>
+    <td>RAN2#58bis</td>
+    <td>R2-072996</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Bracketed terminology for Segmentation Info;Corrected clause numbering;Clarified description of Extension bit and Segment Offset.</td>
+    <td>0.1.3</td>
+  </tr>
+  <tr>
+    <td>2007-08</td>
+    <td>RAN2#59</td>
+    <td>R2-073554</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Added receive operation descriptions for the case AM RLC entity receives AMD PDU segments;Modified general texts regarding retransmissions;Added a general description text for Segmentation Info;Added an Editor&#x27;s note for Segment Offset.</td>
+    <td>0.1.4</td>
+  </tr>
+  <tr>
+    <td>2007-08</td>
+    <td>RAN2#59</td>
+    <td>R2-073712</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>v0.1.4 was endorsed by RAN WG2 as v0.2.0.</td>
+    <td>0.2.0</td>
+  </tr>
+  <tr>
+    <td>2007-08</td>
+    <td>RAN2#59</td>
+    <td>R2-073844</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Added some missing abbreviations in clause 3.2;Added description and a figure regarding RLC entity configuration in clause 4.2.1, and removed Editor&#x27;s note on this aspect;Added new sub clauses under clauses 4.2.1.1-4.2.1.3 (purely editorial modification)Added description on SN, i.e. RLC PDU based SN, and removed Editor&#x27;s note on the possibility of having the same header structure for AMD PDU and AMD PDU segment due to PDCP SN reuse;Added description of the AM receive window operation;Added description that fixed header part should be byte aligned and extension header part should be byte aligned;Modified description on extension header part (LI and E are not required for the last Data field element) and removed Editor&#x27;s note on this aspect;Added further description on Data field;LI field size is set to 11bits;Corrected editorial errors (reference number to tables)Added 3 state variables: VT(S), VR(R), VR(MR).</td>
+    <td>0.2.1</td>
+  </tr>
+  <tr>
+    <td>2007-08</td>
+    <td>RAN2#59</td>
+    <td>R2-073868</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Corrected editorial errors;Added 1 constant: Rx_Wndow_Size;Added description of modulus operation on VT(S), VR(R), VT(MR).</td>
+    <td>0.2.2</td>
+  </tr>
+  <tr>
+    <td>2007-08</td>
+    <td>RAN2#59</td>
+    <td>R2-073881</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Removed reference to RLC UM for VT(R) and VT(MR).</td>
+    <td>0.2.3</td>
+  </tr>
+  <tr>
+    <td>2007-09</td>
+    <td>RAN#37</td>
+    <td>RP-070689</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>v0.2.3 was endorsed by RAN WG2 as v1.0.0 and presented to RAN plenary for information.</td>
+    <td>1.0.0</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RAN2#60</td>
+    <td>R2-074583</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Added description of the AM transmit window operation;Added Editor&#x27;s note that PDU loss detection should be after HARQ reordering;Added description on AM retransmission and resegmentation;Added description of the polling trigger &quot;transmission of last data in the buffer&quot;;Added polling trigger &quot;poll retransmit timer&quot; and its description;Added Editor&#x27;s note that either PDU count based or window based polling trigger should be supported;Added description of the status reporting trigger &quot;polling from its peer AM RLC entity&quot;;Removed old Editor&#x27;s note in the polling sub clause;Added status reporting trigger &quot;detection of reception failure of an RLC data PDU&quot; and its description;Added status prohibit function and its description;Added Editor&#x27;s note that at least a 1byte fixed header for the UMD PDU should be supported;Complete AMD PDU and AMD PDU segment headers captured and 3 new figures inserted for each of them;Added Editor&#x27;s note that STATUS PDU will only have 1 format;Modified description of the Data field so that it also applies to AMD PDU segment;Added description of the SN field in relation to the AMD PDU segment;Corrected description of the E field;Defined SO field length to be 15bits;Completed the description of the SO field and removed the related Editor&#x27;s note;Added description of the D/C field, RF field and P field;Added 2 state variables: VT(A) and VT(MS);Added to the description of VT(S) and VR(MR);Added 1 constant: Tx_Window_Size;Added 2 timers: T_poll_prohibit and T_status_prohibit.r</td>
+    <td>1.0.1</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RAN2#60</td>
+    <td>R2-075061</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Cleaned up terminology related to PDUs;Editorial corrections (aligned wording, corrected Figure numbering, clarifications, etc.)Added Editor&#x27;s note that exception cases when a negatively acknowledged RLC data PDU should not be transmitted will be captured when identified;Added description that the use of status prohibit function and particular polling triggers are configurable;Modified receiver operation for RLC-AM regarding AMD PDU segments (aligned with AMD PDU);Added description that DL CCCH is handled by RLC-UM and removed corresponding Editor&#x27;s note;Added Editor&#x27;s note that wording &quot;considered&quot; regarding retransmission of AMD PDU / AMD PDU segment in sub clause 5.2.1 should be improved;Added to the description of SN field that it is 10bits for AMD PDU and AMD PDU segment;Removed Editor&#x27;s note regarding the need for status prohibit function;Added Editor&#x27;s note that the need for [SI] field for UMD PDU can be challenged.</td>
+    <td>1.0.2</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RAN2#60</td>
+    <td>R2-075154</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Added an Editor&#x27;s note regarding Local NACK;Modified wording in clause 5.2.1 on the object of retransmission (RLC data PDU changed to AMD PDU / portion of AMD PDU);Clarified that STATUS PDU is triggered after the PDU containing th poll bit is &quot;HARQ reordered&quot;, rather than just &quot;reordered&quot;;Removed incorrect inclusion of a T_status_prohibit and added an Editor&#x27;s which just says status prohibit function is supported.</td>
+    <td>1.0.3</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RAN2#60</td>
+    <td>R2-075198</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Description regarding the modulus operation involving state variables was changed in order to align with TS 25.322;Figures on PDUs were slightly modified (editorial).</td>
+    <td>1.0.4</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RAN2#60</td>
+    <td>R2-075430</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Text on receiver operation in clause 5.1.3 was revised to align the description regarding modulus operation with TS 25.322;Further cleaned up terminology related to PDUs;V1.0.4 was endorsed by RAN WG2 as v1.1.0 with the above revisions.</td>
+    <td>1.1.0</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RAN2#60</td>
+    <td>R2-075500</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Added RLC architecture model figures (Figures 4.2.1.1.1-1, 4.2.1.2.1-1, 4.2.1.3.1-1);Added Editor&#x27;s note that the SDU discard functionality may not be specified in RLC;Added description of receive operations for RLC-UM in sub clause 5.1.2;Added to the description of receive operations for RLC-AM in sub clause 5.1.3 including: STATUS transmitting window definition, procedures for the case RLC data PDU within receiving window is received, actions at T_reordering expiry and RLC SDU reassembly;T_and in sub clause 5.1.3;Removed Editor&#x27;s note which said that PDU loss detection should be after HARQ reordering;Clarified the description of the polling trigger &quot;transmission of last data in the buffer&quot;;Added description of STATUS PDU construction in sub clause 5.2.3 and removed an Editor&#x27;s note in this sub clause;Modified trigger for RLC SDU discard to &quot;indication from PDCP&quot;;Removed Editor&#x27;s note on the type of PDUs to be specified;Removed Editor&#x27;s notes regarding STATUS PDU piggybacking;Complete UMD PDU headers captured and 2 new figures inserted for them, and removed Editor&#x27;s note on UMD PDU;Defined one STATUS PDU format with a new figure and an Editor&#x27;s note, and removed old Editor&#x27;s note in sub clause 6.2.1.6;Added description of the R1 field, CPT field, ACK_SN field, E1 field, NACK_SN field, E2 field, SOstart field and SOend field.Added 7 state variables: VR(R-SO), VR(X), VR(X-SO), VR(MS), VR(UR), VR(UMR) and VR(UX);Constants Rx_Window_Size and Tx Window size were converged into one constant &quot;Window_Size&quot; of which the value is defined to half the SN space, and constants &quot;AM_Window_Size&quot; and &quot;UM_Window_Size&quot; were newly defined;Added 1 timer: T_reordering.</td>
+    <td>1.1.1</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RAN2#60</td>
+    <td>R2-075501</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Added definition for &quot;byte segment&quot;;Removed Editor&#x27;s note which said that the SDU discard functionality may not be specified in RLC;Added missing description for RLC-UM receive operation (the case when UMD PDU with SN that falls within the reordering window but not equal to VR(R) is received);Added missing description for RLC-AM receive operation (the case when only part of the received RLC data PDU is received in duplication);Added text related to updating state variable VR(MS);Added Editor&#x27;s note that it has to be decided whether T_reordering can be triggered by a missing RLC data PDU for which status reporting has already been triggered once;Editorial clarification / corrections were made.</td>
+    <td>1.1.2</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RAN2#60</td>
+    <td>R2-075502</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Added text related to updating state variable VR(MS);Editorial clarification / corrections were made.</td>
+    <td>1.1.3</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RAN2#60</td>
+    <td>R2-075503</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Modified description of VR(MS) update procedure;Modified description of VR(X) / VR(X-SO) update procedure;Editorial corrections were made.</td>
+    <td>1.1.4</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RAN2#60</td>
+    <td>R2-075504</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Added missing description with regards to RLC-AM receive operation;Added Editor&#x27;s note on the delivery of RLC control PDUs;Editorial corrections were made.</td>
+    <td>1.1.5</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RAN2#60</td>
+    <td>R2-074589</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>v1.1.5 was endorsed by RAN WG2 as v1.2.0.</td>
+    <td>1.2.0</td>
+  </tr>
+  <tr>
+    <td>2007-11</td>
+    <td>RP-38</td>
+    <td>RP-070918</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>v1.2.0 was stepped to v2.0.0 and presented to RAN plenary for approval.</td>
+    <td>2.0.0</td>
+  </tr>
+  <tr>
+    <td>2007-12</td>
+    <td>RP-38</td>
+    <td>-</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Approved at TSG RAN-38 and placed under change control</td>
+    <td>8.0.0</td>
+  </tr>
+  <tr>
+    <td>2008-03</td>
+    <td>RP-39</td>
+    <td>RP-080196</td>
+    <td>0001</td>
+    <td>-</td>
+    <td></td>
+    <td>CR0001 for TS 36.322 E-UTRA RLC:Added reference to TS 36.321;Clarified definition of &quot;byte segment&quot;;Renamed &quot;Segmentation Info&quot; to &quot;Framing Info&quot;;Aligned texts to refer to &quot;upper layer&quot; and &quot;lower layer&quot; instead of RRC/PDCP and MAC;Specified that BCCH and DL CCCH is handled by RLC-TM;Added support for duplicate detection by receiving RLC UM entity;;Clarified that RLC SDUs should be delivered to upper layers in sequence;Modified description so that MAC indicates &quot;total size of RLC PDUs&quot; together with notification of transmission opportunity instead of &quot;TB size&quot;;Specified that RLC SDU discard is applied for RLC-AM and RLC UM, and introduced the detailed RLC SDU discard procedure;Renamed &quot;RLC reset&quot; to &quot;RLC re-establishment&quot;, and introduced the detailed RLC re-establishment procedure;Removed Editor&#x27;s note on RLC flow control (flow control will not be supported by RLC);Restructured the texts on RLC AM and RLC UM receive operations, and added/modified the detailed descriptions;Added description on prioritization of data to transmit (control &gt; data; retransmission &gt; new data);Removed the term STATUS transmitting window;Clarified that retransmission of negatively acknowledged data by STATUS PDU is mandatory and that retransmission of negatively acknowledged data by HARQ delivery failure is optional;Removed Editor&#x27;s note on retransmission prohibit (there will be no conditions where negatively acknowledged data shall not be retransmitted);Clarified description on polling trigger &quot;Transmission of last data in buffer&quot;;Added new polling triggers &quot;Every Poll_PDU PDUs&quot; and &quot;Every Poll_Byte Bytes&quot;, introduced their descriptions, and added an Editor&#x27;s note that their configurability is FFS;Added description on status reporting trigger &quot;detection of reception failure of an RLC data PDU&quot;;Introduced description of the status prohibit function;Removed Editor&#x27;s note on the possibility to define more RLC control PDUs (no more RLC control PDUs will be defined);Clarified the &quot;most significant bit&quot; and &quot;least significant bit&quot; in an RLC PDU;Removed reference to bit numbers in RLC PDU;Modified the order of fields in the 1byte UMD PDU header;Removed Editor&#x27;s note on the order of fields in the AMD PDU / AMD PDU segment header (they are now confirmed);Modified definition of ACK_SN;Defined the special value of SOend;Added description on the UM modulus operation;Removed state variables VR(R-SO), VR(X-SO) and VR(UMR);Modified description/definition of state variables VR(MR), VR(X), VR(MS), VR(UR) and VR(UX);Introduced new state variables VR(H) and VR(UH) and their descriptions;Introduced new constants Poll_PDU and Poll_Byte and their descriptions;Clarified that only one T_reordering will be running at one time for an RLC entity;Introduced new timer T_status_prohibit and its description;Editorial corrections were made.</td>
+    <td>8.1.0</td>
+  </tr>
+  <tr>
+    <td>2008-05</td>
+    <td>RP-40</td>
+    <td>RP-080411</td>
+    <td>0002</td>
+    <td>1</td>
+    <td></td>
+    <td>Clarification on STATUS PDU size for BSR</td>
+    <td>8.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-40</td>
+    <td>RP-080411</td>
+    <td>0003</td>
+    <td>-</td>
+    <td></td>
+    <td>Removal of Editor&#x27;s Note on updating of VR(MS) upon expiry of T_reordering</td>
+    <td>8.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-40</td>
+    <td>RP-080411</td>
+    <td>0004</td>
+    <td>-</td>
+    <td></td>
+    <td>Removal of STATUS receiving window</td>
+    <td>8.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-40</td>
+    <td>RP-080411</td>
+    <td>0005</td>
+    <td>-</td>
+    <td></td>
+    <td>Duplicate detection in UM RLC</td>
+    <td>8.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-40</td>
+    <td>RP-080411</td>
+    <td>0006</td>
+    <td>-</td>
+    <td></td>
+    <td>Correction to Polling Procedure</td>
+    <td>8.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-40</td>
+    <td>RP-080411</td>
+    <td>0007</td>
+    <td>-</td>
+    <td></td>
+    <td>Miscellaneous corrections to TS 36.322</td>
+    <td>8.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-40</td>
+    <td>RP-080411</td>
+    <td>0008</td>
+    <td>-</td>
+    <td></td>
+    <td>Small corrections to RLC</td>
+    <td>8.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-40</td>
+    <td>RP-080411</td>
+    <td>0012</td>
+    <td>-</td>
+    <td></td>
+    <td>CR to 36.322 on correction to RLC PDU reassembly</td>
+    <td>8.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-40</td>
+    <td>RP-080411</td>
+    <td>0015</td>
+    <td>1</td>
+    <td></td>
+    <td>36.322 CR on &#x27;RLC retransmission count and addition of Configurable Parameters&#x27;</td>
+    <td>8.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-40</td>
+    <td>RP-080411</td>
+    <td>0017</td>
+    <td>-</td>
+    <td></td>
+    <td>Service alignments with TS 36.323 (PDCP)</td>
+    <td>8.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-40</td>
+    <td>RP-080411</td>
+    <td>0018</td>
+    <td>-</td>
+    <td></td>
+    <td>CR on the procedure to construct the STATUS PDU</td>
+    <td>8.2.0</td>
+  </tr>
+  <tr>
+    <td>2008-09</td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0019</td>
+    <td>1</td>
+    <td></td>
+    <td>Clarification of polling</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0020</td>
+    <td>-</td>
+    <td></td>
+    <td>Corrections to formatting</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0021</td>
+    <td>2</td>
+    <td></td>
+    <td>The value of ACK_SN for partial STATUS PDU</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0022</td>
+    <td>1</td>
+    <td></td>
+    <td>Error cases for RLC</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0024</td>
+    <td>-</td>
+    <td></td>
+    <td>RLC entity re-establishment</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0025</td>
+    <td>-</td>
+    <td></td>
+    <td>Miscellaneous corrections to RLC specification</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0029</td>
+    <td>-</td>
+    <td></td>
+    <td>Clarification of the reordering timer</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0032</td>
+    <td>-</td>
+    <td></td>
+    <td>Clarification of Triggering Conditions for Status Reports</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0033</td>
+    <td>-</td>
+    <td></td>
+    <td>RLC UMD PDU formats with LI</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0036</td>
+    <td>-</td>
+    <td></td>
+    <td>Correction on UM Receive Operation</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0039</td>
+    <td>-</td>
+    <td></td>
+    <td>Correction for TM RLC entity: 6.1.2.3</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-41</td>
+    <td>RP-080691</td>
+    <td>0040</td>
+    <td>-</td>
+    <td></td>
+    <td>Removal of MBMS channels: 6.1.2.3</td>
+    <td>8.3.0</td>
+  </tr>
+  <tr>
+    <td>2008-12</td>
+    <td>RP-42</td>
+    <td>RP-081019</td>
+    <td>0043</td>
+    <td>-</td>
+    <td></td>
+    <td>Proposed CR for aligning the construction of partial Status PDUs with intended operation</td>
+    <td>8.4.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-42</td>
+    <td>RP-081019</td>
+    <td>0046</td>
+    <td>-</td>
+    <td></td>
+    <td>Error Handling in RLC</td>
+    <td>8.4.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-42</td>
+    <td>RP-081019</td>
+    <td>0047</td>
+    <td>-</td>
+    <td></td>
+    <td>Miscellaneous corrections to 36.322</td>
+    <td>8.4.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-42</td>
+    <td>RP-081019</td>
+    <td>0048</td>
+    <td>-</td>
+    <td></td>
+    <td>Correction to Segment Offset fields</td>
+    <td>8.4.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-42</td>
+    <td>RP-081019</td>
+    <td>0049</td>
+    <td>-</td>
+    <td></td>
+    <td>Correction to the description of the delivery of RLC SDU</td>
+    <td>8.4.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-42</td>
+    <td>RP-081019</td>
+    <td>0050</td>
+    <td>-</td>
+    <td></td>
+    <td>Minor issues on RLC</td>
+    <td>8.4.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-42</td>
+    <td>RP-081019</td>
+    <td>0054</td>
+    <td>-</td>
+    <td></td>
+    <td>The setting of VR(X)</td>
+    <td>8.4.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-42</td>
+    <td>RP-081019</td>
+    <td>0055</td>
+    <td>-</td>
+    <td></td>
+    <td>Adding RLC TM operation</td>
+    <td>8.4.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-42</td>
+    <td>RP-081019</td>
+    <td>0056</td>
+    <td>-</td>
+    <td></td>
+    <td>Removing a redundant text on VT(A) setting</td>
+    <td>8.4.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-42</td>
+    <td>RP-081019</td>
+    <td>0057</td>
+    <td>-</td>
+    <td></td>
+    <td>Counting RLC Retransmissions</td>
+    <td>8.4.0</td>
+  </tr>
+  <tr>
+    <td>2009-03</td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0058</td>
+    <td>-</td>
+    <td></td>
+    <td>CR to 36.322 on RRC Parameters</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0059</td>
+    <td>-</td>
+    <td></td>
+    <td>Local NACKing in UE</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0060</td>
+    <td>-</td>
+    <td></td>
+    <td>Supporting RLC SDU larger than 2047 octets</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0061</td>
+    <td>-</td>
+    <td></td>
+    <td>CR on the in sequence delivery function for UM</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0062</td>
+    <td>-</td>
+    <td></td>
+    <td>Correction to Delivery of PDU</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0063</td>
+    <td>1</td>
+    <td></td>
+    <td>Issues with SO, SOstart, and SOend fields</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0064</td>
+    <td>-</td>
+    <td></td>
+    <td>Miscellaneous corrections to RLC specification</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0065</td>
+    <td>-</td>
+    <td></td>
+    <td>Correction to status reporting triggering condition</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0066</td>
+    <td>-</td>
+    <td></td>
+    <td>Alignment of one condition on setting the poll bit</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0067</td>
+    <td>1</td>
+    <td></td>
+    <td>Proposed CR to 36.322 on Clarification on Polling procedure</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0068</td>
+    <td>1</td>
+    <td></td>
+    <td>Every Poll_PDU PDUs and Every Poll_Byte bytes triggers</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0069</td>
+    <td>-</td>
+    <td></td>
+    <td>UE behaviour when T_poll_retransmit expires</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-43</td>
+    <td>RP-090129</td>
+    <td>0076</td>
+    <td>-</td>
+    <td></td>
+    <td>Definition of RETX_COUNT missing</td>
+    <td>8.5.0</td>
+  </tr>
+  <tr>
+    <td>2009-06</td>
+    <td>RP-44</td>
+    <td>RP-090514</td>
+    <td>0080</td>
+    <td>-</td>
+    <td></td>
+    <td>Reset of T_poll_retransmission</td>
+    <td>8.6.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-44</td>
+    <td>RP-090514</td>
+    <td>0081</td>
+    <td>-</td>
+    <td></td>
+    <td>RLC functions</td>
+    <td>8.6.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-44</td>
+    <td>RP-090514</td>
+    <td>0082</td>
+    <td>1</td>
+    <td></td>
+    <td>Correction to handling of reserved field</td>
+    <td>8.6.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-44</td>
+    <td>RP-090514</td>
+    <td>0083</td>
+    <td>-</td>
+    <td></td>
+    <td>Correction to condition for stopping t-Reordering in AM mode</td>
+    <td>8.6.0</td>
+  </tr>
+  <tr>
+    <td>2009-09</td>
+    <td>RP-45</td>
+    <td>RP-090906</td>
+    <td>0084</td>
+    <td>-</td>
+    <td></td>
+    <td>Possible misinterpretation on incrementing RETX_COUNT</td>
+    <td>8.7.0</td>
+  </tr>
+  <tr>
+    <td>2009-12</td>
+    <td>RP-46</td>
+    <td>RP-091341</td>
+    <td>0087</td>
+    <td>-</td>
+    <td></td>
+    <td>Capturing MBMS agreements in RLC</td>
+    <td>9.0.0</td>
+  </tr>
+  <tr>
+    <td>2010-03</td>
+    <td>RP-47</td>
+    <td>RP-100305</td>
+    <td>0089</td>
+    <td>-</td>
+    <td></td>
+    <td>Correction to RLC entity</td>
+    <td>9.1.0</td>
+  </tr>
+  <tr>
+    <td>2010-06</td>
+    <td>RP-48</td>
+    <td>RP-100536</td>
+    <td>0091</td>
+    <td>1</td>
+    <td></td>
+    <td>Correction of RLC VR(H) update</td>
+    <td>9.2.0</td>
+  </tr>
+  <tr>
+    <td>2010-09</td>
+    <td>RP-49</td>
+    <td>RP-100851</td>
+    <td>0092</td>
+    <td>1</td>
+    <td></td>
+    <td>Miscellaneous corrections to RLC</td>
+    <td>9.3.0</td>
+  </tr>
+  <tr>
+    <td>2010-12</td>
+    <td>RP-50</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td></td>
+    <td>Upgrade to Release 10 - no technical change</td>
+    <td>10.0.0</td>
+  </tr>
+  <tr>
+    <td>2012-09</td>
+    <td>RP-57</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td></td>
+    <td>Upgrade to Release 11 - no technical change</td>
+    <td>11.0.0</td>
+  </tr>
+  <tr>
+    <td>2014-06</td>
+    <td>RP-64</td>
+    <td>RP-140892</td>
+    <td>0099</td>
+    <td>1</td>
+    <td></td>
+    <td>Extended RLC LI field</td>
+    <td>12.0.0</td>
+  </tr>
+  <tr>
+    <td>2014-09</td>
+    <td>RP-65</td>
+    <td>RP-141511</td>
+    <td>0101</td>
+    <td>-</td>
+    <td></td>
+    <td>Corrections to configuration of extended RLC LI field</td>
+    <td>12.1.0</td>
+  </tr>
+  <tr>
+    <td>2014-12</td>
+    <td>RP-66</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td></td>
+    <td>MCC editorial update</td>
+    <td>12.1.1</td>
+  </tr>
+  <tr>
+    <td>2015-03</td>
+    <td>RP-67</td>
+    <td>RP-150376</td>
+    <td>0105</td>
+    <td>1</td>
+    <td></td>
+    <td>RLC concatenation for extended LI field</td>
+    <td>12.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-67</td>
+    <td>RP-150374</td>
+    <td>0107</td>
+    <td>-</td>
+    <td></td>
+    <td>Introduction of ProSe Direct Communication</td>
+    <td>12.2.0</td>
+  </tr>
+  <tr>
+    <td>2015-09</td>
+    <td>RP-69</td>
+    <td>RP-151441</td>
+    <td>0108</td>
+    <td>-</td>
+    <td></td>
+    <td>Corrections for STCH in 36.322</td>
+    <td>12.3.0</td>
+  </tr>
+  <tr>
+    <td>2015-12</td>
+    <td>RP-70</td>
+    <td>RP-152071</td>
+    <td>0114</td>
+    <td>-</td>
+    <td></td>
+    <td>Introduction of extended RLC protocol formats for CA enhancement</td>
+    <td>13.0.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-70</td>
+    <td>RP-152080</td>
+    <td>0115</td>
+    <td>-</td>
+    <td></td>
+    <td>Introduction of SC-PTM in RLC</td>
+    <td>13.0.0</td>
+  </tr>
+  <tr>
+    <td>2016-03</td>
+    <td>RP-71</td>
+    <td>RP-160470</td>
+    <td>0116</td>
+    <td>1</td>
+    <td></td>
+    <td>Clarification on Polling for last data</td>
+    <td>13.1.0</td>
+  </tr>
+  <tr>
+    <td>2016-06</td>
+    <td>RP-72</td>
+    <td>RP-161078</td>
+    <td>0120</td>
+    <td>1</td>
+    <td></td>
+    <td>Addition of sidelink in the overview model</td>
+    <td>13.2.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-72</td>
+    <td>RP-161081</td>
+    <td>0121</td>
+    <td>2</td>
+    <td></td>
+    <td>Introduction of NB-IoT</td>
+    <td>13.2.0</td>
+  </tr>
+  <tr>
+    <td>2017-03</td>
+    <td>RP-75</td>
+    <td>RP-170655</td>
+    <td>0126</td>
+    <td>-</td>
+    <td>F</td>
+    <td>Correction on channel bandwidth definition for NB-IoT</td>
+    <td>13.3.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-75</td>
+    <td>RP-170637</td>
+    <td>0125</td>
+    <td>2</td>
+    <td>B</td>
+    <td>Introducing Rel-14 NB-IoT enhancements into RLC</td>
+    <td>14.0.0</td>
+  </tr>
+  <tr>
+    <td>2017-09</td>
+    <td>RP-77</td>
+    <td>RP-171914</td>
+    <td>0127</td>
+    <td>2</td>
+    <td>C</td>
+    <td>Packet Reordering for Sidelink</td>
+    <td>14.1.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-77</td>
+    <td>RP-171920</td>
+    <td>0129</td>
+    <td>1</td>
+    <td>A</td>
+    <td>Corrections on logical channel for Rel-13 MTC</td>
+    <td>14.1.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-77</td>
+    <td>RP-171915</td>
+    <td>0130</td>
+    <td>-</td>
+    <td>F</td>
+    <td>Corrections to RLC for re-establishment for NB-IoT using control plane</td>
+    <td>14.1.0</td>
+  </tr>
+  <tr>
+    <td>2017-12</td>
+    <td>RP-78</td>
+    <td>RP-172614</td>
+    <td>0132</td>
+    <td>1</td>
+    <td>B</td>
+    <td>EN-DC impacts to LTE RLC</td>
+    <td>15.0.0</td>
+  </tr>
+  <tr>
+    <td>2018-04</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Added 5G logo to the cover page</td>
+    <td>15.0.1</td>
+  </tr>
+  <tr>
+    <td>2018-07</td>
+    <td>RP-80</td>
+    <td>RP-181252</td>
+    <td>0133</td>
+    <td>1</td>
+    <td>B</td>
+    <td>Introduction of further NB-IoT enhancements in 36.322</td>
+    <td>15.1.0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RP-80</td>
+    <td>RP-181247</td>
+    <td>0138</td>
+    <td>1</td>
+    <td>B</td>
+    <td>Introduction of Ultra Reliable Low Latency Communication for LTE</td>
+    <td>15.1.0</td>
+  </tr>
+  <tr>
+    <td>2019-06</td>
+    <td>RP-84</td>
+    <td>RP-191382</td>
+    <td>0141</td>
+    <td>2</td>
+    <td>F</td>
+    <td>Correction on SN size for RLC AM</td>
+    <td>15.2.0</td>
+  </tr>
+  <tr>
+    <td>2019-09</td>
+    <td>RP-85</td>
+    <td>RP-192198</td>
+    <td>0142</td>
+    <td>-</td>
+    <td>F</td>
+    <td>Normative Annex of CRs Containing Early Implementable Features and Corrections</td>
+    <td>15.3.0</td>
+  </tr>
+  <tr>
+    <td>2020-07</td>
+    <td>RP-88</td>
+    <td>RP-201168</td>
+    <td>0145</td>
+    <td>2</td>
+    <td>F</td>
+    <td>Clarification on RLC UM SN size for NB-IoT</td>
+    <td>15.4.0</td>
+  </tr>
+  <tr>
+    <td>2020-07</td>
+    <td>RP-88</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Upgraded to Rel-16</td>
+    <td>16.0.0</td>
+  </tr>
+  <tr>
+    <td>2022-03</td>
+    <td>RP-95</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Upgraded to Rel-17, no technical change</td>
+    <td>17.0.0</td>
+  </tr>
+  <tr>
+    <td>2024-03</td>
+    <td>RP-103</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Upgraded to Rel-18, no technical change</td>
+    <td>18.0.0</td>
+  </tr>
+  <tr>
+    <td>2025-09</td>
+    <td>RP-109</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Upgraded to Rel-19, no technical change</td>
+    <td>19.0.0</td>
+  </tr>
+</table>

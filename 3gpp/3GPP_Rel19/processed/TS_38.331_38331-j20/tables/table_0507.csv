@@ -1,0 +1,3 @@
+RA-Prioritization field descriptions
+powerRampingStepHighPriorityPower ramping step applied for prioritized random access procedure.
+"scalingFactorBIScaling factor for the backoff indicator (BI) for the prioritized random access procedure. (see TS 38.321 [3], clause 5.1.4). Value zero corresponds to 0, value dot25 corresponds to 0.25 and so on."

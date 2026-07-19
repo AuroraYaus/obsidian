@@ -1,0 +1,6 @@
+SPUCCH format,Frequency hopping,Slot,Set of values for
+"1, 1a, 1b",Enabled,1st,"1, 4, 5"
+,,2nd,"1, 2, 5"
+,Disabled,1st and 2nd,"2, 3, 4"
+3,Disabled,1st and 2nd,"1, 5"
+4,Enabled,1st and 2nd,"1, 5"

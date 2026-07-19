@@ -1,0 +1,4 @@
+MasterInformationBlockSidelink field descriptions
+directFrameNumberIndicates the frame number in which S-SSB transmitted.
+"inCoverageValue true indicates that the UE transmitting the MasterInformationBlockSidelink is in network coverage, or UE selects GNSS timing as the synchronization reference source."
+slotIndexIndicates the slot index in which S-SSB transmitted.

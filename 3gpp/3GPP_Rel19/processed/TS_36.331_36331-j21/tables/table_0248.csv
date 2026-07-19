@@ -1,0 +1,4 @@
+MeasResultSSTD field descriptions
+frameBoundaryOffsetResultIndicates the frame boundary difference between the PCell and the PSCell as an integer value according to TS 36.214 [48].
+sfn-OffsetResultIndicates the SFN difference between the PCell and the PSCell as an integer value according to TS 36.214 [48].
+subframeBoundaryOffsetResultIndicates the subframe boundary difference between the PCell and the PSCell as an integer value according to the mapping table in TS 36.133 [16].

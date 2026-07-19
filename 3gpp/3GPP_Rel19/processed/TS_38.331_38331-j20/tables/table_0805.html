@@ -1,0 +1,47 @@
+<table>
+  <tr>
+    <td>MBS-SessionInfoListMulticast field descriptions</td>
+  </tr>
+  <tr>
+    <td>g-RNTIG-RNTI used to scramble the scheduling and transmission of multicast MTCH.</td>
+  </tr>
+  <tr>
+    <td>mbs-SessionIdIndicates an identifier of the MBS session to be received by the UE in RRC_INACTIVE.</td>
+  </tr>
+  <tr>
+    <td>mrb-ListMulticastA list of multicast MRBs to which the associated MBS multicast session is mapped to.</td>
+  </tr>
+  <tr>
+    <td>mtch-NeighbourCellIndicates neighbour cells which provide this service on MTCH for RRC_INACTIVE. The first bit is set to 1 if the service is provided on MTCH in the first cell in mbs-NeighbourCellList, otherwise it is set to 0. The second bit is set to 1 if the service is provided on MTCH in the second cell in mbs-NeighbourCellList, and so on. If the service is not available in any neighbouring cell and mbs-NeighbourCellList is signalled, the network sets all bits in this field to 0. The field is absent when mbs-NeighbourCellList is absent or an empty mbs-NeighbourCellList is signalled. If this field is absent when mbs-NeighbourCellList is absent or a non-empty mbs-NeighbourCellList is signalled, the related service may or may not be available in any neighbouring cell, i.e. the UE cannot determine the presence or absence of an MBS service in neighbouring cells based on the absence of this field. If this field is absent and an empty mbs-NeighbourCellList is signalled, then the UE shall assume that MBS multicast services signalled in mbs-SessionInfoListMulticast in the MBSMulticastConfiguration message are not provided in any neighbour cell.</td>
+  </tr>
+  <tr>
+    <td>mtch-SchedulingInfoIndicates the index of DRX configuration entry in drx-ConfigPTM-List that is used for scheduling the MTCH. The value 0 corresponds to the first entry in drx-ConfigPTM-List, the value 1 corresponds to the second entry in drx-ConfigPTM-List and so on. In case mtch-schedulingInfo is absent for a G-RNTI (i.e. no PTM DRX), the UE shall monitor for PDCCH scrambled with G-RNTI in any slot according to the search space configured for MTCH.</td>
+  </tr>
+  <tr>
+    <td>mtch-SSB-MappingWindowIndexIndicates the index of MTCH-SSB-MappingWindowCycleOffset configuration entry in MTCH-SSB-MappingWindowList. The value 0 corresponds to the first entry in MTCH-SSB-MappingWindowList, the value 1 corresponds to the second entry in MTCH-SSB-MappingWindowList and so on. This field is set to the same value for all MBS sessions mapped to the same G-RNTI.</td>
+  </tr>
+  <tr>
+    <td>pdcp-SN-SizeDLIndicates PDCP sequence number size of 12 or 18 bits, as specified in TS 38.323 [5].</td>
+  </tr>
+  <tr>
+    <td>pdsch-ConfigIndexIndicates the index of PDSCH configuration entry in pdsch-ConfigList for MTCH. Value 0 corresponds to the first entry in pdsch-ConfigList, the value 1 corresponds to the second entry in pdsch-ConfigList and so on. When the field is absent the UE applies the first entry in pdsch-ConfigList for MTCH.</td>
+  </tr>
+  <tr>
+    <td>pdcp-SyncIndicatorIndicates the PDCP COUNT of the corresponding multicast session is synchronized in the RNA, i.e. the cells in the RNA follow a common QoS flow to MRB mapping rule and at the same time PDCP COUNT is set according to the MBS QoS Flow SN.</td>
+  </tr>
+  <tr>
+    <td>sn-FieldLengthIndicates RLC SN field size of 6 or12 bits, as specified in TS 38.322 [4].</td>
+  </tr>
+  <tr>
+    <td>stopMonitoringRNTIIndicates the UE to stop monitoring the G-RNTI for the corresponding multicast session.</td>
+  </tr>
+  <tr>
+    <td>t-ReassemblyTimer for reassembly in TS 38.322 [4], in milliseconds. Value ms0 means 0 ms, value ms5 means 5 ms and so on.</td>
+  </tr>
+  <tr>
+    <td>t-ReorderingValue in ms of t-Reordering specified in TS 38.323 [5]. Value ms1 corresponds to 1 ms, value ms10 corresponds to 10 ms, and so on.</td>
+  </tr>
+  <tr>
+    <td>thresholdIndexIndicates the index of thresholdMBS entry in thresholdMBS-List that is used for RRC connection resume for a UE receiving the corresponding multicast session in RRC_INACTIVE. Value 0 corresponds to the first entry in thresholdMBS-List, the value 1 corresponds to the second entry in thresholdMBS-List and so on.</td>
+  </tr>
+</table>

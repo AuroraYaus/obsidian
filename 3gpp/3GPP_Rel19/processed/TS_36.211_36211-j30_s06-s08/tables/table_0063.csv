@@ -1,0 +1,4 @@
+Range of,Condition
+,if the UE is configured with a SCG
+,if the UE is configured with shortProcessingTime (see TS 36.331 [9])
+,if the UE is configured with dl-STTI-Length and ul-STTI-Length (see TS 36.331 [9]) set to 'slot' for the serving cell

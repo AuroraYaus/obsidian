@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <td>DLDedicatedMessageSegment field descriptions</td>
+  </tr>
+  <tr>
+    <td>segmentNumberIdentifies the sequence number of a segment within the encoded DL DCCH message. The network transmits the segments with continuously increasing segmentNumber order so that the UE&#x27;s RRC layer may expect to obtain them from lower layers in the correct order. Hence, the UE is not required to perform segment re-ordering on RRC level.</td>
+  </tr>
+  <tr>
+    <td>rrc-MessageSegmentContainerIncludes a segment of the encoded DL DCCH message. The size of the included segment in this container should be small enough so the resulting encoded RRC message PDU is less than or equal to the PDCP SDU size limit.</td>
+  </tr>
+  <tr>
+    <td>rrc-MessageSegmentTypeIndicates whether the included DL DCCH message segment is the last segment of the message or not.</td>
+  </tr>
+</table>

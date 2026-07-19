@@ -1,0 +1,4 @@
+RRCConnectionReestablishmentComplete-NB field descriptions
+anr-InfoAvailableIndicates the availability of ANR measurement information.
+measResultServCellThis field refers to the last idle mode measurement results taken of the serving cell.
+rlf-InfoAvailableIndicates the availability of radio link failure related information.

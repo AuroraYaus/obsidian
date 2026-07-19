@@ -1,0 +1,4 @@
+SL-PRS-ResourceSharedSL-PRS-RP field descriptions
+mNumberOfSymbolsIndicates the number of symbols in the SL PRS resource in the shared resource pool. The maximum value that is configured for this field is 4.
+"sl-PRS-CombSizeN-AndReOffsetIndicates a comb offset and a comb size of the SL PRS resource in a shared SL PRS resource pool (see TS 38.214 [19], clause 8.2.4)."
+sl-PRS-ResourceIDIndicates the index of the SL PRS resource in shared resource pool.

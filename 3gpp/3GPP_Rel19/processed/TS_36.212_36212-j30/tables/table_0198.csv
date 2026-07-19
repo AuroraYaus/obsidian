@@ -1,0 +1,5 @@
+Value,PUSCH starting position
+00,symbol 0
+01,25µs in symbol 0
+10,(25+TA) µs in symbol 0
+11,symbol 1

@@ -1,0 +1,9 @@
+Index,LCID values
+00000,Reserved
+00001-01010,Identity of the logical channel
+01011-10100,Identity of the logical channel which is used for duplication
+10101-11011,Reserved
+11100,PC5-S messages that are not protected
+11101,"PC5-S messages ""Direct Security Mode Command"" and ""Direct Security Mode Complete"""
+11110,Other PC5-S messages that are protected
+11111,Padding

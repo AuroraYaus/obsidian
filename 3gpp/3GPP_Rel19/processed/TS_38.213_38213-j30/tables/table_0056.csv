@@ -1,0 +1,17 @@
+Index,SS/PBCH block and CORESET multiplexing pattern,Number of RBs NRBCORESET,Number of Symbols  NsymbCORESET,Offset (RBs)
+0,1,48,1,0
+1,1,48,1,8
+2,1,48,2,0
+3,1,48,2,8
+4,2,24,1,-41 if  -42 if kSSB=0kSSB>0
+5,2,24,1,25
+6,2,48,1,-41 if  -42 if kSSB=0kSSB>0
+7,2,48,1,49
+8,Reserved,,,
+9,Reserved,,,
+10,Reserved,,,
+11,Reserved,,,
+12,Reserved,,,
+13,Reserved,,,
+14,Reserved,,,
+15,Reserved,,,

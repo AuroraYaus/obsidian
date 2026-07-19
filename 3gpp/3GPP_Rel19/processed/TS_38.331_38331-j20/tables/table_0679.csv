@@ -1,0 +1,2 @@
+UE-NR-Capability field descriptions
+featureSetCombinationsA list of FeatureSetCombination:s for supportedBandCombinationList in UE-NR-Capability. The FeatureSetDownlink:s and FeatureSetUplink:s referred to from these FeatureSetCombination:s are defined in the featureSets list in UE-NR-Capability.

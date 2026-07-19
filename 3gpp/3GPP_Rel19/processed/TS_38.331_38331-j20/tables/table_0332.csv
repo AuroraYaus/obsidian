@@ -1,0 +1,5 @@
+LCG-DSR-Config field descriptions
+"dsr-ReportingThresListList of remaining time thresholds configured in ascending order for reporting delay status information in the Multiple Entry DSR MAC CE, as specified in TS 38.321 [3]. At least one configured DSR reporting threshold should be no lower than the remainingTimeThreshold. If at least one LCG is configured with dsr-ReportingThresList, any LCG configured with remainingTimeThreshold should be configured with dsr-ReportingThresList. The IE DSR-ReportingThreshold in number of milliseconds."
+dsr-ReportNonDelayCriticalDataIndicates whether the UE should consider the non-delay reporting data ahead of delay reporting data in the delay status reporting data volume calculation for the Logical Channel Group as specified in TS 38.323 [5].
+lcg-IdIdentifier of the Logical Channel Group which the DSR configuration refers to.
+"remainingTimeThresholdRemaining time threshold used for triggering Single Entry and Multiple Entry DSR for the logical channels belonging to this Logical Channel Group, as specified in TS 38.321 [3]. Value in number of milliseconds."

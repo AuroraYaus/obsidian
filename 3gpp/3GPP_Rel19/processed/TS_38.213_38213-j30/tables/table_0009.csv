@@ -1,0 +1,8 @@
+RAR grant field,Number of bits
+Frequency hopping flag,1
+PUSCH frequency resource allocation,"12, for operation with shared spectrum channel access in FR1 or for FR2-2 when ChannelAccessMode2-r17 is provided14, otherwise"
+PUSCH time resource allocation,4
+MCS,4
+TPC command for PUSCH,3
+CSI request,1
+ChannelAccess-CPext,"2, for operation with shared spectrum channel access in FR1 or for FR2-2 when ChannelAccessMode2-r17 is provided0, otherwise"

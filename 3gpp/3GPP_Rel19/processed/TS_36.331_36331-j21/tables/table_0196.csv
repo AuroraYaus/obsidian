@@ -1,0 +1,15 @@
+CSFB-RegistrationParam1XRTT field descriptions
+foreignNIDRegThe CDMA2000 1xRTT NID roamer registration indicator.
+foreignSIDRegThe CDMA2000 1xRTT SID roamer registration indicator.
+homeRegThe CDMA2000 1xRTT Home registration indicator.
+multipleNIDThe CDMA2000 1xRTT Multiple NID storage indicator.
+multipleSIDThe CDMA2000 1xRTT Multiple SID storage indicator.
+nidUsed along with the sid as a pair to control when the UE should Register or Re-Register with the CDMA2000 1xRTT network.
+parameterRegThe CDMA2000 1xRTT Parameter-change registration indicator.
+"powerDownRegThe CDMA2000 1xRTT Power-down registration indicator. If set to TRUE, the UE that has a valid / current CDMA2000 1xRTT pre-registration will perform a CDMA2000 1xRTT power down registration when it is switched off."
+powerUpRegThe CDMA2000 1xRTT Power-up registration indicator.
+registrationPeriodThe CDMA2000 1xRTT Registration period.
+registrationZoneThe CDMA2000 1xRTT Registration zone.
+sidUsed along with the nid as a pair to control when the UE should Register or Re-Register with the CDMA2000 1xRTT network.
+totalZoneThe CDMA2000 1xRTT Number of registration zones to be retained.
+zoneTimerThe CDMA2000 1xRTT Zone timer length.

@@ -1,0 +1,4 @@
+CLI-RSSI-MeasResourceSet field descriptions
+aperiodicTriggeringOffsetIndicates a slot offset between the slot containing the DCI that triggers a set of aperiodic CLI-RSSI resources and the slot in which the CLI-RSSI resource set is measured.
+cli-RSSI-MeasResourceIdListIndicates the CLI-RSSI measurement resources associated with this CLI-RSSI measurement resource set.
+cli-RSSI-MeasResourceSetIdIndicates ID of CLI-RSSI measurement resource set.

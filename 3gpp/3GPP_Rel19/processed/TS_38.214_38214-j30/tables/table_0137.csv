@@ -1,0 +1,6 @@
+Scheduled bandwidth,Number of PT-RS groups,Number of samples per PT-RS group
+NRB0 NRB < NRB1,2,2
+NRB1  NRB < NRB2,2,4
+NRB2  NRB < NRB3,4,2
+NRB3  NRB < NRB4,4,4
+NRB4  NRB,8,4
