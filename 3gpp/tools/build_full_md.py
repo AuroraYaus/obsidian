@@ -185,13 +185,11 @@ def _run_text(r: ET.Element) -> str:
                     if _SVG_DIR is not None and (_SVG_DIR / svg_name).exists():
                         result = _extractor().extract_file(_SVG_DIR / svg_name)
                         if result["text"]:
-                            is_complex = result.get("unreliable", False)
-                            if is_complex:
-                                parts.append(
-                                    f"![](media_svg/{svg_name}) [公式≈: {result['text']}]"
-                                )
-                            else:
-                                parts.append(f"[公式: {result['text']}]")
+                            # 统一输出 SVG 引用 + 文本注释（agent 可读 + Obsidian 显示）
+                            approx = "≈" if result.get("unreliable", False) else ""
+                            parts.append(
+                                f"![](media_svg/{svg_name}) [公式{approx}: {result['text']}]"
+                            )
                         else:
                             parts.append(f"![](media_svg/{svg_name})")
                     else:
