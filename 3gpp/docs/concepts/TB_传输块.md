@@ -39,7 +39,7 @@ TB 是一整件快递，CB 是快递拆开的包裹。每个包裹可以先检�
 
 - LTE：TS 36.212 Rel-19 §5.1.2；§5.2/§5.3 的共享信道处理链路。
 - NR：TS 38.212 Rel-19 §6.2 UL-SCH；§7.2 DL-SCH/PCH。
-- 本地锚点示例：`3GPP_Rel19/processed/TS_36.212_36212-j30/TS_36.212_36212-j30_content.md`；`3GPP_Rel19/processed/TS_38.212_38212-j30/TS_38.212_38212-j30_content.md`。
+- 本地锚点示例：`3GPP_Rel19/processed/TS_36.212_36212-j30/content.md`；`3GPP_Rel19/processed/TS_38.212_38212-j30/content.md`。
 
 ## 图谱关联
 

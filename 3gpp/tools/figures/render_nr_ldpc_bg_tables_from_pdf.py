@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Crop TS 38.212 LDPC BG1/BG2 tables from the locally rendered PDF."""
+"""@file render_nr_ldpc_bg_tables_from_pdf.py
+@brief 从 TS 38.212 本地渲染 PDF 中裁剪拼接 LDPC BG1/BG2 移位表图片
+@date 2025
+@note 设计意图：使用 pdftoppm 将 PDF 源文件的第 21-24 页光栅化，然后按预定坐标裁剪、
+  拼接表格片段，输出完整移位表（给 L1 讲义）和分段清晰表（给 L2 讲义）。
+@see docs/L1/T3.4_TS38.212_BG_shift_tables.md
+@see docs/L2/T8.3_TS38.212_BG_shift_table_detail.md
+"""
 
 from __future__ import annotations
 
@@ -67,6 +74,11 @@ PAGE_SPECS = {
 
 
 def render_pages(tmpdir: Path) -> None:
+    """@brief 用 pdftoppm 将 PDF 源文件第 21-24 页渲染为 PNG
+    @param tmpdir 输出临时目录
+    @throws FileNotFoundError PDF 源文件不存在时抛出
+    @throws RuntimeError pdftoppm 命令行工具不可用时抛出
+    @note 渲染分辨率 220 DPI，文件名格式 ts38212-{页码}.png"""
     if not PDF.exists():
         raise FileNotFoundError(f"missing PDF source: {PDF}")
     if shutil.which("pdftoppm") is None:
@@ -89,6 +101,11 @@ def render_pages(tmpdir: Path) -> None:
 
 
 def make_table_image(tmpdir: Path, key: str) -> Image.Image:
+    """@brief 将指定基图的多个片段裁剪拼接为完整表格图片
+    @param tmpdir 含渲染 PNG 的临时目录
+    @param key 基图标识："bg1" 或 "bg2"
+    @return 拼接完成的 PIL Image 对象
+    @note 裁剪区域 x 坐标固定 [170, 1650]，片段间留 28px 间距，四周留 40px 白边"""
     x0, x1 = 170, 1650
     gap = 28
     crops: list[Image.Image] = []
@@ -108,6 +125,10 @@ def make_table_image(tmpdir: Path, key: str) -> Image.Image:
 
 
 def save_split_table_images(tmpdir: Path, key: str) -> None:
+    """@brief 保存每个片段为独立的 L2 讲义用表格图片
+    @param tmpdir 含渲染 PNG 的临时目录
+    @param key 基图标识："bg1" 或 "bg2"
+    @note 每个片段单独裁剪并加 40px 白边保存"""
     x0, x1 = 170, 1650
     for filename, y0, y1, output in PAGE_SPECS[key]["pieces"]:
         page = Image.open(tmpdir / filename).convert("RGB")
@@ -120,6 +141,10 @@ def save_split_table_images(tmpdir: Path, key: str) -> None:
 
 
 def main() -> None:
+    """@brief 从 TS 38.212 PDF 中提取并拼接 BG1/BG2 移位表图片
+    @note 输出产物：对 BG1 和 BG2 各生成一张完整拼接图和若干张分段清晰图，
+      分别放入 docs/L1/assets/ 和 docs/L2/assets/
+    @throws subprocess.CalledProcessError pdftoppm 渲染失败时由 check=True 传播"""
     with tempfile.TemporaryDirectory(prefix="ts38212_pdf_pages_") as tmp:
         tmpdir = Path(tmp)
         render_pages(tmpdir)

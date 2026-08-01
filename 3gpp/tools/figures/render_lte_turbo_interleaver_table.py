@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Render TS 36.212 Table 5.1.3-3 as a readable teaching figure."""
+"""@file render_lte_turbo_interleaver_table.py
+@brief 渲染 TS 36.212 Table 5.1.3-3：LTE Turbo 内部交织器参数的完整教学表格
+@date 2025
+@note 设计意图：以四个分面展示 188 条 (i,K,f1,f2) 参数，黄色高亮 B=10001 手算用到的 K=4992/5056
+  和最大块长 K=6144，确保 Markdown 缩放后仍可逐行核验。
+@see docs/L1/T3.3_TS36.212_Table_5.1.3-3_interleaver.md
+"""
 
 from __future__ import annotations
 
@@ -13,14 +19,16 @@ except ModuleNotFoundError:
     from figure_text_fit import font
 
 
-
 ROOT = Path(__file__).resolve().parents[2]
 CSV_PATH = ROOT / "3GPP_Rel19/processed/TS_36.212_36212-j30/tables/table_0009.csv"
 OUT_PATH = ROOT / "docs/L1/assets/T3.3_TS36.212_Table_5.1.3-3.png"
 
 
-
 def load_entries() -> list[tuple[int, int, int, int]]:
+    """@brief 从 CSV 文件加载 Turbo 内部交织器参数表
+    @return 按 i 升序排列的 (i, K, f1, f2) 元组列表，共 188 条
+    @note CSV 源自 TS 36.212 j30，一行包含 4 个 (i,K,f1,f2) 组，
+      读取时按 offset 展开并排序"""
     entries: list[tuple[int, int, int, int]] = []
     for row in csv.reader(CSV_PATH.read_text(encoding="utf-8").splitlines()):
         if not row or row[0] == "i":
@@ -32,6 +40,13 @@ def load_entries() -> list[tuple[int, int, int, int]]:
 
 
 def centered_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt: ImageFont.FreeTypeFont, fill: str) -> None:
+    """@brief 在矩形单元格内居中绘制单行文本
+    @param draw PIL 绘图上下文
+    @param box 目标矩形 (x0, y0, x1, y1)
+    @param text 要绘制的文本
+    @param fnt 字体对象
+    @param fill 文字颜色
+    @note 水平和垂直双向居中"""
     bbox = draw.textbbox((0, 0), text, font=fnt)
     tw = bbox[2] - bbox[0]
     th = bbox[3] - bbox[1]
@@ -41,6 +56,14 @@ def centered_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], tex
 
 
 def wrapped_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt: ImageFont.FreeTypeFont, fill: str, gap: int = 4) -> None:
+    """@brief 在矩形内绘制自动换行文本（左对齐）
+    @param draw PIL 绘图上下文
+    @param box 目标矩形 (x0, y0, x1, y1)
+    @param text 原始文本
+    @param fnt 字体对象
+    @param fill 文字颜色
+    @param gap 行间距像素，默认 4
+    @note 按空格分词后贪心换行，不做断词处理"""
     words = text.split()
     lines: list[str] = []
     current = ""
@@ -69,6 +92,15 @@ def draw_cell(
     text_fill: str,
     fnt: ImageFont.FreeTypeFont,
 ) -> None:
+    """@brief 绘制单个带边框的表格单元格并居中文字
+    @param draw PIL 绘图上下文
+    @param xy 单元格矩形 (x0, y0, x1, y1)
+    @param text 单元格内文字
+    @param fill 填充颜色
+    @param outline 边框颜色
+    @param text_fill 文字颜色
+    @param fnt 字体对象
+    @note 边框宽度固定 1px"""
     draw.rectangle(xy, fill=fill, outline=outline, width=1)
     centered_text(draw, xy, text, fnt, text_fill)
 
@@ -85,6 +117,16 @@ def draw_group(
     *,
     highlight_ks: set[int],
 ) -> None:
+    """@brief 绘制一个参数分面面板（含标题、表头和所有数据行）
+    @param draw PIL 绘图上下文
+    @param entries 该分面的 (i,K,f1,f2) 条目列表
+    @param title 分面标题（如 "i = 1 .. 47"）
+    @param subtitle 分面副标题
+    @param x0 面板左上角 X 坐标
+    @param y0 面板左上角 Y 坐标
+    @param panel_w 面板宽度
+    @param row_h 行高像素
+    @note 表头深蓝色底色白字，数据行斑马条纹，高亮 K 值用黄色背景"""
     border = "#C8D0DA"
     panel_bg = "#F8FAFC"
     header_bg = "#123B63"
@@ -122,6 +164,11 @@ def draw_group(
 
 
 def main() -> None:
+    """@brief 渲染 TS 36.212 Table 5.1.3-3 完整交织器参数表
+    @note 输出文件: docs/L1/assets/T3.3_TS36.212_Table_5.1.3-3.png
+    @note 四个分面按 i 范围 (1-47, 48-94, 95-141, 142-188) 布局，
+      高亮色标注教学关键 K 值，底部附证据链说明
+    @throws SystemExit CSV 解析后条目数不为 188 时退出"""
     entries = load_entries()
     if len(entries) != 188:
         raise SystemExit(f"expected 188 entries, got {len(entries)}")

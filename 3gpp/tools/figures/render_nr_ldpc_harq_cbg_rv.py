@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Render NR LDPC HARQ soft-buffer, RV, and CBG partial retransmission diagram."""
+"""@file render_nr_ldpc_harq_cbg_rv.py
+@brief 渲染 NR LDPC HARQ Soft Buffer、RV 与 CBG 部分重传综合教学图
+@date 2025
+@note 设计意图：将 NR LDPC 的 RV/k0 地址选择、HARQ soft buffer 合并和 CBG partial retransmission
+  放在同一张图里，通过 TB/CBG/CB 层级结构、两个 circular buffer 对比（被调度 vs 未被调度）
+  和写回规则表，说明 CBGTI、CBGFI、RV 和 soft buffer 的协同作用。
+@see docs/L2/T9.3_NR_LDPC_HARQ_CBG_RV.md
+"""
 
 from __future__ import annotations
 
@@ -35,8 +42,13 @@ PALETTE = {
 }
 
 
-
 def text_center(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt, fill: str) -> None:
+    """@brief 在矩形内居中绘制单行文本
+    @param draw PIL 绘图上下文
+    @param box 目标矩形
+    @param text 文本
+    @param fnt 字体对象
+    @param fill 文字颜色"""
     bbox = draw.textbbox((0, 0), text, font=fnt)
     x = box[0] + ((box[2] - box[0]) - (bbox[2] - bbox[0])) / 2
     y = box[1] + ((box[3] - box[1]) - (bbox[3] - bbox[1])) / 2 - 1
@@ -52,6 +64,15 @@ def wrapped(
     fill: str,
     gap: int = 5,
 ) -> int:
+    """@brief 在指定位置绘制自动换行文本
+    @param draw PIL 绘图上下文
+    @param xy 起始坐标
+    @param text 原始文本
+    @param fnt 字体对象
+    @param width 每行最大像素宽度
+    @param fill 文字颜色
+    @param gap 行间距，默认 5
+    @return 绘制后的下一行 Y 坐标"""
     x, y = xy
     lines = fit_wrap_text(draw, text, fnt, width)
     for line in lines:
@@ -61,6 +82,12 @@ def wrapped(
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], color: str = "#61758A") -> None:
+    """@brief 绘制带箭头头的线段
+    @param draw PIL 绘图上下文
+    @param start 起点坐标
+    @param end 终点（箭头尖端）坐标
+    @param color 颜色，默认灰色
+    @note 箭头头长 13px、翼展 7px"""
     dx = end[0] - start[0]
     dy = end[1] - start[1]
     dist = math.hypot(dx, dy)
@@ -78,6 +105,10 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int
 
 
 def draw_hierarchy(draw: ImageDraw.ImageDraw) -> None:
+    """@brief 绘制 TB/CBG/CB 三级层级结构和 CBGTI/CBGFI 重传示意
+    @param draw PIL 绘图上下文
+    @note TB0 含两个 CBG：CBG0 (CB0,CB1) 本次不重传（mask=0），
+      CBG1 (CB2,CB3) 本次重传（mask=1），按 RV2/k0 写回"""
     draw.text((70, 205), "TB / CBG / CB 层级与本次重传 mask", font=font(28, True), fill=PALETTE["blue"])
     tb = (70, 260, 1830, 340)
     draw.rounded_rectangle(tb, radius=12, fill=PALETTE["blue_l"], outline=PALETTE["blue"], width=2)
@@ -103,6 +134,14 @@ def draw_hierarchy(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_ring(draw: ImageDraw.ImageDraw, cx: int, cy: int, title: str, retransmit: bool) -> None:
+    """@brief 绘制单个 circular buffer 环形视图，展示 RV 覆盖和重复检测
+    @param draw PIL 绘图上下文
+    @param cx 环中心 X 坐标
+    @param cy 环中心 Y 坐标
+    @param title 标题（如 "CB0 / CBG0: 未被 CBGTI 调度"）
+    @param retransmit 是否表示本次有重传数据
+    @note 环形 12 个地址用颜色区分：蓝色=RV0 历史，绿色=本次 RV2 覆盖区，
+      琥珀色=重复地址（RV0 和 RV2 重叠），灰色=未覆盖"""
     draw.text((cx - 240, cy - 210), title, font=font(24, True), fill=PALETTE["ink"])
     radius = 112
     labels = [str(i) for i in range(12)]
@@ -139,6 +178,10 @@ def draw_ring(draw: ImageDraw.ImageDraw, cx: int, cy: int, title: str, retransmi
 
 
 def draw_buffers(draw: ImageDraw.ImageDraw) -> None:
+    """@brief 绘制两个 circular buffer 对比和接收端写回规则面板
+    @param draw PIL 绘图上下文
+    @note 左侧：CB0/CBG0 未被调度，保持 RV0；右侧：CB2/CBG1 RV2 部分重传，
+      含 new coverage、repeat 累加和饱和等规则的说明表"""
     draw.text((70, 735), "RV 起点、部分重传与 soft buffer 动作", font=font(28, True), fill=PALETTE["green"])
     draw_ring(draw, 340, 1015, "CB0 / CBG0: 未被 CBGTI 调度", retransmit=False)
     draw_ring(draw, 850, 1015, "CB2 / CBG1: RV2 部分重传", retransmit=True)
@@ -162,6 +205,10 @@ def draw_buffers(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_footer(draw: ImageDraw.ImageDraw) -> None:
+    """@brief 绘制最小调试 dump 与风险检查卡片面板
+    @param draw PIL 绘图上下文
+    @note 五个检查卡片覆盖 CBGTI/CBGFI 语义、RV/k0 一致性、
+      CB 状态保持、TB CRC 边界和饱和计数"""
     panel = (70, 1395, 1830, 1710)
     draw.rounded_rectangle(panel, radius=14, fill=PALETTE["purple_l"], outline=PALETTE["purple"], width=2)
     draw.text((100, 1435), "最小调试 dump 与风险检查", font=font(28, True), fill=PALETTE["purple"])
@@ -181,6 +228,11 @@ def draw_footer(draw: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    """@brief 渲染 NR LDPC HARQ/CBG/RV 综合教学图
+    @note 输出文件: docs/L2/assets/T9.3_NR_LDPC_HARQ_CBG_RV.png
+    @note 图中包含 TB/CBG/CB 三级层级、两个 circular buffer 对比（有无重传）
+      和调试检查卡片，核心信息是 CBGTI 决定重传范围、CBGFI 决定是否合并、
+      RV 决定地址起点、soft buffer 按地址保持/累加"""
     img = Image.new("RGB", (1900, 1780), PALETTE["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((70, 40), "NR LDPC HARQ Soft Buffer、RV 与 CBG 部分重传", font=font(36, True), fill=PALETTE["ink"])

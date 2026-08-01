@@ -1,4 +1,12 @@
 #!/usr/bin/env python3
+"""
+@file extract_3gpp_word.py
+@brief 从 3GPP Word 文件（.docx/.doc）中批量抽取结构化内容（段落、标题、
+       表格、公式、图片），产出自包含的 Markdown 文件和 manifest.json 索引。
+       目的：将协议源文档从二进制封闭格式转为可检索、可版本管理、可被讲义引用的纯文本知识资产。
+@date 2026-07-22
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -18,6 +26,12 @@ from tools.word_extract import export_document, parse_docx
 
 
 def main() -> int:
+    """
+    @brief 脚本入口：扫描源目录中的 .docx/.doc 文件，逐个抽取结构化内容，
+           生成 manifest.json 汇总索引和 extraction_report.md 可读报告。
+    @return 0 表示所有文件抽取成功；1 表示至少一个文件处理失败。
+    @note .doc 文件优先尝试 LibreOffice 转换为 .docx 后再解析，转换失败时记录错误并继续。
+    """
     parser = argparse.ArgumentParser(description="Extract structured artifacts from 3GPP Word files.")
     parser.add_argument("--source", default="3GPP_Rel19/specs", help="Directory containing .docx/.doc files")
     parser.add_argument("--output", default="3GPP_Rel19/processed", help="Output directory")
@@ -51,6 +65,12 @@ def main() -> int:
 
 
 def _discover_sources(source: Path) -> list[Path]:
+    """
+    @brief 在源目录中收集所有 .docx 和 .doc 文件，
+           作为后续批量抽取的输入列表。
+    @param source 源目录路径。
+    @return 文件路径列表（不含子目录递归，仅一级迭代）。
+    """
     return [
         path
         for path in source.iterdir()
@@ -59,6 +79,14 @@ def _discover_sources(source: Path) -> list[Path]:
 
 
 def _process_source(path: Path, output: Path) -> dict:
+    """
+    @brief 处理单个源文件：.doc 先转 .docx，解析结构化内容，写出到 output 目录。
+           异常时记录错误信息而不中断整个批量流程，保证一个文件失败不影响其余文件。
+    @param path 源文件路径。
+    @param output 输出目录。
+    @return 包含状态、统计信息和错误描述的结果字典。
+    @note .doc 转换产生的临时目录在 finally 块中确保清理。
+    """
     base_row = {
         "source_name": path.name,
         "source_path": str(path),
@@ -108,6 +136,15 @@ def _process_source(path: Path, output: Path) -> dict:
 
 
 def _convert_doc_to_docx(path: Path, output_dir: Path) -> Path:
+    """
+    @brief 使用 LibreOffice 无头模式将旧版 .doc 文件转换为 .docx，
+           为后续 python-docx 解析提供兼容输入格式。
+    @param path 源 .doc 文件路径。
+    @param output_dir 转换输出目录。
+    @return 转换后的 .docx 文件路径。
+    @throws RuntimeError 当 LibreOffice 未安装、转换失败或未产出 .docx 文件时抛出。
+    @note 设置 180 秒超时防止大文档卡死；转换后检查输出文件存在性并处理可能的文件名不匹配。
+    """
     converter = shutil.which("libreoffice") or shutil.which("soffice")
     if converter is None:
         raise RuntimeError("LibreOffice is not available for .doc conversion")
@@ -142,6 +179,13 @@ def _convert_doc_to_docx(path: Path, output_dir: Path) -> Path:
 
 
 def _spec_from_name(name: str) -> str:
+    """
+    @brief 从 3GPP 文件名中提取规范号（如 "38212-j30.docx" -> "TS 38.212"），
+           用于 manifest 索引中的文档分类标识。
+    @param name 文件名（不含路径）。
+    @return "TS xx.xxx" 格式的规范号字符串，无法匹配时返回 "TS unknown"。
+    @note 匹配模式为两位数字+三位数字后跟连字符（如 "38212-"）。
+    """
     match = re.match(r"([0-9]{2})([0-9]{3})-", name)
     if not match:
         return "TS unknown"
@@ -149,6 +193,12 @@ def _spec_from_name(name: str) -> str:
 
 
 def _status_counts(rows: list[dict]) -> dict[str, int]:
+    """
+    @brief 按 status 字段聚合统计已处理文档的各类状态数量，
+           用于 manifest 和报告中的概览信息。
+    @param rows _process_source 产出的结果字典列表。
+    @return {status: count} 映射字典。
+    """
     counts: dict[str, int] = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
@@ -156,6 +206,12 @@ def _status_counts(rows: list[dict]) -> dict[str, int]:
 
 
 def _write_report(manifest: dict, path: Path) -> None:
+    """
+    @brief 将 manifest JSON 数据渲染为可读的 Markdown 抽取报告，
+           包含生成时间、源/输出目录、状态统计和逐文档明细表。
+    @param manifest 完整的 manifest 字典（含 documents 列表）。
+    @param path 报告输出文件路径。
+    """
     lines = [
         "# 3GPP Rel-19 Word Extraction Report",
         "",

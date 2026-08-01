@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render LDPC Min-Sum/NMS/OMS check-node comparison."""
+""" @file render_ldpc_min_sum_variants.py
+    @brief 渲染 LDPC Min-Sum、Normalized Min-Sum 与 Offset Min-Sum 校验节点更新对比图。
+    @date 2025
+    @note 教学输入 q=[+2.4,-0.9,+1.6,-3.1]，逐边展示三种算法的输出差异。
+    @see render_ldpc_bp_spa_round.py 对应的 SPA 精确算法教学图
+"""
 
 from __future__ import annotations
 
@@ -31,6 +36,14 @@ PALETTE = {
 
 
 def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt, fill: str) -> None:
+    """ @brief 在矩形内居中绘制单行文本。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 绘制区域。
+        @param text 待绘制的单行字符串。
+        @param fnt PIL 字体对象。
+        @param fill 文字颜色。
+        @return 无返回值。
+    """
     bbox = draw.textbbox((0, 0), text, font=fnt)
     x = box[0] + ((box[2] - box[0]) - (bbox[2] - bbox[0])) / 2
     y = box[1] + ((box[3] - box[1]) - (bbox[3] - bbox[1])) / 2 - 1
@@ -38,6 +51,16 @@ def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text:
 
 
 def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt, fill: str, width: int, gap: int = 6) -> int:
+    """ @brief 在指定坐标处绘制自动换行的左对齐多行文本。
+        @param draw PIL ImageDraw 实例。
+        @param xy 起始坐标 (x, y)。
+        @param text 待绘制的长文本。
+        @param fnt 字体对象。
+        @param fill 文字颜色。
+        @param width 每行最大像素宽度。
+        @param gap 行间距，默认 6。
+        @return 最后一行的底部 Y 坐标。
+    """
     x, y = xy
     for line in fit_wrap_text(draw, text, fnt, width):
         draw.text((x, y), line, font=fnt, fill=fill)
@@ -46,6 +69,16 @@ def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt,
 
 
 def table(draw: ImageDraw.ImageDraw, x: int, y: int, headers: list[str], rows: list[list[str]], widths: list[int], row_h: int = 56) -> int:
+    """ @brief 绘制带表头的简单表格。
+        @param draw PIL ImageDraw 实例。
+        @param x 表格左上角 X。
+        @param y 表格左上角 Y。
+        @param headers 表头列名列表。
+        @param rows 数据行。
+        @param widths 每列像素宽度列表。
+        @param row_h 行高，默认 56（最小 56）。
+        @return 表格底部 Y 坐标。
+    """
     row_h = max(row_h, 56)
     xx = x
     for header, width in zip(headers, widths):
@@ -64,6 +97,10 @@ def table(draw: ImageDraw.ImageDraw, x: int, y: int, headers: list[str], rows: l
 
 
 def draw_check_node(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制校验节点输入图：4 个输入 q0-q3 连接到中心 CN，展示排除自身输入的外信息原理。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+    """
     draw.text((70, 160), "Check-node 输入", font=font(30, True), fill=PALETTE["blue"])
     cx, cy = 330, 395
     inputs = [
@@ -91,6 +128,11 @@ def draw_check_node(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_min1_min2(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制 min1/min2 机制说明面板。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note min1=0.9 来自 q1，min2=1.6 来自 q2；输出给 q1 时改用 min2 避免自反馈。
+    """
     panel = (710, 160, 1530, 385)
     draw.rounded_rectangle(panel, radius=16, fill=PALETTE["panel"], outline=PALETTE["line"], width=2)
     draw.text((740, 190), "min1/min2 机制", font=font(30, True), fill=PALETTE["ink"])
@@ -105,6 +147,11 @@ def draw_min1_min2(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_compare_table(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制 MS/NMS/OMS 三种算法逐边输出对比表。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note NMS 使用 α=0.75 乘法修正，OMS 使用 β=0.4 减法修正后截零。
+    """
     draw.text((710, 410), "同一组输入下的三种输出", font=font(30, True), fill=PALETTE["green"])
     rows = [
         ["to q0", "+", "0.9", "+0.900", "+0.675", "+0.500"],
@@ -116,6 +163,10 @@ def draw_compare_table(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_resource_panel(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制底部工程取舍卡片：SPA、Min-Sum、NMS、OMS 四种方案的优缺点。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+    """
     panel = (70, 750, 1530, 1060)
     draw.rounded_rectangle(panel, radius=16, fill="#FFFDF6", outline="#E2CD7A", width=2)
     draw.text((105, 780), "工程取舍", font=font(30, True), fill=PALETTE["ink"])
@@ -134,6 +185,10 @@ def draw_resource_panel(draw: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    """ @brief 脚本入口：生成 T8.6 LDPC Min-Sum 及其变体校验节点更新对比图。
+        @return 无返回值。
+        @note 产出 1600x1120 PNG：CN 输入图 + min1/min2 说明 + 三种输出对比 + 工程取舍。
+    """
     img = Image.new("RGB", (1600, 1120), PALETTE["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((70, 42), "LDPC Min-Sum、NMS 与 OMS 校验节点更新", font=font(40, True), fill=PALETTE["ink"])

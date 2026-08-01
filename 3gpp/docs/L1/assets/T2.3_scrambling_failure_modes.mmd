@@ -1,0 +1,19 @@
+%%{init: {'theme': 'default'}}%%
+flowchart TB
+    ROOT["编码器输出含统计偏置：长 0 串、协议模板、重复结构"]
+    ROOT --> P1["故障一：星座使用不均 → 信道估计偏差"]
+    ROOT --> P2["故障二：同步链失锁 → PLL/DLL 漂移失锁"]
+    ROOT --> P3["故障三：峰均比恶化 → 同相叠加，非线性失真"]
+    ROOT --> P4["故障四：干扰结构化 → 相干干扰致译码退化"]
+
+    P1 -.-> SOL["加扰：Gold 序列逐比特异或全序列 → 统计均匀"]
+    P2 -.-> SOL
+    P3 -.-> SOL
+    P4 -.-> SOL
+
+    style ROOT fill:#E3F2FD,stroke:#1565C0,color:#17212F
+    style P1 fill:#FFF3E0,stroke:#E65100,color:#17212F
+    style P2 fill:#FFF3E0,stroke:#E65100,color:#17212F
+    style P3 fill:#FFF3E0,stroke:#E65100,color:#17212F
+    style P4 fill:#FFF3E0,stroke:#E65100,color:#17212F
+    style SOL fill:#E8F5E9,stroke:#2E7D32,color:#17212F

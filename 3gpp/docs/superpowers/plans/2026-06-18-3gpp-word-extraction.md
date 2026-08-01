@@ -79,5 +79,5 @@ source_spec: "docs/superpowers/plans/2026-06-18-3gpp-word-extraction.md"
 - [ ] Run unit tests.
 - [ ] Run the extraction CLI.
 - [ ] Verify manifest source count equals the number of Word files in `3GPP_Rel19/specs`.
-- [ ] Verify each `processed` or `converted` document has `metadata.json`, `TS_36.212_36212-j30_content.md`, and `sections.jsonl`.
+- [ ] Verify each `processed` or `converted` document has `metadata.json`, `content.md`, and `sections.jsonl`.
 - [ ] Report any conversion or parsing failures explicitly.

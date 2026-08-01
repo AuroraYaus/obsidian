@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render the LTE/NR decoder protocol reading map."""
+""" @file render_t0_1_lte_nr_decoder_protocol_map.py
+@brief 渲染 LTE/NR 译码协议阅读导航地图，从 3GPP 协议源到接收端对象与译码器家族的完整导航图。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -15,7 +18,7 @@ except ModuleNotFoundError:
 
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT_PATH = ROOT / "docs/L1/assets/T0.1_LTE_NR_decoder_protocol_reading_map.png"
+OUT_PATH = ROOT / "docs/L0/assets/T0.1_LTE_NR_decoder_protocol_reading_map.png"
 
 COL = {
     "bg": "#FFFFFF",
@@ -38,6 +41,11 @@ COL = {
 
 
 def tokenize(text: str) -> list[str]:
+    """ @brief 将文本按词边界切分为 token 列表，保留 ASCII 字母数字和符号为一词，中文字符单独成词。
+    @param text 待切分的原始文本字符串。
+    @return token 列表。
+    @note 用于 wrap() 的预处理，确保中文和英文/数字在换行时不会粘连。
+    """
     tokens: list[str] = []
     cur = ""
     for ch in text:
@@ -59,6 +67,14 @@ def tokenize(text: str) -> list[str]:
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.FreeTypeFont, width: int) -> list[str]:
+    """ @brief 根据给定宽度和字体对文本自动换行，返回行列表。
+    @param draw PIL 绘图上下文（用于测量文本宽度）。
+    @param text 待换行的原始文本。
+    @param fnt PIL 字体对象。
+    @param width 最大行宽（px）。
+    @return 换行后的文本行列表。
+    @note 使用 draw.textlength() 而非 textbbox 以精确计算渲染宽度。
+    """
     lines: list[str] = []
     cur = ""
     for tok in tokenize(text):
@@ -79,6 +95,13 @@ def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.FreeTypeFont, widt
 
 
 def text_height(draw: ImageDraw.ImageDraw, lines: list[str], fnt: ImageFont.FreeTypeFont, gap: int) -> int:
+    """ @brief 计算多行文本的总渲染高度（含行间距）。
+    @param draw PIL 绘图上下文。
+    @param lines 文本行列表。
+    @param fnt PIL 字体对象。
+    @param gap 行间距（px）。
+    @return 总高度（px）。
+    """
     total = 0
     for i, line in enumerate(lines):
         bbox = draw.textbbox((0, 0), line, font=fnt)
@@ -89,6 +112,13 @@ def text_height(draw: ImageDraw.ImageDraw, lines: list[str], fnt: ImageFont.Free
 
 
 def assert_inside(inner: tuple[int, int, int, int], bbox: tuple[int, int, int, int], label: str) -> None:
+    """ @brief 断言文本边界框完全位于内部矩形区域内，防止文字溢出卡片边界。
+    @param inner 内部矩形 (x0, y0, x1, y1)。
+    @param bbox 文本边界框 (x0, y0, x1, y1)。
+    @param label 标签名，用于错误消息提示。
+    @return None
+    @throws AssertionError 当 bbox 超出 inner 时抛出。
+    """
     if bbox[0] < inner[0] or bbox[1] < inner[1] or bbox[2] > inner[2] or bbox[3] > inner[3]:
         raise AssertionError(f"{label} text bbox {bbox} exceeds padded box {inner}")
 
@@ -103,6 +133,18 @@ def draw_centered(
     gap: int = 7,
     pad: int = 24,
 ) -> None:
+    """ @brief 在指定矩形区域内居中绘制多行文本，自动换行并断言不溢出。
+    @param draw PIL 绘图上下文。
+    @param box 矩形四边坐标 (x0, y0, x1, y1)。
+    @param text 文本字符串或行列表。
+    @param size 字号。
+    @param color 文本颜色 hex 字符串。
+    @param bold 是否加粗。
+    @param gap 行间距，默认 7px。
+    @param pad 内边距，默认 24px。
+    @return None
+    @throws AssertionError 当文本溢出卡片内区域时抛出。
+    """
     fnt = font(size, bold)
     inner = (box[0] + pad, box[1] + pad, box[2] - pad, box[3] - pad)
     if inner[2] <= inner[0] or inner[3] <= inner[1]:
@@ -131,6 +173,15 @@ def draw_centered(
 
 
 def rounded(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], fill: str, outline: str, radius: int = 16, width: int = 2) -> None:
+    """ @brief 绘制统一风格的圆角矩形。
+    @param draw PIL 绘图上下文。
+    @param box 矩形四边坐标 (x0, y0, x1, y1)。
+    @param fill 填充色 hex 字符串。
+    @param outline 描边色 hex 字符串。
+    @param radius 圆角半径，默认 16px。
+    @param width 描边宽度，默认 2px。
+    @return None
+    """
     draw.rounded_rectangle(box, radius=radius, fill=fill, outline=outline, width=width)
 
 
@@ -142,6 +193,15 @@ def node(
     fill: str,
     outline: str,
 ) -> tuple[int, int, int, int]:
+    """ @brief 绘制一个带标题和正文的导航地图节点卡片。
+    @param draw PIL 绘图上下文。
+    @param box 矩形四边坐标 (x0, y0, x1, y1)。
+    @param title 节点标题（如"LTE 主线"）。
+    @param body 节点正文描述。
+    @param fill 填充色 hex 字符串。
+    @param outline 标题与描边色 hex 字符串。
+    @return 传入的 box 坐标（用于后续箭头连接计算）。
+    """
     rounded(draw, box, fill, outline, 16, 2)
     draw_centered(draw, (box[0] + 18, box[1] + 18, box[2] - 18, box[1] + 70), title, 25, outline, True, 5, 8)
     draw_centered(draw, (box[0] + 20, box[1] + 82, box[2] - 20, box[3] - 20), body, 24, COL["ink"], False, 7, 10)
@@ -149,10 +209,20 @@ def node(
 
 
 def center(box: tuple[int, int, int, int]) -> tuple[float, float]:
+    """ @brief 计算矩形几何中心坐标。
+    @param box 矩形四边坐标 (x0, y0, x1, y1)。
+    @return 中心点坐标 (cx, cy)。
+    """
     return ((box[0] + box[2]) / 2, (box[1] + box[3]) / 2)
 
 
 def boundary_point(box: tuple[int, int, int, int], toward: tuple[float, float]) -> tuple[float, float]:
+    """ @brief 计算从矩形中心向目标点方向与矩形边界的交点，用于箭头起点/终点定位。
+    @param box 矩形四边坐标 (x0, y0, x1, y1)。
+    @param toward 目标点坐标 (tx, ty)。
+    @return 矩形边界上的交点坐标 (bx, by)。
+    @note 当 toward 与矩形中心重合时返回中心点，避免除零。
+    """
     cx, cy = center(box)
     dx, dy = toward[0] - cx, toward[1] - cy
     if abs(dx) < 1e-6 and abs(dy) < 1e-6:
@@ -164,6 +234,13 @@ def boundary_point(box: tuple[int, int, int, int], toward: tuple[float, float]) 
 
 
 def arrow(draw: ImageDraw.ImageDraw, src: tuple[int, int, int, int], dst: tuple[int, int, int, int], color: str) -> None:
+    """ @brief 绘制两个矩形节点之间的直连箭头，自动计算边界交点作为起止点。
+    @param draw PIL 绘图上下文。
+    @param src 源矩形 (x0, y0, x1, y1)。
+    @param dst 目标矩形 (x0, y0, x1, y1)。
+    @param color 线条与箭头填充色 hex 字符串。
+    @return None
+    """
     x0, y0 = boundary_point(src, center(dst))
     x1, y1 = boundary_point(dst, center(src))
     length = math.hypot(x1 - x0, y1 - y0)
@@ -187,6 +264,13 @@ def segment_intersects_rect(
     rect: tuple[int, int, int, int],
     margin: int = 0,
 ) -> bool:
+    """ @brief 判断线段是否与矩形相交，用于折线箭头布局时的碰撞检测。
+    @param p0 线段起点 (x, y)。
+    @param p1 线段终点 (x, y)。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @param margin 矩形外扩边距，默认 0。
+    @return 相交返回 True，否则 False。
+    """
     x0, y0, x1, y1 = rect
     x0 -= margin
     y0 -= margin
@@ -220,6 +304,13 @@ def assert_no_unrelated_crossing(
     points: list[tuple[float, float]],
     forbidden: dict[str, tuple[int, int, int, int]],
 ) -> None:
+    """ @brief 断言折线不穿过任何禁行矩形区域，确保箭头布局视觉上不重叠。
+    @param name 箭头名称，用于错误消息。
+    @param points 折线顶点列表 [(x, y), ...]。
+    @param forbidden 禁行矩形字典 {名称: (x0, y0, x1, y1)}。
+    @return None
+    @throws AssertionError 当任意折线段穿过禁行矩形时抛出。
+    """
     for p0, p1 in zip(points, points[1:]):
         for rect_name, rect in forbidden.items():
             if segment_intersects_rect(p0, p1, rect, margin=3):
@@ -227,6 +318,12 @@ def assert_no_unrelated_crossing(
 
 
 def elbow_arrow(draw: ImageDraw.ImageDraw, points: list[tuple[float, float]], color: str) -> None:
+    """ @brief 绘制折线箭头，用于绕开中间节点的迂回路径。
+    @param draw PIL 绘图上下文。
+    @param points 折线顶点列表 [(x, y), ...]，最后一段末端绘制箭头。
+    @param color 线条与箭头填充色 hex 字符串。
+    @return None
+    """
     if len(points) < 2:
         return
     x0, y0 = points[-2]
@@ -246,6 +343,12 @@ def elbow_arrow(draw: ImageDraw.ImageDraw, points: list[tuple[float, float]], co
 
 
 def draw_table(draw: ImageDraw.ImageDraw, x: int, y: int) -> int:
+    """ @brief 绘制"读协议时先问的问题"的协议阅读索引表，返回绘制后的 Y 坐标。
+    @param draw PIL 绘图上下文。
+    @param x 表格左上角 X 坐标。
+    @param y 表格左上角 Y 坐标。
+    @return 表格绘制完成后的 Y 坐标（用于后续元素定位）。
+    """
     draw.text((x, y), "读协议时先问的问题", font=font(34, True), fill=COL["ink"])
     y += 58
     cols = [235, 455, 390, 420, 420]
@@ -272,10 +375,19 @@ def draw_table(draw: ImageDraw.ImageDraw, x: int, y: int) -> int:
 
 
 def edge_check(img: Image.Image) -> dict[str, int]:
+    """ @brief 检测图像四边边缘的非白色像素数量，用于验证内容是否正确填满画布。
+    @param img PIL Image 对象。
+    @return 字典 {"top": N, "bottom": N, "left": N, "right": N}，每个值为非白色像素计数。
+    @note 如果某边非白色像素数过多，说明内容可能溢出或布局计算有误。
+    """
     pix = img.load()
     w, h = img.size
 
     def nonwhite(points: list[tuple[int, int]]) -> int:
+        """ @brief 统计点列表中非白色像素的数量。
+            @param points 待检查的像素坐标列表 [(x, y), ...]。
+            @return 非白色像素计数。
+        """
         return sum(1 for x, y in points if pix[x, y] != (255, 255, 255))
 
     return {
@@ -287,6 +399,12 @@ def edge_check(img: Image.Image) -> dict[str, int]:
 
 
 def main() -> None:
+    """ @brief 渲染 T0.1 LTE/NR 译码协议阅读地图，保存为 PNG 到 docs/L0/assets/。
+    @note 该图涵盖 3GPP 协议源、接收端对象、LTE Turbo/NR LDPC/NR Polar 三条译码主线、
+     证据闭环、工程落点导航，并附带协议阅读索引表和边缘非白像素检测。
+    @see render_t12_1_golden_model_layout.py 黄金模型布局图。
+    @return None
+    """
     img = Image.new("RGB", (2200, 2300), COL["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((80, 58), "T0.1 LTE/NR 译码协议阅读地图", font=font(46, True), fill=COL["ink"])

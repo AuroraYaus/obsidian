@@ -15,7 +15,7 @@ source_spec: "docs/superpowers/plans/2026-06-21-python-figure-body-equivalents.m
 
 **Goal:** Fix text-fit risks in Python-generated figures and add auditable Mermaid/Markdown equivalents next to every Python PNG used in lesson bodies.
 
-**Architecture:** Add two focused audit scripts, build a migration ledger from existing Markdown/PNG references, fix the highest-risk Python figure scripts first, then migrate lesson bodies in batches. Verification is command-driven and treats PNG assets as visual aids rather than the only expression of teaching TS_36.211_36211-j30_s06-s08_content.
+**Architecture:** Add two focused audit scripts, build a migration ledger from existing Markdown/PNG references, fix the highest-risk Python figure scripts first, then migrate lesson bodies in batches. Verification is command-driven and treats PNG assets as visual aids rather than the only expression of teaching content.
 
 **Tech Stack:** Python 3.12 standard library, Markdown text scanning, existing Pillow-based figure scripts, existing `tools/audit_figure_geometry.py` and `tools/audit_figure_readability.py`.
 
@@ -26,7 +26,7 @@ source_spec: "docs/superpowers/plans/2026-06-21-python-figure-body-equivalents.m
 - Create `tools/audit_figure_text_fit_static.py`: static risk scanner for `tools/figures/*.py`.
 - Create `tools/audit_python_figure_body_equivalents.py`: Markdown scanner requiring nearby body equivalent blocks for Python PNGs.
 - Create `tests/test_python_figure_audits.py`: unit tests for both audit scripts using temporary fixtures.
-- Create `docs/audits/python_figure_to_body_TS_36.211_36211-j30_s06-s08_TS_36.213_36213-j30_cover_TS_38.300_38300-j20_TS_36.211_36211-j30_cover_TS_36.201_36201-j00_TS_36.322_36322-j00_TS_38.201_38201-j00_TS_36.213_36213-j30_s06-s07_TS_36.331_36331-j21_TS_38.202_38202-j00_TS_36.213_36213-j30_s14-xx_TS_38.306_38306-j20_TS_38.213_38213-j30_TS_36.213_36213-j30_sAnnexes_TS_38.214_38214-j30_TS_36.302_36302-j00_TS_36.306_36306-j20_TS_36.211_36211-j30_s09-sxx_TS_38.212_38212-j30_TS_38.321_38321-j20_TS_36.212_36212-j30_TS_38.322_38322-j20_TS_36.321_36321-j20_TS_38.211_38211-j30_TS_36.214_36214-j00_TS_38.331_38331-j20_TS_36.300_36300-j10_TS_36.213_36213-j30_s00-s05_TS_38.323_38323-j10_TS_36.213_36213-j30_s08-s09_TS_38.215_38215-j20_TS_36.213_36213-j30_s10-s13_TS_36.211_36211-j30_s00-s05_TS_36.323_36323-j00_content_migration.md`: full migration ledger.
+- Create `docs/audits/python_figure_to_body_content_migration.md`: full migration ledger.
 - Modify selected `tools/figures/*.py`: remove silent truncation and add text-fit guards.
 - Modify `docs/L1/*.md`, `docs/L2/*.md`, `docs/L3/*.md`: add Mermaid/table equivalents near PNG read guides.
 - Modify `docs/audits/image_asset_inventory.md` and `docs/audits/python_figure_textfit_and_body_equivalent_plan.md`: record completion status and commands.
@@ -65,7 +65,7 @@ source_spec: "docs/superpowers/plans/2026-06-21-python-figure-body-equivalents.m
 ### Task 3: Build Migration Ledger
 
 **Files:**
-- Create: `docs/audits/python_figure_to_body_TS_36.211_36211-j30_s06-s08_TS_36.213_36213-j30_cover_TS_38.300_38300-j20_TS_36.211_36211-j30_cover_TS_36.201_36201-j00_TS_36.322_36322-j00_TS_38.201_38201-j00_TS_36.213_36213-j30_s06-s07_TS_36.331_36331-j21_TS_38.202_38202-j00_TS_36.213_36213-j30_s14-xx_TS_38.306_38306-j20_TS_38.213_38213-j30_TS_36.213_36213-j30_sAnnexes_TS_38.214_38214-j30_TS_36.302_36302-j00_TS_36.306_36306-j20_TS_36.211_36211-j30_s09-sxx_TS_38.212_38212-j30_TS_38.321_38321-j20_TS_36.212_36212-j30_TS_38.322_38322-j20_TS_36.321_36321-j20_TS_38.211_38211-j30_TS_36.214_36214-j00_TS_38.331_38331-j20_TS_36.300_36300-j10_TS_36.213_36213-j30_s00-s05_TS_38.323_38323-j10_TS_36.213_36213-j30_s08-s09_TS_38.215_38215-j20_TS_36.213_36213-j30_s10-s13_TS_36.211_36211-j30_s00-s05_TS_36.323_36323-j00_content_migration.md`
+- Create: `docs/audits/python_figure_to_body_content_migration.md`
 
 - [ ] Generate an inventory from Markdown image references under `docs/L1`, `docs/L2`, and `docs/L3`.
 - [ ] Record columns: lesson, image, script, equivalent type, status, body location.
@@ -116,7 +116,7 @@ source_spec: "docs/superpowers/plans/2026-06-21-python-figure-body-equivalents.m
 ### Task 7: Final Verification and Records
 
 **Files:**
-- Modify: `docs/audits/python_figure_to_body_TS_36.211_36211-j30_s06-s08_TS_36.213_36213-j30_cover_TS_38.300_38300-j20_TS_36.211_36211-j30_cover_TS_36.201_36201-j00_TS_36.322_36322-j00_TS_38.201_38201-j00_TS_36.213_36213-j30_s06-s07_TS_36.331_36331-j21_TS_38.202_38202-j00_TS_36.213_36213-j30_s14-xx_TS_38.306_38306-j20_TS_38.213_38213-j30_TS_36.213_36213-j30_sAnnexes_TS_38.214_38214-j30_TS_36.302_36302-j00_TS_36.306_36306-j20_TS_36.211_36211-j30_s09-sxx_TS_38.212_38212-j30_TS_38.321_38321-j20_TS_36.212_36212-j30_TS_38.322_38322-j20_TS_36.321_36321-j20_TS_38.211_38211-j30_TS_36.214_36214-j00_TS_38.331_38331-j20_TS_36.300_36300-j10_TS_36.213_36213-j30_s00-s05_TS_38.323_38323-j10_TS_36.213_36213-j30_s08-s09_TS_38.215_38215-j20_TS_36.213_36213-j30_s10-s13_TS_36.211_36211-j30_s00-s05_TS_36.323_36323-j00_content_migration.md`
+- Modify: `docs/audits/python_figure_to_body_content_migration.md`
 - Modify: `docs/audits/python_figure_textfit_and_body_equivalent_plan.md`
 - Modify: `docs/audits/image_asset_inventory.md`
 
@@ -140,13 +140,13 @@ python3 tools/audit_figure_readability.py tools/figures
 **Files:**
 - Modify: `docs/audits/image_asset_inventory.md`
 - Modify: `docs/audits/python_figure_textfit_and_body_equivalent_plan.md`
-- Modify: `docs/audits/python_figure_to_body_TS_36.211_36211-j30_s06-s08_TS_36.213_36213-j30_cover_TS_38.300_38300-j20_TS_36.211_36211-j30_cover_TS_36.201_36201-j00_TS_36.322_36322-j00_TS_38.201_38201-j00_TS_36.213_36213-j30_s06-s07_TS_36.331_36331-j21_TS_38.202_38202-j00_TS_36.213_36213-j30_s14-xx_TS_38.306_38306-j20_TS_38.213_38213-j30_TS_36.213_36213-j30_sAnnexes_TS_38.214_38214-j30_TS_36.302_36302-j00_TS_36.306_36306-j20_TS_36.211_36211-j30_s09-sxx_TS_38.212_38212-j30_TS_38.321_38321-j20_TS_36.212_36212-j30_TS_38.322_38322-j20_TS_36.321_36321-j20_TS_38.211_38211-j30_TS_36.214_36214-j00_TS_38.331_38331-j20_TS_36.300_36300-j10_TS_36.213_36213-j30_s00-s05_TS_38.323_38323-j10_TS_36.213_36213-j30_s08-s09_TS_38.215_38215-j20_TS_36.213_36213-j30_s10-s13_TS_36.211_36211-j30_s00-s05_TS_36.323_36323-j00_content_migration.md`
+- Modify: `docs/audits/python_figure_to_body_content_migration.md`
 - Optionally create: `tools/audit_project_image_inventory.py`
 
 - [ ] Build a whole-project image reference ledger for `docs/L1`, `docs/L2`, and `docs/L3` with: lesson path, line number, raw PNG reference, resolved asset path, asset existence, unique/reused status, source type, generating script, and inventory row.
 - [ ] Classify each unique PNG as `python_pil_drawn`, `python_pdf_crop`, `python_generated_from_table`, or `external_or_unknown`; PDF/Word protocol table crops must be reviewed separately from hand-drawn PIL teaching figures.
 - [x] Check Markdown references against `docs/audits/image_asset_inventory.md`: every referenced PNG must exist and have an inventory row; every inventory PNG must record whether it is body-referenced; repeated references must list all use sites. 2026-06-22 新增 `tools/audit_project_image_inventory.py` 后输出 `PROJECT_IMAGE_INVENTORY_AUDIT_OK`，覆盖 68 个实物 PNG、66 个 Markdown PNG 引用、65 个唯一正文引用 PNG 和 3 个 evidence/compatibility 保留 PNG。
-- [x] Run body-equivalent quality audit for every body PNG reference, not just marker presence. Rows in `docs/audits/python_figure_to_body_TS_36.211_36211-j30_s06-s08_TS_36.213_36213-j30_cover_TS_38.300_38300-j20_TS_36.211_36211-j30_cover_TS_36.201_36201-j00_TS_36.322_36322-j00_TS_38.201_38201-j00_TS_36.213_36213-j30_s06-s07_TS_36.331_36331-j21_TS_38.202_38202-j00_TS_36.213_36213-j30_s14-xx_TS_38.306_38306-j20_TS_38.213_38213-j30_TS_36.213_36213-j30_sAnnexes_TS_38.214_38214-j30_TS_36.302_36302-j00_TS_36.306_36306-j20_TS_36.211_36211-j30_s09-sxx_TS_38.212_38212-j30_TS_38.321_38321-j20_TS_36.212_36212-j30_TS_38.322_38322-j20_TS_36.321_36321-j20_TS_38.211_38211-j30_TS_36.214_36214-j00_TS_38.331_38331-j20_TS_36.300_36300-j10_TS_36.213_36213-j30_s00-s05_TS_38.323_38323-j10_TS_36.213_36213-j30_s08-s09_TS_38.215_38215-j20_TS_36.213_36213-j30_s10-s13_TS_36.211_36211-j30_s00-s05_TS_36.323_36323-j00_content_migration.md` now distinguish `present_quality_pass; body_referenced` and `evidence_only; compatibility_retained; not_current_body_reference`; `python3 tools/audit_python_figure_body_equivalents.py docs/L1 docs/L2 docs/L3` 输出 `PYTHON_FIGURE_BODY_EQUIVALENT_AUDIT_OK`。
+- [x] Run body-equivalent quality audit for every body PNG reference, not just marker presence. Rows in `docs/audits/python_figure_to_body_content_migration.md` now distinguish `present_quality_pass; body_referenced` and `evidence_only; compatibility_retained; not_current_body_reference`; `python3 tools/audit_python_figure_body_equivalents.py docs/L1 docs/L2 docs/L3` 输出 `PYTHON_FIGURE_BODY_EQUIVALENT_AUDIT_OK`。
 - [x] Run script-level checks for all `tools/figures/*.py`: `audit_figure_text_fit_static.py`, `audit_figure_readability.py`, `audit_figure_geometry.py --focus-only`, and `audit_figure_geometry.py`. 2026-06-22 最新规则复跑均输出 OK；逐个执行 58 个 Python 文件结果 `FIGURE_SCRIPT_RUNS total=58 failures=0`，其中 57 个为 `render_*.py` 绘图脚本，1 个为 `figure_text_fit.py` helper。
 - [ ] Record manual visual review evidence for all 68 physical PNGs: font top/bottom margin, adjacent box spacing, arrow shape/direction, connector endpoints, table cell centering, bottom-note area, protocol-source/crop quality, and residual risk.
 - [ ] Add a PDF/Word crop-specific review line for long protocol tables: source page/table number, crop rectangle, split-image readability, stitching boundary, and rule forbidding replacement by old CSV/PIL redraws unless explicitly approved.

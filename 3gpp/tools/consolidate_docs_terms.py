@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Consolidate repeated lesson terminology into a single glossary chapter."""
+"""
+@file consolidate_docs_terms.py
+@brief 将各节讲义中重复出现的术语缩写集中收纳到全局术语总表，并从各节正文中移除分散的术语说明
+       小节和前置缩写表格，最终统一替换全名展开为缩写，使讲义更聚焦教学内容而非机械重复解释。
+@date 2026-07-22
+"""
 
 from __future__ import annotations
 
@@ -193,6 +198,11 @@ LEAD_IN_PATTERNS = [
 
 
 def render_glossary() -> str:
+    """
+    @brief 将 GLOSSARY_GROUPS 内置术语字典渲染为 Markdown 格式的全局术语总表，
+           按"系统与协议缩写""译码对象与算法"等分组组织，使读者可一站式查阅。
+    @return 完整的 Markdown 文本，包含标题、分组表格和术语说明。
+    """
     lines = [
         "# 译码讲义术语总表",
         "",
@@ -208,14 +218,32 @@ def render_glossary() -> str:
 
 
 def is_term_heading(line: str) -> bool:
+    """
+    @brief 判断当前行是否为讲义内分散术语小节的标题，
+           用于定位需要移除的冗余术语块边界。
+    @param line 讲义中的一行文本。
+    @return True 表示该行是"术语登场"/"本节缩写说明"/"本节术语"之一。
+    """
     return line.strip() in {"## 术语登场", "## 本节缩写说明", "## 本节术语"}
 
 
 def is_section_heading(line: str) -> bool:
+    """
+    @brief 判断当前行是否为 Markdown 二级标题。
+    @param line 讲义中的一行文本。
+    @return True 表示该行以 ## 开头。
+    """
     return line.startswith("## ")
 
 
 def is_non_terminology_heading(line: str) -> bool:
+    """
+    @brief 判断当前行是否为非术语/非缩写类的二级标题，
+           在 remove_term_sections 中用于确定删除块的结束边界。
+    @param line 讲义中的一行文本。
+    @return True 表示该行是二级标题且不含"术语"或"缩写"关键字。
+    @note 避免误删非术语内容：遇到不明确的标题会选择保留而非冒险删除。
+    """
     if not is_section_heading(line):
         return False
     stripped = line.strip()
@@ -223,6 +251,14 @@ def is_non_terminology_heading(line: str) -> bool:
 
 
 def remove_term_sections(text: str) -> str:
+    """
+    @brief 从讲义正文中删除分散的"术语登场""本节缩写说明"等冗余术语小节，
+           使其不再在各文件间重复出现。
+    @param text 讲义的原始 Markdown 全文。
+    @return 删除术语小节后的文本，保留空白行格式完整性。
+    @note 删除前会清理小节前的多余空行以避免产生双倍空行；
+          遇到不明确的同类标题时会保留内容，防止误删正文。
+    """
     lines = text.splitlines()
     out: list[str] = []
     i = 0
@@ -247,6 +283,14 @@ def remove_term_sections(text: str) -> str:
 
 
 def remove_lead_in_tables(text: str) -> str:
+    """
+    @brief 删除讲义中以引导句开头、后跟缩写表格的"前置缩写介绍"段落，
+           其功能已被全局术语总表替代，保留会造成重复和维护负担。
+    @param text 讲义的原始 Markdown 全文。
+    @return 删除引导句和跟随的表格后剩余的文本。
+    @note 仅匹配 LEAD_IN_PATTERNS 中预设的引导句式；
+          删除时会连同引导句后的连续 Markdown 表格行一并移除。
+    """
     lines = text.splitlines()
     out: list[str] = []
     i = 0
@@ -273,6 +317,14 @@ def remove_lead_in_tables(text: str) -> str:
 
 
 def remove_orphan_abbreviation_tables(text: str) -> str:
+    """
+    @brief 删除讲义中无引导句、直接出现的孤立缩写表格（以特定表头开头），
+           这些表格在术语集中后成为冗余碎片。
+    @param text 讲义的原始 Markdown 全文。
+    @return 删除孤立缩写表格后的文本，保留表格前后格式。
+    @note 仅删除以预设表头行（如"| 缩写 | 全称 |"）开头的连续表格行；
+          删除前会清理表前空行以避免残留空白。
+    """
     lines = text.splitlines()
     out: list[str] = []
     i = 0
@@ -295,6 +347,14 @@ def remove_orphan_abbreviation_tables(text: str) -> str:
 
 
 def replace_expansions(text: str) -> str:
+    """
+    @brief 将讲义正文中的术语全名展开（如"第三代合作伙伴计划（3GPP）"）替换为缩写（如"3GPP"），
+           减少冗余文字，使行文更紧凑，读者通过术语总表查全称即可。
+    @param text 讲义的原始 Markdown 全文。
+    @return 完成全名到缩写替换后的文本。
+    @note 替换按模式长度降序执行，优先匹配长模式避免短模式覆盖长模式；
+          额外包含少数 fixup 替换（如 NR LDPC 中间空格、3GPP 协议等硬编码修补）。
+    """
     for old, new in sorted(EXPANSION_REPLACEMENTS, key=lambda item: len(item[0]), reverse=True):
         text = text.replace(old, new)
     text = text.replace("NR低密度奇偶校验码", "NR LDPC")
@@ -316,6 +376,13 @@ def replace_expansions(text: str) -> str:
 
 
 def update_reading_map_link(text: str) -> str:
+    """
+    @brief 在阅读地图文档的"前置知识检查"小节前插入全局术语入口链接，
+           确保读者从入口文档就能导航到术语总表。
+    @param text 阅读地图文档的原始 Markdown 全文。
+    @return 插入术语入口段落后（或已存在时不动）的文本。
+    @note 幂等操作：如果链接已存在则跳过，防止重复插入。
+    """
     if "../L0/L0_terminology_glossary.md" in text:
         return text
     marker = "## 前置知识检查\n"
@@ -330,6 +397,12 @@ def update_reading_map_link(text: str) -> str:
 
 
 def process_lessons() -> int:
+    """
+    @brief 遍历 L1/L2/L3 所有讲义，依次执行术语删除、引导表移除、孤立表格清理
+           和全名替换，对阅读地图额外插入术语总表链接。
+    @return 实际被修改的讲义文件数量。
+    @note 各文件仅当内容真正发生变化时才写入磁盘，避免无意义的时间戳更新。
+    """
     changed = 0
     for root in LESSON_ROOTS:
         for path in sorted(root.glob("T*.md")):
@@ -347,6 +420,11 @@ def process_lessons() -> int:
 
 
 def main() -> int:
+    """
+    @brief 脚本入口：默认干运行（dry-run）检查变更范围；指定 --write 后执行术语集中化操作，
+           首先生成全局术语总表，再逐文件处理讲义。
+    @return 0 表示成功或干运行完毕；非 0 表示异常。
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args()

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render an N=4 Polar SC decoding tree with f/g and partial sums."""
+""" @file render_nr_polar_sc_decoding_tree.py
+@brief 渲染 N=4 Polar SC（逐次抵消）译码树教学图，展示 f/g 函数、判决与 partial sum 回传的完整流程。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -43,6 +46,15 @@ def round_box(
     width: int = 2,
     radius: int = 14,
 ) -> None:
+    """ @brief 绘制统一风格的圆角矩形框，用于包裹译码树中的每个阶段节点。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @param fill 填充色 hex 字符串。
+    @param outline 描边色 hex 字符串。
+    @param width 描边宽度，默认 2px。
+    @param radius 圆角半径，默认 14px。
+    @return None
+    """
     draw.rounded_rectangle(xy, radius=radius, fill=fill, outline=outline, width=width)
 
 
@@ -54,6 +66,15 @@ def center_text(
     fill: str,
     gap: int = 6,
 ) -> None:
+    """ @brief 将多行文本在指定矩形区域内水平和垂直居中绘制，用于节点内显示公式与译码结果。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @param lines 待绘制的文本行列表。
+    @param fnt PIL 字体对象。
+    @param fill 文本颜色 hex 字符串。
+    @param gap 行间距，默认 6px。
+    @return None
+    """
     heights = []
     widths = []
     for line in lines:
@@ -75,6 +96,15 @@ def arrow(
     fill: str,
     width: int = 3,
 ) -> None:
+    """ @brief 绘制带三角形箭头的直线段，表示译码树中的数据流向。
+    @param draw PIL 绘图上下文。
+    @param start 线段起点坐标 (x, y)。
+    @param end 线段终点坐标 (x, y)，箭头指向此处。
+    @param fill 线条与箭头填充色 hex 字符串。
+    @param width 线宽，默认 3px。
+    @return None
+    @note 箭头头部长度 14px、宽度 8px，居中于线段末端。
+    """
     x0, y0 = start
     x1, y1 = end
     length = math.hypot(x1 - x0, y1 - y0)
@@ -99,6 +129,14 @@ def segment_intersects_rect(
     rect: tuple[int, int, int, int],
     margin: int = 0,
 ) -> bool:
+    """ @brief 判断线段是否与矩形区域相交，用于折线箭头布局时的碰撞检测。
+    @param p0 线段起点 (x, y)。
+    @param p1 线段终点 (x, y)。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @param margin 矩形外扩边距，默认 0。
+    @return 相交返回 True，否则 False。
+    @note 检测线段端点是否在矩形内、以及线段与矩形四条边的交点。
+    """
     x0, y0, x1, y1 = rect
     x0 -= margin
     y0 -= margin
@@ -132,6 +170,13 @@ def assert_no_unrelated_crossing(
     points: list[tuple[float, float]],
     forbidden: dict[str, tuple[int, int, int, int]],
 ) -> None:
+    """ @brief 断言折线路径不穿过任何禁行矩形区域，确保箭头布局视觉上不重叠。
+    @param name 箭头名称，用于错误消息标识。
+    @param points 折线顶点列表 [(x, y), ...]。
+    @param forbidden 禁行矩形字典 {名称: (x0, y0, x1, y1)}。
+    @return None
+    @throws AssertionError 当任意折线段穿过禁行矩形时抛出。
+    """
     for p0, p1 in zip(points, points[1:]):
         for rect_name, rect in forbidden.items():
             if segment_intersects_rect(p0, p1, rect, margin=3):
@@ -144,6 +189,13 @@ def elbow_arrow(
     fill: str,
     width: int = 3,
 ) -> None:
+    """ @brief 绘制折线箭头（多段直线 + 末端三角箭头），用于绕开其他节点的反馈路径。
+    @param draw PIL 绘图上下文。
+    @param points 折线顶点列表 [(x, y), ...]，最后一段末端绘制箭头。
+    @param fill 线条与箭头填充色 hex 字符串。
+    @param width 线宽，默认 3px。
+    @return None
+    """
     x1, y1 = points[-1]
     x0, y0 = points[-2]
     length = math.hypot(x1 - x0, y1 - y0)
@@ -164,6 +216,11 @@ def elbow_arrow(
 
 
 def main() -> None:
+    """ @brief 渲染 T10.4 N=4 Polar SC 译码树教学图，保存为 PNG 到 docs/L2/assets/。
+    @note 该图展示从通道 LLR 输入、f 函数进入左半树、frozen 位强制判决、g 函数进入右半树、
+     information 位判决到 partial sum 回传的完整 SC 译码流程，附带 f/g 函数约定公式。
+    @return None
+    """
     img = Image.new("RGB", (2100, 1460), COL["bg"])
     draw = ImageDraw.Draw(img)
 

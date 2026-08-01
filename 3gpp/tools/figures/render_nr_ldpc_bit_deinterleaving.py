@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Render NR LDPC bit deinterleaving and LLR placement flow for T9.4."""
+"""@file render_nr_ldpc_bit_deinterleaving.py
+@brief 渲染 NR LDPC bit deinterleaving 与 LLR 放置流程教学图
+@date 2025
+@note 设计意图：展示 TS 38.212 §5.4.2.2 的 bit interleaver 正向和反向过程——
+  从 demapper 符号顺序 LLR（f 序列）恢复到 rate-recovery 顺序（e 序列），
+  配合 QPSK 和 16QAM 二维矩阵示例和工程检测点。
+@see docs/L2/T9.4_NR_LDPC_bit_deinterleaving.md
+"""
 
 from __future__ import annotations
 
@@ -34,8 +41,14 @@ PALETTE = {
 }
 
 
-
 def center(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt, fill: str) -> None:
+    """@brief 在矩形内居中绘制单行文本
+    @param draw PIL 绘图上下文
+    @param box 目标矩形
+    @param text 文本
+    @param fnt 字体对象
+    @param fill 文字颜色
+    @note 水平和垂直双向居中"""
     bbox = draw.textbbox((0, 0), text, font=fnt)
     x = box[0] + ((box[2] - box[0]) - (bbox[2] - bbox[0])) / 2
     y = box[1] + ((box[3] - box[1]) - (bbox[3] - bbox[1])) / 2 - 1
@@ -43,10 +56,25 @@ def center(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str,
 
 
 def wrap_lines(draw: ImageDraw.ImageDraw, text: str, fnt, width: int) -> list[str]:
+    """@brief 按最大像素宽度对文本自动换行
+    @param draw PIL 绘图上下文
+    @param text 原始文本
+    @param fnt 字体对象
+    @param width 每行最大像素宽度
+    @return 换行后的字符串列表"""
     return fit_wrap_text(draw, text, fnt, width)
 
 
 def wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt, width: int, fill: str, gap: int = 5) -> int:
+    """@brief 在指定位置绘制自动换行文本
+    @param draw PIL 绘图上下文
+    @param xy 起始坐标 (x, y)
+    @param text 原始文本
+    @param fnt 字体对象
+    @param width 每行最大像素宽度
+    @param fill 文字颜色
+    @param gap 行间距，默认 5
+    @return 绘制后的下一行 Y 坐标"""
     x, y = xy
     for line in wrap_lines(draw, text, fnt, width):
         draw.text((x, y), line, font=fnt, fill=fill)
@@ -55,6 +83,13 @@ def wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt, widt
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], color: str = "#61758A", width: int = 3) -> None:
+    """@brief 绘制带箭头头的线段
+    @param draw PIL 绘图上下文
+    @param start 起点坐标
+    @param end 终点（箭头尖端）坐标
+    @param color 颜色，默认灰色
+    @param width 线宽，默认 3
+    @note 箭头头长 14px、宽 8px"""
     sx, sy = start
     ex, ey = end
     length = math.hypot(ex - sx, ey - sy)
@@ -76,6 +111,9 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int
 
 
 def draw_flow(draw: ImageDraw.ImageDraw) -> None:
+    """@brief 绘制接收端 bit deinterleaving 流程：demapper LLR → LDPC input
+    @param draw PIL 绘图上下文
+    @note 四个节点横向排列并通过箭头连接，展示从解调器输出到 LDPC 译码器输入的完整路径"""
     y = 174
     boxes = [
         ("demapper LLR", "按调制符号输出：每符号 Qm 个 LLR", PALETTE["blue_l"], PALETTE["blue"]),
@@ -97,6 +135,15 @@ def draw_flow(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_matrix(draw: ImageDraw.ImageDraw, x0: int, y0: int, qm: int, symbols: int, title: str) -> None:
+    """@brief 绘制 demapper 顺序 vs rate-recovery 顺序的二维矩阵对比
+    @param draw PIL 绘图上下文
+    @param x0 矩阵左上角 X 坐标
+    @param y0 矩阵左上角 Y 坐标
+    @param qm 调制阶数（每符号比特数）
+    @param symbols 符号数量
+    @param title 标题（如 "QPSK: Qm=2..."）
+    @note 左侧矩阵显示 demapper 符号顺序 f，右侧显示反交织后的 e 序列，
+      中间连线标注 inverse 操作"""
     draw.text((x0, y0 - 44), title, font=font(24, True), fill=PALETTE["ink"])
     cell_w, cell_h = 112, 64
     header_h = 60
@@ -133,6 +180,10 @@ def draw_matrix(draw: ImageDraw.ImageDraw, x0: int, y0: int, qm: int, symbols: i
 
 
 def draw_checks(draw: ImageDraw.ImageDraw) -> None:
+    """@brief 绘制工程检测点卡片面板
+    @param draw PIL 绘图上下文
+    @note 五个检测卡片覆盖 Qm 来源、bit order 公式、buffer 读写顺序、
+      bank conflict 和高 SNR CRC fail 排查路径"""
     panel = (70, 1060, 1530, 1306)
     draw.rounded_rectangle(panel, radius=14, fill="#FFFDF7", outline="#DDBB60", width=2)
     draw.text((100, 1056), "工程检测点", font=font(26, True), fill=PALETTE["amber"])
@@ -155,6 +206,10 @@ def draw_checks(draw: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    """@brief 渲染 NR LDPC bit deinterleaving 与 LLR 放置教学图
+    @note 输出文件: docs/L2/assets/T9.4_NR_LDPC_bit_deinterleaving.png
+    @note 图中包含接收端流程链、QPSK/16QAM 二维矩阵对比（demapper order vs rate-recovery order）
+      和五个工程检测点卡片"""
     img = Image.new("RGB", (1980, 1400), PALETTE["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((70, 40), "NR LDPC Bit Deinterleaving 与 LLR 放置", font=font(40, True), fill=PALETTE["ink"])

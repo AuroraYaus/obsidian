@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render Turbo/LDPC/Polar decoder hardware tradeoff comparison."""
+""" @file render_decoder_hardware_tradeoff_comparison.py
+    @brief 渲染 Turbo/LDPC/Polar 三种译码器硬件架构取舍对比图。
+    @date 2025
+    @note 对比并行度、存储访问、排序、迭代/列表深度、延迟、吞吐、功耗和验证风险六个维度。
+    @see render_decoder_selection_by_channel_type.py 对应的译码器选择决策图
+"""
 
 from __future__ import annotations
 
@@ -38,6 +43,11 @@ COL = {
 
 
 def tokenize(text: str) -> list[str]:
+    """ @brief 将文本按单词和空白符分解为 token 列表，用于后续自动换行。
+        @param text 待分词的原始字符串，可含中英文混排和换行符。
+        @return 分词结果列表：每个元素为完整单词、单个空白或单个特殊字符。
+        @note ASCII 字母数字和常见符号 /_-+.[] 视为单词内字符，其余按字符单独拆分。
+    """
     tokens: list[str] = []
     cur = ""
     for ch in text:
@@ -62,6 +72,14 @@ def tokenize(text: str) -> list[str]:
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.FreeTypeFont, width: int) -> list[str]:
+    """ @brief 按给定像素宽度对文本自动换行，返回分行后的字符串列表。
+        @param draw PIL ImageDraw 实例，用于测量文本实际渲染宽度。
+        @param text 待分行的原始文本，可含换行符和中文。
+        @param fnt PIL 字体对象，决定字符宽度度量。
+        @param width 每行最大像素宽度（整数）。
+        @return 按宽度裁剪后的字符串行列表。
+        @note 调用 tokenize() 分词后再逐 token 拼接，超过宽度则换行。
+    """
     lines: list[str] = []
     cur = ""
     for tok in tokenize(text):
@@ -83,6 +101,10 @@ def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.FreeTypeFont, widt
 
 
 def center(box: tuple[int, int, int, int]) -> tuple[float, float]:
+    """ @brief 返回矩形包围盒的几何中心坐标。
+        @param box (left, top, right, bottom) 四元组。
+        @return (cx, cy) 中心浮点坐标。
+    """
     return ((box[0] + box[2]) / 2, (box[1] + box[3]) / 2)
 
 
@@ -95,6 +117,17 @@ def draw_centered(
     bold: bool = True,
     gap: int = 7,
 ) -> None:
+    """ @brief 在指定矩形内竖直居中对齐绘制多行文本。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 绘制区域。
+        @param text 待绘制的字符串或字符串列表。
+        @param size 字体大小（像素）。
+        @param color CSS 颜色字符串，默认为 ink 色。
+        @param bold 是否使用粗体，默认 True。
+        @param gap 行间距（像素），默认 7。
+        @return 无返回值。
+        @throws RuntimeError 当文本总高度超出 box 可用高度时抛出，防止文字溢出不可见。
+    """
     fnt = font(size, bold)
     raw_lines = text if isinstance(text, list) else [text]
     lines: list[str] = []
@@ -119,6 +152,12 @@ def draw_centered(
 
 
 def boundary_point(box: tuple[int, int, int, int], toward: tuple[float, float]) -> tuple[float, float]:
+    """ @brief 计算矩形边界上与目标方向对齐的交点，用于绘制箭头连接线。
+        @param box (left, top, right, bottom) 矩形包围盒。
+        @param toward 目标点 (x, y)，从矩形中心指向该点的射线与边界相交的位置。
+        @return 边界交点坐标 (x, y)。
+        @note 按半宽/半高比例缩放方向向量，确保交点落在矩形边界上而非内部。
+    """
     cx, cy = center(box)
     dx, dy = toward[0] - cx, toward[1] - cy
     if abs(dx) < 1e-6 and abs(dy) < 1e-6:
@@ -130,6 +169,15 @@ def boundary_point(box: tuple[int, int, int, int], toward: tuple[float, float]) 
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[float, float], end: tuple[float, float], color: str, width: int = 3) -> None:
+    """ @brief 从起点到终点绘制带三角箭头的直线。
+        @param draw PIL ImageDraw 实例。
+        @param start 箭头起始坐标 (x, y)。
+        @param end 箭头终点坐标 (x, y)，箭头尖端位于此处。
+        @param color CSS 颜色字符串。
+        @param width 线条宽度（像素），默认 3。
+        @return 无返回值。
+        @note 箭头尖端尺寸：head_len=15px, head_w=9px；线体在箭头尖端前 head_len 处截断以免覆盖箭头。
+    """
     x0, y0 = start
     x1, y1 = end
     length = math.hypot(x1 - x0, y1 - y0)
@@ -148,6 +196,14 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[float, float], end: tuple[floa
 
 
 def connect(draw: ImageDraw.ImageDraw, src: tuple[int, int, int, int], dst: tuple[int, int, int, int], color: str) -> None:
+    """ @brief 在两个矩形节点之间绘制连接箭头，自动计算边界交点。
+        @param draw PIL ImageDraw 实例。
+        @param src 源矩形 (left, top, right, bottom)。
+        @param dst 目标矩形 (left, top, right, bottom)。
+        @param color CSS 颜色字符串。
+        @return 无返回值。
+        @note 箭头从源边界指向目标边界，不穿入矩形内部。
+    """
     arrow(draw, boundary_point(src, center(dst)), boundary_point(dst, center(src)), color)
 
 
@@ -159,12 +215,31 @@ def node(
     fill: str,
     size: int = 24,
 ) -> tuple[int, int, int, int]:
+    """ @brief 绘制一个圆角矩形节点，内含居中对齐文本。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 节点包围盒。
+        @param text 节点内显示的文本字符串或行列表。
+        @param color 边框颜色 CSS 字符串。
+        @param fill 背景填充颜色 CSS 字符串。
+        @param size 字体大小（像素），默认 24。
+        @return 节点包围盒（传入的 box 原样返回，便于链式操作）。
+        @note 圆角半径固定为 16，边框宽度 2。
+    """
     draw.rounded_rectangle(box, radius=16, fill=fill, outline=color, width=2)
     draw_centered(draw, box, text, size=size, color=COL["ink"], bold=False)
     return box
 
 
 def panel(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], title: str, color: str, fill: str) -> None:
+    """ @brief 绘制一个带标题的圆角面板区域。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 面板包围盒。
+        @param title 面板左上角标题文字。
+        @param color 边框颜色 CSS 字符串。
+        @param fill 背景填充颜色 CSS 字符串。
+        @return 无返回值。
+        @note 圆角半径 22，边框宽度 3；标题字号 31，加粗，颜色与边框相同。
+    """
     draw.rounded_rectangle(box, radius=22, fill=fill, outline=color, width=3)
     draw.text((box[0] + 26, box[1] + 22), title, font=font(31, True), fill=color)
 
@@ -178,6 +253,17 @@ def draw_datapath(
     nodes: list[str],
     bottom_note: str,
 ) -> None:
+    """ @brief 绘制单个译码器的硬件数据通路：面板标题 + 流水节点链 + 底部说明。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 整条数据通路面板的包围盒。
+        @param title 面板左上角标题（如"Turbo 硬件数据通路"）。
+        @param color 主题色 CSS 字符串。
+        @param fill 面板背景色 CSS 字符串。
+        @param nodes 流水线各阶段名称列表，从左到右依次绘制并箭头连接。
+        @param bottom_note 面板底部的说明文字。
+        @return 无返回值。
+        @note 每个节点宽度 225、高度 102、间距 18；底部说明区带浅灰边框。
+    """
     panel(draw, box, title, color, fill)
     left = box[0] + 40
     y = box[1] + 105
@@ -194,6 +280,11 @@ def draw_datapath(
 
 
 def draw_datapaths(draw: ImageDraw.ImageDraw) -> int:
+    """ @brief 自上而下绘制 Turbo、LDPC、Polar 三条数据通路面板并对比瓶颈。
+        @param draw PIL ImageDraw 实例。
+        @return 三条面板底部的 Y 坐标，供后续模块使用。
+        @note 每条面板高 380，间距 40；Turbo 瓶颈在 trellis 递推，LDPC 在 message memory，Polar 在 sorter/path copy。
+    """
     y0 = 165
     draw_datapath(
         draw,
@@ -228,6 +319,12 @@ def draw_datapaths(draw: ImageDraw.ImageDraw) -> int:
 
 
 def draw_shared_table(draw: ImageDraw.ImageDraw, top: int) -> int:
+    """ @brief 绘制"可共享 vs 不宜共享"的译码子系统分类表。
+        @param draw PIL ImageDraw 实例。
+        @param top 表格顶部 Y 坐标（上一模块底部的 Y 值）。
+        @return 表格底部 Y 坐标，供后续模块使用。
+        @note 四行五类：输入输出、控制、计算、存储，分别列出可共享与不宜共享的模块。
+    """
     y0 = top + 105
     draw.text((90, y0 - 52), "统一译码子系统：可共享与不宜共享", font=font(32, True), fill=COL["ink"])
     x0 = 90
@@ -253,6 +350,13 @@ def draw_shared_table(draw: ImageDraw.ImageDraw, top: int) -> int:
 
 
 def draw_decision_matrix(draw: ImageDraw.ImageDraw, top: int) -> int:
+    """ @brief 绘制 Turbo/LDPC/Polar 工程决策矩阵表，按维度横向对比三种译码器。
+        @param draw PIL ImageDraw 实例。
+        @param top 表格顶部 Y 坐标（上一模块底部的 Y 值）。
+        @return 表格底部 Y 坐标，供后续模块使用。
+        @throws RuntimeError 当与上一模块间距不足 90px 时抛出，防止视觉重叠。
+        @note 六个维度：并行度、延迟、吞吐、面积/功耗、验证难度；每行高 84。
+    """
     y0 = top + 105
     if y0 - top < 90:
         raise RuntimeError("shared-to-decision spacing too small")
@@ -281,6 +385,13 @@ def draw_decision_matrix(draw: ImageDraw.ImageDraw, top: int) -> int:
 
 
 def draw_footer(draw: ImageDraw.ImageDraw, top: int) -> None:
+    """ @brief 绘制底部三列总结卡片：周期估算、验证重点、设计结论。
+        @param draw PIL ImageDraw 实例。
+        @param top 卡片区顶部 Y 坐标（上一模块底部的 Y 值）。
+        @return 无返回值。
+        @throws RuntimeError 当与上一模块间距不足 90px 时抛出。
+        @note 每张卡片宽 540、高 260，琥珀色主题，含标题和正文两行。
+    """
     y0 = top + 105
     if y0 - top < 90:
         raise RuntimeError("decision-to-footer spacing too small")
@@ -299,6 +410,11 @@ def draw_footer(draw: ImageDraw.ImageDraw, top: int) -> None:
 
 
 def main(output: Path | None = None) -> None:
+    """ @brief 脚本入口：生成 T11.4 Turbo/LDPC/Polar 硬件架构取舍对比图。
+        @param output 自定义输出路径（可选），默认写入 OUT_PATH。
+        @return 无返回值。
+        @note 产出单张 PNG，1900x3040，含数据通路、共享子系统和决策矩阵三个模块。
+    """
     out = output or OUT_PATH
     img = Image.new("RGB", (1900, 3040), COL["bg"])
     draw = ImageDraw.Draw(img)

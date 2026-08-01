@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Render T15.4 Design Compiler synthesis flow figure."""
+""" @file render_t15_4_dc_synthesis_flow_decoders.py
+@brief 渲染T15.4 Design Compiler综合流程图 —— RTL输入到技术映射网表，报告时序/面积/功耗/结构风险
+@date 2025 """
 
 from __future__ import annotations
 
@@ -38,11 +40,24 @@ WHITE = "#ffffff"
 
 
 def text_size(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont) -> tuple[int, int]:
+    """ @brief 计算文本渲染后的像素尺寸，用于卡片/表格布局中的宽度高度约束判断
+    @param draw PIL ImageDraw 绘图上下文
+    @param text 待测量的文本字符串
+    @param fnt PIL ImageFont 字体对象
+    @return (width, height) 文本边界框的宽高像素值
+    @note 使用 textbbox 替代已废弃的 textsize 方法 """
     box = draw.textbbox((0, 0), text, font=fnt)
     return box[2] - box[0], box[3] - box[1]
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: int) -> list[str]:
+    """ @brief 按最大像素宽度自动换行，将单行长文本拆分为多行
+    @param draw PIL ImageDraw 绘图上下文
+    @param text 待换行的原始文本字符串
+    @param fnt PIL ImageFont 字体对象
+    @param width 每行允许的最大像素宽度
+    @return 换行后的字符串列表，每项为一行
+    @note 按空格切分单词逐词累加宽度 """
     words = text.split()
     lines: list[str] = []
     cur = ""
@@ -67,6 +82,15 @@ def centered(
     fill: str = INK,
     gap: int = 8,
 ) -> None:
+    """ @brief 在指定矩形区域内居中绘制多行文本，自动计算垂直起始位置
+    @param draw PIL ImageDraw 绘图上下文
+    @param rect (x0, y0, x1, y1) 目标矩形区域
+    @param lines 待绘制的文本行列表
+    @param fnt PIL ImageFont 字体对象
+    @param fill 文本颜色，默认 INK
+    @param gap 行间距像素值，默认 8
+    @return None
+    @note 使用 anchor="mm" 实现水平和垂直居中 """
     x0, y0, x1, y1 = rect
     heights = [text_size(draw, line, fnt)[1] for line in lines]
     total = sum(heights) + gap * max(0, len(lines) - 1)
@@ -78,6 +102,13 @@ def centered(
 
 
 def card(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], title: str, body: str, fill: str) -> None:
+    """ @brief 绘制一个带圆角边框、标题和正文的语义卡片组件
+    @param draw PIL ImageDraw 绘图上下文
+    @param rect (x0, y0, x1, y1) 卡片矩形区域
+    @param title 卡片标题文本
+    @param body 卡片正文文本（自动换行后居中绘制）
+    @param fill 卡片背景填充颜色
+    @return None """
     x0, y0, x1, y1 = rect
     draw.rounded_rectangle(rect, radius=8, fill=fill, outline="#37474f", width=2)
     draw.text(((x0 + x1) / 2, y0 + 42), title, font=HEAD, fill=INK, anchor="mm")
@@ -85,6 +116,12 @@ def card(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], title: str,
 
 
 def boundary_point(rect: tuple[int, int, int, int], side: str, offset: int = 0) -> tuple[float, float]:
+    """ @brief 计算矩形某条边上的点坐标，用于箭头起止点的精确定位
+    @param rect (x0, y0, x1, y1) 矩形区域
+    @param side 边的方向："left"/"right"/"top"/"bottom"
+    @param offset 沿该边的偏移量（像素）
+    @return (x, y) 边界点坐标
+    @throws ValueError 当 side 参数不是合法方向时抛出 """
     x0, y0, x1, y1 = rect
     if side == "left":
         return x0, (y0 + y1) / 2 + offset
@@ -98,6 +135,13 @@ def boundary_point(rect: tuple[int, int, int, int], side: str, offset: int = 0) 
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[float, float], end: tuple[float, float], color: str = LINE, width: int = 4) -> None:
+    """ @brief 绘制带箭头尖端的直线段，用于表示综合流程方向
+    @param draw PIL ImageDraw 绘图上下文
+    @param start (x, y) 线段起点坐标
+    @param end (x, y) 线段终点坐标（箭头尖端位置）
+    @param color 线条和箭头填充颜色，默认 LINE
+    @param width 线条宽度像素值，默认 4
+    @return None """
     sx, sy = start
     ex, ey = end
     vx, vy = ex - sx, ey - sy
@@ -128,6 +172,16 @@ def table(
     widths: list[int],
     row_h: int,
 ) -> None:
+    """ @brief 绘制带圆角外框、表头和交替行颜色的数据表格
+    @param draw PIL ImageDraw 绘图上下文
+    @param x0 表格左上角 x 坐标
+    @param y0 表格左上角 y 坐标
+    @param headers 表头文本列表
+    @param rows 表格数据行列表
+    @param widths 各列宽度像素值列表
+    @param row_h 每行的像素高度
+    @return None
+    @note 数据行交替白色/#fafafa 以提高可读性 """
     total_w = sum(widths)
     total_h = row_h * (len(rows) + 1)
     draw.rounded_rectangle((x0, y0, x0 + total_w, y0 + total_h), radius=8, fill=WHITE, outline="#607d8b", width=2)
@@ -148,6 +202,12 @@ def table(
 
 
 def main() -> None:
+    """ @brief 渲染T15.4 DC综合流程图的主入口
+    @note 生成的图片展示从 RTL Inputs → DC Setup → SDC Constraints → Compile → Reports 的五步综合流程。
+    上半部分为五张流程卡片和工具边界说明，中间为 Artifact 风险检查表（Artifact/Decoder-specific risk/DC check/Evidence），下半部分为路径族关键逻辑分析表（Path family/Likely critical logic/First action/Do not hide）。
+    包含布局间距的自检断言。
+    输出至 docs/L3/assets/T15.4_DC_synthesis_flow_decoders.png
+    @see render_t15_3_coverage_regression_strategy.py, render_t15_5_timing_closure_critical_paths.py """
     width, height = 3000, 2860
     img = Image.new("RGB", (width, height), "#f8fbfa")
     draw = ImageDraw.Draw(img)

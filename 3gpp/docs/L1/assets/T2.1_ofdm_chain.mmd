@@ -1,0 +1,15 @@
+%%{init: {'theme': 'default', 'fontSize': 14}}%%
+flowchart LR
+    A["N 个调制符号 dₖ<br/>频域 · 复数"] --> B["IFFT<br/>N 点<br/>O(N log N)"]
+    B --> C["时域采样 s[n]<br/>N 个采样点"]
+    C --> D["+CP<br/>复制末尾<br/>N_CP 个样点到前端"]
+    D --> E["完整 OFDM 符号<br/>时长 T_symbol<br/>= T_u + T_CP"]
+    E --> F["多径信道<br/>h(t) + AWGN"]
+    F --> G["去 CP<br/>丢弃前端<br/>N_CP 个采样"]
+    G --> H["FFT<br/>N 点<br/>O(N log N)"]
+    H --> I["N 个接收符号<br/>hat{d}_k = H_k·d_k + n_k<br/>频域 · 单抽头均衡"]
+
+    style A fill:#e3f2fd,stroke:#1565c0
+    style E fill:#fff3e0,stroke:#e65100
+    style F fill:#fce4ec,stroke:#c62828
+    style I fill:#e8f5e9,stroke:#2e7d32

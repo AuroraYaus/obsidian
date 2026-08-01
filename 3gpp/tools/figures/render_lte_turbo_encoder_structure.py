@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Render a rebuilt teaching figure for TS 36.212 Figure 5.1.3-2."""
+"""@file render_lte_turbo_encoder_structure.py
+@brief 重建 TS 36.212 Figure 5.1.3-2：LTE rate 1/3 Turbo 编码器结构教学图
+@date 2025
+@note 设计意图：依据 TS 36.212 Rel-19 §5.1.3.2.1/§5.1.3.2.2 和本地 media/image79.wmf 重建，
+  实线表示信息编码阶段，虚线表示网格终止阶段使用的尾比特路径。
+@see docs/L2/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder.md
+"""
 
 from __future__ import annotations
 
@@ -30,7 +36,6 @@ PALE_ORANGE = "#FFF4E7"
 PALE_PURPLE = "#F2EFFF"
 
 
-
 def draw_wrapped(
     draw: ImageDraw.ImageDraw,
     xy: tuple[int, int],
@@ -40,6 +45,16 @@ def draw_wrapped(
     max_width: int,
     line_gap: int = 7,
 ) -> int:
+    """@brief 在指定坐标绘制自动换行文本
+    @param draw PIL 绘图上下文
+    @param xy 起始坐标 (x, y)
+    @param text 原始文本
+    @param fnt 字体对象
+    @param fill 文字颜色
+    @param max_width 每行最大像素宽度
+    @param line_gap 行间距像素，默认 7
+    @return 文本绘制完成后的下一行 Y 坐标（便于继续追加文本）
+    @note 委托 figure_text_fit.wrap_text 进行智能换行"""
     x, y = xy
     lines = fit_wrap_text(draw, text, fnt, max_width)
     for line in lines:
@@ -49,10 +64,23 @@ def draw_wrapped(
 
 
 def wrapped_lines(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.FreeTypeFont, max_width: int) -> list[str]:
+    """@brief 获取文本按最大宽度换行后的行列表
+    @param draw PIL 绘图上下文
+    @param text 原始文本
+    @param fnt 字体对象
+    @param max_width 每行最大像素宽度
+    @return 换行后的字符串列表
+    @note 纯计算函数，不执行绘图动作"""
     return fit_wrap_text(draw, text, fnt, max_width)
 
 
 def text_height(draw: ImageDraw.ImageDraw, lines: list[str], fnt: ImageFont.FreeTypeFont, gap: int) -> int:
+    """@brief 计算多行文本的总渲染高度
+    @param draw PIL 绘图上下文
+    @param lines 文本行列表
+    @param fnt 字体对象
+    @param gap 行间距像素
+    @return 总像素高度（含行间距）"""
     heights = []
     for line in lines:
         bbox = draw.textbbox((0, 0), line, font=fnt)
@@ -69,6 +97,15 @@ def draw_centered_multiline(
     max_width: int,
     line_gap: int = 6,
 ) -> None:
+    """@brief 在矩形区域内居中绘制可能包含列表的多行文本
+    @param draw PIL 绘图上下文
+    @param box_xy 目标矩形 (x0, y0, x1, y1)
+    @param text 单个字符串或字符串列表（列表内每项独立换行后合并）
+    @param fnt 字体对象
+    @param fill 文字颜色
+    @param max_width 每行最大像素宽度
+    @param line_gap 行间距像素，默认 6
+    @note 所有行整体在 box 内垂直居中，每行 anchor="mm" 水平居中"""
     if isinstance(text, list):
         lines: list[str] = []
         for item in text:
@@ -86,6 +123,13 @@ def draw_centered_multiline(
 
 
 def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt: ImageFont.FreeTypeFont, fill: str) -> None:
+    """@brief 在矩形内居中绘制单行文本
+    @param draw PIL 绘图上下文
+    @param box 目标矩形 (x0, y0, x1, y1)
+    @param text 要绘制的文本
+    @param fnt 字体对象
+    @param fill 文字颜色
+    @note 水平和垂直双向居中，不处理换行"""
     bbox = draw.textbbox((0, 0), text, font=fnt)
     x = box[0] + ((box[2] - box[0]) - (bbox[2] - bbox[0])) / 2
     y = box[1] + ((box[3] - box[1]) - (bbox[3] - bbox[1])) / 2 - 1
@@ -93,10 +137,18 @@ def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text:
 
 
 def center(box_xy: tuple[int, int, int, int]) -> tuple[float, float]:
+    """@brief 计算矩形几何中心坐标
+    @param box_xy 矩形 (x0, y0, x1, y1)
+    @return 中心坐标 (cx, cy)"""
     return (box_xy[0] + box_xy[2]) / 2, (box_xy[1] + box_xy[3]) / 2
 
 
 def boundary_point(box_xy: tuple[int, int, int, int], toward: tuple[float, float]) -> tuple[float, float]:
+    """@brief 计算从矩形中心射向目标点时与矩形边界的交点
+    @param box_xy 矩形 (x0, y0, x1, y1)
+    @param toward 目标点坐标
+    @return 边界交点坐标
+    @note 用于连接线的精确起止定位"""
     cx, cy = center(box_xy)
     dx, dy = toward[0] - cx, toward[1] - cy
     if abs(dx) < 1e-6 and abs(dy) < 1e-6:
@@ -108,6 +160,14 @@ def boundary_point(box_xy: tuple[int, int, int, int], toward: tuple[float, float
 
 
 def box(draw: ImageDraw.ImageDraw, xy: tuple[int, int, int, int], title: str, subtitle: str, fill: str, outline: str) -> None:
+    """@brief 绘制带标题和副标题的圆角矩形模块
+    @param draw PIL 绘图上下文
+    @param xy 矩形 (x0, y0, x1, y1)
+    @param title 模块标题（上排，24px 加粗）
+    @param subtitle 模块副标题（下排，24px 常规，自动换行）
+    @param fill 填充颜色
+    @param outline 描边颜色
+    @note 圆角半径 12、描边宽度 3"""
     draw.rounded_rectangle(xy, radius=12, fill=fill, outline=outline, width=3)
     center_text(draw, (xy[0] + 14, xy[1] + 12, xy[2] - 14, xy[1] + 54), title, font(24, True), INK)
     if subtitle:
@@ -122,6 +182,14 @@ def arrow(
     width: int = 4,
     dotted: bool = False,
 ) -> None:
+    """@brief 绘制带箭头头的线段，支持实线和虚线
+    @param draw PIL 绘图上下文
+    @param start 起点坐标
+    @param end 终点（箭头尖端）坐标
+    @param color 线条颜色，默认 LINE
+    @param width 线宽，默认 4
+    @param dotted 是否虚线模式，默认 False
+    @note 虚线用于表示 trellis termination 阶段的尾比特路径"""
     sx, sy = start
     ex, ey = end
     dx = ex - sx
@@ -155,15 +223,34 @@ def connect(
     width: int = 4,
     dotted: bool = False,
 ) -> None:
+    """@brief 在两个矩形之间绘制自动取边界交点的箭头连线
+    @param draw PIL 绘图上下文
+    @param src 源矩形
+    @param dst 目标矩形
+    @param color 连线颜色
+    @param width 线宽，默认 4
+    @param dotted 是否虚线模式，默认 False
+    @note 自动计算从 src 边界到 dst 边界的最短路径"""
     arrow(draw, boundary_point(src, center(dst)), boundary_point(dst, center(src)), color, width, dotted)
 
 
 def pill(draw: ImageDraw.ImageDraw, xy: tuple[int, int, int, int], text: str, fill: str, outline: str | None = None) -> None:
+    """@brief 绘制胶囊形状标签（高圆角矩形）
+    @param draw PIL 绘图上下文
+    @param xy 矩形 (x0, y0, x1, y1)
+    @param text 标签文字
+    @param fill 填充颜色
+    @param outline 描边颜色，默认与 fill 相同
+    @note 文字颜色自动选择：深色填充用白色文字，浅色填充用 INK"""
     draw.rounded_rectangle(xy, radius=18, fill=fill, outline=outline or fill, width=2)
     center_text(draw, xy, text, font(24, True), "#FFFFFF" if fill not in {"#FFFFFF", PALE_BLUE, PALE_GREEN, PALE_ORANGE, PALE_PURPLE} else INK)
 
 
 def main() -> None:
+    """@brief 渲染 TS 36.212 Figure 5.1.3-2 重建图
+    @note 输出文件: docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png
+    @note 图中包含信息编码主路径（系统路+两路校验）、Turbo 内部交织器、
+      网格终止路径（尾比特虚线）和接收端读图顺序说明"""
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     img = Image.new("RGB", (2040, 1570), "#FFFFFF")
     draw = ImageDraw.Draw(img)

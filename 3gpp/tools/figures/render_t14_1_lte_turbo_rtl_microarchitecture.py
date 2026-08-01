@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render T14.1 LTE Turbo RTL microarchitecture."""
+""" @file render_t14_1_lte_turbo_rtl_microarchitecture.py
+    @brief 渲染 T14.1 LTE Turbo 译码器 RTL 微架构图——SISO 数据通路、alpha/beta 存储、外信息 RAM 和迭代控制 FSM
+    @date 2025
+    @see render_t14_2_nr_ldpc_rtl_microarchitecture.py 同系列 NR LDPC RTL 微架构图
+    @see render_t13_3_nr_ldpc_fixed_point_model.py 定点化模型对照（各阶段 checkpoint 定义）
+"""
 
 from __future__ import annotations
 
@@ -30,11 +35,26 @@ LINE = "#546e7a"
 
 
 def text_size(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont) -> tuple[int, int]:
+
+    """ @brief 计算文本在指定字体下的渲染像素宽高，用于布局和自动换行宽度判断
+        @param draw PIL ImageDraw 绘制上下文
+        @param text 待测量的文本字符串
+        @param fnt PIL ImageFont 字体对象
+        @return 元组 (width, height) 表示文本占据的像素尺寸
+    """
     box = draw.textbbox((0, 0), text, font=fnt)
     return box[2] - box[0], box[3] - box[1]
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: int) -> list[str]:
+
+    """ @brief 按指定宽度自动换行文本，单词边界处断行，确保每行渲染宽度不超过给定像素宽度上限
+        @param draw PIL ImageDraw 绘制上下文
+        @param text 待换行的英文字符串
+        @param fnt PIL ImageFont 字体对象
+        @param width 像素宽度上限
+        @return 换行后的字符串列表，每行为一个文本块
+    """
     words = text.split()
     lines: list[str] = []
     cur = ""
@@ -52,6 +72,16 @@ def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: 
 
 
 def centered(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], lines: list[str], fnt, fill=INK, gap=7) -> None:
+
+    """ @brief 在给定矩形区域内垂直居中绘制多行文本，支持行间距控制
+        @param draw PIL ImageDraw 绘制上下文
+        @param lines 多行文本列表
+        @param fnt PIL ImageFont 字体对象
+        @param rect 绘制的矩形边界 (x0, y0, x1, y1)
+        @param fill 文字颜色
+        @param gap 行间距像素值
+        @note 先计算总高度再做垂直偏移，确保文本块在矩形内视觉居中
+    """
     x0, y0, x1, y1 = rect
     heights = [text_size(draw, line, fnt)[1] for line in lines]
     total = sum(heights) + gap * max(0, len(lines) - 1)
@@ -63,6 +93,15 @@ def centered(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], lines: 
 
 
 def card(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], title: str, body: str, fill: str) -> None:
+
+    """ @brief 绘制圆角卡片（标题 + 正文），作为知识图的基本信息容器
+        @param draw PIL ImageDraw 绘制上下文
+        @param rect 矩形的 (x0, y0, x1, y1) 坐标
+        @param title 卡片标题（粗体渲染）
+        @param body 卡片正文（自动换行后居中绘制）
+        @param fill 卡片背景色
+        @note 卡片是教学图中承载概念说明的主要视觉组件，边距和标题位置由参数内置
+    """
     x0, y0, x1, y1 = rect
     draw.rounded_rectangle(rect, radius=8, fill=fill, outline="#37474f", width=2)
     draw.text(((x0 + x1) / 2, y0 + 35), title, font=HEAD, fill=INK, anchor="mm")
@@ -70,10 +109,22 @@ def card(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], title: str,
 
 
 def center(rect: tuple[int, int, int, int]) -> tuple[float, float]:
+
+    """ @brief 计算矩形几何中心坐标，用于箭头起止点的方向计算
+        @param rect 矩形 (x0, y0, x1, y1)
+        @return 中心坐标 (cx, cy)
+    """
     return (rect[0] + rect[2]) / 2, (rect[1] + rect[3]) / 2
 
 
 def boundary(src: tuple[int, int, int, int], dst: tuple[int, int, int, int]) -> tuple[float, float]:
+
+    """ @brief 计算从矩形中心指向目标方向的矩形边界交点，用于箭头的精确起止定位
+        @param src 源矩形 (x0, y0, x1, y1)
+        @param dst 目标矩形 (x0, y0, x1, y1)
+        @return 源矩形边界上的交点坐标 (x, y)
+        @throws 零长度向量时返回矩形中心（退化为无方向情况）
+    """
     sx, sy = center(src)
     dx, dy = center(dst)
     vx, vy = dx - sx, dy - sy
@@ -93,6 +144,15 @@ def segment_intersects_rect(
     rect: tuple[int, int, int, int],
     margin: int = 0,
 ) -> bool:
+
+    """ @brief 判断线段是否与矩形相交（含边界），用于折线路由路径的合法性校验
+        @param p0 线段起点 (x, y)
+        @param p1 线段终点 (x, y)
+        @param rect 矩形 (x0, y0, x1, y1)
+        @param margin 矩形外扩边距，默认 0
+        @return 相交则返回 True
+        @note 处理水平和垂直线段的退化情况，避免除以零
+    """
     x0, y0, x1, y1 = rect
     x0 -= margin
     y0 -= margin
@@ -126,6 +186,14 @@ def assert_no_unrelated_crossing(
     points: list[tuple[float, float]],
     forbidden: dict[str, tuple[int, int, int, int]],
 ) -> None:
+
+    """ @brief 断言折线路径不穿越禁止区域中的任何矩形，用于保证绕行路径的视觉清晰度
+        @param name 路径名称，用于错误信息
+        @param points 折线顶点列表 [(x, y), ...]
+        @param forbidden 禁止穿越的矩形字典 {名称: (x0,y0,x1,y1), ...}
+        @throws AssertionError 当任一线段穿越任一禁止矩形时抛出，帮助开发期发现视觉冲突
+        @note 本函数是绘图质量保障而非运行期功能断言——穿越不会导致数据错误但会使图不可读
+    """
     for p0, p1 in zip(points, points[1:]):
         for rect_name, rect in forbidden.items():
             if segment_intersects_rect(p0, p1, rect, margin=3):
@@ -133,6 +201,15 @@ def assert_no_unrelated_crossing(
 
 
 def arrow(draw: ImageDraw.ImageDraw, src: tuple[int, int, int, int], dst: tuple[int, int, int, int], color=LINE) -> None:
+
+    """ @brief 在两个矩形组件之间绘制带箭头的连接线。
+        @param draw PIL ImageDraw 绘制上下文。
+        @param src 源矩形 (x0, y0, x1, y1)。
+        @param dst 目标矩形 (x0, y0, x1, y1)。
+        @param color 线条颜色，默认 LINE。
+        @return 无返回值。
+        @note 箭头头部为三角形，自动计算方向并在目标边界处终止，不侵入目标矩形内部。
+    """
     ax, ay = boundary(src, dst)
     bx, by = boundary(dst, src)
     vx, vy = bx - ax, by - ay
@@ -153,6 +230,14 @@ def arrow(draw: ImageDraw.ImageDraw, src: tuple[int, int, int, int], dst: tuple[
 
 
 def point_arrow(draw: ImageDraw.ImageDraw, start: tuple[float, float], end: tuple[float, float], color=LINE) -> None:
+
+    """ @brief 在两点之间绘制带三角箭头的连接线，适用于自由路由路径
+        @param draw PIL ImageDraw 绘制上下文
+        @param start 起点坐标 (x, y)
+        @param end 终点坐标 (x, y)
+        @param color 线条颜色
+        @note 与 arrow() 不同，本函数不依赖矩形边界计算，直接使用像素坐标
+    """
     sx, sy = start
     ex, ey = end
     vx, vy = ex - sx, ey - sy
@@ -173,6 +258,18 @@ def point_arrow(draw: ImageDraw.ImageDraw, start: tuple[float, float], end: tupl
 
 
 def table(draw: ImageDraw.ImageDraw, x0: int, y0: int, headers: list[str], rows: list[list[str]], widths: list[int], row_h: int = 84) -> None:
+
+    """ @brief 绘制带表头的圆角数据表格，含行分隔线和列分隔线。
+        @param draw PIL ImageDraw 绘制上下文。
+        @param x0 表格左上角 X 坐标。
+        @param y0 表格左上角 Y 坐标。
+        @param headers 表头文本列表。
+        @param rows 数据行列表，每行为字符串列表。
+        @param widths 每列宽度列表（像素）。
+        @param row_h 每行高度（像素），默认 84。
+        @return 无返回值。
+        @note 表格是教学图中展示 checkpoint、寄存器映射、对比规则等结构化信息的主要组件。
+    """
     total_w = sum(widths)
     total_h = row_h * (len(rows) + 1)
     draw.rounded_rectangle((x0, y0, x0 + total_w, y0 + total_h), radius=8, fill="#ffffff", outline="#607d8b", width=2)
@@ -192,6 +289,11 @@ def table(draw: ImageDraw.ImageDraw, x0: int, y0: int, headers: list[str], rows:
 
 
 def main() -> None:
+
+    """ @brief 绘制本文件对应的教学示意图，输出为 PNG 格式
+        @note 本脚本是单文件渲染器，通过 PIL 直接绘制，不依赖外部图表库
+        @note 输出路径由全局变量 OUT 定义，对应 docs/L3/assets/ 下的同名 PNG
+    """
     width, height = 2400, 2140
     img = Image.new("RGB", (width, height), "#f8fbfa")
     draw = ImageDraw.Draw(img)

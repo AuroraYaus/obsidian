@@ -678,7 +678,7 @@ git add 2026-06-19-lte-nr-decoding-learning-roadmap.md
 git commit -m "Verify LTE NR decoding roadmap completeness"
 ```
 
-Expected: commit succeeds if there were edits. If no edits were needed, leave the prior commit as the latest roadmap TS_36.211_36211-j30_s06-s08_content commit.
+Expected: commit succeeds if there were edits. If no edits were needed, leave the prior commit as the latest roadmap content commit.
 
 ### Task 7: Review and Final Commit State
 

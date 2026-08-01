@@ -1,3 +1,7 @@
+""" @file test_diagram_audit_tools.py
+    @brief 测试 Mermaid 图表审计工具和 Python 渲染脚本输出审计工具。
+    @date 2025 """
+
 import tempfile
 import unittest
 from pathlib import Path
@@ -6,7 +10,10 @@ from PIL import Image
 
 
 class MermaidDiagramAuditTests(unittest.TestCase):
+    """ @brief 测试 audit_mermaid_diagrams 模块：验证 Mermaid 图表中的有序列表节点标签、subgraph 命名等规则。 """
+
     def test_reports_ordered_list_syntax_in_node_label(self) -> None:
+        """ @brief 验证审计能检测到节点标签中使用有序列表语法（如 "1. Configure descriptor"）。 """
         from tools.audit_mermaid_diagrams import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -24,6 +31,7 @@ class MermaidDiagramAuditTests(unittest.TestCase):
         self.assertTrue(any(f.rule == "ordered_list_label" for f in findings), findings)
 
     def test_reports_subgraph_display_name_without_id(self) -> None:
+        """ @brief 验证审计能检测到 subgraph 仅有显示文本而无 ID 的情况。 """
         from tools.audit_mermaid_diagrams import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -43,6 +51,7 @@ class MermaidDiagramAuditTests(unittest.TestCase):
         self.assertTrue(any(f.rule == "subgraph_name_without_id" for f in findings), findings)
 
     def test_accepts_skill_compatible_flowchart(self) -> None:
+        """ @brief 验证使用规范 subgraph ID、classDef 和 stage 类的 Mermaid 图通过审计。 """
         from tools.audit_mermaid_diagrams import audit_markdown_files
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -66,7 +75,10 @@ class MermaidDiagramAuditTests(unittest.TestCase):
 
 
 class PythonFigureOutputAuditTests(unittest.TestCase):
+    """ @brief 测试 audit_python_figure_outputs 模块：验证 Python 渲染脚本的输出 PNG 是否正确生成。 """
+
     def test_reports_script_that_exits_zero_without_png_output(self) -> None:
+        """ @brief 验证审计能检测到脚本正常退出但未生成声明 PNG 输出的情况。 """
         from tools.audit_python_figure_outputs import audit_scripts
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -78,6 +90,7 @@ class PythonFigureOutputAuditTests(unittest.TestCase):
         self.assertTrue(any(f.rule == "missing_png_output" for f in findings), findings)
 
     def test_accepts_script_that_writes_declared_png(self) -> None:
+        """ @brief 验证脚本正确生成声明的 PNG 输出时通过审计。 """
         from tools.audit_python_figure_outputs import audit_scripts
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -100,6 +113,7 @@ class PythonFigureOutputAuditTests(unittest.TestCase):
         self.assertEqual([], findings)
 
     def test_ignores_function_local_png_path_variables_as_declared_outputs(self) -> None:
+        """ @brief 验证审计忽略函数局部变量声明的 PNG 输出路径，不将其视为模块级输出声明。 """
         from tools.audit_python_figure_outputs import audit_scripts
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -126,6 +140,7 @@ class PythonFigureOutputAuditTests(unittest.TestCase):
         self.assertEqual([], findings)
 
     def test_does_not_attribute_preexisting_recent_png_to_script(self) -> None:
+        """ @brief 验证审计不会将已存在的 PNG 文件误判为脚本生成的新输出。 """
         from tools.audit_python_figure_outputs import audit_scripts
 
         with tempfile.TemporaryDirectory() as tmp:

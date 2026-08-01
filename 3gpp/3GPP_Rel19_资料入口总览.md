@@ -27,7 +27,7 @@ source_spec: "3GPP_Rel19/manifest.csv"
 ## 使用顺序
 
 1. 先确认协议号和包版本。
-2. 再去 `processed/` 找对应的 `TS_36.213_36213-j30_s00-s05_index.md` 和 `TS_36.212_36212-j30_content.md`。
+2. 再去 `processed/` 找对应的 `TS_36.213_36213-j30_s00-s05_index.md` 和 `content.md`。
 3. 如果要核对表格、公式或 media，回到 `processed/` 子目录里的 `tables/`、`equations/`、`media/` 和 `source.docx`。
 
 ## 关联说明

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render T12.4 NR Polar floating-point simulation flow."""
+""" @file render_t12_4_nr_polar_float_sim_flow.py
+@brief 渲染 T12.4 NR Polar 浮点仿真流程图，展示从可靠性序列到 SC/SCL/CA-SCL 译码器列表大小扫描的完整仿真管线。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -25,11 +28,24 @@ TINY = font(24)
 
 
 def size(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont) -> tuple[int, int]:
+    """ @brief 计算文本渲染后的宽高。
+    @param draw PIL 绘图上下文。
+    @param text 待测量的文本字符串。
+    @param fnt PIL 字体对象。
+    @return (宽度, 高度) px。
+    """
     b = draw.textbbox((0, 0), text, font=fnt)
     return b[2] - b[0], b[3] - b[1]
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: int) -> list[str]:
+    """ @brief 按单词边界自动换行，返回行列表。
+    @param draw PIL 绘图上下文。
+    @param text 待换行的英文字符串。
+    @param fnt PIL 字体对象。
+    @param width 最大行宽（px）。
+    @return 换行后的行列表。
+    """
     words = text.split()
     lines: list[str] = []
     cur = ""
@@ -47,11 +63,28 @@ def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: 
 
 
 def text_height(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont) -> int:
+    """ @brief 计算单行文本的渲染高度。
+    @param draw PIL 绘图上下文。
+    @param text 待测量的文本字符串。
+    @param fnt PIL 字体对象。
+    @return 高度（px）。
+    """
     b = draw.textbbox((0, 0), text, font=fnt)
     return b[3] - b[1]
 
 
 def centered_lines(draw, lines, fnt, center_x, y0, y1, fill, line_gap=8):
+    """ @brief 在指定垂直范围内居中对齐绘制多行文本。
+    @param draw PIL 绘图上下文。
+    @param lines 文本行列表。
+    @param fnt PIL 字体对象。
+    @param center_x 水平居中 X 坐标。
+    @param y0 垂直范围起点 Y。
+    @param y1 垂直范围终点 Y。
+    @param fill 文本颜色 hex 字符串。
+    @param line_gap 行间距，默认 8px。
+    @return None
+    """
     heights = [text_height(draw, line, fnt) for line in lines]
     total = sum(heights) + line_gap * max(0, len(lines) - 1)
     y = y0 + (y1 - y0 - total) / 2
@@ -61,6 +94,14 @@ def centered_lines(draw, lines, fnt, center_x, y0, y1, fill, line_gap=8):
 
 
 def box(draw, xy, title, body, fill):
+    """ @brief 绘制带标题和正文的圆角矩形卡片，用于仿真流程各阶段节点。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @param title 卡片标题。
+    @param body 正文描述字符串。
+    @param fill 填充色 hex 字符串。
+    @return None
+    """
     x0, y0, x1, y1 = xy
     draw.rounded_rectangle(xy, radius=12, fill=fill, outline="#263238", width=2)
     draw.text(((x0 + x1) / 2, y0 + 32), title, font=HEAD, fill="#102027", anchor="mm")
@@ -69,10 +110,19 @@ def box(draw, xy, title, body, fill):
 
 
 def center(rect):
+    """ @brief 计算矩形几何中心坐标。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @return 中心点坐标 (cx, cy)。
+    """
     return (rect[0] + rect[2]) / 2, (rect[1] + rect[3]) / 2
 
 
 def boundary_point(src, dst):
+    """ @brief 计算从源矩形中心向目标矩形方向的边界交点，用于箭头起点/终点定位。
+    @param src 源矩形 (x0, y0, x1, y1)。
+    @param dst 目标矩形 (x0, y0, x1, y1)。
+    @return 源矩形边界上的交点坐标 (bx, by)。
+    """
     sx, sy = center(src)
     dx, dy = center(dst)
     vx, vy = dx - sx, dy - sy
@@ -86,6 +136,12 @@ def boundary_point(src, dst):
 
 
 def arrow_between(draw, src, dst):
+    """ @brief 绘制两个矩形节点之间的直连箭头。
+    @param draw PIL 绘图上下文。
+    @param src 源矩形 (x0, y0, x1, y1)。
+    @param dst 目标矩形 (x0, y0, x1, y1)。
+    @return None
+    """
     ax, ay = boundary_point(src, dst)
     bx, by = boundary_point(dst, src)
     vx, vy = bx - ax, by - ay
@@ -102,11 +158,24 @@ def arrow_between(draw, src, dst):
 
 
 def cell(draw, xy, text, fnt, fill="#263238"):
+    """ @brief 在矩形区域内居中绘制单行文本，用于实验矩阵表格单元格。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @param text 待绘制的文本字符串。
+    @param fnt PIL 字体对象。
+    @param fill 文本颜色 hex 字符串。
+    @return None
+    """
     x0, y0, x1, y1 = xy
     draw.text(((x0 + x1) / 2, (y0 + y1) / 2), text, font=fnt, fill=fill, anchor="mm")
 
 
 def main() -> None:
+    """ @brief 渲染 T12.4 NR Polar 浮点仿真计划图，保存为 PNG 到 docs/L3/assets/。
+    @note 该图展示从协议配置、UCI/DCI 构造、Polar 编码、速率匹配到 AWGN+LLR 的仿真管线，
+     以及 SC/SCL/CA-SCL 译码器列表大小扫描、实验矩阵和工程检测点。
+    @return None
+    """
     W, H = 2200, 1800
     img = Image.new("RGB", (W, H), "#f9fbfa")
     draw = ImageDraw.Draw(img)

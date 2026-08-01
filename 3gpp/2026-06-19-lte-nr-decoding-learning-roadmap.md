@@ -279,7 +279,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T2.1 |
 | **前置** | T1.4, T1.5 |
 | **Prompt** | 请讲解加性白高斯噪声（AWGN）、高斯随机变量、SNR、Eb/N0、Es/N0、码率、调制阶数和噪声方差缩放。推导 BPSK 在 AWGN 下的 LLR，并给出固定随机种子的可复现实验。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T2.1_AWGN_noise_scaling.md` |
+| **产出** | `docs/L1/T2.7_AWGN_noise_scaling.md` |
 | **验收** | Learner can compute noise variance for a given code rate, modulation order, and Eb/N0, and generate reproducible noisy BPSK samples. |
 | **3GPP/证据** | 背景任务。 Modulation order linkage to TS 38.214 Rel-19 `38214-j30` §5.1.3/§6.1.4 and LTE equivalent anchors `待核验`. 本地证据路径： TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`. |
 
@@ -290,7 +290,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T2.2 |
 | **前置** | T1.5, T2.1 |
 | **Prompt** | 请讲解 BPSK 和 QPSK 星座映射、Gray 映射、接收采样模型、BPSK 精确 LLR 和 QPSK 逐比特 LLR。包含可用 Mermaid 表达的星座/流程图和一个小型数值软解调例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T2.2_BPSK_QPSK_soft_demapping.md` |
+| **产出** | `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md` |
 | **验收** | Learner can derive BPSK LLR and compute QPSK bit LLRs for one received symbol. |
 | **3GPP/证据** | TS 36.211 Rel-19 `36211-j30_*` modulation clauses `待核验`; TS 38.211 Rel-19 `38211-j30` modulation clauses `待核验`. 本地证据路径： TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (精确分册 `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -301,7 +301,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T2.3 |
 | **前置** | T2.2 |
 | **Prompt** | 请讲解 16QAM、64QAM、256QAM 的比特映射、精确比特 LLR 与 Max-Log-MAP 近似，说明实际译码器为什么使用近似、查表或最近距离简化。包含一个 16QAM 手算例子和一个 LLR 符号反转失败案例。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T2.3_QAM_Max_Log_MAP_demapping.md` |
+| **产出** | `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md` |
 | **验收** | Learner can compute approximate bit LLR for a 16QAM symbol and explain complexity growth for higher QAM. |
 | **3GPP/证据** | TS 38.214 Rel-19 `38214-j30` MCS modulation order sections §5.1.3/§6.1.4; TS 38.211 modulation clauses `待核验`; LTE anchors `待核验`. 本地证据路径： TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -312,7 +312,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T2.4 |
 | **前置** | T2.1, T2.2 |
 | **Prompt** | 请从译码器输入视角讲解 Rayleigh/Rician 衰落、均衡器输出和信道增益如何改变 LLR 可靠度。聚焦译码器看到的软比特与可靠度，不展开完整信道估计课程；包含一个单抽头衰落例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T2.4_fading_channel_LLR_reliability.md` |
+| **产出** | `docs/L1/T2.10_fading_channel_LLR_reliability.md` |
 | **验收** | Learner can explain why equalized symbols with low channel gain should have smaller LLR magnitude. |
 | **3GPP/证据** | 背景任务。 Link to physical channel and demodulation context in TS 36.211 Rel-19 `36211-j30_*` / TS 38.211 Rel-19 `38211-j30`, 精确锚点 `待核验`. 本地证据路径： TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (精确分册 `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -323,7 +323,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T2.5 |
 | **前置** | T1.5, T2.1 |
 | **Prompt** | 请引入 LLR 裁剪、缩放、量化、饱和，以及定点译码器为什么不能保留无限精度。包含过度自信 LLR、缩放不足 LLR 和符号错误三个例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T2.5_LLR_clipping_scaling_quantization.md` |
+| **产出** | `docs/L1/T2.11_LLR_clipping_scaling_quantization.md` |
 | **验收** | Learner can explain why LLR magnitude saturation changes decoder behavior and identify a likely LLR sign convention bug. |
 | **3GPP/证据** | 无需直接 3GPP 引用 for the quantization concept. Downstream decoder-family articles must cite their own Rel-19 protocol evidence. |
 

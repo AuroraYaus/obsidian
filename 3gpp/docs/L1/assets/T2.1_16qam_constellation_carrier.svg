@@ -85,5 +85,5 @@
 <text x="762" y="619" text-anchor="middle" class="t t13" fill="#8E24AA" font-weight="bold">1110</text>
 <text x="762" y="637" text-anchor="middle" class="t t11">I=-1  Q=-1</text>
 <text x="450.0" y="663" text-anchor="middle" class="t t-mono">s(t) = I·cos(2πf_c t) − Q·sin(2πf_c t) ，  I, Q ∈ {−3, −1, +1, +3}</text>
-<text x="450.0" y="695" text-anchor="middle" class="t t11">每个符号持续一个符号周期 T_s，载波频率 f_c ≫ 1/T_s（图中为示意比例）  |  箭头所指为下方载波波形对应的 4 个星座点</text>
+<text x="450.0" y="695" text-anchor="middle" class="t t11">每个符号持续一个符号周期 T_s，载波频率 f_c ≫ 1/T_s（图中为示意比例）  |  彩色圈标出下方波形对应的 4 个星座点；电平未归一化，仅用于示意</text>
 </svg>

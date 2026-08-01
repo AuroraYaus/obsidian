@@ -2,6 +2,14 @@
 flowchart TD
 
     N1["3GPP LTE/NR 信道译码知识体系"]:::root
+    N620["00 导读"]:::domain
+    N1 --> N620
+    N621["译码协议阅读地图"]:::subdomain
+    N620 --> N621
+    N622["协议总览与学习路径"]:::leaf_concept
+    N621 -->|包含| N622
+    L623["T0_1_LTE_NR_decoder_protocol_"]:::lecture
+    N622 -.->|📄| L623
     N2["01 数学基础"]:::domain
     N1 --> N2
     N3["GF(2) 伽罗瓦域"]:::subdomain
@@ -36,27 +44,53 @@ flowchart TD
     N1 --> N17
     N18["信道模型"]:::subdomain
     N17 --> N18
+    N600["OFDM、帧结构与资源栅格"]:::subdomain
+    N17 --> N600
+    N601["OFDM 子载波间隔"]:::leaf_concept
+    N600 -->|包含| N601
+    L602["T2_1_OFDM_subcarrier_spacing_ba"]:::lecture
+    N601 -.->|📄| L602
+    N603["NR 参数集与时域层级"]:::leaf_concept
+    N600 -->|包含| N603
+    L604["T2_2_NR_numerology_time_domai"]:::lecture
+    N603 -.->|📄| L604
+    N605["NR 频域资源栅格"]:::leaf_concept
+    N600 -->|包含| N605
+    L606["T2_3_NR_frequency_resource_gri"]:::lecture
+    N605 -.->|📄| L606
+    N607["LTE 帧结构"]:::leaf_concept
+    N600 -->|包含| N607
+    L608["T2_5_LTE_frame_structure_time_"]:::lecture
+    N607 -.->|📄| L608
     N19["AWGN 与 Eb/N0"]:::leaf_concept
     N18 -->|包含| N19
-    L20["T2_1_AWGN_noise_scaling"]:::lecture
+    L20["T2_7_AWGN_noise_scaling"]:::lecture
     N19 -.->|📄| L20
     N21["衰落信道与LLR可信度"]:::leaf_concept
     N18 -->|包含| N21
-    L22["T2_4_fading_channel_LLR_reliab"]:::lecture
+    L22["T2_10_fading_channel_LLR_reli"]:::lecture
     N21 -.->|📄| L22
     N23["软解调"]:::subdomain
     N17 --> N23
     N24["BPSK/QPSK 软解调"]:::leaf_concept
     N23 -->|包含| N24
-    L25["T2_2_BPSK_QPSK_soft_demapping"]:::lecture
+    L25["T2_8_BPSK_QPSK_soft_demapping"]:::lecture
     N24 -.->|📄| L25
     N26["QAM Max-Log-MAP解调"]:::leaf_concept
     N23 -->|包含| N26
-    L27["T2_3_QAM_Max_Log_MAP_demapping"]:::lecture
+    L27["T2_9_QAM_Max_Log_MAP_demapping"]:::lecture
     N26 -.->|📄| L27
+    N610["MCS 调制阶数与目标码率"]:::leaf_concept
+    N23 -->|包含| N610
+    L611["T2_4_MCS_modulation_order_targ"]:::lecture
+    N610 -.->|📄| L611
+    N612["资源栅格→译码器 LLR"]:::leaf_concept
+    N23 -->|包含| N612
+    L613["T2_6_from_resource_grid_to_dec"]:::lecture
+    N612 -.->|📄| L613
     N28["LLR 裁剪/缩放/量化"]:::leaf_concept
     N23 -->|包含| N28
-    L29["T2_5_LLR_clipping_scaling_quan"]:::lecture
+    L29["T2_11_LLR_clipping_scaling_quan"]:::lecture
     N28 -.->|📄| L29
     N30["03 协议结构"]:::domain
     N1 --> N30

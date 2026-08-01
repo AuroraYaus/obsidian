@@ -10,7 +10,6 @@ tags:
   - report
 source_spec: "3GPP_Rel19/processed/extraction_report.md"
 ---
-
 # 3GPP Rel-19 Word Extraction Report
 
 Generated at: `2026-06-18T12:14:02.592352+00:00`

@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render LTE HARQ redundancy versions as ring-buffer windows."""
+""" @file render_lte_harq_rv_windows.py
+    @brief 渲染 LTE HARQ 四个冗余版本在循环缓存（ring buffer）上的窗口位置。
+    @date 2025
+    @note 教学参数：环长 Kw=32，每个 RV 读取 E=11 个非 NULL 位置；展示 LLR 流到环地址的映射关系。
+    @see render_harq_soft_buffer_comparison.py 对应的 HARQ soft buffer 生命周期图
+"""
 
 from __future__ import annotations
 
@@ -40,6 +45,14 @@ def text_center(
     fnt: ImageFont.FreeTypeFont,
     fill: str,
 ) -> None:
+    """ @brief 在矩形内居中绘制单行文本。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 绘制区域（浮点坐标）。
+        @param text 待绘制的单行字符串。
+        @param fnt PIL 字体对象。
+        @param fill 文字颜色。
+        @return 无返回值。
+    """
     bbox = draw.textbbox((0, 0), text, font=fnt)
     width = bbox[2] - bbox[0]
     height = bbox[3] - bbox[1]
@@ -57,6 +70,16 @@ def draw_wrapped(
     max_width: int,
     line_gap: int = 6,
 ) -> int:
+    """ @brief 在指定坐标处绘制自动换行的左对齐多行文本。
+        @param draw PIL ImageDraw 实例。
+        @param xy 起始坐标 (x, y)。
+        @param text 待绘制的长文本。
+        @param fnt 字体对象。
+        @param fill 文字颜色。
+        @param max_width 每行最大像素宽度。
+        @param line_gap 行间距，默认 6。
+        @return 最后一行的底部 Y 坐标。
+    """
     x, y = xy
     lines = fit_wrap_text(draw, text, fnt, max_width)
     for line in lines:
@@ -66,15 +89,35 @@ def draw_wrapped(
 
 
 def ring_point(cx: int, cy: int, radius: int, idx: int, total: int) -> tuple[float, float]:
+    """ @brief 计算圆环上第 idx 个位置（从 12 点钟方向顺时针）的坐标。
+        @param cx 圆心 X。
+        @param cy 圆心 Y。
+        @param radius 半径。
+        @param idx 位置索引（0-based）。
+        @param total 总位置数。
+        @return (x, y) 坐标。
+    """
     angle = 2 * math.pi * idx / total - math.pi / 2
     return cx + radius * math.cos(angle), cy + radius * math.sin(angle)
 
 
 def window(start: int, length: int, total: int) -> list[int]:
+    """ @brief 从起点顺时针取 length 个环地址（模 total）。
+        @param start 起始地址索引。
+        @param length 窗口长度。
+        @param total 环总长。
+        @return 地址列表（已取模）。
+    """
     return [(start + offset) % total for offset in range(length)]
 
 
 def segment_ranges(addresses: list[int], total: int) -> list[tuple[int, int]]:
+    """ @brief 将离散地址集合合并为连续段区间列表，用于绘制圆弧窗口。
+        @param addresses 地址列表（可能无序）。
+        @param total 环总长。
+        @return [(start, end), ...] 连续段列表。
+        @note 支持跨越环尾的连续段检测。
+    """
     selected = set(addresses)
     ranges: list[tuple[int, int]] = []
     visited: set[int] = set()
@@ -103,6 +146,17 @@ def draw_arc_window(
     color: str,
     width: int,
 ) -> None:
+    """ @brief 在圆环上绘制一段或多段彩色圆弧，表示某个 RV 窗口的覆盖范围。
+        @param draw PIL ImageDraw 实例。
+        @param cx 圆心 X。
+        @param cy 圆心 Y。
+        @param radius 圆弧半径。
+        @param addresses 该窗口包含的地址列表。
+        @param total 环总长。
+        @param color 圆弧颜色。
+        @param width 圆弧线宽。
+        @return 无返回值。
+    """
     box = (cx - radius, cy - radius, cx + radius, cy + radius)
     for start, end in segment_ranges(addresses, total):
         a0 = 360 * start / total - 90
@@ -119,6 +173,14 @@ def draw_arrow(
     color: str = "#50657B",
     width: int = 4,
 ) -> None:
+    """ @brief 绘制带三角箭头的直线。
+        @param draw PIL ImageDraw 实例。
+        @param start 起点 (x, y)。
+        @param end 终点 (x, y)。
+        @param color CSS 颜色字符串，默认灰蓝色。
+        @param width 线宽，默认 4。
+        @return 无返回值。
+    """
     dx = end[0] - start[0]
     dy = end[1] - start[1]
     length = math.hypot(dx, dy)
@@ -136,6 +198,11 @@ def draw_arrow(
 
 
 def draw_rv_ring(draw: ImageDraw.ImageDraw) -> dict[int, list[int]]:
+    """ @brief 绘制 32 地址环缓冲区 + RV0-RV3 四个彩色窗口 + 图例。
+        @param draw PIL ImageDraw 实例。
+        @return {rv_index: [address_list]} 字典，供后续模块复用。
+        @note 环半径 286，每个地址为圆点；RV 标签带 k0 起点标注。
+    """
     total = 32
     win_len = 11
     starts = {0: 0, 1: 8, 2: 16, 3: 24}
@@ -220,6 +287,15 @@ def draw_address_chips(
     per_row: int,
     show_llr_index: bool = False,
 ) -> int:
+    """ @brief 以网格形式绘制地址标签芯片（chips），重复地址用黄色高亮。
+        @param draw PIL ImageDraw 实例。
+        @param x 网格左上角 X。
+        @param y 网格左上角 Y。
+        @param addresses 地址列表（按顺序）。
+        @param repeated 已在前文命中过的地址集合，用黄色标注。
+        @param primary_color 首次命中地址的主颜色。
+        @return 芯片网格底部 Y 坐标。
+    """
     row_gap = 14
     for idx, addr in enumerate(addresses):
         row = idx // per_row
@@ -240,6 +316,12 @@ def draw_address_chips(
 
 
 def draw_transmission_stream(draw: ImageDraw.ImageDraw, rv_windows: dict[int, list[int]]) -> None:
+    """ @brief 绘制 RV1 的 LLR 流地址芯片图：展示发送端按 RV1 起点扫描环后的 LLR 序号到环地址映射。
+        @param draw PIL ImageDraw 实例。
+        @param rv_windows {rv_index: [address_list]} 字典。
+        @return 无返回值。
+        @note 黄色芯片表示 RV0 已命中过的重叠地址，绿色为 RV1 首次补充。
+    """
     x, y = 1040, 185
     draw.text((x, y), "本次重传示例：RV1 输出 LLR 流", font=font(28, True), fill=PALETTE["ink"])
     draw_wrapped(
@@ -269,6 +351,12 @@ def draw_transmission_stream(draw: ImageDraw.ImageDraw, rv_windows: dict[int, li
 
 
 def draw_soft_buffer_panel(draw: ImageDraw.ImageDraw, rv_windows: dict[int, list[int]]) -> None:
+    """ @brief 绘制接收端 HARQ soft buffer 更新表：四种地址分类及写回动作。
+        @param draw PIL ImageDraw 实例。
+        @param rv_windows {rv_index: [address_list]} 字典。
+        @return 无返回值。
+        @note 四行：重复覆盖（饱和累加）、增量冗余（首次写入）、未观测（保持）、<NULL>（跳过）。
+    """
     x, y = 1040, 600
     draw.rounded_rectangle((x - 24, y - 30, x + 1010, y + 526), radius=18, fill=PALETTE["panel"], outline="#D6E0EB", width=2)
     draw.text((x, y), "接收端 HARQ soft buffer 更新", font=font(28, True), fill=PALETTE["ink"])
@@ -300,6 +388,12 @@ def draw_soft_buffer_panel(draw: ImageDraw.ImageDraw, rv_windows: dict[int, list
 
 
 def draw_rv_transmission_model(draw: ImageDraw.ImageDraw, rv_windows: dict[int, list[int]]) -> None:
+    """ @brief 绘制四个冗余版本 RV0-RV3 的传输与接收模型大表。
+        @param draw PIL ImageDraw 实例。
+        @param rv_windows {rv_index: [address_list]} 字典。
+        @return 无返回值。
+        @note 五行四列：传输标识、发送端读取窗口、LLR 流地址芯片、接收端写回动作、累计状态。
+    """
     x, y = 100, 1240
     draw.text((x, y), "四个冗余版本的传输与接收模型", font=font(30, True), fill=PALETTE["ink"])
     draw.text(
@@ -376,6 +470,11 @@ def draw_rv_transmission_model(draw: ImageDraw.ImageDraw, rv_windows: dict[int, 
 
 
 def draw_bottom_notes(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制底部黄色读图顺序与工程检查点卡片。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note 四步：同一环上 RV 是窗口、LLR 流按环地址映射、soft buffer 写回规则、验证记录字段。
+    """
     x, y = 100, 2290
     draw.rounded_rectangle((x, y, 2120, y + 210), radius=16, fill="#FFF9E8", outline="#E3C45B", width=2)
     draw.text((x + 24, y + 20), "读图顺序与工程检查点", font=font(24, True), fill="#6F4B00")
@@ -401,6 +500,11 @@ def draw_bottom_notes(draw: ImageDraw.ImageDraw) -> None:
 
 
 def main(output: Path | None = None) -> None:
+    """ @brief 脚本入口：生成 T7.3 LTE HARQ 冗余版本在循环缓存中的位置教学图。
+        @param output 自定义输出路径（可选），默认 OUT_PATH。
+        @return 无返回值。
+        @note 产出 2220x3060 PNG：RV 环 + LLR 流映射 + soft buffer 更新 + 传输模型 + 底注。
+    """
     out = output or OUT_PATH
     img = Image.new("RGB", (2220, 3060), "#FFFFFF")
     draw = ImageDraw.Draw(img)

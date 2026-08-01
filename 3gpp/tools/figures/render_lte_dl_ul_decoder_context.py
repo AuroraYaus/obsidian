@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render LTE DL/UL decoder context and soft-buffer namespace comparison."""
+""" @file render_lte_dl_ul_decoder_context.py
+    @brief 渲染 LTE DL-SCH 和 UL-SCH 译码器上下文与 soft buffer namespace 对比图。
+    @date 2025
+    @note 展示同一 Turbo core 在不同方向和不同 soft buffer key 结构下的复用与隔离。
+    @see render_harq_soft_buffer_comparison.py 对应的 HARQ soft buffer 生命周期图
+"""
 
 from __future__ import annotations
 
@@ -40,6 +45,14 @@ def center_text(
     fnt: ImageFont.FreeTypeFont,
     fill: str,
 ) -> None:
+    """ @brief 在矩形内居中绘制单行文本。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 绘制区域。
+        @param text 待绘制的单行字符串。
+        @param fnt PIL 字体对象。
+        @param fill 文字颜色。
+        @return 无返回值。
+    """
     bbox = draw.textbbox((0, 0), text, font=fnt)
     width = bbox[2] - bbox[0]
     height = bbox[3] - bbox[1]
@@ -57,6 +70,16 @@ def wrap_text(
     max_width: int,
     line_gap: int = 6,
 ) -> int:
+    """ @brief 在指定坐标处绘制自动换行的左对齐多行文本。
+        @param draw PIL ImageDraw 实例。
+        @param xy 起始坐标 (x, y)。
+        @param text 待绘制的长文本。
+        @param fnt 字体对象。
+        @param fill 文字颜色。
+        @param max_width 每行最大像素宽度。
+        @param line_gap 行间距，默认 6。
+        @return 最后一行的底部 Y 坐标。
+    """
     x, y = xy
     for line in fit_wrap_text(draw, text, fnt, max_width):
         draw.text((x, y), line, font=fnt, fill=fill)
@@ -65,6 +88,13 @@ def wrap_text(
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[float, float], end: tuple[float, float], color: str = "#556A80") -> None:
+    """ @brief 绘制带三角箭头的直线。
+        @param draw PIL ImageDraw 实例。
+        @param start 起点 (x, y)。
+        @param end 终点 (x, y)。
+        @param color CSS 颜色字符串，默认灰蓝色。
+        @return 无返回值。
+    """
     sx, sy = start
     ex, ey = end
     vx, vy = ex - sx, ey - sy
@@ -94,6 +124,15 @@ def draw_box(
     fill: str,
     outline: str = PALETTE["line"],
 ) -> None:
+    """ @brief 绘制含标题和正文的圆角矩形信息框。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 区域。
+        @param title 上方标题（粗体 24px）。
+        @param body 下方正文（灰色 24px）。
+        @param fill 背景填充色。
+        @param outline 边框颜色。
+        @return 无返回值。
+    """
     draw.rounded_rectangle(box, radius=12, fill=fill, outline=outline, width=2)
     center_text(draw, (box[0] + 12, box[1] + 10, box[2] - 12, box[1] + 48), title, font(24, True), PALETTE["ink"])
     center_text(draw, (box[0] + 14, box[1] + 48, box[2] - 14, box[3] - 12), body, font(24), PALETTE["muted"])
@@ -106,6 +145,14 @@ def token_row(
     tokens: list[tuple[str, str]],
     fnt: ImageFont.FreeTypeFont | None = None,
 ) -> None:
+    """ @brief 绘制一行彩色 token 标签（圆角矩形 + 白色文字）。
+        @param draw PIL ImageDraw 实例。
+        @param x 行起始 X。
+        @param y 行起始 Y。
+        @param tokens (标签文字, 颜色) 对列表。
+        @param fnt 字体（可选，默认 24px 粗体）。
+        @return 无返回值。
+    """
     if fnt is None:
         fnt = font(24, True)
     cursor = x
@@ -131,6 +178,10 @@ def draw_pipeline(
     key_caption: str,
     notes: list[str],
 ) -> None:
+    """ @brief 绘制一条译码流水线面板：信号源 -> descriptor -> soft buffer key -> Turbo core + token 标签。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+    """
     panel = (x, y, x + width, y + 806)
     draw.rounded_rectangle(panel, radius=16, fill=panel_fill, outline=accent, width=2)
     draw.rounded_rectangle((x, y, x + width, y + 58), radius=16, fill=accent, outline=accent)
@@ -165,6 +216,10 @@ def draw_pipeline(
 
 
 def main() -> None:
+    """ @brief 脚本入口：生成 T7.5 LTE DL/UL 译码器上下文与 soft buffer namespace 对比图。
+        @return 无返回值。
+        @note 产出 1920x1600 PNG：左侧 DL-SCH（UE 侧）、右侧 UL-SCH（eNB 侧）、共享 Turbo core 说明和 UL 负例碰撞示例。
+    """
     img = Image.new("RGB", (1920, 1600), "#FFFFFF")
     draw = ImageDraw.Draw(img)
 

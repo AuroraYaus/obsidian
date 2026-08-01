@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="280" viewBox="0 0 900 280">
+<rect width="900" height="280" fill="white"/>
+<text x="450.0" y="20" text-anchor="middle" font-size="15" fill="#1565c0" font-weight="bold">NR 帧结构层级分解：无线帧 → 子帧 → 时隙 → OFDM 符号</text>
+<text x="210.0" y="45" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">μ=0  Δf=15 kHz</text>
+<rect x="90" y="55" width="240" height="28" rx="4" fill="#1565c0" opacity="0.12" stroke="#1565c0" stroke-width="1.5"/>
+<text x="210.0" y="74.0" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">无线帧 · 10 ms</text>
+<rect x="90" y="91" width="240" height="22" rx="3" fill="#1565c0" opacity="0.18" stroke="#1565c0" stroke-width="1"/>
+<text x="210.0" y="106.0" text-anchor="middle" font-size="10" fill="#1565c0">子帧 · 1 ms</text>
+<line x1="210.0" y1="83" x2="210.0" y2="91" stroke="#1565c0" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="210.0" y1="113" x2="210.0" y2="121" stroke="#1565c0" stroke-width="1" stroke-dasharray="3,2"/>
+<rect x="90.0" y="121" width="240.0" height="28" rx="3" fill="#1565c0" opacity="0.25" stroke="#1565c0" stroke-width="1"/>
+<text x="210.0" y="139.0" text-anchor="middle" font-size="10" fill="#1565c0">slot 0</text>
+<rect x="127.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="139.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="151.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="163.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="175.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="187.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="199.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="211.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="223.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="235.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="247.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="259.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="271.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<rect x="283.5" y="161" width="9" height="14" rx="1" fill="#1565c0" opacity="0.35" stroke="#1565c0" stroke-width="0.5"/>
+<text x="210.0" y="187" text-anchor="middle" font-size="9" fill="#1565c0">14 OFDM 符号/时隙</text>
+<text x="210.0" y="201" text-anchor="middle" font-size="9" fill="#555">T_u=66.67μs  T_slot=1.0ms</text>
+<text x="510.0" y="45" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="bold">μ=1  Δf=30 kHz</text>
+<rect x="390" y="55" width="240" height="28" rx="4" fill="#2e7d32" opacity="0.12" stroke="#2e7d32" stroke-width="1.5"/>
+<text x="510.0" y="74.0" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">无线帧 · 10 ms</text>
+<rect x="390" y="91" width="240" height="22" rx="3" fill="#2e7d32" opacity="0.18" stroke="#2e7d32" stroke-width="1"/>
+<text x="510.0" y="106.0" text-anchor="middle" font-size="10" fill="#2e7d32">子帧 · 1 ms</text>
+<line x1="510.0" y1="83" x2="510.0" y2="91" stroke="#2e7d32" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="510.0" y1="113" x2="510.0" y2="121" stroke="#2e7d32" stroke-width="1" stroke-dasharray="3,2"/>
+<rect x="390.0" y="121" width="118.5" height="28" rx="3" fill="#2e7d32" opacity="0.25" stroke="#2e7d32" stroke-width="1"/>
+<text x="449.2" y="139.0" text-anchor="middle" font-size="10" fill="#2e7d32">slot 0</text>
+<rect x="511.5" y="121" width="118.5" height="28" rx="3" fill="#2e7d32" opacity="0.25" stroke="#2e7d32" stroke-width="1"/>
+<text x="570.8" y="139.0" text-anchor="middle" font-size="10" fill="#2e7d32">slot 1</text>
+<rect x="427.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="439.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="451.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="463.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="475.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="487.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="499.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="511.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="523.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="535.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="547.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="559.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="571.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<rect x="583.5" y="161" width="9" height="14" rx="1" fill="#2e7d32" opacity="0.35" stroke="#2e7d32" stroke-width="0.5"/>
+<text x="510.0" y="187" text-anchor="middle" font-size="9" fill="#2e7d32">14 OFDM 符号/时隙</text>
+<text x="510.0" y="201" text-anchor="middle" font-size="9" fill="#555">T_u=33.33μs  T_slot=0.5ms</text>
+<text x="810.0" y="45" text-anchor="middle" font-size="13" fill="#e65100" font-weight="bold">μ=2  Δf=60 kHz</text>
+<rect x="690" y="55" width="240" height="28" rx="4" fill="#e65100" opacity="0.12" stroke="#e65100" stroke-width="1.5"/>
+<text x="810.0" y="74.0" text-anchor="middle" font-size="11" fill="#e65100" font-weight="bold">无线帧 · 10 ms</text>
+<rect x="690" y="91" width="240" height="22" rx="3" fill="#e65100" opacity="0.18" stroke="#e65100" stroke-width="1"/>
+<text x="810.0" y="106.0" text-anchor="middle" font-size="10" fill="#e65100">子帧 · 1 ms</text>
+<line x1="810.0" y1="83" x2="810.0" y2="91" stroke="#e65100" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="810.0" y1="113" x2="810.0" y2="121" stroke="#e65100" stroke-width="1" stroke-dasharray="3,2"/>
+<rect x="690.0" y="121" width="57.8" height="28" rx="3" fill="#e65100" opacity="0.25" stroke="#e65100" stroke-width="1"/>
+<text x="718.9" y="139.0" text-anchor="middle" font-size="10" fill="#e65100">slot 0</text>
+<rect x="750.8" y="121" width="57.8" height="28" rx="3" fill="#e65100" opacity="0.25" stroke="#e65100" stroke-width="1"/>
+<text x="779.6" y="139.0" text-anchor="middle" font-size="10" fill="#e65100">slot 1</text>
+<rect x="811.5" y="121" width="57.8" height="28" rx="3" fill="#e65100" opacity="0.25" stroke="#e65100" stroke-width="1"/>
+<text x="840.4" y="139.0" text-anchor="middle" font-size="10" fill="#e65100">slot 2</text>
+<rect x="872.2" y="121" width="57.8" height="28" rx="3" fill="#e65100" opacity="0.25" stroke="#e65100" stroke-width="1"/>
+<text x="901.1" y="139.0" text-anchor="middle" font-size="10" fill="#e65100">slot 3</text>
+<rect x="727.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="739.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="751.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="763.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="775.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="787.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="799.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="811.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="823.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="835.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="847.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="859.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="871.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<rect x="883.5" y="161" width="9" height="14" rx="1" fill="#e65100" opacity="0.35" stroke="#e65100" stroke-width="0.5"/>
+<text x="810.0" y="187" text-anchor="middle" font-size="9" fill="#e65100">14 OFDM 符号/时隙</text>
+<text x="810.0" y="201" text-anchor="middle" font-size="9" fill="#555">T_u=16.67μs  T_slot=0.25ms</text>
+<text x="450.0" y="262" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">SCS 越大 → 符号越短 → 每子帧时隙数越多 → 调度机会越多</text>
+</svg>

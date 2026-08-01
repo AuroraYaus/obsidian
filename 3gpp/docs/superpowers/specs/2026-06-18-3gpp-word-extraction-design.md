@@ -31,7 +31,7 @@ Each source document gets its own directory:
 3GPP_Rel19/processed/TS_38.212_38212-j30/
   source.docx
   document.xml
-  TS_36.212_36212-j30_content.md
+  content.md
   sections.jsonl
   metadata.json
   tables/
@@ -57,7 +57,7 @@ Formulas are exported as raw OMML XML files. If later tooling can convert OMML t
 
 Media files are copied from `word/media` unchanged. Relationship IDs are read so inline drawings can be associated with media targets when possible.
 
-Text and headings are emitted to `TS_36.212_36212-j30_content.md` and `sections.jsonl`. Section detection uses paragraph style names and numbered-heading text patterns as heuristics, so the report clearly calls them "section candidates" rather than claiming perfect semantic structure.
+Text and headings are emitted to `content.md` and `sections.jsonl`. Section detection uses paragraph style names and numbered-heading text patterns as heuristics, so the report clearly calls them "section candidates" rather than claiming perfect semantic structure.
 
 ## Error Handling
 

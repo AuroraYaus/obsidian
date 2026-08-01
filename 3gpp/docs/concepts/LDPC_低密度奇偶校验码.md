@@ -41,7 +41,7 @@ LDPC 像一个由很多局部规则组成的推理网络。每条规则只检查
 - NR：TS 38.212 Rel-19 §5.2.2 LDPC segmentation。
 - NR：TS 38.212 Rel-19 §5.3.2 LDPC channel coding。
 - NR：TS 38.212 Rel-19 §5.4.2 LDPC rate matching。
-- 本地锚点示例：`3GPP_Rel19/processed/TS_38.212_38212-j30/TS_38.212_38212-j30_content.md`。
+- 本地锚点示例：`3GPP_Rel19/processed/TS_38.212_38212-j30/content.md`。
 
 ## 图谱关联
 

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render T12.1 golden model project layout flow."""
+""" @file render_t12_1_golden_model_layout.py
+@brief 渲染 T12.1 黄金模型（Golden Model）项目布局图，展示从协议证据到可复现仿真产物的完整工程流。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -25,11 +28,24 @@ SMALL = font(24)
 
 
 def text_size(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont) -> tuple[int, int]:
+    """ @brief 计算文本渲染后的宽高。
+    @param draw PIL 绘图上下文。
+    @param text 待测量的文本字符串。
+    @param fnt PIL 字体对象。
+    @return (宽度, 高度) px。
+    """
     box = draw.textbbox((0, 0), text, font=fnt)
     return box[2] - box[0], box[3] - box[1]
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: int) -> list[str]:
+    """ @brief 按单词边界自动换行，返回行列表。
+    @param draw PIL 绘图上下文。
+    @param text 待换行的英文字符串。
+    @param fnt PIL 字体对象。
+    @param width 最大行宽（px）。
+    @return 换行后的行列表。
+    """
     words = text.split()
     lines: list[str] = []
     cur = ""
@@ -47,6 +63,13 @@ def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: 
 
 
 def rounded_box(draw: ImageDraw.ImageDraw, xy: tuple[int, int, int, int], fill: str, outline: str = "#263238") -> None:
+    """ @brief 绘制统一风格的圆角矩形。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @param fill 填充色 hex 字符串。
+    @param outline 描边色 hex 字符串，默认 "#263238"。
+    @return None
+    """
     draw.rounded_rectangle(xy, radius=14, fill=fill, outline=outline, width=2)
 
 
@@ -57,6 +80,14 @@ def centered_lines(
     body: list[str],
     fill: str,
 ) -> None:
+    """ @brief 绘制带标题和正文列表的居中卡片，用于黄金模型工程流的各个阶段节点。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @param title 卡片标题。
+    @param body 正文行列表。
+    @param fill 填充色 hex 字符串。
+    @return None
+    """
     x0, y0, x1, y1 = xy
     rounded_box(draw, xy, fill)
     tw, th = text_size(draw, title, HEAD)
@@ -81,6 +112,15 @@ def draw_centered_wrapped(
     fill: str,
     gap: int = 6,
 ) -> None:
+    """ @brief 在矩形区域内居中绘制多行文本。
+    @param draw PIL 绘图上下文。
+    @param box 矩形四边坐标 (x0, y0, x1, y1)。
+    @param lines 文本行列表。
+    @param fnt PIL 字体对象。
+    @param fill 文本颜色 hex 字符串。
+    @param gap 行间距，默认 6px。
+    @return None
+    """
     heights = [text_size(draw, line, fnt)[1] for line in lines]
     total = sum(heights) + gap * max(0, len(lines) - 1)
     y = box[1] + (box[3] - box[1] - total) / 2
@@ -91,6 +131,13 @@ def draw_centered_wrapped(
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], color: str = "#37474f") -> None:
+    """ @brief 绘制带三角形箭头的直线段，表示黄金模型工程流的数据传递方向。
+    @param draw PIL 绘图上下文。
+    @param start 线段起点坐标 (x, y)。
+    @param end 线段终点坐标 (x, y)。
+    @param color 线条与箭头填充色 hex 字符串，默认 "#37474f"。
+    @return None
+    """
     sx, sy = start
     ex, ey = end
     vx, vy = ex - sx, ey - sy
@@ -111,6 +158,13 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int
 
 
 def mid(rect: tuple[int, int, int, int], side: str, offset: int = 0) -> tuple[int, int]:
+    """ @brief 计算矩形指定边的中点坐标（支持水平偏移），用于箭头端点定位。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @param side 边标识："left"、"right"、"top"、"bottom"。
+    @param offset 沿边方向的水平偏移量，默认 0。
+    @return 中点坐标 (x, y)。
+    @throws ValueError 当 side 不是有效值时抛出。
+    """
     x0, y0, x1, y1 = rect
     cx = (x0 + x1) // 2
     cy = (y0 + y1) // 2
@@ -126,6 +180,12 @@ def mid(rect: tuple[int, int, int, int], side: str, offset: int = 0) -> tuple[in
 
 
 def main() -> None:
+    """ @brief 渲染 T12.1 黄金模型项目布局图，保存为 PNG 到 docs/L3/assets/。
+    @note 该图展示从协议证据、配置模式、种子注册到仿真运行、产出扇出（模型/向量/日志/归档）
+     的完整工程流，并附带布局间距断言和阅读顺序说明。
+    @see render_t0_1_lte_nr_decoder_protocol_map.py 协议阅读地图。
+    @return None
+    """
     W, H = 2500, 1760
     img = Image.new("RGB", (W, H), "#f8faf7")
     draw = ImageDraw.Draw(img)

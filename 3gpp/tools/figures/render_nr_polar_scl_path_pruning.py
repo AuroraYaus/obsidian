@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render an N=4, L=2 Polar SCL path split and pruning example."""
+""" @file render_nr_polar_scl_path_pruning.py
+@brief 渲染 N=4, L=2 Polar SCL 路径分裂、PM 排序与剪枝教学图，展示列表译码的候选管理机制。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -43,6 +46,15 @@ def box(
     fill: str,
     outline: str,
 ) -> None:
+    """ @brief 绘制带标题和正文列表的圆角矩形卡片，用于表示 SCL 译码路径的每个阶段。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @param title 卡片标题文本。
+    @param lines 正文行列表。
+    @param fill 填充色 hex 字符串。
+    @param outline 标题与描边色 hex 字符串。
+    @return None
+    """
     draw.rounded_rectangle(xy, radius=14, fill=fill, outline=outline, width=2)
     draw.text((xy[0] + 22, xy[1] + 16), title, font=font(24, True), fill=outline)
     heights = [draw.textbbox((0, 0), line, font=font(24))[3] - draw.textbbox((0, 0), line, font=font(24))[1] for line in lines]
@@ -55,6 +67,13 @@ def box(
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], fill: str) -> None:
+    """ @brief 绘制带三角形箭头的直线段，表示 SCL 路径在阶段间的流向。
+    @param draw PIL 绘图上下文。
+    @param start 线段起点坐标 (x, y)。
+    @param end 线段终点坐标 (x, y)。
+    @param fill 线条与箭头填充色 hex 字符串。
+    @return None
+    """
     x0, y0 = start
     x1, y1 = end
     length = math.hypot(x1 - x0, y1 - y0)
@@ -74,10 +93,28 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int
 
 
 def center_text(draw: ImageDraw.ImageDraw, xy: tuple[int, int, int, int], text: str, fnt: ImageFont.ImageFont, fill: str) -> None:
+    """ @brief 在矩形区域内居中绘制单行文本，用于表格单元格中的路径信息展示。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @param text 待绘制的文本字符串。
+    @param fnt PIL 字体对象。
+    @param fill 文本颜色 hex 字符串。
+    @return None
+    """
     draw.text(((xy[0] + xy[2]) / 2, (xy[1] + xy[3]) / 2), text, font=fnt, fill=fill, anchor="mm")
 
 
 def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt: ImageFont.ImageFont, fill: str, width: int, gap: int = 6) -> None:
+    """ @brief 在给定宽度内自动换行绘制文本，用于工程检测点的说明段落。
+    @param draw PIL 绘图上下文。
+    @param xy 起始坐标 (x, y)。
+    @param text 待绘制的文本字符串。
+    @param fnt PIL 字体对象。
+    @param fill 文本颜色 hex 字符串。
+    @param width 最大行宽（px）。
+    @param gap 行间距，默认 6px。
+    @return None
+    """
     words = text.split()
     lines: list[str] = []
     current = ""
@@ -97,6 +134,11 @@ def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt:
 
 
 def main() -> None:
+    """ @brief 渲染 T10.5 N=4, L=2 Polar SCL 路径分裂与剪枝教学图，保存为 PNG 到 docs/L2/assets/。
+    @note 该图展示从空列表初始、frozen 位强制置 0、information 位分裂 0/1、
+     按 PM 排序保留前 L=2 条路径的完整流程，附带路径表和工程检测点提醒。
+    @return None
+    """
     img = Image.new("RGB", (2000, 1340), COL["bg"])
     draw = ImageDraw.Draw(img)
 

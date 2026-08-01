@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380">
+<rect width="900" height="380" fill="white"/>
+<text x="450.0" y="24" text-anchor="middle" font-size="15" fill="#1565c0" font-weight="bold">LTE vs NR 时域层级并排对比</text>
+<rect x="100" y="55" width="300" height="60" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+<text x="250.0" y="79" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">无线帧</text>
+<text x="250.0" y="101" text-anchor="middle" font-size="11" fill="#1565c0">10 ms</text>
+<rect x="450" y="55" width="300" height="60" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+<text x="600.0" y="79" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="bold">无线帧</text>
+<text x="600.0" y="101" text-anchor="middle" font-size="11" fill="#2e7d32">10 ms</text>
+<text x="430" y="89" text-anchor="middle" font-size="20" fill="#555">→</text>
+<rect x="100" y="133" width="300" height="60" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+<text x="250.0" y="157" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">子帧</text>
+<text x="250.0" y="179" text-anchor="middle" font-size="11" fill="#1565c0">1 ms · 调度+计时</text>
+<rect x="450" y="133" width="300" height="60" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+<text x="600.0" y="157" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="bold">子帧</text>
+<text x="600.0" y="179" text-anchor="middle" font-size="11" fill="#2e7d32">1 ms · 仅计时</text>
+<text x="430" y="167" text-anchor="middle" font-size="20" fill="#555">→</text>
+<rect x="100" y="211" width="300" height="60" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+<text x="250.0" y="235" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">时隙</text>
+<text x="250.0" y="257" text-anchor="middle" font-size="11" fill="#1565c0">0.5 ms · 7符号</text>
+<rect x="450" y="211" width="300" height="60" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+<text x="600.0" y="235" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="bold">时隙</text>
+<text x="600.0" y="257" text-anchor="middle" font-size="11" fill="#2e7d32">14符号 · 随μ变</text>
+<text x="430" y="245" text-anchor="middle" font-size="20" fill="#555">→</text>
+<rect x="100" y="289" width="300" height="60" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+<text x="250.0" y="313" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">OFDM符号</text>
+<text x="250.0" y="335" text-anchor="middle" font-size="11" fill="#1565c0">66.7μs (15 kHz)</text>
+<rect x="450" y="289" width="300" height="60" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+<text x="600.0" y="313" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="bold">OFDM符号</text>
+<text x="600.0" y="335" text-anchor="middle" font-size="11" fill="#2e7d32">66.7→4.17μs</text>
+<text x="430" y="323" text-anchor="middle" font-size="20" fill="#555">→</text>
+<text x="250.0" y="43" text-anchor="middle" font-size="14" fill="#1565c0" font-weight="bold">LTE</text>
+<text x="600.0" y="43" text-anchor="middle" font-size="14" fill="#2e7d32" font-weight="bold">NR</text>
+<text x="450.0" y="370" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">核心差异：LTE 子帧 = 调度+计时 ；NR 子帧 = 纯计时，时隙 = 调度单位</text>
+</svg>

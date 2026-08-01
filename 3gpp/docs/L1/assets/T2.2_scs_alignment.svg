@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="340" viewBox="0 0 900 340">
+<rect width="900" height="340" fill="white"/>
+<text x="450.0" y="22" text-anchor="middle" font-size="15" fill="#1565c0" font-weight="bold">不同 SCS 的 OFDM 符号边界对齐关系</text>
+<text x="84" y="84.0" text-anchor="end" font-size="13" fill="#1565c0" font-weight="bold">μ=0 · Δf=15 kHz</text>
+<rect x="100.0" y="55" width="22.5" height="48" fill="#1565c0" opacity="0.2" stroke="#1565c0" stroke-width="0.6"/>
+<rect x="122.5" y="55" width="157.5" height="48" fill="#1565c0" opacity="0.4" stroke="#1565c0" stroke-width="0.6"/>
+<text x="190.0" y="50" text-anchor="middle" font-size="9" fill="#1565c0">0</text>
+<rect x="280.0" y="55" width="22.5" height="48" fill="#1565c0" opacity="0.2" stroke="#1565c0" stroke-width="0.6"/>
+<rect x="302.5" y="55" width="157.5" height="48" fill="#1565c0" opacity="0.4" stroke="#1565c0" stroke-width="0.6"/>
+<text x="370.0" y="50" text-anchor="middle" font-size="9" fill="#1565c0">1</text>
+<rect x="460.0" y="55" width="22.5" height="48" fill="#1565c0" opacity="0.2" stroke="#1565c0" stroke-width="0.6"/>
+<rect x="482.5" y="55" width="157.5" height="48" fill="#1565c0" opacity="0.4" stroke="#1565c0" stroke-width="0.6"/>
+<text x="550.0" y="50" text-anchor="middle" font-size="9" fill="#1565c0">2</text>
+<rect x="640.0" y="55" width="22.5" height="48" fill="#1565c0" opacity="0.2" stroke="#1565c0" stroke-width="0.6"/>
+<rect x="662.5" y="55" width="157.5" height="48" fill="#1565c0" opacity="0.4" stroke="#1565c0" stroke-width="0.6"/>
+<text x="730.0" y="50" text-anchor="middle" font-size="9" fill="#1565c0">3</text>
+<text x="460" y="117" text-anchor="middle" font-size="11" fill="#555">T_u=66.67 μs</text>
+<text x="84" y="164.0" text-anchor="end" font-size="13" fill="#2e7d32" font-weight="bold">μ=1 · Δf=30 kHz</text>
+<rect x="100.0" y="135" width="11.2" height="48" fill="#2e7d32" opacity="0.2" stroke="#2e7d32" stroke-width="0.6"/>
+<rect x="111.2" y="135" width="78.8" height="48" fill="#2e7d32" opacity="0.4" stroke="#2e7d32" stroke-width="0.6"/>
+<text x="145.0" y="130" text-anchor="middle" font-size="9" fill="#2e7d32">0</text>
+<rect x="190.0" y="135" width="11.2" height="48" fill="#2e7d32" opacity="0.2" stroke="#2e7d32" stroke-width="0.6"/>
+<rect x="201.2" y="135" width="78.8" height="48" fill="#2e7d32" opacity="0.4" stroke="#2e7d32" stroke-width="0.6"/>
+<text x="235.0" y="130" text-anchor="middle" font-size="9" fill="#2e7d32">1</text>
+<rect x="280.0" y="135" width="11.2" height="48" fill="#2e7d32" opacity="0.2" stroke="#2e7d32" stroke-width="0.6"/>
+<rect x="291.2" y="135" width="78.8" height="48" fill="#2e7d32" opacity="0.4" stroke="#2e7d32" stroke-width="0.6"/>
+<text x="325.0" y="130" text-anchor="middle" font-size="9" fill="#2e7d32">2</text>
+<rect x="370.0" y="135" width="11.2" height="48" fill="#2e7d32" opacity="0.2" stroke="#2e7d32" stroke-width="0.6"/>
+<rect x="381.2" y="135" width="78.8" height="48" fill="#2e7d32" opacity="0.4" stroke="#2e7d32" stroke-width="0.6"/>
+<text x="415.0" y="130" text-anchor="middle" font-size="9" fill="#2e7d32">3</text>
+<rect x="460.0" y="135" width="11.2" height="48" fill="#2e7d32" opacity="0.2" stroke="#2e7d32" stroke-width="0.6"/>
+<rect x="471.2" y="135" width="78.8" height="48" fill="#2e7d32" opacity="0.4" stroke="#2e7d32" stroke-width="0.6"/>
+<text x="505.0" y="130" text-anchor="middle" font-size="9" fill="#2e7d32">4</text>
+<rect x="550.0" y="135" width="11.2" height="48" fill="#2e7d32" opacity="0.2" stroke="#2e7d32" stroke-width="0.6"/>
+<rect x="561.2" y="135" width="78.8" height="48" fill="#2e7d32" opacity="0.4" stroke="#2e7d32" stroke-width="0.6"/>
+<text x="595.0" y="130" text-anchor="middle" font-size="9" fill="#2e7d32">5</text>
+<rect x="640.0" y="135" width="11.2" height="48" fill="#2e7d32" opacity="0.2" stroke="#2e7d32" stroke-width="0.6"/>
+<rect x="651.2" y="135" width="78.8" height="48" fill="#2e7d32" opacity="0.4" stroke="#2e7d32" stroke-width="0.6"/>
+<text x="685.0" y="130" text-anchor="middle" font-size="9" fill="#2e7d32">6</text>
+<rect x="730.0" y="135" width="11.2" height="48" fill="#2e7d32" opacity="0.2" stroke="#2e7d32" stroke-width="0.6"/>
+<rect x="741.2" y="135" width="78.8" height="48" fill="#2e7d32" opacity="0.4" stroke="#2e7d32" stroke-width="0.6"/>
+<text x="775.0" y="130" text-anchor="middle" font-size="9" fill="#2e7d32">7</text>
+<text x="460" y="197" text-anchor="middle" font-size="11" fill="#555">T_u=33.33 μs</text>
+<text x="84" y="244.0" text-anchor="end" font-size="13" fill="#e65100" font-weight="bold">μ=2 · Δf=60 kHz</text>
+<rect x="100.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="105.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="122.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">0</text>
+<rect x="145.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="150.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="167.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">1</text>
+<rect x="190.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="195.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="212.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">2</text>
+<rect x="235.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="240.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="257.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">3</text>
+<rect x="280.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="285.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="302.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">4</text>
+<rect x="325.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="330.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="347.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">5</text>
+<rect x="370.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="375.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="392.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">6</text>
+<rect x="415.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="420.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="437.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">7</text>
+<rect x="460.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="465.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="482.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">8</text>
+<rect x="505.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="510.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="527.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">9</text>
+<rect x="550.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="555.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="572.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">10</text>
+<rect x="595.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="600.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="617.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">11</text>
+<rect x="640.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="645.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="662.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">12</text>
+<rect x="685.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="690.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="707.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">13</text>
+<rect x="730.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="735.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="752.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">14</text>
+<rect x="775.0" y="215" width="5.6" height="48" fill="#e65100" opacity="0.2" stroke="#e65100" stroke-width="0.6"/>
+<rect x="780.6" y="215" width="39.4" height="48" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="0.6"/>
+<text x="797.5" y="210" text-anchor="middle" font-size="9" fill="#e65100">15</text>
+<text x="460" y="277" text-anchor="middle" font-size="11" fill="#555">T_u=16.67 μs</text>
+<line x1="100" y1="103" x2="100" y2="215" stroke="#888" stroke-width="0.8" stroke-dasharray="4,4"/>
+<line x1="280" y1="103" x2="280" y2="215" stroke="#888" stroke-width="0.8" stroke-dasharray="4,4"/>
+<line x1="460" y1="103" x2="460" y2="215" stroke="#888" stroke-width="0.8" stroke-dasharray="4,4"/>
+<line x1="640" y1="103" x2="640" y2="215" stroke="#888" stroke-width="0.8" stroke-dasharray="4,4"/>
+<text x="100" y="310" font-size="12" fill="#555">▲ 1 个 15 kHz 符号 = 2 个 30 kHz 符号 = 4 个 60 kHz 符号    SCS 翻倍 → 符号时长减半 → CP 结束时刻对齐</text>
+</svg>

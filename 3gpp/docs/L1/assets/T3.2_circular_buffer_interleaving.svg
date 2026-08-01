@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 868 370" width="868" height="370">
+<style>
+  text { font-family: "DejaVu Sans", "Noto Sans", sans-serif; }
+  .title    { font-size: 15px; font-weight: bold; fill: #263238; }
+  .subtitle { font-size: 12px; fill: #546E7A; }
+  .small    { font-size: 10px; fill: #78909C; text-anchor: middle; }
+  .cell-txt { font-size: 11px; text-anchor: middle; dominant-baseline: central; }
+  .legend   { font-size: 11px; fill: #37474F; }
+</style>
+<text x="434" y="24" class="title" text-anchor="middle">
+  circular buffer w 的交错写入  (K<sub>Π</sub>=5,  K<sub>w</sub>=15)
+</text>
+<text x="185" y="48" class="subtitle" text-anchor="middle">系统流 v<sup>(0)</sup></text>
+<text x="560" y="48" class="subtitle" text-anchor="middle">parity 流 v<sup>(1)</sup> / v<sup>(2)</sup>  逐比特交替</text>
+<rect x="60" y="68" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+<text x="84" y="79" class="cell-txt" fill="#1565C0">v⁰</text>
+<rect x="110" y="68" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+<text x="134" y="79" class="cell-txt" fill="#1565C0">v⁰</text>
+<rect x="160" y="68" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+<text x="184" y="79" class="cell-txt" fill="#1565C0">v⁰</text>
+<rect x="210" y="68" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+<text x="234" y="79" class="cell-txt" fill="#1565C0">v⁰</text>
+<rect x="260" y="68" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+<text x="284" y="79" class="cell-txt" fill="#1565C0">v⁰</text>
+<rect x="310" y="68" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
+<text x="334" y="79" class="cell-txt" fill="#E65100">v¹</text>
+<rect x="360" y="68" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="384" y="79" class="cell-txt" fill="#2E7D32">v²</text>
+<rect x="410" y="68" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
+<text x="434" y="79" class="cell-txt" fill="#E65100">v¹</text>
+<rect x="460" y="68" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="484" y="79" class="cell-txt" fill="#2E7D32">v²</text>
+<rect x="510" y="68" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
+<text x="534" y="79" class="cell-txt" fill="#E65100">v¹</text>
+<rect x="560" y="68" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="584" y="79" class="cell-txt" fill="#2E7D32">v²</text>
+<rect x="610" y="68" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
+<text x="634" y="79" class="cell-txt" fill="#E65100">v¹</text>
+<rect x="660" y="68" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="684" y="79" class="cell-txt" fill="#2E7D32">v²</text>
+<rect x="710" y="68" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
+<text x="734" y="79" class="cell-txt" fill="#E65100">v¹</text>
+<rect x="760" y="68" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="784" y="79" class="cell-txt" fill="#2E7D32">v²</text>
+<rect x="60" y="102" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+<text x="84" y="113" class="cell-txt" fill="#1565C0">0</text>
+<rect x="110" y="102" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+<text x="134" y="113" class="cell-txt" fill="#1565C0">1</text>
+<rect x="160" y="102" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+<text x="184" y="113" class="cell-txt" fill="#1565C0">2</text>
+<rect x="210" y="102" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+<text x="234" y="113" class="cell-txt" fill="#1565C0">3</text>
+<rect x="260" y="102" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+<text x="284" y="113" class="cell-txt" fill="#1565C0">4</text>
+<rect x="310" y="102" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
+<text x="334" y="113" class="cell-txt" fill="#E65100">0</text>
+<rect x="360" y="102" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="384" y="113" class="cell-txt" fill="#2E7D32">0</text>
+<rect x="410" y="102" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
+<text x="434" y="113" class="cell-txt" fill="#E65100">1</text>
+<rect x="460" y="102" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="484" y="113" class="cell-txt" fill="#2E7D32">1</text>
+<rect x="510" y="102" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
+<text x="534" y="113" class="cell-txt" fill="#E65100">2</text>
+<rect x="560" y="102" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="584" y="113" class="cell-txt" fill="#2E7D32">2</text>
+<rect x="610" y="102" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
+<text x="634" y="113" class="cell-txt" fill="#E65100">3</text>
+<rect x="660" y="102" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="684" y="113" class="cell-txt" fill="#2E7D32">3</text>
+<rect x="710" y="102" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
+<text x="734" y="113" class="cell-txt" fill="#E65100">4</text>
+<rect x="760" y="102" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="784" y="113" class="cell-txt" fill="#2E7D32">4</text>
+<text x="434" y="146" class="subtitle" text-anchor="middle">
+  ↓ sub-block interleaving 后，按 bit collection 规则写入 ↓
+</text>
+<line x1="84" y1="162" x2="84" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="134" y1="162" x2="134" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="184" y1="162" x2="184" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="234" y1="162" x2="234" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="284" y1="162" x2="284" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="334" y1="162" x2="334" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="384" y1="162" x2="384" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="434" y1="162" x2="434" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="484" y1="162" x2="484" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="534" y1="162" x2="534" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="584" y1="162" x2="584" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="634" y1="162" x2="634" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="684" y1="162" x2="684" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="734" y1="162" x2="734" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="784" y1="162" x2="784" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="185" y="212" class="subtitle" text-anchor="middle">[0, K<sub>Π</sub>−1]</text>
+<text x="560" y="212" class="subtitle" text-anchor="middle">[K<sub>Π</sub>, 3K<sub>Π</sub>−1]</text>
+<line x1="309" y1="210" x2="309" y2="302" stroke="#37474F" stroke-width="1.8" stroke-dasharray="6,3"/>
+<rect x="60" y="230" width="48" height="44" rx="4" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+<text x="84" y="246" class="cell-txt" fill="#1565C0" font-weight="bold">v⁰</text>
+<text x="84" y="261" class="small">_0</text>
+<text x="84" y="290" class="small">w<sub>0</sub></text>
+<rect x="110" y="230" width="48" height="44" rx="4" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+<text x="134" y="246" class="cell-txt" fill="#1565C0" font-weight="bold">v⁰</text>
+<text x="134" y="261" class="small">_1</text>
+<text x="134" y="290" class="small">w<sub>1</sub></text>
+<rect x="160" y="230" width="48" height="44" rx="4" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+<text x="184" y="246" class="cell-txt" fill="#1565C0" font-weight="bold">v⁰</text>
+<text x="184" y="261" class="small">_2</text>
+<text x="184" y="290" class="small">w<sub>2</sub></text>
+<rect x="210" y="230" width="48" height="44" rx="4" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+<text x="234" y="246" class="cell-txt" fill="#1565C0" font-weight="bold">v⁰</text>
+<text x="234" y="261" class="small">_3</text>
+<text x="234" y="290" class="small">w<sub>3</sub></text>
+<rect x="260" y="230" width="48" height="44" rx="4" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+<text x="284" y="246" class="cell-txt" fill="#1565C0" font-weight="bold">v⁰</text>
+<text x="284" y="261" class="small">_4</text>
+<text x="284" y="290" class="small">w<sub>4</sub></text>
+<rect x="310" y="230" width="48" height="44" rx="4" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
+<text x="334" y="246" class="cell-txt" fill="#E65100" font-weight="bold">v¹</text>
+<text x="334" y="261" class="small">_0</text>
+<text x="334" y="290" class="small">w<sub>5</sub></text>
+<rect x="360" y="230" width="48" height="44" rx="4" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
+<text x="384" y="246" class="cell-txt" fill="#2E7D32" font-weight="bold">v²</text>
+<text x="384" y="261" class="small">_0</text>
+<text x="384" y="290" class="small">w<sub>6</sub></text>
+<rect x="410" y="230" width="48" height="44" rx="4" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
+<text x="434" y="246" class="cell-txt" fill="#E65100" font-weight="bold">v¹</text>
+<text x="434" y="261" class="small">_1</text>
+<text x="434" y="290" class="small">w<sub>7</sub></text>
+<rect x="460" y="230" width="48" height="44" rx="4" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
+<text x="484" y="246" class="cell-txt" fill="#2E7D32" font-weight="bold">v²</text>
+<text x="484" y="261" class="small">_1</text>
+<text x="484" y="290" class="small">w<sub>8</sub></text>
+<rect x="510" y="230" width="48" height="44" rx="4" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
+<text x="534" y="246" class="cell-txt" fill="#E65100" font-weight="bold">v¹</text>
+<text x="534" y="261" class="small">_2</text>
+<text x="534" y="290" class="small">w<sub>9</sub></text>
+<rect x="560" y="230" width="48" height="44" rx="4" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
+<text x="584" y="246" class="cell-txt" fill="#2E7D32" font-weight="bold">v²</text>
+<text x="584" y="261" class="small">_2</text>
+<text x="584" y="290" class="small">w<sub>10</sub></text>
+<rect x="610" y="230" width="48" height="44" rx="4" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
+<text x="634" y="246" class="cell-txt" fill="#E65100" font-weight="bold">v¹</text>
+<text x="634" y="261" class="small">_3</text>
+<text x="634" y="290" class="small">w<sub>11</sub></text>
+<rect x="660" y="230" width="48" height="44" rx="4" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
+<text x="684" y="246" class="cell-txt" fill="#2E7D32" font-weight="bold">v²</text>
+<text x="684" y="261" class="small">_3</text>
+<text x="684" y="290" class="small">w<sub>12</sub></text>
+<rect x="710" y="230" width="48" height="44" rx="4" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
+<text x="734" y="246" class="cell-txt" fill="#E65100" font-weight="bold">v¹</text>
+<text x="734" y="261" class="small">_4</text>
+<text x="734" y="290" class="small">w<sub>13</sub></text>
+<rect x="760" y="230" width="48" height="44" rx="4" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
+<text x="784" y="246" class="cell-txt" fill="#2E7D32" font-weight="bold">v²</text>
+<text x="784" y="261" class="small">_4</text>
+<text x="784" y="290" class="small">w<sub>14</sub></text>
+<text x="434" y="312" class="subtitle" text-anchor="middle">w 总长 K<sub>w</sub> = 3 × K<sub>Π</sub> = 15</text>
+<rect x="60" y="338" width="14" height="14" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
+<text x="78" y="349" class="legend" fill="#1565C0">v⁽⁰⁾  系统流</text>
+<rect x="235" y="338" width="14" height="14" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
+<text x="253" y="349" class="legend" fill="#E65100">v⁽¹⁾  parity 1</text>
+<rect x="410" y="338" width="14" height="14" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
+<text x="428" y="349" class="legend" fill="#2E7D32">v⁽²⁾  parity 2</text>
+</svg>

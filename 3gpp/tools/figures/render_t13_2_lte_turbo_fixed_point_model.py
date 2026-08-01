@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render T13.2 LTE Turbo fixed-point model flow."""
+""" @file render_t13_2_lte_turbo_fixed_point_model.py
+@brief 渲染 T13.2 LTE Turbo 定点模型计划图，展示从协议向量到 CRC/报告的 C/C++ 整数数据通路与位精确检查点。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -25,11 +28,24 @@ TINY = font(24)
 
 
 def text_box(draw, text, fnt):
+    """ @brief 计算文本渲染后的宽高。
+    @param draw PIL 绘图上下文。
+    @param text 待测量的文本字符串。
+    @param fnt PIL 字体对象。
+    @return (宽度, 高度) px。
+    """
     b = draw.textbbox((0, 0), text, font=fnt)
     return b[2] - b[0], b[3] - b[1]
 
 
 def wrap(draw, text, fnt, width):
+    """ @brief 按单词边界自动换行，返回行列表。
+    @param draw PIL 绘图上下文。
+    @param text 待换行的英文字符串。
+    @param fnt PIL 字体对象。
+    @param width 最大行宽（px）。
+    @return 换行后的行列表。
+    """
     words = text.split()
     lines = []
     cur = ""
@@ -47,11 +63,26 @@ def wrap(draw, text, fnt, width):
 
 
 def line_h(draw, text, fnt):
+    """ @brief 计算单行文本的渲染高度。
+    @param draw PIL 绘图上下文。
+    @param text 待测量的文本字符串。
+    @param fnt PIL 字体对象。
+    @return 高度（px）。
+    """
     b = draw.textbbox((0, 0), text, font=fnt)
     return b[3] - b[1]
 
 
 def centered(draw, lines, fnt, rect, fill="#263238", gap=7):
+    """ @brief 在矩形区域内居中对齐绘制多行文本。
+    @param draw PIL 绘图上下文。
+    @param lines 文本行列表。
+    @param fnt PIL 字体对象。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @param fill 文本颜色 hex 字符串。
+    @param gap 行间距，默认 7px。
+    @return None
+    """
     x0, y0, x1, y1 = rect
     hs = [line_h(draw, line, fnt) for line in lines]
     total = sum(hs) + gap * max(0, len(lines) - 1)
@@ -63,6 +94,14 @@ def centered(draw, lines, fnt, rect, fill="#263238", gap=7):
 
 
 def card(draw, rect, title, body, fill):
+    """ @brief 绘制带标题和正文的圆角矩形卡片，用于 Turbo 定点模型各阶段。
+    @param draw PIL 绘图上下文。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @param title 卡片标题。
+    @param body 正文描述字符串。
+    @param fill 填充色 hex 字符串。
+    @return None
+    """
     x0, y0, x1, y1 = rect
     draw.rounded_rectangle(rect, radius=8, fill=fill, outline="#263238", width=2)
     draw.text(((x0 + x1) / 2, y0 + 32), title, font=HEAD, fill="#102027", anchor="mm")
@@ -70,10 +109,19 @@ def card(draw, rect, title, body, fill):
 
 
 def center(rect):
+    """ @brief 计算矩形几何中心坐标。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @return 中心点坐标 (cx, cy)。
+    """
     return (rect[0] + rect[2]) / 2, (rect[1] + rect[3]) / 2
 
 
 def edge(src, dst):
+    """ @brief 计算从源矩形中心向目标矩形方向的边界交点，用于箭头起点/终点定位。
+    @param src 源矩形 (x0, y0, x1, y1)。
+    @param dst 目标矩形 (x0, y0, x1, y1)。
+    @return 源矩形边界上的交点坐标 (bx, by)。
+    """
     sx, sy = center(src)
     dx, dy = center(dst)
     vx, vy = dx - sx, dy - sy
@@ -87,6 +135,12 @@ def edge(src, dst):
 
 
 def arrow(draw, src, dst):
+    """ @brief 绘制两个矩形节点之间的直连箭头。
+    @param draw PIL 绘图上下文。
+    @param src 源矩形 (x0, y0, x1, y1)。
+    @param dst 目标矩形 (x0, y0, x1, y1)。
+    @return None
+    """
     ax, ay = edge(src, dst)
     bx, by = edge(dst, src)
     vx, vy = bx - ax, by - ay
@@ -103,10 +157,23 @@ def arrow(draw, src, dst):
 
 
 def cell(draw, rect, text, fnt=TINY, fill="#263238"):
+    """ @brief 在单元格内自动换行并居中绘制文本，用于 Turbo 定点检查点表格。
+    @param draw PIL 绘图上下文。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @param text 待绘制的文本字符串。
+    @param fnt PIL 字体对象。
+    @param fill 文本颜色 hex 字符串。
+    @return None
+    """
     centered(draw, wrap(draw, text, fnt, rect[2] - rect[0] - 18), fnt, (rect[0] + 7, rect[1] + 4, rect[2] - 7, rect[3] - 4), fill, gap=4)
 
 
 def table(draw, rect):
+    """ @brief 绘制 Turbo 定点检查点表格，列出速率恢复、分支度量、前后向递推、外信息和 CRC 门控的位精确比较字段。
+    @param draw PIL 绘图上下文。
+    @param rect 表格外框矩形 (x0, y0, x1, y1)。
+    @return None
+    """
     x0, y0, x1, y1 = rect
     draw.rounded_rectangle(rect, radius=8, fill="#ffffff", outline="#607d8b", width=2)
     draw.text(((x0 + x1) / 2, y0 + 36), "Turbo Fixed-Point Checkpoints", font=HEAD, fill="#102027", anchor="mm")
@@ -132,6 +199,11 @@ def table(draw, rect):
 
 
 def main():
+    """ @brief 渲染 T13.2 LTE Turbo 定点模型计划图，保存为 PNG 到 docs/L3/assets/。
+    @note 该图展示从协议向量、LLR 量化器、SISO 核心、迭代交换到 CRC/报告的 C/C++ 整数数据通路，
+     包含 Turbo 定点检查点表格和位宽/算法选项卡（Log-MAP/Max-Log-MAP/度量归一化/外信息缩放/饱和计数）。
+    @return None
+    """
     W, H = 2200, 1780
     img = Image.new("RGB", (W, H), "#f8fbfa")
     draw = ImageDraw.Draw(img)

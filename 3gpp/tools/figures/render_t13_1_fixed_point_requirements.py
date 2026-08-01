@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render T13.1 fixed-point decoder requirement flow."""
+""" @file render_t13_1_fixed_point_requirements.py
+@brief 渲染 T13.1 定点译码器需求图，展示从浮点 LLR 实验到可审计位宽、饱和、损失预算的完整需求封闭流程。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -25,11 +28,24 @@ TINY = font(24)
 
 
 def text_size(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont) -> tuple[int, int]:
+    """ @brief 计算文本渲染后的宽高。
+    @param draw PIL 绘图上下文。
+    @param text 待测量的文本字符串。
+    @param fnt PIL 字体对象。
+    @return (宽度, 高度) px。
+    """
     box = draw.textbbox((0, 0), text, font=fnt)
     return box[2] - box[0], box[3] - box[1]
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: int) -> list[str]:
+    """ @brief 按单词边界自动换行，返回行列表。
+    @param draw PIL 绘图上下文。
+    @param text 待换行的英文字符串。
+    @param fnt PIL 字体对象。
+    @param width 最大行宽（px）。
+    @return 换行后的行列表。
+    """
     words = text.split()
     lines: list[str] = []
     cur = ""
@@ -47,10 +63,25 @@ def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: 
 
 
 def text_h(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont) -> int:
+    """ @brief 计算单行文本的渲染高度。
+    @param draw PIL 绘图上下文。
+    @param text 待测量的文本字符串。
+    @param fnt PIL 字体对象。
+    @return 高度（px）。
+    """
     return draw.textbbox((0, 0), text, font=fnt)[3]
 
 
 def centered_lines(draw, lines, fnt, box, fill="#263238", gap=7):
+    """ @brief 在矩形区域内居中对齐绘制多行文本。
+    @param draw PIL 绘图上下文。
+    @param lines 文本行列表。
+    @param fnt PIL 字体对象。
+    @param box 矩形四边坐标 (x0, y0, x1, y1)。
+    @param fill 文本颜色 hex 字符串。
+    @param gap 行间距，默认 7px。
+    @return None
+    """
     x0, y0, x1, y1 = box
     heights = [text_h(draw, line, fnt) for line in lines]
     total = sum(heights) + gap * max(0, len(lines) - 1)
@@ -62,6 +93,14 @@ def centered_lines(draw, lines, fnt, box, fill="#263238", gap=7):
 
 
 def card(draw, rect, title, body, fill):
+    """ @brief 绘制带标题和正文的圆角矩形卡片，用于定点需求流程各阶段。
+    @param draw PIL 绘图上下文。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @param title 卡片标题。
+    @param body 正文描述字符串。
+    @param fill 填充色 hex 字符串。
+    @return None
+    """
     x0, y0, x1, y1 = rect
     draw.rounded_rectangle(rect, radius=10, fill=fill, outline="#263238", width=2)
     draw.text(((x0 + x1) / 2, y0 + 34), title, font=HEAD, fill="#102027", anchor="mm")
@@ -70,10 +109,19 @@ def card(draw, rect, title, body, fill):
 
 
 def center(rect):
+    """ @brief 计算矩形几何中心坐标。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @return 中心点坐标 (cx, cy)。
+    """
     return (rect[0] + rect[2]) / 2, (rect[1] + rect[3]) / 2
 
 
 def boundary_point(src, dst):
+    """ @brief 计算从源矩形中心向目标矩形方向的边界交点，用于箭头起点/终点定位。
+    @param src 源矩形 (x0, y0, x1, y1)。
+    @param dst 目标矩形 (x0, y0, x1, y1)。
+    @return 源矩形边界上的交点坐标 (bx, by)。
+    """
     sx, sy = center(src)
     dx, dy = center(dst)
     vx, vy = dx - sx, dy - sy
@@ -87,6 +135,12 @@ def boundary_point(src, dst):
 
 
 def arrow(draw, src, dst):
+    """ @brief 绘制两个矩形节点之间的直连箭头。
+    @param draw PIL 绘图上下文。
+    @param src 源矩形 (x0, y0, x1, y1)。
+    @param dst 目标矩形 (x0, y0, x1, y1)。
+    @return None
+    """
     ax, ay = boundary_point(src, dst)
     bx, by = boundary_point(dst, src)
     vx, vy = bx - ax, by - ay
@@ -107,11 +161,24 @@ def arrow(draw, src, dst):
 
 
 def cell(draw, rect, text, fnt=SMALL, fill="#263238"):
+    """ @brief 在单元格内自动换行并居中绘制文本，用于需求模板表格。
+    @param draw PIL 绘图上下文。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @param text 待绘制的文本字符串。
+    @param fnt PIL 字体对象。
+    @param fill 文本颜色 hex 字符串。
+    @return None
+    """
     lines = wrap(draw, text, fnt, rect[2] - rect[0] - 22)
     centered_lines(draw, lines, fnt, (rect[0] + 8, rect[1] + 5, rect[2] - 8, rect[3] - 5), fill, gap=5)
 
 
 def draw_table(draw, rect):
+    """ @brief 绘制"进入 C/C++ 前必须固定的决定"需求模板表格。
+    @param draw PIL 绘图上下文。
+    @param rect 表格外框矩形 (x0, y0, x1, y1)。
+    @return None
+    """
     x0, y0, x1, y1 = rect
     draw.rounded_rectangle(rect, radius=12, fill="#ffffff", outline="#607d8b", width=2)
     draw.text(((x0 + x1) / 2, y0 + 36), "Requirement Template: What Must Be Fixed Before C/C++", font=HEAD, fill="#102027", anchor="mm")
@@ -137,6 +204,11 @@ def draw_table(draw, rect):
 
 
 def main() -> None:
+    """ @brief 渲染 T13.1 定点译码器需求图，保存为 PNG 到 docs/L3/assets/。
+    @note 该图展示从浮点基线、量化契约、定点模型到回归证据的完整需求封闭流程，
+     包含需求模板表格（LLR 格式/内部消息/算术/损失预算/比较策略）、Q 格式示例和审查关卡。
+    @return None
+    """
     W, H = 2200, 1760
     img = Image.new("RGB", (W, H), "#f8fbfa")
     draw = ImageDraw.Draw(img)

@@ -82,7 +82,7 @@ source_spec: "docs/audits/python_figure_textfit_and_body_equivalent_plan.md"
 ## 执行顺序
 
 - [x] 新增或更新全局标准文件，固化“Python 图不得作为唯一正文表达”和“文本框内部 bbox 审计”规则。
-- [x] 新增迁移台账 `docs/audits/python_figure_to_body_TS_36.211_36211-j30_s06-s08_TS_36.213_36213-j30_cover_TS_38.300_38300-j20_TS_36.211_36211-j30_cover_TS_36.201_36201-j00_TS_36.322_36322-j00_TS_38.201_38201-j00_TS_36.213_36213-j30_s06-s07_TS_36.331_36331-j21_TS_38.202_38202-j00_TS_36.213_36213-j30_s14-xx_TS_38.306_38306-j20_TS_38.213_38213-j30_TS_36.213_36213-j30_sAnnexes_TS_38.214_38214-j30_TS_36.302_36302-j00_TS_36.306_36306-j20_TS_36.211_36211-j30_s09-sxx_TS_38.212_38212-j30_TS_38.321_38321-j20_TS_36.212_36212-j30_TS_38.322_38322-j20_TS_36.321_36321-j20_TS_38.211_38211-j30_TS_36.214_36214-j00_TS_38.331_38331-j20_TS_36.300_36300-j10_TS_36.213_36213-j30_s00-s05_TS_38.323_38323-j10_TS_36.213_36213-j30_s08-s09_TS_38.215_38215-j20_TS_36.213_36213-j30_s10-s13_TS_36.211_36211-j30_s00-s05_TS_36.323_36323-j00_content_migration.md`，列出当前 66 个 Markdown PNG 正文引用、65 个唯一正文引用 PNG 和 3 个 evidence/compatibility 保留 PNG 的状态。
+- [x] 新增迁移台账 `docs/audits/python_figure_to_body_content_migration.md`，列出当前 66 个 Markdown PNG 正文引用、65 个唯一正文引用 PNG 和 3 个 evidence/compatibility 保留 PNG 的状态。
 - [x] 新增两个审计脚本，先运行得到失败清单。
 - [x] 修复 P0 静默删行绘图脚本并重生成对应 PNG。
 - [x] 对每篇含 PNG 的讲义补 Mermaid/Markdown 等价块，优先处理失败清单。

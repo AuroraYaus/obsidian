@@ -51,7 +51,7 @@ Current extraction status observed at design time from `3GPP_Rel19/processed/man
 
 Before writing the final roadmap, recheck these counts against `3GPP_Rel19/processed/manifest.json`.
 
-The design depends on the `$3gpp-word-extraction` skill when protocol tables, formulas, raw Word XML, or extraction completeness matter. Markdown `TS_36.212_36212-j30_content.md` alone is not enough to claim complete protocol understanding when table or formula semantics are material.
+The design depends on the `$3gpp-word-extraction` skill when protocol tables, formulas, raw Word XML, or extraction completeness matter. Markdown `content.md` alone is not enough to claim complete protocol understanding when table or formula semantics are material.
 
 ## Protocol Scope
 
@@ -133,28 +133,28 @@ These anchors seed the final roadmap. Detailed lesson articles must still verify
 
 | Theme | Protocol Anchor | Local Path | Evidence Status |
 |:---|:---|:---|:---|
-| LTE CRC calculation | TS 36.212 Rel-19 `36212-j30`, §5.1.1 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
-| LTE code block segmentation and CB CRC | TS 36.212 Rel-19 `36212-j30`, §5.1.2 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
-| LTE Turbo encoder | TS 36.212 Rel-19 `36212-j30`, §5.1.3.2, Figure 5.1.3-2 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；复现图形前必须核验 figure/media 原始制品 |
-| LTE Turbo interleaver | TS 36.212 Rel-19 `36212-j30`, §5.1.3.2.3, Table 5.1.3-3 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；复现参数前必须核验 table 原始制品 |
-| LTE Turbo rate matching | TS 36.212 Rel-19 `36212-j30`, §5.1.4.1, Figure 5.1.4-1, Table 5.1.4-1 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；复现参数前必须核验 table 原始制品 |
-| LTE UL-SCH Turbo chain | TS 36.212 Rel-19 `36212-j30`, §5.2.2.1-§5.2.2.8 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
-| LTE DL-SCH Turbo chain | TS 36.212 Rel-19 `36212-j30`, §5.3.2.1-§5.3.2.2 and related coding/rate matching clauses | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；最终章节范围必须复核 |
+| LTE CRC calculation | TS 36.212 Rel-19 `36212-j30`, §5.1.1 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
+| LTE code block segmentation and CB CRC | TS 36.212 Rel-19 `36212-j30`, §5.1.2 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
+| LTE Turbo encoder | TS 36.212 Rel-19 `36212-j30`, §5.1.3.2, Figure 5.1.3-2 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `content.md` 定位；复现图形前必须核验 figure/media 原始制品 |
+| LTE Turbo interleaver | TS 36.212 Rel-19 `36212-j30`, §5.1.3.2.3, Table 5.1.3-3 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `content.md` 定位；复现参数前必须核验 table 原始制品 |
+| LTE Turbo rate matching | TS 36.212 Rel-19 `36212-j30`, §5.1.4.1, Figure 5.1.4-1, Table 5.1.4-1 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `content.md` 定位；复现参数前必须核验 table 原始制品 |
+| LTE UL-SCH Turbo chain | TS 36.212 Rel-19 `36212-j30`, §5.2.2.1-§5.2.2.8 | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
+| LTE DL-SCH Turbo chain | TS 36.212 Rel-19 `36212-j30`, §5.3.2.1-§5.3.2.2 and related coding/rate matching clauses | `3GPP_Rel19/processed/TS_36.212_36212-j30` | 章节锚点已从 `content.md` 定位；最终章节范围必须复核 |
 | LTE MCS/TBS/HARQ process context | TS 36.213 Rel-19 `36213-j30`, relevant §7/§8 clauses | `3GPP_Rel19/processed/TS_36.213_36213-j30_*` | 待核验 exact LTE normal-mode anchors before final roadmap |
-| NR CRC calculation | TS 38.212 Rel-19 `38212-j30`, §5.1 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；公式细节必须核验原始制品 |
-| NR Polar segmentation | TS 38.212 Rel-19 `38212-j30`, §5.2.1 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
-| NR LDPC segmentation | TS 38.212 Rel-19 `38212-j30`, §5.2.2 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
-| NR Polar coding | TS 38.212 Rel-19 `38212-j30`, §5.3.1, §5.3.1.2, Table 5.3.1.2-1 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；复现可靠性表前必须核验 table 原始制品 |
-| NR LDPC coding | TS 38.212 Rel-19 `38212-j30`, §5.3.2, Table 5.3.2-1/2/3 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；复现基图表前必须核验 table 原始制品 |
-| NR Polar rate matching | TS 38.212 Rel-19 `38212-j30`, §5.4.1, §5.4.1.1, Table 5.4.1.1-1 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；复现表格前必须核验 table 原始制品 |
-| NR LDPC rate matching and bit interleaving | TS 38.212 Rel-19 `38212-j30`, §5.4.2, §5.4.2.2 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
-| NR UL-SCH LDPC chain | TS 38.212 Rel-19 `38212-j30`, §6.2.1-§6.2.6 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
-| NR UCI Polar chain on PUCCH | TS 38.212 Rel-19 `38212-j30`, §6.3.1.2.1, §6.3.1.3.1, §6.3.1.4.1/§6.3.1.4.3 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
-| NR UCI Polar chain on PUSCH | TS 38.212 Rel-19 `38212-j30`, §6.3.2.2.1, §6.3.2.3.1, §6.3.2.4.1 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
-| NR DL-SCH LDPC chain | TS 38.212 Rel-19 `38212-j30`, §7.2.1-§7.2.6 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
-| NR DCI Polar context | TS 38.212 Rel-19 `38212-j30`, §7.3 and §7.3.2 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；详细 DCI 映射可能需要核验 TS 38.213/38.214 |
-| NR PDSCH MCS/TBS/RV | TS 38.214 Rel-19 `38214-j30`, §5.1.3, §5.1.7 | `3GPP_Rel19/processed/TS_38.214_38214-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；复现表格前必须核验 table 原始制品 |
-| NR PUSCH MCS/TBS/RV | TS 38.214 Rel-19 `38214-j30`, §6.1.4, §6.1.5 | `3GPP_Rel19/processed/TS_38.214_38214-j30` | 章节锚点已从 `TS_36.212_36212-j30_content.md` 定位；复现表格前必须核验 table 原始制品 |
+| NR CRC calculation | TS 38.212 Rel-19 `38212-j30`, §5.1 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；公式细节必须核验原始制品 |
+| NR Polar segmentation | TS 38.212 Rel-19 `38212-j30`, §5.2.1 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
+| NR LDPC segmentation | TS 38.212 Rel-19 `38212-j30`, §5.2.2 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
+| NR Polar coding | TS 38.212 Rel-19 `38212-j30`, §5.3.1, §5.3.1.2, Table 5.3.1.2-1 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；复现可靠性表前必须核验 table 原始制品 |
+| NR LDPC coding | TS 38.212 Rel-19 `38212-j30`, §5.3.2, Table 5.3.2-1/2/3 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；复现基图表前必须核验 table 原始制品 |
+| NR Polar rate matching | TS 38.212 Rel-19 `38212-j30`, §5.4.1, §5.4.1.1, Table 5.4.1.1-1 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；复现表格前必须核验 table 原始制品 |
+| NR LDPC rate matching and bit interleaving | TS 38.212 Rel-19 `38212-j30`, §5.4.2, §5.4.2.2 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
+| NR UL-SCH LDPC chain | TS 38.212 Rel-19 `38212-j30`, §6.2.1-§6.2.6 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
+| NR UCI Polar chain on PUCCH | TS 38.212 Rel-19 `38212-j30`, §6.3.1.2.1, §6.3.1.3.1, §6.3.1.4.1/§6.3.1.4.3 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
+| NR UCI Polar chain on PUSCH | TS 38.212 Rel-19 `38212-j30`, §6.3.2.2.1, §6.3.2.3.1, §6.3.2.4.1 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
+| NR DL-SCH LDPC chain | TS 38.212 Rel-19 `38212-j30`, §7.2.1-§7.2.6 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；表格/公式/媒体未核验时不得复现参数 |
+| NR DCI Polar context | TS 38.212 Rel-19 `38212-j30`, §7.3 and §7.3.2 | `3GPP_Rel19/processed/TS_38.212_38212-j30` | 章节锚点已从 `content.md` 定位；详细 DCI 映射可能需要核验 TS 38.213/38.214 |
+| NR PDSCH MCS/TBS/RV | TS 38.214 Rel-19 `38214-j30`, §5.1.3, §5.1.7 | `3GPP_Rel19/processed/TS_38.214_38214-j30` | 章节锚点已从 `content.md` 定位；复现表格前必须核验 table 原始制品 |
+| NR PUSCH MCS/TBS/RV | TS 38.214 Rel-19 `38214-j30`, §6.1.4, §6.1.5 | `3GPP_Rel19/processed/TS_38.214_38214-j30` | 章节锚点已从 `content.md` 定位；复现表格前必须核验 table 原始制品 |
 
 ## Roadmap Architecture
 
@@ -314,7 +314,7 @@ Decoder-family coverage:
 | `编号` | T2.1 |
 | `前置` | T1.4, T1.5 |
 | `Prompt` | Explain additive white Gaussian noise (AWGN), Gaussian random variables, SNR, Eb/N0, Es/N0, code rate, modulation order, and noise variance scaling. Include derivation for BPSK LLR in AWGN and a reproducible Python simulation with seed. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T2.1_AWGN_noise_scaling.md` |
+| `产出` | `docs/L1/T2.7_AWGN_noise_scaling.md` |
 | `验收` | Learner can compute noise variance for a given code rate, modulation order, and Eb/N0, and generate reproducible noisy BPSK samples. |
 | `3GPP/证据` | Background task. Modulation order linkage to TS 38.214 Rel-19 `38214-j30` §5.1.3/§6.1.4 and LTE equivalent anchors `待核验`. Local evidence path(s): TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`. |
 
@@ -325,7 +325,7 @@ Decoder-family coverage:
 | `编号` | T2.2 |
 | `前置` | T1.5, T2.1 |
 | `Prompt` | Teach BPSK and QPSK constellation mapping, Gray mapping, received sample model, exact LLR for BPSK, and bit-wise LLR for QPSK. Include diagrams in Mermaid where possible and a small numerical demapper example. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T2.2_BPSK_QPSK_soft_demapping.md` |
+| `产出` | `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md` |
 | `验收` | Learner can derive BPSK LLR and compute QPSK bit LLRs for one received symbol. |
 | `3GPP/证据` | TS 36.211 Rel-19 `36211-j30_*` modulation clauses `待核验`; TS 38.211 Rel-19 `38211-j30` modulation clauses `待核验`. Local evidence path(s): TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (exact part `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -336,7 +336,7 @@ Decoder-family coverage:
 | `编号` | T2.3 |
 | `前置` | T2.2 |
 | `Prompt` | Explain 16QAM, 64QAM, 256QAM bit mapping, exact bit LLR, and Max-Log-MAP approximation. Show why practical decoders use approximation and lookup/nearest-distance simplifications. Include one 16QAM worked example and one failure case where LLR sign is inverted. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T2.3_QAM_Max_Log_MAP_demapping.md` |
+| `产出` | `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md` |
 | `验收` | Learner can compute approximate bit LLR for a 16QAM symbol and explain complexity growth for higher QAM. |
 | `3GPP/证据` | TS 38.214 Rel-19 `38214-j30` MCS modulation order sections §5.1.3/§6.1.4; TS 38.211 modulation clauses `待核验`; LTE anchors `待核验`. Local evidence path(s): TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -347,7 +347,7 @@ Decoder-family coverage:
 | `编号` | T2.4 |
 | `前置` | T2.1, T2.2 |
 | `Prompt` | Explain Rayleigh/Rician fading at decoder input level, channel equalization output, and how channel gain changes LLR reliability. Keep the focus on what the decoder sees: soft bits plus reliability. Include one single-tap fading example. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T2.4_fading_channel_LLR_reliability.md` |
+| `产出` | `docs/L1/T2.10_fading_channel_LLR_reliability.md` |
 | `验收` | Learner can explain why equalized symbols with low channel gain should have smaller LLR magnitude. |
 | `3GPP/证据` | Background task. Link to physical channel and demodulation context in TS 36.211 Rel-19 `36211-j30_*` / TS 38.211 Rel-19 `38211-j30`, exact anchors `待核验`. Local evidence path(s): TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (exact part `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -358,7 +358,7 @@ Decoder-family coverage:
 | `编号` | T2.5 |
 | `前置` | T1.5, T2.1 |
 | `Prompt` | Introduce LLR clipping, scaling, quantization, saturation, and why fixed-point decoders cannot keep infinite precision. Include examples of overconfident LLR, under-scaled LLR, and sign error. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T2.5_LLR_clipping_scaling_quantization.md` |
+| `产出` | `docs/L1/T2.11_LLR_clipping_scaling_quantization.md` |
 | `验收` | Learner can explain why LLR magnitude saturation changes decoder behavior and identify a likely LLR sign convention bug. |
 | `3GPP/证据` | No direct 3GPP citation required for the quantization concept. Downstream decoder-family articles must cite their own Rel-19 protocol evidence. |
 

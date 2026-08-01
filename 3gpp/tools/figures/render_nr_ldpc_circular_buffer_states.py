@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Render NR LDPC circular-buffer state comparison for T9.2."""
+"""@file render_nr_ldpc_circular_buffer_states.py
+@brief 渲染 NR LDPC Circular Buffer 状态对比教学图
+@date 2025
+@note 设计意图：将 punctured/unknown、shortened/filler、repeated 三类位置放在同一条母码
+  circular buffer 上可视化，并展示接收端动作链（地址流→掩码检查→LLR 动作→LDPC 输入）
+  和四种常见错误的对照表。
+@see docs/L2/T9.2_NR_LDPC_circular_buffer_states.md
+"""
 
 from __future__ import annotations
 
@@ -30,8 +37,13 @@ PALETTE = {
 }
 
 
-
 def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt, fill: str) -> None:
+    """@brief 在矩形内居中绘制单行文本
+    @param draw PIL 绘图上下文
+    @param box 目标矩形
+    @param text 文本
+    @param fnt 字体对象
+    @param fill 文字颜色"""
     bbox = draw.textbbox((0, 0), text, font=fnt)
     x = box[0] + ((box[2] - box[0]) - (bbox[2] - bbox[0])) / 2
     y = box[1] + ((box[3] - box[1]) - (bbox[3] - bbox[1])) / 2 - 1
@@ -39,6 +51,15 @@ def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text:
 
 
 def wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt, width: int, fill: str, gap: int = 5) -> int:
+    """@brief 在指定位置绘制自动换行文本
+    @param draw PIL 绘图上下文
+    @param xy 起始坐标
+    @param text 原始文本
+    @param fnt 字体对象
+    @param width 每行最大像素宽度
+    @param fill 文字颜色
+    @param gap 行间距，默认 5
+    @return 绘制后下一行 Y 坐标"""
     x, y = xy
     for line in fit_wrap_text(draw, text, fnt, width):
         draw.text((x, y), line, font=fnt, fill=fill)
@@ -47,6 +68,12 @@ def wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt, widt
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], color: str = "#61758A") -> None:
+    """@brief 绘制带箭头头的线段
+    @param draw PIL 绘图上下文
+    @param start 起点坐标
+    @param end 终点（箭头尖端）坐标
+    @param color 颜色，默认灰色
+    @note 箭头头长 12px、宽 7px"""
     sx, sy = start
     ex, ey = end
     length = math.hypot(ex - sx, ey - sy)
@@ -68,6 +95,10 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int
 
 
 def draw_buffer(draw: ImageDraw.ImageDraw) -> None:
+    """@brief 绘制同一条 circular buffer 上的 12 个位置及其三类状态
+    @param draw PIL 绘图上下文
+    @note 每个位置显示 pos 编号、LLR 值和状态标签（new/punct/short/rep/unk），
+      下方三个图例解释 punctured/unknown、shortened/filler、repeated 的工程语义"""
     x0, y0 = 78, 292
     cell_w, cell_h = 118, 96
     states = [
@@ -107,6 +138,9 @@ def draw_buffer(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_update_flow(draw: ImageDraw.ImageDraw) -> None:
+    """@brief 绘制接收端动作链：地址流→掩码检查→LLR 动作→LDPC 输入
+    @param draw PIL 绘图上下文
+    @note 四个节点横向排列，展示从 RV/k0 地址产生到最终 LDPC 输入的完整数据通路"""
     y = 608
     boxes = [
         ("addr stream", "RV/k0/Ncb 产生候选地址", "#EAF6FF"),
@@ -128,6 +162,10 @@ def draw_update_flow(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_errors(draw: ImageDraw.ImageDraw) -> None:
+    """@brief 绘制错误对照与工程检测点表格
+    @param draw PIL 绘图上下文
+    @note 四行对比：punctured、shortened、repeated、skip/null 四种状态下的
+      正确处理、典型错误和可观测检测点"""
     panel = (70, 814, 1530, 1288)
     draw.rounded_rectangle(panel, radius=16, fill="#FFFDF6", outline="#E2CD7A", width=2)
     draw.text((105, 850), "错误对照与工程检测点", font=font(28, True), fill=PALETTE["ink"])
@@ -160,6 +198,10 @@ def draw_errors(draw: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    """@brief 渲染 NR LDPC Circular Buffer 状态对比教学图
+    @note 输出文件: docs/L2/assets/T9.2_NR_LDPC_circular_buffer_states.png
+    @note 图中包含三类状态的可视化 buffer、接收端动作链流程图、
+      四行错误对照表，强调 unknown/known/repeat 三种语义不可互替"""
     img = Image.new("RGB", (1700, 1420), PALETTE["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((70, 42), "NR LDPC Circular Buffer 状态对比", font=font(40, True), fill=PALETTE["ink"])

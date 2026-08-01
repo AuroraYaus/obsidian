@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render a CRC-aided SCL final selection example."""
+"""@file render_nr_polar_ca_scl_selector.py
+@brief 渲染 CRC 辅助 SCL（CA-SCL）最终路径选择示例图，展示 PM 排名与 CRC/RNTI 过滤后选择最佳候选的过程。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -36,6 +39,14 @@ COL = {
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], fill: str) -> None:
+    """@brief 绘制带箭头线段，连接流程节点。
+    @param draw PIL ImageDraw 绘制上下文
+    @param start 箭头起点坐标 (x, y)
+    @param end 箭头终点坐标 (x, y)
+    @param fill 线条和箭头填充颜色
+    @return None
+    @note 箭杆线宽 3px，箭头长度 14px、宽度 8px。
+    """
     x0, y0 = start
     x1, y1 = end
     length = math.hypot(x1 - x0, y1 - y0)
@@ -55,10 +66,24 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int
 
 
 def center_text(draw: ImageDraw.ImageDraw, xy: tuple[int, int, int, int], text: str, fnt: ImageFont.ImageFont, fill: str) -> None:
+    """@brief 在矩形区域内居中绘制文本，使用 PIL 的 anchor="mm" 实现精确居中。
+    @param draw PIL ImageDraw 绘制上下文
+    @param xy 目标矩形区域 (x0, y0, x1, y1)
+    @param text 要绘制的文本
+    @param fnt PIL 字体对象
+    @param fill 文本颜色
+    @return None
+    """
     draw.text(((xy[0] + xy[2]) / 2, (xy[1] + xy[3]) / 2), text, font=fnt, fill=fill, anchor="mm")
 
 
 def text_h(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont) -> int:
+    """@brief 获取文本在指定字体下的像素高度。
+    @param draw PIL ImageDraw 绘制上下文
+    @param text 要测量的文本
+    @param fnt PIL 字体对象
+    @return 文本的像素高度（整数）
+    """
     box_xy = draw.textbbox((0, 0), text, font=fnt)
     return box_xy[3] - box_xy[1]
 
@@ -71,6 +96,15 @@ def centered_lines(
     fill: str,
     gap: int = 8,
 ) -> None:
+    """@brief 在指定区域内垂直居中绘制多行文本，整体文本块在区域内水平和垂直居中对齐。
+    @param draw PIL ImageDraw 绘制上下文
+    @param xy 目标矩形区域 (x0, y0, x1, y1)
+    @param lines 多行文本字符串列表
+    @param fnt PIL 字体对象
+    @param fill 文本颜色
+    @param gap 行间距（像素），默认 8
+    @return None
+    """
     heights = [text_h(draw, line, fnt) for line in lines]
     total = sum(heights) + gap * max(0, len(lines) - 1)
     y = xy[1] + (xy[3] - xy[1] - total) / 2
@@ -81,6 +115,15 @@ def centered_lines(
 
 
 def box(draw: ImageDraw.ImageDraw, xy: tuple[int, int, int, int], title: str, lines: list[str], fill: str, outline: str) -> None:
+    """@brief 绘制带标题和多行正文的圆角信息框，用于流程节点和状态说明。
+    @param draw PIL ImageDraw 绘制上下文
+    @param xy 矩形区域 (x0, y0, x1, y1)
+    @param title 框内左上角标题（24px 粗体）
+    @param lines 正文多行文本列表
+    @param fill 框内填充色
+    @param outline 边框和标题颜色（2px）
+    @return None
+    """
     draw.rounded_rectangle(xy, radius=14, fill=fill, outline=outline, width=2)
     draw.text((xy[0] + 24, xy[1] + 16), title, font=font(24, True), fill=outline)
     body = (xy[0] + 28, xy[1] + 72, xy[2] - 28, xy[3] - 26)
@@ -88,6 +131,12 @@ def box(draw: ImageDraw.ImageDraw, xy: tuple[int, int, int, int], title: str, li
 
 
 def main() -> None:
+    """@brief 脚本入口：生成 CRC 辅助 SCL 最终路径选择教学图 T10.6_NR_Polar_CA_SCL_final_selector.png。
+    @note 图中展示 L=4 路径的 SCL 输出候选经过并行 CRC/RNTI 检查后由 final selector 选出最佳路径的过程。
+    关键教学点：最终输出不是 PM 最小路径，而是通过 CRC/RNTI 检查的最佳候选。
+    底部表格列出一条具体路径选择案例：P0(PM=0.8, CRC fail) 被淘汰，P1(PM=1.3, CRC pass) 被选中。
+    @see render_nr_polar_decoder_chain_overview.py Polar 译码链路总览
+    """
     img = Image.new("RGB", (2000, 1280), COL["bg"])
     draw = ImageDraw.Draw(img)
 

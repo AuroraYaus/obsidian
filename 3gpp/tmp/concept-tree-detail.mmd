@@ -19,6 +19,18 @@ flowchart TD
         N16["熵H(X) / 互信息I(X;Y) / 信道容量C / 香农限"]:::clsdeep
     end
     subgraph SG_02_信道与软解调["02 信道与软解调"]
+        subgraph SG_02_5_OFDM与参数集["OFDM 与参数集"]
+            N80["子载波间隔 / 循环前缀 / 正交性"]:::clsdeep
+            N81["numerology μ=0..4 / 时隙格式 / 子载波间隔15·2μ kHz"]:::clsdeep
+        end
+        subgraph SG_02_6_资源栅格与帧结构["资源栅格与帧结构"]
+            N82["RB/PRB / 公共资源栅格 / Point A"]:::clsdeep
+            N83["帧/子帧/时隙/符号 / LTE 帧结构 vs NR"]:::clsdeep
+        end
+        subgraph SG_02_7_MCS与LLR入口["MCS 与 LLR 入口"]
+            N84["MCS 表 / 调制阶数 / 目标码率 / TBS"]:::clsdeep
+            N85["RE 映射→软信息→LLR 输入语义"]:::clsdeep
+        end
         N17["02 信道与软解调"]:::domain
         N18["AWGN 加性高斯白噪声"]:::clssubdomain
         N19["σ² / Eb/N0 vs Es/N0 vs SNR / 噪声缩放→LLR"]:::clsdeep
@@ -189,20 +201,20 @@ flowchart TD
     N14 -.->|📄| L_N14_T1_5_LLR_soft_d
     L_N16_T1_6_informatio["T1_6_information_theory_mini"]:::lecture
     N16 -.->|📄| L_N16_T1_6_informatio
-    L_N19_T2_1_AWGN_noise["T2_1_AWGN_noise_scaling"]:::lecture
-    N19 -.->|📄| L_N19_T2_1_AWGN_noise
-    L_N21_T2_2_BPSK_QPSK_["T2_2_BPSK_QPSK_soft_demappin"]:::lecture
-    N21 -.->|📄| L_N21_T2_2_BPSK_QPSK_
-    L_N21_T2_3_QAM_Max_Lo["T2_3_QAM_Max_Log_MAP_demappi"]:::lecture
-    N21 -.->|📄| L_N21_T2_3_QAM_Max_Lo
-    L_N23_T2_2_BPSK_QPSK_["T2_2_BPSK_QPSK_soft_demappin"]:::lecture
-    N23 -.->|📄| L_N23_T2_2_BPSK_QPSK_
-    L_N23_T2_3_QAM_Max_Lo["T2_3_QAM_Max_Log_MAP_demappi"]:::lecture
-    N23 -.->|📄| L_N23_T2_3_QAM_Max_Lo
-    L_N23_T2_5_LLR_clippi["T2_5_LLR_clipping_scaling_qu"]:::lecture
-    N23 -.->|📄| L_N23_T2_5_LLR_clippi
-    L_N25_T2_4_fading_cha["T2_4_fading_channel_LLR_reli"]:::lecture
-    N25 -.->|📄| L_N25_T2_4_fading_cha
+    L_N19_T2_7_AWGN_noise["T2_7_AWGN_noise_scaling"]:::lecture
+    N19 -.->|📄| L_N19_T2_7_AWGN_noise
+    L_N21_T2_8_BPSK_QPSK_["T2_8_BPSK_QPSK_soft_demappin"]:::lecture
+    N21 -.->|📄| L_N21_T2_8_BPSK_QPSK_
+    L_N21_T2_9_QAM_Max_Lo["T2_9_QAM_Max_Log_MAP_demappi"]:::lecture
+    N21 -.->|📄| L_N21_T2_9_QAM_Max_Lo
+    L_N23_T2_8_BPSK_QPSK_["T2_8_BPSK_QPSK_soft_demappin"]:::lecture
+    N23 -.->|📄| L_N23_T2_8_BPSK_QPSK_
+    L_N23_T2_9_QAM_Max_Lo["T2_9_QAM_Max_Log_MAP_demappi"]:::lecture
+    N23 -.->|📄| L_N23_T2_9_QAM_Max_Lo
+    L_N23_T2_11_LLR_clippi["T2_11_LLR_clipping_scaling_qu"]:::lecture
+    N23 -.->|📄| L_N23_T2_11_LLR_clippi
+    L_N25_T2_10_fading_cha["T2_10_fading_channel_LLR_reli"]:::lecture
+    N25 -.->|📄| L_N25_T2_10_fading_cha
     L_N28_T1_2_GF2_polyno["T1_2_GF2_polynomials_crc_rem"]:::lecture
     N28 -.->|📄| L_N28_T1_2_GF2_polyno
     L_N28_T3_1_LTE_NR_CRC["T3_1_LTE_NR_CRC_families"]:::lecture
@@ -285,8 +297,8 @@ flowchart TD
     N68 -.->|📄| L_N68_T5_1_fixed_poin
     L_N68_T13_1_fixed_poi["T13_1_fixed_point_decoder_re"]:::lecture
     N68 -.->|📄| L_N68_T13_1_fixed_poi
-    L_N69_T2_5_LLR_clippi["T2_5_LLR_clipping_scaling_qu"]:::lecture
-    N69 -.->|📄| L_N69_T2_5_LLR_clippi
+    L_N69_T2_11_LLR_clippi["T2_11_LLR_clipping_scaling_qu"]:::lecture
+    N69 -.->|📄| L_N69_T2_11_LLR_clippi
     L_N69_T13_1_fixed_poi["T13_1_fixed_point_decoder_re"]:::lecture
     N69 -.->|📄| L_N69_T13_1_fixed_poi
     L_N71_T4_1_iterative_["T4_1_iterative_decoding_extr"]:::lecture

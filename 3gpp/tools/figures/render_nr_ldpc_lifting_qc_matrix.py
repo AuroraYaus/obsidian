@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render NR LDPC lifting and QC matrix teaching figures."""
+"""@file render_nr_ldpc_lifting_qc_matrix.py
+@brief 渲染 NR LDPC 提升（lifting）与准循环（Quasi-Cyclic）矩阵教学用图，包含 BG 五区结构、QC lifting 原理和接收端用途。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -37,6 +40,15 @@ PALETTE = {
 
 
 def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt, fill: str) -> None:
+    """@brief 在给定矩形区域内居中绘制文本，用于表格单元格、卡片的文字居中对齐。
+    @param draw PIL ImageDraw 绘制上下文
+    @param box 目标矩形区域 (x0, y0, x1, y1)
+    @param text 要绘制的文本内容
+    @param fnt PIL 字体对象
+    @param fill 文本颜色（十六进制字符串）
+    @return None
+    @note 文本在水平和垂直方向均居中；box 是像素坐标，不改变 draw 状态。
+    """
     bbox = draw.textbbox((0, 0), text, font=fnt)
     x = box[0] + ((box[2] - box[0]) - (bbox[2] - bbox[0])) / 2
     y = box[1] + ((box[3] - box[1]) - (bbox[3] - bbox[1])) / 2 - 1
@@ -44,6 +56,16 @@ def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text:
 
 
 def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt, fill: str, width: int) -> int:
+    """@brief 在指定宽度内自动换行绘制文本，用于卡片和说明段落的长文本排版。
+    @param draw PIL ImageDraw 绘制上下文
+    @param xy 起始左上角坐标 (x, y)，行高基于字体 size+7
+    @param text 需要换行的长文本
+    @param fnt PIL 字体对象
+    @param fill 文本颜色
+    @param width 文字最大宽度（像素），超出自动换行
+    @return 绘制结束后的 y 坐标（下一行可用的起始 y），便于链式布局
+    @note 换行策略由 figure_text_fit.wrap_text 提供，不在本函数中实现。
+    """
     x, y = xy
     lines = fit_wrap_text(draw, text, fnt, width)
     for line in lines:
@@ -53,12 +75,26 @@ def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt,
 
 
 def read_csv(name: str) -> list[list[str]]:
+    """@brief 从 3GPP 表格目录读取 CSV 文件并返回二维字符串列表，封装路径拼接与编码处理。
+    @param name CSV 文件名（不含 .csv 扩展名），位于 TS_38.212 表格目录下
+    @return 二维列表，每行为一个字符串列表
+    @throws FileNotFoundError 当表格文件不存在时由 Python 标准库抛出
+    """
     path = TABLE_DIR / f"{name}.csv"
     with path.open(encoding="utf-8", newline="") as handle:
         return list(csv.reader(handle))
 
 
 def render_shift_table(table_name: str, title: str, out_name: str) -> None:
+    """@brief 从 CSV 渲染一张双栏 shift-value 表格 PNG，呈现 BG1/BG2 移位值的 row/col/iLS 组织关系。
+    @param table_name CSV 文件名（不含扩展名），如 table_0015
+    @param title 图片顶部标题文字
+    @param out_name 输出 PNG 文件名，写入 docs/L2/assets/ 下
+    @return None
+    @note 协议原表为横向双栏排版，每个半栏包含 row index、column index 和 set index 0-7 下的 shift value。
+    空白 row index 表示延续上一行的 row group；数值 0 是有效零移位，不是空项。
+    @see tools/figures/render_nr_ldpc_bg_tables_from_pdf.py BG1/BG2 表格裁剪替代方案
+    """
     rows = read_csv(table_name)
     data = rows[1:]
     row_h = 56  # TEXT_FIT_OK: shift-table cells contain short numeric labels centered at 24px.
@@ -116,10 +152,25 @@ def render_shift_table(table_name: str, title: str, out_name: str) -> None:
 
 
 def circulant_identity(z: int, shift: int) -> list[list[int]]:
+    """@brief 生成 Zc x Zc 的循环移位单位矩阵，用于玩具展开示例中展示子矩阵的结构。
+    @param z 提升大小 Zc（子矩阵边长）
+    @param shift 循环右移位数；shift=0 表示不移位的单位矩阵
+    @return 整数二维列表，元素 1 表示非零项、0 表示零项
+    @note 每行唯一非零项的列索引为 (行号 + shift) mod Zc。
+    """
     return [[1 if j == (i + shift) % z else 0 for j in range(z)] for i in range(z)]
 
 
 def render_toy_expansion() -> None:
+    """@brief 渲染 QC-LDPC 玩具基矩阵展开示例图，用 Zc=4 的 2x3 基矩阵展示 -1 为零矩阵、p 为循环移位。
+    @return None
+    @note 生成 T8.3_NR_LDPC_toy_QC_expansion.png。
+    左侧显示基矩阵 B 的 2x3 结构（-1 为零矩阵，非负数为移位值），
+    右侧显示展开后的 8x12 完整奇偶校验矩阵 H，
+    每个 4x4 子块按移位值循环填充 1 的位置。
+    右侧面板列出读图要点，强调 -1 不是 shift=-1、0 是有效移位值等概念。
+    @see render_bg_regions_qc_receiver BG 五区与接收端关系图
+    """
     z = 4
     base = [[0, -1, 2], [1, 0, -1]]
     block = 34
@@ -197,6 +248,14 @@ def render_toy_expansion() -> None:
 
 
 def draw_arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], color: str) -> None:
+    """@brief 绘制带箭头的线段，用于连接流程框和表示数据流向。
+    @param draw PIL ImageDraw 绘制上下文
+    @param start 箭头起点坐标 (x, y)
+    @param end 箭头终点坐标 (x, y)，箭头三角指向此点
+    @param color 线条和箭头填充颜色
+    @return None
+    @note 箭头为实心三角形，箭杆线宽 4px，箭头长度 18px、宽度 10px。
+    """
     sx, sy = start
     ex, ey = end
     length = math.hypot(ex - sx, ey - sy)
@@ -223,12 +282,31 @@ def label_box(
     fill: str,
     accent: str,
 ) -> None:
+    """@brief 绘制带标题和正文的圆角标注框，用于步骤说明和知识点卡片。
+    @param draw PIL ImageDraw 绘制上下文
+    @param box 矩形区域 (x0, y0, x1, y1)
+    @param title 框顶部粗体标题
+    @param body 正文文字，自动换行
+    @param fill 框内填充色
+    @param accent 边线颜色（3px 边框）
+    @return None
+    @note 标题用 25px 粗体，正文用 24px 常规字体；换行宽度为 box 宽度减 36px。
+    """
     draw.rounded_rectangle(box, radius=10, fill=fill, outline=accent, width=3)
     draw.text((box[0] + 18, box[1] + 14), title, font=font(25, True), fill=PALETTE["ink"])
     draw_wrapped(draw, (box[0] + 18, box[1] + 54), body, font(24), PALETTE["muted"], box[2] - box[0] - 36)
 
 
 def render_bg_regions_qc_receiver() -> None:
+    """@brief 渲染 BG 五区结构、QC lifting 与接收端用途的三联教学图，用于理解 NR LDPC 基矩阵的 A/B/C/D/E 分区和接收端 descriptor 链路。
+    @return None
+    @note 生成 T8.3_NR_LDPC_BG_regions_QC_receiver.png。
+    左侧面板展示 BG 五区（A/B/C/D/E）的组织关系：
+    systematic columns（信息列）、core parity（核心校验列）、extension parity（扩展校验列）；
+    中间面板展示 QC lifting 原理：BG edge -> shift value -> P_ij = V_ij mod Zc -> 循环移位子矩阵；
+    右侧面板展示接收端 descriptor 链路：Descriptor -> Shift ROM -> Rate recovery -> Layered core -> HARQ view。
+    @see render_toy_expansion 玩具 QC 展开示例
+    """
     width, height = 2200, 1080
     img = Image.new("RGB", (width, height), PALETTE["bg"])
     draw = ImageDraw.Draw(img)
@@ -352,6 +430,12 @@ def render_bg_regions_qc_receiver() -> None:
 
 
 def main() -> None:
+    """@brief 脚本入口：依次生成 BG 五区/QC/接收端总览图和玩具 QC 展开图。
+    @note 本脚本不渲染 BG1/BG2 shift 表格——表格由 render_nr_ldpc_bg_tables_from_pdf.py 通过 PDF 裁剪生成。
+    生成产物：
+    - docs/L2/assets/T8.3_NR_LDPC_BG_regions_QC_receiver.png
+    - docs/L2/assets/T8.3_NR_LDPC_toy_QC_expansion.png
+    """
     print(
         "SKIP BG1/BG2 shift tables: use "
         "tools/figures/render_nr_ldpc_bg_tables_from_pdf.py to crop the "

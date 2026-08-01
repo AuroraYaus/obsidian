@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Render T15.1 decoder SystemVerilog testbench architecture figure."""
+""" @file render_t15_1_decoder_testbench_architecture.py
+@brief 渲染T15.1译码器SystemVerilog测试平台架构图 —— golden vectors驱动RTL、scoreboard比对、断言/失败束/复位/超时全覆盖
+@date 2025 """
 
 from __future__ import annotations
 
@@ -38,11 +40,24 @@ WHITE = "#ffffff"
 
 
 def text_size(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont) -> tuple[int, int]:
+    """ @brief 计算文本渲染后的像素尺寸，用于卡片/表格布局中的宽度高度约束判断
+    @param draw PIL ImageDraw 绘图上下文
+    @param text 待测量的文本字符串
+    @param fnt PIL ImageFont 字体对象
+    @return (width, height) 文本边界框的宽高像素值
+    @note 使用 textbbox 替代已废弃的 textsize 方法，确保跨平台一致性 """
     box = draw.textbbox((0, 0), text, font=fnt)
     return box[2] - box[0], box[3] - box[1]
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: int) -> list[str]:
+    """ @brief 按最大像素宽度自动换行，将单行长文本拆分为多行，避免溢出卡片边界
+    @param draw PIL ImageDraw 绘图上下文
+    @param text 待换行的原始文本字符串
+    @param fnt PIL ImageFont 字体对象
+    @param width 每行允许的最大像素宽度
+    @return 换行后的字符串列表，每项为一行
+    @note 按空格切分单词，逐词累加宽度判断是否换行；非Western文本需预分片 """
     words = text.split()
     lines: list[str] = []
     cur = ""
@@ -67,6 +82,15 @@ def centered(
     fill: str = INK,
     gap: int = 7,
 ) -> None:
+    """ @brief 在指定矩形区域内居中绘制多行文本，自动计算垂直起始位置
+    @param draw PIL ImageDraw 绘图上下文
+    @param rect (x0, y0, x1, y1) 目标矩形区域
+    @param lines 待绘制的文本行列表
+    @param fnt PIL ImageFont 字体对象
+    @param fill 文本颜色，默认 INK
+    @param gap 行间距像素值，默认 7
+    @return None
+    @note 使用 anchor="mm" 实现真正的水平和垂直居中；适用于卡片正文和表格单元格 """
     x0, y0, x1, y1 = rect
     heights = [text_size(draw, line, fnt)[1] for line in lines]
     total = sum(heights) + gap * max(0, len(lines) - 1)
@@ -78,6 +102,14 @@ def centered(
 
 
 def card(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], title: str, body: str, fill: str) -> None:
+    """ @brief 绘制一个带圆角边框、标题和正文的语义卡片组件
+    @param draw PIL ImageDraw 绘图上下文
+    @param rect (x0, y0, x1, y1) 卡片矩形区域
+    @param title 卡片标题文本（位于卡片顶部居中）
+    @param body 卡片正文文本（自动换行后居中绘制）
+    @param fill 卡片背景填充颜色
+    @return None
+    @note 标题使用 HEAD 字体，正文使用 TEXT 字体；是架构图中所有功能块的基本绘制单元 """
     x0, y0, x1, y1 = rect
     draw.rounded_rectangle(rect, radius=8, fill=fill, outline="#37474f", width=2)
     draw.text(((x0 + x1) / 2, y0 + 36), title, font=HEAD, fill=INK, anchor="mm")
@@ -85,6 +117,13 @@ def card(draw: ImageDraw.ImageDraw, rect: tuple[int, int, int, int], title: str,
 
 
 def boundary_point(rect: tuple[int, int, int, int], side: str, offset: int = 0) -> tuple[float, float]:
+    """ @brief 计算矩形某条边上的点坐标，用于箭头起止点的精确定位
+    @param rect (x0, y0, x1, y1) 矩形区域
+    @param side 边的方向："left"/"right"/"top"/"bottom"
+    @param offset 沿该边的偏移量（像素），正值向下/右偏移
+    @return (x, y) 边界点坐标
+    @throws ValueError 当 side 参数不是合法方向时抛出
+    @note 返回中点位置加偏移，用于多箭头避免重叠 """
     x0, y0, x1, y1 = rect
     if side == "left":
         return x0, (y0 + y1) / 2 + offset
@@ -98,6 +137,14 @@ def boundary_point(rect: tuple[int, int, int, int], side: str, offset: int = 0) 
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[float, float], end: tuple[float, float], color: str = LINE, width: int = 4) -> None:
+    """ @brief 绘制带箭头尖端的直线段，用于表示数据流/控制流方向
+    @param draw PIL ImageDraw 绘图上下文
+    @param start (x, y) 线段起点坐标
+    @param end (x, y) 线段终点坐标（箭头尖端位置）
+    @param color 线条和箭头填充颜色，默认 LINE
+    @param width 线条宽度像素值，默认 4
+    @return None
+    @note 箭头头部尺寸固定 (18x9)，线段在箭头前截断以避免穿透；零长度线段静默返回 """
     sx, sy = start
     ex, ey = end
     vx, vy = ex - sx, ey - sy
@@ -125,6 +172,13 @@ def segment_intersects_rect(
     rect: tuple[int, int, int, int],
     margin: int = 0,
 ) -> bool:
+    """ @brief 判断线段是否与矩形区域相交，用于交叉检查中的布局验证
+    @param p0 线段起点 (x, y)
+    @param p1 线段终点 (x, y)
+    @param rect (x0, y0, x1, y1) 矩形区域
+    @param margin 矩形外扩边距像素值，默认 0
+    @return True 如果线段与扩展后的矩形相交，否则 False
+    @note 实现标准的 AABB 线段相交测试：先快速排除不相交情况，再逐边检测 """
     x0, y0, x1, y1 = rect
     x0 -= margin
     y0 -= margin
@@ -160,6 +214,13 @@ def assert_no_unrelated_crossing(
     points: list[tuple[float, float]],
     forbidden: dict[str, tuple[int, int, int, int]],
 ) -> None:
+    """ @brief 断言折线段不穿过任何禁止矩形区域，用于布线后的布局完整性自检
+    @param name 当前折线的标识名称，用于断言失败时的错误消息
+    @param points 折线的顶点列表 [(x, y), ...]
+    @param forbidden 禁止穿过的矩形字典 {名称: (x0, y0, x1, y1)}
+    @return None
+    @throws AssertionError 当折线任一子段穿过了禁止矩形时抛出
+    @note 这是防御性质量检查 —— 图中不应有一条数据流线穿过无关的功能卡片 """
     for p0, p1 in zip(points, points[1:]):
         for rect_name, rect in forbidden.items():
             if segment_intersects_rect(p0, p1, rect, margin=3):
@@ -167,6 +228,13 @@ def assert_no_unrelated_crossing(
 
 
 def polyline_arrow(draw: ImageDraw.ImageDraw, points: list[tuple[float, float]], color: str = LINE, width: int = 4) -> None:
+    """ @brief 绘制带箭头尖端的折线（多段直线段），用于需要绕行避开其他卡片的连线
+    @param draw PIL ImageDraw 绘图上下文
+    @param points 折线顶点列表 [(x, y), ...]，最后一个点作为箭头尖端位置
+    @param color 线条和箭头填充颜色，默认 LINE
+    @param width 线条宽度像素值，默认 4
+    @return None
+    @note 与 arrow() 的区别：支持多段转折；仅最后一段末端绘制箭头；适用于布线路由场景 """
     if len(points) < 2:
         return
     head_len, head_w = 18, 9
@@ -200,6 +268,16 @@ def table(
     widths: list[int],
     row_h: int,
 ) -> None:
+    """ @brief 绘制带圆角外框、表头和交替行颜色的数据表格
+    @param draw PIL ImageDraw 绘图上下文
+    @param x0 表格左上角 x 坐标
+    @param y0 表格左上角 y 坐标
+    @param headers 表头文本列表，从左到右
+    @param rows 表格数据行列表，每行为一个字符串列表
+    @param widths 各列宽度像素值列表，从左到右
+    @param row_h 每行的像素高度（含表头行）
+    @return None
+    @note 表头使用 BLUE 背景色，数据行交替白色/#fafafa 以提高可读性；所有单元格使用 centered() 居中 """
     total_w = sum(widths)
     total_h = row_h * (len(rows) + 1)
     draw.rounded_rectangle((x0, y0, x0 + total_w, y0 + total_h), radius=8, fill=WHITE, outline="#607d8b", width=2)
@@ -219,6 +297,11 @@ def table(
 
 
 def main() -> None:
+    """ @brief 渲染T15.1测试平台架构图的主入口
+    @note 生成的图片展示 SystemVerilog 测试平台的完整结构：Reference Vectors → Vector Loader → SV Driver → Decoder DUT → SV Monitor → Scoreboard / Assertions / Failure Bundle。
+    下半部分包括 Reset/Timeout/Backpressure/Replay 五种测试序列卡片，以及 Testbench Role 和 Decoder Family 两张对照表。
+    输出至 docs/L3/assets/T15.1_decoder_testbench_architecture.png
+    @see render_t15_2_protocol_vector_corner_case_suite.py """
     width, height = 2800, 2380
     img = Image.new("RGB", (width, height), "#f8fbfa")
     draw = ImageDraw.Draw(img)

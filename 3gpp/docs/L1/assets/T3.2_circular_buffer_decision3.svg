@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560">
+<style>
+  text { font-family: "DejaVu Sans", "Noto Sans", sans-serif; }
+  .legend-title { font-size: 13px; font-weight: bold; fill: #263238; }
+  .legend-item { font-size: 11px; fill: #37474F; }
+</style>
+<defs>
+<marker id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#90A4AE"/></marker>
+</defs>
+<text x="480.0" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">决策三：循环缓冲区 — 同一环形结构，两种速率匹配策略</text>
+<text x="480.0" y="54" text-anchor="middle" font-size="12" fill="#546E7A">circular buffer w (长度 K<tspan font-size="9" dy="2">w</tspan><tspan dy="-2">=3K</tspan><tspan font-size="9" dy="2">Π</tspan><tspan dy="-2">) ，灰色箭头指示环形读取方向，红线表示从 RV 起点读取 E 个比特的轨迹</tspan></text>
+<path d="M 260.00 105.00 A 175.00 175.00 0 0 1 411.55 367.50 L 324.95 317.50 A 75.00 75.00 0 0 0 260.00 205.00 Z" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
+<text x="368.3" y="217.5" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#1565C0">系统流 v⁽⁰⁾</text>
+<path d="M 411.55 367.50 A 175.00 175.00 0 0 1 108.45 367.50 L 195.05 317.50 A 75.00 75.00 0 0 0 324.95 317.50 Z" fill="#FFE0B2" stroke="#E65100" stroke-width="2"/>
+<text x="260.0" y="405.0" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#E65100">校验流 v⁽¹⁾</text>
+<path d="M 108.45 367.50 A 175.00 175.00 0 0 1 260.00 105.00 L 260.00 205.00 A 75.00 75.00 0 0 0 195.05 317.50 Z" fill="#C8E6C9" stroke="#2E7D32" stroke-width="2"/>
+<text x="151.7" y="217.5" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#2E7D32">校验流 v⁽²⁾</text>
+<text x="260.0" y="274.0" text-anchor="middle" font-size="13" font-style="italic" fill="#37474F">K<tspan font-size="9" dy="2">w</tspan><tspan dy="-2">=3K</tspan><tspan font-size="9" dy="2">Π</tspan></text>
+<line x1="358.5" y1="109.4" x2="399.3" y2="140.7" stroke="#90A4AE" stroke-width="1.2" marker-end="url(#arrowGray)"/>
+<line x1="358.5" y1="450.6" x2="311.0" y2="470.3" stroke="#90A4AE" stroke-width="1.2" marker-end="url(#arrowGray)"/>
+<line x1="63.0" y1="280.0" x2="69.7" y2="229.0" stroke="#90A4AE" stroke-width="1.2" marker-end="url(#arrowGray)"/>
+<circle cx="260.0" cy="100.0" r="6" fill="#EF5350" stroke="#B71C1C" stroke-width="1.5"/>
+<text x="260.0" y="77.0" text-anchor="middle" dominant-baseline="central" font-size="10" fill="#B71C1C" font-weight="bold">RV 0</text>
+<circle cx="415.9" cy="370.0" r="6" fill="#EF5350" stroke="#B71C1C" stroke-width="1.5"/>
+<text x="435.8" y="381.5" text-anchor="middle" dominant-baseline="central" font-size="10" fill="#B71C1C" font-weight="bold">RV 1</text>
+<path d="M 306.33 107.10 A 179.00 179.00 0 0 1 213.67 452.90
+M 211.60 460.63 A 187.00 187.00 0 0 1 196.04 455.72" fill="none" stroke="#EF5350" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="208.2,451.6 189.1,450.7 193.0,440.1" fill="#EF5350"/>
+<text x="449.8" y="339.8" text-anchor="middle" font-size="13" font-weight="bold" fill="#B71C1C" font-style="italic">E</text>
+<text x="260.0" y="515.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">打孔 (Puncturing)</text>
+<text x="260.0" y="533.0" text-anchor="middle" font-size="11" fill="#546E7A">E &lt; K_w  → 部分比特未发送（未被红线覆盖的环段即被打孔）</text>
+<path d="M 700.00 105.00 A 175.00 175.00 0 0 1 851.55 367.50 L 764.95 317.50 A 75.00 75.00 0 0 0 700.00 205.00 Z" fill="#BBDEFB" stroke="#1565C0" stroke-width="2"/>
+<text x="808.3" y="217.5" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#1565C0">系统流 v⁽⁰⁾</text>
+<path d="M 851.55 367.50 A 175.00 175.00 0 0 1 548.45 367.50 L 635.05 317.50 A 75.00 75.00 0 0 0 764.95 317.50 Z" fill="#FFE0B2" stroke="#E65100" stroke-width="2"/>
+<text x="700.0" y="405.0" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#E65100">校验流 v⁽¹⁾</text>
+<path d="M 548.45 367.50 A 175.00 175.00 0 0 1 700.00 105.00 L 700.00 205.00 A 75.00 75.00 0 0 0 635.05 317.50 Z" fill="#C8E6C9" stroke="#2E7D32" stroke-width="2"/>
+<text x="591.7" y="217.5" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#2E7D32">校验流 v⁽²⁾</text>
+<text x="700.0" y="274.0" text-anchor="middle" font-size="13" font-style="italic" fill="#37474F">K<tspan font-size="9" dy="2">w</tspan><tspan dy="-2">=3K</tspan><tspan font-size="9" dy="2">Π</tspan></text>
+<line x1="798.5" y1="109.4" x2="839.3" y2="140.7" stroke="#90A4AE" stroke-width="1.2" marker-end="url(#arrowGray)"/>
+<line x1="798.5" y1="450.6" x2="751.0" y2="470.3" stroke="#90A4AE" stroke-width="1.2" marker-end="url(#arrowGray)"/>
+<line x1="503.0" y1="280.0" x2="509.7" y2="229.0" stroke="#90A4AE" stroke-width="1.2" marker-end="url(#arrowGray)"/>
+<circle cx="700.0" cy="100.0" r="6" fill="#EF5350" stroke="#B71C1C" stroke-width="1.5"/>
+<text x="700.0" y="77.0" text-anchor="middle" dominant-baseline="central" font-size="10" fill="#B71C1C" font-weight="bold">RV 0</text>
+<circle cx="855.9" cy="370.0" r="6" fill="#EF5350" stroke="#B71C1C" stroke-width="1.5"/>
+<text x="875.8" y="381.5" text-anchor="middle" dominant-baseline="central" font-size="10" fill="#B71C1C" font-weight="bold">RV 1</text>
+<path d="M 746.33 107.10 A 179.00 179.00 0 0 1 653.67 452.90
+M 651.60 460.63 A 187.00 187.00 0 0 1 748.40 99.37
+M 750.47 91.64 A 195.00 195.00 0 0 1 825.34 130.62" fill="none" stroke="#EF5350" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="807.4,136.5 825.0,143.9 817.8,152.5" fill="#EF5350"/>
+<text x="608.1" y="456.5" text-anchor="middle" font-size="13" font-weight="bold" fill="#B71C1C" font-style="italic">E</text>
+<text x="700.0" y="515.0" text-anchor="middle" font-size="14" font-weight="bold" fill="#263238">重复 (Repetition)</text>
+<text x="700.0" y="533.0" text-anchor="middle" font-size="11" fill="#546E7A">E &gt; K_w  → 读取超过一圈后绕回开头，部分比特被重复发送</text>
+<rect x="110" y="488" width="18" height="13" rx="2" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
+<text x="134" y="495" class="legend-item" dominant-baseline="central">系统流 v⁽⁰⁾  (systematic)</text>
+<rect x="300" y="488" width="18" height="13" rx="2" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
+<text x="324" y="495" class="legend-item" dominant-baseline="central">校验流 v⁽¹⁾  (parity 1)</text>
+<rect x="490" y="488" width="18" height="13" rx="2" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
+<text x="514" y="495" class="legend-item" dominant-baseline="central">校验流 v⁽²⁾  (parity 2)</text>
+<circle cx="700" cy="494.5" r="5" fill="#EF5350" stroke="#B71C1C" stroke-width="1.2"/>
+<text x="712" y="495" class="legend-item" dominant-baseline="central">RV 起始位置 (k₀)</text>
+</svg>

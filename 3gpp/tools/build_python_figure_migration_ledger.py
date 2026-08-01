@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Build the Python figure body-equivalent migration ledger."""
+"""
+@file build_python_figure_migration_ledger.py
+@brief 构建 Python 图片到正文等价内容迁移总账，统一追踪每张 PNG 图片是否已有 Mermaid 等价图、
+       Markdown 等价表或正文等价说明，防止讲义中只存像素信息而无结构化文本可检索。
+@date 2026-07-22
+"""
 
 from __future__ import annotations
 
@@ -22,6 +27,13 @@ EVIDENCE_STATUS_TOKENS = ("evidence_only", "compatibility_retained", "not_curren
 
 
 def equivalent_type(image: str, lesson_text: str) -> str:
+    """
+    @brief 根据图片文件名和讲义正文内容推断该图片应使用哪种等价表示形式，
+           避免因信息丢失而无从判断是画流程图还是列表格。
+    @param image 图片文件名，通过命名关键字判断类型倾向。
+    @param lesson_text 图片所在讲义的全文，用于正文关键词二次兜底判断。
+    @return 等价类型标签，三选一：Mermaid 等价图、Markdown 等价表、图片内容正文等价。
+    """
     lower = image.lower()
     if any(token in lower for token in ["table", "sequence", "compare", "comparison", "requirements", "report"]):
         return "Markdown 等价表"
@@ -33,6 +45,13 @@ def equivalent_type(image: str, lesson_text: str) -> str:
 
 
 def existing_evidence_rows() -> list[tuple[str, str, str, str, str, str]]:
+    """
+    @brief 从已有总账文件中读取标记为"证据保留"（evidence_only/compatibility_retained 等）的行，
+           避免增量构建时丢弃已审核通过的既有记录。
+    @return 六元组列表：(Lesson, Image, Scripts, EquivalentType, Status, BodyLocation)，
+           均来自总账 Markdown 表格的单元格文本。
+    @note 仅解析以 | ` 开头的表格行，非表格行和格式不完整的行被静默跳过。
+    """
     if not OUT.exists():
         return []
     rows: list[tuple[str, str, str, str, str, str]] = []
@@ -49,6 +68,13 @@ def existing_evidence_rows() -> list[tuple[str, str, str, str, str, str]]:
 
 
 def main() -> int:
+    """
+    @brief 扫描所有讲义中的 PNG 图片引用，结合附近 40 行内是否存在等价标记，
+           生成一张完整的图片到正文内容迁移总账表格。
+    @return 0 表示生成成功（或干运行完毕）；非 0 表示内部逻辑异常（当前实现始终返回 0）。
+    @note 扫描 docs/L1、docs/L2、docs/L3 下所有 .md 文件；
+          既存证据行通过 existing_evidence_rows() 保留合并，防止重复审核。
+    """
     import argparse
 
     parser = argparse.ArgumentParser(
@@ -115,5 +141,10 @@ def main() -> int:
     return 0
 
 
+# @brief 构建 Python 图片到正文等价内容迁移总账。
+# @usage python tools/build_python_figure_migration_ledger.py [--dry-run] [--output PATH]
+# @args --dry-run  仅打印摘要，不写入输出文件。
+# @args --output   指定输出文件路径，默认 docs/audits/python_figure_to_body_content_migration.md。
+# @exit_code 0 正常完成；非 0 表示内部异常。
 if __name__ == "__main__":
     raise SystemExit(main())

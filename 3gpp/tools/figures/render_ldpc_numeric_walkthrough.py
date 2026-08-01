@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render toy LDPC Min-Sum numeric walkthrough figure."""
+""" @file render_ldpc_numeric_walkthrough.py
+    @brief 渲染 LDPC Min-Sum 数值走读教学图（两张：H/CN 消息 + Posterior/早停/调试字段）。
+    @date 2025
+    @note 教学 H=[[1,1,0,1,0,0],[0,1,1,0,1,0],[1,0,1,0,0,1]]，初始 LLR 和 CN 消息均为手算可复现。
+    @see render_ldpc_min_sum_variants.py 对应的 MS/NMS/OMS 算法对比图
+"""
 
 from __future__ import annotations
 
@@ -33,6 +38,14 @@ PALETTE = {
 
 
 def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt, fill: str) -> None:
+    """ @brief 在矩形内居中绘制单行文本。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 绘制区域。
+        @param text 待绘制的单行字符串。
+        @param fnt PIL 字体对象。
+        @param fill 文字颜色。
+        @return 无返回值。
+    """
     bbox = draw.textbbox((0, 0), text, font=fnt)
     x = box[0] + ((box[2] - box[0]) - (bbox[2] - bbox[0])) / 2
     y = box[1] + ((box[3] - box[1]) - (bbox[3] - bbox[1])) / 2 - 1
@@ -40,6 +53,16 @@ def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text:
 
 
 def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt, fill: str, width: int, gap: int = 6) -> int:
+    """ @brief 在指定坐标处绘制自动换行的左对齐多行文本。
+        @param draw PIL ImageDraw 实例。
+        @param xy 起始坐标 (x, y)。
+        @param text 待绘制的长文本。
+        @param fnt 字体对象。
+        @param fill 文字颜色。
+        @param width 每行最大像素宽度。
+        @param gap 行间距，默认 6。
+        @return 最后一行的底部 Y 坐标。
+    """
     x, y = xy
     for line in fit_wrap_text(draw, text, fnt, width):
         draw.text((x, y), line, font=fnt, fill=fill)
@@ -48,6 +71,16 @@ def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt,
 
 
 def table(draw: ImageDraw.ImageDraw, x: int, y: int, headers: list[str], rows: list[list[str]], widths: list[int], row_h: int = 56) -> int:
+    """ @brief 绘制带表头的简单表格。
+        @param draw PIL ImageDraw 实例。
+        @param x 表格左上角 X。
+        @param y 表格左上角 Y。
+        @param headers 表头列名列表。
+        @param rows 数据行。
+        @param widths 每列像素宽度列表。
+        @param row_h 行高，默认 56。
+        @return 表格底部 Y 坐标。
+    """
     xx = x
     for header, width in zip(headers, widths):
         draw.rectangle((xx, y, xx + width, y + row_h), fill="#EAF3FF", outline=PALETTE["line"], width=2)
@@ -65,6 +98,11 @@ def table(draw: ImageDraw.ImageDraw, x: int, y: int, headers: list[str], rows: l
 
 
 def draw_matrix_and_initial(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制 Toy H 矩阵格子 + 初始 channel LLR 和硬判决表。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note H 为 3x6 矩阵，初始 syndrome=[0,1,1]，c1 和 c2 校验失败。
+    """
     draw.text((80, 165), "Toy H 与初始判决", font=font(34, True), fill=PALETTE["blue"])
     H = [[1, 1, 0, 1, 0, 0], [0, 1, 1, 0, 1, 0], [1, 0, 1, 0, 0, 1]]
     x0, y0, cell = 85, 235, 52
@@ -82,6 +120,10 @@ def draw_matrix_and_initial(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_messages(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制一轮 Min-Sum CN 消息表：9 条边消息及其符号/幅度推导说明。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+    """
     draw.text((900, 165), "一轮 Min-Sum CN 消息", font=font(34, True), fill=PALETTE["green"])
     rows = [
         ["r0->v0", "+0.6"], ["r0->v1", "-0.6"], ["r0->v3", "-0.8"],
@@ -100,6 +142,11 @@ def draw_messages(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_posterior(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制 Posterior LLR 合成、硬判决与早停条件说明。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note 更新后 hard=[0,1,1,1,0,1]，syndrome=[0,0,0]，满足 LDPC 早停条件。
+    """
     draw.text((900, 800), "Posterior、硬判决与早停", font=font(34, True), fill=PALETTE["purple"])
     rows = [
         ["v0", "+0.9+0.6-0.4", "+1.1", "0"],
@@ -114,6 +161,11 @@ def draw_posterior(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_bottom(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制底部调试字段与真实 NR 对应关系表。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note 四行：iteration、edge messages、posterior LLR、syndrome weight 的 toy vs NR 对照。
+    """
     panel = (80, 1415, 1920, 1900)
     draw.rounded_rectangle(panel, radius=16, fill="#FFFDF6", outline="#E2CD7A", width=2)
     draw.text((120, 1455), "调试字段与真实 NR 对应关系", font=font(34, True), fill=PALETTE["ink"])
@@ -127,6 +179,10 @@ def draw_bottom(draw: ImageDraw.ImageDraw) -> None:
 
 
 def render_overview() -> Image.Image:
+    """ @brief 渲染第一部分：Toy H 矩阵 + channel LLR 初始状态 + 一轮 CN 消息。
+        @return 2000x840 的 PIL Image 对象。
+        @note 输出为 PART1_PATH，侧重信道输入和 CN 处理阶段。
+    """
     img = Image.new("RGB", (2000, 840), PALETTE["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((80, 48), "Toy LDPC Min-Sum 数值走读", font=font(46, True), fill=PALETTE["ink"])
@@ -144,6 +200,10 @@ def render_overview() -> Image.Image:
 
 
 def render_posterior_debug() -> Image.Image:
+    """ @brief 渲染第二部分：VN posterior 合成、hard decision、syndrome 早停和调试字段表。
+        @return 2000x1320 的 PIL Image 对象。
+        @note 输出为 PART2_PATH，承接第一部分的消息展示最终判决和验证字段。
+    """
     img = Image.new("RGB", (2000, 1320), PALETTE["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((80, 48), "Posterior、早停与调试字段", font=font(46, True), fill=PALETTE["ink"])
@@ -190,6 +250,10 @@ def render_posterior_debug() -> Image.Image:
 
 
 def main() -> None:
+    """ @brief 脚本入口：生成 T8.8 LDPC 数值走读两张独立图 + 一张历史拼接图。
+        @return 无返回值。
+        @note 产出一张 PART1（2000x840）、一张 PART2（2000x1320）和一张组合全景图 OUT_PATH。
+    """
     overview = render_overview()
     posterior = render_posterior_debug()
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)

@@ -46,7 +46,27 @@ source_spec: "Local project instructions"
 - `tools/` — 审计/抽取/渲染工具链
 - `3GPP_Rel19/` — 协议原始资料和结构化抽取
 
-### 3. 合规基线
+### 3. 强制 DOXYGEN 风格注释（知识库红线）
+
+**本项目是教学知识库，代码可读性优先于功能正确性。** 所有 Python 脚本、Shell 脚本、配置文件中的函数/类/任务入口必须使用完整的 DOXYGEN 风格注释：
+- 文件头：`@file` + `@brief` + `@date`
+- 函数：`@brief` + `@param` + `@return` + `@note` + `@throws`（按需）
+- 脚本入口：`@brief` + `@usage` + `@args` + `@env` + `@exit_code`
+
+代码审查时注释质量与功能正确性同等权重。详见 `.claude/rules/documentation.md`（项目根级规则）。
+
+### 4. SVG 图生成后强制视觉验证
+
+**任何 SVG 图（含手写、Python 生成、Mermaid/PlantUML 渲染）生成后，必须先验证再嵌入文档，禁止直接提交。**
+
+验证步骤：
+1. **Y 坐标扫描**（必须）：提取所有 `<text>`、`<rect>`、`<line>` 的 y 坐标，逐层核对间距 ≥ 8 px
+2. **PNG 预览**（推荐）：`cairosvg` 或 ImageMagick `convert` 转 PNG，肉眼确认无交叠
+3. 确认通过后才能写入 `docs/L1/assets/` 并在正文引用
+
+**教训来源**：2026-07-23 生成的 circular buffer 交错图因未做坐标扫描，箭头说明文字、分隔标签、目标格子挤在 4 px 范围内，用户立即发现文字交叠。详见 `memory/svg-render-verify-before-commit.md`。
+
+### 5. 合规基线
 
 所有讲义和代码必须遵守 `合规与遵从.md` 中的 22 条 Hard Constraints。关键规则：
 - 标题口语化禁止（Rule 16）

@@ -10,7 +10,6 @@ tags:
   - glossary
 source_spec: "docs/L0/L0_terminology_glossary.md"
 ---
-
 # 译码讲义术语总表
 
 本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。
@@ -37,19 +36,15 @@ source_spec: "docs/L0/L0_terminology_glossary.md"
 
 | 术语 | 中文/常用名 | 说明 |
 |:---|:---|:---|
-| [[LLR_对数似然比]] | 对数似然比 | Log-Likelihood Ratio；译码器输入软信息，通常用符号表示倾向、幅度表示可靠度。 |
-| [[CRC_循环冗余校验]] | 循环冗余校验 | Cyclic Redundancy Check；用于错误检测，不负责纠错。 |
-| [[HARQ_混合自动重传请求]] | 混合自动重传请求 | Hybrid Automatic Repeat Request；通过重传和软合并提升可靠性。 |
-| [[TB_传输块]] | 传输块 | Transport Block；信道编码/译码链路最终交付的整体数据对象。 |
-| [[CB_码块]] | 码块 | Code Block；TB 分段后由译码核心逐块处理的工作单元。 |
-| [[CBG_码块组]] | 码块组 | Code Block Group；NR LDPC 中可作为部分重传粒度的一组 CB。 |
-| [[LDPC_低密度奇偶校验码]] | 低密度奇偶校验码 | Low-Density Parity-Check Code；NR 数据业务的主要信道编码家族。 |
-| [[Turbo_码]] | Turbo 码 | Turbo Code；LTE 数据业务的主要信道编码家族。 |
-| [[Polar_码]] | 极化码 | Polar Code；NR 控制信息译码的主要编码家族。 |
-| [[Segmentation_码块分段]] | 码块分段 | Code Block Segmentation；TB 拆分成 CB 的过程。 |
-| [[Rate_Matching_速率匹配]] | 速率匹配 | Rate Matching；编码比特选择与接收端 rate recovery 的总称。 |
-| [[Soft_Buffer_软缓存]] | 软缓存 | Soft Buffer；保存 LLR 而不是硬判决 bit 的缓存。 |
-| [[Early_Stopping_早停控制]] | 早停控制 | Early Stopping；利用 CRC/syndrome/path metric 提前结束迭代的实现策略。 |
+| LLR | 对数似然比 | Log-Likelihood Ratio；译码器输入软信息，通常用符号表示倾向、幅度表示可靠度。 |
+| CRC | 循环冗余校验 | Cyclic Redundancy Check；用于错误检测，不负责纠错。 |
+| HARQ | 混合自动重传请求 | Hybrid Automatic Repeat Request；通过重传和软合并提升可靠性。 |
+| TB | 传输块 | Transport Block；信道编码/译码链路最终交付的整体数据对象。 |
+| CB | 码块 | Code Block；TB 分段后由译码核心逐块处理的工作单元。 |
+| CBG | 码块组 | Code Block Group；NR LDPC 中可作为部分重传粒度的一组 CB。 |
+| LDPC | 低密度奇偶校验码 | Low-Density Parity-Check Code；NR 数据业务的主要信道编码家族。 |
+| Turbo | Turbo 码 | Turbo Code；LTE 数据业务的主要信道编码家族。 |
+| Polar | 极化码 | Polar Code；NR 控制信息译码的主要编码家族。 |
 | BCJR | BCJR 算法 | Bahl、Cocke、Jelinek、Raviv 提出的后验概率译码算法；名称来自作者姓氏。 |
 | MAP | 最大后验概率 | Maximum A Posteriori；基于观测后后验概率选择最可能路径或比特。 |
 | SCL | 连续消除列表译码 | Successive Cancellation List；Polar 译码中保留多条候选路径的算法。 |
@@ -69,7 +64,7 @@ source_spec: "docs/L0/L0_terminology_glossary.md"
 | BER | 比特错误率 | Bit Error Rate；按比特统计的错误比例。 |
 | FER | 帧错误率 | Frame Error Rate；按帧统计的错误比例。 |
 | SNR | 信噪比 | Signal-to-Noise Ratio；信号功率与噪声功率的比值。 |
-| [[RV_冗余版本]] | 冗余版本 | Redundancy Version；速率匹配循环缓存中的不同起点或区域选择。 |
+| RV | 冗余版本 | Redundancy Version；速率匹配循环缓存中的不同起点或区域选择。 |
 | PRB | 物理资源块 | Physical Resource Block；物理层资源分配的基本频域块。 |
 | RE | 资源元素 | Resource Element；一个 OFDM 符号和一个子载波位置上的资源单元。 |
 

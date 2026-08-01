@@ -24,8 +24,8 @@ source_spec: "3GPP_Rel19/processed/manifest.json"
 ## 协议抽取目录
 
 ### TS_36.201_36201-j00
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.201_36201-j00/TS_36.201_36201-j00_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.201_36201-j00/TS_36.201_36201-j00_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.201_36201-j00/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.201_36201-j00/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_36.211_36211-j30_cover
@@ -49,8 +49,8 @@ source_spec: "3GPP_Rel19/processed/manifest.json"
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_36.212_36212-j30
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.212_36212-j30/TS_36.212_36212-j30_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.212_36212-j30/TS_36.212_36212-j30_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.212_36212-j30/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.212_36212-j30/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_36.213_36213-j30_cover
@@ -89,106 +89,106 @@ source_spec: "3GPP_Rel19/processed/manifest.json"
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_36.214_36214-j00
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.214_36214-j00/TS_36.214_36214-j00_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.214_36214-j00/TS_36.214_36214-j00_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.214_36214-j00/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.214_36214-j00/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_36.300_36300-j10
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.300_36300-j10/TS_36.300_36300-j10_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.300_36300-j10/TS_36.300_36300-j10_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.300_36300-j10/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.300_36300-j10/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_36.302_36302-j00
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.302_36302-j00/TS_36.302_36302-j00_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.302_36302-j00/TS_36.302_36302-j00_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.302_36302-j00/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.302_36302-j00/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_36.306_36306-j20
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.306_36306-j20/TS_36.306_36306-j20_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.306_36306-j20/TS_36.306_36306-j20_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.306_36306-j20/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.306_36306-j20/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_36.321_36321-j20
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.321_36321-j20/TS_36.321_36321-j20_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.321_36321-j20/TS_36.321_36321-j20_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.321_36321-j20/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.321_36321-j20/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_36.322_36322-j00
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.322_36322-j00/TS_36.322_36322-j00_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.322_36322-j00/TS_36.322_36322-j00_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.322_36322-j00/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.322_36322-j00/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_36.323_36323-j00
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.323_36323-j00/TS_36.323_36323-j00_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.323_36323-j00/TS_36.323_36323-j00_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.323_36323-j00/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.323_36323-j00/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_36.331_36331-j21
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.331_36331-j21/TS_36.331_36331-j21_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.331_36331-j21/TS_36.331_36331-j21_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_36.331_36331-j21/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_36.331_36331-j21/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.201_38201-j00
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.201_38201-j00/TS_38.201_38201-j00_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.201_38201-j00/TS_38.201_38201-j00_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.201_38201-j00/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.201_38201-j00/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.202_38202-j00
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.202_38202-j00/TS_38.202_38202-j00_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.202_38202-j00/TS_38.202_38202-j00_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.202_38202-j00/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.202_38202-j00/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.211_38211-j30
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.211_38211-j30/TS_38.211_38211-j30_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.211_38211-j30/TS_38.211_38211-j30_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.211_38211-j30/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.211_38211-j30/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.212_38212-j30
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.212_38212-j30/TS_38.212_38212-j30_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.212_38212-j30/TS_38.212_38212-j30_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.212_38212-j30/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.212_38212-j30/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.213_38213-j30
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.213_38213-j30/TS_38.213_38213-j30_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.213_38213-j30/TS_38.213_38213-j30_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.213_38213-j30/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.213_38213-j30/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.214_38214-j30
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.214_38214-j30/TS_38.214_38214-j30_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.214_38214-j30/TS_38.214_38214-j30_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.214_38214-j30/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.214_38214-j30/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.215_38215-j20
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.215_38215-j20/TS_38.215_38215-j20_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.215_38215-j20/TS_38.215_38215-j20_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.215_38215-j20/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.215_38215-j20/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.300_38300-j20
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.300_38300-j20/TS_38.300_38300-j20_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.300_38300-j20/TS_38.300_38300-j20_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.300_38300-j20/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.300_38300-j20/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.306_38306-j20
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.306_38306-j20/TS_38.306_38306-j20_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.306_38306-j20/TS_38.306_38306-j20_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.306_38306-j20/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.306_38306-j20/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.321_38321-j20
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.321_38321-j20/TS_38.321_38321-j20_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.321_38321-j20/TS_38.321_38321-j20_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.321_38321-j20/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.321_38321-j20/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.322_38322-j20
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.322_38322-j20/TS_38.322_38322-j20_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.322_38322-j20/TS_38.322_38322-j20_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.322_38322-j20/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.322_38322-j20/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.323_38323-j10
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.323_38323-j10/TS_38.323_38323-j10_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.323_38323-j10/TS_38.323_38323-j10_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.323_38323-j10/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.323_38323-j10/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。
 
 ### TS_38.331_38331-j20
-- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.331_38331-j20/TS_38.331_38331-j20_index.md`
-- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.331_38331-j20/TS_38.331_38331-j20_content.md`
+- 索引锚点：`3gpp/3GPP_Rel19/processed/TS_38.331_38331-j20/README.md`
+- 正文锚点：`3gpp/3GPP_Rel19/processed/TS_38.331_38331-j20/content.md`
 - 用途：索引页汇总结构化资产，正文页提供协议文本快速阅读。

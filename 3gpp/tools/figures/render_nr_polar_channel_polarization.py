@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render a toy N=4 Polar transform and frozen/information mask diagram."""
+"""@file render_nr_polar_channel_polarization.py
+@brief 渲染 N=4 Polar 极化变换玩具示例图，展示蝶形结构、frozen/information mask 和接收端 mask 语义。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -34,12 +37,28 @@ COL = {
 
 
 def center(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt, fill: str) -> None:
+    """@brief 在矩形区域内居中绘制文本，使用 anchor="mm" 精确居中。
+    @param draw PIL ImageDraw 绘制上下文
+    @param box 目标矩形区域 (x0, y0, x1, y1)
+    @param text 要绘制的文本
+    @param fnt PIL 字体对象
+    @param fill 文本颜色
+    @return None
+    """
     cx = (box[0] + box[2]) / 2
     cy = (box[1] + box[3]) / 2
     draw.text((cx, cy), text, font=fnt, fill=fill, anchor="mm")
 
 
 def wrap_text(draw: ImageDraw.ImageDraw, text: str, fnt, width: int) -> list[str]:
+    """@brief 按单词边界和指定宽度对文本换行，返回分行列表。
+    @param draw PIL ImageDraw 绘制上下文
+    @param text 需要换行的文本
+    @param fnt PIL 字体对象
+    @param width 文字最大宽度（像素）
+    @return 换行后的字符串列表
+    @note 换行在单词边界处执行，不在单词内部断开。
+    """
     words = text.split()
     lines: list[str] = []
     current = ""
@@ -56,6 +75,16 @@ def wrap_text(draw: ImageDraw.ImageDraw, text: str, fnt, width: int) -> list[str
 
 
 def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt, fill: str, width: int, gap: int = 6) -> None:
+    """@brief 在指定宽度内自动换行绘制文本。
+    @param draw PIL ImageDraw 绘制上下文
+    @param xy 起始左上角坐标 (x, y)
+    @param text 需要换行的长文本
+    @param fnt PIL 字体对象
+    @param fill 文本颜色
+    @param width 文字最大宽度（像素）
+    @param gap 行间距（像素），默认 6
+    @return None
+    """
     x, y = xy
     for line in wrap_text(draw, text, fnt, width):
         draw.text((x, y), line, font=fnt, fill=fill)
@@ -63,6 +92,15 @@ def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt,
 
 
 def node(draw: ImageDraw.ImageDraw, x: int, y: int, label: str, fill: str) -> tuple[int, int, int, int]:
+    """@brief 在指定中心坐标绘制自适应大小的圆角节点框，用于 Polar 蝶形图中的输入/输出位节点。
+    @param draw PIL ImageDraw 绘制上下文
+    @param x 节点中心 x 坐标
+    @param y 节点中心 y 坐标
+    @param label 节点内显示的标签文字（如 "u0=0", "x0"）
+    @param fill 节点填充色，frozen 位用蓝色、information 位用绿色
+    @return 节点的外接矩形 (x0, y0, x1, y1)，用于后续连线计算
+    @note 框的宽度和高度根据文字尺寸自适应调整，椭圆形圆角。
+    """
     f = font(24, True)
     text_box = draw.textbbox((0, 0), label, font=f)
     text_w = text_box[2] - text_box[0]
@@ -78,6 +116,13 @@ def node(draw: ImageDraw.ImageDraw, x: int, y: int, label: str, fill: str) -> tu
 
 
 def xor(draw: ImageDraw.ImageDraw, x: int, y: int) -> tuple[int, int, int, int]:
+    """@brief 在指定坐标绘制 XOR（异或）运算符号，用于 Polar 蝶形图中的模二加节点。
+    @param draw PIL ImageDraw 绘制上下文
+    @param x 符号中心 x 坐标
+    @param y 符号中心 y 坐标
+    @return 符号的外接矩形 (x0, y0, x1, y1)，用于连线计算
+    @note 符号由圆形边框和内部的加号（十字线）组成，圆形半径 19px。
+    """
     r = 19
     draw.ellipse((x - r, y - r, x + r, y + r), fill="#FFFFFF", outline=COL["blue"], width=3)
     draw.line((x - r + 5, y, x + r - 5, y), fill=COL["blue"], width=2)
@@ -86,6 +131,14 @@ def xor(draw: ImageDraw.ImageDraw, x: int, y: int) -> tuple[int, int, int, int]:
 
 
 def arrow(draw: ImageDraw.ImageDraw, a: tuple[int, int], b: tuple[int, int], color: str = "#61758A") -> None:
+    """@brief 绘制带箭头线段，连接蝶形图中的 XOR 节点和输出节点。
+    @param draw PIL ImageDraw 绘制上下文
+    @param a 箭头起点坐标 (x, y)
+    @param b 箭头终点坐标 (x, y)
+    @param color 线条和箭头填充颜色，默认 "#61758A"
+    @return None
+    @note 箭杆线宽 3px，箭头长度 13px、宽度 7px。
+    """
     ax, ay = a
     bx, by = b
     length = math.hypot(bx - ax, by - ay)
@@ -105,14 +158,31 @@ def arrow(draw: ImageDraw.ImageDraw, a: tuple[int, int], b: tuple[int, int], col
 
 
 def right_mid(box: tuple[int, int, int, int]) -> tuple[int, int]:
+    """@brief 返回矩形右边框中点坐标，用于从节点右侧引出连线。
+    @param box 矩形区域 (x0, y0, x1, y1)
+    @return 右边框中点 (x1, (y0+y1)//2)
+    """
     return (box[2], (box[1] + box[3]) // 2)
 
 
 def left_mid(box: tuple[int, int, int, int]) -> tuple[int, int]:
+    """@brief 返回矩形左边框中点坐标，用于连接到节点左侧。
+    @param box 矩形区域 (x0, y0, x1, y1)
+    @return 左边框中点 (x0, (y0+y1)//2)
+    """
     return (box[0], (box[1] + box[3]) // 2)
 
 
 def tag(draw: ImageDraw.ImageDraw, x: int, y: int, text: str, fill: str) -> int:
+    """@brief 绘制彩色标签徽章（圆角矩形+白色文字），返回下一个标签的起始 x 坐标用于水平链式排列。
+    @param draw PIL ImageDraw 绘制上下文
+    @param x 标签左上角 x 坐标
+    @param y 标签左上角 y 坐标
+    @param text 标签文字（白色绘制）
+    @param fill 标签背景色
+    @return 下一个标签应放置的 x 坐标（当前标签右边界+10px）
+    @note 用于排列 frozen set、information set 等集合标签。
+    """
     f = font(24, True)
     b = draw.textbbox((0, 0), text, font=f)
     w = b[2] - b[0] + 28
@@ -123,6 +193,13 @@ def tag(draw: ImageDraw.ImageDraw, x: int, y: int, text: str, fill: str) -> int:
 
 
 def main() -> None:
+    """@brief 脚本入口：生成 N=4 Polar 极化变换与 frozen mask 教学图 T10.2_NR_Polar_N4_transform_frozen_mask.png。
+    @note 图中包含两部分：
+    - 上部：N=4 Polar 蝶形图，展示 u0-u3 输入经异或扩散到 x0-x3 输出的过程，蓝色=frozen 位，绿色=information 位。
+    - 下部：接收端 mask 语义面板，展示 frozen set F={0,1}、information set I={2,3} 的互补关系。
+    关键教学点：frozen 位是译码树上的已知约束，不是 punctured 也不是低可靠 LLR。
+    @see render_nr_polar_decoder_chain_overview.py Polar 译码链路总览
+    """
     img = Image.new("RGB", (1900, 1220), COL["bg"])
     draw = ImageDraw.Draw(img)
 

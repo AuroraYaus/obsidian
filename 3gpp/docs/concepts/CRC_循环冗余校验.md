@@ -43,7 +43,7 @@ CRC 像包裹封条。封条完整不能证明包裹绝对没问题，但封条�
 - LTE：TS 36.212 Rel-19 §5.1.2 Code block segmentation and code block CRC attachment。
 - NR：TS 38.212 Rel-19 `38212-j30` §5.1 CRC calculation。
 - NR：TS 38.212 Rel-19 §5.2 Code block segmentation and code block CRC attachment。
-- 本地锚点示例：`3GPP_Rel19/processed/TS_36.212_36212-j30/TS_36.212_36212-j30_content.md`；`3GPP_Rel19/processed/TS_38.212_38212-j30/TS_38.212_38212-j30_content.md`。
+- 本地锚点示例：`3GPP_Rel19/processed/TS_36.212_36212-j30/content.md`；`3GPP_Rel19/processed/TS_38.212_38212-j30/content.md`。
 
 ## 图谱关联
 

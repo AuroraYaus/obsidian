@@ -1,0 +1,16 @@
+%%{init: {'theme': 'default', 'fontSize': 14}}%%
+flowchart TD
+    subgraph single["单载波传输 · 宽带均衡器方案"]
+        S1["宽带信号<br/>占满整个带宽 B"] --> S2["频率选择性衰落信道<br/>不同频率增益不同"]
+        S2 --> S3["宽带均衡器<br/>需逆滤波补偿<br/>N 个抽头 · 复杂度 O(N)"]
+        S3 --> S4["噪声增强<br/>深衰落处放大噪声<br/>❌ 性能恶化"]
+    end
+
+    subgraph ofdm["OFDM 多载波 · 窄带子信道方案"]
+        O1["宽带信道切成 N 个<br/>窄带子信道<br/>各 Δf = B/N"] --> O2["每个子信道内<br/>为平坦衰落<br/>信道响应 = 常数 H_k"]
+        O2 --> O3["单抽头均衡<br/>每个子载波只需 ÷ H_k<br/>复杂度 O(N log N)"]
+        O3 --> O4["深衰落子载波<br/>单独降置信度<br/>✓ 无噪声增强"]
+    end
+
+    style S4 fill:#ffcdd2,stroke:#c62828
+    style O4 fill:#c8e6c9,stroke:#2e7d32

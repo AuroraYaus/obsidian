@@ -9,9 +9,9 @@ flowchart LR
         L_T0_1_LTE_NR_decoder_protocol_reading_map["T0.1 LTE/NR 译码协议阅读地图"]:::f_l1
         C_LLR_对数似然比["LLR 对数似然比"]:::c_math
         L_T1_5_LLR_soft_decision["软信息的符号、幅度与译码器输入语义"]:::f_l1
-        L_T2_1_AWGN_noise_scaling["$E_b/N_0$ 到译码器软信息"]:::f_l1
-        L_T2_2_BPSK_QPSK_soft_demapping["从星座点到逐比特软信息"]:::f_l1
-        L_T2_5_LLR_clipping_scaling_quantization["浮点 LLR 到定点译码器输入的表示转换"]:::f_l1
+        L_T2_7_AWGN_noise_scaling["$E_b/N_0$ 到译码器软信息"]:::f_l1
+        L_T2_8_BPSK_QPSK_soft_demapping["从星座点到逐比特软信息"]:::f_l1
+        L_T2_11_LLR_clipping_scaling_quantization["浮点 LLR 到定点译码器输入的表示转换"]:::f_l1
         L_T5_1_fixed_point_numbers_for_LLR["从浮点可靠度到硬件可保存的有符号数"]:::f_l1
         C_贝叶斯推断["贝叶斯推断"]:::c_math
         L_T1_4_probability_bayes_soft_decoding["噪声信道下的信念更新"]:::f_l1
@@ -27,24 +27,33 @@ flowchart LR
         L_T8_3_NR_LDPC_lifting_QC_matrix["T8.3 NR LDPC 提升大小与 QC-…"]:::f_l1
     end
     subgraph DOM_chan["信道与信号"]
+        C_OFDM_与资源栅格["OFDM/资源栅格"]:::c_chan
+        L_T2_1_OFDM_subcarrier_spacing_basics["子载波间隔、CP 与正交性"]:::f_l1
+        L_T2_2_NR_numerology_time_domain_hierarchy["NR 参数集与时域层级"]:::f_l1
+        L_T2_3_NR_frequency_resource_grid["NR 频域资源栅格"]:::f_l1
+        L_T2_5_LTE_frame_structure_time_frequency["LTE 帧结构与时频资源"]:::f_l1
+        C_MCS_调制阶数与码率["MCS 调制阶数与码率"]:::c_chan
+        L_T2_4_MCS_modulation_order_target_code_rate["调制阶数与目标码率"]:::f_l1
+        C_资源栅格到LLR["资源栅格→译码器输入"]:::c_chan
+        L_T2_6_from_resource_grid_to_decoder_LLR["从资源栅格到译码器 LLR"]:::f_l1
         C_AWGN_信道模型["AWGN 信道模型"]:::c_chan
-        L_T2_1_AWGN_noise_scaling["$E_b/N_0$ 到译码器软信息"]:::f_l1
-        L_T2_4_fading_channel_LLR_reliability["均衡输出幅度与可信度差异"]:::f_l1
+        L_T2_7_AWGN_noise_scaling["$E_b/N_0$ 到译码器软信息"]:::f_l1
+        L_T2_10_fading_channel_LLR_reliability["均衡输出幅度与可信度差异"]:::f_l1
         C_BPSK_QPSK_软解调["BPSK/QPSK 软解调"]:::c_chan
-        L_T2_2_BPSK_QPSK_soft_demapping["从星座点到逐比特软信息"]:::f_l1
+        L_T2_8_BPSK_QPSK_soft_demapping["从星座点到逐比特软信息"]:::f_l1
         L_T1_5_LLR_soft_decision["软信息的符号、幅度与译码器输入语义"]:::f_l1
         C_QAM_软解调["QAM 软解调"]:::c_chan
-        L_T2_3_QAM_Max_Log_MAP_demapping["16QAM 手算与高阶近似"]:::f_l1
-        L_T2_2_BPSK_QPSK_soft_demapping["从星座点到逐比特软信息"]:::f_l1
+        L_T2_9_QAM_Max_Log_MAP_demapping["16QAM 手算与高阶近似"]:::f_l1
+        L_T2_8_BPSK_QPSK_soft_demapping["从星座点到逐比特软信息"]:::f_l1
         C_Max_Log_MAP_近似["Max-Log-MAP 近似"]:::c_chan
-        L_T2_3_QAM_Max_Log_MAP_demapping["16QAM 手算与高阶近似"]:::f_l1
+        L_T2_9_QAM_Max_Log_MAP_demapping["16QAM 手算与高阶近似"]:::f_l1
         L_T6_6_Log_MAP_Max_Log_MAP_Turbo["T6.6 Log-MAP 与 Max-Log…"]:::f_l1
         C_Eb_N0_噪声缩放["Eb/N0 噪声缩放"]:::c_chan
-        L_T2_1_AWGN_noise_scaling["$E_b/N_0$ 到译码器软信息"]:::f_l1
+        L_T2_7_AWGN_noise_scaling["$E_b/N_0$ 到译码器软信息"]:::f_l1
         L_T4_5_decoder_performance_metrics["错误率、速度、能耗与面积取舍"]:::f_l1
         C_衰落信道与LLR可信度["衰落信道与LLR可信度"]:::c_chan
-        L_T2_4_fading_channel_LLR_reliability["均衡输出幅度与可信度差异"]:::f_l1
-        L_T2_5_LLR_clipping_scaling_quantization["浮点 LLR 到定点译码器输入的表示转换"]:::f_l1
+        L_T2_10_fading_channel_LLR_reliability["均衡输出幅度与可信度差异"]:::f_l1
+        L_T2_11_LLR_clipping_scaling_quantization["浮点 LLR 到定点译码器输入的表示转换"]:::f_l1
     end
     subgraph DOM_prot["协议结构"]
         C_CRC_错误检测["CRC 错误检测"]:::c_prot

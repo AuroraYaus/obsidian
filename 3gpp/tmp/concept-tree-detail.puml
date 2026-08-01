@@ -143,111 +143,144 @@ package "AWGN 信道模型" as N57 #42A5F5 {
 N56 --> N57
 rectangle "加性高斯白噪声: y = x + n" as N58 #BBDEFB
 N57 --> N58
-note "T2_1_AWGN_noise_scaling" as N59 #FAFAFA
+note "T2_7_AWGN_noise_scaling" as N59 #FAFAFA
 N58 .. N59
 rectangle "噪声方差 σ² = N₀/2" as N60 #BBDEFB
 N57 --> N60
-note "T2_1_AWGN_noise_scaling" as N61 #FAFAFA
+note "T2_7_AWGN_noise_scaling" as N61 #FAFAFA
 N60 .. N61
 rectangle "Eb/N0: 每信息比特能量 vs 噪声谱密度" as N62 #BBDEFB
 N57 --> N62
-note "T2_1_AWGN_noise_scaling" as N63 #FAFAFA
+note "T2_7_AWGN_noise_scaling" as N63 #FAFAFA
 N62 .. N63
 rectangle "Es/N0 vs Eb/N0: R·Es/N0 = Eb/N0" as N64 #BBDEFB
 N57 --> N64
-note "T2_1_AWGN_noise_scaling" as N65 #FAFAFA
+note "T2_7_AWGN_noise_scaling" as N65 #FAFAFA
 N64 .. N65
 rectangle "噪声缩放系数 2/σ² → 译码器输入LLR" as N66 #BBDEFB
 N57 --> N66
-note "T2_1_AWGN_noise_scaling" as N67 #FAFAFA
+note "T2_7_AWGN_noise_scaling" as N67 #FAFAFA
 N66 .. N67
+}
+package "OFDM 与参数集" as N700 #42A5F5 {
+N56 --> N700
+rectangle "子载波间隔 15·2μ kHz / CP / 正交性" as N701 #BBDEFB
+N700 --> N701
+note "T2_1_OFDM_subcarrier_spacing_basics" as N702 #FAFAFA
+N701 .. N702
+rectangle "numerology μ=0..4 / 时隙格式" as N703 #BBDEFB
+N700 --> N703
+note "T2_2_NR_numerology_time_domain_hierarchy" as N704 #FAFAFA
+N703 .. N704
+}
+package "资源栅格与帧结构" as N705 #42A5F5 {
+N56 --> N705
+rectangle "RB/PRB / 公共资源栅格 / Point A" as N706 #BBDEFB
+N705 --> N706
+note "T2_3_NR_frequency_resource_grid" as N707 #FAFAFA
+N706 .. N707
+rectangle "LTE 帧结构: 帧/子帧/时隙/符号" as N708 #BBDEFB
+N705 --> N708
+note "T2_5_LTE_frame_structure_time_frequency" as N709 #FAFAFA
+N708 .. N709
+}
+package "MCS 与 LLR 入口" as N710 #42A5F5 {
+N56 --> N710
+rectangle "MCS 表 / 调制阶数 / 目标码率 / TBS" as N711 #BBDEFB
+N710 --> N711
+note "T2_4_MCS_modulation_order_target_code_rate" as N712 #FAFAFA
+N711 .. N712
+rectangle "RE 映射→软信息→LLR 译码器输入" as N713 #BBDEFB
+N710 --> N713
+note "T2_6_from_resource_grid_to_decoder_LLR" as N714 #FAFAFA
+N713 .. N714
 }
 package "调制星座" as N68 #42A5F5 {
 N56 --> N68
 rectangle "BPSK: 1 bit/sym, 星座点±1" as N69 #BBDEFB
 N68 --> N69
-note "T2_2_BPSK_QPSK_soft_demapping" as N70 #FAFAFA
+note "T2_8_BPSK_QPSK_soft_demapping" as N70 #FAFAFA
 N69 .. N70
 rectangle "QPSK: 2 bit/sym, 格雷映射" as N71 #BBDEFB
 N68 --> N71
-note "T2_2_BPSK_QPSK_soft_demapping" as N72 #FAFAFA
+note "T2_8_BPSK_QPSK_soft_demapping" as N72 #FAFAFA
 N71 .. N72
 rectangle "16QAM: 4 bit/sym, 十字星座" as N73 #BBDEFB
 N68 --> N73
-note "T2_3_QAM_Max_Log_MAP_demapping" as N74 #FAFAFA
+note "T2_9_QAM_Max_Log_MAP_demapping" as N74 #FAFAFA
 N73 .. N74
 rectangle "64QAM: 6 bit/sym" as N75 #BBDEFB
 N68 --> N75
-note "T2_3_QAM_Max_Log_MAP_demapping" as N76 #FAFAFA
+note "T2_9_QAM_Max_Log_MAP_demapping" as N76 #FAFAFA
 N75 .. N76
 rectangle "256QAM: 8 bit/sym (NR DL最高)" as N77 #BBDEFB
 N68 --> N77
-note "T2_3_QAM_Max_Log_MAP_demapping" as N78 #FAFAFA
+note "T2_9_QAM_Max_Log_MAP_demapping" as N78 #FAFAFA
 N77 .. N78
 rectangle "格雷映射: 相邻星座点仅1bit不同" as N79 #BBDEFB
 N68 --> N79
-note "T2_2_BPSK_QPSK_soft_demapping" as N80 #FAFAFA
+note "T2_8_BPSK_QPSK_soft_demapping" as N80 #FAFAFA
 N79 .. N80
-note "T2_3_QAM_Max_Log_MAP_demapping" as N81 #FAFAFA
+note "T2_9_QAM_Max_Log_MAP_demapping" as N81 #FAFAFA
 N79 .. N81
 }
 package "软解调算法" as N82 #42A5F5 {
 N56 --> N82
 rectangle "硬判决: 最近星座点→比特→0/1" as N83 #BBDEFB
 N82 --> N83
-note "T2_2_BPSK_QPSK_soft_demapping" as N84 #FAFAFA
+note "T2_8_BPSK_QPSK_soft_demapping" as N84 #FAFAFA
 N83 .. N84
 rectangle "软判决: 输出LLR而非0/1" as N85 #BBDEFB
 N82 --> N85
-note "T2_2_BPSK_QPSK_soft_demapping" as N86 #FAFAFA
+note "T2_8_BPSK_QPSK_soft_demapping" as N86 #FAFAFA
 N85 .. N86
 rectangle "Max-Log-MAP: max⁰‖y−s‖²−max¹‖y−s‖²" as N87 #BBDEFB
 N82 --> N87
-note "T2_3_QAM_Max_Log_MAP_demapping" as N88 #FAFAFA
+note "T2_9_QAM_Max_Log_MAP_demapping" as N88 #FAFAFA
 N87 .. N88
 rectangle "逐比特LLR: 对每个bit位置独立计算" as N89 #BBDEFB
 N82 --> N89
-note "T2_3_QAM_Max_Log_MAP_demapping" as N90 #FAFAFA
+note "T2_9_QAM_Max_Log_MAP_demapping" as N90 #FAFAFA
 N89 .. N90
 rectangle "最近星座点搜索 (子集约束)" as N91 #BBDEFB
 N82 --> N91
-note "T2_3_QAM_Max_Log_MAP_demapping" as N92 #FAFAFA
+note "T2_9_QAM_Max_Log_MAP_demapping" as N92 #FAFAFA
 N91 .. N92
 }
 package "LLR 后处理" as N93 #42A5F5 {
 N56 --> N93
 rectangle "LLR裁剪: 限制幅度不超过阈值" as N94 #BBDEFB
 N93 --> N94
-note "T2_5_LLR_clipping_scaling_quan" as N95 #FAFAFA
+note "T2_11_LLR_clipping_scaling_quan" as N95 #FAFAFA
 N94 .. N95
 rectangle "LLR缩放: 乘以信道可信度因子" as N96 #BBDEFB
 N93 --> N96
-note "T2_5_LLR_clipping_scaling_quan" as N97 #FAFAFA
+note "T2_11_LLR_clipping_scaling_quan" as N97 #FAFAFA
 N96 .. N97
-note "T2_4_fading_channel_LLR_reliab" as N98 #FAFAFA
+note "T2_10_fading_channel_LLR_reli" as N98 #FAFAFA
 N96 .. N98
 rectangle "均匀量化: 等间隔量化阶" as N99 #BBDEFB
 N93 --> N99
-note "T2_5_LLR_clipping_scaling_quan" as N100 #FAFAFA
+note "T2_11_LLR_clipping_scaling_quan" as N100 #FAFAFA
 N99 .. N100
 rectangle "非均匀量化: 小幅度细量化/大幅度粗量化" as N101 #BBDEFB
 N93 --> N101
-note "T2_5_LLR_clipping_scaling_quan" as N102 #FAFAFA
+note "T2_11_LLR_clipping_scaling_quan" as N102 #FAFAFA
 N101 .. N102
 }
 package "衰落信道影响" as N103 #42A5F5 {
 N56 --> N103
 rectangle "瑞利衰落: 幅度服从瑞利分布" as N104 #BBDEFB
 N103 --> N104
-note "T2_4_fading_channel_LLR_reliab" as N105 #FAFAFA
+note "T2_10_fading_channel_LLR_reli" as N105 #FAFAFA
 N104 .. N105
 rectangle "信道估计误差→LLR可信度下降" as N106 #BBDEFB
 N103 --> N106
-note "T2_4_fading_channel_LLR_reliab" as N107 #FAFAFA
+note "T2_10_fading_channel_LLR_reli" as N107 #FAFAFA
 N106 .. N107
 rectangle "均衡后等效SNR→LLR幅度缩放" as N108 #BBDEFB
 N103 --> N108
-note "T2_4_fading_channel_LLR_reliab" as N109 #FAFAFA
+note "T2_10_fading_channel_LLR_reli" as N109 #FAFAFA
 N108 .. N109
 }
 }
@@ -687,15 +720,15 @@ package "LLR量化方案" as N316 #42A5F5 {
 N303 --> N316
 rectangle "均匀量化: 量化阶Δ, LLR_q = round(LLR/Δ)·Δ" as N317 #BBDEFB
 N316 --> N317
-note "T2_5_LLR_clipping_scaling_quan" as N318 #FAFAFA
+note "T2_11_LLR_clipping_scaling_quan" as N318 #FAFAFA
 N317 .. N318
 rectangle "非均匀量化: 小LLR细量化,大LLR粗量化" as N319 #BBDEFB
 N316 --> N319
-note "T2_5_LLR_clipping_scaling_quan" as N320 #FAFAFA
+note "T2_11_LLR_clipping_scaling_quan" as N320 #FAFAFA
 N319 .. N320
 rectangle "裁剪阈值: |LLR|&gt;C→截断为C" as N321 #BBDEFB
 N316 --> N321
-note "T2_5_LLR_clipping_scaling_quan" as N322 #FAFAFA
+note "T2_11_LLR_clipping_scaling_quan" as N322 #FAFAFA
 N321 .. N322
 rectangle "LLR位宽: 4bit(粗)/5bit(平衡)/6bit(精细)" as N323 #BBDEFB
 N316 --> N323

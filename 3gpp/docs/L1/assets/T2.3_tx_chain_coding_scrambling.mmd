@@ -1,0 +1,18 @@
+%%{init: {'theme': 'default'}}%%
+flowchart TB
+    A["信息比特"] --> B["CRC / 码块分段"]
+    B --> C["信道编码 — 构造 dmin<br/>代数维度：K → N，2^K 合法码字 ⊂ 2^N"]
+    C --> D["速率匹配"]
+    D --> E["加扰 — ⊕ Gold，保持 dmin<br/>统计维度：坐标平移，白化比特"]
+    E --> F["调制映射<br/>QPSK / 16QAM / 64QAM / …"]
+    F --> G["层映射 / 预编码"]
+    G --> H["资源映射 / OFDM / 射频"]
+
+    C -.- CA["代数维度：构造 N 维稀疏码字集合 → 纠错上限"]
+    E -.- EA["统计维度：坐标平移白化比特 → 射频友好"]
+
+    style C fill:#FFCDD2,stroke:#C62828,color:#17212F
+    style E fill:#BBDEFB,stroke:#1565C0,color:#17212F
+    style F fill:#C8E6C9,stroke:#2E7D32,color:#17212F
+    style CA fill:#FFF8E1,stroke:#F9A825,color:#17212F,stroke-dasharray: 5 5
+    style EA fill:#FFF8E1,stroke:#F9A825,color:#17212F,stroke-dasharray: 5 5

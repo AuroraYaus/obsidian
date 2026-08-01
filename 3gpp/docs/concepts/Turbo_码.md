@@ -40,7 +40,7 @@ Turbo 译码像两位审稿人看同一篇文章。一位看原顺序，另一�
 
 - LTE：TS 36.212 Rel-19 §5.1.3 Channel coding。
 - LTE：TS 36.212 Rel-19 §5.1.4 Rate matching。
-- 本地锚点示例：`3GPP_Rel19/processed/TS_36.212_36212-j30/TS_36.212_36212-j30_content.md`。
+- 本地锚点示例：`3GPP_Rel19/processed/TS_36.212_36212-j30/content.md`。
 
 ## 图谱关联
 

@@ -1,0 +1,17 @@
+%%{init: {'theme': 'default'}}%%
+flowchart TB
+    A["信息比特<br/>K bits，含协议模板和偏置"] --> B["信道编码<br/>K → N (N > K)<br/>构造 2^K 合法码字 ⊂ 2^N 空间<br/>定义 dmin → 纠错上限"]
+    B --> C["编码比特 (N bits)<br/>含冗余，但统计偏置仍在"]
+    C --> D["加扰<br/>⊕ Gold 序列 = F2^N 坐标平移<br/>打散长0串和固定模板<br/>严格保持所有 dmin"]
+    D --> E["加扰比特 (N bits)<br/>统计均匀，频谱平坦 → 射频友好"]
+
+    B -.- BA["代数维度：构造码字集合的结构"]
+    D -.- DA["统计维度：白化比特序列的结构"]
+
+    style A fill:#F7F9FC,stroke:#C9D4DF,color:#17212F
+    style B fill:#FFCDD2,stroke:#C62828,color:#17212F
+    style C fill:#F3E5F5,stroke:#7B1FA2,color:#17212F
+    style D fill:#BBDEFB,stroke:#1565C0,color:#17212F
+    style E fill:#C8E6C9,stroke:#2E7D32,color:#17212F
+    style BA fill:#FFF8E1,stroke:#F9A825,color:#17212F,stroke-dasharray: 5 5
+    style DA fill:#FFF8E1,stroke:#F9A825,color:#17212F,stroke-dasharray: 5 5

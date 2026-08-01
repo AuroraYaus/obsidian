@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Audit centralized lesson terminology rules for the LTE/NR curriculum."""
+"""@file audit_lesson_terms.py
+@brief 审计 Markdown 讲义中的术语首现规则——每份讲义不得自带术语表，
+       所有技术缩写必须在全局术语表中统一定义，避免知识碎片化。
+@date 2026-07-22
+
+本工具扫描 L1/L2/L3 讲义，检查三个硬性约束：
+1. 讲义正文中禁止出现自建术语表（集中化管理要求）
+2. 全局术语表必须覆盖所有核心技术缩写
+3. 发现违规即审计失败，阻断知识库不一致状态
+"""
 
 from __future__ import annotations
 
@@ -50,6 +59,10 @@ TECH_TERM_RE = {
 
 
 def audit_technical_first_use(path: Path) -> list[str]:
+    """@brief  检查单份讲义是否残留了自建术语表（分散的术语定义违反集中管理原则）。
+    @param  path  待审计的 Markdown 文件路径。
+    @return       违规列表；空列表表示该文件未违反术语集中化规则。
+    @note  术语表文件本身不检查，因为它是唯一的合法定义源。"""
     errors: list[str] = []
     if path.resolve() == GLOSSARY_PATH.resolve():
         return errors
@@ -72,6 +85,10 @@ def audit_technical_first_use(path: Path) -> list[str]:
 
 
 def audit_glossary() -> list[str]:
+    """@brief  验证全局术语表是否覆盖了所有核心技术缩写——
+             缺失的术语会导致讲义中出现裸奔缩写，破坏可读性保障。
+    @return  缺失条目列表；空列表表示术语表完整。
+    @note   术语表缺失视为硬错误，因为它是所有讲义术语首现的权威来源。"""
     errors: list[str] = []
     if not GLOSSARY_PATH.is_file():
         return [f"{GLOSSARY_PATH}: glossary file is missing"]
@@ -84,6 +101,11 @@ def audit_glossary() -> list[str]:
 
 
 def main() -> int:
+    """@brief    脚本入口：扫描指定路径下的 Markdown 文件，执行术语首现规则审计。
+    @usage    python audit_lesson_terms.py <path> [<path> ...]
+    @args     paths  一个或多个 Markdown 文件或目录路径。
+    @exit_code       0 = 所有文件通过审计；1 = 发现违规或术语表缺失。
+    @note    审计失败时将输出详细错误行号和违规内容，便于定位修复点。"""
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="+", type=Path)
     args = parser.parse_args()

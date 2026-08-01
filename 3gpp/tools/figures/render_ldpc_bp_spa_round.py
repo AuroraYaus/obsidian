@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render a toy LDPC BP/SPA one-round walkthrough figure."""
+""" @file render_ldpc_bp_spa_round.py
+    @brief 渲染 LDPC BP/SPA 单轮消息传递教学图：Tanner 图 + SPA 公式 + 数值结果。
+    @date 2025
+    @note 教学 H=[[1,1,1,0],[0,1,1,1]]，channel LLR=[2.0,-1.0,0.7,1.2]。
+    @see render_ldpc_tanner_syndrome.py 对应的 Tanner 图和 syndrome 教学图
+"""
 
 from __future__ import annotations
 
@@ -32,6 +37,14 @@ PALETTE = {
 
 
 def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt, fill: str) -> None:
+    """ @brief 在矩形内居中绘制单行文本。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 绘制区域。
+        @param text 待绘制的单行字符串。
+        @param fnt PIL 字体对象。
+        @param fill 文字颜色。
+        @return 无返回值。
+    """
     bbox = draw.textbbox((0, 0), text, font=fnt)
     x = box[0] + ((box[2] - box[0]) - (bbox[2] - bbox[0])) / 2
     y = box[1] + ((box[3] - box[1]) - (bbox[3] - bbox[1])) / 2 - 1
@@ -39,6 +52,16 @@ def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text:
 
 
 def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt, fill: str, width: int, gap: int = 6) -> int:
+    """ @brief 在指定坐标处绘制自动换行的左对齐多行文本。
+        @param draw PIL ImageDraw 实例。
+        @param xy 起始坐标 (x, y)。
+        @param text 待绘制的长文本。
+        @param fnt 字体对象。
+        @param fill 文字颜色。
+        @param width 每行最大像素宽度。
+        @param gap 行间距，默认 6。
+        @return 最后一行的底部 Y 坐标。
+    """
     x, y = xy
     for line in fit_wrap_text(draw, text, fnt, width):
         draw.text((x, y), line, font=fnt, fill=fill)
@@ -47,6 +70,13 @@ def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt,
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], color: str) -> None:
+    """ @brief 绘制带三角箭头的直线。
+        @param draw PIL ImageDraw 实例。
+        @param start 起点 (x, y)。
+        @param end 终点 (x, y)。
+        @param color CSS 颜色字符串。
+        @return 无返回值。
+    """
     sx, sy = start
     ex, ey = end
     length = math.hypot(ex - sx, ey - sy)
@@ -66,6 +96,15 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int
 
 
 def table(draw: ImageDraw.ImageDraw, x: int, y: int, headers: list[str], rows: list[list[str]], widths: list[int]) -> int:
+    """ @brief 绘制带表头的简单表格。
+        @param draw PIL ImageDraw 实例。
+        @param x 表格左上角 X。
+        @param y 表格左上角 Y。
+        @param headers 表头列名列表。
+        @param rows 数据行（二维列表）。
+        @param widths 每列像素宽度列表。
+        @return 表格底部 Y 坐标。
+    """
     h = 56
     header_fill = "#EAF3FF"
     cell_fill = "#FFFFFF"
@@ -86,6 +125,10 @@ def table(draw: ImageDraw.ImageDraw, x: int, y: int, headers: list[str], rows: l
 
 
 def draw_graph(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制玩具 Tanner 图：4 个变量节点 v0-v3 + 2 个校验节点 c0-c1 + 6 条边。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+    """
     draw.text((70, 162), "玩具 Tanner 图", font=font(30, True), fill=PALETTE["blue"])
     vx = [120, 250, 380, 510]
     vy = 265
@@ -112,6 +155,10 @@ def draw_graph(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_formula_panel(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制 SPA 消息更新公式面板：VN->CN、CN->VN、Posterior 三种对象。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+    """
     panel = (650, 160, 1530, 400)
     draw.rounded_rectangle(panel, radius=16, fill=PALETTE["panel"], outline=PALETTE["line"], width=2)
     draw.text((680, 190), "SPA 更新的三个对象", font=font(30, True), fill=PALETTE["ink"])
@@ -129,6 +176,10 @@ def draw_formula_panel(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_numeric_tables(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制一轮 SPA 数值结果表格：CN 外信息、VN posterior、hard decision、syndrome。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+    """
     draw.text((650, 430), "一轮数值结果", font=font(30, True), fill=PALETTE["green"])
     rows1 = [
         ["r0->v0", "-0.313"],
@@ -159,6 +210,10 @@ def draw_numeric_tables(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_bottom_notes(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制底部四列工程检测点卡片：外信息、非线性、定点风险、停止边界。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+    """
     panel = (70, 760, 1530, 1060)
     draw.rounded_rectangle(panel, radius=16, fill="#FFFDF6", outline="#E2CD7A", width=2)
     draw.text((105, 790), "读图顺序与工程检测点", font=font(30, True), fill=PALETTE["ink"])
@@ -177,6 +232,10 @@ def draw_bottom_notes(draw: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    """ @brief 脚本入口：生成 T8.5 LDPC BP/SPA 一轮消息传递教学图。
+        @return 无返回值。
+        @note 产出 1600x1120 PNG：Tanner 图 + SPA 公式 + 数值结果 + 检测点。
+    """
     img = Image.new("RGB", (1600, 1120), PALETTE["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((70, 42), "LDPC BP/SPA 一轮消息传递", font=font(40, True), fill=PALETTE["ink"])

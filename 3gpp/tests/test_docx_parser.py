@@ -1,3 +1,7 @@
+""" @file test_docx_parser.py
+    @brief 测试 .docx 解析器和导出器——段落、标题、公式、表格、图片的提取与可追溯产物导出。
+    @date 2025 """
+
 import csv
 import json
 import tempfile
@@ -83,6 +87,19 @@ DOCUMENT_XML = """<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
 
 def make_docx(path: Path) -> None:
+    """
+    @brief 在内存中构造一个合法的 DOCX ZIP 文档并写入磁盘。
+
+    通过 Python zipfile 模块按 OOXML 规范组装 [Content_Types].xml、
+    _rels/.rels、word/document.xml、word/_rels/document.xml.rels
+    和 word/media/image1.png，生成一个可用于测试 docx_parser 和
+    exporter 的标准 DOCX 文件。
+
+    @param path  目标文件路径，ZIP/DOCX 将写入此位置。
+    @note        生成的 DOCX 包含 1 个一级标题、2 个正文段落、
+                 1 个 OMML 公式、1 个含 vMerge/gridSpan 的表格
+                 和 1 个内嵌图片引用，覆盖解析器的核心要素。
+    """
     with zipfile.ZipFile(path, "w") as zf:
         zf.writestr("[Content_Types].xml", CONTENT_TYPES)
         zf.writestr("_rels/.rels", ROOT_RELS)
@@ -92,7 +109,10 @@ def make_docx(path: Path) -> None:
 
 
 class DocxParserTests(unittest.TestCase):
+    """ @brief 测试 docx_parser 和 exporter：验证 .docx 解析提取段落/标题/公式/表格/图片，以及导出可追溯产物的完整性。 """
+
     def test_parse_docx_extracts_paragraphs_headings_equations_tables_and_media(self):
+        """ @brief 验证 parse_docx 正确提取段落文本、标题标记、公式 XML、表格合并单元格和图片引用。 """
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "38331-j20.docx"
             make_docx(path)
@@ -112,6 +132,7 @@ class DocxParserTests(unittest.TestCase):
         self.assertEqual(doc.media[0].target, "media/image1.png")
 
     def test_export_document_writes_traceable_artifacts(self):
+        """ @brief 验证 export_document 生成完整的可追溯产物：source.docx、document.xml、content.md、README、sections、tables（HTML/CSV）、equations 和 media。 """
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             source = root / "38331-j20.docx"

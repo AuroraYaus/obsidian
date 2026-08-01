@@ -29,18 +29,18 @@ source_spec: "docs/superpowers/plans/2026-06-19-l1-remaining-lessons.md"
 - [ ] Apply the project-wide depth rule to T1-T2 before writing more T3: each existing lesson must be expanded beyond outline-level coverage, with terminology origin, problem motivation, formal definition, worked example, derivation, receive-side consequence, verification, implementation impact, protocol evidence boundary, and non-goals/misconceptions where relevant.
 - [ ] Apply the project-wide 3GPP protocol-close-reading rule to every 3GPP-related knowledge point: start from protocol context and explain the before/after chain, why the protocol defines it, where it sits in the receive decoding chain, what input/output it implies, and which later Turbo/LDPC/Polar task depends on it.
 - [ ] Do not present engineering choices as protocol mandates.
-- [ ] If only `TS_36.212_36212-j30_content.md` or `sections.jsonl` is inspected, record that formulas/tables are not fully reproduced unless `equations/*.xml` or `tables/*.html` was checked.
-- [ ] If a lesson depends on a protocol/paper/book formula, table, figure, or algorithm diagram, reproduce the needed TS_36.211_36211-j30_s06-s08_content in the lesson body. Use Markdown/Mermaid/LaTeX when stable; when complex formulas, merged cells, large matrices, or diagrams cannot render cleanly in Markdown, generate a PNG/SVG asset with Python, insert it in the lesson, and record the script, input data, and evidence path.
+- [ ] If only `content.md` or `sections.jsonl` is inspected, record that formulas/tables are not fully reproduced unless `equations/*.xml` or `tables/*.html` was checked.
+- [ ] If a lesson depends on a protocol/paper/book formula, table, figure, or algorithm diagram, reproduce the needed content in the lesson body. Use Markdown/Mermaid/LaTeX when stable; when complex formulas, merged cells, large matrices, or diagrams cannot render cleanly in Markdown, generate a PNG/SVG asset with Python, insert it in the lesson, and record the script, input data, and evidence path.
 - [ ] Do not force sections `## 1.` through `## 18.` or `### 15.1`. Natural headings are allowed and preferred when they teach the topic more clearly.
 - [ ] Every lesson must include execution/evidence records and a protocol evidence table or protocol/evidence boundary table, even when protocol sections are not directly applicable.
 
 ## Files
 
-- Create: `docs/L1/T2.1_AWGN_noise_scaling.md`
-- Create: `docs/L1/T2.2_BPSK_QPSK_soft_demapping.md`
-- Create: `docs/L1/T2.3_QAM_Max_Log_MAP_demapping.md`
-- Create: `docs/L1/T2.4_fading_channel_LLR_reliability.md`
-- Create: `docs/L1/T2.5_LLR_clipping_scaling_quantization.md`
+- Create: `docs/L1/T2.7_AWGN_noise_scaling.md`
+- Create: `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md`
+- Create: `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md`
+- Create: `docs/L1/T2.10_fading_channel_LLR_reliability.md`
+- Create: `docs/L1/T2.11_LLR_clipping_scaling_quantization.md`
 - Create: `docs/L1/T3.1_LTE_NR_CRC_families.md`
 - Create: `docs/L1/T3.2_transport_code_block_filler_bits.md`
 - Create: `docs/L1/T3.3_LTE_Turbo_segmentation_rules.md`
@@ -57,11 +57,11 @@ source_spec: "docs/superpowers/plans/2026-06-19-l1-remaining-lessons.md"
 - Modify: `docs/L1/T1.4_probability_bayes_soft_decoding.md`
 - Modify: `docs/L1/T1.5_LLR_soft_decision.md`
 - Modify: `docs/L1/T1.6_information_theory_minimum_for_decoding.md`
-- Modify: `docs/L1/T2.1_AWGN_noise_scaling.md`
-- Modify: `docs/L1/T2.2_BPSK_QPSK_soft_demapping.md`
-- Modify: `docs/L1/T2.3_QAM_Max_Log_MAP_demapping.md`
-- Modify: `docs/L1/T2.4_fading_channel_LLR_reliability.md`
-- Modify: `docs/L1/T2.5_LLR_clipping_scaling_quantization.md`
+- Modify: `docs/L1/T2.7_AWGN_noise_scaling.md`
+- Modify: `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md`
+- Modify: `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md`
+- Modify: `docs/L1/T2.10_fading_channel_LLR_reliability.md`
+- Modify: `docs/L1/T2.11_LLR_clipping_scaling_quantization.md`
 - Modify: `docs/L1/T3.1_LTE_NR_CRC_families.md`
 - Modify: `docs/L1/T3.2_transport_code_block_filler_bits.md`
 - Modify: `docs/L1/T3.3_LTE_Turbo_segmentation_rules.md`

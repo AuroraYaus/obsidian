@@ -27,6 +27,6 @@ source_spec: "TS 36.211/38.211; algorithmic receiver concept"
 
 - [[Modulation_Constellations_调制星座]]
 - [[LLR_对数似然比]]
-- [[T2.2_BPSK_QPSK_soft_demapping]]
-- [[T2.3_QAM_Max_Log_MAP_demapping]]
+- [[T2.8_BPSK_QPSK_soft_demapping]]
+- [[T2.9_QAM_Max_Log_MAP_demapping]]
 - 关系语义：软解调是信道输出到译码器输入的关键转换。

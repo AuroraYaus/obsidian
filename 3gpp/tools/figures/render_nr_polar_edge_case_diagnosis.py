@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render NR Polar decoder edge-case diagnosis flow."""
+"""@file render_nr_polar_edge_case_diagnosis.py
+@brief 渲染 NR Polar 译码器边界案例诊断流程图，展示从 descriptor 到 CRC/RNTI selector 的逐层排障路径和最小 dump 包。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -45,6 +48,15 @@ def draw_box(
     fill: str,
     outline: str,
 ) -> None:
+    """@brief 绘制带标题和多行正文的诊断卡片，用于展示排障步骤和故障注入点。
+    @param draw PIL ImageDraw 绘制上下文
+    @param xy 矩形区域 (x0, y0, x1, y1)
+    @param title 卡片左上角标题（24px 粗体，颜色与 outline 一致）
+    @param lines 正文多行文本列表（24px 粗体）
+    @param fill 卡片填充色
+    @param outline 边框颜色（2px）和标题颜色
+    @return None
+    """
     draw.rounded_rectangle(xy, radius=14, fill=fill, outline=outline, width=2)
     draw.text((xy[0] + 22, xy[1] + 16), title, font=font(24, True), fill=outline)
     y = xy[1] + 64
@@ -54,6 +66,14 @@ def draw_box(
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], color: str) -> None:
+    """@brief 绘制带箭头线段，连接诊断流程节点展示逐层排障路径。
+    @param draw PIL ImageDraw 绘制上下文
+    @param start 箭头起点坐标 (x, y)
+    @param end 箭头终点坐标 (x, y)
+    @param color 线条和箭头填充颜色
+    @return None
+    @note 箭杆线宽 3px，箭头长度 14px、宽度 8px。
+    """
     x0, y0 = start
     x1, y1 = end
     length = math.hypot(x1 - x0, y1 - y0)
@@ -75,6 +95,14 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int
 
 
 def main() -> None:
+    """@brief 脚本入口：生成 NR Polar 译码器边界案例诊断流程图 T10.8_NR_Polar_edge_case_diagnosis.png。
+    @note 图中包含三个主区域：
+    - 顶部：五节点诊断链路（descriptor -> rate recovery -> mask generator -> SC/SCL core -> CRC/RNTI select）。
+    - 中部：八个典型故障注入点卡片（无 CRC 小负载、CRC 长度错、L 太小、PM 并列、puncture/shorten 错、frozen mask 错、UCI/DCI mismatch、RNTI 边界错）。
+    - 下部：最小 dump 包清单（descriptor、sets、rate recovery、SCL、selector 逐层 dump 项）。
+    工程定位原则：先证明输入和索引坐标正确，再怀疑 SC/SCL core；CRC fail 是现象不是根因。
+    @see render_nr_polar_decoder_chain_overview.py Polar 译码链路总览
+    """
     img = Image.new("RGB", (1900, 1560), COL["bg"])
     draw = ImageDraw.Draw(img)
 

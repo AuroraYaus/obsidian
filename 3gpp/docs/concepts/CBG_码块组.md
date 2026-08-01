@@ -41,7 +41,7 @@ CBG 是 code block group。NR 可以把一个 TB 分成多个 CB，再按规则�
 
 - NR：TS 38.214 Rel-19 §5.1.7 PDSCH CBG transmission。
 - NR：TS 38.214 Rel-19 §6.1.5 PUSCH CBG transmission。
-- 本地锚点示例：`3GPP_Rel19/processed/TS_38.214_38214-j30/TS_38.214_38214-j30_content.md`。
+- 本地锚点示例：`3GPP_Rel19/processed/TS_38.214_38214-j30/content.md`。
 
 ## 图谱关联
 

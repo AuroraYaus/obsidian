@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render LDPC Tanner graph and syndrome teaching figure."""
+""" @file render_ldpc_tanner_syndrome.py
+    @brief 渲染 LDPC Tanner 图、syndrome 计算与消息流入口教学图。
+    @date 2025
+    @note 教学 H=[[1,1,0,1,0,0],[0,1,1,0,1,0],[1,0,1,0,0,1]]，含 GF(2) 手算例子。
+    @see render_ldpc_bp_spa_round.py 对应的 SPA 一轮消息传递图
+"""
 
 from __future__ import annotations
 
@@ -34,6 +39,14 @@ PALETTE = {
 
 
 def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt, fill: str) -> None:
+    """ @brief 在矩形内居中绘制单行文本。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 绘制区域。
+        @param text 待绘制的单行字符串。
+        @param fnt PIL 字体对象。
+        @param fill 文字颜色。
+        @return 无返回值。
+    """
     bbox = draw.textbbox((0, 0), text, font=fnt)
     x = box[0] + ((box[2] - box[0]) - (bbox[2] - bbox[0])) / 2
     y = box[1] + ((box[3] - box[1]) - (bbox[3] - bbox[1])) / 2 - 1
@@ -41,6 +54,15 @@ def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text:
 
 
 def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt, fill: str, width: int) -> int:
+    """ @brief 在指定坐标处绘制自动换行的左对齐多行文本。
+        @param draw PIL ImageDraw 实例。
+        @param xy 起始坐标 (x, y)。
+        @param text 待绘制的长文本。
+        @param fnt 字体对象。
+        @param fill 文字颜色。
+        @param width 每行最大像素宽度。
+        @return 最后一行的底部 Y 坐标。
+    """
     x, y = xy
     current = ""
     lines: list[str] = []
@@ -67,6 +89,13 @@ def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt,
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], color: str) -> None:
+    """ @brief 绘制带三角箭头的直线。
+        @param draw PIL ImageDraw 实例。
+        @param start 起点 (x, y)。
+        @param end 终点 (x, y)。
+        @param color CSS 颜色字符串。
+        @return 无返回值。
+    """
     sx, sy = start
     ex, ey = end
     length = math.hypot(ex - sx, ey - sy)
@@ -86,6 +115,11 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int
 
 
 def draw_matrix(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制小校验矩阵 H 的格子图：3x6，1 为蓝色填充。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note 行标 c0-c2，列标 v0-v5，每格 56px，含标题与节点间距断言。
+    """
     H = [[1, 1, 0, 1, 0, 0], [0, 1, 1, 0, 1, 0], [1, 0, 1, 0, 0, 1]]
     x0, y0 = 70, 250
     cell = 56
@@ -108,6 +142,11 @@ def draw_matrix(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_graph(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制 Tanner 图：6 个变量节点（圆）+ 3 个校验节点（方）+ 边。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note 节点间距 88px(VN)/135px(CN)，边来自 H 矩阵的 1 元素。
+    """
     H = [[1, 1, 0, 1, 0, 0], [0, 1, 1, 0, 1, 0], [1, 0, 1, 0, 0, 1]]
     vx = [500 + i * 88 for i in range(6)]
     vy = 245
@@ -131,6 +170,11 @@ def draw_graph(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_syndrome(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制 GF(2) syndrome 手算面板：三条校验方程的逐位异或计算。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note 展示 x=[1,0,1,1,1,0] 通过全部三条校验；翻转 x5 后 s2 非零的反例。
+    """
     panel = (70, 690, 1510, 1115)
     draw.rounded_rectangle(panel, radius=18, fill=PALETTE["panel"], outline=PALETTE["line"], width=2)
     draw.text((105, 720), "GF(2) syndrome 手算例子", font=font(28, True), fill=PALETTE["ink"])
@@ -167,6 +211,11 @@ def draw_syndrome(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_message_flow(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制右侧消息流入口面板：四步消息传递流程说明。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note 步骤：VN 发 LLR -> CN 生成外信息 -> VN 汇总 -> hard decision + 早停。
+    """
     panel = (1110, 210, 1530, 650)
     draw.rounded_rectangle(panel, radius=18, fill="#FFFDF6", outline="#E2CD7A", width=2)
     draw.text((1140, 240), "一轮消息流入口", font=font(28, True), fill=PALETTE["ink"])
@@ -184,6 +233,10 @@ def draw_message_flow(draw: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    """ @brief 脚本入口：生成 T8.4 LDPC Tanner 图、syndrome 与消息流教学图。
+        @return 无返回值。
+        @note 产出 1600x1180 PNG：H 矩阵 + Tanner 图 + 消息流说明 + syndrome 手算例子。
+    """
     img = Image.new("RGB", (1600, 1180), PALETTE["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((70, 42), "LDPC Tanner 图、syndrome 与消息流", font=font(40, True), fill=PALETTE["ink"])

@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
-"""Find citation/table/figure rebuild candidates in roadmap lessons.
+"""@file audit_reference_rebuilds.py
+@brief 在讲义中定位需要手动审查的参考文献/表格/公式重建候选行——
+       这不是硬阻断审计，而是 triage（分诊）工具：
+       标记出可能违反"依赖的有效内容必须在正文中重建"规则的行。
+@date 2026-07-22
 
-This is a triage tool, not a hard pass/fail gate. It prints lines that deserve
-manual review under the project rule: formulas, tables, figures, and algorithms
-that a lesson actually depends on must be rebuilt in the body or explicitly
-marked as background-only.
+扫描四种风险模式：
+1. 未核验/待核验/不复现/未展开标记 → 内容可能缺失
+2. 引用 Table/Figure/图表 → 外部材质未重建
+3. 论文引用 [Author, YYYY] → 依赖外部文献的公式/算法
+4. 公式/方程/算法框图引用 → 数学内容未在正文中重建
+
+安全边界（SAFE_HINTS）中的行默认跳过：如"背景阅读""未引用具体公式"
+等明确声明不依赖的标记。输出供人工审查决策。
 """
 
 from __future__ import annotations
@@ -25,6 +33,9 @@ SAFE_HINTS = re.compile(r"背景阅读|未引用该文献的具体公式|不声�
 
 
 def iter_markdown(paths: list[Path]) -> list[Path]:
+    """@brief  从输入路径中收集所有 .md 文件，去重排序。
+    @param  paths  文件或目录路径列表。
+    @return        去重排序后的 Markdown 文件路径列表。"""
     files: list[Path] = []
     for path in paths:
         if path.is_file() and path.suffix == ".md":
@@ -35,6 +46,13 @@ def iter_markdown(paths: list[Path]) -> list[Path]:
 
 
 def main() -> int:
+    """@brief    脚本入口：扫描讲义中的引用/表格/公式重建候选行。
+    @usage    python audit_reference_rebuilds.py <path> [<path> ...] [--context-safe]
+    @args     paths            一个或多个 Markdown 文件或目录路径。
+    @args     --context-safe   同时输出安全边界提示行（背景阅读等），
+                               默认跳过这些行以减少噪音。
+    @exit_code                 始终返回 0（分诊工具，不做硬阻断）。
+    @note    输出格式：`<file>:<line>: [<risk_type>] <content>`。"""
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="+", type=Path)
     parser.add_argument("--context-safe", action="store_true", help="also print lines that contain safe boundary hints")

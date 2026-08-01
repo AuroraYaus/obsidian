@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Static audit for Python figure geometry-risk patterns."""
+"""
+@file    audit_figure_geometry.py
+@brief   静态审计 Python 教学图渲染脚本中的几何风险模式。
+         检测箭头连接方式、多段路径、弯曲连接、向 量箭头一致性等潜在布局错误，
+         避免生成误导学生的几何变形图。
+@date    2026-07-22
+
+Static audit for Python figure geometry-risk patterns.
+"""
 
 from __future__ import annotations
 
@@ -131,11 +139,25 @@ ARROWHEAD_FIXED_WING_RE = re.compile(
 
 
 def is_draw_line_call(node: ast.Call) -> bool:
+    """
+    @brief   检查 AST 节点是否为 draw.line() 调用。
+             用于在 AST 遍历中快速筛选出箭头绘制的关键语句，避免对所有函数调用进行无差别检查。
+    @param   node  待检查的 AST Call 节点。
+    @return  若调用是 draw.line() 则返回 True，否则返回 False。
+    """
     func = node.func
     return isinstance(func, ast.Attribute) and func.attr == "line"
 
 
 def assigned_point_list_lengths(fn: ast.FunctionDef) -> dict[str, int]:
+    """
+    @brief   收集函数体内被赋值的列表/元组的长度。
+             用于判断箭头路径是否为多段路径——若变量名被赋值为 ≥3 个元素的列表，
+             则该变量可能是多段折线的点集，需要进一步审查。
+    @param   fn  待分析的 AST 函数定义节点。
+    @return  变量名到列表/元组长度的映射字典；未赋值的变量不在字典中出现。
+    @note    仅处理顶层赋值语句，嵌套解包和推导式中的赋值不参与长度推断。
+    """
     assigned: dict[str, int] = {}
     for node in ast.walk(fn):
         if not isinstance(node, ast.Assign):
@@ -152,6 +174,17 @@ def assigned_point_list_lengths(fn: ast.FunctionDef) -> dict[str, int]:
 
 
 def audit_arrow_function_ast(path: Path, text: str) -> list[str]:
+    """
+    @brief   基于 AST 对箭头辅助函数进行深度几何审计。
+             检查箭头是否使用了弯曲连接 (joint='curve')、是否绘制了多段路径、
+             箭身是否与箭头方向共线、箭头翼点是否由法向量推导——这些是教学图中
+             箭头看起来歪斜或不流畅的根本原因。
+    @param   path   被审计脚本的文件路径，用于在发现中定位问题行。
+    @param   text   脚本的完整源代码文本，供正则回退检查使用。
+    @return  几何审计发现列表，每个元素是格式化的发现字符串。
+    @note    本函数同时使用 AST 遍历和正则回退——AST 用于精确的节点级检测，
+             正则用于 AST 无法覆盖的复杂模式匹配。
+    """
     findings: list[str] = []
     try:
         tree = ast.parse(text)
@@ -194,6 +227,14 @@ def audit_arrow_function_ast(path: Path, text: str) -> list[str]:
 
 
 def collect_files(paths: list[Path]) -> list[Path]:
+    """
+    @brief   从给定的路径列表中收集所有 .py 文件。
+             目录会被展开为其中所有 .py 文件，文件直接添加——这是统一文件入口，
+             避免每个审计函数重复实现文件遍历逻辑。
+    @param   paths  路径列表，可混合目录和文件。
+    @return  按文件名排序的 .py 文件路径列表。
+    @note    不存在的路径被静默跳过，不抛异常。
+    """
     files: list[Path] = []
     for path in paths:
         if not path.exists():
@@ -206,19 +247,49 @@ def collect_files(paths: list[Path]) -> list[Path]:
 
 
 def line_for_offset(text: str, offset: int) -> int:
+    """
+    @brief   将文本中的字符偏移量转换为行号（1-based）。
+             正则匹配返回的是字符位置，而审计报告需要人类可读的行号。
+    @param   text    源文本。
+    @param   offset  字符偏移量（0-based）。
+    @return  1-based 行号。
+    """
     return text.count("\n", 0, offset) + 1
 
 
 def has_any(text: str, needles: tuple[str, ...]) -> bool:
+    """
+    @brief   检查文本中是否包含任意一个给定的子串。
+             用于快速判断脚本中是否存在某些关键模式，决定是否需要深入审计。
+    @param   text     要搜索的文本。
+    @param   needles  待匹配的子串元组。
+    @return  若存在任意匹配则返回 True，否则返回 False。
+    """
     return any(needle in text for needle in needles)
 
 
 def function_name(block: str) -> str:
+    """
+    @brief   从函数定义块中提取函数名。
+             用于在按函数分段审计时标记当前上下文属于哪个函数。
+    @param   block  函数定义的源代码块文本。
+    @return  函数名字符串；若匹配失败则返回空字符串。
+    """
     match = re.match(r"def\s+(\w+)\s*\(", block)
     return match.group(1) if match else ""
 
 
 def audit_file(path: Path) -> list[str]:
+    """
+    @brief   对单个 Python 脚本执行全部几何审计规则。
+             这是几何审计的核心引擎——汇总 AST 审计、正则模式匹配、
+             历史关注列表检查、箭头连接完整性验证等所有维度的检查结果。
+    @param   path  待审计的 .py 文件路径。
+    @return  该文件的所有几何审计发现列表。
+    @note    每个发现字符串格式为 "path:line: 问题描述"。
+             历史关注文件（HISTORICAL_FOCUS）有额外的强制性检查，
+             因为这些文件曾出现过几何问题。
+    """
     text = path.read_text(encoding="utf-8")
     lines = text.splitlines()
     findings: list[str] = audit_arrow_function_ast(path, text)
@@ -372,6 +443,15 @@ def audit_file(path: Path) -> list[str]:
 
 
 def main() -> int:
+    """
+    @brief   图几何审计入口——扫描渲染脚本中的箭头连接、弯曲路径和向量一致性。
+    @usage   python audit_figure_geometry.py [paths...] [--focus-only]
+    @args    paths        待审计的 .py 文件或目录路径，默认为 tools/figures。
+             --focus-only 仅审计 HISTORICAL_FOCUS 中的历史高风险脚本。
+    @exit_code  0 = 通过审计，1 = 存在几何风险发现。
+    @note    输出包含格式化的发现列表（按 path:line 定位）和聚合状态行。
+             历史关注脚本有更严格的检查，因为其几何复杂度更高。
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", type=Path, default=DEFAULT_PATHS)
     parser.add_argument(

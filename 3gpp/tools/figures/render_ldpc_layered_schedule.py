@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render LDPC flooding vs layered schedule overview."""
+""" @file render_ldpc_layered_schedule.py
+    @brief 渲染 LDPC Flooding 与 Layered 译码调度对比图。
+    @date 2025
+    @note 对比两种调度的时序差异，展示小 H 的 layer 更新顺序和 Zc 地址访问。
+    @see render_ldpc_bp_spa_round.py 对应的 SPA 单轮消息传递图
+"""
 
 from __future__ import annotations
 
@@ -32,6 +37,14 @@ PALETTE = {
 
 
 def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt, fill: str) -> None:
+    """ @brief 在矩形内居中绘制单行文本。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 绘制区域。
+        @param text 待绘制的单行字符串。
+        @param fnt PIL 字体对象。
+        @param fill 文字颜色。
+        @return 无返回值。
+    """
     bbox = draw.textbbox((0, 0), text, font=fnt)
     x = box[0] + ((box[2] - box[0]) - (bbox[2] - bbox[0])) / 2
     y = box[1] + ((box[3] - box[1]) - (bbox[3] - bbox[1])) / 2 - 1
@@ -39,6 +52,16 @@ def center_text(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text:
 
 
 def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt, fill: str, width: int, gap: int = 6) -> int:
+    """ @brief 在指定坐标处绘制自动换行的左对齐多行文本。
+        @param draw PIL ImageDraw 实例。
+        @param xy 起始坐标 (x, y)。
+        @param text 待绘制的长文本。
+        @param fnt 字体对象。
+        @param fill 文字颜色。
+        @param width 每行最大像素宽度。
+        @param gap 行间距，默认 6。
+        @return 最后一行的底部 Y 坐标。
+    """
     x, y = xy
     for line in fit_wrap_text(draw, text, fnt, width):
         draw.text((x, y), line, font=fnt, fill=fill)
@@ -47,6 +70,13 @@ def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, fnt,
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], color: str = "#61758A") -> None:
+    """ @brief 绘制带三角箭头的直线。
+        @param draw PIL ImageDraw 实例。
+        @param start 起点 (x, y)。
+        @param end 终点 (x, y)。
+        @param color CSS 颜色字符串，默认灰蓝色。
+        @return 无返回值。
+    """
     sx, sy = start
     ex, ey = end
     length = math.hypot(ex - sx, ey - sy)
@@ -66,12 +96,30 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int
 
 
 def node(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], title: str, body: str, fill: str) -> None:
+    """ @brief 绘制含标题和正文的圆角矩形节点。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 节点区域。
+        @param title 节点上方标题（粗体）。
+        @param body 节点下方正文（灰色）。
+        @param fill 背景填充色。
+        @return 无返回值。
+    """
     draw.rounded_rectangle(box, radius=10, fill=fill, outline=PALETTE["line"], width=2)
     center_text(draw, (box[0] + 10, box[1] + 12, box[2] - 10, box[1] + 54), title, font(24, True), PALETTE["ink"])
     draw_wrapped(draw, (box[0] + 18, box[1] + 66), body, font(24), PALETTE["muted"], box[2] - box[0] - 36, gap=8)
 
 
 def table(draw: ImageDraw.ImageDraw, x: int, y: int, headers: list[str], rows: list[list[str]], widths: list[int], row_h: int = 56) -> int:
+    """ @brief 绘制带表头的简单表格。
+        @param draw PIL ImageDraw 实例。
+        @param x 表格左上角 X。
+        @param y 表格左上角 Y。
+        @param headers 表头列名列表。
+        @param rows 数据行。
+        @param widths 每列像素宽度列表。
+        @param row_h 行高，默认 56。
+        @return 表格底部 Y 坐标。
+    """
     xx = x
     for header, width in zip(headers, widths):
         draw.rectangle((xx, y, xx + width, y + row_h), fill="#EAF3FF", outline=PALETTE["line"], width=2)
@@ -89,6 +137,11 @@ def table(draw: ImageDraw.ImageDraw, x: int, y: int, headers: list[str], rows: l
 
 
 def draw_schedule_compare(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制 Flooding vs Layered 调度时序对比图：两种调度的模块流程图。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note Flooding：先全 CN 再全 VN；Layered：逐层更新，新值立即可用。
+    """
     draw.text((80, 165), "Flooding 与 Layered 时序差异", font=font(34, True), fill=PALETTE["blue"])
     # Flooding row.
     y = 235
@@ -131,6 +184,11 @@ def draw_schedule_compare(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_layer_table(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制小 H 矩阵的 layer 更新表 + Zc 地址访问说明面板。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note 展示 row group、connected cols 和 read-modify-write 关系。
+    """
     draw.text((980, 165), "小 H 的 layer 更新顺序", font=font(34, True), fill=PALETTE["green"])
     rows = [
         ["0", "c0", "v0,v1,v3", "更新 L0,L1,L3"],
@@ -159,6 +217,11 @@ def draw_layer_table(draw: ImageDraw.ImageDraw) -> None:
 
 
 def draw_flow_and_log(draw: ImageDraw.ImageDraw) -> None:
+    """ @brief 绘制 Layered decoder loop 流程图 + 最小验证日志字段清单。
+        @param draw PIL ImageDraw 实例。
+        @return 无返回值。
+        @note 五步循环：iteration -> layer -> CN update -> VN update -> syndrome check。
+    """
     panel = (80, 965, 1830, 1335)
     draw.rounded_rectangle(panel, radius=16, fill="#FFFDF6", outline="#E2CD7A", width=2)
     draw.text((120, 1000), "Layered decoder loop 与验证日志", font=font(34, True), fill=PALETTE["ink"])
@@ -190,6 +253,10 @@ def draw_flow_and_log(draw: ImageDraw.ImageDraw) -> None:
 
 
 def main() -> None:
+    """ @brief 脚本入口：生成 T8.7 LDPC Flooding 与 Layered 译码调度对比图。
+        @return 无返回值。
+        @note 产出 1920x1400 PNG：调度对比 + layer 表 + decoder loop 流程图。
+    """
     img = Image.new("RGB", (1920, 1400), PALETTE["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((80, 48), "LDPC Flooding 与 Layered 译码调度", font=font(46, True), fill=PALETTE["ink"])

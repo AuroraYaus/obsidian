@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+<rect width="900" height="520" fill="white"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#888"/></marker></defs>
+<text x="450.0" y="24" text-anchor="middle" font-size="15" fill="#1565c0" font-weight="bold">端到端数据流：RE 网格 → 译码器输入 LLR 向量</text>
+<rect x="260.0" y="60" width="380" height="48" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+<text x="450" y="78" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">RE 网格</text>
+<text x="450" y="94" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">时频二维 · LTE或NR</text>
+<text x="634.0" y="102" text-anchor="end" font-size="9" fill="#888">T2.1–T2.5</text>
+<line x1="450" y1="108" x2="450" y2="118" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="260.0" y="118" width="380" height="48" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+<text x="450" y="136" text-anchor="middle" font-size="12" fill="#6a1b9a" font-weight="bold">信道估计+均衡</text>
+<text x="450" y="152" text-anchor="middle" font-size="12" fill="#6a1b9a" font-weight="bold">DM-RS辅助 · 单抽头</text>
+<text x="634.0" y="160" text-anchor="end" font-size="9" fill="#888">T2.7</text>
+<line x1="450" y1="166" x2="450" y2="176" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="260.0" y="176" width="380" height="48" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+<text x="450" y="194" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">接收调制符号</text>
+<text x="450" y="210" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">y = h·x + n</text>
+<text x="634.0" y="218" text-anchor="end" font-size="9" fill="#888">T2.7</text>
+<line x1="450" y1="224" x2="450" y2="234" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="260.0" y="234" width="380" height="48" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+<text x="450" y="252" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">软解调</text>
+<text x="450" y="268" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">每RE→Q_m个LLR</text>
+<text x="634.0" y="276" text-anchor="end" font-size="9" fill="#888">T2.8–T2.9</text>
+<line x1="450" y1="282" x2="450" y2="292" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="260.0" y="292" width="380" height="48" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+<text x="450" y="310" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">速率恢复</text>
+<text x="450" y="326" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">puncturing填充0</text>
+<text x="634.0" y="334" text-anchor="end" font-size="9" fill="#888">T7/T9</text>
+<line x1="450" y1="340" x2="450" y2="350" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="260.0" y="350" width="380" height="48" rx="6" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+<text x="450" y="368" text-anchor="middle" font-size="12" fill="#00695c" font-weight="bold">码块切分</text>
+<text x="450" y="384" text-anchor="middle" font-size="12" fill="#00695c" font-weight="bold">按CB边界→E_r</text>
+<text x="634.0" y="392" text-anchor="end" font-size="9" fill="#888">T3.2–T3.5</text>
+<line x1="450" y1="398" x2="450" y2="408" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="260.0" y="408" width="380" height="48" rx="6" fill="#eceff1" stroke="#37474f" stroke-width="2"/>
+<text x="450" y="426" text-anchor="middle" font-size="12" fill="#37474f" font-weight="bold">译码器核心</text>
+<text x="450" y="442" text-anchor="middle" font-size="12" fill="#37474f" font-weight="bold">Turbo/LDPC/Polar</text>
+<text x="634.0" y="450" text-anchor="end" font-size="9" fill="#888">T6/T8</text>
+<text x="670.0" y="80" font-size="10" fill="#1565c0">LTE: 固定15kHz SCS</text>
+<text x="670.0" y="96" font-size="10" fill="#1565c0">NR: 可变μ=0–4 · BWP</text>
+<text x="670.0" y="128" font-size="10" fill="#6a1b9a">单抽头均衡 · 每子载波÷H_k</text>
+<text x="670.0" y="160" font-size="10" fill="#e65100">constellation symbol</text>
+<text x="670.0" y="176" font-size="10" fill="#e65100">非OFDM symbol（T2.1区分）</text>
+<text x="670.0" y="208" font-size="10" fill="#c62828">BPSK/QPSK: T2.8</text>
+<text x="670.0" y="224" font-size="10" fill="#c62828">16/64/256QAM: T2.9</text>
+<text x="670.0" y="256" font-size="10" fill="#2e7d32">Turbo sub-block: T7</text>
+<text x="670.0" y="272" font-size="10" fill="#2e7d32">LDPC bit selection: T9</text>
+<text x="670.0" y="304" font-size="10" fill="#00695c">C个码块，各长度E_r</text>
+<text x="670.0" y="336" font-size="10" fill="#37474f">译码器不感知RE网格</text>
+<text x="670.0" y="352" font-size="10" fill="#37474f">只消费一维LLR向量</text>
+<text x="450.0" y="505" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">译码器输入接口：每CB一个LLR向量（长度E_r）——LTE与NR在此收敛为统一抽象</text>
+</svg>

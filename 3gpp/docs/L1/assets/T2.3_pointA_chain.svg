@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="310" viewBox="0 0 900 310">
+<rect width="900" height="310" fill="white"/>
+<text x="450.0" y="24" text-anchor="middle" font-size="15" fill="#1565c0" font-weight="bold">Point A → CRB → BWP → PRB 频域偏移关系</text>
+<rect x="100" y="80" width="680" height="26" fill="#f0f4f8" stroke="#888" stroke-width="1.5" rx="3"/>
+<text x="90" y="74" text-anchor="end" font-size="13" fill="black" font-weight="bold">Point A</text>
+<line x1="100" y1="66" x2="100" y2="80" stroke="black" stroke-width="1.5"/>
+<polygon points="100,80 94,90 106,90" fill="black"/>
+<text x="796" y="98.0" text-anchor="start" font-size="12" fill="#555">频率 →</text>
+<line x1="100.0" y1="80" x2="100.0" y2="74" stroke="#555" stroke-width="1"/>
+<text x="100.0" y="70" text-anchor="middle" font-size="10" fill="#555">CRB0</text>
+<line x1="168.0" y1="80" x2="168.0" y2="74" stroke="#555" stroke-width="1"/>
+<line x1="236.0" y1="80" x2="236.0" y2="74" stroke="#555" stroke-width="1"/>
+<text x="236.0" y="70" text-anchor="middle" font-size="10" fill="#555">CRB2</text>
+<line x1="304.0" y1="80" x2="304.0" y2="74" stroke="#555" stroke-width="1"/>
+<line x1="372.0" y1="80" x2="372.0" y2="74" stroke="#555" stroke-width="1"/>
+<text x="372.0" y="70" text-anchor="middle" font-size="10" fill="#555">CRB4</text>
+<line x1="440.0" y1="80" x2="440.0" y2="74" stroke="#555" stroke-width="1"/>
+<line x1="508.0" y1="80" x2="508.0" y2="74" stroke="#555" stroke-width="1"/>
+<text x="508.0" y="70" text-anchor="middle" font-size="10" fill="#555">CRB6</text>
+<line x1="576.0" y1="80" x2="576.0" y2="74" stroke="#555" stroke-width="1"/>
+<line x1="644.0" y1="80" x2="644.0" y2="74" stroke="#555" stroke-width="1"/>
+<text x="644.0" y="70" text-anchor="middle" font-size="10" fill="#555">CRB8</text>
+<line x1="712.0" y1="80" x2="712.0" y2="74" stroke="#555" stroke-width="1"/>
+<line x1="780.0" y1="80" x2="780.0" y2="74" stroke="#555" stroke-width="1"/>
+<text x="780.0" y="70" text-anchor="middle" font-size="10" fill="#555">CRB10</text>
+<rect x="236.0" y="83" width="340.0" height="20" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" rx="2"/>
+<text x="406.0" y="98.0" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">BWP i</text>
+<text x="236.0" y="58" text-anchor="middle" font-size="10" fill="#1565c0">N_BWP_start=2</text>
+<line x1="236.0" y1="64" x2="236.0" y2="80" stroke="#1565c0" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="270.0" y="124" text-anchor="middle" font-size="9" fill="#1565c0">PRB0</text>
+<text x="338.0" y="124" text-anchor="middle" font-size="9" fill="#1565c0">PRB1</text>
+<text x="406.0" y="124" text-anchor="middle" font-size="9" fill="#1565c0">PRB2</text>
+<text x="474.0" y="124" text-anchor="middle" font-size="9" fill="#1565c0">PRB3</text>
+<text x="542.0" y="124" text-anchor="middle" font-size="9" fill="#1565c0">PRB4</text>
+<line x1="236.0" y1="128" x2="236.0" y2="114" stroke="#1565c0" stroke-width="1"/>
+<line x1="576.0" y1="128" x2="576.0" y2="114" stroke="#1565c0" stroke-width="1"/>
+<text x="100" y="156" font-size="12" fill="#333">CRB = 从 Point A 起始的绝对编号（各 Numerology 独立）</text>
+<text x="100" y="176" font-size="12" fill="#333">BWP = CRB 范围的连续子集（每 UE 最多 4 个，1 个激活）</text>
+<text x="100" y="196" font-size="12" fill="#333">PRB(BWP内) = CRB - N_BWP_start（BWP 内的局部编号）</text>
+<text x="450.0" y="294" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">n_PRBU = n_CRBU - N_BWP_start  ——  局部 PRB = 绝对 CRB - BWP 起始偏移</text>
+</svg>

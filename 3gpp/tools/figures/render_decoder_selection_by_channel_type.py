@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render LTE/NR decoder selection by channel and information type."""
+""" @file render_decoder_selection_by_channel_type.py
+    @brief 渲染按信道和信息类型选择 LTE/NR 译码器的决策流程图。
+    @date 2025
+    @note 涵盖协议映射速查表、descriptor 分支逻辑和边界情况检测点。
+    @see render_lte_dl_ul_decoder_context.py 对应的 LTE DL/UL 译码上下文图
+"""
 
 from __future__ import annotations
 
@@ -38,6 +43,11 @@ COL = {
 
 
 def tokenize(text: str) -> list[str]:
+    """ @brief 将文本按单词和空白符分解为 token 列表，用于后续自动换行。
+        @param text 待分词的原始字符串，可含中英文混排和换行符。
+        @return 分词结果列表：每个元素为完整单词、单个空白或单个特殊字符。
+        @note ASCII 字母数字和 /_-+.[]=() 视为单词内字符，其余按字符单独拆分。
+    """
     tokens: list[str] = []
     cur = ""
     for ch in text:
@@ -59,6 +69,14 @@ def tokenize(text: str) -> list[str]:
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.FreeTypeFont, width: int) -> list[str]:
+    """ @brief 按给定像素宽度对文本自动换行，返回分行后的字符串列表。
+        @param draw PIL ImageDraw 实例，用于测量文本实际渲染宽度。
+        @param text 待分行的原始文本。
+        @param fnt PIL 字体对象。
+        @param width 每行最大像素宽度（整数）。
+        @return 按宽度裁剪后的字符串行列表。
+        @note 调用 tokenize() 分词后再逐 token 拼接，超过宽度则换行。
+    """
     lines: list[str] = []
     cur = ""
     for tok in tokenize(text):
@@ -79,6 +97,13 @@ def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.FreeTypeFont, widt
 
 
 def text_box_height(draw: ImageDraw.ImageDraw, lines: list[str], fnt: ImageFont.FreeTypeFont, gap: int) -> int:
+    """ @brief 计算多行文本的总像素高度（含行间距）。
+        @param draw PIL ImageDraw 实例。
+        @param lines 文本行列表。
+        @param fnt 字体对象。
+        @param gap 行间距（像素）。
+        @return 总像素高度。
+    """
     heights = []
     for line in lines:
         bbox = draw.textbbox((0, 0), line, font=fnt)
@@ -96,6 +121,17 @@ def draw_centered(
     gap: int = 7,
     pad: int = 24,
 ) -> None:
+    """ @brief 在指定矩形内竖直居中对齐绘制多行文本（支持左右内边距）。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 绘制区域。
+        @param text 待绘制的字符串或字符串列表。
+        @param size 字体大小（像素）。
+        @param color CSS 颜色字符串，默认为 ink 色。
+        @param bold 是否使用粗体。
+        @param gap 行间距（像素）。
+        @param pad 左右内边距（像素），默认 24。
+        @return 无返回值。
+    """
     fnt = font(size, bold)
     raw = text if isinstance(text, list) else [text]
     lines: list[str] = []
@@ -112,10 +148,19 @@ def draw_centered(
 
 
 def center(box: tuple[int, int, int, int]) -> tuple[float, float]:
+    """ @brief 返回矩形包围盒的几何中心坐标。
+        @param box (left, top, right, bottom) 四元组。
+        @return (cx, cy) 中心浮点坐标。
+    """
     return ((box[0] + box[2]) / 2, (box[1] + box[3]) / 2)
 
 
 def boundary_point(box: tuple[int, int, int, int], toward: tuple[float, float]) -> tuple[float, float]:
+    """ @brief 计算矩形边界上与目标方向对齐的交点，用于绘制箭头连接线。
+        @param box (left, top, right, bottom) 矩形包围盒。
+        @param toward 目标点 (x, y)。
+        @return 边界交点坐标 (x, y)。
+    """
     cx, cy = center(box)
     dx, dy = toward[0] - cx, toward[1] - cy
     if abs(dx) < 1e-6 and abs(dy) < 1e-6:
@@ -127,6 +172,14 @@ def boundary_point(box: tuple[int, int, int, int], toward: tuple[float, float]) 
 
 
 def arrow(draw: ImageDraw.ImageDraw, src: tuple[int, int, int, int], dst: tuple[int, int, int, int], color: str) -> None:
+    """ @brief 在两个矩形之间绘制带三角箭头的连接线。
+        @param draw PIL ImageDraw 实例。
+        @param src 源矩形 (left, top, right, bottom)。
+        @param dst 目标矩形 (left, top, right, bottom)。
+        @param color CSS 颜色字符串。
+        @return 无返回值。
+        @note 箭头头部尺寸：head_len=18, head_w=10；线条宽度 4。
+    """
     x0, y0 = boundary_point(src, center(dst))
     x1, y1 = boundary_point(dst, center(src))
     length = math.hypot(x1 - x0, y1 - y0)
@@ -145,6 +198,15 @@ def arrow(draw: ImageDraw.ImageDraw, src: tuple[int, int, int, int], dst: tuple[
 
 
 def rounded(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], fill: str, outline: str, radius: int = 18, width: int = 2) -> None:
+    """ @brief 绘制圆角矩形（简化 wrapper）。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 矩形区域。
+        @param fill 填充色。
+        @param outline 边框色。
+        @param radius 圆角半径，默认 18。
+        @param width 边框宽度，默认 2。
+        @return 无返回值。
+    """
     draw.rounded_rectangle(box, radius=radius, fill=fill, outline=outline, width=width)
 
 
@@ -156,12 +218,28 @@ def node(
     outline: str,
     size: int = 24,
 ) -> tuple[int, int, int, int]:
+    """ @brief 绘制一个带文本的圆角矩形节点。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 节点包围盒。
+        @param text 节点内文本。
+        @param fill 背景填充色。
+        @param outline 边框颜色。
+        @param size 字体大小，默认 24。
+        @return 节点包围盒（传入 box 原样返回）。
+    """
     rounded(draw, box, fill, outline, 18, 2)
     draw_centered(draw, box, text, size=size, bold=False)
     return box
 
 
 def draw_mapping_table(draw: ImageDraw.ImageDraw, x: int, y: int) -> int:
+    """ @brief 绘制协议映射速查表：制式、信道类型、译码器家族、协议锚点、判定要点。
+        @param draw PIL ImageDraw 实例。
+        @param x 表格左上角 X 坐标。
+        @param y 表格左上角 Y 坐标。
+        @return 表格底部 Y 坐标。
+        @note 六行数据覆盖 LTE/NR 的数据和控制信道，包含 3GPP 协议锚点引用。
+    """
     draw.text((x, y), "协议映射速查表", font=font(34, True), fill=COL["ink"])
     y += 58
     cols = [190, 330, 250, 320, 600]
@@ -188,6 +266,12 @@ def draw_mapping_table(draw: ImageDraw.ImageDraw, x: int, y: int) -> int:
 
 
 def draw_decision_flow(draw: ImageDraw.ImageDraw, y: int) -> int:
+    """ @brief 绘制接收端 descriptor 选择逻辑分支图：从 descriptor 出发按 RAT/信道类型分叉到四种译码器。
+        @param draw PIL ImageDraw 实例。
+        @param y 图区顶部 Y 坐标。
+        @return 图区底部 Y 坐标。
+        @note 三层分支：RAT -> 信道类型 -> decoder_type，用箭头连接各节点。
+    """
     draw.text((90, y), "接收端 descriptor 选择逻辑", font=font(34, True), fill=COL["ink"])
     y += 62
     boxes = {
@@ -220,6 +304,12 @@ def draw_decision_flow(draw: ImageDraw.ImageDraw, y: int) -> int:
 
 
 def draw_edge_cases(draw: ImageDraw.ImageDraw, y: int) -> int:
+    """ @brief 绘制边界情况卡片：小 payload、UCI on PUSCH、DCI CRC/RNTI、NR CBG 四种场景。
+        @param draw PIL ImageDraw 实例。
+        @param y 卡片区顶部 Y 坐标。
+        @return 卡片区底部 Y 坐标。
+        @note 四张卡片并排，每张 395x145，带颜色主题和正文说明。
+    """
     draw.text((90, y), "边界情况与工程检测点", font=font(34, True), fill=COL["ink"])
     y += 58
     items = [
@@ -239,10 +329,19 @@ def draw_edge_cases(draw: ImageDraw.ImageDraw, y: int) -> int:
 
 
 def edge_check(img: Image.Image) -> dict[str, int]:
+    """ @brief 检测图像四边是否有非白色像素，用于验证画布尺寸是否足够容纳所有内容。
+        @param img PIL Image 对象。
+        @return 字典，键为 "top"/"bottom"/"left"/"right"，值为对应边缘的非白像素计数。
+        @note 若某边缘非白像素多，说明内容可能被裁剪，需增大画布尺寸。
+    """
     pix = img.load()
     w, h = img.size
 
     def nonwhite(points: list[tuple[int, int]]) -> int:
+        """ @brief 统计点列表中非白色像素的数量。
+            @param points 待检查的像素坐标列表 [(x, y), ...]。
+            @return 非白色像素计数。
+        """
         count = 0
         for x, y in points:
             if pix[x, y] != (255, 255, 255):
@@ -258,6 +357,10 @@ def edge_check(img: Image.Image) -> dict[str, int]:
 
 
 def main() -> None:
+    """ @brief 脚本入口：生成 T11.5 按信道和信息类型选择译码器决策图。
+        @return 无返回值。
+        @note 产出 1900x2200 PNG，含协议速查表、descriptor 分支、边界卡片和读图说明。
+    """
     img = Image.new("RGB", (1900, 2200), COL["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((70, 54), "T11.5 按信道和信息类型选择译码器", font=font(44, True), fill=COL["ink"])

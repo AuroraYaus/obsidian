@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render the NR Polar receive-side decoding chain overview."""
+"""@file render_nr_polar_decoder_chain_overview.py
+@brief 渲染 NR Polar 接收侧译码链路总览图，涵盖 UCI/DCI 共用主链路、descriptor 字段和工程检查点。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -39,6 +42,12 @@ PALETTE = {
 
 
 def text_size(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.FreeTypeFont) -> tuple[int, int]:
+    """@brief 获取文本在指定字体下的像素宽度和高度。
+    @param draw PIL ImageDraw 绘制上下文
+    @param text 要测量的文本
+    @param fnt PIL 字体对象
+    @return (宽度, 高度) 像素元组
+    """
     box = draw.textbbox((0, 0), text, font=fnt)
     return box[2] - box[0], box[3] - box[1]
 
@@ -50,6 +59,14 @@ def center_text(
     fnt: ImageFont.FreeTypeFont,
     fill: str,
 ) -> None:
+    """@brief 在矩形区域内居中绘制文本，修正 bbox 原点偏移以确保精确对齐。
+    @param draw PIL ImageDraw 绘制上下文
+    @param box 目标矩形区域 (x0, y0, x1, y1)
+    @param text 要绘制的文本
+    @param fnt PIL 字体对象
+    @param fill 文本颜色
+    @return None
+    """
     bbox = draw.textbbox((0, 0), text, font=fnt)
     w = bbox[2] - bbox[0]
     h = bbox[3] - bbox[1]
@@ -67,6 +84,17 @@ def wrap_draw(
     max_chars: int,
     line_gap: int = 6,
 ) -> int:
+    """@brief 按最大字符数换行绘制文本，支持段落（\\n）分隔，返回绘制结束后的 y 坐标。
+    @param draw PIL ImageDraw 绘制上下文
+    @param xy 起始左上角坐标 (x, y)
+    @param text 需要换行的文本（可含 \\n 段落分隔）
+    @param fnt PIL 字体对象
+    @param fill 文本颜色
+    @param max_chars 每行最大字符数
+    @param line_gap 行间距（像素），默认 6
+    @return 绘制结束后的 y 坐标
+    @note 使用 textwrap.wrap 按字符宽度换行，段落间额外添加一个 line_gap。
+    """
     x, y = xy
     for paragraph in text.split("\n"):
         for line in textwrap.wrap(paragraph, width=max_chars, break_long_words=False):
@@ -84,6 +112,15 @@ def node(
     fill: str,
     stripe: str,
 ) -> None:
+    """@brief 绘制带彩色顶部条纹的流程节点框，用于展示译码链路中的处理步骤。
+    @param draw PIL ImageDraw 绘制上下文
+    @param box 矩形区域 (x0, y0, x1, y1)
+    @param title 节点标题（24px 粗体）
+    @param body 节点正文（24px 常规，按字符宽度自动换行）
+    @param fill 框内填充色
+    @param stripe 顶部 12px 彩色条纹颜色
+    @return None
+    """
     draw.rounded_rectangle(box, radius=12, fill=fill, outline=PALETTE["line"], width=2)
     draw.rounded_rectangle((box[0], box[1], box[2], box[1] + 12), radius=12, fill=stripe, outline=stripe)
     center_text(draw, (box[0] + 8, box[1] + 22, box[2] - 8, box[1] + 66), title, font(24, True), PALETTE["ink"])
@@ -91,6 +128,14 @@ def node(
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int], color: str = "#61758A") -> None:
+    """@brief 绘制带箭头线段，连接流程节点展示译码链路的数据流向。
+    @param draw PIL ImageDraw 绘制上下文
+    @param start 箭头起点坐标 (x, y)
+    @param end 箭头终点坐标 (x, y)
+    @param color 线条和箭头填充颜色，默认 "#61758A"
+    @return None
+    @note 箭杆线宽 4px，箭头长度 15px、宽度 9px。
+    """
     sx, sy = start
     ex, ey = end
     length = math.hypot(ex - sx, ey - sy)
@@ -110,6 +155,15 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[int, int], end: tuple[int, int
 
 
 def tag(draw: ImageDraw.ImageDraw, x: int, y: int, label: str, fill: str) -> int:
+    """@brief 绘制彩色标签徽章（圆角矩形+白色文字），返回下一个标签的起始 x 坐标用于水平链式排列。
+    @param draw PIL ImageDraw 绘制上下文
+    @param x 标签左上角 x 坐标
+    @param y 标签左上角 y 坐标
+    @param label 标签文字（白色绘制）
+    @param fill 标签背景色
+    @return 下一个标签应放置的 x 坐标（当前标签右边界+10px）
+    @note 用于排列 descriptor 字段标签和流程步骤标签。
+    """
     fnt = font(24, True)
     w, h = text_size(draw, label, fnt)
     pad_x, pad_y = 24, 10
@@ -120,6 +174,16 @@ def tag(draw: ImageDraw.ImageDraw, x: int, y: int, label: str, fill: str) -> int
 
 
 def main() -> None:
+    """@brief 脚本入口：生成 NR Polar 控制信息接收侧译码链路总览图 T10.1_NR_Polar_decoder_chain_overview.png。
+    @note 图中包含四个主区域：
+    - 顶部：六节点水平链路（Demapper LLR -> Rate recovery -> Polar decoder -> Path list -> CRC aided select -> Control bits）。
+    - 中部：UCI/DCI 共同主链路和差异字段对照表。
+    - 左下：小型控制块流程例子教学面板。
+    - 右下：最小 Polar decoder descriptor 字段标签集。
+    关键教学点：UCI 与 DCI 共用 Polar 主链路，但 CRC、RNTI 和上下文字段不同。
+    @see render_nr_polar_ca_scl_selector.py CA-SCL 最终路径选择图
+    @see render_nr_polar_channel_polarization.py N=4 Polar 极化变换图
+    """
     img = Image.new("RGB", (2200, 1520), PALETTE["bg"])
     draw = ImageDraw.Draw(img)
 

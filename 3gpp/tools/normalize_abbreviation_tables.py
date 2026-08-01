@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Ensure lesson abbreviation tables contain all used standard terms."""
+"""
+@file normalize_abbreviation_tables.py
+@brief 扫描讲义中实际使用的技术缩写，确保每篇讲义的"本节缩写说明"表格包含该节用到的所有标准术语，
+       并补充缺失项。目的：维护各节缩写表的完整性，避免读者在无定义的情况下遇到缩写。
+@date 2026-07-22
+"""
 
 from __future__ import annotations
 
@@ -11,11 +16,26 @@ from audit_lesson_terms import TECH_TERM_RE, TECH_TERMS, strip_code_fences
 
 
 def used_terms(text: str) -> list[str]:
+    """
+    @brief 从讲义正文中检测实际出现的技术缩写（排除代码块内的假阳性），
+           返回该节真正需要解释的缩写列表。
+    @param text 讲义 Markdown 全文。
+    @return 在正文中出现过的标准缩写列表。
+    @note 检测前先通过 strip_code_fences 移除代码块，避免代码中的变量名或注释被误判为缩写。
+    """
     stripped = strip_code_fences(text)
     return [abbr for abbr in TECH_TERMS if TECH_TERM_RE[abbr].search(stripped)]
 
 
 def normalize_table(text: str) -> tuple[str, int]:
+    """
+    @brief 规范化单篇讲义的缩写说明表格：若缺少"本节缩写说明"小节则追加，
+           若已有但缺少术语则补充缺失行。幂等：若表格已包含全部术语则不做修改。
+    @param text 讲义 Markdown 全文。
+    @return (new_text, added_count) 元组，added_count 为新增缩写行数（0 表示无需修改）。
+    @note 新插入的缩写说明表格紧随大标题（第一个 # 标题行）之后；
+          已有表格若已覆盖所有需求术语则跳过写入磁盘。
+    """
     marker = "## 本节缩写说明"
     needed_terms = used_terms(text)
     if not needed_terms:
@@ -78,6 +98,11 @@ def normalize_table(text: str) -> tuple[str, int]:
 
 
 def main() -> int:
+    """
+    @brief 脚本入口：对指定文件列表逐一执行缩写表格规范化，
+           输出每文件新增行数和总计统计。
+    @return 0 正常完成。
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="+", type=Path)
     args = parser.parse_args()
@@ -96,5 +121,9 @@ def main() -> int:
     return 0
 
 
+# @brief 规范化讲义缩写说明表格：检测正文使用的术语并补充到"本节缩写说明"表格中。
+# @usage python tools/normalize_abbreviation_tables.py FILE...
+# @args FILE...  要处理的一个或多个 .md 文件路径。
+# @exit_code 0 正常完成。
 if __name__ == "__main__":
     raise SystemExit(main())

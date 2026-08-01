@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Audit Markdown lessons for migrated Python figure content."""
+"""@file audit_python_figure_body_equivalents.py
+@brief 审计讲义正文中 Python 生成图片的等价内容是否到位——图片语义必须由
+       Mermaid/Markdown 表格/正文文字承接，不能仅存在于像素中。
+@date 2026-07-22
+
+本工具检查每张引用的图片是否在附近窗口内附带了等价内容标记
+（"Mermaid 等价图""Markdown 等价表""图片内容正文等价"），
+并对等价内容的质量进行二次校验：Mermaid 子图必须有足够节点/边，
+表格必须有足够数据行，正文等价必须有实质性文字量。
+"""
 
 from __future__ import annotations
 
@@ -76,6 +85,9 @@ class Finding:
 
 
 def iter_markdown_files(paths: list[Path]) -> list[Path]:
+    """@brief  从输入路径中递归收集所有 .md 文件，去重排序。
+    @param  paths  文件或目录路径列表。
+    @return        去重排序后的 Markdown 文件路径列表。"""
     files: list[Path] = []
     for path in paths:
         if path.is_dir():
@@ -86,6 +98,11 @@ def iter_markdown_files(paths: list[Path]) -> list[Path]:
 
 
 def has_marker_near(lines: list[str], image_line_index: int, window_lines: int) -> bool:
+    """@brief  检查图片引用上方指定窗口内是否出现等价内容标记。
+    @param  lines             文件的按行列表。
+    @param  image_line_index  图片引用所在行号（0-based）。
+    @param  window_lines      向上搜索的窗口大小。
+    @return                   True 表示附近存在等价内容标记。"""
     start = max(0, image_line_index - window_lines)
     end = min(len(lines), image_line_index + window_lines + 1)
     nearby = "\n".join(lines[start:end])
@@ -93,6 +110,13 @@ def has_marker_near(lines: list[str], image_line_index: int, window_lines: int) 
 
 
 def equivalent_window(lines: list[str], image_line_index: int, window_lines: int) -> tuple[int, list[str]] | None:
+    """@brief  定位图片引用下方的等价内容块——从引用行向下扫描到第一个等价标记，
+             收集从标记到块结束之间的所有行。
+    @param  lines             文件的按行列表。
+    @param  image_line_index  图片引用行号（0-based）。
+    @param  window_lines      向下搜索的窗口大小。
+    @return                   元组 (标记行号, 块内容行列表)；若无等价标记则返回 None。
+    @note   块边界由下一张图片、下一个 ## 标题或其他图的 `图 ` 开头行界定。"""
     start = image_line_index + 1
     end = min(len(lines), image_line_index + window_lines + 1)
     marker_idx = None
@@ -121,6 +145,10 @@ def equivalent_window(lines: list[str], image_line_index: int, window_lines: int
 
 
 def mermaid_stats(block: list[str]) -> tuple[int, int]:
+    """@brief  统计等价内容块中 Mermaid 图表的节点数和边数。
+    @param  block  等价内容块的按行列表。
+    @return        (节点数, 边数) 元组，用于质量门槛判断。
+    @note   过浅的图表（<4 节点或 <3 边）被视为低质量等价内容。"""
     in_mermaid = False
     nodes = 0
     edges = 0
@@ -140,6 +168,10 @@ def mermaid_stats(block: list[str]) -> tuple[int, int]:
 
 
 def markdown_table_data_rows(block: list[str]) -> int:
+    """@brief  统计等价内容块中 Markdown 表格的有效数据行数（不含表头和分隔行）。
+    @param  block  等价内容块的按行列表。
+    @return        有效数据行数。
+    @note   少于 4 行数据的表格被视为低质量等价内容。"""
     rows = 0
     for line in block:
         stripped = line.strip()
@@ -155,6 +187,11 @@ def markdown_table_data_rows(block: list[str]) -> int:
 
 
 def substantive_lines(block: list[str]) -> list[str]:
+    """@brief  过滤等价内容块中的实质性正文行，剔除模板占位语、元标签和审计说明。
+    @param  block  等价内容块的按行列表。
+    @return        仅含实质性内容的行列表——用于评估等价内容文字量是否充足。
+    @note   移除所有 GENERIC_PHRASES（如"相邻正文表格承接字段"等模板套话）、
+             标记行和脚本/审计说明行。"""
     useful: list[str] = []
     for line in block:
         stripped = line.strip()
@@ -171,6 +208,14 @@ def substantive_lines(block: list[str]) -> list[str]:
 
 
 def quality_findings(path: Path, line: int, image: str, block: list[str]) -> list[Finding]:
+    """@brief  对图片的等价内容块执行质量门槛检查——
+             检测模板占位语、Mermaid 过浅、表格过空、正文过短、仅含审计说明。
+    @param  path   所属 Markdown 文件路径。
+    @param  line   等价标记所在行号。
+    @param  image  原始图片引用字符串。
+    @param  block  等价内容块的按行列表。
+    @return        质量问题 Findings 列表。
+    @note   四个维度：占位语检测、Mermaid 深度、表格行数、实质性文字量。"""
     findings: list[Finding] = []
     block_text = "\n".join(block)
     if any(phrase in block_text for phrase in GENERIC_PHRASES):
@@ -238,6 +283,14 @@ def audit_markdown_files(
     forbid_meta_labels: bool = False,
     forbid_image_prose: bool = False,
 ) -> list[Finding]:
+    """@brief  对一组 Markdown 文件执行图片正文等价内容的完整审计。
+    @param  paths                    待扫描的文件或目录路径。
+    @param  window_lines             搜索等价标记的窗口行数（默认 40）。
+    @param  allow_body_image_embeds  是否允许正文中嵌入图片（默认允许，用于迁移过渡期）。
+    @param  forbid_meta_labels       是否禁止正文中出现等价元标签（严格模式）。
+    @param  forbid_image_prose       是否禁止正文中出现图片生成/审计相关描述（严格模式）。
+    @return                          所有发现问题 Findings 的汇总列表。
+    @note   三个独立维度：等价内容存在性、等价内容质量、元标签/审计文案位置合规。"""
     findings: list[Finding] = []
     for path in iter_markdown_files(paths):
         lines = path.read_text(encoding="utf-8").splitlines()
@@ -296,6 +349,13 @@ def audit_equivalent_for_asset(
     image: str,
     window_lines: int,
 ) -> list[Finding]:
+    """@brief  对单个图片资产检查是否存在等价内容块，如有则进一步检查质量。
+    @param  path             所属 Markdown 文件路径。
+    @param  lines            文件的按行列表。
+    @param  asset_line_index  图片引用行号（0-based）。
+    @param  image             图片引用字符串（用于错误消息）。
+    @param  window_lines      搜索窗口大小。
+    @return                   Findings 列表；包含 missing_body_equivalent 或质量问题。"""
     block = equivalent_window(lines, asset_line_index, window_lines)
     if block is None:
         return [
@@ -311,6 +371,16 @@ def audit_equivalent_for_asset(
 
 
 def main(argv: list[str] | None = None) -> int:
+    """@brief    脚本入口：审计讲义正文中 Python 图片的等价内容是否到位。
+    @param    argv  命令行参数列表（sys.argv）。
+    @usage    python audit_python_figure_body_equivalents.py [paths...] [--window-lines <N>]
+              [--allow-body-image-embeds] [--allow-meta-labels] [--allow-image-prose]
+    @args     paths                      可选的扫描路径（默认 L1/L2/L3）。
+    @args     --window-lines <N>          等价标记搜索窗口大小（默认 40 行）。
+    @args     --allow-body-image-embeds   允许正文嵌入图片（过渡期选项）。
+    @args     --allow-meta-labels         允许正文出现等价元标签（过渡期选项）。
+    @args     --allow-image-prose         允许正文出现图片生成/审计描述（过渡期选项）。
+    @exit_code                            0 = 全部通过；1 = 发现问题。"""
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", type=Path, default=DEFAULT_DOC_ROOTS)
     parser.add_argument("--window-lines", type=int, default=40)

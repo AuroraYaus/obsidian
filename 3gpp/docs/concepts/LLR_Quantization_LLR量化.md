@@ -27,6 +27,6 @@ source_spec: "Engineering methodology; decoder input signal conditioning"
 
 - [[LLR_对数似然比]]
 - [[Fixed_Point_Numbers_定点数]]
-- [[T2.5_LLR_clipping_scaling_quantization]]
+- [[T2.11_LLR_clipping_scaling_quantization]]
 - [[T13.1_fixed_point_decoder_requirements]]
 - 关系语义：LLR 量化是软解调到译码器的格式转换。

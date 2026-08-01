@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render NR Polar rate recovery reverse flow and toy circular buffer."""
+"""@file render_nr_polar_rate_recovery_flow.py
+@brief 渲染 NR Polar 速率恢复反操作流程图和玩具循环缓存示例，展示接收端逆交织、LLR 放回和 punctured/shortened/repeated 的初始化规则。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -44,6 +47,17 @@ def draw_centered_lines(
     bold: bool = True,
     gap: int = 6,
 ) -> None:
+    """@brief 在指定区域内垂直和水平居中绘制多行文本，常用于卡片和表格单元格。
+    @param draw PIL ImageDraw 绘制上下文
+    @param xy 目标矩形区域 (x0, y0, x1, y1)
+    @param lines 多行文本字符串列表
+    @param size 字体大小（像素）
+    @param fill 文本颜色
+    @param bold 是否粗体，默认 True
+    @param gap 行间距（像素），默认 6
+    @return None
+    @note 使用 PIL anchor="mm" 实现精确居中对齐。
+    """
     fnt = font(size, bold)
     heights = [draw.textbbox((0, 0), line, font=fnt)[3] - draw.textbbox((0, 0), line, font=fnt)[1] for line in lines]
     total = sum(heights) + gap * (len(lines) - 1)
@@ -55,10 +69,20 @@ def draw_centered_lines(
 
 
 def center(xy: tuple[int, int, int, int]) -> tuple[float, float]:
+    """@brief 计算矩形的几何中心坐标。
+    @param xy 矩形区域 (x0, y0, x1, y1)
+    @return 中心坐标 (cx, cy) 浮点数元组
+    """
     return ((xy[0] + xy[2]) / 2, (xy[1] + xy[3]) / 2)
 
 
 def boundary_point(xy: tuple[int, int, int, int], toward: tuple[float, float]) -> tuple[float, float]:
+    """@brief 计算矩形边界上指向目标方向的最近点，用于框间箭头的起点/终点定位。
+    @param xy 矩形区域 (x0, y0, x1, y1)
+    @param toward 目标点坐标，箭头指向的方向
+    @return 矩形边界上的点坐标（浮点数元组）
+    @note 通过射线与矩形边界的交点计算，保证箭头正好从边框出发/抵达边框。
+    """
     cx, cy = center(xy)
     dx = toward[0] - cx
     dy = toward[1] - cy
@@ -71,6 +95,15 @@ def boundary_point(xy: tuple[int, int, int, int], toward: tuple[float, float]) -
 
 
 def box(draw: ImageDraw.ImageDraw, xy: tuple[int, int, int, int], title: str, lines: list[str], fill: str, outline: str) -> tuple[int, int, int, int]:
+    """@brief 绘制带标题和正文的圆角流程框，用于展示速率恢复链路的各个处理步骤。
+    @param draw PIL ImageDraw 绘制上下文
+    @param xy 矩形区域 (x0, y0, x1, y1)
+    @param title 框内顶部标题（24px 粗体，颜色与 outline 一致）
+    @param lines 正文多行文本（24px 粗体，居中对齐）
+    @param fill 框内填充色
+    @param outline 边框颜色（2px）和标题颜色
+    @return 矩形区域（返回输入坐标用于链式布局）
+    """
     draw.rounded_rectangle(xy, radius=14, fill=fill, outline=outline, width=2)
     draw_centered_lines(draw, (xy[0] + 10, xy[1] + 12, xy[2] - 10, xy[1] + 58), [title], 24, outline, True)
     draw_centered_lines(draw, (xy[0] + 16, xy[1] + 68, xy[2] - 16, xy[3] - 16), lines, 24, COL["ink"], True, 8)
@@ -78,6 +111,14 @@ def box(draw: ImageDraw.ImageDraw, xy: tuple[int, int, int, int], title: str, li
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[float, float], end: tuple[float, float], fill: str) -> None:
+    """@brief 绘制带箭头线段，使用浮点坐标支持从边界点精确出发。
+    @param draw PIL ImageDraw 绘制上下文
+    @param start 箭头起点坐标 (x, y)（浮点数）
+    @param end 箭头终点坐标 (x, y)（浮点数）
+    @param fill 线条和箭头填充颜色
+    @return None
+    @note 箭杆线宽 3px，用三角函数计算箭头朝向和三角顶点。
+    """
     x0, y0 = start
     x1, y1 = end
     length = math.hypot(x1 - x0, y1 - y0)
@@ -99,10 +140,26 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[float, float], end: tuple[floa
 
 
 def connect_arrow(draw: ImageDraw.ImageDraw, src: tuple[int, int, int, int], dst: tuple[int, int, int, int], fill: str) -> None:
+    """@brief 在两个矩形框之间绘制连接箭头，自动从源框边界到目标框边界精确定位。
+    @param draw PIL ImageDraw 绘制上下文
+    @param src 源矩形区域 (x0, y0, x1, y1)
+    @param dst 目标矩形区域 (x0, y0, x1, y1)
+    @param fill 箭头颜色
+    @return None
+    @note 箭头从 src 朝向 dst 中心的边界点出发，到达 dst 朝向 src 中心的边界点。
+    """
     arrow(draw, boundary_point(src, center(dst)), boundary_point(dst, center(src)), fill)
 
 
 def main() -> None:
+    """@brief 脚本入口：生成 NR Polar 速率恢复反操作流程图 T10.7_NR_Polar_rate_recovery_flow.png。
+    @note 图中包含四个主区域：
+    - 顶部：五节点水平链路（demapper LLR -> coded-bit deinterleave -> bit selection reverse -> sub-block deinterleave -> Polar decoder input）。
+    - 中部：N=8, E=10 的玩具循环缓存示例，展示 punctured/received/shortened/repeated 四种位置状态。
+    - 下部左侧：LLR 初始化规则说明面板。
+    - 下部右侧：NR Polar/LDPC/LTE Turbo 速率恢复对比表。
+    @see render_nr_ldpc_rate_recovery_overview.py LDPC 速率恢复总览
+    """
     img = Image.new("RGB", (2080, 1530), COL["bg"])
     draw = ImageDraw.Draw(img)
 

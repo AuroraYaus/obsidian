@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render TS 38.212 Table 5.3.1.2-1 Polar reliability sequence."""
+"""@file render_nr_polar_reliability_sequence.py
+@brief 渲染 TS 38.212 Table 5.3.1.2-1 Polar 可靠性序列本地复现表格，展示 rank 与 Q(rank) 的完整映射关系。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -35,6 +38,14 @@ COL = {
 
 
 def center(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fnt, fill: str) -> None:
+    """@brief 在矩形区域内居中绘制文本，用于表格单元格的 rank/Q(rank) 数据对齐。
+    @param draw PIL ImageDraw 绘制上下文
+    @param box 目标矩形区域 (x0, y0, x1, y1)
+    @param text 要绘制的文本内容
+    @param fnt PIL 字体对象
+    @param fill 文本颜色
+    @return None
+    """
     b = draw.textbbox((0, 0), text, font=fnt)
     x = box[0] + (box[2] - box[0] - (b[2] - b[0])) / 2
     y = box[1] + (box[3] - box[1] - (b[3] - b[1])) / 2 - 1
@@ -42,6 +53,11 @@ def center(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str,
 
 
 def read_pairs() -> list[tuple[int, int]]:
+    """@brief 从 TS 38.212 table_0012.csv 读取 Polar 可靠性序列的 (rank, Q(rank)) 配对数据并进行完整性校验。
+    @return 按 rank 升序排列的 (rank, Q(rank)) 元组列表，共 1024 对
+    @throws AssertionError 当数据对数不为 1024 或 rank 不连续时抛出
+    @note rank 是可靠性升序位置（0 最不可靠，1023 最可靠），Q(rank) 是编码前 bit index。
+    """
     pairs: list[tuple[int, int]] = []
     with CSV_PATH.open(encoding="utf-8", newline="") as handle:
         for row in csv.reader(handle):
@@ -56,6 +72,13 @@ def read_pairs() -> list[tuple[int, int]]:
 
 
 def main() -> None:
+    """@brief 脚本入口：生成 TS 38.212 Table 5.3.1.2-1 Polar 可靠性序列本地复现表格 T10.3_TS38.212_Table_5.3.1.2-1_Polar_sequence.png。
+    @note 表格按 8 组、每组 128 行的格式展示 1024 对 (rank, Q(rank)) 映射。
+    每组两列：rank（可靠性升序位置）和 Q(rank)（编码前 bit index）。
+    检查点：Q(0)=0, Q(1)=1, Q(2)=2, Q(3)=4, Q(1023)=1023。
+    数据来源：3GPP_Rel19/processed/TS_38.212_38212-j30/tables/table_0012.csv。
+    @see render_nr_polar_channel_polarization.py N=4 Polar 极化变换图
+    """
     pairs = read_pairs()
     groups = 8
     rows = 128

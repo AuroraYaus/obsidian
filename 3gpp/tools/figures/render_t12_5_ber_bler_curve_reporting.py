@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Render T12.5 BER/BLER curve reporting flow."""
+""" @file render_t12_5_ber_bler_curve_reporting.py
+@brief 渲染 T12.5 BER/BLER 曲线报告流程图，展示从仿真运行到标准化 CSV、曲线绘制和失败诊断的完整报告管线。
+@date 2025
+"""
 
 from __future__ import annotations
 
@@ -26,11 +29,24 @@ axis_font = font(24)
 
 
 def bbox_size(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont) -> tuple[int, int]:
+    """ @brief 计算文本渲染后的宽高。
+    @param draw PIL 绘图上下文。
+    @param text 待测量的文本字符串。
+    @param fnt PIL 字体对象。
+    @return (宽度, 高度) px。
+    """
     box = draw.textbbox((0, 0), text, font=fnt)
     return box[2] - box[0], box[3] - box[1]
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: int) -> list[str]:
+    """ @brief 按单词边界自动换行，返回行列表。
+    @param draw PIL 绘图上下文。
+    @param text 待换行的英文字符串。
+    @param fnt PIL 字体对象。
+    @param width 最大行宽（px）。
+    @return 换行后的行列表。
+    """
     words = text.split()
     lines: list[str] = []
     cur = ""
@@ -48,11 +64,29 @@ def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont, width: 
 
 
 def text_h(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.ImageFont) -> int:
+    """ @brief 计算单行文本的渲染高度。
+    @param draw PIL 绘图上下文。
+    @param text 待测量的文本字符串。
+    @param fnt PIL 字体对象。
+    @return 高度（px）。
+    """
     b = draw.textbbox((0, 0), text, font=fnt)
     return b[3] - b[1]
 
 
 def centered_lines(draw, lines, fnt, x0, y0, x1, y1, fill="#263238", gap=8):
+    """ @brief 在矩形区域内居中对齐绘制多行文本。
+    @param draw PIL 绘图上下文。
+    @param lines 文本行列表。
+    @param fnt PIL 字体对象。
+    @param x0 矩形左边界。
+    @param y0 矩形上边界。
+    @param x1 矩形右边界。
+    @param y1 矩形下边界。
+    @param fill 文本颜色 hex 字符串。
+    @param gap 行间距，默认 8px。
+    @return None
+    """
     heights = [text_h(draw, line, fnt) for line in lines]
     total = sum(heights) + gap * max(0, len(lines) - 1)
     y = y0 + (y1 - y0 - total) / 2
@@ -63,6 +97,14 @@ def centered_lines(draw, lines, fnt, x0, y0, x1, y1, fill="#263238", gap=8):
 
 
 def card(draw, xy, title, body, fill):
+    """ @brief 绘制带标题和正文的圆角矩形卡片，用于 BLER 报告流程各阶段。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @param title 卡片标题。
+    @param body 正文描述字符串。
+    @param fill 填充色 hex 字符串。
+    @return None
+    """
     x0, y0, x1, y1 = xy
     draw.rounded_rectangle(xy, radius=12, fill=fill, outline="#263238", width=2)
     draw.text(((x0 + x1) / 2, y0 + 34), title, font=HEAD, fill="#102027", anchor="mm")
@@ -71,10 +113,19 @@ def card(draw, xy, title, body, fill):
 
 
 def center(rect):
+    """ @brief 计算矩形几何中心坐标。
+    @param rect 矩形四边坐标 (x0, y0, x1, y1)。
+    @return 中心点坐标 (cx, cy)。
+    """
     return (rect[0] + rect[2]) / 2, (rect[1] + rect[3]) / 2
 
 
 def boundary(src, dst):
+    """ @brief 计算从源矩形中心向目标矩形方向的边界交点，用于箭头起点/终点定位。
+    @param src 源矩形 (x0, y0, x1, y1)。
+    @param dst 目标矩形 (x0, y0, x1, y1)。
+    @return 源矩形边界上的交点坐标 (bx, by)。
+    """
     sx, sy = center(src)
     dx, dy = center(dst)
     vx, vy = dx - sx, dy - sy
@@ -88,6 +139,12 @@ def boundary(src, dst):
 
 
 def arrow(draw, src, dst):
+    """ @brief 绘制两个矩形节点之间的直连箭头。
+    @param draw PIL 绘图上下文。
+    @param src 源矩形 (x0, y0, x1, y1)。
+    @param dst 目标矩形 (x0, y0, x1, y1)。
+    @return None
+    """
     ax, ay = boundary(src, dst)
     bx, by = boundary(dst, src)
     vx, vy = bx - ax, by - ay
@@ -104,15 +161,37 @@ def arrow(draw, src, dst):
 
 
 def cell(draw, xy, text, fnt, fill="#263238"):
+    """ @brief 在矩形区域内居中绘制单行文本，用于表格单元格。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @param text 待绘制的文本字符串。
+    @param fnt PIL 字体对象。
+    @param fill 文本颜色 hex 字符串。
+    @return None
+    """
     draw.text(((xy[0] + xy[2]) / 2, (xy[1] + xy[3]) / 2), text, font=fnt, fill=fill, anchor="mm")
 
 
 def wrapped_cell(draw, xy, text, fnt, fill="#263238"):
+    """ @brief 在单元格内自动换行并居中绘制文本，用于 BLER 表格中较长的描述字段。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @param text 待绘制的文本字符串。
+    @param fnt PIL 字体对象。
+    @param fill 文本颜色 hex 字符串，默认 "#263238"。
+    @return None
+    """
     lines = wrap(draw, text, fnt, xy[2] - xy[0] - 18)
     centered_lines(draw, lines, fnt, xy[0] + 9, xy[1] + 4, xy[2] - 9, xy[3] - 4, fill, gap=5)
 
 
 def draw_curve(draw, xy):
+    """ @brief 在指定矩形区域内绘制一幅示意性 BLER 曲线（含坐标轴、数据点和误差棒）。
+    @param draw PIL 绘图上下文。
+    @param xy 矩形四边坐标 (x0, y0, x1, y1)。
+    @return None
+    @note 该曲线为示意图，用于教学展示 BLER 报告的标准输出格式，非真实仿真数据。
+    """
     x0, y0, x1, y1 = xy
     draw.rounded_rectangle(xy, radius=12, fill="#ffffff", outline="#607d8b", width=2)
     draw.text(((x0 + x1) / 2, y0 + 34), "Report-Ready BLER Curve", font=HEAD, fill="#102027", anchor="mm")
@@ -139,6 +218,11 @@ def draw_curve(draw, xy):
 
 
 def main() -> None:
+    """ @brief 渲染 T12.5 BER/BLER 曲线报告图，保存为 PNG 到 docs/L3/assets/。
+    @note 该图展示从仿真运行到标准化 CSV、曲线构建和报告包的报告管线，
+     包含 metrics.csv 要求的列定义、BLER 示意曲线和失败诊断闭环流程。
+    @return None
+    """
     W, H = 2200, 1780
     img = Image.new("RGB", (W, H), "#f9fbfa")
     draw = ImageDraw.Draw(img)

@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Render LTE/NR HARQ soft-buffer comparison."""
+""" @file render_harq_soft_buffer_comparison.py
+    @brief 渲染 LTE/NR HARQ 软缓存（soft buffer）生命周期的对比教学图。
+    @date 2025
+    @note 覆盖生命周期、环缓冲区 RV 窗口、CBG 粒度差异和 descriptor 对比表。
+    @see render_lte_harq_rv_windows.py 对应的 LTE HARQ RV 窗口详解图
+"""
 
 from __future__ import annotations
 
@@ -38,10 +43,21 @@ COL = {
 
 
 def wrap(draw: ImageDraw.ImageDraw, text: str, fnt: ImageFont.FreeTypeFont, width: int) -> list[str]:
+    """ @brief 委托 figure_text_fit.wrap_text 执行自动换行。
+        @param draw PIL ImageDraw 实例。
+        @param text 待换行的原始文本。
+        @param fnt 字体对象。
+        @param width 每行最大像素宽度。
+        @return 分行后的字符串列表。
+    """
     return fit_wrap_text(draw, text, fnt, width)
 
 
 def center(box: tuple[int, int, int, int]) -> tuple[float, float]:
+    """ @brief 返回矩形包围盒的几何中心坐标。
+        @param box (left, top, right, bottom) 四元组。
+        @return (cx, cy) 中心浮点坐标。
+    """
     return ((box[0] + box[2]) / 2, (box[1] + box[3]) / 2)
 
 
@@ -54,6 +70,16 @@ def draw_centered(
     bold: bool = True,
     gap: int = 7,
 ) -> None:
+    """ @brief 在指定矩形内竖直居中对齐绘制多行文本。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 绘制区域。
+        @param lines 待绘制的字符串或字符串列表。
+        @param size 字体大小（像素）。
+        @param color CSS 颜色字符串，默认 ink。
+        @param bold 是否粗体。
+        @param gap 行间距。
+        @return 无返回值。
+    """
     fnt = font(size, bold)
     lines = [lines] if isinstance(lines, str) else lines
     heights = [draw.textbbox((0, 0), line, font=fnt)[3] - draw.textbbox((0, 0), line, font=fnt)[1] for line in lines]
@@ -75,6 +101,17 @@ def draw_wrapped_text(
     width: int = 600,
     line_gap: int = 34,
 ) -> int:
+    """ @brief 在指定坐标处绘制自动换行的多行文本（左对齐）。
+        @param draw PIL ImageDraw 实例。
+        @param xy 左上角起始坐标 (x, y)。
+        @param text 待绘制的长文本。
+        @param size 字体大小。
+        @param color 文字颜色。
+        @param bold 是否粗体。
+        @param width 每行最大像素宽度。
+        @param line_gap 行间距（像素）。
+        @return 文本最后一行的底部 Y 坐标。
+    """
     fnt = font(size, bold)
     y = xy[1]
     for line in wrap(draw, text, fnt, width):
@@ -93,6 +130,17 @@ def draw_wrapped_centered(
     width: int | None = None,
     gap: int = 7,
 ) -> None:
+    """ @brief 先在指定宽度内自动换行，然后在矩形内竖直居中绘制。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 绘制区域。
+        @param text 待绘制的长文本。
+        @param size 字体大小。
+        @param color 文字颜色。
+        @param bold 是否粗体。
+        @param width 换行宽度（None 则自动取 box 宽度 - 32）。
+        @param gap 行间距。
+        @return 无返回值。
+    """
     fnt = font(size, bold)
     lines = wrap(draw, text, fnt, width or (box[2] - box[0] - 32))
     draw_centered(draw, box, lines, size=size, color=color, bold=bold, gap=gap)
@@ -106,6 +154,15 @@ def node(
     fill: str = "#FFFFFF",
     size: int = 22,
 ) -> tuple[int, int, int, int]:
+    """ @brief 绘制一个含多行自动换行文本的圆角矩形节点。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 节点区域。
+        @param lines 节点内文本行列表。
+        @param outline 边框颜色。
+        @param fill 背景填充色，默认白色。
+        @param size 字体大小，默认 22。
+        @return 节点包围盒（传入 box 原样返回）。
+    """
     draw.rounded_rectangle(box, radius=18, fill=fill, outline=outline, width=2)
     wrapped: list[str] = []
     fnt = font(size)
@@ -116,6 +173,11 @@ def node(
 
 
 def boundary_point(box: tuple[int, int, int, int], toward: tuple[float, float]) -> tuple[float, float]:
+    """ @brief 计算矩形边界上与目标方向对齐的交点。
+        @param box (left, top, right, bottom) 矩形包围盒。
+        @param toward 目标点 (x, y)。
+        @return 边界交点坐标 (x, y)。
+    """
     cx, cy = center(box)
     dx, dy = toward[0] - cx, toward[1] - cy
     if abs(dx) < 1e-6 and abs(dy) < 1e-6:
@@ -127,6 +189,15 @@ def boundary_point(box: tuple[int, int, int, int], toward: tuple[float, float]) 
 
 
 def arrow(draw: ImageDraw.ImageDraw, start: tuple[float, float], end: tuple[float, float], color: str, width: int = 3) -> None:
+    """ @brief 从起点到终点绘制带三角箭头的直线。
+        @param draw PIL ImageDraw 实例。
+        @param start 起点坐标 (x, y)。
+        @param end 终点坐标（箭头尖位置）。
+        @param color CSS 颜色字符串。
+        @param width 线条宽度，默认 3。
+        @return 无返回值。
+        @note 箭头头长 14、头宽 9。
+    """
     x0, y0 = start
     x1, y1 = end
     length = math.hypot(x1 - x0, y1 - y0)
@@ -145,15 +216,35 @@ def arrow(draw: ImageDraw.ImageDraw, start: tuple[float, float], end: tuple[floa
 
 
 def connect(draw: ImageDraw.ImageDraw, src: tuple[int, int, int, int], dst: tuple[int, int, int, int], color: str) -> None:
+    """ @brief 在两个矩形节点之间绘制连接箭头。
+        @param draw PIL ImageDraw 实例。
+        @param src 源矩形 (left, top, right, bottom)。
+        @param dst 目标矩形。
+        @param color CSS 颜色字符串。
+        @return 无返回值。
+    """
     arrow(draw, boundary_point(src, center(dst)), boundary_point(dst, center(src)), color, 3)
 
 
 def panel(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], title: str, color: str, fill: str) -> None:
+    """ @brief 绘制带标题的圆角面板。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 面板区域。
+        @param title 左上角标题。
+        @param color 边框颜色。
+        @param fill 背景填充色。
+        @return 无返回值。
+    """
     draw.rounded_rectangle(box, radius=22, fill=fill, outline=color, width=3)
     draw.text((box[0] + 28, box[1] + 22), title, font=font(31, True), fill=color)
 
 
 def draw_lifecycles(draw: ImageDraw.ImageDraw) -> int:
+    """ @brief 并排绘制 LTE 和 NR HARQ soft buffer 生命周期四阶段流程图。
+        @param draw PIL ImageDraw 实例。
+        @return 面板底部 Y 坐标。
+        @note 左侧 LTE：新数据分配 -> RV0 失败保留 -> RV2 累加 -> CRC pass 释放；右侧 NR 额外包含 CBG 维度。
+    """
     y0 = 165
     panel_h = 470
     panel(draw, (70, y0, 900, y0 + panel_h), "LTE HARQ soft buffer 生命周期", COL["lte"], COL["lte_l"])
@@ -181,11 +272,25 @@ def draw_lifecycles(draw: ImageDraw.ImageDraw) -> int:
 
 
 def ring_point(cx: int, cy: int, r: int, idx: int, total: int) -> tuple[float, float]:
+    """ @brief 计算圆环上第 idx 个位置（从 12 点钟方向开始顺时针）的坐标。
+        @param cx 圆心 X。
+        @param cy 圆心 Y。
+        @param r 半径。
+        @param idx 位置索引（0-based）。
+        @param total 总位置数。
+        @return (x, y) 坐标。
+    """
     ang = -math.pi / 2 + 2 * math.pi * idx / total
     return cx + r * math.cos(ang), cy + r * math.sin(ang)
 
 
 def draw_lte_ring(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int]) -> None:
+    """ @brief 绘制 LTE 环缓冲区 RV 窗口示意图：16 个地址环形排列，RV0 和 RV2 部分重叠。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 面板区域。
+        @return 无返回值。
+        @note RV0 覆盖地址 0-5，RV2 覆盖地址 4-9，地址 4/5 为重叠区执行 LLR 饱和累加。
+    """
     panel(draw, box, "LTE: RV 是同一 ring buffer 的窗口", COL["lte"], COL["lte_l"])
     cx, cy = box[0] + 270, box[1] + 305
     total, radius = 16, 150
@@ -214,6 +319,12 @@ def draw_lte_ring(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int]) -> 
 
 
 def draw_nr_cbg(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int]) -> None:
+    """ @brief 绘制 NR CBG mask 重传粒度示意图：TB -> CBG0/CBG1 -> CB/CB 的层次关系。
+        @param draw PIL ImageDraw 实例。
+        @param box (left, top, right, bottom) 面板区域。
+        @return 无返回值。
+        @note CBGTI=[0,1] 时 mask=0 的 CBG0 保持不动，mask=1 的 CBG1 按 RV2 更新；CBGFI=1 才合并。
+    """
     panel(draw, box, "NR: CBG mask 改变重传粒度", COL["nr"], COL["nr_l"])
     tb = node(draw, (box[0] + 55, box[1] + 110, box[2] - 55, box[1] + 190), ["TB0: NDI=old, RV=2, CBGTI=[0,1], CBGFI=1"], COL["nr"], "#FFFFFF", 24)
     cbg0 = node(draw, (box[0] + 80, box[1] + 250, box[0] + 390, box[1] + 368), ["CBG0 mask=0", "CB0/CB1 保持"], COL["line"], "#F3F6F9", 24)
@@ -232,6 +343,12 @@ def draw_nr_cbg(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int]) -> No
 
 
 def draw_middle(draw: ImageDraw.ImageDraw, top: int) -> int:
+    """ @brief 绘制中间对比区：左侧 LTE RV 环 + 右侧 NR CBG 粒度图。
+        @param draw PIL ImageDraw 实例。
+        @param top 本区顶部 Y 坐标。
+        @return 本区底部 Y 坐标。
+        @throws RuntimeError 当与上一模块间距不足 70px 时抛出。
+    """
     y0 = top + 80
     draw_lte_ring(draw, (70, y0, 900, y0 + 700))
     draw_nr_cbg(draw, (1000, y0, 1830, y0 + 700))
@@ -242,6 +359,13 @@ def draw_middle(draw: ImageDraw.ImageDraw, top: int) -> int:
 
 
 def draw_table(draw: ImageDraw.ImageDraw, top: int) -> int:
+    """ @brief 绘制 LTE/NR HARQ descriptor 对比表：soft buffer key、RV、重传粒度、NDI、CRC。
+        @param draw PIL ImageDraw 实例。
+        @param top 表格顶部 Y 坐标。
+        @return 表格底部 Y 坐标。
+        @throws RuntimeError 当与上一模块间距不足 95px 时抛出。
+        @note 五列：字段、LTE Turbo、NR LDPC、译码器检查；每行高 92。
+    """
     y0 = top + 105
     if y0 - top < 95:
         raise RuntimeError("middle-to-table spacing too small")
@@ -271,6 +395,12 @@ def draw_table(draw: ImageDraw.ImageDraw, top: int) -> int:
 
 
 def draw_examples(draw: ImageDraw.ImageDraw, top: int) -> int:
+    """ @brief 绘制三个 LLR 累加实例卡片：LTE RV0->RV2、NR CBG partial、定点饱和。
+        @param draw PIL ImageDraw 实例。
+        @param top 卡片区顶部 Y 坐标。
+        @return 卡片区底部 Y 坐标。
+        @throws RuntimeError 当间距不足 90px 时抛出。
+    """
     y0 = top + 105
     if y0 - top < 90:
         raise RuntimeError("table-to-examples spacing too small")
@@ -293,6 +423,12 @@ def draw_examples(draw: ImageDraw.ImageDraw, top: int) -> int:
 
 
 def draw_footer(draw: ImageDraw.ImageDraw, top: int) -> None:
+    """ @brief 绘制底部紫色总结卡片：读图顺序与四条验证重点。
+        @param draw PIL ImageDraw 实例。
+        @param top 卡片区顶部 Y 坐标。
+        @return 无返回值。
+        @note 四步验证：生命周期 -> 中部对比 -> 表格字段 dump -> 负测试。
+    """
     y0 = top + 95
     b = (90, y0, 1830, y0 + 300)
     draw.rounded_rectangle(b, radius=18, fill=COL["purple_l"], outline=COL["purple"], width=2)
@@ -307,6 +443,10 @@ def draw_footer(draw: ImageDraw.ImageDraw, top: int) -> None:
 
 
 def main() -> None:
+    """ @brief 脚本入口：生成 T11.3 LTE/NR HARQ Soft Buffer 对比教学图。
+        @return 无返回值。
+        @note 产出 1900x3040 PNG：生命周期、环缓冲区、CBG 粒度、descriptor 表和 LLR 累加实例。
+    """
     img = Image.new("RGB", (1900, 3040), COL["bg"])
     draw = ImageDraw.Draw(img)
     draw.text((70, 42), "T11.3 LTE/NR HARQ Soft Buffer 对比", font=font(44, True), fill=COL["ink"])

@@ -1,17 +1,16 @@
 %%{init: {'theme': 'default', 'themeVariables': {'fontSize': '16px'}, 'flowchart': {'nodeSpacing': 8, 'rankSpacing': 30}}}%%
 flowchart TD
-    ROOT["📚 3GPP 译码知识库 | 94篇讲义 · 关系图谱"]:::root
+    ROOT["📚 3GPP 译码知识库 | 100篇讲义 · 关系图谱"]:::root
 
     ROOT --> L0["L0 术语表"]:::l0
-    ROOT --> L1["L1 数学基础 27篇"]:::l1
+    ROOT --> L1["L1 数学基础 33篇"]:::l1
     ROOT --> L2["L2 协议与算法 43篇"]:::l2
     ROOT --> L3["L3 工程实现 23篇"]:::l3
     ROOT --> SPEC["3GPP Rel-19 协议原文 7份"]:::spec
     ROOT --> SIM["sim 仿真验证"]:::sim
 
     L0 --> L0_G["译码讲义术语总表"]:::l0n
-    L1 --> L1_M0_协议阅读地图["M0 协议阅读地图"]:::l1m
-    L1_M0_协议阅读地图 --> L1_T0_1_LTE_NR_decoder_protocol_reading_map["T0_1_LTE_NR_decoder_protocol_reading"]:::l1n
+    L0 --> L0_T0_1_LTE_NR_decoder_protocol_reading_map["T0_1_LTE_NR_decoder_protocol_reading"]:::l0n
     L1 --> L1_M1a_GF2代数基础["M1a GF(2)代数基础"]:::l1m
     L1_M1a_GF2代数基础 --> L1_T1_1_GF2_binary_arithmetic_for_decoders["T1_1_GF2_binary_arithmetic_for_decod"]:::l1n
     L1_M1a_GF2代数基础 --> L1_T1_2_GF2_polynomials_crc_remainders["T1_2_GF2_polynomials_crc_remainders"]:::l1n
@@ -21,11 +20,11 @@ flowchart TD
     L1_M1b_概率与信息论 --> L1_T1_5_LLR_soft_decision["T1_5_LLR_soft_decision"]:::l1n
     L1_M1b_概率与信息论 --> L1_T1_6_information_theory_minimum_for_decoding["T1_6_information_theory_minimum_for_"]:::l1n
     L1 --> L1_M2_软解调与信道模型["M2 软解调与信道模型"]:::l1m
-    L1_M2_软解调与信道模型 --> L1_T2_1_AWGN_noise_scaling["T2_1_AWGN_noise_scaling"]:::l1n
-    L1_M2_软解调与信道模型 --> L1_T2_2_BPSK_QPSK_soft_demapping["T2_2_BPSK_QPSK_soft_demapping"]:::l1n
-    L1_M2_软解调与信道模型 --> L1_T2_3_QAM_Max_Log_MAP_demapping["T2_3_QAM_Max_Log_MAP_demapping"]:::l1n
-    L1_M2_软解调与信道模型 --> L1_T2_4_fading_channel_LLR_reliability["T2_4_fading_channel_LLR_reliability"]:::l1n
-    L1_M2_软解调与信道模型 --> L1_T2_5_LLR_clipping_scaling_quantization["T2_5_LLR_clipping_scaling_quantizati"]:::l1n
+    L1_M2_软解调与信道模型 --> L1_T2_7_AWGN_noise_scaling["T2_7_AWGN_noise_scaling"]:::l1n
+    L1_M2_软解调与信道模型 --> L1_T2_8_BPSK_QPSK_soft_demapping["T2_8_BPSK_QPSK_soft_demapping"]:::l1n
+    L1_M2_软解调与信道模型 --> L1_T2_9_QAM_Max_Log_MAP_demapping["T2_9_QAM_Max_Log_MAP_demapping"]:::l1n
+    L1_M2_软解调与信道模型 --> L1_T2_10_fading_channel_LLR_reliability["T2_10_fading_channel_LLR_reliability"]:::l1n
+    L1_M2_软解调与信道模型 --> L1_T2_11_LLR_clipping_scaling_quantization["T2_11_LLR_clipping_scaling_quantizati"]:::l1n
     L1 --> L1_M3_CRC,分段与传输块["M3 CRC,分段与传输块"]:::l1m
     L1_M3_CRC,分段与传输块 --> L1_T3_1_LTE_NR_CRC_families["T3_1_LTE_NR_CRC_families"]:::l1n
     L1_M3_CRC,分段与传输块 --> L1_T3_2_transport_code_block_filler_bits["T3_2_transport_code_block_filler_bit"]:::l1n
