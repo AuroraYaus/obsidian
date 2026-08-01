@@ -41,6 +41,23 @@ NUMERIC_HEADING_RE = re.compile(r"^(\d+(?:\.\d+)*)\s+\S+")
 
 R_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 
+# 公式文本提取（import 同目录 extract_formula_text）
+_EXTRACT_MODULE = None
+
+
+def _extractor():
+    """@brief 惰性导入公式文本提取模块（避免循环依赖与启动开销）。"""
+    global _EXTRACT_MODULE
+    if _EXTRACT_MODULE is None:
+        import importlib.util
+
+        spec = importlib.util.spec_from_file_location(
+            "extract_formula_text", Path(__file__).resolve().parent / "extract_formula_text.py"
+        )
+        _EXTRACT_MODULE = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(_EXTRACT_MODULE)
+    return _EXTRACT_MODULE
+
 
 def parse_document_xml(docx_path: Path) -> tuple[ET.Element, dict[str, str]]:
     """
@@ -100,6 +117,7 @@ def paragraph_text(p: ET.Element, inline_math: bool = True) -> str:
 
 
 _OLE_RELS: dict[str, str] = {}
+_SVG_DIR: Path | None = None  # 公式 SVG 目录（main() 按 --output 设置）
 
 
 def set_ole_rels(rels: dict[str, str]) -> None:
@@ -110,6 +128,17 @@ def set_ole_rels(rels: dict[str, str]) -> None:
     """
     _OLE_RELS.clear()
     _OLE_RELS.update(rels)
+
+
+def set_svg_dir(output_path: Path) -> None:
+    """
+    @brief 按输出路径设置公式 SVG 目录（与 full.md 同目录的 media_svg/）。
+    @param output_path  full.md 输出路径。
+    @note SVG 目录不存在时置 None（跳过文本提取，仅输出图片引用）。
+    """
+    global _SVG_DIR
+    cand = output_path.parent / "media_svg"
+    _SVG_DIR = cand if cand.is_dir() else None
 
 
 def _run_text(r: ET.Element) -> str:
@@ -139,8 +168,10 @@ def _run_text(r: ET.Element) -> str:
                 parts.append(f"![](media/{name})")
         elif tag == "object":
             # OLE 公式对象（3GPP 部分公式以 wmf 图片嵌入，无 OMML 文本）。
-            # Obsidian 不支持 wmf 渲染，引用经 LibreOffice 矢量转换并裁剪
-            # 后的 SVG 版本（media_svg/，见 tools/trim_svg.py）。
+            # 输出分级：
+            #   简单公式（≤2 层、无未知字符）→ [公式: 文本]（agent 直接读）
+            #   复杂公式（多层/未知字符）→ SVG 引用 + [公式: 近似文本]
+            #      （Obsidian 显示结构，agent 读大意）
             rid = ""
             for el in child.iter():
                 if _local(el.tag) == "imagedata":
@@ -150,8 +181,21 @@ def _run_text(r: ET.Element) -> str:
             if target:
                 base = target.split("/")[-1]
                 if base.lower().endswith(".wmf"):
-                    base = base[:-4] + ".svg"
-                    parts.append(f"![](media_svg/{base})")
+                    svg_name = base[:-4] + ".svg"
+                    if _SVG_DIR is not None and (_SVG_DIR / svg_name).exists():
+                        result = _extractor().extract_file(_SVG_DIR / svg_name)
+                        if result["text"]:
+                            is_complex = result.get("unreliable", False)
+                            if is_complex:
+                                parts.append(
+                                    f"![](media_svg/{svg_name}) [公式≈: {result['text']}]"
+                                )
+                            else:
+                                parts.append(f"[公式: {result['text']}]")
+                        else:
+                            parts.append(f"![](media_svg/{svg_name})")
+                    else:
+                        parts.append(f"![](media_svg/{svg_name})")
                 else:
                     parts.append(f"![](media/{base})")
             else:
@@ -304,6 +348,7 @@ def main() -> int:
 
     body, rels = parse_document_xml(src)
     set_ole_rels(rels)
+    set_svg_dir(out)
     full = build_full_md(body)
     out.write_text(full, encoding="utf-8")
     print(f"已生成: {out} ({len(full.splitlines())} 行)")
