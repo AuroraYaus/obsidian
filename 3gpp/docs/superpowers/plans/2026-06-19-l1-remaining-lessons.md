@@ -36,11 +36,11 @@ source_spec: "docs/superpowers/plans/2026-06-19-l1-remaining-lessons.md"
 
 ## Files
 
-- Create: `docs/L1/T2.7_AWGN_noise_scaling.md`
-- Create: `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md`
-- Create: `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md`
-- Create: `docs/L1/T2.10_fading_channel_LLR_reliability.md`
-- Create: `docs/L1/T2.11_LLR_clipping_scaling_quantization.md`
+- Create: `docs/L1/T2.1_AWGN_noise_scaling.md`
+- Create: `docs/L1/T2.2_BPSK_QPSK_soft_demapping.md`
+- Create: `docs/L1/T2.3_QAM_Max_Log_MAP_demapping.md`
+- Create: `docs/L1/T2.4_fading_channel_LLR_reliability.md`
+- Create: `docs/L1/T2.5_LLR_clipping_scaling_quantization.md`
 - Create: `docs/L1/T3.1_LTE_NR_CRC_families.md`
 - Create: `docs/L1/T3.2_transport_code_block_filler_bits.md`
 - Create: `docs/L1/T3.3_LTE_Turbo_segmentation_rules.md`
@@ -57,11 +57,11 @@ source_spec: "docs/superpowers/plans/2026-06-19-l1-remaining-lessons.md"
 - Modify: `docs/L1/T1.4_probability_bayes_soft_decoding.md`
 - Modify: `docs/L1/T1.5_LLR_soft_decision.md`
 - Modify: `docs/L1/T1.6_information_theory_minimum_for_decoding.md`
-- Modify: `docs/L1/T2.7_AWGN_noise_scaling.md`
-- Modify: `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md`
-- Modify: `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md`
-- Modify: `docs/L1/T2.10_fading_channel_LLR_reliability.md`
-- Modify: `docs/L1/T2.11_LLR_clipping_scaling_quantization.md`
+- Modify: `docs/L1/T2.1_AWGN_noise_scaling.md`
+- Modify: `docs/L1/T2.2_BPSK_QPSK_soft_demapping.md`
+- Modify: `docs/L1/T2.3_QAM_Max_Log_MAP_demapping.md`
+- Modify: `docs/L1/T2.4_fading_channel_LLR_reliability.md`
+- Modify: `docs/L1/T2.5_LLR_clipping_scaling_quantization.md`
 - Modify: `docs/L1/T3.1_LTE_NR_CRC_families.md`
 - Modify: `docs/L1/T3.2_transport_code_block_filler_bits.md`
 - Modify: `docs/L1/T3.3_LTE_Turbo_segmentation_rules.md`

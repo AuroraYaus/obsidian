@@ -27,11 +27,11 @@ source_spec: "docs/superpowers/specs/2026-07-27-lte-nr-phy-t2-design.md"
 
 | 当前文件名 | 新文件名 |
 |:---|:---|
-| `T2.7_AWGN_noise_scaling.md` | `T2.7_AWGN_noise_scaling.md` |
-| `T2.8_BPSK_QPSK_soft_demapping.md` | `T2.8_BPSK_QPSK_soft_demapping.md` |
-| `T2.9_QAM_Max_Log_MAP_demapping.md` | `T2.9_QAM_Max_Log_MAP_demapping.md` |
-| `T2.10_fading_channel_LLR_reliability.md` | `T2.10_fading_channel_LLR_reliability.md` |
-| `T2.11_LLR_clipping_scaling_quantization.md` | `T2.11_LLR_clipping_scaling_quantization.md` |
+| `T2.1_AWGN_noise_scaling.md` | `T2.7_AWGN_noise_scaling.md` |
+| `T2.2_BPSK_QPSK_soft_demapping.md` | `T2.8_BPSK_QPSK_soft_demapping.md` |
+| `T2.3_QAM_Max_Log_MAP_demapping.md` | `T2.9_QAM_Max_Log_MAP_demapping.md` |
+| `T2.4_fading_channel_LLR_reliability.md` | `T2.10_fading_channel_LLR_reliability.md` |
+| `T2.5_LLR_clipping_scaling_quantization.md` | `T2.11_LLR_clipping_scaling_quantization.md` |
 
 ### 引用更新范围
 

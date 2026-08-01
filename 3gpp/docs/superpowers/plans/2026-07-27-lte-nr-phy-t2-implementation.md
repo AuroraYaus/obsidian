@@ -37,21 +37,21 @@ source_spec: "docs/superpowers/plans/2026-07-27-lte-nr-phy-t2-implementation.md"
 ### Task 1: 重命名 5 个现有文件
 
 **Files:**
-- Rename: `docs/L1/T2.7_AWGN_noise_scaling.md` → `docs/L1/T2.7_AWGN_noise_scaling.md`
-- Rename: `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md` → `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md`
-- Rename: `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md` → `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md`
-- Rename: `docs/L1/T2.10_fading_channel_LLR_reliability.md` → `docs/L1/T2.10_fading_channel_LLR_reliability.md`
-- Rename: `docs/L1/T2.11_LLR_clipping_scaling_quantization.md` → `docs/L1/T2.11_LLR_clipping_scaling_quantization.md`
+- Rename: `docs/L1/T2.1_AWGN_noise_scaling.md` → `docs/L1/T2.7_AWGN_noise_scaling.md`
+- Rename: `docs/L1/T2.2_BPSK_QPSK_soft_demapping.md` → `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md`
+- Rename: `docs/L1/T2.3_QAM_Max_Log_MAP_demapping.md` → `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md`
+- Rename: `docs/L1/T2.4_fading_channel_LLR_reliability.md` → `docs/L1/T2.10_fading_channel_LLR_reliability.md`
+- Rename: `docs/L1/T2.5_LLR_clipping_scaling_quantization.md` → `docs/L1/T2.11_LLR_clipping_scaling_quantization.md`
 
 - [ ] **Step 1: 批量 git mv**
 
 ```bash
 cd /home/yys/AGENT/3gpp
-git mv docs/L1/T2.7_AWGN_noise_scaling.md docs/L1/T2.7_AWGN_noise_scaling.md
-git mv docs/L1/T2.8_BPSK_QPSK_soft_demapping.md docs/L1/T2.8_BPSK_QPSK_soft_demapping.md
-git mv docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md
-git mv docs/L1/T2.10_fading_channel_LLR_reliability.md docs/L1/T2.10_fading_channel_LLR_reliability.md
-git mv docs/L1/T2.11_LLR_clipping_scaling_quantization.md docs/L1/T2.11_LLR_clipping_scaling_quantization.md
+git mv docs/L1/T2.1_AWGN_noise_scaling.md docs/L1/T2.7_AWGN_noise_scaling.md
+git mv docs/L1/T2.2_BPSK_QPSK_soft_demapping.md docs/L1/T2.8_BPSK_QPSK_soft_demapping.md
+git mv docs/L1/T2.3_QAM_Max_Log_MAP_demapping.md docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md
+git mv docs/L1/T2.4_fading_channel_LLR_reliability.md docs/L1/T2.10_fading_channel_LLR_reliability.md
+git mv docs/L1/T2.5_LLR_clipping_scaling_quantization.md docs/L1/T2.11_LLR_clipping_scaling_quantization.md
 ```
 
 - [ ] **Step 2: 验证重命名**
@@ -101,7 +101,7 @@ sed -i '1s/^# T2\.5 /# T2.11 /' docs/L1/T2.11_LLR_clipping_scaling_quantization.
 - 正文引用 `T2.1`（在非文件名的上下文中）→ `T2.7`
 - 同理处理 T2.2→T2.8, T2.3→T2.9, T2.4→T2.10, T2.5→T2.11
 
-**重点注意：** 外部文件中的 wikilink 以旧文件名匹配（如 `[[T2.7_AWGN_noise_scaling]]`），需要替换为目标文件名。
+**重点注意：** 外部文件中的 wikilink 以旧文件名匹配（如 `[[T2.1_AWGN_noise_scaling]]`），需要替换为目标文件名。
 
 - [ ] **Step 3: 全文扫描验证**
 

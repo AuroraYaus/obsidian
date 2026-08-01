@@ -33,7 +33,7 @@ source_spec: "docs/superpowers/plans/2026-06-25-docs-terminology-consolidation.m
 
 **Files:**
 - Create: `docs/L0_terminology_glossary.md`
-- Modify: `docs/L0/T0.1_LTE_NR_decoder_protocol_reading_map.md`
+- Modify: `docs/L1/T0.1_LTE_NR_decoder_protocol_reading_map.md`
 
 **Interfaces:**
 - Consumes: the recurring abbreviations and definitions already present across `docs/L1`, `docs/L2`, and `docs/L3`
@@ -45,7 +45,7 @@ Create `docs/L0_terminology_glossary.md` with a title like `# 译码讲义术语
 
 - [ ] **Step 2: Link the glossary from the reading map**
 
-Update `docs/L0/T0.1_LTE_NR_decoder_protocol_reading_map.md` so the protocol map points to the new glossary chapter in its boundary or navigation section. Keep the chapter itself concise and avoid reintroducing the removed repeated tables.
+Update `docs/L1/T0.1_LTE_NR_decoder_protocol_reading_map.md` so the protocol map points to the new glossary chapter in its boundary or navigation section. Keep the chapter itself concise and avoid reintroducing the removed repeated tables.
 
 - [ ] **Step 3: Verify the glossary renders cleanly**
 

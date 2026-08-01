@@ -55,7 +55,7 @@ python3 tools/audit_reference_rebuilds.py docs/L1/T*.md docs/L2/T*.md > docs/aud
 |:---|:---|:---|
 | LTE CRC 多项式 | 已在 T3.1 复现 LTE CRC24A、CRC24B、CRC16、CRC8。 | `docs/L1/T3.1_LTE_NR_CRC_families.md`。 |
 | LTE Turbo 分段合法块长表 | 已在 T3.3 用 Python 图片化复现 TS 36.212 Table 5.1.3-3。 | `docs/L1/assets/T3.3_TS36.212_Table_5.1.3-3.png`；`tools/figures/render_lte_turbo_interleaver_table.py`。 |
-| NR LDPC lifting set 与基图移位表 | 已在 T3.4 用 Python 图片化复现 TS 38.212 Table 5.3.2-1/2/3。 | `docs/L1/assets/T3.4_TS38.212_Table_5.3.2-*.png`；`tools/figures/render_nr_ldpc_bg_tables_from_pdf.py`。 |
+| NR LDPC lifting set 与基图移位表 | 已在 T3.4 用 Python 图片化复现 TS 38.212 Table 5.3.2-1/2/3。 | `docs/L1/assets/T3.4_TS38.212_Table_5.3.2-*.png`；`tools/figures/render_nr_ldpc_tables.py`。 |
 | LTE sub-block interleaver 32 列置换 | T7.2 正文复现 Table 5.1.4-1 序列，并记录 `table_0010.csv/html`。 | `docs/L2/T7.2_LTE_subblock_deinterleaver_circular_buffer.md`。 |
 | LTE HARQ soft buffer `Ncb/NIR/E/k0` 主线 | T7.3 已重建 DL-SCH/PCH 主线公式并记录 Word media 证据。 | `docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md`。 |
 | TS 36.213/36.321 LTE HARQ/MAC 边界锚点 | 已在 T7.3/T7.5/T7.6 补入 TS 36.213 §8.3、§8.6、§8.6.1 和 TS 36.321 §4.3.2、§4.4、§5.3.2.1、§5.3.2.2、§5.4.2.1 的本地路径与行号证据。 | `docs/L2/T7.3_LTE_HARQ_soft_buffer_RV.md`；`docs/L2/T7.5_LTE_DL_UL_decoding_differences.md`；`docs/L2/T7.6_LTE_Turbo_decoder_edge_cases.md`。 |

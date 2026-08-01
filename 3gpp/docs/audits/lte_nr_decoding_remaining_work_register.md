@@ -263,7 +263,7 @@ python3 tools/audit_figure_geometry.py --focus-only tools/figures
 | 6 | `tools/figures/render_nr_ldpc_edge_case_diagnosis.py` |
 | 6 | `tools/figures/render_nr_ldpc_lifting_qc_matrix.py` |
 | 10 | `tools/figures/render_nr_ldpc_rate_recovery_overview.py` |
-| 6 | `tools/figures/render_nr_ldpc_bg_tables_from_pdf.py` |
+| 6 | `tools/figures/render_nr_ldpc_tables.py` |
 | 4 | `tools/figures/render_nr_polar_ca_scl_selector.py` |
 | 4 | `tools/figures/render_nr_polar_decoder_chain_overview.py` |
 | 6 | `tools/figures/render_nr_polar_edge_case_diagnosis.py` |
@@ -296,7 +296,7 @@ python3 tools/audit_figure_geometry.py --focus-only tools/figures
 
 - [x] `tools/figures/render_nr_ldpc_base_graph_selection.py`：复核 BG1/BG2 选择表、协议条件说明和节点间距。
 - [x] `tools/figures/render_nr_ldpc_lifting_qc_matrix.py`：复核 lifting/QC 矩阵表、非零位置标注、标题与图元间距。
-- [x] `tools/figures/render_nr_ldpc_bg_tables_from_pdf.py`：复核 TS 38.212 表格重建图行高、分栏、表头和脚注字号。
+- [x] `tools/figures/render_nr_ldpc_tables.py`：复核 TS 38.212 表格重建图行高、分栏、表头和脚注字号。
 - [x] `tools/figures/render_nr_ldpc_rate_recovery_overview.py`：复核 rate recovery 表、k0/RV 说明、环形缓存区域和底部说明。
 - [x] `tools/figures/render_nr_ldpc_circular_buffer_states.py`：复核 circular buffer 状态、短索引例外、说明框和局部遮挡。
 - [x] `tools/figures/render_nr_ldpc_bit_deinterleaving.py`：复核 bit deinterleaving 表、列组、索引标签和读图顺序。

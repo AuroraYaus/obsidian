@@ -42,7 +42,7 @@ source_spec: "docs/superpowers/plans/2026-07-20-figure-numbering.md"
 ### Task 1: 手动修复 T2.1 已有的 2 张 SVG 嵌入（加图编号）
 
 **Files:**
-- Modify: `docs/L1/T2.7_AWGN_noise_scaling.md:178,193`
+- Modify: `docs/L1/T2.1_AWGN_noise_scaling.md:178,193`
 
 **说明:** T2.1 是目前唯一有实际 `![]()` 图片嵌入的文件，2 张 SVG 已有描述性 alt text 但缺编号。
 
@@ -73,7 +73,7 @@ source_spec: "docs/superpowers/plans/2026-07-20-figure-numbering.md"
 - [ ] **Step 3: 验证**
 
 ```bash
-grep -n '图 [0-9]' docs/L1/T2.7_AWGN_noise_scaling.md
+grep -n '图 [0-9]' docs/L1/T2.1_AWGN_noise_scaling.md
 ```
 预期输出：两行，分别显示 `图 1` 和 `图 2`。
 
@@ -192,7 +192,7 @@ def main():
             if has_section:
                 stats['skipped_has_section'] += 1
                 continue
-            if has_embed and md_file != 'T2.7_AWGN_noise_scaling.md':
+            if has_embed and md_file != 'T2.1_AWGN_noise_scaling.md':
                 # T2.1 已在 Task 1 处理，其他有嵌入的也应该处理
                 pass
             
