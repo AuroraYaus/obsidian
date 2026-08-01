@@ -1,0 +1,1193 @@
+###### Annex A (normative):
+Measurement channels
+
+# A.1 General
+
+The throughput values defined in the measurement channels specified in Annex A, are calculated and are valid per datastream (codeword). For multi-stream (more than one codeword) transmissions, the throughput referenced in the minimum requirements is the sum of throughputs of all datastreams (codewords).
+
+The UE category entry in the definition of the reference measurement channel in Annex A is only informative and reveals the UE categories, which can support the corresponding measurement channel. Whether the measurement channel is used for testing a certain UE category or not is specified in the individual minimum requirements.
+
+# A.2 UL reference measurement channels for E-UTRA TDD Config 2
+
+## A.2.1 General
+
+The measurement channels in the following clauses are defined to derive the requirements in clause 6 (Transmitter Characteristics) and clause 7 (Receiver Characteristics). The measurement channels represent example configurations of physical channels for different data rates.
+
+## A.2.2 Reference measurement channels for E-UTRA
+
+### A.2.2.1 Full RB allocation
+
+#### A.2.2.1.1 QPSK
+
+Table A.2.2.1.1-1: Reference Channels for QPSK with full RB allocation
+
+| Parameter | Unit | Value |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Channel bandwidth | MHz | 1.4 | 3 | 5 | 10 | 15 | 20 |
+| Allocated resource blocks |  | 6 | 15 | 25 | 50 | 75 | 100 |
+| Uplink-Downlink Configuration (note 2) |  | 2 | 2 | 2 | 2 | 2 | 2 |
+| Special subframe configuration (note 3) |  | 7 | 7 | 7 | 7 | 7 | 7 |
+| DFT-OFDM Symbols per Sub-Frame |  | 12 | 12 | 12 | 12 | 12 | 12 |
+| Modulation |  | QPSK | QPSK | QPSK | QPSK | QPSK | QPSK |
+| Target Coding rate |  | 1/3 | 1/3 | 1/3 | 1/3 | 1/5 | 1/6 |
+| Payload size |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 | Bits | 600 | 1544 | 2216 | 5160 | 4392 | 4584 |
+| Transport block CRC | Bits | 24 | 24 | 24 | 24 | 24 | 24 |
+| Number of code blocks per Sub-Frame (NOTE 1) |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 |  | 1 | 1 | 1 | 1 | 1 | 1 |
+| Total number of bits per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 | Bits | 1728 | 4320 | 7200 | 14400 | 21600 | 28800 |
+| Total symbols per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 |  | 864 | 2160 | 3600 | 7200 | 10800 | 14400 |
+| UE Category |  | ≥ 1 | ≥ 1 | ≥ 1 | ≥ 1 | ≥ 1 | ≥ 1 |
+| NOTE 1: If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)NOTE 2: As per Table 4.2-2 in TS 36.211 [7]NOTE 3: As per Table 4.2-1 in TS 36.211 [7] |  |  |  |  |  |  |  |
+
+#### A.2.2.1.2 16-QAM
+
+Table A.2.2.1.2-1: Reference Channels for 16-QAM with full RB allocation
+
+| Parameter | Unit | Value |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Channel bandwidth | MHz | 1.4 | 3 | 5 | 10 | 15 | 20 |
+| Allocated resource blocks |  | 6 | 15 | 25 | 50 | 75 | 100 |
+| Uplink-Downlink Configuration (NOTE 2) |  | 2 | 2 | 2 | 2 | 2 | 2 |
+| Special subframe configuration (NOTE 3) |  | 7 | 7 | 7 | 7 | 7 | 7 |
+| DFT-OFDM Symbols per Sub-Frame |  | 12 | 12 | 12 | 12 | 12 | 12 |
+| Modulation |  | 16QAM | 16QAM | 16QAM | 16QAM | 16QAM | 16QAM |
+| Target Coding rate |  | 3/4 | 1/2 | 1/3 | 3/4 | 1/2 | 1/3 |
+| Payload size |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 | Bits | 2600 | 4264 | 4968 | 21384 | 21384 | 19848 |
+| Transport block CRC | Bits | 24 | 24 | 24 | 24 | 24 | 24 |
+| Number of code blocks per Sub-Frame (NOTE 1) |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 |  | 1 | 1 | 1 | 4 | 4 | 4 |
+| Total number of bits per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 | Bits | 3456 | 8640 | 14400 | 28800 | 43200 | 57600 |
+| Total symbols per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 |  | 864 | 2160 | 3600 | 7200 | 10800 | 14400 |
+| UE Category |  | ≥ 1 | ≥ 1 | ≥ 1 | ≥ 2 | ≥ 2 | ≥ 2 |
+| NOTE 1: If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)NOTE 2: As per Table 4.2-2 in TS 36.211 [7]NOTE 3: As per Table 4.2-1 in TS 36.211 [7] |  |  |  |  |  |  |  |
+
+#### A.2.2.1.3 64-QAM
+
+Table A.2.2.1.3-1: Reference Channels for 64-QAM with full RB allocation
+
+| Parameter | Unit | Value |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Channel bandwidth | MHz | 1.4 | 3 | 5 | 10 | 15 | 20 |
+| Allocated resource blocks |  | 6 | 15 | 25 | 50 | 75 | 100 |
+| Uplink-Downlink Configuration (NOTE 2) |  | 2 | 2 | 2 | 2 | 2 | 2 |
+| Special subframe configuration (NOTE 3) |  | 7 | 7 | 7 | 7 | 7 | 7 |
+| DFT-OFDM Symbols per Sub-Frame |  | 12 | 12 | 12 | 12 | 12 | 12 |
+| Modulation |  | 64QAM | 64QAM | 64QAM | 64QAM | 64QAM | 64QAM |
+| Target Coding rate |  | 3/4 | 3/4 | 3/4 | 3/4 | 3/4 | 3/4 |
+| Payload size |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 | Bits | 3752 | 9528 | 15840 | 31704 | 46888 | 63776 |
+| Transport block CRC | Bits | 24 | 24 | 24 | 24 | 24 | 24 |
+| Number of code blocks per Sub-Frame (NOTE 1) |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 |  | 1 | 2 | 3 | 6 | 8 | 11 |
+| Total number of bits per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 | Bits | 5184 | 12960 | 21600 | 43200 | 64800 | 86400 |
+| Total symbols per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 |  | 864 | 2160 | 3600 | 7200 | 10800 | 14400 |
+| UE Category (NOTE 4) |  | 5, 8 | 5, 8 | 5, 8 | 5, 8 | 5, 8 | 5, 8 |
+| UE UL Cateogry (NOTE 4) |  | 5, 8, 13, 14 | 5, 8, 13, 14 | 5, 8, 13, 14 | 5, 8, 13, 14 | 5, 8, 13, 14 | 5, 8, 13, 14 |
+| NOTE 1: If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)NOTE 2: As per Table 4.2-2 in TS 36.211 [7]NOTE 3: As per Table 4.2-1 in TS 36.211 [7]NOTE 4:  If UE does not report UE UL category, then the applicability of reference channel is determined by UE category. If UE reports UE UL category, then the applicability of reference channel is determined by UE UL category. |  |  |  |  |  |  |  |
+
+#### A.2.2.1.4 256 QAM
+
+Table A.2.2.1.4-1: Reference Channels for 256 QAM with full RB allocation
+
+| Parameter | Unit | Value |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Channel bandwidth | MHz | 1.4 | 3 | 5 | 10 | 15 | 20 |
+| Allocated resource blocks |  | 6 | 15 | 25 | 50 | 75 | 100 |
+| Uplink-Downlink Configuration (NOTE 2) |  | 2 | 2 | 2 | 2 | 2 | 2 |
+| Special subframe configuration (NOTE 3) |  | 7 | 7 | 7 | 7 | 7 | 7 |
+| DFT-OFDM Symbols per Sub-Frame |  | 12 | 12 | 12 | 12 | 12 | 12 |
+| Modulation |  | 256QAM | 256QAM | 256QAM | 256QAM | 256QAM | 256QAM |
+| Target Coding rate |  | 3/4 | 3/4 | 3/4 | 3/4 | 3/4 | 3/4 |
+| Payload size |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 | Bits | 5160 | 12960 | 21384 | 42368 | 63776 | 84760 |
+| Transport block CRC | Bits | 24 | 24 | 24 | 24 | 24 | 24 |
+| Number of code blocks per Sub-Frame (NOTE 1) |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 |  | 1 | 3 | 4 | 8 | 11 | 15 |
+| Total number of bits per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 | Bits | 6912 | 17280 | 28800 | 57600 | 86400 | 115200 |
+| Total symbols per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frame 2,7 |  | 864 | 2160 | 3600 | 7200 | 10800 | 14400 |
+| UE UL Cateogry |  | ≥ 15 | ≥ 15 | ≥ 15 | ≥ 15 | ≥ 15 | ≥ 15 |
+| NOTE 1: If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)NOTE 2: As per Table 4.2-2 in TS 36.211 [7]NOTE 3: As per Table 4.2-1 in TS 36.211 [7] |  |  |  |  |  |  |  |
+
+### A.2.2.2 Partial RB allocation
+
+#### A.2.2.2.1 QPSK
+
+Table A.2.2.2.1-1: Reference Channels for QPSK with partial RB allocation
+
+| Parameter | Ch BW | Allocated RBs | UL-DL Configuration (NOTE 2) | Special subframe configuration (NOTE 3) | DFT-OFDM Symbols per Sub-Frame | Mod'n | Target Coding rate | Payload size for Sub-Frame 2, 7 | Transport block CRC | Number of code blocks per Sub-Frame (NOTE 1) | Total number of bits per Sub-Frame for Sub-Frame 2, 7 | Total symbols per Sub-Frame for Sub-Frame 2, 7 | UE Category |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Unit | MHz |  |  |  |  |  |  | Bits | Bits |  | Bits |  |  |
+|  | 1.4 - 20 | 1 | 2 | 7 | 12 | QPSK | 1/3 | 72 | 24 | 1 | 288 | 144 | ≥ 1 |
+|  | 1.4 - 20 | 2 | 2 | 7 | 12 | QPSK | 1/3 | 176 | 24 | 1 | 576 | 288 | ≥ 1 |
+|  | 1.4 - 20 | 3 | 2 | 7 | 12 | QPSK | 1/3 | 256 | 24 | 1 | 864 | 432 | ≥ 1 |
+|  | 1.4 - 20 | 4 | 2 | 7 | 12 | QPSK | 1/3 | 392 | 24 | 1 | 1152 | 576 | ≥ 1 |
+|  | 1.4 - 20 | 5 | 2 | 7 | 12 | QPSK | 1/3 | 424 | 24 | 1 | 1440 | 720 | ≥ 1 |
+|  | 3-20 | 6 | 2 | 7 | 12 | QPSK | 1/3 | 600 | 24 | 1 | 1728 | 864 | ≥ 1 |
+|  | 3-20 | 8 | 2 | 7 | 12 | QPSK | 1/3 | 808 | 24 | 1 | 2304 | 1152 | ≥ 1 |
+|  | 3-20 | 9 | 2 | 7 | 12 | QPSK | 1/3 | 776 | 24 | 1 | 2592 | 1296 | ≥ 1 |
+|  | 3-20 | 10 | 2 | 7 | 12 | QPSK | 1/3 | 872 | 24 | 1 | 2880 | 1440 | ≥ 1 |
+|  | 3-20 | 12 | 2 | 7 | 12 | QPSK | 1/3 | 1224 | 24 | 1 | 3456 | 1728 | ≥ 1 |
+|  | 5-20 | 15 | 2 | 7 | 12 | QPSK | 1/3 | 1320 | 24 | 1 | 4320 | 2160 | ≥ 1 |
+|  | 5-20 | 16 | 2 | 7 | 12 | QPSK | 1/3 | 1384 | 24 | 1 | 4608 | 2304 | ≥ 1 |
+|  | 5-20 | 18 | 2 | 7 | 12 | QPSK | 1/3 | 1864 | 24 | 1 | 5184 | 2592 | ≥ 1 |
+|  | 5-20 | 20 | 2 | 7 | 12 | QPSK | 1/3 | 1736 | 24 | 1 | 5760 | 2880 | ≥ 1 |
+|  | 5-20 | 24 | 2 | 7 | 12 | QPSK | 1/3 | 2472 | 24 | 1 | 6912 | 3456 | ≥ 1 |
+|  | 10-20 | 25 | 2 | 7 | 12 | QPSK | 1/3 | 2216 | 24 | 1 | 7200 | 3600 | ≥ 1 |
+|  | 10-20 | 27 | 2 | 7 | 12 | QPSK | 1/3 | 2792 | 24 | 1 | 7776 | 3888 | ≥ 1 |
+|  | 10-20 | 30 | 2 | 7 | 12 | QPSK | 1/3 | 2664 | 24 | 1 | 8640 | 4320 | ≥ 1 |
+|  | 10-20 | 32 | 2 | 7 | 12 | QPSK | 1/3 | 2792 | 24 | 1 | 9216 | 4608 | ≥ 1 |
+|  | 10-20 | 36 | 2 | 7 | 12 | QPSK | 1/3 | 3752 | 24 | 1 | 10368 | 5184 | ≥ 1 |
+|  | 10-20 | 40 | 2 | 7 | 12 | QPSK | 1/3 | 4136 | 24 | 1 | 11520 | 5760 | ≥ 1 |
+|  | 10-20 | 45 | 2 | 7 | 12 | QPSK | 1/3 | 4008 | 24 | 1 | 12960 | 6480 | ≥ 1 |
+|  | 10-20 | 48 | 2 | 7 | 12 | QPSK | 1/3 | 4264 | 24 | 1 | 13824 | 6912 | ≥ 1 |
+|  | 15 - 20 | 50 | 2 | 7 | 12 | QPSK | 1/3 | 5160 | 24 | 1 | 14400 | 7200 | ≥ 1 |
+|  | 15 - 20 | 54 | 2 | 7 | 12 | QPSK | 1/3 | 4776 | 24 | 1 | 15552 | 7776 | ≥ 1 |
+|  | 15 - 20 | 60 | 2 | 7 | 12 | QPSK | 1/4 | 4264 | 24 | 1 | 17280 | 8640 | ≥ 1 |
+|  | 15 - 20 | 64 | 2 | 7 | 12 | QPSK | 1/4 | 4584 | 24 | 1 | 18432 | 9216 | ≥ 1 |
+|  | 15 - 20 | 72 | 2 | 7 | 12 | QPSK | 1/4 | 5160 | 24 | 1 | 20736 | 10368 | ≥ 1 |
+|  | 20 | 75 | 2 | 7 | 12 | QPSK | 1/5 | 4392 | 24 | 1 | 21600 | 10800 | ≥ 1 |
+|  | 20 | 80 | 2 | 7 | 12 | QPSK | 1/5 | 4776 | 24 | 1 | 23040 | 11520 | ≥ 1 |
+|  | 20 | 81 | 2 | 7 | 12 | QPSK | 1/5 | 4776 | 24 | 1 | 23328 | 11664 | ≥ 1 |
+|  | 20 | 90 | 2 | 7 | 12 | QPSK | 1/6 | 4008 | 24 | 1 | 25920 | 12960 | ≥ 1 |
+|  | 20 | 96 | 2 | 7 | 12 | QPSK | 1/6 | 4264 | 24 | 1 | 27648 | 13824 | ≥ 1 |
+| NOTE 1: If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)NOTE 2: As per Table 4.2-2 in TS 36.211 [7]NOTE 3: As per Table 4.2-1 in TS 36.211 [7] |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+A.2.2.2.2 16-QAM
+
+Table A.2.2.2.2-1: Reference Channels for 16QAM with partial RB allocation
+
+| Parameter | Ch BW | Allocated RBs | UL-DL Configuration (NOTE 2) | Special subframe configuration (NOTE 3) | DFT-OFDM Symbols per Sub-Frame | Mod'n | Target Coding rate | Payload size for Sub-Frame 2, 7 | Transport block CRC | Number of code blocks per Sub-Frame (NOTE 1) | Total number of bits per Sub-Frame for Sub-Frame 2, 7 | Total symbols per Sub-Frame for Sub-Frame 2, 7 | UE Category |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Unit | MHz |  |  |  |  |  |  | Bits | Bits |  | Bits |  |  |
+|  | 1.4 - 20 | 1 | 2 | 7 | 12 | 16QAM | 3/4 | 408 | 24 | 1 | 576 | 144 | ≥ 1 |
+|  | 1.4 - 20 | 2 | 2 | 7 | 12 | 16QAM | 3/4 | 840 | 24 | 1 | 1152 | 288 | ≥ 1 |
+|  | 1.4 - 20 | 3 | 2 | 7 | 12 | 16QAM | 3/4 | 1288 | 24 | 1 | 1728 | 432 | ≥ 1 |
+|  | 1.4 - 20 | 4 | 2 | 7 | 12 | 16QAM | 3/4 | 1736 | 24 | 1 | 2304 | 576 | ≥ 1 |
+|  | 1.4 - 20 | 5 | 2 | 7 | 12 | 16QAM | 3/4 | 2152 | 24 | 1 | 2880 | 720 | ≥ 1 |
+|  | 3-20 | 6 | 2 | 7 | 12 | 16QAM | 3/4 | 2600 | 24 | 1 | 3456 | 864 | ≥ 1 |
+|  | 3-20 | 8 | 2 | 7 | 12 | 16QAM | 3/4 | 3496 | 24 | 1 | 4608 | 1152 | ≥ 1 |
+|  | 3-20 | 9 | 2 | 7 | 12 | 16QAM | 3/4 | 3880 | 24 | 1 | 5184 | 1296 | ≥ 1 |
+|  | 3-20 | 10 | 2 | 7 | 12 | 16QAM | 3/4 | 4264 | 24 | 1 | 5760 | 1440 | ≥ 1 |
+|  | 3-20 | 12 | 2 | 7 | 12 | 16QAM | 3/4 | 5160 | 24 | 1 | 6912 | 1728 | ≥ 1 |
+|  | 5-20 | 15 | 2 | 7 | 12 | 16QAM | 1/2 | 4264 | 24 | 1 | 8640 | 2160 | ≥ 1 |
+|  | 5-20 | 16 | 2 | 7 | 12 | 16QAM | 1/2 | 4584 | 24 | 1 | 9216 | 2304 | ≥ 1 |
+|  | 5-20 | 18 | 2 | 7 | 12 | 16QAM | 1/2 | 5160 | 24 | 1 | 10368 | 2592 | ≥ 1 |
+|  | 5-20 | 20 | 2 | 7 | 12 | 16QAM | 1/3 | 4008 | 24 | 1 | 11520 | 2880 | ≥ 1 |
+|  | 5-20 | 24 | 2 | 7 | 12 | 16QAM | 1/3 | 4776 | 24 | 1 | 13824 | 3456 | ≥ 1 |
+|  | 10-20 | 25 | 2 | 7 | 12 | 16QAM | 1/3 | 4968 | 24 | 1 | 14400 | 3600 | ≥ 1 |
+|  | 10-20 | 27 | 2 | 7 | 12 | 16QAM | 1/3 | 4776 | 24 | 1 | 15552 | 3888 | ≥ 1 |
+|  | 10-20 | 30 | 2 | 7 | 12 | 16QAM | 3/4 | 12960 | 24 | 3 | 17280 | 4320 | ≥ 2 |
+|  | 10-20 | 32 | 2 | 7 | 12 | 16QAM | 3/4 | 13536 | 24 | 3 | 18432 | 4608 | ≥ 2 |
+|  | 10-20 | 36 | 2 | 7 | 12 | 16QAM | 3/4 | 15264 | 24 | 3 | 20736 | 5184 | ≥ 2 |
+|  | 10-20 | 40 | 2 | 7 | 12 | 16QAM | 3/4 | 16992 | 24 | 3 | 23040 | 5760 | ≥ 2 |
+|  | 10-20 | 45 | 2 | 7 | 12 | 16QAM | 3/4 | 19080 | 24 | 4 | 25920 | 6480 | ≥ 2 |
+|  | 10-20 | 48 | 2 | 7 | 12 | 16QAM | 3/4 | 20616 | 24 | 4 | 27648 | 6912 | ≥ 2 |
+|  | 15 - 20 | 50 | 2 | 7 | 12 | 16QAM | 3/4 | 21384 | 24 | 4 | 28800 | 7200 | ≥ 2 |
+|  | 15 - 20 | 54 | 2 | 7 | 12 | 16QAM | 3/4 | 22920 | 24 | 4 | 31104 | 7776 | ≥ 2 |
+|  | 15 - 20 | 60 | 2 | 7 | 12 | 16QAM | 2/3 | 23688 | 24 | 4 | 34560 | 8640 | ≥ 2 |
+|  | 15 - 20 | 64 | 2 | 7 | 12 | 16QAM | 2/3 | 25456 | 24 | 4 | 36864 | 9216 | ≥ 2 |
+|  | 15 - 20 | 72 | 2 | 7 | 12 | 16QAM | 1/2 | 20616 | 24 | 4 | 41472 | 10368 | ≥ 2 |
+|  | 20 | 75 | 2 | 7 | 12 | 16QAM | 1/2 | 21384 | 24 | 4 | 43200 | 10800 | ≥ 2 |
+|  | 20 | 80 | 2 | 7 | 12 | 16QAM | 1/2 | 22920 | 24 | 4 | 46080 | 11520 | ≥ 2 |
+|  | 20 | 81 | 2 | 7 | 12 | 16QAM | 1/2 | 22920 | 24 | 4 | 46656 | 11664 | ≥ 2 |
+|  | 20 | 90 | 2 | 7 | 12 | 16QAM | 2/5 | 20616 | 24 | 4 | 51840 | 12960 | ≥ 2 |
+|  | 20 | 96 | 2 | 7 | 12 | 16QAM | 2/5 | 22152 | 24 | 4 | 55296 | 13824 | ≥ 2 |
+| NOTE 1: If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)NOTE 2: As per Table 4.2-2 in TS 36.211 [7]NOTE 3: As per Table 4.2-1 in TS 36.211 [7] |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+#### A.2.2.2.3 64-QAM
+
+Table A.2.2.2.3-1: Reference Channels for 64-QAM with partial RB allocation
+
+| Parameter | Ch BW | Allocated RBs | UL-DL Configuration (NOTE 2) | Special subframe configuration (NOTE 3) | DFT-OFDM Symbols per Sub-Frame | Mod'n | Target Coding rate | Payload size for Sub-Frame 2, 7 | Trans-port block CRC | Number of code blocks per Sub-Frame (NOTE 1) | Total number of bits per Sub-Frame for Sub-Frame 2, 7 | Total symbols per Sub-Frame for Sub-Frame 2, 7 | UE Category (NOTE 4) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Unit | MHz |  |  |  |  |  |  | Bits | Bits |  | Bits |  |  |
+|  | 1.4 - 20 | 1 | 2 | 7 | 12 | 64QAM | 3/4 | 616 | 24 | 1 | 864 | 144 | 5,8 |
+|  | 1.4 - 20 | 2 | 2 | 7 | 12 | 64QAM | 3/4 | 1256 | 24 | 1 | 1728 | 288 | 5,8 |
+|  | 1.4 - 20 | 3 | 2 | 7 | 12 | 64QAM | 3/4 | 1864 | 24 | 1 | 2592 | 432 | 5,8 |
+|  | 1.4 - 20 | 4 | 2 | 7 | 12 | 64QAM | 3/4 | 2536 | 24 | 1 | 3456 | 576 | 5,8 |
+|  | 1.4 - 20 | 5 | 2 | 7 | 12 | 64QAM | 3/4 | 3112 | 24 | 1 | 4320 | 720 | 5,8 |
+|  | 3-20 | 6 | 2 | 7 | 12 | 64QAM | 3/4 | 3752 | 24 | 1 | 5184 | 864 | 5,8 |
+|  | 3-20 | 8 | 2 | 7 | 12 | 64QAM | 3/4 | 5160 | 24 | 1 | 6912 | 1152 | 5,8 |
+|  | 3-20 | 9 | 2 | 7 | 12 | 64QAM | 3/4 | 5736 | 24 | 1 | 7776 | 1296 | 5,8 |
+|  | 3-20 | 10 | 2 | 7 | 12 | 64QAM | 3/4 | 6200 | 24 | 2 | 8640 | 1440 | 5,8 |
+|  | 3-20 | 12 | 2 | 7 | 12 | 64QAM | 3/4 | 7480 | 24 | 2 | 10368 | 1728 | 5,8 |
+|  | 5-20 | 15 | 2 | 7 | 12 | 64QAM | 3/4 | 9528 | 24 | 2 | 12960 | 2160 | 5,8 |
+|  | 5-20 | 16 | 2 | 7 | 12 | 64QAM | 3/4 | 10296 | 24 | 2 | 13824 | 2304 | 5,8 |
+|  | 5-20 | 18 | 2 | 7 | 12 | 64QAM | 3/4 | 11448 | 24 | 2 | 15552 | 2592 | 5,8 |
+|  | 5-20 | 20 | 2 | 7 | 12 | 64QAM | 3/4 | 12576 | 24 | 3 | 17280 | 2880 | 5,8 |
+|  | 5-20 | 24 | 2 | 7 | 12 | 64QAM | 3/4 | 15264 | 24 | 3 | 20736 | 3456 | 5,8 |
+|  | 10-20 | 25 | 2 | 7 | 12 | 64QAM | 3/4 | 15840 | 24 | 3 | 21600 | 3600 | 5,8 |
+|  | 10-20 | 27 | 2 | 7 | 12 | 64QAM | 3/4 | 16992 | 24 | 3 | 23328 | 3888 | 5,8 |
+|  | 10-20 | 30 | 2 | 7 | 12 | 64QAM | 3/4 | 19080 | 24 | 4 | 25920 | 4320 | 5,8 |
+|  | 10-20 | 32 | 2 | 7 | 12 | 64QAM | 3/4 | 20616 | 24 | 4 | 27648 | 4608 | 5,8 |
+|  | 10-20 | 36 | 2 | 7 | 12 | 64QAM | 3/4 | 22920 | 24 | 4 | 31104 | 5184 | 5,8 |
+|  | 10-20 | 40 | 2 | 7 | 12 | 64QAM | 3/4 | 25456 | 24 | 5 | 34560 | 5760 | 5,8 |
+|  | 10-20 | 45 | 2 | 7 | 12 | 64QAM | 3/4 | 28336 | 24 | 5 | 38880 | 6480 | 5,8 |
+|  | 10-20 | 48 | 2 | 7 | 12 | 64QAM | 3/4 | 30576 | 24 | 5 | 41472 | 6912 | 5,8 |
+|  | 15 - 20 | 50 | 2 | 7 | 12 | 64QAM | 3/4 | 31704 | 24 | 6 | 43200 | 7200 | 5,8 |
+|  | 15 - 20 | 54 | 2 | 7 | 12 | 64QAM | 3/4 | 34008 | 24 | 6 | 46656 | 7776 | 5,8 |
+|  | 15 - 20 | 60 | 2 | 7 | 12 | 64QAM | 3/4 | 37888 | 24 | 7 | 51840 | 8640 | 5,8 |
+|  | 15 - 20 | 64 | 2 | 7 | 12 | 64QAM | 3/4 | 40576 | 24 | 7 | 55296 | 9216 | 5,8 |
+|  | 1.4 - 20 | 1 | 2 | 7 | 12 | 64QAM | 3/4 | 616 | 24 | 1 | 864 | 144 | 5,8 |
+|  | 1.4 - 20 | 2 | 2 | 7 | 12 | 64QAM | 3/4 | 1256 | 24 | 1 | 1728 | 288 | 5,8 |
+|  | 1.4 - 20 | 3 | 2 | 7 | 12 | 64QAM | 3/4 | 1864 | 24 | 1 | 2592 | 432 | 5,8 |
+|  | 1.4 - 20 | 4 | 2 | 7 | 12 | 64QAM | 3/4 | 2536 | 24 | 1 | 3456 | 576 | 5,8 |
+|  | 1.4 - 20 | 5 | 2 | 7 | 12 | 64QAM | 3/4 | 3112 | 24 | 1 | 4320 | 720 | 5,8 |
+|  | 3-20 | 6 | 2 | 7 | 12 | 64QAM | 3/4 | 3752 | 24 | 1 | 5184 | 864 | 5,8 |
+|  | 3-20 | 8 | 2 | 7 | 12 | 64QAM | 3/4 | 5160 | 24 | 1 | 6912 | 1152 | 5,8 |
+|  | 3-20 | 9 | 2 | 7 | 12 | 64QAM | 3/4 | 5736 | 24 | 1 | 7776 | 1296 | 5,8 |
+|  | 3-20 | 10 | 2 | 7 | 12 | 64QAM | 3/4 | 6200 | 24 | 2 | 8640 | 1440 | 5,8 |
+|  | 3-20 | 12 | 2 | 7 | 12 | 64QAM | 3/4 | 7480 | 24 | 2 | 10368 | 1728 | 5,8 |
+|  | 5-20 | 15 | 2 | 7 | 12 | 64QAM | 3/4 | 9528 | 24 | 2 | 12960 | 2160 | 5,8 |
+|  | 5-20 | 16 | 2 | 7 | 12 | 64QAM | 3/4 | 10296 | 24 | 2 | 13824 | 2304 | 5,8 |
+|  | 5-20 | 18 | 2 | 7 | 12 | 64QAM | 3/4 | 11448 | 24 | 2 | 15552 | 2592 | 5,8 |
+|  | 5-20 | 20 | 2 | 7 | 12 | 64QAM | 3/4 | 12576 | 24 | 3 | 17280 | 2880 | 5,8 |
+|  | 5-20 | 24 | 2 | 7 | 12 | 64QAM | 3/4 | 15264 | 24 | 3 | 20736 | 3456 | 5,8 |
+|  | 10-20 | 25 | 2 | 7 | 12 | 64QAM | 3/4 | 15840 | 24 | 3 | 21600 | 3600 | 5,8 |
+|  | 10-20 | 27 | 2 | 7 | 12 | 64QAM | 3/4 | 16992 | 24 | 3 | 23328 | 3888 | 5,8 |
+|  | 10-20 | 30 | 2 | 7 | 12 | 64QAM | 3/4 | 19080 | 24 | 4 | 25920 | 4320 | 5,8 |
+|  | 15 - 20 | 50 | 2 | 7 | 12 | 64QAM | 3/4 | 31704 | 24 | 6 | 43200 | 7200 | 5,8 |
+|  | 15 - 20 | 54 | 2 | 7 | 12 | 64QAM | 3/4 | 34008 | 24 | 6 | 46656 | 7776 | 5,8 |
+|  | 15 - 20 | 60 | 2 | 7 | 12 | 64QAM | 3/4 | 37888 | 24 | 7 | 51840 | 8640 | 5,8 |
+|  | 15 - 20 | 64 | 2 | 7 | 12 | 64QAM | 3/4 | 40576 | 24 | 7 | 55296 | 9216 | 5,8 |
+|  | 15 - 20 | 72 | 2 | 7 | 12 | 64QAM | 3/4 | 45352 | 24 | 8 | 62208 | 10368 | 5,8 |
+|  | 20 | 75 | 2 | 7 | 12 | 64QAM | 3/4 | 46888 | 24 | 8 | 64800 | 10800 | 5,8 |
+|  | 20 | 80 | 2 | 7 | 12 | 64QAM | 3/4 | 51024 | 24 | 9 | 69120 | 11520 | 5,8 |
+|  | 20 | 81 | 2 | 7 | 12 | 64QAM | 3/4 | 51024 | 24 | 9 | 69984 | 11664 | 5,8 |
+|  | 20 | 90 | 2 | 7 | 12 | 64QAM | 3/4 | 51024 | 24 | 9 | 77760 | 12960 | 5,8 |
+|  | 20 | 96 | 2 | 7 | 12 | 64QAM | 3/4 | 61664 | 24 | 11 | 82944 | 13824 | 5,8 |
+| NOTE 1: If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)NOTE 2: As per Table 4.2-2 in TS 36.211 [7].NOTE 3: As per Table 4.2-1 in TS 36.211 [7]NOTE 4:  If UE does not report UE UL category, then the applicability of reference channel is determined by UE category. If UE reports UE UL category, then the applicability of reference channel is determined by UE UL category |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+#### A.2.2.2.4 256 QAM
+
+Table A.2.2.2.4-1: Reference Channels for 256 QAM with partial RB allocation
+
+| Parameter | Ch BW | Allocated RBs | UL-DL Configuration (NOTE 2) | Special Slot Configuration (NOTE 3) | DFT-OFDM Symbols per Sub-Frame | Mod'n | Target Coding rate | Payload size for Sub-Frame 2, 7 | Trans-port block CRC | Number of code blocks per Sub-Frame (NOTE 1) | Total number of bits per Sub-Frame for Sub-Frame 2, 7 | Total symbols per Sub-Frame for Sub-Frame 2, 7 | UE UL Cateogry |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Unit | MHz |  |  |  |  |  |  | Bits | Bits |  | Bits |  |  |
+|  | 1.4 - 20 | 1 | 2 | 7 | 12 | 256QAM | 3/4 | 840 | 24 | 1 | 1152 | 144 | ≥ 15 |
+|  | 1.4 - 20 | 2 | 2 | 7 | 12 | 256QAM | 3/4 | 1672 | 24 | 1 | 2304 | 288 | ≥ 15 |
+|  | 1.4 - 20 | 3 | 2 | 7 | 12 | 256QAM | 3/4 | 2536 | 24 | 1 | 3456 | 432 | ≥ 15 |
+|  | 1.4 - 20 | 4 | 2 | 7 | 12 | 256QAM | 3/4 | 3368 | 24 | 1 | 4608 | 576 | ≥ 15 |
+|  | 1.4 - 20 | 5 | 2 | 7 | 12 | 256QAM | 3/4 | 4264 | 24 | 1 | 5760 | 720 | ≥ 15 |
+|  | 3-20 | 6 | 2 | 7 | 12 | 256QAM | 3/4 | 5160 | 24 | 1 | 6912 | 864 | ≥ 15 |
+|  | 3-20 | 8 | 2 | 7 | 12 | 256QAM | 3/4 | 6712 | 24 | 2 | 9216 | 1152 | ≥ 15 |
+|  | 3-20 | 9 | 2 | 7 | 12 | 256QAM | 3/4 | 7736 | 24 | 2 | 10368 | 1296 | ≥ 15 |
+|  | 3-20 | 10 | 2 | 7 | 12 | 256QAM | 3/4 | 8504 | 24 | 2 | 11520 | 1440 | ≥ 15 |
+|  | 3-20 | 12 | 2 | 7 | 12 | 256QAM | 3/4 | 10296 | 24 | 2 | 13824 | 1728 | ≥ 15 |
+|  | 5-20 | 15 | 2 | 7 | 12 | 256QAM | 3/4 | 12960 | 24 | 3 | 17280 | 2160 | ≥ 15 |
+|  | 5-20 | 16 | 2 | 7 | 12 | 256QAM | 3/4 | 13536 | 24 | 3 | 18432 | 2304 | ≥ 15 |
+|  | 5-20 | 18 | 2 | 7 | 12 | 256QAM | 3/4 | 15264 | 24 | 3 | 20736 | 2592 | ≥ 15 |
+|  | 5-20 | 20 | 2 | 7 | 12 | 256QAM | 3/4 | 16992 | 24 | 3 | 23040 | 2880 | ≥ 15 |
+|  | 5-20 | 24 | 2 | 7 | 12 | 256QAM | 3/4 | 20616 | 24 | 4 | 27648 | 3456 | ≥ 15 |
+|  | 10-20 | 25 | 2 | 7 | 12 | 256QAM | 3/4 | 21384 | 24 | 4 | 28800 | 3600 | ≥ 15 |
+|  | 10-20 | 27 | 2 | 7 | 12 | 256QAM | 3/4 | 22920 | 24 | 4 | 31104 | 3888 | ≥ 15 |
+|  | 10-20 | 30 | 2 | 7 | 12 | 256QAM | 3/4 | 25456 | 24 | 5 | 34560 | 4320 | ≥ 15 |
+|  | 10-20 | 32 | 2 | 7 | 12 | 256QAM | 3/4 | 27376 | 24 | 5 | 36864 | 4608 | ≥ 15 |
+|  | 10-20 | 36 | 2 | 7 | 12 | 256QAM | 3/4 | 30576 | 24 | 6 | 41472 | 5184 | ≥ 15 |
+|  | 10-20 | 40 | 2 | 7 | 12 | 256QAM | 3/4 | 34008 | 24 | 6 | 46080 | 5760 | ≥ 15 |
+|  | 10-20 | 45 | 2 | 7 | 12 | 256QAM | 3/4 | 37888 | 24 | 7 | 51840 | 6480 | ≥ 15 |
+|  | 10-20 | 48 | 2 | 7 | 12 | 256QAM | 3/4 | 40576 | 24 | 8 | 55296 | 6912 | ≥ 15 |
+|  | 15 - 20 | 50 | 2 | 7 | 12 | 256QAM | 3/4 | 42368 | 24 | 8 | 57600 | 7200 | ≥ 15 |
+|  | 15 - 20 | 54 | 2 | 7 | 12 | 256QAM | 3/4 | 46888 | 24 | 8 | 62208 | 7776 | ≥ 15 |
+|  | 15 - 20 | 60 | 2 | 7 | 12 | 256QAM | 3/4 | 51024 | 24 | 9 | 69120 | 8640 | ≥ 15 |
+|  | 15 - 20 | 64 | 2 | 7 | 12 | 256QAM | 3/4 | 55056 | 24 | 9 | 73728 | 9216 | ≥ 15 |
+|  | 15 - 20 | 72 | 2 | 7 | 12 | 256QAM | 3/4 | 61664 | 24 | 11 | 82944 | 10368 | ≥ 15 |
+|  | 20 | 75 | 2 | 7 | 12 | 256QAM | 3/4 | 63776 | 24 | 11 | 86400 | 10800 | ≥ 15 |
+|  | 20 | 80 | 2 | 7 | 12 | 256QAM | 3/4 | 68808 | 24 | 12 | 92160 | 11520 | ≥ 15 |
+|  | 20 | 81 | 2 | 7 | 12 | 256QAM | 3/4 | 68808 | 24 | 12 | 93312 | 11664 | ≥ 15 |
+|  | 20 | 90 | 2 | 7 | 12 | 256QAM | 3/4 | 76208 | 24 | 13 | 103680 | 12960 | ≥ 15 |
+|  | 20 | 96 | 2 | 7 | 12 | 256QAM | 3/4 | 81176 | 24 | 14 | 110592 | 13824 | ≥ 15 |
+| NOTE 1: If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)NOTE 2: As per Table 4.2-2 in TS 36.211 [7]NOTE 3: As per Table 4.2-1 in TS 36.211 [7] |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+# A.3 DL reference measurement channels for E-UTRA
+
+## A.3.1 General
+
+The number of available channel bits varies across the sub-frames due to PBCH and PSS/SSS overhead. The payload size per sub-frame is varied in order to keep the code rate constant throughout a frame.
+
+Unless otherwise stated, no user data is scheduled on subframes #5 in order to facilitate the transmission of system information blocks (SIB).
+
+The algorithm for determining the payload size A is as follows; given a desired coding rate R and radio block allocation NRB
+
+1. Calculate the number of channel bits Nch that can be transmitted during the first transmission of a given sub-frame.
+
+2. Find A such that the resulting coding rate is as close to R as possible, that is,
+
+![](media_svg/image1.svg) [公式≈: minR−(A+24*(N_{CB}+1))/N_{ch},whereN_{CB}=^{√}_{⌠}_{∞}_{C}^{0}^{,}_{,}^{if}_{if}^{C}_{C}^{=}_{>}^{1}_{1}],
+
+subject to
+
+a) A is a valid TB size according to clause 7.1.7 of TS 36.213 [6] assuming an allocation of NRB resource blocks.
+
+b) C is the number of Code Blocks calculated according to clause 5.1.2 of TS 36.212 [5].
+
+3. If there is more than one A that minimizes the equation above, then the larger value is chosen per default and the chosen code rate should not exceed 0.93.
+
+4. For TDD, the measurement channel is based on DL/UL configuration ratio of 3DL+DwPTS (10 OFDM symbol SSF7): 1UL
+
+### A.3.1.1 QPSK
+
+Table A.3.1.1-1: Fixed Reference Channel for Receiver Requirements (TDD)
+
+| Parameter | Unit | Value |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Channel Bandwidth | MHz | 1.4 | 3 | 5 | 10 | 15 | 20 |
+| Allocated resource blocks |  | 6 | 15 | 25 | 50 | 75 | 100 |
+| Uplink-Downlink Configuration (NOTE 5) |  | 2 | 2 | 2 | 2 | 2 | 2 |
+| Special subframe configuration (NOTE 6) |  | 7 | 7 | 7 | 7 | 7 | 7 |
+| Allocated subframes per Radio Frame (D+S) |  | 3 | 3+2 | 3+2 | 3+2 | 3+2 | 3+2 |
+| Number of HARQ Processes | Processes | 7 | 7 | 7 | 7 | 7 | 7 |
+| Maximum number of HARQ transmission |  | 1 | 1 | 1 | 1 | 1 | 1 |
+| Modulation |  | QPSK | QPSK | QPSK | QPSK | QPSK | QPSK |
+| Target coding rate |  | 1/3 | 1/3 | 1/3 | 1/3 | 1/3 | 1/3 |
+| Information Bit Payload per Sub-Frame | Bits |  |  |  |  |  |  |
+| For Sub-Frame 3, 4, 8, 9 |  | 408 | 1320 | 2216 | 4392 | 6712 | 8760 |
+| For Sub-Frame 1, 6 |  | N/A | 776 | 1288 | 2664 | 4008 | 5352 |
+| For Sub-Frame 5 |  | N/A | N/A | N/A | N/A | N/A | N/A |
+| For Sub-Frame 0 |  | 208 | 1064 | 1800 | 4392 | 6712 | 8760 |
+| Transport block CRC | Bits | 24 | 24 | 24 | 24 | 24 | 24 |
+| Number of Code Blocks per Sub-Frame (NOTE 4) |  |  |  |  |  |  |  |
+| For Sub-Frame 3, 4, 8, 9 |  | 1 | 1 | 1 | 1 | 2 | 2 |
+| For Sub-Frame 1, 6 |  | N/A | 1 | 1 | 1 | 1 | 1 |
+| For Sub-Frame 5 |  | N/A | N/A | N/A | N/A | N/A | N/A |
+| For Sub-Frame 0 |  | 1 | 1 | 1 | 1 | 2 | 2 |
+| Binary Channel Bits Per Sub-Frame | Bits |  |  |  |  |  |  |
+| For Sub-Frame 3, 4, 8, 9 |  | 1368 | 3780 | 6300 | 13800 | 20700 | 27600 |
+| For Sub-Frame 1, 6 |  | N/A | 2616 | 4456 | 9056 | 13656 | 18256 |
+| For Sub-Frame 5 |  | N/A | N/A | N/A | N/A | N/A | N/A |
+| For Sub-Frame 0 |  | 672 | 3084 | 5604 | 13104 | 20004 | 26904 |
+| Max. Throughput averaged over 1 frame | kbps | 102.4 | 564 | 932 | 1965.6 | 3007.2 | 3970.4 |
+| UE Category |  | ≥ 1 | ≥ 1 | ≥ 1 | ≥ 1 | ≥ 1 | ≥ 1 |
+| NOTE 1: For normal subframes(0,3,4,5,8,9), 2 symbols allocated to PDCCH for 20 MHz, 15 MHz and 10 MHz channel BW; 3 symbols allocated to PDCCH for 5 MHz and 3 MHz; 4 symbols allocated to PDCCH for 1.4 MHz. For special subframe (1&6), only 2 OFDM symbols are allocated to PDCCH for all BWs.NOTE 2: For 1.4MHz, no data shall be scheduled on special subframes(1&6) to avoid problems with insufficient PDCCH performanceNOTE 3: Reference signal, Synchronization signals and PBCH allocated as per TS 36.211 [7]NOTE 4: If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).NOTE 5: As per Table 4.2-2 in TS 36.211 [7]NOTE 6: As per Table 4.2-1 in TS 36.211 [7] |  |  |  |  |  |  |  |
+
+### A.3.1.2 64-QAM
+
+Table A.3.1.2-1: Fixed Reference Channel for Maximum input level for UE Categories ≥ 3 (TDD)
+
+| Parameter | Unit | Value |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Channel bandwidth | MHz | 1.4 | 3 | 5 | 10 | 15 | 20 |
+| Allocated resource blocks |  | 6 | 15 | 25 | 50 | 75 | 100 |
+| Subcarriers per resource block |  | 12 | 12 | 12 | 12 | 12 | 12 |
+| Uplink-Downlink Configuration (NOTE 5) |  | 2 | 2 | 2 | 2 | 2 | 2 |
+| Special subframe configuration (NOTE 6) |  | 7 | 7 | 7 | 7 | 7 | 7 |
+| Allocated subframes per Radio Frame |  | 2 | 3+2 | 3+2 | 3+2 | 3+2 | 3+2 |
+| Modulation |  | 64QAM | 64QAM | 64QAM | 64QAM | 64QAM | 64QAM |
+| Target Coding Rate |  | ¾ | ¾ | ¾ | ¾ | ¾ | ¾ |
+| Number of HARQ Processes | Processes | 7 | 7 | 7 | 7 | 7 | 7 |
+| Maximum number of HARQ transmissions |  | 1 | 1 | 1 | 1 | 1 | 1 |
+| Information Bit Payload per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frames 3, 4, 8, 9 | Bits | 2984 | 8504 | 14112 | 30576 | 46888 | 61664 |
+| For Sub-Frames 1,6 | Bits | N/A | 5544 | 9528 | 19848 | 30576 | 40576 |
+| For Sub-Frame 5 | Bits | N/A | N/A | N/A | N/A | N/A | N/A |
+| For Sub-Frame 0 | Bits | N/A | 6968 | 12576 | 30576 | 45352 | 61664 |
+| Transport block CRC | Bits | 24 | 24 | 24 | 24 | 24 | 24 |
+| Number of Code Blocks per Sub-Frame(NOTE 4) |  |  |  |  |  |  |  |
+| For Sub-Frames 3, 4, 8, 9 |  | 1 | 2 | 3 | 5 | 8 | 11 |
+| For Sub-Frames 1,6 |  | N/A | 2 | 2 | 4 | 6 | 8 |
+| For Sub-Frame 5 |  | N/A | N/A | N/A | N/A | N/A | N/A |
+| For Sub-Frame 0 |  | N/A | 2 | 3 | 5 | 8 | 11 |
+| Binary Channel Bits per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frames 3, 4, 8, 9 | Bits | 4104 | 11340 | 18900 | 41400 | 62100 | 82800 |
+| For Sub-Frames 1,6 |  | N/A | 7848 | 13368 | 27168 | 40968 | 54768 |
+| For Sub-Frame 5 | Bits | N/A | N/A | N/A | N/A | N/A | N/A |
+| For Sub-Frame 0 | Bits | N/A | 9252 | 16812 | 39312 | 60012 | 80712 |
+| Max. Throughput averaged over 1 frame | kbps | 596.8 | 3791.2 | 6369.6 | 13910 | 20945 | 27877 |
+| NOTE 1: For normal subframes(0,3,4,5,8,9), 2 symbols allocated to PDCCH for 20 MHz, 15 MHz and 10 MHz channel BW; 3 symbols allocated to PDCCH for 5 MHz and 3 MHz; 4 symbols allocated to PDCCH for 1.4 MHz. For special subframe (1&6), only 2 OFDM symbols are allocated to PDCCH for all BWs.NOTE 2: For 1.4MHz, no data shall be scheduled on special subframes(1&6) to avoid problems with insufficient PDCCH performance.NOTE 3: Reference signal, Synchronization signals and PBCH allocated as per TS 36.211 [7].NOTE 4: If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).NOTE 5: As per Table 4.2-2 in TS 36.211 [7].NOTE 6: As per Table 4.2-1 in TS 36.211 [7] |  |  |  |  |  |  |  |
+
+### A.3.1.3 256-QAM
+
+Table A.3.1.3-1: Fixed Reference Channel for Maximum input level for UE Categories 11/12 and UE DL categories ≥ 11 (TDD)
+
+| Parameter | Unit | Value |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Channel bandwidth | MHz | 1.4 | 3 | 5 | 10 | 15 | 20 |
+| Allocated resource blocks |  | 6 | 15 | 25 | 50 | 75 | 100 |
+| Subcarriers per resource block |  | 12 | 12 | 12 | 12 | 12 | 12 |
+| Uplink-Downlink Configuration (NOTE 5) |  | 2 | 2 | 2 | 2 | 2 | 2 |
+| Special subframe configuration (NOTE 6) |  | 7 | 7 | 7 | 7 | 7 | 7 |
+| Allocated subframes per Radio Frame |  | 2 | 3+2 | 3+2 | 3+2 | 3+2 | 3+2 |
+| Modulation |  | 256QAM | 256QAM | 256QAM | 256QAM | 256QAM | 256QAM |
+| Target Coding Rate |  | 4/5 | 4/5 | 4/5 | 4/5 | 4/5 | 4/5 |
+| Number of HARQ Processes | Processes | 7 | 7 | 7 | 7 | 7 | 7 |
+| Maximum number of HARQ transmissions |  | 1 | 1 | 1 | 1 | 1 | 1 |
+| Information Bit Payload per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frames 3,4,8,9 | Bits | 4392 | 12216 | 19848 | 42368 | 63776 | 84760 |
+| For Sub-Frames 1,6 | Bits | N/A | 10464 | 17824 | 36224 | 54624 | 73024 |
+| For Sub-Frame 5 | Bits | N/A | N/A | N/A | N/A | N/A | N/A |
+| For Sub-Frame 0 | Bits | N/A | 9912 | 17568 | 42368 | 63776 | 84760 |
+| Transport block CRC | Bits | 24 | 24 | 24 | 24 | 24 | 24 |
+| Number of Code Blocks per Sub-Frame(NOTE 4) |  |  |  |  |  |  |  |
+| For Sub-Frames 3,4,8,9 |  | 1 | 2 | 4 | 7 | 11 | 14 |
+| For Sub-Frames 1,6 |  | N/A | 2 | 3 | 6 | 9 | 13 |
+| For Sub-Frame 5 |  | N/A | N/A | N/A | N/A | N/A | N/A |
+| For Sub-Frame 0 |  | N/A | 2 | 3 | 7 | 11 | 14 |
+| Binary Channel Bits per Sub-Frame |  |  |  |  |  |  |  |
+| For Sub-Frames 3,4,8,9 | Bits | 5472 | 15120 | 25200 | 55200 | 82800 | 110400 |
+| For Sub-Frames 1,6 |  | N/A | 8248 | 13536 | 27376 | 40576 | 55056 |
+| For Sub-Frame 5 | Bits | N/A | N/A | N/A | N/A | N/A | N/A |
+| For Sub-Frame 0 | Bits | N/A | 12336 | 22416 | 52416 | 80016 | 107616 |
+| Max. Throughput averaged over 1 frame | kbps | 878.4 | 5570.4 | 9240 | 20049.6 | 30144 | 40503.2 |
+| NOTE 1: For normal subframes(0,3,4,5,8,9), 2 symbols allocated to PDCCH for 20 MHz, 15 MHz and 10 MHz channel BW; 3 symbols allocated to PDCCH for 5 MHz and 3 MHz; 4 symbols allocated to PDCCH for 1.4 MHz. For special subframe (1&6), only 2 OFDM symbols are allocated to PDCCH for all BWs.NOTE 2: For 1.4MHz, no data shall be scheduled on special subframes(1&6) to avoid problems with insufficient PDCCH performance.NOTE 3: Reference signal, Synchronization signals and PBCH allocated as per TS 36.211 [7].NOTE 4: If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).NOTE 5: As per Table 4.2-2 in TS 36.211 [7].NOTE 6: As per Table 4.2-1 in TS 36.211 [7] |  |  |  |  |  |  |  |
+
+###### Annex B:
+Void
+
+###### Annex C:
+Void
+
+###### Annex D:
+Void
+
+###### Annex E:
+Void
+
+###### Annex F:
+Void
+
+###### Annex G:
+Void
+
+###### Annex H (normative):
+Modified MPR behavior
+
+The definitions of the bits in the modifiedMPR-Behaviour field have been moved to Annex H of 38.101-1[2].
+
+###### Annex I (normative):
+Dual uplink interferer
+
+UE is mandated to support operation in dual and triple uplink mode for EN-DC configuration in NR FR1 listed in Table 5.5B.2-1, Table 5.5B.3-1, and Table 5.5B.4.1-1 and indicated by column single uplink allowed, Table 7.3B.2.3.5.1-1, Table 7.3B.2.3.5.2-0, Table 7.3B.2.3.5.2-1 or NE-DC configuration in NR FR1 listed in Table 5.5B.4a.1-1 and indicated by column single uplink allowed if the intermodulation products caused by the dual uplink operation do not interfere with its own primary downlink transmission channel bandwidth of PCell or PSCell. For intermodulation products falling into any secondary downlink channel bandwidth, UE single UL capability is not considered.
+
+Formula for determining if the EN-DC in NR FR1 configuration with dual uplink operation interferes with its own downlink reception.
+
+Interference bandwidth: IBW = |a| * CBW1 + |b| * CBW2
+
+- |a| + |b| = 2 (or 3)
+
+- CBW1 and CBW2 are the transmission bandwidth configurations of the UL channels
+
+Center frequency of IBW:  fIBW = |a * f1 + b * f2|
+
+- f1 and f2 are center frequency of the transmission bandwidth configurations of each UL channel
+
+The range of IMD 2 (or 3): [fIBW – IBW/2, fIBW + IBW/2]
+
+NOTE 1: UE shall be able to apply operations which are configured by RRC reconfiguration and corresponding HARQ timing on the transmission bandwidth.
+
+NOTE 2: For identified difficult band combination, during two adjacent RRC reconfiguration, the changing of transmission bandwidth should not introduce IM2 and IM3, which will result in UE changing from 2Tx to 1Tx. Otherwise, UE behavior is not specified.
+
+For DC_3A_n3A intra-band non-contiguous EN-DC combination, only single switched UL is supported in Rel-15.
+
+For DC_2A_n2A, DC_5A_n5A, DC_7A_n7A, DC_48A_n48A, DC_66A_n66A, DC_71A_n71A intra-band non-contiguous EN-DC combination, and DC_(n)5AA,  DC_(n)12AA, DC_(n)38AA, DC_(n)48AA intra-band contiguous EN-DC combination,only single switched UL is supported.
+
+###### Annex J:
+Void
+
+###### Annex K:
+Void
+
+###### Annex L (informative):
+Change history
+
+| Change history |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Date | Meeting | TDoc | CR | Rev | Cat | Subject/Comment | New version |  |
+| 2017-08 | RAN4#84 |  |  |  |  | Initial Skeleton | 0.0.1 |  |
+| 2017-11 | RAN4#84Bis | R4-1711980 |  |  |  | Number TPs from editors | 0.1.0 |  |
+| 2017-12 | RAN4#85 | R4-1713807 |  |  |  | Approved TPs in RAN4#85R4-1714444, CA BW classes, TP, EricssonR4-1714170, How to list DC configurations into TS 38.101-3, NokiaR4-1714530, TP on introducing operating bands for NR-LTE DC including SUL band combinations in 38.101-3 , QualcommR4-1714098, TP to TS 38.101-3: UE RF requirements for non-standalone SUL, HuaweiR4-1713206, TP on general parts for 38.101-3 NR interwork, EricssonR4-1714443, TP to TS 38.101-3: On dual uplink operation for EN-DC in NR FR1 and single uplink, NokiaR4-1714450, TP to 38.101-3: maximum output power and unwanted emissions for EN-DC, EricssonR4-1714346, TP to 38.101-3: REFSENS for intra-band EN-DC, EricssonR4-1714345, TP for TS 36.101-3: clause 7 receiver requirements, HuaweiBand list according to R4-1714542, List of bands and band combinations to be introduced into RAN4 NR core requirements by December 2017, RAN4 Chairmen | 0.2.0 |  |
+| 2017-12 | RAN4#85 | R4-1714571 |  |  |  | Further corrections after email review | 0.3.0 |  |
+| 2017-12 | RAN#78 | RP-172477 |  |  |  | v1.0.0 submitted for plenary approval. Contents same as 0.3.0 | 1.0.0 |  |
+| 2017-12 | RAN#78 |  |  |  |  | Approved by plenary – Rel-15 spec under change control | 15.0.0 |  |
+| 2018-03 | RAN#79 | RP-180264 | 0005 |  | F | Implementation of endorsed CRs to 38.101-3Endorsed draft CRF: R4-1801267, Draft CR on UE RF requirements for SUL in TS 38.101-3, HuaweiB: R4-1801111, Draft CR for completed LTE 1CC + NR 1band for TS 38.101-3, NTT DOCOMO, INC.B: R4-1800716, Draft CR for introduction of completed band combinations from 37.863-03-01 into 38.101-3, EricssonB: R4-1800063, Draft CR for completed EN-DC of LTE 4CC + NR 1band for TS 38.101-3, NokiaB: R4-1800717, Draft CR for introduction of completed band combinations from 37.865-01-01 into 38.101-3, EricssonF: R4-1800049, Modification for TS38.101-3, CATTF: R4-1800287, 38.101-3 DC_(n)71B draft CR for clause 6.2.4.1 - A-MPR for intra-band EN-DC - NS value, T-Mobile USA Inc.F: R4-1800288, 38.101-3 DC_(n)71B draft CR for clause 7.3.3 Reference sensitivity for DC_(n)71B - MSD values, T-Mobile USA Inc.F: R4-1801139 Draft CR to 38.101-3: MSD for inter-band EN-DC, Ericsson | 15.1.0 |  |
+| 2018-06 | RAN#80 | RP-181374 | 0013 | 1 | F | CR to TS 38.101-3: Implementation of endorsed draft CRs from RAN4 #87Missing figures (Figure 6.3B.1.1-1, Figure 6.3B.1.1-2, Figure 6.3B.1.1-3 and Figure 6.3B.1.1-4) from the endorsed draftCR (R4-1807235) were added during the CR implementation. | 15.2.0 |  |
+| 2018-09 | RAN#81 | RP-182129 | 0020 | 2 | F | Big CR for 38.101-3Draft CRs from RAN4#88:R4-1809960 Draft CR to TS 38.101-3: to introduce new NR inter-band DC band combinations Samsung,KDDI,SKT,KT,LGU+R4-1809991 CR to 38.101-3:Corrections on UE coexistence table for Table 6.5B.3.3.1-1 MediaTek Inc.R4-1810054 Pcmax for Rel-15 inter-band EN-DC for FR1 and NR in FR2 InterDigital, Inc.R4-1810111 Single UL allowed corrections for DC_28A-n51A EN-DC in 38.101-3 Skyworks Solutions Inc.R4-1810125 Draft CR to 38.101-3 Single UL allowed corrections for DC_28A_51A EN-DC Skyworks Solutions Inc.R4-1810128 Draft CR to 38.101-3 Single UL allowed corrections for EN-DC operation in NR FR1 (two bands) Skyworks Solutions Inc.R4-1810167 TP for TR 37.863-01-01: MSD for DC_5A_n78A due to the 4th harmonic MediaTek Inc.R4-1810410 Draft CR to 38.101-3: Corrections on symbols and abbreviations in clause 3 ZTE CorporationR4-1810417 Correction to DC_(n)71B MSD definition NokiaR4-1810433 Correction on EN-DC 8A_n79A SoftBank Corp.,ZTER4-1810476 Draft CR to TS 38.101-3 correction for DC_3_n3-n77, DC_3_n3-n78 CHTTLR4-1810976 Annex lettering change for 38.101-3 Qualcomm IncorporatedR4-1811461 Clarification and corrections of EN-DC REFSENS exceptions requirement Nokia, Nokia Shanghai BellR4-1811462 Correction to DC_(n)71B scs restriction for NR NokiaR4-1811466 EN DC_41-79 CATTR4-1811467 Draft CR TS 38.101-3 Corrections to Single UL Allowed Criteria for Mid-Band EN-DC in FR1 Skyworks Solutions Inc.R4-1811484 Pcmax for inter-band EN-DC FR1 draft CR InterDigital, Inc.R4-1811525 Draft CR TS 38.101-3 on missing requirements for FR1 EN-DC Skyworks Solutions, Inc.R4-1811542 Draft CR to 38.101-3 on correction on some errors Huawei, HiSiliconR4-1811796 Draft CR to 38.101-3 Corrections to Single UL allowed criteria for EN-DC Skyworks Solutions Inc.R4-1811800 DRAFT CR for PCmax FR2 correction Qualcomm IncorporatedR4-1811810 Draft CR TS 38.101-3: Corrections for B41/n41 SPRINT Corporation | 15.3.0 |  |
+| 2018-12 | RAN#82 | RP-182359 | 0030 |  | F | Endorced draft CRs from RAN4#88Bis :R4-1812057, Introduction of Intra-band contiguous EN-DC bandwidth classes, NokiaR4-1812290 Draft CR on MSD for EN-DC including Band 66 and n78 Huawei, HiSiliconR4-1812293 Draft CR on switching time mask for EN-DC Huawei, HiSiliconR4-1812298 Draft CR to TS 38.101-3: to add missing requirements for inter-band CA between FR1 and FR2. SamsungR4-1812360 Draft CR to 38.101-3: Corrrection to UL configuration for EN-DC reference sensitivity exceptions Skyworks Solutions Inc.R4-1812361 Draft CR to 38.101-3: NR uplink DFT-S-OFDM waveforms for EN-DC reference sensitivity Skyworks Solutions Inc.R4-1812362 Draft CR to 38.101-3: Editorial and RB allocation corrections to table 7.3B.2.3.4-2 Skyworks Solutions Inc.R4-1812363 Draft CR to 38.101-3: Single UL allowed operation corrections in clause 7.3B.2.3.5 Skyworks Solutions Inc.R4-1812404 Non-contiguous intra-band EN-DC emission requirements Qualcomm IncorporatedR4-1812410 Correction on REFSENS exception for EN-DC 41A-n77A/n78A SoftBank Corp.R4-1812670 Correction on REFSENS exceptions of DC_5A-7A_n78A to TS 38.101-3 LG UplusR4-1813471 draftCR on applicability of TDD configuratiin for CA in TS 38.101-3 HuaweiR4-1813796 Draft CR for 38.101-3: Intra-band Pcmax for Type 2 UEs Sprint CorporationR4-1813816 Renaming of DC_(n)71B into DC_(n)71AA NokiaR4-1813817 Correction to EN-DC operating bands and configurations NokiaR4-1813818 Draft CR on correction REFSENs exceptions due to dual uplink operation for inter-band EN-DC to TS 38.101-3 SamsungR4-1813822 Draft CR for 38.101-3: Single UL allowed criteria in Annex I  Vodafone España SAR4-1814157 Draft CR for UE-to-UE coexistence requirements for intra-band EN-DC in TS38.101-3 LG Electronics FranceR4-1814167 Draft CR on Single UL for some EN-DC combinations HuaweiEndorsed draft CRs from Ran4#89:R4-1815952 dCR on TS38.101-3 merging draft CRs from RAN4#(88Bis) Qualcomm IncorporatedR4-1814803 Draft CR on editorial error for EN-DC band combinations to TS 38.101-3 Huawei, HiSiliconR4-1815802 draft CR editorial correction in 38.101-3 EricssonR4-1814425 Simplification of requirements for EN-DC configuration including FR2 NTT DOCOMO, INC.R4-1814512 Draft CR to TS38.101-3_Corrections on MSD requirments for EN-DC combinations of band 8 and n77 n78(Clause 7.3B.2.3.1) ZTE CorporationR4-1814938 Draft CR to 38.101-3 on operating bands for CA and DC ZTE Corporation Zhifeng MaR4-1814976 Correction for Maximum output power for inter-band EN-DC (two bands) Nokia, Nokia Shanghai BellR4-1814977 Correction for ?TIB,c for EN-DC Nokia, Nokia Shanghai BellR4-1814978 MPR and A-MPR for interband EN-DC Nokia, Nokia Shanghai BellR4-1814980 Correction for intra-band EN-DC bandwidth class Nokia, Nokia Shanghai BellR4-1815065 draft CR for adding missing transmit singnal quality for inter band EN-DC for TS 38.101-3 NTT DOCOMO, INC.R4-1815811 draft Rel-15 CR to 38.101-3 to correct n260 BW class Ericsson, AT&TR4-1815865 Draft CR for 38.101-3 Intra-band EN-DC nominal carrier spacing for 30 kHz raster SPRINT CorporationR4-1815973 Draft CR to 38.101-3 rel. 15 to fix MSD issues for higher order EN-DC combinationsR4-1816227 Draft CR on Power Class for inter band EN-DC within FR1 OPPOR4-1816233 Receiver requirements for intra-band EN-DC Qualcomm IncorporatedR4-1816621 Introduction of maxUplinkDutyCycle to ENDC HPUE in FR1 OPPOR4-1816638 Pcmax computation and evaluation for inter band ENDC QualcommR4-1816178 Draft CR for correction for missing agreed DC combinations in Rel-15 for TS 38.101-3 NTT DOCOMO, INC.R4-1816197 Draft CR to TS38.101-3_Clarifications on MSD and UL configuration tables for EN-DC ZTE CorporationR4-1816198 Simplification of EN-DC and CA between FR1 and FR2 UE to UE co-ex table by adopting CA band approach Nokia, Nokia Shanghai BellR4-1816202 Correction to interband EN-DC OOBE emission requirements Nokia, Nokia Shanghai BellR4-1816203 Receiver requirements for interband EN-DC Nokia, Nokia Shanghai BellR4-1816207 Draft CR to 38.101-3 rel. 15 to fix MPR issue Apple GmbHR4-1816224 Draft CR for 38.101-3 NS_04 applicability for intra-band EN-DC SPRINT CorporationR4-1816231 Draft CR on output power dynamic for DC OPPOR4-1816237 Correction for Intra-band contiguous EN-DC A-MPR definition Nokia, Nokia Shanghai BellR4-1816246 Draft CR to TS38.101-3: Corrections on TS for MSD calculations based on ENDC bands combination including of bands 1,3,8, n77, and n78 MediaTek Inc.R4-1816247 Draft CR 38-101-3 Corrections for EN-DC Single Uplink allowed Operation Skyworks Solutions Inc.R4-1816250 draft CR for adding note about the fallback of EN-DC in Applicability of minimum requirements for TS 38.101-3 NTT DOCOMO, INC.R4-1816608 Draft CR on LTE RMC for TDD EN-DC UE RF Tests Qualcomm IncorporatedR4-1816613 Draft CR for reducing AMPR for DC_(n)71AA without Dynamic Power Sharing "Motorola Mobility, T-Mobile" | 15.4.0 |  |
+| 2018-12 | RAN#82 | RP-182773 | 0033 | 1 | F | Completion of configured maximum output power for intra-band contiguous EN-DC | 15.4.0 |  |
+| 2018-12 | RAN#82 | RP-182774 | 0034 | 1 | F | Configured maximum output power for intra-band non-contiguous EN-DC | 15.4.0 |  |
+| 2019-03 | RAN#83 | RP-190403 | 0035 |  | F | CR to TS 38.101-3: Implementation of endorsed draft CRs from RAN4#90Endorced draft CRs from RAN4#90R4-1900034, Editorial corrections for 38.101-3, Qualcomm IncorporatedR4-1900460, Draft CR to TS38.101-3_corrections on MSD, ZTE CorporationR4-1900461, Draft CR to TS38.101-3_inter-band NR DC between FR1 and FR2, ZTE CorporationR4-1900524, Draft CR to TS 38.101-3 on inter-band CA & inter-band EN-DC configurations, ZTE CorporationR4-1900529, Draft CR to TS 38.101-3 on Single Uplink Allowed for EN-DC combinations of order 3 or higher, ZTE CorporationR4-1900726, Editorial corrections to delta Tib for EN-DC, Rohde & SchwarzR4-1901359, draft CR for correction for missing operating band for EN-DC, NTT DOCOMO INC.R4-1901428, draft CR to make editorial corrections in 38-101-3 Rel-15, EricssonR4-1901848, Draft CR for 38.101-3: Addition of default power class, Sprint CorporationR4-1901850, Draft CR for 38.101-3: Intra-band Pcmax P_EN-DC_Total for non-DPS UEs, Sprint CorporationR4-1901851, Draft CR for 38.101-3: Intra-band Pcmax Editorial corrections, Sprint CorporationR4-1901874, Guardband for harmonic exception to reference sensitivity, Qualcomm IncorporatedR4-1901878, Non-simultaneous Tx/Rx for TDD intra-band EN-DC, Qualcomm IncorporatedR4-1901890, A-MPR for DC_(n)71AA without Dynamic Power Sharing, Motorola Mobility France S.A.SR4-1901926, Draft CR to 38.101-3 to clarify ACS2 wanted level, Qualcomm IncorporatedR4-1901997, draft_CR TS 38.101-3 type 2 UE DC_(n)41 and DC_41_n41 NS04 AMPR correction, Skyworks Solutions Inc.R4-1902002, Draft CR to 38.101-3 on DC_n41-41 – B40 coexistence , Qualcomm IncorporatedR4-1902154, Draft CR to TS38.101-3_clean up on inter-band CA between FR1 and FR2, ZTE CorporationR4-1902155, Draft CR for TS 38.101-3: Corrections to Table 7.3B.2.3.5.1-1 for reference sensitivity exceptions (two bands), MediaTek Inc.R4-1902156, draftCR corrections for TS 38.101-3, HuaweiR4-1902157, CR on intraband ENDC channel configurations, Intel CorporationR4-1902160, Draft CR on some errors to TS 38.101-3, HuaweiR4-1902161, CR to 38.101-3 to clarify non-simultaneous RXTX capability for co-bands, Qualcomm IncorporatedR4-1902163, Draft CR to 38.101-3 to clarify DL carrier levels for bands in close frequency proximity, Qualcomm IncorporatedR4-1902164, Draft CR to reflect agreed MSD analysis of DC_25A-n41A for TS 38.101-3, MediaTek Inc.R4-1902169, draft CR for inter-band EN-DC Pcmax, HuaweiR4-1902172, Draft CR ACLR for NC intra-band EN-DC, Skyworks Solutions Inc.R4-1902176, Draft CR for 38.101-3 modification of requirements for intra-band non-contiguous EN-DC SEM, HuaweiR4-1902179, draft CR for introduction of Tx IM for Inter-band EN-DC in TS38.101-3, NTT DOCOMO, INC.R4-1902182, Clarification for OOBE boundary for intra-band contiguous and non-contiguous EN-DC, vivoR4-1902195, draft_CR TS 38.101-3 Footnote correction in Table 7.3B.2.3.1-2, Skyworks Solutions Inc.R4-1902232, Draft CR on SUL band combinations to TS 38.101-3, HuaweiR4-1902478, Addition of power class 2 EN-DC ACLR requirement, NokiaR4-1902481, draftCR on inter-band EN-DC Rx requirement for TS 38.101-3, HuaweiR4-1902486, Draft CR for 38.101-3 modification of requirements for network signalled value NS_04, HuaweiR4-1902496, Draft CR for TS 38.101-3: Switching time for intra-band EN-DC upon dual PA UE capability, HuaweiR4-1902500, Draft CR for 38.101-3: adding MPR for intra-band ENDC,Skyworks Solutions IncR4-1902660, Introduction of modified MPR for 38.101-3, NokiaEditorial changes after RAN#83To align the annex numbering with other specifications (TS 38.101-x series), 'Modified MPR behavior' was moved to annex H. | 15.5.0 |  |
+| 2019-06 | RAN#84 | RP-191240 | 0041 |  | F | CR to TS 38.101-3: Implementation of endorsed draft CRs from RAN4#90bis and RAN4#91Endorced draft CRs from RAN4#90BisR4-1902829, Draft CR for 38.101-3 editoral correction for editorial correction for intra-band contiguous EN-DC uplink configuration when Rx requirements are measured, HuaweiR4-1903074 Draft CR to 38.101-3 rel. 15 to fix missing SUO note Apple Inc.R4-1903090 Pcmax for Rel-15 intra-band EN-DC within FR1 wrong references - fixes InterDigital CommunicationsR4-1903150 Draft CR to TS 38.101-3_Spurious emission and Tx IM for inter-band CA between FR1 and FR2 ZTE CorporationR4-1903302 Draft CR to TS 38.101-3 correction for the DC_3_n3 delta R IBNC table CHTTLR4-1903426 draft CR for 38.101-3: Reflect the agreed MSD for DC_5_n78 China TelecomR4-1903515 Removal of reference sensitivity exception due to close proximity of bands for EN-DC in NR FR1 clause NokiaR4-1903958 Completion of defintions of EN-DC configured power EricssonR4-1904639 Draft CR to 38.101-3 on DC_n41-41 – B40 coexistence,  Qualcomm IncorporatedR4-1904934 Harmonization of reference sensitivity level for DC clause NokiaR4-1904935 Change description 4.2(e) in Applicability of minimum requirements for TS 38.101-3 vivoR4-1904945 Draft CR to TS38.101-3_adding some exclusion frequencies for SEM and spurious emission for EN-DC ZTE CorporationR4-1904946 Draft CR to TS 38.101-3 on some minor corrections ZTE CorporationR4-1904951 Draft CR for 38.101-3 intra-band EN-DC AMPR HuaweiR4-1904953 Draft CR for 38.101-3: NS_04 A-MPR power class relationship clarification Sprint CorporationR4-1904959 Draft CR on UE to UE coexistence for TS 38.101-3 HuaweiR4-1904988 Draft CR to 38.101-1. Clarify EN-DC category for requirements of carrier imbalance Qualcomm IncorporatedR4-1904995 draft CR to 38.101-3 Configured output power for inter-band EN-DC including both FR1 and FR2 Intel CorporationR4-1905085 Draft CR for TR 38.101-3 NE-DC RF requirement HuaweiR4-1904925 Draft CR for improving EN-DC configuration tables in TS38.101-3 CATTEndorced draft CRs from RAN4#91R4-1905628 Draft CR to TS38.101-3_Frequency error for intra-band for EN-DC ZTE CorporationR4-1905629 Draft CR to TS 38.101-3_removal of the reference sensitivity exception for NR CA between FR1 and FR2 ZTE CorporationR4-1905767 draft CR to 38.101-3 Correction ot DeltaTIB,c in configured output power for EN-DC Intel CorporationR4-1905774 Draft CR to TS38.101-3 Correction to intra-band and inter-band EN-DC Pcmax Intel CorporationR4-1905793 CR for TS 38.101-3 (Rel-15): Support of n257D-F for DC_1-42_n257 and DC_3-42_n257 SoftBank Corp.R4-1905799 Correction of LTE anchor condition to Spurious response for EN-DC Anritsu CorporationR4-1907057 Draft CR for 38.101-3: Further UE coexistence table clean-up Sprint CorporationR4-1907063 Draft CR for 38.101-3: Global replacement of LTE with E-UTRA Sprint CorporationR4-1907136 Draft CR to 38.101-3 rel. 15 to fix missing Exceptions for Out-of-band Blocking AppleR4-1907137 Draft CR to 38.101-3 rel. 15 to fix missing SUO note AppleR4-1907181 Draft CR for 38.101-3: Removal of unnecessary ACLR notes Sprint CorporationR4-1907422 Draft CR for TS 38.101-1 Correction of channel bandwidth set for NR CA HuaweiR4-1907424 Draft CR for clarification of note for B42_n77 and B42_n78 NTT DOCOMO, INC.R4-1907425 DraftCR TS 38.101-3 Corrections to Intra-band ENDC MPR text Skyworks Solutions Inc.R4-1907426 Definition of BCS support in inter-band EN-DC mode Qualcomm IncorporatedR4-1907448 Correction to EN-DC spurious emissions ROHDE & SCHWARZR4-1907476 draft CR for TS 38.101-3 intra-band EN-DC Pcmax HuaweiR4-1907482 Correction of RefSens exceptions due to UL harmonic interference for EN-DC in 38.101-3 vivoR4-1907483 [Rx]Draft CR for 38.101-3 defining Reference sensitivity for intra-band non-contiguous,  HuaweiR4-1907485 Corrections to MPR/A-MPR and additional requirements for intra-band EN-DC EricssonR4-1907489 Draft CR to 38.101-3. Revise MSD for DC_20A-n8A Qualcomm IncorporatedR4-1907492 Modification of reference sensitivity and general spurious emissions in 38.101-3 Qualcomm IncorporatedR4-1907594 draft CR of modification on reference for inter-band EN-DC including FR2 for TS 38.101-3 NTT DOCOMO INC.R4-1907808 Draft CR to 38.101-3 NE-DC introducation InterDigital Communications | 15.6.0 |  |
+| 2019-06 | RAN#84 | RP-191241 | 0036 |  | B | CR to REL-16 TS 38.101-3: Implementation of endorsed draft CRs on NR combinations and dual Connectivity combinations | 16.0.0 |  |
+| 2019-06 | RAN#84 | RP-191241 | 0037 |  | B | CR on introduction of completed EN-DC of 2 bands LTE and 1 band NR from RAN4#91 into TS 38.101-3 | 16.0.0 |  |
+| 2019-06 | RAN#84 | RP-191241 | 0039 |  | B | Introducing CR on new EN-DC LTE(xDL/1UL)+ NR(2DL/1UL) DC in rel-16 | 16.0.0 |  |
+| 2019-06 | RAN#84 | RP-191252 | 0040 | 1 | B | Introduction of band combinations and requirements for Band n87 (LTE/NR sharing) | 16.0.0 |  |
+| 2019-06 | RAN#84 | RP-191241 | 0042 | 1 | B | Big CR for agreed DC band combo of 1 LTE band + 1 NR band | 16.0.0 |  |
+| 2019-06 | RAN#84 | RP-191241 | 0043 |  | B | CR introduction completed band combinations 37.716-31-11 -> 38.101-3 | 16.0.0 |  |
+| 2019-06 | RAN#84 | RP-191241 | 0044 |  | B | CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into Rel16 TS 38.101-3 | 16.0.0 |  |
+| 2019-09 | RAN#85 | RP-192049 | 0064 |  | A | CR to TS 38.101-3: Implementation of endorsed draft CRs from RAN4#92 (Rel-16)- Mirror changes from R4-1910354 from RAN4#92 | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192028 | 0045 | 2 | B | CR to correct 7.3B.2.3.2 and 7.3B.2.3.4 for EN-DC DC_7_n77 and DC_7_n78 | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192028 | 0046 | 2 | F | Correction on EN-DC grouping in Rel-16 spec | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192028 | 0047 | 1 | F | CR to TS 38.101-3 correction for the UL RB allocations of the MSD table | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192027 | 0049 | 1 | F | [SUL] CR on SUL band combinations into Rel-16 TS 38.101-3 | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192028 | 0051 |  | B | CR on introduction of completed EN-DC of 2 bands LTE and 1 band NR from RAN4#92 into TS 38.101-3 | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192033 | 0053 |  | C | CR for 38.101-3: B41 n41 EN-DC allocation based A-MPR | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192028 | 0054 | 1 | F | CR_38.101-3 Rel 16 Addition of footnote 3 to DC_40A_n41A | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192028 | 0056 | 1 | F | CR for 38.101-3: Correction of n5 combinations protection for B26 | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192027 | 0057 |  | B | CR on introducing NR intra-band CA for 3DL Bands and 1UL band for 38.101-3 | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192027 | 0058 |  | B | CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into Rel16 TS 38.101-3 | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192028 | 0059 |  | F | Big CR for EN-DC of LTE 1band + NR 1band | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192028 | 0060 |  | B | CR introduction completed band combinations 37.716-31-11 -> 38.101-3 | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192028 | 0061 |  | B | CR to introduce new combinations of LTE 4band + NR 1band for TS 38.101-3 | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192035 | 0062 |  | F | CR for 38.101-3 Pcmax for EN-DC with 3CC uplink | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192027 | 0065 |  | B | CR to reflect the completed NR inter band CA DC combinations for 3 bands DL with 2 bands UL into Rel16 TS 38.101-3 | 16.1.0 |  |
+| 2019-09 | RAN#85 | RP-192028 | 0066 |  | B | CR on introduction of completed EN-DC of x bands LTE and 2 band NR from RAN4#92 into TS 38.101-3 | 16.1.0 |  |
+| 2019-12 | RAN#86 | RP-193032 | 0075 |  | A | CR for 38.101-3 EN-DC RX Out-of-Band Blocking for shared bands and bands in close proximity | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193032 | 0077 |  | A | CR to 38.101-3 Missing Harmonic Mixing MSD for DC_3_n77/n78 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193032 | 0079 |  | A | CR for 38.101-3 EN-DC DL Synchronous Carriers | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193032 | 0085 |  | A | CR for 38.101-3: Correction to DC Config and dual UL interferer (Rel-16) | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193032 | 0087 |  | A | CR for 38.101-3: Correction to EN-DC and NE-DC Configurations  (Rel-16) | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193032 | 0090 |  | A | CR to TS38.101-3: Correction on channel spacing for intra-band EN-DC carriers (section 5.4B.1) | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0091 |  | B | CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into Rel16 TS 38.101-3 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0092 |  | B | CR to reflect the completed NR inter band CA DC combinations for 3 bands DL with 2 bands UL into Rel16 TS 38.101-3 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0093 | 1 | B | CR to reflect the completed ENDC combinations for 3 bands DL with 3 bands UL into Rel16 TS 38.101-3 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193021 | 0094 |  | F | CR to remove square brackets for n90 in TS38.101-3 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193019 | 0095 | 1 | B | CR for adding solution for addressing SAR issue for EN-DC PC2 UE | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0097 |  | B | Introducing NR inter-band CA for 3DL Bands and 1UL band for 38.101-3 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0099 |  | F | CR to TS 38.101-3 on single UL allowed for inter-band CA configurations (Rel-16) | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0102 |  | B | CR on introduction of completed EN-DC of 1 band LTE and 1 band NR | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193032 | 0106 |  | A | CR for TS 38.101-3: Removing MSD requirements for EN-DC combinations due to receiver even order harmonic mixing with UL 3rd harmonic | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193032 | 0107 |  | A | CR to TS 38.101-3: clarification for MPR statement | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193032 | 0108 |  | A | CR to TS 38.101-3 on inter-band CA, EN-DC, NE-DC and NR-DC configurations (Rel-16) | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0109 |  | F | CR for TS 38.101-3: Removing MSD requirements for EN-DC combinations due to receiver even order harmonic mixing with UL 3rd harmonic | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193033 | 0111 |  | A | CR to TS 38.101-3: adding missing 90MHz channel BW support for n77, n78 related CA | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0112 |  | B | Introducing CR on new EN-DC LTE(xDL/1UL)+ NR(2DL/1UL) DC in rel-16 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193033 | 0114 |  | F | Removal of brackets from MPR and MSD 38.101-3 REL16 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193033 | 0120 |  | A | Pcmax for EN-DC: applicability of NS values and removal of a duty-cycle capability | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0123 | 1 | B | CR for TS 38.101-3: MSD due to cross band isolation | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193033 | 0125 |  | A | CR for TS 38.101-3: Additional out-of-band blocking exceptions for inter-band EN-DC | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0126 |  | B | CR for 38.101-3 introduce SUL band combination DC_66A_n78(2A)_SUL_n78A-n86A | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193033 | 0128 |  | A | CR for 38.101-3: correct MSD exception for DC_2_n78(Rel-16) | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0129 |  | B | CR to introduce new combinations of LTE 4band + NR 1band for TS 38.101-3 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0130 |  | B | CR on introduction of completed EN-DC of 2 bands LTE and 1 band NR from RAN4#92bis and RAN4#93 into TS 38.101-3 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0131 |  | B | CR introduction completed band combinations 37.716-31-11 -> 38.101-3 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0132 |  | B | CR introduction completed band combinations 38.716-04-01 -> 38.101-3 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0133 | 1 | F | CR to 38.101-3 to remove duplicate combinations | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193012 | 0134 |  | F | CR to 38.101-3 to add missing ?TIB and ?RIB values for DC_12-30_n66 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193033 | 0136 |  | A | Mirror CR for 38.101-3: Clarification of the notation for intra-band EN-DC combinations | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193008 | 0140 | 2 | B | CR to 38.101-3 on uplink power control for non synchronous NR-DC between FR1 and FR2 | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193032 | 0148 |  | A | CR to TS 38.101-3 on inter-band EN-DC configurations including FR2 for five bands (Rel-16) | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193033 | 0152 | 1 | A | CR for 38.101-3 correction for intra-band EN-DC Pcmax | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193033 | 0153 | 1 | A | CR for 38.101-3 intra-band EN-DC MPR/AMPR | 16.2.0 |  |
+| 2019-12 | RAN#86 | RP-193032 | 0154 |  | F | EN-DC grouping correction for FR1 only configurations REL-16 | 16.2.0 |  |
+| 2019-12 | RAN#86 |  |  |  |  | Change history corrected | 16.2.1 |  |
+| 2020-03 | RAN#87 | RP-200388 | 0159 | 1 | F | CR on SAR solution for TDD&TDD EN-DC PC2 UE | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200396 | 0164 |  | A | Mirror CR for 38.101-3: Correction of MOP tolerance for B41/n41  EN-DC | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0165 | 1 | F | CR for 38.101-3: Remove delta Tib and delta Rib for FR1+FR2 CA | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0166 |  | F | CR for 38.101-3: DC_25-41_n41 correction | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200396 | 0172 |  | A | CR to TS 38.101-3: corrections on ACS for intra-band contiguous EN-DC | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200396 | 0174 |  | A | CR to TS 38.101-3: editorial corrections on Rx requirements for intra-band contiguous EN-DC | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0175 | 1 | F | CR to TS 38.101-3: Updated the MSD values for ENDC 3-n41 | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200396 | 0177 |  | A | CR to TS 38.101-3: Correct the intra-band ENDC channel spacing | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0178 |  | B | CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into Rel16 TS 38.101-3 | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0179 |  | B | CR to reflect the completed NR inter band CA DC combinations for 3 bands DL with 2 bands UL into Rel16 TS 38.101-3 | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0180 |  | B | CR to reflect the completed ENDC combinations for 3 bands DL with 3 bands UL into Rel16 TS 38.101-3 | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0181 |  | F | Correction to remedy missing implementation of approved CR0093r1 | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200396 | 0182 |  | F | CR for TS38.101-3, Correction of IE RF-Parameters name of maxUplinkDutyCycle | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200384 | 0184 |  | B | UE co-existence reuiqrements for band n28 into 38.101-3 | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0186 |  | F | CR for 38.101-3: Correction of MOP tolerance for DC_39_n41 | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0187 |  | B | CR on introduction of completed EN-DC of 2 bands LTE and 1 band NR from RAN4#94-e into TS 38.101-3 | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0190 |  | B | CR on introduction of completed EN-DC of 1 band LTE and 1 band NR | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200396 | 0193 |  | A | CR to TS 38.101-3: editorial correction for output power dynamics for intra-band EN-DC | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0195 |  | B | CR to TS 38.101-3: adding 90MHz channel BW support for Rel.16 CA_n78A-n257 configurations | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0196 |  | B | Introducing CR on new EN-DC LTE (x bands DL/1UL)+NR(2 bands DL/1UL) band combinations in rel-16 | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200396 | 0199 |  | A | CR on correction of 38.101-3 NEDC Ppowerclass (Rel-16) | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0200 |  | D | CR to introduce new combinations of LTE 4band + NR 1band for TS 38.101-3 | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0206 |  | B | CR to add 3 LTE bands and 1 NR band EN-DC combinations | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0207 |  | B | CR to add NR Inter-band CA for 4 bands in TS 38.101-3 | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0208 | 1 | F | Editorial corrections | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200396 | 0211 |  | F | CR to 38.101-3 R16 to remove FDM ULSUP combinations | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200396 | 0213 | 1 | A | CR for inter-band ENDC Tx requirement | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0215 | 1 | F | CR to 38.101-3 on EN-DC band combination with SUL | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200378 | 0217 |  | A | EN-DC configuration table corrections | 16.3.0 |  |
+| 2020-03 | RAN#87 | RP-200380 | 0218 |  | B | CR for introduce new EN-DC of LTE 2,3,4 band + NR FR1 1UL1DL band + NR FR2 1UL1DL band for TS 38.101-3 | 16.3.0 |  |
+| 2020-06 | RAN#88 | RP-200880 | 0223 | 3 | B | CR to TS 38.101-3: Switching time mask between two uplink carriers in EN-DC | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200960 | 0228 |  | F | CR for TS38.101-3, Aligned IE RF-Parameters name of maxUplinkDutyCycle with RAN2 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0229 |  | B | Introducing NR inter-band CA for 3DL Bands and 1UL band for 38.101-3 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0232 |  | A | CR Coexistence cleanup for 38101-3 Rel16 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0234 |  | A | CR to TS 38.101-3 R16: corrections on ACS for intra-band contiguous EN-DC | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0240 |  | A | CR for TS 38.101-3: MSD due to UL harmonic | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0241 |  | F | CR for TS 38.101-3: Adding missing MSD due to UL harmonic for DC_28_n50 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0245 |  | A | MOP for interband EN-DC including both FR1 and FR2 REL16 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0248 |  | A | CR to 38.101-3 MSD due to UL harmonics and intermodulation interference R16 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0251 |  | A | Mirror CR for 38.101-3: Corrections for Ppowerclass and referenced sections | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0252 |  | B | Introducing CR on new EN-DC LTE(xDL/1UL)+ NR(2DL/1UL) DC in Rel-16 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0255 |  | B | Big CR on introduction of completed EN-DC of 1 band LTE and 1 band NR | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0259 |  | A | CR to TS 38.101-3 on configured output power relaxation due to EN-DC (Rel-16) | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0261 |  | A | CR to TS 38.101-3 on REFSENS relaxation due to EN-DC (Rel-16) | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0264 |  | F | Correction to EN-DC coexistence requirements | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0267 |  | A | CR to TS 38.101-3: Clean up the MSD test point for ENDC(three band) | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0268 |  | B | CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into Rel16 TS 38.101-3 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0269 |  | B | CR to reflect the completed ENDC combinations for 3 bands DL with 3 bands UL into Rel16 TS 38.101-3 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0274 |  | B | CR to introduce new combinations of LTE 4band + NR 1band for TS 38.101-3 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0275 |  | B | CR on introduction of completed EN-DC of 2 bands LTE and 1 band NR from RAN4#94bis-e and RAN4#95-e into TS 38.101-3 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0276 |  | B | CR to reflect the completed NR inter band CA DC combinations for 3 bands DL with 2 bands UL into Rel16 TS 38.101-3 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0277 |  | B | CR introduction completed band combinations 37.716-31-11 - | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0279 |  | F | CR Rel-16 for editorial corrections TS 38.101-3 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200959 | 0280 |  | F | CR for 38.101-3: to clean up for SUL band combinations | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0238 | 1 | A | CR for TS 38.101-3: Missing MSD due to cross band isolation | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0243 | 1 | F | FR1+FR2 CA interband CA BCS support REL16 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-201045 | 0282 | 1 | B | Addition of UE coexistence between US DC combinations and NR Band n77 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200965 | 0249 | 1 | B | CR for 38.101-3: Introduction of Power Class 1.5 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0236 | 1 | A | CR to TS 38.101-3: editorial corrections on wide band Intermodulation for intra-band contiguous EN-DC in FR1 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200988 | 0296 |  | F | CR to remove TBD in 38.101-3 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-201055 | 0281 | 2 | B | CR to 38.101-3 MSD due to UL harmonics and intermodulation interference R16 | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200958 | 0287 | 2 | B | CR for TS 38.101-3: NR V2X con-current operation | 16.4.0 |  |
+| 2020-06 | RAN#88 | RP-200985 | 0272 | 1 | A | Removal of the Annex modifiedMPR-Behaviour from the NSA specification | 16.4.0 |  |
+| 2020-09 | RAN#89 | RP-201507 | 0300 |  | F | CR for missing note for DC_39A_n41A for non-simultaneous RX/TX operation | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201507 | 0301 |  | F | CR for correcting DC_48_n5 UE spurious coexistence in 38.101-3 | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201507 | 0303 |  | F | CR for missing IMD MSD in 38.101-3 for DC_3A-28A_n41A, DC_28A-41A_n77A | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201512 | 0307 |  | A | CR for missing IMD MSD in 38.101-3 for DC_1A-41A_n78A, DC_7A-28A_n78A | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201512 | 0309 |  | A | Correction to in-band emissions for intra-band contiguous EN-DC | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201507 | 0313 |  | F | Coexistence cleanup for 38101-3 Rel16 | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201506 | 0314 |  | D | CR Editorial cleanup of band combination tables for 38101-3 Rel16 | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201512 | 0317 |  | A | CR to 38.101-3 MSD due to UL harmonics and intermodulation interference R16 | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201507 | 0319 |  | F | CR to correct protected band of intra-band EN-DC | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201512 | 0323 |  | A | CR for TS 38.101-3: FR1 inter-band EN-DC out-of-band blocking UL configuration | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201504 | 0324 | 3 | B | CR to TS 38.101-3: PC2 band 3+band n78 ENDC | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201512 | 0326 |  | A | Corrections of Japan-related EN-DC co-ex tables for REL-15 combo | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201492 | 0329 | 1 | F | Correction on 5G V2X con-current UE RF requirements in rel-16 | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201492 | 0330 | 1 | F | CR on TS38.101-3 for NR V2X | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201749 | 0334 | 3 | B | CR to TS 38.101-3: PC2 band 3+band n41 ENDC | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201506 | 0335 |  | F | CR to TS 38.101-3: Clean up the MSD test point for ENDC(three band) | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201504 | 0344 |  | F | Correction of delta Powerclass for Inter-band EN-DC | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201506 | 0347 | 1 | F | CR for 38.101-3 to remove PHS system, 860~890 and 1400~1427 protection for EN-DC band combination with band n1, n8 and n50 | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201507 | 0349 |  | F | CR on inter-band ENDC Pcmax | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201495 | 0350 | 1 | B | CR to 38.101-3 on time masks for ULSUP in R16 | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201512 | 0351 | 1 | F | CR to 38.101-3 - Correction to cross band isolation MSD tables and DC_42_n79 | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201494 | 0352 | 1 | F | CR for 38.101-3 Switching time mask for inter-band EN-DC UEs only supporting single switched UL | 16.5.0 |  |
+| 2020-09 | RAN#89 | RP-201507 | 0353 |  | F | CR for TS 38.101-3 introduce new power class for EN-DC | 16.5.0 |  |
+| 2020-12 | RAN#90 | RP-202509 | 0362 | 1 | F | Correction on Additional ILs and MSD levels for DC_20_n38 UE | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202427 | 0363 | 1 | F | Correction on 5G V2X inter-band con-current UE RF requirements in TS38.101-3 | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202427 | 0364 | 1 | F | CR for TS 38.101-3, Time mask for TDM operation between NR V2X and LTE V2X in ITS band | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202509 | 0367 |  | F | CR to 38.101-3 (Rel-16) error correntions to configurations for CA and DC | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202427 | 0368 | 1 | F | General corrections for V2X sections in 38.101-3 | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202485 | 0370 |  | A | UL output power for spurious response and general Rx | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202430 | 0382 |  | F | CR to TS 38.101-3 on intra-band contiguous EN-DC BW class (Rel-16) | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202509 | 0383 | 1 | F | CR to TS 38.101-3 on simplification for inter-band CA configuration between FR1 and FR2 | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202485 | 0385 |  | A | CR to TS 38.101-3: Some corrections on the ENDC | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202442 | 0386 | 1 | F | CR to 38.101-3: Add requirement on the inter-band EN-DC with no DL interruption | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202485 | 0388 |  | F | CR to TS 38.101-3: corrections on ACS for intra-band contiguous EN-DC | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202429 | 0391 |  | F | Correction of delta Powerclass for Inter-band EN-DC | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202509 | 0392 | 1 | F | CR on NR power class under EN-DC | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202428 | 0396 |  | F | CR to TS 38.101-3 corrections on inter-band EN-DC configurations including FR1 and FR2 | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202509 | 0398 |  | F | CR to correct MSD of DC_1A-41A_n77A | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202414 | 0402 | 2 | B | CR to add NR-U EN-DC combinations | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202485 | 0410 | 1 | A | CR to TS38.101-3[R16] Applicability of 2Rx requirements | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202485 | 0412 |  | A | CR 38101-3 R16 Band 10 protection and DC_42_n79 correction | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202428 | 0413 | 1 | F | CR for editorial corrections 38.101-3 | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202485 | 0414 | 1 | F | Correction to PCMAX for contiguous intra-band EN-DC | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202485 | 0420 |  | A | CR for 38.101-3 Correction on EN-DC synchronous carriers (R16) | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202485 | 0424 | 1 | F | CR for TS 38.101-3: correction of spurious emission band UE co-existence (R16) | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202485 | 0425 | 1 | F | Adding delta TIB requirement for DC_2-7-7-13_n66 | 16.6.0 |  |
+| 2020-12 | RAN#90 | RP-202462 | 0359 |  | B | Introducing CR on new EN-DC LTE(xDL/1UL)+ NR(2DL/1UL) DC in Rel-17 | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202468 | 0366 |  | B | CR on Introducing NR inter-band CA for 3DL Bands and 1UL band for 38.101-3 | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202454 | 0371 |  | B | Big CR on introduction of completed PC2 for EN-DC with 1 LTE band + 1 NR TDD band | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202471 | 0373 |  | B | CR on introduction of completed NR CA/DC combs with 4DL/2UL including FR2 | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202461 | 0374 |  | B | CR introduction completed band combinations for Dual Connectivity (DC) of 5 bands LTE inter-band CA (5DL/1UL) and 1 NR band (1DL/1UL) | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202465 | 0375 |  | B | CR introduction completed band combinations for Dual Connectivity (DC) of x bands (x=2,3,4) LTE inter-band CA (xDL/1UL) and 1 NR FR1 band (1DL/1UL) and 1 NR FR2 band (1DL/1UL) | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202457 | 0376 |  | B | Big CR for Rel-17 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202472 | 0377 |  | B | CR on Introduction of completed SUL band combinations into TS 38.101-3 | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202460 | 0387 |  | B | CR to introduce new combinations of LTE 4band + NR 1band for TS 38.101-3 | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202458 | 0395 |  | B | CR on introduction of completed EN-DC of 2 bands LTE and 1 band NR from RAN4#96e and RAN4#97e into TS 38.101-3 | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202459 | 0400 |  | B | CR introduction completed band combinations LTE 3DL and one NR band - | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202470 | 0401 |  | B | CR introduction completed band combinations NR Inter-band 4 bands CA - | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202450 | 0365 | 1 | B | CR for TS 38.101-3, Introduce new band combination of V2X_39A-n47A, V2X_n39A-47A, V2X_40A-n47A and V2X_n40A-47A | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202467 | 0426 |  | B | CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-3 | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202469 | 0427 |  | B | CR to reflect the completed NR inter band CA DC combinations for 3 bands DL with 2 bands UL into TS 38.101-3 | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202464 | 0428 |  | B | CR to reflect the completed DC combinations for 3 bands DL with 3 bands UL into TS 38.101-3 | 17.0.0 |  |
+| 2020-12 | RAN#90 | RP-202463 | 0429 |  | B | CR to reflect the completed Dual Connectivity (DC) of x bands (x=1,2,3) LTE inter-band CA (xDL1UL) and 3 bands NR inter-band CA (3DL1UL) | 17.0.0 |  |
+| 2021-03 | RAN#91 | RP-210086 | 0432 |  | B | Big CR on introduction of completed PC2 for EN-DC with 1 LTE band + 1 NR TDD band | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210091 | 0436 |  | A | CR to TS 38.101-3 on correction to hanging paragraph in the spec (Rel-17) | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210177 | 0438 |  | B | Introduction CR on new NR DC LTE(xDL/1UL)+ NR(2DL/1UL) band combinations in Rel-17 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210094 | 0441 | 1 | B | CR for TS 38.101-3, Introduce new band combination of V2X_41A-n47A and V2X_n41A-47A | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210179 | 0442 |  | B | CR on Introducing NR inter-band CA for 3DL Bands and 1UL band for 38.101-3 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210072 | 0445 |  | A | CR for TS 38.101-3, General corrections for NR V2X | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210094 | 0446 |  | F | Revision of inter-band V2X con-currency table for V2X_39_n47 and V2X_40_n47 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210082 | 0448 |  | A | CR for TS 38.101-3: Correction on 1Tx-2Tx switching between two uplink carriers  (Rel-17) | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210175 | 0453 |  | B | CR introduction completed band combinations for Dual Connectivity (DC) of 5 bands LTE inter-band CA (5DL/1UL) and 1 NR band (1DL/1UL) | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210184 | 0454 | 1 | B | CR on introduction of completed NR CA/DC combs with 4DL/2UL including FR2 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210171 | 0455 |  | B | Big CR for Rel-17 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210082 | 0457 |  | A | Clarification on timing difference for Tx switching in EN-DC R17 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210088 | 0459 |  | A | CR to TS 38.101-3 clarification on the single uplink allowance for DC_3A_n3A | 17.1.0 |  |
+| 2021-03 | RAN#91 |  | 0460 |  | B | CR on introduction of completed EN-DC of 2 bands LTE and 1 band NR from RAN4#96e and RAN4#97e into TS 38.101-3 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210089 | 0468 |  | A | CR for 38.101-3 to add the missing Tib Rib for DC_2-7-7-66_n78/ DC_2-7-66-66_n78/ DC_2-7-7-66-66_n78 (Rel-17) | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210173 | 0471 |  | B | CR introduction completed band combinations LTE 3DL and one NR band - | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210180 | 0472 |  | B | CR introduction completed band combinations NR Inter-band 4 bands CA - | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210174 | 0473 |  | B | CR to introduce new combinations of LTE 4band + NR 1band for TS 38.101-3 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210117 | 0476 |  | A | CR for 38.101-3 to introduce a new MSD due to the counter intermodulation interference(Rel-17) | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210075 | 0478 |  | A | CR for 38.101-3: Correction for CA_n66A-n260A | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210086 | 0480 |  | A | CR to TS38.101-3: Correction on duty cycle signalling terminology for PC2 inter-band ENDC | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210117 | 0492 | 1 | F | CR for bug fixing of band combination tables for 38101-3 Rel17 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210181 | 0497 |  | B | CR to reflect the completed NR inter band CA DC combinations for 3 bands DL with 2 bands UL into TS 38.101-3 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210182 | 0498 |  | B | CR to reflect the completed ENDC combinations for 3 bands DL with 3 bands UL into TS 38.101-3 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210183 | 0499 |  | B | CR to reflect the completed Dual Connectivity (DC) of x bands (x=1,2,3) LTE inter-band CA (xDL1UL) and 3 bands NR inter-band CA (3DL1UL) into TS38.101-3 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210176 | 0500 |  | B | CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-3 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210091 | 0501 |  | A | TS 38.101-3: Addition of missing lower order fallbacks R16 | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210117 | 0504 |  | A | CR for 38.101-3: clarification of intra-band EN-DC BCS applicability | 17.1.0 |  |
+| 2021-03 | RAN#91 | RP-210853 | 0507 | 2 | A | Correcting FR1-FR2 BCS ambiguity – Interpretation B | 17.1.0 |  |
+| 2021-06 | RAN#92-e | RP-211084 | 0519 | - | A | Corrections to EN-DC spurious emission tables | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211079 | 0521 | - | A | CR correction to DC_7A-20A_n3A MSD test point R17 CATANot implemented as the CR is empty | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211114 | 0522 | - | B | Big CR on introduction of completed PC2 for EN-DC with 1 LTE band + 1 NR TDD band | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211122 | 0523 | - | B | CR for TS 38.101-3, Introduce new band combination of V2X_n78A-47A | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211122 | 0524 | - | B | CR for TS 38.101-3, Introduce new band combination of V2X_n79A-47A | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211114 | 0526 | - | B | CR on Introducing NR inter-band CA for 3DL Bands and 1UL band for 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211086 | 0531 | - | A | CR to TS 38.101-3[R17]: Addition of UE co-existence requirements for band 40 and n40. | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211077 | 0536 | - | A | CR for TS 38.101-3: Cleanup for spurious emissions for UE co-existence table | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211077 | 0538 | - | A | CR to TS 38.101-3 on delta TIB and RIB corrections (Rel-17) | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211078 | 0545 | - | A | CR to 38.101-3 for missing MSD due to cross band and MSD due to receiver harmonic mixing for combos with n46 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211120 | 0551 | - | B | Introduction CR on new NR DC LTE(xDL/1UL, x=1,2,3,4)+ NR(2DL/1UL) band combinations in Rel-17 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211078 | 0552 | - | A | CR for updating the note of mandatory simultaneous Rx/Tx capability for FR1 EN-DC combinations | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211078 | 0554 | - | A | CR for updating the note of mandatory simultaneous Rx/Tx capability for FR2 included and FR1+FR2 EN-DC and NR-CA combinations | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211101 | 0555 | - | A | CR for TS 38.101-3, Time mask for NR V2X and LTE V2X switching in ITS band | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211086 | 0563 | - | A | CR for clarification on interBandContiguousMRDC in TS 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211114 | 0567 | 1 | F | CR for TS 38.101-3: MSD test configurations modifications for US EN-DC combinations with Band n77 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211086 | 0569 |  | F | CR for 38.101-3 to correct some errors in  Delta TIB and Delta RIB table | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211119 | 0571 | - | A | CR for 38.101-3 to introduce the missing MSD requirements | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211088 | 0574 |  | A | CR to TS38.101-3: Correction on TIB,c description for FR1-FR2 CA | 17.2.0 |  |
+| 2021-06 |  | RP-211115 | 0575 |  | B | CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211120 | 0576 |  | B | CR to reflect the completed ENDC combinations for 3 bands DL with 3 bands UL into Rel16 TS 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211120 | 0577 |  | B | CR to reflect the completed Dual Connectivity (DC) of x bands (x=1,2,3) LTE inter-band CA (xDL1UL) and 3 bands NR inter-band CA (3DL1UL) | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211119 | 0580 | - | A | CR for missing delta T & delta R of EN-DC with intra-band non-contiguous LTE CA combos in Rel.16 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211120 | 0581 |  | B | CR on introduction of completed EN-DC of 2 bands LTE and 1 band NR from RAN4#99-e and RAN4#98-bis-e into TS 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211120 | 0582 | - | B | CR to introduce new combinations of LTE 4band + NR 1band for TS 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211120 | 0583 | - | B | Big CR for Rel-17 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211110 | 0588 | - | A | Notational amendment and correction to PCMAX for EN-DC | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211115 | 0590 |  | B | CR to add EN-DC PC2 band combinations with more than 3 bands | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211114 | 0592 | 1 | F | CR for corrections 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211115 | 0593 |  | F | CR for corrections 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211120 | 0594 |  | F | CR for corrections 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211120 | 0595 |  | F | CR for corrections 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211120 | 0597 |  | F | CR for corrections 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211120 | 0598 |  | F | CR for corrections 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211078 | 0600 | - | A | CR for 38.101-3 missing ENDC coexistence - Mirror | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211114 | 0607 |  | A | Mirror CR to Rel-16 CR R4-2111086 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211080 | 0608 | - | F | CR for 38.101-3-h10: Corrections to intra-band non-contiguous EN-DC REFSENS | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211114 | 0609 |  | B | CR to reflect the completed NR inter band CA DC combinations for 3 bands DL with 2 bands UL into TS 38.101-3 | 17.2.0 |  |
+| 2021-06 | RAN#92-e | RP-211120 | 0610 |  | B | CR to add 3 LTE bands and 1 NR band DC combinations | 17.2.0 |  |
+| 2021-09 | RAN#93-e | RP-211904 | 0611 |  | B | CR for TS 38.101-3, Introduce new band combination of V2X_3A_n47A | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211915 | 0612 |  | B | CR on Introducing NR inter-band CA for 3DL Bands and 1UL band for 38.101-3 | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211921 | 0613 |  | A | CR to 38.101-3 on handling of fallbacks for FR2 CA | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211900 | 0614 |  | B | CR on introduction of completed NR CA/DC combs with 4DL/2UL including FR2 | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211901 | 0617 |  | B | Big CR on introduction of completed PC2 for EN-DC with 1 LTE band + 1 NR TDD band | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211899 | 0618 |  | B | Big CR for Rel-17 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211900 | 0619 |  | B | CR on Introduction of completed 5 bands inter-band CA into TS 38.101-3 | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211899 | 0620 |  | B | Introduction CR on new NR DC LTE(xDL/1UL, x=1,2,3,4)+ NR(2DL/1UL) band combinations in Rel-17 | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211900 | 0621 |  | B | Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-3 | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211900 | 0622 |  | B | CR to reflect the completed NR inter band CA DC combinations for 3 bands DL with 2 bands UL into TS 38.101-3 | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211899 | 0623 |  | B | CR to reflect the completed ENDC combinations for 3 bands DL with 3 bands UL into Rel16 TS 38.101-3 | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211899 | 0624 |  | B | CR to reflect the completed Dual Connectivity (DC) of x bands (x=1,2,3) LTE inter-band CA (xDL1UL) and 3 bands NR inter-band CA (3DL1UL) | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211899 | 0625 |  | B | CR on introduction of completed EN-DC of 2 bands LTE and 1 band NR from RAN4#100-e into TS 38.101-3 | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211899 | 0627 |  | B | CR to add 3 LTE bands and 1 NR band DC combinations | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211900 | 0628 |  | B | CR to add NR Inter-band CA for 4 bands in TS 38.101-3 | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211901 | 0629 |  | B | CR to add EN-DC PC2 band combinations with more than 2 bands | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211899 | 0630 |  | B | Big CR to introduce new combinations of LTE 4band + NR 1band for TS 38.101-3 | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211891 | 0632 |  | A | CR for 38.101-3 to introduce the missing MSD requirements | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211908 | 0633 |  | B | CR for 38.101-3 to specify the MSD requirements for ENDC combinations | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211896 | 0634 |  | B | CR for 38.101-3: Introduction of BCS4 and BCS5 | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211900 | 0635 |  | F | CR for TS 38.101-1: Correcting frequency setup for 2UL interband reference sensitivity | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211923 | 0638 |  | A | Big CR for TS 38.101-3 Maintenance part1 (Rel-17) | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211900 | 0639 |  | F | Big CR for TS 38.101-3 Maintenance part1 (Rel-17) | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211905 | 0640 |  | B | CR for updating the note of mandatory simultaneous Rx/Tx capability for Rel.17 FR1 EN-DC combinations | 17.3.0 |  |
+| 2021-09 | RAN#93-e | RP-211905 | 0641 |  | B | CR for updating the note of mandatory simultaneous Rx/Tx capability for Rel.17 FR1+FR2 NR CA and EN-DC combinations | 17.3.0 |  |
+| 2021-12 | RAN#94-e | RP-212830 | 0643 |  | B | Big CR on introducing NR inter-band CA for 3DL Bands and 1UL band for 38.101-3 | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212828 | 0644 |  | B | Big CR for Rel-17 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212828 | 0645 |  | B | CR on introduction of completed EN-DC of 2 bands LTE and 1 band NR from RAN4#101-e into TS 38.101-3 | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212831 | 0646 |  | B | CR on introduction of completed NR CA/DC combs with 4DL/2UL including FR2 | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212828 | 0647 |  | B | CR introduction completed band combinations for Dual Connectivity (DC) of 5 bands LTE inter-band CA (5DL/1UL) and 1 NR band (1DL/1UL) | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212828 | 0649 | 1 | F | CR for TS 38.101-3: MSD test configurations modification for US inter-band EN-DC combinations with n77 | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212829 | 0650 |  | B | Introduction CR on new NR DC LTE(xDL/1UL, x=1,2,3,4)+ NR(2DL/1UL) band combinations in Rel-17 | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212832 | 0651 |  | B | Big CR on introduction of completed PC2 for EN-DC with 1 LTE band + 1 NR TDD band | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212830 | 0652 |  | B | Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-3 | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212830 | 0653 |  | B | Big CR to reflect the completed NR inter band CA DC combinations for 3 bands DL with 2 bands UL into TS 38.101-3 | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212829 | 0654 |  | B | CR to reflect the completed ENDC combinations for 3 bands DL with 3 bands UL into Rel16 TS 38.101-3 | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212829 | 0655 |  | B | CR to reflect the completed Dual Connectivity (DC) of x bands (x=1,2,3) LTE inter-band CA (xDL1UL) and 3 bands NR inter-band CA (3DL1UL) | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212828 | 0657 |  | B | CR to add 3 LTE bands and 1 NR band DC combinations | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212832 | 0659 |  | B | CR to add EN-DC PC2 band combinations with more than 2 bands | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212828 | 0660 |  | B | Big CR to introduce new combinations of LTE 4band + NR 1band for TS 38.101-3 | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212828 | 0661 | 1 | D | CR for 38.101-3 Correction to Inter-band EN-DC within FR1 | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212824 | 0665 |  | F | CR to TS 38.101-3 on DC configuration regrouping cleanup | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212827 | 0666 |  | F | CR for 38.101-3 to correct the editorial errors for general paragraph | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212847 | 0667 |  | F | CR TS 38.101-3: Addition of missing R16 band combinations | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212827 | 0668 |  | B | Improved wording for BCS4 and BCS5 | 17.4.0 |  |
+| 2021-12 | RAN#94-e | RP-212845 | 0671 |  | F | Big CR for TS 38.101-3 Maintenance (Rel-17) | 17.4.0 |  |
+| 2022-03 | RAN#95 | RP-220354 | 0676 | 1 | F | CR for TS 38.101-3 Rel-17: Corrections on UE co-existence | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220333 | 0677 | 1 | F | CR 38.101-3: Rel-17 Correction of bugs in combinations tables | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220359 | 0678 |  | B | CR on Introducing NR inter-band CA for 3DL Bands and 1UL band for 38.101-3 | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220359 | 0679 |  | B | Big CR to reflect the completed NR inter band CA DC combinations for 3 bands DL with 2 bands UL into TS 38.101-3 | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220354 | 0681 |  | B | Big CR for Rel-17 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220356 | 0683 |  | B | Big CR on introduction of completed PC2 for EN-DC with 1 LTE band + 1 NR TDD band | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220355 | 0684 |  | B | Introduction CR on new NR DC LTE(xDL/1UL)+ NR(2DL/1UL) band combinations in Rel-17 | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220359 | 0685 |  | B | Big CR on introduction of completed NR CA/DC combs with 4DL/2UL including FR2 | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220354 | 0686 |  | B | Big CR introduction completed band combinations for Dual Connectivity (DC) of 5 bands LTE inter-band CA (5DL/1UL) and 1 NR band (1DL/1UL) | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220359 | 0688 |  | B | Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-3 | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220355 | 0689 |  | B | Big CR to reflect the completed ENDC combinations for 3 bands DL with 3 bands UL into TS 38.101-3 | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220355 | 0690 |  | B | Big CR to reflect the completed DC of x bands (x=1,2,3) LTE inter-band CA (xDL1UL) and 3 bands NR inter-band CA (3DL1UL) into TS 38.101-3 | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220354 | 0691 |  | B | CR on introduction of completed EN-DC of 2 bands LTE and 1 band NR from RAN4#101bis-e and RAN4#102-e into TS 38.101-3 | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220359 | 0692 |  | B | CR on Introduction of completed 5 bands inter-band CA into TS 38.101-3 | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220356 | 0693 |  | B | CR for 38.101-3 to introduce MSD requirements for missing bandwidths. | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220354 | 0694 |  | B | Big CR to introduce new combinations of LTE 4band + NR 1band for TS 38.101-3 | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220354 | 0695 |  | B | Big CR 38.101-3 new combinations LTE 3DL and one NR band | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220359 | 0696 |  | B | Big CR 38.101-3 new combinations NR CA Inter-band 4DL/1UL | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220356 | 0697 |  | B | Big CR 38.101-3 EN-DC PC2 | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220337 | 0702 |  | F | Big CR for TS 38.101-3 Maintenance (Rel-17) | 17.5.0 |  |
+| 2022-03 | RAN#95 | RP-220355 | 0703 |  | B | CR on Introduction of completed Dual Connectivity (DC) of x bands (x=1,2) LTE inter-band CA (xDL1UL) and 4 bands NR inter-band CA (4DL1UL) into TS 38.101-3 | 17.5.0 |  |
+| 2022-06 | RAN#96 | RP-221685 | 0704 |  | B | Introduction CR on new NR DC LTE(xDL/1UL)+ NR(2DL/1UL) band combinations in Rel-17 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221654 | 0706 | 1 | F | CR 38101-3-h50 adding FR1+FR2 CA fallbacks | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221654 | 0707 | 1 | F | CR 38101-3-h50 adding FR1 EN-DC fallbacks | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221654 | 0708 | 1 | F | CR 38101-3-h50 adding EN-DC or NR-DC with FR2 fallbacks | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221694 | 0709 |  | B | Big CR on introduction of completed PC2 for EN-DC with 1 LTE band + 1 NR TDD band | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221685 | 0710 |  | B | Big CR for Rel-17 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221677 | 0712 | 1 | F | CR for TS 38.101-3, Correction on MOP requirements for inter-band V2X con-current operation_Rel-17 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221695 | 0713 |  | B | Big CR for TS 38.101-3, Introduce new band combinations of V2X con-current operation | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221686 | 0714 |  | B | CR on Introducing NR inter-band CA for 3DL Bands and 1UL band for 38.101-3 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221686 | 0715 |  | B | Big CR on introduction of completed NR CA/DC combs with 4DL/2UL including FR2 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221686 | 0716 |  | B | Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-3 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221685 | 0717 |  | B | Big CR to reflect the completed ENDC combinations for 3 bands DL with 3 bands UL into TS 38.101-3 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221685 | 0718 |  | B | Big CR to reflect the completed DC of x bands (x=1,2,3) LTE inter-band CA (xDL1UL) and 3 bands NR inter-band CA (3DL1UL) into TS 38.101-3 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221695 | 0719 | 1 | B | Big CR to 38.101-3: update of simultaneous RxTx capability for band combinations | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221686 | 0720 |  | B | Big CR on Introduction of completed 5 bands inter-band CA into TS 38.101-3 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221685 | 0721 |  | B | Big CR on Introduction of completed  Dual Connectivity (DC) of x bands (x=1,2) LTE inter-band CA (xDL1UL) and 4 bands NR inter-band CA (4DL1UL) into TS 38.101-3 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221694 | 0722 |  | F | CR for TS 38.101-3 Rel-17: Corrections on band combinations for UE co-existence | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221680 | 0724 |  | F | CR for 38.101-3 to clarify that BCS4 and BCS5 can't be reported together | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221685 | 0725 |  | B | big CR 38.101-3 new combinations LTE 3DL and one NR band | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221694 | 0726 |  | B | big CR 38.101-3 EN-DC PC2 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221686 | 0727 |  | B | Big CR to reflect the completed NR inter band CA DC combinations for 3 bands DL with 2 bands UL into TS 38.101-3 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221685 | 0728 |  | B | Big CR to introduce new combinations of LTE 4band + NR 1band for TS 38.101-3 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221680 | 0730 | 1 | B | Increasing the maximum power limit for inter-band UL DC | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221677 | 0731 |  | F | DMRS bundling for CA and DC | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221685 | 0732 |  | B | CR on introduction of completed DC of 2 bands LTE and 1 band NR from RAN4#103-e into TS 38.101-3 | 17.6.0 |  |
+| 2022-06 | RAN#96 | RP-221655 | 0735 |  | A | Big CR for TS 38.101-3 Maintenance (Rel-17) | 17.6.0 |  |
+| 2022-09 | RAN#97 | RP-222028 | 0737 | 1 | F | CR 38.101-3: Rel-17 Adding missing fallback combinations and bug fixes | 17.7.0 |  |
+| 2022-09 | RAN#97 | RP-222036 | 0741 |  | F | CR 38.101-3 for editorial corrections to band combination tables | 17.7.0 |  |
+| 2022-09 | RAN#97 | RP-222033 | 0742 | 1 | F | CR for 38.101-3 to remove the band combinations in which band n7/7 and n38/38 are not Scell (R17) | 17.7.0 |  |
+| 2022-09 | RAN#97 | RP-222036 | 0743 | 1 | F | CR for 38.101-3 to clarify the ambiguity of BCS4 and BCS5 | 17.7.0 |  |
+| 2022-09 | RAN#97 | RP-222033 | 0744 |  | F | Addition of missing fallback DC_40-42_n257 | 17.7.0 |  |
+| 2022-09 | RAN#97 | RP-222028 | 0747 | 1 | F | CR for TS 38.101-3 on corrections to MOP band edge relaxation for intra-band contiguous and non-contiguous EN-DC band combinations | 17.7.0 |  |
+| 2022-09 | RAN#97 | RP-222033 | 0748 |  | F | CR for TS 38.101-3 on corrections to MSD test points for DC_1A-20A_n8A, DC_1A-20A_n38A and DC_1A-20A_n78A | 17.7.0 |  |
+| 2022-09 | RAN#97 | RP-222036 | 0749 | 1 | F | CR for 38.101-3: Corrections for DC_n41A-n66A-n260X | 17.7.0 |  |
+| 2022-09 | RAN#97 | RP-222023 | 0752 |  | F | Big CR for 38.101-3 maintenance (Rel-17) | 17.7.0 |  |
+| 2022-09 | RAN#97 | RP-222551 | 0753 | 1 | B | Big CR of TS38.101-3 to add new NR_CADC 2BDL_xBUL combinations containing FR1 + FR2-2 | 17.7.0 |  |
+| 2022-12 | RAN#98-e | RP-223308 | 0757 |  | F | CR for 38.101-3 to Add Missing MSD Items for PC2 EN-DC combos | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223298 | 0760 |  | F | Modification on power imbalance requirement for EN-DC with overlapping DL frequency | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223290 | 0766 |  | A | CR for TS 38.101-3 on clarifications for intra-band EN-DC configurations (Rel-17) | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223309 | 0767 |  | F | CR addition of protection for n100 and n101 into 38.101-3 | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223291 | 0773 |  | A | CR for TS 38.101-3 Rel-17 CAT-A: Corrections on band combinations for UE co-existence | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223308 | 0774 |  | F | CR for TS 38.101-3 Rel-17: Corrections on band combinations for UE co-existence | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223291 | 0778 | 1 | F | Rel17 Cat F Correction CR on adding missing BCS for DC_66A-66A_n66A | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223290 | 0790 |  | F | CR to TS38.101-3[R17] 4Rx MSD for ENDC | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223296 | 0795 |  | A | CR for an update on output power dynamics for intra-band EN-DC from Rel.16 | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223298 | 0796 | 1 | F | CR for corrections on Rel-17 band combinations in TS38.101-3 | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223290 | 0799 |  | A | R17 CR on inter band ENDC OOBE correction (CAT-A) | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223308 | 0800 |  | F | CR on TS 38.101-3 to correct delta TIB table for NE-DC and EN-DC combinations | 17.8.0 |  |
+| 2022-12 | RAN#98-e | RP-223291 | 0804 |  | A | CR on TDD RMC for Intra-band EN-DC - TS 38.101-3 | 17.8.0 |  |
+
+| Date | Meeting | TDoc | CR | Rev | Cat | Subject/Comment | New version |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2022-12 | RAN#98-e | RP-223312 | 0755 |  | B | Introduction CR on new NR DC LTE(xDL/1UL)+ NR(2DL/1UL) band combinations in Rel-18 | 18.0.0 |
+| 2022-12 | RAN#98-e | RP-223315 | 0756 | 1 | B | CR related to Introduction of new LTE TDD Band in 1670 – 1675 MHz | 18.0.0 |
+| 2022-12 | RAN#98-e | RP-223333 | 0775 |  | B | Big CR for TS 38.101-3, Introduction of new R18 Uu+V2X band combinations | 18.0.0 |
+| 2022-12 | RAN#98-e | RP-223320 | 0776 |  | B | Big CR for Rel-18 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 18.0.0 |
+| 2022-12 | RAN#98-e | RP-223323 | 0779 |  | B | Big CR on introduction of completed  DC of x LTE bands and y NR bands with z bands DL and 3 bands UL | 18.0.0 |
+| 2022-12 | RAN#98-e | RP-223330 | 0782 |  | B | big CR 38.101-3 new combinations Rel-18 EN-DC HPUE | 18.0.0 |
+| 2022-12 | RAN#98-e | RP-223322 | 0784 |  | B | Big CR to introduce new combinations DC of x bands LTE inter-band CA (x345) and 1 NR band | 18.0.0 |
+| 2022-12 | RAN#98-e | RP-223321 | 0787 |  | B | CR on introduction of completed DC of 2 bands LTE and 1 band NR into TS 38.101-3 | 18.0.0 |
+| 2022-12 | RAN#98-e | RP-223326 | 0791 |  | B | big CR 38.101-3 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2) | 18.0.0 |
+| 2022-12 | RAN#98-e | RP-223325 | 0792 |  | B | Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-3 | 18.0.0 |
+| 2022-12 | RAN#98-e | RP-223313 | 0793 |  | B | Big CR to reflect the completed DC combinations of x bands (x=1,2,3) LTE inter-band CA (xDL/1UL) and y bands NR inter-band CA (yDL/1UL) | 18.0.0 |
+| 2022-12 | RAN#98-e | RP-223325 | 0801 |  | B | Big CR to reflect the completed NR inter-band CA DC combinations for  3 bands DL with x bands UL (x=1,2) into TS 38.101-3 | 18.0.0 |
+| 2023-03 | RAN#99 | RP-230509 | 0807 |  | A | CR for 38.101-3 to Identify Applicable HPUE EN-DC Combinations | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230517 | 0810 |  | A | TS 38.101-3 Rel-18 CAT-A: Correction to co-existence requirements of band n8 and n100 | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230517 | 0812 |  | A | CR for TS 38.101-3 Rel-18 CAT-A: Corrections on band combinations for UE co-existence | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230499 | 0815 |  | A | CR for TS 38.101-3 Rel-18: Introducing missing MSD for harmonic mixing | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230537 | 0816 | 1 | F | CR 38.101-3: Rel-18 Band combinations bug fixing and adding missing fallbacks | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230501 | 0819 |  | A | CR to 38.101-3 for corrections on intra-band EN-DC configurations | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230516 | 0822 |  | F | CR to introduce emissions specifications for certain LTE_V2X band combinations | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230540 | 0824 |  | B | Introduction CR on new band combinations in DC_R18_xBLTE_2BNR_yDL2UL | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230537 | 0825 |  | B | Big CR for Rel-18 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230553 | 0826 |  | B | big CR 38.101-3 new combinations Rel-18 EN-DC HPUE | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230542 | 0827 |  | B | Big CR on introduction of completed  DC of x LTE bands and y NR bands with z bands DL and 3 bands UL | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230519 | 0837 |  | A | Correction on the HigherPowerLimitCADC IE name | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230544 | 0838 |  | B | Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-3 | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230499 | 0842 |  | A | CR to R18 TS38.101-3 maintenance for UE co-ex requirements for EN-DC | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230512 | 0844 |  | A | CR to R18 TS38.101-3 modification of MSD test point for DC_21_n28-n79 | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230502 | 0847 |  | A | CR on Harmonic mixing MSD for DC_8A-n79A (R18 CAT-A) | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230538 | 0850 |  | B | CR on introduction of completed DC of 2 bands LTE and 1 band NR from RAN4#106 into TS 38.101-3 | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230546 | 0851 |  | B | big CR 38.101-3 NR Inter-band CA/DC for y bands DL (y=4, 5, 6) with x bands UL (x=1, 2) | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230508 | 0854 | 1 | A | Correction on the powerClassNRPart IE | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230514 | 0858 |  | A | Frequency range definition update for TS 38.101-3 (Rel-18) | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230507 | 0862 |  | A | Clarification on Time mask for Tx switching for NSA | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230539 | 0868 | 1 | B | draft Big CR to introduce new combinations DC of x bands LTE inter-band CA (x345) and 1 NR band | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230503 | 0873 |  | A | CR for TS 38.101-3 to introduce DC_20_n28 general description(R18) | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230540 | 0879 |  | A | CR for corrections on Rel-18 inter-band EN-DC band combination in TS38.101-3 | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230512 | 0883 |  | A | CR for clarification on uplink power class 2 support of the EN-DC configurations | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230545 | 0884 |  | B | Big CR to reflect the completed NR inter-band CA DC combinations for  3 bands DL with x bands UL (x=1,2) into TS 38.101-3 | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230499 | 0886 |  | A | CR for TS 38.101-3 on corrections to BCS in intra-band EN-DC and inter-band CA configurations (R18_CAT_A) | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230503 | 0890 |  | A | CR for TS 38.101-3 on intra-band EN-DC band combination support for DC_(n)41 (R18_CAT_A) | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230538 | 0894 |  | F | CR to TS 38.101-3 Rel-18 Introduction of triple-beat and Scell MSD | 18.1.0 |
+| 2023-03 | RAN#99 | RP-230541 | 0896 |  | B | Big CR to reflect the completed DC combinations of x bands (x=1,2,3) LTE inter-band CA (xDL/1UL) and y bands NR inter-band CA (yDL/1UL) | 18.1.0 |
+| 2023-06 | RAN#100 | RP-231338 | 0935 |  | A | CR to TS38.101-3: Add missing DC_8A_n79A-n258A | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231341 | 0901 |  | F | CR on Corrections due to Missing Implementation of Previously Agreed Category A CR | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231341 | 0912 |  | A | On requirements for inter-band non-collocated EN-DC with overlapping DL bands (R18) | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231343 | 0942 |  | F | Generalize the increase higher power limit requirements for current EN-DC band combinations | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231351 | 0928 |  | A | Rel-18 CR to 38 101-3 for Clarification of UL Tx Switching | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231355 | 0932 |  | A | UNDONE CHANGES (because of missing changes in Rel-16 CR#0930, it will be implemented in the next version) Rel18 Cat A CR for 38.101-3 Add RI8,8R relaxtion for ENDC with 8 Rx antenas ports for EUTRA bands | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231355 | 0939 |  | A | CR to TS38.101-3: Corrections on MOP FR1-FR2 inter-band NR CA and MOP/MPR for ENDC including FR2/FR1 and FR2 | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231355 | 0949 |  | F | 38101-3 CR on clarification of UE coexistence frequency range (R18) | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231356 | 0962 |  | A | CR to 38.101-3 Rel-18 Cat A, MSD corrections | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231356 | 0966 |  | A | CR to R18 TS38.101-3 for addition of missing MSD requirements for DC_19_n77 and DC_21_n77 | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231356 | 0972 |  | A | CR for corrections on EN-DC channel bandwidth section | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231359 | 0917 |  | B | Big CR on introduction of completed band combinations in DC_R18_xBLTE_2BNR_yDL2UL | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231360 | 0933 |  | B | Big CR on introduction of completed  DC of x LTE bands and y NR bands with z bands DL and 3 bands UL | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231369 | 0948 |  | A | CR for Rel-18 38.101-3 to delete the configurations of DC_48A/B/C/D/E_n46E | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231369 | 0951 |  | A | CR for corrections on Rel-18 band combinations in TS38.101-3 | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231369 | 0967 |  | B | Big CR for Rel-18 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231369 | 0920 | 1 | F | EN-DC interband 2UL co-ex simplication R18 | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231370 | 0916 |  | B | CR on introduction of completed DC of 2 bands LTE and 1 band NR from RAN4#106bis-e and RAN4#107 into TS 38.101-3 | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231371 | 0925 |  | B | draft Big CR to introduce new combinations DC of x bands LTE inter-band CA (x345) and 1 NR band | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231372 | 0975 |  | B | Big CR to reflect the completed DC combinations of x bands (x=1,2,3) LTE inter-band CA (xDL/1UL) and y bands NR inter-band CA (yDL/1UL) | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231374 | 0940 |  | B | CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-3 | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231374 | 0953 |  | A | CR for corrections on missing BCS for Rel-18 FR1+FR2 CA band combinations in TS38.101-3 | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231375 | 0921 |  | B | Big CR to reflect the completed NR inter-band CA DC combinations for  3 bands DL with x bands UL (x=1,2) into TS 38.101-3 | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231376 | 0955 |  | A | CR for corrections on Rel-18 NE-DC band combinations | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231376 | 0958 |  | F | CR for 38.101-3 18.1.0 Bug fixes and fallback additions for CA/DC tables | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231376 | 0973 |  | B | big CR 38.101-3 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2) | 18.2.0 |
+| 2023-06 | RAN#100 | RP-231382 | 0968 |  | B | big CR 38.101-3 new combinations Rel-18 EN-DC HPUE | 18.2.0 |
+| 2023-09 | RAN#101 | RP-232521 | 0981 |  | B | big CR 38.101-3 new combinations Rel-18 EN-DC HPUE | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232519 | 0983 |  | F | CR to TS 38.101-3 Rel-18 Removing triple uplink configurations | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232519 | 0988 |  | B | Big CR on introduction of completed band combinations in DC_R18_xBLTE_2BNR_yDL2UL | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232501 | 0996 |  | A | [NR_newRAT]Rel18 Cat A CR for 38.101-3 Add RI8,8R relaxtion for ENDC with 8 Rx antenas ports for EUTRA bands | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232519 | 0999 |  | B | Big CR on introduction of completed  DC of x LTE bands and y NR bands with z bands DL and 3 bands UL | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232519 | 1003 |  | B | CR on introduction of completed DC of 2 bands LTE and 1 band NR from RAN4#108 into TS 38.101-3 | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232501 | 1007 |  | A | [NR_newRAT-Core] Corrections on the description on the delta Rib value for DCA and DC in REFSEN requirement | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232520 | 1010 |  | B | Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-3 | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232519 | 1011 |  | B | Big CR to reflect the completed DC combinations of x bands (x=1,2,3) LTE inter-band CA (xDL/1UL) and y bands NR inter-band CA (yDL/1UL) | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232520 | 1012 |  | B | Big CR to reflect the completed NR inter-band CA DC combinations for  3 bands DL with x bands UL (x=1,2) into TS 38.101-3 | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232500 | 1019 |  | A | CR to 38.101-3 Correction to intra-band EN-DC configuration(R18) | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232520 | 1021 |  | A | [NR_CADC_R18_3BDL_xBUL]Rel-18 Cat A CR for 38.101-3 Correct the UL configuration for some concerned FR1+FR2 combo | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232521 | 1023 |  | A | [HPUE_FR1_DC_LTE_NR_R18]Rel18 Cat A CR for 38.101-3 Correct the note for HPUE indication in configuration table | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232519 | 1024 |  | B | draft Big CR to introduce new combinations DC of x bands LTE inter-band CA (x345) and 1 NR band | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232520 | 1025 |  | B | big CR 38.101-3 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2) | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232519 | 1027 |  | B | Big CR for Rel-18 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232519 | 0982 | 1 | F | CR to TS 38.101-3 Rel-18 Amendments to triple-beat MSD test points | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232487 | 1016 | 1 | F | CR for Rel-18 38.101-3 to correct the superscript for ENDC including CA_n77-n79 and CA_n78-n79 on non-simultaneous Rx/Tx operation | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232520 | 0985 | 1 | F | CR for 38.101-3 18.2.0 Bug fixes for CA/DC tables | 18.3.0 |
+| 2023-09 | RAN#101 | RP-232486 | 1009 | 1 | A | [DC_R17_1BLTE_1BNR_2DL2UL-Core] Corrections on Tx requirements for inter-band NEDC including FR2 | 18.3.0 |
+| 2023-12 | RAN#102 | RP-233361 | 1030 |  | B | Introduction of higherPowerLimit-r17 into EN-DC of PC3+PC5 including UL Intra band CA | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233361 | 1032 |  | B | Introduction of delta PPowerClass report | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233368 | 1034 |  | F | CR Bug Fixes for Band Combinations in 38101-3-i30_s00-05 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233366 | 1038 |  | B | CR to 38.101-3 on introduction of band n109 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233336 | 1041 |  | A | CR on TS38.101-3 for simplification of NR V2X UE coexistence in Rel-18 (Cat. A) | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233367 | 1045 |  | A | CR for 38.101-3 UE to UE coex  R18 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233363 | 1046 |  | B | On beam correspondence requriement for EN-DC/NE-DC | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233369 | 1051 |  | A | CR to TS 38.101-3 (Rel-18): Correction of an invalid channel bandwidth in 3DL/2UL inter-band reference sensitivity testing for PC3 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233367 | 1052 |  | A | CR to TS 38.101-3 (Rel-18): Correction of an invalid channel bandwidth in 3DL/2UL inter-band reference sensitivity testing for PC3 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233343 | 1060 |  | A | [DC_R17_2BLTE_1BNR_3DL2UL] CR for 38.101-3: Removal of wrong UL configuration for DC_3A-32A_n78(2A), Rel-18 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233343 | 1062 |  | A | [DC_R17_3BLTE_1BNR_4DL2UL] CR for 38.101-3: Correction on the delta_T/R for DC_1-7-32_n78, Rel-18 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233368 | 1064 |  | B | Big CR 38.101-3 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2) | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233367 | 1065 |  | B | CR on introduction of completed DC of 2 bands LTE and 1 band NR from RAN4#109 into TS 38.101-3 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233367 | 1067 |  | A | Rel18 Cat A CR for 38.101-3 Correct the Uplink configuration for DC_2A_n7(2A)-n66A | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233361 | 1083 |  | B | CR to TS38.101-3 for Introducing new scenarios for increase higher power limit for ENDC | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233367 | 1090 |  | B | Big CR for Rel-18 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233369 | 1086 | 1 | B | big CR 38.101-3 new combinations Rel-18 EN-DC HPUE | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233370 | 1094 |  | B | Big CR for 3Tx NR inter-band UL CA and EN-DC basket WI 38.101-3 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233370 | 1080 | 1 | B | R18 38101-3 CR for 3Tx inter-band ENDC | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233367 | 1031 | 1 | B | TS 38.101-3 big CR for DC_R18_xBLTE_2BNR_yDL2UL | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233368 | 1063 | 1 | B | Big CR to reflect the completed NR inter-band CA DC combinations for 3 bands DL with up to 2 bands UL into TS 38.101-3 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233368 | 1084 | 1 | B | TS 38.101-3 big CR for NR_CADC_R18_2BDL_xBUL | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233368 | 1087 | 1 | F | CR for 38.101-3: Missing 2BDL xBUL Combinations from R4-2312482 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233367 | 1082 | 1 | B | Big CR to introduce new combinations DC of x bands LTE inter-band CA (x345) and 1 NR band | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233367 | 1085 | 1 | B | TS 38.101-3 big CR for DC_R18_xBLTE_yBNR_zDL2UL | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233363 | 1054 | 1 | B | TS 38.101-3 big CR for NR_ENDC_RF_FR1_enh2 | 18.4.0 |
+| 2023-12 | RAN#102 | RP-233364 | 1055 | 2 | B | Rel-18 CR for 38.101-3 New BS signalling implementation for non-collocated scenario | 18.4.0 |
+| 2024-03 | RAN#103 | RP-240554 | 1104 |  | A | CR for TS 38.101-3 Rel-18 CAT-A: Introducing missing Rel-16 MSD requirements | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240554 | 1106 |  | A | CR for TS 38.101-3 Rel-18 CAT-A: Introducing missing Rel-17 MSD requirements | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240554 | 1108 |  | F | CR for TS 38.101-3 Rel-18 CAT-F: Correcting MSD requirement | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240554 | 1145 |  | A | (DC_R16_1BLTE_1BNR_2DL2UL) CR to 38.101-3 Rel-18 Cat-A for Spurious Emissions for Inter-band EN-DC within FR1 | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240554 | 1158 |  | A | (DC_R17_1BLTE_1BNR_2DL2UL-Core) CR for TS 38.101-3 to clarify the applicable SCS when UE testing (R18) | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240554 | 1164 | 1 | F | (DC_R16_1BLTE_1BNR_2DL2UL) CR for corrections and re-structures of the MOP table for EN-DC (Rel.18) | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240554 | 1170 | 1 | A | (DC_R17_xBLTE_2BNR_yDL2UL)Rel18 Cat A CR for 38.101-3 Add the missing MSD exception notes for DC_1_n41-n77 | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240555 | 1115 |  | A | CR to 38.101-3 on correction of DC_48A-48A-66A_n77A UL configuration | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240557 | 1174 |  | A | [NR_BCS4-Core] CR for 38.101-3: Maximum Aggregated BW for BCS5 | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240557 | 1179 | 1 | A | (NR_CADC_R16_3BDL_2BUL) CR to TS 38.101-3: DC_1-41_n77 MSD correction | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240558 | 1148 |  | A | (NR_CADC_R17_2BDL_xBUL-Core) CR for 38.101-3: Remove unsupported NR DC configuration from FR1-FR2 NR-DC combination table | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240561 | 1156 |  | A | (NR_newRAT) Clarifications for FR2 testing with NR-DC and NR-CA | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240562 | 1101 |  | A | CR for TS 38.101-3 Rel-18 CAT-A: Introducing missing Rel-15 MSD requirements | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240563 | 1131 |  | A | (NR_newRAT-Core) CR to R18 TS 38.101-3 correct PC3 MSD for DC_19A_n77A and DC_3A-19A_n79A | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240563 | 1137 |  | A | (NR_newRAT-Core) CR for 38.101-3 corrections to EN-DC power class table | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240576 | 1123 |  | F | CR 38101-3-i40_s06-XX Bug correction for higherPowerLimitMRDC-r17 | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240595 | 1161 |  | B | Big CR for Rel-18 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240595 | 1166 |  | B | BigCR to introduce new combinations DC of x bands LTE inter-band CA (x345) and 1 NR band | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240595 | 1167 |  | B | CR on introduction of completed DC of 2 bands LTE and 1 band NR from RAN4#110 into TS 38.101-3 | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240596 | 1120 |  | B | Big CR on introduction of completed  DC of x LTE bands and y NR bands with z bands DL and 3 bands UL | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240596 | 1133 |  | B | TS 38.101-3 big CR for DC_R18_xBLTE_2BNR_yDL2UL | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240596 | 1151 |  | B | TS 38.101-3 big CR for DC_R18_xBLTE_yBNR_zDL2UL | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240597 | 1109 |  | F | CR Bug Fixes for Band Combinations in 38101-3-i40_s00-05 | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240597 | 1142 |  | B | Big CR to reflect the completed NR inter-band CA DC combinations for 3 bands DL with up to 2 bands UL into TS 38.101-3 | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240597 | 1150 |  | B | TS 38.101-3 big CR for NR_CADC_R18_2BDL_xBUL | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240597 | 1175 |  | F | [NR_CADC_R18_2BDL_xBUL] CR for 38.101-3: Missing changes from R4-2312482 | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240598 | 1171 |  | B | Big CR 38.101-3 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2) | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240600 | 1132 |  | F | (HPUE_FR1_DC_LTE_NR_R18-Core) CR to R18 TS 38.101-3 correct PC2 MSD for DC_3A-19A_n79A and some typos | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240600 | 1152 |  | B | big CR 38.101-3 new combinations Rel-18 EN-DC HPUE | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240600 | 1116 | 1 | F | CR to 38.101-3 on correction of PC2 support indication for DC_3A_n78A | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240601 | 1181 |  | B | Big CR to 38.101-3 on simultaneous Rx-Tx basket | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240603 | 1124 |  | F | (NR_cov_enh2-Core) Correction on dpc-Reporting-FR1 related requirements | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240606 | 1168 |  | F | (NR_ENDC_RF_FR1_enh2-Core) Correction of Lower-MSD requirements for EN-DC | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240606 | 1180 |  | F | Big CR for lower MSD for inter-band CA/EN-DC/DC | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240607 | 1146 | 3 | F | Rel-18 CR for 38.101-3 NonCol_IntraB_ENDC_NR_CA | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240607 | 1127 | 1 | F | Clarification on RF requirement for intra-band non-collocated EN-DC | 18.5.0 |
+| 2024-03 | RAN#103 | RP-240613 | 1160 |  | F | Big CR for Low band 4Rx for handheld UE and 3Tx for inter-band UL CA and EN-DC (38.101-3) | 18.5.0 |
+| 2024-03 | RAN#103 |  |  |  |  | Editorial changes: Rearranged orders of sections  5.5B.6a and section 7.3B.2.3.7 | 18.5.1 |
+| 2024-06 | RAN#104 | RP-241395 | 1190 |  | A | CR to 38.101-3 on enabling missing UL feature support for inter-band CA between FR1 and FR2 | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241447 | 1195 |  | B | TS 38.101-3 big CR for DC_R18_xBLTE_2BNR_yDL2UL | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241452 | 1202 |  | A | (NR_CADC_R18_3BDL_xBUL-Core) Rel-18 Cat A CR for TS 38.101-3 to correct three-band NR-CA combinations including FR2 | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241461 | 1203 |  | B | Big CR to 38.101-3 on simultaneous Rx-Tx basket | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241390 | 1208 |  | A | (DC_R16_1BLTE_1BNR_2DL2UL-Core) Rel-18 Cat A CR for 38.101-3 Address the ambiguity on the order for component carriers for EN-DC | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241395 | 1210 |  | A | (NR_CADC_R17_2BDL_xBUL) CR for 38.101-3 Add the missing fallbacks for FR1+FR2 combos | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241449 | 1211 |  | B | Big CR on introduction of completed DC of x LTE bands and y NR bands with z bands DL and 3 bands UL | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241493 | 1212 |  | F | R18 Cat-F CR 38.101-3 correction CR for 3Tx requirements | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241465 | 1213 |  | F | Correction of parameter name for dpc-Reporting-FR1 for range 1 & 2 interworking | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241453 | 1214 |  | F | (NR_CADC_R18_2BDL_xBUL) CR for 38.101-3: Missing BCS4 and 5 for CA_n66A-n258(2A) | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241444 | 1215 |  | B | Big CR for Rel-18 Dual Connectivity (DC) of 1 LTE band (1DL/1UL) and 1 NR band (1DL/1UL) | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241390 | 1218 |  | F | (DC_R17_xBLTE_2BNR_yDL2UL) CR for TS 38.101-3: Corrections on NE-DC configurations (Rel.18) | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241390 | 1221 |  | A | (DC_R16_1BLTE_1BNR_2DL2UL) CR for TS 38.101-3: Correction on inconsistent UL EN-DC configurations | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241478 | 1224 |  | F | CR for TS 38.101-3: 4Rx/8Rx applicability for Lower-MSD requirements | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241382 | 1228 |  | F | (NR_newRAT-Core) Correct the NOTE for harmonic mixing MSD valid test point | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241451 | 1229 |  | B | TS 38.101-3 big draft CR for NR_CADC_R18_2BDL_xBUL | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241448 | 1230 |  | B | TS 38.101-3 big CR for DC_R18_xBLTE_yBNR_zDL2UL | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241458 | 1232 |  | B | big CR 38.101-3 new combinations Rel-18 EN-DC HPUE | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241484 | 1239 |  | F | (NonCol_intraB_ENDC_NR_CA-Core) CR 38.101-3 v18.5.1 Clarifications on RF requirement for non-collocated inter-band EN-DC with E-UTRA contiguous CCs | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241447 | 1240 |  | F | CR into 38.101-3 Correction to band combination tables | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241382 | 1244 |  | A | Clarification of general spurious emission test range in ENDC (R18) | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241390 | 1247 |  | A | (DC_R17_2BLTE_1BNR_3DL2UL-Core)CR for 38.101-3 to correct uplink EN-DC configuration for DC_5A-66A_n261J | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241446 | 1249 |  | B | Big CR to introduce new combinations DC of x bands LTE inter-band CA (x345) and 1 NR band | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241445 | 1251 |  | A | TS 38.101-3: CR for correction of MSD values | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241453 | 1253 |  | B | big CR 38.101-3 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2) | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241445 | 1254 |  | B | CR on introduction of completed DC of 2 bands LTE and 1 band NR from RAN4#110bis and RAN4#111 into TS 38.101-3 | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241390 | 1257 |  | A | (DC_R17_3BLTE_1BNR_4DL2UL-Core) CR for TS 38.101-3 to add the missing UL configuration CA_3C_n78A for DC_1A-3C-28A_n78A (R18) | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241452 | 1259 |  | B | Big CR to reflect the completed NR inter-band CA DC combinations for 3 bands DL with up to 2 bands UL into TS 38.101-3 | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241478 | 1260 |  | F | (NR_ENDC_RF_FR1_enh2-Core) Correction on Lower-MSD verification for EN-DC | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241443 | 1196 | 1 | F | CR Bug Fixes 38101-3-i51_s00-05 | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241445 | 1252 | 2 | F | TS 38.101-3: CR for correction of band n77 CBW | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241458 | 1245 | 1 | F | [HPUE_FR1_DC_LTE_NR_R18-Core] CR to TS 38.101-3: Corrections to HPUE band combinations | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241484 | 1197 | 1 | F | (NonCol_intraB_ENDC_NR_CA-Core) On general clasue for receiver characteristics | 18.6.0 |
+| 2024-06 | RAN#104 | RP-241494 | 1198 | 3 | F | (TEI) On general clasue for receiver characteristics | 18.6.0 |
+| 2024-09 | RAN#105 | RP-242149 | 1264 | - | A | (DC_R17_2BLTE_1BNR_3DL2UL-Core, DC_R17_xBLTE_2BNR_yDL2UL) CR to introduce missing MSD requirements | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242150 | 1266 | - | A | (ENDC_UE_PC2_R17_NR_TDD-Core) CR for 38.101-3 to add general text descriptions on higher power class(es) applicability for higher order band combinations | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242149 | 1271 | 1 | F | (DC_R18_2BLTE_1BNR_3DL2UL-Core) Rel-18 Cat F CR for TS 38.101-3 to add PC3 MSD | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242155 | 1276 | 1 | F | CR 38.101-3 Clarifications for non-co-located requirements | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242149 | 1282 | 1 | F | (DC_R18_2BLTE_1BNR_3DL2UL) CR to TS 38.101-3 Rel18 Removal of Unnecessary NE-DC Requirements | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242158 | 1283 | - | F | CR 38.101-3 correcting 2 bands NR CA configuration tables | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242158 | 1284 | - | F | CR 38.101-3 correcting 3 bands NR CA configuration tables | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242158 | 1285 | - | F | CR 38.101-3 correcting 4 bands NR CA configuration tables | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242149 | 1290 | 1 | F | (4Rx_low_NR_band_handheld_3Tx_NR_CA_ENDC) Correction on configured output power of 3Tx EN-DC including UL MIMO and Tx diversity | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242194 | 1292 | 2 | B | R18 Cat-F CR 38.101-3 channel spacing for intra-band EN-DC[Intra-Band_EN-DC_Channelspacing] | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242149 | 1293 | 2 | F | CR for EN-DC Harmonic Mixing clean-up PC3 | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242150 | 1294 | 2 | F | CR for EN-DC Harmonic Mixing clean-up PC2 | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242159 | 1295 | - | F | (NR_cov_enh2-Core) CR to 38.101-3 for powerr boosting feature supporting CA | 18.7.0 |
+| 2024-09 | RAN#105 | RP-242149 | 1296 | 1 | F | CR to TS 38.101-3 Rel-18 EN-DC Uplink Harmonic clean-up | 18.7.0 |
+| 2024-12 | RAN#106 | RP-243054 | 1302 |  | F | IE and UE capability name corrections (38.101-3) | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243038 | 1303 |  | F | Correction of an informative NOTE | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1306 |  | F | (DC_R18_1BLTE_1BNR_2DL2UL) CR for 38.101-3 to add missing MSD due to harmonic mixing in PC3 DC_5A_n78A | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1309 | 1 | F | CR Bugfix 38101-3-i70_s00-05 | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243027 | 1316 |  | A | (LTE_NR_B41_Bn41_PC29dBm-Core) CR for TS 38.101-3: Add ACLR requirement for PC1.5 intra-band contiguous EN-DC | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243025 | 1317 |  | F | (HPUE_FR1_TDD_NR_CADC_SUL_R18) CR for TS 38.101-3 to correct MSD for DC_18A_n77A PC2 IMD | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243038 | 1319 |  | F | (NR_cov_enh2-Core)CR on 38.101-3 [R18] Update the IE names for coverage enhancement | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1320 | 1 | F | (DC_R18_2BLTE_1BNR_3DL2UL-Core) CR for TS 38.101-3 to modify the UL configuration of DC_3C-8A_n1A | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1321 | 1 | F | (DC_R18_xBLTE_2BNR_yDL2UL-Core) CR for TS 38.101-3 to modify the UL configuration of DC_3A-7A-8A_n7A-n78A DC_3A_n1A-n75A | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1322 |  | F | Corrections to Harmonic Mixing MSD for EN-DC | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1327 |  | F | (DC_R18_2BLTE_1BNR_3DL2UL) CR for TS 38.101-3 on 2L and 1N bands EN-DC configuration grouping | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1328 |  | F | (DC_R18_xBLTE_1BNR_yDL2UL) CR for TS 38.101-3 on (3-5)L and 1N bands EN-DC configuration grouping | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1329 |  | F | (DC_R18_xBLTE_2BNR_yDL2UL) CR for TS 38.101-3 on (1-4)L and 2N bands EN-DC configuration grouping | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1330 |  | F | (DC_R18_xBLTE_yBNR_zDL2UL) CR for TS 38.101-3 on (1-3)L and (3-5)N bands EN-DC configuration grouping | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243035 | 1332 |  | A | (NR_CADC_R17_3BDL_2BUL-Core) Updates on NR CA band for inter-band CA between FR1 and FR2 with three bands_R18_CAT_A | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243036 | 1333 |  | F | (NR_CADC_R18_3BDL_xBUL-Core) Corrections on NR CA band for inter-band CA between FR1 and FR2 | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1334 |  | F | Cleanup on 38.101-3 for inter-band DC configuration grouping | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1335 | 2 | F | (DC_R18_1BLTE_1BNR_2DL2UL-Core) CR for TS 38.101-3-i70 Corrections to intra-band MSD requirements | 18.8.0 |
+| 2024-12 | RAN#106 | RP-243024 | 1336 |  | F | CR to 38.101-3 correcting duplicated UL configuration | 18.8.0 |
+
+| Change history |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Date | Meeting | TDoc | CR | Rev | Cat | Subject/Comment | New version |  |
+| 2024-12 | RAN#106 | RP-243073 | 1304 |  | B | Big CR on Rel-19 HPUE for DC combinations of LTE band(s) and NR band(s) | 19.0.0 |  |
+| 2024-12 | RAN#106 | RP-243072 | 1313 |  | B | big CR 38.101-3 for NR_CADC_SUL_R19 | 19.0.0 |  |
+| 2024-12 | RAN#106 | RP-243071 | 1326 |  | B | BigCR for DC_R19_xBLTE_yBNR | 19.0.0 |  |
+| 2025-03 | RAN#107 | RP-250584 | 1339 |  | A | CR 38.101-3 Clarification of collocation requirements R19 | 19.1.0 |  |
+| 2025-03 | RAN#107 | RP-250614 | 1343 |  | B | Big CR on Rel-19 HPUE for DC combinations of LTE band(s) and NR band(s)NOTE: Partial Implemented, as Table 7.3B.2.3.5.1-1a does not exist and Table 7.3B.2.3.2-1a was not implementable. | 19.1.0 |  |
+| 2025-03 | RAN#107 | RP-250620 | 1346 |  | B | BigCR to 38.101-3: Simultaneous Rx-Tx | 19.1.0 |  |
+| 2025-03 | RAN#107 | RP-250581 | 1349 |  | A | (DC_R18_1BLTE_1BNR_2DL2UL) CR to to change the B66 DL test frequency of DC_66A_n77A/n41A/n38A in Tables 7.3B.2.3.4-1&1a from 2197.5MHz to 2177.5MHz - TS38.101-3 | 19.1.0 |  |
+| 2025-03 | RAN#107 | RP-250581 | 1354 |  | A | (DC_R16_1BLTE_1BNR_2DL2UL-Core) Corrections on reference sensitivity for intra-band contiguous and inter-band EN-DC configurations_R19_CAT_A | 19.1.0 |  |
+| 2025-03 | RAN#107 | RP-250598 | 1356 |  | A | (DC_R18_xBLTE_2BNR_yDL2UL-Core) Removal of redundant EN-DC configurations including FR1 and FR2_R19_CAT_A | 19.1.0 |  |
+| 2025-03 | RAN#107 | RP-250602 | 1358 |  | A | (NR_CADC_R18_2BDL_xBUL-Core) Corrections on NR CA band for two bands between FR1 and FR2_R19_CAT_A | 19.1.0 |  |
+| 2025-03 | RAN#107 | RP-250612 | 1359 |  | B | BigCR for DC_R19_xBLTE_yBNR | 19.1.0 |  |
+| 2025-03 | RAN#107 | RP-250613 | 1360 |  | B | big CR 38.101-3 for NR_CADC_SUL_R19 | 19.1.0 |  |
+| 2025-03 | RAN#107 | RP-250579 | 1365 |  | A | CR for TS 38.101-3 to correct Test BW configuration of DC_5A-7A_n78A MSD | 19.1.0 |  |
+| 2025-03 | RAN#107 | RP-250581 | 1373 |  | A | (DC_R17_1BLTE_1BNR_2DL2UL-Core) Cat A CR for TS 38.101-3-j0 Intra-band contiguous MSD clean-up | 19.1.0 |  |
+| 2025-06 | RAN#108 | RP-250954 | 1374 |  | B | Big CR on Rel-19 HPUE for DC combinations of LTE band(s) and NR band(s) | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250951 | 1375 | 1 | F | CR Bugfixes and missing Fallbacks 38101-3-j10_s00-05 | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250922 | 1378 |  | A | (DC_R18_xBLTE_2BNR_yDL2UL-Core) CR for TS 38.101-3 to modify some errors for DC_1A-3A-20A_n8A-n78A | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250913 | 1383 |  | A | (DC_R16_2BLTE_1BNR_3DL2UL) CR to correct the Band 41 BW used for the DC_5A_41A_n79A MSD in clause 7.3B.2.3.5.2 according to CA_5A-41A - TS38.101-3 | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250917 | 1386 |  | A | (DC_R17_1BLTE_1BNR_2DL2UL-Core) CR to clarify the applicable SCS when UE testing in clause 7.3A.1 - TS 38.101-3 | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250922 | 1389 |  | A | (  4Rx_low_NR_band_handheld_3Tx_NR_CA_ENDC)CR for 38.101-3 adding the missing NOTE for 3Tx DC_40A_n78A | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250951 | 1391 |  | B | Big CR for DC_R19_xBLTE_yBNRNOTE: This CR was partially implemented as the Tabular for Table 5.5B.6a.3-1 in the CR was actually Table 5.5B.6a.4-1 and therefore, not the correct inTabutlar input. The author provided the correct Tabular for Table 5.5B.6a.3-1 during conflict resolution period. | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250913 | 1397 |  | A | (DC_R16_1BLTE_1BNR_2DL2UL-Core) Corrections on single UL allowed for two bands EN-DC configurations_R19_CAT_A | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250917 | 1400 |  | A | (DC_R17_1BLTE_1BNR_2DL2UL-Core) Corrections on multiple entries for EN-DC configuration MSD test points_R19_CAT_A | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250922 | 1402 |  | A | (DC_R18_1BLTE_1BNR_2DL2UL-Core) Corrections on band n66 DL test frequency for DC_30A_n66A_R19_CAT_A | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250952 | 1403 |  | B | big CR 38.101-3 for NR_CADC_SUL_R19 | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250952 | 1404 |  | F | CR 38.101-3 correcting 2 bands NR CA combinatons | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250954 | 1405 | 1 | A | (HPUE_DC_LTE_NR_R19) CR for TS 38.101-3 to add the missing Note and correct the MSD values for DC_18A_n77A in Rel-19 | 19.2.0 |  |
+| 2025-06 | RAN#108 | RP-250953 | 1406 |  | B | BigCR to 38.101-3 Simultaneous Rx-Tx | 19.2.0 |  |
+| 2025-09 | RAN#109 | RP-252381 | 1408 |  | A | CR to 38.101-3 Rel-18 Band Combination Bug Fixes CATA Rel19 | 19.3.0 |  |
+| 2025-09 | RAN#109 | RP-252412 | 1409 |  | B | Big CR on 38.101-3 for Support of intra-band non-collocated EN-DC/NR-CA deployment Phase 2 | 19.3.0 |  |
+| 2025-09 | RAN#109 | RP-252377 | 1412 |  | A | (DC_R17_1BLTE_1BNR_2DL2UL-Core) CR to correct and clarify the applicable RB allocations for 30kHz SCS when UE testing in clause 7.3B.1 - TS 38.101-3 | 19.3.0 |  |
+| 2025-09 | RAN#109 | RP-252377 | 1415 |  | A | (DC_R18_xBLTE_1BNR_yDL2UL-Core) CR to TR 38.101-3 on corrections to categories of EN-DC configurations_R19_CAT_A | 19.3.0 |  |
+| 2025-09 | RAN#109 | RP-252402 | 1416 |  | B | Big CR on Rel-19 HPUE for DC combinations of LTE band(s) and NR band(s) | 19.3.0 |  |
+| 2025-09 | RAN#109 | RP-252396 | 1419 |  | B | Big CR for DC_R19_xBLTE_yBNR | 19.3.0 |  |
+| 2025-09 | RAN#109 | RP-252417 | 1420 |  | B | Big CR 38.101-3 for NR_CADC_SUL_R19 | 19.3.0 |  |
+| 2025-09 | RAN#109 | RP-252419 | 1413 | 1 | B | Big formal CR for TS38.101-3 for HPUE objective | 19.3.0 |  |
+| 2025-09 | RAN#109 | RP-252396 | 1422 | 1 | F | CR 38.101-3 correcting 3DL EN-DC configurations | 19.3.0 |  |
+| 2025-09 | RAN#109 | RP-252395 | 1424 |  | A | Rel-19 CR for TS 38.101-3 Remove the spurious emission requirements for band combinations coexisting with PHS system [PHS_System] | 19.3.0 |  |
+| 2025-12 | RAN#110 | RP-253667 | 1428 |  | A | (DC_R17_1BLTE_1BNR_2DL2UL-Core) CR for TS 38.101-3 to modify the RB allocations for MSD tests of 30kHz SCS bands. | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253639 | 1430 | 2 | F | CR 38.101-3 to change MSD for n41 10MHz CBW and remove redundant MSD due to IMD | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253642 | 1431 |  | B | Big CR on Rel-19 HPUE for DC combinations of LTE band(s) and NR band(s) | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253667 | 1433 |  | A | (DC_R18_1BLTE_1BNR_2DL2UL-Core) CR to correct note used for DC_2_n71 and DC_71_n2 in clause 7.3B.2.3.1 - TS 38.101-3 | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253675 | 1438 |  | A | (NR_newRAT-Core) DC_19A-21A_n79A PC3 REFSENS MSD test points correction on DL frequency for band 19 | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253667 | 1440 |  | A | (HPUE_FR1_DC_LTE_NR_R18-Core) DC_19A-21A_n79A PC2 REFSENS MSD test points correction on DL frequency for band 19 | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253667 | 1444 |  | A | (DC_R16_1BLTE_1BNR_2DL2UL-Core) Second harmonic exceptions for spurious emissions for ENDC_41A_n41A operation | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253639 | 1445 | 1 | F | CR-Bugfix 38101-3-j30_s00-05 | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253661 | 1446 |  | F | (NonCol_intraB_ENDC_NR_CA_Ph2) Type 4 UE requirement alignment with RAN2 signalling | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253659 | 1451 |  | F | CR for 38.101-3 clause 6 changes of Rel.19 Inter-band EN-DC HPUE with 2Tx and 3Tx | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253639 | 1453 |  | B | Big CR for DC_R19_xBLTE_yBNR | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253659 | 1454 | 1 | B | CR on HPUE MSD requirements simplification for TS38.101-3 | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253671 | 1456 |  | A | (NR_CADC_R18_2BDL_xBUL-Core) CR to 38.101-3 to correct uplink configuration for CA_n66-n257 and CA_n71-n257 and CA_n71-n260_R19_CAT_A | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253671 | 1458 |  | A | (NR_CADC_R18_3BDL_xBUL-Core) CR to 38.101-3 to add missing uplink configurations for CA_n2-n12-n260_R19_CAT_A | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253667 | 1460 |  | A | (DC_R18_1BLTE_1BNR_2DL2UL-Core) CR to 38.101-3 to remove the empty rows from EN-DC and NE-DC spurious emission requirement tables_R19_CAT_A | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253640 | 1461 |  | B | big CR 38.101-3 for NR_CADC_SUL_R19 | 19.4.0 |  |
+| 2025-12 | RAN#110 | RP-253639 | 1462 | 1 | F | CR 38.101-3 correcting MSD table for 3DL combinations | 19.4.0 |  |
+| 2026-03 | RAN#111 | RP-260444 | 1463 |  | F | CR-Bugfix 38.101-3 | 19.5.0 |  |
+| 2026-03 | RAN#111 | RP-260444 | 1471 |  | F | (DC_R19_xBLTE_yBNR-Core) CR to 38.101-3 to correct MSD test points due to dual uplink operation for 3 bands configurations_R19 | 19.5.0 |  |
+| 2026-03 | RAN#111 | RP-260452 | 1475 |  | A | (DC_R18_1BLTE_1BNR_2DL2UL-Core) CR to TS38.101-3: Remove UL3/DL1 harmonic near-miss MSD cases | 19.5.0 |  |
+| 2026-03 | RAN#111 | RP-260444 | 1477 |  | F | CR 38.101-3 corrections NR CA configurations | 19.5.0 |  |
+| 2026-03 | RAN#111 | RP-260452 | 1484 |  | F | (DC_R18_2BLTE_1BNR_3DL2UL-Core) CR to correct some DL Fc for DC_7A-28A_n5A, DC_7A-20A_n3A & DC_3A-28A_n5A MSDs and CBW for DC_2A-13A_n77A MSD in clause 7.3B.2.3.5.2 - Rel-19 TS 38.101-3 | 19.5.0 |  |
+| 2026-03 | RAN#111 | RP-260446 | 1466 | 1 | F | (NR_ENDC_RF_Ph4-Core) CR on HPUE MSD simplification requirements for TS38.101-3 | 19.5.0 |  |
+| 2026-03 | RAN#111 | RP-260467 | 1479 | 1 | A | (NR_cov_enh2-Core) CR on the configured power for EN-DC enabling Rel-18 power boosting | 19.5.0 |  |
+| 2026-03 | RAN#111 | RP-260444 | 1467 | 1 | F | (DC_R19_xBLTE_yBNR-Core) CR to 38.101-3 to correct the test frequency for DC_8_n40-n71 and notes for DC_2_n77 | 19.5.0 |  |
+| 2026-03 | RAN#111 | RP-260452 | 1465 | 2 | A | (NR_CADC_R18_yBDL_xBUL-Core) CR for 38.101-3: Correction on NRDC combination of n3A-n28A-n77A-n257A/G/H/I | 19.5.0 |  |
+| 2026-06 | RAN#112 | RP-261410 | 1488 |  | A | Requirement applicability for inter-band non-collocated EN-DC with overlapping DL frequency | 19.6.0 |  |
+| 2026-06 | RAN#112 | RP-261399 | 1497 |  | A | (DC_R17_1BLTE_1BNR_2DL2UL-Core) CR to clarify the applicable RB allocations for 30kHz SCS when UE testing and remove related redundant notes in clause 7.3B - TS 38.101-3 | 19.6.0 |  |
+| 2026-06 | RAN#112 | RP-261399 | 1499 |  | A | (NR_CADC_R18_2BDL_xBUL-Core) CR to modify NOTE 2 to NOTE 5 in the table of MSDs due to UL harmonic for EN-DC in NR FR1 in clause 7.3B.2 - TS 38.101-3 | 19.6.0 |  |
+| 2026-06 | RAN#112 | RP-261399 | 1500 |  | A | (DC_R18_1BLTE_1BNR_2DL2UL) CR on correction of UL configuration for DC_71A_n25A | 19.6.0 |  |
+| 2026-06 | RAN#112 | RP-261388 | 1502 |  | F | ( HPUE_DC_LTE_NR_R19) CR to correct the DL Fc for DC_18A_n78A in clause 7.3B.2.3.5.1 PC2 - Rel-19 TS 38.101-3 | 19.6.0 |  |
+| 2026-06 | RAN#112 | RP-261399 | 1509 |  | A | (DC_R17_2BLTE_1BNR_3DL2UL) CR to correct the DL Fc for 7.3B.2.3.5.2-1 in clause 7.3B.2.3.5.2 - Rel-19 TS 38.101-3 | 19.6.0 |  |
+| 2026-06 | RAN#112 | RP-261399 | 1511 |  | A | (DC_R18_xBLTE_2BNR_yDL2UL-Core) CR to correct the DL Fc for Table 7.3B.2.3.5.2-1 in clause Table 7.3B.2.3.5.2 - Rel-19 TS 38.101-3 | 19.6.0 |  |
+| 2026-06 | RAN#112 | RP-261392 | 1512 |  | F | CAT F CR to R19 38.101-3-j50 to add HPUE MSD simplication for 1UL band 2CC and 2UL bands 3CC | 19.6.0 |  |
+| 2026-06 | RAN#112 | RP-261388 | 1516 |  | F | (NR_CADC_SUL_R19) CR to 38.101-3 to add operating band for inter-band CA between FR1 and FR2 | 19.6.0 |  |

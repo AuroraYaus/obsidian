@@ -1,0 +1,12538 @@
+# 10 Measurement Performance requirements
+
+## 10.1 NR measurements
+
+### 10.1.1 Introduction
+
+The requirements in clause 10.1 apply as follows:
+
+- intra-frequency requirements apply for PCell measurements in SA, NR-DC, or NE-DC operation mode,
+
+- intra-frequency requirements apply for PSCell measurements in NR-DC or EN-DC operation mode,
+
+- intra-frequency requirements apply for SCell measurements in SA operation mode with NR CA or any MR-DC operation mode with NR CA,
+
+- inter-frequency requirements apply for non-serving cell measurements on NR carrier frequencies.
+
+- inter-frequency requirements apply for measurements from one cell on a frequency compared to the measurement from another cell on a different frequency.
+
+In the requirements of clause 10.1, the exceptions for side conditions apply as follows:
+
+- for the UE capable of CA but not configured with any SCell, the applicable exceptions for side conditions are specified in annex B, clause B.3.2.1 for UE supporting CA in FR1, and clause B.3.2.3 for UE supporting CA in FR2, respectively;
+
+- for the UE capable of CA and configured with at least one SCell, the applicable exceptions for side conditions are specified in Annex B, clause B.3.2.2 for UE configured with CA in FR1, and clause B.3.2.4 for UE supporting CA in FR2, respectively;
+
+- for the UE capable of SUL but not configured with SUL, the applicable exceptions for side conditions are specified in annex B, clause B.3.4.1 for UE supporting SUL in FR1;
+
+- for the UE capable of SUL and configured with at least one SUL, the applicable exceptions for side conditions are specified in annex B, clause B.3.4.2 for UE configured with SUL in FR1.
+
+### 10.1.2 Intra-frequency RSRP accuracy requirements for FR1
+
+#### 10.1.2.1 Intra-frequency SS-RSRP accuracy requirements
+
+
+##### 10.1.2.1.1 Absolute SS-RSRP Accuracy
+
+Unless otherwise specified, the accuracy requirements for absolute SS-RSRP in this clause apply to a cell on the same frequency as that of the serving cell in FR1. The accuracy requirements in this clause are also applicable when highSpeedMeasFlag-r16 or highSpeedMeasCA-Scell-r17 is configured.
+
+The accuracy requirements in table 10.1.2.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each relevant SSB.
+
+Table 10.1.2.1.1-1: SS-RSRP Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| 4.5 | 9 | -6 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| 8 | 11 | -6 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A,NR_FDD_FR1_B, NR_TDD_FR1_B,NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H, NR_FDD_FR1_N | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.2.1.2 Relative SS-RSRP Accuracy
+
+The relative SS-RSRP accuracy is defined as the SS-RSRP measured from one cell compared to the SS-RSRP measured from another cell on the same frequency, or between any two SS-RSRP levels measured on the same cell in FR1. The accuracy requirements in this clause are also applicable when highSpeedMeasFlag-r16 or highSpeedMeasCA-Scell-r17 is configured.
+
+The accuracy requirements in table 10.1.2.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each relevant SSB.
+
+Table 10.1.2.1.2-1: SS-RSRP Intra-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C,NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 2 | 3 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G,NR_TDD_FR1_G,NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 3 | 3 | -6 | Note 3 | Note 3 | Note 3 | N/A | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+#### 10.1.2.2 Void
+
+#### 10.1.2.3 Intra-frequency CSI-RSRP accuracy requirements
+
+##### 10.1.2.3.1 Absolute CSI-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RSRP accuracy in this clause apply to a cell where the CSI-RS resources to be measured have the same center frequency as the CSI-RS resources indicated for measurement in the serving cell in FR1.
+
+The accuracy requirements in table 10.1.2.3.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each associated SSB.
+
+- Conditions for intra-frequency measurements are fulfilled according to Annex B.2.12 for a corresponding Band for each relevant CSI-RS to be measured.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3. The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in Table 10.1.2.3.1-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for intra-frequency measurement is serving cell timing.
+
+Table 10.1.2.3.1-1: CSI-RSRP Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+| 4.5 | 9 | -6 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -70 |
+| 8 | 11 | -6 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A,NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+##### 10.1.2.3.2 Relative CSI-RSRP Accuracy
+
+The relative CSI-RSRP accuracy is defined as the CSI-RSRP measured from one cell compared to the CSI-RSRP measured from another cell on the same center frequency, or between any two CSI-RSRP levels measured on the same cell in FR1.
+
+The accuracy requirements in table 10.1.2.3.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each associated SSB.
+
+- Conditions for intra-frequency measurements are fulfilled according to Annex B.2.12 for a corresponding Band for each relevant CSI-RS to be measured.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3. The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in Table 10.1.2.3.2-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for intra-frequency measurement is serving cell timing.
+
+Table 10.1.2.3.2-1: CSI-RSRP Intra-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+| 2 | 3 | -3 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G,NR_TDD_FR1_G,NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| 3 | 3 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | N/A | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+### 10.1.2B Intra-frequency RSRP accuracy requirements for FR1 for CA/DC Idle Mode Measurements
+
+#### 10.1.2B.1 Intra-frequency SS-RSRP accuracy requirements
+
+The requirements in this clause are applicable for a UE:
+
+- in state RRC_IDLE or RRC_INACTIVE
+
+- that is synchronised to the cell that is measured.
+
+The requirements are for absolute SS-RSRP accuracy.
+
+##### 10.1.2B.1.1 Absolute SS-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-RSRP accuracy in this clause apply to the serving cell in FR1.
+
+The accuracy requirements in table 10.1.2B.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.1.2 for a corresponding Band for each relevant SSB.
+
+Table 10.1.2B.1.1-1: SS-RSRP Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| 6 | 10.5 | -4 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| 9.5 | 12.5 | -4 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A,NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.2C Intra-frequency RSRP accuracy requirements for FR1 SAN
+
+#### 10.1.2C.1 Intra-frequency SS-RSRP accuracy requirements
+
+##### 10.1.2C.1.1 Absolute SS-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-RSRP accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR1.
+
+The accuracy requirements in table 10.1.2C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.2C.1.1-1: SS-RSRP Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 4.5 | 9 | -6 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -70 |
+| 8 | 11 | -6 | NR_FDD_SAB_FR1_A | N/A | N/A | -70 | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+##### 10.1.2C.1.2 Relative SS-RSRP Accuracy
+
+The relative SS-RSRP accuracy is defined as the SS-RSRP measured from one cell compared to the SS-RSRP measured from another cell on the same frequency, or between any two SS-RSRP levels measured on the same cell in FR1.
+
+The accuracy requirements in table 10.1.2C.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.2C.1.2-1: SS-RSRP Intra-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 2 | 3 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -50 |
+| 3 | 3 | -6 | Note 3 | Note 3 | Note 3 | N/A | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+<End of Change 1>
+
+### 10.1.2D Intra-frequency RSRP accuracy requirements for RedCap UE with Satellite Access in FR1
+
+#### 10.1.2D.1 Intra-frequency SS-RSRP accuracy requirements
+
+##### 10.1.2D.1.1 Absolute SS-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-RSRP accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR1.
+
+The accuracy requirements in clause 10.1.2C.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the absolute accuracy requirements in table 10.1.2D.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for both 1Rx and 2Rx RedCap UE for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.2D.1.1-1: SS-RSRP Intra-frequency absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 5.5 | 10 | -6 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -70 |
+| 9 | 12 | -6 | NR_FDD_SAB_FR1_A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+##### 10.1.2D.1.2 Relative SS-RSRP Accuracy
+
+The relative SS-RSRP accuracy is defined as the SS-RSRP measured from one cell compared to the SS-RSRP measured from another cell on the same frequency, or between any two SS-RSRP levels measured on the same cell in FR1.
+
+The accuracy requirements in clause 10.1.2C.1.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the relative accuracy requirements in table 10.1.2D.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for both 1Rx and 2Rx RedCap UE for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.2D.1.2-1: SS-RSRP Intra-frequency relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 3 | 4 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+| 4 | 4 | -6 | Note 3 | Note 3 | Note 3 | N/A | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+### 10.1.3 Intra-frequency RSRP accuracy requirements for FR2
+
+#### 10.1.3.1 Intra-frequency SS-RSRP accuracy requirements
+
+##### 10.1.3.1.1 Absolute SS-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-RSRP accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR2.
+
+The accuracy requirements in table 10.1.3.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.3.1.1-1: SS-RSRP Intra-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| 6 | 9 | ≥-6 | Same value as SSB_RP in Table B.2.2-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 8 | 11 |  | N/A |  | -70 | -50 |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.3.1.2 Relative SS-RSRP Accuracy
+
+The relative SS-RSRP accuracy is defined as the SS-RSRP measured from one cell compared to the SS-RSRP measured from another cell on the same frequency, or between any two SS-RSRP levels measured on the same cell in FR2.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.3.1.2-1: SS-RSRP Intra-frequency relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 6 | 9 | ≥-6 | Same value as SSB_RP in Table B.2.2-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies. |  |  |  |  |  |
+
+#### 10.1.3.2 Void
+
+#### 10.1.3.3 Intra-frequency CSI-RSRP accuracy requirements
+
+##### 10.1.3.3.1 Absolute CSI-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RSRP accuracy in this clause apply to a cell where the CSI-RS resources to be measured have the same center frequency as the CSI-RS resources indicated for measurement in the serving cell in FR2.
+
+The accuracy requirements in table 10.1.3.3.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each associated SSB(s).
+
+- Conditions for intra-frequency measurements are fulfilled according to Annex B.2.12 for a corresponding Band for each relevant CSI-RS to be measured.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3. The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.3.3.1-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for intra-frequency measurement is serving cell timing.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.3.3.1-1: CSI-RSRP Intra-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 2 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 1 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |  |
+| 6 | 9 | ≥-6 | Same value as CSI-RS_RP in Table B.2.8-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 8 | 11 |  | N/A |  | -70 | -50 |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.3.3.2 Relative CSI-RSRP Accuracy
+
+The relative CSI-RSRP accuracy is defined as the CSI-RSRP measured from one cell compared to the CSI-RSRP measured from another cell on the same center frequency, or between any two CSI-RSRP levels measured on the same cell in FR2.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each associated SSB(s).
+
+- Conditions for intra-frequency measurements are fulfilled according to Annex B.2.12 for a corresponding Band for each CSI-RS to be measured.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3. The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.3.3.2-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for intra-frequency measurement is serving cell timing.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.3.3.2-1: CSI-RSRP Intra-frequency relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCS CSI-RS Note 1 |  | dBm/BWChannel |
+|  |  |  | SCS CSI-RS = 60 kHz | SCS CSI-RS = 120 kHz |  |
+| 6 | 9 | ≥-6 | Same value as CSI-RS_RP in Table B.2.8-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of cells to which the requirement applies. |  |  |  |  |  |
+
+### 10.1.3B Intra-frequency RSRP accuracy requirements for FR2 for CA/DC Idle Mode Measurements
+
+#### 10.1.3B.1 Intra-frequency SS-RSRP accuracy requirements
+
+The requirements in this clause are applicable for a UE:
+
+- in state RRC_IDLE or RRC_INACTIVE
+
+- that is synchronised to the cell that is measured.
+
+The requirements are for absolute SS-RSRP accuracy.
+
+##### 10.1.3B.1.1 Absolute SS-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-RSRP accuracy in this clause apply to the serving cell in FR2.
+
+The accuracy requirements in table 10.1.3B.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.1.2 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.3B.1.1-1: SS-RSRP Intra-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| 7.5 | 10.5 | ≥-4 | Same value as SSB_RP in Table B.2.2-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 9.5 | 12.5 |  | N/A |  | -70 | -50 |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+### 10.1.3C Intra-frequency RSRP accuracy requirements for FR2-NTN
+
+#### 10.1.3C.1 Intra-frequency SS-RSRP accuracy requirements
+
+##### 10.1.3C.1.1 Absolute SS-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-RSRP accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR2-NTN.
+
+The accuracy requirements in table 10.1.3C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.3C.1.1-1: SS-RSRP Intra-frequency absolute accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| 7 | 10 | ≥-6 | Same value as SSB_RP derived from annex B.2.17, according to UE VSAT type |  | N/A | -70 |
+| 9 | 12 |  | N/A |  | -70 | -50 |
+| NOTE 1: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.3C.1.2 Relative SS-RSRP Accuracy
+
+The relative SS-RSRP accuracy is defined as the SS-RSRP measured from one cell compared to the SS-RSRP measured from another cell on the same frequency, or between any two SS-RSRP levels measured on the same cell in FR2-NTN.
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.3C.1.2-1: SS-RSRP Intra-frequency relative accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 3 | 6 | ≥-6 | Same value as SSB_RP derived from annex B.2.17, according to UE VSAT type |  | -50 |
+| NOTE 1: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies. |  |  |  |  |  |
+
+### 10.1.4 Inter-frequency RSRP accuracy requirements for FR1
+
+#### 10.1.4.1 Inter-frequency SS-RSRP accuracy requirements
+
+##### 10.1.4.1.1 Absolute SS-RSRP Accuracy in FR1
+
+The requirements for absolute SS-RSRP accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell. The accuracy requirements in this clause are also applicable when highSpeedMeasInterFreq-r17 is configured.
+
+The accuracy requirements in table 10.1.4.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for each relevant SSB.
+
+Table 10.1.4.1.1-1: SS-RSRP Inter-frequency Absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| 4.5 | 9 | -6 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| 8 | 11 | -6 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A, NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: VoidNOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.4.1.2 Relative SS-RSRP Accuracy in FR1
+
+The relative SS-RSRP accuracy in inter-frequency case is defined as the RSRP measured from one cell on a frequency in FR1compared to the RSRP measured from another cell on a different frequency in FR1. The accuracy requirements in this clause are also applicable when highSpeedMeasInterFreq-r17 is configured.
+
+The accuracy requirements in Table 10.1.4.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] Clause 7.3 for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.3 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1.4.1.2-1: SS-RSRP Inter-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 4.5 | 6 | -6 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+#### 10.1.4.2 Void
+
+#### 10.1.4.3 Inter-frequency CSI-RSRP accuracy requirements
+
+##### 10.1.4.3.1 Absolute CSI-RSRP Accuracy in FR1
+
+The requirements for absolute CSI-RSRP accuracy in this clause apply to a cell where the CSI-RS resources to be measured have the different center frequency as the CSI-RS resources indicated for measurement in the serving cell in FR1.
+
+The accuracy requirements in table 10.1.4.3.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for each relevant SSB.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band for each relevant CSI-RS to be measured.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3. The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.4.3.1-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+Table 10.1.4.3.1-1: CSI-RSRP Inter-frequency Absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B, | -120.5 | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -70 |
+| 4.5 | 9 | -6 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -70 |
+| 8 | 11 | -6 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A,NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+##### 10.1.4.3.2 Relative CSI-RSRP Accuracy in FR1
+
+The relative CSI-RSRP accuracy in inter-frequency case is defined as the CSI-RSRP measured from one cell on a frequency in FR1compared to the CSI-RSRP measured from another cell on a different frequency in FR1.
+
+The accuracy requirements in table 10.1.4.3.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] clause7.3 for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for each relevant SSB.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band for each relevant CSI-RS to be measured.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3. The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.4.3.2-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+• NOTE: The reference measurement timing for one layer for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+- |CSI_RP1dBm - CSI_RP2dBm|  27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1.4.3.2-1: CSI-RSRP Inter-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| 4.5 | 6 | -6 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: VoidNOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+### 10.1.4B Inter-frequency RSRP accuracy requirements for FR1 for CA/DC Idle Mode Measurements
+
+#### 10.1.4B.1 Inter-frequency SS-RSRP accuracy requirements
+
+The requirements in this clause are applicable for a UE:
+
+- in state RRC_IDLE or RRC_INACTIVE
+
+- that is synchronised to the cell that is measured.
+
+The requirements are for absolute SS-RSRP accuracy.
+
+##### 10.1.4B.1.1 Absolute SS-RSRP Accuracy in FR1
+
+The requirements for absolute SS-RSRP accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.4B.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.1.3 for a corresponding Band for each relevant SSB.
+
+Table 10.1.4B.1.1-1: SS-RSRP Inter-frequency Absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| 6 | 10.5 | -4 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| 9.5 | 12.5 | -4 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A, NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: VoidNOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.4C Inter-frequency RSRP accuracy requirements for FR1 SAN
+
+#### 10.1.4C.1 Inter-frequency SS-RSRP accuracy requirements
+
+##### 10.1.4C.1.1 Absolute SS-RSRP Accuracy in FR1
+
+The requirements for absolute SS-RSRP accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.4C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.4C.1.1-1: SS-RSRP Inter-frequency Absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 4.5 | 9 | -6 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -70 |
+| 8 | 11 | -6 | NR_FDD_SAB_FR1_A | N/A | N/A | -70 | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: VoidNOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+##### 10.1.4C.1.2 Relative SS-RSRP Accuracy in FR1
+
+The relative SS-RSRP accuracy in inter-frequency case is defined as the RSRP measured from one cell on a frequency in FR1compared to the RSRP measured from another cell on a different frequency in FR1.
+
+The accuracy requirements in Table 10.1.4C.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] Clause 7.3 for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.18 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1.4C.1.2-1: SS-RSRP Inter-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 4.5 | 6 | -6 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2A |  |  |  |  |  |  |  |
+
+### 10.1.4D Inter-frequency RSRP accuracy requirements for RedCap UE with Satellite Access in FR1
+
+#### 10.1.4D.1 Inter-frequency SS-RSRP accuracy requirements
+
+##### 10.1.4D.1.1 Absolute SS-RSRP Accuracy in FR1
+
+The requirements for absolute SS-RSRP accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in clause 10.1.4C.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the absolute accuracy requirements in table 10.1.4D.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for both 1Rx and 2Rx RedCap UE for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.4D.1.1-1: SS-RSRP Inter-frequency Absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 5.5 | 10 | -6 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -70 |
+| 9 | 12 | -6 | NR_FDD_SAB_FR1_A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: VoidNOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+##### 10.1.4D.1.2 Relative SS-RSRP Accuracy in FR1
+
+The relative SS-RSRP accuracy in inter-frequency case is defined as the RSRP measured from one cell on a frequency in FR1compared to the RSRP measured from another cell on a different frequency in FR1.
+
+The accuracy requirements in clause 10.1.4C.1.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the relative accuracy requirements in table 10.1.4D.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] Clause 7.3 for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.18 for both 1Rx and 2Rx RedCap UE for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1.4D.1.2-1: SS-RSRP Inter-frequency relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 5.5 | 7 | -6 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2A |  |  |  |  |  |  |  |
+
+### 10.1.5 Inter-frequency RSRP accuracy requirements for FR2
+
+#### 10.1.5.1 Inter-frequency SS-RSRP accuracy requirements
+
+##### 10.1.5.1.1 Absolute SS-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-RSRP accuracy in this clause apply to a cell on a frequency in FR2 that is on a different frequency than the serving cell.
+
+The accuracy requirements in table 10.1.5.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.5.1.1-1: SS-RSRP Inter-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| 6 | 9 | ≥-4 | Same value as SSB_RP in Table B.2.3-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 8 | 11 |  | N/A |  | -70 | -50 |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.5.1.2 Relative SS-RSRP Accuracy
+
+The relative SS-RSRP accuracy is defined as the SS-RSRP measured from one cell on a frequency in FR2 compared to the SS-RSRP measured from another cell on another frequency in FR2.
+
+The accuracy requirements in table 10.1.5.1.2-1 are valid under the following conditions:
+
+- Conditions defined in TS 38.101-2 [19] clause7.3 for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for each relevant SSB.
+
+-- |SSB_RP1dBm - SSB_RP2dBm|  27dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.5.1.2-1: SS-RSRP Inter-frequency relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 6 | 9 | ≥-4 | Same value as SSB_RP in Table B.2.3-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies. |  |  |  |  |  |
+
+#### 10.1.5.2 Void
+
+#### 10.1.5.3 Inter-frequency CSI-RSRP accuracy requirements
+
+##### 10.1.5.3.1 Absolute CSI-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RSRP accuracy in this clause apply to a cell on a frequency in FR2 where the CSI-RS resources to be measured have the different center frequency as the CSI-RS resources indicated for measurement in the serving cell.
+
+The accuracy requirements in table 10.1.5.3.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for each relevant associated SSB.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band for each relevant CSI-RS to be measured.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3. The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.5.3.1-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.5.3.1-1: CSI-RSRP Inter-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 2 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 1 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |  |
+| 6 | 9 | ≥-4 | Same value as CSI_RP in Table B.2.9-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 8 | 11 |  | N/A |  | -70 | -50 |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.5.3.2 Relative CSI-RSRP Accuracy
+
+The relative CSI-RSRP accuracy in inter-frequency case is defined as the CSI-RSRP measured from one cell on a frequency in FR2 compared to the CSI-RSRP measured from another cell on another frequency in FR2.
+
+The accuracy requirements in table 10.1.5.3.2-1 are valid under the following conditions:
+
+- Conditions defined in TS 38.101-2 [19] clause7.3 for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for each relevant associated SSB.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band for each relevant CSI-RS to be measured.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3. The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.5.3.2-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+- |CSI_RP1dBm - CSI_RP2dBm|  27dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.5.3.2-1: CSI-RSRP Inter-frequency relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |
+| 6 | 9 | ≥-4 | Same value as CSI_RP in Table B.2.9-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of cells to which the requirement applies. |  |  |  |  |  |
+
+### 10.1.5B Inter-frequency RSRP accuracy requirements for FR2 for CA/DC Idle Mode Measurements
+
+#### 10.1.5B.1 Inter-frequency SS-RSRP accuracy requirements
+
+The requirements in this clause are applicable for a UE:
+
+- in state RRC_IDLE or RRC_INACTIVE
+
+- that is synchronised to the cell that is measured.
+
+The requirements are for absolute SS-RSRP accuracy.
+
+##### 10.1.5B.1.1 Absolute SS-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-RSRP accuracy in this clause apply to a cell on a frequency in FR2 that is on a different frequency than the serving cell.
+
+The accuracy requirements in table 10.1.5B.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.1.3 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.5B.1.1-1: SS-RSRP Inter-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| 7.5 | 10.5 | ≥-4 | Same value as SSB_RP in Table B.2.3-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 9.5 | 12.5 |  | N/A |  | -70 | -50 |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+### 10.1.5C Inter-frequency RSRP accuracy requirements for FR2-NTN
+
+#### 10.1.5C.1 Inter-frequency SS-RSRP accuracy requirements
+
+##### 10.1.5C.1.1 Absolute SS-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-RSRP accuracy in this clause apply to a cell on a frequency in FR2-NTN that is on a different frequency than the serving cell.
+
+The accuracy requirements in table 10.1.5C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.5C.1.1-1: SS-RSRP Inter-frequency absolute accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| 7 | 10 | ≥-4 | Same value as SSB_RP derived from annex B.2.18, according to UE VSAT type |  | N/A | -70 |
+| 9 | 12 |  | N/A |  | -70 | -50 |
+| NOTE 1: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.5C.1.2 Relative SS-RSRP Accuracy
+
+The relative SS-RSRP accuracy is defined as the SS-RSRP measured from one cell on a frequency in FR2-NTN compared to the SS-RSRP measured from another cell on another frequency in FR2-NTN.
+
+The accuracy requirements in table 10.1.5C.1.2-1 are valid under the following conditions:
+
+- Conditions defined in 38.101-5 [19] clause 10.3 for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.5C.1.2-1: SS-RSRP Inter-frequency relative accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 7 | 10 | ≥-4 | Same value as SSB_RP derived from annex B.2.18, according to UE VSAT type |  | -50 |
+| NOTE 1: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies. |  |  |  |  |  |
+
+### 10.1.6 RSRP Measurement Report Mapping
+
+The reporting range of SS-RSRP and CSI-RSRP for L3 reporting is defined from -156 dBm to -31 dBm with 1 dB resolution. The reporting range of SS-RSRP, CSI-RSRP and P-L1-RSRP for L1 reporting is defined from -140 to -44 dBm with 1 dB resolution.
+
+The mapping of measured quantity is defined in table 10.1.6.1-1. The range in the signalling may be larger than the guaranteed accuracy range.
+
+The reporting range of differential SS-RSRP, CSI-RSRP and P-L1-RSRP for L1 reporting is defined from 0 dB to -30 dB with 2 dB resolution.
+
+The mapping of measured quantity is defined in table 10.1.6.1-2. The range in the signalling may be larger than the guaranteed accuracy range.
+
+Table 10.1.6.1-1: SS-RSRP, CSI-RSRP measurement report mapping and P-L1-RSRP report mapping
+
+| Reported value | Measured quantity value (L3 SS-RSRP) and CSI-RSRP | Measured quantity value (L1 SS-RSRP and CSI-RSRP, P-L1-RSRP) | Unit |
+| --- | --- | --- | --- |
+| RSRP_0 | SS-RSRP<-156 | Not valid | dBm |
+| RSRP_1 | -156 SS-RSRP<-155 | Not valid | dBm |
+| RSRP_2 | -155 SS-RSRP<-154 | Not valid | dBm |
+| RSRP_3 | -154 SS-RSRP<-153 | Not valid | dBm |
+| RSRP_4 | -153 SS-RSRP<-152 | Not valid | dBm |
+| RSRP_5 | -152 SS-RSRP<-151 | Not valid | dBm |
+| RSRP_6 | -151 SS-RSRP<-150 | Not valid | dBm |
+| RSRP_7 | -150 SS-RSRP<-149 | Not valid | dBm |
+| RSRP_8 | -149 SS-RSRP<-148 | Not valid | dBm |
+| RSRP_9 | -148 SS-RSRP<-147 | Not valid | dBm |
+| RSRP_10 | -147 SS-RSRP<-146 | Not valid | dBm |
+| RSRP_11 | -146 SS-RSRP<-145 | Not valid | dBm |
+| RSRP_12 | -145 SS-RSRP<-144 | Not valid | dBm |
+| RSRP_13 | -144 SS-RSRP<-143 | Not valid | dBm |
+| RSRP_14 | -143 SS-RSRP<-142 | Not valid | dBm |
+| RSRP_15 | -142 SS-RSRP<-141 | Not valid | dBm |
+| RSRP_16 | -141 SS-RSRP<-140 | RSRP<-140 | dBm |
+| RSRP_17 | -140 SS-RSRP<-139 | -140RSRP<-139 | dBm |
+| RSRP_18 | -139 SS-RSRP<-138 | -139 RSRP<-138 | dBm |
+| … | … |  | … |
+| RSRP_111 | -46≤ SS-RSRP<-45 | -46 RSRP<-45 | dBm |
+| RSRP_112 | -45 SS-RSRP<-44 | -45 RSRP<-44 | dBm |
+| RSRP_113 | -44 SS-RSRP<-43 | -44 RSRP | dBm |
+| RSRP_114 | -43 SS-RSRP<-42 | Not valid | dBm |
+| RSRP_115 | -42 SS-RSRP<-41 | Not valid | dBm |
+| RSRP_116 | -41 SS-RSRP<-40 | Not valid | dBm |
+| RSRP_117 | -40 SS-RSRP<-39 | Not valid | dBm |
+| RSRP_118 | -39 SS-RSRP<-38 | Not valid | dBm |
+| RSRP_119 | -38 SS-RSRP<-37 | Not valid | dBm |
+| RSRP_120 | -37 SS-RSRP<-36 | Not valid | dBm |
+| RSRP_121 | -36 SS-RSRP<-35 | Not valid | dBm |
+| RSRP_122 | -35 SS-RSRP<-34 | Not valid | dBm |
+| RSRP_123 | -34 SS-RSRP<-33 | Not valid | dBm |
+| RSRP_124 | -33 SS-RSRP<-32 | Not valid | dBm |
+| RSRP_125 | -32 SS-RSRP<-31 | Not valid | dBm |
+| RSRP_126 | -31 SS-RSRP | Not valid | dBm |
+| RSRP_127 (Note) | Infinity | Infinity | dBm |
+| NOTE: The value of RSRP_127 is applicable for RSRP threshold configured by the network as defined in TS 38.331 [2], but not for the purpose of measurement reporting. |  |  |  |
+
+Table 10.1.6.1-2: Differential SS-RSRP, CSI-RSRP measurement (for L1 reporting) report mapping and  P-L1-RSRP report mapping
+
+| Reported value | Measured quantity value (difference in measured RSRP from strongest RSRP) | Unit |
+| --- | --- | --- |
+| DIFFRSRP_0 | 0≥ΔRSRP>-2 | dB |
+| DIFFRSRP_1 | -2≥ΔRSRP>-4 | dB |
+| DIFFRSRP_2 | -4≥ΔRSRP>-6 | dB |
+| DIFFRSRP_3 | -6≥ΔRSRP>-8 | dB |
+| DIFFRSRP_4 | -8≥ΔRSRP>-10 | dB |
+| DIFFRSRP_5 | -10≥ΔRSRP>-12 | dB |
+| DIFFRSRP_6 | -12≥ΔRSRP>-14 | dB |
+| DIFFRSRP_7 | -14≥ΔRSRP>-16 | dB |
+| DIFFRSRP_8 | -16≥ΔRSRP>-18 | dB |
+| DIFFRSRP_9 | -18≥ΔRSRP>-20 | dB |
+| DIFFRSRP_10 | -20≥ΔRSRP>-22 | dB |
+| DIFFRSRP_11 | -22≥ΔRSRP>-24 | dB |
+| DIFFRSRP_12 | -24≥ΔRSRP>-26 | dB |
+| DIFFRSRP_13 | -26≥ΔRSRP>-28 | dB |
+| DIFFRSRP_14 | -28≥ΔRSRP>-30 | dB |
+| DIFFRSRP_15 | -30≥ΔRSRP | dB |
+
+### 10.1.7 Intra-frequency RSRQ accuracy requirements for FR1
+
+#### 10.1.7.1 Intra-frequency SS-RSRQ accuracy requirements in FR1
+
+##### 10.1.7.1.1 Absolute SS-RSRQ Accuracy in FR1
+
+Unless otherwise specified, the requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR1. The accuracy requirements in this clause are also applicable when highSpeedMeasFlag-r16 or highSpeedMeasCA-Scell-r17 is configured.
+
+The accuracy requirements in table 10.1.7.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each relevant SSB.
+
+Table 10.1.7.1.1-1: SS-RSRQ Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 2.5 | 4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+#### 10.1.7.2 Intra-frequency CSI-RSRQ accuracy requirements
+
+##### 10.1.7.2.1 Absolute CSI-RSRQ Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RSRQ accuracy in this clause apply to the intra-frequency measurement defined in clause 9.10.2.1 in FR1.
+
+The accuracy requirements in table 10.1.7.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for associated SSB.
+
+- Conditions for intra-frequency measurements are fulfilled according to Annex B.2.12 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in Table 10.1.7.2.1-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for intra-frequency measurement is serving cell timing.
+
+Table 10.1.7.2.1-1: CSI-RSRQ Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| 2.5 | 4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+### 10.1.7B Intra-frequency RSRQ accuracy requirements for FR1 for CA/DC Idle Mode Measurements
+
+#### 10.1.7B.1 Intra-frequency SS-RSRQ accuracy requirements in FR1
+
+The requirements in this clause are applicable for a UE:
+
+- in state RRC_IDLE or RRC_INACTIVE
+
+- that is synchronised to the cell that is measured.
+
+The requirements are for absolute SS-RSRQ accuracy.
+
+##### 10.1.7B.1.1 Absolute SS-RSRQ Accuracy in FR1
+
+Unless otherwise specified, the requirements for absolute SS-RSRQ accuracy in this clause apply to the serving cell in FR1.
+
+The accuracy requirements in table 10.1.7B.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.1.2 for a corresponding Band for each relevant SSB.
+
+Table 10.1.7B.1.1-1: SS-RSRQ Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 4 | 5.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 5 | 5.5 | -4 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.7C Intra-frequency RSRQ accuracy requirements for FR1 SAN
+
+#### 10.1.7C.1 Intra-frequency SS-RSRQ accuracy requirements in FR1
+
+##### 10.1.7C.1.1 Absolute SS-RSRQ Accuracy in FR1
+
+Unless otherwise specified, the requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR1.
+
+The accuracy requirements in table 10.1.7C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.7C.1.1-1: SS-RSRQ Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 2.5 | 4 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -50 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2A |  |  |  |  |  |  |  |
+
+### 10.1.7D Intra-frequency RSRQ accuracy requirements for RedCap UE with Satellite Access in FR1
+
+#### 10.1.7D.1 Intra-frequency SS-RSRQ accuracy requirements in FR1
+
+##### 10.1.7D.1.1 Absolute SS-RSRQ Accuracy in FR1
+
+Unless otherwise specified, the requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR1.
+
+The accuracy requirements in clause 10.1.7C.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the absolute accuracy requirements in table 10.1.7D.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for both 1Rx and 2Rx RedCap UE for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.7D.1.1-1: SS-RSRQ Intra-frequency absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 3.5 | 5 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+| 4.5 | 5 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2A |  |  |  |  |  |  |  |
+
+### 10.1.8 Intra-frequency RSRQ accuracy requirements for FR2
+
+#### 10.1.8.1 Intra-frequency SS-RSRQ accuracy requirements in FR2
+
+##### 10.1.8.1.1 Absolute SS-RSRQ Accuracy in FR2
+
+Unless otherwise specified, the requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR2.
+
+The accuracy requirements in table 10.1.8.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.8.1.1-1: SS-RSRQ Intra-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 2.5 | 4 | ≥-3 | Same value as SSB_RP in Table B.2.2-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 3.5 | 4 | ≥-6 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+#### 10.1.8.2 Intra-frequency CSI-RSRQ accuracy requirements
+
+##### 10.1.8.2.1 Absolute CSI-RSRQ Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RSRQ accuracy in this clause apply to the intra-frequency measurement defined in clause 9.10.2.1 in FR2.
+
+The accuracy requirements in table 10.1.8.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each relevant SSB.
+
+- Conditions for intra-frequency measurements are fulfilled according to Annex B.2.12 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in Table 10.1.8.2.1-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for intra-frequency measurement is serving cell timing.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.8.2.1-1: CSI-RSRQ Intra-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |
+| 2.5 | 4 | ≥-3 | Same value as CSI_RP in Table B.2.8-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 3.5 | 4 | ≥-6 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+### 10.1.8B Intra-frequency RSRQ accuracy requirements for FR2 for CA/DC Idle Mode Measurements
+
+#### 10.1.8B.1 Intra-frequency SS-RSRQ accuracy requirements in FR2
+
+The requirements in this clause are applicable for a UE:
+
+- in state RRC_IDLE or RRC_INACTIVE
+
+- that is synchronised to the cell that is measured.
+
+The requirements are for absolute SS-RSRQ accuracy.
+
+##### 10.1.8B.1.1 Absolute SS-RSRQ Accuracy in FR2
+
+Unless otherwise specified, the requirements for absolute SS-RSRQ accuracy in this clause apply to the serving cell in FR2.
+
+The accuracy requirements in table 10.1.8B.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.1.2 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.8B.1.1-1: SS-RSRQ Intra-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 4 | 5.5 | ≥-3 | Same value as SSB_RP in Table B.2.2-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 5 | 5.5 | ≥-4 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+### 10.1.8C Intra-frequency RSRQ accuracy requirements for FR2-NTN
+
+#### 10.1.8C.1 Intra-frequency SS-RSRQ accuracy requirements in FR2-NTN
+
+##### 10.1.8C.1.1 Absolute SS-RSRQ Accuracy in FR2-NTN
+
+Unless otherwise specified, the requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR2-NTN.
+
+The accuracy requirements in table 10.1.8C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.8C.1.1-1: SS-RSRQ Intra-frequency absolute accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 3.5 | 5 | ≥-3 | Same value as SSB_RP derived from annex B.2.17, according to UE VSAT type |  | -50 |
+| 4.5 | 5 | ≥-6 |  |  |  |
+| NOTE 1: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+### 10.1.9 Inter-frequency RSRQ accuracy requirements for FR1
+
+#### 10.1.9.1 Inter-frequency SS-RSRQ accuracy requirements in FR1
+
+##### 10.1.9.1.1 Absolute SS-RSRQ Accuracy in FR1
+
+The requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell. The accuracy requirements in this clause are also applicable when highSpeedMeasInterFreq-r17 is configured.
+
+The accuracy requirements in table 10.1.9.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for each relevant SSB.
+
+Table 10.1.9.1.1-1: SS-RSRQ Inter-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 2.5 | 4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.9.1.2 Relative SS-RSRQ Accuracy in FR1
+
+The relative SS-RSRQ accuracy in inter-frequency case is defined as the RSRQ measured from one cell on a frequency in FR1 compared to the RSRP measured from another cell on a different frequency in FR1. The accuracy requirements in this clause are also applicable when highSpeedMeasInterFreq-r17 is configured.
+
+The accuracy requirements in table 10.1.9.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1.9.1.2-1: SS-RSRQ Inter-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 2 | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 3 | 4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 4 | 4 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+#### 10.1.9.2 Inter-frequency CSI-RSRQ accuracy requirements
+
+##### 10.1.9.2.1 Absolute CSI-RSRQ Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RSRQ accuracy in this clause apply to the inter-frequency measurement defined in clause 9.10.3.1 in FR1.
+
+The accuracy requirements in table 10.1.9.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for associated SSB.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+• The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.9.2.1-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+Table 10.1.9.2.1-1: CSI-RSRQ Inter-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| 2.5 | 4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+##### 10.1.9.2.2 Relative CSI-RSRQ Accuracy
+
+The relative CSI-RSRQ accuracy is defined as the CSI-RSRQ measured from one cell compared to the CSI-RSRQ measured from another cell with the same center frequency, or between any two CSI-RSRQ levels measured on the same cell in FR1.
+
+The accuracy requirements in table 10.1.9.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for the associated SSB.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band for each relevant CSI-RS.
+
+- |CSI_RP1dBm - CSI_RP2dBm|  27 dB
+
+- |Channel 1_Io  Channel 2_Io |  20 dB
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+• The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.9.2.2-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+Table 10.1.9.2.2-1: CSI-RSRQ Inter-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  | Note 2 | NR operating band groups Note 4 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| 3 | 4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| 4 | 4 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+### 10.1.9B Inter-frequency RSRQ accuracy requirements for FR1 for CA/DC Idle Mode Measurements
+
+#### 10.1.9B.1 Inter-frequency SS-RSRQ accuracy requirements in FR1
+
+The requirements in this clause are applicable for a UE:
+
+- in state RRC_IDLE or RRC_INACTIVE
+
+- that is synchronised to the cell that is measured.
+
+The requirements are for absolute SS-RSRQ accuracy.
+
+##### 10.1.9B.1.1 Absolute SS-RSRQ Accuracy in FR1
+
+The requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.9B.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.1.3 for a corresponding Band for each relevant SSB.
+
+Table 10.1.9B.1.1-1: SS-RSRQ Inter-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 4 | 5.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 5 | 5.5 | -4 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+### 10.1.9C Inter-frequency RSRQ accuracy requirements for FR1 SAN
+
+#### 10.1.9C.1 Inter-frequency SS-RSRQ accuracy requirements in FR1
+
+##### 10.1.9C.1.1 Absolute SS-RSRQ Accuracy in FR1
+
+The requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.9C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.9C.1.1-1: SS-RSRQ Inter-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 2.5 | 4 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -50 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.9C.1.2 Relative SS-RSRQ Accuracy in FR1
+
+The relative SS-RSRQ accuracy in inter-frequency case is defined as the RSRQ measured from one cell on a frequency in FR1 compared to the RSRP measured from another cell on a different frequency in FR1.
+
+The accuracy requirements in table 10.1.9C.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.9C.1.2-1: SS-RSRQ Inter-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 2 | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 3 | 4 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -50 |
+| 4 | 4 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+### 10.1.9D Inter-frequency RSRQ accuracy requirements for RedCap UE with Satellite Access in FR1
+
+#### 10.1.9D.1 Inter-frequency SS-RSRQ accuracy requirements in FR1
+
+##### 10.1.9D.1.1 Absolute SS-RSRQ Accuracy in FR1
+
+The requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in clause 10.1.9C.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the absolute accuracy requirements in table 10.1.9D.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for both 1Rx and 2Rx RedCap UE for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.9D.1.1-1: SS-RSRQ Inter-frequency absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 3.5 | 5 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+| 4.5 | 5 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.9D.1.2 Relative SS-RSRQ Accuracy in FR1
+
+The relative SS-RSRQ accuracy in inter-frequency case is defined as the RSRQ measured from one cell on a frequency in FR1 compared to the RSRP measured from another cell on a different frequency in FR1.
+
+The accuracy requirements in clause 10.1.9C.1.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the relative accuracy requirements in table 10.1.9D.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for both 1Rx and 2Rx RedCap UE for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.9D.1.2-1: SS-RSRQ Inter-frequency relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 2 | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 4 | 5 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+| 5 | 5 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+### 10.1.10 Inter-frequency RSRQ accuracy requirements for FR2
+
+#### 10.1.10.1 Inter-frequency SS-RSRQ accuracy requirements in FR2
+
+##### 10.1.10.1.1 Absolute SS-RSRQ Accuracy in FR2
+
+The requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on a frequency in FR2 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.10.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.10.1.1-1: SS-RSRQ Inter-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 2.5 | 4 | ≥-3 | Same value as SSB_RP in Table B.2.2-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 3.5 | 4 | ≥-4 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+##### 10.1.10.1.2 Relative SS-RSRQ Accuracy in FR2
+
+The relative SS-RSRQ accuracy in inter-frequency case is defined as the RSRQ measured from one cell on a frequency in FR2 compared to the RSRP measured from another cell on a different frequency in FR2.
+
+The accuracy requirements in table 10.1.10.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1 dBm - SSB_RP2 dBm|  27 dB
+
+- | Channel 1_Io Channel 2_Io |  20 dB
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.10.1.2-1: SS-RSRQ Inter-frequency relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 3 | 4 | ≥-3 | Same value as SSB_RP in Table B.2.2-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 4 | 4 | ≥-4 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 4: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+#### 10.1.10.2 Inter-frequency CSI-RSRQ accuracy requirements
+
+##### 10.1.10.2.1 Absolute CSI-RSRQ Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RSRQ accuracy in this clause apply the inter-frequency measurement defined in clause 9.10.3.1 in FR2.
+
+The accuracy requirements in table 10.1.10.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for associated SSB.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+• The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.10.2.1-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE:  The reference measurement timing for one layer for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+Table 10.1.10.2.1-1: CSI-RSRQ Inter-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |
+| 2.5 | 4 | ≥-3 | Same value as CSI_RP in Table B.2.9-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 3.5 | 4 | ≥-4 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+##### 10.1.10.2.2 Relative CSI-RSRQ Accuracy
+
+The relative CSI-RSRQ accuracy is defined as the CSI-RSRQ measured from one cell compared to the CSI-RSRQ measured from another cell with the same center frequency, or between any two CSI-RSRQ levels measured on the same cell in FR2.
+
+The accuracy requirements in table 10.1.10.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band for the associated SSB.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+• The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.10.2.2-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE:  The reference measurement timing for one layer for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+Table 10.1.10.2.2-1: CSI-RSRQ Inter-frequency relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |
+| 3 | 4 | ≥-3 | Same value as CSI_RP in Table B.2.9-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 4 | 4 | ≥-4 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of cells to which the requirement applies.NOTE 4: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+### 10.1.10B  Inter-frequency RSRQ accuracy requirements for FR2 for CA/DC Idle Mode Measurements
+
+#### 10.1.10B.1 Inter-frequency SS-RSRQ accuracy requirements in FR2
+
+The requirements in this clause are applicable for a UE:
+
+- in state RRC_IDLE or RRC_INACTIVE
+
+- that is synchronised to the cell that is measured.
+
+The requirements are for absolute SS-RSRQ accuracy.
+
+##### 10.1.10B.1.1 Absolute SS-RSRQ Accuracy in FR2
+
+The requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on a frequency in FR2 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.10B.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.1.3 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.10B.1.1-1: SS-RSRQ Inter-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 4 | 5.5 | ≥-3 | Same value as SSB_RP in Table B.2.2-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 5 | 5.5 | ≥-4 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+### 10.1.10C Inter-frequency RSRQ accuracy requirements for FR2-NTN
+
+#### 10.1.10C.1 Inter-frequency SS-RSRQ accuracy requirements in FR2-NTN
+
+##### 10.1.10C.1.1 Absolute SS-RSRQ Accuracy in FR2-NTN
+
+The requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on a frequency in FR2-NTN that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.10C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.10C.1.1-1: SS-RSRQ Inter-frequency absolute accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 3.5 | 5 | ≥-3 | Same value as SSB_RP derived from annex B.2.18, according to UE VSAT type |  | -50 |
+| 4.5 | 5 | ≥-4 |  |  |  |
+| NOTE 1: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+##### 10.1.10C.1.2 Relative SS-RSRQ Accuracy in FR2-NTN
+
+The relative SS-RSRQ accuracy in inter-frequency case is defined as the RSRQ measured from one cell on a frequency in FR2-NTN compared to the RSRP measured from another cell on a different frequency in FR2-NTN.
+
+The accuracy requirements in table 10.1.10C.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1 dBm - SSB_RP2 dBm|  27 dB
+
+- | Channel 1_Io Channel 2_Io |  20 dB
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.10C.1.2-1: SS-RSRQ Inter-frequency relative accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 4 | 5 | ≥-3 | Same value as SSB_RP derived from annex B.2.18, according to UE VSAT type |  | -50 |
+| 5 | 5 | ≥-4 |  |  |  |
+| NOTE 1: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 4: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+### 10.1.11 RSRQ report mapping
+
+## 10.1.11.1 SS-RSRQ and CSI-RSRQ measurement report mapping
+
+The reporting range of SS-RSRQ and CSI-RSRQ measurement is defined from -43 dB to 20 dB with 0.5 dB resolution. The mapping of measured quantity is defined in table 10.1.11.1-1. The range in the signalling may be larger than the guaranteed accuracy range.
+
+Table 10.1.11.1-1: SS-RSRQ and CSI-RSRQ measurement report mapping
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| SS-RSRQ_0 | SS-RSRQ<-43 | dB |
+| SS-RSRQ_1 | -43 SS-RSRQ<-42.5 | dB |
+| SS-RSRQ_2 | -42.5 SS-RSRQ<-42 | dB |
+| SS-RSRQ_3 | -42 SS-RSRQ<-41.5 | dB |
+| SS-RSRQ_4 | -41.5 SS-RSRQ<-41 | dB |
+| .. | .. | … |
+| SS-RSRQ_122 | 17.5 SS-RSRQ<18 | dB |
+| SS-RSRQ_123 | 18 SS-RSRQ<18.5 | dB |
+| SS-RSRQ_124 | 18.5 SS-RSRQ<19 | dB |
+| SS-RSRQ_125 | 19 SS-RSRQ<19.5 | dB |
+| SS-RSRQ_126 | 19.5 SS-RSRQ<20 | dB |
+| SS-RSRQ_127 | 20  SS-RSRQ | dB |
+
+### 10.1.12 Intra-frequency SINR accuracy requirements for FR1
+
+#### 10.1.12.1 Intra-frequency SS-SINR accuracy requirements in FR1
+
+##### 10.1.12.1.1 Absolute SS-SINR Accuracy in FR1
+
+Unless otherwise specified, the requirements for absolute SS-SINR accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR1.
+
+The accuracy requirements in table 10.1.12.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band.
+
+Table 10.1.12.1.1-1: SS-SINR Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 3 | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 3.0 | 4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: The requirements apply for SSB Ês/Iot  25 dB under non-HST scenarios.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: The requirements apply for SSB Ês/Iot 5 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |
+
+#### 10.1.12.2 Intra-frequency CSI-SINR accuracy requirements in FR1
+
+##### 10.1.12.2.1 Absolute CSI-SINR Accuracy in FR1
+
+Unless otherwise specified, the requirements for absolute CSI-SINR accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR1.
+
+The accuracy requirements in table 10.1.12.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to Annex B.2.12 for a corresponding Band.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+• NOTE: The reference measurement timing for intra-frequency measurement is serving cell timing.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+• The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.12.2.1-1.
+
+Table 10.1.12.2.1-1: CSI-SINR Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCS |  |  | dBm/BW Channel | dBm/BW Channel |
+|  |  |  |  | SCS (kHz) |  |  |  |  |
+| 3 | 4 | -3 |  | 15 | 30 | 60 |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -70 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | N/A | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. NOTE 4: The requirements apply for CSI-RS Ês/Iot XdB. X=15 if timing offset between the reference measurement timing and the target CSI-RS is no larger than 0.5*CP, and X=4 if timing offset between the reference measurement timing and the target CSI-RS is larger than 0.5*CP but no larger than CP. |  |  |  |  |  |  |  |  |
+
+### 10.1.12C  Intra-frequency SINR accuracy requirements for FR1 SAN
+
+#### 10.1.12C.1 Intra-frequency SS-SINR accuracy requirements in FR1
+
+##### 10.1.12C.1.1 Absolute SS-SINR Accuracy in FR1
+
+Unless otherwise specified, the requirements for absolute SS-SINR accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR1.
+
+The accuracy requirements in table 10.1.12C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for a corresponding Band.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.12C.1.1-1: SS-SINR Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 3 | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 3 | 4 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -50 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: The requirements apply for SSB Ês/Iot  25 dB under non-HST scenarios.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A.NOTE 5: The requirements apply for SSB Ês/Iot 5 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |
+
+### 10.1.12D  Intra-frequency SINR accuracy requirements for RedCap UE with Satellite Access in FR1
+
+#### 10.1.12D.1 Intra-frequency SS-SINR accuracy requirements in FR1
+
+##### 10.1.12D.1.1 Absolute SS-SINR Accuracy in FR1
+
+Unless otherwise specified, the requirements for absolute SS-SINR accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR1.
+
+The accuracy requirements in clause 10.1.12D.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the absolute accuracy requirements in table 10.1.12D.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for both 1Rx and 2Rx RedCap UE for a corresponding Band.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.12D.1.1-1: SS-SINR Intra-frequency absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 3 | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 4.0 | 4 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+| 4.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: The requirements apply for SSB Ês/Iot  25 dB under non-HST scenarios.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A.NOTE 5: The requirements apply for SSB Ês/Iot 5 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |
+
+### 10.1.13 Intra-frequency SINR accuracy requirements for FR2
+
+#### 10.1.13.1 Intra-frequency SS-SINR accuracy requirements in FR2
+
+##### 10.1.13.1.1 Absolute SS-SINR Accuracy in FR2
+
+Unless otherwise specified, the requirements for absolute SS-SINR accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR2.
+
+The accuracy requirements in table 10.1.13.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.13.1.1-1: SS-SINR Intra-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 3 | 4 | ≥-3 | Same value as SSB_RP in Table B.2.2-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 3.5 | 4 | ≥-6 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The requirements apply for SSB Ês/Iot  25 dB. |  |  |  |  |  |
+
+#### 10.1.13.2 Intra-frequency CSI-SINR accuracy requirements in FR2
+
+##### 10.1.13.2.1 Absolute CSI-SINR Accuracy in FR2
+
+Unless otherwise specified, the requirements for absolute CSI-SINR accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR2.
+
+The accuracy requirements in table 10.1.13.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.12 for a corresponding Band.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+• NOTE: The reference measurement timing for intra-frequency measurement is serving cell timing.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+• The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.13.2.1-1.
+
+Table 10.1.13.2.1-1: CSI-SINR Intra-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |
+| 3 | 4 | ≥-3 | Same value as CSI_RP in Table B.2.8-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 3.5 | 4 | ≥-6 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The requirements apply for CSI-RS Ês/Iot XdB. X=15 if timing offset between the reference measurement timing and the target CSI-RS is no larger than 0.5*CP, and X=4 if timing offset between the reference measurement timing and the target CSI-RS is larger than 0.5*CP but no larger than CP. |  |  |  |  |  |
+
+### 10.1.13C Intra-frequency SINR accuracy requirements for FR2-NTN
+
+#### 10.1.13C.1 Intra-frequency SS-SINR accuracy requirements in FR2-NTN
+
+##### 10.1.13C.1.1 Absolute SS-SINR Accuracy in FR2-NTN
+
+Unless otherwise specified, the requirements for absolute SS-SINR accuracy in this clause apply to a cell on the same frequency as that of the serving cell in FR2-NTN.
+
+The accuracy requirements in table 10.1.13C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.17 for a corresponding Band.
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.13C.1.1-1: SS-SINR Intra-frequency absolute accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 4 | 5 | ≥-3 | Same value as SSB_RP derived from annex B.2.17, according to UE VSAT type |  | -50 |
+| 4.5 | 5 | ≥-6 |  |  |  |
+| NOTE 1: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The requirements apply for SSB Ês/Iot  25 dB |  |  |  |  |  |
+
+### 10.1.14 Inter-frequency SINR accuracy requirements for FR1
+
+#### 10.1.14.1 Inter-frequency SS-SINR accuracy requirements in FR1
+
+##### 10.1.14.1.1 Absolute SS-SINR Accuracy in FR1
+
+The requirements for absolute SS-SINR accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.14.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band.
+
+Table 10.1.14.1.1-1: SS-SINR Inter-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 3.0 | 4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: The requirements apply for SSB Ês/Iot  25 dB.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: The requirements apply for SSB Ês/Iot  5 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |
+
+##### 10.1.14.1.2 Relative SS-SINR Accuracy in FR1
+
+The relative SS-SINR accuracy in inter-frequency case is defined as the SS-SINR measured from one cell on a frequency in FR1 compared to the SS-SINR measured from another cell on a different frequency in FR1.
+
+The accuracy requirements in table 10.1.14.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- | Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1.14.1.2-1: SS-SINR Inter-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 2,4 | NR operating band groups Note 5 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 3.5 | 4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 4 | 4 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: The requirements apply for SSB Ês/Iot  25 dB.NOTE 5: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 6: The requirements apply for SSB Ês/Iot  5 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |
+
+#### 10.1.14.2 Inter-frequency CSI-SINR accuracy requirements in FR1
+
+##### 10.1.14.2.1 Absolute CSI-SINR Accuracy in FR1
+
+The requirements for absolute CSI-SINR accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.14.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.3 for a corresponding Band for the associated SSB.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+Note: The reference measurement timing for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in Table 10.1.14.2.1-1.
+
+Table 10.1.14.2.1-1: CSI-SINR Inter-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCS |  |  | dBm/BW Channel | dBm/BW Channel |
+|  |  |  |  | SCS (kHz) |  |  |  |  |
+| 3 | 4 | -3 |  | 15 | 30 | 60 |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | N/A | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 4: The requirements apply for CSI-RS Ês/Iot XdB. X=15 if timing offset between the reference measurement timing and the target CSI-RS is no larger than 0.5*CP, and X=4 if timing offset between the reference measurement timing and the target CSI-RS is larger than 0.5*CP but no larger than CP. |  |  |  |  |  |  |  |  |
+
+##### 10.1.14.2.2 Relative CSI-SINR Accuracy in FR1
+
+The relative CSI-SINR accuracy in inter-frequency case is defined as the CSI-SINR measured from one cell on a frequency in FR1 compared to the CSI-SINR measured from another cell on a different frequency in FR1.
+
+The accuracy requirements in table 10.1.14.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.3 for a corresponding Band for the associated SSB.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band.
+
+- |CSI_RP1dBm - CSI_RP2dBm|  27 dB
+
+- | Channel 1_Io Channel 2_Io |  20 dB
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in Table 10.1.14.2.2-1.
+
+Table 10.1.14.2.2-1: CSI-SINR Inter-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCS |  |  | dBm/BW Channel | dBm/BW Channel |
+|  |  |  |  | SCS (kHz) |  |  |  |  |
+| 3.5 | 4 | -3 |  | 15 | 30 | 60 |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| 4 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | N/A | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of cells to which the requirement applies.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: The requirements apply for CSI-RS Ês/Iot  XdB. X=15 if timing offset between the reference measurement timing and the target CSI-RS is no larger than 0.5*CP, and X=4 if timing offset between the reference measurement timing and the target CSI-RS is larger than 0.5*CP but no larger than CP. |  |  |  |  |  |  |  |  |
+
+### 10.1.14C  Inter-frequency SINR accuracy requirements for FR1 SAN
+
+#### 10.1.14C.1 Inter-frequency SS-SINR accuracy requirements in FR1
+
+##### 10.1.14C.1.1 Absolute SS-SINR Accuracy in FR1
+
+The requirements for absolute SS-SINR accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.14C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for a corresponding Band.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.14C.1.1-1: SS-SINR Inter-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 3 | 4 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -50 |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: The requirements apply for SSB Ês/Iot  25 dB.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+##### 10.1.14C.1.2 Relative SS-SINR Accuracy in FR1
+
+The relative SS-SINR accuracy in inter-frequency case is defined as the SS-SINR measured from one cell on a frequency in FR1 compared to the SS-SINR measured from another cell on a different frequency in FR1.
+
+The accuracy requirements in table 10.1.14C.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for a corresponding Band.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- | Channel 1_Io Channel 2_Io |  20 dB
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.14C.1.2-1: SS-SINR Inter-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 2,4 | NR operating band groups Note 5 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| 3.5 | 4 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -50 |
+| 4 | 4 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: The requirements apply for SSB Ês/Iot  [25] dB.NOTE 5: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+### 10.1.14D  Inter-frequency SINR accuracy requirements for RedCap UE with Satellite Access in FR1
+
+#### 10.1.14D.1 Inter-frequency SS-SINR accuracy requirements in FR1
+
+##### 10.1.14D.1.1 Absolute SS-SINR Accuracy in FR1
+
+The requirements for absolute SS-SINR accuracy in this clause apply to a cell on a frequency in FR1 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in clause 10.1.14C.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the absolute accuracy requirements in table 10.1.14D.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for both 1Rx and 2Rx RedCap UE for a corresponding Band.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.14D.1.1-1: SS-SINR Inter-frequency absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 4.0 | 5 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+| 4.5 | 5 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: The requirements apply for SSB Ês/Iot  25 dB.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+##### 10.1.14D.1.2 Relative SS-SINR Accuracy in FR1
+
+The relative SS-SINR accuracy in inter-frequency case is defined as the SS-SINR measured from one cell on a frequency in FR1 compared to the SS-SINR measured from another cell on a different frequency in FR1.
+
+The accuracy requirements in clause 10.1.14C.1.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the relative accuracy requirements in table 10.1.14D.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for both 1Rx and 2Rx RedCap UE for a corresponding Band.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- | Channel 1_Io Channel 2_Io |  20 dB
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.14D.1.2-1: SS-SINR Inter-frequency relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 2,4 | NR operating band groups Note 5 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| 4.5 | 5 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+| 5 | 5 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: The requirements apply for SSB Ês/Iot  [25] dB.NOTE 5: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+### 10.1.15 Inter-frequency SINR accuracy requirements for FR2
+
+#### 10.1.15.1 Inter-frequency SS-SINR accuracy requirements in FR2
+
+##### 10.1.15.1.1 Absolute SS-SINR Accuracy in FR2
+
+The requirements for absolute SS-SINR accuracy in this clause apply to a cell on a frequency in FR2 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.15.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.15.1.1-1: SS-SINR Inter-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 3 | 4 | ≥-3 | Same value as SSB_RP in Table B.2.2-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 3.5 | 4 | ≥-4 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The requirements apply for SSB Ês/Iot  25 dB. |  |  |  |  |  |
+
+##### 10.1.15.1.2 Relative SS-SINR Accuracy in FR2
+
+The relative SS-SINR accuracy in inter-frequency case is defined as the SS-SINR measured from one cell on a frequency in FR2 compared to the SS-SINR measured from another cell on a different frequency in FR2.
+
+The accuracy requirements in table 10.1.15.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.3 for a corresponding Band.
+
+- |SSB_RP1 dBm - SSB_RP2 dBm|  27 dB
+
+- | Channel 1_Io Channel 2_Io |  20 dB
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.15.1.2-1: SS-SINR Inter-frequency relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 3.5 | 4 | ≥-3 | Same value as SSB_RP in Table B.2.2-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 4 | 4 | ≥-6 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 4: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 5: The requirements apply for SSB Ês/Iot  25 dB. |  |  |  |  |  |
+
+#### 10.1.15.2 Inter-frequency CSI-SINR accuracy requirements in FR2
+
+##### 10.1.15.2.1 Absolute CSI-SINR Accuracy in FR2
+
+The requirements for absolute CSI-SINR accuracy in this clause apply to a cell on a frequency in FR2 that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.15.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+• NOTE: The reference measurement timing for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+• The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.15.2.1-1.
+
+Table 10.1.15.2.1-1: CSI-SINR Inter-frequency absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |
+| 3 | 4 | ≥-3 | Same value as CSI_RP in Table B.2.9-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 3.5 | 4 | ≥-4 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The requirements apply for CSI-RS Ês/Iot XdB. X=15 if timing offset between the reference measurement timing and the target CSI-RS is no larger than 0.5*CP, and X=4 if timing offset between the reference measurement timing and the target CSI-RS is larger than 0.5*CP but no larger than CP. |  |  |  |  |  |
+
+##### 10.1.15.2.2 Relative CSI-SINR Accuracy in FR2
+
+The relative CSI-SINR accuracy in inter-frequency case is defined as the CSI-SINR measured from one cell on a frequency in FR2 compared to the CSI-SINR measured from another cell on a different frequency in FR2.
+
+The accuracy requirements in table 10.1.15.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to Annex B.2.13 for a corresponding Band.
+
+- |CSI_RP1 dBm - CSI_RP2 dBm|  27 dB
+
+- | Channel 1_Io Channel 2_Io |  20 dB
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+Note: The reference measurement timing for inter-frequency measurement is up to UE implementation and shall be based on the timing of one of the target cells.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in Table 10.1.15.2.2-1.
+
+Table 10.1.15.2.2-1: CSI-SINR Inter-frequency relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |
+| 3.5 | 4 | ≥-3 | Same value as CSI_RP in Table B.2.9-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| 4 | 4 | ≥-6 |  |  |  |
+| NOTE 1: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The requirements apply for CSI-RS Ês/Iot XdB. X=15 if timing offset between the reference measurement timing and the target CSI-RS is no larger than 0.5*CP, and X=4 if timing offset between the reference measurement timing and the target CSI-RS is larger than 0.5*CP but no larger than CP. |  |  |  |  |  |
+
+### 10.1.15C Inter-frequency SINR accuracy requirements for FR2-NTN
+
+#### 10.1.15C.1 Inter-frequency SS-SINR accuracy requirements in FR2-NTN
+
+##### 10.1.15C.1.1 Absolute SS-SINR Accuracy in FR2-NTN
+
+The requirements for absolute SS-SINR accuracy in this clause apply to a cell on a frequency in FR2-NTN that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.15C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for a corresponding Band.
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.15C.1.1-1: SS-SINR Inter-frequency absolute accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 4 | 5 | ≥-3 | Same value as SSB_RP derived from annex B.2.18, according to UE VSAT type |  | -50 |
+| 4.5 | 5 | ≥-4 |  |  |  |
+| NOTE 1: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The requirements apply for SSB Ês/Iot  25 dB. |  |  |  |  |  |
+
+##### 10.1.15C.1.2 Relative SS-SINR Accuracy in FR2-NTN
+
+The relative SS-SINR accuracy in inter-frequency case is defined as the SS-SINR measured from one cell on a frequency in FR2-NTN compared to the SS-SINR measured from another cell on a different frequency in FR2-NTN.
+
+The accuracy requirements in table 10.1.15C.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.18 for a corresponding Band.
+
+- |SSB_RP1 dBm - SSB_RP2 dBm|  27 dB
+
+- | Channel 1_Io Channel 2_Io |  20 dB
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.15C.1.2-1: SS-SINR Inter-frequency relative accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 2 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 1 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 4.5 | 5 | ≥-3 | Same value as SSB_RP derived from annex B.2.18, according to UE VSAT type |  | -50 |
+| 5 | 5 | ≥-6 |  |  |  |
+| NOTE 1: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 2: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 4: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE ba The requirements apply for SSB Ês/Iot  25 dB.seband is above the value defined in this table.NOTE 5: The requirements apply for SSB Ês/Iot ≤ 25 dB. |  |  |  |  |  |
+
+### 10.1.16 SINR report mapping
+
+#### 10.1.16.1 SS-SINR and CSI-SINR measurement report mapping
+
+The reporting range of SS-SINR and CSI-SINR for L3 reporting and L1 reporing is defined from -23 dB to 40 dB with 0.5 dB resolution. The mapping of measured quantity is defined in table 10.1.16.1-1. The range in the signalling may be larger than the guaranteed accuracy range.
+
+The reporting range of differential SS-SINR and CSI-SINR for L1 reporting is defined from -15 dB to 0 dB with 1 dB resolution.
+
+The mapping of measured quantity is defined in table 10.1.16.1-2. The range in the signalling may be larger than the guaranteed accuracy range.
+
+Table 10.1.16.1-1: SS-SINR and CSI-SINR measurement report mapping
+
+| Reported value | Measured quantity value (L3 SS-SINR and L3 CSI-SINR) | Measured quantity value (L1 SS-SINR and L1 CSI-SINR) | Unit |
+| --- | --- | --- | --- |
+| SINR_0 | SINR<-23 | SINR<-23 | dB |
+| SINR_1 | -23 SINR<-22.5 | -23SINR<-22.5 | dB |
+| SINR_2 | -22.5 SINR<-22 | -22.5SINR<-22 | dB |
+| SINR_3 | -22 SINR<-21.5 | -22SINR<-21.5 | dB |
+| SINR_4 | -21.5 SINR<-21 | -21.5SINR<-21 | dB |
+| .. | .. | .. | … |
+| SINR_123 | 38 SINR<38.5 | 38SINR<38.5 | dB |
+| SINR_124 | 38.5 SINR<39 | 38.5SINR<39 | dB |
+| SINR_125 | 39 SINR<39.5 | 39SINR<39.5 | dB |
+| SINR_126 | 39.5 SINR<40 | 39.5SINR<40 | dB |
+| SINR_127 | 40 SINR | 40SINR | dB |
+
+Table 10.1.16.1-2: Differential SS-SINR and CSI-SINR measurement (for L1 reporting) report mapping
+
+| Reported value | Measured quantity value (difference in measured SINR from largest SINR) | Unit |
+| --- | --- | --- |
+| DIFFSINR_0 | 0≥ΔSINR>-1 | dB |
+| DIFFSINR_1 | -1≥ΔSINR>-2 | dB |
+| DIFFSINR_2 | -2≥ΔSINR>-3 | dB |
+| DIFFSINR_3 | -3≥ΔSINR>-4 | dB |
+| DIFFSINR_4 | -4≥ΔSINR>-5 | dB |
+| DIFFSINR_5 | -5≥ΔSINR>-6 | dB |
+| DIFFSINR_6 | -6≥ΔSINR>-7 | dB |
+| DIFFSINR_7 | -7≥ΔSINR>-8 | dB |
+| DIFFSINR_8 | -8≥ΔSINR>-9 | dB |
+| DIFFSINR_9 | -9≥ΔSINR>-10 | dB |
+| DIFFSINR_10 | -10≥ΔSINR>-11 | dB |
+| DIFFSINR_11 | -11≥ΔSINR>-12 | dB |
+| DIFFSINR_12 | -12≥ΔSINR>-13 | dB |
+| DIFFSINR_13 | -13≥ΔSINR>-14 | dB |
+| DIFFSINR_14 | -14≥ΔSINR>-15 | dB |
+| DIFFSINR_15 | -15≥ΔSINR | dB |
+
+### 10.1.17 Power Headroom
+
+#### 10.1.17.1 Power Headroom Report
+
+##### 10.1.17.1.1 Power Headroom Report Mapping
+
+The power headroom reporting range is from -32 ...+38 dB. table 10.1.17.1-1 defines the report mapping.
+
+Table 10.1.17.1-1: Power headroom report mapping
+
+| Reported value | Measured quantity value (dB) |
+| --- | --- |
+| POWER_HEADROOM_0 | PH  -32 |
+| POWER_HEADROOM_1 | -32  PH  -31 |
+| POWER_HEADROOM_2 | -31  PH  -30 |
+| POWER_HEADROOM_3 | -30  PH  -29 |
+|  |  |
+| POWER_HEADROOM_53 | 20  PH  21 |
+| POWER_HEADROOM_54 | 21  PH  22 |
+| POWER_HEADROOM_55 | 22  PH  24 |
+| POWER_HEADROOM_56 | 24  PH  26 |
+| POWER_HEADROOM_57 | 26  PH  28 |
+| POWER_HEADROOM_58 | 28  PH  30 |
+| POWER_HEADROOM_59 | 30  PH  32 |
+| POWER_HEADROOM_60 | 32  PH  34 |
+| POWER_HEADROOM_61 | 34  PH  36 |
+| POWER_HEADROOM_62 | 36  PH  38 |
+| POWER_HEADROOM_63 | PH ≥ 38 |
+
+### 10.1.18 PCMAX,c,f
+
+The UE is required to report the UE configured maximum output  power (PCMAX,c,f) together with the power headroom. This clause defines the requirements for the PCMAX,c,f reporting.
+
+#### 10.1.18.1 Report Mapping
+
+The PCMAX,c,f reporting range is defined from -29 dBm to 33 dBm with 1 dB resolution. table 10.1.18.1-1 defines the reporting mapping.
+
+Table 10.1.18.1-1 Mapping of PCMAX,c.f
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| PCMAX_C_00 | PCMAX,c,f < -29 | dBm |
+| PCMAX_C_01 | -29  PCMAX,c,f < -28 | dBm |
+| PCMAX_C_02 | -28  PCMAX,c,f < -27 | dBm |
+| … | … | … |
+| PCMAX_C_61 | 31  PCMAX,c,f < 32 | dBm |
+| PCMAX_C_62 | 32  PCMAX,c,f < 33 | dBm |
+| PCMAX_C_63 | 33  PCMAX,c,f | dBm |
+
+### 10.1.19 L1-RSRP accuracy requirements for FR1
+
+#### 10.1.19.1 SSB based L1-RSRP accuracy requirements
+
+Unless otherwise specified, the requirements for absolute and relative SSB based L1-RSRP accuracy in this clause apply to all SSBs of the serving cell configured for L1-RSRP measurement and all SSBs of cell(s) with different PCI from serving cell configured for L1-RSRP measurement in FR1.
+
+##### 10.1.19.1.1 Absolute Accuracy
+
+The accuracy requirements in table 10.1.19.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+Table 10.1.19.1.1-1: SSB based L1-RSRP absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| ±5.0 | ±9.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| ±8.5 | ±11.5 | -3 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A, NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F, NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.19.1.2 Relative Accuracy
+
+The relative SSB based L1-RSRP accuracy is defined as the L1-RSRP measured from one SSB compared to the largest measured value of L1-RSRP among all SSBs of the cell (serving cell or cell with different PCI from serving cell) on which UE performs L1-RSRP measurements.
+
+The accuracy requirements in table 10.1.19.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+Table 10.1.19.1.2-1: SSB based L1-RSRP relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| ±3 | ±4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: VoidNOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+#### 10.1.19.2 CSI-RS based L1-RSRP accuracy requirements
+
+##### 10.1.19.2.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RS based L1-RSRP accuracy in this clause apply to all CSI-RS resources of the serving cell configured for L1-RSRP measurement.
+
+The accuracy requirements in table 10.1.19.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.19.2.1-1.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS, and
+
+- The CSI-RS density is 3.
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.19.2.1-1 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.19.2.1-1 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.19.2.1-1: CSI-RS based L1-RSRP absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -70 |
+| ±5.0 | ±9.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -70 |
+| ±8.5 | ±11.5 | -3 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A,NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+##### 10.1.19.2.2 Relative Accuracy
+
+The relative CSI-RS based L1-RSRP accuracy is defined as the L1-RSRP measured from one CSI-RS compared to the largest measured value of L1-RSRP among all CSI-RS resources of the serving cell.
+
+The accuracy requirements in table 10.1.19.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.19.2.2-1.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS, and
+
+- The CSI-RS density is 3.
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.19.2.2-1 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.19.2.2-1 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.19.2.2-1: CSI-RS based L1-RSRP relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| ±3 | ±4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: VoidNOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+### 10.1.19C L1-RSRP accuracy requirements for FR1 SAN
+
+#### 10.1.19C.1 SSB based L1-RSRP accuracy requirements
+
+##### 10.1.19C.1.1 Absolute Accuracy
+
+Unless otherwise specified, the accuracy requirements for absolute SSB based L1-RSRP in this clause apply to all SSBs of the serving cell configured for L1-RSRP measurement.
+
+The accuracy requirements in table 10.1.19C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.19.1 for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.19C.1.1-1: SSB based L1-RSRP absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 5 | 9.5 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -70 |
+| 8.5 | 11.5 | -3 | NR_FDD_SAB_FR1_A | N/A | N/A | -70 | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+##### 10.1.19C.1.2 Relative Accuracy
+
+The relative SSB based L1-RSRP accuracy is defined as the L1-RSRP measured from one SSB compared to the largest measured value of L1-RSRP among all SSBs of the serving cell.
+
+The accuracy requirements in table 10.1.19C.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.19.1 for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.19C.1.2-1: SSB based L1-RSRP relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 3 | 4 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: VoidNOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+#### 10.1.19C.2 CSI-RS based L1-RSRP accuracy requirements
+
+##### 10.1.19C.2.1 Absolute Accuracy
+
+Unless otherwise specified, the accuracy requirements for absolute CSI-RS based L1-RSRP in this clause apply to all CSI-RS resources of the serving cell configured for L1-RSRP measurement.
+
+The accuracy requirements in table 10.1.19C.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.19.2 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.19C.2.1-1.
+
+Table 10.1.19C.2.1-1: CSI-RS based L1-RSRP absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz |  |  |
+| 5 | 9.5 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -70 |
+| 8.5 | 11.5 | -3 | NR_FDD_SAB_FR1_A | N/A | N/A | -70 | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+##### 10.1.19C.2.2 Relative Accuracy
+
+The relative CSI-RS based L1-RSRP accuracy is defined as the L1-RSRP measured from one CSI-RS compared to the largest measured value of L1-RSRP among all CSI-RS resources of the serving cell.
+
+The accuracy requirements in table 10.1.19C.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.19.2 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.19C.2.2-1.
+
+Table 10.1.19C.2.2-1: CSI-RS based L1-RSRP relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz |  |  |
+| 3 | 4 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_SAB_FR1_B | -120.5 | -117.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: VoidNOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+### 10.1.19D LTM Intra-frequency L1-RSRP accuracy requirements for FR1
+
+#### 10.1.19D.1 SSB based intra-frequency L1-RSRP accuracy requirements
+
+##### 10.1.19D.1.1 Absolute Accuracy
+
+Unless otherwise specified, the accuracy requirements for SSB based intra-frequency L1-RSRP in this clause apply to all SSBs of candidate neighbour cell(s) on the same frequency as that of the serving cell in FR1.
+
+The accuracy requirements in table 10.1.19D.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+Table 10.1.19D.1.1-1: SSB based L1-RSRP absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| ±5.0 | ±9.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| ±8.5 | ±11.5 | -3 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A, NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F, NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.19D.1.2 Relative Accuracy
+
+The relative SSB based L1-RSRP accuracy is defined as the L1-RSRP measured on one SSB configured in LTM-CSI-ResourceConfig compared to the L1-RSRP measured on another  SSB configured in LTM-CSI-ResourceConfig for the cell(s) on the same frequency in FR1.The accuracy requirements in Table 10.1.19D.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+Table 10.1.19D.1.2-1: SSB based L1-RSRP relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| ±3 | ±4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: VoidNOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+#### 10.1.19D.2 CSI-RS based intra-frequency L1-RSRP accuracy requirements
+
+##### 10.1.19D.2.1 Absolute CSI-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RSRP accuracy in this clause apply to a cell where the LTM candidate cell CSI-RS resources to be measured are within the same active BWP as the CSI-RS resources indicated for measurement in the serving cell in FR1.
+
+The accuracy requirements in table 10.1.19D.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each associated SSB.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.8 for a corresponding Band for each relevant CSI-RS to be measured.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3. The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.19D.2.1-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for intra-frequency measurement is serving cell timing.
+
+Table 10.1.19D.2.1-1: CSI-RSRP Intra-frequency absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+| 4.5 | 9 | -3 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -70 |
+| 8 | 11 | -3 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A,NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+##### 10.1.19D.2.2 Relative CSI-RSRP Accuracy
+
+The relative CSI-RSRP accuracy is defined as the CSI-RSRP measured from one cell compared to the CSI-RSRP measured from another cell within the same active BWP, or between any two CSI-RSRP levels measured on the same cell in FR1.
+
+The accuracy requirements in table 10.1.19D.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.2 for a corresponding Band for each associated SSB.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.8 for a corresponding Band for each relevant CSI-RS to be measured.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3. The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.19D.2.2-1.
+
+- The timing offset between the reference measurement timing and the target CSI-RS in one layer is no larger than CP.
+
+NOTE: The reference measurement timing for one layer for intra-frequency measurement is serving cell timing.
+
+Table 10.1.19D.2.2-1: CSI-RSRP Intra-frequency relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+| 2 | 3 | -3 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G,NR_TDD_FR1_G,NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| 3 | 3 | -3 | Note 3 | Note 3 | Note 3 | Note 3 | N/A | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+### 10.1.19E LTM Inter-frequency L1-RSRP accuracy requirements for FR1
+
+#### 10.1.19E.1 SSB based Inter-frequency L1-RSRP accuracy requirements
+
+##### 10.1.19E.1.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute SSB based L1-RSRP accuracy in this clause apply to all SSBs of candidate neighbour cell(s) on a frequency in FR1 that is on a different frequency than the serving cell.
+
+The accuracy requirements in table 10.1.19E.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+Table 10.1.19E.1.1-1: Inter-frequency L1-RSRP absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| ±5.0 | ±9.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| ±8.5 | ±11.5 | -3 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A, NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F, NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.19E.1.2 Relative Accuracy
+
+The relative SSB based L1-RSRP accuracy is defined as the L1-RSRP measured on one SSB configured in LTM-CSI-ResourceConfig from one cell on a frequency in FR1 compared to another SSB configured in LTM-CSI-ResourceConfig from any other cell on another frequency in FR1.
+
+The accuracy requirements in table 10.1.19E.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1 dBm - SSB_RP2 dBm| ≤ 27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1.19E.1.2-1: Inter-frequency L1-RSRP relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| ±5.0 | ±9.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.19F L1-RSRP accuracy requirements for RedCap UE with Satellite Access in FR1
+
+#### 10.1.19F.1 SSB based L1-RSRP accuracy requirements
+
+##### 10.1.19F.1.1 Absolute Accuracy
+
+Unless otherwise specified, the accuracy requirements for absolute SSB based L1-RSRP in this clause apply to all SSBs of the serving cell configured for L1-RSRP measurement.
+
+The accuracy requirements in clause 10.1.19C.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the absolute accuracy requirements in table 10.1.19F.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.19.1 for both 1Rx and 2Rx RedCap UE for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.19F.1.1-1: SSB based L1-RSRP absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| ±8.0 | ±12.5 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -70 |
+| ±11.5 | ±14.5 | -3 | NR_FDD_SAB_FR1_A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+##### 10.1.19F.1.2 Relative Accuracy
+
+The relative SSB based L1-RSRP accuracy is defined as the L1-RSRP measured from one SSB compared to the largest measured value of L1-RSRP among all SSBs of the serving cell.
+
+The accuracy requirements in clause 10.1.19C.1.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the relative accuracy requirements in table 10.1.19F.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [43] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.19.1 for both 1Rx and 2Rx RedCap UE for a corresponding Band for each relevant SSB.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+Table 10.1.19F.1.2-1: SSB based L1-RSRP relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| ±6 | ±7 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: VoidNOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+#### 10.1.19F.2 CSI-RS based L1-RSRP accuracy requirements
+
+##### 10.1.19F.2.1 Absolute Accuracy
+
+Unless otherwise specified, the accuracy requirements for absolute CSI-RS based L1-RSRP in this clause apply to all CSI-RS resources of the serving cell configured for L1-RSRP measurement.
+
+The accuracy requirements in clause 10.1.19C.2.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the absolute accuracy requirements in table 10.1.19F.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.19.2 for both 1Rx and 2Rx RedCap UE for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.19C.2.1-1.
+
+Table 10.1.19F.2.1-1: CSI-RS based L1-RSRP absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz |  |  |
+| ±8.0 | ±12.5 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -70 |
+| ±11.5 | ±14.5 | -3 | NR_FDD_SAB_FR1_A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+##### 10.1.19F.2.2 Relative Accuracy
+
+The relative CSI-RS based L1-RSRP accuracy is defined as the L1-RSRP measured from one CSI-RS compared to the largest measured value of L1-RSRP among all CSI-RS resources of the serving cell.
+
+The accuracy requirements in clause 10.1.19F.2.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1Rx, the relative accuracy requirements in table 10.1.19F.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.19.2 for both 1Rx and 2Rx RedCap UE for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- Valid information for the SAN serving the target cell has been provided.
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.19C.2.2-1.
+
+Table 10.1.19F.2.2-1: CSI-RS based L1-RSRP relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz |  |  |
+| ±6 | ±7 | -3 | NR_FDD_SAB_FR1_A | -121 | -118 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: VoidNOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2A. |  |  |  |  |  |  |  |
+
+### 10.1.20 L1-RSRP accuracy requirements for FR2
+
+#### 10.1.20.1 SSB based L1-RSRP accuracy requirements
+
+Unless otherwise specified, the accuracy requirements for absolute and relative SSB based L1-RSRP in this clause apply to all SSBs of the serving cell configured for L1-RSRP measurement, all the SSBs of the serving cell configured for L1-RSRP measurement when the UE is configured with groupBasedBeamReporting-r17 set to 'enabled' and all SSBs of cell(s) with different PCI from serving cell configured for L1-RSRP measurement in FR2.
+
+##### 10.1.20.1.1 Absolute Accuracy
+
+The accuracy requirements in table 10.1.20.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.20.1.1-1: SSB based L1-RSRP absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| ±6.5 | ±9.5 | ≥-3 | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 8.5 | 11.5 | ≥-3 | N/A |  | -70 | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.20.1.2 Relative Accuracy
+
+The relative SSB based L1-RSRP accuracy is defined as the L1-RSRP measured from one SSB compared to the largest measured value of L1-RSRP among all SSBs of the cell (serving cell or cell with different PCI from serving cell) on which UE performs L1-RSRP measurements.
+
+When the UE is configured with groupBasedBeamReporting-r17 set to 'enabled', the relative SSB based L1-RSRP accuracy is defined as the L1-RSRP measured from one SSB compared to the largest measured value of L1-RSRP among all SSBs of the serving cell on which UE performs L1-RSRP measurements with different Rx beams, the all SSBs are in the same or different resource set (s) in one CSI resource setting.
+
+The accuracy requirements in table 10.1.20.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.20.1.2-1: SSB based L1-RSRP relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 3 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 6.5 | 9.5 | ≥-3 | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+#### 10.1.20.2 CSI-RS based L1-RSRP accuracy requirements
+
+##### 10.1.20.2.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RS based L1-RSRP accuracy in this clause apply to all CSI-RS resources of the serving cell configured for L1-RSRP measurement, and all the CSI-RSs of the serving cell configured for L1-RSRP measurement when the UE is configured with groupBasedBeamReporting-r17 set to 'enabled'.
+
+The accuracy requirements in table 10.1.20.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.20.2.1-1.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS, and
+
+- The CSI-RS density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.20.2.1-1 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.20.2.1-1 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.20.2.1-1: CSI-RS based L1-RSRP absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |  |
+| ±6.5 | ±9.5 | ≥-3 | Same value as CSI-RS_RP in Table B.2.4.2-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 8.5 | 11.5 | ≥-3 | N/A |  | -70 | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.20.2.2 Relative Accuracy
+
+The relative CSI-RS based L1-RSRP accuracy is defined as the L1-RSRP measured from one CSI-RS compared to the largest measured value of L1-RSRP among all CSI-RSs of the cell (serving cell or cell with different PCI from serving cell) on which UE performs L1-RSRP measurements.
+
+For simultaneous reception from multiple directions, when the UE is configured with groupBasedBeamReporting-r17 set to 'enabled', the relative CSI-RS based L1-RSRP accuracy is defined as the L1-RSRP measured from one CSI-RS compared to the largest measured value of L1-RSRP among all CSI-RSs of the serving cell on which UE performs L1-RSRP measurements with different Rx beams, the all CSI-RSs are in the same or different resource set (s) in one CSI resource setting. RSRP among all CSI-RS resources of the serving cell.
+
+The accuracy requirements in table 10.1.20.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.20.2.2-1.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS, and
+
+- The CSI-RS density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.20.2.2-1 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.20.2.2-1 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.20.2.2-1: CSI-RS based L1-RSRP relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS |  | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |
+| 6.5 | 9.5 | ≥-3 | Same value as CSI-RS RP in Table B.2.4.2-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+### 10.1.20A   LTM Intra-frequency L1-RSRP accuracy requirements for FR2
+
+#### 10.1.20A.1 SSB based intra-frequency L1-RSRP accuracy requirements
+
+##### 10.1.20A.1.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute accuracy of SSB based intra-frequency L1-RSRP in this clause apply to all SSBs of candidate neighbour cell(s) on the same frequency as that of the serving cell in FR2.
+
+The accuracy requirements in table 10.1.20A.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.20A.1.1-1: SSB based L1-RSRP absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| ±6.5 | ±9.5 | ≥-3 | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 8.5 | 11.5 | ≥-3 | N/A |  | -70 | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.20A.1.2 Relative Accuracy
+
+The relative SSB based L1-RSRP accuracy is defined as the L1-RSRP measured on one SSB configured in LTM-CSI-ResourceConfig compared to the L1-RSRP measured from another SSB configured in LTM-CSI-ResourceConfig from the cell(s) on the same frequency in FR2.
+
+The accuracy requirements in table 10.1.20A.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.20A.1.2-1: SSB based L1-RSRP relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 3 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 6.5 | 9.5 | ≥-3 | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+#### 10.1.20A.2 CSI-RS based intra-frequency L1-RSRP accuracy requirements
+
+##### 10.1.20A.2.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute accuracy of CSI-RS based intra-frequency L1-RSRP in this clause apply to all intra-frequency CSI-RS resources of candidate neighbour cell(s) in FR2 as defined in clause 9.14a.
+
+The accuracy requirements in table 10.1.20A.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.20A.2.1-1.
+
+Table 10.1.20A.2.1-1: CSI-RS based L1-RSRP absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RSNote 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 120 kHz | SCSCSI-RS = 240 kHz |  |  |
+| ±6.5 | ±9.5 | ≥-3 | Same value as CSI-RS_RP in Table B.2.4.2-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 8.5 | 11.5 | ≥-3 | N/A |  | -70 | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.20A.2.2 Relative Accuracy
+
+The relative CSI-RS based L1-RSRP accuracy is defined as the L1-RSRP measured on one CSI-RS configured in LTM-CSI-ResourceConfig compared to the L1-RSRP measured from another intra-frequency CSI-RS configured in LTM-CSI-ResourceConfig from the cell(s) in FR2 as defined in clause 9.14a.
+
+The accuracy requirements in table 10.1.20A.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1.20A.2.2-1.
+
+Table 10.1.20A.2.2-1: CSI-RS based L1-RSRP relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 3 |  | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 120 kHz | SCSCSI-RS = 240 kHz |  |
+| 6.5 | 9.5 | ≥-3 | Same value as CSI-RS_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+### 10.1.20B LTM Inter-frequency L1-RSRP accuracy requirements for FR2
+
+#### 10.1.20B.1 SSB based inter-frequency L1-RSRP accuracy requirements
+
+##### 10.1.20B.1.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute SSB based L1-RSRP accuracy in this clause apply to all SSBs of candidate neighbour cell(s) on a frequency in FR2 that is on a different frequency than the serving cell.
+
+The accuracy requirements in table 10.1.20B.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.20B.1.1-1: SSB based L1-RSRP absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| ±6.5 | ±9.5 | ≥-3 | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 8.5 | 11.5 | ≥-3 | N/A |  | -70 | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.20B.1.2 Relative Accuracy
+
+The relative SSB based L1-RSRP accuracy is defined as the L1-RSRP measured on one SSB configured in LTM-CSI-ResourceConfig on one cell on a frequency in FR2 compared to the value of L1-RSRP measured from another SSB configured in LTM-CSI-ResourceConfig from any other cell on another frequency in FR2.
+
+The accuracy requirements in table 10.1.20B.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1 dBm - SSB_RP2 dBm| ≤ 27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.20B.1.2-1: SSB based L1-RSRP relative accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 3 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |
+| 6.5 | 9.5 | ≥-3 | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+### 10.1.20C L1-RSRP accuracy requirements for FR2-NTN
+
+#### 10.1.20C.1 SSB based L1-RSRP accuracy requirements
+
+Unless otherwise specified, the requirements for absolute accuracy and relative accuracy of SSB based L1-RSRP in this clause apply to all SSBs of the serving cell configured for L1-RSRP measurement in FR2-NTN.
+
+##### 10.1.20C.1.1 Absolute Accuracy
+
+The accuracy requirements in Table 10.1.20C.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to Annex B.2.19 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.20C.1.1-1: SSB based L1-RSRP absolute accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120kHz | SCSSSB = 240kHz |  |  |
+| ±7.5 | ±10.5 | ≥-3 | Same value as SSB_RP derived from annex B.2.17, according to UE VSAT type |  | N/A | -70 |
+| 9.5 | 12.5 | ≥-3 | N/A |  | -70 | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.20C.1.2 Relative Accuracy
+
+The relative accuracy of SSB based L1-RSRP is defined as the L1-RSRP measured from one SSB compared to the largest measured value of L1-RSRP among all SSBs of the serving cell on which UE performs L1-RSRP measurements.
+
+The accuracy requirements in Table 10.1.20C.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to Annex B.2.19 for a corresponding Band for each relevant SSB.
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+Table 10.1.20C.1.2-1: SSB based L1-RSRP relative accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 3 |  | dBm/BWChannel |
+|  |  |  | SCSSSB = 120kHz | SCSSSB = 240kHz |  |
+| 3.5 | 6.5 | ≥-3 | Same value as SSB_RP derived from annex B.2.17, according to UE VSAT type |  | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+#### 10.1.20C.2 CSI-RS based L1-RSRP accuracy requirements
+
+##### 10.1.20C.2.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute accuracy of CSI-RS based L1-RSRP in this clause apply to all CSI-RS resources of the serving cell configured for L1-RSRP measurement.
+
+The accuracy requirements in Table 10.1.20C.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to Annex B.2.19 for a corresponding Band for each relevant CSI-RS.
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in Table 10.1.20C.2.1-1.
+
+Table 10.1.20C.2.1-1: CSI-RS based L1-RSRP absolute accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60kHz | SCSCSI-RS = 120kHz |  |  |
+| ±7.5 | ±10.5 | ≥-3 | Same value as SSB_RP derived from annex B.2.17, according to UE VSAT type |  | N/A | -70 |
+| 9.5 | 12.5 | ≥-3 | N/A |  | -70 | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+##### 10.1.20C.2.2 Relative Accuracy
+
+The relative accuracy of CSI-RS based L1-RSRP is defined as the L1-RSRP measured from one CSI-RS compared to the largest measured value of L1-RSRP among all CSI-RS resources of the serving cell.
+
+The accuracy requirements in Table 10.1.20C.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 10.3 of TS 38.101-5 [42] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to Annex B.2.19 for a corresponding Band for each relevant CSI-RS.
+
+- The measured signals are in the directions within the declared minimum elevation angle supported for receiving.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in Table 10.1.20C.2.2-1.
+
+Table 10.1.20C.2.2-1: CSI-RS based L1-RSRP relative accuracy in FR2-NTN
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |
+|  |  |  | Minimum Io |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS |  | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60kHz | SCSCSI-RS = 120kHz |  |
+| 3.5 | 6.5 | ≥-3 | Same value as SSB_RP derived from annex B.2.17, according to UE VSAT type |  | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |
+
+### 10.1.20D  Predicted L1-RSRP accuracy requirements for FR2
+
+#### 10.1.20D.1 CSI-RS based predicted L1-RSRP accuracy requirements
+
+##### 10.1.20D.1.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute accuracy of CSI-RS based predicted L1-RSRP in this clause apply to all the CSI-RS resources of the serving cell reported by the UE configured with reportQuantity-r19 set to ‘'p-cri-RSRP-r19’. The CSI-RS resources for prediction and the number of reported resources among them is indicated to the UE by ‘resourcesForSetA-r19’ and ‘nrofreportedpredictedrs-r19’, respectively, in the CSI-ReportConfig.
+
+Any L1-RSRP measurements used for the verification of the prediction accuracy requirements in Tables 10.1.20D.1.1-2 and 10.1.20D.1.1-3 are valid under the following conditions:
+
+- Conditions for L1-RSRP measurements are fulfilled according to [Annex B.2.4.2] for the actual strongest CSI-RS as the total power received by the UE for a corresponding Band for each relevant CSI-RS.
+
+-  Conditions for L1-RSRP measurements are fulfilled according to annex [B.2.4.1] for the actual strongest SSB as the total power received by the UE for a corresponding Band for each relevant SSB.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- Further conditions are captured in Table 10.1.20D.1.1-1.
+
+Table 10.1.20D.1.1-1: Conditions for CSI-RS based predicted L1-RSRP accuracy requirements
+
+| Parameter | Value |
+| --- | --- |
+| Number of CSI-RS beams in resourcesForSetA-r19 | 32 |
+| Number of beams in resourcesForChannelMeasurement when resourcesForChannelMeasurement are CSI-RS beams | 8 |
+| Relationship between resourcesForChannelMeasurement and resourcesForSetA-r19 beams when resourcesForChannelMeasurement are CSI-RS beams | The resourcesForChannelMeasuremen are selected from resourcesForSetA-r19 such that each resource in resourcesForChannelMeasuremen corresponds to one distinct resource of resourcesForSetA-r19, and the selected resources are interlaced and approximately uniformly distributed across the resourcesForSetA-r19 beam grid. |
+| Beamwidth assumption when resourcesForChannelMeasurement are CSI-RS beams | Equal beamwidth for all beams in resourcesForSetA-r19 |
+| Number of beams in resourcesForChannelMeasurement when resourcesForChannelMeasurement are SSB beams | 8 |
+| Relationship between resourcesForChannelMeasurement and resourcesForSetA-r19 beams when resourcesForChannelMeasurement are SSB beams | All resources in resourcesForSetA-r19 are partitioned into eight groups of four resources, where all resources within each group are QCLed to one unique resource in resourcesForChannelMeasuremen |
+| Beamwidth assumption when resourcesForChannelMeasurement are SSB beams | Equal beamwidth for all beams in resourcesForChannelMeasuremen.Equal beamwidth for all beams in resourcesForSetA-r19 |
+| Ês/Iot | [ >= -3 dB] |
+| Number of beams in resourcesForChannelMeasurement whose Es/Iot need to exceed threshold | 2 |
+| Minimum Io | TBD |
+| Maximum Io | TBD |
+| Note 1: TXRU weights mapping for BS and UE is up to company. |  |
+
+Note: The simulation results to derive accuracy requirements of this section were generated based on the parameters of A.x.y.z
+
+The performance with larger bandwidth of CSI-RS for the reported P-L1-RSRP in nrofreportedpredictedrs-r19 is equal to or better than the accuracy requirements in table 10.1.20D.1.1-2, when resourcesForChannelMeasurement are CSI-RS beams. In both Table 10.1.20D.1.1-2 and 10.1.20D.1.1-3, absolute accuracy is defined as the difference between reported P-L1-RSRP of the P-CRI and the ground truth L1-RSRP of the same P-CRI.
+
+Table 10.1.20D.1.1-2: CSI-RS based predicted L1-RSRP absolute accuracy in FR2 when resourcesForChannelMeasurement are CSI-RS beams
+
+| Accuracy |  |
+| --- | --- |
+| Normal condition dB | Extreme condition dB |
+| ±[7.5] | ±[10.5] |
+
+The performance with larger bandwidth of CSI-RS for the reported P-L1-RSRP in nrofreportedpredictedrs-r19 is equal to or better than the accuracy requirements in table 10.1.20D.1.1-3, when resourcesForChannelMeasurement are SSB beams.
+
+Table 10.1.20D.1.1-3: CSI-RS based predicted L1-RSRP absolute accuracy in FR2 when resourcesForChannelMeasurement are SSB beams
+
+| Accuracy |  |
+| --- | --- |
+| Normal condition dB | Extreme condition dB |
+| ±[8] | ±[11] |
+
+### 10.1.21 SFTD accuracy requirements
+
+#### 10.1.21.1 SFTD acuracy requirements for NE-DC
+
+The SFN and frame timing difference (SFTD) is measured between PCell and E-UTRAN PSCell under NE-DC.
+
+The accuracy requirements in table 10.1.21.1-4 are appilicable under the following conditions:
+
+For FR1 PCell SFN and frame timing measurement:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Io range defined in Table 10.1.21.1-1.
+
+Table 10.1.21.1-1: PCell Io range conditions in FR1
+
+| Parameter | Io Note 1 range |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | NR operating band groups Note 4, 5 | Minimum Io Note 2, 3 |  | Maximum Io |
+|  |  | dBm/ SCSSSB |  | dBm/BWChannel |
+|  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |
+| Conditions | NR_FDD_FR1_A, NR_TDD_FR1_A | -121 | -118 | -50 |
+|  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | -50 |
+|  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -50 |
+|  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -50 |
+|  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -50 |
+|  | NR_FDD_FR1_F | -118.5 | -115.5 | -50 |
+|  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -50 |
+|  | NR_FDD_FR1_H | -117.5 | -114.5 | -50 |
+|  | NR_FDD_FR1_N | -114.5 | -111.5 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The condition level is increased by ΔRIB,c as defined in clause 7.3B in TS 38.101-3 [20], depending on E-UTRA – NR band combination.NOTE 3: The condition level is increased by MSD as defined in clause 7.3B in TS 38.101-3 [20], if applicable depending on E-UTRA – NR band combination.NOTE 4: NR operating band groups are as defined in clause 3.5.NOTE 5: Only NR bands within EN-DC band combinations as specified in clause 5.5B in TS 38.101-3 [20] are applicable. |  |  |  |  |
+
+For FR2 PCell SFN and frame timing measurement:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Io range defined in Table 10.1.21.1-2.
+
+Table 10.1.21.1-2: PCell Io range conditions in FR2
+
+| Parameter | Io Note 1 range |  |  |
+| --- | --- | --- | --- |
+|  | Minimum Io Note 2, 3 |  | Maximum Io |
+|  | dBm/ SCSSSB |  | dBm/BWChannel |
+|  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |
+| Conditions | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth and specified at the Reference point.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |
+
+For E-UTRA PSCell SFN and frame timing measurement:
+
+- Cell specific reference signals are transmitted either from one, two or four antenna ports.
+
+- Conditions defined in TS 36.101 [25] clause7.3 for reference sensitivity are fulfilled.
+
+- No changes to the uplink transmission timing are applied during the measurement period.
+
+- RSRP|dBm according to annex B.3.5 in TS 36.101 [25] for a corresponding Band.
+
+- Io range defined in Table 10.1.21.1-3.
+
+Table 10.1.21.1-3: E-UTRA PSCell Io range conditions
+
+| Parameter | Io Note 1 range |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | E-UTRA operating band groups Note 3 | Minimum Io | Maximum Io |  |
+| Conditions |  | dBm/15 kHz Note 2 | dBm/BWChannel |  |
+|  | FDD_A, TDD_A | -121 | -50 |  |
+|  | FDD_C, TDD_C | -120 | -50 |  |
+|  | FDD_D | -119.5 | -50 |  |
+|  | FDD_E, TDD_E | -119 | -50 |  |
+|  | FDD_F | -118.5 | -50 |  |
+|  | FDD_G | -118 | -50 |  |
+|  | FDD_H | -117.5 | -50 |  |
+|  | FDD_N | -114.5 | -50 |  |
+| NOTE 1: When in dBm/15 kHz, the minimum Io condition is expressed as the average Io per RE over all REs in that symbol. Io may be different in different symbols within a subframe.NOTE 2: The condition level is increased by ∆>0, when applicable, as described in clauses B.4.2 and B.4.3 in TS 36.133 [15].NOTE 3: E-UTRA operating band groups are as defined in clause 3.5 in TS 36.133 [15]. |  |  |  |  |
+
+Table 10.1.21.1-4: SFTD measurement accuracy
+
+| Accuracy | Conditions |  |
+| --- | --- | --- |
+|  | Ês/Iot Note 2 | Frequency range |
+| Ts Note 1 | dB |  |
+| 40*64*Tc | -3 | FR1 |
+| 40*64*Tc |  | FR2 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: The parameter Ês/Iot is the minimum Ês/Iot of the pair of cells to which the requirement applies. |  |  |
+
+#### 10.1.21.2 SFTD acuracy requirements for NR-DC
+
+The SFN and frame timing difference (SFTD) is measured between PCell in FR1 and PSCell in FR2 under NR dual connectivity.
+
+The accuracy requirements in table 10.1.21.2-3 are appilicable under the following conditions:
+
+For FR1 PCell SFN and frame timing measurement:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Io range defined in Table 10.1.21.2-1.
+
+Table 10.1.21.2-1: PCell Io range conditions in FR1
+
+| Parameter | Io Note 1 range |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | NR operating band groups Note 2 | Minimum Io |  | Maximum Io |
+|  |  | dBm/ SCSSSB |  | dBm/BWChannel |
+|  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |
+| Conditions | NR_FDD_FR1_A, NR_TDD_FR1_A | -121 | -118 | -50 |
+|  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | -50 |
+|  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -50 |
+|  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -50 |
+|  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -50 |
+|  | NR_FDD_FR1_F | -118.5 | -115.5 | -50 |
+|  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -50 |
+|  | NR_FDD_FR1_H | -117.5 | -114.5 | -50 |
+|  | NR_FDD_FR1_N | -114.5 | -111.5 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |
+
+For FR2 PSCell SFN and frame timing measurement:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Io range defined in Table 10.1.21.2-2.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.21.2-2: PSCell Io range conditions in FR2
+
+| Parameter | Io Note 1 range |  |  |
+| --- | --- | --- | --- |
+|  | Minimum Io Note 2, 3 |  | Maximum Io |
+|  | dBm/ SCSSSB |  | dBm/BWChannel |
+|  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |
+| Conditions | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth and specified at the Reference point.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |
+
+Table 10.1.21.2-3: SFTD measurement accuracy
+
+| Accuracy | Conditions |  |
+| --- | --- | --- |
+|  | Ês/Iot Note 2 | Frequency range |
+| Ts Note 1 | dB |  |
+| 40*64*Tc | -3 | Between FR1 and FR2 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: The parameter Ês/Iot is the minimum Ês/Iot of the pair of cells to which the requirement applies. |  |  |
+
+#### 10.1.21.3 Inter-frequency SFTD acuracy requirements
+
+The SFN and frame timing difference (SFTD) is measured between PCell and inter-frequency neighbour cell.
+
+The accuracy requirements in table 10.1.21.3-3 are appilicable under the following conditions:
+
+For FR1 PCell, inter-frequency neighbour cell SFN and frame timing measurement:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Io range defined in Table 10.1.21.3-1.
+
+Table 10.1.21.3-1: PCell, inter-frequency neighbour cell Io range conditions in FR1
+
+| Parameter | Io Note 1 range |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | NR operating band groups Note 2 | Minimum Io |  | Maximum Io |
+|  |  | dBm/ SCSSSB |  | dBm/BWChannel |
+|  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |
+| Conditions | NR_FDD_FR1_A, NR_TDD_FR1_A | -121 | -118 | -50 |
+|  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | -50 |
+|  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -50 |
+|  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -50 |
+|  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -50 |
+|  | NR_FDD_FR1_F | -118.5 | -115.5 | -50 |
+|  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -50 |
+|  | NR_FDD_FR1_H | -117.5 | -114.5 | -50 |
+|  | NR_FDD_FR1_N | -114.5 | -111.5 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |
+
+For FR2 PCell, inter-frequency neighbour cell SFN and frame timing measurement:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Io range defined in Table 10.1.21.3-2.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+Table 10.1.21.3-2: PCell, inter-frequency neighbour cell Io range conditions in FR2
+
+| Parameter | Io Note 1 range |  |  |
+| --- | --- | --- | --- |
+|  | Minimum Io Note 2, 3 |  | Maximum Io |
+|  | dBm/ SCSSSB |  | dBm/BWChannel |
+|  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |
+| Conditions | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival | Same value as SSB_RP in Table B.2.4.1-2, according to UE Power class, operating band and angle of arrival | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth and specified at the Reference point.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |
+
+Table 10.1.21.3-3: Inter-frequency SFTD measurement accuracy
+
+| Accuracy | Conditions |  |
+| --- | --- | --- |
+|  | Ês/Iot Note 2 | Frequency range |
+| Ts Note 1 | dB |  |
+| 40*64*Tc | -3 | FR1, FR2 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: The parameter Ês/Iot is the minimum Ês/Iot of the pair of cells to which the requirement applies. |  |  |
+
+### 10.1.22 CLI measurement accuracy requirements
+
+#### 10.1.22.1 SRS-RSRP
+
+##### 10.1.22.1.1 SRS-RSRP Accuracy
+
+The SRS-RSRP measurement reported by the UE shall fulfil the accuracy requirements defined in table 10.1.22.1.1-1 for FR1 and table 10.1.22.1.1-2 for FR2, provided that the following conditions are met. The accuracy requirements in this clause are derived based on AWGN radio propagation conditions.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for SRS-RSRP measurements are fulfilled according to annex B.2.7 for a corresponding Band for each relevant SRS resource configured for measurement.
+
+- The time difference between UE’s DL reference timing in the serving cell and SRS arrival time is no larger than Terror_SRS_RSRP, where
+
+- Terror_SRS_RSRP = TC × NTA_offset + 4.67µs for FR1
+
+- Terror_SRS_RSRP = TC × NTA_offset + 3.67µs for FR2
+
+- NTA_offset is defined in table 7.1.2-2
+
+- TC is 0.509 ns
+
+- The number of SRS ports in the SRS resource configured for measurement is 1,
+
+- The number of symbols in the SRS resource configured for measurement is 1,
+
+- The number of repetitions in the SRS resource configured for measurement is 1,
+
+- Frequency hopping, sequence group hopping or sequence hopping is disabled in the SRS resource configured for measurement,
+
+- The bandwidth of the SRS resource is 48 PRBs.
+
+- One of the following conditions is met
+
+- There is no other SRS resource with the same root sequence and on the same symbol and with same comb as the relevant SRS resource.
+
+- If multiple SRS resources are on the same symbol and with same comb, the distance between cyclic shifts of any two resources is no less than 6 if transmissionComb = n4, and no less than 4 if transmissionComb = n2.
+
+Table 10.1.22.1.1-1:  SRS-RSRP absolute accuracy in FR1
+
+| Accuracy |  |  |  |  |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition |  |  | Extreme condition |  |  | SRS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  |  |  |  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB |  |  |  |  |  | dB |  | dBm / SCSSRS |  |  | dBm/BW Channel | dBm/BW Channel |
+| SCSSRS (kHz) |  |  | SCSSRS (kHz) |  |  |  |  |  |  |  |  |  |
+| 15 | 30 | 60 | 15 | 30 | 60 |  |  | SCSSRS = 15 kHz | SCSSRS = 30 kHz | SCSSRS = 60 kHz |  |  |
+| 3 | 3.5 | 5 | 7.5 | 8 | 9.5 | 1 | NR_TDD_FR1_A, | -120 | -117 | -114 | N/A | -70 |
+|  |  |  |  |  |  |  | NR_TDD_FR1_C | -119 | -116 | -113 | N/A | -70 |
+|  |  |  |  |  |  |  | NR_TDD_FR1_D | -118.5 | -115.5 | -112.5 | N/A | -70 |
+|  |  |  |  |  |  |  | NR_TDD_FR1_E | -118 | -115 | -112 | N/A | -70 |
+| 6.5 | 7 | 8.5 | 9.5 | 10 | 11.5 | 1 | NR_TDD_FR1_A,NR_TDD_FR1_C, NR_TDD_FR1_D, NR_TDD_FR1_E | N/A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |  |  |  |  |
+
+Table 10.1.22.1.1-2: SRS-RSRP absolute accuracy in FR2
+
+| Accuracy |  |  |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition |  | Extreme condition |  | SRS Ês/Iot | Io Note 1 range |  |  |  |
+|  |  |  |  |  | Minimum Io |  |  | Maximum Io |
+| dB |  |  |  | dB | dBm / SCSSRS Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+| SCSSRS (kHz) |  | SCSSRS (kHz) |  |  | SCSSRS = | SCSSRS = |  |  |
+| 60 | 120 | 60 | 120 |  | 60 kHz | 120 kHz |  |  |
+| 6 | 8.5 | 9 | 11.5 | ≥1 | Same value as SRS_RP in Table B.2.7-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 9 | 11.5 | 11 | 13.5 | ≥1 | N/A |  | -70 | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |  |  |
+
+##### 10.1.22.1.2 SRS-RSRP report mapping
+
+The reporting range of SRS-RSRP is defined from -140 dBm to -44 dBm with 1 dB resolution. The mapping of measured quantity is defined in table 10.1.22.1.2-1. The range in the signalling may be larger than the guaranteed accuracy range.
+
+Table 10.1.22.1.2-1: SRS-RSRP measurement report mapping
+
+| Reported value | Measured quantity value | Unit |  |
+| --- | --- | --- | --- |
+| SRS-RSRP_0 | SRS-RSRP<-140 | dBm |  |
+| SRS-RSRP_1 | -140≤ SRS-RSRP<-139 | dBm |  |
+| SRS-RSRP_2 | -139≤ SRS-RSRP<-138 | dBm |  |
+| SRS-RSRP_3 | -138≤ SRS-RSRP<-137 | dBm |  |
+| SRS-RSRP_4 | -137≤ SRS-RSRP<-136 | dBm |  |
+| .. | .. | … |  |
+| SRS-RSRP_95 | -46≤ SRS-RSRP<-45 | dBm |  |
+| SRS-RSRP_96 | -45≤ SRS-RSRP<-44 | dBm |  |
+| SRS-RSRP_97 | -44≤ SRS-RSRP | dBm |  |
+| SRS-RSRP_98 | Infinity |  |  |
+| NOTE: ‘Infinity’ means that UE cannot detect SRS due to too strong signal to measure. |  |  |  |
+
+#### 10.1.22.2 CLI-RSSI
+
+##### 10.1.22.2.1 CLI-RSSI Accuracy
+
+The CLI-RSSI measurement reported by the UE shall fulfil the accuracy requirements defined in table 10.1.22.2.1-1 for FR1 and table 10.1.22.2.1-2 for FR2, provided that the following conditions are met.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+Table 10.1.22.2.1-1: CLI-RSSI absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Io Note 1 range |  |  |  |  |  |
+|  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB |  | dBm / SCSSRS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSRS = 15 kHz | SCSSRS = 30 kHz | SCSSRS = 60 kHz |  |  |
+| 3.5 | 6.5 | NR_TDD_FR1_A, | -120 | -117 | -114 | N/A | -70 |
+|  |  | NR_TDD_FR1_C | -119 | -116 | -113 | N/A | -70 |
+|  |  | NR_TDD_FR1_D | -118.5 | -115.5 | -112.5 | N/A | -70 |
+|  |  | NR_TDD_FR1_E | -118 | -115 | -112 | N/A | -70 |
+| 5.5 | 8.5 | Note 3 | Note 3 | Note 3 | Note 3 | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement. |  |  |  |  |  |  |  |
+
+Table 10.1.22.2.1-2: CLI-RSSI absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Io Note 1 range |  |  |  |
+|  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dBm / SCSSRS Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  | SCSSRS = 60 kHz | SCSSRS = 120 kHz |  |  |
+| 5 | 8 | Same value as SRS_RP in Table B.2.7-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 7 | 10 | Note 4 |  | -70 | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement. |  |  |  |  |  |
+
+##### 10.1.22.2.2 CLI-RSSI report mapping
+
+The reporting range of CLI-RSSI is defined from -100 dBm to -25 dBm with 1 dB resolution. The mapping of measured quantity is defined in table 10.1.22.2.2-1. The range in the signalling may be larger than the guaranteed accuracy range. UE shall scale the measured CLI-RSSI to report a nominal RSSI equivalent to 6RB measurement with 15 kHz SCS.
+
+Table 10.1.22.2.2-1: CLI-RSSI measurement report mapping
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| CLI-RSSI_00 | CLI-RSSI < 100 | dBm |
+| CLI-RSSI_01 | -100  CLI-RSSI < 99 | dBm |
+| CLI-RSSI_02 | -99  CLI-RSSI < 98 | dBm |
+| … | … | … |
+| CLI-RSSI_74 | -27  CLI-RSSI < -26 | dBm |
+| CLI-RSSI_75 | -26  CLI-RSSI < -25 | dBm |
+| CLI-RSSI_76 | -25  CLI-RSSI | dBm |
+
+### 10.1.23 RSTD Measurements
+
+#### 10.1.23.1 Introduction
+
+The requirements in clause 10.1.23 shall apply, provided the UE has received nr-DL-TDOA-RequestLocationInformation message from LMF via LPP [34] requesting the UE to report one or more DL RSTD measurements defined in TS 38.215 [4]. The requirements in clause 10.1.23 shall apply:
+
+- when UE is in RRC_CONNECTED state and the measurement is performed with MG or without MG,
+
+- when UE is in RRC_INACTIVE state.
+
+- when UE is in RRC_IDLE state.
+
+#### 10.1.23.2 Measurement Accuracy Requirements
+
+The accuracy requirements for RSTD measurement shall be within ±(X+Y+Z+Δ) Tc.
+
+X is defined in table 10.1.23.2-1 for AWGN channel and table 10.1.23.2-3 for fading channel for FR1, provided that the following conditions are met.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for RSTD measurements are fulfilled according to annex B.2.14 for a corresponding Band for each relevant PRS resource configured for measurement.
+
+- UE does not perform positioning measurement with reduced number of samples.
+
+X is defined in table 10.1.23.2-2 for AWGN channel and table 10.1.23.2-4 for fading channel for FR2, provided that the following conditions are met.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for RSTD measurements are fulfilled according to annex B.2.14 for a corresponding Band for each relevant PRS resource configured for measurement.
+
+-  UE does not perform positioning measurement with reduced number of samples.
+
+X is defined in table 10.1.23.2-7 for AWGN channel in FR1 provided that the following conditions are met.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for RSTD measurements are fulfilled according to annex B.2.14 for a corresponding Band for each relevant PRS resource configured for measurement.
+
+- UE supports positioning measurement with reduced number of sample and is indicated by LMF to perform positioning measurement with reduced number of samples.
+
+X is defined in table 10.1.23.2-8 for AWGN channel in FR2 provided that the following conditions are met.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for RSTD measurements are fulfilled according to annex B.2.14 for a corresponding Band for each relevant PRS resource configured for measurement.
+
+- UE supports positioning measurement with reduced number of sample and is indicated by LMF to perform positioning measurement with reduced number of samples.
+
+NOTE: The requirements for fading channel in this clause are derived based on TDL-A (30 ns delay spread, 5 Hz) and TDL-C (60 ns delay spread, 300 Hz) channel models for FR1 and FR2 respectively.
+
+When UE measures RSTD on PRS resources belonging to different PFLs, then the RSTD accuracy is defined as the accuracy corresponding to the largest accuracy value among different PFLs.
+
+If the UE doesn’t support Rx TEG reporting for RSTD measurement or when the measurements of reference cell and neighbour cell belong to different Rx TEGs, Y, Z and Δ are defined as follows:
+
+- When UE measures RSTD on PRS resources belonging to same PFL, Y=32 Tc, provided that the time offset between the two PRS resource instances from the reference cell and the neighbor cell, which are used for a single RSTD estimate, is no greater than 160 ms.
+
+- When UE measures RSTD on PRS resources belonging different PFLs, Y=256 Tc, provided that the time offset between the two PRS resource instances from the reference cell and the neighbor cell, which are used for a single RSTD estimate, is no greater than 1280 ms.
+
+- Z is defined in table 10.1.23.2-5 for FR1 and table 10.1.23.2-6 for FR2, respectively.
+
+- Δ is zero for single PFL, and is defined in table 10.1.23.2-5a for FR1 and table 10.1.23.2-6a for FR2, respectively, for dual PFL.
+
+If the measurements of reference cell and neighbour cell belong to the same Rx TEG, i.e. associated and reported with a common Rx TEG ID, then the sum of Y+Z+Δ is equal to the timing error margin of the Rx TEG reported in nr-UE-RxTEG-TimingErrorMargin. The timing error margin reported via nr-UE-RxTEG-TimingErrorMargin cannot be larger than the value of (Y+Z+Δ) defined when the UE does not associate the measurements with the same Rx TEG.
+
+Table 10.1.23.2-1: RSTD absolute accuracy in FR1 for AWGN channel
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 132 | (PRS Ês/Iot)ref ≥-6 dB (PRS Ês/Iot)i ≥-13 dB | 15 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 98 |  |  | ≥ 52 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 42 |  |  | ≥ 104 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 75 |  | 30 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 48 |  |  | ≥ 48 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 24 |  |  | ≥ 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 50 |  | 60 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| 24 |  |  | ≥ 64 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 10 |  |  | ≥ 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7: Void |  |  |  |  |  |  |  |
+
+Table 10.1.23.2-2: RSTD absolute accuracy in FR2 for AWGN channel
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)          Note 2 | Io Note 3 range |  |
+|  |  |  |  |  | Minimum Io | Maximum Io |
+| Tc Note 4 | dB | kHz | PRB |  | dBm/SCS | dBm/BWChannel |
+| 35 | (PRS Ês/Iot)ref ≥-6 dB (PRS Ês/Iot)i ≥-13 dB | 60 | ≥ 24 | ≥ 4 | Same value as PRS_RP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 24 |  |  | ≥ 64 | ≥ 1 | Note 5 | Note 5 |
+| 11 |  |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 |
+| 24 |  | 120 | ≥ 32 | ≥ 4 | Same value as PRS_RP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 13 |  |  | ≥ 64 | ≥ 1 | Note 5 | Note 5 |
+| 6 |  |  | ≥ 128 | ≥ 1 | Note 5 | Note 5 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 6: Void |  |  |  |  |  |  |
+
+Table 10.1.23.2-3: RSTD absolute accuracy in FR1 for fading channel
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 247 | (PRS Ês/Iot)ref ≥-6 dB (PRS Ês/Iot)i ≥-13 dB | 15 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 140 |  |  | ≥ 52 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 86 |  |  | ≥ 104 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 118 |  | 30 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 109 |  |  | ≥ 48 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 28 |  |  | ≥ 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 147 |  | 60 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| 27 |  |  | ≥ 64 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 21 |  |  | ≥ 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7: Void |  |  |  |  |  |  |  |
+
+Table 10.1.23.2-4: RSTD absolute accuracy in FR2 for fading channel
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)          Note 2 | Io Note 3 range |  |
+|  |  |  |  |  | Minimum Io | Maximum Io |
+| Tc Note 4 | dB | kHz | PRB |  | dBm/SCS | dBm/BWChannel |
+| 83 | (PRS Ês/Iot)ref ≥-6 dB (PRS Ês/Iot)i ≥-13 dB | 60 | ≥ 24 | ≥ 4 | Same value as PRS_RP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 64 |  |  | ≥ 64 | ≥ 1 | Note 5 | Note 5 |
+| 46 |  |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 |
+| 48 |  | 120 | ≥ 32 | ≥ 4 | Same value as PRS_RP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 54 |  |  | ≥ 64 | ≥ 1 | Note 5 | Note 5 |
+| 36 |  |  | ≥ 128 | ≥ 1 | Note 5 | Note 5 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 6: Void |  |  |  |  |  |  |
+
+Table 10.1.23.2-5: Margin for RSTD measurement accuracy in FR1
+
+| PRS BW (PRB number) |  |  | Margin (Tc) |
+| --- | --- | --- | --- |
+| SCS=15 kHz | SCS=30 kHz | SCS=60 kHz |  |
+| ≥ 24 | N/A | N/A | 120 |
+| ≥ 52 | ≥ 24 | N/A | 72 |
+| ≥ 104 | ≥ 48 | ≥ 24 | 36 |
+| N/A | ≥ 132 | ≥ 64 | 16 |
+| N/A | N/A | ≥ 132 | 12 |
+
+Table 10.1.23.2-5a: Margin Δ for RSTD measurement accuracy in FR1
+
+| PRS BW (PRB number) |  |  | Margin (Tc) |
+| --- | --- | --- | --- |
+| SCS=15 kHz | SCS=30 kHz | SCS=60 kHz |  |
+| ≥ 24 | N/A | N/A | 128 |
+| ≥ 52 | ≥ 24 | N/A | 64 |
+| ≥ 104 | ≥ 48 | ≥ 24 | 32 |
+| N/A | ≥ 132 | ≥ 64 | 16 |
+| N/A | N/A | ≥ 132 | 8 |
+
+Table 10.1.23.2-6: Margin for RSTD measurement accuracy in FR2
+
+| PRS BW (PRB number) |  | Margin (Tc) |
+| --- | --- | --- |
+| SCS=60 kHz | SCS=120 kHz |  |
+| ≥ 24 | N/A | 72 |
+| ≥ 64 | ≥ 32 | 32 |
+| ≥ 132 | ≥ 64 | 16 |
+| N/A | ≥ 128 | 12 |
+
+Table 10.1.23.2-6a: Margin Δ for RSTD measurement accuracy in FR2
+
+| PRS BW (PRB number) |  | Margin (Tc) |
+| --- | --- | --- |
+| SCS=60 kHz | SCS=120 kHz |  |
+| ≥ 24 | N/A | 32 |
+| ≥ 64 | ≥ 32 | 16 |
+| ≥ 132 | ≥ 64 | 8 |
+| N/A | ≥ 128 | 4 |
+
+Table 10.1.23.2-7: RSTD absolute accuracy in FR1 for AWGN channel with reduced number of samples
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 98 | (PRS Ês/Iot)ref ≥-3 dB (PRS Ês/Iot)i ≥-6 dB | 15 | ≥ 52 | ≥ 1 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 42 |  |  | ≥ 104 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 48 |  | 30 | ≥ 48 | ≥ 1 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 24 |  |  | ≥ 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 24 |  | 60 | ≥ 64 | ≥ 1 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| 10 |  |  | ≥ 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7: Void |  |  |  |  |  |  |  |
+
+Table 10.1.23.2-8: RSTD absolute accuracy in FR2 for AWGN channel with reduced number of samples
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)          Note 2 | Io Note 3 range |  |
+|  |  |  |  |  | Minimum Io | Maximum Io |
+| Tc Note 4 | dB | kHz | PRB |  | dBm/SCS | dBm/BWChannel |
+| 24 | (PRS Ês/Iot)ref ≥-3 dB (PRS Ês/Iot)i ≥-6 dB | 60 | ≥ 64 | ≥ 1 | Same value as PRS_RP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | Note 5 |
+| 11 |  |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 |
+| 13 |  | 120 | ≥ 64 | ≥ 1 | Same value as PRS_RP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | Note 5 |
+| 6 |  |  | ≥ 128 | ≥ 1 | Note 5 | Note 5 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 6: Void |  |  |  |  |  |  |
+
+#### 10.1.23.3 Report mapping
+
+##### 10.1.23.3.1 Absolute DL RSTD Measurement Reporting
+
+The reporting range for the DL RSTD measurement is defined from -985024Tc to 985024Tc with the resolution step of 2kTc, where
+
+Tc is defined in TS 38.211 [6],
+
+kmin≤k≤kmax,
+
+kmin = -6 and kmax = 5,
+
+k≥ timingReportingGranularityFactor [34] configured by LMF via LPP for the RSTD measurement.
+
+The measurement report mapping for different k values are specified in tables 10.1.23.3.1-1  10.1.23.3.1-12.
+
+Table 10.1.23.3.1-1: Report mapping for k=0
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_0000000 | RSTD < -985024 | Tc |
+| RSTD_0000001 | -985024  RSTD < -985023 | Tc |
+| RSTD_0000002 | -985023  RSTD < -985022 | Tc |
+|  |  | … |
+| RSTD_0985024 | -1  RSTD < 0 | Tc |
+| RSTD_0985025 | 0  RSTD < 1 | Tc |
+| … | … | … |
+| RSTD_1970047 | 985022  RSTD < 985023 | Tc |
+| RSTD_1970048 | 985023  RSTD < 985024 | Tc |
+| RSTD_1970049 | 985024  RSTD | Tc |
+
+Table 10.1.23.3.1-2: Report mapping for k=1
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_000000 | RSTD < -985024 | Tc |
+| RSTD_000001 | -985024  RSTD < -985022 | Tc |
+| RSTD_000002 | -985022  RSTD < -985020 | Tc |
+|  |  | … |
+| RSTD_492512 | -2  RSTD < 0 | Tc |
+| RSTD_492513 | 0  RSTD < 2 | Tc |
+| … | … | … |
+| RSTD_985023 | 985020  RSTD < 985022 | Tc |
+| RSTD_985024 | 985022  RSTD < 985024 | Tc |
+| RSTD_985025 | 985024  RSTD | Tc |
+
+Table 10.1.23.3.1-3: Report mapping for k=2
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_000000 | RSTD < -985024 | Tc |
+| RSTD_000001 | -985024  RSTD < -985020 | Tc |
+| RSTD_000002 | -985020  RSTD < -985016 | Tc |
+|  |  | … |
+| RSTD_246256 | -4  RSTD < 0 | Tc |
+| RSTD_246257 | 0  RSTD < 4 | Tc |
+| … | … | … |
+| RSTD_492511 | 985016  RSTD < 985020 | Tc |
+| RSTD_492512 | 985020  RSTD < 985024 | Tc |
+| RSTD_492513 | 985024  RSTD | Tc |
+
+Table 10.1.23.3.1-4: Report mapping for k=3
+
+| Reported Quantity Value | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_000000 | RSTD < -985024 | Tc |
+| RSTD_000001 | -985024  RSTD < -985016 | Tc |
+| RSTD_000002 | -985016  RSTD < -985008 | Tc |
+|  |  | … |
+| RSTD_123128 | -8  RSTD < 0 | Tc |
+| RSTD_123129 | 0  RSTD < 8 | Tc |
+| … | … | … |
+| RSTD_246255 | 985008  RSTD < 985016 | Tc |
+| RSTD_246256 | 985016  RSTD < 985024 | Tc |
+| RSTD_246257 | 985024  RSTD | Tc |
+
+Table 10.1.23.3.1-5: Report mapping for k=4
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_000000 | RSTD < -985024 | Tc |
+| RSTD_000001 | -985024  RSTD < -985008 | Tc |
+| RSTD_000002 | -985008  RSTD < -984992 | Tc |
+|  |  | … |
+| RSTD_061564 | -16  RSTD < 0 | Tc |
+| RSTD_061565 | 0  RSTD < 16 | Tc |
+| … | … | … |
+| RSTD_123127 | 984992  RSTD < 985008 | Tc |
+| RSTD_123128 | 985008  RSTD < 985024 | Tc |
+| RSTD_123129 | 985024  RSTD | Tc |
+
+Table 10.1.23.3.1-6: Report mapping for k=5
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_00000 | RSTD < -985024 | Tc |
+| RSTD_00001 | -985024  RSTD < -984992 | Tc |
+| RSTD_00002 | -984992  RSTD < -984960 | Tc |
+|  |  | … |
+| RSTD_30782 | -32  RSTD < 0 | Tc |
+| RSTD_30783 | 0  RSTD < 32 | Tc |
+| … | … | … |
+| RSTD_61563 | 984960  RSTD < 984992 | Tc |
+| RSTD_61564 | 984992  RSTD < 985024 | Tc |
+| RSTD_61565 | 985024  RSTD | Tc |
+
+Table 10.1.23.3.1-7: Report mapping for k=-1
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_0000000 | RSTD < -985024 | Tc |
+| RSTD_0000001 | -985024  RSTD < -985023.5 | Tc |
+| RSTD_0000002 | -985023.5  RSTD < -985023 | Tc |
+|  |  | … |
+| RSTD_1970048 | -0.5  RSTD < 0 | Tc |
+| RSTD_1970049 | 0  RSTD < 0.5 | Tc |
+| … | … | … |
+| RSTD_3940095 | 985023  RSTD < 985023.5 | Tc |
+| RSTD_3940096 | 985023.5  RSTD < 985024 | Tc |
+| RSTD_3940097 | 985024  RSTD | Tc |
+
+Table 10.1.23.3.1-8: Report mapping for k=-2
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_0000000 | RSTD < -985024 | Tc |
+| RSTD_0000001 | -985024  RSTD < -985023.75 | Tc |
+| RSTD_0000002 | -985023.75  RSTD < -985023.5 | Tc |
+|  |  | … |
+| RSTD_3940096 | -0.25  RSTD < 0 | Tc |
+| RSTD_3940097 | 0  RSTD < 0.25 | Tc |
+| … | … | … |
+| RSTD_7880191 | 985023.5  RSTD < 985023.75 | Tc |
+| RSTD_7880192 | 985023.75  RSTD < 985024 | Tc |
+| RSTD_7880193 | 985024  RSTD | Tc |
+
+Table 10.1.23.3.1-9: Report mapping for k=-3
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_00000000 | RSTD < -985024 | Tc |
+| RSTD_00000001 | -985024  RSTD < -985023.875 | Tc |
+| RSTD_00000002 | -985023.875  RSTD < -985023.75 | Tc |
+|  |  | … |
+| RSTD_07880192 | -0.125  RSTD < 0 | Tc |
+| RSTD_07880193 | 0  RSTD < 0.125 | Tc |
+| … | … | … |
+| RSTD_15760383 | 985023.75  RSTD < 985023.875 | Tc |
+| RSTD_15760384 | 985023.875  RSTD < 985024 | Tc |
+| RSTD_15760385 | 985024  RSTD | Tc |
+
+Table 10.1.23.3.1-10: Report mapping for k=-4
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_00000000 | RSTD < -985024 | Tc |
+| RSTD_00000001 | -985024  RSTD < -985023.9375 | Tc |
+| RSTD_00000002 | -985023.9375  RSTD < -985023.875 | Tc |
+|  |  | … |
+| RSTD_15760384 | -0. 0625  RSTD < 0 | Tc |
+| RSTD_15760385 | 0  RSTD < 0.0625 | Tc |
+| … | … | … |
+| RSTD_31520767 | 985023.875  RSTD < 985023.9375 | Tc |
+| RSTD_31520768 | 985023.9375  RSTD < 985024 | Tc |
+| RSTD_31520769 | 985024  RSTD | Tc |
+
+Table 10.1.23.3.1-11: Report mapping for k=-5
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_00000000 | RSTD < -985024 | Tc |
+| RSTD_00000001 | -985024  RSTD < -985023.9688 | Tc |
+| RSTD_00000002 | -985023.9688  RSTD < -985023.9375 | Tc |
+|  |  | … |
+| RSTD_31520768 | -0.0312  RSTD < 0 | Tc |
+| RSTD_31520769 | 0  RSTD < 0.0312 | Tc |
+| … | … | … |
+| RSTD_63041535 | 985023.9375  RSTD < 985023.9688 | Tc |
+| RSTD_63041536 | 985023.9688  RSTD < 985024 | Tc |
+| RSTD_63041537 | 985024  RSTD | Tc |
+
+Table 10.1.23.3.1-12: Report mapping for k=-6
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| RSTD_i | RSTD |  |
+| RSTD_000000000 | RSTD < -985024 | Tc |
+| RSTD_000000001 | -985024  RSTD < -985023.9844 | Tc |
+| RSTD_000000002 | -985023.9844  RSTD < -985023.9688 | Tc |
+|  |  | … |
+| RSTD_063041536 | -0.0156  RSTD < 0 | Tc |
+| RSTD_063041537 | 0  RSTD < 0.0156 | Tc |
+| … | … | … |
+| RSTD_126083071 | 985023.9688  RSTD < 985023.9844 | Tc |
+| RSTD_126083072 | 985023.9844  RSTD < 985024 | Tc |
+| RSTD_126083073 | 985024  RSTD | Tc |
+
+##### 10.1.23.3.2 Differential Reporting for DL RSTD Measurement
+
+A first DL RSTD measurement is reported by means of differential reporting, i.e. as RSTD, relative to a second DL RSTD measurement (RSTD2), provided that:
+
+- the absolute measured quantity value of the second DL RSTD measurement (RSTD2) is not larger than the absolute measured quantity value of the first DL RSTD measurement (RSTD1), i.e., RSTD=RSTD1-RSTD2≥0, and
+
+- the absolute value of the second DL RSTD measurement (RSTD2) is reported together with RSTD for the first DL RSTD measurement.
+
+The reporting range for differential reporting RSTD of the first DL RSTD measurement is defined from 0 up to 8191Tc with the resolution step of 2kTc, where
+
+Tc is defined in TS 38.211 [6],
+
+kmin≤k≤kmax,
+
+kmin = -6 and kmax = 5,
+
+k≥ timingReportingGranularityFactor [34] configured by LMF via LPP for the RSTD measurement.
+
+The measurement report mapping for different k values are specified in tables 10.1.23.3.2-1  10.1.23.3.2-12.
+
+Table 10.1.23.3.2-1: Report mapping for k=0
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_0000 | 0  RSTD < 1 | Tc |
+| DIFFRSTD_0001 | 1  RSTD < 2 | Tc |
+| DIFFRSTD_0002 | 2  RSTD < 3 | Tc |
+|  |  | … |
+| DIFFRSTD_8189 | 8189  RSTD < 8190 | Tc |
+| DIFFRSTD_8190 | 8190  RSTD < 8191 | Tc |
+| DIFFRSTD_8191 | 8191  RSTD | Tc |
+
+Table 10.1.23.3.2-2: Report mapping for k=1
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_0000 | 0  RSTD < 2 | Tc |
+| DIFFRSTD_0001 | 2  RSTD < 4 | Tc |
+| DIFFRSTD_0002 | 4  RSTD < 6 | Tc |
+|  |  | … |
+| DIFFRSTD_4093 | 8186  RSTD < 8188 | Tc |
+| DIFFRSTD_4094 | 8188  RSTD < 8190 | Tc |
+| DIFFRSTD_4095 | 8190  RSTD | Tc |
+
+Table 10.1.23.3.2-3: Report mapping for k=2
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_0000 | 0  RSTD < 4 | Tc |
+| DIFFRSTD_0001 | 4  RSTD < 8 | Tc |
+| DIFFRSTD_0002 | 8  RSTD < 12 | Tc |
+|  |  | … |
+| DIFFRSTD_2045 | 8180  RSTD < 8184 | Tc |
+| DIFFRSTD_2046 | 8184  RSTD < 8188 | Tc |
+| DIFFRSTD_2047 | 8188  RSTD | Tc |
+
+Table 10.1.23.3.2-4: Report mapping for k=3
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_0000 | 0  RSTD < 8 | Tc |
+| DIFFRSTD_0001 | 8  RSTD < 16 | Tc |
+| DIFFRSTD_0002 | 16  RSTD < 24 | Tc |
+|  |  | … |
+| DIFFRSTD_1021 | 8168  RSTD < 8176 | Tc |
+| DIFFRSTD_1022 | 8176  RSTD < 8184 | Tc |
+| DIFFRSTD_1023 | 8184  RSTD | Tc |
+
+Table 10.1.23.3.2-5: Report mapping for k=4
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_000 | 0  RSTD < 16 | Tc |
+| DIFFRSTD_001 | 16  RSTD < 32 | Tc |
+| DIFFRSTD_002 | 32  RSTD < 48 | Tc |
+|  |  | … |
+| DIFFRSTD_509 | 8144  RSTD < 8160 | Tc |
+| DIFFRSTD_510 | 8160  RSTD < 8176 | Tc |
+| DIFFRSTD_511 | 8176  RSTD | Tc |
+
+Table 10.1.23.3.2-6: Report mapping for k=5
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_000 | 0  RSTD < 32 | Tc |
+| DIFFRSTD_001 | 32  RSTD < 64 | Tc |
+| DIFFRSTD_002 | 64  RSTD < 96 | Tc |
+|  |  | … |
+| DIFFRSTD_253 | 8096  RSTD < 8128 | Tc |
+| DIFFRSTD_254 | 8128  RSTD < 8160 | Tc |
+| DIFFRSTD_255 | 8160  RSTD | Tc |
+
+Table 10.1.23.3.2-7: Report mapping for k=-1
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_00000 | 0  RSTD < 0.5 | Tc |
+| DIFFRSTD_00001 | 0.5  RSTD < 1 | Tc |
+| DIFFRSTD_00002 | 1  RSTD < 1.5 | Tc |
+|  |  | … |
+| DIFFRSTD_16380 | 8190  RSTD < 8190.5 | Tc |
+| DIFFRSTD_16381 | 8190.5  RSTD < 8191 | Tc |
+| DIFFRSTD_16382 | 8191  RSTD | Tc |
+
+Table 10.1.23.3.2-8: Report mapping for k=-2
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_00000 | 0  RSTD < 0.25 | Tc |
+| DIFFRSTD_00001 | 0.25  RSTD < 0.5 | Tc |
+| DIFFRSTD_00002 | 0.5  RSTD < 0. 75 | Tc |
+|  |  | … |
+| DIFFRSTD_32762 | 8190.5  RSTD < 8190.75 | Tc |
+| DIFFRSTD_32763 | 8190.75  RSTD < 8191 | Tc |
+| DIFFRSTD_32764 | 8191  RSTD | Tc |
+
+Table 10.1.23.3.2-9: Report mapping for k=-3
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_00000 | 0  RSTD < 0.125 | Tc |
+| DIFFRSTD_00001 | 0.125  RSTD < 0.25 | Tc |
+| DIFFRSTD_00002 | 0.25  RSTD < 0. 375 | Tc |
+|  |  | … |
+| DIFFRSTD_65526 | 8190.75  RSTD < 8190.875 | Tc |
+| DIFFRSTD_65527 | 8190.875  RSTD < 8191 | Tc |
+| DIFFRSTD_65528 | 8191  RSTD | Tc |
+
+Table 10.1.23.3.2-10: Report mapping for k=-4
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_000000 | 0  RSTD < 0.0625 | Tc |
+| DIFFRSTD_000001 | 0.0625  RSTD < 0.125 | Tc |
+| DIFFRSTD_000002 | 0.125  RSTD < 0.1875 | Tc |
+|  |  | … |
+| DIFFRSTD_131054 | 8190.875  RSTD < 8190.9375 | Tc |
+| DIFFRSTD_131055 | 8190.9375  RSTD < 8191 | Tc |
+| DIFFRSTD_131056 | 8191  RSTD | Tc |
+
+Table 10.1.23.3.2-11: Report mapping for k=-5
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_000000 | 0  RSTD < 0.0312 | Tc |
+| DIFFRSTD_000001 | 0.0312  RSTD < 0.0625 | Tc |
+| DIFFRSTD_000002 | 0.0625  RSTD < 0.0938 | Tc |
+|  |  | … |
+| DIFFRSTD_262110 | 8190.9375  RSTD < 8190.9688 | Tc |
+| DIFFRSTD_262111 | 8190.9688  RSTD < 8191 | Tc |
+| DIFFRSTD_262112 | 8191  RSTD | Tc |
+
+Table 10.1.23.3.2-12: Report mapping for k=-6
+
+| Reported Quantity Value,DIFFRSTD_i | RSTD = RSTD1  RSTD2 | Unit |
+| --- | --- | --- |
+| DIFFRSTD_000000 | 0  RSTD < 0. 0156 | Tc |
+| DIFFRSTD_000001 | 0. 0156 RSTD < 0. 0312 | Tc |
+| DIFFRSTD_000002 | 0. 0312  RSTD < 0.0469 | Tc |
+|  |  | … |
+| DIFFRSTD_524222 | 8190.9688 RSTD < 8190. 9844 | Tc |
+| DIFFRSTD_524223 | 8190. 9844 RSTD < 8191 | Tc |
+| DIFFRSTD_524224 | 8191  RSTD | Tc |
+
+##### 10.1.23.3.3 Additional Path Report Mapping for DL RSTD
+
+The reporting range for the additional path reporting for an RSTD measurement is defined up to the range from -8175Tc to 8175Tc with the resolution step of 2kTc, where
+
+Tc is defined in TS 38.211 [6],
+
+kmin≤k≤kmax,
+
+kmin = -6 and kmax = 5,
+
+k≥ timingReportingGranularityFactor [34] configured by LMF via LPP for the RSTD measurement.
+
+The UE can report the timing of up to two additional paths with respect to the path timing determining the RSTD measurement.
+
+A UE capable of  additionalPathsExtSupport-r17 can report the timing for a number additional paths, up to its capability, with respect to the path timing determining the RSTD measurement.
+
+The report mappings for different k values are specified in tables 10.1.23.3.3-1  10.1.23.3.3-12.
+
+Table 10.1.23.3.3-1: Report mapping for k=0
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_00000 | path < -8175 | Tc |
+| path_00001 | -8175  path < -8174 | Tc |
+| path_00002 | -8174  path < -8173 | Tc |
+|  |  | … |
+| path_08175 | -1  path < 0 | Tc |
+| path_08176 | 0  path < 1 | Tc |
+| … | … | … |
+| path_16349 | 8173  path < 8174 | Tc |
+| path_16350 | 8174  path < 8175 | Tc |
+| path_16351 | 8175  path | Tc |
+
+Table 10.1.23.3.3-2: Report mapping for k=1
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+| path_0000 | path < -8175 | Tc |
+| path_0001 | -8175  path < -8173 | Tc |
+| path_0002 | -8173  path < -8171 | Tc |
+|  |  | … |
+| path_4088 | -1  path < 1 | Tc |
+| … | … | … |
+| path_8174 | 8171  path < 8173 | Tc |
+| path_8175 | 8173  path < 8175 | Tc |
+| path_8176 | 8175  path | Tc |
+
+Table 10.1.23.3.3-3: Report mapping for k=2
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+| path_0000 | path < -8174 | Tc |
+| path_0001 | -8174  path < -8170 | Tc |
+| path_0002 | -8170  path < -8166 | Tc |
+|  |  | … |
+| path_2044 | -2  path < 2 | Tc |
+| … | … | … |
+| path_4086 | 8166  path < 8170 | Tc |
+| path_4087 | 8170  path < 8174 | Tc |
+| path_4088 | 8174  path | Tc |
+
+Table 10.1.23.3.3-4: Report mapping for k=3
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+| path_0000 | path < -8172 | Tc |
+| path_0001 | -8172  path < -8164 | Tc |
+| path_0002 | -8164  path < -8156 | Tc |
+|  |  | … |
+| path_1022 | -4  path < 4 | Tc |
+| … | … | … |
+| path_2042 | 8156  path < 8164 | Tc |
+| path_2043 | 8164  path < 8172 | Tc |
+| path_2044 | 8172  path | Tc |
+
+Table 10.1.23.3.3-5: Report mapping for k=4
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+| path_0000 | path < -8168 | Tc |
+| path_0001 | -8168  path < -8152 | Tc |
+| path_0002 | -8152  path < -8136 | Tc |
+|  |  | … |
+| path_511 | -8  path < 8 | Tc |
+| … | … | … |
+| path_1020 | 8136  path < 8152 | Tc |
+| path_1021 | 8152  path < 8168 | Tc |
+| path_1022 | 8168  path | Tc |
+
+Table 10.1.23.3.3-6: Report mapping for k=5
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+| path_000 | path < -8160 | Tc |
+| path_001 | -8160  path < -8128 | Tc |
+| path_002 | -8128  path < -8096 | Tc |
+|  |  | … |
+| path_256 | 0  path < 32 | Tc |
+| … | … | … |
+| path_509 | 8096  path < 8128 | Tc |
+| path_510 | 8128  path < 8160 | Tc |
+| path_511 | 8160  path | Tc |
+
+Table 10.1.23.3.3-7: Report mapping for k=-1
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_00000 | path < -8175 | Tc |
+| path_00001 | -8175  path < -8174.5 | Tc |
+| path_00002 | -8174.5  path < -8174 | Tc |
+|  |  | … |
+| path_16350 | -0.5  path < 0 | Tc |
+| path_16351 | 0  path < 0.5 | Tc |
+| … | … | … |
+| path_32699 | 8174  path < 8174.5 | Tc |
+| path_32700 | 8174.5  path < 8175 | Tc |
+| path_32701 | 8175  path | Tc |
+
+Table 10.1.23.3.3-8: Report mapping for k=-2
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_00000 | path < -8175 | Tc |
+| path_00001 | -8175  path < -8174.75 | Tc |
+| path_00002 | -8174.75  path < -8174.5 | Tc |
+|  |  | … |
+| path_32700 | -0.25  path < 0 | Tc |
+| path_32701 | 0  path < 0.25 | Tc |
+| … | … | … |
+| path_65399 | 8174.5  path < 8174.75 | Tc |
+| path_65400 | 8174.75  path < 8175 | Tc |
+| path_65401 | 8175  path | Tc |
+
+Table 10.1.23.3.3-9: Report mapping for k=-3
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_00000 | path < -8175 | Tc |
+| path_00001 | -8175  path < -8174.8750 | Tc |
+| path_00002 | -8174.8750 path < -8174.7500 | Tc |
+|  |  | … |
+| path_065400 | -0.25  path < 0 | Tc |
+| path_065401 | 0  path < 0.25 | Tc |
+| … | … | … |
+| path_130799 | 8174.7500  path < 8174.8750 | Tc |
+| path_130800 | 8174.8750  path < 8175 | Tc |
+| path_130801 | 8175  path | Tc |
+
+Table 10.1.23.3.3-10: Report mapping for k=-4
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_000000 | path < -8175 | Tc |
+| path_000001 | -8175  path < -8174.9375 | Tc |
+| path_000002 | -8174.9375 path < -8174.8750 | Tc |
+|  |  | … |
+| path_130800 | -0.25  path < 0 | Tc |
+| path_130801 | 0  path < 0.25 | Tc |
+| … | … | … |
+| path_261599 | 8174.8750  path < 8174.9375 | Tc |
+| path_261600 | 8174.9375  path < 8175 | Tc |
+| path_261601 | 8175  path | Tc |
+
+Table 10.1.23.3.3-11: Report mapping for k=-5
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_0000000 | path < -8175 | Tc |
+| path_0000001 | -8175  path < -8174.9688 | Tc |
+| path_0000002 | -8174.9688  path < -8174.9375 | Tc |
+|  |  | … |
+| path_0261600 | -0.0312  path < 0 | Tc |
+| path_0261601 | 0  path < 0.0312 | Tc |
+| … | … | … |
+| path_523199 | 8174.9375  path < 8174.9688 | Tc |
+| path_523200 | 8174.9688  path < 8175 | Tc |
+| path_523201 | 8175  path | Tc |
+
+Table 10.1.23.3.3-12: Report mapping for k=-6
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_0000000 | path < -8175 | Tc |
+| path_0000001 | -8175  path < -8174.9844 | Tc |
+| path_0000002 | -8174.9844  path < -8174.9688 | Tc |
+|  |  | … |
+| path_0523200 | -0.0156  path < 0 | Tc |
+| path_0523201 | 0  path < 0.0156 | Tc |
+| … | … | … |
+| path_1046399 | 8174.9688  path < 8174.9844 | Tc |
+| path_1046400 | 8174.9844  path < 8175 | Tc |
+| path_1046401 | 8175  path | Tc |
+
+### 10.1.23A RSTD Measurements Based on PRS Aggregation
+
+#### 10.1.23A.1 Introduction
+
+The requirements in clause 10.1.23A shall apply, provided the UE has received nr-DL-TDOA-RequestLocationInformation message with nr-DL-PRS-JointMeasurementRequestedPFL-List from LMF via LPP TS 37.355 [34] requesting the UE to report one or more DL RSTD measurements defined in TS 38.215 [4] with aggregated measurement. The requirements in clause 10.1.23A shall apply:
+
+- when UE is in RRC_CONNECTED state and the measurement is performed with MG or without MG,
+
+- when UE is in RRC_INACTIVE state,
+
+- when UE is in RRC_IDLE state.
+
+10.1.23A.2 Measurement Accuracy Requirements
+
+When UE measures RSTD on PRS resources belonging to different PFLs or different PFL combinations, then the RSTD accuracy is defined as the accuracy corresponding to the largest accuracy value among different PFLs or different PFL combinations.
+
+The requirements in this clause for 3-PFL and 2-PFL apply provided that:
+
+- PRS resources linked for aggregation saftisfy all the conditions specified in TS 38.214 [26] clause 5.1.6.5.3.
+
+- The spacing between the center frequencies of adjacent PFLs containing PRS resources linked for aggregation does not exceed the nominal channel spacing for intra-band contiguous CA defined in TS 38.101-1 [18], clause 5.4A.1 for FR1, and in TS 38.101-2, [19] clause 5.4A.1 for FR2-1.
+
+The accuracy requirements for RSTD measurement based on PRS Aggregation shall be within ±(X+Y+Z+Δ) Tc.
+
+X is defined in table 10.1.23A.2-1 for AWGN channel and table 10.1.23A.2-3 for fading channel for FR1, provided that the following conditions are met:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for RSTD measurements are fulfilled according to annex B.2.14 for a corresponding Band for each relevant PRS resource configured for measurement.
+
+- UE does not perform positioning measurement with reduced number of samples.
+
+X is defined in table 10.1.23A.2-2 for AWGN channel and table 10.1.23A.2-4 for fading channel for FR2, provided that the following conditions are met:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for RSTD measurements are fulfilled according to annex B.2.14 for a corresponding Band for each relevant PRS resource configured for measurement.
+
+-  UE does not perform positioning measurement with reduced number of samples.
+
+X is defined in table 10.1.23A.2-5 for AWGN channel in FR1, provided that the following conditions are met:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for RSTD measurements are fulfilled according to annex B.2.14 for a corresponding Band for each relevant PRS resource configured for measurement.
+
+- UE supports positioning measurement with reduced number of sample and is indicated by LMF to perform positioning measurement with reduced number of samples.
+
+X is defined in table 10.1.23A.2-6 for AWGN channel in FR2, provided that the following conditions are met:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for RSTD measurements are fulfilled according to annex B.2.14 for a corresponding Band for each relevant PRS resource configured for measurement.
+
+- UE supports positioning measurement with reduced number of sample and is indicated by LMF to perform positioning measurement with reduced number of samples.
+
+NOTE: The requriements for fading channel in this clause are derived based on TDL-A (30 ns delay spread, 5Hz) and TDL-C (60 ns delay spread, 300 Hz) channel models for FR1 and FR2 respectively.
+
+If the UE doesn’t support Rx TEG reporting for RSTD measurement or when the measurements of reference cell and neighbour cell belong to different Rx TEGs, Y, Z and Δ are defined as follows:
+
+- When UE measures RSTD on PRS resources belonging to same PFL or same PFL combination, Y=32 Tc, provided that the time offset between the two PRS resource instances from the reference cell and the neighbor cell, which are used for a single RSTD estimate, is no greater than 160 ms.
+
+- When UE measures RSTD on PRS resources belonging different PFLs or different PFL combinations, Y=256 Tc, provided that the time offset between the two PRS resource instances from the reference cell and the neighbor cell, which are used for a single RSTD estimate, is no greater than 1280 ms.
+
+- Z is defined in table 10.1.23A.2-7 for FR1 and table 10.1.23A.2-9 for FR2, respectively, where the PRS BW refers to the sum of the PRS PRB numbers across the aggregated PFLs.
+
+- Δ is zero when UE measures RSTD on PRS resources belonging to same PFL or same PFL combination and is defined in table 10.1.23A.2-8 for FR1 and table 10.1.23A.2-10 for FR2, respectively, when UE measures RSTD on PRS resources belonging different PFLs or different PFL combinations, where the PRS BW refers to the sum of the PRS PRB numbers across the aggregated PFLs.
+
+If the measurements of reference cell and neighbour cell belong to the same Rx TEG, i.e. associated and reported with a common Rx TEG ID, then the sum of Y+Z+Δ is equal to the timing error margin of the Rx TEG reported in nr-UE-RxTEG-TimingErrorMargin. The timing error margin reported via nr-UE-RxTEG-TimingErrorMargin cannot be larger than the value of (Y+Z+Δ) defined when the UE does not associate the measurements with the same Rx TEG.
+
+Table 10.1.23A.2-1: RSTD absolute accuracy in FR1 for AWGN channel
+
+| Accuracy for 2 PFLs | Accuracy for 3 PFLs | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS SCS | PRS bandwidth per PFLNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 |  | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 20 | 16 | (PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i ≥-13dB | 15 | ≥ 104 | ≥ 1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 11 | 6 |  | 30 | ≥ 132 | ≥ 1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 6 | 4 |  |  | 272 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 11 | 6 |  | 60 | ≥ 64 | ≥ 1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| 5 | 4 |  |  | 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| NOTE 1: Minimum PRS bandwidth per PFL, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i among all the aggregated PFLs.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6]. NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |  |  |  |
+
+Table 10.1.23A.2-2: RSTD absolute accuracy in FR2 for AWGN channel
+
+| Accuracy for 2 PFLs | Accuracy for 3 PFLs | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS SCS | PRS bandwidth per PFLNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)          Note 2 | Io Note 3 range |  |
+|  |  |  |  |  |  | Minimum Io | Maximum Io |
+| Tc Note 4 |  | dB | kHz | PRB |  | dBm/SCS | dBm/BWChannel |
+| 11 | 6 | (PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i ≥-13dB | 60 | ≥ 64 | ≥ 1 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 5 | 4 |  |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 |
+| 6 | 4 |  | 120 | ≥ 64 | ≥ 1 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 3 | 2 |  |  | ≥ 128 | ≥ 1 | Note 5 | Note 5 |
+| NOTE 1: Minimum PRS bandwidth per PFL, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i among all the aggregated PFLs.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |  |  |
+
+Table 10.1.23A.2-3: RSTD absolute accuracy in FR1 for fading channel
+
+| Accuracy for 2 PFLs | Accuracy for 3 PFLs | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS SCS | PRS bandwidth per PFLNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 |  | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 38 | 30 | (PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i ≥-13dB | 15 | ≥ 104 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 29 | 29 |  | 30 | ≥ 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 27 | 26 |  |  | 272 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 29 | 35 |  | 60 | ≥ 64 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 27 | 31 |  |  | 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| NOTE 1: Minimum PRS bandwidth per PFL, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i among all the aggregated PFLs.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1.23A.2-1. |  |  |  |  |  |  |  |  |
+
+Table 10.1.23A.2-4: RSTD absolute accuracy in FR2 for fading channel
+
+| Accuracy for 2 PFLs | Accuracy for 3 PFLs | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS SCS | PRS bandwidth per PFLNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)          Note 2 | Io Note 3 range |  |
+|  |  |  |  |  |  | Minimum Io | Maximum Io |
+| Tc Note 4 |  | dB | kHz | PRB |  | dBm/SCS | dBm/BWChannel |
+| 71 | 51 | (PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i ≥-13dB | 60 | ≥ 64 | ≥ 1 | Note 5 | Note 5 |
+| 55 | 38 |  |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 |
+| 72 | 49 |  | 120 | ≥ 64 | ≥ 1 | Note 5 | Note 5 |
+| 56 | 53 |  |  | ≥ 128 | ≥ 1 | Note 5 | Note 5 |
+| NOTE 1: Minimum PRS bandwidth per PFL, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i among all the aggregated PFLs.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1.23A.2-2. |  |  |  |  |  |  |  |
+
+Table 10.1.23A.2-5: RSTD absolute accuracy in FR1 for AWGN channel with reduced number of samples
+
+| Accuracy for 2 PFLs | Accuracy for 3 PFLs | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS SCS | PRS bandwidth per PFLNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 |  | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 24 | 20 | (PRS Ês/Iot)ref ≥-3dB (PRS Ês/Iot)i ≥-6dB | 15 | ≥ 104 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 13 | 7 |  | 30 | ≥ 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 6 | 5 |  |  | 272 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 13 | 7 |  | 60 | ≥ 64 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 6 | 5 |  |  | 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| NOTE 1: Minimum PRS bandwidth per PFL, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i among all the aggregated PFLs.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1.23A.2-1. |  |  |  |  |  |  |  |  |
+
+Table 10.1.23A.2-6: RSTD absolute accuracy in FR2 for AWGN channel with reduced number of samples
+
+| Accuracy for 2 PFLs | Accuracy for 3 PFLs | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS SCS | PRS bandwidth per PFLNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)          Note 2 | Io Note 3 range |  |
+|  |  |  |  |  |  | Minimum Io | Maximum Io |
+| Tc Note 4 |  | dB | kHz | PRB |  | dBm/SCS | dBm/BWChannel |
+| 13 | 7 | (PRS Ês/Iot)ref ≥-3dB (PRS Ês/Iot)i ≥-6dB | 60 | ≥ 64 | ≥ 1 | Note 5 | Note 5 |
+| 6 | 5 |  |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 |
+| 6 | 4 |  | 120 | ≥ 64 | ≥ 1 | Note 5 | Note 5 |
+| 3 | 2 |  |  | ≥ 128 | ≥ 1 | Note 5 | Note 5 |
+| NOTE 1: Minimum PRS bandwidth per PFL, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i among all the aggregated PFLs.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1.23A.2-2. |  |  |  |  |  |  |  |
+
+Table 10.1.23A.2-7: Margin for RSTD measurement accuracy in FR1
+
+| PRS BW (PRB number) |  |  | Margin (Tc) |
+| --- | --- | --- | --- |
+| SCS=15kHz | SCS=30kHz | SCS=60kHz |  |
+| ≥ 104 | N/A | N/A | 36 |
+| N/A | ≥ 132 | ≥ 64 | 16 |
+| N/A | N/A | ≥ 132 | 12 |
+
+Table 10.1.23A.2-8: Margin Δ for RSTD measurement accuracy in FR1
+
+| PRS BW (PRB number) |  |  | Margin (Tc) |
+| --- | --- | --- | --- |
+| SCS=15kHz | SCS=30kHz | SCS=60kHz |  |
+| ≥ 104 | N/A | N/A | 32 |
+| N/A | ≥ 132 | ≥ 64 | 16 |
+| N/A | N/A | ≥ 132 | 8 |
+
+Table 10.1.23A.2-9: Margin for RSTD measurement accuracy in FR2
+
+| PRS BW (PRB number) |  | Margin (Tc) |
+| --- | --- | --- |
+| SCS=60kHz | SCS=120kHz |  |
+| ≥ 64 | N/A | 32 |
+| ≥ 132 | ≥ 64 | 16 |
+| N/A | ≥ 128 | 12 |
+
+Table 10.1.23A.2-10: Margin Δ for RSTD measurement accuracy in FR2
+
+| PRS BW (PRB number) |  | Margin (Tc) |
+| --- | --- | --- |
+| SCS=60kHz | SCS=120kHz |  |
+| ≥ 64 | N/A | 16 |
+| ≥ 132 | ≥ 64 | 8 |
+| N/A | ≥ 128 | 4 |
+
+
+#### 10.1.23A.3 Report Mapping
+
+##### 10.1.23A.3.1 Absolute DL RSTD Measurement Reporting
+
+The report mapping as defined in clause 10.1.23.3.1 shall apply.
+
+##### 10.1.23A.3.2 Differential Reporting for DL RSTD Measurement
+
+The report mapping as defined in clause 10.1.23.3.2 shall apply.
+
+##### 10.1.23A.3.3 Additional Path Report Mapping for DL RSTD
+
+The report mapping as defined in clause 10.1.23.3.3 shall apply.
+
+### 10.1.24 PRS-RSRP Measurements
+
+#### 10.1.24.1 Introduction
+
+The requirements in clause 10.1.24 shall apply, provided the UE has received nr-DL-TDOA-RequestLocationInformation or nr-Multi-RTT-RequestLocationInformation or nr-DL-AoD-RequestLocationInformation message from LMF via LPP [34] requesting the UE to report one or more DL PRS-RSRP measurements defined in TS 38.215 [4].
+
+The requirements in clause 10.1.24 apply for UE in RRC_CONNECTED, including PRS-RSRP measurement with MG and outside MG, as well as for UE in RRC_INACTIVE and RRC_IDLE state. For PRS-RSRP measurement in FR2, the requirements apply with and without reduced Rx beam sweeping factor.
+
+#### 10.1.24.2 Measurement Accuracy Requirements
+
+##### 10.1.24.2.1 Absolute PRS-RSRP accuracy
+
+The absolute accuracy requirements for PRS-RSRP measurement for FR1 defined in table 10.1.24.2.1-1 are valid under the following conditions:
+
+- Conditions defined in 38.101-1 clause7.3 for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.2.14 for a corresponding Band
+
+- UE does not support positioning measurements with reduced number of samples, or LMF does not indicate UE to perform positioning measurements with reduced number of samples
+
+The absolute accuracy requirements for PRS-RSRP measurement for FR2 defined in table 10.1.24.2.1-2 are valid under the following conditions:
+
+- Conditions defined in 38.101-2 [19] clause7.3 for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.2.14 for a corresponding Band
+
+- UE does not support positioning measurements with reduced number of samples, or LMF does not indicate UE to perform positioning measurements with reduced number of samples
+
+Table 10.1.24.2.1-1: PRS-RSRP absolute accuracy for FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 7 range |  |  |  |  |
+|  |  |  |  |  | NR operating band groups Note 8 | Minimum Io Note 1dBm / SCSPRS |  |  | Maximum Io |
+| dB | dB | dB | PRB | - |  | dBm / SCSPRS |  |  | dBm/BWChannel |
+|  |  |  |  |  |  | dBm/15 kHz Note 6 | dBm/30 kHz Note 6 | dBm/60 kHz Note 6 |  |
+| ±3.5 | ±8 | ≥-3 dB | ≥24 | All | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -124 | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -123.5 | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -123 | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -122.5 | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -122 | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -121.5 | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -121 | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -120.5 | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -117.5 | -114.5 | -50 |
+|  |  |  |  |  | Note 4 |  |  |  |  |
+|  |  |  |  |  | Note 4 |  |  |  |  |
+| ±8.5 | ±13 | ≥-13 dB | 24 ≤ BW ≤ 52 | All | Note 4 |  |  |  |  |
+| ±6 | ±10.5 |  | 52< BW≤ 104 | All | Note 4 |  |  |  |  |
+| ±4.5 | ±9 |  | BW >104 | All | Note 4 |  |  |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: Void.NOTE 3: PRS bandwidth is as indicated in prs-Bandwidth in the OTDOA or DL-AoD assistance data defined in [34].NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 24 PRB.NOTE 5: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 6: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 7: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 8: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |  |
+
+Table 10.1.24.2.1-2: PRS-RSRP absolute accuracy for FR2
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 7 range |  |  |
+|  |  |  |  |  | Minimum Io Note 1dBm / SCSPRS |  | Maximum Io |
+| dB | dB | dB | PRB | - | dBm / SCSPRS |  | dBm/BWChannel |
+|  |  |  |  |  | dBm/120 kHz Note 6 | dBm/60 kHz Note 6 |  |
+| ±5 | ±8 | ≥-3 dB | ≥24 | All | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+|  |  |  |  |  | Note 4 |  |  |
+|  |  |  |  |  | Note 4 |  |  |
+| ±8.5 | ±11.5 | ≥-13 dB | 24 ≤ BW ≤ 64 | All | Note 4 |  |  |
+| ±6 | ±9 |  | BW >64 | All | Note 4 |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: Void.NOTE 3: PRS bandwidth is as indicated in prs-Bandwidth in the OTDOA or DL-AoD assistance data defined in [34].NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 24 PRB.NOTE 5: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 6: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 7: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 8: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+The absolute accuracy requirements for PRS-RSRP measurement for FR1 defined in table 10.1.24.2.1-3 are valid under the following conditions:
+
+- Conditions defined in 38.101-1 clause7.3 for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.2.14 for a corresponding Band
+
+- UE supports positioning measurements with reduced number of samples, and LMF indicates UE to perform positioning measurements with reduced number of samples
+
+- AWGN channel
+
+The absolute accuracy requirements for PRS-RSRP measurement for FR2 defined in table 10.1.24.2.1-4 are valid under the following conditions:
+
+- Conditions defined in 38.101-2 [19] clause7.3 for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.2.14 for a corresponding Band
+
+- UE supports positioning measurements with reduced number of samples, and LMF indicates UE to perform positioning measurements with reduced number of samples
+
+- AWGN channel
+
+Table 10.1.24.2.1-3: PRS-RSRP absolute accuracy for FR1 with reduced sample number
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 6 range |  |  |  |  |  |
+|  |  |  |  |  | NR operating band groups Note 7 | Minimum Io Note 1dBm / SCSPRS |  |  |  | Maximum Io |
+| dB | dB | dB | PRB | - |  | dBm / SCSPRS |  |  |  | dBm/BWChannel |
+|  |  |  |  |  |  | dBm/15 kHz Note 5 |  | dBm/30 kHz Note 5 | dBm/60 kHz Note 5 |  |
+| ±3.5 | ±8 | ≥0 | ≥48 | All | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -124 |  | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -123.5 |  | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -123 |  | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -122.5 |  | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -122 |  | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -121.5 |  | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -121 |  | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -120.5 |  | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -117.5 |  | -114.5 | -50 |
+| ±8.5 | ±13 | ≥-6 | 48 ≤ BW ≤ 52 | All | Note 3 |  |  |  |  |  |
+| ±6 | ±10.5 |  | 52< BW≤ 104 | All | Note 3 |  |  |  |  |  |
+| ±4.5 | ±9 |  | BW >104 | All | Note 3 |  |  |  |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: PRS bandwidth is as indicated in prs-Bandwidth in the OTDOA or DL-AoD assistance data defined in [34].NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 48 PRB.NOTE 4: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 5: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 6: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 7: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |  |  |
+
+Table 10.1.24.2.1-4: PRS-RSRP absolute accuracy for FR2 with reduced sample number
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 6 range |  |  |
+|  |  |  |  |  | Minimum Io Note 1dBm / SCSPRS |  | Maximum Io |
+| dB | dB | dB | PRB | - | dBm / SCSPRS |  | dBm/BWChannel |
+|  |  |  |  |  | dBm/120 kHz Note 5 | dBm/60 kHz Note 5 |  |
+| ±5 | ±8 | ≥0 | ≥48 | All | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| ±8.5 | ±11.5 | ≥-6 | 48 ≤ BW ≤ 64 | All | Note 3 |  |  |
+| ±6 | ±9 |  | BW >64 | All | Note 3 |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: PRS bandwidth is as indicated in prs-Bandwidth in the OTDOA or DL-AoD assistance data defined in [34].NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 48 PRB.NOTE 4: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 5: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 6: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 7: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.24.2.2 Relative PRS RSRP accuracy
+
+The relative PRS-RSRP accuracy is defined as accuracy of the difference between two PRS-RSRP measurements.
+
+The relative PRS-RSRP accuracy requirements apply for the cases when PRS-RSRP is measured from PRS resources in the same PRS resource set in FR1 or FR2, and measured with same Rx beam in case of FR2.
+
+The accuracy requirements for PRS-RSRP measurement for FR1 defined in table 10.1.24.2.2-1 are valid under the following conditions:
+
+- Conditions defined in 38.101-1 clause7.3 for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.2.14 for a corresponding Band
+
+- UE does not support positioning measurements with reduced number of samples, or LMF does not indicate UE to perform positioning measurements with reduced number of samples
+
+The accuracy requirements for PRS-RSRP measurement for FR2 defined in table 10.1.24.2.2-2 are valid under the following conditions:
+
+- Conditions defined in 38.101-2 clause7.3 for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.2.14 for a corresponding Band
+
+- UE does not support positioning measurements with reduced number of samples, or LMF does not indicate UE to perform positioning measurements with reduced number of samples
+
+Table 10.1.24.2.2-1: PRS-RSRP relative accuracy for FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 7 range |  |  |  |  |
+|  |  |  |  |  | NR operating band groups Note 8 | Minimum Io Note 1dBm / SCSPRS |  |  | Maximum Io |
+| dB | dB | dB | PRB | - |  | dBm / SCSPRS |  |  | dBm/BWChannel |
+|  |  |  |  |  |  | dBm/15 kHz Note 6 | dBm/30 kHz Note 6 | dBm/60 kHz Note 6 |  |
+| ±3.5 | ±5.0 | ≥-3 dB | ≥24 | All | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -124 | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -123.5 | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -123 | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -122.5 | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -122 | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -121.5 | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -121 | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -120.5 | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -117.5 | -114.5 | -50 |
+|  |  |  |  |  | Note 4 |  |  |  |  |
+|  |  |  |  |  | Note 4 |  |  |  |  |
+| ±9.5 | ±11.0 | ≥-13 dB | 24 ≤ BW ≤ 52 | All | Note 4 |  |  |  |  |
+| ±6.5 | ±8.0 |  | 52< BW≤ 104 | All | Note 4 |  |  |  |  |
+| ±5.0 | ±6.5 |  | BW >104 | All | Note 4 |  |  |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: Void.NOTE 3: PRS bandwidth is as indicated in prs-Bandwidth in the OTDOA or DL-AoD assistance data defined in [34].NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 24 PRB.NOTE 5: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 6: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 7: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 8: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |  |
+
+Table 10.1.24.2.2-2: PRS-RSRP relative accuracy for FR2
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 7 range |  |  |
+|  |  |  |  |  | Minimum Io Note 1dBm / SCSPRS |  | Maximum Io |
+| dB | dB | dB | PRB | - | dBm / SCSPRS |  | dBm/BWChannel |
+|  |  |  |  |  | dBm/120 kHz Note 6 | dBm/60 kHz Note 6 |  |
+| ±5.0 | ±8.0 | ≥-3 dB | ≥24 | All | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+|  |  |  |  |  | Note 4 |  |  |
+|  |  |  |  |  | Note 4 |  |  |
+| ±10 | ±13 | ≥-13 dB | 24 ≤ BW ≤ 64 | All | Note 4 |  |  |
+| ±7.5 | ±10.5 |  | BW >64 | All | Note 4 |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: Void.NOTE 3: PRS bandwidth is as indicated in prs-Bandwidth in the OTDOA or DL-AoD assistance data defined in [34].NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 24 PRB.NOTE 5: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 6: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 7: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 8: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+The absolute accuracy requirements for PRS-RSRP measurement for FR1 defined in table 10.1.24.2.2-3 are valid under the following conditions:
+
+- Conditions defined in 38.101-1 clause7.3 for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.2.14 for a corresponding Band
+
+- UE supports positioning measurements with reduced number of samples, and LMF indicates UE to perform positioning measurements with reduced number of samples
+
+- AWGN channel
+
+The absolute accuracy requirements for PRS-RSRP measurement for FR2 defined in table 10.1.24.2.2-4 are valid under the following conditions:
+
+- Conditions defined in 38.101-2 [19] clause7.3 for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.2.14 for a corresponding Band
+
+- UE supports positioning measurements with reduced number of samples, and LMF indicates UE to perform positioning measurements with reduced number of samples
+
+- AWGN channel
+
+Table 10.1.24.2.2-3: PRS-RSRP relative accuracy for FR1 with reduced sample number
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 6 range |  |  |  |  |
+|  |  |  |  |  | NR operating band groups Note 7 | Minimum Io Note 1dBm / SCSPRS |  |  | Maximum Io |
+| dB | dB | dB | PRB | - |  | dBm / SCSPRS |  |  | dBm/BWChannel |
+|  |  |  |  |  |  | dBm/15 kHz Note 5 | dBm/30 kHz Note 5 | dBm/60 kHz Note 5 |  |
+| ±3.5 | ±5.0 | ≥0 | ≥48 | All | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -124 | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -123.5 | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -123 | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -122.5 | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -122 | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -121.5 | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -121 | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -120.5 | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -117.5 | -114.5 | -50 |
+| ±9.5 | ±11.0 | ≥-6 | 48 ≤ BW ≤ 52 | All | Note 3 |  |  |  |  |
+| ±6.5 | ±8.0 |  | 52< BW≤ 104 | All | Note 3 |  |  |  |  |
+| ±5.0 | ±6.5 |  | BW >104 | All | Note 3 |  |  |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: PRS bandwidth is as indicated in prs-Bandwidth in the OTDOA or DL-AoD assistance data defined in [34].NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 48 PRB.NOTE 4: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 5: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 6: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 7: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |  |
+
+Table 10.1.24.2.2-4: PRS-RSRP relative accuracy for FR2 with reduced sample number
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 6 range |  |  |
+|  |  |  |  |  | Minimum Io Note 1dBm / SCSPRS |  | Maximum Io |
+| dB | dB | dB | PRB | - | dBm / SCSPRS |  | dBm/BWChannel |
+|  |  |  |  |  | dBm/120 kHz Note 5 | dBm/60 kHz Note 5 |  |
+| ±5.0 | ±8.0 | ≥0 | ≥48 | All | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+| ±10 | ±13 | ≥-6 | 48 ≤ BW ≤ 64 | All | Note 3 |  |  |
+| ±7.5 | ±10.5 |  | BW >64 | All | Note 3 |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: PRS bandwidth is as indicated in prs-Bandwidth in the OTDOA or DL-AoD assistance data defined in [34].NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 24 PRB.NOTE 4: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 5: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 6: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 8: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+#### 10.1.24.3 Report mapping
+
+##### 10.1.24.3.1 Absolute PRS-RSRP Measurement Report Mapping
+
+The reporting range of absolute PRS-RSRP measurement is defined from -156 dBm to -31 dBm with 1 dB resolution.
+
+The mapping of measured quantity is defined in table 10.1.24.3.1-1. The range in the signalling may be larger than the guaranteed accuracy range.
+
+Table 10.1.24.3.1-1: Measurement report mapping for PRS-RSRP
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| PRS_RSRP_0 | PRS-RSRP<-156 | dBm |
+| PRS_RSRP_1 | -156PRS-RSRP<-155 | dBm |
+| PRS_RSRP_2 | -155PRS-RSRP<-154 | dBm |
+| PRS_RSRP_3 | -154PRS-RSRP<-153 | dBm |
+| PRS_RSRP_4 | -153PRS-RSRP<-152 | dBm |
+| PRS_RSRP_5 | -152PRS-RSRP<-151 | dBm |
+| PRS_RSRP_6 | -151PRS-RSRP<-150 | dBm |
+| PRS_RSRP_7 | -150PRS-RSRP<-149 | dBm |
+| PRS_RSRP_8 | -149PRS-RSRP<-148 | dBm |
+| PRS_RSRP_9 | -148PRS-RSRP<-147 | dBm |
+| PRS_RSRP_10 | -147PRS-RSRP<-146 | dBm |
+| PRS_RSRP_11 | -146PRS-RSRP<-145 | dBm |
+| PRS_RSRP_12 | -145PRS-RSRP<-144 | dBm |
+| PRS_RSRP_13 | -144PRS-RSRP<-143 | dBm |
+| PRS_RSRP_14 | -143PRS-RSRP<-142 | dBm |
+| PRS_RSRP_15 | -142PRS-RSRP<-141 | dBm |
+| PRS_RSRP_16 | -141PRS-RSRP<-140 | dBm |
+| PRS_RSRP_17 | -140PRS-RSRP<-139 | dBm |
+| PRS_RSRP_18 | -139PRS-RSRP<-138 | dBm |
+| … | … | … |
+| PRS_RSRP_111 | -46PRS-RSRP<-45 | dBm |
+| PRS_RSRP_112 | -45PRS-RSRP<-44 | dBm |
+| PRS_RSRP_113 | -44PRS-RSRP<-43 | dBm |
+| PRS_RSRP_114 | -43PRS-RSRP<-42 | dBm |
+| PRS_RSRP_115 | -42PRS-RSRP<-41 | dBm |
+| PRS_RSRP_116 | -41PRS-RSRP<-40 | dBm |
+| PRS_RSRP_117 | -40PRS-RSRP<-39 | dBm |
+| PRS_RSRP_118 | -39PRS-RSRP<-38 | dBm |
+| PRS_RSRP_119 | -38PRS-RSRP<-37 | dBm |
+| PRS_RSRP_120 | -37PRS-RSRP<-36 | dBm |
+| PRS_RSRP_121 | -36PRS-RSRP<-35 | dBm |
+| PRS_RSRP_122 | -35PRS-RSRP<-34 | dBm |
+| PRS_RSRP_123 | -34PRS-RSRP<-33 | dBm |
+| PRS_RSRP_124 | -33PRS-RSRP<-32 | dBm |
+| PRS_RSRP_125 | -32PRS-RSRP<-31 | dBm |
+| PRS_RSRP_126 | -31PRS-RSRP | dBm |
+
+##### 10.1.24.3.2 Differential Report Mapping for PRS-RSRP Measurement
+
+The reporting range of differential PRS-RSRP is defined from -30 dB to 0 dB with 1 dB resolution when nr-DL-AoD-RequestLocationInformation message is received.
+
+The mapping of measured quantity is defined in table 10.1.24.3.2-1. The range in the signalling may be larger than the guaranteed accuracy range.
+
+The reporting range of differential PRS-RSRP is defined from -30 dB to 30 dB with 1 dB resolution when nr-DL-TDOA-RequestLocationInformation or nr-Multi-RTT-RequestLocationInformation is received.
+
+The mapping of measured quantity is defined in Table 10.1.24.3.2-2. The range in the signalling may be larger than the guaranteed accuracy range or the range supported by the UE receiver for differential RSRP measured on different PRS resources in frequency domain at the same time.
+
+Table 10.1.24.3.2-1: Measurement report mapping for differential PRS-RSRP
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| DIFFRSRP_0 | -30≥ΔRSRP | dB |
+| DIFFRSRP_1 | -29≥ΔRSRP>-30 | dB |
+| DIFFRSRP_2 | -28≥ΔRSRP>-29 | dB |
+| DIFFRSRP_3 | -27≥ΔRSRP>-28 | dB |
+| DIFFRSRP_4 | -26≥ΔRSRP>-27 | dB |
+| DIFFRSRP_5 | -25≥ΔRSRP>-26 | dB |
+| DIFFRSRP_6 | -24≥ΔRSRP>-25 | dB |
+| DIFFRSRP_7 | -23≥ΔRSRP>-24 | dB |
+| DIFFRSRP_8 | -22≥ΔRSRP>-23 | dB |
+| DIFFRSRP_9 | -21≥ΔRSRP>-22 | dB |
+| DIFFRSRP_10 | -20≥ΔRSRP>-21 | dB |
+| DIFFRSRP_11 | -19≥ΔRSRP>-20 | dB |
+| DIFFRSRP_12 | -18≥ΔRSRP>-19 | dB |
+| DIFFRSRP_13 | -17≥ΔRSRP>-18 | dB |
+| DIFFRSRP_14 | -16≥ΔRSRP>-17 | dB |
+| DIFFRSRP_15 | -15≥ΔRSRP>-16 | dB |
+| DIFFRSRP_16 | -14≥ΔRSRP>-15 | dB |
+| DIFFRSRP_17 | -13≥ΔRSRP>-14 | dB |
+| DIFFRSRP_18 | -12≥ΔRSRP>-13 | dB |
+| DIFFRSRP_19 | -11≥ΔRSRP>-12 | dB |
+| DIFFRSRP_20 | -10≥ΔRSRP>-11 | dB |
+| DIFFRSRP_21 | -9≥ΔRSRP>-10 | dB |
+| DIFFRSRP_22 | -8≥ΔRSRP>-9 | dB |
+| DIFFRSRP_23 | -7≥ΔRSRP>-8 | dB |
+| DIFFRSRP_24 | -6≥ΔRSRP>-7 | dB |
+| DIFFRSRP_25 | -5≥ΔRSRP>-6 | dB |
+| DIFFRSRP_26 | -4≥ΔRSRP>-5 | dB |
+| DIFFRSRP_27 | -3≥ΔRSRP>-4 | dB |
+| DIFFRSRP_28 | -2≥ΔRSRP>-3 | dB |
+| DIFFRSRP_29 | -1≥ΔRSRP>-2 | dB |
+| DIFFRSRP_30 | 0≥ΔRSRP>-1 | dB |
+
+Table 10.1.24.3.2-2: Measurement report mapping for differential PRS-RSRP
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| DIFFRSRP_0 | -30≥ΔRSRP | dB |
+| DIFFRSRP_1 | -29≥ΔRSRP>-30 | dB |
+| DIFFRSRP_2 | -28≥ΔRSRP>-29 | dB |
+| DIFFRSRP_3 | -27≥ΔRSRP>-28 | dB |
+| DIFFRSRP_4 | -26≥ΔRSRP>-27 | dB |
+| DIFFRSRP_5 | -25≥ΔRSRP>-26 | dB |
+| DIFFRSRP_6 | -24≥ΔRSRP>-25 | dB |
+| DIFFRSRP_7 | -23≥ΔRSRP>-24 | dB |
+| DIFFRSRP_8 | -22≥ΔRSRP>-23 | dB |
+| DIFFRSRP_9 | -21≥ΔRSRP>-22 | dB |
+| DIFFRSRP_10 | -20≥ΔRSRP>-21 | dB |
+| DIFFRSRP_11 | -19≥ΔRSRP>-20 | dB |
+| DIFFRSRP_12 | -18≥ΔRSRP>-19 | dB |
+| DIFFRSRP_13 | -17≥ΔRSRP>-18 | dB |
+| DIFFRSRP_14 | -16≥ΔRSRP>-17 | dB |
+| … | … | … |
+| DIFFRSRP_25 | -5≥ΔRSRP>-6 | dB |
+| DIFFRSRP_26 | -4≥ΔRSRP>-5 | dB |
+| DIFFRSRP_27 | -3≥ΔRSRP>-4 | dB |
+| DIFFRSRP_28 | -2≥ΔRSRP>-3 | dB |
+| DIFFRSRP_29 | -1≥ΔRSRP>-2 | dB |
+| DIFFRSRP_30 | 0≥ΔRSRP>-1 | dB |
+| DIFFRSRP_31 | 1≥ΔRSRP>0 | dB |
+| DIFFRSRP_32 | 2≥ΔRSRP>1 | dB |
+| DIFFRSRP_33 | 3≥ΔRSRP>2 | dB |
+| DIFFRSRP_34 | 4≥ΔRSRP>3 | dB |
+| DIFFRSRP_35 | 5≥ΔRSRP>4 | dB |
+| DIFFRSRP_36 | 6≥ΔRSRP>5 | dB |
+| … | … | … |
+| DIFFRSRP_47 | 17≥ΔRSRP>16 | dB |
+| DIFFRSRP_48 | 18≥ΔRSRP>17 | dB |
+| DIFFRSRP_49 | 19≥ΔRSRP>18 | dB |
+| DIFFRSRP_50 | 20≥ΔRSRP>19 | dB |
+| DIFFRSRP_51 | 21≥ΔRSRP>20 | dB |
+| DIFFRSRP_52 | 22≥ΔRSRP>21 | dB |
+| DIFFRSRP_53 | 23≥ΔRSRP>-22 | dB |
+| DIFFRSRP_54 | 24≥ΔRSRP>23 | dB |
+| DIFFRSRP_55 | 25≥ΔRSRP>24 | dB |
+| DIFFRSRP_56 | 26≥ΔRSRP>25 | dB |
+| DIFFRSRP_57 | 27≥ΔRSRP>26 | dB |
+| DIFFRSRP_58 | 28≥ΔRSRP>27 | dB |
+| DIFFRSRP_59 | 29≥ΔRSRP>28 | dB |
+| DIFFRSRP_60 | 30≥≥ΔRSRP>29 | dB |
+| DIFFRSRP_61 | ΔRSRP>30 | dB |
+
+### 10.1.24A PRS-RSRP Measurements Based on PRS Aggregation
+
+#### 10.1.24A.1 Introduction
+
+The requirements in clause 10.1.24A shall apply, provided that the UE has received nr-DL-TDOA-RequestLocationInformation or nr-Multi-RTT-RequestLocationInformation message from LMF via LPP TS 37.355 [34] requesting the UE to report one or more DL PRS-RSRP measurements defined in TS 38.215 [4] performed by aggregating PRS resources from multiple PFLs via nr-DL-PRS-JointMeasurementRequested TS 37.355 [34].
+
+The requirements in clause 10.1.24A shall apply:
+
+- when UE is in RRC_CONNECTED state and the measurement is performed with MG,
+
+- when UE is in RRC_INACTIVE state,
+
+- when UE is in RRC_IDLE state.
+
+#### 10.1.24A.2 Measurement Accuracy Requirements
+
+##### 10.1.24A.2.1 Absolute PRS RSRP Accuracy Requirement
+
+The accuracy requirements in clause 10.1.24.2.1 corresponding to the total aggregated PRS bandwidth shall apply.
+
+##### 10.1.24A.2.2 Relative PRS RSRP Accuracy Requirement
+
+The accuracy requirements in clause 10.1.24.2.2 corresponding to the total aggregated PRS bandwidth shall apply.
+
+#### 10.1.24A.3 Report Mapping
+
+##### 10.1.24A.3.1 Absolute PRS-RSRP Measurement Report Mapping
+
+The absolute report mapping for PRS-RSRP measurement in clause 10.1.24.3.1 shall apply.
+
+##### 10.1.24A.3.2 Differential Report Mapping for PRS-RSRP Measurement
+
+The differential report mapping for PRS-RSRP measurement in clause 10.1.24.3.2 shall apply.
+
+### 10.1.25 UE Rx-Tx Time Difference Measurements
+
+#### 10.1.25.1 Introduction
+
+The requirements in clause 10.1.25 shall apply, provided the UE has received nr-Multi-RTT-RequestLocationInformation message from LMF via LPP [31] requesting the UE to report one or more UE Rx-Tx time difference measurements defined in TS 38.215 [4]. The requirements in clause 10.1.25 shall apply:
+
+- when UE is in RRC_CONNECTED state and the measurement is performed with MG or without MG,
+
+- when UE is in RRC_INACTIVE state.
+
+#### 10.1.25.2 Measurement Accuracy Requirements
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall not apply, if:
+
+NTA_offset defined in table 7.1.2-2 changes during the UE Rx-Tx measurement period or
+
+if the uplink transmission timing changes during the UE Rx-Tx measurement period due to the network-configured Timing Advance.
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall apply provided that:
+
+- The UE transmits SRS within the range from -160 ms to 160 ms of at least one DL PRS resource of each of the TRPs in the assistance data.
+
+If the uplink transmission timing changes during the UE Rx-Tx measurement period due to the autonomous timing adjustment defined in clause 7.1.2 then:
+
+- UE Rx-Tx measurement accuracy requirements shall apply for a cell, which is also the downlink reference cell (defined in clause 7.1.1) for SRS transmission even if the uplink transmission timing changes during the UE Rx-Tx measurement period due to autonomous adjustment.
+
+- UE Rx-Tx measurement accuracy requirements shall not apply for a cell, which is not the downlink reference cell (defined in clause 7.1.1) for SRS transmission, if the uplink transmission timing changes during the UE Rx-Tx measurement period due to autonomous adjustment.
+
+When a serving cell change occurs during the UE Rx-Tx measurement period, the UE Rx-Tx time difference measurement accuracy requirements in this clause shall apply provided that the serving cell change does not impact SRS configuration for the UE Rx-Tx measurement.
+
+The relative UE Rx-Tx measurement accuracy in this clause is defined as accuracy of the difference between two UE Rx-Tx measurements.
+
+The accuracy requirements in table 10.1.25.2-1 for FR1 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+AWGN propagation condition.
+
+Table 10.1.25.2-1: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | RB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ± (78+) | -3 | ≥24 | 15 | ≥4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 |  |
+| ± (59+) |  | ≥52 |  | ≥1 | Note 6 | Note 6 | Note 6 |
+| ± (30+) |  | >104 |  | ≥1 | Note 6 | Note 6 | Note 6 |
+| ± (57+) |  | ≥24 | 30 | ≥4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 |  |
+| ± (30+) |  | ≥48 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (15+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (29+) |  | ≥24 | 60 | ≥4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 |  |
+| ± (15+) |  | ≥ 64 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (7+) |  | ≥ 132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (101+) | -13 | ≥24 | 15 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (75+) |  | ≥52 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (37+) |  | >104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (58+) |  | ≥24 | 30 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (39+) |  | ≥48 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (16+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (36+) |  | ≥24 | 60 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (16+) |  | ≥ 64 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (8+) |  | ≥ 132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and  dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from Table 10.1.25.2-5. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.25.2-1a for FR1 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+Number of measurement samples is less than 4
+
+AWGN propagation condition.
+
+Table 10.1.25.2-1a: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN with reduced measurement samples
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ± (59+) | 0 | ≥52 | 15 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| ± (30+) |  | >104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (30+) |  | ≥48 | 30 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| ± (15+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (15+) |  | ≥64 | 60 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| ± (7+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (75+) | -6 | ≥52 | 15 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (37+) |  | >104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (39+) |  | ≥48 | 30 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (16+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (16+) |  | ≥64 | 60 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (8+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and  dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from Table 10.1.25.2-5. |  |  |  |  |  |  |  |
+
+The relative accuracy requirements in table 10.1.25.2-1b for FR1 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+AWGN propagation condition.
+
+the two UE Rx-Tx time difference measurements are associated with the same RxTx TEG
+
+Table 10.1.25.2-1b: UE Rx-Tx time difference relative measurement accuracy in FR1 in AWGN with TEG reporting
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 132 +ΔNote 7 | (PRS Ês/Iot)j ≥-6 dB (PRS Ês/Iot)i ≥-13 dB | 15 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 98 +Δ |  |  | ≥ 52 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 42 +Δ |  |  | ≥ 104 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 75 +Δ |  | 30 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 48 +Δ |  |  | ≥ 48 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 24 +Δ |  |  | ≥ 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 50 +Δ |  | 60 | ≥24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| 24 +Δ |  |  | ≥ 64 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 10 +Δ |  |  | ≥ 132 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of resource j and resource i.NOTE 2:  Minimum number of PRS resource repetitions among resource j and resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7: Δis the value of the timing error margin for the RxTx TEG, reported via nr-UE-RxTxTEG-TimingErrorMargin. Δ cannot be larger than the sum of the margins in table 10.1.25.2-5 (dependent on PRS/SRS BW) for any pair of individual UE Rx-Tx time difference measurements associated with the RxTx TEG. . |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.25.2-2 for FR1 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+Fading propagation condition.
+
+Table 10.1.25.2-2: UE Rx-Tx time difference measurement accuracy in FR1 in fading
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ± (137+) | -3 | ≥24 | 15 | ≥4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 |  |
+| ± (96+) |  | ≥52 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (62+) |  | >104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (87+) |  | ≥24 | 30 | ≥4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 |  |
+| ± (68+) |  | ≥48 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (44+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (59+) |  | ≥24 | 60 | ≥4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 |  |
+| ± (42+) |  | ≥ 64 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (36+) |  | ≥ 132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (180+) | -13 | ≥24 | 15 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (98+) |  | ≥52 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (68+) |  | >104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (87+) |  | ≥24 | 30 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (85+) |  | ≥48 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (44+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (139+) |  | ≥24 | 60 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (46+) |  | ≥ 64 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± (30+) |  | ≥ 132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter  dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and  dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:    is the margin determined from Table 10.1.25.2-5. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.25.2-3 for FR2 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+AWGN propagation condition.
+
+Table 10.1.25.2-3: UE Rx-Tx time difference measurement accuracy in FR2 in AWGN
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | IoNote 4 range |  |
+|  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  | dBm / SCSPRS | dBm/BWChannel |
+| ± (22+) | -3 | ≥24 | 60 | ≥4 | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ± (15+) |  | ≥64 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (7+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (12+) |  | ≥32 | 120 | ≥4 | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ± (7+) |  | ≥64 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (4+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (35+) | -13 | ≥24 | 60 | ≥4 | NOTE 6 | NOTE 6 |
+| ± (15+) |  | ≥64 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (7+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (14+) |  | ≥32 | 120 | ≥4 | NOTE 6 | NOTE 6 |
+| ± (9+) |  | ≥64 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (4+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter  dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and  dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:    is the margin determined from Table 10.1.25.2-6. |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.25.2-3a for FR2 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band
+
+Number of measurement samples is less than 4
+
+AWGN propagation condition.
+
+Table 10.1.25.2-3a: UE Rx-Tx time difference measurement accuracy in FR2 in AWGN with reduced measurement samples
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | IoNote 4 range |  |
+|  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  | dBm / SCSPRS | dBm/BWChannel |
+| ± (15+) | 0 | ≥64 | 60 | ≥1 | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | NOTE 6 |
+| ± (7+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (7+) |  | ≥64 | 120 | ≥1 | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | NOTE 6 |
+| ± (4+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (15+) | -6 | ≥64 | 60 | ≥1 | NOTE 6 | NOTE 6 |
+| ± (7+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (9+) |  | ≥64 | 120 | ≥1 | NOTE 6 | NOTE 6 |
+| ± (4+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and  dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from Table 10.1.25.2-6. |  |  |  |  |  |  |
+
+The relative accuracy requirements in table 10.1.25.2-3b for FR2 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band
+
+AWGN propagation condition.
+
+the two UE Rx-Tx time difference measurements are associated with the same RxTx TEG
+
+Table 10.1.25.2-3b: UE Rx-Tx time difference relative measurement accuracy in FR2 in AWGN with TEG reporting
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)          Note 2 | Io Note 3 range |  |
+|  |  |  |  |  | Minimum Io | Maximum Io |
+| Tc Note 4 | dB | kHz | PRB |  | dBm/SCS | dBm/BWChannel |
+| 35 +ΔNote 6 | (PRS Ês/Iot)j ≥-6 dB (PRS Ês/Iot)i ≥-13 dB | 60 | ≥ 24 | ≥ 4 | Same value as PRS_RP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 24 +Δ |  |  | ≥ 64 | ≥ 1 | Note 5 | Note 5 |
+| 11 +Δ |  |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 |
+| 24+Δ |  | 120 | ≥ 32 | ≥ 4 | Same value as PRS_RP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 13 +Δ |  |  | ≥ 64 | ≥ 1 | Note 5 | Note 5 |
+| 6 +Δ |  |  | ≥ 128 | ≥ 1 | Note 5 | Note 5 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of resource j and resource i.NOTE 2:  Minimum number of PRS resource repetitions among resource j and resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 6: Δis the value of the timing error margin for the RxTx TEG, reported via nr-UE-RxTxTEG-TimingErrorMargin. Δ cannot be larger than the sum of the margins in table 10.1.25.2-6 (dependent on PRS/SRS BW) for any pair of individual UE Rx-Tx time difference measurements associated with the RxTx TEG. |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.25.2-4 for FR2 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+Fading propagation condition.
+
+Table 10.1.25.2-4: UE Rx-Tx time difference measurement accuracy in FR2 in fading
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | IoNote 4 range |  |
+|  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  | dBm / SCSPRS | dBm/BWChannel |
+| ± (75+) | -3 | ≥24 | 60 | ≥4 | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ± (72+) |  | ≥64 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (57+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (61+) |  | ≥32 | 120 | ≥4 | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ± (64+) |  | ≥64 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (55+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (92+) | -13 | ≥24 | 60 | ≥4 | NOTE 6 | NOTE 6 |
+| ± (70+) |  | ≥64 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (57+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (60+) |  | ≥32 | 120 | ≥4 | NOTE 6 | NOTE 6 |
+| ± (66+) |  | ≥64 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ± (62+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter  dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and  dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from Table 10.1.25.2-6. |  |  |  |  |  |  |
+
+Table 10.1.25.2-5: Margin for UE Rx-Tx time difference measurement accuracy in FR1
+
+| Min(PRS BW, SRS BW) (PRB) |  |  | Margin (Tc Note 1) |
+| --- | --- | --- | --- |
+| SCS = 15 kHz | SCS = 30 kHz | SCS = 60 kHz |  |
+| ≥ 24 | N/A | N/A | 160 |
+| ≥ 52 | ≥ 24 | N/A | 80 |
+| ≥ 104 | ≥ 48 | ≥ 24 | 56 |
+| N/A | ≥ 132 | ≥ 64 | 24 |
+| N/A | N/A | ≥ 132 | 24 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies. |  |  |  |
+
+Table 10.1.25.2-6: Margin for UE Rx-Tx time difference measurement accuracy in FR2
+
+| Min(PRS BW, SRS BW) (PRB) |  | Margin (Tc Note 1) |
+| --- | --- | --- |
+| SCS = 60 kHz | SCS = 120 kHz |  |
+| ≥ 24 | N/A | 76 |
+| ≥ 64 | ≥ 32 | 32 |
+| ≥ 132 | ≥ 64 | 24 |
+| N/A | ≥ 128 | 20 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies. |  |  |
+
+#### 10.1.25.3 Report mapping
+
+Absolute UE Rx-Tx measurement reporting in clause 10.1.25.3.1, differential reporting for UE Rx-Tx measurement in clause 10.1.25.3.2, and additional path report mapping for UE Rx-Tx measurement in clause 10.1.25.3.3 applies, regardless of number of samples used to measure PRS, to report:
+
+- TEG based measurement corresponding to UE reported Rx TEG in nr-UE-Rx-TEG-ID-r17 [34],
+
+- gap-based UE Rx-Tx measurement,
+
+- gapless UE Rx-Tx measurement,
+
+- UE Rx-Tx in RRC_INACTIVE state.
+
+##### 10.1.25.3.1 Absolute UE Rx-Tx Measurement Report Mapping
+
+The reporting range for the absolute UE Rx-Tx time difference measurement (TUE Rx-Tx) is defined from -985024Tc to 985024Tc with the resolution step of 2kTc, where:
+
+Tc is defined in TS 38.211 [6],
+
+kmin≤k≤kmax,
+
+kmin = -6 and kmax = 5,
+
+k≥ timingReportingGranularityFactor TS 34.355 [34] configured by LMF via LPP for the UE Rx-Tx time difference measurement.
+
+The TUE Rx-Tx report mapping for k = {0, 1, 2, 3, 4, 5, -1, -2, -3, -4, -5, -6} are specified in tables 10.1.25.3.1-1, 10.1.25.3.1-2, 10.1.25.3.1-3, 10.1.25.3.1-4, 10.1.25.3.1-5, 10.1.25.3.1-6, 10.1.25.3.1-7, 10.1.25.3.1-8, 10.1.25.3.1-9, 10.1.25.3.1-10, 10.1.25.3.1-11, and 10.1.25.3.1-12, respectively.
+
+Table 10.1.25.3.1-1: Absolute UE Rx-Tx time difference measurement report mapping for k=0
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_0000000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_0000001 | -985024  TUE Rx-Tx < -985023 | Tc |
+| RX-TX_TIME_DIFFERENCE_0000002 | -985023  TUE Rx-Tx < -985022 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_0985024 | -1  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_0985025 | 0  TUE Rx-Tx < 1 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_1970047 | 985022  TUE Rx-Tx < 985023 | Tc |
+| RX-TX_TIME_DIFFERENCE_1970048 | 985023  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_1970049 | 985024  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.1-2: Absolute UE Rx-Tx time difference measurement report mapping for k=1
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_000000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_000001 | -985024  TUE Rx-Tx < -985022 | Tc |
+| RX-TX_TIME_DIFFERENCE_000002 | -985022  TUE Rx-Tx < -985020 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_492512 | -2  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_492513 | 0  TUE Rx-Tx < 2 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_985023 | 985020  TUE Rx-Tx < 985022 | Tc |
+| RX-TX_TIME_DIFFERENCE_985024 | 985022  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_985025 | 985024  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.1-3: Absolute UE Rx-Tx time difference measurement report mapping for k=2
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_000000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_000001 | -985024  TUE Rx-Tx < -985020 | Tc |
+| RX-TX_TIME_DIFFERENCE_000002 | -985020  TUE Rx-Tx < -985016 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_246256 | -4  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_246257 | 0  TUE Rx-Tx < 4 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_492511 | 985016  TUE Rx-Tx < 985020 | Tc |
+| RX-TX_TIME_DIFFERENCE_492512 | 985020  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_492513 | 985024  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.1-4: Absolute UE Rx-Tx time difference measurement report mapping for k=3
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_000000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_000001 | -985024  TUE Rx-Tx < -985016 | Tc |
+| RX-TX_TIME_DIFFERENCE_000002 | -985016  TUE Rx-Tx < -985008 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_123128 | -8  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_123129 | 0  TUE Rx-Tx < 8 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_246255 | 985008  TUE Rx-Tx < 985016 | Tc |
+| RX-TX_TIME_DIFFERENCE_246256 | 985016  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_246257 | 985024  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.1-5: Absolute UE Rx-Tx time difference measurement report mapping for k=4
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_000000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_000001 | -985024  TUE Rx-Tx < -985008 | Tc |
+| RX-TX_TIME_DIFFERENCE_000002 | -985008  TUE Rx-Tx < -984992 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_061564 | -16  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_061565 | 0  TUE Rx-Tx < 16 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_123127 | 984992  TUE Rx-Tx < 985008 | Tc |
+| RX-TX_TIME_DIFFERENCE_123128 | 985008  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_123129 | 985024  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.1-6: Absolute UE Rx-Tx time difference measurement report mapping for k=5
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_00000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_00001 | -985024  TUE Rx-Tx < -984992 | Tc |
+| RX-TX_TIME_DIFFERENCE_00002 | -984992  TUE Rx-Tx < -984960 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_30782 | -32  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_30783 | 0  TUE Rx-Tx < 32 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_61563 | 984960  TUE Rx-Tx < 984992 | Tc |
+| RX-TX_TIME_DIFFERENCE_61564 | 984992  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_61565 | 985024  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.1-7: Absolute UE Rx-Tx time difference measurement report mapping for k=-1
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_0000000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_0000001 | -985024  TUE Rx-Tx < -985023.5 | Tc |
+| RX-TX_TIME_DIFFERENCE_0000002 | -985023.5  TUE Rx-Tx < -985023 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_1970048 | -0.5  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_1970049 | 0  TUE Rx-Tx < 0.5 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_3940095 | 985023  TUE Rx-Tx < 985023.5 | Tc |
+| RX-TX_TIME_DIFFERENCE_3940096 | 985023.5  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_3940097 | 985024  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.1-8: Absolute UE Rx-Tx time difference measurement report mapping for k=-2
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_0000000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_0000001 | -985024  TUE Rx-Tx < -985023.75 | Tc |
+| RX-TX_TIME_DIFFERENCE_0000002 | -985023.75  TUE Rx-Tx < -985023.5 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_3940096 | -0.25  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_3940097 | 0  TUE Rx-Tx < 0.25 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_7880191 | 985023.5  TUE Rx-Tx < 985023.75 | Tc |
+| RX-TX_TIME_DIFFERENCE_7880192 | 985023.75  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_7880193 | 985024  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.1-9: Absolute UE Rx-Tx time difference measurement report mapping for k=-3
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_00000000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_00000001 | -985024  TUE Rx-Tx < -985023.875 | Tc |
+| RX-TX_TIME_DIFFERENCE_00000002 | -985023.875  TUE Rx-Tx < -985023.75 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_07880192 | -0.125  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_07880193 | 0  TUE Rx-Tx < 0.125 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_15760383 | 985023.75  TUE Rx-Tx < 985023.875 | Tc |
+| RX-TX_TIME_DIFFERENCE_15760384 | 985023.875  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_15760385 | 985024  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.1-10: Absolute UE Rx-Tx time difference measurement report mapping for k=-4
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_00000000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_00000001 | -985024  TUE Rx-Tx < -985023.9375 | Tc |
+| RX-TX_TIME_DIFFERENCE_00000002 | -985023.9375  TUE Rx-Tx < -985023.875 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_15760384 | -0.0625  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_15760385 | 0  TUE Rx-Tx < 0.0625 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_31520767 | 985023.875  TUE Rx-Tx < 985023.9375 | Tc |
+| RX-TX_TIME_DIFFERENCE_31520768 | 985023.9375  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_31520769 | 985024  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.1-11: Absolute UE Rx-Tx time difference measurement report mapping for k=-5
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_00000000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_00000001 | -985024  TUE Rx-Tx < -985023.9688 | Tc |
+| RX-TX_TIME_DIFFERENCE_00000002 | -985023.9688  TUE Rx-Tx < -985023.9375 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_31520768 | -0.0312  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_31520769 | 0  TUE Rx-Tx < 0.0312 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_63041535 | 985023.9375  TUE Rx-Tx < 985023.9688 | Tc |
+| RX-TX_TIME_DIFFERENCE_63041536 | 985023.9688  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_63041537 | 985024  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.1-12: Absolute UE Rx-Tx time difference measurement report mapping for k=-6
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| RX-TX_TIME_DIFFERENCE_00000000 | TUE Rx-Tx < -985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_00000001 | -985024  TUE Rx-Tx < -985023.9844 | Tc |
+| RX-TX_TIME_DIFFERENCE_00000002 | -985023.9844  TUE Rx-Tx < -985023.9688 | Tc |
+|  |  | … |
+| RX-TX_TIME_DIFFERENCE_63041536 | -0.0156  TUE Rx-Tx < 0 | Tc |
+| RX-TX_TIME_DIFFERENCE_63041537 | 0  TUE Rx-Tx < 0.0156 | Tc |
+| … | … | … |
+| RX-TX_TIME_DIFFERENCE_126083071 | 985023.9688  TUE Rx-Tx < 985023.9844 | Tc |
+| RX-TX_TIME_DIFFERENCE_126083072 | 985023.9844  TUE Rx-Tx < 985024 | Tc |
+| RX-TX_TIME_DIFFERENCE_126083073 | 985024  TUE Rx-Tx | Tc |
+
+##### 10.1.25.3.2 Differential UE Rx-Tx Measurement Report Mapping
+
+The reporting range for differential UE Rx-Tx time difference measurement (TUE Rx-Tx) is defined from 0 up to 8191Tc where:
+
+TUE Rx-Tx = TUE Rx-Tx1 - TUE Rx-Tx2; where:
+
+TUE Rx-Tx1 > TUE Rx-Tx2,
+
+TUE Rx-Tx1 is the first absolute UE Rx-Tx time difference measurement,
+
+TUE Rx-Tx1 is the second absolute UE Rx-Tx time difference measurement,
+
+Tc is defined in TS 38.211 [6],
+
+kmin≤k≤kmax,
+
+kmin = -6 and kmax = 5,
+
+k≥ timingReportingGranularityFactor [34] configured by LMF via LPP for the UE Rx-Tx time difference measurement.
+
+The TUE Rx-Tx report mapping for k = {0, 1, 2, 3, 4, 5, -1, -2, -3, -4, -5, -6} are specified in tables 10.1.25.3.2-1, 10.1.25.3.2-2, 10.1.25.3.2-3, 10.1.25.3.2-4, 10.1.25.3.2-5, 10.1.25.3.2-6, 10.1.25.3.2-7, 10.1.25.3.2-8, 10.1.25.3.2-9, 10.1.25.3.2-10, 10.1.25.3.2-11, and 10.1.25.3.2-12, respectively.
+
+Table 10.1.25.3.2-1: Differential UE Rx-Tx time difference measurement report mapping for k=0
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_0000 | 0  TUE Rx-Tx < 1 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_0001 | 1  TUE Rx-Tx < 2 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_0002 | 2  TUE Rx-Tx < 3 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_8189 | 8189  TUE Rx-Tx < 8190 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_8190 | 8190  TUE Rx-Tx < 8191 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_8191 | 8191  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.2-2: Differential UE Rx-Tx time difference measurement report mapping for k=1
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_0000 | 0  TUE Rx-Tx < 2 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_0001 | 2  TUE Rx-Tx < 4 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_0002 | 4  TUE Rx-Tx < 6 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_4093 | 8186  TUE Rx-Tx < 8188 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_4094 | 8188  TUE Rx-Tx < 8190 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_4095 | 8190  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.2-3: Differential UE Rx-Tx time difference measurement report mapping for k=2
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_0000 | 0  TUE Rx-Tx < 4 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_0001 | 4  TUE Rx-Tx < 8 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_0002 | 8  TUE Rx-Tx < 12 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_2045 | 8180  TUE Rx-Tx < 8184 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_2046 | 8184  TUE Rx-Tx < 8188 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_2047 | 8188  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.2-4: Differential UE Rx-Tx time difference measurement report mapping for k=3
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_0000 | 0  TUE Rx-Tx < 8 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_0001 | 8  TUE Rx-Tx < 16 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_0002 | 16  TUE Rx-Tx < 24 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_1021 | 8168  TUE Rx-Tx < 8176 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_1022 | 8176  TUE Rx-Tx < 8184 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_1023 | 8184  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.2-5: Differential UE Rx-Tx time difference measurement report mapping for k=4
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_000 | 0  TUE Rx-Tx < 16 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_001 | 16  TUE Rx-Tx < 32 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_002 | 32  TUE Rx-Tx < 48 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_509 | 8144  TUE Rx-Tx < 8160 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_510 | 8160  TUE Rx-Tx < 8176 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_511 | 8176  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.2-6: Differential UE Rx-Tx time difference measurement report mapping for k=5
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_000 | 0  TUE Rx-Tx < 32 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_001 | 32  TUE Rx-Tx < 64 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_002 | 64  TUE Rx-Tx < 96 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_253 | 8096  TUE Rx-Tx < 8128 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_254 | 8128  TUE Rx-Tx < 8160 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_255 | 8160  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.2-7: Differential UE Rx-Tx time difference measurement report mapping for k=-1
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_00000 | 0  TUE Rx-Tx < 0.5 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_00001 | 0.5  TUE Rx-Tx < 1 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_00002 | 1  TUE Rx-Tx < 1.5 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_16380 | 8190  TUE Rx-Tx < 8190.5 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_16381 | 8190.5  TUE Rx-Tx < 8191 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_16382 | 8191  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.2-8: Differential UE Rx-Tx time difference measurement report mapping for k=-2
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_00000 | 0  TUE Rx-Tx < 0.25 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_00001 | 0.25  TUE Rx-Tx < 0.5 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_00002 | 0.5  TUE Rx-Tx < 0.75 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_32762 | 8190.5  TUE Rx-Tx < 8190.75 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_32763 | 8190.75  TUE Rx-Tx < 8191 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_32764 | 8191  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.2-9: Differential UE Rx-Tx time difference measurement report mapping for k=-3
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_00000 | 0  TUE Rx-Tx < 0.125 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_00001 | 0.125  TUE Rx-Tx < 0.25 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_00002 | 0.25  TUE Rx-Tx < 0.375 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_65526 | 8190.75  TUE Rx-Tx < 8190.875 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_65527 | 8190.875  TUE Rx-Tx < 8191 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_65528 | 8191  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.2-10: Differential UE Rx-Tx time difference measurement report mapping for k=-4
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_000000 | 0  TUE Rx-Tx < 0.0625 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_000001 | 0.0625  TUE Rx-Tx < 0.125 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_000002 | 0.125  TUE Rx-Tx < 0.1875 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_131054 | 8190.875  TUE Rx-Tx < 8190.9375 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_131055 | 8190.9375  TUE Rx-Tx < 8191 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_131056 | 8191  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.2-11: Differential UE Rx-Tx time difference measurement report mapping for k=-5
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_000000 | 0  TUE Rx-Tx < 0.0312 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_000001 | 0.0312  TUE Rx-Tx < 0.0625 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_000002 | 0.0625  TUE Rx-Tx < 0.0938 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_262110 | 8190.9375  TUE Rx-Tx < 8190.9688 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_262111 | 8190.9688  TUE Rx-Tx < 8191 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_262112 | 8191  TUE Rx-Tx | Tc |
+
+Table 10.1.25.3.2-12: Differential UE Rx-Tx time difference measurement report mapping for k=-6
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| DIFF_RX-TX_TIME_DIFFERENCE_000000 | 0  TUE Rx-Tx < 0.0156 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_000001 | 0.0156  TUE Rx-Tx < 0.0312 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_000002 | 0.0312  TUE Rx-Tx < 0.0469 | Tc |
+|  |  | … |
+| DIFF_RX-TX_TIME_DIFFERENCE_524222 | 8190.9688  TUE Rx-Tx < 8190.9844 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_524223 | 8190.9844  TUE Rx-Tx < 8191 | Tc |
+| DIFF_RX-TX_TIME_DIFFERENCE_524224 | 8191  TUE Rx-Tx | Tc |
+
+##### 10.1.25.3.3 Additional Path Report Mapping for UE Rx-Tx Time Difference
+
+The reporting range for the additional path reporting for an UE Rx-Tx time difference measurement is defined up to the range from -8175Tc to 8175Tc with the resolution step of 2kTc, where
+
+Tc is defined in TS 38.211 [6],
+
+kmin≤k≤kmax,
+
+kmin = -6 and kmax = 5,
+
+k≥ timingReportingGranularityFactor [34] configured by LMF via LPP for the UE Rx-Tx time difference measurement.
+
+The UE can report the timing of up to two additional paths with respect to the path timing determining the UE Rx-Tx time difference measurement.
+
+The UE capable of  additionalPathsExtSupport-r17 can report the timing of up to its supported number of additional paths with respect to the path timing determining the UE Rx-Tx measurement.
+
+The report mappings for different k values are specified in tables 10.1.25.3.3-1  10.1.25.3.3-12.
+
+Table 10.1.25.3.3-1: Report mapping for k=0
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_00000 | path < -8175 | Tc |
+| path_00001 | -8175  path < -8174 | Tc |
+| path_00002 | -8174  path < -8173 | Tc |
+|  |  | … |
+| path_08175 | -1  path < 0 | Tc |
+| path_08176 | 0  path < 1 | Tc |
+| … | … | … |
+| path_16349 | 8173  path < 8174 | Tc |
+| path_16350 | 8174  path < 8175 | Tc |
+| path_16351 | 8175  path | Tc |
+
+Table 10.1.25.3.3-2: Report mapping for k=1
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+| path_0000 | path < -8175 | Tc |
+| path_0001 | -8175  path < -8173 | Tc |
+| path_0002 | -8173  path < -8171 | Tc |
+|  |  | … |
+| path_4088 | -1  path < 1 | Tc |
+| … | … | … |
+| path_8174 | 8171  path < 8173 | Tc |
+| path_8175 | 8173  path < 8175 | Tc |
+| path_8176 | 8175  path | Tc |
+
+Table 10.1.25.3.3-3: Report mapping for k=2
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+| path_0000 | path < -8174 | Tc |
+| path_0001 | -8174  path < -8170 | Tc |
+| path_0002 | -8170  path < -8166 | Tc |
+|  |  | … |
+| path_2044 | -2  path < 2 | Tc |
+| … | … | … |
+| path_4086 | 8166  path < 8170 | Tc |
+| path_4087 | 8170  path < 8174 | Tc |
+| path_4088 | 8174  path | Tc |
+
+Table 10.1.25.3.3-4: Report mapping for k=3
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+| path_0000 | path < -8172 | Tc |
+| path_0001 | -8172  path < -8164 | Tc |
+| path_0002 | -8164  path < -8156 | Tc |
+|  |  | … |
+| path_1022 | -4  path < 4 | Tc |
+| … | … | … |
+| path_2042 | 8156  path < 8164 | Tc |
+| path_2043 | 8164  path < 8172 | Tc |
+| path_2044 | 8172  path | Tc |
+
+Table 10.1.25.3.3-5: Report mapping for k=4
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+| path_0000 | path < -8168 | Tc |
+| path_0001 | -8168  path < -8152 | Tc |
+| path_0002 | -8152  path < -8136 | Tc |
+|  |  | … |
+| path_511 | -8  path < 8 | Tc |
+| … | … | … |
+| path_1020 | 8136  path < 8152 | Tc |
+| path_1021 | 8152  path < 8168 | Tc |
+| path_1022 | 8168  path | Tc |
+
+Table 10.1.25.3.3-6: Report mapping for k=5
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+| path_000 | path < -8160 | Tc |
+| path_001 | -8160  path < -8128 | Tc |
+| path_002 | -8128  path < -8096 | Tc |
+|  |  | … |
+| path_256 | 0  path < 32 | Tc |
+| … | … | … |
+| path_509 | 8096  path < 8128 | Tc |
+| path_510 | 8128  path < 8160 | Tc |
+| path_511 | 8160  path | Tc |
+
+Table 10.1.25.3.3-7: Report mapping for k=-1
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_00000 | path < -8175 | Tc |
+| path_00001 | -8175  path < -8174.5 | Tc |
+| path_00002 | -8174.5  path < -8174 | Tc |
+|  |  | … |
+| path_16350 | -0.5  path < 0 | Tc |
+| path_16351 | 0  path < 0.5 | Tc |
+| … | … | … |
+| path_32699 | 8174  path < 8174.5 | Tc |
+| path_32700 | 8174.5  path < 8175 | Tc |
+| path_32701 | 8175  path | Tc |
+
+Table 10.1.25.3.3-8: Report mapping for k=-2
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_00000 | path < -8175 | Tc |
+| path_00001 | -8175  path < -8174.75 | Tc |
+| path_00002 | -8174.75  path < -8174.5 | Tc |
+|  |  | … |
+| path_32700 | -0.25  path < 0 | Tc |
+| path_32701 | 0  path < 0.25 | Tc |
+| … | … | … |
+| path_65399 | 8174.5  path < 8174.75 | Tc |
+| path_65400 | 8174.75  path < 8175 | Tc |
+| path_65401 | 8175  path | Tc |
+
+Table 10.1.25.3.3-9: Report mapping for k=-3
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_00000 | path < -8175 | Tc |
+| path_00001 | -8175  path < -8174.875 | Tc |
+| path_00002 | -8174.875  path < -8174.75 | Tc |
+|  |  | … |
+| path_65400 | -0.125  path < 0 | Tc |
+| path_65401 | 0  path < 0.125 | Tc |
+| … | … | … |
+| path_130799 | 8174.75  path < 8174.875 | Tc |
+| path_130800 | 8174.875  path < 8175 | Tc |
+| path_130801 | 8175  path | Tc |
+
+Table 10.1.25.3.3-10: Report mapping for k=-4
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_00000 | path < -8175 | Tc |
+| path_00001 | -8175  path < -8174.9375 | Tc |
+| path_00002 | -8174.9375  path < -8174.875 | Tc |
+|  |  | … |
+| path_130800 | -0.0625  path < 0 | Tc |
+| path_130801 | 0  path < 0.0625 | Tc |
+| … | … | … |
+| path_261599 | 8174.875  path < 8174.9375 | Tc |
+| path_261600 | 8174.9375  path < 8175 | Tc |
+| path_261601 | 8175  path | Tc |
+
+Table 10.1.25.3.3-11: Report mapping for k=-5
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_000000 | path < -8175 | Tc |
+| path_000001 | -8175  path < -8174.9688 | Tc |
+| path_000002 | -8174.9688  path < -8174.9375 | Tc |
+|  |  | … |
+| path_261600 | -0.0312  path < 0 | Tc |
+| path_261601 | 0  path < 0.0312 | Tc |
+| … | … | … |
+| path_523199 | 8174.9375  path < 8174.9688 | Tc |
+| path_523200 | 8174.9688  path < 8175 | Tc |
+| path_ 523201 | 8175  path | Tc |
+
+Table 10.1.25.3.3-12: Report mapping for k=-6
+
+| Reported Quantity Value,path_i | Measured Quantity Value,path | Unit |
+| --- | --- | --- |
+|  |  |  |
+| path_0000000 | path < -8175 | Tc |
+| path_0000001 | -8175  path < -8174.9844 | Tc |
+| path_0000002 | -8174.9844  path < -8174.9688 | Tc |
+|  |  | … |
+| path_0523200 | -0.0156  path < 0 | Tc |
+| path_0523201 | 0  path < 0.0156 | Tc |
+| … | … | … |
+| path_1046399 | 8174.9688 path < 8174.9844 | Tc |
+| path_1046400 | 8174.9844  path < 8175 | Tc |
+| path_1046401 | 8175  path | Tc |
+
+### 10.1.25A UE Rx-Tx Time Difference Measurement Based on PRS Aggregation
+
+#### 10.1.25A.1 Introduction
+
+The requirements in clause 10.1.25A apply provided the UE has received nr-Multi-RTT-RequestLocationInformation message from LMF via LPP TS 37.355 [34] requesting the UE to report one or more UE Rx-Tx time difference measurements, defined in TS 38.215 [4], performed by aggregating PRS resources on multiple PFLs. The requirements in clause 10.1.25A apply:
+
+- when UE is in RRC_CONNECTED state and the measurement is performed with MG,
+
+- when UE is in RRC_INACTIVE state.
+
+#### 10.1.25A.2 Measurement Accuracy Requirements
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall not apply, if:
+
+NTA_offset defined in table 7.1.2-2 changes during the UE Rx-Tx measurement period or
+
+if the uplink transmission timing changes during the UE Rx-Tx measurement period due to the network-configured Timing Advance.
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall apply provided that:
+
+- The UE transmits SRS within the range from -160 ms to 160 ms of at least one DL PRS resource of each of the TRPs in the assistance data.
+
+- PRS resources linked for aggregation saftisfy all the conditions specified in TS 38.214 [26] clause 5.1.6.5.3.
+
+- the spacing between the center frequencies of adjacent PFLs containing PRS resources linked for aggregation does not exceed the nominal channel spacing for intra-band contiguous CA defined in TS 38.101-1 [18], clause 5.4A.1 for FR1 and in TS 38.101-2 [19], clause 5.4A.1 for FR2-1.
+
+If the uplink transmission timing changes during the UE Rx-Tx measurement period due to the autonomous timing adjustment defined in clause 7.1.2 then:
+
+- UE Rx-Tx measurement accuracy requirements shall apply for a cell, which is also the downlink reference cell (defined in clause 7.1.1) for SRS transmission even if the uplink transmission timing changes during the UE Rx-Tx measurement period due to autonomous adjustment.
+
+- UE Rx-Tx measurement accuracy requirements shall not apply for a cell, which is not the downlink reference cell (defined in clause 7.1.1) for SRS transmission, if the uplink transmission timing changes during the UE Rx-Tx measurement period due to autonomous adjustment.
+
+When a serving cell change occurs during the UE Rx-Tx measurement period, the UE Rx-Tx time difference measurement accuracy requirements in this clause shall apply provided that the serving cell change does not impact SRS configuration for the UE Rx-Tx measurement.
+
+The accuracy requirements in table 10.1.25A.2-1 for FR1 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+AWGN propagation condition.
+
+Table 10.1.25A.2-1: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN
+
+| Accuracyfor2 PFLs | Accuracy for3 PFLs | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS bandwidth per PFL | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ±(12 + ) | ±(10 + ) | -3 | ≥104 | 15 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -124.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -123.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -120.5 |  |
+| ±(6 + ) | ±(3 + ) |  | ≥132 | 30 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -121.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -120.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -117.5 |  |
+| ±(3 + ) | ±(2 + ) |  | ≥272 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(6 + ) | ±(3 + ) |  | ≥64 | 60 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -118.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -117.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -114.5 |  |
+| ±(3 + ) | ±(2 + ) |  | ≥ 132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(14+) | ±(13+) | -13 | ≥104 | 15 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(8+) | ±(4+) |  | ≥132 | 30 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(4+) | ±(3+) |  | ≥272 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(9+) | ±(4+) |  | ≥ 64 | 60 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(4+) | ±(3+) |  | ≥ 132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from table 10.1.25A.2-5, where the PRS BW refers to the sum of the PRS PRB numbers across the aggregated PFLs. |  |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.25A.2-1a for FR1 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+Number of measurement samples is less than 4.
+
+AWGN propagation condition.
+
+Table 10.1.25A.2-1a: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN with reduced measurement samples
+
+| Accuracyfor2 PFLs | Accuracy for3 PFLs | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS bandwidth per PFL | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ±(11+) | ±(9+) | 0 | ≥104 | 15 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -124.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -123.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -120.5 |  |
+| ±(5+) | ±(3+) |  | ≥132 | 30 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -121.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -120.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -117.5 |  |
+| ±(3+) | ±(2+) |  | ≥272 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(5+) | ±(3+) |  | ≥64 | 60 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -118.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -117.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -114.5 |  |
+| ±(3+) | ±(2+) |  | ≥ 132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(14+) | ±(13+) | -6 | ≥104 | 15 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(9+) | ±(4+) |  | ≥132 | 30 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(4+) | ±(3+) |  | ≥272 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(9+) | ±(4+) |  | ≥ 64 | 60 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(4+) | ±(3+) |  | ≥ 132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter  dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and  dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from table 10.1.25A.2-5, where the PRS BW refers to the sum of the PRS PRB numbers across the aggregated PFLs. |  |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.25A.2-2 for FR1 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+Fading propagation condition.
+
+Table 10.1.25A.2-2: UE Rx-Tx time difference measurement accuracy in FR1 for fading channel
+
+| Accuracyfor2 PFLs | Accuracy for3 PFLs | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS bandwidth per PFL | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ±(40+) | ±(38+) | -3 | ≥104 | 15 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -124.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -123.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -120.5 |  |
+| ±(33+) | ±(32+) |  | ≥132 | 30 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -121.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -120.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -117.5 |  |
+| ±(33+) | ±(30+) |  | ≥272 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(35+) | ±(34+) |  | ≥64 | 60 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -118.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -117.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -114.5 |  |
+| ±(32+) | ±(31+) |  | ≥ 132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(44+) | ±(39+) | --13 | ≥104 | 15 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(34+) | ±(34+) |  | ≥132 | 30 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(33+) | ±(30+) |  | ≥272 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(35+) | ±(37+) |  | ≥ 64 | 60 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(33+) | ±(34+) |  | ≥ 132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from table 10.1.25A.2-5, where the PRS BW refers to the sum of the PRS PRB numbers across the aggregated PFLs. |  |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.25A.2-3 for FR2 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+AWGN propagation condition.
+
+Table 10.1.25A.2-3: UE Rx-Tx time difference measurement accuracy in FR2 in AWGN
+
+| Accuracy for2 PFLs | Accuracy for3 PFLs | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS bandwidth per PFL | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | TcNote 5 | dB | PRB | kHz |  | dBm / SCSPRS | dBm/BWChannel |
+| ±(6+) | ±(3+) | -3 | ≥64 | 60 | ≥1 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ±(3+) | ±(2+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ±(3+) | ±(2+) |  | ≥64 | 120 | ≥1 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ±(2+) | ±(1+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ±(9+) | ±(4+) | -13 | ≥64 | 60 | ≥1 | NOTE 6 | NOTE 6 |
+| ±(4+) | ±(3+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ±(4+) | ±(3+) |  | ≥64 | 120 | ≥1 | NOTE 6 | NOTE 6 |
+| ±(2+) | ±(1+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from table 10.1.25A.2-6, where the PRS BW refers to the sum of the PRS PRB numbers across the aggregated PFLs. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.25A.2-3a for FR2 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+Number of measurement samples is less than 4.
+
+AWGN propagation condition.
+
+Table 10.1.25A.2-3a: UE Rx-Tx time difference measurement accuracy in FR2 in AWGN with reduced measurement samples
+
+| Accuracy for2 PFLs | Accuracy for3 PFLs | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS bandwidth per PFL | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | TcNote 5 | dB | PRB | kHz |  | dBm / SCSPRS | dBm/BWChannel |
+| ±(5+) | ±(3+) | 0 | ≥64 | 60 | ≥1 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ±(3+) | ±(2+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ±(3+) | ±(2+) |  | ≥64 | 120 | ≥1 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ±(2+) | ±(1+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ±(9+) | ±(4+) | -6 | ≥64 | 60 | ≥1 | NOTE 6 | NOTE 6 |
+| ±(4+) | ±(3+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ±(4+) | ±(3+) |  | ≥64 | 120 | ≥1 | NOTE 6 | NOTE 6 |
+| ±(2+) | ±(1+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from table 10.1.25A.2-6, where the PRS BW refers to the sum of the PRS PRB numbers across the aggregated PFLs. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.25A.2-4 for FR2 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+Fading propagation condition.
+
+Table 10.1.25A.2-4: UE Rx-Tx time difference measurement accuracy in FR2 for fading channel
+
+| Accuracy for2 PFLs | Accuracy for3 PFLs | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS bandwidth per PFL | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | TcNote 5 | dB | PRB | kHz |  | dBm / SCSPRS | dBm/BWChannel |
+| ±(57+) | ±(38+) | -3 | ≥64 | 60 | ≥1 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ±(37+) | ±(32+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ±(44+) | ±(37+) |  | ≥64 | 120 | ≥1 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ±(38+) | ±(38+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ±(73+) | ±(43+) | -13 | ≥64 | 60 | ≥1 | NOTE 6 | NOTE 6 |
+| ±(46+) | ±(35+) |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| ±(56+) | ±(42+) |  | ≥64 | 120 | ≥1 | NOTE 6 | NOTE 6 |
+| ±(43+) | ±(47+) |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from table 10.1.25A.2-6, where the PRS BW refers to the sum of the PRS PRB numbers across the aggregated PFLs. |  |  |  |  |  |  |  |
+
+Table 10.1.25A.2-5: Margin for UE Rx-Tx time difference measurement accuracy in FR1
+
+| Min(PRS BW, SRS BW) (PRB) |  |  | Margin (Tc Note 1) |
+| --- | --- | --- | --- |
+| SCS = 15 kHz | SCS = 30 kHz | SCS = 60 kHz |  |
+| ≥ 104 | N/A | N/A | 56 |
+| N/A | ≥ 132 | ≥ 64 | 24 |
+| N/A | N/A | ≥ 132 | 24 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies. |  |  |  |
+
+Table 10.1.25A.2-6: Margin for UE Rx-Tx time difference measurement accuracy in FR2
+
+| Min(PRS BW, SRS BW) (PRB) |  | Margin (Tc Note 1) |
+| --- | --- | --- |
+| SCS = 60 kHz | SCS = 120 kHz |  |
+| ≥ 64 | N/A | 32 |
+| ≥ 132 | ≥ 64 | 24 |
+| N/A | ≥ 128 | 20 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies. |  |  |
+
+The relative accuracy of UE Rx-Tx measurement in this clause is defined as accuracy of the difference between two UE Rx-Tx measurements.
+
+The relative accuracy requirements in table 10.1.25A.2-7 for FR1 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+AWGN propagation condition.
+
+The two UE Rx-Tx time difference measurements are associated with the same RxTx TEG.
+
+Table 10.1.25A.2-7: UE Rx-Tx time difference relative measurement accuracy in FR1 in AWGN with TEG reporting
+
+| Accuracyfor2 PFLs | Accuracy for3 PFLs | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS bandwidth per PFL Note 1 | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 2 | NR operating band groupsNote 4 | IoNote 3 range |  |
+|  |  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ±(20+ Δ) | ±(16+Δ) | (PRS Ês/Iot)j ≥-6 (PRS Ês/Iot)i ≥-13 | ≥104 | 15 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B | -126.5 |  |
+|  |  |  |  |  |  | NR_TDD_FR1_C | -126 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -124.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G | -124 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -123.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -120.5 |  |
+| ±(11+Δ) | ±(6+Δ) |  | ≥132 | 30 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B | -123.5 |  |
+|  |  |  |  |  |  | NR_TDD_FR1_C | -123 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -121.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G | -121 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -120.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -117.5 |  |
+| ±(6+Δ) | ±(4+Δ) |  | ≥272 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(11+Δ) | ±(6+Δ) |  | ≥64 | 60 | ≥1 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_B | -120.5 |  |
+|  |  |  |  |  |  | NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_F | -118.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G | -118 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_H | -117.5 |  |
+|  |  |  |  |  |  | NR_FDD_FR1_N | -114.5 |  |
+| ±(5+Δ) | ±(4+Δ) |  | ≥ 132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of resource j and resource i.NOTE 2:  Minimum number of PRS resource repetitions among resource j and resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7: Δ is the value of the timing error margin for the RxTx TEG, reported via nr-UE-RxTxTEG-TimingErrorMargin. Δ cannot be larger than the sum of the margins in table 10.1.25A.2-5 (dependent on PRS/SRS BW) for any pair of individual UE Rx-Tx time difference measurements associated with the RxTx TEG. |  |  |  |  |  |  |  |  |
+
+The relative accuracy requirements in table 10.1.25A.2-8 for FR2 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+AWGN propagation condition.
+
+the two UE Rx-Tx time difference measurements are associated with the same RxTx TEG.
+
+Table 10.1.25A.2-8: UE Rx-Tx time difference relative measurement accuracy in FR2 in AWGN with TEG reporting
+
+| Accuracy for2 PFLs | Accuracy for3 PFLs | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS Ês/Iot | PRS bandwidth per PFL Note 1 | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 2 | IoNote 3 range |  |
+|  |  |  |  |  |  | Minimum Io | Maximum Io |
+| TcNote 5 | TcNote 5 | dB | PRB | kHz |  | dBm / SCSPRS | dBm/BWChannel |
+| 11+Δ | 6+Δ | (PRS Ês/Iot)j ≥-6 (PRS Ês/Iot)i ≥-13 | ≥64 | 60 | ≥1 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 5+Δ | 4+Δ |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 |
+| 6+Δ | 4+Δ |  | ≥64 | 120 | ≥1 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 3+Δ | 2+Δ |  | ≥128 |  | ≥1 | NOTE 6 | NOTE 6 |
+| NOTE 1: Minimum PRS bandwidth per PFL, which is minimum of the PRS bandwidths of resource j and resource i.NOTE 2:  Minimum number of PRS resource repetitions among resource j and resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 6: Δ is the value of the timing error margin for the RxTx TEG, reported via nr-UE-RxTxTEG-TimingErrorMargin. Δ cannot be larger than the sum of the margins in table 10.1.25A.2-6 (dependent on PRS/SRS BW) for any pair of individual UE Rx-Tx time difference measurements associated with the RxTx TEG. |  |  |  |  |  |  |  |
+
+#### 10.1.25A.3 Report mapping
+
+Applicable measurement report mappings are defined in clause 10.1.25.3.
+
+### 10.1.25C UE Rx-Tx Time Difference Measurements in Satellite Accesss
+
+#### 10.1.25C.1 Introduction
+
+The requirements in clause 10.1.25C shall apply, provided the UE has received nr-Multi-RTT-RequestLocationInformation message from LMF via LPP [31] requesting the UE to report one or more UE Rx-Tx time difference measurements defined in TS 38.215 [4]. The requirements in clause 10.1.25C shall apply:
+
+- when UE is in RRC_CONNECTED state and the measurement is performed with MG or without MG.
+
+#### 10.1.25C.2 Measurement Accuracy Requirements
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall not apply, if:
+
+- NTA_offset defined in table 7.1.2-2 changes during the UE Rx-Tx measurement period or
+
+- if the uplink transmission timing changes during the UE Rx-Tx measurement period due to the network-configured Timing Advance.
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall apply provided that:
+
+- The UE transmits SRS within -160, 160 msec of at least one DL PRS resource of each of the TRPs corresponding to the serving cell in the assistance data.
+
+If the uplink transmission timing changes during the UE Rx-Tx measurement period due to the autonomous timing adjustment defined in clause 7.1C.2 then:
+
+- UE Rx-Tx measurement accuracy requirements shall apply for a cell, which is also the downlink reference cell (defined in clause 7.1C.1) for SRS transmission even if the uplink transmission timing changes during the UE Rx-Tx measurement period due to autonomous adjustment.
+
+The accuracy requirements in table 10.1.25C.2-1 for FR1-NTN are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-5 [18] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- AWGN propagation condition.
+
+Table 10.1.25C.2-1: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN with reduced measurement samples
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ± 59+ | 0 | ≥52 | 15 | ≥1 | NR_FDD_SAB_FR1_A | -121 | -50 |
+| ± 30+ |  | >104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± 30+ |  | ≥48 | 30 | ≥1 | NR_FDD_SAB_FR1_A | -118 | -50 |
+| ± 15+ |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± 15+ |  | ≥64 | 60 | ≥1 | NR_FDD_SAB_FR1_A | -115 | -50 |
+| ± 7+ |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± 75+ | -6 | ≥52 | 15 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± 37+ |  | >104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± 39+ |  | ≥48 | 30 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± 16+ |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± 16+ |  | ≥64 | 60 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± 8+ |  | ≥132 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and  dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from Table 10.1.25C.2-2. |  |  |  |  |  |  |  |
+
+Table 10.1.25C.2-2: Margin for UE Rx-Tx time difference measurement accuracy in FR1-NTN
+
+| Min(PRS BW, SRS BW) (PRB) |  |  | Margin (Tc Note 1) |
+| --- | --- | --- | --- |
+| SCS = 15 kHz | SCS = 30 kHz | SCS = 60 kHz |  |
+| ≥ 24 | N/A | N/A | 160 |
+| ≥ 52 | ≥ 24 | N/A | 80 |
+| ≥ 104 | ≥ 48 | ≥ 24 | 56 |
+| N/A | ≥ 132 | ≥ 64 | 24 |
+| N/A | N/A | ≥ 132 | 24 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies. |  |  |  |
+
+#### 10.1.25C.3 Report mapping
+
+The report mapping provided in clause 10.1.25.3 is applicable for NTN.
+
+### 10.1.25D UE Rx-Tx Time Difference Measurements RedCap UE with Satellite Access in FR1
+
+#### 10.1.25D.1 Introduction
+
+The requirements in clause 10.1.25D shall apply, provided the UE has received nr-Multi-RTT-RequestLocationInformation message from LMF via LPP [31] requesting the UE to report one or more UE Rx-Tx time difference measurements defined in TS 38.215 [4]. The requirements in clause 10.1.25D shall apply:
+
+- when UE is in RRC_CONNECTED state and the measurement is performed with MG or without MG.
+
+#### 10.1.25D.2 Measurement Accuracy Requirements
+
+##### 10.1.25D.2.1 UE Rx-Tx Accuracy Requirement for 2Rx RedCap UE without FH
+
+For UE Rx-Tx time difference measurement performed by 2Rx RedCap UE without RX FH, the accuracy requirements corresponding to the PRS bandwidth supported by the RedCap UE for PRS measurement without RX FH in clause 10.1.25C.2 shall apply.
+
+##### 10.1.25D.2.2 UE Rx-Tx Accuracy Requirement for 1Rx RedCap UE without FH
+
+For UE Rx-Tx time difference measurement performed by 1Rx RedCap UE without Rx FH, the accuracy requirements corresponding to the PRS bandwidth supported by the RedCap UE for PRS measurement without RX FH in clause 10.1.25C.2 shall apply, except those defined in Table 10.1.25D.2.2-1 and Table 10.1.25D.2.2-2.
+
+Table 10.1.25D.2.2-1: UE Rx-Tx time difference measurement accuracy for 1Rx RedCap UE in FR1 in AWGN with reduced measurement samples
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ±65+ | 0 | ≥52 | 15 | ≥1 | NR_FDD_SAB_FR1_A | -121 | -50 |
+| ±36+ |  | >104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±35+ |  | ≥48 | 30 | ≥1 | NR_FDD_SAB_FR1_A | -118 | -50 |
+| ±73+ | -6 | ≥52 | 15 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±40+ |  | >104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±39+ |  | ≥48 | 30 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from Table 10.1.25C.2-2. |  |  |  |  |  |  |  |
+
+Table 10.1.25D.2.2-2: Margin for UE Rx-Tx time difference measurement accuracy in FR1-NTN
+
+| Min(PRS BW, SRS BW) (PRB) |  |  | Margin (Tc Note 1) |
+| --- | --- | --- | --- |
+| SCS = 15 kHz | SCS = 30 kHz | SCS = 60 kHz |  |
+| ≥ 24 | N/A | N/A | 160 |
+| ≥ 52 | ≥ 24 | N/A | 80 |
+| ≥ 104 | ≥ 48 | ≥ 24 | 56 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies. |  |  |  |
+
+#### 10.1.25D.3 Report mapping
+
+The report mapping provided in clause 10.1.25.3 is applicable for RedCap with NTN.
+
+### 10.1.26 FR2 P-MPR report
+
+The FR2 P-MPR report mapping is defined by this clause.
+
+#### 10.1.26.1 Report mapping
+
+table 10.1.26.1-1 defines the FR2 P-MPR report mapping.
+
+Table 10.1.26.1-1 Mapping of FR2 P-MPR
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| P-MPR_00 | 3  P-MP < 6 | dB |
+| P-MPR_01 | 6  P-MP < 9 | dB |
+| P-MPR_02 | 9  P-MP < 12 | dB |
+| P-MPR_03 | P-MP  12 | dB |
+
+### 10.1.27 L1-SINR accuracy requirements for FR1
+
+#### 10.1.27.1 L1-SINR accuracy requirements with CSI-RS based CMR and no dedicated IMR configured
+
+##### 10.1.27.1.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RS based L1-SINR accuracy in this clause apply to all CSI-RS resources configured as CMR and no dedicated resource configured as IMR of the serving cell configured for L1-SINR measurement.
+
+The accuracy requirements in table 10.1.27.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.1 for a corresponding Band for each relevant CSI-RS based CMR.
+
+- The bandwidth of CSI-RS as CMR is 48 PRBs and the density is 3.
+
+- AWGN radio propagation conditions.
+
+The performance with larger bandwidth of CSI-RS as CMR is equal to or better than the accuracy requirements in table 10.1.27.1.1-1.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.1 for a corresponding Band for each relevant CSI-RS based CMR, and
+
+- The CSI-RS density is 3.
+
+- AWGN radio propagation conditions.
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.27.2.1-1 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.27.2.1-1 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.27.1.1-1: L1-SINR absolute accuracy for CSI-RS based CMR only in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS CMRÊs/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| ±5.5 | ±6.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 3: The requirements apply for CSI-RS CMR Ês/Iot  6 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |  |
+
+##### 10.1.27.1.2 Relative Accuracy
+
+The relative CSI-RS based L1-SINR accuracy is defined as the L1-SINR measured from one CSI-RS compared to the largest measured value of L1-SINR among all CSI-RS resources of the serving cell.
+
+The accuracy requirements in table 10.1.27.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.1 for a corresponding Band for each relevant CSI-RS based CMR.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- AWGN radio propagation conditions.
+
+The performance with larger bandwidth of CSI-RS as CMR is equal to or better than the accuracy requirements in table 10.1.27.1.2-1.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.1 for a corresponding Band for each relevant CSI-RS based CMR, and
+
+- The CSI-RS density is 3.
+
+- AWGN radio propagation conditions.
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.27.1.2-1 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.27.1.2-1 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.27.1.2-1: L1-SINR relative accuracy for CSI-RS based CMR only in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS CMRÊs/Iot Note 2 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| ±[4.5] | ±[5.5] | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS CMR Ês/Iot is the minimum CMR Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 4: The requirements apply for CSI-RS CMR Ês/Iot  6 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |  |
+
+#### 10.1.27.2 L1-SINR accuracy requirements with SSB based CMR and dedicated IMR configured
+
+##### 10.1.27.2.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute SSB based L1-SINR accuracy in this clause apply to all SSBs configured as CMR and dedicated resources configured as IMR of the serving cell configured for L1-SINR measurement.
+
+The accuracy requirements are defined in table 10.1.27.2.1-1 for SSB based CMR and NZP-IMR and in table 10.1.27.2.1-2 for SSB based CMR and ZP-IMR.
+
+The accuracy requirements in tables 10.1.27.2.1-1 and 10.1.27.2.1-2 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.2 for a corresponding Band for each relevant SSB based CMR and IMR.
+
+- The bandwidth of NZP-IMR and ZP-IMR is 48 PRBs and the density is 3.
+
+- AWGN radio propagation conditions.
+
+The performance with larger bandwidth of NZP-IMR and ZP-IMR is equal to or better than the accuracy requirements in tables 10.1.27.2.1-1 and 10.1.27.2.1-2.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS as NZP-IMR and ZP-IMR measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.2 for a corresponding Band for each relevant SSB based CMR and IMR.
+
+- The CSI-RS density is 3.
+
+- AWGN radio propagation conditions.
+
+If the bandwidth of CSI-RS as NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.27.2.1-1 and 10.1.27.2.1-2 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS as NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.27.2.1-1 and 10.1.27.2.1-2 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.27.2.1-1: L1-SINR absolute accuracy for SSB based CMR and NZP-IMR in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB- CMRÊs/Iot | NZP-IMRÊs/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| ±4.0 | ±5.0 | 0 | 0 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 3: The requirements apply for SSB-CMR Ês/Iot ≤ [6] dB with SCS 15 kHz or 30 kHz under NR high speed scenarios. |  |  |  |  |  |  |  |  |
+
+Table 10.1.27.2.1-2: L1-SINR absolute accuracy for SSB based CMR and ZP-IMR in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB- CMRÊs/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| ±4.5 | ±5.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 3: The requirements apply for SSB Ês/Iot ≤ [6] dB with SCS 15 kHz or 30 kHz under NR high speed scenarios. |  |  |  |  |  |  |  |
+
+##### 10.1.27.2.2 Relative Accuracy
+
+The relative SSB based L1-SINR accuracy is defined as the L1-SINR measured from one SSB configured as CMR and one IMR configured as IMR compared to the largest measured value of L1-SINR among all SSBs and IMRs of the serving cell.
+
+The accuracy requirements are defined in table 10.1.27.2.2-1 for SSB based CMR and NZP-IMR and in table 10.1.27.2.2-2 for SSB based CMR and ZP-IMR.
+
+The accuracy requirements in tables 10.1.27.2.2-1 and 10.1.27.2.2-2 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.2 for a corresponding Band for each relevant SSB based CMR and IMR.
+
+- The bandwidth of NZP-IMR and ZP-IMR is 48 PRBs and the density is 3.
+
+- AWGN radio propagation conditions.
+
+The performance with larger bandwidth of NZP-IMR and ZP-IMR is equal to or better than the accuracy requirements in tables 10.1.27.2.2-1 and 10.1.27.2.2-2.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS as NZP-IMR and ZP-IMR measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.2 for a corresponding Band for each relevant SSB based CMR and IMR.
+
+- The CSI-RS density is 3.
+
+- AWGN radio propagation conditions.
+
+If the bandwidth of CSI-RS as NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.27.2.2-1 and 10.1.27.2.2-2 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS as NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.27.2.2-1 and 10.1.27.2.2-2 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.27.2.2-1: L1-SINR relative accuracy for SSB based CMR and NZP-IMR in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB- CMRÊs/Iot Note 2 | NZP-IMRÊs/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| ±3.0 | ±4.0 | 0 | 0 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB CMR Ês/Iot is the minimum SSB CMR Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 4: The requirements apply for SSB-CMR Ês/Iot  6 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |  |
+
+Table 10.1.27.2.2-2: L1-SINR relative accuracy for SSB based CMR and ZP-IMR in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB- CMRÊs/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| ±3.5 | ±4.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB CMR Ês/Iot is the minimum SSB CMR Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 4: he requirements apply for SSB Ês/Iot  6 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |
+
+#### 10.1.27.3 L1-SINR accuracy requirements with CSI-RS based CMR and dedicated IMR configured
+
+##### 10.1.27.3.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RS based L1-SINR accuracy in this clause apply to all CSI-RS resources configured as CMR and dedicated resources configured as IMR of the serving cell configured for L1-SINR measurement.
+
+The accuracy requirements are defined in table 10.1.27.3.1-1 for CSI-RS based CMR and NZP-IMR and in table 10.1.27.3.1-2 for CSI-RS based CMR and ZP-IMR.
+
+The accuracy requirements in tables 10.1.27.3.1-1 and 10.1.27.3.1-2 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.3 for a corresponding Band for each relevant CSI-RS based CMR and IMR.
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is 48 PRBs and the density is 3.
+
+- AWGN radio propagation conditions.
+
+The performance with larger bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is equal to or better than the accuracy requirements in tables 10.1.27.3.1-1 and 10.1.27.3.1-2.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS as CMR, NZP-IMR and ZP-IMR measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.3 for a corresponding Band for each relevant CSI-RS based CMR and IMR, and
+
+- The CSI-RS density is 3.
+
+- AWGN radio propagation conditions.
+
+If the bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.27.3.1-1 and 10.1.27.3.1-2 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.27.3.1-1 and 10.1.27.3.1-2 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.27.3.1-1: L1-SINR absolute accuracy for CSI-RS based CMR and NZP-IMR in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS CMR Ês/Iot | NZP-IMRÊs/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| ±4.0 | ±5.0 | 0 | 0 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 3: The requirements apply for CSI-RS CMR Ês/Iot  6 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |  |  |
+
+Table 10.1.27.3.1-2: L1-SINR absolute accuracy for CSI-RS based CMR and ZP-IMR in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS CMR Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| ±4.5 | ±5.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 3: The requirements apply for CSI-RS CMR Ês/Iot  6 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |  |
+
+##### 10.1.27.3.2 Relative Accuracy
+
+The relative CSI-RS based L1-SINR accuracy is defined as the L1-SINR measured from one CSI-RS configured as CMR and one IMR configured as IMR compared to the largest measured value of L1-SINR among all CSI-RS and IMR resources of the serving cell.
+
+The accuracy requirements are defined in table 10.1.27.3.2-1 for CSI-RS based CMR and NZP-IMR and in table 10.1.27.3.2-2 for CSI-RS based CMR and ZP-IMR.
+
+The accuracy requirements in tables 10.1.27.3.2-1 and 10.1.27.3.2-2 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.3 for a corresponding Band for each relevant CSI-RS based CMR and IMR.
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is 48 PRBs and the density is 3.
+
+- AWGN radio propagation conditions.
+
+The performance with larger bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is equal to or better than the accuracy requirements in tables 10.1.27.3.2-1 and 10.1.27.3.2-2.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS as CMR, NZP-IMR and ZP-IMR measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.3 for a corresponding Band for each relevant CSI-RS based CMR and IMR, and
+
+- The CSI-RS density is 3.
+
+- AWGN radio propagation conditions.
+
+If the bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.27.3.2-1 and 10.1.27.3.2-2 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.27.3.2-1 and 10.1.27.3.2-2 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.27.3.2-1: L1-SINR relative accuracy for CSI-RS based CMR and NZP-IMR in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS CMR Ês/Iot Note 2 | NZP-IMRÊs/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  |  | NR operating band groups Note 3 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| ±3.0 | ±4.0 | 0 | 0 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS CMR Ês/Iot is the minimum CMR Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 4: The requirements apply for CSI-RS CMR Ês/Iot  6 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |  |  |
+
+Table 10.1.27.3.2-2: L1-SINR relative accuracy for CSI-RS based CMR and ZP-IMR in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS CMR Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| ±[3.5] | ±[4.5] | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS CMR Ês/Iot is the minimum CMR Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 4: The requirements apply for CSI-RS CMR Ês/Iot  6 dB with SCS 15kHz or 30kHz under NR high speed scenarios. |  |  |  |  |  |  |  |  |
+
+### 10.1.28 L1-SINR accuracy requirements for FR2
+
+## 10.1.28.1 L1-SINR accuracy requirements with CSI-RS based CMR and no dedicated IMR configured
+
+## 10.1.28.1.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RS based L1-SINR accuracy in this clause apply to all CSI-RS resources configured as CMR and no dedicated resource configured as IMR of the serving cell configured for L1-SINR measurement.
+
+The accuracy requirements in table 10.1.28.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.1 for a corresponding Band for each relevant CSI-RS based CMR.
+
+- The bandwidth of CSI-RS as CMR is 48 PRBs and the density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- AWGN radio propagation conditions.
+
+The performance with larger bandwidth of CSI-RS as CMR is equal to or better than the accuracy requirements in table 10.1.28.1.1-1.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS based CMR, and
+
+- The CSI-RS density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- AWGN radio propagation conditions.
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.28.1.1-1 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.28.1.1-1 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.28.1.1-1: L1-SINR absolute accuracy for CSI-RS based CMR only in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RSCMRÊs/Iot Note 3 | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |  |
+| ±5.5 | ±6.5 | ≥-3 | Same value as CSI-RS_RP in clause B.2.8.1, according to UE Power class, operating band and angle of arrival |  | N/A | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the CSI-RS CMR Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+## 10.1.28.1.2 Relative Accuracy
+
+The relative CSI-RS based L1-SINR accuracy is defined as the L1-SINR measured from one CSI-RS compared to the largest measured value of L1-SINR among all CSI-RS resources of the serving cell.
+
+The accuracy requirements in table 10.1.28.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.1 for a corresponding Band for each relevant CSI-RS based CMR.
+
+- The bandwidth of CSI-RS as CMR is 48 PRBs and the density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- AWGN radio propagation conditions.
+
+The performance with larger bandwidth of CSI-RS as CMR is equal to or better than the accuracy requirements in table 10.1.28.1.2-1.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS based CMR, and
+
+- The CSI-RS density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- AWGN radio propagation conditions.
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.28.1.2-1 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS meets the following condition the requirements in table 10.1.28.1.2-1 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.28.1.2-1: L1-SINR relative accuracy for CSI-RS based CMR only in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RSCMRÊs/Iot Note 2, Note 4 | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 3 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |  |
+| ±4.5 | ±5.5 | ≥-3 | Same value as CSI-RS_RP in clause B.2.8.1, according to UE Power class, operating band and angle of arrival |  | N/A | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS CMR Ês/Iot is the minimum CSI-RS CMR Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: Values based on Refsens and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the te  Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.st cases, the CSI-RS CMR Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+## 10.1.28.2 L1-SINR accuracy requirements with SSB based CMR and dedicated IMR configured
+
+## 10.1.28.2.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute SSB based L1-SINR accuracy in this clause apply to all SSBs configured as CMR and dedicated resources configured as IMR of the serving cell configured for L1-SINR measurement.
+
+The accuracy requirements are defined in table 10.1.28.2.1-1 for SSB based CMR and NZP-IMR and in table 10.1.28.2.1-2 for SSB based CMR and ZP-IMR.
+
+The accuracy requirements in tables 10.1.28.2.1-1 and 10.1.28.2.1-2 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.2 for a corresponding Band for each relevant SSB based CMR and IMR.
+
+- The bandwidth of NZP-IMR and ZP-IMR is 48 PRBs and the density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- AWGN radio propagation conditions.
+
+- SSB based CMR and IMR in the test come from the same direction.
+
+The performance with larger bandwidth of NZP-IMR and ZP-IMR is equal to or better than the accuracy requirements in tables 10.1.28.2.1-1 and 10.1.28.2.1-2.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS as NZP-IMR and ZP-IMR measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.2 for a corresponding Band for each relevant SSB based CMR and IMR.
+
+- The CSI-RS density is 3.
+
+- AWGN radio propagation conditions.
+
+If the bandwidth of CSI-RS as NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.28.2.1-1 and 10.1.28.2.1-2 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS as NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.28.2.1-1 and 10.1.28.2.1-2 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.28.2.1-1: L1-SINR absolute accuracy for SSB based CMR and NZP-IMR in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB CMRÊs/Iot Note 3 | NZP-IMRÊs/Iot Note 3 | Io Note 1 range |  |  |  |
+|  |  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dB | dBm / SCSSSB Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| ±4.0 | ±5.0 | ≥0 | ≥0 | Same value as SSB_RP in clause B.2.8.2, according to UE Power class, operating band and angle of arrival |  | N/A | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot, NZP-IMR Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |  |
+
+Table 10.1.28.2.1-2: L1-SINR absolute accuracy for SSB based CMR and ZP-IMR in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB CMRÊs/Iot Note 3 | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| ±4.5 | ±5.5 | ≥-3 | Same value as SSB_RP in clause B.2.8.2, according to UE Power class, operating band and angle of arrival |  | N/A | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB CMR Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+## 10.1.28.2.2 Relative Accuracy
+
+The relative SSB based L1-SINR accuracy is defined as the L1-SINR measured from one SSB configured as CMR and one IMR configured as IMR compared to the largest measured value of L1-SINR among all SSB based CMRs and IMRs of the serving cell.
+
+The accuracy requirements are defined in table 10.1.28.2.2-1 for SSB based CMR and NZP-IMR and in table 10.1.28.2.2-2 for SSB based CMR and ZP-IMR.
+
+The accuracy requirements in tables 10.1.28.2.2-1 and 10.1.28.2.2-2 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.2 for a corresponding Band for each relevant SSB based CMR and IMR.
+
+- The bandwidth of NZP-IMR and ZP-IMR is 48 PRBs and the density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- AWGN radio propagation conditions.
+
+- SSB based CMR and IMR in the test come from the same direction.
+
+The performance with larger bandwidth of NZP-IMR and ZP-IMR is equal to or better than the accuracy requirements in tables 10.1.28.2.2-1 and 10.1.28.2.2-2.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS as NZP-IMR and ZP-IMR measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.2 for a corresponding Band for each relevant SSB based CMR and IMR.
+
+- The CSI-RS density is 3.
+
+- AWGN radio propagation conditions.
+
+If the bandwidth of CSI-RS as NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.28.2.2-1 and 10.1.28.2.2-2 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS as NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.28.2.2-1 and 10.1.28.2.2-2 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS as NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.28.2.2-1: L1-SINR relative accuracy for SSB based CMR and NZP-IMR in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB CMRÊs/Iot Note 2, Note 4 | NZP-IMRÊs/Iot Note 4 | Io Note 1 range |  |  |  |
+|  |  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dB | dBm / SCSSSB Note 3 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| ±3.0 | ±4.0 | ≥0 | ≥0 | Same value as SSB_RP in clause B.2.8.2, according to UE Power class, operating band and angle of arrival |  | N/A | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB CMR Ês/Iot is the minimum SSB CMR Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the test cases, the SSB CMR Ês/Iot, NZP-IMR Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |  |
+
+Table 10.1.28.2.2-2: L1-SINR relative accuracy for SSB based CMR and ZP-IMR in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB CMRÊs/Iot Note 2, Note 4 | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSSSB Note 3 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| ±3.5 | ±4.5 | ≥-3 | Same value as SSB_RP in clause B.2.8.2, according to UE Power class, operating band and angle of arrival |  | N/A | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB CMR Ês/Iot is the minimum SSB CMR Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the test cases, the SSB CMR Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+## 10.1.28.3 L1-SINR accuracy requirements with CSI-RS based CMR and dedicated IMR configured
+
+## 10.1.28.3.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute CSI-RS based L1-SINR accuracy in this clause apply to all CSI-RS resources as CMR and dedicated resources configured as IMR of the serving cell configured for L1-SINR measurement.
+
+The accuracy requirements are defined in table 10.1.28.3.1-1 for CSI-RS based CMR and NZP-IMR and in table 10.1.28.3.1-2 for CSI-RS based CMR and ZP-IMR.
+
+The accuracy requirements in tables 10.1.28.3.1-1 and 10.1.28.3.1-2 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.3 for a corresponding Band for each relevant CSI-RS based CMR and IMR.
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is 48 PRBs and the density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- AWGN radio propagation conditions.
+
+- CSI-RS based CMR and IMR in the test come from the same direction.
+
+The performance with larger bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is equal to or better than the accuracy requirements in tables 10.1.28.3.1-1 and 10.1.28.3.1-2.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS as CMR, NZP-IMR and ZP-IMR measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.3 for a corresponding Band for each relevant CSI-RS based CMR and IMR, and
+
+- The CSI-RS density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- AWGN radio propagation conditions.
+
+- CSI-RS based CMR and IMR in the test come from the same direction
+
+If the bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.28.3.1-1 and 10.1.28.3.1-2 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.28.3.1-1 and 10.1.28.3.1-2 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.28.3.1-1: L1-SINR absolute accuracy for CSI-RS based CMR and NZP-IMR in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS CMR Ês/Iot Note 3 | NZP-IMRÊs/Iot Note 3 | Io Note 1 range |  |  |  |
+|  |  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dB | dBm / SCSCSI-RS Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |  |
+| ±4.0 | ±5.0 | ≥0 | ≥0 | Same value as CSI-RS_RP in clause B.2.8.3, according to UE Power class, operating band and angle of arrival |  | N/A | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the CSI-RS Ês/Iot, NZP-IMR Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |  |
+
+Table 10.1.28.3.1-2: L1-SINR absolute accuracy for CSI-RS based CMR and ZP-IMR in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS CMR Ês/Iot Note 3 | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |  |
+| ±4.5 | ±5.5 | ≥-3 | Same value as CSI-RS_RP in clause B.2.8.3, according to UE Power class, operating band and angle of arrival |  | N/A | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the CSI-RS Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+## 10.1.28.3.2 Relative Accuracy
+
+The relative CSI-RS based L1-SINR accuracy is defined as the L1-SINR measured from one CSI-RS configured as CMR and one IMR configured as IMR compared to the largest measured value of L1-SINR among all CSI-RS based CMRs and IMRs of the serving cell.
+
+The accuracy requirements are defined in table 10.1.28.3.2-1 for CSI-RS based CMR and NZP-IMR and in table 10.1.28.3.2-2 for CSI-RS based CMR and ZP-IMR.
+
+The accuracy requirements in tables 10.1.28.3.2-1 and 10.1.28.3.2-2 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.3 for a corresponding Band for each relevant CSI-RS based CMR and IMR.
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is 48 PRBs and the density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- AWGN radio propagation conditions.
+
+- CSI-RS based CMR and IMR in the test come from the same direction.
+
+The performance with larger bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is equal to or better than the accuracy requirements in tables 10.1.28.3.2-1 and 10.1.28.3.2-2.
+
+If UE supports sbfd-Aware-r19 and SBFD is configured by the network, for CSI-RS as CMR, NZP-IMR and ZP-IMR measurement in SBFD symbols the accuracy requirements apply under the following conditions and depending on the bandwith of CSI-RS.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled, and
+
+- Conditions for L1-SINR measurements are fulfilled according to annex B.2.8.3 for a corresponding Band for each relevant CSI-RS based CMR and IMR, and
+
+- The CSI-RS density is 3.
+
+- The measured signals are in the directions covered by the percentile EIS spherical coverage of the UE, defined in clause 7.3.4 of TS 38.101-2 [19].
+
+- AWGN radio propagation conditions.
+
+- CSI-RS based CMR and IMR in the test come from the same direction
+
+If the bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.28.3.2-1 and 10.1.28.3.2-2 apply.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured, when one of the following conditions is met
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 48 PRBs in at least one DL subband
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is no less than 72 PRBs across two DL subbands
+
+If the bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR meets the following condition the requirements in table 10.1.28.3.2-1 and 10.1.28.3.2-2 apply with additional 0.5dB margin.
+
+- For the case when one DL subband is configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in the DL subband
+
+- For the case when two DL subbands are configured
+
+- The bandwidth of CSI-RS as CMR, NZP-IMR and ZP-IMR is no less than 24 PRBs but less than 48 PRBs in each DL subband, and the total bandwidth of CSI-RS is less than 72 PRBs across two DL subbands
+
+Table 10.1.28.3.2-1: L1-SINR relative accuracy for CSI-RS based CMR and NZP-IMR in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS CMR Ês/Iot Note 2, Note 4 | NZP-IMRÊs/Iot Note 4 | Io Note 1 range |  |  |  |
+|  |  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dB | dBm / SCSCSI-RS Note 3 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |  |
+| ±3.0 | ±4.0 | ≥0 | ≥0 | Same value as CSI-RS_RP in clause B.2.8.3, according to UE Power class, operating band and angle of arrival |  | N/A | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS CMR Ês/Iot is the minimum CSI-RS CMR Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the test cases, the CSI-RS CMR Ês/Iot, NZP-IMR Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |  |
+
+Table 10.1.28.3.2-2: L1-SINR relative accuracy for CSI-RS based CMR and ZP-IMR in FR2
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS CMR Ês/Iot Note 2, Note 4 | Io Note 1 range |  |  |  |
+|  |  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB | dBm / SCSCSI-RS Note 3 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSCSI-RS = 60 kHz | SCSCSI-RS = 120 kHz |  |  |
+| ±3.5 | ±4.5 | ≥-3 | Same value as CSI-RS_RP in clause B.2.8.3, according to UE Power class, operating band and angle of arrival |  | N/A | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS CMR Ês/Iot is the minimum CSI-RS CMR Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 4: In the test cases, the CSI-RS CMR Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |
+
+### 10.1.29 Intra-frequency RSRQ accuracy requirements under CCA
+
+#### 10.1.29.1 Intra-frequency SS-RSRQ accuracy requirements in FR1
+
+##### 10.1.29.1.1 Absolute SS-RSRQ Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on the same frequency as that of the serving cell under CCA.
+
+The accuracy requirements in table 10.1.29.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.9 for a corresponding Band for each relevant SSB.
+
+Table 10.1.29.1.1-1: SS-RSRQ intra-frequency absolute accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 2.5 | 4 | -3 | NR_CCA_FR1_I | -117 | -114 | N/A | -50 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.30 Inter-frequency RSRQ accuracy requirements under CCA
+
+#### 10.1.30.1 Inter-frequency SS-RSRQ accuracy requirements in FR1
+
+##### 10.1.30.1.1 Absolute SS-RSRQ Accuracy
+
+The requirements for absolute SS-RSRQ accuracy in this clause apply to a cell on a frequency under CCA that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.30.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.10 for a corresponding Band for each relevant SSB.
+
+Table 10.1.30.1.1-1: SS-RSRQ inter-frequency absolute accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 2.5 | 4 | -3 | NR_CCA_FR1_I | -117 | -114 | N/A | -50 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.30.1.2 Relative SS-RSRQ Accuracy
+
+The relative SS-RSRQ accuracy in inter-frequency case is defined as the RSRQ measured from one cell on a frequency compared to the RSRP measured from another cell on a different frequency, with at least one of the two frequencies being under CCA.
+
+The accuracy requirements in table 10.1.30.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.10 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1 dBm - SSB_RP2 dBm| ≤ 27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1.30.1.2-1: SS-RSRQ inter-frequency relative accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 2 | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 3 | 4 | -3 | NR_CCA_FR1_I | -117 | -114 | N/A | -50 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| 4 | 4 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.31 Intra-frequency SINR accuracy requirements under CCA
+
+#### 10.1.31.1 Intra-frequency SS-SINR accuracy requirements in FR1
+
+##### 10.1.31.1.1 Absolute SS-SINR Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-SINR accuracy in this clause apply to a cell on the same frequency as that of the serving cell under CCA.
+
+The accuracy requirements in table 10.1.31.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.9 for a corresponding Band.
+
+Table 10.1.31.1.1-1: SS-SINR intra-frequency absolute accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 3 | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 3.0 | 4 | -3 | NR_CCA_FR1_I | -117 | -114 | N/A | -50 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: The requirements apply for SSB Ês/Iot ≤ 25 dB.NOTE 4: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.32 Inter-frequency SINR accuracy requirements under CCA
+
+#### 10.1.32.1 Inter-frequency SS-SINR accuracy requirements in FR1
+
+##### 10.1.32.1.1 Absolute SS-SINR Accuracy
+
+The requirements for absolute SS-SINR accuracy in this clause apply to a cell on a frequency under CCA that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.32.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.10 for a corresponding Band.
+
+Table 10.1.32.1.1-1: SS-SINR inter-frequency absolute accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 3.0 | 4 | -3 | NR_CCA_FR1_I | -117 | -114 | N/A | -50 |
+|  |  |  | NR_CCA_FR1_J | 116.5 | -113.5 |  |  |
+| 3.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: The requirements apply for SSB Ês/Iot ≤ 25 dB.NOTE 4: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.32.1.2 Relative SS-SINR Accuracy
+
+The relative SS-SINR accuracy in inter-frequency case is defined as the SS-SINR measured from one cell on a frequency compared to the SS-SINR measured from another cell on a different frequency, with at least one of the two frequencies being under CCA.
+
+The accuracy requirements in table 10.1.32.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.10 for a corresponding Band.
+
+- SSB_RP1 dBm - SSB_RP2 dBm| ≤ 27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1.32.1.2-1: SS-SINR inter-frequency relative accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 2,4 | NR operating band groups Note 5 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+| 3.5 | 4 | -3 | NR_CCA_FR1_I | -117 | -114 | N/A | -50 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| 4 | 4 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: The requirements apply for SSB Ês/Iot ≤ 25 dB.NOTE 5: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.33 L1-RSRP accuracy requirements under CCA
+
+#### 10.1.33.1 SSB based L1-RSRP accuracy requirements in FR1
+
+##### 10.1.33.1.1 Absolute Accuracy
+
+Unless otherwise specified, the requirements for absolute SSB based L1-RSRP accuracy in this clause apply to all SSBs of the serving cell configured for L1-RSRP measurement under CCA.
+
+The accuracy requirements in table 10.1.33.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.10.1 for a corresponding Band for each relevant SSB.
+
+Table 10.1.33.1.1-1: SSB based L1-RSRP absolute accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| ±5.0 | ±9.5 | -3 | NR_CCA_FR1_I | -117 | -114 | N/A | -70 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| ±8.5 | ±11.5 | -3 | NR_CCA_FR1_I | N/A | N/A | -70 | -50 |
+|  |  |  | NR_CCA_FR1_J |  |  |  |  |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.33.1.2 Relative Accuracy
+
+The relative SSB based L1-RSRP accuracy is defined as the L1-RSRP measured from one SSB compared to the largest measured value of L1-RSRP among all SSBs of the serving cell under CCA.
+
+The accuracy requirements in table 10.1.33.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.10.1 for a corresponding Band for each relevant SSB.
+
+Table 10.1.33.1.2-1: SSB based L1-RSRP relative accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| ±3 | ±4 | -3 | NR_CCA_FR1_I | -117 | -114 | N/A | -50 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.34 RSSI measurements under CCA
+
+#### 10.1.34.1 Intra-frequency absolute RSSI measurement accuracy requirements in FR1
+
+The accuracy requirements for intra-frequency RSSI measurements on a carrier frequency under CCA are specified in table 10.1.34.1-1. The requirements apply for any configured RSSI measDuration [2], provided that:
+
+- All symbols during each RSSI measurement duration are available for RSSI sampling within the same reporting interval.
+
+The intra-frequency RSSI measurement bandwidth is the channel bandwidth defined in clause 4 of TS 37.213 [33], where the channel has the center frequency configured by ARFCN-valueNR.
+
+Table 10.1.34.1-1: Intra-frequency RSSI accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Io Note 1 range |  |  |  |  |
+|  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| [3.5] | [6.5] | NR_CCA_FR1_I | -117 | -114 | N/A | -70 |
+|  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| [5.5] | [8.5] | NR_CCA_FR1_I | N/A | N/A | -70 | -50 |
+|  |  | NR_CCA_FR1_J |  |  |  |  |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |
+
+#### 10.1.34.2 Inter-frequency absolute RSSI measurement accuracy requirements in FR1
+
+The accuracy requirements for inter-frequency RSSI measurements on a carrier frequency under CCA are the same as specified in clause 10.1.34.1.
+
+The inter-frequency RSSI measurement bandwidth is the channel bandwidth defined in clause 4 of TS 37.213 [33], where the channel has the center frequency configured by ARFCN-valueNR.
+
+#### 10.1.34.3 RSSI measurement report mapping
+
+The reporting range of RSSI measurement is defined from -100 dBm to -25 dBm with 1 dBm resolution.
+
+The mapping of the measured quantity is defined in table 10.1.34.3-1. The range in the signalling may be larger than the guaranteed accuracy range, provided that the following condition is met:
+
+the RSSI measurement bandwidth is the channel bandwidth defined in clause 4 of TS 37.213 [33], where the channel has the center frequency configured by ARFCN-valueNR.
+
+Table 10.1.34.3-1: RSSI measurement report mapping
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| RSSI_00 | RSSI < 100 | dBm |
+| RSSI_01 | -100  RSSI < 99 | dBm |
+| RSSI_02 | -99  RSSI < 98 | dBm |
+| … | … | … |
+| RSSI_74 | -27  RSSI < -26 | dBm |
+| RSSI_75 | -26  RSSI < -25 | dBm |
+| RSSI_76 | -25  RSSI | dBm |
+
+### 10.1.35 Channel occupancy measurements under CCA
+
+#### 10.1.35.1 Intra-frequency channel occupancy measurement accuracy requirements in FR1
+
+The UE shall be able to correctly evaluate the intra-frequency channel occupancy configured according to TS 38.331 [2], provided that the following conditions are met:
+
+- All symbols during each RSSI measurement duration are available for RSSI sampling within the same reporting interval,
+
+- RSSI at the UE receiver meets the following condition with respect to the configured channelOccupancyThreshold [2]:
+
+- RSSI at the UE receiver is below channelOccupancyThreshold-![](media_svg/image1.svg) [公式≈: ^{δ}RSSI], or
+
+- RSSI at the UE receiver is above channelOccupancyThreshold+![](media_svg/image2.svg) [公式≈: ^{δ}RSSI],
+
+- where ![](media_svg/image3.svg) [公式≈: ^{δ}RSSI] is the applicable RSSI measurement accuracy value from the RSSI measurement accuracy requirements specified in clause 10.1.34.1.
+
+The channel occupancy measurement bandwidth is the same as the RSSI measurement bandwidth in clause 10.1.34.1.
+
+#### 10.1.35.2 Inter-frequency channel occupancy measurement accuracy requirements in FR1
+
+The UE shall be able to correctly evaluate the inter-frequency channel occupancy configured according to TS 38.331 [2], provided that the following conditions are met:
+
+- All symbols during each RSSI measurement duration are available for RSSI sampling within the same reporting interval,
+
+- RSSI at the UE receiver meets the following condition with respect to the configured channelOccupancyThreshold [2]:
+
+- RSSI at the UE receiver is below channelOccupancyThreshold-![](media_svg/image1.svg) [公式≈: ^{δ}RSSI], or
+
+- RSSI at the UE receiver is above channelOccupancyThreshold+![](media_svg/image2.svg) [公式≈: ^{δ}RSSI],
+
+- where ![](media_svg/image3.svg) [公式≈: ^{δ}RSSI] is the applicable RSSI measurement accuracy value from the RSSI measurement accuracy requirements specified in clause 10.1.34.2.
+
+The channel occupancy measurement bandwidth is the same as the RSSI measurement bandwidth in clause 10.1.34.2.
+
+### 10.1.36 Intra-frequency RSRP accuracy requirements under CCA
+
+#### 10.1.36.1 Intra-frequency SS-RSRP accuracy requirements in FR1
+
+##### 10.1.36.1.1 Absolute SS-RSRP Accuracy
+
+Unless otherwise specified, the requirements for absolute SS-RSRP accuracy in this clause apply to a cell on the same frequency as that of the serving cell under CCA.
+
+The accuracy requirements in table 10.1.36.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.8 for a corresponding Band for each relevant SSB.
+
+Table 10.1.36.1.1-1: SS-RSRP intra-frequency absolute accuracy
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 4.5 | 9 | -6 | NR_CCA_FR1_I | -117 | -114 | N/A | -70 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| 8 | 11 | -6 | NR_CCA_FR1_I | N/A | N/A | -70 | -50 |
+|  |  |  | NR_CCA_FR1_J |  |  |  |  |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.36.1.2 Relative SS-RSRP Accuracy
+
+The relative SS-RSRP accuracy is defined as the SS-RSRP measured from one cell compared to the SS-RSRP measured from another cell on the same frequency, or between any two SS-RSRP levels measured on the same cell under CCA.
+
+The accuracy requirements in table 10.1.36.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.8 for a corresponding Band for each relevant SSB.
+
+Table 10.1.36.1.2-1: SS-RSRP intra-frequency relative accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 2 | 3 | -3 | NR_CCA_FR1_I | -117 | -114 | N/A | -50 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| 3 | 3 | -6 | Note 3 | Note 3 | Note 3 | N/A | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.37 Inter-frequency RSRP accuracy requirements under CCA
+
+#### 10.1.37.1 Inter-frequency SS-RSRP accuracy requirements in FR1
+
+##### 10.1.37.1.1 Absolute SS-RSRP
+
+The requirements for absolute SS-RSRP in this clause apply to a cell on a frequency under CCA that has different carrier frequency from the serving cell.
+
+The accuracy requirements in table 10.1.37.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.9 for a corresponding Band for each relevant SSB.
+
+Table 10.1.37.1.1-1: SS-RSRP inter-frequency absolute accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 4.5 | 9 | -6 | NR_CCA_FR1_I | -117 | -114 | N/A | -70 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| 8 | 11 | -6 | NR_CCA_FR1_I | N/A | N/A | -70 | -50 |
+|  |  |  | NR_CCA_FR1_J |  |  |  |  |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1.37.1.2 Relative SS-RSRP Accuracy
+
+The relative SS-RSRP accuracy in inter-frequency case is defined as the RSRP measured from one cell on a frequency compared to the RSRP measured from another cell on a different frequency, with at least one of the two frequencies being under CCA.
+
+The accuracy requirements in table 10.1.37.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.9 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1 dBm - SSB_RP2 dBm| ≤ 27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1.37.1.2-1: SS-RSRP inter-frequency relative accuracy under CCA
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+| 4.5 | 6 | -6 | NR_CCA_FR1_I | -117 | -114 | N/A | -50 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 |  |  |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.38 PRS-RSRPP Measurements
+
+#### 10.1.38.1 Introduction
+
+The requirements in clause 10.1.38.2 shall apply, provided the UE has received nr-DL-AoD-RequestLocationInformation message from LMF via LPP [34] requesting the UE to report one or more DL PRS-RSRPP measurements defined in TS 38.215 [4]. The requirements in clause 10.1.38 shall apply:
+
+- when UE is in RRC_CONNECTED state,
+
+- when UE is in RRC_INACTIVE state,
+
+- when UE is in RRC_IDLE state.
+
+The requirements in clause 10.1.38.2 apply for the first path PRS-RSRP measurement.
+
+#### 10.1.38.2 Measurement Accuracy Requirements
+
+##### 10.1.38.2.1 Absolute PRS RSRPP accuracy
+
+The absolute accuracy requirements for PRS-RSRPP measurement for FR1 defined in table 10.1.38.2.1-1 and table 10.1.38.2.1-3 are valid under the following conditions:
+
+- Conditions defined in 38.101-1 clause7.3 for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.2.14 for a corresponding Band
+
+The absolute accuracy requirements for PRS-RSRPP measurement for FR2 defined in table 10.1.38.2.1-2 and table 10.1.38.2.1-4 are valid under the following conditions:
+
+- Conditions defined in 38.101-2 [19] clause7.3 for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.2.14 for a corresponding Band
+
+The absolute accuracy requirements for PRS-RSRPP measurement defined in table 10.1.38.2.1-1 and table 10.1.38.2.1-2 apply for the UE not supporting supportedDL-PRS-ProcessingSamples [34] or LMF does not indicate UE to perform positioning measurements with reduced number of samples.
+
+The absolute accuracy requirements for PRS-RSRPP measurement defined in table 10.1.38.2.1-3 and table 10.1.38.2.1-4 apply for the UE supporting supportedDL-PRS-ProcessingSamples [34].
+
+NOTE: The requirements in this clause are derived based on two-tap channel defined in TS 38.101-4 [21] annex B.2.4 (a = 1, τd=0.45 µs and fD=5 Hz).
+
+NOTE: The requirements in this clause are derived based on the difference between the estimated PRS-RSRPP compared to the ideal PRS-RSRPP defined as
+
+$$ RSRPP_{p}\propto  \left | \sum  _{k}H_{k}\operatorname {exp}\left (\left ( j2\pi  D_{p}\frac {k}{N_{IFFT}}\right ) \right )\right | ^{2}$$
+
+Where:
+
+$ H_{k}$ is the effective channel frequency response (over REs occupied by PRS) measured without receiver noise.
+
+$ D_{p}$ is the exact delay of the p-th path in the channel model.
+
+Table 10.1.38.2.1-1: PRS-RSRPP absolute accuracy for FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 7 range |  |  |  |  |
+|  |  |  |  |  | NR operating band groups Note 8 | Minimum Io Note 1dBm / SCSPRS |  |  | Maximum Io |
+| dB | dB | dB | PRB | - |  | dBm / SCSPRS |  |  | dBm/BWChannel |
+|  |  |  |  |  |  | dBm/15 kHz Note 6 | dBm/30 kHz Note 6 | dBm/60 kHz Note 6 |  |
+| ±4.1 | ±8.6 | ≥-3 | ≥24 | All | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -124 | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -123.5 | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -123 | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -122.5 | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -122 | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -121.5 | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -121 | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -120.5 | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -117.5 | -114.5 | -50 |
+|  |  |  |  |  | Note 4 |  |  |  |  |
+|  |  |  |  |  | Note 4 |  |  |  |  |
+| ±5.8 | ±10.3 | ≥-13 | 24 ≤ BW ≤ 52 | All | Note 4 |  |  |  |  |
+| ±4.9 | ±9.4 |  | BW > 52 | All | Note 4 |  |  |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: Void.NOTE 3: PRS bandwidth is as indicated in prs-Bandwidth in the DL-TDOA or DL-AoD assistance data defined in [34].NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 24 PRB.NOTE 5: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 6: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 7: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 8: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |  |
+
+Table 10.1.38.2.1-2: PRS-RSRPP absolute accuracy for FR2
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 7 range |  |  |
+|  |  |  |  |  | Minimum Io Note 1dBm / SCSPRS |  | Maximum Io |
+| dB | dB | dB | PRB | - | dBm / SCSPRS |  | dBm/BWChannel |
+|  |  |  |  |  | dBm/120 kHz Note 6 | dBm/60 kHz Note 6 |  |
+| ±6.0 | ±9.0 | ≥-3 | ≥24 | All | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+|  |  |  |  |  | Note 4 |  |  |
+|  |  |  |  |  | Note 4 |  |  |
+| ±7.3 | ±10.3 | ≥-13 | 24 ≤ BW ≤ 64 | All | Note 4 |  |  |
+| ±6.2 | ±9.2 |  | BW >64 | All | Note 4 |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: Void.NOTE 3: PRS bandwidth is as indicated in prs-Bandwidth in the DL-TDOA or DL-AoD assistance data defined in [34].NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 24 PRB.NOTE 5: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 6: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 7: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 8: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+Table 10.1.38.2.1-3: PRS-RSRPP absolute accuracy for FR1 for reduced number of samples
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 7 range |  |  |  |  |
+|  |  |  |  |  | NR operating band groups Note 8 | Minimum Io Note 1dBm / SCSPRS |  |  | Maximum Io |
+| dB | dB | dB | PRB | - |  | dBm / SCSPRS |  |  | dBm/BWChannel |
+|  |  |  |  |  |  | dBm/15 kHz Note 6 | dBm/30 kHz Note 6 | dBm/60 kHz Note 6 |  |
+| ±3.9 | ±8.4 | ≥0 | ≥48 | All | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -124 | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -123.5 | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -123 | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -122.5 | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -122 | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -121.5 | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -121 | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -120.5 | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -117.5 | -114.5 | -50 |
+|  |  |  |  |  | Note 4 |  |  |  |  |
+|  |  |  |  |  | Note 4 |  |  |  |  |
+| ±4.2 | ±8.7 | ≥-6 | 48 ≤ BW ≤ 52 | All | Note 4 |  |  |  |  |
+| ±4.1 | ±8.6 |  | BW >52 | All | Note 4 |  |  |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: Void.NOTE 3: PRS bandwidth is as indicated in prs-Bandwidth in the DL-TDOA or DL-AoD assistance data defined in [34].NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 48 PRB.NOTE 5: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 6: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 7: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 8: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |  |
+
+Table 10.1.38.2.1-4: PRS-RSRPP absolute accuracy for FR2 for reduced number of samples
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 7 range |  |  |
+|  |  |  |  |  | Minimum Io Note 1dBm / SCSPRS |  | Maximum Io |
+| dB | dB | dB | PRB | - | dBm / SCSPRS |  | dBm/BWChannel |
+|  |  |  |  |  | dBm/120 kHz Note 6 | dBm/60 kHz Note 6 |  |
+| ± 5.9 | ± 8.9 | ≥0 | ≥48 | All | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival |  | -50 |
+|  |  |  |  |  | Note 4 |  |  |
+|  |  |  |  |  | Note 4 |  |  |
+| ±5.6 | ±8.6 | ≥-6 | 48 ≤ BW ≤ 64 | All | Note 4 |  |  |
+| ±5.4 | ±8.4 |  | BW >64 | All | Note 4 |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: Void.NOTE 3: PRS bandwidth is as indicated in prs-Bandwidth in the DL-TDOA or DL-AoD assistance data defined in [34].NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 48 PRB.NOTE 5: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 6: The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 7: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 8: NR operating band groups are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+#### 10.1.38.3 Report mapping
+
+##### 10.1.38.3.1 Absolute PRS-RSRPP Measurement Report Mapping
+
+The reporting range of absolute PRS-RSRPP measurement is defined from -156 dBm to -31 dBm with 1 dB resolution.
+
+The mapping of measured quantity is defined in table 10.1.38.3.1-1. The range in the signalling may be larger than the guaranteed accuracy range.
+
+The UE capable of additionalPathsExtSupport-r17 can report the PRS-RSRPP measurement of up to its supported number of additional paths.
+
+Table 10.1.38.3.1-1: Measurement report mapping for PRS-RSRPP
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| PRS_RSRPP_0 | PRS-RSRPP<-156 | dBm |
+| PRS_RSRPP_1 | -156PRS-RSRPP<-155 | dBm |
+| PRS_RSRPP_2 | -155PRS-RSRPP<-154 | dBm |
+| PRS_RSRPP_3 | -154PRS-RSRPP<-153 | dBm |
+| PRS_RSRPP_4 | -153PRS-RSRPP<-152 | dBm |
+| PRS_RSRPP_5 | -152PRS-RSRPP<-151 | dBm |
+| PRS_RSRPP_6 | -151PRS-RSRPP<-150 | dBm |
+| PRS_RSRPP_7 | -150PRS-RSRPP<-149 | dBm |
+| PRS_RSRPP_8 | -149PRS-RSRPP<-148 | dBm |
+| PRS_RSRPP_9 | -148PRS-RSRPP<-147 | dBm |
+| PRS_RSRPP_10 | -147PRS-RSRPP<-146 | dBm |
+| PRS_RSRPP_11 | -146PRS-RSRPP<-145 | dBm |
+| PRS_RSRPP_12 | -145PRS-RSRPP<-144 | dBm |
+| PRS_RSRPP_13 | -144PRS-RSRPP<-143 | dBm |
+| PRS_RSRPP_14 | -143PRS-RSRPP<-142 | dBm |
+| PRS_RSRPP_15 | -142PRS-RSRPP<-141 | dBm |
+| PRS_RSRPP_16 | -141PRS-RSRPP<-140 | dBm |
+| PRS_RSRPP_17 | -140PRS-RSRPP<-139 | dBm |
+| PRS_RSRPP_18 | -139PRS-RSRPP<-138 | dBm |
+| … | … | … |
+| PRS_RSRPP_111 | -46PRS-RSRPP<-45 | dBm |
+| PRS_RSRPP_112 | -45PRS-RSRPP<-44 | dBm |
+| PRS_RSRPP_113 | -44PRS-RSRPP<-43 | dBm |
+| PRS_RSRPP_114 | -43PRS-RSRPP<-42 | dBm |
+| PRS_RSRPP_115 | -42PRS-RSRPP<-41 | dBm |
+| PRS_RSRPP_116 | -41PRS-RSRPP<-40 | dBm |
+| PRS_RSRPP_117 | -40PRS-RSRPP<-39 | dBm |
+| PRS_RSRPP_118 | -39PRS-RSRPP<-38 | dBm |
+| PRS_RSRPP_119 | -38PRS-RSRPP<-37 | dBm |
+| PRS_RSRPP_120 | -37PRS-RSRPP<-36 | dBm |
+| PRS_RSRPP_121 | -36PRS-RSRPP<-35 | dBm |
+| PRS_RSRPP_122 | -35PRS-RSRPP<-34 | dBm |
+| PRS_RSRPP_123 | -34PRS-RSRPP<-33 | dBm |
+| PRS_RSRPP_124 | -33PRS-RSRPP<-32 | dBm |
+| PRS_RSRPP_125 | -32PRS-RSRPP<-31 | dBm |
+| PRS_RSRPP_126 | -31PRS-RSRPP | dBm |
+
+##### 10.1.38.3.2 Differential Report Mapping for PRS-RSRPP Measurement
+
+The reporting range of differential PRS-RSRPP is defined from -30 dB to 30 dB with 1 dB resolution.
+
+The mapping of measured quantity is defined in table 10.1.38.3.2-1. The range in the signalling may be larger than the guaranteed accuracy range.
+
+For differential reporting, PRS-RSRPP is reported as the difference in dB with respect to the first reported PRS-RSRPP.
+
+Table 10.1.38.3.2-1: Measurement report mapping for differential PRS-RSRPP
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| DIFFRSRPP_0 | -30≥ΔRSRPP | dB |
+| DIFFRSRPP_1 | -29≥ΔRSRPP>-30 | dB |
+| DIFFRSRPP_2 | -28≥ΔRSRPP>-29 | dB |
+| DIFFRSRPP_3 | -27≥ΔRSRPP>-28 | dB |
+| DIFFRSRPP_4 | -26≥ΔRSRPP>-27 | dB |
+| DIFFRSRPP_5 | -25≥ΔRSRPP>-26 | dB |
+| DIFFRSRPP_6 | -24≥ΔRSRPP>-25 | dB |
+| DIFFRSRPP_7 | -23≥ΔRSRPP>-24 | dB |
+| DIFFRSRPP_8 | -22≥ΔRSRPP>-23 | dB |
+| DIFFRSRPP_9 | -21≥ΔRSRPP>-22 | dB |
+| DIFFRSRPP_10 | -20≥ΔRSRPP>-21 | dB |
+| DIFFRSRPP_11 | -19≥ΔRSRPP>-20 | dB |
+| DIFFRSRPP_12 | -18≥ΔRSRPP>-19 | dB |
+| DIFFRSRPP_13 | -17≥ΔRSRPP>-18 | dB |
+| DIFFRSRPP_14 | -16≥ΔRSRPP>-17 | dB |
+| … | … | … |
+| DIFFRSRPP_25 | -5≥ΔRSRPP>-6 | dB |
+| DIFFRSRPP_26 | -4≥ΔRSRPP>-5 | dB |
+| DIFFRSRPP_27 | -3≥ΔRSRPP>-4 | dB |
+| DIFFRSRPP_28 | -2≥ΔRSRPP>-3 | dB |
+| DIFFRSRPP_29 | -1≥ΔRSRPP>-2 | dB |
+| DIFFRSRPP_30 | 0≥ΔRSRPP>-1 | dB |
+| DIFFRSRPP_31 | 1≥ΔRSRPP>0 | dB |
+| DIFFRSRPP_32 | 2≥ΔRSRPP>1 | dB |
+| DIFFRSRPP_33 | 3≥ΔRSRPP>2 | dB |
+| DIFFRSRPP_34 | 4≥ΔRSRPP>3 | dB |
+| DIFFRSRPP_35 | 5≥ΔRSRPP>4 | dB |
+| DIFFRSRPP_36 | 6≥ΔRSRPP>5 | dB |
+| … | … | … |
+| DIFFRSRPP_47 | 17≥ΔRSRPP>16 | dB |
+| DIFFRSRPP_48 | 18≥ΔRSRPP>17 | dB |
+| DIFFRSRPP_49 | 19≥ΔRSRPP>18 | dB |
+| DIFFRSRPP_50 | 20≥ΔRSRPP>19 | dB |
+| DIFFRSRPP_51 | 21≥ΔRSRPP>20 | dB |
+| DIFFRSRPP_52 | 22≥ΔRSRPP>21 | dB |
+| DIFFRSRPP_53 | 23≥ΔRSRPP>-22 | dB |
+| DIFFRSRPP_54 | 24≥ΔRSRPP>23 | dB |
+| DIFFRSRPP_55 | 25≥ΔRSRPP>24 | dB |
+| DIFFRSRPP_56 | 26≥ΔRSRPP>25 | dB |
+| DIFFRSRPP_57 | 27≥ΔRSRPP>26 | dB |
+| DIFFRSRPP_58 | 28≥ΔRSRPP>27 | dB |
+| DIFFRSRPP_59 | 29≥ΔRSRPP>28 | dB |
+| DIFFRSRPP_60 | 30≥ΔRSRPP>29 | dB |
+| DIFFRSRPP_61 | ΔRSRPP>30 | dB |
+
+### 10.1.38A PRS-RSRPP Measurements Based on PRS Aggregation
+
+#### 10.1. 38A.1 Introduction
+
+The requirements in clause 10.1.38A.2 shall apply, provided the UE has received nr-DL-TDOA-RequestLocationInformation or nr-Multi-RTT-RequestLocationInformation or nr-DL-AoD-RequestLocationInformation message from LMF via LPP TS 37.355 [34] with a request to perform measurement by aggregating PRS resources from multiple PFLs via nr-DL-PRS-JointMeasurementRequested for UE to report one or more DL PRS-RSRPP measurements defined in TS 38.215 [4]. The requirements in clause 10.1.38A.2 shall apply:
+
+- when UE is in RRC_CONNECTED state, and the measurement is performed with MG,
+
+- when UE is in RRC_INACTIVE state.
+
+- when UE is in RRC_IDLE state.
+
+The requirements in clause 10.1.38A.2 apply for the first path PRS-RSRP measurement.
+
+#### 10.1.38A.2 Measurement Accuracy Requirements
+
+##### 10.1.38A.2.1 Absolute PRS RSRPP accuracy
+
+The accuracy requirements in clause 10.1.38.2.1 corresponding to the total aggregated PRS bandwidth shall apply.
+
+
+#### 10.1.38A.3 Report mapping
+
+##### 10.1.38A.3.1 Absolute PRS-RSRPP Measurement Report Mapping
+
+The absolute report mapping for PRS-RSRPP measurement in clause 10.1.38.3.1 shall apply.
+
+##### 10.1.38A.3.2 Differential Report Mapping for PRS-RSRPP Measurement
+
+The differential report mapping for PRS-RSRPP measurement in clause 10.1.38.3.2 shall apply.
+
+### 10.1.39 UE Rx-Tx time difference measurements for RTT-based PDC
+
+#### 10.1.39.1 Void
+
+#### 10.1.39.2  Measurement Accuracy Requirements for PRS
+
+The error in the reported value of UE Rx-Tx time difference measurement, including both the measurement error and the reporting quantization error, shall be within the accuracy requirements specified in this clause.
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall not apply, if:
+
+- NTA_offset defined in table 7.1.2-2 changes during the UE Rx-Tx measurement period or
+
+- if the uplink transmission timing changes during the UE Rx-Tx measurement period due to the network-configured Timing Advance.
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall apply provided that:
+
+- The UE transmits SRS within -160, 160 msec of at least one PDC DL PRS resource from the serving cell (PCell).
+
+When a serving cell change occurs during the UE Rx-Tx measurement period, the UE Rx-Tx time difference measurement accuracy requirements in this clause shall apply provided that the serving cell change does not impact SRS configuration for the UE Rx-Tx measurement.
+
+The accuracy requirements in table 10.1.39.2-1 for FR1 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+PRP|dBm according to Annex B.2.14 for a corresponding Band.
+
+AWGN propagation condition.
+
+Table 10.1.39.2-1: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ± [78++ℇ] | -3 | ≥[24] | 15 | ≥[4] | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 |  |
+| ± [59++ℇ] |  | ≥[52] |  | ≥[1] | Note 6 | NOTE 6 | NOTE 6 |
+| ± [30++ℇ] |  | >[104] |  | ≥[1] | Note 6 | NOTE 6 | NOTE 6 |
+| ± [57++ℇ] |  | ≥[24] | 30 | ≥[4] | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -117.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -117 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -116.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -116 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -115.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -115 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -114.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -111.5 |  |
+| ± [30++ℇ] |  | ≥[48] |  | ≥[1] | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± [15++ℇ] |  | ≥[132] |  | ≥[1] | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± [29++ℇ] |  | ≥[24] | 60 | ≥[4] | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -115 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -114.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -114 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -113.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -113 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -113.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -113 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -111.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -108.5 |  |
+| ± [15++ℇ] |  | ≥[64] |  | ≥[1] | NOTE 6 | NOTE 6 | NOTE 6 |
+| ± [7++ℇ] |  | ≥[132] |  | ≥[1] | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and  dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from Table 10.1.39.2-3.NOTE 8:  ℇ is the margin for reporting quantitization error and ℇ=16 Tc. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.39.2-2 for FR2 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+AWGN propagation condition.
+
+Table 10.1.39.2-2: UE Rx-Tx time difference measurement accuracy in FR2 in AWGN
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | IoNote 4 range |  |
+|  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  | dBm / SCSPRS | dBm/BWChannel |
+| ± [22++ℇ] | -3 | ≥[24] | 60 | ≥[1] | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ± [15++ℇ] |  | ≥[64] |  | ≥[1] | NOTE 6 | NOTE 6 |
+| ± [7++ℇ] |  | ≥[132] |  | ≥[1] | NOTE 6 | NOTE 6 |
+| ± [12++ℇ] |  | ≥[32] | 120 | ≥[1] | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ± [7++ℇ] |  | ≥[64] |  | ≥[1] | NOTE 6 | NOTE 6 |
+| ± [4++ℇ] |  | ≥[128] |  | ≥[1] | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and  dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from Table 10.1.39.2-4.NOTE 8:  ℇ is the margin for reporting quantitization error and ℇ=16 Tc. |  |  |  |  |  |  |
+
+Table 10.1.39.2-3: Margin for UE Rx-Tx time difference measurement accuracy in FR1
+
+| Min(PRS BW, SRS BW) (PRB) |  |  | Margin (Tc Note 1) |
+| --- | --- | --- | --- |
+| SCS = 15 kHz | SCS = 30 kHz | SCS = 60 kHz |  |
+| ≥ 24 | N/A | N/A | 160 |
+| ≥ 52 | ≥ 24 | N/A | 80 |
+| ≥ 104 | ≥ 48 | ≥ 24 | 56 |
+| N/A | ≥ 132 | ≥ 64 | 24 |
+| N/A | N/A | ≥ 132 | 24 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies. |  |  |  |
+
+Table 10.1.39.2-4: Margin for UE Rx-Tx time difference measurement accuracy in FR2
+
+| Min(PRS BW, SRS BW) (MHz) |  | Margin (Tc Note 1) |
+| --- | --- | --- |
+| SCS = 60 kHz | SCS = 120 kHz |  |
+| ≥ 24 | N/A | 76 |
+| ≥ 64 | ≥ 32 | 32 |
+| ≥ 132 | ≥ 64 | 24 |
+| N/A | ≥ 128 | 20 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies. |  |  |
+
+#### 10.1.39.3  Measurement Accuracy Requirements for TRS
+
+The error in the reported value of UE Rx-Tx time difference measurement, including both the measurement error and the reporting quantization error, shall be within the accuracy requirements specified in this clause.
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall not apply, if:
+
+- NTA_offset defined in table 7.1.2-2 changes during the UE Rx-Tx measurement period or
+
+- if the uplink transmission timing changes during the UE Rx-Tx measurement period due to the network-configured Timing Advance.
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall apply provided that:
+
+- The UE transmits SRS within -160, 160 msec of at least one PDC TRS resource from the serving cell (PCell).
+
+When a serving cell change occurs during the UE Rx-Tx measurement period, the UE Rx-Tx time difference measurement accuracy requirements in this clause shall apply provided that the serving cell change does not impact SRS configuration for the UE Rx-Tx measurement.
+
+The accuracy requirements in table 10.1.39.3-1 for FR1 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.13 for a corresponding Band.
+
+AWGN propagation condition.
+
+Table 10.1.39.3-1: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | TRS Ês/Iot | Minimum TRS bandwidth | TRS SCS | NR operating band groupsNote 2 | IoNote 3 range |  |
+|  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 4 | dB | PRB | kHz |  | dBm / SCSTRS | dBm/BW |
+| [116++ℇ] | -3 | ≥[24] | 15 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 |  |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 |  |
+|  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 |  |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 |  |
+|  |  |  |  | NR_FDD_FR1_F | -118.5 |  |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 |  |
+|  |  |  |  | NR_FDD_FR1_H | -117.5 |  |
+|  |  |  |  | NR_FDD_FR1_N | -114.5 |  |
+| [60++ℇ] |  | ≥[52] |  | Note 5 | NOTE 5 | NOTE 5 |
+| [29++ℇ] |  | >[104] |  | Note 5 | NOTE 5 | NOTE 5 |
+| [56++ℇ] |  | ≥[24] | 30 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -118 | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -117.5 |  |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -117 |  |
+|  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -116.5 |  |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -116 |  |
+|  |  |  |  | NR_FDD_FR1_F | -115.5 |  |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -115 |  |
+|  |  |  |  | NR_FDD_FR1_H | -114.5 |  |
+|  |  |  |  | NR_FDD_FR1_N | -111.5 |  |
+| [29++ℇ] |  | ≥[48] |  | NOTE 5 | NOTE 5 | NOTE 5 |
+| [15++ℇ] |  | ≥[132] |  | NOTE 5 | NOTE 5 | NOTE 5 |
+| [29++ℇ] |  | ≥[24] | 60 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -115 | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -114.5 |  |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -114 |  |
+|  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -113.5 |  |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -113 |  |
+|  |  |  |  | NR_FDD_FR1_F | -113.5 |  |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -113 |  |
+|  |  |  |  | NR_FDD_FR1_H | -111.5 |  |
+|  |  |  |  | NR_FDD_FR1_N | -108.5 |  |
+| [14++ℇ] |  | ≥[64] |  | NOTE 5 | NOTE 5 | NOTE 5 |
+| [7++ℇ] |  | ≥[132] |  | NOTE 5 | NOTE 5 | NOTE 5 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: The Io is defined in TRS slots. The same Io range applies to TRS and non-TRS symbols. Io levels are different in TRS and non-TRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the TRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 6:   is the margin determined from Table 10.1.39.3-3.NOTE 7:  ℇ is the margin for reporting quantization error and ℇ=16 Tc. |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1.39.3-2 for FR2 are valid under the following conditions:
+
+Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+PRP|dBm according to annex B.2.13 for a corresponding Band.
+
+AWGN propagation condition.
+
+Table 10.1.39.3-2: UE Rx-Tx time difference measurement accuracy in FR2 in AWGN
+
+| Accuracy | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  | TRS Ês/Iot | Minimum TRS bandwidth | TRS SCS | IoNote 3 range |  |
+|  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 4 | dB | PRB | kHz | dBm / SCSTRS | dBm/BWChannel |
+| [29++ℇ] | -3 | ≥[24] | 60 | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| [14++ℇ] |  | ≥[64] |  | NOTE 5 | NOTE 5 |
+| [7++ℇ] |  | ≥[132] |  | NOTE 5 | NOTE 5 |
+| [15++ℇ] |  | ≥[32] | 120 | Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| [7++ℇ] |  | ≥[64] |  | NOTE 5 | NOTE 5 |
+| [4++ℇ] |  | ≥[128] |  | NOTE 5 | NOTE 5 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in clause 3.5.NOTE 3: The Io is defined in TRS slots. The same Io range applies to TRS and non-TRS symbols. Io levels are different in TRS and non-TRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the TRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 6:   is the margin determined from Table 10.1.39.3-4.NOTE 7:  ℇ is the margin for reporting quantization error and ℇ=16 Tc. |  |  |  |  |  |
+
+Table 10.1.39.3-3: Margin for UE Rx-Tx time difference measurement accuracy in FR1
+
+| Min(TRS BW, SRS BW) (RB) |  |  | Margin (Tc Note 1) |
+| --- | --- | --- | --- |
+| SCS = 15 kHz | SCS = 30 kHz | SCS = 60 kHz |  |
+| ≥ 24 | N/A | N/A | 160 |
+| ≥ 52 | ≥ 24 | N/A | 80 |
+| ≥ 104 | ≥ 48 | ≥ 24 | 56 |
+| N/A | ≥ 132 | ≥ 64 | 24 |
+| N/A | N/A | ≥ 132 | 24 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and TRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies. |  |  |  |
+
+Table 10.1.39.3-4: Margin for UE Rx-Tx time difference measurement accuracy in FR2
+
+| Min(TRS BW, SRS BW) (MHz) |  | Margin (Tc Note 1) |
+| --- | --- | --- |
+| SCS = 60 kHz | SCS = 120 kHz |  |
+| ≥ 24 | N/A | 76 |
+| ≥ 64 | ≥ 32 | 32 |
+| ≥ 132 | ≥ 64 | 24 |
+| N/A | ≥ 128 | 20 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and TRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies. |  |  |
+
+### 10.1.40 Void
+
+### 10.1.41 FR1 DPC report
+
+The FR1 DPC report mapping is defined in this clause.
+
+#### 10.1.41.1 Report mapping
+
+table 10.1.41.1-1 defines the FR1 DPC report mapping.
+
+Table 10.1.41.1-1 Mapping of FR1 DPC
+
+| Reported value | Reported quantity value | Unit |
+| --- | --- | --- |
+| DPC_00 | 0 | dB |
+| DPC_03 | 3 | dB |
+| DPC_06 | 6 | dB |
+
+### 10.1.42 TDCP Measurement Report Mapping
+
+The reporting range of TDCP amplitude is defined from 0 to 1. The reporting range of TDCP phase is 0 to 2p. The mapping of measured quantity is defined in tables 10.1.42-1, 10.1.42-2. The range in the signalling may be larger than the guaranteed accuracy range.
+
+Table 10.1.42-1: TDCP amplitude measurement report mapping
+
+| Reported value | Measured quantity value |
+| --- | --- |
+| TDCP_0 | $ 1-\frac {1}{128\sqrt {2}}$< TDCP ≤1 |
+| TDCP_1 | $ 1-\frac {1}{128}$< TDCP ≤ $ 1-\frac {1}{128\sqrt {2}}$ |
+| TDCP_2 | $ 1-\frac {1}{64\sqrt {2}}$< TDCP ≤ $ 1-\frac {1}{128}$ |
+| TDCP_3 | $ 1-\frac {1}{64}$< TDCP ≤ $ 1-\frac {1}{64\sqrt {2}}$ |
+| TDCP_4 | $ 1-\frac {1}{32\sqrt {2}}$< TDCP ≤ $ 1-\frac {1}{64}$ |
+| TDCP_5 | $ 1-\frac {1}{32}$< TDCP ≤ $ 1-\frac {1}{32\sqrt {2}}$ |
+| TDCP_6 | $ 1-\frac {1}{16\sqrt {2}}$< TDCP ≤ $ 1-\frac {1}{32}$ |
+| TDCP_7 | $ 1-\frac {1}{16}$< TDCP ≤ $ 1-\frac {1}{16\sqrt {2}}$ |
+| TDCP_8 | $ 1-\frac {1}{8\sqrt {2}}$< TDCP ≤ $ 1-\frac {1}{16}$ |
+| TDCP_9 | $ 1-\frac {1}{8}$ < TDCP ≤ $ 1-\frac {1}{8\sqrt {2}}$ |
+| TDCP_10 | $ 1-\frac {1}{4\sqrt {2}}$< TDCP ≤ $ 1-\frac {1}{8}$ |
+| TDCP_11 | $ 1-\frac {1}{4}$< TDCP ≤ $ 1-\frac {1}{4\sqrt {2}}$ |
+| TDCP_12 | $ 1-\frac {1}{2\sqrt {2}}$< TDCP ≤ $ 1-\frac {1}{4}$ |
+| TDCP_13 | $ 1-\frac {1}{2}$< TDCP ≤ $ 1-\frac {1}{2\sqrt {2}}$ |
+| TDCP_14 | $ 1-\frac {1}{\sqrt {2}}$< TDCP ≤ $ 1-\frac {1}{2}$ |
+| TDCP_15 | 0 ≤ TDCP ≤ $ 1-\frac {1}{\sqrt {2}}$ |
+
+Table 10.1.42-2: TDCP phase measurement report mapping
+
+| Reported value | Measured quantity value |
+| --- | --- |
+| TDCP_PH_0 | 0 ≤ TDCP_PH < $\frac {2\pi  }{16}$ |
+| TDCP_PH_1 | $\frac {2\pi  }{16}$≤ TDCP_PH < $\frac {2\pi  *2}{16}$ |
+| TDCP_PH_2 | $\frac {2\pi  *2}{16}$≤ TDCP_PH < $\frac {2\pi  *3}{16}$ |
+| TDCP_PH_3 | $\frac {2\pi  *3}{16}$≤ TDCP_PH < $\frac {2\pi  *4}{16}$ |
+| TDCP_PH_4 | $\frac {2\pi  *4}{16}$≤ TDCP_PH < $\frac {2\pi  *5}{16}$ |
+| TDCP_PH_5 | $\frac {2\pi  *5}{16}$≤ TDCP_PH < $\frac {2\pi  *6}{16}$ |
+| TDCP_PH_6 | $\frac {2\pi  *6}{16}$≤ TDCP_PH < $\frac {2\pi  *7}{16}$ |
+| TDCP_PH_7 | $\frac {2\pi  *7}{16}$≤ TDCP_PH < $\frac {2\pi  *8}{16}$ |
+| TDCP_PH_8 | $\frac {2\pi  *8}{16}$≤ TDCP_PH < $\frac {2\pi  *9}{16}$ |
+| TDCP_PH_9 | $\frac {2\pi  *9}{16}$ ≤ TDCP_PH < $\frac {2\pi  *10}{16}$ |
+| TDCP_PH_10 | $\frac {2\pi  *10}{16}$≤ TDCP_PH < $\frac {2\pi  *11}{16}$ |
+| TDCP_PH_11 | $\frac {2\pi  *11}{16}$≤ TDCP_PH < $\frac {2\pi  *12}{16}$ |
+| TDCP_PH_12 | $\frac {2\pi  *12}{16}$≤ TDCP_PH < $\frac {2\pi  *13}{16}$ |
+| TDCP_PH_13 | $\frac {2\pi  *13}{16}$≤ TDCP_PH < $\frac {2\pi  *14}{16}$ |
+| TDCP_PH_14 | $\frac {2\pi  *14}{16}$≤ TDCP_PH < $\frac {2\pi  *15}{16}$ |
+| TDCP_PH_15 | $\frac {2\pi  *15}{16}$≤ TDCP_PH ≤ $ 2\pi  $ |
+
+### 10.1.43 DL-RSCPD Measurements
+
+#### 10.1.43.1 Introduction
+
+The requirements in clause 10.1.43 shall apply, provided the UE has received NR-DL-TDOA-RequestLocationInformation message with dl-PRS-RSCPD-Request-r18 from LMF via LPP TS 37.355 [34] requesting the UE to measure and report DL RSCPD measurement together with DL RSTD measurements defined in TS 38.215 [4]. The requirements in clause 10.1.43 shall apply:
+
+- when UE is in RRC_CONNECTED state and the measurement is performed with MG,
+
+- when UE is in RRC_IDLE or RRC_INACTIVE state.
+
+#### Measurement Accuracy Requirements
+
+The accuracy requirements for DL RSCPD measurement are based on single measurement sample in single PFL and shall be within ±(X+Y) degree, provided that the following conditions are met:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled for FR1.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled for FR2.
+
+- Conditions for DL RSCPD measurements are fulfilled according to annex B.2.14 for a corresponding Band for each relevant PRS resource configured for measurement.
+
+- The measurements to derive DL RSCPD are performed on PRS resources within same set of symbols.
+
+- DL RSCPD measurements are based on PRS resources with comb size other than 12.
+
+The requirements in this clause are derived based on AWGN channel and on two-tap channel defined in 38.101-4 [21] annex B.2.4 (a = 1, τd=0.45 µs and fD=5 Hz).
+
+X is defined in table 10.1.43.2-1 for AWGN channel and table 10.1.43.2-2 for two-tap channel for FR1 and is derived assuming no carrier frequency offset at TRP.
+
+X is defined in table 10.1.43.2-3 for AWGN channel and table 10.1.43.2-4 for two-tap channel for FR2 and is derived assuming no carrier frequency offset at TRP.
+
+Y is 14 degrees for FR1 and 28 degrees for FR2.
+
+Table 10.1.43.2-1: DL RSCPD absolute accuracy in FR1 for AWGN channel
+
+| Accuracy(PRS Ês/Iot)ref ≥   -6dB (PRS Ês/Iot)i ≥ -13dB | Accuracy(PRS Ês/Iot)ref ≥    -3dB (PRS Ês/Iot)i ≥ -6dB | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| degree | degree | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 16 | 3 | 15 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 11 | 5 |  | ≥ 52 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 8 | 4 |  | ≥ 104 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 16 | 3 | 30 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 11 | 4 |  | ≥ 48 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 6 | 3 |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 17 | 3 | 60 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| 8 | 4 |  | ≥ 64 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 6 | 3 |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5:  The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest RB number for the corresponding SCS. |  |  |  |  |  |  |  |
+
+Table 10.1.43.2-2: DL RSCPD absolute accuracy in FR1 for two-tap channel
+
+| Accuracy(PRS Ês/Iot)ref ≥    -3dB (PRS Ês/Iot)i ≥ -6dB | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| degree | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 7 | 15 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 7 |  | ≥ 52 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 5 |  | ≥ 104 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 5 | 30 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 6 |  | ≥ 48 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 5 |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 5 | 60 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| 7 |  | ≥ 64 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 4 |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5:  The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest RB number for the corresponding SCS. |  |  |  |  |  |  |
+
+Table 10.1.43.2-3: DL RSCPD absolute accuracy in FR2 for AWGN channel
+
+| Accuracy(PRS Ês/Iot)ref ≥   -6dB (PRS Ês/Iot)i ≥ -13dB | Accuracy(PRS Ês/Iot)ref ≥    -3dB (PRS Ês/Iot)i ≥ -6dB | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)          Note 2 | Io Note 3 range |  |
+|  |  |  |  |  | Minimum Io | Maximum Io |
+| degree | degree | kHz | PRB |  | dBm/SCS | dBm/BWChannel |
+| 17 | 3 | 60 | ≥ 24 | ≥ 4 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 9 | 5 |  | ≥ 64 | ≥ 1 | Note 4 | Note 4 |
+| 7 | 3 |  | ≥ 132 | ≥ 1 | Note 4 | Note 4 |
+| 17 | 3 | 120 | ≥ 32 | ≥ 4 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 10 | 6 |  | ≥ 64 | ≥ 1 | Note 4 | Note 4 |
+| 6 | 3 |  | ≥ 128 | ≥ 1 | Note 4 | Note 4 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest RB number for the corresponding SCS. |  |  |  |  |  |  |
+
+Table 10.1.43.2-4: DL RSCPD absolute accuracy in FR2 for two-tap channel
+
+| Accuracy(PRS Ês/Iot)ref ≥    -3dB (PRS Ês/Iot)i ≥ -6dB | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)          Note 2 | Io Note 3 range |  |
+|  |  |  |  | Minimum Io | Maximum Io |
+| degree | kHz | PRB |  | dBm/SCS | dBm/BWChannel |
+| 5 | 60 | ≥ 24 | ≥ 4 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 5 |  | ≥ 64 | ≥ 1 | Note 4 | Note 4 |
+| 4 |  | ≥ 132 | ≥ 1 | Note 4 | Note 4 |
+| 5 | 120 | ≥ 32 | ≥ 4 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 7 |  | ≥ 64 | ≥ 1 | Note 4 | Note 4 |
+| 5 |  | ≥ 128 | ≥ 1 | Note 4 | Note 4 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |
+
+#### 10.1.43.3 Report Mapping
+
+##### 10.1.43.3.1 Absolute DL RSCPD Measurement Reporting
+
+The reporting range of DL RSCPD, as defined in clause 5.1.43 of TS 38.215 [4], is defined from -180 degree to +180 degree. The reporting resolution is 0.1 degree.
+
+The mapping of DL RSCPD measured quantity is defined in table 10.1.43.3.1-1.
+
+Table 10.1.43.3.1-1: DL RSCPD measurement report mapping
+
+| Reported value | Measured quantity value (DL RSCPD) | Unit |
+| --- | --- | --- |
+| DL_RSCPD_0000 | -180 ≤ DL RSCPD < -179.9 | degree |
+| DL_RSCPD_0001 | -179.9 ≤ DL RSCPD < -179.8 | degree |
+| DL_RSCPD_0002 | -179.8 ≤ DL RSCPD < -179.7 | degree |
+| … | … | … |
+| DL_RSCPD_1798 | -0.2 ≤ DL RSCPD < -0.1 | degree |
+| DL_RSCPD_1799 | -0.1 ≤ DL RSCPD < 0 | degree |
+| DL_RSCPD_1800 | 0 ≤ DL RSCPD < 0.1 | degree |
+| DL_RSCPD_1801 | 0.1 ≤ DL RSCPD < 0.2 | degree |
+| DL_RSCPD_1802 | 0.2 ≤ DL RSCPD < 0.3 | degree |
+| … | … | … |
+| DL_RSCPD_3598 | 179.8 ≤ DL RSCPD < 179.9 | degree |
+| DL_RSCPD_3599 | 179.9 ≤ DL RSCPD < 180 | degree |
+
+### 10.1.44 DL-RSCP Measurements
+
+#### 10.1.44.1 Introduction
+
+The requirements in clause 10.1.44 shall apply, provided the UE has received NR-Multi-RTT-RequestLocationInformation message with dl-PRS-RSCP-Request-r18 from LMF via LPP TS 37.355 [34] requesting the UE to measure and report DL RSCP measurement together with UE Rx-Tx time difference measurements defined in TS 38.215 [4].
+
+The requirements in clause 10.1.44 shall apply:
+
+- when UE is in RRC_CONNECTED state and the measurement is performed with MG,
+
+- when UE is in RRC_INACTIVE state.
+
+#### 10.1.44.2 Measurement Accuracy Requirements
+
+The relative accuracy of DL RSCP measurement in this clause is defined as accuracy of the difference between two DL RSCP measurements, each based on single measurement sample in single PFL.
+
+The requirements in this clause are derived based on AWGN channel and based on two-tap channel defined in 38.101-4 [21] annex B.2.4 (a = 1, τd=0.45 µs and fD=5 Hz).
+
+The DL RSCP relative measurement accuracy requirements in this clause shall not apply, if:
+
+- NTA_offset defined in table 7.1.2-2 changes during the DL RSCP with UE Rx-Tx measurement period, or
+
+- if the uplink transmission timing changes during the DL RSCP with UE Rx-Tx measurement period due to the network-configured Timing Advance.
+
+The DL RSCP relative measurement accuracy requirements in this clause shall apply provided that:
+
+- The UE transmits SRS within the range from -160 ms to 160 ms of at least one DL PRS resource of each of the TRPs in the assistance data.
+
+If the uplink transmission timing changes during the DL RSCP with UE Rx-Tx measurement period due to the autonomous timing adjustment defined in clause 7.1.2 then:
+
+- DL RSCP and UE Rx-Tx measurement accuracy requirements shall apply for a cell, which is also the downlink reference cell (defined in section 7.1.1) for SRS transmission.
+
+- UE Rx-Tx measurement accuracy requirements shall not apply for a cell, which is not the downlink reference cell (defined in section 7.1.1) for SRS transmission.
+
+When a serving cell change occurs during the DL RSCP with UE Rx-Tx measurement period, UE Rx-Tx measurement accuracy requirements and DL RSCP measurement requirements do not apply.
+
+The relative DL RSCP accuracy requirements defined in clause 10.1.44 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled for FR1.
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled for FR2.
+
+- Conditions for DL RSCP measurements are fulfilled according to annex B.2.14 for a corresponding Band for each relevant PRS resource configured for measurement.
+
+- DL RSCP measurements to derive the relative accuracy are performed on PRS resources within the same set of symbols.
+
+- DL RSCPD measurements are based on PRS resources with comb size other than 12.
+
+The accuracy requirement for relative DL-RSCP shall be within ±(X+Y) degree.
+
+The values of X for accuracy requirements for relative DL-RSCP measurement in FR1 are defined in table 10.1.44.2-1 for AWGN channel and in table 10.1.44.2-2 for two-tap channel and is derived assuming no carrier frequency offset at TRP.
+
+The values of X for accuracy requirements for relative DL-RSCP measurement in FR2 are defined in table 10.1.44.2-3 for AWGN channel and in table 10.1.44.2-4 for two-tap channel and is derived assuming no carrier frequency offset at TRP.
+
+Y is 14 degrees for FR1 and 28 degrees for FR2.
+
+Table 10.1.44.2-1: DL RSCP relative accuracy in FR1 for AWGN channel
+
+| Accuracy(PRS Ês/Iot)ref ≥   -3dB (PRS Ês/Iot)i ≥ -13dB | Accuracy(PRS Ês/Iot)ref ≥    0dB (PRS Ês/Iot)i ≥ -6dB | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| degree | degree | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 14 | 4 | 15 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 9 | 4 |  | ≥ 52 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 6 | 3 |  | ≥ 104 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 14 | 5 | 30 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 9 | 3 |  | ≥ 48 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 7 | 3 |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 14 | 4 | 60 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| 10 | 4 |  | ≥ 64 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 7 | 3 |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5:   The same bands and the same Io conditions for each band apply for this requirement as for the corresponding                 requirement with the PRS bandwidth of the smallest RB number for the corresponding SCS. |  |  |  |  |  |  |  |
+
+Table 10.1.44.2-2: DL RSCP relative accuracy in FR1 for two-tap channel
+
+| Accuracy(PRS Ês/Iot)ref ≥   0dB (PRS Ês/Iot)i ≥ -6dB | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| degree | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 9 | 15 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 7 |  | ≥ 52 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 5 |  | ≥ 104 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 7 | 30 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 5 |  | ≥ 48 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 7 |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 7 | 60 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| 9 |  | ≥ 64 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| 6 |  | ≥ 132 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5:  The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |  |
+
+Table 10.1.44.2-3: DL RSCP relative accuracy in FR2 for AWGN channel
+
+| Accuracy(PRS Ês/Iot)ref ≥   -3dB (PRS Ês/Iot)i ≥ -13dB | Accuracy(PRS Ês/Iot)ref ≥    0dB (PRS Ês/Iot)i ≥ -6dB | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)          Note 2 | Io Note 3 range |  |
+|  |  |  |  |  | Minimum Io | Maximum Io |
+| degree | degree | kHz | PRB |  | dBm/SCS | dBm/BWChannel |
+| 14 | 4 | 60 | ≥ 24 | ≥ 4 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 8 | 4 |  | ≥ 64 | ≥ 1 | Note 4 | Note 4 |
+| 6 | 3 |  | ≥ 132 | ≥ 1 | Note 4 | Note 4 |
+| 16 | 5 | 120 | ≥ 32 | ≥ 4 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 9 | 4 |  | ≥ 64 | ≥ 1 | Note 4 | Note 4 |
+| 7 | 3 |  | ≥ 128 | ≥ 1 | Note 4 | Note 4 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest RB number for the corresponding SCS. |  |  |  |  |  |  |
+
+Table 10.1.44.2-4: DL RSCP relative accuracy in FR2 for two-tap channel.
+
+| Accuracy(PRS Ês/Iot)ref ≥    0dB (PRS Ês/Iot)i ≥ -6dB | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)          Note 2 | Io Note 3 range |  |
+|  |  |  |  | Minimum Io | Maximum Io |
+| degree | kHz | PRB |  | dBm/SCS | dBm/BWChannel |
+| 8 | 60 | ≥ 24 | ≥ 4 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 5 |  | ≥ 64 | ≥ 1 | Note 4 | Note 4 |
+| 3 |  | ≥ 132 | ≥ 1 | Note 4 | Note 4 |
+| 9 | 120 | ≥ 32 | ≥ 4 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 6 |  | ≥ 64 | ≥ 1 | Note 4 | Note 4 |
+| 5 |  | ≥ 132 | ≥ 1 | Note 4 | Note 4 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |
+
+#### 10.1.44.3 Report Mapping
+
+Relative DL RSCP measurement reporting in clause 10.1.44.3.1 applies to report:
+
+- gap-based DL RSCP measurement, and
+
+- DL RSCP in RRC_INACTIVE state.
+
+##### 10.1.44.3.1 Relative DL RSCP Measurement Reporting
+
+The reporting range of relative DL RSCP, as defined in clause 5.1.42 of TS 38.215 [4], is defined from 0 degree to 360 degree. The reporting resolution is 0.1 degree.
+
+The mapping of DL RSCP measured quantity is defined in table 10.1.44.3.1-1.
+
+Table 10.1.44.3.1-1: DL RSCP measurement report mapping
+
+| Reported value | Measured quantity value (DL RSCP) | Unit |
+| --- | --- | --- |
+| DL_RSCP_0000 | 0 ≤ DL RSCP < 0.1 | degree |
+| DL_RSCP_0001 | 0.1 ≤ DL RSCP < 0.2 | degree |
+| DL_RSCP_0002 | 0.2 ≤ DL RSCP < 0.3 | degree |
+| … | … | … |
+| DL_RSCP_1798 | 179.8 ≤ DL RSCP < 179.9 | degree |
+| DL_RSCP_1799 | 179.9 ≤ DL RSCP < 180 | degree |
+| DL_RSCP_1800 | 180 ≤ DL RSCP < 180.1 | degree |
+| DL_RSCP_1801 | 180.1 ≤ DL RSCP < 180.2 | degree |
+| DL_RSCP_1802 | 180.2 ≤ DL RSCP < 180.3 | degree |
+| … | … | … |
+| DL_RSCP_3598 | 359.8 ≤ DL RSCP < 359.9 | degree |
+| DL_RSCP_3599 | 359.9 ≤ DL RSCP < 360 | degree |
+
+### 10.1.45 CJT calibration measurements
+
+#### 10.1.45.1 Introduction
+
+The accuracy requirements in table 10.1.45.2-1, 10.1.45.2-2, 10.1.45.3-1, 10.1.45.3-2 and 10.1.45.3-3 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to Annex B.2.12 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+#### 10.1.45.2 CJTC calibration delay offset report
+
+Table 10.1.45.2-1: CJTC calibration delay offset report absolute accuracy in FR1 for UE supporting cjtc-DdReport-r19 and not supporting cjtc-DdReportHighAccuracy-r19
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 15 kHz SCS | 30 kHz SCS | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| ns | ns | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| 258 | 166 | 3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+Table 10.1.45.2-2: CJTC calibration delay offset report absolute accuracy in FR1 for UE supporting cjtc-DdReport-r19 and cjtc-DdReportHighAccuracy-r19
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 15 kHz SCS | 30 kHz SCS | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| ns | ns | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| 74 | 46 | 3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+#### 10.1.45.3 CJTC calibration frequency offset report
+
+Table 10.1.45.3-1: CJTC calibration frequency offset report absolute accuracy in FR1 for UE supporting cjtc-FO-Report-r19 and not supporting cjtc-DdReportHighAccuracy-r19
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 15 kHz SCS | 30 kHz SCS | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| Hz | Hz | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| 91 | 187 | 3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+Table 10.1.45.3-2: CJTC calibration frequency offset report absolute accuracy in FR1 for UE supporting cjtc-FO-Report-r19 and cjtc-FO-ReportHighAccuracy-r19 high accuracy reporting level 1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 15 kHz SCS | 30 kHz SCS | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| Hz | Hz | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| 22 | 33 | 3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+Table 10.1.45.3-3: CJTC calibration frequency offset report absolute accuracy in FR1 for UE supporting cjtc-FO-Report-r19 and cjtc-FO-ReportHighAccuracy-r19 high accuracy reporting level 2
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 15 kHz SCS | 30 kHz SCS | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| Hz | Hz | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| 11 | 12 | 3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1.46 CJT Calibration Report Mapping
+
+#### 10.1.46.1 CJT Calibration Delay Offset Measurement Report Mapping
+
+The reporting range of delay offset is defined from 0 to AD, where $ A_{D}\in  \left \{ 0.5CP,CP\right \} $. The number of levels is defined by MD, where $ M_{D}\in  \{32, 64, 128, 256\}$. The mapping of measured quantity is defined in tables 10.1.y.1-1. The range in the signaling may be larger than the guaranteed accuracy range.
+
+Table 10.1.46.1-1: Mapping of cjtc-Dd
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| CJTC_D_00 | 0 ≤ CJTC-Dd < $\frac {A_{D}}{M_{D}-1}$ | ns |
+| CJTC_D _01 | $\frac {A_{D}}{M_{D}-1}$≤ CJTC-Dd < $\frac {2*A_{D}}{M_{D}-1}$ | ns |
+| CJTC_D _02 | $\frac {2*A_{D}}{M_{D}-1}$≤ CJTC-Dd < $\frac {3*A_{D}}{M_{D}-1}$ | ns |
+| … | … | … |
+| CJTC_D _MD-2 | $\frac {(M_{D}-2)*A_{D}}{M_{D}-1}$≤ CJTC-Dd < $ A_{D}$ | ns |
+| CJTC_D _MD-1 | $ A_{D}$ £ CJTC-Dd | ns |
+
+#### 10.1.46.2 CJT Calibration Frequency Offset Measurement Report Mapping
+
+The reporting range of frequency offset is defined from 0 to AFO, where $ A_{FO}\in  \left \{ 0.1ppm,0.2ppm\right \} $. The number of levels is defined by MFO, where $ M_{FO}\in  \{16, 32, 256\}$. The mapping of measured quantity is defined in tables 10.1.46.2-1. The range in the signaling may be larger than the guaranteed accuracy range.10.1.46
+
+Table 10.1.46.2-1: Mapping of cjtc-F
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| CJTC_F_00 | 0 ≤ CJTC-F < $\frac {A_{FO}}{M_{FO}-1}$ | Hz |
+| CJTC_F _01 | $\frac {A_{FO}}{M_{FO}-1}$≤ CJTC-F < $\frac {2*A_{FO}}{M_{FO}-1}$ | Hz |
+| CJTC_F _02 | $\frac {2*A_{FO}}{M_{FO}-1}$≤ CJTC-F < $\frac {3*A_{FO}}{M_{FO}-1}$ | Hz |
+| … | … | … |
+| CJTC_F _MFO-2 | $\frac {(M_{FO}-2)*A_{FO}}{M_{FO}-1}$≤ CJTC-F < $ A_{FO}$ | Hz |
+| CJTC_F _MFO-1 | ‘Invalid’ | N/A |
+
+#### 10.1.46.3 CJT Calibration Phase Offset Measurement Report Mapping
+
+The reporting range of phase offset is defined from 0 to 2p. The number of levels is defined by MF, where $ M_{\Phi  }\in  \{16, 32\}$. The mapping of measured quantity is defined in tables 10.1.46.3-1. The range in the signaling may be larger than the guaranteed accuracy range.
+
+Table 10.1.46.3-1: Mapping of cjtc-P
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| CJTC_P_00 | 0 ≤ CJTC-P < $\frac {2\pi  }{M_{\Phi  }-1}$ | rad |
+| CJTC_P _01 | $\frac {2\pi  }{M_{\Phi  }-1}$≤ CJTC-P < $\frac {2*2\pi  }{M_{\Phi  }-1}$ | rad |
+| CJTC_P _02 | $\frac {2*2\pi  }{M_{\Phi  }-1}$≤ CJTC-P < $\frac {3*2\pi  }{M_{\Phi  }-1}$ | rad |
+| … | … | … |
+| CJTC_P _ MF -2 | $\frac {(M_{\Phi  }-2)*2\pi  }{M_{\Phi  }-1}$≤ CJTC-P ≤ $ 2\pi  $ | rad |
+| CJTC_P _ MF -1 | ‘Invalid’ | N/A |
+
+### 10.1.47 L1 CLI measurement accuracy requirements
+
+#### 10.1.47.1 L1-SRS-RSRP
+
+##### 10.1.47.1.1 L1-SRS-RSRP Accuracy
+
+The L1-SRS-RSRP measurement reported by the UE shall fulfil the accuracy requirements defined in table 10.1.47.1.1-1 for FR1 and table 10.1.47.1.1-2 for FR2-1, provided that the following conditions are met. The accuracy requirements in this clause are derived based on AWGN radio propagation conditions.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-SRS-RSRP measurements are fulfilled according to annex B.2.7 for a corresponding Band for each relevant SRS resource configured for measurement.
+
+- The time difference between UE’s DL reference timing in the serving cell and SRS arrival time is no larger than Terror_SRS_RSRP, where
+
+- Terror_SRS_RSRP = TC × NTA_offset + 4.67µs for 15 kHz SCS and 30 kHz SCS for FR1
+
+- Terror_SRS_RSRP = TC × NTA_offset + 1.67 µs for 60 kHz SCS for FR1.
+
+- Terror_SRS_RSRP = TC × NTA_offset + 0.67µs for FR2
+
+- NTA_offset is defined in table 7.1.2-2
+
+- TC is 0.509 ns
+
+- The number of SRS ports in the SRS resource configured for measurement is 1,
+
+- The number of symbols in the SRS resource configured for measurement is 1,
+
+- The number of repetitions in the SRS resource configured for measurement is 1,
+
+- Frequency hopping, sequence group hopping or sequence hopping is disabled in the SRS resource configured for measurement,
+
+- The bandwidth of the SRS resource is 24 PRBs.
+
+- One of the following conditions is met
+
+- There is no other SRS resource with the same root sequence and on the same symbol and with same comb as the relevant SRS resource.
+
+- If multiple SRS resources are on the same symbol and with same comb, the distance between cyclic shifts of any two resources is no less than 6 if transmissionComb = n4, and no less than 4 if transmissionComb = n2.
+
+Table 10.1.47.1.1-1: L1-SRS-RSRP absolute accuracy in FR1
+
+| Accuracy |  |  |  |  |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition |  |  | Extreme condition |  |  | SRS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  |  |  |  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB |  |  |  |  |  | dB |  | dBm / SCSSRS |  |  | dBm/BW Channel | dBm/BW Channel |
+| SCSSRS (kHz) |  |  | SCSSRS (kHz) |  |  |  |  |  |  |  |  |  |
+| 15 | 30 | 60 | 15 | 30 | 60 |  |  | SCSSRS = 15 kHz | SCSSRS = 30 kHz | SCSSRS = 60 kHz |  |  |
+| 3.5 | 4 | 3.5 | 8 | 8.5 | 8 | 1 | NR_TDD_FR1_A, | -120 | -117 | -114 | N/A | -70 |
+|  |  |  |  |  |  |  | NR_TDD_FR1_C | -119 | -116 | -113 | N/A | -70 |
+|  |  |  |  |  |  |  | NR_TDD_FR1_D | -118.5 | -115.5 | -112.5 | N/A | -70 |
+|  |  |  |  |  |  |  | NR_TDD_FR1_E | -118 | -115 | -112 | N/A | -70 |
+| 7 | 7.5 | 7 | 10 | 10.5 | 10 | 1 | NR_TDD_FR1_A,NR_TDD_FR1_C, NR_TDD_FR1_D, NR_TDD_FR1_E | N/A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |  |  |  |  |
+
+Table 10.1.47.1.1-2: L1-SRS-RSRP absolute accuracy in FR2
+
+| Accuracy |  |  |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition |  | Extreme condition |  | SRS Ês/Iot | Io Note 1 range |  |  |  |
+|  |  |  |  |  | Minimum Io |  |  | Maximum Io |
+| dB |  |  |  | dB | dBm / SCSSRS Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+| SCSSRS (kHz) |  | SCSSRS (kHz) |  |  | SCSSRS = 60 kHz | SCSSRS = 120 kHz |  |  |
+| 60 | 120 | 60 | 120 |  |  |  |  |  |
+| 5 | 5 | 8 | 8 | ≥1 | Same value as SRS_RP in Table B.2.7-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 8 | 8 | 10 | 10 | ≥1 | N/A |  | -70 | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table. |  |  |  |  |  |  |  |  |
+
+##### 10.1.47.1.2 L1-SRS-RSRP report mapping
+
+The reporting range of L1-SRS-RSRP is defined from -140 dBm to -44 dBm with 1 dB resolution. The mapping of measured quantity is defined in table 10.1.47.1.2-1. The range in the signalling may be larger than the guaranteed accuracy range.
+
+The reporting range of differential SRS-RSRP for L1 reporting is defined from 0 dB to -30 dB with 2 dB resolution. The mapping of measured quantity is defined in table 10.1.47.1.2-2. The range in the signalling may be larger than the guaranteed accuracy range.
+
+Table 10.1.47.1.2-1: L1-SRS-RSRP measurement report mapping
+
+| Reported value | Measured quantity value | Unit |  |
+| --- | --- | --- | --- |
+| L1-SRS-RSRP_0 | L1-SRS-RSRP<-140 | dBm |  |
+| L1-SRS-RSRP_1 | -140≤ L1-SRS-RSRP<-139 | dBm |  |
+| L1-SRS-RSRP_2 | -139≤ L1-SRS-RSRP<-138 | dBm |  |
+| L1-SRS-RSRP_3 | -138≤ L1-SRS-RSRP<-137 | dBm |  |
+| L1-SRS-RSRP_4 | -137≤ L1-SRS-RSRP<-136 | dBm |  |
+| .. | .. | … |  |
+| L1-SRS-RSRP_95 | -46≤ L1-SRS-RSRP<-45 | dBm |  |
+| L1-SRS-RSRP_96 | -45≤ L1-SRS-RSRP<-44 | dBm |  |
+| L1-SRS-RSRP_97 | -44≤ L1-SRS-RSRP | dBm |  |
+| L1-SRS-RSRP_98 | Infinity |  |  |
+| NOTE: ‘Infinity’ means that UE cannot detect SRS due to too strong signal to measure. |  |  |  |
+
+Table 10.1.47.1.2-2: Differential SRS-RSRP measurement (for L1 reporting) report mapping
+
+| Reported value | Measured quantity value (difference in measured RSRP from strongest RSRP) | Unit |
+| --- | --- | --- |
+| DIFF_SRS-RSRP_0 | 0≥ΔRSRP>-2 | dB |
+| DIFF_SRS-RSRP_1 | -2≥ΔRSRP>-4 | dB |
+| DIFF_SRS-RSRP_2 | -4≥ΔRSRP>-6 | dB |
+| DIFF_SRS-RSRP_3 | -6≥ΔRSRP>-8 | dB |
+| DIFF_SRS-RSRP_4 | -8≥ΔRSRP>-10 | dB |
+| DIFF_SRS-RSRP_5 | -10≥ΔRSRP>-12 | dB |
+| DIFF_SRS-RSRP_6 | -12≥ΔRSRP>-14 | dB |
+| DIFF_SRS-RSRP_7 | -14≥ΔRSRP>-16 | dB |
+| DIFF_SRS-RSRP_8 | -16≥ΔRSRP>-18 | dB |
+| DIFF_SRS-RSRP_9 | -18≥ΔRSRP>-20 | dB |
+| DIFF_SRS-RSRP_10 | -20≥ΔRSRP>-22 | dB |
+| DIFF_SRS-RSRP_11 | -22≥ΔRSRP>-24 | dB |
+| DIFF_SRS-RSRP_12 | -24≥ΔRSRP>-26 | dB |
+| DIFF_SRS-RSRP_13 | -26≥ΔRSRP>-28 | dB |
+| DIFF_SRS-RSRP_14 | -28≥ΔRSRP>-30 | dB |
+| DIFF_SRS-RSRP_15 | -30≥ΔRSRP | dB |
+
+#### 10.1.47.2 L1-CLI-RSSI
+
+##### 10.1.47.2.1 L1-CLI-RSSI Accuracy
+
+The L1-CLI-RSSI measurement reported by the UE shall fulfil the accuracy requirements defined in table 10.1.47.2.1-1 for FR1 and table 10.1.47.2.1-2 for FR2, provided that the following conditions are met.
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+Table 10.1.47.2.1-1: L1-CLI-RSSI absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Io Note 1 range |  |  |  |  |  |
+|  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB |  | dBm / SCSSRS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  | SCSSRS = 15 kHz | SCSSRS = 30 kHz | SCSSRS = 60 kHz |  |  |
+| 3.5 | 6.5 | NR_TDD_FR1_A, | -120 | -117 | -114 | N/A | -70 |
+|  |  | NR_TDD_FR1_C | -119 | -116 | -113 | N/A | -70 |
+|  |  | NR_TDD_FR1_D | -118.5 | -115.5 | -112.5 | N/A | -70 |
+|  |  | NR_TDD_FR1_E | -118 | -115 | -112 | N/A | -70 |
+| 5.5 | 8.5 | Note 3 | Note 3 | Note 3 | Note 3 | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement. |  |  |  |  |  |  |  |
+
+Table 10.1.47.2.1-2: L1-CLI-RSSI absolute accuracy in FR2
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Io Note 1 range |  |  |  |
+|  |  | Minimum Io |  |  | Maximum Io |
+| dB | dB | dBm / SCSSRS Note 2 |  | dBm/BWChannel | dBm/BWChannel |
+|  |  | SCSSRS = 60 kHz | SCSSRS = 120 kHz |  |  |
+| 5 | 8 | Same value as SRS_RP in Table B.2.7-2, according to UE Power class, operating band and angle of arrival |  | N/A | -70 |
+| 7 | 10 | Note 4 |  | -70 | -50 |
+| NOTE 1: Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2: Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3: In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement. |  |  |  |  |  |
+
+##### 10.1.47.2.2 L1-CLI-RSSI report mapping
+
+The reporting range of L1-CLI-RSSI is defined from -100 dBm to -25 dBm with 1 dB resolution. The mapping of measured quantity is defined in table 10.1.47.2.2-1. The range in the signalling may be larger than the guaranteed accuracy range. UE shall scale the measured L1-CLI-RSSI to report a nominal RSSI equivalent to 6RB measurement with 15 kHz SCS.
+
+The reporting range of differential L1-CLI-RSSI reporting is defined from 0 dB to -30 dB with 2 dB resolution. The mapping of measured quantity is defined in table 10.1.47.2.2-2. The range in the signalling may be larger than the guaranteed accuracy range.
+
+Table 10.1.47.2.2-1: L1-CLI-RSSI measurement report mapping
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| L1-CLI-RSSI_00 | L1-CLI-RSSI < 100 | dBm |
+| L1-CLI-RSSI_01 | -100  L1-CLI-RSSI < 99 | dBm |
+| L1-CLI-RSSI_02 | -99  L1-CLI-RSSI < 98 | dBm |
+| … | … | … |
+| L1-CLI-RSSI_74 | -27  L1-CLI-RSSI < -26 | dBm |
+| L1-CLI-RSSI_75 | -26  L1-CLI-RSSI < -25 | dBm |
+| L1-CLI-RSSI_76 | -25  L1-CLI-RSSI | dBm |
+
+Table 10.1.47.2.2-2: Differential CLI-RSSI measurement (for L1 reporting) report mapping
+
+| Reported value | Measured quantity value (difference in measured RSSI from strongest RSSI) | Unit |
+| --- | --- | --- |
+| DIFF_CLI-RSSI_0 | 0≥ΔCLI-RSSI>-2 | dB |
+| DIFF_CLI-RSSI_1 | -2≥ΔCLI-RSSI>-4 | dB |
+| DIFF_CLI-RSSI_2 | -4≥ΔCLI-RSSI>-6 | dB |
+| DIFF_CLI-RSSI_3 | -6≥ΔCLI-RSSI>-8 | dB |
+| DIFF_CLI-RSSI_4 | -8≥ΔCLI-RSSI>-10 | dB |
+| DIFF_CLI-RSSI_5 | -10≥ΔCLI-RSSI>-12 | dB |
+| DIFF_CLI-RSSI_6 | -12≥ΔCLI-RSSI>-14 | dB |
+| DIFF_CLI-RSSI_7 | -14≥ΔCLI-RSSI>-16 | dB |
+| DIFF_CLI-RSSI_8 | -16≥ΔCLI-RSSI>-18 | dB |
+| DIFF_CLI-RSSI_9 | -18≥ΔCLI-RSSI>-20 | dB |
+| DIFF_CLI-RSSI_10 | -20≥ΔCLI-RSSI>-22 | dB |
+| DIFF_CLI-RSSI_11 | -22≥ΔCLI-RSSI>-24 | dB |
+| DIFF_CLI-RSSI_12 | -24≥ΔCLI-RSSI>-26 | dB |
+| DIFF_CLI-RSSI_13 | -26≥ΔCLI-RSSI>-28 | dB |
+| DIFF_CLI-RSSI_14 | -28≥ΔCLI-RSSI>-30 | dB |
+| DIFF_CLI-RSSI_15 | -30≥ΔCLI-RSSI | dB |
+
+### 10.1.48 RS resource prediction accuracy requirements for FR2
+
+#### 10.1.48.1 CSI-RS based RS resource prediction accuracy requirements
+
+Unless otherwise specified, the accuracy requirements for prediction accuracy of CSI-RS based RS resources in this clause apply to the case when only one CSI-RS based RS resource of the serving cell is configured to be predicted for CSI-RS based RS resource prediction in FR2 when the UE is configured with reportQuantity-r19 set to 'p-cri-r19'.
+
+The accuracy requirements in Tables 10.1.48.1-2 and 10.1.48.1-3 are valid under the following conditions:
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex [B.2.4.2] for the actual strongest CSI-RS as the total power received by the UE for a corresponding Band for each relevant CSI-RS.
+
+-  Conditions for L1-RSRP measurements are fulfilled according to annex [B.2.4.1] for the actual strongest SSB as the total power received by the UE for a corresponding Band for each relevant SSB.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+- Further conditions are captured in Table 10.1.48.1-1.
+
+Table 10.1.48.1-1: Conditions for CSI-RS based RS resource prediction accuracy requirements
+
+| Parameter | Value |
+| --- | --- |
+| Number of CSI-RS beams in resourcesForSetA-r19 | 32 |
+| Number of beams in resourcesForChannelMeasurement when resourcesForChannelMeasurement are CSI-RS beams | 8 |
+| Relationship between resourcesForChannelMeasurement and resourcesForSetA-r19 beams when resourcesForChannelMeasurement are CSI-RS beams | The resourcesForChannelMeasuremen are selected from resourcesForSetA-r19 such that each resource in resourcesForChannelMeasuremen corresponds to one distinct resource of resourcesForSetA-r19, and the selected resources are interlaced and approximately uniformly distributed across the resourcesForSetA-r19 beam grid. |
+| Beamwidth assumption when resourcesForChannelMeasurement are CSI-RS beams | Equal beamwidth for all beams in resourcesForSetA-r19 |
+| Number of beams in resourcesForChannelMeasurement when resourcesForChannelMeasurement are SSB beams | 8 |
+| Relationship between resourcesForChannelMeasurement and resourcesForSetA-r19 beams when resourcesForChannelMeasurement are SSB beams | All resources in resourcesForSetA-r19 are partitioned into eight groups of four resources, where all resources within each group are QCLed to one unique resource in resourcesForChannelMeasuremen |
+| Beamwidth assumption when resourcesForChannelMeasurement are SSB beams | Equal beamwidth for all beams in resourcesForChannelMeasuremen.Equal beamwidth for all beams in resourcesForSetA-r19 |
+| Ês/Iot | [ >= -3 dB] |
+| Number of beams in resourcesForChannelMeasurement whose Es/Iot need to exceed threshold | 2 |
+| Minimum Io | TBD |
+| Maximum Io | TBD |
+| Note 1: TXRU weights mapping for BS and UE is up to company. |  |
+
+Note: The simulation results to derive accuracy requirements of this section were generated based on the parameters of A.x.y.z
+
+The performance with larger bandwidth of CSI-RS for the first reported P-CRI in nrofreportedpredictedrs-r19 is equal to or better than the accuracy requirements in table 10.1.48.1-2, when resourcesForChannelMeasurement are CSI-RS beams. The correct prediction is considered as the ground-truth L1-RSRP of the first reported P-CRI being larger than or equal to the ground-truth RSRP of the strongest beam in resourcesForSetA-r19 minus the tolerance margin.
+
+Table 10.1.48.1-2: CSI-RS based RS resource prediction accuracy requirements in FR2 when resourcesForChannelMeasurement are CSI-RS beams
+
+| Success rate | Tolerance margin dB |
+| --- | --- |
+| $\geq  [75\%$] | 3 |
+| NOTE 1:   The successful rate of correct prediction should be greater than or equal to [75%] |  |
+
+The performance with larger bandwidth of CSI-RS for the first reported P-CRI in nrofreportedpredictedrs-r19 is equal to or better than the accuracy requirements in table 10.1.48.1-3, when resourcesForChannelMeasurement are SSB beams. The correct prediction is considered as the ground-truth L1-RSRP of the first reported P-CRI being larger than or equal to the ground-truth RSRP of the strongest beam in resourcesForSetA-r19 minus the tolerance margin.
+
+Table 10.1.48.1-3: CSI-RS based RS resource prediction accuracy requirements in FR2 when resourcesForChannelMeasurement are SSB beams
+
+| Success rate | Tolerance margin |
+| --- | --- |
+| $\geq  [75\%$] | 3 |
+| NOTE 1:   The successful rate of correct prediction should be greater than or equal to [75%] |  |
+
+## 10.1A NR measurements for RedCap
+
+### 10.1A.1 Introduction
+
+The requirements in this clause are applicable for RedCap UE as follows:
+
+- intra-frequency requirements apply for PCell measurements in SA,
+
+- inter-frequency requirements apply for non-serving cell measurements on NR carrier frequencies.
+
+- inter-frequency requirements apply for measurements from one cell on a frequency compared to the measurement from another cell on a different frequency.
+
+The accuracy requirements in this clause are applicable for AWGN radio propagation conditions. The accuracy requirements of RSRP, RSRQ and SINR are applicable provided that reference SSB is not changed during measurement period.
+
+### 10.1A.2 Intra-frequency RSRP accuracy requirements for FR1
+
+#### 10.1A.2.1 Intra-frequency SS-RSRP accuracy requirements
+
+##### 10.1A.2.1.1 Absolute SS-RSRP Accuracy
+
+The accuracy requirements in clause 10.1.2.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.2.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.15 for a corresponding Band for each relevant SSB.
+
+Table 10.1A.2.1.1-1: SS-RSRP Intra-frequency absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| 5.5 | 10 | -6 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| 9 | 12 | -6 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A,NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1A.2.1.2 Relative SS-RSRP Accuracy
+
+The accuracy requirements in clause 10.1.2.1.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.2.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.15 for a corresponding Band for each relevant SSB.
+
+Table 10.1A.2.1.2-1: SS-RSRP Intra-frequency relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 3 | 4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 4 | 4 | -6 | Note 3 | Note 3 | Note 3 | N/A | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1A.3 Intra-frequency RSRP accuracy requirements for FR2
+
+#### 10.1A.3.1 Intra-frequency SS-RSRP accuracy requirements
+
+##### 10.1A.3.1.1 Absolute SS-RSRP Accuracy
+
+The accuracy requirements in clause 10.1.3.1.1 shall apply.
+
+##### 10.1A.3.1.2 Relative SS-RSRP Accuracy
+
+The accuracy requirements in clause 10.1.3.1.2 shall apply.
+
+### 10.1A.4 Inter-frequency RSRP accuracy requirements for FR1
+
+#### 10.1A.4.1 Inter-frequency SS-RSRP accuracy requirements
+
+##### 10.1A.4.1.1 Absolute SS-RSRP Accuracy in FR1
+
+The accuracy requirements in clause 10.1.4.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.4.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.16 for a corresponding Band for each relevant SSB.
+
+Table 10.1A.4.1.1-1: SS-RSRP Inter-frequency Absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| 5.5 | 10 | -6 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| 9 | 12 | -6 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A, NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: VoidNOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1A.4.1.2 Relative SS-RSRP Accuracy in FR1
+
+The accuracy requirements in clause 10.1.4.1.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.4.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] clause7.3 for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.16 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1A.4.1.2-1: SS-RSRP Inter-frequency relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 5.5 | 7 | -6 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1A.5 Inter-frequency RSRP accuracy requirements for FR2
+
+#### 10.1A.5.1 Inter-frequency SS-RSRP accuracy requirements
+
+##### 10.1A.5.1.1 Absolute SS-RSRP Accuracy
+
+The accuracy requirements in clause 10.1.5.1.1 shall apply.
+
+##### 10.1A.5.1.2 Relative SS-RSRP Accuracy
+
+The accuracy requirements in clause 10.1.5.1.2 shall apply.
+
+### 10.1A.6 Intra-frequency RSRQ accuracy requirements for FR1
+
+#### 10.1A.6.1 Intra-frequency SS-RSRQ accuracy requirements in FR1
+
+##### 10.1A.6.1.1 Absolute SS-RSRQ Accuracy in FR1
+
+The accuracy requirements in clause 10.1.7.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.6.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.15 for a corresponding Band for each relevant SSB.
+
+Table 10.1A.6.1.1-1: SS-RSRQ Intra-frequency absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 3.5 | 5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 4.5 | 5 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1A.7 Intra-frequency RSRQ accuracy requirements for FR2
+
+#### 10.1A.7.1 Intra-frequency SS-RSRQ accuracy requirements in FR2
+
+##### 10.1A.7.1.1 Absolute SS-RSRQ Accuracy in FR2
+
+The accuracy requirements in clause 10.1.8.1.1 shall apply.
+
+### 10.1A.8 Inter-frequency RSRQ accuracy requirements for FR1
+
+#### 10.1A.8.1 Inter-frequency SS-RSRQ accuracy requirements in FR1
+
+##### 10.1A.8.1.1 Absolute SS-RSRQ in FR1
+
+The accuracy requirements in clause 10.1.9.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.8.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.16 for a corresponding Band for each relevant SSB.
+
+Table 10.1A.8.1.1-1: SS-RSRQ Inter-frequency absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 3 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 3.5 | 5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 4.5 | 5 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1A.8.1.2 Relative SS-RSRQ Accuracy in FR1
+
+The accuracy requirements in clause 10.1.9.1.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.8.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.16 for a corresponding Band for each relevant SSB.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- |Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1A.8.1.2-1: SS-RSRQ Inter-frequency relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 2 | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 4 | 5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 5 | 5 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1A.9 Inter-frequency RSRQ accuracy requirements for FR2
+
+#### 10.1A.9.1 Inter-frequency SS-RSRQ accuracy requirements in FR2
+
+##### 10.1A.9.1.1 Absolute SS-RSRQ Accuracy in FR2
+
+The accuracy requirements in clause 10.1.10.1.1 shall apply.
+
+##### 10.1A.9.1.2 Relative SS-RSRQ Accuracy in FR2
+
+The accuracy requirements in clause 10.1.10.1.2 shall apply.
+
+### 10.1A.10  Intra-frequency SINR accuracy requirements for FR1
+
+#### 10.1A.10.1 Intra-frequency SS-SINR accuracy requirements in FR1
+
+##### 10.1A.10.1.1 Absolute SS-SINR Accuracy in FR1
+
+The accuracy requirements in clause 10.1.12.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.10.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for intra-frequency measurements are fulfilled according to annex B.2.15 for a corresponding Band.
+
+Table 10.1A.10.1.1-1: SS-SINR Intra-frequency absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 3 | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 4.0 | 4 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 4.5 | 4 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: The requirements apply for SSB Ês/Iot ≤ 25 dB under non-HST scenarios.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: The requirements apply for SSB Ês/Iot ≤5 dB with SCS 15 kHz or 30 kHz under NR high speed scenarios. |  |  |  |  |  |  |  |
+
+### 10.1A.11 Intra-frequency SINR accuracy requirements for FR2
+
+#### 10.1A.11.1 Intra-frequency SS-SINR accuracy requirements in FR2
+
+##### 10.1A.11.1.1 Absolute SS-SINR Accuracy in FR2
+
+The accuracy requirements in clause 10.1.13.1.1 shall apply.
+
+### 10.1A.12  Inter-frequency SINR accuracy requirements for FR1
+
+#### 10.1A.12.1 Inter-frequency SS-SINR accuracy requirements in FR1
+
+##### 10.1A.12.1.1 Absolute SS-SINR Accuracy in FR1
+
+The accuracy requirements in clause 10.1.14.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.12.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.16 for a corresponding Band.
+
+Table 10.1A.12.1.1-1: SS-SINR Inter-frequency absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 4.0 | 5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 4.5 | 5 | -6 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3: The requirements apply for SSB Ês/Iot ≤ 25 dB.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1A.12.1.2 Relative SS-SINR Accuracy in FR1
+
+The accuracy requirements in clause 10.1.14.1.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.12.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for inter-frequency measurements are fulfilled according to annex B.2.16 for a corresponding Band.
+
+- |SSB_RP1dBm - SSB_RP2dBm|  27 dB
+
+- | Channel 1_Io Channel 2_Io |  20 dB
+
+Table 10.1A.12.1.2-1: SS-SINR Inter-frequency relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  | Note 2,4 | NR operating band groups Note 5 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 120 kHz | SCSSSB = 240 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| 4.5 | 5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| 5 | 5 | -6 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 4: The requirements apply for SSB Ês/Iot ≤ [25] dB.NOTE 5: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+### 10.1A.13  Inter-frequency SINR accuracy requirements for FR2
+
+#### 10.1A.13.1 Inter-frequency SS-SINR accuracy requirements in FR2
+
+##### 10.1A.13.1.1 Absolute SS-SINR Accuracy in FR2
+
+The accuracy requirements in clause 10.1.15.1.1 shall apply.
+
+##### 10.1A.13.1.2 Relative SS-SINR Accuracy in FR2
+
+The accuracy requirements in clause 10.1.15.1.1 shall apply.
+
+### 10.1A.14 L1-RSRP accuracy requirements for FR1
+
+#### 10.1A.14.1 SSB based L1-RSRP accuracy requirements
+
+##### 10.1A.14.1.1 Absolute Accuracy
+
+The accuracy requirements in clause 10.1.19.1.1 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.14.1.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+Table 10.1A.14.1.1-1: SSB based L1-RSRP absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -121 | -118 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -70 |
+| ±8.0 | ±12.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -70 |
+| ±11.5 | ±14.5 | -3 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A, NR_FDD_FR1_B,  NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F, NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+##### 10.1A.14.1.2 Relative Accuracy
+
+The accuracy requirements in clause 10.1.19.1.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.14.1.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.1 for a corresponding Band for each relevant SSB.
+
+Table 10.1A.14.1.2-1: SSB based L1-RSRP relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SSB Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSSB |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSSB = 15 kHz | SCSSSB = 30 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | N/A | -50 |
+| ±6 | ±7 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of SSBs to which the requirement applies.NOTE 3: VoidNOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |
+
+#### 10.1A.14.2 CSI-RS based L1-RSRP accuracy requirements
+
+##### 10.1A.14.2.1 Absolute Accuracy
+
+The accuracy requirements in clause 10.1.19.2.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.14.2.1-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table 10.1A.19.2.1-1.
+
+Table 10.1A.14.2.1-1: CSI-RS based L1-RSRP absolute accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -70 |
+| ±8.0 | ±12.5 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -70 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -70 |
+| ±11.5 | ±14.5 | -3 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A,NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N | N/A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+##### 10.1A.14.2.2 Relative Accuracy
+
+The accuracy requirements in clause 10.1.19.2.2 shall apply when RedCap UE is capable of 2Rx. When UE is only required to support 1RX, the absolute accuracy requirements in table 10.1A.14.2.2-1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3I of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for L1-RSRP measurements are fulfilled according to annex B.2.4.2 for a corresponding Band for each relevant CSI-RS.
+
+- The bandwidth of CSI-RS is 48 PRBs and the density is 3.
+
+The performance with larger bandwidth of CSI-RS is equal to or better than the accuracy requirements in table10.1A.14.2.2-1.
+
+Table 10.1A.14.2.2-1: CSI-RS based L1-RSRP relative accuracy for 1Rx RedCap UE in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | CSI-RS Ês/Iot Note 2 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR operating band groups Note 4 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSCSI-RS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSCSI-RS = 15 kHz | SCSCSI-RS = 30 kHz | SCSCSI-RS = 60 kHz |  |  |
+|  |  |  | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -118 | -115 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_B, NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -117 | -114 | N/A | -50 |
+| ±6 | ±7 | -3 | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -116.5 | -113.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -116 | -113 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_F | -118.5 | -115.5 | -112.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -115 | -112 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_H | -117.5 | -114.5 | -111.5 | N/A | -50 |
+|  |  |  | NR_FDD_FR1_N | -114.5 | -111.5 | -108.5 | N/A | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3: VoidNOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2. |  |  |  |  |  |  |  |  |
+
+### 10.1A.15  L1-RSRP accuracy requirements for FR2
+
+#### 10.1A.15.1 SSB based L1-RSRP accuracy requirements
+
+##### 10.1A.15.1.1 Absolute Accuracy
+
+The accuracy requirements in clause 10.1.20.1.1 shall apply.
+
+##### 10.1A.15.1.2 Relative Accuracy
+
+The accuracy requirements in clause 10.1.20.1.1 shall apply.
+
+#### 10.1A.15.2 CSI-RS based L1-RSRP accuracy requirements
+
+##### 10.1A.15.2.1 Absolute Accuracy
+
+The accuracy requirements in clause 10.1.20.1.1 shall apply.
+
+##### 10.1A.15.2.2 Relative Accuracy
+
+The accuracy requirements in clause 10.1.20.1.1 shall apply.
+
+### 10.1A.16 RSTD Measurements for RedCap Positioning
+
+#### 10.1A.16.1 Introduction
+
+The requirements in clause 10.1A.16 shall apply, provided the UE has received nr-DL-TDOA-RequestLocationInformation message from LMF via LPP TS 37.355 [34] requesting the UE to report one or more DL RSTD measurements defined in TS 38.215 [4].
+
+The requirements in clause 10.1A.16 shall apply,
+
+- When the RedCap UE is in RRC_CONNECTED state and the RSTD measurement is performed with and without RX FH within measurement gap.
+
+- When RedCap UE is in RRC_CONNECTED state and the RSTD measurement is performed without RX FH outside of the measurement gap.
+
+- When RedCap UE is in RRC_CONNECTED state and the RSTD measurement is performed without RX FH when both PPW and measurement gap is configured.
+
+- When RedCap UE is in RRC_INACTIVE state and the RSTD measurement is performed with and without RX FH.
+
+- When RedCap UE is in RRC_IDLE state and the RSTD measurement is performed with and without RX FH.
+
+The requirements defined in clause 10.1A.16 are valid under the conditions defined in clause 10.1.23.
+
+#### 10.1A.16.2 Measurement Accuracy Requirements
+
+The accuracy requirements for RSTD measurement shall be within ±(X+Y+Z+Δ) Tc. The values of Y, Z and Δ and Rx TEG based requirement are as defined in clause 10.1.23.2. For Rx FH, PRS BW in tables 10.1.23.2-5, 10.1.23.2-5a, 10.1.23.2-6, and 10.1.23.2-6a refer to per hop BW. The requirements for fading channel in this clause are derived based on TDL-A (30 ns delay spread, 5Hz) and TDL-C (60 ns delay spread, 300 Hz) channel models for FR1 and FR2, respectively.
+
+##### 10.1A.16.2.1 Accuracy requirement for RSTD measurement without RX FH
+
+For 4 sample RSTD measurement performed by 2Rx RedCap UE without RX FH, the values of X, corresponding to the PRS bandwidth supported by the RedCap UE for PRS measurement without RX FH, in tables 10.1.23.2-1 in FR1 for AWGN, 10.1.23.2-2 in FR2 for AWGN, 10.1.23.2-3 in FR1 for fading channel, and 10.1.23.2-4 in FR2 for fading channel apply.
+
+For reduced sample RSTD measurement performed by 2Rx RedCap UE without RX FH, the values of X, corresponding to the PRS bandwidth supported by the RedCap UE for PRS measurement without RX FH, in tables 10.1.23.2-7 in FR1 for AWGN, and 10.1.23.2-8 in FR2 for AWGN apply.
+
+The value of X for 4 sample RSTD measurement performed by 1Rx RedCap UE without RX FH is defined in table 10.1A.16.2.1-1 in FR1 for AWGN, and in table 10.1A.16.2.1-2 in FR1 for fading channel.
+
+The value of X for reduced sample RSTD measurement performed by 1Rx RedCap UE without RX FH is defined in table 10.1A.16.2.1-3 in FR1 for AWGN.
+
+Table 10.1A.16.2.1-1: RSTD absolute accuracy for 1Rx RedCap UE in FR1 for AWGN channel (without RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 137 | (PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i ≥-13dB | 15 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 79 |  |  | ≥ 52 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 45 |  |  | ≥ 104 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 81 |  | 30 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 46 |  | 30 | ≥ 48 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 52 |  | 60 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |  |  |
+
+Table 10.1A.16.2.1-2: RSTD absolute accuracy for 1Rx RedCap UE in FR1 for fading channel (without RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 191 | (PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i ≥-10dB | 15 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 146 |  |  | ≥ 52 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 100 |  |  | ≥ 104 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 129 |  | 30 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 110 |  |  | ≥ 48 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 96 |  | 60 | ≥ 24 | ≥ 4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |  |  |
+
+Table 10.1A.16.2.1-3: RSTD absolute accuracy for 1Rx RedCap UE in FR1 for AWGN channel with reduced number of samples (without RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 109 | (PRS Ês/Iot)ref ≥-3dB (PRS Ês/Iot)i ≥-6dB | 15 | ≥ 52 | ≥ 1 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 60 |  |  | ≥ 104 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 62 |  | 30 | ≥ 48 | ≥ 1 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |  |  |
+
+##### 10.1A.16.2.2 Accuracy requirement for RSTD measurement with RX FH
+
+The value of X for 4 sample RSTD measurement performed by 2Rx RedCap UE with RX FH is defined in tables 10.1A.16.2.2-1 in FR1 for AWGN, 10.1A.16.2.2-2 in FR2 for AWGN, 10.1A.16.2.2-3 in FR1 for fading channel, and 10.1.23.2-4 in FR2 for fading channel, respectively.
+
+The value of X for reduced sample RSTD measurement performed by 2Rx RedCap UE with RX FH is defined in tables 10.1A.16.2.2-5 in FR1 for AWGN, and 10.1A.16.2.2-6 in FR2 for AWGN, respectively.
+
+The value of for 4 sample RSTD measurement performed by 1Rx RedCap UE with RX FH is defined in tables 10.1A.16.2.2-7 in FR1 for AWGN, and 10.1A.16.2.2-8 in FR1 for fading channel, respectively.
+
+The value of for reduced sample RSTD measurement performed by 1Rx RedCap UE with RX FH is defined in table 10.1A.16.2.2-9 in FR1 for AWGN.
+
+Table 10.1A.16.2.2-1: RSTD absolute accuracy for 2Rx RedCap UE in FR1 for AWGN channel (with RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidth per hopNote 1 | Total PRS bandwidth after all hopsNote 7 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB | PRB |  | dBm/SCS | dBm/BWChannel |
+| 50 | (PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i ≥-13dB | 15 | ≥ 52 | 268 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 26 |  | 30 | 48 | 272 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 27 |  | 60 | 24 | 132 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  VoidNOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: VoidNOTE 7: Total PRS bandwidth after all hops regardless of the size of the overlapping bandwidth between hops. |  |  |  |  |  |  |  |
+
+Table 10.1A.16.2.2-2: RSTD absolute accuracy for 2Rx RedCap UE in FR2 for AWGN channel (with RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidth per hopNote 1 | Total PRS bandwidth after all hopsNote 6 | Io Note 3 range |  |
+|  |  |  |  |  | Minimum Io | Maximum Io |
+| Tc Note 4 | dB | kHz | PRB | PRB | dBm/SCS | dBm/BWChannel |
+| 15 | (PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i ≥-13dB | 60 | ≥ 64 | 264 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 8 |  | 120 | 64 | 264 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  VoidNOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: VoidNOTE 6: Total PRS bandwidth after all hops regardless of the size of the overlapping bandwidth between hops. |  |  |  |  |  |  |
+
+Table 10.1A.16.2.2-3: RSTD absolute accuracy for 2Rx RedCap UE in FR1 for fading channel (with RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidth per hopNote 1 | Total PRS bandwidth after all hopsNote 7 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB | PRB |  | dBm/SCS | dBm/BWChannel |
+| 36 | (PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i ≥-13dB | 15 | ≥ 52 | 268 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 22 |  | 30 | 48 | 272 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 29 |  | 60 | 24 | 132 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  VoidNOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: VoidNOTE 7: Total PRS bandwidth after all hops regardless of the size of the overlapping bandwidth between hops. |  |  |  |  |  |  |  |
+
+Table 10.1A.16.2.2-4: RSTD absolute accuracy for 2Rx RedCap UE in FR2 for fading channel (with RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidth per hopNote 1 | Total PRS bandwidth after all hopsNote 6 | Io Note 3 range |  |
+|  |  |  |  |  | Minimum Io | Maximum Io |
+| Tc Note 4 | dB | kHz | PRB | PRB | dBm/SCS | dBm/BWChannel |
+| 37 | (PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i ≥-13dB | 60 | ≥ 64 | 264 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 37 |  | 120 | 64 | 264 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  VoidNOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: VoidNOTE 6: Total PRS bandwidth after all hops regardless of the size of the overlapping bandwidth between hops. |  |  |  |  |  |  |
+
+Table 10.1A.16.2.2-5: RSTD absolute accuracy for 2Rx RedCap UE in FR1 for AWGN channel with reduced number of samples (with RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | Total PRS bandwidth after all hopsNote 7 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB | PRB |  | dBm/SCS | dBm/BWChannel |
+| 33 | (PRS Ês/Iot)ref ≥-3dB (PRS Ês/Iot)i ≥-6dB | 15 | ≥ 52 | 268 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 18 |  | 30 | 48 | 272 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 21 |  | 60 | 24 | 132 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  VoidNOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: VoidNOTE 7: Total PRS bandwidth after all hops regardless of the size of the overlapping bandwidth between hops. |  |  |  |  |  |  |  |
+
+Table 10.1A.16.2.2-6: RSTD absolute accuracy for 2Rx RedCap UE in FR2 for AWGN channel with reduced number of samples (with RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | Total PRS bandwidth after all hopsNote 6 | Io Note 3 range |  |
+|  |  |  |  |  | Minimum Io | Maximum Io |
+| Tc Note 4 | dB | kHz | PRB | PRB | dBm/SCS | dBm/BWChannel |
+| 12 | (PRS Ês/Iot)ref ≥-3dB (PRS Ês/Iot)i ≥-6dB | 60 | ≥ 64 | 264 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| 6 |  | 120 | 64 | 264 | Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  VoidNOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: VoidNOTE 6: Total PRS bandwidth after all hops regardless of the size of the overlapping bandwidth between hops. |  |  |  |  |  |  |
+
+Table 10.1A.16.2.2-7: RSTD absolute accuracy for 1Rx RedCap UE in FR1 for AWGN channel (with RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidth per hopNote 1 | Total PRS bandwidth after all hopsNote 7 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB | PRB |  | dBm/SCS | dBm/BWChannel |
+| 58 | (PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i  ≥-13dB | 15 | ≥ 52 | 268 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 30 |  | 30 | 48 | 272 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 27 |  | 60 | ≥24 | 132 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  VoidNOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: VoidNOTE 7: Total PRS bandwidth after all hops regardless of the size of the overlapping bandwidth between hops. |  |  |  |  |  |  |  |
+
+Table 10.1A.16.2.2-8: RSTD absolute accuracy for 1Rx RedCap UE in FR1 for fading channel (with RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidth per hopNote 1 | Total PRS bandwidth after all hopsNote 7 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB | PRB |  | dBm/SCS | dBm/BWChannel |
+| 72 |  | 15 | ≥ 52 | 268 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 59 |  | 30 | 48 | 272 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 31 |  | 60 | 24 | 132 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  VoidNOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: VoidNOTE 7: Total PRS bandwidth after all hops regardless of the size of the overlapping bandwidth between hops. |  |  |  |  |  |  |  |
+
+Table 10.1A.16.2.2-9: RSTD absolute accuracy for 1Rx RedCap UE in FR1 for AWGN channel with reduced number of samples (with RX FH)
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidth per hopNote 1 | Total PRS bandwidth after all hopsNote 7 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB | PRB |  | dBm/SCS | dBm/BWChannel |
+| 42 | (PRS Ês/Iot)ref ≥-3dB (PRS Ês/Iot)i ≥-6dB | 15 | ≥ 52 | 268 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -126.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -50 |
+| 21 |  | 30 | 48 | 272 | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 | -50 |
+| 24 |  | 60 | 24 | 132 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 | -50 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:  VoidNOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: VoidNOTE 7: Total PRS bandwidth after all hops regardless of the size of the overlapping bandwidth between hops. |  |  |  |  |  |  |  |
+
+#### 10.1A.16.3 Report Mapping
+
+##### 10.1A.16.3.1 Absolute DL RSTD Measurement Reporting
+
+Measurement reporting range and report mapping tables defined in clause 10.1.23.3.1 apply to DL RSTD measurement reporting for both 1Rx and 2Rx RedCap UEs and DL RSTD measurement performed with and without RX FH.
+
+##### 10.1A.16.3.2 Differential Reporting for DL RSTD Measurement
+
+Measurement reporting range and report mapping tables defined in clause 10.1.23.3.2 apply to DL RSTD measurement reporting for both 1Rx and 2Rx RedCap UEs and DL RSTD measurement performed with and without RX FH.
+
+##### 10.1A.16.3.3 Additional Path Report Mapping for DL RSTD
+
+Measurement reporting range and report mapping tables defined in clause 10.1.23.3.3 apply to DL RSTD measurement reporting for both 1Rx and 2Rx RedCap UEs and DL RSTD measurement performed with and without RX FH.
+
+### 10.1A.17 PRS-RSRP Measurements for RedCap positioning
+
+#### 10.1A.17.1 Introduction
+
+The requirements in clause 10.1A.17 shall apply, provided the UE has received nr-DL-TDOA-RequestLocationInformation or nr-Multi-RTT-RequestLocationInformation or nr-DL-AoD-RequestLocationInformation message from LMF via LPP TS 37.355 [34] requesting the UE to report one or more DL PRS-RSRP measurements defined in TS 38.215 [4].
+
+The requirements in clause 10.1A.17 shall apply,
+
+- When the RedCap UE is in RRC_CONNECTED state and the PRS-RSRP measurement is performed with and without RX FH within measurement gap.
+
+- When RedCap UE is in RRC_CONNECTED state and the PRS-RSRP measurement is performed without RX FH outside of the measurement gap.
+
+- When RedCap UE is in RRC_CONNECTED state and the PRS-RSRP measurement is performed without RX FH when both PPW and measurement gap is configured.
+
+- When RedCap UE is in RRC_INACTIVE state and the PRS-RSRP measurement is performed with and without RX FH.
+
+- When RedCap UE is in RRC_IDLE state and the PRS-RSRP measurement is performed with and without RX FH.
+
+The requirements defined in clause 10.1A.17 are valid under the conditions defined in clause 10.1.24.1.
+
+#### 10.1A.17.2 Measurement Accuracy Requirements
+
+##### 10.1A.17.2.1 Absolute PRS RSRP Accuracy Requirement
+
+Accuracy requirement, corresponding to the PRS bandwidth supported by the RedCap UE for measurement without RX FH, defined in clause 10.1.24.2.1 apply to the PRS-RSRP measurement performed by 2Rx RedCap UE without RX FH.
+
+Accuracy requirement in clause 10.1.24.2.1 apply to the PRS-RSRP measurement performed by 2Rx RedCap UE with RX FH, where the PRS bandwidth in clause 10.1.24.2.1 correspond to the PRS bandwidth measured by the RedCap UE per hop.
+
+Accuracy requirement in table 10.1A.17.2.1-1 applies to the 4-sample PRS-RSRP measurement performed by 1Rx RedCap UE without RX FH.
+
+Accuracy requirement in table 10.1A.17.2.1-2 applies to reduced sample PRS-RSRP measurement performed by 1Rx RedCap UE without RX FH
+
+Accuracy requirement in table 10.1A.17.2.1-1 and table 10.1A.17.2.1-2 apply to the PRS-RSRP measurement performed by 1Rx RedCap UE with RX FH, where the PRS bandwidth in table 10.1A.17.2.1-1 and table 10.1A.17.2.1-2 correspond to the PRS bandwidth measured by the RedCap UE per hop.
+
+Table 10.1A.17.2.1-1: PRS-RSRP absolute accuracy for 1Rx RedCap UE in FR1 (without RX FH)
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BWNote 2 | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 5 range |  |  |  |  |
+|  |  |  |  |  | NR operating band groups Note 6 | Minimum Io Note 1dBm / SCSPRS |  |  | Maximum Io |
+| dB | dB | dB | PRB |  |  | dBm / SCSPRS |  |  | dBm/BWChannel |
+|  |  |  |  |  |  | dBm/15kHz Note 4 | dBm/30kHz Note 4 | dBm/60kHz Note 4 |  |
+| ±7 | ±11.5 | ≥-3dB | ≥24 | All | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -124 | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -126.5 | -123.5 | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -123 | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -122.5 | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -122 | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -121.5 | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -121 | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -120.5 | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -117.5 | -114.5 | -50 |
+| ±7.5 | ±12 | ≥-10dB | 24 ≤ BW ≤ 52 | All | Note 3 |  |  |  |  |
+| ±6 | ±10.5 |  | 52< BW≤ 104 | All | Note 3 |  |  |  |  |
+| ±5.5 | ±9.5 |  | BW >104 | All | Note 3 |  |  |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: PRS bandwidth is as indicated in dl-PRS-ResourceBandwidth in the DL-TDOA or DL-AoD or multi-RTT assistance data defined in TS 37.355 34]. NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 24 PRB.NOTE 4: The condition level is increased by ∆>0, when applicable, as described in Sections B.3.2 and B.3.3.NOTE 5: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 6: NR operating band groups are as defined in Section 3.5.2. |  |  |  |  |  |  |  |  |  |
+
+Table 10.1A.17.2.1-2: PRS-RSRP absolute accuracy for 1Rx RedCap UE in FR1 with reduced sample number (without RX FH)
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BWNote 2 | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 6 range |  |  |  |  |  |
+|  |  |  |  |  | NR operating band groups Note 5 | Minimum Io Note 1dBm / SCSPRS |  |  |  | Maximum Io |
+| dB | dB | dB | PRB |  |  | dBm / SCSPRS |  |  |  | dBm/BWChannel |
+|  |  |  |  |  |  | dBm/15kHz Note 4 |  | dBm/30kHz Note 4 | dBm/60kHz Note 4 |  |
+| ±3.5 | ±8 | ≥0 | ≥48 | All | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -124 |  | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -126.5 | -123.5 |  | -120.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 | -123 |  | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -122.5 |  | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -122 |  | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -121.5 |  | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 | -121 |  | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -120.5 |  | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -117.5 |  | -114.5 | -50 |
+| ±4 | ±8.5 | ≥-6 | 48 ≤ BW ≤ 52 | All | Note 3 |  |  |  |  |  |
+| ±4 | ±8.5 |  | 52< BW≤ 104 | All | Note 3 |  |  |  |  |  |
+| ±3.5 | ±8 |  | BW >104 | All | Note 3 |  |  |  |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: PRS bandwidth is as indicated in dl-PRS-ResourceBandwidth in the DL-TDOA or DL-AoD or multi-RTT assistance data defined in TS 37.355 [34].NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 48 PRB.NOTE 4: The condition level is increased by ∆>0, when applicable, as described in Sections B.3.2 and B.3.3.NOTE 5: NR operating band groups are as defined in Section 3.5.2. |  |  |  |  |  |  |  |  |  |  |
+
+##### 10.1A.17.2.2 Relative PRS RSRP Accuracy Requirement
+
+Relative accuracy requirement, corresponding to the PRS bandwidth supported by the RedCap UE for measurement without RX FH, defined in clause 10.1.24.2.2 apply to the PRS-RSRP measurement performed by 2Rx RedCap UE without RX FH.
+
+Relative accuracy requirement in clause 10.1.24.2.2 apply to the PRS-RSRP measurement performed by 2Rx RedCap UE with RX FH, where the PRS bandwidth in clause 10.1.24.2.2 correspond to the PRS bandwidth measured by the RedCap UE per hop.
+
+#### 10.1A.17.3 Report Mapping
+
+##### 10.1A.17.3.1 Absolute PRS-RSRP Measurement Report Mapping
+
+Measurement reporting range and report mapping tables defined in clause 10.1.24.3.1 apply to PRS-RSRP measurement reporting for both 1Rx and 2Rx RedCap UEs and PRS-RSRP measurement performed with and without RX FH.
+
+##### 10.1A.17.3.2 Differential Report Mapping for PRS-RSRP Measurement
+
+Measurement reporting range and report mapping tables defined in clause 10.1.24.3.2 apply to PRS-RSRP measurement reporting for both 1Rx and 2Rx RedCap UEs and PRS-RSRP measurement performed with and without RX FH.
+
+### 10.1A.18   UE Rx-Tx Time Difference Measurements for RedCap Positioning
+
+#### 10.1A.18.1 Introduction
+
+The requirements in clause 10.1A.18 shall apply, provided the RedCap UE has received nr-Multi-RTT-RequestLocationInformation message from LMF via LPP TS 37.355 [34] requesting the UE to report one or more UE Rx-Tx time difference measurements defined in TS 38.215 [4]. The requirements in clause 10.1A.18 shall apply:
+
+­ When the RedCap UE is in RRC_CONNECTED state and the UE Rx-Tx time difference measurement is performed with and without RX FH within measurement gap.
+
+­ When RedCap UE is in RRC_CONNECTED state and the UE Rx-Tx time difference measurement is performed without RX FH outside of the measurement gap.
+
+­ When RedCap UE is in RRC_CONNECTED state and the UE Rx-Tx time difference measurement is performed without RX FH when both PPW and measurement gap is configured.
+
+­ When RedCap UE is in RRC_INACTIVE state and the UE Rx-Tx time difference measurement is performed with and without RX FH.
+
+#### 10.1A.18.2 Measurement Accuracy Requirements
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall not apply, if:
+
+- NTA_offset defined in table 7.1A.2-2 changes during the UE Rx-Tx measurement period or
+
+- if the uplink transmission timing changes during the UE Rx-Tx measurement period due to the network-configured Timing Advance.
+
+The UE Rx-Tx time difference measurement accuracy requirements in this clause shall apply provided that:
+
+- The UE transmits SRS within the range from -160 ms to 160 ms of at least one DL PRS resource of each of the TRPs in the assistance data.
+
+If the uplink transmission timing changes during the UE Rx-Tx measurement period due to the autonomous timing adjustment defined in clause 7.1A.2 then:
+
+- UE Rx-Tx measurement accuracy requirements shall apply for a cell, which is also the downlink reference cell (defined in clause 7.1A.1) for SRS transmission even if the uplink transmission timing changes during the UE Rx-Tx measurement period due to autonomous adjustment.
+
+- UE Rx-Tx measurement accuracy requirements shall not apply for a cell, which is not the downlink reference cell (defined in clause 7.1A.1) for SRS transmission, if the uplink transmission timing changes during the UE Rx-Tx measurement period due to autonomous adjustment.
+
+When a serving cell change occurs during the UE Rx-Tx measurement period, the UE Rx-Tx time difference measurement accuracy requirements in this clause shall apply provided that the serving cell change does not impact SRS configuration for the UE Rx-Tx measurement.
+
+The relative accuracy of UE Rx-Tx measurement in this clause is defined as accuracy of the difference between two UE Rx-Tx measurements.
+
+##### 10.1A.18.2.1 UE Rx-Tx Accuracy Requirement for 2RX RedCap UE without FH
+
+For UE Rx-Tx time difference measurement performed by 2RX RedCap UE without RX FH, the accuracy requirements corresponding to the PRS bandwidth supported by the RedCap UE for PRS measurement without RX FH in clause 10.1.25.2 shall apply.
+
+##### 10.1A.18.2.2 UE Rx-Tx Accuracy Requirement for 1RX RedCap UE without FH
+
+The accuracy requirements in table 10.1A.18.2.2-1 for FR1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- AWGN propagation condition.
+
+Table 10.1A.18.2.2-1: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ±(89+) | -3 | ≥24 | 15 | ≥4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -126.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 |  |
+| ±(51+) |  | ≥52 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(25+) |  | 104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(49+) |  | ≥24 | 30 | ≥4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -123.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 |  |
+| ±(27+) |  | 48 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(27+) |  | 24 | 60 | ≥4 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 |  |
+| ±(98+) | -13 | ≥24 | 15 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(61+) |  | ≥52 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(32+) |  | 104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(55+) |  | ≥24 | 30 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(34+) |  | 48 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(31+) |  | 24 | 60 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:   is the margin determined from table 10.1A.18.2.2-3. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1A.18.2.2-1a for FR1 for are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- Number of measurement samples is less than 4.
+
+- AWGN propagation condition.
+
+Table 10.1A.18.2.2-1a: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN with reduced measurement samples
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ±(65+) | 0 | ≥52 | 15 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(36+) |  | 104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(35+) |  | 48 | 30 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(73+) | -6 | ≥52 | 15 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(40+) |  | 104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(39+) |  | 48 | 30 | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols, and dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1A.18.2.2-1.NOTE 7:   is the margin determined from table 10.1A.18.2.2-3. |  |  |  |  |  |  |  |
+
+The relative accuracy requirements in table 10.1A.18.2.2-1b for FR1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- AWGN propagation condition.
+
+- the two UE Rx-Tx time difference measurements are associated with the same RxTx TEG.
+
+Table 10.1A.18.2.2-1b: UE Rx-Tx time difference relative measurement accuracy in FR1 in AWGN with TEG reporting
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS SCS | PRS bandwidthNote 1 | PRS resource repetition ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$)Note 2 | Io Note 3 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 4 | Minimum Io | Maximum Io |
+| Tc Note 5 | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| 137 +Δ | (PRS Ês/Iot)j ≥-6dB (PRS Ês/Iot)i ≥-13dB | 15 | ≥ 24 | ≥ 4 | Note 6 | Note 6 | Note 6 |
+| 79 +Δ |  |  | ≥ 52 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 45 +Δ |  |  | 104 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 81 +Δ |  | 30 | ≥ 24 | ≥ 4 | Note 6 | Note 6 | Note 6 |
+| 46 +Δ |  |  | 48 | ≥ 1 | Note 6 | Note 6 | Note 6 |
+| 52 +Δ |  | 60 | 24 | ≥ 4 | Note 6 | Note 6 | Note 6 |
+| NOTE 1: Minimum PRS bandwidth, which is minimum of the PRS bandwidths of resource j and resource i.NOTE 2:  Minimum number of PRS resource repetitions among resource j and resource i. $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols, and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3: Io is assumed to have constant EPRE across the bandwidth.NOTE 4: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1A.18.2.2-1.NOTE 7: Δ is the value of the timing error margin for the RxTx TEG, reported via nr-UE-RxTxTEG-TimingErrorMargin. Δ cannot be larger than the sum of the margins in table 10.1A.18.2.2-3 (dependent on PRS/SRS BW) for any pair of individual UE Rx-Tx time difference measurements associated with the RxTx TEG. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1A.18.2.2-2 for FR1 for are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- Fading propagation condition.
+
+Table 10.1A.18.2.2-2: UE Rx-Tx time difference measurement accuracy in FR1 in fading
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | PRS SCS | PRS resource repetition $(T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS}$ Note 3 | NR operating band groupsNote 2 | IoNote 4 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  |  | dBm / SCSPRS | dBm/BW |
+| ±(202+) | -3 | ≥24 | 15 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(158+) |  | ≥52 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(114+) |  | 104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(153+) |  | ≥24 | 30 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(120+) |  | 48 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(72+) |  | 24 | 60 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(179+) | -10 | ≥24 | 15 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(169+) |  | ≥52 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(126+) |  | 104 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(152+) |  | ≥24 | 30 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(133+) |  | 48 |  | ≥1 | NOTE 6 | NOTE 6 | NOTE 6 |
+| ±(72+) |  | 24 | 60 | ≥4 | NOTE 6 | NOTE 6 | NOTE 6 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: $ T_{rep}^{PRS},L_{PRS},K_{comb}^{PRS}$ are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols, and dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1A.18.2.2-1.NOTE 7:   is the margin determined from table 10.1A.18.2.2-3. |  |  |  |  |  |  |  |
+
+Table 10.1A.18.2.2-3: Margin for UE Rx-Tx time difference measurement accuracy in FR1
+
+| Min(PRS BW, SRS BW) (PRB) |  |  | Margin (Tc Note 1) |
+| --- | --- | --- | --- |
+| SCS = 15 kHz | SCS = 30 kHz | SCS = 60 kHz |  |
+| ≥ 24 | N/A | N/A | 160 |
+| ≥ 52 | ≥ 24 | N/A | 80 |
+| 104 | 48 | 24 | 56 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies. |  |  |  |
+
+##### 10.1A.18.2.3 UE Rx-Tx Accuracy Requirement for 2RX RedCap UE with FH
+
+The accuracy requirements in table 10.1A.18.2.3-1 for FR1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- AWGN propagation condition.
+
+- The BWtotal as defined in clause 9.9A.4.8 for RRC_CONNECTED and in clause 5.6A.6.6 for RRC_INACTIVE is no less than the “Total PRS bandwidth after FH”.
+
+Table 10.1A.18.2.3-1: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS bandwidth per hop | PRS SCS | Total PRS bandwidth after FH | NR operating band groupsNote 2 | IoNote 3 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 4 | dB | PRB | kHz | PRB |  | dBm / SCSPRS | dBm/BW |
+| ±(23+) | -3 | ≥52 | 15 | 268 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -126.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 |  |
+| ±(17+) |  | 48 | 30 | 272 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -123.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 |  |
+| ±(21+) |  | 24 | 60 | 132 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 |  |
+| ±(54+) | -13 | ≥52 | 15 | 268 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(38+) |  | 48 | 30 | 272 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(40+) |  | 24 | 60 | 132 | NOTE 5 | NOTE 5 | NOTE 5 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 6:   is the margin determined from table 10.1A.18.2.3-5. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1A.18.2.3-1a for FR1 for are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- Number of measurement samples is less than 4.
+
+- AWGN propagation condition.
+
+- The BWtotal as defined in clause 9.9A.4.8 for RRC_CONNECTED and in clause 5.6A.6.6 for RRC_INACTIVE is no less than the “Total PRS bandwidth after FH”.
+
+Table 10.1A.18.2.3-1a: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN with reduced measurement samples
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS bandwidth per hop | PRS SCS | Total PRS bandwidth after FH | NR operating band groupsNote 2 | IoNote 3 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 4 | dB | PRB | kHz | PRB |  | dBm / SCSPRS | dBm/BW |
+| ±(17+) | 0 | ≥52 | 15 | 268 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(11+) |  | 48 | 30 | 272 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(18+) |  | 24 | 60 | 132 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(32+) | -6 | ≥52 | 15 | 268 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(20+) |  | 48 | 30 | 272 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(31+) |  | 24 | 60 | 132 | NOTE 5 | NOTE 5 | NOTE 5 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1A.18.2.3-1.NOTE 6:   is the margin determined from table 10.1A.18.2.3-5. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1A.18.2.3-2 for FR1 for are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- Fading propagation condition.
+
+- The BWtotal as defined in clause 9.9A.4.8 for RRC_CONNECTED and in clause 5.6A.6.6 for RRC_INACTIVE is no less than the “Total PRS bandwidth after FH”.
+
+Table 10.1A.18.2.3-2: UE Rx-Tx time difference measurement accuracy in FR1 in fading
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS bandwidth per hop | PRS SCS | Total PRS bandwidth after FH | NR operating band groupsNote 2 | IoNote 3 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 4 | dB | PRB | kHz | PRB |  | dBm / SCSPRS | dBm/BW |
+| ±(94+) | -3 | ≥52 | 15 | 268 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(52+) |  | 48 | 30 | 272 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(52+) |  | 24 | 60 | 132 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(99+) | -13 | ≥52 | 15 | 268 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(53+) |  | 48 | 30 | 272 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(63+) |  | 24 | 60 | 132 | NOTE 5 | NOTE 5 | NOTE 5 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1A.18.2.3-1.NOTE 6:   is the margin determined from table 10.1A.18.2.3-5. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1A.18.2.3-3 for FR2 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- AWGN propagation condition.
+
+- The BWtotal as defined in clause 9.9A.4.8 for RRC_CONNECTED and in clause 5.6A.6.6 for RRC_INACTIVE is no less than the “Total PRS bandwidth after FH”.
+
+Table 10.1A.18.2.3-3: UE Rx-Tx time difference measurement accuracy in FR2 in AWGN
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth per hop | PRS SCS | Total PRS bandwidth after FH | IoNote 4 range |  |
+|  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz | PRB | dBm / SCSPRS | dBm/BWChannel |
+| ±(11+) | -3 | ≥64 | 60 | 264 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ±(7+) |  | 64 | 120 | 264 | Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival | -50 |
+| ±(33+) | -13 | ≥64 | 60 | 264 | NOTE 5 | NOTE 5 |
+| ±(27+) |  | 64 | 120 | 264 | NOTE 5 | NOTE 5 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 6:    is the margin determined from table 10.1A.18.2.3-6. |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1A.18.2.3.3-3a for FR2 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- Number of measurement samples is less than 4.
+
+- AWGN propagation condition.
+
+- The BWtotal as defined in clause 9.9A.4.8 for RRC_CONNECTED and in clause 5.6A.6.6 for RRC_INACTIVE is no less than the “Total PRS bandwidth after FH”.
+
+Table 10.1A.18.2.3-3a: UE Rx-Tx time difference measurement accuracy in FR2 in AWGN with reduced measurement samples
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth per hop | PRS SCS | Total PRS bandwidth after FH | IoNote 4 range |  |
+|  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz | PRB | dBm / SCSPRS | dBm/BWChannel |
+| ±(11+) | 0 | ≥64 | 60 | 264 | NOTE 5 | NOTE 5 |
+| ±(5+) |  | 64 | 120 | 264 | NOTE 5 | NOTE 5 |
+| ±(17+) | -6 | ≥64 | 60 | 264 | NOTE 5 | NOTE 5 |
+| ±(14+) |  | 64 | 120 | 264 | NOTE 5 | NOTE 5 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1A.18.2.3-3.NOTE 6:    is the margin determined from table 10.1A.18.2.3-6. |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1A.18.2.3-4 for FR2 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-2 [19] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- Fading propagation condition.
+
+- The BWtotal as defined in clause 9.9A.4.8 for RRC_CONNECTED and in clause 5.6A.6.6 for RRC_INACTIVE is no less than the “Total PRS bandwidth after FH”.
+
+Table 10.1A.18.2.3-4: UE Rx-Tx time difference measurement accuracy in FR2 in fading
+
+| Accuracy | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth per hop | PRS SCS | Total PRS bandwidth after FH | IoNote 4 range |  |
+|  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 5 | dB | PRB | kHz |  | dBm / SCSPRS | dBm/BWChannel |
+| ±(27+) | -3 | ≥64 | 60 | 264 | NOTE 5 | NOTE 5 |
+| ±(17+) |  | 64 | 120 | 264 | NOTE 5 | NOTE 5 |
+| ±(41+) | -13 | ≥64 | 60 | 264 | NOTE 5 | NOTE 5 |
+| ±(38+) |  | 64 | 120 | 264 | NOTE 5 | NOTE 5 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1A.18.2.3-3.NOTE 6:    is the margin determined from table 10.1A.18.2.3-6. |  |  |  |  |  |  |
+
+Table 10.1A.18.2.3-5: Margin for UE Rx-Tx time difference measurement accuracy in FR1 with FH
+
+| Min(PRS BW, SRS BW) (PRB) |  |  | Margin (Tc Note 1) |
+| --- | --- | --- | --- |
+| SCS = 15 kHz | SCS = 30 kHz | SCS = 60 kHz |  |
+| ≥ 52 | N/A | N/A | 80 |
+| N/A | 48 | 24 | 56 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies.NOTE 3: PRS BW and SRS BW refer to BW per hop. |  |  |  |
+
+Table 10.1A.18.2.3-6: Margin for UE Rx-Tx time difference measurement accuracy in FR2 with FH
+
+| Min(PRS BW, SRS BW) (PRB) |  | Margin (Tc Note 1) |
+| --- | --- | --- |
+| SCS = 60 kHz | SCS = 120 kHz |  |
+| ≥ 64 | N/A | 32 |
+| N/A | 64 | 24 |
+| NOTE 1: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies.NOTE 3: PRS BW and SRS BW refer to BW per hop. |  |  |
+
+10.1A.18.2.4 UE Rx-Tx Accuracy Requirement for 1RX RedCap UE with FH
+
+The accuracy requirements in table 10.1A.18.2.4-1 for FR1 are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- AWGN propagation condition.
+
+Table 10.1A.18.2.4-1: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS bandwidth per hop | PRS SCS | Total PRS bandwidth after FH | NR operating band groupsNote 2 | IoNote 3 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 4 | dB | PRB | kHz | PRB |  | dBm / SCSPRS | dBm/BW |
+| ±(23+) | -3 | ≥52 | 15 | 268 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -127 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -126.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -126 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -124 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 |  |
+| ±(14+) |  | 48 | 30 | 272 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -124 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -123.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -123 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -122.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -122 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -121.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -121 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -120.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -117.5 |  |
+| ±(22+) |  | 24 | 60 | 132 | NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B,NR_TDD_FR1_B | -120.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_C, NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -119.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -119 |  |
+|  |  |  |  |  | NR_FDD_FR1_F | -118.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G | -118 |  |
+|  |  |  |  |  | NR_FDD_FR1_H | -117.5 |  |
+|  |  |  |  |  | NR_FDD_FR1_N | -114.5 |  |
+| ±(60+) | -13 | ≥52 | 15 | 268 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(42+) |  | 48 | 30 | 272 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(45+) |  | 24 | 60 | 132 | NOTE 5 | NOTE 5 | NOTE 5 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 6:   is the margin determined from table 10.1A.18.2.3-5. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1A.18.2.4-1a for FR1 for are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- Number of measurement samples is less than 4.
+
+- AWGN propagation condition.
+
+Table 10.1A.18.2.4-1a: UE Rx-Tx time difference measurement accuracy in FR1 in AWGN with reduced measurement samples
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS bandwidth per hop | PRS SCS | Total PRS bandwidth after FH | NR operating band groupsNote 2 | IoNote 3 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 4 | dB | PRB | kHz | PRB |  | dBm / SCSPRS | dBm/BW |
+| ±(16+) | 0 | ≥52 | 15 | 268 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(9+) |  | 48 | 30 | 272 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(10+) |  | 24 | 60 | 132 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(33+) | -6 | ≥52 | 15 | 268 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(16+) |  | 48 | 30 | 272 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(21+) |  | 24 | 60 | 132 | NOTE 5 | NOTE 5 | NOTE 5 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1A.18.2.4-1.NOTE 6:   is the margin determined from table 10.1A.18.2.3-5. |  |  |  |  |  |  |  |
+
+The accuracy requirements in table 10.1A.18.2.4-2 for FR1 for are valid under the following conditions:
+
+- Conditions defined in clause 7.3 of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PRP|dBm according to annex B.2.14 for a corresponding Band.
+
+- Fading propagation condition.
+
+Table 10.1A.18.2.4-2: UE Rx-Tx time difference measurement accuracy in FR1 in fading
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | PRS bandwidth per hop | PRS SCS | Total PRS bandwidth after FH | NR operating band groupsNote 2 | IoNote 3 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 4 | dB | PRB | kHz | PRB |  | dBm / SCSPRS | dBm/BW |
+| ±(63+) | -3 | ≥52 | 15 | 268 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(43+) |  | 48 | 30 | 272 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(40+) |  | 24 | 60 | 132 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(85+) | -10 | ≥52 | 15 | 268 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(61+) |  | 48 | 30 | 272 | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±(55+) |  | 24 | 60 | 132 | NOTE 5 | NOTE 5 | NOTE 5 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS as defined in table 10.1A.18.2.4-1.NOTE 6:   is the margin determined from table 10.1A.18.2.3-5. |  |  |  |  |  |  |  |
+
+#### 10.1A.18.3 Report mapping
+
+##### 10.1A.18.3.1 Absolute UE Rx-Tx Measurement Report Mapping
+
+The report mapping as defined in clause 10.1.25.3.1 shall apply.
+
+##### 10.1A.18.3.2 Differential UE Rx-Tx Measurement Report Mapping
+
+The report mapping as defined in clause 10.1.25.3.2 shall apply.
+
+##### 10.1A.18.3.3 Additional Path Report Mapping for UE Rx-Tx Time Difference
+
+The report mapping as defined in clause 10.1.25.3.3 shall apply.
+
+### 10.1A.19 PRS-RSRPP Measurements for RedCap Positioning
+
+#### 10.1A.19.1 Introduction
+
+The requirements in clause 10.1A.19.2 shall apply, provided the RedCap UE has received nr-DL-AoD-RequestLocationInformation message from LMF via LPP 37.355 [34] requesting the RedCap UE to report one or more DL PRS-RSRPP measurements defined in TS 38.215 [4]. The requirements in clause 10.1A.19 shall apply:
+
+- when RedCap UE is in RRC_CONNECTED state,
+
+- when RedCap UE is in RRC_INACTIVE state,
+
+- when RedCap UE is in RRC_IDLE state.
+
+The requirements in clause 10.1A.19.2 apply for the first path PRS-RSRP measurement.
+
+#### 10.1A.19.2 Measurement Accuracy Requirements
+
+##### 10.1A.19.2.1 Absolute PRS RSRPP accuracy
+
+The absolute accuracy requirements for PRS-RSRPP measurements for 1Rx RedCap UE for FR1 defined in table 10.1A.19.2.1-1 and table 10.1A.19.2.1-2 are valid under the following conditions:
+
+- Conditions defined in TS 38.101-1 [18] clause 7.3 for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.2.14 for a corresponding Band.
+
+The absolute accuracy requirements for PRS-RSRPP measurements defined in clause 10.1.38.2.1 are reused for 2Rx RedCap UE.
+
+The absolute accuracy requirements for PRS-RSRPP measurement defined in table 10.1A.19.2.1-1 apply for the RedCap UE not supporting supportedDL-PRS-ProcessingSamples TS 37.355 [34] or LMF does not indicate RedCap UE to perform positioning measurements with reduced number of samples.
+
+The absolute accuracy requirements for PRS-RSRPP measurement defined in table 10.1A.19.2.1-2 apply for the RedCap UE supporting supportedDL-PRS-ProcessingSamples TS 37.355 [34].
+
+The absolute accuracy requirements for PRS-RSRPP measurement defined in this clause apply to the measurements with and without frequency hopping. For the measurements with frequency hopping, the accuracy requirements apply for the corresponding PRS bandwidth per hop.
+
+NOTE 1: The requriements in this clause are derived based on two-tap channel defined in TS 38.101-4 [21] annex B.2.4 (a = 1, τd=0.45 µs and fD=5 Hz).
+
+NOTE 2: The requirements in this clause are derived based on the difference between the estimated PRS-RSRPP compared to the ideal PRS-RSRPP defined as
+
+$$ RSRPP_{p}\propto  \left | \sum  _{k}H_{k}\operatorname {exp}\left (\left ( j2\pi  D_{p}\frac {k}{N_{IFFT}}\right ) \right )\right | ^{2}$$
+
+Where:
+
+$ H_{k}$ is the effective channel frequency response (over REs occupied by PRS) measured without receiver noise.
+
+$ D_{p}$ is the exact delay of the p-th path in the channel model.
+
+Table 10.1A.19.2.1-1: PRS-RSRPP absolute accuracy for 1Rx RedCap UE for FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 6 range |  |  |  |  |
+|  |  |  |  |  | NR operating band groups Note 7 | Minimum Io Note 1dBm / SCSPRS |  |  | Maximum Io |
+| dB | dB | dB | PRB | - |  | dBm / SCSPRS |  |  | dBm/BWChannel |
+|  |  |  |  |  |  | dBm/15kHz Note 5 | dBm/30kHz Note 5 | dBm/60kHz Note 5 |  |
+| ±3.5 | ±8 | ≥-3 | ≥24 | All | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -124 | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B | -126.5 | -123.5 | -120.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -126 | -123 | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -122.5 | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -122 | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -121.5 | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G | -124 | -121 | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -120.5 | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -117.5 | -114.5 | -50 |
+|  |  |  |  |  | Note 3 |  |  |  |  |
+|  |  |  |  |  | Note 3 |  |  |  |  |
+| ±4.5 | ±9 | ≥-10 | 24 ≤ BW ≤ 52 | All | Note 3 |  |  |  |  |
+| ±4 | ±8.5 |  | BW > 52 | All | Note 3 |  |  |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: PRS bandwidth is as indicated in prs-Bandwidth in the DL-TDOA or DL-AoD assistance data defined in TS 37.355 [34].NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 24 PRB.NOTE 4: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 5: The condition level is increased by ∆>0, when applicable, as described in Sections B.3.2 and B.3.3.NOTE 6: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 7: NR operating band groups are as defined in Section 3.5.2. |  |  |  |  |  |  |  |  |  |
+
+Table 10.1A.19.2.1-2: PRS-RSRPP absolute accuracy for 1Rx RedCap UE for FR1 for reduced number of samples
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS BW | Repetition factor ($ T_{rep}^{PRS}*L_{PRS}/K_{comb}^{PRS})$ | Io Note 6 range |  |  |  |  |
+|  |  |  |  |  | NR operating band groups Note 7 | Minimum Io Note 1dBm / SCSPRS |  |  | Maximum Io |
+| dB | dB | dB | PRB | - |  | dBm / SCSPRS |  |  | dBm/BWChannel |
+|  |  |  |  |  |  | dBm/15kHz Note 5 | dBm/30kHz Note 5 | dBm/60kHz Note 5 |  |
+| ±3.5 | ±8 | ≥0 | ≥48 | All | NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A | -127 | -124 | -121 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_B | -126.5 | -123.5 | -120.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -126 | -123 | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_D, NR_TDD_FR1_D | -125.5 | -122.5 | -119.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_E, NR_TDD_FR1_E | -125 | -122 | -119 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_F | -124.5 | -121.5 | -118.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G | -124 | -121 | -118 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_H | -123.5 | -120.5 | -117.5 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_N | -120.5 | -117.5 | -114.5 | -50 |
+|  |  |  |  |  | Note 3 |  |  |  |  |
+|  |  |  |  |  | Note 3 |  |  |  |  |
+| ±4 | ±8.5 | ≥-6 | 48 ≤ BW ≤ 52 | All | Note 3 |  |  |  |  |
+| ±3.5 | ±7.5 |  | BW >52 | All | Note 3 |  |  |  |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: PRS bandwidth is as indicated in prs-Bandwidth in the DL-TDOA or DL-AoD assistance data defined in TS 37.355 [34].NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 48 PRB.NOTE 4: The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 5: The condition level is increased by ∆>0, when applicable, as described in Sections B.3.2 and B.3.3.NOTE 6: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 7: NR operating band groups are as defined in Section 3.5.2. |  |  |  |  |  |  |  |  |  |
+
+#### 10.1A.19.3 Report mapping
+
+##### 10.1A.19.3.1 Absolute PRS-RSRPP Measurement Report Mapping
+
+The absolute PRS-RSRPP measurement report mapping defined in clause 10.1.38.3.1 applies.
+
+##### 10.1A.19.3.2 Differential Report Mapping for PRS-RSRPP Measurement
+
+The differential report mapping for PRS-RSRPP measurement defined in clause 10.1.38.3.2 applies.
+
+## 10.2 E-UTRAN measurements
+
+### 10.2.1 Introduction
+
+Accuracy requirements for measurements on E-UTRAN carrier frequencies are specified in clause 10.2 and apply for UE in SA or NR-DC or NE-DC operation mode, unless otherwise specified.
+
+Unless otherwise specified, the requirements in clause 10.2 are applicable for a UE:
+
+- in RRC_CONNECTED state
+
+- performing measurements with appropriate measurement gaps according to clause 9.1.2.
+
+- that is synchronised to the cell that is measured.
+
+The reported measurement result after layer 1 filtering shall be an estimate of the average value of the measured quantity over the measurement period. The reference point for the measurement result after layer 1 filtering is referred to as point B in the measurement model described in TS 36.300 [24].
+
+The accuracy requirements of E-UTRA measurements in this clause are valid for the reported measurement result after layer 1 filtering. The accuracy requirements are verified from the measurement report at point D in the measurement model having the layer 3 filtering disabled.
+
+If the UE needs measurement gaps to perform the inter-RAT NR ─ E-UTRAN FDD and NR ─ E-UTRAN TDD measurements, the relevant measurement procedure and measurement gap patterns stated in clause9.1.2 shall apply.
+
+### 10.2.2 E-UTRAN RSRP measurements
+
+NOTE: This measurement is for handover between NR and E-UTRAN.
+
+The measurement period of E-UTRA RSRP in RRC_CONNECTED state is specified in clauses 9.4.2 and 9.4.3.
+
+The accuracy requirements of E-UTRA RSRP measurements in RRC_CONNECTED state and the corresponding side conditions shall be the same as the inter-frequency RSRP Accuracy Requirements in clause 9.1.3 of TS 36.133[15].
+
+The reporting range and mapping specified for RSRP measurements in clause 9.1.4 of TS36.133[15] shall apply.
+
+### 10.2.3 E-UTRAN RSRQ measurements
+
+NOTE: This measurement is for handover between NR and E-UTRAN.
+
+The measurement period of E-UTRA RSRQ in RRC_CONNECTED state is specified in clauses 9.4.2 and 9.4.3.
+
+The accuracy requirements of E-UTRA RSRQ measurements in RRC_CONNECTED state and the corresponding side conditions shall be the same as the inter-frequency RSRQ Accuracy Requirements in clause 9.1.6 of TS 36.133 [15].
+
+The requirements for E-UTRA RSRQ measurements accuracy in RRC_CONNECTED state and the corresponding side conditions shall be the same as the inter-frequency RSRQ Accuracy Requirements in clause 9.1.6 of TS 36.133 [15].
+
+The reporting range and mapping specified for RSRQ measurements in clause 9.1.7 of TS36.133[15] shall apply.
+
+### 10.2.4 E-UTRAN RSTD measurements
+
+The requirements in this clause are valid for UE supporting this capability.
+
+The measurement period is specified in clauses 9.4.4.1 and 9.4.4.2 for inter-RAT NR ─ E-UTRAN FDD and inter-RAT NR ─ E-UTRAN TDD RSTD measurements, respectively.
+
+The accuracy requirements and the corresponding side conditions shall be the same as the inter-frequency measurement accuracy requirements for RSTD measurements in RRC_CONNECTED in clauses 9.1.10.2 of TS 36.133 [15].
+
+If the UE needs measurement gaps to perform the inter-RAT NR ─ E-UTRAN FDD and NR ─ E-UTRAN TDD RSTD measurements, the relevant measurement procedure and measurement gap patterns stated in clause9.1.2 shall apply.
+
+The reporting range and mapping for the inter-RAT NR ─ E-UTRAN FDD and NR ─ E-UTRAN TDD RSTD measurements is the same as specified for RSTD measurements in TS 36.133 [15, clauses 9.1.10.3 and 9.1.10.4].
+
+### 10.2.5 E-UTRAN RS-SINR measurements
+
+NOTE: This measurement is for handover between NR and E-UTRAN.
+
+The measurement period of E-UTRA RS-SINR in RRC_CONNECTED state is specified in clauses 9.4.2 and 9.4.3.
+
+The accuracy requirements of E-UTRA RS-SINR measurements in RRC_CONNECTED state and the corresponding side conditions shall be the same as the inter-frequency RS-SINR Accuracy Requirements in clause 9.1.17.3 of TS36.133[15].
+
+The reporting range and mapping for E-UTRA RS-SINR measurements shall be the same as specified for RS-SINR measurements in clause 9.1.17.1 of TS 36.133 [15].
+
+### 10.2.6 E-UTRAN RSRP measurements for CA/DC Idle Mode Measurements
+
+NOTE: This measurement is for CA/DC Idle Mode measurements between NR and E-UTRAN.
+
+The requirements in this clause are applicable for a UE:
+
+- in state RRC_IDLE or RRC_INACTIVE
+
+- that is synchronised to the cell that is measured.
+
+The requirements are for absolute E-UTRA RSRP accuracy.
+
+The measurement period of E-UTRA RSRP in RRC_IDLE and RRC_INACTIVE states are specified in clause 4.4.2.
+
+The accuracy requirements of E-UTRA RSRP measurements in RRC_IDLE and RRC_INACTIVE states and the corresponding side conditions shall be as the inter-frequency RSRP Accuracy Requirements in clause 9.1.3B.2 of TS 36.133 [15].
+
+The reporting range and mapping specified for RSRP measurements in clause 9.1.4 of TS 36.133 [15] shall apply.
+
+### 10.2.7 E-UTRAN RSRQ measurements for CA/DC Idle Mode Measurements
+
+NOTE: This measurement is for CA/DC Idle Mode measurements between NR and E-UTRAN.
+
+The requirements in this clause are applicable for a UE:
+
+- in state RRC_IDLE or RRC_INACTIVE
+
+- that is synchronised to the cell that is measured.
+
+The requirements are for absolute E-UTRA RSRQ accuracy.
+
+The measurement period of E-UTRA RSRQ in RRC_IDLE and RRC_INACTIVE states are specified in clause 4.4.2.
+
+The accuracy requirements of E-UTRA RSRQ measurements in RRC_IDLE and RRC_INACTIVE states and the corresponding side conditions shall be as the inter-frequency RSRQ Accuracy Requirements in clause 9.1.6B.2 of TS 36.133 [15].
+
+The reporting range and mapping specified for RSRQ measurements in clause 9.1.7 of TS 36.133 [15] shall apply.
+
+## 10.2A E-UTRAN measurements for RedCap
+
+### 10.2A.1 Introduction
+
+Accuracy requirements for measurements on E-UTRAN carrier frequencies are specified in clause 10.2A and apply for RedCap UE in SA operation mode, unless otherwise specified.
+
+Unless otherwise specified, the requirements in clause 10.2A are applicable for a UE:
+
+- in RRC_CONNECTED state
+
+- performing measurements with appropriate measurement gaps according to clause 9.1A.2.
+
+- that is synchronised to the cell that is measured.
+
+The reported measurement result after layer 1 filtering shall be an estimate of the average value of the measured quantity over the measurement period. The reference point for the measurement result after layer 1 filtering is referred to as point B in the measurement model described in TS 36.300 [24].
+
+The accuracy requirements of E-UTRA measurements in this clause are valid for the reported measurement result after layer 1 filtering. The accuracy requirements are verified from the measurement report at point D in the measurement model having the layer 3 filtering disabled.
+
+If the UE needs measurement gaps to perform the inter-RAT NR ─ E-UTRAN FDD and NR ─ E-UTRAN TDD measurements, the relevant measurement procedure and measurement gap patterns stated in clause 9.1A.2 shall apply.
+
+### 10.2A.2 E-UTRAN RSRP measurements
+
+NOTE: This measurement is for handover between NR and E-UTRAN.
+
+The measurement period of E-UTRA RSRP in RRC_CONNECTED state is specified in clauses 9.4A.2 and 9.4A.3.
+
+For 2Rx RedCap,
+
+- The accuracy requirements of E-UTRA RSRP measurements in RRC_CONNECTED state and the corresponding side conditions shall be the same as the inter-frequency RSRP accuracy requirements for UE other than Cat.1bis in clause 9.1.3 of TS 36.133 [15].
+
+For 1Rx RedCap,
+
+- The accuracy requirements of E-UTRA RSRP measurements in RRC_CONNECTED state and the corresponding side conditions shall be the same as the inter-frequency RSRP accuracy requirements for UE Cat.1bis in clause 9.1.3 of TS 36.133 [15].
+
+The reporting range and mapping specified for RSRP measurements in clause 9.1.4 of TS 36.133 [15] shall apply.
+
+### 10.2A.3 E-UTRAN RSRQ measurements
+
+NOTE: This measurement is for handover between NR and E-UTRAN.
+
+The measurement period of E-UTRA RSRQ in RRC_CONNECTED state is specified in clauses 9.4A.2 and 9.4A.3.
+
+For 2Rx RedCap,
+
+- The accuracy requirements of E-UTRA RSRQ measurements in RRC_CONNECTED state and the corresponding side conditions shall be the same as the inter-frequency RSRQ accuracy requirements for UE other than Cat.1bis in clause 9.1.6 of TS 36.133 [15].
+
+For 1Rx RedCap,
+
+- The accuracy requirements of E-UTRA RSRQ measurements in RRC_CONNECTED state and the corresponding side conditions shall be the same as the inter-frequency RSRQ accuracy requirements for UE Cat.1bis in clause 9.1.6 of TS 36.133 [15].
+
+The requirements for accuracy of E-UTRA RSRQ measurements in RRC_CONNECTED state and the corresponding side conditions shall be the same as the inter-frequency RSRQ Accuracy Requirements in clause 9.1.6 of TS 36.133 [15].
+
+The reporting range and mapping specified for RSRQ measurements in clause 9.1.7 of TS 36.133 [15] shall apply.
+
+### 10.2A.4 E-UTRAN RS-SINR measurements
+
+NOTE: This measurement is for handover between NR and E-UTRAN.
+
+The measurement period of E-UTRA RS-SINR in RRC_CONNECTED state is specified in clauses 9.4A.2 and 9.4A.3.
+
+For 2Rx RedCap,
+
+- The accuracy requirements of E-UTRA RS-SINR measurements in RRC_CONNECTED state and the corresponding side conditions shall be the same as the inter-frequency RS-SINR accuracy requirements in clause 9.1.17.3 of TS 36.133 [15].
+
+The reporting range and mapping for E-UTRA RS-SINR measurements shall be the same as specified for RS-SINR measurements in clause 9.1.17.1 of TS 36.133 [15].
+
+## 10.3 UTRAN FDD Measurements
+
+The requirements in this clause are applicable for a UE:
+
+- in state RRC_CONNECTED
+
+- performing measurements according to clause 9.4.6 with appropriate measurement gaps
+
+- that is synchronised to the cell that is measured.
+
+The reported measurement result after layer 1 filtering shall be an estimate of the average value of the measured quantity over the measurement period. The reference point for the measurement result after layer 1 filtering is referred to as point B in the measurement model described in TS 25.302 [30].
+
+The accuracy requirements in this clause are valid for the reported measurement result after layer 1 filtering. The accuracy requirements are verified from the measurement report at point D in the measurement model having the layer 3 filtering disabled.
+
+### 10.3.1 UTRAN FDD CPICH RSCP
+
+NOTE: This measurement is for handover between E-UTRAN and UTRAN FDD.
+
+The requirements in this clause are valid for terminals supporting this capability.
+
+The measurement period for RRC_CONNECTED state is specified in clause 9.4.6.
+
+In RRC_CONNECTED state the accuracy requirements shall meet the absolute accuracy requirements in table 10.3.1-1, under the following conditions:
+
+- CPICH Ec/Io condition for a detectable cell is as specified in clause 9.4.6;
+
+- SCH_Ec/Io condition for a detectable cell is as specified in clause 9.4.6.
+
+Table 10.3.1-1: UTRAN FDD CPICH_RSCP absolute accuracy
+
+| Accuracy |  | Conditions |  |  |
+| --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Io range |  |  |
+|  |  | UTRA operating bands | Minimum Io | Maximum Io |
+| dB | dB |  | dBm/3.84 MHz | dBm/3.84 MHz |
+|  |  | Band I, IV, VI, X XI, XIX and XXI | -94 | -70 |
+|  |  | Band IX | -93 | -70 |
+| 6 | 9 | Band II, V and VII | -92 | -70 |
+|  |  | Band III, VIII, XII, XIII, XIV , XX and XXII | -91 | -70 |
+|  |  | Band XXV, XXVI Note 1 | -90.5 | -70 |
+| 8 | 11 | Note 2 | -70 | -50 |
+| NOTE 1: For Band XXVI, the condition has the minimum Io of -92 dBm/3.84 MHz when the carrier frequency of the assigned UTRA channel is within 869-894 MHz for the UE which supports both Band V and Band XXVI operating frequencies.NOTE 2: The same bands apply for this requirement as for the corresponding highest accuracy requirement. |  |  |  |  |
+
+If the UE, in RRC_CONNECTED state, needs measurement gaps to perform UTRAN FDD measurements, the relevant UTRAN FDD measurement procedure and measurement gap pattern stated in clause 9.4.6 shall apply.
+
+The reporting range and mapping specified for FDD CPICH RSCP in TS 25.133 [29] shall apply.
+
+### 10.3.2 UTRAN FDD CPICH Ec/No
+
+NOTE: This measurement is for handover between E-UTRAN and UTRAN FDD.
+
+The requirements in this clause are valid for terminals supporting this capability.
+
+The measurement period for RRC_CONNECTED state is specified in clause 9.4.6.
+
+In RRC_CONNECTED state the accuracy requirements shall be the same as the inter-frequency measurement accuracy requirements for FDD CPICH Ec/No in TS 25.133 [29].
+
+If the UE, in RRC_CONNECTED state, needs measurement gaps to perform UTRAN FDD measurements, the UTRAN FDD measurement procedure and measurement gap pattern stated in clause 9.4.6 shall apply.
+
+The reporting range and mapping specified for FDD CPICH Ec/No in TS 25.133 [29] shall apply.
+
+## 10.4 V2X measurements
+
+### 10.4.1 Introduction
+
+The requirements in this clause are applicable for a UE capable of V2X sidelink communication.
+
+The accuracy requirements in this clause are:
+
+- applicable for AWGN radio propagation conditions,
+
+- assume independent interference (noise) at each receiver antenna port.
+
+### 10.4.2 Intra-frequency PSBCH-RSRP accuracy requirements for FR1
+
+#### 10.4.2.1 PSBCH-RSRP Absolute Accuracy
+
+The requirements for absolute PSBCH-RSRP accuracy in this clause apply to a V2X synchronization source on the same frequency as that of the own V2X UE performing the measurement in FR1.
+
+The accuracy requirements in table 10.4.2.1-1 are valid under the following conditions:
+
+- Demodulation reference signals are transmitted from one port.
+
+- Conditions defined in clause 7.3E of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for PSBCH-RSRP measurements are fulfilled according to annex B.4.2 for a corresponding Band for each relevant PSBCH-DMRS.
+
+Table 10.4.2.1-1: Intra-frequency PSBCH-RSRP absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR V2X operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSL |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSL = 15 kHz | SCSSL = 30 kHz | SCSSL = 60 kHz |  |  |
+| 4.5 | 9 | -6 | NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_TDD_FR1_J | -116.5 | -113.5 | -110.5 | N/A | -70 |
+| 8 | 11 | -6 | NR_TDD_FR1_B, NR_TDD_FR1_J | N/A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR V2X operating band groups in FR1 are as defined in clause 3.5.2.NOTE 3: Ês/Iot for a SyncRef UE is the Ês/Iot of PSBCH-DMRS. |  |  |  |  |  |  |  |  |
+
+#### 10.4.2.2 PSBCH-RSRP Relative Accuracy
+
+The relative PSBCH-RSRP accuracy is defined as the PSBCH-RSRP measured from one V2X synchronization source compared to the PSBCH-RSRP measured from another V2X synchronization source on the same frequency in FR1.
+
+The accuracy requirements in table 10.4.2.2-1 are valid under the following conditions:
+
+- Demodulation reference signals are transmitted from one port.
+
+- Conditions defined in clause 7.3E of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for PSBCH-RSRP accuracy measurements are fulfilled according to annex B.4.2 for a corresponding Band for each relevant PSBCH-DMRS.
+
+Table 10.4.2.2-1: Intra-frequency PSBCH-RSRP relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR V2X operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSL |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSL = 15 kHz | SCSSL = 30 kHz | SCSSL = 60 kHz |  |  |
+| 2 | 3 | -3 | NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -50 |
+|  |  |  | NR_TDD_FR1_J | -116.5 | -113.5 | -110.5 | N/A | -50 |
+| 3 | 3 | -6 | Note 4 | Note 4 | Note 4 | Note 4 | N/A | Note 4 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR V2X operating band groups in FR1 are as defined in clause 3.5.2.NOTE 3: Ês/Iot for a SyncRef UE is the Ês/Iot of PSBCH-DMRS.NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement. |  |  |  |  |  |  |  |  |
+
+### 10.4.2A Intra-frequency PSBCH-RSRP accuracy requirements for FR1 under CCA
+
+#### 10.4.2A.1 PSBCH-RSRP Absolute Accuracy
+
+The requirements for absolute PSBCH-RSRP accuracy in this clause apply to a sidelink synchronization source on the same frequency as that of the own sidelink UE performing the measurement in FR1 under CCA.
+
+The accuracy requirements in table 10.4.2A.1-1 are valid under the following conditions:
+
+- Demodulation reference signals are transmitted from one port.
+
+- Conditions defined in clause 7.3E of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for PSBCH-RSRP measurements are fulfilled according to annex B.4.2 for a corresponding Band for each relevant PSBCH-DMRS.
+
+Table 10.4.2A.1-1: Intra-frequency PSBCH-RSRP absolute accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR sidelink operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSL |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSL = 15 kHz | SCSSL = 30 kHz |  |  |
+| 4.5 | 9 | -6 | NR_CCA_FR1_I | -117 | -114 | N/A | -70 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 | N/A | -70 |
+| 8 | 11 | -6 | NR_CCA_FR1_I, NR_CCA_FR1_J | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR sidelink operating band groups in FR1 are as defined in clause 3.5.2.NOTE 3: Ês/Iot for a SyncRef UE is the Ês/Iot of PSBCH-DMRS. |  |  |  |  |  |  |  |
+
+#### 10.4.2A.2 PSBCH-RSRP Relative Accuracy
+
+The relative PSBCH-RSRP accuracy is defined as the PSBCH-RSRP measured from one sidelink synchronization source compared to the PSBCH-RSRP measured from another sidelink synchronization source on the same frequency in FR1 under CCA.
+
+The accuracy requirements in table 10.4.2A.2-1 are valid under the following conditions:
+
+- Demodulation reference signals are transmitted from one port.
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for PSBCH-RSRP accuracy measurements are fulfilled according to annex B.4.2 for a corresponding Band for each relevant PSBCH-DMRS.
+
+- The same number of S-SSB repetitions on frequency domain is configured between two sidelink synchronization sources.
+
+Table 10.4.2A.2-1: Intra-frequency PSBCH-RSRP relative accuracy in FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR sidelink operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm / SCSSL |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCSSL = 15 kHz | SCSSL = 30 kHz |  |  |
+| 2 | 3 | -3 | NR_CCA_FR1_I | -117 | -114 | N/A | -50 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 | N/A | -50 |
+| 3 | 3 | -6 | Note 4 | Note 4 | Note 4 | N/A | Note 4 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR sidelink operating band groups in FR1 are as defined in clause 3.5.2.NOTE 3: Ês/Iot for a SyncRef UE is the Ês/Iot of PSBCH-DMRS.NOTE 4: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement. |  |  |  |  |  |  |  |
+
+### 10.4.3 Intra-Frequency SL-RSSI Measurement Accuracy Requirements for FR1
+
+#### 10.4.3.1 Absolute SL-RSSI Accuracy
+
+The intra-frequency SL-RSSI requirements are specified in table 10.4.3.1-1. The requirements apply for measurement period of 1 slot and for any configured measurement bandwidth larger than 10 PRBs, provided that:
+
+- All symbols duing each RSSI measurement duration are available for RSSI sampling within the same measurement interval.
+
+Table 10.4.3.1-1: Intra-frequency SL-RSSI absolute accuracy
+
+| Accuracy |  | Conditions |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Io Note 1 range |  |  |  |  |
+|  |  | NR V2X operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB |  | dBm/SCSSL |  |  | dBm/BWChannel |
+|  |  |  | SCSSL = 15 kHz | SCSSL = 30 kHz | SCSSL = 60 kHz |  |
+| 2.5 | 5.5 | NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | -50 |
+|  |  | NR_TDD_FR1_J | -116.5 | -113.5 | -110.5 | -50 |
+| 4.5 | 7.5 | Note 3 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR V2X operating band groups are as defined in clause 3.5 for the corresponding NR operating bands.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement. |  |  |  |  |  |  |
+
+### 10.4.3A Intra-Frequency SL-RSSI Measurement Accuracy Requirements for FR1 under CCA
+
+#### 10.4.3A.1 Absolute SL-RSSI Accuracy
+
+The intra-frequency SL-RSSI requirements are specified in table 10.4.3A.1-1 under CCA. The requirements apply for measurement period of 1 slot and for any configured measurement bandwidth larger than 10 PRBs, provided that:
+
+- All symbols during each RSSI measurement duration according to indication of first or second starting symbol within a slot are available for RSSI sampling within the same measurement interval.
+
+Table 10.4.3A.1-1: Intra-frequency SL-RSSI absolute accuracy
+
+| Accuracy |  | Conditions |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Io Note 1 range |  |  |  |
+|  |  | NR sidelink operating band groups Note 2 | Minimum Io |  | Maximum Io |
+| dB | dB |  | dBm/SCSSL |  | dBm/BWChannel |
+|  |  |  | SCSSL = 15 kHz | SCSSL = 30 kHz |  |
+| 2.5 | 5.5 | NR_CCA_FR1_I | -117 | -114 | -50 |
+|  |  | NR_CCA_FR1_J | -116.5 | -113.5 | -50 |
+| 4.5 | 7.5 | Note 3 | Note 3 | Note 3 | Note 3 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR sidelink operating band groups are as defined in clause 3.5 for the corresponding NR operating bands.NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement. |  |  |  |  |  |
+
+### 10.4.4 Intra-Frequency L1 SL-RSRP Measurement Accuracy Requirements for FR1
+
+#### 10.4.4.1 Absolute L1 SL-RSRP Accuracy
+
+The requirements for absolute L1 SL-RSRP accuracy in this clause apply to a UE performing PSCCH-RSRP and/or PSSCH-RSRP measurements on the same frequency as used by operating V2X sidelink communication.
+
+The accuracy requirements in table 10.4.4.1-1 are valid under the following conditions:
+
+- Demodulation reference signals for PSCCH and/or PSSCH are transmitted from one port.
+
+- Conditions defined in clause 7.3E of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PSCCH-RSRP|dBm and/or PSSCH-RSRP|dBm according to annex B.4.4 for a corresponding Band are fulfilled.
+
+Table 10.4.4.1-1: Intra-frequency L1 SL-RSRP absolute accuracy for UE capable of V2X sidelink communication
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR V2X operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm/SCS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCS = 15 kHz | SCS = 30 kHz | SCS = 60 kHz |  |  |
+| 4.5 | 9 | 0 dB | NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_TDD_FR1_J | -116.5 | -113.5 | -110.5 | N/A | -70 |
+| 8 | 11 | 0 dB | NR_TDD_FR1_B NR_TDD_FR1_J | N/A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR V2X operating band groups are as defined in clause 3.5 for the corresponding NR operating bands.NOTE 3: The parameter Ês/Iot is the Ês/Iot of PSCCH-DMRS and/or PSSCH-DMRS. |  |  |  |  |  |  |  |  |
+
+### 10.4.4A Intra-Frequency L1 SL-RSRP Measurement Accuracy Requirements for FR1 under CCA
+
+#### 10.4.4A.1 Absolute L1 SL-RSRP Accuracy
+
+The requirements for absolute L1 SL-RSRP accuracy in this clause apply to a UE performing PSCCH-RSRP and/or PSSCH-RSRP measurements on the same frequency as used by operating sidelink communication under CCA.
+
+The accuracy requirements in table 10.4.4A.1-1 are valid under the following conditions:
+
+- Demodulation reference signals for PSCCH and/or PSSCH are transmitted from one port.
+
+- Conditions defined in clause 7.3F of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PSCCH-RSRP|dBm and/or PSSCH-RSRP|dBm according to annex B.4.4 for a corresponding Band are fulfilled.
+
+Table 10.4.4A.1-1: Intra-frequency L1 SL-RSRP absolute accuracy for UE capable of sidelink communication
+
+| Accuracy |  | Conditions |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |
+|  |  |  | NR sidelink operating band groups Note 2 | Minimum Io |  |  | Maximum Io |
+| dB | dB | dB |  | dBm/SCS |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCS = 15 kHz | SCS = 30 kHz |  |  |
+| 4.5 | 9 | 0 dB | NR_CCA_FR1_I | -117 | -114 | N/A | -70 |
+|  |  |  | NR_CCA_FR1_J | -116.5 | -113.5 | N/A | -70 |
+| 8 | 11 | 0 dB | NR_CCA_FR1_I NR_CCA_FR1_J | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR sidelink operating band groups are as defined in clause 3.5 for the corresponding NR operating bands.NOTE 3: The parameter Ês/Iot is the Ês/Iot of PSCCH-DMRS and/or PSSCH-DMRS. |  |  |  |  |  |  |  |
+
+### 10.4.5 Intra-Frequency Discovery Signal Measurement Accuracy Requirements
+
+The requirements in this clause are applicable for a remote sidelink UE in U2N relay scenario provided that the remote UE:
+
+- is out of coverage on the frequency used for sidelink, and
+
+- that is synchronised to the sidelink relay UE that is measured.
+
+The requirements in this clause are applicable for a remote sidelink UE in multipath relay scenario provided that the remote UE:
+
+- is synchronised to the sidelink relay UE that is measured and
+
+- is in coverage on the frequency used for sidelink if both the direct path and the sidelink on the indirect path are on the same frequency
+
+- is out of coverage on the frequency used for sidelink if the direct path and the sidelink on the indirect path are on different frequencies.
+
+#### 10.4.5.1 Absolute Discovery Signal Measurement Accuracy
+
+The accuracy requirements for absolute discovery signal measurement in this clause apply to a sidelink UE performing SL-RSRP measurements for direct to indirect path switch or SL-RSRP measurements for indirect to direct path switch on the same frequency as used by the sidelink relay UE transmitting the relay Discovery message.
+
+The accuracy requirements in table 10.4.5.1-1 are valid under the following conditions:
+
+- Demodulation reference signals for PSCCH and/or PSSCH are transmitted from one port.
+
+- Conditions defined in clause 7.3E of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- PSCCH-RSRP|dBm and/or PSSCH-RSRP|dBm according to annex B.4.4 for a corresponding Band are fulfilled.
+
+Table 10.4.5.1-1: Intra-frequency discovery signal measurement absolute accuracy for a remote sidelink UE [2] capable of sidelink Communication and sidelink Discovery and configured by upper layers for relay operation.
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | Ês/Iot Note 3 | Io Note 1 range |  |  |  |  |  |
+|  |  |  | NR V2X operating band groups Note 2 | Minimum Io |  |  |  | Maximum Io |
+| dB | dB | dB |  | dBm/SCS |  |  | dBm/BWChannel | dBm/BWChannel |
+|  |  |  |  | SCS = 15 kHz | SCS = 30 kHz | SCS = 60 kHz |  |  |
+| 4.5 | 9 | 0 dB | NR_TDD_FR1_B | -120.5 | -117.5 | -114.5 | N/A | -70 |
+|  |  |  | NR_TDD_FR1_J | -116.5 | -113.5 | -110.5 | N/A | -70 |
+| 8 | 11 | 0 dB | NR_TDD_FR1_B NR_TDD_FR1_J | N/A | N/A | N/A | -70 | -50 |
+| NOTE 1: Io is assumed to have constant EPRE across the bandwidth.NOTE 2: NR sidelink operating band groups are as defined in clause 3.5 for the corresponding NR operating bands.NOTE 3: The parameter Ês/Iot is the Ês/Iot of PSCCH-DMRS and/or PSSCH-DMRS. |  |  |  |  |  |  |  |  |
+
+## 10.4A NR Sidelink Measurements for Positioning
+
+### 10.4A.1 Introduction
+
+The SL measurements for positioning are performed based on SL-PRS. The SL-PRS reception procedure is as described in TS 38.321 [7]. The UE shall monitor PSCCH to receive the associated SL-PRS in the same slot TS 38.214 [26].
+
+### 10.4A.2 SL RSTD measurements
+
+#### 10.4A.2.1 Measurement Report Mapping
+
+##### 10.4A.2.1.1 Absolute SL RSTD Measurement Reporting
+
+The reporting range for the SL RSTD measurement is defined from -985024Tc to 985024Tc with the resolution step of 2kTc, where
+
+Tc is defined in TS 38.211 [6],
+
+kmin≤k≤kmax,
+
+kmin=2 and kmax=5, when configured SL-PRS resources of both of the reference UE and the second anchor UE measured for the SL RSTD measurement are in FR1.
+
+The measurement report mapping for different k values are specified in tables 10.4A.2.1.1-1  10.4A.2.1.1-4.
+
+Table 10.4A.2.1.1-1: Report mapping for k=2
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| SL_RSTD_i | SL_RSTD |  |
+| SL_RSTD_000000 | SL_RSTD < -985024 | Tc |
+| SL_RSTD_000001 | -985024  SL_RSTD < -985020 | Tc |
+| SL_RSTD_000002 | -985020  SL_RSTD < -985016 | Tc |
+|  |  | … |
+| SL_RSTD_246256 | -4  SL_RSTD < 0 | Tc |
+| SL_RSTD_246257 | 0  SL_RSTD < 4 | Tc |
+| … | … | … |
+| SL_RSTD_492511 | 985016  SL_RSTD < 985020 | Tc |
+| SL_RSTD_492512 | 985020  SL_RSTD < 985024 | Tc |
+| SL_RSTD_492513 | 985024  SL_RSTD | Tc |
+
+Table 10.4A.2.1.1-2: Report mapping for k=3
+
+| Reported Quantity Value | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| SL_RSTD_i | SL_RSTD |  |
+| SL_RSTD_000000 | SL_RSTD < -985024 | Tc |
+| SL_RSTD_000001 | -985024  SL_RSTD < -985016 | Tc |
+| SL_RSTD_000002 | -985016  SL_RSTD < -985008 | Tc |
+|  |  | … |
+| SL_RSTD_123128 | -8  SL_RSTD < 0 | Tc |
+| SL_RSTD_123129 | 0  SL_RSTD < 8 | Tc |
+| … | … | … |
+| SL_RSTD_246255 | 985008  SL_RSTD < 985016 | Tc |
+| SL_RSTD_246256 | 985016  SL_RSTD < 985024 | Tc |
+| SL_RSTD_246257 | 985024  SL_RSTD | Tc |
+
+Table 10.4A.2.1.1-3: Report mapping for k=4
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| SL_RSTD_i | SL_RSTD |  |
+| SL_RSTD_000000 | SL_RSTD < -985024 | Tc |
+| SL_RSTD_000001 | -985024  SL_RSTD < -985008 | Tc |
+| SL_RSTD_000002 | -985008  SL_RSTD < -984992 | Tc |
+|  |  | … |
+| SL_RSTD_061564 | -16  SL_RSTD < 0 | Tc |
+| SL_RSTD_061565 | 0  SL_RSTD < 16 | Tc |
+| … | … | … |
+| SL_RSTD_123127 | 984992  SL_RSTD < 985008 | Tc |
+| SL_RSTD_123128 | 985008  SL_RSTD < 985024 | Tc |
+| SL_RSTD_123129 | 985024  SL_RSTD | Tc |
+
+Table 10.4A.2.1.1-4: Report mapping for k=5
+
+| Reported Quantity Value, | Measured Quantity Value, | Unit |
+| --- | --- | --- |
+| SL_RSTD_i | SL_RSTD |  |
+| SL_RSTD_00000 | SL_RSTD < -985024 | Tc |
+| SL_RSTD_00001 | -985024  SL_RSTD < -984992 | Tc |
+| SL_RSTD_00002 | -984992  SL_RSTD < -984960 | Tc |
+|  |  | … |
+| SL_RSTD_30782 | -32  SL_RSTD < 0 | Tc |
+| SL_RSTD_30783 | 0  SL_RSTD < 32 | Tc |
+| … | … | … |
+| SL_RSTD_61563 | 984960  SL_RSTD < 984992 | Tc |
+| SL_RSTD_61564 | 984992  SL_RSTD < 985024 | Tc |
+| SL_RSTD_61565 | 985024  SL_RSTD | Tc |
+
+#### 10.4A.2.2 Measurement Accuracy Requirements
+
+The accuracy requirements for SL RSTD measurement shall be within ±(X+Y+Z) Tc, where X, Y, and Z are defined as follows.
+
+X is defined in table 10.4A.2.2-1 for AWGN propagation condition and table 10.4A.2.2-2 for fading propagation condition in FR1, provided that the following conditions are met:
+
+- Conditions defined in clause 7.3E of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- Conditions for SL RSTD measurements are fulfilled according to annex B.4A.1 for a corresponding Band for each relevant SL-PRS resource configured for measurement.
+
+- Y=32 Tc, provided that the time offset between the two SL-PRS resource instances from the reference UE and the second anchor UE, which are used for a single SL RSTD estimate, is no greater than 160 ms.
+
+- Z is defined in table 10.4A.2.2-3 for FR1.
+
+NOTE: The requriements for fading channel in this clause are derived based on TDL-A (30 ns delay spread, 5Hz) channel models for FR1.
+
+Table 10.4A.2.2-1: SL RSTD absolute accuracy in FR1 for AWGN channel
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | SL-PRS Ês/Iot | SL-PRS SCS | SL-PRS bandwidthNote 1 | Number of samples, S | Io Note 2 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 3 | Minimum Io | Maximum Io |
+| Tc Note 4 | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| ±66 | (SL-PRS Ês/Iot)ref ≥0 dB(SL-PRS Ês/Iot)i ≥-3 dB | 15 | 48 | ≥ 4 | NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_J | -119.5 | -50 |
+| ±69 |  |  | >48 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| ±40 |  |  | ≥ 96 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| ±73 |  | 30 | ≥ 24 | ≥ 4 | NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_J | -116.5 | -50 |
+| ±39 |  |  | >48 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| ±40 |  | 60 | ≥ 24 | ≥ 4 | NR_TDD_FR1_B | -117.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -117 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G | -115 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_J | -113.5 | -50 |
+| NOTE 1: Minimum SL-PRS bandwidth, which is the minimum of the SL-PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2: Io is assumed to have constant EPRE across the bandwidth.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the SL-PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |  |  |
+
+Table 10.4A.2.2-2: SL RSTD absolute accuracy in FR1 for fading channel
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | SL-PRS Ês/Iot | SL-PRS SCS | SL-PRS bandwidthNote 1 | Number of samples, S | Io Note 2 range |  |  |
+|  |  |  |  |  | NR operating band groups Note 3 | Minimum Io | Maximum Io |
+| Tc Note 4 | dB | kHz | PRB |  |  | dBm/SCS | dBm/BWChannel |
+| ±97 | (SL-PRS Ês/Iot)ref ≥0 dB(SL-PRS Ês/Iot)i ≥-3 dB | 15 | 48 | ≥ 4 | NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G | -121 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_J | -119.5 | -50 |
+| ±133 |  |  | >48 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| ±91 |  |  | ≥ 96 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| ±138 |  | 30 | ≥ 24 | ≥ 4 | NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G | -118 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_J | -116.5 | -50 |
+| ±99 |  |  | >48 | ≥ 1 | Note 5 | Note 5 | Note 5 |
+| ±83 |  | 60 | ≥ 24 | ≥ 4 | NR_TDD_FR1_B | -117.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -117 | -50 |
+|  |  |  |  |  | NR_FDD_FR1_G | -115 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_J | -113.5 | -50 |
+| NOTE 1: Minimum SL-PRS bandwidth, which is the minimum of the SL-PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2: Io is assumed to have constant EPRE across the bandwidth.NOTE 3: NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the SL-PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |  |  |
+
+Table 10.4A.2.2-3: Margin for SL RSTD measurement accuracy in FR1
+
+| PRS BW (PRB number) |  |  | Margin Z (Tc) |
+| --- | --- | --- | --- |
+| SCS=15kHz | SCS=30kHz | SCS=60kHz |  |
+| ≥ 48 | ≥ 24 | N/A | 72 |
+| ≥ 96 | ≥ 48 | ≥ 24 | 36 |
+
+### 10.4A.3 SL PRS-RSRP measurements
+
+#### 10.4A.3.1 Measurement Report Mapping
+
+##### 10.4A.3.1.1 Absolute SL PRS-RSRP Measurement Report Mapping
+
+The reporting range of absolute SL PRS-RSRP measurement is defined from -156 dBm to -31 dBm with 1 dB resolution.
+
+The mapping of measured quantity is defined in table 10.4A.3.1.1-1. The range in the signalling may be larger than the guaranteed accuracy range.
+
+Table 10.4A.3.1.1-1: Measurement report mapping for SL PRS-RSRP
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| SL_PRS-RSRP_0 | SL_PRS-RSRP<-156 | dBm |
+| SL_PRS-RSRP_1 | -156≤SL_PRS-RSRP<-155 | dBm |
+| SL_PRS-RSRP_2 | -155≤SL_PRS-RSRP<-154 | dBm |
+| SL_PRS-RSRP_3 | -154≤SL_PRS-RSRP<-153 | dBm |
+| SL_PRS-RSRP_4 | -153≤SL_PRS-RSRP<-152 | dBm |
+| SL_PRS-RSRP_5 | -152≤SL_PRS-RSRP<-151 | dBm |
+| SL_PRS-RSRP_6 | -151≤SL_PRS-RSRP<-150 | dBm |
+| SL_PRS-RSRP_7 | -150≤SL_PRS-RSRP<-149 | dBm |
+| SL_PRS-RSRP_8 | -149≤SL_PRS-RSRP<-148 | dBm |
+| SL_PRS-RSRP_9 | -148≤SL_PRS-RSRP<-147 | dBm |
+| SL_PRS-RSRP_10 | -147≤SL_PRS-RSRP<-146 | dBm |
+| SL_PRS-RSRP_11 | -146≤SL_PRS-RSRP<-145 | dBm |
+| SL_PRS-RSRP_12 | -145≤SL_PRS-RSRP<-144 | dBm |
+| SL_PRS-RSRP_13 | -144≤SL_PRS-RSRP<-143 | dBm |
+| SL_PRS-RSRP_14 | -143≤SL_PRS-RSRP<-142 | dBm |
+| SL_PRS-RSRP_15 | -142≤SL_PRS-RSRP<-141 | dBm |
+| SL_PRS-RSRP_16 | -141≤SL_PRS-RSRP<-140 | dBm |
+| SL_PRS-RSRP_17 | -140≤SL_PRS-RSRP<-139 | dBm |
+| SL_PRS-RSRP_18 | -139≤SL_PRS-RSRP<-138 | dBm |
+| … | … | … |
+| SL_PRS-RSRP_111 | -46≤SL_PRS-RSRP<-45 | dBm |
+| SL_PRS-RSRP_112 | -45≤SL_PRS-RSRP<-44 | dBm |
+| SL_PRS-RSRP_113 | -44≤SL_PRS-RSRP<-43 | dBm |
+| SL_PRS-RSRP_114 | -43≤SL_PRS-RSRP<-42 | dBm |
+| SL_PRS-RSRP_115 | -42≤SL_PRS-RSRP<-41 | dBm |
+| SL_PRS-RSRP_116 | -41≤SL_PRS-RSRP<-40 | dBm |
+| SL_PRS-RSRP_117 | -40≤SL_PRS-RSRP<-39 | dBm |
+| SL_PRS-RSRP_118 | -39≤SL_PRS-RSRP<-38 | dBm |
+| SL_PRS-RSRP_119 | -38≤SL_PRS-RSRP<-37 | dBm |
+| SL_PRS-RSRP_120 | -37≤SL_PRS-RSRP<-36 | dBm |
+| SL_PRS-RSRP_121 | -36≤SL_PRS-RSRP<-35 | dBm |
+| SL_PRS-RSRP_122 | -35≤SL_PRS-RSRP<-34 | dBm |
+| SL_PRS-RSRP_123 | -34≤SL_PRS-RSRP<-33 | dBm |
+| SL_PRS-RSRP_124 | -33≤SL_PRS-RSRP<-32 | dBm |
+| SL_PRS-RSRP_125 | -32≤SL_PRS-RSRP<-31 | dBm |
+| SL_PRS-RSRP_126 | -31≤SL_PRS-RSRP | dBm |
+
+#### 10.4A.3.2 Measurement Accuracy Requirements
+
+##### 10.4A.3.2.1 Absolute SL PRS-RSRP accuracy
+
+The absolute accuracy requirements for SL PRS-RSRP measurement for FR1 defined in table 10.4A.3.2.1-1 are valid under the following conditions:
+
+- Conditions defined in 38.101-1 [18] clause 7.3E for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.4A.1 for a corresponding Band.
+
+Table 10.4A.3.2.1-1: SL PRS-RSRP absolute accuracy for FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | SL- PRS Ês/Iot | SL-PRS SCS | SL-PRS BW Note 2 | Number of SL-PRS samples, S | NR operating band group Note 5 | Io Note 4 range |  |
+|  |  |  |  |  |  |  | Minimum Io Note 1 | Maximum Io |
+| dB | dB | dB | kHz | PRB | - |  | dBm / SCSPRS | dBm/ BWChannel |
+| ±3.3 | ±7.9 | ≥-3 dB | 15 | 48 | ≥4 | NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_G | -121 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_J | -119.5 | -50 |
+| ±5.3 | ±9.8 |  |  | > 48 | ≥1 | Note 3 |  |  |
+| ±4.7 | ±9.2 |  |  | ≥ 96 | ≥1 | Note 3 |  |  |
+| ±4.5 | ±9.0 |  | 30 | ≥ 24 | ≥4 | NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_G | -118 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_J | -116.5 | -50 |
+| ±5.0 | ±9.5 |  |  | > 48 | ≥1 | Note 3 |  |  |
+| ±4.6 | ±9.1 |  | 60 | ≥ 24 | ≥4 | NR_TDD_FR1_B | -117.5 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_C | -117 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_G | -115 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_J | -113.5 | -50 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: SL-PRS bandwidth is as indicated in sl-PRS-BW in the SL-PRS-AssistanceData defined in TS 38.355 [37].NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the SL-PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 4: The Io is defined in PRS positioning slots. The same Io range applies to SL-PRS and non-SL-PRS symbols. Io levels are different in SL-PRS and non-SL-PRS symbols within the same slot.NOTE 5: NR operating band groups are as defined in Section 3.5.2. |  |  |  |  |  |  |  |  |
+
+### 10.4A.4 SL Rx-Tx measurements
+
+#### 10.4A.4.1 Measurement Report Mapping
+
+##### 10.4A.4.1.1 Absolute SL Rx-Tx Measurement Report Mapping
+
+The reporting range for the absolute SL Rx-Tx time difference measurement (TSL Rx-Tx) is defined from -985024´Tc to 985024´Tc with the resolution step of 2k´Tc, where:
+
+Tc is defined in TS 38.211 [6],
+
+kmin≤k≤kmax,
+
+kmin=2 and kmax=5, when both of the transmitted SL-PRS and the received SL-PRS resources configured for TSL Rx-Tx are in FR1.
+
+The TSL Rx-Tx report mapping for k = 2, 3, 4, and 5 are specified in tables 10.4A.4.1.1-1, 10.4A.4.1.1-2, 10.4A.4.1.1-3, and 10.4A.4.1.1-4, respectively.
+
+Table 10.4A.4.1.1-1: Absolute SL Rx-Tx time difference measurement report mapping for k=2
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| SL_RX-TX_TIME_DIFFERENCE_0000 | TSL Rx-Tx < -985024 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_0001 | -985024 £ TSL Rx-Tx < -985020 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_0002 | -985020 £ TSL Rx-Tx < -985016 | Tc |
+| ¼ | ¼ | … |
+| SL_RX-TX_TIME_DIFFERENCE_246256 | -4 £ TSL Rx-Tx < 0 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_246257 | 0 £ TSL Rx-Tx < 4 | Tc |
+| … | … | … |
+| SL_RX-TX_TIME_DIFFERENCE_492511 | 985016 £ TSL Rx-Tx < 985020 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_492512 | 985020 £ TSL Rx-Tx < 985024 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_492513 | 985024 £ TSL Rx-Tx | Tc |
+
+Table 10.4A.4.1.1-2: Absolute SL Rx-Tx time difference measurement report mapping for k=3
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| SL_RX-TX_TIME_DIFFERENCE_0000 | TSL Rx-Tx < -985024 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_0001 | -985024 £ TSL Rx-Tx < -985016 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_0002 | -985016 £ TSL Rx-Tx < -985008 | Tc |
+| ¼ | ¼ | … |
+| SL_RX-TX_TIME_DIFFERENCE_123128 | -8 £ TSL Rx-Tx < 0 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_123129 | 0 £ TSL Rx-Tx < 8 | Tc |
+| … | … | … |
+| SL_RX-TX_TIME_DIFFERENCE_246255 | 985008 £ TSL Rx-Tx < 985016 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_246256 | 985016 £ TSL Rx-Tx < 985024 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_246257 | 985024 £ TSL Rx-Tx | Tc |
+
+Table 10.4A.4.1.1-3: Absolute SL Rx-Tx time difference measurement report mapping for k=4
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| SL_RX-TX_TIME_DIFFERENCE_0000 | TSL Rx-Tx < -985024 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_0001 | -985024 £ TSL Rx-Tx < -985008 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_0002 | -985008 £ TSL Rx-Tx < -984992 | Tc |
+| ¼ | ¼ | … |
+| SL_RX-TX_TIME_DIFFERENCE_61564 | -16 £ TSL Rx-Tx < 0 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_61565 | 0 £ TSL Rx-Tx < 16 | Tc |
+| … | … | … |
+| SL_RX-TX_TIME_DIFFERENCE_123127 | 984992 £ TSL Rx-Tx < 985008 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_123128 | 985008 £ TSL Rx-Tx < 985024 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_123129 | 985024 £ TSL Rx-Tx | Tc |
+
+Table 10.4A.4.1.1-4: Absolute SL Rx-Tx time difference measurement report mapping for k=5
+
+| Reported Quantity Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| SL_RX-TX_TIME_DIFFERENCE_0000 | TSL Rx-Tx < -985024 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_0001 | -985024 £ TSL Rx-Tx < -984992 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_0002 | -984992 £ TSL Rx-Tx < -984960 | Tc |
+| ¼ | ¼ | … |
+| SL_RX-TX_TIME_DIFFERENCE_30782 | -32 £ TSL Rx-Tx < 0 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_30783 | 0 £ TSL Rx-Tx < 32 | Tc |
+| … | … | … |
+| SL_RX-TX_TIME_DIFFERENCE_61563 | 984960 £ TSL Rx-Tx < 984992 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_61564 | 984992 £ TSL Rx-Tx < 985024 | Tc |
+| SL_RX-TX_TIME_DIFFERENCE_61565 | 985024 £ TSL Rx-Tx | Tc |
+
+#### 10.4A.4.2 Measurement Accuracy
+
+The accuracy requirements for SL Rx-Tx time difference measurement shall be within ±(X+Y+) Tc, where X, Y, and  are defined as follows.
+
+X is defined in table 10.4A.4.2-1 for AWGN propagation condition and table 10.4A.4.2-2 for fading propagation condition in FR1, provided that the following conditions are met:
+
+- Conditions defined in clause 7.3E of TS 38.101-1 [18] for reference sensitivity are fulfilled.
+
+- SL PRP|dBm according to annex B.4A.1 for a corresponding Band.
+
+- The UE transmits SL PRS within -160, 160 msec of at least one SL PRS resource of each of the anchor UEs in the assistance data.
+
+- NTA_offset defined in table 7.1.2-2 does not change during the UE Rx-Tx measurement period when the reference timing used for SL PRS transmissions is a NR serving cell.
+
+If UE indicates tx-TimeInfo when reporting SL Rx-Tx time difference results, the frequency drift margin Y=32 Tc, provided that the time offset between the SL PRS transmission and reception, which are used for a single SL Rx-Tx estimate, is no greater than 160 ms. Otherwise, Y=0.
+
+Margin  are defined in table 10.4A.4.2-3.
+
+Table 10.4A.4.2-1: SL Rx-Tx time difference measurement accuracy in FR1 for AWGN channel
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | Number of samples, S | PRS SCS | NR operating band groupsNote 2 | IoNote 3 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 4 | dB | PRB |  | kHz |  | dBm / SCSPRS | dBm/BW |
+| ±49 | -3 | 48 | ≥ 4 | 15 | NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -123 |  |
+|  |  |  |  |  | NR_FDD_FR1_G | -121 |  |
+|  |  |  |  |  | NR_TDD_FR1_J | -119.5 |  |
+| ±59 |  | >48 | ≥ 1 |  | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±31 |  | ≥ 96 | ≥ 1 |  | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±52 |  | ≥ 24 | ≥ 4 | 30 | NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  | NR_FDD_FR1_G | -118 |  |
+|  |  |  |  |  | NR_TDD_FR1_J | -116.5 |  |
+| ±31 |  | >48 | ≥ 1 |  | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±29 |  | ≥ 24 | ≥ 4 | 60 | NR_TDD_FR1_B | -117.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -117 |  |
+|  |  |  |  |  | NR_FDD_FR1_G | -115 |  |
+|  |  |  |  |  | NR_TDD_FR1_J | -113.5 |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |  |  |
+
+Table 10.4A.4.2-2: SL Rx-Tx time difference measurement accuracy in FR1 for fading channel
+
+| Accuracy | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | PRS Ês/Iot | Minimum PRS bandwidth | Number of samples, S | PRS SCS | NR operating band groupsNote 2 | IoNote 3 range |  |
+|  |  |  |  |  |  | Minimum IoNote 1 | Maximum Io |
+| TcNote 4 | dB | PRB |  | kHz |  | dBm / SCSPRS | dBm/BW |
+| ±86 | -3 | 48 | ≥ 4 | 15 | NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -123 |  |
+|  |  |  |  |  | NR_FDD_FR1_G | -121 |  |
+|  |  |  |  |  | NR_TDD_FR1_J | -119.5 |  |
+| ±104 |  | >48 | ≥ 1 |  | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±72 |  | ≥ 96 | ≥ 1 |  | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±84 |  | ≥ 24 | ≥ 4 | 30 | NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -120 |  |
+|  |  |  |  |  | NR_FDD_FR1_G | -118 |  |
+|  |  |  |  |  | NR_TDD_FR1_J | -116.5 |  |
+| ±86 |  | >48 | ≥ 1 |  | NOTE 5 | NOTE 5 | NOTE 5 |
+| ±65 |  | ≥ 24 | ≥ 4 | 60 | NR_TDD_FR1_B | -117.5 | -50 |
+|  |  |  |  |  | NR_TDD_FR1_C | -117 |  |
+|  |  |  |  |  | NR_FDD_FR1_G | -115 |  |
+|  |  |  |  |  | NR_TDD_FR1_J | -113.5 |  |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: NR operating band groups are as defined in Section 3.5.NOTE 3: The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4: Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS. |  |  |  |  |  |  |  |
+
+Table 10.4A.4.2-3: Margin for UE Rx-Tx time difference measurement accuracy in FR1
+
+| Min(receive SL-PRS BW, transmit SL-PRS BW) (PRB) |  |  | Margin  (Tc) |
+| --- | --- | --- | --- |
+| SCS = 15 kHz | SCS = 30 kHz | SCS = 60 kHz |  |
+| ≥ 48 | ≥ 24 | N/A | 80 |
+| ≥ 96 | ≥ 48 | ≥ 24 | 56 |
+
+### 10.4A.5 SL PRS-RSRPP measurements
+
+#### 10.4A.5.1 Measurement Report Mapping
+
+##### 10.4A.5.1.1 Absolute SL PRS-RSRPP Measurement Report Mapping
+
+The reporting range of absolute SL PRS-RSRPP measurement is defined from -156 dBm to -31 dBm with 1 dB resolution.
+
+The mapping of measured quantity is defined in table 10.4A.5.1.1-1. The range in the signalling may be larger than the guaranteed accuracy range.
+
+Table 10.4A.5.1.1-1: Measurement report mapping for SL PRS-RSRPP
+
+| Reported value | Measured quantity value | Unit |
+| --- | --- | --- |
+| SL_PRS-RSRPP_0 | SL_PRS-RSRPP<-156 | dBm |
+| SL_PRS-RSRPP_1 | -156≤SL_PRS-RSRPP<-155 | dBm |
+| SL_PRS-RSRPP_2 | -155≤SL_PRS-RSRPP<-154 | dBm |
+| SL_PRS-RSRPP_3 | -154≤SL_PRS-RSRPP<-153 | dBm |
+| SL_PRS-RSRPP_4 | -153≤SL_PRS-RSRPP<-152 | dBm |
+| SL_PRS-RSRPP_5 | -152≤SL_PRS-RSRPP<-151 | dBm |
+| SL_PRS-RSRPP_6 | -151≤SL_PRS-RSRPP<-150 | dBm |
+| SL_PRS-RSRPP_7 | -150≤SL_PRS-RSRPP<-149 | dBm |
+| SL_PRS-RSRPP_8 | -149≤SL_PRS-RSRPP<-148 | dBm |
+| SL_PRS-RSRPP_9 | -148≤SL_PRS-RSRPP<-147 | dBm |
+| SL_PRS-RSRPP_10 | -147≤SL_PRS-RSRPP<-146 | dBm |
+| SL_PRS-RSRPP_11 | -146≤SL_PRS-RSRPP<-145 | dBm |
+| SL_PRS-RSRPP_12 | -145≤SL_PRS-RSRPP<-144 | dBm |
+| SL_PRS-RSRPP_13 | -144≤SL_PRS-RSRPP<-143 | dBm |
+| SL_PRS-RSRPP_14 | -143≤SL_PRS-RSRPP<-142 | dBm |
+| SL_PRS-RSRPP_15 | -142≤SL_PRS-RSRPP<-141 | dBm |
+| SL_PRS-RSRPP_16 | -141≤SL_PRS-RSRPP<-140 | dBm |
+| SL_PRS-RSRPP_17 | -140≤SL_PRS-RSRPP<-139 | dBm |
+| SL_PRS-RSRPP_18 | -139≤SL_PRS-RSRPP<-138 | dBm |
+| … | … | … |
+| SL_PRS-RSRPP_111 | -46≤SL_PRS-RSRPP<-45 | dBm |
+| SL_PRS-RSRPP_112 | -45≤SL_PRS-RSRPP<-44 | dBm |
+| SL_PRS-RSRPP_113 | -44≤SL_PRS-RSRPP<-43 | dBm |
+| SL_PRS-RSRPP_114 | -43≤SL_PRS-RSRPP<-42 | dBm |
+| SL_PRS-RSRPP_115 | -42≤SL_PRS-RSRPP<-41 | dBm |
+| SL_PRS-RSRPP_116 | -41≤SL_PRS-RSRPP<-40 | dBm |
+| SL_PRS-RSRPP_117 | -40≤SL_PRS-RSRPP<-39 | dBm |
+| SL_PRS-RSRPP_118 | -39≤SL_PRS-RSRPP<-38 | dBm |
+| SL_PRS-RSRPP_119 | -38≤SL_PRS-RSRPP<-37 | dBm |
+| SL_PRS-RSRPP_120 | -37≤SL_PRS-RSRPP<-36 | dBm |
+| SL_PRS-RSRPP_121 | -36≤SL_PRS-RSRPP<-35 | dBm |
+| SL_PRS-RSRPP_122 | -35≤SL_PRS-RSRPP<-34 | dBm |
+| SL_PRS-RSRPP_123 | -34≤SL_PRS-RSRPP<-33 | dBm |
+| SL_PRS-RSRPP_124 | -33≤SL_PRS-RSRPP<-32 | dBm |
+| SL_PRS-RSRPP_125 | -32≤SL_PRS-RSRPP<-31 | dBm |
+| SL_PRS-RSRPP_126 | -31≤SL_PRS-RSRPP | dBm |
+
+#### 10.4A.5.2 Measurement Accuracy
+
+##### 10.4A.5.2.1 Introduction
+
+The requirements in clause 10.4A.5.2 shall apply provided the UE has received SL-TDOA-RequestLocationInformation or SL-AOA-RequestLocationInformation or SL-TOA-RequestLocationInformation or SL-RTT-RequestLocationInformation from LMF or another UE via SLPP requesting the UE to measure and report SL PRS-RSRPP measurements defined in TS 38.215 [4].
+
+The requirements in clause 10.4A.5.2 apply for the first path SL PRSRSRPP measurement.
+
+##### 10.4A.5.2.2 Measurement Accuracy Requirements
+
+###### 10.4A.5.2.2.2 Absolute SL PRS-RSRPP accuracy
+
+The absolute accuracy requirements for SL PRS-RSRPP measurement for FR1 defined in table 10.4A.5.2.2.2-1 are valid under the following conditions:
+
+- Conditions defined in 38.101-1 [18] clause 7.3E for reference sensitivity are fulfilled.
+
+- PRP 1,2|dBm according to annex B.4A.1 for a corresponding Band.
+
+NOTE 1: The requriements in this clause are derived based on two-tap channel defined in TS 38.101-4 [21] annex B.2.4 (a = 1, τd=0.45 µs and fD=5 Hz).
+
+NOTE 2: The requirements in this clause are derived based on the difference between the estimated SL PRSRSRPP compared to the ideal SL PRSRSRPP defined as
+
+$$ RSRPP_{p}\propto  \left | \sum  _{k}H_{k}\operatorname {exp}\left (\left ( j2\pi  D_{p}\frac {k}{N_{IFFT}}\right ) \right )\right | ^{2}$$
+
+where:
+
+$ H_{k}$ is the effective channel frequency response (over REs occupied by SL-PRS) measured without receiver noise.
+
+$ D_{p}$ is the exact delay of the p-th path in the channel model.
+
+Table 10.4A.5.2.2.2-1: SL PRS-RSRPP absolute accuracy for FR1
+
+| Accuracy |  | Conditions |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Normal condition | Extreme condition | PRS Ês/Iot | PRS SCS | PRS BW Note 2 | PRS sample | operating band group Note 5 | Io Note 4 range |  |
+|  |  |  |  |  |  |  | Minimum Io Note 1 | Maximum Io |
+| dB | dB | dB | kHz | PRB | - |  | dBm / SCSPRS | dBm/BWChannel |
+| ±4.8 | ±9.3 | ≥-3 | 15 | 48 | ≥4 | NR_TDD_FR1_B | -123.5 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_C | -123 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_G | -121 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_J | -119.5 | -50 |
+| ±4.7 | ±9.2 |  |  | > 48 | ≥1 | Note 3 |  |  |
+| ±4.5 | ±9.0 |  |  | ≥ 96 | ≥1 | Note 3 |  |  |
+| ±4.7 | ±9.2 |  | 30 | ≥ 24 | ≥4 | NR_TDD_FR1_B | -120.5 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_C | -120 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_G | -118 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_J | -116.5 | -50 |
+| ±4.8 | ±9.3 |  |  | > 48 | ≥1 | Note 3 |  |  |
+| ±4.8 | ±9.3 |  | 60 | ≥ 24 | ≥4 | NR_TDD_FR1_B | -117.5 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_C | -117 | -50 |
+|  |  |  |  |  |  | NR_FDD_FR1_G | -115 | -50 |
+|  |  |  |  |  |  | NR_TDD_FR1_J | -113.5 | -50 |
+| NOTE 1: This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2: SL PRS bandwidth is as indicated in sl-PRS-BW in the SL-PRS-AssistanceData defined in TS 38.355 [37].NOTE 3: The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the SL PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 4: The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 5: NR V2X operating band groups are as defined in Section 3.5.2. |  |  |  |  |  |  |  |  |
+
+### 10.4A.6 SL AoA measurements
+
+#### 10.4A.6.1 Measurement Report Mapping
+
+##### 10.4A.6.1.1 Absolute SL AoA Measurement Report Mapping
+
+The UE shall report A-AoA measurement results based on measurement report mapping in this clause. The UE shall report Z-AoA measurement results based on measurement report mapping in this clause.
+
+The reporting range of SL AoA, as defined in TS 38.215 [4], is defined from -180 degree to +180 degree for A-AoA. The reporting resolution is 0.1 degree. The mapping of A-AoA measured quantity is defined in table 10.4A.6.1.1-1.
+
+Table 10.4A.6.1.1-1: A-AoA measurement report mapping
+
+| Reported value | Measured quantity value (A-AoA) | Unit |
+| --- | --- | --- |
+| A-AoA_0 | -180 ≤ A-AoA < -179.9 | Degree |
+| A-AoA_1 | -179.9 ≤ A-AoA < -179.8 | Degree |
+| A-AoA_2 | -179.8 ≤ A-AoA < -179.7 | Degree |
+| … | … | … |
+| A-AoA_1798 | -0.2 ≤ A-AoA < -0.1 | Degree |
+| A-AoA_1799 | -0.1 ≤ A-AoA < 0 | Degree |
+| A-AoA_1800 | 0 ≤ A-AoA < 0.1 | Degree |
+| A-AoA_1801 | 0.1 ≤ A-AoA < 0.2 | Degree |
+| A-AoA_1802 | 0.2 ≤ A-AoA < 0.3 | Degree |
+| … | … | … |
+| A-AoA_3598 | 179.8 ≤ A-AoA < 179.9 | Degree |
+| A-AoA_3599 | 179.9 ≤ A-AoA < 180 | Degree |
+
+The reporting range of SL AoA, as defined in TS 38.215 [4], is defined from 0 degree to +180 degree for Z-AoA. The reporting resolution is 0.1 degree. The reporting resolution is 0.1 degree. The mapping of Z-AoA measured quantity is defined in table 10.4A.6.1.1-2.
+
+Table 10.4A.6.1.1-2: Z-AoA measurement report mapping
+
+| Reported value | Measured quantity value (Z-AoA) | Unit |
+| --- | --- | --- |
+| Z-AoA_0 | 0 ≤ Z-AoA < 0.1 | degree |
+| Z-AoA _1 | 0.1 ≤ Z-AoA < 0.2 | degree |
+| Z-AoA _2 | 0.2 ≤ Z-AoA < 0.3 | degree |
+| … | … | … |
+| Z-AoA _1798 | 179.8 ≤ Z-AoA < 179.9 | degree |
+| Z-AoA _1799 | 179.9 ≤ Z-AoA ≤ 180 | degree |
+
+### 10.4A.7 SL RTOA measurements
+
+#### 10.4A.7.1 Measurement Report Mapping
+
+##### 10.4A.7.1.1 Absolute SL RTOA Measurement Report Mapping
+
+The reporting range of SL RTOA measurement, as defined in clause 5.2.2 of TS 38.215 [4], is defined from -985024Tc to +985024Tc. The reporting resolution is uniform across the reporting range and is defined as T = Tc*2k where
+
+k is selected from the set {02, 3, 4, 5},
+
+Tc is defined in TS 38.211 [6].
+
+The mapping of measured quantity for each reporting resolution (k) is defined in table 10.4A.7.1.1-1 to table 10.4A.7.1.1-4.
+
+Table 10.4A.7.1.1-1: Absolute SL RTOA measurement report mapping for k=2
+
+| Reported Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| SL_RTOA_000000 | -985024 > SL_RTOA | Tc |
+| SL_RTOA_000001 | -985024  SL_RTOA < -985020 | Tc |
+| SL_RTOA_000002 | -985020  SL_RTOA < -985018 | Tc |
+|  |  | … |
+| SL_RTOA_246255 | -8  SL_RTOA < -4 | Tc |
+| SL_RTOA_246256 | -4  SL_RTOA  0 | Tc |
+| SL_RTOA_246257 | 0 < SL_RTOA  4 | Tc |
+| SL_RTOA_246258 | 4 < SL_RTOA  8 | Tc |
+| SL_RTOA_246259 | 8 < SL_RTOA  12 | Tc |
+| … | … | … |
+| SL_RTOA_492512 | 985020 < SL_RTOA  985024 | Tc |
+| SL_RTOA_492513 | 985024 < SL_RTOA | Tc |
+
+Table 10.4A.7.1.1-2: Absolute SL RTOA measurement report mapping for k=3
+
+| Reported Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| SL_RTOA_000000 | -985024 > SL_RTOA | Tc |
+| SL_RTOA_000001 | -985024  SL_RTOA < -985016 | Tc |
+| SL_RTOA_000002 | -985016  SL_RTOA < -985008 | Tc |
+|  |  | … |
+| SL_RTOA_123127 | -16  SL_RTOA < -8 | Tc |
+| SL_RTOA_123128 | -8  SL_RTOA  0 | Tc |
+| SL_RTOA_123129 | 0 < SL_RTOA  8 | Tc |
+| SL_RTOA_123130 | 8 < SL_RTOA  16 | Tc |
+| SL_RTOA_123131 | 16 < SL_RTOA  24 | Tc |
+| … | … | … |
+| SL_RTOA_246256 | 985016 < SL_RTOA  985024 | Tc |
+| SL_RTOA_246257 | 985024 < SL_RTOA | Tc |
+
+Table 10.4A.7.1.1-3: Absolute SL RTOA measurement report mapping for k=4
+
+| Reported Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| SL_RTOA_000000 | -985024 > SL_RTOA | Tc |
+| SL_RTOA_000001 | -985024  SL_RTOA < -985008 | Tc |
+| SL_RTOA_000002 | -985008  SL_RTOA < -984992 | Tc |
+|  |  | … |
+| SL_RTOA_61563 | -32  SL_RTOA < -16 | Tc |
+| SL_RTOA_61564 | -16  SL_RTOA  0 | Tc |
+| SL_RTOA_61565 | 0 < SL_RTOA  16 | Tc |
+| SL_RTOA_61566 | 16 < SL_RTOA  32 | Tc |
+| SL_RTOA_61567 | 32 < SL_RTOA  48 | Tc |
+| … | … | … |
+| SL_RTOA_123128 | 985008 < SL_RTOA  985024 | Tc |
+| SL_RTOA_123129 | 985024 < SL_RTOA | Tc |
+
+Table 10.4A.7.1.1-4: Absolute SL RTOA measurement report mapping for k=5
+
+| Reported Value | Measured Quantity Value | Unit |
+| --- | --- | --- |
+| SL_RTOA_00000 | -985024 > SL_RTOA | Tc |
+| SL_RTOA_00001 | -985024  SL_RTOA < -984992 | Tc |
+| SL_RTOA_00002 | -984992  SL_RTOA < -984960 | Tc |
+|  |  | … |
+| SL_RTOA_30781 | -64  SL_RTOA < -32 | Tc |
+| SL_RTOA_30782 | -32  SL_RTOA  0 | Tc |
+| SL_RTOA_30783 | 0 < SL_RTOA  32 | Tc |
+| SL_RTOA_30784 | 32 < SL_RTOA  64 | Tc |
+| SL_RTOA_30785 | 64 < SL_RTOA  96 | Tc |
+| … | … | … |
+| SL_RTOA_61564 | 984992 < SL_RTOA  985024 | Tc |
+| SL_RTOA_61565 | 985024 < SL_RTOA | Tc |
+
+# 11 Void

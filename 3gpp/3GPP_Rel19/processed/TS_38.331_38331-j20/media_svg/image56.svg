@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.2" width="152.1mm" height="166.9mm" viewBox="-401.0 -528.0 15207.0 16693.0" preserveAspectRatio="xMidYMid" fill-rule="evenodd" stroke-width="28.222" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" xmlns:ooo="http://xml.openoffice.org/svg/export" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:presentation="http://sun.com/xmlns/staroffice/presentation" xmlns:smil="http://www.w3.org/2001/SMIL20/" xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xml:space="preserve">
+ <defs class="ClipPathGroup">
+  <clipPath id="presentation_clip_path" clipPathUnits="userSpaceOnUse">
+   <rect x="0" y="0" width="21590" height="27940"/>
+  </clipPath>
+  <clipPath id="presentation_clip_path_shrink" clipPathUnits="userSpaceOnUse">
+   <rect x="21" y="27" width="21547" height="27885"/>
+  </clipPath>
+ </defs>
+ <defs>
+  <font id="EmbeddedFont_1" horiz-adv-x="2048">
+   <font-face font-family="Arial embedded" units-per-em="2048" font-weight="bold" font-style="normal" ascent="1852" descent="423"/>
+   <missing-glyph horiz-adv-x="2048" d="M 0,0 L 2047,0 2047,2047 0,2047 0,0 Z"/>
+   <glyph unicode="U" horiz-adv-x="1165" d="M 147,1466 L 443,1466 443,672 C 443,546 447,464 454,427 467,367 497,319 545,283 592,246 657,228 740,228 824,228 887,245 930,280 973,314 998,356 1007,406 1016,456 1020,539 1020,655 L 1020,1466 1316,1466 1316,696 C 1316,520 1308,396 1292,323 1276,250 1247,189 1204,139 1161,89 1103,49 1031,20 959,-10 865,-25 749,-25 609,-25 503,-9 431,24 358,56 301,98 259,150 217,201 189,255 176,312 157,396 147,520 147,684 L 147,1466 Z"/>
+   <glyph unicode="E" horiz-adv-x="1111" d="M 149,0 L 149,1466 1236,1466 1236,1218 445,1218 445,893 1181,893 1181,646 445,646 445,247 1264,247 1264,0 149,0 Z"/>
+  </font>
+ </defs>
+ <defs>
+  <font id="EmbeddedFont_2" horiz-adv-x="2048">
+   <font-face font-family="Times embedded" units-per-em="2048" font-weight="normal" font-style="italic" ascent="1402" descent="635"/>
+   <missing-glyph horiz-adv-x="2048" d="M 0,0 L 2047,0 2047,2047 0,2047 0,0 Z"/>
+   <glyph unicode="y" horiz-adv-x="918" d="M 31,819 C 55,825 72,827 94,827 178,827 217,795 258,684 313,532 420,94 420,16 420,-16 406,-49 377,-88 319,-164 272,-221 248,-248 205,-293 182,-309 156,-309 141,-309 129,-303 107,-287 76,-262 55,-252 31,-252 -14,-252 -49,-287 -49,-332 -49,-385 -6,-422 55,-422 186,-422 453,-117 676,291 815,543 872,690 872,791 872,852 821,903 760,903 713,903 680,872 680,827 680,795 696,774 737,748 776,725 791,707 791,678 791,596 717,438 541,147 L 500,385 C 469,567 354,903 324,903 L 315,903 C 311,901 305,901 297,901 281,899 205,887 96,866 86,864 59,858 31,854 L 31,819 Z"/>
+   <glyph unicode="u" horiz-adv-x="884" d="M 944,240 C 836,104 807,78 774,78 760,78 752,90 752,113 752,125 752,125 791,272 L 952,885 801,885 C 690,582 668,530 575,385 453,190 352,86 287,86 260,86 244,107 244,137 244,143 244,150 246,156 L 432,899 426,903 C 307,875 231,862 119,848 L 119,819 C 201,817 201,817 221,807 231,803 242,784 242,770 242,752 231,702 213,633 L 137,342 C 98,190 86,127 86,90 86,14 123,-23 195,-23 340,-23 449,88 684,483 623,262 592,125 592,80 592,16 629,-18 690,-18 786,-18 831,20 973,221 L 944,240 Z"/>
+   <glyph unicode="t" horiz-adv-x="530" d="M 606,877 L 442,877 500,1087 C 502,1092 502,1096 502,1100 502,1112 498,1118 485,1118 473,1118 467,1116 455,1100 375,997 248,893 182,875 131,858 117,846 117,823 117,821 117,817 119,811 L 270,811 123,248 C 119,229 117,221 111,205 90,137 76,74 76,53 76,10 119,-23 174,-23 268,-23 336,35 465,225 L 438,240 C 338,111 305,78 272,78 254,78 242,92 242,119 242,121 242,121 244,129 L 424,811 596,811 606,877 Z"/>
+   <glyph unicode="r" horiz-adv-x="750" d="M 248,0 C 354,350 389,434 483,592 553,707 608,770 643,770 657,770 666,762 676,741 692,707 709,696 750,696 811,696 844,733 844,799 844,860 805,903 748,903 700,903 645,872 592,817 508,729 426,610 393,528 L 365,455 473,899 467,903 C 317,877 299,872 150,848 L 150,813 C 195,821 203,823 219,823 264,823 291,803 291,766 291,737 291,737 258,598 L 92,0 248,0 Z"/>
+   <glyph unicode="q" horiz-adv-x="936" d="M 801,-391 L 764,-391 C 690,-391 647,-371 649,-332 649,-326 651,-317 653,-309 L 989,872 840,872 809,776 C 776,870 735,903 651,903 381,903 51,526 51,215 51,70 131,-23 260,-23 406,-23 500,51 682,313 L 500,-287 C 473,-369 440,-387 307,-395 L 307,-428 801,-428 801,-391 Z M 657,858 C 725,858 778,803 778,735 778,563 639,272 500,156 446,111 391,86 342,86 270,86 227,147 227,244 227,395 334,621 467,758 530,821 598,858 657,858 Z"/>
+   <glyph unicode="p" horiz-adv-x="1110" d="M 115,825 L 162,827 C 207,829 248,803 248,770 248,745 176,461 102,190 55,16 14,-137 -16,-266 -37,-360 -66,-385 -154,-387 L -154,-420 266,-420 266,-389 C 170,-389 135,-373 135,-328 135,-299 170,-143 211,12 262,-14 299,-23 346,-23 645,-23 961,319 961,647 961,807 870,903 725,903 592,903 494,838 375,670 L 434,877 C 436,887 438,893 438,893 438,899 434,903 428,903 L 426,903 111,858 115,825 Z M 649,815 C 737,811 776,758 776,641 776,502 717,328 629,201 543,78 444,16 338,16 281,16 240,47 240,92 240,162 311,428 373,582 428,721 547,821 649,815 Z"/>
+   <glyph unicode="o" horiz-adv-x="900" d="M 666,903 C 578,903 498,881 414,836 203,717 55,481 55,264 55,86 170,-23 356,-23 492,-23 623,37 741,156 877,289 958,461 958,616 958,786 840,903 666,903 Z M 641,860 C 729,860 786,784 786,668 786,516 721,313 629,180 553,72 475,20 387,20 291,20 227,94 227,207 227,358 287,539 387,684 467,801 553,860 641,860 Z"/>
+   <glyph unicode="n" horiz-adv-x="939" d="M 942,240 C 831,100 807,78 774,78 756,78 741,92 741,111 741,127 750,166 770,240 L 887,662 C 897,705 905,750 905,778 905,854 850,903 770,903 639,903 510,778 299,453 L 436,899 430,903 C 322,881 276,872 98,840 L 98,807 C 203,805 229,793 229,752 229,739 227,727 225,717 L 29,0 182,0 C 279,324 297,369 387,508 510,696 614,799 690,799 721,799 739,776 739,739 739,715 727,647 711,584 L 621,246 C 594,139 588,113 588,92 588,14 616,-18 684,-18 776,-18 827,23 971,213 L 942,240 Z"/>
+   <glyph unicode="m" horiz-adv-x="1412" d="M 1411,240 C 1403,229 1393,219 1384,207 1350,166 1331,143 1329,141 1284,92 1264,78 1235,78 1219,78 1210,88 1210,111 1210,119 1219,154 1231,203 L 1370,717 C 1372,727 1376,760 1376,774 1376,848 1325,903 1257,903 1217,903 1176,889 1126,858 1026,793 942,694 801,469 854,629 883,741 883,780 883,854 836,903 766,903 641,903 498,768 309,471 L 428,899 422,903 C 311,881 268,872 94,840 L 94,807 C 188,805 188,805 207,795 217,791 225,776 225,762 225,737 176,549 104,293 59,137 51,104 25,0 L 178,0 C 276,324 307,401 377,508 494,684 614,797 684,797 711,797 725,778 725,745 725,719 664,477 582,188 565,129 557,100 530,0 L 684,0 C 766,319 807,424 911,567 1012,707 1114,797 1174,797 1196,797 1214,778 1214,754 1214,743 1210,723 1200,682 L 1081,211 C 1061,131 1055,96 1055,76 1055,14 1083,-18 1137,-18 1233,-18 1323,49 1432,201 L 1442,215 1411,240 Z"/>
+   <glyph unicode="l" horiz-adv-x="487" d="M 467,252 C 334,82 317,66 272,66 252,66 242,78 242,102 242,119 248,145 258,182 260,190 262,197 262,199 L 262,203 571,1389 561,1399 C 438,1370 360,1358 242,1343 L 242,1311 C 340,1311 381,1298 381,1264 381,1255 379,1243 375,1227 L 92,145 C 86,125 84,107 84,92 84,16 119,-23 184,-23 291,-23 360,35 494,233 L 467,252 Z"/>
+   <glyph unicode="k" horiz-adv-x="913" d="M 848,223 C 774,96 762,84 725,84 682,84 639,152 559,348 549,375 518,449 483,528 786,797 846,838 944,844 L 944,877 569,877 569,844 C 657,842 682,834 682,807 682,766 580,668 389,520 358,498 330,475 301,453 L 547,1389 537,1399 C 412,1370 334,1358 217,1343 L 217,1311 C 317,1313 354,1298 356,1260 352,1225 338,1169 311,1075 303,1047 297,1024 293,1008 L 289,989 29,0 182,0 281,369 367,434 C 399,344 453,217 489,145 555,16 592,-23 651,-23 733,-23 784,29 879,201 L 848,223 Z"/>
+   <glyph unicode="i" horiz-adv-x="440" d="M 455,233 C 403,166 391,150 371,129 336,94 305,74 287,74 270,74 254,88 254,104 254,125 260,158 274,195 L 285,231 287,236 287,240 467,899 461,903 C 252,864 213,858 133,852 L 133,819 C 244,817 262,811 262,770 262,754 256,719 244,680 L 145,317 C 113,195 100,135 100,94 100,18 133,-23 195,-23 291,-23 365,39 481,211 L 455,233 Z M 438,1339 C 383,1339 342,1294 342,1231 342,1165 381,1122 440,1122 494,1122 541,1169 541,1227 541,1286 494,1339 438,1339 Z"/>
+   <glyph unicode="f" horiz-adv-x="1165" d="M 72,811 L 256,811 76,-49 C 31,-268 -37,-381 -123,-381 -147,-381 -164,-367 -164,-348 -164,-340 -162,-336 -156,-326 -147,-313 -145,-305 -145,-293 -145,-250 -182,-215 -225,-215 -268,-215 -301,-252 -301,-299 -301,-371 -231,-424 -139,-424 43,-424 184,-223 270,156 L 418,811 641,811 653,877 432,877 C 492,1200 567,1343 682,1343 711,1343 727,1333 727,1317 727,1313 725,1307 719,1298 709,1282 707,1272 707,1255 707,1206 737,1174 782,1174 829,1174 868,1210 868,1255 868,1333 793,1389 690,1389 592,1389 512,1343 438,1249 377,1167 336,1073 274,877 L 86,877 72,811 Z"/>
+   <glyph unicode="e" horiz-adv-x="778" d="M 733,223 C 586,102 522,70 432,70 317,70 242,143 242,256 242,287 246,315 262,381 L 319,389 C 627,432 844,588 844,764 844,850 782,903 680,903 385,903 63,567 63,258 63,92 174,-23 334,-23 479,-23 637,61 758,199 L 733,223 Z M 311,516 C 381,698 532,856 637,856 680,856 709,825 709,776 709,713 670,639 606,578 530,506 453,469 276,426 L 311,516 Z"/>
+   <glyph unicode="d" horiz-adv-x="1045" d="M 948,227 C 836,98 815,82 780,82 760,82 743,98 743,123 743,156 807,397 877,627 924,791 965,940 1079,1389 L 1069,1399 C 963,1376 889,1366 756,1352 L 756,1317 C 868,1313 883,1307 883,1264 883,1235 881,1229 852,1120 L 762,784 C 745,870 709,903 629,903 363,903 31,518 31,211 31,66 113,-23 246,-23 385,-23 475,43 614,248 592,143 588,113 588,66 588,10 623,-27 674,-27 760,-27 868,57 973,207 L 948,227 Z M 637,856 C 698,852 729,813 729,739 729,428 516,76 328,76 256,76 209,129 209,211 209,379 311,619 446,762 504,821 580,860 637,856 Z"/>
+   <glyph unicode="b" horiz-adv-x="919" d="M 225,1317 C 348,1313 358,1307 358,1262 358,1243 354,1221 340,1174 336,1161 332,1147 330,1135 L 326,1120 47,94 47,86 C 47,39 203,-23 319,-23 629,-23 969,334 969,657 969,801 868,903 731,903 588,903 481,819 336,594 440,977 457,1034 549,1389 L 539,1399 C 434,1380 375,1370 225,1352 L 225,1317 Z M 651,803 C 741,803 795,735 795,627 795,492 692,272 569,145 494,68 406,25 317,25 254,25 223,47 223,94 223,217 285,414 371,567 461,725 553,803 651,803 Z"/>
+   <glyph unicode="a" horiz-adv-x="937" d="M 950,225 L 893,168 C 827,102 805,84 786,84 770,84 758,96 758,111 758,152 844,504 940,854 946,875 948,879 952,897 L 938,903 813,889 807,883 784,784 C 768,860 709,903 621,903 348,903 35,530 35,205 35,61 113,-23 244,-23 387,-23 475,45 655,299 612,131 608,115 608,63 608,4 633,-20 690,-20 772,-20 821,18 975,205 L 950,225 Z M 633,858 C 702,854 748,805 748,733 748,561 643,319 504,168 455,113 385,78 326,78 252,78 207,135 207,229 207,344 283,551 373,680 455,799 549,864 633,858 Z"/>
+   <glyph unicode="U" horiz-adv-x="1353" d="M 1567,1337 L 1159,1337 1159,1305 C 1268,1294 1305,1272 1305,1210 1305,1178 1251,973 1153,623 L 1126,522 C 1036,186 905,47 680,47 510,47 393,143 393,289 393,360 451,582 604,1118 645,1260 678,1288 819,1305 L 819,1337 260,1337 260,1305 C 397,1292 420,1280 420,1221 420,1196 414,1163 406,1128 L 297,735 C 236,512 209,385 209,299 209,104 395,-37 655,-37 924,-37 1094,109 1184,416 L 1354,999 C 1432,1266 1440,1276 1567,1305 L 1567,1337 Z"/>
+   <glyph unicode="S" horiz-adv-x="1002" d="M 958,958 L 1040,1366 993,1366 C 965,1323 946,1313 901,1313 875,1313 850,1319 807,1335 764,1354 696,1364 633,1364 420,1364 268,1223 268,1022 268,911 299,852 422,721 432,713 467,674 502,635 535,600 565,567 582,549 678,449 705,395 705,307 705,154 592,35 440,35 268,35 141,180 141,381 141,395 141,403 145,422 L 104,426 35,-31 72,-31 C 86,16 109,37 150,37 172,37 203,29 256,10 350,-25 406,-37 469,-37 705,-37 883,139 883,373 883,506 838,584 651,772 467,958 449,987 449,1087 449,1217 535,1296 672,1296 752,1296 813,1270 856,1221 901,1169 918,1102 922,965 L 958,958 Z"/>
+   <glyph unicode="I" horiz-adv-x="801" d="M -16,0 L 483,0 483,33 C 367,47 344,59 344,117 344,158 348,178 367,246 L 619,1153 C 655,1272 670,1284 786,1305 L 786,1337 281,1337 281,1305 C 401,1288 424,1274 424,1217 424,1186 418,1145 401,1090 L 150,184 C 113,66 98,53 -16,33 L -16,0 Z"/>
+   <glyph unicode="E" horiz-adv-x="1296" d="M 1298,1337 L 281,1337 281,1305 C 408,1292 438,1276 438,1221 438,1196 426,1128 416,1090 L 164,184 C 129,68 113,53 -2,33 L -2,0 1036,0 1163,332 1131,348 C 1034,215 981,164 893,123 817,88 678,68 522,68 408,68 360,88 360,137 360,162 385,258 434,436 L 500,672 C 532,670 563,668 596,668 L 690,666 C 748,664 797,653 811,641 829,627 834,612 834,571 834,535 829,510 819,465 L 860,455 999,930 963,938 C 885,764 864,750 680,743 655,743 590,741 518,739 L 653,1217 C 666,1264 686,1270 805,1270 1124,1270 1196,1243 1196,1120 1196,1094 1194,1063 1192,1028 L 1235,1024 1298,1337 Z"/>
+   <glyph unicode="C" horiz-adv-x="1271" d="M 1335,952 L 1411,1360 1368,1360 C 1352,1327 1331,1315 1290,1315 1272,1315 1249,1319 1206,1329 1116,1352 1034,1364 967,1364 528,1364 135,954 135,498 135,184 356,-37 670,-37 881,-37 1044,51 1229,268 L 1194,297 C 1010,117 891,55 723,55 496,55 365,209 365,475 365,719 463,967 623,1133 721,1233 850,1290 985,1290 1174,1290 1278,1180 1298,958 L 1335,952 Z"/>
+  </font>
+ </defs>
+ <defs class="TextShapeIndex">
+  <g ooo:slide="id1" ooo:id-list="id3"/>
+ </defs>
+ <defs class="EmbeddedBulletChars">
+  <g id="bullet-char-template-57356" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 580,1141 L 1163,571 580,0 -4,571 580,1141 Z"/>
+  </g>
+  <g id="bullet-char-template-57354" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 8,1128 L 1137,1128 1137,0 8,0 8,1128 Z"/>
+  </g>
+  <g id="bullet-char-template-10146" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 174,0 L 602,739 174,1481 1456,739 174,0 Z M 1358,739 L 309,1346 659,739 1358,739 Z"/>
+  </g>
+  <g id="bullet-char-template-10132" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 2015,739 L 1276,0 717,0 1260,543 174,543 174,936 1260,936 717,1481 1274,1481 2015,739 Z"/>
+  </g>
+  <g id="bullet-char-template-10007" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 0,-2 C -7,14 -16,27 -25,37 L 356,567 C 262,823 215,952 215,954 215,979 228,992 255,992 264,992 276,990 289,987 310,991 331,999 354,1012 L 381,999 492,748 772,1049 836,1024 860,1049 C 881,1039 901,1025 922,1006 886,937 835,863 770,784 769,783 710,716 594,584 L 774,223 C 774,196 753,168 711,139 L 727,119 C 717,90 699,76 672,76 641,76 570,178 457,381 L 164,-76 C 142,-110 111,-127 72,-127 30,-127 9,-110 8,-76 1,-67 -2,-52 -2,-32 -2,-23 -1,-13 0,-2 Z"/>
+  </g>
+  <g id="bullet-char-template-10004" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 285,-33 C 182,-33 111,30 74,156 52,228 41,333 41,471 41,549 55,616 82,672 116,743 169,778 240,778 293,778 328,747 346,684 L 369,508 C 377,444 397,411 428,410 L 1163,1116 C 1174,1127 1196,1133 1229,1133 1271,1133 1292,1118 1292,1087 L 1292,965 C 1292,929 1282,901 1262,881 L 442,47 C 390,-6 338,-33 285,-33 Z"/>
+  </g>
+  <g id="bullet-char-template-9679" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 813,0 C 632,0 489,54 383,161 276,268 223,411 223,592 223,773 276,916 383,1023 489,1130 632,1184 813,1184 992,1184 1136,1130 1245,1023 1353,916 1407,772 1407,592 1407,412 1353,268 1245,161 1136,54 992,0 813,0 Z"/>
+  </g>
+  <g id="bullet-char-template-8226" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 346,457 C 273,457 209,483 155,535 101,586 74,649 74,723 74,796 101,859 155,911 209,963 273,989 346,989 419,989 480,963 531,910 582,859 608,796 608,723 608,648 583,586 532,535 482,483 420,457 346,457 Z"/>
+  </g>
+  <g id="bullet-char-template-8211" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M -4,459 L 1135,459 1135,606 -4,606 -4,459 Z"/>
+  </g>
+  <g id="bullet-char-template-61548" transform="scale(0.00048828125,-0.00048828125)">
+   <path d="M 173,740 C 173,903 231,1043 346,1159 462,1274 601,1332 765,1332 928,1332 1067,1274 1183,1159 1299,1043 1357,903 1357,740 1357,577 1299,437 1183,322 1067,206 928,148 765,148 601,148 462,206 346,322 231,437 173,577 173,740 Z"/>
+  </g>
+ </defs>
+ <g>
+  <g id="id2" class="Master_Slide">
+   <g id="bg-id2" class="Background"/>
+   <g id="bo-id2" class="BackgroundObjects"/>
+  </g>
+ </g>
+ <g class="SlideGroup">
+  <g>
+   <g id="container-id1">
+    <g id="id1" class="Slide" clip-path="url(#presentation_clip_path)">
+     <g class="Page">
+      <g class="Graphic">
+       <g id="id3">
+        <rect class="BoundingBox" stroke="none" fill="none" x="6883" y="12154" width="7823" height="3632"/>
+        <defs>
+         <clipPath id="clip_path_1" clipPathUnits="userSpaceOnUse">
+          <path d="M 6883,12154 L 14705,12154 14705,15785 6883,15785 6883,12154 Z"/>
+         </clipPath>
+        </defs>
+        <g clip-path="url(#clip_path_1)"/>
+        <defs>
+         <clipPath id="clip_path_2" clipPathUnits="userSpaceOnUse">
+          <path d="M 6883,12154 L 14705,12154 14705,15785 6883,15785 6883,12154 Z"/>
+         </clipPath>
+        </defs>
+        <g clip-path="url(#clip_path_2)">
+         <path fill="rgb(255,255,255)" stroke="none" d="M 6883,12154 L 6908,12154 6908,12179 6883,12179 6883,12154 Z"/>
+         <path fill="rgb(255,255,255)" stroke="none" d="M 14681,15761 L 14706,15761 14706,15786 14681,15786 14681,15761 Z"/>
+        </g>
+        <g clip-path="url(#clip_path_1)"/>
+        <defs>
+         <clipPath id="clip_path_3" clipPathUnits="userSpaceOnUse">
+          <path d="M 7391,12814 L 7947,12814 7947,15783 7391,15783 7391,12814 Z"/>
+         </clipPath>
+        </defs>
+        <g clip-path="url(#clip_path_3)">
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="25" stroke-linejoin="round" stroke-linecap="round" d="M 8229,11976 L 7670,11976 7670,16065 7112,16065"/>
+        </g>
+        <g clip-path="url(#clip_path_1)"/>
+        <defs>
+         <clipPath id="clip_path_4" clipPathUnits="userSpaceOnUse">
+          <path d="M 13614,12814 L 14170,12814 14170,15783 13614,15783 13614,12814 Z"/>
+         </clipPath>
+        </defs>
+        <g clip-path="url(#clip_path_4)">
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="25" stroke-linejoin="round" stroke-linecap="round" d="M 14452,11976 L 13893,11976 13893,16065 13334,16065"/>
+        </g>
+        <g clip-path="url(#clip_path_1)"/>
+        <defs>
+         <clipPath id="clip_path_5" clipPathUnits="userSpaceOnUse">
+          <path d="M 6883,12154 L 14705,12154 14705,15785 6883,15785 6883,12154 Z"/>
+         </clipPath>
+        </defs>
+        <g clip-path="url(#clip_path_5)">
+         <path fill="rgb(255,255,255)" stroke="none" d="M 7353,12268 L 7988,12268 7988,12802 7353,12802 7353,12268 Z"/>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="25" stroke-linejoin="round" stroke-linecap="round" d="M 7353,12268 L 7988,12268 7988,12802 7353,12802 7353,12268 Z"/>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="7424" y="12662"><tspan font-family="Arial, sans-serif" font-size="356px" font-weight="700" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">U</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="7681" y="12662"><tspan font-family="Arial, sans-serif" font-size="356px" font-weight="700" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">E</tspan></tspan></tspan></text>
+         <path fill="rgb(255,255,255)" stroke="none" d="M 13576,12268 L 14211,12268 14211,12802 13576,12802 13576,12268 Z"/>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="25" stroke-linejoin="round" stroke-linecap="round" d="M 13576,12268 L 14211,12268 14211,12802 13576,12802 13576,12268 Z"/>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13647" y="12662"><tspan font-family="Arial, sans-serif" font-size="356px" font-weight="700" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">U</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13903" y="12662"><tspan font-family="Arial, sans-serif" font-size="356px" font-weight="700" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">E</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8496" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">U</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8770" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">E</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9004" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">C</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9258" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">a</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9448" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">p</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9639" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">a</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9829" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">b</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10020" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">i</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10126" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">l</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10233" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">i</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10337" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">t</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10444" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">y</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10612" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">E</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10845" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">n</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11036" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">q</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11226" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">u</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11417" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">i</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11523" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">r</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11671" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">y</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11841" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">S</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12031" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">i</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12136" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">d</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12326" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">e</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12496" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">l</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12603" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">i</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12707" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">n</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12898" y="13907"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">k</tspan></tspan></tspan></text>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="25" stroke-linejoin="round" stroke-linecap="round" d="M 7683,14046 L 13596,14046"/>
+        </g>
+        <g clip-path="url(#clip_path_1)"/>
+        <defs>
+         <clipPath id="clip_path_6" clipPathUnits="userSpaceOnUse">
+          <path d="M 13596,13894 L 13878,13894 13878,14196 13596,14196 13596,13894 Z M 13599,13896 L 13599,14196 13878,14196 13878,13896 13599,13896 Z"/>
+         </clipPath>
+        </defs>
+        <g clip-path="url(#clip_path_6)">
+         <path fill="rgb(0,0,0)" stroke="none" d="M 13596,13894 L 13881,13894 13881,14199 13596,14199 13596,13894 Z"/>
+        </g>
+        <g clip-path="url(#clip_path_1)"/>
+        <defs>
+         <clipPath id="clip_path_7" clipPathUnits="userSpaceOnUse">
+          <path d="M 6883,12154 L 14705,12154 14705,15785 6883,15785 6883,12154 Z"/>
+         </clipPath>
+        </defs>
+        <g clip-path="url(#clip_path_7)">
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8199" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">U</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8476" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">E</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8707" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">C</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8961" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">a</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9151" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">p</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9342" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">a</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9532" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">b</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9723" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">i</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9829" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">l</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="9936" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">i</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10040" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">t</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10147" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">y</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10317" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">I</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10444" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">n</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10634" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">f</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10739" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">o</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="10929" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">r</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11079" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">m</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11353" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">a</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11544" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">t</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11650" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">i</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11755" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">o</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11945" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">n</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12136" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">S</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12326" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">i</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12433" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">d</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12623" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">e</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12793" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">l</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12898" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">i</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13004" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">n</tspan></tspan></tspan></text>
+         <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="13195" y="14795"><tspan font-family="Times, serif" font-size="381px" font-style="italic" font-weight="400" fill="rgb(0,0,0)" stroke="none" style="white-space: pre">k</tspan></tspan></tspan></text>
+         <path fill="none" stroke="rgb(0,0,0)" stroke-width="25" stroke-linejoin="round" stroke-linecap="round" d="M 7968,14935 L 13881,14935"/>
+        </g>
+        <g clip-path="url(#clip_path_1)"/>
+        <defs>
+         <clipPath id="clip_path_8" clipPathUnits="userSpaceOnUse">
+          <path d="M 7683,14783 L 7965,14783 7965,15085 7683,15085 7683,14783 Z M 7683,14785 L 7683,15085 7965,15085 7965,14785 7683,14785 Z"/>
+         </clipPath>
+        </defs>
+        <g clip-path="url(#clip_path_8)">
+         <path fill="rgb(0,0,0)" stroke="none" d="M 7968,14783 L 7683,14783 7683,15088 7968,15088 7968,14783 Z"/>
+        </g>
+        <g clip-path="url(#clip_path_1)"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,5935 @@
+# A.8 E-UTRA standalone tests for NR RRM
+
+Editor notes: All NR RRM tests under E-UTRA standalone operations are included in this annex. All EN-DC related NR RRM tests are in A.4 and A.5.
+
+## A.8.1 Void
+
+## A.8.2 RRC_IDLE state mobility
+
+### A.8.2.1 Inter-RAT NR Cell re-selection
+
+#### A.8.2.1.1 E-UTRA Cell reselection to higher priority NR target Cell in FR1
+
+##### A.8.2.1.1.1 Test Purpose and Environment
+
+This test is to verify the requirement for the E-UTRAN to NR inter-RAT cell reselection requirements specified in clause 4.2.2.5.6 in TS 36.133 [15].
+
+The test scenario comprises of 1 E-UTRA cell and 1 NR cell as given in tables A.8.2.1.1.1-1, A.8.2.1.1.1-2, A.8.2.1.1.1-3 and A.8.2.1.1.1-4. The test consists of three successive time periods, with time duration of T1, T2, and T3 respectively. E-UTRA cell 1 is already identified by the UE prior to the start of the test. Cell 2 is of higher priority than cell 1.
+
+Table A.8.2.1.1.1-1: Supported test configurations
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations |  |
+
+Table A.8.2.1.1.1-2: General test parameters for E-UTRA cell re-selection FR1 NR cell test case
+
+| Parameter |  | Unit | Test configuration | Value | Comment |
+| --- | --- | --- | --- | --- | --- |
+| Initial condition | Active cell |  | 1, 2, 3, 4, 5, 6 | Cell 2 | The UE camps on cell 2 in the initial phase |
+|  | Neighbour cell |  | 1, 2, 3, 4, 5, 6 | Cell 1 |  |
+| T1 end condition | Active cell |  |  | Cell 1 | During T1 period the UE reselects to cell 1 |
+|  | Neighbour cell |  |  | Cell 2 |  |
+| T3 end condition | Active cell |  | 1, 2, 3, 4, 5, 6 | Cell 2 | The UE shall perform reselection to cell 2 during T3 |
+|  | Neighbour cell |  | 1, 2, 3, 4, 5, 6 | Cell 1 |  |
+| RF Channel Number |  |  | 1, 2, 3, 4, 5, 6 | 1, 2 | E-UTRAN radio channel (1) and NR radio channel (2) are used for this test |
+| Time offset between cells |  |  | 1, 4 | 3 ms | Asynchronous cells |
+|  |  |  | 2, 5 | 3 s | Synchronous cells |
+|  |  |  | 3, 6 | 3 s | Synchronous cells |
+| Access Barring Information |  | - | 1, 2, 3, 4, 5, 6 | Not Sent | No additional delays in random access procedure. |
+| DRX cycle length |  | s | 1, 2, 3, 4, 5, 6 | 1.28 | The value shall be used for all cells in the test. |
+| NR PRACH configuration index |  |  | 1, 2, 3, 4, 5, 6 | 102 | The detailed configuration is specified in TS 38.211 clause 6.3.3.2 |
+| T1 |  | s | 1, 2, 3, 4, 5, 6 | 15 | T1 needs to be defined so that cell re-selection reaction time is taken into account. |
+| T2 |  | s | 1, 2, 3, 4, 5, 6 | >7 | During T2, cell 2 shall be powered off, and during the off time the physical cell identity shall be changed. The intention is to ensure that cell 2 has not been detected by the UE prior to the start of period T3. |
+| T3 |  | s | 1, 2, 3, 4, 5, 6 | 75 | T3 needs to be defined so that cell re-selection reaction time is taken into account. |
+
+Table A.8.2.1.1.1-3: Cell specific test parameters for NR cell 2
+
+| Parameter | Unit | Test configuration | Cell 2 |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 | T3 |
+| TDD configuration |  | 1, 4 | N/A |  |  |
+|  |  | 2, 5 | TDDConf.1.1 |  |  |
+|  |  | 3, 6 | TDDConf.2.1 |  |  |
+| PDSCH Reference measurement channel |  | 1, 4 | SR.1.1 FDD |  |  |
+|  |  | 2, 5 | SR.1.1 TDD |  |  |
+|  |  | 3, 6 | SR.2.1 TDD |  |  |
+| RMSI CORESET Reference Channel |  | 1, 4 | CR.1.1 FDD |  |  |
+|  |  | 2, 5 | CR.1.1 TDD |  |  |
+|  |  | 3, 6 | CR.2.1 TDD |  |  |
+| RMC CORESET Reference Channel |  | 1, 4 | CCR.1.1 FDD |  |  |
+|  |  | 2, 5 | CCR.1.1 TDD |  |  |
+|  |  | 3, 6 | CCR.2.1 TDD |  |  |
+| OCNG Patterns |  | 1, 2, 3, 4, 5, 6 | OP.1 |  |  |
+| SMTC configuration |  | 1, 2, 3, 4, 5, 6 | SMTC.1 |  |  |
+| SSB configuration |  | 1, 4 | SSB.1 FR1 |  |  |
+|  |  | 2, 5 | SSB.1 FR1 |  |  |
+|  |  | 3, 6 | SSB.2 FR1 |  |  |
+| Initial DL BWP configuration |  | 1, 2, 3, 4, 5, 6 | DLBWP.0.1 |  |  |
+| Initial UL BWP configuration |  | 1, 2, 3, 4, 5, 6 | ULBWP.0.1 |  |  |
+| RLM-RS |  | 1, 2, 3, 4, 5, 6 | SSB |  |  |
+| Qrxlevmin | dBm/SCS | 1, 2, 4, 5 | -140 |  |  |
+|  |  | 3, 6 | -137 |  |  |
+| Pcompensation | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| Qhysts | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| Qoffsets, n | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| Cell_selection_and_reselection_quality_measurement |  | 1, 2, 3, 4, 5, 6 | SS-RSRP |  |  |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 1, 4 | -4 | -infinity | 12 |
+|  |  | 2, 5 |  |  |  |
+|  |  | 3, 6 |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | dBm/SCS | 1, 4 | -98 |  |  |
+|  |  | 2, 5 | -98 |  |  |
+|  |  | 3, 6 | -95 |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | dBm/15 kHz | 1, 4 | -98 |  |  |
+|  |  | 2, 5 |  |  |  |
+|  |  | 3, 6 |  |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 1, 4 | -4 | -infinity | 12 |
+|  |  | 2, 5 |  |  |  |
+|  |  | 3, 6 |  |  |  |
+| SS-RSRP Note3 | dBm/SCS | 1, 4 | -102 | -infinity | -86 |
+|  |  | 2, 5 | -102 | -infinity | -86 |
+|  |  | 3, 6 | -99 | -infinity | -83 |
+| Io | dBm/9.36 MHz | 1, 4 | -68.60 | -70.05 | -57.78 |
+|  | dBm/9.36 MHz | 2, 5 | -68.60 | -70.05 | -57.78 |
+|  | dBm/38.16 MHz | 3, 6 | -62.50 | -63.95 | -51.69 |
+| Treselection | s | 1, 2, 3, 4, 5, 6 | 0 | 0 | 0 |
+| SnonintrasearchP | dB | 1, 2, 3, 4, 5, 6 | 50 |  |  |
+| Threshx, highP | dB | 1, 2, 3, 4, 5, 6 | 48 |  |  |
+| Threshserving, lowP | dB | 1, 2, 3, 4, 5, 6 | 44 |  |  |
+| Threshx, lowP | dB | 1, 2, 3, 4, 5, 6 | 50 |  |  |
+| Propagation Condition |  | 1, 2, 3, 4, 5, 6 | AWGN |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |  |  |
+
+Table A.8.2.1.1.1-4: Cell specific test parameters for E-UTRA cell 1
+
+| Parameter | Unit | Cell 1 |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 |
+| E-UTRA RF Channel number |  | 1 |  |  |
+| BWchannel | MHz | 10 |  |  |
+| OCNG Patterns defined in TS 36.133 [15] clause A.3.2 |  | OP.2 TDD for test configuration 1, 2, 3;OP.2 FDD for test configuration 4, 5, 6 |  |  |
+| PBCH_RA | dB | 0 |  |  |
+| PBCH_RB | dB |  |  |  |
+| PSS_RA | dB |  |  |  |
+| SSS_RA | dB |  |  |  |
+| PCFICH_RB | dB |  |  |  |
+| PHICH_RA | dB |  |  |  |
+| PHICH_RB | dB |  |  |  |
+| PDCCH_RA | dB |  |  |  |
+| PDCCH_RB | dB |  |  |  |
+| PDSCH_RA | dB |  |  |  |
+| PDSCH_RB | dB |  |  |  |
+| OCNG_RANote 1 | dB |  |  |  |
+| OCNG_RBNote 1 | dB |  |  |  |
+| Qrxlevmin | dBm | -140 |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2 | dBm/15 kHz | -98 |  |  |
+| RSRP Note 3 | dBm/15 KHz | -84 | -84 | -84 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 14 | 14 | 14 |
+| ![](media_svg/image4.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 14 | 14 | 14 |
+| TreselectionEUTRAN | s | 0 |  |  |
+| SnonintrasearchP | dB | 50 |  |  |
+| Threshx, highP | dB | 48 |  |  |
+| Threshserving, lowP | dB | 44 |  |  |
+| Threshx, lowP | dB | 50 |  |  |
+| Propagation Condition |  | AWGN |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |  |
+
+##### A.8.2.1.1.2 Test Requirements
+
+The cell reselection delay to a higher priority NR cell is defined as the time from the beginning of time period T3, to the moment when the UE camps on cell 2, and starts to send preambles on the PRACH for sending the RRCSetupRequest message to perform a Registration procedure for mobility and periodic registration updateon cell 2.
+
+The cell re-selection delay to a higher priority cell shall be less than 68 s.
+
+The rate of correct cell reselections observed during repeated tests shall be at least 90 %.
+
+NOTE: The cell re-selection delay to a higher priority cell can be expressed as: Thigher_priority_search + Tevaluate, NR + TSI-NR, and to a lower priority cell can be expressed as: Tevaluate, EUTRAN+ TSI-EUTRA,
+
+Where:
+
+Thigher_priority_search See clause 4.2.2 in TS 36.133[15]
+
+Tevaluate, NR See Table 4.2.2.5.6-1 in clause 4.2.2.5.6 in TS 36.133[15]
+
+TSI-NR Maximum repetition period of relevant system info blocks that needs to be received by the UE to camp on a cell; 1280 ms is assumed in this test case.
+
+Tevaluate, EUTRAN See Table 4.2.2.5-1 in clause 4.2.2.5
+
+TSI-EUTRA Maximum repetition period of relevant system info blocks that needs to be received by the UE to camp on a cell; 1280 ms is assumed in this test case.
+
+This gives a total of 67.68 s, allow 68 s for the cell re-selection delay to a higher priority NR cell and 7.68 s for the cell re-selection delay to a lower priority cell in the test case, which we allow 8 s.
+
+#### A.8.2.1.2 E-UTRA Cell reselection to lower priority NR target Cell in FR1 for UE configured with highSpeedInterRAT-NR-r16
+
+##### A.8.2.1.2.1 Test Purpose and Environment
+
+This test is to verify the requirement for the E-UTRAN to NR inter-RAT cell reselection requirements specified in clause 4.2.2.5.6 in 36.133 [15].
+
+The test scenario comprises of 1 E-UTRA cell and 1 NR cell as given in tables A.8.2.1.2.1-1, A.8.2.1.2.1-2, A.8.2.1.2.1-3 and A.8.2.1.2.1-4. In SIB of the E-UTRA cell, highSpeedInterRAT-NR-r16 is configured and the carrier of NR cell is configured with highSpeedCarrierNR-r16. The test consists of two time periods, with time duration of T1 and T2 respectively. Both E-UTRA cell 1 and NR cell 2 are already identified by the UE prior to the start of the test. NR cell 2 is of lower priority than E-UTRA cell 1.
+
+Table A.8.2.1.2.1-1: Supported test configurations for UE configured with highSpeedInterRAT-NR-r16
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE:  The UE is only required to be tested in one of the supported test configurations |  |
+
+Table A.8.2.1.2.1-2: General test parameters in E-UTRA cell re-selection FR1 NR cell test case for UE configured with highSpeedInterRAT-NR-r16
+
+| Parameter |  | Unit | Test configuration | Value | Comment |
+| --- | --- | --- | --- | --- | --- |
+| Initial condition | Active cell |  | 1, 2, 3, 4, 5, 6 | Cell 1 | The UE camps on cell 1 in the initial phase |
+| T1 end condition | Active cell |  | 1, 2, 3, 4, 5, 6 | Cell 2 | The UE shall perform reselection to cell 2 during T1 |
+|  | Neighbour cells |  | 1, 2, 3, 4, 5, 6 | Cell 1 |  |
+| T2 end condition | Active cell |  | 1, 2, 3, 4, 5, 6 | Cell 1 | The UE shall perform reselection to cell 1 during T2 for iteration of the tests. |
+|  | Neighbour cells |  | 1, 2, 3, 4, 5, 6 | Cell 2 |  |
+| RF Channel Number |  |  | 1, 2, 3, 4, 5, 6 | 1, 2 | E-UTRAN radio channel (1) and NR radio channel (2) are used for this test |
+| Time offset between cells |  |  | 1, 4 | 3 ms | Asynchronous cells |
+|  |  |  | 2, 5 | 3 s | Synchronous cells |
+|  |  |  | 3, 6 | 3 s | Synchronous cells |
+| Access Barring Information |  | - | 1, 2, 3, 4, 5, 6 | Not Sent | No additional delays in random access procedure. |
+| DRX cycle length |  | s | 1, 2, 3, 4, 5, 6 | 0.32 | The value shall be used for all cells in the test. |
+| NR PRACH configuration index |  |  | 1, 2, 3, 4, 5, 6 | 102 | The detailed configuration is specified in TS 38.211 clause 6.3.3.2 |
+| T1 |  | s | 1, 2, 3, 4, 5, 6 | 15 | T1 needs to be defined so that cell re-selection reaction time is taken into account. |
+| T2 |  | s | 1, 2, 3, 4, 5, 6 | 75 | T2 needs to be defined so that cell re-selection reaction time is taken into account. |
+
+Table A.8.2.1.2.1-3: Cell specific test parameters for NR cell 2 in E-UTRA cell re-selection FR1 NR cell test case for UE configured with highSpeedInterRAT-NR-r16
+
+| Parameter | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| TDD configuration |  | 1, 4 | N/A |  |
+|  |  | 2, 5 | TDDConf.1.1 |  |
+|  |  | 3, 6 | TDDConf.2.1 |  |
+| PDSCH Reference measurement channel |  | 1, 4 | SR.1.1 FDD |  |
+|  |  | 2, 5 | SR.1.1 TDD |  |
+|  |  | 3, 6 | SR.2.1 TDD |  |
+| RMSI CORESET Reference Channel |  | 1, 4 | CR.1.1 FDD |  |
+|  |  | 2, 5 | CR.1.1 TDD |  |
+|  |  | 3, 6 | CR.2.1 TDD |  |
+| RMC CORESET Reference Channel |  | 1, 4 | CCR.1.1 FDD |  |
+|  |  | 2, 5 | CCR.1.1 TDD |  |
+|  |  | 3, 6 | CCR.2.1 TDD |  |
+| OCNG Patterns |  | 1, 2, 3, 4, 5, 6 | OP.1 |  |
+| SMTC configuration |  | 1, 2, 3, 4, 5, 6 | SMTC.1 |  |
+| SSB configuration |  | 1, 4 | SSB.1 FR1 |  |
+|  |  | 2, 5 | SSB.1 FR1 |  |
+|  |  | 3, 6 | SSB.2 FR1 |  |
+| Initial DL BWP configuration |  | 1, 2, 3, 4, 5, 6 | DLBWP.0.1 |  |
+| Initial UL BWP configuration |  | 1, 2, 3, 4, 5, 6 | ULBWP.0.1 |  |
+| RLM-RS |  | 1, 2, 3, 4, 5, 6 | SSB |  |
+| Qrxlevmin | dBm/SCS | 1, 2, 4, 5 | -140 |  |
+|  |  | 3, 6 | -137 |  |
+| Pcompensation | dB | 1, 2, 3, 4, 5, 6 | 0 |  |
+| Qhysts | dB | 1, 2, 3, 4, 5, 6 | 0 |  |
+| Qoffsets, n | dB | 1, 2, 3, 4, 5, 6 | 0 |  |
+| Cell_selection_and_reselection_quality_measurement |  | 1, 2, 3, 4, 5, 6 | SS-RSRP |  |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 1, 4 | 14 | 14 |
+|  |  | 2, 5 |  |  |
+|  |  | 3, 6 |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | dBm/SCS | 1, 4 | -98 |  |
+|  |  | 2, 5 | -98 |  |
+|  |  | 3, 6 | -95 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | dBm/15 kHz | 1, 4 | -98 |  |
+|  |  | 2, 5 |  |  |
+|  |  | 3, 6 |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 1, 4 | 14 | 14 |
+|  |  | 2, 5 |  |  |
+|  |  | 3, 6 |  |  |
+| SS-RSRP Note3 | dBm/SCS | 1, 4 | -84 | -84 |
+|  |  | 2, 5 | -84 | -84 |
+|  |  | 3, 6 | -81 | -81 |
+| Io | dBm/9.36 MHz | 1, 4 | -55.88 | -55.88 |
+|  | dBm/9.36 MHz | 2, 5 | -55.88 | -55.88 |
+|  | dBm/38.16 MHz | 3, 6 | -47.79 | -47.79 |
+| Treselection | s | 1, 2, 3, 4, 5, 6 | 0 |  |
+| Snonintrasearch | dB | 1, 2, 3, 4, 5, 6 | Not sent |  |
+| Threshx, high | dB | 1, 2, 3, 4, 5, 6 | 48 |  |
+| Threshserving, low | dB | 1, 2, 3, 4, 5, 6 | 44 |  |
+| Threshx, low | dB | 1, 2, 3, 4, 5, 6 | 50 |  |
+| Propagation Condition |  | 1, 2,  4, 5 | AWGN 1944 Hz Note 4 |  |
+|  |  | 3,6 | AWGN 3334 Hz Note 5 |  |
+| NOTE 1:  OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:  Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3:  SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: The AWGN 1944 Hz condition is a non fading propagation channel with one tap. Doppler shift is a constant 1944 Hz.NOTE 5: The AWGN 3334 Hz condition is a non fading propagation channel with one tap. Doppler shift is a constant 3334 Hz. |  |  |  |  |
+
+Table A.8.2.1.2.1-4: Cell specific test parameters for E-UTRA cell 1 in E-UTRA cell re-selection FR1 NR cell test case for UE configured with highSpeedInterRAT-NR-r16
+
+| Parameter | Unit | Cell 1 |  |
+| --- | --- | --- | --- |
+|  |  | T1 | T2 |
+| E-UTRA RF Channel number |  | 1 |  |
+| BWchannel | MHz | 10 |  |
+| OCNG Patterns defined in TS 36.133 clause A.3.2 |  | OP.2 TDD for test configuration 1, 2, 3;OP.2 FDD for test configuration 4, 5, 6 |  |
+| PBCH_RA | dB | 0 |  |
+| PBCH_RB | dB |  |  |
+| PSS_RA | dB |  |  |
+| SSS_RA | dB |  |  |
+| PCFICH_RB | dB |  |  |
+| PHICH_RA | dB |  |  |
+| PHICH_RB | dB |  |  |
+| PDCCH_RA | dB |  |  |
+| PDCCH_RB | dB |  |  |
+| PDSCH_RA | dB |  |  |
+| PDSCH_RB | dB |  |  |
+| OCNG_RANote 1 | dB |  |  |
+| OCNG_RBNote 1 | dB |  |  |
+| Qrxlevmin | dBm | -140 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2 | dBm/15 kHz | -98 |  |
+| RSRP Note 3 | dBm/15 KHz | -102 | -86 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | -4 | 12 |
+| ![](media_svg/image4.svg) [公式≈: ^{Ê}s^{N}oc] | dB | -4 | 12 |
+| TreselectionEUTRAN | s | 0 |  |
+| Snonintrasearch | dB | 50 |  |
+| Threshx, high | dB | 48 |  |
+| Threshserving, low | dB | 44 |  |
+| Threshx, low | dB | 50 |  |
+| Propagation Condition |  | AWGN |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: Void. |  |  |  |
+
+##### A.8.2.1.2.2 Test Requirements
+
+The cell reselection delay to a lower priority NR cell is defined as the time from the beginning of time period T1, to the moment when the UE camps on cell 2, and starts to send preambles on the PRACH for sending the RRC CONNECTION REQUEST message to perform a Tracking Area Update procedure on cell 2.
+
+The cell re-selection delay to a lower priority cell shall be less than 3 s.
+
+The rate of correct cell reselections observed during repeated tests shall be at least 90 %.
+
+NOTE: The cell re-selection delay to a lower priority cell can be expressed as: Tevaluate, NR_HST + TSI-NR,
+
+Where:
+
+Tevaluate, NR_HST See Table 4.2.2.5.6-2 in clause 4.2.2.5.6 in [15]
+
+TSI-NR Maximum repetition period of relevant system info blocks that needs to be received by the UE to camp on a cell; 1280 ms is assumed in this test case.
+
+This gives a total of 2.24 s, allow 3 s for the cell re-selection delay to a lower priority NR cell.
+
+### A.8.2.2 E-UTRA – NR Inter-RAT Early Measruement Reporting
+
+#### A.8.2.2.1 E-UTRA – NR Early Measurement Reporting for NR in FR1
+
+##### A.8.2.2.1.1 Test Purpose and Environment
+
+This test is to verify the requirement for the E-UTRAN to NR inter-RAT Idle mode DC measurement requirements specified in clause 4.9.2.4 in TS 36.133 [15]. This test is also to verify the accuracy requirement for the E-UTRAN to NR inter-RAT Idle mode DC measurement requirements specified in clause 9.11.1A and 9.11.2A in TS 36.133 [15]. Supported test configurations are shown in table A.8.2.2.1.1-1.
+
+Table A.8.2.2.1.1-1: Supported test configurations
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations |  |
+
+The test scenario comprises of 1 E-UTRA cell (Cell 1) and 1 NR cell (Cell 2). The the test parameters and applicability for the E-UTRAN cell are defined in table A.8.2.2.1.1-4. The general test parameters and the cell specific test parameters for the NR cell are specified in table A.8.2.2.1.1-2 and table A.8.2.2.1.1-3, respectively.
+
+The test consists of three successive time periods, with time duration of T1, T2, and T3 respectively. Prior to the start of the time duration T1, the UE shall be connected to Cell 1. During T1, Cell 2 shall be powered off. At the end of T1, the RRC connection to Cell 1 is released and UE is configured Idle mode DC measurement on the carrier frequency of Cell 2. Time duration T2 starts when the RRC connection is released, and during the T2 UE is in Idle mode. Cell 2 shall be powered on from the beginning of T2. At beginning of T3 the UE is paged for connection setup and requested by the network to send idle mode measurements.
+
+Table A.8.2.2.1.1-2: General test parameters
+
+| Parameter | Unit | Test | Value | Comment |
+| --- | --- | --- | --- | --- |
+|  |  | configuration |  |  |
+| Active cell |  | 1, 2, 3, 4, 5, 6 | E-UTRAN Cell 1 |  |
+| Neighbour cell |  | 1, 2, 3, 4, 5, 6 | NR Cell 2 | Cell 2 is of higher priority. |
+| RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1: Cell 12: Cell 2 |  |
+| DRX cycle length | s | 1, 2, 3, 4, 5, 6 | 1.28 |  |
+| Time offset between Cell 1 and Cell 2 |  | 1, 2, 3, 4, 5, 6 | 3 s |  |
+| T1 | s | 1, 2, 3, 4, 5, 6 | 0.5 |  |
+| T2 | s | 1, 2, 3, 4, 5, 6 | 71 |  |
+| T3 | s | 1, 2, 3, 4, 5, 6 | 2 |  |
+| T331 | s | 1, 2, 3, 4, 5, 6 | 300 |  |
+
+Table A.8.2.2.1.1-3: Cell specific test parameters for NR cell 2
+
+| Parameter | Unit | Test configuration | Cell 2 |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 | T3 |
+| TDD configuration |  | 1, 4 | N/A |  |  |
+|  |  | 2, 5 | TDDConf.1.1 |  |  |
+|  |  | 3, 6 | TDDConf.2.1 |  |  |
+| PDSCH Reference measurement channel |  | 1, 4 | SR.1.1 FDD |  |  |
+|  |  | 2, 5 | SR.1.1 TDD |  |  |
+|  |  | 3, 6 | SR.2.1 TDD |  |  |
+| RMSI CORESET Reference Channel |  | 1, 4 | CR.1.1 FDD |  |  |
+|  |  | 2, 5 | CR.1.1 TDD |  |  |
+|  |  | 3, 6 | CR.2.1 TDD |  |  |
+| RMC CORESET Reference Channel |  | 1, 4 | CCR.1.1 FDD |  |  |
+|  |  | 2, 5 | CCR.1.1 TDD |  |  |
+|  |  | 3, 6 | CCR.2.1 TDD |  |  |
+| OCNG Patterns |  | 1, 2, 3, 4, 5, 6 | OP.1 |  |  |
+| SMTC configuration |  | 1, 2, 3, 4, 5, 6 | SMTC.1 |  |  |
+| SSB configuration |  | 1, 4 | SSB.1 FR1 |  |  |
+|  |  | 2, 5 | SSB.1 FR1 |  |  |
+|  |  | 3, 6 | SSB.2 FR1 |  |  |
+| Initial DL BWP configuration |  | 1, 2, 3, 4, 5, 6 | DLBWP.0.1 |  |  |
+| Initial UL BWP configuration |  | 1, 2, 3, 4, 5, 6 | ULBWP.0.1 |  |  |
+| Qrxlevmin | dBm/SCS | 1, 2, 4, 5 | -140 |  |  |
+|  |  | 3, 6 | -137 |  |  |
+| Pcompensation | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| Qhysts | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| Qoffsets, n | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| Cell_selection_and_reselection_quality_measurement |  | 1, 2, 3, 4, 5, 6 | SS-RSRP |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | dBm/SCS | 1, 4 | -98 |  |  |
+|  |  | 2, 5 | -98 |  |  |
+|  |  | 3, 6 | -95 |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | dBm/15 kHz | 1, 4 | -98 |  |  |
+|  |  | 2, 5 |  |  |  |
+|  |  | 3, 6 |  |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 1, 2, 3, 4, 5, 6 | -infinity | -4 | -4 |
+| $\frac {Ê_{s}}{I_{ot}}$ | dB | 1, 2, 3, 4, 5, 6 | -infinity | -4 | -4 |
+| SS-RSRP Note3 | dBm/SCS | 1, 4 | -infinity | -102 | -102 |
+|  |  | 2, 5 | -infinity | -102 | -102 |
+|  |  | 3, 6 | -infinity | -99 | -99 |
+| SS-RSRQ Note3 | dB | 1, 4 | -infinity | -16.25 | -16.25 |
+|  |  | 2, 5 | -infinity | -16.25 | -16.25 |
+|  |  | 3, 6 | -infinity | -16.25 | -16.25 |
+| Io | dBm/9.36 MHz | 1, 4 | -70.05 | -68.60 | -68.60 |
+|  | dBm/9.36 MHz | 2, 5 | -70.05 | -68.60 | -68.60 |
+|  | dBm/38.16 MHz | 3, 6 | -63.96 | -62.50 | -62.50 |
+| Propagation Condition |  | 1, 2, 3, 4, 5, 6 | AWGN |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |  |  |
+
+Table A.8.2.2.1.1-4: Cell specific test parameters for E-UTRA cell 1
+
+| Parameter | Unit | Cell 1 |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 |
+| E-UTRA RF Channel number |  | 1 |  |  |
+| BWchannel | MHz | 10 |  |  |
+| OCNG Patterns defined in TS 36.133 [15] clause A.3.2 |  | OP.2 TDD for test configuration 1, 2, 3;OP.2 FDD for test configuration 4, 5, 6 |  |  |
+| PBCH_RA | dB | 0 |  |  |
+| PBCH_RB | dB |  |  |  |
+| PSS_RA | dB |  |  |  |
+| SSS_RA | dB |  |  |  |
+| PCFICH_RB | dB |  |  |  |
+| PHICH_RA | dB |  |  |  |
+| PHICH_RB | dB |  |  |  |
+| PDCCH_RA | dB |  |  |  |
+| PDCCH_RB | dB |  |  |  |
+| PDSCH_RA | dB |  |  |  |
+| PDSCH_RB | dB |  |  |  |
+| OCNG_RANote 1 | dB |  |  |  |
+| OCNG_RBNote 1 | dB |  |  |  |
+| Qrxlevmin | dBm | -140 |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2 | dBm/15 kHz | -98 |  |  |
+| RSRP Note 3 | dBm/15 KHz | -84 | -84 | -84 |
+| RSRQ Note 3 | dB | -10.96 | -10.96 | -10.96 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 14 | 14 | 14 |
+| ![](media_svg/image4.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 14 | 14 | 14 |
+| TreselectionEUTRAN | s | 0 |  |  |
+| SnonintrasearchP | dB | 50 |  |  |
+| Threshx, highP | dB | 48 |  |  |
+| Threshserving, lowP | dB | 44 |  |  |
+| Threshx, lowP | dB | 50 |  |  |
+| beamMeasConfigIdle |  | True |  |  |
+| Propagation Condition |  | AWGN |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |  |
+
+##### A.8.2.2.1.2 Test Requirements
+
+At the beginning of the time-period T2 the connection is released, and UE enters idle mode. During the time period T2 the UE is in Idle mode and Cell 2 is active. The UE shall not perform reselection. The UE shall perform Idle Mode DC measurement according to clause 4.9.2.4 in TS 36.133 [15]. UE shall be able to detect, acqure the SSB index and measure the SS-RSRP and SS-RSRQ from Cell 2 for Idle mode DC measurement during T2.
+
+NOTE: The Idle mode DC measurement period for the test setup can be expressed as: Thigher_priority_search + TSSB_index,NR + Tevaluate, NR.
+
+Where:
+
+Thigher_priority_search See clause 4.2.2 in TS 36.133[15]
+
+TSSB_index,NR See Table 4.9.2.4-1 in clause 4.9.2.4 in TS 36.133[15]
+
+Tevaluate, NR See Table 4.2.2.5.6-1 in clause 4.2.2.5.6 in TS 36.133[15]
+
+This gives a total of 70.24 s, allow 71 s for the T2.
+
+At the start of T3 the UE is paged for connection setup. During the connection setup the UE is requested to transmit early measurement report. The UE shall send early measurement report to the PCell.
+
+After receiving the requested early measurement report, the test equipment verifies the accuracy of measurement reported for serving Cell 1 and Cell 2 meets the requirements in section 9.1.2B in TS 36.133[15] and section 9.1.3B, respectively and test ends.
+
+The rate of correct events observed during repeated tests shall be at least 90 %.
+
+#### A.8.2.2.2 E-UTRA – NR Early Measurement Reporting for NR in FR2
+
+##### A.8.2.2.2.1 Test Purpose and Environment
+
+This test is to verify the requirement for the E-UTRAN to NR inter-RAT Idle mode DC measurement requirements specified in clause 4.9.2.4 in TS 36.133 [15]. This test is also to verify the accuracy requirement for the E-UTRAN to NR inter-RAT Idle mode DC measurement requirements specified in clause 9.11.1A and 9.11.2A in TS 36.133 [15]. Supported test configurations are shown in table A.8.2.2.2.1-1.
+
+Table A.8.2.2.2.1-1: Supported test configurations
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| 2 | LTE TDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations |  |
+
+The test scenario comprises of 1 E-UTRA cell (Cell 1) and 1 NR cell (Cell 2). The the test parameters and applicability for the E-UTRAN cell are defined in table A.8.2.2.2.1-4. The general test parameters and the cell specific test parameters for the NR cell are speficied in table A.8.2.2.2.1-2 and table A.8.2.2.2.1-3, respectively.
+
+The test consists of three successive time periods, with time duration of T1, T2, and T3 respectively. Prior to the start of the time duration T1, the UE shall be connected to Cell 1. During T1, Cell 2 shall be powered off. At the end of T1, the RRC connection to Cell 1 is released and UE is configured Idle mode DC measurement on the carrier frequency of Cell 2. Time duration T2 starts when the RRC connection is released, and during the T2 UE is in Idle mode. Cell 2 shall be powered on from the beginning of T2. At beginning of T3 the UE is paged for connection setup and requested by the network to send idle mode measurements.
+
+Table A.8.2.2.2.1-2: General test parameters
+
+| Parameter | Unit | Test | Value | Comment |
+| --- | --- | --- | --- | --- |
+|  |  | configuration |  |  |
+| Active cell |  | 1, 2 | E-UTRAN Cell 1 | E-UTRA cell 1 is on E-UTRA RF channel number 1 as defined in clause A.3.7.2.2. |
+| Neighbour cell |  | 1, 2 | NR Cell 2 | Cell 2 is of higher priority. |
+| E-UTRA RF Channel Number |  | 1, 2 | 1 | One E-UTRA carrier frequency is used. |
+| NR RF Channel Number |  | 1, 2 | 1 | One FR2 NR carrier frequency is used. |
+| DRX cycle length | s | 1, 2 | 1.28 |  |
+| Time offset between Cell 1 and Cell 2 |  | 1, 2 | 3 s |  |
+| T1 | s | 1, 2 | 0.5 |  |
+| T2 | s | 1, 2 | 128 |  |
+| T3 | s | 1, 2 | 2 |  |
+| T331 | s | 1, 2 | 300 |  |
+
+Table A.8.2.2.2.1-3: Cell specific test parameters for NR cell 2
+
+| Parameter | Unit | Test configuration | Cell 2 |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 | T3 |
+| TDD configuration |  | 1, 2 | TDDConf.3.1 |  |  |
+| PDSCH Reference measurement channel |  | 1, 2 | SR.3.1 TDD |  |  |
+| RMSI CORESET Reference Channel |  | 1, 2 | CR.3.1 TDD |  |  |
+| RMC CORESET Reference Channel |  | 1, 2 | CCR.3.1 TDD |  |  |
+| OCNG Patterns |  | 1, 2 | OP.1 |  |  |
+| BWchannel | MHz | 1, 2 | 100 |  |  |
+| Data PRBs allocated |  | 1, 2 | 66 |  |  |
+| SMTC configuration |  | 1, 2 | SMTC.1 |  |  |
+| SSB configuration |  | 1, 2 | SSB.1 FR2 |  |  |
+| Initial DL BWP configuration |  | 1, 2 | DLBWP.0.1 |  |  |
+| Initial UL BWP configuration |  | 1, 2 | ULBWP.0.1 |  |  |
+| RLM-RS |  |  | SSB |  |  |
+| Qrxlevmin |  |  | -140 |  |  |
+| Pcompensation |  |  | 0 |  |  |
+| Qhysts |  |  | 0 |  |  |
+| Qoffsets, n |  |  | 0 |  |  |
+| Cell_selection_and_reselection_quality_measurement |  |  | SS-RSRP |  |  |
+| AoA setup |  |  | Setup 1 defined in A.3.15.1 |  |  |
+| Beam assumptionNote 4 |  |  | Rough |  |  |
+| $\hat  {E}_{s}/I_{otBB}$ Note 5 | dB | 1, 2 | -infinity | -4.18 | -4.18 |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | dBm/SCS | 1, 2 | -98 |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | dBm/15kHz | 1, 2 | -107 |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 1, 2 | -infinity | -4 | -4 |
+| SS-RSRP Note3 | dBm/SCS | 1, 2 | -infinity | -102 | -102 |
+| SS-RSRQ Note3 | dB | 1, 2 | -infinity | -16.25 | -16.25 |
+| Io | dBm/95.04 MHz | 1, 2 | -69.01 | -67.56 | -67.56 |
+| Propagation Condition |  | 1, 2 | AWGN |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementationNOTE 5: Calculation of Es/IotBB includes the effect of UE internal noise up to the value assumed for the associated Refsens requirement in clause 7.3.2 of TS 38.101-2 [19], and an allowance of 1 dB for UE multi-band relaxation factor ΔMBP from TS 38.101-2 [19] Table 6.2.1.3-4. |  |  |  |  |  |
+
+Table A.8.2.2.2.1-4: Cell specific test parameters for E-UTRA cell 1
+
+| Parameter | Unit | Cell 1 |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 |
+| E-UTRA RF Channel number |  | 1 |  |  |
+| BWchannel | MHz | 10 |  |  |
+| OCNG Patterns defined in TS 36.133 [15] clause A.3.2 |  | OP.2 TDD for test configuration 1, 2, 3;OP.2 FDD for test configuration 4, 5, 6 |  |  |
+| PBCH_RA | dB | 0 |  |  |
+| PBCH_RB | dB |  |  |  |
+| PSS_RA | dB |  |  |  |
+| SSS_RA | dB |  |  |  |
+| PCFICH_RB | dB |  |  |  |
+| PHICH_RA | dB |  |  |  |
+| PHICH_RB | dB |  |  |  |
+| PDCCH_RA | dB |  |  |  |
+| PDCCH_RB | dB |  |  |  |
+| PDSCH_RA | dB |  |  |  |
+| PDSCH_RB | dB |  |  |  |
+| OCNG_RANote 1 | dB |  |  |  |
+| OCNG_RBNote 1 | dB |  |  |  |
+| Qrxlevmin | dBm | -140 |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2 | dBm/15 kHz | -98 |  |  |
+| RSRP Note 3 | dBm/15 KHz | -84 | -84 | -84 |
+| RSRQ Note 3 | dB | -10.96 | -10.96 | -10.96 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 14 | 14 | 14 |
+| ![](media_svg/image4.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 14 | 14 | 14 |
+| TreselectionEUTRAN | s | 0 |  |  |
+| SnonintrasearchP | dB | N/A |  |  |
+| Threshx, highP | dB | 48 |  |  |
+| Threshserving, lowP | dB | 44 |  |  |
+| Threshx, lowP | dB | 50 |  |  |
+| beamMeasConfigIdle |  | False |  |  |
+| Propagation Condition |  | AWGN |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |  |
+
+##### A.8.2.2.2.2 Test Requirements
+
+At the beginning of the time-period T2 the connection is released, and UE enters idle mode. During the time period T2 the UE is in Idle mode and Cell 2 is active. The UE shall not perform reselection. The UE shall perform Idle Mode DC measurement according to clause 4.9.2.4 in TS 36.133 [15]. UE shall be able to detect, acqure the SSB index and measure the SS-RSRP and SS-RSRQ from Cell 2 for Idle mode DC measurement during T2.
+
+NOTE: The Idle mode DC measurement period for the test setup can be expressed as: Tdetect, NR.
+
+Where:
+
+Tdetect, NR See Table 4.2.2.5.6-1 in clause 4.2.2.5.6 in TS 36.133[15]
+
+This gives a total of 128 s, allow 128 s for the T2.
+
+At the start of T3 the UE is paged for connection setup. During the connection setup the UE is requested to transmit early measurement report. The UE shall send early measurement report to the PCell.
+
+After receiving the requested early measurement report, the test equipment verifies the accuracy of measurement reported for serving Cell 1 and Cell 2 meets the requirements in section 9.1.2B in TS 36.133[15] and section 9.1.3B, respectively and test ends.
+
+The rate of correct events observed during repeated tests shall be at least 90 %.
+
+## A.8.3 RRC_CONNECTED state mobility
+
+### A.8.3.1 Handover
+
+#### A.8.3.1.1 E-UTRAN - NR handover in FR1
+
+##### A.8.3.1.1.1 Test Purpose and Environment
+
+This test shall verify the E-UTRAN to NR FR1 handover requirements as specified in clause 6.1.2.1 specified in clause 5.3.4 in TS 36.133 [15].
+
+The test comprises of one E-UTRA carrier and one NR carrier. There are two cells and one cell on each carrier. Cell 1 is the E-UTRAN and Cell 2 is an inter-RAT NR neighbour cell. The test consists of three successive time periods, with time durations of T1, T2 and T3 respectively. At the start of time duration T1, the UE does not have any timing information of Cell 2. Starting T2, Cell 2 becomes detectable and the UE is expected to detect and send a measurement report. Gap pattern configuration with id #0 as specified in table 8.1.2.1-1 of TS 36.133 [15] is configured before T2 begins to enable inter-RAT frequency monitoring.
+
+A RRC message implying handover shall be sent to the UE during period T2 after the UE has reported Event B2. The start of T3 is the instant when the last TTI containing the RRC message implying handover is sent to the UE. The handover message shall contain Cell 2 as the target cell.
+
+Supported test configurations are shown in table A.8.3.1.1-1. General test parameters are provided in table A.8.3.1.1-2. Cell specific test parameters for Cell 1 and Cell 2 are provided in tables A.8.3.1.1-3 and A.8.3.1.1-4 respectively.
+
+Table A.8.3.1.1-1: Supported test configurations for E-UTRAN inter-RAT NR handover
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations |  |
+
+Table A.8.3.1.1-2: General test parameters for E-UTRAN inter-RAT NR handover
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR RF Channel Number |  |  | 1 | 1 NR carrier frequency is used in the test |
+| LTE RF Channel Number |  |  | 2 | 1 E-UTRAN carrier frequency is used in the test |
+| Initial conditions | Active cell |  | Cell 1 | E-UTRAN cell |
+|  | Neighbouring cell |  | Cell 2 | NR cell |
+| Final condition | Active cell |  | Cell 2 |  |
+| NR measurement quantity |  |  | SS-RSRP |  |
+| E-UTRAN measurement quantity |  |  | RSRP |  |
+| b2-Threshold1 |  | dBm | -83 | Absolute E-UTRAN RSRP threshold for event B2 |
+| b2-Threshold2NR |  | dBm | As specified in table A.8.3.1.1-4 | Absolute NR SS-RSRP threshold for event B2 |
+| Hysteresis |  | dB | 0 |  |
+| TimeToTrigger |  | s | 0 |  |
+| Filter coefficient |  |  | 0 | L3 filtering is not used |
+| DRX |  |  | OFF | Non-DRX test |
+| Access Barring Information |  | - | Not sent | No additional delays in random access procedure |
+| Time offset between cells |  |  | 3 ms | Asynchronous cells |
+| Gap pattern configuration Id |  |  | 0 | As specified in table 8.1.2.1-1 started before T2 starts [15] |
+| T1 |  | s | 5 |  |
+| T2 |  | s | 5 |  |
+| T3 |  | s | 1 |  |
+
+Table A.8.3.1.1-3: Cell specific test parameters for E-UTRAN inter-RAT NR handover (Cell 1)
+
+| Parameter | Unit | Configuration | Cell 1 |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 | T3 |
+| RF channel number |  | 1, 2, 3, 4, 5, 6 | 2 |  |  |
+| Duplex mode |  | 1, 2, 3 | FDD |  |  |
+|  |  | 4, 5, 6 | TDD |  |  |
+| TDD special subframe configurationNote1 |  | 4, 5, 6 | 6 |  |  |
+| TDD uplink-downlink configurationNote1 |  | 4, 5, 6 | 1 |  |  |
+| BWchannel | MHz | 1, 2, 3, 4, 5, 6 | 5 MHz: NPRB,c = 2510 MHz: NPRB,c = 5020 MHz: NPRB,c = 100 |  |  |
+| PRACH ConfigurationNote2 |  | 1, 2, 3 | 4 |  |  |
+|  |  | 4, 5, 6 | 53 |  |  |
+| PDSCH parameters:DL Reference Measurement ChannelNote3 |  | 1, 2, 3 | 5 MHz: R.7 FDD10 MHz: R.3 FDD20 MHz: R.6 FDD |  |  |
+|  |  | 4, 5, 6 | 5 MHz: R.4 TDD10 MHz: R.0 TDD20 MHz: R.3 TDD |  |  |
+| PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote3 |  | 1, 2, 3 | 5 MHz: R.11 FDD10 MHz: R.6 FDD20 MHz: R.10 FDD |  |  |
+|  |  | 4, 5, 6 | 5 MHz: R.11 TDD10 MHz: R.6 TDD20 MHz: R.10 TDD |  |  |
+| OCNG PatternsNote3 |  | 1, 2, 3 | 5 MHz: OP.20 FDD10 MHz: OP.10 FDD20 MHz: OP.17 FDD |  |  |
+|  |  | 4, 5, 6 | 5 MHz: OP.9 TDD10 MHz: OP.1 TDD20 MHz: OP.7 TDD |  |  |
+| PBCH_RA | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| PBCH_RB |  |  |  |  |  |
+| PSS_RA |  |  |  |  |  |
+| SSS_RA |  |  |  |  |  |
+| PCFICH_RB |  |  |  |  |  |
+| PHICH_RA |  |  |  |  |  |
+| PHICH_RB |  |  |  |  |  |
+| PDCCH_RA |  |  |  |  |  |
+| PDCCH_RB |  |  |  |  |  |
+| PDSCH_RA |  |  |  |  |  |
+| PDSCH_RB |  |  |  |  |  |
+| OCNG_RANote4 |  |  |  |  |  |
+| OCNG_RBNote4 |  |  |  |  |  |
+| NocNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -98 |  |  |
+| Ês/Noc | dB | 1, 2, 3, 4, 5, 6 | 7 | 7 | 7 |
+| Ês/IotNote6 | dB | 1, 2, 3, 4, 5, 6 | 7 | 7 | 7 |
+| RSRPNote6 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -91 | -91 | -91 |
+| SCH_RPNote6 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -91 | -91 | -91 |
+| IoNote6 | dBm/9 MHz | 1, 2, 3, 4, 5, 6 | -62.43 | -62.43 | -62.43 |
+| Propagation Condition |  | 1, 2, 3, 4, 5, 6 | AWGN |  |  |
+| Antenna Configuration and Correlation Matrix Note7 |  | 1, 2, 3, 4, 5, 6 | 1x2 Low |  |  |
+| NOTE 1: Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211 [23].NOTE 2: PRACH configurations are specified in table 5.7.1-2 and table 5.7.1-3 in TS 36.211 [23].NOTE 3: DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 [15] respectively.NOTE 4: OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 5: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 6: Ês/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 7: Propagation condition and correlation matrix are defined in clause B.2 in TS 36.101 [25]. |  |  |  |  |  |
+
+Table A.8.3.1.1-4: Cell specific test parameters E-UTRAN inter-RAT NR handover (Cell 2)
+
+| Parameter |  | Unit | Configuration | Cell 2 |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  | T1 | T2 | T3 |
+| RF channel number |  |  | 1, 2, 3, 4, 5, 6 | 1 |  |  |
+| Duplex mode |  |  | 1, 4 | FDD |  |  |
+|  |  |  | 2, 3, 5, 6 | TDD |  |  |
+| TDD Configuration |  |  | 2, 5 | TDDConf.1.1 |  |  |
+|  |  |  | 3, 6 | TDDConf.2.1 |  |  |
+| BWchannel |  | MHz | 1, 4 | 10: NPRB,c = 52 (FDD) |  |  |
+|  |  |  | 2, 5 | 10: NPRB,c = 52 (TDD) |  |  |
+|  |  |  | 3, 6 | 40: NPRB,c = 106 (TDD) |  |  |
+| PDSCH reference measurement channel |  |  | 1, 4 | SR.1.1 FDD |  |  |
+|  |  |  | 2, 5 | SR.1.1 TDD |  |  |
+|  |  |  | 3, 6 | SR.2.1 TDD |  |  |
+| CORSET reference channel |  |  | 1, 4 | CR.1.1 FDD |  |  |
+|  |  |  | 2, 5 | CR.1.1 TDD |  |  |
+|  |  |  | 3, 6 | CR.2.1 TDD |  |  |
+| PRACH configuration |  |  |  | FR1 PRACH configuration 1 |  |  |
+| OCNG patternNote1 |  |  | 1, 2, 3, 4, 5, 6 | OP.1 |  |  |
+| BWP | Initial DL BWP |  | 1, 2, 3, 4, 5, 6 | DLBWP.0.1 |  |  |
+|  | Dedicated DL BWP |  |  | DLBWP.1.1 |  |  |
+|  | Initial UL BWP |  |  | ULBWP.0.1 |  |  |
+|  | Dedicated UL BWP |  |  | ULBWP.1.1 |  |  |
+| SMTC configuration |  |  | 1, 2, 3, 4, 5, 6 | SMTC.2 |  |  |
+| SSB configuration |  |  | 1, 2, 4, 5 | SSB.1 FR1 |  |  |
+|  |  |  | 3, 6 | SSB.2 FR1 |  |  |
+| b2-Threshold2NR |  | dBm | 1, 2, 4, 5 | -106 |  |  |
+|  |  |  | 3, 6 | -103 |  |  |
+| EPRE ratio of PSS to SSS |  | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| EPRE ratio of PBCH_DMRS to SSS |  |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH_DMRS |  |  |  |  |  |  |
+| EPRE ratio of PDCCH_DMRS to SSS |  |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH_DMRS |  |  |  |  |  |  |
+| EPRE ratio of PDSCH_DMRS to SSS |  |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH_DMRS |  |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS |  |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS |  |  |  |  |  |  |
+| NocNote2 |  | dBm/15 KHz | 1, 2, 3, 4, 5, 6 | -98 |  |  |
+| NocNote2 |  | dBm/SCS | 1, 2, 4, 5 | -98 |  |  |
+|  |  |  | 3, 6 | -95 |  |  |
+| Ês/Noc |  | dB | 1, 2, 3, 4, 5, 6 | -inifinity | 0 | 0 |
+| Ês/IotNote3 |  | dB | 1, 2, 3, 4, 5, 6 | -inifinity | 0 | 0 |
+| SS-RSRPNote3 |  | dBm/SCS | 1, 2, 4, 5 | -inifinity | -98 | -98 |
+|  |  |  | 3, 6 | -inifinity | -95 | -95 |
+| IoNote3 |  | dBm/9.36 MHz | 1, 2, 4, 5 | -70.05 | -67.04 | -67.04 |
+|  |  | dBm/38.16 MHz | 3, 6 | -63.96 | -60.94 | -60.94 |
+| Propagation condition |  |  | 1, 2, 3, 4, 5, 6 | AWGN |  |  |
+| Antenna Configuration and Correlation Matrix |  |  | 1, 2, 3, 4, 5, 6 | 1x2 Low |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 3: Ês/Iot, SS-RSRP, and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |  |  |  |
+
+##### A.8.3.1.1.2 Test Requirements
+
+The UE shall start to transmit the PRACH to Cell 2 less than 112 ms from the beginning of time period T3.
+
+The rate of correct handovers observed during repeated tests shall be at least 90 %.
+
+NOTE: The handover delay can be expressed as: RRC procedure delay + Tinterrupt, where:
+
+RRC procedure delay = 50 ms and is specified in TS36.133.
+
+Tinterrupt = 62 ms in the test; Tinterrupt is defined in TS36.133 clause 5.3.4.3.
+
+This gives a total of 112 ms.
+
+## A.8.4 Measurement procedure
+
+### A.8.4.1 E-UTRA – NR Inter-RAT SFTD Measurement Delay
+
+#### A.8.4.1.1 E-UTRA – NR Inter-RAT SFTD Measurement Delay in non-DRX
+
+##### A.8.4.1.1.1 Test Purpose and Environment
+
+The purpose of this test is to partly verify that measurement reporting delay for SFTD between E-UTRA PCell and inter-RAT NR neighbour cell in FR1 is within the requirements stated in clauses 8.1.2.4.25 and 8.1.2.4.26 of TS36.133[15] for E-UTRA FDD and TDD, respectively, when no measurement gaps are provided and no DRX is configured.
+
+The tests consist of a single time period of duration T1. Two carriers are used in the tests: one E-UTRA carrier with the PCell (Cell 1), and one NR carrier with the NR neighbour cell (Cell 2).
+
+Prior to the start of time duration T1, the UE is connected to Cell 1 and configured to carry out intra-frequency measurements only. The point in time at which the UE receives, at the UE antenna connector(s), a RRC message containing a measurement configuration for SFTD measurements on RF channel 1 defines the start of time duration T1. Following the start of T1 the UE shall detect Cell 2, determine the SFN and frame time difference of Cell 2 relative to Cell 1, and send a measurement report.
+
+The supported test configurations are listed in table A.8.4.1.1.1-1 below. Test parameters and cell-specific parameters for the NR cell are provided in tables A.8.4.1.1.1-2 and A.8.4.1.1.1-3 below, respectively. Cell-specific parameters for the E-UTRA cell are provided in table A.3.7.2.1-1 in clause A.3.7.2.1.
+
+Table A.8.4.1.1.1-1: Applicable E-UTRA and NR configurations for inter-RAT SFTD measurement delay test
+
+| Config | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations |  |
+
+Table A.8.4.1.1.1-2: Applicable E-UTRA and NR configurations for inter-RAT SFTD measurement delay test
+
+| Parameter | Unit | Test configuration | Value |  | Comment |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | Test 1 | Test 2 |  |
+| E-UTRA RF Channel Number |  | Config 1,2,3,4,5,6 | 1 |  | One E-UTRAN carrier frequencies is used. |
+| NR RF Channel Number |  | Config 1,2,3,4,5,6 | 1 |  | One NR FR1 carrier frequencies is used. |
+| Active cell |  | Config 1,2,3,4,5,6 | Cell 1 |  | Cell 1 is on E-UTRA RF channel number 1. |
+| Neighbour cell |  | Config 1,2,3,4,5,6 | Cell 2 |  | Cell 2 is on NR RF channel number 1. |
+| SSB configuration |  | Config 1,4 | SSB.1 FR1 |  | As specified in clause A.3.10.1 |
+|  |  | Config 2,5 | SSB.1 FR1 |  | As specified in clause A.3.10.1 |
+|  |  | Config 3,6 | SSB.2 FR1 |  | As specified in clause A.3.10.1 |
+| CP length |  | Config 1,2,3,4,5,6 | Normal |  | Applicable to both cells. |
+| DRX |  | Config 1,2,3,4,5,6 | OFF |  | DRX is not used |
+| Frame time offset between serving and neighbour cells | ms | Config 1,2,4,5 | 3 | 7 | Asynchronous cells.The timing of Cell 2 relative to the timing of Cell 1. |
+|  | s | Config 3,6 | 3 |  | Synchronous cells. |
+| SFN offset between serving and neighbour cells |  | Config 1,2,3,4,5,6 | 0 | 1 | SFN of Cell 2 relative to SFN of Cell 1. |
+| T1 | s | Config 1,2,3,4,5,6 | 1 |  |  |
+
+Table A.8.4.1.1.1-3: Cell specific test parameters for Cell 2 in inter-RAT SFTD measurement delay test
+
+| Parameter | Unit | Test configuration | Cell 2 |
+| --- | --- | --- | --- |
+| NR RF Channel Number |  | Config 1,2,3,4,5,6 | 1 |
+| Duplex mode |  | Config 1,4 | FDD |
+|  |  | Config 2,3,5,6 | TDD |
+| BWchannel | MHz | Config 1,4 | 10: NPRB,c = 52 |
+|  |  | Config 2,5 | 10: NPRB,c = 52 |
+|  |  | Config 3,6 | 40: NPRB,c = 106 |
+| TDD configuration |  | Config 2,5 | TDDConf.1.1 |
+|  |  | Config 3,6 | TDDConf.2.1 |
+| OCNG Pattern defined in A.3.2.1.1 |  | Config 1,2,3,4,5,6 | OP.1 |
+| SMTC configuration |  | Config 1,2,3,4,5,6 | SMTC.1 |
+| PDSCH/PDCCH subcarrier spacing | kHz | Config 1,2,4,5 | 15 |
+|  |  | Config 3,6 | 30 |
+| EPRE ratio of PSS to SSS | dB | Config 1,2,3,4,5,6 | 0 |
+| EPRE ratio of PBCH DMRS to SSS | dB |  |  |
+| EPRE ratio of PBCH to PBCH DMRS | dB |  |  |
+| EPRE ratio of OCNG DMRS to SSS Note 1 | dB |  |  |
+| EPRE ratio of OCNG to OCNG DMRS Note 1 | dB |  |  |
+| Noc Note2 | dBm/15kHz |  | -98 |
+| Noc Note2 | dBm/SCS | Config 1,2,4,5 | -98 |
+|  |  | Config 3,6 | -95 |
+| SS-RSRP Note 3, 4 | dBm/SCS | Config 1,2,4,5 | -94 |
+|  |  | Config 3,6 | -91 |
+| Ês/Iot | dB | Config 1,2,3,4,5,6 | 4 |
+| Ês/Noc | dB | Config 1,2,3,4,5,6 | 4 |
+| Io Note 3 | dBm/9.36 MHz | Config 1,2,4,5 | -64.59 |
+|  | dBm/38.16 MHz | Config 3,6 | -58.50 |
+| Propagation Condition |  | Config 1,2,3,4,5,6 | AWGN |
+| NOTE 1: OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |
+
+##### A.8.4.1.1.2 Test Requirements
+
+Following the start of T1, the UE shall detect Cell 2 and determine the relative time difference between Cell 1 and Cell 2. At latest at TRRC_procedure_delay + Tmeasure_SFTD1 after the beginning of time duration T1, the UE shall send a measurement report on SFTD between Cell 1 and Cell 2.
+
+The observed rate of successful SFTD reports in repeated tests shall be at least 90 %.
+
+NOTE: The actual overall delays measured in the test may be up to 2×TTIDCCH longer than the measurement reporting delays above due to TTI insertion uncertainty of the measurement report in DCCH.
+
+#### A.8.4.1.2 E-UTRA – NR Inter-RAT SFTD Measurement Delay in DRX
+
+##### A.8.4.1.2.1 Test Purpose and Environment
+
+The purpose of this test is to partly verify that measurement reporting delay for SFTD between E-UTRA PCell and inter-RAT NR neighbour cell in FR1 is within the requirements stated in clauses 8.1.2.4.25 and 8.1.2.4.26 of TS36.133[15] for E-UTRA FDD and TDD, respectively, when no measurement gaps are provided and DRX is configured.
+
+The tests consist of a single time period of duration T1. Two carriers are used in the tests: one E-UTRA carrier with the PCell (Cell 1), and one NR carrier with the NR neighbour cell (Cell 2).
+
+Prior to the start of time duration T1, the UE is connected to Cell 1 and configured to carry out intra-frequency measurements only. The point in time at which the UE receives, at the UE antenna connector(s), a RRC message containing a measurement configuration for SFTD measurements on RF channel 1 defines the start of time duration T1. Following the start of T1 the UE shall detect Cell 2, determine the SFN and frame time difference of Cell 2 relative to Cell 1, and send a measurement report.
+
+The supported test configurations are listed in table A.8.4.1.2.1-1 below. Test parameters are provided in tablesA.8.4.1.2.1-2 below. Cell-specific parameters for the E-UTRA and NR cells are provided in tableA.3.7.2.1-1 in clause A.3.7.2.1, and table A.8.4.1.1.1-3 in clause A.8.4.1.1.1, respectively.
+
+Table A.8.4.1.2.1-1: Applicable E-UTRA and NR configurations for inter-RAT SFTD measurement delay test in DRX
+
+| Config | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations |  |
+
+Table A.8.4.1.2.1-2: Applicable E-UTRA and NR configurations for inter-RAT SFTD measurement delay test in DRX
+
+| Parameter | Unit | Test configuration | Value |  | Comment |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | Test 1 | Test 2 |  |
+| E-UTRA RF Channel Number |  | Config 1,2,3,4,5,6 | 1 |  | One E-UTRAN carrier frequencies is used. |
+| NR RF Channel Number |  | Config 1,2,3,4,5,6 | 1 |  | One NR FR1 carrier frequencies is used. |
+| Active cell |  | Config 1,2,3,4,5,6 | Cell 1 |  | Cell 1 is on E-UTRA RF channel number 1. |
+| Neighbour cell |  | Config 1,2,3,4,5,6 | Cell 2 |  | Cell 2 is on NR RF channel number 1. |
+| SSB configuration |  | Config 1,4 | SSB.1 FR1 |  | As specified in clause A.3.10.1 |
+|  |  | Config 2,5 | SSB.1 FR1 |  | As specified in clause A.3.10.1 |
+|  |  | Config 3,6 | SSB.2 FR1 |  | As specified in clause A.3.10.1 |
+| CP length |  | Config 1,2,3,4,5,6 | Normal |  | Applicable to both cells. |
+| DRX |  | Config 1,2,3,4,5,6 | DRX.4 |  | DRX configuration as specified in clause A.3.3.4 |
+| Frame time offset between serving and neighbour cells | ms | Config 1,2,4,5 | 3 | 7 | Asynchronous cells.The timing of Cell 2 relative to the timing of Cell 1. |
+|  | s | Config 3,6 | 3 |  | Synchronous cells. |
+| SFN offset between serving and neighbour cells |  | Config 1,2,3,4,5,6 | 0 | 1 | SFN of Cell 2 relative to SFN of Cell 1. |
+| T1 | s | Config 1,2,3,4,5,6 | 1 |  |  |
+
+##### A.8.4.1.2.2 Test Requirements
+
+Following the start of T1, the UE shall detect Cell 2 and determine the relative time difference between Cell 1 and Cell 2. At latest at the earliest DRX activity time following upon  TRRC_procedure_delay + Tmeasure_SFTD1 from the beginning of time duration T1, the UE shall send a measurement report on SFTD between Cell 1 and Cell 2.
+
+The observed rate of successful SFTD reports in repeated tests shall be at least 90 %.
+
+NOTE: The actual overall delays measured in the test may be up to 2×TTIDCCH longer than the measurement reporting delays above due to TTI insertion uncertainty of the measurement report in DCCH.
+
+### A.8.4.2 E-UTRA – NR Inter-RAT Measurements
+
+#### A.8.4.2.1 NR Inter-RAT event triggered reporting tests for FR1 without SSB time index detection when DRX is not used
+
+##### A.8.4.2.1.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the UE makes correct reporting of an event. This test will partly verify the NR inter-RAT cell search requirements in clause 8.1.2.4.21 of TS 36.133 [15] for E-UTRAN FDD-NR measurements and clause 8.1.2.4.22 of TS 36.133[15] for E-UTRAN TDD-NR measurements.
+
+In this test, there are two cells: E-UTRA cell 1 as PCell on E-UTRA RF channel 1 and NR cell 2 as neighbour cell in FR1 on NR RF channel 1. The test parameters are given in tables A.8.4.2.1.1-1, A.8.4.2.1.1-2, A.8.4.2.1.1-3 and A.8.4.2.1.1-4.
+
+Measurement gap pattern configuration is defined in table A.8.4.2.1.1-2.
+
+In the measurement control information, it is indicated to the UE that event-triggered reporting with Event B2 (PCell becomes worse than threshold1 and inter RAT neighbour becomes better than threshold2) [16] is used. The test consists of two successive time periods, with time duration of T1, and T2 respectively. During time duration T1, the UE shall not have any timing information of NR cell 2.
+
+Table A.8.4.2.1.1-1: NR inter-RAT event triggered reporting tests without SSB index reading for FR1
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.8.4.2.1.1-2: General test parameters for NR inter-RAT event triggered reporting for FR1 without SSB time index detection
+
+| Parameter | Unit | Test configuration | Value | Comment |  |
+| --- | --- | --- | --- | --- | --- |
+| E-UTRA RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 | One E-UTRAcarrier frequency is used. |  |
+| NR RF Chanel Number |  | 1, 2, 3, 4, 5, 6 | 1 | One FR1 NR carrier frequency is used. |  |
+| Active cell |  | 1, 2, 3, 4, 5, 6 | E-UTRA cell 1 (PCell) | E-UTRA cell 1 is on E-UTRA RF channel number 1. |  |
+| Neighbour cell |  | 1, 2, 3, 4, 5, 6 | NR cell 2 | NR cell 2 is on NR RF channel number 1. |  |
+| Gap Pattern Id |  | 1, 2, 3, 4, 5, 6 | 0 | As specified in clause Table 8.1.2.1-1 of TS 36.133 [15]. |  |
+| Measurement gap offset |  | 1, 2, 3, 4, 5, 6 | 39 | As specified in TS 36.331 [16]. |  |
+| b2-Threshold1 | dBm | 1, 2, 3, 4, 5, 6 | Note 1 | E-UTRA RSRP threshold for E-UTRA RSRP measurement on cell 1 for event B2 [16] |  |
+| b2-Threshold2NR | dBm | 1, 2, 3, 4, 5, 6 | Note 2 | SS-RSRP threshold for SS-RSRP measurement on cell 2 for event B2 [16] |  |
+| Hysteresis | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| CP length |  | 1, 2, 3, 4, 5, 6 | Normal |  |  |
+| TimeToTrigger | s | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| Filter coefficient |  | 1, 2, 3, 4, 5, 6 | 0 | L3 filtering is not used |  |
+| DRX |  | 1, 2, 3, 4, 5, 6 | OFF | DRX is not used |  |
+| Time offset between serving and neighbour cells |  | 1, 4 | 3 ms | Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1. |  |
+|  |  | 2, 3, 5, 6 | 3s | Synchronous cells. |  |
+| T1 | s | 1, 2, 3, 4, 5, 6 | 5 |  |  |
+| T2 | s | 1, 2, 3, 4, 5, 6 | 1 |  |  |
+| NOTE 1: The value of b2-Threshold1 is defined in table A.8.4.2.1.1-3NOTE 2: The value of b2-Threshold2NR is defined in table A.8.4.2.1.1-4 |  |  |  |  |  |
+
+Table A.8.4.2.1.1-3: E-UTRAN PCell specific test parameters for NR inter-RAT event triggered reporting in non-DRX with NR neigbour cell in FR1 without SSB time index detection
+
+| Parameter | Unit | Configuration | Cell 1 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| RF channel number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 2, 3 | FDD |  |
+|  |  | 4, 5, 6 | TDD |  |
+| TDD special subframe configurationNote1 |  | 4, 5, 6 | 6 |  |
+| TDD uplink-downlink configurationNote1 |  | 4, 5, 6 | 1 |  |
+| BWchannel | MHz | 1, 2, 3, 4, 5, 6 | 5 MHz: NPRB,c = 2510 MHz: NPRB,c = 5020 MHz: NPRB,c = 100 |  |
+| PDSCH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.7 FDD10 MHz: R.3 FDD20 MHz: R.6 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.4 TDD10 MHz: R.0 TDD20 MHz: R.3 TDD |  |
+| PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.11 FDD10 MHz: R.6 FDD20 MHz: R.10 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.11 TDD10 MHz: R.6 TDD20 MHz: R.10 TDD |  |
+| OCNG PatternsNote2 |  | 1, 2, 3 | 5 MHz: OP.20 FDD10 MHz: OP.10 FDD20 MHz: OP.17 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: OP.9 TDD10 MHz: OP.1 TDD20 MHz: OP.7 TDD |  |
+| b2-Threshold1 | dBm | 1, 2, 3, 4, 5, 6 | -77 |  |
+| PBCH_RA | dB | 1, 2, 3, 4, 5, 6 | 0 |  |
+| PBCH_RB |  |  |  |  |
+| PSS_RA |  |  |  |  |
+| SSS_RA |  |  |  |  |
+| PCFICH_RB |  |  |  |  |
+| PHICH_RA |  |  |  |  |
+| PHICH_RB |  |  |  |  |
+| PDCCH_RA |  |  |  |  |
+| PDCCH_RB |  |  |  |  |
+| PDSCH_RA |  |  |  |  |
+| PDSCH_RB |  |  |  |  |
+| OCNG_RANote3 |  |  |  |  |
+| OCNG_RBNote3 |  |  |  |  |
+| NocNote4 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -104 |  |
+| Ês/Noc | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| Ês/IotNote5 | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| RSRPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| SCH_RPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| IoNote5 | dBm/9 MHz | 1, 2, 3, 4, 5, 6 | -59.13+10log (NPRB,c /50) | -59.13+10log (NPRB,c /50) |
+| Propagation Condition Note6 |  | 1, 2, 3, 4, 5, 6 | AWGN |  |
+| Antenna Configuration and Correlation Matrix Note6 |  | 1, 2, 3, 4, 5, 6 | 1x2 |  |
+| NOTE 1: Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211 [23].NOTE 2: DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 [15] respectively.NOTE 3: OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 4: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 5: Ês/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 6: Propagation condition and correlation matrix are defined in clause B.2 in TS 36.101 [25]. |  |  |  |  |
+
+Table A.8.4.2.1.1-4: NR neighbour cell specific test parameters for NR inter-RAT event triggered reporting for FR1 without SSB time index detection
+
+| Parameter | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| NR RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 4 | FDD |  |
+|  |  | 2, 3, 5, 6 | TDD |  |
+| TDD configuration |  | 2, 5 | TDDConf.1.1 |  |
+|  |  | 3, 6 | TDDConf.2.1 |  |
+| BWchannel | MHz | 1, 2, 4, 5 | 10: NPRB,c = 52 |  |
+|  |  | 3, 6 | 40: NPRB,c = 106 |  |
+| OCNG Patterns defined in A.3.2.1.1 (OP.1) |  | 1, 2, 3, 4, 5, 6 | OP.1 |  |
+| SMTC configuration defined in A.3.11.1 and A.3.11.2 |  | 1, 4 | SMTC.2 |  |
+|  |  | 2, 3, 5, 6 | SMTC.1 |  |
+| PDSCH/PDCCH subcarrier spacing | kHz | 1, 2, 4, 5 | 15 |  |
+|  |  | 3, 6 | 30 |  |
+| b2-Threshold2NR | dBm/SCS | 1, 2, 4, 5 | -101 |  |
+|  |  | 3, 6 | -98 |  |
+| EPRE ratio of PSS to SSS |  | 1, 2, 3, 4, 5, 6 | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS (Note 1) |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -98 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | dBm/SCS | 1, 2, 4, 5 | -98 |  |
+|  |  | 3, 6 | -95 |  |
+| SS-RSRP Note 3 | dBm/SCS | 1, 2, 4, 5 | -Infinity | -91 |
+|  |  | 3, 6 | -Infinity | -88 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| IoNote3 | dBm/9.36 MHz | 1, 2, 4, 5 | -70.05 | -62.26 |
+|  | dBm/38.16 MHz | 3, 6 | -63.95 | -56.16 |
+| Propagation Condition |  | 1, 2, 3, 4, 5, 6 | AWGN |  |
+| Antenna Configuration and Correlation Matrix |  | 1, 2, 3, 4, 5, 6 | 1x2 |  |
+| NOTE 1: OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+##### A.8.4.2.1.2 Test Requirements
+
+The UE shall send one Event B2 triggered measurement report, with a measurement reporting delay less than 920 ms from the beginning of time period T2. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+The UE is not required to report SSB time index.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the measurement reporting delays above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+#### A.8.4.2.2 NR Inter-RAT event triggered reporting tests for FR1 without SSB time index detection when DRX is used
+
+##### A.8.4.2.2.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the UE makes correct reporting of an event. This test will partly verify the NR inter-RAT cell search requirements in clause 8.1.2.4.21 of TS 36.133 [15] for E-UTRAN FDD-NR measurements and clause 8.1.2.4.22 of TS 36.133[15] for E-UTRAN TDD-NR measurements.
+
+In this test, there are two cells: E-UTRA cell 1 as PCell on E-UTRA RF channel 1 and NR cell 2 as neighbour cell in FR1 on NR RF channel 1. The test parameters are given in tables A.8.4.2.2.1-1, A.8.4.2.2.1-2, A.8.4.2.2.1-3 and A.8.4.2.2.1-4.
+
+In tests 1 and 2, measurement gap pattern configuration is defined in table A.8.4.2.2.1-2.
+
+In the measurement control information, it is indicated to the UE that event-triggered reporting with Event B2 (PCell becomes worse than threshold1 and inter RAT neighbour becomes better than threshold2) [16] is used. The test consists of two successive time periods, with time duration of T1, and T2 respectively. During time duration T1, the UE shall not have any timing information of NR cell 2.
+
+Table A.8.4.2.2.1-1: NR inter-RAT event triggered reporting tests without SSB index reading for FR1
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.8.4.2.2.1-2: General test parameters for NR inter-RAT event triggered reporting for FR1 without SSB time index detection
+
+| Parameter | Unit | Test configuration | Value |  | Comment |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | Test 1 | Test 2 |  |  |
+| E-UTRA RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 |  | One E-UTRA carrier frequency is used. |  |
+| NR RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 |  | One FR1 NR carrier frequency is used. |  |
+| Active cell |  | 1, 2, 3, 4, 5, 6 | E-UTRA cell 1 (PCell) |  | E-UTRA cell 1 is on E-UTRA RF channel number 1. |  |
+| Neighbour cell |  | 1, 2, 3, 4, 5, 6 | NR cell 2 |  | NR cell 2 is on NR RF channel number 1. |  |
+| Gap Pattern Id |  | 1, 2, 3, 4, 5, 6 | 0 |  | As specified in clause Table 8.1.2.1-1 of TS 36.133 [15]. |  |
+| Measurement gap offset |  | 1, 2, 3, 4, 5, 6 | 39 |  | As specified in TS 36.331 [16]. |  |
+| b2-Threshold1 | dBm | 1, 2, 3, 4, 5, 6 | Note 1 |  | E-UTRA RSRP threshold for E-UTRA RSRP measurement on cell 1 for event B2 [16] |  |
+| b2-Threshold2NR | dBm | 1, 2, 3, 4, 5, 6 | Note 2 |  | SS-RSRP threshold for SS-RSRP measurement on cell 2 for event B2 [16] |  |
+| Hysteresis | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |  |
+| CP length |  | 1, 2, 3, 4, 5, 6 | Normal |  |  |  |
+| TimeToTrigger | s | 1, 2, 3, 4, 5, 6 | 0 |  |  |  |
+| Filter coefficient |  | 1, 2, 3, 4, 5, 6 | 0 |  | L3 filtering is not used |  |
+| DRX |  | 1, 2, 3, 4, 5, 6 | DRX.9 | DRX.12 | As specified in clause A.3.3 |  |
+| Time offset between serving and neighbour cells |  | 1, 4 | 3 ms |  | Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1. |  |
+|  |  | 2, 3, 5, 6 | 3s |  | Synchronous cells. |  |
+| T1 | s | 1, 2, 3, 4, 5, 6 | 5 |  |  |  |
+| T2 | s | 1, 2, 3, 4, 5, 6 | 2 | 11 |  |  |
+| NOTE 1: The value of b2-Threshold1 is defined in table A.8.4.2.2.1-3NOTE 2: The value of b2-Threshold2NR is defined in table A.8.4.2.2.1-4 |  |  |  |  |  |  |
+
+Table A.8.4.2.2.1-3: E-UTRAN PCell specific test parameters for NR inter-RAT event triggered reporting in non-DRX with NR neigbour cell in FR1 without SSB time index detection
+
+| Parameter | Unit | Configuration | Cell 1 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| RF channel number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 2, 3 | FDD |  |
+|  |  | 4, 5, 6 | TDD |  |
+| TDD special subframe configurationNote1 |  | 4, 5, 6 | 6 |  |
+| TDD uplink-downlink configurationNote1 |  | 4, 5, 6 | 1 |  |
+| BWchannel | MHz | 1, 2, 3, 4, 5, 6 | 5 MHz: NPRB,c = 2510 MHz: NPRB,c = 5020 MHz: NPRB,c = 100 |  |
+| PDSCH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.7 FDD10 MHz: R.3 FDD20 MHz: R.6 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.4 TDD10 MHz: R.0 TDD20 MHz: R.3 TDD |  |
+| PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.11 FDD10 MHz: R.6 FDD20 MHz: R.10 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.11 TDD10 MHz: R.6 TDD20 MHz: R.10 TDD |  |
+| OCNG PatternsNote2 |  | 1, 2, 3 | 5 MHz: OP.20 FDD10 MHz: OP.10 FDD20 MHz: OP.17 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: OP.9 TDD10 MHz: OP.1 TDD20 MHz: OP.7 TDD |  |
+| b2-Threshold1 | dBm | 1, 2, 3, 4, 5, 6 | -77 |  |
+| PBCH_RA | dB | 1, 2, 3, 4, 5, 6 | 0 |  |
+| PBCH_RB |  |  |  |  |
+| PSS_RA |  |  |  |  |
+| SSS_RA |  |  |  |  |
+| PCFICH_RB |  |  |  |  |
+| PHICH_RA |  |  |  |  |
+| PHICH_RB |  |  |  |  |
+| PDCCH_RA |  |  |  |  |
+| PDCCH_RB |  |  |  |  |
+| PDSCH_RA |  |  |  |  |
+| PDSCH_RB |  |  |  |  |
+| OCNG_RANote3 |  |  |  |  |
+| OCNG_RBNote3 |  |  |  |  |
+| NocNote4 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -104 |  |
+| Ês/Noc | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| Ês/IotNote5 | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| RSRPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| SCH_RPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| IoNote5 | dBm/9 MHz | 1, 2, 3, 4, 5, 6 | -59.13+10log (NPRB,c /50) | -59.13+10log (NPRB,c /50) |
+| Propagation Condition Note6 |  | 1, 2, 3, 4, 5, 6 | AWGN |  |
+| Antenna Configuration and Correlation Matrix Note6 |  | 1, 2, 3, 4, 5, 6 | 1x2 |  |
+| NOTE 1: Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211 [23].NOTE 2: DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 [15] respectively.NOTE 3: OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 4: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 5: Ês/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 6: Propagation condition and correlation matrix are defined in clause B.2 in TS 36.101 [25]. |  |  |  |  |
+
+Table A.8.4.2.2.1-4: NR neighbour cell specific test parameters for NR inter-RAT event triggered reporting for FR1 without SSB time index detection
+
+| Parameter | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| NR RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 4 | FDD |  |
+|  |  | 2, 3, 5, 6 | TDD |  |
+| TDD configuration |  | 2, 5 | TDDConf.1.1 |  |
+|  |  | 3, 6 | TDDConf.2.1 |  |
+| BWchannel | MHz | 1, 2, 4, 5 | 10: NPRB,c = 52 |  |
+|  |  | 3, 6 | 40: NPRB,c = 106 |  |
+| OCNG Patterns defined in A.3.2.1.1 (OP.1) |  | 1, 2, 3, 4, 5, 6 | OP.1 |  |
+| SMTC configuration defined in A.3.11.1 and A.3.11.2 |  | 1, 4 | SMTC.2 |  |
+|  |  | 2, 3, 5, 6 | SMTC.1 |  |
+| PDSCH/PDCCH subcarrier spacing | kHz | 1, 2, 4, 5 | 15 |  |
+|  |  | 3, 6 | 30 |  |
+| b2-Threshold2NR | dBm/SCS | 1, 2, 4, 5 | -101 |  |
+|  |  | 3, 6 | -98 |  |
+| EPRE ratio of PSS to SSS |  | 1, 2, 3, 4, 5, 6 | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS (Note 1) |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -98 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | dBm/SCS | 1, 2, 4, 5 | -98 |  |
+|  |  | 3, 6 | -95 |  |
+| SS-RSRP Note 3 | dBm/SCS | 1, 2, 4, 5 | -Infinity | -91 |
+|  |  | 3, 6 | -Infinity | -88 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| IoNote3 | dBm/9.36 MHz | 1, 2, 4, 5 | -70.05 | -62.26 |
+|  | dBm/38.16 MHz | 3, 6 | -63.95 | -56.16 |
+| Propagation Condition |  | 1, 2, 3, 4, 5, 6 | TDL-C 300 ns 100 Hz |  |
+| Antenna Configuration and Correlation Matrix |  | 1, 2, 3, 4, 5, 6 | 1x2 Low |  |
+| NOTE 1: OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+##### A.8.4.2.2.2 Test Requirements
+
+In test 1 with per-UE gap, the UE shall send one Event B2 triggered measurement report, with a measurement reporting delay less than 1080 ms from the beginning of time period T2. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+In test 2 with per-UE gap, the UE shall send one Event B2 triggered measurement report, with a measurement reporting delay less than 10240 ms from the beginning of time period T2. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+In tests 1 and 2, the UE is not required to report SSB time index.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the measurement reporting delays above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+#### A.8.4.2.3 NR Inter-RAT event triggered reporting tests for FR1 with SSB time index detection when DRX is not used
+
+##### A.8.4.2.3.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the UE makes correct reporting of an event. This test will partly verify the NR inter-RAT cell search requirements in clause 8.1.2.4.21of TS 36.133 [15] for E-UTRAN FDD-NR measurements and clause 8.1.2.4.22 of TS 36.133[15] for E-UTRAN TDD-NR measurements.
+
+In this test, there are two cells: E-UTRA cell 1 as PCell on E-UTRA RF channel 1 and NR cell 2 as neighbour cell in FR1 on NR RF channel 1.  The test parameters are given in tables A.8.4.2.3.1-1, A.8.4.2.3.1-2, A.8.4.2.3.1-3 and A.8.4.2.3.1-4.
+
+Measurement gap pattern configuration is defined in table A.8.4.2.3.1-2.
+
+In the measurement control information, it is indicated to the UE that event-triggered reporting with Event B2 (PCell becomes worse than threshold1 and inter RAT neighbour becomes better than threshold2) [16] is used. In the measurement configuration the UE shall be indicated to report the SSB index of the identified NR cell. The test consists of two successive time periods, with time duration of T1, and T2 respectively. During time duration T1, the UE shall not have any timing information of NR cell 2.
+
+Table A.8.4.2.3.1-1: NR inter-RAT event triggered reporting tests without SSB index reading for FR1
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.8.4.2.3.1-2: General test parameters for NR inter-RAT event triggered reporting for FR1 without SSB time index detection
+
+| Parameter | Unit | Test configuration | Value | Comment |
+| --- | --- | --- | --- | --- |
+| E-UTRA RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 | One E-UTRA carrier frequency is used. |
+| NR RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 | One FR1 NR carrier frequency is used. |
+| Active cell |  | 1, 2, 3, 4, 5, 6 | E-UTRA cell 1 (PCell) | E-UTRA cell 1 is on E-UTRA RF channel number 1. |
+| Neighbour cell |  | 1, 2, 3, 4, 5, 6 | NR cell 2 | NR cell 2 is on NR RF channel number 1. |
+| Gap Pattern Id |  | 1, 2, 3, 4, 5, 6 | 0 | As specified in clause Table 8.1.2.1-1 of TS 36.133 [15]. |
+| Measurement gap offset |  | 1, 2, 3, 4, 5, 6 | 39 | As specified in TS 36.331 [16]. |
+| b2-Threshold1 | dBm | 1, 2, 3, 4, 5, 6 | Note 1 | E-UTRA RSRP threshold for E-UTRA RSRP measurement on cell 1 for event B2 [16] |
+| b2-Threshold2NR | dBm | 1, 2, 3, 4, 5, 6 | Note 2 | SS-RSRP threshold for SS-RSRP measurement on cell 2 for event B2 [16] |
+| Hysteresis | dB | 1, 2, 3, 4, 5, 6 | 0 |  |
+| CP length |  | 1, 2, 3, 4, 5, 6 | Normal |  |
+| TimeToTrigger | s | 1, 2, 3, 4, 5, 6 | 0 |  |
+| Filter coefficient |  | 1, 2, 3, 4, 5, 6 | 0 | L3 filtering is not used |
+| DRX |  | 1, 2, 3, 4, 5, 6 | OFF | DRX is not used |
+| Time offset between serving and neighbour cells |  | 1, 4 | 3 ms | Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1. |
+|  |  | 2, 3, 5, 6 | 3s | Synchronous cells. |
+| T1 | s | 1, 2, 3, 4, 5, 6 | 5 |  |
+| T2 | s | 1, 2, 3, 4, 5, 6 | 2 |  |
+| NOTE 1: The value of b2-Threshold1 is defined in table A.8.4.2.3.1-3NOTE 2: The value of b2-Threshold2NR is defined in table A.8.4.2.3.1-4 |  |  |  |  |
+
+Table A.8.4.2.3.1-3: E-UTRAN PCell specific test parameters for NR inter-RAT event triggered reporting in non-DRX with NR neigbour cell in FR1 without SSB time index detection
+
+| Parameter | Unit | Configuration | Cell 1 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| RF channel number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 2, 3 | FDD |  |
+|  |  | 4, 5, 6 | TDD |  |
+| TDD special subframe configurationNote1 |  | 4, 5, 6 | 6 |  |
+| TDD uplink-downlink configurationNote1 |  | 4, 5, 6 | 1 |  |
+| BWchannel | MHz | 1, 2, 3, 4, 5, 6 | 5 MHz: NPRB,c = 2510 MHz: NPRB,c = 5020 MHz: NPRB,c = 100 |  |
+| PDSCH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.7 FDD10 MHz: R.3 FDD20 MHz: R.6 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.4 TDD10 MHz: R.0 TDD20 MHz: R.3 TDD |  |
+| PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.11 FDD10 MHz: R.6 FDD20 MHz: R.10 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.11 TDD10 MHz: R.6 TDD20 MHz: R.10 TDD |  |
+| OCNG PatternsNote2 |  | 1, 2, 3 | 5 MHz: OP.20 FDD10 MHz: OP.10 FDD20 MHz: OP.17 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: OP.9 TDD10 MHz: OP.1 TDD20 MHz: OP.7 TDD |  |
+| b2-Threshold1 | dBm | 1, 2, 3, 4, 5, 6 | -77 |  |
+| PBCH_RA | dB | 1, 2, 3, 4, 5, 6 | 0 |  |
+| PBCH_RB |  |  |  |  |
+| PSS_RA |  |  |  |  |
+| SSS_RA |  |  |  |  |
+| PCFICH_RB |  |  |  |  |
+| PHICH_RA |  |  |  |  |
+| PHICH_RB |  |  |  |  |
+| PDCCH_RA |  |  |  |  |
+| PDCCH_RB |  |  |  |  |
+| PDSCH_RA |  |  |  |  |
+| PDSCH_RB |  |  |  |  |
+| OCNG_RANote3 |  |  |  |  |
+| OCNG_RBNote3 |  |  |  |  |
+| NocNote4 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -104 |  |
+| Ês/Noc | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| Ês/IotNote5 | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| RSRPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| SCH_RPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| IoNote5 | dBm/9 MHz | 1, 2, 3, 4, 5, 6 | -59.13+10log (NPRB,c /50) | -59.13+10log (NPRB,c /50) |
+| Propagation Condition Note6 |  | 1, 2, 3, 4, 5, 6 | AWGN |  |
+| Antenna Configuration and Correlation Matrix Note6 |  | 1, 2, 3, 4, 5, 6 | 1x2 |  |
+| NOTE 1: Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211 [23].NOTE 2: DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 [15] respectively.NOTE 3: OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 4: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 5: Ês/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 6: Propagation condition and correlation matrix are defined in clause B.2 in TS 36.101 [25]. |  |  |  |  |
+
+Table A.8.4.2.3.1-4: NR neighbour cell specific test parameters for NR inter-RAT event triggered reporting for FR1 without SSB time index detection
+
+| Parameter | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| NR RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 4 | FDD |  |
+|  |  | 2, 3, 5, 6 | TDD |  |
+| TDD configuration |  | 2, 5 | TDDConf.1.1 |  |
+|  |  | 3, 6 | TDDConf.2.1 |  |
+| BWchannel | MHz | 1, 2, 4, 5 | 10: NPRB,c = 52 |  |
+|  |  | 3, 6 | 40: NPRB,c = 106 |  |
+| OCNG Patterns defined in A.3.2.1.1 (OP.1) |  | 1, 2, 3, 4, 5, 6 | OP.1 |  |
+| SMTC configuration defined in A.3.11.1 and A.3.11.2 |  | 1, 4 | SMTC.2 |  |
+|  |  | 2, 3, 5, 6 | SMTC.1 |  |
+| PDSCH/PDCCH subcarrier spacing | kHz | 1, 2, 4, 5 | 15 |  |
+|  |  | 3, 6 | 30 |  |
+| b2-Threshold2NR | dBm/SCS | 1, 2, 4, 5 | -101 |  |
+|  |  | 3, 6 | -98 |  |
+| EPRE ratio of PSS to SSS |  | 1, 2, 3, 4, 5, 6 | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS (Note 1) |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -98 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | dBm/SCS | 1, 2, 4, 5 | -98 |  |
+|  |  | 3, 6 | -95 |  |
+| SS-RSRP Note 3 | dBm/SCS | 1, 2, 4, 5 | -Infinity | -91 |
+|  |  | 3, 6 | -Infinity | -88 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| IoNote3 | dBm/9.36 MHz | 1, 2, 4, 5 | -70.05 | -62.26 |
+|  | dBm/38.16 MHz | 3, 6 | -63.95 | -56.16 |
+| Propagation Condition |  | 1, 2, 3, 4, 5, 6 | AWGN |  |
+| Antenna Configuration and Correlation Matrix |  | 1, 2, 3, 4, 5, 6 | 1x2 |  |
+| NOTE 1: OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+##### A.8.4.2.3.2 Test Requirements
+
+The UE shall send one Event B2 triggered measurement report, with a measurement reporting delay less than 1040 ms from the beginning of time period T2. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+The UE is required to report SSB time index.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the measurement reporting delays above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+#### A.8.4.2.4 NR Inter-RAT event triggered reporting tests for FR1 with SSB time index detection when DRX is used
+
+##### A.8.4.2.4.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the UE makes correct reporting of an event. This test will partly verify the NR inter-RAT cell search requirements in clause 8.1.2.4.21of TS 36.133 [15] for E-UTRAN FDD-NR measurements and clause 8.1.2.4.22 of TS 36.133[15] for E-UTRAN TDD-NR measurements.
+
+In this test, there are two cells: E-UTRA cell 1 as PCell on E-UTRA RF channel 1 and NR cell 2 as neighbour cell in FR1 on NR RF channel 1. The test parameters are given in tables A.8.4.2.4.1-1, A.8.4.2.4.1-2, A.8.4.2.4.1-3 and A.8.4.2.4.1-4.
+
+In tests 1 and 2, measurement gap pattern configuration is defined in table A.8.4.2.4.1-2.
+
+In the measurement control information, it is indicated to the UE that event-triggered reporting with Event B2 (PCell becomes worse than threshold1 and inter RAT neighbour becomes better than threshold2) [16] is used. In the measurement configuration the UE shall be indicated to report the SSB index of the identified NR cell. The test consists of two successive time periods, with time duration of T1, and T2 respectively. During time duration T1, the UE shall not have any timing information of NR cell 2.
+
+Table A.8.4.2.4.1-1: NR inter-RAT event triggered reporting tests without SSB index reading for FR1
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.8.4.2.4.1-2: General test parameters for NR inter-RAT event triggered reporting for FR1 without SSB time index detection
+
+| Parameter | Unit | Test configuration | Value |  | Comment |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | Test 1 | Test 2 |  |  |
+| E-UTRA RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 |  | One E-UTRA carrier frequency is used. |  |
+| NR RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 |  | One FR1 NR carrier frequency is used. |  |
+| Active cell |  | 1, 2, 3, 4, 5, 6 | E-UTRA cell 1 (PCell) |  | E-UTRA cell 1 is on E-UTRA RF channel number 1. |  |
+| Neighbour cell |  | 1, 2, 3, 4, 5, 6 | NR cell 2 |  | NR cell 2 is on NR RF channel number 1. |  |
+| Gap Pattern Id |  | 1, 2, 3, 4, 5, 6 | 0 |  | As specified in clause Table 8.1.2.1-1 of TS 36.133 [15]. |  |
+| Measurement gap offset |  | 1, 2, 3, 4, 5, 6 | 39 |  | As specified in TS 36.331 [16]. |  |
+| b2-Threshold1 | dBm | 1, 2, 3, 4, 5, 6 | Note 1 |  | E-UTRA RSRP threshold for E-UTRA RSRP measurement on cell 1 for event B2 [16] |  |
+| b2-Threshold2NR | dBm | 1, 2, 3, 4, 5, 6 | Note 2 |  | SS-RSRP threshold for SS-RSRP measurement on cell 2 for event B2 [16] |  |
+| Hysteresis | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |  |
+| CP length |  | 1, 2, 3, 4, 5, 6 | Normal |  |  |  |
+| TimeToTrigger | s | 1, 2, 3, 4, 5, 6 | 0 |  |  |  |
+| Filter coefficient |  | 1, 2, 3, 4, 5, 6 | 0 |  | L3 filtering is not used |  |
+| DRX |  | 1, 2, 3, 4, 5, 6 | DRX.9 | DRX.12 | As specified in clause A.3.3 |  |
+| Time offset between serving and neighbour cells |  | 1, 4 | 3 ms |  | Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1. |  |
+|  |  | 2, 3, 5, 6 | 3s |  | Synchronous cells. |  |
+| T1 | s | 1, 2, 3, 4, 5, 6 | 5 |  |  |  |
+| T2 | s | 1, 2, 3, 4, 5, 6 | 2 | 13 |  |  |
+| NOTE 1: The value of b2-Threshold1 is defined in table A.8.4.2.4.1-3NOTE 2: The value of b2-Threshold2NR is defined in table A.8.4.2.4.1-4 |  |  |  |  |  |  |
+
+Table A.8.4.2.4.1-3: E-UTRAN PCell specific test parameters for NR inter-RAT event triggered reporting in non-DRX with NR neigbour cell in FR1 without SSB time index detection
+
+| Parameter | Unit | Configuration | Cell 1 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| RF channel number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 2, 3 | FDD |  |
+|  |  | 4, 5, 6 | TDD |  |
+| TDD special subframe configurationNote1 |  | 4, 5, 6 | 6 |  |
+| TDD uplink-downlink configurationNote1 |  | 4, 5, 6 | 1 |  |
+| BWchannel | MHz | 1, 2, 3, 4, 5, 6 | 5 MHz: NPRB,c = 2510 MHz: NPRB,c = 5020 MHz: NPRB,c = 100 |  |
+| PDSCH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.7 FDD10 MHz: R.3 FDD20 MHz: R.6 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.4 TDD10 MHz: R.0 TDD20 MHz: R.3 TDD |  |
+| PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.11 FDD10 MHz: R.6 FDD20 MHz: R.10 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.11 TDD10 MHz: R.6 TDD20 MHz: R.10 TDD |  |
+| OCNG PatternsNote2 |  | 1, 2, 3 | 5 MHz: OP.20 FDD10 MHz: OP.10 FDD20 MHz: OP.17 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: OP.9 TDD10 MHz: OP.1 TDD20 MHz: OP.7 TDD |  |
+| b2-Threshold1 | dBm | 1, 2, 3, 4, 5, 6 | -77 |  |
+| PBCH_RA | dB | 1, 2, 3, 4, 5, 6 | 0 |  |
+| PBCH_RB |  |  |  |  |
+| PSS_RA |  |  |  |  |
+| SSS_RA |  |  |  |  |
+| PCFICH_RB |  |  |  |  |
+| PHICH_RA |  |  |  |  |
+| PHICH_RB |  |  |  |  |
+| PDCCH_RA |  |  |  |  |
+| PDCCH_RB |  |  |  |  |
+| PDSCH_RA |  |  |  |  |
+| PDSCH_RB |  |  |  |  |
+| OCNG_RANote3 |  |  |  |  |
+| OCNG_RBNote3 |  |  |  |  |
+| NocNote4 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -104 |  |
+| Ês/Noc | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| Ês/IotNote5 | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| RSRPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| SCH_RPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| IoNote5 | dBm/9 MHz | 1, 2, 3, 4, 5, 6 | -59.13+10log (NPRB,c /50) | -59.13+10log (NPRB,c /50) |
+| Propagation Condition Note6 |  | 1, 2, 3, 4, 5, 6 | AWGN |  |
+| Antenna Configuration and Correlation Matrix Note6 |  | 1, 2, 3, 4, 5, 6 | 1x2 |  |
+| NOTE 1: Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211 [23].NOTE 2: DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 [15] respectively.NOTE 3: OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 4: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 5: Ês/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 6: Propagation condition and correlation matrix are defined in clause B.2 in TS 36.101 [25]. |  |  |  |  |
+
+Table A.8.4.2.4.1-4: NR neighbour cell specific test parameters for NR inter-RAT event triggered reporting for FR1 without SSB time index detection
+
+| Parameter | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| NR RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 4 | FDD |  |
+|  |  | 2, 3, 5, 6 | TDD |  |
+| TDD configuration |  | 2, 5 | TDDConf.1.1 |  |
+|  |  | 3, 6 | TDDConf.2.1 |  |
+| BWchannel | MHz | 1, 2, 4, 5 | 10: NPRB,c = 52 |  |
+|  |  | 3, 6 | 40: NPRB,c = 106 |  |
+| OCNG Patterns defined in A.3.2.1.1 (OP.1) |  | 1, 2, 3, 4, 5, 6 | OP.1 |  |
+| SMTC configuration defined in A.3.11.1 and A.3.11.2 |  | 1, 4 | SMTC.2 |  |
+|  |  | 2, 3, 5, 6 | SMTC.1 |  |
+| PDSCH/PDCCH subcarrier spacing | kHz | 1, 2, 4, 5 | 15 |  |
+|  |  | 3, 6 | 30 |  |
+| b2-Threshold2NR | dBm/SCS | 1, 2, 4, 5 | -101 |  |
+|  |  | 3, 6 | -98 |  |
+| EPRE ratio of PSS to SSS |  | 1, 2, 3, 4, 5, 6 | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS (Note 1) |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -98 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | dBm/SCS | 1, 2, 4, 5 | -98 |  |
+|  |  | 3, 6 | -95 |  |
+| SS-RSRP Note 3 | dBm/SCS | 1, 2, 4, 5 | -Infinity | -91 |
+|  |  | 3, 6 | -Infinity | -88 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| IoNote3 | dBm/9.36 MHz | 1, 2, 4, 5 | -70.05 | -62.26 |
+|  | dBm/38.16 MHz | 3, 6 | -63.95 | -56.16 |
+| Propagation Condition |  | 1, 2, 3, 4, 5, 6 | AWGN |  |
+| Antenna Configuration and Correlation Matrix |  | 1, 2, 3, 4, 5, 6 | 1x2 |  |
+| NOTE 1: OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+##### A.8.4.2.4.2 Test Requirements
+
+In test 1 with per-UE gap, the UE shall send one Event B2 triggered measurement report, with a measurement reporting delay less than 1280 ms from the beginning of time period T2. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+In test 2 with per-UE gap, the UE shall send one Event B2 triggered measurement report, with a measurement reporting delay less than 12160 ms from the beginning of time period T2. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+In tests 1 and 2, the UE is required to report SSB time index.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the measurement reporting delays above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+#### A.8.4.2.5 NR Inter-RAT event triggered reporting tests for FR2 without SSB time index detection when DRX is not used
+
+##### A.8.4.2.5.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the UE makes correct reporting of an event. This test will partly verify the NR inter-RAT cell search requirements in clause 8.1.2.4.21of TS 36.133 [15] for E-UTRAN FDD-NR measurements and clause 8.1.2.4.22 of TS 36.133[15] for E-UTRAN TDD-NR measurements.
+
+In this test, there are two cells: E-UTRA cell 1 as PCell on E-UTRA RF channel 1 and NR cell 2 as neighbour cell in FR2 on NR RF channel 1. The test parameters are given in tables A.8.4.2.5.1-1, A.8.4.2.5.1-2 and A.8.4.2.5.1-3.
+
+The cell specific test parameters for E-UTRA Cell 1 as PCell are defined in clause A.3.7.2.2.
+
+Measurement gap pattern configuration defined in table A.8.4.2.5.1-2 is provided for a UE that does not support per-FR gap, and no gap pattern (Gap Pattern Id and Measurement gap offset) is configured for a UE capable of per-FR gap.
+
+In the measurement control information, it is indicated to the UE that event-triggered reporting with Event B1 (Inter RAT neighbour becomes better than threshold) [16] is used. The test consists of two successive time periods, with time duration of T1, and T2 respectively. During time duration T1, the UE shall not have timing information of NR cell 2.
+
+Table A.8.4.2.5.1-1: NR inter-RAT event triggered reporting tests without SSB index reading for FR2 in non-DRX
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| 2 | LTE TDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.8.4.2.5.1-2: General test parameters for NR inter-RAT event triggered reporting for FR2 without SSB time index detection in non-DRX
+
+| Parameter | Unit | Test configuration | Value | Comment |
+| --- | --- | --- | --- | --- |
+| E-UTRA RF Channel Number |  | 1, 2 | 1 | One E-UTRA carrier frequency is used. |
+| NR RF Channel Number |  | 1, 2 | 1 | One FR2 NR carrier frequency is used. |
+| Active cell |  | 1, 2 | E-UTRA cell 1 (PCell) | E-UTRA cell 1 is on E-UTRA RF channel number 1 as defined in clause A.3.7.2.2. |
+| Neighbour cell |  | 1, 2 | NR cell 2 | NR cell 2 is on NR RF channel number 1. |
+| Gap Pattern Id |  | 1, 2 | 0 | As specified in clause Table 8.1.2.1-1 of TS 36.133 [15]. |
+| Measurement gap offset |  | 1, 2 | 39 | As specified in TS 36.331 [16]. |
+| b1-ThresholdNR | dBm | 1, 2 | Note 1 | SS-RSRP threshold for SS-RSRP measurement on cell 2 for event B1 [16] |
+| Hysteresis | dB | 1, 2 | 0 |  |
+| CP length |  | 1, 2 | Normal |  |
+| TimeToTrigger | s | 1, 2 | 0 |  |
+| Filter coefficient |  | 1, 2 | 0 | L3 filtering is not used |
+| DRX |  | 1, 2 | OFF | DRX is not used |
+| Time offset between serving and neighbour cells |  | 1 | 3 ms | Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1. |
+|  |  | 2 | 3s | Synchronous cells. |
+| T1 | s | 1, 2 | 10 |  |
+| T2 | s | 1, 2 | 6 |  |
+| NOTE 1: The value of b1-ThresholdNR is defined in table A.8.4.2.5.1-3 |  |  |  |  |
+
+Table A.8.4.2.5.1-3: NR neighbour cell specific test parameters for NR inter-RAT event triggered reporting for FR2 without SSB time index detection in non-DRX
+
+| Parameter |  | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  | T1 | T2 |
+| AoA setup defined in A.3.15.2.1 |  |  | 1, 2 | Setup 2a |  |
+| Assumption for UE beamsNote 5 |  |  | 1, 2 | Rough |  |
+| NR RF Channel Number |  |  | 1, 2 | 1 |  |
+| Duplex mode |  |  | 1, 2 | TDD |  |
+| TDD configuration |  |  | 1, 2 | TDDConf.3.1 |  |
+| BWchannel |  | MHz | 1, 2 | 100: NPRB,c = 24 |  |
+| OCNG patterns defined in A.3.2.1.1 |  |  | 1, 2 | OP. 3 |  |
+| SMTC configuration defined in A.3.11.1 and A.3.11.2 |  |  | 1 | SMTC.2 |  |
+|  |  |  | 2 | SMTC.1 |  |
+| PDSCH/PDCCH subcarrier spacing |  | kHz | 1, 2 | 120 |  |
+| b1-ThresholdNR | UE power class 3 | dBm/SCS | 1, 2 | -112 |  |
+| EPRE ratio of PSS to SSS |  |  | 1, 2 | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS (Note 1) |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |  |
+| Ês |  | dBm/SCS | 1, 2 | - Infinity | -80.6 |
+| SS B_RP Note 3 |  | dBm/SCS | 1, 2 | -Infinity | -80.6 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] BB Note 6 |  | dB | 1, 2 | -Infinity | 8.3 |
+| IoNote3 |  | dBm/95.04 MHz | 1, 2 | -Infinity | -56.0 |
+| Propagation Condition |  |  | 1, 2 | AWGN |  |
+| NOTE 1: OCNG shall be used such that a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: VoidNOTE 3: SS B_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: VoidNOTE 5: Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementationNOTE 6: Calculation of Es/IotBB includes the effect of UE internal noise up to the value assumed for the associated Refsens requirement in clause 7.3.2 of TS 38.101-2 [19], and an allowance of 1 dB for UE multi-band relaxation factor ΔMBP from TS 38.101-2 [19] Table 6.2.1.3-4. |  |  |  |  |  |
+
+##### A.8.4.2.5.2 Test Requirements
+
+The UE shall send one Event B1 triggered measurement report, with a measurement reporting delay less than D1 ms and D2 ms from the beginning of time period T2 for a UE incapable of per-FR gap and for a UE capable of per-FR gap, respectively. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+The UE is not required to report SSB time index.
+
+Table A.8.4.2.5.2-1: Test requirements for NR inter-RAT event triggered reporting for FR2 without SSB time index detection in non-DRX
+
+| Test case | Measurement reporting delay (ms) |  |
+| --- | --- | --- |
+|  | Test 1: D1 ms | Test 2: D2 ms |
+| UE power class 3 | 3200 | 1600 |
+
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the measurement reporting delays above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+#### A.8.4.2.6 NR Inter-RAT event triggered reporting tests for FR2 without SSB time index detection when DRX is used
+
+##### A.8.4.2.6.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the UE makes correct reporting of an event. This test will partly verify the NR inter-RAT cell search requirements in clause 8.1.2.4.21of TS 36.133 [15] for E-UTRAN FDD-NR measurements and clause 8.1.2.4.22 of TS 36.133[15] for E-UTRAN TDD-NR measurements.
+
+In this test, there are two cells: E-UTRA cell 1 as PCell on E-UTRA RF channel 1 and NR cell 2 as neighbour cell in FR2 on NR RF channel 1.  The test parameters are given in tables A.8.4.2.6.1-1, A.8.4.2.6.1-2 and A.8.4.2.6.1-3.
+
+The cell specific test parameters for E-UTRA Cell 1 as PCell are defined in clause A.3.7.2.2.
+
+
+Measurement gap pattern configuration defined in table A.8.4.2.6.1-2 is provided for a UE that does not support per-FR gap, and no gap pattern (Gap Pattern Id and Measurement gap offset) is configured for a UE capable of per-FR gap.
+
+In the measurement control information, it is indicated to the UE that event-triggered reporting with Event B1 (Inter RAT neighbour becomes better than threshold) [16] is used. The test consists of two successive time periods, with time duration of T1, and T2 respectively. During time duration T1, the UE shall not have timing information of NR cell 2.
+
+Table A.8.4.2.6.1-1: NR inter-RAT event triggered reporting tests without SSB index reading for FR2 in DRX
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| 2 | LTE TDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.8.4.2.6.1-2: General test parameters for NR inter-RAT event triggered reporting for FR2 without SSB time index detection in DRX
+
+| Parameter | Unit | Test configuration | Value |  | Comment |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | Test 1 | Test 2 |  |  |
+| E-UTRA RF Channel Number |  | 1, 2 | 1 |  | One E-UTRA carrier frequency is used. |  |
+| NR RF Channel Number |  | 1, 2 | 1 |  | One FR2 NR carrier frequency is used. |  |
+| Active cell |  | 1, 2, 3, 4, 5, 6 | E-UTRA cell 1 (PCell) |  | E-UTRA cell 1 is on E-UTRA RF channel number 1 as defined in clause A.3.7.2.2. |  |
+| Neighbour cell |  | 1, 2, 3, 4, 5, 6 | NR cell 2 |  | NR cell 2 is on NR RF channel number 1. |  |
+| Gap Pattern Id |  | 1, 2, 3, 4, 5, 6 | 0 |  | As specified in clause Table 8.1.2.1-1 of TS 36.133 [15]. |  |
+| Measurement gap offset |  | 1, 2, 3, 4, 5, 6 | 39 |  | As specified in TS 36.331 [16]. |  |
+| b1-ThresholdNR | dBm | 1, 2 | Note 1 |  | SS-RSRP threshold for SS-RSRP measurement on cell 2 for event B1 [16] |  |
+| Hysteresis | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |  |
+| CP length |  | 1, 2, 3, 4, 5, 6 | Normal |  |  |  |
+| TimeToTrigger | s | 1, 2, 3, 4, 5, 6 | 0 |  |  |  |
+| Filter coefficient |  | 1, 2, 3, 4, 5, 6 | 0 |  | L3 filtering is not used |  |
+| DRX |  | 1, 2, 3, 4, 5, 6 | DRX.9 | DRX.12 | As specified in clause A.3.3 |  |
+| Time offset between serving and neighbour cells |  | 1 | 3 ms |  | Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1. |  |
+|  |  | 2 | 3s |  | Synchronous cells. |  |
+| T1 | s | 1, 2, 3, 4, 5, 6 | 5 |  |  |  |
+| T2 | s | 1, 2, 3, 4, 5, 6 | 6 | 83 |  |  |
+| NOTE 1: The value of b1-ThresholdNR is defined in table A.8.4.2.6.1-3 |  |  |  |  |  |  |
+
+Table A.8.4.2.6.1-3: NR neighbour cell specific test parameters for NR inter-RAT event triggered reporting for FR2 without SSB time index detection in DRX
+
+| Parameter |  | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  | T1 | T2 |
+| AoA setup defined in A.3.15.1 |  |  | 1, 2 | Setup 1 |  |
+| Assumption for UE beamsNote 5 |  |  | 1, 2 | Rough |  |
+| NR RF Channel Number |  |  | 1, 2 | 1 |  |
+| Duplex mode |  |  | 1, 2 | TDD |  |
+| TDD configuration |  |  | 1, 2 | TDDConf.3.1 |  |
+| BWchannel |  | MHz | 1, 2 | 100: NPRB,c = 66 |  |
+| OCNG patterns defined in A.3.2.1.1 (OP.1) |  |  | 1, 2 | OP.1 |  |
+| SMTC configuration defined in A.3.11.1 and A.3.11.2 |  |  | 1 | SMTC.2 |  |
+|  |  |  | 2 | SMTC.1 |  |
+| PDSCH/PDCCH subcarrier spacing |  | kHz | 1, 2 | 120 |  |
+| b1-ThresholdNR | UE power class 3 | dBm/SCS | 1, 2 | -106 |  |
+| EPRE ratio of PSS to SSS |  |  | 1, 2 | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS (Note 1) |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 |  | dBm/15kHz | 1, 2 | -104.7 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 |  | dBm/SCS | 1, 2 | -95.7 |  |
+| SS-RSRP Note 3 |  | dBm/SCS | 1, 2 | -Infinity | -87.7 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  | dB | 1, 2 | -Infinity | 8 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 1, 2 | -Infinity | 8 |
+| IoNote3 |  | dBm/95.04 MHz | 1, 2 | -66.7 | -58. 0 |
+| Propagation Condition |  |  | 1, 2 | AWGN |  |
+| NOTE 1: OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc]to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5: Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementation |  |  |  |  |  |
+
+##### A.8.4.2.6.2 Test Requirements
+
+In test 1, the UE shall send one Event B1 triggered measurement report, with a measurement reporting delay less than D1 ms and D3 ms from the beginning of time period T2 for a UE incapable of per-FR gap and for a UE capable of per-FR gap, respectively. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+In test 2, the UE shall send one Event B1 triggered measurement report, with a measurement reporting delay less than D2 ms and D4 ms from the beginning of time period T2 for a UE incapable of per-FR gap and for a UE capable of per-FR gap, respectively. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+In tests 1 and 2, the UE is not required to report SSB time index.
+
+Table A.8.4.2.6.2-1: Test requirements for NR inter-RAT event triggered reporting for FR2 without SSB time index detection in DRX
+
+| Test case | Measurement reporting delay (ms) |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | D1 ms | D2 ms | D3 ms | D4 ms |
+| UE power class 3 | 4800 | 51200 | 4800 | 51200 |
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the measurement reporting delays above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+#### A.8.4.2.7 NR Inter-RAT event triggered reporting tests for FR2 with SSB time index detection when DRX is not used
+
+##### A.8.4.2.7.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the UE makes correct reporting of an event. This test will partly verify the NR inter-RAT cell search requirements in clause 8.1.2.4.21 of TS 36.133 [15] for E-UTRAN FDD-NR measurements and clause 8.1.2.4.22 of TS 36.133[15] for E-UTRAN TDD-NR measurements.
+
+In this test, there are two cells: E-UTRA cell 1 as PCell on E-UTRA RF channel 1 and NR cell 2 as neighbour cell in FR2 on NR RF channel 1. The test parameters are given in tables A.8.4.2.7.1-1, A.8.4.2.7.1-2 and A.8.4.2.7.1-3.
+
+The cell specific test parameters for E-UTRA Cell 1 as PCell are defined in clause A.3.7.2.2.
+
+Measurement gap pattern configuration defined in table A.8.4.2.7.1-2 is provided for a UE that does not support per-FR gap, and no gap pattern (Gap Pattern Id and Measurement gap offset) is configured for a UE capable of per-FR gap.
+
+In the measurement control information, it is indicated to the UE that event-triggered reporting with Event B1 (Inter RAT neighbour becomes better than threshold) [16] is used. In the measurement configuration the UE shall be indicated to report the SSB index of the identified NR cell. The test consists of two successive time periods, with time duration of T1, and T2 respectively. During time duration T1, the UE shall not have any timing information of NR cell 2.
+
+Table A.8.4.2.7.1-1: NR inter-RAT event triggered reporting tests with SSB index reading for FR2 in non-DRX
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| 2 | LTE TDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.8.4.2.7.1-2: General test parameters for NR inter-RAT event triggered reporting for FR2 with SSB time index detection in non-DRX
+
+| Parameter | Unit | Test configuration | Value | Comment |  |
+| --- | --- | --- | --- | --- | --- |
+| E-UTRA RF Channel Numbers |  | 1, 2 | 1 | One E-UTRA carrier frequency is used. |  |
+| NR RF Channel Numbers |  | 1, 2 | 1 | One FR2 NR carrier frequency is used. |  |
+| Active cell |  | 1, 2 | E-UTRA cell 1 (PCell) | E-UTRA cell 1 is on E-UTRA RF channel number 1 as defined in clause A.3.7.2.2. |  |
+| Neighbour cell |  | 1, 2 | NR cell 2 | NR cell 2 is on NR RF channel number 1. |  |
+| Gap Pattern Id |  | 1, 2 | 0 | As specified in clause Table 8.1.2.1-1 of TS 36.133 [15]. |  |
+| Measurement gap offset |  | 1, 2 | 39 | As specified in TS 36.331 [16]. |  |
+| b1-ThresholdNR | dBm | 1, 2 | Note 1 | SS-RSRP threshold for SS-RSRP measurement on cell 2 for event B1 [16] |  |
+| Hysteresis | dB | 1, 2 | 0 |  |  |
+| CP length |  | 1, 2 | Normal |  |  |
+| TimeToTrigger | s | 1, 2 | 0 |  |  |
+| Filter coefficient |  | 1, 2 | 0 | L3 filtering is not used |  |
+| DRX |  | 1, 2 | OFF | DRX is not used |  |
+| Time offset between serving and neighbour cells |  | 1 | 3 ms | Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1. |  |
+|  |  | 2 | 3s | Synchronous cells. |  |
+| T1 | s | 1, 2 | 5 |  |  |
+| T2 | s | 1, 2 | 5 |  |  |
+| NOTE 1: The value of b1-ThresholdNR is defined in table A.8.4.2.7.1-3 |  |  |  |  |  |
+
+Table A.8.4.2.7.1-3: NR neighbour cell specific test parameters for NR inter-RAT event triggered reporting for FR2 with SSB time index detection in non-DRX
+
+| Parameter |  | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  | T1 | T2 |
+| AoA setup defined in A.3.15.1 |  |  | 1, 2 | Setup 1 |  |
+| Assumption for UE beamsNote 5 |  |  | 1, 2 | Rough |  |
+| NR RF Channel Number |  |  | 1, 2 | 1 |  |
+| Duplex mode |  |  | 1, 2 | TDD |  |
+| TDD configuration |  |  | 1, 2 | TDDConf.3.1 |  |
+| BWchannel |  | MHz | 1, 2 | 100: NPRB,c = 66 |  |
+| OCNG patterns defined in A.3.2.1.1 |  |  | 1, 2 | OP.1 |  |
+| SMTC configuration defined in A.3.11.1 and A.3.11.2 |  |  | 1 | SMTC.2 |  |
+|  |  |  | 2 | SMTC.1 |  |
+| PDSCH/PDCCH subcarrier spacing |  | kHz | 1, 2 | 120 |  |
+| b1-ThresholdNR | UE power class 3 | dBm/SCS | 1, 2 | -106 |  |
+| EPRE ratio of PSS to SSS |  |  | 1, 2 | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS (Note 1) |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 |  | dBm/15kHz | 1, 2 | -104.7 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 |  | dBm/SCS | 1, 2 | -95.7 |  |
+| SS-RSRP Note 3 |  | dBm/SCS | 1, 2 | -Infinity | -87.7 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  | dB | 1, 2 | -Infinity | 8 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 1, 2 | -Infinity | 8 |
+| IoNote3 |  | dBm/95.04 MHz | 1, 2 | -66.7 | -58. 0 |
+| Propagation Condition |  |  | 1, 2 | AWGN |  |
+| NOTE 1: OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc]to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5: Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementation |  |  |  |  |  |
+
+##### A.8.4.2.7.2 Test Requirements
+
+the UE shall send one Event B1 triggered measurement report, with a measurement reporting delay less than D1 ms and D2 ms from the beginning of time period T2 for a UE incapable of per-FR gap and for a UE capable of per-FR gap, respectively. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+The UE is required to report SSB time index.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the measurement reporting delays above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+Table A.8.4.2.7.2-1: Test requirements for NR inter-RAT event triggered reporting for FR2 with SSB time index detection in non-DRX
+
+| Test case | Measurement reporting delay (ms) |  |
+| --- | --- | --- |
+|  | D1 ms | D2 ms |
+| UE power class 3 | 4160 | 2080 |
+
+#### A.8.4.2.8 NR Inter-RAT event triggered reporting tests for FR2 with SSB time index detection when DRX is used
+
+##### A.8.4.2.8.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the UE makes correct reporting of an event. This test will partly verify the NR inter-RAT cell search requirements in clause 8.1.2.4.21 of TS 36.133 [15] for E-UTRAN FDD-NR measurements and clause 8.1.2.4.22 of TS 36.133[15] for E-UTRAN TDD-NR measurements.
+
+In this test, there are two cells: E-UTRA cell 1 as PCell on E-UTRA RF channel 1 and NR cell 2 as neighbour cell in FR2 on NR RF channel 1. The test parameters are given in tables A.8.4.2.8.1-1, A.8.4.2.8.1-2 and A.8.4.2.8.1-3.
+
+The cell specific test parameters for E-UTRA Cell 1 as PCell are defined in clause A.3.7.2.2.
+
+Measurement gap pattern configuration defined in table A.8.4.2.8.1-2 is provided for a UE that does not support per-FR gap, and no gap pattern (Gap Pattern Id and Measurement gap offset) is configured for a UE capable of per-FR gap.
+
+In the measurement control information, it is indicated to the UE that event-triggered reporting with Event B1 (Inter RAT neighbour becomes better than threshold) [16] is used. In the measurement configuration the UE shall be indicated to report the SSB index of the identified NR cell. The test consists of two successive time periods, with time duration of T1, and T2 respectively. During time duration T1, the UE shall not have any timing information of NR cell 2.
+
+Table A.8.4.2.8.1-1: NR inter-RAT event triggered reporting tests with SSB index reading for FR2 in DRX
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| 2 | LTE TDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.8.4.2.8.1-2: General test parameters for NR inter-RAT event triggered reporting for FR2 with SSB time index detection in DRX
+
+| Parameter | Unit | Test configuration | Value |  | Comment |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | Test 1 | Test 2 |  |  |
+| E-UTRA RF Channel Number |  | 1, 2 | 1 |  | One E-UTRA carrier frequency is used. |  |
+| NR RF Channel Number |  | 1, 2 | 1 |  | One FR2 NR carrier frequency is used. |  |
+| Active cell |  | 1, 2 | E-UTRA cell 1 (PCell) |  | E-UTRA cell 1 is on E-UTRA RF channel number 1 as defined in clause A.3.7.2.2. |  |
+| Neighbour cell |  | 1, 2 | NR cell 2 |  | NR cell 2 is on NR RF channel number 1. |  |
+| Gap Pattern Id |  | 1, 2 | 0 |  | As specified in clause Table 8.1.2.1-1 of TS 36.133 [15]. |  |
+| Measurement gap offset |  | 1, 2 | 39 |  | As specified in TS 36.331 [16]. |  |
+| b1-ThresholdNR | dBm | 1, 2 | Note 1 |  | SS-RSRP threshold for SS-RSRP measurement on cell 2 for event B1 [16] |  |
+| Hysteresis | dB | 1, 2 | 0 |  |  |  |
+| CP length |  | 1, 2 | Normal |  |  |  |
+| TimeToTrigger | s | 1, 2 | 0 |  |  |  |
+| Filter coefficient |  | 1, 2 | 0 |  | L3 filtering is not used |  |
+| DRX |  |  | DRX.9 | DRX.12 | As specified in clause A.3.3 |  |
+| Time offset between serving and neighbour cells |  | 1 | 3 ms |  | Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1. |  |
+|  |  | 2 | 3s |  | Synchronous cells. |  |
+| T1 | s | 1, 2 | 5 |  |  |  |
+| T2 | s | 1, 2 | 7 | 70 |  |  |
+| NOTE 1: The value of b1-ThresholdNR is defined in table A.8.4.2.8.1-3 |  |  |  |  |  |  |
+
+Table A.8.4.2.8.1-3: NR neighbour cell specific test parameters for NR inter-RAT event triggered reporting for FR2 with SSB time index detection
+
+| Parameter |  | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  | T1 | T2 |
+| AoA setup defined in A.3.15.1 |  |  | 1, 2 | Setup 1 |  |
+| Assumption for UE beamsNote 5 |  |  | 1, 2 | Rough |  |
+| NR RF Channel Number |  |  | 1, 2 | 1 |  |
+| Duplex mode |  |  | 1, 2 | TDD |  |
+| TDD configuration |  |  | 1, 2 | TDDConf.3.1 |  |
+| BWchannel |  | MHz | 1, 2 | 100: NPRB,c = 66 |  |
+| OCNG patterns defined in A.3.2.1.1 |  |  | 1, 2 | OP.1 |  |
+| SMTC configuration defined in A.3.11.1 and A.3.11.2 |  |  | 1 | SMTC.2 |  |
+|  |  |  | 2 | SMTC.1 |  |
+| PDSCH/PDCCH subcarrier spacing |  | kHz | 1, 2 | 120 |  |
+| b1-ThresholdNR | UE power class 3 | dBm/SCS | 1, 2 | -106 |  |
+| EPRE ratio of PSS to SSS |  |  | 1, 2 | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS (Note 1) |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 |  | dBm/15kHz | 1, 2 | -104.7 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 |  | dBm/SCS | 1, 2 | -95.7 |  |
+| SS-RSRP Note 3 |  | dBm/SCS | 1, 2 | -Infinity | -87.7 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  | dB | 1, 2 | -Infinity | 8 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 1, 2 | -Infinity | 8 |
+| IoNote3 |  | dBm/95.04 MHz | 1, 2 | -66.7 | -58. 0 |
+| Propagation Condition |  |  | 1, 2 | AWGN |  |
+| NOTE 1: OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc]to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5: Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementation |  |  |  |  |  |
+
+##### A.8.4.2.8.2 Test Requirements
+
+In test 1, the UE shall send one Event B1 triggered measurement report, with a measurement reporting delay less than D1 ms and D3 ms from the beginning of time period T2 for a UE incapable of per-FR gap and for a UE capable of per-FR gap, respectively. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+In test 2, the UE shall send one Event B1 triggered measurement report, with a measurement reporting delay less than D2 ms from the beginning of time period T2 for a UE incapable of per-FR gap and for a UE capable of per-FR gap, respectively. The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled. The rate of correct events observed during repeated tests shall be at least 90 %.
+
+In tests 1 and 2, the UE is required to report SSB time index.
+
+Table A.8.4.2.8.2-1: Test requirements for NR inter-RAT event triggered reporting for FR2 with SSB time index detection in DRX
+
+| Test case | Measurement reporting delay (ms) |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | D1 ms | D2 ms | D3 ms | D4 ms |
+| UE power class 3 | 6240 | 66560 | 6240 | 66560 |
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the measurement reporting delays above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+#### A.8.4.2.9 NR Inter-RAT event triggered reporting tests for FR1 with SSB time index detection in DRX for UE configured with highSpeedInterRAT-NR-r16
+
+##### A.8.4.2.9.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the UE makes correct reporting of an event. This test will partly verify the NR inter-RAT cell search requirements in clause 8.1.2.4.21of TS 36.133 [15] for E-UTRAN FDD-NR measurements and clause 8.1.2.4.22 of TS 36.133[15] for E-UTRAN TDD-NR measurements when UE is configured with highSpeedInterRAT-NR-r16.
+
+In this test, there are two cells: E-UTRA cell 1 as PCell on E-UTRA RF channel 1 and NR cell 2 as neighbour cell in FR1 on NR RF channel 1. The test parameters are given in tables A.8.4.2.9.1-1, A.8.4.2.9.1-2, A.8.4.2.9.1-3 and A.8.4.2.9.1-4.
+
+In the measurement control information, it is indicated to the UE that event-triggered reporting with Event B2 (PCell becomes worse than threshold1 and inter RAT neighbour becomes better than threshold2) [16] is used. In the measurement configuration the UE shall be indicated to report the SSB index of the identified NR cell. The test consists of two successive time periods, with time duration of T1, and T2 respectively. During time duration T1, the UE shall not have any timing information of NR cell 2.
+
+Table A.8.4.2.9.1-1: NR inter-RAT event triggered reporting tests with SSB index reading for FR1 for UE configured with highSpeedInterRAT-NR-r16
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.8.4.2.9.1-2: General test parameters for NR inter-RAT event triggered reporting for FR1 with SSB time index detection for UE configured with highSpeedInterRAT-NR-r16
+
+| Parameter | Unit | Test configuration | Value | Comment |
+| --- | --- | --- | --- | --- |
+| E-UTRA RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 | One E-UTRA carrier frequency is used. |
+| NR RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 | One FR1 NR carrier frequency is used. |
+| Active cell |  | 1, 2, 3, 4, 5, 6 | E-UTRA cell 1 (PCell) | E-UTRA cell 1 is on E-UTRA RF channel number 1. |
+| Neighbour cell |  | 1, 2, 3, 4, 5, 6 | NR cell 2 | NR cell 2 is on NR RF channel number 1. |
+| Gap Pattern Id |  | 1, 2, 3, 4, 5, 6 | 0 | As specified in clause Table 8.1.2.1-1 of TS 36.133 [15]. |
+| Measurement gap offset |  | 1, 2, 3, 4, 5, 6 | 39 | As specified in TS 36.331 [16]. |
+| b2-Threshold1 | dBm | 1, 2, 3, 4, 5, 6 | Note 1 | E-UTRA RSRP threshold for E-UTRA RSRP measurement on cell 1 for event B2 [16] |
+| b2-Threshold2NR | dBm | 1, 2, 3, 4, 5, 6 | Note 2 | SS-RSRP threshold for SS-RSRP measurement on cell 2 for event B2 [16] |
+| Hysteresis | dB | 1, 2, 3, 4, 5, 6 | 0 |  |
+| CP length |  | 1, 2, 3, 4, 5, 6 | Normal |  |
+| TimeToTrigger | s | 1, 2, 3, 4, 5, 6 | 0 |  |
+| Filter coefficient |  | 1, 2, 3, 4, 5, 6 | 0 | L3 filtering is not used |
+| DRX |  | 1, 2, 3, 4, 5, 6 | DRX.5 | As specified in clause A.3.3 |
+| Time offset between serving and neighbour cells |  | 1, 4 | 3 ms | Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1. |
+|  |  | 2, 3, 5, 6 | 3s | Synchronous cells. |
+| T1 | s | 1, 2, 3, 4, 5, 6 | 5 |  |
+| T2 | s | 1, 2, 3, 4, 5, 6 | 5 |  |
+| NOTE 1: The value of b2-Threshold1 is defined in table A.8.4.2.9.1-3NOTE 2: The value of b2-Threshold2NR is defined in table A.8.4.2.9.1-4 |  |  |  |  |
+
+Table A.8.4.2.9.1-3: E-UTRAN PCell specific test parameters for NR inter-RAT event triggered reporting with NR neigbour cell in FR1 with SSB time index detection for UE configured with highSpeedInterRAT-NR-r16
+
+| Parameter | Unit | Configuration | Cell 1 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| RF channel number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 2, 3 | FDD |  |
+|  |  | 4, 5, 6 | TDD |  |
+| TDD special subframe configurationNote1 |  | 4, 5, 6 | 6 |  |
+| TDD uplink-downlink configurationNote1 |  | 4, 5, 6 | 1 |  |
+| BWchannel | MHz | 1, 2, 3, 4, 5, 6 | 5 MHz: NPRB,c = 2510 MHz: NPRB,c = 5020 MHz: NPRB,c = 100 |  |
+| PDSCH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.7 FDD10 MHz: R.3 FDD20 MHz: R.6 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.4 TDD10 MHz: R.0 TDD20 MHz: R.3 TDD |  |
+| PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.11 FDD10 MHz: R.6 FDD20 MHz: R.10 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.11 TDD10 MHz: R.6 TDD20 MHz: R.10 TDD |  |
+| OCNG PatternsNote2 |  | 1, 2, 3 | 5 MHz: OP.20 FDD10 MHz: OP.10 FDD20 MHz: OP.17 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: OP.9 TDD10 MHz: OP.1 TDD20 MHz: OP.7 TDD |  |
+| b2-Threshold1 | dBm | 1, 2, 3, 4, 5, 6 | -77 |  |
+| PBCH_RA | dB | 1, 2, 3, 4, 5, 6 | 0 |  |
+| PBCH_RB |  |  |  |  |
+| PSS_RA |  |  |  |  |
+| SSS_RA |  |  |  |  |
+| PCFICH_RB |  |  |  |  |
+| PHICH_RA |  |  |  |  |
+| PHICH_RB |  |  |  |  |
+| PDCCH_RA |  |  |  |  |
+| PDCCH_RB |  |  |  |  |
+| PDSCH_RA |  |  |  |  |
+| PDSCH_RB |  |  |  |  |
+| OCNG_RANote3 |  |  |  |  |
+| OCNG_RBNote3 |  |  |  |  |
+| NocNote4 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -104 |  |
+| Ês/Noc | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| Ês/IotNote5 | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| RSRPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| SCH_RPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| IoNote5 | dBm/9 MHz | 1, 2, 3, 4, 5, 6 | -59.13+10log (NPRB,c /50) | -59.13+10log (NPRB,c /50) |
+| Propagation Condition Note6 |  | 1, 2, 3, 4, 5, 6 | AWGN |  |
+| Antenna Configuration and Correlation Matrix Note6 |  | 1, 2, 3, 4, 5, 6 | 1x2 Low |  |
+| NOTE 1: Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211 [23].NOTE 2: DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 [15] respectively.NOTE 3: OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 4: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 5: Ês/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 6: Propagation condition and correlation matrix are defined in clause B.2 in TS 36.101 [25]. |  |  |  |  |
+
+Table A.8.4.2.9.1-4: NR neighbour cell specific test parameters for NR inter-RAT event triggered reporting for FR1 with SSB time index detection for UE configured with highSpeedInterRAT-NR-r16
+
+| Parameter | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| NR RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 4 | FDD |  |
+|  |  | 2, 3, 5, 6 | TDD |  |
+| TDD configuration |  | 2, 5 | TDDConf.1.1 |  |
+|  |  | 3, 6 | TDDConf.2.1 |  |
+| BWchannel | MHz | 1, 2, 4, 5 | 10: NPRB,c = 52 |  |
+|  |  | 3, 6 | 40: NPRB,c = 106 |  |
+| OCNG Patterns defined in A.3.2.1.1 (OP.1) |  | 1, 2, 3, 4, 5, 6 | OP.1 |  |
+| SMTC configuration defined in A.3.11.1 and A.3.11.2 |  | 1, 4 | SMTC.2 |  |
+|  |  | 2, 3, 5, 6 | SMTC.1 |  |
+| PDSCH/PDCCH subcarrier spacing | kHz | 1, 2, 4, 5 | 15 |  |
+|  |  | 3, 6 | 30 |  |
+| b2-Threshold2NR | dBm/SCS | 1, 2, 4, 5 | -101 |  |
+|  |  | 3, 6 | -98 |  |
+| EPRE ratio of PSS to SSS |  | 1, 2, 3, 4, 5, 6 | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS (Note 1) |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -98 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | dBm/SCS | 1, 2, 4, 5 | -98 |  |
+|  |  | 3, 6 | -95 |  |
+| SS-RSRP Note 3 | dBm/SCS | 1, 2, 4, 5 | -Infinity | -91 |
+|  |  | 3, 6 | -Infinity | -88 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| IoNote3 | dBm/9.36 MHz | 1, 2, 4, 5 | -70.05 | -62.26 |
+|  | dBm/38.16 MHz | 3, 6 | -63.95 | -56.16 |
+| Propagation Condition |  | 1, 2, 4, 5 | AWGN1944 |  |
+|  |  | 3,6 | AWGN3334 |  |
+| Antenna Configuration and Correlation Matrix |  | 1, 2, 3, 4, 5, 6 | 1x2 Low |  |
+| NOTE 1: OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+##### A.8.4.2.9.2 Test Requirements
+
+The UE shall send one Event B2 triggered measurement report, with a measurement reporting delay less than 4.8 s from the beginning of time period T2. The UE is required to read the neighbour cell SSB index and report the acquired SSB index in this test.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the measurement reporting delays above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+### A.8.4.3 E-UTRAN - NR Inter-RAT event-triggered without measurement gaps
+
+#### A.8.4.3.1 NR Inter-RAT event triggered reporting tests for FR2 without MG nor DRX
+
+##### A.8.4.3.1.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the UE makes correct reporting of an event. This test will partly verify the NR inter-RAT cell search requirements in clause 8.1.2.4.29 of TS 36.133 [15] for E-UTRAN FDD-NR measurements and clause 8.1.2.4.30 of TS 36.133[15] for E-UTRAN TDD-NR measurements, as well as the interruption requriements in clause 7.8.2.22.
+
+In this test, there are two cells: E-UTRA cell 1 as PCell on E-UTRA RF channel 1 and NR cell 2 as neighbour cell in FR2 on NR RF channel 1. The test parameters are given in tables A.8.4.3.1.1-1, A.8.4.3.1.1-2 and A.8.4.3.1.1-3.
+
+The cell specific test parameters for E-UTRA Cell 1 as PCell are defined in clause A.3.7.2.2.
+
+No measurement gap is configured for the test. UE is continuously scheduled in DL in LTE PCell during the test.
+
+In the measurement control information, it is indicated to the UE that event-triggered reporting with Event B1 (Inter RAT neighbour becomes better than threshold) [16] is used. The test consists of two successive time periods, with time duration of T1, and T2 respectively. During time duration T1, the UE shall not have timing information of NR cell 2.
+
+Table A.8.4.3.1.1-1: NR inter-RAT event triggered reporting tests without SSB index reading for FR2 in non-DRX
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| 2 | LTE TDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.8.4.3.1.1-2: General test parameters for NR inter-RAT event triggered reporting for FR2 without MG nor DRX
+
+| Parameter | Unit | Test configuration | Value | Comment |
+| --- | --- | --- | --- | --- |
+| E-UTRA RF Channel Number |  | 1, 2 | 1 | One E-UTRA carrier frequency is used. |
+| NR RF Channel Number |  | 1, 2 | 1 | One FR2 NR carrier frequency is used. |
+| Active cell |  | 1, 2 | E-UTRA cell 1 (PCell) | E-UTRA cell 1 is on E-UTRA RF channel number 1 as defined in clause A.3.7.2.2. |
+| Neighbour cell |  | 1, 2 | NR cell 2 | NR cell 2 is on NR RF channel number 1. |
+| b1-ThresholdNR | dBm | 1, 2 | Note 1 | SS-RSRP threshold for SS-RSRP measurement on cell 2 for event B1 [16] |
+| SMTC configuration |  | 1, 2 | SMTC.3 | As defined in A.3.11. |
+| Hysteresis | dB | 1, 2 | 0 |  |
+| CP length |  | 1, 2 | Normal |  |
+| TimeToTrigger | s | 1, 2 | 0 |  |
+| Filter coefficient |  | 1, 2 | 0 | L3 filtering is not used |
+| DRX |  | 1, 2 | OFF | DRX is not used |
+| Time offset between serving and neighbour cells |  | 1, 2 | 3s | Synchronous cells. |
+| T1 | s | 1, 2 | 10 |  |
+| T2 | s | 1, 2 |  |  |
+| NOTE 1: The value of b1-ThresholdNR is defined in table A.8.4.3.1.1-3 |  |  |  |  |
+
+Table A.8.4.3.1.1-3: NR neighbour cell specific test parameters for NR inter-RAT event triggered reporting for FR2 without SSB time index detection in non-DRX
+
+| Parameter |  | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  | T1 | T2 |
+| AoA setup defined in A.3.15.2.1 |  |  | 1, 2 | Setup 2a |  |
+| Assumption for UE beamsNote 5 |  |  | 1, 2 | Rough |  |
+| NR RF Channel Number |  |  | 1, 2 | 1 |  |
+| Duplex mode |  |  | 1, 2 | TDD |  |
+| TDD configuration |  |  | 1, 2 | TDDConf.3.1 |  |
+| BWchannel |  | MHz | 1, 2 | 100: NPRB,c = 24 |  |
+| OCNG patterns defined in A.3.2.1.1 |  |  | 1, 2 | OP. 3 |  |
+| SSB configuration |  |  | 1, 2 | SSB.3 FR2 |  |
+| PDSCH/PDCCH subcarrier spacing |  | kHz | 1, 2 | 120 |  |
+| b1-ThresholdNR | UE power class 3 | dBm/SCS | 1, 2 | -112 |  |
+| EPRE ratio of PSS to SSS |  |  | 1, 2 | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS (Note 1) |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |  |
+| Ês |  | dBm/SCS | 1, 2 | - Infinity | -80.6 |
+| SS B_RP Note 3 |  | dBm/SCS | 1, 2 | -Infinity | -80.6 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] BB Note 6 |  | dB | 1, 2 | -Infinity | 8.3 |
+| IoNote3 |  | dBm/95.04 MHz | 1, 2 | -Infinity | -56.0 |
+| Propagation Condition |  |  | 1, 2 | AWGN |  |
+| NOTE 1: OCNG shall be used such that a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: VoidNOTE 3: SS B_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: VoidNOTE 5: Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementationNOTE 6: Calculation of Es/IotBB includes the effect of UE internal noise up to the value assumed for the associated Refsens requirement in clause 7.3.2 of TS 38.101-2 [19], and an allowance of 1 dB for UE multi-band relaxation factor ΔMBP from TS 38.101-2 [19] Table 6.2.1.3-4. |  |  |  |  |  |
+
+##### A.8.4.3.1.2 Test Requirements
+
+In the test, the UE shall send one Event B1 triggered measurement report, with a measurement reporting delay less than D1 ms from the beginning of time period T2, where D1 = 12.8 s for UE power class 3.
+
+During the test, the interruption ratio (number of interrupted subframes over the number of total subframes) in LTE PCell shall be less than 1.25 %, and each interruption shall not exceed 1 subframe.
+
+The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled.
+
+In the test, the UE is not required to report SSB time index.
+
+The rate of correct events observed during repeated tests shall be at least 90 %.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the measurement reporting delays above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+#### A.8.4.3.2 NR Inter-RAT event triggered reporting tests for FR1 without gaps when DRX is not used
+
+##### A.8.4.3.2.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the UE makes correct reporting of an event when performing inter-RAT NR measurements without gaps and with or without interruptions. This test will partly verify the NR inter-RAT cell search requirements in clause 8.1.2.4.29 of TS 36.133 [15] for E-UTRAN FDD-NR measurements and clause 8.1.2.4.30 of TS 36.133[15] for E-UTRAN TDD-NR measurements.
+
+The purpose of this test is also to verify that the interruption ratio does not exceed the limits for the LTE PCell during the inter-RAT NR measurement without gaps and with interruptions. This test will verify the interruption ratio for LTE PCell in standalone LTE specified in clause 7.8.2.22.
+
+In this test, there are two cells: E-UTRA cell 1 as PCell on E-UTRA RF channel 1 and NR cell 2 as neighbour cell in FR1 on NR RF channel 1. The test parameters are given in tables A.8.4.3.2.1-1, A.8.4.3.2.1-2, A.8.4.3.2.1-3 and A.8.4.3.2.1-4.
+
+The serving frequency should be selected for this test case should be one in which the UE reports UE capabilities interRAT-NeedForGapsNR-r16=FALSE and interRAT-NeedForInterruptionNR-r18=’nogap-interruption’ or interRAT-NeedForInterruptionNR-r18=’nogap-nointerruption’.
+
+No measurement gap is configured for the test. UE is continuously scheduled in DL in LTE PCell during the test.
+
+In the measurement control information, it is indicated to the UE that event-triggered reporting with Event B1 Inter RAT neighbour becomes better than threshold) [16] is used. The test consists of two successive time periods, with time duration of T1, and T2 respectively. During time duration T1, the UE shall not have any timing information of NR cell 2.
+
+Table A.8.4.3.2.1-1: NR inter-RAT event triggered reporting tests without gaps and with interruptions
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.8.4.3.2.1-2: General test parameters for NR inter-RAT event triggered reporting for FR1 without gaps and with interruptions
+
+| Parameter | Unit | Test configuration | Value | Comment |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |
+| E-UTRA RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 | One E-UTRAcarrier frequency is used. |  |
+| NR RF Chanel Number |  | 1, 2, 3, 4, 5, 6 | 1 | One FR1 NR carrier frequency is used. |  |
+| Active cell |  | 1, 2, 3, 4, 5, 6 | E-UTRA Cell 1 (PCell) | E-UTRA Cell 1 is on E-UTRA RF channel number 1. |  |
+| Neighbour cell |  | 1, 2, 3, 4, 5, 6 | NR Cell 2 | NR Cell 2 is on NR RF channel number 1. |  |
+| b1-ThresholdNR | dBm | 1, 2, 3, 4, 5, 6 | Note 1 | SS-RSRP threshold for SS-RSRP measurement on cell 2 for event B1 [16] |  |
+| Hysteresis | dB | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| CP length |  | 1, 2, 3, 4, 5, 6 | Normal |  |  |
+| TimeToTrigger | s | 1, 2, 3, 4, 5, 6 | 0 |  |  |
+| Filter coefficient |  | 1, 2, 3, 4, 5, 6 | 0 | L3 filtering is not used |  |
+| DRX |  | 1, 2, 3, 4, 5, 6 | OFF | DRX is not used |  |
+| Time offset between serving and neighbour cells |  | 1, 4 | 3 ms | Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1. |  |
+|  |  | 2, 3, 5, 6 | 3s | Synchronous cells. |  |
+| T1 | s | 1, 2, 3, 4, 5, 6 | 5 |  |  |
+| T2 | s | 1, 2, 3, 4, 5, 6 | 2 |  |  |
+| NOTE 1: The value of b1-ThresholdNR is defined in table A.8.4.3.2.1-4 |  |  |  |  |  |
+
+Table A.8.4.3.2.1-3: E-UTRAN PCell specific test parameters for NR inter-RAT event triggered reporting in non-DRX with NR neighbour cell in FR1 without gaps and with interruptions
+
+| Parameter | Unit | Configuration | Cell 1 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| RF channel number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 2, 3 | FDD |  |
+|  |  | 4, 5, 6 | TDD |  |
+| TDD special subframe configurationNote1 |  | 4, 5, 6 | 6 |  |
+| TDD uplink-downlink configurationNote1 |  | 4, 5, 6 | 1 |  |
+| BWchannel | MHz | 1, 2, 3, 4, 5, 6 | 5 MHz: NPRB,c = 2510 MHz: NPRB,c = 5020 MHz: NPRB,c = 100 |  |
+| PDSCH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.7 FDD10 MHz: R.3 FDD20 MHz: R.6 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.4 TDD10 MHz: R.0 TDD20 MHz: R.3 TDD |  |
+| PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote2 |  | 1, 2, 3 | 5 MHz: R.11 FDD10 MHz: R.6 FDD20 MHz: R.10 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: R.11 TDD10 MHz: R.6 TDD20 MHz: R.10 TDD |  |
+| OCNG PatternsNote2 |  | 1, 2, 3 | 5 MHz: OP.20 FDD10 MHz: OP.10 FDD20 MHz: OP.17 FDD |  |
+|  |  | 4, 5, 6 | 5 MHz: OP.9 TDD10 MHz: OP.1 TDD20 MHz: OP.7 TDD |  |
+| PBCH_RA | dB | 1, 2, 3, 4, 5, 6 | 0 |  |
+| PBCH_RB |  |  |  |  |
+| PSS_RA |  |  |  |  |
+| SSS_RA |  |  |  |  |
+| PCFICH_RB |  |  |  |  |
+| PHICH_RA |  |  |  |  |
+| PHICH_RB |  |  |  |  |
+| PDCCH_RA |  |  |  |  |
+| PDCCH_RB |  |  |  |  |
+| PDSCH_RA |  |  |  |  |
+| PDSCH_RB |  |  |  |  |
+| OCNG_RANote3 |  |  |  |  |
+| OCNG_RBNote3 |  |  |  |  |
+| NocNote4 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -104 |  |
+| Ês/Noc | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| Ês/IotNote5 | dB | 1, 2, 3, 4, 5, 6 | 17 | 17 |
+| RSRPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| SCH_RPNote5 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -87 | -87 |
+| IoNote5 | dBm/9 MHz | 1, 2, 3, 4, 5, 6 | -59.13+10log (NPRB,c /50) | -59.13+10log (NPRB,c /50) |
+| Propagation Condition Note6 |  | 1, 2, 3, 4, 5, 6 | AWGN |  |
+| Antenna Configuration and Correlation Matrix Note6 |  | 1, 2, 3, 4, 5, 6 | 1x2 |  |
+| NOTE 1: Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211 [23].NOTE 2: DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 [15] respectively.NOTE 3: OCNG shall be used such that all cells are fully allocated, and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 4: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 5: Ês/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 6: Propagation condition and correlation matrix are defined in clause B.2 in TS 36.101 [25]. |  |  |  |  |
+
+Table A.8.4.3.2.1-4: NR neighbour cell specific test parameters for NR inter-RAT event triggered reporting for FR1 without SSB time index detection
+
+| Parameter | Unit | Test configuration | Cell 2 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| NR RF Channel Number |  | 1, 2, 3, 4, 5, 6 | 1 |  |
+| Duplex mode |  | 1, 4 | FDD |  |
+|  |  | 2, 3, 5, 6 | TDD |  |
+| TDD configuration |  | 2, 5 | TDDConf.1.1 |  |
+|  |  | 3, 6 | TDDConf.2.1 |  |
+| BWchannel | MHz | 1, 2, 4, 5 | 10: NPRB,c = 52 |  |
+|  |  | 3, 6 | 40: NPRB,c = 106 |  |
+| OCNG Patterns defined in A.3.2.1.1 (OP.1) |  | 1, 2, 3, 4, 5, 6 | OP.1 |  |
+| SMTC configuration defined in A.3.11 |  | 1, 4 | SMTC.2 |  |
+|  |  | 2, 3, 5, 6 | SMTC.1 |  |
+| PDSCH/PDCCH subcarrier spacing | kHz | 1, 2, 4, 5 | 15 |  |
+|  |  | 3, 6 | 30 |  |
+| b1-ThresholdNR | dBm/SCS | 1, 2, 4, 5 | -101 |  |
+|  |  | 3, 6 | -98 |  |
+| EPRE ratio of PSS to SSS |  | 1, 2, 3, 4, 5, 6 | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS (Note 1) |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |
+| $ N_{oc}$ Note2 | dBm/15kHz | 1, 2, 3, 4, 5, 6 | -98 |  |
+| $ N_{oc}$ Note2 | dBm/SCS | 1, 2, 4, 5 | -98 |  |
+|  |  | 3, 6 | -95 |  |
+| SS-RSRP Note 3 | dBm/SCS | 1, 2, 4, 5 | -Infinity | -91 |
+|  |  | 3, 6 | -Infinity | -88 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 1, 2, 3, 4, 5, 6 | -Infinity | 7 |
+| IoNote3 | dBm/9.36 MHz | 1, 2, 4, 5 | -70.05 | -62.26 |
+|  | dBm/38.16 MHz | 3, 6 | -63.95 | -56.16 |
+| Propagation Condition |  | 1, 2, 3, 4, 5, 6 | AWGN |  |
+| Antenna Configuration and Correlation Matrix |  | 1, 2, 3, 4, 5, 6 | 1x2 |  |
+| NOTE 1: OCNG shall be used such that the cell is fully allocated, and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for $ N_{oc}$ to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+##### A.8.4.3.2.2 Test Requirements
+
+The UE shall be continuously scheduled on PCell during the entire length of T1 and T2. During both time durations the interruption ratio should not exceed 2.5 %.
+
+In the test, the UE shall send one Event B1 triggered measurement report, with a measurement reporting delay less than D1 ms from the beginning of time period T2.
+
+D1 = 1280 for a UE that supports interRAT-NeedForInterruptionNR-r18=’nogap-interruption’
+
+D1 = 800 for a UE that supports interRAT-NeedForInterruptionNR-r18=’nogap-nointerruption’
+
+The UE shall not send event triggered measurement reports, as long as the reporting criteria are not fulfilled.
+
+The UE is not required to report SSB time index.
+
+The rate of correct events observed during repeated tests shall be at least 90 %.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the measurement reporting delays above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+## A.8.5 Measurement performance
+
+### A.8.5.1 SFTD accuracy
+
+#### A.8.5.1.1 SFTD accuracy
+
+##### A.8.5.1.1.1 Test Purpose
+
+The purpose of this set of tests is to verify that the SFTD measurement accuracy is within the specified limits. This test will verify the requirements as specified in clause 9.1.27 in TS 36.133 [15] for inter-RAT FR1 SFTD measurements.
+
+##### A.8.5.1.1.2 Test Environment
+
+Supported test configurations are shown in table A.8.5.1.1.2-1. In this set of test cases there are two cells on different carriers. Cell 1 is E-UTRAN PCell and Cell 2 is inter-RAT NR FR1 target cell. The test parameters of cell 1 are given in clause A.8.5.1.1.2-2. The test parameters of cell 2 are given in table A.8.5.1.1.2-3. The SFTD between PCell and target cell shall be set by the test equipment to one of the time differences in table A.8.5.1.1.2-4.
+
+Table A.8.5.1.1.2-1: Supported test configurations for SFTD accuracy
+
+| Configuration | Description |
+| --- | --- |
+| 1 | NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode, LTE FDD |
+| 2 | NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode, LTE FDD |
+| 3 | NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode, LTE FDD |
+| 4 | NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode, LTE TDD |
+| 5 | NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode, LTE TDD |
+| 6 | NR 30kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode, LTE TDD |
+| NOTE: The UE is only required to be tested in one of the supported test configurations |  |
+
+Table A.8.5.1.1.2-2: Test parameters for SFTD accuracy (Cell 1)
+
+| Parameter | Unit | Test 1 |
+| --- | --- | --- |
+| E-UTRA RF Channel Number |  | 1 |
+| Duplex mode |  | FDD or TDD |
+| TDD special subframe configurationNote1 |  | 6 |
+| TDD uplink-downlink configurationNote1 |  | 1 |
+| BWchannel |  | 5 MHz: NPRB,c = 2510 MHz: NPRB,c = 5020 MHz: NPRB,c = 100 |
+| PDSCH parameters:DL Reference Measurement ChannelNote2 |  | 5 MHz: R.7 FDD10 MHz: R.3 FDD20 MHz: R.6 FDD5 MHz: R.4 TDD10 MHz: R.0 TDD20 MHz: R.3 TDD |
+| PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote2 |  | 5 MHz: R.11 FDD10 MHz: R.6 FDD20 MHz: R.10 FDD5 MHz: R.11 TDD10 MHz: R.6 TDD20 MHz: R.10 TDD |
+| OCNG PatternsNote2 |  | 5 MHz: OP.20 FDD10 MHz: OP.10 FDD20 MHz: OP.17 FDD5 MHz: OP.9 TDD10 MHz: OP.1 TDD20 MHz: OP.7 TDD |
+| PBCH_RA | dB | 0 |
+| PBCH_RB | dB |  |
+| PSS_RA | dB |  |
+| SSS_RA | dB |  |
+| PCFICH_RB | dB |  |
+| PHICH_RA | dB |  |
+| PHICH_RB | dB |  |
+| PDCCH_RA | dB |  |
+| PDCCH_RB | dB |  |
+| PDSCH_RA | dB |  |
+| PDSCH_RB | dB |  |
+| OCNG_RANote3 | dB |  |
+| OCNG_RBNote3 | dB |  |
+| NocNote4 | dBm/15 kHz | -104 |
+| Ês/Noc | dB | -3 |
+| Ês/Iot | dB | -3 |
+| RSRP Note5 | dBm/15 kHz | -107 |
+| SCH_RP Note5 | dBm/15 kHz | -107 |
+| Io Note5 | dBm/Ch BW | -74.45+10log(NPRB,c /50) |
+| Propagation Condition |  | AWGN |
+| Antenna Configuration |  | 1x2 |
+| NOTE 1: Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211 [23].NOTE 2: DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 [15] respectively.NOTE 3: OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 4: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 5: Es/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |
+
+Table A.8.5.1.1.2-3: Test parameters for SFTD accuracy (Cell 2)
+
+| Parameter |  | Config | Unit | Test 1 |
+| --- | --- | --- | --- | --- |
+| SSB ARFCN |  | 1~6 |  | freq1 |
+| Duplex mode |  | 1,4 |  | FDD |
+|  |  | 2,5 |  | TDD |
+|  |  | 3,6 |  | TDD |
+| TDD Configuration |  | 1,4 |  | N/A |
+|  |  | 2,5 |  | TDDConf.1.1 |
+|  |  | 3,6 |  | TDDConf.2.1 |
+| BWchannel |  | 1,4 | MHz | 10: NPRB,c = 52 |
+|  |  | 2,5 |  | 10: NPRB,c = 52 |
+|  |  | 3,6 |  | 40: NPRB,c = 106 |
+| PDSCH Reference measurement channel |  | 1,4 |  | SR.1.1 FDD |
+|  |  | 2,5 |  | SR.1.1 TDD |
+|  |  | 3,6 |  | SR.2.1 TDD |
+| RMSI CORESET Reference Channel |  | 1,4 |  | CR.1.1 FDD |
+|  |  | 2,5 |  | CR.1.1 TDD |
+|  |  | 3,6 |  | CR.2.1 TDD |
+| RMC CORESET Reference Channel |  | 1,4 |  | CCR.1.1 FDD |
+|  |  | 2,5 |  | CCR.1.1 TDD |
+|  |  | 3,6 |  | CCR.2.1 TDD |
+| SSB configuration |  | 1,4 |  | SSB.1 FR1 |
+|  |  | 2,5 |  | SSB.1 FR1 |
+|  |  | 3,6 |  | SSB.2 FR1 |
+| SMTC configuration |  | 1~6 |  | SMTC.1 |
+| DL BWP configuration |  | 1~6 |  | DLBWP.1.1 |
+| UL BWP configuration |  | 1~6 |  | ULBWP.1.1 |
+| OCNG Patterns |  | 1~6 |  | OP.1 |
+| EPRE ratio of PSS to SSS |  | 1~6 | dB | 0 |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH DMRS |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSSNote 1 |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS Note 1 |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | NR_FDD_FR1_A, NR_TDD_FR1_A NOTE 5 | 1~6 | dBm/15kHz | -104 |
+|  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |
+|  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |
+|  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |
+|  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |
+|  | NR_FDD_FR1_F |  |  |  |
+|  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |
+|  | NR_FDD_FR1_H |  |  |  |
+|  | NR_FDD_FR1_N |  |  |  |
+| Note2 | NR_FDD_FR1_A, NR_TDD_FR1_A NOTE 5 | 1,2,4,5 | dBm/SSB SCS | -104 |
+|  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |
+|  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |
+|  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |
+|  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |
+|  | NR_FDD_FR1_F |  |  |  |
+|  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |
+|  | NR_FDD_FR1_H |  |  |  |
+|  | NR_FDD_FR1_N |  |  |  |
+|  | NR_FDD_FR1_A, NR_TDD_FR1_A NOTE 5 | 3,6 |  | -101 |
+|  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |
+|  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |
+|  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |
+|  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |
+|  | NR_FDD_FR1_F |  |  |  |
+|  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |
+|  | NR_FDD_FR1_H |  |  |  |
+|  | NR_FDD_FR1_N |  |  |  |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  | 1~6 | dB | -3 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | 1~6 | dB | -3 |
+| SS-RSRP Note3 | NR_FDD_FR1_A, NR_TDD_FR1_A NOTE 5 | 1,2,4,5 | dBm/SCS | -107 |
+|  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |
+|  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |
+|  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |
+|  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |
+|  | NR_FDD_FR1_F |  |  |  |
+|  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |
+|  | NR_FDD_FR1_H |  |  |  |
+|  | NR_FDD_FR1_N |  |  |  |
+|  | NR_FDD_FR1_A, NR_TDD_FR1_A NOTE 5 | 3,6 |  | -104 |
+|  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |
+|  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |
+|  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |
+|  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |
+|  | NR_FDD_FR1_F |  |  |  |
+|  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |
+|  | NR_FDD_FR1_H |  |  |  |
+|  | NR_FDD_FR1_N |  |  |  |
+| Io Note3 | NR_FDD_FR1_A, NR_TDD_FR1_A NOTE 5 | 1,2,4,5 | dBm/9.36 MHz | -74.28 |
+|  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |
+|  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |
+|  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |
+|  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |
+|  | NR_FDD_FR1_F |  |  |  |
+|  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |
+|  | NR_FDD_FR1_H |  |  |  |
+|  | NR_FDD_FR1_N |  |  |  |
+|  | NR_FDD_FR1_A, NR_TDD_FR1_A NOTE 5 | 3,6 | dBm/38.16 MHz | -68.18 |
+|  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |
+|  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |
+|  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |
+|  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |
+|  | NR_FDD_FR1_F |  |  |  |
+|  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |
+|  | NR_FDD_FR1_H |  |  |  |
+|  | NR_FDD_FR1_N |  |  |  |
+| Propagation condition |  | 1~6 |  | AWGN |
+| Antenna configuration |  | 1~6 |  | 1x2 |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5:  The test configuration excludes support for band n51 and it is not required to run this test on band n51 in this release of the specification |  |  |  |  |
+
+Table A.8.5.1.1.2-4: Timing offsets for SFTD accuracy test
+
+| Condition | SFN offset between PCell and PSCell | Frame boundary offset between PCell and PSCell (Ts) |
+| --- | --- | --- |
+| 1 | 100 | -122000 |
+| 2 | 300 | -60540 |
+| 3 | 500 | 1000 |
+| 4 | 700 | 62540 |
+| 5 | 900 | 124000 |
+
+##### A.8.5.1.1.3 Test Requirements
+
+The SFTD reported by the UE consists of 2 elements, SFN offset and frame boundary offset between PCell and inter-RAT NR target cell. The reported SFTD accuracy shall fulfil the requirement in clause 9.1.27 in TS36.133[15].
+
+### A.8.5.2 E-UTRA – NR Inter-RAT Measurement Performance requirements
+
+A.8.5.2.1 SS-RSRP
+
+##### A.8.5.2.1.1 E-UTRAN – NR inter-RAT measurements with FR1 target cell
+
+A.8.5.2.1.1.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the SS-RSRP measurement accuracy is within the specified limits. This test will verify the requirements in clause 9.11.1 in TS 36.133 [15] for inter-RAT FR1 SS-RSRP measurements.
+
+A.8.5.2.1.1.2 Test Parameters
+
+Supported test configurations are shown in table A.8.5.2.1.1.2-1. In this test case there are two cells on different carriers. Cell 1 is the E-UTRA cell which specific test parameters for this test case are specified in table A.3.7.2.1-1. Cell 2 is the inter-RAT NR FR1 target cell. The absolute accuracy requirements of SS-RSRP inter-RAT measurement is tested by using test parameters in table A.8.5.2.1.1.2-2.
+
+Table A.8.5.2.1.1.2-1: SS-RSRP Inter-RAT SS-RSRP supported test configurations
+
+| Config | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations |  |
+
+Table A.8.5.2.1.1.2-2: SS-RSRP inter-RAT test parameters
+
+| Parameter |  |  | Unit | Test 1 |  | Test 2 |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  | Cell 2 |  | Cell 2 |  |
+| SSB ARFCN |  |  |  | freq1 |  | freq1 |  |
+| Duplex mode |  | Config 1,4 |  | FDD |  |  |  |
+|  |  | Config 2,3,5,6 |  | TDD |  |  |  |
+| TDD configuration |  | Config 1,4 |  | Not Applicable |  |  |  |
+|  |  | Config 2,5 |  | TDDConf.1.1 |  |  |  |
+|  |  | Config 3,6 |  | TDDConf.2.1 |  |  |  |
+| Downlink initial BWP configuration |  |  |  | DLBWP.0.1 |  |  |  |
+| Uplink initial BWP configuration |  |  |  | ULBWP.0.1 |  |  |  |
+| DRX Cycle configuration |  |  | ms | Not Applicable |  |  |  |
+| PDSCH Reference measurement channel |  | Config 1,4 |  | - |  | - |  |
+|  |  | Config 2,5 |  |  |  |  |  |
+|  |  | Config 3,6 |  |  |  |  |  |
+| RMSI CORESET Reference Channel |  | Config 1,4 |  | - |  | - |  |
+|  |  | Config 2,5 |  |  |  |  |  |
+|  |  | Config 3,6 |  |  |  |  |  |
+| Dedicated CORESET Reference Channel |  | Config 1,4 |  | - |  | - |  |
+|  |  | Config 2,5 |  |  |  |  |  |
+|  |  | Config 3,6 |  |  |  |  |  |
+| OCNG Patterns |  |  |  | OP.1 |  |  |  |
+| SS-RSSI-Measurement |  |  |  | Not Applicable |  |  |  |
+| SMTC configruation |  |  |  | SMTC.1 |  |  |  |
+| SSB configuration |  | Config 1,2,4,5 |  | SSB.1 FR1 |  |  |  |
+|  |  | Config 3,6 |  | SSB.2 FR1 |  |  |  |
+| PDSCH/PDCCH subcarrier spacing |  | Config 1,2,4,5 | kHz | 15 |  |  |  |
+|  |  | Config 3,6 |  | 30 |  |  |  |
+| EPRE ratio of PSS to SSS |  |  | dB | 0 | 0 | 0 | 0 |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS(Note 1) |  |  |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,3,4,5,6 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/15kHz | -94.65 |  | -117 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  | -116.5 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  | -116 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  | -115.5 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  | -115 |  |
+|  |  | NR_FDD_FR1_F |  |  |  | -114.5 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  | -114 |  |
+|  |  | NR_FDD_FR1_H |  |  |  | -113.5 |  |
+|  |  | NR_FDD_FR1_N |  |  |  | -110.5 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,4,5 |  | dBm/SCS | -94.65 |  | Same as Noc for 15kHz |  |
+|  | Config 3,6 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 |  | -91.65 |  | -114 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  | -113.5 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  | -113 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  | -112.5 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  | -112 |  |
+|  |  | NR_FDD_FR1_F |  |  |  | -111.5 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  | -111 |  |
+|  |  | NR_FDD_FR1_H |  |  |  | -110.5 |  |
+|  |  | NR_FDD_FR1_N |  |  |  | -107.5 |  |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  |  | dB | 10 |  | -4 |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  |  | dB | 10 |  | -4 |  |
+| SS-RSRPNote3 | Config 1,2,4,5 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/SCS | -84.65 |  | -121 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  | -120.5 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  | -120 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  | -119.5 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  | -119 |  |
+|  |  | NR_FDD_FR1_F |  |  |  | -118.5 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  | -118 |  |
+|  |  | NR_FDD_FR1_H |  |  |  | -117.5 |  |
+|  |  | NR_FDD_FR1_N |  |  |  | -114.5 |  |
+|  | Config 3,6 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 |  | -81.65 |  | -118 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  | -117.5 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  | -117 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  | -116.5 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  | -116 |  |
+|  |  | NR_FDD_FR1_F |  |  |  | -115.5 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  | -115 |  |
+|  |  | NR_FDD_FR1_H |  |  |  | -114.5 |  |
+|  |  | NR_FDD_FR1_N |  |  |  | -111.5 |  |
+| IoNote3 | Config 1,2,4,5 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/9.36 MHz | -56.28 |  | -87.76 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  | -87.26 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  | -86.76 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  | -86.26 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  | -85.76 |  |
+|  |  | NR_FDD_FR1_F |  |  |  | -85.26 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  | -84.76 |  |
+|  |  | NR_FDD_FR1_H |  |  |  | -84.26 |  |
+|  |  | NR_FDD_FR1_N |  |  |  | -81.26 |  |
+|  | Config 3,6 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/38.16 MHz | -50.19 |  | -84.76 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  | -84.26 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  | -83.76 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  | -83.26 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  | -82.76 |  |
+|  |  | NR_FDD_FR1_F |  |  |  | -82.26 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  | -81.76 |  |
+|  |  | NR_FDD_FR1_H |  |  |  | -81.26 |  |
+|  |  | NR_FDD_FR1_N |  |  |  | -78.26 |  |
+| Propagation condition |  |  | - | AWGN |  |  |  |
+| Antenna configuration |  |  | - | 1x2 |  |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP, and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5: NR operating band groups are as defined in clause 3.5.2.NOTE 6:  The test configuration excludes support for band n51 and it is not required to run this test on band n51 in this release of the specification. |  |  |  |  |  |  |  |
+
+A.8.5.2.1.1.3 Test Requirements
+
+The SS-RSRP measurement accuracy for Cell 2 shall fulfil the requirement in clause 9.11.1 in TS 36.133 [15].
+
+##### A.8.5.2.1.2 E-UTRAN – NR inter-RAT measurements with FR2 target cell
+
+###### A.8.5.2.1.2.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the SS-RSRP measurement accuracy is within the specified limits. This test will verify the requirements in clause 9.11.1 in TS 36.133 [15] for inter-RAT FR2 SS-RSRP measurements.
+
+###### A.8.5.2.1.2.2 Test Parameters
+
+Supported test configurations are shown in table A.8.5.2.1.2.2-1. In this test case there are two cells on different carriers. Absolute accuracy requirements of SS-RSRP inter-RAT measurement are tested by using test setup in table A.8.5.2.1.2.2-2 and table A.8.5.2.1.2.2-3. In all test cases, Cell 2 is target cell. Cell 1 is the E-UTRA cell which specific test parameters for this test case are specified in table A.3.7.2.1-1.
+
+Table A.8.5.2.1.2.2-1: SS-RSRP Inter-RAT SS-RSRP supported test configurations
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| 2 | LTE TDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+
+Table A.8.5.2.1.2.2-2: SS-RSRP Inter-RAT general test parameters
+
+| Parameter | Unit | Test 1 | Test 2 |
+| --- | --- | --- | --- |
+|  |  | Cell 2 | Cell 2 |
+| SSB ARFCN |  | Freq1 | freq1 |
+| Duplex mode |  | TDD | TDD |
+| TDD configuration |  | TDDConf.3.1 | TDDConf.3.1 |
+| BWchannel | MHz | 100: NPRB,c = 66 | 100: NPRB,c = 66 |
+| Downlink initial BWP configuration |  | DLBWP.0.1 |  |
+| Uplink initial BWP configuration |  | ULBWP.0.1 |  |
+| DRX cycle configuration | ms | Not applicable |  |
+| PDSCH Reference measurement channel |  | - | - |
+| RMSI CORESET Reference Channel |  | - | - |
+| OCNG Patterns |  | OP.1 | OP.1 |
+| SMTC configuration |  | SMTC.1 | SMTC.1 |
+| SSB configuration |  | SSB.3 FR2 | SSB.3 FR2 |
+| PDSCH/PDCCH subcarrier spacing | kHz | 120 | 120 |
+| EPRE ratio of PSS to SSS | dB | 0 | 0 |
+| EPRE ratio of PBCH_DMRS to SSS |  |  |  |
+| EPRE ratio of PBCH to PBCH_DMRS |  |  |  |
+| EPRE ratio of PDCCH_DMRS to SSS |  |  |  |
+| EPRE ratio of PDCCH to PDCCH_DMRS |  |  |  |
+| EPRE ratio of PDSCH_DMRS to SSS |  |  |  |
+| EPRE ratio of PDSCH to PDSCH_DMRS |  |  |  |
+| EPRE ratio of OCNG DMRS to SSSNote 1 |  |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: VoidNOTE 3: VoidNOTE 4: Void |  |  |  |
+
+Table A.8.5.2.1.2.2-3: SS-RSRP Inter-RAT OTA related test parameters
+
+| Parameter | Unit | Test 1 | Test 2 |
+| --- | --- | --- | --- |
+|  |  | Cell 2 | Cell 2 |
+| Angle of arrival configuration |  | Setup 1 according to A.3.15.1 | Setup 1 according to A.3.15.1 |
+| Assumption for UE beamsNote 10 |  | Rough | Rough |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note1 | dBm/15kHz Note4 | -105 | N/A |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note1 | dBm/SCSNote4 | -96 | N/A |
+| Es | dBm/SCSNote4 |  | (Table B.2.3-2 Rx Beam Peak +1 dB)(Note 7) |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 11 | N/A |
+| SSB_RPNote2 | dBm/SCS Note4 | -85 | (Table B.2.3-2 Rx Beam Peak +1 dB)(Note 7) |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot]BB Note 2, Note 9 | dB | 9.97 | -3.81 |
+| IoNote2 | dBm/95.04 MHz Note4 | -55.65 | (Table B.2.3-2 Rx Beam Peak +30 dB)(Note 8) |
+| NOTE 1: Where used, interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: SSB_RP, Es/Iot and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: VoidNOTE 4: Equivalent power received by an antenna with 0 dBi gain at the centre of the quiet zone.NOTE 5: VoidNOTE 6: VoidNOTE 7: SSB_RP is applied at 1 dB above the minimum level specified in table B.2.3-2 for beam peak.NOTE 8: Io is applied at 10log10(792)dB+1 dB above the minimum level specified in table B.2.3-2 for beam peak.NOTE 9: Calculation of Es/IotBB includes the effect of UE internal noise up to the value assumed for the associated Refsens requirement in clause 7.3.2 of TS 36.101-2 [19], and an allowance of 1 dB for UE multi-band relaxation factor ΔMBP from TS 38.101-2 [19] Table 6.2.1.3-4.Note 10: Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementation. |  |  |  |
+
+###### A.8.5.2.1.2.3 Test Requirements
+
+The SS-RSRP measurement accuracy for Cell 2 shall fulfil the requirement in clause 9.11.1 in TS 36.133 [15].
+
+#### A.8.5.2.2 SS-RSRQ
+
+##### A.8.5.2.2.1 E-UTRAN – NR inter-RAT measurements with FR1 target cell
+
+A.8.5.2.2.1.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the SS-RSRQ measurement accuracy is within the specified limits. This test will verify the requirements in clause 9.11.2 in TS 36.133 [15] for inter-RAT FR1 SS-RSRQ measurements.
+
+A.8.5.2.2.1.2 Test Parameters
+
+Supported test configurations are shown in table A.8.5.2.2.1.2-1. In this test case there are two cells on different carriers. Cell 1 is the E-UTRA cell which specific test parameters for this test case are specified in table A.3.7.2.1-1. Cell 2 is the inter-RAT NR FR1 target cell. The absolute accuracy requirements of SS-RSRP inter-RAT measurement is tested by using test parameters in table A.8.5.2.2.1.2-2.
+
+Table A.8.5.2.2.1.2-1: SS-RSRQ Inter-RAT SS-RSRQ supported test configurations
+
+| Config | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations |  |
+
+Table A.8.5.2.2.1.2-2: SS-RSRQ inter-RAT test parameters
+
+| Parameter |  |  | Unit | Test 1 |  | Test 2 |  | Test 3 |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  | Cell 2 |  | Cell 2 |  | Cell 2 |  |
+| SSB ARFCN |  |  |  | freq1 |  | freq1 |  | freq1 |  |
+| Duplex mode |  | Config 1,4 |  | FDD |  |  |  |  |  |
+|  |  | Config 2,3,5,6 |  | TDD |  |  |  |  |  |
+| TDD configuration |  | Config 1,4 |  | Not Applicable |  |  |  |  |  |
+|  |  | Config 2,5 |  | TDDConf.1.1 |  |  |  |  |  |
+|  |  | Config 3,6 |  | TDDConf.2.1 |  |  |  |  |  |
+| Downlink initial BWP configuration |  |  |  | DLBWP.0.1 |  |  |  |  |  |
+| Uplink initial BWP configuration |  |  |  | ULBWP.0.1 |  |  |  |  |  |
+| DRX Cycle configuration |  |  | ms | Not Applicable |  |  |  |  |  |
+| PDSCH Reference measurement channel |  | Config 1,4 |  | - |  | - |  | - |  |
+|  |  | Config 2,5 |  |  |  |  |  |  |  |
+|  |  | Config 3,6 |  |  |  |  |  |  |  |
+| RMSI CORESET Reference Channel |  | Config 1,4 |  | - |  | - |  | - |  |
+|  |  | Config 2,5 |  |  |  |  |  |  |  |
+|  |  | Config 3,6 |  |  |  |  |  |  |  |
+| Dedicated CORESET Reference Channel |  | Config 1,4 |  | - |  | - |  | - |  |
+|  |  | Config 2,5 |  |  |  |  |  |  |  |
+|  |  | Config 3,6 |  |  |  |  |  |  |  |
+| OCNG Patterns |  |  |  | OP.1 |  |  |  |  |  |
+| SS-RSSI-Measurement |  |  |  | Not Applicable |  |  |  |  |  |
+| SMTC configruation |  |  |  | SMTC.1 |  |  |  |  |  |
+| SSB configuration |  | Config 1,2,4,5 |  | SSB.1 FR1 |  |  |  |  |  |
+|  |  | Config 3,6 |  | SSB.2 FR1 |  |  |  |  |  |
+| PDSCH/PDCCH subcarrier spacing |  | Config 1,2,4,5 | kHz | 15 |  |  |  |  |  |
+|  |  | Config 3,6 |  | 30 |  |  |  |  |  |
+| EPRE ratio of PSS to SSS |  |  | dB | 0 | 0 | 0 | 0 | 0 | 0 |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS(Note 1) |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,4,5 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/15kHz | -80.18 |  | -106 |  | -116 |  |
+|  |  | NR_FDD_FR1_B |  |  |  |  |  | -115.5 |  |
+|  |  | NR_TDD_FR1_C |  |  |  |  |  | -115 |  |
+|  |  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |  |  | -114.5 |  |
+|  |  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |  |  | -114 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -113.5 |  |
+|  |  | NR_FDD_FR1_G |  |  |  |  |  | -113 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -112.5 |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -109.5 |  |
+|  | Config 3,6 |  |  | -86.27 |  | -113 |  | Same as Noc for Config 1,2,4,5 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,4,5 |  | dBm/SCS | -80.18 |  | -106 |  | Same as Noc for 15kHz |  |
+|  | Config 3,6 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 |  | -83.27 |  | -110 |  | -113 |  |
+|  |  | NR_FDD_FR1_B |  |  |  |  |  | -112.5 |  |
+|  |  | NR_TDD_FR1_C |  |  |  |  |  | -112 |  |
+|  |  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |  |  | -111.5 |  |
+|  |  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |  |  | -111 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -110.5 |  |
+|  |  | NR_FDD_FR1_G |  |  |  |  |  | -110 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -109.5 |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -106.5 |  |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  |  | dB | -1.75 |  | -1.75 |  | -1.75 |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  |  | dB | -1.75 |  | -1.75 |  | -1.75 |  |
+| SS-RSRPNote3 | Config 1,2,4,5 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/SCS | -81.93 |  | -107.75 |  | -117.75 |  |
+|  |  | NR_FDD_FR1_B |  |  |  |  |  | -117.25 |  |
+|  |  | NR_TDD_FR1_C |  |  |  |  |  | -116.75 |  |
+|  |  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |  |  | -116.25 |  |
+|  |  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |  |  | -115.75 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -115.25 |  |
+|  |  | NR_FDD_FR1_G |  |  |  |  |  | -114.75 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -114.25 |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -111.25 |  |
+|  | Config 3,6 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 |  | -85.02 |  | -111.75 |  | -114.75 |  |
+|  |  | NR_FDD_FR1_B |  |  |  |  |  | -114.25 |  |
+|  |  | NR_TDD_FR1_C |  |  |  |  |  | -113.75 |  |
+|  |  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |  |  | -113.25 |  |
+|  |  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |  |  | -112.75 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -112.25 |  |
+|  |  | NR_FDD_FR1_G |  |  |  |  |  | -111.75 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -111.25 |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -108.25 |  |
+| SS-RSRQ Note3 |  | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dB | -14.77 |  | -40.59 |  | -14.76 |  |
+|  |  | NR_FDD_FR1_B |  |  |  |  |  |  |  |
+|  |  | NR_TDD_FR1_C |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_G |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  |  |  |
+| IoNote3 | Config 1,2,4,5 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/9.36 MHz | -50 |  | -75.83 |  | -85.83 |  |
+|  |  | NR_FDD_FR1_B |  |  |  |  |  | -85.33 |  |
+|  |  | NR_TDD_FR1_C |  |  |  |  |  | -84.83 |  |
+|  |  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |  |  | -84.33 |  |
+|  |  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |  |  | -83.83 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -83.33 |  |
+|  |  | NR_FDD_FR1_G |  |  |  |  |  | -82.83 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -82.33 |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -79.33 |  |
+|  | Config 3,6 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/38.16 MHz | -50 |  | -76.73 |  | -79.73 |  |
+|  |  | NR_FDD_FR1_B |  |  |  |  |  | -79.23 |  |
+|  |  | NR_TDD_FR1_C |  |  |  |  |  | -78.73 |  |
+|  |  | NR_FDD_FR1_D, NR_TDD_FR1_D |  |  |  |  |  | -78.23 |  |
+|  |  | NR_FDD_FR1_E, NR_TDD_FR1_E |  |  |  |  |  | -77.73 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -77.23 |  |
+|  |  | NR_FDD_FR1_G |  |  |  |  |  | -76.73 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -76.53 |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -73.53 |  |
+| Propagation condition |  |  | - | AWGN |  |  |  |  |  |
+| Antenna configuration |  |  | - | 1x2 |  |  |  |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRQ, SS-RSRP, and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRQ minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5: NR operating band groups are as defined in clause 3.5.2.NOTE 6:  The test configuration excludes support for band n51 and it is not required to run this test on band n51 in this release of the specification. |  |  |  |  |  |  |  |  |  |
+
+A.8.5.2.2.1.3 Test Requirements
+
+The SS-RSRQ measurement accuracy for Cell 2 shall fulfil the requirement in clause 9.11.2 in TS 36.133 [15].
+
+##### A.8.5.2.2.2 E-UTRAN – NR inter-RAT measurements with FR2 target cell
+
+###### A.8.5.2.2.2.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the SS-RSRQ measurement accuracy is within the specified limits. This test will verify the requirements in clause 9.11.2 in TS 36.133 [15] for inter-RAT FR2 SS-RSRQ measurements.
+
+###### A.8.5.2.2.2.2 Test Parameters
+
+Supported test configurations are shown in table A.8.5.2.2.2.2-1. In this test case there are two cells on different carriers. Absolute accuracy requirements of SS-RSRQ inter-RAT measurement are tested by using test setup in table A.8.5.2.2.2.2-2 and table A.8.5.2.2.2.2-3. In all test cases, Cell 2 is target cell. Cell 1 is the E-UTRA cell which specific test parameters for this test case are specified in table A.3.7.2.1-1.
+
+Table A.8.5.2.2.2.2-1: SS-RSRQ Inter-RAT SS-RSRQ supported test configurations
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| 2 | LTE TDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+
+Table A.8.5.2.2.2.2-2: SS-RSRQ Inter-RAT general test parameters
+
+| Parameter | Unit | Test 1 | Test 2 |
+| --- | --- | --- | --- |
+|  |  | Cell 2 | Cell 2 |
+| SSB ARFCN |  | Freq1 | freq1 |
+| Duplex mode |  | TDD | TDD |
+| TDD configuration |  | TDDConf.3.1 | TDDConf.3.1 |
+| BWchannel | MHz | 100: NPRB,c = 66 | 100: NPRB,c = 66 |
+| Downlink initial BWP configuration |  | DLBWP.0.1 |  |
+| Uplink initial BWP configuration |  | ULBWP.0.1 |  |
+| DRX cycle configuration | ms | Not applicable |  |
+| PDSCH Reference measurement channel |  | - | - |
+| RMSI CORESET Reference Channel |  | - | - |
+| OCNG Patterns |  | OP.1 | OP.1 |
+| SMTC configuration |  | SMTC.1 | SMTC.1 |
+| SSB configuration |  | SSB.3 FR2 | SSB.3 FR2 |
+| PDSCH/PDCCH subcarrier spacing | kHz | 120 | 120 |
+| EPRE ratio of PSS to SSS | dB | 0 | 0 |
+| EPRE ratio of PBCH_DMRS to SSS |  |  |  |
+| EPRE ratio of PBCH to PBCH_DMRS |  |  |  |
+| EPRE ratio of PDCCH_DMRS to SSS |  |  |  |
+| EPRE ratio of PDCCH to PDCCH_DMRS |  |  |  |
+| EPRE ratio of PDSCH_DMRS to SSS |  |  |  |
+| EPRE ratio of PDSCH to PDSCH_DMRS |  |  |  |
+| EPRE ratio of OCNG DMRS to SSSNote 1 |  |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: VoidNOTE 3: VoidNOTE 4: Void |  |  |  |
+
+Table A.8.5.2.2.2.2-3: SS-RSRQ Inter-RAT OTA related test parameters
+
+| Parameter | Unit | Test 1 | Test 2 |
+| --- | --- | --- | --- |
+|  |  | Cell 2 | Cell 2 |
+| Angle of arrival configuration |  | Setup 1 according to A.3.15.1 | Setup 1 according to A.3.15.1 |
+| Assumption for UE beamsNote 10 |  | Rough | Rough |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note1 | dBm/15kHz Note4 | -104.7 | (Table B.2.3-2 Rx Beam Peak -5 dB)(Note 7) |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note1 | dBm/SCS Note4 | -95.7 | (Table B.2.3-2 Rx Beam Peak +4 dB)(Note 7) |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | -0.5 | -1.75 |
+| SSB_RPNote2 | dBm/SCS Note4 | -96.2 | (Table B.2.3-2 Rx Beam Peak +2.25 dB)(Note 8) |
+| SS-RSRQNote2 | dB | -3.27 | -14.82 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] Note2 | dB | -0.5 | -1.75 |
+| IoNote2 | dBm/95.04 MHz Note4 | -63.95 | (Table B.2.3-2 Rx Beam Peak +35.22 dB)(Note 9) |
+| NOTE 1: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: SSB_RP, SS-RSRQ, Es/Iot and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: VoidNOTE 4: Equivalent power received by an antenna with 0 dBi gain at the centre of the quiet zone.NOTE 5: VoidNOTE 6: VoidNOTE 7: Noc for SCS 15kHz is applied at -10log10(8)+4 dB above the minimum level specified in table B.2.3-2 for beam peak. Noc for SCS 120kHz is applied at 4 dB above the minimum level specified in table B.2.3-2 for beam peak.NOTE 8: SSB_RP is applied at 2.25 dB above the minimum level specified in table B.2.3-2 for beam peak.NOTE 9: Io is applied at 10log10(792)+6.22 dB above the minimum level specified in table B.2.3-2 for beam peak.Note 10: Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementation. |  |  |  |
+
+###### A.8.5.2.2.2.3 Test Requirements
+
+The SS-RSRQ measurement accuracy for Cell 2 shall fulfil the requirement in clause 9.11.2 in TS 36.133 [15].
+
+In this test case there are two cells on different carriers and measurement gaps are provided
+
+#### A.8.5.2.3 SS-SINR
+
+##### A.8.5.2.3.1 E-UTRAN – NR inter-RAT measurements with FR1 target cell
+
+A.8.5.2.3.1.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the SS- SINR measurement accuracy is within the specified limits. This test will verify the requirements in clause 9.11.3 in TS 36.133 [15] for inter-RAT FR1 SS-SINR measurements.
+
+A.8.5.2.3.1.2 Test Parameters
+
+Supported test configurations are shown in table A.8.5.2.3.1.2-1. In this test case there are two cells on different carriers. Cell 1 is the E-UTRA cell which specific test parameters for this test case are specified in table A.3.7.2.1-1. Cell 2 is the inter-RAT NR FR1 target cell. The absolute accuracy requirements of SS-RSRP inter-RAT measurement is tested by using test parameters in table A.8.5.2.3.1.2-2.
+
+Table A.8.5.2.3.1.2-1: SS- SINR Inter-RAT SS- SINR supported test configurations
+
+| Config | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 2 | LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 3 | LTE FDD, NR 30kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| 4 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode |
+| 5 | LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode |
+| 6 | LTE TDD, NR 30kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations |  |
+
+Table A.8.5.2.3.1.2-2: SS-SINR inter-RAT test parameters
+
+| Parameter |  |  | Unit | Test 1 |  | Test 2 |  | Test 3 |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  | Cell 2 |  | Cell 2 |  | Cell 2 |  |
+| SSB ARFCN |  |  |  | freq1 |  | freq1 |  | freq1 |  |
+| Duplex mode |  | Config 1,4 |  | FDD |  |  |  |  |  |
+|  |  | Config 2,3,5,6 |  | TDD |  |  |  |  |  |
+| TDD configuration |  | Config 1,4 |  | Not Applicable |  |  |  |  |  |
+|  |  | Config 2,5 |  | TDDConf.1.1 |  |  |  |  |  |
+|  |  | Config 3,6 |  | TDDConf.2.1 |  |  |  |  |  |
+| Downlink initial BWP configuration |  |  |  | DLBWP.0.1 |  |  |  |  |  |
+| Uplink initial BWP configuration |  |  |  | ULBWP.0.1 |  |  |  |  |  |
+| DRX Cycle configuration |  |  | ms | Not Applicable |  |  |  |  |  |
+| PDSCH Reference measurement channel |  | Config 1,4 |  | - |  | - |  | - |  |
+|  |  | Config 2,5 |  |  |  |  |  |  |  |
+|  |  | Config 3,6 |  |  |  |  |  |  |  |
+| RMSI CORESET Reference Channel |  | Config 1,4 |  | - |  | - |  | - |  |
+|  |  | Config 2,5 |  |  |  |  |  |  |  |
+|  |  | Config 3,6 |  |  |  |  |  |  |  |
+| Dedicated CORESET Reference Channel |  | Config 1,4 |  | - |  | - |  | - |  |
+|  |  | Config 2,5 |  |  |  |  |  |  |  |
+|  |  | Config 3,6 |  |  |  |  |  |  |  |
+| OCNG Patterns |  |  |  | OP.1 |  |  |  |  |  |
+| SS-RSSI-Measurement |  |  |  | Not Applicable |  |  |  |  |  |
+| SMTC configruation |  |  |  | SMTC.1 |  |  |  |  |  |
+| SSB configuration |  | Config 1,2,4,5 |  | SSB.1 FR1 |  |  |  |  |  |
+|  |  | Config 3,6 |  | SSB.2 FR1 |  |  |  |  |  |
+| PDSCH/PDCCH subcarrier spacing |  | Config 1,2,4,5 | kHz | 15 |  |  |  |  |  |
+|  |  | Config 3,6 |  | 30 |  |  |  |  |  |
+| EPRE ratio of PSS to SSS |  |  | dB | 0 | 0 | 0 | 0 | 0 | 0 |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS(Note 1) |  |  |  |  |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,4,5 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/15kHz | -880 |  | -108.5 |  | -119.5 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |  |  | -119 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |  |  | -118.5 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  |  |  | -118 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  |  |  | -117.5 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -117 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |  |  | -116.5 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -116 |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -113 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,4,5 |  | dBm/SCS | [-80] |  | -88 |  | -108.5 |  |
+|  | Config 3,6 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 |  | -85 |  | -105.5 |  | -116.5 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |  |  | -116 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |  |  | -115.5 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  |  |  | -115 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  |  |  | -114.5 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -114 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |  |  | -114.5 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -113] |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -110 |  |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  |  | dB | -1.75 |  | 20 |  | -4.0 |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  |  | dB | -1.75 |  | 20 |  | -4.0 |  |
+| SS-RSRPNote3 | Config 1,2,4,5 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/SCS | -89.75 |  | -88.5 |  | -123.5 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |  |  | -123 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |  |  | -122.5 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  |  |  | -122 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  |  |  | -121.5 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -121 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |  |  | -120.5 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -120 |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -117 |  |
+|  | Config 3,6 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 |  | -86.75 |  | -85.5 |  | -120.5 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |  |  | -120 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |  |  | -119.5 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  |  |  | -119 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  |  |  | -118.5 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -118 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |  |  | -117.5 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -117 |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -114 |  |
+| SS-SINR Note3 |  | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dB | -1.75 |  | 20 |  | -4.0 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  |  |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  |  |  |
+| IoNote3 | Config 1,2,4,5 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/9.36 MHz | -57.83 |  | -60.5 |  | -90.09 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |  |  | -89.59 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |  |  | -89.09 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  |  |  | -88.59 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  |  |  | -88.09 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -87.59 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |  |  | -87.09 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -86.59 |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -83.59 |  |
+|  | Config 3,6 | NR_FDD_FR1_ANR_TDD_FR1_A NOTE 6 | dBm/38.16 MHz | -51.73 |  | -54.41 |  | -84 |  |
+|  |  | NR_FDD_FR1_B, NR_TDD_FR1_B |  |  |  |  |  | -83.5 |  |
+|  |  | NR_FDD_FR1_C, NR_TDD_FR1_C |  |  |  |  |  | -83 |  |
+|  |  | NR_FDD_FR1_DNR_TDD_FR1_D |  |  |  |  |  | -82.5 |  |
+|  |  | NR_FDD_FR1_ENR_TDD_FR1_E |  |  |  |  |  | -82 |  |
+|  |  | NR_FDD_FR1_F |  |  |  |  |  | -81.5 |  |
+|  |  | NR_FDD_FR1_G, NR_TDD_FR1_G |  |  |  |  |  | -81 |  |
+|  |  | NR_FDD_FR1_H |  |  |  |  |  | -80.5 |  |
+|  |  | NR_FDD_FR1_N |  |  |  |  |  | -77.5 |  |
+| Propagation condition |  |  | - | AWGN |  |  |  |  |  |
+| Antenna configuration |  |  | - | 1x2 |  |  |  |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-SINR, SS-RSRP, and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-SINR, SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5: NR operating band groups are as defined in clause 3.5.2.NOTE 6:  The test configuration excludes support for band n51 and it is not required to run this test on band n51 in this release of the specification. |  |  |  |  |  |  |  |  |  |
+
+A.8.5.2.3.1.3 Test Requirements
+
+The SS-SINR measurement accuracy for Cell 2 shall fulfil the requirement in clause 9.11.3 in TS 36.133 [15].
+
+##### A.8.5.2.3.2 E-UTRAN – NR inter-RAT measurements with FR2 target cell
+
+###### A.8.5.2.3.2.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the SS- SINR measurement accuracy is within the specified limits. This test will verify the requirements in clause 9.11.3 in TS 36.133 [15] for inter-RAT FR2 SS-SINR measurements.
+
+###### A.8.5.2.3.2.2 Test Parameters
+
+Supported test configurations are shown in table A.8.5.2.3.2.2-1. In this test case there are two cells on different carriers. Absolute accuracy requirements of SS-SINR inter-RAT measurement are tested by using test setup in table A.8.5.2.3.2.2-2 and A.8.5.2.3.2.2-3. In all test cases, Cell 2 is target cell. Cell 1 is the E-UTRA cell which specific test parameters for this test case are specified in table A.3.7.2.1-1.
+
+Table A.8.5.2.3.2.2-1: SS-SINR Inter-RAT SS-SINR supported test configurations
+
+| Configuration | Description |
+| --- | --- |
+| 1 | LTE FDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+| 2 | LTE TDD, NR 120 kHz SSB SCS, 100 MHz bandwidth, TDD duplex mode |
+
+Table A.8.5.2.3.2.2-2: SS-SINR Inter-RAT general test parameters
+
+| Parameter | Unit | Test 1 | Test 2 | Test 3 |
+| --- | --- | --- | --- | --- |
+|  |  | Cell 2 | Cell 2 | Cell 2 |
+| SSB ARFCN |  | Freq1 | freq1 | freq1 |
+| Duplex mode |  | TDD | TDD | TDD |
+| TDD configuration |  | TDDConf.3.1 | TDDConf.3.1 | TDDConf.3.1 |
+| BWchannel | MHz | 100: NPRB,c = 66 | 100: NPRB,c = 66 | 100: NPRB,c = 66 |
+| Downlink initial BWP configuration |  | DLBWP.0.1 |  |  |
+| Uplink initial BWP configuration |  | ULBWP.0.1 |  |  |
+| DRX cycle configuration | ms | Not applicable |  |  |
+| PDSCH Reference measurement channel |  | - | - | - |
+| RMSI CORESET Reference Channel |  | - | - | - |
+| OCNG Patterns |  | OP.1 | OP.1 | OP.1 |
+| SMTC configuration |  | SMTC.1 | SMTC.1 | SMTC.1 |
+| SSB configuration |  | SSB.3 FR2 | SSB.3 FR2 | SSB.3 FR2 |
+| PDSCH/PDCCH subcarrier spacing | kHz | 120 | 120 | 120 |
+| EPRE ratio of PSS to SSS | dB | 0 | 0 | 0 |
+| EPRE ratio of PBCH_DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH_DMRS |  |  |  |  |
+| EPRE ratio of PDCCH_DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH_DMRS |  |  |  |  |
+| EPRE ratio of PDSCH_DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH_DMRS |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSSNote 1 |  |  |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: VoidNOTE 3: VoidNOTE 4: Void |  |  |  |  |
+
+Table A.8.5.2.3.2.2-3: SS-SINR Inter-RAT OTA related test parameters
+
+| Parameter | Unit | Test 1 | Test 2 | Test 3 |
+| --- | --- | --- | --- | --- |
+|  |  | Cell 2 | Cell 2 | Cell 2 |
+| Angle of arrival configuration |  | Setup 1 according to A.3.15.1 | Setup 1 according to A.3.15.1 | Setup 1 according to A.3.15.1 |
+| Assumption for UE beamsNote 10 |  | Rough | Rough | Rough |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note1 | dBm/15kHz Note4 | -104.7 | -104.7 | (Table B.2.3-2 Rx Beam Peak -5 dB)(Note 7) |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note1 | dBm/SCS Note4 | -95.7 | -95.7 | (Table B.2.3-2 Rx Beam Peak +4 dB)(Note 7) |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | -0.5 | 11 | -1.0 |
+| SSB_RPNote2 | dBm/SCS Note4 | -96. 2 | -84.7 | (Table B.2.3-2 Rx Beam Peak +3 dB)(Note 8) |
+| SS-SINRNote2 | dB | -0.5 | 11 | -1.0 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] Note2 | dB | -0.5 | 11 | -1.0 |
+| IoNote2 | dBm/95.04 MHz Note4 | -63.95 | -55.38 | (Table B.2.3-2 Rx Beam Peak +35.54 dB)(Note 9) |
+| NOTE 1: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: SSB_RP, SS-SINR, Es/Iot and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: VoidNOTE 4: Equivalent power received by an antenna with 0 dBi gain at the centre of the quiet zone.NOTE 5: VoidNOTE 6: VoidNOTE 7: Noc for SCS 15kHz is applied at -10log10(8)+4 dB above the minimum level specified in table B.2.3-2 for beam peak. Noc for SCS 120kHz is applied at 4 dB above the minimum level specified in table B.2.3-2 for beam peak.NOTE 8: SSB_RP is applied at 3 dB above the minimum level specified in table B.2.3-2 for beam peak.NOTE 9: Io is applied at level 10log10(792)+6.54 dB above the minimum level specified in table B.2.3-2 for beam peak.Note 10: Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementation. |  |  |  |  |
+
+###### A.8.5.2.3.2.3 Test Requirements
+
+The SS-SINR measurement accuracy for Cell 2 shall fulfil the requirement in clause 9.11.3 in TS 36.133 [15].
+
+# A.9 V2X Tests
+
+## A.9.1 V2X Tests in FR1
+
+### A.9.1.1 Test for V2X UE Transmit Timing
+
+#### A.9.1.1.1 Test for GNSS as Synchronization Reference Source
+
+##### A.9.1.1.1.1 Test Purpose and Environment
+
+
+The purpose of this test is to verify the UE timing requirements as specified in clause 12.2.2, when the GNSS is used as timing reference. For this test, the UE is triggered by the test loop function to transmit for V2X sidelink communication.
+
+Table A.9.1.1.1.1-1 defines test parameters for UE transmit timing accuracy tests for V2X. There is one GNSS based synchronization source during the test. The test system can emulate and send the GNSS signal to the test UE. The test parameters for GNSS signals are defined in B.4.1.
+
+Table A.9.1.1.1.1-1: V2X Sidelink Test Parameters for UE Transmit Timing Tests for GNSS as Timing Reference
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| RF Channel Number |  | 1 | HD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 1 | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| SCS | kHz | 30 |  |
+| Active cell |  | None |  |
+| Active SyncRef UE |  | None |  |
+| V2X sidelink communication preconfiguration |  | As specified in section A.3.21.2 | IE values unless specified otherwise in this test. |
+| PSCCH Reference Measurement Channel |  | CC.1A HD | As specified in table A.3.21.3-1 |
+| PSSCH Reference Measurement Channel |  | CD.1A HD | As specified in table A.3.21.3-2 |
+| Propagation condition |  | AWGN |  |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |  |  |
+
+##### A.9.1.1.1.2 Test requirements
+
+For parameters specified in tables A.9.1.1.1-1, the timing accuracy for V2X sidelink transmission shall be within the limits defined in clause 12.2.2. The timing accuracy is verified by using PSSCH transmissions.
+
+#### A.9.1.1.2 Test for SyncRef UE as Synchronization Reference Source
+
+##### A.9.1.1.2.1 Test Purpose and Environment
+
+The purpose of this test is to verify the timing requirements for V2X sidelink transmissions specified in clause 12.2.5, when SyncRef UE is used as timing reference. For this test, the UE is triggered by the test loop function to transmit for V2X sidelink communication.
+
+Table A.9.1.1.2.1-1 defines test parameters for UE transmit timing accuracy tests for V2X sidelink Communication. There is one active SyncRef UE in this test without either serving cell and or GNSS signals. Before the test starts, the UE has been synchronized to the SyncRef UE. The transmit timing accuracy is verified by using the transmission timing of PSSCH transmissions.
+
+Table A.9.1.1.2.1-1: General Test Parameters for V2X UE Transmit Timing Test for SyncRef UE as Timing Reference
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| RF Channel Number |  |  | 1 | HD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 3 |  | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| SCS |  | kHz | 30 |  |
+| Active cell |  |  | None |  |
+| Active SyncRef UE |  |  | SyncRef UE 1 | Transmitting S-SSB on RF channel number 1 |
+| V2X sidelink communication preconfiguration |  |  | As specified in section A.3.21.2 | IE values unless specified otherwise in this test. |
+| PSCCH Reference Measurement Channel |  |  | CC.1A HD | As specified in table A.3.21.3-1 |
+| PSSCH Reference Measurement Channel |  |  | CD.1A HD | As specified in table A.3.21.3-2 |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note1,2 |  | dBm/30kHz | -95 |  |
+| SyncRef UE 1 | sl-SSB-TimeAllocation |  | sl-SSB-TimeAllocation1 |  |
+|  | slssid |  | 30 |  |
+|  | inCoverage |  | TRUE | In MIB-SL |
+|  | networkControlledSyncTx |  | ON |  |
+|  | V2X sidelink communication configuration |  | As specified in section A.3.21.2 | IE values unless specified otherwise in this test. |
+|  | ![](media_svg/image6.svg) [公式≈: ^{Ê}s^{N}oc] |  | 3 |  |
+|  | PSBCH-RSRP Note1, Note 2 | dBm/30kHz | -92 |  |
+| Propagation condition |  |  | AWGN |  |
+| NOTE 1: PSBCH-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 2: S-PSS Es/Noc and S-SSS Es/Noc are set the same as PSBCH Es/Noc.NOTE 3: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |
+
+##### A.9.1.1.2.2 Test requirements
+
+For parameters specified in tables A.9.1.1.2.1-1, the timing accuracy for V2X sidelink transmission shall be within the limits defined in clause 12.2.5. The timing accuracy is verified by using PSSCH transmissions.
+
+#### A.9.1.1.3 Test for FR1 NR Cell as Synchronization Reference Source
+
+##### A.9.1.1.3.1 Test Purpose and Environment
+
+The purpose of this test is to verify the timing requirements for V2X sidelink transmissions specified in clause 12.2.3, when the downlink timing of the serving cell (RRC_IDLE) or PCell (RRC_CONNECTED) on a non-V2X sidelink carrier is used as timing reference. For this test, the UE is triggered by the test loop function or the upper layers to transmit for V2X sidelink communication.
+
+This test is applicable for V2X sidelink communication capable UEs that support NR Uu and sidelink operation.
+
+Table A.9.1.1.3.1-1, A.9.1.1.3.1-2 and A.9.1.1.3.1-3 define test parameters for UE transmit timing accuracy tests for V2X sidelink Communication. There is one active cell (PCell) in this test. The transmit timing accuracy is verified by using the transmission timing of PSSCH transmissions.
+
+Table A.9.1.1.3.1-1: Supported test configurations for FR1 PCell
+
+| Configuration | Description |
+| --- | --- |
+| 1 | NR Uu: FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 2 | NR Uu: TDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 3 | NR Uu: TDD, SSB SCS 30 kHz, data SCS 30 kHz, BW 40 MHz |
+| NOTE: The UE is only required to pass in one of the supported test configurations in FR1 |  |
+
+Table A.9.1.1.3.1-2: V2X Sidelink Test Parameters for V2X UE Transmit Timing Accuracy Test for gNB as Timing Reference
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| RF Channel Number |  | 1 | HD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 1 | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| SCS | kHz | 30 |  |
+| Active cell |  | Cell 1 |  |
+| Active SyncRef UE |  | None |  |
+| V2X sidelink communication configuration |  | As specified in section A.3.21.2 | IE values unless specified otherwise in this test. |
+| PSCCH Reference Measurement Channel |  | CC.1A HD | As specified in table A.3.21.3-1 |
+| PSSCH Reference Measurement Channel |  | CD.1A HD | As specified in table A.3.21.3-2 |
+| NOTE 1:     The UE is only required to be tested in one of the supported test configurations. |  |  |  |
+
+Table A.9.1.1.3.1-3: Cell Test Parameters for V2X UE Transmit Timing Accuracy Test for gNB as Timing Reference
+
+| Parameter |  | Unit | Cell 1 |
+| --- | --- | --- | --- |
+| RF Channel Number |  |  | 2 |
+| Duplex Mode | Config 1 |  | FDD |
+|  | Config 2,3 |  | TDD |
+| TDD configuration | Config 1 |  | Not Applicable |
+|  | Config 2 |  | TDDConf.1.1 |
+|  | Config 3 |  | TDDConf.2.1 |
+| Channel Bandwidth (BWchannel) | Config 1,2 | MHz | 10: NPRB,c = 52 |
+|  | Config 3 |  | 40: NPRB,c = 106 |
+| Initial BWP Configuration |  |  | DLBWP.0.1ULBWP.0.1 |
+| Dedicated BWP Configuration |  |  | DLBWP.1.1ULBWP.1.1 |
+| DRX Cycle |  |  | N/A |
+| PDSCH Reference measurement channel | Config 1 |  | SR.1.1 FDD |
+|  | Config 2 |  | SR.1.1 TDD |
+|  | Config 3 |  | SR.2.1 TDD |
+| CORESET Reference Channel | Config 1 |  | CR.1.1 FDD |
+|  | Config 2 |  | CR.1.1 TDD |
+|  | Config 3 |  | CR.2.1 TDD |
+| Dedicated CORESET Reference Channel | Config 1 |  | CCR.1.1 FDD |
+|  | Config 2 |  | CCR.1.1 TDD |
+|  | Config 3 |  | CCR.2.1 TDD |
+| SSB configuration | Config 1,2 |  | SSB.1 FR1 |
+|  | Config 3 |  | SSB.2 FR1 |
+| SMTC Configuration |  |  | SMTC.2 |
+| OCNG Patterns |  |  | OP.1 |
+| EPRE ratio of PSS to SSS |  | dB | 0 |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS(Note 1) |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | Config 1,2,3 | dBm/15 kHz | -98 |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | Config 1,2 | dBm/SCS | -98 |
+|  | Config 3 |  | -95 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 3 |
+| SS-RSRP Note3 | Config 1,2 | dBm/SCS | -95 |
+|  | Config 3 |  | -92 |
+| Io Note 3 | Config 1,2 | dBm/9.36 MHz | -65.2 |
+|  | Config 3 | dBm/38.1 MHz | -59.2 |
+| Propagation Condition |  |  | AWGN |
+| NOTE 1: OCNG shall be used such that cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |
+
+##### A.9.1.1.3.2 Test requirements
+
+For parameters specified in tables A.9.1.1.3.1-1 A.9.1.1.3.1-2 and A.9.1.1.3.1-3, the timing accuracy for V2X sidelink transmission shall be within the limits defined in clause 12.2.3. The timing accuracy is verified by using PSSCH transmissions.
+
+### A.9.1.2 Test for Initiation/Cease of S-SSB Transmission with V2X Sidelink Communication
+
+#### A.9.1.2.1 Test for FR1 NR Cell as synchronization reference source without gap under non-DRX
+
+##### A.9.1.2.1.1 Test Purpose and Environment
+
+The purpose of this test is to verify that the V2X UE meets the requirements related to the maximum evaluation time allowed to initiate and cease S-SSB transmissions defined in clause 12.3.1.1, when the reference timing used for sidelink transmissions is a NR serving cell in FR1 on a non-V2X sidelink carrier.
+
+This test is applicable for V2X sidelink communication capable UEs that support NR Uu and sidelink operation.
+
+Supported test configurations for FR1 NR cell are shown in table A.9.1.2.1.1-1.
+
+Table A.9.1.2.1.1-1: Supported Test Configurations for FR1 NR cell as synchronization reference source
+
+| Configuration | Description |
+| --- | --- |
+| 1 | NR Uu: FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 2 | NR Uu: TDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 3 | NR Uu: TDD, SSB SCS 30 kHz, data SCS 30 kHz, BW 40 MHz |
+| NOTE 1: The UE is only required to pass in one of the supported test configurations in FR1.NOTE 2: For NR SL, SL BW is one between 20 MHz and 40 MHz, and SL SCS is 30kHz. |  |
+
+The test parameters are given in table A.9.1.2.1.1-2 and table A.9.1.2.1.1-3 below. There is one active cell in this test. The test consists of three successive time periods, with time duration of T1, T2 and T3 respectively.
+
+During T1, the SS-RSRP of the PCell is above syncTxThreshIC and the UE is not expected to be transmitting S-SSB.
+
+During T2, the SS-RSRP of the PCell is lowered below syncTxThreshIC and the UE is expected to initiate S-SSB transmissions.
+
+During T3, the SS-RSRP of the PCell is increased back to be above syncTxThreshIC and the UE is expected to cease S-SSB transmissions.
+
+Table A.9.1.2.1.1-2: Test Parameters for Initiation/Cease of S-SSB Transmission Test for FR1 NR cell as synchronization reference source
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| SCS | kHz | 30 |  |
+| Active cell |  | Cell 1 | Serving cell on RF channel number 1 |
+| Active SyncRef UE |  | None |  |
+| Active V2X UE |  | V2X UE | Transmitting S-SSB on RF channel number 2 (HD carrier in Band n47 or n38) |
+| V2X sidelink communication configuration |  | As specified in table A.3.21.2-2 | IE values unless specified otherwise in this test |
+| networkControlledSyncTx |  | Not configured |  |
+| syncTxThreshIC | dBm/SCS | -110 | In SIB12 |
+| DRX |  | OFF |  |
+| T1 | s | 3 |  |
+| T2 | s | 5.24 |  |
+| T3 | s | 5.24 |  |
+
+Table A.9.1.2.1.1-3: FR1 NR Cell Specific Test Parameters for Initiation/Cease of S-SSB Transmission Test for FR1 NR cell as synchronization reference source
+
+| Parameter |  | Unit | Cell 1 |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 | T3 |
+| NR RF Channel Number |  |  | 1 |  |  |
+| Duplex Mode | Config 1 |  | FDD |  |  |
+|  | Config 2,3 |  | TDD |  |  |
+| TDD configuration | Config 1 |  | Not applicable |  |  |
+|  | Config 2 |  | TDDConf.1.1 |  |  |
+|  | Config 3 |  | TDDConf.2.1 |  |  |
+| Channel Bandwidth (BWchannel) | Config 1,2 | MHz | 10:NPRB,c = 52 |  |  |
+|  | Config 3 |  | 40:NPRB,c = 106 |  |  |
+| Initial BWP Configuration |  |  | DLBWP.0.1ULBWP.0.1 |  |  |
+| Dedicated BWP Configuration |  |  | DLBWP.1.1ULBWP.1.1 |  |  |
+| DRX Cycle |  | ms | N/A |  |  |
+| PDSCH Reference measurement channel | Config 1 |  | SR.1.1 FDD |  |  |
+|  | Config 2 |  | SR.1.1 TDD |  |  |
+|  | Config 3 |  | SR.2.1 TDD |  |  |
+| CORESET Reference Channel | Config 1 |  | CR.1.1 FDD |  |  |
+|  | Config 2 |  | CR.1.1 TDD |  |  |
+|  | Config 3 |  | CR.2.1 TDD |  |  |
+| Dedicated CORESET Reference Channel | Config 1 |  | CCR.1.1 FDD |  |  |
+|  | Config 2 |  | CCR.1.1 TDD |  |  |
+|  | Config 3 |  | CCR.2.1 TDD |  |  |
+| SSB configuration | Config 1,2 |  | SSB.1 FR1 |  |  |
+|  | Config 3 |  | SSB.2 FR1 |  |  |
+| SMTC Configuration | Config 1 |  | SMTC.2 |  |  |
+|  | Config 2,3 |  | SMTC.1 |  |  |
+| TRS configuration | Config 1 |  | TRS.1.1 FDD |  |  |
+|  | Config 2 |  | TRS.1.1 TDD |  |  |
+|  | Config 3 |  | TRS.1.2 TDD |  |  |
+| OCNG Patterns |  |  | OP.1 |  |  |
+| EPRE ratio of PSS to SSS |  | dB | 0 |  |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS Note 1 |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS Note 1 |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,3 | dBm/15 kHz | -110 |  |  |
+|  | Config 1,2 | dBm /SCS | -110 |  |  |
+|  | Config 3 |  | -107 |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 4.5 | -4.5 | 4.5 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  | dB | 4.5 | -4.5 | 4.5 |
+| SS-RSRPNote3 | Config 1,2 | dBm /SCS | -105.5 | -114.5 | -105.5 |
+|  | Config 3 |  | -102.5 | -111.5 | -102.5 |
+| IoNote3 | Config 1,2 | dBm /9.36 MHz | -76.2 | -80.7 | -76.2 |
+|  | Config 3 | dBm/ 38.16 MHz | -70.1 | -74.6 | -70.1 |
+| Propagation condition |  |  | AWGN |  |  |
+| NOTE 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |  |
+
+##### A.9.1.2.1.2 Test Requirements
+
+The S-SSB transmission initiation delay is defined as the time from the beginning of time period T2 up to the moment when the UE initiates the S-SSB transmission.
+
+The S-SSB transmission initiation delay shall be less than 0.56 s.
+
+The S-SSB transmission cease delay is defined as the time from the beginning of time period T3 up to the moment when the UE ceases the S-SSB transmission.
+
+The S-SSB transmission cease delay shall be less than 0.56 s.
+
+The rate of correct initiation/cease delay of S-SSB transmissions observed during repeated tests shall be at least 90 %.
+
+NOTE: The initiation/cease delay of S-SSB transmissions can be expressed as: Tevaluate,SLSS + S-SSB period,
+
+Where:
+
+Tevaluate,SLSS = 0.4 sec (as specified in clause 12.3.1.1);
+
+S-SSB period = 160 ms.
+
+#### A.9.1.2.2 Test for SyncRef UE as synchronization reference source
+
+##### A.9.1.2.2.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to the evaluation time allowed to initiate and cease S-SSB transmissions defined in clause 12.3.1.4, when the reference timing used for sidelink transmissions is a SyncRef UE.
+
+The test parameters are given in table A.9.1.2.2.1-1 and table A.9.1.2.2.1-2 below. There are neither active cells nor GNSS signals in this test. There is one active SyncRef UE (SyncRef UE 1) in this test. The test system shall emulate SyncRef UE 1 to transmit S-SSB every synchronization period.
+
+Prior to start of test, test system is required to ensure that the V2X UE is synchronized to the SyncRef UE 1 and is transmitting S-SSB as derived from the S-SSB of SyncRef UE 1 as per clause 5.8.5.3 of TS 38.331[2]. For the test configuration, the SLSSID used by the V2X UE shall be 30 with inCoverage IE in MIB-SL set as FALSE. The test consists of three successive time periods, with time duration of T1, T2 and T3 respectively.
+
+During T1, the PSBCH-RSRP of SyncRef UE 1 is above syncTxThreshOOC and the UE is not expected to be transmitting S-SSB.
+
+During T2, the PSBCH-RSRP of SyncRef UE 1 is lowered below syncTxThreshOOC and the UE is expected to initiate S-SSB transmissions.
+
+During T3, the PSBCH-RSRP of SyncRef UE 1 is increased back to be above syncTxThreshOOC and the UE is expected to cease S-SSB transmissions.
+
+Table A.9.1.2.2.1-1: Test Parameters for Initiation/Cease of S-SSB Transmission Test for SyncRef UE as synchronization reference source
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| SCS | kHz | 30 |  |
+| Active cell |  | None |  |
+| Active SyncRef UE |  | SyncRef UE 1 | Transmitting S-SSB on RF channel number 1(HD carrier in Band n47 or n38) |
+| Active V2X UE |  | V2X UE | Transmitting S-SSB on RF channel number 1(HD carrier in Band n47 or n38) |
+| V2X sidelink communication preconfiguration |  | As specified in table A.3.21.2-2 | IE values unless specified otherwise in this test |
+| networkControlledSyncTx |  | Not configured |  |
+| syncTxThreshOoC | dBm/30kHz | -100 |  |
+| T1 | s | 3 |  |
+| T2 | s | 5.24 |  |
+| T3 | s | 5.24 |  |
+
+Table A.9.1.2.2.1-2: SyncRef UE Specific Test Parameters for Initiation/Cease of S-SSB Transmission Test for SyncRef UE as synchronization reference source
+
+| Parameter | Unit | SyncRef UE 1 |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 |
+| NR RF Channel Number |  | 1 |  |  |
+| V2X SL communication resource pool configuration |  | As specified in table A.3.21.2-2 |  |  |
+| Channel Bandwidth (BWchannel) Note3 | MHz | 20(NPRB,c = 50) or  40(NPRB,c = 100) |  |  |
+| SLSSID |  | 30 |  |  |
+| inCoverage |  | TRUE |  |  |
+| networkControlledSyncTx |  | ON |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note1 | dBm/30 kHz | -98 |  |  |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 5.5 | -3.5 | 5.5 |
+| PSBCH![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 5.5 | -3.5 | 5.5 |
+| PSBCH-RSRPNote2 | dBm/30 kHz | -92.5 | -101.5 | -92.5 |
+| IoNote2 | dBm /18 MHz | -63.6 | -68.6 | -63.6 |
+|  | dBm/36 MHz | -60.6 | -65.6 | -60.6 |
+| Propagation condition |  | AWGN |  |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: PSBCH-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io level is based on the allocated PRBs for S-PSS/S-SSS/PSBCH symbols.NOTE 3: The UE is only required to be tested in one of the supported test configurations.NOTE 4: S-PSS Es/Noc and S-SSS Es/Noc are set the same as PSBCH Es/Noc. |  |  |  |  |
+
+##### A.9.1.2.2.2 Test Requirements
+
+The S-SSB transmission initiation delay is defined as the time from the beginning of time period T2 up to the moment when the UE initiates the S-SSB transmission.
+
+The S-SSB transmission initiation delay shall be less than 0.8 s.
+
+The S-SSB transmission cease delay is defined as the time from the beginning of time period T3 up to the moment when the UE ceases the S-SSB transmission.
+
+The S-SSB transmission cease delay shall be less than 0.8 s.
+
+The rate of correct initiation/cease delay of S-SSB transmissions observed during repeated tests shall be at least 90 %.
+
+NOTE: The initiation/cease delay of S-SSB transmissions can be expressed as: Tevaluate,SLSS + S-SSB period,
+
+Where:
+
+- Tevaluate,SLSS = 0.64 sec (as specified in clause 12.3.1.4);
+
+- S-SSB period = 160 ms.
+
+#### A.9.1.2.3 Test for SyncRef UE as synchronization reference source when SL-DRX is used
+
+##### A.9.1.2.3.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to the evaluation time allowed to initiate and cease S-SSB transmissions defined in clause 12.3.1.4, when the reference timing used for sidelink transmissions is a SyncRef UE and SL-DRX is used.
+
+The test parameters are given in table A.9.1.2.3.1-1 and table A.9.1.2.3.1-2 below. There are neither active cells nor GNSS signals in this test. There is one active SyncRef UE (SyncRef UE 1) in this test. The test system shall emulate SyncRef UE 1 to transmit S-SSB every synchronization period.
+
+Prior to start of test, test system is required to ensure that the V2X UE is synchronized to the SyncRef UE 1 and is transmitting S-SSB as derived from the S-SSB of SyncRef UE 1 as per clause 5.8.5.3 of TS 38.331[2]. For the test configuration, the SLSSID used by the V2X UE shall be 30 with inCoverage IE in MIB-SL set as FALSE. The test consists of three successive time periods, with time duration of T1, T2 and T3 respectively.
+
+During T1, the PSBCH-RSRP of SyncRef UE 1 is above syncTxThreshOOC and the UE is not expected to be transmitting S-SSB.
+
+During T2, the PSBCH-RSRP of SyncRef UE 1 is lowered below syncTxThreshOOC and the UE is expected to initiate S-SSB transmissions.
+
+During T3, the PSBCH-RSRP of SyncRef UE 1 is increased back to be above syncTxThreshOOC and the UE is expected to cease S-SSB transmissions.
+
+Table A.9.1.2.3.1-1: Test Parameters for Initiation/Cease of S-SSB Transmission Test for SyncRef UE as synchronization reference source when SL-DRX is used
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| SCS | kHz | 30 |  |
+| Active cell |  | None |  |
+| Active SyncRef UE |  | SyncRef UE 1 | Transmitting S-SSB on RF channel number 1(HD carrier in Band n47 or n38) |
+| Active V2X UE |  | V2X UE | Transmitting S-SSB on RF channel number 1(HD carrier in Band n47 or n38) |
+| V2X sidelink communication preconfiguration |  | As specified in table A.3.21.2-2 | IE values unless specified otherwise in this test |
+| networkControlledSyncTx |  | Not configured |  |
+| syncTxThreshOoC | dBm/30kHz | -97 |  |
+| SL-DRX |  | SL-DRX.2 | SL-DRX configuration as specified in clause A.3.21.4 |
+| T1 | s | 3 |  |
+| T2 | s | 5.24 |  |
+| T3 | s | 5.24 |  |
+
+Table A.9.1.2.3.1-2: SyncRef UE Specific Test Parameters for Initiation/Cease of SLSS Transmission Test for SyncRef UE as synchronization reference source when SL-DRX is used
+
+| Parameter | Unit | Cell 1 |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 |
+| NR RF Channel Number |  | 1 |  |  |
+| V2X SL communication resource pool configuration |  | As specified in table A.3.21.2-2 |  |  |
+| Channel Bandwidth (BWchannel) Note3 | MHz | 20(NPRB,c = 50) or  40(NPRB,c = 100) |  |  |
+| SLSSID |  | 30 |  |  |
+| inCoverage |  | FALSE |  |  |
+| networkControlledSyncTx |  | ON |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note1 | dBm/30 kHz | -98 |  |  |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 5.5 | -3.5 | 5.5 |
+| PSBCH![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 5.5 | -3.5 | 5.5 |
+| PSBCH-RSRPNote2 | dBm/30 kHz | -92.5 | -101.5 | -92.5 |
+| IoNote2 | dBm /3.96 MHz | -70.2 | -75.2 | -70.2 |
+| Propagation condition |  | AWGN |  |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: PSBCH-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io level is based on the allocated PRBs for PSPSS/PSSSS/PSBCH symbols.NOTE 3: The UE is only required to be tested in one of the supported test configurations.NOTE 4: PSSSS Es/Noc and PSPSS Es/Noc are set the same as PSBCH Es/Noc. |  |  |  |  |
+
+##### A.9.1.2.3.2 Test Requirements
+
+The S-SSB transmission initiation delay is defined as the time from the beginning of time period T2 up to the moment when the UE initiates the S-SSB transmission.
+
+The S-SSB transmission initiation delay shall be less than 1.44 s.
+
+The S-SSB transmission cease delay is defined as the time from the beginning of time period T3 up to the moment when the UE ceases the S-SSB transmission.
+
+The S-SSB transmission cease delay shall be less than 1.44 s.
+
+The rate of correct initiation/cease delay of S-SSB transmissions observed during repeated tests shall be at least 90 %.
+
+NOTE: The initiation/cease delay of S-SSB transmissions can be expressed as: Tevaluate,SLSS + S-SSB period,
+
+Where:
+
+- Tevaluate,SLSS = 1.28 sec (as specified in clause 12.3.1.4);
+
+- S-SSB period = 160 ms.
+
+#### A.9.1.2.4 Test for SyncRef UE as synchronization reference source with CCA
+
+##### A.9.1.2.4.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to the evaluation time allowed to initiate and cease S-SSB transmissions defined in clause 12.3A.1.4, when the reference timing used for sidelink transmissions is a SyncRef UE.
+
+The test parameters are given in table A.9.1.2.4.1-1 and table A.9.1.2.4.1-2 below. There are neither active cells nor GNSS signals in this test. There is one active SyncRef UE (SyncRef UE 1) in this test. The test system shall emulate SyncRef UE 1 to transmit S-SSB every synchronization period.
+
+Prior to start of test, test system is required to ensure that the sidelink UE is synchronized to the SyncRef UE 1 and is transmitting S-SSB as derived from the S-SSB of SyncRef UE 1 as per clause 5.8.5.3 of TS 38.331[2]. For the test configuration, the SLSSID used by the sidelink UE shall be 30 with inCoverage IE in MIB-SL set as FALSE. The test consists of three successive time periods, with time duration of T1, T2 and T3 respectively. Two counters, lCCA_2 and lCCA_3, as defined in A.3.26.4.1 will be used with time duration of T2 and T3 respectively.
+
+During T1, the PSBCH-RSRP of SyncRef UE 1 is above syncTxThreshOOC and the UE is not expected to be transmitting S-SSB.
+
+During T2, the PSBCH-RSRP of SyncRef UE 1 is lowered below syncTxThreshOOC and the UE is expected to initiate S-SSB transmissions. The counter lCCA_2 is initialized as 0 at the beginning of T2 and tracks the number of unavailable SSB periods as defined in A.3.26.4.1 until the end of T2.
+
+During T3, the PSBCH-RSRP of SyncRef UE 1 is increased back to be above syncTxThreshOOC and the UE is expected to cease S-SSB transmissions. The counter lCCA_3 is initialized as 0 at the beginning of T3 and tracks the number of unavailable SSB periods as defined in A.3.26.4.1 until the end of T3.
+
+Table A.9.1.2.4.1-1: Test Parameters for Initiation/Cease of S-SSB Transmission Test for SyncRef UE as synchronization reference source with CCA
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| SCS | kHz | 30 |  |
+| Active cell |  | None |  |
+| Active SyncRef UE |  | SyncRef UE 1 | Transmitting S-SSB on RF channel number 1 |
+| Active sidelink UE |  | Sidelink UE | Transmitting S-SSB on RF channel number 1 |
+| Sidelink communication preconfiguration |  | As specified in table A.3.21.2-1 and table A.3.21.2-2 | IE values unless specified otherwise in this test |
+| networkControlledSyncTx |  | Not configured |  |
+| syncTxThreshOoC | dBm/30kHz | -97 |  |
+| T1 | s | 3 |  |
+| T2 | s | 5.24 |  |
+| T3 | s | 5.24 |  |
+
+Table A.9.1.2.4.1-2: SyncRef UE Specific Test Parameters for Initiation/Cease of S-SSB Transmission Test for SyncRef UE as synchronization reference source with CCA
+
+| Parameter | Unit | SyncRef UE 1 |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 |
+| NR RF Channel Number |  | 1 |  |  |
+| SL CCA model |  | As specified in clause A.3.26.4.1 |  |  |
+| PCCA_SL_SyncRefUE_1 |  | 0.75 |  |  |
+| PCCA_SL_SyncRefUE_2 |  | 0.75 |  |  |
+| LCCA_SL |  | 4 |  |  |
+| SL communication resource pool configuration |  | As specified in table A.3.21.2-1 and table A.3.21.2-2 |  |  |
+| Channel Bandwidth (BWchannel) Note3 | MHz | 20(NPRB,c = 50) or  40(NPRB,c = 100) |  |  |
+| SLSSID |  | 30 |  |  |
+| inCoverage |  | TRUE |  |  |
+| networkControlledSyncTx |  | ON |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note1 | dBm/30 kHz | -98 |  |  |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 5.5 | -3.5 | 5.5 |
+| PSBCH![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 5.5 | -3.5 | 5.5 |
+| PSBCH-RSRPNote2 | dBm/30 kHz | -92.5 | -101.5 | -92.5 |
+| IoNote2 | dBm/3.96 MHz | -70.2 | -75.2 | -70.2 |
+| Propagation condition |  | AWGN |  |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: PSBCH-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io level is based on the allocated PRBs for S-PSS/S-SSS/PSBCH symbols.NOTE 3: The UE is only required to be tested in one of the supported test configurations.NOTE 4: S-PSS Es/Noc and S-SSS Es/Noc are set the same as PSBCH Es/Noc. |  |  |  |  |
+
+##### A.9.1.2.4.2 Test Requirements
+
+The S-SSB transmission initiation delay is defined as the time from the beginning of time period T2 up to the moment when the UE initiates the S-SSB transmission.
+
+The S-SSB transmission initiation delay shall be less than Tevaluate,SLSS_CCA + S-SSB period.
+
+The S-SSB transmission cease delay is defined as the time from the beginning of time period T3 up to the moment when the UE ceases the S-SSB transmission.
+
+The S-SSB transmission cease delay shall be less than Tevaluate,SLSS_CCA + S-SSB period.
+
+Where:
+
+- Tevaluate,SLSS_CCA = (4+LSLSS)×S-SSB periods [ms] (as specified in clause 12.3A.1.4) and LSLSS = lCCA_2 or lCCA_3, is the number of unavailable S-SSB period during time duration of T2 and T3 respectively;
+
+- S-SSB period = 160 ms.
+
+The rate of correct initiation/cease delay of S-SSB transmissions observed during repeated tests shall be at least 90 %.
+
+### A.9.1.3  Test for V2X Synchronization Reference Selection/Reselection
+
+#### A.9.1.3.1  Test for GNSS configured as the highest priority
+
+##### A.9.1.3.1.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to SyncRef UE selection / reselection defined in clause 12.4, when GNSS is configured as the highest priority. For this test, the UE is triggered by the test loop function or the upper layers to transmit for V2X Sidelink Communication.
+
+The test parameters are given in table A.9.1.3.1.1-1and A.9.1.3.1.1-2 below. There are no GNSS signals in this test. There are three active SyncRef UEs (SyncRef UE 1, SyncRef UE 2 and SyncRef UE 3) in this test. The test system shall emulate SyncRef UE 1, SyncRef UE 2 and SyncRef UE 3 to transmit S-SSB every S-SSB period.
+
+The test system can verify the selection / reselection of SyncRef UE by monitoring the SLSS ID used by the V2X UE for its S-SSB transmissions. When the V2X UE is not synchronized to any SyncRef UE, then the V2X UE shall use the SLSS ID belonging to set id_oon. When the V2X UE is synchronized to a SyncRef UE, the V2X UE shall derive its SLSS ID from the SLSS ID of the SyncRef UE as per clause 5.8.5.3 of TS 38.331[2].
+
+The test consists of three successive time periods, with time duration of T1, T2 and T3 respectively. SyncRef UE 1, SyncRef UE 2 and SyncRef UE 3 are all powered off before starting the test. During T1, SyncRef UE 1 is powered ON and the V2X UE will select SyncRef UE 1 as synchronization source. During T2, SyncRef UE 2 is powered ON and the V2X UE will select SyncRef UE 2 as the synchronization source. During T3, SyncRef UE 3 is powered ON and the V2X UE will reselect to SyncRef UE 3 as the synchronization source.
+
+Table A.9.1.3.1.1-1: Test Parameters for V2X Synchronization Reference Selection/Reselection Tests for GNSS configured as the highest priority
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| SCS |  | kHz | 30 |  |
+| Initial condition | Active synchronization source |  | Sync Ref UE 1 | DUT transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 30 and in-coverage set as FALSE in MIB-SL. |
+| T2 end condition | Active synchronization source |  | Sync Ref UE 2 | DUT transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 336 and in-coverage set as FALSE in MIB-SL. |
+| Final condition | Active synchronization source |  | Sync Ref UE 3 | UE transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 0 and in-coverage set as FALSE in MIB-SL. |
+| Active SyncRef UEs |  |  | SyncRef UE 1SyncRef UE 2SyncRef UE 3 | Transmitting S-SSB on RF channel number 1 (HD carrier in Band n47 or n38) |
+| Timing offset among SyncRef UEs |  | s | CP/2 | Synchronous |
+| Frequency offset of SyncRef UE 1,2,3 |  | ppm | 0 |  |
+| V2X sidelink Communication configuration |  |  | As specified in table A. 3.21.2-2 | IE values unless specified otherwise in this test. |
+| sl-SyncPriority |  |  | gnss |  |
+| syncTxThreshOoC |  |  | +infinity | syncTxThreshOoC |
+| T1 |  | s | 24 |  |
+| T2 |  | s | 16 |  |
+| T3 |  | s | 3.2 |  |
+
+Table A.9.1.3.1.1-2: SyncRef UE Specific Test Parameters for V2X Synchronization Reference Selection/Reselection Tests for GNSS configured as the highest priority
+
+| Parameter | Unit | SyncRef UE 1 |  |  | SyncRef UE 2 |  |  | SyncRef UE 3 |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 | T1 | T2 | T3 | T1 | T2 | T3 |
+| NR RF Channel Number |  | 1(HD carrier in Band n47 or n38) |  |  |  |  |  |  |  |  |
+| Channel Bandwidth (BWchannel) Note 4 | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |  |  |  |  |  |  |  |
+| V2X Sidelink Communication resource pool configuration |  | As specified in table A.3.21.2-2 |  |  |  |  |  |  |  |  |
+| networkControlledSyncTx |  | ON |  |  | N/A |  |  | ON |  |  |
+| syncTxThreshOoC | dBm/15 kHz | N/A |  |  | +infinity |  |  | N/A |  |  |
+| SLSSID |  | 30 |  |  | 0 |  |  | 0 |  |  |
+| inCoverage (in MIB-SL) |  | TRUE |  |  | FALSE |  |  | TRUE |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | -95 |  |  |  |  |  |  |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 0 | 0 | 0 | -infinity | 0 | 0 | -infinity | -infinity | 3 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] Note2 | dB | 0 | 0 | -4.76 | -infinity | 0 | 0 | -infinity | -infinity | 0 |
+| PSBCH-RSRPNote2, Note 3 | dBm/30 kHz | -95 | -95 | -95 | -infinity | -95 | -95 | -infinity | -infinity | -92 |
+| Io Note2 | dBm/18 MHz | -70.78 | -70.78 | -67.78 | -73.79 | -70.78 | -70.78 | -70.78 | -70.78 | -67.78 |
+|  | dBm/36 MHz | -70.78 | -70.78 | -67.78 | -73.79 | -70.78 | -70.78 | -70.78 | -70.78 | -67.78 |
+| Propagation Condition |  | AWGN |  |  |  |  |  |  |  |  |
+| NOTE 1: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: Es/Iot, Io, PSBCH-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: S-PSS Es/Iot and S-SSS Es/Iot are set the same as PSBCH Es/Iot.NOTE 4: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |  |  |  |  |  |  |
+
+##### A.9.1.3.1.2 Test Requirements
+
+During T1, SyncRef UE selection delay is defined as the time from the beginning of T1 to the time UE is synchronized to SyncRef UE 1, and changes its S-SSB transmissions timing and SLSS ID to follow SyncRef UE 1 as the synchronization source. For the test configuration, the SLSS ID will be changed to 30 (with in-coverage IE in MIB-SL set to FALSE) after SyncRef UE selection delay from start of T1.
+
+The SyncRef UE selection delay shall be less than 8.8 sec. The SyncRef UE selection delay can be expressed as:
+
+SyncRef UE selection delay = Tdetect,SyncRef UE + Tevaluate,SLSS + S-SSB period
+
+Where
+
+- Tdetect,SyncRef UE = 8 sec (as specified in sub-clause 12.4)
+
+- Tevaluate,SLSS = 0.64 sec (as specified in sub-clause 12.3)
+
+- S-SSB period = 160 ms
+
+This gives a total of 8.8 seconds.
+
+2) During T2, SyncRef UE reselection delay is defined as the time from the beginning of T2 to the time UE changes its synchronization source from SyncRef UE 1 to SyncRef UE 2 and changes its S-SSB transmissions timing and SLSS ID to follow SyncRef UE 2 as the synchronization source. For the test configuration, the SLSS ID will be changed to 336 (with in-coverage IE in MIB-SL set to FALSE) after SyncRef UE reselection delay from start of T2.
+
+The SyncRef UE reselection delay shall be less than 8.8 sec. The SyncRef UE reselection delay can be expressed as:
+
+SyncRef UE reselection delay = Tdetect,SyncRef UE + Tevaluate,SLSS + S-SSB period
+
+Where
+
+- Tdetect,SyncRef UE = 8 sec (as specified in sub-clause 12.4)
+
+- Tevaluate,SLSS = 0.64 (as specified in sub-clause 12.3)
+
+- S-SSB period = 160 ms
+
+This gives a total of 8.8 seconds.
+
+3) During T3, SyncRef UE reselection delay is defined as the time from the beginning of T3 to the time UE changes its synchronization source from SyncRef UE 2 to SyncRef UE 3, and changes its S-SSB transmissions timing and SLSS ID to follow SyncRef UE 3 as the synchronization source. For the test configuration, the SLSS ID will still be 0 (with in-coverage IE in MIB-SL set to FALSE) after SyncRef UE reselection delay from start of T3.
+
+The SyncRef UE reselection delay shall be less than 2.4 sec. The SyncRef UE reselection delay can be expressed as:
+
+SyncRef UE reselection delay = Tdetect,SyncRef UE + Tevaluate,SLSS + S-SSB period
+
+Where
+
+- Tdetect,SyncRef UE = 1.6 sec (as specified in sub-clause 12.4)
+
+- Tevaluate,SLSS = 0.64 (as specified in sub-clause 12.3)
+
+- S-SSB period = 160 ms
+
+This gives a total of 2.4 seconds.
+
+The test system will verify that the V2X UE does not drop or delay more than 6 % of its V2X data and S-SSB transmissions during the duration of T2, and does not drop or delay more than 30 % of its S-SSB transmissions during the duration of T3.
+
+The rate of correct SyncRef UE selection / reselection observed during repeated tests shall be at least 90 %.
+
+#### A.9.1.3.2  Test for FR1 NR Cell configured as the highest priority
+
+##### A.9.1.3.2.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to SyncRef UE selection / reselection defined in clause 12.4, when gNB is configured as the highest priority. For this test, the UE is triggered by the test loop function or the upper layers to transmit for V2X Sidelink Communication.
+
+This test is applicable for V2X sidelink communication capable UEs that support gNB as synchronization source and sidelink operation.
+
+Table A.9.1.3.2.1-1: Void
+
+The test parameters are given in table A.9.1.3.2.1-2 and A.9.1.3.2.1-3 below. There are no active cells and GNSS is reliable during the whole test. The test system can emulate and send the GNSS signal to the test UE. The test parameters for GNSS signals are defined in B.4.1. There are two active SyncRef UEs (SyncRef UE 1 and SyncRef UE 2) in this test. The test system shall emulate SyncRef UE 1 and SyncRef UE 2 to transmit S-SSB every S-SSB period.
+
+The test system can verify the selection / reselection of SyncRef UE by monitoring the SLSS ID used by the V2X UE for its S-SSB transmissions. When the V2X UE is synchronized to a SyncRef UE, the V2X UE shall derive its SLSS ID from the SLSS ID of the SyncRef UE as per clause 5.8.5.3 of TS 38.331[2].
+
+The test consists of three successive time periods, with time duration of T1, T2 and T3 respectively. During T1, both SyncRef UE 1 and SyncRef UE 2 are powered off and the V2X UE will select GNSS as synchronization source. During T2, SyncRef UE 1 is powered ON and the V2X UE will select SyncRef UE 1 as the synchronization source. During T3, a higher priority SyncRef UE 2 is additionally powered ON and the V2X UE will reselect to the higher priority SyncRef UE 2 as the synchronization source.
+
+Table A.9.1.3.2.1-2: Test Parameters for V2X Synchronization Reference Selection/Reselection Tests for FR1 NR Cell configured as the highest priority
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| SCS |  | kHz | 30 |  |
+| Initial condition | Active synchronization source |  | GNSS | DUT transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 0 and in-coverage set as TRUE in MIB-SL. |
+| T2 end condition | Active synchronization source |  | Sync Ref UE 1 | DUT transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 336+59 and in-coverage set as FALSE in MIB-SL. |
+| Final condition | Active synchronization source |  | Sync Ref UE 2 | UE transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 30 and in-coverage set as FALSE in MIB-SL. |
+| Active cell |  |  | None |  |
+| Active SyncRef UEs |  |  | SyncRef UE 1SyncRef UE 2 | Transmitting S-SSB on RF channel number 1 |
+| Timing offset between SyncRef UE 1 and SyncRef UE 2 |  | ms | 3 | Asynchronous |
+| Frequency offset of SyncRef UE 1,2 |  | ppm | 0 |  |
+| V2X sidelink Communication preconfiguration |  |  | As specified in table A.3.21.2-2 | IE values unless specified otherwise in this test. |
+| syncPriority |  |  | gnb |  |
+| syncTxThreshOoC |  |  | 13 (+infinity) |  |
+| T1 |  | s | 24 |  |
+| T2 |  | s | 16 |  |
+| T3 |  | s | 16 |  |
+
+Table A.9.1.3.2.1-3: SyncRef UE Specific Test Parameters for V2X Synchronization Reference Selection/Reselection Tests for FR1 NR Cell configured as the highest priority
+
+| Parameter | Unit | SyncRef UE 1 |  |  | SyncRef UE 2 |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 | T1 | T2 | T3 |
+| NR RF Channel Number |  | 1(HD carrier in Band n47 or n38) |  |  |  |  |  |
+| Channel Bandwidth (BWchannel) Note 4 | MHz | 20(NPRB,c = 50) or  40(NPRB,c = 100) |  |  |  |  |  |
+| V2X Sidelink Communication resource pool configuration |  | As specified in table A.3.21.2-2 |  |  | As specified in table A.3.21.2-2 |  |  |
+| networkControlledSyncTx |  | N/A |  |  | ON |  |  |
+| syncTxThreshOoC | dBm/15 kHz | +infinity |  |  | N/A |  |  |
+| SLSSID |  | 59 |  |  | 30 |  |  |
+| inCoverage (in MIB-SL) |  | FALSE |  |  | TRUE |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | -95 |  |  |  |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | -infinity | 0 | 0 | -infinity | -infinity | 3 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot]Note2, | dB | -infinity | 0 | -4.76 | -infinity | -infinity | 0 |
+| Io Note2, | dBm/18 MHz | -73.79 | -70.78 | -70.78 | -73.79 | -73.79 | -70.78 |
+|  | dBm/36 MHz | -73.79 | -70.78 | -70.78 | -73.79 | -73.79 | -70.78 |
+| PSBCH-RSRP Note2, Note 3 | dBm/30 kHz | -infinity | -95 | -95 | -infinity | -infinity | -92 |
+| Propagation Condition |  | AWGN |  |  |  |  |  |
+| NOTE 1: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: Es/Iot, Io, PSBCH-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: S-PSS Es/Iot and S-SSS Es/Iot are set the same as PSBCH Es/Iot.NOTE 4: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |  |  |  |
+
+##### A.9.1.3.2.2 Test Requirements
+
+1) During T2, SyncRef UE selection delay is defined as the time from the beginning of T2 to the time UE is synchronized to SyncRef UE 1 and changes its S-SSB transmissions timing and SLSS ID to follow SyncRef UE 1 as the synchronization source. For the test configuration, the SLSS ID will be changed to 336+59 (with in-coverage IE in MIB-SL set to FALSE) after SyncRef UE selection delay from start of T2.
+
+The SyncRef UE selection delay shall be less than 8.8 sec. The SyncRef UE selection/reselection delay can be expressed as:
+
+SyncRef UE selection/reselection delay = Tdetect,SyncRef UE + Tevaluate,SLSS + S-SSB period
+
+Where
+
+- Tdetect,SyncRef UE = 8 sec (as specified in sub-clause 12.4)
+
+- Tevaluate,SLSS = 0.64 sec (as specified in sub-clause 12.3)
+
+- S-SSB period = 160 ms
+
+This gives a total of 8.8 seconds.
+
+2) During T3, SyncRef UE reselection delay is defined as the time from the beginning of T3 to the time UE changes its synchronization source from SyncRef UE 1 to SyncRef UE 2, and changes its S-SSB transmissions timing and SLSS ID to follow SyncRef UE 2 as the synchronization source. For the test configuration, the SLSS ID will be changed to 30 (with in-coverage IE in MIB-SL set to FALSE) after SyncRef UE selection delay from start of T3.
+
+The SyncRef UE reselection delay shall be less than 8.8 sec. The SyncRef UE selection/reselection delay can be expressed as:
+
+SyncRef UE selection/reselection delay = Tdetect,SyncRef UE + Tevaluate,SLSS + S-SSB period
+
+Where
+
+- Tdetect,SyncRef UE = 8 sec (as specified in sub-clause 12.4)
+
+- Tevaluate,SLSS = 0.64 sec (as specified in sub-clause 12.3)
+
+- S-SSB period = 160 ms
+
+This gives a total of 8.8 seconds.
+
+The test system will verify that the V2X UE does not drop or delay more than 6 % of its V2X data and S-SSB transmissions during the duration of T2 and T3.
+
+The rate of correct SyncRef UE selection / reselection observed during repeated tests shall be at least 90 %.
+
+#### A.9.1.3.3 Test for GNSS configured as the highest priority under SL-DRX
+
+##### A.9.1.3.3.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to SyncRef UE selection / reselection defined in clause 12.4, when GNSS is configured as the highest priority and SL-DRX is configured. For this test, the UE is triggered by the test loop function or the upper layers to transmit for V2X Sidelink Communication.
+
+The test parameters are given in table A.9.1.3.3.1-1and A.9.1.3.3.1-2 below. There are no GNSS signals in this test. There are three active SyncRef UEs (SyncRef UE 1, SyncRef UE 2 and SyncRef UE 3) in this test. The test system shall emulate SyncRef UE 1, SyncRef UE 2 and SyncRef UE 3 to transmit S-SSB every S-SSB period.
+
+The test system can verify the selection / reselection of SyncRef UE by monitoring the SLSS ID used by the V2X UE for its S-SSB transmissions. When the V2X UE is not synchronized to any SyncRef UE, then the V2X UE shall use the SLSS ID belonging to set id_oon. When the V2X UE is synchronized to a SyncRef UE, the V2X UE shall derive its SLSS ID from the SLSS ID of the SyncRef UE as per clause 5.8.5.3 of TS 38.331[2].
+
+The test consists of three successive time periods, with time duration of T1, T2 and T3 respectively. SyncRef UE 1, SyncRef UE 2 and SyncRef UE 3 are all powered off before starting the test. During T1, SyncRef UE 1 is powered ON and the V2X UE will select SyncRef UE 1 as synchronization source. During T2, SyncRef UE 2 is powered ON and the V2X UE will select SyncRef UE 2 as the synchronization source. During T3, SyncRef UE 3 is powered ON and the V2X UE will reselect to SyncRef UE 3 as the synchronization source. SL-DRX is configured during the entire test period.
+
+Table A.9.1.3.3.1-1: Test Parameters for V2X Synchronization Reference Selection/Reselection Tests for GNSS configured as the highest priority
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| SCS |  | kHz | 30 |  |
+| Initial condition | Active synchronization source |  | Sync Ref UE 1 | DUT transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 30 and in-coverage set as FALSE in MIB-SL. |
+| T2 end condition | Active synchronization source |  | Sync Ref UE 2 | DUT transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 336 and in-coverage set as FALSE in MIB-SL. |
+| Final condition | Active synchronization source |  | Sync Ref UE 3 | UE transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 0 and in-coverage set as FALSE in MIB-SL. |
+| Active SyncRef UEs |  |  | SyncRef UE 1SyncRef UE 2SyncRef UE 3 | Transmitting S-SSB on RF channel number 1 (HD carrier in Band n47 or n38) |
+| Timing offset among SyncRef UEs |  | s | CP/2 | Synchronous |
+| Frequency offset of SyncRef UE 1,2,3 |  | ppm | 0 |  |
+| V2X sidelink Communication configuration |  |  | As specified in table A. 3.21.2-2 | IE values unless specified otherwise in this test. |
+| sl-SyncPriority |  |  | gnss |  |
+| syncTxThreshOoC |  |  | +infinity | syncTxThreshOoC |
+| SL-DRX |  |  | SL.DRX.2 | As specified in clause A.3.21.4 |
+| T1 |  | s | 24 |  |
+| T2 |  | s | 16 |  |
+| T3 |  | s | 3.2 |  |
+
+Table A.9.1.3.3.1-2: SyncRef UE Specific Test Parameters for V2X Synchronization Reference Selection/Reselection Tests for GNSS configured as the highest priority
+
+| Parameter | Unit | SyncRef UE 1 |  |  | SyncRef UE 2 |  |  | SyncRef UE 3 |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 | T1 | T2 | T3 | T1 | T2 | T3 |
+| NR RF Channel Number |  | 1(TDD carrier in Band n47 or n38) |  |  |  |  |  |  |  |  |
+| Channel Bandwidth (BWchannel) Note 4 | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |  |  |  |  |  |  |  |
+| V2X Sidelink Communication resource pool configuration |  | As specified in table A.3.21.2-2 |  |  |  |  |  |  |  |  |
+| networkControlledSyncTx |  | ON |  |  | N/A |  |  | ON |  |  |
+| syncTxThreshOoC | dBm/15 kHz | N/A |  |  | +infinity |  |  | N/A |  |  |
+| SLSSID |  | 30 |  |  | 0 |  |  | 0 |  |  |
+| inCoverage (in MIB-SL) |  | TRUE |  |  | FALSE |  |  | TRUE |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | -95 |  |  |  |  |  |  |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 0 | 0 | 0 | -infinity | 0 | 0 | -infinity | -infinity | 3 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | 0 | 0 | -4.76 | -infinity | 0 | 0 | -infinity | -infinity | 0 |
+| PSBCH-RSRPNote2, Note 3 | dBm/30 kHz | -95 | -95 | -95 | -infinity | -95 | -95 | -infinity | -infinity | -92 |
+| Propagation Condition |  | AWGN |  |  |  |  |  |  |  |  |
+| NOTE 1: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: PSBCH-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: S-PSS Es/Iot and S-SSS Es/Iot are set the same as PSBCH Es/Iot.NOTE 4: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |  |  |  |  |  |  |
+
+##### A.9.1.3.3.2 Test Requirements
+
+During T1, SyncRef UE selection delay is defined as the time from the beginning of T1 to the time UE is synchronized to SyncRef UE 1, and changes its S-SSB transmissions timing and SLSS ID to follow SyncRef UE 1 as the synchronization source. For the test configuration, the SLSS ID will be changed to 30 (with in-coverage IE in MIB-SL set to FALSE) after SyncRef UE selection delay from start of T1.
+
+The SyncRef UE selection delay shall be less than 8.8 sec. The SyncRef UE selection delay can be expressed as:
+
+SyncRef UE selection delay = Tdetect,SyncRef UE + Tevaluate,SLSS + S-SSB period
+
+Where
+
+- Tdetect,SyncRef UE = 8 sec (as specified in sub-clause 12.4)
+
+- Tevaluate,SLSS = 0.64 sec (as specified in sub-clause 12.3)
+
+- S-SSB period = 160 ms
+
+This gives a total of 8.8 seconds.
+
+2) During T2, SyncRef UE reselection delay is defined as the time from the beginning of T2 to the time UE changes its synchronization source from SyncRef UE 1 to SyncRef UE 2 and changes its S-SSB transmissions timing and SLSS ID to follow SyncRef UE 2 as the synchronization source. For the test configuration, the SLSS ID will be changed to 336 (with in-coverage IE in MIB-SL set to FALSE) after SyncRef UE reselection delay from start of T2.
+
+The SyncRef UE reselection delay shall be less than 8.8 sec. The SyncRef UE reselection delay can be expressed as:
+
+SyncRef UE reselection delay = Tdetect,SyncRef UE + Tevaluate,SLSS + S-SSB period
+
+Where
+
+- Tdetect,SyncRef UE = 8 sec (as specified in sub-clause 12.4)
+
+- Tevaluate,SLSS = 0.64 (as specified in sub-clause 12.3)
+
+- S-SSB period = 160 ms
+
+This gives a total of 8.8 seconds.
+
+3) During T3, SyncRef UE reselection delay is defined as the time from the beginning of T3 to the time UE changes its synchronization source from SyncRef UE 2 to SyncRef UE 3, and changes its S-SSB transmissions timing and SLSS ID to follow SyncRef UE 3 as the synchronization source. For the test configuration, the SLSS ID will still be 0 (with in-coverage IE in MIB-SL set to FALSE) after SyncRef UE reselection delay from start of T3.
+
+The SyncRef UE reselection delay shall be less than 2.4 sec. The SyncRef UE reselection delay can be expressed as:
+
+SyncRef UE reselection delay = Tdetect,SyncRef UE + Tevaluate,SLSS + S-SSB period
+
+Where
+
+- Tdetect,SyncRef UE = 1.6 sec (as specified in sub-clause 12.4)
+
+- Tevaluate,SLSS = 0.64 (as specified in sub-clause 12.3)
+
+- S-SSB period = 160 ms
+
+This gives a total of 2.4 seconds.
+
+The test system will verify that the V2X UE does not drop its V2X data and SLSS transmissions at most in an aggregated window of 480 ms during the duration of T2, and does not drop or delay at most an aggregated window of 24 ms of its S-SSB transmissions during the duration of T3.
+
+The rate of correct SyncRef UE selection / reselection observed during repeated tests shall be at least 90 %.
+
+#### A.9.1.3.4 Test for FR1 NR Cell configured as the highest priority under SL-DRX
+
+##### A.9.1.3.4.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to SyncRef UE selection / reselection defined in clause 12.4, when gNB is configured as the highest priority and SL-DRX is configured. For this test, the UE is triggered by the test loop function or the upper layers to transmit for V2X Sidelink Communication.
+
+This test is applicable for V2X sidelink communication capable UEs that support gNB as synchronization source and sidelink operation.
+
+The test parameters are given in table A.9.1.3.4.1-1 and A.9.1.3.4.1-2 below. There are no active cells and GNSS is reliable during the whole test. The test system can emulate and send the GNSS signal to the test UE. The test parameters for GNSS signals are defined in B.4.1. There are two active SyncRef UEs (SyncRef UE 1 and SyncRef UE 2) in this test. The test system shall emulate SyncRef UE 1 and SyncRef UE 2 to transmit S-SSB every S-SSB period.
+
+The test system can verify the selection / reselection of SyncRef UE by monitoring the SLSS ID used by the V2X UE for its S-SSB transmissions. When the V2X UE is synchronized to a SyncRef UE, the V2X UE shall derive its SLSS ID from the SLSS ID of the SyncRef UE as per clause 5.8.5.3 of TS 38.331[2].
+
+The test consists of three successive time periods, with time duration of T1, T2 and T3 respectively. During T1, both SyncRef UE 1 and SyncRef UE 2 are powered off and the V2X UE will select GNSS as synchronization source. During T2, SyncRef UE 1 is powered ON and the V2X UE will select SyncRef UE 1 as the synchronization source. During T3, a higher priority SyncRef UE 2 is additionally powered ON and the V2X UE will reselect to the higher priority SyncRef UE 2 as the synchronization source. SL-DRX is configured during the entire test period.
+
+Table A.9.1.3.4.1-1: Test Parameters for V2X Synchronization Reference Selection/Reselection Tests for FR1 NR Cell configured as the highest priority
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| SCS |  | kHz | 30 |  |
+| Initial condition | Active synchronization source |  | GNSS | DUT transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 0 and in-coverage set as TRUE in MIB-SL. |
+| T2 end condition | Active synchronization source |  | Sync Ref UE 1 | DUT transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 336+59 and in-coverage set as FALSE in MIB-SL. |
+| Final condition | Active synchronization source |  | Sync Ref UE 2 | UE transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 30 and in-coverage set as FALSE in MIB-SL. |
+| Active cell |  |  | None |  |
+| Active SyncRef UEs |  |  | SyncRef UE 1SyncRef UE 2 | Transmitting S-SSB on RF channel number 1 |
+| Timing offset between SyncRef UE 1 and SyncRef UE 2 |  | ms | 3 | Asynchronous |
+| Frequency offset of SyncRef UE 1,2 |  | ppm | 0 |  |
+| V2X sidelink Communication preconfiguration |  |  | As specified in table A.3.21.2-2 | IE values unless specified otherwise in this test. |
+| syncPriority |  |  | gnb |  |
+| syncTxThreshOoC |  |  | 13 (+infinity) |  |
+| SL-DRX |  |  | SL.DRX.2 | As specified in clause A.3.21.4 |
+| T1 |  | s | 24 |  |
+| T2 |  | s | 16 |  |
+| T3 |  | s | 16 |  |
+
+Table A.9.1.3.4.1-2: SyncRef UE Specific Test Parameters for V2X Synchronization Reference Selection/Reselection Tests for FR1 NR Cell configured as the highest priority
+
+| Parameter | Unit | SyncRef UE 1 |  |  | SyncRef UE 2 |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 | T1 | T2 | T3 |
+| NR RF Channel Number |  | 1(HD carrier in Band n47 or n38) |  |  |  |  |  |
+| Channel Bandwidth (BWchannel) Note 4 | MHz | 20(NPRB,c = 50) or  40(NPRB,c = 100) |  |  |  |  |  |
+| V2X Sidelink Communication resource pool configuration |  | As specified in table A.3.21.2-2 |  |  | As specified in table A.3.21.2-2 |  |  |
+| networkControlledSyncTx |  | N/A |  |  | ON |  |  |
+| syncTxThreshOoC | dBm/15 kHz | +infinity |  |  | N/A |  |  |
+| SLSSID |  | 59 |  |  | 30 |  |  |
+| inCoverage (in MIB-SL) |  | FALSE |  |  | TRUE |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | -95 |  |  |  |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | -infinity | 0 | 0 | -infinity | -infinity | 3 |
+| ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] | dB | -infinity | 0 | -4.76 | -infinity | -infinity | 0 |
+| PSBCH-RSRP Note2, Note 3 | dBm/30 kHz | -infinity | -95 | -95 | -infinity | -infinity | -92 |
+| Propagation Condition |  | AWGN |  |  |  |  |  |
+| NOTE 1: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: PSBCH-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: S-PSS Es/Iot and S-SSS Es/Iot are set the same as PSBCH Es/Iot.NOTE 4: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |  |  |  |
+
+##### A.9.1.3.4.2 Test Requirements
+
+1) During T2, SyncRef UE selection delay is defined as the time from the beginning of T2 to the time UE is synchronized to SyncRef UE 1 and changes its S-SSB transmissions timing and SLSS ID to follow SyncRef UE 1 as the synchronization source. For the test configuration, the SLSS ID will be changed to 336+59 (with in-coverage IE in MIB-SL set to FALSE) after SyncRef UE selection delay from start of T2.
+
+The SyncRef UE selection delay shall be less than 8.8 sec. The SyncRef UE selection/reselection delay can be expressed as:
+
+SyncRef UE selection/reselection delay = Tdetect,SyncRef UE + Tevaluate,SLSS + S-SSB period
+
+Where
+
+- Tdetect,SyncRef UE = 8 sec (as specified in sub-clause 12.4)
+
+- Tevaluate,SLSS = 0.64 sec (as specified in sub-clause 12.3)
+
+- S-SSB period = 160 ms
+
+This gives a total of 8.8 seconds.
+
+2) During T3, SyncRef UE reselection delay is defined as the time from the beginning of T3 to the time UE changes its synchronization source from SyncRef UE 1 to SyncRef UE 2, and changes its S-SSB transmissions timing and SLSS ID to follow SyncRef UE 2 as the synchronization source. For the test configuration, the SLSS ID will be changed to 30 (with in-coverage IE in MIB-SL set to FALSE) after SyncRef UE selection delay from start of T3.
+
+The SyncRef UE reselection delay shall be less than 8.8 sec. The SyncRef UE selection/reselection delay can be expressed as:
+
+SyncRef UE selection/reselection delay = Tdetect,SyncRef UE + Tevaluate,SLSS + S-SSB period
+
+Where
+
+- Tdetect,SyncRef UE = 8 sec (as specified in sub-clause 12.4)
+
+- Tevaluate,SLSS = 0.64 sec (as specified in sub-clause 12.3)
+
+- S-SSB period = 160 ms
+
+This gives a total of 8.8 seconds.
+
+The test system will verify that the V2X UE does not drop or delay its V2X data and SLSS transmissions at most in an aggregated window of 480 ms during the duration of T2 and T3.
+
+The rate of correct SyncRef UE selection / reselection observed during repeated tests shall be at least 90 %.
+
+### A.9.1.4 Test for L1 SL-RSRP Measurement
+
+#### A.9.1.4.1 Test for V2X UE Autonomous Resource Selection/Reselection
+
+##### A.9.1.4.1.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to autonomous resource selection / reselection for V2X UE in mode 2 defined in clause 12.5. For this test, the UE is triggered by the test loop function or the upper layers to transmit for V2X Sidelink Communication.
+
+The test parameters are given in table A.9.1.4.1.1-1and A. 9.1.4.1.1-2 below. There are 50 active V2X sidelink UEs (UE0~UE49) in this test. Both the UE under test and active V2X sidelink UEs select GNSS as synchronization reference source. The test system can emulate and send the GNSS signal to the test UE and active V2X sidelink UEs. The test parameters for GNSS signals are defined in B.4.1. The test system shall emulate the active V2X sidelink UEs to transmit PSCCH/PSSCH every 5 ms. At the beginning of whole test, the test equipment shall send one AT command to trigger the UE under test continuously transmits PSCCH/PSSCH.
+
+The test consists of two duration T1 and T2. During T1, the signal from Test Equipement are configured such that
+
+- he measured PSSCH-RSRP for 20 active V2X sidelink UEs(UE10~UE29) is above the measurement threshold, and the resource occupied by the 20 active V2X sidelink UEs is expected to be excluded in the resource selection procedure and,
+
+- the measured PSSCH-RSRP for other 30 active V2X sidelink UEs(UE0~UE9, UE30~UE49) is low the measurement threshold, and the resource occupied by the 30 active V2X sidelink UEs is expected to be included in the resource selection procedureDuring T2, the signal from Test Equipement are configured such that
+
+- the measured PSSCH-RSRP or the 20 active V2X sidelink UEs(UE10~UE29) is below the measurement threshold, and the resource occupied by the 20 active V2X sidelink UEs is expected to be included in the resource selection procedure and,
+
+- the measured PSSCH-RSRP for other 30 active V2X sidelink UEs(UE0~UE9, UE30~UE49) is above the measurement threshold, and the resource occupied by the 30 active V2X sidelink UEs is expected to be excluded in the resource selection procedure.
+
+Table A. 9.1.4.1.1-1: Test Parameters for V2X UE Autonomous Resource Selection/Reselection Tests for PSSCH-RSRP measurements
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR RF Channel Number |  |  | 1 | HD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 2 |  | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| SCS |  | kHz | 30 |  |
+| V2X sidelink communication pre-configuration |  |  | As specified in table A.3.21.2-1 and A.3.21.2-3 | IE values unless specified otherwise in this test. |
+| sl-TimeResource-r16 included in SL-ResourcePool |  |  | 1111111111 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+| sl-NumSubchannel-r16 included in SL-ResourcePool |  |  | 5 | Indicates the number of sub-channels for TX resource pool |
+| sl-SubchannelSize-r16 included in SL-ResourcePool |  |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+| Number of Active Sidelink UEs |  |  | 50 | Active Sidelink UE i = 0, .., 49 |
+| SL-Thres-RSRP |  |  | 12 | Corresponding -106 dBm as defined in section 6.3.5 in TS38.331[2]Same for all priority level pairs. |
+| Active Sidelink UEs (UE i = 0, .., 49) | V2X sidelink Communication preconfiguration |  | As specified in table A.3.21.2-1And A.3.21.2-3 | IE values unless specified otherwise in this test. |
+|  | sl-TimeResource-r16 included in SL-ResourcePool |  | {1i} Note1 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+|  | sl-NumSubchannel-r16 included in SL-ResourcePool |  | 1 | Indicates the number of sub-channels for TX resource pool |
+|  | sl-StartRB-Subchannel-r16 included in SL-ResourcePool |  | floor(i/10)x10 | Indicates the lowest PRB index of the subchannel with the lowest index.UE 0~9 start PRB=0;UE 10~19 start PRB=10;UE 20~29 start PRB=20;UE 30~39 start PRB=30;UE 40~49 start PRB=40; |
+|  | sl-SubchannelSize-r16 included in SL-ResourcePool |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+|  | sl-ResourceReservePeriod2-r16 | ms | 5 |  |
+| Timing offset among Active Sidelink UEs |  | s | CP/2 | Synchronous |
+| NOTE 1: {1i} is a sequence of nine 0’s with one 1 in (mod(i,10 )+1’th position.NOTE 2: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |
+
+Table A.9.1.4.1.1-2: Active Sidelink UE Specific Test Parameters for V2X UE Autonomous Resource Selection/Reselection Tests for PSSCH-RSRP measurements
+
+| Parameter | Unit | Active Sidelink UE i(i = 0, .., 49) |  |
+| --- | --- | --- | --- |
+|  |  | T1 | T2 |
+| NR RF Channel Number | - | 1 |  |
+| Channel Bandwidth (BWchannel)Note 5 | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |
+| PSCCH RMC (defined in A.3.21.3) | - | CC.1A HD |  |
+| PSSCH RMC (defined in A.3.21.3) | - | CD.1A HD |  |
+| ![](media_svg/image7.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | -111 | -121 |
+| ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note3 | dB | 10 |  |
+| ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,3 | dB | 10 |  |
+| ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note4 | dB | 0 | 20 |
+| ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,4 | dB | 0 | 20 |
+| PSSCH-RSRP1 Note 2,3 | dBm/SCS | -101 | -111 |
+| PSSCH -RSRP2 Note 2,4 | dBm/SCS | -111 | -101 |
+| IoNote 2 | dBm/18 MHz | -77.42 | -74.03 |
+|  | dBm/36 MHz | -77.42 | -74.03 |
+| Antenna Configuration | - | 1x2 |  |
+| Propagation Condition | - | AWGN |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image10.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: Es/Iot, PSSCH-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: For UE 20 to 29, occupying subchannel #2NOTE 4: For UE 0 to 19 and 30 to 49, occupying subchannel #0/1/3/4NOTE 5: The UE is only required to be tested in one of the supported test configurations. |  |  |  |
+
+##### A.9.1.4.1.2 Test Requirements
+
+The test time  T1 and T2 should be long enough. The rate of PSSCH transmissions on the resources on subchannel #1 or #2 shall be less than 10 % during T1. The rate of PSSCH transmissions on the resources on subchannel #1 or #2 shall be more than 90 % during T2.
+
+#### A.9.1.4.2 Test for V2X UE Resource Pre-emption
+
+##### A.9.1.4.2.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to autonomous resource pre-emption for V2X UE in mode 2 defined in clause 12.5. For this test, the UE is triggered by the test loop function or the upper layers to transmit for V2X Sidelink Communication.
+
+The test parameters are given in table A. 9.1.4.2.1-1and A.12. 9.1.4.1-2 below. There is one active V2X sidelink UE in this test. Both the UE under test and the active V2X sidelink UE select GNSS as synchronization reference source. The test system can emulate and send the GNSS signal to the test UE and active V2X sidelink UEs. The test parameters for GNSS signals are defined in B.4.1. At the beginning of whole test, the test equipment shall send one message with a SL-SCH MAC PDU as specified in clause6.1.6 in TS 38.321[7], in order to make sure that the UE under test needs continuously transmit PSCCH/PSSCH.
+
+The test consists of two duration T1 and T2. During T1, the signal from Test Equipement are configured such that the active V2X sidelink UE is not transmitting. The UE under test shall transmit SL data and reserve future resources. The resource reservation is decoded by the active V2X sidelink UE. The point in time at which resource reservation from the UE under test is decoded by the active V2X sidelink UE defines the start of time period T2. During T2, the active V2X sidelink UE reserves the same resource as the UE under test with high priority data no later than slot n- Tpre-empt.
+
+Table A.9.1.4.2.1-1: Test Parameters for V2X UE Resource Pre-emption Tests for PSSCH-RSRP measurements
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR RF Channel Number |  |  | 1 | HD carrier in Band n47 and n38 |
+| Channel Bandwidth (BWchannel) Note 1 |  | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| SCS |  | kHz | 30 |  |
+| V2X sidelink communication pre-configuration |  |  | As specified in table A.3.21.2-1 and A.3.21.2-3 | IE values unless specified otherwise in this test. |
+| sl-TimeResource-r16 included in SL-ResourcePool in SL-ResourcePool in sl-TxPoolSelectedNormal-r16 |  |  | 10000000000000000000 | Indicates the time resource of resource pool within sl-Period. (see TS 38.213 [3]) Note that this is for Tx pool. |
+| sl-TimeResource-r16 included in SL-ResourcePool in sl-RxPool-r16 |  |  | 11111111111111111111 | Indicates the time resource of resource pool within sl-Period. (see TS 38.213 [3]) Note that this is for Rx pool. |
+| sl-NumSubchannel-r16 included in SL-ResourcePool |  |  | 1 | Indicates the number of subchannels in the corresponding resource pool, which consists of contiguous PRBs only |
+| sl-SubchannelSize-r16 included in SL-ResourcePool |  |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+| sl-StartRB-Subchannel-r16 included in SL-ResourcePool |  |  | 10 | Indicates the lowest PRB index of the subchannel with the lowest index. |
+| Number of Active Sidelink UEs |  |  | 1 |  |
+| SL-Thres-RSRP |  |  | 12 | Corresponding -106 dBm as defined in section 6.3.8 in TS38.331[2] |
+| Active Sidelink UEs | V2X sidelink Communication preconfiguration |  | As specified in table A.3.21.2-1 and A.3.21.2-3 | IE values unless specified otherwise in this test. |
+|  | sl-TimeResource-r16 included in SL-ResourcePool |  | 11111111111111111111 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+|  | sl-NumSubchannel-r16 included in SL-ResourcePool |  | 1 | Indicates the number of sub-channels for TX resource pool |
+|  | sl-StartRB-Subchannel-r16 included in SL-ResourcePool |  | 10 | Indicates the lowest PRB index of the subchannel with the lowest index. |
+|  | Sl-SubchannelSize-r16 included in SL-ResourcePool |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+| Timing offset among Active Sidelink Ues |  | s | CP/2 | Synchronous |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |
+
+Table A.9.1.4.2.1-2: Active Sidelink UE Specific Test Parameters for V2X UE Resource Pre-emption Tests for PSSCH-RSRP measurements
+
+| Parameter | Unit | Active Sidelink UE |  |
+| --- | --- | --- | --- |
+|  |  | T1 | T2 |
+| NR RF Channel Number | - | 1 |  |
+| Channel Bandwidth (BWchannel) Note 3 | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |
+| PSCCH RMC (defined in A.3.21.3) | - | CC.1A HD |  |
+| PSSCH RMC (defined in A.3.21.3) | - | CD.1A HD |  |
+| ![](media_svg/image7.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | N/A | -100 |
+| PSCCH ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] | dB |  | 5 |
+| PSSCH ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] | dB |  | 5 |
+| PSCCH ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2 | dB |  | 5 |
+| PSSCH ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2 | dB |  | 5 |
+| PSSCH-RSRP Note 2 | dBm/30kHz |  | -95 |
+| Io Note 2 | dBm/18 MHz |  | -73.01 |
+|  | dBm/36 MHz |  | -73.01 |
+| Antenna Configuration | - | 1x2 |  |
+| Propagation Condition | - | AWGN |  |
+| NOTE 1: Interference from other Ues and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image10.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: Es/Iot, PSSCH-RSRP and Io have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: The UE is only required to be tested in one of the supported test configurations. |  |  |  |
+
+##### A.9.1.4.2.2 Test Requirements
+
+The test time T1 and T2 should be long enough. The UE under test is required to trigger resource reselection and not to transmit on the reserved resource at slot n when the high priority reservation is transmitted by the active V2X sidelink UE before n-Tpre-empt, where
+
+Tpre-empt = T3+Tproc,0
+
+T3 = 5 slots and Tproc,0= 1 slot for FR1.
+
+The rate of PSSCH transmissions on the resources at slot n shall be less than 10 % during repeated tests.
+
+#### A.9.1.4.3  Test for V2X UE Resource Re-evaluation
+
+##### A.9.1.4.3.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to autonomous resource re-evaluation for V2X UE in mode 2 defined in clause 12.5. For this test, the UE is triggered by the test loop function or the upper layers to transmit for V2X Sidelink Communication.
+
+The test parameters are given in table A.9.1.4.3.1-1, A.9.1.4.3.1-2 and A.9.1.4.3.1-3 below. There are 130 active V2X sidelink UEs in this test. The first 100 active V2X sidelink UEs are scheduled with 50 ms periodicity. The last 30 active V2X sidelink Ues are aperiodic service UE with retransmission reservation period equaling 15 ms.
+
+Both the UE under test and active V2X sidelink Ues select GNSS as synchronization reference source. The test system can emulate and send the GNSS signal to the test UE and active V2X sidelink Ues. The test parameters for GNSS signals are defined in B.4.1.
+
+The test consists of three duration T0, T1, T2.
+
+During T0, the signal from Test Equipement are configured. The resource occupied by the active V2X sidelink UEs is expected to be excluded in the resource selection procedure such that the measured PSSCH-RSRP is above the measurement threshold. The test equipment shall just configure the resource pool for the test UE without the MAC PDU for transmission channel configuration.
+
+During T1, the signal from Test Equipement are configured. Some of the resource occupied by the active V2X sidelink Ues is expected to be excluded in the resource selection procedure such that the measured PSSCH-RSRP is above the measurement threshold and some of the resource occupied by the active V2X sidelink Ues is expected to be included in the resource selection procedure such that the measured PSSCH-RSRP is below the measurement threshold. The test system shall emulate the active V2X sidelink Ues to transmit PSCCH/PSSCH every 50 ms according to the RSRP level specified in the Table A. 9.1.4.3.1-2, but UE #0~29 will be silent during T2.
+
+At the end of T1, where slot index mod 100 = 99, the test equipment shall send one message with a SL-SCH MAC PDU as specified in clause6.1.6 in TS 38.321[7], in order to make sure that the UE under test shall be scheduled to periodically transmit PSCCH/PSSCH.
+
+During T2, the additional aperiodic active V2X sidelink UEs from Test Equipement are configured in the beginning 30 slots, and the resource occupied by these active V2X sidelink UEs is expected to be excluded in the resource re-evaluation procedure such that the measured PSSCH-RSRP is above the measurement threshold shown in table A. 9.1.4.3.1-2. The test system shall emulate the active V2X sidelink UEs to transmit PSCCH/PSSCH with the maximum number of reserved PSCCH/PSSCH resources equalling n2 and time resource assignment interval as 15 ms.
+
+During T2, the test UE is expeted to reselect the resources and transmit the PSCCH/PSSCH in the newly re-evaluated resources.
+
+Table A.9.1.4.3.1-1: Test Parameters for V2X UE Resource Selection Tests for Re-evaluation
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR RF Channel Number |  |  | 1 | HD carrier in Band n47 and n38 |
+| Channel Bandwidth (BWchannel) Note 2 |  | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |
+| SCS |  | kHz | 30 |  |
+| V2X sidelink communication pre-configuration |  |  | As specified in table A.3.21.2-2 | IE values unless specified otherwise in this test. |
+| sl-TimeResource-r16 included in SL-ResourcePool |  |  | 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+| sl-NumSubchannel-r16 included in SL-ResourcePool |  |  | 1 | Indicates the number of sub-channels for TX resource pool |
+| sl-SubchannelSize-r16 included in SL-ResourcePool |  |  | 10 |  |
+| sl-StartRB-Subchannel-r16 |  |  | 0 |  |
+| Number of Active Sidelink UEs |  |  | 130 | Active Sidelink UE i = 0, .., 129 |
+| SL-Thres-RSRP-r16 |  |  | 13 | Corresponding -104 dBm as defined in section 6.3.5 in TS38.331[2] |
+| Active Sidelink UEs(UE i=0-99) | V2X sidelink Communication preconfiguration |  | As specified in table A.3.21.2-2 | IE values unless specified otherwise in this test. |
+|  | sl-TimeResource-r16 included in SL-ResourcePool |  | {1i}Note1 | Indicates the bitmap of the TX resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213 [3]) |
+|  | sl-NumSubchannel-r16 included in SL-ResourcePool |  | 1 | Indicates the number of sub-channels for TX resource pool |
+|  | sl-SubchannelSize-r16 included in SL-ResourcePool |  | 10 | Indicates the size of sub-channels for TX resource pool |
+|  | sl-ResourceReservePeriod2-r16 | ms | 50 |  |
+| Active Sidelink UEs(UE i= 100-129) | V2X sidelink Communication preconfiguration |  | As specified in table A.3.21.2-2 | IE values unless specified otherwise in this test. |
+|  | sl-TimeResource-r16 included in SL-ResourcePool |  | {1i}Note1 | Indicates the bitmap of the TX resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213 [3]) |
+|  | sl-NumSubchannel-r16 included in SL-ResourcePool |  | 1 | Indicates the number of sub-channels for TX resource pool |
+|  | sl-SubchannelSize included in SL-ResourcePool |  | 10 | Indicates the size of sub-channels for TX resource pool |
+|  | sl-MultiReserveResource-r16 |  | enabled |  |
+|  | sl-MaxNumPerReserve-r16 |  | n2 |  |
+|  | sl-ResourceReservePeriod2-r16 |  | 0 | Unit:ms |
+| Timing offset among Active Sidelink UEs |  | s | CP/2 | Synchronous |
+| T0 |  | s | 1 |  |
+| T1 |  | ms | 50 |  |
+| T2 |  | ms | 50 |  |
+| NOTE 1:       {1i} is a sequence of ninety-nine 0’s with one 1 in (mod(i,100)+1)’th position.NOTE 2:     The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |
+
+Table A.9.1.4.3.1-2: Active Sidelink UE Specific Test Parameters for V2X UE Resource Selection Tests for Re-evaluation (UE #0...99)
+
+| Parameter | Unit | Active Sidelink UE i(i = 0, .., 99) |  |
+| --- | --- | --- | --- |
+|  |  | T1 | T2 |
+| NR RF Channel Number | - | 1 |  |
+| Channel Bandwidth (BWchannel) Note 7 | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |
+| PSCCH RMC (defined in A.3.21.3) | - | CC.1A HD |  |
+| PSSCH RMC (defined in A.3.21.3) | - | CD.1A HD |  |
+| ![](media_svg/image7.svg) [公式≈: ^{N}oc] Note1 | dBm/SCS | -113 |  |
+| PSSCH1 ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note 3 | dB | 16 | 16 |
+| PSSCH2 ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note 4 | dB | 2 | 2 |
+| PSSCH3 ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note 5 | dB | 16 | -infinity |
+| PSSCH4 ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note 6 | dB | 2 | 2 |
+| PSSCH1 ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,3 | dB | 16 | [-0.11] Note 10 |
+|  |  | 16 | 16 Note 11 |
+| PSSCH2 ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,4 | dB | 2 | [-14.11] |
+| PSSCH3 ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,5 | dB | 16 | -infinity |
+| PSSCH4 ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,6 | dB | 2 | 2 |
+| PSSCH -RSRP1 Note 2, 3 | dBm/SCS | -97 | -97 |
+| PSSCH -RSRP2 Note 2, 4 | dBm/SCS | -111 | -111 |
+| PSSCH -RSRP3 Note 2, 5 | dBm/SCS | -97 | -infinity |
+| PSSCH -RSRP4 Note 2, 6 | dBm/SCS | -111 | -111 |
+| Io Note 2, 8 | dBm/18 MHz | -76.10 | -76.10 |
+|  | dBm/36 MHz | -76.10 | -76.10 |
+| Io Note 2, 9 | dBm/18 MHz | -88.08 | [-75.93] |
+|  | dBm/36 MHz | -88.08 | [-75.93] |
+| Io Note 2, 10 | dBm/18 MHz | -76.10 | [-73.14] |
+|  | dBm/36 MHz | -76.10 | [-73.14] |
+| Io Note 2, 11 | dBm/18 MHz | -76.10 | -76.10 |
+|  | dBm/36 MHz | -76.10 | -76.10 |
+| Io Note 2, 12 | dBm/18 MHz | -88.08 | -88.08 |
+|  | dBm/36 MHz | -88.08 | -88.08 |
+| Antenna Configuration | - | 1x2 |  |
+| Propagation Condition | - | AWGN |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image10.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot], PSSCH-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: UE #50~64 and UE #85~99 will periodically occupy the subchannels on the slot with “#slot index mod 100” = #50-64 and #85-99.NOTE 4: UE #30~49 will periodically occupy the subchannels on the slot with “#slot index mod 100” = #30-49.NOTE 5: UE #0~29 will periodically occupy the subchannels on the slot with “#slot index mod 100” = #0-29.NOTE 6: UE #65~84 will periodically occupy the subchannels on the slot with “#slot index mod 100” = #65-84.NOTE 7: The UE is only required to be tested in one of the supported configurations.NOTE 8: Calculated on slot #0~29.NOTE 9: Calculated on slot #30~49.Note 10: Calculated on slot #50~59.Note 11: Calculated on slot #60~64 and slot #85~99.Note 12: Calculated on slot #65~84. |  |  |  |
+
+Table A.9.1.4.3.1-3: Active Sidelink UE Specific Test Parameters for V2X UE Resource Selection Tests for Re-evaluation (UE #100…129)
+
+| Parameter | Unit | Active Sidelink UE i(i = 100, .., 129) |  |
+| --- | --- | --- | --- |
+|  |  | T1 | T2 |
+| NR RF Channel Number | - | 1 |  |
+| Channel Bandwidth (BWchannel) Note 4 | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |
+| PSCCH RMC (defined in A.3.21.3) | - | CC.1A HD |  |
+| PSSCH RMC (defined in A.3.21.3) | - | CD.1 A HD |  |
+| ![](media_svg/image7.svg) [公式≈: ^{N}oc] Note1 | dBm/SCS | -103 |  |
+| PSSCH ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] | dB | -infinity | 16 |
+| PSSCH ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2 | dB | -infinity | 16 Note 5 |
+|  |  | -infinity | [11.88] Note 6 |
+|  |  | -infinity | [-0.11] Note 7 |
+| PSSCH-RSRP Note 2, Note 3 | dBm/SCS | -infinity | -97 |
+| Io Note 2, 5 | dBm/18 MHz | -76.10 | -76.10 |
+|  | dBm/36 MHz | -76.10 | -76.10 |
+| Io Note 2, 6 | dBm/18 MHz | -88.08 | [-75.93] |
+|  | dBm/36 MHz | -88.08 | [-75.93] |
+| Io Note 2, 7 | dBm/18 MHz | -76.10 | [-73.14] |
+|  | dBm/36 MHz | -76.10 | [-73.14] |
+| Antenna Configuration | - | 1x2 |  |
+| Propagation Condition | - | AWGN |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image10.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: Es/Iot, PSSCH-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: UE #100~129 will occupy the subchannels on the slots with “#slot index mod 100”= #0-29 during T2.NOTE 4: The UE is only required to be tested in one of the supported configurations.NOTE 5: Calculated on slot #0~29.NOTE 6: Calculated on slot #30~49.NOTE 7: Calculated on slot #50~59. |  |  |  |
+
+##### A.9.1.4.3.2 Test Requirements
+
+The rate of PSSCH transmissions on the resources of the subchannels which are occupied by UE #65-84 shall be more than 90 % during T2.
+
+#### A.9.1.4.4 Test for V2X UE Autonomous Resource Selection/Reselection with Periodic Sensing
+
+##### A.9.1.4.4.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to autonomous resource selection / reselection for V2X UE in mode 2 with partial sensing support defined in clause 12.5. For this test, the UE is triggered by the test loop function or the upper layers to transmit for V2X Sidelink Communication.
+
+The test parameters are given in table A.9.1.4.4.1-1and A. 9.1.4.4.1-2 below. There are 100 active V2X sidelink UEs (UE0~UE99) in this test. Both the UE under test and active V2X sidelink UEs select GNSS as synchronization reference source. The test system can emulate and send the GNSS signal to the test UE and active V2X sidelink UEs. The test parameters for GNSS signals are defined in B.4.1. The test system shall emulate the active V2X sidelink UEs to transmit PSCCH/PSSCH every 10 ms. At the beginning of whole test, the test equipment shall send one message with a SL-SCH MAC PDU as specified in clause6.1.6 in TS 38.321[7] and ensure that the UE under test needs to continuously transmit PSCCH/PSSCH with 10 ms period. Upon receiving the MAC PDU, UE starts resource selection to transmit PSCCH/PSSCH based on the available sensing results.
+
+The test consists of two duration T1 and T2. During T1, the signals from Test Equipment are configured such that
+
+- the measured PSSCH-RSRP for 40 active V2X sidelink UEs(UE20~UE59) is above the measurement threshold, and the resource occupied by the 40 active V2X sidelink UEs is expected to be excluded in the resource selection procedure and,
+
+- the measured PSSCH-RSRP for other 60 active V2X sidelink UEs(UE0~UE19, UE60~UE99) is low the measurement threshold, and the resource occupied by the 60 active V2X sidelink UEs is expected to be included in the resource selection procedure.
+
+During T2, the signals from Test Equipment are configured such that
+
+- the measured PSSCH-RSRP for the 40 active V2X sidelink UEs(UE20~UE59) is below the measurement threshold, and the resource occupied by the 40 active V2X sidelink UEs is expected to be included in the resource selection procedure and,
+
+- the measured PSSCH-RSRP for other 60 active V2X sidelink UEs(UE0~UE19, UE60~UE99) is above the measurement threshold, and the resource occupied by the 60 active V2X sidelink UEs is expected to be excluded in the resource selection procedure.
+
+Table A.9.1.4.4.1-1: Test Parameters for V2X UE Autonomous Resource Selection/Reselection Tests with Periodic Sensing
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR RF Channel Number |  |  | 1 | TDD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 2 |  | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| SCS |  | kHz | 30 |  |
+| V2X sidelink communication pre-configuration |  |  | As specified in table A.3.21.2-1 and A.3.21.2-3 | IE values unless specified otherwise in this test. |
+| sl-TimeResource-r16 included in SL-ResourcePool |  |  | 1111111111 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+| sl-NumSubchannel-r16 included in SL-ResourcePool |  |  | 5 | Indicates the number of sub-channels for TX resource pool |
+| sl-SubchannelSize-r16 included in SL-ResourcePool |  |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+| Number of Active Sidelink UEs |  |  | 100 | Active Sidelink UE i = 0, .., 49 |
+| SL-ThresPSSCH-RSRP |  |  | 12 | Corresponding -106 dBm as defined in section 6.3.5 in TS38.331[2] |
+| Active Sidelink UEs (UE i = 0, .., 99) | V2X sidelink Communication preconfiguration |  | As specified in table A.3.21.2-1And A.3.21.2-3 | IE values unless specified otherwise in this test. |
+|  | sl-TimeResource-r16 included in SL-ResourcePool |  | {1i} Note1 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+|  | sl-NumSubchannel-r16 included in SL-ResourcePool |  | 1 | Indicates the number of sub-channels for TX resource pool |
+|  | sl-StartRB-Subchannel-r16 included in SL-ResourcePool |  | floor(i/20)x10 | Indicates the lowest PRB index of the subchannel with the lowest index.UE 0~19 start PRB=0;UE 20~39 start PRB=10;UE 40~59 start PRB=20;UE 60~79 start PRB=30;UE 80~99 start PRB=40; |
+|  | sl-SubchannelSize-r16 included in SL-ResourcePool |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+|  | sl-ResourceReservePeriod2-r16 | ms | 10 |  |
+| Timing offset among Active Sidelink UEs |  | s | CP/2 | Synchronous |
+| NOTE 1: {1i} is a sequence of nine 0’s with one 1 in (mod(i,10 )+1’th position.NOTE 2: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |
+
+Table A.9.1.4.4.1-2: Active Sidelink UE Specific Test Parameters for V2X UE Autonomous Resource Selection/Reselection Tests with Periodic Sensing
+
+| Parameter | Unit | Active Sidelink UE i(i = 0, .., 99) |  |
+| --- | --- | --- | --- |
+|  |  | T1 | T2 |
+| NR RF Channel Number | - | 1 |  |
+| Channel Bandwidth (BWchannel)Note 5 | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |
+| SCS | kHz | 30 |  |
+| PSCCH RMC (defined in A.3.21.3) | - | CC.1A HD |  |
+| PSSCH RMC (defined in A.3.21.3) | - | CD.1A HD |  |
+| ![](media_svg/image7.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | -111 | -121 |
+| ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note3 | dB | 10 |  |
+| ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,3 | dB | 10 |  |
+| ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note4 | dB | 0 | 20 |
+| ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,4 | dB | 0 | 20 |
+| PSSCH-RSRP1 Note 2,3 | dBm/30kHz | -101 | -111 |
+| PSSCH -RSRP2 Note 2,4 | dBm/30kHz | -111 | -101 |
+| SL-RSSI1 Note 2,3 | dBm/3.6 MHz | -79.79 | -89.79 |
+| SL-RSSI2 Note 2,4 | dBm/3.6 MHz | -87.20 | -80.17 |
+| Antenna Configuration | - | 1x2 |  |
+| Propagation Condition | - | AWGN |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image10.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: Es/Iot, PSSCH-RSRP and SL-RSSI levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: For UE 20 to 59, occupying subchannel #1/2NOTE 4: For UE 0 to 19 and 60 to 99, occupying subchannel #0/3/4NOTE 5: The UE is only required to be tested in one of the supported test configurations. |  |  |  |
+
+##### A.9.1.4.4.2 Test Requirements
+
+The test time T1 and T2 should be long enough. The rate of PSSCH transmissions on the resources on subchannel #1 or #2 shall be less than 10 % during T1. The rate of PSSCH transmissions on the resources on subchannel #1 or #2 shall be more than 90 % during T2.
+
+#### A.9.1.4.5 Test for V2X UE Autonomous Resource Selection/Reselection with Contiguous Sensing
+
+##### A.9.1.4.5.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to autonomous resource selection / reselection for V2X UE in mode 2 performing contiguous sensing configured with M=31 defined in clause 12.5. For this test, the UE is triggered by the test loop function or the upper layers to transmit for V2X Sidelink Communication.
+
+The test parameters are given in table A.9.1.4.5.1-1and A. 9.1.4.5.1-2 below. There are 50 active V2X sidelink UEs (UE0~UE49) in this test. Both the UE under test and active V2X sidelink UEs select GNSS as synchronization reference source. The test system can emulate and send the GNSS signal to the test UE and active V2X sidelink UEs. The test parameters for GNSS signals are defined in B.4.1. The test system shall emulate the active V2X sidelink UEs to transmit PSCCH/PSSCH every 5 ms. Starting from the beginning of whole test, the test equipment shall send a message with a SL-SCH MAC PDU every 5 ms as specified in clause6.1.6 in TS 38.321[7] to schedule an aperiodic transmission and ensure that the UE under test needs continuously transmit PSCCH/PSSCH every 5 ms.
+
+The test consists of two duration T1 and T2. During T1, the signal from Test Equipment are configured such that
+
+- the measured PSSCH-RSRP for 20 active V2X sidelink UEs (UE10~UE29) is above the measurement threshold, and the resource occupied by the 20 active V2X sidelink UEs is expected to be excluded in the resource selection procedure and,
+
+- the measured PSSCH-RSRP for other 30 active V2X sidelink UEs(UE0~UE9, UE30~UE49) is low the measurement threshold, and the resource occupied by the 30 active V2X sidelink UEs is expected to be included in the resource selection procedure.
+
+During T2, the signal from Test Equipment are configured such that
+
+- the measured PSSCH-RSRP for the 20 active V2X sidelink UEs(UE10~UE29) is below the measurement threshold, and the resource occupied by the 20 active V2X sidelink UEs is expected to be included in the resource selection procedure and,
+
+- the measured PSSCH-RSRP for other 30 active V2X sidelink UEs(UE0~UE9, UE30~UE49) is above the measurement threshold, and the resource occupied by the 30 active V2X sidelink UEs is expected to be excluded in the resource selection procedure.
+
+Table A.9.1.4.5.1-1: Test Parameters for V2X UE Autonomous Resource Selection/Reselection Tests with Contiguous Sensing
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR RF Channel Number |  |  | 1 | TDD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 2 |  | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| SCS |  | kHz | 30 |  |
+| V2X sidelink communication pre-configuration |  |  | As specified in table A.3.21.2-1 and A.3.21.2-3 | IE values unless specified otherwise in this test. |
+| sl-TimeResource-r16 included in SL-ResourcePool |  |  | 1111111111 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+| sl-NumSubchannel-r16 included in SL-ResourcePool |  |  | 5 | Indicates the number of sub-channels for TX resource pool |
+| sl-SubchannelSize-r16 included in SL-ResourcePool |  |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+| Number of Active Sidelink UEs |  |  | 50 | Active Sidelink UE i = 0, .., 49 |
+| SL-ThresPSSCH-RSRP |  |  | 12 | Corresponding -106 dBm as defined in section 6.3.5 in TS38.331[2] |
+| Active Sidelink UEs (UE i = 0, .., 49) | V2X sidelink Communication preconfiguration |  | As specified in table A.3.21.2-1And A.3.21.2-3 | IE values unless specified otherwise in this test. |
+|  | sl-TimeResource-r16 included in SL-ResourcePool |  | {1i} Note1 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+|  | sl-NumSubchannel-r16 included in SL-ResourcePool |  | 1 | Indicates the number of sub-channels for TX resource pool |
+|  | sl-StartRB-Subchannel-r16 included in SL-ResourcePool |  | floor(i/10)x10 | Indicates the lowest PRB index of the subchannel with the lowest index.UE 0~9 start PRB=0;UE 10~19 start PRB=10;UE 20~29 start PRB=20;UE 30~39 start PRB=30;UE 40~49 start PRB=40; |
+|  | sl-SubchannelSize-r16 included in SL-ResourcePool |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+| Timing offset among Active Sidelink UEs |  | s | CP/2 | Synchronous |
+| NOTE 1: {1i} is a sequence of nine 0’s with one 1 in (mod(i,10 )+1’th position.NOTE 2: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |
+
+Table A.9.1.4.5.1-2: Active Sidelink UE Specific Test Parameters for V2X UE Autonomous Resource Selection/Reselection Tests with Contiguous Sensing
+
+| Parameter | Unit | Active Sidelink UE i(i = 0, .., 49) |  |
+| --- | --- | --- | --- |
+|  |  | T1 | T2 |
+| NR RF Channel Number | - | 1 |  |
+| Channel Bandwidth (BWchannel)Note 5 | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |
+| SCS | kHz | 30 |  |
+| PSCCH RMC (defined in A.3.21.3) | - | CC.1A HD |  |
+| PSSCH RMC (defined in A.3.21.3) | - | CD.1A HD |  |
+| ![](media_svg/image7.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | -111 | -121 |
+| ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note3 | dB | 10 |  |
+| ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,3 | dB | 10 |  |
+| ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note4 | dB | 0 | 20 |
+| ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,4 | dB | 0 | 20 |
+| PSSCH-RSRP1 Note 2,3 | dBm/30kHz | -101 | -111 |
+| PSSCH -RSRP2 Note 2,4 | dBm/30kHz | -111 | -101 |
+| SL-RSSI1 Note 2,3 | dBm/3.6 MHz | -79.79 | -89.79 |
+| SL-RSSI2 Note 2,4 | dBm/3.6 MHz | -87.20 | -80.17 |
+| Antenna Configuration | - | 1x2 |  |
+| Propagation Condition | - | AWGN |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image10.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: Es/Iot, PSSCH-RSRP and SL-RSSI levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: For UE 10 to 29, occupying subchannel #1/2NOTE 4: For UE 0 to 9 and 30 to 49, occupying subchannel #0/3/4NOTE 5: The UE is only required to be tested in one of the supported test configurations. |  |  |  |
+
+##### A.9.1.4.5.2 Test Requirements
+
+The test time T1 and T2 should be long enough. The rate of PSSCH transmissions on the resources on subchannel #1 or #2 shall be less than 10 % during T1. The rate of PSSCH transmissions on the resources on subchannel #1 or #2 shall be more than 90 % during T2.
+
+#### A.9.1.4.6 Test for V2X UE Autonomous Resource Selection/Reselection in SL-DRX
+
+##### A.9.1.4.6.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to autonomous resource selection / reselection for V2X UE in mode 2 defined in clause 12.5. For this test, the UE is triggered by the test loop function or the upper layers to transmit for V2X Sidelink Communication.
+
+The test parameters are given in table A.9.1.4.6.1-1and A. 9.1.4.6.1-2 below. There are 50 active V2X sidelink UEs (UE0~UE49) and another V2X sidelink UE as the receiver for the UE under test in this test. The UE under test, the receiver UE and active V2X sidelink UEs select GNSS as synchronization reference source. The test system can emulate and send the GNSS signal to the test UE, the receiver V2X sidelink UE and active V2X sidelink UEs. The test parameters for GNSS signals are defined in B.4.1. The test system shall emulate the active V2X sidelink UEs to transmit PSCCH/PSSCH every 5 ms. At the beginning of whole test, the test equipment shall send one message with a SL-SCH MAC PDU as specified in clause6.1.6 in TS 38.321[7] and ensure that the UE under test needs continuously transmit PSCCH/PSSCH to the receiver SL UE.
+
+The receiver UE runs one DRX cycle with 40 ms cycle length and 10 ms on time, 0 ms inactivity timer, and 10 ms offset. The UE under test and the 50 active UEs are in non-DRX mode.
+
+The test consists of two duration T1 and T2. During T1, the signals from Test Equipment are configured such that
+
+- the measured PSSCH-RSRP for 20 active V2X sidelink UEs(UE10~UE29) is above the measurement threshold, and the resource occupied by the 20 active V2X sidelink UEs is expected to be excluded in the resource selection procedure and,
+
+- the measured PSSCH-RSRP for other 30 active V2X sidelink UEs(UE0~UE9, UE30~UE49) is low the measurement threshold, and the resource occupied by the 30 active V2X sidelink UEs is expected to be included in the resource selection procedure.
+
+During T2, the signals from Test Equipment are configured such that
+
+- the measured PSSCH-RSRP for the 20 active V2X sidelink UEs(UE20~UE29) is below the measurement threshold, and the resource occupied by the 20 active V2X sidelink UEs is expected to be included in the resource selection procedure and,
+
+- the measured PSSCH-RSRP for other 30 active V2X sidelink UEs(UE0~UE9, UE30~UE49) is above the measurement threshold, and the resource occupied by the 30 active V2X sidelink UEs is expected to be excluded in the resource selection procedure.
+
+Table A.9.1.4.6.1-1: Test Parameters for V2X UE Autonomous Resource Selection/Reselection Tests in SL-DRX
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR RF Channel Number |  |  | 1 | TDD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 2 |  | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| SCS |  | kHz | 30 |  |
+| V2X sidelink communication pre-configuration |  |  | As specified in table A.3.21.2-1 and A.3.21.2-3 | IE values unless specified otherwise in this test. |
+| sl-TimeResource-r16 included in SL-ResourcePool |  |  | 1111111111 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+| sl-NumSubchannel-r16 included in SL-ResourcePool |  |  | 5 | Indicates the number of sub-channels for TX resource pool |
+| sl-SubchannelSize-r16 included in SL-ResourcePool |  |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+| Number of Active Sidelink UEs |  |  | 50 | Active Sidelink UE i = 0, .., 49 |
+| SL-ThresPSSCH-RSRP |  |  | 12 | Corresponding -106 dBm as defined in section 6.3.5 in TS38.331[2] |
+| Active Sidelink UEs (UE i = 0, .., 49) | V2X sidelink Communication preconfiguration |  | As specified in table A.3.21.2-1And A.3.21.2-3 | IE values unless specified otherwise in this test. |
+|  | sl-TimeResource-r16 included in SL-ResourcePool |  | {1i} Note1 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+|  | sl-NumSubchannel-r16 included in SL-ResourcePool |  | 1 | Indicates the number of sub-channels for TX resource pool |
+|  | sl-StartRB-Subchannel-r16 included in SL-ResourcePool |  | floor(i/10)x10 | Indicates the lowest PRB index of the subchannel with the lowest index.UE 0~9 start PRB=0;UE 10~19 start PRB=10;UE 20~29 start PRB=20;UE 30~39 start PRB=30;UE 40~49 start PRB=40; |
+|  | sl-SubchannelSize-r16 included in SL-ResourcePool |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+|  | sl-ResourceReservePeriod2-r16 | ms | 5 |  |
+| Timing offset among Active Sidelink UEs |  | s | CP/2 | Synchronous |
+| NOTE 1: {1i} is a sequence of nine 0’s with one 1 in (mod(i,10 )+1’th position.NOTE 2: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |
+
+Table A.9.1.4.6.1-2: Active Sidelink UE Specific Test Parameters for V2X UE Autonomous Resource Selection/Reselection Tests in SL-DRX
+
+| Parameter | Unit | Active Sidelink UE i(i = 0, .., 49) |  |
+| --- | --- | --- | --- |
+|  |  | T1 | T2 |
+| NR RF Channel Number | - | 1 |  |
+| Channel Bandwidth (BWchannel)Note 5 | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |
+| SCS | kHz | 30 |  |
+| PSCCH RMC (defined in A.3.21.3) | - | CC.1A HD |  |
+| PSSCH RMC (defined in A.3.21.3) | - | CD.1A HD |  |
+| ![](media_svg/image7.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | -111 | -121 |
+| ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note3 | dB | 10 |  |
+| ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,3 | dB | 10 |  |
+| ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] Note4 | dB | 0 | 20 |
+| ![](media_svg/image9.svg) [公式≈: ^{Ê}s^{I}ot] Note2,4 | dB | 0 | 20 |
+| PSSCH-RSRP1 Note 2,3 | dBm/30kHz | -101 | -111 |
+| PSSCH -RSRP2 Note 2,4 | dBm/30kHz | -111 | -101 |
+| SL-RSSI1 Note 2,3 | dBm/3.6 MHz | -79.79 | -89.79 |
+| SL-RSSI2 Note 2,4 | dBm/3.6 MHz | -87.20 | -80.17 |
+| Antenna Configuration | - | 1x2 |  |
+| Propagation Condition | - | AWGN |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image10.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: Es/Iot, PSSCH-RSRP and SL-RSSI levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: For UE 10 to 29, occupying subchannel #1/2NOTE 4: For UE 0 to 9 and 30 to 49, occupying subchannel #0/3/4NOTE 5: The UE is only required to be tested in one of the supported test configurations. |  |  |  |
+
+##### A.9.1.4.6.2 Test Requirements
+
+The test time T1 and T2 should be long enough. The rate of PSSCH transmissions on the resources on subchannel #1 or #2 shall be less than 10 % during T1. The rate of PSSCH transmissions on the resources on subchannel #1 or #2 shall be more than 90 % during T2. The PSSCH transmission should happen only in the receiver SL UE SL-DRX active time.
+
+### A.9.1.5 Test for Congestion Control Measurement
+
+#### A.9.1.5.1 Test Purpose and Environment
+
+The purpose of this test is to verify the congestion control measurement requirements in section 12.6. For UE supporting NR Uu and sidelink operation, this test will also verify that V2X UE makes correct reporting of an event.
+
+The test parameters are given in table A.9.1.5.1-1,  Table A.9.1.5.1-2 , A.9.1.5.1-3 and A.9.1.5.1-4 below. There are 4 active V2X sidelink UEs in this test. The test system shall emulate the active sidelink UE to transmit PSCCH/PSSCH every 50 ms. Additionally, For UE supporting NR Uu and sidelink operation, there is an active Cell (Cell 1) in this test. For UE only supporting NR sidelink, There are no active cell and GNSS is reliable during the whole test. The test system can emulate and send the GNSS signal to the test UE. The test parameters for GNSS signals are defined in B.4.1.
+
+The test consists of two successive time periods, with time duration of T1, and T2 respectively. During T1, all of active V2X sidelink UEs are configured to transmit PSCCH/PSSCH with lower transmission power every 50 ms. During T2, all of active V2X sidelink UEs are configured to transmit PSCCH/PSSCH with higher transmission power every 50 ms.
+
+For UE supporting NR Uu and sidelink operation, the UE under test and all active sidelink UEs select PCell as synchonization source In the measurement control information it is indicated to the V2X UE that event-triggered reporting with Event C1 is used.
+
+For UE only supporting NR sidelink, the UE under test and all active sidelink UEs select GNSS as synchonization source. The UE is triggered by the test loop function or the upper layers to transmit for V2X Sidelink Communication.
+
+For UE supporting NR Uu and sidelink operation, Supported test configurations for FR1 NR cell are shown in table A.9.1.5.1.1-1.
+
+Table A.9.1.5.1.1-1: Supported Test Configurations for FR1 NR cell (only for UE supporting both NR Uu and sidelink operation)
+
+| Configuration | Description |
+| --- | --- |
+| 1 | NR Uu: FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 2 | NR Uu: TDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 3 | NR Uu: TDD, SSB SCS 30 kHz, data SCS 30 kHz, BW 40 MHz |
+| NOTE: The UE is only required to pass in one of the supported test configurations in FR1 |  |
+
+Table A.9.1.5.1-2: General test parameters for Congestion Control Measurement Test for V2X UE
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR RF Channel Number |  |  | 1 | HD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel)Note 2 |  | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |
+| SCS |  | kHz | 30 |  |
+| V2X sidelink communication configuration |  |  | As specified in table A.3.21.2-1 and A.3.21.2-3 | IE values unless specified otherwise in this test. |
+| sl-TimeResource-r16 included in SL-ResourcePool |  |  | 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+| sl-NumSubchannel-r16 included in SL-ResourcePool |  |  | 1 | ENUMERATED {n1} |
+| sl-SubchannelSize included in SL-ResourcePool |  |  | 10 | ENUMERATED {n10} |
+| sl-StartRB-Subchannel-r16 |  |  | 0 |  |
+| threshS-RSSI-CBR |  |  | 19 | Corresponding -74 dBm as defined in section 6.3.8 in TS38.331[2] |
+| Active Cell Note 3 |  |  | Cell 1 |  |
+| Number of Active Sidelink UEs every 50 ms |  |  | 4 | Active Sidelink UE i, where i = 0, 1, 2, 3 |
+| Active Sidelink UEs (i = 0,1,2,3) | V2X sidelink Communication configuration |  | As specified in table A.3.21.2-1and A.3.21.2-3 | IE values unless specified otherwise in this test. |
+|  | sl-TimeResource-r16 included in SL-ResourcePool |  | {1i}Note1 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+|  | sl-NumSubchannel-r16 included in SL-ResourcePool |  | 1 |  |
+|  | sl-SubchannelSize included in SL-ResourcePool |  | 10 |  |
+| Timing offset between V2X UE and Active Sidelink UEs |  | s | CP/2 | Synchronous |
+| c1-Threshold-r16Note 3 |  |  | 2 | Corresponding 0.02 as defined in section 6.3.2 in TS38.331[2] |
+| sl-CBR-RangeConfigList-r16 Note 4 |  |  | [2 100] | Two ranges are defined by this list: 0 to 0.02 and 0.02 to 1 |
+| sl-CR-Limit-r16 Note 4 |  |  | 10000 and 10 | Corresponding to the two CBR ranges: if CBR > 0.02, CR ≤ 0.001, otherwise CR > 0.001 |
+| sl-Thres-RSRP-r16 Note 4 |  |  | 12 | Configure threshold <-98.64 dBm/30kHz to ensure not blocking transmission |
+| Hysteresis |  |  | 0 |  |
+| Time To Trigger |  | s | 0 |  |
+| Filter coefficient |  |  | 0 | L3 filtering is not used |
+| T1 |  | s | 5 |  |
+| T2 |  | s | 5 |  |
+| NOTE 1: {1i} is a sequence of ninety nine 0’s with one 1 in i+1’th position.NOTE 2: The UE is only required to be tested in one of the channel bandwidths.NOTE 3: Only for UE supporting both Uu and sidelink operation.NOTE 4:  Only for UE supporting sidelink operation but not supporting Uu. |  |  |  |  |
+
+Table A.9.1.5.1-3: Active sidelink UE specific test parameters for Congestion Control Measurement Test for V2X UE
+
+| Parameter | Unit | Active Sidelink UE i (i = 0, 1, 2, 3) |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | T1 | T2 |  |
+| NR RF Channel Number |  | 1 |  |  |
+| Channel Bandwidth (BWchannel) Note 7 | MHz | 20 (NPRB,c = 50) or 40 (NPRB,c = 100) |  |  |
+| PSCCH RMC (defined in A.3.21.3) |  | CC.1A HD |  |  |
+| PSSCH RMC (defined in A.3.21.3) |  | CD.1A HD |  |  |
+| ![](media_svg/image7.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | -103 |  |  |
+| ![](media_svg/image8.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 4.35 |  | 10.32 |
+| SL-RSSI1 Note 2,3 | dBm/3.6 MHz | -76.5 |  | -71.5 |
+| SL-RSSI2 Note 2,4 | dBm/3.6 MHz | -82.21 |  | -82.21 |
+| Io1 Note 2,5 | dBm/18 MHz | -76.5 |  | -71.5 |
+|  | dBm/36 MHz | -76.5 |  | -71.5 |
+| Io2 Note 2,6 | dBm/18 MHz | -82.21 |  | -82.21 |
+|  | dBm/36 MHz | -82.21 |  | -82.21 |
+| Propagation Condition | - | AWGN |  |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image10.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: SL-RSSI1, SL-RSSI2, Io1 and Io2 levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3: SL-RSSI1 is the SL-RSSI level measured on the slot# 0 - 3 with “SFN mod 5 = 0”.NOTE 4: SL-RSSI2 is the SL-RSSI level measured on the slot# 4-9 with “SFN mod 5 = 0” and the slot# 0-9 with “SFN mod 5 = 1,…, 4”.NOTE 5: Io1 is the Io level measured on the slot# 0 - 3 with “SFN mod 5 = 0”.NOTE 6: Io2 is the Io level measured on the slot# 4-9 with “SFN mod 5 = 0” and the slot# 0-9 with “SFN mod 5 = 1,…, 4”.NOTE 7: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |
+
+Table A.9.1.5.1-4: Cell Test Parameters for Congestion Control Measurement Test for V2X UE (only for UE supporting both NR Uu and sidelink operation)
+
+| Parameter |  | Unit | Cell 1 |
+| --- | --- | --- | --- |
+| RF Channel Number |  |  | 2 |
+| Duplex Mode | Config 1 |  | FDD |
+|  | Config 2,3 |  | TDD |
+| TDD configuration | Config 1 |  | Not Applicable |
+|  | Config 2 |  | TDDConf.1.1 |
+|  | Config 3 |  | TDDConf.2.1 |
+| Channel Bandwidth (BWchannel) | Config 1,2 | MHz | 10: NPRB,c = 52 |
+|  | Config 3 |  | 40: NPRB,c = 106 |
+| Initial BWP Configuration |  |  | DLBWP.0.1ULBWP.0.1 |
+| Dedicated BWP Configuration |  |  | DLBWP.1.1ULBWP.1.1 |
+| DRX Cycle |  |  | N/A |
+| PDSCH Reference measurement channel | Config 1 |  | SR.1.1 FDD |
+|  | Config 2 |  | SR.1.1 TDD |
+|  | Config 3 |  | SR.2.1 TDD |
+| CORESET Reference Channel | Config 1 |  | CR.1.1 FDD |
+|  | Config 2 |  | CR.1.1 TDD |
+|  | Config 3 |  | CR.2.1 TDD |
+| Dedicated CORESET Reference Channel | Config 1 |  | CCR.1.1 FDD |
+|  | Config 2 |  | CCR.1.1 TDD |
+|  | Config 3 |  | CCR.2.1 TDD |
+| SSB configuration | Config 1,2 |  | SSB.1 FR1 |
+|  | Config 3 |  | SSB.2 FR1 |
+| SMTC Configuration |  |  | SMTC.2 |
+| OCNG Patterns |  |  | OP.1 |
+| EPRE ratio of PSS to SSS |  | dB | 0 |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS(Note 1) |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | Config 1,2,3 | dBm/15 kHz | -98 |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | Config 1,2 | dBm/SCS | -98 |
+|  | Config 3 |  | -95 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 3 |
+| SS-RSRP Note3 | Config 1,2 | dBm/SCS | -95 |
+|  | Config 3 |  | -92 |
+| Io Note 3 | Config 1,2 | dBm/9.36 MHz | -65.2 |
+|  | Config 3 | dBm/38.1 MHz | -59.2 |
+| Propagation Condition |  |  | AWGN |
+| NOTE 1: OCNG shall be used such that cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |
+
+#### A.9.1.5.2 Test Requirements
+
+For UEs that support NR Uu and sidelink operation, the UEs shall not send event C1 triggered measurement reports during T1 and shall send event C1 triggered measurement reports during T2.
+
+For UEs that support sidelink operation only, the UE channel occupancy ratio shall be larger than 0.001 during T1, and the UE channel occupancy ratio shall be smaller than 0.001 curing T2.
+
+The rate of correct events observed during repeated tests shall be at least 98 %.
+
+### A.9.1.6 Test for Interruption
+
+#### A.9.1.6.1 Test for Interruption to WAN due to V2X Sidelink Communication
+
+##### A.9.1.6.1.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to interruptions due to V2X sidelink communication defined in clause 12.7.1 under the following additional conditions:
+
+- The UE is out of coverage on the V2X sidelink carrier and is associated with a serving cell on a non-V2X sidelink carrier
+
+This test is applicable for V2X sidelink communication capable UEs that support inter-band concurrent V2X sidelink operation.
+
+For this test, the UE is triggered by the test loop function or the upper layers to monitor V2X sidelink communication.
+
+The test parameters are given in table A.9.1.6.1.1-1, table A.9.1.6.1.1-2, table A.9.1.6.1.1-3 and table A.9.1.6.1.1-4. The test consists of one active cell (PCell) on the serving RF channel 1, and there are no active cells on RF channel 2. On RF channel 2, the test consists of 8 active Sidelink UEs in this test transmitting V2X sidelink communication. The UE under test and all active sidelink UEs select the active cell as synchonization source.
+
+The test consists of three successive time periods, with time duration of T1, T2 and T3 respectively.
+
+During T1, the UE is in RRC_IDLE and monitoring the V2X sidelink communication transmission from other active Sidelink UEs on the V2X sidelink communication resources.
+
+During T2, the test system establishes a RRC connection with the UE. No PDSCH traffic is scheduled for UE, and the UE is expected to transmit SidelinkUEInformationNR indicating sl-RxInterestedFreqList. On reception of SidelinkUEInformationNR, the test system shall send RRC reconfiguration message to the UE and wait for the UE to respond with RRC reconfiguration complete message before transitioning to T3. If the UE does not transmit SidelinkUEInformationNR for up to 2 second, the test system shall transition to T3.
+
+During T3, the UE is scheduled with PDSCH traffic on PCell downlink. The test system will count the missed ACK/NACKs during T3 to verify the allowed interruptions during V2X sidelink communication.
+
+Table A.9.1.6.1.1-1: Supported test configurations for FR1 PCell
+
+| Configuration | Description |
+| --- | --- |
+| 1 | NR Uu: FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 2 | NR Uu: TDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 3 | NR Uu: TDD, SSB SCS 30 kHz, data SCS 30 kHz, BW 40 MHz |
+| NOTE: The UE is only required to pass in one of the supported test configurations in FR1 |  |
+
+Table A.9.1.6.1.1-2: Test Parameters for Interruptions due to V2X Sidelink Communication
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| RF Channel Number | - | 1, 2 | RF channel 1 is non-V2X sidelink carrierRF channel 2 is V2X sidelink carrier |
+| SCS | kHz | 30 |  |
+| Active cell | - | Cell 1 | PCell on RF channel number 1 |
+| CP length of Cell 1 | - | Normal |  |
+| T1 | s | 5.12 |  |
+| T2 | s | Up to receiving RRC reconfiguration setup complete from the UE, or up to 2 second if UE does not transmit SidelinkUEInformationNR during this period. |  |
+| T3 | s | 10 |  |
+
+Table A.9.1.6.1.1-3: Sidelink Communication Configuration for Interruptions due to V2X Sidelink Communication
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| RF Channel Number |  | - | 2 | HD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 1 |  | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| V2X sidelink Communication configuration |  | - | As specified in section A.3.21.2 | IE values unless specified otherwise in this test. |
+| Number of Active Sidelink UEs |  | - | 8 | Active Sidelink UE i = 0, .., 7 |
+| Active Sidelink UEs (UE i = 0, .., 7) | V2X sidelink Communication configuration | - | As specified in section A.3.21.2 | IE values unless specified otherwise in this test. |
+|  | PSCCH Reference Measurement Channel | - | CC.1A HD | As specified in table A.3.21.3-1 |
+|  | PSSCH Reference Measurement Channel | - | CD.1A HD | As specified in table A.3.21.3-2 |
+|  | sl-NumSubchannel-r16 included in SL-ResourcePool | - | 1 | Indicates the number of sub-channels for TX resource pool |
+|  | sl-StartRB-Subchannel-r16 included in SL-ResourcePool | - | i | Indicates the lowest PRB index of the subchannel with the lowest index for active Sidelink UE i = 0, .., 7. |
+|  | PSBCH-RSRP | dBm/30kHz | -95 |  |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |
+
+Table A.9.1.6.1.1-4: Cell specific test parameters for interruptions due to V2X slidelink communication
+
+| Parameter |  | Unit | Cell 1 |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 | T3 |
+| RF Channel Number |  |  | 1 |  |  |
+| UE RRC state |  |  | IDLE | CONNECTED |  |
+| Duplex Mode | Config 1 |  | FDD |  |  |
+|  | Config 2,3 |  | TDD |  |  |
+| TDD configuration | Config 1 |  | Not Applicable |  |  |
+|  | Config 2 |  | TDDConf.1.1 |  |  |
+|  | Config 3 |  | TDDConf.2.1 |  |  |
+| Channel Bandwidth (BWchannel) | Config 1,2 | MHz | 10: NPRB,c = 52 |  |  |
+|  | Config 3 |  | 40: NPRB,c = 106 |  |  |
+| Initial BWP Configuration |  |  | DLBWP.0.1ULBWP.0.1 |  |  |
+| Dedicated BWP Configuration |  |  | DLBWP.1.1ULBWP.1.1 |  |  |
+| DRX Cycle |  |  | N/A |  |  |
+| PDSCH Reference measurement channel | Config 1 |  | N/A | None | SR.1.1 FDD |
+|  | Config 2 |  | N/A | None | SR.1.1 TDD |
+|  | Config 3 |  | N/A | None | SR.2.1 TDD |
+| CORESET Reference Channel | Config 1 |  | CR.1.1 FDD |  |  |
+|  | Config 2 |  | CR.1.1 TDD |  |  |
+|  | Config 3 |  | CR.2.1 TDD |  |  |
+| Dedicated CORESET Reference Channel | Config 1 |  | CCR.1.1 FDD |  |  |
+|  | Config 2 |  | CCR.1.1 TDD |  |  |
+|  | Config 3 |  | CCR.2.1 TDD |  |  |
+| SSB configuration | Config 1,2 |  | SSB.1 FR1 |  |  |
+|  | Config 3 |  | SSB.2 FR1 |  |  |
+| SMTC Configuration |  |  | SMTC.2 |  |  |
+| OCNG Patterns |  |  | OP.1 |  |  |
+| EPRE ratio of PSS to SSS |  | dB | 0 |  |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS(Note 1) |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | Config 1,2,3 | dBm/15 kHz | -98 |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | Config 1,2 | dBm/SCS | -98 |  |  |
+|  | Config 3 |  | -95 |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 3 |  |  |
+| SS-RSRP Note3 | Config 1,2 | dBm/SCS | -95 |  |  |
+|  | Config 3 |  | -92 |  |  |
+| Io Note 3 | Config 1,2 | dBm/9.36 MHz | -65.3 |  |  |
+|  | Config 3 | dBm/38.1 MHz | -59.2 |  |  |
+| Antenna Configuration |  |  | 1x2 |  |  |
+| Propagation Condition |  |  | AWGN |  |  |
+| NOTE 1: OCNG shall be used such that cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |  |  |
+
+##### A.9.1.6.1.2 Test Requirements
+
+The UE shall be continuously scheduled on PCell on RF channel 1 during T3. During T3, the interruption on PCell shall not be more than the values specified in clause 12.7.1..
+
+#### A.9.1.6.2 Test for interruption to WAN at transitions between active and non-active during SL-DRX in asynchronous case
+
+##### A.9.1.6.2.1 Test Purpose and Environment
+
+The purpose of this test is to verify that when V2X sidelink is in SL-DRX and NR PCell is in non-DRX, NR PCell interruptions due to transitions of V2X sidelink UE from active to non-active and from non-active to active do not exceed the limits in terms of missing ACK/NACK. This test will verify the missing ACK/NACK rate on NR PCell in clause 12.7.4 under the following additional conditions:
+
+- The UE is out of coverage on the V2X sidelink carrier and is associated with a serving cell on a non-V2X sidelink carrier.
+
+- The UE is in sidelink resource allocation mode 1.
+
+This test is applicable for V2X sidelink communication capable UEs that support inter-band concurrent V2X sidelink operation.
+
+For this test, the UE is triggered by the test loop function or the upper layers to monitor V2X sidelink communication.
+
+The test parameters are given in table A.9.1.6.2.1-1, table A.9.1.6.2.1-2, and table A.9.1.6.2.1-3. The test consists of one active cell (PCell) on the serving RF channel 1, and there are no active cells on RF channel 2. The UE under test selects GNSS as the synchonization source.
+
+The test consists of one time period, with duration of T1. During T1, NR PCell is continuously scheduled in DL while V2X sidelink is not scheduled and has SL-DRX configured. Prior to start of T1 the SL-DRX inactivity timer for the V2X sidelink has already expired. PDCCH indicating a new transmission on PCell shall be sent continuously during the entire time duration to ensure UE would not enter DRX state on PCell.
+
+Table A.9.1.6.2.1-1: Supported test configurations for FR1 PCell
+
+| Configuration | Description |
+| --- | --- |
+| 1 | NR Uu: FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 2 | NR Uu: TDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 3 | NR Uu: TDD, SSB SCS 30 kHz, data SCS 30 kHz, BW 40 MHz |
+| NOTE: The UE is only required to pass in one of the supported test configurations in FR1 |  |
+
+Table A.9.1.6.2.1-2: Test Parameters for Interruptions at transitions between active and non-active during SL-DRX in asynchronous case
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| RF Channel Number | - | 1, 2 | RF channel 1 is non-V2X sidelink carrierRF channel 2 is V2X sidelink carrier |
+| SCS | kHz | 30 |  |
+| Active cell | - | Cell 1 | PCell on RF channel number 1 |
+| CP length of Cell 1 | - | Normal |  |
+| SL-DRX |  | SL-DRX.3 | SL-DRX related parameters are defined in table A.3.21.4.2-1 |
+| T1 | s | 10 |  |
+
+Table A.9.1.6.2.1-3: Cell specific test parameters for interruptions at transitions between active and non-active during SL-DRX in asynchronous case
+
+| Parameter |  | Unit | Cell 1 |
+| --- | --- | --- | --- |
+|  |  |  | T1 |
+| RF Channel Number |  |  | 1 |
+| UE RRC state |  |  | CONNECTED |
+| Duplex Mode | Config 1 |  | FDD |
+|  | Config 2,3 |  | TDD |
+| TDD configuration | Config 1 |  | Not Applicable |
+|  | Config 2 |  | TDDConf.1.1 |
+|  | Config 3 |  | TDDConf.2.1 |
+| Channel Bandwidth (BWchannel) | Config 1,2 | MHz | 10: NPRB,c = 52 |
+|  | Config 3 |  | 40: NPRB,c = 106 |
+| Initial BWP Configuration |  |  | DLBWP.0.1ULBWP.0.1 |
+| Dedicated BWP Configuration |  |  | DLBWP.1.1ULBWP.1.1 |
+| DRX Cycle |  |  | N/A |
+| PDSCH Reference measurement channel | Config 1 |  | SR.1.1 FDD |
+|  | Config 2 |  | SR.1.1 TDD |
+|  | Config 3 |  | SR.2.1 TDD |
+| CORESET Reference Channel | Config 1 |  | CR.1.1 FDD |
+|  | Config 2 |  | CR.1.1 TDD |
+|  | Config 3 |  | CR.2.1 TDD |
+| Dedicated CORESET Reference Channel | Config 1 |  | CCR.1.1 FDD |
+|  | Config 2 |  | CCR.1.1 TDD |
+|  | Config 3 |  | CCR.2.1 TDD |
+| SSB configuration | Config 1,2 |  | SSB.1 FR1 |
+|  | Config 3 |  | SSB.2 FR1 |
+| SMTC Configuration |  |  | SMTC.2 |
+| OCNG Patterns |  |  | OP.1 |
+| EPRE ratio of PSS to SSS |  | dB | 0 |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS(Note 1) |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | Config 1,2,3 | dBm/15 kHz | -98 |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | Config 1,2 | dBm/SCS | -98 |
+|  | Config 3 |  | -95 |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 3 |
+| SS-RSRP Note3 | Config 1,2 | dBm/SCS | -95 |
+|  | Config 3 |  | -92 |
+| Io Note 3 | Config 1,2 | dBm/9.36 MHz | -65.3 |
+|  | Config 3 | dBm/38.1 MHz | -59.2 |
+| Antenna Configuration |  |  | 1x2 |
+| Propagation Condition |  |  | AWGN |
+| NOTE 1: OCNG shall be used such that cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |
+
+##### A.9.1.6.2.2 Test Requirements
+
+The UE shall be continuously scheduled on PCell on RF channel 1 during the entire length of T1. UE shall not be scheduled in V2X sidelink during T1. During the time duration T1 the UE shall transmit at least 99.375 % of ACK/NACK on NR PCell.
+
+Interruption on NR PCell shall not exceed X as defined in table A.9.1.6.2.2-1.
+
+Table A.9.1.6.2.2-1: Interruption length X at transition between active and non-active during SL-DRX
+
+|  | NR Slot | Interruption length X |
+| --- | --- | --- |
+|  | length (ms) | Async |
+| 0 | 1 | 2 |
+| 1 | 0.5 | 2 |
+| 2 | 0.25 | 3 |
+
+The rate of correct events observed during repeated tests shall be at least 90 %.
+
+#### A.9.1.6.3 Test for Interruption at NR Sidelink Diccovery Configuration
+
+##### A.9.1.6.3.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to interruptions due to NR sidelink discovery configuration defined in clause 12.7.8 under the following additional conditions:
+
+- The UE is out of coverage on the NR sidelink carrier and is associated with a serving cell on a NR non-sidelink carrier
+
+This test is applicable for NR sidelink discovery capable UEs that support inter-band concurrent sidelink operation.
+
+For this test, the UE is triggered by the test loop function or the upper layers to monitor NR sidelink discovery.
+
+The test parameters are given in table A.9.1.6.3.1-1, table A.9.1.6.3.1-2, table A.9.1.6.3.1-3 and table A.9.1.6.3.1-4. The test consists of one active cell (PCell) on the serving RF channel 1, and there are no active cells on RF channel 2. On RF channel 2, the test consists of 8 active Sidelink UEs in this test transmitting sidelink discovery. The UE under test and all active sidelink UEs select the active cell as synchonization source.
+
+The test consists of three successive time periods, with time duration of T1, T2 and T3 respectively.
+
+During T1, the UE is in RRC_IDLE and monitoring NR sidelink discovery announcements from other active Sidelink UEs on NR sidelink discovery resources.
+
+During T2, the test system establishes a RRC connection with the UE. No PDSCH traffic is scheduled for UE, and the UE is expected to transmit SidelinkUEInformationNR indicating sl-RxInterestedFreqListDisc. On reception of SidelinkUEInformationNR, the test system shall send RRC reconfiguration message to the UE and wait for the UE to respond with RRC reconfiguration complete message before transitioning to T3. If the UE does not transmit SidelinkUEInformationNR for up to 2 second, the test system shall transition to T3.
+
+During T3, the UE is scheduled with PDSCH traffic on PCell downlink. The test system will count the missed ACK/NACKs during T3 to verify the allowed interruptions during NR sidelink discovery.
+
+Table A.9.1.6.3.1-1: Supported test configurations for FR1 PCell
+
+| Configuration | Description |
+| --- | --- |
+| 1 | NR Uu: FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 2 | NR Uu: TDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 3 | NR Uu: TDD, SSB SCS 30 kHz, data SCS 30 kHz, BW 40 MHz |
+| NOTE: The UE is only required to pass in one of the supported test configurations in FR1 |  |
+
+Table A.9.1.6.3.1-2: Test Parameters for Interruptions at NR Sidelink Discovery Configuration
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| RF Channel Number | - | 1, 2 | RF channel 1 is NR non- sidelink carrierRF channel 2 is NR sidelink carrier |
+| SCS | kHz | 30 |  |
+| Active cell | - | Cell 1 | PCell on RF channel number 1 |
+| CP length of Cell 1 | - | Normal |  |
+| T1 | s | 5.12 |  |
+| T2 | s | Up to receiving RRC reconfiguration setup complete from the UE, or up to 2 second if UE does not transmit SidelinkUEInformationNR during this period. |  |
+| T3 | s | 5 |  |
+
+Table A.9.1.6.3.1-3: Sidelink Discovery Configuration for Interruptions at NR Sidelink Discovery Configuration
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| RF Channel Number |  | - | 2 | HD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 1 |  | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| NR sidelink discovery configuration |  | - | As specified in section A.3.21.2 | IE values unless specified otherwise in this test. |
+| Number of Active Sidelink UEs |  | - | 8 | Active Sidelink UE i = 0, .., 7 |
+| Active Sidelink UEs (UE i = 0, .., 7) | NR sidelink discovery configuration | - | As specified in section A.3.21.2 | IE values unless specified otherwise in this test. |
+|  | PSCCH Reference Measurement Channel | - | CC.1A HD | As specified in table A.3.21.3-1 |
+|  | PSSCH Reference Measurement Channel | - | CD.1A HD | As specified in table A.3.21.3-2 |
+|  | sl-NumSubchannel-r16 included in SL-ResourcePool | - | 1 | Indicates the number of sub-channels for TX resource pool |
+|  | sl-StartRB-Subchannel-r16 included in SL-ResourcePool | - | i | Indicates the lowest PRB index of the subchannel with the lowest index for active Sidelink UE i = 0, .., 7. |
+|  | PSBCH-RSRP | dBm/30kHz | -95 |  |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |  |  |  |
+
+Table A.9.1.6.3.1-4: Cell specific test parameters for interruptions at NR Sidelink Discovery Configuration
+
+| Parameter |  | Unit | Cell 1 |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 | T3 |
+| RF Channel Number |  |  | 1 |  |  |
+| UE RRC state |  |  | IDLE | CONNECTED |  |
+| Duplex Mode | Config 1 |  | FDD |  |  |
+|  | Config 2,3 |  | TDD |  |  |
+| TDD configuration | Config 1 |  | Not Applicable |  |  |
+|  | Config 2 |  | TDDConf.1.1 |  |  |
+|  | Config 3 |  | TDDConf.2.1 |  |  |
+| Channel Bandwidth (BWchannel) | Config 1,2 | MHz | 10: NPRB,c = 52 |  |  |
+|  | Config 3 |  | 40: NPRB,c = 106 |  |  |
+| Initial BWP Configuration |  |  | DLBWP.0.1ULBWP.0.1 |  |  |
+| Dedicated BWP Configuration |  |  | DLBWP.1.1ULBWP.1.1 |  |  |
+| DRX Cycle |  |  | N/A |  |  |
+| PDSCH Reference measurement channel | Config 1 |  | N/A | None | SR.1.1 FDD |
+|  | Config 2 |  | N/A | None | SR.1.1 TDD |
+|  | Config 3 |  | N/A | None | SR.2.1 TDD |
+| CORESET Reference Channel | Config 1 |  | CR.1.1 FDD |  |  |
+|  | Config 2 |  | CR.1.1 TDD |  |  |
+|  | Config 3 |  | CR.2.1 TDD |  |  |
+| Dedicated CORESET Reference Channel | Config 1 |  | CCR.1.1 FDD |  |  |
+|  | Config 2 |  | CCR.1.1 TDD |  |  |
+|  | Config 3 |  | CCR.2.1 TDD |  |  |
+| SSB configuration | Config 1,2 |  | SSB.1 FR1 |  |  |
+|  | Config 3 |  | SSB.2 FR1 |  |  |
+| SMTC Configuration |  |  | SMTC.2 |  |  |
+| OCNG Patterns |  |  | OP.1 |  |  |
+| EPRE ratio of PSS to SSS |  | dB | 0 |  |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS(Note 1) |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | Config 1,2,3 | dBm/15 kHz | -98 |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 | Config 1,2 | dBm/SCS | -98 |  |  |
+|  | Config 3 |  | -95 |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 3 |  |  |
+| SS-RSRP Note3 | Config 1,2 | dBm/SCS | -95 |  |  |
+|  | Config 3 |  | -92 |  |  |
+| Io Note 3 | Config 1,2 | dBm/9.36 MHz | -65.3 |  |  |
+|  | Config 3 | dBm/38.1 MHz | -59.2 |  |  |
+| Antenna Configuration |  |  | 1x2 |  |  |
+| Propagation Condition |  |  | AWGN |  |  |
+| NOTE 1: OCNG shall be used such that cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |  |  |
+
+##### A.9.1.6.3.2 Test Requirements
+
+The UE shall be continuously scheduled on PCell on RF channel 1 during T3. During T3, the interruption on PCell shall not be more than the values specified in clause 12.7.8.
+
+### A.9.1.7 Selection / Reselection of relay UE
+
+#### A.9.1.7.1 Test Purpose and Environment
+
+The purpose of this test is to verify the requirements related to selection / reselection of relay UE defined in clauses 12.10. In the test, the UE under test is configured with PCell or an Sidelink UE but not both, based on the scenarios (U2N or U2U relay) UE supported, and is configured with resource pools for NR sidelink discovery message as required for remote UE operation.
+
+This test is applicable to UEs capable of NR sidelink communication and sidelink discovery, and further support the optional feature of sidelink remote UE operation.
+
+The test parameters are given in table A.9.1.7.1.1-0, table A.9.1.7.1.1-1, table A.9.1.7.1-2, table A.9.1.7.1-3, table A.9.1.7.1-4, table A.9.1.7.1-5, and table A.9.1.7.1-6 below. The test consists of one active serving cell (cell 1, configured as Table A.9.1.7.1-5) or an Sidelink UE (Sidelink UE 1, configured as Table A.9.1.7.1-6), one remote UE and two active Sidelink relay UEs (Sidelink Relay UE 1, Sidelink Relay UE 2). The relay UEs are configured in mode 2 to be transmitting relay discovery messages every discovery period, which is determined by resource reservation period indicated by sl-ResourceReservePeriodList.
+
+The test system shall ensure that the remote UE under test has transmitted SidelinkUEInformationNR message and has been configured with the sidelink discovery resource pool and sidelink communication resource pool respectively for relay operation prior to the start of the test.
+
+The tests consist of five successive time periods, with time duration of T1, T2, T3, T4 and T5 respectively.
+
+During T1, RSRP of cell 1 or SL-RSRP of Sidelink UE 1 is kept higher than threshHighRemote (within sl-remoteUE-Config), and the remote UE is not required to perform relay UE selection.
+
+During T2, RSRP of cell 1 or SL-RSRP of Sidelink UE 1 is configured to be lower than threshHighRemote. The UE is expected to start looking for relay UE. The test system shall ensure that the UE under test has been configured the resource pool prior to end of T2 duration. During T2, the SD-RSRP of Sidelink Relay UE 1 and Sidelink Relay UE 2 is configured to be lower than the detection threshold and no relay UE will be available for the remote UE under test.
+
+During T3, the SD-RSRP of Sidelink Relay UE 1 is raised above the threshold sl-RSRP-Thresh and the UE is expected to perform relay selection to Sidelink Relay UE 1. The test system can determine that the remote UE has selected a relay by monitoring the configured sidelink communication resource for the ProSe direct link establishment request message to the relay UE.
+
+During T4, the UE is expected to complete the sidelink connection establishment with the relay UE. Note that the RSRP of the serving cell (cell 1) or SL-RSRP of Sidelink UE 1 and the SD-RSRP of sidelink relay UEs are kept unchanged during T3 and T4. The period T4 ends when Sidelink Relay UE1 sends the sidelink communication response message back to the remote UE.
+
+During T5, SD-RSRP of Sidelink Relay UEs are modified such that the remote UE is expected to reselect to Sidelink Relay UE2.
+
+Table A.9.1.7.1-0: Supported test configurations for FR1 PCell
+
+| Configuration | Description |
+| --- | --- |
+| 1 | NR Uu: FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 2 | NR Uu: TDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz |
+| 3 | NR Uu: TDD, SSB SCS 30 kHz, data SCS 30 kHz, BW 40 MHz |
+| Note: The UE is only required to pass in one of the supported test configurations in FR1 |  |
+
+Table A.9.1.7.1-1: Test parameters for selection / reselection of relay UE test for NR FR1
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| NR RF Channel Number |  | 1 | HD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 1 | MHz | 20 (NRB,c = 50) or40 (NRB,c = 100) |  |
+| SCS | kHz | 30 |  |
+| Traffic destination |  | Cell 1 or Sidelink UE 1 | Serving NR cell will broadcast SIB12. Sidelink UE 1 will use the configuration in SL-PreconfigurationNR. |
+| Active Relay UEs |  | Relay UE 1, Relay UE 2 | Transmitting relay discovery message |
+| CP length of Cell 1 and Sidelink UE 1 |  | Normal |  |
+| T1 | ms | 100 |  |
+| T2 | s | Up to receiving RRC reconfiguration setup complete from the UE, or up to 1 sec if UE does not transmit SidelinkUEInformationNR during this period. |  |
+| T3 | s | 1 |  |
+| T4 | s | 2 |  |
+| T5 | s | 1 |  |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations. |  |  |  |
+
+Table A.9.1.7.1-2: Sidelink discovery configuration for selection / reselection of relay UE test for NR FR1
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| NR RF Channel Number |  | 1 | HD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 1 | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| Resource pool configuration for sidelink discovery |  | As specified in table A.3.21.2-2 Note 2 | IE values unless specified otherwise in this test. |
+| sl-TimeResource included in sl-DiscTxPoolSelected-r17 and sl-DiscRxPool-r17 |  | 0000111100 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+| sl-NumSubchannel included in sl-DiscTxPoolSelected-r17 and sl-DiscRxPool-r17 |  | 2 | Indicates the number of sub-channels for TX resource pool |
+| sl-SubchannelSize included in sl-DiscTxPoolSelected-r17 and sl-DiscRxPool-r17 |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+| sl-ResourceReservePeriodList | s | 0.04 | Indicates the resource reservation period for discovery period |
+| threshHighRemote within sl-remoteUE-Config |  | -91 dBm |  |
+| sl-RSRP-Thresh within sl-remoteUE-Config |  | -91 dBm |  |
+| NOTE 1: The UE is only required to be tested in one of the supported test configurations.NOTE 2: This test is according to the principle defined in section A.3.21. |  |  |  |
+
+Table A.9.1.7.1-3: Sidelink Communication configuration for selection / reselection of relay UE test
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| RF Channel Number |  | - | 1 | HD carrier in Band n47 or n38 |
+| Channel Bandwidth (BWchannel) Note 1 |  | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |
+| Sidelink Communication configuration |  | - | As specified in section A.3.21.2 | IE values unless specified otherwise in this test. |
+| sl-TimeResource |  | - | 0000000011 | Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3]) |
+| Number of Active Sidelink Relay UEs |  | - | 2 | Active Sidelink UE i = 0, 1 |
+| Active Sidelink Relay UEs (UE i = 0, 1) and Sidelink UE 1Note 2 | PSCCH Reference Measurement Channel | - | CC.1A HD | As specified in table A.3.21.3-1 |
+|  | PSSCH Reference Measurement Channel | - | CD.1A HD | As specified in table A.3.21.3-2 |
+|  | sl-NumSubchannel-r16 included in SL-ResourcePool | - | 1 | Indicates the number of sub-channels for TX resource pool |
+|  | sl-SubchannelSize-r16 included in SL-ResourcePool |  | 10 | Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB |
+|  | sl-StartRB-Subchannel-r16 included in SL-ResourcePool | - | floor(i)x10 | Indicates the lowest PRB index of the subchannel with the lowest index for Sidelink Relay UE i = 0 starts PRB=0;Sidelink Relay UE i = 1 starts PRB=10. Sidelinke UE 1 i = 2 starts PRB=20. |
+|  | PSBCH-RSRP | dBm/30kHz | -95 |  |
+| NOTE 1:  The UE is only required to be tested in one of the supported test configurations.NOTE 2:  The parameters for Sidelink UE 1 are applicable only when it exists. |  |  |  |  |
+
+Table A.9.1.7.1-4: Sidelink Relay UE specific test parameters for selection / reselection of relay UE test for NR FR1
+
+| Parameter | Unit | Relay UE 1 |  |  |  |  | Relay UE 2 |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 | T4 | T5 | T1 | T2 | T3 | T4 | T5 |
+| NR RF Channel Number |  | 1 (HD carrier in Band n47 or n38) |  |  |  |  |  |  |  |  |  |
+| BWchannel Note 4 | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |  |  |  |  |  |  |  |  |
+| SCS | kHz | 30 |  |  |  |  |  |  |  |  |  |
+| Sidelink Discovery resource pool configuration |  | As specified in table A.9.1.7.1-2 |  |  |  |  |  |  |  |  |  |
+| Transmission frequency |  | Every discovery period (40 ms) |  |  |  |  |  |  |  |  |  |
+| Resource allocation |  | Non-overlapping PRBs |  |  |  |  |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | -97 |  |  |  |  |  |  |  |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | -inf | -inf | 10.5 | 10.5 | -1.5 | -inf | -inf | -inf | -inf | 10.5 |
+| SD-RSRP / SL-RSRP Note2, Note 3 | dBm/30 kHz | -inf | -inf | -86.5 | -86.5 | -98.5 | -inf | -inf | -inf | -inf | -86.5 |
+| Antenna Configuration | - | 1x2 |  |  |  |  |  |  |  |  |  |
+| Propagation Condition |  | AWGN |  |  |  |  |  |  |  |  |  |
+| NOTE 1: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: SD-RSRP / SL-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. NOTE 3: PSCCH-DMRS Es/Iot is set the same as PSSCH-DMRS Es/Iot.NOTE 4: This test is according to the principle defined in section A.3.21.2. |  |  |  |  |  |  |  |  |  |  |  |
+
+Table A.9.1.7.1-5: Cell specific test parameters for selection / reselection of relay UE test for NR FR1
+
+| Parameter |  |  | Unit | Cell 1 |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  | T1 | T2 | T3 | T4 | T5 |
+| NR RF Channel Number |  |  |  | 2 |  |  |  |  |
+| Serving/Non-serving |  |  |  | Serving |  |  |  |  |
+| Duplex Mode |  | Config 1 |  | FDD |  |  |  |  |
+|  |  | Config 2,3 |  | TDD |  |  |  |  |
+| TDD configuration |  | Config 1 |  | Not Applicable |  |  |  |  |
+|  |  | Config 2 |  | TDDConf.1.1 |  |  |  |  |
+|  |  | Config 3 |  | TDDConf.2.1 |  |  |  |  |
+| Channel Bandwidth (BWchannel) |  | Config 1,2 |  | 10: NPRB,c = 52 |  |  |  |  |
+|  |  | Config 3 |  | 40: NPRB,c = 106 |  |  |  |  |
+| Initial BWP Configuration |  |  |  | DLBWP.0.1ULBWP.0.1 |  |  |  |  |
+| Dedicated BWP Configuration |  |  |  | DLBWP.1.1ULBWP.1.1 |  |  |  |  |
+| DRX Cycle |  |  |  | N/A |  |  |  |  |
+| PDSCH Reference measurement channel |  | Config 1 |  | SR.1.1 FDD |  |  |  |  |
+|  |  | Config 2 |  | SR.1.1 TDD |  |  |  |  |
+|  |  | Config 3 |  | SR.2.1 TDD |  |  |  |  |
+| CORESET Reference Channel |  | Config 1 |  | CR.1.1 FDD |  |  |  |  |
+|  |  | Config 2 |  | CR.1.1 TDD |  |  |  |  |
+|  |  | Config 3 |  | CR.2.1 TDD |  |  |  |  |
+| Dedicated CORESET Reference Channel |  | Config 1 |  | CCR.1.1 FDD |  |  |  |  |
+|  |  | Config 2 |  | CCR.1.1 TDD |  |  |  |  |
+|  |  | Config 3 |  | CCR.2.1 TDD |  |  |  |  |
+| SSB configuration |  | Config 1,2 |  | SSB.1 FR1 |  |  |  |  |
+|  |  | Config 3 |  | SSB.2 FR1 |  |  |  |  |
+| SMTC Configuration |  |  |  | SMTC.2 |  |  |  |  |
+| OCNG Patterns |  |  |  | OP.1 |  |  |  |  |
+| EPRE ratio of PSS to SSS |  |  | dB | 0 |  |  |  |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH |  |  |  |  |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS(Note 1) |  |  |  |  |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS (Note 1) |  |  |  |  |  |  |  |  |
+| Correlation Matrix and Antenna Configuration |  |  |  | 1x2 Low |  |  |  |  |
+| drx-Configuration |  |  |  | N/A |  |  |  |  |
+| PDCCH/PCFICH/PHICH Reference measurement channelNote1 |  |  |  | R.11 FDD |  |  |  |  |
+| OCNG Pattern defined in A.3.2.1 |  |  |  | OP.16 FDD |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 |  | Config 1,2,3 | dBm/15 kHz | -97 |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note2 |  | Config 1,2, | dBm/SCS | -97 |  |  |  |  |
+|  |  | Config 3 |  | -94 |  |  |  |  |
+| ![](media_svg/image6.svg) [公式≈: ^{Ê}s^{N}oc] |  |  | dB | 10.5 | 1.5 | 1.5 | 1.5 | 1.5 |
+| SS-RSRP Note3 | Config 1,2, |  | dBm/SCS | -86.5 | -95.5 | -95.5 | -95.5 | -95.5 |
+|  | Config 3 |  |  | -83.5 | -92.5 | -92.5 | -92.5 | -92.5 |
+| Propagation condition |  |  |  | AWGN |  |  |  |  |
+| Correlation Matrix and Antenna Configuration |  |  |  | 1x2 Low |  |  |  |  |
+| NOTE 1: OCNG shall be used such that cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |  |  |  |  |  |  |
+
+Table A.9.1.7.1-6: Sidelink UE specific test parameters for selection / reselection of relay UE test for NR FR1
+
+| Parameter | Unit | Remote UE 2 |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | T1 | T2 | T3 | T4 | T5 |
+| NR RF Channel Number |  | 1 (HD carrier in Band n47 or n38) |  |  |  |  |
+| BWchannel Note 4 | MHz | 20 (NPRB,c = 50) or40 (NPRB,c = 100) |  |  |  |  |
+| SCS | kHz | 30 |  |  |  |  |
+| Resource allocation |  | Non-overlapping PRBs |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note1 | dBm/30 kHz | -97 |  |  |  |  |
+| ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] | dB | 10.5 | -1.5 | -1.5 | -1.5 | -1.5 |
+| SD-RSRP / SL-RSRP Note2, Note 3 | dBm/30 kHz | [-86.5] | [-98.5] | [-98.5] | [-98.5] | [-98.5] |
+| Antenna Configuration | - | 1x2 |  |  |  |  |
+| Propagation Condition |  | AWGN |  |  |  |  |
+| NOTE 1: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: SD-RSRP / SL-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. NOTE 3: PSCCH-DMRS Es/Iot is set the same as PSSCH-DMRS Es/Iot.NOTE 4: This test is according to the principle defined in section A.3.21.2. |  |  |  |  |  |  |
+
+#### A.9.1.7.2 Test Requirements
+
+Sidelink relay UE selection delay is defined as the time from the beginning of time period T3 to the moment when the UE selects the Sidelink Relay UE1 and transmits the PC5-SP direct communication setup message using Sidelink Communications.
+
+The test system shall verify that the sidelink relay UE selection delay is less than 680 ms.
+
+NOTE: The sidelink relay UE selection delay can be expressed as (Tevaluate, SL_Relay_Intra + 40 ms).
+
+Sidelink relay UE reselection time is defined as the time from the beginning of time period T5 to the moment when the UE reselects to Sidelink relay UE2 and transmits the direct communication setup message using Sidelink Communications.
+
+The test system shall verify that the sidelink relay UE reselection delay is less than 840 ms.
+
+NOTE: The sidelink relay UE reselection delay can be expressed as (Tmeasure, SL_Relay_Intra + Tevaluate, SL_Relay_Intra + 40 ms).
+
+# A.9A Tests for NR Sidelink Measurements for Positioning
+
+## A.9A.1 Tests for NR Sidelink Measurements for Positioning in FR1
+
+### A.9A.1.1 Measurement delay tests
+
+#### A.9A.1.1.1 NR SL RSTD measurement reporting delay test case in FR1 SA
+
+##### A.9A.1.1.1.1 Test Purpose and Environment
+
+The purpose of the test is to verify that the SL RSTD measurement meets the requirements specified in clause 12A.2 in an environment with AWGN propagation conditions in FR1 in standalone NR scenario, with additionally configured single frequency layer for SL positioning.
+
+This test is applicable for UEs supporting NR Uu and V2X or 5G ProSe operation, which are capable of performing SL RSTD measurements.
+
+The supported NR Uu test configurations are specified in table A.9A.1.1.1.1-1.
+
+Table A.9A.1.1.1.1-1: Supported test configurations for FR1 NR Cell 1
+
+| NR Uu configuration | Description |
+| --- | --- |
+| Uu_conf1 | NR Uu: 15 kHz SSB SCS, 20 MHz bandwidth, FDD duplex mode |
+| Uu_conf2 | NR Uu: 15 kHz SSB SCS, 20 MHz bandwidth, TDD duplex mode |
+| Uu_conf3 | NR Uu: 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations. |  |
+
+The supported NR SL test configurations are specified in table A.9A.1.1.1.1-2.
+
+Table A.9A.1.1.1.1-2: Supported test configurations for NR SL UEs
+
+| NR SL configuration | Description |
+| --- | --- |
+| SL_conf1 | NR SL: 15 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf2 | NR SL: 30 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf3 | NR SL: 30 kHz SSB SCS, 20 MHz bandwidth, HD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations. |  |
+
+In the test, there is one target UE receiving SL-PRS and performing SL RSTD measurements and three anchor UEs (anchor UE 1, anchor UE 2, and anchor UE 3) transmitting SL-PRS for the SL RSTD measurements on NR SL RF channel 2. Anchor UE 1 is the reference anchor UE for the measurements. The target UE and all the anchor UEs are in RRC_CONNECTED state, with Cell 1 as their PCell in FR1 on NR Uu RF channel 1. Cell 1 is also the synchronization source of the target UE and all anchor UEs in the test.
+
+The test consists of two consecutive time intervals, with duration of T1 and T2. Before T2 starts, the UEs have been synchronized to Cell 1. During time duration T1, the target UE shall not have any timing information of anchor UE 2 and anchor UE 3. All three anchor UEs transmit SL-PRS during T2.
+
+The SL-TDOA-ProvideAssistanceData and SL-TDOA-RequestLocationInformation as defined in TS 38.355 [37, clause 6.9], shall be provided to the target UE via Cell 1 during T1. The last TTI containing the two messages shall be provided to the target UE T ms before the start of T2, where T = 50 ms is the maximum processing time of the SL-TDOA assistance data and location information request.
+
+The general test parameters are listed in table A.9A.1.1.1.1-3. NR Uu specific test parameters for Cell 1 and NR Uu UE-specific test parameters for all UEs in the test are listed in table A.9A.1.1.1.1-4 and A.9A.1.1.1.1-5, respectively. Anchor UE specific test parameters for SL RSTD measurement reporting delay during T1 and T2 are listed in table A.9A.1.1.1.1-6.
+
+Table A.9A.1.1.1.1-3: General test parameters for SL RSTD measurement reporting delay
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| Serving cell |  | Cell 1 | NR PCell of the target UE and all anchor UEs (anchor UE 1, anchor UE 2, anchor UE 3), in FR1 on NR Uu RF channel 1. This cell is also the synchronization source for SL operation for all UEs in the test. |
+| CP length |  | Normal |  |
+| DRX |  | OFF |  |
+| Measurement gap |  | OFF |  |
+| Target UE |  | UE 0 | The performing SL RSTD measurements based on SL-PRS transmissions from anchor UEs |
+| Reference anchor UE |  | UE 1 | Reference anchor UE is the UE in the SL-TDOA assistance data with respect to which the SL RSTD measurement is defined, as specified in TS 38.215 [4] and TS 38.355[37]. The reference anchor UE is UE 1 in this test case. |
+| Other anchor UEs |  | UE 2 and UE 3 | Anchor UE 2 and Anchor UE 3 appear at the first and second places in the anchor UE list SL-RTD-Info in the SL-TDOA assistance data. |
+| Number of anchor UEs provided in SL-TDOA assistance data |  | 4 | Including the reference anchor UE |
+| Sidelink communication configuration |  | As specified in table A.3.21.2-2 |  |
+| Target UE antenna configuration |  | 1 x 2 |  |
+| Timing offset between the anchor UEs at the target UE antenna connector | s | UE2 to UE1: 0UE3 to UE1: 3 | Synchronous transmissions |
+| T1 | s | 3 | The length of the time interval from the beginning of each test |
+| T2 | s | 1.28 | The length of the time interval that follows immediately after time interval T1 |
+
+| Table A.9A.1.1.1.1-4: NR Uu specific test parameters for Cell 1Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| SSB configuration | Uu_conf1 |  | SSB.1 FR1 | SSB configuration of Cell 1. |
+|  | Uu_conf2 |  | SSB.1 FR1 |  |
+|  | Uu_conf3 |  | SSB.2 FR1 |  |
+| SMTC configuration | Uu_conf1 |  | SMTC.2 | SMTC configuration of Cell 1. |
+|  | Uu_conf2 |  | SMTC.1 |  |
+|  | Uu_conf3 |  | SMTC.1 |  |
+| PDSCH RMC configuration | Uu_conf1 |  | SR.1.1 FDD |  |
+|  | Uu_conf2 |  | SR.1.1 TDD |  |
+|  | Uu_conf3 |  | SR.2.1 TDD |  |
+| RMSI CORESET RMC configuration | Uu_conf1 |  | CR.1.1 FDD | As specified in clause A.3.1.2.1 |
+|  | Uu_conf2 |  | CR.1.1 TDD |  |
+|  | Uu_conf3 |  | CR.2.1 TDD |  |
+| Dedicated CORESET RMC configuration | Uu_conf1 |  | CCR.1.1 FDD |  |
+|  | Uu_conf2 |  | CCR.1.1 TDD |  |
+|  | Uu_conf3 |  | CCR.2.1 TDD |  |
+| Initial BWP configuration | Uu_conf1,2,3 |  | DLBWP.0.1 ULBWP.0.1 |  |
+| Active DL BWP configuration | Uu_conf1,2,3 |  | DLBWP.1.1 |  |
+| Active UL BWP configuration | Uu_conf1,2,3 |  | ULBWP.1.1 |  |
+
+Table A.9A.1.1.1.1-5: NR Uu UE-specific test parameters for UE 0, UE 1, UE 2, and UE 3
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| DRX |  |  | OFF |  |
+| OCNG Patterns |  |  | OP.1 |  |
+| EPRE ratio of PSS to SSS |  | dB | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH DMRS |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS Note 1 |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS Note 1 |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,3 | dBm/15 kHz | -110 |  |
+|  | Config 1, 2 | dBm /SCS | -110 |  |
+|  | Config 3 |  | -107 |  |
+| SSB ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 4.5 |  |
+| SSB ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  | dB | 4.5 |  |
+| SS-RSRPNote3 | Config 1,2 | dBm /SCS | -105.5 |  |
+|  | Config 3 |  | -102.5 |  |
+| IoNote3 | Config 1,2 | dBm/ 19.08MHz | -73.1 |  |
+|  | Config 3 | dBm/ 38.16MHz | -70.1 |  |
+| Propagation condition |  |  | AWGN |  |
+| NOTE 1: OCNG shall be used such that cell 1 is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+Table A.9A.1.1.1.1-6: Anchor UEs specific test parameters on the SL carrier
+
+| Parameter |  | Unit | Anchor UE 1 |  | Anchor UE 2 |  |  | Anchor UE 3 |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 | T1 | T2 |  | T1 | T2 |  |
+| SL RF Channel number |  |  | 2 |  | 2 |  |  | 2 |  |  |
+| SL DRX |  |  | OFF |  | OFF |  |  | OFF |  |  |
+| networkControlledSyncTx |  |  | ON |  | ON |  |  | ON |  |  |
+| inCoverage (in MIB-SL) |  |  | TRUE |  | TRUE |  |  | TRUE |  |  |
+| SL resource pool configuration | SL_conf1 |  | shared resource pool if supported by UE1, otherwise dedicated |  | shared resource pool if supported by UE1, otherwise dedicated |  |  | shared resource pool if supported by UE1, otherwise dedicated |  |  |
+|  | SL_conf2 |  |  |  |  |  |  |  |  |  |
+|  | SL_conf3 |  |  |  |  |  |  |  |  |  |
+| SL-PRS configuration (defined in A.3.21A.2.1) | SL_conf1 |  | N/A | SL PRS.1.3 FR1 | N/A |  | SL PRS.1.3 FR1 | N/A |  | SL PRS.1.4 FR1 |
+|  | SL_conf2 |  |  | SL PRS.1.1 FR1 |  |  | SL PRS.1.1 FR1 |  |  | SL PRS.1.2 FR1 |
+|  | SL_conf3 |  |  | SL PRS.1.3 FR1 |  |  | SL PRS.1.3 FR1 |  |  | SL PRS.1.4 FR1 |
+| SL-PRS resource slot offset | SL_conf1,2,3 | slot | N/A | 0 | N/A |  | 1Note 6 | N/A |  | 2Note 6 |
+| PSCCH RMC (defined in A.3.21.3) |  |  | CC.1A HD | CC.1A HD | CC.1A HD |  | CC.1A HD | CC.1A HD |  | CC.1A HD |
+| PSSCH RMC (defined in A.3.21.3) |  |  | CD.1A HD | CD.1A HD | CD.1A HD |  | CD.1A HD | CD.1A HD |  | CD.1A HD |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2,4 | SL_conf1 | dBm/SCS | -94 |  |  |  |  |  |  |  |
+|  | SL_conf2,3 |  | -91 |  |  |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2,5 | SL_conf1 | dBm/SCS | -98 |  |  |  |  |  |  |  |
+|  | SL_conf2,3 |  | -95 |  |  |  |  |  |  |  |
+| SL-PRS ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 4 |  | dB | -Infinity | 0 | -Infinity |  | -3 | -Infinity |  | -3 |
+| PSCCH ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 5 |  | dB | N/A | 4 | N/A |  | 1 | N/A |  | 1 |
+| Io Note 3,4 | SL_conf1 | dBm/9.36MHz | N/A | -65.15 | N/A |  | -65.57 | N/A |  | -65.57 |
+|  | SL_conf2 | dBm/8.64MHz |  | -68.44 |  |  | -68.89 |  |  | -68.89 |
+|  | SL_conf3 | dBm/18.36MHz |  | -65.21 |  |  | -65.65 |  |  | -65.65 |
+| SL PRS-RSRP Note 3,4 | SL_conf1 | dBm/SCS | -Infinity | -94 | -Infinity |  | -97 | -Infinity |  | -97 |
+|  | SL_conf2,3 |  |  | -91 |  |  | -94 |  |  | -94 |
+| PSCCH RP Note 3,5 | SL_conf1 | dBm/SCS | -Infinity | -94 | -Infinity |  | -97 | -Infinity |  | -97 |
+|  | SL_conf2,3 |  |  | -91 |  |  | -94 |  |  | -94 |
+| SL-PRS $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 4 |  | dB | N/A | 0 | N/A |  | -3 | N/A |  | -3 |
+| PSCCH $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 5 |  | dB | N/A | 4 | N/A |  | 1 | N/A |  | 1 |
+| Propagation Condition |  |  | AWGN |  |  |  |  |  |  |  |
+| NOTE 1: The resources for NR Uu uplink transmission are assigned to the UE prior to the start of time period T2.NOTE 2:  Interference from other UEs and noise sources not specified in the test are assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3:  SL PRS-RSRP, PSCCH Received Power (RP), and Io levels have been derived from other parameters and are given for information purpose. These are not settable test parameters.NOTE 4:  In symbols containing SL-PRS.NOTE 5:  In symbols containing PSCCH.NOTE 6:   Applicable only when maxNumOfSlotsWithActiveSL-PRS-Resources is larger than 2. If UE0 reports that maxNumOfSlotsWithActiveSL-PRS-Resources is 1, SL-PRS slot offset for anchor UE2 and anchor UE3 is minTimeAfterEndofSlotCarryActiveSL-PRS-Resources for SCS 15kHz and 2*minTimeAfterEndofSlotCarryActiveSL-PRS-Resources for SCS 30kHz. If UE0 reports that maxNumOfSlotsWithActiveSL-PRS-Resources is 2, SL-PRS slot offset is 1 slot for anchor UE2 and minTimeAfterEndofSlotCarryActiveSL-PRS-Resources for SCS 15kHz and 2*minTimeAfterEndofSlotCarryActiveSL-PRS-Resources for SCS 30kHz for anchor UE3. |  |  |  |  |  |  |  |  |  |  |
+
+##### A.9A.1.1.1.2 Test Requirements
+
+The SL RSTD measurement time fulfils the requirements specified in clause 12A.2.5.
+
+The UE shall perform and report to LMF the SL RSTD measurements for anchor UE 2 and anchor UE 3 with respect to the reference anchor UE 1, within the time duration specified in clause 12A.2.5 starting from the beginning of time interval T2.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the time duration above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+The rate of the correct events for each anchor UE observed during repeated tests shall be at least 90%, where the reported SL RSTD measurement for each correct event shall be within the SL RSTD reporting range specified in clause 10.4A.2.1.1, i.e., between SL_RSTD_000000 and SL_RSTD_492513.
+
+#### A.9A.1.1.2 SL Rx-Tx measurement delay tests
+
+##### A.9A.1.1.2.1 Test Purpose and Environment
+
+The purpose of the test is to verify that the SL Rx-Tx measurement meets the requirements specified in clause 12A.2 in an environment with AWGN propagation conditions in FR1 in standalone NR scenario, with additionally configured single frequency layer for SL positioning.
+
+This test is applicable for UEs supporting NR Uu and V2X or 5G ProSe operation, which are capable of performing SL Rx-Tx measurements.
+
+The supported NR Uu test configurations in FR1 are shown in table A.9A.1.1.2.1-1.
+
+Table A.9A.1.1.2.1-1: Supported Test Configurations for FR1 NR cell
+
+| Configuration | Description |
+| --- | --- |
+| 1 | NR Uu: 15 kHz SSB SCS, 20 MHz BW, FDD duplex mode |
+| 2 | NR Uu: 15 kHz SSB SCS, 20 MHz BW, TDD duplex mode |
+| 3 | NR Uu: 30 kHz SSB SCS, 40 MHz BW, TDD duplex mode |
+| Note 1: The UE is only required to pass in one of the supported test configurations in FR1. |  |
+
+The supported NR SL test configurations are specified in table A.9A.1.1.2.1-2.
+
+Table A.9A.1.1.2.1-2: Supported test configurations for NR SL UEs
+
+| NR SL configuration | Description |
+| --- | --- |
+| SL_conf1 | NR SL: 15 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf2 | NR SL: 30 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf3 | NR SL: 30 kHz SSB SCS, 20 MHz bandwidth, HD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations. |  |
+
+There is one NR active cell (Cell 1) and three active UEs (one target UE and two anchor UEs for SL positioning measurement) in this test. The target UE receives SL-PRS and performs the SL Rx-Tx time difference measurement. The two anchor UEs transmit the SL-PRS for the SL Rx-Tx time difference measurement on NR SL RF channel 2. The target UE and all anchor UEs are in RRC_CONNECTED state, with Cell 1 as their PCell in FR1 on NR Uu RF channel 1.
+
+The test consists of two successive time periods, with time duration of T1 and T2 respectively. Before T2 starts, the UEs have been synchronized to the NR serving cell. And during T2, two anchor UEs transmit SL-PRS for positioning measurements.
+
+The SL-RTT-ProvideAssistanceData and SL-RTT-RequestLocationInformation as defined in TS 38.355 [37, clause 6.9], shall be provided to the target UE via Cell 1 during T1. The last TTI containing the two messages shall be provided to the target UE T ms before the start of T2, where T = 50 ms is the maximum processing time of the SL RTT assistance data and location information request.
+
+The test parameters are given in table A.9A.1.1.2.1-3, A.9A.1.1.2.1-4, A.9A.1.1.2.1-5 and table A.9A.1.1.2.1-6 below.
+
+Table A.9A.1.1.2.1-3: General Test Parameters for SL Rx-Tx measurement reporting delay
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| Serving cell |  | Cell 1 | NR PCell of the target UE and all anchor UEs (anchor UE 1, anchor UE 2), in FR1 on NR Uu RF channel 1. This cell is also the synchronization source for SL operation for all UEs in the test. |
+| CP length |  | Normal |  |
+| DRX |  | OFF |  |
+| Measurement gap |  | OFF |  |
+| Target UE |  | UE 0 | The UE performing SL Rx-Tx measurements based on SL-PRS transmissions from anchor UEs |
+| Other anchor UEs |  | UE 1 and UE 2 | Anchor UE 1 and Anchor UE 2 appear at the first and second places in the anchor UE list SL-RTD-Info in the SL-RTT assistance data. |
+| Number of anchor UEs provided in SL-TDOA assistance data |  | 3 | Including the target UE |
+| Sidelink communication configuration |  | As specified in table A.3.21.2-2 |  |
+| Target UE antenna configuration |  | 1 x 2 |  |
+| Timing offset between the anchor UEs at the target UE antenna connector | s | UE 2 to UE 1: 0UE 3 to UE 1: 3 | Synchronous transmissions |
+| T1 | s | 3 | The length of the time interval from the beginning of each test |
+| T2 | s | 1.28 | The length of the time interval that follows immediately after time interval T1 |
+
+Table A.9A.1.1.2.1-4: NR Uu specific test parameters for Cell 1
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| SSB configuration | Uu_conf1 |  | SSB.1 FR1 | SSB configuration of Cell 1. |
+|  | Uu_conf2 |  | SSB.1 FR1 |  |
+|  | Uu_conf3 |  | SSB.2 FR1 |  |
+| SMTC configuration | Uu_conf1 |  | SMTC.2 | SMTC configuration of Cell 1. |
+|  | Uu_conf2 |  | SMTC.1 |  |
+|  | Uu_conf3 |  | SMTC.1 |  |
+| PDSCH RMC configuration | Uu_conf1 |  | SR.1.1 FDD |  |
+|  | Uu_conf2 |  | SR.1.1 TDD |  |
+|  | Uu_conf3 |  | SR.2.1 TDD |  |
+| RMSI CORESET RMC configuration | Uu_conf1 |  | CR.1.1 FDD | As specified in clause A.3.1.2.1 |
+|  | Uu_conf2 |  | CR.1.1 TDD |  |
+|  | Uu_conf3 |  | CR.2.1 TDD |  |
+| Dedicated CORESET RMC configuration | Uu_conf1 |  | CCR.1.1 FDD |  |
+|  | Uu_conf2 |  | CCR.1.1 TDD |  |
+|  | Uu_conf3 |  | CCR.2.1 TDD |  |
+| Initial BWP configuration | Uu_conf1,2,3 |  | DLBWP.0.1 ULBWP.0.1 |  |
+| Active DL BWP configuration | Uu_conf1,2,3 |  | DLBWP.1.1 |  |
+| Active UL BWP configuration | Uu_conf1,2,3 |  | ULBWP.1.1 |  |
+
+Table A.9A.1.1.2.1-5: NR Uu UE-specific test parameters for UE 0, UE 1 and UE 2
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| DRX |  |  | OFF |  |
+| OCNG Patterns |  |  | OP.1 |  |
+| EPRE ratio of PSS to SSS |  | dB | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH DMRS |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS Note 1 |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS Note 1 |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,3 | dBm/15 kHz | -110 |  |
+|  | Config 1, 2 | dBm /SCS | -110 |  |
+|  | Config 3 |  | -107 |  |
+| SSB ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 4.5 |  |
+| SSB ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  | dB | 4.5 |  |
+| SS-RSRPNote3 | Config 1,2 | dBm /SCS | -105.5 |  |
+|  | Config 3 |  | -102.5 |  |
+| IoNote3 | Config 1,2 | dBm /19.08MHz | -73.1 |  |
+|  | Config 3 | dBm/ 38.16MHz | -70.1 |  |
+| Propagation condition |  |  | AWGN |  |
+| NOTE 1: OCNG shall be used such that cell 1 is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+Table A.9A.1.1.2.1-6: Anchor V2X UE specific test parameters for SL Rx-Tx measurement
+
+| Parameter |  | Unit | Anchor UE 1 |  | Anchor UE 2 |  |  | Comment |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 | T1 | T2 |  |  |
+| SL RF Channel number |  |  | 2 |  | 2 |  |  |  |
+| SL DRX |  |  | OFF |  | OFF |  |  |  |
+| networkControlledSyncTx |  |  | ON |  | ON |  |  |  |
+| inCoverage (in MIB-SL) |  |  | TRUE |  | TRUE |  |  |  |
+| SL pool configuration | SL_conf1 |  | shared resource pool if supported by UE1, otherwise dedicated |  |  |  |  |  |
+|  | SL_conf2 |  |  |  |  |  |  |  |
+|  | SL_conf3 |  |  |  |  |  |  |  |
+| SL-PRS configuration | SL_conf1 |  | N/A | SL PRS.1.3 FR1 | N/A |  | SL PRS.1.3 FR1 | As specified in table A.3.21A.2.1-1 |
+|  | SL_conf2 |  |  | SL PRS.1.1 FR1 |  |  | SL PRS.1.1 FR1 |  |
+|  | SL_conf3 |  |  | SL PRS.1.3 FR1 |  |  | SL PRS.1.3 FR1 |  |
+| PSCCH RMC (defined in A.3.21.2) |  |  | CC.1A HD | CC.1A HD | CC.1A HD |  | CC.1A HD |  |
+| PSSCH RMC (defined in A.3.21.3) |  |  | CD.1A HD | CD.1A HD | CD.1A HD |  | CD.1A HD |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2, 4 | SL conf1 | dBm/SCS | -94 |  |  |  |  |  |
+|  | SL conf2, 3 |  | -91 |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2, 5 | SL conf1 |  | -98 |  |  |  |  |  |
+|  | SL conf2, 3 |  | -95 |  |  |  |  |  |
+| SL-PRS ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 4 |  | dB | -Infinity | 0 | -Infinity |  | -3 |  |
+| PSCCH ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 5 |  | dB | N/A | 4 | N/A |  | 1 |  |
+| Io Note 3, 4 | SL_conf1 | dBm/9.36MHz | N/A | -65.15 | N/A |  | -65.57 |  |
+|  | SL_conf2 | dBm/8.64MHz |  | -68.44 |  |  | -68.89 |  |
+|  | SL_conf3 | dBm/18.36MHz |  | -65.21 |  |  | -65.65 |  |
+| SL PRS-RSRP Note3, 4 | SL_conf1 | dBm/SCS | -Infinity | -94 | -Infinity |  | -97 |  |
+|  | SL_conf2, 3 |  | -Infinity | -91 | -Infinity |  | -94 |  |
+| PSCCH RP Note3, 5 | SL_conf1 |  | -Infinity | -94 | -Infinity |  | -97 |  |
+|  | SL_conf2, 3 |  | -Infinity | -91 | -Infinity |  | -94 |  |
+| SL-PRS $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 4 |  | dB | N/A | 0 | N/A |  | -3 |  |
+| PSCCH $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 5 |  | dB | N/A | 4 | N/A |  | 1 |  |
+| Propagation Condition |  |  | AWGN |  |  |  |  |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: SL PRS-RSRP, PSCCH Received Power (RP) and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io level is based on the allocated PRBs for SL PRS symbols. NOTE 3: The UE is only required to be tested in one of the supported test configurations. NOTE 4:  In symbols containing SL-PRS.NOTE 5:  In symbols containing PSCCH. |  |  |  |  |  |  |  |  |
+
+##### A.9A.1.1.2.2 Test Requirements
+
+The SL Rx-Tx time difference measurement time fulfils the requirements specified in clause 12A.4.5.
+
+The UE shall perform and report the SL Rx-Tx time difference measurements for anchor UE 1 and anchor UE 2 within the specified SL Rx-Tx time difference measurement time starting from the beginning of time interval T2.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the time duration above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+The rate of the correct events for each anchor UE observed during repeated tests shall be at least 90%, where the reported SL Rx-Tx measurement for each correct event shall be within the SL Rx-Tx reporting range specified in clause 10.4A.4.1.
+
+#### A.9A.1.1.3 NR SL AoA measurements reporting delay test in FR1 SA
+
+##### A.9A.1.1.3.1 Test Purpose and Environment
+
+The purpose of the test is to verify that the SL AoA measurement meets the requirements specified in clause 12A.6 in an environment with AWGN propagation conditions in FR1 in NR Uu standalone scenario, when a single frequency layer is configured for SL positioning.
+
+The test is applicable for UEs supporting NR Uu and V2X or 5G ProSe operation, which are capable of performing SL AoA measurements.
+
+The supported NR Uu test configurations are specified in table A.9A.1.1.3.1-1.
+
+The supported NR SL test configurations are specified in table A.9A.1.1.3.1-2.
+
+Table A.9A.1.1.3.1-1: Supported Test Configurations for FR1 NR cell
+
+| Configuration | Description |
+| --- | --- |
+| 1 | NR Uu: 15 kHz SSB SCS, 20 MHz BW, FDD duplex mode |
+| 2 | NR Uu: 15 kHz SSB SCS, 20 MHz BW, TDD duplex mode |
+| 3 | NR Uu: 30 kHz SSB SCS, 40 MHz BW, TDD duplex mode |
+| NOTE 1: The UE is only required to pass in one of the supported test configurations in FR1. |  |
+
+Table A.9A.1.1.3.1-2: Supported test configurations for NR SL UEs
+
+| NR SL configuration | Description |
+| --- | --- |
+| SL_conf1 | NR SL: 15 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf2 | NR SL: 30 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf3 | NR SL: 30 kHz SSB SCS, 20 MHz bandwidth, HD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations. |  |
+
+In the test there is one target UE receiving SL-PRS and performing SL AoA measurements and two anchor UEs (anchor UE 1, anchor UE 2) transmitting SL-PRS for the SL AoA measurements. The target UE and all the anchor UEs are in RRC_CONNECTED state, with Cell 1 as their PCell in FR1. Cell 1 is also the synchronization source of the target UE and all anchor UEs in the test.
+
+The test consists of two consecutive time intervals, with the duration of T1 and T2. During the duration T1, the target UE shall not have any timing information of anchor UE 1 and anchor UE 2. All two anchor UEs transmit SL-PRS during T2.
+
+The SL-AOA-ProvideAssistanceData and SL-AOA-RequestLocationInformation as defined in TS 38.355 [37], shall be provided to the target UE via Cell 1 during T1. The last TTI containing the two messages shall be provided to the target UE T ms before the start of T2, where T = 50 ms is the maximum processing time of the SL-AOA assistance data and location information request.
+
+The general test parameters are listed in table A.9A.1.1.3.1-3. NR Uu specific test parameters for Cell 1 and NR Uu UE-specific test parameters for all UEs in the test are listed in table A.9A.1.1.3.1-4 and A.9A.1.1.3.1-5, respectively. Anchor UE specific test parameters for SL AoA measurement reporting delay during T1 and T2 are listed in table A.9A.1.1.3.1-6.
+
+Table A.9A.1.1.3.1-3: General test parameters for SL AoA measurement reporting delay
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| Serving cell |  | Cell 1 | NR PCell of the target UE and all anchor UEs (anchor UE 1, anchor UE 2), in FR1 on NR Uu RF channel 1. This cell is also the synchronization source for SL operation for all UEs in the test. |
+| CP length |  | Normal |  |
+| DRX |  | OFF |  |
+| Measurement gap |  | OFF |  |
+| Target UE |  | UE 0 | The UE performing SL AoA measurements based on SL-PRS transmissions from anchor UEs |
+| Other anchor UEs |  | UE 1 and UE 2 | Anchor UE 1 and Anchor UE 2 appear at the first and second places in the anchor UE list in the SL-AOA assistance data. |
+| Number of anchor UEs provided in SL-AOA assistance data |  | 3 | Including the target UE |
+| Sidelink communication configuration |  | As specified in table A.3.21.2-2 |  |
+| Target UE antenna configuration |  | 1 x 2 |  |
+| Timing offset between the anchor UEs at the target UE antenna connector | s | UE 1 to UE 0: 0UE 2 to UE 1: 3 | Synchronous transmissions |
+| T1 | s | 3 | The length of the time interval from the beginning of each test |
+| T2 | s | 1.28 | The length of the time interval that follows immediately after time interval T1 |
+
+Table A.9A.1.1.3.1-4: NR Uu specific test parameters for Cell 1
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| SSB configuration | Uu_conf1 |  | SSB.1 FR1 | SSB configuration of Cell 1. |
+|  | Uu_conf2 |  | SSB.1 FR1 |  |
+|  | Uu_conf3 |  | SSB.2 FR1 |  |
+| SMTC configuration | Uu_conf1 |  | SMTC.2 | SMTC configuration of Cell 1. |
+|  | Uu_conf2 |  | SMTC.1 |  |
+|  | Uu_conf3 |  | SMTC.1 |  |
+| PDSCH RMC configuration | Uu_conf1 |  | SR.1.1 FDD |  |
+|  | Uu_conf2 |  | SR.1.1 TDD |  |
+|  | Uu_conf3 |  | SR.2.1 TDD |  |
+| RMSI CORESET RMC configuration | Uu_conf1 |  | CR.1.1 FDD | As specified in clause A.3.1.2.1 |
+|  | Uu_conf2 |  | CR.1.1 TDD |  |
+|  | Uu_conf3 |  | CR.2.1 TDD |  |
+| Dedicated CORESET RMC configuration | Uu_conf1 |  | CCR.1.1 FDD |  |
+|  | Uu_conf2 |  | CCR.1.1 TDD |  |
+|  | Uu_conf3 |  | CCR.2.1 TDD |  |
+| Initial BWP configuration | Uu_conf1,2,3 |  | DLBWP.0.1 ULBWP.0.1 |  |
+| Active DL BWP configuration | Uu_conf1,2,3 |  | DLBWP.1.1 |  |
+| Active UL BWP configuration | Uu_conf1,2,3 |  | ULBWP.1.1 |  |
+
+Table A.9A.1.1.3.1-5: NR Uu UE-specific test parameters for UE 0, UE 1, and UE 2
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| DRX |  |  | OFF |  |
+| OCNG Patterns |  |  | OP.1 |  |
+| EPRE ratio of PSS to SSS |  | dB | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH DMRS |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS Note 1 |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS Note 1 |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,3 | dBm/15 kHz | -110 |  |
+|  | Config 1, 2 | dBm /SCS | -110 |  |
+|  | Config 3 |  | -107 |  |
+| SSB ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 4.5 |  |
+| SSB ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  | dB | 4.5 |  |
+| SS-RSRPNote3 | Config 1,2 | dBm /SCS | -105.5 |  |
+|  | Config 3 |  | -102.5 |  |
+| IoNote3 | Config 1,2 | dBm /19.08MHz | -73.1 |  |
+|  | Config 3 | dBm/ 38.16MHz | -70.1 |  |
+| Propagation condition |  |  | AWGN |  |
+| NOTE 1: OCNG shall be used such that cell 1 is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+Table A.9A.1.1.3.1-6: Anchor UE specific test parameters on the SL carrier
+
+| Parameter |  |  | Unit | Anchor UE 1 |  | Anchor UE 2 |  |  | Comment |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  | T1 | T2 | T1 | T2 |  |  |
+| SL RF Channel number |  |  |  | 2 |  | 2 |  |  |  |
+| SL DRX |  |  |  | OFF |  | OFF |  |  |  |
+| networkControlledSyncTx |  |  |  | ON |  | ON |  |  |  |
+| inCoverage (in MIB-SL) |  |  |  | TRUE |  | TRUE |  |  |  |
+| SL pool configuration |  | SL_conf1 |  | shared resource pool if supported by UE1, otherwise dedicated |  |  |  |  |  |
+|  |  | SL_conf2 |  |  |  |  |  |  |  |
+|  |  | SL_conf3 |  |  |  |  |  |  |  |
+| SL-PRS configuration |  | SL_conf1 |  | N/A | SL PRS.1.3 FR1 | N/A |  | SL PRS.1.3 FR1 | As specified in table A.3.21A.2.1-1 |
+|  |  | SL_conf2 |  |  | SL PRS.1.1 FR1 |  |  | SL PRS.1.1 FR1 |  |
+|  |  | SL_conf3 |  |  | SL PRS.1.3 FR1 |  |  | SL PRS.1.3 FR1 |  |
+| PSCCH RMC (defined inA.3.21.2) |  |  |  | CC.1A HD | CC.1A HD | CC.1A HD |  | CC.1A HD |  |
+| PSSCH RMC (defined in A.3.21.3) |  |  |  | CD.1A HD | CD.1A HD | CD.1A HD |  | CD.1A HD |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2, 4 | SL conf1 |  | dBm/SCS | -94 |  |  |  |  |  |
+|  | SL conf2, 3 |  |  | -91 |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2, 5 | SL conf1 |  |  | -98 |  |  |  |  |  |
+|  | SL conf2, 3 |  |  | -95 |  |  |  |  |  |
+| SL-PRS ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 4 |  |  | dB | -Infinity | 0 | -Infinity |  | -3 |  |
+| PSCCH ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 5 |  |  | dB | N/A | 4 | N/A |  | 1 |  |
+| Io Note 3, 4 |  | SL_conf1 | dBm/9.36MHz | N/A | -65.15 | N/A |  | -65.57 |  |
+|  |  | SL_conf2 | dBm/8.46MHz |  | -68.44 |  |  | -68.89 |  |
+|  |  | SL_conf3 | dBm/18.36MHz |  | -65.21 |  |  | -65.65 |  |
+| SL PRS-RSRP Note3 | SL conf1 |  | dBm/SCS | -Infinity | -94 | -Infinity |  | -97 |  |
+|  | SL conf2, 3 |  |  | -Infinity | -91 | -Infinity |  | -94 |  |
+| PSCCH RP Note3, 5 | SL conf1 |  |  | -Infinity | -94 | -Infinity |  | -97 |  |
+|  | SL conf2, 3 |  |  | -Infinity | -91 | -Infinity |  | -94 |  |
+| SL-PRS $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 4 |  |  | dB | N/A | 0 | N/A |  | -3 |  |
+| PSCCH $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 5 |  |  | dB | N/A | 4 | N/A |  | 1 |  |
+| Propagation Condition |  |  |  | AWGN |  |  |  |  |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: SL PRS-RSRP, PSCCH Received Power (RP) and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io level is based on the allocated PRBs for SL PRS symbols. NOTE 3: The UE is only required to be tested in one of the supported test configurations. NOTE 4:  In symbols containing SL-PRS.NOTE 5:  In symbols containing PSCCH. |  |  |  |  |  |  |  |  |  |
+
+##### A.9A.1.1.3.2 Test Requirements
+
+The SL AoA measurement time fulfils the requirements specified in clause 12A.6.5.
+
+The UE shall perform and report to LMF the SL AoA measurements for the anchor UE 1 and anchor UE 2, within the time duration specified in clause 12A.6.5 starting from the beginning of time interval T2.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the time duration above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+The rate of the correct events for each anchor UE observed during repeated tests shall be at least 90%, where the reported SL AoA measurement for each correct event shall be within the SL AoA reporting range specified in clause 10.4A.6.1.1, i.e., between A_AoA_0 and SL_AoA_3599, and between Z_AoA_0 and Z_AoA_1799.
+
+#### A.9A.1.1.4 NR SL RTOA measurements reporting delay test in FR1 SA
+
+##### A.9A.1.1.4.1 Test Purpose and Environment
+
+The purpose of the test is to verify that the SL RTOA measurement meets the requirements specified in clause 12A.7 in an environment with AWGN propagation conditions in FR1 in NR Uu standalone scenario, when a single frequency layer is configured for SL positioning.
+
+The test is applicable for UEs supporting NR Uu and V2X or 5G ProSe operation, which are capable of performing SL AoA measurements.
+
+The supported NR Uu test configurations are specified in table A.9A.1.1.4.1-1.
+
+The supported NR SL test configurations are specified in table A.9A.1.1.4.1-2.
+
+Table A.9A.1.1.4.1-1: Supported test configurations for FR1 NR Cell 1
+
+| NR Uu configuration | Description |
+| --- | --- |
+| Uu_conf1 | NR Uu: 15 kHz SSB SCS, 20 MHz bandwidth, FDD duplex mode |
+| Uu_conf2 | NR Uu: 15 kHz SSB SCS, 20 MHz bandwidth, TDD duplex mode |
+| Uu_conf3 | NR Uu: 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations. |  |
+
+Table A.9A.1.1.4.1-2: Supported test configurations for NR SL UEs
+
+| NR SL configuration | Description |
+| --- | --- |
+| SL_conf1 | NR SL: 15 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf2 | NR SL: 30 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf3 | NR SL: 30 kHz SSB SCS, 20 MHz bandwidth, HD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations. |  |
+
+In the test there is one target UE transmitting SL-PRS and performing SL RTOA measurements and one anchor UE (anchor UE 1) receiving SL-PRS for the SL RTOA measurements. The target UE and all the anchor UEs are in RRC_CONNECTED state, with Cell 1 as their PCell in FR1. Cell 1 is also the synchronization source of the target UE and all anchor UEs in the test.
+
+The test consists of two consecutive time intervals, with the duration of T1 and T2. During the duration T1, the target UE shall not have any timing information of anchor UE 1 and anchor UE 2. All two anchor UEs transmit SL-PRS during T2.
+
+The SL-TOA-ProvideAssistanceData and SL-TOA-RequestLocationInformation as defined in TS 38.355 [37], shall be provided to the target UE via Cell 1 during T1. The last TTI containing the two messages shall be provided to the target UE T ms before the start of T2, where T = 50 ms is the maximum processing time of the SL-TOA assistance data and location information request.
+
+The general test parameters are listed in table A.9A.1.1.4.1-3. NR Uu specific test parameters for Cell 1 and NR Uu UE-specific test parameters for all UEs in the test are listed in table A.9A.1.1.4.1-4 and A.9A.1.1.4.1-5, respectively. Anchor UE specific test parameters for SL RTOA measurement reporting delay during T1 and T2 are listed in table A.9A.1.1.4.1-6.
+
+Table A.9A.1.1.4.1-3: General test parameters for SL RTOA measurement reporting delay
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| Serving cell |  | Cell 1 | NR PCell of the target UE and all anchor UEs (anchor UE 1), in FR1 on NR Uu RF channel 1. This cell is also the synchronization source for SL operation for all UEs in the test. |
+| CP length |  | Normal |  |
+| DRX |  | OFF |  |
+| Measurement gap |  | OFF |  |
+| Target UE |  | UE 0 | The UE performing SL RTOA measurements based on SL-PRS receiving from anchor UEs |
+| Other anchor UEs |  | UE 1 | Anchor UE 1 appears at the first place in the anchor UE list SL-TOA assistance data. |
+| Number of anchor UEs provided in SL-TOA assistance data |  | 2 | Including the target UE |
+| Sidelink communication configuration |  | As specified in table A.3.21.2-2 |  |
+| Target UE antenna configuration |  | 1 x 2 |  |
+| Timing offset between the anchor UEs at the target UE antenna connector | s | Anchor UE 1 to target UE 1: 0 | Synchronous transmissions |
+| T1 | s | 3 | The length of the time interval from the beginning of each test |
+| T2 | s | 1.28 | The length of the time interval that follows immediately after time interval T1 |
+
+Table A.9A.1.1.4.1-4: NR Uu specific test parameters for Cell 1
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| SSB configuration | Uu_conf1 |  | SSB.1 FR1 | SSB configuration of Cell 1. |
+|  | Uu_conf2 |  | SSB.1 FR1 |  |
+|  | Uu_conf3 |  | SSB.2 FR1 |  |
+| SMTC configuration | Uu_conf1 |  | SMTC.2 | SMTC configuration of Cell 1. |
+|  | Uu_conf2 |  | SMTC.1 |  |
+|  | Uu_conf3 |  | SMTC.1 |  |
+| PDSCH RMC configuration | Uu_conf1 |  | SR.1.1 FDD |  |
+|  | Uu_conf2 |  | SR.1.1 TDD |  |
+|  | Uu_conf3 |  | SR.2.1 TDD |  |
+| RMSI CORESET RMC configuration | Uu_conf1 |  | CR.1.1 FDD | As specified in clause A.3.1.2.1 |
+|  | Uu_conf2 |  | CR.1.1 TDD |  |
+|  | Uu_conf3 |  | CR.2.1 TDD |  |
+| Dedicated CORESET RMC configuration | Uu_conf1 |  | CCR.1.1 FDD |  |
+|  | Uu_conf2 |  | CCR.1.1 TDD |  |
+|  | Uu_conf3 |  | CCR.2.1 TDD |  |
+| Initial BWP configuration | Uu_conf1,2,3 |  | DLBWP.0.1 ULBWP.0.1 |  |
+| Active DL BWP configuration | Uu_conf1,2,3 |  | DLBWP.1.1 |  |
+| Active UL BWP configuration | Uu_conf1,2,3 |  | ULBWP.1.1 |  |
+
+Table A.9A.1.1.4.1-5: NR Uu UE-specific test parameters for UE 0 and UE 1
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| DRX |  |  | OFF |  |
+| OCNG Patterns |  |  | OP.1 |  |
+| EPRE ratio of PSS to SSS |  | dB | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH DMRS |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS Note 1 |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS Note 1 |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,3 | dBm/15 kHz | -110 |  |
+|  | Config 1, 2 | dBm /SCS | -110 |  |
+|  | Config 3 |  | -107 |  |
+| SSB ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 4.5 |  |
+| SSB ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  | dB | 4.5 |  |
+| SS-RSRPNote3 | Config 1,2 | dBm /SCS | -105.5 |  |
+|  | Config 3 |  | -102.5 |  |
+| IoNote3 | Config 1,2 | dBm /19.08MHz | -73.1 |  |
+|  | Config 3 | dBm/ 38.16MHz | -70.1 |  |
+| Propagation condition |  |  | AWGN |  |
+| NOTE 1: OCNG shall be used such that cell 1 is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+Table A.9A.1.1.4.1-6: Anchor UE specific test parameters on the SL carrier
+
+| Parameter |  | Unit | Anchor UE 1 |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 |
+| SL RF Channel number |  |  | 2 |  |
+| SL DRX |  |  | OFF |  |
+| networkControlledSyncTx |  |  | ON |  |
+| inCoverage (in MIB-SL) |  |  | TRUE |  |
+| SL pool configuration | SL_conf1 |  | N/A | shared resource pool if supported by UE1, otherwise dedicated |
+|  | SL_conf2 |  |  |  |
+|  | SL_conf3 |  |  |  |
+| SL-PRS configuration | SL_conf1 |  | N/A | SL PRS.1.3 FR1 |
+|  | SL_conf2 |  |  | SL PRS.1.1 FR1 |
+|  | SL_conf3 |  |  | SL PRS.1.3 FR1 |
+| PSCCH RMC (defined in A.3.21.2) |  |  | CC.1A HD | CC.1A HD |
+| PSSCH RMC (defined in A.3.21.3) |  |  | CD.1A HD | CD.1A HD |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2, 4 | SL conf1 | dBm/SCS | -94 |  |
+|  | SL conf2, 3 |  | -91 |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2, 5 | SL conf1 |  | -98 |  |
+|  | SL conf2, 3 |  | -95 |  |
+| SL-PRS ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 4 |  | dB | -Infinity | 0 |
+| PSCCH ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 5 |  | dB | N/A | 4 |
+| Io Note 3 | SL_conf1 | dBm/9.36MHz | N/A | -65.15 |
+|  | SL_conf2 | dBm/8.64MHz |  | -68.44 |
+|  | SL_conf3 | dBm/18.36MHz |  | -65.21 |
+| SL PRS-RSRP Note3, 4 | SL_conf1 | dBm/SCS | -Infinity | -94 |
+|  | SL_conf2, 3 |  | -Infinity | -91 |
+| PSCCH RP Note 3, 5 | SL_conf1 |  | -Infinity | -94 |
+|  | SL_conf2, 3 |  | -Infinity | -91 |
+| SL-PRS $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 4 |  | dB | N/A | 0 |
+| PSCCH $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 5 |  | dB | N/A | 4 |
+| Propagation Condition |  |  | AWGN |  |
+| NOTE 1: The resources for NR Uu uplink transmission are assigned to the UE prior to the start of time period T2.NOTE 2:  Interference from other UEs and noise sources not specified in the test are assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3:  SL PRS-RSRP, PSCCH Received Power (RP) and Io levels have been derived from other parameters and are given for information purpose. These are not settable test parameters.NOTE 4:  In symbols containing SL-PRS.NOTE 5:  In symbols containing PSCCH. |  |  |  |  |
+
+##### A.9A.1.1.4.2 Test Requirements
+
+The SL RTOA measurement time fulfils the requirements specified in clause 12A.7.5.
+
+The UE shall perform and report to LMF the SL RTOA measurements for the anchor UE 1, within the time duration specified in clause 12A.7.5 starting from the beginning of time interval T2.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the time duration above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+The rate of the correct events for each anchor UE observed during repeated tests shall be at least 90%, where the reported SL RTOA measurement for each correct event shall be within the SL RTOA reporting range specified in clause 10.4A.7.1.1, i.e., between SL_RTOA_0 and SL_RTOA_985024.
+
+#### A.9A.1.1.5 NR SL PRS-RSRP measurement reporting delay test case in FR1 SA
+
+##### A.9A.1.1.5.1 Test Purpose and Environment
+
+The purpose of the test is to verify that the measurement time of both SL PRS PRS-RSRP and SL PRS RSTD measurements meet the requirements specified in clause 12A.3.5and 12A.2.5 respectively in an environment with AWGN propagation conditions in FR1 in standalone NR scenario, with additionally configured single frequency layer for SL positioning.
+
+The test environment and configurations refer to A.9A.1.1.1. And if UE passes this test case, then UE does not need to take the reporting delay test with RSTD measurement only defined in A.9A.1.1.1.
+
+##### A.9A.1.1.5.2 Test Requirements
+
+The SL PRS-RSRP and SL RSTD measurement times fulfil the requirements specified in clause 12A.3.5 and 12A.2.5 respectively.
+
+The UE shall perform and report to LMF the SL PRS-RSRP measurements for anchor UE 2 and anchor UE 3 within the time duration specified in clause 12A.3.5 starting from the beginning of time interval T2. UE also performs and report to LMF the SL RSTD measurements for anchor UE 2 and anchor UE 3 with respect to the reference anchor UE 1, within the time duration specified in clause 12A.2.5 starting from the beginning of time interval T2.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the time duration above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+The rate of the correct events for each anchor UE observed during repeated tests shall be at least 90%, where the reported SL PRS-RSRP measurement for each correct event shall be within the SL PRS-RSRP reporting range specified in clause 10.4A.3.1.1, i.e., between SL_PRS_RSRP_0 and SL_PRS_RSRP_126, and the reported SL RSTD measurement for each correct event shall be within the SL RSTD reporting range specified in clause 10.4A.2.1.1.
+
+#### A.9A.1.1.6 NR SL PRS-RSRPP measurement reporting delay test case in FR1 SA
+
+##### A.9A.1.1.6.1 Test Purpose and Environment
+
+The purpose of the test is to verify that the measurement time of both SL PRS PRS-RSRPP and SL Rx-Tx measurements meet the requirements specified in clause 12A.5.5and 12A.4.5 respectively in an environment with two-tap propagation conditions in FR1 in standalone NR scenario, with additionally configured single frequency layer for SL positioning.
+
+The test environment and configurations refer to A.9A.1.1.2, except that the propagation shall be two-tap channel. And if UE passes this test case, then UE does not need to take the reporting delay test case with SL Rx-Tx measurement only defined in A.9A.1.1.2.
+
+##### A.9A.1.1.6.2 Test Requirements
+
+The SL PRS-RSRPP and SL Rx-Tx measurement times fulfil the requirements specified in clause 12A.5.5 and 12A.4.5, respectively.
+
+The UE shall perform and report to LMF the SL PRS-RSRPP measurements for anchor UE 2 and anchor UE 3 within the time duration specified in clause 12A.5.5 starting from the beginning of time interval T2. UE also performs and report to LMF the SL Rx-Tx measurements for anchor UE 2 and anchor UE 3 within the time duration specified in clause 12A.4.5 starting from the beginning of time interval T2.
+
+NOTE: The actual overall delays measured in the test may be up to 2xTTIDCCH higher than the time duration above because of TTI insertion uncertainty of the measurement report in DCCH.
+
+The rate of the correct events for each anchor UE observed during repeated tests shall be at least 90%, where the reported SL PRS-RSRPP measurement for each correct event shall be within the SL PRS-RSRPP reporting range specified in clause 10.4A.5.1.1, i.e., between SL_PRS_RSRPP_0 and SL_PRS_RSRPP_126, and the reported SL Rx-Tx measurement for each correct event shall be within the SL Rx-Tx reporting range specified in clause 10.4A.4.1.1.
+
+### A.9A.1.2 Measurement Accuracy Tests
+
+#### A.9A.1.2.1 NR SL RSTD measurement accuracy test case in FR1 SA
+
+##### A.9A.1.2.1.1 Test Purpose and Environment
+
+The purpose of the test is to verify that the SL RSTD measurement meets the accuracy requirements specified in clause 10.4A.2 in an environment with AWGN propagation conditions in FR1 in standalone NR scenario, with additionally configured single frequency layer for SL positioning.
+
+This test is applicable for UEs supporting NR Uu and V2X or 5G ProSe operation, which are capable of performing SL RSTD measurements.
+
+The supported NR Uu test configurations are specified in table A.9A.1.2.1.1-1.
+
+Table A.9A.1.2.1.1-1: Supported test configurations for FR1 NR Cell 1
+
+| NR Uu configuration | Description |
+| --- | --- |
+| Uu_conf1 | NR Uu: 15 kHz SSB SCS, 20 MHz bandwidth, FDD duplex mode |
+| Uu_conf2 | NR Uu: 15 kHz SSB SCS, 20 MHz bandwidth, TDD duplex mode |
+| Uu_conf3 | NR Uu: 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations. |  |
+
+The supported NR SL test configurations are specified in table A.9A.1.2.1.1-2.
+
+Table A.9A.1.2.1.1-2: Supported test configurations for NR SL UEs
+
+| NR SL configuration | Description |
+| --- | --- |
+| SL_conf1 | NR SL: 15 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf2 | NR SL: 30 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf3 | NR SL: 30 kHz SSB SCS, 20 MHz bandwidth, HD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations. |  |
+
+In the test, there is one target UE receiving SL-PRS and performing SL RSTD measurements and two anchor UEs (anchor UE 1 and anchor UE 2) transmitting SL-PRS for the SL RSTD measurements on NR SL RF channel 2. Anchor UE 1 is the reference anchor UE for the measurements. The target UE and all the anchor UEs are in RRC_CONNECTED state, with Cell 1 as their PCell in FR1 on NR Uu RF channel 1. Cell 1 is also the synchronization source of the target UE and all anchor UEs in the test.
+
+The test consists of two consecutive time intervals, with duration of T1 and T2. Before T2 starts, the UEs have been synchronized to Cell 1. During time duration T1, the target UE shall not have any timing information of anchor UE 2. All two anchor UEs transmit SL-PRS during T2.
+
+The SL-TDOA-ProvideAssistanceData and SL-TDOA-RequestLocationInformation as defined in TS 38.355 [37, clause 6.9], shall be provided to the target UE via Cell 1 during T1. The last TTI containing the two messages shall be provided to the target UE T ms before the start of T2, where T = 50 ms is the maximum processing time of the SL-TDOA assistance data and location information request.
+
+The general test parameters are listed in table A.9A.1.2.1.1-3. NR Uu specific test parameters for Cell 1 and NR Uu UE-specific test parameters for all UEs in the test are listed in table A.9A.1.2.1.1-4 and A.9A.1.2.1.1-5, respectively. Anchor UE specific test parameters for SL RSTD measurement accuracy during T1 and T2 are listed in table A.9A.1.2.1.1-6.
+
+Table A.9A.1.2.1.1-3: General test parameters for SL RSTD measurement accuracy test
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| Serving cell |  | Cell 1 | NR PCell of the target UE and all anchor UEs (anchor UE 1, anchor UE 2), in FR1 on NR Uu RF channel 1. This cell is also the synchronization source for SL operation for all UEs in the test. |
+| CP length |  | Normal |  |
+| DRX |  | OFF |  |
+| Measurement gap |  | OFF |  |
+| Target UE |  | UE 0 | The UE performing SL RSTD measurements based on SL-PRS transmissions from anchor UEs |
+| Reference anchor UE |  | UE 1 | Reference anchor UE is the UE in the SL-TDOA assistance data with respect to which the SL RSTD measurement is defined, as specified in TS 38.215 [4] and TS 38.355[37]. The reference anchor UE is UE 1 in this test case. |
+| Other anchor UE |  | UE 2 | Anchor UE 2 appears at the second place in the anchor UE list SL-RTD-Info in the SL-TDOA assistance data. |
+| Number of anchor UEs provided in SL-TDOA assistance data |  | 3 | Including the target UE |
+| Sidelink communication configuration |  | As specified in table A.3.21.2-2 |  |
+| Target UE antenna configuration |  | 1 x 2 |  |
+| Timing offset between the anchor UEs at the target UE antenna connector | s | UE 2 to UE 1: 3 | Synchronous transmissions |
+| T1 | s | 3 | The length of the time interval from the beginning of each test |
+| T2 | s | 1.28 | The length of the time interval that follows immediately after time interval T1 |
+
+Table A.9A.1.2.1.1-4: NR Uu specific test parameters for Cell 1
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| SSB configuration | Uu_conf1 |  | SSB.1 FR1 | SSB configuration of Cell 1. |
+|  | Uu_conf2 |  | SSB.1 FR1 |  |
+|  | Uu_conf3 |  | SSB.2 FR1 |  |
+| SMTC configuration | Uu_conf1 |  | SMTC.2 | SMTC configuration of Cell 1. |
+|  | Uu_conf2 |  | SMTC.1 |  |
+|  | Uu_conf3 |  | SMTC.1 |  |
+| PDSCH RMC configuration | Uu_conf1 |  | SR.1.1 FDD |  |
+|  | Uu_conf2 |  | SR.1.1 TDD |  |
+|  | Uu_conf3 |  | SR.2.1 TDD |  |
+| RMSI CORESET RMC configuration | Uu_conf1 |  | CR.1.1 FDD | As specified in clause A.3.1.2.1 |
+|  | Uu_conf2 |  | CR.1.1 TDD |  |
+|  | Uu_conf3 |  | CR.2.1 TDD |  |
+| Dedicated CORESET RMC configuration | Uu_conf1 |  | CCR.1.1 FDD |  |
+|  | Uu_conf2 |  | CCR.1.1 TDD |  |
+|  | Uu_conf3 |  | CCR.2.1 TDD |  |
+| Initial BWP configuration | Uu_conf1,2,3 |  | DLBWP.0.1 ULBWP.0.1 |  |
+| Active DL BWP configuration | Uu_conf1,2,3 |  | DLBWP.1.1 |  |
+| Active UL BWP configuration | Uu_conf1,2,3 |  | ULBWP.1.1 |  |
+
+Table A.9A.1.2.1.1-5: NR Uu UE-specific test parameters for UE 0, UE 1, and UE 2
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| DRX |  |  | OFF |  |
+| OCNG Patterns |  |  | OP.1 |  |
+| EPRE ratio of PSS to SSS |  | dB | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH DMRS |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS Note 1 |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS Note 1 |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,3 | dBm/15 kHz | -110 |  |
+|  | Config 1, 2 | dBm /SCS | -110 |  |
+|  | Config 3 |  | -107 |  |
+| SSB ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 4.5 |  |
+| SSB ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  | dB | 4.5 |  |
+| SS-RSRPNote3 | Config 1,2 | dBm /SCS | -105.5 |  |
+|  | Config 3 |  | -102.5 |  |
+| IoNote3 | Config 1,2 | dBm /19.08MHz | -73.1 |  |
+|  | Config 3 | dBm/ 38.16MHz | -70.1 |  |
+| Propagation condition |  |  | AWGN |  |
+| NOTE 1: OCNG shall be used such that cell 1 is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+Table A.9A.1.2.1.1-6: Anchor UE specific test parameters on the SL carrier
+
+| Parameter |  | Unit | Anchor UE 1 |  | Anchor UE 2 |  |  | Comment |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 | T1 | T2 |  |  |
+| SL RF Channel number |  |  | 2 |  | 2 |  |  |  |
+| SL DRX |  |  | OFF |  | OFF |  |  |  |
+| networkControlledSyncTx |  |  | ON |  | ON |  |  |  |
+| inCoverage (in MIB-SL) |  |  | TRUE |  | TRUE |  |  |  |
+| SL pool configuration | SL_conf1 |  | dedicated resource pool if supported by UE1, otherwise shared |  |  |  |  |  |
+|  | SL_conf2 |  |  |  |  |  |  |  |
+|  | SL_conf3 |  |  |  |  |  |  |  |
+| SL-PRS configuration | SL_conf1 |  | N/A | SL PRS.1.3 FR1 | N/A |  | SL PRS.1.3 FR1 | As specified in table A.3.21A.2.1-1 |
+|  | SL_conf2 |  |  | SL PRS.1.1 FR1 |  |  | SL PRS.1.1 FR1 |  |
+|  | SL_conf3 |  |  | SL PRS.1.3 FR1 |  |  | SL PRS.1.3 FR1 |  |
+| PSCCH RMC (defined in A3.21.3) |  |  | CC.1A HD | CC.1A HD | CC.1A HD |  | CC.1A HD |  |
+| PSSCH RMC (defined in A.3.21.3) |  |  | CD.1A HD | CD.1A HD | CD.1A HD |  | CD.1A HD |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2, 4 | SL conf1 | dBm/SCS | -94 |  |  |  |  |  |
+|  | SL conf2, 3 |  | -91 |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2, 5 | SL conf1 |  | -98 |  |  |  |  |  |
+|  | SL conf2, 3 |  | -95 |  |  |  |  |  |
+| SL-PRS ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 4 |  | dB | -Infinity | 0 | -Infinity |  | -3 |  |
+| PSCCH ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 5 |  | dB | N/A | 4 | N/A |  | 1 |  |
+| Io Note 3, 4 | SL_conf1 | dBm/9.36MHz | N/A | -65.15 | N/A |  | -65.57 |  |
+|  | SL_conf2 | dBm/8.64MHz |  | -68.44 |  |  | -68.89 |  |
+|  | SL_conf3 | dBm/18.36MHz |  | -65.21 |  |  | -65.65 |  |
+| SL PRS-RSRP Note3, 4 | SL_conf1 | dBm/SCS | -Infinity | -94 | -Infinity |  | -97 |  |
+|  | SL_conf2, 3 |  | -Infinity | -91 | -Infinity |  | -94 |  |
+| PSCCH RP Note3, 5 | SL_conf1 |  | -Infinity | -94 | -Infinity |  | -97 |  |
+|  | SL_conf2, 3 |  | -Infinity | -91 | -Infinity |  | -94 |  |
+| SL-PRS $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 4 |  | dB | N/A | 0 | N/A |  | -3 |  |
+| PSCCH $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 5 |  | dB | N/A | 4 | N/A |  | 1 |  |
+| Propagation Condition |  |  | AWGN |  |  |  |  |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: SL PRS-RSRP, PSCCH Received Power (RP) and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io level is based on the allocated PRBs for SL PRS symbols. NOTE 3: The UE is only required to be tested in one of the supported test configurations. NOTE 4:  In symbols containing SL-PRS.NOTE 5:  In symbols containing PSCCH. |  |  |  |  |  |  |  |  |
+
+##### A.9A.1.2.1.2 Test Requirements
+
+In each test, the SL RSTD measurement for anchor UE 2 shall fulfil the absolute accuracy requirement in clause 10.4A.2.2.
+
+#### A.9A.1.2.2 SL Rx-Tx measurement accuracy test case in FR1
+
+##### A.9A.1.2.2.1 Test Purpose and Environment
+
+The purpose of the test is to verify that the SL Rx-Tx measurement meets the accuracy requirements specified in clause 10.4A.4 in an environment with AWGN propagation conditions in FR1 in standalone NR scenario, with additionally configured single frequency layer for SL positioning.
+
+This test is applicable for UEs supporting NR Uu and V2X or 5G ProSe operation, which are capable of performing SL Rx-Tx measurements.
+
+The supported NR Uu test configurations in FR1 are shown in table A.9A.1.2.2.1-1.
+
+Table A.9A.1.2.2.1-1: Supported Test Configurations for FR1 NR cell
+
+| Configuration | Description |
+| --- | --- |
+| 1 | NR Uu: 15 kHz SSB SCS, 20 MHz BW, FDD duplex mode |
+| 2 | NR Uu: 15 kHz SSB SCS, 20 MHz BW, TDD duplex mode |
+| 3 | NR Uu: 30 kHz SSB SCS, 40 MHz BW, TDD duplex mode |
+| NOTE 1: The UE is only required to pass in one of the supported test configurations in FR1. |  |
+
+The supported NR SL test configurations are specified in table A.9A.1.2.2.1-2.
+
+Table A.9A.1.2.2.1-2: Supported test configurations for NR SL UEs
+
+| NR SL configuration | Description |
+| --- | --- |
+| SL_conf1 | NR SL: 15 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf2 | NR SL: 30 kHz SSB SCS, 10 MHz bandwidth, HD duplex mode |
+| SL_conf3 | NR SL: 30 kHz SSB SCS, 20 MHz bandwidth, HD duplex mode |
+| NOTE: The UE is only required to be tested in one of the supported test configurations. |  |
+
+There is one NR active cell (Cell 1) and three active UEs (one target UE and two anchor UEs for SL positioning measurement) in this test. The target UE receives SL-PRS and performs the SL Rx-Tx time difference measurement. The two anchor UEs transmit the SL-PRS for the SL Rx-Tx time difference measurement on NR SL RF channel 2. The target UE and all anchor UEs are in RRC_CONNECTED state, with Cell 1 as their PCell in FR1 on NR Uu RF channel 1.
+
+The test consists of two successive time periods, with time duration of T1 and T2 respectively. Before T2 starts, the UEs have been synchronized to the NR serving cell. And during T2, two anchor UEs transmit SL-PRS for positioning measurements.
+
+The SL-RTT-ProvideAssistanceData and SL-RTT-RequestLocationInformation as defined in TS 38.355 [37, clause 6.9], shall be provided to the target UE via Cell 1 during T1. The last TTI containing the two messages shall be provided to the target UE T ms before the start of T2, where T = 50 ms is the maximum processing time of the SL-RTT assistance data and location information request.
+
+The test parameters are given in table A.9A.1.2.2.1-3, A.9A.1.2.2.1-4, A.9A.1.2.2.1-5 and table A.9A.1.2.2.1-6 below.
+
+Table A.9A.1.2.2.1-3: General Test Parameters for SL Rx-Tx measurement reporting delay
+
+| Parameter | Unit | Value | Comment |
+| --- | --- | --- | --- |
+| Serving cell |  | Cell 1 | NR PCell of the target UE and all anchor UEs (anchor UE 1, anchor UE 2), in FR1 on NR Uu RF channel 1. This cell is also the synchronization source for SL operation for all UEs in the test. |
+| CP length |  | Normal |  |
+| DRX |  | OFF |  |
+| Measurement gap |  | OFF |  |
+| Target UE |  | UE 0 | The UE performing SL Rx-Tx measurements based on SL-PRS transmissions from anchor UEs |
+| Other anchor UEs |  | UE 1 and UE 2 | Anchor UE 1 and Anchor UE 2 appear at the first and second places in the anchor UE list SL-RTD-Info in the SL-RTT assistance data. |
+| Number of anchor UEs provided in SL-RTT assistance data |  | 3 | Including the target UE |
+| Sidelink communication configuration |  | As specified in table A.3.21.2-2 |  |
+| Target UE antenna configuration |  | 1 x 2 |  |
+| Timing offset between the anchor UEs at the target UE antenna connector | s | UE 2 to UE 1: 3 | Synchronous transmissions |
+| T1 | s | 3 | The length of the time interval from the beginning of each test |
+| T2 | s | 1.28 | The length of the time interval that follows immediately after time interval T1 |
+
+Table A.9A.1.2.2.1-4: NR Uu specific test parameters for Cell 1
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| SSB configuration | Uu_conf1 |  | SSB.1 FR1 | SSB configuration of Cell 1. |
+|  | Uu_conf2 |  | SSB.1 FR1 |  |
+|  | Uu_conf3 |  | SSB.2 FR1 |  |
+| SMTC configuration | Uu_conf1 |  | SMTC.2 | SMTC configuration of Cell 1. |
+|  | Uu_conf2 |  | SMTC.1 |  |
+|  | Uu_conf3 |  | SMTC.1 |  |
+| PDSCH RMC configuration | Uu_conf1 |  | SR.1.1 FDD |  |
+|  | Uu_conf2 |  | SR.1.1 TDD |  |
+|  | Uu_conf3 |  | SR.2.1 TDD |  |
+| RMSI CORESET RMC configuration | Uu_conf1 |  | CR.1.1 FDD | As specified in clause A.3.1.2.1 |
+|  | Uu_conf2 |  | CR.1.1 TDD |  |
+|  | Uu_conf3 |  | CR.2.1 TDD |  |
+| Dedicated CORESET RMC configuration | Uu_conf1 |  | CCR.1.1 FDD |  |
+|  | Uu_conf2 |  | CCR.1.1 TDD |  |
+|  | Uu_conf3 |  | CCR.2.1 TDD |  |
+| Initial BWP configuration | Uu_conf1,2,3 |  | DLBWP.0.1 ULBWP.0.1 |  |
+| Active DL BWP configuration | Uu_conf1,2,3 |  | DLBWP.1.1 |  |
+| Active UL BWP configuration | Uu_conf1,2,3 |  | ULBWP.1.1 |  |
+
+Table A.9A.1.2.2.1-5: NR Uu UE-specific test parameters for UE 0, UE 1 and UE 2
+
+| Parameter |  | Unit | Value | Comment |
+| --- | --- | --- | --- | --- |
+| NR Uu RF channel number |  |  | 1 | RF channel of Cell 1. |
+| DRX |  |  | OFF |  |
+| OCNG Patterns |  |  | OP.1 |  |
+| EPRE ratio of PSS to SSS |  | dB | 0 |  |
+| EPRE ratio of PBCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PBCH to PBCH DMRS |  |  |  |  |
+| EPRE ratio of PDCCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDCCH to PDCCH DMRS |  |  |  |  |
+| EPRE ratio of PDSCH DMRS to SSS |  |  |  |  |
+| EPRE ratio of PDSCH to PDSCH DMRS |  |  |  |  |
+| EPRE ratio of OCNG DMRS to SSS Note 1 |  |  |  |  |
+| EPRE ratio of OCNG to OCNG DMRS Note 1 |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc]Note2 | Config 1,2,3 | dBm/15 kHz | -110 |  |
+|  | Config 1, 2 | dBm /SCS | -110 |  |
+|  | Config 3 |  | -107 |  |
+| SSB ![](media_svg/image3.svg) [公式≈: ^{Ê}s^{N}oc] |  | dB | 4.5 |  |
+| SSB ![](media_svg/image1.svg) [公式≈: ^{Ê}s^{I}ot] |  | dB | 4.5 |  |
+| SS-RSRPNote3 | Config 1,2 | dBm /SCS | -105.5 |  |
+|  | Config 3 |  | -102.5 |  |
+| IoNote3 | Config 1,2 | dBm /19.08MHz | -73.1 |  |
+|  | Config 3 | dBm/ 38.16MHz | -70.1 |  |
+| Propagation condition |  |  | AWGN |  |
+| NOTE 1: OCNG shall be used such that cell 1 is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4: SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port. |  |  |  |  |
+
+Table A.9A.1.2.2.1-6: Anchor V2X UE specific test parameters for SL Rx-Tx measurement
+
+| Parameter |  | Unit | Anchor UE 1 |  | Anchor UE 2 |  |  | Comment |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | T1 | T2 | T1 | T2 |  |  |
+| SL RF Channel number |  |  | 2 |  | 2 |  |  |  |
+| SL DRX |  |  | OFF |  | OFF |  |  |  |
+| networkControlledSyncTx |  |  | ON |  | ON |  |  |  |
+| inCoverage (in MIB-SL) |  |  | TRUE |  | TRUE |  |  |  |
+| SL pool configuration | SL_conf1 |  | dedicated resource pool if supported by UE1, otherwise shared |  |  |  |  |  |
+|  | SL_conf2 |  |  |  |  |  |  |  |
+|  | SL_conf3 |  |  |  |  |  |  |  |
+| SL-PRS configuration | SL_conf1 |  | N/A | SL PRS.1.3 FR1 | N/A |  | SL PRS.1.4 FR1 | As specified in table A.3.21A.2.1-1 |
+|  | SL_conf2 |  |  | SL PRS.1.1 FR1 |  |  | SL PRS.1.2 FR1 |  |
+|  | SL_conf3 |  |  | SL PRS.1.3 FR1 |  |  | SL PRS.1.4 FR1 |  |
+| PSCCH RMC (defined in A3.21.3) |  |  | CC.1A HD | CC.1A HD | CC.1A HD |  | CC.1A HD |  |
+| PSSCH RMC (defined in A.3.21.3) |  |  | CD.1A HD | CD.1A HD | CD.1A HD |  | CD.1A HD |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2, 4 | SL conf1 | dBm/SCS | -94 |  |  |  |  |  |
+|  | SL conf2, 3 |  | -91 |  |  |  |  |  |
+| ![](media_svg/image2.svg) [公式≈: ^{N}oc] Note 2, 5 | SL conf1 |  | -98 |  |  |  |  |  |
+|  | SL conf2, 3 |  | -95 |  |  |  |  |  |
+| SL-PRS ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 4 |  | dB | -Infinity | 0 | -Infinity |  | -3 |  |
+| PSCCH ![](media_svg/image12.svg) [公式≈: ^{E}^{ˆ}s^{/}^{N}oc] Note 5 |  | dB | N/A | 4 | N/A |  | 1 |  |
+| Io Note 3 | SL_conf1 | dBm/9.36MHz | N/A | -65.15 | N/A |  | -65.57 |  |
+|  | SL_conf2 | dBm/8.64MHz |  | -68.44 |  |  | -68.89 |  |
+|  | SL_conf3 | dBm/18.36MHz |  | -65.21 |  |  | -65.65 |  |
+| SL PRS-RSRP Note3, 4 | SL conf1 | dBm/SCS | -Infinity | -94 | -Infinity |  | -97 |  |
+|  | SL conf2, 3 |  | -Infinity | -91 | -Infinity |  | -94 |  |
+| PSCCH RP Note3, 5 | SL conf1 |  | -Infinity | -94 | -Infinity |  | -97 |  |
+|  | SL conf2, 3 |  | -Infinity | -91 | -Infinity |  | -94 |  |
+| SL-PRS $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 4 |  | dB | N/A | 0 | N/A |  | -3 |  |
+| PSCCH $\frac {\hat  {E}_{s}}{I_{ot}}$ Note 5 |  | dB | N/A | 4 | N/A |  | 1 |  |
+| Propagation Condition |  |  | AWGN |  |  |  |  |  |
+| NOTE 1: Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for ![](media_svg/image2.svg) [公式≈: ^{N}oc] to be fulfilled.NOTE 2: SL PRS-RSRP, PSCCH Received Power (RP) and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io level is based on the allocated PRBs for SL PRS symbols. NOTE 3: The UE is only required to be tested in one of the supported test configurations. NOTE 4:  In symbols containing SL-PRS.NOTE 5:  In symbols containing PSCCH. |  |  |  |  |  |  |  |  |
+
+##### A.9A.1.2.2.2 Test Requirements
+
+The SL Rx-Tx time difference measurement fulfils the UE Rx-Tx measurement accuracy requirements specified in clause 10.4A.4.2 for both anchor UE 1 and anchor UE 2.
+
+#### A.9A.1.2.3 NR SL PRS-RSRP measurement accuracy test case in FR1 SA
+
+##### A.9A.1.2.3.1 Test Purpose and Environment
+
+The purpose of the test is to verify that the SL PRS PRS-RSRP measurement accuracy meets the requirements specified in clause 10.4A.3.2 in an environment with AWGN propagation conditions in FR1 in standalone NR scenario, with additionally configured single frequency layer for SL positioning.
+
+The test environment and configurations refer to A.9A.1.2.1. During the test, both SL RSTD and SL PRS-RSRP measurements are requested by LMF.
+
+##### A.9A.1.2.3.2 Test Requirements
+
+In each test, the PRS-RSRP measurement accuracies shall fulfil the accuracy requirement defined in clause 10.4A.3.2.
+
+#### A.9A.1.2.4 NR SL PRS-RSRPP measurement accuracy test case in FR1 SA
+
+##### A.9A.1.2.4.1 Test Purpose and Environment
+
+The purpose of the test is to verify that the SL PRS PRS-RSRPP measurement accuracy meets the requirements specified in clause 10.4A.5.2 in an environment with two-tap propagation conditions in FR1 in standalone NR scenario, with additionally configured single frequency layer for SL positioning.
+
+The test environment and configurations refer to A.9A.1.2.2, except that the propagation shall be two-tap channel. During the test, both SL Rx-Tx and SL PRS-RSRPP measurements are requested by LMF.
+
+##### A.9A.1.2.4.2 Test Requirements
+
+In each test, the PRS-RSRPP measurement accuracies shall fulfil the accuracy requirement defined in clause 10.4A.5.2.

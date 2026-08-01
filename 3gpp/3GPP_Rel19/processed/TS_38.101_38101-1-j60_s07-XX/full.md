@@ -1,0 +1,8844 @@
+# 7 Receiver characteristics
+
+## 7.1 General
+
+Unless otherwise stated the receiver characteristics are specified at the antenna connector(s) of the UE. For UE(s) with an integral antenna only, a reference antenna(s) with a gain of 0 dBi is assumed for each antenna port(s). UE with an integral antenna(s) may be taken into account by converting these power levels into field strength requirements, assuming a 0 dBi gain antenna. For UEs with more than one receiver antenna connector, identical interfering signals shall be applied to each receiver antenna port if more than one of these is used (diversity).
+
+The levels of the test signal applied to each of the antenna connectors shall be as defined in the respective clauses below.
+
+The applicability of receiver requirements for Band n90 is in accordance with that for Band n41; a UE supporting Band n90 shall meet the minimum requirements for Band n41.
+
+With the exception of clause 7.3, the requirements shall be verified with the network signalling value NS_01 configured (Table 6.2.3-1).
+
+All the parameters in clause 7 are defined using the UL reference measurement channels specified in Annex A.2.2, the DL reference measurement channels specified in Annex A.3.2 and using the set-up specified in Annex C.3.1.
+
+The minimum requirements specified in clauses 7.5, 7.6, 7.7 and 7.8 for NR band n48 refer to the minimum requirements for NR bands < 2.7 GHz.
+
+For the additional requirements for intra-band non-contiguous carrier aggregation of two or more sub-blocks, an in-gap test refers to the case when the interfering signal is located at a negative offset with respect to the assigned lowest channel frequency of the highest sub-block and located at a positive offset with respect to the assigned highest channel frequency of the lowest sub-block.
+
+For the additional requirements for intra-band non-contiguous carrier aggregation of two or more sub-blocks, an out-of-gap test refers to the case when the interfering signal(s) is (are) located at a positive offset with respect to the assigned channel frequency of the highest carrier frequency, or located at a negative offset with respect to the assigned channel frequency of the lowest carrier frequency.
+
+For the additional requirements for intra-band non-contiguous carrier aggregation of two or more sub-blocks with channel bandwidth larger than or equal to 5 MHz, the existing adjacent channel selectivity requirements, in-band blocking requirements (for each case), and narrow band blocking requirements apply for in-gap tests only if the corresponding interferer frequency offsets with respect to the two measured carriers satisfy the following condition in relation to the sub-block gap size Wgap for at least one of these carriers j = 1,2, so that the interferer frequency position does not change the nature of the core requirement tested:
+
+Wgap ≥ 2∙|FInterferer (offset),j|  – BWChannel(j)
+
+where FInterferer (offset),j for a sub-block with a single component carrier is the interferer frequency offset with respect to carrier j as specified in clause 7.5, clause 7.6.2 and clause 7.6.4 for the respective requirement and BWChannel(j) the channel bandwidth of carrier j. FInterferer (offset),j for a sub-block with two or more contiguous component carriers is the interference frequency offset with respect to the carrier adjacent to the gap is specified in clause 7.5A, 7.6A.2 and 7.6A.3. The interferer frequency offsets for adjacent channel selectivity, each in-band blocking case and narrow- band blocking shall be tested separately with a single in-gap interferer at a time.
+
+For the additional requirements for operation with shared spectrum channel access, the receiver requirements apply under the assumption that all 20 MHz sub-bands and all RB’s of each sub-band within the downlink channel are allocated with intra-cell guard bands configured to zero.
+
+Unless otherwise stated, the receiver requirements of inter-band UL CA are applicable to UE with one Tx antenna connector in each of the two bands, or UE with one Tx antenna connector in one band and two Tx antenna connectors in the other band.
+
+Unless otherwise stated, the receiver requirements of single carrier or CA operation are applicable to UE with one Tx antenna connector or multiple Tx antenna connectors with UL MIMO or Tx diversity operation in the UL band(s).
+
+## 7.1A General
+
+The minimum requirements for band combinations including Band n41 also apply for the corresponding band combinations with Band n90 replacing Band n41 but with otherwise identical parameters. For brevity the said band combinations with Band n90 are not listed in the tables below but are covered by this specification.
+
+The minium requirements specified in clauses 7.5A, 7.6A, 7.7A and 7.8A for NR band n48 refer to the minimum requirements for NR bands < 2.7 GHz.
+
+## 7.1F General
+
+For wideband operations, the minimum requirements for the receiver characteristics are specified when zero width intra-cell guardbands are configured and with all RB set(s) within the channel scheduled and with all RB sets available for DL transmissions according to the channel access procedures in [14].
+
+Unless stated otherwise, when a clause is not present for shared spectrum channel access, the general requirements and the additional clause requirements (suffices A,B,D) in clause 7 apply.
+
+## 7.1G (Reserved)
+
+## 7.1H (Reserved)
+
+## 7.1I General
+
+For a (e)Redcap UE the requirements in Section 7 shall be verified with the channel bandwidth up to 20MHz and REFSENS specified in clause 7.3I.
+
+## 7.1J General for ATG
+
+Unless otherwise stated, the receiver characteristics are specified at the antenna connector(s) of the ATG UE with one or multiple omni-directional antenna(s) or at the transceiver array boundary (TAB) connectors of the ATG UE with the antenna array. The definition about transceiver array boundary (TAB) is specified in clause 4.3.2 of TS 38.104 [16].
+
+For ATG UE with multiple omni-directional antennas not indicating the capability antennaArrayType-r18, the receiver RF requirements are defined on top of each antenna connector.
+
+For ATG UE with antenna array indicating the capability antennaArrayType-r18, the receiver RF requirements are defined on top of each TAB connector.
+
+## 7.1K (Reserved)
+
+## 7.1L (Reserved)
+
+## 7.1M General for LP-WUS/WUR
+
+The minimum requirements are specified assuming only one receiver for the wake-up signal. The criterion for verifying all receiver core RF requirements shall be MDR of the LP-WUS, which shall not exceed 1% with the LP-WUS parameters given in Annex A.3M.
+
+## 7.2 Diversity characteristics
+
+The UE is required to be equipped with a minimum of two Rx antenna ports in all operating bands except for the bands n7, n38, n41, n48, n77, n78, n79, n104 where the UE is required to be equipped with a minimum of four Rx antenna ports. This requirement applies when the band is used as a standalone band or as part of a band combination.
+
+Unless otherwise stated, the following applicability rules apply,
+
+- For the single carrier REFSENS requirements in Clause 7:
+
+- the UE shall be verified with two Rx antenna ports in all supported frequency bands,
+
+- additional requirements for four Rx ports shall be verified in operating bands where the UE is equipped with four Rx antenna ports, and
+
+- additional requirements for four and six Rx ports shall be verified in operating bands where the UE is equipped with six Rx antenna ports, and
+
+- additional requirements for four, six and eight Rx ports shall be verified in operating bands where the UE is equipped with eight Rx antenna ports.
+
+- For Rx requirements other than single carrier REFSENS in Clause 7:
+
+- the UE shall be verified with four Rx antenna ports and skip two Rx antenna ports requirements in operating bands where the UE is equipped with four Rx antenna ports,
+
+- the UE shall be verified with six Rx antenna ports and skip both two and four Rx antenna ports requirements in operating bands where the UE is equipped with six Rx antenna ports,
+
+- the UE shall be verified with eight Rx antenna ports and skip two, four and six Rx antenna ports requirements in operating bands where the UE is equipped with eight Rx antenna ports unless the UE does not support eight Rx ports for band(s) in a band combination in which case those band(s) shall be verified with four Rx antenna ports,
+
+- otherwise, the UE shall be verified with two Rx antenna ports.
+
+- The above rules apply for all clauses except for clause 7.9.
+
+A (e)Redcap UE is required to be equipped with a minimum of single Rx antenna port and maximum of two Rx antenna ports. Clause 7 requirements for four Rx antenna ports do not apply to a (e)RedCap UE.
+
+If a UE indicates intraBandNR-CA-non-collocated-r18 or intraBandNR-CA-non-collocated-r19, both Rx power imbalance requirements as specified in clause 7.10A and Rx requirements in clauses 7.3 – 7.9 shall be verified.
+
+## 7.2J Diversity characteristics for ATG
+
+The ATG UE is required to be equipped with a minimum of two Rx antenna ports in all operating bands. ATG UE is required optionally to be equipped with four Rx antenna ports.
+
+## 7.2M Diversity characteristics for WUS/WUR
+
+There is no diversity gain for LP-WUS/WUR.
+
+## 7.3 Reference sensitivity
+
+### 7.3.1 General
+
+The reference sensitivity power level REFSENS is the minimum mean power applied to each one of the UE antenna ports for all UE categories, at which the throughput shall meet or exceed the requirements for the specified reference measurement channel.
+
+In later clauses of Clause 7 where the value of REFSENS is used as a reference to set the corresponding requirement:
+
+- when the UE is verified with 2 Rx antenna ports, it shall be verified against those requirements by applying the REFSENS value in Table 7.3.2-1a, Table 7.3.2-1b and Table 7.3.2-1c or Table 7.3.2-1d with 2 Rx antenna ports tested;
+
+- when the UE is verified with 4 Rx antenna ports, it shall be verified against those requirements by applying the resulting REFSENS value derived from the requirement in Table 7.3.2-2 with 4 Rx antenna ports tested.
+
+- when the UE is verified with 6 Rx antenna ports, it shall be verified against those requirements by applying the resulting REFSENS value derived from the requirement in Table 7.3.2-2aa with 6 Rx antenna ports tested.
+
+- when the UE is verified with 8 Rx antenna ports, it shall be verified against those requirements by applying the resulting REFSENS value derived from the requirement in Table 7.3.2-2a with 8 Rx antenna ports tested.
+
+### 7.3.2 Reference sensitivity power level
+
+The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2.2, A3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-1c, Table 7.3.2-1d , Table 7.3.2-2, and Table 7.3.2-2a and Table 7.3.2-2aa.
+
+
+Table 7.3.2-1a: Two antenna port reference sensitivity QPSK PREFSENS for FDD bands
+
+| Operating band / SCS / Channel bandwidth |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Operating Band | SCS kHz | 3MHz (dBm) | 5MHz (dBm) | 7MHz(dBm) | 10MHz (dBm) | 15MHz (dBm) | 20MHz (dBm) | 25MHz (dBm) | 30 MHz (dBm) | 35 MHz (dBm) | 40MHz (dBm) | 45 MHz (dBm) | 50MHz (dBm) |
+| n1 | 15 |  | -100.0 |  | -96.8 | -95.0 | -93.8 | -92.7 | -91.9 |  | -90.6 | -90.1 | -89.6 |
+|  | 30 |  |  |  | -97.1 | -95.1 | -94.0 | -92.8 | -92.0 |  | -90.7 | -90.2 | -89.7 |
+|  | 60 |  |  |  | -97.5 | -95.4 | -94.2 | -93.0 | -92.1 |  | -90.9 | -90.3 | -89.7 |
+| n2 | 15 |  | -98 |  | -94.8 | -93 | -91.8 | -90.7 | -84.111 | -83.611 | -81.511 |  |  |
+|  | 30 |  |  |  | -95.1 | -93.1 | -92 | -90.8 | -84.211 | -83.711 | -81.611 |  |  |
+|  | 60 |  |  |  | -95.5 | -93.4 | -92.2 | -90.9 | -84.311 | -83.811 | -81.711 |  |  |
+| n3 | 15 |  | -97.0 |  | -93.8 | -92.0 | -90.8 | -89.7 | -88.9 | -86.2 | -82.311 | -81.311 | -79.711 |
+|  | 30 |  |  |  | -94.1 | -92.1 | -91.0 | -89.8 | -89.0 | -86.3 | -82.411 | -81.411 | -79.811 |
+|  | 60 |  |  |  | -94.5 | -92.4 | -91.2 | -90.0 | -89.1 | -86.4 | -82.611 | -81.511 | -79.911 |
+| n5 | 15 | -100.2 | -98.0 | -96.5 | -94.8 | -93.0 | -86.811 | -84.811 |  |  |  |  |  |
+|  | 30 |  |  |  | -95.1 | -93.1 | -88.611 | -84.911 |  |  |  |  |  |
+| n71 | 15 |  | -98.0 |  | -94.8 | -93.0 | -91.8 | -90.7 | -89.9 | -89.2 | -88.6 |  | -81.511 |
+|  | 30 |  |  |  | -95.1 | -93.1 | -92.0 | -90.8 | -90.0 | -89.3 | -88.7 |  | -81.511 |
+|  | 60 |  |  |  | -95.5 | -93.4 | -92.2 | -91.0 | -90.1 | -89.4 | -88.9 |  | -81.511 |
+| n8 | 15 |  | -97.0 |  | -93.8 | -91.411 | -85.811 | -83.611 | -81.311 | -78.411 |  |  |  |
+|  | 30 |  |  |  | -94.1 | -91.711 | -87.211 | -84.711 | -81.411 | -78.511 |  |  |  |
+| n12 | 15 | -99.2 | -97.0 |  | -93.8 | -84.011 |  |  |  |  |  |  |  |
+|  | 30 |  |  |  | -94.1 | -84.111 |  |  |  |  |  |  |  |
+| n13 | 15 |  | -97.0 |  | -93.8 |  |  |  |  |  |  |  |  |
+|  | 30 |  |  |  | -94.1 |  |  |  |  |  |  |  |  |
+| n14 | 15 |  | -97.0 |  | -93.8 |  |  |  |  |  |  |  |  |
+|  | 30 |  |  |  | -94.1 |  |  |  |  |  |  |  |  |
+| n18 | 15 |  | -100.0 |  | -96.8 | -95.0 |  |  |  |  |  |  |  |
+|  | 30 |  |  |  | -97.1 | -95.1 |  |  |  |  |  |  |  |
+| n20 | 15 |  | -97.0 |  | -93.8 | -91.011 | -89.811 |  |  |  |  |  |  |
+|  | 30 |  |  |  | -94.1 | -91.111 | -90.011 |  |  |  |  |  |  |
+| n24 | 15 |  | -100.0 |  | -96.8 |  |  |  |  |  |  |  |  |
+|  | 30 |  |  |  | -97.1 |  |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | -97.5 |  |  |  |  |  |  |  |  |
+| n25 | 15 |  | -96.5 |  | -93.3 | -91.5 | -90.3 | -89.3 | -82.211 | -81.711 | -79.511 | -77.611 |  |
+|  | 30 |  |  |  | -93.6 | -91.6 | -90.5 | -89.4 | -82.311 | -81.811 | -79.611 | -77.711 |  |
+|  | 60 |  |  |  | -94.0 | -91.9 | -90.7 | -89.6 | -82.411 | -81.911 | -79.711 | -77.811 |  |
+| n26 | 15 | -99.7 | -97.56 | -96.06 | -94.56 | -92.76 | -87.611 | -84.511 | -81.711 |  |  |  |  |
+|  | 30 |  |  |  | -94.86 | -92.76 | -87.711 | -84.611 | -81.811 |  |  |  |  |
+| n28 | 15 | -100.2 | -98.5 |  | -95.5 | -93.5 | -90.811 | -84.211 | -78.511 |  | -66.311 |  |  |
+|  | 30 |  |  |  | -95.6 | -93.6 | -91.011 | -84.211 | -78.611 |  | -66.311 |  |  |
+| n30 | 15 |  | -99.0 |  | -95.8 |  |  |  |  |  |  |  |  |
+|  | 30 |  |  |  | -96.1 |  |  |  |  |  |  |  |  |
+| n31 | 15 | -95.7 | -93.511 |  |  |  |  |  |  |  |  |  |  |
+| n65 | 15 |  | -99.5 |  | -96.3 | -94.5 | -93.3 |  |  |  |  |  | -89.2 |
+|  | 30 |  |  |  | -96.6 | -94.6 | -93.5 |  |  |  |  |  | -89.3 |
+|  | 60 |  |  |  | -97.0 | -94.9 | -93.7 |  |  |  |  |  | -89.4 |
+| n66 | 15 |  | -99.5 |  | -96.3 | -94.5 | -93.3 | -92.2 | -91.4 | -90.7 | -90.1 | -89.6 |  |
+|  | 30 |  |  |  | -96.6 | -94.6 | -93.5 | -92.3 | -91.5 | -90.8 | -90.2 | -89.7 |  |
+|  | 60 |  |  |  | -97.0 | -94.9 | -93.7 | -92.5 | -91.6 | -90.9 | -90.4 | -89.8 |  |
+| n68 | 15 |  | -98.5 |  | -95.5 | -93.5 |  |  |  |  |  |  |  |
+|  | 30 |  |  |  | -95.6 | -93.6 |  |  |  |  |  |  |  |
+|  | 15 |  | -100.0 |  | -96.8 | -95.0 | -93.8 | -92.7 |  |  |  |  |  |
+| n70 | 30 |  |  |  | -97.1 | -95.1 | -94.0 | -92.8 |  |  |  |  |  |
+|  | 60 |  |  |  | -97.5 | -95.4 | -94.2 | -93.0 |  |  |  |  |  |
+| n71 | 15 |  | -97.2 |  | -94.0 | -91.6 | -86.011 | -74.811 | -82.59,11-70.611, 12-67.110,11 | -80.79,11-68.011,12-64.010,11 |  |  |  |
+|  | 30 |  |  |  | -94.3 | -91.9 | -87.411 | -74.911 | -82.69,11-70.611, 12-67.210,11 | -80.89,11-68.011,12-64.110,11 |  |  |  |
+| n72 | 15 | -95.7 | -93.511 |  |  |  |  |  |  |  |  |  |  |
+| n74 | 15 |  | -99.53 |  | -96.33 | -94.53 | -89.33,11 |  |  |  |  |  |  |
+|  | 30 |  |  |  | -96.63 | -94.63 | -89.53,11 |  |  |  |  |  |  |
+|  | 60 |  |  |  | -97.03 | -94.93 | -89.63,11 |  |  |  |  |  |  |
+| n85 | 15 | -99.2 | -97.0 |  | -93.8 | -84.011 |  |  |  |  |  |  |  |
+|  | 30 |  |  |  | -94.1 | -84.111 |  |  |  |  |  |  |  |
+| n87 | 15 | -95.7 | -93.511 |  |  |  |  |  |  |  |  |  |  |
+| n88 | 15 | -95.7 | -93.511 |  |  |  |  |  |  |  |  |  |  |
+| n100 | 15 | -102.2 | -100 |  |  |  |  |  |  |  |  |  |  |
+| n105 | 15 |  | -97.28 |  | -94.0 | -91.6 | -86.911 | -85.111 | -83.811 | -82.511 |  |  |  |
+|  | 30 |  |  |  | -94.3 | -91.9 | -87.911 | -85.511 | -84.311 | -82.611 |  |  |  |
+| n106 | 15 | -99.2 |  |  |  |  |  |  |  |  |  |  |  |
+| n110 | 15 | -102.2 |  |  |  |  |  |  |  |  |  |  |  |
+| NOTE 1: Four Rx antenna ports shall be the baseline for this operating band except for two Rx vehicular UE and two Rx antenna port XR UEs indicating UE capability supportOf2RxXR-r18. Four Rx antenna ports for (e)RedCap UE is not supported for this operating band.NOTE 2: The transmitter shall be set to PUMAX as defined in clause 6.2.4NOTE 3: The requirement is modified by -0.5 dB when the assigned NR channel bandwidth is confined within 1475.9 - 1510.9 MHz.NOTE 4: VoidNOTE 5: VoidNOTE 6: Values are modified by -0.5dB when carrier channel BW is between 865MHz and 894MHz.NOTE 7: Void.NOTE 8: DL channels overlapping the 612-617MHz range have 0.5dB added to the REFSENSNOTE 9: Applies to UEs that support a maximum uplink BW of 20 MHz in this band.NOTE 10: Applies to UEs that support optional symmetric UL/DL for this BW.NOTE 11: The requirement shall be met with uplink transmission bandwidth equal to but not less than that specified in Table 7.3.2-3.NOTE 12: Applies to UEs that support a maximum uplink BW of 25 MHz in this band. |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+Table 7.3.2-1b: Two antenna port reference sensitivity QPSK PREFSENS for TDD, SDL and FDD with variable duplex operation bands
+
+| Operating band / SCS / Channel bandwidth / REFSENS |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Operating band | SCSkHz | Channel bandwidth (MHz) | REFSENS (dBm)8 | Duplex Mode |
+| n297 | 15 | 5,10 | -97 + 10log10(NRB/25) | SDL |
+|  | 30 | 10 | -94.1 + 10log10(NRB/24) |  |
+| n34 | 15 | 5, 10, 15 | -100 + 10log10(NRB/25) | TDD |
+|  | 30 | 10, 15 | -97.1 + 10log10(NRB/24) |  |
+|  | 60 | 10, 15 | -97.5 + 10log10(NRB/11) |  |
+| n381 | 15 | 5, 10, 15, 20, 25, 30, 40 | -100 + 10log10(NRB/25) | TDD |
+|  | 30 | 10, 15, 20, 25, 30, 40 | -97.1 + 10log10(NRB/24) |  |
+|  | 60 | 10, 15, 20, 25, 30, 40 | -97.5 + 10log10(NRB/11) |  |
+| n39 | 15 | 5, 10, 15, 20, 25, 30, 35, 40 | -100 + 10log10(NRB/25) | TDD |
+|  | 30 | 10, 15, 20, 25, 30, 35, 40 | -97.1 + 10log10(NRB/24) |  |
+|  | 60 | 10, 15, 20, 25, 30, 35, 40 | -97.5 + 10log10(NRB/11) |  |
+| n40 | 15 | 5, 10, 15, 20, 25, 30, 40, 50 | -100 + 10log10(NRB/25) | TDD |
+|  | 30 | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | -97.1 + 10log10(NRB/24) |  |
+|  | 60 | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | -97.5 + 10log10(NRB/11) |  |
+| n411, n901 | 15 | 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 | -94.8 + 10log10(NRB/52) | TDD |
+|  | 30 | 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 | -95.1 + 10log10(NRB/24) |  |
+|  | 60 | 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 | -95.5 + 10log10(NRB/11) |  |
+| n481 | 15 | 5, 10, 15, 20, 30, 40, 50 | -99 + 10log10(NRB/25) | TDD |
+|  | 30 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | -96.1 + 10log10(NRB/24) |  |
+|  | 60 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | -96.5 + 10log10(NRB/11) |  |
+| n50 | 15 | 5, 10, 15, 20, 30, 40, 50 | -100 + 10log10(NRB/25) | TDD |
+|  | 30 | 10, 15, 20, 30, 40, 50, 60, 80 | -97.1 + 10log10(NRB/24) |  |
+|  | 60 | 10, 15, 20, 30, 40, 50, 60, 80 | -97.5 + 10log10(NRB/11) |  |
+| n51 | 15 | 5 | -100 | TDD |
+| n53 | 15 | 5, 10 | -100 + 10log10(NRB/25) | TDD |
+|  | 30 | 10 | -97.1 |  |
+|  | 60 | 10 | -97.5 |  |
+| n54 | 15 | 5 | -100 | TDD |
+| n677 | 15 | 5, 10, 15, 20 | -100 + 10log10(NRB/25) | SDL |
+|  | 30 | 10, 15, 20 | -97.1 + 10log10(NRB/24) |  |
+| n757 | 15 | 5,10,15,20,25,30,40,50 | -100 + 10log10(NRB/25) | SDL |
+|  | 30 | 10,15,20,25,30,40,50 | -97.1 + 10log10(NRB/24) |  |
+|  | 60 | 10,15,20,25,30,40,50 | -97.5 + 10log10(NRB/11) |  |
+| n767 | 15 | 5 | -95.3 + 10log10(NRB/52) | SDL |
+| n771,4 | 15 | 10, 15, 20, 25, 30, 40, 50 | -95.3 + 10log10(NRB/52) | TDD |
+|  | 30 | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | -95.6 + 10log10(NRB/24) |  |
+|  | 60 | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | -96.0 + 10log10(NRB/11) |  |
+| n781 | 15 | 10, 15, 20, 25, 30, 40, 50 | -95.8 + 10log10(NRB/52) | TDD |
+|  | 30 | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | -96.1 + 10log10(NRB/24) |  |
+|  | 60 | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | -96.5 + 10log10(NRB/11) |  |
+| n791 | 15 | 10, 20, 30, 40, 50 | -95.8 + 10log10(NRB/52) | TDD |
+|  | 30 | 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 | -96.1 + 10log10(NRB/24) |  |
+|  | 60 | 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 | -96.5 + 10log10(NRB/11) |  |
+| n91 | 15 | 5 | -100 | FDD |
+| n92 | 15 | 5,10,15,20 | -100 + 10log10(NRB/25) | FDD |
+|  | 30 | 10,15,20 | -97.1 + 10log10(NRB/24) |  |
+| n93 | 15 | 5 | -100 | FDD |
+| n94 | 15 | 5,10,15,20 | -100 + 10log10(NRB/25) | FDD |
+|  | 30 | 10,15,20 | -97.1 + 10log10(NRB/24) |  |
+| n101 | 15 | 5, 10 | -100 + 10log10(NRB/25) | TDD |
+|  | 30 | 10 | -97.1 + 10log10(NRB/24) |  |
+| n1041,10 | 15 | 20, 30, 40, 50 | -90.7 + 10log10(NRB/106) | TDD |
+|  | 30 | 20, 30, 40, 50, 60, 70, 80, 90, 100 | -90.8 + 10log10(NRB/51) |  |
+|  | 60 | 20, 30, 40, 50, 60, 70, 80, 90, 100 | -91.1 + 10log10(NRB/24) |  |
+| n10911 | 15 | 5,10,15,20,25,30,40,50 | -100 + 10log10(NRB/25) | FDD |
+|  | 30 | 10,15,20,25,30,40,50 | -97.1 + 10log10(NRB/24) |  |
+| NOTE 1: Four Rx antenna ports shall be the baseline for this operating band except for two Rx vehicular UE and two Rx antenna port XR UEs indicating UE capability supportOf2RxXR-r18. Four Rx antenna ports for (e)RedCap UE is not supported for this operating band.NOTE 2: The transmitter shall be set to PUMAX as defined in clause 6.2.4.NOTE 3: VoidNOTE 4: The requirement is modified by -0.5 dB when the assigned UE channel bandwidth is confined within 3300 - 3800 MHz.NOTE 5: For these bandwidths, the minimum requirements are restricted to operation when carrier is configured as a downlink carrier part of CA configuration.NOTE 6: VoidNOTE 7: For SDL bands, the reference sensitivity requirements shall be verified by inter-band CA combinations with SDL band, which are supported by UE.NOTE 8: The REFSENS value is rounded to the nearest number down to one decimal point. “NRB” in REFSENS formula is the maximum transmission bandwidth configuration as defined in Table 5.3.2-1.NOTE 9: Void.NOTE 10: A UE may implement two RX antenna ports for band n104 when conditions are met. The exact conditions are FFS.NOTE 11: Applies for DL channels for which channels edges are > 15 MHz away from 2xFUL at 15 kHz SCS and > 30 MHz away from 2xFUL at 30 kHz SCS. In case of UL second harmonic direct hit, the value is modified to -71.9 dBm for all channel bandwidths. |  |  |  |  |
+
+For power class 2 UEs, certain degradation of the reference sensitivity in Table 7.3.2-1a is allowed. The maximum amount of degradation is specified in Table 7.3.2-1c, and in Table 7.3.2-1d for a UE that indicates txDiversity-r16 or txDiversity2Tx-r18 [15].
+
+Table 7.3.2-1c: Reference Sensitivity Degradation from PC3 to PC2 for FDD bands for UE not supporting Tx Diversity
+
+| Operating Band | 3MHz (dB) | 5MHz (dB) | 7MHz(dB) | 10MHz (dB) | 15MHz (dB) | 20MHz (dB) | 25MHz (dB) | 30 MHz (dB) | 35 MHz (dB) | 40MHz (dB) | 45 MHz (dB) | 50MHz (dB) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| n1 |  | 0 |  | 0 | 0 | 0 | 0 | 0 | - | 0 | 0 | 0 |
+| n2 |  | 0.8 |  | 0.9 | 1.1 | 1.2 | 1.3 | 2.74 | 2.84 | 3.54 |  |  |
+| n3 |  | 0.5 |  | 0.5 | 0.5 | 0.5 | 0.6 | 0.8 | 1.1 | 1.54 | 2.34 | 2.84 |
+| n5 | 0.5 | 0.5 | 0.6 | 0.7 | 0.8 | 1.54 | 2.64 |  |  |  |  |  |
+| n7 |  | 0.5 |  | 0.5 | 0.5 | 0.5 | 0.5 | 0.5 | 0.5 | 0.5 |  | 2.04 |
+| n8 |  | 0.5 |  | 0.7 | 0.84 | 2.34 | 2.84 | 3.24 | 3.14 |  |  |  |
+| n13 |  | 0.8 |  | 0.9 |  |  |  |  |  |  |  |  |
+| n14 |  | 0.6 |  | 0.8 |  |  |  |  |  |  |  |  |
+| n25 |  | 0.8 |  | 0.8 | 0.9 | 1.1 | 1.3 | 2.74 | 2.84 | 3.54 | 3.74 |  |
+| n26 | 0.5 | 0.5 | 0.6 | 0.7 | 0.8 | 2.24 | 2.64 | 2.84 |  |  |  |  |
+| n28 | 0.6 | 0.6 |  | 0.7 | 0.8 | 1.34 | 2.44 | 2.94 |  | 34 |  |  |
+| n66 |  | 0 |  | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| n71 |  | 0.5 |  | 0.9 | 0.9 | 2.24 | 2.54 | 2.52,42.43,4 | 2.92,43.13,4 |  |  |  |
+| n70 |  | 0 |  | 0 | 0 | 0 | 0 |  |  |  |  |  |
+| n85 | 0.6 | 0.6 |  | 1.0 | 2.64 |  |  |  |  |  |  |  |
+| NOTE 1: The transmitter shall be set to PUMAX as defined in clause 6.2.4NOTE 2: Applies to UEs that support a maximum uplink BW of 20 MHz and to UEs that support a maximum uplink BW of 25MHz in this band.NOTE 3: Applies to UEs that support optional symmetric UL/DL for this BW.NOTE 4: The requirement shall be met with uplink transmission bandwidth equal to but not less than that specified in Table 7.3.2-3. |  |  |  |  |  |  |  |  |  |  |  |  |
+
+Table 7.3.2-1d: Reference Sensitivity Degradation from PC3 to PC2 for
+FDD bands for UE supporting Tx Diversity
+
+| Operating Band | 3MHz (dB) | 5MHz (dB) | 7MHz(dB) | 10MHz (dB) | 15MHz (dB) | 20MHz (dB) | 25MHz (dB) | 30 MHz (dB) | 35 MHz (dB) | 40MHz (dB) | 45 MHz (dB) | 50MHz (dB) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| n1 |  | 0 |  | 0 | 0 | 0 | 0 | 0 | - | 0 | 0 | 0 |
+| n2 |  | 1.2 |  | 1.2 | 1.3 | 1.2 | 1.2 | 5.84 | 6.04 | 6.54 |  |  |
+| n3 |  | 1.4 |  | 1.5 | 1.5 | 1.5 | 1.6 | 1.7 | 2.8 | 54 | 5.54 | 6.04 |
+| n5 | 1.1 | 1.1 | 1.1 | 1.2 | 1.4 | 4.54 | 6.14 |  |  |  |  |  |
+| n7 |  | 0.9 |  | 1.0 | 1.0 | 1.0 | 1.1 | 1.1 | 1.1 | 1.1 |  | 5.34 |
+| n8 |  | 1.3 |  | 1.4 | 2.14 | 5.84 | 6.14 | 6.54 | 7.04 |  |  |  |
+| n13 |  | 1.2 |  | 1.3 |  |  |  |  |  |  |  |  |
+| n14 |  | 1.1 |  | 1.3 |  |  |  |  |  |  |  |  |
+| n25 |  | 1.5 |  | 1.5 | 1.6 | 1.6 | 1.7 | 6.04 | 6.24 | 6.74 | 7.14 |  |
+| n26 | 1.1 | 1.1 | 1.1 | 1.2 | 1.4 | 5.24 | 6.14 | 6.54 |  |  |  |  |
+| n28 | 1.1 | 1.1 |  | 1.1 | 1.3 | 3.04 | 6.64 | 7.94 |  | 8.24 |  |  |
+| n66 |  | 0 |  | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |
+| n71 |  | 1.1 |  | 1.1 | 1.7 | 5.54 | 6.94 | 6.22,47.23,4 | 6.52,47.33,4 |  |  |  |
+| n70 |  | 0 |  | 0 | 0 | 0 | 0 |  |  |  |  |  |
+| n85 | 1.2 | 1.2 |  | 1.4 | 6.44 |  |  |  |  |  |  |  |
+| NOTE 1: The transmitter shall be set to PUMAX as defined in clause 6.2G.4NOTE 2: Applies to UEs that support a maximum uplink BW of 20 MHz and to UEs that support a maximum uplink BW of 25MHz in this band.NOTE 3: Applies to UEs that support optional symmetric UL/DL for this BW.NOTE 4: The requirement shall be met with uplink transmission bandwidth equal to but not less than that specified in Table 7.3.2-3. |  |  |  |  |  |  |  |  |  |  |  |  |
+
+
+For UE(s) equipped with 4 Rx antenna ports, reference sensitivity for 2Rx antenna ports in Table 7.3.2-1a and in Table 7.3.2-1b shall be modified by the amount given in ΔRIB,4R in Table 7.3.2-2 for the applicable operating bands. For operating band frequency range ≤ 1 GHz, the 4Rx operation is primarily for FWA form factor, and when 4Rx operation is supported by handheld UE, ∆RIB,4R as indicated in Table 7.3.2-2 NOTE 2 is applied.
+
+Table 7.3.2-2: Four antenna port reference sensitivity allowance ΔRIB,4R
+
+| Operating band | ΔRIB,4R (dB) |
+| --- | --- |
+| n5, n8, n13, n26, n28, n71, n85, n105 | -2.71 |
+| n5, n8, n13, n20, n26, n28, n71, n85 | -2.42 |
+| n1, n2, n3, n7, n25, n30, n34, n38, n39, n40, n41, n66, n70 | -2.7 |
+| n48, n77, n78, n79, n104 | -2.2 |
+| NOTE 1: When 4 Rx operation is supported by FWA form factorNOTE 2: When 4Rx operation is supported by handheld UE. |  |
+
+For UE(s) equipped with 8 Rx antenna ports, reference sensitivity for 2Rx antenna ports in Table 7.3.2-1a and in Table 7.3.2-1b shall be modified by the amount given in ΔRIB,8R in Table 7.3.2-2a for the applicable operating bands.
+
+Table 7.3.2-2a: Eight antenna port reference sensitivity allowance ΔRIB,8R
+
+| Operating band | ΔRIB,8R (dB) |
+| --- | --- |
+| n1, n3, n7, n25, n66 | -4.5 |
+| n34, n39, n41 | -4.3 |
+| n77, n78, n79 | -4.0 |
+| NOTE 1: 8 Rx operation is targeted for FWA/CPE/Vehicle/Industrial devices form factor. |  |
+
+For UE(s) equipped with 6 Rx antenna ports, reference sensitivity for 2Rx antenna ports in Table 7.3.2-1a and in Table 7.3.2-1b shall be modified by the amount given in ΔRIB,6R in Table 7.3.2-2aa for the applicable operating bands.
+
+Table 7.3.2-2aa: Six antenna port reference sensitivity allowance ΔRIB,6R
+
+| Operating band | ΔRIB,6R (dB) |
+| --- | --- |
+| n41 | -3.41-3.72 |
+| n77, n78, n79, n104 | -3.01-3.32 |
+| NOTE 1: When 6 Rx operation is supported by handheld UE.NOTE 2: When 6 Rx operation is supported by FWA form factor. |  |
+
+For two Rx antenna port XR UE(s) indicating UE capability supportOf2RxXR-r18, reference sensitivity for two Rx antenna ports in Table 7.3.2-1a and in Table 7.3.2-1b shall be modified by the amount given in ΔRXR,2R in Table 7.3.2-2b for the applicable operating bands.
+
+Table 7.3.2-2b: Two antenna port XR UE reference sensitivity allowance ΔRXR,2R
+
+| Operating band | ΔRXR,2R (dB) |
+| --- | --- |
+| n7, n38, n41, n48, n77, n78, n79 | -1.0 |
+
+The reference receive sensitivity (REFSENS) requirement specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-1c, Table 7.3.2-1d, Table 7.3.2-2, Table 7.3.2-2a, Table 7.3.2-2aa and Table 7.3.2-2b shall be met with uplink transmission bandwidth less than or equal to that specified in Table 7.3.2-3 except for the channel bandwidths indicated with NOTE 11 in Table 7.3.2-1a, NOTE 4 in Table 7.3.2-1c, and NOTE 4 in Table 7.3.2-1d.
+
+Table 7.3.2-3: Uplink configuration for reference sensitivity
+
+| Operating band / SCS (kHz) / Channel bandwidth (MHz) / Duplex mode |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Operating Band | SCS | 3 | 5 | 7 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 60 | 70 | 80 | 90 | 100 | Duplex Mode |
+| n1 | 15 |  | 25 |  | 501 | 751 | 1001 | 1281 | 1281 |  | 1281 | 1281 | 1281 |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 24 | 361 | 501 | 641 | 641 |  | 641 | 641 | 641 |  |  |  |  |  |  |
+|  | 60 |  |  |  | 101 | 18 | 24 | 301 | 301 |  | 301 | 301 | 301 |  |  |  |  |  |  |
+| n2 | 15 |  | 25 |  | 501 | 501 | 501 | 501 | 481 | 401 | 401 |  |  |  |  |  |  |  | FDD |
+|  | 30 |  | 101 |  | 24 | 241 | 241 | 241 | 241 | 201 | 201 |  |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | 101 | 101 | 101 | 101 | 101 | 101 | 101 |  |  |  |  |  |  |  |  |
+| n3 | 15 |  | 25 |  | 501 | 501 | 501 | 501 | 501 | 501 | 501 | 501 | 501 |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 24 | 241 | 241 | 241 | 241 | 241 | 241 | 241 | 241 |  |  |  |  |  |  |
+|  | 60 |  |  |  | 101 | 101 | 101 | 101 | 101 | 101 | 101 | 101 | 101 |  |  |  |  |  |  |
+| n5 | 15 | 15 | 25 | 251 | 251 | 201 | 201 | Note 5 |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 121 | 101 | 101 | Note 5 |  |  |  |  |  |  |  |  |  |  |  |
+| n7 | 15 |  | 25 |  | 501 | 751 | 751 | 721 | 641 | 451 | 451 |  | 451 |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 24 | 361 | 361 | 361 | 321 | 201 | 201 |  | 201 |  |  |  |  |  |  |
+|  | 60 |  |  |  | 101 | 18 | 181 | 181 | 161 | 101 | 101 |  | 101 |  |  |  |  |  |  |
+| n8 | 15 |  | 25 |  | 251 | 201 | 201 | Note 5 | Note 5 | Note 5 |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 121 | 101 | 101 | Note 5 | Note 5 | Note 5 |  |  |  |  |  |  |  |  |  |
+| n12 | 15 | 15 | 201 |  | 201 | 201 |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 101 | 101 |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n13 | 15 |  | 201 |  | 201 |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 101 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n14 | 15 |  | 201 |  | 201 |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 101 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n18 | 15 |  | 25 |  | 251 | 251 |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 101 | 101 |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n20 | 15 |  | 25 |  | 201 | 202 | 202 |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 101 | 102 | 102 |  |  |  |  |  |  |  |  |  |  |  |  |
+| n24 | 15 |  | 25 |  | 50 |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 24 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | 10 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n25 | 15 |  | 25 |  | 501 | 501 | 501 | 501 | 481 | 401 | 401 | Note 5 |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 24 | 241 | 241 | 241 | 241 | 201 | 201 | Note 5 |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | 101 | 101 | 101 | 101 | 101 | 101 | 101 | Note 5 |  |  |  |  |  |  |  |
+| n26 | 15 | 15 | 25 |  | 251 | 251 | 251 | Note 5 | Note 5 |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 121 | 121 | 121 | Note 5 | Note 5 |  |  |  |  |  |  |  |  |  |  |
+| n28 | 15 | 15 | 25 |  | 251 | 251 | 251 | 251 | 251 |  | 251 |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 101 | 101 | 101 | 101 | 101 |  | 101 |  |  |  |  |  |  |  |  |
+| n30 | 15 |  | 201 |  | 201 |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 101 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n31 | 15 | 58 | 58 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+| n34 | 15 |  | 25 |  | 50 | 75 |  |  |  |  |  |  |  |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 | 36 |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | 10 | 18 |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n38 | 15 |  | 25 |  | 50 | 75 | 100 | 128 | 160 |  | 216 |  |  |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 | 36 | 50 | 64 | 75 |  | 100 |  |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | 10 | 18 | 24 | 30 | 36 |  | 50 |  |  |  |  |  |  |  |  |
+| n39 | 15 |  | 25 |  | 50 | 75 | 100 | 128 | 160 | 180 | 216 |  |  |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 | 36 | 50 | 64 | 75 | 90 | 100 |  |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | 10 | 18 | 24 | 30 | 36 | 40 | 50 |  |  |  |  |  |  |  |  |
+| n40 | 15 |  | 25 |  | 50 | 75 | 100 | 128 | 160 |  | 216 |  | 270 |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 | 36 | 50 | 64 | 75 |  | 100 |  | 128 | 162 | 180 | 216 | 243 | 270 |  |
+|  | 60 |  |  |  | 10 | 18 | 24 | 30 | 36 |  | 50 |  | 64 | 75 | 90 | 100 | 120 | 135 |  |
+| n41, n90 | 15 |  | 25 |  | 50 | 75 | 100 | 128 | 160 | 180 | 216 | 240 | 270 |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 | 36 | 50 | 64 | 75 | 90 | 100 | 108 | 128 | 162 | 180 | 216 | 243 | 270 |  |
+|  | 60 |  |  |  | 10 | 18 | 24 | 30 | 36 | 40 | 50 | 54 | 64 | 75 | 90 | 100 | 120 | 135 |  |
+| n48 | 15 |  | 25 |  | 50 | 75 | 100 |  | 160 |  | 216 |  |  |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 | 36 | 50 |  | 75 |  | 100 |  |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | 10 | 18 | 24 |  | 36 |  | 50 |  |  |  |  |  |  |  |  |
+| n50 | 15 |  | 25 |  | 50 | 75 | 100 |  | 160 |  | 216 |  | 270 |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 | 36 | 50 |  | 75 |  | 100 |  | 128 | 162 |  | Note 3 |  |  |  |
+|  | 60 |  |  |  | 10 | 18 | 24 |  | 36 |  | 50 |  | 64 | 75 |  | Note 3 |  |  |  |
+| n51 | 15 |  | 25 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TDD |
+| n53 | 15 |  | 25 |  | 50 |  |  |  |  |  |  |  |  |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | 10 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n54 | 15 |  | 25 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | TDD |
+| n65 | 15 |  | 25 |  | 501 | 751 | 1001 |  |  |  |  |  | 1281 |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 24 | 361 | 501 |  |  |  |  |  | 641 |  |  |  |  |  |  |
+|  | 60 |  |  |  | 101 | 18 | 24 |  |  |  |  |  | 301 |  |  |  |  |  |  |
+| n66 | 15 |  | 25 |  | 501 | 751 | 1001 | 1281 | 160 | 1801 | 216 | 2401 |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 24 | 361 | 501 | 641 | 751 | 901 | 1001 | 1081 |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | 101 | 18 | 24 | 301 | 361 | 401 | 501 | 541 |  |  |  |  |  |  |  |
+| n68 | 15 |  | 25 |  | 251 | 251 |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 121 | 121 |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n70 | 15 |  | 25 |  | 501 | 751 | Note 3 | Note 3 |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 24 | 361 | Note 3 | Note 3 |  |  |  |  |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | 101 | 18 | Note 3 | Note 3 |  |  |  |  |  |  |  |  |  |  |  |
+| n71 | 15 |  | 25 |  | 251 | 201 | 201 | 201 | 201,6 | 201,6 |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 121 | 101 | 101 | 101 | 101,6 | 101,6 |  |  |  |  |  |  |  |  |  |
+| n72 | 15 | 58 | 58 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+| n74 | 15 |  | 25 |  | 251 | 251 | 251 |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 101 | 101 | 101 |  |  |  |  |  |  |  |  |  |  |  |  |
+|  | 60 |  |  |  | 51 | 51 | 51 |  |  |  |  |  |  |  |  |  |  |  |  |
+| n77 | 15 |  |  |  | 50 | 75 | 100 | 128 | 160 |  | 216 |  | 270 |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 | 36 | 50 | 64 | 75 |  | 100 |  | 128 | 162 | 180 | 216 | 243 | 270 |  |
+|  | 60 |  |  |  | 10 | 18 | 24 | 30 | 36 |  | 50 |  | 64 | 75 | 90 | 100 | 120 | 135 |  |
+| n78 | 15 |  |  |  | 50 | 75 | 100 | 128 | 160 |  | 216 |  | 270 |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 | 36 | 50 | 64 | 75 |  | 100 |  | 128 | 162 | 180 | 216 | 243 | 270 |  |
+|  | 60 |  |  |  | 10 | 18 | 24 | 30 | 36 |  | 50 |  | 64 | 75 | 90 | 100 | 120 | 135 |  |
+| n79 | 15 |  |  |  | 50 |  | 100 |  | 160 |  | 216 |  | 270 |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 |  | 50 |  | 75 |  | 100 |  | 128 | 162 | 180 | 216 | 243 | 270 |  |
+|  | 60 |  |  |  | 10 |  | 24 |  | 36 |  | 50 |  | 64 | 75 | 90 | 100 | 120 | 135 |  |
+| n85 | 15 | 15 | 201 |  | 201 | 201 |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 101 | 101 |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n87 | 15 | 58 | 58 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+| n88 | 15 | 58 | 58 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+| n91 | 15 |  | 254 |  | 201,4 |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+| n92 | 15 |  | 25 |  | 201 | 201 | 201 |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 101 | 101 | 101 |  |  |  |  |  |  |  |  |  |  |  |  |
+| n93 | 15 |  | 254 |  | 251,4 |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+| n94 | 15 |  | 25 |  | 251 | 201 | 201 |  |  |  |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 121 | 101 | 101 |  |  |  |  |  |  |  |  |  |  |  |  |
+| n100 | 15 | 15 | 25 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+| n101 | 15 |  | 25 |  | 50 |  |  |  |  |  |  |  |  |  |  |  |  |  | TDD |
+|  | 30 |  |  |  | 24 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n104 | 15 |  |  |  |  |  | 100 |  |  |  | 216 |  | 270 |  |  |  |  |  | TDD |
+|  | 30 |  |  |  |  |  | 50 |  |  |  | 100 |  | 128 | 162 | 180 | 216 | 243 | 270 |  |
+|  | 60 |  |  |  |  |  | 24 |  |  |  | 50 |  | 64 | 75 | 90 | 100 | 120 | 135 |  |
+| n105 | 15 |  | 25 |  | 251 | 201 | 201 | Note 5 | Note 5 | Note 5 |  |  |  |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 121 | 101 | 101 | Note 5 | Note 5 | Note 5 |  |  |  |  |  |  |  |  |  |
+| n106 | 15 | 15 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| n109 | 15 |  | 25 |  | Note 7 | Note 7 | Note 7 | Note 7 | Note 7 |  | Note 7 |  | Note 7 |  |  |  |  |  | FDD |
+|  | 30 |  |  |  | 24 | Note 7 | Note 7 | Note 7 | Note 7 |  | Note 7 |  | Note 7 |  |  |  |  |  |  |
+| n110 | 15 | 15 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | FDD |
+| Note 1: UL resource blocks shall be located as close as possible to the downlink operating band but confined within the transmission bandwidth configuration for the channel bandwidth (Table 5.3.2-1).Note 2: For band n20; for 15 kHz SCS, in the case of 15 MHz channel bandwidth, the UL resource blocks shall be located at RBstart 11 and in the case of 20 MHz channel bandwidth, the UL resource blocks shall be located at RBstart 16; for 30 kHz SCS, in the case of 15 MHz channel bandwidth, the UL resource blocks shall be located at RBstart 6 and in the case of 20 MHz channel bandwidth, the UL resource blocks shall be located at RBstart 8; Note 3: For DL channel bandwidths that do not have symmetric UL channel bandwidth, highest valid UL configuration with lowest TX-RX separation (Table 5.4.4-1) shall be used unless otherwise specified.Note 4: For band n91 and n93, largest supported UL bandwidth configuration shall be used.Note 5: For this DL channel bandwidth, the UL configuration of the highest UL channel bandwidth specified in Table 5.3.6-1 and the nominal Tx-Rx frequency separation specified in Table 5.4.4-1 shall be used, i.e. FTX-RX as defined in clause 5.3.6 does not apply.Note 6: UEs supporting the optional symmetrical UL/DL bandwidths shall use this UL configuration. For UEs not supporting this uplink channel bandwidth, the UL configuration of the 20MHz UL channel bandwidth an UL configuration of LCRB=20(RBstart=0) and the nominal Tx-Rx frequency separation specified in Table 5.4.4-1 shall be used, i.e. FTX-RX as defined in clause 5.3.6 does not apply.Note 7: For this DL channel bandwidth, the UL configuration of 5MHz for 15kHz SCS and 10MHz for 30kHz shall be used.Note 8: In the case of 3 MHz channel bandwidth, the UL resource blocks shall be located at RBstart 9 and in the case of 5 MHz channel bandwidth, the UL resource blocks shall be located at RBstart 10. |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+Unless given by Table 7.3.2-4, the minimum requirements specified in Tables 7.3.2-1a, Tables 7.3.2-1b, Tables 7.3.2-1c, Tables 7.3.2-1d and 7.3.2-2 shall be verified with the network signalling value NS_01 (Table 6.2.3-1) configured.
+
+Table 7.3.2-4: Network signaling value for reference sensitivity
+
+| Operating band | Network Signalling value |
+| --- | --- |
+| n2 | NS_03 |
+| n12 | NS_06 |
+| n13 | NS_06 |
+| n14 | NS_06 |
+| n24 | NS_56 |
+| n25 | NS_03 |
+| n30 | NS_21 |
+| n48 | NS_27 |
+| n53 | NS_45 |
+| n54 | NS_62 |
+| n66 | NS_03 |
+| n70 | NS_03 |
+| n71 | NS_35 |
+| n85 | NS_06 |
+| n110 | NS_06 |
+
+### 7.3.3 ΔRIB,c
+
+For a UE supporting CA, SUL or DC band combination, the minimum requirement for reference sensitivity in Table 7.3.2-1a and Table 7.3.2-1b shall be increased by the amount given by ΔRIB,c defined in clause 7.3A, 7.3B, 7.3C in this specification and 7.3A, 7.3B in TS 38.101-3 [3] for the applicable operating bands.
+
+In case the UE supports more than one of band combinations for CA, SUL or DC, and an operating band belongs to more than one band combinations then
+
+- When the operating band frequency range is ≤ 1 GHz, the applicable additional ΔRIB,c shall be the average value for all band combinations defined in clause 7.3A, 7.3B, 7.3C in this specification and 7.3A, 7.3B in TS 38.101-3 [3], truncated to one decimal place that apply for that operating band among the supported band combinations. In case there is a harmonic relation between low band UL and high band DL, then the maximum ΔRIB,c among the different supported band combinations involving such band shall be applied
+
+- When the operating band frequency range is > 1 GHz, the applicable additional ΔRIB,c shall be the maximum value for all band combinations defined in clause 7.3A, 7.3B, 7.3C in this specification and 7.3A, 7.3B in TS 38.101-3 [3] for the applicable operating bands.
+
+## 7.3A Reference sensitivity for CA
+
+### 7.3A.1 General
+
+The reference sensitivity power level REFSENS is the minimum mean power applied to each one of the UE antenna ports for all UE categories, at which the throughput shall meet or exceed the requirements for the specified reference measurement channel. For operations with 4 Rx or 8 Rx antenna ports, the MSD in the applicable bands shall be increased by the absolute value of ΔRIB,4R in Table 7.3.2-2 or ΔRIB,8R in Table 7.3.2-2a when MSD > 0.
+
+For reference sensitivity exception test points where the specified carrier frequency does not correspond to a valid NR-ARFCN, the closest NR-ARFCN as specified in clause 5.4.2 applies.
+
+For reference sensitivity level tests or reference sensitivity exception tests specified in clause 7.3A, SCS=15kHz based UL test configuration can be replaced by SCS=30kHz based UL test configuration. The equivalent substitution relationship between different SCS UL test configuration is shown in Table 7.3A.1-1 for the operating bands above 2.2GHz.
+
+Table 7.3A.1-1: Equivalent substitution relationship between different SCS UL test configuration
+
+| SCS (kHz) | (BW[MHz], LCRB) |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 15 | (10, 50) | (15, 75) | (20, 100) | (25, 128) | (30, 160) | (35, 180) | (40, 216) | (45, 240) | (50, 270) |
+| 30 | (10, 24) | (15, 36) | (20, 50) | (25, 64) | (30, 75) | (35, 90) | (40, 100) | (45, 108) | (50, 128) |
+| NOTE 1: A Lcrb value for 30kHz SCS that is not defined in this table can be determined as the closest integer number that is lower or equal to half the corresponding Lcrb value for 15kHz SCS and satisfies the following equation: $ Number of RBs=2^{X}\times  3^{Y}\times  5^{Z}$ (where X, Y and Z are non-negative integers), except for 1 RB LCRB for 15 kHz SCS which is kept to 1 RB LCRB for 30 kHz SCS.NOTE 2: A value of RBstart for 30kHz SCS is determined as the closest integer number that is lower or equal to half the corresponding RBstart for 15 kHz SCS. If RBstart + LCRB would exceed NRB, RBstart is adjusted so that UL RB allocation fits inside NRB. |  |  |  |  |  |  |  |  |  |
+
+### 7.3A.2 Reference sensitivity power level for CA
+
+#### 7.3A.2.1 Reference sensitivity power level for Intra-band contiguous CA
+
+For intra-band contiguous carrier aggregation, the throughput of each component carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-2, Table 7.3.2-2a, and Table 7.3.2-3.
+
+For UE(s) supporting one uplink carrier, the uplink configuration of the PCC shall be in accordance with Table 7.3.2-3 and the downlink PCC carrier center frequency shall be configured closer to uplink operating band than any of the downlink SCC center frequency. For power class 3, the reference sensitivity power level is increased by ΔRIBC for specific uplink and downlink test points which are specified in Table 7.3A.2.1-1a.
+
+For aggregation of two or more downlink FDD carriers with two uplink carriers, the reference sensitivity is defined only for the specific uplink and downlink test points which are specified in Table 7.3A.2.1-1 and the power class 3 reference sensitivity power level increased by ΔRIBC. The requirements apply with all downlink carriers active. Unless given by Table 7.3.2-4, the reference sensitivity requirements shall be verified with the network signaling value NS_01 (Table 6.2.3.1-1) configured.
+
+Table 7.3A.2.1-1: Power class 3 intra-band contiguous CA  reference sensitivity with two uplink carriers
+
+| CA configuration | SCS(PCC/SCC)(kHz) | Aggregated channel bandwidth (PCC+SCC) | UL PCC allocation(LCRB) | UL SCC allocation(LCRB) | PCC ΔRIBC (dB) | SCC ΔRIBC (dB) | Duplex mode |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| CA_n3B5 | 15/15 | 20MHz + 20MHz | 25 (RBSTART = 0) | 25 (RBSTART = 81) | 25.1 | 12.4 | FDD |
+| CA_n5B | 15/15 | 10MHz + 10MHz | 10 (RBstart = 0) | 10 (RBstart = 42) | 30.8 | 26.1 | FDD |
+| CA_n5B5 | 15/15 | 5MHz + 20MHz | 4 (RBSTART = 0) | 16 (RBSTART = 90) | 44.6 | 23.0 | FDD |
+| CA_n7B | 15/15 | 10MHz + 40MHz | 9 (RBstart = 26) | 36 (RBstart = 180) | 34 | 25 | FDD |
+| NOTE 1: All combinations of channel bandwidths defined in Table 5.5A.1-1.NOTE 2: The carrier centre frequency of SCC in the UL operating band is configured closer to the DL operating band.NOTE 3: The transmitted power over both PCC and SCC shall be set to PUMAX as defined in subclause 6.2A.4.NOTE 4: The PCC allocation is same as Transmission bandwidth configuration NRB as defined in Table 5.3.2-1. NOTE 5: Applicable only to BCS 1 and to BCS 4 and 5. |  |  |  |  |  |  |  |
+
+Table 7.3A.2.1-1a: Power class 3 intra-band contiguous CA reference sensitivity
+with one uplink carrier
+
+| CA configuration | SCS(PCC/SCC)(kHz) | Aggregated channel bandwidth (PCC+SCC) | UL PCC allocation(LCRB) | SCCΔRIBC (dB) | Duplex mode |
+| --- | --- | --- | --- | --- | --- |
+| CA_n71B1 | 15/15 | 30MHz + 5MHz | 20 (RBSTART = 0) | 3.8 | FDD |
+| CA_n3B | 15/15 | 50MHz + 5MHz | 50 (RBSTART = 220) | 1.9 | FDD |
+| NOTE 1: Applicable only to BCS 4 and 5 and for UEs supporting the optional symmetrical UL/DL channel bandwidths. |  |  |  |  |  |
+
+Table 7.3A.2.1-2: Void
+
+For power class 2, the reference sensitivity power level is increased by ΔRIBC for specific uplink and downlink test points which are specified in Table 7.3A.2.1-3. The requirements apply with all downlink carriers active. Unless given by Table 7.3.2-4, the reference sensitivity requirements shall be verified with the network signalling value NS_01 (Table 6.2.3.1-1) configured.
+
+Table 7.3A.2.1-3: Power class 2 intra-band contiguous CA reference sensitivity
+with one uplink carrier
+
+| CA configuration | SCS(kHz) | Aggregated channel bandwidth (PCC+SCC) | UL PCC allocation | SCCΔRIBC1 (dB) | SCCΔRIBC2 (dB) | Duplex mode |
+| --- | --- | --- | --- | --- | --- | --- |
+| CA_n71B | 15/15 | 30 MHz + 5 MHz | 20 (RBstart = 0) | 5.6 3 | 7.73 | FDD |
+| NOTE 1: Applicable to UE supporting PC2 with 1Tx. NOTE 2: Applicable to UE supporting PC2 with 2Tx.NOTE 3: Applicable only to BCS 4 and 5 and for UEs supporting the optional symmetrical UL/DL channel bandwidths. |  |  |  |  |  |  |
+
+##### 7.3A.2.1.1 PC2 and PC1.5 MSD requirements with look-up tables for Intra-band CA
+
+7.3A.2.1.1.1 General
+
+The PC2 and PC1.5 MSD requirements with look-up tables for Intra-band CA do not apply when band is n46, n96 or n102.
+
+7.3A.2.1.1.2 Intra-band CA with 1UL CC
+
+The PC2 and the PC1.5 MSD requirements with look-up tables for Intra-band CA reference sensitivity exceptions (MSD) due to 1UL CC interference shall apply when the following criteria are met:
+
+- A PC3 reference sensitivity exception requirement is specified either in Table 7.3A.2.1-1a, or in Table 7.3A.2.2-1, and, the corresponding PC2 or PC1.5 reference sensitivity exception requirement is not specified in Table 7.3A.2.1-3, or in Table 7.3A.2.2-1a, and
+
+- PC2 output power achieved with one Tx antenna connector “PC21Tx”, or achieved with two Tx antenna connectors “PC22Tx”, or PC1.5 output power achieved with two Tx antenna connectors “PC1.52Tx” is specified in Table 6.2.1-1 or Table 6.2D.1-1, and,
+
+For these cases, and where in the following PCx denotes either PC21Tx, PC22Tx or PC1.52Tx, the PCx MSD is specified as:
+
+PCx MSD = PC3 MSD + MSD
+
+where,
+
+- PCx MSD is the reference sensitivity exception specified for PC21Tx, PC22Tx, or PC1.52Tx,
+
+- PC3 MSD is the reference sensitivity exception specified for PC3 in Table 7.3A.2.1-1a, or in Table 7.3A.2.2-1,
+
+- MSD values are specified in Table 7.3A.2.1.1.2-1 output columns denoted “MSDmax 3, 6, 9”. These apply to the same uplink/downlink configurations as those specified for the minimum PC3 MSD requirements in Table Table 7.3A.2.1-1a, or in Table 7.3A.2.2-1,
+
+- The correspondence between the MSDmax specified in Table 7.3A.2.1.1.2-1, the source of interference and PCx MSD is specified in Table 7.3A.2.1.1.2-2,
+
+Table 7.3A.2.1.1.2-1: MSD per MSDmax look-up table for MSD
+
+| PC3 MSD (dB) | MSDmax / MSD(dB) |  |  |
+| --- | --- | --- | --- |
+|  | 3 | 6 | 9 |
+| 0.1≤ PC3 MSD <1.0 | 0.7 | 1.1 | 2.5 |
+| 1.0≤ PC3 MSD <3.0 | 1.6 | 2.7 | 5.1 |
+| 3.0≤ PC3 MSD <5.0 | 2.0 | 3.8 | 6.5 |
+| 5.0≤ PC3 MSD <7.0 | 2.3 | 4.5 | 7.3 |
+| 7.0≤ PC3 MSD <9.0 | 2.5 | 5.0 | 7.9 |
+| PC3 MSD ≥9.0 | 3 | 6 | 9 |
+
+Table 7.3A.2.1.1.2-2: MSDmax correspondence look-up table for source of interference and PCx MSD
+
+| MSDmax |  |  |
+| --- | --- | --- |
+| PC21Tx MSD | PC22Tx MSD | PC1.52Tx MSD |
+| 3 | 6 | 9 |
+
+As an exception, for cases where:
+
+- The PC21Tx MSD is specified in 7.3A.2.1-3, or in Table 7.3A.2.2-1a, and
+
+- The PC3 MSD is not specified in Table 7.3A.2.1-1a, or in Table 7.3A.2.2-1, and
+
+- PC1.5 output power achieved with two Tx antenna connectors “PC1.52Tx” is specified in Table 6.2.1-1 or in Table 6.2D.1-1,
+
+then the PC1.52Tx MSD is specified as:
+
+PC1.52Tx MSD = PC21Tx MSD + MSD,
+
+where in the Table 7.3A.2.1.1.2-1,
+
+- MSD is specified output column denoted “MSDmax 6”,
+
+- The input column uses the specified “PC21Tx MSD” instead of “PC3 MSD”. These apply to the same uplink/downlink configurations as those specified for the minimum PC2 MSD requirements in Table Table 7.3A.2.1-1a, or in Table 7.3A.2.2-1.
+
+#### 7.3A.2.2 Reference sensitivity power level for Intra-band non-contiguous CA
+
+For intra-band non-contiguous carrier aggregation with one uplink carrier and two or more downlink sub-blocks, throughput of each downlink component carrier shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2 and A.3.2 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) and parameters specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-2, Table 7.3.2-2a and Table 7.3A.2.2-1.
+
+For aggregation of two or more downlink FDD carriers with one uplink carrier and unless otherwise noted, the downlink SCC carrier center frequency shall be configured closer to the uplink operating band than the downlink PCC center frequency. For power class 3, the reference sensitivity is increased by ΔRIBNC only for the specific uplink and downlink test points which are specified in Table 7.3A.2.2-1. For power class 2, the reference sensitivity power level is increased by ΔRIBNC for specific uplink and downlink test points which are specified in Table 7.3A.2.2-1a. The requirements apply with all downlink carriers active. Unless given by Table 7.3.2-4, the reference sensitivity requirements shall be verified with the network signaling value NS_01 (Table 6.2.3.1-1) configured.
+
+Table 7.3A.2.2-1: Power class 3 intra-band non-contiguous CA reference sensitivity with one uplink carrier.
+
+| CA configuration | SCS(PCC/SCC)(kHz) | Aggregated channel bandwidth (PCC+SCC) | Wgap / [MHz] | UL PCC allocation(LCRB) | SCCΔRIBNC (dB) | Duplex mode |
+| --- | --- | --- | --- | --- | --- | --- |
+| CA_n1(2A) | 15/15 | 5MHz + 5MHz | 0.0 < Wgap ≤ 50.0 | 25 | 0.5 | FDD |
+| CA_n2(2A) | 15/15 | 5MHz + 5MHz | Wgap = 50.0 | 105 | 5.0 | FDD |
+|  |  |  | Wgap = 30.0 | 25 | 0.0 |  |
+| CA_n3(2A) | 15/15 | 5MHz + 5MHz | Wgap = 65.0 | 125 | 4.7 | FDD |
+|  |  |  | Wgap = 45.0 | 255 | 0.0 |  |
+| CA_n5(2A) | 15/15 | 15MHz + 5MHz | Wgap = 5.0 | 55 | 6.3 | FDD |
+| CA_n7(2A) | 15/15 | 10MHz + 5MHz | Wgap = 55 | 325 | 0.0 | FDD |
+|  |  |  | Wgap = 30 | 505 | 0.0 |  |
+| CA_n12(2A) | 15/15 | 5MHz + 5MHz | 0.0 < Wgap ≤ 7.0 | 5 (RBstart=12) | 3 | FDD |
+| CA_n25(2A) 9 | 15/15 | 5MHz + 5MHz | Wgap = 55.0 | 105 | 5.0 | FDD |
+|  |  |  | Wgap = 30.0 | 25 | 0.0 |  |
+| CA_n25(2A) 10 | 15/15 | 40MHz + 5MHz | Wgap = 20.0 | 40 (RBstart = 176) | [24.6] 8 | FDD |
+| CA_n26(2A) | 15/15 | 15MHz + 10MHz | Wgap = 10.0 | 5 (RBstart = 74) | 25.2 | FDD |
+| CA_n66(2A)CA_n66(3A) | N/A | NOTE 1 | NOTE 2 | NOTE 3, NOTE 4 | 0.0 | FDD |
+| CA_n71(2A) | 15/15 | 15MHz + 10MHz | Wgap = 10.0 | 5 (RBstart = 2) | 22.2 | FDD |
+|  |  | 25MHz + 5MHz11 | Wgap = 5.0 | 20 (RBstart = 19) | 25.1 |  |
+| NOTE 1: All combinations of channel bandwidths defined in Table 5.5A.2-1.NOTE 2: All applicable sub-block gap sizes.NOTE 3: The PCC allocation is same as Transmission bandwidth configuration NRB as defined in Table 5.3.2-1. NOTE 4: The carrier center frequency of PCC in the DL operating band is configured closer to the UL operating band.NOTE 5: Refers to the UL resource blocks shall be located as close as possible to the downlink operating band but confined within the transmission.NOTE 6: Wgap is the sub-block gap between the two sub-blocks.NOTE 7: Void.NOTE 8:  For operation with three or more non-contiguous component carriers, ΔRIBNC applies to all secondary component carriers.NOTE 9: Bandwidth Combination Set 0.NOTE 10: Bandwidth Combination Set 1NOTE 11: Applicable only to Bandwidth Combination Set 4 and 5 and for UEs supporting the symmetrical UL/DL channel bandwidths. |  |  |  |  |  |  |
+
+Table 7.3A.2.2-1a: Power class 2 intra-band non-contiguous CA reference sensitivity
+with one uplink carrier
+
+| CA configuration | SCS(kHz) | Aggregated channel bandwidth (PCC+SCC) | Wgap / [MHz] | UL PCC allocation | SCCΔRIBNC1 (dB) | SCCΔRIBNC2 (dB) | Duplex mode |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| CA_n71(2A) | 15/15 | 15MHz + 10MHz | Wgap = 10.0 | 5 (RBstart = 2) | 24.8 | 29.3 | FDD |
+|  |  | 25MHz + 5MHz1 | Wgap = 5.0 | 20 (RBstart = 8) | 27.23 | 31.83 |  |
+| CA_n25(2A) 9 | 15/15 | 5MHz + 5MHz | Wgap = 55.0 | 105 | 7.3 | 10.0 | FDD |
+|  |  |  | Wgap = 30.0 | 25 | 0.0 | 0.0 |  |
+| CA_n25(2A) 10 | 15/15 | 40MHz + 5MHz | Wgap = 20.0 | 40 (RBstart = 176) | [27.6] 8 | 32.68 | FDD |
+| CA_n66(2A)CA_n66(3A) | N/A | NOTE 4 | NOTE 5 | NOTE 6, NOTE 7 | 0.0 | 0.0 | FDD |
+| NOTE 1: Applicable to UE supporting PC2 with 1Tx. NOTE 2: Applicable to UE supporting PC2 with 2Tx.NOTE 3: Applicable only to BCS 4 and 5 and for UEs supporting the optional symmetrical UL/DL channel bandwidths.NOTE 4: All combinations of channel bandwidths defined in Table 5.5A.2-1.NOTE 5: All applicable sub-block gap sizes.NOTE 6: The PCC allocation is same as Transmission bandwidth configuration NRB as defined in Table 5.3.2-1. NOTE 7: Void.NOTE 9: Bandwidth Combination Set 0.NOTE 10: Bandwidth Combination Set 1 |  |  |  |  |  |  |  |
+
+For intra-band non-contiguous carrier aggregation with two uplink carriers and two or more downlink sub-blocks, throughput of each downlink component carrier shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2 and A.3.2 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) and parameters specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-2, Table 7.3.2-2a and Table 7.3A.2.2-2 with the power class 3 reference sensitivity power level increased by ΔRIBNC  only for the specific uplink and downlink test points which are specified in Table 7.3A.2.2-2.The requirements apply with all downlink carriers and two uplink carriers active. The reference sensitivity requirements shall be verified with the network signaling value NS_01 (Table 6.2.3.1-1) configured.
+
+Table 7.3A.2.2-2: Power class 3 intra-band non-contiguous CA reference sensitivity
+with two uplink carriers
+
+| CA configuration | PCC/SCC (SCS, BW) | PCC/SCC UL Fc (MHz) | UL PCC/SCC allocation(LCRB) | PCC/SCC DL Fc (MHz) | PCC ΔRIBNC (dB) | SCC ΔRIBNC (dB) | Duplex mode |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| CA_n26(2A) | (15kHz, 5MHz)/ (15kHz, 5MHz) | 816.5 / 839 | 12 (RBSTART = 0) / 12 (RBSTART = 3) | 861.5 / 884 | 38.0 | 13.0 | FDD |
+
+#### 7.3A.2.3 Reference sensitivity power level for Inter-band CA
+
+For inter-band carrier aggregation with one component carrier per operating band and the uplink assigned to one NR band the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1 with parameters specified in  Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-2, Table 7.3.2-2a, Table 7.3.2-3, and in Table 7.3F.2-1, Table 7.3F.2-2, Table 7.3F.2-3 for inter-band CA with one shared spectrum channel access band, modified in accordance with clause 7.3A.3.2. The reference sensitivity is defined to be met with all downlink component carriers active and one of the uplink carriers active. Exceptions to reference sensitivity are allowed in accordance with clause 7.3A.4, 7.3A.5 and 7.3A.6.
+
+For the combination of intra-band and inter-band carrier aggregation, the intra-band CA relaxation, ΔRIBC and ΔRIBNC, are also applied according to the clause 7.3A.2.1 and 7.3A.2.2.
+
+##### 7.3A.2.3.1 PC2 and PC1.5 MSD requirements with look-up tables for two-band DL CA with 1UL band
+
+7.3A.2.3.1.0 General
+
+The PC2 and PC1.5 MSD requirements with look-up tables for two or three DL band CA with 1UL band do not apply when the UL band is either band n46, band n96 or band n102.
+
+7.3A.2.3.1.1 1UL band with 1UL CC for 2DL band CA
+
+The PC2 and the PC1.5 MSD requirements with look-up tables for two-band DL CA reference sensitivity exceptions (MSD) due to 1UL band 1UL CC harmonic, harmonic mixing, and cross band isolation interference shall apply when the following criteria are met:
+
+- A PC3 reference sensitivity exception requirement is specified either in Table 7.3A.4-1, or in Table 7.3A.4-4 or in Table 7.3A.6-1, and, the corresponding PC2 or PC1.5 reference sensitivity exception requirement is not specified in Table 7.3A.4-2a, or in Table 7.3A.4-4a-1, or in Table 7.3A.4-4b, or in Table 7.3A.6-1a-1, or in Table 7.3A.6-1b, and
+
+- PC2 output power achieved with one Tx antenna connector “PC21Tx”, or achieved with two Tx antenna connectors “PC22Tx”, or PC1.5 output power achieved with two Tx antenna connectors “PC1.52Tx” is specified in Table 6.2.1-1 or Table 6.2D.1-1, and,
+
+- The PCx aggressor NR UL band is the same aggressor UL band as in case of PC3 MSD.
+
+For these cases, and where in the following PCx denotes either PC21Tx, PC22Tx or PC1.52Tx, the PCx MSD due to harmonic, harmonic mixing, and cross band isolation is specified as:
+
+PCx MSD = PC3 MSD + MSD
+
+
+where,
+
+- PCx MSD is the reference sensitivity exception specified for PC21Tx, PC22Tx, or PC1.52Tx,
+
+- PC3 MSD is the reference sensitivity exception specified for PC3 in Table 7.3A.4-1, or in Table 7.3A.4-4 or in Table 7.3A.6-1,
+
+- MSD values are specified in Table 7.3A.2.3.1.1-1 output columns denoted “MSDmax 3, 6, 9”. These apply to the same uplink/downlink configurations as those specified for the minimum PC3 MSD requirements in Table 7.3A.4-1, or in Table 7.3A.4-4 or in Table 7.3A.6-1,
+
+- The correspondence between the MSDmax specified in Table 7.3A.2.3.1.1-1, the source of interference and PCx MSD is specified in Table 7.3A.2.3.1.1-2,
+
+Table 7.3A.2.3.1.1-1: MSD per MSDmax look-up table for MSD due to harmonic, harmonic mixing, cross band isolation
+
+| PC3 MSD (dB) | MSDmax / MSD(dB) |  |  |
+| --- | --- | --- | --- |
+|  | 3 | 6 | 9 |
+| 0.1≤ PC3 MSD <1.0 | 0.7 | 1.1 | 2.5 |
+| 1.0≤ PC3 MSD <3.0 | 1.6 | 2.7 | 5.1 |
+| 3.0≤ PC3 MSD <5.0 | 2.0 | 3.8 | 6.5 |
+| 5.0≤ PC3 MSD <7.0 | 2.3 | 4.5 | 7.3 |
+| 7.0≤ PC3 MSD <9.0 | 2.5 | 5.0 | 7.9 |
+| PC3 MSD ≥9.0 | 3 | 6 | 9 |
+
+Table 7.3A.2.3.1.1-2: MSDmax correspondence look-up table for source of interference and PCx MSD
+
+| Source of interference | MSDmax |  |  |
+| --- | --- | --- | --- |
+|  | PC21Tx MSD | PC22Tx MSD | PC1.52Tx MSD |
+| UL harmonic | 3 | 6 | 9 |
+| Harmonic mixing | 3 | 6 | 9 |
+| Cross band isolation | 3 | 6 | 9 |
+
+As an exception, for cases where:
+
+- The PC21Tx MSD is specified in Table 7.3A.4-2a or in Table 7.3A.4-4a-1 or in Table 7.3A.6-1a-1, and
+
+- The PC3 MSD is not specified in Table 7.3A.4-1, or in Table 7.3A.4-4 or in Table 7.3A.6-1, and
+
+- The PC1.5 MSD is not specified in Table 7.3A.4-4b or in Table 7.3A.6-1b, and
+
+- PC1.5 output power achieved with two Tx antenna connectors “PC1.52Tx” is specified in Table 6.2.1-1 or in Table 6.2D.1-1,
+
+then the PC1.52Tx MSD is specified as:
+
+PC1.52Tx MSD = PC21Tx MSD + MSD,
+
+where in the Table 7.3A.2.3.1.1-1,
+
+- MSD is specified output column denoted “MSDmax 6”,
+
+- The input column uses the specified “PC21Tx MSD” instead of “PC3 MSD”. These apply to the same uplink/downlink configurations as those specified for the minimum PC2 MSD requirements in Table 7.3A.4-2a, or in Table 7.3A.4-4a-1 or in Table 7.3A.6-1a-1.
+
+7.3A.2.3.1.2 1UL TDD band with 2UL CCs for 2DL band CA
+
+The PC2 and the PC1.5 MSD requirements with look-up tables for two-band DL CA reference sensitivity exceptions (MSD) due to 1UL band with 2UL CC intermodulation interference shall apply when the following criteria are met:
+
+- The UL band is a TDD band configured with intra-band contiguous or intra-band non-contiguous UL CA, and,
+
+- A PC3 reference sensitivity exception requirement is specified in Table 7.3A.5-1, and the corresponding PC2 or PC1.5 reference sensitivity exception requirement is not specified in Table 7.3A.5-1a or in Table 7.3A.5-1b,
+
+- PC2 or PC1.5 power class is specified in Table 6.2A.1.1-1, Table 6.2A.1.2-1 or Table 6.2H.1.1-1
+
+- The PCx aggressor NR UL band is the same aggressor UL band as in case of PC3 MSD.
+
+For these cases, and where in the following PCx denotes either PC2 or PC1.5, the PCx MSD due to 1UL band with two contiguous or two non-contiguous UL CC intermodulation interference is specified as:
+
+PCx MSD = PC3 MSD + MSD
+
+where,
+
+- PC3 MSD is the reference sensitivity exception specified in Table 7.3A.5-1,
+
+- For IMD3 and IMD5 MSD values are specified in Table 7.3A.2.3.1.1-1 output column denoted “MSDmax 3” for PC2 and “MSDmax 6” for PC1.5,
+
+- For IMD4 and ≥ IMD6 MSD values are specified in Table 7.3A.2.3.2.1-1 output columns denoted “MSDmax  9” for PC2 and “MSDmax 15” for PC1.5,
+
+- These apply for the same uplink/downlink configurations as those specified for the minimum PC3 MSD requirements in Table 7.3A.5-1,
+
+- The correspondence between the MSDmax specified in Table 7.3A.2.3.2.1-1, the IMD order and PCx MSD is specified in Table 7.3A.2.3.1.2-1,
+
+Table 7.3A.2.3.1.2-1: MSDmax correspondence look-up table for 1UL band 2UL CC IMD order and PCx MSD
+
+| IMD order | MSDmax |  |
+| --- | --- | --- |
+|  | PC2 MSD | PC1.5 MSD |
+| IMD3 | 3 | 6 |
+| IMD4 | 9 | 15 |
+| IMD5 | 3 | 6 |
+| ≥ IMD6 | 9 | 15 |
+
+As an exception, for cases where:
+
+- The PC2 MSD is specified in Table 7.3A.5-1a, and,
+
+- The PC3 MSD is not specified in Table 7.3A.5-1, and,
+
+- The PC1.5 MSD is not specified in Table 7.3A.5-1b, and,
+
+- PC1.5 power class is specified in Table 6.2A.1.1-1, Table 6.2A.1.2-1 or Table 6.2H.1.1-1,
+
+then the PC1.5 MSD is specified as:
+
+PC1.5 MSD = PC2 MSD + MSD,
+
+where,
+
+- MSD is specified output column denoted “MSDmax 3” in the Table 7.3A.2.3.1.1-1 for IMD3 and IMD5, and,
+
+- MSD is specified output column denoted “MSDmax 6” in the Table 7.3A.2.3.2.1-1 for IMD4 and ≥ IMD6,
+
+- The input column uses the specified “PC2 MSD” instead of “PC3 MSD”. These apply to the same uplink/downlink configurations as those specified for the minimum PC2 MSD requirements in Table 7.3A.5-1a.
+
+##### 7.3A.2.3.2 PC2 and PC1.5 MSD requirements with look-up tables for two-band or three-band DL CA with two-band UL CA
+
+7.3A.2.3.2.0 General
+
+The PC2 and PC1.5 MSD requirements with look-up tables for two or three DL band CA with 2UL band CA do not apply when the UL band is either band n46, band n96 or band n102.
+
+7.3A.2.3.2.1 2UL band CA with 1UL CC in each band
+
+
+The PC2 and the PC1.5 MSD requirements with look-up tables for two-band and three-band DL CA reference sensitivity exceptions (MSD) due to 2UL CA intermodulation interference shall apply when the following criteria are met:
+
+- A PC3 reference sensitivity exception requirement is specified either in Table 7.3A.5-1, or in Table 7.3A.5-2, and, the corresponding PC2 or PC1.5 reference sensitivity exception requirement is not specified in Table 7.3A.5-1a, or in Table 7.3A.5-1b, or in Table 7.3A.5-2a, or in Table 7.3A.5-2b, and
+
+- PC2 or PC1.5 two-band UL CA is specified in Table 6.2A.1.3-1, or Table 6.2H.3.1-1, or in clause 6.2L.3.1, and,
+
+- The PC2 or PC1.5 MSD is caused by the same uplink/downlink configurations as in case of PC3 MSD.
+
+For these cases, and where in the following PCx denotes either PC2 or PC1.5, the PCx MSD due to 2UL CA intermodulation interference is specified as:
+
+PCx MSD = PC3 MSD + MSD
+
+where,
+
+- PCx MSD is the reference sensitivity exception specified for PC2 or PC1.5 with 2UL band CA 1Tx or 2Tx in each UL band and with 1UL CC in each UL band,
+
+- PC3 MSD is the reference sensitivity exception specified for PC3 in Table 7.3A.5-1, or in Table 7.3A.5-2,
+
+- MSD values are specified in Table 7.3A.2.3.2.1-1 output columns denoted “MSDmax 6, 9, 12, 15, 18, 24, 30”. These apply for the same uplink/downlink configurations as those specified for the minimum PC3 MSD requirements in Table 7.3A.5-1, or in Table 7.3A.5-2, and,
+
+- The correspondence between the MSDmax specified in Table 7.3A.2.3.2.1-1, the IMD order and PCx MSD is specified in Table 7.3A.2.3.2.1-2,
+
+Table 7.3A.2.3.2.1-1: MSD per MSDmax look-up table for MSD due to 2UL CA intermodulation interference
+
+| PC3 MSD (dB) | MSDmax / MSD(dB) |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | 6 | 9 | 12 | 15 | 18 | 24 | 30 |
+| 0.1≤ PC3 MSD <0.5 | 1.2 | 2.4 | 3.9 | 5.8 | 7.9 | 13.2 | 18.8 |
+| 0.5≤ PC3 MSD <1.0 | 1.7 | 3.5 | 5.4 | 7.5 | 10.0 | 15.6 | 21.4 |
+| 1.0≤ PC3 MSD <2.0 | 2.8 | 4.8 | 7.1 | 9.6 | 12.4 | 18.0 | 24.1 |
+| 2.0≤ PC3 MSD <3.0 | 3.5 | 5.7 | 8.2 | 10.9 | 13.7 | 19.5 | 25.5 |
+| 3.0≤ PC3 MSD <4.0 | 3.9 | 6.3 | 8.9 | 11.7 | 14.5 | 20.5 | 26.5 |
+| 4.0≤ PC3 MSD <5.0 | 4.3 | 6.8 | 9.4 | 12.4 | 15.2 | 21.2 | 27.2 |
+| 5.0≤ PC3 MSD <6.0 | 4.5 | 7.1 | 9.9 | 12.8 | 15.8 | 21.7 | 27.7 |
+| 6.0≤ PC3 MSD <7.0 | 4.8 | 7.6 | 10.4 | 13.3 | 16.2 | 22.3 | 28.2 |
+| 7.0≤ PC3 MSD <8.0 | 5.0 | 7.8 | 10.7 | 13.6 | 16.6 | 22.5 | 28.5 |
+| 8.0≤ PC3 MSD <9.0 | 5.2 | 8.1 | 11.0 | 14.0 | 16.9 | 22.8 | 28.8 |
+| PC3 MSD ≥9.0 | 6 | 9 | 12 | 15 | 18 | 24 | 30 |
+
+Table 7.3A.2.3.2.1-2: MSDmax correspondence look-up table for IMD order and PCx MSD
+
+| IMD order | MSDmax |  |
+| --- | --- | --- |
+|  | PC2 MSD | PC1.5 MSD |
+| IMD2 | 6 | 12 |
+| IMD3 | 9 | 18 |
+| IMD4 | 12 | 24 |
+| IMD5 | 15 | 30 |
+
+As an exception, for cases where:
+
+- The PC2 MSD is specified in Table 7.3A.5-1a or in Table 7.3A.5-2a, and,
+
+- The PC3 MSD is not specified in Table 7.3A.5-1 or in Table 7.3A.5-2, and,
+
+- The PC1.5 MSD is not specified in Table 7.3A.5-1b or in Table 7.3A.5-2b, and,
+
+- PC2 or PC1.5 two-band UL CA is specified in Table 6.2A.1.3-1 or Table 6.2H.3.1-1 or in clause 6.2L.3.1,
+
+then the PC1.5 MSD is specified as:
+
+PC1.5 MSD = PC2 MSD + MSD,
+
+where,
+
+- In the Table 7.3A.2.3.2.1-1, MSD is specified with output columns denoted “MSDmax 6, 9, 12, 15” and where the input column uses the specified PC2 MSD specified in Table 7.3A.5-1a or in Table 7.3A.5-2a instead of the PC3 MSD, and
+
+- In the Table 7.3A.2.3.2.1-2, the correspondence between the MSDmax and the IMD order is specified using the column specified for “PC2 MSD”, and
+
+- These PC1.5 MSD requirements apply for the same uplink/downlink configurations as those specified in the PC2 MSD requirements of Table 7.3A.5-1a or Table 7.3A.5-2a.
+
+7.3A.2.3.2.2 2UL band CA with 2UL contiguous CCs in one TDD band and 1UL CC in the other band
+
+The PC2 and the PC1.5 MSD requirements with look-up tables for two-band and three-band DL CA reference sensitivity exceptions (MSD) due to 2UL band CA IMD3 interference from 2UL CC in one TDD band and 1UL CC in the other band, (also known as 1st order triple-beat MSD) shall apply when the following criteria are met:
+
+- The UL band is configured with intra-band contiguous UL CA is a TDD band, and,
+
+- The other UL band is configured with 1UL CC, and
+
+- A PC3 reference sensitivity exception requirement is specified in Table 7.3A.5-1 or in Table 7.3A.5-2, and the corresponding PC2 or PC1.5 reference sensitivity exception requirement is not specified in Tables 7.3A.5-1a or 7.3A.5-2a or Tables 7.3A.5-1b or 7.3A.5-2b,
+
+- PC2 or PC1.5 power class is specified in Table 6.2A.1.3-1 or Table 6.2H.3.1-1 or in clause 6.2L.3.1,
+
+- The PCx aggressor NR UL band is the same aggressor UL band as in case of PC3 MSD.
+
+For these cases, and where in the following PCx denotes either PC2 or PC1.5, the PCx MSD due to 2UL band CA IMD3 interference with two contiguous UL CC in one band and 1UL CC in the other band is specified as:
+
+PCx MSD = PC3 MSD + MSD
+
+where,
+
+- PC3 MSD is the reference sensitivity exception specified for PC3 in Table 7.3A.5-1, or in Table 7.3A.5-2,
+
+- MSD values are specified in Table 7.3A.2.3.2.1-1output column denoted “MSDmax 6” for PC2 and “MSDmax 12” for PC1.5. These apply for the same uplink/downlink configurations as those specified for the minimum PC3 MSD requirements in Table 7.3A.5-1, or in Table 7.3A.5-2, and,
+
+As an exception, for cases where:
+
+- The PC2 MSD is specified in Table 7.3A.5-1a or in Table 7.3A.5-2a, and,
+
+- The PC3 MSD is not specified in Table 7.3A.5-1 or in Table 7.3A.5-2, and,
+
+- The PC1.5 MSD is not specified in Table 7.3A.5-1b or in Table 7.3A.5-2b, and,
+
+- PC1.5 two-band UL CA for a total of 2Tx or 3Tx or 4Tx and with 1CC in one UL band and two CCs in the other UL band is specified in Table 6.2A.1.3-1 or Table 6.2H.3.1-1 or in clause 6.2L.3.1,
+
+then the PC1.5 MSD is specified as:
+
+PC1.5 MSD = PC2 MSD + MSD
+
+where in the Table 7.3A.2.3.2.1-1,
+
+- MSD is specified with output column denoted “MSDmax 6”,
+
+- The input column uses the specified “PC2 MSD” instead of “PC3 MSD”.
+
+#### 7.3A.2.4 Void
+
+#### 7.3A.2.5 Reference sensitivity power level for low NR band carrier aggregation via switching
+
+The reference sensitivity power level REFSENS for low NR band inter-band carrier aggregation supported via switching featureSetCombinationLowBandSwitching-r19  in a band pair is the minimum mean power applied to each band respectively at each one of the UE antenna ports for all UE categories, at which the throughput in the DL scheduling before and/or after the Switching Gap shall meet or exceed the requirements for the specified reference measurement channel. It’s noted that the DL scheduling in the RMC for Inter-band CA via switching as specified in Annexes A.8 is closest to the Switching Gap (gapDurationPCelltoSCell-r19 and gapDurationSCelltoPCell-r19) configured by network.
+
+For a UE indicating the capability switchingPeriodForFDD-SDL-r19 for the band pair of NR inter-band CA combinations defined in Table 5.2A.2.1-1, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2.2/A8.1 (with one sided dynamic OCNG Pattern OP.1 FDD for the DL-signal as described in Annex A.5.1.1) with the REFSENS specified in Table 7.3.2-1a for PCell FDD band, the REFSENS specified in Table 7.3.2-1b for SCell SDL band and uplink transmission bandwidth less than or equal to that specified in Table 7.3.2-3 for PCell FDD band.
+
+### 7.3A.3 ΔRIB,c for CA
+
+#### 7.3A.3.1 General
+
+For a UE supporting a CA configuration, the ΔRIB,c applies for both SC and CA operation.
+
+#### 7.3A.3.2 ΔRIB,c for Inter-band CA
+
+For the UE which supports inter-band carrier aggregation, the minimum requirement for reference sensitivity in clause 7.3A.2 shall be increased by the amount given by ΔRIB,c defined in clause 7.3A.3.2 for the applicable operating bands. Unless otherwise stated, ΔRIB,c is set to zero.
+
+In case the UE supports more than one of band combinations for CA, SUL or DC, and an operating band belongs to more than one band combinations then
+
+- When the operating band frequency range is ≤ 1 GHz, the applicable additional ΔRIB,c shall be the average value for all band combinations defined in clause 7.3A, 7.3B, 7.3C in this specification and 7.3A, 7.3B in TS 38.101-3 [3], truncated to one decimal place that apply for that operating band among the supported band combinations. In case there is a harmonic relation between low band UL and high band DL, then the maximum ΔRIB,c among the different supported band combinations involving such band shall be applied
+
+- When the operating band frequency range is > 1 GHz, the applicable additional ΔRIB,c shall be the maximum value for all band combinations defined in clause 7.3A, 7.3B, 7.3C in this specification and 7.3A, 7.3B in TS 38.101-3 [3] for the applicable operating bands.
+
+##### 7.3A.3.2.1 ΔRIB,c for two bands
+
+Table 7.3A.3.2.1-1: ΔRIB,c due to CA (two bands)
+
+| Inter-band CA combination | ΔRIB,c for NR bands (dB)8 |  |
+| --- | --- | --- |
+|  | Component band in order of bands in configuration9 |  |
+| CA_n1-n28 | - | 0.2 |
+| CA_n1-n67 | - | 0.2 |
+| CA_n1-n71 | - | 0.3 |
+| CA_n1-n77 | 0.2 | 0.5 |
+| CA_n1-n78 | - | 0.5 |
+| CA_n1-n102 | 0.2 | 0.5 |
+| CA_n1-n105 | - | 0.3 |
+| CA_n2-n48 | 0.2 | 0.5 |
+| CA_n2-n66 | 0.3 | 0.3 |
+| CA_n2-n71 | - | 0.3 |
+| CA_n2-n77 | 0.2 | 0.5 |
+| CA_n2-n78 | 0.2 | 0.5 |
+| CA_n3-n41 | - | 04 / 0.55 |
+| CA_n3-n67 | 0.3 | - |
+| CA_n3-n74 | 0.3 | 0.5 |
+| CA_n3-n77 | 0.2 | 0.5 |
+| CA_n3-n78 | 0.2 | 0.5 |
+| CA_n3-n79 | - | 0.5 |
+| CA_n3-n102 | - | 0.5 |
+| CA_n3-n104 | - | 0.5 |
+| CA_n3-n105 | - | 0.3 |
+| CA_n5-n8 | 0.4 | 0.4 |
+| CA_n5-n12 | 0.5 | 0.3 |
+| CA_n5-n28 | 0.2 | 0.2 |
+| CA_n5-n41 | 0.2 | - |
+| CA_n5-n77 | 0.2 | 0.5 |
+| CA_n5-n78 | 0.2 | 0.5 |
+| CA_n5-n105 | 0.1 | 0.1 |
+| CA_n7-n8 | - | 0.2 |
+| CA_n7-n20 | 0.5 | - |
+| CA_n7-n40 | - | 0.5 |
+| CA_n7-n46 | 0.3 | - |
+| CA_n7-n66 | 0.5 | 0.5 |
+| CA_n7-n71 | 0.2 | - |
+| CA_n7-n77 | - | 0.5 |
+| CA_n7-n78 | 0.5 | 0.5 |
+| CA_n7-n79 | - | 0.5 |
+| CA_n7-n102 | - | 0.5 |
+| CA_n7-n105 | - | 0.2 |
+| CA_n8-n28 | 0.2 | 0.2 |
+| CA_n8-n77 | 0.2 | 0.5 |
+| CA_n8-n78 | 0.2 | 0.5 |
+| CA_n8-n79 | - | 0.5 |
+| CA_n8-n104 | - | 0.5 |
+| CA_n12-n66 | 0.5 | - |
+| CA_n12-n71 | 0.8 | 0.8 |
+| CA_n12-n77 | 0.2 | 0.5 |
+| CA_n12-n78 | 0.2 | 0.5 |
+| CA_n13-n77 | 0.2 | 0.5 |
+| CA_n14-n77 | 0.2 | 0.5 |
+| CA_n18-n77 | - | 0.5 |
+| CA_n18-n78 | - | 0.5 |
+| CA_n20-n40 | - | 0.5 |
+| CA_n20-n71 | 0.4 | 0.4 |
+| CA_n20-n77 | - | 0.5 |
+| CA_n20-n78 | - | 0.5 |
+| CA_n24-n48 | 0.2 | 0.5 |
+| CA_n24-n77 | 0.2 | 0.5 |
+| CA_n25-n48 | 0.2 | 0.5 |
+| CA_n25-n66 | 0.3 | 0.3 |
+| CA_n25-n71 | - | 0.3 |
+| CA_n25-n77 | 0.2 | 0.5 |
+| CA_n25-n78 | 0.2 | 0.5 |
+| CA_n25-n85 | - | 0.3 |
+| CA_n26-n28 | 0.2 | 0.2 |
+| CA_n26-n29 | 0.5 | 0.3 |
+| CA_n26-n48 | - | 0.5 |
+| CA_n26-n71 | 0.5 | 0.3 |
+| CA_n26-n77 | - | 0.5 |
+| CA_n26-n78 | - | 0.5 |
+| CA_n28-n71 | 0.7 | 0.7 |
+| CA_n28-n74 | 0.2 | - |
+| CA_n28-n75 | 0.2 | - |
+| CA_n28-n77 | 0.2 | 0.5 |
+| CA_n28-n78 | 0.2 | 0.5 |
+| CA_n28-n79 | 0.2 | 0.5 |
+| CA_n28-n102 | 0.2 | 0.5 |
+| CA_n28-n105 | 0.7 | 0.7 |
+| CA_n29-n48 | 0.2 | 0.5 |
+| CA_n29-n71 | 0.510 | 0.710 |
+| CA_n29-n77 | 0.2 | 0.5 |
+| CA_n28-n94 | 0.1 | 0.2 |
+| CA_n30-n66 | 0.5 | 0.4 |
+| CA_n30-n77 | - | 0.5 |
+| CA_n34-n39 | 0.3 | 0.3 |
+| CA_n34-n40 | 0.3 | 0.3 |
+| CA_n34-n79 | - | 0.5 |
+| CA_n34-n104 | 0.2 | 0.5 |
+| CA_n38-n66 | 0.5 | 0.5 |
+| CA_n38-n78 | 0.4 | 0.5 |
+| CA_n38-n79 | 0.5 | 0.5 |
+| CA_n39-n40 | 0.3 | 0.3 |
+| CA_n39-n41 | 0.2 | 0.2 |
+| CA_n39-n79 | - | 0.5 |
+| CA_n40-n75 | 0.4 | - |
+| CA_n40-n77 | 0.4 | 0.5 |
+| CA_n40-n78 | 0.4 | 0.5 |
+| CA_n40-n79 | - | 0.5 |
+| CA_n40-n105 | - | 0.2 |
+| CA_n41-n48 | 0.5 | 0.5 |
+| CA_n41-n66 | 0.56 / 17 | 0.5 |
+| CA_n41-n71 | - | 0.2 |
+| CA_n41-n771 | - | 0.5 |
+| CA_n41-n781 | - | 0.5 |
+| CA_n41-n79 | 0.5 | 0.5 |
+| CA_n41-n85 | - | 0.2 |
+| CA_n41-n104 | 0.5 | 0.5 |
+| CA_n46-n48 | - | 0.5 |
+| CA_n46-n77 | - | 0.5 |
+| CA_n46-n78 | - | 0.5 |
+| CA_n48-n53 | 0.53 | - |
+| CA_n48-n66 | 0.5 | 0.2 |
+| CA_n48-n70 | 0.5 | 0.2 |
+| CA_n48-n96 | 0.5 | - |
+| CA_n50-n77 | - | 0.5 |
+| CA_n50-n78 | 0.22 / 0.23 | 0.22 / 0.23 |
+| CA_n66-n77 | 0.2 | 0.5 |
+| CA_n66-n78 | 0.2 | 0.5 |
+| CA_n67-n78 | 0.2 | 0.5 |
+| CA_n70-n77 | 0.2 | 0.5 |
+| CA_n70-n78 | 0.2 | 0.5 |
+| CA_n71-n77 | 0.2 | 0.5 |
+| CA_n71-n78 | 0.2 | 0.5 |
+| CA_n71-n85 | 0.8 | 0.8 |
+| CA_n74-n77 | - | 0.5 |
+| CA_n74-n78 | - | 0.5 |
+| CA_n75-n78 | - | 0.5 |
+| CA_n76-n78 | - | 0.5 |
+| CA_n77-n85 | 0.5 | 0.2 |
+| CA_n77-n102 | 0.5 | - |
+| CA_n78-n92 | 0.5 | - |
+| CA_n78-n102 | 0.5 | - |
+| CA_n78-n104 | 0.7 | 0.8 |
+| CA_n78-n105 | 0.5 | 0.2 |
+| NOTE 1: The requirements only apply when the sub-frame and Tx-Rx timings are synchronized between the component carriers.  In the absence of synchronization, the requirements are not within scope of these specifications.NOTE 2: Only applicable for UE supporting inter-band carrier aggregation with uplink in one NR band and without simultaneous Rx/Tx.NOTE 3: Applicable for UE supporting inter-band carrier aggregation without simultaneous Rx/Tx.NOTE 4: The requirement is applied for UE transmitting on the frequency range of 2515 – 2690 MHz.NOTE 5: The requirement is applied for UE transmitting on the frequency range of 2496 – 2515 MHz.NOTE 6: The requirement is applied for UE transmitting on the frequency range of 2545-2690 MHz.NOTE 7: The requirement is applied for UE transmitting on the frequency range of 2496-2545 MHzNOTE 8:  “-” denotes ΔRIB,c = 0.NOTE 9: The component band order in the configuration should be listed by the order of NR bands, such as for CA_n1-n77 the band order from left to right is n1 and n77.NOTE 10: Not applicable to UEs indicating support of low NR band inter-band carrier aggregation only via switching featureSetCombinationLowBandSwitching-r19 for this band combination |  |  |
+
+Table 7.3A.3.2.1-2: void
+
+##### 7.3A.3.2.2 Void
+
+##### 7.3A.3.2.3 ΔRIB,c for three bands
+
+Table 7.3A.3.2.3-1: ΔRIB,c due to CA (three bands)
+
+| Inter-band CA combination | ΔRIB,c for NR bands (dB)9 |  |  |
+| --- | --- | --- | --- |
+|  | Component band in order of bands in configuration10 |  |  |
+| CA_n1-n3-n8 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n28 | - | - | 0.2 |
+| CA_n1-n3-n38 | 0.2 | 0.2 | - |
+| CA_n1-n3-n41 | - | - | 05 / 0.56 |
+| CA_n1-n3-n71 | 0.3 | 0.3 | 0.3 |
+| CA_n1-n3-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n79 | - | - | 0.5 |
+| CA_n1-n3-n105 | 0.3 | 0.3 | 0.3 |
+| CA_n1-n5-n8 | - | 0.4 | 0.4 |
+| CA_n1-n5-n28 | - | 0.2 | 0.2 |
+| CA_n1-n5-n40 | - | 0.2 | - |
+| CA_n1-n5-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n5-n79 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n5-n105 | - | 0.2 | 0.3 |
+| CA_n1-n7-n8 | - | - | 0.2 |
+| CA_n1-n7-n20 | - | 0.5 | - |
+| CA_n1-n7-n28 | - | - | 0.2 |
+| CA_n1-n7-n40 | - | 0.3 | 0.8 |
+| CA_n1-n7-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n7-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n7-n79 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n7-n105 | - | - | 0.3 |
+| CA_n1-n8-n28 | - | 0.2 | 0.2 |
+| CA_n1-n8-n40 | - | 0.2 | 0.5 |
+| CA_n1-n8-n41 | - | 0.2 | 0.5 |
+| CA_n1-n8-n77 | - | 0.2 | 0.5 |
+| CA_n1-n8-n78 | - | 0.2 | 0.5 |
+| CA_n1-n8-n79 | - | 0.2 | 0.5 |
+| CA_n1-n18-n77 | - | - | 0.5 |
+| CA_n1-n20-n28 | - | 0.2 | 0.2 |
+| CA_n1-n20-n41 | - | 0.2 | - |
+| CA_n1-n20-n67 | - | 0.2 | 0.2 |
+| CA_n1-n20-n71 | 0.3 | 0.6 | 0.6 |
+| CA_n1-n20-n75 | 0.3 | 0.6 | 0.6 |
+| CA_n1-n20-n77 | - | - | 0.5 |
+| CA_n1-n20-n78 | - | - | 0.5 |
+| CA_n1-n26-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n28-n38 | - | 0.2 | - |
+| CA_n1-n28-n40 | - | 0.2 | - |
+| CA_n1-n28-n41 | - | 0.2 | - |
+| CA_n1-n28-n46 | - | - | 0.5 |
+| CA_n1-n28-n75 | - | 0.2 | - |
+| CA_n1-n28-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n28-n78 | - | 0.2 | 0.5 |
+| CA_n1-n28-n102 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n38-n78 | - | - | 0.5 |
+| CA_n1-n40-n41 | - | 0.8 | 0.3 |
+| CA_n1-n40-n75 | - | 0.8 | - |
+| CA_n1-n40-n77 | - | - | 0.5 |
+| CA_n1-n40-n78 | - | - | 0.5 |
+| CA_n1-n40-n79 | - | 0.5 | 0.5 |
+| CA_n1-n40-n105 | - | - | 0.3 |
+| CA_n1-n41-n75 | - | 0.5 | - |
+| CA_n1-n41-n77 | 0.2 | - | 0.5 |
+| CA_n1-n41-n78 | 0.2 | - | 0.5 |
+| CA_n1-n41-n79 | - | 0.5 | 0.5 |
+| CA_n1-n46-n78 | - | - | 0.5 |
+| CA_n1-n67-n78 | - | - | 0.5 |
+| CA_n1-n71-n77 | - | 0.2 | 0.5 |
+| CA_n1-n71-n78 | - | 0.2 | 0.5 |
+| CA_n1-n75-n78 | - | - | 0.5 |
+| CA_n1-n77-n79 | 0.2 | 0.5 | - |
+| CA_n1-n78-n79 | - | 0.5 | - |
+| CA_n1-n78-n102 | 0.2 | 0.5 | 0.5 |
+| CA_n1-n78-n105 | - | 0.5 | 0.2 |
+| CA_n2-n5-n30 | 0.4 | - | 0.5 |
+| CA_n2-n5-n41 | - | 0.2 | - |
+| CA_n2-n5-n48 | 0.2 | - | 0.5 |
+| CA_n2-n5-n66 | 0.3 | - | 0.3 |
+| CA_n2-n5-n77 | 0.2 | 0.5 | 0.5 |
+| CA_n2-n7-n71 | - | - | 0.2 |
+| CA_n2-n7-n66 | 0.3 | 0.5 | 0.5 |
+| CA_n2-n7-n77 | 0.2 | - | 0.5 |
+| CA_n2-n12-n30 | 0.4 | - | 0.5 |
+| CA_n2-n12-n41 | 0.5 | 0.3 | 0.45 / 0.96 |
+| CA_n2-n12-n66 | 0.3 | 0.5 | 0.3 |
+| CA_n2-n12-n71 | - | 0.8 | 0.8 |
+| CA_n2-n12-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n2-n14-n30 | 0.3 | - | 0.3 |
+| CA_n2-n14-n66 | 0.3 | - | 0.3 |
+| CA_n2-n14-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n2-n29-n30 | 0.3 | - | 0.3 |
+| CA_n2-n29-n66 | 0.3 | - | 0.3 |
+| CA_n2-n29-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n2-n30-n66 | 0.4 | 0.5 | 0.4 |
+| CA_n2-n30-n77 | 0.2 | - | 0.5 |
+| CA_n2-n41-n66 | 0.3 | 0.56 / 17 | 0.5 |
+| CA_n2-n41-n71 | - | - | 0.3 |
+| CA_n2-n48-n66 | 0.3 | 0.5 | 0.3 |
+| CA_n2-n48-n77 | 0.2 | 0.5 | 0.5 |
+| CA_n2-n66-n71 | 0.3 | 0.3 | - |
+| CA_n2-n66-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n2-n66-n78 | 0.3 | 0.3 | 0.5 |
+| CA_n2-n71-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n5-n8 | - | 0.4 | 0.4 |
+| CA_n3-n5-n28 | - | 0.2 | 0.1 |
+| CA_n3-n5-n79 | - | 0.2 | 0.5 |
+| CA_n3-n7-n8 | - | - | 0.2 |
+| CA_n3-n7-n38 | - | 0.5 | 0.5 |
+| CA_n3-n7-n40 | 0.2 | 0.2 | 0.3 |
+| CA_n3-n7-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n7-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n7-n79 | - | - | 0.5 |
+| CA_n3-n7-n105 | - | - | 0.3 |
+| CA_n3-n8-n28 | - | 0.2 | 0.1 |
+| CA_n3-n8-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n8-n41 | - | - | 01 / 0.52 |
+| CA_n3-n5-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n8-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n18-n41 | - | - | 01 / 0.52 |
+| CA_n3-n18-n77 | 0.2 | - | 0.5 |
+| CA_n3-n20-n28 | - | 0.1 | 0.1 |
+| CA_n3-n20-n41 | - | - | 01 / 0.52 |
+| CA_n3-n20-n67 | - | 0.1 | 0.1 |
+| CA_n3-n20-n71 | - | - | 0.3 |
+| CA_n3-n20-n75 | 0.3 | 0.6 | 0.6 |
+| CA_n3-n20-n77 | 0.2 | - | 0.5 |
+| CA_n3-n20-n78 | 0.2 | - | 0.5 |
+| CA_n3-n26-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n28-n41 | - | - | 01 / 0.52 |
+| CA_n3-n28-n75 | 0.3 | 0.6 | 0.6 |
+| CA_n3-n28-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n28-n78 | - | 0.2 | 0.5 |
+| CA_n3-n28-n79 | - | 0.2 | 0.5 |
+| CA_n3-n39-n41 | 0.2 | 0.2 | 0.24 / 0.75 |
+| CA_n3-n39-n79 | - | - | 0.5 |
+| CA_n3-n40-n78 | 0.2 | - | 0.5 |
+| CA_n3-n40-n105 | - | - | 0.3 |
+| CA_n3-n67-n78 | - | 0.2 | 0.5 |
+| CA_n3-n77-n79 | 0.2 | 0.5 | - |
+| CA_n3-n78-n79 | 0.2 | 0.5 | 0.5 |
+| CA_n3-n40-n41 | - | - | 01 / 0.52 |
+| CA_n3-n40-n79 | - | - | 0.5 |
+| CA_n3-n41-n71 | - | - | 0.3 |
+| CA_n3-n41-n77 | 0.2 | 01 / 0.52 | 0.5 |
+| CA_n3-n41-n78 | 0.2 | 01 / 0.52 | 0.5 |
+| CA_n3-n41-n79 | - | 0.5 | 0.5 |
+| CA_n3-n71-n77 | 0.2 | 0.3 | 0.5 |
+| CA_n3-n71-n78 | 0.2 | 0.3 | 0.5 |
+| CA_n3-n75-n78 | 0.2 | - | 0.5 |
+| CA_n3-n78-n105 | 0.2 | 0.5 | 0.3 |
+| CA_n5-n7-n28 | - | - | 0.2 |
+| CA_n5-n7-n40 | 0.2 | 0.3 | 0.7 |
+| CA_n5-n7-n66 | - | 0.5 | 0.5 |
+| CA_n5-n7-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n5-n7-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n5-n12-n77 | 0.5 | 0.3 | 0.5 |
+| CA_n5-n14-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n5-n25-n29 | 0.5 | - | 0.3 |
+| CA_n5-n25-n41 | 0.2 | - | - |
+| CA_n5-n25-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n5-n25-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n5-n28-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n5-n28-n79 | 0.2 | 0.2 | 0.5 |
+| CA_n5-n28-n105 | 0.2 | 0.7 | 0.7 |
+| CA_n5-n29-n66 | 0.5 | 0.3 | - |
+| CA_n5-n29-n77 | 0.5 | 0.3 | 0.5 |
+| CA_n5-n30-n66 | - | 0.5 | 0.4 |
+| CA_n5-n30-n77 | 0.2 | - | 0.5 |
+| CA_n5-n40-n78 | 0.2 | 0.4 | 0.5 |
+| CA_n5-n40-n105 | 0.2 | 0.8 | 0.2 |
+| CA_n5-n41-n66 | 0.2 | 0.55 / 16 | 0.5 |
+| CA_n5-n41-n77 | 0.2 | - | 0.5 |
+| CA_n5-n48-n66 | - | 0.5 | 0.2 |
+| CA_n5-n48-n77 | 0.2 | 0.5 | 0.5 |
+| CA_n5-n66-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n5-n66-n78 | 0.5 | 0.2 | 0.5 |
+| CA_n5-n78-n79 | 0.2 | 0.5 | - |
+| CA_n5-n78-n105 | 0.2 | 0.5 | 0.2 |
+| CA_n7-n8-n28 | - | 0.2 | 0.1 |
+| CA_n7-n8-n40 | - | 0.2 | 0.5 |
+| CA_n7-n8-n78 | - | 0.2 | 0.5 |
+| CA_n7-n12-n71 | 0.2 | 0.8 | 0.8 |
+| CA_n7-n12-n77 | 0.2 | 0.5 | 0.5 |
+| CA_n7-n20-n28 | - | - | 0.2 |
+| CA_n7-n20-n67 | - | 0.2 | 0.2 |
+| CA_n7-n20-n75 | - | 0.2 | 0.2 |
+| CA_n7-n20-n78 | - | - | 0.5 |
+| CA_n7-n25-n66 | 0.5 | 0.3 | 0.5 |
+| CA_n7-n25-n71 | 0.3 | 0.3 | - |
+| CA_n7-n25-n77 | 0.5 | 0.2 | 0.5 |
+| CA_n7-n25-n78 | 0.5 | 0.2 | 0.5 |
+| CA_n7-n26-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n7-n28-n40 | - | - | 0.5 |
+| CA_n7-n28-n75 | - | 0.2 | 0.2 |
+| CA_n7-n28-n78 | - | - | 0.5 |
+| CA_n7-n29-n66 | 0.5 | - | 0.5 |
+| CA_n7-n29-n77 | 0.2 | 0.5 | 0.5 |
+| CA_n7-n40-n79 | - | 0.5 | 0.5 |
+| CA_n7-n40-n105 | - | 0.5 | 0.2 |
+| CA_n7-n46-n78 | 0.5 | - | 0.5 |
+| CA_n7-n66-n71 | 0.5 | 0.5 | 0.1 |
+| CA_n7-n66-n77 | 0.5 | 0.5 | 0.5 |
+| CA_n7-n66-n78 | 0.5 | 0.5 | 0.5 |
+| CA_n7-n67-n78 | - | - | 0.5 |
+| CA_n7-n71-n77 | - | 0.2 | 0.5 |
+| CA_n7-n75-n78 | - | - | 0.5 |
+| CA_n7-n78-n79 | 0.5 | 0.5 | 0.5 |
+| CA_n7-n78-n102 | - | 0.5 | 0.5 |
+| CA_n7-n78-n105 | - | 0.5 | 0.2 |
+| CA_n8-n20-n28 | 0.3 | 0.2 | 0.2 |
+| CA_n8-n28-n40 | 0.2 | 0.2 | - |
+| CA_n8-n28-n75 | 0.2 | 0.2 | - |
+| CA_n8-n28-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n8-n28-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n8-n39-n40 | - | 0.3 | 0.3 |
+| CA_n8-n39-n41 | - | 0.24 | 0.2 |
+| CA_n8-n40-n77 | 0.2 | 0.4 | 0.5 |
+| CA_n8-n40-n78 | 0.2 | 0.4 | 0.5 |
+| CA_n8-n40-n79 | - | - | 0.5 |
+| CA_n8-n41-n78 | 0.2 | 0.4 | 0.5 |
+| CA_n8-n41-n79 | - | 0.5 | 0.5 |
+| CA_n8-n78-n79 | 0.2 | 0.5 | 0.5 |
+| CA_n12-n25-n66 | 0.5 | 0.3 | 0.3 |
+| CA_n12-n30-n66 | 0.5 | 0.5 | 0.4 |
+| CA_n12-n30-n77 | 0.2 | - | 0.5 |
+| CA_n12-n41-n66 | 0.1 | 0.5 | 0.5 |
+| CA_n12-n41-n77 | 0.5 | 0.2 | 0.5 |
+| CA_n12-n66-n77 | 0.5 | 0.5 | 0.5 |
+| CA_n12-n71-n77 | 0.8 | 0.8 | 0.5 |
+| CA_n13-n25-n66 | - | 0.3 | 0.3 |
+| CA_n13-n25-n77 | - | 0.2 | 0.5 |
+| CA_n13-n66-n77 | 0.3 | 0.3 | 0.5 |
+| CA_n14-n30-n66 | - | 0.5 | 0.4 |
+| CA_n14-n30-n77 | 0.2 | - | 0.5 |
+| CA_n14-n66-n77 | 0.2 | 0.5 | 0.5 |
+| CA_n18-n28-n77 | - | - | 0.5 |
+| CA_n18-n40-n77 | 0.2 | 0.4 | 0.5 |
+| CA_n18-n41-n77 | - | - | 0.5 |
+| CA_n20-n28-n75 | - | 0.2 | - |
+| CA_n20-n28-n78 | - | 0.2 | 0.5 |
+| CA_n20-n41-n71 | - | - | 0.2 |
+| CA_n20-n41-n77 | 0.2 | - | 0.5 |
+| CA_n20-n41-n78 | - | - | 0.5 |
+| CA_n20-n67-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n20-n71-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n20-n75-n78 | - | 0.2 | 0.5 |
+| CA_n24-n41-n48 | - | - | 0.5 |
+| CA_n24-n41-n77 | 0.2 | - | 0.5 |
+| CA_n24-n48-n77 | 0.2 | 0.5 | 0.5 |
+| CA_n25-n29-n66 | 0.3 | - | 0.3 |
+| CA_n25-n29-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n25-n38-n78 | 0.2 | 0.4 | 0.5 |
+| CA_n25-n41-n66 | 0.3 | 0.55 / 16 | 0.3 |
+| CA_n25-n41-n71 | - | - | 0.2 |
+| CA_n25-n41-n78 | 0.2 | 0.5 | 0.5 |
+| CA_n25-n48-n66 | 0.3 | 0.5 | 0.3 |
+| CA_n25-n66-n71 | 0.3 | 0.3 | 0.3 |
+| CA_n25-n66-n78 | 0.3 | 0.3 | 0.5 |
+| CA_n25-n66-n77 | 0.3 | 0.3 | 0.5 |
+| CA_n25-n66-n85 | 0.3 | 0.3 | 0.5 |
+| CA_n25-n71-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n25-n71-n78 | 0.2 | 0.3 | 0.5 |
+| CA_n25-n71-n85 | - | 0.8 | 0.8 |
+| CA_n25-n77-n85 | 0.2 | 0.5 | 0.2 |
+| CA_n26-n29-n66 | 0.5 | 0.3 | - |
+| CA_n26-n29-n70 | 0.5 | 0.3 | - |
+| CA_n26-n48-n66 | - | 0.5 | 0.2 |
+| CA_n26-n48-n70 | - | 0.5 | 0.2 |
+| CA_n26-n66-n71 | 0.5 | - | 0.3 |
+| CA_n26-n66-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n26-n70-n71 | 0.5 | - | 0.3 |
+| CA_n26-n70-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n28-n38-n78 | 0.2 | - | 0.5 |
+| CA_n28-n39-n40 | - | 0.3 | 0.3 |
+| CA_n28-n39-n41 | - | 0.2 | 0.2 |
+| CA_n28-n39-n79 | 0.2 | - | 0.5 |
+| CA_n28-n40-n75 | - | - | - |
+| CA_n28-n40-n77 | - | - | 0.5 |
+| CA_n28-n40-n78 | - | - | 0.5 |
+| CA_n28-n40-n79 | 0.2 | - | 0.5 |
+| CA_n28-n41-n75 | 0.2 | - | - |
+| CA_n28-n41-n75 | 0.2 | - | - |
+| CA_n28-n41-n77 | 0.2 | - | 0.5 |
+| CA_n28-n41-n78 | 0.2 | - | 0.5 |
+| CA_n28-n41-n79 | 0.2 | 0.5 | 0.5 |
+| CA_n28-n46-n78 | 0.2 | - | 0.5 |
+| CA_n28-n75-n78 | 0.2 | - | 0.5 |
+| CA_n28-n77-n79 | 0.2 | 0.5 | - |
+| CA_n28-n78-n79 | 0.2 | 0.5 | - |
+| CA_n28-n78-n102 | 0.2 | 0.5 | 0.5 |
+| CA_n29-n30-n66 | - | 0.5 | 0.4 |
+| CA_n29-n30-n77 | 0.2 | - | 0.5 |
+| CA_n29-n66-n71 | 0.5 | 0.3 | 0.7 |
+| CA_n29-n66-n77 | 0.5 | 0.5 | 0.5 |
+| CA_n29-n70-n71 | 0.2 | 0.2 | 0.2 |
+| CA_n30-n66-n77 | 0.5 | 0.4 | 0.5 |
+| CA_n34-n39-n40 | 0.3 | 0.3 | 0.3 |
+| CA_n34-n39-n41 | 0.3 | 0.3 | 0.2 |
+| CA_n34-n40-n41 | 0.3 | 0.3 | - |
+| CA_n34-n41-n78 | - | 0.5 | 0.5 |
+| CA_n39-n40-n41 | 0.3 | 0.6 | 0.6 |
+| CA_n39-n40-n79 | 0.3 | 0.3 | 0.5 |
+| CA_n39-n41-n79 | 0 | 0.5 | 0.8 |
+| CA_n40-n41-n75 | - | 0.5 | - |
+| CA_n40-n41-n77 | 0.4 | - | 0.5 |
+| CA_n40-n41-n79 | 08 | 0.58 | 0.5 |
+| CA_n40-78-n79 | 0.4 | 0.5 | 0.5 |
+| CA_n40-n78-n105 | 0.4 | 0.5 | 0.2 |
+| CA_n41-n66-n71 | 0.51 / 12 | 0.5 | - |
+| CA_n41-n66-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n41-n66-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n41-n66-n85 | 0.51 / 12 | 0.5 | 0.5 |
+| CA_n41-n70-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n41-n71-n77 | - | 0.2 | 0.5 |
+| CA_n41-n71-n78 | - | 0.2 | 0.5 |
+| CA_n41-n71-n85 | - | 0.8 | 0.8 |
+| CA_n41-n74-n77 | - | - | 0.5 |
+| CA_n41-n75-n78 | - | - | 0.5 |
+| CA_n41-n77-n79 | 0.5 | 0.5 | 0.5 |
+| CA_n41-n77-n85 | 0.5 | 0.5 | 0.5 |
+| CA_n46-n48-n96 | 0.5 | 0.5 | 0.6 |
+| CA_n48-n66-n70 | 0.5 | 0.2 | 0.2 |
+| CA_n46-n78-n102 | - | 0.5 | - |
+| CA_n48-n66-n71 | 0.2 | 0.2 | 0.2 |
+| CA_n48-n66-n77 | 0.5 | 0.2 | 0.5 |
+| CA_n48-n70-n71 | 0.2 | 0.2 | 0.2 |
+| CA_n48-n70-n77 | 0.5 | 0.2 | 0.5 |
+| CA_n48-n71-n77 | 0.5 | 0.2 | 0.5 |
+| CA_n66-n70-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n66-n71-n77 | 0.2 | 0.2 | 0.5 |
+| CA_n66-n71-n78 | 0.2 | 0.2 | 0.5 |
+| CA_n66-n71-n85 | - | 0.8 | 0.8 |
+| CA_n66-n77-n85 | 0.5 | 0.5 | 0.5 |
+| CA_n70-n71-n77 | 0.2 | 0.2 | 0.5 |
+| NOTE 1: Applicable for the frequency range of 2515-2690 MHz.NOTE 2: Applicable for the frequency range of 2496-2515 MHz.NOTE 3: Void.NOTE 4: Void.NOTE 5: The requirement is applied for UE transmitting on the frequency range of 2545 - 2690 MHz.NOTE 6: The requirement is applied for UE transmitting on the frequency range of 2496 - 2545 MHz.NOTE 7: Void.NOTE 8: Void.NOTE 9:  “-” denotes ΔRIB,c = 0.NOTE 10: The component band order in the configuration should be listed by the order of NR bands, such as for CA_n1-n3-n8 the band order from left to right is n1, n3 and n8. |  |  |  |
+
+##### 7.3A.3.2.4 ΔRIB,c for four bands
+
+Table 7.3A.3.2.4-1: ΔRIB,c due to CA (four bands)
+
+| Inter-band CA combination | ΔRIB,c for NR bands (dB)7 |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | Component band in order of bands in configuration8 |  |  |  |
+| CA_n1-n3-n5-n28 | 0.2 | 0.2 | 0.2 | 0.2 |
+| CA_n1-n3-n5-n78 | 0.2 | 0.2 | - | 0.5 |
+| CA_n1-n3-n7-n8 | - | - | - | 0.2 |
+| CA_n1-n3-n7-n26 | - | - | - | 0.2 |
+| CA_n1-n3-n7-n28 | - | - | - | 0.2 |
+| CA_n1-n3-n7-n40 | 0.2 | 0.2 | 0.2 | 0.3 |
+| CA_n1-n3-n7-n67 | - | - | - | 0.2 |
+| CA_n1-n3-n7-n77 | 0.3 | 0.3 | 0.3 | 0.5 |
+| CA_n1-n3-n7-n78 | 0.3 | 0.3 | 0.3 | 0.5 |
+| CA_n1-n3-n7-n79 | 0.2 | - | 0.2 | 0.5 |
+| CA_n1-n3-n7-n105 | 0.2 | - | 0.2 | 0.3 |
+| CA_n1-n3-n8-n41 | 0.2 | 0.2 | 0.2 | 05 / 0.56 |
+| CA_n1-n3-n8-n77 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n8-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n8-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n18-n28 | - | - | - | 0.2 |
+| CA_n1-n3-n18-n41 | - | - | - | 05 / 0.56 |
+| CA_n1-n3-n18-n77 | 0.2 | 0.2 | - | 0.5 |
+| CA_n1-n3-n20-n41 | - | - | - | 05 / 0.56 |
+| CA_n1-n3-n20-n67 | - | - | - | 0.2 |
+| CA_n1-n3-n20-n71 | 0.2 | 0.2 | 0.4 | 0.4 |
+| CA_n1-n3-n20-n75 | - | - | - | 0.2 |
+| CA_n1-n3-n20-n77 | 0.2 | 0.2 | - | 0.5 |
+| CA_n1-n3-n20-n78 | 0.2 | 0.2 | - | 0.5 |
+| CA_n1-n3-n26-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n28-n38 | - | - | 0.2 | - |
+| CA_n1-n3-n28-n40 | - | - | 0.2 | 0.3 |
+| CA_n1-n3-n28-n41 | - | - | 0.2 | 05 / 0.56 |
+| CA_n1-n3-n28-n75 | - | - | 0.2 | 0.2 |
+| CA_n1-n3-n28-n77 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n28-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n28-n79 | - | - | 0.2 | 0.5 |
+| CA_n1-n3-n40-n41 | - | - | - | 05 / 0.56 |
+| CA_n1-n3-n40-n77 | 0.3 | 0.3 | 0.3 | 0.5 |
+| CA_n1-n3-n40-n78 | 0.2 | 0.2 | 0.3 | 0.5 |
+| CA_n1-n3-n40-n105 | 0.3 | 0.3 | 0.3 | 0.3 |
+| CA_n1-n3-n41-n71 | - | - | 05 / 0.56 | - |
+| CA_n1-n3-n41-n77 | 0.2 | 0.2 | 05 / 0.56 | 0.5 |
+| CA_n1-n3-n41-n78 | 0.2 | 0.2 | 05 / 0.56 | 0.5 |
+| CA_n1-n3-n71-n77 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n71-n78 | - | - | 0.2 | 0.5 |
+| CA_n1-n3-n67-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n75-n78 | - | - | - | 0.5 |
+| CA_n1-n3-n77-n79 | 0.2 | 0.2 | 0.5 | 0.5 |
+| CA_n1-n5-n7-n40 | 0.2 | 0.2 | 0.3 | 0.3 |
+| CA_n1-n5-n7-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n5-n7-n105 | 0.2 | 0.2 | 0.2 | 0.3 |
+| CA_n1-n5-n28-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n5-n28-n79 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n5-n40-n78 | 0.2 | 0.2 | 0.4 | 0.5 |
+| CA_n1-n5-n40-n105 | 0.2 | 0.2 | 0.3 | 0.3 |
+| CA_n1-n5-n78-n79 | 0.2 | 0.2 | 0.5 | 0.5 |
+| CA_n1-n5-n78-n105 | 0.2 | 0.2 | 0.5 | 0.3 |
+| CA_n1-n7-n8-n40 | - | - | 0.3 | 0.8 |
+| CA_n1-n7-n8-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n7-n20-n28 | - | - | 0.2 | 0.2 |
+| CA_n1-n7-n20-n67 | - | - | 0.2 | 0.2 |
+| CA_n1-n7-n20-n75 | - | - | 0.2 | 0.2 |
+| CA_n1-n7-n26-n78 | 0.2 | 0.2 | - | - |
+| CA_n1-n7-n28-n38 | - | - | 0.2 | - |
+| CA_n1-n7-n28-n75 | - | - | 0.2 | 0.2 |
+| CA_n1-n7-n28-n78 | 0.2 | 0.2 | - | - |
+| CA_n1-n7-n40-n78 | 0.2 | - | 0.4 | 0.5 |
+| CA_n1-n7-n40-n79 | 0.2 | - | 0.4 | 0.5 |
+| CA_n1-n7-n40-n105 | 0.2 | - | 0.4 | 0.3 |
+| CA_n1-n7-n67-n78 | 0.2 | 0.2 | - | - |
+| CA_n1-n7-n75-n78 | - | - | - | 0.5 |
+| CA_n1-n7-n78-n105 | 0.2 | 0.2 | 0.5 | 0.3 |
+| CA_n1-n8-n28-n40 | - | 0.2 | 0.2 | - |
+| CA_n1-n8-n40-n78 | 0.2 | - | 0.4 | 0.5 |
+| CA_n1-n8-n40-n79 | 0.2 | - | 0.4 | 0.5 |
+| CA_n1-n8-n41-n78 | 0.2 | - | 0.4 | 0.5 |
+| CA_n1-n8-n78-n79 | 0.3 | 0.3 | 0.5 | - |
+| CA_n1-n18-n28-n41 | 0.2 | - | 0.2 | - |
+| CA_n1-n18-n28-n77 | 0.2 | - | 0.2 | 0.5 |
+| CA_n1-n18-n41-n77 | 0.2 | - | - | 0.5 |
+| CA_n1-n20-n28-n78 | - | 0.2 | 0.2 | 0.5 |
+| CA_n1-n20-n41-n71 | 0.2 | 0.4 | 05 / 0.56 | 0.4 |
+| CA_n1-n20-n41-n77 | 0.2 | - | 05 / 0.56 | 0.5 |
+| CA_n1-n20-n41-n78 | 0.2 | - | 05 / 0.56 | 0.5 |
+| CA_n1-n20-n67-n78 | - | 0.2 | 0.2 | 0.5 |
+| CA_n1-n20-n71-n78 | 0.2 | - | 0.2 | 0.5 |
+| CA_n1-n20-n75-n78 | 0.2 | - | 0.2 | 0.5 |
+| CA_n1-n28-n38-n78 | 0.2 | 0.2 | - | 0.5 |
+| CA_n1-n28-n40-n41 | - | 0.2 | - | - |
+| CA_n1-n28-n40-n77 | - | 0.2 | - | 0.5 |
+| CA_n1-n28-n40-n78 | - | 0.2 | - | 0.5 |
+| CA_n1-n28-n40-n79 | - | 0.2 | - | 0.5 |
+| CA_n1-n28-n41-n77 | 0.2 | 0.2 | - | 0.5 |
+| CA_n1-n28-n41-n79 | - | 0.2 | 0.5 | 0.5 |
+| CA_n1-n28-n75-n78 | - | 0.2 | - | 0.5 |
+| CA_n1-n28-n77-n79 | 0.2 | 0.2 | 0.5 | 0.5 |
+| CA_n1-n28-n78-n79 | 0.2 | 0.2 | 0.5 | 0.5 |
+| CA_n1-n40-n78-n79 | - | 0.5 | 0.5 | 0.5 |
+| CA_n1-n41-n71-n77 | 0.2 | 05 / 0.56 | 0.2 | 0.5 |
+| CA_n1-n41-n71-n78 | 0.2 | 0.5 | 0.2 | 0.5 |
+| CA_n1-n41-n77-n79 | 0.2 | 0.5 | 0.5 | 0.5 |
+| CA_n2-n5-n30-n66 | 0.4 | - | 0.5 | 0.4 |
+| CA_n2-n5-n30-n77 | 0.2 | 0.2 | - | 0.5 |
+| CA_n2-n5-n48-n66 | 0.2 | - | 0.5 | 0.2 |
+| CA_n2-n5-n48-n77 | 0.2 | - | 0.5 | 0.5 |
+| CA_n2-n5-n66-n77 | 0.3 | - | 0.3 | 0.5 |
+| CA_n2-n12-n30-n66 | 0.4 | 0.5 | 0.5 | 0.4 |
+| CA_n2-n12-n30-n77 | 0.2 | 0.2 | - | 0.5 |
+| CA_n2-n12-n66-n77 | 0.2 | 0.5 | 0.5 | 0.5 |
+| CA_n2-n14-n30-n66 | 0.4 | - | 0.5 | 0.4 |
+| CA_n2-n14-n30-n77 | 0.2 | 0.2 | - | 0.5 |
+| CA_n2-n14-n66-n77 | 0.2 | 0.2 | 0.5 | 0.5 |
+| CA_n2-n29-n30-n66 | 0.4 | - | 0.5 | 0.4 |
+| CA_n2-n29-n30-n77 | 0.2 | 0.2 | - | 0.5 |
+| CA_n2-n30-n66-n77 | 0.2 | 0.5 | 0.4 | 0.5 |
+| CA_n2-n41-n66-n71 | 0.3 | 0.51 / 12 | 0.5 | 0.3 |
+| CA_n2-n48-n66-n77 | 0.3 | 0.5 | 0.3 | 0.5 |
+| CA_n2-n66-n71-n77 | 0.3 | 0.5 | - | 0.5 |
+| CA_n2-n66-n71-n78 | 0.3 | 0.5 | - | 0.5 |
+| CA_n3-n5-n7-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n5-n28-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n5-n28-n79 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n7-n8-n40 | 0.2 | 0.2 | 0.2 | 0.3 |
+| CA_n3-n7-n8-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n7-n20-n28 | - | 0.5 | - | - |
+| CA_n3-n7-n20-n75 | 0.2 | 0.2 | 0.2 | 0.2 |
+| CA_n3-n7-n20-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n7-n26-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n7-n28-n75 | 0.2 | 0.2 | 0.2 | 0.2 |
+| CA_n3-n7-n28-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n7-n40-n78 | 0.2 | 0.2 | 0.3 | 0.5 |
+| CA_n3-n7-n40-n79 | 0.2 | 0.2 | 0.3 | 0.5 |
+| CA_n3-n7-n40-n105 | 0.2 | 0.2 | 0.2 | 0.3 |
+| CA_n3-n7-n67-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n7-n75-n78 | - | - | - | 0.5 |
+| CA_n3-n7-n78-n105 | 0.2 | 0.2 | 0.5 | 0.3 |
+| CA_n3-n8-n28-n40 | - | 0.2 | 0.2 | - |
+| CA_n3-n8-n40-n78 |  | 0.2 | 0.4 | 0.5 |
+| CA_n3-n8-n40-n79 |  | - | - | 0.5 |
+| CA_n3-n8-n41-n79 | - | 0.2 | 0.5 | 0.5 |
+| CA_n3-n18-n28-n41 | - | - | - | 05 / 0.56 |
+| CA_n3-n18-n28-n77 | 0.2 | - | 0.2 | 0.5 |
+| CA_n3-n18-n41-n77 | 0.2 | - | 05 / 0.56 | 0.5 |
+| CA_n3-n20-n28-n78 | 0.2 | - | - | 0.5 |
+| CA_n3-n20-n41-n71 | 0.2 | 0.4 | 05 / 0.56 | 0.4 |
+| CA_n3-n20-n41-n77 | 0.2 | - | 05 / 0.56 | 0.5 |
+| CA_n3-n20-n41-n78 | 0.2 | - | 05 / 0.56 | 0.5 |
+| CA_n3-n20-n67-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n20-n71-n78 | 0.2 | - | - | 0.5 |
+| CA_n3-n20-n75-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n28-n40-n41 | - | - | - | 05 / 0.56 |
+| CA_n3-n28-n40-n77 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n28-n40-n78 | - | 0.2 | - | 0.5 |
+| CA_n3-n28-n40-n79 | - | 0.2 | - | 0.5 |
+| CA_n3-n28-n41-n77 | 0.5 | 0.2 | 01 / 0.52 | 0.5 |
+| CA_n3-n28-n41-n78 | 0.5 | 0.2 | 01 / 0.52 | 0.5 |
+| CA_n3-n28-n41-n79 | - | 0.2 | 0.5 | 0.5 |
+| CA_n3-n28-n75-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n3-n28-n77-n79 | 0.2 | 0.2 | 0.5 | 0.5 |
+| CA_n3-n40-n78-n79 | - | - | 0.5 | 0.5 |
+| CA_n3-n41-n71-n77 | 0.2 | 05 / 0.56 | 0.2 | 0.5 |
+| CA_n3-n41-n71-n78 | 0.5 | 01 / 0.52 | 0.2 | 0.5 |
+| CA_n3-n41-n77-n79 | 0.2 | 0.5 | 0.5 | 0.5 |
+| CA_n5-n7-n40-n78 | 0.2 | 0.2 | 0.5 | 0.5 |
+| CA_n5-n7-n40-n105 | 0.2 | 0.2 | 0.5 | 0.3 |
+| CA_n5-n7-n66-n77 | 0.2 | 0.5 | 0.5 | 0.5 |
+| CA_n5-n7-n78-n105 | 0.2 | 0.2 | 0.5 | 0.3 |
+| CA_n5-n14-n30-n66 | - | - | 0.5 | 0.4 |
+| CA_n5-n25-n29-n66 | 0.5 | - | 0.3 | - |
+| CA_n5-n25-n66-n77 | 0.5 | 0.3 | 0.3 | 0.5 |
+| CA_n5-n25-n66-n78 | 0.5 | 0.3 | 0.3 | 0.5 |
+| CA_n5-n28-n78-n79 | 0.2 | 0.2 | 0.5 | 0.5 |
+| CA_n5-n30-n66-n77 | 0.2 | 0.4 | 0.4 | 0.5 |
+| CA_n5-n40-n78-n105 | 0.2 | 0.4 | 0.5 | 0.3 |
+| CA_n5-n48-n66-n77 | 0.2 | 0.5 | 0.2 | 0.5 |
+| CA_n7-n8-n28-n40 | - | 0.2 | 0.2 | - |
+| CA_n7-n8-n40-n78 | - | 0.2 | 0.4 | 0.5 |
+| CA_n7-n8-n40-n79 | - | 0.2 | 0.5 | 0.5 |
+| CA_n7-n12-n25-n66 | 0.5 | 0.5 | 0.3 | 0.5 |
+| CA_n7-n20-n28-n78 | - | 0.2 | 0.2 | - |
+| CA_n7-n20-n67-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n7-n20-n75-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n7-n25-n29-n77 | 0.5 | 0.2 | 0.2 | 0.5 |
+| CA_n7-n25-n66-n71 | 0.5 | 0.3 | 0.5 | 0.3 |
+| CA_n7-n25-n66-n77 | 0.5 | 0.6 | 0.6 | 0.8 |
+| CA_n7-n25-n66-n78 | 0.5 | 0.6 | 0.6 | 0.8 |
+| CA_n7-n28-n40-n78 | - | - | 0.5 | 0.5 |
+| CA_n7-n28-n40-n79 | - | - | 0.5 | 0.5 |
+| CA_n7-n28-n75-n78 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n7-n29-n66-n77 | 0.5 | 0.5 | 0.5 | 0.5 |
+| CA_n7-n40-n78-n79 | - | 0.5 | 0.5 | 0.5 |
+| CA_n7-n40-n78-n105 | 0.5 | 0.5 | 0.8 | 0.3 |
+| CA_n7-n66-n71-n77 | 0.5 | 0.5 | 0.2 | 0.5 |
+| CA_n8-n20-n28-n75 | 0.3 | 0.2 | 0.2 | - |
+| CA_n8-n28-n40-n78 | 0.2 | 0.2 | - | 0.5 |
+| CA_n8-n28-n40-n79 | 0.2 | 0.2 | - | 0.5 |
+| CA_n8-n39-n41-n79 | 0.2 | - | 0.5 | 0.5 |
+| CA_n8-n40-n78-n79 | 0.2 | 0.4 | 0.5 | 0.5 |
+| CA_n12-n30-n66-n77 | 0.5 | 0.5 | 0.5 | 0.5 |
+| CA_n13-n25-n66-n77 | 0.3 | 0.3 | 0.3 | 0.5 |
+| CA_n14-n30-n66-n77 | 0.2 | 0.5 | 0.5 | 0.5 |
+| CA_n18-n28-n41-n77 | - | 0.2 | 05 / 0.56 | 0.5 |
+| CA_n20-n41-n71-n78 | 0.4 | - | 0.4 | 0.5 |
+| CA_n25-n29-n66-n77 | 0.3 | 0.5 | 0.5 | 0.5 |
+| CA_n25-n38-n66-n78 | 0.3 | 0.4 | 0.3 | 0.5 |
+| CA_n25-n41-n66-n71 | 0.3 | 0.5 | 0.5 | - |
+| CA_n25-n41-n66-n77 | 0.3 | 0.53 / 1.04 | 0.3 | 0.5 |
+| CA_n25-n41-n66-n78 | 0.3 | 0.53 / 1.04 | 0.3 | 0.5 |
+| CA_n25-n41-n66-n85 | 0.3 | 0.5 | 0.5 | - |
+| CA_n25-n41-n71-n77 | - | - | 0.2 | 0.5 |
+| CA_n25-n41-n77-n85 | - | - | 0.5 | 0.2 |
+| CA_n25-n41-n71-n78 | - | - | 0.2 | 0.5 |
+| CA_n25-n41-n71-n85 | 0.3 | 0.5 | - | 0.2 |
+| CA_n25-n66-n71-n77 | 0.3 | 0.3 | 0.3 | 0.5 |
+| CA_n25-n66-n71-n78 | 0.3 | 0.3 | 0.3 | 0.5 |
+| CA_n25-n66-n71-n85 | 0.3 | 0.3 | 0.8 | 0.8 |
+| CA_n25-n66-n77-n85 | 0.2 | 0.5 | 0.5 | 0.5 |
+| CA_n28-n40-n78-n79 | 0.2 | - | 0.5 | 0.5 |
+| CA_n28-n41-n75-n78 | 0.2 | - | - | 0.5 |
+| CA_n28-n41-n77-n79 | 0.2 | 0.5 | 0.5 | 0.5 |
+| CA_n29-n30-n66-n77 | 0.5 | 0.5 | 0.5 | 0.5 |
+| CA_n29-n66-n70-n71 | 0.5 | 0.3 | 0.2 | 0.7 |
+| CA_n41-n66-n70-n78 | - | 0.2 | 0.2 | 0.5 |
+| CA_n41-n66-n71-n77 | 03 / 0.54 | 0.5 | 0.2 | 0.5 |
+| CA_n41-n66-n71-n78 | 03 / 0.54 | 0.5 | 0.2 | 0.5 |
+| CA_n41-n66-n71-n85 | 0.5 | 0.3 | - | 0.2 |
+| CA_n41-n66-n77-n85 | 03 / 0.54 | 0.5 | 0.5 | 0.2 |
+| CA_n48-n66-n70-n77 | 0.5 | 0.2 | 0.2 | 0.5 |
+| NOTE 1: Applicable for the frequency range of 2515-2690 MHz. NOTE 2: Applicable for the frequency range of 2496-2515 MHzNOTE 5: The requirement is applied for UE transmitting on the frequency range of 2545 - 2690 MHz.NOTE 6: The requirement is applied for UE transmitting on the frequency range of 2496 - 2545 MHzNOTE 7:  “-” denotes ΔRIB,c = 0.NOTE 8: The component band order in the configuration should be listed by the order of NR bands, such as for CA_n1-n3-n7-n78 the band order from left to right is n1 n3, n7 and n78. |  |  |  |  |
+
+##### 7.3A.3.2.5 ΔRIB,c for five bands
+
+Table 7.3A.3.2.5-1: ΔRIB,c due to CA (five bands)
+
+| Inter-band CA combination |  | ΔRIB,c for NR bands (dB)1 |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | Component band in order of bands in configuration2 |  |  |  |  |  |  |  |  |  |
+| CA_n1-n3-n5-n7-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n1-n3-n5-n28-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n1-n3-n7-n20-n67 |  | - |  | 0.3 |  | 0.5 |  | - |  | 0.2 |  |
+| CA_n1-n3-n7-n20-n75 |  | - |  | 0.3 |  | 0.5 |  | - |  | 0.2 |  |
+| CA_n1-n3-n7-n26-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n1-n3-n7-n28-n38 |  | - |  | - |  | - |  | 0.2 |  | - |  |
+| CA_n1-n3-n7-n28-n75 |  | - |  | 0.3 |  | 0.5 |  | - |  | 0.2 |  |
+| CA_n1-n3-n7-n28-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n1-n3-n7-n40-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.3 |  | 0.5 |  |
+| CA_n1-n3-n7-n67-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n1-n3-n7-n75-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n1-n3-n7-n78-n105 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.3 |  |
+| CA_n1-n3-n8-n41-n78 |  | 0.2 |  | 0.5 |  | 0.2 |  | 03/0.54 |  | 0.5 |  |
+| CA_n1-n3-n20-n41-n71 |  | 0.2 |  | 0.2 |  | 0.4 |  | 05 / 0.56 |  | 0.4 |  |
+| CA_n1-n3-n20-n41-n77 |  | 0.2 |  | 0.2 |  | - |  | 05 / 0.56 |  | 0.5 |  |
+| CA_n1-n3-n20-n41-n78 |  | 0.2 |  | 0.2 |  | - |  | 05 / 0.56 |  | 0.5 |  |
+| CA_n1-n3-n20-n71-n78 |  | 0.2 |  | 0.2 |  | - |  | 05 / 0.56 |  | 0.5 |  |
+| CA_n1-n3-n20-n75-n78 |  | 0.2 |  | 0.2 |  | - |  | 0.2 |  | 0.5 |  |
+| CA_n1-n3-n28-n40-n41 |  | - |  | - |  | 0.2 |  | - |  | 03/0.54 |  |
+| CA_n1-n3-n28-n40-n77 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.3 |  | 0.5 |  |
+| CA_n1-n3-n28-n41-n77 |  | 0.2 |  | 0.5 |  | 0.2 |  | 03/0.54 |  | 0.5 |  |
+| CA_n1-n3-n28-n41-n79 |  | - |  | - |  | 0.2 |  | 0.5 |  | 0.5 |  |
+| CA_n1-n3-n28-n75-n78 |  | 0.2 |  | 0.2 |  | - |  | 0.2 |  | 0.5 |  |
+| CA_n1-n3-n28-n77-n79 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.5 |  |
+| CA_n1-n3-n40-n78-n79 |  | 0.2 |  | 0.2 |  | 0.3 |  | 0.5 |  | 0.5 |  |
+| CA_n1-n3-n40-n78-n105 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.2 |  |
+| CA_n1-n3-n41-n71-n77 |  | 0.2 |  | 0.2 |  | 05 / 0.56 |  | 0.2 |  | 0.5 |  |
+| CA_n1-n3-n41-n71-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n1-n3-n41-n77-n79 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.5 |  | 0.5 |  |
+| CA_n1-n5-n7-n40-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.5 |  |
+| CA_n1-n5-n7-n40-n105 |  | 0.2 |  | 0.2 |  | 0.3 |  | 0.5 |  | 0.3 |  |
+| CA_n1-n5-n7-n78-n105 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.3 |  |
+| CA_n1-n5-n28-n78-n79 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.5 |  |
+| CA_n1-n5-n40-n78-n105 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.3 |  |
+| CA_n1-n7-n20-n28-n78 |  | 0.2 |  | - |  | 0.4 |  | 0.4 |  | 0.5 |  |
+| CA_n1-n7-n20-n67-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n1-n7-n20-n75-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n1-n7-n28-n75-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n1-n7-n40-n78-n79 |  | 0.2 |  | - |  | 0.5 |  | 0.5 |  | 0.5 |  |
+| CA_n1-n7-n40-n78-n105 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.2 |  |
+| CA_n1-n8-n40-n78-n79 |  | 0.2 |  | 0.2 |  | 0.4 |  | 0.5 |  | 0.5 |  |
+| CA_n1-n18-n28-n41-n77 |  | 0.2 |  | - |  | 0.2 |  | - |  | 0.5 |  |
+| CA_n1-n20-n41-n71-n78 |  | 0.2 |  | 0.4 |  | - |  | 0.4 |  | 0.5 |  |
+| CA_n1-n28-n40-n78-n79 |  | - |  | 0.2 |  | - |  | 0.5 |  | 0.5 |  |
+| CA_n1-n28-n41-n77-n79 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.5 |  | 0.5 |  |
+| CA_n2-n5-n30-n66-n77 |  | 0.3 |  | 0.2 |  | 0.5 |  | 0.4 |  | 0.5 |  |
+| CA_n2-n5-n48-n66-n77 |  | 0.2 |  | - |  | 0.5 |  | 0.2 |  | 0.5 |  |
+| CA_n2-n12-n30-n66-n77 |  | 0.2 |  | 0.5 |  | 0.5 |  | 0.5 |  | 0.5 |  |
+| CA_n2-n14-n30-n66-n77 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.5 |  | 0.5 |  |
+| CA_n2-n29-n30-n66-n77 |  | 0.2 |  | 0.5 |  | 0.5 |  | 0.5 |  | 0.5 |  |
+| CA_n3-n7-n20-n28-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n3-n7-n20-n67-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n3-n7-n20-n75-n78 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.2 |  | 0.5 |  |
+| CA_n3-n7-n40-n78-n105 |  | 0.2 |  | 0.5 |  | 0.2 |  | 0.5 |  | 0.2 |  |
+| CA_n3-n20-n41-n71-n78 |  | 0.2 |  | 0.4 |  | 05 / 0.56 |  | 0.4 |  | 0.5 |  |
+| CA_n3-n28-n41-n77-n79 |  | 0.5 |  | 0.2 |  | 0.5 |  | 0.5 |  | 0.5 |  |
+| CA_n5-n7-n40-n78-n105 |  | 0.2 |  | 0.2 |  | 0.5 |  | 0.5 |  | 0.3 |  |
+| NOTE 1:  “-” denotes ΔRIB,c = 0.NOTE 2: The component band order in the configuration should be listed by the order of NR bands, such as for CA_n1-n3-n5-n7-n78 the band order from left to right is n1 n3, n5, n7 and n78.NOTE 3: The requirement is applied for UE transmitting on the frequency range of 2545 - 2690 MHz.NOTE 4: The requirement is applied for UE transmitting on the frequency range of 2496 - 2545 MHz |  |  |  |  |  |  |  |  |  |  |  |
+
+##### 7.3A.3.2.6 ΔRIB,c for six bands
+
+Table 7.3A.3.2.6-1: ΔRIB,c due to CA (six bands)
+
+| Inter-band CA combination | ΔRIB,c for NR bands (dB)1 |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | Component band in order of bands in configuration2 |  |  |  |  |  |
+| CA_n1-n3-n7-n28-n38-n78 | 0.2 | 0.2 | 0.2 | 0.2 | 0.2 | 0.5 |
+| CA_n1-n3-n7-n40-n78-n105 | 0.2 | 0.2 | 0.2 | 0.3 | 0.5 | 0.3 |
+| CA_n1-n3-n20-n41-n71-n78 | 0.2 | 0.2 | 0.4 | 05 / 0.56 | 0.4 | 0.5 |
+| CA_n1-n5-n7-n40-n78-n105 | 0.2 | 0.2 | 0.2 | 0.3 | 0.5 | 0.3 |
+| NOTE 1:  “-” denotes ΔRIB,c = 0.NOTE 2: The component band order in the configuration should be listed by the order of NR bands, such as for CA_n1-n3-n5-n7-n78 the band order from left to right is n1 n3, n5, n7 and n78. |  |  |  |  |  |  |
+
+#### 7.3A.3.3 ΔRIB,c for Intra-band CA
+
+Table 7.3A.3.3-1: ΔRIB,c due to Intra-band contiguous CA
+
+| Intra-band CA | Operating Band | ΔRIB,c (dB) |
+| --- | --- | --- |
+| CA_n96E | n96 | 0.5 |
+
+Table 7.3A.3.3-2: ΔRIB,c due to Intra-band non-contiguous CA
+
+| CA configuration | SCS(PCC/SCC)(kHz) | Aggregated channel bandwidth (PCC+SCC) | ΔRIBNC (dB) | Duplex mode |
+| --- | --- | --- | --- | --- |
+| CA_n96(4A) | 15/30/60 | 320MHz | 0.5 | TDD |
+
+### 7.3A.4 Reference sensitivity exceptions due to harmonic interference for CA
+
+Sensitivity degradation is allowed for different combinations of UL configurations and DL channel bandwidths if a band in frequency range 1 is impacted by UL harmonic interference from another band which belongs to NR band in frequency range 1 of the same downlink CA configuration. Reference sensitivity exceptions and uplink/downlink configurations due to UL harmonic from a PC3 aggressor NR UL band for either single band uplink or PC3 or PC2 CA are specified in Table 7.3A.4-1. For these exceptions, only the listed test points in Table 7.3A.4-1 are needed to be tested.
+
+Table 7.3A.4-1: Reference sensitivity exceptions and uplink/downlink configurations due to UL harmonic from a PC3 aggressor NR UL band for NR DL CA FR1
+
+| UL band | DL band | UL BW | SCS of UL band | UL RB Allocation | DL BW | MSD | UL/DL fc condition | UL/DL harmonic order |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (kHz) | LCRB | (MHz) | (dB) |  |  |
+| n1 | n77 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n1 | n77 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n2 | n48 | 5 | 15 | 25 | 10 | 8.1 | NOTE 6 | UL2/DL1near-miss |
+| n2 | n77 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n2 | n77 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n2 | n78 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n2 | n78 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n3 | n77 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n3 | n77 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n3 | n78 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n3 | n78 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n3 | n104 | 5 | 15 | 6 | 20 | 11.7 | NOTE 4 | UL4/DL1direct-hit |
+| n3 | n104 | 5 | 15 | 6 | 100 | 6.1 | NOTE 4 | UL4/DL1direct-hit |
+| n5 | n411 | 5 | 15 | 8 | 10 | 10.3 | NOTE 3 | UL3/DL1direct-hit |
+| n5 | n778 | 5 | 15 | 6 | 10 | 10.5 | NOTE 4 | UL4/DL1direct-hit |
+| n5 | n778 | 5 | 15 | 6 | 100 | 2.9 | NOTE 4 | UL4/DL1direct-hit |
+| n5 | n778 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n5 | n778 | 5 | 15 | 5 | 100 | 2.9 | NOTE 5 | UL5/DL1direct-hit |
+| n5 | n78 | 5 | 15 | 6 | 10 | 10.5 | NOTE 4 | UL4/DL1direct-hit |
+| n5 | n78 | 5 | 15 | 6 | 100 | 2.9 | NOTE 4 | UL4/DL1direct-hit |
+| n7 | n79 | 5 | 15 | 25 | 10 | 9.3 | NOTE 6 | UL2/DL1near-miss |
+| n8 | n313 | N/A | N/A | N/A | N/A | N/A | NOTE 2 | UL2/DL1direct-hit |
+| n8 | n7 | 5 | 15 | 8 | 5 | 10 | NOTE 3 | UL3/DL1direct-hit |
+| n8 | n7 | 5 | 15 | 8 | 50 | 1.1 | NOTE 3 | UL3/DL1direct-hit |
+| n8 | n41 | 5 | 15 | 8 | 10 | 13 | NOTE 3 | UL3/DL1direct-hit |
+| n8 | n41 | 5 | 15 | 8 | 100 | 4.5 | NOTE 3 | UL3/DL1direct-hit |
+| n8 | n77 | 5 | 15 | 6 | 10 | 10.8 | NOTE 4 | UL4/DL1direct-hit |
+| n8 | n77 | 5 | 15 | 6 | 100 | 3.1 | NOTE 4 | UL4/DL1direct-hit |
+| n8 | n78 | 5 | 15 | 6 | 10 | 10.8 | NOTE 4 | UL4/DL1direct-hit |
+| n8 | n78 | 5 | 15 | 6 | 100 | 3.1 | NOTE 4 | UL4/DL1direct-hit |
+| n8 | n79 | 5 | 15 | 5 | 10 | 12.0 | NOTE 5 | UL5/DL1direct-hit |
+| n8 | n79 | 5 | 15 | 5 | 100 | 3.8 | NOTE 5 | UL5/DL1direct-hit |
+| n12 | n48 | 5 | 15 | 5 | 5 | 13 | NOTE 5 | UL5/DL1direct-hit |
+| n12 | n48 | 5 | 15 | 5 | 40 | 3.3 | NOTE 5 | UL5/DL1direct-hit |
+| n12 | n66 | 5 | 15 | 8 | 5 | 10 | NOTE 3 | UL3/DL1direct-hit |
+| n12 | n66 | 5 | 15 | 8 | 40 | 3.1 | NOTE 3 | UL3/DL1direct-hit |
+| n12 | n77 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n12 | n77 | 5 | 15 | 5 | 100 | 2.9 | NOTE 5 | UL5/DL1direct-hit |
+| n12 | n781 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n13 | n77 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n13 | n77 | 5 | 15 | 5 | 100 | 2.9 | NOTE 5 | UL5/DL1direct-hit |
+| n14 | n77 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n14 | n77 | 5 | 15 | 5 | 100 | 2.9 | NOTE 5 | UL5/DL1direct-hit |
+| n18 | n77 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n18 | n77 | 5 | 15 | 5 | 100 | 2.9 | NOTE 5 | UL5/DL1direct-hit |
+| n18 | n78 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n20 | n41 | 5 | 15 | 8 | 10 | 10.3 | NOTE 3 | UL3/DL1 |
+| n20 | n77 | 5 | 15 | 6 | 10 | 10.8 | NOTE 4 | UL4/DL1direct-hit |
+| n20 | n77 | 5 | 15 | 6 | 100 | 3.1 | NOTE 4 | UL4/DL1direct-hit |
+| n20 | n78 | 5 | 15 | 6 | 10 | 10.8 | NOTE 4 | UL4/DL1direct-hit |
+| n20 | n78 | 5 | 15 | 6 | 100 | 3.1 | NOTE 4 | UL4/DL1direct-hit |
+| n24 | n778 | 5 | 15 | 12 | 10 | N/A | NOTE 2 | UL2/DL1direct-hit |
+| n25 | n48 | 5 | 15 | 25 | 5 | 8.1 | NOTE 6 | UL2/DL1near-miss |
+| n25 | n77 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n25 | n77 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n25 | n78 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n25 | n78 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n26 | n778 | 5 | 15 | 6 | 10 | N/A | NOTE 4 | UL4/DL1direct-hit |
+| n26 | n778 | 5 | 15 | 5 | 10 | N/A | NOTE 5 | UL5/DL1direct-hit |
+| n26 | n78 | 5 | 15 | 6 | 10 | 10.8 | NOTE 4 | UL4/DL1direct-hit |
+| n26 | n78 | 5 | 15 | 6 | 100 | 3 | NOTE 4 | UL4/DL1direct-hit |
+| n28 | n1 | 5 | 15 | 8 | 5 | 10.2 | NOTE 3 | UL3/DL1direct-hit |
+| n28 | n1 | 5 | 15 | 8 | 50 | 2.6 | NOTE 3 | UL3/DL1direct-hit |
+| n28 | n50 | 5 | 15 | 12 | 10 | 28.1 | NOTE 2 | UL2/DL1direct-hit |
+| n28 | n50 | 5 | 15 | 12 | 80 | 15.8 | NOTE 2 | UL2/DL1direct-hit |
+| n28 | n74 | 5 | 15 | 12 | 5 | 28.1 | NOTE 2 | UL2/DL1direct-hit |
+| n28 | n74 | 5 | 15 | 12 | 20 | 18 | NOTE 2 | UL2/DL1direct-hit |
+| n28 | n75 | 5 | 15 | 12 | 5 | 28.1 | NOTE 2 | UL2/DL1direct-hit |
+| n28 | n75 | 5 | 15 | 12 | 50 | 17.9 | NOTE 2 | UL2/DL1direct-hit |
+| n28 | n77 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n28 | n77 | 5 | 15 | 5 | 100 | 2.9 | NOTE 5 | UL5/DL1direct-hit |
+| n28 | n78 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n28 | n78 | 5 | 15 | 5 | 100 | 2.9 | NOTE 5 | UL5/DL1direct-hit |
+| n28 | n94 | 5 | 15 | 12 | 5 | 28.1 | NOTE 2 | UL2/DL1direct-hit |
+| n28 | n94 | 5 | 15 | 12 | 20 | 21.9 | NOTE 2 | UL2/DL1direct-hit |
+| n50 | n8 | 5 | 15 | 12 | 5 | 10 | NOTE 2 | UL2/DL3direct-hit |
+| n66 | n48 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n66 | n48 | 5 | 15 | 12 | 1007 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n66 | n77 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n66 | n77 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n66 | n78 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n66 | n78 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n70 | n77 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n70 | n77 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n70 | n78 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n70 | n78 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n71 | n71 | 5 | 15 | 6 | 5 | 14.6 | NOTE 4 | UL4/DL1direct-hit |
+| n71 | n2511 | 5 | 15 | 8 | 5 | 6.9 | NOTE 3 | UL3/DL1direct-hit |
+| n71 | n41 | 5 | 15 | 6 | 10 | 10.8 | NOTE 4 | UL4/DL1direct-hit |
+| n71 | n41 | 5 | 15 | 6 | 100 | 3.1 | NOTE 4 | UL4/DL1direct-hit |
+| n71 | n70 | 5 | 15 | 8 | 5 | 9.9 | NOTE 3 | UL3/DL1direct-hit |
+| n71 | n70 | 5 | 15 | 8 | 25 | 4.1 | NOTE 3 | UL3/DL1direct-hit |
+| n71 | n77 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n71 | n78 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n77 | n18 | 10 | 15 | 25 | 5 | 5.4 | NOTE 8 | UL1/DL4 direct-hit14 |
+| n77 | n18 | 10 | 15 | 25 | 15 | 2.5 | NOTE 8 | UL1/DL4 direct-hit14 |
+| n78 | n104 | 10 | 15 | 12 | 20 | 37.5 | NOTE 2 | UL2/DL1direct-hit |
+| n85 | n66 | 5 | 15 | 8 | 5 | 10 | NOTE 3 | UL3/DL1direct-hit |
+| n85 | n66 | 5 | 15 | 8 | 40 | 3.1 | NOTE 3 | UL3/DL1direct-hit |
+| n85 | n77 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n85 | n77 | 5 | 15 | 5 | 100 | 2.9 | NOTE 5 | UL5/DL1direct-hit |
+| n92 | n78 | 5 | 15 | 6 | 10 | 10.8 | NOTE 4 | UL4/DL1direct-hit |
+| n92 | n78 | 5 | 15 | 6 | 100 | 3.1 | NOTE 4 | UL4/DL1direct-hit |
+| n94 | n78 | 5 | 15 | 6 | 10 | 10.8 | NOTE 4 | UL4/DL1direct-hit |
+| n94 | n78 | 5 | 15 | 6 | 100 | 3.1 | NOTE 4 | UL4/DL1direct-hit |
+| n105 | n7 | 5 | 15 | 8 | 5 | 18 | NOTE 3 | UL3/DL1direct-hit |
+| n105 | n78 | 5 | 15 | 5 | 10 | 11.8 | NOTE 5 | UL5/DL1direct-hit |
+| NOTE 1: The direct-hit requirements apply when there is at least one individual RE within the uplink transmission bandwidth of the aggressor (lower) band for which the 2nd / 3rd / 4th / 5th transmitter harmonic is within the downlink transmission bandwidth of a victim (higher) band. The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.NOTE 2: The requirements should be verified for UL NR ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image1.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.2_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band. This DL band may be affected by near-miss interference for which the MSD is not specified.NOTE 3: The requirements should be verified for UL NR ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image3.svg) [公式≈: ff_{ULDL}^{LBHB}=⋅∂_{√∃}/0.30.1] in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with the carrier frequency in the victim (higher) band in MHz and the channel bandwidth configured in the low band.NOTE 4: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image4.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.4_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 5: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image7.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.5_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 6: The near-miss requirements are only applicable when direct-hit requirements do not apply. These requirements should be verified for downlink channel bandwidths no larger than 10 MHz and with a carrier frequency at $\pm  \left ( 10+BW_{Channel}^{HB}/2\right ) $ MHz offset from ![](media_svg/image8.svg) [公式≈: _{2}_{f}_{UL}LB] in the victim (higher band) with ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}], whereand![](media_svg/image9.svg) [公式≈: ^{BW}Channel^{HB}]are the channel bandwidths configured in the aggressor (lower) and victim (higher) bands in MHz, respectively.NOTE 7: For these bandwidths, the minimum requirements are restricted to operation when carrier is configured as a downlink carrier part of CA configuration.NOTE 8: For a UE which supports this band combination only when the Band n77 frequency range restriction defined in NOTE 12 of Table 5.2-1 applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 9: Void.NOTE 10: Void.NOTE 11: These requirements apply when the upper edge frequency of the 5 MHz uplink channel in Band n71 is located at 668 MHz and the downlink channel in Band n25 is located with its upper edge at 1995 MHz.NOTE 12: Void.NOTE 13: No requirements apply when there is at least one individual RE within the uplink transmission bandwidth of the low band for which the 2nd transmitter harmonic is within the downlink transmission bandwidth of the high band. The reference sensitivity for all active downlink component carriers is only verified when this is not the case (the requirements specified in clause 7.3.2 apply unless otherwise specified).NOTE 14: For a UE which supports this band combination only when the Band n77 frequency range restriction of 3400 – 4100 MHz applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped. |  |  |  |  |  |  |  |  |
+
+The reference sensitivity for the shared access band does not apply when there is at least one individual RE within the shared access downlink transmission bandwidth which falls into the reference sensitivity exclusion region as specified in Table 7.3A.4-1a.
+
+Table 7.3A.4-1a: NR-U reference sensitivity measurement exclusion region in MHz.
+
+| NR Band / Harmonic order / Channel BW in UL |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ULBand | Harmonic order | DLBand | 5MHz | 10MHz | 15MHz | 20 MHz | 25 MHz | 30 MHz | 40MHz | 45MHz | 50 MHz |
+| n1 | 3 | n46 | +/- 15 | +/- 23 | +/- 35 | +/- 45 | +/- 60 | +/- 70 | +/- 90 | +/- 100 | +/- 115 |
+| n1 | 3 | n102 | +/- 10 | +/- 20 | +/- 30 | +/- 40 | +/- 50 | +/- 60 | +/- 80 |  | +/- 100 |
+| n7 | 2 | n46 | +/- 10 | +/- 20 | +/- 30 | +/- 40 | +/- 50 | +/- 60 | +/- 80 |  | +/- 100 |
+| n25 | 3 | n46 | +/- 15 | +/- 23 | +/- 35 | +/- 45 | +/- 60 | +/- 70 | +/- 90 |  |  |
+| n48 | 2 | n96 | +/- 10 | +/- 20 | +/- 30 | +/- 40 |  | +/- 60 | +/- 80 |  |  |
+| n66 | 3 | n46 | +/- 15 | +/- 23 | +/- 35 | +/- 45 | +/- 60 | +/- 70 | +/- 90 |  |  |
+| NOTE 1: Even though UL harmonic does not fall directly into NR-U band the exclusion region still applies.NOTE 2: The center of the exclusion region is obtained by multiplying the UL channel center frequency by the harmonic order. |  |  |  |  |  |  |  |  |  |  |  |
+
+Table 7.3A.4-2: Void
+
+For a PC2 aggressor NR UL band for NR DL CA FR1, the maximum amount of REFSENS degradation is specified in Table 7.3A.4-2a.
+
+Table 7.3A.4-2a: Reference sensitivity exceptions and uplink/downlink configurations due to UL harmonic from a PC2 aggressor NR UL band for NR DL CA FR1
+
+| UL band | DL band | UL BW | SCS of UL band | UL RB Allocation | DL BW | MSD(NOTE 7) | MSD(NOTE 8) | UL/DL fc condition | UL/DL harmonic order |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (kHz) | LCRB | (MHz) | (dB) | (dB) |  |  |
+| n2 | n48 | 5 | 15 | 12 | 10 | 10.6 | 13.1 | NOTE 6 | UL2/DL1near-miss |
+| n2 | n77 | 5 | 15 | 12 | 10 | 26.9 | 30.6 | NOTE 2 | UL2/DL1direct-hit |
+| n2 | n77 | 5 | 15 | 12 | 100 | 16.7 | 20.2 | NOTE 2 | UL2/DL1direct-hit |
+| n3 | n78 | 5 | 15 | 12 | 10 | 27.1 | 32.3 | NOTE 2 | UL2/DL1direct-hit |
+| n3 | n78 | 5 | 15 | 12 | 100 | 16.6 | 20.8 | NOTE 2 | UL2/DL1direct-hit |
+| n5 | n778 | 5 | 15 | 6 | 10 | 13.5 | 16.5 | NOTE 4 | UL4/DL1direct-hit |
+| n5 | n778 | 5 | 15 | 6 | 100 | 4.5 | 5.6 | NOTE 4 | UL4/DL1direct-hit |
+| n5 | n778 | 5 | 15 | 5 | 10 | 13.4 | 16.4 | NOTE 5 | UL5/DL1direct-hit |
+| n5 | n778 | 5 | 15 | 5 | 100 | 4.5 | 5.6 | NOTE 5 | UL5/DL1direct-hit |
+| n8 | n41 | 5 | 15 | 8 | 10 | 15.9 | 20 | NOTE 3 | UL3/DL1direct-hit |
+| n8 | n41 | 5 | 15 | 8 | 100 | 6.5 | 9.5 | NOTE 3 | UL3/DL1direct-hit |
+| n8 | n79 | 5 | 15 | 5 | 10 | 14.9 | 19 | NOTE 5 | UL5/DL1direct-hit |
+| n8 | n79 | 5 | 15 | 5 | 100 | 6.2 | 8.4 | NOTE 5 | UL5/DL1direct-hit |
+| n14 | n77 | 5 | 15 | 5 | 10 | 13.1 | 16.5 | NOTE 5 | UL5/DL1direct-hit |
+| n14 | n77 | 5 | 15 | 5 | 100 | 4.4 | 5.7 | NOTE 5 | UL5/DL1direct-hit |
+| n25 | n77 | 5 | 15 | 12 | 10 | 26.9 | 31.9 | NOTE 2 | UL2/DL1direct-hit |
+| n25 | n77 | 5 | 15 | 12 | 100 | 16.8 | 20.8 | NOTE 2 | UL2/DL1direct-hit |
+| n28 | n74 | 5 | 15 | 12 | 5 | 31.1 | 34.1 | NOTE 2 | UL2/DL1direct-hit |
+| n28 | n74 | 5 | 15 | 12 | 20 | 21 | 24 | NOTE 2 | UL2/DL1direct-hit |
+| n66 | n48 | 5 | 15 | 12 | 5 | 30.1 | 33.1 | NOTE 2 | UL2/DL1direct-hit |
+| n66 | n48 | 5 | 15 | 12 | 10012 | 16.8 | 19.8 | NOTE 2 | UL2/DL1direct-hit |
+| n66 | n77 | 5 | 15 | 12 | 10 | 26.9 | 31.9 | NOTE 2 | UL2/DL1direct-hit |
+| n66 | n77 | 5 | 15 | 12 | 100 | 16.7 | 20.8 | NOTE 2 | UL2/DL1direct-hit |
+| n70 | n77 | 5 | 15 | 12 | 10 | 26.9 | 29.8 | NOTE 2 | UL2/DL1direct-hit |
+| n70 | n77 | 5 | 15 | 12 | 100 | 16.7 | 19.5 | NOTE 2 | UL2/DL1direct-hit |
+| n71 | n2510,11 | 5 | 15 | 8 | 5 | 9.4 | 12.9 | NOTE 3 | UL3/DL1direct-hit |
+| n71 | n41 | 5 | 15 | 6 | 10 | 13.6 | 17.8 | NOTE 4 | UL4/DL1direct-hit |
+| n71 | n41 | 5 | 15 | 6 | 100 | 5.1 | 6.1 | NOTE 4 | UL4/DL1direct-hit |
+| n71 | n70 | 5 | 15 | 8 | 5 | 12.5 | 15.1 | NOTE 3 | UL3/DL1direct-hit |
+| n71 | n70 | 5 | 15 | 8 | 25 | 5.9 | 7.4 | NOTE 3 | UL3/DL1direct-hit |
+| n71 | n77 | 5 | 15 | 5 | 10 | 13.2 | 17.4 | NOTE 5 | UL5/DL1direct-hit |
+| n77 | n18 | 10 | 15 | 25 | 5 | 7.7 |  | NOTE 5 | UL1/DL4 13 |
+| n77 | n18 | 10 | 15 | 25 | 15 | 4.1 |  | NOTE 5 | UL1/DL4 13 |
+| n85 | n77 | 5 | 15 | 5 | 10 | 13.2 | 17.4 | NOTE 5 | UL5/DL1direct-hit |
+| n85 | n77 | 5 | 15 | 5 | 100 | 1.3 | 1.7 | NOTE 5 | UL5/DL1direct-hit |
+| NOTE 1: VoidNOTE 2: The requirements should be verified for UL NR-ARFCN of the aggressor  (lower) band (superscript LB) such that ![](media_svg/image1.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.2_{∃}0.1] in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 3: The requirements should be verified for UL NR ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image3.svg) [公式≈: ff_{ULDL}^{LBHB}=⋅∂_{√∃}/0.30.1] in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with the carrier frequency in the victim (higher) band in MHz and the channel bandwidth configured in the low band.NOTE 4: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image4.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.4_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 5: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image7.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.5_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 6: The near-miss requirements are only applicable when direct-hit requirements do not apply. These requirements should be verified for downlink channel bandwidths no larger than 10 MHz and with a carrier frequency at $\pm  \left ( 10+BW_{Channel}^{HB}/2\right ) $ MHz offset from ![](media_svg/image8.svg) [公式≈: _{2}_{f}_{UL}LB] in the victim (higher band) with ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}], whereand![](media_svg/image9.svg) [公式≈: ^{BW}Channel^{HB}]are the channel bandwidths configured in the aggressor (lower) and victim (higher) bands in MHz, respectively.NOTE 7: Applicable to UEs supporting PC2 with 1Tx.NOTE 8: Applicable to UEs supporting PC2 with 2Tx.NOTE 9: These requirements apply when the upper edge frequency of the 5 MHz uplink channel in Band n71 is located at 668 MHz and the downlink channel in Band n25 is located with its upper edge at 1995 MHz.NOTE 10: The direct-hit requirements apply when there is at least one individual RE within the uplink transmission bandwidth of the aggressor (lower) band for which the 2nd / 3rd / 4th / 5th transmitter harmonic is within the downlink transmission bandwidth of a victim (higher) band. The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.NOTE 11: Void.NOTE 12: For these bandwidths, the minimum requirements are restricted to operation when carrier is configured as a downlink carrier part of CA configuration.NOTE 13: For a UE which supports this band combination only when the Band n77 frequency range restriction of 3400 – 4100 MHz applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped. |  |  |  |  |  |  |  |  |  |
+
+Table 7.3A.4-2b: Void
+
+Table 7.3A.4-3: Void
+
+Table 7.3A.4-3a: Void
+
+Sensitivity degradation is allowed for different combinations of UL configurations and DL channel bandwidths if a band is impacted by receiver harmonic mixing due to another band part which belongs to PC3 NR band or PC2 NR band of the same CA configuration. Reference sensitivity exceptions and uplink/downlink configurations due to harmonic mixing from a PC3 aggressor NR UL band for either PC3 or PC2 CA are specified in Table 7.3A.4-4 and from a PC2 aggressor NR UL band for PC2 CA are specified in Table 7.3A.4-4a.For these exceptions, only the listed test points in Table 7.3A.4-4, Table 7.3A.4-4a and Table 7.3A.4-4b are needed to be tested. Sensitivity degradation is not required for receiver even order harmonic mixing with aggressor 3rd order and above harmonic interference.
+
+Table 7.3A.4-4: Reference sensitivity exceptions and uplink/downlink configurations due to harmonic mixing from a PC3 aggressor NR UL band for DL NR CA FR1
+
+| UL band | DL band | UL BW | SCS of UL band | UL RB Allocation | DL BW | MSD | UL/DL fc condition | UL/DL harmonic order |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (kHz) | LCRB | (MHz) | (dB) |  |  |
+| n1 | n1053 | 5 | 15 | 25 | 5 | 26.8 | NOTE 4 | UL1/DL3 |
+| n1 | n713 | 5 | 15 | 25 | 5 | 26.8 | NOTE 4 | UL1/DL3 |
+| n2 | n713 | 5 | 15 | 25 | 5 | 26.8 | NOTE 4 | UL1/DL3 |
+| n2 | n713 | 5 | 15 | 25 | 20 | 15.6 | NOTE 4 | UL1/DL3 |
+| n3 | n5 | 5 | 15 | 25 | 5 | 4 | NOTE 7 | UL1/DL2 |
+| n3 | n26 | 5 | 15 | 25 | 5 | 3.7 | NOTE 7 | UL1/DL2 |
+| n7 | n263 | 25 | 15 | 128 | 5 | 2.0 | NOTE 10 | UL1/DL3 near miss |
+| n7 | n71 | 5 | 15 | 25 | 5 | 5.7 | NOTE 8 | UL1/DL4 |
+| n25 | n41 | 5 | 15 | 6 | 10 | 1.3 | NOTE 9 | UL4/DL3 |
+| n25 | n713 | 5 | 15 | 25 | 5 | 26.8 | NOTE 4 | UL1/DL3 |
+| n25 | n713 | 5 | 15 | 25 | 20 | 15.6 | NOTE 4 | UL1/DL3 |
+| n30 | n14 | 10 | 15 | 50 | 5 | 1.6 | NOTE 15 | UL1/DL3 near miss |
+| n39 | n41 | 5 | 15 | 6 | 10 | 9.3 | NOTE 9 | UL4/DL3 |
+| n39 | n41 | 5 | 15 | 6 | 100 | 2.2 | NOTE 9 | UL4/DL3 |
+| n40 | n203 | 10 | 15 | 25 | 5 | 27.8 | NOTE 4 | UL1/DL3 |
+| n40 | n203 | 10 | 15 | 25 | 20 | 20.6 | NOTE 4 | UL1/DL3 |
+| n40 | n283 | 10 | 15 | 25 | 5 | 37.8 | NOTE 4 | UL1/DL3 |
+| n40 | n283 | 10 | 15 | 25 | 20 | 30.1 | NOTE 4 | UL1/DL3 |
+| n41 | n53 | 10 | 15 | 25 | 5 | 24.3 | NOTE 4 | UL1/DL3 |
+| n41 | n183 | 10 | 15 | 25 | 5 | 26.3 | NOTE 4 | UL1/DL3 |
+| n41 | n183 | 10 | 15 | 25 | 15 | 21.3 | NOTE 4 | UL1/DL3 |
+| n41 | n39 | 10 | 15 | 8 | 5 | 4.3 | NOTE 12 | UL3/DL4 |
+| n41 | n39 | 10 | 15 | 8 | 40 | 0.8 | NOTE 12 | UL3/DL4 |
+| n41 | n48 | 10 | 15 | 6 | 5 | 12.3 | NOTE 9 | UL4/DL3 |
+| n41 | n48 | 10 | 15 | 6 | 100 | 2.3 | NOTE 9 | UL4/DL3 |
+| n41 | n77 | 10 | 15 | 6 | 10 | 8.9 | NOTE 9 | UL4/DL3 |
+| n41 | n77 | 10 | 15 | 6 | 100 | 2.1 | NOTE 9 | UL4/DL3 |
+| n41 | n78 | 10 | 15 | 6 | 10 | 9.3 | NOTE 9 | UL4/DL3 |
+| n41 | n78 | 10 | 15 | 6 | 100 | 2.3 | NOTE 9 | UL4/DL3 |
+| n46 | n7 | 20 | 15 | 25 | 5 | 10.9 | NOTE 7 | UL1/DL2 |
+| n46 | n7 | 20 | 15 | 25 | 50 | 1 | NOTE 7 | UL1/DL2 |
+| n46 | n48 | 20 | 15 | 12 | 5 | 26.8 | NOTE 2 | UL2/DL3 |
+| n46 | n48 | 20 | 15 | 12 | 100 | 13.5 | NOTE 2 | UL2/DL3 |
+| n46 | n77 | 20 | 15 | 12 | 10 | 20.6 | NOTE 2 | UL2/DL3 |
+| n46 | n77 | 20 | 15 | 12 | 100 | 10.6 | NOTE 2 | UL2/DL3 |
+| n46 | n78 | 20 | 15 | 12 | 10 | 21.1 | NOTE 2 | UL2/DL3 |
+| n46 | n78 | 20 | 15 | 12 | 100 | 11.1 | NOTE 2 | UL2/DL3 |
+| n48 | n5 | 10 | 15 | 25 | 5 | 5.7 | NOTE 8 | UL1/DL4 |
+| n48 | n12 | 10 | 15 | 25 | 5 | 31 | NOTE 5 | UL1/DL5 |
+| n48 | n12 | 10 | 15 | 25 | 15 | 18 | NOTE 5 | UL1/DL5 |
+| n48 | n26 | 10 | 15 | 25 | 5 | 5.4 | NOTE 8 | UL1/DL4 |
+| n48 | n26 | 10 | 15 | 25 | 20 | 1 | NOTE 8 | UL1/DL4 |
+| n48 | n29 | 10 | 15 | 25 | 5 | 31 | NOTE 5 | UL1/DL5 |
+| n48 | n29 | 10 | 15 | 25 | 10 | 27.8 | NOTE 5 | UL1/DL5 |
+| n77 | n2 | 10 | 15 | 25 | 5 | 6.7 | NOTE 7 | UL1/DL2 |
+| n77 | n2 | 10 | 15 | 25 | 20 | 2.8 | NOTE 7 | UL1/DL2 |
+| n77 | n3 | 10 | 15 | 25 | 5 | 5.7 | NOTE 7 | UL1/DL2 |
+| n77 | n3 | 10 | 15 | 25 | 20 | 2.2 | NOTE 7 | UL1/DL2 |
+| n77 | n5 | 10 | 15 | 25 | 5 | 5.7 | NOTE 8 | UL1/DL4 |
+| n77 | n5 | 10 | 15 | 25 | 20 | 0.8 | NOTE 8 | UL1/DL4 |
+| n77 | n7 | 10 | 15 | 12 | 5 | 14.7 | NOTE 2 | UL2/DL3 |
+| n77 | n7 | 10 | 15 | 12 | 50 | 2.2 | NOTE 2 | UL2/DL3 |
+| n77 | n8 | 10 | 15 | 25 | 5 | 5.7 | NOTE 8 | UL1/DL4 |
+| n77 | n8 | 10 | 15 | 25 | 20 | 0.8 | NOTE 8 | UL1/DL4 |
+| n77 | n12 | 10 | 15 | 25 | 5 | 31 | NOTE 5 | UL1/DL5 |
+| n77 | n12 | 10 | 15 | 25 | 15 | 18 | NOTE 5 | UL1/DL5 |
+| n77 | n13 | 10 | 15 | 25 | 5 | 31 | NOTE 5 | UL1/DL5 |
+| n77 | n13 | 10 | 15 | 25 | 10 | 27.8 | NOTE 5 | UL1/DL5 |
+| n77 | n14 | 10 | 15 | 25 | 5 | 31 | NOTE 5 | UL1/DL5 |
+| n77 | n14 | 10 | 15 | 25 | 10 | 27.8 | NOTE 5 | UL1/DL5 |
+| n77 | n20 | 10 | 15 | 25 | 5 | 31 | NOTE 5 | UL1/DL5 |
+| n77 | n20 | 10 | 15 | 25 | 20 | 23.5 | NOTE 5 | UL1/DL5 |
+| n77 | n25 | 10 | 15 | 25 | 5 | 5.6 | NOTE 7 | UL1/DL2 |
+| n77 | n25 | 10 | 15 | 25 | 40 | 0.3 | NOTE 7 | UL1/DL2 |
+| n77 | n26 | 10 | 15 | 25 | 5 | 5.4 | NOTE 8 | UL1/DL4 |
+| n77 | n28 | 10 | 15 | 25 | 5 | 31 | NOTE 5 | UL1/DL5 |
+| n77 | n28 | 10 | 15 | 25 | 30 | 11.4 | NOTE 5 | UL1/DL5 |
+| n776 | n29 | 10 | 15 | 25 | 5 | 31 | NOTE 5 | UL1/DL5 |
+| n776 | n29 | 10 | 15 | 25 | 10 | 27.8 | NOTE 5 | UL1/DL5 |
+| n77 | n30 | 10 | 15 | 12 | 5 | 10.4 | NOTE 2 | UL2/DL3 |
+| n77 | n30 | 10 | 15 | 12 | 10 | 7.6 | NOTE 2 | UL2/DL3 |
+| n77 | n40 | 10 | 15 | 12 | 5 | 14.7 | NOTE 2 | UL2/DL3 |
+| n77 | n40 | 10 | 15 | 12 | 100 | 3.6 | NOTE 2 | UL2/DL3 |
+| n77 | n41 | 10 | 15 | 12 | 10 | 11.7 | NOTE 2 | UL2/DL3 |
+| n77 | n41 | 10 | 15 | 12 | 100 | 3.6 | NOTE 2 | UL2/DL3 |
+| n776 | n70 | N/A | N/A | N/A | N/A | N/A | NOTE 7 | UL1/DL2 |
+| n77 | n85 | 10 | 15 | 25 | 5 | 31 | NOTE 5 | UL1/DL5 |
+| n77 | n85 | 10 | 15 | 25 | 15 | 18 | NOTE 5 | UL1/DL5 |
+| n78 | n2 | 10 | 15 | 25 | 5 | 6.7 | NOTE 7 | UL1/DL2 |
+| n78 | n2 | 10 | 15 | 25 | 20 | 2.8 | NOTE 7 | UL1/DL2 |
+| n78 | n3 | 10 | 15 | 25 | 5 | 5.7 | NOTE 7 | UL1/DL2 |
+| n78 | n3 | 10 | 15 | 25 | 20 | 2.2 | NOTE 7 | UL1/DL2 |
+| n78 | n5 | 10 | 15 | 25 | 5 | 5.7 | NOTE 8 | UL1/DL4 |
+| n78 | n8 | 10 | 15 | 25 | 5 | 5.7 | NOTE 8 | UL1/DL4 |
+| n78 | n12 | 10 | 15 | 25 | 5 | 31 | NOTE 5 | UL1/DL5 |
+| n78 | n26 | 10 | 15 | 25 | 5 | 5.4 | NOTE 8 | UL1/DL4 |
+| n78 | n28 | 10 | 15 | 50 | 5 | 6.1 | NOTE 10 | UL1/DL5near-miss |
+| n78 | n40 | 10 | 15 | 12 | 10 | 11.7 | NOTE 2 | UL2/DL3 |
+| n78 | n40 | 10 | 15 | 12 | 100 | 3.6 | NOTE 2 | UL2/DL3 |
+| n78 | n41 | 10 | 15 | 12 | 10 | 11.7 | NOTE 2 | UL2/DL3 |
+| n78 | n41 | 10 | 15 | 12 | 100 | 3.6 | NOTE 2 | UL2/DL3 |
+| n78 | n67 | 10 | 15 | 25 | 5 | 31 | NOTE 5 | UL1/DL5 |
+| n78 | n67 | 10 | 15 | 25 | 10 | 27.8 | NOTE 5 | UL1/DL5 |
+| n79 | n5 | 10 | 15 | 25 | 5 | 27.5 | NOTE 5 | UL1/DL5 |
+| n79 | n8 | 10 | 15 | 25 | 5 | 25 | NOTE 5 | UL1/DL5 |
+| n96 | n48 | 20 | 15 | 25 | 10 | 31 | NOTE 7 | UL1/DL2 |
+| n96 | n48 | 20 | 15 | 25 | 100 | 17.5 | NOTE 7 | UL1/DL2 |
+| n102 | n13 | 20 | 15 | 25 | 5 | 30 | NOTE 4 | UL1/DL3 |
+| n104 | n41 | 20 | 15 | 12 | 10 | 22.0 | NOTE 14 | UL2/DL5 |
+| n104 | n41 | 20 | 15 | 12 | 100 | 11.9 | NOTE 14 | UL2/DL5 |
+| n104 | n78 | 20 | 15 | 25 | 10 | 29 | NOTE 7 | UL1/DL2 |
+| n104 | n78 | 20 | 15 | 25 | 100 | 18.8 | NOTE 7 | UL1/DL2 |
+| NOTE 1: Void.NOTE 2: The requirements should be verified for DL NR-ARFCN of the Victim (lower) band (superscript LB) such that $ f_{DL}^{LB}=\lfloor  f_{UL}^{HB}/0.15\rfloor  0.1 $ and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with $ f_{UL}^{HB}$ the UL carrier frequency and $ BW_{Channel}^{HB}$ the channel bandwidth configured in the higher band, both in MHz.NOTE 3: These requirements apply when there is at least one individual RE within the downlink transmission bandwidth of the victim (lower) band for which the 3rd harmonic is within the uplink transmission bandwidth or the uplink adjacent channel's transmission bandwidth of an aggressor (higher) band.NOTE 4: The requirements should be verified for UL NR-ARFCN of the aggressor (higher) band (superscript HB) such that ![](media_svg/image10.svg) [公式≈: ff_{DLUL}^{LBHB}=⋅∂_{√∃}/0.30.1] in MHz and  $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $  with  the carrier frequency in the victim (lower) band and  the channel bandwidth configured in the higher band.NOTE 5: The requirements should be verified for DL EARFCN of the victim (lower) band (superscript LB) such that ![](media_svg/image13.svg) [公式≈: f_{DL}^{LB}=_{√}f_{UL}^{HB}/0.5_{∃}0.1] and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with $ f_{UL}^{HB}$ the UL carrier frequency and $ BW_{Channel}^{HB}$ the channel bandwidth configured in the higher band, both in MHz.NOTE 6: For a UE which supports this band combination only when the Band n77 frequency range restriction defined in NOTE 12 of Table 5.2-1 applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 7: The requirements should be verified for UL NR-ARFCN of the aggressor (higher) band (superscript HB) such that ![](media_svg/image14.svg) [公式≈: f_{DL}^{LB}=_{√}f_{UL}^{HB}/0.2_{∃}0.1]  in MHz and  $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with  the carrier frequency in the victim (lower) band and  the channel bandwidth configured in the higher band.NOTE 8: The requirements should be verified for UL NR-ARFCN of the aggressor (higher) band (superscript HB) such that ![](media_svg/image15.svg) [公式≈: f_{DL}^{LB}=_{√}f_{UL}^{HB}/0.4_{∃}0.1]  in MHz and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $  with  the carrier frequency in the victim (lower) band and  the channel bandwidth configured in the higher band.NOTE 9: The requirements should be verified for DL NR-ARFCN of the victim (higher) band (superscript HB) such that $ f_{DL}^{HB}=\lfloor  f_{UL}^{LB}/0.75\rfloor  $  and $ F_{UL\_low}^{LB}+BW_{Channel}^{LB}/2\leq  f_{UL}^{LB}\leq  F_{UL\_high}^{LB}-BW_{Channel}^{LB}/2 $ with $ f_{UL}^{LB}$ the UL carrier frequency and $ BW_{Channel}^{LB}$ the channel bandwidth configured in the lower band, both in MHz.NOTE 10: The requirements should be verified for the lowest NR ARFCN of the affected DL (lower) band and for the highest NR ARFCN of the UL (higher) bandNOTE 11: Void.NOTE 12: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image16.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.075_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 13: The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.NOTE 14: The requirements should be verified for DL NR-ARFCN of the Victim (lower) band (superscript LB) such that $ f_{DL}^{LB}=\lfloor  f_{UL}^{HB}/0.25\rfloor  0.1 $ and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with $ f_{UL}^{HB}$ the UL carrier frequency and $ BW_{Channel}^{HB}$ the channel bandwidth configured in the higher band, both in MHz.NOTE 15: The requirements should be verified for the highest NR ARFCN of the affected DL (lower) band and for the lowest NR ARFCN of the UL (higher) band. |  |  |  |  |  |  |  |  |
+
+Table 7.3A.4-4a-1: Reference sensitivity exceptions and uplink/downlink configurations due to harmonic mixing from a PC2 aggressor NR UL band for NR DL CA FR1
+
+| UL band | DL band | UL BW | SCS of UL band | UL RB Allocation | DL BW | MSD | UL/DL fc condition | UL/DL harmonic order |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (kHz) | LCRB | (MHz) | (dB) |  |  |
+| n25 | n41 | 5 | 15 | 6 | 10 | 2.2133.214 | NOTE 8 | UL4/DL3 |
+| n25 | n713 | 5 | 15 | 25 | 5 | 29.51334.514 | NOTE 7 | UL1/DL3 |
+| n25 | n713 | 5 | 15 | 25 | 20 | 18.21323.314 | NOTE 7 | UL1/DL3 |
+| n39 | n41 | 5 | 15 | 6 | 10 | 8.6 | NOTE 8 | UL4/DL3 |
+| n39 | n41 | 5 | 15 | 6 | 100 | 4.9 | NOTE 8 | UL4/DL3 |
+| n40 | n28 | 10 | 15 | 25 | 5 | 40.8 | NOTE 7 | UL1/DL3 |
+| n40 | n28 | 10 | 15 | 25 | 20 | 33.3 | NOTE 7 | UL1/DL3 |
+| n41 | n186 | 10 | 15 | 25 | 5 | 29.3 | NOTE 7 | UL1/DL3 |
+| n41 | n186 | 10 | 15 | 25 | 15 | 24.3 | NOTE 7 | UL1/DL3 |
+| n41 | n39 | 10 | 15 | 8 | 5 | 6.1 | NOTE 9 | UL3/DL4 |
+| n41 | n39 | 10 | 15 | 8 | 40 | 1.5 | NOTE 9 | UL3/DL4 |
+| n41 | n77 | 10 | 15 | 6 | 10 | 11.6 | NOTE 8 | UL4/DL3 |
+| n41 | n77 | 10 | 15 | 6 | 100 | 3.6 | NOTE 8 | UL4/DL3 |
+| n41 | n78 | 10 | 15 | 6 | 10 | 12.1 | NOTE 8 | UL4/DL3 |
+| n41 | n78 | 10 | 15 | 6 | 100 | 3.8 | NOTE 8 | UL4/DL3 |
+| n77 | n2 | 10 | 15 | 25 | 5 | 9.2 | NOTE 4 | UL1/DL2 |
+| n77 | n2 | 10 | 15 | 25 | 20 | 4.4 | NOTE 4 | UL1/DL2 |
+| n77 | n3 | 10 | 15 | 25 | 5 | 8.1 | NOTE 4 | UL1/DL2 |
+| n77 | n3 | 10 | 15 | 25 | 40 | 0.8 | NOTE 4 | UL1/DL2 |
+| n77 | n5 | 10 | 15 | 25 | 5 | 8.1 | NOTE 5 | UL1/DL4 |
+| n77 | n5 | 10 | 15 | 25 | 20 | 1.5 | NOTE 5 | UL1/DL4 |
+| n77 | n7 | 10 | 15 | 12 | 5 | 17.7 | NOTE 3 | UL2/DL3 |
+| n77 | n7 | 10 | 15 | 12 | 50 | 3.6 | NOTE 3 | UL2/DL3 |
+| n77 | n8 | 10 | 15 | 25 | 5 | 8.1 | NOTE 5 | UL1/DL4 |
+| n77 | n8 | 10 | 15 | 25 | 20 | 1.5 | NOTE 5 | UL1/DL4 |
+| n77 | n12 | 10 | 15 | 25 | 5 | 34 | NOTE 1 | UL1/DL5 |
+| n77 | n12 | 10 | 15 | 25 | 15 | 21 | NOTE 1 | UL1/DL5 |
+| n77 | n13 | 10 | 15 | 25 | 5 | 34 | NOTE 1 | UL1/DL5 |
+| n77 | n13 | 10 | 15 | 25 | 10 | 30.8 | NOTE 1 | UL1/DL5 |
+| n77 | n14 | 10 | 15 | 25 | 5 | 34 | NOTE 1 | UL1/DL5 |
+| n77 | n14 | 10 | 15 | 25 | 10 | 30.8 | NOTE 1 | UL1/DL5 |
+| n77 | n25 | 10 | 15 | 25 | 5 | 7.9 | NOTE 4 | UL1/DL2 |
+| n77 | n25 | 10 | 15 | 25 | 40 | 0.5 | NOTE 4 | UL1/DL2 |
+| n77 | n28 | 10 | 15 | 25 | 5 | 34 | NOTE 1 | UL1/DL5 |
+| n77 | n28 | 10 | 15 | 25 | 30 | 14.1 | NOTE 1 | UL1/DL5 |
+| n772 | n29 | 10 | 15 | 25 | 5 | 34 | NOTE 1 | UL1/DL5 |
+| n772 | n29 | 10 | 15 | 25 | 10 | 30.8 | NOTE 1 | UL1/DL5 |
+| n77 | n30 | 10 | 15 | 12 | 5 | 13.2 | NOTE 3 | UL2/DL3 |
+| n77 | n30 | 10 | 15 | 12 | 10 | 10.2 | NOTE 3 | UL2/DL3 |
+| n77 | n40 | 10 | 15 | 12 | 5 | 17.5 | NOTE 3 | UL2/DL3 |
+| n77 | n40 | 10 | 15 | 12 | 100 | 5.5 | NOTE 3 | UL2/DL3 |
+| n77 | n41 | 10 | 15 | 12 | 10 | 14.5 | NOTE 3 | UL2/DL3 |
+| n77 | n41 | 10 | 15 | 12 | 100 | 5.5 | NOTE 3 | UL2/DL3 |
+| n772 | n70 | N/A | N/A | N/A | N/A | N/A | NOTE 4 | UL1/DL2 |
+| n77 | n85 | 10 | 15 | 25 | 5 | 34 | NOTE 1 | UL1/DL5 |
+| n77 | n85 | 10 | 15 | 25 | 15 | 21 | NOTE 1 | UL1/DL5 |
+| n78 | n3 | 10 | 15 | 25 | 5 | 8.1 | NOTE 4 | UL1/DL2 |
+| n78 | n3 | 10 | 15 | 25 | 40 | 0.8 | NOTE 4 | UL1/DL2 |
+| n78 | n5 | 10 | 15 | 25 | 5 | 8.1 | NOTE 5 | UL1/DL4 |
+| n78 | n5 | 10 | 15 | 25 | 20 | 1.5 | NOTE 5 | UL1/DL4 |
+| n78 | n8 | 10 | 15 | 25 | 5 | 8.1 | NOTE 5 | UL1/DL4 |
+| n78 | n8 | 10 | 15 | 25 | 20 | 1.5 | NOTE 5 | UL1/DL4 |
+| n78 | n26 | 10 | 15 | 25 | 5 | 8.1 | NOTE 5 | UL1/DL4 |
+| n78 | n28 | 10 | 15 | 50 | 5 | 8.2 | NOTE 15 | UL1/DL5near-miss |
+| n78 | n40 | 10 | 15 | 12 | 10 | 14.5 | NOTE 3 | UL2/DL3 |
+| n78 | n40 | 10 | 15 | 12 | 100 | 5.5 | NOTE 3 | UL2/DL3 |
+| n79 | n8 | 10 | 15 | 25 | 5 | 28.0 | NOTE 1 | UL1/DL5 |
+| NOTE 1: The requirements should be verified for DL NR-ARFCN of the victim (lower) band (superscript LB) such that ![](media_svg/image13.svg) [公式≈: f_{DL}^{LB}=_{√}f_{UL}^{HB}/0.5_{∃}0.1] and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with $ f_{UL}^{HB}$ the UL carrier frequency and $ BW_{Channel}^{HB}$ the channel bandwidth configured in the higher band, both in MHz.NOTE 2: For a UE which supports this band combination only when the Band n77 frequency range restriction defined in NOTE 12 of Table 5.2-1 from TS 38.101-1 applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 3: The requirements should be verified for DL NR-ARFCN of the Victim (lower) band (superscript LB) such that $ f_{DL}^{LB}=\lfloor  f_{UL}^{HB}/0.15\rfloor  0.1 $ and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with $ f_{UL}^{HB}$ the UL carrier frequency and $ BW_{Channel}^{HB}$ the channel bandwidth configured in the higher band, both in MHz.NOTE 4: The requirements should be verified for UL NR-ARFCN of the aggressor (higher) band (superscript HB) such that ![](media_svg/image14.svg) [公式≈: f_{DL}^{LB}=_{√}f_{UL}^{HB}/0.2_{∃}0.1]  in MHz and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with  the carrier frequency in the victim (lower) band and  the channel bandwidth configured in the higher band.NOTE 5: The requirements should be verified for UL NR-ARFCN of the aggressor (higher) band (superscript HB) such that ![](media_svg/image15.svg) [公式≈: f_{DL}^{LB}=_{√}f_{UL}^{HB}/0.4_{∃}0.1]  in MHz and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with  the carrier frequency in the victim (lower) band and  the channel bandwidth configured in the higher band.NOTE 6: These requirements apply when there is at least one individual RE within the downlink transmission bandwidth of the victim (lower) band for which the 3rd harmonic is within the uplink transmission bandwidth or the uplink adjacent channel's transmission bandwidth of an aggressor (higher) band.NOTE 7: The requirements should be verified for UL NR-ARFCN of the aggressor (higher) band (superscript HB) such that ![](media_svg/image10.svg) [公式≈: ff_{DLUL}^{LBHB}=⋅∂_{√∃}/0.30.1] in MHz and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with  the carrier frequency in the victim (lower) band and  the channel bandwidth configured in the higher band.NOTE 8: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image17.svg) [公式≈: f_{UL}^{LB}=_{√}7.5*f_{DL}^{HB}_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 9: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image16.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.075_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 10: VoidNOTE 11: Void.NOTE 12: The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.NOTE 13: Applicable to UE’s supporting PC2 with 1TxNOTE 14: Applicable to UE’s supporting PC2 with 2TxNOTE 15: The requirements should be verified for the lowest NR ARFCN of the affected DL (lower) band and for the highest NR ARFCN of the UL (higher) band. |  |  |  |  |  |  |  |  |
+
+Table 7.3A.4-4a-2: Void
+
+Table 7.3A.4-4b: Reference sensitivity exceptions and uplink/downlink configurations due to harmonic mixing from a PC1.5 aggressor NR UL band for NR DL CA FR1
+
+| UL band | DL band | UL BW | SCS of UL band | UL RB Allocation | DL BW | MSD | UL/DL fc condition | UL/DL harmonic order |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (kHz) | LCRB | (MHz) | (dB) |  |  |
+| n40 | n28 | 10 | 15 | 25 | 5 | 43.8 | NOTE 7 | UL1/DL3 |
+| n40 | n28 | 10 | 15 | 25 | 20 | 36.3 | NOTE 7 | UL1/DL3 |
+| n41 | n39 | 10 | 15 | 8 | 5 | 10.5 | NOTE 6 | UL3/DL4 |
+| n41 | n39 | 10 | 15 | 8 | 40 | 3.0 | NOTE 6 | UL3/DL4 |
+| n41 | n77 | 10 | 15 | 6 | 10 | 14.5 | NOTE 8 | UL4/DL3 |
+| n41 | n77 | 10 | 15 | 6 | 100 | 5.5 | NOTE 8 | UL4/DL3 |
+| n41 | n78 | 10 | 15 | 6 | 10 | 14.9 | NOTE 8 | UL4/DL3 |
+| n41 | n78 | 10 | 15 | 6 | 100 | 5.8 | NOTE 8 | UL4/DL3 |
+| n77 | n2 | 10 | 15 | 25 | 5 | 11.8 | NOTE 4 | UL1/DL2 |
+| n77 | n2 | 10 | 15 | 25 | 20 | 6.5 | NOTE 4 | UL1/DL2 |
+| n77 | n3 | 10 | 15 | 25 | 5 | 10.7 | NOTE 4 | UL1/DL2 |
+| n77 | n3 | 10 | 15 | 25 | 40 | 1.4 | NOTE 4 | UL1/DL2 |
+| n77 | n5 | 10 | 15 | 25 | 5 | 10.7 | NOTE 5 | UL1/DL4 |
+| n77 | n5 | 10 | 15 | 25 | 20 | 2.6 | NOTE 5 | UL1/DL4 |
+| n77 | n7 | 10 | 15 | 12 | 10 | 17.5 | NOTE 3 | UL2/DL3 |
+| n77 | n7 | 10 | 15 | 12 | 100 | 5.5 | NOTE 3 | UL2/DL3 |
+| n77 | n12 | 10 | 15 | 25 | 5 | 37 | NOTE 1 | UL1/DL5 |
+| n77 | n12 | 10 | 15 | 25 | 15 | 24 | NOTE 1 | UL1/DL5 |
+| n77 | n13 | 10 | 15 | 25 | 5 | 37 | NOTE 1 | UL1/DL5 |
+| n77 | n13 | 10 | 15 | 25 | 10 | 33.8 | NOTE 1 | UL1/DL5 |
+| n77 | n14 | 10 | 15 | 25 | 5 | 37 | NOTE 1 | UL1/DL5 |
+| n77 | n14 | 10 | 15 | 25 | 10 | 33.8 | NOTE 1 | UL1/DL5 |
+| n77 | n25 | 10 | 15 | 25 | 5 | 10.6 | NOTE 4 | UL1/DL2 |
+| n77 | n25 | 10 | 15 | 25 | 40 | 0.8 | NOTE 4 | UL1/DL2 |
+| n77 | n28 | 10 | 15 | 25 | 5 | 37 | NOTE 1 | UL1/DL5 |
+| n77 | n28 | 10 | 15 | 25 | 30 | 17 | NOTE 1 | UL1/DL5 |
+| n772 | n29 | 10 | 15 | 25 | 5 | 37 | NOTE 1 | UL1/DL5 |
+| n772 | n29 | 10 | 15 | 25 | 10 | 33.8 | NOTE 1 | UL1/DL5 |
+| n77 | n30 | 10 | 15 | 12 | 5 | 16.1 | NOTE 3 | UL2/DL3 |
+| n77 | n30 | 10 | 15 | 12 | 10 | 13 | NOTE 3 | UL2/DL3 |
+| n77 | n40 | 10 | 15 | 12 | 10 | 17.5 | NOTE 3 | UL2/DL3 |
+| n77 | n40 | 10 | 15 | 12 | 100 | 7.9 | NOTE 3 | UL2/DL3 |
+| n77 | n41 | 10 | 15 | 12 | 5 | 20.5 | NOTE 3 | UL2/DL3 |
+| n77 | n41 | 10 | 15 | 12 | 100 | 7.9 | NOTE 3 | UL2/DL3 |
+| n772 | n70 | N/A | N/A | N/A | N/A | N/A | NOTE 4 | UL1/DL2 |
+| n77 | n85 | 10 | 15 | 25 | 5 | 37 | NOTE 1 | UL1/DL5 |
+| n77 | n85 | 10 | 15 | 25 | 15 | 24 | NOTE 1 | UL1/DL5 |
+| n78 | n3 | 10 | 15 | 25 | 5 | 10.7 | NOTE 4 | UL1/DL2 |
+| n78 | n3 | 10 | 15 | 25 | 40 | 1.4 | NOTE 4 | UL1/DL2 |
+| n78 | n8 | 10 | 15 | 25 | 5 | 10.6 | NOTE 5 | UL1/DL4 |
+| n78 | n8 | 10 | 15 | 25 | 20 | 2.6 | NOTE 5 | UL1/DL4 |
+| n78 | n26 | 10 | 15 | 25 | 5 | 10.1 | NOTE 5 | UL1/DL4 |
+| n78 | n28 | 10 | 15 | 50 | 5 | 13 | NOTE 10 | UL1/DL5near-miss |
+| n78 | n40 | 10 | 15 | 12 | 10 | 17.5 | NOTE 3 | UL2/DL3 |
+| n78 | n40 | 10 | 15 | 12 | 100 | 7.9 | NOTE 3 | UL2/DL3 |
+| n79 | n8 | 10 | 15 | 25 | 5 | 31.0 | NOTE 1 | UL1/DL5 |
+| NOTE 1: The requirements should be verified for DL NR-ARFCN of the victim (lower) band (superscript LB) such that ![](media_svg/image13.svg) [公式≈: f_{DL}^{LB}=_{√}f_{UL}^{HB}/0.5_{∃}0.1] and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with $ f_{UL}^{HB}$ the UL carrier frequency and $ BW_{Channel}^{HB}$ the channel bandwidth configured in the higher band, both in MHz.NOTE 2: For a UE which supports this band combination only when the Band n77 frequency range restriction defined in NOTE 12 of Table 5.2-1 from TS 38.101-1 applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 3: The requirements should be verified for DL NR-ARFCN of the Victim (lower) band (superscript LB) such that $ f_{DL}^{LB}=\lfloor  f_{UL}^{HB}/0.15\rfloor  0.1 $ and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with $ f_{UL}^{HB}$ the UL carrier frequency and $ BW_{Channel}^{HB}$ the channel bandwidth configured in the higher band, both in MHz.NOTE 4: The requirements should be verified for UL NR-ARFCN of the aggressor (higher) band (superscript HB) such that ![](media_svg/image14.svg) [公式≈: f_{DL}^{LB}=_{√}f_{UL}^{HB}/0.2_{∃}0.1]  in MHz and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $  with  the carrier frequency in the victim (lower) band and  the channel bandwidth configured in the higher band.NOTE 5: The requirements should be verified for UL NR-ARFCN of the aggressor (higher) band (superscript HB) such that ![](media_svg/image15.svg) [公式≈: f_{DL}^{LB}=_{√}f_{UL}^{HB}/0.4_{∃}0.1]  in MHz and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with  the carrier frequency in the victim (lower) band and  the channel bandwidth configured in the higher band.NOTE 6: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image16.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.075_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 7: The requirements should be verified for UL NR-ARFCN of the aggressor (higher) band (superscript HB) such that ![](media_svg/image10.svg) [公式≈: ff_{DLUL}^{LBHB}=⋅∂_{√∃}/0.30.1] in MHz and  $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $  with  the carrier frequency in the victim (lower) band and  the channel bandwidth configured in the higher band.NOTE 8: The requirements should be verified for DL NR-ARFCN of the victim (higher) band (superscript HB) such that $ f_{DL}^{HB}=\lfloor  f_{UL}^{LB}/0.75\rfloor  $  and $ F_{UL\_low}^{LB}+BW_{Channel}^{LB}/2\leq  f_{UL}^{LB}\leq  F_{UL\_high}^{LB}-BW_{Channel}^{LB}/2 $ with $ f_{UL}^{LB}$ the UL carrier frequency and $ BW_{Channel}^{LB}$ the channel bandwidth configured in the lower band, both in MHz.NOTE 9: The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.NOTE 10: The requirements should be verified for the lowest NR ARFCN of the affected DL (lower) band and for the highest NR ARFCN of the UL (higher) band. |  |  |  |  |  |  |  |  |
+
+The reference sensitivity for the shared access band does not apply when there is at least one individual RE within the shared access downlink transmission bandwidth which falls into the reference sensitivity exclusion region as specified in Table 7.3A.4-1c.
+
+Table 7.3A.4-4c: NR-U reference sensitivity measurement exclusion region in MHz.
+
+| NR Band / Harmonic order / Channel BW (MHz) in UL |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ULBand | UL/DL Harmonic Order | DLBand | 5 | 10 | 15 | 20 | 25 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100 |
+| n77 | UL3/DL2 | n46 |  | +/-23 | +/-35 | +/-45 | +/-60 | +/-70 | +/-90 | +/-115 | +/-140 | +/-160 | +/-180 | +/-210 | +/-230 |
+| n78 | UL3/DL2 | n46 |  | +/-23 | +/-35 | +/-45 | +/-60 | +/-70 | +/-90 | +/-115 | +/-140 | +/-160 | +/-180 | +/-210 | +/-230 |
+| NOTE 1: Even though UL harmonic does not fall directly into NR-U band the exclusion region still applies.NOTE 2: The center of the exclusion region is obtained by multiplying the UL channel center frequency by the ratio of the UL harmonic order over the DL harmonic order. |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+Table 7.3A.4-4d: Reference sensitivity exceptions and uplink/downlink configurations due to harmonic mixing from a power class 5 aggressor NR UL band for NR DL CA FR1
+
+| UL band | DL band | UL BW | SCS of UL band | UL RB Allocation | DL BW | MSD | UL/DL fc condition | UL/DL harmonic order |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (kHz) | LCRB | (MHz) | (dB) |  |  |
+| n46 | n7 | 20 | 15 | 25 | 5 | 8.3 | NOTE 7 | UL1/DL2 |
+| n46 | n7 | 20 | 15 | 25 | 30 | 2.8 | NOTE 7 | UL1/DL2 |
+| n46 | n48 | 20 | 15 | 12 | 10 | 23.8 | NOTE 2 | UL2/DL3 |
+| n46 | n48 | 20 | 15 | 12 | 100 | 10.7 | NOTE 2 | UL2/DL3 |
+| n46 | n78 | 20 | 15 | 12 | 10 | 18.1 | NOTE 2 | UL2/DL3 |
+| n46 | n78 | 20 | 15 | 12 | 100 | 8.4 | NOTE 2 | UL2/DL3 |
+| n96 | n48 | 20 | 15 | 25 | 10 | 28 | NOTE 2 | UL1/DL2 |
+| n96 | n48 | 20 | 15 | 25 | 15 | 23 | NOTE 2 | UL1/DL2 |
+| NOTE 1: Void.NOTE 2: The requirements should be verified for UL NR-ARFCN of the aggressor (high) band (superscript HB) such that ![](media_svg/image18.svg) [公式≈: f_{UL}^{LB}=_{√}15*f_{DL}^{HB}_{∃}0.1]in MHz and $ F_{UL\_low}^{LB}+BW_{Channel}^{LB}/2\leq  f_{UL}^{LB}\leq  F_{UL\_high}^{LB}-BW_{Channel}^{LB}/2 $   with![](media_svg/image19.svg) [公式≈: _{f}_{DL}LB] carrier frequency in the victim (lower) band in MHz and ![](media_svg/image20.svg) [公式≈: ^{BW}Channel^{LB}] the channel bandwidth configured in the higher band.NOTE 3: These requirements apply when there is at least one individual RE within the downlink transmission bandwidth of the victim (lower) band for which the 3rd harmonic is within the uplink transmission bandwidth or the uplink adjacent channel’s transmission bandwidth of an aggressor (higher) band.NOTE 4: Void.NOTE 5: Void.NOTE 6: Void.NOTE 7: The requirements should be verified for UL NR-ARFCN of the aggressor (higher) band (superscript HB) such that ![](media_svg/image14.svg) [公式≈: f_{DL}^{LB}=_{√}f_{UL}^{HB}/0.2_{∃}0.1]  in MHz and $ F_{UL\_low}^{HB}+BW_{Channel}^{HB}/2\leq  f_{UL}^{HB}\leq  F_{UL\_high}^{HB}-BW_{Channel}^{HB}/2 $ with  the carrier frequency in the victim (lower) band and  the channel bandwidth configured in the higher band.NOTE 8: The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing. |  |  |  |  |  |  |  |  |
+
+Table 7.3A.4-5: Void
+
+### 7.3A.5 Reference sensitivity exceptions due to intermodulation interference due to 2UL CA
+
+For inter-band carrier aggregation with uplink assigned to two CCs from up to two UL NR bands and three CCs from two UL NR bands given in Table 7.3A.5-1, Table 7.3A.5-1a, Table 7.3A.5-1b, Table 7.3A.5-2, Table 7.3A.5-2a and Table 7.3A.5-2b the reference sensitivity is defined only for the specific uplink and downlink test points specified in Table 7.3A.5-1, Table 7.3A.5-1a, Table 7.3A.5-1b, Table 7.3A.5-, Table 7.3A.5-2a and Table 7.3A.5-2b. For these test points the reference sensitivity requirement specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-2 and Table 7.3.2-2a  are relaxed by the amount of the corresponding parameter MSD given in Table 7.3A.5-1, Table 7.3A.5-1a, Table 7.3A.5-1b, Table 7.3A.5-2, Table 7.3A.5-2a and Table 7.3A.5-2b.
+
+Table 7.3A.5-1: 2DL/2UL inter-band Reference sensitivity QPSK PREFSENS and uplink/downlink configurations for PC3 CA
+
+| Band / Channel bandwidth / NRB / Duplex mode |  |  |  |  |  |  |  | Source of IMD |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| NR CA band combination | NR band | UL Fc  (MHz) | UL/DL BW  (MHz) | UL  LCRB | DL Fc (MHz) | MSD  (dB) | Duplex mode |  |
+| CA_n1-n3 | n1 | 1950 | 5 | 25 | 2140 | 23 | FDD | IMD3 |
+|  | n3 | 1760 | 5 | 25 | 1855 | N/A | TDD | N/A |
+| CA_n1-n8 | n1 | 1965 | 5 | 25 | 2155 | 6.0 | FDD | IMD4 |
+|  | n8 | 887.5 | 5 | 25 | 932.5 | N/A | FDD | N/A |
+| CA_n1-n46 | n1 | 1950 | 5 | 25 | 2140 | 5 | FDD | IMD5 |
+|  | n46 | 5660 | 20 | 100 | 5660 | N/A | TDD | N/A |
+| CA_n1-n71 | n1 | 1958 | 5 | 25 | 2148 | N/A | FDD | N/A |
+|  | n71 | 668 | 5 | 25 | 622 | 15.1 | FDD | IMD3 |
+| CA_n1-n77 | n1 | 1950 | 5 | 25 | 2140 | 29.8 | FDD | IMD24,21 |
+|  | n77 | 4090 | 10 | 50 | 4090 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2130 | 17 | FDD | IMD516 |
+|  | n7712 | 3310 | 10 | 1 (RBSTART=25) | 3310 | N/A | TDD | N/A |
+|  |  | 3900 | 10 | 1 (RBSTART=25) | 3900 |  |  |  |
+| CA_n1-n78 | n1 | 1950 | 5 | 25 | 2140 | 8.0 | FDD | IMD4 |
+|  | n78 | 3710 | 10 | 50 | 3710 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2167.5 | 1.7 | FDD | IMD717 |
+|  | n7812 | 3305 | 10 | 1 (RBSTART=0) | 3305 | N/A | TDD | N/A |
+|  |  | 3675 | 10 | 1 (RBSTART=44) | 3675 |  |  |  |
+| CA_n1-n102 | n1 | 1922.5 | 5 | 25 | 2112.5 | 13 | FDD | IMD3 |
+|  | n102 | 5957.5 | 20 | 100 | 5957.5 | N/A | TDD | N/A |
+| CA_n1-n105 | n1 | 1958 | 5 | 25 | 2148 | N/A | FDD | N/A |
+|  | n105 | 673 | 5 | 25 | 622 | 15.1 | FDD | IMD3 |
+| CA_n2-n48 | n2 | 1852.5 | 5 | 25 | 1932.5 | 12 | FDD | IMD4 |
+|  | n48 | 3625 | 20 | 100 | 3625 | N/A | TDD | N/A |
+| CA_n2-n66 | n2 | 1855 | 5 | 25 | 1935 | 20 | FDD | IMD34 |
+|  | n66 | 1775 | 5 | 25 | 2175 | N/A | FDD | N/A |
+| CA_n2-n77 | n2 | 1855 | 5 | 25 | 1935 | 26 | FDD | IMD221 |
+|  | n77 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+|  | n2 | 1885 | 5 | 25 | 1965 | 5 | FDD | IMD5 |
+|  | n77 | 3810 | 10 | 50 | 3810 | N/A | TDD | N/A |
+|  | n2 | N/A | 5 | N/A | 1987.5 | 2.7 | FDD | IMD7 |
+|  | n7712 | 3455 | 10 | 1 (RBSTART=10) | 3455 | N/A | TDD | N/A |
+|  |  | 3945 | 10 | 1 (RBSTART=0) | 3945 |  |  |  |
+| CA_n2-n78 | n2 | 1855 | 5 | 25 | 1935 | 26 | FDD | IMD24 |
+|  | n78 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+| CA_n3-n5 | n3 | 1771 | 10 | 50 | 1866 | 4 | FDD | IMD4 |
+|  | n5 | 838 | 5 | 25 | 883 | N/A | FDD | N/A |
+|  | n3 | 1721 | 10 | 50 | 1816 | N/A | FDD | N/A |
+|  | n5 | 838 | 5 | 25 | 883 | 24 | FDD | IMD23 |
+| CA_n3-n7 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n7 | 2535 | 10 | 50 | 2655 | 10.2 | FDD | IMD4 |
+| CA_n3-n8 | n3 | 1755 | 10 | 50 | 1850 | N/A | FDD | N/A |
+|  | n8 | 900 | 5 | 25 | 945 | 8 | FDD | IMD44 |
+|  | n3 | 1747.5 | 10 | 50 | 1842.5 | 6.4 | FDD | IMD5 |
+|  | n8 | 897.5 | 5 | 25 | 942.5 | N/A | FDD | N/A |
+| CA_n3-n18 | n3 | 1731 | 5 | 25 | 1826 | 4 | FDD | IMD4 |
+|  | n18 | 818 | 5 | 25 | 863 | N/A | FDD | N/A |
+| CA_n3-n20 | n3 | 1775 | 5 | 25 | 1870 | 4 | FDD | IMD4 |
+|  | n20 | 840 | 5 | 25 | 799 | N/A | FDD | N/A |
+|  | n3 | 1735 | 5 | 25 | 1830 | N/A | FDD | N/A |
+|  | n20 | 847 | 5 | 25 | 806 | 9 | FDD | IMD4 |
+| CA_n3-n26 | n3 | 1771 | 5 | 25 | 1866 | 4 | FDD | IMD4 |
+|  | n26 | 838 | 5 | 25 | 883 | N/A | FDD | N/A |
+|  | n3 | 1721 | 5 | 25 | 1816 | N/A | FDD | N/A |
+|  | n26 | 838 | 5 | 25 | 883 | 26 | FDD | IMD24 |
+| CA_n3-n38 | n3 | 1713 | 5 | 25 | 1808 | 8.2 | FDD | IMD4 |
+|  | n38 | 2617 | 5 | 25 | 2617 | N/A | TDD | N/A |
+| CA_n3-n41 | n3 | 1740 | 5 | 25 | 1835 | 8.2 | FDD | IMD4 |
+|  | n41 | 2657.5 | 10 | 50 | 2657.5 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1877.5 | N/A | FDD | IMD914 |
+|  | n41 | 2545 | 60 | 1 (RBSTART= 0) | 2545 | N/A | TDD | N/A |
+|  |  | 2625 | 100 | 1 (RBSTART= 272) | 2625 |  |  |  |
+|  | n3 | 1747.5 | 5 | 25 (RBSTART= 0) | 1842.5 | 15.3 | FDD | IMD3 |
+|  | n41 | 2560 | 60 | 1 (RBSTART= 30) | 2560 | N/A | TDD | N/A |
+|  |  | 2620 | 60 | 1 (RBSTART= 127) | 2620 |  |  |  |
+| CA_n3-n77 | n3 | 1740 | 5 | 25 | 1835 | 26 | FDD | IMD24,21 |
+|  | n77 | 3575 | 10 | 50 | 3575 | N/A | TDD | N/A |
+|  | n3 | N/A | N/A | N/A | N/A | N/A | FDD | IMD57 |
+|  | n7712 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1877.5 | 2.2 | FDD | IMD7 |
+|  | n7712 | 3427.5 | 10 | 1 (RBSTART=10) | 3427.5 | N/A | TDD | N/A |
+|  |  | 3945 | 10 | 1 (RBSTART=0) | 3945 |  |  |  |
+| CA_n3-n78 | n3 | 1740 | 5 | 25 | 1835 | 26 | FDD | IMD24,21 |
+|  | n78 | 3575 | 10 | 25 | 3575 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1877.5 | 2.2 | FDD | IMD7 |
+|  | n7812 | 3305 | 10 | 1 (RBSTART=3) | 3305 | N/A | TDD | N/A |
+|  |  | 3780 | 10 | 1 (RBSTART=0) | 3780 |  |  |  |
+| CA_n3-n104 | n3 | 1750 | 5 | 25 | 1845 | 9.0 | FDD | IMD4 |
+|  | n104 | 7095 | 20 | 50 | 7095 | N/A | TDD | N/A |
+| CA_n5-n7 | n5 | 834 | 5 | 25 | 879 | 12 | FDD | IMD34 |
+|  | n7 | 2547 | 10 | 50 | 2667 | N/A | FDD | N/A |
+| CA_n5-n8 | n5 | 837.5 | 5 | 25 | 882.5 | N/A | FDD | N/A |
+|  | n8 | 882.5 | 5 | 25 | 927.5 | 25 | FDD | IMD3 |
+| CA_n5-n12 | n5 | 829 | 10 | 10 (RBSTART=0) | 874 | N/A18 | FDD | N/A |
+|  |  | 838.9 | 10 | 10 (RBSTART=36) | 883.9 |  |  |  |
+|  | n12 | N/A | 5 | N/A | 743.5 | 20.8 | FDD | IMD11 |
+| CA_n5-n13 | n5 | 828 | 5 | 25 | 873 | 25 | FDD | IMD3 |
+|  | n13 | 783 | 5 | 25 | 752 | N/A | FDD | N/A |
+| CA_n5-n14 | n5 | 836 | 5 | 25 | 881 | 25 | FDD | IMD34 |
+|  | n14 | 791 | 5 | 25 | 761 | N/A | FDD | N/A |
+|  | n5 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n14 | 795.5 | 5 | 25 | 765.5 | 25 | FDD | IMD3 |
+|  | n5 | 829 | 10 | 10 (RBSTART=0) | 874 | N/A18 | FDD | N/A |
+|  |  | 838.9 | 10 | 10 (RBSTART=28) | 883.9 |  |  |  |
+|  | n14 | N/A | 5 | N/A | 765.5 | 26.2 | FDD | IMD9 |
+| CA_n5-n29 | n5 | 829 | 10 | 10 (RBSTART=0) | 874 | N/A18 | FDD | N/A |
+|  |  | 838.9 | 10 | 10 (RBSTART=36) | 883.9 |  |  |  |
+|  | n29 | N/A | 5 | N/A | 725.5 | 16.0 | FDD | IMD13 |
+| CA_n5_n41 | n5 | 839 | 5 | 25 | 884 | 15.6 | FDD | IMD33 |
+|  | n41 | 2562 | 10 | 50 | 2562 | N/A | TDD | N/A |
+| CA_n5-n66 | n5 | 838 | 5 | 25 | 883 | 30 | FDD | IMD24 |
+|  | n66 | 1721 | 5 | 25 | 2121 | N/A | FDD | N/A |
+| CA_n5-n77 | n5 | N/A | N/A | N/A | N/A | N/A | FDD | IMD27 |
+|  | n7712 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+|  | n5 | 844 | 5 | 25 | 889 | 8.3 | FDD | IMD413 |
+|  | n77 | 3421 | 10 | 50 | 3421 | N/A | TDD | N/A |
+|  | n5 | 829 | 5 | 25 | 874 | 5.5 | FDD | IMD513 |
+|  | n77 | 4190 | 10 | 50 | 4190 | N/A | TDD | N/A |
+|  | n5 | N/A | 5 | N/A | 880 | 8.6 | FDD | IMD4 |
+|  | n7712 | 3410 | 10 | 1 (RBSTART=25) | 3410 | N/A | TDD | N/A |
+|  |  | 3850 | 10 | 1 (RBSTART=25) | 3850 |  |  |  |
+| CA_n5-n78 | n5 | 844 | 5 | 25 | 889 | 8.3 | FDD | IMD4 |
+|  | n78 | 3421 | 10 | 50 | 3421 | N/A | TDD | N/A |
+|  | n5 | N/A | 5 | N/A | 880 | 8.6 | FDD | IMD417 |
+|  | n7812 | 3340 | 10 | 1 (RBSTART=25) | 3340 | N/A | TDD | N/A |
+|  |  | 3780 | 10 | 1 (RBSTART=25) | 3780 |  |  |  |
+| CA_n7-n20 | n7 | 2512 | 5 | 50 | 2632 | N/A | FDD | N/A |
+|  | n20 | 851 | 5 | 25 | 810 | 12 | FDD | IMD3 |
+| CA_n7-n26 | n7 | 2556 | 5 | 25 | 2676 | N/A | FDD | N/A |
+|  | n26 | 837 | 5 | 25 | 882 | 16.0 | FDD | IMD34 |
+|  | n7 | 2567.5 | 5 | 25 | 2687.5 | 2.5 | FDD | IMD5 |
+|  | n26 | 816.5 | 5 | 25 | 861.5 | N/A | FDD | N/A |
+| CA_n7-n40 | n7 | 2510 | 5 | 25 | 2630 | 23 | FDD | IMD3 |
+|  | n40 | 2390 | 10 | 50 | 2390 | N/A | TDD | N/A |
+| CA_n7-n46 | n7 | 2550 | 10 | 50 | 2670 | 26.8 | FDD | IMD24 |
+|  | n46 | 5220 | 20 | 100 | 5220 | N/A | TDD | N/A |
+| CA_n7-n66 | n7 | 2535 | 10 | 50 | 2655 | 15 | FDD | IMD4 |
+|  | n66 | 1730 | 5 | 25 | 2130 | N/A | FDD | N/A |
+| CA_n7-n77 | n7 | 2540 | 5 | 25 | 2660 | 7.1 | FDD | IMD4 |
+|  | n77 | 3870 | 10 | 50 | 3870 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2687.5 | 15 | FDD | IMD5 |
+|  | n7712 | 3455 | 10 | 1 (RBSTART=0) | 3455 | N/A | TDD | N/A |
+|  |  | 3835 | 10 | 1 (RBSTART=7) | 3835 |  |  |  |
+| CA_n7-n78 | n7 | N/A | 5 | N/A | 2650 | 15 | FDD | IMD5 |
+|  | n7812 | 3350 | 10 | 1 (RBSTART=25) | 3350 | N/A | TDD | N/A |
+|  |  | 3700 | 10 | 1 (RBSTART=25) | 3700 |  |  |  |
+| CA_n8-n20 | n8 | 890.5 | 5 | 25 | 935.5 | N/A | FDD | N/A |
+|  | n20 | 849.5 | 5 | 25 | 808.5 | 25 | FDD | IMD34 |
+|  | n8 | 892.5 | 5 | 25 | 937.5 | 25 | FDD | IMD34 |
+|  | n20 | 847.5 | 5 | 25 | 806.5 | N/A | FDD | N/A |
+| CA_n8-n41 | n8 | 882.5 | 5 | 25 | 927.5 | 12.1 | FDD | IMD34 |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+| CA_n8-n77 | n8 | 897.5 | 5 | 25 | 942.5 | 8.3 | FDD | IMD4 |
+|  | n77 | 3635 | 10 | 50 | 3635 | N/A | TDD | N/A |
+| CA_n8-n78 | n8 | 897.5 | 5 | 25 | 942.5 | 8.3 | FDD | IMD4 |
+|  | n78 | 3635 | 10 | 50 | 3635 | N/A | TDD | N/A |
+| CA_n8-n79 | n8 | 897.5 | 5 | 25 | 942.5 | 4.8 | FDD | IMD5 |
+|  | n79 | 4532.5 | 40 | 216 | 4532.5 | N/A | TDD | N/A |
+| CA_n12-n66 | n12 | 707.5 | 5 | 25 | 737.5 | N/A | FDD | N/A |
+|  | n66 | 1765 | 5 | 25 | 2115 | 5.0 | FDD | IMD4 |
+| CA_n12-n77 | n12 | 702 | 5 | 20 | 732 | 5.5 | FDD | IMD5 |
+|  | n77 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+| CA_n12-n78 | n12 | 710 | 5 | 25 | 740 | 5.5 | FDD | IMD5 |
+|  | n78 | 3580 | 10 | 50 | 3580 | N/A | TDD | N/A |
+| CA_n13-n77 | n13 | 782 | 5 | 20 | 751 | 5.5 | FDD | IMD5 |
+|  | n77 | 3880 | 10 | 50 | 3880 | N/A | TDD | N/A |
+|  | n13 | N/A | 5 | N/A | 750 | 8.6 | FDD | IMD415 |
+|  | n7712 | 3510 | 10 | 1 (RBSTART=25) | 3510 | N/A | TDD | N/A |
+|  |  | 3885 | 10 | 1 (RBSTART=25) | 3885 |  |  |  |
+| CA_n14-n77 | n14 | 793 | 5 | 20 | 763 | 5.5 | FDD | IMD5 |
+|  | n77 | 3935 | 10 | 50 | 3935 | N/A | TDD | N/A |
+| CA_n18-n41 | n18 | 820 | 5 | 25 | 865 | 14.1 | FDD | IMD3 |
+|  | n41 | 2505 | 10 | 50 | 2505 | N/A | TDD | N/A |
+| CA_n18-n77 | n18 | 827.5 | 5 | 25 | 872.5 | 8.4 | FDD | IMD48 |
+|  | n77 | 3355 | 10 | 50 | 3355 | N/A | TDD | N/A |
+|  | n18 | 817.5 | 5 | 25 | 862.5 | 4.5 | FDD | IMD58 |
+|  | n77 | 4130 | 10 | 50 | 4130 | N/A | TDD | N/A |
+|  | n18 | N/A | N/A | N/A | N/A | N/A | FDD | IMD27 |
+|  | n77 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+|  | n18 | N/A | 5 | N/A | 870 | 8.6 | FDD | IMD4 |
+|  | n7712 | 3480 | 10 | 1 (RBSTART=25) | 3480 | N/A | TDD | N/A |
+|  |  | 3915 | 10 | 1 (RBSTART=25) | 3800 |  |  |  |
+| CA_n18-n78 | n18 | 827.5 | 5 | 25 | 872.5 | 8.3 | FDD | IMD49 |
+|  | n78 | 3355 | 10 | 50 | 3355 | N/A | TDD | N/A |
+| CA_n20-n41 | n20 | 851 | 5 | 25 | 810 | 12.1 | FDD | IMD34 |
+|  | n41 | 2512 | 10 | 50 | N/A | N/A | TDD | N/A |
+| CA_n20-n77 | n20 | 850 | 5 | 25 | 809 | 11 | FDD | IMD4 |
+|  | n77 | 3359 | 10 | 50 | 3359 | N/A | TDD | N/A |
+|  | n20 | 840 | 5 | 25 | 799 | 6.5 | FDD | IMD5 |
+|  | n77 | 4159 | 10 | 50 | 4159 | N/A | TDD | N/A |
+| CA_n20-n78 | n20 | 850 | 5 | 25 | 809 | 11 | FDD | IMD4 |
+|  | n78 | 3359 | 10 | 50 | 3359 | N/A | TDD | N/A |
+|  | n20 | N/A | 5 | N/A | 800 | 8.6 | FDD | IMD415 |
+|  | n7812 | 3350 | 10 | 1 (RBSTART=25) | 3350 | N/A | TDD | N/A |
+|  |  | 3750 | 10 | 1 (RBSTART=25) | 3750 |  |  |  |
+| CA_n24-n77 | n24 | N/A | N/A | N/A | N/A | N/A | FDD | IMD410 |
+|  | n77 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+| CA_n25-n41 | n25 | N/A | 5 | N/A | 1992.5 | 8.5 | FDD | IMD7 |
+|  | n41 | 2545 | 90 | 1 (RBSTART=0) | 2545 | N/A | TDD | N/A |
+|  |  | 2640 | 100 | 1 (RBSTART=221) | 2640 |  |  |  |
+|  | n25 | 1860 | 5 | 25 | 1940 | 15.3 | FDD | IMD3 |
+|  | n41 | 2501 | 10 | 1 (RBstart = 25) | 2501 | N/A | TDD | N/A |
+|  |  | 2556 | 100 | 1 (RBstart = 208) | 2556 |  |  |  |
+| CA_n25-n48 | n25 | 1852.5 | 5 | 25 | 1932.5 | 12 | FDD | IMD4 |
+|  | n48 | 3625 | 20 | 100 | 3625 | N/A | TDD | N/A |
+| CA_n25-n66 | n25 | 1855 | 5 | 25 | 1935 | 20 | FDD | IMD3 |
+|  | n66 | 1775 | 5 | 25 | 2175 | N/A | FDD | N/A |
+|  | n25 | 1912.5 | 5 | 25 | 1992.5 | N/A | FDD | N/A |
+|  | n66 | 1712.5 | 5 | 25 | 2112.5 | 23 | FDD | IMD34 |
+| CA_n25-n77 | n25 | 1855 | 5 | 25 | 1935 | 26 | FDD | IMD221 |
+|  | n77 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+|  | n25 | 1885 | 5 | 25 | 1965 | 5 | FDD | IMD5 |
+|  | n77 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1987.5 | 2.7 | FDD | IMD7 |
+|  | n7712 | 3455 | 10 | 1 (RBSTART=10) | 3455 | N/A | TDD | N/A |
+|  |  | 3945 | 10 | 1 (RBSTART=0) | 3945 |  |  |  |
+| CA_n25-n78 | n25 | 1855 | 5 | 25 | 1935 | 26 | FDD | IMD24 |
+|  | n78 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1980 | 2.7 | FDD | IMD7 |
+|  | n7812 | 3315 | 10 | 1 (RBSTART=7) | 3315 | N/A | TDD | N/A |
+|  |  | 3760 | 10 | 1 (RBSTART=0) | 3760 |  |  |  |
+| CA_n26-n66 | n26 | 838 | 5 | 25 | 883 | 30 | FDD | IMD24 |
+|  | n66 | 1721 | 5 | 25 | 2121 | N/A | FDD | N/A |
+| CA_n26-n70 | n26 | 831 | 5 | 25 | 876 | 30 | FDD | IMD24 |
+|  | n70 | 1707.5 | 5 | 25 | 2007.5 | N/A | FDD | N/A |
+| CA_n26-n77 | n26 | N/A | N/A | N/A | N/A | N/A | FDD | IMD413 |
+|  | n77 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+|  | n26 | N/A | N/A | N/A | N/A | N/A | FDD | IMD513 |
+|  | n77 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+| CA_n26-n78 | n26 | 836.5 | 5 | 25 | 881.5 | 11.1 | FDD | IMD4 |
+|  | n78 | 3391 | 10 | 50 | 3391 | N/A | TDD | N/A |
+|  | n26 | 824 | 5 | 12 (RBSTART=0) | 869 | N/A | TDD | N/A |
+|  |  | 839 | 5 | 12 (RBSTART=0) | 884 |  |  |  |
+|  | n78 | N/A | 10 | N/A | 3336 | 11.1 | FDD | IMD4 |
+| CA_n28-n50 | n28 | 730 | 10 | 50 | 775 | 15.3 | FDD | IMD24,21 |
+|  | n50 | 1500 | 10 | 50 | 1500 | N/A | TDD | N/A |
+| CA_n28-n74 | n28 | 705.5 | 5 | 25 | 760.5 | 24.6 | FDD | IMD24,21 |
+|  | n74 | 1466 | 5 | 25 | 1514 | N/A | FDD | N/A |
+|  | n28 | 709 | 5 | 25 | 764 | N/A | FDD | N/A |
+|  | n74 | 1466 | 5 | 25 | 1514 | 14.6 | FDD | IMD4 |
+|  | n28 | 735.5 | 5 | 25 | 790.5 | N/A | FDD | N/A |
+|  | n74 | 1450.4 | 5 | 25 | 1498.4 | 2.5 | FDD | IMD5 |
+| CA_n28-n77 | n28 | N/A | N/A | N/A | N/A | N/A | FDD | IMD27 |
+|  | n7712 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+|  | n28 | 705.5 | 5 | 25 | 760.5 | 5.5 | FDD | IMD5 |
+|  | n77 | 3582.5 | 10 | 50 | 3582.5 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 780 | 8.5 | FDD | IMD415 |
+|  | n7712 | 3510 | 10 | 1 (RBSTART=25) | 3510 | N/A | TDD | N/A |
+|  |  | 3900 | 10 | 1 (RBSTART=25) | 3900 |  |  |  |
+|  | n28 | N/A | 5 | N/A | 705.5 | 8.6 | FDD | IMD4 |
+|  | n7712 | 3455 | 10 | 1 (RBSTART=17) | 3455 | N/A | TDD | N/A |
+|  |  | 3805 | 10 | 1 (RBSTART=0) | 3805 |  |  |  |
+| CA_n28-n78 | n28 | 705.5 | 5 | 25 | 760.5 | 5.5 | FDD | IMD5 |
+|  | n78 | 3582.5 | 10 | 50 | 3582.5 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 750 | 8.6 | FDD | IMD415 |
+|  | n78 | 3310 | 10 | 1 (RBSTART=7) | 3310 | N/A | TDD | N/A |
+|  |  | 3700 | 10 | 1 (RBSTART=0) | 3700 |  |  |  |
+| CA_n29-n77 | n29 | N/A | 5 | N/A | 720 | 8.6 | SDL | IMD415 |
+|  | n7712 | 3540 | 10 | 1 (RBSTART=25) | 3410 | N/A | TDD | N/A |
+|  |  | 3900 | 10 | 1 (RBSTART=25) | 3850 |  |  |  |
+| CA_n30-n77 | n30 | 2310 | 5 | 25 | 2355 | 8.0 | FDD | IMD4 |
+|  | n77 | 3487.5 | 10 | 50 | 3487.5 | N/A | TDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2352.5 | 3.2 | FDD | IMD7 |
+|  | n7712 | 3455 | 10 | 1 (RBSTART=17) | 3455 | N/A | TDD | N/A |
+|  |  | 3825 | 10 | 1 (RBSTART=0) | 3825 |  |  |  |
+| CA_n40-n41 | n40 | N/A | 10 | N/A | 2395 | 38.7 | TDD | IMD314,16,19 |
+|  | n41 | 2565 | 100 | 1 (RBSTART=0) | 2565 | N/A | TDD | N/A |
+|  |  | 2644.8 | 60 | 1 (RBSTART=52) | 2644.8 | N/A | TDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2395 | 32.5 | TDD | IMD314,16,19,20 |
+|  | n41 | 2565 | 100 | 270 (RBSTART=3) | 2565 | N/A | TDD | N/A |
+|  |  | 2644.8 | 60 | 162 (RBSTART=0) | 2644.8 | N/A | TDD | N/A |
+| CA_n41-n66 | n41 | 2545 | 90 | 1 (RBSTART=0) | 2545 | N/A | TDD | N/A |
+|  |  | 2640 | 100 | 1 (RBSTART=171) | 2640 |  |  |  |
+|  | n66 | N/A | 5 | N/A | 2197.5 | 32.5 | FDD | IMD5 |
+| CA_n41-n71 | n41 | 2614 | 10 | 50 | 2614 | N/A | TDD | N/A |
+|  | n71 | 665 | 5 | 25 | 619 | 9.5 | FDD | IMD4 |
+| CA_n41-n77 | n41 | 2545 | 60 | 1 (RBSTART=0) | 2545 | N/A | TDD | N/A |
+|  |  | 2625 | 100 | 1 (RBSTART=272) | 2625 |  |  |  |
+|  | n77 | N/A | 10 | N/A | 3305 | 2.7 | TDD | IMD9 |
+|  | n41 | N/A | 10 | N/A | 2565 | 17 | TDD | IMD516 |
+|  | n7712 | 3485 | 10 | 1 (RBSTART=25) | 3485 | N/A | TDD | N/A |
+|  |  | 3945 | 10 | 1 (RBSTART=25) | 3945 |  |  |  |
+| CA_n41-n78 | n41 | N/A | 10 | N/A | 2500 | 2.7 | TDD | IMD9 |
+|  | n78 | 3350 | 100 | 1 (RBSTART=0) | N/A | N/A | TDD | N/A |
+|  |  | 3450 |  | 1 (RBSTART=272) |  |  |  |  |
+| CA_n41-n79 | n41 | 2565 | 100 | 1 (RBSTART=89) | 2565 | N/A | TDD | N/A |
+|  |  | 2644.8 | 60 | 1 (RBSTART=93) | 2644.8 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4995 | 10.4 | TDD | IMD414,15 |
+|  | n41 | 2565 | 100 | 270 (RBSTART=3) | 2565 | N/A | TDD | N/A |
+|  |  | 2644.8 | 60 | 162 (RBSTART=0) | 2644.8 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4995 | 6 | TDD | IMD414,15,20 |
+|  | n4112 | 2565 | 100 | 270 (RBSTART=3) | 2565 | N/A | TDD | N/A |
+|  |  | 2655 | 40 | 100 (RBSTART=6) | 2655 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4995 | 5.3 | TDD | IMD414,15,20 |
+| CA_n46-n77 | n46 | N/A | 20 | N/A | 5155 | N/A | TDD | IMD5 |
+|  | n7712 | 3385 | 10 | 1 (RBSTART= 25) | 3385 | N/A | TDD | N/A |
+|  |  | 3975 | 10 | 1 (RBSTART= 25) | 3975 |  |  |  |
+|  | n46 | N/A | 20 | N/A | 5660 | N/A | TDD | IMD6 |
+|  | n7712 | 3310 | 10 | 1 (RBSTART= 25) | 3310 | N/A | TDD | N/A |
+|  |  | 3790 | 10 | 1 (RBSTART= 25) | 3790 |  |  |  |
+|  | n46 | N/A | 20 | N/A | 5230 | N/A | TDD | IMD7 |
+|  | n7712 | 3310 | 10 | 1 (RBSTART= 25) | 3310 | N/A | TDD | N/A |
+|  |  | 3790 | 10 | 1 (RBSTART= 25) | 3790 |  |  |  |
+| CA_n46-n78 | n46 | N/A | 20 | N/A | 5660 | N/A | TDD | IMD6 |
+|  | n7812 | 3310 | 10 | 1 (RBSTART= 25) | 3310 | N/A | TDD | N/A |
+|  |  | 3790 | 10 | 1 (RBSTART= 25) | 3790 |  |  |  |
+|  | n46 | N/A | 20 | N/A | 5230 | N/A | TDD | IMD7 |
+|  | n7812 | 3310 | 10 | 1 (RBSTART= 25) | 3310 | N/A | TDD | N/A |
+|  |  | 3790 | 10 | 1 (RBSTART= 25) | 3790 |  |  |  |
+| CA_n48-n66 | n48 | 3660 | 10 | 50 | 3660 | N/A | TDD | N/A |
+|  | n66 | 1730 | 5 | 25 | 2130 | 5.0 | FDD | IMD5 |
+| CA_n48-n70 | n48 | 3695 | 10 | 50 | 3695 | N/A | TDD | N/A |
+|  | n70 | 1697.5 | 15/25 | 25 | 1997.5 | 26 | FDD | IMD24 |
+| CA_n66-n71 | n66 | 1750 | 5 | 25 | 2150 | 5 | FDD | IMD4 |
+|  | n71 | 675 | 5 | 25 | 629 | N/A | FDD | N/A |
+| CA_n66-n77 | n66 | 1775 | 5 | 25 | 2175 | 31 | FDD | IMD2 |
+|  | n77 | 3950 | 10 | 50 | 3950 | N/A | TDD | N/A |
+|  | n66 | 1760 | 5 | 25 | 2160 | 5.0 | FDD | IMD5 |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2197.5 | 15 | FDD | IMD513 |
+|  | n7712 | 3305 | 10 | 1 (RBSTART=0) | 3305 | N/A | TDD | N/A |
+|  |  | 3855 | 10 | 1 (RBSTART=8) | 3855 |  |  |  |
+|  | n66 | 1730 | 5 | 25 | 2130 | 1.7 | FDD | IMD7 |
+|  | n7712 | 3455 | 10 | 1 (RBSTART=10) | 3455 | N/A | TDD | N/A |
+|  |  | 3875 | 10 | 1 (RBSTART=0) | 3875 |  |  |  |
+| CA_n66-n78 | n66 | 1730 | 5 | 25 | 2130 | 5.0 | FDD | IMD5 |
+|  | n78 | 3660 | 10 | 50 | 3660 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | 25 | 2150 | 1.7 | FDD | IMD7 |
+|  | n7812 | 3350 | 10 | 1 (RBSTART=7) | 3350 | N/A | TDD | N/A |
+|  |  | 3750 | 10 | 1 (RBSTART=0) | 3750 |  |  |  |
+| CA_n66-n85 | n66 | 1770 | 5 | 25 | 2138 | 5 | FDD | IMD4 |
+|  | n85 | 701 | 5 | 25 | 731 | N/A | FDD | N/A |
+| CA_n67-n78 | n67 | N/A | 5 | N/A | 748 | 8.6 | SDL | IMD415 |
+|  | n7812 | 3376 | 10 | 1 (RBSTART=25) | 3376 | N/A | TDD | N/A |
+|  |  | 3750 | 10 | 1 (RBSTART=25) | 3750 |  |  |  |
+| CA_n70-n71 | n70 | 1697.5 | 5 | 25 | 1997.5 | 5 | FDD | IMD4 |
+|  | n71 | 695.5 | 5 | 25 | 649.5 | N/A | FDD | N/A |
+| CA_n70-n77 | n70 | 1702.5 | 5 | 25 | 2002.5 | 31 | FDD | IMD2 |
+|  | n77 | 3705 | 10 | 50 | 3705 | N/A | TDD | N/A |
+|  | n70 | 1697.5 | 5 | 25 | 1997.5 | 5.0 | FDD | IMD5 |
+|  | n77 | 3545 | 10 | 50 | 3545 | N/A | TDD | N/A |
+| CA_n70-n78 | n70 | 1705 | 5 | 25 | 2005 | 31 | FDD | IMD2 |
+|  | n78 | 3710 | 10 | 50 | 3710 | N/A | TDD | N/A |
+|  | n70 | 1705 | 5 | 25 | 2005 | 5.0 | FDD | IMD5 |
+|  | n78 | 3560 | 10 | 50 | 3560 | N/A | TDD | N/A |
+| CA_n71-n77 | n71 | 671 | 5 | 25 | 625 | 5.5 | FDD | IMD513 |
+|  | n77 | 3309 | 10 | 50 | 3309 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 640 | 8.6 | FDD | IMD4 |
+|  | n7712 | 3480 | 10 | 1 (RBSTART=25) | 3480 | N/A | TDD | N/A |
+|  |  | 3800 | 10 | 1 (RBSTART=25) | 3800 |  |  |  |
+| CA_n71-n78 | n71 | 681.5 | 5 | 25 | 635.5 | 5.5 | FDD | IMD5 |
+|  | n78 | 3361.5 | 10 | 50 | 3361.5 | N/A | TDD | N/A |
+| CA_n74-n77 | n74 | N/A | 5 | N/A | 1500 | 4.6 | FDD | IMD6 |
+|  | n7712 | 3505 | 10 | 1(Rbstart=26) | 3505 | N/A | TDD | N/A |
+|  |  | 4005 | 10 | 1(Rbstart=26) | 4005 |  |  |  |
+|  | n74 | N/A | 5 | N/A | 1505 | 1.7 | FDD | IMD7 |
+|  | n7712 | 3305 | 10 | 1(Rbstart=26) | 3305 | N/A | TDD | N/A |
+|  |  | 3905 | 10 | 1(Rbstart=26) | 3905 |  |  |  |
+| CA_n75-n78 | n75 | N/A | 5 | N/A | 1505 | 2.7 | SDL | IMD9 |
+|  | n7812 | 3305 | 10 | 1 (RBSTART=25) | 3305 | N/A | TDD | N/A |
+|  |  | 3795 | 10 | 1 (RBSTART=25) | 3795 |  |  |  |
+| CA_n77-n85 | n77 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+|  | n85 | 702 | 5 | 20 | 732 | 5.5 | FDD | IMD5 |
+| CA_n78-n102 | n7812 | 3320 | 10 | 1 (RBSTART=25) | 3320 | N/A | TDD | N/A |
+|  |  | 3680 | 10 | 1 (RBSTART=25) | 3680 |  |  |  |
+|  | n102 | 6280 | 20 | 100 | 6280 | N/A | TDD | IMD44 |
+| CA_n78-n105 | n78 | 3361.5 | 10 | 50 | 3361.5 | N/A | TDD | N/A |
+|  | n105 | 682.5 | 5 | 25 | 631.5 | 5.5 | FDD | IMD5 |
+| NOTE 1: Both of the transmitters shall be set min(+20 dBm, PCMAX_L,f,c) as defined in clause 6.2A.4NOTE 2: RBSTART = 0, 15 kHz SCS is assumed.NOTE 3: No requirements apply when there is at least one individual RE within the intermodulation generated by the dual uplink is within the downlink transmission bandwidth of the FDD band. The reference sensitivity should only be verified when this is not the case (the requirements specified in clause 7.3 apply).NOTE 4: This band is subject to IMD5 also which MSD is not specified.NOTE 5: Void.NOTE 6:  Void.NOTE 7:  In current release the maximum separation bandwidth class is 600MHz, therefore, no IMD MSD requirement apply for this CA configuration when two uplink sub blocks are assigned within CA_77(2A).NOTE8: For a UE which supports this band combination only when the Band n77 frequency range restriction of 3400 – 4100 MHz applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 9: For a UE which supports this band combination only when the Band n78 frequency range restriction of 3400 – 3800 MHz, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 10: There is no IMD4 product in band n24 downlink for n77 operating in 3450 – 3980 MHz and n24 uplink restricted to between 1627.5 – 1637.5 MHz and between 1646.5 – 1656.5 MHz.NOTE 11: Void.NOTE 12: This band supports intra-band non-contiguous uplink configuration.NOTE 13: For a UE which supports this band combination only when the Band n77 frequency range restriction defined in NOTE 12 of Table 5.2-1 applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 14: Applicable when n41 spectrum is restricted to 2515-2675MHzNOTE 15: This band is subject to IMD6 also which MSD is not specifiedNOTE 16: This band is subject to IMD7 also which MSD is not specified.NOTE 17: For a UE which supports this band combination only when the Band n78 frequency range restriction of 3400 – 3800 MHz or 3300 – 3600 MHz applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 18: This component carrier is affected by IMD due to CA_n5B for which the MSD is not specified.NOTE 19: This band is subject to IMD5, IMD9, IMD11 and IMD13 also which MSD are not specified.NOTE 20: This second test point is optional.NOTE 21: This band is subject to IMD4 also which MSD is not specified. |  |  |  |  |  |  |  |  |
+
+Table 7.3A.5-1a: 2DL/2UL inter-band Reference sensitivity QPSK PREFSENS and uplink/downlink configurations for PC2 CA
+
+| Band / Channel bandwidth / NRB / Duplex mode |  |  |  |  |  |  |  | Source of IMD |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| NR CAConfiguration | NR band | UL Fc  (MHz) | UL/DL BW  (MHz) | UL  LCRB | DL Fc (MHz) | MSD  (dB) | Duplex mode |  |
+| CA_n1-n3 | n1 | 1950 | 5 | 25 | 2140 | 32 | FDD | IMD3 |
+|  | n3 | 1760 | 5 | 25 | 1855 | N/A | FDD | N/A |
+| CA_n1-n77 | n1 | 1950 | 5 | 25 | 2140 | 35.8 | FDD | IMD24,18 |
+|  | n77 | 4090 | 10 | 50 | 4090 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2130 | 20 | FDD | IMD515 |
+|  | n7712 | 3310 | 10 | 1 (RBSTART=25) | 3310 | N/A | TDD | N/A |
+|  |  | 3900 | 10 | 1 (RBSTART=25) | 3900 |  |  |  |
+| CA_n1-n78 | n1 | 1950 | 5 | 25 | 2140 | 17.8 | FDD | IMD4 |
+|  | n78 | 3710 | 10 | 50 | 3710 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2165,7 | 6.5 | FDD | IMD7 |
+|  | n7812 | 3305 | 10 | 1 (RBSTART=0) | 3305 | N/A | TDD | N/A |
+|  |  | 3675 | 10 | 1 (RBSTART=44) | 3675 |  |  |  |
+| CA_n2-n77 | n2 | 1855 | 5 | 25 | 1935 | 32.10 | FDD | IMD218 |
+|  | n77 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+|  | n2 | 1885 | 5 | 25 | 1965 | 20.0 | FDD | IMD5 |
+|  | n77 | 3810 | 10 | 50 | 3810 | N/A | TDD | N/A |
+| CA_n3-n7 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n7 | 2535 | 10 | 50 | 2655 | 21.8 | FDD | IMD4 |
+| CA_n3-n20 | n3 | 1775 | 5 | 25 | 1870 | 14 | FDD | IMD4 |
+|  | n20 | 840 | 5 | 25 | 799 | N/A | FDD | N/A |
+|  | n3 | 1735 | 5 | 25 | 1830 | N/A | FDD | N/A |
+|  | n20 | 847 | 5 | 25 | 806 | 20.4 | FDD | IMD4 |
+| CA_n3-n41 | n3 | 1740 | 5 | 25 | 1835 | 18.4 | FDD | IMD4 |
+|  | n41 | 2657.5 | 10 | 50 | 2657.5 | N/A | TDD | N/A |
+|  | n3 | 1747.5 | 5 | 25 (RBSTART= 0) | 1842.5 | 21.3 | FDD | IMD3 |
+|  | n41 | 2560 | 60 | 1 (RBSTART= 30) | 2560 | N/A | TDD | N/A |
+|  |  | 2620 | 60 | 1 (RBSTART= 127) | 2620 |  |  |  |
+|  | n3 | N/A | 5 | N/A | 1877.5 | N/A17 | FDD | IMD9 |
+|  | n41 | 2545 | 60 | 1 (RBSTART= 0) | 2545 | N/A | TDD | N/A |
+|  |  | 2625 | 100 | 1 (RBSTART= 272) | 2625 |  |  |  |
+| CA_n3-n77 | n3 | 1740 | 5 | 25 | 1835 | 31.9 | FDD | IMD24,18 |
+|  | n77 | 3575 | 10 | 50 | 3575 | N/A | TDD | N/A |
+|  | n3 | N/A | N/A | N/A | N/A | N/A6 | FDD | IMD5 |
+|  | n77 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1877.5 | 7.9 | FDD | IMD7 |
+|  | n7712 | 3427.5 | 10 | 1 (RBstart=10) | 3427.5 | N/A | TDD | N/A |
+|  |  | 3945 | 10 | 1 (RBstart=0) | 3945 |  |  |  |
+| CA_n3-n78 | n3 | 1740 | 5 | 25 | 1835 | 31.9 | FDD | IMD24,18 |
+|  | n78 | 3575 | 10 | 50 | 3575 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1877.5 | 7.9 | FDD | IMD7 |
+|  | n7812 | 3305 | 10 | 1 (RBSTART=3) | 3305 | N/A | TDD | N/A |
+|  |  | 3780 | 10 | 1 (RBSTART=0) | 3780 |  |  |  |
+| CA_n5-n77 | n5 | 844 | 5 | 25 | 889 | 18.6 | FDD | IMD44,13 |
+|  | n77 | 3421 | 10 | 50 | 3421 | N/A | TDD | N/A |
+|  | n5 | 829 | 5 | 25 | 874 | 16.7 | FDD | IMD513 |
+|  | n77 | 4190 | 10 | 50 | 4190 | N/A | TDD | N/A |
+|  | n5 | N/A | 5 | N/A | 880 | 18.5 | FDD | IMD4 |
+|  | n7712 | 3410 | 10 | 1 (RBSTART=25) | 3410 | N/A | TDD | N/A |
+|  |  | 3850 | 10 | 1 (RBSTART=25) | 3850 |  |  |  |
+| CA_n5-n78 | n5 | 844 | 5 | 25 | 889 | 18.6 | FDD | IMD4 |
+|  | n78 | 3421 | 10 | 50 | 3421 | N/A | TDD | N/A |
+| CA_n5-n784 | n5 | N/A | 5 | N/A | 880 | 16.7 | FDD | IMD4 |
+|  | n7812 | 3340 | 10 | 1 (RBSTART=25) | 3340 | N/A | TDD | N/A |
+|  |  | 3780 | 10 | 1 (RBSTART=25) | 3780 |  |  |  |
+| CA_n7-n20 | n7 | 2512 | 5 | 50 | 2632 | N/A | FDD | N/A |
+|  | n20 | 851 | 5 | 25 | 810 | 20.7 | FDD | IMD3 |
+| CA_n7-n77 | n7 | 2540 | 5 | 25 | 2660 | 15.8 | FDD | IMD4 |
+|  | n77 | 3870 | 10 | 50 | 3870 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2687.5 | 18 | FDD | IMD515 |
+|  | n7712 | 3455 | 10 | 1 (RBSTART=0) | 3455 | N/A | TDD | N/A |
+|  |  | 3835 | 10 | 1 (RBSTART=7) | 3835 |  |  |  |
+| CA_n7-n78 | n7 | N/A | 5 | N/A | 2650 | 18 | FDD | IMD515 |
+|  | n7812 | 3350 | 10 | 1 (RBSTART=25) | 3350 | N/A | TDD | N/A |
+|  |  | 3700 | 10 | 1 (RBSTART=25) | 3700 |  |  |  |
+| CA_n8-n41 | n8 | 882.5 | 5 | 25 | 927.5 | 21.1 | FDD | IMD34 |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+| CA_n8-n77 | n8 | 897.5 | 5 | 25 | 942.5 | 15.5 | FDD | IMD4 |
+|  | n77 | 3635 | 10 | 50 | 3635 | N/A | TDD | N/A |
+| CA_n8-n78 | n8 | 897.5 | 5 | 25 | 942.5 | 15.5 | FDD | IMD4 |
+|  | n78 | 3635 | 10 | 50 | 3635 | N/A | TDD | N/A |
+| CA_n8-n79 | n8 | 897.5 | 5 | 25 | 942.5 | 21.5 | FDD | IMD5 |
+|  | n79 | 4532.5 | 40 | 216 | 4532.5 | N/A | TDD | N/A |
+| CA_n12-n77 | n12 | 702 | 5 | 20 | 732 | 11.7 | FDD | IMD5 |
+|  | n77 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+| CA_n13-n77 | n13 | N/A | 5 | N/A | 750 | 16.6 | FDD | IMD414 |
+|  | n7712 | 3510 | 10 | 1 (RBSTART=25) | 3510 | N/A | TDD | N/A |
+|  |  | 3885 | 10 | 1 (RBSTART=25) | 3885 |  |  |  |
+|  | n13 | 782 | 5 | 20 | 751 | 20.5 | FDD | IMD5 |
+|  | n77 | 3880 | 10 | 50 | 3880 | N/A | TDD | N/A |
+| CA_n14-n77 | n14 | 795.5 | 5 | 15 | 765.5 | 11.7 | FDD | IMD5 |
+|  | n77 | 3947.5 | 10 | 50 | 3947.5 | N/A | TDD | N/A |
+| CA_n18-n41 | n18 | 820 | 5 | 25 | 865 | 23.1 | FDD | IMD3 |
+|  | n41 | 2505 | 10 | 50 | 2505 | N/A | TDD | N/A |
+| CA_n18-n77 | n18 | 827.5 | 5 | 25 | 872.5 | 17.5 | FDD | IMD48 |
+|  | n77 | 3355 | 10 | 50 | 3355 | N/A | TDD | N/A |
+|  | n18 | 817.5 | 5 | 25 | 862.5 | 10.5 | FDD | IMD58 |
+|  | n77 | 4130 | 10 | 50 | 4130 | N/A | TDD | N/A |
+|  | n18 | N/A | N/A | N/A | N/A | N/A | FDD | IMD27 |
+|  | n7712 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+|  | n18 | N/A | 5 | N/A | 870 | 16.7 | FDD | IMD4 |
+|  | n7712 | 34803915 | 1010 | 1 (RBSTART=25)1 (RBSTART=25) | 34803800 | N/A | TDD | N/A |
+| CA_n25-n41 | n25 | N/A | 5 | N/A | 1992.5 | 16.6 | FDD | IMD7 |
+|  | n41 | 2545 | 90 | 1 (RBstart=0) | 2545 | N/A | TDD | N/A |
+|  |  | 2640 | 100 | 1 (RBstart=221) | 2640 |  |  |  |
+|  | n25 | 1860 | 5 | 25 | 1940 | 21.3 | FDD | IMD3 |
+|  | n41 | 2501 | 10 | 1 (RBstart = 25) | 2501 | N/A | TDD | N/A |
+|  |  | 2556 | 100 | 1 (RBstart = 208) | 2556 |  |  |  |
+| CA_n25-n66 | n66 | 1775 | 5 | 25 | 2175 | N/A | FDD | N/A |
+|  | n25 | 1855 | 5 | 25 | 1935 | 29 | FDD | IMD3 |
+|  | n66 | 1712.5 | 5 | 25 | 2112.5 | 32 | FDD | IMD34 |
+|  | n25 | 1912.5 | 5 | 25 | 1992.5 | N/A | FDD | N/A |
+| CA_n25-n77 | n25 | 1855 | 5 | 25 | 1935 | 32.1 | FDD | IMD24,18 |
+|  | n77 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1987.5 | 8.4 | FDD | IMD7 |
+|  | n7712 | 3455 | 10 | 1 (RBSTART=10) | 3455 | N/A | TDD | N/A |
+|  |  | 3945 | 10 | 1 (RBSTART=0) | 3945 |  |  |  |
+| CA_n25-n78 | n25 | 1855 | 5 | 25 | 1935 | 32.10 | FDD | IMD24 |
+|  | n78 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1980 | 8.4 | FDD | IMD7 |
+|  | n7812 | 3315 | 10 | 1 (RBSTART=7) | 3315 | N/A | TDD | N/A |
+|  |  | 3760 | 10 | 1 (RBSTART=0) | 3760 |  |  |  |
+| CA_n26-n78 | n26 | 836.5 | 5 | 25 | 881.5 | 23.8 | FDD | IMD4 |
+|  | n78 | 3391 | 10 | 50 | 3391 | N/A | TDD | N/A |
+| CA_n28-n77 | n28 | N/A | N/A | N/A | N/A | N/A | FDD | IMD27 |
+|  | n7712 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+|  | n28 | 705.5 | 5 | 25 | 760.5 | 19.2 | FDD | IMD5 |
+|  | n77 | 3582.5 | 10 | 50 | 3582.5 | N/A | TDD | N/A |
+|  | n28 | 725 | 5 | 25 | 780 | 16.6 | FDD | IMD414 |
+|  | n7712 | 3510 | 10 | 1 (RBSTART=25) | 3510 | N/A | TDD | N/A |
+|  |  | 3900 | 10 | 1 (RBSTART=25) | 3900 |  |  |  |
+| CA_n28-n78 | n28 | N/A | 5 | N/A | 780 | 16.7 | FDD | IMD414 |
+|  | n7812 | 3310 | 10 | 1 (RBSTART=7) | 3310 | N/A | TDD | N/A |
+|  |  | 3700 | 10 | 1 (RBSTART=0) | 3700 |  |  |  |
+|  | n28 | 705.5 | 5 | 25 | 760.5 | 19.2 | FDD | IMD5 |
+|  | n78 | 3582.5 | 10 | 50 | 3582.5 | N/A | TDD | N/A |
+| CA_n30-n77 | n30 | 2310 | 5 | 25 | 2355 | 17.6 | FDD | IMD4 |
+|  | n77 | 3487.5 | 10 | 50 | 3487.5 | N/A | TDD | N/A |
+| CA_n41-n66 | n41 | 2545 | 90 | 1 (RBstart=0) | 2545 | N/A | TDD | N/A |
+|  |  | 2640 | 100 | 1 (RBstart=171) | 2640 |  |  |  |
+|  | n66 | N/A | 5 | N/A | 2197.5 | 35.5 | FDD | IMD5 |
+| CA_n41-n71 | n41 | 2614 | 10 | 50 | 2614 | N/A | TDD | N/A |
+|  | n71 | 665 | 5 | 25 | 619 | 21.5 | FDD | IMD4 |
+| CA_n41-n77 | n41 | 2545 | 60 | 1 (RBstart=0) | 2545 | N/A | TDD | N/A |
+|  |  | 2625 | 100 | 1 (RBstart=272) | 2625 |  |  |  |
+|  | n77 | N/A | 10 | N/A | 3305 | 8.4 | TDD | IMD9 |
+|  | n41 | N/A | 10 | N/A | 2565 | 20 | TDD | IMD516 |
+|  | n7712 | 3485 | 10 | 1 (RBSTART=25) | 3485 | N/A | TDD | N/A |
+|  |  | 3945 | 10 | 1 (RBSTART=25) | 3945 |  |  |  |
+| CA_n66-n71 | n66 | 1750 | 5 | 25 | 2150 | 15.5 | FDD | IMD4 |
+|  | n71 | 675 | 5 | 25 | 629 | N/A | FDD | N/A |
+| CA_n66-n77 | n66 | 1775 | 5 | 25 | 2175 | 34.33 | FDD | IMD2 |
+|  | n77 | 3950 | 10 | 50 | 3950 | N/A | TDD | N/A |
+|  | n66 | 1760 | 5 | 25 | 2160 | 11.27 | FDD | IMD5 |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2197.5 | 18 | FDD | IMD515 |
+|  | n7712 | 3305 | 10 | 1 (RBstart=0) | 3305 | N/A | TDD | N/A |
+|  |  | 3855 | 10 | 1 (RBstart=8) | 3855 |  |  |  |
+| CA_n66-n78 | n66 | 1760 | 5 | 25 | 2160 | 11.27 | FDD | IMD5 |
+|  | n78 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | 25 | 2150 | 6.5 | FDD | IMD7 |
+|  | n7812 | 3350 | 10 | 1 (RBSTART=7) | 3350 | N/A | TDD | N/A |
+|  |  | 3750 | 10 | 1 (RBSTART=0) | 3750 |  |  |  |
+| CA_n66-n85 | n66 | 1770 | 5 | 25 | 2138 | 15.5 | FDD | IMD4 |
+|  | n85 | 701 | 5 | 25 | 731 | N/A | FDD | N/A |
+| CA_n70-n77 | n70 | 1702.5 | 5 | 25 | 2002.5 | 37 | FDD | IMD2 |
+|  | n77 | 3705 | 10 | 50 | 3705 | N/A | TDD | N/A |
+|  | n70 | 1697.5 | 5 | 25 | 1997.5 | 18.4 | FDD | IMD5 |
+|  | n77 | 3545 | 10 | 50 | 3545 | N/A | TDD | N/A |
+| CA_n71-n77 | n71 | 681.5 | 5 | 25 | 635.5 | 11.4 | FDD | IMD513 |
+|  | n77 | 3361.5 | 10 | 50 | 3361.5 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 640 | 16.7 | FDD | IMD414 |
+|  | n7712 | 3480 | 10 | 1 (RBSTART=25) | 3480 | N/A | TDD | N/A |
+|  |  | 3800 | 10 | 1 (RBSTART=25) | 3800 |  |  |  |
+| CA_n71-n78 | n71 | 681.5 | 5 | 25 | 635.5 | 11.4 | FDD | IMD5 |
+|  | n78 | 3361.5 | 10 | 50 | 3361.5 | N/A | TDD | N/A |
+| CA_n74-n77 | n74 | N/A | 5 | N/A | 1500 | 11.4 | FDD | IMD6 |
+|  | n7712 | 35054005 | 1010 | 1(Rbstart=26)1(Rbstart=26) | 35054005 | N/A | TDD | N/A |
+|  | n74 | N/A | 5 | N/A | 1505 | 6.5 | FDD | IMD7 |
+|  | n7712 | 33053905 | 1010 | 1(Rbstart=26)1(Rbstart=26) | 33053905 | N/A | TDD | N/A |
+| CA_n77-n85 | n77 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+|  | n85 | 702 | 5 | 20 | 732 | 11.7 | FDD | IMD5 |
+| NOTE 1: Both of the transmitters shall be set min(+23 dBm, PCMAX_L,f,c) as defined in clause 6.2A.4NOTE 2: RBSTART = 0, 15 kHz SCS is assumed.NOTE 3: No requirements apply when there is at least one individual RE within the intermodulation generated by the dual uplink is within the downlink transmission bandwidth of the FDD band. The reference sensitivity should only be verified when this is not the case (the requirements specified in clause 7.3 apply).NOTE 4: This band is subject to IMD5 also which MSD is not specified.NOTE 5: Void.NOTE 6: Void.NOTE 7:  In current release the maximum separation bandwidth class is 600MHz, therefore, no IMD2 MSD requirement apply for this CA configuration when two uplink sub blocks are assigned within CA_77(2A).NOTE8: For a UE which supports this band combination only when the Band n77 frequency range restriction of 3400 – 4100 MHz applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 9: Void.NOTE 10: Void.NOTE 11: Void.NOTE 12: This band supports intra-band non-contiguous uplink configuration.NOTE 13: For a UE which supports this band combination only when the Band n77 frequency range restriction defined in NOTE 12 of Table 5.2-1 applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 14: This band is subject to IMD6 also which MSD is not specified.NOTE 15: This band is subject to IMD7 also which MSD is not specified.NOTE 16: Void. NOTE 17: Applicable when n41 spectrum is restricted to 2515-2675MHz.NOTE 18: This band is subject to IMD4 also which MSD is not specified. |  |  |  |  |  |  |  |  |
+
+Table 7.3A.5-1b: 2DL/2UL inter-band Reference sensitivity QPSK PREFSENS and uplink/downlink configurations for PC1.5 CA
+
+| Band / Channel bandwidth / NRB / Duplex mode |  |  |  |  |  |  |  | Source of IMD |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| NR CAConfiguration | NR band | UL Fc  (MHz) | UL/DL BW  (MHz) | UL  LCRB | DL Fc (MHz) | MSD  (dB) | Duplex mode |  |
+| CA_n1-n78 | n1 | 1950 | 5 | 25 | 2140 | 26.4 | FDD | IMD4 |
+|  | n78 | 3710 | 10 | 50 | 3710 | N/A | TDD | N/A |
+| CA_n2-n77 | n2 | 1855 | 5 | 25 | 1935 | 35.2 | FDD | IMD24 |
+|  | n77 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+|  | n2 | 1885 | 5 | 25 | 1965 | 28.0 | FDD | IMD5 |
+|  | n77 | 3810 | 10 | 50 | 3810 | N/A | TDD | N/A |
+| CA_n3-n78 | n3 | 1750 | 5 | 25 | 1845 | 35.2 | FDD | IMD24 |
+|  | n78 | 3595 | 10 | 50 | 3595 | N/A | TDD | N/A |
+| CA_n5-n772 | n5 | 844 | 5 | 25 | 889 | 25.5 | FDD | IMD4 |
+|  | n77 | 3421 | 10 | 50 | 3421 | N/A | TDD | N/A |
+|  | n5 | 826.5 | 5 | 25 | 871.5 | 24.3 | FDD | IMD5 |
+|  | n77 | 4177.5 | 10 | 50 | 4177.5 | N/A | TDD | N/A |
+|  | n5 | N/A | 5 | N/A | 880 | 22.6 | FDD | IMD4 |
+|  | n7712 | 3410 | 10 | 1 (RBstart=25) | 3410 | N/A | TDD | N/A |
+|  |  | 3850 | 10 | 1 (RBstart=25) | 3850 |  |  |  |
+| CA_n7-n77 | n7 | 2540 | 5 | 25 | 2660 | 29.7 | FDD | IMD4 |
+|  | n77 | 3870 | 10 | 50 | 3870 | N/A | TDD | N/A |
+| CA_n7-n78 | n7 | 2520 | 5 | 25 | 2640 | 29.7 | FDD | IMD4 |
+|  | n78 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+| CA_n25-n41 | n25 | N/A | 5 | N/A | 1992.5 | 22.5 | FDD | IMD7 |
+|  | n41 | 2545 | 90 | 1 (RBstart=0) | 2545 | N/A | TDD | N/A |
+|  |  | 2640 | 100 | 1 (RBstart=221) | 2640 |  |  |  |
+|  | n25 | 1860 | 5 | 25 | 1940 | 27.3 | FDD | IMD3 |
+|  | n41 | 2501 | 10 | 1 (RBstart = 25) | 2501 | N/A | TDD | N/A |
+|  |  | 2556 | 100 | 1 (RBstart = 208) | 2556 |  |  |  |
+| CA_n25-n77 | n25 | 1855 | 5 | 25 | 1935 | 37.5 | FDD | IMD24 |
+|  | n77 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+|  | n25 | 1885 | 5 | 25 | 1965 | 29.8 | FDD | IMD5 |
+|  | n77 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+| CA_n26-n78 | n26 | 836.5 | 5 | 25 | 881.5 | 25.5 | FDD | IMD4 |
+|  | n78 | 3391 | 10 | 50 | 3391 | N/A | TDD | N/A |
+| CA_n28-n78 | n28 | 705.5 | 5 | 25 | 760.5 | 24.3 | FDD | IMD5 |
+|  | n78 | 3582.5 | 10 | 50 | 3582.5 | N/A | TDD | N/A |
+| CA_n41-n66 | n41 | 2545 | 90 | 1 (RBstart=0) | 2545 | N/A | TDD | N/A |
+|  |  | 2640 | 100 | 1 (RBstart=171) | 2640 |  |  |  |
+|  | n66 | N/A | 5 | N/A | 2197.5 | 38.5 | FDD | IMD5 |
+| CA_n41-n71 | n41 | 2614 | 10 | 50 | 2614 | N/A | TDD | N/A |
+|  | n71 | 665 | 5 | 25 | 619 | 33.5 | FDD | IMD4 |
+| CA_n41-n77 | n41 | 2545 | 60 | 1 (RBstart=0) | 2545 | N/A | TDD | N/A |
+|  |  | 2625 | 100 | 1 (RBstart=272) | 2625 |  |  |  |
+|  | n77 | N/A | 10 | N/A | 3305 | 13.6 | TDD | IMD9 |
+| CA_n66-n77 | n66 | 1775 | 5 | 25 | 2175 | 40.0 | FDD | IMD2 |
+|  | n77 | 3950 | 10 | 50 | 3950 | N/A | TDD | N/A |
+|  | n66 | 1760 | 5 | 25 | 2160 | 26.0 | FDD | IMD5 |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+| CA_n70-n77 | n70 | 1702.5 | 5 | 25 | 2002.5 | 41.8 | FDD | IMD2 |
+|  | n77 | 3705 | 10 | 50 | 3705 | N/A | TDD | N/A |
+|  | n70 | 1697.5 | 5 | 25 | 1997.5 | 27.9 | FDD | IMD5 |
+|  | n77 | 3545 | 10 | 50 | 3545 | N/A | TDD | N/A |
+| CA_n71-n77 | n71 | 681.5 | 5 | 25 | 635.5 | 16.0 | FDD | IMD53 |
+|  | n77 | 3361.5 | 10 | 50 | 3361.5 | N/A | TDD | N/A |
+| CA_n77-n85 | n77 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+|  | n85 | 702 | 5 | 20 | 732 | 16.2 | FDD | IMD5 |
+| NOTE 1: This band combination is specified for inter-band UL CA with UL MIMO or Tx diversity capabilites, and the transmitter shall be set at min (+23 dBm, PCMAX_L,f,c) for the band with 1Tx antenna connector as defined in clause 6.2A.4, and set at min (+27.8 dBm, PCMAX_L,f,c) for the band with 2Tx antenna connectors as defined in clause 6.2H.3 or 6.2L.3.4.NOTE 2: For a UE which supports this band combination only when the Band n77 frequency range restriction defined in NOTE 12 of Table 5.2-1 applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 3: In current release the maximum separation bandwidth class is 600MHz, therefore, no IMD2 MSD requirement apply for this CA configuration when two uplink sub blocks are assigned within CA_77(2A).NOTE 4: This band is subject to IMD4 also which MSD is not specified. |  |  |  |  |  |  |  |  |
+
+Table 7.3A.5-2: 3DL/2UL interband Reference sensitivity QPSK PREFSENS and uplink/downlink configurations for PC3 CA
+
+| Band / Channel bandwidth / NRB / Duplex mode |  |  |  |  |  |  |  | Source of IMD |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| NR CA band combination | NR band | UL Fc  (MHz) | UL/DL BW  (MHz) | UL  LCRB | DL Fc (MHz) | MSD  (dB) | Duplex mode |  |
+| CA_n1-n3-n28 | n1 | 1975 | 5 | 25 | 2165 | N/A | FDD | N/A |
+|  | n28 | 710.5 | 5 | 25 | 765.5 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1818.5 | 4.0 | FDD | IMD5 |
+|  | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n28 | 710.5 | 5 | 25 | 765.5 | N/A | FDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2139 | 11.0 | FDD | IMD4 |
+| CA_n1-n3-n40 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n3 | 1735 | 5 | 25 | 1830 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2380 | 8.0 | TDD | IMD5 |
+| CA_n1-n3-n41 | n1 | 1977.5 | 5 | 25 | 2167.5 | N/A | FDD | N/A |
+|  | n3 | 1712.5 | 5 | 25 | 1807.5 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2507.5 | 5.0 | TDD | IMD5 |
+| CA_n1-n3-n71 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1855 | 4 | FDD | IMD5 |
+|  | n71 | 695 | 5 | 25 | 649 | N/A | FDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2160 | 5 | FDD | IMD4 |
+|  | n3 | 1775 | 5 | 25 | 1870 | N/A | FDD | N/A |
+|  | n71 | 695 | 5 | 25 | 649 | N/A | FDD | N/A |
+| CA_n1-n3-n75 | n1 | 1960 | 5 | 25 | 2150 | N/A | FDD | N/A |
+|  | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n75 | N/A | 5 | N/A | 1480 | 24.2 | SDL | IMD34 |
+| CA_n1-n3-n77 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n3 | 1750 | 5 | 25 | 1845 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3700 | 28.4 | TDD | IMD22 |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1807.5 | 31.5 | FDD | IMD21,2 |
+|  | n77 | 3757.5 | 10 | 50 | 3757.5 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 31.0 | FDD | IMD21 |
+|  | n3 | 1775 | 5 | 25 | 1870 | N/A | FDD | N/A |
+|  | n77 | 3915 | 10 | 50 | 3915 | N/A | TDD | N/A |
+| CA_n1-n3-n78 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n3 | 1750 | 5 | 25 | 1845 | N/A |  | N/A |
+|  | n78 | N/A | 10 | N/A | 3700 | 28.4 | TDD | IMD22 |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1830 | 27.9 |  | IMD2 |
+|  | n78 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+|  | n1 | 1925 | 5 | 25 | 2115 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | 25 | 1875 | N/A | 15.3 | IMD3 |
+|  | n78 | 3300 | 100 | 1 (RBstart=203) | 3300 | N/A | TDD | N/A |
+|  |  | 3400 | 100 | 1 (RBstart=67) | 3400 |  |  |  |
+| CA_n1-n3-n79 | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4950 | 4.7 | TDD | IMD5 |
+|  | n3 | 1750 | 5 | 25 | 1845 | N/A | FDD | N/A |
+|  | n79 | 4860 | 40 | 216 | 4860 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 3.6 | FDD | IMD5 |
+| CA_n1-n3-n105 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1855 | 4 | FDD | IMD5 |
+|  | n105 | 695 | 5 | 25 | 644 | N/A | FDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2160 | 5 | FDD | IMD4 |
+|  | n3 | 1775 | 5 | 25 | 1870 | N/A | FDD | N/A |
+|  | n105 | 695 | 5 | 25 | 644 | N/A | FDD | N/A |
+| CA_n1-n5-n7 | n1 | 1968 | 5 | 25 | 2158 | N/A | FDD | N/A |
+|  | n7 | 2512 | 10 | 50 | 2632 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 880 | 1.0 | FDD | IMD5 |
+| CA_n1-n5-n28 | n1 | N/A | 5 | N/A | 2123 | 4 | FDD | IMD5 |
+|  | n5 | 829 | 5 | 25 | 874 | N/A | FDD | N/A |
+|  | n28 | 738 | 5 | 25 | 793 | N/A | FDD | N/A |
+|  | n1 | 1965 | 5 | 25 | 2155 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 875 | 4.6 | FDD | IMD5 |
+|  | n28 | 710 | 5 | 25 | 765 | N/A | FDD | N/A |
+| CA_n1-n5-n40 | n1 | N/A | 5 | N/A | 2144 | 4.0 | FDD | IMD5 |
+|  | n5 | 832 | 5 | 25 | 877 | N/A | FDD | N/A |
+|  | n40 | 2320 | 10 | 50 | 2320 | N/A | TDD | N/A |
+|  | n1 | 1945 | 5 | 25 | 2135 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 880 | 8.0 | FDD | IMD4 |
+|  | n40 | 2385 | 10 | 50 | 2385 | N/A | TDD | N/A |
+|  | n1 | 1977.5 | 5 | 25 | 2167.5 | N/A | FDD | N/A |
+|  | n5 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2305 | 9.0 | TDD | IMD4 |
+| CA_n1-n5-n78 | n1 | N/A | 5 | N/A | 2122 | 18.1 | FDD | IMD3 |
+|  | n5 | 829 | 5 | 25 | 874 | N/A | FDD | N/A |
+|  | n78 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+|  | n1 | 1975 | 5 | 25 | 2165 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 885 | 3.1 | FDD | IMD5 |
+|  | n78 | 3405 | 10 | 50 | 3405 | N/A | TDD | N/A |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3610 | 15.7 | TDD | IMD3 |
+| CA_n1-n5-n79 | n1 | N/A | 5 | N/A | 2160 | 1.2 | FDD | IMD4 |
+|  | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n79 | 4650 | 40 | 100 | 4650 | N/A | TDD | N/A |
+|  | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 890 | 15.2 | FDD | IMD3 |
+|  | n79 | 4750 | 40 | 100 | 4750 | N/A | TDD | N/A |
+|  | n1 | 1923 | 5 | 25 | 2113 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 879 | 10.3 | FDD | IMD4 |
+|  | n79 | 4890 | 40 | 100 | 4890 | N/A | TDD | N/A |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n5 | 845 | 5 | 25 | 890 | N/A | FDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4785 | 14.9 | TDD | IMD3 |
+|  | n1 | 1940 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n5 | 830 | 5 | 25 | 874 | N/A | FDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4430 | 9.4 | TDD | IMD4 |
+| CA_n1-n5-n105 | n1 | 1925 | 5 | 25 | 2115 | N/A | FDD | N/A |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n105 | N/A | 5 | N/A | 614.5 | 9.4 | FDD | IMD4 |
+|  | n1 | 1929 | 5 | 25 | 2119 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 873 | 4.6 | FDD | IMD5 |
+|  | n105 | 700.5 | 5 | 25 | 649.5 | N/A | FDD | NA |
+|  | n1 | N/A | 5 | N/A | 2162 | 16 | FDD | IMD3 |
+|  | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n105 | 635 | 5 | 25 | 615 | N/A | FDD | NA |
+| CA_n1-n7-n8 | n1 | 1977.5 | 5 | 25 | 2167.5 | N/A | FDD | N/A |
+|  | n7 | 2502.5 | 5 | 25 | 2622.5 | N/A | FDD | N/A |
+|  | n8 | N/A | 5 | N/A | 927.5 | 1.0 | FDD | IMD5 |
+| CA_n1-n7-n20 | n1 | 1940 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n7 | 2510 | 10 | 50 | 2630 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 800 | 4.5 | FDD | IMD5 |
+| CA_n1-n7-n26 | n1 | 1965 | 5 | 25 | 2155 | N/A | FDD | N/A |
+|  | n7 | 2510 | 10 | 50 | 2630 | N/A | FDD | N/A |
+|  | n26 | N/A | 5 | N/A | 875 | 3.5 | FDD | IMD5 |
+| CA_n1-n7-n28 | n1 | 1935 | 5 | 25 | 2125 | N/A | FDD | N/A |
+|  | n7 | N/A | 10 | N/A | 2653 | 30.0 | FDD | IMD2 |
+|  | n28 | 718 | 5 | 25 | 773 | N/A | FDD | N/A |
+|  | n1 | 1935 | 5 | 25 | 2125 | N/A | FDD | N/A |
+|  | n7 | 2510 | 10 | 50 | 2630 | N/A | FDD | N/A |
+|  | n28 | N/A | 10 | N/A | 785 | 4.5 | FDD | IMD5 |
+| CA_n1-n7-n40 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2630 | 23 | FDD | IMD3 |
+|  | n40 | 2390 | 10 | 50 | 2390 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2120 | 16.4 | FDD | IMD3 |
+|  | n7 | 2530 | 5 | 25 | 2650 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+| CA_n1-n7-n67 | n1 | 1948 | 5 | 25 | 2138 | N/A | FDD | N/A |
+|  | n7 | 2548 | 5 | 25 | 2668 | N/A | FDD | N/A |
+|  | n67 | N/A | 5 | N/A | 748 | 3.3 | SDL | IMD5 |
+| CA_n1-n7-n75 | n1 | 1975 | 5 | 25 | 2165 | N/A | FDD | N/A |
+|  | n7 | 2510 | 5 | 25 | 2630 | N/A | FDD | N/A |
+|  | n75 | N/A | 5 | N/A | 1450 | 13.2 | SDL | IMD3 |
+| CA_n1-n7-n77 | n1 | 1977.5 | 5 | 25 | 2167.5 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2627.5 | 9.1 | FDD | IMD4 |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n1 | 1922.5 | 5 | 25 | 2112.5 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2622.5 | 1.3 | FDD | IMD5 |
+|  | n77 | 4195 | 10 | 50 | 4195 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 8.7 | FDD | IMD4 |
+|  | n7 | 2510 | 10 | 50 | 2630 | N/A | FDD | N/A |
+|  | n77 | 3580 | 10 | 50 | 3580 | N/A | TDD | N/A |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n7 | 2520 | 5 | 25 | 2640 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3390 | 10.1 | TDD | IMD4 |
+|  | n1 | 1940 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3770 | 1.3 | TDD | IMD5 |
+| CA_n1-n7-n78 | n1 | 1977.5 | 5 | 25 | 2167.5 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2627.5 | 9.1 | FDD | IMD4 |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 8.7 | FDD | IMD4 |
+|  | n7 | 2510 | 10 | 50 | 2630 | N/A | FDD | N/A |
+|  | n78 | 3580 | 10 | 50 | 3580 | N/A | TDD | N/A |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n7 | 2520 | 5 | 25 | 2640 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3390 | 10.1 | TDD | IMD4 |
+|  | n1 | 1940 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3770 | 1.3 | TDD | IMD5 |
+| CA_n1-n7-n105 | n1 | 1935 | 5 | 25 | 2125 | N/A | FDD | N/A |
+|  | n7 | 2565 | 10 | 50 | 2685 | N/A | FDD | N/A |
+|  | n105 | N/A | 5 | N/A | 630 | 28.7 | FDD | IMD2 |
+|  | n1 | 1925 | 5 | 25 | 2115 | N/A | FDD | N/A |
+|  | n7 | 2565 | 10 | 50 | 2565 | N/A | FDD | N/A |
+|  | n105 | N/A | 5 | N/A | 645 | 1 | FDD | IMD5 |
+|  | n1 | 1968.5 | 5 | 25 | 2158.5 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2634.5 | 30 | FDD | IMD22 |
+|  | n105 | 666 | 5 | 25 | 615 | N/A | FDD | N/A |
+| CA_n1-n8-n40 | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n8 | N/A | 5 | N/A | 930 | 8.0 | FDD | IMD4 |
+|  | n40 | 2395 | 10 | 50 | 2395 | N/A | TDD | N/A |
+| CA_n1-n8-n41 | n1 | 1977.5 | 5 | 25 | 2167.5 | N/A | FDD | N/A |
+|  | n8 | N/A | 5 | N/A | 927.5 | 1.0 | FDD | IMD5 |
+|  | n41 | 2502.5 | 10 | 50 | 2502.5 | N/A | TDD | N/A |
+| CA_n1-n8-n78 | n1 | 1945 | 5 | 25 | 2135 | N/A | FDD | N/A |
+|  | n8 | 900 | 5 | 25 | 945 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3745 | 14.9 | TDD | IMD3 |
+|  | n1 | 1940 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n8 | N/A | 5 | N/A | 940 | 3.3 | FDD | IMD5 |
+|  | n78 | 3380 | 10 | 50 | 3380 | N/A | TDD | N/A |
+| CA_n1-n18-n28 | n1 | 1965 | 5 | 25 | 2155 | N/A | FDD | N/A |
+|  | n28 | 708 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n18 | N/A | 5 | N/A | 867 | 4.6 | FDD | IMD5 |
+|  | n18 | 825 | 5 | 25 | 870 | N/A | FDD | N/A |
+|  | n28 | 738 | 5 | 25 | 793 | N/A | FDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2127 | 4 | FDD | IMD5 |
+| CA_n1-n18-n41 | n1 | 1960 | 5 | 25 | 2150 | N/A | FDD | N/A |
+|  | n41 | 2505 | 10 | 50 | 2505 | N/A | TDD | N/A |
+|  | n18 | N/A | 5 | N/A | 870 | 3.3 | FDD | IMD5 |
+| CA_n1-n18-n77 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n18 | 825 | 5 | 25 | 870 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3600 | 15.7 | TDD | IMD31 |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3390 | 10 | 50 | 3390 | N/A | TDD | N/A |
+|  | n18 | N/A | 5 | N/A | 870 | 3.5 | FDD | IMD5 |
+|  | n1 | N/A | 5 | N/A | 2120 | 16.4 | FDD | IMD3 |
+|  | n18 | 825 | 5 | 25 | 870 | N/A | FDD | N/A |
+|  | n77 | 3770 | 10 | 50 | 3770 | N/A | TDD | N/A |
+| CA_n1-n20-n28 | n1 | N/A | 5 | N/A | 2110 | 4 | FDD | IMD5 |
+|  | n20 | 834 | 5 | 25 | 793 | N/A | FDD | N/A |
+|  | n28 | 736 | 5 | 25 | 791 | N/A | FDD | N/A |
+| CA_n1-n20-n41 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 810 | 3.3 | FDD | IMD5 |
+|  | n41 | 2550 | 10 | 50 | 2550 | N/A | TDD | N/A |
+| CA_n1-n20-n71 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n20 | 859 | 5 | 25 | 818 | N/A | FDD | N/A |
+|  | n71 | N/A | 5 | N/A | 627 | 9.4 | FDD | IMD4 |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 806 | 4.6 | FDD | IMD5 |
+|  | n71 | 689 | 5 | 25 | 643 | N/A | FDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2167 | 16 | FDD | IMD3 |
+|  | n20 | 835 | 5 | 25 | 794 | N/A | FDD | N/A |
+|  | n71 | 666 | 5 | 25 | 620 | N/A | FDD | N/A |
+| CA_n1-n20-n75 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n20 | 856 | 5 | 25 | 815 | N/A | FDD | N/A |
+|  | n75 | N/A | 5 | N/A | 1474 | 4.0 | SDL | IMD5 |
+| CA_n1-n20-n77 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3644 | 15.7 | TDD | IMD31 |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 806 | 3.5 | FDD | IMD5 |
+|  | n77 | 3328 | 10 | 50 | 3328 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 16.4 | FDD | IMD3 |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n77 | 3834 | 10 | 50 | 3834 | N/A | TDD | N/A |
+| CA_n1-n20-n78 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3644 | 15.7 | TDD | IMD3 |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 806 | 3.1 | FDD | IMD5 |
+|  | n78 | 3328 | 10 | 50 | 3328 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2120 | 18.1 | FDD | IMD3 |
+|  | n20 | 835 | 5 | 25 | 794 | N/A | FDD | N/A |
+|  | n78 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+| CA_n1-n26-n78 | n1 | N/A | 5 | N/A | 2122 | 18.1 | FDD | IMD3 |
+|  | n26 | 829 | 5 | 25 | 874 | N/A | FDD | N/A |
+|  | n78 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+|  | n1 | 1975 | 5 | 25 | 2165 | N/A | FDD | N/A |
+|  | n26 | N/A | 5 | N/A | 885 | 3.1 | FDD | IMD5 |
+|  | n78 | 3405 | 10 | 50 | 3405 | N/A | TDD | N/A |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n26 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3610 | 15.7 | TDD | IMD3 |
+| CA_n1-n28-n40 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 780 | 8 | FDD | IMD4 |
+|  | n40 | 2340 | 10 | 50 | 2340 | N/A | TDD | N/A |
+|  | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n28 | 735 | 5 | 25 | 790 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2390 | 9.0 | TDD | IMD4 |
+| CA_n1-n28-n41 | n1 | 1935 | 5 | 25 | 2125 | N/A | FDD | N/A |
+|  | n28 | 718 | 5 | 25 | 773 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2653 | 30.1 | TDD | IMD22 |
+|  | n1 | 1923 | 5 | 25 | 2113 | N/A | FDD | N/A |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 762 | 29.3 | FDD | IMD21 |
+| CA_n1-n28-n46 | n1 | 1975 | 5 | 25 | 2165 | N/A | FDD | N/A |
+|  | n28 | 710 | 5 | 25 | 765 | N/A | FDD | N/A |
+|  | n46 | N/A | 20 | N/A | 5215 | N/A | TDD | IMD4 |
+|  | n1 | 1975 | 5 | 25 | 2165 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 765 | 10.5 | FDD | IMD4 |
+|  | n46 | 5160 | 20 | 100 | 5160 | N/A | TDD | N/A |
+| CA_n1-n28-n77 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n28 | 733 | 5 | 25 | 788 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3416 | 15.7 | TDD | IMD32 |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n77 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 790 | 4.2 | FDD | IMD5 |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n77 | 3630 | 10 | 50 | 3630 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2150 | 15.7 | FDD | IMD3 |
+| CA_n1-n28-n78 | n1 | N/A | 5 | N/A | 2150 | 15.7 | FDD | IMD3 |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | 3630 | 10 | 50 | 3630 | N/A | TDD | N/A |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 794 | 4.2 | FDD | IMD5 |
+|  | n78 | 3352 | 10 | 50 | 3352 | N/A | TDD | N/A |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n28 | 733 | 5 | 25 | 788 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3416 | 15.7 | TDD | IMD3 |
+| CA_n1-n28-n79 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n28 | 730 | 5 | 25 | 785 | N/A | FDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4630 | 14.9 | TDD | IMD31 |
+|  | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n79 | 4648 | 40 | 216 | 4648 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 788 | 15.2 | FDD | IMD32 |
+|  | n28 | 745.5 | 5 | 25 | 800.5 | N/A | FDD | N/A |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2167.5 | 1.2 | FDD | IMD41 |
+| CA_n1-n28-n102 | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n28 | 706 | 5 | 25 | 761 | N/A | FDD | N/A |
+|  | n102 | N/A | 40 | N/A | 5978 | N/A12 | TDD | IMD5 |
+| CA_n1-n40-n41 | n1 | 1975 | 5 | 25 | 2165 | N/A | FDD | N/A |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2635 | 21 | TDD | IMD3 |
+|  | n1 | N/A | 5 | N/A | 2130 | 23.7 | FDD | IMD31 |
+|  | n40 | 2335 | 10 | 50 | 2335 | N/A | TDD | N/A |
+|  | n41 | 2540 | 10 | 50 | 2540 | N/A | TDD | N/A |
+| CA_n1-n40-n77 | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3480 | 9.8 | TDD | IMD41 |
+|  | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2340 | 10.6 | TDD | IMD41 |
+|  | n77 | 3450 | 10 | 50 | 3450 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 9.1 | FDD | IMD4 |
+|  | n40 | 2380 | 10 | 50 | 2380 | N/A | TDD | N/A |
+|  | n77 | 3450 | 10 | 50 | 3450 | N/A | TDD | N/A |
+| CA_n1-n40-n78 | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3480 | 9.8 | TDD | IMD41 |
+|  | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2340 | 10.6 | TDD | IMD4 |
+|  | n78 | 3450 | 10 | 50 | 3450 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 9.1 | FDD | IMD4 |
+|  | n40 | 2380 | 10 | 50 | 2380 | N/A | TDD | N/A |
+|  | n78 | 3450 | 10 | 50 | 3450 | N/A | TDD | N/A |
+| CA_n1-n40-n79 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4960 | 19 | TDD | IMD4 |
+|  | n1 | N/A | 5 | N/A | 2150 | 29.4 | FDD | IMD22 |
+|  | n40 | 2380 | 10 | 50 | 2380 | N/A | TDD | N/A |
+|  | n79 | 4530 | 10 | 50 | 4530 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2150 | 0 | FDD | IMD5 |
+|  | n40 | 2350 | 10 | 50 | 2350 | N/A | TDD | N/A |
+|  | n79 | 4600 | 10 | 50 | 4600 | N/A | TDD | N/A |
+| CA_n1-n40-n105 | n1 | 1977 | 5 | 25 | 2167 | N/A | FDD | N/A |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n105 | N/A | 5 | N/A | 649 | 1dB | FDD | IMD4 |
+| CA_n1-n41-n77 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n41 | 2650 | 10 | 50 | 2650 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3330 | 19.6 | TDD | IMD31,2 |
+|  | n1 | 1975 | 5 | 10 | 2165 | N/A | FDD | N/A |
+|  | n77 | 3410 | 10 | 50 | 3410 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2515 | 11.5 | TDD | IMD41 |
+|  | n41 | 2640 | 10 | 50 | 2640 | N/A | TDD | N/A |
+|  | n77 | 3710 | 10 | 50 | 3710 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 9.3 | FDD | IMD4 |
+| CA_n1-n41-n78 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n41 | 2650 | 10 | 50 | 2650 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3330 | 19.6 | TDD | IMD31,2 |
+|  | n1 | 1975 | 5 | 10 | 2165 | N/A | FDD | N/A |
+|  | n78 | 3410 | 10 | 50 | 3410 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2515 | 11.5 | TDD | IMD4 |
+|  | n1 | N/A | 5 | N/A | 2140 | 9.3 | FDD | IMD4 |
+|  | n78 | 3710 | 10 | 50 | 3710 | N/A | TDD | N/A |
+|  | n41 | 2640 | 10 | 50 | 2640 | N/A | TDD | N/A |
+| CA_n1-n41-n79 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n41 | 2530 | 10 | 50 | 2530 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4500 | 19.0 | TDD | IMD21 |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n79 | 4500 | 40 | 216 | 4500 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2530 | 29.4 | TDD | IMD21 |
+|  | n41 | 2530 | 10 | 50 | 2530 | N/A | TDD | N/A |
+|  | n79 | 4690 | 40 | 216 | 4690 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2160 | 29.9 | FDD | IMD21 |
+| CA_n1-n46-n78 | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n46 | 5430 | 20 | 100 | 5430 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3500 | 29 | TDD | IMD2 |
+|  | n1 | N/A | 5 | N/A | 2130 | 30 | FDD | IMD2 |
+|  | n46 | 5630 | 20 | 100 | 5630 | N/A | TDD | N/A |
+|  | n78 | 3500 | 10 | 50 | 3500 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2120 | 15 | FDD | IMD3 |
+|  | n46 | 5160 | 20 | 100 | 5160 | N/A | TDD | N/A |
+|  | n78 | 3640 | 10 | 50 | 3640 | N/A | TDD | N/A |
+|  | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n46 | N/A | 20 | N/A | 5430 | N/A | TDD | IMD2 |
+|  | n78 | 3500 | 10 | 50 | 3500 | N/A | TDD | N/A |
+|  | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n46 | N/A | 20 | N/A | 5250 | N/A | TDD | IMD3 |
+|  | n78 | 3590 | 10 | 50 | 3590 | N/A | TDD | N/A |
+| CA_n1-n67-n78 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n67 | N/A | 5 | N/A | 748 | 3.5 | SDL | IMD5 |
+|  | n78 | 3329 | 10 | 50 | 3329 | N/A | TDD | N/A |
+| CA_n1-n71-n77 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n71 | N/A | 5 | N/A | 635 | 15.2 | FDD | IMD3 |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n71 | 686 | 5 | 25 | 640 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3342 | 15.7 | TDD | IMD3 |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n71 | 680 | 5 | 25 | 634 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3992 | 9.4 | TDD | IMD4 |
+|  | n1 | N/A | 5 | N/A | 2160 | 15.7 | FDD | IMD3 |
+|  | n71 | 686 | 5 | 25 | 640 | N/A | FDD | N/A |
+|  | n77 | 3532 | 10 | 50 | 3532 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2141 | 10.1 | FDD | IMD4 |
+|  | n71 | 680 | 5 | 25 | 634 | N/A | FDD | N/A |
+|  | n77 | 4181 | 10 | 50 | 4181 | N/A | TDD | N/A |
+| CA_n1-n71-n78 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n71 | N/A | 5 | N/A | 635 | 15.2 | FDD | IMD3 |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n71 | 686 | 5 | 25 | 640 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3342 | 15.7 | TDD | IMD3 |
+|  | n1 | N/A | 5 | N/A | 2160 | 15.7 | FDD | IMD3 |
+|  | n71 | 686 | 5 | 25 | 640 | N/A | FDD | N/A |
+|  | n78 | 3532 | 10 | 50 | 3532 | N/A | TDD | N/A |
+| CA_n1-n75-n78 | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n75 | N/A | 5 | N/A | 1470 | 30.4 | SDL | IMD2 |
+|  | n78 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+| CA_n1-n77-n79 | n1 | N/A | 5 | N/A | 2140 | 15.6 | FDD | IMD31,2 |
+|  | n77 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n79 | 4660 | 40 | 216 | 4660 | N/A | TDD | N/A |
+| CA_n1-n78-n79 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n78 | 3410 | 10 | 50 | 3410 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4870 | 15.9 | TDD | IMD31,3 |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3490 | 4.6 | TDD | IMD53 |
+|  | n79 | 4670 | 40 | 216 | 4670 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 15.6 | FDD | IMD31,2 |
+|  | n78 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n79 | 4660 | 40 | 216 | 4660 | N/A | TDD | N/A |
+| CA_n1-n78-n102 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n78 | 3320 | 5 | 25 | 3320 | N/A | TDD | N/A |
+|  | n102 | N/A | 40 | N/A | 6020 | N/A12 | TDD | IMD5 |
+|  | n1 | N/A | 5 | N/A | 2155 | 29.9 | FDD | IMD21 |
+|  | n78 | 3790 | 5 | 25 | 3790 | N/A | TDD | N/A |
+|  | n102 | 5945 | 40 | 216 | 5945 | N/A | TDD | N/A |
+| CA_n1-n78-n105 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n105 | N/A | 5 | N/A | 635 | 15.2 | FDD | IMD3 |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3342 | 15.7 | TDD | IMD3 |
+|  | n105 | 686 | 5 | 25 | 635 | N/A | FDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2160 | 15.7 | FDD | IMD3 |
+|  | n78 | 3532 | 10 | 50 | 3532 | N/A | TDD | N/A |
+|  | n105 | 686 | 5 | 25 | 635 | N/A | FDD | N/A |
+| CA_n2-n5-n30 | n2 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 880 | 9.7 | FDD | IMD4 |
+|  | n30 | 2310 | 10 | 50 | 2355 | N/A | FDD | N/A |
+| CA_n2-n5-n41 | n2 | 1855 | 10 | 50 | 1935 | N/A | FDD | N/A |
+|  | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2685 | 30.0 | TDD | IMD2 |
+| CA_n2-n5-n48 | n2 | N/A | 5 | N/A | 1962 | 15.6 | FDD | IMD3 |
+|  | n5 | 839 | 5 | 25 | 884 | N/A | FDD | N/A |
+|  | n48 | 3640 | 10 | 50 | 3640 | N/A | TDD | N/A |
+|  | n2 | 1905 | 5 | 25 | 1985 | N/A | FDD | N/A |
+|  | n5 | 844 | 5 | 25 | 889 | N/A | FDD | N/A |
+|  | n48 | N/A | 10 | 50 | 3593 | 16.6 | TDD | IMD3 |
+| CA_n2-n5-n66 | n2 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2140 | 7.2 | FDD | IMD4 |
+| CA_n2-n5-n77 | n2 | 1907.5 | 5 | 25 | 1987.5 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 887.5 | 3.8 | FDD | IMD55 |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n2 | N/A | 5 | N/A | 1987 | 16.5 | FDD | IMD35 |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n77 | 3680 | 10 | 50 | 3680 | N/A | TDD | N/A |
+|  | n2 | 1880 | 5 | 25 | 1960 | N/A | FDD | N/A |
+|  | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3540 | 16.0 | TDD | IMD31 |
+| CA_n2-n12-n30 | n2 | 1885 | 5 | 25 | 1965 | N/A | FDD | N/A |
+|  | n12 | 708.5 | 5 | 25 | 738.5 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2353 | 12.0 | FDD | IMD4 |
+| CA_n2-n12-n71 | n2 | 1907.5 | 5 | 25 | 1987.5 | N/A | FDD | N/A |
+|  | n12 | N/A | 5 | N/A | 743.5 | 4.2 | FDD | IMD5 |
+|  | n71 | 665.5 | 5 | 25 | 649.5 | N/A | FDD | N/A |
+| CA_n2-n12-n77 | n2 | N/A | 5 | N/A | 1960 | 16.5 | FDD | IMD32,5 |
+|  | n12 | 707.5 | 5 | 25 | 737.5 | N/A | FDD | N/A |
+|  | n77 | 3375 | 10 | 50 | 3375 | N/A | TDD | N/A |
+|  | n2 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n12 | 707.5 | 5 | 25 | 737.5 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3315 | 16.0 | TDD | IMD31,2,5 |
+| CA_n2-n14-n66 | n2 | 1874 | 5 | 25 | 1954 | N/A | FDD | N/A |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2162 | 7.6 | FDD | IMD4 |
+|  | n2 | N/A | 5 | N/A | 1954 | 7.2 | FDD | IMD4 |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n66 | 1770 | 5 | 25 | 2170 | N/A | FDD | N/A |
+| CA_n2-n14-n77 | n2 | N/A | 5 | N/A | 1954 | 16.5 | FDD | IMD3 |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n77 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+|  | n2 | 1880 | 5 | 25 | 1960 | N/A | FDD | N/A |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3466 | 16.0 | TDD | IMD31 |
+| CA_n2-n30-n77 | n2 | N/A | 5 | N/A | 1986 | 8.6 | FDD | IMD45 |
+|  | n30 | 2312 | 5 | 25 | 2357 | N/A | FDD | N/A |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n2 | 1905 | 5 | 25 | 1985 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2354 | 10.6 | FDD | IMD45 |
+|  | n77 | 3361 | 10 | 50 | 3361 | N/A | TDD | N/A |
+|  | n2 | 1860 | 5 | 25 | 1940 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2354 | 3.4 | FDD | IMD5 |
+|  | n77 | 3967 | 10 | 50 | 3967 | N/A | TDD | N/A |
+|  | n2 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4180 | 29.4 | TDD | IMD22,5 |
+| CA_n2-n48-n66 | n2 | 1855 | 5 | 25 | 1935 | N/A | FDD | N/A |
+|  | n48 | N/A | 10 | 50 | 3625 | 32.0 | TDD | IMD2 |
+|  | n66 | 1770 | 5 | 25 | 2170 | N/A | FDD | N/A |
+|  | n2 | 1905 | 5 | 25 | 1985 | N/A | FDD | N/A |
+|  | n48 | 3560 | 10 | 50 | 3560 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2155 | 12.1 | FDD | IMD4 |
+|  | n2 | N/A | 5 | N/A | 1960 | 28.3 | FDD | IMD21 |
+|  | n48 | 3695 | 10 | 50 | 3695 | N/A | TDD | N/A |
+|  | n66 | 1735 | 5 | 25 | 2135 | N/A | FDD | N/A |
+| CA_n2-n66-n77 | n2 | N/A | 5 | 25 | 1950 | 15.3 | FDD | IMD3 |
+|  | n66 | 1775 | 5 | 25 | 2175 | N/A | FDD | N/A |
+|  | n77 | 3300 | 100 | 1 (RBstart=203) | 3300 | N/A | TDD | N/A |
+|  |  | 3400 | 100 | 1 (RBstart=67) | 3400 |  |  |  |
+|  | n2 | 1880 | 5 | 25 | 1960 | N/A | FDD | N/A |
+|  | n66 | 1740 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3620 | 29.4 | TDD | IMD22,5 |
+|  | n2 | 1855 | 5 | 25 | 1935 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2115 | 29.2 | FDD | IMD22 |
+|  | n77 | 3970 | 10 | 50 | 3970 | N/A | TDD | N/A |
+|  | n2 | 1885 | 5 | 25 | 1965 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2175 | 4.0 | FDD | IMD5 |
+|  | n77 | 3915 | 10 | 50 | 3915 | N/A | TDD | N/A |
+|  | n2 | N/A | 5 | N/A | 1960 | 32.1 | FDD | IMD2 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+|  | n2 | N/A | 5 | N/A | 1960 | 9.1 | FDD | IMD45 |
+|  | n66 | 1770 | 5 | 25 | 2170 | N/A | FDD | N/A |
+|  | n77 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n2 | N/A | 5 | N/A | 1960 | 2.1 | FDD | IMD55 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3620 | 10 | 50 | 3620 | N/A | TDD | N/A |
+| CA_n3-n5-n7 | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n5 | 845 | 5 | 25 | 890 | N/A | FDD | N/A |
+|  | n7 | N/A | 10 | N/A | 2625 | 30.0 | FDD | IMD24 |
+|  | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 880 | 19.0 | FDD | IMD3 |
+|  | n7 | 2560 | 10 | 50 | 2680 | N/A | FDD | N/A |
+| CA_n3-n5-n28 | n3 | N/A | 5 | N/A | 1829.5 | 8.7 | FDD | IMD4 |
+|  | n5 | 845 | 5 | 25 | 890 | N/A | FDD | N/A |
+|  | n28 | 705.5 | 5 | 25 | 760.5 | N/A | FDD | N/A |
+|  | n3 | 1713 | 5 | 25 | 1808 | N/A | FDD | N/A |
+|  | n5 | 827 | 5 | 25 | 872 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 768 | 9.4 | FDD | IMD4 |
+| CA_n3-n5-n78 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n5 | 839 | 5 | 25 | 884 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3408 | 16.1 | TDD | IMD31 |
+|  | n3 | N/A | 5 | N/A | 1862 | 15.7 | FDD | IMD3 |
+|  | n5 | 839 | 5 | 25 | 884 | N/A | FDD | N/A |
+|  | n78 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+| CA_n3-n5-n79 | n3 | N/A | 5 | N/A | 1877.5 | 8.8 | FDD | IMD4 |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 860 | 15.3 | FDD | IMD3 |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 890 | 10.3 | FDD | IMD4 |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n3 | 1782.5 | 5 | 25 | 1875.5 | N/A | FDD | N/A |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4420 | 15.7 | TDD | IMD3 |
+|  | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n5 | 846 | 5 | 25 | 891 | N/A | FDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4494 | 9.4 | TDD | IMD4 |
+| CA_n3-n7-n8 | n3 | 1735 | 5 | 25 | 1830 | N/A | FDD | N/A |
+|  | n7 | 2530 | 10 | 50 | 2650 | N/A | FDD | N/A |
+|  | n8 | N/A | 5 | N/A | 940 | 18.0 | FDD | IMD3 |
+|  | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n7 | N/A | 10 | N/A | 2670 | 29.0 | FDD | IMD211 |
+|  | n8 | 890 | 5 | 25 | 935 | N/A | FDD | N/A |
+| CA_n3-n7-n20 | n3 | 1747 | 5 | 25 | 1842 | N/A | FDD | N/A |
+|  | n7 | 2543 | 10 | 50 | 2663 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 796 | 20.0 | FDD | IMD2 |
+|  | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n7 | N/A | 10 | N/A | 2625 | 29.0 | FDD | IMD2 |
+|  | n20 | 845 | 5 | 25 | 804 | N/A | FDD | N/A |
+|  | n3 | 1750 | 5 | 25 | 1845 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | 25 | N/A | 17.0 | FDD | IMD3 |
+|  | n20 | 835 | 5 | 25 | 794 | N/A | FDD | N/A |
+| CA_n3-n7-n26 | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n7 | 2560 | 10 | 50 | 2680 | N/A | FDD | N/A |
+|  | n26 | N/A | 5 | N/A | 880 | 17.5 | FDD | IMD3 |
+|  | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n7 | N/A | 10 | N/A | 2625 | 29.0 | FDD | IMD24 |
+|  | n26 | 845 | 5 | 25 | 890 | N/A | FDD | N/A |
+| CA_n3-n7-n28 | n3 | 1747 | 5 | 25 | 1842 | N/A | FDD | N/A |
+|  | n7 | 2543 | 5 | 25 | 2663 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 796 | 20.0 | FDD | IMD2 |
+|  | n3 | 1712.5 | 5 | 25 | 1807.5 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2682 | 17.0 | FDD | IMD3 |
+|  | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1832.5 | 26 | FDD | IMD2 |
+|  | n7 | 2543 | 5 | 25 | 2663 | N/A | FDD | N/A |
+|  | n28 | 710.5 | 5 | 25 | 765.5 | N/A | FDD | N/A |
+| CA_n3-n7-n40 | n3 | 1770 | 10 | 50 | 1865 | 4.5 | FDD | IMD5 |
+|  | n7 | 2525 | 10 | 50 | 2645 | N/A | FDD | N/A |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+| CA_n3-n7-n67 | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n7 | 2520 | 5 | 25 | 2640 | N/A | FDD | N/A |
+|  | n67 | N/A | 5 | N/A | 750 | 20 | SDL | IMD2 |
+| CA_n3-n7-n75 | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n7 | 2505 | 5 | 25 | 2625 | N/A | FDD | N/A |
+|  | n75 | N/A | 5 | N/A | 1450 | 10.4 | SDL | IMD4 |
+| CA_n3-n7-n77 | n3 | N/A | 5 | N/A | 1820 | 17.6 | FDD | IMD3 |
+|  | n7 | 2565 | 5 | 25 | 2685 | N/A | FDD | N/A |
+|  | n77 | 3310 | 10 | 50 | 3310 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1820 | 8.6 | FDD | IMD4 |
+|  | n7 | 2565 | 5 | 25 | 2685 | N/A | FDD | N/A |
+|  | n77 | 3475 | 10 | 50 | 3475 | N/A | TDD | N/A |
+|  | n3 | 1715 | 5 | 25 | 1810 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2685 | 3.4 | FDD | IMD5 |
+|  | n77 | 4175 | 10 | 50 | 4175 | N/A | TDD | N/A |
+|  | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n7 | 2560 | 5 | 25 | 2680 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3390 | 16.1 | TDD | IMD31 |
+| CA_n3-n7-n78 | n3 | N/A | 5 | N/A | 1820 | 17.6 | FDD | IMD3 |
+|  | n7 | 2565 | 5 | 25 | 2685 | N/A | FDD | N/A |
+|  | n78 | 3310 | 10 | 50 | 3310 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1820 | 8.6 | FDD | IMD4 |
+|  | n7 | 2565 | 5 | 25 | 2685 | N/A | FDD | N/A |
+|  | n78 | 3475 | 10 | 50 | 3475 | N/A | TDD | N/A |
+|  | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n7 | 2560 | 5 | 25 | 2680 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3390 | 16.1 | TDD | IMD3 |
+| CA_n3-n7-n105 | n3 | N/A | 5 | N/A | 1875 | 16.5 | FDD | IMD2 |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n105 | 675 | 5 | 25 | 624 | N/A | FDD | N/A |
+| CA_n3-n8-n40 | n3 | N/A | 5 | N/A | 1874 | 4 | FDD | IMD5 |
+|  | n8 | 912 | 5 | 25 | 957 | N/A | FDD | N/A |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+| CA_n3-n8-n41 | n3 | 1722.5 | 5 | 25 | 1817.5 | N/A | FDD | N/A |
+|  | n8 | 887.5 | 5 | 25 | 932.5 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2610 | 28.0 | FDD | IMD24 |
+|  | n3 | 1725 | 5 | 25 | 1820 | N/A | FDD | N/A |
+|  | n8 | N/A | 5 | N/A | 945 | 26.0 | FDD | IMD24 |
+|  | n41 | 2516 | 10 | 50 | 2516 | N/A | FDD | N/A |
+| CA_n3-n8-n78 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3550 | 16.1 | TDD | IMD31 |
+|  | n3 | N/A | 5 | N/A | 1820 | 15.7 | FDD | IMD3 |
+|  | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n78 | 3640 | 10 | 50 | 3640 | N/A | TDD | N/A |
+| CA_n3-n8-n79 | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n8 | 885 | 5 | 25 | 930 | N/A | FDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4425 | 15.7 | TDD | IMD32 |
+|  | n3 | 1755 | 5 | 25 | 1850 | N/A | FDD | N/A |
+|  | n8 | N/A | 5 | N/A | 955 | 15.3 | FDD | IMD3 |
+|  | n79 | 4465 | 40 | 216 | 4465 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1850 | 8.8 | FDD | IMD4 |
+|  | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n79 | 4580 | 40 | 216 | 4580 | N/A | FDD | N/A |
+| CA_n3-n18-n28 | n3 | 1712.5 | 5 | 25 | 1807.5 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 770 | 9.4 | FDD | IMD4 |
+|  | n18 | 827.5 | 5 | 25 | 872.5 | N/A | FDD | N/A |
+| CA_n3-n18-n41 | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2540 | N/A | TDD | IMD2 |
+|  | n3 | 1725 | 5 | 25 | 1820 | N/A | FDD | N/A |
+|  | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2630 | 16.0 | TDD | IMD3 |
+|  | n3 | 1765 | 5 | 25 | 1860 | N/A | FDD | N/A |
+|  | n18 | N/A | 5 | N/A | 865 | 28.9 | FDD | IMD2 |
+|  | n41 | 2630 | 10 | 50 | 2630 | N/A | TDD | N/A |
+|  | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n18 | N/A | 5 | N/A | 862.5 | 17.5 | FDD | IMD3 |
+|  | n41 | 2597.5 | 10 | 50 | 2597.5 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1850 | 28.8 | FDD | IMD2 |
+|  | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n41 | 2670 | 10 | 50 | 2670 | N/A | TDD | N/A |
+| CA_n3-n18-n77 | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3410 | 16.3 | TDD | IMD31,2 |
+|  | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1865 | 15.7 | FDD | IMD3 |
+|  | n77 | 3505 | 10 | 50 | 3505 | N/A | TDD | N/A |
+| CA_n3-n20-n28 | n3 | N/A | 5 | N/A | 1828 | 9.4 | FDD | IMD4 |
+|  | n20 | 852 | 5 | 25 | 811 | N/A | FDD | N/A |
+|  | n28 | 728 | 5 | 25 | 783 | N/A | FDD | N/A |
+|  | n3 | 1748 | 5 | 25 | 1843 | N/A | FDD | N/A |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 793 | 9.4 | FDD | IMD4 |
+| CA_n3-n20-n41 | n3 | 1735 | 5 | 25 | 1830 | N/A | FDD | N/A |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2623 | 29 | TDD | IMD2 |
+|  | n3 | 1747 | 5 | 25 | 1842 | N/A | FDD | N/A |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2594 | 16 | TDD | IMD3 |
+|  | n3 | 1747 | 5 | 25 | 1842 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 806 | 28.9 | FDD | IMD2 |
+|  | n41 | 2553 | 10 | 50 | 2553 | N/A | TDD | N/A |
+|  | n3 | 1715 | 5 | 25 | 1810 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 806 | 19 | FDD | IMD3 |
+|  | n41 | 2624 | 10 | 50 | 2624 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1831 | 28.9 | FDD | IMD2 |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n41 | 2678 | 10 | 50 | 2678 | N/A | TDD | N/A |
+| CA_n3-n20-n67 | n3 | 1775 | 5 | 25 | 1870 | N/A | FDD | N/A |
+|  | n20 | 840 | 5 | 25 | 799 | N/A | FDD | N/A |
+|  | n67 | N/A | 5 | N/A | 745 | 9.4 | FDD | IMD4 |
+| CA_n3-n20-n71 | n3 | N/A | 5 | N/A | 1843 | 9.4 | FDD | IMD4 |
+|  | n20 | 841 | 5 | 25 | 800 | N/A | FDD | N/A |
+|  | n71 | 680 | 5 | 25 | 634 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1841 | 5.9 | FDD | IMD5 |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n71 | 672 | 5 | 25 | 626 | N/A | FDD | N/A |
+| CA_n3-n20-n77 | n3 | 1747 | 5 | 25 | 1842 | N/A | FDD | N/A |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3441 | 16.3 | TDD | IMD31 |
+|  | n3 | N/A | 5 | N/A | 1842 | 15.7 | FDD | IMD3 |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n77 | 3536 | 10 | 50 | 3536 | N/A | TDD | N/A |
+| CA_n3-n20-n78 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n20 | 845 | 5 | 25 | 804 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3420 | 16.1 | TDD | IMD31 |
+|  | n3 | N/A | 5 | N/A | 1820 | 17.3 | FDD | IMD3 |
+|  | n20 | 845 | 5 | 25 | 804 | N/A | FDD | N/A |
+|  | n78 | 3510 | 10 | 50 | 3510 | N/A | TDD | N/A |
+| CA_n3-n26-n78 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n26 | 839 | 5 | 25 | 884 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3408 | 16.1 | TDD | IMD31 |
+|  | n3 | N/A | 5 | N/A | 1862 | 15.7 | FDD | IMD3 |
+|  | n26 | 839 | 5 | 25 | 884 | N/A | FDD | N/A |
+|  | n78 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+| CA_n3-n28-n41 | n3 | 1782.5 | 5 | 25 | 1877.5 | N/A | FDD | N/A |
+|  | n28 | 745.5 | 5 | 25 | 800.5 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2528 | 25.4 | TDD | IMD2 |
+|  | n3 | 1715 | 5 | 25 | 1810 | N/A | FDD | N/A |
+|  | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2687 | 13.9 | TDD | IMD3 |
+|  | n3 | 1760 | 5 | 25 | 1855 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 790 | 24.5 | FDD | IMD24 |
+|  | n41 | 2550 | 10 | 50 | 2550 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1832.5 | 26.0 | FDD | IMD2 |
+|  | n28 | 710.5 | 5 | 25 | 765.5 | N/A | FDD | N/A |
+|  | n41 | 2543 | 10 | 50 | 2543 | N/A | TDD | N/A |
+| CA_n3-n28-75 | n3 | 1782 | 5 | 25 | 1877 | N/A | FDD | N/A |
+|  | n28 | 709 | 5 | 25 | 764 | N/A | FDD | N/A |
+|  | n75 | N/A | 5 | N/A | 1437 | 4.0 | SDL | IMD5 |
+| CA_n3-n28-n77 | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n28 | 733 | 5 | 25 | 788 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4173 | 15.9 | TDD | IMD3 |
+|  | n28 | 735 | 5 | 25 | 790 | N/A | FDD | N/A |
+|  | n77 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1850 | 17.0 | FDD | IMD3 |
+|  | n3 | 1712.5 | 5 | 25 | 1807.5 | N/A | FDD | N/A |
+|  | n77 | 4195 | 10 | 50 | 4195 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 770 | 15.3 | FDD | IMD3 |
+| CA_n3-n28-n78 | n28 | 735 | 5 | 25 | 790 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3320 | N/A | TDD | IMD31 |
+|  | n3 | 1755 | 5 | 25 | 1850 | 17.3 | FDD | N/A |
+| CA_n3-n28-n79 | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n28 | 725 | 5 | 25 | 780 | N/A | FDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4585 | 9.4 | TDD | IMD41 |
+|  | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n79 | 4530 | 40 | 216 | 4530 | N/A | TDD | N/A |
+|  | n28 | 725 | 5 | 25 | 780 | 10.3 | FDD | IMD4 |
+|  | n28 | 725 | 5 | 25 | 780 | N/A | FDD | N/A |
+|  | n79 | 4770 | 40 | 216 | 4770 | N/A | TDD | N/A |
+|  | n3 | 1775 | 5 | 25 | 1870 | 5.7 | FDD | IMD5 |
+| CA_n3-n34-n41 | n3 | 1742.5 | 5 | 25 | 1837.5 | N/A | FDD | N/A |
+|  | n34 | 2020 | 5 | 25 | 2020 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2575 | 0.8 | TDD | IMD5 |
+| CA_n3-n34-n79 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n34 | 2020 | 5 | 25 | 2020 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4900 | 3.2 | TDD | IMD5 |
+|  | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n34 | 4900 | 40 | 216 | 4900 | N/A | TDD | N/A |
+|  | n79 | N/A | 5 | N/A | 2020 | 9.7 | TDD | IMD5 |
+| CA_n3-40-n41 | n3 | N/A | 5 | N/A | 1842.5 | 1.0 | FDD | IMD5 |
+|  | n40 | 2347.5 | 10 | 50 | 2347.5 | N/A | TDD | N/A |
+|  | n41 | 2600 | 10 | 50 | 2600 | N/A | TDD | N/A |
+| CA_n3-n40-n77 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n40 | 2320 | 10 | 50 | 2320 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4050 | 19.0 | TDD | IMD21 |
+|  | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2310 | 29.4 | TDD | IMD21 |
+|  | n77 | 4030 | 10 | 50 | 4030 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1820 | 29.9 | FDD | IMD22 |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n77 | 4130 | 10 | 50 | 4130 | N/A | TDD | N/A |
+| CA_n3-n40-n78 | n3 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n40 | 2350 | 10 | 50 | 2350 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3440 | 16.8 | TDD | IMD4 |
+|  | n3 | 1925 | 5 | 25 | 2115 | N/A | FDD | N/A |
+|  | n40 | 2395 | 10 | 50 | 2395 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3335 | 0.8 | TDD | IMD5 |
+|  | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2360 | 5.3 | TDD | IMD5 |
+|  | n78 | 3760 | 10 | 50 | 3760 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1860 | 14 | FDD | IMD4 |
+|  | n40 | 2390 | 5 | 25 | 2390 | N/A | TDD | N/A |
+|  | n78 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+| CA_n3-n40-n79 | n3 | 1782.5 | 5 | 25 | 1877.5 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4820 | 3.3 | TDD | IMD5 |
+|  | n3 | 1782.5 | 5 | 25 | 1877.5 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2310 | 5.9 | TDD | IMD5 |
+|  | n79 | 4820 | 40 | 216 | 4820 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1850 | 4.7 | FDD | IMD5 |
+|  | n40 | 2350 | 10 | 50 | 2350 | N/A | TDD | N/A |
+|  | n79 | 4450 | 40 | 216 | 4450 | N/A | TDD | N/A |
+| CA_n3-n40-n105 | n3 | 1745 | 5 | 25 | 1840 | N/A | FDD | N/A |
+|  | n40 | 2380 | 10 | 50 | 2380 | N/A | TDD | N/A |
+|  | n105 | N/A | 5 | N/A | 635 | 26.0 | FDD | IMD24 |
+|  | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2388 | 26.0 | TDD | IMD2 |
+|  | n105 | 668 | 5 | 25 | 617 | N/A | FDD | N/A |
+| CA_n3-n41-n71 | n3 | N/A | 5 | N/A | 1875 | 16.5 | FDD | IMD2 |
+|  | n41 | 2550 | 10 | 50 | 2550 | N/A | FDD | N/A |
+|  | n71 | 675 | 5 | 25 | 629 | N/A | FDD | N/A |
+| CA_n3-n41-n77 | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2640 | 4.3 | TDD | IMD5 |
+|  | n77 | 3900 | 10 | 50 | 3900 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1840 | 14.9 | FDD | IMD3 |
+|  | n41 | 2620 | 10 | 50 | 2620 | N/A | TDD | N/A |
+|  | n77 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n41 | 2580 | 10 | 50 | 2580 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3440 | 15.3 | TDD | IMD31 |
+| CA_n3-n41-n78 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n41 | 2560 | 10 | 50 | 2560 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3390 | 15.3 | TDD | IMD3 |
+|  | n3 | N/A | 5 | N/A | 1840 | 14.9 | TDD | IMD3 |
+|  | n41 | 2620 | 10 | 50 | 2620 | N/A | FDD | N/A |
+|  | n78 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+| CA_n3-n41-n79 | n3 | N/A | 5 | N/A | 1850 | 29.4 | FDD | IMD21 |
+|  | n41 | 2570 | 10 | 50 | 2570 | N/A | TDD | N/A |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2670 | 30.2 | TDD | IMD21 |
+|  | n79 | 4440 | 40 | 216 | 4440 | N/A | TDD | N/A |
+|  | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n41 | 2670 | 10 | 50 | 2670 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4440 | 30.8 | TDD | IMD21 |
+| CA_n3-n67-n78 | n3 | N/A | 5 | N/A | 1877.5 | 2.2 | FDD | IMD7 |
+|  | n67 | N/A | 5 | N/A | N/A | N/A | SDL | N/A |
+|  | n7810 | 3305 | 10 | 1 (RBSTART=25) | 3305 | N/A | TDD | N/A |
+|  |  | 3780 | 10 | 1 (RBSTART=25) | 3780 |  |  |  |
+| CA_n3-n71-n77 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n71 | 680 | 5 | 25 | 634 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4140 | 15.9 | TDD | IMD31 |
+|  | n3 | 1747 | 5 | 25 | 1842 | N/A | FDD | N/A |
+|  | n71 | 680 | 5 | 25 | 634 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3787 | 10.1 | TDD | IMD4 |
+|  | n3 | 1748 | 5 | 25 | 1843 | N/A | FDD | N/A |
+|  | n71 | N/A | 5 | N/A | 632 | 15.3 | FDD | IMD3 |
+|  | n77 | 4128 | 10 | 50 | 4128 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1843 | 12.5 | FDD | IMD4 |
+|  | n71 | 680 | 5 | 25 | 634 | N/A | FDD | N/A |
+|  | n77 | 3883 | 10 | 50 | 3883 | N/A | TDD | N/A |
+| CA_n3-n71-n78 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n71 | 670 | 5 | 25 | 624 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3740 | 17.3 | TDD | IMD41 |
+| CA_n3-n75-n78 | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n75 | N/A | 5 | N/A | 1450 | 10.8 | SDL | IMD4 |
+|  | n78 | 3700 | 10 | 50 | 3700 | N/A | TDD | N/A |
+|  | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n75 | N/A | 5 | N/A | 1490 | 1.0 | SDL | IMD5 |
+|  | n78 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+| CA_n3-n77-n79 | n77 | 3350 | 10 | 50 | 3350 | N/A | FDD | N/A |
+|  | n79 | 4840 | 40 | 216 | 4840 | N/A | TDD | N/A |
+|  | n3 | 1765 | 5 | 25 | 1860 | 15.7 | TDD | IMD31, 2 |
+| CA_n3-n78-n79 | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n78 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4860 | 13.1 | TDD | IMD3 |
+|  | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3480 | 1 | TDD | IMD5 |
+|  | n79 | 4410 | 10 | 50 | 4410 | N/A | TDD | N/A |
+|  | n3 | 1765 | 5 | 25 | 1860 | 15.7 | FDD | IMD31 |
+|  | n78 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n79 | 4840 | 10 | 50 | 4840 | N/A | TDD | N/A |
+|  | n3 | 1745 | 5 | 25 | 1840 | 3 | FDD | IMD4 |
+|  | n78 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+|  | n79 | 4700 | 10 | 50 | 4700 | N/A | TDD | N/A |
+| CA_n3-n78-n105 | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3740 | 17.3 | TDD | IMD44 |
+|  | n105 | 670 | 5 | 25 | 619 | N/A | FDD | N/A |
+| CA_n5-n7-n25 | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2685 | 30.0 | FDD | IMD2 |
+|  | n25 | 1855 | 5 | 25 | 1935 | N/A | FDD | N/A |
+| CA_n5-n7-n66 | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2624 | 29.0 | FDD | IMD2 |
+|  | n66 | 1777.5 | 5 | 25 | 2177.5 | N/A | FDD | N/A |
+|  | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2670 | 13 | FDD | IMD3 |
+|  | n66 | 1750 | 5 | 25 | 2150 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 880 | 13 | FDD | IMD3 |
+|  | n7 | 2560 | 5 | 25 | 2680 | N/A | FDD | N/A |
+|  | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+| CA_n5-n7-n77 | n5 | 844 | 5 | 25 | 889 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2645 | 30.1 | FDD | IMD2 |
+|  | n77 | 3489 | 10 | 50 | 3489 | N/A | TDD | N/A |
+|  | n5 | N/A | 5 | N/A | 879 | 30.2 | FDD | IMD21, 4 |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n77 | 3429 | 10 | 50 | 3429 | N/A | TDD | N/A |
+|  | n5 | 827 | 5 | 25 | 852 | N/A | FDD | N/A |
+|  | n7 | 2503 | 5 | 25 | 2623 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3330 | 30.2 | TDD | IMD22, 4 |
+| CA_n5-n7-n78 | n5 | N/A | 5 | N/A | 879 | 30.2 | FDD | IMD2 |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n78 | 3429 | 10 | 50 | 3429 | N/A | TDD | N/A |
+|  | n5 | N/A | 5 | N/A | 875 | 3.3 | FDD | IMD5 |
+|  | n7 | 2525 | 5 | 25 | 2645 | N/A | FDD | N/A |
+|  | n78 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n5 | 844 | 5 | 25 | 889 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2645 | 30.1 | FDD | IMD2 |
+|  | n78 | 3489 | 10 | 50 | 3489 | N/A | TDD | N/A |
+|  | n5 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n7 | 2540 | 5 | 25 | 2660 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3375 | 29.7 | TDD | IMD22 |
+| CA_n5-n7-n105 | n5 | 834.5 | 5 | 25 | 879.5 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2655 | 6.5 | FDD | IMD5 |
+|  | n105 | 683 | 5 | 25 | 632 | N/A | FDD | N/A |
+| CA_n5-n12-n77 | n5 | N/A | 5 | N/A | 880 | 3.9 | FDD | IMD5 |
+|  | n12 | 707.5 | 5 | 25 | 737.5 | N/A | FDD | N/A |
+|  | n77 | 3710 | 10 | 50 | 3710 | N/A | TDD | N/A |
+|  | n5 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n12 | N/A | 5 | N/A | 740 | 4.4 | FDD | IMD55 |
+|  | n77 | 4080 | 10 | 50 | 4080 | N/A | TDD | N/A |
+|  | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n12 | 707.5 | 5 | 25 | 737.5 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3905 | 4.4 | TDD | IMD5 |
+| CA_n5-n14-n30 | n5 | N/A | 5 | N/A | 872 | 3.9 | FDD | IMD5 |
+|  | n14 | 795 | 5 | 25 | 765 | N/A | FDD | N/A |
+|  | n30 | 2308 | 5 | 25 | 2353 | N/A | FDD | N/A |
+|  | n5 | 821 | 5 | 25 | 872 | N/A | FDD | N/A |
+|  | n14 | 794.5 | 5 | 25 | 764.5 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2357 | 4.4 | FDD | IMD5 |
+| CA_n5-n14-n66 | n5 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n14 | N/A | 5 | N/A | 767 | 9.4 | FDD | IMD4 |
+|  | n66 | 1712.5 | 5 | 25 | 2112.5 | N/A | FDD | N/A |
+| CA_n5-n14-n77 | n5 | N/A | 5 | N/A | 880 | 3.9 | FDD | IMD55 |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n77 | 4052 | 10 | 50 | 4052 | N/A | TDD | N/A |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n14 | N/A | 5 | N/A | 765.5 | 11.6 | FDD | IMD41,5 |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n5 | 840 | 5 | 25 | 885 | N/A | FDD | N/A |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3313 | 10.3 | TDD | IMD41,5 |
+| CA_n5-n25-n41 | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n25 | 1855 | 5 | 25 | 1935 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2685 | 28.0 | TDD | IMD2 |
+| CA_n5-n25-n66 | n5 | 834 | 5 | 25 | 879 | N/A | FDD | N/A |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2132 | 7.2 | FDD | IMD4 |
+| CA_n5-n25-n77 | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n25 | 1880 | 5 | 25 | 1960 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3540 | 16.0 | TDD | IMD3 |
+|  | n5 | N/A | 5 | N/A | 889 | 3.8 | FDD | IMD55 |
+|  | n25 | 1907 | 5 | 25 | 1987 | N/A | FDD | N/A |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1987 | 16.5 | FDD | IMD3 |
+|  | n77 | 3680 | 10 | 25 | 3680 | N/A | TDD | N/A |
+| CA_n5-n25-n78 | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3560 | 16.1 | TDD | IMD3 |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1987 | 16.5 | FDD | IMD3 |
+|  | n78 | 3680 | 10 | 50 | 3680 | N/A | TDD | N/A |
+|  | n5 | N/A | 5 | N/A | 887.5 | 3.8 | FDD | IMD5 |
+|  | n25 | 1907.5 | 5 | 25 | 1987.5 | N/A | FDD | N/A |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+| CA_n5-n28-n78 | n5 | N/A | 5 | N/A | 874 | 3.8 | FDD | IMD5 |
+|  | n28 | 723 | 5 | 25 | 778 | N/A | FDD | N/A |
+|  | n78 | 3766 | 10 | 50 | 3766 | N/A | TDD | N/A |
+|  | n5 | 844 | 5 | 25 | 889 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 778 | 11.6 | FDD | IMD4 |
+|  | n78 | 3310 | 10 | 50 | 3310 | N/A | TDD | N/A |
+|  | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n28 | 707 | 5 | 25 | 762 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3781 | 4.0 | TDD | IMD5 |
+| CA_n5-n28-n105 | n5 | 845 | 5 | 25 | 890 | N/A | FDD | N/A |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n105 | 686 | 5 | 25 | 635 | 25.0 | FDD | IMD3 |
+| CA_n5-n29-n66 | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n29 | N/A | 5 | N/A | 720 | 9.4 | SDL | IMD4 |
+|  | n66 | 1770 | 5 | 25 | 2170 | N/A | FDD | N/A |
+| CA_n5-n29-n77 | n5 | 845 | 5 | 25 | 890 | N/A | FDD | N/A |
+|  | n29 | N/A | 5 | N/A | 720 | 4.4 | SDL | IMD55 |
+|  | n77 | 4100 | 10 | 50 | 4100 | N/A | TDD | N/A |
+| CA_n5-n30-n66 | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n30 | 2307.5 | 5 | 25 | 2352.5 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2125 | 4 | FDD | IMD5 |
+| CA_n5-n30-n77 | n5 | N/A | 5 | N/A | 880 | 15.2 | FDD | IMD31 |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | 3740 | 10 | 50 | 3740 | N/A | TDD | N/A |
+|  | n5 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2355 | 13.2 | FDD | IMD35 |
+|  | n77 | 4025 | 10 | 50 | 4025 | N/A | TDD | N/A |
+|  | n5 | 840 | 5 | 25 | 885 | N/A | FDD | N/A |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3780 | 16.1 | TDD | IMD3 |
+| CA_n5-n40-n78 | n5 | N/A | 5 | N/A | 880 | 15.2 | FDD | IMD3 |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n78 | 3740 | 10 | 50 | 3740 | N/A | TDD | N/A |
+|  | n5 | 840 | 5 | 25 | 885 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3780 | 16.1 | TDD | IMD3 |
+| CA_n5-n40-n105 | n5 | 836.5 | 5 | 25 | 881.5 | N/A | FDD | N/A |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n105 | N/A | 5 | N/A | 632 | 17 | FDD | IMD3 |
+|  | n5 | 836.5 | 5 | 25 | 881.5 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2356 | 18.8 | TDD | IMD3 |
+|  | n105 | 683 | 5 | 25 | 632 | N/A | FDD | NA |
+| CA_n5-n41-n66 | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2624 | 29.0 | TDD | IMD24 |
+|  | n66 | 1777.5 | 5 | 25 | 2177.5 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 875 | 28.9 | FDD | IMD24 |
+|  | n41 | 2640 | 10 | 50 | 2640 | N/A | TDD | N/A |
+|  | n66 | 1765 | 5 | 25 | 2165 | N/A | FDD | N/A |
+| CA_n5-n41-n77 | n5 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n41 | 2540 | 10 | 50 | 2540 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3375 | 28.2 | TDD | IMD22 |
+|  | n5 | 840 | 5 | 25 | 885 | N/A | FDD | N/A |
+|  | n41 | 2510 | 10 | 50 | 2510 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4180 | 14.6 | TDD | IMD3 |
+|  | n5 | 844 | 5 | 25 | 889 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2645 | 28.1 | TDD | IMD2 |
+|  | n77 | 3489 | 10 | 50 | 3489 | N/A | TDD | N/A |
+|  | n5 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2510 | 11.2 | FDD | IMD3 |
+|  | n77 | 4180 | 10 | 50 | 4180 | N/A | TDD | N/A |
+|  | n5 | N/A | 5 | N/A | 879 | 28.7 | FDD | IMD2 |
+|  | n41 | 2550 | 10 | 50 | 2550 | N/A | TDD | N/A |
+|  | n77 | 3429 | 10 | 50 | 3429 | N/A | TDD | N/A |
+|  | n5 | N/A | 5 | N/A | 880 | 13.7 | FDD | IMD31 |
+|  | n41 | 2510 | 10 | 50 | 2510 | N/A | TDD | N/A |
+|  | n77 | 4140 | 10 | 50 | 4140 | N/A | TDD | N/A |
+| CA_n5-n48-n66 | n5 | 829 | 5 | 25 | 874 | N/A | FDD | N/A |
+|  | n48 | N/A | 10 | N/A | 3622 | 3.6 | TDD | IMD5 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+| CA_n5-n66-n77 | n5 | 845 | 5 | 25 | 890 | N/A | FDD | N/A |
+|  | n66 | 1775 | 5 | 25 | 2175 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3465 | 16.1 | TDD | IMD31 |
+|  | n5 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n66 | 1712.5 | 5 | 25 | 2112.5 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4192 | 8.2 | TDD | IMD45 |
+|  | n5 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2142 | 13.2 | FDD | IMD3 |
+|  | n77 | 3795 | 10 | 50 | 3795 | N/A | TDD | N/A |
+| CA_n5-n66-n78 | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3380 | 16.1 | TDD | IMD3 |
+|  | n5 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2120 | 13.2 | FDD | IMD3 |
+|  | n78 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+| CA_n5-n78-n79 | n5 | 846 | 5 | 25 | 891 | N/A | FDD | N/A |
+|  | n78 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4636 | 26.2 | TDD | IMD2 |
+|  | n5 | 827 | 5 | 25 | 872 | N/A | FDD | N/A |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4959 | 22 | TDD | IMD3 |
+|  | n5 | 827 | 5 | 25 | 872 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3593 | 26.9 | TDD | IMD2 |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n5 | 827 | 5 | 25 | 872 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3326 | 17 | TDD | IMD3 |
+|  | n79 | 4980 | 40 | 216 | 4980 | N/A | TDD | N/A |
+|  | n5 | N/A | 5 | N/A | 880 | 16.2 | FDD | IMD2 |
+|  | n78 | 3550 | 10 | 50 | 3550 | N/A | TDD | N/A |
+|  | n79 | 4430 | 40 | 216 | 4430 | N/A | TDD | N/A |
+|  | n5 | N/A | 5 | N/A | 875 | 3 | FDD | IMD5 |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n79 | 4520 | 40 | 216 | 4520 | N/A | TDD | N/A |
+| CA_n5-n78-n105 | n5 | 836.5 | 5 | 25 | 881.5 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3568.5 | 4 | TDD | IMD5 |
+|  | n105 | 683 | 5 | 25 | 632 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 881.5 | 3.8 | FDD | IMD5 |
+|  | n78 | 3613.5 | 10 | 50 | 3613.5 | N/A | TDD | N/A |
+|  | n105 | 683 | 5 | 25 | 632 | N/A | FDD | N/A |
+| CA_n7-n8-n40 | n7 | 2530 | 5 | 25 | 2650 | N/A | FDD | N/A |
+|  | n8 | 905 | 5 | 25 | 950 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2345 | 3.0 | TDD | IMD5 |
+| CA_n7-n8-n78 | n7 | 2555 | 5 | 25 | 2675 | N/A | FDD | N/A |
+|  | n8 | 900 | 5 | 25 | 945 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3455 | 28.5 | TDD | IMD22 |
+|  | n7 | 2555 | 5 | 25 | 2675 | N/A | FDD | N/A |
+|  | n8 | N/A | 5 | N/A | 945 | 29.7 | FDD | IMD2 |
+|  | n78 | 3500 | 10 | 50 | 3500 | N/A | TDD | N/A |
+|  | n7 | 2520 | 5 | 25 | 2640 | N/A | FDD | N/A |
+|  | n8 | N/A | 5 | N/A | 940 | 3.1 | FDD | IMD5 |
+|  | n78 | 3310 | 10 | 50 | 3310 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2650 | 28 | FDD | IMD2 |
+|  | n8 | 895 | 5 | 25 | 940 | N/A | FDD | N/A |
+|  | n78 | 3545 | 10 | 50 | 3545 | N/A | TDD | N/A |
+| CA_n7-n20-n28 | n7 | N/A | 5 | N/A | 2640 | 5.9 | FDD | IMD5 |
+|  | n20 | 842 | 5 | 25 | 801 | N/A | FDD | N/A |
+|  | n28 | 728 | 5 | 25 | 783 | N/A | FDD | N/A |
+|  | n7 | 2505 | 5 | 25 | 2625 | N/A | FDD | N/A |
+|  | n20 | 859 | 5 | 25 | 818 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 787 | 17.4 | FDD | IMD31 |
+| CA_n7-n20-n67 | n7 | 2565 | 10 | 50 | 2685 | N/A | TDD | N/A |
+|  | n20 | 834.5 | 5 | 25 | 793.5 | N/A | FDD | N/A |
+|  | n67 | N/A | 5 | N/A | 773 | 3.9 | FDD | IMD5 |
+| CA_n7-n20-n78 | n7 | 2560 | 5 | 25 | 2680 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 810 | 30.5 | FDD | IMD21 |
+|  | n78 | 3370 | 10 | 50 | 3370 | N/A | TDD | N/A |
+|  | n7 | 2560 | 5 | 25 | 2680 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 810 | 3.0 | FDD | IMD5 |
+|  | n78 | 3435 | 10 | 50 | 3435 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2675 | 30.8 | FDD | IMD2 |
+|  | n20 | 845 | 5 | 25 | 804 | N/A | FDD | N/A |
+|  | n78 | 3520 | 10 | 50 | 3520 | N/A | TDD | N/A |
+|  | n7 | 2540 | 5 | 25 | 2660 | N/A | FDD | N/A |
+|  | n20 | 835 | 5 | 25 | 794 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3375 | 29.7 | TDD | IMD22 |
+| CA_n7-n25-n29 | n7 | 2567.5 | 5 | 25 | 2687.5 | N/A | FDD | N/A |
+|  | n25 | 1852.5 | 5 | 25 | 1932.5 | N/A | FDD | N/A |
+|  | n29 | N/A | 5 | N/A | 719.5 | 26 | SDL | IMD2 |
+|  | n7 | 2503 | 5 | 25 | 2623 | N/A | FDD | N/A |
+|  | n25 | 1910 | 5 | 25 | 1990 | N/A | FDD | N/A |
+|  | n29 | N/A | 5 | N/A | 724 | 4.5 | SDL | IMD5 |
+| CA_n7-n25-n77 | n7 | N/A | 5 | N/A | 2640 | 5.3 | FDD | IMD5 |
+|  | n25 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n77 | 4125 | 10 | 50 | 4125 | N/A | TDD | N/A |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1950 | 8.6 | FDD | IMD4 |
+|  | n77 | 3525 | 10 | 50 | 3525 | N/A | TDD | N/A |
+|  | n7 | 2520 | 5 | 25 | 2640 | N/A | FDD | N/A |
+|  | n25 | 1905 | 5 | 25 | 1985 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3750 | 4.5 | TDD | IMD5 |
+| CA_n7-n25-n78 | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1950 | 8.6 | FDD | IMD4 |
+|  | n78 | 3525 | 10 | 50 | 3525 | N/A | TDD | N/A |
+|  | n7 | 2520 | 5 | 25 | 2640 | N/A | FDD | N/A |
+|  | n25 | 1905 | 5 | 25 | 1985 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3750 | 4.5 | TDD | IMD5 |
+| CA_n7-n26-n78 | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n26 | N/A | 5 | N/A | 879 | 30.2 | FDD | IMD2 |
+|  | n78 | 3429 | 10 | 50 | 3429 | N/A | TDD | N/A |
+|  | n7 | 2525 | 5 | 25 | 2645 | N/A | FDD | N/A |
+|  | n26 | N/A | 5 | N/A | 875 | 3.3 | FDD | IMD5 |
+|  | n78 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2645 | 30.1 | FDD | IMD2 |
+|  | n26 | 844 | 5 | 25 | 889 | N/A | FDD | N/A |
+|  | n78 | 3489 | 10 | 50 | 3489 | N/A | TDD | N/A |
+|  | n7 | 2540 | 5 | 25 | 2660 | N/A | FDD | N/A |
+|  | n26 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3375 | 29.7 | TDD | IMD2 |
+| CA_n7-n28-n40 | n7 | N/A | 5 | N/A | 2630 | 5.9 | FDD | IMD5 |
+|  | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+| CA_n7-n28-n78 | n7 | 2567.5 | 5 | 25 | 2687.5 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 782.5 | 28.8 | FDD | IMD2 |
+|  | n78 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n7 | 2567.5 | 5 | 25 | 2687.5 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 782.5 | 3.0 | FDD | IMD5 |
+|  | n78 | 3460 | 10 | 50 | 3460 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2650 | 30.5 | FDD | IMD2 |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | 3390 | 10 | 50 | 3390 | N/A | TDD | N/A |
+|  | n7 | 2565 | 5 | 25 | 2685 | N/A | FDD | N/A |
+|  | n28 | 745 | 5 | 25 | 800 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3310 | 29.7 | TDD | IMD22 |
+| CA_n7-n29-n66 | n7 | 2502.5 | 5 | 25 | 2622.5 | N/A | FDD | N/A |
+|  | n29 | N/A | 5 | N/A | 725 | 31 | SDL | IMD2 |
+|  | n66 | 1777.5 | 5 | 25 | 2197.5 | N/A | FDD | N/A |
+| CA_n7-n29-n77 | n7 | 2540 | 5 | 25 | 2660 | N/A | FDD | N/A |
+|  | n29 | N/A | 5 | N/A | 720 | 3.0 | SDL | IMD5 |
+|  | n77 | 3450 | 10 | 50 | 3450 | N/A | TDD | N/A |
+| CA_n7-n40-n78 | n7 | N/A | 5 | N/A | 2630 | 10.1 | FDD | IMD4 |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n78 | 3625 | 10 | 50 | 3625 | N/A | TDD | N/A |
+|  | n7 | 2510 | 5 | 25 | 2630 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2310 | 8.7 | TDD | IMD4 |
+|  | n78 | 3785 | 10 | 50 | 3785 | N/A | TDD | N/A |
+| CA_n7-n40-n79 | n7 | 2520 | 5 | 25 | 2640 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4830 | 30.5 | TDD | IMD22 |
+|  | n7 | 2530 | 5 | 25 | 2650 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2320 | 25 | TDD | IMD2 |
+|  | n79 | 4850 | 10 | 50 | 4850 | N/A | FDD | N/A |
+|  | n7 | 2510 | 5 | 25 | 2630 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2370 | 6 | TDD | IMD5 |
+|  | n79 | 4950 | 10 | 50 | 4950 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2630 | 29.4 | FDD | IMD2 |
+|  | n40 | 2320 | 10 | 50 | 2320 | N/A | TDD | N/A |
+|  | n79 | 4950 | 10 | 50 | 4950 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2650 | 3 | FDD | IMD5 |
+|  | n40 | 2350 | 10 | 50 | 2350 | N/A | TDD | N/A |
+|  | n79 | 4850 | 10 | 50 | 4850 | N/A | TDD | N/A |
+| CA_n7-n40-n105 | n7 | N/A | 5 | N/A | 2655 | 5.9 | FDD | IMD5 |
+|  | n40 | 2352 | 10 | 50 | 2352 | N/A | TDD | N/A |
+|  | n105 | 683 | 5 | 25 | 632 | N/A | FDD | N/A |
+| CA_n7-n46-n78 | n7 | 2530 | 5 | 25 | 2650 | N/A | FDD | N/A |
+|  | n46 | 5840 | 20 | 100 | 5840 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3310 | 29.7 | TDD | IMD21 |
+|  | n7 | 2530 | 5 | 25 | 2650 | N/A | FDD | N/A |
+|  | n46 | N/A | 20 | N/A | 5840 | 25.2 | TDD | IMD21 |
+|  | n78 | 3310 | 10 | 50 | 3310 | N/A | TDD | N/A |
+| CA_n7-n66-n77 | n7 | 2560 | 5 | 25 | 2680 | N/A | FDD | N/A |
+|  | n66 | 1730 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3390 | 16.1 | TDD | IMD31 |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2150 | 8.7 | FDD | IMD4 |
+|  | n77 | 3625 | 10 | 50 | 3625 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2640 | 3.4 | FDD | IMD5 |
+|  | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n77 | 3900 | 10 | 50 | 3900 | N/A | TDD | N/A |
+| CA_n7-n66-n78 | n7 | 2560 | 5 | 25 | 2680 | N/A | FDD | N/A |
+|  | n66 | 1730 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3390 | 16.1 | TDD | IMD3 |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2150 | 8.7 | FDD | IMD4 |
+|  | n78 | 3625 | 10 | 50 | 3625 | N/A | TDD | N/A |
+| CA_n7-n67-n78 | n7 | 2562 | 5 | 25 | 2682 | N/A | FDD | N/A |
+|  | n67 | N/A | 5 | N/A | 748 | 28.8 | SDL | IMD21 |
+|  | n78 | 3310 | 10 | 50 | 3310 | N/A | TDD | N/A |
+| CA_n7-n71-n77 | n7 | 2505 | 5 | 25 | 2625 | N/A | FDD | N/A |
+|  | n71 | 666 | 5 | 25 | 620 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3837 | 16.0 | TDD | IMD3 |
+|  | n7 | N/A | 5 | N/A | 2670 | 29.6 | FDD | IMD2 |
+|  | n71 | 680 | 5 | 25 | 634 | N/A | FDD | N/A |
+|  | n77 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+| CA_n7-n75-n78 | n7 | 2510 | 5 | 25 | 2630 | N/A | FDD | N/A |
+|  | n75 | N/A | 5 | N/A | 1470 | 16 | SDL | IMD3 |
+|  | n78 | 3550 | 10 | 50 | 3550 | N/A | TDD | N/A |
+|  | n7 | 2560 | 5 | 25 | 2680 | N/A | FDD | N/A |
+|  | n75 | N/A | 5 | N/A | 1500 | 10.5 | SDL | IMD4 |
+|  | n78 | 3310 | 10 | 50 | 3310 | N/A | TDD | N/A |
+| CA_n7-n78-n79 | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n78 | 3500 | 10 | 50 | 3500 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4450 | 20.6 | TDD | IMD31 |
+|  | n7 | 2567.5 | 5 | 25 | 2687.5 | N/A | FDD | N/A |
+|  | n78 | 3302.5 | 10 | 50 | 3302.5 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4400 | 14 | TDD | IMD4 |
+|  | n7 | 2525 | 5 | 25 | 2645 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3760 | 6.4 | TDD | IMD4 |
+|  | n79 | 4405 | 10 | 50 | 4405 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 1860 | 19 | FDD | IMD3 |
+|  | n78 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+|  | n79 | 4780 | 10 | 50 | 4780 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2660 | 8 | FDD | IMD4 |
+|  | n78 | 3500 | 10 | 50 | 3500 | N/A | TDD | N/A |
+|  | n79 | 4830 | 10 | 50 | 4830 | N/A | TDD | N/A |
+| CA_n7-n78-n102 | n7 | 2560 | 5 | 25 | 2680 | N/A | FDD | N/A |
+|  | n78 | 3420 | 5 | 25 | 3420 | N/A | TDD | N/A |
+|  | n102 | N/A | 40 | N/A | 5980 | N/A12 | TDD | IMD21 |
+|  | n7 | 2560 | 5 | 25 | 2680 | N/A | FDD | N/A |
+|  | n78 | N/A | 5 | N/A | 3420 | 29.6 | TDD | IMD21 |
+|  | n102 | 5980 | 40 | 216 | 5980 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2680 | 29.6 | FDD | IMD21 |
+|  | n78 | 3320 | 5 | 25 | 3320 | N/A | TDD | N/A |
+|  | n102 | 6000 | 40 | 216 | 6000 | N/A | TDD | N/A |
+| CA_n7-n78-n105 | n7 | 2555 | 5 | 25 | 2675 | N/A | FDD | N/A |
+|  | n78 | 3520 | 10 | 50 | 3520 | N/A | TDD | N/A |
+|  | n105 | N/A | 5 | N/A | 625 | 3.9 | FDD | IMD5 |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3714 | 9.7 | TDD | IMD4 |
+|  | n105 | 693 | 5 | 25 | 642 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2625 | 28.7 | FDD | IMD2 |
+|  | n78 | 3308 | 10 | 50 | 3308 | N/A | TDD | N/A |
+|  | n105 | 683 | 5 | 25 | 632 | N/A | FDD | N/A |
+| CA_n8-n20-n28 | n8 | N/A | 5 | 25 | 951.5 | 24.3 | FDD | IMD3 |
+|  | n20 | 834.5 | 5 | 25 | 793.5 | N/A | FDD | N/A |
+|  | n28 | 717.5 | 5 | 25 | 772.5 | N/A | FDD | N/A |
+|  | n8 | 887.5 | 5 | 25 | 932.5 | N/A | FDD | N/A |
+|  | n20 | 834.5 | 5 | 25 | 793.5 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | 25 | 781.5 | 24 | FDD | IMD3 |
+| CA_n8-n28-n40 | n8 | N/A | 5 | N/A | 928 | 17.0 | FDD | IMD3 |
+|  | n28 | 706 | 5 | 25 | 761 | N/A | FDD | N/A |
+|  | n40 | 2340 | 10 | 50 | 2340 | N/A | TDD | N/A |
+|  | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n28 | 706 | 5 | 25 | 761 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2322 | 18.8 | TDD | IMD3 |
+| CA_n8-n28-n77 | n8 | N/A | 5 | N/A | 928 | 3.8 | FDD | IMD5 |
+|  | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n77 | 3900 | 10 | 50 | 3900 | N/A | TDD | N/A |
+|  | n8 | 883 | 5 | 25 | 928 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 761 | 11.6 | FDD | IMD4 |
+|  | n77 | 3410 | 10 | 50 | 3410 | N/A | TDD | N/A |
+|  | n8 | 883 | 5 | 25 | 928 | N/A | FDD | N/A |
+|  | n28 | 745 | 5 | 25 | 800 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3394 | 10.3 | TDD | IMD4 |
+|  | n8 | 883 | 5 | 25 | 928 | N/A | FDD | N/A |
+|  | n28 | 745 | 5 | 25 | 800 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3863 | 4.0 | TDD | IMD5 |
+| CA_n8-n39-n40 | n8 | N/A | 5 | N/A | 940 | 8.6 | FDD | IMD4 |
+|  | n39 | 1920 | 5 | 25 | 1920 | N/A | TDD | N/A |
+|  | n40 | 2370 | 10 | 50 | 2370 | N/A | TDD | N/A |
+|  | n8 | N/A | 5 | N/A | 950 | 4.3 | FDD | IMD5 |
+|  | n39 | 1910 | 5 | 25 | 1910 | N/A | TDD | N/A |
+|  | n40 | 2390 | 10 | 50 | 2390 | N/A | TDD | N/A |
+|  | n8 | 905 | 5 | 25 | 950 | N/A | FDD | N/A |
+|  | n39 | N/A | 5 | N/A | 1905 | 3.5 | TDD | IMD5 |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+| CA_n8-n39-n79 | n8 | 900 | 5 | 25 | 945 | N/A | FDD | N/A |
+|  | n39 | 1890 | 10 | 50 | 1890 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4680 | 15.9 | TDD | IMD3 |
+|  | n8 | 890 | 5 | 25 | 935 | N/A | FDD | N/A |
+|  | n39 | 1890 | 10 | 50 | 1890 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4560 | 12.1 | TDD | IMD4 |
+|  | n8 | 897.5 | 5 | 25 | 942.5 | N/A | FDD | N/A |
+|  | n39 | N/A | 10 | N/A | 1907.5 | 13.8 | TDD | IMD4 |
+|  | n79 | 4600 | 40 | 216 | 4600 | N/A | TDD | N/A |
+|  | n8 | N/A | 5 | N/A | 940 | 15.1 | FDD | IMD3 |
+|  | n39 | 1900 | 10 | 50 | 1900 | N/A | TDD | N/A |
+|  | n79 | 4740 | 40 | 216 | 4740 | N/A | TDD | N/A |
+|  | n8 | N/A | 5 | N/A | 940 | 7.1 | FDD | IMD4 |
+|  | n39 | 1900 | 10 | 50 | 1900 | N/A | TDD | N/A |
+|  | n79 | 4750 | 40 | 216 | 4750 | N/A | TDD | N/A |
+| CA_n8-n40-n41 | n8 | 895 | 5 | 25 | 940 | N/A | FDD | N/A |
+|  | n40 | 2355 | 10 | 50 | 2355 | 4.9 | TDD | IMD5 |
+|  | n41 | N/A | 10 | N/A | 2520 | N/A | TDD | N/A |
+| CA_n8-n40-n77 | n8 | N/A | 5 | N/A | 950 | 30.5 | FDD | IMD21 |
+|  | n40 | 2380 | 10 | 50 | 2380 | N/A | TDD | N/A |
+|  | n77 | 3330 | 10 | 50 | 3330 | N/A | TDD | N/A |
+|  | n8 | N/A | 5 | N/A | 935 | 19.8 | FDD | IMD31 |
+|  | n40 | 2320 | 10 | 50 | 2320 | N/A | TDD | N/A |
+|  | n77 | 3705 | 10 | 50 | 3705 | N/A | TDD | N/A |
+|  | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2395 | 28 | TDD | IMD2 |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2330 | 13.2 | TDD | IMD3 |
+|  | n77 | 4150 | 10 | 50 | 4150 | N/A | TDD | N/A |
+|  | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n40 | 2395 | 10 | 50 | 2395 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3305 | 28.8 | TDD | IMD2 |
+|  | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4130 | 16.1 | TDD | IMD3 |
+| CA_n8-n40-n78 | n8 | N/A | 5 | N/A | 950 | 30.5 | FDD | IMD2 |
+|  | n40 | 2380 | 10 | 50 | 2380 | N/A | TDD | N/A |
+|  | n78 | 3330 | 10 | 50 | 3330 | N/A | TDD | N/A |
+|  | n8 | N/A | 5 | N/A | 935 | 19.8 | FDD | IMD3 |
+|  | n40 | 2320 | 10 | 50 | 2320 | N/A | TDD | N/A |
+|  | n78 | 3705 | 10 | 50 | 3705 | N/A | TDD | N/A |
+|  | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2395 | 28 | TDD | IMD2 |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n40 | 2395 | 10 | 50 | 2395 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3305 | 28.8 | TDD | IMD24 |
+|  | n8 | 890 | 5 | 25 | 935 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3730 | 16.8 | TDD | IMD3 |
+| CA_n8-n40-n79 | n8 | 885 | 5 | 25 | 930 | N/A | FDD | N/A |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4960 | 10.7 | TDD | IMD4 |
+|  | n8 | 885 | 5 | 25 | 930 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2305 | 9.2 | TDD | IMD4 |
+|  | n79 | 4960 | 40 | 216 | 4960 | N/A | TDD | N/A |
+| CA_n8-n41-n78 | n8 | N/A | 10 | N/A | 950 | 29.1 | FDD | IMD2 |
+|  | n41 | 2630 | 10 | 50 | N/A | N/A | TDD | N/A |
+|  | n78 | 3580 | 10 | 50 | N/A | N/A | TDD | N/A |
+|  | n8 | N/A | 10 | N/A | 940 | 4.0 | FDD | IMD5 |
+|  | n41 | 2680 | 10 | 50 | N/A | N/A | TDD | N/A |
+|  | n78 | 3550 | 10 | 50 | N/A | N/A | TDD | N/A |
+|  | n8 | 895 | 5 | 25 | 940 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2650 | 28.0 | TDD | IMD2 |
+|  | n78 | 3545 | 10 | 50 | N/A | N/A | TDD | N/A |
+|  | n8 | 900 | 5 | 25 | 945 | N/A | FDD | N/A |
+|  | n41 | 2555 | 10 | 50 | N/A | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3455 | 28.5 | TDD | IMD22 |
+| CA_n8-n41-n79 | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n41 | 2650 | 10 | 50 | 2650 | N/A | TDD | N/A |
+|  | n79 | 4470 | 10 | 50 | 4470 | 16.3 | TDD | IMD3 |
+|  | n8 | 910 | 5 | 25 | 955 | N/A | FDD | N/A |
+|  | n41 | 2650 | 10 | 50 | 2650 | 15.5 | TDD | IMD3 |
+|  | n79 | 4470 | 10 | 50 | 4470 | N/A | TDD | N/A |
+|  | n8 | 895 | 5 | 25 | 940 | 11.8 | FDD | IMD31 |
+|  | n41 | 2680 | 10 | 50 | 2680 | N/A | TDD | N/A |
+|  | n79 | 4420 | 10 | 50 | 4420 | N/A | TDD | N/A |
+| CA_n8-n78-n79 | n8 | 900 | 5 | 25 | 945 | N/A | FDD | N/A |
+|  | n78 | 3700 | 10 | 50 | 3700 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4600 | 25 | TDD | IMD22 |
+|  | n8 | 900 | 5 | 25 | 945 | N/A | FDD | N/A |
+|  | n78 | 3700 | 10 | 50 | 3700 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4700 | 2 | TDD | IMD5 |
+|  | n8 | 827 | 5 | 25 | 872 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3593 | 25 | TDD | IMD2 |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n8 | N/A | 5 | N/A | 930 | 20.3 | FDD | IMD2 |
+|  | n78 | 3600 | 10 | 50 | 3600 | N/A | TDD | N/A |
+|  | n79 | 4530 | 40 | 216 | 4530 | N/A | TDD | N/A |
+|  | n8 | N/A | 5 | N/A | 940 | 3 | FDD | IMD5 |
+|  | n78 | 3600 | 10 | 50 | 3600 | N/A | TDD | N/A |
+|  | n79 | 4930 | 40 | 216 | 4930 | N/A | TDD | N/A |
+| CA_n12-n30-n77 | n12 | N/A | 5 | N/A | 740 | 15.2 | FDD | IMD31 |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | 3880 | 10 | 50 | 3880 | N/A | TDD | N/A |
+|  | n12 | 707.5 | 5 | 25 | 737.5 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2355 | 13.2 | FDD | IMD3 |
+|  | n77 | 3770 | 10 | 50 | 3770 | N/A | TDD | N/A |
+|  | n12 | 707 | 5 | 25 | 737 | N/A | FDD | N/A |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3913 | 16.0 | TDD | IMD3 |
+| CA_n12-n66-n77 | n12 | N/A | 5 | N/A | 740 | 15.2 | FDD | IMD35 |
+|  | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n77 | 4180 | 10 | 50 | 4180 | N/A | TDD | N/A |
+|  | n12 | 707 | 5 | 25 | 737 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2126 | 13.2 | FDD | IMD3 |
+|  | n77 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+|  | n12 | 704 | 5 | 25 | 734 | N/A | FDD | N/A |
+|  | n66 | 1723 | 5 | 25 | 2123 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4150 | 16.0 | TDD | IMD31,2,5 |
+| CA_n12-n71-n77 | n12 | N/A | 5 | N/A | 732 | 4.4 | FDD | IMD5 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | 3504 | 10 | 50 | 3504 | N/A | TDD | N/A |
+|  | n12 | 711 | 5 | 25 | 741 | N/A | FDD | N/A |
+|  | n71 | N/A | 5 | N/A | 646 | 3.9 | FDD | IMD5 |
+|  | n77 | 3490 | 10 | 50 | 3490 | N/A | TDD | N/A |
+| CA_n13-n25-n66 | n13 | 782 | 5 | 25 | 751 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2156 | 7.2 | FDD | IMD4 |
+|  | n25 | 1860 | 5 | 25 | 1940 | N/A | FDD | N/A |
+|  | n13 | 780 | 10 | 50 | 749 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1940 | 6.2 | FDD | IMD4 |
+|  | n66 | 1750 | 5 | 25 | 2150 | N/A | FDD | N/A |
+| CA_n13-n25-n77 | n13 | 782 | 5 | 25 | 751 | N/A | FDD | N/A |
+|  | n25 | 1896 | 5 | 25 | 1976 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3460 | 17.3 | TDD | IMD31,2 |
+|  | n13 | 782 | 5 | 25 | 751 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 16.0 | FDD | IMD3 |
+|  | n77 | 3524 | 10 | 50 | 3524 | N/A | TDD | N/A |
+| CA_n13-n66-n77 | n13 | 782 | 5 | 25 | 751 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2146 | 17.1 | FDD | IMD3 |
+|  | n77 | 3710 | 10 | 50 | 3710 | N/A | TDD | N/A |
+|  | n13 | N/A | 5 | N/A | 750 | 15.2 | FDD | IMD35 |
+|  | n66 | 1710 | 5 | 25 | 2110 | N/A | FDD | N/A |
+|  | n77 | 4170 | 10 | 50 | 4170 | N/A | TDD | N/A |
+|  | n13 | 782 | 5 | 25 | 751 | N/A | FDD | N/A |
+|  | n66 | 1770 | 5 | 25 | 2170 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3334 | 16.3 | TDD | IMD31,2,5 |
+| CA_n14-n30-n77 | n14 | N/A | 5 | N/A | 763 | 15.2 | FDD | IMD31 |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | 3857 | 10 | 50 | 3857 | N/A | TDD | N/A |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2355 | 13.2 | FDD | IMD3 |
+|  | n77 | 3941 | 10 | 50 | 3941 | N/A | TDD | N/A |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3896 | 16.0 | TDD | IMD3 |
+| CA_n14-n66-n77 | n14 | N/A | 5 | N/A | 763 | 15.2 | FDD | IMD35 |
+|  | n66 | 1712.5 | 5 | 25 | 2112.5 | N/A | FDD | N/A |
+|  | n77 | 4188 | 10 | 50 | 4188 | N/A | TDD | N/A |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2155 | 13.2 | FDD | IMD3 |
+|  | n77 | 3741 | 10 | 50 | 3741 | N/A | TDD | N/A |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n66 | 1755 | 5 | 25 | 2155 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3341 | 16.0 | TDD | IMD31,2,5 |
+| CA_n18-n28-n41 | n18 | 825 | 5 | 25 | 870 | N/A | FDD | N/A |
+|  | n28 | 738 | 5 | 25 | 793 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2562 | 4.4 | TDD | IMD5 |
+|  | n18 | 825 | 5 | 25 | 870 | N/A | FDD | N/A |
+|  | n41 | 2505 | 10 | 50 | 2505 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 795 | 3.9 | FDD | IMD5 |
+| CA_n18-n28-n77 | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n28 | 710 | 5 | 25 | 765 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3770 | 4.0 | TDD | IMD5 |
+|  | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 778 | 4.4 | FDD | IMD5 |
+|  | n77 | 4058 | 10 | 50 | 4058 | N/A | TDD | N/A |
+|  | n18 | N/A | 5 | N/A | 865 | 3.9 | FDD | IMD5 |
+|  | n28 | 723 | 5 | 25 | 778 | N/A | FDD | N/A |
+|  | n77 | 3757 | 10 | 50 | 3757 | N/A | TDD | N/A |
+| CA_n18-n40-n77 | n18 | 817.5 | 5 | 25 | 862.5 | N/A | FDD | N/A |
+|  | n40 | 2350 | 5 | 25 | 2350 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3882.5 | 16.1 | TDD | IMD3 |
+|  | n18 | 817.5 | 5 | 25 | 862.5 | N/A | FDD | N/A |
+|  | n40 | N/A | 5 | N/A | 2367.5 | 13.2 | TDD | IMD3 |
+|  | n77 | 4002.5 | 10 | 50 | 4002.5 | N/A | TDD | N/A |
+|  | n18 | N/A | 5 | N/A | 862.5 | 15.2 | FDD | IMD31 |
+|  | n40 | 2302.5 | 5 | 25 | 2302.5 | N/A | TDD | N/A |
+|  | n77 | 3742.5 | 10 | 50 | 3742.5 | N/A | TDD | N/A |
+| CA_n18-n41-n77 | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n41 | 2630 | 10 | 50 | 2630 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3450 | 28.6 | TDD | IMD22,4 |
+|  | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2630 | 26.5 | TDD | IMD24 |
+|  | n77 | 3450 | 10 | 50 | 3450 | N/A | TDD | N/A |
+|  | n18 | N/A | 5 | N/A | 870 | 29.3 | FDD | IMD21,4 |
+|  | n41 | 2590 | 10 | 50 | 2590 | N/A | TDD | N/A |
+|  | n77 | 3460 | 10 | 50 | 3460 | N/A | TDD | N/A |
+| CA_n20-n28-n78 | n20 | N/A | 5 | N/A | 808 | 3.8 | FDD | IMD5 |
+|  | n28 | 705.5 | 5 | 25 | 760.5 | N/A | FDD | N/A |
+|  | n78 | 3630 | 10 | 50 | 3630 | N/A | TDD | N/A |
+|  | n20 | 859.5 | 5 | 25 | 818.5 | N/A | FDD | N/A |
+|  | n28 | 710 | 5 | 25 | 765 | 11.6 | FDD | IMD4 |
+|  | n78 | 3343.5 | 10 | N/A | 3343.5 | N/A | TDD | N/A |
+|  | n20 | 859.5 | 5 | 25 | 818.5 | N/A | FDD | N/A |
+|  | n28 | 733.5 | 5 | 25 | 788.5 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3312 | 10.3 | TDD | IMD4 |
+|  | n20 | 840 | 5 | 25 | 799 | N/A | FDD | N/A |
+|  | n28 | 710 | 5 | 25 | 765 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3680 | 4.0 | TDD | IMD5 |
+| CA_n20-n41-n71 | n20 | 834 | 5 | 25 | 793 | N/A | FDD | N/A |
+|  | n41 | 2686 | 10 | 25 | 2686 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 650 | 5.9 | FDD | IMD5 |
+|  | n20 | 835 | 5 | 25 | 794 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2660 | 6.5 | TDD | IMD5 |
+|  | n71 | 680 | 5 | 25 | 634 | N/A | FDD | N/A |
+| CA_n20-n41-n77 | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n41 | 2593 | 10 | 50 | 2593 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3440 | 28.2 | TDD | IMD22 |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n41 | 2506 | 10 | 50 | 2506 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4165 | 14.6 | TDD | IMD3 |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2593 | 28.1 | TDD | IMD2 |
+|  | n77 | 3440 | 10 | 50 | 3440 | N/A | TDD | N/A |
+|  | n20 | 837 | 5 | 25 | 796 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2516 | 11.2 | TDD | IMD3 |
+|  | n77 | 4190 | 10 | 50 | 4190 | N/A | TDD | N/A |
+|  | n20 | N/A | 5 | N/A | 806 | 28.7 | FDD | IMD2 |
+|  | n41 | 2594 | 10 | 50 | 2594 | N/A | TDD | N/A |
+|  | n77 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n20 | N/A | 5 | N/A | 817 | 13.7 | FDD | IMD3 |
+|  | n41 | 2501 | 10 | 50 | 2501 | N/A | TDD | N/A |
+|  | n77 | 4185 | 10 | 50 | 4185 | N/A | TDD | N/A |
+| CA_n20-n41-n78 | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n41 | 2593 | 10 | 50 | 2593 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3440 | 28.8 | TDD | IMD22 |
+|  | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2593 | 29.8 | TDD | IMD2 |
+|  | n78 | 3440 | 10 | 50 | 3440 | N/A | TDD | N/A |
+|  | n20 | N/A | 5 | N/A | 806 | 30.8 | FDD | IMD2 |
+|  | n41 | 2593 | 10 | 50 | 2593 | N/A | TDD | N/A |
+|  | n78 | 3399 | 10 | 50 | 3399 | N/A | TDD | N/A |
+|  | n20 | N/A | 5 | N/A | 806 | 3.3 | FDD | IMD5 |
+|  | n41 | 2635 | 10 | 50 | 2635 | N/A | TDD | N/A |
+|  | n78 | 3549.5 | 10 | 50 | 3549.5 | N/A | TDD | N/A |
+| CA_n20-n67-n78 | n20 | 855 | 5 | 25 | 814 | N/A | FDD | N/A |
+|  | n67 | N/A | 5 | N/A | 755 | 11.6 | FDD | IMD4 |
+|  | n78 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+| CA_n20-n71-n78 | n20 | 847 | 5 | 25 | 806 | N/A | FDD | N/A |
+|  | n71 | 680 | 5 | 25 | 634 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3567 | 4 | TDD | IMD5 |
+|  | n20 | N/A | 5 | N/A | 808 | 3.8 | FDD | IMD5 |
+|  | n71 | 680 | 5 | 25 | 634 | N/A | FDD | N/A |
+|  | n78 | 3528 | 10 | 50 | 3528 | N/A | TDD | N/A |
+| CA_n24-n41-n48 | n24 | 1649 | 5 | 25 | 1528.5 | N/A | FDD | N/A |
+|  | n41 | 2610 | 10 | 50 | 2610 | N/A | TDD | N/A |
+|  | n48 | N/A | 10 | N/A | 3571 | 15.3 | TDD | IMD3 |
+|  | n24 | 1630 | 5 | 25 | 1528.5 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2501 | 4.3 | TDD | IMD5 |
+|  | n48 | 3695 | 10 | 50 | 3695 | N/A | TDD | N/A |
+|  | n24 | N/A | 5 | N/A | 1530 | 14.9 | FDD | IMD3 |
+|  | n41 | 2592.5 | 10 | 50 | 2592.5 | N/A | TDD | N/A |
+|  | n48 | 3655 | 10 | 50 | 3655 | N/A | TDD | N/A |
+| CA_n24-n41-n77 | n24 | 1630 | 5 | 25 | 1528.5 | N/A | FDD | N/A |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3740 | 15.3 | TDD | IMD31,5 |
+|  | n24 | 1630 | 5 | 25 | 1528.5 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2620 | 4.3 | TDD | IMD55 |
+|  | n77 | 3755 | 10 | 50 | 3755 | N/A | TDD | N/A |
+|  | n24 | N/A | 5 | N/A | 1528.5 | 14.9 | FDD | IMD32,5 |
+|  | n41 | 2501 | 10 | 50 | 2501 | N/A | TDD | N/A |
+|  | n77 | 3473.5 | 10 | 50 | 3473.5 | N/A | TDD | N/A |
+| CA_n25-n38-n78 | n25 | N/A | 5 | N/A | 1932.5 | 16.4 | FDD | IMD3 |
+|  | n38 | 2617.5 | 5 | 25 | 2617.5 | N/A | TDD | N/A |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n25 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n38 | 2610 | 5 | 25 | 2610 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3350 | 14.8 | TDD | IMD3 |
+|  | n25 | N/A | 5 | N/A | 1960 | 8.6 | TDD | IMD4 |
+|  | n38 | 2570 | 5 | 25 | 2570 | N/A | FDD | N/A |
+|  | n78 | 3550 | 10 | 50 | 3550 | N/A | TDD | N/A |
+| CA_n25-n41-n66 | n25 | N/A | 5 | N/A | 1940 | 11.0 | FDD | IMD4 |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+|  | n66 | 1715 | 5 | 25 | 2115 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | 25 | 1950 | 15.3 | FDD | IMD3 |
+|  | n41 | 2546 | 100 | 1 (RBstart=24) | 2546 | N/A | TDD | N/A |
+|  |  | 2641 | 90 | 1 (RBstart=232) | 2641 |  |  |  |
+|  | n66 | 1775 | 5 | 25 | 2175 | N/A | FDD | N/A |
+|  | n25 | 1912.5 | 5 | 25 | 1992.5 | N/A | FDD | N/A |
+|  | n41 | 2546 | 100 | 1 (RBstart=260) | 2546 | N/A | TDD | N/A |
+|  |  | 2641 | 90 | 1 (RBstart=121) | 2641 |  |  |  |
+|  | n66 | N/A | 5 | 25 | 1962.5 | 15.3 | FDD | IMD3 |
+| CA_n25-n41-n71 | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n41 | 2532 | 10 | 50 | 2532 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 632 | 28.7 | FDD | IMD2 |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n41 | 2534 | 10 | 50 | 2534 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 632 | 4.3 | FDD | IMD5 |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2578 | 30.0 | TDD | IMD22 |
+|  | n71 | 678 | 5 | 25 | 632 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1980 | 26.0 | FDD | IMD2 |
+|  | n41 | 2658 | 10 | 50 | 2658 | N/A | TDD | N/A |
+|  | n71 | 678 | 5 | 50 | 632 | N/A | FDD | N/A |
+| CA_n25-n41-n77 | n25 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n41 | 2670 | 10 | 50 | 2670 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3470 | 13.3 | TDD | IMD31 |
+|  | n25 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2640 | 4.3 | TDD | IMD55 |
+|  | n77 | 4125 | 10 | 50 | 4125 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1950 | 16.1 | FDD | IMD35 |
+|  | n41 | 2675 | 10 | 50 | 2675 | N/A | TDD | N/A |
+|  | n77 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1950 | 7.6 | FDD | IMD4 |
+|  | n41 | 2550 | 10 | 50 | 2550 | N/A | TDD | N/A |
+|  | n77 | 3525 | 10 | 50 | 3525 | N/A | TDD | N/A |
+| CA_n25-n41-n78 | n25 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n41 | 2670 | 10 | 50 | 2670 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3470 | 13.3 | TDD | IMD31 |
+|  | n25 | N/A | 5 | N/A | 1950 | 16.1 | FDD | IMD3 |
+|  | n41 | 2675 | 10 | 50 | 2675 | N/A | TDD | N/A |
+|  | n78 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1950 | 7.6 | FDD | IMD4 |
+|  | n41 | 2550 | 10 | 50 | 2550 | N/A | TDD | N/A |
+|  | n78 | 3525 | 10 | 50 | 3525 | N/A | TDD | N/A |
+| CA_n25-n41-n85 | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n41 | 2638 | 10 | 50 | 2638 | N/A | TDD | N/A |
+|  | n85 | N/A | 5 | N/A | 738 | 28.7 | FDD | IMD24 |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2608 | 26.7 | TDD | IMD2 |
+|  | n85 | 708 | 5 | 25 | 738 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1952 | 26 | FDD | IMD2 |
+|  | n41 | 2660 | 10 | 50 | 2660 | N/A | TDD | N/A |
+|  | n85 | 708 | 5 | 50 | 738 | N/A | FDD | N/A |
+| CA_n25-n48-n66 | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n48 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2160 | 10.4 | FDD | IMD4 |
+|  | n25 | 1880 | 5 | 25 | 1960 | N/A | FDD | N/A |
+|  | n48 | N/A | 10 | N/A | 3620 | 29.4 | TDD | IMD2 |
+|  | n66 | 1740 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 32.1 | FDD | IMD21 |
+|  | n48 | 3700 | 10 | 50 | 3700 | N/A | TDD | N/A |
+|  | n66 | 1740 | 5 | 25 | 2140 | N/A | FDD | N/A |
+| CA_n25-n66-n77 | n25 | 1855 | 5 | 25 | 1935 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2115 | 29.2 | FDD | IMD22 |
+|  | n77 | 3970 | 10 | 50 | 3970 | N/A | TDD | N/A |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2160 | 4.0 | FDD | IMD5 |
+|  | n77 | 3930 | 10 | 50 | 3930 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 32.1 | FDD | IMD2 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 9.1 | FDD | IMD45 |
+|  | n66 | 1770 | 5 | 25 | 2170 | N/A | FDD | N/A |
+|  | n77 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 2.1 | FDD | IMD55 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3620 | 10 | 50 | 3620 | N/A | TDD | N/A |
+|  | n25 | 1880 | 5 | 25 | 1960 | N/A | FDD | N/A |
+|  | n66 | 1740 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3620 | 29.4 | TDD | IMD22,5 |
+| CA_n25-n66-n78 | n25 | 1880 | 5 | 25 | 1960 | N/A | FDD | N/A |
+|  | n66 | 1740 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3620 | 29.4 | TDD | IMD2 |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2150 | 10.4 | FDD | IMD4 |
+|  | n78 | 3550 | 10 | 50 | 3550 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 32.1 | FDD | IMD21,2 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n78 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+| CA_n25-n66-n85 | n25 | N/A | 5 | N/A | 1992.5 | 11.0 | FDD | IMD4 |
+|  | n66 | 1712.5 | 5 | 25 | 2112.5 | N/A | FDD | N/A |
+|  | n85 | 713.5 | 5 | 25 | 743.5 | N/A | FDD | N/A |
+| CA_n25-n71-n77 | n25 | 1907.5 | 5 | 25 | 1987.5 | N/A | FDD | N/A |
+|  | n71 | 695.5 | 5 | 25 | 649.5 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3305 | 8.0 | TDD | IMD31,2,5 |
+|  | n25 | N/A | 5 | N/A | 1954 | 16.5 | FDD | IMD32,5 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | 3340 | 10 | 50 | 3340 | N/A | TDD | N/A |
+| CA_n25-n71-n78 | n25 | 1907.5 | 5 | 25 | 1987.5 | N/A | FDD | N/A |
+|  | n71 | 695.5 | 5 | 25 | 649.5 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3305 | 8.0 | TDD | IMD3 |
+|  | n25 | N/A | 5 | N/A | 1954 | 16.5 | FDD | IMD3 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n78 | 3340 | 10 | 50 | 3340 | N/A | TDD | N/A |
+| CA_n25-n71-n85 | n25 | 1912.5 | 5 | 25 | 1992,5 | N/A | FDD | N/A |
+|  | n71 | 665.5 | 5 | 25 | 619.5 | N/A | FDD | N/A |
+|  | n85 | N/A | 5 | 25 | 743.5 | 4.2 | FDD | IMD5 |
+| CA_n25-n77-n85 | n25 | N/A | 5 | N/A | 1960 | 16.5 | FDD | IMD32 |
+|  | n77 | 3375 | 10 | 50 | 3375 | N/A | TDD | N/A |
+|  | n85 | 707.5 | 5 | 25 | 737.5 | N/A | FDD | N/A |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3315 | 16.0 | TDD | IMD31,2 |
+|  | n85 | 707.5 | 5 | 25 | 737.5 | N/A | FDD | N/A |
+| CA_n26-n29-n66 | n26 | 830 | 5 | 25 | 875 | N/A | FDD | N/A |
+|  | n29 | N/A | 5 | N/A | 720 | 9.4 | SDL | IMD4 |
+|  | n66 | 1770 | 5 | 25 | 2170 | N/A | FDD | N/A |
+| CA_n26-n48-n66 | n26 | 829 | 5 | 25 | 874 | N/A | FDD | N/A |
+|  | n48 | N/A | 10 | N/A | 3622 | 3.6 | TDD | IMD5 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+| CA_n26-n48-n70 | n26 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n48 | 3653 | 10 | 50 | 3653 | N/A | TDD | N/A |
+|  | n70 | N/A | 5 | N/A | 2000 | 13.2 | FDD | IMD3 |
+| CA_n26-n66-n71 | n26 | N/A | 5 | N/A | 892 | 4.2 | FDD | IMD5 |
+|  | n66 | 1770 | 5 | 25 | 2170 | N/A | FDD | N/A |
+|  | n71 | 665.5 | 5 | 25 | 619.5 | N/A | FDD | N/A |
+| CA_n26-n66-n77 | n26 | 845 | 5 | 25 | 890 | N/A | FDD | N/A |
+|  | n66 | 1775 | 5 | 25 | 2175 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3465 | 16.1 | TDD | IMD31 |
+|  | n26 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n66 | 1712.5 | 5 | 25 | 2112.5 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4192 | 8.2 | TDD | IMD4 |
+|  | n26 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2142 | 13.2 | FDD | IMD3 |
+|  | n77 | 3795 | 10 | 50 | 3795 | N/A | TDD | N/A |
+| CA_n26-n70-n77 | n26 | 845 | 5 | 25 | 890 | N/A | FDD | N/A |
+|  | n70 | 1700 | 5 | 25 | 2000 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3390 | 16.1 | TDD | IMD35 |
+|  | n26 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n70 | 1700 | 5 | 25 | 2000 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4179.5 | 8.2 | TDD | IMD45 |
+|  | n26 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n70 | 1700 | 5 | 25 | 2000 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3430 | 3.3 | TDD | IMD55 |
+|  | n26 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n70 | N/A | 5 | N/A | 2000 | 13.2 | FDD | IMD35 |
+|  | n77 | 3653 | 10 | 50 | 3653 | N/A | TDD | N/A |
+| CA_n28-n39-n40 | n28 | N/A | 5 | N/A | 790 | 8.6 | FDD | IMD4 |
+|  | n39 | 1915 | 5 | 25 | 1915 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | FDD | N/A |
+| CA_n28-n39-n41 | n28 | N/A | 5 | N/A | 762 | 29.3 | FDD | IMD2 |
+|  | n39 | 1923 | 5 | 25 | 1923 | N/A | TDD | N/A |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+| CA_n28-n39-n79 | n28 | 715 | 5 | 25 | 770 | N/A | FDD | N/A |
+|  | n39 | 1902.5 | 5 | 25 | 1902.5 | N/A | TDD | N/A |
+|  | n79 | 4520 | 40 | 216 | 4520 | 6.7 | TDD | IMD3 |
+|  | n28 | 727.5 | 5 | 25 | 782.5 | N/A | FDD | N/A |
+|  | n39 | 1902.5 | 5 | 25 | 1902.5 | N/A | TDD | N/A |
+|  | n79 | 4980 | 40 | 216 | 4980 | 4.0 | TDD | IMD41 |
+|  | n28 | 715.5 | 5 | 25 | 770.5 | N/A | FDD | N/A |
+|  | n39 | 1898 | 5 | 25 | 1898 | 5.7 | TDD | IMD5 |
+|  | n79 | 4760 | 40 | 216 | 4760 | N/A | TDD | N/A |
+|  | n28 | 730 | 5 | 25 | 785 | 15.6 | FDD | IMD3 |
+|  | n39 | 1887.5 | 5 | 25 | 1887.5 | N/A | TDD | N/A |
+|  | n79 | 4560 | 40 | 216 | 4560 | N/A | TDD | N/A |
+|  | n28 | 725 | 5 | 25 | 780 | 8.5 | FDD | IMD4 |
+|  | n39 | 1900 | 5 | 25 | 1900 | N/A | TDD | N/A |
+|  | n79 | 4920 | 40 | 216 | 4920 | N/A | TDD | N/A |
+| CA_n28-n40-n41 | n28 | N/A | 5 | N/A | 760 | 7.6 | FDD | IMD4 |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | TDD | N/A |
+|  | n40 | 2380 | 10 | 50 | 2380 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2540 | 11.4 | TDD | IMD5 |
+| CA_n28-n40-n71 | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n40 | 2350 | 10 | 50 | 2350 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 622 | 3.9 | FDD | IMD5 |
+| CA_n28-n40-n77 | n28 | N/A | 5 | N/A | 800.5 | 11 | FDD | IMD31 |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n77 | 3795 | 10 | 50 | 3795 | N/A | TDD | N/A |
+|  | n28 | 708 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3726 | 26.7 | TDD | IMD32 |
+|  | n28 | 708 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2390 | 12.3 | TDD | IMD3 |
+|  | n77 | 3806 | 10 | 50 | 3806 | N/A | TDD | N/A |
+| CA_n28-n40-n78 | n28 | N/A | 5 | N/A | 800.5 | 11 | FDD | IMD3 |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n78 | 3795 | 10 | 50 | 3795 | N/A | N/A | N/A |
+|  | n28 | 708 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3726 | 26.7 | TDD | IMD32 |
+|  | n28 | 708 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2379 | 12.3 | TDD | IMD3 |
+|  | n78 | 3795 | 10 | 50 | 3795 | N/A | TDD | N/A |
+| CA_n28-n40-n79 | n28 | 730 | 5 | 25 | 785 | N/A | FDD | N/A |
+|  | n40 | 2350 | 10 | 50 | 2350 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4540 | 10.7 | TDD | IMD4 |
+|  | n28 | 720 | 5 | 25 | 775 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2340 | 9.2 | TDD | IMD4 |
+|  | n79 | 4500 | 10 | 50 | 4500 | N/A | TDD | N/A |
+| CA_n28-n41-n74 | n28 | N/A | 5 | N/A | 782 | 3.5 | FDD | IMD5 |
+|  | n41 | 2569 | 10 | 50 | 2569 | N/A | TDD | N/A |
+|  | n74 | 1452 | 5 | 25 | 1500 | N/A | FDD | N/A |
+| CA_n28-n41-n77 | n28 | N/A | 5 | N/A | 798 | 29.3 | FDD | IMD24 |
+|  | n41 | 2642 | 10 | 50 | 2642 | N/A | TDD | N/A |
+|  | n77 | 3440 | 10 | 50 | 3440 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 782.5 | 3.0 | FDD | IMD5 |
+|  | n41 | 2567.5 | 10 | 50 | 2567.5 | N/A | TDD | N/A |
+|  | n77 | 3460 | 10 | 50 | 3460 | N/A | TDD | N/A |
+|  | n28 | 738 | 5 | 25 | 793 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2642 | 27.5 | TDD | IMD2 |
+|  | n77 | 3380 | 10 | 50 | 3380 | N/A | TDD | N/A |
+|  | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n41 | 2580 | 10 | 50 | 2580 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3323 | 26.7 | TDD | IMD24 |
+| CA_n28-n41-n78 | n28 | 738 | 5 | 25 | 793 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2642 | 27.5 | TDD | IMD2 |
+|  | n78 | 3380 | 10 | 50 | 3380 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 798 | 29.3 | FDD | IMD21 |
+|  | n41 | 2642 | 10 | 50 | 2642 | N/A | TDD | N/A |
+|  | n78 | 3440 | 10 | 50 | 3440 | N/A | TDD | N/A |
+|  | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n41 | 2580 | 10 | 50 | 2580 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3323 | 28.2 | TDD | IMD22 |
+| CA_n28-n41-n79 | n28 | N/A | 5 | N/A | 780 | 13.0 | FDD | IMD31 |
+|  | n41 | 2600 | 10 | 50 | 2600 | N/A | TDD | N/A |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n28 | 720 | 5 | 25 | 775 | N/A | FDD | N/A |
+|  | n41 | 2600 | 10 | 50 | 2600 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4480 | 10.1 | TDD | IMD32 |
+|  | n28 | 735 | 5 | 25 | 790 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2645 | 10.4 | TDD | IMD4 |
+|  | n79 | 4850 | 40 | 216 | 4850 | N/A | TDD | N/A |
+| CA_n28-n46-n78 | n28 | 710 | 5 | 25 | 765 | N/A | FDD | N/A |
+|  | n46 | 5170 | 20 | 100 | 5170 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3750 | 17 | TDD | IMD31 |
+|  | n28 | N/A | 5 | N/A | 780 | 16 | FDD | IMD3 |
+|  | n46 | 5900 | 20 | 100 | 5900 | N/A | FDD | N/A |
+|  | n78 | 3340 | 10 | 50 | 3340 | N/A | TDD | N/A |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n46 | N/A | 20 | N/A | 5900 | 22 | TDD | IMD31,2 |
+|  | n78 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+| CA_n28-n71-n77 | n28 | 713 | 5 | 25 | 768 | N/A | FDD | N/A |
+|  | n71 | N/A | 5 | N/A | 628 | 4.7 | FDD | IMD5 |
+|  | n77 | 3480 | 10 | 50 | 3480 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 778 | 4.3 | FDD | IMD5 |
+|  | n71 | 688 | 5 | 25 | 642 | N/A | FDD | N/A |
+|  | n77 | 3530 | 10 | 50 | 3530 | N/A | TDD | N/A |
+| CA_n28-n74-n77 | n28 | 730 | 5 | 25 | 785 | N/A | FDD | N/A |
+|  | n74 | N/A | 5 | 25 | 1500 | 9.0 | FDD | IMD4 |
+|  | n77 | 3690 | 10 | 50 | 3690 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | 25 | 785 | 18.7 | FDD | IMD3 |
+|  | n74 | 1452 | 5 | 25 | 1500 | N/A | FDD | N/A |
+|  | n77 | 3689 | 10 | 50 | 3689 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | 25 | 785 | 13.2 | FDD | IMD4 |
+|  | n74 | 1458 | 5 | 25 | 1506 | N/A | FDD | N/A |
+|  | n77 | 3589 | 10 | 50 | 3589 | N/A | TDD | N/A |
+|  | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n74 | 1443 | 5 | 25 | 1491 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3629 | 15.9 | TDD | IMD3 |
+|  | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n74 | 1443 | 5 | 25 | 1491 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3629 | 10.2 | TDD | IMD4 |
+| CA_n28-n75-n78 | n28 | 725 | 5 | 25 | 780 | N/A | FDD | N/A |
+|  | n75 | N/A | 5 | N/A | 1476 | 9.0 | SDL | IMD4 |
+|  | n78 | 3651 | 10 | 50 | 3651 | N/A | TDD | N/A |
+| CA_n28-n77-n79 | n77 | 3620 | 10 | 50 | 3620 | N/A | TDD | N/A |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n28 | 745 | 5 | 25 | 800 | 16.2 | FDD | IMD21,2 |
+| CA_n28-n78-n79 | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | 3700 | 10 | 50 | 3700 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4440 | 26.2 | TDD | IMD2 |
+|  | n28 | 708 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4721 | 5.1 | TDD | IMD31 |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3700 | 26.9 | TDD | IMD23 |
+|  | n79 | 4440 | 10 | 50 | 4440 | N/A | TDD | N/A |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3420 | 8.7 | TDD | IMD33 |
+|  | n79 | 4900 | 40 | 216 | 4900 | N/A | TDD | N/A |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3310 | 4.6 | TDD | IMD3 |
+|  | n79 | 4790 | 10 | 50 | 4790 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 800 | 16.2 | FDD | IMD21 |
+|  | n78 | 3620 | 10 | 50 | 3620 | N/A | TDD | N/A |
+|  | n79 | 4420 | 10 | 50 | 4420 | N/A | TDD | N/A |
+| CA_n28-n78-n102 | n28 | 710 | 5 | 25 | 765 | N/A | FDD | N/A |
+|  | n78 | 3380 | 5 | 25 | 3380 | N/A | TDD | N/A |
+|  | n102 | N/A | 40 | N/A | 6050 | 22 | TDD | IMD31,2 |
+|  | n28 | 730 | 5 | 25 | 785 | N/A | FDD | N/A |
+|  | n78 | N/A | 5 | N/A | 3755 | 10.3 | TDD | IMD41 |
+|  | n102 | 5945 | 40 | 216 | 5945 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 775 | 16 | FDD | IMD31,2 |
+|  | n78 | 3395 | 5 | 25 | 3395 | N/A | TDD | N/A |
+|  | n102 | 6015 | 40 | 216 | 6015 | N/A | TDD | N/A |
+| CA_n29-n30-n66 | n29 | N/A | 5 | N/A | 719.5 | 4.5 | SDL | IMD5 |
+|  | n30 | 2307.5 | 5 | 25 | 2352.5 | N/A | FDD | N/A |
+|  | n66 | 1777.5 | 5 | 25 | 2177.5 | N/A | FDD | N/A |
+| CA_n29-n30-n77 | n29 | N/A | 5 | N/A | 722 | 15.2 | SDL | IMD31 |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | 3898 | 10 | 50 | 3898 | N/A | TDD | N/A |
+| CA_n29-n66-n77 | n29 | N/A | 5 | N/A | 722 | 15.2 | SDL | IMD35 |
+|  | n66 | 1734 | 5 | 25 | 2134 | N/A | FDD | N/A |
+|  | n77 | 4190 | 10 | 50 | 4190 | N/A | TDD | N/A |
+| CA_n30-n66-n77 | n30 | N/A | 5 | N/A | 2355 | 29.2 | FDD | IMD25 |
+|  | n66 | 1745 | 5 | 25 | 2145 | N/A | FDD | N/A |
+|  | n77 | 4100 | 10 | 50 | 4100 | N/A | TDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2355 | 3.4 | FDD | IMD5 |
+|  | n66 | 1735 | 5 | 25 | 2135 | N/A | FDD | N/A |
+|  | n77 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2160 | 8.7 | FDD | IMD45 |
+|  | n77 | 3390 | 10 | 50 | 3390 | N/A | TDD | N/A |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n66 | 1745 | 5 | 25 | 2145 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4055 | 28.4 | TDD | IMD21,5 |
+| CA_n34-n39-n40 | n34 | 2022.5 | 5 | 25 | 2022.5 | N/A | TDD | N/A |
+|  | n39 | 1882.5 | 5 | 25 | 1882.5 | N/A | TDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2305 | 2.4 | TDD | IMD5 |
+| CA_n34-n40-n41 | n34 | N/A | 5 | N/A | 2015 | 18.3 | TDD | IMD31 |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n41 | 2590 | 10 | 50 | 2590 | N/A | TDD | N/A |
+|  | n34 | 2020 | 5 | 25 | 2020 | N/A | TDD | N/A |
+|  | n40 | 2320 | 10 | 50 | 2320 | N/A | TDD | N/A |
+|  | n41 | 2620 | 10 | 50 | 2620 | 16.5 | TDD | IMD3 |
+| CA_n34-n41-n79 | n34 | 2020 | 5 | 25 | 2020 | N/A | TDD | N/A |
+|  | n41 | 2660 | 10 | 50 | 2660 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | 216 | 4680 | 17.8 | TDD | IMD2 |
+|  | n34 | 2020 | 5 | 25 | 2020 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | 50 | 2550 | 25.2 | TDD | IMD2 |
+|  | n79 | 4570 | 40 | 216 | 4570 | N/A | TDD | N/A |
+|  | n34 | N/A | 5 | 25 | 2015 | 27.1 | TDD | IMD2 |
+|  | n41 | 2585 | 10 | 50 | 2585 | N/A | TDD | N/A |
+|  | n79 | 4600 | 40 | 216 | 4600 | N/A | TDD | N/A |
+|  | n34 | N/A | 5 | 25 | 2015 | 6.5 | TDD | IMD5 |
+|  | n41 | 2515 | 10 | 50 | 2515 | N/A | TDD | N/A |
+|  | n79 | 4780 | 40 | 216 | 4780 | N/A | TDD | N/A |
+| CA_n38-n66-n78 | n38 | 2550 | 5 | 25 | 2550 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2150 | 8.7 | FDD | IMD4 |
+|  | n78 | 3625 | 10 | 50 | 3625 | N/A | TDD | N/A |
+|  | n38 | 2610 | 5 | 25 | 2610 | N/A | TDD | N/A |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3460 | 15.0 | TDD | IMD3 |
+| CA_n39-n40-n41 | n39 | 1917.5 | 5 | 25 | 1917.5 | N/A | TDD | N/A |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2685 | 30.3 | TDD | IMD3 |
+|  | n39 | N/A | 5 | N/A | 1915 | 27.4 | TDD | IMD31 |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+| CA_n39-n40-n79 | n39 | 1917.5 | 5 | 25 | 1917.5 | N/A | TDD | N/A |
+|  | n40 | 2305 | 10 | 25 | 2305 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4980 | 5.8 | TDD | IMD4 |
+| CA_n39-n41-n79 | n39 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+|  | n41 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+|  | n79 | N/A | N/A | N/A | N/A | N/A | TDD | IMD29 |
+|  | n39 | 1900 | 5 | 25 | 1900 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2650 | 29.8 | TDD | IMD21 |
+|  | n79 | 4550 | 10 | 50 | 4550 | N/A | TDD | N/A |
+|  | n39 | N/A | 5 | N/A | 1900 | 28.9 | TDD | IMD21 |
+|  | n41 | 2650 | 10 | 50 | 2650 | N/A | TDD | N/A |
+|  | n79 | 4550 | 10 | 50 | 4550 | N/A | TDD | N/A |
+| CA_n40-n41-n7714 | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3445 | 5.2 | TDD | IMD515 |
+|  | n40 | 2305 | 10 | 50 | 2305 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2600 | 13.1 | TDD | IMD415 |
+|  | n77 | 3605 | 10 | 50 | 3605 | N/A | TDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2350 | 15 | TDD | IMD415 |
+|  | n41 | 2550 | 10 | 50 | 2550 | N/A | TDD | N/A |
+|  | n77 | 3725 | 10 | 50 | 3725 | N/A | TDD | N/A |
+| CA_n40-n41-n79 | n40 | 2340 | 10 | 50 | 2340 | N/A | TDD | N/A |
+|  | n41 | 2600 | 10 | 50 | 2600 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4940 | 30.5 | TDD | IMD2 |
+|  | n40 | N/A | 10 | N/A | 2335 | 31 | TDD | IMD21 |
+|  | n41 | 2545 | 10 | 50 | 2545 | N/A | TDD | N/A |
+|  | n79 | 4880 | 40 | 216 | 4880 | N/A | TDD | N/A |
+|  | n40 | 2340 | 10 | 50 | 2340 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2600 | 29.4 | TDD | IMD21 |
+|  | n79 | 4940 | 40 | 216 | 4940 | N/A | TDD | N/A |
+| CA_n40-n71-n77 | n40 | 2320 | 10 | 50 | 2320 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 630 | 18.7 | FDD | IMD32 |
+|  | n77 | 3580 | 10 | 50 | 3580 | N/A | TDD | N/A |
+|  | n40 | 2330 | 10 | 50 | 2330 | N/A | TDD | N/A |
+|  | n71 | 688 | 5 | 25 | 642 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3706 | 16.3 | TDD | IMD31 |
+|  | n40 | N/A | 10 | N/A | 2354 | 15.5 | TDD | IMD3 |
+|  | n71 | 688 | 5 | 25 | 642 | N/A | FDD | N/A |
+|  | n77 | 3730 | 10 | 50 | 3730 | N/A | TDD | N/A |
+| CA_n40-n78-n79 | n40 | 2350 | 10 | 50 | 2350 | N/A | TDD | N/A |
+|  | n78 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4450 | 23 | TDD | IMD3 |
+|  | n40 | N/A | 10 | N/A | 2350 | 12 | TDD | IMD31 |
+|  | n78 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n79 | 4450 | 10 | 50 | 4450 | N/A | TDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2320 | 6 | TDD | IMD4 |
+|  | n78 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n79 | 4560 | 10 | 50 | 4560 | N/A | TDD | N/A |
+| CA_n40-n78-n105 | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n78 | 3789 | 10 | 50 | 3789 | N/A | TDD | N/A |
+|  | n105 | N/A | 5 | N/A | 648 | 3.3 | FDD | IMD5 |
+|  | n40 | 2310 | 10 | 50 | 2310 | N/A | TDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3708 | 16 | TDD | IMD3 |
+|  | n105 | 699 | 5 | 25 | 648 | N/A | FDD | N/A |
+|  | n40 | N/A | 10 | N/A | 2310 | 15.7 | TDD | IMD3 |
+|  | n78 | 3708 | 10 | 50 | 3708 | N/A | TDD | N/A |
+|  | n105 | 699 | 5 | 25 | 648 | N/A | FDD | N/A |
+| CA_n41-n66-n77 | n41 | 2600 | 10 | 50 | 2600 | N/A | TDD | N/A |
+|  | n66 | 1730 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3470 | 14.6 | TDD | IMD31,2 |
+|  | n41 | N/A | 10 | N/A | 2670 | 4.2 | TDD | IMD55 |
+|  | n66 | 1715 | 5 | 25 | 2115 | N/A | FDD | N/A |
+|  | n77 | 4190 | 10 | 50 | 4190 | N/A | TDD | N/A |
+|  | n41 | 2640 | 10 | 50 | 2640 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2160 | 8.0 | FDD | IMD4 |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+| CA_n41-n66-n78 | n41 | 2560 | 10 | 50 | 2560 | N/A | TDD | N/A |
+|  | n66 | 1730 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3390 | 14.6 | TDD | IMD31 |
+|  | n41 | 2530 | 10 | 50 | 2530 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2160 | 8.0 | FDD | IMD4 |
+|  | n78 | 3610 | 10 | 50 | 3610 | N/A | TDD | N/A |
+| CA_n41-n66-n85 | n41 | 2501 | 10 | 50 | 2501 | N/A | TDD | N/A |
+|  | n66 | 1770 | 5 | 25 | 2170 | N/A | FDD | N/A |
+|  | n85 | N/A | 5 | N/A | 731 | 29.5 | FDD | IMD21 |
+| CA_n41-n70-n78 | n41 | 2655 | 10 | 50 | 2655 | N/A | TDD | N/A |
+|  | n70 | N/A | 5 | N/A | 2000 | 17.6 | FDD | IMD3 |
+|  | n78 | 3310 | 10 | 50 | 3310 | N/A | TDD | N/A |
+|  | n41 | 2565 | 10 | 50 | 2565 | N/A | TDD | N/A |
+|  | n70 | N/A | 5 | N/A | 2000 | 8.6 | FDD | IMD4 |
+|  | n78 | 3565 | 10 | 50 | 3565 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2480 | 5.3 | TDD | IMD5 |
+|  | n70 | 1700 | 5 | 25 | 2000 | N/A | FDD | N/A |
+|  | n78 | 3790 | 10 | 50 | 3790 | N/A | TDD | N/A |
+|  | n41 | 2545 | 10 | 50 | 2545 | N/A | FDD | N/A |
+|  | n70 | 1700 | 5 | 25 | 2000 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3390 | 16.1 | TDD | IMD3 |
+| CA_n41-n71-n77 | n41 | 2615 | 10 | 50 | 2615 | N/A | TDD | N/A |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3308 | 27.7 | TDD | IMD21,2,5 |
+|  | n41 | 2564 | 10 | 50 | 2564 | N/A | TDD | N/A |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3950 | 14.8 | TDD | IMD31 |
+|  | n41 | N/A | 10 | N/A | 2615 | 26.7 | TDD | IMD25 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | 3308 | 10 | 50 | 3308 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2564 | 13.5 | TDD | IMD3 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | 3950 | 10 | 50 | 3950 | N/A | TDD | N/A |
+|  | n41 | 2680 | 10 | 50 | 2680 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 640 | 29.3 | FDD | IMD25 |
+|  | n77 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+| CA_n41-n71-n78 | n41 | 2615 | 10 | 50 | 2615 | N/A | TDD | N/A |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3308 | 27.6 | TDD | IMD21,2 |
+|  | n41 | N/A | 10 | N/A | 2615 | 28.7 | TDD | IMD2 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n78 | 3308 | 10 | 50 | 3308 | N/A | TDD | N/A |
+|  | 41 | 2642 | 10 | 50 | 2642 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 798 | 29.3 | FDD | IMD2 |
+|  | n78 | 3440 | 10 | 50 | 3440 | N/A | TDD | N/A |
+| CA_n41-n74-n77 | n41 | 2650 | 10 | 50 | 2650 | N/A | TDD | N/A |
+|  | n74 | N/A | 5 | N/A | 1500 | 29.2 | FDD | IMD22 |
+|  | n77 | 4150 | 10 | 50 | 4150 | NA | TDD | N/A |
+|  | n41 | 2525 | 10 | 50 | 2525 | N/A | TDD | N/A |
+|  | n74 | N/A | 5 | N/A | 1500 | 15 | FDD | IMD3 |
+|  | n77 | 3550 | 10 | 50 | 3550 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2650 | 28 | TDD | IMD2 |
+|  | n74 | 1450 | 5 | 25 | 1498 | N/A | FDD | N/A |
+|  | n77 | 4100 | 10 | 50 | 4100 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2518 | 3 | TDD | IMD5 |
+|  | n74 | 1454 | 5 | 25 | 1502 | N/A | FDD | N/A |
+|  | n77 | 3440 | 10 | 50 | 3440 | N/A | TDD | N/A |
+|  | n41 | 2650 | 10 | 50 | 2650 | N/A | TDD | N/A |
+|  | n74 | 1450 | 5 | 25 | 1498 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4100 | 27 | TDD | IMD2 |
+|  | n41 | 2525 | 10 | 50 | 2525 | N/A | TDD | N/A |
+|  | n74 | 1450 | 5 | 25 | 1498 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3600 | 14 | TDD | IMD31 |
+| CA_n41-n77-n79 | n77 | 3600 | 10 | 50 | 3600 | N/A | TDD | N/A |
+|  | n79 | 4600 | 40 | 216 | 4600 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2600 | 10.7 | TDD | IMD31,2 |
+| CA_n41-n77-n85 | n41 | 2687 | 10 | 50 | 2687 | N/A | TDD | N/A |
+|  | n77 | 3420 | 10 | 50 | 3420 | N/A | TDD | N/A |
+|  | n85 | N/A | 5 | N/A | 733 | 29.3 | FDD | IMD25 |
+|  | n41 | N/A | 10 | N/A | 2 619 | 27.5 | TDD | IMD24.5 |
+|  | n77 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+|  | n85 | 701 | 5 | 25 | 731 | N/A | FDD | N/A |
+|  | n41 | 2680 | 10 | 50 | 2680 | N/A | TDD | N/A |
+|  | n77 | 3393 | 10 | N/A | 3393 | 26.7 | TDD | IMD24,5 |
+|  | n85 | 713 | 5 | 25 | 743 | N/A | FDD | N/A |
+| CA_n46-n78-n102 | n46 | 5315 | 20 | 100 | 5315 | N/A | TDD | N/A |
+|  | n78 | 3770 | 10 | 50 | 3770 | N/A | TDD | N/A |
+|  | n102 | N/A | 40 | N/A | 5995 | N/A12 | TDD | IMD4 |
+|  | n46 | N/A | 10 | N/A | 5530 | N/A12 | TDD | IMD4 |
+|  | n78 | 3550 | 10 | 50 | 3550 | N/A | TDD | N/A |
+|  | n102 | 6315 | 40 | 216 | 6315 | N/A | TDD | N/A |
+| CA_n48-n66-n70 | n48 | 3625 | 10 | 50 | 3625 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2142.5 | 2.8 | FDD | IMD5 |
+|  | n70 | 1702.5 | 5 | 25 | 2002.5 | N/A | FDD | N/A |
+|  | n48 | 3645 | 10 | 50 | 3645 | N/A | TDD | N/A |
+|  | n66 | 1762.5 | 5 | 25 | 2162.5 | N/A | FDD | N/A |
+|  | n70 | N/A | 5 | N/A | 2002.5 | 3.1 | FDD | IMD5 |
+| CA_n48-n66-n71 | n48 | 3552.5 | 10 | 50 | 3552.5 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2161.5 | 14.4 | FDD | IMD3 |
+|  | n71 | 695.5 | 5 | 25 | 649.5 | N/A | FDD | N/A |
+|  | n48 | N/A | 10 | N/A | 3695 | 5.2 | TDD | IMD4 |
+|  | n66 | 1712.5 | 5 | 25 | 2112.5 | N/A | FDD | N/A |
+|  | n71 | 665.5 | 5 | 25 | 619.5 | N/A | FDD | N/A |
+| CA_n48-n70-n71 | n48 | N/A | 10 | N/A | 3694 | 9 | TDD | IMD41 |
+|  | n70 | 1697.5 | 5 | 25 | 1997.5 | N/A | FDD | N/A |
+|  | n71 | 665.5 | 5 | 25 | 619.5 | N/A | FDD | N/A |
+| CA_n48-n71-n77 | n48 | N/A | N/A | N/A | N/A | N/A | FDD | N/A |
+|  | n71 | N/A | N/A | N/A | N/A | N/A | FDD | N/A |
+|  | n77 | N/A | N/A | N/A | N/A | N/A | FDD | IMD25 |
+|  | n48 | N/A | N/A | N/A | N/A | N/A | FDD | IMD25 |
+|  | n71 | N/A | N/A | N/A | N/A | N/A | FDD | N/A |
+|  | n77 | N/A | N/A | N/A | N/A | N/A | FDD | N/A |
+| CA_n66-n70-n77 | n66 | 1757.5 | 5 | 25 | 2157.5 | N/A | FDD | N/A |
+|  | n70 | N/A | 5 | N/A | 2007.5 | 32.1 | FDD | IMD22,1 |
+|  | n77 | 3765 | 10 | 50 | 3765 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2162.5 | 29.2 | FDD | IMD21 |
+|  | n70 | 1702.5 | 5 | 25 | 2002.5 | N/A | FDD | N/A |
+|  | n77 | 3865 | 10 | 50 | 3865 | N/A | TDD | N/A |
+| CA_n66-n70-n78 | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n70 | N/A | 5 | N/A | 2000 | 32.1 | FDD | IMD22 |
+|  | n78 | 3760 | 10 | 50 | 3760 | N/A | TDD | N/A |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n70 | N/A | 5 | N/A | 2000 | 2.1 | FDD | IMD5 |
+|  | n78 | 3640 | 10 | 50 | 3640 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2160 | 5.0 | FDD | IMD5 |
+|  | n70 | 1700 | 5 | 25 | 2000 | N/A | FDD | N/A |
+|  | n78 | 3630 | 10 | 50 | 3630 | N/A | TDD | N/A |
+| CA_n66-n71-n77 | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n71 | 668 | 5 | 25 | 622 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4108 | 15.9 | TDD | IMD31,2,5 |
+|  | n66 | N/A | 5 | N/A | 2150 | 15.5 | FDD | IMD32 |
+|  | n71 | 690 | 5 | 25 | 644 | N/A | FDD | N/A |
+|  | n77 | 3530 | 10 | 50 | 3530 | N/A | TDD | N/A |
+|  | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n71 | N/A | 5 | N/A | 640 | 15.3 | FDD | IMD35 |
+|  | n77 | 4080 | 10 | 50 | 4080 | N/A | TDD | N/A |
+| CA_n66-n71-n78 | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n71 | 668 | 5 | 25 | 622 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3724 | 9 | TDD | IMD41 |
+|  | n66 | N/A | 5 | N/A | 2160 | 15.5 | FDD | IMD3 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n78 | 3546 | 10 | 50 | 3546 | N/A | TDD | N/A |
+| CA_n66-n77-n85 | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n77 | 4180 | 10 | 50 | 4180 | N/A | TDD | N/A |
+|  | n85 | N/A | 5 | N/A | 740 | 23.5 | FDD | IMD35 |
+|  | n66 | N/A | 5 | N/A | 2124 | 21.4 | FDD | IMD3 |
+|  | n77 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+|  | n85 | 708 | 5 | 25 | 738 | N/A | FDD | N/A |
+| CA_n70-n71-n77 | n70 | N/A | N/A | N/A | N/A | N/A | FDD | N/A |
+|  | n71 | N/A | N/A | N/A | N/A | N/A | FDD | N/A |
+|  | n77 | N/A | N/A | N/A | N/A | N/A | TDD | IMD31,5 |
+|  | n70 | 1702.5 | 5 | 25 | 2002.5 | N/A | FDD | N/A |
+|  | n71 | 680.5 | 5 | 25 | 834.5 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3745 | 8.2 | TDD | IMD4 |
+|  | n70 | N/A | N/A | N/A | N/A | N/A | FDD | IMD35 |
+|  | n71 | N/A | N/A | N/A | N/A | N/A | FDD | N/A |
+|  | n77 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+|  | n70 | N/A | N/A | N/A | N/A | N/A | FDD | IMD45 |
+|  | n71 | N/A | N/A | N/A | N/A | N/A | FDD | N/A |
+|  | n77 | N/A | N/A | N/A | N/A | N/A | TDD | N/A |
+| NOTE 1: This band is subject to IMD5 also which MSD is not specified.NOTE 2: This band is subject to IMD4 also which MSD is not specified.NOTE 3: The requirements only apply for UEs supporting inter-band carrier aggregation with simultaneous Rx/Tx capability. Simultaneous Rx/Tx capability does not apply for UEs supporting band n78 with a n77 implementation.NOTE 4: This band is subject to IMD3 also which MSD is not specified.NOTE 5: For a UE which supports this band combination only when the Band n77 frequency range restriction defined in NOTE 12 of Table 5.2-1 applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 6: Void.NOTE 7: Void.NOTE 8: Both of the transmitters shall be set min(+20 dBm, PCMAX_L,f,c) as defined in clause 6.2A.4NOTE 9: There is no IMD2 product in band n79 downlink for n79 operating in 4800 – 5000 MHz frequency range.NOTE 10: This band supports intra-band non-contiguous uplink configuration.NOTE 11: This MSD requirement applies with both IMD2 and IMD3 products should be generated.NOTE 12: This is a share spectrum access band, hence no MSD is defined.NOTE 13: This band is also subject to a near missed IMD2 that is not specified and is not applicable for band n77 spectrum ranges of 3450-3550MHz and 3700-3980MHz.NOTE 14: This combination only works for non-simultaneous RX/TX. In the case that there is no simultaneous RX/TX also no RX sensitivity section is needed.NOTE 15: This band is subject to IMD6 also which MSD is not specified. |  |  |  |  |  |  |  |  |
+
+Table 7.3A.5-2a: 3DL/2UL interband Reference sensitivity QPSK PREFSENS and uplink/downlink configurations for PC2 CA
+
+| Band / Channel bandwidth / NRB / Duplex mode |  |  |  |  |  |  |  | Source of IMD |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| NR CA band combination | NR band | UL Fc  (MHz) | UL/DL BW  (MHz) | UL  LCRB | DL Fc (MHz) | MSD  (dB) | Duplex mode |  |
+| CA_n1-n3-n77 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1807.5 | 37.5 | FDD | IMD21,2 |
+|  | n77 | 3757.5 | 10 | 50 | 3757.5 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 37.0 | FDD | IMD21 |
+|  | n3 | 1775 | 5 | 25 | 1870 | N/A | FDD | N/A |
+|  | n77 | 3915 | 10 | 50 | 3915 | N/A | TDD | N/A |
+| CA_n1-n3-n28 | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n28 | 710.5 | 5 | 25 | 765.5 | N/A | FDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2139 | 22.7 | FDD | IMD4 |
+| CA_n1-n3-n78 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1830 | 33.9 | FDD | IMD2 |
+|  | n78 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n3 | 1750 | 5 | 25 | 1845 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3700 | 34.4 | TDD | IMD2 |
+| CA_n1-n3-n79 | n3 | 1750 | 5 | 25 | 1845 | N/A | FDD | N/A |
+|  | n79 | 4860 | 40 | 216 | 4860 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 18.7 | FDD | IMD5 |
+| CA_n1-n7-n20 | n1 | 1940 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n7 | 2510 | 10 | 50 | 2630 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 800 | 17.7 | FDD | IMD5 |
+| CA_n1-n7-n28 | n1 | 1935 | 5 | 25 | 2125 | N/A | FDD | N/A |
+|  | n7 | 2510 | 10 | 50 | 2630 | N/A | FDD | N/A |
+|  | n28 | N/A | 10 | N/A | 785 | 17,7 | FDD | IMD5 |
+| CA_n1-n7-n78 | n1 | 1977.5 | 5 | 25 | 2167.5 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2627.5 | 20.6 | FDD | IMD4 |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 20.1 | FDD | IMD4 |
+|  | n7 | 2510 | 10 | 50 | 2630 | N/A | FDD | N/A |
+|  | n78 | 3580 | 10 | 50 | 3580 | N/A | TDD | N/A |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n7 | 2520 | 5 | 25 | 2640 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3390 | 22.1 | TDD | IMD4 |
+|  | n1 | 1940 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3770 | 10.9 | TDD | IMD5 |
+| CA_n1-n18-n41 | n1 | 1960 | 5 | 25 | 2150 | N/A | FDD | N/A |
+|  | n41 | 2505 | 10 | 50 | 2505 | N/A | TDD | N/A |
+|  | n18 | N/A | 5 | N/A | 870 | 12.4 | FDD | IMD5 |
+| CA_n1-n18-n77 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3390 | 10 | 50 | 3390 | N/A | TDD | N/A |
+|  | n18 | N/A | 5 | N/A | 870 | 18.6 | FDD | IMD5 |
+|  | n1 | N/A | 5 | N/A | 2120 | 25.4 | FDD | IMD3 |
+|  | n18 | 825 | 5 | 25 | 870 | N/A | FDD | N/A |
+|  | n77 | 3770 | 10 | 50 | 3770 | N/A | TDD | N/A |
+| CA_n1-n26-n78 | n1 | N/A | 5 | N/A | 2122 | 27.0 | FDD | IMD3 |
+|  | n26 | 829 | 5 | 25 | 874 | N/A | FDD | N/A |
+|  | n78 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+|  | n1 | 1975 | 5 | 25 | 2165 | N/A | FDD | N/A |
+|  | n26 | N/A | 5 | N/A | 885 | 15.3 | FDD | IMD5 |
+|  | n78 | 3405 | 10 | 50 | 3405 | N/A | TDD | N/A |
+| CA_n1-n28-n41 | n1 | 1923 | 5 | 25 | 2113 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 762 | 36.6 | FDD | IMD21 |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+| CA_n1-n28-n77 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n77 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 790 | 16.5 | FDD | IMD5 |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n77 | 3630 | 10 | 50 | 3630 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2150 | 24.7 | FDD | IMD3 |
+| CA_n1-n28-n78 | n1 | N/A | 5 | N/A | 2150 | 24.6 | FDD | IMD3 |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | 3630 | 10 | 50 | 3630 | N/A | TDD | N/A |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 794 | 17.2 | FDD | IMD5 |
+|  | n78 | 3352 | 10 | 50 | 3352 | N/A | TDD | N/A |
+| CA_n1-n28-n79 | n1 | 1930 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n79 | 4648 | 40 | 216 | 4648 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 788 | 24.2 | FDD | IMD32 |
+|  | n28 | 745.5 | 5 | 25 | 800.5 | N/A | FDD | N/A |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2167.5 | 13.4 | FDD | IMD41 |
+| CA_n1-n77-n79 | n1 | 1950 | 5 | 25 | 2140 | 24.6 | FDD | IMD31,2 |
+|  | n77 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n79 | 4660 | 40 | 216 | 4660 | N/A | TDD | N/A |
+| CA_n1-n41-n77 | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n41 | 2650 | 10 | 50 | 2650 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3330 | 28.2 | TDD | IMD31,2 |
+|  | n1 | 1975 | 5 | 10 | 2165 | N/A | FDD | N/A |
+|  | n77 | 3410 | 10 | 50 | 3410 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2515 | 22.0 | TDD | IMD41 |
+|  | n41 | 2640 | 10 | 50 | 2640 | N/A | TDD | N/A |
+|  | n77 | 3710 | 10 | 50 | 3710 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 21.4 | FDD | IMD4 |
+| CA_n1-n78-n79 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n78 | 3410 | 10 | 50 | 3410 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4870 | 24.9 | TDD | IMD31,3 |
+|  | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3490 | 17 | TDD | IMD53 |
+|  | n79 | 4670 | 40 | 216 | 4670 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 24.6 | FDD | IMD31 |
+|  | n78 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n79 | 4660 | 40 | 216 | 4660 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 3.8 | FDD | IMD41 |
+|  | n78 | 3590 | 10 | 50 | 3590 | N/A | TDD | N/A |
+|  | n79 | 4660 | 40 | 216 | 4660 | N/A | TDD | N/A |
+| CA_n2-n5-n77 | n2 | 1907.5 | 5 | 25 | 1987.5 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 887.5 | 13.6 | FDD | IMD55 |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n2 | N/A | 5 | N/A | 1987 | 24.8 | FDD | IMD35 |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n77 | 3680 | 10 | 50 | 3680 | N/A | TDD | N/A |
+| CA_n2-n12-n77 | n2 | N/A | 5 | N/A | 1960 | 24,8 | FDD | IMD32,5 |
+|  | n12 | 707.5 | 5 | 25 | 737.5 | N/A | FDD | N/A |
+|  | n77 | 3375 | 10 | 50 | 3375 | N/A | TDD | N/A |
+| CA_n2-n14-n77 | n2 | N/A | 5 | N/A | 1954 | 24.8 | FDD | IMD3 |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n77 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+| CA_n2-n30-n77 | n2 | N/A | 5 | N/A | 1986 | 19.3 | FDD | IMD45 |
+|  | n30 | 2312 | 5 | 25 | 2357 | N/A | FDD | N/A |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n2 | 1905 | 5 | 25 | 1985 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2354 | 22.2 | FDD | IMD45 |
+|  | n77 | 3361 | 10 | 50 | 3361 | N/A | TDD | N/A |
+|  | n2 | 1860 | 5 | 25 | 1940 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2354 | 12.9 | FDD | IMD5 |
+|  | n77 | 3967 | 10 | 50 | 3967 | N/A | TDD | N/A |
+| CA_n2-n66-n77 | n2 | 1855 | 5 | 25 | 1935 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2115 | 34.7 | FDD | IMD21,2 |
+|  | n77 | 3970 | 10 | 50 | 3970 | N/A | TDD | N/A |
+|  | n2 | N/A | 5 | N/A | 1960 | 37.6 | FDD | IMD21,2 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+|  | n2 | N/A | 5 | 25 | 1950 | 21 | FDD | IMD3 |
+|  | n66 | 1775 | 5 | 25 | 2175 | N/A | FDD | N/A |
+|  | n77 | 3300 | 100 | 1 (RBstart=203) | 3300 | N/A | TDD | N/A |
+|  |  | 3400 | 100 | 1 (RBstart=67) | 3400 |  |  |  |
+| CA_n3-n7-n20 | n3 | 1747 | 5 | 25 | 1842 | N/A | FDD | N/A |
+|  | n7 | 2543 | 10 | 50 | 2663 | N/A | FDD | N/A |
+|  | n20 | N/A | 5 | N/A | 796 | 26.0 | FDD | IMD2 |
+|  | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n7 | N/A | 10 | N/A | 2625 | 35.0 | FDD | IMD2 |
+|  | n20 | 845 | 5 | 25 | 804 | N/A | FDD | N/A |
+|  | n3 | 1750 | 5 | 25 | 1845 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | 25 | N/A | 25.9 | FDD | IMD3 |
+|  | n20 | 835 | 5 | 25 | 794 | N/A | FDD | N/A |
+| CA_n3-n7-n28 | n3 | 1747 | 5 | 25 | 1842 | N/A | FDD | N/A |
+|  | n7 | 2543 | 5 | 25 | 2663 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 796 | 26.0 | FDD | IMD2 |
+|  | n3 | 1712.5 | 5 | 25 | 1807.5 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2682 | 25.9 | FDD | IMD3 |
+|  | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1832.5 | 32 | FDD | IMD2 |
+|  | n7 | 2543 | 5 | 25 | 2663 | N/A | FDD | N/A |
+|  | n28 | 710.5 | 5 | 25 | 765.5 | N/A | FDD | N/A |
+| CA_n3-n7-n78 | n3 | N/A | 5 | N/A | 1820 | 26.6 | FDD | IMD3 |
+|  | n7 | 2565 | 5 | 25 | 2685 | N/A | FDD | N/A |
+|  | n78 | 3310 | 10 | 50 | 3310 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1820 | 17 | FDD | IMD4 |
+|  | n7 | 2565 | 5 | 25 | 2685 | N/A | FDD | N/A |
+|  | n78 | 3475 | 10 | 50 | 3475 | N/A | TDD | N/A |
+|  | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n7 | 2560 | 5 | 25 | 2680 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3390 | 25.1 | TDD | IMD3 |
+| CA_n3-n18-n41 | n3 | 1765 | 5 | 25 | 1860 | N/A | FDD | N/A |
+|  | n18 | N/A | 5 | N/A | 865 | 34.9 | FDD | IMD2 |
+|  | n41 | 2630 | 10 | 50 | 2630 | N/A | TDD | N/A |
+|  | n3 | 1730 | 5 | 25 | 1825 | N/A | FDD | N/A |
+|  | n18 | N/A | 5 | N/A | 862.5 | 26.5 | FDD | IMD3 |
+|  | n41 | 2597.5 | 10 | 50 | 2597.5 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1850 | 34.8 | FDD | IMD2 |
+|  | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n41 | 2670 | 10 | 50 | 2670 | N/A | TDD | N/A |
+| CA_n3-n18-n77 | n18 | 820 | 5 | 25 | 865 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1865 | 24.2 | FDD | IMD3 |
+|  | n77 | 3505 | 10 | 50 | 3505 | N/A | TDD | N/A |
+| CA_n3-n26-n78 | n3 | N/A | 5 | N/A | 1862 | 24.6 | FDD | IMD3 |
+|  | n26 | 839 | 5 | 25 | 884 | N/A | FDD | N/A |
+|  | n78 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+| CA_n3-n28-n41 | n3 | 1760 | 5 | 25 | 1855 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 790 | 30.5 | FDD | IMD24 |
+|  | n41 | 2550 | 10 | 50 | 2550 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1832.5 | 32 | FDD | IMD2 |
+|  | n28 | 710.5 | 5 | 25 | 765.5 | N/A | FDD | N/A |
+|  | n41 | 2543 | 10 | 50 | 2543 | N/A | TDD | N/A |
+| CA_n3-n28-n77 | n3 | 1712.5 | 5 | 25 | 1807.5 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 770 | 24.2 | FDD | IMD3 |
+|  | n77 | 4195 | 10 | 50 | 4195 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1850 | 25.8 | FDD | IMD32 |
+|  | n28 | 735 | 5 | 25 | 790 | N/A | FDD | N/A |
+|  | n77 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+| CA_n3-n28-n78 | n3 | N/A | 5 | N/A | 1850 | 29.2 | FDD | IMD3 |
+|  | n28 | 735 | 5 | 25 | 790 | N/A | FDD | N/A |
+|  | n78 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+|  | n3 | 1750 | 5 | 25 | 1845 | N/A | FDD | N/A |
+|  | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3764 | 16.9 | TDD | IMD5 |
+| CA_n3-n28-n79 | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n79 | 4530 | 40 | 216 | 4530 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 780 | 21.5 | FDD | IMD4 |
+|  | n28 | 725 | 5 | 25 | 780 | N/A | FDD | N/A |
+|  | n79 | 4770 | 40 | 216 | 4770 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1870 | 20.5 | FDD | IMD5 |
+| CA_n3-n41-n77 | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n41 | 2580 | 10 | 50 | 2580 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3440 | 24.3 | TDD | IMD31 |
+|  | n3 | N/A | 5 | N/A | 1840 | 23.9 | FDD | IMD32 |
+|  | n41 | 2620 | 10 | 50 | 2620 | N/A | TDD | N/A |
+|  | n77 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n3 | 1720 | 5 | 25 | 1815 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2640 | 16.7 | TDD | IMD5 |
+|  | n77 | 3900 | 10 | 50 | 3900 | N/A | TDD | N/A |
+| CA_n3-n41-n79 | n3 | 1755 | 5 | 25 | 1850 | 35.4 | FDD | IMD21 |
+|  | n41 | 2570 | 10 | 50 | 2570 | N/A | TDD | N/A |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n41 | 2670 | 10 | 50 | 2670 | 36.2 | TDD | IMD21 |
+|  | n79 | 4440 | 40 | 216 | 4440 | N/A | TDD | N/A |
+|  | n3 | 1770 | 5 | 25 | 1865 | N/A | FDD | N/A |
+|  | n41 | 2670 | 10 | 50 | 2670 | N/A | TDD | N/A |
+|  | n79 | 4440 | 40 | 216 | 4440 | 36.8 | TDD | IMD21 |
+| CA_n3-n77-n79 | n77 | 3350 | 10 | 50 | 3350 | N/A | FDD | N/A |
+|  | n79 | 4840 | 40 | 216 | 4840 | N/A | TDD | N/A |
+|  | n3 | 1765 | 5 | 25 | 1860 | 24.2 | TDD | IMD31, 2 |
+| CA_n3-n78-n79 | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n78 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+|  | n79 | N/A | 10 | N/A | 4860 | 22.1 | TDD | IMD3 |
+|  | n3 | 1780 | 5 | 25 | 1875 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3480 | 8.5 | TDD | IMD5 |
+|  | n79 | 4410 | 10 | 50 | 4410 | N/A | TDD | N/A |
+|  | n3 | 1765 | 5 | 25 | 1860 | 24.7 | FDD | IMD31 |
+|  | n78 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n79 | 4840 | 10 | 50 | 4840 | N/A | TDD | N/A |
+|  | n3 | 1745 | 5 | 25 | 1840 | 11.5 | FDD | IMD4 |
+|  | n78 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+|  | n79 | 4700 | 10 | 50 | 4700 | N/A | TDD | N/A |
+| CA_n5-n7-n77 | n5 | N/A | 5 | N/A | 879 | 35.2 | FDD | IMD21,4 |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n77 | 3429 | 10 | 50 | 3429 | N/A | TDD | N/A |
+|  | n5 | 844 | 5 | 25 | 889 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2645 | 35.1 | FDD | IMD2 |
+|  | n77 | 3489 | 10 | 50 | 3489 | N/A | TDD | N/A |
+| CA_n5-n7-n78 | n5 | N/A | 5 | N/A | 879 | 35.2 | FDD | IMD21 |
+|  | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n78 | 3429 | 10 | 50 | 3429 | N/A | TDD | N/A |
+|  | n5 | 844 | 5 | 25 | 889 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2645 | 35.1 | FDD | IMD2 |
+|  | n78 | 3489 | 10 | 50 | 3489 | N/A | TDD | N/A |
+| CA_n5-n12-n77 | n5 | N/A | 5 | N/A | 880 | 14.0 | FDD | IMD5 |
+|  | n12 | 707.5 | 5 | 25 | 737.5 | N/A | FDD | N/A |
+|  | n77 | 3710 | 10 | 50 | 3710 | N/A | TDD | N/A |
+|  | n5 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n12 | N/A | 5 | N/A | 740 | 14.9 | FDD | IMD55 |
+|  | n77 | 4080 | 10 | 50 | 4080 | N/A | TDD | N/A |
+| CA_n5-n14-n77 | n5 | N/A | 5 | N/A | 880 | 14.0 | FDD | IMD55 |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n77 | 4052 | 10 | 50 | 4052 | N/A | TDD | N/A |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n14 | N/A | 5 | N/A | 765.5 | 20.3 | FDD | IMD41.5 |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+| CA_n5-n25-n77 | n5 | N/A | 5 | N/A | 889 | 13.6 | FDD | IMD55 |
+|  | n25 | 1907 | 5 | 25 | 1987 | N/A | FDD | N/A |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1987 | 24.8 | FDD | IMD3 |
+|  | n77 | 3680 | 10 | 25 | 3680 | N/A | TDD | N/A |
+| CA_n5-n25-n78 | n5 | N/A | 5 | N/A | 889 | 13.6 | FDD | IMD5 |
+|  | n25 | 1907 | 5 | 25 | 1987 | N/A | FDD | N/A |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1987 | 24.8 | FDD | IMD3 |
+|  | n78 | 3680 | 10 | 50 | 3680 | N/A | TDD | N/A |
+| CA_n5-n29-n77 | n5 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n29 | N/A | 5 | N/A | 722 | 14.9 | FDD | IMD55 |
+|  | n77 | 4062 | 10 | 50 | 4062 | N/A | TDD | N/A |
+| CA_n5-n30-n77 | n5 | N/A | 5 | N/A | 880 | 23.5 | FDD | IMD31 |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | 3740 | 10 | 50 | 3740 | N/A | TDD | N/A |
+|  | n5 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2355 | 21.4 | FDD | IMD35 |
+|  | n77 | 4025 | 10 | 50 | 4025 | N/A | TDD | N/A |
+| CA_n5-n66-n77 | n5 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2142 | 22.2 | FDD | IMD3 |
+|  | n77 | 3795 | 10 | 50 | 3795 | N/A | TDD | N/A |
+|  | n5 | 845 | 5 | 25 | 890 | N/A | FDD | N/A |
+|  | n66 | 1775 | 5 | 25 | 2175 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3465 | 25.1 | TDD | IMD3 |
+|  | n5 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n66 | 1712.5 | 5 | 25 | 2112.5 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4192 | 19 | TDD | IMD45 |
+|  | n5 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n66 | 1735 | 5 | 25 | 2135 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3535 | 14.2 | TDD | IMD5 |
+|  | n5 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2142 | 22.2 | FDD | IMD3 |
+|  | n77 | 3795 | 10 | 50 | 3795 | N/A | TDD | N/A |
+| CA_n7-n25-n77 | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1950 | 20.0 | FDD | IMD4 |
+|  | n77 | 3525 | 10 | 50 | 3525 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2640 | 18.8 | FDD | IMD5 |
+|  | n25 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n77 | 4125 | 10 | 50 | 4125 | N/A | TDD | N/A |
+| CA_n7-n66-n77 | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2150 | 20.5 | FDD | IMD4 |
+|  | n77 | 3625 | 10 | 50 | 3625 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2640 | 18.8 | FDD | IMD5 |
+|  | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n77 | 3900 | 10 | 50 | 3900 | N/A | TDD | N/A |
+| CA_n7-n71-n77 | n7 | N/A | 5 | N/A | 2670 | 34.6 | FDD | IMD2 |
+|  | n71 | 680 | 5 | 25 | 634 | N/A | FDD | N/A |
+|  | n77 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+| CA_n7-n26-n78 | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n26 | N/A | 5 | N/A | 879 | 36.2 | FDD | IMD2 |
+|  | n78 | 3429 | 10 | 50 | 3429 | N/A | TDD | N/A |
+|  | n7 | 2525 | 5 | 25 | 2645 | N/A | FDD | N/A |
+|  | n26 | N/A | 5 | N/A | 875 | 15.7 | FDD | IMD5 |
+|  | n78 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2645 | 36.1 | FDD | IMD2 |
+|  | n26 | 844 | 5 | 25 | 889 | N/A | FDD | N/A |
+|  | n78 | 3489 | 10 | 50 | 3489 | N/A | TDD | N/A |
+| CA_n7-n28-n78 | n7 | 2567.5 | 5 | 25 | 2687.5 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 782.5 | 33.8 | FDD | IMD21 |
+|  | n78 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2650 | 35.5 | FDD | IMD2 |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | 3390 | 10 | 50 | 3390 | N/A | TDD | N/A |
+|  | n7 | 2565 | 5 | 25 | 2685 | N/A | FDD | N/A |
+|  | n28 | 745 | 5 | 25 | 800 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3310 | 35.7 | TDD | IMD2 |
+| CA_n7-n66-n78 | n7 | 2540 | 5 | 25 | 2660 | N/A | FDD | N/A |
+|  | n66 | 1760 | 5 | 25 | 2160 | 20.5 | FDD | IMD4 |
+|  | n78 | 3620 | 10 | 50 | 3620 | N/A | TDD | N/A |
+| CA_n12-n30-n77 | n12 | N/A | 5 | N/A | 740 | 23.5 | FDD | IMD31 |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | 3880 | 10 | 50 | 3880 | N/A | TDD | N/A |
+|  | n12 | 707.5 | 5 | 25 | 737.5 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2355 | 21.4 | FDD | IMD3 |
+|  | n77 | 3770 | 10 | 50 | 3770 | N/A | TDD | N/A |
+| CA_n12-n66-n77 | n12 | N/A | 5 | N/A | 740 | 23.5 | FDD | IMD35 |
+|  | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n77 | 4180 | 10 | 50 | 4180 | N/A | TDD | N/A |
+|  | n12 | 707 | 5 | 25 | 737 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2126 | 21.4 | FDD | IMD3 |
+|  | n77 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+| CA_n13-n25-n77 | n13 | 782 | 5 | 25 | 751 | N/A | FDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 24.0 | FDD | IMD3 |
+|  | n77 | 3524 | 10 | 50 | 3524 | N/A | TDD | N/A |
+| CA_n13-n66-n77 | n13 | 782 | 5 | 25 | 751 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2146 | 26.0 | FDD | IMD3 |
+|  | n77 | 3710 | 10 | 50 | 3710 | N/A | TDD | N/A |
+|  | n13 | N/A | 5 | N/A | 750 | 24.1 | FDD | IMD3 |
+|  | n66 | 1710 | 5 | 25 | 2110 | N/A | FDD | N/A |
+|  | n77 | 4170 | 10 | 50 | 4170 | N/A | TDD | N/A |
+| CA_n14-n30-n77 | n14 | N/A | 5 | N/A | 763 | 23.5 | FDD | IMD31 |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | 3857 | 10 | 50 | 3857 | N/A | TDD | N/A |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2355 | 21.4 | FDD | IMD3 |
+|  | n77 | 3941 | 10 | 50 | 3941 | N/A | TDD | N/A |
+| CA_n14-n66-n77 | n14 | N/A | 5 | N/A | 763 | 23.5 | FDD | IMD35 |
+|  | n66 | 1712.5 | 5 | 25 | 2112.5 | N/A | FDD | N/A |
+|  | n77 | 4188 | 10 | 50 | 4188 | N/A | TDD | N/A |
+|  | n14 | 793 | 5 | 25 | 763 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2155 | 21.4 | FDD | IMD3 |
+|  | n77 | 3741 | 10 | 50 | 3741 | N/A | TDD | N/A |
+| CA_n18-n28-n41 | n18 | 825 | 5 | 25 | 870 | N/A | FDD | N/A |
+|  | n41 | 2505 | 10 | 50 | 2505 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 795 | 16.9 | FDD | IMD5 |
+| CA_n18-n28-n77 | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 778 | 17.5 | FDD | IMD5 |
+|  | n77 | 4058 | 10 | 50 | 4058 | N/A | TDD | N/A |
+|  | n18 | N/A | 5 | N/A | 865 | 12.1 | FDD | IMD5 |
+|  | n28 | 723 | 5 | 25 | 778 | N/A | FDD | N/A |
+|  | n77 | 3757 | 10 | 50 | 3757 | N/A | TDD | N/A |
+| CA_n18-n41-n77 | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n41 | 2630 | 10 | 50 | 2630 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3450 | 34.6 | TDD | IMD22,4 |
+|  | n18 | 820 | 5 | 25 | 865 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2630 | 32.5 | TDD | IMD24 |
+|  | n77 | 3450 | 10 | 50 | 3450 | N/A | TDD | N/A |
+|  | n18 | N/A | 5 | N/A | 870 | 33.8 | FDD | IMD21,4 |
+|  | n41 | 2590 | 10 | 50 | 2590 | N/A | TDD | N/A |
+|  | n77 | 3460 | 10 | 50 | 3460 | N/A | TDD | N/A |
+| CA_n25-n41-n66 | n25 | N/A | 5 | N/A | 1940 | 23.0 | FDD | IMD4 |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+|  | n66 | 1715 | 5 | 25 | 2115 | N/A | FDD | N/A |
+| CA_n25-n41-n71 | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n41 | 2532 | 10 | 50 | 2532 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 632 | 34.7 | FDD | IMD2 |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n41 | 2534 | 10 | 50 | 2534 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 632 | 19.3 | FDD | IMD5 |
+|  | n25 | N/A | 5 | N/A | 1980 | 32.0 | FDD | IMD2 |
+|  | n41 | 2658 | 10 | 50 | 2658 | N/A | TDD | N/A |
+|  | n71 | 678 | 5 | 50 | 632 | N/A | FDD | N/A |
+| CA_n25-n41-n77 | n25 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n41 | 2670 | 10 | 50 | 2670 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3470 | 22.3 | TDD | IMD31 |
+|  | n25 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2640 | 16.7 | TDD | IMD55 |
+|  | n77 | 4125 | 10 | 50 | 4125 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1950 | 25.1 | FDD | IMD35 |
+|  | n41 | 2675 | 10 | 50 | 2675 | N/A | TDD | N/A |
+|  | n77 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1950 | 18.3 | FDD | IMD4 |
+|  | n41 | 2550 | 10 | 50 | 2685 | N/A | TDD | N/A |
+|  | n77 | 3525 | 10 | 50 | 3525 | N/A | TDD | N/A |
+| CA_n25-n66-n77 | n25 | 1855 | 5 | 25 | 1935 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2115 | 35.2 | FDD | IMD22 |
+|  | n77 | 3970 | 10 | 50 | 3970 | N/A | TDD | N/A |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2160 | 16.4 | FDD | IMD5 |
+|  | n77 | 3930 | 10 | 50 | 3930 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 38.1 | FDD | IMD2 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 21.1 | FDD | IMD45 |
+|  | n66 | 1770 | 5 | 25 | 2170 | N/A | FDD | N/A |
+|  | n77 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 13.0 | FDD | IMD55 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3620 | 10 | 50 | 3620 | N/A | TDD | N/A |
+|  | n25 | 1880 | 5 | 25 | 1960 | N/A | FDD | N/A |
+|  | n66 | 1740 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3620 | 35.4 | TDD | IMD25 |
+| CA_n25-n66-n78 | n25 | 1880 | 5 | 25 | 1960 | M/A | FDD | N/A |
+|  | n66 | 1740 | 5 | 25 | 2140 | 21.1 | FDD | IMD4 |
+|  | n78 | 3500 | 10 | 50 | 3500 | N/A | TDD | N/A |
+|  | n25 | 1880 | 5 | 25 | 1960 | 37.6 | FDD | IMD21,2 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n78 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+| CA_n25-n71-n77 | n25 | 1907.5 | 5 | 25 | 1987.5 | N/A | FDD | N/A |
+|  | n71 | 695.5 | 5 | 25 | 649.5 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3305 | 16.1 | TDD | IMD31,2,5 |
+|  | n25 | N/A | 5 | N/A | 1954 | 25.5 | FDD | IMD32,5 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | 3340 | 10 | 50 | 3340 | N/A | TDD | N/A |
+| CA_n28-n41-n74 | n28 | N/A | 5 | N/A | 782 | 17.5 | FDD | IMD5 |
+|  | n41 | 2569 | 10 | 50 | 2569 | N/A | TDD | N/A |
+|  | n74 | 1452 | 5 | 25 | 1500 | N/A | FDD | N/A |
+| CA_n28-n41-n77 | n28 | 743 | 5 | 25 | 798 | N/A | FDD | N/A |
+|  | n41 | 2580 | 10 | 50 | 2580 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3323 | 32.7 | TDD | IMD22,4 |
+|  | n28 | N/A | 5 | N/A | 798 | 35.3 | FDD | IMD21,4 |
+|  | n41 | 2642 | 10 | 50 | 2642 | N/A | TDD | N/A |
+|  | n77 | 3440 | 10 | 50 | 3440 | N/A | TDD | N/A |
+|  | n28 | 738 | 5 | 25 | 793 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2642 | 33.5 | TDD | IMD24 |
+|  | n77 | 3380 | 10 | 50 | 3380 | N/A | TDD | N/A |
+| CA_n28-n41-n79 | n28 | 725 | 5 | 25 | 780 | 22 | FDD | IMD31 |
+|  | n41 | 2600 | 10 | 50 | 2600 | N/A | TDD | N/A |
+|  | n79 | 4600 | 40 | 216 | 4600 | N/A | TDD | N/A |
+|  | n28 | 720 | 5 | 25 | 775 | N/A | FDD | N/A |
+|  | n41 | 2600 | 10 | 50 | 2600 | N/A | TDD | N/A |
+|  | n79 | 4480 | 40 | 216 | 4600 | 19.1 | TDD | IMD32 |
+|  | n28 | 735 | 5 | 25 | 790 | N/A | FDD | N/A |
+|  | n41 | 2645 | 10 | 50 | 2645 | 22.4 | TDD | IMD4 |
+|  | n79 | 4850 | 40 | 216 | 4850 | N/A | TDD | N/A |
+| CA_n28-n74-n77 | n28 | 730 | 5 | 25 | 785 | N/A | FDD | N/A |
+|  | n74 | N/A | 5 | 25 | 1500 | 20.7 | FDD | IMD4 |
+|  | n77 | 3690 | 10 | 50 | 3690 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | 25 | 785 | 27.7 | FDD | IMD3 |
+|  | n74 | 1452 | 5 | 25 | 1500 | N/A | FDD | N/A |
+|  | n77 | 3689 | 10 | 50 | 1818.5 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | 25 | 785 | 25.1 | FDD | IMD4 |
+|  | n74 | 1458 | 5 | 25 | 1516 | N/A | FDD | N/A |
+|  | n77 | 3589 | 10 | 50 | 1818.5 | N/A | FDD | N/A |
+| CA_n28-n77-n79 | n77 | 3620 | 10 | 50 | 3620 | N/A | TDD | N/A |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n28 | 745 | 5 | 25 | 800 | 22.7 | FDD | IMD21, 2 |
+| CA_n28-n78-n79 | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | 3700 | 10 | 50 | 3700 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4440 | 32.2 | TDD | IMD23,4 |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+|  | n79 | N/A | 40 | N/A | 4440 | 5.7 | TDD | IMD53,4 |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3700 | 32.9 | TDD | IMD23 |
+|  | n79 | 4440 | 40 | 216 | 4440 | N/A | TDD | N/A |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | N/A | 10 | N/A | 3420 | 16.8 | TDD | IMD33 |
+|  | n79 | 4900 | 40 | 216 | 4900 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 800 | 22.2 | FDD | IMD2 |
+|  | n78 | 3620 | 10 | 50 | 3620 | N/A | TDD | N/A |
+|  | n79 | 4420 | 40 | 216 | 4420 | N/A | TDD | N/A |
+|  | n28 | N/A | 5 | N/A | 790 | 5.7 | FDD | IMD5 |
+|  | n78 | 3530 | 10 | 50 | 3530 | N/A | TDD | N/A |
+|  | n79 | 4900 | 40 | 216 | 4900 | N/A | TDD | N/A |
+| CA_n29-n30-n77 | n29 | N/A | 5 | N/A | 722 | 23.5 | FDD | IMD31 |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n77 | 3898 | 10 | 50 | 3898 | N/A | TDD | N/A |
+| CA_n29-n66-n77 | n29 | N/A | 5 | N/A | 722 | 23.5 | FDD | IMD35 |
+|  | n66 | 1734 | 5 | 25 | 2134 | N/A | FDD | N/A |
+|  | n77 | 4190 | 10 | 50 | 4190 | N/A | TDD | N/A |
+| CA_n30-n66-n77 | n30 | N/A | 5 | N/A | 2355 | 34.2 | FDD | IMD25 |
+|  | n66 | 1745 | 5 | 25 | 2145 | N/A | FDD | N/A |
+|  | n77 | 4100 | 10 | 50 | 4100 | N/A | TDD | N/A |
+|  | n30 | N/A | 5 | N/A | 2355 | 12.9 | FDD | IMD5 |
+|  | n66 | 1735 | 5 | 25 | 2135 | N/A | FDD | N/A |
+|  | n77 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+|  | n30 | 2310 | 5 | 25 | 2355 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2160 | 19.2 | FDD | IMD45 |
+|  | n77 | 3390 | 10 | 50 | 3390 | N/A | TDD | N/A |
+| CA_n41-n66-n77 | n41 | 2600 | 10 | 50 | 2600 | N/A | TDD | N/A |
+|  | n66 | 1730 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3470 | 23.6 | TDD | IMD31,2 |
+|  | n41 | N/A | 10 | N/A | 2670 | 16.6 | TDD | IMD55 |
+|  | n66 | 1715 | 5 | 25 | 2115 | N/A | FDD | N/A |
+|  | n77 | 4190 | 10 | 50 | 4190 | N/A | TDD | N/A |
+|  | n41 | 2640 | 10 | 50 | 2640 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2160 | 19.0 | FDD | IMD4 |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+| CA_n41-n71-n77 | n41 | 2615 | 10 | 50 | 2615 | N/A | TDD | N/A |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3308 | 33.7 | TDD | IMD21,2,5 |
+|  | n41 | 2564 | 10 | 50 | 2564 | N/A | TDD | N/A |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3950 | 23.8 | TDD | IMD31 |
+|  | n41 | N/A | 10 | N/A | 2615 | 32.7 | TDD | IMD25 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | 3308 | 10 | 50 | 3308 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2564 | 22.5 | TDD | IMD3 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | 3950 | 10 | 50 | 3950 | N/A | TDD | N/A |
+|  | n41 | 2680 | 10 | 50 | 2680 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 640 | 35.3 | FDD | IMD25 |
+|  | n77 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+| CA_n41-n74-n77 | n41 | 2650 | 10 | 50 | 2650 | N/A | TDD | N/A |
+|  | n74 | N/A | 5 | N/A | 1500 | 35.2 | FDD | IMD22 |
+|  | n77 | 4150 | 10 | 50 | 4150 | NA | TDD | N/A |
+|  | n41 | 2525 | 10 | 50 | 2525 | N/A | TDD | N/A |
+|  | n74 | N/A | 5 | N/A | 1500 | 24 | FDD | IMD3 |
+|  | n77 | 3550 | 10 | 50 | 3550 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2650 | 34 | TDD | IMD2 |
+|  | n74 | 1450 | 5 | 25 | 1498 | N/A | FDD | N/A |
+|  | n77 | 4100 | 10 | 50 | 4100 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2518 | 13.9 | TDD | IMD5 |
+|  | n74 | 1454 | 5 | 25 | 1502 | N/A | FDD | N/A |
+|  | n77 | 3440 | 10 | 50 | 3440 | N/A | TDD | N/A |
+|  | n41 | 2650 | 10 | 50 | 2650 | N/A | TDD | N/A |
+|  | n74 | 1450 | 5 | 25 | 1498 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4100 | 33 | TDD | IMD2 |
+|  | n41 | 2525 | 10 | 50 | 2525 | N/A | TDD | N/A |
+|  | n74 | 1450 | 5 | 25 | 1498 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3600 | 23 | TDD | IMD31 |
+| CA_n66-n71-n77 | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n71 | 668 | 5 | 25 | 622 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4108 | 24.9 | TDD | IMD31,2,5 |
+|  | n66 | N/A | 5 | N/A | 2150 | 24.5 | FDD | IMD32 |
+|  | n71 | 690 | 5 | 25 | 644 | N/A | FDD | N/A |
+|  | n77 | 3530 | 10 | 50 | 3530 | N/A | TDD | N/A |
+|  | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n71 | N/A | 5 | N/A | 640 | 24.3 | FDD | IMD35 |
+|  | n77 | 4080 | 10 | 50 | 4080 | N/A | TDD | N/A |
+| NOTE 1: This band is subject to IMD5 also which MSD is not specified.NOTE 2: This band is subject to IMD4 also which MSD is not specified.NOTE 3: The requirements only apply for UEs supporting inter-band carrier aggregation with simultaneous Rx/Tx capability. Simultaneous Rx/Tx capability does not apply for UEs supporting band n78 with a n77 implementation.NOTE 4: This band is subject to IMD3 also which MSD is not specified.NOTE 5: For a UE which supports this band combination only when the Band n77 frequency range restriction defined in NOTE 12 of Table 5.2-1 applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 6: Both of the transmitters shall be set min(+23 dBm, PCMAX_L,f,c) as defined in clause 6.2A.4NOTE 7: This band supports intra-band non-contiguous uplink configuration.NOTE 8: In Japan, n77 band is restricted to 3400 – 4100 MHz frequency range, and there are no valid MSD test points when using this restricted frequency range |  |  |  |  |  |  |  |  |
+
+Table 7.3A.5-2b: 3DL/2UL inter-band Reference sensitivity QPSK PREFSENS and uplink/downlink configurations for PC1.5 CA
+
+| Band / Channel bandwidth / NRB / Duplex mode |  |  |  |  |  |  |  | Source of IMD |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| NR CAConfiguration | NR band | UL Fc  (MHz) | UL/DL BW  (MHz) | UL  LCRB | DL Fc (MHz) | MSD  (dB) | Duplex mode |  |
+| CA_n1-n3-n78 | n1 | 1950 | 5 | 25 | 2140 | N/A | FDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1830 | 38.7 | FDD | IMD2 |
+|  | n78 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+| CA_n1-n7-n78 | n1 | 1977.5 | 5 | 25 | 2167.5 | N/A | FDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2627.5 | 25.2 | FDD | IMD4 |
+|  | n78 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n1 | N/A | 5 | N/A | 2140 | 29.5 | FDD | IMD4 |
+|  | n7 | 2510 | 10 | 50 | 2630 | N/A | FDD | N/A |
+|  | n78 | 3580 | 10 | 50 | 3580 | N/A | TDD | N/A |
+| CA_n1-n26-n78 | n1 | N/A | 5 | N/A | 2122 | 31.9 | FDD | IMD3 |
+|  | n26 | 829 | 5 | 25 | 874 | N/A | FDD | N/A |
+|  | n78 | 3780 | 10 | 50 | 3780 | N/A | TDD | N/A |
+|  | n1 | 1975 | 5 | 25 | 2165 | N/A | FDD | N/A |
+|  | n26 | N/A | 5 | N/A | 885 | 23.9 | FDD | IMD5 |
+|  | n78 | 3405 | 10 | 50 | 3405 | N/A | TDD | N/A |
+| CA_n1-n28-n78 | n1 | N/A | 5 | N/A | 2150 | 29.4 | FDD | IMD3 |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | 3630 | 10 | 50 | 3630 | N/A | TDD | N/A |
+|  | n1 | 1970 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 794 | 21.3 | FDD | IMD5 |
+|  | n78 | 3352 | 10 | 50 | 3352 | N/A | TDD | N/A |
+| CA_n2-n5-n77 | n2 | 1907.5 | 5 | 25 | 1987.5 | N/A | FDD | N/A |
+|  | n5 | N/A | 5 | N/A | 887.5 | 30.3 | FDD | IMD55 |
+|  | n77 | 3305 | 10 | 50 | 3305 | N/A | TDD | N/A |
+|  | n2 | N/A | 5 | N/A | 1987 | 34.5 | FDD | IMD35 |
+|  | n5 | 846.5 | 5 | 25 | 891.5 | N/A | FDD | N/A |
+|  | n77 | 3680 | 10 | 50 | 3680 | N/A | TDD | N/A |
+| CA_n2-n66-n77 | n2 | 1855 | 5 | 25 | 1935 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2115 | 41.2 | FDD | IMD21,2 |
+|  | n77 | 3970 | 10 | 50 | 3970 | N/A | TDD | N/A |
+|  | n2 | N/A | 5 | N/A | 1960 | 44.1 | FDD | IMD21,2 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+|  | n2 | N/A | 5 | 25 | 1950 | 27 | FDD | IMD3 |
+|  | n66 | 1775 | 5 | 25 | 2175 | N/A | FDD | N/A |
+|  | n77 | 3300 | 100 | 1 (RBstart=203) | 3300 | N/A | TDD | N/A |
+|  |  | 3400 | 100 | 1 (RBstart=67) | 3400 |  |  |  |
+| CA_n3-n7-n78 | n3 | N/A | 5 | N/A | 1820 | 31.4 | FDD | IMD3 |
+|  | n7 | 2565 | 5 | 25 | 2685 | N/A | FDD | N/A |
+|  | n78 | 3310 | 10 | 50 | 3310 | N/A | TDD | N/A |
+|  | n3 | N/A | 5 | N/A | 1820 | 29.4 | FDD | IMD4 |
+|  | n7 | 2565 | 5 | 25 | 2685 | N/A | FDD | N/A |
+|  | n78 | 3475 | 10 | 50 | 3475 | N/A | TDD | N/A |
+| CA_n3-n26-n78 | n3 | N/A | 5 | N/A | 1862 | 29.4 | FDD | IMD3 |
+|  | n26 | 839 | 5 | 25 | 884 | N/A | FDD | N/A |
+|  | n78 | 3540 | 10 | 50 | 3540 | N/A | TDD | N/A |
+| CA_n3-n28-n78 | n3 | N/A | 5 | N/A | 1850 | 31 | FDD | IMD3 |
+|  | n28 | 735 | 5 | 25 | 790 | N/A | FDD | N/A |
+|  | n78 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+| CA_n5-n66-n77 | n5 | 845 | 5 | 25 | 890 | N/A | FDD | N/A |
+|  | n66 | 1775 | 5 | 25 | 2175 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3465 | 34.1 | TDD | IMD3 |
+|  | n5 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n66 | 1712.5 | 5 | 25 | 2112.5 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 4192 | 30.8 | TDD | IMD45 |
+|  | n5 | 835 | 5 | 25 | 880 | N/A | FDD | N/A |
+|  | n66 | 1735 | 5 | 25 | 2135 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3535 | 28.8 | TDD | IMD5 |
+|  | n5 | 826.5 | 5 | 25 | 871.5 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2142 | 31.2 | FDD | IMD3 |
+|  | n77 | 3795 | 10 | 50 | 3795 | N/A | TDD | N/A |
+| CA_n7-n26-n78 | n7 | 2550 | 5 | 25 | 2670 | N/A | FDD | N/A |
+|  | n26 | N/A | 5 | N/A | 879 | 41 | FDD | IMD2 |
+|  | n78 | 3429 | 10 | 50 | 3429 | N/A | TDD | N/A |
+|  | n7 | 2525 | 5 | 25 | 2645 | N/A | FDD | N/A |
+|  | n26 | N/A | 5 | N/A | 875 | 24.3 | FDD | IMD5 |
+|  | n78 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2645 | 40.9 | FDD | IMD2 |
+|  | n26 | 844 | 5 | 25 | 889 | N/A | FDD | N/A |
+|  | n78 | 3489 | 10 | 50 | 3489 | N/A | TDD | N/A |
+| CA_n7-n28-n78 | n7 | 2567.5 | 5 | 25 | 2687.5 | N/A | FDD | N/A |
+|  | n28 | N/A | 5 | N/A | 782.5 | 39.6 | FDD | IMD21 |
+|  | n78 | 3350 | 10 | 50 | 3350 | N/A | TDD | N/A |
+|  | n7 | N/A | 5 | N/A | 2650 | 41.3 | FDD | IMD2 |
+|  | n28 | 740 | 5 | 25 | 795 | N/A | FDD | N/A |
+|  | n78 | 3390 | 10 | 50 | 3390 | N/A | TDD | N/A |
+| CA_n25-n41-n66 | n25 | N/A | 5 | N/A | 1940 | 35.0 | FDD | IMD4 |
+|  | n41 | 2685 | 10 | 50 | 2685 | N/A | TDD | N/A |
+|  | n66 | 1715 | 5 | 25 | 2115 | N/A | FDD | N/A |
+| CA_n25-n41-n71 | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n41 | 2532 | 10 | 50 | 2532 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 632 | 40.7 | FDD | IMD2 |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n41 | 2534 | 10 | 50 | 2534 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 632 | 31.5 | FDD | IMD5 |
+|  | n25 | N/A | 5 | N/A | 1980 | 38.0 | FDD | IMD2 |
+|  | n41 | 2658 | 10 | 50 | 2658 | N/A | TDD | N/A |
+|  | n71 | 678 | 5 | 50 | 632 | N/A | FDD | N/A |
+| CA_n25-n41-n77 | n25 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n41 | 2670 | 10 | 50 | 2670 | N/A | TDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3470 | 31.3 | TDD | IMD31 |
+|  | n25 | 1870 | 5 | 25 | 1950 | N/A | FDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2640 | 31.5 | TDD | IMD55 |
+|  | n77 | 4125 | 10 | 50 | 4125 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1950 | 34.1 | FDD | IMD35 |
+|  | n41 | 2675 | 10 | 50 | 2675 | N/A | TDD | N/A |
+|  | n77 | 3400 | 10 | 50 | 3400 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1950 | 30.1 | FDD | IMD4 |
+|  | n41 | 2550 | 10 | 50 | 2550 | N/A | TDD | N/A |
+|  | n77 | 3525 | 10 | 50 | 3525 | N/A | TDD | N/A |
+| CA_n25-n66-n77 | n25 | 1855 | 5 | 25 | 1935 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2115 | 41.2 | FDD | IMD22 |
+|  | n77 | 3970 | 10 | 50 | 3970 | N/A | TDD | N/A |
+|  | n25 | 1900 | 5 | 25 | 1980 | N/A | FDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2160 | 31.2 | FDD | IMD5 |
+|  | n77 | 3930 | 10 | 50 | 3930 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 44.1 | FDD | IMD22,5 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+|  | n25 | N/A | 5 | N/A | 1960 | 27.6 | FDD | IMD55 |
+|  | n66 | 1760 | 5 | 25 | 2160 | N/A | FDD | N/A |
+|  | n77 | 3620 | 10 | 50 | 3620 | N/A | TDD | N/A |
+| CA_n25-n71-n77 | n25 | N/A | 5 | N/A | 1954 | 34.5 | FDD | IMD32,5 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | 3340 | 10 | 50 | 3340 | N/A | TDD | N/A |
+| CA_n41-n66-n77 | n41 | 2600 | 10 | 50 | 2600 | N/A | TDD | N/A |
+|  | n66 | 1730 | 5 | 25 | 2130 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3470 | 32.6 | TDD | IMD31,2 |
+|  | n41 | N/A | 10 | N/A | 2670 | 31.4 | TDD | IMD55 |
+|  | n66 | 1715 | 5 | 25 | 2115 | N/A | FDD | N/A |
+|  | n77 | 4190 | 10 | 50 | 4190 | N/A | TDD | N/A |
+|  | n41 | 2640 | 10 | 50 | 2640 | N/A | TDD | N/A |
+|  | n66 | N/A | 5 | N/A | 2160 | 30.8 | FDD | IMD4 |
+|  | n77 | 3720 | 10 | 50 | 3720 | N/A | TDD | N/A |
+| CA_n41-n71-n77 | n41 | 2615 | 10 | 50 | 2615 | N/A | TDD | N/A |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3308 | 39.7 | TDD | IMD21,2,5 |
+|  | n41 | 2564 | 10 | 50 | 2564 | N/A | TDD | N/A |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | N/A | 10 | N/A | 3950 | 32.8 | TDD | IMD31 |
+|  | n41 | N/A | 10 | N/A | 2615 | 38.7 | TDD | IMD25 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | 3308 | 10 | 50 | 3308 | N/A | TDD | N/A |
+|  | n41 | N/A | 10 | N/A | 2564 | 31.5 | TDD | IMD3 |
+|  | n71 | 693 | 5 | 25 | 647 | N/A | FDD | N/A |
+|  | n77 | 3950 | 10 | 50 | 3950 | N/A | TDD | N/A |
+|  | 41 | 2680 | 10 | 50 | 2680 | N/A | TDD | N/A |
+|  | n71 | N/A | 5 | N/A | 640 | 41.3 | FDD | IMD25 |
+|  | n77 | 3320 | 10 | 50 | 3320 | N/A | TDD | N/A |
+| CA_n66-n71-n77 | n66 | N/A | 5 | N/A | 2150 | 33.5 | FDD | IMD32 |
+|  | n71 | 690 | 5 | 25 | 644 | N/A | FDD | N/A |
+|  | n77 | 3530 | 10 | 50 | 3530 | N/A | TDD | N/A |
+|  | n66 | 1720 | 5 | 25 | 2120 | N/A | FDD | N/A |
+|  | n71 | N/A | 5 | N/A | 640 | 33.3 | FDD | IMD35 |
+|  | n77 | 4080 | 10 | 50 | 4080 | N/A | TDD | N/A |
+| NOTE 1: This band is subject to IMD5 also which MSD is not specified.NOTE 2: This band is subject to IMD4 also which MSD is not specified.NOTE 3: The requirements only apply for UEs supporting inter-band carrier aggregation with simultaneous Rx/Tx capability. Simultaneous Rx/Tx capability does not apply for UEs supporting band n78 with a n77 implementation.NOTE 4: This band is subject to IMD3 also which MSD is not specified.NOTE 5: For a UE which supports this band combination only when the Band n77 frequency range restriction defined in NOTE 12 of Table 5.2-1 applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skippedNOTE 6: This band combination is specified with support of two band inter-band UL CA with UL MIMO or Tx diversity capabilities, and the transmitter shall be set at min (+23 dBm, PCMAX_L,f,c) for the UL band with single Tx antenna connector as defined in clause 6.2A.4, and set at min (+27.8 dBm, PCMAX_L,f,c) for the UL band with 2Tx antenna connectors as defined in clause 6.2H.3.4 or 6.2L.3.4. |  |  |  |  |  |  |  |  |
+
+### 7.3A.6 Reference sensitivity exceptions due to cross band isolation for CA
+
+Sensitivity degradation is allowed for a band if it is impacted by UL of another band part which belongs to NR band of the same NR CA configuration due to cross band isolation issues. The reference sensitivity degradation for the victim band due to cross band isolation is specified only for the specific uplink and downlink test points specified in Table 7.3A.6-1 for either PC3 and PC2 NR CA from a PC3 aggressor NR UL band, and for PC2 NR CA, in Table 7.3A.6-1afrom a PC2 aggressor NR UL band, and in Table 7.3A.6-1b from a PC1.5 aggressor NR single band uplink, and in Table 7.3A.6-3 when a DL band < 1 GHz  is victim of two simultaneous PC3 aggressor NR UL bands.
+
+In Tables 7.3A.6-1, 7.3A.6-1a and 7.3A.6-1b the following terminology is used to define the source of cross-band isolation interference:
+
+- “ACLR1” indicates that the first adjacent channel of the aggressor UL band falls into the Rx channel of victim band.
+
+- “ACLR2” indicates that the second adjacent channel of the aggressor UL band falls into the Rx channel of victim band.
+
+- “>ACLR2” indicates that neither the first, nor the second adjacent channel of the aggressor UL band falls into the Rx channel of victim band.
+
+In Table 7.3A.6-3 only two DL / two UL < 1 GHz bands cases where one DL is simultaneously victim of UL channel ACLR1 of one band and UL channel ACLR1 or 2 of the other band are specified.
+
+Table 7.3A.6-1: Reference sensitivity exceptions (MSD) and uplink/downlink configurations due to cross band isolation from a PC3 aggressor NR UL band for NR CA FR1
+
+| UL band | DL band | UL Fc | UL BW | SCS of UL band | UL RB Allocation | DL Fc | DL BW | MSD | Cross-bandInterferencesource |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (MHz) | (kHz) | LCRB | (MHz) | (MHz) | (dB) |  |
+| n1 | n3 | 1922.5 | 5 | 15 | 25 (RBstart=0) | 1877.5 | 5 | 3 | >ACLR2 |
+| n1 | n3 | 1945 | 50 | 15 | 128 (RBstart=0) | 1877.5 | 5 | 19.7 | ACLR1 |
+| n1 | n38 | 1955 | 50 | 15 | 128 (RBstart=142) | 2572.5 | 5 | 2.9 | >ACLR2 |
+| n1 | n38 | 1955 | 50 | 15 | 128 (RBstart=142) | 2590 | 40 | 2.9 | >ACLR2 |
+| n1 | n40 | 1955 | 50 | 15 | 128 (RBstart=142) | 2305 | 10 | 3.6 | >ACLR2 |
+| n1 | n40 | 1970 | 20 | 15 | 100 (RBstart=6) | 2305 | 10 | 3.6 | >ACLR2 |
+| n1 | n41 | 1955 | 50 | 15 | 128 (RBstart=142) | 2501 | 10 | 6.1 | >ACLR2 |
+| n1 | n41 | 1970 | 20 | 15 | 100 (RBstart=6) | 2546 | 100 | 0.7 | >ACLR2 |
+| n2 | n66 | 1910 | 40 | 15 | 40 (RBstart=176) | 2112.5 | 5 | 0 | >ACLR2 |
+| n3 | n39 | 1770 | 30 | 15 | 50 (RBstart=110) | 1882.5 | 5 | 2.1 | >ACLR2 |
+| n3 | n41 | 1760 | 50 | 15 | 50 (RBstart=220) | 2501 | 10 | 0.7 | >ACLR2 |
+| n3 | n41 | 1760 | 50 | 15 | 50 (RBstart=220) | 2546 | 100 | 0.7 | >ACLR2 |
+| n3 | n74 | 1712.5 | 5 | 15 | 25 (RBstart=0) | 1515.5 | 5 | 2.6 | >ACLR2 |
+| n3 | n75 | 1712.5 | 5 | 15 | 25 (RBstart=0) | 1515.5 | 5 | 4.3 | >ACLR2 |
+| n5 | n8 | 844 | 10 | 15 | 25 (RBstart=27) | 951.5 | 5 | 2.8 | >ACLR2 |
+| n5 | n13 | 834 | 20 | 15 | 20 (RBstart=0) | 753.5 | 5 | 2.4 | >ACLR2 |
+| n5 | n28 | 834 | 20 | 15 | 20 (RBstart=0) | 800.5 | 5 | 17.5 | ACLR2 |
+| n5 | n71 | 834 | 20 | 15 | 20 (RBstart=0) | 649.5 | 5 | 3.9 | >ACLR2 |
+| n5 | n105 | 834 | 20 | 15 | 20 (RBstart=0) | 649.5 | 5 | 3.3 | >ACLR2 |
+| n7 | n3 | 2525 | 50 | 15 | 45 (RBstart=0) | 1877.5 | 5 | 0.6 | >ACLR2 |
+| n7 | n40 | 2525 | 50 | 15 | 45 (RBstart=0) | 2395 | 10 | 1.7 | >ACLR2 |
+| n12 | n71 | 706.5 | 15 | 15 | 20 (RBstart=0) | 649.5 | 5 | 3.8 | >ACLR2 |
+| n13 | n5 | 782 | 10 | 15 | 20 (RBstart=32) | 871.5 | 5 | 2.1 | >ACLR2 |
+| n18 | n285 | 822.5 | 15 | 15 | 25 (RBstart=0) | 800.5 | 5 | 31.3 | ACLR1 |
+| n18 | n28 | 822.5 | 15 | 15 | 25 (RBstart=0) | 785.5 | 5 | 12.7 | ACLR2 |
+| n20 | n71 | 842 | 20 | 15 | 20 (RBstart=0) | 649.5 | 5 | 2.6 | >ACLR2 |
+| n26 | n28 | 824 | 20 | 15 | 25 (RBstart=0) | 800.5 | 5 | 36.9 | ACLR1 |
+| n26 | n29 | 824 | 20 | 15 | 25 (RBstart=0) | 719.5 | 5 | 3.9 | >ACLR2 |
+| n26 | n71 | 824 | 20 | 15 | 20 (RBstart=0) | 649.5 | 5 | 3.9 | >ACLR2 |
+| n28 | n71 | 718 | 30 | 15 | 25 (RBstart=0) | 649.5 | 5 | 13.3 | ACLR2 |
+| n28 | n105 | 718 | 30 | 15 | 25 (RBstart=0) | 649.5 | 5 | 12.1 | ACLR2 |
+| n30 | n66 | 2310 | 10 | 15 | 20 (RBstart=0) | 2197.5 | 5 | 8.3 | >ACLR2 |
+| n34 | n3 | 2017.5 | 15 | 15 | 75 (RBstart=0) | 1877.5 | 5 | 3 | >ACLR2 |
+| n34 | n40 | 2017.5 | 15 | 15 | 75 (RBstart=4) | 2305 | 10 | 3 | >ACLR2 |
+| n34 | n41 | 2017.5 | 15 | 15 | 75 (RBstart=4) | 2501 | 10 | 3.2 | >ACLR2 |
+| n38 | n1 | 2590 | 40 | 15 | 216 (RBstart=0) | 2167.5 | 5 | 1.9 | >ACLR2 |
+| n38 | n2 | 2590 | 40 | 15 | 216 (RBstart=0) | 1987.5 | 5 | 0.6 | >ACLR2 |
+| n38 | n25 | 2590 | 40 | 15 | 216 (RBstart=0) | 1992.5 | 5 | 0.6 | >ACLR2 |
+| n38 | n66 | 2590 | 40 | 15 | 216 (RBstart=0) | 2197.5 | 5 | 1.9 | >ACLR2 |
+| n38 | n78 | 2600 | 40 | 15 | 216 (RBstart=0) | 3305 | 10 | 8.3 | >ACLR2 |
+| n39 | n41 | 1900 | 40 | 15 | 216 (RBstart=0) | 2501 | 10 | 3.3 | >ACLR2 |
+| n40 | n1 | 2340 | 100 | 30 | 270 (RBstart=0) | 2167.5 | 5 | 21.9 | ACLR2 |
+| n40 | n7 | 2350 | 100 | 30 | 270 (RBstart=3) | 2622.5 | 5 | 22.3 | >ACLR2 |
+| n40 | n7 | 2350 | 100 | 30 | 270 (RBstart=3) | 2645 | 50 | 15.6 | >ACLR2 |
+| n40 | n34 | 2350 | 100 | 30 | 270 (RBstart=0) | 2022.5 | 5 | 17.9 | >ACLR2 |
+| n40 | n41 | 2345 | 50 | 30 | 128 (RBstart=5) | 2565 | 100 | 11.28 | >ACLR2 |
+| n40 | n41 | 2350 | 100 | 30 | 270 (RBstart=3) | 2501 | 10 | 28.1 | ACLR2 |
+| n41 | n1 | 2546 | 100 | 30 | 270 (RBstart=0) | 2167.5 | 5 | 18.1 | >ACLR2 |
+| n41 | n2 | 2546 | 100 | 30 | 270 (RBstart=0) | 1987.5 | 5 | 0.6 | >ACLR2 |
+| n41 | n3 | 2546 | 100 | 30 | 270 (RBstart=0) | 1877.5 | 5 | 0.6 | >ACLR2 |
+| n41 | n25 | 2546 | 100 | 30 | 270 (RBstart=0) | 1992.5 | 5 | 0.6 | >ACLR2 |
+| n41 | n34 | 2456 | 100 | 30 | 270 (RBstart=0) | 2022.5 | 5 | 7.2 | >ACLR2 |
+| n41 | n39 | 2546 | 100 | 30 | 270 (RBstart=3) | 1917.5 | 5 | 1.6 | >ACLR2 |
+| n41 | n40 | 2546 | 100 | 30 | 270 (RBstart=0) | 2395 | 10 | 31.4 | ACLR2 |
+| n41 | n40 | 2565 | 100 | 30 | 270 (RBstart=0) | 2345 | 50 | 27.18 | ACLR2 |
+| n41 | n48 | 2680 | 100 | 30 | 270 (RBstart=3) | 3555 | 10 | 8.3 | >ACLR2 |
+| n411 | n66 | 2546 | 100 | 30 | 270 (RBstart=0) | 2197.5 | 5 | 10.5 | >ACLR2 |
+| n41 | n70 | 2546 | 100 | 30 | 270 (RBstart=0) | 2017.5 | 5 | 0.6 | >ACLR2 |
+| n41 | n77 | 2640 | 100 | 30 | 270 (RBstart=3) | 3305 | 10 | 8.3 | >ACLR2 |
+| n41 | n78 | 2640 | 100 | 30 | 270 (RBstart=3) | 3305 | 10 | 8.3 | >ACLR2 |
+| n46 | n48 | 5190 | 80 | 30 | 216 (RBstart=0) | 3695 | 10 | 13.3 | >ACLR2 |
+| n46 | n48 | 5190 | 80 | 30 | 216 (RBstart=0) | 3650 | 100 | 6.2 | >ACLR2 |
+| n46 | n77 | 5190 | 80 | 30 | 216 (RBstart=0) | 3975 | 10 | 10.5 | >ACLR2 |
+| n46 | n77 | 5190 | 80 | 30 | 216 (RBstart=0) | 3930 | 100 | 5.5 | >ACLR2 |
+| n46 | n78 | 5190 | 80 | 30 | 216 (RBstart=0) | 3795 | 10 | 10.4 | >ACLR2 |
+| n46 | n78 | 5190 | 80 | 30 | 216 (RBstart=0) | 3750 | 100 | 5.1 | >ACLR2 |
+| n48 | n411 | 3570 | 40 | 15 | 216 (RBstart=0) | 2685 | 10 | 4.5 | >ACLR2 |
+| n48 | n411 | 3570 | 40 | 15 | 216 (RBstart=0) | 2640 | 100 | 4.5 | >ACLR2 |
+| n48 | n46 | 3680 | 40 | 15 | 216 (RBstart=0) | 5160 | 20 | 15.7 | >ACLR2 |
+| n48 | n96 | 3680 | 40 | 15 | 216 (RBstart=0) | 5935 | 20 | 15.7 | >ACLR2 |
+| n66 | n2 | 1760 | 40 | 15 | 216 (RBstart=0) | 1932.5 | 5 | 1.2 | >ACLR2 |
+| n66 | n25 | 1757.5 | 45 | 15 | 240 (RBstart=2) | 1932.5 | 5 | 1.4 | >ACLR2 |
+| n66 | n2 | 1757.5 | 45 | 15 | 240 (RBstart=2) | 1932.5 | 5 | 1.2 | >ACLR2 |
+| n66 | n41 | 1760 | 40 | 15 | 216 (RBstart=0) | 2501 | 10 | 0.4 | >ACLR2 |
+| n71 | n5 | 685.5 | 25 | 15 | 20 (RBstart=113) | 871.5 | 5 | 2.0 | >ACLR2 |
+| n71 | n12 | 688 | 20 | 15 | 20 (RBstart=86) | 731.5 | 5 | 8.2 | ACLR2 |
+| n71 | n20 | 688 | 20 | 15 | 20 (RBstart=86) | 796 | 5 | 3.0 | >ACLR2 |
+| n71 | n26 | 688 | 20 | 15 | 20 (RBstart=86) | 861.5 | 5 | 2.0 | >ACLR2 |
+| n71 | n28 | 688 | 20 | 15 | 20 (RBstart=86) | 760.5 | 5 | 6.5 | >ACLR2 |
+| n71 | n29 | 685.5 | 25 | 15 | 20 (RBstart=113) | 719.5 | 5 | 386,9 | ACLR1 |
+| n71 | n29 | 688 | 20 | 15 | 20 (RBstart=86) | 719.5 | 5 | 17.59 | ACLR2 |
+| n71 | n85 | 685.5 | 25 | 15 | 20 (RBstart=113) | 730.5 | 5 | 10.26 | ACLR2 |
+| n71 | n85 | 680.5 | 35 | 15 | 20 (Rbstart=168) | 730.5 | 5 | 237 | ACLR1 |
+| n77 | n7 | 3350 | 100 | 30 | 270 (RBstart=0) | 2687.5 | 5 | 4.5 | >ACLR2 |
+| n77 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2395 | 5 | 7.5 | >ACLR2 |
+| n77 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2350 | 100 | 4.5 | >ACLR2 |
+| n77 | n411 | 3350 | 100 | 30 | 270 (RBstart=0) | 2685 | 10 | 4.5 | >ACLR2 |
+| n77 | n411 | 3350 | 100 | 30 | 270 (RBstart=0) | 2640 | 100 | 4.5 | >ACLR2 |
+| n78 | n71 | 3350 | 100 | 30 | 270 (RBstart=0) | 2687.5 | 5 | 4.5 | >ACLR2 |
+| n78 | n38 | 3350 | 100 | 30 | 270 (RBstart=0) | 2617.5 | 5 | 3.3 | >ACLR2 |
+| n78 | n38 | 3350 | 100 | 30 | 270 (RBstart=0) | 2600 | 40 | 3.3 | >ACLR2 |
+| n78 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2395 | 10 | 4.5 | >ACLR2 |
+| n78 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2350 | 100 | 4.5 | >ACLR2 |
+| n78 | n411 | 3350 | 100 | 30 | 270 (RBstart=0) | 2685 | 10 | 4.5 | >ACLR2 |
+| n78 | n411 | 3350 | 100 | 30 | 270 (RBstart=0) | 2640 | 100 | 4.5 | >ACLR2 |
+| n78 | n46 | 3750 | 100 | 30 | 270 (RBstart=3) | 5160 | 20 | 13.5 | >ACLR2 |
+| n783 | n79 | 3750 | 100 | 30 | 270 (RBstart=3) | 4420 | 40 | 2 | >ACLR2 |
+| n783 | n79 | 3750 | 100 | 30 | 270 (RBstart=3) | 4405 | 10 | 2 | >ACLR2 |
+| n78 | n104 | 3750 | 100 | 30 | 270 (RBstart=0) | 6435 | 20 | 14.4 | >ACLR2 |
+| n79 | n783 | 4450 | 100 | 30 | 270 (RBstart=0) | 3795 | 10 | 2.6 | >ACLR2 |
+| n79 | n783 | 4450 | 100 | 30 | 270 (RBstart=0) | 3750 | 100 | 2.6 | >ACLR2 |
+| n85 | n71 | 705.5 | 15 | 15 | 20 (RBstart=0) | 649.5 | 5 | 3.8 | >ACLR2 |
+| n96 | n48 | 5965 | 80 | 30 | 216 (RBstart=0) | 3695 | 10 | 13.3 | >ACLR2 |
+| n96 | n48 | 5965 | 80 | 30 | 216 (RBstart=0) | 3650 | 100 | 6.2 | >ACLR2 |
+| n104 | n78 | 6475 | 100 | 30 | 270 (RBstart=0) | 3795 | 10 | 15.8 | >ACLR2 |
+| n105 | n5 | 693 | 20 | 15 | 20 (RBstart=86) | 871.5 | 5 | 1.7 | >ACLR2 |
+| n105 | n28 | 693 | 20 | 15 | 20 (RBstart=86) | 760.5 | 5 | 6.9 | >ACLR2 |
+| NOTE 1: Applicable only when harmonic mixing MSD for this combination is not applied.NOTE 2: VoidNOTE 3: The requirements only apply for UEs supporting inter-band carrier aggregation with simultaneous Rx/Tx capability. Simultaneous Rx/Tx capability does not apply for UEs supporting band n78 with a n77 implementation.NOTE 4: VoidNOTE 5: The MSD exceptions are applicable to the case that interference of UL band 3rd order IMD product falls into the affected DL channels.NOTE 6: Applicable to UE not supporting n71 optional maximum symmetrical UL/DL channel bandwidthNOTE 7: Applicable to UE supporting n71 optional maximum symmetrical UL/DL channel bandwidthNOTE 8: Applicable when n41 spectrum is restricted to 2515-2675MHzNOTE 9: Not applicable to UEs indicating support of low NR band inter-band carrier aggregation via switching featureSetCombinationLowBandSwitching-r19 for this band combination |  |  |  |  |  |  |  |  |  |
+
+Table 7.3A.6-1a-1: Reference sensitivity exceptions (MSD) and uplink/downlink configurations due to cross band isolation from a PC2 aggressor NR UL band for NR CA FR1
+
+| UL band | DL band | UL Fc | UL BW | SCS of UL band | UL RB Allocation | DL Fc | DL BW | MSD | Cross-bandInterferencesource |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (MHz) | (kHz) | LCRB | (MHz) | (MHz) | (dB) |  |
+| n2 | n66 | 1900 | 20 | 15 | 50 (RBstart=56) | 2112.5 | 5 | 0.760.97 | >ACLR2 |
+| n3 | n1 | 1760 | 50 | 15 | 50 (RBstart=220) | 2112.5 | 5 | 0.861.17 | >ACLR2 |
+| n3 | n7 | 1760 | 50 | 15 | 50 (RBstart=220) | 2622.5 | 5 | 0.560.77 | >ACLR2 |
+| n7 | n1 | 2525 | 50 | 15 | 45 (RBstart=0) | 2167.5 | 5 | 0.861.17 | >ACLR2 |
+| n7 | n3 | 2525 | 50 | 15 | 45 (RBstart=0) | 1877.5 | 5 | 1.161.57 | >ACLR2 |
+| n25 | n41 | 1760 | 40 | 15 | 40 (RBstart=176) | 2501 | 10 | 0.8617 | >ACLR2 |
+| n25 | n66 | 1895 | 40 | 15 | 40 (RBstart=176) | 2112.5 | 5 | 0.760.97 | >ACLR2 |
+| n39 | n41 | 1900 | 40 | 15 | 216 (RBstart=0) | 2501 | 10 | 4.7 | >ACLR2 |
+| n40 | n3 | 2350 | 100 | 30 | 270 (RBstart=0) | 1877.5 | 5 | 0.6 | >ACLR2 |
+| n40 | n41 | 2345 | 50 | 30 | 128 (RBstart=5) | 2565 | 100 | 13.9 | >ACLR2 |
+| n40 | n41 | 2350 | 100 | 30 | 270 (RBstart=3) | 2501 | 10 | 31.1 | ACLR2 |
+| n41 | n1 | 2546 | 100 | 30 | 270 (RBstart=0) | 2167.5 | 5 | 20.8 | >ACLR2 |
+| n41 | n3 | 2546 | 100 | 30 | 270 (RBstart=0) | 1877.5 | 5 | 2.3 | >ACLR2 |
+| n41 | n25 | 2546 | 100 | 30 | 270 (RBstart=0) | 1992.5 | 5 | 1.6 | >ACLR2 |
+| n41 | n39 | 2546 | 100 | 30 | 270 (RBstart=3) | 1917.5 | 5 | 2.7 | >ACLR2 |
+| n41 | n40 | 2546 | 100 | 30 | 270 (RBstart=0) | 2395 | 10 | 31.4 | ACLR2 |
+| n41 | n40 | 2565 | 100 | 30 | 270 (RBstart=0) | 2345 | 50 | 30.1 | ACLR2 |
+| n41 | n66 | 2546 | 100 | 30 | 270 (RBstart=0) | 2197.5 | 5 | 13.1 | >ACLR2 |
+| n41 | n77 | 2640 | 100 | 30 | 270 (RBstart=3) | 3305 | 10 | 10.5 | >ACLR2 |
+| n41 | n79 | 2640 | 100 | 30 | 270 (RBstart=3) | 4405 | 10 | 3.1 | >ACLR2 |
+| n66 | n2 | 1760 | 40 | 15 | 216 (RBstart=0) | 1932.5 | 5 | 1.963.37 | >ACLR2 |
+| n66 | n25 | 1757.5 | 45 | 15 | 240 (RBstart=2) | 1932.5 | 5 | 2.263.87 | >ACLR2 |
+| n66 | n41 | 1760 | 40 | 15 | 216 (RBstart=0) | 2501 | 10 | 0.8617 | >ACLR2 |
+| n66 | n70 | 1760 | 40 | 15 | 216 (RBstart=0) | 1997.5 | 5 | 1.963.37 | >ACLR2 |
+| n70 | n66 | 1702.5 | 15 | 15 | 75 (RBstart=4) | 2112.5 | 5 | 0.460.57 | >ACLR2 |
+| n71 | n29 | 685.5 | 25 | 15 | 20 (RBstart=113) | 719.5 | 5 | 416,8447,8 | ACLR1 |
+| n71 | n29 | 688 | 20 | 15 | 20 (RBstart=86) | 719.5 | 5 | 20.46,823.37,8 | ACLR2 |
+| n71 | n85 | 685.5 | 25 | 15 | 20 (RBstart=113) | 730.5 | 5 | 13.24,616.24,7 | ACLR2 |
+| n71 | n85 | 680.5 | 35 | 15 | 20 (RBstart=168) | 730.5 | 5 | 265,632.35,7 | ACLR1 |
+| n77 | n2 | 3350 | 100 | 30 | 270 (RBstart=0) | 1987.5 | 5 | 1.0 | >ACLR2 |
+| n77 | n7 | 3350 | 100 | 30 | 270 (RBstart=0) | 2687.5 | 5 | 6.5 | >ACLR2 |
+| n77 | n25 | 3350 | 100 | 30 | 270 (RBstart=0) | 1992.5 | 5 | 1.0 | >ACLR2 |
+| n77 | n30 | 3350 | 100 | 30 | 270 (RBstart=0) | 2357.5 | 5 | 1.0 | >ACLR2 |
+| n77 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2395 | 5 | 9.5 | >ACLR2 |
+| n77 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2350 | 100 | 6.5 | >ACLR2 |
+| n77 | n411 | 3350 | 100 | 30 | 270 (RBstart=0) | 2685 | 10 | 6.5 | >ACLR2 |
+| n77 | n411 | 3350 | 100 | 30 | 270 (RBstart=0) | 2640 | 100 | 6.5 | >ACLR2 |
+| n77 | n66 | 3350 | 100 | 30 | 270 (RBstart=0) | 2197.5 | 5 | 1.0 | >ACLR2 |
+| n78 | n7 | 3350 | 100 | 30 | 270 (RBstart=0) | 2687.5 | 5 | 6.5 | >ACLR2 |
+| n78 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2395 | 10 | 6.5 | >ACLR2 |
+| n78 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2350 | 100 | 1.2 | >ACLR2 |
+| n783 | n79 | 3750 | 100 | 30 | 270 (RBstart=3) | 4405 | 10 | 5 | >ACLR2 |
+| n783 | n79 | 3750 | 100 | 30 | 270 (RBstart=3) | 4450 | 100 | 5 | >ACLR2 |
+| n79 | n41 | 4450 | 100 | 30 | 270 (RBstart=0) | 2685 | 10 | 3.5 | >ACLR2 |
+| n79 | n783 | 4450 | 100 | 30 | 270 (RBstart=0) | 3795 | 10 | 5.6 | >ACLR2 |
+| n79 | n783 | 4450 | 100 | 30 | 270 (RBstart=0) | 3750 | 100 | 5.6 | >ACLR2 |
+| NOTE 1: Applicable only when harmonic mixing MSD for this combination is not applied.NOTE 2: Void.NOTE 3: The requirements only apply for UEs supporting inter-band carrier aggregation with simultaneous Rx/Tx capability. Simultaneous Rx/Tx capability does not apply for UEs supporting band n78 with a n77 implementation.NOTE 4: Applicable to UE not supporting n71 optional maximum symmetrical UL/DL channel bandwidthNOTE 5: Applicable to UE supporting n71 optional maximum symmetrical UL/DL channel bandwidth.NOTE 6: Applicable to UE’s supporting PC2 with 1TxNOTE 7: Applicable to UE’s supporting PC2 with 2TxNOTE 8:  Not applicable to UEs indicating support of low NR band inter-band carrier aggregation via switching featureSetCombinationLowBandSwitching-r19 for this band combination |  |  |  |  |  |  |  |  |  |
+
+Table 7.3A.6-1a-2: Void
+
+Table 7.3A.6-1b: Reference sensitivity exceptions (MSD) and uplink/downlink configurations due to cross band isolation from a PC1.5 aggressor NR single UL band for DL NR CA FR1
+
+| UL band | DL band | UL Fc | UL BW | SCS of UL band | UL RB Allocation | DL Fc | DL BW | MSD | Cross-bandInterferencesource |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (MHz) | (kHz) | LCRB | (MHz) | (MHz) | (dB) |  |
+| n40 | n3 | 2350 | 100 | 30 | 270 (RBstart=0) | 1877.5 | 5 | 1.2 | >ACLR2 |
+| n40 | n41 | 2350 | 100 | 30 | 270 (RBstart=3) | 2501 | 10 | 37.9 | ACLR2 |
+| n41 | n1 | 2546 | 100 | 30 | 270 (RBstart=0) | 2167.5 | 5 | 23.5 | >ACLR2 |
+| n41 | n3 | 2546 | 100 | 30 | 270 (RBstart=0) | 1877.5 | 5 | 3.9 | >ACLR2 |
+| n41 | n25 | 2546 | 100 | 30 | 270 (RBstart=0) | 1992.5 | 5 | 2.8 | >ACLR2 |
+| n41 | n40 | 2546 | 100 | 30 | 270 (RBstart=0) | 2395 | 5 | 38.2 | ACLR2 |
+| n41 | n66 | 2521 | 50 | 30 | 128 (RBstart=0) | 2197.5 | 5 | 7.7 | >ACLR2 |
+| n41 | n77 | 2640 | 100 | 30 | 270 (RBstart=3) | 3305 | 10 | 13.3 | >ACLR2 |
+| n41 | n39 | 2546 | 100 | 30 | 270 (RBstart=3) | 1917.5 | 5 | 6.7 | >ACLR2 |
+| n77 | n2 | 3350 | 100 | 30 | 270 (RBstart=0) | 1987.5 | 5 | 1.8 | >ACLR2 |
+| n77 | n7 | 3350 | 100 | 30 | 270 (RBstart=0) | 2687.5 | 5 | 9.0 | >ACLR2 |
+| n77 | n25 | 3350 | 100 | 30 | 270 (RBstart=0) | 1992.5 | 5 | 1.8 | >ACLR2 |
+| n77 | n30 | 3350 | 100 | 30 | 270 (RBstart=0) | 2357.5 | 5 | 1.8 | >ACLR2 |
+| n77 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2395 | 5 | 12.0 | >ACLR2 |
+| n77 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2350 | 100 | 2.2 | >ACLR2 |
+| n77 | n411 | 3350 | 100 | 30 | 270 (RBstart=0) | 2685 | 10 | 9.0 | >ACLR2 |
+| n77 | n411 | 3350 | 100 | 30 | 270 (RBstart=0) | 2640 | 100 | 9.0 | >ACLR2 |
+| n77 | n66 | 3350 | 100 | 30 | 270 (RBstart=0) | 2197.5 | 5 | 1.8 | >ACLR2 |
+| n78 | n1 | 3350 | 100 | 30 | 270 (RBstart=0) | 2167.5 | 5 | 2.7 | >ACLR2 |
+| n78 | n7 | 3350 | 100 | 30 | 270 (RBstart=0) | 2687.5 | 5 | 9.0 | >ACLR2 |
+| n78 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2395 | 10 | 9.0 | >ACLR2 |
+| n78 | n401 | 3350 | 100 | 30 | 270 (RBstart=0) | 2350 | 100 | 2.2 | >ACLR2 |
+| n783 | n79 | 3750 | 100 | 30 | 270 (RBstart=3) | 4405 | 10 | 8 | >ACLR2 |
+| n783 | n79 | 3750 | 100 | 30 | 270 (RBstart=3) | 4420 | 40 | 8 | >ACLR2 |
+| n783 | n79 | 3750 | 100 | 30 | 270 (RBstart=3) | 4450 | 100 | 8 | >ACLR2 |
+| n79 | n783 | 4450 | 100 | 30 | 270 (RBstart=0) | 3795 | 10 | 8.6 | >ACLR2 |
+| n79 | n783 | 4450 | 100 | 30 | 270 (RBstart=0) | 3750 | 100 | 8.6 | >ACLR2 |
+| NOTE 1: Applicable only when harmonic mixing MSD for this combination is not applied.NOTE 2: Void.NOTE 3: The requirements only apply for UEs supporting inter-band carrier aggregation with simultaneous Rx/Tx capability. Simultaneous Rx/Tx capability does not apply for UEs supporting band n78 with a n77 implementation. |  |  |  |  |  |  |  |  |  |
+
+Table 7.3A.6-1c: Reference sensitivity exceptions (MSD) and uplink/downlink configurations due to cross band isolation from a power class 5 aggressor NR single UL band for DL NR CA FR1
+
+| UL band | DL band | UL Fc | UL BW | SCS of UL band | UL RB Allocation | DL Fc | DL BW | MSD | Cross-bandInterferencesource |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (MHz) | (kHz) | LCRB | (MHz) | (MHz) | (dB) |  |
+| n46 | n48 | 5190 | 80 | 30 | 216 (RBstart=0) | 3695 | 10 | 11 | >ACLR2 |
+| n46 | n48 | 5190 | 80 | 30 | 216 (RBstart=0) | 3650 | 100 | 3.9 | >ACLR2 |
+| n46 | n78 | 5190 | 80 | 30 | 216 (RBstart=0) | 3795 | 10 | 8.1 | >ACLR2 |
+| n46 | n78 | 5190 | 80 | 30 | 216 (RBstart=0) | 3750 | 100 | 2.8 | >ACLR2 |
+| n96 | n48 | 5965 | 80 | 30 | 216 (RBstart=0) | 3695 | 10 | 11 | >ACLR2 |
+| n96 | n48 | 5965 | 80 | 30 | 216 (RBstart=0) | 3650 | 100 | 3.9 | >ACLR2 |
+| NOTE 1: Void |  |  |  |  |  |  |  |  |  |
+
+Table 7.3A.6-2: Void
+
+Table 7.3A.6-3: Reference sensitivity exceptions (MSD) and uplink/downlink configurations due to cross band isolation from two simulataneous PC3 aggressor NR UL bands for NR CA FR1
+
+| UL band | DL band | UL Fc | UL BW | SCS of UL band | UL RB Allocation | DL Fc | DL BW | MSD | Cross-bandInterferencesource |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (MHz) | (kHz) | LCRB | (MHz) | (MHz) | (dB) |  |
+| n5 | n28 | 834 | 20 | 15 | 20 (RBstart=0) | 788 | 30 | 3.1 | ACLR2 |
+| n28 |  | 733 | 30 | 15 | 25 (RBstart=135) |  |  |  | ACLR1 |
+| n26 | n28 | 824 | 20 | 15 | 25 (RBstart=0) | 788 | 30 | 13.5 | ACLR1 |
+| n28 |  | 733 | 30 | 15 | 25 (RBstart=135) |  |  |  | ACLR1 |
+
+### 7.3A.7 Lower-MSD requirements for inter-band CA
+
+A UE can report better MSD performance than the minimum requirements as specified in clause 7.3A.4, 7.3A.5, 7.3A.6, 7.3A.2.3.1 and in clause 7.3A.2.3.2 by lowerMSD-r18 capability, except that the reporting for MSD caused by IMD with order higher than 5, IMD of UL intra-band CA or triple-beat is not supported in this release of the specification. The MSD performance after improvement is categorized into different lower-MSD capability classes, which are defined in Table 7.3A.7-1.
+
+Table 7.3A.7-1: Lower-MSD capability classes
+
+| Lower-MSD capability class | Maximum allowed actual MSD(i.e. Threshold) | Remark |
+| --- | --- | --- |
+| I | 0 dB | Actual MSD ≤ 0dB |
+| II | 3 dB | Actual MSD ≤ 3dB |
+| III | 6 dB | Actual MSD ≤ 6dB |
+| IV | 9 dB | Actual MSD ≤ 9dB |
+| V | 12 dB | Actual MSD ≤ 12dB |
+| VI | 15 dB | Actual MSD ≤ 15dB |
+| VII | 18 dB | Actual MSD ≤ 18dB |
+| VIII | 22 dB | Actual MSD ≤ 22dB |
+
+The reported lower-MSD capability classes are subject to the same uplink/downlink configurations as defined for the minimum MSD requirements in clause 7.3A.4, 7.3A.5, 7.3A.6, 7.3A.2.3.1 and 7.3A.2.3.2. If a UE can support more than one test points for a given REFSENS exception case, the reported lower-MSD capability class is applicable for the test point having the largest specified MSD value. Otherwise, it’s only applicable for the test point which can be supported by the UE. If one or multiple power classes are requested by the network, the UE can, if supported, report lowerMSD-r18 capability for the requested power classes; otherwise, the UE shall report lowerMSD-r18 capability for the highest supported power class for the given CA configuration.
+
+The UE shall meet one of the following conditions in order to report lowerMSD-r18 capability for a given REFSENS exception case:
+
+- If the specified minimum requirement is tightly bounded by the range of a lower-MSD capability class (i.e, Thresholdi-1 < MSD ≤ Thresholdi, where i and (i-1) are two adjacent lower-MSD capability classes), the actual MSD shall be at least one-level lower (i.e., actual MSD ≤ Thresholdi-1); or
+
+- If the specified minimum requirement is larger than the maximum threshold (corresponding to lower-MSD capability class VIII), the actual MSD shall be no more than the maximum threshold.
+
+Otherwise, the UE shall not report lowerMSD-r18 capability for this REFSENS exception case.
+
+If the special MSD type “ALL” is indicated in the lowerMSD-r18 capability, the reporting conditions as specified above shall be met for each MSD type that has been specified in this release for the given CA configuration.
+
+NOTE 1:  The lowerMSD-r18 capability is verified by reusing the MSD test point parameters and only replacing the minimum MSD requirement value by the threshold of the reported lower-MSD capability class. UE supporting lower MSD shall indicate the lower MSD capability for the requested power class if supported. If no power class is explicitly requested, the UE supporting lower MSD shall indicate the lower MSD capability for the highest supported power class of the band combination including victim band and aggressor band(s). And, similar to the specified MSD minimum requirements, only the highest supported power class or the power class required by the certification/regulation body per UL configuration is verified.
+
+NOTE 2: If the UE is equipped with four or eight Rx antenna ports for the victim band of the BC, the lowerMSD-r18 capability is verified with four or eight Rx antenna ports according to clause 7.2 under the condition mentioned above, but with the increased MSD values by the absolute value of ΔRIB,4Ror ΔRIB,8R applied for the requirement based on the description in clause 7.3A.1.
+
+## 7.3B Reference sensitivity for NR-DC
+
+For inter-band NR-DC configurations, the reference sensitivity for the corresponding inter-band CA configuration as specified in clause 7.3A applies.
+
+## 7.3C Reference sensitivity for SUL
+
+### 7.3C.1 General
+
+The reference sensitivity power level REFSENS is the minimum mean power applied to each one of the UE antenna ports for all UE categories, at which the throughput shall meet or exceed the requirements for the specified reference measurement channel. For operations with 4 Rx or 8 Rx antenna ports, the MSD in the applicable bands shall be increased by the absolute value of ΔRIB,4R in Table 7.3.2-2 or ΔRIB,8R in Table 7.3.2-2a when MSD > 0.
+
+For reference sensitivity exception test points where the specified carrier frequency does not correspond to a valid NR-ARFCN, the closest NR-ARFCN as specified in clause 5.4.2 applies.
+
+For reference sensitivity level tests or reference sensitivity exception tests specified in clause 7.3C, SCS=15kHz based UL test configuration can be replaced by SCS=30kHz based UL test configuration. The equivalent substitution relationship between different SCS UL test configuration is shown in Table 7.3A.1-1 for the operating bands above 2.2GHz.
+
+### 7.3C.2 Reference sensitivity power level for SUL
+
+
+For SUL operation, the reference receive sensitivity (REFSENS) requirement for downlink bands specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-2 and Table 7.3.2-2a  shall be met for an uplink transmission bandwidth less than or equal to that specified in Table 7.3.2-3 or supplementary uplink transmission bandwidth less than or equal to that specified in Table 7.3C.2-1 with reference measurement channels as specified in Annexes A.2.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1), unless sensitivity degradation is allowed in this clause of this specification. These exceptions also apply to any higher order CA or DC combination containing one of the exception combinations in this clause as subset.
+
+For SUL operation with downlink CA, the reference receive sensitivity (REFSENS) requirement for downlink bands specified in clause 7.3A.2 shall be met for an uplink transmission bandwidth less than or equal to that specified in Table 7.3.2-3 or supplementary uplink transmission bandwidth less than or equal to that specified in Table 7.3C.2-1 with reference measurement channels as specified in Annexes A.2.2.2,  A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1), unless sensitivity degradation is allowed in this clause of this specification. These exceptions also apply to any higher order CA or DC combination containing one of the exception combinations in this clause as subset.
+
+Table 7.3C.2-1: Supplementary uplink configuration for reference sensitivity
+
+| NR Band / SCS of SUL band / Channel bandwidth of the DL band / NRB |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| DL band | SUL band | SCS of SUL band(kHz) | 5MHz | 10 MHz | 15 MHz | 20 MHz | 25 MHz | 30 MHz | 40 MHz | 50 MHz | 60 MHz | 70MHz | 80 MHz | 90 MHz | 100 MHz |
+| n1 | n80 | 15 | 160 | 160 | 160 | 160 | 160 | 160 | 160 |  |  |  |  |  |  |
+| n1 | n81 | 15 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |  |  |  |  |  |
+| n1 | n841 | 15 | 25 | 50 | 75 | 100 | 128 | 128 | 128 | 128 |  |  |  |  |  |
+| n1 | n89 | 15 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |  |  |  |  |  |
+| n3 | n801 | 15 | 25 | 50 | 50 | 50 | 50 | 50 | 50 |  |  |  |  |  |  |
+| n3 | n84 | 15 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |  |  |  |  |  |  |
+| n5 | n84 | 15 | 100 | 100 | 100 | 100 |  |  |  |  |  |  |  |  |  |
+| n8 | n84 | 15 | 100 | 100 | 100 | 100 |  |  |  |  |  |  |  |  |  |
+| n8 | n811 | 15 | 25 | 25 | 20 | 20 |  |  |  |  |  |  |  |  |  |
+| n24 | n991 | 15 | 25 | 50 |  |  |  |  |  |  |  |  |  |  |  |
+| n28 | n831 | 15 | 25 | 25 | 25 | 25 |  | 25 |  |  |  |  |  |  |  |
+| n41 | n80 | 15 |  | 160 | 160 | 160 |  | 160 | 160 | 160 | 160 |  | 160 | 160 | 160 |
+| n41 | n81 | 15 |  | 100 | 100 | 100 |  |  | 100 | 100 | 100 |  | 100 | 100 | 100 |
+| n41 | n83 | 15 |  | 100 | 100 | 100 |  | 100 | 100 | 100 | 100 |  | 100 | 100 | 100 |
+|  |  | 30 |  | 50 | 50 | 50 |  | 50 | 50 | 50 | 50 |  | 50 | 50 | 50 |
+| n41 | n95 | 15 |  | 75 | 75 | 75 |  | 75 | 75 | 75 | 75 |  | 75 | 75 | 75 |
+| n41 | n97 | 30 |  | 216 | 216 | 216 |  | 216 | 216 | 216 | 216 | 216 | 216 | 216 | 216 |
+| n41 | n98 | 15 |  | 216 | 216 | 216 |  | 216 | 216 | 216 | 216 |  | 216 | 216 | 216 |
+| n41 | n99 | 15 |  | 50 | 50 | 50 |  | 50 | 50 | 50 | 50 |  | 50 | 50 | 50 |
+| n48 | n99 | 15 |  | 50 | 50 | 50 |  | 50 | 50 | 50 | 50 |  | 50 | 50 | 50 |
+| n77 | n80 | 15 |  | 160 | 160 | 160 |  |  | 160 | 160 | 160 |  | 160 | 160 | 160 |
+| n77 | n84 | 15 |  | 100 | 100 | 100 |  |  | 100 | 100 | 100 |  | 100 | 100 | 100 |
+| n77 | n99 | 15 |  | 50 | 50 | 50 | 50 | 50 | 50 | 50 | 50 | 50 | 50 | 50 | 50 |
+| n78 | n80 | 15 |  | 160 | 160 | 160 | 160 | 160 | 160 | 160 | 160 | 160 | 160 | 160 | 160 |
+| n78 | n81 | 15 |  | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| n78 | n82 | 15 |  | 100 | 100 | 100 |  |  | 100 | 100 | 100 |  | 100 | 100 | 100 |
+| n78 | n83 | 15 |  | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| n78 | n84 | 15 |  | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| n78 | n86 | 15 |  | 216 | 216 | 216 |  |  | 216 | 216 | 216 |  | 216 | 216 | 216 |
+| n78 | n89 | 15 |  | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| n79 | n80 | 15 |  |  |  |  |  |  | 160 | 160 | 160 |  | 160 |  | 160 |
+| n79 | n83 | 15 |  | 100 |  | 100 |  | 100 | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+|  |  | 30 |  | 50 |  | 50 |  | 50 | 50 | 50 | 50 | 50 | 50 | 50 | 50 |
+| n79 | n81 | 15 |  |  |  |  |  |  | 100 | 100 | 100 |  | 100 |  | 100 |
+| n79 | n84 | 15 |  |  |  |  |  |  | 100 | 100 | 100 |  | 100 |  | 100 |
+| n79 | n95 | 15 |  |  |  |  |  |  | 75 | 75 | 75 |  | 75 |  | 75 |
+| n79 | n97 | 15 |  |  |  |  |  |  | 270 | 270 | 270 |  | 270 |  | 270 |
+| n79 | n98 | 15 |  |  |  |  |  |  | 216 | 216 | 216 |  | 216 |  | 216 |
+| NOTE 1: The Tx-Rx carrier center frequency separation between SUL band and DL band is the same as the Tx-Rx carrier center frequency separation of DL band specified in Table 5.4.4-1 from TS 38.101-1. The channel bandwidth of SUL band is the same as DL band. This restriction of REFSENS configurations applies also for these carriers when applicable SUL configuration is part of a higher order configuration. |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+
+For the UE that supports any of the SUL operation given in Table 7.3C.2-2, exceptions to the requirements specified in Table 7.3.2-1a and Table 7.3.2-1b are allowed for different combinations of UL configurations and DL channel bandwidths when the uplink is active in a lower frequency band and is within a specified frequency range such that transmitter harmonics fall within the downlink transmission bandwidth assigned in a higher band as noted in Table 7.3C.2-2 and Table 7.3C.2-2a. For these exceptions, only the listed test points in Table 7.3C.2-2 are needed to be tested for PC3, and only the listed test points in Table 7.3C.2-2a are needed to be tested for PC2.
+
+Table 7.3C.2-2: PC3 Reference sensitivity and uplink/downlink configurations for SUL operation (exceptions due to uplink harmonic issue)
+
+| UL band | DL band | UL BW | SCS of UL band | UL RB Allocation | DL BW | MSD | UL/DL fc condition | UL/DL harmonic order |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (kHz) | LCRB | (MHz) | (dB) |  |  |
+| n80 | n77 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n80 | n77 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n80 | n78 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n80 | n78 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n81 | n41 | 5 | 15 | 8 | 10 | 13 | NOTE 3 | UL3/DL1direct-hit |
+| n81 | n41 | 5 | 15 | 8 | 100 | 4.5 | NOTE 3 | UL3/DL1direct-hit |
+| n81 | n78 | 5 | 15 | 6 | 10 | 10.8 | NOTE 4 | UL4/DL1direct-hit |
+| n81 | n78 | 5 | 15 | 6 | 100 | 3.1 | NOTE 4 | UL4/DL1direct-hit |
+| n81 | n79 | 5 | 15 | 5 | 40 | 6.8 | NOTE 5 | UL5/DL1direct-hit |
+| n81 | n79 | 5 | 15 | 5 | 100 | 3.8 | NOTE 5 | UL5/DL1direct-hit |
+| n82 | n78 | 5 | 15 | 6 | 10 | 10.8 | NOTE 4 | UL4/DL1direct-hit |
+| n82 | n78 | 5 | 15 | 6 | 100 | 3.1 | NOTE 4 | UL4/DL1direct-hit |
+| n83 | n78 | 5 | 15 | 5 | 10 | 10.4 | NOTE 5 | UL5/DL1direct-hit |
+| n83 | n78 | 5 | 15 | 5 | 100 | 2.9 | NOTE 5 | UL5/DL1direct-hit |
+| n84 | n77 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n84 | n77 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n86 | n78 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n86 | n78 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n89 | n78 | 5 | 15 | 6 | 10 | 10.5 | NOTE 4 | UL4/DL1direct-hit |
+| n89 | n78 | 5 | 15 | 6 | 100 | 2.9 | NOTE 4 | UL4/DL1direct-hit |
+| n97 | n79 | 5 | 15 | 12 | 10 | 35.5 | NOTE 2 | UL2/DL1direct-hit |
+| n97 | n79 | 5 | 15 | 12 | 100 | 25.3 | NOTE 2 | UL2/DL1direct-hit |
+| n99 | n77 | 5 | 15 | 12 | 10 | 23.9 | NOTE 2 | UL2/DL1direct-hit |
+| n99 | n77 | 5 | 15 | 12 | 100 | 13.8 | NOTE 2 | UL2/DL1direct-hit |
+| n80 | n104 | 5 | 15 | 6 | 20 | 11.7 | NOTE 2 | UL4/DL1direct-hit |
+| n80 | n104 | 5 | 15 | 6 | 100 | 6.1 | NOTE 2 | UL4/DL1direct-hit |
+| NOTE 1: The direct-hit requirements apply when there is at least one individual RE within the uplink transmission bandwidth of the aggressor (lower) band for which the 2nd / 3rd / 4th / 5th transmitter harmonic is within the downlink transmission bandwidth of a victim (higher) band. The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.NOTE 2:  The requirements should be verified for UL NR ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image1.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.2_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band. This DL band may be affected by near-miss interference for which the MSD is not specified.NOTE 3: The requirements should be verified for UL NR ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image3.svg) [公式≈: ff_{ULDL}^{LBHB}=⋅∂_{√∃}/0.30.1] in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with the carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the low band.NOTE 4: The requirements should be verified for UL EARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image4.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.4_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 5: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image7.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.5_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 6: The near-miss requirements are only applicable when direct-hit requirements do not apply. These requirements should be verified for downlink channel bandwidths no larger than 10 MHz and with a carrier frequency at $\pm  \left ( 10+BW_{Channel}^{HB}/2\right ) $ MHz offset from ![](media_svg/image8.svg) [公式≈: _{2}_{f}_{UL}LB] in the victim (higher band) with ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}], whereand![](media_svg/image9.svg) [公式≈: ^{BW}Channel^{HB}]are the channel bandwidths configured in the aggressor (lower) and victim (higher) bands in MHz, respectively. |  |  |  |  |  |  |  |  |
+
+Table 7.3C.2-2a: PC2 Reference sensitivity and uplink/downlink configurations for SUL operation (exceptions due to uplink harmonic issue)
+
+| UL band | DL band | UL BW | SCS of UL band | UL RB Allocation | DL BW | MSD(NOTE 7) | MSD(NOTE 8) | UL/DL fc condition | UL/DL harmonic order |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (kHz) | LCRB | (MHz) | (dB) | (dB) |  |  |
+| n80 | n77 | 5 | 15 | 12 | 10 | 26.9 | 29.9 | NOTE 2 | UL2/DL1direct-hit |
+| n80 | n77 | 5 | 15 | 12 | 100 | 16.8 | 19.8 | NOTE 2 | UL2/DL1direct-hit |
+| n80 | n78 | 5 | 15 | 12 | 10 | 26.9 | 29.9 | NOTE 2 | UL2/DL1direct-hit |
+| n80 | n78 | 5 | 15 | 12 | 100 | 16.8 | 19.8 | NOTE 2 | UL2/DL1direct-hit |
+| n80 | n104 | 5 | 15 | 6 | 20 | 14.7 | 17.7 | NOTE 4 | UL4/DL1direct-hit |
+| n80 | n104 | 5 | 15 | 6 | 100 | 8.4 | 11.1 | NOTE 4 | UL4/DL1direct-hit |
+| n84 | n77 | 5 | 15 | 12 | 10 | 26.9 | 29.9 | NOTE 2 | UL2/DL1direct-hit |
+| n84 | n77 | 5 | 15 | 12 | 100 | 16.8 | 19.8 | NOTE 2 | UL2/DL1direct-hit |
+| n97 | n79 | 5 | 15 | 25 | 10 | 38.5 | 41.5 | NOTE 2 | UL2/DL1direct-hit |
+| n97 | n79 | 5 | 15 | 25 | 100 | 28.3 | 31.3 | NOTE 2 | UL2/DL1direct-hit |
+| NOTE 1: The direct-hit requirements apply when there is at least one individual RE within the uplink transmission bandwidth of the aggressor (lower) band for which the 2nd / 3rd / 4th / 5th transmitter harmonic is within the downlink transmission bandwidth of a victim (higher) band. The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.NOTE 2: The requirements should be verified for UL NR ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image1.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.2_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band. This DL band may be affected by near-miss interference for which the MSD is not specified.NOTE 3: The requirements should be verified for UL NR ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image3.svg) [公式≈: ff_{ULDL}^{LBHB}=⋅∂_{√∃}/0.30.1] in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with the carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the low band.NOTE 4: The requirements should be verified for UL EARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image4.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.4_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 5: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image7.svg) [公式≈: f_{UL}^{LB}=_{√}f_{DL}^{HB}/0.5_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 6: The near-miss requirements are only applicable when direct-hit requirements do not apply. These requirements should be verified for downlink channel bandwidths no larger than 10 MHz and with a carrier frequency at $\pm  \left ( 10+BW_{Channel}^{HB}/2\right ) $ MHz offset from ![](media_svg/image8.svg) [公式≈: _{2}_{f}_{UL}LB] in the victim (higher band) with ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}], whereand![](media_svg/image9.svg) [公式≈: ^{BW}Channel^{HB}]are the channel bandwidths configured in the aggressor (lower) and victim (higher) bands in MHz, respectively.NOTE 7: Applicable to UEs supporting PC2 with 1Tx.NOTE 8: Applicable to UEs supporting PC2 with 2Tx. |  |  |  |  |  |  |  |  |  |
+
+Table 7.3C.2-3: Void
+
+For the UE that supports any of the SUL operation given in Table 7.3C.2-4 and Table 7.3C.2-4a, reference sensitivity degradation is allowed for different combinations of UL configurations and DL channel bandwidths when a DL band is impacted by UL band due to cross band isolation issues. For these exceptions, only the listed test points in Table 7.3C.2-4 are needed to be tested for PC3, and only the listed test points in Table 7.3C.2-4a are needed to be tested for PC2.
+
+Table 7.3C.2-4: PC3 Reference sensitivity and uplink/downlink configurations for SUL operation (exceptions due to cross band isolation)
+
+| UL band | DL band | UL Fc | UL BW | SCS of UL band | UL RB Allocation | DL Fc | DL BW | MSD | X band interference source |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (MHz) | (kHz) | LCRB | (MHz) | (MHz) | (dB) |  |
+| n80 | n41 | 1765 | 40 | 15 | 50 (RBstart=166) | 2501 | 10 | 0.7 | >ACLR2 |
+| n80 | n41 | 1765 | 40 | 15 | 50 (RBstart=166) | 2546 | 100 | 0.7 | >ACLR2 |
+| n84 | n3 | 1945 | 50 | 15 | 128 (RBstart=0) | 1877.5 | 5 | 19.7 | ACLR1 |
+| n95 | n41 | 2017.5 | 15 | 15 | 75 (RBstart=4) | 2501 | 10 | 3.2 | >ACLR2 |
+| n95 | n41 | 2017.5 | 15 | 15 | 75 (RBstart=4) | 2501 | 10 | 3.5 | >ACLR2 |
+| n95 | n41 | 2017.5 | 15 | 15 | 75 (RBstart=4) | 2546 | 100 | 3.2 | >ACLR2 |
+| n97 | n41 | 2350 | 100 | 30 | 270 (RBstart=3) | 2501 | 10 | 28.1 | ACLR2 |
+| n97 | n41 | 2360 | 80 | 30 | 216 (RBstart=1) | 2546 | 100 | 10.6 | ACLR2 |
+| n98 | n41 | 1900 | 40 | 15 | 216 (RBstart=0) | 2501 | 10 | 3.3 | >ACLR2 |
+| n98 | n41 | 1900 | 40 | 15 | 216 (RBstart=0) | 2501 | 10 | 3.6 | >ACLR2 |
+
+Table 7.3C.2-4a: PC2 Reference sensitivity and uplink/downlink configurations for SUL operation (exceptions due to cross band isolation)
+
+| UL band | DL band | UL Fc | UL BW | SCS of UL band | UL RB Allocation | DL Fc | DL BW | MSD | Cross-bandInterferencesource |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (MHz) | (kHz) | LCRB | (MHz) | (MHz) | (dB) |  |
+| n80 | n41 | 1765 | 40 | 15 | 50 (RBstart=166) | 2501 | 10 | 1.311.62 | >ACLR2 |
+| n80 | n41 | 1765 | 40 | 15 | 50 (RBstart=166) | 2546 | 100 | 1.311.62 | >ACLR2 |
+| n84 | n3 | 1945 | 50 | 15 | 128 (RBstart=0) | 1877.5 | 5 | 22.7125.72 | ACLR1 |
+| n95 | n41 | 2017.5 | 15 | 15 | 75 (RBstart=4) | 2501 | 10 | 4.815.92 | >ACLR2 |
+| n95 | n41 | 2017.5 | 15 | 15 | 75 (RBstart=4) | 2546 | 100 | 4.815.92 | >ACLR2 |
+| n97 | n41 | 2350 | 100 | 30 | 270 (RBstart=3) | 2501 | 10 | 31.1134.12 | ACLR2 |
+| n97 | n41 | 2360 | 80 | 30 | 216 (RBstart=1) | 2546 | 100 | 13.6116.62 | ACLR2 |
+| n98 | n41 | 1900 | 40 | 15 | 216 (RBstart=0) | 2501 | 10 | 4.916.02 | >ACLR2 |
+| NOTE 1: Applicable to UE’s supporting PC2 with 1Tx.NOTE 2: Applicable to UE’s supporting PC2 with 2Tx. |  |  |  |  |  |  |  |  |  |
+
+Table 7.3C.2-5: Void
+
+For the UE that supports any of the SUL operation given in Table 7.3C.2-6 and Table 7.3C.2-6a, reference sensitivity degradation is allowed for different combinations of UL configurations and DL channel bandwidths when a DL band is impacted by UL band due to harmonic mixing issues. For these exceptions, only the listed test points in Table 7.3C.2-6 are needed to be tested for PC3, and only the listed test points in Table 7.3C.2-6a are needed to be tested for PC2.
+
+Table 7.3C.2-6: PC3 reference sensitivity and uplink/downlink configurations for SUL operation (exceptions due to harmonic mixing)
+
+| UL band | DL band | UL BW | SCS of UL band | UL RB Allocation | DL BW | MSD | UL/DL fc condition | UL/DL harmonic order |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (kHz) | LCRB | (MHz) | (dB) |  |  |
+| n98 | n41 | 5 | 15 | 6 | 10 | 9.3 | NOTE 2 | UL4/DL3 |
+| n98 | n41 | 5 | 15 | 6 | 100 | 2.2 | NOTE 2 | UL4/DL3 |
+| NOTE 1: The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.NOTE 2: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image17.svg) [公式≈: f_{UL}^{LB}=_{√}7.5*f_{DL}^{HB}_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band. |  |  |  |  |  |  |  |  |
+
+Table 7.3C.2-6a: PC2 reference sensitivity and uplink/downlink configurations for SUL operation (exceptions due to harmonic mixing)
+
+| UL band | DL band | UL BW | SCS of UL band | UL RB Allocation | DL BW | MSD | UL/DL fc condition | UL/DL harmonic order |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (kHz) | LCRB | (MHz) | (dB) |  |  |
+| n98 | n41 | 5 | 15 | 6 | 10 | 11.8314.34 | NOTE 2 | UL4/DL3 |
+| n98 | n41 | 5 | 15 | 6 | 100 | 3.334.34 | NOTE 2 | UL4/DL3 |
+| NOTE 1: The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.NOTE 2: The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image17.svg) [公式≈: f_{UL}^{LB}=_{√}7.5*f_{DL}^{HB}_{∃}0.1]in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 3: Applicable to UE’s supporting PC2 with 1Tx.NOTE 4: Applicable to UE’s supporting PC2 with 2Tx. |  |  |  |  |  |  |  |  |
+
+#### 7.3C.2.1 PC2 and PC1.5 MSD requirements with look-up tables for SUL with downlink CA
+
+
+The PC2 and the PC1.5 MSD requirements with look-up tables for SUL with downlink CA due to SUL band 1UL CC harmonic, harmonic mixing, and cross band isolation interference shall apply when the following criterias are met:
+
+- A PC3 reference sensitivity exception requirement is specified either in Table 7.3C.2-2, or in Table 7.3C.2-4 or in Table 7.3C.2-6, and,
+
+- PC2 output power achieved with one Tx antenna connector, denoted here “PC21Tx”, or achieved with two Tx antenna connectors, denoted here “PC22Tx”, or PC1.5 output power achieved with two Tx antenna connectors, denoted here “PC1.52Tx”, is specified as a valid power class in Table 6.2.1-1, and,
+
+- The PCx aggressor SUL band is the same aggressor SUL band as in case of PC3 MSD.
+
+For these cases, and where in the following PCx denotes either PC21Tx, PC22Tx or PC1.52Tx, the PCx MSD due to harmonic, harmonic mixing, and cross band isolation is specified as:
+
+PCx MSD = PC3 MSD + MSD
+
+where,
+
+- PCx MSD is the reference sensitivity exception specified for PC21Tx, PC22Tx, or PC1.52Tx,
+
+- PC3 MSD is the reference sensitivity exception specified for PC3 in Table 7.3C.2-2, or in Table 7.3C.2-4 or in Table 7.3C.2-6,
+
+- MSD values are specified in Table 7.3C.2.1-1 output columns denoted “MSDmax 3, 6, 9”. These apply to the same uplink/downlink configurations as those specified for the minimum PC3 MSD requirements in Table 7.3C.2-2, or in Table 7.3C.2-4 or in Table 7.3C.2-6,
+
+- The correspondence between the MSDmax specified in Table 7.3C.2.1-1, the source of interference and PCx MSD is specified in Table 7.3C.2.1-2,
+
+Table 7.3C.2.1-1: MSD per MSDmax look-up table for MSD due to harmonic, harmonic mixing, cross band isolation
+
+| PC3 MSD (dB) | MSDmax / MSD(dB) |  |  |
+| --- | --- | --- | --- |
+|  | 3 | 6 | 9 |
+| 0.1≤ PC3 MSD <1.0 | 0.7 | 1.1 | 2.5 |
+| 1.0≤ PC3 MSD <3.0 | 1.6 | 2.7 | 5.1 |
+| 3.0≤ PC3 MSD <5.0 | 2.0 | 3.8 | 6.5 |
+| 5.0≤ PC3 MSD <7.0 | 2.3 | 4.5 | 7.3 |
+| 7.0≤ PC3 MSD <9.0 | 2.5 | 5.0 | 7.9 |
+| PC3 MSD ≥9.0 | 3 | 6 | 9 |
+
+Table 7.3C.2.1-2: MSDmax correspondence look-up table for source of interference and PCx MSD
+
+| Source of interference | MSDmax |  |  |
+| --- | --- | --- | --- |
+|  | PC21Tx MSD | PC22Tx MSD | PC1.52Tx MSD |
+| UL harmonic | 3 | 6 | 9 |
+| Harmonic mixing | 3 | 6 | 9 |
+| Cross band isolation | 3 | 6 | 9 |
+
+As an exception, for cases where:
+
+- The PC21Tx MSD is specified in Table 7.3C.2-2a or in Table 7.3C.2-4a or in Table 7.3C.2-6a, and
+
+- The PC3 MSD is not specified in Table 7.3C.2-2, or in Table 7.3C.2-4 or in Table 7.3C.2-6, and
+
+- The PC1.5 MSD is not specified, and
+
+- PC1.5 output power achieved with two Tx antenna connectors “PC1.52Tx” is specified as a valid power class in Table 6.2.1-1,
+
+then the PC1.52Tx MSD is specified as:
+
+PC1.52Tx MSD = PC21Tx MSD + MSD,
+
+where in the Table 7.3C.2.1-1,
+
+- MSD is specified output column denoted “MSDmax 6”,
+
+- The input column uses the specified “PC21Tx MSD” instead of “PC3 MSD”. These apply to the same uplink/downlink configurations as those specified for the minimum PC2 MSD requirements in Table 7.3C.2-2a or in Table 7.3C.2-4a or in Table 7.3C.2-6a.
+
+### 7.3C.3 ΔRIB,c for SUL
+
+#### 7.3C.3.1 General
+
+For a UE supporting a SUL configuration, the ΔRIB,c applies for both SC and SUL operation.
+
+#### 7.3C.3.2 SUL band combination
+
+For the UE which supports SUL band combiantion, the minimum requirement for reference sensitivity in clause 7.3C.2 shall be increased by the amount given in ΔRIB,c defined in clause 7.3C.3.2 for the applicable operating bands. Unless otherwise stated, ΔRIB,c is set to zero.
+
+In case the UE supports more than one of band combinations for CA, SUL or DC, and an operating band belongs to more than one band combinations then
+
+- When the operating band frequency range is ≤ 1 GHz, the applicable additional ΔRIB,c shall be the average value for all band combinations defined in clause 7.3A, 7.3B, 7.3C in this specification and 7.3A, 7.3B in TS 38.101-3 [3], truncated to one decimal place that apply for that operating band among the supported band combinations. In case there is a harmonic relation between low band UL and high band DL, then the maximum ΔRIB,c among the different supported band combinations involving such band shall be applied
+
+- When the operating band frequency range is > 1 GHz, the applicable additional ΔRIB,c shall be the maximum value for all band combinations defined in clause 7.3A, 7.3B, 7.3C in this specification and 7.3A, 7.3B in TS 38.101-3 [3] for the applicable operating bands.
+
+##### 7.3C.3.2.1 ΔRIB,c  for two bands
+
+Table 7.3C.3.2.1-1: ΔRIB,c due to SUL (two bands)
+
+| Band combination for SUL | ΔRIB,c for NR band (dB)2 |  |
+| --- | --- | --- |
+|  | Component band in order of bands in configuration3 |  |
+| SUL_n41-n80 | 0.51 | N/A |
+| SUL_n41-n95 | 0.2 | N/A |
+| SUL_n41-n98 | 0.2 | N/A |
+| SUL_n48-n99 | 0.5 | N/A |
+| SUL_n77-n80 | 0.5 | N/A |
+| SUL_n77-n84 | 0.5 | N/A |
+| SUL_n77-n99 | 0.5 | N/A |
+| SUL_n78-n80 | 0.5 | N/A |
+| SUL_n78-n81 | 0.5 | N/A |
+| SUL_n78-n82 | 0.5 | N/A |
+| SUL_n78-n83 | 0.5 | N/A |
+| SUL_n78-n84 | 0.5 | N/A |
+| SUL_n78-n86 | 0.5 | N/A |
+| SUL_n79-n83 | 0.5 | N/A |
+| SUL_n79-n97 | 0.5 | N/A |
+| SUL_n79-n98 | 0.5 | N/A |
+| SUL_n80-n104 | N/A | 0.5 |
+| SUL_n81-n104 | N/A | 0.5 |
+| SUL_n83-n104 | N/A | 0.5 |
+| SUL_n84-n104 | N/A | 0.5 |
+| SUL_n89-n104 | N/A | 0.5 |
+| NOTE 1: The requirement is applied for UE transmitting on the frequency range of 2496 – 2515 MHz.NOTE 2: “-” denotes ΔRIB,c = 0 and ΔRIB,c is not applicable to SUL band(s).NOTE 3: The component band order in the configuration should be listed by the order of NR band, such as for SUL_n41-n80 the order of band is n41 and n80. |  |  |
+
+##### 7.3C.3.2.2 ΔRIB,c  for three bands
+
+Table 7.3C.3.2.2-1: ΔRIB,c due to SUL (three bands)
+
+| Band combination for SUL | ΔRIB,c for NR bands (dB)2 |  |  |
+| --- | --- | --- | --- |
+|  | Component band in order of bands in configuration3 |  |  |
+| CA_n1_n78-n80 | 0.2 | 0.5 | N/A |
+| CA_n1_n78-n81 | - | 0.5 | N/A |
+| CA_n1_n78-n84 | 0.2 | 0.5 | N/A |
+| CA_n1_n78-n89 | 0.2 | 0.5 | N/A |
+| CA_n3_n41-n80 | - | 0.51 | N/A |
+| CA_n3_n78-n80 | 0.2 | 0.5 | N/A |
+| CA_n3_n78-n84 | 0.2 | 0.5 | N/A |
+| CA_n3_n79-n80 | - | 0.5 | N/A |
+| CA_n5_n78-n84 | 0.2 | 0.5 | N/A |
+| CA_n5_n78-n89 | 0.2 | 0.5 | - |
+| CA_n28_n41-n83 | 0.2 | - | N/A |
+| CA_n8_n78-n81 | 0.2 | 0.5 | N/A |
+| CA_n8_n78-n84 | 0.2 | 0.5 | N/A |
+| CA_n28_n79-n83 | 0.2 | 0.5 | N/A |
+| CA_n41_n79-n80 | 0.5 | 0.5 | N/A |
+| CA_n41_n79-n83 | 0.5 | 0.5 | N/A |
+| CA_n41_n79-n95 | - | 0.5 | N/A |
+| CA_n41_n79-n97 | - | 0.8 | N/A |
+| CA_n41_n79-n98 | - | 0.5 | N/A |
+| CA_n41_n95-n98 | - | N/A | N/A |
+| CA_n78_n1-n80 | 0.5 | 0.2 | N/A |
+| CA_n78_n1-n81 | 0.5 | - | N/A |
+| CA_n78_n1-n89 | 0.5 | 0.2 | N/A |
+| CA_n78_n3-n84 | 0.5 | 0.2 | N/A |
+| CA_n78_n5-n84 | 0.5 | 0.2 | N/A |
+| CA_n78_n8-n84 | 0.5 | 0.2 | N/A |
+| CA_n79_n41-n80 | 0.5 | 0.5 | N/A |
+| CA_n78_n80-n84 | 0.5 | N/A | N/A |
+| CA_n78_n81-n84 | 0.5 | N/A | N/A |
+| CA_n78_n84-n89 | 0.5 | N/A | N/A |
+| CA_n79_n41-n83 | 0.5 | 0.5 | N/A |
+| CA_n79_n41-n95 | - | 0.5 | N/A |
+| CA_n79_n41-n97 | - | 0.8 | N/A |
+| CA_n79_n41-n98 | - | 0.5 | N/A |
+| NOTE 1: The requirement is applied for UE transmitting on the frequency range of 2496 – 2515 MHz.NOTE 2: “-” denotes ΔRIB,c = 0 and ΔRIB,c is not applicable to SUL band(s).NOTE 3: The component band order in the configuration should be listed by the order of NR bands, such as for CA_n1_n78-n80 the order of band is n1, n78 and n80. |  |  |  |
+
+##### 7.3C.3.2.3 ΔRIB,c  for four bands
+
+Table 7.3C.3.2.3-1: ΔRIB,c due to SUL (four bands)
+
+| Band combination for SUL | ΔRIB,c for NR bands (dB)1 |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | Component band in order of bands in configuration2 |  |  |  |
+| CA_n1-n3_n78-n80 | 0.2 | 0.2 | 0.5 | N/A |
+| CA_n1-n3_n78-n84 | 0.2 | 0.2 | 0.5 | N/A |
+| CA_n28-n79_n41-n83 | 0.2 | - | 0.8 | N/A |
+| CA_n28-n41_n79-n83 | 0.2 | - | 0.8 | N/A |
+| CA_n41-n95_n79-n98 | 0.5 | 0.5 | N/A | N/A |
+| CA_n41-n98_n79-n95 | 0.5 | 0.5 | N/A | N/A |
+| CA_n41-n83_n79-n98 | 0.5 | 0.5 | N/A | N/A |
+| CA_n41-n83_n79-n95 | 0.5 | 0.5 | N/A | N/A |
+| NOTE 1: “-” denotes ΔRIB,c = 0 and ΔRIB,c is not applicable to SUL band(s).NOTE 2: The component band order in the configuration should be listed by the order of NR bands, such as for CA_n28-n79_n41-n83 the order of band is n28, n41, n79 and n83. |  |  |  |  |
+
+## 7.3D Reference sensitivity for UL MIMO
+
+For UE with multiple transmitter antenna connectors up to a maximum of four in closed-loop spatial multiplexing scheme, the minimum requirements specified in clause 7.3 shall be met with the UL MIMO configurations described in clause 6.2D.1 and clause 6.2F.1D for shared spectrum access operation, and the reference measurement channels as specified in Annex A.2.2 for CP-OFDM waveforms shall apply. For UL MIMO, the parameter PUMAX is the total transmitter power over all transmit antenna connectors.
+
+## 7.3E Reference sensitivity for V2X
+
+### 7.3E.1 General
+
+The reference sensitivity power level PREFSENS_V2X is the minimum mean power applied to each one of the UE antenna ports for V2X UE, at which the throughput shall meet or exceed the requirements for the specified reference measurement channel.
+
+### 7.3E.2 Minimum requirements
+
+When UE is configured for NR V2X reception non-concurrent with NR uplink transmissions for NR V2X operating bands specified in Table 5.2E.1-1, the throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.7.2 with parameters specified in Table 7.3E.2-1.
+
+Table 7.3E.2-1: Reference sensitivity of NR V2X Bands (PC5)
+
+| NR V2X Band | SCS kHz | Channel bandwidth / PREFSENS_V2X(dBm) |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | 5MHz4 | 10 MHz | 20 MHz | 30 MHz | 40 MHz | Duplex Mode |
+| n14 | 15 | -95.9 | -92.7 |  |  |  | HD |
+|  | 30 |  | -93.0 |  |  |  |  |
+|  | 60 |  |  |  |  |  |  |
+| n38 | 15 |  | -96.5 | -93.2 | -91.4 | -90.1 | HD |
+|  | 30 |  | -96.1 | -93.4 | -91.7 | -90.2 |  |
+|  | 60 |  | -96.9 | -93.1 | -91.9 | -90.4 |  |
+| n47 | 15 |  | -92.5 | -89.2 | -87.4 | -86.1 | HD |
+|  | 30 |  | -92.1 | -89.4 | -87.7 | -86.2 |  |
+|  | 60 |  | -92.9 | -89.1 | -87.9 | -86.4 |  |
+| n795 | 15 |  | -95.5 | -92.2 | -90.4 | -89.1 | HD |
+|  | 30 |  | -95.1 | -92.4 | -90.7 | -89.2 |  |
+|  | 60 |  | -95.9 | -92.1 | -90.9 | -89.4 |  |
+| NOTE 1: Reference measurement channel is defined in A.7.2.NOTE 2: The signal power is specified per antenna port.NOTE 3: Void.NOTE 4: The CBW is only applicable for PS UE in n14.NOTE 5: These REFSENS values do not consider the impact of the near/far effect |  |  |  |  |  |  |  |
+
+Table 7.3E.2-2: Sidelink TX configuration for reference sensitivity of NR V2X Bands (PC5)
+
+|  |  | NR Band / SCS / Channel bandwidth / Duplex mode |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| NR V2X Band | SCSkHz | 5 MHz3 | 10 MHz | 20 MHz | 30 MHz | 40 MHz | Duplex Mode |
+| n14 | 15 | 20 | 20 |  |  |  | HD |
+|  | 30 |  | 10 |  |  |  |  |
+|  | 60 |  |  |  |  |  |  |
+| n38 | 15 |  | 50 | 105 | 160 | 216 | HD |
+|  | 30 |  | 24 | 50 | 75 | 105 |  |
+|  | 60 |  | 102 | 24 | 36 | 50 |  |
+| n47 | 15 |  | 50 | 105 | 160 | 216 | HD |
+|  | 30 |  | 24 | 50 | 75 | 105 |  |
+|  | 60 |  | 102 | 24 | 36 | 50 |  |
+| n79 | 15 |  | 50 | 105 | 160 | 216 | HD |
+|  | 30 |  | 24 | 50 | 75 | 105 |  |
+|  | 60 |  | 102 | 24 | 36 | 50 |  |
+| NOTE 1: The sidelink allocated RB (LCRB) size could be adjusted according to resource pool configuration in [7].NOTE 2: For the case, 11 RB is allowed for S-SSB Block.NOTE 3: The CBW is only applicable for PS UE in n14. |  |  |  |  |  |  |  |
+
+### 7.3E.2A Minimum requirements for Sidelink CA
+
+The reference sensitivity power level REFSENS is the minimum mean power applied to each one of the UE antenna ports, at which the throughput shall meet or exceed the requirements for the specified reference measurement channel.
+
+### 7.3E.2A.1 Reference sensitivity power level for Sidelink CA
+
+For intra-band contiguous NR SL CA operation, the reference sensitivity requirement specified in Table 7.3E.2-1 shall apply for each component carrier with all carriers active. The requirement is applied for each carrier reception when 2 carrier transmissions are activated at the same time.
+
+For intra-band non-contiguous NR SL CA UE, the reference sensitivity requirement specified in Table 7.3E.2-1 shall apply for each sub-block with all carriers active. The requirement is applied for each sub-block reception when 2 sub-block transmissions are activated at the same time.
+
+### 7.3E.2F Minimum requirements for Sidelink Unlicensed
+
+#### 7.3E.2F.1 General
+
+The reference sensitivity power level REFSENS is the minimum mean power applied to each one of the UE antenna ports, at which the throughput shall meet or exceed the requirements for the specified reference measurement channel.
+
+In later clauses of Clause 7 where the value of REFSENS is used as a reference to set the corresponding requirement, the UE shall be verified against those requirements by applying the REFSENS value in Table 7.3E.2F.2-1 with 2 Rx antenna ports tested.
+
+#### 7.3E.2F.2 Reference sensitivity power level
+
+The throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.7.2 with parameters specified in Table 7.3E.2F.2-1, Table 7.3E.2F.2-2, and Table 7.3E.2F.2-3.
+
+Table 7.3E.2F.2-1: Two antenna port reference sensitivity QPSK PREFSENS
+
+| Operating band / SCS / Channel bandwidth / REFSENS |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Operating band | SCSkHz | Channel bandwidth (MHz) | REFSENS (dBm)1 | Duplex Mode |
+| n46 | 15 | 20, 40 | -89.2 + 10log10(NRB/105) | HD |
+|  | 30 | 20, 40, 60, 80, 100 | -89.4 + 10log10(NRB/50) |  |
+|  | 60 | 20, 40, 60, 80, 100 | -89.6 + 10log10(NRB/24) |  |
+| n96, n102 | 15 | 20, 40 | -88.7 + 10log10(NRB/105) | HD |
+|  | 30 | 20, 40, 60, 80, 100 | -88.9 + 10log10(NRB/50) |  |
+|  | 60 | 20, 40, 60, 80, 100 | -89.1 + 10log10(NRB/24) |  |
+| NOTE 1: The REFSENS value is rounded to the nearest number down to one decimal point. “NRB” in REFSENS formula is the maximum transmission bandwidth configuration as defined in Table 7.3E.2F.2-3 |  |  |  |  |
+
+For UE(s) equipped with 4 Rx antenna ports, reference sensitivity for 2Rx antenna ports in Table 7.3E.2F.2-1 shall be modified by the amount given in ΔRIB,4R in Table 7.3E.2F.2-2 for the applicable operating bands.
+
+Table 7.3E.2F.2-2: Four antenna port reference sensitivity allowance ΔRIB,4R
+
+| Operating band | ΔRIB,4R (dB) |
+| --- | --- |
+| n46, n96, n102 | -2.2 |
+
+The reference receive sensitivity (REFSENS) requirement specified in Table 7.3E.2F.2-1 and Table 7.3E.2F.2-2 shall be met with sidelink transmission bandwidth less than or equal to that specified in Table 7.3E.2F.2-3.
+
+Table 7.3E.2F.2-3: Transmitted sidelink  configuration for reference sensitivity
+
+| Operating band / SCS / Channel bandwidth/NRB |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Operating Band | SCS kHz | 20 MHz | 40 MHz | 60 MHz | 80 MHz | 100 MHz |
+| n46 | 15 | 105 | 216 |  |  |  |
+|  | 30 | 50 | 105 | 160 | 216 | 270 |
+|  | 60 | 24 | 50 | 75 | 105 | 135 |
+| n96, n102 | 15 | 105 | 216 |  |  |  |
+|  | 30 | 50 | 105 | 160 | 216 | 270 |
+|  | 60 | 24 | 50 | 75 | 105 | 135 |
+
+Unless given by Table 7.3E.2F.2-4, the minimum requirements specified in Tables 7.3E.2F.2-1 and 7.3E.2F.2-2 shall be verified with the network signalling value NS_01 (Table 6.2F.3.1-1) configured.
+
+Table 7.3F.2-4: Network signaling value for reference sensitivity
+
+| Operating band | Network Signalling value |
+| --- | --- |
+| n46 | NS_01 |
+| n96 | NS_53 |
+| n102 | NS_01 |
+
+### 7.3E.3 Reference sensitivity power level for V2X concurrent operation
+
+#### 7.3E.3.1 General
+
+When UE is configured for NR V2X reception on V2X carrier concurrent with NR uplink and downlink, NR V2X sidelink throughput for the carrier shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.7.2 with parameters specified in Table 7.3E.2-1 and 7.3E.2-2. Also, the NR downlink throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.3 with parameters specified in Tables 7.3.2-1a, 7.3.2-1b, 7.3.2-2 and 7.3.2-3. The reference sensitivity is defined to be met with all downlink component carriers active. The REFSENS of Uu downlink and PC5 sidelink will be tested at the same time. Exceptions to reference sensitivity with different transmission and reception configurations are allowed for the combinations of aggressor and victim bands specified in Tables 7.3E.3-3 and 7.3E.3-4. The limited test configurations are specified in Tables 7.3E.3-3 and 7.3E.3-4 to verify MSD requirements.
+
+For the intra-band concurrent NR V2X operation, the reference sensitivity power level shall be applied per carrier. The requirements in clause 7.3.2 shall be applied for NR downlink carrier and the requirements in clause 7.3E.2 shall be applied for NR sidelink carrier. NR V2X sidelink throughput for the carrier shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.7.2. Also, the NR downlink throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.3.2 in TS38.101-1.
+
+For reference sensitivity exception test points where the specified carrier frequency does not correspond to a valid NR-ARFCN, the closest NR-ARFCN as specified in clause 5.4.2 applies.
+
+Table 7.3E.3-1: Void
+
+Table 7.3E.3-2: ΔRIB,V2X (two bands)
+
+| V2X inter-band concurrent band Combination | NR Band | ΔRIB,V2X [dB] |
+| --- | --- | --- |
+| V2X_n71-n47 | n71 | 0.0 |
+
+Table 7.3E.3-3: Reference sensitivity exceptions (MSD) due to cross band isolation for inter-band concurrent operation
+
+| Aggressor band | Victim band | Aggressor band Fc | Aggressor band BW | SCS of Aggressor band | Aggressor band RB Allocation | Victim band Fc | Victim band BW | MSD |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (MHz) | (kHz) | LCRB | (MHz) | (MHz) | (dB) |
+| n79 | n47 | 4980 | 40 | 15 | 216(RBstart=0) | 5860 | 10 | 3.3 |
+| n47 | n79 | 5860 | 10 | 15 | 50 (RBstart=0) | 4980 | 40 | 3.3 |
+
+Table 7.3E.3-4: Reference sensitivity exceptions (MSD) due to harmonic interference for inter-band concurrent operation
+
+| Aggressor band | Victim band | Aggressor band BW | SCS of Aggressor band | Aggressor band RB Allocation | Victim band BW | MSD | UL/DL fc condition | UL/DL harmonic order |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (kHz) | LCRB | (MHz) | (dB) |  |  |
+| n1 | n47 | 5 | 15 | 16 (RBstart=4) | 10 | 20.1 | NOTE 2 | UL3/DL1direct-hit |
+| NOTE 1: These requirements apply when there is at least one individual RE within the uplink transmission bandwidth of the aggressor (lower) band for which the 2nd / 3rd / 4th / 5th transmitter harmonic is within the downlink transmission bandwidth of a victim (higher) band.NOTE 2: The requirements should be verified for UL NR ARFCN of the aggressor (lower) band (superscript LB) such that ![](media_svg/image3.svg) [公式≈: ff_{ULDL}^{LBHB}=⋅∂_{√∃}/0.30.1] in MHz and ![](media_svg/image2.svg) [公式≈: ^{FBWfFBW}ULlowChannelULULhighChannel^{LBLBLBLBLB}__^{+≥≥−}^{/2/2}] with the carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the low band. |  |  |  |  |  |  |  |  |
+
+### 7.3E.3F Minimum requirements for SL-U concurrent operation
+
+#### 7.3E.3F.1 Reference sensitivity power level for SL-U concurrent operation
+
+
+For the inter-band concurrent NR SL-U operation, the requirements specified in clause 7.3E.2F.2 shall apply for the NR sidelink reception in the operating bands in Table 5.2E.2F-1 and the requirements specified in clause 7.3.2 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+For the REFSENS exception of SL_n78-n46 inter-band concurrent NR SL-U operation, the existing CA_n46-n78 MSD requirements in Table 7.3A.5-1 are applied. Also, the existing ΔRIB of CA_n46-n78 in Table 7.3A.3.2.1-1 is applied for SL_n78-n46 inter-band concurrent NR SL-U operation UE.
+
+## 7.3F Reference sensitivity for shared spectrum channel access
+
+### 7.3F.1 General
+
+The reference sensitivity power level REFSENS is the minimum mean power applied to each one of the UE antenna ports, at which the throughput shall meet or exceed the requirements for the specified reference measurement channel.
+
+In later clauses of Clause 7 where the value of REFSENS is used as a reference to set the corresponding requirement, the UE shall be verified against those requirements by applying the REFSENS value in Table 7.3G.2-1 with 2 Rx antenna ports tested.
+
+### 7.3F.2 Reference sensitivity power level
+
+The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2.2, A3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.3F.2-1, Table 7.3F.2-2, and Table 7.3F.2-3.
+
+Table 7.3F.2-1: Two antenna port reference sensitivity QPSK PREFSENS
+
+| Operating band / SCS / Channel bandwidth / REFSENS |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| Operating band | SCSkHz | Channel bandwidth (MHz) | REFSENS (dBm)8 | Duplex Mode |
+| n46 | 15 | 20, 40 | -89.7 + 10log10(NRB/106) | TDD |
+|  | 30 | 20, 40, 60, 80, 100 | -89.9 + 10log10(NRB/51) |  |
+|  | 60 | 60, 80, 100 | -90.1 + 10log10(NRB/24) |  |
+| n96, n102 | 15 | 20, 40 | -89.2 + 10log10(NRB/106) | TDD |
+|  | 30 | 20, 40, 60, 80, 100 | -89.4 + 10log10(NRB/51) |  |
+|  | 60 | 60, 80, 100 | -89.6 + 10log10(NRB/24) |  |
+| NOTE 1: The REFSENS value is rounded to the nearest number down to one decimal point. “NRB” in REFSENS formula is the maximum transmission bandwidth configuration as defined in Table 5.3.2-1. |  |  |  |  |
+
+For UE(s) equipped with 4 Rx antenna ports, reference sensitivity for 2Rx antenna ports in Table 7.3F.2-1 shall be modified by the amount given in ΔRIB,4R in Table 7.3F.2-2 for the applicable operating bands.
+
+Table 7.3F.2-2: Four antenna port reference sensitivity allowance ΔRIB,4R
+
+| Operating band | ΔRIB,4R (dB) |
+| --- | --- |
+| n46, n96, n102 | -2.2 |
+
+The reference receive sensitivity (REFSENS) requirement specified in Table 7.3F.2-1 and Table 7.3F.2-2 shall be met with uplink transmission bandwidth less than or equal to that specified in Table 7.3F.2-3.
+
+Table 7.3F.2-3: Uplink configuration for reference sensitivity
+
+| Operating band / SCS / Channel bandwidth |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Operating Band | SCS kHz | 20 MHz (dBm) | 40 MHz (dBm) | 60 MHz (dBm) | 80 MHz (dBm) | 100 MHz (dBm) |
+| n46 | 15 | 100 | 216 |  |  |  |
+|  | 30 | 50 | 100 | 162 | 216 | 270 |
+|  | 60 | 24 | 50 | 75 | 100 | 135 |
+| n96, n102 | 15 | 100 | 216 |  |  |  |
+|  | 30 | 50 | 100 | 162 | 216 | 270 |
+|  | 60 | 24 | 50 | 75 | 100 | 135 |
+
+Unless given by Table 7.3F.2-4, the minimum requirements specified in Tables 7.3F.2-1 and 7.3F.2-2 shall be verified with the network signalling value NS_01 (Table 6.2F.3.1-1) configured.
+
+Table 7.3F.2-4: Network signaling value for reference sensitivity
+
+| Operating band | Network Signalling value |
+| --- | --- |
+| n46 | NS_01 |
+| n96 | NS_53 |
+| n102 | NS_01 |
+
+### 7.3F.3 Void
+
+### 7.3F.4 Void
+
+### 7.3F.4A Shared spectrum channel access CA
+
+#### 7.3F.4A.1 Intra-band contiguous shared spectrum channel access CA
+
+For intra-band contiguous carrier aggregation, the throughput of each component carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.3F.2-1, Table 7.3F.2-2, and Table 7.3F.2-3.
+
+### 7.3F.5 Void
+
+
+
+
+
+
+
+
+
+
+
+#### 7.3F.5.1 Void
+
+#### 7.3F.5.2 Void
+
+#### 7.3F.5.3 Void
+
+## 7.3G Reference sensitivity for Tx Diversity
+
+For UE supporting Tx diversity, the minimum requirements specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-1d, Table 7.3.2-2, Table 7.3.2-2aa and Table 7.3.2-2a shall be met with Tx diversity configuration described in clause 6.2G.1. For Tx diversity, the parameter PUMAX is defined in clause 6.2G.4 with the sum of the output power from all UE antenna connectors.
+
+### 7.3G.5 Void
+
+#### 7.3G.5.0 Void
+
+## 7.3H (Reserved)
+
+## 7.3I Reference sensitivity for (e)RedCap
+
+### 7.3I.1 General
+
+The reference sensitivity power level REFSENS is the minimum mean power applied to each one of the UE antenna ports for all UE categories, at which the throughput shall meet or exceed the requirements for the specified reference measurement channel.
+
+### 7.3I.2 Reference sensitivity power level for RedCap
+
+For a RedCap UE equipped with 2 Rx antenna ports, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2.2, A3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.3.2-1a and Table 7.3.2-1b for the applicable operating bands. The reference sensitivity (REFSENS) requirement specified for a RedCap UE equipped with 2 Rx antenna ports shall be met with uplink transmission bandwidth less than or equal to that specified in Table 7.3.2-3 and, for FDD bands, with the Tx-Rx separation as defined in clause 5.4.4 for the applicable band and UE channel bandwidth.
+
+For a power class 2 RedCap UE equipped with 2 Rx antenna ports operating in FD-FDD mode, certain degradation of the reference sensitivity in Table 7.3.2-1a is allowed. The maximum amount of degradation is specified in Table 7.3.2-1c.
+
+For a RedCap UE equipped with 1 Rx antenna ports, reference sensitivity for 2Rx antenna ports in Table 7.3.2-1a and in Table 7.3.2-1b shall be modified by the amount given in ΔR1R in Table 7.3I.2-1 for the applicable operating bands. The reference sensitivity (REFSENS) requirement specified for a RedCap UE equipped with 1 Rx antenna ports shall be met with uplink transmission bandwidth less than or equal to that specified in Table 7.3.2-3 and, for FDD bands, with the Tx-Rx separation as defined in clause 5.4.4 for the applicable band and UE channel bandwidth.
+
+For a power class 2 RedCap UE equipped with 2 Rx or 1 Rx antenna port(s) operating in HD-FDD mode or with TDD band, the reference sensitivity is specified in Table 7.3I.2-2 and Table 7.3I.2-3 respectively.
+
+For a power class 2 RedCap UE equipped with 1 Rx antenna ports operating in FD-FDD mode, the reference sensitivity in Table 7.3I.2-1b shall be met with uplink transmission bandwidth less than or equal to that specified in Table 7.3.2-3.
+
+Table 7.3I.2-1: Single antenna port reference sensitivity allowance ΔR1R
+
+| Operating band | Channel bandwidth (MHz) | ΔR1R (dB) |
+| --- | --- | --- |
+| TDD band | 5, 10, 15, 20 | 2.5 |
+| FDD band | 5 | 2.5 |
+| FDD band | 10, 15, 20 | 3.0 |
+
+Table 7.3I.2-1b: The reference sensitivity for PC2 RedCap UE with 1 Rx antenna port operating in FD-FDD mode
+
+| Operating band / SCS / Channel bandwidth |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Operating Band | SCS kHz | 5 MHz (dBm) | 10 MHz (dBm) | 15 MHz (dBm) | 20 MHz (dBm) |
+| n1 | 15 | -97.5 | -93.8 | -92 | -90.8 |
+|  | 30 |  | -94.1 | -92.1 | -91 |
+|  | 60 |  | -94.5 | -92.4 | -91.2 |
+| n3 | 15 | -93.6 | -90.3 | -88.5 | -87.3 |
+|  | 30 |  | -90.7 | -88.7 | -87.6 |
+|  | 60 |  | -91.1 | -89.0 | -87.8 |
+
+For a RedCap UE equipped with 2 Rx antenna ports operating in HD-FDD mode, reference sensitivity for 2Rx antenna ports in Table 7.3I.2-2 shall be met with uplink transmission bandwidth less than or equal to that specified in Table 7.3I.2-4.
+
+Table 7.3I.2-2: HD-FDD RedCap UE with 2 Rx antenna port reference sensitivity
+
+| Operating band / SCS / Channel bandwidth |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Operating Band | SCS kHz | 5 MHz (dBm) | 10 MHz (dBm) | 15 MHz (dBm) | 20 MHz (dBm) |
+| n1 | 15 | -100.0 | -96.8 | -95.0 | -93.7 |
+|  | 30 |  | -97.2 | -95.2 | -93.9 |
+|  | 60 |  | -97.5 | -95.4 | -94.2 |
+| n2 | 15 | -98.8 | -95.6 | -93.8 | -92.5 |
+|  | 30 |  | -96.0 | -94.0 | -92.7 |
+|  | 60 |  | -96.3 | -94.2 | -93.0 |
+| n3 | 15 | -97.8 | -94.6 | -92.8 | -91.5 |
+|  | 30 |  | -95.0 | -93.0 | -91.7 |
+|  | 60 |  | -95.3 | -93.2 | -92.0 |
+| n5 | 15 | -98.8 | -95.6 | -93.8 | -92.5 |
+|  | 30 |  | -96.0 | -94.0 | -92.7 |
+| n7 | 15 | -98.8 | -95.6 | -93.8 | -92.5 |
+|  | 30 |  | -96.0 | -94.0 | -92.7 |
+|  | 60 |  | -96.3 | -94.2 | -93.0 |
+| n8 | 15 | -97.8 | -94.6 | -92.8 | -91.5 |
+|  | 30 |  | -95.0 | -93.0 | -91.7 |
+| n12 | 15 | -97.8 | -94.6 | -92.8 |  |
+|  | 30 |  | -95.0 | -93.0 |  |
+| n13 | 15 | -97.8 | -94.6 |  |  |
+|  | 30 |  | -95.0 |  |  |
+| n14 | 15 | -97.8 | -94.6 |  |  |
+|  | 30 |  | -95.0 |  |  |
+| n18 | 15 | -100.0 | -96.8 | -95.0 |  |
+|  | 30 |  | -97.2 | -95.2 |  |
+| n20 | 15 | -97.8 | -94.6 | -92.8 | -91.5 |
+|  | 30 |  | -95.0 | -93.0 | -91.7 |
+| n24 | 15 | -100.0 | -96.8 |  |  |
+|  | 30 |  | -97.2 |  |  |
+|  | 60 |  | -97.5 |  |  |
+| n25 | 15 | -97.3 | -94.1 | -92.3 | -91.0 |
+|  | 30 |  | -94.5 | -92.5 | -91.2 |
+|  | 60 |  | -94.8 | -92.7 | -91.5 |
+| n26 | 15 | -98.3 | -95.1 | -93.3 | -92.0 |
+|  | 30 |  | -95.5 | -93.5 | -92.2 |
+| n28 | 15 | -99.3 | -96.1 | -94.3 | -93.0 |
+|  | 30 |  | -96.5 | -94.5 | -93.2 |
+| n30 | 15 | -99.5 | -96.3 |  |  |
+|  | 30 |  | -96.7 |  |  |
+| n65 | 15 | -100.0 | -96.8 | -95.0 | -93.7 |
+|  | 30 |  | -97.2 | -95.2 | -93.9 |
+|  | 60 |  | -97.5 | -95.4 | -94.2 |
+| n66 | 15 | -100.0 | -96.8 | -95.0 | -93.7 |
+|  | 30 |  | -97.2 | -95.2 | -93.9 |
+|  | 60 |  | -97.5 | -95.4 | -94.2 |
+| n70 | 15 | -100.0 | -96.8 | -95.0 | -93.7 |
+|  | 30 |  | -97.2 | -95.2 | -93.9 |
+|  | 60 |  | -97.5 | -95.4 | -94.2 |
+| n71 | 15 | -98.0 | -94.8 | -93.0 | -91.7 |
+|  | 30 |  | -95.2 | -93.2 | -91.9 |
+| n74 | 15 | -100.0 | -96.8 | -95.0 | -93.7 |
+|  | 30 |  | -97.2 | -95.2 | -93.9 |
+|  | 60 |  | -97.5 | -95.4 | -94.2 |
+| n85 | 15 | -97.8 | -94.6 | -92.8 |  |
+|  | 30 |  | -95.0 | -93.0 |  |
+| n91 | 15 | -100.0 |  |  |  |
+| n92 | 15 | -100.0 | -96.8 | -95.0 | -93.7 |
+|  | 30 |  | -97.2 | -95.2 | -93.9 |
+| n93 | 15 | -100.0 |  |  |  |
+| n94 | 15 | -100.0 | -96.8 | -95.0 | -93.7 |
+|  | 30 |  | -97.2 | -95.2 | -93.9 |
+| n105 | 15 | -981 | -94.8 | -93 | -91.7 |
+|  | 30 |  | -95.2 | -93.2 | -91.9 |
+| NOTE 1: DL channels overlapping the 612-617MHz range have 0.5dB added to the REFSENS |  |  |  |  |  |
+
+For a RedCap UE equipped with 1 Rx antenna ports and operating in HD-FDD mode, reference sensitivity for 1Rx antenna ports in Table 7.3I.2-3 shall be met with uplink transmission bandwidth less than or equal to that specified in Table 7.3I.2-4.
+
+Table 7.3I.2-3: HD-FDD RedCap UE with 1 Rx antenna port reference sensitivity
+
+| Operating band / SCS / Channel bandwidth |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Operating Band | SCS kHz | 5 MHz (dBm) | 10 MHz (dBm) | 15 MHz (dBm) | 20 MHz (dBm) |
+| n1 | 15 | -97.5 | -94.3 | -92.5 | -91.2 |
+|  | 30 |  | -94.7 | -92.7 | -91.4 |
+|  | 60 |  | -95.0 | -92.9 | -91.7 |
+| n2 | 15 | -96.3 | -93.1 | -91.3 | -90.0 |
+|  | 30 |  | -93.5 | -91.5 | -90.2 |
+|  | 60 |  | -93.8 | -91.7 | -90.5 |
+| n3 | 15 | -95.3 | -92.1 | -90.3 | -89.0 |
+|  | 30 |  | -92.5 | -90.5 | -89.2 |
+|  | 60 |  | -92.8 | -90.7 | -89.5 |
+| n5 | 15 | -96.3 | -93.1 | -91.3 | -90.0 |
+|  | 30 |  | -93.5 | -91.5 | -90.2 |
+| n7 | 15 | -96.3 | -93.1 | -91.3 | -90.0 |
+|  | 30 |  | -93.5 | -91.5 | -90.2 |
+|  | 60 |  | -93.8 | -91.7 | -90.5 |
+| n8 | 15 | -95.3 | -92.1 | -90.3 | -89.0 |
+|  | 30 |  | -92.5 | -90.5 | -89.2 |
+| n12 | 15 | -95.3 | -92.1 | -90.3 |  |
+|  | 30 |  | -92.5 | -90.5 |  |
+| n13 | 15 | -95.3 | -92.1 |  |  |
+|  | 30 |  | -92.5 |  |  |
+| n14 | 15 | -95.3 | -92.1 |  |  |
+|  | 30 |  | -92.5 |  |  |
+| n18 | 15 | -97.5 | -94.3 | -92.5 |  |
+|  | 30 |  | -94.7 | -92.7 |  |
+| n20 | 15 | -95.3 | -92.1 | -90.3 | -89.0 |
+|  | 30 |  | -92.5 | -90.5 | -89.2 |
+| n24 | 15 | -97.5 | -94.3 |  |  |
+|  | 30 |  | -94.7 |  |  |
+|  | 60 |  | -95.0 |  |  |
+| n25 | 15 | -94.8 | -91.6 | -89.8 | -88.5 |
+|  | 30 |  | -92.0 | -90.0 | -88.7 |
+|  | 60 |  | -92.3 | -90.2 | -89.0 |
+| n26 | 15 | -95.8 | -92.6 | -90.8 | -89.5 |
+|  | 30 |  | -93.0 | -91.0 | -89.7 |
+| n28 | 15 | -96.8 | -93.6 | -91.8 | -90.5 |
+|  | 30 |  | -94.0 | -92.0 | -90.7 |
+| n30 | 15 | -97.0 | -93.8 |  |  |
+|  | 30 |  | -94.2 |  |  |
+| n65 | 15 | -97.5 | -94.3 | -92.5 | -91.2 |
+|  | 30 |  | -94.7 | -92.7 | -91.4 |
+|  | 60 |  | -95.0 | -92.9 | -91.7 |
+| n66 | 15 | -97.5 | -94.3 | -92.5 | -91.2 |
+|  | 30 |  | -94.7 | -92.7 | -91.4 |
+|  | 60 |  | -95.0 | -92.9 | -91.7 |
+| n70 | 15 | -97.5 | -94.3 | -92.5 | -91.2 |
+|  | 30 |  | -94.7 | -92.7 | -91.4 |
+|  | 60 |  | -95.0 | -92.9 | -91.7 |
+| n71 | 15 | -95.5 | -92.3 | -90.5 | -89.2 |
+|  | 30 |  | -92.7 | -90.7 | -89.4 |
+| n74 | 15 | -97.5 | -94.3 | -92.5 | -91.2 |
+|  | 30 |  | -94.7 | -92.7 | -91.4 |
+|  | 60 |  | -95.0 | -92.9 | -91.7 |
+| n85 | 15 | -95.3 | -92.1 | -90.3 |  |
+|  | 30 |  | -92.5 | -90.5 |  |
+| n91 | 15 | -97.5 |  |  |  |
+| n92 | 15 | -97.5 | -94.3 | -92.5 | -91.2 |
+|  | 30 |  | -94.7 | -92.7 | -91.4 |
+| n93 | 15 | -97.5 |  |  |  |
+| n94 | 15 | -97.5 | -94.3 | -92.5 | -91.2 |
+|  | 30 |  | -94.7 | -92.7 | -91.4 |
+| n105 | 15 | -95.51 | -92.3 | -90.5 | -89.2 |
+|  | 30 |  | -92.7 | -90.7 | -89.4 |
+| NOTE 1: DL channels overlapping the 612-617MHz range have 0.5dB added to the REFSENS |  |  |  |  |  |
+
+Table 7.3I.2-4: Uplink configuration for HD-FDD reference sensitivity
+
+| Operating band / SCS / Channel bandwidth |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Operating Band | SCS kHz | 5 MHz | 10 MHz | 15 MHz | 20 MHz |
+| n1 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+|  | 60 |  | 10 | 18 | 24 |
+| n2 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+|  | 60 |  | 10 | 18 | 24 |
+| n3 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+|  | 60 |  | 10 | 18 | 24 |
+| n5 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+| n7 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+|  | 60 |  | 10 | 18 | 24 |
+| n8 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+| n12 | 15 | 25 | 50 | 75 |  |
+|  | 30 |  | 24 | 36 |  |
+| n13 | 15 | 25 | 50 |  |  |
+|  | 30 |  | 24 |  |  |
+| n14 | 15 | 25 | 50 |  |  |
+|  | 30 |  | 24 |  |  |
+| n18 | 15 | 25 | 50 | 75 |  |
+|  | 30 |  | 24 | 36 |  |
+| n20 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+| n24 | 15 | 25 | 50 |  |  |
+|  | 30 |  | 24 |  |  |
+|  | 60 |  | 10 |  |  |
+| n25 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+|  | 60 |  | 10 | 18 | 24 |
+| n26 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+| n28 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+| n30 | 15 | 25 | 50 |  |  |
+|  | 30 |  | 24 |  |  |
+| n65 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+|  | 60 |  | 10 | 18 | 24 |
+| n66 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+|  | 60 |  | 10 | 18 | 24 |
+| n70 | 15 | 25 | 50 | 75 | NOTE 1 |
+|  | 30 |  | 24 | 36 | NOTE 1 |
+|  | 60 |  | 10 | 18 | NOTE 1 |
+| n71 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+| n74 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+|  | 60 |  | 10 | 18 | 24 |
+| n85 | 15 | 25 | 50 | 75 |  |
+|  | 30 |  | 24 | 36 |  |
+| n91 | 15 | 25 |  |  |  |
+| n92 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+| n93 | 15 | 25 |  |  |  |
+| n94 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+| n105 | 15 | 25 | 50 | 75 | 100 |
+|  | 30 |  | 24 | 36 | 50 |
+| NOTE 1: For DL channel bandwidths that do not have symmetric UL channel bandwidth, highest valid UL configuration with lowest TX-RX separation (Table 5.4.4-1) shall be used unless otherwise specified. |  |  |  |  |  |
+
+### 7.3I.3 Reference sensitivity power level for eRedCap
+
+For UE supporting IE supportOfERedCap-r18 and IE eRedCapNotReducedBB-BW-r18, the REFSENS requirements for RedCap UE in clause 7.3I.2 apply.
+
+For UE supporting IE supportOfERedCap-r18 but not supporting eRedCapNotReducedBB-BW-r18, the reference sensitivity requirements for 5 MHz channel bandwidth with 15 kHz SCS defined in clause 7.3I.2 apply. These reference sensitivity requirements for 5 MHz channel bandwidth apply also for 10, 15 and 20 MHz channel bandwidths with 15 kHz SCS. In case the reference sensitivity requirements for 5 MHz channel bandwidth are not defined, the reference sensitivity requirements for 10 MHz channel bandwidth apply with the reference sensitivity level reduced by 3.2 dB, and the UL configuration shall be less than or equal to minimum between RB number specified in Table 7.3I.2-4  and 25 RBs for HD-FDD operation, and minimum between RB number specified in Table 7.3.2-3 and 25RBs otherwise. These reference sensitivity requirements for 10 MHz channel bandwidth apply also for 15 and 20 MHz channel bandwidths. Both Tx RBs in UL configuration and Rx RBs in FRC, when applicable, shall be allocated within the range from RBlow = ceil(NRB/2 - NRB_PR3/2) to RBhigh = RBlow + NRB_PR3 -1, where RBlow and RBhigh are the lowest and highest available RB position and NRB_PR3 is 25 RBs for 15 kHz SCS.
+
+For UE supporting IE supportOfERedCap-r18 but not supporting eRedCapNotReducedBB-BW-r18, for 30 kHz SCS, the reference sensitivity requirements defined for 10 MHz channel bandwidth in clause 7.3I.2 apply with reference sensitivity level reduced by 3.0 dB and the UL configuration shall be less than or equal to minimum between RB number specified in Table 7.3I.2-4 and 12 RBs for HD-FDD operation, and minimum between RB number specified in Table 7.3.2-3 and 12RBs otherwise. These reference sensitivity requirements for 10 MHz channel bandwidth apply also for 15 and 20 MHz channel bandwidths with 30 kHz SCS. Both Tx RBs in UL configuration and Rx RBs in FRC, when applicable, shall be allocated within the range from RBlow = ceil(NRB/2 - NRB_PR3/2) to RBhigh = RBlow + NRB_PR3 -1, where RBlow and RBhigh are the lowest and highest available RB position and NRB_PR3 is 12 RBs for 30 kHz SCS.
+
+NOTE: It is not necessary to repeat verification when same requirement applies for multiple channel bandwidths.
+
+## 7.3J Reference sensitivity for ATG
+
+### 7.3J.1 General
+
+For ATG UE with multiple omni-directional antennas not indicating the capability antennaArrayType-r18, the reference sensitivity power level REFSENS is the minimum mean power per polarization at antenna connector, at which the throughput shall meet or exceed the requirements for the specified reference measurement channel.
+
+For ATG UE with antenna array indicating the capability antennaArrayType-r18,the reference sensitivity power level REFSENS is the minimum mean power per polarization at TAB antenna connector, at which the throughput shall meet or exceed the requirements for the specified reference measurement channel.
+
+### 7.3J.2 Reference sensitivity power level
+
+For a ATG UE(s) equipped with 2 Rx antenna ports, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2.2 and A.3.2 (with one sided dynamic OCNG Pattern OP.1 FDD for the DL-signal as described in Annex A.5.1.1) with parameters specified in Table 7.3.2-1a and Table 7.3.2-1b for the applicable operating bands.
+
+For ATG UE(s) equipped with 4 Rx antenna ports, reference sensitivity for 2Rx antenna ports shall be modified by the amount given in ΔRIB,4R in Table 7.3.2-2 for the applicable operating bands.
+
+The reference sensitivity (REFSENS) requirement for a ATG UE shall be met with uplink transmission bandwidth less than or equal to that specified in Table 7.3.2-3.
+
+### 7.3J.2A Reference sensitivity power level for ATG CA
+
+#### 7.3J.2A.1 Reference sensitivity power level for ATG intra-band contiguous CA
+
+For ATG UE intra-band contiguous carrier aggregation, the throughput of each component carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-2, Table 7.3.2-2a, and Table 7.3.2-3.
+
+For UE(s) supporting one uplink carrier, the uplink configuration of the PCC shall be in accordance with Table 7.3.2-3 and the downlink PCC carrier center frequency shall be configured closer to uplink operating band than any of the downlink SCC center frequency.
+
+#### 7.3J.2A.2 Reference sensitivity power level for ATG inter-band CA
+
+For inter-band carrier aggregation with one component carrier per operating band and the uplink assigned to one NR band the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2.2 and A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1 with parameters specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-2, Table 7.3.2-2a and Table 7.3.2-3. The reference sensitivity is defined to be met with all downlink component carriers active and one of the uplink carriers active. Exceptions to reference sensitivity are allowed in accordance with clause 7.3J.2A.3.
+
+The reference sensitivity exceptions due to cross band isolation is applicable to the UL aggressor band configured with either one Tx antenna connector or two Tx antenna connectors with UL MIMO.
+
+### 7.3J.3A ΔRIB,c for ATG CA
+
+For ATG UE supporting inter-band carrier aggregation, the minimum requirement for reference sensitivity in clause 7.3A.2 shall be increased by the amount given by ΔRIB,c defined in clause 7.3A.3.2 for the applicable operating bands. Unless otherwise stated, ΔRIB,c is set to zero.
+
+### 7.3J.4A Reference sensitivity exceptions due to cross band isolation for ATG CA
+
+Sensitivity degradation is allowed for a band if it is impacted by UL of another band part which belongs to NR band of the same NR CA configuration due to cross band isolation issues. The reference sensitivity degradation for the victim band due to cross band isolation is specified only for the specific uplink and downlink test points specified in Table 7.3J.4A-1, and the reference sensitivity degradation values according to UL output power are specified in Table 7.3J.4A-1a.
+
+Table 7.3J.4A-1: Reference sensitivity exceptions (MSD) and uplink/downlink configurations due to cross band isolation from an ATG UE aggressor NR UL band for NR CA in FR1
+
+| UL band | DL band | UL Fc | UL BW | SCS of UL band | UL RB Allocation | DL Fc | DL BW | MSD | Cross-bandInterferencesource |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  | (MHz) | (MHz) | (kHz) | LCRB | (MHz) | (MHz) | (dB) |  |
+| n39 | n3 | 1900 | 30 | 15 | 160 (RBstart=0) | 1817.5 | 25 | A11 | >ACLR2 |
+| n3 | n39 | 1722.5 | 25 | 15 | 50 (RBstart=83) | 1900 | 30 | A22 | >ACLR2 |
+| NOTE1: MSD is A1 value corresponding to UL output power in Table 7.3J.2A.4-1a.NOTE2: MSD is A2 value corresponding to UL output power in Table 7.3J.2A.4-1a.NOTE3: MSD only applies for ATG UE targeted for CPE form factor. |  |  |  |  |  |  |  |  |  |
+
+Table 7.3J.4A-1a: Reference sensitivity exceptions (MSD) and uplink/downlink configurations due to cross band isolation from an ATG UE aggressor for different NR UL output powers
+
+| UL Output power(dBm) | A1(dB) | A2(dB) |
+| --- | --- | --- |
+| 23 | 4.4 | 1.0 |
+| 24 | 5.0 | 1.2 |
+| 25 | 5.4 | 1.4 |
+| 26 | 5.9 | 1.6 |
+| 27 | 6.5 | 1.8 |
+| 28 | 7.0 | 2.1 |
+| 29 | 7.7 | 2.4 |
+| 30 | 8.4 | 2.7 |
+| 31 | 9.1 | 3.1 |
+| 32 | 9.9 | 3.5 |
+| 33 | 10.8 | 4.0 |
+| 34 | 11.6 | 4.5 |
+| 35 | 12.5 | 5.0 |
+| 36 | 13.4 | 5.7 |
+| 37 | 14.4 | 6.4 |
+| 38 | 15.4 | 7.2 |
+| 39 | 16.4 | 8.0 |
+| 40 | 17.5 | 8.9 |
+
+## 7.3K (Reserved)
+
+## 7.3L (Reserved)
+
+## 7.3M Reference sensitivity for LP-WUS/WUR
+
+### 7.3M.1 General
+
+The reference sensitivity power level REFSENS is the minimum mean power applied to the UE antenna port, at which the MDR criterion with the side conditions specified in 7.1M shall be met.
+
+### 7.3M.2 Reference sensitivity power level for LP-WUS/WUR
+
+The REFSENS for the LP-WUS/WUR shall be specified in Table 7.3M.2-1. The reference sensitivity in Table 7.3M.2-1 shall be modified by the amount given in ΔRLP-WUS in Table 7.3M.2-2 for the applicable operating bands.
+
+Table 7.3M.2-1: Reference sensitivity for LP-WUR
+
+| RX parameter | SCS (kHz) | Value (dBm) |
+| --- | --- | --- |
+| REFSENS for Type1 LR | 15 | -97.5 |
+|  | 30 | -94.5 |
+| REFSENS for Type2 LR | 15 | -102.0 |
+|  | 30 | -99.0 |
+
+Table 7.3M.2-2: Reference sensitivity allowance ΔRLP-WUS
+
+| Operating band | ΔRLP-WUS (dB) |
+| --- | --- |
+| n41, n77, n78, n79 | 1.0 |
+| n104 | 3.0 |
+
+## 7.4 Maximum input level
+
+Maximum input level is defined as the maximum mean power received at the UE antenna port, at which the specified relative throughput shall meet or exceed the minimum requirements for the specified reference measurement channel. The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexs A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.4-1.
+
+Table 7.4-1: Maximum input level
+
+| Rx Parameter | Units | Channel bandwidth (MHz) |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | 3, 5, 7, 10, 15, 20 | 25, 30, 35, 40, 45, 50 | 60, 70, 80, 90, 100 |
+| Power in Transmission Bandwidth Configuration4 | dBm | -252 | -25 + 10log10(BWChannel /20)Note 2 | -202 |
+|  |  | -273,5 | -27 + 10log10(BWChannel /20)Note 3,5 | -223,5 |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum uplink configuration specified in Table 7.3.2-3 and 7.3F.2-3 for shared spectrum channel access operation with PCMAX_L,f,c as defined in clause 6.2.4.NOTE 2: Reference measurement channel is A.3.2.3 or A.3.3.3 for 64 QAM.NOTE 3: Reference measurement channel is A.3.2.4 or A.3.3.4 for 256 QAM.NOTE 4: 10log10(x) is rounded to the nearest 0.5dB value.NOTE 5: Reference measurement channel is A.3.2.5 or A.3.3.5 for 1024 QAM. |  |  |  |  |
+
+## 7.4A Maximum input level for CA
+
+### 7.4A.1 Maximum input level for Intra-band contiguous CA
+
+For intra-band contiguous carrier aggregation maximum input level is defined as the maximum mean power received at the UE antenna port, over the Transmission bandwidth configuration of each CC.
+
+The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.4A.1-1 for each component carrier.
+
+Table 7.4A.1-1: Maximum input level for Intra-band contiguous CA
+
+| Rx Parameter | Units | NR CA Bandwidth Class |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | B | C | D |  |
+| Power in largest transmission bandwidth configuration CC, Plargest BW | dBm | -232 | -232 | -252 |  |
+|  |  | -253,4 | -253,4 | -273,4 |  |
+| Power in each other CC | dBm | Plargest BW +10*log{(NRB,c*SCSc)/(NRB,largest BW*SCSlargest BW)} |  |  |  |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum uplink configuration specified in Table 7.3.2-3 and 7.3F.2-3 for shared spectrum channel access operation with PCMAX_L,f,c as defined in clause 6.2.4.NOTE 2: Reference measurement channel is A.3.2.3 or A.3.3.3 for 64 QAM.NOTE 3: Reference measurement channel is A.3.2.4 or A.3.3.4 for 256 QAM.NOTE 4:  Reference measurement channel is A.3.2.5 or A.3.3.5 for 1024 QAM. |  |  |  |  |  |
+
+### 7.4A.2 Maximum input level for Intra-band non-contiguous CA
+
+For intra-band non-contiguous carrier aggregation with one uplink carrier and two or more downlink sub-blocks, each larger than or equal to 5 MHz, the maximum input level requirements are defined with the uplink configuration in accordance with 7.3A.2.2-1. For this uplink configuration, the UE shall meet the requirements for each sub-block as specified in Table 7.4-1 and Table 7.4A.1-1 for one component carrier and two component carriers per sub-block, respectively. The throughput of each downlink component carrier shall be ≥ 95% of the maximum throughput of the specified reference measurement channel as specified in Annex A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1 and A.5.2.1. The requirements apply with all downlink carriers active.
+
+### 7.4A.3 Maximum input level for Inter-band CA
+
+For inter-band carrier aggregation with one component carrier per operating band and the uplink assigned to one NR band, the maximum input level is defined with the uplink active on the band(s) other than the band whose downlink is being tested. For NR CA configurations including an operating band without uplink band or an operating band with an unpaired DL part (as noted in Table 5.2-1), the requirements for all downlinks shall be met with the single uplink carrier active in each band capable of UL operation. The UE shall meet the requirements specified in clause 7.4 for each component carrier while all downlink carriers are active.
+
+The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexs A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1) for each component carrier.
+
+## 7.4B Maximum input level for NR-DC
+
+For inter-band NR-DC configurations, the maximum input level for the corresponding inter-band CA configuration as specified in clause 7.4A applies.
+
+## 7.4D Maximum input level for UL MIMO
+
+For UE with multiple transmitter antenna connectors up to a maximum of four in closed-loop spatial multiplexing, the minimum requirements specified in clause 7.4 shall be met with the UL MIMO configurations described in clause 6.2D.1 and clause 6.2F.1D for shared spectrum access operation. For UL MIMO, the parameter PCMAX_L is defined as the total transmitter power over all transmit antenna connectors.
+
+## 7.4E Maximum input level for V2X
+
+### 7.4E.1 General
+
+Maximum input level is defined as the maximum mean power received at the UE antenna port, at which the specified relative throughput shall meet or exceed the minimum requirements for the specified reference measurement channel. When UE is configured for NR V2X reception non-concurrent with NR uplink transmissions for NR V2X operating bands specified in Table 5.2E.1-1, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.7.3 and A.7.4 with parameters specified in Table 7.4E.1-1.
+
+Table 7.4E.1-1: Maximum input level of NR V2X
+
+| Rx Parameter | Units | Channel bandwidth |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | 5 MHz3 | 10 MHz | 20 MHz | 30 MHz | 40 MHz |
+| Power in Transmission Bandwidth Configuration | dBm | -251 | -251 | -251 | -231 | -221 |
+|  |  | -272 | -272 | -272 | -252 | -242 |
+| NOTE 1: Reference measurement channel is A.7.3 for 64 QAM.NOTE 2: Reference measurement channel is A.7.4 for 256 QAM.NOTE 3: The CBW is only applicable for PS UE in n14. |  |  |  |  |  |  |
+
+### 7.4E.1A Maximum input level for Sidelink CA
+
+For intra-band contiguous NR SL CA operation, the following maximum input level requirement shall be applied to the SL CA bandwidth class B.
+
+Table 7.4E.1A-1 Maximum input levels for intra-band contiguous CA UE
+
+| Rx Parameter | Units | SL CA Bandwidth Class |  |
+| --- | --- | --- | --- |
+|  |  | A | B |
+| Power in largest Transmission Bandwidth Configuration CC | dBm |  | -25 + 10log10(BWChannel /20)Note 1 |
+|  |  |  | -27 + 10log10(BWChannel /20)Note 2 |
+| NOTE 1: Reference measurement channel is A.7.3 for 64 QAM.NOTE 2: Reference measurement channel is A.7.4 for 256 QAM.NOTE 3: 10log10(x) is rounded to the nearest 0.5dB |  |  |  |
+
+The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annex A.7.3 and A.7.4. The requirements apply with all downlink carriers active.
+
+For intra-band non-contiguous NR SL CA, the maximum input level requirements in Section 7.4E.1 will be applied to each sub-block. The throughput (>= 95% T-put) of each CC shall meet or exceed the minimum requirements for the specified reference measurement channel in A.7.3 and A.7.4. The requirements apply with all downlink carriers active.
+
+### 7.4E.1F General requirement for Sidelink Unlicensed
+
+The maximum input level requirement of SL-U operation in clause 7.4 apply.
+
+The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.7.3 and A.7.4.
+
+### 7.4E.2 Maximum input level for V2X concurrent operation
+
+For the inter-band concurrent NR V2X operation, the requirements specified in clause 7.4E.1 shall apply for the NR sidelink reception in the operating bands in Table 5.2E.2-1 and the requirements specified in clause 7.4 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+### 7.4E.2F Maximum input level for SL-U concurrent operation
+
+For the inter-band concurrent NR SL-U operation, the requirements specified in clause 7.4E.1F shall apply for the NR sidelink reception in the operating bands in Table 5.2E.2F-1 and the requirements specified in clause 7.4 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+## 7.4F (Reserved)
+
+## 7.4G (Reserved)
+
+## 7.4H (Reserved)
+
+## 7.4I (Reserved)
+
+## 7.4J Maximum input level for ATG
+
+### 7.4J.1 General
+
+Maximum input level is defined as the maximum mean power received at the UE antenna port, at which the specified relative throughput shall meet or exceed the minimum requirements for the specified reference measurement channel. The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexs A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.4J.1-1.
+
+Table 7.4J.1-1: Maximum input level for ATG
+
+| Rx Parameter | Units | ATG UE Types |  | Reference measurement channel |
+| --- | --- | --- | --- | --- |
+|  |  | Omni-directional antenna: receiver characteristics specified at the antenna connector(s) | Antenna array: receiver characteristics specified at transceiver array boundary (TAB) connectors |  |
+| Power in Transmission Bandwidth Configuration | dBm | -42 | -30 | A.3.2.3 or A.3.3.3 for 64 QAM |
+|  |  | -44 | -32 | A.3.2.4 or A.3.3.4 for 256 QAM |
+| The applicable channel bandwidths | MHz | 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |  |  |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum uplink configuration specified in Table 7.3.2-3 with PCMAX_L,f,c as defined in clause 6.2J.2. |  |  |  |  |
+
+### 7.4J.2A Maximum input level for ATG CA
+
+#### 7.4J.2A.1 Minimum requirement for ATG intra-band contiguous CA
+
+For intra-band contiguous carrier aggregation maximum input level is defined as the maximum mean power received at the UE antenna port, over the Transmission bandwidth configuration of each CC.
+
+The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.4J.2A-1 for each component carrier.
+
+Table 7.4J.2A-1: Maximum input level for ATG intra-band contiguous CA
+
+| Rx Parameter | Units | ATG UE Types |  |
+| --- | --- | --- | --- |
+|  |  | Omni-directional antenna | Antenna array |
+| Power in largest transmission bandwidth configuration CC, Plargest BW | dBm | -422 | -302 |
+|  |  | -443 | -323 |
+| Power in each other CC | dBm | Plargest BW +10*log{(NRB,c*SCSc)/(NRB,largest BW*SCSlargest BW)} |  |
+| The applicable NR CA Bandwidth Class | MHz | C |  |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum uplink configuration specified in Table 7.3.2-3 with PCMAX_L,f,c as defined in clause 6.2J.2.NOTE 2: Reference measurement channel is A.3.2.3 or A.3.3.3 for 64 QAM.NOTE 3: Reference measurement channel is A.3.2.4 or A.3.3.4 for 256 QAM. |  |  |  |
+
+#### 7.4J.2A.1 Minimum requirement for ATG inter-band CA
+
+For inter-band carrier aggregation with one component carrier per operating band and the uplink assigned to one NR band, the maximum input level is defined with the uplink active on the band(s) other than the band whose downlink is being tested. For NR CA configurations including an operating band without uplink band or an operating band with an unpaired DL part (as noted in Table 5.2-1), the requirements for all downlinks shall be met with the single uplink carrier active in each band capable of UL operation. The UE shall meet the requirements specified in clause 7.4A.1 for each component carrier while all downlink carriers are active.
+
+The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1) for each component carrier.
+
+## 7.4K (Reserved)
+
+## 7.4L (Reserved)
+
+## 7.4M Maximum input level for LP-WUS/WUR
+
+Maximum input level is defined as the maximum mean power received at the UE antenna connector, at which the MDR criterion shall be met with the side conditions in clause 7.1M and with parameters specified in Table 7.4M-1, and in Tables 7.4M-2a and 7.4M-2b respectively.
+
+The UE supporting LP-WUS shall fulfil the minimum requirements specified in Table 7.4M-1 for type 1 and type 2 LP-WUR. For this requirement, a non-LP-WUS DL RB is defined as any RB in the DL transmission bandwidth configuration of the UE channel that is not occupied by the LP-WUS carrier as defined in sub-clause 5.3M.
+
+Table 7.4M-1: Maximum input level for Type1 LR and Type2 LR
+
+| Rx Parameter | Units | Maximum input power |
+| --- | --- | --- |
+| Case 1: Power in LP-WUS | dBm | -25.0 |
+| Case 2: Total power including LP-WUS RBs and non-LPWUS RBs | dBm | -25.0 |
+| NOTE: Reference measurement channel is specified in A.3M.1. |  |  |
+
+Table 7.4M-2a: Test parameters for Maximum input level for Type1 LR and Type 2 LR, case1
+
+| RX parameter | Units | Value |
+| --- | --- | --- |
+| Power in LP-WUS | dBm | -25.0 |
+| Power of each non-LP-WUS DL RB | mW | 0 |
+
+Table 7.4M-2b: Test parameters for Maximum input level for Type1 LR and Type 2 LR, case 2
+
+| RX parameter | Units | Value |
+| --- | --- | --- |
+| Total power including LP-WUS RBs and non-LPWUS RBs | dBm | -25.0 |
+| ASCS Guard RB1 | PRB | X |
+| LP-WUS power boosting | dB | 0 |
+| NOTE 1: ASCS Guard RBs are zero-power and exist when NRB,LP-WUS < NRB. X=1 for type 1 LR and X=0 for type 2 LR. NOTE 2: The interfering NR RBs consists of QPSK with the same SCS as LP-WUS, in all PRB in the DL transmission BW configuration not occupied by either LP-WUS or Guard RB. |  |  |
+
+## 7.5 Adjacent channel selectivity
+
+Adjacent channel selectivity (ACS) is a measure of a receiver's ability to receive an NR signal at its assigned channel frequency in the presence of an adjacent channel signal at a given frequency offset from the centre frequency of the assigned channel. ACS is the ratio of the receive filter attenuation on the assigned channel frequency to the receive filter attenuation on the adjacent channel(s).
+
+The UE shall fulfil the minimum requirements specified in Table 7.5-1 for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz and the minimum requirements specified in Table 7.5-2 for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz. These requirements apply for all values of an adjacent channel interferer up to -25 dBm and for any SCS specified for the channel bandwidth of the wanted signal. However, it is not possible to directly measure the ACS; instead the lower and upper range of test parameters are chosen as in Table 7.5-3 and Table 7.5-4 for verification of the requirements specified in Table 7.5-1, and as in Table 7.5-5 and Table 7.5-6 for verification of the requirements specified in Table 7.5-2. For these test parameters, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1). For operating bands with an unpaired DL part (as noted in Table 5.2-1), the requirements only apply for carriers assigned in the paired part.
+
+Table 7.5-1: ACS for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz
+
+| RX parameter | Units | Channel bandwidth (MHz) |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | 3, 5, 7, 10 | 15 | 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| ACS | dB | 33 | 30 | 27 – 10log10(BWChannel /20) |
+| NOTE1:  ACS value is rounded to the next higher 0.5dB value |  |  |  |  |
+
+Table 7.5-2: ACS for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+| RX parameter | Units | Channel bandwidth (MHz) |
+| --- | --- | --- |
+|  |  | 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| ACS | dB | 33 |
+
+Table 7.5-3: Test parameters for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz, case 1
+
+| RX parameter | Units | Channel bandwidth (MHz) |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | 3 | 5, 7, 10 | 15 | 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration | dBm | REFSENS + 14 dB |  |  |  |
+| Pinterferer4 | dBm | REFSENS + 45.5 dB |  | REFSENS + 42.5 dB | REFSENS + 39.5 – 10log10(BWChannel /20) |
+| BWinterferer | MHz | 3 | 5 |  |  |
+| Finterferer (offset) | MHz | 3 /- 3 | BWChannel /2 + 2.5/-(BWChannel /2 + 2.5) |  |  |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 3: The interferer consists of the NR interferer RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1.NOTE 4: 10log10(x) is rounded to the next higher 0.5dB value. |  |  |  |  |  |
+
+Table 7.5-4: Test parameters for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz, case 2
+
+| RX parameter | Units | Channel bandwidth (MHz) |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | 3 | 5, 7, 10 | 15 | 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration4 | dBm | -56.5 |  | -53.5 | -50.5 + 10log10(BWChannel /20) |
+| Pinterferer | dBm | -25 |  |  |  |
+| BWinterferer | MHz | 3 | 5 |  |  |
+| Finterferer (offset) | MHz | 3 /- 3 | BWChannel /2 + 2.5/-(BWChannel /2 + 2.5) |  |  |
+| NOTE 1: The transmitter shall be set to 24 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1NOTE 4: 10log10(x) is rounded to the next higher 0.5dB value. |  |  |  |  |  |
+
+Table 7.5-5: Test parameters for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz, case 1
+
+| RX parameter | Units | Channel bandwidth (MHz) |
+| --- | --- | --- |
+|  |  | 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration | dBm | REFSENS + 14 dB |
+| Pinterferer | dBm | REFSENS + 45.5 dB |
+| BWinterferer | MHz | BWChannel |
+| Finterferer (offset) | MHz | BWChannel/-BWChannel |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with an SCS equal to that of the wanted signal.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. |  |  |
+
+Table 7.5-6: Test parameters for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz, case 2
+
+| RX parameter | Units | Channel bandwidth (MHz) |
+| --- | --- | --- |
+|  |  | 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration | dBm | -56.5 |
+| Pinterferer | dBm | -25 |
+| BWinterferer | MHz | BWChannel |
+| Finterferer (offset) | MHz | BWChannel/-BWChannel |
+| NOTE 1: The transmitter shall be set to 24 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with an SCS equal to that of the wanted signal.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. |  |  |
+
+## 7.5A Adjacent channel selectivity for CA
+
+### 7.5A.1 Adjacent channel selectivity for Intra-band contiguous CA
+
+For intra-band contiguous carrier aggregation the downlink SCC(s) shall be configured at nominal channel spacing to the PCC. The UE shall fulfil the minimum requirement specified in Table 7.5A.1-1 and 7.5A.1-1a for an adjacent channel interferer on either side of the aggregated downlink signal at a specified frequency offset and for an interferer power up to -25 dBm.
+
+The throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Tables 7.5A.1-2, 7.5A.1-2a, 7.5A.1-3 and 7.5A.1-3a.
+
+Table 7.5A.1-1: ACS for intra-band contiguous CA with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+|  |  | NR CA bandwidth class |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+| Rx Parameter | Units | B | C | D |  |
+| ACS | dB | 26.0 | 33.0 | 25.2 |  |
+
+Table 7.5A.1-1a: ACS for intra-band contiguous CA with FDL_high < 2700 MHz and FUL_high < 2700 MHz
+
+|  |  | NR CA bandwidth class |  |
+| --- | --- | --- | --- |
+| Rx Parameter | Units | B | C |
+| ACS | dB | 20.0 | 17.0 |
+
+Table 7.5A.1-2: Test parameters for intra-band contiguous CA with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz, case 1
+
+| Rx Parameter | Units | NR CA bandwidth class |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | B | C | D |  |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + 14 dB | REFSENS + 14 dB | REFSENS + 14 dB |  |
+| PInterferer | dBm | Aggregated power + 24.5 dB | Aggregated power + 31.5 dB | Aggregated power + 23.7 dB |  |
+| BWInterferer | MHz | 20 | BWchannel CA | 50 |  |
+| FInterferer (offset) | MHz | 10 + Foffset/-10 - Foffset | BWchannel CA/2 + Foffset/-BWchannel CA/2 + Foffset | 25 + Foffset/-25 -Foffset |  |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4 .NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with an SCS equal to that of the closest carrier.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. |  |  |  |  |  |
+
+Table 7.5A.1-2a: Test parameters for intra-band contiguous CA with FDL_high<2700 MHz and FUL_high<2700 MHz, case 1
+
+| Rx Parameter | Units | NR CA bandwidth class |  |
+| --- | --- | --- | --- |
+|  |  | B | C |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + 14 dB | REFSENS + 14 dB |
+| PInterferer | dBm | Aggregated power + 18.5 dB | Aggregated power + 15.5 dB |
+| BWInterferer | MHz | 5 | 5 |
+| FInterferer (offset) | MHz | 2.5 + Foffset/-2.5 - Foffset | 2.5 + Foffset/-2.5 - Foffset |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4 .NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. |  |  |  |
+
+Table 7.5A.1-3: Test parameters for intra-band contiguous CA with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz, case 2
+
+| Rx Parameter | Units | NR CA bandwidth class |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | B | C | D |  |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | -49.5 + 10log(NRB,c/NRB_agg) | -56.5 | -48.7 + 10log(NRB,c/NRB_agg) |  |
+| PInterferer | dBm | -25 | -25 | -25 |  |
+| BWInterferer | MHz | 20 | BWchannel CA | 50 |  |
+| FInterferer (offset) | MHz | 10 + Foffset/-10 -Foffset | BWchannel CA/2 + Foffset/-BWchannel CA/2 + Foffset | 25 + Foffset/-25 -Foffset |  |
+| NOTE 1: The transmitter shall be set to 24 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with an SCS equal to that of the closest carrier.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. |  |  |  |  |  |
+
+Table 7.5A.1-3a: Test parameters for intra-band contiguous CA with FDL_high <2700 MHz and FUL_high<2700 MHz, case 2
+
+| Rx Parameter | Units | NR CA Bandwidth Class |  |
+| --- | --- | --- | --- |
+|  |  | B | C |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | -43.5 + 10log(NRB,c/NRB_agg) | -40.5 + 10log(NRB,c/NRB_agg) |
+| PInterferer | dBm | -25 | -25 |
+| BWInterferer | MHz | 5 | 5 |
+| FInterferer (offset) | MHz | 2.5 + Foffset/-2.5 - Foffset | 2.5 + Foffset/-2.5 - Foffset |
+| NOTE 1: The transmitter shall be set to 24 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. |  |  |  |
+
+### 7.5A.2 Adjacent channel selectivity Intra-band non-contiguous CA
+
+For intra-band non-contiguous carrier aggregation with FDL_high < 2700 MHz and FUL_high < 2700 MHz with one uplink carrier and two or more downlink sub-blocks, each larger than or equal to 5 MHz, the adjacent channel selectivity requirements are defined with the uplink configuration in accordance with Table 7.3A.2.2-1. For this uplink configuration, the UE shall meet the requirements for each sub-block as specified in clauses 7.5 and 7.5A.1 for one component carrier and two component carriers per sub-block, respectively. The UE shall fulfil the minimum requirements all values of a single adjacent channel interferer in-gap and out-of-gap up to a –25 dBm interferer power while all downlink carriers are active. For the lower range of test parameters (Case 1), the interferer power Pinterferer  shall be set to the maximum of the levels given by the carriers of the respective sub-blocks as specified in Table 7.5-3 and Table 7.5A.1-2a for one component carrier and two component carriers per sub-block, respectively. The wanted signal power levels for the carriers of each sub-block shall then be adjusted relative to Pinterferer  in accordance with the ACS requirement for each sub-block (Table 7.5-1 and Table 7.5A.1-1a). For the upper range of test parameters (Case 2) for which the interferer power Pinterferer  is -25 dBm (Table 7.5-4 and Table 7.5A.1-3a) the wanted signal power levels for the carriers of each sub-block shall be adjusted relative to Pinterferer  like for Case 1.
+
+For intra-band non-contiguous carrier aggregation with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz with one uplink carrier and two or more downlink sub-blocks, each larger than or equal to 5 MHz, the adjacent channel selectivity requirements are defined with the uplink configuration in accordance with Table 7.3A.2.2-1. For this uplink configuration, the UE shall meet the requirements for each sub-block as specified in clauses 7.5 and 7.5A.1 for one component carrier and two component carriers per sub-block, respectively. The UE shall fulfil the minimum requirements all values of a single adjacent channel interferer in-gap and out-of-gap up to a –25 dBm interferer power while all downlink carriers are active. For the lower range of test parameters (Case 1), the interferer power Pinterferer  shall be set to the maximum of the levels given by the carriers of the respective sub-blocks as specified in Table 7.5-5 and Table 7.5A.1-2 for one component carrier and two component carriers per sub-block, respectively. The wanted signal power levels for the carriers of each sub-block shall then be adjusted relative to Pinterferer  in accordance with the ACS requirement for each sub-block (Table 7.5-2 and Table 7.5A.1-1). For the upper range of test parameters (Case 2) for which the interferer power Pinterferer  is -25 dBm (Table 7.5-6 and Table 7.5A.1-3) the wanted signal power levels for the carriers of each sub-block shall be adjusted relative to Pinterferer  like for Case 1.
+
+The throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+### 7.5A.3 Adjacent channel selectivity Inter-band CA
+
+For inter-band carrier aggregation with one component carrier per operating band and the uplink assigned to one NR band, the adjacent channel requirements are defined with the uplink active on the band(s) other than the band whose downlink is being tested. For NR CA configurations including an operating band without uplink operation or an operating band with an unpaired DL part (as noted in Table 5.2-1), the requirements for all downlinks shall be met with the single uplink carrier active in each band capable of UL operation. The UE shall meet the requirements specified in clause 7.5 and clause 7.5F when the downlink belongs to a spectrum sharing defined band, for each component carrier while all downlink carriers are active.
+
+The throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+## 7.5B Adjacent channel selectivity for NR-DC
+
+For inter-band NR-DC configurations, the adjacent channel selectivity for the corresponding inter-band CA configuration as specified in clause 7.5A applies.
+
+## 7.5D Adjacent channel selectivity for UL MIMO
+
+For UE(s) with multiple transmitter antenna connectors up to a maximum of four in closed-loop spatial multiplexing scheme, the minimum requirements specified in clause 7.5 shall be met with the UL MIMO configurations described in clause 6.2D.1 and clause 6.2F.1D for shared spectrum access operation. For UL MIMO, the parameter PCMAX_L is defined as the total transmitter power over all transmit antenna connectors.
+
+## 7.5E Adjacent channel selectivity for V2X
+
+### 7.5E.1 General
+
+Adjacent channel selectivity (ACS) is a measure of a receiver's ability to receive an NR signal at its assigned channel frequency in the presence of an adjacent channel signal at a given frequency offset from the centre frequency of the assigned channel. ACS is the ratio of the receive filter attenuation on the assigned channel frequency to the receive filter attenuation on the adjacent channel(s).
+
+The UE shall fulfil the minimum requirements specified in Table 7.5E.1-1 for NR V2X UE. These requirements apply for all values of an adjacent channel interferer up to -25 dBm and for any SCS specified for the channel bandwidth of the wanted signal. However, it is not possible to directly measure the ACS; instead the lower and upper range of test parameters are chosen as in Table 7.5E.1-2 and Table 7.5E.1-3 for verification of the requirements specified in Table 7.5E.1-1. For these test parameters, when UE is configured for NR V2X reception non-concurrent with NR uplink transmissions for NR V2X operating bands specified in Table 5.2E.1-1, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.7.2.
+
+In licensed band, the minimum requirements shall reuse the same ACS values with NR UE.
+
+Table 7.5E.1-1: Adjacent channel selectivity for NR V2X
+
+| RX parameter | Units | Channel bandwidth |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | 5 MHz1 | 10 MHz | 20 MHz | 30 MHz | 40 MHz |
+| ACS | dB | 33.0 | 33.0 | 27.0 | 25.5 | 24.0 |
+| NOTE 1: The CBW is only applicable for PS UE in n14. |  |  |  |  |  |  |
+
+Table 7.5E.1-2: Test parameters for Adjacent channel selectivity for V2X, Case 1
+
+| RX parameter | Units | Channel bandwidth |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | 10 MHz | 20 MHz | 30 MHz | 40 MHz |
+| Power in transmission bandwidth configuration | dBm | PREFSENS_V2X + 14 dB |  |  |  |
+| Pinterferer | dBm | PREFSENS_V2X + 45.5 dB | PREFSENS_V2X + 39.5 dB | PREFSENS_V2X + 38.0 dB | PREFSENS_V2X + 36.5 dB |
+| BWinterferer | MHz | 10 | 10 | 10 | 10 |
+| Finterferer (offset) | MHz | 10 / -10 | 15 / -15 | 20 / -20 | 25 / -25 |
+| NOTE 1: The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS. |  |  |  |  |  |
+
+Table 7.5E.1-2a: Test parameters for Adjacent channel selectivity in n14, Case 1
+
+| RX parameter | Units | Channel bandwidth |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | 5 MHz | 10 MHz | 20 MHz | 30 MHz | 40 MHz |
+| Power in transmission bandwidth configuration | dBm | PREFSENS_V2X + 14 dB |  |  |  |  |
+| Pinterferer | dBm | PREFSENS_V2X + 45.5 dB | PREFSENS_V2X + 45.5 dB |  |  |  |
+| BWinterferer | MHz | 5 | 5 |  |  |  |
+| Finterferer (offset) | MHz | 5 / -5 | 7.5 / -7.5 |  |  |  |
+| NOTE 1: The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS. |  |  |  |  |  |  |
+
+Table 7.5E.1-3: Test parameters for Adjacent channel selectivity for V2X, Case 2
+
+| RX parameter | Units |  | Channel bandwidth |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  | 10 MHz | 20 MHz | 30 MHz | 40 MHz |  |
+| Power in transmission bandwidth configuration |  | dBm |  | -56.5 | -50.5 | -49.0 | -47.5 |  |
+| Pinterferer |  | dBm |  | -25 |  |  |  |  |
+| BWinterferer |  | MHz |  | 10 | 10 | 10 | 10 |  |
+| Finterferer (offset) |  | MHz |  | 10 / -10 | 15 / -15 | 20 / -20 | 25 / -25 |  |
+| NOTE 1: The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS. |  |  |  |  |  |  |  |  |
+
+Table 7.5E.1-3a: Test parameters for Adjacent channel selectivity in n14, Case 2
+
+| RX parameter | Units | Channel bandwidth |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | 5 MHz | 10 MHz | 20 MHz | 30 MHz | 40 MHz |
+| Power in transmission bandwidth configuration | dBm | -56.5 | -56.5 |  |  |  |
+| Pinterferer | dBm | -25 |  |  |  |  |
+| BWinterferer | MHz | 5 | 5 |  |  |  |
+| Finterferer (offset) | MHz | 5/ -5 | 7.5 / -7.5 |  |  |  |
+| NOTE 1: The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS. |  |  |  |  |  |  |
+
+### 7.5E.1A Adjacent channel selectivity requirement for Sidelink CA
+
+For intra-band contiguous NR SL CA operation, the UE shall fulfil the minimum requirement specified in Table 7.5E.1A-1 to Table 7.5E.1A-3 where the throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex A.7.2.
+
+Table 7.5E.1A-1 ACS for intra-band contiguous NR SL CA UE
+
+|  |  | SL CA bandwidth class |
+| --- | --- | --- |
+| Rx Parameter | Units | B |
+| ACS | dB | 20.0 |
+
+Table 7.5E.1A-2 Test parameters for intra-band contiguous SL CA UE, case 1
+
+| Rx Parameter | Units | SL CA bandwidth class |
+| --- | --- | --- |
+|  |  | B |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | PREFSENS_SL + 14 dB |
+| PInterferer | dBm | Aggregated power + 18.5 dB |
+| BWInterferer | MHz | 10 |
+| FInterferer (offset) | MHz | 5+Aggreagted BWChannel/2/-(5+Aggregated BWChannel/2) |
+| NOTE 1: The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with 15 kHz SCS. |  |  |
+
+Table 7.5E.1A-3 Test parameters for intra-band contiguous SL CA UE, case 2
+
+| Rx Parameter | Units | SL CA Bandwidth Class |
+| --- | --- | --- |
+|  |  | B |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | -43.5 + 10log(NRB,c/NRB_agg) |
+| PInterferer | dBm | -25 |
+| BWInterferer | MHz | 10 |
+| FInterferer (offset) | MHz | 5+Aggreagted BWChannel/2/-(5+Aggregated BWChannel/2) |
+| NOTE 1: The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with 15 kHz SCS. |  |  |
+
+For intra-band non-contiguous NR SL CA, the UE shall fulfil the minimum requirement specified in Table 7.5E.1-1 to Table 7.5E.1-3 per sub-block where the throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex A.7.2.
+
+For the ACS requirement, the UE shall meet the requirements for each sub-block as specified in clauses 7.5E for one component carrier per sub-block. The UE shall fulfil the minimum requirements all values of a single adjacent channel interferer in-gap and out-of-gap up to a –25 dBm interferer power while all sidelink carriers are active. For the lower range of test parameters (Case 1), the interferer power Pinterferer shall be set to the maximum of the levels given by the carriers of the respective sub-blocks as specified in Table 7.5E-2 for one component carrier per sub-block. The wanted signal power levels for the carriers of each sub-block shall then be adjusted relative to Pinterferer in accordance with the ACS requirement for each sub-block (Table 7.5E-1). For the upper range of test parameters (Case 2) for which the interferer power Pinterferer is -25 dBm (Table 7.5E-3) the wanted signal power levels for the carriers of each sub-block shall be adjusted relative to Pinterferer like for Case 1.
+
+### 7.5E.1F General requirement for Sidelink Unlicensed
+
+The ACS requirement of SL-U operation in clause 7.5F.1 apply.
+
+The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.7.2.
+
+### 7.5E.2 Adjacent channel selectivity for V2X concurrent operation
+
+For the inter-band concurrent NR V2X operation, the requirements specified in clause 7.5E.1 shall apply for the NR sidelink reception in the operating bands in Table 5.2E.2-1 and the requirements specified in clause 7.5 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+### 7.5E.2F Adjacent channel selectivity for SL-U concurrent operation
+
+For the inter-band concurrent NR SL-U operation, the requirements specified in clause 7.5E.1F shall apply for the NR sidelink reception in the operating bands in Table 5.2E.2F-1 and the requirements specified in clause 7.5 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+
+
+
+
+
+
+
+
+
+
+## 7.5F Adjacent channel selectivity for shared spectrum channel access
+
+### 7.5F.1 General
+
+Adjacent channel selectivity (ACS) is a measure of a receiver's ability to receive an NR signal at its assigned channel frequency in the presence of an adjacent channel signal at a given frequency offset from the centre frequency of the assigned channel. ACS is the ratio of the receive filter attenuation on the assigned channel frequency to the receive filter attenuation on the adjacent channel(s).
+
+Instead of the general ACS requirements specified in clause 7.5, the UE shall fulfil the minimum requirements specified in Table 7.5F.1-1. These requirements apply for any SCS specified for the channel bandwidth of the wanted signal.  For the test parameters specified in Table 7.5F.1-2, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+Table 7.5F.1-1: ACS for shared spectrum channel access bands
+
+| RX parameter | Units | Channel bandwidth |
+| --- | --- | --- |
+|  |  | 20, 40, 60, 80, 100 MHz |
+| ACS | dB | 24 – 10log10(BWChannel /20) |
+| NOTE1:  ACS value is rounded to the next higher 0.5dB value |  |  |
+
+Table 7.5F.1-2: Test parameters for shared spectrum channel access bands
+
+| RX parameter | Units | Channel bandwidth |
+| --- | --- | --- |
+|  |  | 20, 40, 60, 80, 100 MHz |
+| Power in transmission bandwidth configuration | dBm | REFSENS + 14 dB |
+| Pinterferer | dBm | REFSENS + 36.5 dB – 10log10(BWChannel /20) dB |
+| BWinterferer | MHz | 20 |
+| Finterferer (offset) | MHz | (BWChannel + BWinterferer)/2/-(BWChannel + BWinterferer)/2 |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with an SCS equal to that of the wanted signal.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. |  |  |
+
+### 7.5F.1A Adjacent channel selectivity for shared spectrum channel access CA
+
+#### 7.5F.1A.1 Intra-band contiguous shared spectrum channel access CA
+
+ACS for intra-band contiguous shared access CA requirements are specified in Table 7.5F.1A.1-1.  These requirements apply for any SCS specified for the channel bandwidth of the wanted signal.  For the test parameters specified in Table 7.5F.1A.1-2, the throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+Table 7.5F.1A.1-1: ACS for intra-band contiguous shared access CA
+
+|  |  | NR-U CA bandwidth class |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Rx Parameter | Units | B | C | D | E | I | M | N | O |
+| ACS | dB | 24  – 10log10(BWChannel_CA/20) |  |  |  |  |  |  |  |
+| NOTE 1:  ACS value is rounded to the next higher 0.5dB value |  |  |  |  |  |  |  |  |  |
+
+Table 7.5F.1A.1-2: Test parameters for intra-band contiguous NR-U CA
+
+| Rx Parameter | Units | NR-U CA bandwidth class |
+| --- | --- | --- |
+|  |  | B, C, D, E, M, N, O |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + 14 dB |
+| PInterferer | dBm | Aggregated power + 22.5 – 10log10(BWChannel_CA/20) dB |
+| BWInterferer | MHz | 20 |
+| FInterferer (offset) | MHz | 10 + Foffset/-10 - Foffset |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3F.2-3 with PCMAX_L,f,c defined in clause 6.2.4 .NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with an SCS equal to that of the closest carrier.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. |  |  |
+
+### 7.5F.2 Void
+
+## 7.5G (Reserved)
+
+## 7.5H (Reserved)
+
+## 7.5I (Reserved)
+
+## 7.5J Adjacent channel selectivity for ATG
+
+### 7.5J.1 General
+
+Adjacent channel selectivity (ACS) is a measure of a receiver's ability to receive an NR signal at its assigned channel frequency in the presence of an adjacent channel signal at a given frequency offset from the centre frequency of the assigned channel. ACS is the ratio of the receive filter attenuation on the assigned channel frequency to the receive filter attenuation on the adjacent channel(s).
+
+The UE shall fulfil the minimum requirements specified in Table 7.5J.1-1 for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz and the minimum requirements specified in Table 7.5J.1-2 for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz. These requirements apply for all values of an adjacent channel interferer up to -42 dBm with omni-directional antenna and -30dBm with antenna array for any SCS specified for the channel bandwidth of the wanted signal. However, it is not possible to directly measure the ACS; instead the lower and upper range of test parameters are chosen as in Table 7.5J.1-3 and Table 7.5J.1-4 for verification of the requirements specified in Table 7.5J.1-1, and as in Table 7.5J.1-5 and Table 7.5J,1-6 for verification of the requirements specified in Table 7.5J.1-2. For these test parameters, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+Table 7.5J.1-1: ACS for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz
+
+| RX parameter | Units | Channel bandwidth (MHz) |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | 5, 10 | 15 | 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| ACS | dB | 33 | 30 | 27 – 10log10(BWChannel /20) |
+| NOTE1: ACS value is rounded to the next higher 0.5dB value |  |  |  |  |
+
+Table 7.5J.1-2: ACS for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+| RX parameter | Units | Channel bandwidth (MHz) |
+| --- | --- | --- |
+|  |  | 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| ACS | dB | 33 |
+
+Table 7.5J.1-3: Test parameters for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz, case 1
+
+| RX parameter | Units | Channel bandwidth (MHz) |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | 5, 10 | 15 | 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration | dBm | REFSENS + 14 dB |  |  |  |
+| Pinterferer4 | dBm |  | REFSENS + 45.5 dB | REFSENS + 42.5 dB | REFSENS + 39.5 – 10log10(BWChannel /20) |
+| BWinterferer | MHz |  | 5 |  |  |
+| Finterferer (offset) | MHz |  | BWChannel /2 + 2.5/-(BWChannel /2 + 2.5) |  |  |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2J.2NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 3: The interferer consists of the NR interferer RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1.NOTE 4:  10log10(x) is rounded to the next higher 0.5dB value. |  |  |  |  |  |
+
+Table 7.5J.1-4: Test parameters for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz, case 2
+
+| RX parameter | Units | Channel bandwidth (MHz) |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | 5, 10 | 15 | 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration4 | dBm | -73.55-61.56 | -70.55-58.56 | -67.5 + 10log10(BWChannel /20)5-55.5 + 10log10(BWChannel /20)6 |
+| Pinterferer | dBm | -425-306 |  |  |
+| BWinterferer | MHz | 5 |  |  |
+| Finterferer (offset) | MHz | BWChannel /2 + 2.5/-(BWChannel /2 + 2.5) |  |  |
+| NOTE 1: The transmitter shall be set to 24 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2J.2.NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1NOTE 4:  10log10(x) is rounded to the next higher 0.5dB value.NOTE 5: Pinterferer shall be set to -42dBm for omni-directional antenna.NOTE 6: Pinterferer shall be set to -30dBm for antenna array. |  |  |  |  |
+
+Table 7.5J.1-5: Test parameters for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz, case 1
+
+| RX parameter | Units | Channel bandwidth (MHz) |
+| --- | --- | --- |
+|  |  | 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration | dBm | REFSENS + 14 dB |
+| Pinterferer | dBm | REFSENS + 45.5 dB |
+| BWinterferer | MHz | BWChannel |
+| Finterferer (offset) | MHz | BWChannel/-BWChannel |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2J.2NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with an SCS equal to that of the wanted signal.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. |  |  |
+
+Table 7.5J.1-6: Test parameters for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz, case 2
+
+| RX parameter | Units | Channel bandwidth (MHz) |
+| --- | --- | --- |
+|  |  | 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration | dBm | -73.54-61.55 |
+| Pinterferer | dBm | -424-305 |
+| BWinterferer | MHz | BWChannel |
+| Finterferer (offset) | MHz | BWChannel/-BWChannel |
+| NOTE 1: The transmitter shall be set to 24 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2J.2NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with an SCS equal to that of the wanted signal.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. NOTE 4: Pinterferer shall be set to -42dBm for omni-directional antenna.NOTE 5: Pinterferer shall be set to -30dBm for antenna array. |  |  |
+
+### 7.5J.2A Adjacent channel selectivity for ATG CA
+
+#### 7.5J.2A.1 Minimum requirement for ATG intra-band contiguous CA
+
+For intra-band contiguous carrier aggregation the downlink SCC(s) shall be configured at nominal channel spacing to the PCC. The UE shall fulfil the minimum requirement specified in Table 7.5J.2A.1-1 for an adjacent channel interferer on either side of the aggregated downlink signal at a specified frequency offset and for an interferer power up to -42 dBm for omni-directional antenna or -30dBm for antenna array.
+
+The throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Tables 7.5J.2A.1-2 and 7.5J.2A.1-3.
+
+Table 7.5J.2A.1-1: ACS for ATG intra-band contiguous CA with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+|  |  | NR CA bandwidth class |
+| --- | --- | --- |
+| Rx Parameter | Units | C |
+| ACS | dB | 33.0 |
+
+Table 7.5J.2A.1-2: Test parameters for ATG intra-band contiguous CA with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz, case 1
+
+| Rx Parameter | Units | NR CA bandwidth class |
+| --- | --- | --- |
+|  |  | C |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + 14 dB |
+| PInterferer | dBm | Aggregated power + 31.5 dB |
+| BWInterferer | MHz | BWchannel CA |
+| FInterferer (offset) | MHz | BWchannel CA/2 + Foffset/-BWchannel CA/2 + Foffset |
+| NOTE 1: The transmitter shall be set to 24 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2J.2NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with an SCS equal to that of the closest carrier.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. |  |  |
+
+Table 7.5J.2A.1-3: Test parameters for ATG intra-band contiguous CA with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz, case 2
+
+| Rx Parameter | Units | NR CA bandwidth class |
+| --- | --- | --- |
+|  |  | C |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | -73.54-61.55 |
+| PInterferer | dBm | -424-305 |
+| BWInterferer | MHz | BWchannel CA |
+| FInterferer (offset) | MHz | BWchannel CA/-BWchannel CA |
+| NOTE 1: The transmitter shall be set to 24 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2J.2NOTE 2: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with an SCS equal to that of the closest carrier.NOTE 3: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1. NOTE 4: Pinterferer shall be set to -42dBm for omni-directional antenna.NOTE 5: Pinterferer shall be set to -30dBm for antenna array. |  |  |
+
+#### 7.5J.2A.2 Minimum requirement for ATG inter-band contiguous CA
+
+For inter-band carrier aggregation with one component carrier per operating band and the uplink assigned to one NR band, the adjacent channel requirements are defined with the uplink active on the band(s) other than the band whose downlink is being tested. For NR CA configurations including an operating band without uplink operation or an operating band with an unpaired DL part (as noted in Table 5.2-1), the requirements for all downlinks shall be met with the single uplink carrier active in each band capable of UL operation. The UE shall meet the requirements specified in clause 7.5J.1 for each component carrier while all downlink carriers are active.
+
+The throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+## 7.5K (Reserved)
+
+## 7.5L (Reserved)
+
+## 7.5M Adjacent channel and subcarrier selectivity for LP-WUS/WUR
+
+### 7.5M.1 General
+
+This clause specifies the requirements for Adjacent channel selectivity (ACS) and Adjacent subcarrier selectivity (ASCS) for LP-WUS/WUR.
+
+### 7.5M.2 Adjacent channel selectivity for LP-WUS/WUR
+
+The adjacent channel selectivity (ACS) is a measure of a receiver’s ability to receive an LP-WUS signal at its configured RBs inside the configured channel, in the presence of an adjacent channel signal at a given frequency offset from the centre frequency of the configured channel. ACS is the ratio of the receive filter attenuation on the LP-WUS frequency to the receive filter attenuation on the adjacent channel(s).
+
+The UE shall fulfil the minimum requirements specified in Table 7.5M.2-1 for Type 1 LR and Type 2 LR respectively.
+
+These requirements apply for any SCS specified in table 5.3M.2-1. The requirement in table 7.5M.2-1 shall be verified for each set of test parameters in Table 7.5M.2-2 and Table 7.5M.2-3, respectively. For these parameters, the MDR criterion in clause 7.1M shall be met with the side conditions in clause 7.1M. In this requirement, guard RBs for ACS are adjacent to the LP-WUS and located between the LPWUS and the interferer.
+
+Table 7.5M.2-1: ACS requirement
+
+|  | Units | Value |
+| --- | --- | --- |
+| ACS for Type1 LR | dB | 24.5 + Z |
+| ACS for Type2 LR | dB | 32.0 |
+| NOTE1: Z = 0.0 with 7 guard RBs for 15 kHz SCS or 2 guard RBs for 30 kHz SCS, and Z = - 5 with 0 guard RB. NOTE2: For channel bandwidths without sufficient guard RBs, only Z = - 5 with 0 guard RB applies. |  |  |
+
+Table 7.5M.2-2: Test parameters, case 1
+
+| RX parameter | Units | Value |  |
+| --- | --- | --- | --- |
+| Power in LP-WUS transmission BW configuration | dBm | REFSENSLP-WUS3 + 14.0 dB |  |
+| Pinterferer4 | dBm | REFSENSLP-WUS3 + ACS4 + 16.0 dB |  |
+| BWinterferer | MHz | 3 | 5 |
+| Finterferer (offset) | MHz | 3 /- 3 | BWChannel /2 + 2.5/-(BWChannel /2 + 2.5) |
+| NOTE 1: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to $\left ( \lceil  \|F_{interferer}\|/SCS\rceil  +0.5\right ) SCS $ MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 2: The interferer consists of the NR interferer RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1.NOTE 3: REFSENSLP-WUS is the value specified in clause 7.3M.2 according to type 1 LR and type 2 LR respectively.NOTE 4: Defined in table 7.5M-1 according to type 1 LR and type 2 LR respectively. |  |  |  |
+
+Table 7.5M.2-3: Test parameters for case 2
+
+| RX parameter | Units | Value |  |
+| --- | --- | --- | --- |
+| Pinterferer | dBm | -25.0 |  |
+| Power in LP-WUS transmission BW configuration | dBm | Pinterferer – ACS3 - 2.0 dB |  |
+| BWinterferer | MHz | 3 | 5 |
+| Finterferer (offset) | MHz | 3 /- 3 | BWChannel /2 + 2.5/-(BWChannel /2 + 2.5) |
+| NOTE 1: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to $\left ( \lceil  \|F_{interferer}\|/SCS\rceil  +0.5\right ) SCS $ MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 2: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1.NOTE 3: Defined in table 7.5M-1 according to type 1 LR and type 2 LR respectively. |  |  |  |
+
+### 7.5M.3 Adjacent subcarrier selectivity for LP-WUS/WUR
+
+Adjacent subcarrier selectivity (ASCS) is a measure of a receiver’s ability to receive the LP-WUS on the assigned subcarriers in the presence of fully populated NR signal at all adjacent subcarriers. ASCS is the ratio of the receiver filter attenuation on the LP-WUS RBs to the receiver filter attenuation on the adjacent subcarriers.
+
+The UE shall fulfil the minimum requirements specified in Table 7.5M.3-1 and 7.5M.3-2.
+
+Table 7.5M.3-1: ASCS test parameters for Type-1 LR
+
+| RX parameter | Units | Value |
+| --- | --- | --- |
+| Power in LP-WUS | dBm | Type-1 REFSENSLP-WUS + 0.5 |
+| LP-WUS power boosting2 | dB | 0 |
+| NOTE 1: LP-WUS is configured in NR carrier with 1 guard RB on each side of LP-WUS signal.NOTE 2: 0dB power boost means equal PSD between NR RBs and LP-WUS RBs.NOTE 3: The NR signal occupies the remaining RB resources within the maximum transmission bandwidth configuration, excluding the LP-WUS RBs and the guard RB between the NR and LP-WUS signals. |  |  |
+
+Table 7.5M.3-2: ASCS test parameters for Type-2 LR
+
+| RX parameter | Units | Value |
+| --- | --- | --- |
+| Power in LP-WUS | dBm | Type-2 REFSENSLP-WUS |
+| LP-WUS power boosting2 | dB | 0 |
+| NOTE 1: LP-WUS is configured in NR carrier with 0 guard RB on each side of LP-WUS signal.NOTE 2: 0dB power boost means equal PSD between NR RBs and LP-WUS RBs.NOTE 3: The NR signal occupies the remaining RB resources within the maximum transmission bandwidth configuration, excluding the LP-WUS RBs and the guard RB between the NR and LP-WUS signals. |  |  |
+
+## 7.6 Blocking characteristics
+
+### 7.6.1 General
+
+The blocking characteristic is a measure of the receiver's ability to receive a wanted signal at its assigned channel frequency in the presence of an unwanted interferer on frequencies other than those of the spurious response or the adjacent channels, without this unwanted input signal causing a degradation of the performance of the receiver beyond a specified limit. The blocking performance shall apply at all frequencies except those at which a spurious response occurs.
+
+For shared spectrum channel access and band combinations with operating bands intended for shared spectrum channel access, the blocking characteristics is specified in clause 7.6F.
+
+### 7.6.2 In-band blocking
+
+For NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz in-band blocking (IBB) is defined for an unwanted interfering signal falling into the UE receive band or into the first 15 MHz below or above the UE receive band.  The throughput of the wanted signal shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.6.2-1 and Table 7.6.2-2. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal. For operating bands with an unpaired DL part (as noted in Table 5.2-1), the requirements only apply for carriers assigned in the paired part.
+
+Table 7.6.2-1: In-band blocking parameters for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz
+
+| RX parameter | Units | Channel bandwidth (MHz) |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | 3 | 5, 7, 10 | 15 | 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration3 | dBm | REFSENS + 6 dB |  | REFSENS + 7 dB | REFSENS + (9 + 10log10(BWChannel /20)) dB |
+| BWinterferer | MHz | 3 | 5 |  |  |
+| FIoffset, case 1 | MHz | 4.5 | 7.5 |  |  |
+| FIoffset, case 2 | MHz | 7.5 | 12.5 |  |  |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1 and 15 kHz SCS. NOTE 3: 10log10(x) is rounded to the next higher 0.5dB value. |  |  |  |  |  |
+
+Table 7.6.2-2: In-band blocking for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz
+
+| NR band | Parameter | Unit | Case 1 | Case 2 | Case 3 | Case 4 | Case 5 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  | Pinterferer | dBm | -56 | -44 | -15 | -38 | -224 |
+|  | Finterferer (offset) | MHz | -BWChannel/2 – FIoffset, case 1andBWChannel/2 + FIoffset, case 1 | ≤ -BWChannel/2 – FIoffset, case 2and≥ BWChannel/2 + FIoffset, case 2 |  | -BWChannel/2-11 |  |
+| n1, n2, n3, n5, n7, n8, n12, n13, n14, n18, n20, n24, n25, n26, n28, n29, n31, n34, n38, n39, n40, n41, n483, n50, n51, n53, n54, n65, n66, n67, n68, n70, n72, n74, n75, n76, n85, n87, n88 n91, n92, n93, n94, n100, n101, n106, n110 | Finterferer | MHz | NOTE 2 | FDL_low – 15toFDL_high + 15 |  |  |  |
+| n30 | Finterferer | MHz | NOTE 2 | FDL_low – 15toFDL_high + 15 |  | FDL_low – 11 |  |
+| n71 | Finterferer | MHz | NOTE 2 | FDL_low – 12 to FDL_high + 15 | FDL_low – 12 |  |  |
+| n105 | Finterferer | MHz | NOTE 2 | FDL_low – 12toFDL_high + 15 |  |  | FDL_low – 7 |
+| NOTE 1: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 2: For each carrier frequency, the requirement applies for two interferer carrier frequencies: a: -BWChannel/2 – FIoffset, case 1; b: BWChannel/2 + FIoffset, case 1NOTE 3: n48 follows the requirement in this frequency range according to the general requirement defined in Clause 7.1.NOTE 4: For Band n105 channels overlapping the 612 - 617 MHz frequency range, Pinterferer is modified to -34 dBm.NOTE 5: For SDL bands, requirements shall be applied only for CA band combination cases. |  |  |  |  |  |  |  |
+
+NOTE: For bands n100 and n101, additional requirements for wideband cab-radio receiver are specified by ETSI TC RT based on ECC Decision (20)02 [19].
+
+For NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz in-band blocking (IBB) is defined for an unwanted interfering signal falling into the UE receive band or into an immediately adjacent frequency range up to 3*BWChannel below or above the UE receive band where BWChannel is the bandwidth of the wanted signal. The throughput of the wanted signal shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1)] with parameters specified in Table 7.6.2-3 and Table 7.6.2-4. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal.
+
+Table 7.6.2-3: In-band blocking parameters for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+| RX parameter | Units | Channel bandwidth (MHz) |
+| --- | --- | --- |
+|  |  | 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration | dBm | REFSENS + 6 dB3 |
+| BWinterferer | MHz | BWChannel |
+| FIoffset, case 1 | MHz | (3/2)*BWChannel |
+| FIoffset, case 2 | MHz | (5/2)*BWChannel |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1 NOTE 3: For Band n104, the power in transmission bandwidth configuration is REFSENS + 9 dB |  |  |
+
+Table 7.6.2-4: In-band blocking for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+| NR band | Parameter | Unit | Case 1 | Case 2 |
+| --- | --- | --- | --- | --- |
+|  | Pinterferer | dBm | -56 | -44 |
+| n77, n78, n79, n104 | Finterferer (offset) | MHz | -BWChannel/2 –FIoffset, case 1andBWChannel/2 +FIoffset, case 1 | ≤ -BWChannel/2 –FIoffset, case 2and≥ BWChannel/2 +FIoffset, case 2 |
+|  | Finterferer |  | NOTE 2 | FDL_low – 3*BWChanneltoFDL_high + 3*BWChannel |
+| NOTE 1: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with an SCS equal to that of the wanted signal.NOTE 2: For each carrier frequency, the requirement applies for two interferer carrier frequencies: a: -BWChannel/2 – FIoffset, case 1; b: BWChannel/2 + FIoffset, case 1NOTE 3: BWChannel denotes the channel bandwidth of the wanted signal |  |  |  |  |
+
+### 7.6.3 Out-of-band blocking
+
+For NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz out-of-band band blocking is defined for an unwanted CW interfering signal falling outside a frequency range 15 MHz below or above the UE receive band. The throughput of the wanted signal shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.6.3-1 and Table 7.6.3-2. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal. For operating bands with an unpaired DL part (as noted in Table 5.2-1), the requirements only apply for carriers assigned in the paired part.
+
+Table 7.6.3-1: Out-of-band blocking parameters for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz
+
+| Channel bandwidth | Power in transmission bandwidth configuration [dBm] |
+| --- | --- |
+| 3 MHz | REFSENS + 6.0 dB |
+| 5 MHz | REFSENS + 6.0 dB |
+| 7 MHz | REFSENS + 6.0 dB |
+| 10 MHz | REFSENS + 6.0 dB |
+| 15 MHz | REFSENS + 7.0 dB |
+| 20 MHz | REFSENS + 9.0 dB |
+| 25 MHz | REFSENS + 10.0 dB |
+| 30 MHz | REFSENS + 11.0 dB |
+| 35 MHz | REFSENS + 11.5 dB |
+| 40 MHz | REFSENS + 12.0 dB |
+| 45 MHz | REFSENS + 12.5 dB |
+| 50 MHz | REFSENS + 13.0 dB |
+| 60 MHz | REFSENS + 14.0 dB |
+| 70 MHz | REFSENS + 14.5 dB |
+| 80 MHz | REFSENS + 15.0 dB |
+| 90 MHz | REFSENS + 15.5 dB |
+| 100 MHz | REFSENS + 16.0 dB |
+| NOTE:  The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4. |  |
+
+Table 7.6.3-2: Out of-band blocking for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz
+
+| NR band | Parameter | Unit | Range 1 | Range 2 | Range 3 |
+| --- | --- | --- | --- | --- | --- |
+|  | Pinterferer | dBm | -44 | -30 | -15 |
+| n1, n2, n3,n5, n7, n8, n12, n13, n14, n18, n20, n24, n25, n26, n28, n29, n30, n31, n34, n38, n39, n40, n41, n485, n50, n51, n536, n54, n65, n66, n67, n68, n70, n71, n72, n74, n75, n76, n85, n87, n88, n91, n92, n93, n94, n100, n101, n105, n106, n110 | Finterferer (CW) | MHz | -60 < f – FDL_low < -15or15 < f – FDL_high < 60 | -85 < f – FDL_low ≤ -60or60 ≤ f – FDL_high < 85 | 1 ≤ f ≤ FDL_low – 85orFDL_high + 85 ≤ f≤ 12750 |
+| NOTE 1: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 6000 MHz.NOTE 2: For band 51 the FDL_high of band 50 is applied as FDL_high for band 51. For band 50, the FDL_low of band 51 is applied as FDL_low for band 50.NOTE 3: For band 76 the FDL_high of band 75 is applied as FDL_high for band 76. For band 75, the FDL_low of band 76 is applied as FDL_low for band 75.NOTE 4: For UEs supporting both bands 38 and 41, the FDL_high and FDL_low of band 41 is applied as FDL_high and FDL_low for band 38.NOTE 5: n48 follows the requirement in this frequency range according to the general requirement defined in Clause 7.1. The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 2700 MHz and FInterferer < 4800 MHz.NOTE 6: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer ≥ 2580 MHz and FInterferer < 2775 MHz.NOTE 7 For UE supporting both bands 25 and 70, the FDL_high of band 70 is applied as FDL_high for band 25, and the FDL_low of band 25 is applied as FDL_low for band 70.NOTE 8: For bands 91 and 93 the FDL_high of bands 92 and 94 are applied as FDL_high for bands 91 and 93. For bands 92 and 94, the FDL_low of bands 91 and 93 are applied as FDL_low for bands 92 and 94NOTE 9: For SDL bands, requirements shall be applied only for CA band combination cases.NOTE 10 For a UE supporting CA_20A-28A and higher order band combinations in which CA_20A-28A is a subset, the requirements for Band n20 and Band n28 apply with FDL_low given by the lower limit of the restricted operating frequency range in Band n28 and FDL_high by Band n20.NOTE 11: For a UE supporting CA_n3A-n39A and higher order band combinations in which CA_n3A-n39A is a subset, the requirements for Band n3 and Band n39 apply with FDL_low given by the lower limit of the restricted operating frequency range in Band n3 and FDL_high by Band n39. |  |  |  |  |  |
+
+NOTE: For bands n100 and n101, additional requirements for wideband cab-radio receiver are specified by ETSI TC RT based on ECC Decision (20)02 [19].
+
+For interferer frequencies across ranges 1, 2 and 3 in Table 7.6.3-2, a maximum of
+
+![](media_svg/image23.svg) [公式≈: _{√}max{24,6∪_{⊥}n∪N_{RB}/6_{∀}}min{_{√}n∪N_{RB}/10_{∃},5}_{∃}]
+
+exceptions are allowed for spurious response frequencies in each assigned frequency channel when measured using a step size of  ![](media_svg/image24.svg) [公式≈: min(_{√}BW_{channel}/2_{∃},5)]MHz with![](media_svg/image25.svg) [公式≈: ^{N}RB]the number of resource blocks in the downlink transmission bandwidth configuration, BWChannel the bandwidth of the frequency channel in MHz and n = 1, 2, 3 for SCS = 15, 30, 60 kHz, respectively. For these exceptions, the requirements in clause 7.7 apply.
+
+For NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz out-of-band band blocking is defined for an unwanted CW interfering signal falling outside a frequency range up to 3*BWChannel below or from 3*BWChannel above the UE receive band, where BWChannel is the channel bandwidth. The throughput of the wanted signal shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.6.3-3 and Table 7.6.3-4. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal.
+
+Table 7.6.3-3: Out-of-band blocking parameters for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+| RX parameter | Units | Channel bandwidth (MHz) |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | 10 | 15 | 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration | dBm | REFSENS + 6 dB | REFSENS + 7 dB | REFSENS + 9 dB |
+| NOTE: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4. |  |  |  |  |
+
+Table 7.6.3-4: Out of-band blocking for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+| NR band | Parameter | Unit | Range1 | Range 2 | Range 3 |
+| --- | --- | --- | --- | --- | --- |
+| n77, n78 (NOTE 3) | Pinterferer | dBm | -44 | -30 | -15 |
+|  | Finterferer (CW) | MHz | -60 < f – FDL_low ≤      -3*BWChannelor3*BWChannel ≤ f – FDL_high < 60 | -200 < f – FDL_low ≤    -MAX(60,3*BWChannel)orMAX(60,3*BWChannel) ≤ f – FDL_high < 200 | 1 ≤ f ≤ FDL_low – MAX(200,3*BWChannel)orFDL_high                      + MAX(200,3*BWChannel)≤ f ≤ 12750 |
+| n79 (NOTE 4) | Finterferer (CW) | MHz | N/A | -150 < f – FDL_low ≤           -MAX(60,3*BWChannel)orMAX(60,3*BWChannel) ≤ f – FDL_high < 150 | 1 ≤ f ≤ FDL_low – MAX(150,3*BWChannel)orFDL_high                      + MAX(150,3*BWChannel)≤ f ≤ 12750 |
+| n104 (NOTE 5) | Finterferer (CW) | MHz | N/A | -150 < f – FDL_low ≤  -MAX(60,3*BWChannel)orMAX(60,3*BWChannel) ≤ f – FDL_high < 150 | 1 ≤ f ≤ FDL_low – MAX(150,3*BWChannel)orFDL_high                      + MAX(150,3*BWChannel)≤ f ≤ 12750 |
+| NOTE 1: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 6000 MHz.NOTE 2: BWChannel denotes the channel bandwidth of the wanted signalNOTE 3: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm, for FInterferer > 2700 MHz and FInterferer < 4800 MHz. For BWChannel > 15 MHz, the requirement for Range 1 is not applicable and Range 2 applies from the frequency offset of 3*BWChannel from the band edge. For BWChannel larger than 60 MHz, the requirement for Range 2 is not applicable and Range 3 applies from the frequency offset of 3*BWChannel from the band edge.NOTE 4: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm, for FInterferer > 3650 MHz and FInterferer < 5750 MHz. For BWChannel ≥ 40 MHz, the requirement for Range 2 is not applicable and Range 3 applies from the frequency offset of 3*BWChannel from the band edge.NOTE 5: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm, for FInterferer > 5175 MHz. For BWChannel > 60 MHz, the requirement for Range 2 is not applicable and Range 3 applies from the frequency offset of 3*BWChannel from the band edge. The power level of the interferer (PInterferer) for Range 2 shall be modified to -33 dBm for the range 5925 – MAX(60,3*CBW) ≤ f < FDL_low -  MAX(60,3*CBW). |  |  |  |  |  |
+
+For interferer frequencies across ranges 1, 2 and 3 in Table 7.6.3-4, a maximum of
+
+![](media_svg/image23.svg) [公式≈: _{√}max{24,6∪_{⊥}n∪N_{RB}/6_{∀}}min{_{√}n∪N_{RB}/10_{∃},5}_{∃}]
+
+exceptions are allowed for spurious response frequencies in each assigned frequency channel when measured using a step size of  ![](media_svg/image24.svg) [公式≈: min(_{√}BW_{channel}/2_{∃},5)]MHz with![](media_svg/image25.svg) [公式≈: ^{N}RB]the number of resource blocks in the downlink transmission bandwidth configuration, BWChannel the bandwidth of the frequency channel in MHz and n = 1, 2, 3 for SCS = 15, 30, 60 kHz, respectively. For these exceptions, the requirements in clause 7.7 apply.
+
+### 7.6.4 Narrow band blocking
+
+This requirement is measure of a receiver's ability to receive a NR signal at its assigned channel frequency in the presence of an unwanted narrow band CW interferer at a frequency, which is less than the nominal channel spacing.
+
+The relative throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.6.4-1. For operating bands with an unpaired DL part (as noted in Table 5.2-1), the requirements only apply for carriers assigned in the paired part.
+
+Table 7.6.4-1: Narrow Band Blocking
+
+| NR band | Parameter | Unit | Channel Bandwidth (MHz) |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | 3 | 5 | 7 | 10 | 15 | 20 | 25, 30, 35, 40, 45, 50 | 60, 70, 80, 90, 100 |
+| n1, n2, n3, n5, n7, n8, n12, n13, n14, n18, n20, n24, n25, n26, n28, n29, n30, n31, n34, n38, n39, n40, n41, n48, n50, n51, n53, n65, n66, n67, n68, n70, n71, n72, n74, n75, n76, n85, n87, n88, n100, n101, n106, n110 | Pw | dBm | PREFSENS + channel-bandwidth specific value below |  |  |  |  |  |  |  |
+|  |  | dB | 18 | 16 | 14 | 13 | 14 | 16 | 16 | 16 |
+|  | Puw (CW) | dBm | -55 |  |  |  |  |  |  |  |
+|  | Fuw (offset SCS= 15 kHz) 4 | MHz | $\left ( \lfloor  \frac {\frac {BW_{Channel}}{2}+0.2}{SCS}+0.5\rfloor  +0.5\right ) SCS $ |  |  |  |  |  | $\left ( \lfloor  \frac {\frac {BW_{Channel}}{2}+BW_{GB,Channel}}{SCS}+0.5\rfloor  +0.5\right ) SCS $ | NA |
+|  | Fuw (offset SCS= 30 kHz)4 | MHz | NA |  |  |  |  |  |  | $\left ( \lfloor  \frac {\frac {BW_{Channel}}{2}+BW_{GB,Channel}}{SCS}+0.5\rfloor  +0.5\right ) SCS $ |
+| NOTE 1: The transmitter shall be set a 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4NOTE 2: Reference measurement channel is specified in Annexes A.3.2 and A.3.3 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1.NOTE 3: The PREFSENS power level is specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-2, Table 7.3.2-2aa and Table 7.3.2-2a for two, four, six and eight antenna ports, respectively.NOTE 4: Fuw shall be rounded to half of SCS.NOTE 5: For SDL bands, requirements shall be applied only for CA band combination cases. |  |  |  |  |  |  |  |  |  |  |
+
+NOTE: For bands n100 and n101, additional requirements for wideband cab-radio receiver are specified by ETSI TC RT based on ECC Decision (20)02 [19].
+
+## 7.6A Blocking characteristics for CA
+
+### 7.6A.1 General
+
+### 7.6A.2 In-band blocking for CA
+
+#### 7.6A.2.1 In-band blocking for Intra-band contiguous CA
+
+For intra-band contiguous carrier aggregation the downlink SCC(s) shall be configured at nominal channel spacing to the PCC. The UE shall fulfil the minimum requirement specified in Table 7.6A.2.1-1 and 7.6A.2.1-1a for an adjacent channel interferer on either side of the aggregated downlink signal at a specified frequency offset and for an interferer power up to -25 dBm. The throughput of each carrier shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+Table 7.6A.2.1-1: In-band blocking parameters for intra-band contiguous CA with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+| Rx Parameter | Units | NR CA bandwidth class |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | B | C | D |  |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + CA bandwidth class specific value below |  |  |  |
+|  | dB | 10.0 | 6 | 13.8 |  |
+| BWInterferer | MHz | 20 | BWchannel CA | 50 |  |
+| FIoffset, case 1 | MHz | 30 | BWchannel CA+ BWchannel CA/2 | 75 |  |
+| FIoffset, case 2 | MHz | 50 | BWInterferer + FIoffset, case 1 | 125 |  |
+| NOTE 1: The transmitter shall be set to 4dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The interferer consists of the Reference measurement channel specified in Annexes  and A.3.3 with one sided dynamic OCNG Pattrn OP.1 FDD/TDD as described in Annex /A.5.2.1 and set-up according to Annex C.3.1 |  |  |  |  |  |
+
+Table 7.6A.2.1-1a: In-band blocking parameters for intra-band contiguous CA with FDL_low < 2700 MHz and FUL_low < 2700 MHz
+
+| Rx Parameter | Units | NR CA bandwidth class |  |
+| --- | --- | --- | --- |
+|  |  | B | C |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + NR CA bandwidth class specific value below |  |
+|  | dB | 16.0 | 19.0 |
+| BWInterferer | MHz | 5 | 5 |
+| FIoffset, case 1 | MHz | 7.5 | 7.5 |
+| FIoffset, case 2 | MHz | 12.5 | 12.5 |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The interferer consists of the Reference measurement channel specified in Annexes  and A.3.3 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex /A.5.2.1 and set-up according to Annex C.3.1 |  |  |  |
+
+Table 7.6A.2.1-2: In-band blocking for intra-band contiguous CA  with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+| NR band | Parameter | Unit | Case 1 | Case 2 |
+| --- | --- | --- | --- | --- |
+|  | Pinterferer | dBm | -56 | -44 |
+| n77, n78, n79, n104 | Finterferer (offset) | MHz | -Foffset –FIoffset, case 1andFoffset +FIoffset, case 1 | ≤ -Foffset –FIoffset, case 2and≥Foffset +FIoffset, case 2 |
+|  | Finterferer | MHz | NOTE 2 | FDL_low – 3BWchannel CAtoFDL_high + 3BWchannel CA |
+| NOTE 1: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with an SCS equal to that of the closest carrier.NOTE 2: For each carrier frequency, the requirement applies for two interferer carrier frequencies: a: -Foffset – FIoffset, case 1; b: Foffset + FIoffset, case 1NOTE 3: BWchannel CA denotes the aggregated channel bandwidth of the wanted signal |  |  |  |  |
+
+Table 7.6A.2.1-2a: In-band blocking for intra-band contiguous CA with FDL_low  < 2700 MHz and FUL_low  < 2700 MHz
+
+| NR band | Parameter | Unit | Case 1 | Case 2 | Case 3 |
+| --- | --- | --- | --- | --- | --- |
+|  | Pinterferer | dBm | -56 | -44 |  |
+| n2, n3, n25, n38, n41, n66, n484, n40 | Finterferer (offset) | MHz | -Foffset –FIoffset, case 1andFoffset +FIoffset, case 1 | ≤ -Foffset –FIoffset, case 2and≥Foffset +FIoffset, case 2 |  |
+|  | Finterferer | MHz | NOTE 2 | FDL_low – 15toFDL_high + 15 |  |
+| n71 | Finterferer | MHz | NOTE 2 | FDL_low – 12toFDL_high + 15 | FDL_low – 12 |
+| NOTE 1: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 2: For each carrier frequency, the requirement applies for two interferer carrier frequencies: a: -Foffset – FIoffset, case 1; b: Foffset + FIoffset, case 1NOTE 3: BWchannel CA denotes the aggregated channel bandwidth of the wanted signalNOTE 4: n48 follows the requirement in this frequency range according to the general requirement defined in Clause 7.1A. |  |  |  |  |  |
+
+#### 7.6A.2.2 In-band blocking for Intra-band non-contiguous CA
+
+For intra-band non-contiguous carrier aggregation with one uplink carrier and two or more downlink sub-blocks, each larger than or equal to 5 MHz, the in-band blocking requirements are defined with the uplink configuration in accordance with Table 7.3A.2.2-1. For this uplink configuration, the UE shall meet the requirements for each sub-block as specified in clause 7.6.2 and 7.6A.2.1 for one component carrier and two component carriers per sub-block, respectively. The requirements apply for in-gap and out-of-gap interferers while all downlink carriers are active.
+
+The throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+#### 7.6A.2.3 In-band blocking for Inter-band CA
+
+For inter-band carrier aggregation with one component carrier per operating band and the uplink assigned to one NR band, the in-band blocking requirements are defined with the uplink active on the band(s) other than the band whose downlink is being tested. The UE shall meet the requirements specified in clause 7.6.2 and clause 7.6F.2 when the downlink belongs to a spectrum sharing defined band, for each component carrier while all downlink carriers are active.
+
+For the UE which supports inter-band CA configuration in Table 7.3A.3.2.1-1, Pinterferer power defined in Table 7.6.2-2 and 7.6.2-4, and Table 7.6F.2.1-2 for shared spectrum channel access, is increased by the amount given by ΔRIB,c in Table 7.3A.3.2.1-1 and in Table 7.3F.3-1 for shared spectrum channel access.
+
+For NR CA configurations including an operating band without uplink operation or an operating band with an unpaired DL part (as noted in Table 5.2-1), the requirements for all downlinks shall be met with the single uplink carrier active in each band capable of UL operation. The requirements for the component carrier configured in the operating band without uplink operation are specified in clause 7.6.2 while all downlink carriers are active.
+
+Table 7.6A.2.3-1: Void
+
+The throughput of each carrier shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+### 7.6A.3 Out-of-band blocking for CA
+
+#### 7.6A.3.1 Out-of-band blocking for Intra-band contiguous CA
+
+For intra-band contiguous carrier aggregation the downlink SCC(s) shall be configured at nominal channel spacing to the PCC. For FDD, the PCC shall be configured closest to the uplink band. All downlink carriers shall be active throughout the test.
+
+The UE shall fulfil the minimum requirement in presence of an interfering signal specified in Table 7.6A.3-1 and Table 7.6A.3-2 being on either side of the aggregated signal. The throughput of each carrier shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+Table 7.6A.3-1: Out-of-band blocking parameters for intra-band contiguous CA
+
+| RX parameter | Units | CA bandwidth class |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | B | C | D |  |
+| Power in transmission bandwidth configuration | dBm | REFSENS + CA bandwidth class specific value below |  |  |  |
+|  | dB | 9 | 9 | 9 |  |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4. |  |  |  |  |  |
+
+Table 7.6A.3-1a: Void
+
+Table 7.6A.3-2: Out of-band blocking for intra-band contiguous CA
+
+| NR band | Parameter | Unit | Range1 | Range 2 | Range 3 |
+| --- | --- | --- | --- | --- | --- |
+|  | Pinterferer | dBm | -45 | -30 | -15 |
+| n2, n3, n25, n38, n41, n66, n71, n485, n40 | Finterferer (CW) | MHz | -60 < f – FDL_low < -15or15 < f – FDL_high < 60 | -85 < f – FDL_low ≤ -60or60 ≤ f – FDL_high < 85 | 1 ≤ f ≤ FDL_low – 85orFDL_high + 85 ≤ f≤ 12750 |
+| n77, n78(NOTE 3) | Finterferer (CW) | MHz | N/A | N/A | 1 ≤ f ≤ FDL_low – MAX(200,3*BWChannel_CA)orFDL_high+ MAX(200,3*BWChannel_CA)≤ f ≤ 12750 |
+| n79(NOTE 4) | Finterferer (CW) | MHz | N/A | N/A | 1 ≤ f ≤ FDL_low – MAX(150,3*BWChannel_CA)orFDL_high + MAX(150,3*BWChannel_CA)≤ f ≤ 12750 |
+| n104(NOTE 6) | Finterferer (CW) | MHz | N/A | N/A | 1 ≤ f ≤ FDL_low – MAX(150,3*BWChannel_CA)orFDL_high + MAX(150,3*BWChannel_CA)≤ f ≤ 12750 |
+| NOTE 1: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 6000 MHz.NOTE 2: BWChannel_CA denotes the aggregated channel bandwidth of the wanted signalNOTE 3: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm, for FInterferer > 2700 MHz and FInterferer < 4800 MHz. For BWChannel_CA > 15 MHz, the requirement for Range 1 is not applicable and Range 2 applies from the frequency offset of 3*BWChannel_CA from the band edge. For BWChannel_CA > 65 MHz, the requirement for Range 2 is not applicable and Range 3 applies from the frequency offset of 3*BWChannel_CA from the band edge.NOTE 4: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm, for FInterferer > 3650 MHz and FInterferer < 5750 MHz. For BWChannel_CA > 45 MHz, the requirement for Range 2 is not applicable and Range 3 applies from the frequency offset of 3*BWChannel_CA from the band edge.NOTE 5: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 2700 MHz and FInterferer < 4800 MHzNOTE 6: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm, for FInterferer > 5675 MHz and FInterferer < 7875 MHz. |  |  |  |  |  |
+
+Table 7.6A.3-2a: Void
+
+For interferer frequencies across ranges 1, 2 and 3 in Table 7.6A.3-2, a maximum of
+
+![](media_svg/image23.svg) [公式≈: _{√}max{24,6∪_{⊥}n∪N_{RB}/6_{∀}}min{_{√}n∪N_{RB}/10_{∃},5}_{∃}]
+
+exceptions are allowed for spurious response frequencies in each assigned frequency channel when measured using a step size of  ![](media_svg/image24.svg) [公式≈: min(_{√}BW_{channel}/2_{∃},5)]MHz with ![](media_svg/image25.svg) [公式≈: ^{N}RB] the number of resource blocks in the downlink transmission bandwidth configuration,  BWChannel is the bandwidth of the frequency channel in MHz and n = 1, 2, 3 for SCS = 15, 30, 60 kHz, respectively. For these exceptions, the requirements in subclause 7.7A.1 apply.
+
+#### 7.6A.3.2 Out-of-band blocking for Intra-band non-contiguous CA
+
+For intra-band non-contiguous carrier aggregation with one uplink carrier and two or more downlink sub-blocks, the out-of-band blocking requirements are defined with the uplink configuration in accordance with Table 7.3A.2.2-1. For this uplink configuration, the UE shall meet the requirements for each sub-block as specified in clauses7.6.3 and 7.6A.3.1 for one component carrier and two component carriers per sub-block, respectively. The requirements apply with all downlink carriers active.
+
+The throughput of each carrier shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+#### 7.6A.3.3 Out-of-band blocking for Inter-band CA
+
+For inter-band carrier aggregation with one component carrier per operating band and the uplink assigned to one NR band, the out-of-band blocking requirements are defined with the uplink active on the band(s) other than the band whose downlink is being tested. For NR CA configurations including an operating band without uplink band or an operating band with an unpaired DL part (as noted in Table 5.2-1), the requirements for all downlinks shall be met with the single uplink carrier active in each band capable of UL operation. The UE shall meet the requirements specified in clause 7.6.3 for each component carrier while all downlink carriers are active.
+
+For inter-band carrier aggregation with component carriers in operating bands < 2.7GHz including n48, and for FDL_Low(j) – 15 MHz ≤ f ≤ FDL_High(j) + 15 MHz, the appropriate adjacent channel selectivity and in-band blocking requirements in the respective clauses 7.5 and 7.6.2 shall be applied for carrier j. For inter-band carrier aggregation with component carriers in operating bands > 2.7GHz excluding n48, and for FDL_Low(j) – 3* BWchannel ≤ f ≤ FDL_High(j) + 3* BWchannel, the appropriate adjacent channel selectivity and in-band blocking requirements in the respective clauses 7.5 and 7.6.2 shall be applied for carrier j. FDL_Low(j) and FDL_High(j) denote the respective lower and upper frequency limits of the operating band containing carrier j, j = 1,…,X, with carriers numbered in increasing order of carrier frequency and X the number of component carriers in the band combination. BWchannel denotes the channel bandwidth of the wanted signal component carrier j. If CW interferer falls in a gap between FDL_High(j) and FDL_Low(j+1) where the corresponding OOB ranges 1 and 2 overlap, then the lower level interferer limit of the overlapping OOB ranges applies.
+
+If FDL_high of the lower NR band is greater than or equal to the FDL_low of the another upper NR band as in overlapping RX frequency ranges, then the OOB range shall start from the FDL_low of the lower NR band, and from the FDL_high of the upper NR band.
+
+For inter-band carrier aggregation with uplink assigned to two NR bands, the out-of-band blocking requirements specified in clause 7.6.3 shall be met with the transmitter power for the uplink set to 7 dB below PCMAX_L,f,c  for each serving cell c.
+
+For the UE which supports inter-band CA configuration in Table 7.3A.3.2.1-1, Pinterferer power defined in Table 7.6.3-2 and 7.6.3-4 and Table 7.6F.3.2-2 for shared spectrum channel access, is increased by the amount given by ΔRIB,c in Table 7.3A.3.2.1-1 and in Table 7.3F.3-1 for shared spectrum channel access.
+
+For inter-band CA combination listed in Table 7.6A.3.3-1, exceptions to the requirement specified in Table 7.6A.3.3-2 are allowed when the second order intermodulation product of the lower frequency band UL carrier and the CW interfering signal fully or partially overlaps with the higher frequency band DL carrier. Unless otherwise stated, the exceptions apply to any power classes for the listed inter-band CA combinations.
+
+Table 7.6A.3.3-1: CA band combination with exceptions allowed
+
+| CA band combination |
+| --- |
+| CA_n1-n102 |
+| CA_n5-n77 |
+| CA_n5-n78 |
+| CA_n5-n79 |
+| CA_n7-n8 |
+| CA_n7-n46 |
+| CA_n7-n105 |
+| CA_n8-n77 |
+| CA_n8-n78 |
+| CA_n8-n79 |
+| CA_n8-n104 |
+| CA_n12-n48 |
+| CA_n12-n77 |
+| CA_n12-n78 |
+| CA_n13-n77 |
+| CA_n14-n77 |
+| CA_n18-n77 |
+| CA_n18-n78 |
+| CA_n20-n78 |
+| CA_n26-n77 |
+| CA_n26-n78 |
+| CA_n28-n46 |
+| CA_n28-n77 |
+| CA_n28-n78 |
+| CA_n28-n79 |
+| CA_n28-n102 |
+| CA_n48-n71 |
+| CA_n48-n77 |
+| CA_n71-n77 |
+| CA_n71-n78 |
+| CA_n77-n85 |
+| CA_n78-n92 |
+| CA_n78-n105 |
+
+Table 7.6A.3.3-1a: Void
+
+Table 7.6A.3.3-2: Requirement for out-of-band blocking exceptions
+
+| Parameter | Unit | Level |
+| --- | --- | --- |
+| PInterferer (CW) | dBm | -441 |
+| NOTE 1: The requirement applies when $\left \| f_{Interferer}\pm  f_{UL}^{LB}-f_{DL}^{HB}\right \| \leq  (BW_{UL}^{LB}+BW_{DL}^{HB})/2 $, where $ f_{UL}^{LB}$ and $ f_{DL}^{HB}$ are the carrier frequencies for lower frequency band UL and higher frequency band DL, respectively. $ BW_{UL}^{LB}$ and $ BW_{DL}^{HB}$ are the channel bandwidths configured for lower frequency band UL carrier and higher frequency band DL carrier in MHz, respectively. |  |  |
+
+For all interferer frequency ranges specified in clause 7.6.3 a maximum of
+
+![](media_svg/image23.svg) [公式≈: _{√}max{24,6∪_{⊥}n∪N_{RB}/6_{∀}}min{_{√}n∪N_{RB}/10_{∃},5}_{∃}]
+
+exceptions are allowed for spurious response frequencies in each assigned frequency channel when measured using a step size of   ![](media_svg/image24.svg) [公式≈: min(_{√}BW_{channel}/2_{∃},5)]MHz with NRB the number of resource blocks in the downlink transmission bandwidth configuration, BWChannel the bandwidth of the frequency channel in MHz and n = 1, 2, 3 for SCS = 15, 30, 60 kHz, respectively. For these exceptions, the requirements in clause 7.7 apply.
+
+The throughput of each carrier shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+### 7.6A.4 Narrow band blocking for CA
+
+#### 7.6A.4.1 Narrow band blocking for Intra-band contiguous CA
+
+For intra-band contiguous carrier aggregation, the downlink SCC(s) shall be configured at nominal channel spacing to the PCC. For FDD, the PCC shall be configured closest to the uplink band. All downlink carriers shall be active throughout the test. The uplink output power shall be set as specified in Table 7.6A.4.1-1 with the uplink configuration. For UE(s) supporting one uplink, the uplink configuration of the PCC shall be in accordance with Table 7.3.2-3. The UE shall fulfil the minimum requirement in presence of an interfering signal specified in Table 7.6A.4.1-1 being on either side of the aggregated signal. The throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes , A3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex /A.5.2.1) with parameters specified in Table 7.6A.4.1-1.
+
+Table 7.6A.4.1-1: Narrow-band blocking for intra-band contiguous CA
+
+| NR band | Parameter | Unit | NR CA bandwidth class |  |
+| --- | --- | --- | --- | --- |
+|  |  |  | B | C |
+| n1, n2, n3, n25, n38, n41, n66, n71, n48, n40 | Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + NR CA Bandwidth Class specific value below |  |
+|  |  | dB | 16 | 16 |
+|  | Puw (CW) | dBm | -55 | -55 |
+|  | Fuw (offset forf = 15 kHz, 30 kHz) | MHz | - Foffset – 0.2/+ Foffset + 0.2 | - Foffset – 0.2/+ Foffset + 0.2 |
+|  |  |  |  |  |
+| NOTE 1: The transmitter shall be set a 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: Reference measurement channel is specified in Annexes A.3.2 and A3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1.NOTE 3: The PREFSENS power level is specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-2 and Table 7.3.2-2a for two, four and eight antenna ports, respectively.NOTE 4: The Fuw (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the interferer and shall be further adjusted to ![](media_svg/image26.svg) [公式≈: ⋅∂_{√∃}FSCS + 0.5SCS+0.5SCS_{interferer}]MHz to be offset from the sub-carrier raster. |  |  |  |  |
+
+#### 7.6A.4.2 Narrow band blocking for Intra-band non-contiguous CA
+
+For intra-band non-contiguous carrier aggregation with FDL_low < 2700 MHz and FUL_low < 2700 MHz with one uplink carrier and two or more downlink sub-blocks, the narrow band blocking requirements are defined with the uplink configuration in accordance with Table 7.3A.2.2-1. For this uplink configuration, the UE shall meet the requirements for each sub-block as specified in clauses 7.6.4 and 7.6A.4.1 for one component carrier and two component carriers per sub-block, respectively. The requirements apply for in-gap and out-of-gap interferers while all downlink carriers are active.
+
+The throughput of each carrier shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+#### 7.6A.4.3 Narrow band blocking for Inter-band CA
+
+For inter-band carrier aggregation with one component carrier per operating band and the uplink assigned to one NR band, the narrow band blocking requirements are defined with the uplink active on the band(s) other than the band whose downlink is being tested. For NR CA configurations including an operating band without uplink band or an operating band with an unpaired DL part (as noted in Table 5.2-1), the requirements for all downlinks shall be met with the single uplink carrier active in each band capable of UL operation. The UE shall meet the requirements specified in clause 7.6.4 for each component carrier while all downlink carriers are active.
+
+For the UE which supports inter-band CA configuration in Table 7.3A.3.2.1-1, PUW power defined in Table 7.6.4-1 is increased by the amount given by ΔRIB,c in Table 7.3A.3.2.1-1.
+
+The throughput of each carrier shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+## 7.6B Blocking characteristics for NR-DC
+
+For inter-band NR-DC configurations, the blocking characteristics for the corresponding inter-band CA configuration as specified in clause 7.6A applies.
+
+## 7.6C Blocking characteristics for SUL
+
+### 7.6C.1 General
+
+### 7.6C.2 In-band blocking for SUL
+
+For SUL operation, the in-band blocking requirement for downlink bands specified in clause 7.6.2 shall be met.
+
+For SUL operation with downlink CA, the in-band blocking requirement for downlink bands specified in clause 7.6A.2 shall be met.
+
+### 7.6C.3 Out-of-band blocking for SUL
+
+For SUL operation, the out-of-band blocking requirement for downlink bands specified in clause 7.6.3 shall be met. For SUL operation with downlink CA, the out-of-band blocking requirement for downlink bands specified in clause 7.6A.3 shall be met. For operation band combination listed in Table 7.6C.3-1, exceptions to the requirement specified in Table 7.6C.3-2 are allowed when the second order intermodulation product of the SUL carrier and the CW interfering signal fully or partially overlaps with the DL carrier.
+
+Table 7.6C.3-1: SUL operating band combination with exceptions allowed
+
+| NR Band combination for SUL |
+| --- |
+| SUL_n78-n81 |
+| SUL_n78-n82 |
+| SUL_n78-n83 |
+| SUL_n79-n81 |
+| SUL_n79-n83 |
+| SUL_n89-n104 |
+
+Table 7.6C.3-2: Requirement for out-of-band blocking exceptions
+
+| Parameter | Unit | Level |
+| --- | --- | --- |
+| PInterferer (CW) | dBm | -441 |
+| NOTE 1: The requirement applies when $\|f_{Interferer}\pm  f_{SUL}-f_{DL}\|\leq  (BW_{SUL}+BW_{DL})/2 $, where $ BW_{SUL}$ and $ BW_{DL}$ are the channel bandwidths configured for SUL and DL (victim) bands in MHz, respectively. |  |  |
+
+For all interferer frequency ranges specified in clause 7.6.3 a maximum of
+
+![](media_svg/image23.svg) [公式≈: _{√}max{24,6∪_{⊥}n∪N_{RB}/6_{∀}}min{_{√}n∪N_{RB}/10_{∃},5}_{∃}]
+
+exceptions are allowed for spurious response frequencies in each assigned frequency channel when measured using a step size of ![](media_svg/image24.svg) [公式≈: min(_{√}BW_{channel}/2_{∃},5)]MHz with NRB the number of resource blocks in the downlink transmission bandwidth configuration, BWChannel the bandwidth of the frequency channel in MHz and n = 1, 2, 3 for SCS = 15, 30, 60 kHz, respectively. For these exceptions, the requirements in clause 7.7 apply.
+
+### 7.6C.4 Narrow band blocking for SUL
+
+Narrow band blocking is not specified for SUL band combination.
+
+## 7.6D Blocking characteristics for UL MIMO
+
+For UE with multiple transmitter antenna connectors up to a maximum of four in closed-loop spatial multiplexing scheme, the minimum requirements specified in clause 7.6 shall be met with the UL MIMO configurations described in clause 6.2D.1 and in clause 6.2F.1D for shared spectrum access operation. For UL MIMO, the parameter PCMAX_L is defined as the total transmitter power over all transmit antenna connectors.
+
+## 7.6E Blocking characteristics for V2X
+
+### 7.6E.1 General
+
+The blocking characteristic is a measure of the receiver's ability to receive a wanted signal at its assigned channel frequency in the presence of an unwanted interferer on frequencies other than those of the spurious response or the adjacent channels, without this unwanted input signal causing a degradation of the performance of the receiver beyond a specified limit. The blocking performance shall apply at all frequencies except those at which a spurious response occurs.
+
+### 7.6E.2 In-band blocking
+
+#### 7.6E.2.1 General
+
+When UE is configured for NR V2X reception non-concurrent with NR uplink transmissions for NR V2X operating bands specified in Table 5.2E.1-1, the throughput of the wanted signal shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annex A.7.2 with parameters specified in Table 7.6E.2.1-1 and Table 7.6E.2.1-2. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal.
+
+Table 7.6E.2.1-1: In-band blocking parameters for NR V2X
+
+| RX parameter | Units | Channel bandwidth |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | 10 MHz | 20 MHz | 30 MHz | 40 MHz |
+| Power in transmission bandwidth configuration | dBm | PREFSENS_V2X + channel bandwidth specific value below |  |  |  |
+|  | dB | 6 | 9 | 11 | 12 |
+| BWinterferer | MHz | 10 |  |  |  |
+| FIoffset, case 1 | MHz | 15 |  |  |  |
+| FIoffset, case 2 | MHz | 25 |  |  |  |
+| NOTE 1: The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used. |  |  |  |  |  |
+
+Table 7.6E.2.1-1a: In-band blocking parameters in n14
+
+| RX parameter | Units | Channel bandwidth |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | 5 MHz | 10 MHz | 20 MHz | 30 MHz | 40 MHz |
+| Power in transmission bandwidth configuration | dBm | PREFSENS_V2X + channel bandwidth specific value below |  |  |  |  |
+|  | dB | 6 | 6 |  |  |  |
+| BWinterferer | MHz | 5 |  |  |  |  |
+| FIoffset, case 1 | MHz | 7.5 |  |  |  |  |
+| FIoffset, case 2 | MHz | 12.5 |  |  |  |  |
+| NOTE 1: The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used. |  |  |  |  |  |  |
+
+Table 7.6E.2.1-2: In-band blocking for NR V2X
+
+| NR band | Parameter | Unit | Case 1 | Case 2 |
+| --- | --- | --- | --- | --- |
+| n14 | PInterferer | dBm | -56 | -44 |
+|  | FInterferer (offset) | MHz | -BW/2 – FIoffset,case 1&BW/2 + FIoffset,case 1 | ≤-BW/2 – FIoffset,case 2&≥BW/2 + FIoffset,case 2 |
+|  | FInterferer | MHz | NOTE 2 | FDL_low – 15toFDL_high + 15 |
+| n38, n47 | Pinterferer | dBm | -44 | -44 |
+|  | Finterferer (offset) | MHz | -BW/2 – FIoffset, case 1andBW/2 + FIoffset, case 1 | ≤ -BW/2 – FIoffset, case 2and≥ BW/2 + FIoffset, case 2 |
+|  | Finterferer | MHz | NOTE 2 | FDL_low – 30toFDL_high + 30 |
+| NOTE 1: For certain bands, the unwanted modulated interfering signal may not fall inside the UE receive band, but within the first 15 MHz below or above the UE receive band.NOTE 2: For each carrier frequency the requirement is valid for two frequencies:a. the carrier frequency -BW/2 – FIoffset, case 1 andb. the carrier frequency +BW/2 + FIoffset, case 1NOTE 3: FInterferer range values for unwanted modulated interfering signal are interferer center frequencies NOTE 4: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS. |  |  |  |  |
+
+#### 7.6E.2.1A In-band blocking for Sidelink CA
+
+For intra-band contiguous SL CA operation, the UE shall fulfil the minimum requirement specified in Table 7.6E.2.1A-1 to Table 7.6E.2.1A-2 where the throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex A.7.2.
+
+Table 7.6E.2.1A-1 In-band blocking parameters for intra-band contiguous SL CA UE
+
+| Rx Parameter | Units | SL CA bandwidth class |
+| --- | --- | --- |
+|  |  | B |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | PREFSENS_SL + NR SL CA bandwidth class specific value below |
+|  | dB | 16.0 |
+| BWInterferer | MHz | 10 |
+| FIoffset, case 1 | MHz | 15 |
+| FIoffset, case 2 | MHz | 25 |
+| NOTE 1: The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used. |  |  |
+
+Table 7.6E.2.1A-2 In-band blocking for intra-band contiguous SL CA UE
+
+| NR SL CA band | Parameter | Unit | Case 1 | Case 2 |
+| --- | --- | --- | --- | --- |
+|  | PInterferer | dBm | -44 | -44 |
+| SL_n47B | FInterferer(offset) | MHz | - BWchannel CA/2 – FIoffset,case 1&+ BWchannel CA/2  + FIoffset,case 1 | ≤- BWchannel CA/2 – FIoffset,case 2&≥+ BWchannel CA/2 + FIoffset,case 2 |
+|  | FInterferer (Range) | MHz | NOTE 2 | FDL_low – 30toFDL_high + 30 |
+| NOTE 1: For certain bands, the unwanted modulated interfering signal may not fall inside the UE receive band, but within the first 30 MHz below or above the UE receive bandNOTE 2: For each carrier frequency the requirement is valid for two frequencies:   a. the carrier frequency - BWchannel CA/2  - FIoffset, case 1 and   b. the carrier frequency + BWchannel CA/2 + FIoffset, case 1NOTE 3: BWchannel CA denotes the aggregated channel bandwidth of the wanted signal |  |  |  |  |
+
+For intra-band non-contiguous SL CA operation, the UE shall meet the requirements for each sub -block as specified in clause 7.6E.2 for one component carrier per sub-block. The requirements apply for in-gap and out-of-gap interferers while all sidelink carriers are active. The UE throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex A.7.2 with the test parameters defined in clause 7.6E.2.1 per sub-block while all downlink carriers are active.
+
+#### 7.6E.2.2 In-band blocking for V2X concurrent operation
+
+For the inter-band concurrent NR V2X operation, the requirements specified in clause 7.6E.2.1 shall apply for the NR sidelink reception in the operating bands in Table 5.2E.2-1 and the requirements specified in clause 7.6.2 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+#### 7.6E.2.2F In-band blocking for SL-U concurrent operation
+
+For the inter-band concurrent NR SL-U operation, the requirements specified in clause 7.6E.2F shall apply for the NR sidelink reception in the operating bands in Table 5.2E.2F-1 and the requirements specified in clause 7.6.2 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+### 7.6E.3 Out-of-band blocking
+
+#### 7.6E.3.1 General
+
+For NR V2X bands out-of-band band blocking is defined for an unwanted CW interfering signal falling outside a frequency range 30 MHz below or above the UE receive band. When UE is configured for NR V2X reception non-concurrent with NR uplink transmissions for NR V2X operating bands specified in Table 5.2E.1-1, the throughput of the wanted signal shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.7.2 with parameters specified in Table 7.6E.3.1-1 and Table 7.6E.3.1-2. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal.
+
+For interferer frequencies across ranges 1, 2 and 3 in Table 7.6E.3.1-2, a maximum of
+
+![](media_svg/image23.svg) [公式≈: _{√}max{24,6∪_{⊥}n∪N_{RB}/6_{∀}}min{_{√}n∪N_{RB}/10_{∃},5}_{∃}]
+
+exceptions are allowed for spurious response frequencies in each assigned frequency channel when measured using a step size of ![](media_svg/image24.svg) [公式≈: min(_{√}BW_{channel}/2_{∃},5)]MHz with NRB the number of resource blocks in the transmission bandwidth configuration, BWChannel the bandwidth of the frequency channel in MHz and n = 1, 2, 3 for SCS = 15, 30, 60 kHz, respectively. For these exceptions, the requirements in clause 7.7E.1 apply.
+
+Table 7.6E.3.1-1: Out-of-band blocking parameters for NR V2X
+
+| RX parameter | Units | Channel bandwidth |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | 5 MHz2 | 10 MHz | 20 MHz | 30 MHz | 40 MHz |
+| Power in transmission bandwidth configuration | dBm | PREFSENS_V2X + channel bandwidth specific value below |  |  |  |  |
+|  | dB | 6 | 6 | 9 | 11 | 12 |
+| NOTE 1: Reference measurement channel is A.7.2.NOTE 2: The CBW is only applicable for PS UE in n14. |  |  |  |  |  |  |
+
+Table 7.6E.3.1-2: Out of-band blocking for NR V2X
+
+| NR band | Parameter | Units | Range 1 | Range 2 | Range 3 |
+| --- | --- | --- | --- | --- | --- |
+| n14 | Pinterferer | dBm | -44 | -30 | -15 |
+|  | Finterferer (CW) | MHz | -60 < f – FDL_low < -15or15 < f – FDL_high < 60 | -85 < f – FDL_low ≤ -60or60 ≤ f – FDL_high < 85 | 1 ≤ f ≤ FDL_low – 85orFDL_high + 85 ≤ f≤ 12750 |
+| n47 | Pinterferer | dBm | -44 | -30 | -15 |
+|  | Finterferer (CW) | MHz | FDL_low -30 toFDL_low -60 | FDL_low -60 toFDL_low -85 | FDL_low -85 to1 MHz |
+|  |  |  | FDL_high +30 toFDL_high + 60 | FDL_high +60 toFDL_high +85 | FDL_high +85 to+12750 MHz |
+| n38 | Pinterferer | dBm | -44 | -30 | -15 |
+|  | Finterferer (CW) | MHz | FDL_low -30 toFDL_low -60 | FDL_low -60 toFDL_low -85 | FDL_low -85 to1 MHz |
+| NOTE 1: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 4400 MHz. |  |  |  |  |  |
+
+#### 7.6E.3.1A Out-of-band blocking for Sidelink CA
+
+For intra-band contiguous SL CA operation, the UE throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex A.7.2 with parameters specified in Tables 7.6E.3.1A-1 and 7.6E.3.1A-2.
+
+For interferer frequencies across ranges 1, 2 and 3 in Table 7.6E.3.1A-2, a maximum of
+
+![](media_svg/image23.svg) [公式≈: _{√}max{24,6∪_{⊥}n∪N_{RB}/6_{∀}}min{_{√}n∪N_{RB}/10_{∃},5}_{∃}]
+
+exceptions are allowed for spurious response frequencies in each assigned frequency channel when measured using a step size of ![](media_svg/image24.svg) [公式≈: min(_{√}BW_{channel}/2_{∃},5)]MHz with NRB the number of resource blocks in the transmission bandwidth configuration, BWChannel the bandwidth of the frequency channel in MHz and n = 1, 2, 3 for SCS = 15, 30, 60 kHz, respectively. For these exceptions, the requirements in clause 7.7E.1A apply.
+
+Table 7.6E.3.1A-1: Out-of-band blocking parameters for intra-band contiguous SL CA UE
+
+| Rx Parameter | Units | SL CA Bandwidth Class |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | B |  |  |  |  |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | PREFSENS_SL + SL CA Bandwidth Class specific value below |  |  |  |  |
+|  |  | 9 |  |  |  |  |
+
+Table 7.6E.3.1A-2: Out of band blocking for intra-band contiguous SL CA UE
+
+| NR SLCA band | Parameter | Units | Frequency |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  |  | Range 1 | Range 2 | Range 3 |
+|  | PInterferer | dBm | -44 | -30 | -15 |
+| V2X_47B | FInterferer (CW) | MHz | -60 < f – FDL_low < -30or30 < f – FDL_high < 60 | -85 < f – FDL_low ≤ -60or60 ≤ f – FDL_high < 85 | 1 ≤ f ≤ FDL_low – 85orFDL_high + 85 ≤ f≤ 12750 |
+| NOTE 1: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 6000 MHz.NOTE 2: The requirement is applied for multi-carrier intra-band concurrent receptions when 2 carrier transmissions are activated at the same time. |  |  |  |  |  |
+
+For intra-band non-contiguous SL CA operation, the UE shall meet the requirements for each sub-block as specified in clauses 7.6E.3 for one component carrier per sub-block, respectively. The requirements apply with all sidelink carriers active. The UE throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex A.7.2 with test parameters defined in clause 7.6E.3.1 per sub-block while all downlink carriers are active.
+
+#### 7.6E.3.2 Out-of-band blocking for V2X concurrent operation
+
+For the inter-band concurrent NR V2X operation, the requirements specified in clause 7.6E.3.1 shall apply for the NR sidelink reception in Band n47 and the requirements specified in clause 7.6.3 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+#### 7.6E.3.2F Out-of-band blocking for SL-U concurrent operation
+
+For the inter-band concurrent NR SL-U operation, the requirements specified in clause 7.6E.3F shall apply for the NR sidelink reception in the operating bands in Table 5.2E.2F-1 and the requirements specified in clause 7.6.3 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+### 7.6E.3F Out-of-band blocking for Sidelink Unlicensed
+
+Out-of-band band blocking is defined for an unwanted CW interfering signal falling outside a frequency range 60 MHz or greater below or above the UE receive band. The throughput of the wanted signal shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex 7.2 with parameters specified in Table 7.6F.3.1-1 and Table 7.6F.3.1-2. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal.
+
+
+
+
+
+
+
+
+
+
+
+## 7.6F Blocking characteristics for shared spectrum channel access
+
+### 7.6F.1 General
+
+The blocking characteristic is a measure of the receiver's ability to receive a wanted signal at its assigned channel frequency in the presence of an unwanted interferer on frequencies other than those of the spurious response or the adjacent channels, without this unwanted input signal causing a degradation of the performance of the receiver beyond a specified limit. The blocking performance shall apply at all frequencies except those at which a spurious response occurs.
+
+### 7.6F.2 In-band blocking
+
+#### 7.6F.2.1 General
+
+In-band blocking (IBB) is defined for an unwanted interfering signal falling into the UE receive band or into the first 60 MHz below or above the UE receive band.  The throughput of the wanted signal shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.6F.2.1-1 and Table 7.6F.2.1-2. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal.
+
+Table 7.6F.2.1-1: In-band blocking parameters for shared access bands
+
+| RX parameter | Units | Channel bandwidth |
+| --- | --- | --- |
+|  |  | 20, 40, 60, 80, 100 MHz |
+| Power in transmission bandwidth configuration | dBm | REFSENS + 9 dB + 10log10(BWChannel /20) dB |
+| BWinterferer | MHz | 20 |
+| FIoffset, case 1 | MHz | 30 |
+| FIoffset, case 2 | MHz | ≥ 50 |
+
+Table 7.6F.2.1-2: In-band blocking for shared access bands
+
+| Operating band | Parameter | Unit | Case 1 | Case 2 |
+| --- | --- | --- | --- | --- |
+|  | Pinterferer | dBm | -56 | -44 |
+|  | Finterferer (offset) | MHz | -CBW/2 –FIoffset, case 1andCBW/2 +FIoffset, case 1 | ≤ -CBW/2 –FIoffset, case 2and≥ CBW/2 +FIoffset, case 2 |
+| n46, n96, n102 | Finterferer |  | NOTE 2 | FDL_low – 3*CBWtoFDL_high + 3*CBW,NOTE 4 |
+| NOTE 1: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with an SCS equal to that of the wanted signal.NOTE 2: For each carrier frequency, the requirement applies for two interferer carrier frequencies: a: -CBW/2 – FIoffset, case 1; b: CBW/2 + FIoffset, case 1NOTE 3: CBW denotes the channel bandwidth of the wanted signalNOTE 4: Interferer carrier frequencies in the frequency range for Case 2 shall be located at discrete frequencies in integer multiples of 20 MHz offset from -CBW/2 – FIoffset, case 2 and CBW/2 + FIoffset, case 2 |  |  |  |  |
+
+#### 7.6F.2.2 Void
+
+### 7.6F.2A In-band blocking for shared spectrum CA
+
+#### 7.6F.2A.1 Intra-band contiguous shared spectrum channel access CA
+
+In-band blocking for intra-band contiguous shared access CA requirements are specified in Table 7.6F.2A.1-1.  These requirements apply for any SCS specified for the channel bandwidth of the wanted signal.  For the test parameters specified in Table 7.6F.2A.1-2, the throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+Table 7.6F.2A.1-1: In-band blocking parameters for intra-band contiguous shared access CA
+
+| Rx Parameter | Units | Shared access CA bandwidth class |
+| --- | --- | --- |
+|  |  | B, C, D, E, M, N, O |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + aggregated channel bandwidth value below |
+|  | dB | 9 + 10log10(BWChannel_CA/20) |
+| BWInterferer | MHz | 20 |
+| FIoffset, case 1 | MHz | 30 |
+| FIoffset, case 2 | MHz | ≥ 50 |
+| NOTE 1: The transmitter shall be set to 4dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: The interferer consists of the Reference measurement channel specified in Annexes  and A.3.3 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex /A.5.2.1 and set-up according to Annex C.3.1 |  |  |
+
+Table 7.6F.2A.1-2: In-band blocking for intra-band contiguous shared access CA
+
+| Operating band | Parameter | Unit | Case 1 | Case 2 |
+| --- | --- | --- | --- | --- |
+|  | Pinterferer | dBm | -56 | -44 |
+|  | Finterferer (offset) | MHz | -BWchannel CA/2 –FIoffset, case 1andBWchannel CA/2 +FIoffset, case 1 | ≤ -BWchannel CA/2 –FIoffset, case 2and≥ BWchannel CA/2 +FIoffset, case 2 |
+| n46 | Finterferer | MHz | NOTE 2 | FDL_low – 3* BWchannel CAtoFDL_high + 3* BWchannel CANOTE 4 |
+| NOTE 1: The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to ![](media_svg/image21.svg) [公式≈: (_{⊥}F_{interferer}/SCS_{∀}+0.5)SCS]MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with an SCS equal to that of the closest carrier.NOTE 2: For each carrier frequency, the requirement applies for two interferer carrier frequencies: a: -BWchannel CA/2 – FIoffset, case 1; b: BWchannel CA/2 + FIoffset, case 1NOTE 3: BWchannel CA denotes the aggregated channel bandwidth of the wanted signalNOTE 4: Interferer carrier frequencies in the frequency range for Case 2 shall be located at discrete frequencies in integer multiples of 20 MHz offset from - BWchannel CA /2 – FIoffset, case 2 and BWchannel CA /2 + FIoffset, case 2 |  |  |  |  |
+
+### 7.6F.3 Out-of-band blocking
+
+#### 7.6F.3.1 General
+
+Out-of-band band blocking is defined for an unwanted CW interfering signal falling outside a frequency range 60 MHz or greater below or above the UE receive band. The throughput of the wanted signal shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.6F.3.1-1 and Table 7.6F.3.1-2. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal.
+
+Table 7.6F.3.1-1: Out-of-band blocking parameters for shared access bands
+
+| RX parameter | Units | Channel bandwidth |
+| --- | --- | --- |
+|  |  | 20, 40, 60, 80, 100 MHz |
+| Power in transmission bandwidth configuration | dBm | REFSENS + 9 dB |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4. |  |  |
+
+Table 7.6F.3.1-2: Out of-band blocking for shared access bands
+
+| Operating band | Parameter | Unit | Range1 | Range 2 | Range 3 |
+| --- | --- | --- | --- | --- | --- |
+|  | Pinterferer | dBm | -44 | -30 | -15 |
+| n46, n96 | Finterferer (CW) | MHz | N/A | -200 < f – FDL_low ≤    -3*CBWor3*CBW ≤ f – FDL_high < 200 | 1 ≤ f ≤ FDL_low – MAX(200,3*CBW)orFDL_high                   + MAX(200,3*CBW)≤ f ≤ 12750 |
+| n102 | Finterferer (CW) | MHz | N/A | -200 < f – FDL_low ≤    -3*CBWorFDL_high + MAX(200,3*CBW) ≤ f < 7125 +  MAX(375,3*CBW) | 1 ≤ f ≤ FDL_low – MAX(200,3*CBW)or7125 +  MAX(375,3*CBW) ≤ f ≤ 12750 |
+| NOTE 1: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 4200 MHz.NOTE 2: CBW denotes the channel bandwidth of the wanted signalNOTE 3:  For band n102, the power level of the interferer (PInterferer) for Range 2 shall be modified to -33dBm for the range FDL_high + MAX(200,3*CBW) ≤ f < 7125 +  MAX(375,3*CBW). |  |  |  |  |  |
+
+
+For interferer frequencies across ranges 1, 2 and 3 in Table 7.6F.3.1-2, a maximum of
+
+![](media_svg/image23.svg) [公式≈: _{√}max{24,6∪_{⊥}n∪N_{RB}/6_{∀}}min{_{√}n∪N_{RB}/10_{∃},5}_{∃}]
+
+exceptions are allowed for spurious response frequencies in each assigned frequency channel when measured using a step size of ![](media_svg/image27.svg) [公式: min(_{√}CBW/2_{∃},5)] MHz with![](media_svg/image25.svg) [公式≈: ^{N}RB]the number of resource blocks in the downlink transmission bandwidth configuration, CBW the bandwidth of the frequency channel in MHz and n = 1, 2, 3 for SCS = 15, 30, 60 kHz, respectively. For these exceptions, the requirements in clause 7.7F apply.
+
+#### 7.6F.3.2 Void
+
+### 7.6F.3A Out-of-band blocking for shared spectrum CA
+
+#### 7.6F.3A.1 Intra-band contiguous shared spectrum channel access CA
+
+Out-of-band blocking for intra-band contiguous shared access CA requirements are specified in Table 7.6F.3A.1-1.  These requirements apply for any SCS specified for the channel bandwidth of the wanted signal.  For the test parameters specified in Table 7.6F.3A.1-2, the throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+Table 7.6F.3A.1-1: Out-of-band blocking parameters for intra-band contiguous shared access CA
+
+| Rx Parameter | Units | Shared access CA bandwidth class |
+| --- | --- | --- |
+|  |  | B, C, D, E, M, N, O |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + CA bandwidth class specific value below |
+|  | dB | 9 |
+| NOTE 1: The transmitter shall be set to 4dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3F.2-3 with PCMAX_L,f,c defined in clause 6.2.4. |  |  |
+
+Table 7.6F.3A.1-2: Out of-band blocking for intra-band contiguous CA
+
+| Operating band | Parameter | Unit | Range1 | Range 2 | Range 3 |
+| --- | --- | --- | --- | --- | --- |
+|  | Pinterferer | dBm | -45 | -30 | -15 |
+| n46 | Finterferer (CW) | MHz | N/A | -200 < f – FDL_low ≤ -3*BWChannel_CAor3*BWChannel_CA ≤ f – FDL_high < 200 | 1 ≤ f ≤ FDL_low – MAX(200,3*BWChannel_CA)orFDL_high + MAX(200,3*BWChannel_CA)≤ f ≤ 12750 |
+| NOTE 1: The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm, for FInterferer > 4200 MHz. |  |  |  |  |  |
+
+## 7.6G (Reserved)
+
+## 7.6H (Reserved)
+
+## 7.6I Blocking characteristics for RedCap
+
+Requirements in clauses 7.6.1 to 7.6.4 apply for a RedCap UE, except for a RedCap UE supporting both Band n20 and Band n28 the out-of-band blocking requirements for Band n20 and Band n28 specified in clause 7.6.3 apply with FDL_low given by Band n28 and FDL_high by Band n20.
+
+## 7.6J Blocking characteristics for ATG
+
+### 7.6J.1 General
+
+The blocking characteristic is a measure of the receiver's ability to receive a wanted signal at its assigned channel frequency in the presence of an unwanted interferer on frequencies other than those of the spurious response or the adjacent channels, without this unwanted input signal causing a degradation of the performance of the receiver beyond a specified limit. The blocking performance shall apply at all frequencies except those at which a spurious response occurs.
+
+### 7.6J.2 In-band blocking for ATG
+
+For ATG UE, the in-band blocking requirement defined in clause 7.6.2 applies.
+
+### 7.6J.2A In-band blocking for ATG CA
+
+#### 7.6J.2A.1 In-band blocking for ATG Intra-band contiguous CA
+
+For ATG UE supporting intra-band contiguous CA operation, the in-band blocking requirement defined in clause 7.6A.2.1 applies.
+
+#### 7.6J.2A.2 In-band blocking for ATG Inter-band CA
+
+For ATG UE supporting inter-band CA operation, the in-band blocking requirement defined in clause 7.6A.2.3 applies.
+
+### 7.6J.3 Out-of-band blocking for ATG
+
+For ATG UE, the out-of-band blocking requirement defined in clause 7.6.3 applies.
+
+NOTE: In 3GPP, the ATG UE out-of-band blocking specification is defined to ensure the telecommunication link and there may be other sources of interference and regulatory issues that need to be considered when designing ATG UE, i.e. avionic equipment.
+
+### 7.6J.3A Out-of-band blocking for ATG CA
+
+NOTE: In 3GPP, the ATG UE out-of-band blocking specification is defined to ensure the telecommunication link and there may be other sources of interference and regulatory issues that need to be considered when designing ATG UE, i.e. avionic equipment.
+
+#### 7.6J.3A.1 Out-of-band blocking for ATG Intra-band contiguous CA
+
+For ATG UE supporting intra-band contiguous CA operation, the out-of-band blocking requirement defined in clause 7.6A.3.1 applies.
+
+#### 7.6J.3A.2 Out-band blocking for ATG Inter-band CA
+
+For ATG UE supporting inter-band CA operation, the out-of-band blocking requirement defined in clause 7.6A.3.3 applies.
+
+## 7.6K (Reserved)
+
+## 7.6L (Reserved)
+
+## 7.7 Spurious response
+
+Spurious response is a measure of the ability of the receiver to receive a wanted signal on its assigned channel frequency without exceeding a given degradation due to the presence of an unwanted CW interfering signal at any other frequency for which a response is obtained, i.e. for which the out-of-band blocking limit as specified in clause 7.6.3 is not met.
+
+The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2  and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters for the wanted signal as specified in Table 7.7-1 for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz and in Table 7.7-1a for NR bands with FDL_high ≥ 3300 MHz and FUL_high ≥ 3300 MHz and for the interferer as specified in Table 7.7-2. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal. For operating bands with an unpaired DL part (as noted in Table 5.2-1), the requirements only apply for carriers assigned in the paired part.
+
+Table 7.7-1: Spurious response parameters for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz
+
+| RX parameter | Units | Channel bandwidth (MHz) |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | 3, 5, 7, 10 | 15 | 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration2 | dBm | REFSENS + 6 dB | REFSENS +7 dB | REFSENS + (9 + 10log10(BWChannel /20)) dB |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: 10log10(x) is rounded to the next higher 0.5dB value. |  |  |  |  |
+
+Table 7.7.1-1a: Spurious response parameters for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+| RX parameter | Units | Channel bandwidth (MHz) |  |  |
+| --- | --- | --- | --- | --- |
+|  |  | 10 | 15 | 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Power in transmission bandwidth configuration | dBm | REFSENS + 6 dB | REFSENS + 7 dB | REFSENS + 9 dB |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4. |  |  |  |  |
+
+Table 7.7-2: Spurious response
+
+| Parameter | Unit | Level |
+| --- | --- | --- |
+| PInterferer (CW) | dBm | -44 |
+| FInterferer | MHz | Spurious response frequencies |
+
+## 7.7A Spurious response for CA
+
+### 7.7A.1 Spurious response for Intra-band contiguous CA
+
+Table 7.7A-1: Spurious response parameters for intra-band contiguous CA
+
+| RX parameter | Units | NR CA bandwidth class |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | B | C | D |  |
+| Power in transmission bandwidth configuration | dBm | REFSENS + CA bandwidth class specific value below |  |  |  |
+|  | dB | 9 | 9 | 9 |  |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4. |  |  |  |  |  |
+
+Table 7.7A-2: Spurious response for CA
+
+| Parameter | Unit | Level |
+| --- | --- | --- |
+| PInterferer (CW) | dBm | -44 |
+| FInterferer | MHz | Spurious response frequencies |
+
+Table 7.7A-3: Void
+
+Table 7.7A-4: Void
+
+### 7.7A.2 Spurious response for Intra-band non-contiguous CA
+
+For intra-band non-contiguous carrier aggregation with one uplink carrier and two or more downlink sub-blocks, the spurious response requirements are defined with the uplink configuration in accordance with Table 7.3A.2.2-1. For this uplink configuration, the UE shall meet the requirements for each sub-block as specified in clauses 7.7 and 7.7A.1 for one component carrier and two component carriers per sub-block, respectively. The requirements apply with all downlink carriers active.
+
+The throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+### 7.7A.3 Spurious response for Inter-band CA
+
+For inter-band carrier aggregation with one component carrier per operating band and the uplink assigned to one NR band, the spurious response are defined with the uplink active on the band(s) other than the band whose downlink is being tested. The UE shall meet the requirements specified in clause 7.7 for each component carrier while all downlink carriers are active.
+
+For the UE which supports inter-band CA configuration in Table 7.3A.3.2.1-1, Pinterferer power defined in Table 7.7-2 and Table 7.7F.1-2 for shared spectrum channel access is increased by the amount given by ΔRIB,c in Table 7.3A.3.2.1-1 and in Table 7.3F.3-1 for shared spectrum channel access .
+
+The throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+## 7.7B Spurious response for NR-DC
+
+For inter-band NR-DC configurations, the spurious response for the corresponding inter-band CA configuration as specified in clause 7.7A applies.
+
+## 7.7D Spurious response for UL MIMO
+
+For UE with multiple transmitter antenna connectors up to a maximum of four in closed-loop spatial multiplexing scheme, the minimum requirements specified in clause 7.7 shall be met with the UL MIMO configurations described in clause 6.2D.1 and in clause 6.2F.1D for shared spectrum access operation. For UL MIMO, the parameter PCMAX_L is defined as the total transmitter power over all transmit antenna connectors.
+
+## 7.7E Spurious response for V2X
+
+### 7.7E.1 General
+
+Spurious response is a measure of the receiver’s ability to receive a wanted signal on its assigned channel frequency without exceeding a given degradation due to the presence of an unwanted CW interfering signal at any other frequency for which a response is obtained, i.e. for which the out-of-band blocking limit as specified in clause 7.6E.3.1 is not met.
+
+When UE is configured for NR V2X reception non-concurrent with NR uplink transmissions for NR V2X operating bands specified in Table 5.2E.1-1, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.7.2 with parameters for the wanted signal as specified in Table 7.7E.1-1 and Table 7.7E.1-2 for NR V2X bands. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal.
+
+Table 7.7E.1-1: Spurious response parameters for NR V2X
+
+| RX parameter | Units | Channel bandwidth |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | 5 MHz2 | 10 MHz | 20 MHz | 30 MHz | 40 MHz |
+| Power in transmission bandwidth configuration | dBm | PREFSENS_V2X + channel bandwidth specific value below |  |  |  |  |
+|  | dB | 6 | 6 | 9 | 11 | 12 |
+| NOTE 1: Reference measurement channel is A.7.2NOTE 2:   The CBW is only applicable for PS UE in n14. |  |  |  |  |  |  |
+
+Table 7.7E.1-2: Spurious response for NR V2X
+
+| Parameter | Unit | Level |
+| --- | --- | --- |
+| PInterferer  (CW) | dBm | -44 |
+| FInterferer | MHz | Spurious response frequencies |
+
+### 7.7E.1A Spurious response requirements for Sidelink CA
+
+For intra-band contiguous SL CA operation, the UE throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex A.7.2 with parameters specified in Table 7.7E.1A-1 and Table 7.7E.1A-2.
+
+Table 7.7E.1A-1: Spurious response parameters for intra-band contiguous SL CA UE
+
+| Rx Parameter | Units | SL CA Bandwidth Class |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | B |  |  |  |  |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | PREFSENS_SL + SL CA Bandwidth Class specific value below |  |  |  |  |
+|  |  | 9 |  |  |  |  |
+| NOTE 1: The requirement is applied for multi-carrier intra-band concurrent receptions when 2 carrier transmissions are activated at the same time.NOTE 2: Reference measurement channel is A.7.2 |  |  |  |  |  |  |
+
+Tables 7.7E.1A-2: Spurious response for intra-band contiguous SL CA UE
+
+| Parameter | Unit | Level |
+| --- | --- | --- |
+| PInterferer(CW) | dBm | -44 |
+| FInterferer | MHz | Spurious response frequencies |
+| NOTE 1: The requirement is applied for multi-carrier intra-band concurrent receptions when 2 carrier transmissions are activated at the same time. |  |  |
+
+For intra-band non-contiguous SL CA operation, the UE shall meet the requirements for each sub-block as specified in clauses 7.7E for one component carrier per sub-block, respectively. The requirements apply with all sidelink carriers active. The UE throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex A.7.2 with test parameters defined in clause 7.7E.1 per sub-block while all downlink carriers are active.
+
+### 7.7E.1F General requirement for Sidelink Unlicensed
+
+The spurious response requirement in clause 7.7F.1 apply.
+
+
+For spurious responses, the throughput of the wanted signal shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex 7.2
+
+### 7.7E.2 Spurious response for V2X concurrent operation
+
+For the inter-band concurrent NR V2X operation, the requirements specified in clause 7.7E.1 shall apply for the NR sidelink reception in the operating bands in Table 5.2E.2-1 and the requirements specified in clause 7.7 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+### 7.7E.2F Spurious response for SL-U concurrent operation
+
+For the inter-band concurrent NR SL-U operation, the requirements specified in clause 7.7E.1F shall apply for the NR sidelink reception in the operating bands in Table 5.2E.2F-1 and the requirements specified in clause 7.7 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+## 7.7F Spurious response for shared spectrum channel access
+
+### 7.7F.1 General
+
+For spurious responses, the throughput of the wanted signal shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.7F.1-1 and Table 7.7F.1-2. The relative throughput requirement shall be met for any SCS at any other frequency at which a response is obtained i.e. for which the limit as specified in clause 7.6F.3.1 is not met.
+
+Table 7.7F.1-1: Spurious response parameters for shared access bands
+
+| RX parameter | Units | Channel bandwidth |
+| --- | --- | --- |
+|  |  | 20, 40, 60, 80, 100 MHz |
+| Power in transmission bandwidth configuration | dBm | REFSENS + 9 dB |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4. |  |  |
+
+Table 7.7F.1-2: Spurious response for shared spectrum channel access
+
+| Parameter | Unit | Level |
+| --- | --- | --- |
+| PInterferer (CW) | dBm | -44 |
+| FInterferer | MHz | Spurious response frequencies |
+
+### 7.7F.1A Spurious response for shared spectrum channel access CA
+
+#### 7.7F.1A.1 Intra-band contiguous shared spectrum channel access CA
+
+
+For spurious responses, the throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.7F.1A.1-1 and Table 7.7F.1A.1-2. The relative throughput requirement shall be met for any SCS at any other frequency at which a response is obtained i.e. for which the limit as specified in clause 7.6F.3.2 is not met.
+
+Table 7.7F.1A.1-1: Spurious response parameters for intra-band contiguous shared access CA
+
+| Rx Parameter | Units | Shared access CA bandwidth class |
+| --- | --- | --- |
+|  |  | B, C, D, E, I, M, N,O |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + CA bandwidth class specific value below |
+|  | dB | 9 |
+| NOTE 1: The transmitter shall be set to 4dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3F.2-3 with PCMAX_L,f,c defined in clause 6.2.4. |  |  |
+
+Table 7.7F.1A.1-2: Spurious response for intra-band contiguous shared access CA
+
+| Parameter | Unit | Level |
+| --- | --- | --- |
+| PInterferer (CW) | dBm | -44 |
+| FInterferer | MHz | Spurious response frequencies |
+
+### 7.7F.2 Void
+
+## 7.7G (Reserved)
+
+## 7.7H (Reserved)
+
+## 7.7I (Reserved)
+
+## 7.7J Spurious response for ATG
+
+### 7.7J.1 General
+
+
+For ATG UE, the spurious response defined in clause 7.7 applies.
+
+### 7.7J.1A Spurious response for ATG CA
+
+#### 7.7J.1A.1 Spurious response for ATG intra-band contiguous CA
+
+For ATG UE supporting intra-band contiguous CA operation, the spurious response defined in clause 7.7A.1 applies.
+
+#### 7.7J.1A.2 Spurious response for ATG inter-band CA
+
+For ATG UE supporting inter-band CA operation, the spurious response defined in clause 7.7A.3 applies.
+
+## 7.7K (Reserved)
+
+## 7.7L (Reserved)
+
+## 7.8 Intermodulation characteristics
+
+### 7.8.1 General
+
+Intermodulation response rejection is a measure of the capability of the receiver to receive a wanted signal on its assigned channel frequency in the presence of two or more interfering signals which have a specific frequency relationship to the wanted signal
+
+### 7.8.2 Wide band Intermodulation
+
+The wide band intermodulation requirement is defined using a CW carrier and modulated NR signal as interferer 1 and interferer 2 respectively.
+
+The throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.8.2-1 for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz and Table 7.8.2-2 for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal. For operating bands with an unpaired DL part (as noted in Table 5.2-1), the requirements only apply for carriers assigned in the paired part.
+
+Table 7.8.2-1: Wide band intermodulation parameters for NR bands with FDL_high < 2700 MHz and FUL_high < 2700 MHz
+
+| Rx parameter | Units | Channel bandwidth (MHz) |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | 3 | 5, 7, 10 | 15 | 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Pw in Transmission Bandwidth Configuration, per CC5 | dBm | REFSENS + 8 dB | REFSENS + 6 dB | REFSENS + 7 dB | REFSENS + (9 + 10log10(BWChannel /20)) dB |
+| PInterferer 1 (CW) | dBm | -46 |  |  |  |
+| PInterferer 2 (Modulated) | dBm | -46 |  |  |  |
+| BWInterferer 2 | MHz | 3 | 5 |  |  |
+| FInterferer 1 (Offset) | MHz | -BW/2 – 4.5/+BW/2 + 4.5 | -BWChannel/2 – 7.5/+BWChannel/2 + 7.5 |  |  |
+| FInterferer 2 (Offset) | MHz | 2*FInterferer 1 |  |  |  |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: Reference measurement channel is specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).NOTE 3: The modulated interferer consists of the Reference measurement channel specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1 and 15 kHz SCS.NOTE 4: The Finterferer 1 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the CW interferer and Finterferer 2 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the modulated interferer.NOTE 5: 10log10(x) is rounded to the next higher 0.5dB value. |  |  |  |  |  |
+
+Table 7.8.2-2: Wide band intermodulation parameters for NR bands with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+| Rx parameter | Units | Channel bandwidth (MHz) |
+| --- | --- | --- |
+|  |  | 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100 |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + 6 dB |
+| PInterferer 1 (CW) | dBm | -46 |
+| PInterferer 2(Modulated) | dBm | -46 |
+| BWInterferer 2 | MHz | BWChannel |
+| FInterferer 1(Offset) | MHz | -2BWChannel/+2BWChannel |
+| FInterferer 2(Offset) | MHz | 2*FInterferer 1 |
+| NOTE 1: The transmitter shall be set to 4dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: Reference measurement channel is specified in Annexes A.2.2, A.2.3, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).NOTE 3: The modulated interferer consists of the Reference measurement channel specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1 and the same  SCS as the wanted signal.NOTE 4: The Finterferer 1 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the CW interferer and Finterferer 2 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the modulated interferer. |  |  |
+
+## 7.8A Intermodulation characteristics for CA
+
+### 7.8A.1 General
+
+### 7.8A.2 Wide band intermodulation for CA
+
+#### 7.8A.2.1 Wide band intermodulation for Intra-band contiguous CA
+
+Table 7.8A.2.1-1: Wide band intermodulation parameters for intra-band contiguous CA with FDL_low ≥ 3300 MHz and FUL_low ≥ 3300 MHz
+
+| Rx parameter | Units | NR CA bandwidth class |  |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  |  | B | C | D |  |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + 10 dB | REFSENS + 6 dB | REFSENS + 13.8 dB |  |
+| PInterferer 1 (CW) | dBm | -46 |  |  |  |
+| PInterferer 2(Modulated) | dBm | -46 |  |  |  |
+| BWInterferer 2 | MHz | 20 | BWChannel_CA | 50 |  |
+| FInterferer 1(Offset) | MHz | -Foffset-30/Foffset+30 | -2BWChannel_CA/+2BWChannel_CA | -Foffset-75/Foffset+75 |  |
+| FInterferer 2(Offset) | MHz |  | 2*FInterferer 1 |  |  |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: Reference measurement channel is specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).NOTE 3: The modulated interferer consists of the Reference measurement channel specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1 and the same SCS as the closest carrier.NOTE 4: The Finterferer 1 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the CW interferer and Finterferer 2 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the modulated interferer. |  |  |  |  |  |
+
+Table 7.8A.2.1-2: Wide band intermodulation parameters for intra-band contiguous CA with FDL_low  < 2700 MHz and FUL_low  < 2700 MHz
+
+| Rx parameter | Units | NR CA bandwidth class |  |
+| --- | --- | --- | --- |
+|  |  | B | C |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | REFSENS + 16 dB | REFSENS + 19 dB |
+| PInterferer 1 (CW) | dBm | -46 | -46 |
+| PInterferer 2(Modulated) | dBm | -46 | -46 |
+| BWInterferer 2 | MHz | 5 | 5 |
+| FInterferer 1(Offset) | MHz | -Foffset-7.5/Foffset+7.5 | -Foffset-7.5/Foffset+7.5 |
+| FInterferer 2(Offset) | MHz | 2*FInterferer 1 | 2*FInterferer 1 |
+| NOTE 1: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: Reference measurement channel is specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1)NOTE 3: The modulated interferer consists of the Reference measurement channel specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1 and the same SCS as the 15 kHz SCS.NOTE 4: The Finterferer 1 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the CW interferer and Finterferer 2 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the modulated interferer. |  |  |  |
+
+#### 7.8A.2.2 Wide band intermodulation for Intra-band non-contiguous CA
+
+For intra-band non-contiguous carrier aggregation with one uplink carrier and two or more downlink sub-blocks, the wide band intermodulation requirements are defined with the uplink configuration in accordance with Table 7.3A.2.2-1. For this uplink configuration, the UE shall meet the requirements for each sub-block as specified in clause 7.8.2 and 7.8A.2.1 for one component carrier and two component carriers per sub-block, respectively. The requirements apply for out-of-gap interferers while all downlink carriers are active.
+
+The throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+#### 7.8A.2.3 Wide band intermodulation for Inter-band CA
+
+For inter-band carrier aggregation with one component carrier per operating band and the uplink assigned to one NR band, the wide band intermodulation requirements are defined with the uplink active on the band(s) other than the band whose downlink is being tested. The UE shall meet the requirements specified in clause 7.8 for each component carrier while all downlink carriers are active.
+
+For the UE which supports inter-band CA configuration in Table 7.3A.3.2.1-1, Pinterferer power defined in Table 7.8.2-1 and 7.8.2-2 and Table 7.8F.2-1 for shared spectrum channel access is increased by the amount given by ΔRIB,c in Table 7.3A.3.2.1-1 in Table 7.3F.3-1 for shared spectrum channel access .
+
+The throughput of each carrier shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).
+
+## 7.8B Intermodulation characteristics for NR-DC
+
+For inter-band NR-DC configurations, the intermodulation characteristics for the corresponding inter-band CA configuration as specified in clause 7.8A applies.
+
+## 7.8D Intermodulation characteristics for UL MIMO
+
+For UE(s) with multiple transmitter antenna connectors up to a maximum of four in closed-loop spatial multiplexing scheme, the minimum requirements in clause 7.8 shall be met with the UL MIMO configurations described in clause 6.2D.1 and in clause 6.2F.1D for shared spectrum access operation. For UL MIMO, the parameter PCMAX_L is defined as the total transmitter power over all transmit antenna connectors.
+
+## 7.8E Intermodulation characteristics for V2X
+
+### 7.8E.1 General
+
+Intermodulation response rejection is a measure of the capability of the receiver to receive a wanted signal on its assigned channel frequency in the presence of two or more interfering signals which have a specific frequency relationship to the wanted signal.
+
+### 7.8E.2 Wide band Intermodulation
+
+#### 7.8E.2.1 General
+
+The wide band intermodulation requirement is defined using modulated NR carrier and a CW signal as interferer 1 and interferer 2 respectively. When UE is configured for NR V2X reception non-concurrent with NR uplink transmissions for NR V2X operating bands specified in Table 5.2E.1-1, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.7.2 with parameters specified in Table 7.8E.2-1 for NR V2X bands. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal.
+
+Table 7.8E.2-1: Wide band intermodulation parameters for NR V2X
+
+| NR band | Rx parameter | Units | Channel bandwidth |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | 10 MHz | 20 MHz | 30 MHz | 40 MHz |
+| n38, n47 | Power in Transmission Bandwidth Configuration | dBm | PREFSENS_V2X + channel bandwidth specific value below |  |  |  |
+|  |  | dB | 6 | 9 | 11 | 12 |
+|  | PInterferer 1 (CW) | dBm | -46 |  |  |  |
+|  | PInterferer 2 (Modulated) | dBm | -46 |  |  |  |
+|  | BWInterferer 2 | MHz | 10MHz |  |  |  |
+|  | FInterferer 1  (Offset) | MHz | -BW/2 – 15/+BW/2 + 15 |  |  |  |
+|  | FInterferer 2  (Offset) | MHz | 2 * FInterferer 1 |  |  |  |
+| NOTE 1: Reference measurement channel is A.7.2NOTE 2: The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used. |  |  |  |  |  |  |
+
+Table 7.8E.2-1a: Wide band intermodulation parameters in n14
+
+| NR band | Rx parameter | Units | Channel bandwidth |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  | 5 MHz | 10 MHz | 20 MHz | 30 MHz | 40 MHz |
+| n14 | Power in Transmission Bandwidth Configuration | dBm | PREFSENS_V2X + channel bandwidth specific value below |  |  |  |  |
+|  |  | dB | 6 | 6 |  |  |  |
+|  | PInterferer 1 (CW) | dBm | -46 |  |  |  |  |
+|  | PInterferer 2 (Modulated) | dBm | -46 |  |  |  |  |
+|  | BWInterferer 2 | MHz | 5MHz |  |  |  |  |
+|  | FInterferer 1  (Offset) | MHz | -BW/2 – 7.5/+BW/2 + 7.5 |  |  |  |  |
+|  | FInterferer 2  (Offset) | MHz | 2 * FInterferer 1 |  |  |  |  |
+| NOTE 1: Reference measurement channel is A.7.2.NOTE 2: The interferer is QPSK modulated PSSCH containing data and reference symbols. Normal cyclic prefix is used. |  |  |  |  |  |  |  |
+
+#### 7.8E.2.2 Wide band Intermodulation for V2X concurrent operation
+
+For the inter-band concurrent NR V2X operation, the requirements specified in clause 7.8E.2.1 shall apply for the NR sidelink reception in the operating bands in Table 5.2E.2-1 and the requirements specified in clause 7.8 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+#### 7.8E.2.2A Wide band intermodulation for Sidelink CA
+
+For intra-band contiguous SL CA operation, the UE throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex A.7.2 with parameters specified in Table 7.8E.2.1A-1 for the specified wanted signal mean power in the presence of two interfering signals.
+
+Table 7.8E.2.2A-1: Wide band intermodulation for intra-band contiguous SL CA UE
+
+| Rx parameter | Units | SL CA Bandwidth Class |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  | B |  |  |  |  |
+| Pw in Transmission Bandwidth Configuration, per CC | dBm | PREFSENS_SL + SL CA Bandwidth Class specific value below |  |  |  |  |
+|  |  | 9 |  |  |  |  |
+| PInterferer 1(CW) | dBm | -46 |  |  |  |  |
+| PInterferer 2(Modulated) | dBm | -46 |  |  |  |  |
+| BWInterferer 2 | MHz | 10 |  |  |  |  |
+| FInterferer 1(Offset) | MHz | –Foffset-15/+ Foffset+15 |  |  |  |  |
+| FInterferer 2(Offset) | MHz | 2*FInterferer 1 |  |  |  |  |
+| NOTE 1: The requirement is applied for multi-carrier intra-band concurrent receptions when 2 carrier transmissions are activated at the same time.NOTE 2: The Finterferer 1 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the CW interferer and Finterferer 2 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the modulated interferer. |  |  |  |  |  |  |
+
+For intra-band non-contiguous SL CA operation, the UE shall meet the requirements for each sub-block as specified in clauses 7.8E.2 for one component carrier per sub-block, respectively. The requirements apply with all sidelink carriers active. The UE throughput shall be ≥ 95% of the maximum throughput of the reference measurement channels as specified in Annex A.7.2 with test parameters defined in clause 7.8E.2.1 per sub-block while all downlink carriers are active.
+
+#### 7.8E.2.2F Wide band Intermodulation for SL-U concurrent operation
+
+For the inter-band concurrent NR SL-U operation, the requirements specified in clause 7.8E.2F shall apply for the NR sidelink reception in the operating bands in Table [5.2E.2F-1] and the requirements specified in clause 7.8 shall apply for the NR downlink reception in licensed band while all downlink carriers are active.
+
+### 7.8E.2F Wide band Intermodulation for Sidelink Unlicensed
+
+The spurious response requirement in clause 7.8F.2 apply.
+
+Instead of the general wideband intermodulation requirements specified in clause 7.8.2, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annex 7.2 with parameters specified in Table 7.8F.2-1. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal.
+
+## 7.8F Intermodulation characteristics for shared spectrum channel access
+
+### 7.8F.1 General
+
+Intermodulation response rejection is a measure of the capability of the receiver to receive a wanted signal on its assigned channel frequency in the presence of two or more interfering signals which have a specific frequency relationship to the wanted signal
+
+### 7.8F.2 Wide band Intermodulation
+
+The wide band intermodulation requirement is defined using a CW carrier and modulated NR signal as interferer 1 and interferer 2 respectively.
+
+Instead of the general wideband intermodulation requirements specified in clause 7.8.2, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2 and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1) with parameters specified in Table 7.8F.2-1. The relative throughput requirement shall be met for any SCS specified for the channel bandwidth of the wanted signal.
+
+Table 7.8F.2-1: Wide band intermodulation parameters for shared spectrum channel access
+
+| Rx parameter | Units | Channel bandwidth |
+| --- | --- | --- |
+|  |  | 20, 40, 60, 80, 100 MHz |
+| Pw in Transmission Bandwidth configuration, per CC | dBm | REFSENS + 9 dB + 10log10(BWChannel /20) dB |
+| PInterferer 1 (CW) | dBm | -46 |
+| PInterferer 2 (Modulated) | dBm | -46 |
+| BWInterferer 2 | MHz | 20 |
+| FInterferer 1 (Offset) | MHz | -BW/2 – 30 / +BW/2 + 30 |
+| FInterferer 2 (Offset) | MHz | 2*FInterferer 1 |
+| NOTE 1: The transmitter shall be set to 4dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3F.2-3 with PCMAX_L,f,c defined in clause 6.2.4.NOTE 2: Reference measurement channel is specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1).NOTE 3: The modulated interferer consists of the Reference measurement channel specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1 and the same SCS as the wanted signal.NOTE 4: The Finterferer 1 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the CW interferer and Finterferer 2 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the modulated interferer. |  |  |
+
+## 7.8G (Reserved)
+
+## 7.8H (Reserved)
+
+## 7.8I (Reserved)
+
+## 7.8J Intermodulation characteristics for ATG
+
+### 7.8J.1 General
+
+Intermodulation response rejection is a measure of the capability of the receiver to receive a wanted signal on its
+
+assigned channel frequency in the presence of two or more interfering signals which have a specific frequency relationship to the wanted signal.
+
+### 7.8J.2 Wide band intermodulation for ATG
+
+For ATG UE, the wide band intermodulation requirement defined in clause 7.8.2 applies.
+
+### 7.8J.2A Wide band intermodulation for ATG CA
+
+#### 7.8J.2A.1 Wide band intermodulation for ATG intra-band contiguous CA
+
+For ATG UE supporting intra-band contiguous carrier aggregation, the wide band intermodulation requirement defined in clause 7.8A.2.1 applies.
+
+#### 7.8J.2A.2 Wide band intermodulation for ATG inter-band CA
+
+For ATG UE supporting inter-band carrier aggregation, the wide band intermodulation requirement defined in clause 7.8A.2.3 applies.
+
+## 7.8K (Reserved)
+
+## 7.8L (Reserved)
+
+## 7.9 Spurious emissions
+
+The spurious emissions power is the power of emissions generated or amplified in a receiver that appear at the UE antenna connector.
+
+The power of any narrow band CW spurious emission shall not exceed the maximum level specified in Table 7.9-1
+
+Table 7.9-1: General receiver spurious emission requirements
+
+| Frequency range | Measurementbandwidth | Maximum level | NOTE |
+| --- | --- | --- | --- |
+| 30 MHz  f < 1 GHz | 100 kHz | -57 dBm |  |
+| 1 GHz  f  12.75 GHz | 1 MHz | -47 dBm |  |
+| 12.75 GHz  f  5th harmonic of the upper frequency edge of the DL operating band in GHz | 1 MHz | -47 dBm | 2 |
+| 12.75 GHz – 26 GHz | 1 MHz | -47 dBm | 3 |
+| NOTE 1: Unused PDCCH resources are padded with resource element groups with power level given by PDCCH as defined in Annex C.3.1.NOTE 2: Applies for Band that the upper frequency edge of the DL Band more than 2.69 GHz.NOTE 3: Applies for Band that the upper frequency edge of the DL Band more than 5.2 GHz. |  |  |  |
+
+## 7.9A Spurious emissions for CA
+
+### 7.9A.1 Void
+
+### 7.9A.2 Void
+
+### 7.9A.3 Spurious emissions for Inter-band CA
+
+For inter-band carrier aggregation including an operating band without uplink band, the UE shall meet the Rx spurious emissions requirements specified in clause 7.9 for each component carrier while all downlink carriers are active.
+
+## 7.9B Spurious emissions for NR-DC
+
+For inter-band NR-DC configurations, the spurious emissions for the corresponding inter-band CA configuration as specified in clause 7.9A applies.
+
+
+## 7.9J Spurious emissions for ATG
+
+### 7.9J.1 General
+
+For ATG UE, the spurious emissions as specified in clause 7.9 applies.
+
+### 7.9J.1A Spurious emissions for ATG CA
+
+#### 7.9J.1A.1 Spurious emissions for ATG inter-band CA
+
+For ATG UE supporting inter-band carrier aggregation including an operating band without uplink band, the UE shall meet the Rx spurious emissions requirements specified in clause 7.9 for each component carrier while all downlink carriers are active.
+
+## 7.9M Spurious emissions for LP-WUS/WUR
+
+The spurious emissions as specified in clause 7.9 applies.
+
+## 7.10 Power imbalance
+
+## 7.10A Power imbalance for CA
+
+### 7.10A.1 General
+
+Power imbalance requirement is a measure of the receiver’s ability to receive a wanted signal in the presence of another signal with a power imbalance and a specific frequency offset from the wanted signal.
+
+Power imbalance requirement in this subclause is applicable for:
+
+- A UE capable of intraBandNR-CA-non-collocated-r18 and is not provided with nonCollocatedTypeNR-CA-r18 and is configured with maxMIMO-Layerswith value less than or equal to 2; or,
+
+- A UE capable of intraBandNR-CA-non-collocated-r19 and nonCollocatedTypeNR-CA-r1900 is provided with value type4 and is configured with maxMIMO-Layer equal to 4.
+
+### 7.10A.2 Minimum requirement
+
+For the test parameters in Table 7.10A.2-1, the throughput shall be ≥ 95 % of the maximum throughput of the reference measurement channels as specified in Annexes A.2.2, A.3.2, and A.3.3 (with one sided dynamic OCNG Pattern OP.1 TDD for the DL-signal as described in Annex A.5.2.1).
+
+Table 7.10A.2-1: Power imbalance parameters for intra-band non-contiguous CA
+
+| Test configurations | Carriers | Rx Power in transmission bandwidth configuration (dBm) | channel bandwidth | Center of BWanother Relative to edge of BWwanted |
+| --- | --- | --- | --- | --- |
+| 1 | Wanted carrier | REFSENS NOTE 4 + 1 | BWwanted ≤ BWanother | < max (5/2* BWanother, 50MHz |
+|  | Another wanted carrier | Power of wanted carrier + 25 |  |  |
+| 2 | Wanted carrier | REFSENS NOTE 4 + 1 | BWwanted > BWanother |  |
+|  | Another wanted carrier | Power of wanted carrier + 25 – 10*log10(BWwanted /BWanother) |  |  |
+| 3 | Wanted carrier | REFSENS NOTE 4 + 1 | NA | ≥ max (5/2* BWanother, 50MHz) |
+|  | Another wanted carrier | Power of wanted carrier + 25 |  |  |
+| NOTE 1: The transmitter shall be set to 24dB below PCMAX_L,f,c at the minimum uplink configuration specified in Table 7.3.2-3 with PCMAX_L,f,c as defined in clause 6.2A.4.NOTE 2: BWwanted is the channel bandwidth of wanted carrier. BWanother is the channel bandwidth of another wanted carrier with 25 dB power imbalance.NOTE 3: It’s allowed to use one of test configurations to verify the RX power imbalance requirement for type 2 UE.NOTE 4: When a UE reports intraBandNR-CA-non-collocated-r18, the REFSENS is the reference sensitivity level for two antenna ports in Table 7.3.2-1b. When a UE reports intraBandNR-CA-non-collocated-r19, the REFSENS is further modified by the amount of ΔRIB,4R given in Table 7.3.2-2 for four antenna ports.NOTE 5:  Void.NOTE 6: Only FWA UE is intended for supporting intraBandNR-CA-non-collocated-r19. |  |  |  |  |
+
+For a UE capable of intraBandNR-CA-non-collocated-r18 for the following CA band combinations in Table 7.10A.2-2, the Power imbalance requirements are applicable with 2Rx antenna ports for each component carrier if it is not provided with nonCollocatedTypeNR-CA-r18 and is configured with maxMIMO-Layers with value less than or equal to 2.
+
+For a UE capable of intraBandNR-CA-non-collocated-r19 with the CA band combinations in Table 7.10A.2-2, the Rx requirements for four Rx ports are applicable for each component carrier, if nonCollocatedTypeNR-CA-r1900 is provided with value type4 and the UE is configured with maxMIMO-Layers equal to 4.
+
+Table 7.10A.2-2: NR CA combinations
+
+| CA combination |
+| --- |
+| CA_n77(2A) |
+| CA_n78(2A) |
+| NOTE: All the requirements for intra-band contiguous and non-contiguous CA apply under the assumption of the same slot format indicated by TDD-UL-DL-ConfigurationCommon and TDD-UL-DL-ConfigurationDedicated in the PCell and SCells for NR SA |

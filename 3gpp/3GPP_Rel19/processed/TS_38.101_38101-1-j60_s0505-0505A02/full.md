@@ -1,0 +1,273 @@
+## 5.5 Void
+
+## 5.5A Configurations for CA
+
+### 5.5A.0 General
+
+The configurations for CA operating band including Band n41 also apply for the corresponding CA operating bands with Band n90 replacing Band n41 but with otherwise identical parameters. For brevity the said configuration for CA operating bands with Band n90 are not listed in the tables below but are covered by this specification.
+
+Noncontiguous resource allocation and almost contiguous allocation are not applicable for each NR carrier of intraband contiguous and non-contiguous CA configurations.
+
+For a CA configuration with one or more operating band supporting asymmetric channel bandwidths as specified in sub-clause 5.3.6, requirements are defined for an asymmetric UL and DL channel bandwidth combination of a supported asymmetric channel bandwidth combination set for an operating band of the CA configuration when the said UL and DL channel bandwidths are also contained in a supported bandwidth combination set of the CA configuration.
+
+For a higher order band combination of which CA_n20-n28 is a subset, the frequency range in band n28 is restricted for the higher order band combination to 703-733 MHz for the UL and 758-788 MHz for the DL.
+
+The configuration tables for CA describe Bandwidth Combination Sets. Bandwidth Combination Set 4 and 5 contain all possible defined channel bandwidths for each band in the combination. The fact that BCS4 and BCS5 contain all channel bandwidths for each band does not alter if a bandwidth is mandatory or optional for a given band. Bandwidths that are identified as optional in Table 5.3.5-1 for a given release are still optional for UEs that support BCS4 or BCS5, where the bandwidths the UE supports for each band, the maximum bandwidth and/or minimum bandwidth for the band in the band combination are indicated in the UE capabilities. The minimum bandwidth per CC and maximum aggregated FDD, TDD and total bandwidth per band combination may be indicated only for BCS5 as described in 38.306 [15] and BCS5 shall not be indicated together with BCS4 for a CA configuration. For inter-band CA combinations including FR1 intra-band CA and with BCS4 or BCS5 in the following configuration tables, the Bandwidth Combination Sets for the FR1 intra-band CA are BCS4 or BCS5, respectively.
+
+By default, unless otherwise noted/stated and except for NR band restricted to operation with share spectrum access channel, power class 3 applies to:
+
+- all valid NR FR1 band single uplink configurations,
+
+- all specified NR FR1 band intra-band uplink CA configurations,
+
+- all specified inter-band CA configurations.
+
+For NR bands with operation restricted to shared spectrum channel access, by default power class 5 applies to all valid single uplink configurations and to all specified intra-band uplink CA configuration. The applicability of higher power class(es) is described in the CA configuration tables in clauses 5.5A.1, 5.5A.2 and 5.5A.3. For inter-band CA combinations in clause 5.5A.3, the applicability of higher power class(es) for higher order band combinations is extended based on the following conditions:
+
+- For a combination of intra-band and inter-band CA, the same higher power class(es) may be supported, which are specified for the inter-band UL CA configuration(s) in the combination composed of the same bands without intra-band CA.
+
+- For a combination of intra-band and inter-band CA, the higher power class(es) may be supported for single-carrier UL when the same higher power class(es) are specified for all its fallback combinations.
+
+- For a combination with 3 or more DL bands without intra-band CA, the higher power class(es) may be supported for single-carrier UL when the same higher power class(es) are specified for all its 2-band fallback combinations.
+
+- For a combination with 4 or more DL bands without intra-band CA, the higher power class(es) may be supported for inter-band UL CA configuration(s) when the same higher power class(es) are specified for all its 3-band fallback combinations.
+
+A UE supporting a given power class for a CA configuration shall meet the corresponding transmitter and receiver requirements in Clause 6 and Clause 7, respectively.
+
+In the CA configuration tables of clause 5.5A.1 and clause 5.5A.2:
+
+- Unless otherwise noted/stated, Uplink CA configuration entries with "-" mean single uplink carrier is valid for downlink intra-band CA,
+
+In the CA configuration tables of clause 5.5A.3:
+
+- Uplink CA configuration entries with "-" mean that any valid constituent band of the downlink inter-band CA combination can be configured as a single uplink carrier,
+
+- Unless otherwise noted, all of the valid downlink constituent bands can be configured as a single uplink carrier,
+
+- If an uplink CA configuration is supported, its fallback single uplink is also supported.
+
+### 5.5A.1 Configurations for intra-band contiguous CA
+
+Table 5.5A.1-1: NR CA configurations and bandwidth combination sets defined for
+intra-band contiguous CA
+
+| NR CA configuration / Bandwidth combination set |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| NR CA configuration | Uplink CA configurations or single uplink carrier5 | Channel bandwidths for carrier (MHz) | Channel bandwidths for carrier (MHz) | Channel bandwidths for carrier (MHz) | Channel bandwidths for carrier (MHz) | Channel bandwidths for carrier (MHz) | Maximum aggregated  bandwidth (MHz) | Bandwidth combination set |
+| CA_n1B | - | 10 | 10,15 |  |  |  | 40 | 0 |
+|  |  | 15 | 15,20 |  |  |  |  |  |
+|  |  | 20 | 20 |  |  |  |  |  |
+| CA_n2B | - | 5 | 15 |  |  |  | 20 | 0 |
+|  |  | 10 | 10 |  |  |  |  |  |
+| CA_n3B | - | 5 | 15, 20, 25, 30 |  |  |  | 60 | 0 |
+|  |  | 10 | 10, 15, 20, 25, 30 |  |  |  |  |  |
+|  |  | 15, 20, 25, 30 | 5, 10, 15, 20, 25, 30 |  |  |  |  |  |
+|  | CA_n3B | 5, 10, 15, 20 | 5, 10, 15, 20 |  |  |  | 40 | 1 |
+|  | - | See n3 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 75 | 4 and 5 |
+| CA_n5B | CA_n5B | 5, 10, 15 | 5, 10, 15 |  |  |  | 20 | 0 |
+|  |  | 5, 10, 15, 20 | 5, 10, 15, 20 |  |  |  | 25 | 1 |
+|  |  | See n5 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 25 | 4 and 5 |
+| CA_n7B | n73CA_n7B | 10 | 10, 15, 20, 30, 40 |  |  |  | 50 | 0 |
+|  |  | 15 | 15, 20, 30 |  |  |  |  |  |
+|  |  | 20 | 20, 30 |  |  |  |  |  |
+|  | - | See n7 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 70 | 4 and 5 |
+| CA_n25B | - | 5 | 15 |  |  |  | 20 | 0 |
+|  |  | 10 | 10 |  |  |  |  |  |
+| CA_n38B | - | 5 | 15, 20, 25 |  |  |  | 50 | 0 |
+|  |  | 10 | 10, 15, 20, 25 |  |  |  |  |  |
+|  |  | 15, 20, 25 | 5, 10, 15, 20, 25 |  |  |  |  |  |
+| CA_n40B | - | 20 | 80 |  |  |  | 100 | 0 |
+|  |  | 50 | 50 |  |  |  |  |  |
+|  | n403,4CA_n40B3 | 10,15, 20, 30, 40, 50, 60, 80 | 10, 15, 20, 30, 40, 50, 60, 80 |  |  |  | 100 | 1 |
+|  |  | See n40 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 100 | 4 and 5 |
+| CA_n41B | n413,4CA_n41B3 | 10, 20, 30, 40, 50 | 10, 20, 30, 40, 50 |  |  |  | 100 | 0 |
+|  |  | See n41 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 100 | 4 and 5 |
+| CA_n41C | n413,4CA_n41C3,4 | 40 | 80, 100 |  |  |  | 180 | 0 |
+|  |  | 50, 60, 80 | 60, 80, 100 |  |  |  |  |  |
+|  |  | 10 | 100 |  |  |  | 190 | 1 |
+|  |  | 15, 20 | 90, 100 |  |  |  |  |  |
+|  |  | 40 | 80, 90, 100 |  |  |  |  |  |
+|  |  | 50, 60, 80, 90 | 60, 80, 90, 100 |  |  |  |  |  |
+|  |  | 10 | 100 |  |  |  | 190 | 2 |
+|  |  | 15, 20 | 90, 100 |  |  |  |  |  |
+|  |  | 30, 40 | 80, 90, 100 |  |  |  |  |  |
+|  |  | 50, 60, 80, 90 | 60, 80, 90, 100 |  |  |  |  |  |
+|  |  | See n41 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 190 | 4 and 5 |
+| CA_n46B | - | 20, 40, 60 | 20, 40 |  |  |  | 100 | 0 |
+| CA_n46C | - | 60, 80 | 60, 80 |  |  |  | 160 | 0 |
+| CA_n46D | - | 60, 80 | 80 | 80 |  |  | 240 | 0 |
+| CA_n46M | - | 20, 40, 60 | 20, 40 | 20, 40 |  |  | 140 | 0 |
+| CA_n46N | - | Void |  |  |  |  |  | 0 |
+|  |  | 20, 40, 60 | 20, 40 | 20, 40 | 20, 40 |  | 180 | 1 |
+| CA_n46O | - | 20, 60 | 20, 40 | 20, 40 | 20, 40 | 20, 40 | 220 | 0 |
+| CA_n48B | CA_n48B | 5 | 15, 20 |  |  |  | 40 | 0 |
+|  |  | 10, 15, 20 | 10, 15, 20 |  |  |  |  |  |
+|  |  | 15, 20 | 15, 20 |  |  |  |  |  |
+|  | - | 10 | 50, 60, 80, 90 |  |  |  | 100 | 1 |
+|  |  | 15, 20 | 40, 50, 60, 80 |  |  |  |  |  |
+|  |  | 40 | 40, 50, 60 |  |  |  |  |  |
+|  | - | 10, 15, 20, 30, 40 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90 |  |  |  | 100 | 2 |
+|  | - | See n48 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 100 | 4 and 5 |
+| CA_n48C | - | 10 | 100 |  |  |  | 140 | 0 |
+|  |  | 15 | 90, 100 |  |  |  |  |  |
+|  |  | 20 | 90, 100 |  |  |  |  |  |
+|  |  | 40 | 80, 90, 100 |  |  |  |  |  |
+|  | - | 10, 15, 20, 30, 40 | 70, 80, 90, 100 |  |  |  | 140 | 1 |
+|  | - | See n48 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 140 | 4 and 5 |
+| CA_n66B | - | 5 | 20, 40 |  |  |  | 50 | 0 |
+|  |  | 10 | 15, 20, 40 |  |  |  |  |  |
+|  |  | 15 | 15, 20 |  |  |  |  |  |
+| CA_n71B | n713 | 5 | 20 |  |  |  | 25 | 0 |
+|  |  | 10 | 15 |  |  |  |  |  |
+|  |  | 10 | 20 |  |  |  | 35 | 1 |
+|  |  | 15 | 15, 20 |  |  |  |  |  |
+|  |  | 5, 10, 15 | 15, 20 |  |  |  | 35 | 2 |
+|  |  | See n71 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 35 | 4 and 5 |
+| CA_n77B | n773 | 20 | 25, 30, 40 |  |  |  | 60 | 0 |
+|  |  | 25 | 30 |  |  |  |  |  |
+|  |  | See n77 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 100 | 4 and 5 |
+| CA_n77C | n773,4CA_n77C3,4 | 50 | 60, 80, 100 |  |  |  | 200 | 0 |
+|  |  | 60 | 60, 80, 100 |  |  |  |  |  |
+|  |  | 80 | 80, 100 |  |  |  |  |  |
+|  |  | 100 | 100 |  |  |  |  |  |
+|  |  | 10 | 100 |  |  |  | 200 | 1 |
+|  |  | 15, 20 | 90, 100 |  |  |  |  |  |
+|  |  | 25, 30 | 80, 90, 100 |  |  |  |  |  |
+|  |  | 40 | 70, 80, 90, 100 |  |  |  |  |  |
+|  |  | 50, 60, 70, 80, 90, 100 | 60, 70, 80, 90, 100 |  |  |  |  |  |
+|  |  | See n77 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 200 | 4 and 5 |
+| CA_n77D | n773 | 100 | 100 | 100 |  |  | 300 | 0 |
+|  |  | See n77 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 300 | 4 and 5 |
+| CA_n78B | n783 | 20 | 50 |  |  |  | 70 | 0 |
+| CA_n78C | n783,4CA_n78C3,4 | 50 | 60, 80, 100 |  |  |  | 200 | 0 |
+|  |  | 60 | 60, 80, 100 |  |  |  |  |  |
+|  |  | 80 | 80, 100 |  |  |  |  |  |
+|  |  | 100 | 100 |  |  |  |  |  |
+|  |  | 10 | 100 |  |  |  | 200 | 1 |
+|  |  | 15, 20 | 90, 100 |  |  |  |  |  |
+|  |  | 25, 30 | 80, 90, 100 |  |  |  |  |  |
+|  |  | 40 | 70, 80, 90, 100 |  |  |  |  |  |
+|  |  | 50, 60, 70, 80, 90, 100 | 60, 70, 80, 90, 100 |  |  |  |  |  |
+|  |  | See n78 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 200 | 4 and 5 |
+| CA_n78D | n783 | 100 | 100 | 100 |  |  | 300 | 0 |
+|  |  | See n78 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 300 | 4 and 5 |
+| CA_n79C | CA_n79C3,4 | 50 | 60, 80, 100 |  |  |  | 200 | 0 |
+|  |  | 60 | 60, 80, 100 |  |  |  |  |  |
+|  |  | 80 | 80, 100 |  |  |  |  |  |
+|  |  | 100 | 100 |  |  |  |  |  |
+|  |  | See n79 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 200 | 4 and 5 |
+| CA_n79D | - | 100 | 100 | 100 |  |  | 300 | 0 |
+|  |  | See n79 channel bandwidths in Table 5.3.5-1 for each carrier2 |  |  |  |  | 300 | 4 and 5 |
+| CA_n96B | CA_n96B | 20, 40 | 20, 40, 60, 80 |  |  |  | 100 | 0 |
+| CA_n96C | CA_n96C | 80 | 40, 60, 80 |  |  |  | 160 | 0 |
+| CA_n96D | - | 80 | 80 | 60, 80 |  |  | 240 | 0 |
+| CA_n96E | - | 80 | 80 | 80 | 80 |  | 320 | 0 |
+| CA_n102B | CA_n102B | 20, 40 | 20, 40, 60, 80 |  |  |  | 100 | 0 |
+| CA_n102C | CA_n102C | 80 | 40, 60, 80 |  |  |  | 160 | 0 |
+| CA_n102D | - | 80 | 80 | 60, 80 |  |  | 240 | 0 |
+| CA_n102E | - | 80 | 80 | 80 | 80 |  | 320 | 0 |
+| CA_n104C | CA_n104C | 20, 30, 40, 50 | 60, 70, 80, 90, 100 |  |  |  | 200 | 0 |
+|  |  | 60, 70, 80, 90 | 60, 70, 80, 90, 100 |  |  |  |  |  |
+|  |  | 100 | 100 |  |  |  |  |  |
+|  |  | See n104 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  |  | 200 | 4 and 5 |
+| CA_n104D | - | See n104 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  |  | 300 | 4 and 5 |
+| NOTE 1: For each channel bandwidth of each component carrier, refer to Table 5.3.5-1 for the applicable SCSs. For a given band, not all UE channel bandwidths support the same SCSs.NOTE 2: The aggregated bandwidth must be greater than or equal to the minimum for the bandwidth class defined in Table 5.3A.5-1, and smaller than or equal to the maximum aggregated bandwidth.NOTE 3: Minimum requirements for Power Class 2 are applicable for this uplink combination or single uplink carrier in this downlink/uplink combinationNOTE 4: Minimum requirements for Power Class 1.5 are applicable for this uplink combination or single uplink carrier in this downlink/uplink combinationNOTE 5: Only single uplink carriers with power class other than PC3 are listed. |  |  |  |  |  |  |  |  |
+
+Table 5.5A.1-2: Void
+
+### 5.5A.2 Configurations for intra-band non-contiguous CA
+
+Table 5.5A.2-1: NR CA configurations and bandwidth combination sets defined for
+intra-band non-contiguous CA
+
+| NR CA Configuration | Uplink CA Configurations or single uplink carrier5 | Channel bandwidths for carrier(MHz) | Channel bandwidths for carrier(MHz) | Channel bandwidths for carrier(MHz) | Channel bandwidths for carrier(MHz) | MaximumAggregated bandwidth(MHz) | Bandwidth combination set |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| CA_n1(2A) | - | 5, 10, 15, 20 | 5, 10, 15, 20 |  |  | 40 | 0 |
+|  |  | See n1 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 55 | 4 and 5 |
+| CA_n2(2A) | - | 5, 10, 15, 20 | 5, 10, 15, 20 |  |  | 40 | 0 |
+|  | - | See n2 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 40 | 4 and 5 |
+| CA_n2(3A) | - | See n2 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 50 | 4 and 5 |
+| CA_n3(2A) | - | 5, 10, 15, 20 | 5, 10, 15, 20 |  |  | 40 | 0 |
+|  |  | 5, 10, 15, 20, 25, 30 | 5, 10, 15, 20, 25, 30 |  |  | 60 | 1 |
+|  |  | See n3 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 70 | 4 and 5 |
+| CA_n5(2A) | - | 5, 10, 15, 20 | 5, 10, 15, 20 |  |  | 25 | 0 |
+| CA_n7(2A) | - | 5, 10, 15, 20 | 5, 10, 15, 20 |  |  | 40 | 0 |
+|  |  | See n7 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 65 | 4 and 5 |
+| CA_n12(2A) | - | 5 | 5 |  |  | 10 | 0 |
+| CA_n25(2A) | n253 | 5, 10, 15, 20 | 5, 10, 15, 20 |  |  | 40 | 0 |
+|  |  | 5, 10, 15, 20, 25, 30, 40 | 5, 10, 15, 20, 25, 30, 40 |  |  | 60 | 1 |
+|  |  | See n25 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 60 | 4 and 5 |
+| CA_n25(3A) | n253 | 5, 10, 15, 20, 25, 30, 40 | 5, 10, 15, 20, 25, 30, 40 | 5, 10, 15, 20, 25, 30, 40 |  | 55 | 0 |
+|  |  | See n25 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 55 | 4 and 5 |
+| CA_n26(2A) | CA_n26(2A)7 | 5, 10, 15 | 5, 10, 15 |  |  | 30 | 0 |
+| CA_n40(2A) | n403,4CA_n40(2A)3,4 | See n40 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 95 | 4 and 5 |
+| CA_n41(2A) | n413,4CA_n41(2A)3,4 | 40, 50, 60, 80, 100 | 40, 50, 60, 80, 100 |  |  | 180 | 0 |
+|  |  | 10, 15, 20, 40, 50, 60, 80, 90, 100 | 10, 15, 20, 40, 50, 60, 80, 90, 100 |  |  | 190 | 1 |
+|  |  | 10, 15, 20, 30, 40, 50, 60, 80, 90 | 15, 20, 30, 40, 50, 60, 80, 90, 100 |  |  | 190 | 2 |
+|  |  | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 |  |  | 190 | 3 |
+|  |  | See n41 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 190 | 4 and 5 |
+| CA_n41(3A) | n413,4 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 |  | 190 | 0 |
+|  |  | See n41 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 190 | 4 and 5 |
+| CA_n41(4A) | n413 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 190 | 0 |
+|  |  | See n41 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 190 | 4 and 5 |
+| CA_n46(2A) | - | 10, 20, 40, 60, 80 | 10, 20, 40, 60, 80 |  |  | 160 | 0 |
+| CA_n48(2A) | - | 10, 15, 20, 40, 50, 60, 80, 90, 100 | 10, 15, 20, 40, 50, 60, 80, 90, 100 |  |  | 1402 | 0 |
+|  |  | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 |  |  | 1402 | 1 |
+|  |  | See n48 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 1402 | 4 and 5 |
+| CA_n48(3A) | - | 10, 15, 20, 40,50, 60, 80, 90, 100 | 10, 15, 20, 40,50, 60, 80, 90, 100 | 10, 15, 20, 40,50, 60, 80, 90, 100 |  | 1402 | 0 |
+|  |  | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 |  | 1402 | 1 |
+| CA_n48(4A) | - | 10, 15, 20, 40, 50, 60, 80, 90, 100 | 10, 15, 20, 40, 50, 60, 80, 90, 100 | 10, 15, 20, 40, 50, 60, 80, 90, 100 | 10, 15, 20, 40, 50, 60, 80, 90, 100 | 1352 | 0 |
+|  |  | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 1352 | 1 |
+| CA_n66(2A) | n663 | 5, 10, 15, 20 | 5, 10, 15, 20, 40 |  |  | 60 | 0 |
+|  |  | 5, 10, 15, 20, 25, 30, 40 | 5, 10, 15, 20, 25, 30, 40 |  |  | 80 | 1 |
+|  |  | 5, 10, 15, 20, 40 | 5, 10, 15, 20, 40 |  |  | 80 | 2 |
+|  |  | See n66 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 85 | 4 and 5 |
+| CA_n66(3A) | - | 5, 10, 15, 20, 40 | 5, 10, 15, 20, 40 | 5, 10, 15, 20, 40 |  | 80 | 0 |
+|  |  | See n66 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 80 | 4 and 5 |
+| CA_n71(2A) | n713 | 5, 10, 15, 20 | 5,10,15, 20 |  |  | 30 | 0 |
+|  |  | See n71 channel bandwidths in Table 5.3.5-1 for each carrier up to 25 MHz per carrier |  |  |  | 30 | 4 and 5 |
+| CA_n77(2A)6,9 | n773,4CA_n77(2A)3,4 | 20, 40, 80, 100 | 20, 40, 80, 100 |  |  | 200 | 0 |
+|  |  | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 |  |  | 200 | 1 |
+|  |  | See n77 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 200 | 4 and 5 |
+| CA_n77(3A) | n773,4CA_n77(2A)3 | 20, 40, 80, 100 | 20, 40, 80, 100 | 20, 40, 80, 100 |  | 300 | 0 |
+|  |  | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 |  | 300 | 1 |
+|  |  | See n77 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 300 | 4 and 5 |
+| CA_n78(2A)6, 9 | n783,4CA_n78(2A)3,4 | 10, 20, 40, 50, 60, 80, 90, 100 | 10, 20, 40, 50, 60, 80, 90, 100 |  |  | 200 | 0 |
+|  |  | 10, 20, 25, 30, 40, 50, 60, 80, 90, 100 | 10, 20, 25, 30, 40, 50, 60, 80, 90, 100 |  |  | 200 | 1 |
+|  |  | 10, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | 10, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 |  |  | 200 | 2 |
+|  |  | See n78 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 200 | 4 and 5 |
+| CA_n79(2A) | CA_n79(2A) | See n79 channel bandwidths in Table 5.3.5-1 for each carrier |  |  |  | 200 | 4 and 5 |
+| CA_n96(2A) | - | 20, 40, 60, 80 | 20, 40, 60, 80 |  |  | 160 | 0 |
+| CA_n96(3A) | - | 20, 40, 60, 80 | 20, 40, 60, 80 | 20, 40, 60, 80 |  | 240 | 0 |
+| CA_n96(4A) | - | 20, 40, 60, 80 | 20, 40, 60, 80 | 20, 40, 60, 80 | 20, 40, 60, 80 | 320 | 0 |
+| CA_n102(2A) | - | 20, 40, 60, 80 | 20, 40, 60, 80 |  |  | 160 | 0 |
+| CA_n102(3A) | - | 20, 40, 60, 80 | 20, 40, 60, 80 | 20, 40, 60, 80 |  | 240 | 0 |
+| CA_n102(4A) | - | 20, 40, 60, 80 | 20, 40, 60, 80 | 20, 40, 60, 80 | 20, 40, 60, 80 | 320 | 0 |
+| NOTE 1: Void.NOTE 2: Parameter value accounts for both, the maximum frequency range of band n48 (150 MHz), and the minimum frequency gaps in between NR non-contiguous component carriers.NOTE 3: Minimum requirements for Power Class 2 are applicable for this uplink combination or single uplink carrier in this downlink/uplink combinationNOTE 4: Minimum requirements for Power Class 1.5 are applicable for this uplink combination or single uplink carrier in this downlink/uplink combinationNOTE 5: Only single uplink carriers with power class other than PC3 are listed.NOTE 6: Maximum 6 dB power spectral density imbalance between downlink carriers is assumed when UE does not indicate intraBandNR-CA-non-collocated-r18 or UE indicates intraBandNR-CA-non-collocated-r18 and nonCollocatedTypeNR-CA-r18 is provided. Clause 7.10A.2 power imbalance requirement apply if the UE indicates intraBandNR-CA-non-collocated-r18 and nonCollocatedTypeNR-CA-r18 is not provided and UE is configured with maxMIMO-Layerswith value less than or equal to 2. For these UEs, the power spectral density imbalance condition also applies for these carriers when applicable intra-band non-contiguous NR CA configuration is a subset of a higher order NR CA configuration.NOTE 7: Unless otherwise stated, only RF requirements for dual PA architecture are applicable for UL CA_n26(2A) and UE shall indicate the dualPA-Architecture for UL CA_n26(2A).NOTE 8: For each channel bandwidth of each component carrier, refer to Table 5.3.5-1 for the applicable SCSs. For a given band, not all UE channel bandwidths support the same SCSs.NOTE 9: Maximum 6 dB power spectral density imbalance between downlink carriers is assumed when the UE indicates intraBandNR-CA-non-collocated-r19 and nonCollocatedTypeNR-CA-r1900 is provided with value type1 or is absent. Clause 7.10A.2 power imbalance requirement is applied, if the UE indicates intraBandNR-CA-non-collocated-r19 and nonCollocatedTypeNR-CA-r1900 is provided with value type4 and UE is configured with maxMIMO-Layers equal to 4. For these UEs, the power spectral density imbalance condition is also applied for their carriers when applicable intra-band non-contiguous NR CA configuration is a subset of a higher order NR CA configuration. |  |  |  |  |  |  |  |
+
+Table 5.5A.2-2: NR CA configurations and bandwidth combination sets defined for
+mixed intra-band contiguous and non-contiguous CA
+
+| NR CA configuration | Uplink CA configuration or single uplink carrier4 | NR Band | Channel bandwidth (MHz) | Bandwidth combination set |
+| --- | --- | --- | --- | --- |
+| CA_n41(A-C) | n412,3CA_n41C2,3 | n41 | 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100 | 0 |
+|  |  | n41 | CA_n41C_BCS2 |  |
+|  |  | n41 | See n41 channel bandwidths in Table 5.3.5-1 | 4 and 5 |
+|  |  | n41 | CA_n41C_BCS4 and 5 |  |
+| CA_n41(2A-C) | n412,3CA_n41C | n41 | CA_n41(2A)_BCS3 | 0 |
+|  |  | n41 | CA_n41C_BCS1 |  |
+|  |  | n41 | CA_n41(2A)_BCS4 and 5 | 4 and 5 |
+|  |  | n41 | CA_n41C_BCS4 and 5 |  |
+| CA_n48(A-B) | CA_n48B | n48 | 5, 10, 15, 20, 40, 501, 601, 801, 901, 1001 | 0 |
+|  |  | n48 | CA_n48B_BCS0 |  |
+|  |  | n48 | 5, 10, 15, 20, 30, 40, 501, 601, 701, 801, 901, 1001 | 1 |
+|  |  | n48 | CA_n48B_BCS2 |  |
+|  |  | n48 | See n48 channel bandwidths in Table 5.3.5-1 | 4 and 5 |
+|  |  | n48 | CA_n48B_BCS4 and 5 |  |
+| CA_n78(A-C) | CA_n78C | n78 | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | 0 |
+|  |  | n78 | CA_n78C_BCS0 |  |
+|  |  | n78 | 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100 | 1 |
+|  |  | n78 | CA_n78C_BCS1 |  |
+|  |  | n78 | See n78 channel bandwidths in Table 5.3.5-1 | 4 and 5 |
+|  |  | n78 | CA_n78C_BCS4 and 5 |  |
+| NOTE 1: This UE channel bandwidth is applicable only to downlinkNOTE 2: Minimum requirements for Power Class 2 are applicable for this uplink combination or single uplink carrier in this downlink/uplink combinationNOTE 3: Minimum requirements for Power Class 1.5 are applicable for this uplink combination or single uplink carrier in this downlink/uplink combinationNOTE 4: Only single uplink carriers with power class other than PC3 are listed.NOTE 5: For each channel bandwidth of each component carrier, refer to Table 5.3.5-1 for the applicable SCSs. For a given band, not all UE channel bandwidths support the same SCSs. |  |  |  |  |

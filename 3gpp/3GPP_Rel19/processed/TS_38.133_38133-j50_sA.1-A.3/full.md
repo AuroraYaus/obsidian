@@ -1,0 +1,6246 @@
+###### Annex A (normative):
+Test Cases
+
+# A.1 Purpose of annex
+
+The purpose of annex A is to define test cases and the relevant configurations for verifying various types of RRM requirements with NR cells, including SA NR, EN-DC, and NE-DC deployments as well as standalone E-UTRA deployments.
+
+# A.2 Requirement classification for statistical testing
+
+Requirements in this specification are either expressed as absolute requirements with a single value stating the requirement or expressed as a success rate. There are no provisions for the statistical variations that will occur when the parameter is tested.
+
+Annex A outlines the tests in more detail and lists the test parameters needed. The test will result in an outcome of a test variable value for the device under test (DUT) inside or outside the test limit. Overall, the probability of a "good" DUT being inside the test limit(s) and the probability of a "bad" DUT being outside the test limit(s) should be as high as possible. For this reason, when selecting the test variable and the test limit(s), the statistical nature of the test is accounted for.
+
+The statistical nature depends on the type of requirement. Some have large statistical variations, while others are not statistical in nature at all. When testing a parameter with a statistical nature, a confidence level is set. This establishes the probability that a DUT passing the test actually meets the requirements and determines how many times a test has to be repeated and what the pass and fail criteria are. Those aspects are not covered by TS 38.133. The details of the tests on how many times to run it and how to establish confidence in the tests are described in TS 38.533 [5]. This annex establishes the variable to be used in the test and whether it can be viewed as statistical in nature or not.
+
+## A.2.1 Types of requirements in TS 38.133
+
+### A.2.1.1 Time and delay requirements on UE higher layer actions
+
+A very large part of the RRM requirements are delay requirements:
+
+- In RRC_IDLE state mobility (clause A.6.1 and A.7.1) there is cell re-selection delay.
+
+- In RRC_CONNECTED state mobility (clauses A.4.3, A.4.6, A.5.3, A.5.6, A.6.3, A.6.6, A.7.3 and A.7.6) there is handover delay, cell search delay and measurement reporting delay.
+
+- In RRC Connection Control (clauses A.4.3.2, A.5.3.2, A.6.3.2 and A.7.3.2) there is RRC re-establishment delay.
+
+All have in common that the UE is required to perform an action observable in higher layers (e.g. camp on the correct cell) within a certain time after a specific event (e.g. when a new strong pilot or reference signal appears). The delay time is statistical in nature for several reasons, among others that several of the measurements are performed by the UE in a fading radio environment.
+
+The variations make a strict limit unsuitable for a test. Instead there is a condition set for a correct action by the UE, e.g. that the UE shall camp on the correct cell within X seconds. Then the rate of correct events is observed during repeated tests and a limit is set on the rate of correct events, usually 90% correct events are required. How the limit is applied in the test depends on the confidence required, further detailed are in TS 38.533 [5].
+
+### A.2.1.2 Measurements of power levels, relative powers and time
+
+A very large number of requirements are on measurements that the UE performs:
+
+- In RRC_CONNECTED state mobility (clauses A.4.3, A.5.3, A.6.3 and A.7.3) there are measurement reports.
+
+- In Measurement Performance Requirements (clauses A.4.7, A.5.7, A.6.7 and A.7.7) there are requirements for all type of measurements.
+
+The accuracy requirements on measurements are expressed in this specification as a fixed limit (e.g. +/-X dB), but the measurement error will have a distribution that is not easily confined in fixed limits. Assuming a Gaussian distribution of the error, the limits will have to be set at +/-3.29 if the probability of failing a "good DUT" in a single test is to be kept at 0.1%. It is more reasonable to set the limit tighter and test the DUT by counting the rate of measurements that are within the limits, in a way similar to the requirements on delay.
+
+### A.2.1.3 Implementation requirements
+
+A few requirements are strict actions the UE should take or capabilities the UE should have, without any allowance for deviations. These requirements are absolute and should be tested as such. Examples are:
+
+- "Event triggered report rate" in RRC_CONNECTED state mobility (clauses A.4.3, A.4.6, A.5.3, A.5.6, A.6.3, A.6.6, A.7.3 and A.7.6),
+
+- "Correct behaviour at time-out" in RRC connection control (clauses A.4.3.2, A.5.3.2, A.6.3.2 and A.7.3.2).
+
+### A.2.1.4 Physical layer timing requirements
+
+There are requirements on Timing (clauses A.4.4, A.5.4, A.6.4 and A.7.4). There are both absolute and relative limits on timing accuracy depending upon the type of requirement. Examples are:
+
+- Initial Transmit Timing (clauses A.4.4.1, A.5.4.1, A.6.4.1 and A.7.4.1) has an absolute limit on timing accuracy.
+
+- Timing Advance (clauses A.4.4.2, A.5.4.2, A.6.4.2 and A.7.4.2) has a relative limit on timing accuracy.
+
+### A.2.1.5 Requirements under CCA
+
+A few requirements include CCA failures in DL and or UL. Considering that the CCA model is of statistical nature, requirements that include CCA failures are always considered of statistical nature.
+
+# A.3 RRM test configurations
+
+## A.3.1 Reference measurement channels
+
+### A.3.1.1 PDSCH
+
+#### A.3.1.1.1 FDD
+
+Table A.3.1.1.1-1: PDSCH Reference Measurement Channels for SCS=15 kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | SR.1.1 FDD | SR.1.2 FDD | SR.1.3 FDD |  |  |  |  |
+| Channel bandwidth | MHz | Defined in test case | Defined in test case by the parameter r NRB,c | Defined in test case by the parameter r NRB,c |  |  |  |  |
+| Number of transmitter antennas |  | 1 | 1 | 1 |  |  |  |  |
+| Allocated resource blocks for PDSCH Note 1 |  | 24 | 15 | 12 |  |  |  |  |
+| Allocated slots per Radio Frame |  | 10 | 10 | 10 |  |  |  |  |
+| Radio frame containing SSB | slots | Note 5 | Note 5 | Note 5 |  |  |  |  |
+| Radio frame not containing SSB | slots | 10 | 10 | 10 |  |  |  |  |
+| MCS index |  | 4 | 4 | 4 |  |  |  |  |
+| Modulation |  | QPSK | QPSK | QPSK |  |  |  |  |
+| Target Coding Rate |  | 1/3 | 1/3 | 1/3 |  |  |  |  |
+| Number of control symbols |  | 2 | 2 | 2 |  |  |  |  |
+| PDSCH mapping type |  | Type A | Type A | Type A |  |  |  |  |
+| Information Bit Payload |  |  |  |  |  |  |  |  |
+| For slots with RMSI Note 2 | bits | 1608 | 984 | 736 |  |  |  |  |
+| For slots without RMSI | bits | 1864 | 1128 | 888 |  |  |  |  |
+| Number of Code Blocks per slot |  | 1 | 1 | 1 |  |  |  |  |
+| Binary Channel Bits Per slot |  |  |  |  |  |  |  |  |
+| For slots with RMSI Note 2, Note 4 | bits | 5184 | 3240 | 2592 |  |  |  |  |
+| For slots without RMSI Note 6 | bits | 6048 | 3780 | 3024 |  |  |  |  |
+| NOTE 1: Allocated outside the SMTC duration in time and in resource blocks which do not overlap with the resource blocks allocated for SS/PBCH block.NOTE 2: PDSCH is scheduled on the slots with RMSI.NOTE 3: If necessary the information bit payload size can be adjusted to facilitate the test implementation. The payload sizes are defined in TS 38.213 [3].NOTE 4: Derived based on the PDSCH DMRS assumption: dmrs-TypeA-Position=2, dmrs-Type=1, dmrs-AdditonalPositions=2, maxLength=1, Antenna port index: 1000, and Number of PDSCH DMRS CDM group(s) without data: 2.NOTE 5: PDSCH is not scheduled in slots containing SSB according to the SSB configuration used in the test. SSB configurations are defined in clause A.3.10.NOTE 6: Derived based on the PDSCH DMRS assumption: dmrs-TypeA-Position=2, dmrs-Type=1, dmrs-AdditonalPositions=2, maxLength=1, Antenna port index: 1000, and Number of PDSCH DMRS CDM group(s) without data: 1.NOTE 7:  When DRX is configured, PDCCH can be scheduled both for downlink assignment and/or UL grant only during (10ms  -  drx-InactivityTimer) from timing when drx-onDurationTimer starts, unless otherwise specified in the test case. |  |  |  |  |  |  |  |  |
+
+#### A.3.1.1.2 TDD
+
+For tests with VSAT UEs using FR1 numerology in FDD operation, the TDD tables below may be used.
+
+Table A.3.1.1.2-1: PDSCH Reference Measurement Channels for SCS=15 kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | SR.1.1 TDD | SR.1.2 TDD |  |  |  |  |  |
+| Channel bandwidth | MHz | Defined in test case | Defined in test case |  |  |  |  |  |
+| Number of transmitter antennas |  | 1 | 1 |  |  |  |  |  |
+| Allocated resource blocks for PDSCH Note 1 |  | 24 | 24 |  |  |  |  |  |
+| Allocated slots per Radio Frame |  |  |  |  |  |  |  |  |
+| Radio frame containing SSB | slots | Note 5 | Note 5 |  |  |  |  |  |
+| Radio frame not containing SSB | slots | 4 | 6 |  |  |  |  |  |
+| MCS table |  | 64QAM | 64QAM |  |  |  |  |  |
+| MCS index |  | 4 | 4 |  |  |  |  |  |
+| Modulation |  | QPSK | QPSK |  |  |  |  |  |
+| Target Coding Rate |  | 1/3 | 1/3 |  |  |  |  |  |
+| Number of control symbols |  | 2 | 2 |  |  |  |  |  |
+| PDSCH mapping type |  | Type A | Type A |  |  |  |  |  |
+| Information Bit Payload |  |  |  |  |  |  |  |  |
+| For slots with RMSI Note 2 | bits | 1608 | 1608 |  |  |  |  |  |
+| For slots without RMSI | bits | 1864 | 1864 |  |  |  |  |  |
+| For special slots | bits | N/A | 1128 |  |  |  |  |  |
+| Number of Code Blocks per slot |  | 1 | 1 |  |  |  |  |  |
+| Binary Channel Bits Per slot |  |  |  |  |  |  |  |  |
+| For slots with RMSI Note 2, Note 4 | bits | 5184 | 5184 |  |  |  |  |  |
+| For slots without RMSI Note 6 | bits | 6048 | 6048 |  |  |  |  |  |
+| For special slots Note 6 | bits | - | 3744 |  |  |  |  |  |
+| NOTE 1: Allocated outside the SMTC duration in time and in resource blocks which do not overlap with the resource blocks allocated for SS/PBCH block.NOTE 2: PDSCH is scheduled on the slots with RMSI.NOTE 3: If necessary the information bit payload size can be adjusted to facilitate the test implementation. The payload sizes are defined in TS 38.213 [3].NOTE 4: Derived based on the PDSCH DMRS assumption: dmrs-TypeA-Position=2, dmrs-Type=1, dmrs-AdditonalPositions=2, maxLength=1, Antenna port index: 1000, and Number of PDSCH DMRS CDM group(s) without data: 2.NOTE 5: PDSCH is not scheduled in slots containing SSB according to the SSB configuration used in the test. SSB configurations are defined in clause A.3.10.NOTE 6: Derived based on the PDSCH DMRS assumption: dmrs-TypeA-Position=2, dmrs-Type=1, dmrs-AdditonalPositions=2, maxLength=1, Antenna port index: 1000, and Number of PDSCH DMRS CDM group(s) without data: 1.NOTE 7:  When DRX is configured, PDCCH can be scheduled both for downlink assignment and/or UL grant only during (10ms  -  drx-InactivityTimer) from timing when drx-onDurationTimer starts, unless otherwise specified in the test case. |  |  |  |  |  |  |  |  |
+
+Table A.3.1.1.2-2: PDSCH Reference Measurement Channels for SCS=30 kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | SR.2.1 TDD |  |  |  |  |  |  |
+| Channel bandwidth | MHz | Defined in test case |  |  |  |  |  |  |
+| Number of transmitter antennas |  | 1 |  |  |  |  |  |  |
+| Allocated resource blocks for PDSCH Note 1 |  | 24 |  |  |  |  |  |  |
+| Allocated slots per Radio Frame |  |  |  |  |  |  |  |  |
+| Radio frame containing SSB | slots | Note 5 |  |  |  |  |  |  |
+| Radio frame not containing SSB | slots | 10 |  |  |  |  |  |  |
+| MCS table |  | 64QAM |  |  |  |  |  |  |
+| MCS index |  | 4 |  |  |  |  |  |  |
+| Modulation |  | QPSK |  |  |  |  |  |  |
+| Target Coding Rate |  | 1/3 |  |  |  |  |  |  |
+| Number of control symbols |  | 2 |  |  |  |  |  |  |
+| PDSCH mapping type |  | Type A |  |  |  |  |  |  |
+| Information Bit Payload |  |  |  |  |  |  |  |  |
+| For slots with RMSI Note 2 | bits | 1608 |  |  |  |  |  |  |
+| For slots without RMSI | bits | 1864 |  |  |  |  |  |  |
+| Number of Code Blocks per slot |  | 1 |  |  |  |  |  |  |
+| Binary Channel Bits Per slot |  |  |  |  |  |  |  |  |
+| For slots with RMSI Note 2, Note 4 | bits | 6048 |  |  |  |  |  |  |
+| NOTE 1: Allocated outside the SMTC duration in time and in resource blocks which do not overlap with the resource blocks allocated for SS/PBCH block.NOTE 2: PDSCH is scheduled on the slots with RMSI.NOTE 3: If necessary the information bit payload size can be adjusted to facilitate the test implementation. The payload sizes are defined in TS 38.213 [3].NOTE 4: Derived based on the PDSCH DMRS assumption: dmrs-TypeA-Position=2, dmrs-Type=1, dmrs-AdditonalPositions=2, maxLength=1, Antenna port index: 1000, and Number of PDSCH DMRS CDM group(s) without data: 2.NOTE 5: PDSCH is not scheduled in slots containing SSB according to the SSB configuration used in the test. SSB configurations are defined in clause A.3.10.NOTE 6: Derived based on the PDSCH DMRS assumption: dmrs-TypeA-Position=2, dmrs-Type=1, dmrs-AdditonalPositions=2, maxLength=1, Antenna port index: 1000, and Number of PDSCH DMRS CDM group(s) without data: 1.NOTE 7:  When DRX is configured, PDCCH can be scheduled both for downlink assignment and/or UL grant only during (10ms  -  drx-InactivityTimer) from timing when drx-onDurationTimer starts, unless otherwise specified in the test case. |  |  |  |  |  |  |  |  |
+
+Table A.3.1.1.2-3: PDSCH Reference Measurement Channels for SCS=120 kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | SR.3.1 TDD | SR.3.2 TDD | SR.3.3 TDD |  |  |  |  |
+| Channel bandwidth | MHz | 100 | 100 | 100 |  |  |  |  |
+| Number of transmitter antennas |  | 1 | 1 | 1 |  |  |  |  |
+| Allocated resource blocks for PDSCH |  | 24 Note 1 | 24Note 7 | 48Note 7 |  |  |  |  |
+| Allocated slots per Radio Frame |  |  |  |  |  |  |  |  |
+| Radio frame containing SSB | slots | Note 5 | Note 5 | Note 5 |  |  |  |  |
+| Radio frame not containing SSB | slots | 48 | 48 | 48 |  |  |  |  |
+| MCS table |  | 64QAM | 64QAM | 64QAM |  |  |  |  |
+| MCS index |  | 4 | 4 | 4 |  |  |  |  |
+| Modulation |  | QPSK | QPSK | QPSK |  |  |  |  |
+| Target Coding Rate |  | 1/3 | 1/3 | 1/3 |  |  |  |  |
+| Number of control symbols |  | 2 | 2 | 2 |  |  |  |  |
+| PDSCH mapping type |  | Type A | Type A | Type A |  |  |  |  |
+| Information Bit Payload |  |  |  |  |  |  |  |  |
+| For slots with RMSI | bits | 1608 | 1608 | 3104 |  |  |  |  |
+| For slots without RMSI | bits | 1864 | 1864 | 3624 |  |  |  |  |
+| Number of Code Blocks per slot |  | 1 | 1 | 1 |  |  |  |  |
+| Binary Channel Bits Per slot |  |  |  |  |  |  |  |  |
+| For slots with RMSI Note 4 | bits | 5184 | 5184 | 10368 |  |  |  |  |
+| For slots without RMSI Note 6 | bits | 6048 | 6048 | 12096 |  |  |  |  |
+| NOTE 1: Allocated in resource blocks which do not overlap with the resource blocks allocated for SS/PBCH blockNOTE 2: VoidNOTE 3: If necessary the information bit payload size can be adjusted to facilitate the test implementation. The payload sizes are defined in TS 38.213 [3].NOTE 4: Derived based on the PDSCH DMRS assumption: dmrs-TypeA-Position=2, dmrs-Type=1, dmrs-AdditonalPositions=2, maxLength=1, Antenna port index: 1000, and Number of PDSCH DMRS CDM group(s) without data: 2.NOTE 5: PDSCH is not scheduled in slots containing SSB according to the SSB configuration used in the test. SSB configurations are defined in clause A.3.10.NOTE 6: Derived based on the PDSCH DMRS assumption: dmrs-TypeA-Position=2, dmrs-Type=1, dmrs-AdditonalPositions=2, maxLength=1, Antenna port index: 1000, and Number of PDSCH DMRS CDM group(s) without data: 1.NOTE 7: Allocated in the same resource blocks as the CORESET.NOTE 8:  When DRX is configured, PDSCH is scheduled only while drx-onDurationTimer is running, unless otherwise specified in the test case. |  |  |  |  |  |  |  |  |
+
+### A.3.1.2 CORESET for RMSI scheduling
+
+#### A.3.1.2.1 FDD
+
+Table A.3.1.2.1-1: RMSI CORESET Reference Channel for FDD with SCS=15KHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CR.1.1 FDD | CR.1.2 FDD | CR.1.3 FDD | CR.1.4 FDD |  |  |  |
+| Channel bandwidth | MHz | Defined in test case | Defined in test case | Defined in test case | Defined in test case |  |  |  |
+| Subcarrier spacing for RMSI CORESET | kHz | 15 | 15 | 15 | 15 |  |  |  |
+| Allocated resource blocks for RMSI CORESET |  | 24 (Note 8) | 12 (Note 9) | 15 (Note 10) | 20 (Note 11) |  |  |  |
+| Subcarrier spacing for SSB | kHz | 15 | 15 | 15 | 15 |  |  |  |
+| SSB and RMSI CORESET multiplexing configuration |  | Pattern 1 | Pattern 1 | Pattern 1 | Pattern 1 |  |  |  |
+| Offset between SSB and RMSI CORESET Note 3, 7 | PRB | 0  (Note 8) | 0 (Note 9) | 0 (Note 10) | 0 (Note 11) |  |  |  |
+| Configuration of PDCCH monitoring occasions for RMSI CORESET Note 4 |  | Index 4 | Index 4 | Index 4 | Index 4 |  |  |  |
+| Number of transmitter antennas |  | 1 | 1 | 1 | 1 |  |  |  |
+| Duration of RMSI CORESET | symbols | 2 (Note 8) | 2 (Note 9) | 3 (Note 10) | 3 (Note 11) |  |  |  |
+| DCI Format Note 1 |  | Note 2 | Note 2 | Note 2 | Note 2 |  |  |  |
+| Aggregation level | CCE | 8 | 4 | 8 | 8 |  |  |  |
+| DMRS precoder granularity |  | 6 | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size |  |  |  |
+| REG bundle size |  | 6 | 6 | 6 | 6 |  |  |  |
+| Mapping from REG to CCE |  | Distributed (Note 8) | Distributed (Note 9) | Non-Distributed (Note 10) | Distributed (Note 11) |  |  |  |
+| Cell ID |  | Note 5 | Note 5 | Note 5 | Note 5 |  |  |  |
+| Payload (without CRC) | bits | Note 6 | Note 6 | Note 6 | Note 6 |  |  |  |
+| NOTE 1: DCI formats are defined in TS 38.212 [8].NOTE 2: DCI format shall depend upon the test configuration.NOTE 3: The offset is defined with respect to the subcarrier spacing of the CORESET from the smallest PRB index of RMSI CORESET to the smallest PRB index of the common PRB overlapping with the first PRB of the SS/PBCH block.NOTE 4: The configuration of PDCCH monitoring occasions for RMSI CORESET is defined in table 13-11 in TS 38.213 [3].NOTE 5: Cell ID shall depend upon the test configuration.NOTE 6: Payload size shall depend upon the test configuration.NOTE 7: Other values can be used to align with GSCN [13] as long as SSB does not overlap the RMC.NOTE 8:  The configuration of set of resource blocks, slot symbols, RB offset and REG to CCE mapping of control resource set for Type0-PDCCH search space corresponds to index 0 in table 13-1 in TS 38.213 [3]NOTE 9:  The configuration of set of resource blocks, slot symbols, RB offset and REG to CCE mapping of control resource set for Type0-PDCCH search space corresponds to index 0 in table 13-0 in TS 38.213 [3] NOTE 10:  The configuration of set of resource blocks, slot symbols, RB offset and REG to CCE mapping of control resource set for Type0-PDCCH search space corresponds to index 8 in table 13-0 in TS 38.213 [3] NOTE 11:  The configuration of set of resource blocks, slot symbols, RB offset and REG to CCE mapping of control resource set for Type0-PDCCH search space corresponds to index 11 in table 13-0 in TS 38.213 [3] |  |  |  |  |  |  |  |  |
+
+#### A.3.1.2.2 TDD
+
+For tests with VSAT UEs using FR1 numerology in FDD operation, the TDD tables below may be used.
+
+Table A.3.1.2.2-1: RMSI CORESET Reference Channel for TDD with SCS=15kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CR.1.1 TDD |  |  |  |  |  |  |
+| Channel bandwidth | MHz | Defined in test case |  |  |  |  |  |  |
+| Subcarrier spacing | kHz | 15 |  |  |  |  |  |  |
+| Allocated resource blocks for RMSI CORESET Note 7 |  | 24 |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |  |
+| SSB and RMSI CORESET multiplexing configuration Note 7 |  | Pattern 1 |  |  |  |  |  |  |
+| Offset between SSB and RMSI CORESET Note 3, 7 | PRB | 0 (Note 8) |  |  |  |  |  |  |
+| Configuration of PDCCH monitoring occasions for RMSI CORESET Note 4 |  | Index 4 |  |  |  |  |  |  |
+| Number of transmitter antennas |  | 1 |  |  |  |  |  |  |
+| Duration of RMSI CORESET Note 7 | symbols | 2 |  |  |  |  |  |  |
+| DCI Format Note 1 |  | Note 2 |  |  |  |  |  |  |
+| Aggregation level | CCE | 8 |  |  |  |  |  |  |
+| DMRS precoder granularity |  | 6 |  |  |  |  |  |  |
+| REG bundle size |  | 6 |  |  |  |  |  |  |
+| Mapping from REG to CCE |  | Distributed |  |  |  |  |  |  |
+| Cell ID |  | Note 5 |  |  |  |  |  |  |
+| Payload (without CRC) | bits | Note 6 |  |  |  |  |  |  |
+| NOTE 1: DCI formats are defined in TS 38.212 [8].NOTE 2: DCI format shall depend upon the test configuration.NOTE 3: The offset is defined with respect to the subcarrier spacing of the CORESET from the smallest PRB index of RMSI CORESET to the smallest PRB index of the common PRB overlapping with the first PRB of the SS/PBCH block.NOTE 4: The configuration of PDCCH monitoring occasions for RMSI CORESET is defined in table 13-11 in TS 38.213 [3].NOTE 5: Cell ID shall depend upon the test configuration.NOTE 6: Payload size shall depend upon the test configuration.NOTE 7:  The configuration of set of resource blocks and slot symbols of control resource set for Type0-PDCCH search space corresponds to index 0 in table 13-1 in TS 38.213 [3].NOTE 8: Other values can be used to align with GSCN [13] as long as SSB does not overlap the RMC. |  |  |  |  |  |  |  |  |
+
+Table A.3.1.2.2-2: RMSI CORESET Reference Channel for TDD with SCS=30kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CR.2.1 TDD |  |  |  |  |  |  |
+| Channel bandwidth | MHz | Defined in test case |  |  |  |  |  |  |
+| Subcarrier spacing | kHz | 30 |  |  |  |  |  |  |
+| Allocated resource blocks for RMSI CORESET Note 7 |  | 24 |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |  |
+| SSB and RMSI CORESET multiplexing configuration Note 7 |  | Pattern 1 |  |  |  |  |  |  |
+| Offset between SSB and RMSI CORESET Note 3, 7 | PRB | 0 (Note 8) |  |  |  |  |  |  |
+| Configuration of PDCCH monitoring occasions for RMSI CORESET Note 4 |  | Index 4 |  |  |  |  |  |  |
+| Number of transmitter antennas |  | 1 |  |  |  |  |  |  |
+| Duration of RMSI CORESET Note 7 | symbols | 2 |  |  |  |  |  |  |
+| DCI Format Note 1 |  | Note 2 |  |  |  |  |  |  |
+| Aggregation level | CCE | 8 |  |  |  |  |  |  |
+| DMRS precoder granularity |  | 6 |  |  |  |  |  |  |
+| REG bundle size |  | 6 |  |  |  |  |  |  |
+| Mapping from REG to CCE |  | Distributed |  |  |  |  |  |  |
+| Cell ID |  | Note 5 |  |  |  |  |  |  |
+| Payload (without CRC) | bits | Note 6 |  |  |  |  |  |  |
+| NOTE 1: DCI formats are defined in TS 38.212 [8].NOTE 2: DCI format shall depend upon the test configuration.NOTE 3: The offset is defined with respect to the subcarrier spacing of the CORESET from the smallest PRB index of RMSI CORESET to the smallest PRB index of the common PRB overlapping with the first PRB of the SS/PBCH block.NOTE 4: The configuration of PDCCH monitoring occasions for RMSI CORESET is defined in table 13-11 in TS 38.213 [3].NOTE 5: Cell ID shall depend upon the test configuration.NOTE 6: Payload size shall depend upon the test configuration.NOTE 7:  The configuration of set of resource blocks and slot symbols of control resource set for Type0-PDCCH search space corresponds to index 0 in table 13-6 in TS 38.213 [3].NOTE 8: Other values can be used to align with GSCN [13] as long as SSB does not overlap the RMC. |  |  |  |  |  |  |  |  |
+
+Table A.3.1.2.2-3: RMSI CORESET Reference Channel for TDD with SCS=120kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CR.3.1 TDD | CR.3.2 TDD |  |  |  |  |  |
+| Channel bandwidth | MHz | 100 | 100 |  |  |  |  |  |
+| Subcarrier spacing | kHz | 120 | 120 |  |  |  |  |  |
+| Allocated resource blocks for RMSI CORESET |  | 24 Note 7 | 48 Note 9 |  |  |  |  |  |
+| SSB and RMSI CORESET multiplexing configuration |  | Pattern 1 Note 7 | Pattern 1 Note 9 |  |  |  |  |  |
+| Offset between SSB and RMSI CORESET Note 3 | PRB | 0 (Note 8) Note 7 | 0 (Note 8) Note 9 |  |  |  |  |  |
+| Configuration of PDCCH monitoring occasions for RMSI CORESET Note 4 |  | Index 4 | Index 4 |  |  |  |  |  |
+| Number of transmitter antennas |  | 1 | 1 |  |  |  |  |  |
+| Duration of RMSI CORESET | symbols | 2 Note 7 | 2 Note 9 |  |  |  |  |  |
+| DCI Format Note 1 |  | Note 2 | Note 2 |  |  |  |  |  |
+| Aggregation level | CCE | 8 | 8 |  |  |  |  |  |
+| DMRS precoder granularity |  | 6 | 6 |  |  |  |  |  |
+| REG bundle size |  | 6 | 6 |  |  |  |  |  |
+| Mapping from REG to CCE |  | Distributed | Distributed |  |  |  |  |  |
+| Cell ID |  | Note 5 | Note 5 |  |  |  |  |  |
+| Payload (without CRC) | bits | Note 6 | Note 6 |  |  |  |  |  |
+| NOTE 1: DCI formats are defined in TS 38.212 [8].NOTE 2: DCI format shall depend upon the test configuration.NOTE 3: The offset is defined with respect to the subcarrier spacing of the CORESET from the smallest PRB index of RMSI CORESET to the smallest PRB index of the common PRB overlapping with the first PRB of the SS/PBCH block.NOTE 4: The configuration of PDCCH monitoring occasions for RMSI CORESET is defined in table 13-12 in TS 38.213 [3].NOTE 5: Cell ID shall depend upon the test configuration.NOTE 6: Payload size shall depend upon the test configuration.NOTE 7:  The configuration of set of resource blocks and slot symbols of control resource set for Type0-PDCCH search space corresponds to index 0 in table 13-8 in TS 38.213 [3].NOTE 8: Other values can be used to align with GSCN [13] as long as SSB does not overlap the RMC.NOTE 9:  The configuration of set of resource blocks and slot symbols of control resource set for Type0-PDCCH search space corresponds to index 2 in table 13-10 in TS 38.213 [3]. |  |  |  |  |  |  |  |  |
+
+### A.3.1.3 CORESET for RMC scheduling
+
+#### A.3.1.3.1 FDD
+
+Table A.3.1.3.1-1: Control Channel RMC for FDD with SCS=15kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CCR.1.1 FDD | CCR.1.2 FDD | CCR.1.3 FDD | CCR.1.4 FDD | CCR.1.5 FDD | CCR.1.6 FDD | CCR.1.7 FDD | CCR.1.8 FDD |  |  |
+| Channel bandwidth | MHz | Defined in test case | Defined in test case | Defined in test case | Defined in test case | 10 | 3 MHz | 3 MHz | 5 MHz |  |  |
+| Subcarrier spacing | kHz | 15 | 15 | 15 | 15 | 15 | 15 | 15 | 15 |  |  |
+| Allocated resource blocks for CORESET Note 3 |  | 24 | 18 | 24 | 18 | 24 | 12 | 12 | 18 |  |  |
+| Number of transmitter antennas |  | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |  |  |
+| Duration of CORESET | symbols | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 3 |  |  |
+| monitoringSymbolsWithinSlot |  | 10000000000000 | 10000000000000 | 10000000000000 | 10000000000000 | 00100000000000 | 10000000000000 | 10000000000000 | 10000000000000 |  |  |
+| REG bundle size |  | 6 | 6 | 6 | 6 | 6 | 6 | 6 | 6 |  |  |
+| DMRS precoder granularity |  | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size |  |  |
+| CCE to REG mapping |  | Interleaved | Interleaved | Interleaved | Interleaved | Interleaved | Interleaved | Non-Interleaved | Interleaved |  |  |
+| Interleave n_shift |  | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |  |  |
+| Interleave size |  | 2 | 2 | 2 | 2 | 2 | 2 | N/A | 2 |  |  |
+| Beamforming Pre-Coder |  | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |  |  |
+| Aggregation level | CCE | 4 | 2 | 8 | 4 | 4 | 4 | 4 | 8 |  |  |
+| DCI formats |  | Note 1 | Note 1 | Note 1 | Note 1 | Note 1 | 1-0 | 1-0 | 1-0 |  |  |
+| Payload size (without CRC) | bits | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |  |  |
+| NOTE 1: DCI format shall depend upon the test configuration.NOTE 2: Payload size shall depend upon the test configuration.NOTE 3: Allocated in the resource blocks where the associated RMC is scheduled. |  |  |  |  |  |  |  |  |  |  |  |
+
+Table A.3.1.3.1-2: Control Channel RMC for FDD with SCS=120kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CCR.2.1 FDD |  |  |  |  |  |  |
+| Channel bandwidth | MHz | 100 |  |  |  |  |  |  |
+| Subcarrier spacing | kHz | 120 |  |  |  |  |  |  |
+| Allocated resource blocks for CORESET Note 3 |  | 24 |  |  |  |  |  |  |
+| Number of transmitter antennas |  | 1 |  |  |  |  |  |  |
+| Duration of CORESET | symbols | 1 |  |  |  |  |  |  |
+| monitoringSlotPeriodicityAndOffset Note 4 |  | sl1600 |  |  |  |  |  |  |
+| monitoringSymbolsWithinSlot |  | 11000000000000 |  |  |  |  |  |  |
+| REG bundle size |  | 6 |  |  |  |  |  |  |
+| DMRS precoder granularity |  | Same as REG bundle size |  |  |  |  |  |  |
+| CCE to REG mapping |  | Interleaved |  |  |  |  |  |  |
+| Interleave n_shift |  | 0 |  |  |  |  |  |  |
+| Interleave size |  | 2 |  |  |  |  |  |  |
+| Beamforming Pre-Coder |  | N/A |  |  |  |  |  |  |
+| Aggregation level | CCE | 4 |  |  |  |  |  |  |
+| DCI formats |  | Note 1 |  |  |  |  |  |  |
+| Payload size (without CRC) | bits | Note 2 |  |  |  |  |  |  |
+| NOTE 1: DCI format shall depend upon the test configuration.NOTE 2: Payload size shall depend upon the test configuration.NOTE 3: Allocated in the resource blocks where the associated RMC is scheduled.NOTE 4: monitoringSlotPeriodicityAndOffet is set to “sl1 0” if it is specifically stated that cell(s) configured with one of the control channel RMCs above shall transmit PDCCHs continuously. |  |  |  |  |  |  |  |  |
+
+Table A.3.1.3.1-3: Control Channel RMC for FDD with SCS=15kHz
+
+| Parameter | Unit | Value |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CCR.3.1 FDD | CCR.3.2 FDD |  |  |  |
+| Channel bandwidth | MHz | Defined in test case | Defined in test case |  |  |  |
+| Subcarrier spacing | kHz | 15 | 15 |  |  |  |
+| Allocated resource blocks for CORESET Note 3 |  | 48 | 48 |  |  |  |
+| Number of transmitter antennas |  | 1 | 1 |  |  |  |
+| Duration of CORESET | symbols | 2 | 2 |  |  |  |
+| monitoringSymbolsWithinSlot |  | 10000000000000 | 10000000000000 |  |  |  |
+| REG bundle size |  | 6 | 6 |  |  |  |
+| DMRS precoder granularity |  | Same as REG bundle size | Same as REG bundle size |  |  |  |
+| CCE to REG mapping |  | Interleaved | Interleaved |  |  |  |
+| Interleave n_shift |  | 0 | 0 |  |  |  |
+| Interleave size |  | 2 | 2 |  |  |  |
+| Beamforming Pre-Coder |  | N/A | N/A |  |  |  |
+| Aggregation level | CCE | 8 | 16 |  |  |  |
+| DCI formats |  | Note 1 | Note 1 |  |  |  |
+| Payload size (without CRC) | bits | Note 2 | Note 2 |  |  |  |
+| Note 1: DCI format shall depend upon the test configuration.Note 2: Payload size shall depend upon the test configurationNote 3: Allocated in the resource blocks where the associated RMC is scheduled. |  |  |  |  |  |  |
+
+#### A.3.1.3.2 TDD
+
+For tests with VSAT UEs using FR1 numerology in FDD operation, the TDD tables below may be used.
+
+Table A.3.1.3.2-1: Control Channel RMC for TDD with SCS=15kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CCR.1.1 TDD | CCR.1.2 TDD | CCR.1.3 TDD | CCR.1.4 TDD | CCR.1.5 TDD |  |  |
+| Channel bandwidth | MHz | Defined in test case | Defined in test case | Defined in test case | Defined in test case | 10 |  |  |
+| Subcarrier spacing | kHz | 15 | 15 | 15 | 15 | 15 |  |  |
+| Allocated resource blocks for CORESET Note 3 |  | 24 | 18 | 24 | 18 | 18 |  |  |
+| Number of transmitter antennas |  | 1 | 1 | 1 | 1 | 1 |  |  |
+| Duration of CORESET | symbols | 2 | 2 | 2 | 2 | 2 |  |  |
+| monitoringSymbolsWithinSlot |  | 10000000000000 | 10000000000000 | 10000000000000 | 10000000000000 | 00100000000000 |  |  |
+| REG bundle size |  | 6 | 6 | 6 | 6 | 6 |  |  |
+| DMRS precoder granularity |  | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size |  |  |
+| CCE to REG mapping |  | Interleaved | Interleaved | Interleaved | Interleaved | Interleaved |  |  |
+| Interleave n_shift |  | 0 | 0 | 0 | 0 | 0 |  |  |
+| Interleave size |  | 2 | 2 | 2 | 2 | 2 |  |  |
+| Beamforming Pre-Coder |  | N/A | N/A | N/A | N/A | N/A |  |  |
+| Aggregation level | CCE | 4 | 2 | 8 | 4 | 4 |  |  |
+| DCI formats |  | Note 1 | Note 1 | Note 1 | Note 1 | Note 1 |  |  |
+| Payload size (without CRC) | bits | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |  |  |
+| NOTE 1: DCI format shall depend upon the test configuration.NOTE 2: Payload size shall depend upon the test configuration.NOTE 3: Allocated in the resource blocks where the associated RMC is scheduled. |  |  |  |  |  |  |  |  |
+
+Table A.3.1.3.2-2: Control Channel RMC for TDD with SCS=30kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CCR.2.1 TDD | CCR.2.2 TDD | CCR.2.3 TDD | CCR.2.4 TDD |  |  |  |
+| Channel bandwidth | MHz | Defined in test case | Defined in test case | Defined in test case | Defined in test case |  |  |  |
+| Subcarrier spacing | kHz | 30 | 30 | 30 | 30 |  |  |  |
+| Allocated resource blocks for CORESET Note 3 |  | 24 | 24 | 18 | 18 |  |  |  |
+| Number of transmitter antennas |  | 1 | 1 | 1 | 1 |  |  |  |
+| Duration of CORESET | symbols | 2 | 2 | 2 | 2 |  |  |  |
+| REG bundle size |  | 6 | 6 | 6 | 6 |  |  |  |
+| DMRS precoder granularity |  | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size |  |  |  |
+| CCE to REG mapping |  | Interleaved | Interleaved | Interleaved | Interleaved |  |  |  |
+| Interleave n_shift |  | 0 | 0 | 0 | 0 |  |  |  |
+| Interleave size |  | 2 | 2 | 2 | 2 |  |  |  |
+| Beamforming Pre-Coder |  | N/A | N/A | N/A | N/A |  |  |  |
+| Aggregation level | CCE | 4 | 8 | 4 | 2 |  |  |  |
+| DCI formats |  | Note 1 | Note 1 | Note 1 | Note 1 |  |  |  |
+| Payload size (without CRC) | bits | Note 2 | Note 2 | Note 2 | Note 2 |  |  |  |
+| NOTE 1: DCI format shall depend upon the test configuration.NOTE 2: Payload size shall depend upon the test configuration.NOTE 3: Allocated in the same resource blocks where the associated RMC is scheduled. |  |  |  |  |  |  |  |  |
+
+Table A.3.1.3.2-3: Control Channel RMC for TDD with SCS=120kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CCR.3.1 TDD | CCR.3.2 TDD | CCR.3.3 TDD | CCR.3.4 TDD | CCR.3.5 TDD | CCR.3.6 TDD | CCR.3.7 TDD |
+| Channel bandwidth | MHz | 100 | 100 | 100 | 100 | 100 | 100 | 100 |
+| Subcarrier spacing | kHz | 120 | 120 | 120 | 120 | 120 | 120 | 120 |
+| Allocated resource blocks for CORESET Note 3 |  | 24 | 24 | 24 | 24 | 24 | 24 | 48 |
+| Number of transmitter antennas |  | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+| monitoringSlotPeriodicityAndOffset Note 4 |  | sl1600 | sl1600 | sl16080 | sl1600 | sl1600 | sl16080 | sl1600 |
+| monitoringSymbolsWithinSlot |  | 11000000000000 | 00110000000000 | 11000000000000 | 10000000000000 | 00100000000000 | 10000000000000 | 11000000000000 |
+| Duration of CORESET | slot | 1 | 1 | 1 | 2 | 2 | 2 | 1 |
+| REG bundle size |  | 6 | 6 | 6 | 6 | 6 | 6 | 6 |
+| DMRS precoder granularity |  | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size |
+| CCE to REG mapping |  | Interleaved | Interleaved | Interleaved | Interleaved | Interleaved | Interleaved | Interleaved |
+| Interleave n_shift |  | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Interleave size |  | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+| Beamforming Pre-Coder |  | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
+| Aggregation level | CCE | 4 | 4 | 4 | 8 | 8 | 8 | 4 |
+| DCI formats |  | Note 1 | Note 1 | Note 1 | Note 1 | Note 1 | Note 1 | Note 1 |
+| Payload size (without CRC) | bits | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 | Note 2 |
+| NOTE 1: DCI format shall depend upon the test configuration.NOTE 2: Payload size shall depend upon the test configuration.NOTE 3: Allocated in the same resource blocks where the associated PDSCH RMC is scheduled.NOTE 4:  monitoringSlotPeriodicityAndOffet is set to “sl1 0” if it is specifically stated that cell(s) configured with one of the control channel RMCs above shall transmit PDCCHs continuously. |  |  |  |  |  |  |  |  |
+
+Table A.3.1.3.2-4: Control Channel RMC for TDD with SCS=15kHz
+
+| Parameter | Unit | Value |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CCR.4.1 TDD | CCR.4.2 TDD |  |  |  |
+| Channel bandwidth | MHz | Defined in test case | Defined in test case |  |  |  |
+| Subcarrier spacing | kHz | 15 | 15 |  |  |  |
+| Allocated resource blocks for CORESET Note 3 |  | 48 | 48 |  |  |  |
+| Number of transmitter antennas |  | 1 | 1 |  |  |  |
+| Duration of CORESET | symbols | 2 | 2 |  |  |  |
+| monitoringSymbolsWithinSlot |  | 10000000000000 | 10000000000000 |  |  |  |
+| REG bundle size |  | 6 | 6 |  |  |  |
+| DMRS precoder granularity |  | Same as REG bundle size | Same as REG bundle size |  |  |  |
+| CCE to REG mapping |  | Interleaved | Interleaved |  |  |  |
+| Interleave n_shift |  | 0 | 0 |  |  |  |
+| Interleave size |  | 2 | 2 |  |  |  |
+| Beamforming Pre-Coder |  | N/A | N/A |  |  |  |
+| Aggregation level | CCE | 8 | 16 |  |  |  |
+| DCI formats |  | Note 1 | Note 1 |  |  |  |
+| Payload size (without CRC) | bits | Note 2 | Note 2 |  |  |  |
+| Note 1: DCI format shall depend upon the test configuration.Note 2: Payload size shall depend upon the test configurationNote 3: Allocated in the resource blocks where the associated RMC is scheduled. |  |  |  |  |  |  |
+
+Table A.3.1.3.2-5: Control Channel RMC for TDD with SCS=30kHz
+
+| Parameter | Unit | Value |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CCR.5.1 TDD | CCR.5.2 TDD |  |  |  |
+| Channel bandwidth | MHz | Defined in test case | Defined in test case |  |  |  |
+| Subcarrier spacing | kHz | 30 | 30 |  |  |  |
+| Allocated resource blocks for CORESET Note 3 |  | 48 | 48 |  |  |  |
+| Number of transmitter antennas |  | 1 | 1 |  |  |  |
+| Duration of CORESET | symbols | 2 | 2 |  |  |  |
+| REG bundle size |  | 6 | 6 |  |  |  |
+| DMRS precoder granularity |  | Same as REG bundle size | Same as REG bundle size |  |  |  |
+| CCE to REG mapping |  | Interleaved | Interleaved |  |  |  |
+| Interleave n_shift |  | 0 | 0 |  |  |  |
+| Interleave size |  | 2 | 2 |  |  |  |
+| Beamforming Pre-Coder |  | N/A | N/A |  |  |  |
+| Aggregation level | CCE | 8 | 16 |  |  |  |
+| DCI formats |  | Note 1 | Note 1 |  |  |  |
+| Payload size (without CRC) | bits | Note 2 | Note 2 |  |  |  |
+| Note 1: DCI format shall depend upon the test configuration.Note 2: Payload size shall depend upon the test configuration.Note 3: Allocated in the same resource blocks where the associated RMC is scheduled. |  |  |  |  |  |  |
+
+### A.3.1.4 TDD UL/DL configuration
+
+Table A.3.1.4-1: TDD UL/DL configuration for SCS=15 kHz
+
+| Parameter | Unit | Value |  |  |
+| --- | --- | --- | --- | --- |
+| Reference channel |  | TDDConf.1.1 | TDDConf.1.2 |  |
+| referenceSubcarrierSpacing | kHz | 15 | 15 |  |
+| TDD UL/DL pattern 1 Note 2 |  | ‘DSUU’S=’10DL:2GP:2UL’ | ‘DSUU’S=’ 6DL: 2GP: 6UL’ |  |
+| dl-UL-TransmissionPeriodicity | ms | 4 | 4 |  |
+| nrofDownlinkSlots |  | 1 | 1 |  |
+| nrofDownlinkSymbols |  | 10 | 6 |  |
+| nrofUplinkSlot |  | 2 | 2 |  |
+| nrofUplinkSymbols |  | 2 | 6 |  |
+| TDD UL/DL pattern 2 Note 2 |  | ‘D’ | ‘D’ |  |
+| dl-UL-TransmissionPeriodicity | ms | 1 | 1 |  |
+| nrofDownlinkSlots |  | 1 | 1 |  |
+| nrofDownlinkSymbols |  | 0 | 0 |  |
+| nrofUplinkSlot |  | 0 | 0 |  |
+| nrofUplinkSymbols |  | 0 | 0 |  |
+| NOTE 1: As specified in TS 38.213 [3] and TS 38.331 [2].NOTE 2: For information. |  |  |  |  |
+
+Table A.3.1.4-2: TDD UL/DL configuration for SCS=30 kHz
+
+| Parameter | Unit | Value |  |  |
+| --- | --- | --- | --- | --- |
+| Reference channel |  | TDDConf.2.1 | TDDConf.2.2 | TDDConf.2.3 |
+| referenceSubcarrierSpacing | kHz | 30 | 30 | 30 |
+| TDD UL/DL pattern 1 Note 2 |  | ‘3D1S4U’S=’6DL:4GP:4UL’ | ‘1D1S2U’S=’11DL: 1GP:2UL’ | ‘3D1S4U’S=’4DL:4GP:6UL’ |
+| dl-UL-TransmissionPeriodicity | ms | 4 | 2 | 4 |
+| nrofDownlinkSlots |  | 3 | 1 | 3 |
+| nrofDownlinkSymbols |  | 6 | 11 | 4 |
+| nrofUplinkSlot |  | 4 | 2 | 4 |
+| nrofUplinkSymbols |  | 4 | 2 | 6 |
+| TDD UL/DL pattern 2 Note 2 |  | ‘DD’ | Not configured | ‘DD’ |
+| dl-UL-TransmissionPeriodicity | ms | 1 | Not configured | 1 |
+| nrofDownlinkSlots |  | 2 | Not configured | 2 |
+| nrofDownlinkSymbols |  | 0 | Not configured | 0 |
+| nrofUplinkSlot |  | 0 | Not configured | 0 |
+| nrofUplinkSymbols |  | 0 | Not configured | 0 |
+| NOTE 1: As specified in TS 38.213 [3] and TS 38.331 [2].NOTE 2: For information |  |  |  |  |
+
+Table A.3.1.4-3: TDD UL/DL configuration for SCS=120 kHz
+
+| Parameter | Unit | Value |  |  |
+| --- | --- | --- | --- | --- |
+| Reference channel |  | TDDConf.3.1 | TDDConf.3.2 |  |
+| referenceSubcarrierSpacing | kHz | 120 | 120 |  |
+| TDD UL/DL pattern 1 Note 2 |  | ‘DDDSU’S=’10DL:2GP:2UL’ | ‘DDDSU’S=’ 6DL: 2GP: 6UL’ |  |
+| dl-UL-TransmissionPeriodicity | ms | 0.625 | 0.625 |  |
+| nrofDownlinkSlots |  | 3 | 3 |  |
+| nrofDownlinkSymbols |  | 10 | 6 |  |
+| nrofUplinkSlot |  | 1 | 1 |  |
+| nrofUplinkSymbols |  | 2 | 6 |  |
+| TDD UL/DL pattern 2 Note 2 |  | Not configured | Not configured |  |
+| dl-UL-TransmissionPeriodicity | ms | Not configured | Not configured |  |
+| nrofDownlinkSlots |  | Not configured | Not configured |  |
+| nrofDownlinkSymbols |  | Not configured | Not configured |  |
+| nrofUplinkSlot |  | Not configured | Not configured |  |
+| nrofUplinkSymbols |  | Not configured | Not configured |  |
+| NOTE 1: As specified in TS 38.213 [3] and TS 38.331 [2].NOTE 2: For information |  |  |  |  |
+
+Table A.3.1.4-4: TDD UL/DL configuration of SBFD for SCS=30 kHz
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TDDConf.2.4 |
+| referenceSubcarrierSpacing | kHz | 30 |
+| TDD UL/DL pattern 1 Note 2 |  | ‘3D1S1U’S=’10DL:2GP:2UL’ |
+| dl-UL-TransmissionPeriodicity | ms | 2.5 |
+| nrofDownlinkSlots |  | 3 |
+| nrofDownlinkSymbols |  | 10 |
+| nrofUplinkSlot |  | 1 |
+| nrofUplinkSymbols |  | 2 |
+| TDD UL/DL pattern 2 Note 2 |  | Not configured |
+| dl-UL-TransmissionPeriodicity | ms | Not configured |
+| NOTE 1: As specified in TS 38.213 [3] and TS 38.331 [2].NOTE 2: For information |  |  |
+
+## A.3.1A Reference measurement channels under CCA
+
+### A.3.1A.1 PDSCH
+
+#### A.3.1A.1.1 TDD
+
+Table A.3.1A.1.1-1: PDSCH Reference Measurement Channels for SCS=30 kHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | SR.1.1 CCA |  |  |  |  |  |  |
+| Channel bandwidth | MHz | 40 |  |  |  |  |  |  |
+| Number of transmitter antennas |  | 1 |  |  |  |  |  |  |
+| Allocated resource blocks for PDSCH Note 1 |  | 24 |  |  |  |  |  |  |
+| Allocated slots per Radio Frame |  |  |  |  |  |  |  |  |
+| Radio frame containing SSB | slots | Note 5 |  |  |  |  |  |  |
+| Radio frame not containing SSB | slots | Note 7 |  |  |  |  |  |  |
+| MCS table |  | 64QAM |  |  |  |  |  |  |
+| MCS index |  | 4 |  |  |  |  |  |  |
+| Modulation |  | QPSK |  |  |  |  |  |  |
+| Target Coding Rate |  | 1/3 |  |  |  |  |  |  |
+| Number of control symbols |  | 2 |  |  |  |  |  |  |
+| PDSCH mapping type |  | Type A |  |  |  |  |  |  |
+| Information Bit Payload |  |  |  |  |  |  |  |  |
+| For slots with RMSI Note 2 | bits | 1608 |  |  |  |  |  |  |
+| For slots without RMSI | bits | 1864 |  |  |  |  |  |  |
+| Number of Code Blocks per slot |  | 1 |  |  |  |  |  |  |
+| Binary Channel Bits Per slot |  |  |  |  |  |  |  |  |
+| For slots with RMSI Note 2, Note 4 | bits | 5184 |  |  |  |  |  |  |
+| For slots without RMSI Note 6 | bits | 6048 |  |  |  |  |  |  |
+| NOTE 1: Allocated outside the discovery burst transmission window in time and in resource blocks which do not overlap with the resource blocks allocated for SS/PBCH block.NOTE 2: PDSCH is scheduled on the slots with RMSI.NOTE 3: If necessary the information bit payload size can be adjusted to facilitate the test implementation. The payload sizes are defined in TS 38.213 [3].NOTE 4: Derived based on the PDSCH DMRS assumption: dmrs-TypeA-Position=2, dmrs-Type=1, dmrs-AdditonalPositions=2, maxLength=1, Antenna port index: 1000, and Number of PDSCH DMRS CDM group(s) without data: 2.NOTE 5: PDSCH is not scheduled in slots containing SSB according to the SSB configuration used in the test. SSB configurations are defined in clause A.3.10A.NOTE 6: Derived based on the PDSCH DMRS assumption: dmrs-TypeA-Position=2, dmrs-Type=1, dmrs-AdditonalPositions=2, maxLength=1, Antenna port index: 1000, and Number of PDSCH DMRS CDM group(s) without data: 1.NOTE 7: PDSCH is transmitted during the RMC burst as specified in clause A.3.1A.5. |  |  |  |  |  |  |  |  |
+
+### A.3.1A.2 CORESET for RMSI scheduling
+
+#### A.3.1A.2.1 TDD
+
+Table A.3.1A.2.1-1: RMSI CORESET Reference Channel for SCS=30KHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CR.1.1 CCA |  |  |  |  |  |  |
+| Channel bandwidth | MHz | 40 |  |  |  |  |  |  |
+| Subcarrier spacing | kHz | 30 |  |  |  |  |  |  |
+| Allocated resource blocks for RMSI CORESET Note 7 |  | 48 |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |  |
+| SSB and RMSI CORESET multiplexing configuration Note 7 |  | Pattern 1 |  |  |  |  |  |  |
+| Offset between SSB and RMSI CORESET Note 3, 7 | RB | 0 (Note 8) |  |  |  |  |  |  |
+| Configuration of PDCCH monitoring occasions for RMSI CORESET Note 4 |  | Index 0 |  |  |  |  |  |  |
+| Number of transmitter antennas |  | 1 |  |  |  |  |  |  |
+| Duration of RMSI CORESET Note 7 | symbols | 2 |  |  |  |  |  |  |
+| DCI Format Note 1 |  | Note 2 |  |  |  |  |  |  |
+| Aggregation level | CCE | 8 |  |  |  |  |  |  |
+| DMRS precoder granularity |  | 6 |  |  |  |  |  |  |
+| REG bundle size |  | 6 |  |  |  |  |  |  |
+| Mapping from REG to CCE |  | Distributed |  |  |  |  |  |  |
+| Cell ID |  | Note 5 |  |  |  |  |  |  |
+| Payload (without CRC) | bits | Note 6 |  |  |  |  |  |  |
+| NOTE 1: DCI formats are defined in TS 38.212 [8].NOTE 2: DCI format shall depend upon the test configuration.NOTE 3: The offset is defined with respect to the subcarrier spacing of the CORESET from the smallest PRB index of RMSI CORESET to the smallest PRB index of the common PRB overlapping with the first PRB of the SS/PBCH block.NOTE 4: The configuration of PDCCH monitoring occasions for RMSI CORESET is defined in table 13-11 in TS 38.213 [3].NOTE 5: Cell ID shall depend upon the test configuration.NOTE 6: Payload size shall depend upon the test configuration.NOTE 7:  The configuration of set of resource blocks and slot symbols of control resource set for Type0-PDCCH search space corresponds to index 4 in table 13-4A in TS 38.213 [3].NOTE 8: Other values can be used to align with GSCN [13] as long as SSB does not overlap the RMC. |  |  |  |  |  |  |  |  |
+
+### A.3.1A.3 CORESET for RMC scheduling
+
+#### A.3.1A.3.1 TDD
+
+Table A.3.1A.3.1-1: Control Channel RMC with SCS=30KHz
+
+| Parameter | Unit | Value |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel |  | CCR.1.1 CCA | CCR.1.2 CCA | CCR.1.3 CCA |  |  |  |  |
+| Channel bandwidth | MHz | 40 | 40 | 40 |  |  |  |  |
+| Subcarrier spacing | kHz | 30 | 30 | 30 |  |  |  |  |
+| Allocated resource blocks for CORESET Note 3 |  | 24 | 24 | 18 |  |  |  |  |
+| Number of transmitter antennas |  | 1 | 1 | 1 |  |  |  |  |
+| Duration of CORESET | symbols | 2 | 2 | 2 |  |  |  |  |
+| REG bundle size |  | 6 | 6 | 6 |  |  |  |  |
+| DMRS precoder granularity |  | Same as REG bundle size | Same as REG bundle size | Same as REG bundle size |  |  |  |  |
+| CCE to REG mapping |  | Interleaved | Interleaved | Interleaved |  |  |  |  |
+| Interleave n_shift |  | 0 | 0 | 0 |  |  |  |  |
+| Interleave size |  | 2 | 2 | 2 |  |  |  |  |
+| Beamforming Pre-Coder |  | N/A | N/A | N/A |  |  |  |  |
+| Aggregation level | CCE | 4 | 8 | 4 |  |  |  |  |
+| DCI formats |  | Note 1 | Note 1 | Note 1 |  |  |  |  |
+| Payload size (without CRC) | bits | Note 2 | Note 2 | Note 2 |  |  |  |  |
+| NOTE 1: DCI format shall depend upon the test configuration.NOTE 2: Payload size shall depend upon the test configuration.NOTE 3: Allocated in the same resource blocks where the associated RMC is scheduled. |  |  |  |  |  |  |  |  |
+
+### A.3.1A.4 TDD UL/DL configuration
+
+Table A.3.1A.4-1: TDD UL/DL configuration for SCS=30 kHz
+
+| Parameter | Unit | Value |  |  |
+| --- | --- | --- | --- | --- |
+| Reference channel |  | TDDConf.1.1 CCA |  |  |
+| referenceSubcarrierSpacing | kHz | N/A |  |  |
+| TDD UL/DL pattern 1 Note 2, Note 3 |  | ‘3D1S4U’S=’6DL:4GP:4UL’ |  |  |
+| dl-UL-TransmissionPeriodicity | ms | N/A |  |  |
+| nrofDownlinkSlots |  | N/A |  |  |
+| nrofDownlinkSymbols |  | N/A |  |  |
+| nrofUplinkSlot |  | N/A |  |  |
+| nrofUplinkSymbols |  | N/A |  |  |
+| TDD UL/DL pattern 2 Note 2, Note 3 |  | ‘DD’ |  |  |
+| dl-UL-TransmissionPeriodicity | ms | N/A |  |  |
+| nrofDownlinkSlots |  | N/A |  |  |
+| nrofDownlinkSymbols |  | N/A |  |  |
+| nrofUplinkSlot |  | N/A |  |  |
+| nrofUplinkSymbols |  | N/A |  |  |
+| NOTE 1: As specified in TS 38.213 [3] and TS 38.331 [2].NOTE 2: Do not configure tdd-UL-DL-ConfigurationCommon using RRC configurationNOTE 3: The UE will be scheduled via DCI according to the TDD pattern defined in the table. |  |  |  |  |
+
+### A.3.1A.5 RMC burst transmission model
+
+RMC not conveying RMSI is scheduled during the RMC burst. The length of the transmission burst in slots is defined as N. The burst transmission format is determined according to the steps below:
+
+1. Select N randomly from a given set of the number of slots S1 = {1,3,5} with equal probability as the total length of RMC burst transmission format.
+
+2. A uniform random variable from 0 to 1 is generated. If the random variable is less than PCCA_DL, a burst of N fully occupied slots is transmitted. Otherwise, the RMC burst transmission is muted and the muting duration is the same as the number N of slots for determined burst format.
+
+RMC burst transmission is scheduled outside discovery burst transmission window. If transmission occurred in the previous slot, transmission is muted for a duration of one slot. Additionally, if the start time of the candidate RMC burst transmission is within 5 slots of the start of the discovery burst transmission window, RMC transmission is not performed.A.3.2 OFDMA channel noise generator (OCNG).
+
+### A.3.2.1 Generic OFDMA Channel Noise Generator (OCNG)
+
+The OCNG pattern is used in a test for modelling allocations of unused resources in the channel bandwidth to virtual UEs (which are not under test). The OCNG pattern comprises PDCCH and PDSCH transmissions to the virtual UEs. For the cells operating under CCA, OCNG is transmitted only in slots with RMC burst transmission and is not transmitted during the slots for which CCA attempt is unsuccessful or during DBT windows.
+
+#### A.3.2.1.1 OCNG pattern 1: Generic OCNG pattern for all unused REs
+
+Table A.3.2.1.1-1: OP.1: Generic OCNG pattern for all unused REs
+
+| OCNG Parameters | Control Region | Data Region |
+| --- | --- | --- |
+| Resource allocation | Unused REs (Note 1) | Unused REs (Note 2) |
+| Channel | PDCCH | PDSCH |
+| Contents | Virtual UE IDs | Uncorrelated pseudo random QPSK modulated data |
+| Antenna transmission scheme | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Subcarrier spacing | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Aggregation level | Same as used in PDCCH RMC | N/A |
+| Code rate | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Transmit Power | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| CP length | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| NOTE 1: REs not used in the active CORESETs where PDCCH is scheduled for the UE under test.NOTE 2: REs not allocated to any physical channels, CORESET, SSB or any other reference signal within the channel bandwidth of the cell, confined to BWoccupied where specified in the test case. |  |  |
+
+#### A.3.2.1.2 OCNG pattern 2: Generic OCNG pattern for all unused REs for 2AoA setup
+
+Table A.3.2.1.2-2: OP.2: Generic OCNG pattern for all unused REs for 2AoA setup
+
+| OCNG Parameters | Control Region | Data Region |
+| --- | --- | --- |
+| Probe | Transmitting the serving beam |  |
+| Resource allocation | Unused REs (Note 1) in the symbols where SSB/CSI-RS are not transmitted from both the serving beam probe and non-serving beam probe. | Unused REs (Note 2) in the symbols where SSB/CSI-RS are not transmitted from both the serving beam probe and non-serving beam probe. |
+| Channel | PDCCH | PDSCH |
+| Contents | Virtual UE IDs | Uncorrelated pseudo random QPSK modulated data |
+| Antenna transmission scheme | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Subcarrier spacing | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Aggregation level | Same as used in PDCCH RMC | N/A |
+| Code rate | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Transmit Power | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| CP length | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| NOTE 1: REs not used in the active CORESETs where PDCCH is scheduled for the UE under test.NOTE 2: REs not allocated to any physical channels, CORESET, SSB or any other reference signal within the channel bandwidth of the cell, confined to BWoccupied where specified in the test case.NOTE 3: No OCNG is transmitted from the probe transmitting non-serving beam. |  |  |
+
+#### A.3.2.1.3 OCNG pattern 3: Generic OCNG pattern for unused REs in the same bandwidth as CORESET
+
+Table A.3.2.1.3-1: OP.3: Generic OCNG pattern for unused REs in the same BW as CORESET
+
+| OCNG Parameters | Control Region | Data Region |
+| --- | --- | --- |
+| Resource allocation | Unused REs (Note 1) | Unused REs (Note 2) |
+| Channel | PDCCH | PDSCH |
+| Contents | Virtual UE IDs | Uncorrelated pseudo random QPSK modulated data |
+| Antenna transmission scheme | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Subcarrier spacing | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Aggregation level | Same as used in PDCCH RMC | N/A |
+| Code rate | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Transmit Power | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| CP length | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| NOTE 1: REs not used in the active CORESETs where PDCCH is scheduled for the UE under test. REs for OCNG shall not be allocated outside the allocated bandwidth of the CORESET of the serving cell.NOTE 2: REs not allocated to any physical channels, CORESET, SSB or any other reference signal within the allocated bandwidth of the CORESET of the serving cell. REs for OCNG shall not be allocated outside the allocated bandwidth of the CORESET of the serving cell. |  |  |
+
+#### A.3.2.1.4 OCNG pattern 4: Generic OCNG pattern for all unused REs outside SSB slot(s)
+
+Table A.3.2.1.4-1: OP.4: Generic OCNG pattern for all unused REs outside SSB slot(s)
+
+| OCNG Parameters | Control Region | Data Region |
+| --- | --- | --- |
+| Resource allocation | Unused REs (Note 1) | Unused REs (Note 2) |
+| Channel | PDCCH | PDSCH |
+| Contents | Virtual UE IDs | Uncorrelated pseudo random QPSK modulated data |
+| Antenna transmission scheme | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Subcarrier spacing | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Aggregation level | Same as used in PDCCH RMC | N/A |
+| Code rate | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Transmit Power | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| CP length | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| NOTE 1: REs not used in the active CORESETs where PDCCH is scheduled for the UE under test. REs for OCNG shall not be allocated in the slot(s) containing SSB of the respective cell.NOTE 2: REs not allocated to any physical channels, CORESET, SSB or any other reference signal within the channel bandwidth of the cell. REs for OCNG shall not be allocated in the slot(s) containing SSB of the respective cell. |  |  |
+
+A.3.2.1.5 OCNG pattern 5: Generic OCNG pattern for unused REs in the same bandwidth as CORESET for 2AoA setup
+
+Table A.3.2.1.5-1: OP.5: Generic OCNG pattern for unused REs in the same BW as CORESET for 2AoA setup
+
+| OCNG Parameters | Control Region | Data Region |
+| --- | --- | --- |
+| Probe | Transmitting the serving beam |  |
+| Resource allocation | Unused REs (Note 1) in the symbols where SSB/CSI-RS are not transmitted from both the serving beam probe and non-serving beam probe. | Unused REs (Note 2) in the symbols where SSB/CSI-RS are not transmitted from both the serving beam probe and non-serving beam probe. |
+| Channel | PDCCH | PDSCH |
+| Contents | Virtual UE IDs | Uncorrelated pseudo random QPSK modulated data |
+| Antenna transmission scheme | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Subcarrier spacing | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Aggregation level | Same as used in PDCCH RMC | N/A |
+| Code rate | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| Transmit Power | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| CP length | Same as used in PDCCH RMC | Same as used in PDSCH RMC |
+| NOTE 1: REs not used in the active CORESETs where PDCCH is scheduled for the UE under test. REs for OCNG shall not be allocated outside the allocated bandwidth of the CORESET of the serving cell.NOTE 2: REs not allocated to any physical channels, CORESET, SSB or any other reference signal within the allocated bandwidth of the CORESET of the serving cell. REs for OCNG shall not be allocated outside the allocated bandwidth of the CORESET of the serving cell.NOTE 3: No OCNG is transmitted from the probe transmitting non-serving beam. |  |  |
+
+### A.3.2.2 Void
+
+## A.3.3 Reference DRX configurations
+
+### A.3.3.1 DRX Configuration 1: DRX cycle = 40 ms and TAT = 500 ms
+
+Table A.3.3.1-1: DRX.1: DRX cycle = 40 ms and time alignment timer (TAT) = 500 ms
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | 1 ms |
+| drx-InactivityTimer | 1 ms |
+| drx-RetransmissionTimerDL | 1 slot |
+| drx-RetransmissionTimerUL | 1 slot |
+| drx-LongCycleStartOffset | 40 ms |
+| shortDRX | disable |
+| TimeAlignmentTimer | 500 ms |
+| NOTE: This DRX configuration is applicable for NR serving cell. The DRX cycle and time alignment timer parameters are specified in clause 6.3.2 in TS 38.331 [2] |  |
+
+### A.3.3.2 DRX Configuration 2: DRX cycle = 640 ms and TAT = 500 ms
+
+Table A.3.3.2-1: DRX.2: DRX cycle = 640 ms and time alignment timer (TAT) = 500 ms
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | 1 ms |
+| drx-InactivityTimer | 1 ms |
+| drx-RetransmissionTimerDL | 1 slot |
+| drx-RetransmissionTimerUL | 1 slot |
+| drx-LongCycleStartOffset | 640 ms |
+| shortDRX | disable |
+| TimeAlignmentTimer | 500 ms |
+| NOTE: This DRX configuration is applicable for NR serving cell. The DRX cycle and time alignment timer parameters are specified in clause 6.3.2 in TS 38.331 [2] |  |
+
+### A.3.3.3 DRX Configuration 3: DRX cycle = 40 ms and TAT = Infinity
+
+Table A.3.3.3-1: DRX.3: DRX cycle = 40 ms and time alignment timer (TAT) = Infinity
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | 6 ms |
+| drx-InactivityTimer | 1 ms |
+| drx-RetransmissionTimerDL | 1 slot |
+| drx-RetransmissionTimerUL | 1 slot |
+| drx-LongCycleStartOffset | 40 ms |
+| shortDRX | disable |
+| TimeAlignmentTimer | Infinity |
+| NOTE: This DRX configuration is applicable for NR serving cell. The DRX cycle and time alignment timer parameters are specified in clause 6.3.2 in TS 38.331 [2] |  |
+
+### A.3.3.4 DRX Configuration 4: DRX cycle = 160 ms and TAT = Infinity
+
+Table A.3.3.4-1: DRX.4: DRX cycle = 160 ms and time alignment timer (TAT) = Infinity
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | psf2 |
+| drx-InactivityTimer | psf2 |
+| drx-RetransmissionTimer | Psf16 |
+| longDRX-CycleStartOffset | sf160, 0 |
+| shortDRX | disable |
+| TimeAlignmentTimer | Infinity |
+| NOTE: This DRX configuration is applicable for E-UTRA serving cell. For further information see clause 6.3.2 in TS 36.331 [16]. |  |
+
+### A.3.3.5 DRX Configuration 5: DRX cycle = 320 ms and TAT = Infinity
+
+Table A.3.3.5-1: DRX.5: DRX cycle = 320 ms and time alignment timer (TAT) = Infinity
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | psf6 |
+| drx-InactivityTimer | psf1920 |
+| drx-RetransmissionTimer | psf16 |
+| longDRX-CycleStartOffset | sf320, 0 |
+| shortDRX | disable |
+| TimeAlignmentTimer | Infinity |
+| NOTE: This DRX configuration is applicable for E-UTRA serving cell. For further information see clause 6.3.2 in TS 36.331 [16]. |  |
+
+### A.3.3.6 DRX Configuration 6: DRX cycle = 320 ms and TAT = 500 ms
+
+Table A.3.3.6-1: DRX.6: DRX cycle = 320 ms and time alignment timer (TAT) = 500 ms
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | 1 ms |
+| drx-InactivityTimer | 1 ms |
+| drx-RetransmissionTimerDL | 1 slot |
+| drx-RetransmissionTimerUL | 1 slot |
+| drx-LongCycleStartOffset | 320 ms |
+| shortDRX | disable |
+| TimeAlignmentTimer | 500 ms |
+| NOTE: This DRX configuration is applicable for NR serving cell. The DRX cycle and time alignment timer parameters are specified in clause 6.3.2 in TS 38.331 [2] |  |
+
+### A.3.3.7 DRX Configuration 7: DRX cycle = 640 ms and TAT = Infinity
+
+Table A.3.3.7-1: DRX.7: DRX cycle = 640 ms and time alignment timer (TAT) = Infinity
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | 6 ms |
+| drx-InactivityTimer | 1 ms |
+| drx-RetransmissionTimerDL | 1 slot |
+| drx-RetransmissionTimerUL | 1 slot |
+| drx-LongCycleStartOffset | 640 ms |
+| shortDRX | disable |
+| TimeAlignmentTimer | Infinity |
+| NOTE: This DRX configuration is applicable for NR serving cell. The DRX cycle and time alignment timer parameters are specified in clause 6.3.2 in TS 38.331 [2] |  |
+
+### A.3.3.8 DRX Configuration 8: DRX cycle = 320 ms and TAT = Infinity
+
+Table A.3.3.8-1: DRX.8: DRX cycle = 320 ms and time alignment timer (TAT) = Infinity
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | 6 ms |
+| drx-InactivityTimer | 1 ms |
+| drx-RetransmissionTimerDL | 1 slot |
+| drx-RetransmissionTimerUL | 1 slot |
+| drx-LongCycleStartOffset | 320 ms |
+| shortDRX | disable |
+| TimeAlignmentTimer | Infinity |
+| NOTE: This DRX configuration is applicable for NR serving cell. The DRX cycle and time alignment timer parameters are specified in clause 6.3.2 in TS 38.331 [2] |  |
+
+### A.3.3.9 DRX Configuration 9: DRX cycle = 40 ms and TAT = 500 ms
+
+Table A.3.3.9-1: DRX.9: DRX cycle = 40 ms and time alignment timer (TAT) = 500 ms
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | psf2 |
+| drx-InactivityTimer | psf2 |
+| drx-RetransmissionTimer | psf16 |
+| longDRX-CycleStartOffset | sf40, 0 |
+| shortDRX | disable |
+| TimeAlignmentTimer | 500 ms |
+| NOTE: This DRX configuration is applicable for E-UTRA serving cell. For further information see clause 6.3.2 in TS 36.331 [16]. |  |
+
+### A.3.3.10 DRX Configuration 10: DRX cycle = 640 ms and TAT = 500 ms
+
+Table A.3.3.10-1: DRX.10: DRX cycle = 640 ms and time alignment timer (TAT) = 500 ms
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | psf6 |
+| drx-InactivityTimer | psf2 |
+| drx-RetransmissionTimer | psf16 |
+| longDRX-CycleStartOffset | sf640, 0 |
+| shortDRX | disable |
+| TimeAlignmentTimer | 500 ms |
+| NOTE: This DRX configuration is applicable for E-UTRA serving cell. For further information see clause 6.3.2 in TS 36.331 [16]. |  |
+
+### A.3.3.11 DRX Configuration 11: DRX cycle = 20 ms and TAT = Infinity
+
+Table A.3.3.11-1: DRX.11: DRX cycle = 20 ms and time alignment timer (TAT) = Infinity
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | 6 ms |
+| drx-InactivityTimer | 1 ms |
+| drx-RetransmissionTimerDL | 1 slot |
+| drx-RetransmissionTimerUL | 1 slot |
+| drx-LongCycleStartOffset | 20 ms |
+| shortDRX | disable |
+| TimeAlignmentTimer | Infinity |
+| NOTE: This DRX configuration is applicable for NR serving cell. The DRX cycle and time alignment timer parameters are specified in clause 6.3.2 in TS 38.331 [2] |  |
+
+### A.3.3.12 DRX Configuration 12: DRX cycle = 640 ms and TAT = Infinity
+
+Table A.3.3.12-1: DRX.12: DRX cycle = 640 ms and time alignment timer (TAT) = Infinity
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | psf6 |
+| drx-InactivityTimer | psf2 |
+| drx-RetransmissionTimer | psf16 |
+| longDRX-CycleStartOffset | sf640, 0 |
+| shortDRX | disable |
+| TimeAlignmentTimer | Infinity |
+| NOTE: This DRX configuration is applicable for E-UTRA serving cell. For further information see clause 6.3.2 in TS 36.331 [16]. |  |
+
+### A.3.3.13 DRX Configuration X1: DRX cycle = 80 ms and TAT = Infinity
+
+Table A.3.3.13-1: DRX.X1: DRX cycle = 80 ms and time alignment timer (TAT) = Infinity
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | 6 ms |
+| drx-InactivityTimer | 1 ms |
+| drx-RetransmissionTimerDL | 1 slot |
+| drx-RetransmissionTimerUL | 1 slot |
+| drx-LongCycleStartOffset | 80 ms |
+| shortDRX | disable |
+| TimeAlignmentTimer | Infinity |
+| NOTE: This DRX configuration is applicable for NR serving cell. The DRX cycle and time alignment timer parameters are specified in clause 6.3.2 in TS 38.331 [2] |  |
+
+### A.3.3.14 DRX Configuration 14: DRX cycle = 160 ms and TAT = Infinity
+
+Table A.3.3.13-1: DRX.14: DRX cycle = 160 ms and time alignment timer (TAT) = Infinity
+
+| Field | Value |
+| --- | --- |
+| drx-onDurationTimer | 6 ms |
+| drx-InactivityTimer | 1 ms |
+| drx-RetransmissionTimerDL | 1 slot |
+| drx-RetransmissionTimerUL | 1 slot |
+| drx-LongCycleStartOffset | 160 ms |
+| shortDRX | disable |
+| TimeAlignmentTimer | Infinity |
+| NOTE: This DRX configuration is applicable for NR serving cell. The DRX cycle and time alignment timer parameters are specified in clause 6.3.2 in TS 38.331 [2] |  |
+
+## A.3.4 Test Cases with Different Channel Bandwidths
+
+### A.3.4.1 Test Cases with Different E-UTRA Channel Bandwidths
+
+#### A.3.4.1.1 Introduction
+
+In annex A test cases involving E-UTRA cell(s) may be defined with different E-UTRA channel bandwidths to verify the same type of RRM requirement.
+
+#### A.3.4.1.2 Principle of testing
+
+If multiple test cases involving E-UTRA cell(s) are defined with different E-UTRA channel bandwidths to verify the same type of RRM requirement that is E-UTRA channel bandwidth independent, then the UE needs to be tested with only one channel bandwidth in each E-UTRA cell and with the same bandwidth in all the E-UTRA cells used in the test case.
+
+## A.3.5 Test Cases for Synchronous and Asynchronous DC Operations
+
+### A.3.5.1 EN-DC Test Cases for Synchronous and Asynchronous EN-DC Operations
+
+#### A.3.5.1.1 Introduction
+
+This clause defines a principle which is applicable to test cases verifying RRM requirements for EN-DC operation in synchronous and asynchronous scenarios.
+
+In annex A test cases may be defined in both synchronous EN-DC and asynchronous EN-DC scenarios to verify the same type of RRM requirement.
+
+#### A.3.5.1.2 Principle of Testing
+
+If EN-DC test cases are defined in both synchronous and asynchronous EN-DC scenarios to verify the same type of RRM requirement then the UE capable of both synchronous and asynchronous EN-DC operations needs to be tested with one of the tests in either synchronous or asynchronous EN-DC scenarios.
+
+## A.3.6 Antenna configurations
+
+### A.3.6.1 Antenna configurations for FR1
+
+Unless otherwise specified, NR FDD or NR TDD cells in all RRM Test cases in AWGN propagation condition are configured with Antenna Configuration 1x2.
+
+#### A.3.6.1.1 Antenna connection for 4 Rx capable UEs
+
+##### A.3.6.1.1.1 Introduction
+
+All tests in clause A.4 and A.6 are specified for UEs supporting 2RX. In this clause, the antenna connection method for applying 2RX tests to UEs supporting 4RX antenna ports is specified. No tests are currently specified in clause A.4 or A.6 which are applicable only to 4RX antenna ports, so 4RX capable UEs are always tested by reusing tests which were originally specified for 2RX UEs.
+
+##### A.3.6.1.1.2 Principle of testing
+
+A.3.6.1.1.2.1 Single carrier tests
+
+For 4RX capable UEs supporting at least one band where 2RX is supported and 4RX is not supported, the, all single carrier tests specified in clause A.4 and A.6 except those in clauses A.4.7 and A.6.7 shall be tested on any band where 2RX is supported and 4RX is not supported with the antenna connection specified in clause A.3.6.1.1.2.4. For single carrier tests specified in clause A.4.7 or A.6.7, all tests shall be tested with the antenna connection specified in clause A.3.6.1.1.2.4 for bands where 2RX is supported and 4RX is not supported, and the antenna connection specified in clause A.3.6.1.1.2.5 for bands where 4RX is supported.
+
+For 4RX capable UEs which do not support any band where 2RX is supported and 4RX is not supported, all tests specified in clauses A.4 and A.6 shall be tested using the antenna connection specified in clause A.3.6.1.1.2.5. For radio link monitoring tests, the SNR levels are modified according to table A.3.6.1.1.2.1-1 and table A.3.6.1.1.2.1-2. For beam failure detection and link recovery tests, the SNR levels are modified according to table A.3.6.1.1.2.1-3.
+
+Table A.3.6.1.1.2.1-1: Modified parameters for RLM out of sync testing with 4 RX antenna connection
+
+| Test case | SNR during T3 (dB) |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | Test 1 | Test 2 | Test 3 | Test 4 |
+| A.4.5.1.1 | -18 | N/A | N/A | N/A |
+| A.4.5.1.3 | -18 | N/A | N/A | N/A |
+| A.4.5.1.5 | -18 | N/A | N/A | N/A |
+| A.4.5.1.7 | -18 | N/A | N/A | N/A |
+| A.5.5.1.1 | -18 | N/A | N/A | N/A |
+| A.5.5.1.3 | -18 | N/A | N/A | N/A |
+| A.5.5.1.5 | -18 | N/A | N/A | N/A |
+| A.5.5.1.7 | -18 | N/A | N/A | N/A |
+| A.6.5.1.1 | -18 | N/A | N/A | N/A |
+| A.6.5.1.3 | -18 | N/A | N/A | N/A |
+| A.6.5.1.5 | -18 | N/A | N/A | N/A |
+| A.6.5.1.7 | -18 | N/A | N/A | N/A |
+| A.7.5.1.1 | -18 | N/A | N/A | N/A |
+| A.7.5.1.3 | -18 | N/A | N/A | N/A |
+| A.7.5.1.5 | -18 | N/A | N/A | N/A |
+| A.7.5.1.7 | -18 | N/A | N/A | N/A |
+
+Table A.3.6.1.1.2.1-2: Modified parameters for RLM in sync single carrier testing with 4 RX antenna connection
+
+| Test case | SNR during T3 (dB) |  | SNR during T4 (dB) |  |
+| --- | --- | --- | --- | --- |
+|  | Test 1 | Test 2 | Test 1 | Test 2 |
+| A.4.5.1.2 | -18 | N/A | -8 | N/A |
+| A.4.5.1.4 | -18 | N/A | -8 | N/A |
+| A.4.5.1.6 | -18 | N/A | -8 | N/A |
+| A.4.5.1.8 | -18 | N/A | -8 | N/A |
+| A.5.5.1.2 | -18 | N/A | -8 | N/A |
+| A.5.5.1.4 | -18 | N/A | -8 | N/A |
+| A.5.5.1.6 | -18 | N/A | -8 | N/A |
+| A.5.5.1.8 | -18 | N/A | -8 | N/A |
+| A.6.5.1.2 | -18 | N/A | -8 | N/A |
+| A.6.5.1.4 | -18 | N/A | -8 | N/A |
+| A.6.5.1.6 | -18 | N/A | -8 | N/A |
+| A.6.5.1.8 | -18 | N/A | -8 | N/A |
+| A.7.5.1.2 | -18 | N/A | -8 | N/A |
+| A.7.5.1.4 | -18 | N/A | -8 | N/A |
+| A.7.5.1.6 | -18 | N/A | -8 | N/A |
+| A.7.5.1.8 | -18 | N/A | -8 | N/A |
+
+Table A.3.6.1.1.2.1-3: Modified parameters for Beam Failure Detection and Link Recovery testing with 4 RX antenna connection
+
+| Test case | SNR for RS in set q0 during T3, T4 and T5 (dB) |
+| --- | --- |
+|  | Test 1 |
+| A.4.5.5.1 | -15 |
+| A.4.5.5.2 | -15 |
+| A.4.5.5.3 | -15 |
+| A.4.5.5.4 | -15 |
+| A.4.5.5.5 | -15 |
+| A.4.5.5.6 | -15 |
+| A.5.5.5.1 | -15 |
+| A.5.5.5.2 | -15 |
+| A.5.5.5.3 | -15 |
+| A.5.5.5.4 | -15 |
+| A.5.5.5.5 | -15 |
+| A.5.5.5.6 | -15 |
+| A.5.5.5.7 | -15 |
+| A.6.5.5.1 | -15 |
+| A.6.5.5.2 | -15 |
+| A.6.5.5.3 | -15 |
+| A.6.5.5.4 | -15 |
+| A.6.5.5.5 | -15 |
+| A.6.5.5.6 | -15 |
+| A.7.5.5.1 | -15 |
+| A.7.5.5.2 | -15 |
+| A.7.5.5.3 | -15 |
+| A.7.5.5.4 | -15 |
+| A.7.5.5.5 | -15 |
+| A.7.5.5.6 | -15 |
+| A.7.5.5.7 | -15 |
+
+A.3.6.1.1.2.2 Carrier aggregation tests
+
+All carrier aggregation tests are performed using the antenna connection in clause A.3.6.1.1.2.4 for the PCell antenna connection if the PCell is on a band where 2RX is supported and 4RX is not supported, or using the antenna connection in clause A.3.6.1.1.2.5 for the PCell antenna connection if the PCell is on a band where 4RX is supported.
+
+All carrier aggregation tests are performed using the antenna connection in clause A.3.6.1.1.2.4 for the SCell antenna connection if an SCell is on band where 2RX is supported and 4RX is not supported, or using the antenna connection in clause A.3.6.1.1.2.5 for the SCell antenna connection if an SCell is on a band where 4RX is supported.
+
+A.3.6.1.1.2.3 EN-DC tests
+
+All EN-DC tests are performed using the antenna connection in clause A.3.6.1.1.2.6 for the PCell antenna connection if the PCell is on a band where 2RX is supported and 4RX is not supported, or using the antenna connection in clause A.3.6.1.1.2.7 for the PCell antenna connection if the PCell is on a band where 4RX is supported.
+
+All EN-DC tests are performed using the antenna connection in clause A.3.6.1.1.2.4 for the PSCell or SCell antenna connection if an SCell is on band where 2RX is supported and 4RX is not supported, or using antenna connection in clause A.3.6.1.1.2.5 for the SCell antenna connection if an SCell or PSCell is on a band where 4RX is supported.
+
+A.3.6.1.1.2.4 Antenna connection for bands where 2RX is supported
+
+For bands where 2RX is supported and 4RX is not supported, it is left to the UE declaration and antenna port configuration to decide which 2 of the 4 Rx ports are connected with data source from system simulator. The remaining 2 RX ports shall be connected with zero input. No test parameters or requirements are modified.
+
+A.3.6.1.1.2.5 Antenna connection for bands where 4RX is supported
+
+For bands where 4RX is supported, all 4 RX antennas are connected with data source from system simulator. The system simulator shall provide independent noise and fading (low correlation) for each antenna port. Except for the modifications to radio link monitoring thresholds and beam failure detection thresholds described in clauses A.3.6.1.1.2.1, no test parameters or requirements are modified.
+
+A.3.6.1.1.2.6 EN-DC LTE Antenna connection for bands where 2RX is supported
+
+For E-UTRAN bands where 2RX is supported and 4RX is not supported, it is left to the UE declaration and antenna port configuration to decide which 2 of the 4 Rx ports are connected with data source from system simulator. The remaining 2 RX ports shall be connected with zero input. No test parameters or requirements are modified.
+
+A.3.6.1.1.2.7 EN-DC LTE Antenna connection for bands where 4RX is supported
+
+For bands E-UTRAN where 4RX is supported, all 4 RX antennas are connected with data source from system simulator. The system simulator shall provide independent noise and fading (low correlation) for each antenna port. Except for the modifications to radio link monitoring thresholds described in clauses A.3.8.1.2.1 and A.3.8.1.2.2 of TS 36.133 [15], no test parameters or requirements are modified.
+
+#### A.3.6.1.2 Antenna connection for 8 Rx capable UEs
+
+##### A.3.6.1.2.1 Introduction
+
+All tests in clause A.4 and A.6 are specified for UEs supporting 2RX. In this clause, the antenna connection method for applying 2RX tests or 4RX tests to UEs supporting 8RX antenna ports is specified. No tests are currently specified in clause A.4 or A.6 which are applicable only to 8RX antenna ports, so 8RX capable UEs are always tested by reusing tests which were originally specified for 2RX UEs or 4Rx UEs.
+
+##### A.3.6.1.2.2 Principle of testing
+
+A.3.6.1.2.2.1 Single carrier tests
+
+For 8RX capable UEs supporting at least one band where 2RX is supported and either 4RX, 6RX or 8RX is not supported, all single carrier tests specified in clauses A.4 and A.6 except those in clauses A.4.7 and A.6.7 shall be tested on any band where 2RX is supported and 8RX is not supported with the antenna connection specified in clause A.3.6.1.2.2.4. For single carrier tests specified in clauses A.4.7 or A.6.7, all tests shall be tested with the antenna connection specified in clause A.3.6.1.2.2.4 for bands where 2RX is supported and 8RX is not supported, and the antenna connection specified in clause A.3.6.1.2.2.6 for bands where 8RX is supported.
+
+For 8RX capable UEs supporting at least one band where 4RX is supported and either 6RX or 8RX is not supported but without supporting any band where only 2RX is supported, all single carrier tests specified in clauses A.4 and A.6 except those in clauses A.4.7 and A.6.7 shall be tested on any band where 4RX is supported and 8RX is not supported with the antenna connection specified in clause A.3.6.1.2.2.5. For single carrier tests specified in clauses A.4.7 or A.6.7, all tests shall be tested with the antenna connection specified in clause A.3.6.1.2.2.5 for bands where 4RX is supported and 8RX is not supported, and the antenna connection specified in clause A.3.6.1.2.2.6 for bands where 8RX is supported. For radio link monitoring tests, the SNR levels are modified according to table A.3.6.1.1.2.1-1 and table A.3.6.1.1.2.1-2. For beam failure detection and link recovery tests, the SNR levels are modified according to table A.3.6.1.1.2.1-3.
+
+For 8RX capable UEs supporting at least one band where 6RX is supported and 8RX is not supported but without supporting any band where only 2RX or only 4RX is supported, all single carrier tests specified in clauses A.4 and A.6 except those in clauses A.4.7 and A.6.7 shall be tested on any band where 6RX is supported and 8RX is not supported with the antenna connection specified in clause A.3.6.1.2.2.5A. For single carrier tests specified in clauses A.4.7 or A.6.7, all tests shall be tested with the antenna connection specified in clause A.3.6.1.2.2.5A for bands where 6RX is supported and 8RX is not supported, and the antenna connection specified in clause A.3.6.1.2.2.6 for bands where 8RX is supported. For radio link monitoring tests, the SNR levels are modified according to table A.3.6.1.1.2.1-1 and table A.3.6.1.1.2.1-2. For beam failure detection and link recovery tests, the SNR levels are modified according to table A.3.6.1.1.2.1-3.
+
+For 8RX capable UEs which do not support any band where 8RX is not supported, all tests specified in clauses A.4 and A.6 shall be tested using the antenna connection specified in clause A.3.6.1.2.2.6. For radio link monitoring tests, the SNR levels are modified according to table A.3.6.1.1.2.1-1 and table A.3.6.1.1.2.1-2. For beam failure detection and link recovery tests, the SNR levels are modified according to table A.3.6.1.1.2.1-3.
+
+A.3.6.1.2.2.2 Carrier aggregation tests
+
+All carrier aggregation tests are performed using the antenna connection in clause A.3.6.1.2.2.4 for the PCell antenna connection if the PCell is on a band where 2RX is supported and either 4RX or 8RX is not supported, or using the antenna connection in clause A.3.6.1.2.2.5 for the PCell antenna connection if the PCell is on a band where 4RX is supported and 8RX is not supported, or using the antenna connection in clause A.3.6.1.2.2.6 for the PCell antenna connection if the PCell is on a band where 8RX is supported.
+
+All carrier aggregation tests are performed using the antenna connection in clause A.3.6.1.2.2.4 for the SCell antenna connection if an SCell is on band where 2RX is supported and either 4RX or 8RX is not supported, or using the antenna connection in clause A.3.6.1.2.2.5 for the SCell antenna connection if an SCell is on a band where 4RX is supported and 8RX is not supported, or using the antenna connection in clause A.3.6.1.2.2.6 for the SCell antenna connection if an SCell is on a band where 8RX is supported.
+
+A.3.6.1.2.2.3 EN-DC tests
+
+All EN-DC tests are performed using the antenna connection in clause A.3.6.1.2.2.7 for the PCell antenna connection if the PCell is on a band where 2RX is supported and either 4RX or 8RX is not supported, or using the antenna connection in clause A.3.6.1.2.2.8 for the PCell antenna connection if the PCell is on a band where 4RX is supported and 8RX is not supported, or using the antenna connection in clause A.3.6.1.2.2.9 for the PCell antenna connection if the PCell is on a band where 8RX is supported.
+
+All EN-DC tests are performed using the antenna connection in clause A.3.6.1.2.2.4 for the PSCell or SCell antenna connection if an SCell or PSCell is on band where 2RX is supported and either 4RX or 8RX is not supported, or using antenna connection in clause A.3.6.1.2.2.5 for the PSCell or SCell antenna connection if an SCell or PSCell is on a band where 4RX is supported and 8RX is not supported, or using antenna connection in clause A.3.6.1.2.2.6 for the PSCell or SCell antenna connection if an SCell or PSCell is on a band where 8RX is supported.
+
+A.3.6.1.2.2.4 Antenna connection for bands where 2RX is supported
+
+For bands where 2RX is supported and either 4RX, 6RX or 8RX is not supported, it is left to the UE declaration and antenna port configuration to decide which 2 of the 8 Rx ports are connected with data source from system simulator. The remaining 6 RX ports shall be connected with zero input. No test parameters or requirements are modified.
+
+A.3.6.1.2.2.5 Antenna connection for bands where 4RX is supported
+
+For bands where 4RX is supported and either 6RX or 8RX is not supported, it is left to the UE declaration and antenna port configuration to decide which 4 of the 8 Rx ports are connected with data source from system simulator. The remaining 4 RX ports shall be connected with zero input. Except for the modifications to radio link monitoring thresholds and beam failure detection thresholds described in clause A.3.6.1.1.2.1, no test parameters or requirements are modified.
+
+A.3.6.1.2.2.5A Antenna connection for bands where 6RX is supported
+
+For bands where 6RX is supported and 8RX is not supported, it is left to the UE declaration and antenna port configuration to decide which 6 of the 8 Rx ports are connected with data source from system simulator. The remaining 2 RX ports shall be connected with zero input. Except for the modifications to radio link monitoring thresholds and beam failure detection thresholds described in clause A.3.6.1.1.2.1, no test parameters or requirements are modified.
+
+A.3.6.1.2.2.6 Antenna connection for bands where 8RX is supported
+
+For bands where 8RX is supported, all 8 RX antennas are connected with data source from system simulator. The system simulator shall provide independent noise and fading (low correlation) for each antenna port. Except for the modifications to radio link monitoring thresholds described in clause A.3.6.1.1.2.1, no test parameters or requirements are modified.
+
+A.3.6.1.2.2.7 EN-DC LTE Antenna connection for bands where 2RX is supported
+
+For E-UTRAN bands where 2RX is supported and 4RX or 8RX is not supported, it is left to the UE declaration and antenna port configuration to decide which 2 of the 8 Rx ports are connected with data source from system simulator. The remaining 6 RX ports shall be connected with zero input. No test parameters or requirements are modified.
+
+A.3.6.1.2.2.8 EN-DC LTE Antenna connection for bands where 4RX is supported
+
+For bands E-UTRAN where 4RX is supported and 8RX is not supported, it is left to the UE declaration and antenna port configuration to decide which 4 of the 8 Rx ports are connected with data source from system simulator. The remaining 4 RX ports shall be connected with zero input. Except for the modifications to radio link monitoring thresholds described in clauses A.3.8.1.2.1 and A.3.8.1.2.2 of TS 36.133 [15], no test parameters or requirements are modified.
+
+A.3.6.1.2.2.9 EN-DC LTE Antenna connection for bands where 8RX is supported
+
+For bands E-UTRAN where 8RX is supported, all 8 RX antennas are connected with data source from system simulator. The system simulator shall provide independent noise and fading (low correlation) for each antenna port. Except for the modifications to radio link monitoring thresholds described in clauses A.3.8.1.2.1 and A.3.8.1.2.2 of TS 36.133 [15], no test parameters or requirements are modified.
+
+#### A.3.6.1.3 Antenna connection for 6 Rx capable UEs
+
+##### A.3.6.1.3.1 Introduction
+
+All tests in clause A.4 and A.6 are specified for UEs supporting 2RX. In this clause, the antenna connection method for applying 2RX tests or 4RX tests to UEs supporting 6Rx antenna ports is specified. No tests are currently specified in clause A.4 or A.6 which are applicable only to 6Rx antenna ports, so 6Rx capable UEs are always tested by reusing tests which were originally specified for 2RX UEs or 4Rx UEs.
+
+##### A.3.6.1.3.2 Principle of testing
+
+A.3.6.1.3.2.1 Single carrier tests
+
+For 6Rx capable UEs supporting at least one band where 2RX is supported and either 4RX or 6Rx is not supported, all single carrier tests specified in clauses A.4 and A.6 except those in clauses A.4.7 and A.6.7 shall be tested on any band where 2RX is supported and 6Rx is not supported with the antenna connection specified in clause A.3.6.1.3.2.2. For single carrier tests specified in clauses A.4.7 or A.6.7, all tests shall be tested with the antenna connection specified in clause A.3.6.1.3.2.2 for bands where 2RX is supported and 6Rx is not supported, and the antenna connection specified in clause A.3.6.1.3.2.4 for bands where 6Rx is supported.
+
+For 6Rx capable UEs supporting at least one band where 4RX is supported and 6Rx is not supported but without supporting any band where only 2RX is supported, all single carrier tests specified in clauses A.4 and A.6 except those in clauses A.4.7 and A.6.7 shall be tested on any band where 4RX is supported and 6Rx is not supported with the antenna connection specified in clause A.3.6.1.3.2.3. For single carrier tests specified in clauses A.4.7 or A.6.7, all tests shall be tested with the antenna connection specified in clause A.3.6.1.3.2.3 for bands where 4RX is supported and 6Rx is not supported, and the antenna connection specified in clause A.3.6.1.3.2.4 for bands where 6Rx is supported. For radio link monitoring tests, the SNR levels are modified according to table A.3.6.1.1.2.1-1 and table A.3.6.1.1.2.1-2. For beam failure detection and link recovery tests, the SNR levels are modified according to table A.3.6.1.1.2.1-3.
+
+For 6Rx capable UEs which do not support any band where 6Rx is not supported, all tests specified in clauses A.4 and A.6 shall be tested using the antenna connection specified in clause A.3.6.1.3.2.4. For radio link monitoring tests, the SNR levels are modified according to table A.3.6.1.1.2.1-1 and table A.3.6.1.1.2.1-2. For beam failure detection and link recovery tests, the SNR levels are modified according to table A.3.6.1.1.2.1-3.
+
+A.3.6.1.3.2.2 Antenna connection for bands where 2RX is supported
+
+For bands where 2RX is supported and either 4RX or 6Rx is not supported, it is left to the UE declaration and antenna port configuration to decide which 2 of the 6 Rx ports are connected with data source from system simulator. The remaining 6 RX ports shall be connected with zero input. No test parameters or requirements are modified.
+
+A.3.6.1.3.2.3 Antenna connection for bands where 4RX is supported
+
+For bands where 4RX is supported and 6Rx is not supported, it is left to the UE declaration and antenna port configuration to decide which 4 of the 6 Rx ports are connected with data source from system simulator. The remaining 4 RX ports shall be connected with zero input. Except for the modifications to radio link monitoring thresholds and beam failure detection thresholds described in clause A.3.6.1.1.2.1, no test parameters or requirements are modified.
+
+A.3.6.1.3.2.4 Antenna connection for bands where 6Rx is supported
+
+For bands where 6Rx is supported, all 6 RX antennas are connected with data source from system simulator. The system simulator shall provide independent noise and fading (low correlation) for each antenna port. Except for the modifications to radio link monitoring thresholds described in clause A.3.6.1.1.2.1, no test parameters or requirements are modified.
+
+### A.3.6.2 Antenna configurations for FR2
+
+Unless otherwise specified, the default Downlink Antenna Configuration for NR FR2 cells is 1x2.
+
+In case of Downlink Antenna Configuration 2x2 for NR FR2 cells, unless otherwise specified, the downlink signal is transmitted over the two polarizations (V and H) of the dual polarized antenna of the test equipment.
+
+In both cases, the downlink signal is received assuming 2 UE baseband receivers. As the UE is tested following the Blackbox Approach with regard to the UE Rx antennas, the exact UE Rx antenna configuration is not relevant for the test configuration and has no impact on the test implementation.
+
+## A.3.6A Antenna configurations with unlicensed bands
+
+### A.3.6A.1 Antenna configurations for FR1
+
+Unless otherwise specified, NR unlicensed cells in all RRM Test cases in AWGN propagation condition are configured with Antenna Configuration 1x2.
+
+#### A.3.6A.1.1 Antenna connection for 4 Rx capable UEs
+
+##### A.3.6A.1.1.1 Introduction
+
+All tests in clause A.13, A.10, A.11, and A.12 are specified for UEs supporting 2RX. In this clause, the antenna connection method for applying 2RX tests to UEs supporting 4RX antenna ports is specified. No tests are currently specified in clause A.13, A.10, A.11 or A.12 which are applicable only to 4RX antenna ports, so 4RX capable UEs are always tested by reusing tests which were originally specified for 2RX UEs.
+
+##### A.3.6A.1.1.2 Principle of testing
+
+A.3.6A.1.1.2.1 Single carrier tests
+
+For 4RX capable UEs supporting at least one 2RX band, the, all single carrier tests specified in clause A.13. A.10, A.11 and A.12 except those in clauses A.13.4, A.10.5, A.11.6 and A.12.5 shall be tested on any band where 2RX is supported with the antenna connection specified in clause A.3.6A.1.1.2.4. For single carrier tests specified in clauses A.13.4, A.10.5, A.11.6 or A.12.5, all tests shall be tested with the antenna connection specified in clause A.3.6A.1.1.2.4 for bands where 2RX is supported, and the antenna connection specified in clause A.3.6A.1.1.2.5 for bands where 4RX is supported.
+
+For 4RX capable UEs which do not support any 2RX band, all tests specified in clauses A.13, A.10, A.11 and A.12 shall be tested using the antenna connection specified in clause A.3.6A.1.1.2.5. For radio link monitoring tests, the SNR levels are modified according to table A.3.6A.1.1.2.1-1 and table A.3.6A.1.1.2.1-2.
+
+Table A.3.6A.1.1.2.1-1: Modified parameters for RLM out of sync testing with 4 RX antenna connection
+
+| Test case | SNR during T3 (dB) |  |  |  |
+| --- | --- | --- | --- | --- |
+|  | Test 1 | Test 2 | Test 3 | Test 4 |
+| A.10.3.1.2 | -18 | N/A | N/A | N/A |
+| A.11.4.1.2 | -18 | N/A | N/A | N/A |
+
+Table A.3.6A.1.1.2.1-2: Modified parameters for RLM in sync single carrier testing with 4 RX antenna connection
+
+| Test case | SNR during T3 (dB) |  | SNR during T4 (dB) |  |
+| --- | --- | --- | --- | --- |
+|  | Test 1 | Test 2 | Test 1 | Test 2 |
+| A.10.3.1.3 | -18 | N/A | -8 | N/A |
+| A.11.4.1.3 | -18 | N/A | -8 | N/A |
+
+Table A.3.6A.1.1.2.1-3: Modified parameters for Beam Failure Detection and Link Recovery testing with 4 RX antenna connection
+
+| Test case | SNR for RS in set q0 during T3, T4 and T5 (dB) |  |
+| --- | --- | --- |
+|  | Test 1 | Test 2 |
+| A.10.3.4.1 | -15 | N/A |
+| A.10.3.4.2 | -15 | N/A |
+| A.11.4.4.1 | -15 | N/A |
+| A.11.4.4.2 | -15 | N/A |
+
+A.3.6A.1.1.2.2 Carrier aggregation tests
+
+All carrier aggregation tests are performed using the antenna connection in clause A.3.6A.1.1.2.4 for the PCell antenna connection if the PCell is on a band where 2RX is supported or the antenna connection in clause A.3.6A.1.1.2.5 for the PCell antenna connection if the PCell is on a band where 4RX is supported.
+
+All carrier aggregation tests are performed using the antenna connection in clause A.3.6A.1.1.2.4 for the SCell antenna connection if an SCell is on band where 2RX is supported or the testing procedure in clause A.3.6A.1.1.2.5 for the SCell antenna connection if an SCell is on a band where 4RX is supported.
+
+A.3.6A.1.1.2.3 EN-DC tests
+
+All carrier aggregation tests are performed using the antenna connection in clause A.3.6A.1.1.2.6 for the PCell antenna connection if the PCell is on a band where 2RX is supported or the antenna connection in clause A.3.6A.1.1.2.7 for the PCell antenna connection if the PCell is on a band where 4RX is supported.
+
+All carrier aggregation tests are performed using the antenna connection in clause A.3.6A.1.1.2.4 for the PSCell or SCell antenna connection if an SCell is on band where 2RX is supported or the testing procedure in clause A.3.6A.1.1.2.5 for the SCell antenna connection if an SCell or PSCell is on a band where 4RX is supported.
+
+A.3.6A.1.1.2.4 Antenna connection for bands where 2RX is supported
+
+For bands where 2RX is supported, it is left to the UE declaration and AP configuration to decide which 2 of the 4 Rx ports are connected with data source from system simulator. The remaining 2 Rx ports shall be connected with zero input. No test parameters or requirements are modified.
+
+A.3.6A.1.1.2.5 Antenna connection for bands where 4RX is supported
+
+For bands where 4RX is supported, all 4 RX antennas are connected with data source from system simulator. The system simulator shall provide independent noise and fading (low correlation) for each antenna port. Except for the modifications to radio link monitoring thresholds described in clauses A.3.6A.1.1.2.1 and A.3.6A.1.1.2.2, no test parameters or requirements are modified.
+
+A.3.6A.1.1.2.6 EN-DC LTE Antenna connection for bands where 2RX is supported
+
+For bands where LTE 2RX is supported, it is left to the UE declaration and AP configuration to decide which 2 of the 4 Rx ports are connected with data source from system simulator. The remaining 2 Rx ports shall be connected with zero input. No test parameters or requirements are modified.
+
+A.3.6A.1.1.2.7 EN-DC LTE Antenna connection for bands where 4RX is supported
+
+For bands where LTE 4RX is supported, all 4 RX antennas are connected with data source from system simulator. The system simulator shall provide independent noise and fading (low correlation) for each antenna port. Except for the modifications to radio link monitoring thresholds described in clauses A.3.8.1.2.1 and A.3.8.1.2.2 of TS 36.133 [15], no test parameters or requirements are modified.
+
+## A.3.7 EN-DC test setup
+
+### A.3.7.1 Introduction
+
+### A.3.7.2 E-UTRAN Serving Cell Parameters
+
+#### A.3.7.2.1 E-UTRAN Serving Cell Parameters for Tests with NR Cell(s) in FR1
+
+table A.3.7.2.1-1 defines cell specific test parameters for E-UTRAN cell which can be used in EN-DC test cases or in any test case comprising at least one E-UTRA serving cell with all NR cells in FR1. Unless otherwise stated within the test, all measurements in annex A.4 and A.5 are performed only on the NR carrier. The E-UTRA serving cell shall configured to not interfere with NR operation and the E-UTRA serving cell signal power shall not be critical to the test purpose.
+
+Table A.3.7.2.1-1: E-UTRAN cell specific test parameters for tests with all NR cells in FR1
+
+| Parameter | Unit | E-UTRAN Cell |
+| --- | --- | --- |
+| Duplex mode |  | FDD or TDD |
+| TDD special subframe configurationNote1 |  | 6 |
+| TDD uplink-downlink configurationNote1 |  | 1 |
+| BWchannel |  | 5 MHz: NRB,c = 2510 MHz: NRB,c = 5020 MHz: NRB,c = 100 |
+| PDSCH parameters:DL Reference Measurement ChannelNote2 |  | 5 MHz: R.7 FDD10 MHz: R.3 FDD20 MHz: R.6 FDD5 MHz: R.4 TDD10 MHz: R.0 TDD20 MHz: R.3 TDD |
+| PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote2 |  | 5 MHz: R.11 FDD10 MHz: R.6 FDD20 MHz: R.10 FDD5 MHz: R.11 TDD10 MHz: R.6 TDD20 MHz: R.10 TDD |
+| OCNG PatternsNote2 |  | 5 MHz: OP.20 FDD10 MHz: OP.10 FDD20 MHz: OP.17 FDD5 MHz: OP.9 TDD10 MHz: OP.1 TDD20 MHz: OP.7 TDD |
+| PBCH_RA | dB |  |
+| PBCH_RB | dB |  |
+| PSS_RA | dB |  |
+| SSS_RA | dB |  |
+| PCFICH_RB | dB |  |
+| PHICH_RA | dB |  |
+| PHICH_RB | dB | 0 |
+| PDCCH_RA | dB |  |
+| PDCCH_RB | dB |  |
+| PDSCH_RA | dB |  |
+| PDSCH_RB | dB |  |
+| OCNG_RANote3 | dB |  |
+| OCNG_RBNote3 | dB |  |
+| NocNote4 | dBm/15 kHz | -104 |
+| Ês/Noc | dB | 17 |
+| Ês/Iot | dB | 17 |
+| RSRP Note5 | dBm/15 kHz | -87 |
+| SCH_RP Note5 | dBm/15 kHz | -87 |
+| Io Note5 | dBm/Ch BW | -59.13+10log(NRB,c /50) |
+| Propagation Condition |  | AWGN |
+| Antenna Configuration |  | 1x2 |
+| NOTE 1: Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211.NOTE 2: DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 respectively.NOTE 3: OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 4: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 5: Es/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |
+
+#### A.3.7.2.2 E-UTRAN Serving Cell Parameters for Tests with NR Cell(s) in FR2
+
+table A.3.7.2.2-1 defines cell specific test parameters for E-UTRAN cell which can be used in EN-DC test cases or in any test case comprising at least one E-UTRA serving cell with one or more NR cells in FR2.
+
+Table A.3.7.2.2-1: E-UTRAN cell specific test parameters for tests with one or more NR cells in FR2
+
+| Parameter | Unit | E-UTRAN Cell |
+| --- | --- | --- |
+| Duplex mode |  | FDD or TDD |
+| TDD special subframe configurationNote1 |  | 6 |
+| TDD uplink-downlink configurationNote1 |  | 1 |
+| BWchannel | MHz | 5 MHz: NRB,c = 2510 MHz: NRB,c = 5020 MHz: NRB,c = 100 |
+| PDSCH parameters:DL Reference Measurement ChannelNote2 |  | 5 MHz: R.7 FDD10 MHz: R.3 FDD20 MHz: R.6 FDD5 MHz: R.4 TDD10 MHz: R.0 TDD20 MHz: R.3 TDD |
+| PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote2 |  | 5 MHz: R.11 FDD10 MHz: R.6 FDD20 MHz: R.10 FDD5 MHz: R.11 TDD10 MHz: R.6 TDD20 MHz: R.10 TDD |
+| OCNG PatternsNote2 |  | 5 MHz: OP.20 FDD10 MHz: OP.10 FDD20 MHz: OP.17 FDD5 MHz: OP.9 TDD10 MHz: OP.1 TDD20 MHz: OP.7 TDD |
+| PBCH_RA | dB |  |
+| PBCH_RB | dB |  |
+| PSS_RA | dB |  |
+| SSS_RA | dB |  |
+| PCFICH_RB | dB |  |
+| PHICH_RA | dB |  |
+| PHICH_RB | dB | 0 |
+| PDCCH_RA | dB |  |
+| PDCCH_RB | dB |  |
+| PDSCH_RA | dB |  |
+| PDSCH_RB | dB |  |
+| OCNG_RANote3 | dB |  |
+| OCNG_RBNote3 | dB |  |
+| NOTE 1: Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211.NOTE 2: DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 respectively.NOTE 3: OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 4: The E-UTRA signal is required only to ensure the E-UTRA link to the DUT in the EN-DC operation. The Test System shall provide a stable and noise-free E-UTRA signal without need of precise propagation modelling, path loss and polarization control. Further details of the E-UTRA signal configuration are not defined as part of the cell specific test parameters, since the E-UTRA link is not under performance verification and shall not affect the test result unless otherwise specifically stated in the test case. |  |  |
+
+## A.3.7A NR FR1-FR2 test setup
+
+Some Test cases in clause A.7 have NR cells in both FR1 and FR2. Unless otherwise stated within the test, the NR FR1 Cell signal is required only to provide a link to the UE under test. The Test System shall provide a stable and noise-free NR FR1 signal without need of precise propagation modelling, path loss and polarization control. Further details of the NR FR1 signal configuration are not defined as part of the cell specific test parameters, since the NR FR1 link is not under performance verification and shall not affect the test result unless otherwise specifically stated in the test case.
+
+## A.3.7B EN-DC test setup with unlicensed bands
+
+### A.3.7B.1 Introduction
+
+### A.3.7B.2 E-UTRAN Serving Cell Parameters
+
+#### A.3.7B.2.1 E-UTRAN Serving Cell Parameters for Tests with NR Cell(s) under CCA in FR1
+
+table A.3.7A.2.1-1 defines cell specific test parameters for E-UTRAN cell which can be used in EN-DC test cases or in any test case comprising at least one E-UTRA serving cell with all NR cells under CCA in FR1. Unless otherwise stated within the test, all measurements in annex A.4 and A.5 are performed only on the unlicensed NR carrier. The E-UTRA serving cell shall configured to not interfere with NR operation and the E-UTRA serving cell signal power shall not be critical to the test purpose.
+
+Table A.3.7B.2.1-1: E-UTRAN cell specific test parameters for tests with all NR cells user CCA in FR1
+
+| Parameter | Unit | E-UTRAN Cell |
+| --- | --- | --- |
+| Duplex mode |  | FDD or TDD |
+| TDD special subframe configurationNote1 |  | 6 |
+| TDD uplink-downlink configurationNote1 |  | 1 |
+| BWchannel |  | 5 MHz: NRB,c = 2510 MHz: NRB,c = 5020 MHz: NRB,c = 100 |
+| PDSCH parameters:DL Reference Measurement ChannelNote2 |  | 5 MHz: R.7 FDD10 MHz: R.3 FDD20 MHz: R.6 FDD5 MHz: R.4 TDD10 MHz: R.0 TDD20 MHz: R.3 TDD |
+| PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote2 |  | 5 MHz: R.11 FDD10 MHz: R.6 FDD20 MHz: R.10 FDD5 MHz: R.11 TDD10 MHz: R.6 TDD20 MHz: R.10 TDD |
+| OCNG PatternsNote2 |  | 5 MHz: OP.20 FDD10 MHz: OP.10 FDD20 MHz: OP.17 FDD5 MHz: OP.9 TDD10 MHz: OP.1 TDD20 MHz: OP.7 TDD |
+| PBCH_RA | dB |  |
+| PBCH_RB | dB |  |
+| PSS_RA | dB |  |
+| SSS_RA | dB |  |
+| PCFICH_RB | dB |  |
+| PHICH_RA | dB |  |
+| PHICH_RB | dB | 0 |
+| PDCCH_RA | dB |  |
+| PDCCH_RB | dB |  |
+| PDSCH_RA | dB |  |
+| PDSCH_RB | dB |  |
+| OCNG_RANote3 | dB |  |
+| OCNG_RBNote3 | dB |  |
+| NocNote4 | dBm/15 kHz | -104 |
+| Ês/Noc | dB | 17 |
+| Ês/Iot | dB | 17 |
+| RSRP Note5 | dBm/15 kHz | -87 |
+| SCH_RP Note5 | dBm/15 kHz | -87 |
+| Io Note5 | dBm/Ch BW | -59.13+10log(NRB,c /50) |
+| Propagation Condition |  | AWGN |
+| Antenna Configuration |  | 1x2 |
+| NOTE 1: Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211.NOTE 2: DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 respectively.NOTE 3: OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 4: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 5: Es/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. |  |  |
+
+## A.3.7C LTE-FR1/FR2 test setup
+
+Some Test cases in clause A.5 have LTE and FR2 NR cells. Unless otherwise stated within the test, the LTE Cell signal is required only to provide a link to the UE under test. The Test System shall provide a stable and noise-free LTE signal without need of precise propagation modelling, path loss and polarization control. Further details of the LTE signal configuration are not defined as part of the cell specific test parameters, since the LTE link is not under performance verification and shall not affect the test result unless otherwise specifically stated in the test case.
+
+## A.3.7D NE-DC test setup
+
+### A.3.7D.1 Introduction
+
+### A.3.7D.2 E-UTRAN Serving Cell Parameters
+
+#### A.3.7D.2.1 E-UTRAN Serving Cell Parameters for Tests with NR Cell(s) in FR1
+
+The parameters are same as specified in clause A.3.7.2.1.
+
+#### A.3.7D.2.2 E-UTRAN Serving Cell Parameters for Tests with NR Cell(s) in FR2
+
+The parameters are same as specified in clause A.3.7.2.2.
+
+## A.3.8 PRACH configurations
+
+### A.3.8.1 Introduction
+
+This clause provides the typical PRACH configurations used for RRM test cases defined in annex A. To note that for other parameters not listed in this clause, either it can be derived from the set up of each test or it is subjected to RAN5 specifications.
+
+### A.3.8.2 PRACH configurations in FR1
+
+#### A.3.8.2.1 FR1 PRACH configuration 1
+
+FR1 PRACH configuration 1 in this clause provides the typical PRACH configuration for SSB-based contention based random access in FR1.
+
+Table A.3.8.2.1-1: Parameters for FR1 PRACH configuration 1
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| msg1-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-OccasionAndCB-PreamblesPerSSB | oneFourth, n48 | OneFourth: 1 SSB associated with 4 RACH occasions n48: 48 contention based preambles per SSB |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| rsrp-ThresholdSSB | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| ra-ContentionResolutionTimer | sf48 | 48 sub-frames |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| ra-ResponseWindow | sl10 | 10 slots |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.8.2.2 FR1 PRACH configuration 2
+
+FR1 PRACH configuration 2 in this clause provides the typical PRACH configuration for SSB based non-contention based random access in FR1.
+
+Table A.3.8.2.2-1: Parameters for FR1 PRACH configuration 2
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| msg1-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| ra-ResponseWindow | sl10 | 10 slots |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| ssb-ResourceList | ra-PreambleIndex = 40 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE doesn’t use this field if is transmitting CFRA to convey BFR. |
+| BFR-SSB-Resource | ra-PreambleIndex = 40 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE uses this field only if is transmitting CFRA to convey BFR |
+| ra-ssb-OccasionMaskIndex | 1 | PRACH occasion index 1 is allowed |
+| rsrp-ThresholdSSB | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.8.2.3 FR1 PRACH configuration 3
+
+FR1 PRACH configuration 3 in this clause provides the typical PRACH configuration for CSI-RS based non-contention based random access in FR1.
+
+Table A.3.8.2.3-1: Parameters for FR1 PRACH configuration 3
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| msg1-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| ra-ResponseWindow | sl10 | 10 slots |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| csirs-ResourceList | ra-PreambleIndex = 40 | Associated with CSI-RS configured |
+| ra-OccasionList | 1 | RA occasions allowed corresponding to CSI-RS |
+| rsrp-ThresholdCSI-RS | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.8.2.4 FR1 PRACH configuration 4
+
+FR1 PRACH configuration 4 in this clause provides the PRACH configuration for CSI-RS based non-contention based random access in FR1 to convey BFR.
+
+Table A.3.8.2.4-1: Parameters for FR1 PRACH configuration 4
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n200 | Max number of RA preamble transmission performed before declaring a failure is 200 |
+| ra-ResponseWindow | sl1 | 1 slot |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 93 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| BFR-CSIRS-Resource | ra-PreambleIndex = 40 | Associated with CSI-RS configured |
+| ra-OccasionList | 1 | RA occasions allowed corresponding to CSI-RS |
+| rsrp-ThresholdSSB | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.8.2.5 FR1 PRACH configuration 5
+
+FR1 PRACH configuration 5 in this clause provides the typical PRACH configuration for LTM early UL synchronization on candidate cell in FR1.
+
+Table A.3.8.2.5-1: Parameters for FR1 PRACH configuration 5
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| msg1-FrequencyStart | 0 |  |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 |  |
+| powerRampingStep | dB2 |  |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ltm-prach-SubcarrierSpacing | Same as UL carrier SCS |  |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.8.2.6 FR1 PRACH configuration 6
+
+FR1 PRACH configuration 6 in this clause provides the typical PRACH configuration for SSB-based contention free random access in FR1.
+
+Table A.3.8.2.6-1: Parameters for FR1 PRACH configuration 6
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| msg1-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-OccasionAndCB-PreamblesPerSSB | oneFourth, n16 | OneFourth: 1 SSB associated with 4 RACH occasions n16: 16 contention based preambles per SSB |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| rsrp-ThresholdSSB | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| ra-ContentionResolutionTimer | sf48 | 48 sub-frames |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| ra-ResponseWindow | sl10 | 10 slots |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+### A.3.8.3 PRACH configurations in FR2
+
+#### A.3.8.3.1 FR2 PRACH configuration 1
+
+FR2 PRACH configuration 1 in this clause provides the typical PRACH configuration for SSB-based contention based random access in FR2.
+
+Table A.3.8.3.1-1: Parameters for FR2 PRACH configuration 1
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 190 | Preamble Format C2, with 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-4 in TS 38.211 [6]. |
+| msg1-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-OccasionAndCB-PreamblesPerSSB | oneFourth, n48 | OneFourth: 1 SSB associated with 4 RACH occasions n48: 48 contention based preambles per SSB |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| rsrp-ThresholdSSB | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| ra-ContentionResolutionTimer | sf48 | 48 sub-frames |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| ra-ResponseWindow | sl10 | 10 slots |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.8.3.2 FR2 PRACH configuration 2
+
+FR2 PRACH configuration 2 in this clause provides the typical PRACH configuration for SSB based non-contention based random access in FR2.
+
+Table A.3.8.3.2-1: Parameters for FR2 PRACH configuration 2
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 190 | Preamble Format C2, with 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-4 in TS 38.211 [6]. |
+| msg1-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| ra-ResponseWindow | sl10 | 10 slots |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| ssb-ResourceList | ra-PreambleIndex = 40 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE doesn’t use this field if is transmitting CFRA to convey BFR. |
+| BFR-SSB-Resource | ra-PreambleIndex = 40 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE uses this field only if is transmitting CFRA to convey BFR |
+| ra-ssb-OccasionMaskIndex | 1 | PRACH occasion index 1 is allowed |
+| rsrp-ThresholdSSB | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.8.3.3 FR2 PRACH configuration 3
+
+FR2 PRACH configuration 3 in this clause provides the typical PRACH configuration for CSI-RS based non-contention based random access in FR2.
+
+| Table A.3.8.3.3-1: Parameters for FR2 PRACH configuration 3Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 190 | Preamble Format C2, with 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-4 in TS 38.211 [6]. |
+| msg1-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random acces |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| ra-ResponseWindow | sl10 | 10 slots |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| csirs-ResourceList | ra-PreambleIndex = 40 | Associated with CSI-RS configured |
+| ra-OccasionList | 1 | RA occasions allowed corresponding to CSI-RS |
+| rsrp-ThresholdCSI-RS | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.8.3.4 FR2 PRACH configuration 4
+
+FR2 PRACH configuration 4 in this clause provides the PRACH configuration for CSI-RS based non-contention based random access in FR2 to convey BFR.
+
+Table A.3.8.3.4-1: Parameters for FR2 PRACH configuration 4
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 190 | Preamble Format C2, with 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-4 in TS 38.211 [6]. |
+| msg1-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n200 | Max number of RA preamble transmission performed before declaring a failure is 200. |
+| ra-ResponseWindow | sl40 | 40 slots |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| BFR-CSIRS-Resource | ra-PreambleIndex = 40 | Associated with CSI-RS configured |
+| ra-OccasionList | 1 | RA occasions allowed corresponding to CSI-RS |
+| rsrp-ThresholdSSB | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.8.3.5 FR2 PRACH configuration 5
+
+FR2 PRACH configuration 5 in this clause provides the typical PRACH configuration for LTM early UL synchronization on candidate cell in FR2.
+
+Table A.3.8.3.5-1: Parameters for FR2 PRACH configuration 5
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 190 | Preamble Format C2, with 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-4 in TS 38.211 [6] |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| msg1-FrequencyStart | 0 |  |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 |  |
+| powerRampingStep | dB2 |  |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ltm-prach-SubcarrierSpacing | Same as UL carrier SCS |  |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.8.3.6 FR2 PRACH configuration 6
+
+FR2 PRACH configuration 6 in this clause provides the typical PRACH configuration for SSB-based contention free random access in FR2.
+
+Table A.3.8.3.6-1: Parameters for FR2 PRACH configuration 6
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 190 | Preamble Format C2, with 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-4 in TS 38.211 [6]. |
+| msg1-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-OccasionAndCB-PreamblesPerSSB | oneFourth, n16 | OneFourth: 1 SSB associated with 4 RACH occasions n16: 16 contention based preambles per SSB |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| rsrp-ThresholdSSB | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| ra-ContentionResolutionTimer | sf48 | 48 sub-frames |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| ra-ResponseWindow | sl10 | 10 slots |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+## A.3.8A PRACH configurations under CCA
+
+### A.3.8A.1 Introduction
+
+This clause provides the typical PRACH configurations used for RRM test cases defined in annex A. To note that for other parameters not listed in this clause, either it can be derived from the set up of each test or it is subjected to RAN5 specifications.
+
+### A.3.8A.2 PRACH configurations in FR1
+
+#### A.3.8A.2.1 FR1 PRACH configuration 1 under CCA
+
+FR1 PRACH configuration 1 under CCA in this clause provides the typical PRACH configuration for SSB-based contention based random access in FR1.
+
+Table A.3.8A.2.1-1: Parameters for FR1 PRACH configuration 1 under CCA
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| msg1-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-OccasionAndCB-PreamblesPerSSB | oneFourth, n48 | OneFourth: 1 SSB associated with 4 RACH occasions n48: 48 contention based preambles per SSB |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| rsrp-ThresholdSSB | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| ra-ContentionResolutionTimer | sf48 | 48 sub-frames |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-114 | Increased by 6 dB compared with FR1 PRACH configuration 1 for random access test with UL CCA failures. |
+| preambleTransMax | n20 | Max number of RA preamble transmission performed before declaring a failure is 20 to account for CCA failures |
+| ra-ResponseWindow | Sl20 | 20 slots |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.8A.2.2 FR1 PRACH configuration 2 under CCA
+
+FR1 PRACH configuration 2 under CCA in this clause provides the typical PRACH configuration for SSB based non-contention based random access in FR1.
+
+Table A.3.8A.2.2-1: Parameters for FR1 PRACH configuration 2 under CCA
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| msg1-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| prach-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| msg1-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| powerRampingStep | dB2 |  |
+| preambleReceivedTargetPower | dBm-114 | Increased by 6 dB compared with FR1 PRACH configuration 2 for random access test with UL CCA failures. |
+| preambleTransMax | n20 | Max number of RA preamble transmission performed before declaring a failure is 20 to account for CCA failures |
+| ra-ResponseWindow | sl20 | 20 slots |
+| zeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| ssb-ResourceList | ra-PreambleIndex = 50 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE doesn’t use this field if is transmitting CFRA to convey BFR. |
+| BFR-SSB-Resource | ra-PreambleIndex = 50 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE uses this field only if is transmitting CFRA to convey BFR |
+| ra-ssb-OccasionMaskIndex | 1 | PRACH occasion index 1 is allowed |
+| rsrp-ThresholdSSB | RSRP_51 | The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]. |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+## A.3.9 BWP configurations
+
+### A.3.9.1 Introduction
+
+This clause provides the typical BWP configurations used for RRM test cases defined in annex A. For downlink BWP, both initial BWP and dedicated BWP configurations are specified in clause A.3.9.2 and for uplink BWP, both initial BWP and dedicated BWP configurations are specified in clause A.3.9.3. To note that for other parameters not listed in this clause, either it can be derived from the set up of each test or it is subjected to RAN5 specifications.
+
+### A.3.9.2 Downlink BWP configurations
+
+#### A.3.9.2.1 Initial BWP
+
+Table A.3.9.2.1-1: Downlink BWP patterns for initial BWP configuration
+
+| BWP Parameters | Unit | Values |  |  |
+| --- | --- | --- | --- | --- |
+| Reference BWP |  | DLBWP.0.1 | DLBWP.0.2 |  |
+| Starting PRB index |  | 0 | RBc Note 1 |  |
+| Bandwidth | PRB | Same as RF channel defined in each test | same as RMSI CORESET (CORESET #0) defined in each test Note 2 |  |
+| NOTE 1: RBc is the lowest PRB index to guarantee the BWP including CORESET #0 which is defined in clause A.3.1.2.Note 2: In case CORESET#0 and SSBs defined in the test do not completely fit into the bandwidth of the reference BWP bandwidth, the latter one is extended to the next smallest size which can fully accommodate the respective CORESET#0 and SSBs.. |  |  |  |  |
+
+#### A.3.9.2.2 Dedicated BWP
+
+Table A.3.9.2.2-1: Downlink BWP patterns for dedicated BWP configuration
+
+| BWP Parameters | Unit | Values |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference BWP |  | DLBWP.1.1 | DLBWP.1.2 | DLBWP.1.3 | DLBWP.1.4 | DLBWP.1.5 | DLBWP.1.6 | DLBWP.1.7 |
+| Starting PRB index |  | 0 | RBb Note 1 | RBa Note 2 | 0 | RBb Note 1 | RBa Note 2 | RBc Note 3 |
+| Bandwidth | PRB | Same as RF channel defined in each test | 25 for SSB SCS = 15kHz,51 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz48 for SSB SCS = 240kHz | 25 for SSB SCS = 15kHz,51 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz48 for SSB SCS = 240kHz | 24 for SSB SCS = 120kHz24 for SSB SCS = 240kHz | 24 for SSB SCS = 120kHz24 for SSB SCS = 240kHz | 24 for SSB SCS = 120kHz24 for SSB SCS = 240kHz | 25 for SSB SCS = 15kHz,51 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz48 for SSB SCS = 240kHz |
+| NOTE 1: RBb is the lowest PRB index to guarantee the BWP not fully overlapped with SSB PRB index (RBJ, PRBJ+1,.…, PRBJ+19) which is defined in clause A.3.10.NOTE 2: RBa is the lowest PRB index to guarantee the BWP including SSB PRB index (RBJ, PRBJ+1,.…, PRBJ+19) which is defined in clause A.3.10.NOTE 3: RBc is the PRB index having an offset of 6 PRBs with respect to the start of SSB PRB index (RBJ, PRBJ+1,.…, PRBJ+19) which is defined in clause A.3.10. |  |  |  |  |  |  |  |  |
+
+### A.3.9.3 Uplink BWP configurations
+
+#### A.3.9.3.1 Initial BWP
+
+Table A.3.9.3.1-1: Uplink BWP patterns for initial BWP configuration
+
+| BWP Parameters | Unit | Values |  |  |
+| --- | --- | --- | --- | --- |
+| Reference BWP |  | ULBWP.0.1 | ULBWP.0.2 |  |
+| Starting PRB index |  | 0 | RBc Note 1 |  |
+| Bandwidth | PRB | Same as RF channel defined in each test | same as RMSI CORESET (CORESET #0) defined in each test Note 2 |  |
+| NOTE 1: RBc is same as PRBc for DLBWP.0.2 as defined in table A.3.9.2.1-1.Note 2: In case CORESET#0 and SSBs defined in the test do not completely fit into the bandwidth of the reference BWP bandwidth, the latter one is extended to the next smallest size which can fully accommodate the respective CORESET#0 and SSBs. |  |  |  |  |
+
+#### A.3.9.3.2 Dedicated BWP
+
+Table A.3.9.3.2-1: Uplink BWP patterns for dedicated BWP configuration
+
+| BWP Parameters | Unit | Values |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference BWP |  | ULBWP.1.1 | ULBWP.1.2 | ULBWP.1.3 | ULBWP.1.4 | ULBWP.1.5 | ULBWP.1.6 | ULBWP.1.7 |
+| Starting PRB index |  | 0 | RBb Note 1 | RBa Note 2 | 0 | RBb Note 1 | RBa Note 2 | RBc Note 3 |
+| Bandwidth | PRB | Same as RF channel defined in each test | 25 for SSB SCS = 15kHz,51 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz48 for SSB SCS = 240kHz | 25 for SSB SCS = 15kHz,51 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz48 for SSB SCS = 240kHz | 24 for SSB SCS = 120kHz24 for SSB SCS = 240kHz | 24 for SSB SCS = 120kHz24 for SSB SCS = 240kHz | 24 for SSB SCS = 120kHz24 for SSB SCS = 240kHz | 25 for SSB SCS = 15kHz,51 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz48 for SSB SCS = 240kHz |
+| NOTE 1: RBb is same as PRBb for DLBWP.1.2 as defined in table A.3.9.2.2-1.NOTE 2: RBa is same as PRBa for DLBWP.1.3 as defined in table A.3.9.2.2-1.NOTE 3: RBc is same as PRBc for DLBWP.1.7 as defined in table A.3.9.2.2-1 |  |  |  |  |  |  |  |  |
+
+## A.3.9A BWP configurations for RedCap
+
+### A.3.9A.1 Introduction
+
+This clause provides the typical BWP configurations used for RedCap RRM test cases defined in annex A. For downlink BWP, RedCap dedicated BWP configurations are specified in clause A.3.9A.2 and for uplink BWP, RedCap dedicated BWP configurations are specified in clause A.3.9A.3. To note that for other parameters not listed in this clause, either it can be derived from the set up of each test or it is subjected to RAN5 specifications.
+
+### A.3.9A.2 Downlink BWP configurations
+
+#### A.3.9A.2.1 Dedicated BWP
+
+Table A.3.9A.2.2-1: Downlink BWP patterns for RedCap dedicated BWP configuration
+
+| BWP Parameters | Unit | Values |  |  |
+| --- | --- | --- | --- | --- |
+| Reference BWP |  | DLBWP.1.1 RedCap | DLBWP.1.2 RedCap | DLBWP.1.3 RedCap |
+| Starting PRB index |  | RBa Note 1 | RBb Note 2 | RBc Note 3 |
+| Bandwidth | PRB | 25 for SSB SCS = 15kHz,25 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz16 for SSB SCS = 240kHz | 25 for SSB SCS = 15kHz,25 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz16 for SSB SCS = 240kHz | 25 for SSB SCS = 15kHz,25 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz16 for SSB SCS = 240kHz |
+| NOTE 1: RBa is the lowest PRB index to guarantee the BWP including SSB PRB index (RBJ, PRBJ+1,.…, PRBJ+19) which is defined in clause A.3.10.NOTE 2: RBb is the lowest PRB index to guarantee the BWP not fully overlapped with SSB PRB index (RBJ, PRBJ+1,.…, PRBJ+19) which is defined in clause A.3.10.NOTE 3: RBc is the lowest PRB index to guarantee the BWP including SSB PRB index (RBJ, PRBJ+1,.…, PRBJ+19) which is defined in clause A.3.10. |  |  |  |  |
+
+### A.3.9A.3 Uplink BWP configurations
+
+#### A.3.9A.3.1 Dedicated BWP
+
+Table A.3.9A.3.1-1: Uplink BWP patterns for RedCap dedicated BWP configuration
+
+| BWP Parameters | Unit | Values |  |  |
+| --- | --- | --- | --- | --- |
+| Reference BWP |  | ULBWP.1.1 RedCap | ULBWP.1.2 RedCap | ULBWP.1.3 RedCap |
+| Starting PRB index |  | RBa Note 1 | RBb Note 2 | RBc Note 3 |
+| Bandwidth | PRB | 25 for SSB SCS = 15kHz,25 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz16 for SSB SCS = 240kHz | 25 for SSB SCS = 15kHz,25 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz16 for SSB SCS = 240kHz | 25 for SSB SCS = 15kHz,25 for SSB SCS = 30kHz,32 for SSB SCS = 120kHz16 for SSB SCS = 240kHz |
+| NOTE 1: RBa is the same as PRBa for DLBWP.1.1 RedCap.NOTE 2: RBb is the same as PRBb for DLBWP.1.2 RedCap.NOTE 3: RBc is the same as PRBc for DLBWP.1.3 RedCap. |  |  |  |  |
+
+## A.3.10 SSB Configurations
+
+### A.3.10.1 SSB Configurations for FR1
+
+#### A.3.10.1.1 SSB pattern 1 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10.1.1-1: SSB.1 FR1: SSB Pattern 1 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+A.3.10.1.2 SSB pattern 2 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10.1.2-1: SSB.2 FR1: SSB Pattern 2 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 40 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 |
+| Slot numbers containing SSB Note 3 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves |  |
+
+A.3.10.1.3 SSB pattern 3 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10.1.3-1: SSB.3 FR1: SSB Pattern 3 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 10 MHz |  |
+| SSB SCS | 15 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSB Note 2 | 2-5 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104  [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+A.3.10.1.4 SSB pattern 4 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10.1.4-1: SSB.4 FR1: SSB Pattern 4 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 40 MHz |  |
+| SSB SCS | 30 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 | 8-11 |
+| Slot numbers containing SSB Note 3 | 0 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.1.5 SSB pattern 5 in FR1: SSB allocation for SSB SCS=15 kHz starting from odd SFN in 10 MHz
+
+Table A.3.10.1.5-1: SSB.5 FR1: SSB Pattern 5 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 1 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.1.6 SSB pattern 6 in FR1: SSB allocation for SSB SCS=30 kHz starting from odd SFN in 40 MHz
+
+Table A.3.10.1.6-1: SSB.6 FR1: SSB Pattern 6 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 40 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 |
+| Slot numbers containing SSB Note 3 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 1 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.1.7 SSB pattern 7 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10.1.7-1: SSB.7 FR1: SSB Pattern 7 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 10 MHz |  |
+| SSB SCS | 15 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 2 | 3 |
+| Symbol numbers containing SSB Note 2 | 2-5 | 8-11 |
+| Slot numbers containing SSB Note 2 | 1 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104  [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.1.8 SSB pattern 8 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10.1.8-1: SSB.8 FR1: SSB Pattern 8 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 40 MHz |  |
+| SSB SCS | 30 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 2 | 3 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 | 8-11 |
+| Slot numbers containing SSB Note 3 | 1 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.1.9 SSB pattern 9 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10.1.9-1: SSB.9 FR1: SSB Pattern 9 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 80 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.1.10 SSB pattern 10 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10.1.10-1: SSB.10 FR1: SSB Pattern 10 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 40 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 80 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 |
+| Slot numbers containing SSB Note 3 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves |  |
+
+#### A.3.10.1.11 SSB pattern 11 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10.1.11-1: SSB.11 FR1: SSB Pattern 11 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 10 MHz |  |
+| SSB SCS | 15 kHz |  |
+| SSB periodicity (TSSB) | 80 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSB Note 2 | 2-5 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.1.12 SSB pattern 12 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10.1.12-1: SSB.12 FR1: SSB Pattern 12 for SSB SCS=30 kHz in 20 MHz channel
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 20 MHz |  |
+| SSB SCS | 30 kHz |  |
+| SSB periodicity (TSSB) | 80 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 | 8-11 |
+| Slot numbers containing SSB Note 3 | 0 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.1.13 SSB pattern 13 in FR1: SSB allocation for SSB SCS=15 kHz in 3 MHz
+
+Table A.3.10.1.13-1: SSB.13 FR1: SSB Pattern 1 for SSB SCS=15 kHz in 3 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 3 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+11)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.1.14 SSB pattern 14 in FR1: SSB allocation for SSB SCS=15 kHz with 160 ms periodicity in 10MHz
+
+Table A.3.10.1.14-1: SSB.14 FR1: SSB Pattern 14 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 160 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.1.15 SSB pattern 15 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10.1.15-1: SSB.15 FR1: SSB Pattern 15 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 10 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.1.16 SSB pattern 16 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10.1.16-1: SSB.16 FR1: SSB Pattern 16 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 1 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.1.17 SSB pattern 17 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10.1.17-1: SSB.17 FR1: SSB Pattern 17 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 40 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.1.18 SSB pattern 18 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10.1.18-1: SSB.18 FR1: SSB Pattern 18 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 40 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 10 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 |
+| Slot numbers containing SSB Note 3 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves |  |
+
+#### A.3.10.1.19 SSB pattern 19 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10.1.19-1: SSB.10 FR1: SSB Pattern 19 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 40 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 |
+| Slot numbers containing SSB Note 3 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 1 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves |  |
+
+#### A.3.10.1.20 SSB pattern 20 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10.1.20-1: SSB.20 FR1: SSB Pattern 20 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 40 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.1.21 SSB pattern 21 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10.1.21-1: SSB.21 FR1: SSB Pattern 21 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 80 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+A.3.10.1.22 SSB pattern 22 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10.1.22-1: SSB.22 FR1: SSB Pattern 22 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 40 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 80 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 |
+| Slot numbers containing SSB Note 3 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves |  |
+
+#### A.3.10.1.23 SSB pattern 23 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10.1.23-1: SSB.23 FR1: SSB Pattern 23 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 5 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.1.24 SSB pattern 24 in FR1: SSB allocation for SSB SCS=30 kHz in 100 MHz
+
+Table A.3.10.1.24-1: SSB.24 FR1: SSB Pattern 24 for SSB SCS=30 kHz in 100 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 |
+| Slot numbers containing SSB Note 3 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within a single DL subband bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+### A.3.10.2 SSB Configurations for FR2
+
+#### A.3.10.2.1 SSB pattern 1 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.1-1: SSB.1 FR2: SSB Pattern 1 for SSB SCS = 120 kHz in 100 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 100 MHz |  |
+| SSB SCS | 120 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSBs Note 2 | 4-7 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.2.2 SSB pattern 2 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.2-1: SSB.2 FR2: SSB Pattern 2 for SSB SCS = 240 kHz in 100 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 100 MHz |  |
+| SSB SCS | 240 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSBs Note 2 | 8-11 | 12-13, 0-1 |
+| Slot numbers containing SSB Note 2 | 0 | 0, 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.2.3 SSB pattern 3 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.3-1: SSB.3 FR2: SSB Pattern 3 for SSB SCS = 120 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 4-7 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves.NOTE 3: When this SSB pattern is applied in SBFD carrier, PRBs containing SSB can be configured in any frequency location within a single DL subband bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. |  |
+
+#### A.3.10.2.4 SSB pattern 4 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.4-1: SSB.4 FR2: SSB Pattern 4 for SSB SCS = 240 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 240 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.5 SSB pattern 5 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.5-1: SSB.5 FR2: SSB Pattern 5 for SSB SCS = 120 kHz in 100 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 100 MHz |  |
+| SSB SCS | 120 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 2 | 3 |
+| Symbol numbers containing SSBs Note 2 | 2-5 | 6-9 |
+| Slot numbers containing SSB Note 2 | 1 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.2.6 SSB pattern 6 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.6-1: SSB.6 FR2: SSB Pattern 6 for SSB SCS = 240 kHz in 100 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 100 MHz |  |
+| SSB SCS | 240 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 2 | 3 |
+| Symbol numbers containing SSBs Note 2 | 2-5 | 6-9 |
+| Slot numbers containing SSB Note 2 | 1 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.2.7 SSB pattern 7 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.7-1: SSB.7 FR2: SSB Pattern 7 for SSB SCS = 120 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 1 |
+| Symbol numbers containing SSBs Note 2 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.8 SSB pattern 8 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.8-1: SSB.8 FR2: SSB Pattern 8 for SSB SCS = 240 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 100 MHz |  |
+| SSB SCS | 240 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 1 |  |
+| SS/PBCH block index | 1 |  |
+| Symbol numbers containing SSBs Note 2 | 12-13 | 0-1 |
+| Slot numbers containing SSB Note 2 | 0 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.2.9 SSB pattern 9 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.9-1: SSB.9 FR2: SSB Pattern 9 for SSB SCS = 120 kHz in 100 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 100 MHz |  |
+| SSB SCS | 120 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 2 | 3 |
+| Symbol numbers containing SSBs Note 2 | 2-5 | 6-9 |
+| Slot numbers containing SSB Note 2 | 1 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.2.10 SSB pattern 10 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.10-1: SSB.10 FR2: SSB Pattern 10 for SSB SCS = 240 kHz in 100 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 100 MHz |  |
+| SSB SCS | 240 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 2 | 3 |
+| Symbol numbers containing SSBs Note 2 | 4-7 | 8-11 |
+| Slot numbers containing SSB Note 2 | 1 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+A.3.10.2.11 SSB pattern 11 in FR2: SSB allocation for SSB SCS=480 kHz in 400 MHz
+
+Table A.3.10.2.11-1: SSB.11 FR2: SSB Pattern 11 for SSB SCS = 480 kHz in 400 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 400 MHz |  |
+| SSB SCS | 480 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSBs Note 2 | 2-5 | 9-12 |
+| Slot numbers containing SSB Note 2 | 0 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+A.3.10.2.12 SSB pattern 12 in FR2: SSB allocation for SSB SCS=960 kHz in 400 MHz
+
+Table A.3.10.2.12-1: SSB.12 FR2: SSB Pattern 12 for SSB SCS = 960 kHz in 400 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 400 MHz |  |
+| SSB SCS | 960 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSBs Note 2 | 2-5 | 9-12 |
+| Slot numbers containing SSB Note 2 | 0 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+A.3.10.2.13 SSB pattern 13 in FR2: SSB allocation for SSB SCS=480 kHz in 400 MHz
+
+Table A.3.10.2.13-1: SSB.13 FR2: SSB Pattern 13 for SSB SCS = 480 kHz in 400 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 400 MHz |
+| SSB SCS | 480 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+A.3.10.2.14 SSB pattern 14 in FR2: SSB allocation for SSB SCS=960 kHz in 400 MHz
+
+Table A.3.10.2.14-1: SSB.14 FR2: SSB Pattern 14 for SSB SCS = 960 kHz in 400 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 400 MHz |
+| SSB SCS | 960 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+A.3.10.2.15 SSB pattern 15 in FR2: SSB allocation for SSB SCS=480 kHz in 400 MHz
+
+Table A.3.10.2.15-1: SSB.15 FR2: SSB Pattern 15 for SSB SCS = 480 kHz in 400 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 400 MHz |  |
+| SSB SCS | 480 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 2 | 3 |
+| Symbol numbers containing SSBs Note 2 | 2-5 | 9-12 |
+| Slot numbers containing SSB Note 2 | 1 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+A.3.10.2.16 SSB pattern 16 in FR2: SSB allocation for SSB SCS=960 kHz in 400 MHz
+
+Table A.3.10.2.16-1: SSB.16 FR2: SSB Pattern 16 for SSB SCS = 960 kHz in 400 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 400 MHz |  |
+| SSB SCS | 960 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 2 | 3 |
+| Symbol numbers containing SSBs Note 2 | 2-5 | 9-12 |
+| Slot numbers containing SSB Note 2 | 1 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+A.3.10.2.17 SSB pattern 17 in FR2: SSB allocation for SSB SCS=480 kHz in 400 MHz
+
+Table A.3.10.2.17-1: SSB.17 FR2: SSB Pattern 17 for SSB SCS = 480 kHz in 400 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 400 MHz |
+| SSB SCS | 480 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 1 |
+| Symbol numbers containing SSBs Note 2 | 9-12 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+A.3.10.2.18 SSB pattern 18 in FR2: SSB allocation for SSB SCS=960 kHz in 400 MHz
+
+Table A.3.10.2.18-1: SSB.18 FR2: SSB Pattern 18 for SSB SCS = 960 kHz in 400 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 400 MHz |
+| SSB SCS | 960 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 1 |
+| Symbol numbers containing SSBs Note 2 | 9-12 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.19 SSB pattern 19 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10B.2.2-1: SSB.19 FR2: SSB Pattern 17 for SSB SCS = 120 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 40 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 4-7 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.20 SSB pattern 20 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.20-1: SSB.20 FR2: SSB Pattern 18 for SSB SCS = 240 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 240 kHz |
+| SSB periodicity (TSSB) | 40 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.21 SSB pattern 21 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.21-1: SSB.21 FR2: SSB Pattern 19 for SSB SCS = 120 kHz in 100 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 100 MHz |  |
+| SSB SCS | 120 kHz |  |
+| SSB periodicity (TSSB) | 80 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSBs Note 2 | 4-7 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.2.22 SSB pattern 22 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.22-1: SSB.22 FR2: SSB Pattern 20 for SSB SCS = 240 kHz in 100 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 100 MHz |  |
+| SSB SCS | 240 kHz |  |
+| SSB periodicity (TSSB) | 80 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSBs Note 2 | 8-11 | 12-13, 0-1 |
+| Slot numbers containing SSB Note 2 | 0 | 0, 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.2.23 SSB pattern 23 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.23-1: SSB.23 FR2: SSB Pattern 21 for SSB SCS = 120 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 40 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 1 |
+| Symbol numbers containing SSBs Note 2 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.24 SSB pattern 24 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.24-1: SSB.24 FR2: SSB Pattern 22 for SSB SCS = 240 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 100 MHz |  |
+| SSB SCS | 240 kHz |  |
+| SSB periodicity (TSSB) | 40 ms |  |
+| Number of SSBs per SS-burst | 1 |  |
+| SS/PBCH block index | 1 |  |
+| Symbol numbers containing SSBs Note 2 | 12-13 | 0-1 |
+| Slot numbers containing SSB Note 2 | 0 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10.2.25 SSB pattern 25 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.25-1: SSB.25 FR2: SSB Pattern 17 for SSB SCS = 120 kHz in 100 MHz channel with 3 SSBs per SS-burst
+
+| SSB Parameters | Values |  |  |  |
+| --- | --- | --- | --- | --- |
+| Channel bandwidth | 100 MHz |  |  |  |
+| SSB SCS | 120 kHz |  |  |  |
+| SSB periodicity (TSSB) | 20 ms |  |  |  |
+| Number of SSBs per SS-burst | 3 |  |  |  |
+| SS/PBCH block index | 0 | 1 | 2 | 3 |
+| Symbol numbers containing SSBs Note 2 | 4-7 | 8-11 | 2-5 | 6-9 |
+| Slot numbers containing SSB Note 2 | 0 | 0 | 1 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |  |  |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |  |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |  |  |
+
+#### A.3.10.2.26 SSB pattern 26 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.26-1: SSB.26 FR2: SSB Pattern 26 for SSB SCS = 120 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 80 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 4-7 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10ms)/10ms) = 0 |
+| RB numbers containing SSBs within channel BW | (RBJ, RBJ+1,.…, RBJ+19)Note 1 |
+| Note 1: RBs containing SSB can be configured in any frequency location within the associated bandwidth part except the RBs for allowed synchronization raster defined in TS 38.104 [13].Note 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.27 SSB pattern 27 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.27-1: SSB. 27 FR2: SSB Pattern 27 for SSB SCS = 240 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 240 kHz |
+| SSB periodicity (TSSB) | 80 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10ms)/10ms) = 0 |
+| RB numbers containing SSBs within channel BW | (RBJ, RBJ+1,.…, RBJ+39)Note 1 |
+| Note 1: RBs containing SSB can be configured in any frequency location within the associated bandwidth part except the RBs for allowed synchronization raster defined in TS 38.104 [13]. Note 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.28 SSB pattern 28 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.28-1: SSB.28 FR2: SSB Pattern 28 for SSB SCS = 120 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 10 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 4-7 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.29 SSB pattern 29 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.29-1: SSB.29 FR2: SSB Pattern 29 for SSB SCS = 120 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 4-7 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 1 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.30 SSB pattern 30 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10.2.30-1: SSB.30 FR2: SSB Pattern 30 for SSB SCS = 120 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 40 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 4-7 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 1 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.31 SSB pattern 31 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.31-1: SSB.31 FR2: SSB Pattern 31 for SSB SCS = 240 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 240 kHz |
+| SSB periodicity (TSSB) | 10 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.32 SSB pattern 32 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.32-1: SSB.32 FR2: SSB Pattern 32 for SSB SCS = 240 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 240 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 1 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.33 SSB pattern 33 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10.2.33-1: SSB.33 FR2: SSB Pattern 33 for SSB SCS = 240 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 240 kHz |
+| SSB periodicity (TSSB) | 40 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 1 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+39)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10.2.34 SSB pattern 34 in FR2: SSB allocation for SSB SCS=120 kHz in 200 MHz
+
+Table A.3.10.2.34-1: SSB.34 FR2: SSB Pattern 34 for SSB SCS = 120 kHz in 200 MHz channel with 2 SSBs per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 200 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 4-7 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within a single DL subband bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+## A.3.10A SSB Configurations under CCA
+
+### A.3.10A.1 SSB Configurations under CCA for FR1
+
+#### A.3.10A.1.1 SSB pattern 1 under CCA for semi-static channel access: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10A.1.1-1: SSB.1 CCA: SSB Pattern 1 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 40 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSB indexes per SS-burst ($ N_{SSB}^{QCL}$) | 1 |
+| Number of SS/PBCH block candidates per SSB index | 1 |
+| SS/PBCH block candidate position | 0 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves |  |
+
+#### A.3.10A.1.2 SSB pattern 2 under CCA for dynamic channel access: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10A.1.2-1: SSB.2 CCA: SSB Pattern 2 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 40 MHz |  |
+| SSB SCS | 30 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSB indexes per SS-burst ($ N_{SSB}^{QCL}$) | 1 |  |
+| Number of SS/PBCH block candidates per SSB index | 2 |  |
+| SS/PBCH block candidate position | 0 | 2 |
+| SS/PBCH block index | 0 | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves |  |  |
+
+#### A.3.10A.1.3 SSB pattern 3 under CCA for semi-static channel access: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10.1.3-1: SSB.3 CCA: SSB Pattern 3 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 40 MHz |  |
+| SSB SCS | 30 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSB indexes per SS-burst ($ N_{SSB}^{QCL}$) | 2 |  |
+| Number of SS/PBCH block candidates per SSB index | 1 |  |
+| SS/PBCH block candidate position | 0 | 1 |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSB Note 2 | 2-5 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10A.1.4 SSB pattern 4 under CCA for dynamic channel access: SSB allocation for SSB SCS=30 kHz in 40 MHz
+
+Table A.3.10.1.4-1: SSB.4 CCA: SSB Pattern 4 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |  |  |  |
+| --- | --- | --- | --- | --- |
+| Channel bandwidth | 40 MHz |  |  |  |
+| SSB SCS | 30 kHz |  |  |  |
+| SSB periodicity (TSSB) | 20 ms |  |  |  |
+| Number of SSB indexes per SS-burst ($ N_{SSB}^{QCL}$) | 2 |  |  |  |
+| Number of SS/PBCH block candidates per SSB index | 2 |  |  |  |
+| SS/PBCH block candidate position | 0 | 2 | 1 | 3 |
+| SS/PBCH block index | 0 | 0 | 1 | 1 |
+| Symbol numbers containing SSB Note 2 | 2-5 | 2-5 | 8-11 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 | 1 | 0 | 1 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |  |  |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |  |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |  |  |
+
+## A.3.10B SSB Configurations for RedCap
+
+### A.3.10B.1 SSB Configurations for FR1
+
+#### A.3.10B.1.1 SSB pattern 1 for RedCap in FR1: SSB allocation for SSB SCS=30 kHz in 20 MHz
+
+Table A.3.10B.1.1-1: SSB.1 RedCap FR1: SSB Pattern 1 for SSB SCS=30 kHz in 20 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 20 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 |
+| Slot numbers containing SSB Note 3 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves |  |
+
+#### A.3.10B.1.2 SSB pattern 2 for RedCap in FR1: SSB allocation for SSB SCS=30 kHz in 20 MHz
+
+Table A.3.10B.1.2-1: SSB.2 RedCap FR1: SSB Pattern 2 for SSB SCS=30 kHz in 20 MHz channel
+
+| SSB Parameters | Values |  |
+| --- | --- | --- |
+| Channel bandwidth | 20 MHz |  |
+| SSB SCS | 30 kHz |  |
+| SSB periodicity (TSSB) | 20 ms |  |
+| Number of SSBs per SS-burst | 2 |  |
+| SS/PBCH block index | 0 | 1 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 | 8-11 |
+| Slot numbers containing SSB Note 3 | 0 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |  |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |  |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |  |
+
+#### A.3.10B.1.3 SSB pattern 3 for RedCap in FR1: SSB allocation for SSB SCS=30 kHz starting from odd SFN in 20 MHz
+
+Table A.3.10B.1.3-1: SSB.3 RedCap FR1: SSB Pattern 3 for SSB SCS=30 kHz in 20 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 20 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 |
+| Slot numbers containing SSB Note 3 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 1 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10B.1.4 SSB pattern 4 for RedCap in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10B.1.4-1: SSB.4 RedCap FR1: SSB Pattern 4 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10B.1.5 SSB pattern 5 for RedCap in FR1: SSB allocation for SSB SCS=30 kHz in 20 MHz
+
+Table A.3.10B.1.5-1: SSB.5 RedCap FR1: SSB Pattern 5 for SSB SCS=30 kHz in 20 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 20 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 |
+| Slot numbers containing SSB Note 3 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves |  |
+
+#### A.3.10B.1.6 SSB pattern 6 for RedCap in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz
+
+Table A.3.10B.1.6-1: SSB.6 RedCap FR1: SSB Pattern 6 for SSB SCS=15 kHz in 10 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 10 MHz |
+| SSB SCS | 15 kHz |
+| SSB periodicity (TSSB) | 80 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 2 | 2-5 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10B.1.7 SSB pattern 7 for RedCap in FR1: SSB allocation for SSB SCS=30 kHz in 20 MHz
+
+Table A.3.10B.1.7-1: SSB.7 RedCap FR1: SSB Pattern 7 for SSB SCS=30 kHz in 40 MHz channel
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 20 MHz |
+| SSB SCS | 30 kHz |
+| SSB periodicity (TSSB) | 80 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSB Note 3 | 4-7 or 2-5 Note 2 |
+| Slot numbers containing SSB Note 3 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSB within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13].NOTE 2: Symbols 4-7 is chosen, if the SSB pattern Case B should be used for the current band as indicated by table 5.4.3.3-1 of TS 38.104 [13]; Otherwise, symbol 2-5 is chosen.NOTE 3: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves |  |
+
+### A.3.10B.2 SSB Configurations for FR2
+
+#### A.3.10B.2.1 SSB pattern 1 for RedCap in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10B.2.1-1: SSB.1 RedCap FR2: SSB Pattern 1 for SSB SCS = 120 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 20 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 4-7 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10B.2.2 SSB pattern 2 for RedCap in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10B.2.2-1: SSB.2 RedCap FR2: SSB Pattern 2 for SSB SCS = 120 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 40 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 4-7 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10B.2.3 SSB pattern 3 for RedCap in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz
+
+Table A.3.10B.2.3-1: SSB.3 RedCap FR2: SSB Pattern 3 for SSB SCS = 120 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 120 kHz |
+| SSB periodicity (TSSB) | 80 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 4-7 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10B.2.4 SSB pattern 4 for RedCap in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10B.2.4-1: SSB.4 RedCap FR2: SSB Pattern 4 for SSB SCS = 240 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 240 kHz |
+| SSB periodicity (TSSB) | 40 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+#### A.3.10B.2.5 SSB pattern 5 for RedCap in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz
+
+Table A.3.10B.2.5-1: SSB.5 RedCap FR2: SSB Pattern 5 for SSB SCS = 240 kHz in 100 MHz channel with 1 SSB per SS-burst
+
+| SSB Parameters | Values |
+| --- | --- |
+| Channel bandwidth | 100 MHz |
+| SSB SCS | 240 kHz |
+| SSB periodicity (TSSB) | 80 ms |
+| Number of SSBs per SS-burst | 1 |
+| SS/PBCH block index | 0 |
+| Symbol numbers containing SSBs Note 2 | 8-11 |
+| Slot numbers containing SSB Note 2 | 0 |
+| SFN containing SSB | SFN mod (max(TSSB,10 ms)/10 ms) = 0 |
+| PRB numbers containing SSBs within channel BW | (RBJ, PRBJ+1,.…, PRBJ+19)Note 1 |
+| NOTE 1: PRBs containing SSB can be configured in any frequency location within the associated bandwidth part except the PRBs for allowed synchronization raster defined in TS 38.104 [13]. NOTE 2: These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves. |  |
+
+## A.3.11 SMTC Configurations
+
+### A.3.11.1 SMTC pattern 1: SMTC period = 20 ms with SMTC duration = 1 ms
+
+Table A.3.11.1-1: SMTC.1: SMTC Pattern 1 for SMTC period = 20 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 20 ms |
+| SMTC offset | 0 ms |
+| SMTC duration | 1 ms |
+
+### A.3.11.2 SMTC pattern 2: SMTC period = 20 ms with SMTC duration = 5 ms
+
+Table A.3.11.2-1: SMTC.2: SMTC Pattern 2 for SMTC period = 20 ms and duration = 5 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 20 ms |
+| SMTC offset | 0 ms |
+| SMTC duration | 5 ms |
+
+### A.3.11.3 SMTC pattern 3: SMTC period = 160 ms with SMTC duration = 1 ms
+
+Table A.3.11.3-1: SMTC.3: SMTC Pattern 3 for SMTC period = 160 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 160 ms |
+| SMTC offset | 0 ms |
+| SMTC duration | 1 ms |
+
+### A.3.11.4 SMTC pattern 4: SMTC period = 20 ms with SMTC duration = 1 ms
+
+Table A.3.11.4-1: SMTC.4: SMTC Pattern 4 for SMTC period = 20 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 20 ms |
+| SMTC offset | 10 ms |
+| SMTC duration | 1 ms |
+
+### A.3.11.5 SMTC pattern 5: SMTC period = 20 ms with SMTC duration = 5 ms
+
+Table A.3.11.5-1: SMTC.5: SMTC Pattern 5 for SMTC period = 20 ms and duration = 5 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 20 ms |
+| SMTC offset | 10 ms |
+| SMTC duration | 5 ms |
+
+### A.3.11.6 SMTC pattern 6: SMTC period = 20 ms with SMTC duration = 5 ms
+
+Table A.3.11.6-1: SMTC.6: SMTC Pattern 6 for SMTC period = 20 ms and duration = 5 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 20 ms |
+| SMTC offset | 17 ms |
+| SMTC duration | 5 ms |
+
+### A.3.11.7 SMTC pattern 7: SMTC period = 20 ms with SMTC duration = 5 ms
+
+Table A.3.11.7-1: SMTC.7: SMTC Pattern 7 for SMTC period = 20 ms and duration = 5 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 20 ms |
+| SMTC offset | 5 ms |
+| SMTC duration | 5 ms |
+
+### A.3.11.8 SMTC pattern 8: SMTC period = 10 ms with SMTC duration = 1 ms
+
+Table A.3.11.8-1: SMTC.8: SMTC Pattern 8 for SMTC period = 10 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 10 ms |
+| SMTC offset | 0 ms |
+| SMTC duration | 1 ms |
+
+### A.3.11.9 SMTC pattern 9: SMTC period = 20 ms with SMTC duration = 1 ms
+
+Table A.3.11.9-1: SMTC.9: SMTC Pattern 6 for SMTC period = 20 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 20 ms |
+| SMTC offset | 13 ms |
+| SMTC duration | 1 ms |
+
+### A.3.11.10 SMTC pattern 10: SMTC period = 80 ms with SMTC duration = 1 ms
+
+Table A.3.11.10-1: SMTC.10: SMTC Pattern 10 for SMTC period = 80 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 80 ms |
+| SMTC offset | 0 ms |
+| SMTC duration | 1 ms |
+
+### A.3.11.11 SMTC pattern 11: SMTC period = 80 ms with SMTC duration = 5 ms
+
+Table A.3.11.11-1: SMTC.11: SMTC Pattern 11 for SMTC period = 80 ms and duration = 5 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 80 ms |
+| SMTC offset | 5 ms |
+| SMTC duration | 5 ms |
+
+### A.3.11.12 SMTC pattern 12: SMTC period = 20 ms with SMTC duration = 5 ms
+
+Table A.3.11.12-1: SMTC.12: SMTC Pattern 12 for SMTC period = 20 ms and duration = 4 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 20 ms |
+| SMTC offset | 4 ms |
+| SMTC duration | 5 ms |
+
+### A.3.11.13 SMTC pattern 13: SMTC period = 160 ms with SMTC duration = 1 ms
+
+Table A.3.11.13-1: SMTC.13: SMTC Pattern 13 for SMTC period = 160 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 160 ms |
+| SMTC offset | 10 ms |
+| SMTC duration | 1 ms |
+
+### A.3.11.14 SMTC pattern 14: SMTC period = 20 ms with SMTC duration = 1 ms
+
+Table A.3.11.14-1: SMTC.14: SMTC Pattern 14 for SMTC period = 20 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 20 ms |
+| SMTC offset | 5 ms |
+| SMTC duration | 1 ms |
+
+## A.3.11A SMTC Configurations for RedCap
+
+### A.3.11A.0 Introduction
+
+The SMTC configuration for RedCap can also be used in test case for non-RedCap.
+
+### A.3.11A.1 SMTC pattern 1 for RedCap: SMTC period = 40 ms with SMTC duration = 1 ms
+
+Table A.3.11A.1-1: SMTC.1 RedCap: SMTC Pattern 1 for SMTC period = 40 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 40 ms |
+| SMTC offset | 0 ms |
+| SMTC duration | 1 ms |
+
+### A.3.11A.2 SMTC pattern 2 for RedCap: SMTC period = 80 ms with SMTC duration = 1 ms
+
+Table A.3.11A.2-1: SMTC.2 RedCap: SMTC Pattern 2 for SMTC period = 80 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 80 ms |
+| SMTC offset | 0 ms |
+| SMTC duration | 1 ms |
+
+### A.3.11A.3 SMTC pattern 3 for RedCap: SMTC period = 40 ms with SMTC duration = 1 ms
+
+Table A.3.11A.3-1: SMTC.3 RedCap: SMTC Pattern 3 for SMTC period = 40 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 40 ms |
+| SMTC offset | 20 ms |
+| SMTC duration | 1 ms |
+
+### A.3.11A.4 SMTC pattern 4 for RedCap: SMTC period = 80 ms with SMTC duration = 5 ms
+
+Table A.3.11A.4-1: SMTC.4 RedCap: SMTC Pattern 4 for SMTC period = 80 ms and duration = 5 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| SMTC periodicity | 80 ms |
+| SMTC offset | 0 ms |
+| SMTC duration | 5 ms |
+
+A.3.12 Test Cases with Different CC Configurations
+
+### A.3.12.1 EN-DC Test Cases with Different EN-DC Configurations
+
+#### A.3.12.1.1 Introduction
+
+In annex A EN-DC test cases may be defined for two component carriers (CCs) as well as for more than two CCs to verify the same RRM requirement.
+
+#### A.3.12.1.2 Principle of testing
+
+If multiple EN-DC test cases are defined for two CCs as well as for more than two CCs to verify the same type of RRM requirement, which depends on the number of CCs, then from the UE performance point of view the test coverage can be considered fulfilled by executing only the EN-DC test cases with the maximum number of CCs in EN-DC supported by the UE. Otherwise, if the same type of RRM requirement is independent of the number of CCs then from the UE performance point of view the test coverage can be considered fulfilled by executing only the EN-DC test cases with two CCs in EN-DC supported by the UE.
+
+NOTE: The maximum number of CCs that can be used in FR2 tests in EN-DC would depend on the test equipment capability.
+
+### A.3.12.2 Carrier Aggregation Test Cases with Different CA Configurations
+
+#### A.3.12.2.1 Introduction
+
+In annex A carrier aggregation test cases may be defined for two CCs as well as for more than two CCs to verify the same RRM requirement.
+
+#### A.3.12.2.2 Principle of testing
+
+If multiple carrier aggregation test cases are defined for two CCs as well as for more than two CCs to verify the same RRM requirement, which depends on the number of CCs, then from the UE performance point of view the test coverage can be considered fulfilled by executing only the CA test cases with the maximum number of CCs in CA supported by the UE. Otherwise if the same type of RRM requirement is independent of the number of CCs then from the UE performance point of view the test coverage can be considered fulfilled by executing only the CA test cases with at least two CCs in CA supported by the UE.
+
+NOTE: The maximum number of CCs that can be used in FR2 tests in CA would depend on the test equipment capability.
+
+## A.3.13 Test Cases in SA and EN-DC Operations
+
+### A.3.13.1 Introduction
+
+This clause defines a principle which is applicable to test cases verifying RRM requirements in standalone (SA) or EN-DC operations.
+
+In annex A test cases may be defined in SA and EN-DC operations to verify the same RRM requirement.
+
+### A.3.13.2 Principle of Testing
+
+If test cases are defined in both SA and EN-DC operations to verify the same RRM requirement then the UE capable of both SA and EN-DC operations needs to verify that RRM requirement by performing test case(s) in either SA operation or in EN-DC operation.
+
+If test cases are defined in both SA and EN-DC operations to verify at least one common RRM requirement then the UE capable of both SA and EN-DC operations needs to verify RRM requirements by performing test case(s) in either SA operation or in EN-DC operation provided that the performed test case(s):
+
+- verifies the largest number of RRM requirements and
+
+- verifies at least all RRM requirements covered in the test case(s), which is not performed.
+
+A.3.13A Void
+
+A.3.13A.1 Void
+
+A.3.13A.2 Void
+
+Table A.3.13A.2-1: Void
+
+A.3.13A.3 Void
+
+Table A.3.13A.3-1: Void
+
+A.3.13A.4 Void
+
+Table A.3.13A.4-1: Void
+
+A.3.13A.5 Void
+
+Table A.3.13A.5-1: Void
+
+## A.3.13B  Test Cases for EN-DC and NE-DC Operations
+
+### A.3.13B.1 Active BWP switch Test Cases for EN-DC and NE-DC Operations
+
+#### A.3.13B.1.1 Introduction
+
+This clause defines a principle which is applicable to test cases verifying active BWP switch requirements for EN-DC operation and NE-DC operations.
+
+In annex A test cases are defined for both EN-DC and NE-DC operations to verify the same type of RRM requirement.
+
+#### A.3.13B.1.2 Principle of Testing
+
+UE capable of both EN-DC and NE-DC operations needs to be tested with one of the tests in either EN-DC or NE-DC operations.
+
+### A.3.13B.2 SFTD accuracy Test Cases for EN-DC and NE-DC Operations
+
+#### A.3.13B.2.1 Introduction
+
+This clause defines a principle which is applicable to test cases verifying SFTD accuracy requirements for EN-DC operation and NE-DC operations.
+
+In annex A test cases are defined for both EN-DC and NE-DC operations to verify the same type of RRM requirement.
+
+#### A.3.13B.2.2 Principle of Testing
+
+UE capable of both EN-DC and NE-DC operations needs to be tested with one of the tests in either EN-DC or NE-DC operations.
+
+## A.3.14 CSI-RS configurations
+
+### A.3.14.1 FDD
+
+Table A.3.14.1-1: CSI-RS Reference Measurement Channels for SCS=15 kHz
+
+|  | CSI-RS.1.1 FDD | CSI-RS.1.2 FDD | CSI-RS.1.3 FDD | CSI-RS.1.4 FDD | CSI-RS.1.5 FDD | CSI-RS.1.6 FDD | CSI-RS.1.7 FDD |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Resource Type | periodic | periodic | aperiodic | aperiodic | aperiodic | periodic | periodic |
+| Resource Set Config |  |  |  |  |  |  |  |
+| nzp-CSI-ResourceSetId | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| repetition | n.a. | off | off | on | off | n.a. | off |
+| aperiodicTriggeringOffset | n.a. | n.a. | 0 | 0 | 0 | n.a. | n.a. |
+| trs-Info | n.a. | n.a. | n.a. | n.a. | n.a. | n.a. | n.a. |
+| Resource Config |  |  |  |  |  |  |  |
+|  |  | 0 for resource #0 | 0 for resource #0 | 0 for resource #0 | 0 for resource #0 |  | 2 for resource #0 |
+|  |  |  |  | 1 for resource #1 |  |  |  |
+|  |  |  |  | 2 for resource #2 |  |  |  |
+|  |  |  |  | 3 for resource #3 |  |  |  |
+| nzp-CSI-RS-ResourceId | 0 for resource #0 | 1 for resource #1 | 1 for resource #1 | 4 for resource #4 | 1 for resource #1 | 0 for resource #0 | 3 for resource #1 |
+|  |  |  |  | 5 for resource #5 |  |  |  |
+|  |  |  |  | 6 for resource #6 |  |  |  |
+|  |  |  |  | 7 for resource #7 |  |  |  |
+| powerControlOffset | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| powerControlOffsetSS | db0 | db0 | db0 | db0 | db0 | db0 | db0 |
+| scramblingID | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Period (slots) | slot5 | slot10 | n.a. | n.a. | n.a. | slot40 | slot10 |
+| Offset | 1 | 1 | n.a. | n.a. | n.a. | 1 | 1 |
+| qcl-InfoPeriodicCSI-RS | TCI.State.0 | TCI.State.0 | n.a. | n.a. | n.a. | TCI.State.0 | TCI.State.0 |
+|  |  | TCI.State.1 |  |  |  |  | TCI.State.1 |
+| frequencyDomainAllocation | 000001 | 0001 | 0001 | 0001 | 000001 | 000001 | 0100 |
+| nrofPorts | 2 | 1 | 1 | 1 | 1 | 2 | 1 |
+|  |  | 6 for resource #0 | 6 for resource #0 | 0 for resource #0 | Specified in the test case for resource #0 |  | 6 for resource #0 |
+|  |  |  |  | 1 for resource #1 |  |  |  |
+|  |  |  |  | 2 for resource #2 |  |  |  |
+|  |  |  |  | 3 for resource #3 |  |  |  |
+| firstOFDMSymbolInTimeDomain | 4 for resource #0 | 10 for resource #1 | 10 for resource #1 | 4 for resource #4 | n.a. | 5 for resource #0 | 10 for resource #1 |
+|  |  |  |  | 5 for resource #5 |  |  |  |
+|  |  |  |  | 6 for resource #6 |  |  |  |
+|  |  |  |  | 7 for resource #7 |  |  |  |
+| cdm-Type | FD-CDM2 | noCDM | noCDM | noCDM | noCDM | FD-CDM2 | noCDM |
+| density | 1 | 3 | 3 | 3 | 3 | 1 | 3 |
+| startingRB | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| nrofRBs | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the Test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |  |  |  |  |
+
+Table A.3.14.1-2: CSI-RS Reference Measurement Channels for SCS=120 kHz
+
+|  | CSI-RS.2.1 FDD |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Resource Type | periodic |  |  |  |  |  |  |
+| Resource Set Config |  |  |  |  |  |  |  |
+| nzp-CSI-ResourceSetId | 0 |  |  |  |  |  |  |
+| repetition | n.a. |  |  |  |  |  |  |
+| aperiodicTriggeringOffset | n.a. |  |  |  |  |  |  |
+| trs-Info | n.a. |  |  |  |  |  |  |
+| Resource Config |  |  |  |  |  |  |  |
+| nzp-CSI-RS-ResourceId | 0 for resource #0 |  |  |  |  |  |  |
+| powerControlOffset | 0 |  |  |  |  |  |  |
+| powerControlOffsetSS | db0 |  |  |  |  |  |  |
+| scramblingID | 0 |  |  |  |  |  |  |
+| Period (slots) | slot40. |  |  |  |  |  |  |
+| Offset | 8 |  |  |  |  |  |  |
+| qcl-InfoPeriodicCSI-RS | TCL.State.0 |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+| frequencyDomainAllocation | 000001 |  |  |  |  |  |  |
+| nrofPorts | 2 |  |  |  |  |  |  |
+| firstOFDMSymbolInTimeDomain | 5 for resource #0 |  |  |  |  |  |  |
+| cdm-Type | FD-CDM2 |  |  |  |  |  |  |
+| density | 1 |  |  |  |  |  |  |
+| startingRB | 0 |  |  |  |  |  |  |
+| nrofRBs | 276 (Note 1) |  |  |  |  |  |  |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the Test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |  |  |  |  |
+
+### A.3.14.2 TDD
+
+Table A.3.14.2-1: CSI-RS Reference Measurement Channels for SCS=15 kHz
+
+|  | CSI-RS.1.1 TDD | CSI-RS.1.2 TDD | CSI-RS.1.3 TDD | CSI-RS.1.4 TDD | CSI-RS.1.5 TDD | CSI-RS.1.6 TDD |
+| --- | --- | --- | --- | --- | --- | --- |
+| Resource Type | periodic | periodic | aperiodic | aperiodic | periodic | periodic |
+| Resource Set Config |  |  |  |  |  |  |
+| nzp-CSI-ResourceSetId | 0 | 0 | 0 | 0 | 0 | 0 |
+| repetition | n.a. | off | off | on | n.a. | off |
+| aperiodicTriggeringOffset | n.a. | n.a. | 0 | 0 | n.a. | n.a. |
+| trs-Info | n.a. | n.a. | n.a. | n.a. | n.a. | n.a. |
+| Resource Config |  |  |  |  |  |  |
+|  |  | 0 for resource #0 | 0 for resource #0 | 0 for resource #0 |  | 2 for resource #0 |
+|  |  |  |  | 1 for resource #1 |  |  |
+|  |  |  |  | 2 for resource #2 |  |  |
+|  |  |  |  | 3 for resource #3 |  |  |
+| nzp-CSI-RS-ResourceId | 0 for resource #0 | 1 for resource #1 | 1 for resource #1 | 4 for resource #4 | 0 for resource #0 | 3 for resource #1 |
+|  |  |  |  | 5 for resource #5 |  |  |
+|  |  |  |  | 6 for resource #6 |  |  |
+|  |  |  |  | 7 for resource #7 |  |  |
+| powerControlOffset | 0 | 0 | 0 | 0 | 0 | 0 |
+| powerControlOffsetSS | db0 | db0 | db0 | db0 | db0 | db0 |
+| scramblingID | 0 | 0 | 0 | 0 | 0 | 0 |
+| Period (slots) | slot5 | slot10 | n.a. | n.a. | slot40 | slot10 |
+| Offset | 1 | 1 | n.a. | n.a. | 1 | 1 |
+| qcl-InfoPeriodicCSI-RS | TCI.State.0 | TCI.State.0 | n.a. | n.a. | TCI.State.0 | TCI.State.0 |
+|  |  | TCI.State.1 |  |  |  | TCI.State.1 |
+| frequencyDomainAllocation | 000001 | 0001 | 0001 | 0001 | 000001 | 0100 |
+| nrofPorts | 2 | 1 | 1 | 1 | 2 | 1 |
+|  |  | 6 for resource #0 | 6 for resource #0 | 0 for resource #0 |  | 6 for resource #0 |
+|  |  |  |  | 1 for resource #1 |  |  |
+|  |  |  |  | 2 for resource #2 |  |  |
+|  |  |  |  | 3 for resource #3 |  |  |
+| firstOFDMSymbolInTimeDomain | 4 for resource #0 | 10 for resource #1 | 10 for resource #1 | 4 for resource #4 | 5 for resource #0 | 10 for resource #1 |
+|  |  |  |  | 5 for resource #5 |  |  |
+|  |  |  |  | 6 for resource #6 |  |  |
+|  |  |  |  | 7 for resource #7 |  |  |
+| cdm-Type | FD-CDM2 | noCDM | noCDM | noCDM | FD-CDM2 | noCDM |
+| density | 1 | 3 | 3 | 3 | 1 | 3 |
+| startingRB | 0 | 0 | 0 | 0 | 0 | 0 |
+| nrofRBs | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the Test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |  |  |  |
+
+Table A.3.14.2-1A: CSI-RS Reference Measurement Channels for SCS=15 kHz
+
+|  | CSI-RS.1.1A TDD | CSI-RS.1.2A TDD | CSI-RS.1.3A TDD |
+| --- | --- | --- | --- |
+| Resource Type | periodic | aperiodic | periodic |
+| Resource Set Config |  |  |  |
+| nzp-CSI-ResourceSetId | 1 | 1 | 1 |
+| repetition | off | off | off |
+| aperiodicTriggeringOffset | n.a. | 0 | n.a. |
+| trs-Info | n.a. | n.a. | n.a. |
+| Resource Config |  |  |  |
+| nzp-CSI-RS-ResourceId | 12 for resource #0 | 22 for resource #0 | 14 for resource #0 |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  | 13 for resource #1 | 23 for resource #1 | 15 for resource #1 |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+| powerControlOffset | 0 | 0 | 0 |
+| powerControlOffsetSS | db0 | db0 | db0 |
+| scramblingID | 0 | 0 | 0 |
+| Period (slots) | slot20 | n.a. | slot10 |
+| Offset | 1 | n.a. | 2 |
+| qcl-InfoPeriodicCSI-RS | n.a. | n.a. | n.a. |
+|  |  |  |  |
+| frequencyDomainAllocation | 0001 | 0001 | 0001 |
+| nrofPorts | 1 | 1 | 1 |
+| firstOFDMSymbolInTimeDomain | 6 for resource #0 | 7 for resource #0 | 6 for resource #0 |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  | 10 for resource #1 | 11 for resource #1 | 10 for resource #1 |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+| cdm-Type | noCDM | noCDM | noCDM |
+| density | 3 | 3 | 3 |
+| startingRB | 0 | 0 | 0 |
+| nrofRBs | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the Test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |
+
+Table A.3.14.2-2: CSI-RS Reference Measurement Channels for SCS=30 kHz
+
+|  | CSI-RS.2.1 TDD | CSI-RS.2.2 TDD | CSI-RS.2.3 TDD | CSI-RS.2.4 TDD | CSI-RS.2.5 TDD | CSI-RS.2.6 TDD | CSI-RS.2.7 TDD |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Resource Type | periodic | periodic | aperiodic | aperiodic | aperiodic | periodic | periodic |
+| Resource Set Config |  |  |  |  |  |  |  |
+| nzp-CSI-ResourceSetId | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| repetition | n.a. | off | off | on | off | n.a. | off |
+| aperiodicTriggeringOffset | n.a. | n.a. | 0 | 0 | 0 | n.a. | n.a. |
+| trs-Info | n.a. | n.a. | n.a. | n.a. | n.a. | n.a. | n.a. |
+| Resource Config |  |  |  |  |  |  |  |
+|  |  | 0 for resource #0 | 0 for resource #0 | 0 for resource #0 | 0 for resource #0 |  | 2 for resource #0 |
+|  |  |  |  | 1 for resource #1 |  |  |  |
+|  |  |  |  | 2 for resource #2 |  |  |  |
+|  |  |  |  | 3 for resource #3 |  |  |  |
+| nzp-CSI-RS-ResourceId | 0 for resource #0 | 1 for resource #1 | 1 for resource #1 | 4 for resource #4 | 1 for resource #1 | 0 for resource #0 | 3 for resource #1 |
+|  |  |  |  | 5 for resource #5 |  |  |  |
+|  |  |  |  | 6 for resource #6 |  |  |  |
+|  |  |  |  | 7 for resource #7 |  |  |  |
+| powerControlOffset | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| powerControlOffsetSS | db0 | db0 | db0 | db0 | db0 | db0 | db0 |
+| scramblingID | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Period (slots) | slot10 | slot20 | n.a. | n.a. | n.a. | slot80 | slot20 |
+| Offset | 2 | 2 | n.a. | n.a. | n.a. | 2 | 2 |
+| qcl-InfoPeriodicCSI-RS | TCI.State.0 | TCI.State.0 | n.a. | n.a. | n.a. | TCI.State.0 | TCI.State.0 |
+|  |  | TCI.State.1 |  |  |  |  | TCI.State.1 |
+| frequencyDomainAllocation | 000001 | 0001 | 0001 | 0001 | 000001 | 000001 | 0100 |
+| nrofPorts | 2 | 1 | 1 | 1 | 1 | 2 | 1 |
+|  |  | 6 for resource #0 | 6 for resource #0 | 0 for resource #0 | Specified in the test case for resource #0 |  | 6 for resource #0 |
+|  |  |  |  | 1 for resource #1 |  |  |  |
+|  |  |  |  | 2 for resource #2 |  |  |  |
+|  |  |  |  | 3 for resource #3 |  |  |  |
+| firstOFDMSymbolInTimeDomain | 5 for resource #0 | 10 for resource #1 | 10 for resource #1 | 4 for resource #4 | n.a. | 5 for resource #0 | 10 for resource #1 |
+|  |  |  |  | 5 for resource #5 |  |  |  |
+|  |  |  |  | 6 for resource #6 |  |  |  |
+|  |  |  |  | 7 for resource #7 |  |  |  |
+| cdm-Type | FD-CDM2 | noCDM | noCDM | noCDM | noCDM | FD-CDM2 | noCDM |
+| density | 1 | 3 | 3 | 3 | 3 | 1 | 3 |
+| startingRB | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| nrofRBs | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the Test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |  |  |  |  |
+
+Table A.3.14.2-2A: CSI-RS Reference Measurement Channels for SCS=30 kHz
+
+|  | CSI-RS.2.1A TDD | CSI-RS.2.2A TDD | CSI-RS.2.3A TDD |
+| --- | --- | --- | --- |
+| Resource Type | periodic | aperiodic | periodic |
+| Resource Set Config |  |  |  |
+| nzp-CSI-ResourceSetId | 1 | 1 | 1 |
+| repetition | off | off | off |
+| aperiodicTriggeringOffset | n.a. | 0 | n.a. |
+| trs-Info | n.a. | n.a. | n.a. |
+| Resource Config |  |  |  |
+| nzp-CSI-RS-ResourceId | 12 for resource #0 | 22 for resource #0 | 14 for resource #0 |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  | 13 for resource #1 | 23 for resource #1 | 15 for resource #1 |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+| powerControlOffset | 0 | 0 | 0 |
+| powerControlOffsetSS | db0 | db0 | db0 |
+| scramblingID | 0 | 0 | 0 |
+| Period (slots) | slot40 | n.a. | slot20 |
+| Offset | 2 | n.a. | 4 |
+| qcl-InfoPeriodicCSI-RS | n.a. | n.a. | n.a. |
+|  |  |  |  |
+| frequencyDomainAllocation | 0001 | 0001 | 0001 |
+| nrofPorts | 1 | 1 | 1 |
+| firstOFDMSymbolInTimeDomain | 6 for resource #0 | 7 for resource #0 | 6 for resource #0 |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  | 10 for resource #1 | 11 for resource #1 | 10 for resource #1 |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+| cdm-Type | noCDM | noCDM | noCDM |
+| density | 3 | 3 | 3 |
+| startingRB | 0 | 0 | 0 |
+| nrofRBs | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the Test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |
+
+Table A.3.14.2-3: CSI-RS Reference Measurement Channels for SCS=120 kHz
+
+|  | CSI-RS.3.1 TDD | CSI-RS.3.2 TDD | CSI-RS.3.3 TDD | CSI-RS.3.4 TDD | CSI-RS.3.5 TDD | CSI-RS.3.6 TDD |
+| --- | --- | --- | --- | --- | --- | --- |
+| Resource Type | periodic | periodic | aperiodic | aperiodic | periodic | periodic |
+| Resource Set Config |  |  |  |  |  |  |
+| nzp-CSI-ResourceSetId | 0 | 0 | 0 | 0 | 0 | 0 |
+| repetition | n.a. | off | off | on | n.a. | off |
+| aperiodicTriggeringOffset | n.a. | n.a. | 4 | 4 | n.a. | n.a. |
+| trs-Info | n.a. | n.a. | n.a. | n.a. | n.a. | n.a. |
+| Resource Config |  |  |  |  |  |  |
+|  |  | 0 for resource #0 | 0 for resource #0 | 0 for resource #0 |  | 2 for resource #0 |
+|  |  |  |  | 1 for resource #1 |  |  |
+|  |  |  |  | 2 for resource #2 |  |  |
+|  |  |  |  | 3 for resource #3 |  |  |
+| nzp-CSI-RS-ResourceId | 0 for resource #0 | 1 for resource #1 | 1 for resource #1 | 4 for resource #4 | 0 for resource #0 | 3 for resource #1 |
+|  |  |  |  | 5 for resource #5 |  |  |
+|  |  |  |  | 6 for resource #6 |  |  |
+|  |  |  |  | 7 for resource #7 |  |  |
+| powerControlOffset | 0 | 0 | 0 | 0 | 0 | 0 |
+| powerControlOffsetSS | db0 | db0 | db0 | db0 | db0 | db0 |
+| scramblingID | 0 | 0 | 0 | 0 | 0 | 0 |
+| Period (slots) | slot40 | slot80 | n.a. | n.a. | slot320 | slot80 |
+| Offset | 8 | 16 | n.a. | n.a. | 8 | 16 |
+| qcl-InfoPeriodicCSI-RS | TCI.State.0 | TCI.State.0 | n.a. | n.a. | TCI.State.0 | TCI.State.0 |
+|  |  | TCI.State.1 |  |  |  | TCI.State.1 |
+| frequencyDomainAllocation | 000001 | 0001 | 0001 | 0001 | 000001 | 0100 |
+| nrofPorts | 2 | 1 | 1 | 1 | 1 | 1 |
+|  |  | 6 for resource #0 | 6 for resource #0 | 0 for resource #0 |  | 6 for resource #0 |
+|  |  |  |  | 1 for resource #1 |  |  |
+|  |  |  |  | 2 for resource #2 |  |  |
+|  |  |  |  | 3 for resource #3 |  |  |
+| firstOFDMSymbolInTimeDomain | 5 for resource #0 | 10 for resource #1 | 10 for resource #1 | 4 for resource #4 | 5 for resource #0 | 10 for resource #1 |
+|  |  |  |  | 5 for resource #5 |  |  |
+|  |  |  |  | 6 for resource #6 |  |  |
+|  |  |  |  | 7 for resource #7 |  |  |
+| cdm-Type | FD-CDM2 | noCDM | noCDM | noCDM | FD-CDM2 | noCDM |
+| density | 1 | 3 | 3 | 3 | 1 | 3 |
+| startingRB | 0 | 0 | 0 | 0 | 0 | 0 |
+| nrofRBs | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the Test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |  |  |  |
+
+Table A.3.14.2-3A: CSI-RS Reference Measurement Channels for SCS=120 kHz
+
+|  | CSI-RS.3.1A TDD | CSI-RS.3.2A TDD | CSI-RS.3.3A TDD | CSI-RS.3.4A TDD | CSI-RS.3.5A TDD |
+| --- | --- | --- | --- | --- | --- |
+| Resource Type | periodic | aperiodic | periodic | periodic | periodic |
+| Resource Set Config |  |  |  |  |  |
+| nzp-CSI-ResourceSetId | 1 | 1 | 1 | 0 | 1 |
+| repetition | off | off | off | off | off |
+| aperiodicTriggeringOffset | n.a. | 6 | n.a. | n.a. | n.a. |
+| trs-Info | n.a. | n.a. | n.a. | n.a. | n.a. |
+| Resource Config |  |  |  |  |  |
+| nzp-CSI-RS-ResourceId | 12 for resource #0 | 22 for resource #0 | 14 for resource #0 | 0 for resource#0 | 1 for resource #1 |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  | 13 for resource #1 | 23 for resource #1 | 15 for resource #1 |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+| powerControlOffset | 0 | 0 | 0 | 0 | 0 |
+| powerControlOffsetSS | db0 | db0 | db0 | [db6] | [db6] |
+| scramblingID | 0 | 0 | 0 | 0 | 0 |
+| Period (slots) | slot160 | n.a. | slot80 | Slot80 | Slot80 |
+| Offset | 8 | n.a. | 16 | 8 | 8 |
+| qcl-InfoPeriodicCSI-RS | n.a. | n.a. | n.a. | TCI.State.0 | TCI.State.1 |
+|  |  |  |  |  |  |
+| frequencyDomainAllocation | 0001 | 0001 | 0001 | 0001 | 0010 |
+| nrofPorts | 1 | 1 | 1 | 1 | 1 |
+| firstOFDMSymbolInTimeDomain | 6 for resource #0 | 7 for resource #0 | 6 for resource #0 | 5 | 5 |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  | 10 for resource #1 | 11 for resource #1 | 10 for resource #1 |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
+| cdm-Type | noCDM | noCDM | noCDM | noCDM | noCDM |
+| density | 3 | 3 | 3 | 3 | 3 |
+| startingRB | 0 | 0 | 0 | 0 | 0 |
+| nrofRBs | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the Test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |  |  |
+
+## A.3.15 Angle of Arrival (AoA) for FR2 RRM test cases
+
+This clause specifies the AoA setups for FR2 RRM test cases in clause A.5 and A.7. The applicable AoA setup is defined in each test case in clause A.5 and A.7.
+
+### A.3.15.1 Setup 1: Single AoA in Rx beam peak direction
+
+There is only one active probe in the test. The DL signals, and noise if applicable, transmitted from the probe, are aligned to the UE Rx beam peak direction (as defined in TS 38.101-2 [19]).
+
+### A.3.15.2 Setup 2: Single AoA in non Rx beam peak direction
+
+#### A.3.15.2.1 Setup 2a: Single AoA in non Rx beam peak direction without change in direction
+
+There is only one active probe in the test. The DL signals, and noise if applicable, transmitted from the probe, align to a direction (AoA) which is from the set of directions corresponding to the EIS spherical coverage percentile of the DUT as defined in clause 7.3.4 of TS 38.101-2 [19] for each UE power class. The direction (AoA) of the signals shall not be changed between test iterations.
+
+#### A.3.15.2.2 Setup 2b: Single AoA in non Rx beam peak direction with change in direction
+
+There is only one active probe in the test. The DL signals, and noise if applicable, transmitted from the probe, align to a direction (AoA) which is from the set of directions corresponding to the EIS spherical coverage percentile of the DUT as defined in clause 7.3.4 of TS38.101-2[19] for each UE power class. For UE power class 3, the direction (AoA) of the signals shall be changed for each test iteration.
+
+### A.3.15.3 Setup 3: 2 AoAs
+
+There are 2 active probes in the test. The DL signals, and noise if applicable, transmitted from the two active probes, align to directions (AoAs) which are from the set of directions corresponding to the EIS spherical coverage percentile of the DUT as defined in clause 7.3.4 of TS 38.101-2[19] for each UE power class. The relative angular offset between the directions (AoAs) of the 2 active probes, shall be changed for each test iteration. The applicable set of relative angular offsets between the 2 active probes is given in table 3.15.3-1 for each UE power class.
+
+Table A.3.15.3-1: Set of relative angular offsets between active probes for each power class
+
+| UE Power class | Relative angular offset between active probes |
+| --- | --- |
+| 1 | 30°, 60°, 90° and 120° |
+| 2 | FFS |
+| 3 | 30°, 60°, 90°, 120° and 150° |
+| 4 | FFS |
+| 5 | 30°, 60°, 90° and 120° |
+| 6 | 30°, 60°, 90°, 120° and 150° |
+| 7 | FFS |
+
+### A.3.15.4 Setup 4: 2 AoAs, 1 AoA in Rx beam peak direction, 1 in non Rx beam peak
+
+#### A.3.15.4.1 Setup 4a: 2 AoAs, 1 AoA in Rx beam peak direction, 1 in non Rx beam peak without change in direction
+
+There are 2 active probes in the test. The DL signals, and noise if applicable, are transmitted from the two active probes. One probe is aligned to the UE Rx beam peak direction as defined in TS 38.101-2 [19]. The second is aligned to a direction (AoA) which is from the set of directions corresponding to the EIS spherical coverage percentile of the DUT as defined in clause 7.3.4 of TS 38.101-2 [19] for each UE power class. The direction (AoA) of the non Rx beam peak signal shall not be changed between test iterations.
+
+#### A.3.15.4.2 Setup 4b: 2 AoAs, 1 AoA in Rx beam peak direction, 1 in non Rx beam peak with change in direction
+
+There are 2 active probes in the test. The DL signals, and noise if applicable, are transmitted from the two active probes. One probe is aligned to the UE Rx beam peak direction as defined in TS 38.101-2 [19]. The second is aligned to a direction (AoA) which is from the set of directions corresponding to the EIS spherical coverage percentile of the DUT as defined in clause 7.3.4 of TS 38.101-2 [19] for each UE power class.
+
+For UE power class 3, the relative angular offset between the directions (AoAs) of the 2 active probes shall be changed for each test iteration, within the probe alignment described above. The applicable set of relative angular offsets between the 2 active probes is given in table 3.15.3-1 for each UE power class.
+
+#### A.3.15.4.3 Setup 4c: 2 AoAs, 1 AoA in Rx beam peak direction, 1 in non Rx beam peak for power class 6 UE supporting simultaneous reception from multiple directions
+
+There are 2 active probes in the test. The DL signals, and noise if applicable, are transmitted from the two active probes. One probe is aligned to the UE Rx beam peak direction as defined in TS 38.101-2 [19]. The second is aligned to a direction (AoA) which is from the set of directions corresponding to the 2AoA spherical coverage requirement for simultaneous reception from multiple directions as defined in clause 7.3K.6 of TS 38.101-2 [19] for power class 6.
+
+For power class 6 supporting simultaneous reception from multiple directions, the angular separation between the directions (AoAs) of the 2 active probes is 150°, and the direction (AoA) of the non Rx beam peak signal shall not be changed between test iterations.
+
+### A.3.15.5 Setup 5: 2 AoAs for simultaneous reception with QCL Type-D
+
+There are 2 active probes in the test. The DL signals, and noise if applicable, are transmitted from the two active probes.  The 2 AoAs (AoA1 and AoA2) for simultaneous reception with different QCL-typeD are from the set of AoA pairs, denoted by (AoA1, AoA2) that can support 2 AoA reception for UE declared AoA angular separation and declared orientation in the positioner of the test system according to the spherical coverage requirement for simultaneous reception from multiple directions as defined in clause 7.3K.3 of TS 38.101-2 [19] for UE power class 3 supporting simultaneous reception from multiple directions. The angular separation between the directions (AoA1 and AoA2) of the 2 active probes is declared from table 7.3K.3-1 in clause 7.3K.3 of TS 38.101-2 [19] and shall not be changed for each test iteration.
+
+AoA1 needs to satisfy the spherical coverage requirement in table 7.3.4.3-1 of TS 38.101-2 [19].
+
+NOTE: The chosen AoA pair (AoA1, AoA2) is up to RAN5.
+
+### A.3.15.6 Setup 6: 3 AoAs for simultaneous reception with different QCL Type-D
+
+There are 3 active probes in the test and the DL signals and noise are transmitted from the three active probes.
+
+Out of the three AoAs, one AoA (AoA1) is aligned to a direction which is from the set of directions corresponding to the EIS spherical coverage percentile of the DUT as defined in clause 7.3.4 of TS 38.101-2 [19] for UE power class 3 and other 2 AoAs (AoA2 and AoA3) are from the set of AoA pairs, denoted by (AoA2, AoA3) that can support 2 AoA reception for UE declared AoA angular separation and declared orientation in the positioner of the test system according to the spherical coverage requirement for simultaneous reception from multiple directions as defined in clause 7.3K.3 of TS 38.101-2 [19] for power class 3 supporting simultaneous reception from multiple directions. The UE positioning shall be such that the UE passes both spherical coverage requirements.
+
+The angular offset between the directions of the AoA pair (AoA2, AoA3) is declared from table 7.3K.3-1 in clause 7.3K.3 of TS 38.101-2 [19] and shall not be changed for each test iteration.
+
+NOTE: The chosen AoA pair (AoA2, AoA3) is up to RAN5.
+
+### A.3.15.7 Setup 7: 3 AoAs
+
+There are 3 active probes in the test. The DL signals, and noise if applicable, transmitted from the three active probes, align to directions (AoAs) which are from the set of directions corresponding to the EIS spherical coverage percentile of the DUT as defined in clause 7.3.4 of TS 38.101-2[19] for each UE power class. The relative angular offset between the directions (AoAs) of the 3 active probes, shall be changed for each test iteration. Any combinations of two relative angular offsets between 2 active probes specified in table A.3.15.3-1, is considered as a valid applicable relative angular offsets between 3 active probes for the respective power class.
+
+### A.3.15.8 Setup 8: 4 AoAs
+
+There are 4 active probes in the test, placed in single plane (xz plane). The DL signals, and noise if applicable, are transmitted from the four active probes. The relative angular offset between the directions (AoAs) of the 4 active probes is 30, 60 and 60 degrees between neighboring probes.
+
+Note: The deployment of this 4 AoAs setup is assumed to be done using the Indirect Far Field (IFF) FR2 method.
+
+## A.3.15C Angle of Arrival (AoA) for FR2-NTN RRM test cases
+
+This clause specifies the AoA setups for FR2-NTN RRM test cases in clause A.14. The applicable AoA setup is defined in each test case in clause A.14.
+
+### A.3.15C.1 Setup 1: Single AoA
+
+There is only one active probe in the test. The DL signals, and noise if applicable, transmitted from the probe, are aligned with the satellite epherimis information used in the test case and within the declared minimum elevation angle supported for receiving.
+
+### A.3.15C.2 Setup 2: 2 AoAs
+
+There are 2 active probes in the test. The DL signals, and noise if applicable, are transmitted from the two active probes. One probe is aligned with the first satellite epherimis information used in the test case. The second probe is aligned with the second satellite epherimis information used in the test case. Both AoAs are within the declared minimum elevation angle supported for receiving and the relative angular offset between the two AoAs is 30°. The directions (AoAs) of the signals shall not be changed between test iterations.
+
+## A.3.16 TCI State Configuration
+
+### A.3.16.1 Introduction
+
+This clause provides the configurations for TCI states towards either SSB or CSI-RS. The TCI states defined in this clause are configured in each test when applicable to indicate that certain DL signals are QCL’ed with the referenceSignal configured in the TCI states.
+
+### A.3.16.2 TCI states
+
+Table A.3.16.2-1: TCI States
+
+| Parameter | TCI.State.0 | TCI.State.1 | TCI.State.2 | TCI.State.3 |
+| --- | --- | --- | --- | --- |
+| tci-StateId | Id0 | Id1 | Id2 | Id3 |
+| qcl-Type1 | typeC | typeC | typeA | typeA |
+| qcl-Type2Note1 | typeD | typeD | typeD | typeD |
+| referenceSignal | SSB0 | SSB1 | Resource #4 in TRS resource set 1 Note3 | Resource #4 in TRS resource set 2 Note3 |
+| NOTE 1: qcl-Type2 of typeD only where applicable. For RRM test cases, this will be only in FR2NOTE 2: referenceSignal configurations towards which the TCI states are configured are defined in a test-specific manner.NOTE 3: Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured in a test case, it is considered as resource set 1. |  |  |  |  |
+
+Table A.3.16.2-2: Void
+
+## A.3.16A Unified TCI State Configuration
+
+### A.3.16A.1 Introduction
+
+This clause provides the configurations for unified TCI states towards either SSB or CSI-RS. The DLorJoint TCI states defined in this clause are configured in each test when applicable to indicate that certain DL (and UL, if joint DL/UL operation is configured) signals are QCL’ed with the referenceSignal configured in the TCI states. The UL TCI states defined in this clause are configured in each test when applicable to indicate that certain UL signals are QCL’ed with the referenceSignal configured in the TCI states.
+
+### A.3.16A.2 DLorJoint TCI states
+
+Table A.3.16A.2-1: DLorJoint TCI States
+
+| Parameter | DLorJoint TCI.State.0 | DLorJoint TCI.State.1 | DLorJoint TCI.State.2 | DLorJoint TCI.State.3 | DLorJoint TCI.State.4 | DLorJoint TCI.State.5 | DLorJoint TCI.State.6 | DLorJoint TCI.State.7 | DLorJoint TCI.State.8 | DLorJoint TCI.State.9 | DLorJoint TCI.State.10 | DLorJoint TCI.State.11 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| tci-StateUnifiedId | Id0 | Id1 | Id2 | Id3 | Id4 | Id5 | Id6 | Id7 | Id8 | Id9 | Id10 | Id11 |
+| qcl-Type1 | typeA | typeA | typeA | typeA | typeC | typeC | typeA | typeA | typeA | typeC | typeC | typeC |
+| qcl-Type2Note1 | typeD | typeD | typeD | typeD | typeD | typeD | typeD | typeD | typeD | typeD | typeD | typeD |
+| referenceSignal Note2 | Resource #4 in TRS resource set 1 Note3 | Resource #4 in TRS resource set 2  Note 5 | Resource #4 in TRS resource set 1 Note3 | Resource #4 in TRS resource set 2 Note3 | SSB0 | SSB1 from the cell with different PCI | Resource #4 in TRS resource set 3Note 6 | Resource #4 in TRS resource set 4Note 7 | Resource #4 in TRS resource set 5Note 8 | SSB1 | SSB2 | SSB3 |
+| pathlossReferenceRS | N/A | N/A | Resource #4 in TRS resource set 1 Note3 | Resource #4 in TRS resource set 1 Note3 | N/A | N/A | Resource #4 in TRS resource set 3 Note 6 | Resource #4 in TRS resource set 4 Note 7 | Resource #4 in TRS resource set 5 Note 8 | N/A | N/A | N/A |
+| additionalPCI | N/A | configured Note4 | N/A | N/A | N/A | configured Note4 | N/A | N/A | N/A | N/A | N/A | N/A |
+| NOTE 1: qcl-Type2 of typeD only where applicable. For RRM test cases, this will be only in FR2NOTE 2: referenceSignal configurations towards which the TCI states are configured are defined in a test-specific manner.NOTE 3: Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured in a test case, it is considered as resource set 1. The TCI state of the TRS is the DLorJoint TCI.State.4.NOTE 4: Only one PCI than serving cell PCI is included in the additionalPCIList, and the additionalPCIIndex is configured as 0.NOTE 5: Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured in a test case, it is considered as resource set 1. The TCI state of the TRS is the DLorJoint TCI.State.5.NOTE 6:  Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured in a test case, it is considered as resource set 1. The TCI state of the TRS is the DlorJoint TCI.State.9.NOTE 7:  Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured in a test case, it is considered as resource set 1. The TCI state of the TRS is the DlorJoint TCI.State.10.NOTE 7:  Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured in a test case, it is considered as resource set 1. The TCI state of the TRS is the DLorJoint TCI.State.11. |  |  |  |  |  |  |  |  |  |  |  |  |
+
+Table A.3.16A.2-2: DLorJoint TCI States for mTRP FR1
+
+| Parameter | DLorJoint TCI.State.1.1 | DLorJoint TCI.State.1.2 | DLorJoint TCI.State.1.3 | DLorJoint TCI.State.1.4 |
+| --- | --- | --- | --- | --- |
+| tci-StateUnifiedId | Id1 | Id2 | Id3 | Id4 |
+| qcl-Type1 | typeA | typeA | typeC | typeC |
+| qcl-Type2 | N/A | N/A | N/A | N/A |
+| referenceSignal Note2 | Resource #4 in TRS resource set 1 Note2 | Resource #4 in TRS resource set 2 Note3 | SSB2 | SSB3 |
+| pathlossReferenceRS | N/A | N/A | N/A | N/A |
+| additionalPCI | N/A | N/A | N/A | N/A |
+| NOTE 1: referenceSignal configurations towards which the TCI states are configured are defined in a test-specific manner.NOTE 2: Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured in a test case, it is considered as resource set 1. The TCI state of the TRS is the DLorJoint TCI.State.1.1.NOTE 3: Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured in a test case, it is considered as resource set 1. The TCI state of the TRS is the DLorJoint TCI.State.1.2. |  |  |  |  |
+
+### A.3.16A.3 UL TCI states
+
+Table A.3.16A.3-1: UL TCI States
+
+| Parameter | UL TCI.State.0 | UL TCI.State.1 | UL TCI.State.2 | UL TCI.State.3 | UL TCI.State.4 | UL TCI.State.5 |
+| --- | --- | --- | --- | --- | --- | --- |
+| ul-TCIState-Id | Id0 | Id1 | Id2 | Id3 | Id4 | Id5 |
+| referenceSignal Note1 | SSB0 | SSB1 | Resource #4 in TRS resource set 1 Note2 | Resource #4 in TRS resource set 2 Note2 | Resource #4 in TRS resource set 3 Note2 | Resource #4 in TRS resource set 4 Note2 |
+| pathlossReferenceRS | Resource #4 in TRS resource set 1 Note2 | Resource #4 in TRS resource set 1 Note2 | Resource #4 in TRS resource set 1 Note2 | Resource #4 in TRS resource set 2 Note2 | Resource #4 in TRS resource set 3 Note2 | Resource #4 in TRS resource set 4 Note2 |
+| additionalPCI | N/A | configured Note3 | N/A | N/A | N/A | N/A |
+| NOTE 1: referenceSignal configurations towards which the UL TCI states are configured are defined in a test-specific manner.NOTE 2: Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured in a test case, it is considered as resource set 1.NOTE 3: Only one PCI than serving cell PCI is included in the additionalPCIList, and the additionalPCIIndex is configured as 0. |  |  |  |  |  |  |
+
+## A.3.16B  LTM Candidate TCI State Configuration
+
+### A.3.16B.1 Introduction
+
+This clause provides the configurations for TCI states of LTM candidate cell(s) towards either SSB or TRS. The LTM candidate DLorJoint TCI states defined in this clause are configured in each test when applicable to indicate that certain DL (and UL, if joint DL/UL operation is configured) signals are QCL’ed with the referenceSignal configured in the TCI states. The UL TCI states defined in this clause are configured in each test when applicable to indicate that certain UL signals are QCL’ed with the referenceSignal configured in the TCI states.
+
+### A.3.16B.2 LTM candidate DLorJoint TCI states
+
+Table A.3.16B.2-1: LTM candidate DLorJoint TCI States
+
+| Parameter | Candidate DLorJoint TCI.State.0 | Candidate DLorJoint TCI.State.1 | Candidate DLorJoint TCI.State.2 | Candidate DLorJoint TCI.State.3 |
+| --- | --- | --- | --- | --- |
+| Candidatetci-StateId | Id0 | Id1 | Id2 | Id3 |
+| qcl-Type1 | typeA | typeA | typeA | typeA |
+| referenceSignal of qcl-Type 1 Note2 | SSB0 | Resource #4 in TRS resource set 1 Note3 | SSB0 | Resource #4 in TRS resource set 1 Note3 |
+| qcl-Type2Note1 | typeD | typeD | typeD | typeD |
+| referenceSignal of qcl-Type2 Note2 | SSB0 | Resource #4 in TRS resource set 1 Note3 | SSB0 | Resource #4 in TRS resource set 1 Note3 |
+| pathlossReferenceRS | SSB0 | SSB0 | N/A | N/A |
+| additionalPCI | N/A | N/A | N/A | N/A |
+| NOTE 1: qcl-Type2 of typeD only where applicable. For RRM test cases, this will be only in FR2NOTE 2: referenceSignal configurations towards which the TCI states are configured are defined in a test-specific manner.NOTE 3: Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured for a candidate cell in a test case, it is considered as resource set 1. The TCI state of the TRS is the CandidateDLorJoint TCI.State.2. |  |  |  |  |
+
+### A.3.16B.3 LTM candidate UL TCI states
+
+Table A.3.16B.3-1: LTM candidate UL TCI States
+
+| Parameter | Candidate UL TCI.State.0 |
+| --- | --- |
+| Candidateul-TCIState-Id | Id0 |
+| referenceSignal Note1 | SSB0 |
+| pathlossReferenceRS | SSB0 |
+| additionalPCI | N/A |
+| NOTE 1: referenceSignal configurations towards which the UL TCI states are configured are defined in a test-specific manner. |  |
+
+## A.3.17 Configurations of CSI-RS for tracking
+
+### A.3.17.1 Configuration of CSI-RS for tracking for FR1
+
+#### A.3.17.1.1 FDD
+
+Table A.3.17.1.1-1: CSI-RS for tracking for SCS=15 kHz
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.1 FDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 15 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 20 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 10 for CSI-RS resource 1 and 211 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 Note 3 |
+| NOTE 1: BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2: Unless otherwise specified in the test case.NOTE 3: If unified TCI states are configured, the TCI state ID is defined in each test case and from A.3.16A Unified TCI state Configuration. |  |  |
+
+Table A.3.17.1.1-2: CSI-RS for tracking for SCS=30 kHz
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.2 FDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 30 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 40 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 20 for CSI-RS resource 1 and 221 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 |
+| NOTE 1:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test casesNOTE 2:  Unless otherwise specified in the test case. |  |  |
+
+Table A.3.17.1.1-3: Aperiodic CSI-RS for tracking for SCS=15 kHz
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.3 FDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 15 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| aperiodicTriggeringOffsetL2 | slots | 2 |
+| Aperiodic CSI-RS offset | slots | 2 for CSI-RS resource 1 and 23 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 |
+| NOTE 1:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test casesNOTE 2:  Unless otherwise specified in the test case. |  |  |
+
+Table A.3.17.1.1-4: Aperiodic CSI-RS for tracking for SCS=30 kHz
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.4 FDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 30 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| aperiodicTriggeringOffsetL2 | slots | 2 |
+| Aperiodic CSI-RS offset | slots | 2 for CSI-RS resource 1 and 23 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 |
+| NOTE 1:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test casesNOTE 2:  Unless otherwise specified in the test case. |  |  |
+
+Table A.3.17.1.1-5: CSI-RS for tracking for SCS=15 kHz Set 1
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.5 FDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 15 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 20 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 10 for CSI-RS resource 1 and 211 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | DLorJoint TCI.State.1.3 |
+| NOTE 1:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test casesNOTE 2:  Unless otherwise specified in the test case. |  |  |
+
+Table A.3.17.1.1-6: CSI-RS for tracking for SCS=15 kHz Set 2
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.6 FDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 15 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 20 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 10 for CSI-RS resource 1 and 211 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | DLorJoint TCI.State.1.4 |
+| NOTE 1:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test casesNOTE 2:  Unless otherwise specified in the test case. |  |  |
+
+Table A.3.17.1.1-7: CSI-RS for tracking for SCS=15 kHz
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.7 FDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 15 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3 l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 20 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 10 for CSI-RS resource 1 and 211 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 |
+| NOTE 1:  BW of TRS is configured same as the BW size of UE active BP in the RRM test casesNOTE 2:  Unless otherwise specified in the test case. |  |  |
+
+#### A.3.17.1.2 TDD
+
+Table A.3.17.1.2-1: CSI-RS for tracking for SCS=15 kHz
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.1 TDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 15 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 20 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 10 for CSI-RS resource 1 and 211 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 Note 2 |
+| NOTE 1: BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2: If unified TCI states are configured, the TCI state ID is defined in each test case and from A.3.16A Unified TCI state Configuration. |  |  |
+
+Table A.3.17.1.2-2: CSI-RS for tracking for SCS=30 kHz
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.2 TDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 30 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 40 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 20 for CSI-RS resource 1 and 221 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 Note 3 |
+| NOTE 1: BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2: Unless otherwise specified in the test case.NOTE 3: If unified TCI states are configured, the TCI state ID is defined in each test case and from A.3.16A Unified TCI state Configuration. |  |  |
+
+Table A.3.17.1.2-3: Aperiodic CSI-RS for tracking for SCS=15 kHz
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.3 TDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 15 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| aperiodicTriggeringOffsetL2 | slots | 2 |
+| Aperiodic CSI-RS offset | slots | 2 for CSI-RS resource 1 and 23 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 |
+| NOTE:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases. |  |  |
+
+Table A.3.17.1.2-4: Aperiodic CSI-RS for tracking for SCS=30 kHz
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.4 TDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 30 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| aperiodicTriggeringOffsetL2 | slots | 2 |
+| Aperiodic CSI-RS offset | slots | 2 for CSI-RS resource 1 and 23 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 |
+| NOTE 1:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2:  Unless otherwise specified in the test case. |  |  |
+
+Table A.3.17.1.2-5: CSI-RS for tracking for SCS=15 kHz Set 1
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.5 TDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 15 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 20 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 10 for CSI-RS resource 1 and 211 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | DLorJoint TCI.State.1.3 |
+| NOTE:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases. |  |  |
+
+Table A.3.17.1.2-6: CSI-RS for tracking for SCS=15 kHz Set 2
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.6 TDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 15 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 20 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 10 for CSI-RS resource 1 and 211 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | DLorJoint TCI.State.1.4 |
+| NOTE:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases. |  |  |
+
+Table A.3.17.1.2-7: CSI-RS for tracking for SCS=30 kHz Set 1
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.7 TDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 30 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 40 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 20 for CSI-RS resource 1 and 221 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | DLorJoint TCI.State.1.3 |
+| NOTE 1:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2:  Unless otherwise specified in the test case. |  |  |
+
+Table A.3.17.1.2-8: CSI-RS for tracking for SCS=30 kHz Set 2
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.8 TDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 30 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 40 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 20 for CSI-RS resource 1 and 221 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | DLorJoint TCI.State.1.3 |
+| NOTE 1:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2:  Unless otherwise specified in the test case. |  |  |
+
+Table A.3.17.1.2-9: CSI-RS for tracking for SCS=30 kHz
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.1.9 TDD |
+| Bandwidth |  | BW of Active BWPNote 1 |
+| SCS | kHz | 30 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 5 for CSI-RS resource 1 and 3 l0 = 9 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 40 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 20 for CSI-RS resource 1 and 221 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 |
+| NOTE 1:  BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2:  Unless otherwise specified in the test case. |  |  |
+
+### A.3.17.2 Configuration of CSI-RS for tracking for FR2
+
+#### A.3.17.2.1 TDD
+
+Table A.3.17.2.1-1: CSI-RS for tracking for SCS=120 kHz Set 1
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.2.1 TDD |
+| Bandwidth |  | BW of Active BWPNote 1,3 |
+| SCS | kHz | 120 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 1 for CSI-RS resource 1 and 3l0 = 5 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 80 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 40 for CSI-RS resource 1 and 241 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 Note 4 |
+| NOTE 1: BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2: Unless otherwise specified in the test case.NOTE 3: If active BWP is larger than 52RBs, BW of TRS is configured as 52RBs. Otherwise, same as active BWP size..NOTE 4: If unified TCI states are configured, the TCI state ID is defined in each test case and from A.3.16A Unified TCI state Configuration. |  |  |
+
+Table A.3.17.2.1-2: CSI-RS for tracking for SCS=120 kHz Set 2
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.2.2 TDD |
+| Bandwidth |  | BW of Active BWPNote 1,3 |
+| SCS | kHz | 120 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 2 for CSI-RS resource 1 and 3l0 = 6 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 80 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 40 for CSI-RS resource 1 and 241 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.1 Note 4 |
+| NOTE 1: BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2: Unless otherwise specified in the test case.NOTE 3: If active BWP is larger than 52RBs, BW of TRS is configured as 52RBs. Otherwise, same as active BWP size..NOTE 4: If unified TCI states are configured, the TCI state ID is defined in each test case and from A.3.16A Unified TCI state Configuration. |  |  |
+
+Table A.3.17.2.1-3: Aperiodic CSI-RS for tracking for SCS=120 kHz Set 1
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.2.3 TDD |
+| Bandwidth |  | BW of Active BWPNote 1,3 |
+| SCS | kHz | 120 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 1 for CSI-RS resource 1 and 3l0 = 5 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| aperiodicTriggeringOffsetL2 | slots | 2 |
+| Aperiodic CSI-RS offset | slots | 2 for CSI-RS resource 1 and 23 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 |
+| NOTE 1: BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2: Unless otherwise specified in the test case.NOTE 3: If active BWP is larger than 52RBs, BW of TRS is configured as 52RBs. Otherwise, same as active BWP size. |  |  |
+
+Table A.3.17.2.1-4: CSI-RS for tracking for SCS=120 kHz Set 3
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.2.4 TDD |
+| Bandwidth |  | BW of Active BWPNote 1,3 |
+| SCS | kHz | 120 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 3 for CSI-RS resource 1 and 3l0 = 7 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 80 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 40 for CSI-RS resource 1 and 241 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.2 |
+| NOTE 1: BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2: Unless otherwise specified in the test case.NOTE 3: If active BWP is larger than 52RBs, BW of TRS is configured as 52RBs. Otherwise, same as active BWP size. |  |  |
+
+Table A.3.17.2.1-5: CSI-RS for tracking for SCS=120 kHz Set 4
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.2.5 TDD |
+| Bandwidth |  | BW of Active BWPNote 1,3 |
+| SCS | kHz | 120 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 4 for CSI-RS resource 1 and 3l0 = 8 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 80 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 40 for CSI-RS resource 1 and 241 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.3 |
+| NOTE 1: BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2: Unless otherwise specified in the test case.NOTE 3: If active BWP is larger than 52RBs, BW of TRS is configured as 52RBs. Otherwise, same as active BWP size. |  |  |
+
+Table A.3.17.2.1-6: CSI-RS for tracking for SCS=120 kHz Set 5
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.2.6 TDD |
+| Bandwidth |  | BW of Active BWPNote 1,3 |
+| SCS | kHz | 120 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 4 for CSI-RS resource 1 and 3l0 = 8 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 80 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 40 for CSI-RS resource 1 and 241 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.3 |
+| NOTE 1: BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2: Unless otherwise specified in the test case.NOTE 3: If active BWP is larger than 52RBs, BW of TRS is configured as 52RBs. Otherwise, same as active BWP size.NOTE 4: If unified TCI states are configured, the TCI state ID is defined in each test case and from A.3.16A Unified TCI state Configuration. |  |  |
+
+#### A.3.17.2.2 FDD
+
+Table A.3.17.2.2-1: CSI-RS for tracking for SCS=120 kHz Set 1
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | TRS.2.1 FDD |
+| Bandwidth |  | BW of Active BWPNote 1,3 |
+| SCS | kHz | 120 |
+| First subcarrier index in the PRB used for CSI-RS |  | k0=0 for CSI-RS resource 1,2,3,4 |
+| First OFDM symbol in the slot used for CSI-RS |  | l0 = 1 for CSI-RS resource 1 and 3l0 = 5 for CSI-RS resource 2 and 4 |
+| Number of CSI-RS ports (X) |  | 1 for CSI-RS resource 1,2,3,4 |
+| CDM Type |  | ‘No CDM’ for CSI-RS resource 1,2,3,4 |
+| Density (ρ) |  | 3 for CSI-RS resource 1,2,3,4 |
+| CSI-RS periodicity | slots | 80 for CSI-RS resource 1,2,3,4 |
+| CSI-RS offset | slots | 40 for CSI-RS resource 1 and 241 for CSI-RS resource 3 and 4 |
+| EPRE ratio to SSS | dB | 0Note 2 |
+| TCI state |  | TCI.State.0 |
+| NOTE 1: BW of TRS is configured same as the BW size of UE active BWP in the RRM test cases.NOTE 2: Unless otherwise specified in the test case.NOTE 3: If active BWP is larger than 52RBs, BW of TRS is configured as 52RBs. Otherwise, same as active BWP size. |  |  |
+
+## A.3.18 Additional definitions related to OTA testing for FR2 RRM test cases
+
+### A.3.18.1 Introduction
+
+FR2 RRM test cases are performed over the air (OTA). This clause provides additional definitions and clarifications on the OTA measurements and metrics defined or refered in the test cases.
+
+### A.3.18.2 PRACH Power Measurement
+
+PRACH power is measured as EIRP(Link=Link angle, Meas=Link angle) as defined in clause 3.1 of TS 38.101-2 [19].
+
+## A.3.19 Test applicability for DAPS handover
+
+### A.3.19.1 Introduction
+
+In annex A test cases for DAPS handover may be defined with cells in on same or different carrier frequency to verify intra-frequency, intra-band inter-frequency and inter-band inter-frequency DAPS handover RRM requirements, respectively.
+
+### A.3.19.2 Principle of testing
+
+To verify intra-frequency DAPS handover requirements
+
+- The UE capable of intra-frequency asynchronous DAPS handover on any band needs to be tested only in asynchronous scenario.
+
+- The UE not capable of intra-frequency asynchronous DAPS handover on any band but capable of synchronous DAPS handover on some band needs to be tested only in synchronous scenario.
+
+To verify intra-band inter-frequency DAPS handover requirements
+
+- The UE capable of intra-band inter-frequency asynchronous DAPS handover on any band needs to be tested only in asynchronous scenario.
+
+- The UE not capable of intra-band inter-frequency asynchronous DAPS handover on any band but capable of intra-band inter-frequency synchronous DAPS handover on some band needs to be tested only in synchronous scenario.
+
+To verify inter-band inter-frequency DAPS handover requirements
+
+- The UE capable of inter-band inter-frequency asynchronous DAPS handover on any band combination needs to be tested only in asynchronous scenario.
+
+- The UE not capable of inter-band inter-frequency asynchronous DAPS handover on any band combination but capable of inter-band inter-frequency synchronous DAPS handover on some band combination needs to be tested only in synchronous scenario.
+
+## A.3.20 MsgA configurations
+
+### A.3.20.1 Introduction
+
+This clause provides the typical PRACH and PUSCH configurations for MsgA used for RRM test cases defined in annex A. To note that for other parameters not listed in this clause, either it can be derived from the set up of each test or it is subjected to RAN5 specifications.
+
+### A.3.20.2 MsgA configurations in FR1
+
+#### A.3.20.2.1 FR1 MsgA configuration 1
+
+FR1 MsgA configuration 1 in this clause provides the typical MsgA configuration for SSB-based contention based random access for 2-step RA type in FR1.
+
+Table A.3.20.2.1-1: Parameters for FR1 MsgA configuration 1
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| msgA-prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| msgA-SubcarrierSpacing | Same as UL carrier SCS |  |
+| msgA-totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| msgA-PRACH-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| msgA-SSB-perRACH-OccasionAndCB-PreamblesPerSSB | oneFourth, n48 | OneFourth: 1 SSB associated with 4 RACH occasions n48: 48 contention based preambles per SSB |
+| msgA-RO-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| ra-ContentionResolutionTimer | sf48 | 48 sub-frames |
+| msgA-PreamblePowerRampingStep | dB2 |  |
+| msgA-PreambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| msgB-ResponseWindow | sl10 | 10 slots |
+| msgA-ZeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| msgA-MCS | 1 | MCS index for MsgA PUSCH |
+| nrofSlotsMsgA-PUSCH | 1 | Number of slots containing one or multiple PUSCH occasions |
+| nrofMsgA-PO-PerSlot | 1 | Number of time domain PUSCH occasions in each slot |
+| msgA-PUSCH-TimeDomainOffset | 1 | A single time offset with respect to the start of each PRACH slot, counted as the number of slots |
+| PUSCH start symbol | 0 |  |
+| PUSCH allocation length | 14 |  |
+| mappingTypeMsgA-PUSCH | typeA |  |
+| nrofPRBs-PerMsgA-PO | 2 | Number of PRBs per PUSCH occasion |
+| nrofMsgA-PO-FDM | One | The number of MsgA PUSCH occasions FDMed in one time instance |
+| msgA-DMRS-AdditionalPosition | pos1 | Position for additional DM-RS |
+| msgA-PUSCH-NrofPorts | 0 | Configure 1 port per CDM group |
+| msgA-DeltaPreamble | 2dB | Power offset of msgA PUSCH relative to the preamble received target power |
+| msgA-Alpha | alpha1 | Alpha value for MsgA PUSCH. Set 1 |
+| deltaMCS | Disabled | Whether to apply delta MCS |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.20.2.2 FR1 MsgA configuration 2
+
+FR1 PRACH configuration 2 in this clause provides the typical MsgA configuration for SSB based non-contention based random access for 2-step RA type in FR1.
+
+Table A.3.20.2.2-1: Parameters for FR1 MsgA configuration 2
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| msgA-prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| msgA-SubcarrierSpacing | Same as UL carrier SCS |  |
+| msgA-totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| msgA-PRACH-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| msgA-RO-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| msgA-PreamblePowerRampingStep | dB2 |  |
+| msgA-PreambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| msgB-ResponseWindow | sl10 | 10 slots |
+| msgA-ZeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| ssb-ResourceList | ra-PreambleIndex = 50 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE doesn’t use this field if is transmitting CFRA to convey BFR. |
+| BFR-SSB-Resource | ra-PreambleIndex = 50 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE uses this field only if is transmitting CFRA to convey BFR |
+| ra-ssb-OccasionMaskIndex | 1 | PRACH occasion index 1 is allowed |
+| msgA-MCS | 1 | MCS index for MsgA PUSCH |
+| nrofSlotsMsgA-PUSCH | 1 | Number of slots containing one or multiple PUSCH occasions |
+| nrofMsgA-PO-PerSlot | 1 | Number of time domain PUSCH occasions in each slot |
+| msgA-PUSCH-TimeDomainOffset | 1 | A single time offset with respect to the start of each PRACH slot, counted as the number of slots |
+| PUSCH start symbol | 0 |  |
+| PUSCH allocation length | 14 |  |
+| mappingTypeMsgA-PUSCH | typeA |  |
+| nrofPRBs-PerMsgA-PO | 2 | Number of PRBs per PUSCH occasion |
+| nrofMsgA-PO-FDM | One | The number of MsgA PUSCH occasions FDMed in one time instance |
+| msgA-DMRS-AdditionalPosition | pos1 | Position for additional DM-RS |
+| msgA-PUSCH-NrofPorts | 0 | Configure 1 port per CDM group |
+| msgA-DeltaPreamble | 2dB | Power offset of msgA PUSCH relative to the preamble received target power |
+| msgA-Alpha | alpha1 | Alpha value for MsgA PUSCH. Set 1 |
+| deltaMCS | Disabled | Whether to apply delta MCS |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+### A.3.20.3 MsgA configurations in FR2
+
+#### A.3.20.3.1 FR2 MsgA configuration 1
+
+FR2 MsgA configuration 1 in this clause provides the typical MsgA configuration for SSB-based contention based random access for 2-step RA type in FR2.
+
+Table A.3.20.3.1-1: Parameters for FR2 MsgA configuration 1
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| msgA-prach-ConfigurationIndex | 190 | Preamble Format C2, with 10 ms PRACH periodicity, and other detailed configurations defined in table 6.3.3.2-4 in TS 38.211 [6]. |
+| msgA-SubcarrierSpacing | Same as UL carrier SCS |  |
+| msgA-totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| msgA-PRACH-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| msgA-SSB-perRACH-OccasionAndCB-PreamblesPerSSB | oneFourth, n48 | OneFourth: 1 SSB associated with 4 RACH occasions n48: 48 contention-based preambles per SSB |
+| msgA-RO-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| ra-ContentionResolutionTimer | sf48 | 48 sub-frames |
+| msgA-PreamblePowerRampingStep | dB2 |  |
+| msgA-PreambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| msgB-ResponseWindow | sl10 | 10 slots |
+| msgA-ZeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| msgA-MCS | 1 | MCS index for MsgA PUSCH |
+| nrofSlotsMsgA-PUSCH | 1 | Number of slots containing one or multiple PUSCH occasions |
+| nrofMsgA-PO-PerSlot | 1 | Number of time domain PUSCH occasions in each slot |
+| msgA-PUSCH-TimeDomainOffset | 1 | A single time offset with respect to the start of each PRACH slot, counted as the number of slots |
+| PUSCH start symbol | 0 |  |
+| PUSCH allocation length | 10 |  |
+| mappingTypeMsgA-PUSCH | typeA |  |
+| nrofPRBs-PerMsgA-PO | 2 | Number of PRBs per PUSCH occasion |
+| nrofMsgA-PO-FDM | One | The number of MsgA PUSCH occasions FDMed in one time instance |
+| msgA-DMRS-AdditionalPosition | pos1 | Position for additional DM-RS |
+| msgA-PUSCH-NrofPorts | 0 | Configure 1 port per CDM group |
+| msgA-DeltaPreamble | 2dB | Power offset of msgA PUSCH relative to the preamble received target power |
+| msgA-Alpha | alpha1 | Alpha value for MsgA PUSCH. Set 1 |
+| deltaMCS | Disabled | Whether to apply delta MCS |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.20.3.2 FR2 MsgA configuration 2
+
+FR2 MsgA configuration 2 in this clause provides the typical MsgA configuration for SSB based non-contention based random access for 2-step RA type in FR2.
+
+Table A.3.20.3.2-1: Parameters for FR2 MsgA configuration 2
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| msgA-prach-ConfigurationIndex | 190 | Preamble Format C2, with 10 ms PRACH periodicity, and other detailed configurations defined in table 6.3.3.2-4 in TS 38.211 [6]. |
+| msgA-SubcarrierSpacing | Same as UL carrier SCS |  |
+| totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| msgA-PRACH-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| msgA-RO-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| msgA-PreamblePowerRampingStep | dB2 |  |
+| msgA-PreambleReceivedTargetPower | dBm-120 |  |
+| preambleTransMax | n6 | Max number of RA preamble transmission performed before declaring a failure is 6 |
+| msgB-ResponseWindow | sl10 | 10 slots |
+| msgA-ZeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| ssb-ResourceList | ra-PreambleIndex = 50 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE doesn’t use this field if is transmitting CFRA to convey BFR. |
+| BFR-SSB-Resource | ra-PreambleIndex = 50 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE uses this field only if is transmitting CFRA to convey BFR |
+| ra-ssb-OccasionMaskIndex | 1 | PRACH occasion index 1 is allowed |
+| msgA-MCS | 1 | MCS index for MsgA PUSCH |
+| nrofSlotsMsgA-PUSCH | 1 | Number of slots containing one or multiple PUSCH occasions |
+| nrofMsgA-PO-PerSlot | 1 | Number of time domain PUSCH occasions in each slot |
+| msgA-PUSCH-TimeDomainOffset | 1 | A single time offset with respect to the start of each PRACH slot, counted as the number of slots |
+| PUSCH start symbol | 0 |  |
+| PUSCH allocation length | 10 |  |
+| mappingTypeMsgA-PUSCH | typeA |  |
+| nrofPRBs-PerMsgA-PO | 2 | Number of PRBs per PUSCH occasion |
+| nrofMsgA-PO-FDM | One | The number of MsgA PUSCH occasions FDMed in one time instance |
+| msgA-DMRS-AdditionalPosition | pos1 | Position for additional DM-RS |
+| msgA-PUSCH-NrofPorts | 0 | Configure 1 port per CDM group |
+| msgA-DeltaPreamble | 2dB | Power offset of msgA PUSCH relative to the preamble received target power |
+| msgA-Alpha | alpha1 | Alpha value for MsgA PUSCH. Set 1 |
+| deltaMCS | Disabled | Whether to apply delta MCS |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+## A.3.20A MsgA configurations under CCA
+
+### A.3.20A.1 Introduction
+
+This clause provides the typical PRACH and PUSCH configurations for MsgA used for RRM test cases defined in annex A. To note that for other parameters not listed in this clause, either it can be derived from the set up of each test or it is subjected to RAN5 specifications.
+
+### A.3.20A.2 MsgA configurations in FR1
+
+#### A.3.20A.2.1 FR1 MsgA configuration 1 under CCA
+
+FR1 MsgA configuration 1 under CCA in this clause provides the typical MsgA configuration for SSB-based contention based random access for 2-step RA type in FR1.
+
+Table A.3.20A.2.1-1: Parameters for FR1 MsgA configuration 1 under CCA
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| msgA-prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| msgA-SubcarrierSpacing | Same as UL carrier SCS |  |
+| msgA-totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| msgA-PRACH-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| msgA-SSB-perRACH-OccasionAndCB-PreamblesPerSSB | oneFourth, n48 | OneFourth: 1 SSB associated with 4 RACH occasions n48: 48 contention based preambles per SSB |
+| msgA-RO-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| ra-ContentionResolutionTimer | sf48 | 48 sub-frames |
+| msgA-PreamblePowerRampingStep | dB2 |  |
+| msgA-PreambleReceivedTargetPower | dBm-114 | Increased by 6 dB compared with FR1 MsgA configuration 1 for random access test with UL CCA failures. |
+| preambleTransMax | n20 | Max number of RA preamble transmission performed before declaring a failure is 20 to account for CCA failures |
+| msgB-ResponseWindow | sl20 | 20 slots |
+| msgA-ZeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| msgA-MCS | 1 | MCS index for MsgA PUSCH |
+| nrofSlotsMsgA-PUSCH | 1 | Number of slots containing one or multiple PUSCH occasions |
+| nrofMsgA-PO-PerSlot | 1 | Number of time domain PUSCH occasions in each slot |
+| msgA-PUSCH-TimeDomainOffset | 1 | A single time offset with respect to the start of each PRACH slot, counted as the number of slots |
+| PUSCH start symbol | 0 |  |
+| PUSCH allocation length | 14 |  |
+| mappingTypeMsgA-PUSCH | typeA |  |
+| nrofPRBs-PerMsgA-PO | 2 | Number of PRBs per PUSCH occasion |
+| nrofMsgA-PO-FDM | One | The number of MsgA PUSCH occasions FDMed in one time instance |
+| msgA-DMRS-AdditionalPosition | pos1 | Position for additional DM-RS |
+| msgA-PUSCH-NrofPorts | 0 | Configure 1 port per CDM group |
+| msgA-DeltaPreamble | 3 | Power offset of msgA PUSCH relative to the preamble received target power |
+| msgA-Alpha | alpha1 | Alpha value for MsgA PUSCH. Set 1 |
+| deltaMCS | Disabled | Whether to apply delta MCS |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+#### A.3.20A.2.2 FR1 MsgA configuration 2 under CCA
+
+FR1 PRACH configuration 2 under CCA in this clause provides the typical MsgA configuration for SSB based non-contention based random access for 2-step RA type in FR1.
+
+Table A.3.20A.2.2-1: Parameters for FR1 MsgA configuration 2 under CCA
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| msgA-prach-ConfigurationIndex | 102 | 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-2 and table 6.3.3.2-3 in TS 38.211 [6]. |
+| msgA-SubcarrierSpacing | Same as UL carrier SCS |  |
+| msgA-totalNumberOfRA-Preambles | 48 | Total number of preambles used for contention based and contention free random access |
+| numberOfRA-PreamblesGroupA | 48 | No group B. |
+| msgA-PRACH-RootSequenceIndex | 0 | Logic sequence index = 0, resulting in root sequence = 1. |
+| ssb-perRACH-Occasion | oneFourth | OneFourth: 1 SSB associated with 4 RACH occasions |
+| msgA-RO-FDM | One | One PRACH transmission occasions FDMed in one time instance. |
+| msgA-PreamblePowerRampingStep | dB2 |  |
+| msgA-PreambleReceivedTargetPower | dBm-114 | Increased by 6 dB compared with FR1 MsgA configuration 2 for random access test with UL CCA failures. |
+| preambleTransMax | n20 | Max number of RA preamble transmission performed before declaring a failure is 20 to account for CCA failures |
+| msgB-ResponseWindow | sl20 | 20 slots |
+| msgA-ZeroCorrelationZoneConfig | 11 | N-CS configuration, NCS = 23 |
+| Backoff Parameter Index | 2 | 20 ms, as defined in table 7.2-1 in TS 38.321 [7]. |
+| ssb-ResourceList | ra-PreambleIndex = 50 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE doesn’t use this field if is transmitting CFRA to convey BFR. |
+| BFR-SSB-Resource | ra-PreambleIndex = 50 | Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE uses this field only if is transmitting CFRA to convey BFR |
+| ra-ssb-OccasionMaskIndex | 1 | PRACH occasion index 1 is allowed |
+| msgA-MCS | 1 | MCS index for MsgA PUSCH |
+| nrofSlotsMsgA-PUSCH | 1 | Number of slots containing one or multiple PUSCH occasions |
+| nrofMsgA-PO-PerSlot | 1 | Number of time domain PUSCH occasions in each slot |
+| msgA-PUSCH-TimeDomainOffset | 1 | A single time offset with respect to the start of each PRACH slot, counted as the number of slots |
+| PUSCH start symbol | 0 |  |
+| PUSCH allocation length | 14 |  |
+| mappingTypeMsgA-PUSCH | typeA |  |
+| nrofPRBs-PerMsgA-PO | 2 | Number of PRBs per PUSCH occasion |
+| nrofMsgA-PO-FDM | One | The number of MsgA PUSCH occasions FDMed in one time instance |
+| msgA-DMRS-AdditionalPosition | pos1 | Position for additional DM-RS |
+| msgA-PUSCH-NrofPorts | 0 | Configure 1 port per CDM group |
+| msgA-DeltaPreamble | 3 | Power offset of msgA PUSCH relative to the preamble received target power |
+| msgA-Alpha | alpha1 | Alpha value for MsgA PUSCH. Set 1 |
+| deltaMCS | Disabled | Whether to apply delta MCS |
+| NOTE: For further information see clause 6.3.2 in TS 38.331 [2]. |  |  |
+
+## A.3.21 V2X sidelink communication
+
+### A.3.21.1 Introduction
+
+This clause also defines the principle and the reference configurations that are applicable to test cases verifying RRM core requirements for V2X sidelink communication.
+
+### A.3.21.2 Reference resource pool configurations for V2X Sidelink Communication
+
+Table A.3.21.2-1: V2X sidelink SL-BWP configuration for NR
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| SL-BWP-ConfigCommon-r16 |  |  |
+| sl-BWP-Generic-r16 |  |  |
+| sl-LengthSymbols-r16 | sym14 | All 14 symbols in a slot without S-SSB are used for sidelink |
+| sl-StartSymbol-r16 | sym0 | Symbol #0 is the starting symbol used for sidelink in a slot without S-SSB |
+| sl-BWP-PoolConfigCommon-r16 |  |  |
+| sl-RxPool-r16 |  | Indicates the resource pool for reception on the configured BWP.1 entry |
+| SL-ResourcePool-r16[1] | Set according to Table A.3.21.2-2 | Entry 1 |
+| sl-TxPoolSelectedNormal-r16 |  | Indicates the resources pool for mode 2 sidelink communication on the configured BWP.1 entry |
+| SL-ResourcePoolConfig-r16[1] |  | Entry 1 |
+| sl-TxPoolExceptional-r16 | Not present |  |
+
+Table A.3.21.2-2: V2X sidelink resource pool configuration for NR
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| SL-ResourcePool-r16 |  |  |
+| sl-PSCCH-Config-r16 | Set according to Table A.3.21.3-1 |  |
+| sl-PSSCH-Config-r16 | Set according to Table A.3.21.3-2 |  |
+| sl-PSFCH-Config-r16 | Not present |  |
+| sl-SyncAllowed-r16 |  | Indicates the allowed synchronization reference(s) which is (are) allowed to use the configured resource pool. |
+| gnss-Sync-r16 | true |  |
+| gnbEnb-Sync-r16 | true |  |
+| ue-Sync-r16 | true |  |
+| sl-SubchannelSize-r16 | n10 | Subchannel bandwidth is 10 PRB |
+| sl-StartRB-Subchannel-r16 | 0 | The offset of lowest PRB index of the subchannel with the lowest index in the resource pool with respect to the lowest PRB index of a SL BWP |
+| sl-NumSubchannel-r16 | 1 | Number of subchannels in resource pool |
+| sl-UE-SelectedConfigRP-r16 |  |  |
+| sl-Thres-RSRP-List-r16 | Set according to the specific test configuration | Indicates a list of 64 thresholds, and the threshold should be selected based on the priority in the decoded SCI and the priority in the SCI to be transmitted. A resource is excluded if it is indicated or reserved by a decoded SCI and PSSCH RSRP in the associated data resource is above a threshold. |
+| sl-MultiReserveResource-r16 | Not present |  |
+| sl-MaxNumPerReserve-r16 | n2 | At most 2 PSCCH/PSSCH resources can be reserved by a single SCI. |
+| sl-SensingWindow-r16 | ms100 | Length of resource sensing window specified in TS 38.214 [26] subclause 8.1.4. which is 100 ms. |
+| sl-SelectionWindowList-r16 |  | Parameter that determines the end of the selection window for each priority level8 entries |
+| SL-SelectionWindowConfig-r16[k,k=1..8] |  | entry k |
+| sl-Priority-r16 | k | for priority level = k |
+| sl-SelectionWindow-r16 | n20 | Length of resource selection window specified in TS 38.214 [26] subclause 8.1.4. which is 20∙2μslots, where µ=0,1,2,3 refers to SCS 15,30,60,120 kHz respectively |
+| sl-ResourceReservePeriodList-r16 | Not present |  |
+| sl-RS-ForSensing-r16 | pssch | PSSCH-RSRP measurement is used in the sensing operation. |
+| sl-RxParametersNcell | Not present |  |
+| sl-ZoneConfigMCR-List-r16 | Not present |  |
+| sl-PreemptionEnable-r16 | enabled |  |
+| sl-MinMaxMCS-List-r16 |  | 1 entry |
+| SL-MinMaxMCS-Config-r16[1] |  | Entry 1 |
+| sl-MCS-Table-r16 | qam64 | TS 38.214 [26] Table 5.1.3.1-1 is the MCS table used in the resource pool. |
+| sl-TimeResource-r16 | 11111111111111111111 | Every slot in a period of 20 slots during a SFN or DFN cycle can be used for sidelink |
+| SL-TxPercentageList-r16 |  |  |
+| SL-TxPercentageConfig-r16 |  |  |
+| sl-TxPercentage-r16 | p20 | Indicates the portion of candidate single-slot PSSCH resources over the toal resources. Value p20 corresponds to 20%, and so on. |
+
+Table A.3.21.2-3: V2X sidelink UE autonomous resource selection configuration for NR
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| SL-UE-SelectedConfig-r16 |  |  |
+| sl-PSSCH-TxConfigList-r16 |  | 1 entry |
+| SL-PSSCH-TxConfig-r16[1] |  | Entry 1 |
+| sl-TypeTxSync-r16 | Not present | When this filed is absent, the configuration is applicable for all synchronization reference types. |
+| sl-ThresUE-Speed-r16 | kmph200 | UE shall apply the parameters in sl-ParametersAboveThres-r16 if UE absolute speed is higher than 200 km/h, otherwise UE shall apply the parameters in sl-ParametersBelowThres-r16 |
+| sl-ParametersAboveThres-r16 |  |  |
+| sl-MinMCS-PSSCH-r16 | 0 | The minimum MCS index value can be used for PSSCH transmission. |
+| sl-MaxMCS-PSSCH-r16 | 15 | The maximum MCS index value can be used for PSSCH transmission. |
+| sl-MinSubChannelNumPSSCH-r16 | 1 | The minimum number of subchannels can be used for PSSCH transmission. |
+| sl-MaxSubchannelNumPSSCH-r16 | 1 | The maximum number of subchannels can be used for PSSCH transmission. |
+| sl-MaxTxTransNumPSSCH-r16 | 1 | The maximum transmission number for PSSCH (including new transmission and retransmission). |
+| sl-MaxTxPower-r16 | Not present | Not applicable |
+| sl-ParametersBelowThres-r16 |  |  |
+| sl-MinMCS-PSSCH-r16 | 4 | Same as above |
+| sl-MaxMCS-PSSCH-r16 | 25 | Same as above |
+| sl-MinSubChannelNumPSSCH-r16 | 1 | Same as above |
+| sl-MaxSubchannelNumPSSCH-r16 | 1 | Same as above |
+| sl-MaxTxTransNumPSSCH-r16 | 1 | Same as above |
+| sl-MaxTxPower-r16 | Not present | Same as above |
+| sl-ProbResourceKeep-r16 | v0dot8 | The probability of UE keeping current resource is 80% when the resource reselection counter reaches 0 (see TS 38.321 [7]). |
+| sl-ReselectAfter-r16 | n1 | Resource reselection is triggered after 1 sidelink transmission is skipped (see TS 38.321 [7]). |
+
+### A.3.21.3 Reference measurement channels for V2X Sidelink Communication
+
+Table A.3.21.3-1: PSCCH Reference Measurement Channels
+
+| Parameter |  | Unit | Value |
+| --- | --- | --- | --- |
+| Reference channel |  |  | CC.1A HD |
+| Channel bandwidth |  | MHz | Note2 |
+| Number of PSCCH symbols per slot |  |  | 2 |
+| Number of PSCCH PRB |  |  | 10 |
+| Modulation |  |  | QPSK |
+| Information Bit Payload (without CRC) |  | Bits | 26 |
+| Information Bit | Number of DMRS ports |  | 0 (1 port) |
+|  | Priority |  | As set by higher layers |
+|  | Resource reservation period |  | N/A |
+|  | Modulation and coding scheme |  | Set as the PSSCH MCS specified in the test |
+|  | DMRS pattern |  | 0 (2 DMRS) |
+|  | 2nd stage SCI format |  | 00 (SCI format 2-A) |
+|  | Beta offset indicator |  | Set as specified in the test |
+|  | Frequency resource assignment |  | Set as per PSSCH PRB allocation specific in the test |
+|  | Time resource assignment |  | Set as per PSSCH slot allocation specific in the test |
+|  | Reserved bits |  | Set all these bits to 0 |
+| Transport block CRC |  | Bits | 24 |
+| Binary Channel Bits (see Note 1) |  | Bits | 360 |
+| NOTE 1: Binary channel bits calculated under assumption of 2 CP-OFDM symbols per subframe.NOTE 2:     Channel bandwidth depends on test configuration. |  |  |  |
+
+Table A.3.21.3-2: PSSCH Reference Measurement Channels
+
+| Parameter | Unit | Value |
+| --- | --- | --- |
+| Reference channel |  | CD.1A HD |
+| Sidelink transmission mode |  | 2 |
+| Channel bandwidth | MHz | Note1 |
+| Allocated PSSCH resource blocks |  | 10 |
+| Number of PSSCH symbols per slot |  | 10 |
+| Modulation |  | QPSK |
+| Target Code Rate |  | 1/3 |
+| Information Bit Payload (Transport block size) | Bits | 672 |
+| Transport block CRC | Bits | 24 |
+| Number of PSSCH HARQ retransmissions |  | 0 |
+| Binary Channel Bits | Bits | 2160 |
+| NOTE 1:    Channel bandwidth depends on test configuration.NOTE 2:    2nd state SCI and PSFCH are not allocated per slot. |  |  |
+
+### A.3.21.4 Reference SL-DRX configurations
+
+#### A.3.21.4.1 SL-DRX Configuration 1: SL-DRX cycle = 40 ms
+
+Table A.3.21.4.1-1: SL-DRX.1: SL-DRX cycle = 40 ms
+
+| Field | Value |
+| --- | --- |
+| sl-DRX-GC-BC-OnDurationTimer | 2 ms |
+| sl-DRX-GC-InactivityTimer | 2 ms |
+| sl-DRX-GC-RetransmissionTimer | 16 slot |
+| sl-DRX-GC-BC-CyclelongDRX | 40 ms |
+| NOTE: This SL-DRX configuration is applicable for V2X sidelink communication. For further information see clause 6.3.5 in TS 38.331. |  |
+
+#### A.3.21.4.2 SL-DRX Configuration 2: SL-DRX cycle = 320 ms
+
+Table A.3.21.4.2-1: SL-DRX.2: SL-DRX cycle = 320 ms
+
+| Field | Value |
+| --- | --- |
+| sl-DRX-GC-BC-OnDurationTimer | 2 ms |
+| sl-DRX-GC-InactivityTimer | 2 ms |
+| sl-DRX-GC-RetransmissionTimer | 16 slot |
+| sl-DRX-GC-BC-CyclelongDRX | 320 ms |
+| NOTE: This SL-DRX configuration is applicable for V2X sidelink communication. For further information see clause 6.3.5 in TS 38.331 [2]. |  |
+
+#### A.3.21.4.3 SL-DRX Configuration 3: SL-DRX cycle = 640 ms
+
+Table A.3.21.4.3-1: SL-DRX.3: SL-DRX cycle = 640 ms
+
+| Field | Value |
+| --- | --- |
+| sl-DRX-GC-BC-OnDurationTimer | 2 ms |
+| sl-DRX-GC-InactivityTimer | 2 ms |
+| sl-DRX-GC-RetransmissionTimer | 16 slot |
+| sl-DRX-GC-BC-CyclelongDRX | 640 ms |
+| NOTE: This SL-DRX configuration is applicable for V2X sidelink communication. For further information see clause 6.3.5 in TS 38.331 [2]. |  |
+
+## A.3.21A NR Sidelink Measurements for Positioning
+
+### A.3.21A.1 Introduction
+
+This clause defines the principles and the reference configurations that are applicable to test cases verifying RRM requirements for NR sidelink measurements for positioning.
+
+### A.3.21A.2 NR SL-PRS configurations
+
+#### A.3.21A.2.1 NR SL-PRS configurations for FR1
+
+Table A.3.21A.2.1-1: SL PRS.1 FR1: SL-PRS configuration
+
+| SL PRS Parameters | Values |  |  |  |
+| --- | --- | --- | --- | --- |
+| Reference channel | SL PRS.1.1 FR1 | SL PRS.1.2 FR1 | SL PRS.1.3 FR1 | SL PRS.1.4 FR1 |
+| SCS | 15 kHz, 30 kHz |  |  |  |
+| SL-PRS comb size | 4 |  | 4 |  |
+| Number of SL-PRS symbols | 2 |  | 4 |  |
+| SL-PRS comb offset Note 1 | 1 |  | 1 |  |
+| SL-PRS resource slot offset (slot) Note 1 | 0 | 1 Note 2 | 0 | 1 Note 2 |
+| PRB numbers containing SL PRS within channel Bandwidth Note 1 | 24 |  | 48 |  |
+| SL-PRS starting PRB | 4 |  | 4 |  |
+| NOTE 1: Unless otherwise specified in the test case.NOTE 2:  Unless otherwise specified in the test case. If reported value for maxNumOfSlotsWithActiveSL-PRS-Resources is ‘n1’, then slot offset is minTimeAfterEndofSlotCarryActiveSL-PRS-Resources for SCS 15 kHz and 2*minTimeAfterEndofSlotCarryActiveSL-PRS-Resources for SCS 30 kHz. |  |  |  |  |
+
+## A.3.22 CSI-IM configurations
+
+### A.3.22.1 FDD
+
+Table A.3.22.1-1: CSI-IM Reference Measurement Channels for SCS=15 kHz
+
+|  | CSI-IM.1.1 FDD | CSI-IM.1.2 FDD | CSI-IM.1.3 FDD |
+| --- | --- | --- | --- |
+| Resource Type | periodic | aperiodic | periodic |
+| Resource Set Config |  |  |  |
+| csi-IM-ResourceSetId | 0 | 0 | 0 |
+| Resource Config |  |  |  |
+| csi-IM-ResourceId | 0 for resource #0 | 10 for resource #0 | 2 for resource #0 |
+|  | 1 for resource #1 | 11 for resource #1 | 3 for resource #1 |
+| csi-IM-ResourceElementPattern | pattern1 | pattern1 | pattern1 |
+| subcarrierLocation-p1 | s0 | s0 | s0 |
+| symbolLocation-p1 | 6 for resource #0 | 7 for resource #0 | 6 for resource #0 |
+|  | 10 for resource #1 | 11 for resource #1 | 10 for resource #1 |
+| Period (slots) | slot20 | n.a. | slot10 |
+| Offset | 1 | n.a. | 2 |
+| startingRB | 0 | 0 | 0 |
+| nrofRBs | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |
+
+### A.3.22.2 TDD
+
+Table A.3.22.2-1: CSI-IM Reference Measurement Channels for SCS=15 kHz
+
+|  | CSI-IM.1.1 TDD | CSI-IM.1.2 TDD | CSI-IM.1.3 TDD |
+| --- | --- | --- | --- |
+| Resource Type | periodic | aperiodic | periodic |
+| Resource Set Config |  |  |  |
+| csi-IM-ResourceSetId | 0 | 0 | 0 |
+| Resource Config |  |  |  |
+| csi-IM-ResourceId | 0 for resource #0 | 10 for resource #0 | 2 for resource #0 |
+|  | 1 for resource #1 | 11 for resource #1 | 3 for resource #1 |
+| csi-IM-ResourceElementPattern | pattern1 | pattern1 | pattern1 |
+| subcarrierLocation-p1 | s0 | s0 | s0 |
+| symbolLocation-p1 | 6 for resource #0 | 7 for resource #0 | 6 for resource #0 |
+|  | 10 for resource #1 | 11 for resource #1 | 10 for resource #1 |
+| Period (slots) | slot20 | n.a. | slot10 |
+| Offset | 1 | n.a. | 2 |
+| startingRB | 0 | 0 | 0 |
+| nrofRBs | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |
+
+Table A.3.22.2-2: CSI-IM Reference Measurement Channels for SCS=30 kHz
+
+|  | CSI-IM.2.1 TDD | CSI-IM.2.2 TDD | CSI-IM.2.3 TDD |
+| --- | --- | --- | --- |
+| Resource Type | periodic | aperiodic | periodic |
+| Resource Set Config |  |  |  |
+| csi-IM-ResourceSetId | 0 | 0 | 0 |
+| Resource Config |  |  |  |
+| csi-IM-ResourceId | 0 for resource #0 | 10 for resource #0 | 2 for resource #0 |
+|  | 1 for resource #1 | 11 for resource #1 | 3 for resource #1 |
+| csi-IM-ResourceElementPattern | pattern1 | pattern1 | pattern1 |
+| subcarrierLocation-p1 | s0 | s0 | s0 |
+| symbolLocation-p1 | 6 for resource #0 | 7 for resource #0 | 6 for resource #0 |
+|  | 10 for resource #1 | 11 for resource #1 | 10 for resource #1 |
+| Period (slots) | slot40 | n.a. | slot40 |
+| Offset | 2 | n.a. | 4 |
+| startingRB | 0 | 0 | 0 |
+| nrofRBs | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |
+
+Table A.3.22.2-3: CSI-RS Reference Measurement Channels for SCS=120 kHz
+
+|  | CSI-IM.3.1 TDD | CSI-IM.3.2 TDD | CSI-IM.3.3 TDD |
+| --- | --- | --- | --- |
+| Resource Type | periodic | aperiodic | periodic |
+| Resource Set Config |  |  |  |
+| csi-IM-ResourceSetId | 0 | 0 | 0 |
+| Resource Config |  |  |  |
+| csi-IM-ResourceId | 0 for resource #0 | 10 for resource #0 | 2 for resource #0 |
+|  | 1 for resource #1 | 11 for resource #1 | 3 for resource #1 |
+| csi-IM-ResourceElementPattern | pattern1 | pattern1 | pattern1 |
+| subcarrierLocation-p1 | s0 | s0 | s0 |
+| symbolLocation-p1 | 6 for resource #0 | 7 for resource #0 | 6 for resource #0 |
+|  | 10 for resource #1 | 11 for resource #1 | 10 for resource #1 |
+| Period (slots) | slot160 | n.a. | slot80 |
+| Offset | 8 | n.a. | 16 |
+| startingRB | 0 | 0 | 0 |
+| nrofRBs | 276 (Note 1) | 276 (Note 1) | 276 (Note 1) |
+| NOTE 1: If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the test Equipment shall implement CSI-RS only in the width of that BWP. |  |  |  |
+
+## A.3.23 Spatial Relation Configuration
+
+### A.3.23.1 Introduction
+
+This clause provides the configurations for spatial relation towards either SSB or CSI-RS. The spatial relation defined in this clause are configured in each test when applicable to indicate spatial setting for certain UL signals with the referenceSignal configured in the spatial relation.
+
+### A.3.23.2 Spatial Relation
+
+Table A.3.23.2-1: PUCCH Spatial Relation
+
+| Parameter | PUCCH.SRI.0 | PUCCH.SRI.1 |
+| --- | --- | --- |
+| pucch-SpatialRelationInfoId | Id0 | Id1 |
+| referenceSignal | SSB0 | SSB1 |
+| PUCCH-PathlossReferenceRS | SSB0 | SSB1 |
+| NOTE 1: referenceSignal configurations towards which the spatial relation are configured in a test-specific manner. |  |  |
+
+Table A.3.23.2-2: SRS Spatial Relation
+
+| Parameter | SRS.SRI0 | SRS.SRI1 |
+| --- | --- | --- |
+| srs-SpatialRelationInfoId | Id0 | Id1 |
+| referenceSignal | SSB0 | SSB1 |
+| NOTE 1: referenceSignal configurations towards which the spatial relation are configured in a test-specific manner. |  |  |
+
+## A.3.24 SRS configuration
+
+Table A.3.24-1: Sounding Reference Symbol Configuration for SCS=15 kHz
+
+|  | SRS.1 TDD | SRS.4 TDD | PDC-SRS.1 | POS-SRS.1 |  |
+| --- | --- | --- | --- | --- | --- |
+| Field | Value |  |  |  | Comment |
+| c-SRS | 12 | 12 | Same as NRB,c in the test case | Same as NRB,c in the test case |  |
+| b-SRS | 0 | 0 | 0 | n.a. |  |
+| b-hop | 0 | 0 | 0 | n.a. | Frequency hopping is disabled |
+| groupOrSequenceHopping | neither | neither | neither | neither | No group or sequence hopping |
+| freqDomainPosition | 0 | 0 | 0 | 0 | Frequency domain position of SRS |
+| freqDomainShift | 0 | 0 | 0 | 0 |  |
+| pathlossReferenceRSssb-Index | 0 | 0 | 0 | 0 | SSB #0 is used for SRS path loss estimation |
+| usage | antennaSwitching | antennaSwitching | usagePDC-r17 | n.a. |  |
+| startPositionNote 1 | 1 | 1 | 5 | 5 | resourceMapping setting |
+| nrofSymbols Note 1 | 1 | 1 | 4 | 4 |  |
+| repetitionFactor | n1 | n1 | n.a. | n.a. | without repetition. |
+| transmissionComb | n2 | n2 | n4 | n4 |  |
+| combOffset-n2 | 0 | 0 | 0 | 0 | transmissionComb setting |
+| cyclicShift-n2 | 0 | 0 | 0 | 0 |  |
+| nrofSRS-Ports Note 1 | port1 | port1 | port1 | port1 | Number of antenna ports used for SRS transmission |
+| resourceType | Periodic | Aperiodic | Periodic | Periodic |  |
+| periodicityAndOffset-p Note 1 | sl40, 1 | N/A | sl160, 20 | sl160, 20 | SRS transmission periodicity |
+| NOTE 1: For test cases in clauses A.4.5.2.11, A.4.5.2.12, A.6.5.2.3, A.6.5.2.4, the startPosition, nrofSymbols, nrofSRS-Ports, periodicityAndOffset-p are specified in each test cases. |  |  |  |  |  |
+
+Table A.3.24-2: Sounding Reference Symbol Configuration for SCS=30 kHz
+
+|  | SRS.2 TDD | SRS.5 TDD | PDC-SRS.2 | POS-SRS.2 |  |
+| --- | --- | --- | --- | --- | --- |
+| Field | Value |  |  |  | Comment |
+| c-SRS | 24 | 24 | Same as NRB,c in the test case | Same as NRB,c in the test case |  |
+| b-SRS | 0 | 0 | 0 | n.a. |  |
+| b-hop | 0 | 0 | 0 | n.a. | Frequency hopping is disabled |
+| groupOrSequenceHopping | neither | neither | neither | neither | No group or sequence hopping |
+| freqDomainPosition | 0 | 0 | 0 | 0 | Frequency domain position of SRS |
+| freqDomainShift | 0 | 0 | 0 | 0 |  |
+| pathlossReferenceRSssb-Index | 0 | 0 | 0 | 0 | SSB #0 is used for SRS path loss estimation |
+| usage | antennaSwitching | antennaSwitching | usagePDC-r17 | n.a. |  |
+| startPosition Note 1 | 3 | 3 | 5 | 5 | resourceMapping setting |
+| nrofSymbols Note 1 | 1 | 1 | 4 | 4 | SRS symbols belong to the same SRS resource. |
+| repetitionFactor | n1 | n1 | n.a. | n.a. | without repetition. |
+| transmissionComb | n2 | n2 | n4 | n4 |  |
+| combOffset-n2 | 0 | 0 | 0 | 0 | transmissionComb setting |
+| cyclicShift-n2 | 0 | 0 | 0 | 0 |  |
+| nrofSRS-Ports Note 1 | port1 | port1 | port1 | port1 | Number of antenna ports used for SRS resource transmission |
+| resourceType | Periodic | Aperiodic | Periodic | Periodic |  |
+| periodicityAndOffset-p Note 1 | sl80, 3 | N/A | Sl320, 40 | Sl320, 40 | SRS transmission periodicity |
+| NOTE 1:  For test cases in clauses A.4.5.2.11, A.4.5.2.12, A.6.5.2.3, A.6.5.2.4, the startPosition, nrofSymbols, nrofSRS-Ports, periodicityAndOffset-p are specified in each test cases. |  |  |  |  |  |
+
+Table A.3.24-3: Sounding Reference Symbol Configuration for SCS=120 kHz
+
+|  | SRS.3 TDD | SRS.6 TDD | PDC-SRS.3 | POS-SRS.3 |  |
+| --- | --- | --- | --- | --- | --- |
+| Field | Value |  |  |  | Comment |
+| c-SRS | 17 | 17 | Same as NRB,c in the test case | Same as NRB,c in the test case |  |
+| b-SRS | 0 | 0 | 0 | n.a. |  |
+| b-hop | 0 | 0 | 0 | n.a. | Frequency hopping is disabled |
+| groupOrSequenceHopping | neither | neither | neither | neither | No group or sequence hopping |
+| freqDomainPosition | 0 | 0 | 0 | 0 | Frequency domain position of SRS |
+| freqDomainShift | 0 | 0 | 0 | 0 |  |
+| pathlossReferenceRSssb-Index | 0 | 0 | 0 | 0 | SSB #0 is used for SRS path loss estimation |
+| usage | antennaSwitching | antennaSwitching | usagePDC-r17 | n.a. |  |
+| startPosition | 1 | 1 | 5 | 5 | resourceMapping setting |
+| nrofSymbols | 1 | 1 | 4 | 4 | SRS symbols belong to the same SRS resource. |
+| repetitionFactor | n1 | n1 | n1 | n.a. | without repetition. |
+| transmissionComb | n2 | n2 | n4 | n4 |  |
+| combOffset-n2 | 0 | 0 | 0 | 0 | transmissionComb setting |
+| cyclicShift-n2 | 0 | 0 | 0 | 0 |  |
+| nrofSRS-Ports | port1 | port1 | port1 | port1 | Number of antenna ports used for SRS resource transmission |
+| resourceType | Periodic | Aperiodic | Periodic | Periodic |  |
+| periodicityAndOffset-p | sl320, 3 | N/A | Sl1280, 160 | Sl1280, 160 | SRS transmission periodicity |
+
+## A.3.25 Channel bandwidth (CBW) configurations
+
+### A.3.25.1 DL UE specific CBW
+
+Table A.3.25.1-1: DL CBW patterns for UE specific CBW configuration
+
+| BWP Parameters | Unit | Values |  |
+| --- | --- | --- | --- |
+| Reference CBW |  | DLCBW.1.1 | DLCBW.1.2 |
+| OffsetToCarrier | PRB | RBy Note 2 | RBx Note 1 |
+| carrierBandwidth | PRB | Same as RF channel defined in each test | Same as RF channel defined in each test |
+| NOTE 1: RBx is offset in frequency domain between Point A (lowest subcarrier of common PRB 0) and the lowest usable subcarrier on this carrier. Note that PRBx has to be within the CBW of BS.NOTE 2: RBy is offset in frequency domain between Point A (lowest subcarrier of common PRB 0) and the lowest usable subcarrier on this carrier. Note that PRBy has to be within the CBW of BS and different with PRBx, and CBW should include SSB and CORESET#0. |  |  |  |
+
+### A.3.25.2 UL UE specific CBW
+
+Table A.3.25.2-1: UL CBW patterns for UE specific CBW configuration
+
+| BWP Parameters | Unit | Values |  |
+| --- | --- | --- | --- |
+| Reference CBW |  | ULCBW.1.1 | ULCBW.1.2 |
+| OffsetToCarrier | PRB | RBy Note 2 | RBx Note 1 |
+| carrierBandwidth | PRB | Same as RF channel defined in each test | Same as RF channel defined in each test |
+| NOTE 1: RBx is offset in frequency domain between Point A (lowest subcarrier of common PRB 0) and the lowest usable subcarrier on this carrier. Note that PRBx has to be within the CBW of BS.NOTE 2: RBy is offset in frequency domain between Point A (lowest subcarrier of common PRB 0) and the lowest usable subcarrier on this carrier. Note that PRBy has to be within the CBW of BS and different with PRBx. |  |  |  |
+
+## A.3.26 CCA model
+
+### A.3.26.1 Introduction
+
+The CCA model is used in some RRM test cases with at least one cell on a carrier frequency with CCA. The intention with the CCA model is to emulate in the test equipment the behaviour of a gNB or UE which performs channel measurement to check that the channel is clear prior to performing one or more downlink, uplink or sidelink transmissions.
+
+### A.3.26.2 CCA model for operation on a carrier frequency with CCA in FR1
+
+#### A.3.26.2.1 DL CCA model
+
+The same DL CCA model is applicable regardless of whether DRX cycle is used or not with the following differences:
+
+- The counter, lCCA, is used to monitor the number of unavailable DBT samples withing an evaluation window, WCCA_DL. DBT samples outside of the evaluation window WCCA_DL are discarded.
+
+If DRX cycle is not used then prior to each DBT window, the test equipment shall determine whether the DL CCA attempt is successful (i.e., the corresponding signals have to be transmitted), based on probability PCCA_DL of successful DL CCA configured in the corresponding test case. If DRX cycle is not used, then the DL CCA model shall increment the counter lCCA for every unavailable DBT sample due to DL CCA failure.
+
+- If DRX cycle is used, then the DL CCA model shall increment the counter, lCCA, once per DRX cycle for a DRX cycle if the first DBT sample in that DRX cycle is unavailable due to DL CCA failure. DL CCA failures in a DRX cycle are determined as follows:
+
+- The test system in the first DBT window of each DRX cycle determines whether the DL CCA attempt is successful or not using the principle as follows:
+
+- If the DL CCA is successful then the test system shall transmit in all DBT windows within that DRX cycle.
+
+- If the DL CCA is not successful then the test system shall not transmit in any of the DBT windows within that DRX cycle. In this case lCCA is increased by 1.
+
+- The parameters, LCCA_DL, LCCA_UL, WCCA_DL and WCCA_UL can be used as in non-DRX tests.
+
+If the CCA attempt is successful for a transmission, then the test equipment shall transmit also other remaining transmissions, according to the configuration, within the same DBT window.
+
+If the CCA attempt is not successful for a transmission within the DBT window, the test equipment shall determine whether the CCA attempt is successful for the next configured transmission, based on probability PCCA_DL.
+
+The probability can be different in different time intervals Ti during a test case. One probability value (per cell) applies at any time point during a test; one or more probability values can be configured in the entire test, one value PCCA_DL per time interval Ti where i≥1, and the multiple time intervals (when i>1) do not overlap (e.g., PCCA_DL=1.0 in T1 and PCCA_DL=0.75 in T2).
+
+For semi-static channel access configuration, a single value PCCA_DL is used to configure the probability of CCA success in different time intervals Ti during a test realization. An additional limit LCCA_DL is used to determine the maximum number of unavailable DBT samples within an evaluation window WCCA_DL. If the number of unavailable DBT samples on the last WCCA_DL DBT samples is larger or equal to LCCA_DL, the CCA attempt is considered successful for transmission.
+
+For dynamic channel access configuration, the parameters PCCA_DL_1 and PCCA_DL_2 are used to configure the probability of CCA success on the first and second SSB candidate positions, respectively, in different time intervals Ti during a test realization. An additional limit LCCA_DL is used to determine the maximum number of unavailable DBT samples within an evaluation window WCCA_DL. If the number of unavailable DBT samples on the last WCCA_DL DBT samples is larger or equal to LCCA_DL, the CCA attempt is considered successful for transmission.
+
+For semi-static channel access configuration or for dynamic channel access configuration where one candidate SSB position is modelled, prior to each discovery burst transmission window within a time interval Ti of the test, the test equipment shall:
+
+## 1 Generate a uniform random variable p1 from the range [0, 1] for the first candidate position.
+
+## 2  Transmit the discovery burst based on p1 in the first candidate position. If p1 ≤ PCCA_DL, the discovery burst is transmitted at the first candidate SSB location; else if lCCA is larger than or equal to LCCA_DL, the discovery burst is transmitted at the first candidate SSB location, otherwise the discovery burst is muted. If DRX cycle is used, then the decision whether the discover burst is muted or not is repeated for the rest of the DRX cycle.
+
+For dynamic channel access configuration where two candidate SSB positions are modelled, prior to each discovery burst transmission window within a time interval Ti of the test, the test equipment shall:
+
+## 1  Generate a uniform random variable p1 from the range [0, 1] for the first candidate position.
+
+## 2  Transmit the discovery burst based on p1 in the first candidate position: if p1 ≤ PCCA_DL1, the discovery burst is transmitted at first candidate SSB location, else the test equipment shall:
+
+a  Generate a uniform random variable p2 from the range [0, 1] for the second candidate SSB position.
+
+b  Transmit the discovery burst based on p2 in the second candidate position.  If p2 ≤ PCCA_DL2, the discovery burst is transmitted at the second candidate SSB location; else if lCCA is larger than or equal to LCCA_DL, the discovery burst is transmitted at the second candidate SSB location, otherwise the discovery burst is muted. If DRX cycle is used, then the decision whether the discover burst is muted or not is repeated for the rest of the DRX cycle.
+
+The above steps are repeated for each discovery burst transmission window in each time interval Ti of the test. The limit LCCA_DL and window WCCA_DL is a configuration parameter for each test case.
+
+In many test cases, the requirement under a test depends on the number of configured SSB transmissions which are not available during the test due to CCA failure, so the test equipment shall track how many such signal occasions are not transmitted in DL during the test period.
+
+#### A.3.26.2.2 UL CCA model
+
+For UL CCA, the modelling approach is based on probability PCCA_UL of successful CCA. Probability PCCA_UL is configured in the corresponding test case, based on a set SCCA_UL of possible values including 75 % and 87% as typical values for dynamic and semi-static channel access configurations, 0% to model consistent UL CCA failures, and 100% to model no UL CCA failures.
+
+Consistent UL CCA failures are modelled by configuring a low value for PCCA_UL, e.g., PCCA_UL = 0%.
+
+In the same time interval Ti during the same test case, PCCA_UL can be different from PCCA_DL.
+
+The probability can be different in different time intervals Ti during a test case. One probability value applies at any time point during a test; one or more probability values can be configured in the entire test, one value PCCA_UL per time interval Ti where i ≥ 1, and the multiple time intervals (when i > 1) do not overlap (e.g., PCCA_UL = 1.0 in T1 and PCCA_UL = 0.75 in T2).
+
+TCCA µs prior to each UL transmission burst in the test, the test equipment (TE) shall generate a uniform random variable p from the range [0, 1]. If p>PCCA_UL, the TE transmits an OCNG noise pattern with an energy level X per LBT measurement BW, within the UE BW scheduled/configured for the UL transmission for at-least TCCA µs. Where TCCA µs is energy detection time for accessing the uplink channel as defined in section 5.1.1 of TS 37.106 [36]. Where:
+
+- X is 9 dB above the energy detection threshold defined in section 5.1.1 of TS 37.106 [36].
+
+- TCCA is the channel sensing period depending on CCA category for the next UL transmission.
+
+The TE shall count the number of UL CCA failures, and no further UL CCA failures are modelled if the number of failures exceeds the limit LCCA_UL within a window WCCA_UL. For each UL CCA failure generated by the model, the TE shall monitor the corresponding UL resource for the desired UL signal, and based on when and/or whether the TE received the desired UL signal, it deems the test case to pass or fail.
+
+In many cases, the requirement under a test depends on the number of configured signal occasions which are not available during the test, so the test equipment shall track how many such signal occasions are not transmitted in UL during the test period.
+
+### A.3.26.3 CCA model for operation on a carrier frequency with CCA in FR2-2
+
+#### A.3.26.3.1 DL CCA model
+
+For DL CCA, the modelling approach is based on probability PCCA_DL of successful CCA.
+
+If the CCA attempt is successful for a transmission, then the test equipment shall transmit also other remaining transmissions, according to the configuration, within the same DBT window.
+
+If the CCA attempt is not successful for a transmission within the DBT window, the test equipment shall determine whether the CCA attempt is successful for the next configured transmission, based on probability PCCA_DL.
+
+To decide whether the CCA attempt for one SSB/SMTC occasion within one SSB/SMTC occasion group, where one SSB/SMTC occasion group consists of 12 consecutive SSB/SMTC occasions is successful or not, TE shall:
+
+## 1 - Generate a uniform random variable p from the range [0, 1].
+
+## 2 - If p > PCCA_DL,
+
+- TE picks one SSB/SMTC occasion out of a group of 12 consecutive SSB/SMTC occasions based on a fixed pattern, where one SSB/SMTC occasion is equivalent to one SSB burst Set.
+
+- TE models CCA failure in this SSB/SMTC occasion. Note that other 11 SSB/SMTC occasions shall be transmitted by the TE.
+
+- Whole SSB/SMTC occasion group is considered as unavailable to the UE.
+
+## 2 - If p ≤ PCCA_DL,
+
+- TE transmit 12 consecutive SSB/SMTC occasions.
+
+- Whole SSB/SMTC occasion group is considered as available to the UE.
+
+In many test cases, the requirement under a test depends on the number of configured SSB transmissions which are not available during the test due to CCA failure, so the test equipment shall track how many such signal occasions are not transmitted in DL during the test period.
+
+#### A.3.26.3.2 UL CCA model
+
+For UL CCA, the modelling approach is based on probability PCCA_UL of successful CCA. Probability PCCA_UL is configured in the corresponding test case.
+
+Consistent UL CCA failures are modelled by configuring a low value for PCCA_UL, e.g., PCCA_UL = 0%.
+
+In the same time interval Ti during the same test case, PCCA_UL can be different from PCCA_DL.
+
+The probability can be different in different time intervals Ti during a test case. One probability value applies at any time point during a test; one or more probability values can be configured in the entire test, one value PCCA_UL per time interval Ti where i ≥ 1, and the multiple time intervals (when i > 1) do not overlap (e.g., PCCA_UL = 1.0 in T1 and PCCA_UL = 0.75 in T2).
+
+TCCA µs prior to each UL transmission burst in the test, the test equipment (TE) shall generate a uniform random variable p from the range [0, 1]. If p>PCCA_UL, the TE transmits an OCNG noise pattern with an energy level X within the UE BW scheduled/configured for the UL transmission for at-least TCCA µs. Where TCCA µs is energy detection time for accessing the uplink channel as defined in section 5.1.1 of TS 37.106 [36]. Where:
+
+- X is 3 dB above the energy detection threshold defined in section 5.1.1 of TS 37.106 [36].
+
+- TCCA is the channel sensing period depending on CCA category for the next UL transmission.
+
+In many cases, the requirement under a test depends on the number of configured signal occasions which are not available during the test, so the test equipment shall track how many such signal occasions are not transmitted in UL during the test period.
+
+### A.3.26.4 CCA model for operation on a sidelink carrier frequency with CCA
+
+#### A.3.26.4.1 CCA model for SyncRef UE
+
+For the SyncRef UE transmitting S-SSB in sidelink carrier frequency with CCA, the modelling approach is based on probability PCCA_SL_SyncRefUE of successful CCA.
+
+If the CCA attempt is successful for a S-SSB transmission, then the test equipment shall transmit S-SSB on S-SSB transmission occasion, according to the configuration.
+
+If the CCA attempt is not successful for a S-SSB transmission, the test equipment shall determine whether the CCA attempt is successful for the next S-SSB occasion, based on probability PCCA_SL_SyncRefUE.
+
+A counter, denoted by lCCA, tracks the number of unavailable S-SSB periods. In the SL CCA model, the counter lCCA is incremented when CCA failures led to an unavailable S-SSB period.
+
+The probability can be different in different time intervals Ti during a test case. One probability value applies at any time point during a test; one or more probability values can be configured in the entire test, one value PCCA_SL_SyncRefUE per time interval Ti where i ≥ 1, and the multiple time intervals (when i > 1) do not overlap (e.g., PCCA_SL_SyncRefUE = 1.0 in T1 and PCCA_SL_ SyncRefUE = 0.75 in T2).
+
+The parameters P CCA_SL_SyncRefUE_1 and PCCA_SL_SyncRefUE_2 are used to configure the probability of CCA success on the first and second S-SSB candidate occasions, respectively, in different time intervals Ti during a test realization. An additional limit LCCA_SL determines the maximum number of unavailable S-SSB periods. If lCCA ≥LCCA_SL, the CCA attempt is considered successful for S-SSB transmissions.
+
+Two candidate SSB occasions are modelled within each S-SSB period. To decide whether the CCA attempt for the two S-SSB occasions within each of S-SSB period is successful, TE shall:
+
+## 1 - Generate a uniform random variable p1 from the range [0, 1] for the first candidate S-SSB occasion.
+
+## 2 - Transmit the S-SSB based on p1 in the first candidate occasion:
+
+- if p1 ≤ PCCA_SL_SyncRefUE_1, the S-SSB is transmitted in first candidate SSB occasion and this S-SSB period is considered as available to the DUT,
+
+- else TE shall generate a uniform random variable p2 from the range [0, 1] for the second candidate SSB occasion
+
+- If p2 ≤ PCCA_SL_SyncRefUE_2 or if lCCA ≥ LCCA_SL, the S-SSB is transmitted in the second candidate SSB occasion;
+
+- else this S-SSB period is muted.
+
+The above steps are repeated for each S-SSB periods in each time interval Ti of the test. The limit LCCA_SL is a configuration parameter for each test case.
+
+In many test cases, the requirement under a test depends on the counter lCCA, so the test equipment shall track how many such S-SSB periods are not transmitted by TE during the test period.
+
+## A.3.27 Void
+
+### A.3.27.1 Void
+
+### A.3.27.2 Void
+
+### A.3.27.3 Void
+
+### A.3.27.4 Void
+
+### A.3.27.5 Void
+
+## A.3.28 Discovery Burst Transmission Window configuration under CCA
+
+### A.3.28.1 DBT Window pattern 1: DBT Window period = 20 ms with DBT Window duration = 1 ms
+
+Table A.3.28.1-1: DBT.1: DBT Window Pattern 1 for DBT Window period = 20 ms and duration = 1 ms
+
+| SMTC Parameters | Values |
+| --- | --- |
+| Discovery burst transmission window periodicity | 20 ms |
+| Discovery burst transmission window offset | 0 ms |
+| Discovery burst transmission window duration | 1 ms |
+
+## A.3.29 Testing principles for UE capable of only NR bands with shared spectrum access
+
+### A.3.29.1 Introduction
+
+In annex A test cases are defined involving one or more NR cells operating on NR band(s) with shared spectrum channel access. The NR bands with shared spectrum channel access are defined in clause 5.2 of TS 38-101-1 [18].
+
+### A.3.29.2 Principle of testing for UE capable of EN-DC with only NR bands with shared spectrum access
+
+In annex A, test cases in table A.3.29.2-1 are defined for UE capable of EN-DC with only NR band(s) with shared spectrum access and are not required for UE supporting also other NR band(s) (i.e. band with no shared spectrum access). The EN-DC configurations are defined in clause of 5.5B of TS 38.101-3 [20].
+
+Table A.3.29.2-1: Test cases applicable to UE supporting EN-DC with only NR bands with shared spectrum access
+
+| Test category | Section | Test case |
+| --- | --- | --- |
+| Active BWP switching | A.10.3.5.2.1 | E-UTRAN – NR PSCell FR1 DL active BWP switch in non-DRX in synchronous EN-DC |
+|  | A.10.3.5.2.2 | E-UTRAN – NR PSCell FR1 DL active BWP switch with FR1 SCell in non-DRX in synchronous EN-DC |
+|  | A.10.3.5.3.1 | E-UTRAN – NR PSCell FR1 DL active BWP switch in non-DRX in synchronous EN-DC |
+
+### A.3.29.3 Principle of testing for UE capable of SA operation with only NR bands with shared spectrum access
+
+In annex A, test cases in table A.3.29.3-1 are defined for UE capable of NR SA operation with only NR band(s) with shared spectrum access and are not required for UE supporting also other NR band(s) (i.e. band with no shared spectrum access).
+
+Table A.3.29.3-1: Test cases applicable to UE supporting SA operation with only NR bands with shared spectrum access
+
+| Test category | Section | Test case |
+| --- | --- | --- |
+| Active BWP switching | A.11.4.5.2.1 | NR FR1- NR FR1 DL active BWP switch of PCell with non-DRX in SA |
+|  | A.11.4.5.2.2 | NR FR1 DL active BWP switch with non-DRX in SA |
+|  | A.11.4.5.3.1 | NR FR1 DL active BWP switch of Cell with non-DRX in SA |
+
+## A.3.30 CSI-RS configurations for RRM
+
+### A.3.30.1 FDD
+
+Table A.3.30.1-1: CSI-RS RRM Reference Measurement Channels for SCS=15 kHz
+
+|  | CSI-RS.RRM.FR1.1 FDD |
+| --- | --- |
+| CSI-RS-ResourceConfigMobility |  |
+| subcarrierSpacing, kHz | 15 |
+| CSI-RS-CellMobility |  |
+| cellIdnote1 | 0 |
+| nrofPRBs | 48 |
+| startPRB | 0 |
+| density | 3 |
+| CSI-RS-Resource-Mobility |  |
+| csi-RS-Index | 0 |
+| slotConfig: ms20 note2 | slot1 |
+| associatedSSB | True |
+| ssb-Index note3 | 0 |
+| isQuasiColocated | True |
+| firstOFDMSymbolInTimeDomain note4 | 10 |
+| sequenceGenerationConfig | 0 |
+| Others |  |
+| nrofPorts | 1 |
+| CDM Type | NoCDM |
+| EPRE ratio to SSS, dB | 0 |
+| Note1: unless specified otherwise.Note2: unless specified otherwise.Note3: assume the same SS/PBCH block index of the corresponding cell in the test case.Note4: unless specified otherwise. |  |
+
+### A.3.30.2 TDD
+
+Table A.3.30.2-1: CSI-RS RRM Reference Measurement Channels for SCS=15 kHz
+
+|  | CSI-RS.RRM.FR1.1 TDD |
+| --- | --- |
+| CSI-RS-ResourceConfigMobility |  |
+| subcarrierSpacing, kHz | 15 |
+| CSI-RS-CellMobility |  |
+| cellIdnote1 | 0 |
+| nrofPRBs | 48 |
+| startPRB | 0 |
+| density | 3 |
+| CSI-RS-Resource-Mobility |  |
+| csi-RS-Index | 0 |
+| slotConfig: ms20 note2 | slot1 |
+| associatedSSB | True |
+| ssb-Index note3 | 0 |
+| isQuasiColocated | True |
+| firstOFDMSymbolInTimeDomain note4 | 10 |
+| sequenceGenerationConfig | 0 |
+| Others |  |
+| nrofPorts | 1 |
+| CDM Type | NoCDM |
+| EPRE ratio to SSS, dB | 0 |
+| Note1: unless specified otherwise.Note2: unless specified otherwise.Note3: assume the same SS/PBCH block index of the corresponding cell in the test case.Note4: unless specified otherwise. |  |
+
+Table A.3.30.2-2: CSI-RS RRM Reference Measurement Channels for SCS=30 kHz
+
+|  | CSI-RS.RRM.FR1.2 TDD |
+| --- | --- |
+| CSI-RS-ResourceConfigMobility |  |
+| subcarrierSpacing, kHz | 30 |
+| CSI-RS-CellMobility |  |
+| cellIdnote1 | 0 |
+| nrofPRBs | 48 |
+| startPRB | 0 |
+| density | 3 |
+| CSI-RS-Resource-Mobility |  |
+| csi-RS-Index | 0 |
+| slotConfig: ms20 note2 | slot1 |
+| associatedSSB | True |
+| ssb-Index note3 | 0 |
+| isQuasiColocated | True |
+| firstOFDMSymbolInTimeDomain note4 | 10 |
+| sequenceGenerationConfig | 0 |
+| Others |  |
+| nrofPorts | 1 |
+| CDM Type | NoCDM |
+| EPRE ratio to SSS, dB | 0 |
+| Note1: unless specified otherwise.Note2: unless specified otherwise.Note3: assume the same SS/PBCH block index of the corresponding cell in the test case.Note4: unless specified otherwise. |  |
+
+Table A.3.30.2-3: CSI-RS RRM Reference Measurement Channels for SCS=120 kHz
+
+|  | CSI-RS.RRM.FR2.1 TDD |
+| --- | --- |
+| CSI-RS-ResourceConfigMobility |  |
+| subcarrierSpacing, kHz | 120 |
+| CSI-RS-CellMobility |  |
+| cellIdnote1 | 0 |
+| nrofPRBs | 48 |
+| startPRB | 0 |
+| density | 3 |
+| CSI-RS-Resource-Mobility |  |
+| csi-RS-Index | 0 |
+| slotConfig: ms20 note2 | slot1 |
+| associatedSSB | True |
+| ssb-Index note3 | 0 |
+| isQuasiColocated | True |
+| firstOFDMSymbolInTimeDomain note4 | 10 |
+| sequenceGenerationConfig | 0 |
+| Others |  |
+| nrofPorts | 1 |
+| CDM Type | NoCDM |
+| EPRE ratio to SSS, dB | 0 |
+| Note1: unless specified otherwise.Note2: unless specified otherwise.Note3: assume the same SS/PBCH block index of the corresponding cell in the test case.Note4: unless specified otherwise. |  |
+
+## A.3.31 PRS Configurations
+
+### A.3.31.1 PRS Configurations for FR1
+
+#### A.3.31.1.1 PRS pattern 1 in FR1: SCS=15 kHz
+
+Table A.3.31.1.1-1: PRS.1 FR1: PRS Pattern 1 for SCS=15 kHz
+
+| PRS Parameters | Values |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel | PRS.1.1 FR1 | PRS.1.2 FR1 | PRS.1.3 FR1 |  | PRS.1.4 FR1 |  | PRS.1.5 FR1 |
+| Resource index in resource set | 0 | 0 | 0 | 1 | 0 | 1 | 1 |
+| PRS periodicity | 160ms |  |  |  |  |  |  |
+| PRS Resource set slot offset Note 1 | 10 ms |  |  |  |  |  |  |
+| PRS Resource slot offset (slot) Note 1 | 0 | 4 | 0 |  | 4 |  | 4 |
+| PRS RE offset Note 1 | 0 |  | 0 | 1 | 0 | 1 | 1 |
+| SCS | 15kHz |  |  |  |  |  |  |
+| PRS comb size | 2 | 4 | 2 |  | 4 |  | 4 |
+| Number of PRS symbol | 4 | 4 | 4 |  | 4 |  | 4 |
+| Repetion factor | 2 | 1 | 2 |  | 1 |  | 6 |
+| PRS resource time gap (slot) | 1 | 1 | 1 |  | 1 |  | 1 |
+| PRB numbers containing PRS within channel BW Note 1 | 0-23 | 0-103 | 0-23 |  | 0-103 |  | 0-267 |
+| PRS Start PRB | 0 |  |  |  |  |  |  |
+| NOTE 1: Unless otherwise specified in the test case. |  |  |  |  |  |  |  |
+
+
+#### A.3.31.1.2 PRS pattern 2 in FR1: SCS=30 kHz
+
+Table A.3.31.1.2-1: PRS.2 FR1: PRS Pattern 2 for SCS=30 kHz
+
+| PRS Parameters | Values |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel | PRS.2.1 FR1 | PRS.2.2 FR1 | PRS.2.3 FR1 |  | PRS.2.4 FR1 |  | PRS.2.5 FR1 | PRS.2.6 FR1 |
+| Resource index in resource set | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
+| PRS periodicity | 160 ms |  |  |  |  |  |  |  |
+| PRS Resource set slot offset Note 1 | 10 ms |  |  |  |  |  |  |  |
+| PRS Resource slot offset (slot) Note 1 | 0 | 4 | 0 |  | 4 |  | 0 | 0 |
+| PRS RE offset Note 1 | 0 |  | 0 | 1 | 0 | 1 | 0 | 0 |
+| SCS | 30 kHz |  |  |  |  |  |  |  |
+| PRS comb size | 2 | 4 | 2 |  | 4 |  | 4 | 4 |
+| Number of PRS symbol | 4 | 4 | 4 |  | 4 |  | 4 | 4 |
+| Repetion factor | 2 | 1 | 2 |  | 1 |  | 1 | 6 |
+| PRS resource time gap (slot) | 1 | 1 | 1 |  | 1 |  | 1 | 1 |
+| PRB numbers containing PRS within channel BW Note 1 | 0-23 | 0-131 | 0-23 |  | 0-131 |  | 0-47 | 0-271 |
+| PRS Start PRB | 0 |  |  |  |  |  |  |  |
+| NOTE 1: Unless otherwise specified in the test case. |  |  |  |  |  |  |  |  |
+
+### A.3.31.2 PRS Configurations for FR2
+
+#### A.3.31.2.1 PRS pattern 1 in FR2: SCS=120 kHz
+
+Table A.3.31.2.1-1: PRS.1 FR2: PRS Pattern 1 for SCS=120 kHz
+
+| PRS Parameters | Values |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Reference channel | PRS.1.1 FR2 | PRS.1.2 FR2 | PRS.1.3 FR2 |  | PRS.1.4 FR2 |  | PRS.1.5 FR2 | PRS.1.6 FR2 |
+| Resource index in resource set | 0 | 0 | 0 | 1 | 0 | 1 | 0 | 0 |
+| PRS periodicity | 160 ms |  |  |  |  |  |  |  |
+| PRS Resource set slot offset Note 1 | 10 ms |  |  |  |  |  |  |  |
+| PRS Resource slot offset (slot) Note 1 | 0 | 4 | 0 |  | 4 |  | 0 | 0 |
+| PRS RE offset Note 1 | 0 |  | 0 | 1 | 0 | 1 | 0 | 0 |
+| SCS | 120 kHz |  |  |  |  |  |  |  |
+| PRS comb size | 2 | 4 | 2 |  | 4 |  | 4 | 4 |
+| Number of PRS symbol | 4 | 4 | 4 |  | 4 |  | 4 | 4 |
+| Repetion factor | 2 | 1 | 2 |  | 1 |  | 1 | 6 |
+| PRS resource time gap (slot) | 1 | 1 | 1 |  | 1 |  | 1 | 1 |
+| PRB numbers containing PRS within channel BW Note 1 | 0-31 | 0-127 | 0-31 |  | 0-127 |  | 0-63 | 0-263 |
+| PRS Start PRB | 0 |  |  |  |  |  |  |  |
+| NOTE 1: Unless otherwise specified in the test case. |  |  |  |  |  |  |  |  |
+
+## A.3.32 NR sidelink discovery
+
+### A.3.32.1 Introduction
+
+This clause also defines the principle and the reference configurations that are applicable to test cases verifying RRM core requirements for NR sidelink discovery.
+
+### A.3.32.2 Reference resource pool configurations for NR Sidelink Discovery
+
+Table A.3.32.2-1: SL-BWP configuration for NR sidelink discovery
+
+| Field | Value | Comment |
+| --- | --- | --- |
+| SL-BWP-ConfigCommon-r16 |  |  |
+| sl-BWP-Generic-r16 |  |  |
+| sl-LengthSymbols-r16 | sym14 | All 14 symbols in a slot without S-SSB are used for sidelink |
+| sl-StartSymbol-r16 | sym0 | Symbol #0 is the starting symbol used for sidelink in a slot without S-SSB |
+| sl-BWP-DiscPoolConfigCommon-r17 |  |  |
+| sl-DiscRxPool-r17 |  | Indicates the resource pool for reception on the configured BWP.1 entry |
+| SL-ResourcePool-r16[1] | Set according to Table A.3.21.2-2 | Entry 1 |
+| sl-DiscTxPoolSelected-r17 |  | Indicates the resources pool for mode 2 sidelink communication on the configured BWP.1 entry |
+| SL-ResourcePoolConfig-r16[1] |  | Entry 1 |
+
+### A.3.32.3 Principle of Testing
+
+The UE capable of both V2X sidelink communication and NR sidelink discovery does not have to pass the test for interruption at NR sidelink discovery configuration defined in clause 9.1.6.1, if this UE has already passed the test case for interruption due to V2X sidelink communication defined in clause 9.1.6.1.
+
+## A.3.33 PRS Processing Window (PPW) configurations
+
+Table A.3.33-1: Reference PPW configuration
+
+| PPW Parameters | Unit | Values |
+| --- | --- | --- |
+| Reference PPW |  | PPW.1 |
+| Periodicity | slot | Note 1 |
+| Offset | slot | Note 2 |
+| Length | ms | 10 |
+| Type |  | Same as the value reported in prsProcessingType-r17 |
+| Priority |  | st1 |
+| NOTE 1: Same as PRS resource set periodicity as used in the test case.NOTE 2: Same as PRS resource with smallest offset as used in the test case. |  |  |
+
+## A.3.34 Testing principles for test cases related to PRS measurements
+
+### A.3.34.1 Introduction
+
+In annex A test cases are defined for verifying various type of PRS measurement and accuracy requirements.
+
+### A.3.34.2 Test cases in RRC_INACTIVE state
+
+In annex A, PRS measurement test cases are defined with 4 samples and with reduced number of samples in RRC_INACTIVE state. The testing principle for these test cases is as follows:
+
+- A UE capable of supportedDL-PRS-ProcessingSamples-RRC-Inactive [34] is only required to pass the test cases with reduced number of samples.
+
+- A UE not capable of supportedDL-PRS-ProcessingSamples-RRC-Inactive [34] is required to pass the test cases with 4 samples.
+
+In Annex A, PRS measurement delay test cases are defined for both PRS-RSRP and PRS-RSRPP measurements in RRC_INACTIVE state when UE is configured with DRX cycle and eDRX cycle > 10.24s for positioning measurements. The testing principle for these test cases is as follows:
+
+- A UE capable of both PRS-RSRP and PRS-RSRPP measurements is required to pass either PRS-RSRP measurement delay test or PRS-RSRPP measurement delay test.
+
+In Annex A, PRS measurement delay test cases are defined for both RSTD and UE Rx-Tx time difference measurements in RRC_INACTIVE state when UE is configured with DRX cycle and eDRX cycle > 10.24s for positioning measurements. The testing principle for these test cases is as follows:
+
+- A UE capable of both RSTD and UE Rx-Tx time difference measurements is required to pass either RSTD measurement delay test or UE Rx-Tx time difference measurement delay test.
+
+### A.3.34.3 Test cases for PRS measurements with gaps in RRC_CONNECTED state
+
+In annex A, PRS measurement test cases are defined with 4 samples and with reduced number of samples with measurement gaps in RRC_CONNECTED state. The testing principle for these test cases is as follows:
+
+- A UE capable of supportedDL-PRS-ProcessingSamples [34] is only required to pass the test cases with reduced number of samples.
+
+- A UE not capable of supportedDL-PRS-ProcessingSamples [34] is required to pass the test cases with 4 samples.
+
+In annex A, PRS measurement delay test cases are defined for both PRS-RSRP and PRS-RSRPP measurements with measurement gaps in RRC_CONNECTED state. The testing principle for these test cases is as follows:
+
+- A UE capable of both PRS-RSRP and PRS-RSRPP measurements is required to pass either PRS-RSRP measurement delay test or PRS-RSRPP measurement delay test.
+
+### A.3.34.4 Test cases for PRS measurements without gaps in RRC_CONNECTED state
+
+In annex A, PRS measurement test cases are defined with 4 samples and with reduced number of samples without measurement gaps in RRC_CONNECTED state. The testing principle for these test cases is as follows:
+
+- A UE capable of supportedDL-PRS-ProcessingSamples [34] is only required to pass the test cases with reduced number of samples.
+
+- A UE not capable of supportedDL-PRS-ProcessingSamples [34] is required to pass the test case with 4 samples.
+
+In annex A, PRS measurement delay test cases are defined for both PRS-RSRP and PRS-RSRPP measurements without measurement gaps in RRC_CONNECTED state. The testing principle for these test cases is as follows:
+
+- A UE capable of both PRS-RSRP and PRS-RSRPP measurements is required to pass either PRS-RSRP measurement delay test or PRS-RSRPP measurement delay test.
+
+In annex A, PRS measurement delay test cases are defined for both RSTD and UE Rx-Tx time difference measurements without measurement gaps in RRC_CONNECTED state. The testing principle for these test cases is as follows:
+
+- A UE capable of both RSTD and UE Rx-Tx time difference measurements is required to pass either RSTD measurement delay test or UE Rx-Tx time difference measurement delay test.
+
+### A.3.34.5 Testing principles for positioning measurements by aggregating PRS resources from multiple PFLs
+
+In annex A, test cases for measurement delay requirement and accuracy requirement for positioning measurements by aggregating PRS resources from multiple PLFs are defined. While verifying the UE capability to meet the requirements defined for the positioning measurements by aggregating PRS resources from multiple PFLs, a UE capable of both RSTD and UE Rx-Tx time difference measurements by aggregating PRS resources from multiple PFLs is required to pass either PRS aggregation based RSTD measurement delay test or PRS aggregation-based UE Rx-Tx time difference measurement delay test.
+
+### A.3.34.6 Testing principles for carrier phase measurement for positioning
+
+In annex A, test cases for measurement delay requirement and accuracy requirement for carrier phase measurement reported together with legacy positioning measurement are defined.
+
+While verifying the UE capability to meet the requirements defined for the carrier phase measurement reported together with the legacy positioning measurement, a UE capable of both RSCPD with RSTD and RSCP with UE Rx-Tx time difference measurements is required to pass either RSCPD with RSTD measurement delay test or RSCP with UE Rx-Tx time difference measurement delay test.
+
+When a UE is tested for DL RSCPD with RSTD measurement, then the UE shall pass tests for RSTD measurement and RSCPD measurement.
+
+When a UE is tested for DL RSCP with UE Rx-Tx measurement, then the UE shall pass tests for UE Rx-Tx measurement and DL RSCP measurement.
+
+### A.3.34.7 Test cases in RRC_IDLE state
+
+For the measurements supported by the UE in both RRC_IDLE and RRC_INACTIVE modes, UE shall pass the test cases for RRC_IDLE mode and does not need to be tested for the same measurement in RRC_INACTIVE mode.
+
+## A.3.35 Testing principle for RedCap UE
+
+### A.3.35.1 Introduction
+
+This clause defines testing principles which are applicable to test cases verifying RRM requirements for RedCap UE and test cases verifying PRS measurement requirements for RedCap UE.
+
+### A.3.35.2 Principle of testing for FR1
+
+For RedCap and eRedCap UEs supporting 1 Rx branch, all single carrier tests specified in clause A.16 and A.18 except for tests defined for 2 Rx and/or FR2 shall be tested on any band.
+
+For RedCap and eRedCap UEs supporting 2Rx branches, all single carrier tests specified in clause A.16 and A.18 except for tests defined for 1 Rx and/or FR2 shall be tested on any band.
+
+### A.3.35.3 Principle of testing for FR2
+
+For RedCap UEs, all single carrier tests specified in clause A.17 and A.18 except for tests defined for FR1 shall be tested on any band.
+
+### A.3.35.4 Principle of testing for PRS measurement
+
+In annex A, test cases for measurement delay requirement and accuracy requirement for PRS measurement for RedCap UE are defined. The following testing principles are applied while verifying the RedCap UE capability to meet the PRS measurement requirements.
+
+- A UE capable of both PRS-RSRP and PRS-RSRPP measurements is required to pass either PRS-RSRP measurement delay test or PRS-RSRPP measurement delay test.
+
+- A UE capable of both RSTD and UE Rx-Tx time difference measurements is required to pass either RSTD measurement delay test or UE Rx-Tx time difference measurement delay test.
+
+- A UE capable of performing PRS measurement with RX FH is only required to pass the measurement delay test cases for PRS measurement with RX FH.
+
+- For the measurements supported by the UE in both RRC_IDLE and RRC_INACTIVE modes, UE shall pass the test cases for RRC_IDLE mode and does not need to be tested for the same measurement in RRC_INACTIVE mode.
+
+- A UE that indicates $ N3_{i}$ via processingPRS-SymbolsDurationN3-r18 which leads to $ N_{hop,i,j}$ to be equal to 0 is not required to pass corresponding test cases.
+
+## A.3.36 Testing related to Satellite access
+
+### A.3.36.1 Introduction
+
+In annex A test cases are defined for verifying various type of RRM requirements related to satellite access.
+
+### A.3.36.2 Principle of testing GSO and NGSO scenarios
+
+In annex A, RRM test cases related to satellite access are defined for both GSO and NGSO. The testing principle for these test cases is as follows:
+
+- A UE capable of GSO only is required to pass the test cases with GSO.
+
+- A UE capable of NGSO only is required to pass the test cases with NGSO.
+
+- A UE capable of both GSO and NGSO is required to pass the test cases with NGSO only.
+
+Support of GSO and NGSO scenario is indicated via ntn-ScenarioSupport-r17.
+
+The tests with the satellite-motion based varying Doppler and delay shift NTN channel model for FR1-NTN bands is NOT applicable for VSAT UE.
+
+For UE and onwards under the satellite-motion based varying Doppler and delay shift NTN channel model for FR1-NTN bands, supporting NGSO, the following test applicability rules apply:
+
+- The UE shall pass test “A.14.3.1.1 NR UE Transmit Timing Test for FR1” based on Config ID#3 defined for Rel-19 satellite-motion based varying Doppler and delay shift NTN channel model.
+
+- For the rest test cases where the satellite-motion based varying Doppler and delay shift NTN channel model can be applied, i.e. A.14.1.1, A.14.2.1.1 and A.14.5.3.1,
+
+- The UE shall pass the test cases based on either Config ID#2 with the existing static NGSO channel, or the Config ID#3 defined for the satellite-motion based varying Doppler and delay shift NTN channel model.
+
+- For other test cases where the satellite-motion based varying Doppler and delay shift NTN channel model cannot be applied, the UE shall pass the existing test cases.
+
+### A.3.36.3 Principle of testing different RRM requirements
+
+In annex A, RRM test cases related to satellite access are defined for all applicable RRM requirements. The testing principle for these test cases is as follows:
+
+- A UE capable of NTN only is required to pass all the test cases defined in clause A.14.
+
+- A UE capable of both TN and NTN is required to pass the test cases for NTN specific requirements in table A.3.36.3-1.
+
+Table A.3.36.3-1: Test cases for NTN specific requirements
+
+| Clause | Test case slogan |
+| --- | --- |
+| A.14.1.2 | Cell reselection to FR1 intra-frequency NR cell for UE configured with the feature for enhanced requirements |
+| A.14.1.3 | Time-based measurement initiation to FR1 intra-frequency NR cell reselection |
+| A.14.1.4 | Location-based measurement initiation to FR1 intra-frequency NR cell reselection |
+| A.14.1.6 | Cell reselection to FR1 inter-frequency NR cell for UE configured with feature for enhanced requirements |
+| A.14.1.7 | Time-based measurement initiation to FR1 inter-frequency cell reselection |
+| A.14.1.8 | Location-based measurement initiation to FR1 inter-frequency cell reselection |
+| A.14.2.1.3 | Intra-frequency SAN time-based conditional Handover from FR1 to FR1 |
+| A.14.2.1.4 | Inter-frequency SAN time-based conditional Handover from FR1 to FR1 |
+| A.14.2.1.5 | Intra-frequency SAN distance-based conditional Handover from FR1 to FR1 |
+| A.14.2.1.6 | Inter-frequency SAN distance-based conditional Handover from FR1 to FR1 |
+| A.14.3.1.1 | NR UE Transmit Timing Test for FR1 |
+| A.14.5.1.1 | SA event triggered reporting tests without gap under non-DRX |
+| A.14.5.1.2 | SA event triggered reporting tests without gap under DRX |
+| A.14.5.1.3 | SA event triggered reporting tests without gap under non-DRX with SSB index reading |
+| A.14.5.1.4 | SA event triggered reporting tests with single measurement gap under non-DRX for satellite access |
+| A.14.5.1.5 | SA event triggered reporting tests with FNO concurrent gaps under DRX for satellite access |
+| A.14.5.1.6 | SA event triggered reporting tests with PPO concurrent gaps under non-DRX with SSB index reading for satellite access |
+| A.14.5.2.4 | SA event triggered reporting tests for FR1 without SSB time index detection when DRX is not used with two gaps in fully non-overlapped for satellite access |
+| A.14.5.2.6 | SA event triggered reporting tests for FR1 without SSB time index detection when DRX is not used with two gaps in partially partial overlapping for satellite access |
+| A.14.6.3.1 | SA intra-frequency measurement accuracy with FR1 serving cell and FR1 target cell |
+| A.14.6.3.2 | SA Inter-frequency measurement accuracy with FR1 serving cell and FR1 target cell |
+| A.14.6.4.1 | SSB based L1-RSRP measurement |
+| A.14.6.4.2 | CSI-RS based L1-RSRP measurement on resource set with repetition off |
+
+For UEs that declare capabilities to support channel bandwidth of 3 MHz (clause 4.2.7.2 in TS 38.306 [14]), the UE shall also pass the following test cases indicated in Table A.3.36.3-2.
+
+Table A.3.36.3-2: Test cases for NTN UEs supporting operation with 3 MHz channel bandwith
+
+| Clause | Test case slogan |
+| --- | --- |
+| A.14.2.1.x | Intra-frequency SAN time-based conditional Handover from FR1 to FR1 for UE operating on a cell with less than 5 MHz BW |
+| A.14.2.2.x | RACH-based hard Satellite switching with re-synchronization from FR1 to FR1 for less than 5MHz with NTN |
+| A.14.4.1.x | Radio Link Monitoring Out-of-sync Test for FR1 SAN PCell configured with SSB-based RLM RS in non-DRX mode |
+| A.14.4.2.x | Beam Failure Detection and Link Recovery Test for FR1 PCell for satellite access configured with SSB-based BFD and LR in non-DRX mode for a UE operating on a cell with less than 5 MHz BW |
+| A.14.2.2.x | Location-based Cell reselection to FR1 inter-frequency NR satellite access case |
+| A.14.5. | SA event triggered reporting tests for FR1 with SSB time index detection when DRX is used with single gap for 3 MHz channel bandwidth in satellite access |
+| A.14.1.x | Cell reselection to FR1 intra-frequency NR case for UE operating on a cell with less than 5 MHz BW |
+
+### A.3.36.4 Principle of testing different ephemeris formats
+
+Satellite access RRM test cases are defined such that satellite ephemeris information is sent to UE in each test case, according to tables A.3.36.34-1 and A.3.36.34-2.
+
+Table A.3.36.4-1: Test cases configuring EphemerisInfo as PositionVelocity
+
+| Functional Area | Test Case |
+| --- | --- |
+| RRC_IDLE state mobility | A.14.1.3 |
+|  | A.14.1.4 |
+|  | A.14.1.5 |
+|  | A.14.1.6 |
+|  | A.14.1.9 |
+|  | A.14.1.10 |
+| Handover | A.14.2.1.3 |
+|  | A.14.2.1.4 |
+|  | A.14.2.1.5 |
+|  | A.14.2.1.6 |
+| Timing | A.14.3.1 |
+| Radio Link Monitoring | A.14.4.1.1 |
+|  | A.14.4.1.2 |
+|  | A.14.4.1.5 |
+|  | A.14.4.1.6 |
+| BFD and LR procedures | A.14.4.2.1 |
+|  | A.14.4.2.3 |
+|  | A.14.4.2.5 |
+| Active BWP switch | A.14.4.3.1 |
+| UE specific CBW change | A.14.4.4.1 |
+| PL-RS switching delay | A.14.4.5.1 |
+| Intra-frequency measurements | A.14.5.1.1 |
+|  | A.14.5.1.3 |
+|  | A.14.5.1.5 |
+| Inter-frequency measurements | A.14.5.2.1 |
+|  | A.14.5.2.3 |
+|  | A.14.5.2.7 |
+| L1-RSRP measurements | A.14.5.3.1 |
+|  | A.14.5.3.3 |
+| SS-RSRP accuracy | A.14.6.1.1 |
+| SS-RSRQ accuracy | A.14.6.2.1 |
+| SS-SINR accuracy | A.14.6.3.1 |
+| L1-RSRP accuracy | A.14.6.4.1 |
+
+Table A.3.36.4-2: Test cases configuring EphemerisInfo as Orbital
+
+| Functional Area | Test Case |
+| --- | --- |
+| RRC_IDLE state mobility | A.14.1.1 |
+|  | A.14.1.2 |
+|  | A.14.1.7 |
+|  | A.14.1.8 |
+| Handover | A.14.2.1.1 |
+|  | A.14.2.1.2 |
+| RRC Connection Mobility Control | A.14.2.2.1 |
+|  | A.14.2.2.2 |
+|  | A.14.2.2.3 |
+| Timing | A.14.3.2 |
+| Radio Link Monitoring | A.14.4.1.3 |
+|  | A.14.4.1.4 |
+|  | A.14.4.1.7 |
+|  | A.14.4.1.8 |
+| BFD and LR procedures | A.14.4.2.2 |
+|  | A.14.4.2.4 |
+|  | A.14.4.2.6 |
+| Active BWP switch | A.14.4.3.2 |
+| Intra-frequency measurements | A.14.5.1.2 |
+|  | A.14.5.1.4 |
+|  | A.14.5.1.6 |
+| Inter-frequency measurements | A.14.5.2.2 |
+|  | A.14.5.2.4 |
+|  | A.14.5.2.6 |
+|  | A.14.5.2.8 |
+| L1-RSRP measurements | A.14.5.3.2 |
+|  | A.14.5.3.4 |
+| SS-RSRP accuracy | A.14.6.1.2 |
+| SS-RSRQ accuracy | A.14.6.2.2 |
+| SS-SINR accuracy | A.14.6.3.2 |
+| L1-RSRP accuracy | A.14.6.4.2 |
+
+### A.3.36.5 General setup for SIB19
+
+The general parameters for SIB19 setup is specified in table A.3.36.5-1.
+
+Table A.3.36.5-1: Test cases for NTN specific requirements
+
+| Parameter | Unit | Test 1 |
+| --- | --- | --- |
+| Interval between adjacent epoch time | s | LEO: 2.56GEO: 10.24 |
+| ntn-UlSyncValidityDuration | s | LEO: 5GEO: 900 |
+| cellSpecificKoffset | slot | LEO: 14GEO: 258 |
+| kmac | slot | Not configured |
+| ta-Common |  | 0 |
+| ta-CommonDrift |  | 0 |
+| ta-CommonDriftVariant |  | 0 |
+| ntn-PolarizationDL |  | linear |
+| ntn-PolarizationUL |  | linear |
+| ephemerisInfo |  | Detailed ephemeris information is provided in TS 38.508-1 [38]. |
+| ta-Report |  | Not configured |
+
+### A.3.36.6 Satellite specific parameters configuration
+
+#### A.3.36.6.1 Satellite specific configuration for serving cell
+
+Table A.3.36.6.1-1: Satellite specific configuration pattern 1 for serving cell in GSO scenario
+
+| Parameter | SSC.1 |
+| --- | --- |
+| Interval between adjacent epoch time | 10.24 s |
+| ntn-UlSyncValidityDuration | 900 s |
+| cellSpecificKoffset | 258 slots |
+| ta-Common | 0 |
+| ta-CommonDrift | 0 |
+| ta-CommonDriftVariant | 0 |
+| ntn-PolarizationDL | linear |
+| ntn-PolarizationUL | linear |
+| ephemerisInfo | Detailed ephemeris information is provided in TS 38.508-1 [38]. |
+
+Table A.3.36.6.1-2: Satellite specific configuration pattern 2 for serving cell in NGSO scenario
+
+| Parameter | SSC.2 |
+| --- | --- |
+| Interval between adjacent epoch time | 2.56 s |
+| ntn-UlSyncValidityDuration | 5 s |
+| cellSpecificKoffset | 14 slots |
+| ta-Common | 0 |
+| ta-CommonDrift | 0 |
+| ta-CommonDriftVariant | 0 |
+| ntn-PolarizationDL | linear |
+| ntn-PolarizationUL | linear |
+| ephemerisInfo | Detailed ephemeris information is provided in TS 38.508-1 [38]. |
+
+#### A.3.36.6.2 Satellite specific configuration for neighbour cell
+
+Table A.3.36.6.2-1: Satellite specific configuration pattern 1 for neighbour cell in GSO scenario
+
+| Parameter | NSC.1 |
+| --- | --- |
+| Interval between adjacent epoch time | 10.24 s |
+| ntn-UlSyncValidityDuration | 900 s |
+| cellSpecificKoffset | 258 slots |
+| ta-Common | 0 |
+| ta-CommonDrift | 0 |
+| ta-CommonDriftVariant | 0 |
+| ntn-PolarizationDL | linear |
+| ntn-PolarizationUL | linear |
+| ephemerisInfo | Detailed ephemeris information is provided in TS 38.508-1 [38]. |
+
+.
+
+Table A.3.36.6.2-2: Satellite specific configuration pattern 2 for neighbour cell in NGSO scenario
+
+| Parameter | NSC.2 |
+| --- | --- |
+| Interval between adjacent epoch time | 2.56 s |
+| ntn-UlSyncValidityDuration | 5 s |
+| cellSpecificKoffset | 14 slots |
+| ta-Common | 0 |
+| ta-CommonDrift | 0 |
+| ta-CommonDriftVariant | 0 |
+| ntn-PolarizationDL | linear |
+| ntn-PolarizationUL | linear |
+| ephemerisInfo | Detailed ephemeris information is provided in TS 38.508-1 [38]. |
+
+## A.3.37 Reference Cell DTX configurations
+
+### A.3.37.1 Cell DTX Configuration 1: Cell DTX cycle = 160 ms and TAT = Infinity
+
+Table A.3.37.1-1: DTX.1: Cell DTX cycle = 160 ms and time alignment timer (TAT) = Infinity
+
+| Field | Value |
+| --- | --- |
+| cellDTXDRX-onDurationTimer | 1 ms |
+| cellDTXDRX-CycleStartOffset | 160 ms |
+| cellDTXDRXconfigType-r18 | dtx |
+| cellDTXDRXactivationStatus | activated |
+| NOTE: This Cell DTX configuration is applicable for NR serving cell. The Cell DTX cycle and time alignment timer parameters are specified in clause 6.3.2 in TS 38.331 [2]. |  |
+
+## A.3.38 DL-PRS Measurement Time Window configurations
+
+Table A.3.38-1: Reference configuration for DL-PRS Measurement Time Window
+
+| DL-PRS Measurement Time Window Parameters | Unit | Values |  |
+| --- | --- | --- | --- |
+| Reference DL-PRS Measurement Time Window |  | MTW.1 | MTW.2 |
+| Number of configuration elements |  | 1 | 1 |
+| Start SFN |  | 0 | 0 |
+| Periodicity | slot | Note 1 | Note 4 |
+| Slot and Symbol Offset | slot | Note 2 | Note 2 |
+| Duration | slot | 4 | 4 |
+| Associated PFL index |  | 0 | 0 |
+| Associated PRS resource set index |  | Note 3 | Note 3 |
+| NOTE 1: Same as 2*(PRS resource set periodicity as used in the test case).NOTE 2: Same as PRS resource with smallest slot and symbol offset as used in the test case.NOTE 3: Include all PRS resource sets of all TRPs used in the test case.NOTE 4: Same as 2*(DRX cycle as used in the test case). |  |  |  |
+
+## A.3.39 Testing related to RedCap UE with Satellite Access
+
+### A.3.39.1 Introduction
+
+In annex A test cases are defined for verifying various type of RRM requirements for RedCap UE with Satellite Access.
+
+### A.3.39.2 Principle of testing 1Rx and 2Rx (e)RedCap UE in FR1
+
+For RedCap UEs supporting 1 Rx branch, all single carrier tests specified in clause A.20 except for tests defined for 2 Rx shall be tested on any band.
+
+For RedCap UEs supporting 2 Rx branches, all single carrier tests specified in clause A.20 except for tests defined for 1Rx shall be tested on any band.
+
+### A.3.39.3 Principle of testing GSO and NGSO scenarios
+
+In annex A, RRM test cases related to RedCap UE with Satellite Access are defined for both GSO and NGSO. The testing principle for these test cases is as follows:
+
+- A UE capable of GSO only is required to pass the test cases with GSO.
+
+- A UE capable of NGSO only is required to pass the test cases with NGSO.
+
+- A UE capable of both GSO and NGSO is required to pass the test cases with NGSO only.
+
+Support of GSO and NGSO scenario is indicated via ntn-ScenarioSupport-r17.
+
+### A.3.39.4 Principle of testing different RRM requirements
+
+In annex A, RRM test cases related to RedCap UE with Satellite Access are defined for all applicable RRM requirements. The testing principle for these test cases is as follows:
+
+- A RedCap UE capable of NTN only is required to pass all the test cases defined in clause A.20.
+
+- A RedCap UE capable of both TN and NTN is required to pass the test cases for RedCap UE with NTN specific requirements in table A.3.39.4-1.
+
+Table A.3.39.4-1: Test cases for RedCap UE with NTN specific requirements
+
+| Clause | Test case slogan |
+| --- | --- |
+| A.20.1.3, A.20.1.4 | Cell reselection to FR1 intra-frequency NR cell for 1Rx/2Rx RedCap UE configured with feature for enhanced requirements |
+| A.20.1.5, A.20.1.6 | Time-based measurement initiation to FR1 intra-frequency NR cell reselection for 1Rx/2Rx RedCap UE |
+| A.20.1.7, A.20.1.8 | Location-based measurement initiation to FR1 inter-frequency NR cell reselection for 1Rx/2Rx RedCap UE |
+| A.20.2.1.7, A.20.2.1.8 | Intra-frequency SAN time-based conditional Handover from FR1 to FR1 for 1Rx/2Rx RedCap UE with NTN |
+| A.20.2.1.9, A.20.2.1.10 | Inter-frequency SAN distance-based conditional Handover from FR1 to FR1 for 1Rx/2Rx RedCap UE with NTN |
+| A.20.3.1.1 | NR UE Transmit Timing Test for FR1 |
+| A.20.5.1.1, A.20.5.1.2 | SA event triggered reporting tests without gap under non-DRX for 1Rx/2Rx RedCap UE |
+| A.20.5.1.3, A.20.5.1.4 | SA event triggered reporting tests without gap under DRX for 1Rx/2Rx RedCap UE |
+| A.20.5.1.5, A.20.5.1.6 | SA event triggered reporting tests without gap under non-DRX with SSB index reading for 1Rx/2Rx RedCap UE |
+| A.20.5.1.7, A.20.5.1.8 | SA event triggered reporting tests with single measurement gap under non-DRX for satellite access for 1Rx/2Rx RedCap UE |
+| A.20.5.1.9, A.20.5.1.10 | SA event triggered reporting tests with FNO concurrent gaps under DRX for satellite access for 1Rx/2Rx RedCap UE |
+| A.20.5.1.11, A.20.5.1.12 | SA event triggered reporting tests with PPO concurrent gaps under non-DRX with SSB index reading for satellite access for 1Rx/2Rx RedCap UE with NTN |
+| A.20.5.2.5, A.20.5.2.6 | SA event triggered reporting tests for FR1 without SSB time index detection when DRX is not used with two gaps in fully non-overlapped for 1Rx/2Rx RedCap UE with satellite access |
+| A.20.5.2.7, A.20.5.2.8 | SA event triggered reporting tests for FR1 without SSB time index detection when DRX is not used with two gaps in partially partial overalpping for 1Rx/2Rx RedCap UE with satellite access |
+| A.20.6.3.1, A.20.6.3.2 | SA intra-frequency measurement accuracy with FR1 serving cell and FR1 target cell for 1Rx/2Rx RedCap UE |
+| A.20.6.3.3, A.20.6.3.4 | SA Inter-frequency measurement accuracy with FR1 serving cell and FR1 target cell for 1Rx/2Rx RedCap UE |
+| A.20.6.4.1, A.20.6.4.2 | SSB based L1-RSRP measurement for 1Rx/2Rx RedCap UE |
+| A.20.6.4.3, A.20.6,4.4 | CSI-RS based L1-RSRP measurement on resource set with repetition off for 1Rx/2Rx RedCap UE |
+
+### A.3.39.5 Principle of testing HD-FDD RedCap UE
+
+In annex A, RRM test cases related to RedCap UE with Satellite Access are defined for FD-FDD and HD-FDD. The testing principle for these test cases is as follows:
+
+- A RedCap UE capable of both FDD and HD-FDD operation only is required to pass the test cases with one of both.
+
+### A.3.39.6 Principle of testing different ephemeris formats
+
+RRM test cases for RedCap UE with Satellite Access are defined such that satellite ephemeris information is sent to RedCap UE in each test case, according to Tables A.3.39.6-1 and A.3.39.6-2.
+
+Table A.3.39.6-1: Test cases configuring EphemerisInfo as PositionVelocity
+
+| Functional Area | Test Case |
+| --- | --- |
+| RRC_IDLE state mobility | A.20.1.5, A.20.1.6 |
+|  | A.20.1.7, A.20.1.8 |
+|  | A.20.1.9, A.20.1.10 |
+|  | A.20.1.11, A.20.1.12 |
+| Handover | A.20.1.5, A.20.1.6 |
+|  | A.20.1.7, A.20.1.8 |
+| Timing | A.20.3.1 |
+| Radio Link Monitoring | A.20.4.1.1, A.20.4.1.2 |
+|  | A.20.4.1.3, A.20.4.1.4 |
+|  | A.20.4.1.5, A.20.4.1.6 |
+|  | A.20.4.1.7, A.20.4.1.8 |
+| BFD and LR procedures | A.20.4.2.1, A.20.4.2.2 |
+|  | A.20.4.2.5, A.20.4.2.6 |
+|  | A.20.4.2.7, A.20.4.2.8 |
+| Active BWP switch | A.20.4.3 |
+| UE specific CBW change | A.20.4.4 |
+| PL-RS switching delay | A.20.4.5 |
+| Intra-frequency measurements | A.20.5.1.1, A.20.5.1.2 |
+|  | A.20.5.1.5, A.20.5.1.6 |
+|  | A.20.5.1.9, A.20.5.1.10 |
+| Inter-frequency measurements | A.20.5.2.1, A.20.5.2.2 |
+|  | A.20.5.2.3, A.20.5.2.4 |
+|  | A.20.5.2.9, A.20.5.2.10 |
+| L1-RSRP measurements | A.20.5.3.1, A.20.5.3.2 |
+|  | A.20.5.3.3, A.20.5.3.4 |
+| SS-RSRP accuracy | A.20.6.1 |
+| SS-RSRQ accuracy | A.20.6.2 |
+| SS-SINR accuracy | A.20.6.3 |
+| L1-RSRP accuracy | A.20.6.4 |
+
+Table A.3.39.6-2: Test cases configuring EphemerisInfo as Orbital
+
+| Functional Area | Test Case |
+| --- | --- |
+| RRC_IDLE state mobility | A.20.1.5, A.20.1.6 |
+|  | A.20.1.7, A.20.1.8 |
+|  | A.20.1.9, A.20.1.10 |
+|  | A.20.1.11, A.20.1.12 |
+| Handover | A.20.1.5, A.20.1.6 |
+|  | A.20.1.7, A.20.1.8 |
+| RRC Connection Mobility Control | A.20.2.2.1 |
+|  | A.20.2.2.2 |
+|  | A.20.2.2.3 |
+| Timing | A.20.3.1 |
+| Radio Link Monitoring | A.20.4.1.1, A.20.4.1.2 |
+|  | A.20.4.1.3, A.20.4.1.4 |
+|  | A.20.4.1.5, A.20.4.1.6 |
+|  | A.20.4.1.7, A.20.4.1.8 |
+| BFD and LR procedures | A.20.4.2.1, A.20.4.2.2 |
+|  | A.20.4.2.5, A.20.4.2.6 |
+|  | A.20.4.2.7, A.20.4.2.8 |
+| Active BWP switch | A.20.4.3 |
+| Intra-frequency measurements | A.20.5.1.1, A.20.5.1.2 |
+|  | A.20.5.1.5, A.20.5.1.6 |
+|  | A.20.5.1.9, A.20.5.1.10 |
+| Inter-frequency measurements | A.20.5.2.1, A.20.5.2.2 |
+|  | A.20.5.2.3, A.20.5.2.4 |
+|  | A.20.5.2.5, A.20.5.2.6 |
+|  | A.20.5.2.7, A.20.5.2.8 |
+|  | A.20.5.2.9, A.20.5.2.10 |
+| L1-RSRP measurements | A.20.5.3.1, A.20.5.3.2 |
+|  | A.20.5.3.3, A.20.5.3.4 |
+| SS-RSRP accuracy | A.20.6.1 |
+| SS-RSRQ accuracy | A.20.6.2 |
+| SS-SINR accuracy | A.20.6.3 |
+| L1-RSRP accuracy | A.20.6.4 |
+
+### A.3.39.7 General setup for SIB19
+
+The general parameters for SIB19 setup is specified in table A.3.39.7-1 for RedCap UE with NTN.
+
+Table A.3.39.7-1: Test cases for specific requirements for RedCap UE with NTN
+
+| Parameter | Unit | Test 1 |
+| --- | --- | --- |
+| Interval between adjacent epoch time | s | LEO: 2.56GEO: 10.24 |
+| ntn-UlSyncValidityDuration | s | LEO: 5GEO: 900 |
+| cellSpecificKoffset | slot | LEO: 14GEO: 258 |
+| kmac | slot | Not configured |
+| ta-Common |  | 0 |
+| ta-CommonDrift |  | 0 |
+| ta-CommonDriftVariant |  | 0 |
+| ntn-PolarizationDL |  | linear |
+| ntn-PolarizationUL |  | linear |
+| ephemerisInfo |  | Detailed ephemeris information is provided in TS 38.508-1 [38]. |
+| ta-Report |  | Not configured |
+
+### A.3.39.8 Satellite specific parameters configuration
+
+#### A.3.39.8.1 Satellite specific configuration for serving cell
+
+Table A.3.39.8.1-1: Satellite specific configuration pattern 1 for serving cell in GSO scenario
+
+| Parameter | SSC.1 |
+| --- | --- |
+| Interval between adjacent epoch time | 10.24 s |
+| ntn-UlSyncValidityDuration | 900 s |
+| cellSpecificKoffset | 258 slots |
+| ta-Common | 0 |
+| ta-CommonDrift | 0 |
+| ta-CommonDriftVariant | 0 |
+| ntn-PolarizationDL | linear |
+| ntn-PolarizationUL | linear |
+| ephemerisInfo | Detailed ephemeris information is provided in TS 38.508-1 [38]. |
+
+Table A.3.39.8.1-2: Satellite specific configuration pattern 2 for serving cell in NGSO scenario
+
+| Parameter | SSC.2 |
+| --- | --- |
+| Interval between adjacent epoch time | 2.56 s |
+| ntn-UlSyncValidityDuration | 5 s |
+| cellSpecificKoffset | 14 slots |
+| ta-Common | 0 |
+| ta-CommonDrift | 0 |
+| ta-CommonDriftVariant | 0 |
+| ntn-PolarizationDL | linear |
+| ntn-PolarizationUL | linear |
+| ephemerisInfo | Detailed ephemeris information is provided in TS 38.508-1 [38]. |
+
+#### A.3.39.8.2 Satellite specific configuration for neighbour cell
+
+Table A.3.39.8.2-1: Satellite specific configuration pattern 1 for neighbour cell in GSO scenario
+
+| Parameter | NSC.1 |
+| --- | --- |
+| Interval between adjacent epoch time | 10.24 s |
+| ntn-UlSyncValidityDuration | 900 s |
+| cellSpecificKoffset | 258 slots |
+| ta-Common | 0 |
+| ta-CommonDrift | 0 |
+| ta-CommonDriftVariant | 0 |
+| ntn-PolarizationDL | linear |
+| ntn-PolarizationUL | linear |
+| ephemerisInfo | Detailed ephemeris information is provided in TS 38.508-1 [38]. |
+
+.
+
+Table A.3.39.8.2-2: Satellite specific configuration pattern 2 for neighbour cell in NGSO scenario
+
+| Parameter | NSC.2 |
+| --- | --- |
+| Interval between adjacent epoch time | 2.56 s |
+| ntn-UlSyncValidityDuration | 5 s |
+| cellSpecificKoffset | 14 slots |
+| ta-Common | 0 |
+| ta-CommonDrift | 0 |
+| ta-CommonDriftVariant | 0 |
+| ntn-PolarizationDL | linear |
+| ntn-PolarizationUL | linear |
+| ephemerisInfo | Detailed ephemeris information is provided in TS 38.508-1 [38]. |
+
+## A.3.40 Testing principles for eEMR based fast SCell activation
+
+### A.3.40.1 Introduction
+
+In annex A test cases are defined for verifying eEMR (enhanced early measurement reporting) based fast SCell activation requirements specified in clause 8.3.
+
+### A.3.40.2 Principle of testing
+
+For UE supporting eEMR-based Direct SCell activation at SCell addition or eEMR-based PUCCH SCell activation, eEMR-based fast SCell activation for normal SCell activation can be skipped.
+
+For UE supporting both eEMR-based Direct SCell activation at SCell addition and eEMR-based PUCCH SCell activation, eEMR-based PUCCH SCell activation can be skipped.
+
+For UE which can pass R19 test cases for fast SCell activation based on R18 early measurement report, corresponding R18 test cases with valid report can be skipped.
+
+## A.3.41 Test configurations related to SBFD
+
+### A.3.41.1 SBFD configurations for FR1
+
+#### A.3.41.1.0 Introduction
+
+This clause provides typical SBFD configurations used for SBFD RRM test cases defined in annex A. Both the time domain and frequency domain configurations for SBFD are provided for FR1.
+
+The applicable TDD DL/UL configurations for SBFD RRM test cases are defined in Clause A.3.1.4. Based on the applicable TDD DL/UL configurations for SBFD, the time domain configuration of SBFD slots/symbols is set as ‘DXXXU’, where ‘X’ denotes the SBFD slot with all ‘D’ and ‘S’ symbols in the slots configured as SBFD symbol.
+
+For the frequency domain configuration of SBFD subbands, DU and DUD cases are allowed. For the case of DU, 80MHz is in D subband, and 20MHz is in U subband. For the case of DUD, 40MHz is in the 1st D subband, 20MHz is in U subband, and 40MHz is in the 2nd D subband.
+
+#### A.3.41.1.1 SBFD.1 FR1
+
+Table A.3.41.1.1-1: SBFD.1 FR1
+
+| SBFD Parameters | Values |
+| --- | --- |
+| SCS | 30 kHz |
+| Frequency domain configuration | DU, 80MHz in D subband, 20MHz in U subband |
+| SBFD starting slot index | 1 |
+| SBFD starting symbol index | 0 |
+| SBFD ending slot index | 3 |
+| SBFD ending symbol index | 13 |
+
+#### A.3.41.1.2 SBFD.2 FR1
+
+Table A.3.41.1.2-1: SBFD.2 FR1
+
+| SBFD Parameters | Values |
+| --- | --- |
+| SCS | 30 kHz |
+| Frequency domain configuration | DUD, 40MHz in 1st D subband, 20MHz in U subband, 40MHz in 2nd D subband |
+| SBFD starting slot index | 1 |
+| SBFD starting symbol index | 0 |
+| SBFD ending slot index | 3 |
+| SBFD ending symbol index | 13 |
+
+### A.3.41.2 SBFD configurations for FR2
+
+#### A.3.41.2.0 Introduction
+
+This clause provides typical SBFD configurations used for SBFD RRM test cases defined in annex A. Both the time domain and frequency domain configurations for SBFD are provided for FR2.
+
+The applicable TDD DL/UL configurations for SBFD RRM test cases are defined in Clause A.3.1.4. Based on the applicable TDD DL/UL configurations for SBFD, the time domain configuration of SBFD slots/symbols is set as ‘DXXXU’, where ‘X’ denotes the SBFD slot with all ‘D’ and ‘S’ symbols in the slots configured as SBFD symbol.
+
+#### A.3.41.2.1 SBFD.1 FR2
+
+Table A.3.41.2.1-1: SBFD.1 FR2
+
+| SBFD Parameters | Values |
+| --- | --- |
+| SCS | 120kHz |
+| Frequency domain configuration | DU, 50 MHz in D subband, 50 MHz in U subband |
+| SBFD starting slot index | 1 |
+| SBFD starting symbol index | 0 |
+| SBFD ending slot index | 3 |
+| SBFD ending symbol index | 13 |
+
+#### A.3.41.2.2 SBFD.2 FR2
+
+Table A.3.41.2.2-1: SBFD.2 FR2
+
+| SBFD Parameters | Values |
+| --- | --- |
+| SCS | 120kHz |
+| Frequency domain configuration | DUD, 75 MHz in 1st D subband, 50 MHz in U subband, 75 MHz in 2nd D subband |
+| SBFD starting slot index | 1 |
+| SBFD starting symbol index | 0 |
+| SBFD ending slot index | 3 |
+| SBFD ending symbol index | 13 |
+
+### A.3.41.3 Principle of testing L1-RSRP and L1-SINR measurements
+
+In annex A, test cases are defined for L1-RSRP measurement with SBFD in clasue A.6.6.4.15 for FR1 and A.7.6.3.16 for FR2, and test cases are defined for L1-SINR measurement with SBFD in clasue A.6.6.8.5 for FR1 and A.7.6.6.4 for FR2, respectively. The testing principle for these test cases is as follows:
+
+- A UE capable of L1-SINR measurement is only required to pass the test cases defined in clasue A.6.6.8.5 for FR1 and A.7.6.6.4 for FR2.
+
+### A.3.41.4 Collision configurations between CSI-RS and UL scheduling for SBFD
+
+It is possible that the UL scheduling collides with the CSI-RS. In the test a single collision between UL scheduling and CSI-RS happens and the collision is randomly determined by the TE.
+
+### A.3.41.5 Configurations of DL RMC for SBFD
+
+In the test, the PDSCH RMC is not transmitted in UL subband of SBFD symbols, unless otherwise stated in the test case. In the test, the CORESET RMC is not transmitted in UL subband of SBFD symbols, unless otherwise stated in the test case.
+
+### A.3.41.6 Configurations of OCNG for SBFD
+
+In the test, the OCNG shall not be assumed in UL subband of SBFD symbols, unless otherwise stated in the test case.
+
+### A.3.41.7 Configuration of Noc for SBFD
+
+In the test, the interference from other cells and noise sources shall not be assumed in UL subband of SBFD symbols, unless otherwise stated in the test case.
+
+## A.3.42 LP-SS configurations
+
+### A.3.42.1 LP-SS Configuration 1: M=1
+
+Table A.3.42.1-1: LP-SS.1: LP-SS with M=1
+
+| Field | Value |
+| --- | --- |
+| lpss-MvalueAndSeqConfig | nOne |
+| lpss-BinarySeqLen | n8 |
+| lpss-OverlaidSeqRoot | 1 |
+| lpss-PeriodicityAndOffset | ms320, 4 |
+| lpss-StartSymbol | startSymbol1 = 3 |
+| lpss-EPRE-Ratio | dB0 |
+| lpwus-LPSS-StartRB | NOTE 1 |
+| lpwus-LPSS-BeamSubset | NOTE 2 |
+| NOTE 1: The start RB for LP-SS is configured such that the LP-SS does not overlap with initial BWP.NOTE 2: Same as configured value as ssb-PositionsInBurst in SIB1. |  |
+
+### A.3.42.2 LP-SS Configuration 2: M=4
+
+Table A.3.42.2-1: LP-SS.2: LP-SS with M=4
+
+| Field | Value |
+| --- | --- |
+| lpss-MvalueAndSeqConfig | nFour |
+| lpss-BinarySeqLen | n32 |
+| lpss-OverlaidSeqRoot | 1 |
+| lpss-PeriodicityAndOffset | ms320, 4 |
+| lpss-StartSymbol | startSymbol1 = 3 |
+| lpss-EPRE-Ratio | dB0 |
+| lpwus-LPSS-StartRB | NOTE 1 |
+| lpwus-LPSS-BeamSubset | NOTE 2 |
+| NOTE 1: The start RB for LP-SS is configured such that the LP-SS does not overlap with initial BWP.NOTE 2: Same as configured value as ssb-PositionsInBurst in SIB1. |  |
+
+## A.3.43 Test conditions for AI/ML
+
+### A.3.43.1 Channel models for AI/ML based Beam Management FR2
+
+Following simplified channel is used as specifically referred in the test case:
+
+Table A.3.43.1-1: Simplified channel model parameters for UMi CDL-C at 28 GHz
+
+| Cluster # | Absolute Delay [ns] | Power in [dB] | AOD in [°] | AOA in [°] | ZOD in [°] | ZOA in [°] |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | 0 | -7.4318 | -30.4353 | -114.436 | 98.9242 | 74.51134 |
+| 2 | 12.594 | -1.2500 | -20.9269 | 125.5639 | 99.1915 | 74.51134 |
+| 5 | 13.056 | -5.5318 | -28.0782 | -174.436 | 99.5732 | 74.51134 |
+| 6 | 38.196 | 0.0000 | -11.6982 | -174.436 | 99.306 | 74.51134 |
+| 13 | 73.71 | -8.1318 | -33.911 | 95.5639 | 100.165 | 74.51134 |
+| 14 | 78.498 | -9.8318 | -37.5066 | -114.436 | 100.2604 | 74.51134 |
+| Per-Cluster Parameters |  |  |  |  |  |  |
+| Parameter | CASD in [°] | CASA in [°] | CZSD in [°] | CZSA in [°] | XPR in [dB] |  |
+| Value | 0.799 | 10.4021 | 0.5726 | 0 | 7 |  |
+
+The above channel model results from a simplification process of a more comprehensive CDL channel. For informative purposes only, this process has been summarized below:
+
+1. Baseline channel model table is taken from the channel realization described in TR 38.827 [45].
+
+2. The clusters that have the same AoAs are merged, by keeping the delay for the first tap, and combining the power of the three taps with the same AoD/AoAs.
+
+3. After step 2, the weak clusters falling outside the UE’s spherical coverage (i.e. < -10dB) are removed to reduce the number of clusters, under the assumption that they have a limited impact on the beam management.
+
+4. The intra-cluster elevation angle spread (i.e. CZSA) is flattened to fit the probe layout placed in a single plane. The ZoA is modified to the result of the weighted average of the ZoA for the remaining clusters after step 3.
+
+5. The mid-point of the total angular spread of the clusters after step 4 is aligned so it falls inside the total spread of the probes, and then the AoAs in the channel model parameter table are modified to align with the closest probe location. Here, every cluster will be aligned with one probe location.
