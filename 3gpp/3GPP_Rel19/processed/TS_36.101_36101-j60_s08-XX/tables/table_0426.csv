@@ -1,0 +1,28 @@
+Parameter,,,Unit,Cell 1,Cell 2,Cell 3
+Uplink downlink Configuration,,,,1,1,1
+Special subframe configuration,,,,4,4,4
+Downlink power allocation,,,dB,0,0,0
+,,,dB,0 (Note 1),0 (Note 1),0 (Note 1)
+,,,dB,-3,-3,-3
+at antenna port,,,dBm/15kHz,-98,N/A,N/A
+Es/Noc,,,dB,Reference Value in Table 8.3.2.1H-2,10.45,4.6
+BWChannel,,,MHz,10,10,10
+Subframe Configuration,,,,Non-MBSFN,Non-MBSFN,Non-MBSFN
+Time Offset to Cell 1,,,s,N/A,3,-1
+Frequency shift to Cell 1,,,Hz,N/A,300,-100
+Cell Id,,,,0,1,126
+Cell-specific reference signals,,,,"Antenna ports 0,1",,
+CSI reference signals,,,,"Antenna ports 15,16",N/A,N/A
+CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS,,,Subframes,5 / 4,N/A,N/A
+CSI reference signal configuration,,,,8,N/A,N/A
+Zero-power CSI-RS configurationICSI-RS /       ZeroPowerCSI-RS bitmap,,,Subframes / bitmap,4 /0010000000000000,N/A,N/A
+Number of control OFDM symbols,,,,2,2,2
+PDSCH transmission mode,,,,TM9-1layer,N/A,N/A
+Interference model,,,,N/A,As specified in clause B.5.4,As specified in clause B.5.4
+Probability of occurrence of transmission in interference cells,,,%,N/A,20,20
+Probability of occurrence of transmission rank in interfering cells,Rank 1,,%,N/A,80,80
+,Rank 2,,%,N/A,20,20
+Precoding granularity,,,,Frequency domain: 1 PRGTime domain: 1 ms,N/A,N/A
+Beamforming model,,,,Annex B.4.1,N/A,N/A
+Cyclic prefix,,,,Normal,Normal,Normal
+"Note 1:.Note 2:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).Note 3:For Uplink - downlink configuration 1 the reporting interval will alternate between 1ms and 4ms.Note 4:The number of the CRS ports in Cell 1, Cell 2 and Cell 3 is the same.Note 5:SIB-1 will not be transmitted in Cell 2 and Cell 3 in this test.Note 6:The modulation symbols of the signal under test are mapped onto antenna port 7 or 8.",,,,,,

@@ -1,0 +1,18 @@
+Parameter,Unit,Single antenna port,Transmit diversity
+Uplink downlink configuration (Note 1),,4,4
+Special subframe configuration (Note 2),,4,4
+Narrowband physical layer Cell ID,,0,0
+at antenna port,dBm/15kHz,-98,-98
+Cyclic prefix,,Normal,Normal
+Number of CRS ports for in-band deployment mode,,4,4
+NPDCCH starting position (eutraControlRegionSize-r13) (Note 1),,2,2
+Maximum number of repetitions (npdcch-NumRepetitions-r13),,128 for Test 1; 1024 for Test 2.,64 for Test 1; 512 for Test 2.
+NPDCCH start subframe (npdcch-startSF-USS-r13),,4,4
+NPDCCH fractional period offset of starting subframe (npdcch-Offset-USS-r13),,0,0
+NB-IoT downlink subframe bitmap for anchor carrier (downlinkBitmap-r13),,Not configured,Not configured
+NB-IoT downlink subframe bitmap for non-anchor carrier (downlinkBitmapNonAnchor-r13),,Not configured,Not configured
+Downlink gap configuration for anchor carrier (dl-Gap-r13),,Not configured,Not configured
+Downlink gap configuration for non-anchor carrier(dl-GapNonAnchor-r13),,Not configured,Not configured
+Unused REs or RBs (Note 1),,OCNG,OCNG
+OCNG pattern,,NB.OP.1,NB.OP.1
+NOTE 1:Applicable only for in-band deployment mode.,,,

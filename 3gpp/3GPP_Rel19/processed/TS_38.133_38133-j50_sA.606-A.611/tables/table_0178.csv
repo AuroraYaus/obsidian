@@ -1,0 +1,17 @@
+Parameter,Unit,Value,Comment
+NR RF Channel Number,,1,1 NR carrier frequency is used in the test
+LTE RF Channel Number,,2,1 LTE carrier frequency is used in the test
+Active cell,,Cell 1,
+Neighbour cell,,Cell 2,Cell to be identified.
+LTE Channel Bandwidth,MHz,10,
+LTE PDSCH/PCFICH/PDCCH/PHICH parameters,,,As specified in clause A.3.7.2.1
+CP length,,Normal,
+Hysteresis,dB,0,
+Time To Trigger,s,0,
+Filter coefficient,,0,L3 filtering is not used
+DRX,,OFF,
+useAutonomousGaps,,setup,As specified in clause 5.5.3.1 in TS 38.331.
+Time offset between cells,ms,3,Asynchronous cells
+T1,s,5,
+T2,s,10,
+T3,s,5,

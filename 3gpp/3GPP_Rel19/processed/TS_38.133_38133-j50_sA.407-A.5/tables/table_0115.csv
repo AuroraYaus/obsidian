@@ -1,0 +1,18 @@
+Parameter,,Unit,Test 1,,
+,,,T1,T2,T3
+AoA setup,,,Setup 1 defined in A.3.15,,
+Assumption for UE beamsNote 5,,,Rough,,
+EPRE ratio of PDCCH DMRS to SSS,,dB,4,,
+EPRE ratio of PDCCH to PDCCH DMRS,,dB,0,,
+EPRE ratio of PBCH DMRS to SSS,,dB,,,
+EPRE ratio of PBCH to PBCH DMRS,,dB,,,
+EPRE ratio of PSS to SSS,,dB,,,
+EPRE ratio of PDSCH DMRS to SSS,,dB,0,,
+EPRE ratio of PDSCH to PDSCH DMRS,,dB,,,
+EPRE ratio of OCNG DMRS to SSS,,dB,,,
+EPRE ratio of OCNG to OCNG DMRS,,dB,,,
+ssb-Index 0 SNR,"Config 1, 2",dB,2Note 6,-6Note 6,-15
+ssb-Index 1 SNR,"Config 1, 2",,2Note 6,-15,-15
+,"Config 1, 2",dBm/15KHz,-104.7 dBm,,
+Propagation condition,,,TDL-A 30ns 75 Hz,,
+"NOTE 1:OCNG shall be used such that the resources in Cell 2 are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:The signal contains PDCCH for UEs other than the device under test as part of OCNG.NOTE 3:SNR levels correspond to the signal to noise ratio over the SSS REs.NOTE 4:The SNR values are specified for testing a UE which supports 2RX on at least one band. For testing of a UE which supports 4RX on all bands, the SNR during T3 is A.3.6.NOTE 5:Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementationNOTE 6:This value allows up to 1 dB degradation from applied SNR to UE baseband",,,,,

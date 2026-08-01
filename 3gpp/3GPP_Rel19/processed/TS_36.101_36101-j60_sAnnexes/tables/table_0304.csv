@@ -1,0 +1,7 @@
+Relative power level  [dB],,,PDSCH Data
+Subframe,,,
+0,5,"1 – 4, 6 – 9",
+Allocation,,,
+First unallocated PRB–Last unallocated PRB,First unallocated PRB–Last unallocated PRB,First unallocated PRB–Last unallocated PRB,
+0,0,0,Note 1
+"Note 1:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated. The parameteris used to scale the power of PDSCH.Note 2:If two or more transmit antennas with CRS are used in the test, the OCNG shall be transmitted to the virtual users by all the transmit antennas with CRS according to transmission mode 2. The parameter applies to each antenna port separately, so the transmit power is equal between all the transmit antennas with CRS used in the test. The antenna transmission modes are specified in section 7.1 in 3GPP TS 36.213.Note 3:Subframes available for DL transmission and Occupied OFDM symbols in each subframe depend on the downlink burst transmission pattern and its corresponding configuration",,,

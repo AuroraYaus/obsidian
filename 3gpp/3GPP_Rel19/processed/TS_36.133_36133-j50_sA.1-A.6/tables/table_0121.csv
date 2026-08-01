@@ -1,0 +1,54 @@
+Test category,Section,Test case
+Cell re-selection,A.4.2.18,HD – FDD Intra frequency case for UE Category NB1 In-Band mode in normal coverage
+,A.4.2.19,HD – FDD Intra frequency case for UE Category NB1 In-Band mode in enhanced coverage
+,A.4.2.24,HD – FDD Inter frequency case for UE Category NB1 In-Band mode in enhanced coverage
+,A.4.2.35,TDD - TDD Intra frequency case for UE Category NB1 In-Band mode in normal coverage
+,A.4.2.36,TDD – TDD Intra frequency case for UE Category NB1 In-Band mode in enhanced coverage
+,A.4.2.37,TDD – TDD Inter frequency case for UE Category NB1 In-Band mode in enhanced coverage
+Serving cell measurement relaxation,A.4.2.38,HD – FDD Intra frequency case for UE Category NB1 In-Band mode in normal coverage with serving cell RRM measurement relaxation
+Idle RSTD measurement,A.4.7.1,HD – FDD Intra frequency case for UE Category NB1 standalone mode in enhanced coverage
+,A.4.7.2,HD – FDD Inter frequency case for UE Category NB1 standalone mode in enhanced coverage
+,A.4.7.3,TDD Intra frequency case for UE Category NB1 standalone mode in enhanced coverage
+,A.4.7.4,TDD Inter frequency case for UE Category NB1 standalone mode in enhanced coverage
+RRC re-establishment,A.6.1.15,HD-FDD Intra-frequency RRC Re-establishment for UE category NB1 in In-Band mode under enhancednormal coverage
+,A.6.1.16,HD-FDD Inter-frequency RRC Re-establishment for UE category NB1 in In-Band mode under normalenhanced coverage
+,A.6.1.23,TDD Inter-frequency RRC Re-establishment for UE category NB1 in In-Band mode under normal coverage
+,A.6.1.24,TDD - TDD Intra-frequency RRC Re-establishment for UE category NB1 in In-Band mode under enhanced coverage
+Random access,A.6.2.16,HD-FDD Random Access Test for UE category NB1 in In-band Mode under Normal Coverage
+,A.6.2.17,HD-FDD Contention Based Random Access Test for UE category NB1s in In-band Mode in Enhanced Coverage
+,A.6.2.18,HD-FDD Contention Based Random Access on Non-anchor Carrier Test for UE category NB1 UEs In-band mode in Enhanced Coverage
+,A.6.2.19,TDD Contention Based Random Access Test for UE category NB1 UEs In-band mode in normal coverage
+,A.6.2.20,TDD Contention Based Random Access Test for UE category NB1 UEs In-band mode in enhanced coverage
+,A.6.2.21,TDD Contention Based Random Access on Non-anchor Carrier Test for UE category NB1 UEs In-band mode in Enhanced Coverage
+UE transmit timing,A.7.1.17,E-UTRAN HD-FDD – UE Transmit Timing Accuracy Tests for Category NB1 UE In-Band mode under normal coverage
+,A.7.1.18,E-UTRAN HD-FDD – UE Transmit Timing Accuracy Tests for Category NB1 UE In-band mode under enhanced coverage
+,A.7.1.27,TDD – UE Transmit Timing Accuracy Tests for Category NB1 UE In-Band mode under normal coverage
+,A.7.1.28,TDD – UE Transmit Timing Accuracy Tests for Category NB1 UE In-band mode under enhanced coverage
+UE timing advance,A.7.2.9,HD-FDD UE Timing Advance Adjustment Accuracy Test for UE Category NB1 in Standalone Mode under Enhance Coverage
+,A.7.2.15,TDD – TDD UE Timing Advance Adjustment Accuracy Test for UE Category NB1 in Standalone Mode under Enhanced Coverage
+Radio link monitoring,A.7.3.60,HD-FDD Radio Link Monitoring Test for Out-of-sync in DRX for UE category NB1 In-band mode in normal coverage
+,A.7.3.61,HD-FDD Radio Link Monitoring Test for Out-of-sync in DRX for UE category NB1 In-band mode in enhanced coverage
+,A.7.3.62,HD-FDD Radio Link Monitoring Test for In-sync with DRX for UE Category NB1 In-Band mode in Enhanced Coverage
+,A.7.3.63,HD-FDD Radio Link Monitoring Test for In-sync with DRX for UE Category NB1 In-Band mode in Normal Coverage
+,A.7.3.64,HD-FDD Radio Link Monitoring Test for In-sync without DRX for UE Category NB1 In-Band mode in Normal Coverage
+,A.7.3.65,HD-FDD Radio Link Monitoring Test for In-sync without DRX for UE Category NB1 In-Band mode in Enhanced Coverage
+,A.7.3.66,HD-FDD Radio Link Monitoring Test for Out-of-sync without DRX for UE category NB1 in Standalone Mode in Normal Coverage
+,A.7.3.67,HD-FDD Radio Link Monitoring Test for Out-of-sync without DRX for UE category NB1 in Guardband Mode under Enhanced Coverage
+,A.7.3.88,TDD Radio Link Monitoring Test for Out-of-sync in DRX for UE category NB1 In-band mode in normal coverage
+,A.7.3.89,TDD Radio Link Monitoring Test for Out-of-sync in DRX for UE category NB1 In-band mode in enhanced coverage
+,A.7.3.90,TDD Radio Link Monitoring Test for In-sync with DRX for UE Category NB1 In-Band mode in Normal Coverage
+,A.7.3.91,TDD Radio Link Monitoring Test for In-sync with DRX for UE Category NB1 In-Band mode in Enhanced Coverage
+,A.7.3.92,TDD Radio Link Monitoring Test for In-sync without DRX for UE Category NB1 In-Band mode in Normal Coverage
+,A.7.3.93,TDD Radio Link Monitoring Test for In-sync without DRX for UE Category NB1 In-Band mode in Enhanced Coverage
+,A.7.3.94,TDD Radio Link Monitoring Test for Out-of-sync without DRX for UE Category NB1 Standalone mode in Normal Coverage
+,A.7.3.95,TDD Radio Link Monitoring Test for Out-of-sync without DRX for UE Category NB1 guard band mode in Enhanced Coverage
+RSTD measurement accuracy,A.9.8.16,HD – FDD Intra frequency case for UE Category NB1 inband mode in normal coverage
+,A.9.8.17,HD – FDD Inter frequency case for UE Category NB1 inband mode in normal coverage
+,A.9.8.18,HD – FDD Intra frequency case for UE Category NB1 inband mode in enhanced coverage
+,A.9.8.19,HD – FDD Inter frequency case for UE Category NB1 inband mode in enhanced coverage
+,A.9.8.32,TDD Intra frequency case for UE Category NB1 inband mode in normal coverage
+,A.9.8.33,TDD Inter frequency case for UE Category NB1 inband mode in normal coverage
+,A.9.8.34,TDD Intra frequency case for UE Category NB1 inband mode in enhanced coverage
+,A.9.8.35,TDD Inter frequency case for UE Category NB1 inband mode in enhanced coverage
+Channel quality reporting accuracy,A.9.14.1,E-UTRAN HD-FDD Downlink channel quality reporting accuracy for UE Category NB1 Standalone mode under normal coverage
+,A.9.14.2,E-UTRAN HD-FDD Downlink channel quality reporting accuracy for UE Category NB1 Standalone mode under enhanced coverage

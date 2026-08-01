@@ -1,0 +1,5 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,1,UL carrier frequency
+Channel Bandwidth (BWchannel),MHz,5,
+ProSe Direct Discovery resource pool configuration,,As specified in Table A.3.12.4-4(Configuration #4),IE values unless specified otherwise in this test.
+Active Sidelink UEs Configuration,,PDP.1.FDD As specified in Table A.3.12.8.2-1,Transmitting ProSe Direct Discovery

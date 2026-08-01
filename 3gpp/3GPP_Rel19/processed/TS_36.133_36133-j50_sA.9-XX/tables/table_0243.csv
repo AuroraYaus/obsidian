@@ -1,0 +1,25 @@
+Parameter,Unit,Test1,,Test2,,Test3,,Test4,
+,,Cell1,Cell2,Cell1,Cell2,Cell1,Cell2,Cell1,Cell2
+E-UTRA RF Channel Number,,1,,,,,,,
+PBCH_RA,dB,0,0,0,0,0,0,0,0
+PBCH_RB,,,,,,,,,
+PSS_RA,,,,,,,,,
+SSS_RA,,,,,,,,,
+PCFICH_RB,,,,,,,,,
+PHICH_RA,,,,,,,,,
+PHICH_RB,,,,,,,,,
+PDCCH_RA,,,,,,,,,
+PDCCH_RB,,,,,,,,,
+OCNG_RANote1,,,,,,,,,
+OCNG_RBNote1,,,,,,,,,
+PRS_RA,dB,0,0,-3,0,0,0,-3,0
+Note2,dBm/15 kHz,-98,-98,-98,-98,-98,-98,-98,-98
+PRS,dB,-2.37,-8.02,-6,-13,-2.37,-8.02,-6,-13
+PRS  Note3,dB,-3,-10,-6,-13,-3,-10,-6,-13
+Io Note3,dBm/1.08 MHz,-78.92,-78.92,-79.21,-79.21,N/A,N/A,N/A,N/A
+,dBm/9 MHz,N/A,N/A,N/A,N/A,-69.72,-69.72,-70,-70
+PRP Note3,dBm/15kHz,-100.37,-106.02,-104,-111,-100.37,-106.02,-104,-111
+Note 3,dB,-2.37,-8.02,-3,-13,-2.37,-8.02,-3,-13
+RSRP Note 3,dBm/15kHz,-100.37,-106.02,-101,-111,-100.37,-106.02,-101,-111
+Propagation condition,,AWGN,,,,,,,
+"Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols (other than those in the PRS subframes).Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:, PRS , Io, RSRP and PRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io values are derived in the case that there is no PBCH, PSS or SSS in the OFDM symbols carrying PRS.",,,,,,,,,

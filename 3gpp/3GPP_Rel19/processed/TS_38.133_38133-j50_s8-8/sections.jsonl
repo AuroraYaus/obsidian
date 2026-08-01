@@ -1,0 +1,699 @@
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8Signalling characteristics", "paragraph_index": 1, "style": "Heading1"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1Radio Link Monitoring", "paragraph_index": 2, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.1Introduction", "paragraph_index": 3, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.1.1Introduction of Requirement on Radio Link Monitoring for UE Configured with Relaxed Measurement Criteria", "paragraph_index": 22, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.2Requirements for SSB based radio link monitoring", "paragraph_index": 36, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.2.1Introduction", "paragraph_index": 37, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.2.2Minimum requirement", "paragraph_index": 47, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.2.3Measurement restrictions for SSB based RLM", "paragraph_index": 121, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.2.4Minimum requirement of SSB based radio link monitoring for UE fulfilling relaxed measurement criteria", "paragraph_index": 133, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.3Requirements for CSI-RS based radio link monitoring", "paragraph_index": 146, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.3.1Introduction", "paragraph_index": 147, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.3.2Minimum requirement", "paragraph_index": 153, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.3.3Measurement restrictions for CSI-RS based RLM", "paragraph_index": 239, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.3.4Minimum requirement of CSI-RS based radio link monitoring for UE fulfilling relaxed measurement criteria", "paragraph_index": 270, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.4Minimum requirement at transitions", "paragraph_index": 285, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.5Minimum requirement for UE turning off the transmitter", "paragraph_index": 290, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.6Minimum requirement for L1 indication", "paragraph_index": 292, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.7Scheduling availability of UE during radio link monitoring", "paragraph_index": 299, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.7.1Scheduling availability of UE performing radio link monitoring with a same subcarrier spacing as PDSCH/PDCCH on FR1", "paragraph_index": 301, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.7.2Scheduling availability of UE performing radio link monitoring with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 303, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.7.3Scheduling availability of UE performing radio link monitoring on FR2", "paragraph_index": 322, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.7.4Scheduling availability of UE performing radio link monitoring on FR1 or FR2 in case of FR1-FR2 inter-band CA and NR-DC", "paragraph_index": 344, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1.8Minimum requirement under IDC Interference", "paragraph_index": 347, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1ARadio Link Monitoring with CCA on Target Frequency", "paragraph_index": 349, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1A.1Introduction", "paragraph_index": 350, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1A.2Requirements for SSB Based Radio Link Monitoring", "paragraph_index": 367, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1A.2.1Introduction", "paragraph_index": 368, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1A.2.2Minimum Requirement", "paragraph_index": 374, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1A.2.3Measurement Restrictions for SSB based RLM", "paragraph_index": 417, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1A.3Minimum requirement at transitions", "paragraph_index": 425, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1A.4Minimum requirement for UE turning off the transmitter", "paragraph_index": 428, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1A.5Minimum requirement for L1 indication", "paragraph_index": 430, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1A.6Scheduling availability of UE during radio link monitoring", "paragraph_index": 436, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1A.6.3Scheduling availability of UE performing radio link monitoring on FR2-2", "paragraph_index": 444, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1A.6.4Scheduling availability of UE performing radio link monitoring on FR1 or FR2-2 in case of FR1-FR2-2 inter-band CA and NR-DC", "paragraph_index": 457, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1BRadio Link Monitoring for RedCap", "paragraph_index": 460, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.1Introduction", "paragraph_index": 461, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.2Requirements for SSB based radio link monitoring", "paragraph_index": 474, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.2.1Introduction", "paragraph_index": 475, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.2.2Minimum requirement", "paragraph_index": 481, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.2.3Measurement restrictions for SSB based RLM", "paragraph_index": 513, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.3Requirements for CSI-RS based radio link monitoring", "paragraph_index": 521, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.3.1Introduction", "paragraph_index": 522, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.3.2Minimum requirement", "paragraph_index": 528, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.3.3Measurement restrictions for CSI-RS based RLM", "paragraph_index": 568, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.4Minimum requirement at transitions", "paragraph_index": 583, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.5Minimum requirement for UE turning off the transmitter", "paragraph_index": 586, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.6Minimum requirement for L1 indication", "paragraph_index": 588, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.7Scheduling availability of UE during radio link monitoring", "paragraph_index": 598, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.7.1Scheduling availability of UE performing radio link monitoring with a same subcarrier spacing as PDSCH/PDCCH on FR1", "paragraph_index": 600, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.7.2Scheduling availability of UE performing radio link monitoring with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 602, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1B.7.3Scheduling availability of UE performing radio link monitoring on FR2", "paragraph_index": 605, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1CRadio Link Monitoring for Satellite Access", "paragraph_index": 616, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.1Introduction", "paragraph_index": 617, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.2Requirements for SSB based radio link monitoring", "paragraph_index": 628, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.2.1Introduction", "paragraph_index": 629, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.2.2Minimum requirement", "paragraph_index": 639, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.2.3Measurement restrictions for SSB based RLM", "paragraph_index": 662, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.3Requirements for CSI-RS based radio link monitoring", "paragraph_index": 669, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.3.1Introduction", "paragraph_index": 670, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.3.2Minimum requirement", "paragraph_index": 676, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.3.3Measurement restrictions for CSI-RS based RLM", "paragraph_index": 705, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.4Minimum requirement at transitions", "paragraph_index": 713, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.5Minimum requirement for UE turning off the transmitter", "paragraph_index": 717, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.6Minimum requirement for L1 indication", "paragraph_index": 719, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.7Scheduling availability of UE during radio link monitoring", "paragraph_index": 725, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.7.1Scheduling availability of UE performing radio link monitoring with a same subcarrier spacing as PDSCH/PDCCH on FR1-NTN and FR2-NTN", "paragraph_index": 727, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1C.7.2Scheduling availability of UE performing radio link monitoring with a different subcarrier spacing than PDSCH/PDCCH on FR1-NTN and FR2-NTN", "paragraph_index": 729, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1DRadio Link Monitoring for ATG", "paragraph_index": 732, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.1Introduction", "paragraph_index": 733, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.2Requirements for SSB based radio link monitoring", "paragraph_index": 744, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.2.1Introduction", "paragraph_index": 745, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.2.2Minimum requirement", "paragraph_index": 751, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.2.3Measurement restrictions for SSB based RLM", "paragraph_index": 775, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.3Requirements for CSI-RS based radio link monitoring", "paragraph_index": 782, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.3.1Introduction", "paragraph_index": 783, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.3.2Minimum requirement", "paragraph_index": 787, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.3.3Measurement restrictions for CSI-RS based RLM", "paragraph_index": 814, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.4Minimum requirement at transitions", "paragraph_index": 822, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.5Minimum requirement for UE turning off the transmitter", "paragraph_index": 824, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.6Minimum requirement for L1 indication", "paragraph_index": 826, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.7Scheduling availability of UE during radio link monitoring", "paragraph_index": 828, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.7.1Scheduling availability of UE performing radio link monitoring with a same subcarrier spacing as PDSCH/PDCCH on FR1", "paragraph_index": 830, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1D.7.2Scheduling availability of UE performing radio link monitoring with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 832, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1ERadio Link Monitoring for RedCap UE with Satellite Access", "paragraph_index": 837, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.1Introduction", "paragraph_index": 838, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.2Requirements for SSB based radio link monitoring", "paragraph_index": 849, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.2.1Introduction", "paragraph_index": 850, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.2.2Minimum requirement", "paragraph_index": 856, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.2.3Measurement restrictions for SSB based RLM", "paragraph_index": 861, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.3Requirements for CSI-RS based radio link monitoring", "paragraph_index": 863, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.3.1Introduction", "paragraph_index": 864, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.3.2Minimum requirement", "paragraph_index": 870, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.3.3Measurement restrictions for CSI-RS based RLM", "paragraph_index": 879, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.4Minimum requirement at transitions", "paragraph_index": 881, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.5Minimum requirement for UE turning off the transmitter", "paragraph_index": 883, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.6Minimum requirement for L1 indication", "paragraph_index": 885, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.7Scheduling availability of UE during radio link monitoring", "paragraph_index": 888, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.7.1Scheduling availability of UE performing radio link monitoring with a same subcarrier spacing as PDSCH/PDCCH", "paragraph_index": 890, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.1E.7.2Scheduling availability of UE performing radio link monitoring with a different subcarrier spacing than PDSCH/PDCCH", "paragraph_index": 893, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2Interruption", "paragraph_index": 896, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1EN-DC Interruption", "paragraph_index": 897, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.1Introduction", "paragraph_index": 898, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2Requirements", "paragraph_index": 923, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.1Interruptions at transitions between active and non-active during DRX", "paragraph_index": 924, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.2Interruptions at transitions from non-DRX to DRX", "paragraph_index": 929, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.3Interruptions at SCell addition/release", "paragraph_index": 932, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.4Interruptions at SCell activation/deactivation", "paragraph_index": 986, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.5Interruptions during measurements on SCC", "paragraph_index": 1039, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.6Interruptions at UL carrier RRC reconfiguration", "paragraph_index": 1071, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.7Interruptions due to Active BWP switching Requirement", "paragraph_index": 1076, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.8Interruptions at direct SCell activation and hibernation", "paragraph_index": 1087, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.9Interruptions at SCell hibernation", "paragraph_index": 1098, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.10Interruptions at SCell activation/deactivation with multiple downlink SCells", "paragraph_index": 1104, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.11Interruptions due to UE-specific CBW change", "paragraph_index": 1107, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.12Interruptions at NR SRS carrier based switching", "paragraph_index": 1111, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.13Interruptions at E-UTRA SRS carrier based switching", "paragraph_index": 1134, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.14DL Interruptions at switching between two uplink carriers", "paragraph_index": 1150, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.15Interruptions due to SCell dormancy", "paragraph_index": 1156, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.16Interruptions when identifying CGI of an NR cell with autonomous gaps", "paragraph_index": 1168, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.17Interruptions when identifying CGI of an E-UTRA cell with autonomous gaps", "paragraph_index": 1179, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.18Interruptions at NR SRS antenna port switching", "paragraph_index": 1193, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.19Interruptions at fast SCell activation", "paragraph_index": 1207, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.20Interruptions due to PUCCH SCell activation/deactivation", "paragraph_index": 1223, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.1.2.21Interruptions at OD-SSB activation/deactivation", "paragraph_index": 1228, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2SA: Interruptions with Standalone NR Carrier Aggregation", "paragraph_index": 1240, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.1Introduction", "paragraph_index": 1241, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2Requirements", "paragraph_index": 1262, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.1Interruptions at SCell addition/release", "paragraph_index": 1263, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.2Interruptions at SCell activation/deactivation", "paragraph_index": 1290, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.3Interruptions during measurements on deactivated SCC", "paragraph_index": 1317, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.4Interruptions at UL carrier RRC reconfiguration", "paragraph_index": 1347, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.5Interruptions due to Active BWP switching Requirement", "paragraph_index": 1352, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.6Interruptions at inter-frequency SFTD measurement", "paragraph_index": 1363, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.7Interruptions at SCell activation/deactivation with multiple downlink SCells", "paragraph_index": 1382, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.8Interruptions due to UE-specific CBW change", "paragraph_index": 1385, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.9Interruptions at NR SRS carrier based switching", "paragraph_index": 1389, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.10DL Interruptions at UE switching between two uplink carriers", "paragraph_index": 1411, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.10ADL Interruptions at UE switching between two uplink carriers with two transmit antenna connectors", "paragraph_index": 1417, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.10BDL Interruptions at UE switching between one uplink band with one transmit antenna connector and one uplink band with two transmit antenna connectors", "paragraph_index": 1423, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.10CDL Interruptions at UE switching between two uplink bands with two transmit antenna connectors", "paragraph_index": 1427, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.10DDL Interruptions at UE switching across three or four uplink bands", "paragraph_index": 1431, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.10EDL Interruptions at UE switching between two uplink bands with three transmit antenna connectors and maximum two transmit antenna connectors for each band", "paragraph_index": 1440, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.11Interruptions at direct SCell activation", "paragraph_index": 1446, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.12Interruptions due to SCell dormancy", "paragraph_index": 1450, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.12.1Interruptions due to SCell dormancy switch", "paragraph_index": 1451, "style": "Heading6"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.12.2Interruptions due to CQI measurements during SCell dormancy", "paragraph_index": 1456, "style": "Heading6"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.12.3Interruptions due to RRM measurements during SCell dormancy", "paragraph_index": 1459, "style": "Heading6"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.13Interruptions at transitions between active and non-active during DRX", "paragraph_index": 1462, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.14Interruptions when identifying CGI of an NR cell with autonomous gaps", "paragraph_index": 1464, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.15Interruptions when identifying CGI of an E-UTRA cell with autonomous gaps", "paragraph_index": 1475, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.16Interruptions at NR SRS antenna port switching", "paragraph_index": 1485, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.17Interruptions at fast SCell activation", "paragraph_index": 1497, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.18Interruptions due to PUCCH SCell activation/deactivation", "paragraph_index": 1514, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.19Interruptions due to measurements without gap carried out by UE supporting NeedForInterruptionInfoNR", "paragraph_index": 1519, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.20Interruptions due to PDCCH ordered RACH on target LTM cell", "paragraph_index": 1537, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.21Interruptions at NR SRS bandwidth aggregation for positioning", "paragraph_index": 1548, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.2.2.22Interruptions at OD-SSB activation/deactivation", "paragraph_index": 1572, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3NE-DC Interruptions", "paragraph_index": 1588, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.1Introduction", "paragraph_index": 1589, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2Requirements", "paragraph_index": 1608, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.1Interruptions at transitions between active and non-active during DRX", "paragraph_index": 1609, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.2Interruptions at transitions from non-DRX to DRX", "paragraph_index": 1614, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.3Interruptions at PSCell/SCell addition/release", "paragraph_index": 1616, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.4Interruptions at SCell activation/deactivation", "paragraph_index": 1634, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.5Interruptions during measurements on SCC", "paragraph_index": 1650, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.5.1Interruptions during measurements on deactivated NR SCC", "paragraph_index": 1651, "style": "Heading6"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.5.2Interruptions during measurements on deactivated E-UTRAN SCC", "paragraph_index": 1653, "style": "Heading6"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.5.3Interruptions during CQI measurements on dormant E-UTRAN SCC", "paragraph_index": 1663, "style": "Heading6"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.5.4Interruptions during RRM measurements on dormant E-UTRAN SCC", "paragraph_index": 1670, "style": "Heading6"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.6Interruptions at UL carrier RRC reconfiguration", "paragraph_index": 1677, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.7Interruptions due to Active BWP switching Requirement", "paragraph_index": 1682, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.8Interruptions at direct SCell activation and hibernation", "paragraph_index": 1686, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.9Interruptions at SCell hibernation", "paragraph_index": 1697, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.10Interruptions at SCell activation/deactivation with multiple downlink SCells", "paragraph_index": 1702, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.11Interruptions at NR SRS carrier based switching", "paragraph_index": 1705, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.12Interruptions at E-UTRA SRS carrier based switching", "paragraph_index": 1726, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.13Interruptions due to SCell dormancy", "paragraph_index": 1741, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.14Interruptions when identifying CGI of an NR cell with autonomous gaps", "paragraph_index": 1753, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "8.2.3.2.15", "title": "Interruptions when identifying CGI of an E-UTRA cell with autonomous gaps", "paragraph_index": 1763, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.17Interruptions at fast SCell activation", "paragraph_index": 1791, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.18Interruptions due to UE-specific CBW change", "paragraph_index": 1804, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.19Interruptions due to PUCCH SCell activation/deactivation", "paragraph_index": 1806, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.3.2.20Interruptions at OD-SSB activation/deactivation", "paragraph_index": 1811, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4NR-DC: Interruptions", "paragraph_index": 1820, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.1Introduction", "paragraph_index": 1821, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2Requirements", "paragraph_index": 1844, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.1Interruptions at PSCell/SCell addition/release", "paragraph_index": 1845, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.2Interruptions at SCell activation/deactivation", "paragraph_index": 1853, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.3Interruptions during measurements on SCC", "paragraph_index": 1861, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.4Interruptions at UL carrier RRC reconfiguration", "paragraph_index": 1864, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.5Interruptions due to Active BWP switching Requirement", "paragraph_index": 1869, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.6Interruptions at transitions between active and non-active during DRX", "paragraph_index": 1873, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.7Interruptions at transitions from non-DRX to DRX", "paragraph_index": 1879, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.8Interruptions at SCell activation/deactivation with multiple downlink SCells", "paragraph_index": 1882, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.9Interruptions at NR SRS carrier based switching", "paragraph_index": 1888, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.10Interruptions at direct SCell activation", "paragraph_index": 1909, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.11Interruptions when identifying CGI of an NR cell with autonomous gaps", "paragraph_index": 1913, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.12Interruptions when identifying CGI of an E-UTRA cell with autonomous gaps", "paragraph_index": 1924, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "8.2.4.2.13", "title": "Interruptions due to SCell dormancy", "paragraph_index": 1934, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.14Interruptions at NR SRS antenna port switching", "paragraph_index": 1946, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.15Interruptions at fast SCell activation", "paragraph_index": 1959, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.16Interruptions at SCG activation/deactivation", "paragraph_index": 1972, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.17Interruptions due to RRM measurements on deactivated SCG", "paragraph_index": 1977, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.18Interruptions during RLM/BFD measurements on deactivated PSCell", "paragraph_index": 1980, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.19Interruptions due to UE-specific CBW change", "paragraph_index": 1983, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.20Interruptions due to PDCCH ordered RACH on target LTM cell", "paragraph_index": 1985, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.21Interruptions at PSCell Cell switch", "paragraph_index": 1994, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2.22Interruptions at OD-SSB activation/deactivation", "paragraph_index": 1998, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2AVoid", "paragraph_index": 2007, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2A.1Void", "paragraph_index": 2008, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2A.2Void", "paragraph_index": 2009, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2.4.2A.3Void", "paragraph_index": 2010, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2DInterruption for ATG UE", "paragraph_index": 2011, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1Interruptions with Standalone NR Carrier Aggregation", "paragraph_index": 2012, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1.1Introduction", "paragraph_index": 2013, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1.2Requirements", "paragraph_index": 2023, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1.2.1Interruptions at SCell addition/release", "paragraph_index": 2024, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1.2.2Interruptions at SCell activation/deactivation", "paragraph_index": 2032, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1.2.3Interruptions during measurements on deactivated SCC", "paragraph_index": 2039, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1.2.4Interruptions at direct SCell activation", "paragraph_index": 2045, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1.2.5Interruptions due to SCell dormancy", "paragraph_index": 2049, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1.2.6Interruptions at fast SCell activation", "paragraph_index": 2058, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1.2.8Interruptions due to UE-specific CBW change", "paragraph_index": 2084, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1.2.9Interruptions when identifying CGI of an NR cell with autonomous gaps", "paragraph_index": 2088, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.2D.1.2.10Interruptions at NR SRS antenna port switching", "paragraph_index": 2099, "style": "Heading5"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3SCell Activation and Deactivation Delay", "paragraph_index": 2109, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.1Introduction", "paragraph_index": 2110, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.2SCell Activation Delay Requirement for Deactivated SCell", "paragraph_index": 2113, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.2ASCell Activation Delay Requirement for Deactivated SCell based on measurement in IDLE/INACTIVE mode", "paragraph_index": 2293, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.3SCell Deactivation Delay Requirement for Activated SCell", "paragraph_index": 2331, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.4Direct SCell Activation at SCell addition", "paragraph_index": 2340, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.5Direct SCell Activation at Handover", "paragraph_index": 2381, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.7SCell Activation Delay Requirement for Deactivated SCell with Multiple Downlink SCells", "paragraph_index": 2423, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.8SCell Deactivation Delay Requirement for Activated SCell with Multiple Downlink SCells", "paragraph_index": 2511, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.9Direct SCell Activation of Multiple Downlink SCells at SCell addition", "paragraph_index": 2518, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.10Direct SCell Activation of Multiple Downlink SCells at Handover", "paragraph_index": 2548, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.12SCell Activation Delay Requirement for Deactivated PUCCH SCell", "paragraph_index": 2576, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.13SCell activation delay Requirement for Deactivated PUCCH SCell with Multiple SCells", "paragraph_index": 2665, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.14SCell Deactivation Delay Requirement for Activated PUCCH SCell", "paragraph_index": 2718, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.15SCell Deactivation Delay Requirement for Activated PUCCH SCell with Multiple Downlink SCells", "paragraph_index": 2722, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.16Fast SCell Activation Delay Requirement for Deactivated SCell", "paragraph_index": 2729, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.17SCell Activation Delay Requirement for Deactivated SCell with the L3 reporting during activation", "paragraph_index": 2791, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.18SCell Activation Delay Requirement for Deactivated SCell with Multiple Downlink SCells with L3 reporting", "paragraph_index": 2863, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.19OD-SSB based SCell Activation Delay Requirement for Deactivated SCell", "paragraph_index": 2937, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.20OD-SSB based SCell Deactivation Delay Requirement for Activated SCell", "paragraph_index": 3043, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.21OD-SSB based Direct SCell Activation at SCell addition", "paragraph_index": 3048, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.22OD-SSB based SCell Activation Delay Requirement for Deactivated SCell with Multiple Downlink SCells", "paragraph_index": 3084, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.23OD-SSB based SCell Deactivation Delay Requirement for Activated SCell with Multiple Downlink SCells", "paragraph_index": 3175, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.25OD-SSB based SCell Deactivation Delay Requirement for Activated PUCCH SCell", "paragraph_index": 3185, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3.26OD-SSB based SCell Activation Delay Requirement for Deactivated SCell with the L3 reporting during activation", "paragraph_index": 3189, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3ASCell Activation and Deactivation Delay in Carriers with CCA", "paragraph_index": 3197, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3A.1Introduction", "paragraph_index": 3198, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3A.2SCell Activation Delay Requirement for Deactivated SCell", "paragraph_index": 3203, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3A.3SCell Deactivation Delay Requirement for Activated SCell", "paragraph_index": 3296, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3DSCell Activation and Deactivation Delay for ATG", "paragraph_index": 3301, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3D.1Introduction", "paragraph_index": 3302, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3D.2SCell Activation Delay Requirement for Deactivated SCell", "paragraph_index": 3304, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3D.3SCell Deactivation Delay Requirement for Activated SCell", "paragraph_index": 3415, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3D.4Direct SCell Activation at SCell addition", "paragraph_index": 3420, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3D.5Direct SCell Activation at Handover", "paragraph_index": 3456, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3D.6Direct SCell Activation at RRC Resume", "paragraph_index": 3492, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3D.7Fast SCell Activation Delay Requirement for Deactivated SCell", "paragraph_index": 3496, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.3D.8SCell Activation Delay Requirement for Deactivated SCell with the L3 reporting during activation", "paragraph_index": 3535, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.4UE UL carrier RRC reconfiguration delay", "paragraph_index": 3593, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.4.1Introduction", "paragraph_index": 3594, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.4.2UE UL carrier configuration delay requirement", "paragraph_index": 3596, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.4.3UE UL carrier deconfiguration delay requirement", "paragraph_index": 3601, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5Link Recovery Procedures", "paragraph_index": 3606, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.1Introduction", "paragraph_index": 3607, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.1.1Introduction of Requirement on Link Recovery Procedures for UE configured with relaxed measurement criteria", "paragraph_index": 3620, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.2Requirements for SSB based beam failure detection", "paragraph_index": 3634, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.2.1Introduction", "paragraph_index": 3635, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.2.2Minimum requirement", "paragraph_index": 3654, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.2.3Measurement restriction for SSB based beam failure detection", "paragraph_index": 3729, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.2.4Minimum requirement of SSB based beam failure detection for UE fulfilling relaxed measurement criteria", "paragraph_index": 3741, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.3Requirements for CSI-RS based beam failure detection", "paragraph_index": 3754, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.3.1Introduction", "paragraph_index": 3755, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.3.2Minimum requirement", "paragraph_index": 3772, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.3.3Measurement restrictions for CSI-RS beam failure detection", "paragraph_index": 3864, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.3.4Minimum requirement of CSI-RS based beam failure detection for UE fulfilling relaxed measurement criteria", "paragraph_index": 3892, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.4Minimum requirement for L1 indication", "paragraph_index": 3905, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.5Requirements for SSB based candidate beam detection", "paragraph_index": 3923, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.5.1Introduction", "paragraph_index": 3924, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.5.2Minimum requirement", "paragraph_index": 3940, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.5.3Measurement restriction for SSB based candidate beam detection", "paragraph_index": 4015, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.6Requirements for CSI-RS based candidate beam detection", "paragraph_index": 4028, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.6.1Introduction", "paragraph_index": 4029, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.6.2Minimum requirement", "paragraph_index": 4044, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.6.3Measurement restriction for CSI-RS based candidate beam detection", "paragraph_index": 4136, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.7Scheduling availability of UE during beam failure detection", "paragraph_index": 4149, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.7.1Scheduling availability of UE performing beam failure detection with a same subcarrier spacing as PDSCH/PDCCH on FR1", "paragraph_index": 4151, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.7.2Scheduling availability of UE performing beam failure detection with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 4153, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.7.3Scheduling availability of UE performing beam failure detection on FR2", "paragraph_index": 4173, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.7.4Scheduling availability of UE performing beam failure detection on FR1 or FR2 in case of FR1-FR2 inter-band CA and NR-DC", "paragraph_index": 4193, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.8Scheduling availability of UE during candidate beam detection", "paragraph_index": 4196, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.8.1Scheduling availability of UE performing L1-RSRP measurement with a same subcarrier spacing as PDSCH/PDCCH on FR1", "paragraph_index": 4198, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.8.2Scheduling availability of UE performing L1-RSRP measurement with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 4200, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.8.3Scheduling availability of UE performing L1-RSRP measurement on FR2", "paragraph_index": 4220, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.8.4Scheduling availability of UE performing L1-RSRP measurement on FR1 or FR2 in case of FR1-FR2 inter-band CA and NR-DC", "paragraph_index": 4231, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.9Requirements for Beam Failure Recovery in SCell", "paragraph_index": 4234, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.9.1Introduction", "paragraph_index": 4235, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.9.2Requirement", "paragraph_index": 4238, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.10Minimum requirement at transitions for beam failure detection", "paragraph_index": 4244, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.11Minimum requirement under IDC Interference", "paragraph_index": 4250, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.12Minimum requirement at transitions for candidate beam detection", "paragraph_index": 4252, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5ALink Recovery Procedures when CCA is used on target frequency", "paragraph_index": 4255, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.1Introduction", "paragraph_index": 4256, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.2Requirements for SSB based beam failure detection", "paragraph_index": 4268, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.2.1Introduction", "paragraph_index": 4269, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.2.2Minimum requirement", "paragraph_index": 4273, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.2.3Measurement restriction for SSB based beam failure detection", "paragraph_index": 4314, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.3Void", "paragraph_index": 4322, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.4Minimum requirement for L1 indication", "paragraph_index": 4323, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.5Requirements for SSB based candidate beam detection", "paragraph_index": 4330, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.5.1Introduction", "paragraph_index": 4331, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.5.2Minimum requirement", "paragraph_index": 4333, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.5.3Measurement restriction for SSB based candidate beam detection", "paragraph_index": 4375, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.6Void", "paragraph_index": 4382, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.7Scheduling availability of UE during beam failure detection", "paragraph_index": 4383, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.7.1Scheduling availability of UE performing beam failure detection with a same subcarrier spacing as PDSCH/PDCCH", "paragraph_index": 4385, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.7.2Scheduling availability of UE performing beam failure detection with a different subcarrier spacing than PDSCH/PDCCH", "paragraph_index": 4387, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.7.3Scheduling availability of UE performing beam failure detection on FR2-2", "paragraph_index": 4389, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.7.4Scheduling availability of UE performing beam failure detection on FR1 or FR2-2 in case of FR1-FR2-2 inter-band CA and NR-DC", "paragraph_index": 4391, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.8Scheduling availability of UE during candidate beam detection", "paragraph_index": 4393, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5A.8.3Scheduling availability of UE performing L1-RSRP measurement on FR2-2", "paragraph_index": 4399, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5.8A.4Scheduling availability of UE performing L1-RSRP measurement on FR1 or FR2-2 in case of FR1-FR2-2 inter-band CA and NR-DC", "paragraph_index": 4401, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5BLink Recovery Procedures for Redcap", "paragraph_index": 4403, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.1Introduction", "paragraph_index": 4404, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.2Requirements for SSB based beam failure detection for Redcap", "paragraph_index": 4410, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.2.1Introduction", "paragraph_index": 4411, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.2.2Minimum requirement", "paragraph_index": 4415, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.2.3Measurement restriction for SSB based beam failure detection", "paragraph_index": 4444, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.3Requirements for CSI-RS based beam failure detection for Redcap", "paragraph_index": 4452, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.3.1Introduction", "paragraph_index": 4453, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.3.2Minimum requirement", "paragraph_index": 4457, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.3.3Measurement restrictions for CSI-RS beam failure detection", "paragraph_index": 4494, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.4Minimum requirement for L1 indication for Redcap", "paragraph_index": 4509, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.5Requirements for SSB based candidate beam detection for Redcap", "paragraph_index": 4520, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.5.1Introduction", "paragraph_index": 4521, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.5.2Minimum requirement", "paragraph_index": 4523, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.5.3Measurement restriction for SSB based candidate beam detection", "paragraph_index": 4556, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.6Requirements for CSI-RS based candidate beam detection for Redcap", "paragraph_index": 4563, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.6.1Introduction", "paragraph_index": 4564, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.6.2Minimum requirement", "paragraph_index": 4566, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.6.3Measurement restriction for CSI-RS based candidate beam detection", "paragraph_index": 4605, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.7Scheduling availability of UE during beam failure detection for Redcap", "paragraph_index": 4614, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.7.1Scheduling availability of UE performing beam failure detection with a same subcarrier spacing as PDSCH/PDCCH on FR1", "paragraph_index": 4616, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.7.2Scheduling availability of UE performing beam failure detection with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 4618, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.7.3Scheduling availability of UE performing beam failure detection on FR2", "paragraph_index": 4621, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.8Scheduling availability of UE during candidate beam detection for Redcap", "paragraph_index": 4632, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.8.1Scheduling availability of UE performing L1-RSRP measurement with a same subcarrier spacing as PDSCH/PDCCH on FR1", "paragraph_index": 4634, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.8.2Scheduling availability of UE performing L1-RSRP measurement with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 4636, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.8.3Scheduling availability of UE performing L1-RSRP measurement on FR2", "paragraph_index": 4639, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5B.9Minimum requirement at transitions for beam failure detection for Redcap", "paragraph_index": 4647, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5CLink Recovery Procedures for Satellite Access", "paragraph_index": 4650, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.1Introduction", "paragraph_index": 4651, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.2Requirements for SSB based beam failure detection", "paragraph_index": 4657, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.2.1Introduction", "paragraph_index": 4658, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.2.2Minimum requirement", "paragraph_index": 4664, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.2.3Measurement restriction for SSB based beam failure detection", "paragraph_index": 4682, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.3Requirements for CSI-RS based beam failure detection", "paragraph_index": 4689, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.3.1Introduction", "paragraph_index": 4690, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.3.2Minimum requirement", "paragraph_index": 4694, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.3.3Measurement restrictions for CSI-RS beam failure detection", "paragraph_index": 4719, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.4Minimum requirement for L1 indication", "paragraph_index": 4727, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.5Requirements for SSB based candidate beam detection", "paragraph_index": 4737, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.5.1Introduction", "paragraph_index": 4738, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.5.2Minimum requirement", "paragraph_index": 4740, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.5.3Measurement restriction for SSB based candidate beam detection", "paragraph_index": 4763, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.6Requirements for CSI-RS based candidate beam detection", "paragraph_index": 4769, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.6.1Introduction", "paragraph_index": 4770, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.6.2Minimum requirement", "paragraph_index": 4772, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.6.3Measurement restriction for CSI-RS based candidate beam detection", "paragraph_index": 4797, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.7Scheduling availability of UE during beam failure detection", "paragraph_index": 4804, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.7.1Scheduling availability of UE performing beam failure detection with a same subcarrier spacing as PDSCH/PDCCH on FR1-NTN", "paragraph_index": 4806, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.7.2Scheduling availability of UE performing beam failure detection with a different subcarrier spacing than PDSCH/PDCCH on FR1-NTN", "paragraph_index": 4808, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.8Scheduling availability of UE during candidate beam detection", "paragraph_index": 4811, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.8.1Scheduling availability of UE performing L1-RSRP measurement with a same subcarrier spacing as PDSCH/PDCCH on FR1-NTN", "paragraph_index": 4813, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.8.2Scheduling availability of UE performing L1-RSRP measurement with a different subcarrier spacing than PDSCH/PDCCH on FR1-NTN", "paragraph_index": 4815, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5C.9Minimum requirement at transitions for beam failure detection", "paragraph_index": 4818, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5DLink Recovery Procedures for ATG", "paragraph_index": 4822, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.1Introduction", "paragraph_index": 4823, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.2Requirements for SSB based beam failure detection", "paragraph_index": 4830, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.2.1Introduction", "paragraph_index": 4831, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.2.2Minimum requirement", "paragraph_index": 4834, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.2.3Measurement restriction for SSB based beam failure detection", "paragraph_index": 4863, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.3Requirements for CSI-RS based beam failure detection", "paragraph_index": 4870, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.3.1Introduction", "paragraph_index": 4871, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.3.2Minimum requirement", "paragraph_index": 4874, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.3.3Measurement restrictions for CSI-RS beam failure detection", "paragraph_index": 4910, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.4Minimum requirement for L1 indication", "paragraph_index": 4918, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.5Requirements for SSB based candidate beam detection", "paragraph_index": 4920, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.5.1Introduction", "paragraph_index": 4921, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.5.2Minimum requirement", "paragraph_index": 4923, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.5.3Measurement restriction for SSB based candidate beam detection", "paragraph_index": 4958, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.6Requirements for CSI-RS based candidate beam detection", "paragraph_index": 4964, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.6.1Introduction", "paragraph_index": 4965, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.6.2Minimum requirement", "paragraph_index": 4967, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.6.3Measurement restriction for CSI-RS based candidate beam detection", "paragraph_index": 5004, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.7Scheduling availability of UE during beam failure detection", "paragraph_index": 5011, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.7.1Scheduling availability of UE performing beam failure detection with a same subcarrier spacing as PDSCH/PDCCH on FR1", "paragraph_index": 5013, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.7.2Scheduling availability of UE performing beam failure detection with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 5015, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.8Scheduling availability of UE during candidate beam detection", "paragraph_index": 5020, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.8.1Scheduling availability of UE performing L1-RSRP measurement with a same subcarrier spacing as PDSCH/PDCCH on FR1", "paragraph_index": 5022, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.8.2Scheduling availability of UE performing L1-RSRP measurement with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 5024, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.9Minimum requirement at transitions for beam failure detection", "paragraph_index": 5029, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5D.10Requirements for Beam Failure Recovery in SCell", "paragraph_index": 5031, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5ELink Recovery Procedures for RedCap UE with Satellite Access", "paragraph_index": 5034, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.1Introduction", "paragraph_index": 5035, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.2Requirements for SSB based beam failure detection for RedCap UE with satellite access", "paragraph_index": 5041, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.2.1Introduction", "paragraph_index": 5042, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.2.2Minimum requirement", "paragraph_index": 5046, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.2.3Measurement restrictions for SSB beam failure detection", "paragraph_index": 5051, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.3Requirements for CSI-RS based beam failure detection for RedCap UE with satellite access", "paragraph_index": 5053, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.3.1Introduction", "paragraph_index": 5054, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.3.2Minimum requirement", "paragraph_index": 5058, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.3.3Measurement restrictions for CSI-RS beam failure detection", "paragraph_index": 5067, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.4Minimum requirement for L1 indication for RedCap UE with satellite access", "paragraph_index": 5069, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.5Requirements for SSB based candidate beam detection for RedCap UE with satellite access", "paragraph_index": 5072, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.6Requirements for CSI-RS based candidate beam detection for RedCap UE with satellite access", "paragraph_index": 5074, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.7Scheduling availability of UE during beam failure detection for RedCap UE with satellite access", "paragraph_index": 5080, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.8Scheduling availability of UE during candidate beam detection for RedCap UE with satellite access", "paragraph_index": 5083, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.5E.9Minimum requirement at transitions for beam failure detection for RedCap UE with satellite access", "paragraph_index": 5086, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6Active BWP switch delay", "paragraph_index": 5088, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.1Introduction", "paragraph_index": 5089, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.2DCI and timer based BWP switch delay on a single CC", "paragraph_index": 5092, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.2ADCI based BWP switch delay on multiple CCs", "paragraph_index": 5115, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.2A.1Simultaneous DCI based BWP switch delay on multiple CCs", "paragraph_index": 5117, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.2A.2Non-simultaneous DCI based BWP switch delay on multiple CCs", "paragraph_index": 5143, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.2BTimer based BWP switch delay on multiple CCs", "paragraph_index": 5150, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.2B.1Simultaneous timer based BWP switch delay on multiple CCs", "paragraph_index": 5152, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.2B.2Non-simultaneous timer based BWP switch delay on multiple CCs", "paragraph_index": 5161, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.3RRC based BWP switch delay on a single CC", "paragraph_index": 5175, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.3ARRC based BWP switch delay on multiple CCs", "paragraph_index": 5185, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.3A.1Simultaneous RRC based BWP switch delay on multiple CCs", "paragraph_index": 5190, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.3A.2Non-simultaneous RRC based BWP switch delay on multiple CCs", "paragraph_index": 5199, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6.4BWP switch delay on Consistent UL CCA recovery", "paragraph_index": 5213, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6AActive BWP switch delay for RedCap", "paragraph_index": 5217, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6A.1Introduction", "paragraph_index": 5218, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6A.2DCI and timer based BWP switch delay on a single CC", "paragraph_index": 5220, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6A.3RRC based BWP switch delay on a single CC", "paragraph_index": 5242, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6CActive BWP switch delay for satellite access", "paragraph_index": 5251, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6C.1Introduction", "paragraph_index": 5252, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6C.2DCI and timer based BWP switch delay on a single CC", "paragraph_index": 5255, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6C.3RRC based BWP switch delay on a single CC", "paragraph_index": 5277, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6DActive BWP switch delay for ATG", "paragraph_index": 5286, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6D.1Introduction", "paragraph_index": 5287, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6D.2DCI and timer based BWP switch delay on a single CC", "paragraph_index": 5290, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6D.2ADCI based BWP switch delay on multiple CCs", "paragraph_index": 5313, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6D.2A.1Simultaneous DCI based BWP switch delay on multiple CCs", "paragraph_index": 5315, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6D.2BTimer based BWP switch delay on multiple CCs", "paragraph_index": 5341, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6D.2B.1Simultaneous timer based BWP switch delay on multiple CCs", "paragraph_index": 5343, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6D.2B.2Non-simultaneous timer based BWP switch delay on multiple CCs", "paragraph_index": 5352, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6D.3RRC based BWP switch delay on a single CC", "paragraph_index": 5366, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6D.3ARRC based BWP switch delay on multiple CCs", "paragraph_index": 5376, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6D.3A.1Simultaneous RRC based BWP switch delay on multiple CCs", "paragraph_index": 5381, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6EActive BWP switch delay for RedCap UE with satellite access", "paragraph_index": 5390, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6E.1Introduction", "paragraph_index": 5391, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6E.2DCI and timer based BWP switch delay on a single CC", "paragraph_index": 5394, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.6E.3RRC based BWP switch delay on a single CC", "paragraph_index": 5396, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.7Void", "paragraph_index": 5398, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.8NE-DC: E-UTRAN PSCell Addition and Release Delay", "paragraph_index": 5399, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.8.1Introduction", "paragraph_index": 5400, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.8.2E-UTRAN PSCell Addition Delay Requirement", "paragraph_index": 5402, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.8.3E-UTRAN PSCell Release Delay Requirement", "paragraph_index": 5417, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9NR-DC: PSCell Addition and Release Delay", "paragraph_index": 5423, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9.1Introduction", "paragraph_index": 5424, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9.2PSCell Addition Delay Requirement", "paragraph_index": 5426, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9.3PSCell Release Delay Requirement", "paragraph_index": 5444, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9AConditional PSCell Addition Delay", "paragraph_index": 5450, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9A.1Introduction", "paragraph_index": 5451, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9A.2Conditional PSCell Addition Delay Requirement", "paragraph_index": 5453, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9A.2.1Measurement time", "paragraph_index": 5467, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9BNR-DC: PSCell Addition and Release Delay in Carriers with CCA", "paragraph_index": 5471, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9B.1Introduction", "paragraph_index": 5472, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9B.2PSCell Addition Delay Requirement", "paragraph_index": 5474, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9B.3PSCell Release Delay Requirement", "paragraph_index": 5493, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9CSubsequent Conditional PSCell Addition Delay", "paragraph_index": 5499, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9C.1Introduction", "paragraph_index": 5500, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9C.2Subsequent Conditional PSCell Addition Delay Requirement", "paragraph_index": 5502, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.9C.2.1Measurement time", "paragraph_index": 5515, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10Active TCI state switching delay", "paragraph_index": 5519, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10.1Introduction", "paragraph_index": 5520, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10.2Known conditions for TCI state", "paragraph_index": 5522, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10.2AKnown conditions for TCI state with beam prediction", "paragraph_index": 5531, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10.3AMAC-CE based TCI state switch delay in HST FR2 scenarios", "paragraph_index": 5570, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10.4DCI based TCI state switch delay", "paragraph_index": 5579, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10.5RRC based TCI state switch delay", "paragraph_index": 5582, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10.6Active TCI state list update delay", "paragraph_index": 5603, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10AActive TCI state switching delay with CCA", "paragraph_index": 5605, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10A.1Introduction", "paragraph_index": 5606, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10A.2Known conditions for TCI state", "paragraph_index": 5609, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10A.3MAC-CE based TCI state switch delay", "paragraph_index": 5618, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10A.4DCI based TCI state switch delay", "paragraph_index": 5643, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10A.5RRC based TCI state switch delay", "paragraph_index": 5646, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10A.6Active TCI state list update delay", "paragraph_index": 5667, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10BActive TCI state switching delay for RedCap", "paragraph_index": 5669, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10B.1Introduction", "paragraph_index": 5670, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10B.2Known conditions for TCI state", "paragraph_index": 5672, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10B.3MAC-CE based TCI state switch delay", "paragraph_index": 5681, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10B.4DCI based TCI state switch delay", "paragraph_index": 5705, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10B.5RRC based TCI state switch delay", "paragraph_index": 5708, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10B.6Active TCI state list update delay", "paragraph_index": 5724, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10CActive TCI state switching delay for satellite access", "paragraph_index": 5726, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10C.1Introduction", "paragraph_index": 5727, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10C.2MAC-CE based TCI state switch delay", "paragraph_index": 5729, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10C.4DCI based TCI state switch delay", "paragraph_index": 5736, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10C.5RRC based TCI state switch delay", "paragraph_index": 5738, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10C.6Active TCI state list update delay", "paragraph_index": 5746, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10DActive TCI state switching delay for ATG", "paragraph_index": 5748, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10D.2Void", "paragraph_index": 5751, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10D.6Active TCI state list update delay", "paragraph_index": 5769, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10EActive TCI state switching delay for UE operating in FR2-1 and configured with groupBasedBeamReporting-r17", "paragraph_index": 5771, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.1Introduction", "paragraph_index": 5772, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.2Known conditions for TCI state", "paragraph_index": 5774, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.3MAC-CE based dual DL TCI state switch delay", "paragraph_index": 5781, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.3.1MAC-CE based dual DL TCI state switching delay for sDCI", "paragraph_index": 5782, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.3.2MAC-CE based dual DL TCI state switching delay for mDCI", "paragraph_index": 5791, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.4DCI based dual DL TCI state switch delay for sDCI and mDCI", "paragraph_index": 5800, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.4.1DCI based dual DL TCI state switching delay for sDCI", "paragraph_index": 5801, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.4.2DCI based dual DL TCI state switching delay for mDCI", "paragraph_index": 5804, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.5RRC based dual DL TCI state switch delay", "paragraph_index": 5808, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.6Active DL TCI state list update delay", "paragraph_index": 5810, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.6.1Active DL TCI state list update delay for sDCI", "paragraph_index": 5811, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10E.6.2Active DL TCI state list update delay for mDCI", "paragraph_index": 5813, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10FActive TCI state switching delay for RedCap UE with satellite access", "paragraph_index": 5815, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10F.1Introduction", "paragraph_index": 5816, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10F.2MAC-CE based TCI state switch delay", "paragraph_index": 5818, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10F.4DCI based TCI state switch delay", "paragraph_index": 5820, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10F.5RRC based TCI state switch delay", "paragraph_index": 5822, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.10F.6Active TCI state list update delay", "paragraph_index": 5824, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11PSCell Change", "paragraph_index": 5826, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11APSCell Change in Carriers with CCA", "paragraph_index": 5837, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11BConditional PSCell Change", "paragraph_index": 5847, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11B.1Introduction", "paragraph_index": 5848, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11B.2Conditional PSCell Change delay", "paragraph_index": 5850, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11B.2.1Measurement time", "paragraph_index": 5865, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11DConditional PSCell Change in Carriers with CCA", "paragraph_index": 5870, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11D.1Introduction", "paragraph_index": 5871, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11D.2Conditional PSCell Change delay", "paragraph_index": 5873, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11D.2.1Measurement time", "paragraph_index": 5889, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11ESubsequent Conditional PSCell Change", "paragraph_index": 5894, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11E.1Introduction", "paragraph_index": 5895, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11E.2Subsequent Conditional PSCell Change delay", "paragraph_index": 5897, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.11E.2.1Measurement time", "paragraph_index": 5911, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12Uplink spatial relation switch delay", "paragraph_index": 5916, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12.1Introduction", "paragraph_index": 5917, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12.2Known conditions for spatial relation when associated with DL-RS", "paragraph_index": 5919, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12.3MAC-CE based spatial relation switch delay", "paragraph_index": 5929, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12.4DCI based spatial relation switch delay", "paragraph_index": 5945, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12.5RRC based spatial relation switch delay", "paragraph_index": 5948, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12AUplink spatial relation switch delay for RedCap", "paragraph_index": 5958, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12A.1Introduction", "paragraph_index": 5959, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12A.2Known conditions for spatial relation when associated with DL-RS", "paragraph_index": 5961, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12A.3MAC-CE based spatial relation switch delay", "paragraph_index": 5971, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12A.4DCI based spatial relation switch delay", "paragraph_index": 5988, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12A.5RRC based spatial relation switch delay", "paragraph_index": 5992, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12CUplink spatial relation switch delay for satellite access", "paragraph_index": 6003, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12C.1Void", "paragraph_index": 6005, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12C.2Void", "paragraph_index": 6006, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12C.3Void", "paragraph_index": 6007, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12C.4Void", "paragraph_index": 6008, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.12C.5Void", "paragraph_index": 6009, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13UE-specific CBW change", "paragraph_index": 6010, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13.1Introduction", "paragraph_index": 6011, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13.2UE-specific CBW change delay", "paragraph_index": 6013, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13AUE-specific CBW change for RedCap", "paragraph_index": 6019, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13A.1Introduction", "paragraph_index": 6020, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13A.2UE-specific CBW change delay", "paragraph_index": 6022, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13CUE-specific CBW change for satellite access", "paragraph_index": 6028, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13C.1Introduction", "paragraph_index": 6029, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13C.2UE-specific CBW change delay", "paragraph_index": 6031, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13DUE-specific CBW change for ATG", "paragraph_index": 6037, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13D.1Introduction", "paragraph_index": 6038, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13D.2UE-specific CBW change delay", "paragraph_index": 6040, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13EUE-specific CBW change for RedCap UE with satellite access", "paragraph_index": 6042, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13E.1Introduction", "paragraph_index": 6043, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.13E.2UE-specific CBW change delay", "paragraph_index": 6045, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14Pathloss reference signal switching delay", "paragraph_index": 6047, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14.1Introduction", "paragraph_index": 6048, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14.2Known conditions for pathloss reference signal", "paragraph_index": 6051, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14.3MAC-CE based pathloss reference signal switch delay", "paragraph_index": 6063, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14CPathloss reference signal switching delay for satellite access", "paragraph_index": 6083, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14C.1Introduction", "paragraph_index": 6084, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14C.2Known conditions for pathloss reference signal", "paragraph_index": 6087, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14C.3MAC-CE based pathloss reference signal switch delay", "paragraph_index": 6096, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14DPathloss reference signal switching delay for ATG", "paragraph_index": 6104, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14D.1Introduction", "paragraph_index": 6105, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14D.2Known conditions for pathloss reference signal", "paragraph_index": 6108, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14D.3MAC-CE based pathloss reference signal switch delay", "paragraph_index": 6113, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14EPathloss reference signal switching delay for RedCap UE with satellite access", "paragraph_index": 6115, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14E.1Introduction", "paragraph_index": 6116, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14E.2Known conditions for pathloss reference signal", "paragraph_index": 6119, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.14E.3MAC-CE based pathloss reference signal switch delay", "paragraph_index": 6121, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.15Active downlink TCI state switching delay for unified TCI", "paragraph_index": 6123, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.15.1Introduction", "paragraph_index": 6124, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.15.4DCI based downlink TCI state switch delay", "paragraph_index": 6174, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.15.5Active Downlink TCI state list update delay", "paragraph_index": 6177, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.15DActive downlink TCI state switching delay for unified TCI for ATG", "paragraph_index": 6203, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.15D.1Introduction", "paragraph_index": 6204, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.15D.2Void", "paragraph_index": 6206, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.15D.4DCI based downlink TCI state switch delay", "paragraph_index": 6214, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.15D.5Active Downlink TCI state list update delay", "paragraph_index": 6217, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.16Active uplink TCI state switching delay for unified TCI", "paragraph_index": 6225, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.16.1Introduction", "paragraph_index": 6226, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.16.3MAC-CE based uplink TCI state switch delay", "paragraph_index": 6252, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.16.4DCI based uplink TCI state switch delay", "paragraph_index": 6300, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.16.5Active Uplink TCI state list update delay", "paragraph_index": 6308, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.16DActive uplink TCI state switching delay for unified TCI for ATG", "paragraph_index": 6342, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.16D.1Introduction", "paragraph_index": 6343, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.16D.2Void", "paragraph_index": 6348, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.16D.3MAC-CE based uplink TCI state switch delay", "paragraph_index": 6349, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.16D.4DCI based uplink TCI state switch delay", "paragraph_index": 6367, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.16D.5Active Uplink TCI state list update delay", "paragraph_index": 6374, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.17SCG Activation and Deactivation Delay", "paragraph_index": 6387, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.17.1Introduction", "paragraph_index": 6388, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.17.2SCG Activation Delay Requirement", "paragraph_index": 6391, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.17.3SCG Deactivation Delay Requirement", "paragraph_index": 6421, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18TRP specific Link Recovery Procedures", "paragraph_index": 6426, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.1Introduction", "paragraph_index": 6427, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.2Requirements for TRP specific SSB based beam failure detection", "paragraph_index": 6437, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.2.1Introduction", "paragraph_index": 6438, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.2.2Minimum requirement", "paragraph_index": 6442, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.2.3Measurement restriction for SSB based beam failure detection", "paragraph_index": 6487, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.3Requirements for CSI-RS based beam failure detection", "paragraph_index": 6498, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.3.1Introduction", "paragraph_index": 6499, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.3.2Minimum requirement", "paragraph_index": 6503, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.3.3Measurement restrictions for CSI-RS beam failure detection", "paragraph_index": 6572, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.4Minimum requirement for L1 indication", "paragraph_index": 6601, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.5Requirements for SSB based candidate beam detection", "paragraph_index": 6603, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.5.1Introduction", "paragraph_index": 6604, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.5.2Minimum requirement", "paragraph_index": 6606, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.5.3Measurement restriction for SSB based candidate beam detection", "paragraph_index": 6658, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.6Requirements for CSI-RS based candidate beam detection", "paragraph_index": 6668, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.6.1Introduction", "paragraph_index": 6669, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.6.2Minimum requirement", "paragraph_index": 6671, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.6.3Measurement restriction for CSI-RS based candidate beam detection", "paragraph_index": 6729, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.7Requirements for TRP specific Beam Failure Recovery", "paragraph_index": 6742, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.7.1Introduction", "paragraph_index": 6743, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.7.2Requirement", "paragraph_index": 6746, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.8Scheduling availability of UE during TRP specific beam failure detection", "paragraph_index": 6752, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.8.1Scheduling availability of UE performing TRP specific beam failure detection with a same subcarrier spacing as PDSCH/PDCCH on FR1", "paragraph_index": 6754, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.8.2Scheduling availability of UE performing TRP specific beam failure detection with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 6756, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.8.3Scheduling availability of UE performing TRP specific beam failure detection on FR2", "paragraph_index": 6760, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.8.4Scheduling availability of UE performing TRP specific beam failure detection on FR1 or FR2 in case of FR1-FR2 inter-band CA and NR-DC", "paragraph_index": 6776, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.9Scheduling availability of UE during TRP specific candidate beam detection", "paragraph_index": 6779, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.9.1Scheduling availability of UE performing L1-RSRP measurement with a same subcarrier spacing as PDSCH/PDCCH on FR1", "paragraph_index": 6781, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.9.2Scheduling availability of UE performing L1-RSRP measurement with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 6783, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.9.3Scheduling availability of UE performing L1-RSRP measurement on FR2", "paragraph_index": 6787, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.18.9.4Scheduling availability of UE performing L1-RSRP measurement on FR1 or FR2 in case of FR1-FR2 inter-band CA and NR-DC", "paragraph_index": 6797, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19Pre-configured measurement gap activation/deactivation delay", "paragraph_index": 6800, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19.1Introduction", "paragraph_index": 6801, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19.2Pre-configured measurement gap activation/deactivation upon DCI/timer-based BWP switch", "paragraph_index": 6804, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19.2.1Activation/deactivation upon DCI/timer-based BWP switch delay on a single CC", "paragraph_index": 6805, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19.3Pre-configured measurement gap activation/deactivation upon SCell activation/deactivation", "paragraph_index": 6808, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19.4Pre-configured measurement gap activation/deactivation upon RRC reconfiguration", "paragraph_index": 6811, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19.5Activation/deactivation delay requirements for concurrent measurement gaps with Pre-MG", "paragraph_index": 6814, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19.5.1Activation/deactivation delay requirements for non-overlapped activation/deactivation of concurrent measurement gaps with Pre- MG", "paragraph_index": 6816, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19.5.2Activation/deactivation delay requirements for fully overlapped activation/deactivation of concurrent measurement gaps with Pre- MG", "paragraph_index": 6819, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19.5.3Pre-MG activation/deactivation delay when colliding with a concurrent measurement gap", "paragraph_index": 6825, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19DPre-configured measurement gap activation/deactivation delay for ATG", "paragraph_index": 6828, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19D.1Introduction", "paragraph_index": 6829, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19D.2Pre-configured measurement gap activation/deactivation upon DCI/timer-based BWP switch", "paragraph_index": 6832, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19D.2.1Activation/deactivation upon DCI/timer-based BWP switch delay on a single CC", "paragraph_index": 6833, "style": "Heading4"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19D.3Pre-configured measurement gap activation/deactivation upon RRC reconfiguration", "paragraph_index": 6837, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.19D.4Pre-configured measurement gap activation/deactivation upon SCell activation/deactivation", "paragraph_index": 6843, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.20LTM PSCell Cell Switch", "paragraph_index": 6846, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.20.1Introduction", "paragraph_index": 6847, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.20.2LTM Cell Switch delay", "paragraph_index": 6870, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.20.3Void", "paragraph_index": 6877, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.21Active downlink TCI state switching delay for unified TCI for single-DCI mTRP", "paragraph_index": 6878, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.21.1Introduction", "paragraph_index": 6879, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.21.2Known conditions for downlink TCI state", "paragraph_index": 6881, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.21.3MAC-CE based downlink TCI state switch delay", "paragraph_index": 6891, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.21.4DCI based downlink TCI state switch delay", "paragraph_index": 6922, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.21.5Active Downlink TCI state list update delay", "paragraph_index": 6924, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.22Active downlink TCI state switching delay for unified TCI for multi-DCI mTRP", "paragraph_index": 6941, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.22.1Introduction", "paragraph_index": 6942, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.22.2Known conditions for downlink TCI state", "paragraph_index": 6951, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.22.3MAC-CE based downlink TCI state switch delay", "paragraph_index": 6953, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.22.4DCI based downlink TCI state switch delay", "paragraph_index": 6986, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.22.5Active Downlink TCI state list update delay", "paragraph_index": 6988, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.23Active uplink TCI state switching delay for unified TCI for single-DCI mTRP", "paragraph_index": 7006, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.23.1Introduction", "paragraph_index": 7007, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.23.2Known conditions for uplink TCI state", "paragraph_index": 7012, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.23.3MAC-CE based uplink TCI state switch delay", "paragraph_index": 7023, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.23.4DCI based uplink TCI state switch delay", "paragraph_index": 7063, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.23.5Active uplink TCI state list update delay", "paragraph_index": 7065, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.24Active uplink TCI state switching delay for unified TCI for multi-DCI mTRP", "paragraph_index": 7082, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.24.1Introduction", "paragraph_index": 7083, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.24.2Known conditions for uplink TCI state", "paragraph_index": 7097, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.24.3MAC-CE based uplink TCI state switch delay", "paragraph_index": 7099, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.24.4DCI based uplink TCI state switch delay", "paragraph_index": 7134, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.24.5Active Uplink TCI state list update delay", "paragraph_index": 7136, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.25TCI state activation for LTM candidate cell", "paragraph_index": 7165, "style": "Heading2"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.25.1Introduction", "paragraph_index": 7166, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.25.2Known TCI state conditions", "paragraph_index": 7174, "style": "Heading3"}
+{"source": "38133-j50_s8-8.docx", "section": "", "title": "8.25.3SSB based TCI state activation delay", "paragraph_index": 7183, "style": "Heading3"}

@@ -1,0 +1,7 @@
+System,Parameters,Unit,Value
+,Number of generated satellites per system,-,6
+GPS(1),Reference signal power level for all satellites,dBm,-128.5
+Galileo,Reference signal power level for all satellites,dBm,-127
+GLONASS,Reference signal power level for all satellites,dBm,-131
+BDS,Reference signal power level for all satellites,dBm,-133
+"NOTE 1:""GPS"" here means GPS L1 C/A, Modernized GPS, or both, dependent on UE capabilities.NOTE 2:The DUT UE does not need to support all systems. The DUT UE shall support at least one system and will be test for the supported systems.",,,

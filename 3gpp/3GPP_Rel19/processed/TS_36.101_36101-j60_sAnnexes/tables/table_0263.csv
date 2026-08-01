@@ -1,0 +1,34 @@
+Parameter,Unit,
+Reference channel,,R.sTTI.2 FDD
+Channel bandwidth,MHz,10
+Allocated resource blocks,,50
+Allocated subframes per Radio Frame,,8
+Modulation,,16QAM
+Target Coding Rate,,0.45
+Information Bit Payload,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",,
+Subslot index 1,Bits,5160
+Subslot index 2,Bits,3880
+Subslot index 3,Bits,2664
+Subslot index 4,Bits,3880
+Subslot index 5,Bits,5160
+"For Sub-Frames 0,5",,N/A
+Number of Code Blocks,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",,
+Subslot index 1,,1
+Subslot index 2,,1
+Subslot index 3,,1
+Subslot index 4,,1
+Subslot index 5,,1
+"For Sub-Frame 0,5",,N/A
+Binary Channel Bits,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",,
+Subslot index 1,Bits,12032
+Subslot index 2,Bits,8832
+Subslot index 3,Bits,5888
+Subslot index 4,Bits,8832
+Subslot index 5,Bits,12288
+"For Sub-Frame 0,5",,N/A
+Max. Throughput averaged over 1 frame,Mbps,16.5952
+UE Category,,≥2
+"Note 1: For an information bit payload first transmitted at subslot 1, any retransmission happens only on subslots 1 and 5. For an information bit payload first transmitted at subslot 2, any retransmission happens only on subslots 2 and 4. For an information bit payload first transmitted at subslot 3, any retransmission happens only on subslot 3. For an information bit payload first transmitted at subslot 4, any retransmission happens only on subslots 2 and 4. For an information bit payload first transmitted at subslot 5, any retransmission happens only on subslots 1 and 5.",,

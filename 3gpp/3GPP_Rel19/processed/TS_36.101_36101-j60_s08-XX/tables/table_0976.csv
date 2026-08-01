@@ -1,0 +1,9 @@
+Band-width,Reference channel,,OCNG pattern,Propa-gation condi-tion,Correlation matrix and antenna config.,,Reference value,,
+,,,,,,,Fraction of maximum throughput (%),SNR (dB),
+,2Rx CC,4Rx CC,,,2Rx CC,4Rx CC,,2Rx CC,4Rx CC
+1.4MHz,R.43-1 TDD,R.43-1 TDD,OP.1 TDD,EVA5,4x2 Low,4x4 Low,70,11.0,8.1
+3MHz,R.43-2 TDD,R.43-2 TDD,OP.1 TDD,EVA5,4x2 Low,4x4 Low,70,9.8,5.4
+5MHz,R.43-3 TDD,R.43-3 TDD,OP.1 TDD,EVA5,4x2 Low,4x4 Low,70,10.0,5.9
+10 MHz,R.43-4 TDD,R.43-4 TDD,OP.1 TDD,EVA5,4x2 Low,4x4 Low,70,10.5,6.3
+15MHz,R.43-5 TDD,R.43-5 TDD,OP.1 TDD,EVA5,4x2 Low,4x4 Low,70,10.6,6.2
+20MHz,R.43 TDD,R.43 TDD,OP.1 TDD,EVA5,4x2 Low,4x4 Low,70,10.7,6.4

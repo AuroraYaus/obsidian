@@ -1,0 +1,30 @@
+Parameter,,Unit,Value,,,,Comment
+,,,Test 1,Void,Test 2,Void,
+Initial conditions,Active cell,,Cell 1,,,,
+,Neighbouring cell,,Cell 2,,,,Cell 2 is the candidate cell
+Final condition,Active cell,,Cell 2,,,,
+a3-Offset,,dB,-6,,,,
+hysteresis,,dB,0,,,,
+timeToTrigger,,s,0,,,,
+Filter coefficient,,,0,,,,L1 and L3 filtering are not used
+ltm3-Offset-r19,,dB,-6,,,,
+hysteresis-r19,,dB,0,,,,
+timeToTrigger-r19,,s,0,,,,
+includeBeamMeasurements,,,True,,,,
+DRX,,,OFF,,,,DRX is not used
+Access Barring Information,,-,Not Sent,,,,No additional delays in random access procedure.
+Time offset between cells,,,2 s,,,,RTD between cells is less than CP
+deriveSSB-IndexFromCell,,,Enabled,,,,
+EarlyUL-SyncConfig,frequencyInfoUL,,NR RF Channel Number 1,,,,
+,PRACH configuration,,FR1 PRACH configuration 5,,,,RACH bandwidth is within active UL BWP of PCell
+,bwp-GenericParameters,,ULBWP.0.1,,,,
+,n-TimingAdvanceOffset,Tc,25600,,,,
+ltm-CSI-SSB-ResourceList,,,SSB 0 of candidate cell,,,,
+ltm-DL-OrJointTCI-StateToAddModList,CandidateTCI-State#1,,DLorJoint TCI.State.0,,DLorJoint TCI.State.1,,"As specified in clause A.3.16B.In Test 1, CandidateTCI-State#1 is configured for early TCI state activation. CandidateTCI-State#2 is selected by the UE.In Test 2, CandidateTCI-State#1 is selected by the UE."
+,CandidateTCI-State#2,,DLorJoint TCI.State.1,,N/A,,
+ltm-ConfigComplete,,,True,,,,Candidate cell’s configuration is complete configuration
+T1,,s,<3,,,,
+T2,,s,0.2,,,,
+T3,,s,0.1,,,,
+T4,,s,0.2,,,,
+T5,,s,0.1,,,,

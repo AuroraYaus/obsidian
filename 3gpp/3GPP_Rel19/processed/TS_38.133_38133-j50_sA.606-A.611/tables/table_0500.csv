@@ -1,0 +1,8 @@
+,Field,Config,SRSConf.1
+CLI-RSSI measurement resource,rssi-ResourceId,1,0
+,startPRB,1,110
+,nrofPRBs,1,48
+,startPosition,1,3
+,nrofSymbols,1,11
+,rssi-PeriodicityAndOffset,1,"sl40, 9"
+NOTE 1:startPRB is set such that CLI-RSSI measurement resource is fully contained within UL subband.,,,

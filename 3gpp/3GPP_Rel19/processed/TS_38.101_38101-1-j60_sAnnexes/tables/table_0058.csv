@@ -1,0 +1,69 @@
+Parameter,,Unit,Value
+Switching Pattern for Low-band CA,LowBandCA-Switching-r19 -> switchingPattern-r19,A bitmap of slots,00011 00110 01100 11001 11100 11001 10011 00110
+,Period of Switching Pattern,Slots,40
+,Slots on the PCell,,A bit value of ‘0’ in LBCA-SwitchingPattern
+,Slots on the SCell,,A bit value of ‘1’ in LBCA-SwitchingPattern
+Switch-from DL slot on the PCell/SCell,Slot Location,,"Mod(i, 20) = 2, 4, 6, 8, 10, 12, 14, 16, 18"
+,The number of Switch-from Slot,,18 slots for each period of 40 slots.
+,CORESET frequency domain allocation,,Full BW
+,CORESET time domain allocation,,2 OFDM symbol at the begin of each slot
+,PDSCH mapping type,,Type A
+,PDSCH start symbol index (S),,2
+,Number of consecutive PDSCH symbols (L),,12 - gapDurationPCelltoSCell-r19 for the slot indicated as ‘0’ in the LBCA-SwitchingPatternOr 12 - gapDurationSCelltoPCell-r19 for the slot indicated as ‘1’ in the LBCA-SwitchingPattern
+,PDSCH PRB bundling,PRBs,2
+,Dynamic PRB bundling,,false
+,Overhead value for TBS determination,,0
+,First DMRS position for Type A PDSCH mapping,,2
+,DMRS type,,Type 1
+,Number of additional DMRS,,2
+,FDM between DMRS and PDSCH,,Disable
+,The number of slots between PDSCH and corresponding HARQ-ACK information (K1 Value),Slots,2
+Switch-to DL slot on the PCell/SCell,Slot Location,,"Mod(i, 20) = 3, 5, 7, 9, 11, 13, 15, 17, 19"
+,The number of Switch-from Slot,,18 slots for every period of 40 slots.
+,CORESET frequency domain allocation,,Full BW
+,CORESET time domain allocation,,2 OFDM symbol at the begin of each slot
+,PDSCH mapping type,,Type A
+,PDSCH start symbol index (S),,2
+,Number of consecutive PDSCH symbols (L),,12
+,PDSCH PRB bundling,PRBs,2
+,Dynamic PRB bundling,,false
+,Overhead value for TBS determination,,0
+,First DMRS position for Type A PDSCH mapping,,2
+,DMRS type,,Type 1
+,Number of additional DMRS,,2
+,FDM between DMRS and PDSCH,,Disable
+,The number of slots between PDSCH and corresponding HARQ-ACK information (K1 Value),Slots,2
+HARQ process number,,,4
+Subcarrier spacing,,kHz,15
+Subcarrier spacing configuration µ,,,0
+Subcarriers per resource block,,,12
+Allocated slots per period of 40 slots on the PCell,,Slots,18
+Allocated slots per period of 40 slots on the SCell,,Slots,18
+MCS Index,,,4
+MCS Table for TBS determination,,,64QAM / table 5.1.3.1-1: MCS index table 1 for PDSCH in TS 38.214
+Modulation,,,QPSK
+Target Coding Rate R x [1024],,,308
+Maximum number of HARQ transmissions,,,1
+Channel bandwidth,,,"These parameters can refer to Table A.8.1-2 for differernt channel bandwidth. As PCell and SCell can be configured with different channel bandwidth, TBS per slot for PCell and SCell could be different."
+Allocated resource blocks,,,
+Information Bit Payload (TBS) per Slot,,,
+Number of Code Blocks per Slot,,,
+Number of Code Blocks per Slot,,,
+Max. Throughput averaged over 4 frame,,Mbps,(18*TBSPCell + 18*TBSSCell) / 0.04 / 10^6
+RTDP2S (NOTE2),,µs,0
+RTDS2P (NOTE2),,µs,0
+NTA,,Tc,0
+"NTA,offset",,Tc,0
+gapDurationPCelltoSCell-r19,,Symbol,‘1’ for 35us of  switchingPeriodForFDD-SDL-r19‘2’ for 70us of  switchingPeriodForFDD-SDL-r19‘3’ for 140us of  switchingPeriodForFDD-SDL-r19
+gapDurationSCelltoPCell-r19,,Symbol,‘1’ for 35us of  switchingPeriodForFDD-SDL-r19‘2’ for 70us of  switchingPeriodForFDD-SDL-r19‘3’ for 140us of  switchingPeriodForFDD-SDL-r19
+CSIRS for tracking,First subcarrier index in the PRB used for CSI-RS (k0),,"0 for CSI-RS resource 1,2,3,4"
+,OFDM symbols in the PRB used for CSIRS,,l0 = 6 for CSI-RS resource 1 and 3l0 = 10 for CSI-RS resource 2 and 4
+,Number of CSI-RS ports,,"1 for CSI-RS resource 1,2,3,4"
+,CDM Type,,"'No CDM' for CSI-RS resource 1,2,3,4"
+,Density (ρ),,"3 for CSI-RS resource 1,2,3,4"
+,CSIRS periodicity,Slots,"40 for CSI-RS resource 1,2,3,4"
+,CSIRS offset,Slots,"For PCell FDD band, CSI-RS offset are:0 for CSI-RS resource 1 and 21 for CSI-RS resource 3 and 4For SCell SDL band, CSI-RS offset are:20 for CSI-RS resource 1 and 221 for CSI-RS resource 3 and 4"
+,Frequency Occupation,,Start PRB 0Number of PRB = BWP size
+,QCL info,,TCI state #0
+PTRS configuration,,,PTRS is not configured
+NOTE 1:Slot i is slot index per four frames.NOTE 2:The definition is referred to the clause 5.2.2 and 5.2.3 of TR 38.768,,,

@@ -1,0 +1,4 @@
+DRX cycle,"TCycle,i"
+No DRX,"max (80 ms, SMTC period) x CSSFoutside_gap,i"
+DRX cycle ≤ 320 ms,"1.5*max(80 ms, SMTC period, DRX cycle) x CSSFoutside_gap,i"
+DRX cycle>320 ms,"DRX cycle x CSSFoutside_gap,i"

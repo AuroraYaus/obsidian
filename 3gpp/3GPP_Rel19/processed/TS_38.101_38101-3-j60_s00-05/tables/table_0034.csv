@@ -1,0 +1,2113 @@
+NR CA configuration,Uplink configuration,NR Band,Channel bandwidth (MHz) (note 1),Bandwidth combination set
+CA_n5A-n30A-n260A,CA_n5A-n30ACA_n5A-n260ACA_n30A-n260A,n5,"5, 10, 15, 20",0
+,,n30,"5, 10",
+,,n260,"50, 100, 200, 400",
+CA_n5A-n30A-n260G,CA_n5A-n30ACA_n5A-n260A/GCA_n30A-n260A/G,n5,"5, 10, 15, 20",0
+,,n30,"5, 10",
+,,n260,CA_n260G,
+CA_n5A-n30A-n260H,CA_n5A-n30ACA_n5A-n260A/G/HCA_n30A-n260A/G/H,n5,"5, 10, 15, 20",0
+,,n30,"5, 10",
+,,n260,CA_n260H,
+CA_n5A-n30A-n260I,CA_n5A-n30ACA_n5A-n260A/G/H/ICA_n30A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n30,"5, 10",
+,,n260,CA_n260I,
+CA_n5A-n30A-n260J,CA_n5A-n30ACA_n5A-n260A/G/H/I/JCA_n30A-n260A/G/H/I/J,n5,"5, 10, 15, 20",0
+,,n30,"5, 10",
+,,n260,CA_n260J,
+CA_n5A-n30A-n260K,CA_n5A-n30ACA_n5A-n260A/G/H/I/J/KCA_n30A-n260A/G/H/I/J/K,n5,"5, 10, 15, 20",0
+,,n30,"5, 10",
+,,n260,CA_n260K,
+CA_n5A-n30A-n260L,CA_n5A-n30ACA_n5A-n260A/G/H/I/J/K/LCA_n30A-n260A/G/H/I/J/K/L,n5,"5, 10, 15, 20",0
+,,n30,"5, 10",
+,,n260,CA_n260L,
+CA_n5A-n30A-n260M,CA_n5A-n30ACA_n5A-n260A/G/H/I/J/K/L/MCA_n30A-n260A/G/H/I/J/K/L/M,n5,"5, 10, 15, 20",0
+,,n30,"5, 10",
+,,n260,CA_n260M,
+CA_n5A-n48A-n260A,CA_n5A-n260ACA_n48A-n260A,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n260,"50, 100, 200, 400",
+CA_n5A-n48A-n260G,CA_n5A-n260A/GCA_n48A-n260A/G,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n260,CA_n260G,
+CA_n5A-n48A-n260H,CA_n5A-n260A/G/HCA_n48A-n260A/G/H,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n260,CA_n260H,
+CA_n5A-n48A-n260I,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n260,CA_n260I,
+CA_n5A-n48A-n260J,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n260,CA_n260J,
+CA_n5A-n48A-n260K,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n260,CA_n260K,
+CA_n5A-n48A-n260L,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n260,CA_n260L,
+CA_n5A-n48A-n260M,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n260,CA_n260M,
+CA_n5A-n48(2A)-n260A,CA_n5A-n260ACA_n48A-n260A,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n260,"50, 100, 200, 400",
+CA_n5A-n48(2A)-n260G,CA_n5A-n260A/GCA_n48A-n260A/G,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n260,CA_n260G,
+CA_n5A-n48(2A)-n260H,CA_n5A-n260A/G/HCA_n48A-n260A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n260,CA_n260H,
+CA_n5A-n48(2A)-n260I,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n260,CA_n260I,
+CA_n5A-n48(2A)-n260J,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n260,CA_n260J,
+CA_n5A-n48(2A)-n260K,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n260,CA_n260K,
+CA_n5A-n48(2A)-n260L,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n260,CA_n260L,
+CA_n5A-n48(2A)-n260M,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n260,CA_n260M,
+CA_n5A-n48B-n260A,CA_n5A-n260ACA_n48A-n260A,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n260,"50, 100, 200, 400",
+CA_n5A-n48B-n260G,CA_n5A-n260A/GCA_n48A-n260A/G,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n260,CA_n260G,
+CA_n5A-n48B-n260H,CA_n5A-n260A/G/HCA_n48A-n260A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n260,CA_n260H,
+CA_n5A-n48B-n260I,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n260,CA_n260I,
+CA_n5A-n48B-n260J,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n260,CA_n260J,
+CA_n5A-n48B-n260K,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n260,CA_n260K,
+CA_n5A-n48B-n260L,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n260,CA_n260L,
+CA_n5A-n48B-n260M,CA_n5A-n260A/G/H/ICA_n48A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n260,CA_n260M,
+CA_n5A-n48A-n261A,CA_n5A-n261ACA_n48A-n261A,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,"50, 100, 200, 400",
+CA_n5A-n48A-n261G,CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261G,
+CA_n5A-n48A-n261H,CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261H,
+CA_n5A-n48A-n261I,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261I,
+CA_n5A-n48A-n261J,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261J,
+CA_n5A-n48A-n261K,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261K,
+CA_n5A-n48A-n261L,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261L,
+CA_n5A-n48A-n261M,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261M,
+CA_n5A-n48A-n261(A-G),CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(A-G),
+CA_n5A-n48A-n261(A-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(A-H),
+CA_n5A-n48A-n261(A-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(A-I),
+CA_n5A-n48A-n261(G-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(G-H),
+CA_n5A-n48A-n261(2A-G),CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(2A-G),
+CA_n5A-n48A-n261(2A-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(2A-H),
+CA_n5A-n48A-n261(A-2G),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(A-2G),
+CA_n5A-n48A-n261(A-G-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(A-G-H),
+CA_n5A-n48A-n261(2A),CA_n5A-n261ACA_n48A-n261A,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(2A),
+CA_n5A-n48A-n261(3A),CA_n5A-n261ACA_n48A-n261A,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(3A),
+CA_n5A-n48A-n261(2G),CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(2G),
+CA_n5A-n48A-n261(2H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(2H),
+CA_n5A-n48A-n261(G-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(G-I),
+CA_n5A-n48A-n261(H-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(H-I),
+CA_n5A-n48A-n261(2A-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(2A-I),
+CA_n5A-n48A-n261(A-G-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n261,CA_n261(A-G-I),
+CA_n5A-n48(2A)-n261A,CA_n5A-n261ACA_n48A-n261A,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,"50, 100, 200, 400",
+CA_n5A-n48(2A)-n261G,CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261G,
+CA_n5A-n48(2A)-n261H,CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261H,
+CA_n5A-n48(2A)-n261I,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261I,
+CA_n5A-n48(2A)-n261J,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261J,
+CA_n5A-n48(2A)-n261K,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261K,
+CA_n5A-n48(2A)-n261L,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261L,
+CA_n5A-n48(2A)-n261M,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261M,
+CA_n5A-n48(2A)-n261(A-G),CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(A-G),
+CA_n5A-n48(2A)-n261(A-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(A-H),
+CA_n5A-n48(2A)-n261(A-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(A-I),
+CA_n5A-n48(2A)-n261(G-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(G-H),
+CA_n5A-n48(2A)-n261(2A-G),CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(2A-G),
+CA_n5A-n48(2A)-n261(2A-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(2A-H),
+CA_n5A-n48(2A)-n261(A-2G),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(A-2G),
+CA_n5A-n48(2A)-n261(A-G-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(A-G-H),
+CA_n5A-n48(2A)-n261(2A),CA_n5A-n261ACA_n48A-n261A,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(2A),
+CA_n5A-n48(2A)-n261(3A),CA_n5A-n261ACA_n48A-n261A,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(3A),
+CA_n5A-n48(2A)-n261(2G),CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(2G),
+CA_n5A-n48(2A)-n261(2H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(2H),
+CA_n5A-n48(2A)-n261(G-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(G-I),
+CA_n5A-n48(2A)-n261(H-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(H-I),
+CA_n5A-n48(2A)-n261(2A-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(2A-I),
+CA_n5A-n48(2A)-n261(A-G-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48(2A)_BCS1,
+,,n261,CA_n261(A-G-I),
+CA_n5A-n48B-n261A,CA_n5A-n261ACA_n48A-n261A,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,"50, 100, 200, 400",
+CA_n5A-n48B-n261G,CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261G,
+CA_n5A-n48B-n261H,CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261H,
+CA_n5A-n48B-n261I,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261I,
+CA_n5A-n48B-n261J,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261J,
+CA_n5A-n48B-n261K,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261K,
+CA_n5A-n48B-n261L,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261L,
+CA_n5A-n48B-n261M,CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261M,
+CA_n5A-n48B-n261(A-G),CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(A-G),
+CA_n5A-n48B-n261(A-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(A-H),
+CA_n5A-n48B-n261(A-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(A-I),
+CA_n5A-n48B-n261(G-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(G-H),
+CA_n5A-n48B-n261(2A-G),CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(2A-G),
+CA_n5A-n48B-n261(2A-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(2A-H),
+CA_n5A-n48B-n261(A-2G),CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(A-2G),
+CA_n5A-n48B-n261(A-G-H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(A-G-H),
+CA_n5A-n48B-n261(2A),CA_n5A-n261ACA_n48A-n261A,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(2A),
+CA_n5A-n48B-n261(3A),CA_n5A-n261ACA_n48A-n261A,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(3A),
+CA_n5A-n48B-n261(2G),CA_n5A-n261A/GCA_n48A-n261A/G,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(2G),
+CA_n5A-n48B-n261(2H),CA_n5A-n261A/G/HCA_n48A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(2H),
+CA_n5A-n48B-n261(G-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(G-I),
+CA_n5A-n48B-n261(H-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(H-I),
+CA_n5A-n48B-n261(2A-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(2A-I),
+CA_n5A-n48B-n261(A-G-I),CA_n5A-n261A/G/H/ICA_n48A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n48,CA_n48B,
+,,n261,CA_n261(A-G-I),
+CA_n5A-n66A-n260A,CA_n5A-n66ACA_n5A-n260ACA_n66A-n260A,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,"50, 100, 200, 400",
+CA_n5A-n66A-n260G,CA_n5A-n66ACA_n5A-n260A/GCA_n66A-n260A/G,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260G,
+CA_n5A-n66A-n260H,CA_n5A-n66ACA_n5A-n260A/G/HCA_n66A-n260A/G/H,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260H,
+CA_n5A-n66A-n260I,CA_n5A-n66ACA_n5A-n260A/G/H/ICA_n66A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260I,
+CA_n5A-n66A-n260J,CA_n5A-n66ACA_n5A-n260A/G/H/I/JCA_n66A-n260A/G/H/I/J,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260J,
+CA_n5A-n66A-n260K,CA_n5A-n66ACA_n5A-n260A/G/H/I/J/KCA_n66A-n260A/G/H/I/J/K,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260K,
+CA_n5A-n66A-n260L,CA_n5A-n66ACA_n5A-n260A/G/H/I/J/K/LCA_n66A-n260A/G/H/I/J/K/L,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260L,
+CA_n5A-n66A-n260M,CA_n5A-n66ACA_n5A-n260A/G/H/I/J/K/L/MCA_n66A-n260A/G/H/I/J/K/L/M,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260M,
+CA_n5A-n66A-n261A,CA_n5A-n66ACA_n5A-n261ACA_n66A-n261A,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,"50, 100, 200, 400",
+CA_n5A-n66A-n261G,CA_n5A-n66ACA_n5A-n261A/GCA_n66A-n261A/G,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261G,
+CA_n5A-n66A-n261H,CA_n5A-n66ACA_n5A-n261A/G/HCA_n66A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261H,
+CA_n5A-n66A-n261I,CA_n5A-n66ACA_n5A-n261A/G/H/ICA_n66A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261I,
+CA_n5A-n66A-n261J,CA_n5A-n66ACA_n5A-n261A/G/H/ICA_n66A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261J,
+CA_n5A-n66A-n261K,CA_n5A-n66ACA_n5A-n261A/G/H/ICA_n66A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261K,
+CA_n5A-n66A-n261L,CA_n5A-n66ACA_n5A-n261A/G/H/ICA_n66A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261L,
+CA_n5A-n66A-n261M,CA_n5A-n66ACA_n5A-n261A/G/H/ICA_n66A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261M,
+CA_n5A-n66A-n261(2G),CA_n5A-n66ACA_n5A-n261A/GCA_n66A-n261A/G,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(2G),
+CA_n5A-n66A-n261(G-H),CA_n5A-n66ACA_n5A-n261A/G/HCA_n66A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(G-H),
+CA_n5A-n66A-n261(A-G-H),CA_n5A-n66ACA_n5A-n261A/G/HCA_n66A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(A-G-H),
+CA_n5A-n66A-n261(G-I),CA_n5A-n66ACA_n5A-n261A/G/H/ICA_n66A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(G-I),
+CA_n5A-n66A-n261(2H),CA_n5A-n66ACA_n5A-n261A/G/HCA_n66A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(2H),
+CA_n5A-n66A-n261(A-G-I),CA_n5A-n66ACA_n5A-n261A/G/H/ICA_n66A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(A-G-I),
+CA_n5A-n66A-n261(H-I),CA_n5A-n66ACA_n5A-n261A/G/H/ICA_n66A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(H-I),
+CA_n5A-n66A-n261(2A-G),CA_n5A-n66ACA_n5A-n261A/GCA_n66A-n261A/G,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(2A-G),
+CA_n5A-n66A-n261(2A-H),CA_n5A-n66ACA_n5A-n261A/G/HCA_n66A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(2A-H),
+CA_n5A-n66A-n261(2A-I),CA_n5A-n66ACA_n5A-n261A/G/H/ICA_n66A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(2A-I),
+CA_n5A-n66A-n261(2A),CA_n5A-n66ACA_n5A-n261ACA_n66A-n261A,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(2A),
+CA_n5A-n66A-n261(3A),CA_n5A-n66ACA_n5A-n261ACA_n66A-n261A,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(3A),
+CA_n5A-n66A-n261(A-G),CA_n5A-n66ACA_n5A-n261A/GCA_n66A-n261A/G,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(A-G),
+CA_n5A-n66A-n261(A-2G),CA_n5A-n66ACA_n5A-n261A/GCA_n66A-n261A/G,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(A-2G),
+CA_n5A-n66A-n261(A-H),CA_n5A-n66ACA_n5A-n261A/G/HCA_n66A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(A-H),
+CA_n5A-n66A-n261(A-I),CA_n5A-n66ACA_n5A-n261A/G/H/ICA_n66A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n261,CA_n261(A-I),
+CA_n5A-n77A-n260A,CA_n5A-n77ACA_n77A-n260ACA_n5A-n260A,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,"50, 100, 200, 400",
+CA_n5A-n77A-n260G,CA_n5A-n77ACA_n5A-n260A/GCA_n77A-n260A/G,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260G,
+CA_n5A-n77A-n260H,CA_n5A-n77ACA_n5A-n260A/G/HCA_n77A-n260A/G/H,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260H,
+CA_n5A-n77A-n260I,CA_n5A-n77ACA_n5A-n260A/G/H/ICA_n77A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260I,
+CA_n5A-n77A-n260J,CA_n5A-n77ACA_n5A-n260A/G/H/I/JCA_n77A-n260A/G/H/I/J,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260J,
+CA_n5A-n77A-n260K,CA_n5A-n77ACA_n5A-n260A/G/H/I/J/KCA_n77A-n260A/G/H/I/J/K,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260K,
+CA_n5A-n77A-n260L,CA_n5A-n77ACA_n5A-n260A/G/H/I/J/K/LCA_n77A-n260A/G/H/I/J/K/L,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260L,
+CA_n5A-n77A-n260M,CA_n5A-n77ACA_n5A-n260A/G/H/I/J/K/L/MCA_n77A-n260A/G/H/I/J/K/L/M,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260M,
+CA_n5A-n77C-n260A,CA_n5A-n77ACA_n5A-n260ACA_n77A-n260A,n5,"5, 10, 15, 20, 25",0
+,,n77,CA_n77C,
+,,n260,"50, 100, 200, 400",
+,,n5,5,1
+,,n77,CA_n77C,
+,,n260,"50, 100, 200, 400",
+CA_n5A-n77C-n260G,CA_n5A-n260A/GCA_n77A-n260A/G,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n260,CA_n260G,
+CA_n5A-n77C-n260H,CA_n5A-n260A/G/HCA_n77A-n260A/G/H,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n260,CA_n260H,
+CA_n5A-n77C-n260I,CA_n5A-n260A/G/H/ICA_n77A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n260,CA_n260I,
+CA_n5A-n77C-n260J,CA_n5A-n260A/G/H/ICA_n77A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n260,CA_n260J,
+CA_n5A-n77C-n260K,CA_n5A-n260A/G/H/ICA_n77A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n260,CA_n260K,
+CA_n5A-n77C-n260L,CA_n5A-n260A/G/H/ICA_n77A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n260,CA_n260L,
+CA_n5A-n77C-n260M,CA_n5A-n260A/G/H/ICA_n77A-n260A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n260,CA_n260M,
+CA_n5A-n77A-n261A,CA_n77A-n261ACA_n5A-n261A,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,"50, 100, 200, 400",
+CA_n5A-n77A-n261G,CA_n5A-n261A/GCA_n77A-n261A/G,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261G,
+CA_n5A-n77A-n261H,CA_n5A-n261A/G/HCA_n77A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261H,
+CA_n5A-n77A-n261I,CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261I,
+CA_n5A-n77A-n261J,CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261J,
+CA_n5A-n77A-n261K,CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261K,
+CA_n5A-n77A-n261L,CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261L,
+CA_n5A-n77A-n261M,CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261M,
+CA_n5A-n77A-n261(A-G),CA_n5A-n261A/GCA_n77A-n261A/G,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(A-G),
+CA_n5A-n77A-n261(A-H),CA_n5A-n261A/G/HCA_n77A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(A-H),
+CA_n5A-n77A-n261(G-H),CA_n5A-n261A/G/HCA_n77A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(G-H),
+CA_n5A-n77A-n261(2A-G),CA_n5A-n261A/GCA_n77A-n261A/G,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(2A-G),
+CA_n5A-n77A-n261(2A-H),CA_n5A-n261A/G/HCA_n77A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(2A-H),
+CA_n5A-n77A-n261(A-2G),CA_n5A-n261A/GCA_n77A-n261A/G,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(A-2G),
+CA_n5A-n77A-n261(A-G-H),CA_n5A-n261A/G/HCA_n77A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(A-G-H),
+CA_n5A-n77A-n261(A-I),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(A-I),
+CA_n5A-n77A-n261(G-I),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(G-I),
+CA_n5A-n77A-n261(2A),CA_n5A-n261ACA_n77A-n261A,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(2A),
+CA_n5A-n77A-n261(3A),CA_n5A-n261ACA_n77A-n261A,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(3A),
+CA_n5A-n77A-n261(2G),CA_n5A-n261A/GCA_n77A-n261A/G,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(2G),
+CA_n5A-n77A-n261(2H),CA_n5A-n261A/G/HCA_n77A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(2H),
+CA_n5A-n77A-n261(2A-I),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(2A-I),
+CA_n5A-n77A-n261(A-G-I),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(A-G-I),
+CA_n5A-n77A-n261(H-I),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n261,CA_n261(H-I),
+CA_n5A-n77C-n261A,CA_n5A-n261ACA_n77A-n261A,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261A,
+CA_n5A-n77C-n261G,CA_n5A-n261A/GCA_n77A-n261A/G,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261G,
+CA_n5A-n77C-n261H,CA_n5A-n261A/G/HCA_n77A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261H,
+CA_n5A-n77C-n261I,CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261I,
+CA_n5A-n77C-n261J,CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261J,
+CA_n5A-n77C-n261K,CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261K,
+CA_n5A-n77C-n261L,CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261L,
+CA_n5A-n77C-n261M,CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261M,
+CA_n5A-n77C-n261(A-G),CA_n5A-n261A/GCA_n77A-n261A/G,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(A-G),
+CA_n5A-n77C-n261(A-H),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(A-H),
+CA_n5A-n77C-n261(G-H),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(G-H),
+CA_n5A-n77C-n261(2A-G),CA_n5A-n261A/GCA_n77A-n261A/G,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(2A-G),
+CA_n5A-n77C-n261(2A-H),CA_n5A-n261A/G/HCA_n77A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(2A-H),
+CA_n5A-n77C-n261(A-2G),CA_n5A-n261A/G/HCA_n77A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(A-2G),
+CA_n5A-n77C-n261(A-G-H),CA_n5A-n261A/G/HCA_n77A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(A-G-H),
+CA_n5A-n77C-n261(A-I),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(A-I),
+CA_n5A-n77C-n261(G-I),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(G-I),
+CA_n5A-n77C-n261(2A),CA_n5A-n261ACA_n77A-n261A,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(2A),
+CA_n5A-n77C-n261(3A),CA_n5A-n261ACA_n77A-n261A,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(3A),
+CA_n5A-n77C-n261(2G),CA_n5A-n261A/GCA_n77A-n261A/G,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(2G),
+CA_n5A-n77C-n261(2H),CA_n5A-n261A/G/HCA_n77A-n261A/G/H,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(2H),
+CA_n5A-n77C-n261(H-I),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(H-I),
+CA_n5A-n77C-n261(2A-I),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(2A-I),
+CA_n5A-n77C-n261(A-G-I),CA_n5A-n261A/G/H/ICA_n77A-n261A/G/H/I,n5,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+,,n261,CA_n261(A-G-I),
+CA_n5A-n78A-n258A,CA_n5A-n78ACA_n78A-n258ACA_n5A-n258A,n5,"5, 10, 15, 20, 25",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,"50, 100, 200, 400",
+CA_n7A-n25A-n257A,CA_n7A-n257ACA_n25A-n257A,n7,See n7 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,See n257 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n7A-n25A-n257G,CA_n7A-n257A/GCA_n25A-n257A/G,n7,See n7 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,CA_n257G,
+CA_n7A-n25A-n257H,CA_n7A-n257A/G/HCA_n25A-n257A/G/H,n7,See n7 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,CA_n257H,
+CA_n7A-n25A-n257I,CA_n7A-n257A/G/H/ICA_n25A-n257A/G/H/I,n7,See n7 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,CA_n257I,
+CA_n7A-n25A-n257J,CA_n7A-n257A/G/H/I/JCA_n25A-n257A/G/H/I/J,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257J,
+CA_n7A-n25A-n257K,CA_n7A-n257A/G/H/I/J/KCA_n25A-n257A/G/H/I/J/K,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257K,
+CA_n7A-n25A-n257L,CA_n7A-n257A/G/H/I/J/K/LCA_n25A-n257A/G/H/I/J/K/L,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257L,
+CA_n7A-n25A-n257M,CA_n7A-n257A/G/H/I/J/K/L/MCA_n25A-n257A/G/H/I/J/K/L/M,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257M,
+CA_n7A-n25A-n260A,CA_n7A-n260ACA_n25A-n260A,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n260,See n260 channel bandwidths in Table 5.3.5-1,
+CA_n7A-n25A-n260G,CA_n7A-n260A/GCA_n25A-n260A/G,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260G,
+CA_n7A-n25A-n260H,CA_n7A-n260A/G/HCA_n25A-n260A/G/H,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260H,
+CA_n7A-n25A-n260I,CA_n7A-n260A/G/H/ICA_n25A-n260A/G/H/I,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260I,
+CA_n7A-n25A-n260J,CA_n7A-n260A/G/H/I/JCA_n25A-n260A/G/H/I/J,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260J,
+CA_n7A-n25A-n260K,CA_n7A-n260A/G/H/I/J/KCA_n25A-n260A/G/H/I/J/K,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260K,
+CA_n7A-n25A-n260L,CA_n7A-n260A/G/H/I/J/K/LCA_n25A-n260A/G/H/I/J/K/L,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260L,
+CA_n7A-n25A-n260M,CA_n7A-n260A/G/H/I/J/K/L/MCA_n25A-n260A/G/H/I/J/K/L/M,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n25,See n25 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260M,
+CA_n7A-n26A-n258A,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,"50, 100, 200, 400",
+CA_n7A-n26A-n258B,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258B,
+CA_n7A-n26A-n258C,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258C,
+CA_n7A-n26A-n258D,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258D,
+CA_n7A-n26A-n258E,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258E,
+CA_n7A-n26A-n258F,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258F,
+CA_n7A-n26A-n258G,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258G,
+CA_n7A-n26A-n258H,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258H,
+CA_n7A-n26A-n258I,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258I,
+CA_n7A-n26A-n258J,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258J,
+CA_n7A-n26A-n258K,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258K,
+CA_n7A-n26A-n258L,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258L,
+CA_n7A-n26A-n258M,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258M,
+CA_n7A-n26A-n258R2,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R2,
+CA_n7A-n26A-n258R3,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R3,
+CA_n7A-n26A-n258R4,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R4,
+CA_n7A-n26A-n258R5,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R5,
+CA_n7A-n26A-n258R6,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R6,
+CA_n7A-n26A-n258R7,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R7,
+CA_n7A-n26A-n258R8,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R8,
+CA_n7A-n26A-n258R9,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R9,
+CA_n7A-n26A-n258R10,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R10,
+CA_n7B-n26A-n258A,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,"50, 100, 200, 400",
+CA_n7B-n26A-n258B,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258B,
+CA_n7B-n26A-n258C,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258C,
+CA_n7B-n26A-n258D,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258D,
+CA_n7B-n26A-n258E,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258E,
+CA_n7B-n26A-n258F,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258F,
+CA_n7B-n26A-n258G,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258G,
+CA_n7B-n26A-n258H,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258H,
+CA_n7B-n26A-n258I,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258I,
+CA_n7B-n26A-n258J,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258J,
+CA_n7B-n26A-n258K,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258K,
+CA_n7B-n26A-n258L,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258L,
+CA_n7B-n26A-n258M,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258M,
+CA_n7B-n26A-n258R2,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R2,
+CA_n7B-n26A-n258R3,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R3,
+CA_n7B-n26A-n258R4,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R4,
+CA_n7B-n26A-n258R5,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R5,
+CA_n7B-n26A-n258R6,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R6,
+CA_n7B-n26A-n258R7,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R7,
+CA_n7B-n26A-n258R8,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R8,
+CA_n7B-n26A-n258R9,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R9,
+CA_n7B-n26A-n258R10,CA_n7A-n26ACA_n7A-n258ACA_n26A-n258A,n7,CA_n7B,0
+,,n26,"5, 10, 15, 20",
+,,n258,CA_n258R10,
+CA_n7A-n66A-n257A,CA_n7A-n257ACA_n66A-n257A,n7,"5, 10, 15, 20, 25, 30, 40, 50",4 and 5
+,,n66,"10, 15, 20, 25, 30, 40",
+,,n257,"50, 100, 200, 400",
+CA_n7A-n66A-n257G,CA_n7A-n257A/GCA_n66A-n257A/G,n7,"5, 10, 15, 20, 25, 30, 40, 50",4 and 5
+,,n66,"10, 15, 20, 25, 30, 40",
+,,n257,CA_n257G,
+CA_n7A-n66A-n257H,CA_n7A-n257A/G/HCA_n66A-n257A/G/H,n7,"5, 10, 15, 20, 25, 30, 40, 50",4 and 5
+,,n66,"10, 15, 20, 25, 30, 40",
+,,n257,CA_n257H,
+CA_n7A-n66A-n257I,CA_n7A-n257A/G/H/ICA_n66A-n257A/G/H/I,n7,"5, 10, 15, 20, 25, 30, 40, 50",4 and 5
+,,n66,"10, 15, 20, 25, 30, 40",
+,,n257,CA_n257I,
+CA_n7A-n66A-n257J,CA_n7A-n257A/G/H/I/JCA_n66A-n257A/G/H/I/J,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257J,
+CA_n7A-n66A-n257K,CA_n7A-n257A/G/H/I/J/KCA_n66A-n257A/G/H/I/J/K,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257K,
+CA_n7A-n66A-n257L,CA_n7A-n257A/G/H/I/J/K/LCA_n66A-n257A/G/H/I/J/K/L,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257L,
+CA_n7A-n66A-n257M,CA_n7A-n257A/G/H/I/J/K/L/MCA_n66A-n257A/G/H/I/J/K/L/M,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257M,
+CA_n7A-n66A-n260A,CA_n7A-n260ACA_n66A-n260A,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n260,See n260 channel bandwidths in Table 5.3.5-1,
+CA_n7A-n66A-n260G,CA_n7A-n260A/GCA_n66A-n260A/G,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260G,
+CA_n7A-n66A-n260H,CA_n7A-n260A/G/HCA_n66A-n260A/G/H,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260H,
+CA_n7A-n66A-n260I,CA_n7A-n260A/G/H/ICA_n66A-n260A/G/H/I,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260I,
+CA_n7A-n66A-n260J,CA_n7A-n260A/G/H/I/JCA_n66A-n260A/G/H/I/J,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260J,
+CA_n7A-n66A-n260K,CA_n7A-n260A/G/H/I/J/KCA_n66A-n260A/G/H/I/J/K,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260K,
+CA_n7A-n66A-n260L,CA_n7A-n260A/G/H/I/J/K/LCA_n66A-n260A/G/H/I/J/K/L,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260L,
+CA_n7A-n66A-n260M,CA_n7A-n260A/G/H/I/J/K/L/MCA_n66A-n260A/G/H/I/J/K/L/M,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260M,
+CA_n7A-n71A-n257A,CA_n7A-n257ACA_n71A-n257A,n7,"5, 10, 15, 20, 25, 30, 40, 50",4 and 5
+,,n71,"5, 10, 15, 20",
+,,n257,"50, 100, 200, 400",
+CA_n7A-n71A-n257G,CA_n7A-n257A/GCA_n71A-n257A/G,n7,"5, 10, 15, 20, 25, 30, 40, 50",4 and 5
+,,n71,"5, 10, 15, 20",
+,,n257,CA_n257G,
+CA_n7A-n71A-n257H,CA_n7A-n257A/G/HCA_n71A-n257A/G/H,n7,"5, 10, 15, 20, 25, 30, 40, 50",4 and 5
+,,n71,"5, 10, 15, 20",
+,,n257,CA_n257H,
+CA_n7A-n71A-n257I,CA_n7A-n257A/G/H/ICA_n71A-n257G/H/I,n7,"5, 10, 15, 20, 25, 30, 40, 50",4 and 5
+,,n71,"5, 10, 15, 20",
+,,n257,CA_n257I,
+CA_n7A-n71A-n257J,CA_n7A-n257A/G/H/I/JCA_n71A-n257A/G/H/I/J,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257J,
+CA_n7A-n71A-n257K,CA_n7A-n257A/G/H/I/J/KCA_n71A-n257A/G/H/I/J/K,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257K,
+CA_n7A-n71A-n257L,CA_n7A-n257A/G/H/I/J/K/LCA_n71A-n257A/G/H/I/J/K/L,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257L,
+CA_n7A-n71A-n257M,CA_n7A-n257A/G/H/I/J/K/L/MCA_n71A-n257A/G/H/I/J/K/L/M,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n257,CA_n257M,
+CA_n7A-n71A-n260A,CA_n7A-n260ACA_n71A-n260A,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n260,See n260 channel bandwidths in Table 5.3.5-1,
+CA_n7A-n71A-n260G,CA_n7A-n260A/GCA_n71A-n260A/G,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260G,
+CA_n7A-n71A-n260H,CA_n7A-n260A/G/HCA_n71A-n260A/G/H,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260H,
+CA_n7A-n71A-n260I,CA_n7A-n260A/G/H/ICA_n71A-n260A/G/H/I,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260I,
+CA_n7A-n71A-n260J,CA_n7A-n260A/G/H/I/JCA_n71A-n260A/G/H/I/J,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260J,
+CA_n7A-n71A-n260K,CA_n7A-n260A/G/H/I/J/KCA_n71A-n260A/G/H/I/J/K,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260K,
+CA_n7A-n71A-n260L,CA_n7A-n260A/G/H/I/J/K/LCA_n71A-n260A/G/H/I/J/K/L,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260L,
+CA_n7A-n71A-n260M,CA_n7A-n260A/G/H/I/J/K/L/MCA_n71A-n260A/G/H/I/J/K/L/M,n7,See n7 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in Table 5.3.5-1,
+,,n260,CA_n260M,
+CA_n7A-n78A-n258A,CA_n7A-n78ACA_n7A-n258ACA_n78A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,"50, 100, 200, 400",
+CA_n7A-n78A-n258B,CA_n7A-n78ACA_n7A-n258A/BCA_n78A-n258A/B,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258B,
+CA_n7A-n78A-n258C,CA_n7A-n78ACA_n7A-n258A/B/CCA_n78A-n258A/B/C,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258C,
+CA_n7A-n78A-n258D,CA_n7A-n78ACA_n7A-n258A/DCA_n78A-n258A/D,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258D,
+CA_n7A-n78A-n258E,CA_n7A-n78ACA_n7A-n258A/D/ECA_n78A-n258A/D/E,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258E,
+CA_n7A-n78A-n258F,CA_n7A-n78ACA_n7A-n258A/D/E/FCA_n78A-n258A/D/E/F,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258F,
+CA_n7A-n78A-n258G,CA_n7A-n78ACA_n7A-n258A/GCA_n78A-n258A/G,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258G,
+CA_n7A-n78A-n258H,CA_n7A-n78ACA_n7A-n258A/G/HCA_n78A-n258G/H,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258H,
+CA_n7A-n78A-n258I,CA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258I,
+CA_n7A-n78A-n258J,CA_n7A-n78ACA_n7A-n258A/G/H/I/JCA_n78A-n258A/G/H/I/J,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258J,
+CA_n7A-n78A-n258K,CA_n7A-n78ACA_n7A-n258A/G/H/I/J/KCA_n78A-n258A/G/H/I/J/K,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258K,
+CA_n7A-n78A-n258L,CA_n7A-n78ACA_n7A-n258A/G/H/I/J/K/LCA_n78A-n258A/G/H/I/J/K/L,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258L,
+CA_n7A-n78A-n258M,CA_n7A-n78ACA_n7A-n258A/G/H/I/J/K/L/MCA_n78A-n258A/G/H/I/J/K/L/M,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258M,
+CA_n7A-n78A-n258R2,CA_n258R2CA_n7A-n78ACA_n7A-n258A/R2CA_n78A-n258A/R2,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R2,
+CA_n7A-n78A-n258R3,CA_n258R2/R3CA_n7A-n78ACA_n7A-n258A/R2/R3CA_n78A-n258A/R2/R3,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R3,
+CA_n7A-n78A-n258R4,CA_n258R2/R3/R4CA_n7A-n78ACA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R4,
+CA_n7A-n78A-n258R5,CA_n258R2/R3/R4CA_n7A-n78ACA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R5,
+CA_n7A-n78A-n258R6,CA_n258R2/R3/R4CA_n7A-n78ACA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R6,
+CA_n7A-n78A-n258R7,CA_n258R2/R3/R4CA_n7A-n78ACA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R7,
+CA_n7A-n78A-n258R8,CA_n258R2/R3/R4CA_n7A-n78ACA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R8,
+CA_n7A-n78A-n258R9,CA_n258R2/R3/R4CA_n7A-n78ACA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R9,
+CA_n7A-n78A-n258R10,CA_n258R2/R3/R4CA_n7A-n78ACA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R10,
+CA_n7A-n78(2A)-n258A,CA_n78(2A)CA_n7A-n78ACA_n7A-n258ACA_n78A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,"50, 100, 200, 400",
+CA_n7A-n78(2A)-n258B,CA_n78(2A)CA_n258BCA_n7A-n78ACA_n7A-n258A/BCA_n78A-n258A/B,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258B,
+CA_n7A-n78(2A)-n258C,CA_n78(2A)CA_n258B/CCA_n7A-n78ACA_n7A-n258A/B/CCA_n78A-n258A/B/C,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258C,
+CA_n7A-n78(2A)-n258D,CA_n78(2A)CA_n258DCA_n7A-n78ACA_n7A-n258A/DCA_n78A-n258A/D,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258D,
+CA_n7A-n78(2A)-n258E,CA_n78(2A)CA_n258D/ECA_n7A-n78ACA_n7A-n258A/D/ECA_n78A-n258A/D/E,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258E,
+CA_n7A-n78(2A)-n258F,CA_n78(2A)CA_n258D/E/FCA_n7A-n78ACA_n7A-n258A/D/E/FCA_n78A-n258A/D/E/F,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258F,
+CA_n7A-n78(2A)-n258G,CA_n78(2A)CA_n258GCA_n7A-n78ACA_n7A-n258A/GCA_n78A-n258A/G,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258G,
+CA_n7A-n78(2A)-n258H,CA_n78(2A)CA_n258G/HCA_n7A-n78ACA_n7A-n258A/G/HCA_n78A-n258G/H,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258H,
+CA_n7A-n78(2A)-n258I,CA_n78(2A)CA_n258G/H/ICA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258I,
+CA_n7A-n78(2A)-n258J,CA_n78(2A)CA_n258G/H/ICA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258J,
+CA_n7A-n78(2A)-n258K,CA_n78(2A)CA_n258G/H/ICA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258K,
+CA_n7A-n78(2A)-n258L,CA_n78(2A)CA_n258G/H/ICA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258L,
+CA_n7A-n78(2A)-n258M,CA_n78(2A)CA_n258G/H/ICA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258M,
+CA_n7A-n78(2A)-n258R2,CA_n78(2A)CA_n7A-n78ACA_n258R2CA_n7A-n258A/R2CA_n78A-n258A/R2,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R2,
+CA_n7A-n78(2A)-n258R3,CA_n78(2A)CA_n7A-n78ACA_n258R2/R3CA_n7A-n258A/R2/R3CA_n78A-n258A/R2/R3,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R3,
+CA_n7A-n78(2A)-n258R4,CA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R4,
+CA_n7A-n78(2A)-n258R5,CA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R5,
+CA_n7A-n78(2A)-n258R6,CA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R6,
+CA_n7A-n78(2A)-n258R7,CA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R7,
+CA_n7A-n78(2A)-n258R8,CA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R8,
+CA_n7A-n78(2A)-n258R9,CA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R9,
+CA_n7A-n78(2A)-n258R10,CA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R10,
+CA_n7B-n78A-n258A,CA_n7BCA_n7A-n78ACA_n7A-n258ACA_n78A-n258A,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,"50, 100, 200, 400",
+CA_n7B-n78A-n258B,CA_n7BCA_n7A-n78ACA_n7A-n258A/BCA_n78A-n258A/B,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258B,
+CA_n7B-n78A-n258C,CA_n7BCA_n7B-n78ACA_n7B-n258A/B/CCA_n78A-n258A/B/C,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258C,
+CA_n7B-n78A-n258D,CA_n7BCA_n7A-n78ACA_n7A-n258A/DCA_n78A-n258A/D,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258D,
+CA_n7B-n78A-n258E,CA_n7BCA_n7A-n78ACA_n7A-n258A/D/ECA_n78A-n258A/D/E,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258E,
+CA_n7B-n78A-n258F,CA_n7BCA_n7A-n78ACA_n7A-n258A/D/E/FCA_n78A-n258A/D/E/F,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258F,
+CA_n7B-n78A-n258G,CA_n7BCA_n7A-n78ACA_n7A-n258A/GCA_n78A-n258A/G,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258G,
+CA_n7B-n78A-n258H,CA_n7BCA_n7A-n78ACA_n7A-n258A/G/HCA_n78A-n258G/H,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258H,
+CA_n7B-n78A-n258I,CA_n7BCA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258I,
+CA_n7B-n78A-n258J,CA_n7BCA_n7A-n78ACA_n7A-n258A/G/H/I/JCA_n78A-n258A/G/H/I/J,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258J,
+CA_n7B-n78A-n258K,CA_n7BCA_n7A-n78ACA_n7A-n258A/G/H/I/J/KCA_n78A-n258A/G/H/I/J/K,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258K,
+CA_n7B-n78A-n258L,CA_n7BCA_n7A-n78ACA_n7A-n258A/G/H/I/J/K/LCA_n78A-n258A/G/H/I/J/K/L,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258L,
+CA_n7B-n78A-n258M,CA_n7BCA_n7A-n78ACA_n7A-n258A/G/H/I/J/K/L/MCA_n78A-n258A/G/H/I/J/K/L/M,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258M,
+CA_n7B-n78A-n258R2,CA_n7BCA_n7A-n78ACA_n258R2CA_n7A-n258A/R2CA_n78A-n258A/R2,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R2,
+CA_n7B-n78A-n258R3,CA_n7BCA_n7A-n78ACA_n258R2/R3CA_n7A-n258A/R2/R3CA_n78A-n258A/R2/R3,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R3,
+CA_n7B-n78A-n258R4,CA_n7BCA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R4,
+CA_n7B-n78A-n258R5,CA_n7BCA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R5,
+CA_n7B-n78A-n258R6,CA_n7BCA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R6,
+CA_n7B-n78A-n258R7,CA_n7BCA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R7,
+CA_n7B-n78A-n258R8,CA_n7BCA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R8,
+CA_n7B-n78A-n258R9,CA_n7BCA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R9,
+CA_n7B-n78A-n258R10,CA_n7BCA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R10,
+CA_n7B-n78(2A)-n258A,CA_n7BCA_n78(2A)CA_n7A-n78ACA_n7A-n258ACA_n78A-n258A,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,"50, 100, 200, 400",
+CA_n7B-n78(2A)-n258B,CA_n7BCA_n78(2A)CA_n258BCA_n7A-n78ACA_n7A-n258A/BCA_n78A-n258A/B,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258B,
+CA_n7B-n78(2A)-n258C,CA_n7BCA_n78(2A)CA_n258B/CCA_n7A-n78ACA_n7A-n258A/B/CCA_n78A-n258A/B/C,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258C,
+CA_n7B-n78(2A)-n258D,CA_n7BCA_n78(2A)CA_n258DCA_n7A-n78ACA_n7A-n258A/DCA_n78A-n258A/D,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258D,
+CA_n7B-n78(2A)-n258E,CA_n7BCA_n78(2A)CA_n258D/ECA_n7A-n78ACA_n7A-n258A/D/ECA_n78A-n258A/D/E,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258E,
+CA_n7B-n78(2A)-n258F,CA_n7BCA_n78(2A)CA_n258D/E/FCA_n7A-n78ACA_n7A-n258A/D/E/FCA_n78A-n258A/D/E/F,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258F,
+CA_n7B-n78(2A)-n258G,CA_n7BCA_n78(2A)CA_n258GCA_n7A-n78ACA_n7A-n258A/GCA_n78A-n258A/G,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258G,
+CA_n7B-n78(2A)-n258H,CA_n7BCA_n78(2A)CA_n258G/HCA_n7A-n78ACA_n7A-n258A/G/HCA_n78A-n258G/H,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258H,
+CA_n7B-n78(2A)-n258I,CA_n7BCA_n78(2A)CA_n258G/H/ICA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258I,
+CA_n7B-n78(2A)-n258J,CA_n7BCA_n78(2A)CA_n258G/H/ICA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258J,
+CA_n7B-n78(2A)-n258K,CA_n7BCA_n78(2A)CA_n258G/H/ICA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258K,
+CA_n7B-n78(2A)-n258L,CA_n7BCA_n78(2A)CA_n258G/H/ICA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258L,
+CA_n7B-n78(2A)-n258M,CA_n7BCA_n78(2A)CA_n258G/H/ICA_n7A-n78ACA_n7A-n258A/G/H/ICA_n78A-n258A/G/H/I,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258M,
+CA_n7B-n78(2A)-n258R2,CA_n7BCA_n78(2A)CA_n7A-n78ACA_n258R2CA_n7A-n258A/R2CA_n78A-n258A/R2,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R2,
+CA_n7B-n78(2A)-n258R3,CA_n7BCA_n78(2A)CA_n7A-n78ACA_n258R2/R3CA_n7A-n258A/R2/R3CA_n78A-n258A/R2/R3,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R3,
+CA_n7B-n78(2A)-n258R4,CA_n7BCA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R4,
+CA_n7B-n78(2A)-n258R5,CA_n7BCA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R5,
+CA_n7B-n78(2A)-n258R6,CA_n7BCA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R6,
+CA_n7B-n78(2A)-n258R7,CA_n7BCA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R7,
+CA_n7B-n78(2A)-n258R8,CA_n7BCA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R8,
+CA_n7B-n78(2A)-n258R9,CA_n7BCA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R9,
+CA_n7B-n78(2A)-n258R10,CA_n7BCA_n78(2A)CA_n7A-n78ACA_n258R2/R3/R4CA_n7A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4,n7,CA_n7B,0
+,,n78,CA_n78(2A),
+,,n258,CA_n258R10,
+CA_n7A-n105A-n257A,CA_n7A-n105ACA_n7A-n257ACA_n105A-n257A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n105,"5, 10, 15, 20, 25, 30, 35",
+,,n257,"50, 100, 200, 400",
+CA_n7A-n105A-n258A,CA_n7A-n105ACA_n7A-n258ACA_n105A-n258A,n7,"5, 10, 15, 20, 25, 30, 40, 50",0
+,,n105,"5, 10, 15, 20, 25, 30, 35",
+,,n258,"50, 100, 200, 400",
+CA_n8A-n41A-n258A,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,"50, 100, 200, 400",
+CA_n8A-n41A-n258B,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258B,
+CA_n8A-n41A-n258C,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258C,
+CA_n8A-n41A-n258D,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258D,
+CA_n8A-n41A-n258E,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258E,
+CA_n8A-n41A-n258F,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258F,
+CA_n8A-n41A-n258G,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258G,
+CA_n8A-n41A-n258H,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258H,
+CA_n8A-n41A-n258I,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258I,
+CA_n8A-n41A-n258J,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258J,
+CA_n8A-n41A-n258K,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258K,
+CA_n8A-n41A-n258L,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258L,
+CA_n8A-n41A-n258M,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258M,
+CA_n8A-n41C-n258A,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,"50, 100, 200, 400",
+CA_n8A-n41C-n258B,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258B,
+CA_n8A-n41C-n258C,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258C,
+CA_n8A-n41C-n258D,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258D,
+CA_n8A-n41C-n258E,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258E,
+CA_n8A-n41C-n258F,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258F,
+CA_n8A-n41C-n258G,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258G,
+CA_n8A-n41C-n258H,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258H,
+CA_n8A-n41C-n258I,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258I,
+CA_n8A-n41C-n258J,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258J,
+CA_n8A-n41C-n258K,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258K,
+CA_n8A-n41C-n258L,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258L,
+CA_n8A-n41C-n258M,CA_n8A-n41ACA_n8A-n258ACA_n41A-n258A,n8,"5, 10, 15, 20",0
+,,n41,CA_n41C_BCS2,
+,,n258,CA_n258M,
+CA_n8A-n77A-n257A,-,n8,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,"50, 100, 200, 400",
+CA_n8A-n77A-n257G,-,n8,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257G,
+CA_n8A-n77A-n257H,-,n8,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257H,
+CA_n8A-n77A-n257I,-,n8,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257I,
+CA_n8A-n77A-n257J,-,n8,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257J,
+CA_n8A-n77A-n257K,-,n8,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257K,
+CA_n8A-n77A-n257L,-,n8,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257L,
+CA_n8A-n77A-n257M,-,n8,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257M,
+CA_n8A-n77(2A)-n257A,-,n8,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,"50, 100, 200, 400",
+CA_n8A-n77(2A)-n257G,-,n8,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257G,
+CA_n8A-n77(2A)-n257H,-,n8,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257H,
+CA_n8A-n77(2A)-n257I,-,n8,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257I,
+CA_n8A-n77(2A)-n257J,-,n8,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257J,
+CA_n8A-n77(2A)-n257K,-,n8,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257K,
+CA_n8A-n77(2A)-n257L,-,n8,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257L,
+CA_n8A-n77(2A)-n257M,-,n8,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257M,
+CA_n8A-n78A-n257A,CA_n8A-n78ACA_n8A-n257ACA_n78A-n257A,n8,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,"50, 100, 200, 400",
+CA_n8A-n78A-n257D,-,n8,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257D,
+CA_n8A-n78A-n257E,-,n8,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257E,
+CA_n8A-n78A-n257F,-,n8,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257F,
+CA_n8A-n78A-n257G,CA_n257GCA_n8A-n78ACA_n8A-n257A/GCA_n78A-n257A/G,n8,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257G,
+CA_n8A-n78A-n257H,CA_n257G/HCA_n8A-n78ACA_n8A-n257A/G/HCA_n78A-n257A/G/H,n8,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257H,
+CA_n8A-n78A-n257I,CA_n257G/H/ICA_n8A-n78ACA_n8A-n257A/G/H/ICA_n78A-n257A/G/H/I,n8,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257I,
+CA_n8A-n78A-n257J,CA_n257G/H/I/JCA_n8A-n78ACA_n8A-n257A/G/H/I/JCA_n78A-n257A/G/H/I/J,n8,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257J,
+CA_n8A-n78A-n257K,CA_n257G/H/I/J/KCA_n8A-n78ACA_n8A-n257A/G/H/I/J/KCA_n78A-n257A/G/H/I/J/K,n8,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257K,
+CA_n8A-n78A-n257L,-,n8,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257L,
+CA_n8A-n78A-n257M,-,n8,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257M,
+CA_n8A-n79A-n258A,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,"50, 100, 200, 400",
+CA_n8A-n79A-n258B,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258B,
+CA_n8A-n79A-n258C,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258C,
+CA_n8A-n79A-n258D,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258D,
+CA_n8A-n79A-n258E,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258E,
+CA_n8A-n79A-n258F,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258F,
+CA_n8A-n79A-n258G,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258G,
+CA_n8A-n79A-n258H,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258H,
+CA_n8A-n79A-n258I,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258I,
+CA_n8A-n79A-n258J,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258J,
+CA_n8A-n79A-n258K,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258K,
+CA_n8A-n79A-n258L,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258L,
+CA_n8A-n79A-n258M,CA_n8A-n79ACA_n8A-n258ACA_n79A-n258A,n8,"5, 10, 15, 20",0
+,,n79,"40, 50, 60, 80, 100",
+,,n258,CA_n258M,
+CA_n12A-n30A-n260A,CA_n12A-n30ACA_n12A-n260ACA_n30A-n260A,n12,"5, 10, 15",0
+,,n30,"5, 10",
+,,n260,"50, 100, 200, 400",
+CA_n12A-n30A-n260G,CA_n12A-n30ACA_n12A-n260A/GCA_n30A-n260A/G,n12,"5, 10, 15",0
+,,n30,"5, 10",
+,,n260,CA_n260G,
+CA_n12A-n30A-n260H,CA_n12A-n30ACA_n12A-n260A/G/HCA_n30A-n260A/G/H,n12,"5, 10, 15",0
+,,n30,"5, 10",
+,,n260,CA_n260H,
+CA_n12A-n30A-n260I,CA_n12A-n30ACA_n12A-n260A/G/H/ICA_n30A-n260A/G/H/I,n12,"5, 10, 15",0
+,,n30,"5, 10",
+,,n260,CA_n260I,
+CA_n12A-n30A-n260J,CA_n12A-n30ACA_n12A-n260A/G/H/I/JCA_n30A-n260A/G/H/I/J,n12,"5, 10, 15",0
+,,n30,"5, 10",
+,,n260,CA_n260J,
+CA_n12A-n30A-n260K,CA_n12A-n30ACA_n12A-n260A/G/H/I/J/KCA_n30A-n260A/G/H/I/J/K,n12,"5, 10, 15",0
+,,n30,"5, 10",
+,,n260,CA_n260K,
+CA_n12A-n30A-n260L,CA_n12A-n30ACA_n12A-n260A/G/H/I/J/K/LCA_n30A-n260A/G/H/I/J/K/L,n12,"5, 10, 15",0
+,,n30,"5, 10",
+,,n260,CA_n260L,
+CA_n12A-n30A-n260M,CA_n12A-n30ACA_n12A-n260A/G/H/I/J/K/L/MCA_n30A-n260A/G/H/I/J/K/L/M,n12,"5, 10, 15",0
+,,n30,"5, 10",
+,,n260,CA_n260M,
+CA_n12A-n66A-n260A,CA_n12A-n66ACA_n12A-n260ACA_n66A-n260A,n12,"5, 10, 15",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,"50, 100, 200, 400",
+CA_n12A-n66A-n260G,CA_n12A-n66ACA_n12A-n260A/GCA_n66A-n260A/G,n12,"5, 10, 15",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260G,
+CA_n12A-n66A-n260H,CA_n12A-n66ACA_n12A-n260A/G/HCA_n66A-n260A/G/H,n12,"5, 10, 15",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260H,
+CA_n12A-n66A-n260I,CA_n12A-n66ACA_n12A-n260A/G/H/ICA_n66A-n260A/G/H/I,n12,"5, 10, 15",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260I,
+CA_n12A-n66A-n260J,CA_n12A-n66ACA_n12A-n260A/G/H/I/JCA_n66A-n260A/G/H/I/J,n12,"5, 10, 15",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260J,
+CA_n12A-n66A-n260K,CA_n12A-n66ACA_n12A-n260A/G/H/I/J/KCA_n66A-n260A/G/H/I/J/K,n12,"5, 10, 15",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260K,
+CA_n12A-n66A-n260L,CA_n12A-n66ACA_n12A-n260A/G/H/I/J/K/LCA_n66A-n260A/G/H/I/J/K/L,n12,"5, 10, 15",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260L,
+CA_n12A-n66A-n260M,CA_n12A-n66ACA_n12A-n260A/G/H/I/J/K/L/MCA_n66A-n260A/G/H/I/J/K/L/M,n12,"5, 10, 15",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260M,
+CA_n12A-n77A-n260A,CA_n12A-n77ACA_n12A-n260ACA_n77A-n260A,n12,"5, 10, 15",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,"50, 100, 200, 400",
+CA_n12A-n77A-n260G,CA_n12A-n77ACA_n12A-n260A/GCA_n77A-n260A/G,n12,"5, 10, 15",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260G,
+CA_n12A-n77A-n260H,CA_n12A-n77ACA_n12A-n260A/G/HCA_n77A-n260A/G/H,n12,"5, 10, 15",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260H,
+CA_n12A-n77A-n260I,CA_n12A-n77ACA_n12A-n260A/G/H/ICA_n77A-n260A/G/H/I,n12,"5, 10, 15",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260I,
+CA_n12A-n77A-n260J,CA_n12A-n77ACA_n12A-n260A/G/H/I/JCA_n77A-n260A/G/H/I/J,n12,"5, 10, 15",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260J,
+CA_n12A-n77A-n260K,CA_n12A-n77ACA_n12A-n260A/G/H/I/J/KCA_n77A-n260A/G/H/I/J/K,n12,"5, 10, 15",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260K,
+CA_n12A-n77A-n260L,CA_n12A-n77ACA_n12A-n260A/G/H/I/J/K/LCA_n77A-n260A/G/H/I/J/K/L,n12,"5, 10, 15",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260L,
+CA_n12A-n77A-n260M,CA_n12A-n77ACA_n12A-n260A/G/H/I/J/K/L/MCA_n77A-n260A/G/H/I/J/K/L/M,n12,"5, 10, 15",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260M,
+CA_n14A-n30A-n260A,CA_n14A-n30ACA_n14A-n260ACA_n30A-n260A,n14,"5, 10",0
+,,n30,"5, 10",
+,,n260,"50, 100, 200, 400",
+CA_n14A-n30A-n260G,CA_n14A-n30ACA_n14A-n260A/GCA_n30A-n260A/G,n14,"5, 10",0
+,,n30,"5, 10",
+,,n260,CA_n260G,
+CA_n14A-n30A-n260H,CA_n14A-n30ACA_n14A-n260A/G/HCA_n30A-n260A/G/H,n14,"5, 10",0
+,,n30,"5, 10",
+,,n260,CA_n260H,
+CA_n14A-n30A-n260I,CA_n14A-n30ACA_n14A-n260A/G/H/ICA_n30A-n260A/G/H/I,n14,"5, 10",0
+,,n30,"5, 10",
+,,n260,CA_n260I,
+CA_n14A-n30A-n260J,CA_n14A-n30ACA_n14A-n260A/G/H/I/JCA_n30A-n260A/G/H/I/J,n14,"5, 10",0
+,,n30,"5, 10",
+,,n260,CA_n260J,
+CA_n14A-n30A-n260K,CA_n14A-n30ACA_n14A-n260A/G/H/I/J/KCA_n30A-n260A/G/H/I/J/K,n14,"5, 10",0
+,,n30,"5, 10",
+,,n260,CA_n260K,
+CA_n14A-n30A-n260L,CA_n14A-n30ACA_n14A-n260A/G/H/I/J/K/LCA_n30A-n260A/G/H/I/J/K/L,n14,"5, 10",0
+,,n30,"5, 10",
+,,n260,CA_n260L,
+CA_n14A-n30A-n260M,CA_n14A-n30ACA_n14A-n260A/G/H/I/J/K/L/MCA_n30A-n260A/G/H/I/J/K/L/M,n14,"5, 10",0
+,,n30,"5, 10",
+,,n260,CA_n260M,
+CA_n14A-n66A-n260A,CA_n14A-n66ACA_n14A-n260ACA_n66A-n260A,n14,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,"50, 100, 200, 400",
+CA_n14A-n66A-n260G,CA_n14A-n66ACA_n14A-n260A/GCA_n66A-n260A/G,n14,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260G,
+CA_n14A-n66A-n260H,CA_n14A-n66ACA_n14A-n260A/G/HCA_n66A-n260A/G/H,n14,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260H,
+CA_n14A-n66A-n260I,CA_n14A-n66ACA_n14A-n260A/G/H/ICA_n66A-n260A/G/H/I,n14,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260I,
+CA_n14A-n66A-n260J,CA_n14A-n66ACA_n14A-n260A/G/H/I/JCA_n66A-n260A/G/H/I/J,n14,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260J,
+CA_n14A-n66A-n260K,CA_n14A-n66ACA_n14A-n260A/G/H/I/J/KCA_n66A-n260A/G/H/I/J/K,n14,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260K,
+CA_n14A-n66A-n260L,CA_n14A-n66ACA_n14A-n260A/G/H/I/J/K/LCA_n66A-n260A/G/H/I/J/K/L,n14,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260L,
+CA_n14A-n66A-n260M,CA_n14A-n66ACA_n14A-n260A/G/H/I/J/K/L/MCA_n66A-n260A/G/H/I/J/K/L/M,n14,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260M,
+CA_n14A-n77A-n260A,CA_n14A-n77ACA_n14A-n260ACA_n77A-n260A,n14,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,"50, 100, 200, 400",
+CA_n14A-n77A-n260G,CA_n14A-n77ACA_n14A-n260A/GCA_n77A-n260A/G,n14,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260G,
+CA_n14A-n77A-n260H,CA_n14A-n77ACA_n14A-n260A/G/HCA_n77A-n260A/G/H,n14,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260H,
+CA_n14A-n77A-n260I,CA_n14A-n77ACA_n14A-n260A/G/H/ICA_n77A-n260A/G/H/I,n14,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260I,
+CA_n14A-n77A-n260J,CA_n14A-n77ACA_n14A-n260A/G/H/I/JCA_n77A-n260A/G/H/I/J,n14,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260J,
+CA_n14A-n77A-n260K,CA_n14A-n77ACA_n14A-n260A/G/H/I/J/KCA_n77A-n260A/G/H/I/J/K,n14,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260K,
+CA_n14A-n77A-n260L,CA_n14A-n77ACA_n14A-n260A/G/H/I/J/K/LCA_n77A-n260A/G/H/I/J/K/L,n14,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260L,
+CA_n14A-n77A-n260M,CA_n14A-n77ACA_n14A-n260A/G/H/I/J/K/L/MCA_n77A-n260A/G/H/I/J/K/L/M,n14,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260M,
+CA_n18A-n28A-n257A,CA_n18A-n28ACA_n18A-n257ACA_n28A-n257A,n18,"5, 10, 15",0
+,,n28,"5, 10",
+,,n257,"50, 100, 200, 400",
+CA_n18A-n28A-n257G,CA_n18A-n28ACA_n18A-n257A/G,n18,"5, 10, 15",0
+,,n28,"5, 10",
+,,n257,CA_n257G,
+CA_n18A-n28A-n257H,CA_n18A-n28ACA_n18A-n257A/G/HCA_n28A-n257A/G/H,n18,"5, 10, 15",0
+,,n28,"5, 10",
+,,n257,CA_n257H,
+CA_n18A-n28A-n257I,CA_n18A-n28ACA_n18A-n257A/G/H/ICA_n28A-n257A/G/H/I,n18,"5, 10, 15",0
+,,n28,"5, 10",
+,,n257,CA_n257I,
+CA_n18A-n41A-n257A,CA_n18A-n41ACA_n18A-n257ACA_n41A-n257A,n18,"5, 10, 15",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 80, 90, 100",
+,,n257,"50, 100, 200, 400",
+CA_n18A-n41A-n257G,CA_n18A-n41ACA_n18A-n257A/GCA_n41A-n257A/G,n18,"5, 10, 15",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257G,
+CA_n18A-n41A-n257H,CA_n18A-n41ACA_n18A-n257A/G/HCA_n41A-n257A/G/H,n18,"5, 10, 15",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257H,
+CA_n18A-n41A-n257I,CA_n18A-n41ACA_n18A-n257A/G/H/ICA_n41A-n257A/G/H/I,n18,"5, 10, 15",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257I,
+CA_n18A-n77A-n257A,CA_n18A-n77ACA_n18A-n257ACA_n77A-n257A,n18,"5, 10, 15",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,"50, 100, 200, 400",
+CA_n18A-n77A-n257G,CA_n18A-n77ACA_n18A-n257A/GCA_n77A-n257A/G,n18,"5, 10, 15",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257G,
+CA_n18A-n77A-n257H,CA_n18A-n77ACA_n18A-n257A/G/HCA_n77A-n257A/G/H,n18,"5, 10, 15",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257H,
+CA_n18A-n77A-n257I,CA_n18A-n77ACA_n18A-n257A/G/H/ICA_n77A-n257A/G/H/I,n18,"5, 10, 15",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257I,
+CA_n18A-n77(2A)-n257A,CA_n18A-n77ACA_n18A-n257ACA_n77A-n257A,n18,"5, 10, 15",0
+,,n77,CA_n77(2A),
+,,n257,"50, 100, 200, 400",
+CA_n18A-n77(2A)-n257G,CA_n18A-n77ACA_n18A-n257A/GCA_n77A-n257A/G,n18,"5, 10, 15",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257G,
+CA_n18A-n77(2A)-n257H,CA_n18A-n77ACA_n18A-n257A/G/HCA_n77A-n257A/G/H,n18,"5, 10, 15",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257H,
+CA_n18A-n77(2A)-n257I,CA_n18A-n77ACA_n18A-n257A/G/H/ICA_n77A-n257A/G/H/I,n18,"5, 10, 15",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257I,
+CA_n18A-n78A-n257A,CA_n18A-n78ACA_n18A-n257ACA_n78A-n257A,n18,"5, 10, 15",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,"50, 100, 200, 400",
+CA_n18A-n78A-n257G,CA_n18A-n78ACA_n18A-n257A/GCA_n78A-n257A/G,n18,"5, 10, 15",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257G,
+CA_n18A-n78A-n257H,CA_n18A-n78ACA_n18A-n257A/G/HCA_n78A-n257A/G/H,n18,"5, 10, 15",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257H,
+CA_n18A-n78A-n257I,CA_n18A-n78ACA_n18A-n257A/G/H/ICA_n78A-n257A/G/H/I,n18,"5, 10, 15",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257I,
+CA_n25A-n41A-n257A,CA_n25A-n41ACA_n25A-n257ACA_n41A-n257A,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n41,"5, 10, 15, 20, 25, 30, 35, 40, 45, 50",
+,,n257,"50, 100, 200, 400",
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,See n257 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n41A-n257G,CA_n25A-n41ACA_n25A-n257A/GCA_n41A-n257A/G,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n41,"5, 10, 15, 20, 25, 30, 35, 40, 45, 50",
+,,n257,CA_n257G,
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,CA_n257G,
+CA_n25A-n41A-n258A,CA_n25A-n258ACA_n41A-n258A,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,See n258 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n41A-n258G,CA_n25A-n258A/GCA_n41A-n258A/G,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258G,
+CA_n25A-n41A-n258H,CA_n25A-n258A/G/HCA_n41A-n258A/G/H,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258H,
+CA_n25A-n41A-n258I,CA_n25A-n258A/G/H/ICA_n41A-n258A/G/H/I,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258I,
+CA_n25A-n41A-n258J,CA_n25A-n258A/G/H/I/JCA_n41A-n258A/G/H/I/J,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258J,
+CA_n25A-n41A-n258(2A),CA_n25A-n258ACA_n41A-n258A,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258(2A),
+CA_n25A-n41A-n258(2G),CA_n25A-n258A/GCA_n41A-n258A/G,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258(2G),
+CA_n25A-n41A-n258(A-G),CA_n25A-n258A/GCA_n41A-n258A/G,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258(A-G),
+CA_n25A-n41A-n258(A-H),CA_n25A-n258A/G/HCA_n41A-n258A/G/H,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258(A-H),
+CA_n25A-n41A-n258(A-I),CA_n25A-n258A/G/H/ICA_n41A-n258A/G/H/I,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258(A-I),
+CA_n25A-n41A-n258(A-J),CA_n25A-n258A/G/H/I/JCA_n41A-n258A/G/H/I/J,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258(A-J),
+CA_n25A-n41A-n258(G-H),CA_n25A-n258A/G/HCA_n41A-n258A/G/H,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258(G-H),
+CA_n25A-n41A-n258(G-I),CA_n25A-n258A/G/H/ICA_n41A-n258A/G/H/I,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258(G-I),
+CA_n25A-n41A-n258(G-J),CA_n25A-n258A/G/H/I/JCA_n41A-n258A/G/H/I/J,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n258,CA_n258(G-J),
+CA_n25A-n41A-n260A,CA_n25A-n260ACA_n41A-n260A,n25,"5, 10, 15, 20, 25, 30, 40",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,"50, 100, 200, 400",
+CA_n25A-n41A-n260G,CA_n25A-n260ACA_n41A-n260A,n25,"5, 10, 15, 20, 25, 30, 40",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260G,
+CA_n25A-n41A-n260H,CA_n25A-n260ACA_n41A-n260A,n25,"5, 10, 15, 20, 25, 30, 40",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260H,
+CA_n25A-n41A-n260I,CA_n25A-n260ACA_n41A-n260A,n25,"5, 10, 15, 20, 25, 30, 40",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260I,
+CA_n25A-n41A-n260(2A),CA_n25A-n260ACA_n41A-n260A,n25,"5, 10, 15, 20, 25, 30, 40",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260(2A),
+CA_n25A-n41A-n261A,CA_n25A-n41ACA_n25A-n261ACA_n41A-n261A,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,See n261 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n41A-n261G,CA_n25A-n41ACA_n25A-n261A/GCA_n41A-n261A/G,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,CA_n261G,
+CA_n25A-n41A-n261H,CA_n25A-n41ACA_n25A-n261A/G/HCA_n41A-n261A/G/H,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,CA_n261H,
+CA_n25A-n66A-n257A,CA_n25A-n66ACA_n25A-n257ACA_n66A-n257A,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n66,"5, 10, 15, 20, 25, 30, 35, 40, 45",
+,,n257,"50, 100, 200, 400",
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,See n257 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n66A-n257G,CA_n25A-n66ACA_n25A-n257A/GCA_n66A-n257A/G,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n66,"5, 10, 15, 20, 25, 30, 35, 40, 45",
+,,n257,CA_n257G,
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,CA_n257G,
+CA_n25A-n66A-n260A,CA_n25A-n66ACA_n25A-n260ACA_n66A-n260A,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n66,"5, 10, 15, 20, 25, 30, 35, 40, 45",
+,,n260,"50, 100, 200, 400",
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n260,See n260 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n66A-n260G,CA_n25A-n66ACA_n25A-n260A/GCA_n66A-n260A/G,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n66,"5, 10, 15, 20, 25, 30, 35, 40, 45",
+,,n260,CA_n260G,
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n260,CA_n260G,
+CA_n25A-n66A-n261A,CA_n25A-n66ACA_n25A-n261ACA_n66A-n261A,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,See n261 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n66A-n261G,CA_n25A-n66ACA_n25A-n261A/GCA_n66A-n261A/G,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,CA_n261G,
+CA_n25A-n66A-n261H,CA_n25A-n66ACA_n25A-n261A/G/HCA_n66A-n261A/G/H,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n66,See n66 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,CA_n261H,
+CA_n25A-n71A-n257A,CA_n25A-n71ACA_n25A-n257ACA_n71A-n257A,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n71,"5, 10, 15, 20, 25, 30, 35",
+,,n257,"50, 100, 200, 400",
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,See n257 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n71A-n257G,CA_n25A-n71ACA_n25A-n257A/GCA_n71A-n257A/G,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n71,"5, 10, 15, 20, 25, 30, 35",
+,,n257,CA_n257G,
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,CA_n257G,
+CA_n25A-n71A-n260A,CA_n25A-n71ACA_n25A-n260ACA_n71A-n260A,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n71,"5, 10, 15, 20, 25, 30, 35",
+,,n260,"50, 100, 200, 400",
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n260,See n260 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n71A-n260G,CA_n25A-n71ACA_n25A-n260A/GCA_n71A-n260A/G,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n71,"5, 10, 15, 20, 25, 30, 35",
+,,n260,CA_n260G,
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n260,CA_n260G,
+CA_n25A-n71A-n261A,CA_n25A-n71ACA_n25A-n261ACA_n71A-n261A,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,See n261 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n71A-n261G,CA_n25A-n71ACA_n25A-n261A/GCA_n71A-n261A/G,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,CA_n261G,
+CA_n25A-n71A-n261H,CA_n25A-n71ACA_n25A-n261A/G/HCA_n71A-n261A/G/H,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n71,See n71 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,CA_n261H,
+CA_n25A-n77A-n257A,CA_n25A-n77ACA_n25A-n257ACA_n77A-n257A,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n257,"50, 100, 200, 400",
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n77,See n77 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,See n257 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n77A-n257G,CA_n25A-n77ACA_n25A-n257A/GCA_n77A-n257A/G,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n257,CA_n257G,
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n77,See n77 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n257,CA_n257G,
+CA_n25A-n77(2A)-n257A,CA_n25A-n77ACA_n25A-n257ACA_n77(2A)CA_n77A-n257A,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n77,CA_n77(2A),
+,,n257,"50, 100, 200, 400",
+CA_n25A-n77(2A)-n257G,CA_n25A-n77ACA_n25A-n257A/GCA_n77(2A)CA_n77A-n257A/G,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257G,
+CA_n25A-n77A-n260A,CA_n25A-n77ACA_n25A-n260ACA_n77A-n260A,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,"50, 100, 200, 400",
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n77,See n77 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n260,See n260 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n77A-n260G,CA_n25A-n77ACA_n25A-n260A/GCA_n77A-n260A/G,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260G,
+,,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n77,See n77 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n260,CA_n260G,
+CA_n25A-n77(2A)-n260A,CA_n25A-n77ACA_n25A-n260ACA_n77(2A)CA_n77A-n260A,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n77,CA_n77(2A),
+,,n260,"50, 100, 200, 400",
+CA_n25A-n77(2A)-n260G,CA_n25A-n77ACA_n25A-n260A/GCA_n77(2A)CA_n77A-n260A/G,n25,"5, 10, 15, 20, 25, 30, 35, 40, 45",0
+,,n77,CA_n77(2A),
+,,n260,CA_n260G,
+CA_n25A-n77A-n261A,CA_n25A-n77ACA_n25A-n261ACA_n77A-n261A,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n77,See n77 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,See n261 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n77A-n261G,CA_n25A-n77ACA_n25A-n261A/GCA_n77A-n261A/G,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n77,See n77 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,CA_n261G,
+CA_n25A-n77A-n261H,CA_n25A-n77ACA_n25A-n261A/G/HCA_n77A-n261A/G/H,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n77,See n77 channel bandwidths in 38.101-1 Table 5.3.5-1,
+,,n261,CA_n261H,
+CA_n25A-n77(2A)-n261A,CA_n25A-n77ACA_n25A-n261ACA_n77(2A)-n261A,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n77,CA_n77(2A)_BCS4 and 5,
+,,n261,See n261 channel bandwidths in 38.101-2 Table 5.3.5-1,
+CA_n25A-n77(2A)-n261G,CA_n25A-n77ACA_n25A-n261A/GCA_n77(2A)-n261A/G,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n77,CA_n77(2A)_BCS4 and 5,
+,,n261,CA_n261G,
+CA_n25A-n77(2A)-n261H,CA_n25A-n77ACA_n25A-n261A/G/HCA_n77(2A)-n261A/G/H,n25,See n25 channel bandwidths in 38.101-1 Table 5.3.5-1,4 and 5
+,,n77,CA_n77(2A)_BCS4 and 5,
+,,n261,CA_n261H,
+CA_n26A-n78A-n258A,CA_n26A-n258ACA_n78A-n258ACA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,"50, 100, 200, 400",
+CA_n26A-n78A-n258B,CA_n26A-n258ACA_n78A-n258ACA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258B,
+CA_n26A-n78A-n258C,CA_n26A-n258ACA_n78A-n258ACA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258C,
+CA_n26A-n78A-n258D,CA_n26A-n258ACA_n78A-n258ACA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258D,
+CA_n26A-n78A-n258E,CA_n26A-n258ACA_n78A-n258ACA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258E,
+CA_n26A-n78A-n258F,CA_n26A-n258ACA_n78A-n258ACA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258F,
+CA_n26A-n78A-n258G,CA_n26A-n258A/GCA_n78A-n258A/GCA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258G,
+CA_n26A-n78A-n258H,CA_n26A-n258A/G/HCA_n78A-n258A/G/HCA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258H,
+CA_n26A-n78A-n258I,CA_n26A-n258A/G/H/ICA_n78A-n258A/G/H/ICA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258I,
+CA_n26A-n78A-n258J,CA_n26A-n258A/G/H/ICA_n78A-n258A/G/H/ICA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258J,
+CA_n26A-n78A-n258K,CA_n26A-n258A/G/H/ICA_n78A-n258A/G/H/ICA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258K,
+CA_n26A-n78A-n258L,CA_n26A-n258A/G/H/ICA_n78A-n258A/G/H/ICA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258L,
+CA_n26A-n78A-n258M,CA_n26A-n258A/G/H/ICA_n78A-n258A/G/H/ICA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258M,
+CA_n26A-n78A-n258R2,CA_n26A-n78ACA_n26A-n258A/R2CA_n78A-n258A/R2CA_n258R2,n26,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R2,
+CA_n26A-n78A-n258R3,CA_n26A-n78ACA_n26A-n258A/R2/R3CA_n78A-n258A/R2/R3CA_n258R2/R3,n26,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R3,
+CA_n26A-n78A-n258R4,CA_n26A-n78ACA_n26A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4CA_n258R2/R3/R4,n26,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R4,
+CA_n26A-n78A-n258R5,CA_n26A-n78ACA_n26A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4CA_n258R2/R3/R4,n26,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R5,
+CA_n26A-n78A-n258R6,CA_n26A-n78ACA_n26A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4CA_n258R2/R3/R4,n26,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R6,
+CA_n26A-n78A-n258R7,CA_n26A-n78ACA_n26A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4CA_n258R2/R3/R4,n26,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R7,
+CA_n26A-n78A-n258R8,CA_n26A-n78ACA_n26A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4CA_n258R2/R3/R4,n26,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R8,
+CA_n26A-n78A-n258R9,CA_n26A-n78ACA_n26A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4CA_n258R2/R3/R4,n26,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R9,
+CA_n26A-n78A-n258R10,CA_n26A-n78ACA_n26A-n258A/R2/R3/R4CA_n78A-n258A/R2/R3/R4CA_n258R2/R3/R4,n26,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258R10,
+CA_n28A-n39A-n258A,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,"50, 100, 200, 400",
+CA_n28A-n39A-n258B,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258B,
+CA_n28A-n39A-n258C,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258C,
+CA_n28A-n39A-n258D,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258D,
+CA_n28A-n39A-n258E,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258E,
+CA_n28A-n39A-n258F,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258F,
+CA_n28A-n39A-n258G,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258G,
+CA_n28A-n39A-n258H,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258H,
+CA_n28A-n39A-n258I,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258I,
+CA_n28A-n39A-n258J,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258J,
+CA_n28A-n39A-n258K,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258K,
+CA_n28A-n39A-n258L,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258L,
+CA_n28A-n39A-n258M,CA_n28A-n39ACA_n28A-n258ACA_n39A-n258A,n28,"5, 10, 15, 20",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n258,CA_n258M,
+CA_n28A-n40A-n258A,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20, 25, 30, 40, 50, 60, 80",
+,,n258,"50, 100, 200, 400",
+CA_n28A-n40A-n258B,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20",
+,,n258,CA_n258B,
+CA_n28A-n40A-n258C,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20",
+,,n258,CA_n258C,
+CA_n28A-n40A-n258D,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20",
+,,n258,CA_n258D,
+CA_n28A-n40A-n258E,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20",
+,,n258,CA_n258E,
+CA_n28A-n40A-n258F,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20, 25, 30, 40, 50, 60, 80",
+,,n258,CA_n258F,
+CA_n28A-n40A-n258G,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20, 25, 30, 40, 50, 60, 80",
+,,n258,CA_n258G,
+CA_n28A-n40A-n258H,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20, 25, 30, 40, 50, 60, 80",
+,,n258,CA_n258H,
+CA_n28A-n40A-n258I,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20, 25, 30, 40, 50, 60, 80",
+,,n258,CA_n258I,
+CA_n28A-n40A-n258J,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20, 25, 30, 40, 50, 60, 80",
+,,n258,CA_n258J,
+CA_n28A-n40A-n258K,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20, 25, 30, 40, 50, 60, 80",
+,,n258,CA_n258K,
+CA_n28A-n40A-n258L,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20, 25, 30, 40, 50, 60, 80",
+,,n258,CA_n258L,
+CA_n28A-n40A-n258M,CA_n28A-n40ACA_n28A-n258ACA_n40A-n258A,n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20, 25, 30, 40, 50, 60, 80",
+,,n258,CA_n258M,
+CA_n28A-n41A-n257A,CA_n28A-n41ACA_n28A-n257ACA_n41A-n257A,n28,"5, 10",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 80, 90, 100",
+,,n257,"50, 100, 200, 400",
+CA_n28A-n41A-n257G,CA_n28A-n41ACA_n28A-n257A/GCA_n41A-n257A/G,n28,"5, 10",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257G,
+CA_n28A-n41A-n257H,CA_n28A-n41ACA_n28A-n257A/G/HCA_n41A-n257A/G/H,n28,"5, 10",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257H,
+CA_n28A-n41A-n257I,CA_n28A-n41ACA_n28A-n257A/G/H/ICA_n41A-n257A/G/H/I,n28,"5, 10",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257I,
+CA_n28A-n41A-n258A,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,"50, 100, 200, 400",
+CA_n28A-n41A-n258B,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258B,
+CA_n28A-n41A-n258C,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258C,
+CA_n28A-n41A-n258D,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258D,
+CA_n28A-n41A-n258E,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258E,
+CA_n28A-n41A-n258F,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258F,
+CA_n28A-n41A-n258G,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258G,
+CA_n28A-n41A-n258H,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258H,
+CA_n28A-n41A-n258I,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258I,
+CA_n28A-n41A-n258J,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258J,
+CA_n28A-n41A-n258K,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258K,
+CA_n28A-n41A-n258L,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258L,
+CA_n28A-n41A-n258M,CA_n28A-n41ACA_n28A-n258ACA_n41A-n258A,n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n258,CA_n258M,
+CA_n28A-n77A-n257A,CA_n28A-n77ACA_n28A-n257ACA_n77A-n257A,n28,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,"50, 100, 200, 400",
+CA_n28A-n77A-n257D,CA_n28A-n77ACA_n28A-n257A/DCA_n77A-n257A/D,n28,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257D,
+CA_n28A-n77A-n257G,CA_n28A-n77ACA_n28A-n257A/GCA_n77A-n257A/G,n28,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257G,
+CA_n28A-n77A-n257H,CA_n28A-n77ACA_n28A-n257A/G/HCA_n77A-n257A/G/H,n28,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257H,
+CA_n28A-n77A-n257I,CA_n28A-n77ACA_n28A-n257A/G/H/ICA_n77A-n257A/G/H/I,n28,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257I,
+CA_n28A-n77(2A)-n257A,CA_n28A-n77ACA_n28A-n257ACA_n77A-n257A,n28,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,"50, 100, 200, 400",
+CA_n28A-n77(2A)-n257D,CA_n28A-n77ACA_n28A-n257A/DCA_n77A-n257A/D,n28,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257D,
+CA_n28A-n77(2A)-n257G,CA_n28A-n77ACA_n28A-n257A/GCA_n77A-n257A/G,n28,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257G,
+CA_n28A-n77(2A)-n257H,CA_n28A-n77ACA_n28A-n257A/G/HCA_n77A-n257A/G/H,n28,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257H,
+CA_n28A-n77(2A)-n257I,CA_n28A-n77ACA_n28A-n257A/G/H/ICA_n77A-n257A/G/H/I,n28,"5, 10, 15, 20",0
+,,n77,CA_n77(2A),
+,,n257,CA_n257I,
+CA_n28A-n77(3A)-n257A,CA_n28A-n77ACA_n28A-n257ACA_n77A-n257A,n28,"5, 10, 15, 20",0
+,,n77,CA_n77(3A),
+,,n257,"50, 100, 200, 400",
+CA_n28A-n77(3A)-n257D,CA_n28A-n77ACA_n28A-n257A/DCA_n77A-n257A/D,n28,"5, 10, 15, 20",0
+,,n77,CA_n77(3A),
+,,n257,CA_n257D,
+CA_n28A-n77(3A)-n257G,CA_n28A-n77ACA_n28A-n257A/GCA_n77A-n257A/G,n28,"5, 10, 15, 20",0
+,,n77,CA_n77(3A),
+,,n257,CA_n257G,
+CA_n28A-n77(3A)-n257H,CA_n28A-n77ACA_n28A-n257A/G/HCA_n77A-n257A/G/H,n28,"5, 10, 15, 20",0
+,,n77,CA_n77(3A),
+,,n257,CA_n257H,
+CA_n28A-n77(3A)-n257I,CA_n28A-n77ACA_n28A-n257A/G/H/ICA_n77A-n257A/G/H/I,n28,"5, 10, 15, 20",0
+,,n77,CA_n77(3A),
+,,n257,CA_n257I,
+CA_n28A-n78A-n257A,CA_n28A-n78ACA_n28A-n257ACA_n78A-n257A,n28,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,"50, 100, 200, 400",
+CA_n28A-n78A-n257D,CA_n28A-n78ACA_n28A-n257A/DCA_n78A-n257A/D,n28,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257D,
+CA_n28A-n78A-n257G,CA_n28A-n78ACA_n28A-n257A/GCA_n78A-n257A/G,n28,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257G,
+CA_n28A-n78A-n257H,CA_n28A-n78ACA_n28A-n257A/G/HCA_n78A-n257A/G/H,n28,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257H,
+CA_n28A-n78A-n257I,CA_n28A-n78ACA_n28A-n257A/G/H/ICA_n78A-n257A/G/H/I,n28,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n257,CA_n257I,
+CA_n28A-n78A-n258A,CA_n28A-n258ACA_n78A-n258ACA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,"50, 100, 200, 400",
+CA_n28A-n78A-n258B,CA_n28A-n258ACA_n78A-n258ACA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258B,
+CA_n28A-n78A-n258C,CA_n28A-n258ACA_n78A-n258ACA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258C,
+CA_n28A-n78A-n258D,CA_n28A-n258ACA_n78A-n258ACA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258D,
+CA_n28A-n78A-n258E,CA_n28A-n258ACA_n78A-n258ACA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258E,
+CA_n28A-n78A-n258F,CA_n28A-n258ACA_n78A-n258ACA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258F,
+CA_n28A-n78A-n258G,CA_n28A-n258A/GCA_n78A-n258A/GCA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258G,
+CA_n28A-n78A-n258H,CA_n28A-n258A/G/HCA_n78A-n258A/G/HCA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258H,
+CA_n28A-n78A-n258I,CA_n28A-n258A/G/H/ICA_n78A-n258A/G/H/ICA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258I,
+CA_n28A-n78A-n258J,CA_n28A-n258A/G/H/ICA_n78A-n258A/G/H/ICA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258J,
+CA_n28A-n78A-n258K,CA_n28A-n258A/G/H/ICA_n78A-n258A/G/H/ICA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258K,
+CA_n28A-n78A-n258L,CA_n28A-n258A/G/H/ICA_n78A-n258A/G/H/ICA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258L,
+CA_n28A-n78A-n258M,CA_n28A-n258A/G/H/ICA_n78A-n258A/G/H/ICA_n28A-n78A,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n258,CA_n258M,
+CA_n28A-n79A-n257A,CA_n28A-n79ACA_n28A-n257ACA_n79A-n257A,n28,"5, 10, 15, 20, 30",0
+,,n79,"40, 50, 60, 80, 100",
+,,n257,"50, 100, 200, 400",
+CA_n28A-n79A-n257G,CA_n257GCA_n28A-n79ACA_n28A-n257A/GCA_n79A-n257A/G,n28,"5, 10, 15, 20, 30",0
+,,n79,"40, 50, 60, 80, 100",
+,,n257,CA_n257G,
+CA_n28A-n79A-n257H,CA_n257G/HCA_n28A-n79ACA_n28A-n257A/G/HCA_n79A-n257A/G/H,n28,"5, 10, 15, 20, 30",0
+,,n79,"40, 50, 60, 80, 100",
+,,n257,CA_n257H,
+CA_n28A-n79A-n257I,CA_n257G/H/ICA_n28A-n79ACA_n28A-n257A/G/H/ICA_n79A-n257A/G/H/I,n28,"5, 10, 15, 20, 30",0
+,,n79,"40, 50, 60, 80, 100",
+,,n257,CA_n257I,
+CA_n30A-n66A-n260A,CA_n30A-n66ACA_n30A-n260ACA_n66A-n260A,n30,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,"50, 100, 200, 400",
+CA_n30A-n66A-n260G,CA_n30A-n66ACA_n30A-n260A/GCA_n66A-n260A/G,n30,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260G,
+CA_n30A-n66A-n260H,CA_n30A-n66ACA_n30A-n260A/G/HCA_n66A-n260A/G/H,n30,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260H,
+CA_n30A-n66A-n260I,CA_n30A-n66ACA_n30A-n260A/G/H/ICA_n66A-n260A/G/H/I,n30,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260I,
+CA_n30A-n66A-n260J,CA_n30A-n66ACA_n30A-n260A/G/H/I/JCA_n66A-n260A/G/H/I/J,n30,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260J,
+CA_n30A-n66A-n260K,CA_n30A-n66ACA_n30A-n260A/G/H/I/J/KCA_n66A-n260A/G/H/I/J/K,n30,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260K,
+CA_n30A-n66A-n260L,CA_n30A-n66ACA_n30A-n260A/G/H/I/J/K/LCA_n66A-n260A/G/H/I/J/K/L,n30,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260L,
+CA_n30A-n66A-n260M,CA_n30A-n66ACA_n30A-n260A/G/H/I/J/K/L/MCA_n66A-n260A/G/H/I/J/K/L/M,n30,"5, 10",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n260,CA_n260M,
+CA_n30A-n77A-n260A,CA_n30A-n77ACA_n30A-n260ACA_n77A-n260A,n30,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,"50, 100, 200, 400",
+CA_n30A-n77A-n260G,CA_n30A-n77ACA_n30A-n260A/GCA_n77A-n260A/G,n30,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260G,
+CA_n30A-n77A-n260H,CA_n30A-n77ACA_n30A-n260A/G/HCA_n77A-n260A/G/H,n30,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260H,
+CA_n30A-n77A-n260I,CA_n30A-n77ACA_n30A-n260A/G/H/ICA_n77A-n260A/G/H/I,n30,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260I,
+CA_n30A-n77A-n260J,CA_n30A-n77ACA_n30A-n260A/G/H/I/JCA_n77A-n260A/G/H/I/J,n30,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260J,
+CA_n30A-n77A-n260K,CA_n30A-n77ACA_n30A-n260A/G/H/I/J/KCA_n77A-n260A/G/H/I/J/K,n30,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260K,
+CA_n30A-n77A-n260L,CA_n30A-n77ACA_n30A-n260A/G/H/I/J/K/LCA_n77A-n260A/G/H/I/J/K/L,n30,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260L,
+CA_n30A-n77A-n260M,CA_n30A-n77ACA_n30A-n260A/G/H/I/J/K/L/MCA_n77A-n260A/G/H/I/J/K/L/M,n30,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n260,CA_n260M,
+CA_n39A-n40A-n258A,CA_n39A-n40ACA_n39A-n258ACA_n40A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n40,"5, 10, 15, 20, 25, 30, 40, 50, 60, 80, 100",
+,,n258,"50, 100, 200, 400",
+CA_n39A-n41A-n258A,CA_n39A-n41ACA_n39A-n258ACA_n41A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n41,"10, 15, 20, 30, 40, 50, 60, 80, 90, 100",
+,,n258,"50, 100, 200, 400",

@@ -1,0 +1,20 @@
+Table A.9A.1.1.1.1-4: NR Uu specific test parameters for Cell 1Parameter,,Unit,Value,Comment
+NR Uu RF channel number,,,1,RF channel of Cell 1.
+SSB configuration,Uu_conf1,,SSB.1 FR1,SSB configuration of Cell 1.
+,Uu_conf2,,SSB.1 FR1,
+,Uu_conf3,,SSB.2 FR1,
+SMTC configuration,Uu_conf1,,SMTC.2,SMTC configuration of Cell 1.
+,Uu_conf2,,SMTC.1,
+,Uu_conf3,,SMTC.1,
+PDSCH RMC configuration,Uu_conf1,,SR.1.1 FDD,
+,Uu_conf2,,SR.1.1 TDD,
+,Uu_conf3,,SR.2.1 TDD,
+RMSI CORESET RMC configuration,Uu_conf1,,CR.1.1 FDD,As specified in clause A.3.1.2.1
+,Uu_conf2,,CR.1.1 TDD,
+,Uu_conf3,,CR.2.1 TDD,
+Dedicated CORESET RMC configuration,Uu_conf1,,CCR.1.1 FDD,
+,Uu_conf2,,CCR.1.1 TDD,
+,Uu_conf3,,CCR.2.1 TDD,
+Initial BWP configuration,"Uu_conf1,2,3",,DLBWP.0.1 ULBWP.0.1,
+Active DL BWP configuration,"Uu_conf1,2,3",,DLBWP.1.1,
+Active UL BWP configuration,"Uu_conf1,2,3",,ULBWP.1.1,

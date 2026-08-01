@@ -1,0 +1,17 @@
+Parameter,Unit,Value,,,,
+Channel bandwidth,MHz,53,10,20,30,40
+Subcarrier spacing,kHz,15,15,15,15,15
+Subchannel size,,12,10,15,10,12
+Allocated resource blocks,,24,50,105,160,216
+MCS Index,,4,4,4,4,4
+MCS Table for TBS determination,64QAM,,,,,
+Modulation,,QPSK,QPSK,QPSK,QPSK,QPSK
+Transport Block Size,,1608,3624,7936,12296,16896
+Transport block CRC,Bits,16,16,24,24,24
+LDPC base graph,,2,2,1,1,1
+Number of Code Blocks per Slot,,1,1,1,2,3
+Beta offset for 2nd stage SCI,,2.25,2.25,2.25,2.25,2.25
+value when  2nd stage SCI rate matchγ,,7,1,1,1,1
+Binary Channel Bits per Slot,,5160,12036,26556,41076,55860
+Max. Throughput averaged over 100ms,Mbps,0.1608,0.3624,0.7936,1.2296,1.6896
+"NOTE 1:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).NOTE 2: is the number of vacant resource elements in the resource block to which the last coded symbol of the 2nd-stage SCI belongs.NOTE 3:  The CBW is only applicable for PS UE in n14.γ",,,,,,

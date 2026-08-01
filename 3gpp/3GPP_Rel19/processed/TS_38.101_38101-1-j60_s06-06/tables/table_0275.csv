@@ -1,0 +1,12 @@
+Pre-coding,Modulation,RB Allocation,,
+,,Full2 (dB),Partial3 (dB),Exception for 100MHz Full5 (dB)
+DFT-s-OFDM,Pi/2 BPSK4,≤ [2.0],≤ [3.0],
+,QPSK,≤ [2.0],≤ [3.0],
+,16 QAM,≤ [2.5],≤ [3.0],
+,64 QAM,≤ [2.5],≤ [3.5],
+,256 QAM,≤ [4.5],≤ [4.5],
+CP-OFDM,QPSK,≤ [3.5],≤ [4.0],≤ [5.0]
+,16 QAM,≤ [3.5],≤ [4.0],≤ [5.0]
+,64 QAM,≤ [4.5],≤ [4.5],
+,256 QAM,≤ [6.5],≤ [6.5],
+NOTE 1:The MPR shall apply to all SCS in all active 20 MHz sub-bands contiguously allocated in the channel. NOTE 2: The MPR for Full RB allocation applies to all RB’s in all transmitted 20 MHz or larger channels that are fully allocated or all RB’s in all transmitted sub-bands for wideband operation that are fully allocated excluding the wideband configurations of Table 6.2F.2-2.NOTE 3: The MPR for Partial RB allocation applies to interlaced allocations with uplink resource allocation type 2 as specified in TS 38.214 [10] or transmitted sub-bands for wideband operation are transmitted according to the wideband configurations of Table 6.2F.2-2.NOTE 4:Applicable to Pi/2-BPSK modulation when IE powerBoostPi2BPSK is set to 0.NOTE 5:Exception for 100MHz Full RB allocation MPR applies when all RB’s in all sub-bands for 100MHz wideband operation are fully allocated and sub-bands are transmitted according to the wideband configurations of Table 6.2F.2-2.,,,,

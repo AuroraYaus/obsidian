@@ -1,0 +1,5 @@
+"Condition NOTE1,2",TSSB_measurement_period_irat
+No DRX,"max(200ms, ceil(8  Kp)  max(TLB, SMTC period))  Nfreq"
+DRX cycle < 320ms,"max(200ms, ceil(8  Kp  M)  max(TLB, SMTC period, DRX cycle))  Nfreq"
+DRX cycle ≥ 320ms,"ceil(4  Kp  M)  max(TLB, DRX cycle)  Nfreq"
+"NOTE 1: DRX or non DRX requirements apply according to the conditions described in section 5.NOTE 2:   M = 1 when SMTC < = 40ms, and M = 1.5 when SMTC > 40ms",

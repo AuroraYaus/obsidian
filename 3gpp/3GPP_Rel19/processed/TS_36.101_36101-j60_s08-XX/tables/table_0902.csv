@@ -1,0 +1,3 @@
+Test number,Bandwidth,Reference Channel,Propagation Condition,Antenna configuration and correlation Matrix,Reference value for single PBCH TTI,,Reference value for multiple PBCH TTI,
+,,,,,Pm-bch-s (%),SNR (dB),Pm-bch-m (%),SNR (dB)
+1,10 MHz,R.22,EPA1,2 x 1 Low,1,-2.8,1,-12.9

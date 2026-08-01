@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Condition NOTE1</td>
+    <td>TSSB_time_index_irat</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>max(120ms, ceil(3  Kp)  max(TLB, SMTC period))  Nfreq</td>
+  </tr>
+  <tr>
+    <td>DRX cycle ≤ 320ms</td>
+    <td>max(120ms, ceil(3  Kp  1.5)  max(TLB, SMTC period, DRX cycle))  Nfreq</td>
+  </tr>
+  <tr>
+    <td>DRX cycle &gt; 320ms</td>
+    <td>ceil(3  Kp)  max(TLB, DRX cycle)  Nfreq</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1: DRX or non DRX requirements apply according to the conditions described in section 5.</td>
+  </tr>
+</table>

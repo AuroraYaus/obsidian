@@ -1,0 +1,4 @@
+MCS probability,,,Rank probability,
+MCS5,MCS14,MCS25,Rank 1,Rank 2
+50%,25%,25%,80%,20%
+Note 1:The MCS and rank should follow the probability indicated in the table randomly per UE per TTI.Note 2:The probabilities for MCS and rank configuration are used for both 1st and 2nd interfering cells. The MCS and rank configurations are independent for each interfering cell.,,,,

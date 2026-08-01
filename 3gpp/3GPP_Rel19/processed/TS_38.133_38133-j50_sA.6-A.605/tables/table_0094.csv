@@ -1,0 +1,18 @@
+Parameter,,Unit,Value,Comment
+Initial conditions,Active cell,,Cell 1,PCell on RF channel number 1
+,Neighbouring cell,,Cell 2,Neighbour cell on RF channel number 2
+Final condition,Active cell,,Cell 2,PCell on RF channel number 2
+,Neighbouring cell,,Cell 1,Neighbour cell on RF channel number 1
+A3-Offset,,dB,-6,
+Hysteresis,,dB,0,
+Time To Trigger,,s,0,
+Filter coefficient,,,0,L3 filtering is not used
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+Time offset between cells,,s,33,Synchronous cells
+DRX,,,OFF,
+Measurement gap pattern Id,,,#0,Gaps are configured before T2.
+T1,,s,5,
+T2,,s,<5,
+T3,,s,<0.5,
+T4,,ms,10+Tinterrupt2,Tinterrupt2 as defined in Table 6.1.3.2.2-7 for synchronous DAPS HO
+T5,,ms,100,

@@ -1,0 +1,21 @@
+Parameter,Unit,Value,Comment
+PDSCH parameters (E-UTRAN FDD),,DL Reference Measurement Channel R.0 FDD,As specified in clause A.3.1.1.1.
+PCFICH/PDCCH/PHICH parameters(E-UTRAN FDD),,DL Reference Measurement Channel R.6 FDD,As specified in clause A.3.1.2.1.
+Gap Pattern Id,,0,As specified in TS 36.133 clause 8.1.2.1.
+Active cell,,Cell 1,Cell 1 is on E-UTRA RF channel number 1.
+Neighbour cells,,"Cell 2, 3",Cell 2 is on E-UTRA RF channel number 2.Cell 3 is on Absolute RF Channel Number 3 (GSM cell).
+CP length,,Normal,Applicable to cell 1 and cell 2
+E-UTRA Channel Bandwidth (BWchannel),MHz,10,
+E-UTRAN FDD measurement quantity,,RSRP,
+Hysteresis,dB,0,Parameter for A3 and B2 event
+A3-Offset,dB,-6,
+TimeToTrigger,s,0,
+Filter coefficient,,0,L3 filtering is not used
+DRX,,OFF,OFF
+Time offset between E-UTRAN FDD cells,ms,3 ms,Asynchronous cells
+Inter-RAT (GSM) measurement quantity,,GSM Carrier RSSI,
+b2-Threshold-E-UTRA,dBm,-83,RSRP threshold for event B2. This is the threshold for E-UTRA in the B2 configuration. E-UTRA PCell RSRP is below this throughout the test to account for measurement accuracy and fading
+b2-Threshold-GERAN,dBm,-80,GSM Carrier RSSI threshold for event B2.
+Monitored GSM cell list size,,6 GSM neighbours including ARFCN 3,List of GSM cells provided before T2 starts.
+T1,s,5,
+T2,s,10,

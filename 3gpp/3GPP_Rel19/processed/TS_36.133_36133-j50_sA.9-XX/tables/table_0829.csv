@@ -1,0 +1,10 @@
+Parameter,E-UTRA operating band groups Note 3,MinimumSCH_RP Note 1,SCH Ês/Iot
+,,dBm/15kHz,dB
+Conditions,"FDD-M1_A, TDD-M1_A",-136,-15
+,FDD-M1_B,-126.5,
+,FDD-M1_D,-134.5,
+,"FDD-M1_E, TDD-M1_E",-134,
+,FDD-M1_F,-133.5 Note 2,
+,FDD-M1_G,-133,
+,FDD-M1_N,-129.5,
+"NOTE 1:This condition level is increased by ∆>0, when applicable, as described in Sections B.4.2.NOTE 2: The condition is -125 dBm/15kHz when the carrier frequency of the assigned E-UTRA channel bandwidth is within 865-894 MHz.NOTE 3:E-UTRA operating band groups are as defined in Section 3.5.",,,

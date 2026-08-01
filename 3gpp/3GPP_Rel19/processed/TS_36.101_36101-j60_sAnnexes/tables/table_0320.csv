@@ -1,0 +1,16 @@
+Information Element,,,Value
+discRxPool,cp-Len,,Normal
+,discPeriod,,rf32
+,numRetx,,0
+,numRepetition,,1
+,tf-ResourceConfig,prb-Num,12
+,,prb-Start,0
+,,prb-End,23
+,,offsetIndicator,163
+,,subframeBitmap,100000000000000000000000000000000000000000
+,txParameters,,not present
+,rxParameters,,not present
+discTxPoolCommon,,,not present
+discTxPowerInfo,,,not present
+SL-SyncConfig,,,not present
+discInterFreqList,,,not present

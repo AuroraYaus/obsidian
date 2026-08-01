@@ -1,0 +1,8 @@
+Parameter,Unit,Value,Comment
+RF Channel Number,,1,One NR radio channel is used for this test for PCell and SDL SCell
+SCell measurement cycle (measCycleSCell),ms,20,
+switchingPattern-r19,,00000 00000 00000 0011111111 11000 00000 00000,Pattern duration is 40 ms. SCell SSB is transmitted every 20 ms so that 50 % of the SSBs overlap with SCell active periods.
+gapDurationPCelltoSCell-r19,symbols,3,
+gapDurationSCelltoPCell-r19,symbols,4,
+SSB configuration,,SSB.23 FR1,
+SMTC configuration,,SMTC.14,

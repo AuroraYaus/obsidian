@@ -1,0 +1,4 @@
+DRX cycle,TSSB_time_index_intra
+No DRX,Ceil(3 x Kp) x measCyclePSCell x CSSFintra
+DRX cycle≤ 320 ms,"Ceil(3 x Kp) x max(measCyclePSCell, 1.5xDRX cycle) x CSSFintra"
+DRX cycle> 320 ms,"Ceil(3 x Kp) x max(measCyclePSCell, DRX cycle) x CSSFintra"

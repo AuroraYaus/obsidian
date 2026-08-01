@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <td>eDRX_IDLE cycle length [s]</td>
+    <td>DRX cycle length [s]</td>
+    <td>PTW length [s] (number of 1.28 s periods)</td>
+    <td>Scaling Factor (N1) Note1</td>
+    <td>Tdetect,NR_Inter_RedCap_Relax [s] (number of DRX cycles)</td>
+    <td>Tmeasure,NR_Inter_RedCap_Relax [s] (number of DRX cycles)</td>
+    <td>Tevaluate,NR_Inter_RedCap_Relax [s] (number of DRX cycles)</td>
+  </tr>
+  <tr>
+    <td rowspan="4">20.48 ≤  eDRX_IDLE cycle length ≤[163.84]</td>
+    <td>0.32</td>
+    <td>≥15.36 (12)</td>
+    <td>8</td>
+    <td rowspan="4">K1 x (23 x N1 x K1)eDRX_cycle_length×23×N1PTW/DRX_cycle_length</td>
+    <td>0.32 x N1 x K1 (1 x N1 x K1)</td>
+    <td>0.64 x N1 x K1 (2 x N1 x K1)</td>
+  </tr>
+  <tr>
+    <td>0.64</td>
+    <td>≥19.2 (15)</td>
+    <td>5</td>
+    <td>0.64 x N1 x K1 (1 x N1 x K1)</td>
+    <td>1.28 x N1 x K1 (2 x N1 x K1)</td>
+  </tr>
+  <tr>
+    <td>1.28</td>
+    <td>≥30.72 (24)</td>
+    <td>4</td>
+    <td>1.28 x N1 x K1 (1 x N1 x K1)</td>
+    <td>2.56 x N1 x K1 (2 x N1 x K1)</td>
+  </tr>
+  <tr>
+    <td>2.56</td>
+    <td>40.96 (32)</td>
+    <td>3</td>
+    <td>20.48(8)</td>
+    <td>40.96(16)</td>
+  </tr>
+  <tr>
+    <td colspan="7">NOTE 1: Applies for RedCap UE of all supporting FR2 power classes.NOTE 2: The number of DRX cycles in this table corresponds to the DRX cycles within PTWs.NOTE 3: The eDRX_IDLE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 4: The lower bound of PTW length is derived based on .NOTE 5:The measurement shall not be performed across PTW’s. In this case the measurement is performed in the next available PTW.NOTE 6:The evaluation shall not be performed across PTW’s.NOTE 7:K1 = 3 is the measurement relaxation factor applicable for UE fulfilling the lowMobilityEvaluation criterion [2].Tevaluate,NR_Inter_RedCap_Relax*DRX_cycle1.28*1.28</td>
+  </tr>
+</table>

@@ -1,0 +1,5 @@
+Configuration,"TEvaluate_out_CSI-RS,RedCap (ms)","TEvaluate_in_CSI-RS,RedCap (ms)"
+no DRX,"Max(400, Ceil(Mout,RedCap×P)×TCSI-RS)","Max(100, Ceil(Min,RedCap×P) × TCSI-RS)"
+DRX ≤ 320 ms,"Max(400, Ceil(1.5×Mout,RedCap ×P)× Max(TDRX, TCSI-RS))","Max(100, Ceil(1.5×Min,RedCap×P)× Max(TDRX, TCSI-RS))"
+DRX > 320 ms,"Ceil(Mout,RedCap ×P) × TDRX","Ceil(Min,RedCap ×P) × TDRX"
+"NOTE:TCSI-RS is the periodicity of the CSI-RS resource configured for RLM. The requirements in this table apply for TCSI-RS equal to 5 ms, 10 ms, 20 ms or 40 ms. TDRX is the DRX cycle length.",,

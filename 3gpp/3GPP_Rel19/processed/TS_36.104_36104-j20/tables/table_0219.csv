@@ -1,0 +1,10 @@
+Number of TX antennas (Note 1),Number of RX antennas (Note 1),Propagation conditions and correlation matrix (Annex B) (Note 2),,,DIP set,FRC(Annex A),Fraction of  maximum throughput,SINR [dB] (Note 3)
+,,Tested signal,Interferer 1,Interferer 2,,,,
+1,2,EPA 5 Low,ETU 5 Low,N/A,Set 2,A12-1,70%,-4.8
+,,EVA 70 Low,ETU 70 Low,N/A,Set 1*,A12-1,70%,-2.0
+,4,EPA 5 Low,ETU 5 Low,ETU 5 Low,Set 2,A13-1,70%,-4.1
+,,EVA 70 Low,ETU 70 Low,ETU 70 Low,Set 1*,A13-1,70%,-0.1
+,8,EPA 5 Low,ETU 5 Low,ETU 5 Low,Set 2,A4-3,70%,-4.7
+,,EVA 70 Low,ETU 70 Low,ETU 70 Low,Set 1*,A4-3,70%,0.0
+Note*:Not applicable for Local Area BS and Home BS.,,,,,,,,
+"Note 1:Antenna configuration applies for each of the tested signal, interferer 1 and interferer 2.Note 2:The propagation conditions for the tested signal, interferer 1 and interferer 2 are statistically independent.Note 3:SINR corresponds to  of the tested signal as defined in clause 8.1.",,,,,,,,

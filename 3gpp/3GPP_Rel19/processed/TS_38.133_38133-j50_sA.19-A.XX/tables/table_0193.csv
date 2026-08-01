@@ -1,0 +1,7 @@
+Parameter,Test configuration,Unit,Cell 1,,,Cell 2,,
+,,,T1,T2,T3,T1,T2,T3
+Satellite information,"Config 1,3",,SSC.1,,,NSC.1,,
+,"Config 2,4",,SSC.2,,,NSC.2,,
+Koffset,"Config 1,3",ms,239,,,239,,
+,"Config 2,4",,4,,,4,,
+Antenna Configuration,1Rx,,1x1,,,,,

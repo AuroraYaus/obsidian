@@ -1,0 +1,5 @@
+NR SLCA band,Parameter,Units,Frequency,,
+,,,Range 1,Range 2,Range 3
+,PInterferer,dBm,-44,-30,-15
+V2X_47B,FInterferer (CW),MHz,-60 < f – FDL_low < -30or30 < f – FDL_high < 60,-85 < f – FDL_low ≤ -60or60 ≤ f – FDL_high < 85,1 ≤ f ≤ FDL_low – 85orFDL_high + 85 ≤ f≤ 12750
+NOTE 1:The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 6000 MHz.NOTE 2:The requirement is applied for multi-carrier intra-band concurrent receptions when 2 carrier transmissions are activated at the same time.,,,,,

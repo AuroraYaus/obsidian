@@ -1,0 +1,19 @@
+Field,Value,,,,Comment
+Parameters not per CE Levels,,,,,
+rsrp-ThresholdsPrach,"{23,37,47}",,,,"Corresponding to {-117, -103, -93} dBm as defined in Section 9.1.21.5"
+mpdcch-startSF-CSS-RA,v1,,,,
+referenceSignalPower,-5 dBm/15 KHz,,,,As defined in clause 6.3.2 in TS 36.331.
+maxHARQ-Msg3Tx,4,,,,As defined in table 5.7.1-2 in TS 36.211
+Backoff Parameter Index,2,,,,As defined in table 7.2-1 in TS 36.321
+Configured UE transmitted power (),Maximum value allowed by the applicable UE power class,,,,As defined in clause 6.2.5 in TS 36.101
+Parameters per PRACH CE Levels,,,,,
+CE Level,Level 0,Level 1,Level 2,Level 3,
+prach-ConfigIndex,53,53,53,53,As defined in table 5.7.1-2 in TS 36.211
+prach-FreqOffset,0,0,0,0,
+prach-StartingSubframe,sf2,sf4,sf16,sf64,
+maxNumPreambleAttempt,n3,n5,n7,n10,
+numRepetitionPerPreambleAttempt,n1,n4,n16,n64,
+mpdcch-NarrowbandsToMonitor,2,2,2,2,
+mpdcch-NumRepetition-RA,r8,r8,r128,r128,
+prach-HoppingConfig,Off,Off,Off,Off,
+Note 1:See Clause 6.3.2 in TS 36.331 for further information on the parameters in this table.,,,,,

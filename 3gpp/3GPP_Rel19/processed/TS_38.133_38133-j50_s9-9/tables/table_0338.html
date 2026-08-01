@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Configuration</td>
+    <td>TL1-RSRP_Measurement_Period_SSB_CCA (ms)</td>
+  </tr>
+  <tr>
+    <td>non-DRX</td>
+    <td>max(TReport, ceil((M+L1)*P)*TSSB)</td>
+  </tr>
+  <tr>
+    <td>DRX cycle ≤ 320 ms</td>
+    <td>max(TReport, ceil(1.5*(M+L1)*P)*max(TDRX,TSSB))</td>
+  </tr>
+  <tr>
+    <td>DRX cycle &gt; 320 ms</td>
+    <td>ceil((M+L1)*P)*TDRX</td>
+  </tr>
+  <tr>
+    <td colspan="2">Note 1:TSSB = ssb-periodicityServingCell is the periodicity of the SSB-Index configured for L1-RSRP measurement. TDRX is the DRX cycle length. TReport is configured periodicity for reporting.Note 2:L1=0 if higher layer parameter timeRestrictionForChannelMeasurement is configured. Otherwise, when DRX is not configured L1 is the number of SSBs not available at the UE during TL1-RSRP_Measurement_Period_SSB_CCA, and when DRX is configured L1 is the number of DRX cycles in which at least one SSB is not available at the UE during TL1-RSRP_Measurement_Period_SSB_CCA, where L1 ≤ L1max. The UE is not required to determine the availability of SSB occasions more frequent thanOnce per Max(TReport, P * TSSB) if no DRX is used, Once per Max(TReport, Ceil(1.5 * P) * Max(TDRX, TSSB)) if DRX cycle ≤ 320ms, Once per P * TDRX if DRX cycle &gt; 320ms.Note 3:L1max =7 for Max(TDRX,TSSB) ≤ 40ms assuming TDRX=0 for non-DRX,L1max =5 for 40ms &lt; Max(TDRX, TSSB) ≤ 320ms, L1max =3 for TDRX &gt; 320ms.</td>
+  </tr>
+</table>

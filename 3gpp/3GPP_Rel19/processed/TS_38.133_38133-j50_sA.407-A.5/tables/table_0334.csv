@@ -1,0 +1,14 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,1,One E-UTRA radio channel is used for this test
+NR RF Channel Number,,2,One NR radio channel is used for this test
+Active PCell,,Cell 1,PCell on RF channel number 1.
+Active PSCell,,Cell 2,PSCell on RF channel number 2.
+Cell with addiitonal PCI,,Cell 3,Cell on RF channel number 2.
+CP length,,Normal,
+DRX,,OFF,For both PCell and PSCell
+Cell-individual offset for cells on RF channel number 1,dB,0,Individual offset for cells on PCC.
+Cell-individual offset for cells on RF channel number 2,dB,0,Individual offset for cells on PSCC.
+Cell2 timing offset to Cell 1,s,3,Synchronous EN-DC
+Cell3 timing offset to Cell 2,s,0,
+T1,s,0.2,
+T2,s,2,

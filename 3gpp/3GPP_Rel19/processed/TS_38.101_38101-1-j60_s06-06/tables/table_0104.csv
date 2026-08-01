@@ -1,0 +1,7 @@
+Inter-band ULCApower class(NOTE 1),Uplink bands of same power class in inter-band UL CA,,Uplink bands of different power class in inter-band UL CA,
+,One band,Other band,One band,Other band
+Class 3,Class 3,Class 3,Class 3,Class 5
+Class 2,Class 3,Class 3,Class 2,Class 5
+,Class 2,Class 2,Class 2,Class 3
+Class 1.5,Class 2,Class 2,,
+NOTE 1:Indicated by powerClass/powerClass-v1610.,,,,

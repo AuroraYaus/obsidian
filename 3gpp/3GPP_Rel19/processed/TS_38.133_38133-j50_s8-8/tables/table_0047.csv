@@ -1,0 +1,5 @@
+Configuration,TEvaluate_out_SSB (ms),TEvaluate_in_SSB (ms)
+no DRX,"Max(200, Ceil(20  P)  TSSB)","Max(100, Ceil(5 ´ P) ´ TSSB)"
+DRX cycle≤320 ms,"Max(200, Ceil(30  P)  Max(TDRX,TSSB))","Max(100, Ceil(7.5 ´ P) ´ Max(TDRX,TSSB))"
+DRX cycle>320 ms,Ceil(20  P)  TDRX,Ceil(5 ´ P) ´ TDRX
+NOTE:TSSB is the periodicity of the SSB configured for RLM. TDRX is the DRX cycle length.,,

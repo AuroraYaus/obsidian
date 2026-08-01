@@ -1,0 +1,69 @@
+Parameter,,,Unit,Test 1,,
+,,,,Cell 1,Cell 2,
+Cell ID,,,,489,0,
+SSB ARFCN,,,,freq1,,
+Duplex mode,,Config 1,,FDD,,
+,,"Config 2,3",,TDD,,
+TDD configuration,,Config 1,,Not Applicable,,
+,,Config 2,,TDDConf.1.1,,
+,,Config 3,,TDDConf.2.1,,
+BWchannel,,Config 1,MHz,"20: NPRB,c = 106",,
+,,Config 2,,"20: NPRB,c = 106",,
+,,Config 3,,"50: NPRB,c = 133",,
+BWP BW,,Config 1,,"20: NPRB,c = 106",,
+,,Config 2,,"20: NPRB,c = 106",,
+,,Config 3,,"50: NPRB,c = 133",,
+Downlink initial BWP configuration,,,,DLBWP.0.1,,
+Uplink initial BWP configuration,,,,ULBWP.0.1,,
+TRS configuration,,Config 1,,TRS.1.1 FDD,,NA
+,,Config 2,,TRS.1.1 TDD,,NA
+,,Config 3,,TRS.1.2 TDD,,NA
+DRX Cycle length,,"Config 1,2,3",ms,1280,,
+PDSCH Reference measurement channel,,Config 1,,SR.1.1 FDD,,-
+,,Config 2,,SR.1.1 TDD,,
+,,Config 3,,SR2.1 TDD,,
+RMSI CORESET Reference Channel,,Config 1,,CR.1.1 FDD,,-
+,,Config 2,,CR.1.1 TDD,,
+,,Config 3,,CR2.1 TDD,,
+Control channel RMC,,Config 1,,CCR.1.1 FDD,,-
+,,Config 2,,CCR.1.1 TDD,,
+,,Config 3,,CCR2.1 TDD,,
+PRS configuration,,Config 1,,PRS.1.4 FR1,,PRS.1.4 FR1
+,,Config 2,,PRS.1.4 FR1,,PRS.1.4 FR1
+,,Config 3,,PRS.2.4 FR1,,PRS.2.4 FR1
+PRS bandwidth,,"Config 1,2,3",,52 PRBs,,52 PRBs
+PRS Resource slot offset (slot),,"Config 1,2,3",slot,0,,4
+SSB configuration,,Config 1,,SSB.1 FR1,,SSB.1 FR1
+,,Config 2,,SSB.1 FR1,,SSB.1 FR1
+,,Config 3,,SSB.2 FR1,,SSB.2 FR1
+Time offset with Cell 1,,Config 1,ms,-,,3
+,,"Config 2,3",s,-,,3
+SMTC configuration,,Config 1,,SMTC.2,,
+,,"Config 2,3",,SMTC.1,,
+OCNG Patterns,,,,OCNG pattern 1,,
+PDSCH/PDCCH subcarrier spacing,,"Config 1,2",kHz,15 kHz,,
+,,Config 3,,30 kHz,,
+EPRE ratio of PSS to SSS,,,dB,0,,0
+EPRE ratio of PBCH DMRS to SSS,,,,,,
+EPRE ratio of PBCH to PBCH DMRS,,,,,,
+EPRE ratio of PDCCH DMRS to SSS,,,,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,,,,
+EPRE ratio of PDSCH DMRS to SSS,,,,,,
+EPRE ratio of PDSCH to PDSCH,,,,,,
+EPRE ratio of OCNG DMRS to SSS(Note 1),,,,,,
+EPRE ratio of OCNG to OCNG DMRS (Note 1),,,,,,
+Note2,"Config 1,2",,dBm/15 kHz,-98,,
+,Config 3,,,,,
+Note2,"Config 1,2",,dBm/SCS,-98,,
+,Config 3,,,-95,,
+,,,dB,0,,-6
+,,,dB,2.23,,-1.73
+PRS-RSRP Note3,"Config 1, 2",,dBm/SCS,-95.77,,-99.73
+,Config 3,,,-92.77,,-96.73
+SS-RSRP Note3,"Config 1, 2",,dBm/SCS,-95.77,,-99.73
+,Config 3,,,-92.77,,-96.73
+IoNote3,"Config 1,2",,dBm/19.08 MHz,-61.71,,
+,Config 3,,dBm/47.88 MHz,-57.73,,
+Propagation condition,,,,Two-tap channel Note5,,
+Antenna configuration,,,,1x2,,
+"NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:PRS-RSRP, SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4:PRS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5:The two-tap channel model is defined in 38.101-4 annex B.2.4 (a = 1, τd=0.45 µs and fD=5 Hz).",,,,,,

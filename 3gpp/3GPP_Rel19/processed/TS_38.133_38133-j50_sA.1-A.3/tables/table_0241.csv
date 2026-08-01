@@ -1,0 +1,24 @@
+Clause,Test case slogan
+A.14.1.2,Cell reselection to FR1 intra-frequency NR cell for UE configured with the feature for enhanced requirements
+A.14.1.3,Time-based measurement initiation to FR1 intra-frequency NR cell reselection
+A.14.1.4,Location-based measurement initiation to FR1 intra-frequency NR cell reselection
+A.14.1.6,Cell reselection to FR1 inter-frequency NR cell for UE configured with feature for enhanced requirements
+A.14.1.7,Time-based measurement initiation to FR1 inter-frequency cell reselection
+A.14.1.8,Location-based measurement initiation to FR1 inter-frequency cell reselection
+A.14.2.1.3,Intra-frequency SAN time-based conditional Handover from FR1 to FR1
+A.14.2.1.4,Inter-frequency SAN time-based conditional Handover from FR1 to FR1
+A.14.2.1.5,Intra-frequency SAN distance-based conditional Handover from FR1 to FR1
+A.14.2.1.6,Inter-frequency SAN distance-based conditional Handover from FR1 to FR1
+A.14.3.1.1,NR UE Transmit Timing Test for FR1
+A.14.5.1.1,SA event triggered reporting tests without gap under non-DRX
+A.14.5.1.2,SA event triggered reporting tests without gap under DRX
+A.14.5.1.3,SA event triggered reporting tests without gap under non-DRX with SSB index reading
+A.14.5.1.4,SA event triggered reporting tests with single measurement gap under non-DRX for satellite access
+A.14.5.1.5,SA event triggered reporting tests with FNO concurrent gaps under DRX for satellite access
+A.14.5.1.6,SA event triggered reporting tests with PPO concurrent gaps under non-DRX with SSB index reading for satellite access
+A.14.5.2.4,SA event triggered reporting tests for FR1 without SSB time index detection when DRX is not used with two gaps in fully non-overlapped for satellite access
+A.14.5.2.6,SA event triggered reporting tests for FR1 without SSB time index detection when DRX is not used with two gaps in partially partial overlapping for satellite access
+A.14.6.3.1,SA intra-frequency measurement accuracy with FR1 serving cell and FR1 target cell
+A.14.6.3.2,SA Inter-frequency measurement accuracy with FR1 serving cell and FR1 target cell
+A.14.6.4.1,SSB based L1-RSRP measurement
+A.14.6.4.2,CSI-RS based L1-RSRP measurement on resource set with repetition off

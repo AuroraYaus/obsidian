@@ -1,0 +1,141 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Test 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Duplex mode</td>
+    <td></td>
+    <td>TDD</td>
+  </tr>
+  <tr>
+    <td colspan="2">TDD Configuration</td>
+    <td></td>
+    <td>TDDConf.1.1 CCA</td>
+  </tr>
+  <tr>
+    <td colspan="2">BWchannel</td>
+    <td>MHz</td>
+    <td>40: NPRB,c = 106</td>
+  </tr>
+  <tr>
+    <td colspan="2">DL CCA model</td>
+    <td></td>
+    <td>As specified in clause A.3.26.2.1</td>
+  </tr>
+  <tr>
+    <td>DL CCA probability for semi-static channel accessNote6,8</td>
+    <td>PCCA</td>
+    <td></td>
+    <td>0.75</td>
+  </tr>
+  <tr>
+    <td rowspan="2">DL CCA probability for dynamic channel accessNote7,8</td>
+    <td>PCCA_DL_1</td>
+    <td></td>
+    <td>0.75</td>
+  </tr>
+  <tr>
+    <td>PCCA_DL_2</td>
+    <td></td>
+    <td>0.75</td>
+  </tr>
+  <tr>
+    <td colspan="2">SSB configuration for semi-static channel accessNote6,8</td>
+    <td></td>
+    <td>SSB.1 CCA</td>
+  </tr>
+  <tr>
+    <td colspan="2">SSB configuration for dynamic channel accessNote7,8</td>
+    <td></td>
+    <td>SSB.2 CCA</td>
+  </tr>
+  <tr>
+    <td colspan="2">SMTC configuration</td>
+    <td></td>
+    <td>SMTC.1</td>
+  </tr>
+  <tr>
+    <td colspan="2">DBT window configuration</td>
+    <td></td>
+    <td>DBT.1</td>
+  </tr>
+  <tr>
+    <td colspan="2">OCNG Patterns</td>
+    <td></td>
+    <td>OP.1</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPRE ratio of PSS to SSS</td>
+    <td rowspan="9">dB</td>
+    <td rowspan="9">0</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPRE ratio of PBCH DMRS to SSS</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPRE ratio of PBCH to PBCH DMRS</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPRE ratio of PDCCH DMRS to SSS</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPRE ratio of PDCCH to PDCCH DMRS</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPRE ratio of PDSCH DMRS to SSS</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPRE ratio of PDSCH to PDSCH DMRS</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPRE ratio of OCNG DMRS to SSSNote 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPRE ratio of OCNG to OCNG DMRS Note 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Noc Note2</td>
+    <td>dBm/15 kHz</td>
+    <td>-104</td>
+  </tr>
+  <tr>
+    <td colspan="2">Noc Note2</td>
+    <td>dBm/SSB SCS</td>
+    <td>-101</td>
+  </tr>
+  <tr>
+    <td colspan="2">Ês/Iot</td>
+    <td>dB</td>
+    <td>-3</td>
+  </tr>
+  <tr>
+    <td colspan="2">Ês/Noc</td>
+    <td>dB</td>
+    <td>-3</td>
+  </tr>
+  <tr>
+    <td colspan="2">SS-RSRP Note3</td>
+    <td>dBm/SCS</td>
+    <td>-104</td>
+  </tr>
+  <tr>
+    <td colspan="2">Io Note3</td>
+    <td>dBm/38.16 MHz</td>
+    <td>-68.18</td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation condition</td>
+    <td></td>
+    <td>AWGN</td>
+  </tr>
+  <tr>
+    <td colspan="2">Antenna configuration</td>
+    <td></td>
+    <td>1x2</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols in slots with downlink transmission bursts. For cells with CCA model, OCNG is transmitted only in the slots with downlink transmission burst and is not transmitted during the muted slots or during DBT window.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 3:SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4:SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5: The test configuration excludes support for band n51 and it is not required to run this test on band n51 in this release of the specificationNOTE 6:For UE supporting semi-static channel access and network configuring semi-static channel occupancy.NOTE 7:For UE supporting dynamic channel access and network configuring dynamic channel occupancy.NOTE 8:For UE supporting both semi-static and dynamic cannel access, the UE must be tested under both dynamic and semi-static channel occupancy configurations.</td>
+  </tr>
+</table>

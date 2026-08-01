@@ -1,0 +1,6 @@
+Rx Parameter,Units,ATG UE Types,,Reference measurement channel
+,,Omni-directional antenna: receiver characteristics specified at the antenna connector(s),Antenna array: receiver characteristics specified at transceiver array boundary (TAB) connectors,
+Power in Transmission Bandwidth Configuration,dBm,-42,-30,A.3.2.3 or A.3.3.3 for 64 QAM
+,,-44,-32,A.3.2.4 or A.3.3.4 for 256 QAM
+The applicable channel bandwidths,MHz,"5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100",,
+"NOTE 1:The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum uplink configuration specified in Table 7.3.2-3 with PCMAX_L,f,c as defined in clause 6.2J.2.",,,,

@@ -1,0 +1,183 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+    <td>Cell 3</td>
+  </tr>
+  <tr>
+    <td colspan="2">Uplink downlink configuration</td>
+    <td></td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Special subframe configuration</td>
+    <td></td>
+    <td>4</td>
+    <td>4</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Downlink power allocation</td>
+    <td>PDCCH_RAPHICH_RAOCNG_RA</td>
+    <td>dB</td>
+    <td>-3</td>
+    <td>-3</td>
+    <td>-3</td>
+  </tr>
+  <tr>
+    <td>PCFICH_RBPDCCH_RBPHICH_RBOCNG_RB</td>
+    <td>dB</td>
+    <td>-3</td>
+    <td>-3</td>
+    <td>-3</td>
+  </tr>
+  <tr>
+    <td rowspan="3">at antenna port</td>
+    <td></td>
+    <td>dBm/15kHz</td>
+    <td>-98 (Note 1)</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dBm/15kHz</td>
+    <td>-98 (Note 2)</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dBm/15kHz</td>
+    <td>-93 (Note 3)</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB</td>
+    <td>Reference Value in Table 8.5.2.2.4-2</td>
+    <td>5</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td colspan="2">BWChannel</td>
+    <td>MHz</td>
+    <td>10</td>
+    <td>10</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td colspan="2">Subframe Configuration</td>
+    <td></td>
+    <td>Non-MBSFN</td>
+    <td>Non-MBSFN</td>
+    <td>Non-MBSFN</td>
+  </tr>
+  <tr>
+    <td colspan="2">Time Offset between Cells</td>
+    <td>s</td>
+    <td>N/A</td>
+    <td>3</td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Frequency shift between Cells</td>
+    <td>Hz</td>
+    <td>N/A</td>
+    <td>300</td>
+    <td>-100</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell Id</td>
+    <td></td>
+    <td>0</td>
+    <td>126</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDCCH Content</td>
+    <td></td>
+    <td>UL Grant should be included with the proper information aligned with A.3.6.</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2">ABS pattern (Note 4)</td>
+    <td></td>
+    <td>N/A</td>
+    <td>0000000001 0000000001</td>
+    <td>0000000001 0000000001</td>
+  </tr>
+  <tr>
+    <td colspan="2">RLM/RRM Measurement Subframe Pattern (Note 5)</td>
+    <td></td>
+    <td>0000000001 0000000001</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">CSI Subframe Sets (Note 6)</td>
+    <td>CCSI,0</td>
+    <td></td>
+    <td>0000000001 0000000001</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>CCSI,1</td>
+    <td></td>
+    <td>1100111000 1100111000</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of control OFDM symbols</td>
+    <td></td>
+    <td>2</td>
+    <td>Note 7</td>
+    <td>Note 7</td>
+  </tr>
+  <tr>
+    <td colspan="2">ACK/NACK feedback mode</td>
+    <td></td>
+    <td>Multiplexing</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2">PHICH Ng (Note 10)</td>
+    <td></td>
+    <td>1</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2">PHICH duration</td>
+    <td></td>
+    <td>Normal</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2">Unused RE-s and PRB-s</td>
+    <td></td>
+    <td>OCNG</td>
+    <td>OCNG</td>
+    <td>OCNG</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cyclic prefix</td>
+    <td></td>
+    <td>Normal</td>
+    <td>Normal</td>
+    <td>Normal</td>
+  </tr>
+  <tr>
+    <td colspan="6">Note 1:This noise is applied in OFDM symbols #1, #2, #3, #5, #6, #8, #9, #10,#12, #13 of a subframe overlapping with the aggressor ABSNote 2:This noise is applied in OFDM symbols #0, #4, #7, #11 of a subframe overlapping with the aggressor ABSNote 3:This noise is applied in OFDM symbols of a subframe overlapping with aggressor non-ABSNote 4:ABS pattern as defined in [9]. PHICH is transmitted in the serving cell subframe when the subframe is overlapped with the ABS subframe of aggressor cell but not in subframe 5Note 5:Time-domain measurement resource restriction pattern for PCell measurements as defined in [7]Note 6:As configured according to the time-domain measurement resource restriction pattern for CSI measurements defined in [7]Note 7:The number of control OFDM symbols is not available for ABS and is 2 for the subframe indicated by “0” of ABS pattern.Note 8:The number of the CRS ports in Cell 1, Cell 2 and Cell 3 is the same.Note 9:SIB-1 will not be transmitted in Cell 2 and Cell 3 in the test.Note 10:According to Clause 6.9 in TS 36.211 [4]</td>
+  </tr>
+</table>

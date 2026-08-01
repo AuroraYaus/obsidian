@@ -1,0 +1,12 @@
+Parameter,,Unit,Test 1
+Downlink power allocation,,dB,0
+,,dB,0 (Note 1)
+,,dB,-3
+Cell-specific reference symbols,,,Antenna port 0 and antenna port 1
+Beamforming model,,,Annex B.4.3
+at antenna port,,dBm/15kHz,-98
+Symbols for unused PRBs,,,OCNG (Note 2)
+Number of allocated resource blocks,,PRB,50
+Reporting mode,,,PUSCH 3-1
+PDSCH transmission mode,,,9
+"Note 1:.Note 2:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated.",,,

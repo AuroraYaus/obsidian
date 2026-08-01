@@ -1,0 +1,20 @@
+Parameter,,Unit,Value
+Reference channel,,,CC.1A HD
+Channel bandwidth,,MHz,Note2
+Number of PSCCH symbols per slot,,,2
+Number of PSCCH PRB,,,10
+Modulation,,,QPSK
+Information Bit Payload (without CRC),,Bits,26
+Information Bit,Number of DMRS ports,,0 (1 port)
+,Priority,,As set by higher layers
+,Resource reservation period,,N/A
+,Modulation and coding scheme,,Set as the PSSCH MCS specified in the test
+,DMRS pattern,,0 (2 DMRS)
+,2nd stage SCI format,,00 (SCI format 2-A)
+,Beta offset indicator,,Set as specified in the test
+,Frequency resource assignment,,Set as per PSSCH PRB allocation specific in the test
+,Time resource assignment,,Set as per PSSCH slot allocation specific in the test
+,Reserved bits,,Set all these bits to 0
+Transport block CRC,,Bits,24
+Binary Channel Bits (see Note 1),,Bits,360
+NOTE 1:Binary channel bits calculated under assumption of 2 CP-OFDM symbols per subframe.NOTE 2:     Channel bandwidth depends on test configuration.,,,

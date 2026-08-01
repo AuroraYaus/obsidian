@@ -1,0 +1,3 @@
+eDRX_CONN cycle length [s],TEvaluate_Qout_DRX and TEvaluate_Qin_DRX  [s] Note
+2.56 < eDRX_CONN cycle ≤ 10.24,5 * TeDRX_CONN
+Note:Evaluation period length in time depends on the length of the eDRX_CONN cycle in use. TeDRX_CONN is the eDRX_CONN cycle length.,

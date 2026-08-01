@@ -1,0 +1,6 @@
+Test condition,DUT orientation,Diagram
+Orientation 1(Option 1),α = 90º;β = 0º;γ = 0º,
+Orientation 1(Option 2),α = 90º;β = 0º;γ = 180º,
+Orientation 2(Option 1),α = -90º;β = 0º;γ = 0º,
+Orientation 2(Option 2),α = 90º;β = 180º;γ = 0º,
+NOTE 1:The combination of rotations is captured by matrix M=Rz()•Ry()•Rx(),,

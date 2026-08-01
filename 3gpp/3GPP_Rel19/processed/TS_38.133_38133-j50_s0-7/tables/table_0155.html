@@ -1,0 +1,47 @@
+<table>
+  <tr>
+    <td>eDRX_IDLE cycle and eDRX INACTIVE cycle length [s]</td>
+    <td>RAN DRX length [s]</td>
+    <td>eDRX INACTIVEPTW length [s] (number of 1.28 s periods)</td>
+    <td>Scaling Factor (N1)</td>
+    <td>Tdetect,NR_Intra_RedCap [s] (number of RAN DRX cycles)</td>
+    <td>Tmeasure,NR_Intra_RedCap [s] (number of RAN DRX cycles Note 5)</td>
+    <td>Tevaluate,NR_Intra_RedCap [s] (number of RAN DRX cycles Note 5)</td>
+  </tr>
+  <tr>
+    <td>2.56 ≤eDRX_IDLE cycle length ≤ 10485.7620.48 ≤eDRX_INACTIVE cycle length ≤10485.76</td>
+    <td>0.32</td>
+    <td>≥5.12 (4)</td>
+    <td>8</td>
+    <td rowspan="4">(23 x N1)eDRX_cycle_length×23×N1PTW/DRX_cycle_length</td>
+    <td>0.32 x N1 (1 x N1)</td>
+    <td>0.64 x N1 (2 x N1)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>0.64</td>
+    <td>≥6.4 (5)</td>
+    <td>5</td>
+    <td>0.64 x N1 (1 x N1)</td>
+    <td>1.28 x N1 (2 x N1)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>1.28</td>
+    <td>≥10.24 (8)</td>
+    <td>4</td>
+    <td>1.28 x N1 (1 x N1)</td>
+    <td>2.56 x N1 (2 x N1)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>2.56</td>
+    <td>≥15.36 (12)</td>
+    <td>3</td>
+    <td>2.56 x N1 (1 x N1)</td>
+    <td>5.12 x N1 (2 x N1)</td>
+  </tr>
+  <tr>
+    <td colspan="7">NOTE 1:RAN DRX cycle in this table is UE specific DRX value configured by RRC specified in [1].NOTE 2:Applies for RedCap UE of all power class.NOTE 3:The number of RAN DRX cycles in this table is given for the DRX cycles within RAN configured PTWs.NOTE 4:eDRX INACTIVE PTW in this table is RAN configured PTW.NOTE 5:The eDRX_IDLE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 6:The lower bound of PTW length is derived based on .NOTE 7:When eDRX=20.48 s and DRX=0.32 s, UE is allowed to perform cell evaluation within PTW in every 2 eDRX cycles.Tevaluate,NR_Intra_RedCap*DRX_cycle1.28*1.28</td>
+  </tr>
+</table>

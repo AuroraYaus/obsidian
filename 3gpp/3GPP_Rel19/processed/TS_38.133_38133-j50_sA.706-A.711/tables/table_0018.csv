@@ -1,0 +1,15 @@
+Parameter,Unit,Config,Value,Comment
+highSpeedMeasFlagFR2-r17,,"1,2",Set2,highSpeedMeasFlagFR2-r17 = set2 is configured
+Active cell,,"1, 2",PCell (Cell 1),
+Neighbour cell,,"1, 2",Cell 2,Cell to be identified.
+RF Channel Number,,"1, 2",1: Cell 1 and Cell 2,One TDD carrier frequency is used for the NR cells.
+SMTC configuration,,"1, 2",SMTC.1,
+A3-Offset,dB,"1, 2",-11,
+CP length,,"1, 2",Normal,
+Hysteresis,dB,"1, 2",0,
+Time To Trigger,s,"1, 2",0,
+Filter coefficient,,"1, 2",0,L3 filtering is not used
+DRX,,"1, 2",OFF,
+Time offset between Cell 1 and Cell 2,,"1, 2",3 s,Synchronous cells
+T1,s,"1, 2",1,
+T2,s,"1, 2",2,

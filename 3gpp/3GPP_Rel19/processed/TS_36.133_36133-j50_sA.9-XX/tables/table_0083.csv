@@ -1,0 +1,38 @@
+Parameter,,Unit,Test 1,,Test 2,,Test 3,
+,,,Cell 1,Cell 2,Cell 1,Cell 2,Cell 1,Cell 2
+E-UTRA RF Channel Number,,,1,,1,,1,
+BWchannel,,MHz,10,,10,,10,
+Special subframe configurationNote1,,,6,,6,,6,
+Uplink/downlink configurationNote1,,,1,,1,,1,
+Measurement bandwidth,,,22—27,,22—27,,22—27,
+PDSCH Reference measurement channel,,,R.18 TDD,-,R.18 TDD,-,R.18 TDD,-
+PDSCH allocation,,,Follows R.18 TDD,-,Follows R.18 TDD,-,Follows R.18 TDD,-
+MPDCCH Reference measurement channel,,,R.16 TDD,,R.16 TDD,,R.16 TDD,
+OCNG Patterns,,,OP.11 TDD,OP.2 TDD,OP.11 TDD,OP.2 TDD,OP.11 TDD,OP.2 TDD
+PBCH_RA,,dB,0,0,0,0,0,0
+PBCH_RB,,,,,,,,
+PSS_RA,,,,,,,,
+SSS_RA,,,,,,,,
+PCFICH_RB,,,,,,,,
+PHICH_RA,,,,,,,,
+PHICH_RB,,,,,,,,
+MPDCCH_RA,,,,,,,,
+MPDCCH_RB,,,,,,,,
+PDSCH_RA,,,,,,,,
+PDSCH_RB,,,,,,,,
+OCNG_RANote2,,,,,,,,
+OCNG_RBNote2,,,,,,,,
+Note3,Bands TDD-M1_A,dBm/15 kHz,-99,,-79,,-107,
+,Bands TDD-M1_C,,,,,,-106,
+,Bands TDD-M1_E,,,,,,-105,
+,,dB,-12,-14,-12,-14,-12,-14
+Note4,,dB,-12.17,-14.27,-12.17,-14.27,-12.17,-14.27
+RSRPNote4,Bands TDD-M1_A,dBm/15 kHz,-111,-113,-91,-93,-119,-121
+,Bands TDD-M1_C,,,,,,-118,-120
+,Bands TDD-M1_E,,,,,,-117,-119
+IoNote4,Bands TDD-M1_A,dBm/9 MHz,-70.79,,-50.79,,-78.79,
+,Bands TDD-M1_C,,,,,,-77.79,
+,Bands TDD-M1_E,,,,,,-76.79,
+Propagation condition,,-,AWGN,,AWGN,,AWGN,
+Correlation Matrix and Antenna Configuration,,,1x1,,1x1,,1x1,
+"Note 1:For special subframe and uplink-downlink configurations see Tables 4.2-1 and 4.2-2 in TS 36.211.Note 2:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 3:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 4:Es/Iot, RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 5:E-UTRA operating band groups are as defined in Section 3.5.",,,,,,,,

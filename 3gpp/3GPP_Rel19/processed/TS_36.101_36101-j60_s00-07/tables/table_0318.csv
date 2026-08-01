@@ -1,0 +1,4 @@
+Protected band,Frequency range (MHz),,,Maximum Level (dBm),MBW (MHz),NOTE
+Frequency range,1805,-,1855,-40,1,1
+Frequency range,1855,-,1880,-15.5,5,"1, 2, 3"
+"NOTE 1:This requirement is applicable for carriers with aggregated channel bandwidths confined in 1885-1920 MHz.NOTE 2:The requirement also applies for the frequency ranges that are less than FOOB (MHz) in Table 6.6.3.1-1 and Table 6.6.3.1A-1 from the edge of the channel bandwidth.NOTE 3:For these adjacent bands, the emission limit could imply risk of harmful interference to UE(s) operating in the protected operating band.",,,,,,

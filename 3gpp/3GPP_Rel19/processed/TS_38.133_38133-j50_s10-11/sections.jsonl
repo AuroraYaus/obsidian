@@ -1,0 +1,555 @@
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10Measurement Performance requirements", "paragraph_index": 1, "style": "Heading1"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1NR measurements", "paragraph_index": 2, "style": "Heading2"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.1Introduction", "paragraph_index": 3, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2Intra-frequency RSRP accuracy requirements for FR1", "paragraph_index": 15, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2.1Intra-frequency SS-RSRP accuracy requirements", "paragraph_index": 16, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 17, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2.1.2Relative SS-RSRP Accuracy", "paragraph_index": 24, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2.2Void", "paragraph_index": 31, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2.3Intra-frequency CSI-RSRP accuracy requirements", "paragraph_index": 33, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2.3.1Absolute CSI-RSRP Accuracy", "paragraph_index": 34, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2.3.2Relative CSI-RSRP Accuracy", "paragraph_index": 45, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2BIntra-frequency RSRP accuracy requirements for FR1 for CA/DC Idle Mode Measurements", "paragraph_index": 56, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2B.1Intra-frequency SS-RSRP accuracy requirements", "paragraph_index": 57, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2B.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 62, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2CIntra-frequency RSRP accuracy requirements for FR1 SAN", "paragraph_index": 69, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2C.1Intra-frequency SS-RSRP accuracy requirements", "paragraph_index": 70, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2C.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 71, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2C.1.2Relative SS-RSRP Accuracy", "paragraph_index": 79, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2DIntra-frequency RSRP accuracy requirements for RedCap UE with Satellite Access in FR1", "paragraph_index": 88, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2D.1Intra-frequency SS-RSRP accuracy requirements", "paragraph_index": 89, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2D.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 90, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.2D.1.2Relative SS-RSRP Accuracy", "paragraph_index": 98, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3Intra-frequency RSRP accuracy requirements for FR2", "paragraph_index": 106, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3.1Intra-frequency SS-RSRP accuracy requirements", "paragraph_index": 107, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 108, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3.1.2Relative SS-RSRP Accuracy", "paragraph_index": 116, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3.2Void", "paragraph_index": 123, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3.3Intra-frequency CSI-RSRP accuracy requirements", "paragraph_index": 124, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3.3.1Absolute CSI-RSRP Accuracy", "paragraph_index": 125, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3.3.2Relative CSI-RSRP Accuracy", "paragraph_index": 137, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3BIntra-frequency RSRP accuracy requirements for FR2 for CA/DC Idle Mode Measurements", "paragraph_index": 148, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3B.1Intra-frequency SS-RSRP accuracy requirements", "paragraph_index": 149, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3B.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 154, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3CIntra-frequency RSRP accuracy requirements for FR2-NTN", "paragraph_index": 162, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3C.1Intra-frequency SS-RSRP accuracy requirements", "paragraph_index": 163, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3C.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 164, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.3C.1.2Relative SS-RSRP Accuracy", "paragraph_index": 172, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4Inter-frequency RSRP accuracy requirements for FR1", "paragraph_index": 179, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4.1Inter-frequency SS-RSRP accuracy requirements", "paragraph_index": 180, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4.1.1Absolute SS-RSRP Accuracy in FR1", "paragraph_index": 181, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4.1.2Relative SS-RSRP Accuracy in FR1", "paragraph_index": 188, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4.2Void", "paragraph_index": 197, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4.3Inter-frequency CSI-RSRP accuracy requirements", "paragraph_index": 198, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4.3.1Absolute CSI-RSRP Accuracy in FR1", "paragraph_index": 199, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4.3.2Relative CSI-RSRP Accuracy in FR1", "paragraph_index": 210, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4BInter-frequency RSRP accuracy requirements for FR1 for CA/DC Idle Mode Measurements", "paragraph_index": 223, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4B.1Inter-frequency SS-RSRP accuracy requirements", "paragraph_index": 224, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4B.1.1Absolute SS-RSRP Accuracy in FR1", "paragraph_index": 229, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4CInter-frequency RSRP accuracy requirements for FR1 SAN", "paragraph_index": 236, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4C.1Inter-frequency SS-RSRP accuracy requirements", "paragraph_index": 237, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4C.1.1Absolute SS-RSRP Accuracy in FR1", "paragraph_index": 238, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4C.1.2Relative SS-RSRP Accuracy in FR1", "paragraph_index": 246, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4DInter-frequency RSRP accuracy requirements for RedCap UE with Satellite Access in FR1", "paragraph_index": 255, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4D.1Inter-frequency SS-RSRP accuracy requirements", "paragraph_index": 256, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4D.1.1Absolute SS-RSRP Accuracy in FR1", "paragraph_index": 257, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.4D.1.2Relative SS-RSRP Accuracy in FR1", "paragraph_index": 265, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5Inter-frequency RSRP accuracy requirements for FR2", "paragraph_index": 274, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5.1Inter-frequency SS-RSRP accuracy requirements", "paragraph_index": 275, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 276, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5.1.2Relative SS-RSRP Accuracy", "paragraph_index": 284, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5.2Void", "paragraph_index": 294, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5.3Inter-frequency CSI-RSRP accuracy requirements", "paragraph_index": 295, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5.3.1Absolute CSI-RSRP Accuracy", "paragraph_index": 296, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5.3.2Relative CSI-RSRP Accuracy", "paragraph_index": 308, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5BInter-frequency RSRP accuracy requirements for FR2 for CA/DC Idle Mode Measurements", "paragraph_index": 322, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5B.1Inter-frequency SS-RSRP accuracy requirements", "paragraph_index": 323, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5B.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 328, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5CInter-frequency RSRP accuracy requirements for FR2-NTN", "paragraph_index": 336, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5C.1Inter-frequency SS-RSRP accuracy requirements", "paragraph_index": 337, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5C.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 338, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.5C.1.2Relative SS-RSRP Accuracy", "paragraph_index": 346, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.6RSRP Measurement Report Mapping", "paragraph_index": 356, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7Intra-frequency RSRQ accuracy requirements for FR1", "paragraph_index": 365, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7.1Intra-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 366, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7.1.1Absolute SS-RSRQ Accuracy in FR1", "paragraph_index": 367, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7.2Intra-frequency CSI-RSRQ accuracy requirements", "paragraph_index": 374, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7.2.1Absolute CSI-RSRQ Accuracy", "paragraph_index": 375, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7BIntra-frequency RSRQ accuracy requirements for FR1 for CA/DC Idle Mode Measurements", "paragraph_index": 387, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7B.1Intra-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 388, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7B.1.1Absolute SS-RSRQ Accuracy in FR1", "paragraph_index": 393, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7CIntra-frequency RSRQ accuracy requirements for FR1 SAN", "paragraph_index": 400, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7C.1Intra-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 401, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7C.1.1Absolute SS-RSRQ Accuracy in FR1", "paragraph_index": 402, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7DIntra-frequency RSRQ accuracy requirements for RedCap UE with Satellite Access in FR1", "paragraph_index": 410, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7D.1Intra-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 411, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.7D.1.1Absolute SS-RSRQ Accuracy in FR1", "paragraph_index": 412, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.8Intra-frequency RSRQ accuracy requirements for FR2", "paragraph_index": 420, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.8.1Intra-frequency SS-RSRQ accuracy requirements in FR2", "paragraph_index": 421, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.8.1.1Absolute SS-RSRQ Accuracy in FR2", "paragraph_index": 422, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.8.2Intra-frequency CSI-RSRQ accuracy requirements", "paragraph_index": 430, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.8.2.1Absolute CSI-RSRQ Accuracy", "paragraph_index": 431, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.8BIntra-frequency RSRQ accuracy requirements for FR2 for CA/DC Idle Mode Measurements", "paragraph_index": 444, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.8B.1Intra-frequency SS-RSRQ accuracy requirements in FR2", "paragraph_index": 445, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.8B.1.1Absolute SS-RSRQ Accuracy in FR2", "paragraph_index": 450, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.8CIntra-frequency RSRQ accuracy requirements for FR2-NTN", "paragraph_index": 458, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.8C.1Intra-frequency SS-RSRQ accuracy requirements in FR2-NTN", "paragraph_index": 459, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.8C.1.1Absolute SS-RSRQ Accuracy in FR2-NTN", "paragraph_index": 460, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9Inter-frequency RSRQ accuracy requirements for FR1", "paragraph_index": 468, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9.1Inter-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 469, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9.1.1Absolute SS-RSRQ Accuracy in FR1", "paragraph_index": 470, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9.1.2Relative SS-RSRQ Accuracy in FR1", "paragraph_index": 477, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9.2Inter-frequency CSI-RSRQ accuracy requirements", "paragraph_index": 486, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9.2.1Absolute CSI-RSRQ Accuracy", "paragraph_index": 487, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9.2.2Relative CSI-RSRQ Accuracy", "paragraph_index": 499, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9BInter-frequency RSRQ accuracy requirements for FR1 for CA/DC Idle Mode Measurements", "paragraph_index": 513, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9B.1Inter-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 514, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9B.1.1Absolute SS-RSRQ Accuracy in FR1", "paragraph_index": 519, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9CInter-frequency RSRQ accuracy requirements for FR1 SAN", "paragraph_index": 526, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9C.1Inter-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 527, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9C.1.1Absolute SS-RSRQ Accuracy in FR1", "paragraph_index": 528, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9C.1.2Relative SS-RSRQ Accuracy in FR1", "paragraph_index": 536, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9DInter-frequency RSRQ accuracy requirements for RedCap UE with Satellite Access in FR1", "paragraph_index": 546, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9D.1Inter-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 547, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9D.1.1Absolute SS-RSRQ Accuracy in FR1", "paragraph_index": 548, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.9D.1.2Relative SS-RSRQ Accuracy in FR1", "paragraph_index": 556, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10Inter-frequency RSRQ accuracy requirements for FR2", "paragraph_index": 566, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10.1Inter-frequency SS-RSRQ accuracy requirements in FR2", "paragraph_index": 567, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10.1.1Absolute SS-RSRQ Accuracy in FR2", "paragraph_index": 568, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10.1.2Relative SS-RSRQ Accuracy in FR2", "paragraph_index": 576, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10.2Inter-frequency CSI-RSRQ accuracy requirements", "paragraph_index": 586, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10.2.1Absolute CSI-RSRQ Accuracy", "paragraph_index": 587, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10.2.2Relative CSI-RSRQ Accuracy", "paragraph_index": 599, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10BInter-frequency RSRQ accuracy requirements for FR2 for CA/DC Idle Mode Measurements", "paragraph_index": 611, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10B.1Inter-frequency SS-RSRQ accuracy requirements in FR2", "paragraph_index": 612, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10B.1.1Absolute SS-RSRQ Accuracy in FR2", "paragraph_index": 617, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10CInter-frequency RSRQ accuracy requirements for FR2-NTN", "paragraph_index": 625, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10C.1Inter-frequency SS-RSRQ accuracy requirements in FR2-NTN", "paragraph_index": 626, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10C.1.1Absolute SS-RSRQ Accuracy in FR2-NTN", "paragraph_index": 627, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.10C.1.2Relative SS-RSRQ Accuracy in FR2-NTN", "paragraph_index": 635, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.11RSRQ report mapping", "paragraph_index": 645, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.12Intra-frequency SINR accuracy requirements for FR1", "paragraph_index": 650, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.12.1Intra-frequency SS-SINR accuracy requirements in FR1", "paragraph_index": 651, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.12.1.1Absolute SS-SINR Accuracy in FR1", "paragraph_index": 652, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.12.2Intra-frequency CSI-SINR accuracy requirements in FR1", "paragraph_index": 659, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.12.2.1Absolute CSI-SINR Accuracy in FR1", "paragraph_index": 660, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.12CIntra-frequency SINR accuracy requirements for FR1 SAN", "paragraph_index": 671, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.12C.1Intra-frequency SS-SINR accuracy requirements in FR1", "paragraph_index": 672, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.12C.1.1Absolute SS-SINR Accuracy in FR1", "paragraph_index": 673, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.12DIntra-frequency SINR accuracy requirements for RedCap UE with Satellite Access in FR1", "paragraph_index": 681, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.12D.1Intra-frequency SS-SINR accuracy requirements in FR1", "paragraph_index": 682, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.12D.1.1Absolute SS-SINR Accuracy in FR1", "paragraph_index": 683, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.13Intra-frequency SINR accuracy requirements for FR2", "paragraph_index": 691, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.13.1Intra-frequency SS-SINR accuracy requirements in FR2", "paragraph_index": 692, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.13.1.1Absolute SS-SINR Accuracy in FR2", "paragraph_index": 693, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.13.2Intra-frequency CSI-SINR accuracy requirements in FR2", "paragraph_index": 701, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.13.2.1Absolute CSI-SINR Accuracy in FR2", "paragraph_index": 702, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.13CIntra-frequency SINR accuracy requirements for FR2-NTN", "paragraph_index": 714, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.13C.1Intra-frequency SS-SINR accuracy requirements in FR2-NTN", "paragraph_index": 715, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.13C.1.1Absolute SS-SINR Accuracy in FR2-NTN", "paragraph_index": 716, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14Inter-frequency SINR accuracy requirements for FR1", "paragraph_index": 724, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14.1Inter-frequency SS-SINR accuracy requirements in FR1", "paragraph_index": 725, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14.1.1Absolute SS-SINR Accuracy in FR1", "paragraph_index": 726, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14.1.2Relative SS-SINR Accuracy in FR1", "paragraph_index": 733, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14.2Inter-frequency CSI-SINR accuracy requirements in FR1", "paragraph_index": 742, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14.2.1Absolute CSI-SINR Accuracy in FR1", "paragraph_index": 743, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14.2.2Relative CSI-SINR Accuracy in FR1", "paragraph_index": 755, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14CInter-frequency SINR accuracy requirements for FR1 SAN", "paragraph_index": 769, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14C.1Inter-frequency SS-SINR accuracy requirements in FR1", "paragraph_index": 770, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14C.1.1Absolute SS-SINR Accuracy in FR1", "paragraph_index": 771, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14C.1.2Relative SS-SINR Accuracy in FR1", "paragraph_index": 779, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14DInter-frequency SINR accuracy requirements for RedCap UE with Satellite Access in FR1", "paragraph_index": 789, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14D.1Inter-frequency SS-SINR accuracy requirements in FR1", "paragraph_index": 790, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14D.1.1Absolute SS-SINR Accuracy in FR1", "paragraph_index": 791, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.14D.1.2Relative SS-SINR Accuracy in FR1", "paragraph_index": 799, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.15Inter-frequency SINR accuracy requirements for FR2", "paragraph_index": 809, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.15.1Inter-frequency SS-SINR accuracy requirements in FR2", "paragraph_index": 810, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.15.1.1Absolute SS-SINR Accuracy in FR2", "paragraph_index": 811, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.15.1.2Relative SS-SINR Accuracy in FR2", "paragraph_index": 819, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.15.2Inter-frequency CSI-SINR accuracy requirements in FR2", "paragraph_index": 829, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.15.2.1Absolute CSI-SINR Accuracy in FR2", "paragraph_index": 830, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.15.2.2Relative CSI-SINR Accuracy in FR2", "paragraph_index": 842, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.15CInter-frequency SINR accuracy requirements for FR2-NTN", "paragraph_index": 856, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.15C.1Inter-frequency SS-SINR accuracy requirements in FR2-NTN", "paragraph_index": 857, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.15C.1.1Absolute SS-SINR Accuracy in FR2-NTN", "paragraph_index": 858, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.15C.1.2Relative SS-SINR Accuracy in FR2-NTN", "paragraph_index": 866, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.16SINR report mapping", "paragraph_index": 876, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.16.1SS-SINR and CSI-SINR measurement report mapping", "paragraph_index": 877, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.17Power Headroom", "paragraph_index": 885, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.17.1Power Headroom Report", "paragraph_index": 886, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.17.1.1Power Headroom Report Mapping", "paragraph_index": 887, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.18PCMAX,c,f", "paragraph_index": 891, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.18.1Report Mapping", "paragraph_index": 893, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19L1-RSRP accuracy requirements for FR1", "paragraph_index": 897, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19.1SSB based L1-RSRP accuracy requirements", "paragraph_index": 898, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19.1.1Absolute Accuracy", "paragraph_index": 900, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19.1.2Relative Accuracy", "paragraph_index": 906, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19.2CSI-RS based L1-RSRP accuracy requirements", "paragraph_index": 913, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19.2.1Absolute Accuracy", "paragraph_index": 914, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19.2.2Relative Accuracy", "paragraph_index": 938, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19CL1-RSRP accuracy requirements for FR1 SAN", "paragraph_index": 962, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19C.1SSB based L1-RSRP accuracy requirements", "paragraph_index": 963, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19C.1.1Absolute Accuracy", "paragraph_index": 964, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19C.1.2Relative Accuracy", "paragraph_index": 972, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19C.2CSI-RS based L1-RSRP accuracy requirements", "paragraph_index": 980, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19C.2.1Absolute Accuracy", "paragraph_index": 981, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19C.2.2Relative Accuracy", "paragraph_index": 991, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19DLTM Intra-frequency L1-RSRP accuracy requirements for FR1", "paragraph_index": 1001, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19D.1SSB based intra-frequency L1-RSRP accuracy requirements", "paragraph_index": 1002, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19D.1.1Absolute Accuracy", "paragraph_index": 1003, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19D.1.2Relative Accuracy", "paragraph_index": 1010, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19D.2CSI-RS based intra-frequency L1-RSRP accuracy requirements", "paragraph_index": 1016, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19D.2.1Absolute CSI-RSRP Accuracy", "paragraph_index": 1017, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19D.2.2Relative CSI-RSRP Accuracy", "paragraph_index": 1028, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19ELTM Inter-frequency L1-RSRP accuracy requirements for FR1", "paragraph_index": 1039, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19E.1SSB based Inter-frequency L1-RSRP accuracy requirements", "paragraph_index": 1040, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19E.1.1Absolute Accuracy", "paragraph_index": 1041, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19E.1.2Relative Accuracy", "paragraph_index": 1048, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19FL1-RSRP accuracy requirements for RedCap UE with Satellite Access in FR1", "paragraph_index": 1057, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19F.1SSB based L1-RSRP accuracy requirements", "paragraph_index": 1058, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19F.1.1Absolute Accuracy", "paragraph_index": 1059, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19F.1.2Relative Accuracy", "paragraph_index": 1067, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19F.2CSI-RS based L1-RSRP accuracy requirements", "paragraph_index": 1075, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19F.2.1Absolute Accuracy", "paragraph_index": 1076, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.19F.2.2Relative Accuracy", "paragraph_index": 1086, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20L1-RSRP accuracy requirements for FR2", "paragraph_index": 1096, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20.1SSB based L1-RSRP accuracy requirements", "paragraph_index": 1097, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20.1.1Absolute Accuracy", "paragraph_index": 1099, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20.1.2Relative Accuracy", "paragraph_index": 1106, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20.2CSI-RS based L1-RSRP accuracy requirements", "paragraph_index": 1115, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20.2.1Absolute Accuracy", "paragraph_index": 1116, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20.2.2Relative Accuracy", "paragraph_index": 1142, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20ALTM Intra-frequency L1-RSRP accuracy requirements for FR2", "paragraph_index": 1169, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20A.1SSB based intra-frequency L1-RSRP accuracy requirements", "paragraph_index": 1170, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20A.1.1Absolute Accuracy", "paragraph_index": 1171, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20A.1.2Relative Accuracy", "paragraph_index": 1179, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20A.2CSI-RS based intra-frequency L1-RSRP accuracy requirements", "paragraph_index": 1187, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20A.2.1Absolute Accuracy", "paragraph_index": 1188, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20A.2.2Relative Accuracy", "paragraph_index": 1198, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20BLTM Inter-frequency L1-RSRP accuracy requirements for FR2", "paragraph_index": 1208, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20B.1SSB based inter-frequency L1-RSRP accuracy requirements", "paragraph_index": 1209, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20B.1.1Absolute Accuracy", "paragraph_index": 1210, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20B.1.2Relative Accuracy", "paragraph_index": 1218, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20CL1-RSRP accuracy requirements for FR2-NTN", "paragraph_index": 1228, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20C.1SSB based L1-RSRP accuracy requirements", "paragraph_index": 1229, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20C.1.1Absolute Accuracy", "paragraph_index": 1231, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20C.1.2Relative Accuracy", "paragraph_index": 1238, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20C.2CSI-RS based L1-RSRP accuracy requirements", "paragraph_index": 1246, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20C.2.1Absolute Accuracy", "paragraph_index": 1247, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20C.2.2Relative Accuracy", "paragraph_index": 1257, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20D Predicted L1-RSRP accuracy requirements for FR2", "paragraph_index": 1267, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20D.1CSI-RS based predicted L1-RSRP accuracy requirements", "paragraph_index": 1268, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.20D.1.1Absolute Accuracy", "paragraph_index": 1269, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.21SFTD accuracy requirements", "paragraph_index": 1286, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.21.1SFTD acuracy requirements for NE-DC", "paragraph_index": 1287, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.21.2SFTD acuracy requirements for NR-DC", "paragraph_index": 1310, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.21.3Inter-frequency SFTD acuracy requirements", "paragraph_index": 1326, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.22CLI measurement accuracy requirements", "paragraph_index": 1342, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.22.1SRS-RSRP", "paragraph_index": 1343, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.22.1.1SRS-RSRP Accuracy", "paragraph_index": 1344, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.22.1.2SRS-RSRP report mapping", "paragraph_index": 1365, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.22.2CLI-RSSI", "paragraph_index": 1369, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.22.2.1CLI-RSSI Accuracy", "paragraph_index": 1370, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.22.2.2CLI-RSSI report mapping", "paragraph_index": 1377, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23RSTD Measurements", "paragraph_index": 1381, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23.1Introduction", "paragraph_index": 1382, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23.2Measurement Accuracy Requirements", "paragraph_index": 1387, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23.3Report mapping", "paragraph_index": 1432, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23.3.1Absolute DL RSTD Measurement Reporting", "paragraph_index": 1433, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23.3.2Differential Reporting for DL RSTD Measurement", "paragraph_index": 1465, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23.3.3Additional Path Report Mapping for DL RSTD", "paragraph_index": 1499, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23ARSTD Measurements Based on PRS Aggregation", "paragraph_index": 1532, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23A.1Introduction", "paragraph_index": 1533, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23A.3Report Mapping", "paragraph_index": 1587, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23A.3.1Absolute DL RSTD Measurement Reporting", "paragraph_index": 1588, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23A.3.2Differential Reporting for DL RSTD Measurement", "paragraph_index": 1590, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.23A.3.3Additional Path Report Mapping for DL RSTD", "paragraph_index": 1592, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24PRS-RSRP Measurements", "paragraph_index": 1595, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24.1Introduction", "paragraph_index": 1596, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24.2Measurement Accuracy Requirements", "paragraph_index": 1599, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24.2.1Absolute PRS-RSRP accuracy", "paragraph_index": 1600, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24.2.2Relative PRS RSRP accuracy", "paragraph_index": 1627, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24.3Report mapping", "paragraph_index": 1656, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24.3.1Absolute PRS-RSRP Measurement Report Mapping", "paragraph_index": 1657, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24.3.2Differential Report Mapping for PRS-RSRP Measurement", "paragraph_index": 1662, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24APRS-RSRP Measurements Based on PRS Aggregation", "paragraph_index": 1671, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24A.1Introduction", "paragraph_index": 1672, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24A.2Measurement Accuracy Requirements", "paragraph_index": 1678, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24A.2.1Absolute PRS RSRP Accuracy Requirement", "paragraph_index": 1679, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24A.2.2Relative PRS RSRP Accuracy Requirement", "paragraph_index": 1681, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24A.3Report Mapping", "paragraph_index": 1683, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24A.3.1Absolute PRS-RSRP Measurement Report Mapping", "paragraph_index": 1684, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.24A.3.2Differential Report Mapping for PRS-RSRP Measurement", "paragraph_index": 1686, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25UE Rx-Tx Time Difference Measurements", "paragraph_index": 1689, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25.1Introduction", "paragraph_index": 1690, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25.2Measurement Accuracy Requirements", "paragraph_index": 1694, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25.3Report mapping", "paragraph_index": 1761, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25.3.1Absolute UE Rx-Tx Measurement Report Mapping", "paragraph_index": 1767, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25.3.2Differential UE Rx-Tx Measurement Report Mapping", "paragraph_index": 1798, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25.3.3Additional Path Report Mapping for UE Rx-Tx Time Difference", "paragraph_index": 1833, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25AUE Rx-Tx Time Difference Measurement Based on PRS Aggregation", "paragraph_index": 1866, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25A.1Introduction", "paragraph_index": 1867, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25A.2Measurement Accuracy Requirements", "paragraph_index": 1871, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25A.3Report mapping", "paragraph_index": 1941, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25CUE Rx-Tx Time Difference Measurements in Satellite Accesss", "paragraph_index": 1944, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25C.1Introduction", "paragraph_index": 1945, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25C.2Measurement Accuracy Requirements", "paragraph_index": 1948, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25C.3Report mapping", "paragraph_index": 1964, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25DUE Rx-Tx Time Difference Measurements RedCap UE with Satellite Access in FR1", "paragraph_index": 1966, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25D.1Introduction", "paragraph_index": 1967, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25D.2Measurement Accuracy Requirements", "paragraph_index": 1970, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25D.2.1UE Rx-Tx Accuracy Requirement for 2Rx RedCap UE without FH", "paragraph_index": 1971, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25D.2.2UE Rx-Tx Accuracy Requirement for 1Rx RedCap UE without FH", "paragraph_index": 1973, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.25D.3Report mapping", "paragraph_index": 1979, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.26FR2 P-MPR report", "paragraph_index": 1981, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.26.1Report mapping", "paragraph_index": 1983, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.27L1-SINR accuracy requirements for FR1", "paragraph_index": 1987, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.27.1L1-SINR accuracy requirements with CSI-RS based CMR and no dedicated IMR configured", "paragraph_index": 1988, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.27.1.1Absolute Accuracy", "paragraph_index": 1989, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.27.1.2Relative Accuracy", "paragraph_index": 2015, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.27.2L1-SINR accuracy requirements with SSB based CMR and dedicated IMR configured", "paragraph_index": 2041, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.27.2.1Absolute Accuracy", "paragraph_index": 2042, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.27.2.2Relative Accuracy", "paragraph_index": 2071, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.27.3L1-SINR accuracy requirements with CSI-RS based CMR and dedicated IMR configured", "paragraph_index": 2100, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.27.3.1Absolute Accuracy", "paragraph_index": 2101, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.27.3.2Relative Accuracy", "paragraph_index": 2130, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.28L1-SINR accuracy requirements for FR2", "paragraph_index": 2158, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.29Intra-frequency RSRQ accuracy requirements under CCA", "paragraph_index": 2346, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.29.1Intra-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 2347, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.29.1.1Absolute SS-RSRQ Accuracy", "paragraph_index": 2348, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.30Inter-frequency RSRQ accuracy requirements under CCA", "paragraph_index": 2355, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.30.1Inter-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 2356, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.30.1.1Absolute SS-RSRQ Accuracy", "paragraph_index": 2357, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.30.1.2Relative SS-RSRQ Accuracy", "paragraph_index": 2364, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.31Intra-frequency SINR accuracy requirements under CCA", "paragraph_index": 2373, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.31.1Intra-frequency SS-SINR accuracy requirements in FR1", "paragraph_index": 2374, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.31.1.1Absolute SS-SINR Accuracy", "paragraph_index": 2375, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.32Inter-frequency SINR accuracy requirements under CCA", "paragraph_index": 2382, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.32.1Inter-frequency SS-SINR accuracy requirements in FR1", "paragraph_index": 2383, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.32.1.1Absolute SS-SINR Accuracy", "paragraph_index": 2384, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.32.1.2Relative SS-SINR Accuracy", "paragraph_index": 2391, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.33L1-RSRP accuracy requirements under CCA", "paragraph_index": 2400, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.33.1SSB based L1-RSRP accuracy requirements in FR1", "paragraph_index": 2401, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.33.1.1Absolute Accuracy", "paragraph_index": 2402, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.33.1.2Relative Accuracy", "paragraph_index": 2409, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.34RSSI measurements under CCA", "paragraph_index": 2416, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.34.1Intra-frequency absolute RSSI measurement accuracy requirements in FR1", "paragraph_index": 2417, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.34.2Inter-frequency absolute RSSI measurement accuracy requirements in FR1", "paragraph_index": 2423, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.34.3RSSI measurement report mapping", "paragraph_index": 2426, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.35Channel occupancy measurements under CCA", "paragraph_index": 2432, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.35.1Intra-frequency channel occupancy measurement accuracy requirements in FR1", "paragraph_index": 2433, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.35.2Inter-frequency channel occupancy measurement accuracy requirements in FR1", "paragraph_index": 2441, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.36Intra-frequency RSRP accuracy requirements under CCA", "paragraph_index": 2449, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.36.1Intra-frequency SS-RSRP accuracy requirements in FR1", "paragraph_index": 2450, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.36.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 2451, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.36.1.2Relative SS-RSRP Accuracy", "paragraph_index": 2458, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.37Inter-frequency RSRP accuracy requirements under CCA", "paragraph_index": 2465, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.37.1Inter-frequency SS-RSRP accuracy requirements in FR1", "paragraph_index": 2466, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.37.1.1Absolute SS-RSRP", "paragraph_index": 2467, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.37.1.2Relative SS-RSRP Accuracy", "paragraph_index": 2474, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38PRS-RSRPP Measurements", "paragraph_index": 2483, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38.1Introduction", "paragraph_index": 2484, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38.2Measurement Accuracy Requirements", "paragraph_index": 2490, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38.2.1Absolute PRS RSRPP accuracy", "paragraph_index": 2491, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38.3Report mapping", "paragraph_index": 2515, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38.3.1Absolute PRS-RSRPP Measurement Report Mapping", "paragraph_index": 2516, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38.3.2Differential Report Mapping for PRS-RSRPP Measurement", "paragraph_index": 2522, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38APRS-RSRPP Measurements Based on PRS Aggregation", "paragraph_index": 2528, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1. 38A.1Introduction", "paragraph_index": 2529, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38A.2Measurement Accuracy Requirements", "paragraph_index": 2535, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38A.2.1Absolute PRS RSRPP accuracy", "paragraph_index": 2536, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38A.3Report mapping", "paragraph_index": 2538, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38A.3.1Absolute PRS-RSRPP Measurement Report Mapping", "paragraph_index": 2539, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.38A.3.2Differential Report Mapping for PRS-RSRPP Measurement", "paragraph_index": 2541, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.39UE Rx-Tx time difference measurements for RTT-based PDC", "paragraph_index": 2544, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.39.1Void", "paragraph_index": 2545, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.39.2Measurement Accuracy Requirements for PRS", "paragraph_index": 2546, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.39.3Measurement Accuracy Requirements for TRS", "paragraph_index": 2570, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.40Void", "paragraph_index": 2594, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.41FR1 DPC report", "paragraph_index": 2595, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.41.1Report mapping", "paragraph_index": 2597, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.42TDCP Measurement Report Mapping", "paragraph_index": 2601, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.43DL-RSCPD Measurements", "paragraph_index": 2607, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.43.1Introduction", "paragraph_index": 2608, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "Measurement Accuracy Requirements", "paragraph_index": 2612, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.43.3Report Mapping", "paragraph_index": 2631, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.43.3.1Absolute DL RSCPD Measurement Reporting", "paragraph_index": 2632, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.44DL-RSCP Measurements", "paragraph_index": 2637, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.44.1Introduction", "paragraph_index": 2638, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.44.2Measurement Accuracy Requirements", "paragraph_index": 2643, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.44.3Report Mapping", "paragraph_index": 2673, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.44.3.1Relative DL RSCP Measurement Reporting", "paragraph_index": 2677, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.45CJT calibration measurements", "paragraph_index": 2682, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.45.1Introduction", "paragraph_index": 2683, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.45.2CJTC calibration delay offset report", "paragraph_index": 2688, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.45.3CJTC calibration frequency offset report", "paragraph_index": 2693, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.46CJT Calibration Report Mapping", "paragraph_index": 2700, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.46.1CJT Calibration Delay Offset Measurement Report Mapping", "paragraph_index": 2701, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.46.2CJT Calibration Frequency Offset Measurement Report Mapping", "paragraph_index": 2705, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.46.3CJT Calibration Phase Offset Measurement Report Mapping", "paragraph_index": 2709, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.47L1 CLI measurement accuracy requirements", "paragraph_index": 2713, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.47.1L1-SRS-RSRP", "paragraph_index": 2714, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.47.1.1L1-SRS-RSRP Accuracy", "paragraph_index": 2715, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.47.1.2L1-SRS-RSRP report mapping", "paragraph_index": 2737, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.47.2L1-CLI-RSSI", "paragraph_index": 2744, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.47.2.1L1-CLI-RSSI Accuracy", "paragraph_index": 2745, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1.47.2.2L1-CLI-RSSI report mapping", "paragraph_index": 2752, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "10.1.48", "title": "RS resource prediction accuracy requirements for FR2", "paragraph_index": 2759, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "10.1.48.1", "title": "CSI-RS based RS resource prediction accuracy requirements", "paragraph_index": 2760, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1ANR measurements for RedCap", "paragraph_index": 2776, "style": "Heading2"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.1Introduction", "paragraph_index": 2777, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.2Intra-frequency RSRP accuracy requirements for FR1", "paragraph_index": 2783, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.2.1Intra-frequency SS-RSRP accuracy requirements", "paragraph_index": 2784, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.2.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 2785, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.2.1.2Relative SS-RSRP Accuracy", "paragraph_index": 2791, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.3Intra-frequency RSRP accuracy requirements for FR2", "paragraph_index": 2797, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.3.1Intra-frequency SS-RSRP accuracy requirements", "paragraph_index": 2798, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.3.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 2799, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.3.1.2Relative SS-RSRP Accuracy", "paragraph_index": 2801, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.4Inter-frequency RSRP accuracy requirements for FR1", "paragraph_index": 2803, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.4.1Inter-frequency SS-RSRP accuracy requirements", "paragraph_index": 2804, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.4.1.1Absolute SS-RSRP Accuracy in FR1", "paragraph_index": 2805, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.4.1.2Relative SS-RSRP Accuracy in FR1", "paragraph_index": 2811, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.5Inter-frequency RSRP accuracy requirements for FR2", "paragraph_index": 2819, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.5.1Inter-frequency SS-RSRP accuracy requirements", "paragraph_index": 2820, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.5.1.1Absolute SS-RSRP Accuracy", "paragraph_index": 2821, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.5.1.2Relative SS-RSRP Accuracy", "paragraph_index": 2823, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.6Intra-frequency RSRQ accuracy requirements for FR1", "paragraph_index": 2826, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.6.1Intra-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 2827, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.6.1.1Absolute SS-RSRQ Accuracy in FR1", "paragraph_index": 2828, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.7Intra-frequency RSRQ accuracy requirements for FR2", "paragraph_index": 2834, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.7.1Intra-frequency SS-RSRQ accuracy requirements in FR2", "paragraph_index": 2835, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.7.1.1Absolute SS-RSRQ Accuracy in FR2", "paragraph_index": 2836, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.8Inter-frequency RSRQ accuracy requirements for FR1", "paragraph_index": 2838, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.8.1Inter-frequency SS-RSRQ accuracy requirements in FR1", "paragraph_index": 2839, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.8.1.1Absolute SS-RSRQ in FR1", "paragraph_index": 2840, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.8.1.2Relative SS-RSRQ Accuracy in FR1", "paragraph_index": 2846, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.9Inter-frequency RSRQ accuracy requirements for FR2", "paragraph_index": 2854, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.9.1Inter-frequency SS-RSRQ accuracy requirements in FR2", "paragraph_index": 2855, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.9.1.1Absolute SS-RSRQ Accuracy in FR2", "paragraph_index": 2856, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.9.1.2Relative SS-RSRQ Accuracy in FR2", "paragraph_index": 2858, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.10 Intra-frequency SINR accuracy requirements for FR1", "paragraph_index": 2860, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.10.1Intra-frequency SS-SINR accuracy requirements in FR1", "paragraph_index": 2861, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.10.1.1Absolute SS-SINR Accuracy in FR1", "paragraph_index": 2862, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.11Intra-frequency SINR accuracy requirements for FR2", "paragraph_index": 2868, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.11.1Intra-frequency SS-SINR accuracy requirements in FR2", "paragraph_index": 2869, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.11.1.1Absolute SS-SINR Accuracy in FR2", "paragraph_index": 2870, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.12 Inter-frequency SINR accuracy requirements for FR1", "paragraph_index": 2872, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.12.1Inter-frequency SS-SINR accuracy requirements in FR1", "paragraph_index": 2873, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.12.1.1Absolute SS-SINR Accuracy in FR1", "paragraph_index": 2874, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.12.1.2Relative SS-SINR Accuracy in FR1", "paragraph_index": 2880, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.13 Inter-frequency SINR accuracy requirements for FR2", "paragraph_index": 2888, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.13.1Inter-frequency SS-SINR accuracy requirements in FR2", "paragraph_index": 2889, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.13.1.1Absolute SS-SINR Accuracy in FR2", "paragraph_index": 2890, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.13.1.2Relative SS-SINR Accuracy in FR2", "paragraph_index": 2892, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.14L1-RSRP accuracy requirements for FR1", "paragraph_index": 2895, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.14.1SSB based L1-RSRP accuracy requirements", "paragraph_index": 2896, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.14.1.1Absolute Accuracy", "paragraph_index": 2897, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.14.1.2Relative Accuracy", "paragraph_index": 2903, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.14.2CSI-RS based L1-RSRP accuracy requirements", "paragraph_index": 2909, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.14.2.1Absolute Accuracy", "paragraph_index": 2910, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.14.2.2Relative Accuracy", "paragraph_index": 2918, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.15 L1-RSRP accuracy requirements for FR2", "paragraph_index": 2926, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.15.1SSB based L1-RSRP accuracy requirements", "paragraph_index": 2927, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.15.1.1Absolute Accuracy", "paragraph_index": 2928, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.15.1.2Relative Accuracy", "paragraph_index": 2930, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.15.2CSI-RS based L1-RSRP accuracy requirements", "paragraph_index": 2932, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.15.2.1Absolute Accuracy", "paragraph_index": 2933, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.15.2.2Relative Accuracy", "paragraph_index": 2935, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.16RSTD Measurements for RedCap Positioning", "paragraph_index": 2937, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.16.1Introduction", "paragraph_index": 2938, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.16.2Measurement Accuracy Requirements", "paragraph_index": 2947, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.16.2.1Accuracy requirement for RSTD measurement without RX FH", "paragraph_index": 2949, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.16.2.2Accuracy requirement for RSTD measurement with RX FH", "paragraph_index": 2960, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.16.3Report Mapping", "paragraph_index": 2983, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.16.3.1Absolute DL RSTD Measurement Reporting", "paragraph_index": 2984, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.16.3.2Differential Reporting for DL RSTD Measurement", "paragraph_index": 2986, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.16.3.3Additional Path Report Mapping for DL RSTD", "paragraph_index": 2988, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.17PRS-RSRP Measurements for RedCap positioning", "paragraph_index": 2991, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.17.1Introduction", "paragraph_index": 2992, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.17.2Measurement Accuracy Requirements", "paragraph_index": 3001, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.17.2.1Absolute PRS RSRP Accuracy Requirement", "paragraph_index": 3002, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.17.2.2Relative PRS RSRP Accuracy Requirement", "paragraph_index": 3012, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.17.3Report Mapping", "paragraph_index": 3015, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.17.3.1Absolute PRS-RSRP Measurement Report Mapping", "paragraph_index": 3016, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.17.3.2Differential Report Mapping for PRS-RSRP Measurement", "paragraph_index": 3018, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.18UE Rx-Tx Time Difference Measurements for RedCap Positioning", "paragraph_index": 3021, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.18.1Introduction", "paragraph_index": 3022, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.18.2Measurement Accuracy Requirements", "paragraph_index": 3028, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.18.2.1UE Rx-Tx Accuracy Requirement for 2RX RedCap UE without FH", "paragraph_index": 3039, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.18.2.2UE Rx-Tx Accuracy Requirement for 1RX RedCap UE without FH", "paragraph_index": 3041, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.18.2.3UE Rx-Tx Accuracy Requirement for 2RX RedCap UE with FH", "paragraph_index": 3070, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.18.3Report mapping", "paragraph_index": 3139, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.18.3.1Absolute UE Rx-Tx Measurement Report Mapping", "paragraph_index": 3140, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.18.3.2Differential UE Rx-Tx Measurement Report Mapping", "paragraph_index": 3142, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.18.3.3Additional Path Report Mapping for UE Rx-Tx Time Difference", "paragraph_index": 3144, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.19PRS-RSRPP Measurements for RedCap Positioning", "paragraph_index": 3147, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.19.1Introduction", "paragraph_index": 3148, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.19.2Measurement Accuracy Requirements", "paragraph_index": 3154, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.19.2.1Absolute PRS RSRPP accuracy", "paragraph_index": 3155, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.19.3Report mapping", "paragraph_index": 3174, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.19.3.1Absolute PRS-RSRPP Measurement Report Mapping", "paragraph_index": 3175, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.1A.19.3.2Differential Report Mapping for PRS-RSRPP Measurement", "paragraph_index": 3177, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2E-UTRAN measurements", "paragraph_index": 3180, "style": "Heading2"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2.1Introduction", "paragraph_index": 3181, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2.2E-UTRAN RSRP measurements", "paragraph_index": 3190, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2.3E-UTRAN RSRQ measurements", "paragraph_index": 3195, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2.4E-UTRAN RSTD measurements", "paragraph_index": 3201, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2.5E-UTRAN RS-SINR measurements", "paragraph_index": 3207, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2.6E-UTRAN RSRP measurements for CA/DC Idle Mode Measurements", "paragraph_index": 3212, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2.7E-UTRAN RSRQ measurements for CA/DC Idle Mode Measurements", "paragraph_index": 3221, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2AE-UTRAN measurements for RedCap", "paragraph_index": 3230, "style": "Heading2"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2A.1Introduction", "paragraph_index": 3231, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2A.2E-UTRAN RSRP measurements", "paragraph_index": 3240, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2A.3E-UTRAN RSRQ measurements", "paragraph_index": 3248, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.2A.4E-UTRAN RS-SINR measurements", "paragraph_index": 3257, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.3UTRAN FDD Measurements", "paragraph_index": 3263, "style": "Heading2"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.3.1UTRAN FDD CPICH RSCP", "paragraph_index": 3270, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.3.2UTRAN FDD CPICH Ec/No", "paragraph_index": 3281, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4V2X measurements", "paragraph_index": 3288, "style": "Heading2"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.1Introduction", "paragraph_index": 3289, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.2Intra-frequency PSBCH-RSRP accuracy requirements for FR1", "paragraph_index": 3294, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.2.1PSBCH-RSRP Absolute Accuracy", "paragraph_index": 3295, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.2.2PSBCH-RSRP Relative Accuracy", "paragraph_index": 3303, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.2AIntra-frequency PSBCH-RSRP accuracy requirements for FR1 under CCA", "paragraph_index": 3311, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.2A.1PSBCH-RSRP Absolute Accuracy", "paragraph_index": 3312, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.2A.2PSBCH-RSRP Relative Accuracy", "paragraph_index": 3320, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.3Intra-Frequency SL-RSSI Measurement Accuracy Requirements for FR1", "paragraph_index": 3329, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.3.1Absolute SL-RSSI Accuracy", "paragraph_index": 3330, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.3AIntra-Frequency SL-RSSI Measurement Accuracy Requirements for FR1 under CCA", "paragraph_index": 3335, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.3A.1Absolute SL-RSSI Accuracy", "paragraph_index": 3336, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.4Intra-Frequency L1 SL-RSRP Measurement Accuracy Requirements for FR1", "paragraph_index": 3341, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.4.1Absolute L1 SL-RSRP Accuracy", "paragraph_index": 3342, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.4AIntra-Frequency L1 SL-RSRP Measurement Accuracy Requirements for FR1 under CCA", "paragraph_index": 3350, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.4A.1Absolute L1 SL-RSRP Accuracy", "paragraph_index": 3351, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.5Intra-Frequency Discovery Signal Measurement Accuracy Requirements", "paragraph_index": 3359, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4.5.1Absolute Discovery Signal Measurement Accuracy", "paragraph_index": 3367, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4ANR Sidelink Measurements for Positioning", "paragraph_index": 3375, "style": "Heading2"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.1Introduction", "paragraph_index": 3376, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.2SL RSTD measurements", "paragraph_index": 3378, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.2.1Measurement Report Mapping", "paragraph_index": 3379, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.2.1.1Absolute SL RSTD Measurement Reporting", "paragraph_index": 3380, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.2.2Measurement Accuracy Requirements", "paragraph_index": 3394, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.3SL PRS-RSRP measurements", "paragraph_index": 3408, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.3.1Measurement Report Mapping", "paragraph_index": 3409, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.3.1.1Absolute SL PRS-RSRP Measurement Report Mapping", "paragraph_index": 3410, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.3.2Measurement Accuracy Requirements", "paragraph_index": 3415, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.3.2.1Absolute SL PRS-RSRP accuracy", "paragraph_index": 3416, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.4SL Rx-Tx measurements", "paragraph_index": 3422, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.4.1Measurement Report Mapping", "paragraph_index": 3423, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.4.1.1Absolute SL Rx-Tx Measurement Report Mapping", "paragraph_index": 3424, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.4.2Measurement Accuracy", "paragraph_index": 3438, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.5SL PRS-RSRPP measurements", "paragraph_index": 3453, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.5.1Measurement Report Mapping", "paragraph_index": 3454, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.5.1.1Absolute SL PRS-RSRPP Measurement Report Mapping", "paragraph_index": 3455, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.5.2Measurement Accuracy", "paragraph_index": 3460, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.5.2.1Introduction", "paragraph_index": 3461, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.5.2.2Measurement Accuracy Requirements", "paragraph_index": 3464, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.5.2.2.2Absolute SL PRS-RSRPP accuracy", "paragraph_index": 3465, "style": "Heading6"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.6SL AoA measurements", "paragraph_index": 3478, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.6.1Measurement Report Mapping", "paragraph_index": 3479, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.6.1.1Absolute SL AoA Measurement Report Mapping", "paragraph_index": 3480, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.7SL RTOA measurements", "paragraph_index": 3488, "style": "Heading3"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.7.1Measurement Report Mapping", "paragraph_index": 3489, "style": "Heading4"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "10.4A.7.1.1Absolute SL RTOA Measurement Report Mapping", "paragraph_index": 3490, "style": "Heading5"}
+{"source": "38133-j50_s10-11.docx", "section": "", "title": "11Void", "paragraph_index": 3503, "style": "Heading1"}

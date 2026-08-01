@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Configuration</td>
+    <td>TL1-RSRP_Prediction_Period_CSI-RS (ms)</td>
+  </tr>
+  <tr>
+    <td>non-DRX</td>
+    <td>max(TReport, ceil(KBM*M*P*N)*TCSI-RS+Tinference)</td>
+  </tr>
+  <tr>
+    <td>DRX cycle ≤ 320ms</td>
+    <td>max(TReport, ceil(1.5*KBM*M*P*N)*max(TDRX,TCSI-RS) +Tinference)</td>
+  </tr>
+  <tr>
+    <td>DRX cycle &gt; 320ms</td>
+    <td>ceil(KBM*M*P*N)*TDRX+Tinference</td>
+  </tr>
+  <tr>
+    <td colspan="2">Note 1:TCSI-RS is the periodicity of CSI-RS configured for L1-RSRP measurement. TDRX is the DRX cycle length. TReport is configured periodicity for reporting. Tinference is the time required for model inference, which is defined by d&#x27; as specified according to clause 5.4 in TS 38.214 [26].Note 2:the requirements are applicable provided that the CSI-RS resource configured for L1-RSRP measurement is transmitted with Density = 3.</td>
+  </tr>
+</table>

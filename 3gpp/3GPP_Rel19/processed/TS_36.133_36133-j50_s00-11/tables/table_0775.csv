@@ -1,0 +1,14 @@
+Accuracy,Conditions,,,,,,
+,PRS Ês/Iot,"Minimum PRSbandwidth, which is minimum of serving cell channel bandwidth and the PRS bandwidths of the reference cell and the measured neighbour cell i",Minimum number of available measurement subframes among the reference cell and the measured neighbour cell i,The number of consecutive downlink subframes NPRS among the reference cell and the measured neighbour cell i  as defined in [24],Io Note 4 range,,
+,,,,,E-UTRA operating band groups Note 5,MinimumIo Note 1,MaximumIo
+Ts Note 2,dB,RB,,,,dBm/15kHz,dBm/BWChannel
+[21],(PRS Ês/Iot)ref ≥-15dBand(PRS Ês/Iot)i ≥-15dB,≥ 6,≥ 30,≥ 4,"FDD-M1_A, TDD-M1_A",-121,-50
+,,,,,FDD-M1_B,-120.5,-50
+,,,,,"FDD-M1_C, TDD-M1_C",-120,-50
+,,,,,FDD-M1_D,-119.5,-50
+,,,,,"FDD-M1_E, TDD-M1_E",-119,-50
+,,,,,FDD-M1_F,-118.5,-50
+,,,,,FDD-M1_G,-118,-50
+,,,,,FDD-M1_H,-117.5,-50
+,,,,,FDD-M1_N,-114.5,-50
+NOTE 1:This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2:Ts is the basic timing unit defined in TS 36.211 [16].NOTE 3:PRS bandwidth is as indicated in prs-Bandwidth in the OTDOA assistance data defined in [24].NOTE 4:The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 5:E-UTRA operating band groups are as defined in Section 3.5.,,,,,,,

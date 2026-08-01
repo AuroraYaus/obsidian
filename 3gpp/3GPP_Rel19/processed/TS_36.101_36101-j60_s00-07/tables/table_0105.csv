@@ -1,0 +1,17 @@
+ChannelBandwidth[MHz],Parameters,,,,
+5 MHz,Fc [MHz],700.5 ≤ Fc < 705.5,,,
+,RBstart,0,,1-4,
+,LCRB [RBs],1,≥ 15,15 - 23,24
+,A-MPR [dB],≤ 2,≤ 4,≤ 1,≤ 3
+10 MHz,Fc [MHz],703 ≤ Fc < 708,,,
+,RBstart,0 - 8,9 - 12,13 - 39,40 - 43
+,LCRB [RBs],> 0,> 12,> 16,> 0
+,A-MPR [dB],≤ 10,≤ 8,≤ 6,≤ 6
+15 MHz,Fc [MHz],Fc = 705.5,,,
+,RBstart,0 - 16,17 - 23,24 - 56,57 - 60
+,LCRB [RBs],> 0,> 12,> 20,< 6
+,A-MPR [dB],≤ 10,≤ 9,≤ 7,≤ 6
+"NOTE 1:RBstart indicates the lowest RB index of transmitted resource blocksNOTE 2:LCRB is the length of a contiguous resource block allocationNOTE 3:For intra-subframe frequency hopping between two regions, notes 1 and 2 apply on a per slot basis. For intra-slot or intra-subslot frequency hopping between two regions, notes 1 and 2 apply on a per Tno_hopping basis.NOTE 4:For intra-subframe frequency hopping between two regions, the larger A-MPR value of the two regions may be applied for both slots in the subframe. For intra-slot frequency hopping between two regions, the larger A-MPR value may be applied for the slot. For intra-subslot frequency hopping between two regions, the larger A-MPR value may be applied for the subslot.",,,,,
+,,,,,
+,,,,,
+,,,,,

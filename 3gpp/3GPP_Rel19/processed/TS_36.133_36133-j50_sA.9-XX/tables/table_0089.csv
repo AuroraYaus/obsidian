@@ -1,0 +1,49 @@
+Parameter,,Unit,Test 1,,Test 2,
+,,,Cell 1,Cell 2,Cell 1,Cell 2
+E-UTRA RF Channel Number,,,1,2,1,2
+BWchannel,,MHz,10,10,10,10
+Gap Pattern Id,,,0,-,0,-
+Measurement bandwidth,,,22—27,22—27,22—27,22—27
+PDSCH Reference measurement channel,,,R.22 FDD,-,R.22 FDD,-
+PDSCH allocation,,,Follows R.22 FDD,-,Follows R.22 FDD,-
+MPDCCH Reference measurement channel,,,R.18 FDD,R.18 FDD,R.18 FDD,R.18 FDD
+OCNG Patterns,,,OP.21 FDD,OP.6 FDD,OP.21 FDD,OP.6 FDD
+PBCH_RA,,dB,0,0,0,0
+PBCH_RB,,,,,,
+PSS_RA,,,,,,
+SSS_RA,,,,,,
+PCFICH_RB,,,,,,
+PHICH_RA,,,,,,
+PHICH_RB,,,,,,
+MPDCCH_RA,,,,,,
+MPDCCH_RB,,,,,,
+PDSCH_RA,,,,,,
+PDSCH_RB,,,,,,
+OCNG_RANote1,,,,,,
+OCNG_RBNote1,,,,,,
+Note2,Bands FDD-M1_A,dBm/15 kHz,-78.5,-78.5,-98.5,-108
+,Bands FDD-M1_B,,,,,-107.5
+,Bands FDD-M1_C,,,,,-107
+,Bands FDD-M1_D,,,,,-106.5
+,"Bands FDD-M1_E, FDD-M1_F Note 4",,,,,-106
+,Bands FDD-M1_G,,,,,-105
+,Bands FDD-M1_H,,,,,-104.5
+,,dB,-12,-12,-12,-12
+RSRPNote3,Bands FDD-M1_A,dBm/15 kHz,-90.5,-90.5,-110.5,-120
+,Bands FDD-M1_B,,,,,-119.5
+,Bands FDD-M1_C,,,,,-119
+,Bands FDD-M1_D,,,,,-118.5
+,"Bands FDD-M1_E, FDD-M1_F Note 4",,,,,-118
+,Bands FDD-M1_G,,,,,-117
+,Bands FDD-M1_H,,,,,-116.5
+IoNote3,Bands FDD-M1_A,dBm/9 MHz,-50.45,-50.45,-70.45,-86.76
+,Bands FDD-M1_B,,,,,-86.26
+,Bands FDD-M1_C,,,,,-85.76
+,Bands FDD-M1_D,,,,,-85.26
+,"Bands FDD-M1_E, FDD-M1_F Note 4",,,,,-84.76
+,Bands FDD-M1_G,,,,,-83.76
+,Bands FDD-M1_H,,,,,-83.26
+,,dB,-12,-12,-12,-12
+Propagation condition,,-,AWGN,AWGN,AWGN,AWGN
+Antenna Configuration,,,1x1,1x1,1x1,1x1
+"Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:For Band 26, the tests shall be performed with the carrier frequency of assigned E-UTRA channel bandwidth within 865-894 MHz.Note 5:E-UTRA operating band groups are as defined in Section 3.5.",,,,,,

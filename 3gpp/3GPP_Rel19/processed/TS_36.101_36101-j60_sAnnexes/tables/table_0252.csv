@@ -1,0 +1,31 @@
+Parameter,Unit,Value,Value
+Reference channel,,R.NB.5 TDD,R.NB.5-1 TDD
+Carrier Type,,Anchor,Non-anchor
+Channel bandwidth,KHz,200,200
+Uplink-Downlink Configuration (Note 7),,4,4
+Allocated subframes per Radio Frame,,Note 2,Note 2
+Modulation,,QPSK,QPSK
+ITBS/ISF,,4/0,4/0
+Target Coding Rate,,1/3,1/3
+Coding Rate,,0.4,0.4
+Information Bit Payload,,,
+"For Sub-Frames 1,6,7,8",Bits,56,56
+For Sub-Frame 5,Bits,N/A,Note 3
+For Sub-Frame 9,,N/A,56
+For Sub-Frame 0,Bits,Note 3,Note 3
+For Sub-Frame 4,,Note 3,56
+Number of Code Blocks,,,
+"For Sub-Frames 1,6,7,8",,1,1
+For Sub-Frame 5,Bits,N/A,Note 4
+For Sub-Frame 9,,N/A,1
+For Sub-Frame 0,Bits,Note 4,Note 4
+For Sub-Frame 4,,Note 4,1
+Binary Channel Bits,,,
+"For Sub-Frames 1,6,7,8",Bits,200,200
+For Sub-Frame 5,Bits,N/A,Note 5
+For Sub-Frame 9,,N/A,200
+For Sub-Frame 0,Bits,Note 5,Note 5
+For Sub-Frame 4,,Note 5,200
+Max. Averaged Throughput,Bps,Note 6,Note 6
+UE Category,,"NB1,NB2","NB1,NB2"
+"Note 1:For in-band, the first 3 symbols are used for LTE PDCCH and the number of LTE CRS ports is 4.Note 2:It shall depend on the specific NPDSCH scheduling.Note 3:N/A when mod 2 = 0, otherwise 56.Note 4:N/A when mod 2 = 0, otherwise 1.Note 5:N/A when mod 2 = 0, otherwise 200. Note 6:Maximum Average Throughput equals to sum of TB(i) divided by sum of T(i), where TB(i) is the TB size of NPDSCH over ith NPDSCH scheduling period, and T(i) is the total time consisting of NPDCCH transmission duration, NPDCCH to NPDSCH scheduling delay,  NPDSCH transmission duration, NPDSCH to NPUSCH format 2 scheduling delay, NPUSCH format 2 transmission duration, possible delay between NPUSCH format 2 and NPDCCH for next NPDSCH scheduling and subframes used for NPSS/NSSS/NPBCH/NB-SIB1/NB-SIB2 transmission during the ith NPDSCH scheduling period.Note 7:As per Table 4.2-2 in TS 36.211 [4].",,,

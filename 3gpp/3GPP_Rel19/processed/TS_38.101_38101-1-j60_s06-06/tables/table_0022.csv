@@ -1,0 +1,9 @@
+Channel Bandwidth (MHz),"Carrier Centre Frequency, Fc (MHz)",Region A,,,Region B,,
+,,RBstart,LCRB,A-MPR,RBstart,LCRB,A-MPR
+5 MHz,902.5 ≤ FC < 912.5,,> 2.7 MHz/12/SCS,A1,,,
+10 MHz,FC = 910,,> 7.2 MHz/12/SCS,A2,,> 5.4 MHz/12/SCS,A4
+,,,> 8.1 MHz/12/SCS,A3,,> 7.2 MHz/12/SCS,A5
+15 MHz,FC = 907.5,≤ 1.8 MHz /12/SCS,> 0,A6,> 1.8 MHz/12/SCS< 6.12 MHz/12/SCS,≥ 7.2 MHz/12/SCS,A6
+,,≥ 12.24 MHz/12/SCS,> 0,A6,> 1.8 MHz/12/SCS< 6.12 MHz/12/SCS,< 7.2 MHz/12/SCS,A7
+,,,,,≥ 6.12 MHz/12/SCS≤ 7.2 MHz/12/SCS,> 5.4 MHz/12/SCS,A7
+"NOTE 1:The A-MPR values are specified in Table 6.2.3.6-2 and Table 6.2.3.6-2a.NOTE 2:VoidNOTE 3:VoidNOTE 4:For the regions where multiple AMPR requirements are defined, the maximum requirement among applicable AMPR requirements is applied.",,,,,,,

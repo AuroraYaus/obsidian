@@ -1,0 +1,16 @@
+Parameter,Unit,Value,Commnet
+,,Test 1,
+NB-IoT Operation mode,,Standalone,
+Satellite information,,SSC.2,For NGSO
+DRX,,OFF,
+NPDCCH repetition level,,32,
+npdcch-StartSF-USS Note 2,,v2,
+npdcch-NumRepetitions-r13 Note 2,,r32,
+NPUSCH resource units,,1,
+NPUSCH repetition level,,128,
+NPUSCH subcarrier spacing,kHz,15,
+NPUSCH number of subcarriers,,1,
+NPUSCH modulation,, /4QPSK,
+NPUSCH Transport block size,Bits,40,
+npusch-TxDuration,ms,64,
+Note 1:voidNote 2:For further information see clause 6.7.3.2 in TS 36.331 [2].,,,

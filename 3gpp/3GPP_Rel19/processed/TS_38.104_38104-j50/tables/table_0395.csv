@@ -1,0 +1,3 @@
+BS channel bandwidth of the lowest/highest carrier received (MHz),Wanted signal mean power (dBm)(Note 2),Interfering signal mean power (dBm)
+"20, 30, 40, 50, 60, 70, 80,90, 100 (Note 1)",EISminSENS + 6 dB,Wide Area BS: -55 – ΔminSENSMedium Range BS: -50– ΔminSENSLocal Area BS: -47– ΔminSENS
+NOTE 1:The SCS for the lowest/highest carrier received is the lowest SCS supported by the BS for that bandwidthNOTE 2:EISminSENS depends on the BS channel bandwidth,,

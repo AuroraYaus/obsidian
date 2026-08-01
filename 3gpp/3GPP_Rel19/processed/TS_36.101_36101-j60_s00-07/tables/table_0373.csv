@@ -1,0 +1,32 @@
+Channel bandwidth,,,,,,,
+E-UTRA Band,1.4 MHz(dBm),3 MHz(dBm),5 MHz(dBm),10 MHz(dBm),15 MHz(dBm),20 MHz(dBm),Duplex Mode
+1,,,-97,-97,-97,-97,HD-FDD
+2,-101,-97,-95,-95,-95,-95,HD-FDD
+3,-100,-96,-94,-94,-94,-94,HD-FDD
+4,-103,-99,-97,-97,-97,-97,HD-FDD
+5,-101.5,-97.5,-95.5,-95.5,,,HD-FDD
+7,,,-95,-95,-95,-95,HD-FDD
+8,-100.5,-96.5,-94.5,-94.5,,,HD-FDD
+11,,,-97,-97,,,HD-FDD
+12,-100,-96,-94,-94,,,HD-FDD
+13,,,-94,-94,,,HD-FDD
+14,,,-94,-94,,,HD-FDD
+18,,,-97,-97,-97,,HD-FDD
+19,,,-97,-97,-97,,HD-FDD
+20,,,-94.5,-94.5,-94.5,-94.5,HD-FDD
+21,,,-97,-97,-97,,HD-FDD
+24,,,-97.5,-97.5,,,HD-FDD
+25,-99.5,-95.5,-93.5,-93.5,-93.5,-93.5,HD-FDD
+26,-101,-97,-95,-95,-95,,HD-FDD
+27,-101.5,-97.5,-95.5,-95.5,,,HD-FDD
+28,,-97.5,-95.5,-95.5,-95.5,-95.5,HD-FDD
+31,-97.3,-93.3,-91.3,,,,HD-FDD
+71,,,-94.2,-94.2,-94.2,-94.2,HD-FDD
+72,-97.3,-93.3,-91.3,,,,HD-FDD
+73,-97.3,-93.3,-91.3,,,,HD-FDD
+85,,,-94,-94,,,HD-FDD
+87,-97.3,-93.3,-91.3,,,,HD-FDD
+88,-97.3,-93.3,-91.3,,,,HD-FDD
+106,-100.5,-96.5,,,,,HD-FDD
+111,-97.3,-93.3,-91.3,-91.3,,,HD-FDD
+"NOTE 1:The transmitter shall be set to PUMAX as defined in subclause 6.2.5NOTE 2:Reference measurement channel is A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1NOTE 3:For the UE which supports both Band 11 and Band 21 the reference sensitivity level is FFS.NOTE 4:For a UE that support both Band 18 and Band 26, the reference sensitivity level for Band 26 applies for the applicable channel bandwidths.",,,,,,,

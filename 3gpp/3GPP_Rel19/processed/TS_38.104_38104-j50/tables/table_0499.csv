@@ -1,0 +1,13 @@
+Parameter,Value
+Modulation order,QPSK
+First PRB prior to frequency hoppingstartingPRB,0
+Number of PRBs,For tests with FR2-1 : 1.For tests 2 with FR2-2:16
+Intra-slot frequency hopping,enabled
+First PRB after frequency hopping,The largest PRB index – (Number of PRBs – 1)
+Group and sequence hopping,neither
+Hopping ID,0
+Number of symbols,14
+The number of UCI information bits,22
+First symbol,0
+Length of the orthogonal cover code,n2
+Index of the orthogonal cover code,n0

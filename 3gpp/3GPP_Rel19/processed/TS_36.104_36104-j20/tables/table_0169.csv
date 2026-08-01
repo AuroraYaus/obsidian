@@ -1,0 +1,18 @@
+Operating Band,Centre Frequency of Interfering Signal [MHz],,,Interfering Signal mean power [dBm],Wanted Signal mean power [dBm],Interfering signal centre frequency minimum frequency offset from the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap [MHz],Type of Interfering Signal
+"1-5, 7,11, 13-14,18,19, 21, 24, 42, 43, 48, 54, 65, 66, 70, 106",(FUL_low -20),to,(FUL_high +20),-43,PREFSENS +6dB (Note 1),See table 7.6.1.1-6,See table 7.6.1.1-6
+,1(FUL_high +20),toto,(FUL_low -20)12750,-15 (Note 3),PREFSENS +6dB (Note 1),,CW carrier
+"8, 26, 28, 111",(FUL_low  -20),to,(FUL_high +10),-43,PREFSENS +6dB (Note 1),See table 7.6.1.1-6,See table 7.6.1.1-6
+,1(FUL_high +10),toto,(FUL_low  -20)12750,-15 (Note 3),PREFSENS +6dB (Note 1),,CW carrier
+12,(FUL_low  -20),to,(FUL_high +13),-43,PREFSENS +6dB (Note 1),See table 7.6.1.1-6,See table 7.6.1.1-6
+,1(FUL_high +13),toto,(FUL_low  -20)12750,-15 (Note 3),PREFSENS +6dB (Note 1),,CW carrier
+17,(FUL_low  -20),to,(FUL_high +18),-43,PREFSENS +6dB (Note 1),See table 7.6.1.1-6,See table 7.6.1.1-6
+,1(FUL_high +18),toto,(FUL_low  -20)12750,-15 (Note 3),PREFSENS +6dB (Note 1),,CW carrier
+"20, 71",(FUL_low  -11),to,(FUL_high +20),-43,PREFSENS +6dB (Note 1),See table 7.6.1.1-6,See table 7.6.1.1-6
+,1(FUL_high +20),toto,(FUL_low  -11)12750,-15 (Note 3),PREFSENS +6dB (Note 1),,CW carrier
+25,(FUL_low  -20),to,(FUL_high +15),-43,PREFSENS +6dB (Note 1),See table 7.6.1.1-6,See table 7.6.1.1-6
+,1(FUL_high +15),toto,(FUL_low  -20)12750,-15 (Note 3),PREFSENS +6dB (Note 1),,CW carrier
+"31, 72, 73, 74, 87, 88",(FUL_low -20),to,(FUL_high +5),-43,PREFSENS +6dB (Note 1),See table 7.6.1.1-6,See table 7.6.1.1-6
+,1(FUL_high +5),toto,(FUL_low -20)12750,-15 (Note 3),PREFSENS +6dB (Note 1),,CW carrier
+85,(FUL_low  -20),to,(FUL_high +12),-43,PREFSENS +6dB (Note 1),See table 7.6.1.1-6,See table 7.6.1.1-6
+,1(FUL_high +12),toto,(FUL_low  -20)12750,-15 (Note 3),PREFSENS +6dB (Note 1),,CW carrier
+"Note 1:PREFSENS depends on the channel bandwidth as specified in Table 7.2.1-1 for E-UTRA and is specified in Table 7.2.1-5 for NB-IoT.Note 2:For a BS capable of multiband operation, in case of interfering signal that is not in the in-band blocking frequency range of the operating band where the wanted signal is present, and not in the in-band blocking frequency range of an adjacent or overlapping operating band, the wanted signal mean power is equal to PREFSENS + 1.4 dB.Note 3:For NB-IoT, up to 24 exceptions are allowed for spurious response frequencies in each wanted signal frequency when measured using a 1MHz step size. For these exceptions the above throughput requirement shall be met when the blocking signal is set to a level of -40 dBm for 15 kHz subcarrier spacing and -46 dBm for 3.75 kHz subcarrier spacing. In addition, each group of exceptions shall not exceed three contiguous measurements using a 1MHz step size.",,,,,,,

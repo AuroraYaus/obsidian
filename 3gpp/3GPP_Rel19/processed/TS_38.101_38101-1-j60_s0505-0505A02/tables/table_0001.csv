@@ -1,0 +1,120 @@
+NR CA configuration / Bandwidth combination set,,,,,,,,
+NR CA configuration,Uplink CA configurations or single uplink carrier5,Channel bandwidths for carrier (MHz),Channel bandwidths for carrier (MHz),Channel bandwidths for carrier (MHz),Channel bandwidths for carrier (MHz),Channel bandwidths for carrier (MHz),Maximum aggregated bandwidth (MHz),Bandwidth combination set
+CA_n1B,-,10,"10,15",,,,40,0
+,,15,"15,20",,,,,
+,,20,20,,,,,
+CA_n2B,-,5,15,,,,20,0
+,,10,10,,,,,
+CA_n3B,-,5,"15, 20, 25, 30",,,,60,0
+,,10,"10, 15, 20, 25, 30",,,,,
+,,"15, 20, 25, 30","5, 10, 15, 20, 25, 30",,,,,
+,CA_n3B,"5, 10, 15, 20","5, 10, 15, 20",,,,40,1
+,-,See n3 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,75,4 and 5
+CA_n5B,CA_n5B,"5, 10, 15","5, 10, 15",,,,20,0
+,,"5, 10, 15, 20","5, 10, 15, 20",,,,25,1
+,,See n5 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,25,4 and 5
+CA_n7B,n73CA_n7B,10,"10, 15, 20, 30, 40",,,,50,0
+,,15,"15, 20, 30",,,,,
+,,20,"20, 30",,,,,
+,-,See n7 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,70,4 and 5
+CA_n25B,-,5,15,,,,20,0
+,,10,10,,,,,
+CA_n38B,-,5,"15, 20, 25",,,,50,0
+,,10,"10, 15, 20, 25",,,,,
+,,"15, 20, 25","5, 10, 15, 20, 25",,,,,
+CA_n40B,-,20,80,,,,100,0
+,,50,50,,,,,
+,"n403,4CA_n40B3","10,15, 20, 30, 40, 50, 60, 80","10, 15, 20, 30, 40, 50, 60, 80",,,,100,1
+,,See n40 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,100,4 and 5
+CA_n41B,"n413,4CA_n41B3","10, 20, 30, 40, 50","10, 20, 30, 40, 50",,,,100,0
+,,See n41 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,100,4 and 5
+CA_n41C,"n413,4CA_n41C3,4",40,"80, 100",,,,180,0
+,,"50, 60, 80","60, 80, 100",,,,,
+,,10,100,,,,190,1
+,,"15, 20","90, 100",,,,,
+,,40,"80, 90, 100",,,,,
+,,"50, 60, 80, 90","60, 80, 90, 100",,,,,
+,,10,100,,,,190,2
+,,"15, 20","90, 100",,,,,
+,,"30, 40","80, 90, 100",,,,,
+,,"50, 60, 80, 90","60, 80, 90, 100",,,,,
+,,See n41 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,190,4 and 5
+CA_n46B,-,"20, 40, 60","20, 40",,,,100,0
+CA_n46C,-,"60, 80","60, 80",,,,160,0
+CA_n46D,-,"60, 80",80,80,,,240,0
+CA_n46M,-,"20, 40, 60","20, 40","20, 40",,,140,0
+CA_n46N,-,Void,,,,,,0
+,,"20, 40, 60","20, 40","20, 40","20, 40",,180,1
+CA_n46O,-,"20, 60","20, 40","20, 40","20, 40","20, 40",220,0
+CA_n48B,CA_n48B,5,"15, 20",,,,40,0
+,,"10, 15, 20","10, 15, 20",,,,,
+,,"15, 20","15, 20",,,,,
+,-,10,"50, 60, 80, 90",,,,100,1
+,,"15, 20","40, 50, 60, 80",,,,,
+,,40,"40, 50, 60",,,,,
+,-,"10, 15, 20, 30, 40","10, 15, 20, 30, 40, 50, 60, 70, 80, 90",,,,100,2
+,-,See n48 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,100,4 and 5
+CA_n48C,-,10,100,,,,140,0
+,,15,"90, 100",,,,,
+,,20,"90, 100",,,,,
+,,40,"80, 90, 100",,,,,
+,-,"10, 15, 20, 30, 40","70, 80, 90, 100",,,,140,1
+,-,See n48 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,140,4 and 5
+CA_n66B,-,5,"20, 40",,,,50,0
+,,10,"15, 20, 40",,,,,
+,,15,"15, 20",,,,,
+CA_n71B,n713,5,20,,,,25,0
+,,10,15,,,,,
+,,10,20,,,,35,1
+,,15,"15, 20",,,,,
+,,"5, 10, 15","15, 20",,,,35,2
+,,See n71 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,35,4 and 5
+CA_n77B,n773,20,"25, 30, 40",,,,60,0
+,,25,30,,,,,
+,,See n77 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,100,4 and 5
+CA_n77C,"n773,4CA_n77C3,4",50,"60, 80, 100",,,,200,0
+,,60,"60, 80, 100",,,,,
+,,80,"80, 100",,,,,
+,,100,100,,,,,
+,,10,100,,,,200,1
+,,"15, 20","90, 100",,,,,
+,,"25, 30","80, 90, 100",,,,,
+,,40,"70, 80, 90, 100",,,,,
+,,"50, 60, 70, 80, 90, 100","60, 70, 80, 90, 100",,,,,
+,,See n77 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,200,4 and 5
+CA_n77D,n773,100,100,100,,,300,0
+,,See n77 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,300,4 and 5
+CA_n78B,n783,20,50,,,,70,0
+CA_n78C,"n783,4CA_n78C3,4",50,"60, 80, 100",,,,200,0
+,,60,"60, 80, 100",,,,,
+,,80,"80, 100",,,,,
+,,100,100,,,,,
+,,10,100,,,,200,1
+,,"15, 20","90, 100",,,,,
+,,"25, 30","80, 90, 100",,,,,
+,,40,"70, 80, 90, 100",,,,,
+,,"50, 60, 70, 80, 90, 100","60, 70, 80, 90, 100",,,,,
+,,See n78 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,200,4 and 5
+CA_n78D,n783,100,100,100,,,300,0
+,,See n78 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,300,4 and 5
+CA_n79C,"CA_n79C3,4",50,"60, 80, 100",,,,200,0
+,,60,"60, 80, 100",,,,,
+,,80,"80, 100",,,,,
+,,100,100,,,,,
+,,See n79 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,200,4 and 5
+CA_n79D,-,100,100,100,,,300,0
+,,See n79 channel bandwidths in Table 5.3.5-1 for each carrier2,,,,,300,4 and 5
+CA_n96B,CA_n96B,"20, 40","20, 40, 60, 80",,,,100,0
+CA_n96C,CA_n96C,80,"40, 60, 80",,,,160,0
+CA_n96D,-,80,80,"60, 80",,,240,0
+CA_n96E,-,80,80,80,80,,320,0
+CA_n102B,CA_n102B,"20, 40","20, 40, 60, 80",,,,100,0
+CA_n102C,CA_n102C,80,"40, 60, 80",,,,160,0
+CA_n102D,-,80,80,"60, 80",,,240,0
+CA_n102E,-,80,80,80,80,,320,0
+CA_n104C,CA_n104C,"20, 30, 40, 50","60, 70, 80, 90, 100",,,,200,0
+,,"60, 70, 80, 90","60, 70, 80, 90, 100",,,,,
+,,100,100,,,,,
+,,See n104 channel bandwidths in Table 5.3.5-1 for each carrier,,,,,200,4 and 5
+CA_n104D,-,See n104 channel bandwidths in Table 5.3.5-1 for each carrier,,,,,300,4 and 5
+"NOTE 1:For each channel bandwidth of each component carrier, refer to Table 5.3.5-1 for the applicable SCSs. For a given band, not all UE channel bandwidths support the same SCSs.NOTE 2:The aggregated bandwidth must be greater than or equal to the minimum for the bandwidth class defined in Table 5.3A.5-1, and smaller than or equal to the maximum aggregated bandwidth.NOTE 3:Minimum requirements for Power Class 2 are applicable for this uplink combination or single uplink carrier in this downlink/uplink combinationNOTE 4:Minimum requirements for Power Class 1.5 are applicable for this uplink combination or single uplink carrier in this downlink/uplink combinationNOTE 5:Only single uplink carriers with power class other than PC3 are listed.",,,,,,,,

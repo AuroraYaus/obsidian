@@ -1,0 +1,23 @@
+Parameter,,Unit,Test 1 (Note 3),Test 2 (Note 3),Test 2a (Note 3),Test 3 (Note 3),Test 4 (Note 3)
+Downlink power allocation,,dB,-3,-3,-3,-3,-3
+,,dB,-3 (Note 1),-3 (Note 1),-3 (Note 1),-3 (Note 1),-3 (Note 1)
+,,dB,0,0,0,0,0
+,δ,dB,3,3,3,3,3
+at antenna port,,dBm/15kHz,-98,-98,-98,-98,-98
+Coverage enhancement mode,,,CE Mode B,CE Mode A,CE Mode A,CE Mode B,CE Mode B
+PDSCH transmission mode,,,2,2,2,2,2
+OFDM starting symbol (startSymbolBR),,,2,2,2,2,2
+Maximum number of repetitions(for PDSCH (pdsch-maxNumRepetitionCEmodeA/ pdsch-maxNumRepetitionCEmodeB)),,,Not configured,Not configured,Not configured,Not configured,Not configured
+PDSCH repetition number,,,64,1,1,32,16
+Frequency hopping(mpdcch-pdsch-HoppingConfig),,,Enabled,Disabled,Disabled,Enabled,Enabled
+Frequency hopping offset(mpdcch-pdsch-HoppingOffset),,,1,N/A,N/A,1,1
+Frequency hopping interval(interval-FDD),,ms,16,N/A,N/A,8,4
+MPDCCH transmission duration(mPDCCH-NumRepetition),,ms,64,1,1,32,8
+MPDCCH repetition number,,,64,1,1,32,8
+Number of narrowbands for frequency hopping(mpdcch-pdsch-HoppingNB),,,4,N/A,N/A,4,4
+Starting subframe configuration for MPDCCH(mpdcch_startSF_UESS),,,2.5,1,1,2.5,4
+Narrowband for MPDCCH(mpdcch_Narrowband),,,7,0,0,7,7
+MPDCCH aggregation level,,,24,8,8,24,24
+CRS muting outside UE RF bandwidth (crs-IntfMitigEnabled),,,Disabled,Disabled,Enabled,Disabled,Disabled
+Number of PRBs for CRS transmission (crs-IntfMitigNumPRBs),,,N/A,N/A,6,N/A,N/A
+"Note 1:.Note 2:For each test, DC subcarrier puncturing shall be considered.Note 3:Test 1, test 3 and test 4 are applicable for UE supporting CE Mode B. Test 2 is applicable for UE not supporting CE Mode B. Test 2a is applicable for UE not supporting CE Mode B and UE capable of ce-CRS-IntfMitig.Note 4:If not otherwise stated, the values in this table refer to parameters in TS 36.211 [4] or/and TS 36.213 [6] as appropriate.",,,,,,,

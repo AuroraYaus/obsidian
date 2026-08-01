@@ -1,0 +1,6 @@
+NR band,Value of additionalSpectrumEmission,,,,,,,
+,0,1,2,3,4,5,6,7
+n46,NS_01,NS_28,NS_29,NS_30,NS_31,,,Reserved
+n96,NS_01,,NS_54,,,NS_61,,Reserved
+n102,NS_01,,,,,,,Reserved
+NOTE:additionalSpectrumEmission corresponds to an information element of the same name defined in clause 6.3.2 of TS 38.331 [7].,,,,,,,,

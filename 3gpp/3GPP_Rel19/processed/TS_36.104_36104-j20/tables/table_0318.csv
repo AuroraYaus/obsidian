@@ -1,0 +1,20 @@
+Reference channel,A14-1,A14-2
+Sub-carrier spacing (kHz),15,3.75
+Number of tone,1,1
+Diversity,No,No
+Modulation,π/2 BPSK,π/2 BPSK
+Frequency offset,0,0
+Channel estimation length (ms) Note 1,4,16
+Number of NPUSCH repetition,1,1
+IMCS / TBS,0 / 0,0 / 0
+Payload size (bits),32,32
+Allocated resource unit,2,2
+Code rate (target),1/3,1/3
+Code rate (effective),0.29,0.29
+Transport block CRC (bits),24,24
+Code block CRC size (bits),0,0
+Number of code blocks - C,1,1
+Total number of bits per resource unit,96,96
+Total symbols per resource unit,96,96
+Tx time (ms),16,64
+Note 1:Channel estimation lengths are included in the table for information only.,,

@@ -1,0 +1,5 @@
+Test number,Bandwidth combination
+1,20MHz for TDD cell and 20MHz for FDD cell
+2,20MHz for TDD cell and 10MHz for FDD cell
+3,20MHz for TDD cell and 15MHz for FDD cell
+Note 1: The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 9.1.1.2A. The test coverage for different number of component carriers is defined in 9.1.1.3.,

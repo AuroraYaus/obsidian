@@ -1,0 +1,22 @@
+Parameter,Unit,Value,,,,,,,,
+Reference channel,,R.72 FDD,R.72-1 FDD,R.72-2 FDD,R.72-3 FDD,R.73 FDD,R.73-1 FDD,R.74 FDD,R.85 FDD,R.93 FDD
+Channel bandwidth,MHz,10,5,15,20,10,10,10,10,10
+Allocated resource blocks (Note 4),,50,25,75,100,50,50,50,24(Note 5),24(Note 5)
+Allocated subframes per Radio Frame,,9,9,9,9,9,9,9,9,9
+Modulation,,256QAM,256QAM,256QAM,256QAM,64QAM,16QAM,16QAM,64QAM,64QAM
+Target Coding Rate,,0.62,0.69,0.61,0.62,0.43,1/2,1/2,1/2,0.52
+Information Bit Payload (Note 4),,,,,,,,,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",Bits,31704,15840,46888,63776,16416 (CW0)32856 (CW1),12960(CW0)25456(CW1),25456,10296,9528
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,31704,15840,46888,63776,15264 (CW0)30576 (CW1),11448(CW0)22920(CW1),22920,10296,9528
+Number of Code Blocks(Notes 3 and 4),,,,,,,,,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",,6,3,8,11,3 (CW0)6 (CW1),3 (CW0)5 (CW1),5,2,2
+For Sub-Frame 5,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,,6,3,8,11,3 (CW0)5 (CW1),2 (CW0)4 (CW1),5,2,2
+Binary Channel Bits (Note 4),,,,,,,,,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",Bits,51200,23200,76800,102400,38400 (CW0)76800 (CW1),25600 (CW0)51200 (CW1),51200,18432,18432
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,48128,20128,73728,99328,36096 (CW0)72192 (CW1),24064 (CW0)48128 (CW1),48128,18432,18432
+Max. Throughput averaged over 1 frame (Note 4),Mbps,28.534,14.256,42.1992,57.3984,14.659 (CW0)29.342 (CW1),11.513(CW0)22.657 (CW1),22.657,9.2664,8.575
+UE Category,,≥ 11,≥ 11,≥ 11,≥ 11,≥ 5,≥ 5,≥ 5,1bis,1bis
+"Note 1:2 symbols allocated to PDCCH for 20 MHz, 15 MHz and 10 MHz channel BW; 3 symbols allocated to PDCCH for 5 MHz and 3 MHz; 4 symbols allocated to PDCCH for 1.4 MHz.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4].Note 3:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).Note 4:Given per component carrier per codeword.Note 5: 24 resource blocks (RB 0-20 and 30-32) are allocated in sub-frames 0, 1, 2, 3, 4, 6, 7, 8, 9",,,,,,,,,,

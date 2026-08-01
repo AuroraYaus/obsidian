@@ -1,0 +1,7 @@
+SCS (kHz),50 MHz,100 MHz,200 MHz,400 MHz,800 MHz,1600 MHz,2000 MHz
+,NRB,NRB,NRB,NRB,NRB,NRB,NRB
+60,66,132,264,N/A,N/A,N/A,N/A
+120,32,66,132,264,N/A,N/A,N/A
+4801,N/A,N/A,N/A,66,124,248,N/A
+9601,N/A,N/A,N/A,33,62,124,148
+Note 1: This SCS is optional in this release of the specification.,,,,,,,

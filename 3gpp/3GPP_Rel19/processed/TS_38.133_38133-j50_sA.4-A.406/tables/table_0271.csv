@@ -1,0 +1,19 @@
+Parameter,Unit,Test,Value,,Comment
+,,configuration,Test 1,Test 2,
+E-UTRA RF Channel Number,,"Config 1,2,3,4,5,6",1,,One E-UTRAN carrier frequencies is used.
+NR RF Channel Number,,"Config 1,2,3,4,5,6","1, 2",,Two FR1 NR carrier frequencies is used.
+Active cell,,"Config 1,2,3,4,5,6",LTE Cell 1 (PCell) and NR cell 2 (PScell),,LTE Cell 1 is on E-UTRA RF channel number 1.NR Cell 2 is on NR RF channel number 1.
+Neighbour cell,,"Config 1,2,3,4,5,6",NR cell 3,,NR cell 3 is on NR RF channel number 2.
+Gap Pattern Id,,"Config 1,2,3,4,5,6",0,,As specified in clause 9.1.2-1.
+Measurement gap offset,,"Config 1,2,3,4,5,6",9,,
+A3-Offset,dB,"Config 1,2,3,4,5,6",-6,,
+Hysteresis,dB,"Config 1,2,3,4,5,6",0,,
+CP length,,"Config 1,2,3,4,5,6",Normal,,
+TimeToTrigger,s,"Config 1,2,3,4,5,6",0,,
+Filter coefficient,,"Config 1,2,3,4,5,6",0,,L3 filtering is not used
+DRX,ms,"Config 1,2,3,4,5,6",DRX.1,DRX.7,As specified in clause A.3.3
+Time offset between PCell and PSCell,,"Config 1,2,3,4,5,6",3 s,,Synchronous EN-DC
+Time offset between serving and neighbour cells,,"Config 1,4",3 ms,,Asynchronous cells.The timing of Cell 3 is 3 ms later than the timing of Cell 2.
+,,"Config 2,3,5,6",3s,,Synchronous cells.
+T1,s,"Config 1,2,3,4,5,6",5,,
+T2,s,"Config 1,2,3,4,5,6",1.1,11,

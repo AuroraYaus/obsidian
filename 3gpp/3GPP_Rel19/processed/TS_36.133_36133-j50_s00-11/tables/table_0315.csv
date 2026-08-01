@@ -1,0 +1,5 @@
+"Condition NOTE1,2",TSSB_time_index_irat
+No DRX,"Max(120ms, 3  Max(MGRP, SMTC period))  Nfreq"
+DRX cycle ≤ 320ms,"Max(120ms, Ceil(3  1.5)  Max(MGRP, SMTC period, DRX cycle))  Nfreq"
+DRX cycle > 320ms,3  DRX cycle  Nfreq
+NOTE 1: DRX or non DRX requirements apply according to the conditions described in section 5.,

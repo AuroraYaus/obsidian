@@ -1,0 +1,10 @@
+,CA bandwidth class / UTRAACLR1/2 / measurement bandwidth
+,"CA bandwidth class B, C and D"
+UTRAACLR1,33 dB
+Adjacent channel centre frequency offset (in MHz),+ BWChannel_CA /2 + BWUTRA/2/- BWChannel_CA / 2 - BWUTRA/2
+UTRAACLR2,36 dB
+Adjacent channel centre frequency offset (in MHz),+ BWChannel_CA /2 + 3*BWUTRA/2/- BWChannel_CA /2 – 3*BWUTRA/2
+CA E-UTRA channel Measurement bandwidth,BWChannel_CA - 2* BWGB
+UTRA 5MHz channel Measurement bandwidth (NOTE 1),3.84 MHz
+UTRA 1.6MHz channel measurement bandwidth (NOTE 2),1.28 MHz
+NOTE 1:Applicable for E-UTRA FDD co-existence with UTRA FDD in paired spectrum.NOTE 2:Applicable for E-UTRA TDD co-existence with UTRA TDD in unpaired spectrum.,

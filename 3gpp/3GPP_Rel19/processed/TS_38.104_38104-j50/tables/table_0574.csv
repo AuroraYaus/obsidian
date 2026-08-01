@@ -1,0 +1,14 @@
+Reference channel,G-FR1-A4-8,G-FR1-A4-9,G-FR1-A4-10,G-FR1-A4-11 (Note 3),G-FR1-A4-12,G-FR1-A4-13,G-FR1-A4-14,G-FR1A4-15
+Subcarrier spacing [kHz],15,15,15,30,30,30,30,30
+Allocated resource blocks,25,52,106,24,51,106,273,51
+CP-OFDM Symbols per slot (Note 1),12,12,12,12,12,12,12,12(Note4)
+Modulation,16QAM,16QAM,16QAM,16QAM,16QAM,16QAM,16QAM,16QAM
+Code rate (Note 2),658/1024,658/1024,658/1024,658/1024,658/1024,658/1024,658/1024,658/1024
+Payload size (bits),9224,19464,38936,8968,18960,38936,100392,18960
+Transport block CRC (bits),24,24,24,24,24,24,24,24
+Code block CRC size (bits),24,24,24,24,24,24,24,24
+Number of code blocks - C,2,3,5,2,3,5,12,3
+Code block size including CRC (bits) (Note 2),4648,6520,7816,4520,6352,7816,8392,6352
+Total number of bits per slot,14400,29952,61056,13824,29376,61056,157248,28152
+Total symbols per slot,3600,7488,15264,3456,7344,15264,39312,7038
+"NOTE 1:DM-RS configuration type  = 1 with DM-RS duration = single-symbol DM-RS and the number of DM-RS CDM groups without data is 2, Additional DM-RS position = pos1, l0= 2 and l=11 for PUSCH mapping type A, l0= 0 and l =10 for PUSCH mapping type B as per table 6.4.1.1.3-3 of TS 38.211 [9].NOTE 2:Code block size including CRC (bits) equals to K' in clause 5.2.2 of TS 38.212 [15].NOTE 3:The calculation of the “Total number of bits per slot” and “Total symbols per slot” fields include the REs taken up by CSI part 1 and CSI part 2, if present.NOTE 4:   One muted symbol is configured on symbol#4 for PUSCH mapping type A and symbol#2 for PUSCH mapping type B. Half of Res taken up by PUSCH data in the muted symbol.",,,,,,,,

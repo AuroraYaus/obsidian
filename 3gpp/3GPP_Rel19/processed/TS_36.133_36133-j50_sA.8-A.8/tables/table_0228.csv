@@ -1,0 +1,31 @@
+Parameter,Unit,Cell 1,,Cell 2,
+,,T1,T2,T1,T2
+E-UTRA RF Channel Number,,1,,2,
+BWchannel,MHz,10 for 10 MHz cell BW:5 for 5 MHz cell BW,,10 for 10 MHz cell BW:5 for 5 MHz cell BW,
+PDSCH parameters:DL Reference Measurement Channel,,R.23 FDD for 10 MHz cell BWR.31 FDD for 5 MHz cell BW,,-,
+MPDCCH parameters:DL Reference Measurement Channel,,R.19 FDD for 10 MHz cell BWR.27 FDD for 10 MHz cell BW,,R.19 FDD for 10 MHz cell BWR.27 FDD for 10 MHz cell BW,
+OCNG Patterns,,OP.21 FDD for 10 MHz cell BWOP.22 FDD for 5 MHz cell BW,,OP.6 FDD for 10 MHz cell BW:OP.19 FDD for 5 MHz cell BW,
+PBCH_RA,dB,-3,,-3,
+PBCH_RB,dB,,,,
+PSS_RA,dB,,,,
+SSS_RA,dB,,,,
+PCFICH_RB,dB,,,,
+PHICH_RA,dB,,,,
+PHICH_RB,dB,,,,
+MPDCCH_RA,dB,,,,
+MPDCCH_RB,dB,,,,
+PDSCH_RA,dB,,,,
+PDSCH_RB,dB,,,,
+OCNG_RANote 1,dB,,,,
+OCNG_RBNote 1,dB,,,,
+Note 2,dBm/15 KHz,-98,,-98,
+,dB,-12,-12,-Infinity,-12
+Note 3,dB,-12,-12,-Infinity,-12
+RSRP Note 3,dBm/15 KHz,-110,-110,-Infinity,-110
+SCH_RP Note 3,dBm/15 KHz,-110,-110,-Infinity,-110
+Io Note 3,dBm/9MHz,-69.95,-69.95,-Infinity,-69.95
+,dBm/4.5 MHz,-72.96,-72.96,-Infinity,-72.96
+Propagation Condition,,ETU30,,ETU30,
+Correlation Matrix and Antenna Configuration,,2x1 Low,,2x1 Low,
+Timing offset to Cell 1,ms,-,,3,
+"Note 1:OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.Note 3:Es/Iot, RSRP, SCH_RP and Io have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.",,,,,

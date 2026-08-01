@@ -1,0 +1,9 @@
+Frequency Range,Maximum Level,Measurement bandwidth,NOTE
+9 kHz ≤ f < 150 kHz,-36 dBm,1 kHz,
+150 kHz ≤ f < 30 MHz,-36 dBm,10 kHz,
+30 MHz ≤ f < 1000 MHz,-36 dBm,100 kHz,
+1 GHz ≤ f < 12.75 GHz,-30 dBm,1 MHz,4
+,-25 dBm,1 MHz,3
+12.75 GHz ≤ f < 5th harmonic of the upper frequency edge of the UL operating band in GHz,-30 dBm,1 MHz,1
+12.75 GHz < f < 26 GHz,-30 dBm,1 MHz,2
+"NOTE 1:Applies for Band for which the upper frequency edge of the UL Band is greater than 2.55 GHz and less than or equal to 5.2 GHzNOTE 2:Applies for Band that the upper frequency edge of the UL Band more than 5.2 GHzNOTE 3:Applies for Band n41, CA configurations including Band n41, and EN-DC configurations that include n41 specified in clause 5.2B of TS 38.101-3 [3] when NS_04 is signalled. NOTE 4:Does not apply for Band n41, CA configurations including Band n41, and EN-DC configurations that include n41 specified in subclause 5.2B of TS 38.101-3 [3] when NS_04 is signalled.",,,

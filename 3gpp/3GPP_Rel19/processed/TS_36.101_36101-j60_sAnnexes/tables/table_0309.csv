@@ -1,0 +1,12 @@
+Parameter,Unit,Value,,,,,
+Channel bandwidth,MHz,1.4,3,5,10,15,20
+Allocated resource blocks,,,,25,50,,
+Subcarriers per resource block,,,,12,12,,
+Packets per SA period,,,,1,1,,
+Modulation,,,,16QAM,16QAM,,
+Transport Block Size,,,,9912,18336,,
+Transport block CRC,Bits,,,24,24,,
+Maximum number of HARQ transmissions,,,,4,4,,
+Binary Channel Bits,Bits,,,14400,28800,,
+Max. Throughput averaged over 1 SA period of  40ms,kbps,,,247.8,458.4,,
+"Note 1:For PSSCH transmission, the last symbol shall be punctured as per TS 36.211.Note 2:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).NOTE 3: Throughput (in kbps) will depend on SA period configuration",,,,,,,

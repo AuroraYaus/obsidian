@@ -1,0 +1,22 @@
+Parameter,,Unit,Value,Comment
+Active cell,,,Cell 1,
+Neighbouring cell,,,Cell 2,Cell 2 is the candidate cell
+A3-Offset,,dB,-6,
+Hysteresis,,dB,0,
+Time To Trigger,,ms,160,
+Filter coefficient,,,0,L3 filtering is not used
+reportQuantityRS-Indexes,,,rsrp,
+maxNrofRS-IndexesToReport,,,1,
+includeBeamMeasurements,,,True,
+DRX,,,OFF,DRX is not used
+Time offset between cells,,,3 s,The timing of Cell 2 is later than the timing of Cell 1
+deriveSSB-IndexFromCell,,,Enabled,Not relevant to this test case
+Gap Pattern Id,,,0,
+Measurement gap offset,,ms,39,
+LTM-CSI-ReportConfig,L1-RSRP reporting period,slot,80,Periodic L1-RSRP reporting configured
+,nrOfReportedCells,,n1,Report candidate cell’s (Cell 2) L1-RSRP measurement results.
+,nrOfReportedRS-PerCell,,n1,
+,spCellInclusion,,N/A,
+ltm-ConfigComplete,,,True,Candidate cell’s configuration is complete configuration
+T1,,s,0.3,
+T2,,s,0.5,

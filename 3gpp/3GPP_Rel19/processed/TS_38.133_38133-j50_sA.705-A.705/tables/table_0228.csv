@@ -1,0 +1,14 @@
+Parameter,Unit,Value,Comment
+NR RF Channel Number,,"1, 2, 3",Three NR radio channels are used for this test
+Active PCell,,Cell 1,PCell on RF channel number 1.
+Active SCell 1,,Cell 2,SCell 1 on RF channel number 2.
+Active SCell 2,,Cell 3,SCell 2 on RF channel number 3.
+CP length,,Normal,
+DRX,,OFF,
+sCellDeactivationTimer,ms,---,Same value applies for SCell 1 and SCell 2. The value infinity is applied.
+bwp-InactivityTimer,ms,200,Same value applies for SCell 1 and SCell 2.
+Cell 2 timing offset to Cell 1,s,0,Time alignment error as specified in TS 38.104 [13] clause 6.5.3.1.
+Cell 3 timing offset to Cell 1,s,0,
+T1,s,0.2,"During T1, DCI-based simultaneous BWP switching of SCell 1 and SCell 2 is carried out."
+T2,s,0.2,During T2 bwp-InactivityTimer timers shall run to expiry.
+T3,s,0.2,"During T3, timer-based simultaneous BWP switching of SCell 1 and SCell 2 is carried out."

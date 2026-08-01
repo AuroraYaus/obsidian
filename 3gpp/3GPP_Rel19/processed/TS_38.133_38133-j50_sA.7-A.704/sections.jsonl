@@ -1,0 +1,231 @@
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7NR standalone tests with one or more NR cells in FR2", "paragraph_index": 1, "style": "Heading1"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1SA: RRC_IDLE state mobility", "paragraph_index": 2, "style": "Heading2"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1Cell re-selection to NR", "paragraph_index": 3, "style": "Heading3"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.1Cell reselection to FR2 intra-frequency NR case", "paragraph_index": 4, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.1.1Test Purpose and Environment", "paragraph_index": 5, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.1.2Test Parameters", "paragraph_index": 7, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.1.3Test Requirements", "paragraph_index": 15, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.2Cell reselection to FR2 inter-frequency NR case", "paragraph_index": 34, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.2.1Test Purpose and Environment", "paragraph_index": 35, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.2.2Test Parameters", "paragraph_index": 37, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.2.3Test Requirements", "paragraph_index": 45, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.3Cell reselection to FR2 intra-frequency NR case for UE fulfilling low mobility relaxed measurement criterion", "paragraph_index": 63, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.3.1Test Purpose and Environment", "paragraph_index": 64, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.3.2Test Parameters", "paragraph_index": 66, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.3.3Test Requirements", "paragraph_index": 74, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.4Cell reselection to FR2 intra-frequency NR case for UE fulfilling not-at-cell edge relaxed measurement criterion", "paragraph_index": 83, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.4.1Test Purpose and Environment", "paragraph_index": 84, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.4.2Test Parameters", "paragraph_index": 86, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.4.3Test Requirements", "paragraph_index": 94, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.5Cell reselection to FR2 inter-frequency NR case for UE fulfilling low mobility relaxed measurement criterion", "paragraph_index": 103, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.5.1Test Purpose and Environment", "paragraph_index": 104, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.5.2Test Parameters", "paragraph_index": 106, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.5.3Test Requirements", "paragraph_index": 114, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.6Cell reselection to FR2 inter-frequency NR case for UE fulfilling not-at-cell edge relaxed measurement criterion", "paragraph_index": 127, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.6.1Test Purpose and Environment", "paragraph_index": 128, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.6.2Test Parameters", "paragraph_index": 130, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.6.3Test Requirements", "paragraph_index": 138, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.7Cell reselection to FR2 intra-frequency NR case for FR2 power class 6 UE configured with highSpeedMeasFlagFR2-r17", "paragraph_index": 151, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.7.1Test Purpose and Environment", "paragraph_index": 152, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.7.2Test Parameters", "paragraph_index": 154, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.7.3Test Requirements", "paragraph_index": 162, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.8Cell reselection to FR2 inter-frequency NR case for UE configured with highSpeedMeasFlagFR2-r17", "paragraph_index": 174, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.8.1Test Purpose and Environment", "paragraph_index": 175, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.8.2Test Parameters", "paragraph_index": 177, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.8.3Test Requirements", "paragraph_index": 185, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.9Cell reselection to FR2 intra-frequency NR case for FR2 cell supporting OD-SIB1", "paragraph_index": 197, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.9.1Test Purpose and Environment", "paragraph_index": 198, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.9.2Test Parameters", "paragraph_index": 200, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.9.3Test Requirements", "paragraph_index": 208, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.10Cell reselection to FR2 inter-frequency NR case for FR2 cell supporting OD- SIB1", "paragraph_index": 220, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.10.1Test Purpose and Environment", "paragraph_index": 221, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.10.2Test Parameters", "paragraph_index": 223, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.1.1.10.3Test Requirements", "paragraph_index": 231, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.2SA: RRC_INACTIVE state mobility", "paragraph_index": 243, "style": "Heading2"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.2.1Small Data Transmission", "paragraph_index": 244, "style": "Heading3"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.2.1.1TA validation for CG-SDT in FR2", "paragraph_index": 245, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.2.1.1.1Test Purpose and Environment", "paragraph_index": 246, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.2.1.1.2Test Requirements", "paragraph_index": 274, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.2.2Cell reselection for positioning", "paragraph_index": 280, "style": "Heading3"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.2.2.1Cell reselection to FR2 intra-frequency NR case with RRC_ INACTIVE eDRX and positioning SRS", "paragraph_index": 281, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.2.2.1.1Test Purpose and Environment", "paragraph_index": 282, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.2.2.1.2Test Parameters", "paragraph_index": 284, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.2.2.1.3Test Requirements", "paragraph_index": 292, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3RRC_CONNECTED state mobility", "paragraph_index": 302, "style": "Heading2"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1Handover", "paragraph_index": 303, "style": "Heading3"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.1Inter-frequency handover from FR1 to FR2; unknown target cell", "paragraph_index": 304, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.1.1Test Purpose and Environment", "paragraph_index": 305, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.1.2Test Parameters", "paragraph_index": 307, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.1.3Test Requirements", "paragraph_index": 316, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.2Intra-frequency handover from FR2 to FR2; unknown target cell", "paragraph_index": 323, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.2.1Test Purpose and Environment", "paragraph_index": 324, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.2.2Test Parameters", "paragraph_index": 326, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.2.3Test Requirements", "paragraph_index": 335, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.3Inter-frequency handover from FR2 to FR2; unknown target cell", "paragraph_index": 342, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.3.1Test Purpose and Environment", "paragraph_index": 343, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.3.2Test Parameters", "paragraph_index": 345, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.3.3Test Requirements", "paragraph_index": 354, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.4Inter-band inter-frequency synchronous DAPS handover from FR1 to FR2", "paragraph_index": 361, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.4.1Test Purpose and Environment", "paragraph_index": 362, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.4.2Test Parameters", "paragraph_index": 364, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.4.3 Test Requirements", "paragraph_index": 380, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.5Inter-band inter-frequency asynchronous DAPS handover from FR1 to FR2", "paragraph_index": 394, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.5.1Test Purpose and Environment", "paragraph_index": 395, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.5.2Test Parameters", "paragraph_index": 397, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.5.3 Test Requirements", "paragraph_index": 413, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.6Handover with PSCell from SA to EN-DC with unknown FR2 target PScell", "paragraph_index": 427, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.6.1Test Purpose and Environment", "paragraph_index": 428, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.6.2Test Parameters", "paragraph_index": 430, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.6.3Test Requirements", "paragraph_index": 451, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.7HO with PSCell from FR1 NR-SA to EN-DC with known E-UTRA PCell and known FR2 PSCell", "paragraph_index": 467, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.7.1Test purpose and environment", "paragraph_index": 468, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.7.2Test Requirements", "paragraph_index": 488, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.8NR PSCell change delay in HO with PSCell from NR-DC to NR-DC", "paragraph_index": 507, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.8.1Test Purpose and Environment", "paragraph_index": 508, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.8.2Test Requirements", "paragraph_index": 522, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.9Intra-frequency handover from FR2-2 to FR2-2; unknown target cell", "paragraph_index": 525, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.9.1Test Purpose and Environment", "paragraph_index": 526, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.9.2Test Parameters", "paragraph_index": 528, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.9.3Test Requirements", "paragraph_index": 537, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.10Inter-frequency handover from FR2-2 to FR2-2; unknown target cell", "paragraph_index": 544, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.10.1Test Purpose and Environment", "paragraph_index": 545, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.10.2Test Parameters", "paragraph_index": 547, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.10.3Test Requirements", "paragraph_index": 556, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.11Inter-frequency handover from FR1 to FR2-2; unknown target cell", "paragraph_index": 563, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.11.1Test Purpose and Environment", "paragraph_index": 564, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.11.2Test Parameters", "paragraph_index": 566, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.11.3Test Requirements", "paragraph_index": 577, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.12Intra-frequency handover from FR2 to FR2; known target cell configured with NCD-SSB", "paragraph_index": 584, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.12.1Test Purpose and Environment", "paragraph_index": 585, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.12.2Test Parameters", "paragraph_index": 587, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.12.3Test Requirements", "paragraph_index": 601, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.13Inter-frequency handover from FR2 to FR2; known target cell configured with NCD-SSB", "paragraph_index": 608, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.13.1Test Purpose and Environment", "paragraph_index": 609, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.13.2Test Parameters", "paragraph_index": 611, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.13.3Test Requirements", "paragraph_index": 625, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.14Handover with PSCell from FR1-FR2 NR-DC to FR1-FR1 NR-DC with target PSCell in FR1", "paragraph_index": 632, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.14.1Test Purpose and Environment", "paragraph_index": 633, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.14.2Test Requirements", "paragraph_index": 647, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.15HO with PSCell from FR1-FR1 NR-DC to FR1-FR2 NR-DC", "paragraph_index": 672, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.15.1Test Purpose and Environment", "paragraph_index": 673, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.15.2Test Requirements", "paragraph_index": 689, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.16Intra-frequency handover from FR2 to FR2; unknown target cell; for UE supporting fast beam sweeping", "paragraph_index": 700, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.16.1Test Purpose and Environment", "paragraph_index": 701, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.16.2Test Parameters", "paragraph_index": 703, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.16.3Test Requirements", "paragraph_index": 712, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.17Inter-frequency handover from FR2 to FR2; unknown target cell; for UE supporting fast beam sweeping", "paragraph_index": 719, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.17.1Test Purpose and Environment", "paragraph_index": 720, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.17.2Test Parameters", "paragraph_index": 722, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.1.17.3Test Requirements", "paragraph_index": 731, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2RRC Connection Mobility Control", "paragraph_index": 738, "style": "Heading3"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1SA: RRC Re-establishment", "paragraph_index": 739, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.1Intra-frequency RRC Re-establishment in FR2", "paragraph_index": 740, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.2Inter-frequency RRC Re-establishment in FR2", "paragraph_index": 764, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.3Intra-frequency RRC Re-establishment in FR2 without serving cell timing", "paragraph_index": 789, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.3.1Test Purpose and Environment", "paragraph_index": 790, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.3.2Test Requirements", "paragraph_index": 799, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.4Intra-frequency RRC Re-establishment in FR2-2", "paragraph_index": 813, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.4.1Test Purpose and Environment", "paragraph_index": 814, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.4.2Test Requirements", "paragraph_index": 823, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.5Inter-frequency RRC Re-establishment in FR2-2", "paragraph_index": 837, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.5.1Test Purpose and Environment", "paragraph_index": 838, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.5.2Test Requirements", "paragraph_index": 847, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.6Intra-frequency RRC Re-establishment in FR2-2 without serving cell timing", "paragraph_index": 862, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.6.1Test Purpose and Environment", "paragraph_index": 863, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.6.2Test Requirements", "paragraph_index": 872, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.7Intra-frequency RRC Re-establishment in FR2 with UE capable of reduced beam sweeping factor", "paragraph_index": 886, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.7.1Test Purpose and Environment", "paragraph_index": 887, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.7.2Test Requirements", "paragraph_index": 896, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.8Inter-frequency RRC Re-establishment in FR2 without serving cell timing with UE capable of reduced beam sweeping factor", "paragraph_index": 913, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.8.1Test Purpose and Environment", "paragraph_index": 914, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.1.8.2Test Requirements", "paragraph_index": 923, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.2Random Access", "paragraph_index": 941, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.2.14-step RA type c ontention based random access test in FR2 for NR Standalone", "paragraph_index": 942, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.2.24-step RA type n on-contention based random access test in FR2 for NR Standalone", "paragraph_index": 981, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.2.32-step RA type contention based random access test in FR2 for NR Standalone", "paragraph_index": 1014, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.2.42-step RA type n on-contention based random access test in FR2 for NR Standalone", "paragraph_index": 1040, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.3SA: RRC Connection Release with Redirection", "paragraph_index": 1068, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.3.1Redirection from NR in FR2 to NR in FR2", "paragraph_index": 1069, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.3.2Redirection from NR in FR2 to NR in FR2 with UE capable of reduced beam sweeping factor", "paragraph_index": 1092, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.4LTM PDCCH-order Random Access", "paragraph_index": 1118, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.4.1PDCCH-order RACH on neighbor cell in FR2 when RACH BW is within active BWP", "paragraph_index": 1119, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.2.4.2PDCCH-order RACH on inter-frequency neighbor cell in FR2", "paragraph_index": 1158, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3Conditional Handover", "paragraph_index": 1190, "style": "Heading3"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.1Intra-frequency conditional handover from FR2 to FR2", "paragraph_index": 1191, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.1.1Test Purpose and Environment", "paragraph_index": 1192, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.1.2Test Parameters", "paragraph_index": 1194, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.1.2.3Test Requirements", "paragraph_index": 1203, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.2Inter-frequency conditional handover from FR2 to FR2; unknown target cell", "paragraph_index": 1206, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.2.1Test Purpose and Environment", "paragraph_index": 1207, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.2.2Test Parameters", "paragraph_index": 1209, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.2.3Test Requirements", "paragraph_index": 1218, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.3NES triggering intra-frequency target CHO delay From FR2 to FR2", "paragraph_index": 1221, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.3.1Test Purpose and Environment", "paragraph_index": 1222, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.3.2Test Parameters", "paragraph_index": 1224, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.3.2.3Test Requirements", "paragraph_index": 1234, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.4NES triggering inter-frequency conditional handover from FR2 to FR1", "paragraph_index": 1237, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.4.1Test Purpose and Environment", "paragraph_index": 1238, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.4.2Test Parameters", "paragraph_index": 1240, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.4.3Test Requirements", "paragraph_index": 1251, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.5NR conditional handover including target MCG and target SCG from FR1-FR2 NR-DC to FR1-FR2 NR-DC", "paragraph_index": 1254, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.5.1Test Purpose and Environment", "paragraph_index": 1255, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.5.2Test Requirements", "paragraph_index": 1269, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.5.2.1Test Requirements for NR conditional handover", "paragraph_index": 1270, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.5.2.2Test Requirements for NR PSCell change", "paragraph_index": 1274, "style": "Heading6"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.6NR conditional Handover including target MCG and candidate SCG from FR1-FR2 NR-DC to FR1-FR2 NR-DC", "paragraph_index": 1276, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.6.1Test Purpose and Environment", "paragraph_index": 1277, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.6.2Test Parameters", "paragraph_index": 1279, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.3.6.3 Test Requirements", "paragraph_index": 1292, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4LTM PCell Switch", "paragraph_index": 1312, "style": "Heading3"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.1RACH based Intra-frequency PCell switch from FR2 to FR2", "paragraph_index": 1313, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.1.1Test Purpose and Environment", "paragraph_index": 1314, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.1.2Test Parameters", "paragraph_index": 1316, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.1.3Test Requirements", "paragraph_index": 1354, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.2RACH-less Intra-frequency PCell switch from FR2 to FR2", "paragraph_index": 1366, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.2.1Test Purpose and Environment", "paragraph_index": 1367, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.2.2Test Parameters", "paragraph_index": 1369, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.2.3Test Requirements", "paragraph_index": 1414, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.3RACH-based Inter-frequency LTM PCell switch from FR2 to FR2", "paragraph_index": 1425, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.3.1Test Purpose and Environment", "paragraph_index": 1426, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.3.2Test Parameters", "paragraph_index": 1428, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.3.3Test Requirements", "paragraph_index": 1467, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.4RACH-less Intra-frequency CLTM PCell switch from FR2 to FR2 triggered by SSB based L1-RSRP measurement", "paragraph_index": 1478, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.4.1Test Purpose and Environment", "paragraph_index": 1479, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.4.2Test Parameters", "paragraph_index": 1481, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.4.3Test Requirements", "paragraph_index": 1523, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.5RACH-based Intra-frequency CLTM PCell switch from FR2 to FR2 triggered by SSB based L1-RSRP measurement", "paragraph_index": 1537, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.5.1Test Purpose and Environment", "paragraph_index": 1538, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.5.2Test Parameters", "paragraph_index": 1540, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.4.5.3Test Requirements", "paragraph_index": 1575, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.5LTM PSCell Switch", "paragraph_index": 1590, "style": "Heading3"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.5.1RACH-based Intra-frequency LTM PSCell switch from FR2 to FR2", "paragraph_index": 1591, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.5.1.1Test Purpose and Environment", "paragraph_index": 1592, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.5.1.2Test Parameters", "paragraph_index": 1594, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.3.5.1.3Test Requirements", "paragraph_index": 1635, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4Timing", "paragraph_index": 1646, "style": "Heading2"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1UE transmit timing", "paragraph_index": 1647, "style": "Heading3"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.1NR UE Transmit Timing Test for FR2", "paragraph_index": 1648, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.1.1Test Purpose and environment", "paragraph_index": 1649, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.1.2Test requirements", "paragraph_index": 1662, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.2NR UE Transmit Timing Test for FR2-2", "paragraph_index": 1674, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.2.1Test Purpose and environment", "paragraph_index": 1675, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.2.2Test requirements", "paragraph_index": 1687, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.3NR UE Transmit Timing Test with 2-TA for FR2 UE supporting multiDCI-IntraCellMultiTRP-TwoTA-r18", "paragraph_index": 1700, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.3.1Test Purpose and environment", "paragraph_index": 1701, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.3.2Test requirements", "paragraph_index": 1716, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.4NR UE Transmit Timing Test with 2-TA for FR2 UE supporting single DCI", "paragraph_index": 1728, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.4.1Test Purpose and environment", "paragraph_index": 1729, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.1.4.2Test requirements", "paragraph_index": 1742, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.2UE timer accuracy", "paragraph_index": 1754, "style": "Heading3"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3Timing advance", "paragraph_index": 1755, "style": "Heading3"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3.1SA FR2 timing advance adjustment accuracy", "paragraph_index": 1756, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3.1.1Test Purpose and Environment", "paragraph_index": 1757, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3.1.2Test Parameters", "paragraph_index": 1759, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3.1.3 Test Requirements", "paragraph_index": 1775, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3.2SA FR2-2 timing advance adjustment accuracy", "paragraph_index": 1779, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3.2.1Test Purpose and Environment", "paragraph_index": 1780, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3.2.2Test Parameters", "paragraph_index": 1782, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3.2.3Test Requirements", "paragraph_index": 1799, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3.3SA FR2 timing advance adjustment accuracy for asymmetric DL sTRP/UL mTRP deployment with two TAs", "paragraph_index": 1803, "style": "Heading4"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3.3.1Test Purpose and Environment", "paragraph_index": 1804, "style": "Heading5"}
+{"source": "38133-j50_sA.7-A.704.docx", "section": "", "title": "A.7.4.3.3.2Test Parameters", "paragraph_index": 1806, "style": "Heading5"}

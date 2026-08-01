@@ -1,0 +1,6 @@
+Frequency range(MHz),Channel bandwidth (MHz) / Spectrum emission limit (dBm),Measurement bandwidth,Note
+,"1.4, 3, 5, 10, 15, 20 MHz",,
+2620 ≤ f < 2645,-15.5,5 MHz,1
+2645 ≤ f ≤ 2690,-40,1 MHz,
+2690 ≤ f ≤ 2900,-50,1 MHz,
+"NOTE 1:For these adjacent bands, the emission limit could imply risk of harmful interference to UE(s) operating in the protected operating band.",,,

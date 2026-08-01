@@ -1,0 +1,5 @@
+Parameter,,Unit,Test1,
+,,,T1,T2
+Propagation condition,"Config 1 , 2",-,AWGN + 220 Hz,
+,Config 3,,AWGN + 500 Hz,
+Cell specific koffset,,,3,

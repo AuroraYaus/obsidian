@@ -1,0 +1,15 @@
+Parameter,,Unit,Value,Comment
+NB-IOT operational mode,,,Standalone,
+Initial condition,Active cell,,nCell1,
+,Neighbour cells,,nCell2,
+Final condition,Active cell,,nCell2,
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+NPDCCH repetition level,,,16,NPDCCH Rmax
+N310,,-,1,Maximum consecutive out-of-sync indications from lower layers
+N311,,-,1,Minimum consecutive in-sync indications from lower layers
+T310,,Ms,0,Radio link failure timer; T310 is disabled
+T311,,Ms,60000,RRC re-establishment timer
+DRX,,,OFF,
+T1,,S,5,
+T2,,Ms,400,
+T3,,S,60,

@@ -1,0 +1,13 @@
+Modulation,,MPR (dB),,
+,,Edge RB allocations,Outer RB allocations,Inner RB allocations
+DFT-s-OFDM,Pi/2 BPSK w/ Rel-15 DMRS,(NOTE 1),≤ 0.5,0
+,Pi/2 BPSK w Pi/2 BPSK DMRS,(NOTE 1),0,0
+,QPSK,(NOTE 1),≤ 1,0
+,16 QAM,(NOTE 1),≤ 2,≤ 1
+,64 QAM,(NOTE 1),≤ 2.5,
+,256 QAM,(NOTE 1),≤ 4.5,
+CP-OFDM,QPSK,(NOTE 1),≤ 3,≤ 1.5
+,16 QAM,(NOTE 1),≤ 3,≤ 2
+,64 QAM,(NOTE 1),≤ 3.5,
+,256 QAM,(NOTE 1),≤ 6.5,
+"NOTE 1:MPR for all modulations for Edge RB allocation is defined as following for two distinguished channel bandwidths groups as:Within the <50MHz channel bandwidth group:Within the ≥50MHz channel bandwidth group:where CEIL(x,0.5 dB) means rounding x upwards to the closest multiple of 0.5 dB.NOTE 2:In band n101 the MPR is increased by 3 dB when the percentage of uplink symbols transmitted in a radio frame is larger than 50% and by 6 dB when the percentage of uplink symbols transmitted in a radio frame is larger than 75%.                         MPR= CEIL(7.2 dB- 6 dB∙ CBW100 MHz, 0.5 dB)                          MPR= CEIL5.35 dB+3.15 dB∙ CBW100 MHz, 0.5 dB",,,,

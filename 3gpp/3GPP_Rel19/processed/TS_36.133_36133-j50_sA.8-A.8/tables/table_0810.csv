@@ -1,0 +1,26 @@
+Parameter,Unit,Cell 1,,Cell 2,,Cell 3,
+,,T2,T3,T2,T3,T2,T3
+E-UTRA RF Channel Number,,1,,2,,2,
+Correlation Matrix and Antenna Configuration,,1x2 Low,,1x2 Low,,1x2 Low,
+OCNG patterns defined in A.3.2.1,,OP.5 FDD,,OP.6 FDD,,OP.6 FDD,N/A
+PBCH_RA,dB,0,,0,,0,N/A
+PBCH_RB,,,,,,,
+PSS_RA,,,,,,,
+SSS_RA,,,,,,,
+PCFICH_RB,,,,,,,
+PHICH_RA,,,,,,,
+PHICH_RB,,,,,,,
+PDCCH_RA,,,,,,,
+PDCCH_RB,,,,,,,
+OCNG_RANote 1,,,,,,,
+OCNG_RBNote 1,,,,,,,
+PRS_RA,dB,-6,N/A,N/A,3,3,N/A
+Note 3,dBm/15 kHz,-98,-98,-98,-95,-98,-95
+PRS,dB,-4,-Infinity,-Infinity,-1,-8,-Infinity
+PRS  Note 4,dB,-4,-Infinity,-Infinity,-1,-8,-Infinity
+Io Note 4,dBm/9 MHz,-69.94,N/A,N/A,-66.68,-70.11,N/A
+PRP Note 4,dBm/15 kHz,-102,-Infinity,-Infinity,-96,-106,-Infinity
+RSRP Note 4,dBm/ 15 kHz,-96,-96,-105,-99,-109,-Infinity
+Note 4,dB,2,2,-7,-4,-11,-Infinity
+Propagation Condition,,ETU30,,,,,
+"Note 1: OCNG shall be used such that active cells (all, except Cell 3 in T3) are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols other than those in the subframes with transmitted PRS.Note 2:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.Note 3: Interference from other cells and noise sources not specified in the test are assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 4: If PRS_RA is not “N/A”, , PRS , Io, RSRP and PRP levels have been derived from other parameters and are given for information purpose. If PRS_RA is “N/A”, Io and RSRP levels have been derived from other parameters and are given for information purpose. These are not settable test parameters. Interference conditions shall be applied to all PRS symbols of DL positioning subframes.",,,,,,,

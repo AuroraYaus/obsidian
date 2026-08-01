@@ -1,0 +1,36 @@
+BS channel bandwidth of the lowest/highest carrier received (MHz),Interfering RB centre frequency offset from the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap (kHz) (Note 3),Type of interfering signal
+3,±360,CW
+,±960,"3 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+5,±360,CW
+,±1420,"5 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+7,±400,CW
+,±1240,"5 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+10,±370,CW
+,±1960,"5 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+15 (Note 2),±380,CW
+,±1960,"5 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+20 (Note 2),±390,CW
+,±2320,"5 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+25 (Note 2),±325,CW
+,±2350,"20 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+30 (Note 2),±335,CW
+,±2350,"20 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+35 (Note 2),±345,CW
+,±2710,"20 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+40 (Note 2),±355,CW
+,±2710,"20 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+45 (Note 2),±365,CW
+,±2710,"20 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+50 (Note 2),±375,CW
+,±2710,"20 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+60 (Note 2),±395,CW
+,±2710,"20 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+70 (Note 2),±415,CW
+,±2710,"20 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+80 (Note 2),±435,CW
+,±2710,"20 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+90 (Note 2),±365,CW
+,±2530,"20 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+100 (Note 2),±385,CW
+,±2530,"20 MHz DFT-s-OFDM NR signal, 1 RB (Note 1)"
+"NOTE 1:Interfering signal consisting of one resource block positioned at the stated offset, the BS channel bandwidth of the interfering signal is located adjacently to the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap.NOTE 2:This requirement shall apply only for a G-FRC mapped to the frequency range at the channel edge adjacent to the interfering signals.NOTE 3: The centre of the interfering RB refers to the frequency location between the two central subcarriers.",,

@@ -1,0 +1,34 @@
+Parameter,Config,Unit,Value
+SSB GSCN,"1,2",,freq1
+DL CCA model,"1,2",,As specifieed in A.3.20.2.1
+UL CCA model,"1,2",,As specified in A.3.20.2.2
+Duplex mode,"1,2",,TDD
+TDD Configuration,"1,2",,TDDConf.1.1 CCA
+BWchannel,"1,2",MHz,"40: NPRB,c = 106"
+PDSCH Reference measurement channel,"1,2",,SR.1.1 CCA
+RMSI CORESET Reference Channel,"1,2",,CR.1.1 CCA
+Dedicated CORESET Reference Channel,"1,2",,CCR.1.1 CCA
+SSB configuration,"1,2",,SSB.3 CCA for semi-static channel accessSSB.4 CCA for dynamic channel access
+OCNG Patterns,"1,2",,OP.1
+Initial BWP Configuration,"1,2",,DLBWP.0.1 ULBWP.0.1
+Dedicated BWP configuration,"1,2",,DLBWP.1.1 ULBWP.1.1
+DBT Window Configuration,"1,2",,DBT.1
+TRS Configuration,"1,2",,TRS.1.2 TDD
+DRX configuration,"1,2",,DRX.3
+reportConfigType,"1,2",,periodic
+reportQuantity,"1,2",,ssb-Index-RSRP
+Number of reported RS,"1,2",,2
+L1-RSRP reporting period,"1,2",slot,80
+T1,"1,2",s,5
+T2,"1,2",s,1
+EPRE ratio of PSS to SSS,,,
+EPRE ratio of PBCH DMRS to SSS,,,
+EPRE ratio of PBCH to PBCH DMRS,,,
+EPRE ratio of PDCCH DMRS to SSS,,,
+EPRE ratio of PDCCH to PDCCH DMRS,"1,2",dB,0
+EPRE ratio of PDSCH DMRS to SSS,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,,
+EPRE ratio of OCNG DMRS to SSSNote 1,,,
+EPRE ratio of OCNG to OCNG DMRS Note 1,,,
+Propagation condition,"1,2",,AWGN
+"NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols. For cells with CCA model, OCNG is transmitted only in the slots with downlink transmission burst and is not transmitted during the muted slots or during DBT window.",,,

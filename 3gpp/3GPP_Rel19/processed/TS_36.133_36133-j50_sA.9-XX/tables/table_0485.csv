@@ -1,0 +1,13 @@
+Parameter,,Unit,Value,Comment
+NB-IoT operational mode,,,Standalone,
+CP Length,,,Normal,
+Satellite information,Config 1,,SSC.1,
+,Config 2,,SSC.2,
+Timing Advance Command (TA) value during T1,,,31,NTA = 0 for the purpose of establishing a reference value from which the timing advance adjustment accuracy can be measured during T2
+Timing Advance Command (TA) value during T2,,,39,NTA = 128
+Number of repetitons,NPDCCH,,128,
+,NPDSCH,,128,
+,NPUSCH,,32,
+DRX,,,OFF,
+T1,,s,5,
+T2,,s,5,

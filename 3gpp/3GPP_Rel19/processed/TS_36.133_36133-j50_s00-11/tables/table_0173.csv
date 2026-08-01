@@ -1,0 +1,4 @@
+DRX cycle,"TCycle,i"
+No DRX,"max (80ms, SMTC period) x Nfreq"
+DRX cycle ≤ 320ms,"1.5 * max (80ms, SMTC period, DRX cycle) x Nfreq"
+DRX cycle>320ms,DRX cycle x Nfreq

@@ -1,0 +1,5 @@
+DRX cycle,TPSS/SSS_sync_intra
+No DRX,"max(600 ms, ceil((Mpss/sss_sync_with_gaps+ Lcancel) x Kgap) x max(MGRP, SMTC period)) x CSSFintra"
+DRX cycle≤ 320 ms,"max(600 ms, ceil(1.5x (Mpss/sss_sync_with_gaps+ Lcancel) x Kgap) x max(MGRP, SMTC period, DRX cycle)) x CSSFintra"
+DRX cycle>320 ms,"Ceil((Mpss/sss_sync_with_gaps + Lcancel) x Kgap) x max(MGRP, DRX cycle) x CSSFintra"
+"NOTE 1:For a UE supporting concurrent GAPs, if multiple concurrent GAPs are configured, the MGRP is the periodicity of the activated Pre-MG or the MG pattern associated to the intra-frequency layer.NOTE 2:Lcancel is the number of cancelled gap occasions overlapping with SMTC in TPSS/SSS_sync_intra. When DRX is configured, Lcancel is the number of DRX cycles in which at least one measurement gap occasion overlapping with SMTC is cancelled during TPSS/SSS_sync_intra.",

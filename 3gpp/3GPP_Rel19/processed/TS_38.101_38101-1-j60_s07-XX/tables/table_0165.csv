@@ -1,0 +1,5 @@
+Operating band,Parameter,Unit,Case 1,Case 2
+,Pinterferer,dBm,-56,-44
+,Finterferer (offset),MHz,"-BWchannel CA/2 –FIoffset, case 1andBWchannel CA/2 +FIoffset, case 1","≤ -BWchannel CA/2 –FIoffset, case 2and≥ BWchannel CA/2 +FIoffset, case 2"
+n46,Finterferer,MHz,NOTE 2,FDL_low – 3* BWchannel CAtoFDL_high + 3* BWchannel CANOTE 4
+"NOTE 1:The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with an SCS equal to that of the closest carrier.NOTE 2:For each carrier frequency, the requirement applies for two interferer carrier frequencies: a: -BWchannel CA/2 – FIoffset, case 1; b: BWchannel CA/2 + FIoffset, case 1NOTE 3:BWchannel CA denotes the aggregated channel bandwidth of the wanted signalNOTE 4:Interferer carrier frequencies in the frequency range for Case 2 shall be located at discrete frequencies in integer multiples of 20 MHz offset from - BWchannel CA /2 – FIoffset, case 2 and BWchannel CA /2 + FIoffset, case 2",,,,

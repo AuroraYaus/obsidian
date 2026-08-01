@@ -1,0 +1,28 @@
+parameter,,Unit,Cell 1,Cell 2
+Downlink power allocation,,dB,0,0
+,,dB,0 (Note 1),0
+,,dB,-3,-3
+Cell-specific reference signals,,,"Antenna ports 0,1","Antenna ports 0,1"
+CSI reference signals,,,"Antenna ports 15,16",N/A
+CSI-RS periodicity and subframe offset TCSI-RS / ∆CSI-RS,,Subframes,5 / 4,N/A
+CSI reference signal configuration,,,0,N/A
+at antenna port,,dBm/15kHz,-98,N/A
+DIP (Note 2),,dB,N/A,-1.73
+BWChannel,,MHz,10,10
+Cell Id,,,0,126
+PDSCH transmission mode,,,9,9
+Beamforming model,,,"As specified in clause B.4.3(Note 4, 5)",N/A
+Interference model,,,N/A,As specified in clause B.5.4
+Probability of occurrence of transmission rank in interfering cells,Rank 1,,N/A,70
+,Rank 2,,N/A,30
+Precoder update granularity,,PRB,50,6
+PMI delay (Note 5),,ms,10 or 11,N/A
+Reporting interval,,ms,5,N/A
+Reporting mode,,,PUCCH 1-1,N/A
+CodeBookSubsetRestriction bitmap,,,001111,N/A
+Symbols for unused PRBs,,,OCNG (Note 6),N/A
+Simultaneous transmission,,,No simultaneous transmission on the other antenna port in (7 or 8) not used for the input signal under test,N/A
+Physical channel for CQI reporting,,,PUSCH(Note 8),N/A
+cqi-pmi-ConfigurationIndex,TDD PCC,,3,N/A
+,TDD SCC,,4,N/A
+"Note 1:Note 2:The respective received power spectral density of each interfering cell relative to  is defined by its associated DIP value as specified in clause B.5.1.Note 3:The modulation symbols of the signal under test in Cell 1 are mapped onto antenna port 7 or 8.Note 4:The precoder in clause B.4.3 follows UE recommended PMI.Note 5:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).Note 6:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated.Note 7: All cells are time-synchronous.Note 8:To avoid collisions between CQI reports and HARQ-ACK it is necessary to report both on PUSCH instead of PUCCH. PDCCH DCI format 0 shall be transmitted in downlink SF#1, SF#4, SF#6 and #9 to allow periodic CQI to multiplex with the HARQ-ACK on PUSCH in uplink subframe SF#7, SF#8, SF#2 and #3.Note 9:ACK/NACK bits are transmitted using PUSCH with PUCCH format 1b with channel selection configured for tests with 2 CCs.",,,,

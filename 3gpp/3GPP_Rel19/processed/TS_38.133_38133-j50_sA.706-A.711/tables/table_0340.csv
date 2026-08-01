@@ -1,0 +1,17 @@
+Parameter,Unit,Test configuration,Value,Comment
+Active cell,,Config 1,PCell (Cell 1),
+Neighbour cell,,Config 1,Cell 2,Cells to be identified.
+RF Channel Number,,Config 1,"1: Cell 1 , 2: Cell 2",
+SMTC configuration,,Config 1,SMTC.1,Same configuration for MO1 and MO2
+A4-Threshold,dBm,Config 1,-120,
+CP length,,Config 1,Normal,
+Hysteresis,dB,Config 1,0,
+Time To Trigger,s,Config 1,0,
+Filter coefficient,,Config 1,0,L3 filtering is not used
+DRX,,Config 1,OFF,
+Gap Pattern Id,,Config 1,13,For both pre-conifgured gaps
+Measurement gap offset,ms,Config 1,39 for MeasGapId #119 for MeasGapId #2,No overlapping cases
+Time offset between serving and neighbour cells,,Config 1,3 s,Synchronous cells
+T1,s,Config 1,5,
+T2,s,Config 1,0.2,
+T3,s,Config 1,10.4 for PC1 and PC5; 6.5 for other PC,

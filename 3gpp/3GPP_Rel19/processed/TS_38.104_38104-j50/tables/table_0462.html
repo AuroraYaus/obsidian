@@ -1,0 +1,106 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Value</td>
+  </tr>
+  <tr>
+    <td colspan="2">Transform precoding</td>
+    <td>Disabled</td>
+  </tr>
+  <tr>
+    <td colspan="2">Uplink-downlink allocation for TDD</td>
+    <td>120 kHz SCS:3D1S1U, S=10D:2G:2U</td>
+  </tr>
+  <tr>
+    <td colspan="2">Channel bandwidth</td>
+    <td>120 kHz SCS: 50MHz, 200 MHz</td>
+  </tr>
+  <tr>
+    <td>HARQ</td>
+    <td>Maximum number of HARQ transmissions</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RV sequence</td>
+    <td>0, 2, 3, 1</td>
+  </tr>
+  <tr>
+    <td>DM-RS</td>
+    <td>DM-RS configuration type</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>DM-RS duration</td>
+    <td>single-symbol DM-RS</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>DM-RS position (l0)</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Additional DM-RS position</td>
+    <td>pos0, pos1, pos2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Number of DM-RS CDM group(s) without data</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Ratio of PUSCH EPRE to DM-RS EPRE</td>
+    <td>-3 dB</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>DM-RS port</td>
+    <td>{0}</td>
+  </tr>
+  <tr>
+    <td>Time domain resource assignment</td>
+    <td>DM-RS sequence generation</td>
+    <td>NID0=0, nSCID =0 for moving UENID0=1, nSCID =1 for stationary UE</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>PUSCH mapping type</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Allocation length</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Frequency domain resource assignment</td>
+    <td>RB assignment</td>
+    <td>50 MHz CBW/120kHz SCS: 16 RB for each UE200MHz CBW/120kHz SCS: 66 RB for each UE</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Starting PRB index</td>
+    <td>Moving UE: 0 Stationary UE: 16 for 50MHz CBW, 66 for 200MHz CBW for SCS 120kHz</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Frequency hopping</td>
+    <td>Disabled</td>
+  </tr>
+  <tr>
+    <td>SRS resource allocation</td>
+    <td>Slots in which sounding RS is transmitted (Note 1)</td>
+    <td>For TDD: -last symbol in slot #3  in radio frames for 120KHz</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>SRS resource allocation</td>
+    <td>120 kHz SCS: -CSRS = 9, BSRS =0, for 32 RB-CSRS = 33, BSRS =0, for 132 RB</td>
+  </tr>
+  <tr>
+    <td colspan="3">NOTE 1.The transmission of SRS is optional. And the transmission comb and SRS periodic are configured as KTC = 2, and TSRS = 80 respectively.</td>
+  </tr>
+</table>

@@ -1,0 +1,161 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Test 1</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>0 (Note 1)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>-3</td>
+  </tr>
+  <tr>
+    <td colspan="2">Uplink downlink configuration</td>
+    <td></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Special subframe configuration</td>
+    <td></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-specific reference signals</td>
+    <td></td>
+    <td>Antenna ports 0,1</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI reference signals</td>
+    <td></td>
+    <td>Antenna ports 15,…,22</td>
+  </tr>
+  <tr>
+    <td colspan="2">Beamforming model</td>
+    <td></td>
+    <td>Annex B.4.3(Note 3, 4)</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS</td>
+    <td>Subframes</td>
+    <td>5 / 4</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI reference signal configuration</td>
+    <td></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td colspan="2">Zero-power CSI-RS configurationICSI-RS / ZeroPowerCSI-RS bitmap</td>
+    <td>Subframes / bitmap</td>
+    <td>4 /0010000000000000</td>
+  </tr>
+  <tr>
+    <td colspan="2">at antenna port</td>
+    <td>dBm/15kHz</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td colspan="2">Symbols for unused PRBs</td>
+    <td></td>
+    <td>OP.1 TDD</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cyclic prefix</td>
+    <td></td>
+    <td>Normal</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell ID</td>
+    <td></td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Inter-TTI Distance</td>
+    <td></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of HARQ processes per component carrier</td>
+    <td>Processes</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td colspan="2">Maximum number of HARQ transmission</td>
+    <td></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td colspan="2">Redundancy version coding sequence</td>
+    <td></td>
+    <td>{0,0,1,2} for 64QAM and 256QAM</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of allocated resource blocks (Note 2)</td>
+    <td>PRB</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of OFDM symbols for PDCCH per component carrier</td>
+    <td>OFDM symbols</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation condition</td>
+    <td></td>
+    <td>Static propagation conditionNo external noise sources are applied</td>
+  </tr>
+  <tr>
+    <td colspan="2">Simultaneous transmission</td>
+    <td></td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH transmission mode</td>
+    <td></td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td colspan="2">Precoding granularity</td>
+    <td></td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td colspan="2">PMI delay</td>
+    <td></td>
+    <td>10 or 11</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting interval</td>
+    <td></td>
+    <td>1 or 4</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting mode</td>
+    <td></td>
+    <td>PUSCH 3-1</td>
+  </tr>
+  <tr>
+    <td colspan="2">alternativeCodeBookEnabledFor4TX-r12</td>
+    <td></td>
+    <td>False</td>
+  </tr>
+  <tr>
+    <td colspan="2">CodeBookSubsetRestriction bitmap</td>
+    <td></td>
+    <td>0x0000 0000 0000 0010 0000 0000 0000</td>
+  </tr>
+  <tr>
+    <td colspan="4">Note 1:.Note 2:50 resource blocks are allocated in sub-frames 4,9 and 41 resource blocks (RB0–RB20 and RB30–RB49) are allocated in sub-frame 0 and the DwPTS portion of sub-frames 1,6.Note 3:The precoder in clause B.4.3 follows UE recommended PMI.Note 4:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).</td>
+  </tr>
+</table>

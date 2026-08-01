@@ -1,0 +1,12 @@
+Modulation/Waveform,,A1,A2,A3,A4,A5,A6,A7,A8
+,,Outer,Outer,Outer/Inner,Outer/Inner,Outer/Inner,Outer/Inner,Outer/Inner,Outer/Inner
+DFT-s-OFDM,PI/2 BPSK,4.5,6,4,4,4,4,10.5,4
+,QPSK,4.5,6,4,4,4,4,10.5,4
+,16 QAM,4.5,6,5,4,5,4,11,4
+,64 QAM,4.5,6,5,4,5,4,11,4
+,256 QAM,,6,,,,,11,
+CP-OFDM,QPSK,5.5,7,6,4,6,4,11.5,4
+,16 QAM,5.5,7,6,4,6,4,11.5,4
+,64 QAM,5.5,7,6,4,6,4,11.5,4
+,256 QAM,,7,,,,,11.5,
+"NOTE 1:The backoff applied is max (MPR, A-MPR) where MPR is defined in Table 6.2.2-1NOTE 2:Outer and inner allocations are defined in clause 6.2.2",,,,,,,,,

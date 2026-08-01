@@ -1,0 +1,7 @@
+Test number,Band-width,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category
+,,,,,,Fraction of MaximumThroughput (%),SNR (dB),
+1,10 MHz,R.11 FDD,OP.1 FDD,EVA5,2x2 Medium,70,6.8,≥2
+,5 MHz,R.11-2 FDD,OP.1 FDD,EVA5,2x2 Medium,70,5.9,1
+,5 MHz(NOTE 1),R.11-2 FDD,OP.1 FDD,EVA5,2x2 Medium,70,5.9,≥2
+2,10 MHz,R.10 FDD,OP.1 FDD,HST,2x2,70,-2.3,≥1
+NOTE 1:Test case applicability is defined in 8.1.2.1.,,,,,,,,

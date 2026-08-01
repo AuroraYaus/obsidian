@@ -1,0 +1,12 @@
+Parameter,,Unit,Value,Comment
+NR RF Channel Number,,,1,1 NR carrier frequency is used in the test
+LTE RF Channel Number,,,2,1 E-UTRAN carrier frequency is used in the test
+Initial conditions,Active cell,,Cell 1,NR cell
+,Neighbouring cell,,Cell 2,E-UTRAN cell
+Final condition,Active cell,,Cell 2,
+NR measurement quantity,,,SS-RSRP,
+DRX,,,OFF,Non-DRX test
+Access Barring Information,,-,Not sent,No additional delays in random access procedure
+Time offset between cells,,,3 ms,Asynchronous cells
+T1,,s,5,
+T2,,s,1,

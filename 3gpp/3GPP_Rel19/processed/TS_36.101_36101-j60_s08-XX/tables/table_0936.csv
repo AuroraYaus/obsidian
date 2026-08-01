@@ -1,0 +1,9 @@
+Parameter,,Unit,Single antenna port,Transmit diversity
+Downlink power allocation,NPBCH_RA,dB,0,-3
+,NPBCH_RB,dB,0,-3
+at antenna port,,dBm/15kHz,-98,-98
+Cyclic prefix,,,Normal,Normal
+Cell ID,,,0,0
+Uplink downlink configuration (Note 1),,,4,4
+Special subframe configuration (Note 2),,,4,4
+Note 1:as specified in Table 4.2-2 in TS 36.211 [4].Note 2:as specified in Table 4.2-1 in TS 36.211 [4].,,,,

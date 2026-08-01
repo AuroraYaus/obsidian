@@ -1,0 +1,4 @@
+RX parameter,Units,Value
+Power in LP-WUS,dBm,REFSENSLP-WUS1
+LP-WUS power boosting2,dB,0
+"NOTE 1:REFSENSLP-WUS is the value specified in clause 7.3M.2NOTE 2:0dB power boost means equal PSD between NR RBs and LP-WUS RBs.NOTE 3:The interfering NR RBs consists of CP-OFDM QPSK with the same SCS as LP-WUS, in all PRB in the DL transmission BW configuration not occupied by either LP-WUS or Guard RB.",,

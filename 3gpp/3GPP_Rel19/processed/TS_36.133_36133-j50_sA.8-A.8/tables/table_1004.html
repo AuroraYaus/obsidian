@@ -1,0 +1,124 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="2">Active cell</td>
+    <td></td>
+    <td>Cell 1</td>
+    <td>Cell 1 is on E-UTRA RF channel number 1.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Neighbour cell</td>
+    <td></td>
+    <td>Cell 2 (AP)</td>
+    <td>Cell 2 (WLAN AP) is on WLAN RF channel number 1.</td>
+  </tr>
+  <tr>
+    <td colspan="2">CP length</td>
+    <td></td>
+    <td>Normal</td>
+    <td>Applicable to cell 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">E-UTRA RF Channel Number</td>
+    <td></td>
+    <td>1</td>
+    <td>One E-UTRA TDD carrier frequency is used.</td>
+  </tr>
+  <tr>
+    <td colspan="2">WLAN Channel Number</td>
+    <td></td>
+    <td>1</td>
+    <td>One WLAN carrier frequency is used.</td>
+  </tr>
+  <tr>
+    <td colspan="2">WLAN measurement quantity</td>
+    <td></td>
+    <td>WLAN RSSI</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">WLAN beacon frame transmission period</td>
+    <td>ms</td>
+    <td>102.5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX</td>
+    <td></td>
+    <td>OFF</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Special subframe configuration</td>
+    <td></td>
+    <td>6</td>
+    <td>As specified in table 4.2-1 in TS 36.211 [16]. The same configuration applies to all cells.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Uplink-downlink configuration</td>
+    <td></td>
+    <td>1</td>
+    <td>As specified in table 4.2-2 in TS 36.211 [16]. The same configuration applies to all cells</td>
+  </tr>
+  <tr>
+    <td rowspan="3">W1</td>
+    <td>Hysteresis</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Hysteresis for evaluation of event W1.</td>
+  </tr>
+  <tr>
+    <td>Threshold WLAN RSSI</td>
+    <td>dBm</td>
+    <td>-70</td>
+    <td>Actual WLAN RSSI threshold for event W1. Needs to take absolute accuracy tolerance in section 9.7.1 into account plus margin.</td>
+  </tr>
+  <tr>
+    <td>Time To Trigger</td>
+    <td>s</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="3">W3</td>
+    <td>Hysteresis</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Hysteresis for evaluation of event W3.</td>
+  </tr>
+  <tr>
+    <td>Threshold WLAN RSSI</td>
+    <td>dBm</td>
+    <td>-65</td>
+    <td>Actual WLAN RSSI threshold for event W3. Needs to take absolute accuracy tolerance in section 9.7.1 into account plus margin.</td>
+  </tr>
+  <tr>
+    <td>Time To Trigger</td>
+    <td>s</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td>5</td>
+    <td>During this time the cell1 shall be known to the UE; but cell2 shall be unknown to the UE.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td>≤ 40</td>
+    <td>UE should report Event W1 for cell2 within 30 s.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T3</td>
+    <td>s</td>
+    <td>3</td>
+    <td>UE should report Event W3 for cell2 within 0.5 s.</td>
+  </tr>
+</table>

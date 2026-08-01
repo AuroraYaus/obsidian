@@ -1,0 +1,181 @@
+<table>
+  <tr>
+    <td colspan="2">parameter</td>
+    <td>Unit</td>
+    <td>Test 1</td>
+    <td>Test 2</td>
+    <td>Test 3</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>0 (Note 1)</td>
+    <td>0 (Note 1)</td>
+    <td>0 (Note 1)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>-3</td>
+    <td>-3</td>
+    <td>-3</td>
+  </tr>
+  <tr>
+    <td>δ</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Beamforming model</td>
+    <td></td>
+    <td>Annex B.4.1</td>
+    <td>Annex B.4.1</td>
+    <td>Annex B.4.1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-specific reference signals</td>
+    <td></td>
+    <td>Antenna ports 0,1</td>
+    <td>Antenna ports 0,1</td>
+    <td>Antenna ports 0,1</td>
+  </tr>
+  <tr>
+    <td colspan="2">at antenna port</td>
+    <td>dBm/15kHz</td>
+    <td>-98 (Note 6)</td>
+    <td>-98 (Note 6)</td>
+    <td>-98 (Note 6)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Symbols for unused PRBs</td>
+    <td></td>
+    <td>OCNG (Note 3)</td>
+    <td>OCNG (Note 3)</td>
+    <td>OCNG (Note 3)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of allocated resource blocks (Note 2)</td>
+    <td>PRB</td>
+    <td>6</td>
+    <td>6</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td colspan="2">Simultaneous transmission</td>
+    <td></td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH transmission mode</td>
+    <td></td>
+    <td>9</td>
+    <td>9</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td colspan="2">Coverage enhancement mode</td>
+    <td></td>
+    <td>CE Mode A</td>
+    <td>CE Mode A</td>
+    <td>CE Mode A</td>
+  </tr>
+  <tr>
+    <td colspan="2">OFDM starting symbol (startSymbolBR)</td>
+    <td></td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Maximum number of repetitions for PDSCH (pdsch-maxNumRepetitionCEmodeA)</td>
+    <td></td>
+    <td>16</td>
+    <td>16</td>
+    <td>Not configured</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH repetition number</td>
+    <td></td>
+    <td>8</td>
+    <td>4</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Frequency hopping(mpdcch-pdsch-HoppingConfig)</td>
+    <td></td>
+    <td>Enabled</td>
+    <td>Enabled</td>
+    <td>Enabled</td>
+  </tr>
+  <tr>
+    <td colspan="2">Frequency hopping offset(mpdcch-pdsch-HoppingOffset)</td>
+    <td></td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Frequency hopping interval(interval-FDD)</td>
+    <td>ms</td>
+    <td>8</td>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">MPDCCH transmission duration(mPDCCH-NumRepetition)</td>
+    <td>ms</td>
+    <td>8</td>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">MPDCCH repetition number</td>
+    <td></td>
+    <td>8</td>
+    <td>2</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of narrowbands for frequency hopping (mpdcch-pdsch-HoppingNB)</td>
+    <td></td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Starting subframe configuration for MPDCCH(mpdcch_startSF_UESS)</td>
+    <td></td>
+    <td>4</td>
+    <td>8</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td colspan="2">Narrowband for MPDCCH(mpdcch_Narrowband)</td>
+    <td></td>
+    <td>7</td>
+    <td>7</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td colspan="2">MPDCCH aggregation level</td>
+    <td></td>
+    <td>24</td>
+    <td>24</td>
+    <td>24</td>
+  </tr>
+  <tr>
+    <td colspan="6">Note 1:.Note 2:The modulation symbols of the signal under test are mapped onto antenna port 7 or 8.Note 3:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated.Note 4:For each test, DC subcarrier puncturing shall be considered.Note 5:If not otherwise stated, the values in this table refer to parameters in TS 36.211 [4] or/and TS 36.213 [6] as appropriate.</td>
+  </tr>
+</table>

@@ -1,0 +1,19 @@
+Parameter,,Unit,Value,Comment
+NR RF Channel Number,,,1,HD carrier in Band n47 and n38
+Channel Bandwidth (BWchannel) Note 1,,MHz,"20 (NPRB,c = 50) or40 (NPRB,c = 100)",
+SCS,,kHz,30,
+V2X sidelink communication pre-configuration,,,As specified in table A.3.21.2-1 and A.3.21.2-3,IE values unless specified otherwise in this test.
+sl-TimeResource-r16 included in SL-ResourcePool in SL-ResourcePool in sl-TxPoolSelectedNormal-r16,,,10000000000000000000,Indicates the time resource of resource pool within sl-Period. (see TS 38.213 [3]) Note that this is for Tx pool.
+sl-TimeResource-r16 included in SL-ResourcePool in sl-RxPool-r16,,,11111111111111111111,Indicates the time resource of resource pool within sl-Period. (see TS 38.213 [3]) Note that this is for Rx pool.
+sl-NumSubchannel-r16 included in SL-ResourcePool,,,1,"Indicates the number of subchannels in the corresponding resource pool, which consists of contiguous PRBs only"
+sl-SubchannelSize-r16 included in SL-ResourcePool,,,10,Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB
+sl-StartRB-Subchannel-r16 included in SL-ResourcePool,,,10,Indicates the lowest PRB index of the subchannel with the lowest index.
+Number of Active Sidelink UEs,,,1,
+SL-Thres-RSRP,,,12,Corresponding -106 dBm as defined in section 6.3.8 in TS38.331[2]
+Active Sidelink UEs,V2X sidelink Communication preconfiguration,,As specified in table A.3.21.2-1 and A.3.21.2-3,IE values unless specified otherwise in this test.
+,sl-TimeResource-r16 included in SL-ResourcePool,,11111111111111111111,"Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3])"
+,sl-NumSubchannel-r16 included in SL-ResourcePool,,1,Indicates the number of sub-channels for TX resource pool
+,sl-StartRB-Subchannel-r16 included in SL-ResourcePool,,10,Indicates the lowest PRB index of the subchannel with the lowest index.
+,Sl-SubchannelSize-r16 included in SL-ResourcePool,,10,Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB
+Timing offset among Active Sidelink Ues,,s,CP/2,Synchronous
+NOTE 1:The UE is only required to be tested in one of the supported test configurations.,,,,

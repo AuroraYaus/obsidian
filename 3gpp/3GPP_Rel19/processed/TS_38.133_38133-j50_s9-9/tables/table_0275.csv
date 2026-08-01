@@ -1,0 +1,5 @@
+DRX cycle,TSSB_time_index_inter
+No DRX,"max(120 ms, ceil(MSSB_index_inter x Kp x N1 Note 4 x Klayer1_measurement ) x SMTC period)Note 1 x CSSFinter"
+DRX cycle≤ 320 ms,"max(120 ms, ceil (1.5 x MSSB_index_inter x Kp x N1 Note 4 x Klayer1_measurement) x max(SMTC period,DRX cycle)) x CSSFinter"
+DRX cycle>320 ms,Ceil(MSSB_index_inter x Kp x N1 Note 4 x Klayer1_measurement) x DRX cycle x CSSFinter
+"NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identifiedNOTE 2:VoidNOTE 3:VoidNOTE 4:For ATG UE capable of antennaArrayType-r18, N1 = 3 when network assistance on ATG cells reference locations is provided, otherwise N1 = 4.Otherwise, N1 = 1.",

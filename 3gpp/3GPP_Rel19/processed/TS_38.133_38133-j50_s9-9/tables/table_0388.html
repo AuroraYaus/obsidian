@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Condition</td>
+    <td>TL1-RSRP_Measurement_Period_SSB_Inter</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>Max(Treport, Ceil(M * Kgap)  Max(MGRP, TSSB_NBC)  CSSFinter)</td>
+  </tr>
+  <tr>
+    <td>DRX cycle ≤ 320 ms</td>
+    <td>Max(Treport, Ceil(M  1.5 * Kgap)  Max(MGRP, TSSB_NBC, TDRX)  CSSFinter)</td>
+  </tr>
+  <tr>
+    <td>DRX cycle &gt; 320 ms</td>
+    <td>Ceil(M * Kgap)  TDRX  CSSFinter</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:The definition of Kgap is the same as L3 measurement which is a scaling factor for a SSB frequency layer to be measured within an associated measurement gap pattern.NOTE 2: If the UE is incapable of multiCellL1-measRTD-greaterThan-CP-r18, the requirements apply for the the cells configured by LTM-CSI-ResourceConfig-r18 on which UE is required to perform L1 measurements, when the max RTD among the cells on the same inter-frequency layer is not larger than CP length.NOTE 3:TSSB_NBC is the periodicity of the neighbor cell SSB-Index configured for inter-frequency L1-RSRP measurement. TDRX is the DRX cycle length. TReport is the configured periodicity for reporting.</td>
+  </tr>
+</table>

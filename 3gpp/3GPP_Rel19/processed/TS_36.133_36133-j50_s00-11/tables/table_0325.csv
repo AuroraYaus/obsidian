@@ -1,0 +1,4 @@
+"Condition NOTE1,2,3,4",T CO_measurement_period_NR_cca
+No DRX,"max(reportInterval, max(rmtc-Periodicity, MGRP) x CSSFNR,EN-DC)"
+DRX,"max(reportInterval, max(rmtc-Periodicity, MGRP,DRX cycle) x CSSFNR,EN-DC)"
+NOTE 1: DRX or non DRX requirements apply according to the conditions described in clause 3.6.1 of TS 38.133 [50].,

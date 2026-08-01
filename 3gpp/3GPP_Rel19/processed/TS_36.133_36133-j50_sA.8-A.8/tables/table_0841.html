@@ -1,0 +1,154 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td rowspan="2" colspan="2">Unit</td>
+    <td colspan="4">Value</td>
+    <td colspan="2">Comment</td>
+  </tr>
+  <tr>
+    <td colspan="3"></td>
+    <td colspan="2">Test 1</td>
+    <td colspan="2">Test 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">PCell</td>
+    <td colspan="2"></td>
+    <td colspan="4">Cell 1</td>
+    <td colspan="2">PCell is on RF channel 1 (PCC).</td>
+  </tr>
+  <tr>
+    <td colspan="2">SCell 1</td>
+    <td colspan="2"></td>
+    <td colspan="4">Cell 2</td>
+    <td colspan="2">SCell 1 on RF channel 2 (SCC1).</td>
+  </tr>
+  <tr>
+    <td colspan="2">SCell 2</td>
+    <td colspan="2"></td>
+    <td colspan="4">Cell 3</td>
+    <td colspan="2">SCell 2 on RF channel 3 (SCC2). Cell 3 is the assistance data reference cell.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Other neighbor cell</td>
+    <td colspan="2"></td>
+    <td colspan="4">Cell 4</td>
+    <td colspan="2">Neighbor cell on RF channel 3 (SCC2).</td>
+  </tr>
+  <tr>
+    <td colspan="2">Channel Bandwidth (BWchannel)</td>
+    <td colspan="2">MHz</td>
+    <td colspan="4">5MHz or 10MHz or 20MHz</td>
+    <td colspan="2">All channels in a test have the same bandwidth.</td>
+  </tr>
+  <tr>
+    <td colspan="2">PRS configuration index</td>
+    <td colspan="2"></td>
+    <td colspan="4">174 for all cells on PCC184 for all cells on SCC1194 for all cells on SCC2</td>
+    <td colspan="2">This corresponds to periodicity of 320 ms and PRS subframe offset of  DL subframes, as defined in TS 36.211 [16], Table 6.10.4.3-1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Physical cell ID PCI</td>
+    <td colspan="2"></td>
+    <td colspan="4">(PCI of Cell 3 – PCI of Cell 4)mod6=0</td>
+    <td colspan="2">The PCIs of Cell 1 and Cell 2 are selected randomly. PCIs of Cell 3 and Cell 4 are selected randomly such that the relative subcarrier shifts of PRS patterns among these cells are as given by the condition</td>
+  </tr>
+  <tr>
+    <td colspan="2">TDD uplink-downlink configuration</td>
+    <td colspan="2"></td>
+    <td colspan="4">1</td>
+    <td colspan="2">As specified in TS 36.211 [16], Clause 4.2; corresponds to a configuration with 5 ms switch-point periodicity and two downlink consecutive subframes</td>
+  </tr>
+  <tr>
+    <td colspan="2">TDD special subframe configuration</td>
+    <td colspan="2"></td>
+    <td colspan="4">6</td>
+    <td colspan="2">As specified in TS 36.211 [16], Clause 4.2; corresponds to DwPTS of  and UpPTS of</td>
+  </tr>
+  <tr>
+    <td colspan="2">CP length</td>
+    <td colspan="2"></td>
+    <td colspan="4">Normal</td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX</td>
+    <td colspan="2"></td>
+    <td colspan="4">ON</td>
+    <td colspan="2">DRX parameters are further specified in Table A.8.17.11.1-3</td>
+  </tr>
+  <tr>
+    <td colspan="3">Radio frame receive time offset between  the cells at the UE antenna connector</td>
+    <td colspan="2">s</td>
+    <td colspan="4">Cell 1 to Cell 3: 1Cell 2 to Cell 3: -1Cell 4 to Cell 3: 3</td>
+    <td colspan="2">PRS are transmitted from synchronous cells</td>
+  </tr>
+  <tr>
+    <td colspan="2">Time alignment errors among cell1, cell2 and cell3</td>
+    <td colspan="2">s</td>
+    <td colspan="4">Time alignment error as specified in 3GPP TS 36.104 [30] clause 6.5.3.1.</td>
+    <td colspan="2">The value of time alignment error depends upon the type of carrier aggregation.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Expected RSTD</td>
+    <td colspan="2">s</td>
+    <td>Cell 4: 2Other neighbour cells: randomly between -3 and 3</td>
+    <td colspan="3">Cell 1: -2Cell 2: 0 Cell 4: 2Other neighbour cells: randomly between -3 and 3</td>
+    <td colspan="2">The expected RSTD is what is expected at the receiver. The corresponding parameter in the OTDOA assistance data specified in TS 36.355 [24] is the expectedRSTD indicator</td>
+  </tr>
+  <tr>
+    <td colspan="2">Expected RSTD uncertainty for all neighbour cells</td>
+    <td colspan="2">s</td>
+    <td colspan="4">5</td>
+    <td colspan="2">The corresponding parameter in the OTDOA assistance data specified in TS 36.355 [24] is the expectedRSTD-Uncertainty index</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cells in OTDOA assistance data</td>
+    <td rowspan="2" colspan="2"></td>
+    <td colspan="4">16 cells in total</td>
+    <td colspan="2">The list includes the reference cell (received in OTDOA-ReferenceCellInfo [24]) and 15 other cells, all received in OTDOA-ProvideAssistanceData [24].Cell 1 and Cell 2 (when included) appears at random places in the first half of the neighbour cell list in the OTDOA assistance data. Cell 4 always appears at random places in the second half of the list.</td>
+  </tr>
+  <tr>
+    <td colspan="3"></td>
+    <td colspan="2">OTDOA neighbor cells include Cell 4 and other 14 cells on SCC2</td>
+    <td colspan="2">OTDOA neighbor cells include Cell 1 and other 3 cells on PCC, Cell 2 and other 3 cells on SCC1 and Cell 4 and other 6 cells on SCC2</td>
+  </tr>
+  <tr>
+    <td colspan="2">prs-SubframeOffset</td>
+    <td colspan="2"></td>
+    <td colspan="4">Cells on PCC: 300Cells on SCC1: 310Cells on SCC2, except reference cell: 0</td>
+    <td colspan="2">Subframe offset, counted in full  subframes. The corresponding parameter in the OTDOA assistance data is prs-SubframeOffset specified in TS 36.355 [24]</td>
+  </tr>
+  <tr>
+    <td colspan="2">slotNumberOffset</td>
+    <td colspan="2"></td>
+    <td colspan="4">Cells on PCC: 0Cells on SCC1: 0Cells on SCC2, except reference cell: 0</td>
+    <td colspan="2">The slot number offset at the transmitter between a neighbour cell and the assistance data reference cell. The corresponding parameter in the OTDOA assistance data is slotNumberOffset specified in TS 36.355 [24].</td>
+  </tr>
+  <tr>
+    <td colspan="2">PRS muting info</td>
+    <td colspan="2"></td>
+    <td colspan="2">Cell 1: ‘11110000’Cell 2: ‘00001111’Cell 3: ‘11110000’Cell 4: ‘00001111’</td>
+    <td colspan="2">Cell 1: ‘1111111100000000’Cell 2: ‘0000000011111111’Cell 3: ‘1111111100000000’Cell 4:0000000011111111’</td>
+    <td colspan="2">Correponds to prs-MutingInfo defined in TS 36.355 [24]</td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td colspan="2">s</td>
+    <td colspan="4">3</td>
+    <td colspan="2">The length of the time interval from the beginning of each test</td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td colspan="2">s</td>
+    <td colspan="2">1.28</td>
+    <td colspan="2">2.48</td>
+    <td colspan="2">The length of the time interval that follows immediately after time interval T1</td>
+  </tr>
+  <tr>
+    <td colspan="2">T3</td>
+    <td colspan="2">s</td>
+    <td colspan="2">1.28</td>
+    <td colspan="2">2.48</td>
+    <td colspan="2">The length of the time interval that follows immediately after time interval T2</td>
+  </tr>
+</table>

@@ -1,0 +1,16 @@
+Parameter,Unit,Test configuration,Value,Comment
+Active cell,,"1, 2, 3",Cell 1,Cell 1 is the PCell
+RF Channel Number,,"1, 2, 3",1,
+BWchannel,MHz,1,"10: NPRB,c = 52",
+,,2,"10: NPRB,c = 52",
+,,3,"40: NPRB,c = 106",
+SSB configuration,,1,SSB.1 FR1,
+,,2,SSB.1 FR1,
+,,3,SSB.2 FR1,
+SMTC configuration,,1,SMTC.2,
+,,2,SMTC.1,
+,,3,SMTC.1,
+CP length,,"1, 2, 3",Normal,
+DRX,,"1, 2, 3",OFF,
+T1,s,"1, 2, 3",1,
+T2,s,"1, 2, 3",1,

@@ -1,0 +1,53 @@
+<table>
+  <tr>
+    <td>Frequency offset of measurement filter 3dB point, f</td>
+    <td>Frequency offset of measurement filter centre frequency, f_offset</td>
+    <td>Minimum requirement (Note 1, 2, 3, 4, 5)</td>
+    <td>Measurement bandwidth (Note 8)</td>
+  </tr>
+  <tr>
+    <td>0 MHz  f &lt; 0.05 MHz</td>
+    <td>0.015 MHz  f_offset &lt; 0.065 MHz</td>
+    <td></td>
+    <td>30 kHz</td>
+  </tr>
+  <tr>
+    <td>0.05 MHz  f &lt; 0.15 MHz</td>
+    <td>0.065 MHz  f_offset &lt; 0.165 MHz</td>
+    <td></td>
+    <td>30 kHz</td>
+  </tr>
+  <tr>
+    <td>0.15 MHz  f &lt; 0.2 MHz</td>
+    <td>0.165 MHz  f_offset &lt; 0.215 MHz</td>
+    <td>-14 dBm</td>
+    <td>30 kHz</td>
+  </tr>
+  <tr>
+    <td>0.2 MHz  f &lt; 1 MHz</td>
+    <td>0.215 MHz  f_offset &lt; 1.015 MHz</td>
+    <td></td>
+    <td>30 kHz</td>
+  </tr>
+  <tr>
+    <td>(Note 9)</td>
+    <td>1.015 MHz  f_offset &lt; 1.5 MHz</td>
+    <td>-26 dBm</td>
+    <td>30 kHz</td>
+  </tr>
+  <tr>
+    <td>1 MHz  f min(fmax, 10 MHz)</td>
+    <td>1.5 MHz  f_offset &lt; min(f_offsetmax, 10.5 MHz)</td>
+    <td>-13 dBm</td>
+    <td>1 MHz</td>
+  </tr>
+  <tr>
+    <td>10 MHz  f  fmax</td>
+    <td>10.5 MHz  f_offset &lt; f_offsetmax</td>
+    <td>-15 dBm (Note 10)</td>
+    <td>1 MHz</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:The limits in this table only apply for operation with a NB-IoT carrier adjacent to the Base Station RF Bandwidth edge.NOTE 2:For a BS supporting non-contiguous spectrum operation within any operating band the minimum requirement within sub-block gaps is calculated as a cumulative sum of contributions from adjacent sub blocks on each side of the sub block gap, where the contribution from the far-end sub-block shall be scaled according to the measurement bandwidth of the near-end sub-block.NOTE 3:For a BS supporting multi-band operation with Inter RF Bandwidth gap &lt; 20MHz the minimum requirement within the Inter RF Bandwidth gaps is calculated as a cumulative sum of contributions from adjacent sub-blocks or RF Bandwidth on each side of the Inter RF Bandwidth gap, where the contribution from the far-end sub-block or RF Bandwidth shall be scaled according to the measurement bandwidth of the near-end sub-block or RF Bandwidth.NOTE 4:In case the carrier adjacent to the RF bandwidth edge is a NB-IoT carrier, the value of X = PNB-IoTcarrier – 43, where PNB-IoTcarrier is the power level of the NB-IoT carrier adjacent to the RF bandwidth edge. In other cases, X = 0.NOTE 5:For BS that only support E-UTRA and NB-IoT multi-carrier operation, the requirements in this table do not apply to an E-UTRA BS from Release 8, which is upgraded to support E-UTRA and NB-IoT multi-carrier operation, where the upgrade does not affect existing RF parts of the radio unit related to the requirements in this table. In this case, the requirements in clauses 6.6.3.1 and 6.6.3.2 shall apply.</td>
+  </tr>
+</table>

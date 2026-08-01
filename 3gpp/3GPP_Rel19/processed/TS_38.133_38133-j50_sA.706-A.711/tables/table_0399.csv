@@ -1,0 +1,15 @@
+Parameter,Unit,Config,Value,Comment
+Active primary cell,,"1, 2",PCell (Cell 1),
+Active secondary cell,,"1, 2",SCell (Cell 2),
+Neighbour cell,,"1, 2",E-UTRA Cell 3,Neighbour cell to be identified.
+RF Channel Number,,"1, 2",1: Cell 12: Cell 23: Cell 3,"NR Cell 1 is on RF channel number 1.NR Cell 2 is on channel number 2, which is within the same band with RF channel 1 in FR2.E-UTRA Cell 3 is on RF channel 3. Which is in FR 1."
+SMTC configuration,,"1, 2",SMTC.1,
+A3-Offset,dB,"1, 2",-11,
+CP length,,"1, 2",Normal,
+Hysteresis,dB,"1, 2",0,
+Time To Trigger,s,"1, 2",0,
+Filter coefficient,,"1, 2",0,L3 filtering is not used
+DRX,,"1, 2",OFF,
+Time offset between serving and neighbour,,"1, 2",3 s,Synchronous cells
+T1,s,"1, 2",5,
+T2,s,"1, 2",5,

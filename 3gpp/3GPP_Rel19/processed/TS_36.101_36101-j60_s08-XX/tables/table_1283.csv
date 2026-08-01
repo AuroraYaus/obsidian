@@ -1,0 +1,51 @@
+Parameter,,Unit,Test 1,,Test 2,
+,,,TP1,TP2,TP1,TP2
+Bandwidth,,MHz,10 MHz,,10 MHz,
+Transmission mode,,,10,10,10,10
+Downlink power allocation,,dB,0,,0,
+,,dB,0,,0,
+,,dB,0,0,0,0
+,,dB,0,,0,
+Uplink downlink configuration,,,2,2,2,2
+Special subframe configuration,,,4,4,4,4
+SNR,,dB,0,0,20,20
+,,dB[mW/15kHz],-98,-98,-78,-78
+,,dB[mW/15kHz],-98,,-98,
+Propagation channel,,,EPA 5 Low,EPA 5 Low,EPA 5 Low,EPA 5 High
+Antenna configuration,,,2x2,2x2,2x2,2x2
+Beamforming Model,,,As specified in Section B.4.3,,As specified in Section B.4.3,
+Timing offset between TPs,,us,0,,0,
+Frequency offset between TPs,,Hz,0,,0,
+Cell-specific reference signals,,,Antenna ports 0,,Antenna ports 0,
+CSI-RS signal 0,,,"Antenna ports 15,16",N/A,"Antenna ports 15,16",N/A
+CSI-RS 0 periodicity and subframe offset TCSI-RS / ∆CSI-RS,,,5/3,N/A,5/3,N/A
+CSI-RS 0 configuration,,,0,N/A,0,N/A
+CSI-RS signal 1,,,N/A,"Antenna ports 15,16",N/A,"Antenna ports 15,16"
+CSI-RS 1 periodicity and subframe offset TCSI-RS / ∆CSI-RS,,,N/A,5/3,N/A,5/3
+CSI-RS 1 configuration,,,N/A,3,N/A,3
+Zero-power CSI-RS 0 configurationICSI-RS / ZeroPowerCSI-RS bitmap,,,N/A,3 / 1000001000000000,N/A,3 / 1000001000000000
+Zero-power CSI-RS 1 configurationICSI-RS / ZeroPowerCSI-RS bitmap,,,3 / 0011000000000000,N/A,3 / 0011000000000000,N/A
+CSI-IM 0 periodicity and subframe offset TCSI-RS / ∆CSI-RS,,,5/3,N/A,5/3,N/A
+CSI-IM 0 configuration,,,2,N/A,2,N/A
+CSI-IM 1 periodicity and subframe offset TCSI-RS / ∆CSI-RS,,,N/A,5/3,N/A,5/3
+CSI-IM 1 configuration,,,N/A,6,N/A,6
+RI configuration,,,Fixed RI=2 and follow RI,N/A,Fixed RI=1 and follow RI,N/A
+"CSI process 0 (Note 6, 7)",CSI-RS,,CSI-RS 0,N/A,CSI-RS 0,N/A
+,CSI-IM,,CSI-IM 0,N/A,CSI-IM 0,N/A
+,Reporting mode,,PUSCH 3-1,N/A,PUSCH 3-1,N/A
+,Reporting Interval,ms,5,N/A,5,N/A
+,CQI delay,ms,11,N/A,11,N/A
+"CSI process 1 (Note 6, 7, 8)",CSI-RS,,N/A,N/A,N/A,CSI-RS 1
+,CSI-IM,,N/A,N/A,N/A,CSI-IM 1
+,Reporting mode,,N/A,N/A,N/A,PUSCH 3-1
+,Reporting Interval,ms,N/A,N/A,N/A,5
+,CQI delay,ms,N/A,N/A,N/A,11
+CSI process for PDSCH scheduling,,,CSI process 0,,CSI process 0,
+Cell ID,,,0,6,0,6
+Quasi-co-located CSI-RS,,,CSI-RS 0,CSI-RS 1,CSI-RS 0,CSI-RS 1
+Quasi-co-located CRS,,,Same Cell ID as Cell 1,Same Cell ID as Cell 2,Same Cell ID as Cell 1,Same Cell ID as Cell 2
+PMI for subframe 4 and 9,,,010000 for fixed RI = 2010011 for UE reported RI,100000,000011 for fixed RI = 1010011 for UE reported RI,N/A
+PMI for subframe 3 and 8,,,100000,100000,100000,N/A
+Max number of HARQ transmissions,,,1,N/A,1,N/A
+ACK/NACK feedback mode,,,Multiplexing,N/A,Multiplexing,N/A
+"Note 1:If the UE reports in an available uplink reporting instance at subframe SF#n based on CQI estimation at a downlink SF not later than SF#(n-4), this reported wideband CQI cannot be applied at the eNB downlink before SF#(n+4)Note 2:3 symbols allocated to PDCCHNote 3:Reference measurement channel RC.13 TDD according to Table A.4-1. PDSCH transmission is scheduled on subframe 4 and 9 from TP1.Note 4:TM10 OCNG as specified in A.5.2.8 is transmitted on subframe 3 and 8 from TP1.Note 5:TM10 OCNG as specified in A.5.2.8 is transmitted on subframe 3, 4, 8 and 9 from TP2 for Test 1; TP2 is blanked for Test 2.Note 6:Reported wideband CQI and PMI are used and sub-band CQI is discarded.Note 7:If UE supports multiple CSI processes, CSI process 0 is configured as ‘RI-reference CSI process’ for CSI process 1.Note 8:If UE supports one CSI process, CSI process 1 is not configured in Test 2.Note 9:PDCCH DCI format 0 with a trigger for aperiodic CQI shall be transmitted in downlink SF#3and #8 to allow aperiodic CQI/PMI/RI to be transmitted in uplink SF#7 and #2.",,,,,,

@@ -1,0 +1,19 @@
+Parameter,Unit,Value,,,,
+MPDCCH Reference channel,-,R.6 HD-FDD,R.7 HD-FDD,R.14 HD-FDD,R.15 HD-FDD,R.47 HD-FDD
+Carrier bandwidth,MHz,10,10,5,5,1.4
+Number of transmitter antennas,-,1,2,1,2,1
+DCI Format,-,6-1A,6-1A,6-1A,6-1A,6-1A
+Transmission Type,-,Distributed,Distributed,Distributed,Distributed,Distributed
+Number of PRB pairs per M-PDCCH set,-,4,4,4,4,[4]
+Aggregation level,ECCE,16,16,16,16,[16]
+Maximum number of repetitions,-,8,8,8,8,8
+Frequency hopping,-,ON,ON,ON,ON,OFF
+Number of narrowbands,-,2,2,2,2,1
+MPDCCH Narrowband,-,7th,7th,4th,4th,-
+Frequency HoppingOffset,narrowbands,7,7,3,3,-
+MPDCCH start subframe,subframes,1,1,1,1,1
+MPDCCH start symbol,symbols,2,2,2,2,2
+Frequency hopping interval,subframes,4,4,4,4,-
+Payload (without CRC),Bits,Note 1,Note 1,Note 1,Note 1,Note 1
+Cell ID,-,Note 2,Note 2,Note 2,Note 2,Note 2
+Note 1:Payload size shall depend upon the test configuration.Note 2:Cell ID shall depend upon the test configuration.,,,,,,

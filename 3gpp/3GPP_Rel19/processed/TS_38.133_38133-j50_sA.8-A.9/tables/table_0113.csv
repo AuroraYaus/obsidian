@@ -1,0 +1,17 @@
+Parameter,Unit,Active Sidelink UE,
+,,T1,T2
+NR RF Channel Number,-,1,
+Channel Bandwidth (BWchannel) Note 3,MHz,"20 (NPRB,c = 50) or 40 (NPRB,c = 100)",
+PSCCH RMC (defined in A.3.21.3),-,CC.1A HD,
+PSSCH RMC (defined in A.3.21.3),-,CD.1A HD,
+Note1,dBm/30 kHz,N/A,-100
+PSCCH,dB,,5
+PSSCH,dB,,5
+PSCCH  Note2,dB,,5
+PSSCH  Note2,dB,,5
+PSSCH-RSRP Note 2,dBm/30kHz,,-95
+Io Note 2,dBm/18 MHz,,-73.01
+,dBm/36 MHz,,-73.01
+Antenna Configuration,-,1x2,
+Propagation Condition,-,AWGN,
+"NOTE 1:Interference from other Ues and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 2:Es/Iot, PSSCH-RSRP and Io have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3:The UE is only required to be tested in one of the supported test configurations.",,,

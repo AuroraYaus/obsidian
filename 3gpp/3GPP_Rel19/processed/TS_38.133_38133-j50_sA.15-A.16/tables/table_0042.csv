@@ -1,0 +1,14 @@
+Parameter,,Unit,Value,Comment
+Initial conditions,Active cell,,Cell 1,
+,Neighbouring cell,,Cell 2,On carrier with CCA
+Final condition,Active cell,,Cell 2,On carrier with CCA
+A4-Offset,,dBm,-120,
+DL CCA model,,,A.3.26.2.1,
+UL CCA model,,,A.3.26.2.2,
+Hysteresis,,dB,0,
+Time To Trigger,,s,0,
+Filter coefficient,,,0,L3 filtering is not used
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+Time offset between cells,,,3 s,Synchronous cells
+T1,,s,5,
+T2,,s,10,

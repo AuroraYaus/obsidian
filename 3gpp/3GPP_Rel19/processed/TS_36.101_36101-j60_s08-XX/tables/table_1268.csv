@@ -1,0 +1,30 @@
+Parameter,,Unit,Test 1,Test 2,Test 3
+Bandwidth,,MHz,10,,
+PDSCH transmission mode,,,9,,
+Downlink power allocation,,dB,0,,
+,,dB,0,,
+,Pc,dB,0,,
+,,dB,0,,
+Propagation condition and antenna configuration,,,2 x 2 EPA5,,
+Cell-specific reference signals,,,Antenna ports 0,,
+Beamforming Model,,,As specified in Section B.4.3,,
+CSI reference signals,,,"Antenna ports 15, 16",,
+CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS,,,5/1,,
+CSI reference signal configuration,,,6,,
+CodeBookSubsetRestriction bitmap,,,000011 for fixed RI = 1010000 for fixed RI = 2010011 for UE reported RI,,
+Antenna correlation,,,Low,Low,High
+RI configuration,,,Fixed RI=2 and follow RI,Fixed RI=1 and follow RI,Fixed RI=1 and follow RI
+SNR,,dB,0,20,20
+,,dB[mW/15kHz],-98,-98,-98
+,,dB[mW/15kHz],-98,-78,-78
+Maximum number of HARQ transmissions,,,1,,
+Reporting mode,,,PUCCH 1-1,,
+Physical channel for CQI/PMI reporting,,,PUSCH (Note 3),,
+PUCCH Report Type for CQI/PMI,,,2,,
+Physical channel for RI reporting,,,PUCCH Format 2,,
+PUCCH Report Type for RI,,,3,,
+Reporting periodicity,,ms,Npd = 5,,
+PMI and CQI delay,,ms,8,,
+cqi-pmi-ConfigurationIndex,,,2,,
+ri-ConfigurationInd,,,1 (Note 4),,
+"Note 1:If the UE reports in an available uplink reporting instance at subframe SF#n based on PMI and CQI estimation at a downlink subframe not later than SF#(n-4), this reported PMI and wideband CQI cannot be applied at the eNB downlink before SF#(n+4).Note 2:Reference measurement channel RC.9 FDD according to Table A.4-1 with one sided dynamic OCNG Pattern OP.1 FDD as described in Annex A.5.1.1.Note 3:To avoid collisions between CQI/ PMI reports and HARQ-ACK it is necessary to report both on PUSCH instead of PUCCH. PDCCH DCI format 0 shall be transmitted in downlink SF#1 and #6 to allow periodic CQI/ PMI to multiplex with the HARQ-ACK on PUSCH in uplink SF#0 and #5.Note 4:To avoid the ambiguity of TE behaviour when applying CQI and PMI during rank switching, RI reports are to be applied at the TE with one subframe delay in addition to Note 1 to align with CQI and PMI reports.",,,,,

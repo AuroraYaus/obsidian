@@ -1,0 +1,15 @@
+Parameter,Unit,Value,Comment
+highSpeedMeasFlagFR2-r17,,Set1,
+Gap Pattern Id,,13,As specified in clause 9.1.2-1.
+Measurement gap offset,,39,
+SSB,,SSB.3 FR2,As specified in clause A.3.10.2
+offsetMO,dB,16,Applied to NR Cell 2 measurement object
+A3-Offset,dB,-11,
+Hysteresis,dB,0,
+CP length,,Normal,
+TimeToTrigger,s,0,
+Filter coefficient,,0,L3 filtering is not used
+DRX,,OFF,DRX is not used
+Time offset between serving and neighbour cells,,3s,Synchronous cells.
+T1,s,5,
+T2,s,4.5,

@@ -1,0 +1,33 @@
+Parameter,Unit,Test,Cell 2,,Cell 3,
+,,configuration,T1,T2,T1,T2
+AoA setup,,"Config 1,2",Setup 1 as specified in clause A.3.15,,,
+Assumption for UE beamsNote 7,,"Config 1,2",Rough,,Rough,
+NR RF Channel Number,,"Config 1,2",1,,2,
+Duplex mode,,"Config 1,2",TDD,,TDD,
+BWchannel,MHz,"Config 1,2","10: NPRB,c = 66",,"100: NPRB,c = 66",
+BWP BW,MHz,"Config 1,2","10: NPRB,c = 66",,"100: NPRB,c = 66",
+TDD configuration,,"Config 1,2",TDDConf.3.1,,TDDConf.3.1,
+Initial DL BWP,,"Config 1,2",DLBWP.0.1,,NA,
+Initial UL BWP,,"Config 1,2",ULBWP.0.1,,,
+Dedicated DL BWP,,"Config 1,2",DLBWP.1.1,,NA,
+Dedicated UL BWP,,"Config 1,2",ULBWP.1.1,,NA,
+OCNG Patterns defined in A.3.2.1.1 (OP.1),,"Config 1,2",OP.1,,OP.1,
+PDSCH Reference measurement channel,,"Config 1,2",SR.3.1 TDD,,-,
+PDSCH/PDCCH subcarrier spacing,kHz,"Config 1,2",120,,120,
+CORESET Reference Channel,,"Config 1,2",CR.3.1 TDD,,-,
+TRS configuration,,"Config 1,2",TRS.2.1 TDD,,NA,
+TCI configuration,,"Config 1,2",CSI-RS.Config.0,,NA,
+SMTC configuration defined in A.3.11,,"Config 1,2",SMTC.1,,SMTC.1,
+CSI-RS RRM configuration,,"Config 1,2",CSI-RS.RRM.FR2.1 TDD,,CSI-RS.RRM.FR2.1 TDD,
+firstOFDMSymbolInTimeDomain,,"Config 1,2",7,,12,
+Note2,dBm/15 kHz Note5,,-104.7,,-104.7,
+Note2,dBm/SCS Note4,"Config 1,2",-95.7,,-95.7,
+CSI-RSRP Note 3,dBm/SCS Note5,"Config 1,2",-89.7,-89.7,-Infinity,-86.7
+SS-RSRP Note 3,dBm/SCS Note5,"Config 1,2",-89.7,-89.7,-Infinity,-86.7
+for SSB,dB,"Config 1,2",6,6,-Infinity,9
+for CSI-RS,dB,"Config 1,2",6,6,-Infinity,9
+for SSB,dB,"Config 1,2",6,6,-Infinity,9
+for CSI-RS,dB,"Config 1,2",6,6,-Infinity,9
+IoNote3,dBm/95.04 MHz Note5,"Config 1,2",-59.7,-59.7,-66.7,-57.2
+Propagation Condition,,"Config 1,2,3,4,5,6",AWGN,,,
+"NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:SS-RSRP, CSI-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4:SS-RSRP and CSI-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5:Equivalent power received by an antenna with 0 dBi gain at the centre of the quiet zoneNOTE 6:As observed with 0 dBi gain antenna at the centre of the quiet zoneNOTE 7:Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementation",,,,,,

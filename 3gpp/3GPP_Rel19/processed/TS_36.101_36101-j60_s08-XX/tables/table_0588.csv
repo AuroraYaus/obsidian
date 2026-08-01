@@ -1,0 +1,14 @@
+Test,Bandwidth (MHz),Transmission mode,Antenna configuration,Codebook subset restriction,Downlink power allocation (dB),,,at antenna port (dBm/15kHz),ACK/NACK feedback mode,Symbols for unused PRBs
+,,,,,,,,,,
+1,20,3,2 x 2,10,-3,-3,0,-85,Bundling,OP.1 TDD
+2,15+20,3,2 x 2,10,-3,-3,0,-85,(Note 1),OP.1 TDD
+3,2x20,3,2 x 2,10,-3,-3,0,-85,(Note 1),OP.1 TDD
+4,3x20,3,2 x 2,10,-3,-3,0,-85,(Note 1),OP.1 TDD
+5,15+20+20,3,2 x 2,10,-3,-3,0,-85,(Note 1),OP.1 TDD
+6,4x20,3,2 x 2,10,-3,-3,0,-85,(Note 1),OP.1 TDD
+7,15+3x20,3,2 x 2,10,-3,-3,0,-85,(Note 1),OP.1 TDD
+8,5x20,3,2 x 2,10,-3,-3,0,-85,(Note 1),OP.1 TDD
+9,15+4x20,3,2 x 2,10,-3,-3,0,-85,(Note 1),OP.1 TDD
+10,6x20,3,2 x 2,10,-3,-3,0,-85,(Note 1),OP.1 TDD
+11,7x20,3,2 x 2,10,-3,-3,0,-85,(Note 1),OP.1 TDD
+"Note 1:For CA  test cases, PUCCH format 3 is used to feedback ACK/NACK.",,,,,,,,,,

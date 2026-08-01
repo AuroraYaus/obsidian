@@ -1,0 +1,6 @@
+Parameter,Unit,Value,Comment
+PDSCH parameters,,DL Reference Measurement Channel R.4.TDD,As specified in section A.3.1.1.2
+PCFICH/PDCCH/PHICH parameters,,DL Reference Measurement Channel R.11 TDD,As specified in section A.3.1.2.2
+Channel Bandwidth (BWchannel),MHz,5,Channel bandwidth for cells on primary component carrier
+Channel Bandwidth (BWchannel),MHz,5,Channel bandwidth for cells on secondary component carrier
+Note 1:See Table A.8.16.2.1-1 for other general test parameters.Note 2:This test verifies the RRM requirement which is independent of channel bandwidth and is performed according to the principle defined in section A.3.6.1.,,,

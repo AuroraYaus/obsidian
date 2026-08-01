@@ -1,0 +1,7 @@
+DRX cycle length (s),Tidentify_inter (s) (DRX cycles) (normal performance),,Tidentify_inter (s) (DRX cycles) (reduced performance),
+,"Gap period = 40 ms, 20ms",Gap period = 80 ms,Gap period = 40 ms,Gap period = 80 ms
+≤0.16,Non DRX Requirements in clause 8.1.2.3.2.1 are applicable,Non DRX Requirements in clause 8.1.2.3.2.1 are applicable,Non DRX Requirements in clause 8.1.2.3.2.1 are applicable,Non DRX Requirements in clause 8.1.2.3.2.1 are applicable
+0.256,"5.12*Kn*Nfreq,n (20*Kn *Nfreq,n)","7.68*Kn *Nfreq,n (30*Kn *Nfreq,n)","5.12*Kr*Nfreq,r (20*Kr *Nfreq,r)","7.68*Kr *Nfreq,r (30*Kr *Nfreq,r)"
+0.32,"6.4*Kn *Nfreq,n (20*Kn *Nfreq,n)","7.68*Kn *Nfreq,n (24*Kn *Nfreq,n)","6.4*Kr *Nfreq,r (20*Kr *Nfreq,r)","7.68*Kr *Nfreq,r (24*Kr *Nfreq,r)"
+0.32<DRX-cycle≤2.56,"Note (20*Kn *Nfreq,n)","Note (20*Kn *Nfreq,n)","Note (20*Kr *Nfreq,r)","Note (20*Kr *Nfreq,r)"
+Note: Time depends upon the DRX cycle in use,,,,

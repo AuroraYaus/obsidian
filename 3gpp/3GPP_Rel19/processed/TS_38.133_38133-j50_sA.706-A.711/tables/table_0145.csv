@@ -1,0 +1,18 @@
+Parameter,Unit,Test configuration,,Value,,Comment
+,,Test 1,Test 2,Test 1,Test 2,
+NR RF Channel Number,,Config 1,Config 2,4,3,One NR FR1 and three NR FR2 carrier frequency is used.
+E-UTRA RF Channel Number,,N/A,Config 2,N/A,1,One E-UTRAN FDD carrier frequency is used.
+Active cell,,Config 1,Config 2,"NR cell 1 (PCell),NR cell 2(SCell), NR cell 3(SCell)","LTE cell 1 (PCell),NR cell 1(PSCell), NR cell 2(SCell)",LTE Cell 1 is on E-UTRA RF channel number 1.NR Cell 1 is on NR RF channel number 1.NR Cell 2 is on NR RF channel number 2.NR Cell 3 is on NR RF channel number 3.
+Neighbour cell,,Config 1,Config 2,NR cell 4,NR cell 3,NR Cell 3 is on NR RF channel number 3.NR cell 4 is on NR RF channel number 4.
+SMTC-SSB parameters on NR RF Channels,,Config 1,Config 2,SSB.1 FR2,SSB.1 FR2,As specified in clause A.3.10.2
+offsetMO,dB,Config 1,Config 2,16,,
+Hysteresis,dB,Config 1,Config 2,0,,
+A3-Threshold,dBm,Config 1,Config 2,-11,,
+CP length,,Config 1,Config 2,Normal,,
+TimeToTrigger,s,Config 1,Config 2,0,,
+Filter coefficient,,Config 1,Config 2,0,,L3 filtering is not used
+DRX,,Config 1,Config 2,OFF,,DRX is not used
+Time offset between serving and neighbour cells,,Config 1,Config 2,3 s,,Synchronous NR CASynchronous EN-DC
+,,Config 1,Config 2,3s,,Synchronous cells
+T1,s,Config 1,Config 2,5,,
+T2,s,Config 1,Config 2,5.2 for PC1; 3.5 for other PC,5.2 for PC1; 3.5 for other PC,

@@ -1,0 +1,121 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td>-3</td>
+    <td>-3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>-3 (NOTE 1)</td>
+    <td>-3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>0</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="3">at antenna port</td>
+    <td></td>
+    <td>dBm/15kHz</td>
+    <td>-102 (NOTE 2)</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dBm/15kHz</td>
+    <td>-98 (NOTE 3)</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dBm/15kHz</td>
+    <td>-94.8 (NOTE 4)</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB</td>
+    <td>Reference Value in Table 8.2.1.2.3-2</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td colspan="2">BWChannel</td>
+    <td>MHz</td>
+    <td>10</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td colspan="2">Subframe Configuration</td>
+    <td></td>
+    <td>Non-MBSFN</td>
+    <td>Non-MBSFN</td>
+  </tr>
+  <tr>
+    <td colspan="2">Time Offset between Cells</td>
+    <td>s</td>
+    <td colspan="2">2.5 (synchronous cells)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell Id</td>
+    <td></td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">ABS pattern (NOTE 5)</td>
+    <td></td>
+    <td>N/A</td>
+    <td>11000100 11000000 11000000 11000000 11000000</td>
+  </tr>
+  <tr>
+    <td colspan="2">RLM/RRM Measurement Subframe Pattern (NOTE 6)</td>
+    <td></td>
+    <td>1000000010000000100000001000000010000000</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td rowspan="2">CSI Subframe Sets (NOTE7)</td>
+    <td>CCSI,0</td>
+    <td></td>
+    <td>11000100 11000000 11000000 11000000 11000000</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>CCSI,1</td>
+    <td></td>
+    <td>00111011 00111111 00111111 00111111 00111111</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of control OFDM symbols</td>
+    <td></td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH transmission mode</td>
+    <td></td>
+    <td>2</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cyclic prefix</td>
+    <td></td>
+    <td>Normal</td>
+    <td>Normal</td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE 1:.NOTE 2:This noise is applied in OFDM symbols #1, #2, #3, #5, #6, #8, #9, #10,#12, #13 of a subframe overlapping with the aggressor ABS.NOTE 3:This noise is applied in OFDM symbols #0, #4, #7, #11 of a subframe overlapping with the aggressor ABS.NOTE 4:This noise is applied in all OFDM symbols of a subframe overlapping with aggressor non-ABSNOTE 5:ABS pattern as defined in [9].NOTE 6:Time-domain measurement resource restriction pattern for PCell measurements as defined in [7]NOTE 7:As configured according to the time-domain measurement resource restriction pattern for CSI measurements defined in [7].NOTE 8:Cell 1 is the serving cell. Cell 2 is the aggressor cell. The number of the CRS ports in Cell1 and Cell2 is the same.NOTE 9:SIB-1 will not be transmitted in Cell2 in this test.</td>
+  </tr>
+</table>

@@ -1,0 +1,14 @@
+Parameter,Unit,Value,Comment
+Active cell,,Cell 1,
+Neighbour cell,,Cell 2,Cell to be identified.
+E-UTRA RF Channel Number,,1,One FDD carrier frequency is used.
+Channel Bandwidth (BWchannel),MHz,10,
+A3-Offset,dB,-10,
+CP length,,Normal,
+Hysteresis,dB,0,
+Time To Trigger,s,0,
+Filter coefficient,,0,L3 filtering is not used
+DRX,,DRX_L,As specified in clause A.3.3
+Time offset between cells,,3 s,Synchronous cells
+T1,s,5,
+T2,s,5,

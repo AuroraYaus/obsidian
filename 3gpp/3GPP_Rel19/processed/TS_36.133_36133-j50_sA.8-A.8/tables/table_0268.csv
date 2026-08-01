@@ -1,0 +1,14 @@
+Parameter,Unit,Value,Comment
+UE configured E-UTRA RF Channel Number,,"1,2,3,4,5,6,7,8,9","Serving cell and 8 TDD carrier frequencies are used in the UE neighbour cell list. Frequencies 5,6,7,8 and 9 are indicated to have reduced performance"
+Test equipment configuration,,"Cell 1 uses E-UTRA RF cannel number 1Cell 2,3,4 are randomly selected to use different frequencies selected from frequencies 2,3,4,5,6,7,8,9","Cell 1 uses E-UTRA RF channel number 1Cells 2 are randomly selected to use different frequencies selected from E-UTRA frequencies 2, 3, 4.Cells 3, 4 are randomly selected to use different frequencies selected from E-UTRA frequencies 5, 6, 7, 8, 9."
+Active cell,,Cell 1,Cell 1 is on RF channel number 1
+Gap Pattern Id,,0,As specified in TS 36.133 clause 8.1.2.1.
+A3-Offset,dB,-6,
+Hysteresis,dB,0,
+CP length,,Normal,
+TimeToTrigger,s,0,
+Filter coefficient,,0,L3 filtering is not used
+DRX,,OFF,OFF
+Scaling factor configurations,,8,As specified in TS 36.133 clause 8.1.2.1.1a
+T1,s,5,
+T2,s,155,

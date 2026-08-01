@@ -1,0 +1,5 @@
+SL-DRX cycleNote 1 [ms],"Tevaluate,SLSS [ms]"
+No SL-DRX,4 x S-SSB periods
+SL-DRX cycle ≤ 160,4 x S-SSB periods
+SL-DRX cycle > 160,4 x SL-DRX cycle
+"NOTE 1:If multiple SL-DRX cycles are configured for SL UE, the SL-DRX cycle in the requirement is the shortest one. When the shortest SL-DRX cycle UE used changes, the requirements do not apply to the time of transition.",

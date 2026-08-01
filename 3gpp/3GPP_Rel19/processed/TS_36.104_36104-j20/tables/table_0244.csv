@@ -1,0 +1,6 @@
+Number of TX antennas,Number of RX antennas,Cyclic prefix,Propagation conditions and correlation matrix (Annex B),FRC(Annex A),Fraction of nominal maximum throughput(NOTE 1),SNR[dB]
+1,2,Normal,EPA 5Hz Low,A20-1,70%,-0.2
+,,,,A20-2,70%,12.1
+,4,Normal,EPA 5Hz Low,A20-1,70%,-3.2
+,,,,A20-2,70%,8.3
+NOTE1:Fraction of nominal maximum throughput is calculated based on the actual transmitted PUSCH,,,,,,

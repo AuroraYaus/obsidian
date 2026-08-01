@@ -1,0 +1,35 @@
+Accuracy,Conditions,,,,,,
+,PRS Ês/Iot,PRS bandwidth per hop,PRS SCS,Total PRS bandwidth after FH,NR operating band groupsNote 2,IoNote 3 range,
+,,,,,,MinimumIoNote 1,MaximumIo
+TcNote 4,dB,PRB,kHz,PRB,,dBm / SCSPRS,dBm/BW
+±(23+),-3,≥52,15,268,"NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A",-127,-50
+,,,,,"NR_FDD_FR1_B,NR_TDD_FR1_B",-126.5,
+,,,,,"NR_FDD_FR1_C, NR_TDD_FR1_C",-126,
+,,,,,"NR_FDD_FR1_D, NR_TDD_FR1_D",-125.5,
+,,,,,"NR_FDD_FR1_E, NR_TDD_FR1_E",-125,
+,,,,,NR_FDD_FR1_F,-124.5,
+,,,,,"NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G",-124,
+,,,,,NR_FDD_FR1_H,-123.5,
+,,,,,NR_FDD_FR1_N,-120.5,
+±(17+),,48,30,272,"NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A",-124,-50
+,,,,,"NR_FDD_FR1_B,NR_TDD_FR1_B",-123.5,
+,,,,,"NR_FDD_FR1_C, NR_TDD_FR1_C",-123,
+,,,,,"NR_FDD_FR1_D, NR_TDD_FR1_D",-122.5,
+,,,,,"NR_FDD_FR1_E, NR_TDD_FR1_E",-122,
+,,,,,NR_FDD_FR1_F,-121.5,
+,,,,,"NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G",-121,
+,,,,,NR_FDD_FR1_H,-120.5,
+,,,,,NR_FDD_FR1_N,-117.5,
+±(21+),,24,60,132,"NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A",-121,-50
+,,,,,"NR_FDD_FR1_B,NR_TDD_FR1_B",-120.5,
+,,,,,"NR_FDD_FR1_C, NR_TDD_FR1_C",-120,
+,,,,,"NR_FDD_FR1_D, NR_TDD_FR1_D",-119.5,
+,,,,,"NR_FDD_FR1_E, NR_TDD_FR1_E",-119,
+,,,,,NR_FDD_FR1_F,-118.5,
+,,,,,"NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G",-118,
+,,,,,NR_FDD_FR1_H,-117.5,
+,,,,,NR_FDD_FR1_N,-114.5,
+±(54+),-13,≥52,15,268,NOTE 5,NOTE 5,NOTE 5
+±(38+),,48,30,272,NOTE 5,NOTE 5,NOTE 5
+±(40+),,24,60,132,NOTE 5,NOTE 5,NOTE 5
+NOTE 1:This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2:NR operating band groups are as defined in Section 3.5.NOTE 3:The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 4:Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 6:  is the margin determined from table 10.1A.18.2.3-5.,,,,,,,

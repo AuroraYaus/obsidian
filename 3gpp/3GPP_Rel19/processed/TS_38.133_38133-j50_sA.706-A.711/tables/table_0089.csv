@@ -1,0 +1,25 @@
+Parameter,Unit,Test configuration,Value,,,,Comment
+,,,Test 1,Test 2,Test 3,Test 4,
+NR RF Channel Number,,"Config 1,2,3","1, 2",,,,One NR FR1 and one NR FR2 carrier frequency is used.
+Active cell,,"Config 1,2,3",NR cell 1 (PCell),,,,NR Cell 1 is on NR RF channel number 1.
+Neighbour cell,,"Config 1,2,3",NR cell 2,,,,NR cell 2 is on NR RF channel number 2.
+Gap Pattern Id,,"Config 1,2,3",0,,Gap not configured,,As specified in clause 9.1.2-1.
+Measurement gap offset,,"Config 1,2,3",39,,N/A,,
+SMTC-SSB parameters on NR RF Channel 1,,Config 1,SSB.1 FR1,,,,As specified in clause A.3.10.1
+,,Config 2,SSB.1 FR1,,,,As specified in clause A.3.10.1
+,,Config 3,SSB.2 FR1,,,,As specified in clause A.3.10.1
+CSI-RS for tracking parameters on NR RF Channel 1,,Config 1,TRS.1.1 FDD,,,,
+,,Config 2,TRS.1.1 TDD,,,,
+,,Config 3,TRS.1.2 TDD,,,,
+SMTC-SSB parameters on NR RF Channel 2,,"Config 1,2,3",SSB.3 FR2,,,,As specified in clause A.3.10.2
+offsetMO,dB,"Config 1,2,3",6,,,,
+Hysteresis,dB,"Config 1,2,3",0,,,,
+a4-Threshold,dBm,"Config 1,2,3",-105,,,,
+CP length,,"Config 1,2,3",Normal,,,,
+TimeToTrigger,s,"Config 1,2,3",0,,,,
+Filter coefficient,,"Config 1,2,3",0,,,,L3 filtering is not used
+DRX,,"Config 1,2,3",DRX.1,DRX.7,DRX.1,DRX.7,As specified in clause A.3.3
+Time offset between serving and neighbour cells,,Config 1,3 ms,,,,Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1.
+,,"Config 2,3",3s,,,,Synchronous cells.
+T1,s,"Config 1,2,3",5,,,,
+T2,s,"Config 1,2,3",8 for PC1;5 for other PC,82 for PC1; 52 for other PC,8 for PC1;5 for other PC,82 for PC1; 52 for other PC,

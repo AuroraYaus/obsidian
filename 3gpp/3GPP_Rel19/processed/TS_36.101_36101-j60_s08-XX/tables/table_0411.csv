@@ -1,0 +1,18 @@
+Parameter,,Unit,"Test 1, Test 1a",Test 2,Test 3,"Test 4, Test 4a",Test 5
+Downlink power allocation,,dB,0,0,0,0,0
+,,dB,0 (Note 1),0 (Note 1),0 (Note 1),0 (Note 1),0 (Note 1)
+,,dB,-3,-3,-3,-3,-3
+Cell-specific reference signals,,,"Antenna ports 0,1",,,,
+CSI reference signals,,,"Antenna ports 15,…,22","Antenna ports 15,…,18","Antenna ports 15,…,18","Antenna ports 15,…,22","Antenna ports 15,…,18"
+Beamforming model,,,Annex B.4.1,Annex B.4.1,Annex B.4.1,Annex B.4.1,Annex B.4.1
+CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS,,Subframes,5 / 4,5 / 4,5 / 4,5 / 4,5 / 4
+CSI reference signal configuration,,,1,3,3,1,3
+csi-RS-ConfigZP-ApList,,,N/A,NA,NA,"{0,1}",NA
+Zero-power CSI-RS configurationICSI-RS /ZeroPowerCSI-RS bitmap,,Subframes / bitmap,4 /0010000100000000,4 /0010000000000000,4/0010000000000000,0010000100000000 or 0001000100000000(Note 7),N/A
+at antenna port,,dBm/15kHz,-98,-98,-98,-98,-98
+Symbols for unused PRBs,,,OCNG (Note 4),OCNG (Note 4),OCNG (Note 4),OCNG (Note 4),OCNG (Note 4)
+Number of allocated resource blocks (Note 2),,PRB,50,50,100,50,50
+Simultaneous transmission,,,No,"Yes (Note 3, 5)",No,No,No
+PDSCH transmission mode,,,9,9,9,9,9
+Number of MBSFN subframes,,Subframes,2 (Note 6),NA,NA,2 (Note 7),NA
+"Note 1:.Note 2:The modulation symbols of the signal under test are mapped onto antenna port 7 or 8.Note 3:Modulation symbols of an interference signal is mapped onto the antenna port (7 or 8) not used for the input signal under test.Note 4:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated.Note 5:The two UEs’ scrambling identities  are set to 0 for CDM-multiplexed DM RS with interfering simultaneous transmission test cases.Note 6:For TDD mode, 2 subframes (#4/9) are allocated as MBSFN subframes.Note 7:Through DCI signalling, indicating aperiodic ZP-CSI-RS in sub-frames #4 and #9 per frame, the indicated aperiodic ZP-CSI-RS is random selected from RRC-configured AP ZP CSIRS list.",,,,,,,

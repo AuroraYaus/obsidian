@@ -1,0 +1,7 @@
+Neighbouring cell SCH Ês/Iot: Q2 [dB],Gap pattern ID,DRX cycle length (s),Tmeasure_intra_UE cat M1 (s) (DRX cycles)
+Q2-15,0,<0.128,0.8 * Kinter_M1 *  KRSTD_M1_EC (Note1)
+,,0.128≤DRX-cycle≤0.16,Note2 (7 * Kinter_M1 *  KRSTD_M1_EC)
+,,0.16<DRX-cycle≤2.56,Note2(5 * Kinter_M1 *  KRSTD_M1_EC)
+,1,≤0.32,1.6 * Kinter_M1 *  KRSTD_M1_EC (Note1)
+,,0.32<DRX-cycle≤2.56,Note2(5 * Kinter_M1 *  KRSTD_M1_EC)
+Note 1:Number of DRX cycle depends upon the DRX cycle in useNote 2:Time depends upon the DRX cycle in use,,,

@@ -1,0 +1,49 @@
+Information Element,,,,Value(5MHz),Value(10MHz),
+commRxPool,sc-CP-Len,,,Normal,,
+,sc-Period,,,sf40,,
+,sc-TF-ResourceConfig,prb-Num,,12,25,
+,,prb-Start,,0,0,
+,,prb-End,,23,49,
+,,offsetIndicator,,0,,
+,,subframeBitmap,,0001100000000000000000000000000000000000,,
+,data-CP-Len,,,Normal,,
+,dataHoppingConfig,hoppingParameter,,0,,
+,,numSubbands,,ns1,,
+,,rb-Offset,,0,,
+,ue-SelectedResourceConfig,data-TF-ResourceConfig,prb-Num,12,,25
+,,,prb-Start,0,,0
+,,,prb-End,23,,49
+,,,offsetIndicator,0,,
+,,,subframeBitmap,0000000011111111111111111111111111111111,,
+,,trpt-Subset-r12,,001,,
+,rxParametersNCell,,,not present,,
+,txParameters,,,not present,,
+commTxPoolNormalCommon/ commTxPoolNormalDedicated,sc-CP-Len,,,Normal,,
+,sc-Period,,,sf40,,
+,sc-TF-ResourceConfig,prb-Num,,12,,25
+,,prb-Start,,0,,0
+,,prb-End,,24,,49
+,,offsetIndicator,,0,,
+,,subframeBitmap,,0001100000000000000000000000000000000000,,
+,data-CP-Len,,,Normal,,
+,dataHoppingConfig,hoppingParameter,,0,,
+,,numSubbands,,ns1,,
+,,rb-Offset,,0,,
+,ue-SelectedResourceConfig,data-TF-ResourceConfig,prb-Num,12,,25
+,,,prb-Start,0,,0
+,,,prb-End,23,,49
+,,,offsetIndicator,0,,
+,,,subframeBitmap,0000000011111111111111111111111111111111,,
+,,trpt-Subset-r12,,001,,
+,rxParametersNCell,,,not present,,
+,txParameters,sc-TxParameters,alpha,al0,,
+,,,p0,31,,
+,,dataTxParameters,alpha,al0,,
+,,,p0,31,,
+SL-SyncConfig,syncCP-Len,,,Normal,,
+,syncOffsetIndicator,,,2,,
+,slssid,,,30,,
+,txParameters,txParametersGeneral,alpha,al0,,
+,,,p0,31,,
+,,syncTxThreshIC,,0 (-infinity),,
+,rxParamsNCell,,,not present,,

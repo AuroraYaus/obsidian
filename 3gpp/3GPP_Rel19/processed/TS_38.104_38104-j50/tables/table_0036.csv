@@ -1,0 +1,4 @@
+Channel bandwidth,"Prated,c,AC  (NOTE 1)"
+3MHz (NOTE 2),≤ 48 dBm/3MHz + (fDL-921.4) x 40/3 dB
+5MHz,≤ 51.5 dBm/5MHz + (fDL-922.1) x 40/3 dB
+NOTE 1:   fDL = centre frequency in MHzNOTE 2 :  fDL ≤ 922.5 MHz. No additional output power restriction for fDL > 922.5MHz,

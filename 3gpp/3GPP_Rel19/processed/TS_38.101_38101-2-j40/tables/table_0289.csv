@@ -1,0 +1,17 @@
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2025-03,RAN#107,RP-250628,0778,,B,Big CR on UE RF requirements for WI NR_mmWave_protect,19.0.0
+2025-06,RAN#108,RP-250918,0799,,A,(NR_ext_to_71GHz-Core) Addition of missing network signalling label for NS_204_R19_CAT_A,19.1.0
+2025-06,RAN#108,RP-250952,0801,,B,big CR 38.101-2 for NR_CADC_SUL_R19.,19.1.0
+2025-06,RAN#108,RP-250959,0803,,B,CR on UE RF requirements for EESS protection,19.1.0
+2025-09,RAN#109,RP-252378,0808,,A,(NR_newRAT-Core) CR to TR 38.101-2 on correction of figure reference,19.2.0
+2025-09,RAN#109,RP-252381,0813,,A,(NR_CA_R16_intra-Core) CR to TR 38.101-2 on symbols for NR carrier aggregation_R19_CAT_A,19.2.0
+2025-09,RAN#109,RP-252419,0816,1,B,Big CR to TS 38.101-2 on MPR reduction,19.2.0
+2025-09,RAN#109,RP-252390,0818,,A,CR to 38.101-2 on maximum transmission power for STxMP (R19),19.2.0
+2025-09,RAN#109,RP-252425,0823,1,B,CR on FR2 RF requirements for NR_MIMO_Ph5,19.2.0
+2025-12,RAN#110,RP-253651,0824,1,B,"LP-WUS feature CR, FR2",19.3.0
+2025-12,RAN#110,RP-253632,0825,1,F,(NR_mmWave_protect-Core) CR on TS38.101-2 correction of UE RF requirements for EESS protection,19.3.0
+2025-12,RAN#110,RP-253675,0829,,A,"(NR_newRAT-Core, NR_FR2_FWA_Bn257_Bn258-Core, ) CR to add Lcrb in Figure 5.3.1-1 and correct wrong referencing to it in IBE sections - TS 38.101-2",19.3.0
+2025-12,RAN#110,RP-253659,0830,,F,(NR_ENDC_RF_Ph4) CR to TS 38.101-2: Corrections for UE RF enhancements,19.3.0
+2025-12,RAN#110,RP-253632,0837,,A,CR for 38.101-2 Correct the descriptions for BWintraCA and A-MPR NS_202,19.3.0
+2026-03,RAN#111,RP-260445,0842,,F,CR to TS38.101-2 on FR2 LP-WUS,19.4.0
+2026-03,RAN#111,RP-260465,0841,1,A,(NR_RF_FR2_req_Ph3) CR to TS 38.101-2 Correction for EVM parameters,19.4.0

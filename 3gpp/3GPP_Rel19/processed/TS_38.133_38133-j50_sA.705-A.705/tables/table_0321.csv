@@ -1,0 +1,33 @@
+Parameter,Unit,Cell 1
+Frequency Range,,FR2
+Duplex mode,,TDD
+TDD configuration,,TDDConf.3.1
+BWchannel,,"100 MHz: NPRB,c = 66"
+Data PRBs allocated,,66
+Initial BWP Configuration,,DLBWP.0.2ULBWP.0.2
+Dedicated BWP Configuration,,DLBWP.1.1 ULBWP.1.1
+PDSCH Reference measurement channel,,SR.3. 2 TDD
+RMSI CORESET parameters,,CR.3.1 TDD
+Dedicated CORESET parameters (CORESET index p),,CCR.3.1 TDD
+Dedicated CORESET parameters (CORESET index q),,CCR.3.2 TDD
+OCNG Patterns,,OP.5 defined in A.3.2.1
+SSB Configuration for TRP0,,SSB.1 FR2
+SSB Configuration for TRP1,,SSB.5 FR2
+SMTC Configuration,,SMTC.1
+Joint TCI State 0,,DLorJoint TCI.State.2
+Joint TCI State 1,,DLorJoint TCI.State.6
+Joint TCI State 2,,DLorJoint TCI.State.7
+Joint TCI State 3,,DLorJoint TCI.State.8
+TRS Configuration,,TRS.2.1 TDD for DLorJoint TCI.State.2TRS.2.4 TDD for DLorJoint TCI.State.6TRS.2.5 TDD for DLorJoint TCI.State.7TRS.2.6 TDD for DLorJoint TCI.State.8
+Correlation Matrix and Antenna Configuration,,1x2 Low
+EPRE ratio of PSS to SSS,dB,0
+EPRE ratio of PBCH DMRS to SSS,,
+EPRE ratio of PBCH to PBCH DMRS,,
+EPRE ratio of PDCCH DMRS to SSS,,
+EPRE ratio of PDCCH to PDCCH DMRS,,
+EPRE ratio of PDSCH DMRS to SSS,,
+EPRE ratio of PDSCH to PDSCH,,
+EPRE ratio of OCNG DMRS to SSS(Note 1),,
+EPRE ratio of OCNG to OCNG DMRS (Note 1),,
+Propagation Condition,,AWGN
+NOTE 1:OCNG shall be used such that a constant total transmitted power spectral density is achieved for all OFDM symbols.,,

@@ -1,0 +1,19 @@
+Test number,Bandwidth combination (MHz),Number of bits of a DL-SCH transport block received within a TTI,Measurement channel,Reference valueTB success rate(%),,
+,,,,DRB type of Split bearer (Note 2),DRB type of SCG bearer (Note 3),
+,,,,,MCG,SCG
+1,2x10,25456,R.31-2 FDD,95,95,95
+2,2x10,36696 (Note 4),R.31-3A FDD,85,85,85
+3,10+20,36696 (Note 4) for 10MHz CC75376 (Note 5) for 20MHz CC,R.31-3A FDD for 10MHz CCR.31-4 FDD for 20MHz CC,85,85,85
+4,2x15,55056 (Note 6),R.31-4B FDD,85,85,85
+5,15+20,55056 for 15MHz CC75376 (Note 5) for 20MHz CC,R.31-5 FDD for 15MHz CCR.31-4 FDD for 20MHz CC,85,85,85
+6,2x20,75376 (Note 5),R.31-4 FDD,85,85,85
+6A,10+15,36696 (Note 4) for 10MHz CC55056 (Note 6) for 15MHz CC,R.31-2 FDD for 10MHz CCR.31-5 FDD for 15MHz CC,85,85,85
+7,15+5,55056 for 15MHz CC18336 for 5MHz CC,R.31-5 FDD for 15MHz CCR.31-6 FDD for 5MHz CC,85,85,85
+8,15+20+20,55056 for 15MHz CC75376 (Note 5) for 20MHz CC,R.31-5 FDD for 15MHz CCR.31-4 FDD for 20MHz CC,85,85,85
+9,15+15+20,55056for 15MHz CC75376 (Note 5) for 20MHz CC,R.31-5 FDD for 15MHz CCR.31-4 FDD for 20MHz CC,85,85,85
+10,10+10+20,36696 (Note 4) for 10MHz CC75376 (Note 5) for 20MHz CC,R.31-2 FDD for 10MHz CCR.31-4 FDD for 20MHz CC,85,85,85
+11,10+15+15,36696 (Note 4) for 10MHz CC55056 (Note 6) for 15MHz CC,R.31-2 FDD for 10MHz CCR.31-5 FDD for 15MHz CC,85,85,85
+12,10+15+20,36696 (Note 4) for 10MHz CC55056 (Note 6) for 15MHz CC75376 (Note 5) for 20MHz CC,R.31-2 FDD for 10MHz CCR.31-5 FDD for 15MHz CCR.31-4 FDD for 20MHz CC,85,85,85
+13,10+20+20,36696 (Note 4) for 10MHz CC75376 (Note 5) for 20MHz CC,R.31-2 FDD for 10MHz CCR.31-4 FDD for 20MHz CC,85,85,85
+14,3x20,75376 (Note 5),R.31-4 FDD,85,85,85
+"Note 1:For 2 layer transmissions, 2 transport blocks are received within a TTI.Note 2:For the configuration of DRB type of Split bearer, the TB success rate across CGs is defined as TB success rate = 100%*NDL_correct_rx/ (NDL_newtx + NDL_retx), where NDL_newtx is the number of newly transmitted DL transport blocks , NDL_retx is the number of retransmitted DL transport blocks, and NDL_correct_rx is the number of correctly received DL transport blocks. All the above numbers of transmitted, retransmitted or correctly received DL transport blocks are calculated as the sum of the numbers of DL transport blockes across all the CGs used for DC transmission or reception.Note 3:For the configuration of DRB type of SCG bearer, the TB success rate across CGs is defined as TB success rate = 100%*NDL_correct_rx/ (NDL_newtx + NDL_retx), where NDL_newtx is the number of newly transmitted DL transport blocks, NDL_retx is the number of retransmitted DL transport blocks, and NDL_correct_rx is the number of correctly received DL transport blocks. All the above numbers of transmitted, retransmitted or correctly received DL transport blocks are calculated as the sum of the numbers of DL transport blockes per CG used for DC transmission or reception, separately.Note 4:35160 bits for sub-frame 5.Note 5:71112 bits for sub-frame 5.Note 6:52752 bits for sub-frame 5.",,,,,,

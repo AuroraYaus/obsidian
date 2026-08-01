@@ -1,0 +1,17 @@
+CenterFrequency Fc[MHz],Protected range[MHz],Minimum requirement[dBm],Measurement bandwidth
+5190 ≤ Fc ≤ 5230.02,5100 ≤ f ≤ 5141.6,-26,1 MHz
+,5141.6 < f ≤ 5150,-18,
+,5250 ≤ f < 5251,-3 to -13,
+,5251 ≤ f < 5270,-13 to -21,
+,5270 ≤ f < 5278.4,-21 to -26,
+,5278.4 ≤ f ≤ 5400,-26,
+5269.98 ≤ Fc ≤ 5310,5210 < f ≤ 5221.6,-26,
+,5221.6 < f ≤ 5230,-26 to -21,
+,5230 < f ≤ 5249,-21 to -13,
+,5249 ≤ f ≤ 5250,-13 to -3,
+,5350 ≤ f ≤ 5358.4,-18,
+,5358.4 < f ≤ 5400,-26,
+5509.98 ≤ Fc ≤ 5670,5420 ≤ f ≤ 5460,-19,
+,5460 < f ≤ 5470,-13,
+,5770 ≤ f ≤ 5800,-19,
+NOTE:The minimum requirement when specified as a range denotes the emission requirement at the end points of the protected range.  The requirement within the protected range is obtained by linear interpolation between the requirements at the end points.,,,

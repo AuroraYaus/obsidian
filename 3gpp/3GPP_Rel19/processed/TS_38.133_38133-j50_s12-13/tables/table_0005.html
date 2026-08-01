@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>DRX cycle in NR cell</td>
+    <td>Tevaluate,SLSS</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>max(400 ms, ceil( 2 x 5 x Kp) x SMTC period)Note 1</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320 ms</td>
+    <td>max(400 ms, ceil(1.5 x 2 x 5 x Kp) x max(SMTC period, DRX cycle))</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320 ms</td>
+    <td>ceil( 7 x Kp ) x DRX cycle</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identified</td>
+  </tr>
+</table>

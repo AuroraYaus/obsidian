@@ -1,0 +1,9 @@
+Channel bandwidth,5 MHz,,10 MHz,,,,15MHz,,,
+Modulation,BPSK,QPSK,BPSK,,QPSK,,BPSK,,QPSK,
+WB index for 2 subcarrier transmission,0,-,0,1,-,,0,2,-,
+MPR,≤0.5,-,≤0.5,≤0.5,-,,≤0.5,≤0.5,-,
+WB index for 3 subcarrier transmission,-,0,-,,0,1,-,,0,2
+MPR,-,≤2,-,,≤2,≤2,-,,≤2,≤2
+WB index for 6 subcarrier transmission,-,0,-,,0,1,-,,0,2
+MPR,-,≤1,-,,≤1,≤1,-,,≤1,≤1
+NOTE:WB is specified in TS 36.211 [4],,,,,,,,,,

@@ -1,0 +1,4 @@
+Test number,Bandwidth,DL TTI length,Aggregation Level,Reference Channel,OCNG Pattern,Propagation Condition,Antenna configuration and correlation Matrix,Reference value,
+,,,,,,,,Pm-dsg (%),SNR (dB)
+1,10 MHz,Slot,2 SCCE,R.sTTI.10TDD,OP.7 TDD,EVA30,4 x 2 Low,1,2.7
+2,10 MHz,Slot,8 SCCE,R.sTTI.11 TDD,OP.7 TDD,EPA5,2 x 2 Low,1,1.2

@@ -1,0 +1,26 @@
+Parameter,,Unit,nCell 1,,,nCell 2,,
+,,,T1,T2,T3,T1,T2,T3
+BWchannel,,kHz,200,,,200,,
+NPDSCH parameters,"Config. 1, 2",,R.18 HD-FDD,,,R.18 HD-FDD,,
+,Config. 3,,R.24 NB-TDD,,,R.24 NB-TDD,,
+NPDCCH parameters,,,R.30 HD-FDD,,,R.30 HD-FDD,,
+NOCNG Patterns,"Config. 1, 2",,NOP.3 FDD,,,NOP.3 FDD,,
+,Config. 3,,NOP.4 TDD,,,NOP.4 TDD,,
+NPBCH_RA,,dB,0,,,0,,
+NPBCH_RB,,dB,,,,,,
+NPSS_RA,,dB,,,,,,
+NSSS_RA,,dB,,,,,,
+NPDCCH_RA,,dB,,,,,,
+NPDCCH_RB,,dB,,,,,,
+NPDSCH_RA,,dB,,,,,,
+NPDSCH_RB,,dB,,,,,,
+NOCNG_RANote 1,,dB,,,,,,
+NOCNG_RBNote 1,,dB,,,,,,
+,,dBm/15 kHz,-98,,,,,
+,,dB,7,-Infinity,-Infinity,-Infinity,4,4
+Note2,,dB,7,-Infinity,-Infinity,-Infinity,4,4
+NRSRP Note2,,dBm/15 kHz,-91,-Infinity,-Infinity,-Infinity,-94,-94
+Propagation Condition,,,AWGN,,,AWGN,,
+Antenna Configuration,,,1x1,,,1x1,,
+Timing offset to nCell 1,,ms,-,,,3,,
+Note 1:NOCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Es/Iot and NRSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,,,

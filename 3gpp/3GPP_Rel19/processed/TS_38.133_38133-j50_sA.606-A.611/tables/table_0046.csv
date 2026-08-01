@@ -1,0 +1,14 @@
+Parameter,Unit,Value,Comment
+RF Channel Number,,"1,2","Two NR radio channel (1, 2) are used for this test"
+Active PCell,,Cell 1,Primary cell on NR RF channel number 1.
+Configured deactivated SCell,,Cell 2,Configured deactivated secondary cell on NR RF channel number 2
+CP length,,Normal,
+DRX,,Not configured,Non-DRX
+Cell-individual offset for cells on NR channel number,dB,0,Individual offset for cells on primary component carrier.
+SCell measurement cycle (measCycleSCell),ms,160,
+Cell 2 timing offset to cell1,s,0,
+Time alignment error between cell2 and cell1,s,Time alignment error as specified in TS 38.104 [13] clause 6.5.3.1.,The value of time alignment error depends upon the type of carrier aggregation.
+T1,s,5,
+T2,s,0.32(case A)0.96(case B),
+T3,s,3 (case A)0.5(case B),
+T4,s,2.5 (case B),

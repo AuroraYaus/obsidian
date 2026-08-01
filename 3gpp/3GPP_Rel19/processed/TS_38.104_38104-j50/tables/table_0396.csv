@@ -1,0 +1,17 @@
+BS channel bandwidth of the lowest/highest carrier received (MHz),Interfering signal centre frequency offset from the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap (MHz),Type of interfering signal
+5,±2.5025,
+7,±2.5075,
+10,±2.5075,"5 MHz DFT-s-OFDM NR signal,"
+15,±2.5125,"15 kHz SCS, 25 RBs"
+20,±2.5025,
+25,±9.4675,
+30,±9.4725,
+35,±9.4625,
+40,±9.4675,
+45,±9.4725,
+50,±9.4625,"20 MHz DFT-s-OFDM NR signal,"
+60,±9.4725,"15 kHz SCS, 100 RBs"
+70,±9.4675,
+80,±9.4625,
+90,±9.4725,
+100,±9.4675,

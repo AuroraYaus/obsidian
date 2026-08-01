@@ -1,0 +1,5 @@
+NR,Total number of interrupted slots on serving cells,,,,,
+SCS,When MG timing advance of 0 ms is applied,,,When MG timing advance of 0.25 ms is applied,,
+(kHz),MGL=5.5 ms,MGL=3.5 ms,MGL=1.5 ms,MGL=5.5 ms,MGL=3.5 ms,MGL=1.5 ms
+60,22,14,6,22,14,6
+120,44,28,12,44,28,12

@@ -1,0 +1,5 @@
+Configuration,Description
+1,"Cell 1: FDD15 kHz SSB SCS, 10 MHz bandwidth,Cell 2: TDD 240 kHz SSB SCS, 100 MHz bandwidthCell 3: TDD 240 kHz SSB SCS, 100 MHz bandwidth"
+2,"Cell 1: TDD 15 kHz SSB SCS, 10 MHz bandwidth,Cell 2: TDD 240 kHz SSB SCS, 100 MHz bandwidthCell 3: TDD 240 kHz SSB SCS, 100 MHz bandwidth"
+3,"Cell 1: TDD 30 kHz SSB SCS, 40 MHz bandwidth,Cell 2: TDD 240 kHz SSB SCS, 100 MHz bandwidthCell 3: TDD 240 kHz SSB SCS, 100 MHz bandwidth"
+NOTE: The UE is only required to be tested in one of the supported test configurations,

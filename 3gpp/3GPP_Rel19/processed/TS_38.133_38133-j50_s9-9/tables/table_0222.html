@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>T SSB_measurement_period_inter</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>max(200 ms, ceil( 5 x Kp) x SMTC period)Note 1 x CSSFinter</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 160 ms</td>
+    <td>max(200 ms, ceil(5 x M2 Note 2 x Kp) x max(SMTC period, DRX cycle)) x CSSFinter</td>
+  </tr>
+  <tr>
+    <td>160 ms &lt; DRX cycle≤ 320 ms</td>
+    <td>ceil(4 x M2 Note 2 x Kp) x max(SMTC period,DRX cycle) x CSSFinter</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320 ms</td>
+    <td>ceil( Y Note 3 x Kp ) x DRX cycle x CSSFinter</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identifiedNOTE 2:M2 = 1.5 if SMTC period &gt; 40 ms, otherwise M2 = 1NOTE 3:Y=3 when SMTC period &lt;= 40 ms, Y=5 when SMTC period &gt; 40 ms</td>
+  </tr>
+</table>

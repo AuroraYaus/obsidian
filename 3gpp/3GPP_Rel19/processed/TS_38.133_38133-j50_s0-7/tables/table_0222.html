@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <td rowspan="2">Serving cell SSB Ês/Iot (dB)</td>
+    <td>FR of target NR</td>
+    <td colspan="2">Tidentify_intra_NR [ms]</td>
+  </tr>
+  <tr>
+    <td>cell</td>
+    <td>Known NR cell</td>
+    <td>Unknown NR cell</td>
+  </tr>
+  <tr>
+    <td>≥ -8</td>
+    <td>FR1</td>
+    <td>MAX (200 ms, 5 x TSMTC)</td>
+    <td>Kmulti_SMTC * MAX (800 ms, 10 x TSMTC)</td>
+  </tr>
+  <tr>
+    <td>&lt; -8</td>
+    <td>FR1</td>
+    <td>N/A</td>
+    <td>k * MAX(800 ms, 22 x Tsearch) Note2</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:Kmulti_SMTC is defined in clause 9.2C.5.1.NOTE 2:k = 1 if the cells on the target frequency are served by GEO. k = (N+1) if the cells on the target frequency are served by LEO, where N is the number of different satellites associated to the list of configured neighbour cells in ntn-NeighCellConfigList and ntn-NeighCellConfigListExt.</td>
+  </tr>
+</table>

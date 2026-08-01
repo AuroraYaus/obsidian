@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TSSB_time_index_intra</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>ceil(3 x Kgap ) x measCycleSCell x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320ms</td>
+    <td>Ceil(3 x Kgap) x max(measCycleSCell, 1.5 x DRX cycle) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320ms</td>
+    <td>Ceil(3 x Kgap )x max(measCycleSCell, DRX cycle) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:The requirements also apply to CC with deactivated SCell in SCG.</td>
+  </tr>
+</table>

@@ -1,0 +1,122 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td>PCFICH/PDCCH/PHICH parameters</td>
+    <td></td>
+    <td>R.6 FDD</td>
+    <td>As specified in clause A.3.1.2.1</td>
+  </tr>
+  <tr>
+    <td>OCNG Patterns defined in A.3.2.1</td>
+    <td></td>
+    <td>OP.6 FDD</td>
+    <td>OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols (other than those in the PRS subframes). There is no PDSCH allocated in the subframe transmitting PRS.</td>
+  </tr>
+  <tr>
+    <td>Assistance data reference cell</td>
+    <td></td>
+    <td>Cell 2</td>
+    <td>Cell 2 is the SCell on RF channel number 2</td>
+  </tr>
+  <tr>
+    <td>PCell</td>
+    <td></td>
+    <td>Cell 1</td>
+    <td>Cell 1 on RF channel number 1</td>
+  </tr>
+  <tr>
+    <td>Neighbour cell</td>
+    <td></td>
+    <td>Cell 3</td>
+    <td>Cell 3 on RF channel number 2</td>
+  </tr>
+  <tr>
+    <td>E-UTRA RF Channel Number</td>
+    <td></td>
+    <td>1,2</td>
+    <td>Two FDD carrier frequencies are used.</td>
+  </tr>
+  <tr>
+    <td>Channel Bandwidth (BWchannel)</td>
+    <td>MHz</td>
+    <td>10</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>PRS Bandwidth</td>
+    <td>RB</td>
+    <td>50</td>
+    <td>PRS Bandwidthbandwidth is as indicated in prs-Bandwidth in the OTDOA assistance data defined in [24].</td>
+  </tr>
+  <tr>
+    <td>Number of  consecutive positioning downlink subframes</td>
+    <td></td>
+    <td>1</td>
+    <td>As defined in TS 36.211</td>
+  </tr>
+  <tr>
+    <td>prs-MutingInfo</td>
+    <td></td>
+    <td>Cell1:‘11110000’Cell2:‘11110000’Cell3:’11110000’</td>
+    <td>See clause 6.5.1.2 in TS 36.355 for more information</td>
+  </tr>
+  <tr>
+    <td>Cell ID</td>
+    <td></td>
+    <td>(Cell ID of cell 2 – Cell ID of cell 3) mod 6 = 3</td>
+    <td>PCI of cell 1 is selected randomly.</td>
+  </tr>
+  <tr>
+    <td>expectedRSTD</td>
+    <td>s</td>
+    <td>Cell 3:-2 Other neighbour cells: randomly between -3 and 3</td>
+    <td>The expected RSTD is what is expected at the receiver. The corresponding parameter in the OTDOA assistance data specified in TS 36.355 [24] is the expectedRSTD indicator</td>
+  </tr>
+  <tr>
+    <td>expectedRSTDUncertainty for all neighbour cells</td>
+    <td>s</td>
+    <td>5</td>
+    <td>The corresponding parameter in the OTDOA assistance data specified in TS 36.355 [24] is the expectedRSTD-Uncertainty index</td>
+  </tr>
+  <tr>
+    <td>CP length</td>
+    <td></td>
+    <td>Normal</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>DRX</td>
+    <td></td>
+    <td>OFF</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Radio frame receive time offset between the cells at the UE antenna connector</td>
+    <td>s</td>
+    <td>Cell 1 to Cell 2: -1Cell 3 to Cell 2:1</td>
+    <td>PRS are transmitted from synchronous cells</td>
+  </tr>
+  <tr>
+    <td>Time alignment error between cell2 and cell1</td>
+    <td>s</td>
+    <td>Time alignment error as specified in 3GPP TS 36.104 [30] clause 6.5.3.1.</td>
+    <td>The value of time alignment error depends upon the type of carrier aggregation.</td>
+  </tr>
+  <tr>
+    <td>Number of cells provided in OTDOA assistance data</td>
+    <td></td>
+    <td>16</td>
+    <td>The list includes the assistance-data-reference cell (received in OTDOA-ReferenceCellInfo [24]) and 15 other cells, all received in OTDOA-ProvideAssistanceData [24]. All cells provided in OTDOA assistance data are on RF channel 2.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>ms</td>
+    <td>2560</td>
+    <td>Derived according to the RSTD measurement requirements specified in Clause 8.1.2.5.1</td>
+  </tr>
+</table>

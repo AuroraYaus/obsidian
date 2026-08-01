@@ -1,0 +1,10 @@
+Test num,Bandwidth,Reference channel,OCNG pattern,Propa-gation condi-tion,Correlation matrix and antenna config.,Reference value,,UE category
+,,,,,,Fraction of maximumThroughput (%),SNR (dB),
+1(NOTE 2),2x10 MHz,R.11 FDD,OP.1 FDD (NOTE 1),EVA70,2x2 Low,70,13.7,≥3
+2(NOTE 2),2x20 MHz,R.30 FDD,OP.1 FDD (NOTE 1),EVA70,2x2 Low,70,13.2,≥5
+3,2x5 MHz,R.11-2 FDD,OP.1 FDD,EVA70,2x2 Low,70,12.7,≥2
+4,10MHz+5MHz,"R.11 FDD for 10MHz CC,",OP.1 FDD (NOTE 1),EVA70,2x2 Low,70,13.0,≥3
+,,R.11-2 FDD for 5MHz CC,OP.1 FDD (NOTE 1),,,70,12.7,
+5,15MHz+5MHz,R.11-7 FDD for 15MHz CC,OP.1 FDD (NOTE 1),EVA70,2x2 Low,70,12.8,≥3
+,,R.11-2 FDD for 5MHz CC,OP.1 FDD (NOTE 1),,,70,12.7,
+NOTE 1:The OCNG pattern applies for each CC.NOTE 2:VoidNOTE 3: The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 8.1.2.3.,,,,,,,,

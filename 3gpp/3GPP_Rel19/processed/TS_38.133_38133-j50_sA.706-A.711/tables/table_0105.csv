@@ -1,0 +1,14 @@
+Parameter,Unit,Config,Value,Comment
+NR RF Channel Number,,"1, 2","1, 2",2 TDD carrier frequency are used for the NR cells.
+Active cell,,"1, 2",PCell (Cell 1),Cell 1 is on NR RF channel number 1.
+Neighbour cell,,"1, 2",Cell 2,Cell to be identified. Cell 2 is on NR RF channel number 2.
+SMTC configuration,,"1, 2",SMTC.1,
+A3-Offset,dB,"1, 2",-6,
+CP length,,"1, 2",Normal,
+Hysteresis,dB,"1, 2",0,
+Time To Trigger,s,"1, 2",0,
+Filter coefficient,,"1, 2",0,L3 filtering is not used
+DRX,,"1, 2",DRX.7,
+Time offset between Cell 1 and Cell 2,,"1, 2",3 s,Synchronous cells
+T1,s,"1, 2",5,
+T2,s,"1, 2",52,

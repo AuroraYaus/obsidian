@@ -1,0 +1,17 @@
+Parameter,,Unit,Test 1
+Downlink power allocation,,dB,0
+,,dB,0 (Note 1)
+,,dB,-3
+Cell-specific reference signals,,,"Antenna ports 0,1"
+CSI reference signals,,,"Antenna ports 15,…,18"
+Beamforming model,,,Annex B.4.1
+CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS,,Subframes,5 / 4
+CSI reference signal configuration,,,3
+Zero-power CSI-RS configurationICSI-RS /ZeroPowerCSI-RS bitmap,,Subframes / bitmap,4 /0010000000000000
+at antenna port,,dBm/15kHz,-98
+Symbols for unused PRBs,,,OCNG (Note 4)
+Number of allocated resource blocks (Note 2),,PRB,50
+Simultaneous transmission,,,"Yes (Note 3, 5)"
+PDSCH transmission mode,,,9
+Number of MBSFN subframes,,Subframes,NA
+"Note 1:.Note 2:The modulation symbols of the signal under test are mapped onto antenna port 7 or 8.Note 3:Modulation symbols of an interference signal is mapped onto the antenna port (7 or 8) not used for the input signal under test.Note 4:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated.Note 5:The two UEs’ scrambling identities  are set to 0 for CDM-multiplexed DM RS with interfering simultaneous transmission test cases.",,,

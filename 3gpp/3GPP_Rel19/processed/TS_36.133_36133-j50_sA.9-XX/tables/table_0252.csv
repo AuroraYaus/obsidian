@@ -1,0 +1,24 @@
+Parameter,Unit,Cell1,Cell2,Cell3
+E-UTRA RF Channel Number,,1,2,2
+PRS configuration Index,,2,2,2
+PBCH_RA,dB,0,0,0
+PBCH_RB,,,,
+PSS_RA,,,,
+SSS_RA,,,,
+PCFICH_RB,,,,
+PHICH_RA,,,,
+PHICH_RB,,,,
+PDCCH_RA,,,,
+PDCCH_RB,,,,
+OCNG_RANote1,,,,
+OCNG_RBNote1,,,,
+PRS_RA,dB,-3,0,0
+Note2,dBm/15 kHz,-98,,
+PRS,dB,-6,-6,-13
+PRS,dB,-6,-6,-13
+Io Note3,dBm/9 MHz,-70.04,-70.01,-70.01
+PRP Note3,dBm/15kHz,-104,-104,-111
+RSRP Note3,dBm/15kHz,-101,-104,-111
+Note3,dB,-3,-6,-13
+Propagation condition,,AWGN,,
+"Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols (other than those in the PRS subframes).Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:, PRS , RSRP, Io and PRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io values are derived in the case that there is no PBCH, PSS or SSS in the OFDM symbols carrying PRS.",,,,

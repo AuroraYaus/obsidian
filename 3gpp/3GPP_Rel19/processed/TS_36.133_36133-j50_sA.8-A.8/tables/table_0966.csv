@@ -1,0 +1,9 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,"1, 2",Two radio channels are used for this test.
+Active PCell,,Cell1,PCell on RF channel number 1.
+Configured PSCell,,Cell2,PSCell on RF channel number 2.
+CP length,,Normal,
+DRX,,ON,DRX related parameters are defined in Table A.8.23.17.1-3
+T1,s,2,
+T2,s,10,
+Note 1:This test verifies the RRM requirement which is independent of channel bandwidth and is performed according to the principle defined in section A.3.6.1.,,,

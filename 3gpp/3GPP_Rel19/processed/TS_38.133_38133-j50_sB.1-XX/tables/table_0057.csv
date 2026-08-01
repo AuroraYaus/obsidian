@@ -1,0 +1,6 @@
+Parameter,NR operating band groups Note1,Minimum SSB_RP,,SSB Ês/Iot
+,,dBm / SCSSSB,,dB
+,,SCSSSB = 15 kHz,SCSSSB = 30 kHz,
+Conditions,NR_FDD_SAB_FR1_A,-124,-121,-3
+Conditions,NR_FDD_SAB_FR1_B,-123.5,-120.5,-3
+NOTE 1:NR operating band groups for satellite access are defined in clause 3.5.2A.,,,,

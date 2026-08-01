@@ -1,0 +1,8 @@
+Frequency range,Maximum level,Measurement Bandwidth,Note
+9kHz  150kHz,-13 dBm,1 kHz,Note 1
+150kHz  30MHz,,10 kHz,Note 1
+30MHz  1GHz,,100 kHz,Note 1
+1GHz  12.75 GHz,,1 MHz,Note 2
+12.75 GHz  5th harmonic of the upper frequency edge of the DL operating band in GHz,,1 MHz,"Note 2, Note 3"
+12.75 GHz - 26 GHz,,1 MHz,"Note 2, Note 4"
+"NOTE 1:Bandwidth as in ITU-R SM.329 [2] , s4.1NOTE 2:Bandwidth as in ITU-R SM.329 [2] , s4.1. Upper frequency as in ITU-R SM.329 [2] , s2.5 table 1NOTE 3:Applies only for Bands 22, 42, 43, 48 and 49.NOTE 4:Applies only for Band 46.",,,

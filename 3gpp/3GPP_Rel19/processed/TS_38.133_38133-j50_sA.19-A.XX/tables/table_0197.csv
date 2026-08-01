@@ -1,0 +1,19 @@
+Parameter,,Unit,Value,Comment
+RF Channel Number,,,"1, 2",Two NR NTN satellite RF channel
+Initial conditions,Active cell,,Cell 1,
+,Neighbouring cell,,Cell 2,
+Final condition,Active cell,,Cell 2,
+"UE position (L,B, H) at T1 start",,,"(0, 0, 0)","Set by any pre-configured means (L,B,H) is Geodetic coordinate, where L is latitude, B is longitude, and H is height."
+UE moving speed,,km/h,"(108, 0, 0)",Set by any pre-configured means
+referenceLocation1-r17.condEventD1-r17,,m,"(-700, 0, 0)",Reference location for serving cell
+referenceLocation2-r17.condEventD1-r17,,m,"(1300, 0, 0)",Reference location for target cell
+distanceThreshFromReference1-r17.condEventD1-r17,,50m,20,D1-1 Location condition is fulfilled at T2
+distanceThreshFromReference2-r17.condEventD1-r17,,50m,20,D1-2 Location condition is fulfilled at T2
+hysteresis-r17.condEventD1-r17,,10m,0,
+timeToTrigger-r17.condEventD1-r17,,s,0,
+Gap Pattern Id,,,0,
+Measurement gap offset,,,9,
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+Time offset between cells,,,3 s,Synchronous cells
+T1,,s,1,
+T2,,s,12,

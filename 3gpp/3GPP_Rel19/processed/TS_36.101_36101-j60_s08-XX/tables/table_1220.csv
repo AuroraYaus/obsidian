@@ -1,0 +1,34 @@
+Parameter,,Unit,Test 1
+Bandwidth,,MHz,10
+Transmission mode,,,9
+Propagation channel,,,EPA5
+Precoding granularity,,PRB,50
+Correlation and antenna configuration,,,"High 2D XP12(2,3,2) x 2"
+Cell-specific reference signals,,,"Antenna ports 0,1"
+CSI reference signals,,,"Antenna ports15,…,26"
+Beamforming model,,,Annex B.4.3
+CDM Type,,,CDM2
+CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS,,,5/ 1
+NZP-CSI-RS-Configuration-List,,,"{0,1,2}"
+eMIMO-Type,,,Class A
+codebookConfig-N1,,,2
+codebookConfig-N2,,,3
+codebook-Over-Sampling-RateConfig-O1,,,8
+codebook-Over-Sampling-RateConfig-O2,,,4
+Codebook-Config,,,Note 5
+codebookSubsetRestriction-1,,,0x01FFFF FFFF FFFF FFFFFFFF FFFF FFFF FFFFFFFF FFFF FFFF FFFF
+codebookSubsetRestriction-2,,,"Codebook-Config 1:0000 0000 1111Codebook-Config 2,3,4: 0x 00 000000 0000 FFFF"
+Downlink power allocation,,dB,0
+,,dB,0
+,Pc,dB,-8
+,,dB,-3
+,,dB[mW/15kHz],-98
+Reporting mode,,,PUSCH 3-1
+Reporting interval,,ms,5
+PMI delay (Note 2),,ms,8
+Measurement channel,,,R.77 FDD
+Rank Number of PDSCH,,,1
+OCNG Pattern,,,OP.1 FDD
+Max number of HARQ transmissions,,,4
+Redundancy version coding sequence,,,"{0,1,2,3}"
+"Note 1:For random precoder selection, the precoder shall be updated in each TTI (1 ms granularity).Note 2:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).Note 3:PDSCH _RA= 0 dB, PDSCH_RB= 0 dB in order to have the same PDSCH and OCNG power per subcarrier at the receiver.Note 4:Randomization of the principle beam direction shall be used as specified in B.2.3B.4.Note 5:Value of parameter codebookConfig shall be random selected one value from UE supported codebook configurations.",,,

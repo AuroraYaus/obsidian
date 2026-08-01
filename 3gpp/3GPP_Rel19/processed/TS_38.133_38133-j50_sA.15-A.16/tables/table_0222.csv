@@ -1,0 +1,22 @@
+Parameter,,Unit,Test 1,,
+,,,T1,T2,T3
+EPRE ratio of PDCCH DMRS to SSS,,dB,4,,
+EPRE ratio of PDCCH to PDCCH DMRS,,dB,0,,
+EPRE ratio of PBCH DMRS to SSS,,dB,0,,
+EPRE ratio of PBCH to PBCH DMRS,,dB,,,
+EPRE ratio of PSS to SSS,,dB,,,
+EPRE ratio of PDSCH DMRS to SSS,,dB,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,dB,,,
+EPRE ratio of OCNG DMRS to SSS,,dB,,,
+EPRE ratio of OCNG to OCNG DMRS,,dB,,,
+SNR on RLM-RS,"Config 1, 4",dB,1,-7,-15
+,Config 2,,1,-7,-15
+,Config 3,,1,-7,-15
+,"Config 1, 4",dBm/15 kHz,-98,,
+,Config 2,,-98,,
+,Config 3,,-98,,
+,"Config 1, 4",dBm/SCS,-98,,
+,Config 2,,-98,,
+,Config 3,,-95,,
+Propagation condition,,,TDL-C 300 ns 100 Hz,,
+"NOTE 1:OCNG shall be used such that the resources in Cell 1 are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:The signal contains PDCCH for UEs other than the device under test as part of OCNG.NOTE 3:SNR levels correspond to the signal to noise ratio over the SSS REs.NOTE 4:The SNR in time periods T1, T2 and T3 is denoted as SNR1, SNR2 and SNR3 respectively in figure A.16.5.1.6.1-1.NOTE 5:The SNR values are specified for testing a UE which supports 2 RX on at least one band.",,,,,

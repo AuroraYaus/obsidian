@@ -1,0 +1,13 @@
+Reference channel,A1-1,A1-2,A1-3,A1-4,A1-5,A1-6,A1-7,A1-8,A1-9
+Allocated resource blocks,6,15,25,3,9,12,24,101,102
+DFT-OFDM Symbols per subframe,12,12,12,12,12,12,12,12,12
+Modulation,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK
+Code rate,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3
+Payload size (bits),600,1544,2216,256,936,1224,2088,1032,1032
+Transport block CRC (bits),24,24,24,24,24,24,24,24,24
+Code block CRC size (bits),0,0,0,0,0,0,0,0,0
+Number of code blocks - C,1,1,1,1,1,1,1,1,1
+Coded block size including 12bits trellis termination (bits),1884,4716,6732,852,2892,3756,6348,3180,3180
+Total number of bits per sub-frame,1728,4320,7200,864,2592,3456,6912,2880,2880
+Total symbols per sub-frame,864,2160,3600,432,1296,1728,3456,1440,1440
+"NOTE 1:For reference channel A1-8, the allocated RB's are uniformly spaced over the channel bandwidth at RB index N, N+5, N+10, ..., N+45 where N = {0, 1, 2, 3, 4}.NOTE 2:For reference channel A1-9, the allocated RB's are uniformly spaced over the channel bandwidth at RB index N, N+10, N+20, ..., N+90 where N = {0, 1, 2, … 9}.",,,,,,,,,

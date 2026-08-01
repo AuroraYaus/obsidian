@@ -1,0 +1,6 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,2,UL carrier frequency
+Channel Bandwidth (BWchannel),MHz,5 or 10,According to principle defined in clause A.3.12.3
+ProSe Direct Communication resource pool configuration,,As specified in Table A.3.12.5-2(Configuration #2),IE values unless specified otherwise in this test.(Preconfigured)
+Active Sidelink UEs ConfigurationNote 1,,PCP.1.FDDAs specified in Table A.3.12.8.1-1,Transmitting ProSe Direct Communication (PSCCH + PSSCH)Using SyncRef UE1 as synchronization source
+Note 1:This test is according to the principle defined in section A.3.12.3.,,,

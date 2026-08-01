@@ -1,0 +1,11 @@
+Parameter,,Unit,"Test 1, 2"
+Downlink power allocation of LTE signal,,dB,-3
+,,dB,-3(Note 1)
+,,dB,0
+at antenna port,,dBm/15kHz,-93 (Note 2)
+,,dBm/15kHz,-99 (Note 3)
+LTE CRS port number (eutra-NumCRS-Ports-r13),,,4
+NPDCCH repetition number,,subframe,8 for Test 1; 16 for Test 2; 128 for Test 3.
+(npdcch-NumRepetitions-r13),,subframe,8 for Test 1; 16 for Test 2; 128 for Test 3.
+(nPDCCH-startSF-USS-r13),,,4 for Test 1; 2 for Test 2; 1.5 for Test 3
+Note 1:.Note 2:This noise is applied to all subframes from the end of the NPDCCH to the end of the following NPDSCH transmission;Note 3:This noise is applied to all subframes from the end of the NPDSCH to the end of the following NPDCCH transmission.,,,

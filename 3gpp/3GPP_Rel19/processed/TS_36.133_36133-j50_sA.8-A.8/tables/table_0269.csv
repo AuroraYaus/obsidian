@@ -1,0 +1,32 @@
+Parameter,Unit,Cell 1,,"Cell 2, Cell 3, Cell 4",
+,,T1,T2,T1,T2
+E-UTRA RF Channel Number,,1,,"Randomly selected from 2,3,4 such that cell 2 is in the normal performance group",
+BWchannel,,5MHz: NRB = 2510MHz: NRB = 50,,"5MHz: NRB,= 2510MHz: NRB,= 50",
+Special subframe configuration Note1,,6,,,
+Uplink-downlink configuration Note1,,1,,,
+PDSCH parameters: DL Reference Measurement Channel As specified in clause A.3.1.1.2,,5MHz:  R.4 TDD10MHz:R.0 TDD,,-,
+PCFICH/PDCCH/PHICH parameters: DL Reference Measurement Channel As specified in clause A.3.1.2.2,,5MHz: R.11 TDD10MHz:R.6 TDD,,5MHz: R.11 TDD10MHz:R.6 TDD,
+"OCNG Patterns defined in A.3.2.2.1, A.3.2.2.2 ,A.3.2.2.9 and A.3.2.2.10",,5MHz: OP.9 TDD10MHz:OP.1 TDD,,5MHz: OP.10.TDD10MHz:OP.2 TDD,
+PBCH_RA,dB,0,,0,
+PBCH_RB,dB,,,,
+PSS_RA,dB,,,,
+SSS_RA,dB,,,,
+PCFICH_RB,dB,,,,
+PHICH_RA,dB,,,,
+PHICH_RB,dB,,,,
+PDCCH_RA,dB,,,,
+PDCCH_RB,dB,,,,
+PDSCH_RA,dB,,,,
+PDSCH_RB,dB,,,,
+OCNG_RANote 2,dB,,,,
+OCNG_RBNote 2,dB,,,,
+Note 4,dBm/15 kHz,-98,,-98,
+,dB,4,4,-Infinity,7
+Note 5,dB,4,4,-Infinity,7
+RSRP Note 5,dBm/15 kHz,-94,-94,-Infinity,-91
+SCH_RP Note 5,dBm/15 kHz,-94,-94,-Infinity,-91
+Io Note 4,dBm/Ch BW,"-64.76+10log(NRB,c /50)","-64.76+10log(NRB,c /50)","-70.22+10log(NRB,c /50)","-62.43+10log(NRB,c /50)"
+Propagation Condition,,AWGN,,AWGN,
+Antenna Configuration,,1x2,,1x2,
+Timing offset to Cell 1,,-,,3 s,
+"Note 1:For special subframe and uplink-downlink configurations see Tables 4.2-1 and 4.2-2 in TS 36.211.Note 2:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 3:The resources for uplink transmission are assigned to the UE priori to the start of time period T2.Note 4:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 5:Es/Iot, RSRP, SCH_RP and Io have been derived from other parameters for information purposes. They are not settable parameters themselves.",,,,,

@@ -1,0 +1,17 @@
+NR CA Band,NR Band(Table 5.2-1)
+CA_n1(*),n1
+CA_n3(*),n3
+CA_n5(*),n5
+CA_n7(*),n7
+CA_n12(*),n12
+CA_n25(*),n25
+CA_n26(*),n26
+CA_n41(*),n41
+CA_n48(*),n48
+CA_n66(*),n66
+CA_n71(*),n71
+CA_n77(*),n77
+CA_n78(*),n78
+CA_n96(*),n96
+CA_n102(*),n102
+NOTE 1:The minimum requirements only apply for non simultaneous Tx/Rx between all carriers for TDD combinations.NOTE 2:The notation CA_nX(*) in this table indicates intra-band non-contiguous CA for band nX. The configurations for each band are in 5.5A.2.,

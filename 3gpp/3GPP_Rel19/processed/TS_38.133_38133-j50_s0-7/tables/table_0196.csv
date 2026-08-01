@@ -1,0 +1,6 @@
+RRTFH,"(comb size, Number of PRS symbols)",Applicable number of hops per slot Nhopsslot,Applicable length per hop () in number of symbolsTper-hop
+RRTFH≤2 symbols,"(2, 12) with SCS 15kHz, 30kHz in FR1, and 60kHz, 120kHz in FR2",2,7
+,All others,1,14
+2 symbols <RRTFH≤6 symbols,"(≤ 6, any)",1,14
+,"(12, 12)",½,28
+RRTFH>6 symbols,Any combination,½,28

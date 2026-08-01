@@ -1,0 +1,5 @@
+Configuration,Description
+1,"GSO, HD-FDD duplex mode"
+2,"NGSO, HD-FDD duplex mode"
+3,"NGSO, TDD duplex mode"
+"Note:If UE supports both NGSO and GSO, the test case Config 1 can be skipped if the UE passes test case Config 2. If UE supports both NGSO HD-FDD and NGSO TDD, it should pass the test with both config 2 and config 3.",

@@ -1,0 +1,3 @@
+BS channel bandwidth of the lowest/highest carrier received(MHz),Wanted signal mean power (dBm) (Note 1),Interfering signal mean power (dBm),Interfering signal centre frequency minimum offset from the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap (MHz),Type of interfering signal
+"20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100",PREFSENS + 6 dB,Wide Area BS: -25Medium Range BS: -32Local Area BS: -35,±30,"20 MHz CP-OFDM NR signal30 kHz SCS, 51 RBs"
+"NOTE 1:PREFSENS for SBFD UL subband bandwidth depends on the BS channel bandwidth as specified in clause 12.3.2.NOTE 2:For lowest/highest carrier which is configured in DU/UD SBFD operation, the interference only applies when DL subband is adjacent to Base Station RF Bandwidth edge.",,,,

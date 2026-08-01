@@ -1,0 +1,19 @@
+Field,Value,Comment
+prach-ConfigurationIndex,190,"Preamble Format C2, with 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-4 in TS 38.211 [6]."
+msg1-SubcarrierSpacing,Same as UL carrier SCS,
+totalNumberOfRA-Preambles,48,Total number of preambles used for contention based and contention free random access
+numberOfRA-PreamblesGroupA,48,No group B.
+prach-RootSequenceIndex,0,"Logic sequence index = 0, resulting in root sequence = 1."
+ssb-perRACH-Occasion,oneFourth,OneFourth: 1 SSB associated with 4 RACH occasions
+msg1-FDM,One,One PRACH transmission occasions FDMed in one time instance.
+powerRampingStep,dB2,
+preambleReceivedTargetPower,dBm-120,
+preambleTransMax,n6,Max number of RA preamble transmission performed before declaring a failure is 6
+ra-ResponseWindow,sl10,10 slots
+zeroCorrelationZoneConfig,11,"N-CS configuration, NCS = 23"
+Backoff Parameter Index,2,"20 ms, as defined in table 7.2-1 in TS 38.321 [7]."
+ssb-ResourceList,ra-PreambleIndex = 40,Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE doesn’t use this field if is transmitting CFRA to convey BFR.
+BFR-SSB-Resource,ra-PreambleIndex = 40,Associated with SSB index 0. UE doesn’t use ssb-ResourceList and BFR-SSB-Resource IEs at the same time. UE uses this field only if is transmitting CFRA to convey BFR
+ra-ssb-OccasionMaskIndex,1,PRACH occasion index 1 is allowed
+rsrp-ThresholdSSB,RSRP_51,"The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]."
+NOTE:For further information see clause 6.3.2 in TS 38.331 [2].,,

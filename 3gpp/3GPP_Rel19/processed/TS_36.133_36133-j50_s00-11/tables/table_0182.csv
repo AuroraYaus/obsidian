@@ -1,0 +1,7 @@
+Attribute,Out-of-sync,In-sync
+DCI format,6-1A,6-1A
+Starting OFDM symbols,2; Bandwidth >= 10MHz3; 3MHz <= Bandwidth < 10MHz4; Bandwidth = 1.4MHz,2; Bandwidth >= 10MHz3; 3MHz <= Bandwidth < 10MHz4; Bandwidth = 1.4MHz
+Maximum M-PDCCH repetition level,Rmax Note1,Rmax /2 Note1
+Aggregation level (ECCE),L’max Note2,L’max-2Note2
+M-PDCCH Transmission type,Distributed,Distributed
+"NOTE 1:Rmax is determined by the configurable parameter mPDCCH-NumRepetition defined in 36.331 and Rmax>1.NOTE 2:L’max and L’max-2 is derived from the configurable parameter numberPRB-Pairs defined in 36.331. L’max is 24, 16 and 8, if numberPRB-Pairs is 6, 4 and 2, respectively. L’max-2 is the aggregation level two levels below L’max, and L’max-2 is 8, 4 and 2, if numberPRB-Pairs is 6, 4 and 2, respectively.",,

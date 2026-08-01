@@ -1,0 +1,25 @@
+Parameter,Unit,Value
+Channel bandwidth,MHz,20
+Allocated resource blocks,,100
+Uplink-Downlink Configuration,,N/A
+Subcarriers per resource block,,12
+Allocated subframes per Radio Frame (D),,8
+Modulation,,1024QAM
+Target Coding Rate,,4/5
+Number of HARQ Processes,Processes,N/A
+Maximum number of HARQ transmissions,,N/A
+Information Bit Payload per Sub-Frame,,
+"For Sub-Frames 3,4,6,7,8,9",Bits,110136
+"For Sub-Frame 1,2",Bits,N/A
+"For Sub-Frame 0,5",Bits,110136
+Transport block CRC,Bits,24
+Number of Code Blocks per Sub-Frame(Note 3),,
+"For Sub-Frames 3,4,6,7,8,9",,18
+"For Sub-Frame 1,2",,N/A
+"For Sub-Frame 0,5",,18
+Binary Channel Bits Per Sub-Frame,,
+"For Sub-Frames 3,4,6,7,8,9",Bits,138000
+"For Sub-Frame 1,2",Bits,N/A
+"For Sub-Frame 0,5",Bits,136560
+Max. Throughput averaged over 1 frame,kbps,88108.8
+"Note 1:2 symbols allocated to PDCCH for 20 MHz.Note 2:Reference signal, Synchronization signals allocated as per TS 36.211 [4].Note 3:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).",,

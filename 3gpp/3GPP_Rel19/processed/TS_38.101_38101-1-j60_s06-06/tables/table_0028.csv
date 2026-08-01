@@ -1,0 +1,12 @@
+Modulation/Waveform,,A1 (dB),,A2 (dB)
+,,Outer,Inner,Outer/Inner
+DFT-s-OFDM,Pi/2 BPSK,≤ 1,N/A,≤ 3
+,QPSK,≤ 1.5,,≤ 3
+,16 QAM,≤ 2.5,,≤ 3
+,64 QAM,≤ 3,,≤ 3
+,256 QAM,,,
+CP-OFDM,QPSK,≤ 3.5,,≤ 3
+,16 QAM,≤ 3.5,,≤ 3
+,64 QAM,,,
+,256 QAM,,,
+NOTE 1:VoidNOTE 2:Void,,,,

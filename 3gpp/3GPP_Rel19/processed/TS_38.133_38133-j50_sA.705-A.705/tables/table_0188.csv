@@ -1,0 +1,5 @@
+Configuration,Description
+1,"TDD duplex mode, 120 kHz SSB SCS, 100 MHz bandwidth"
+2,"TDD duplex mode, 480 kHz SSB SCS, 400 MHz bandwidth"
+3,"TDD duplex mode, 960 kHz SSB SCS, 400 MHz bandwidth"
+NOTE:The UE is only required to pass in one of the supported test configurations in FR2-2,

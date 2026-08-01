@@ -1,0 +1,5 @@
+Frequency band(MHz),Channel bandwidth /Spectrum emission limit(dBm),Measurement bandwidth
+f ≤ 5925,-27,1 MHz
+6425 ≤ f ≤ X,-13,1 MHz
+f ≥ X,-19,1 MHz
+"Note 1:In case of NS_63 the parameter X is defined as 6435.9MHz for 20MHz channel, 6440.1MHz for 40MHz channel, and 6440.4MHz for 80MHz.Note 2:In case of NS_69 the parameter X is defined as 6425.5MHz for 20MHz channel, 6425.4MHz for 40MHz channel, and 6425.2MHz for 80MHz.",,

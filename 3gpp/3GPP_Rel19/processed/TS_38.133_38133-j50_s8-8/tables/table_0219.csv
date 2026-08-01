@@ -1,0 +1,5 @@
+Configuration,TEvaluate_BFD_SSB (ms)
+no DRX,"Max(50, Ceil(5  P  N*PTRP)  TSSB)"
+DRX cycle ≤ 320 ms,"Max(50, Ceil(7.5  P  N*PTRP)  Max(TDRX,TSSB))"
+DRX cycle > 320 ms,Ceil(5  P  N*PTRP)  TDRX
+"NOTE:TSSB is the periodicity of SSB in the two sets  and . TDRX is the DRX cycle length.q0,0q0,1",

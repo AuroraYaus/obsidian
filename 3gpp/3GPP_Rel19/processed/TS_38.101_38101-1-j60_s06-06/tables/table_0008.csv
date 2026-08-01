@@ -1,0 +1,49 @@
+Network signalling label,Requirements (clause),NR Band,Channel bandwidth (MHz),Resources blocks (NRB),A-MPR (dB)
+NS_01,,Table 5.2-1(NOTE 8),"3, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100",Table 5.3.2-1,N/A
+NS_03,6.5.2.3.3,"n2, n25, n66,n70, n86",,,Clause 6.2.3.7
+NS_03U,"6.5.2.3.3, 6.5.2.4.2","n2, n25, n66, n86 (NOTE 1)",,,Clause 6.2.3.7
+NS_04,"6.5.2.3.2, 6.5.3.3.1","n41, n90","5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100",,Clause 6.2.3.2
+NS_05,6.5.3.3.4,"n1, n65, n84","5, 10, 15, 20 (NOTE 2)",,Clause 6.2.3.4
+NS_05U,"6.5.3.3.4, 6.5.2.4.2","n1, n65, n84 (NOTE 1)","5, 10, 15, 20",,Clause 6.2.3.4
+NS_06,6.5.2.3.4,n12,"3, 5, 10, 15",,Clause6.2.3.32
+,,"n13, n14","5, 10",,
+,,n85,"3, 5, 10, 15",,
+,,n110,3,,
+NS_07,6.5.2.3.46.5.3.3.26,n13,"5, 10","Table 6.2.3.29-1,Table 6.2.3.29-3",Table6.2.3.29-2.Table 6.2.3.29-4
+NS_10,,"n20, n82","15, 20",Table 6.2.3.3-1,Table6.2.3.3-1
+NS_12,6.5.3.3.17,n26,"3, 5, 7,10",Table 6.2.3.21-1Table 6.2.3.21-3,Table 6.2.3.21-2Table 6.2.3.21-4
+NS_13,6.5.3.3.18,n26,"3, 5, 7",Table 6.2.3.22-1Table 6.2.3.22-3,Table 6.2.3.22-2Table 6.2.3.22-4
+NS_14,6.5.3.3.19,"n515, n26","10, 15, 20",Table 6.2.3.23-1Table 6.2.3.23-3,Table 6.2.3.23-2Table 6.2.3.23-4
+NS_15,6.5.3.3.20,"n515, n26","3, 5, 7, 10, 15, 20",Table 6.2.3.24-1Table 6.2.3.24-3,Table 6.2.3.24-2Table 6.2.3.24-4
+NS_17,6.5.3.3.2,"n28, n8313","3, 5, 10",Table 5.3.2-1,Table 6.2.3.33-2
+NS_18,6.5.3.3.3,"n28, n8313, n109","3, 5",,"Table 6.2.3.13-1, A1Table 6.2.3.13-3, A1"
+,,,"10, 15, 20",,"Table 6.2.3.13-1, A2Table 6.2.3.13-3, A2"
+,,,"25, 30, 40",,"Table 6.2.3.13-1, A3, A4, A5Table 6.2.3.13-3, A3, A4, A5, A6"
+NS_21,6.5.2.3.96.5.3.3.12,n30,"5, 10",,Clause 6.2.3.14
+NS_24,6.5.3.3.13,n65 (NOTE 4),"5, 10, 15, 20",Table 6.2.3.15-1,Clause 6.2.3.15
+NS_26,6.5.3.3.29,n68,"10, 15",Table 6.2.3.34-1,Table 6.2.3.34-1
+NS_27,6.5.2.3.86.5.3.3.14,n48,"5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",Table 6.2.3.16-1,Table 6.2.3.16-2
+NS_35,6.5.2.3.1,n71,"5, 10, 15, 20, 25, 30, 35",Table 5.3.2-1,Clause6.2.3.3111
+NS_36,6.5.3.3.30,n68,"5, 10, 15",Table 6.2.3.35-1,Table 6.2.3.35-1
+NS_37,6.5.3.3.6,n74(NOTE 3),"10, 15",Table 6.2.3.8-1,Table6.2.3.8-1
+NS_38,6.5.3.3.7,n74,"5, 10, 15, 20",Table 6.2.3.9-1,Table6.2.3.9-1
+NS_39,6.5.3.3.8,n74,"10, 15, 20",Table 6.2.3.10-1,Table 6.2.3.10-1
+NS_40,6.5.3.3.9,n51,5,,Table6.2.3.5-1
+NS_41,6.5.3.3.10,n50,"5, 10, 15, 20, 30, 40, 50, 60",,Table 6.2.3.11-1
+NS_42,6.5.3.3.11,n50,"5, 10, 15, 20, 30, 40, 50, 60",,Table 6.2.3.12-1
+NS_43,6.5.3.3.5,"n8, n81","5, 10, 15",,Clause 6.2.3.6
+NS_43U,"6.5.3.3.5, 6.5.2.4.2","n8, n81 (NOTE 1)","5, 10, 15",,Clause 6.2.3.6
+NS_44,6.5.3.3.24,n38,"25, 30, 40",Table 6.2.3.20-1,Table 6.2.3.20-1
+NS_45,6.5.3.3.21,n53,"5, 10",,Clause 6.2.3.25
+NS_46,6.5.3.3.25,n7,"10, 15, 20, 25, 30, 35, 40, 50",Table 6.2.3.17-1Table 6.2.3.17-311Table 6.2.3.17-5,Table 6.2.3.17-2Table 6.2.3.17-411Table 6.2.3.17-6
+NS_47,6.5.3.3.15,n41 (Note 5),30 (Note 5),Table 6.2.3.18-1Table 6.2.3.18-3,Table 6.2.3.18-2Table 6.2.3.18-4
+NS_48,6.5.3.3.22,n1 and n84,"10, 15, 20, 25, 30, 40, 45, 50","Table 6.2.3.26-1,Table 6.2.3.26-3","Table 6.2.3.26-2,Table 6.2.3.26-4"
+NS_49,6.5.3.3.23,n1 and n84,"10, 15, 20, 25, 30, 40, 45, 50","Table 6.2.3.27-1,Table 6.2.3.27-3","Table 6.2.3.27-2,Table 6.2.3.27-4"
+NS_50,6.5.3.3.16,"n39, n98","10, 15, 20, 25, 30, 35, 40",,Clause 6.2.3.19
+NS_51,6.5.3.3.22,n65,50,Table 6.2.3.28-1,Table 6.2.3.28-2
+NS_55,NOTE 6,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",,N/A
+NS_56,6.5.3.3.27,"n24, n99","5, 10",,Clause 6.2.3.30
+NS_57,NOTE 10,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",,N/A
+NS_62,6.5.3.3.28,n54,5,,N/A
+NS_100,6.5.2.4.2,"n1, n2, n3, n5, n8, n18, n25, n26, n65, n66, n80, n81, n84, n86, n89(NOTE 1)",,,Table6.2.3.1-2
+"NOTE 1:This NS can be signalled for NR bands that have UTRA services deployed.NOTE 2:No A-MPR is applied for 5 MHz BWChannel where the upper channel edge is ≥ 1930 MHz,10 MHz BWChannel where the upper channel edge is ≥ 1950 MHz and 15 MHz BWChannel where the upper channel edge is ≥ 1955 MHz and 20 MHz BWChannel where the upper channel edge is ≥ 1970 MHz.NOTE 3:Applicable when the NR carrier is within 1447.9 – 1462.9 MHz.NOTE 4:Applicable when the upper edge of the channel bandwidth frequency is greater than 1980 MHz.NOTE 5:Applicable when the NR carrier is within 2545 – 2575 MHz. PC1 operation is not allowed. BWChannel less than 30 MHz are addressed in Table 6.5.3.2-1.NOTE 6:This NS value is applicable for cells in the range 3450 – 3550 MHz for operations in the USA. This NS value does not indicate any additional spurious emission and maximum output power reduction requirements.NOTE 7: Void.NOTE 8:The NS_01 label with the field additionalPmax [7] absent is default for all NR bands.NOTE 9:VoidNOTE 10:This NS value is applicable for cells below 3980 MHz that are partly or fully within the range 3650-3980 MHz for operations in Canada. This NS value does not indicate any additional spurious emission and maximum output power reduction requirements.NOTE 11: Void.NOTE 12: Void.NOTE 13: Void.NOTE 14: Void.NOTE 15: Support of the additional requirement indicated by this network signalling value is indicated by modified MPR behaviour for this band (Annex L.1).",,,,,

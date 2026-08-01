@@ -1,0 +1,51 @@
+Parameter,,Unit,Value
+,,,Test 1
+Active PCell,,,Cell 1
+RF Channel Number,,,1
+Satellite information,Config 1,,SSC.1
+,Config 2,,SSC.2
+Duplex mode,"Config 1, 2",,FDD
+DL initial BWP configuration,"Config 1, 2",,DLBWP.0.1
+DL dedicated BWP configuration,"Config 1, 2",,DLBWP.1.1
+UL initial BWP configuration,"Config 1, 2",,ULBWP.0.1
+UL dedicated BWP configuration,"Config 1, 2",,ULBWP.1.1
+RMSI CORESET Reference Channel,"Config 1, 2",,CR.1.1 FDD
+Dedicated CORESET Reference Channel,"Config 1, 2",,CCR.1.1 FDD
+SSB Configuration,"Config 1, 2",,SSB.1 FR1
+SMTC Configuration,"Config 1, 2",,SMTC.1
+PDSCH/PDCCH subcarrier spacing,"Config 1, 2",,15 kHz
+TRS configuration,"Config 1, 2",,TRS.1.1 FDD
+CSI-RS for RLM,"Config 1, 2",,Resource #4 in TRS.1.1 FDD
+TCI configuration for PDCCH/PDSCH,,,TCI.State. 2
+OCNG parameters,,,OP.1
+CP length,,,Normal
+Correlation Matrix and Antenna Configuration,,,2x2 Low
+Out of sync transmission parameters,DCI format,,1-0
+,Number of Control OFDM symbols,,2
+,Aggregation level,CCE,8
+,Ratio of hypothetical PDCCH RE energy to average CSI-RS RE energy,dB,4
+,Ratio of hypothetical PDCCH DMRS energy to average CSI-RS RE energy,dB,4
+,DMRS precoder granularity,,REG bundle size
+,REG bundle size,,6
+In sync transmission parameters,DCI format,,1-0
+,Number of Control OFDM symbols,,2
+,Aggregation level,CCE,4
+,Ratio of hypothetical PDCCH RE energy to average CSI-RS RE energy,dB,0
+,Ratio of hypothetical PDCCH DMRS energy to average CSI-RS RE energy,dB,0
+,DMRS precoder granularity,,REG bundle size
+,REG bundle size,,6
+DRX,,,OFF
+Gap pattern ID,,,N.A.
+Layer 3 filtering,,,Enabled
+T310 timer,,ms,1000
+T311 timer,,ms,1000
+N310,,,1
+N311,,,1
+CSI-RS configuration for CSI reporting,"Config 1, 2",,CSI-RS.1.1 FDD
+T1,,s,0.2
+T2,,s,0.2
+T3,,s,0.44
+T4,,s,0.2
+T5,,s,0.88
+T6,,s,0.84
+NOTE 1:UE-specific PDCCH is not transmitted after T1 starts.,,,

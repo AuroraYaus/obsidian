@@ -1,0 +1,8 @@
+eDRX_IDLE cycle length [s],DRX or eDRX INACTIVE cycle length[s],T [s],Nserv _RedCap [number of T ]
+2.56 ≤eDRX_IDLE cycle length ≤10485.76,0.32 ≤DRX_Inactive cycle length ≤2.56; or2.56 ≤eDRX_Inactive cycle length ≤10.24 if inactive eDRX is configured,0.32,4*M1
+,,0.64,4*M1
+,,1.28,2
+,,2.56,2
+,,5.12,2
+,,10.24,2
+"NOTE 1: T is determined according to clause 7.1 in [1].NOTE 2:M1=2 if SMTC periodicity (TSMTC) > 20 ms and T≤ 0.64 second, otherwise M1=1.",,,

@@ -1,0 +1,59 @@
+<table>
+  <tr>
+    <td>Parameter description</td>
+    <td>Unit</td>
+    <td colspan="2">Limit (NOTE 1)</td>
+    <td>Applicable Frequencies</td>
+  </tr>
+  <tr>
+    <td>General</td>
+    <td>dB</td>
+    <td colspan="2">max-10-6∆RB-1,-57dBm180kHz-PRB</td>
+    <td>Any non-allocated (NOTE 2)</td>
+  </tr>
+  <tr>
+    <td>IQ Image</td>
+    <td>dB</td>
+    <td>-28</td>
+    <td>Image frequencies when output power &gt; 10 dBm</td>
+    <td>Image frequencies (NOTES 2, 3)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>-25</td>
+    <td>Image frequencies when output power ≤ 10 dBm</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Carrier leakage</td>
+    <td>dBc</td>
+    <td>-28</td>
+    <td>Output power &gt; 10 dBm</td>
+    <td>Carrier frequency (NOTES 4, 5)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>-25</td>
+    <td>0 dBm ≤ Output power ≤10 dBm</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>-20</td>
+    <td>-30 dBm ≤ Output power ≤ 0 dBm</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>-10</td>
+    <td>-40 dBm  Output power &lt; -30 dBm</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE 1:An in-band emissions combined limit is evaluated in each non-allocated RB. For each such RB, the minimum requirement is calculated as the higher of PRB - 30 dB and the power sum of all limit values (General, IQ Image or Carrier leakage) that apply. PRB is defined in NOTE 10.NOTE 2:The measurement bandwidth is 1 RB and the limit is expressed as a ratio of measured power in one non-allocated RB to the measured average power per allocated RB, where the averaging is done across all allocated RBs. The requirement applies with  for any non-allocated RB with RIV=1 and RIV=5 in the uplink scheduling grant where RIV is specified in [10]. NOTE 3:[The applicable frequencies for this limit are those that are enclosed in the reflection of the allocated RBs, based on symmetry with respect to the reported carrier frequency location in txDirectCurrentLocation field of the UplinkTxDirectCurrentBWP, but excluding any allocated RBs.  If txDirectCurrentLocation is not available or is reported with value 3300 or 3301, applicable frequencies shall be calculated with an assumed carrier frequency location at the center of the channel.]NOTE 4:[The measurement bandwidth is 1 RB and the limit is expressed as a ratio of measured power in one non-allocated RB to the measured total power in all allocated RBs with RIV=1 and RIV=5 in the uplink scheduling grant.]NOTE 5:[The applicable frequencies for this limit are those that are enclosed in the RBs containing the DC frequency if  is odd, or in the two RBs immediately adjacent to the DC frequency if  is even, but excluding any allocated RB.  The location of the DC frequency is given by txDirectCurrentLocation field of the UplinkTxDirectCurrentBWP.  If txDirectCurrentLocation is not available or is reported with value 3300 or 3301, applicable frequencies shall be those that are enclosed in the RB(s) in the center of the channel.]NOTE 6: is the Transmission Bandwidth Configuration (see Figure 5.6-1).NOTE 7: is the starting frequency offset between the allocated RB and the measured non-allocated RB (e.g.  or  for the first adjacent RB outside of the allocated bandwidth.NOTE 10: is the transmitted power per 180*2 kHz in allocated RBs, measured in dBm.</td>
+  </tr>
+</table>

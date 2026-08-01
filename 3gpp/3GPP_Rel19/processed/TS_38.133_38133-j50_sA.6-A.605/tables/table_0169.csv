@@ -1,0 +1,12 @@
+Parameter,,Unit,Value,Comment
+Initial conditions,Active cell,,Cell 1,
+,Neighbouring cell,,Cell 3,
+Final condition,Active cell,,Cell 3,
+A3-Offset in handover condition,,dB,-4,
+Hysteresis,,dB,0,
+Time To Trigger,,s,0,
+Filter coefficient,,,0,L3 filtering is not used
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+Time offset between cells,,,3 s,Cell 1 and Cell 3 are synchronous cells
+T1,,s,5,
+T2,,s,2,

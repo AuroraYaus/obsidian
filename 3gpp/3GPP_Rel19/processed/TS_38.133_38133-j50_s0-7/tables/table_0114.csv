@@ -1,0 +1,6 @@
+DRX cyclelength [s],Scaling Factor (N1),"Tdetect,NR_Inter_enh [s] (number of DRX cycles)"
+0.32,N1Note 1,3.2 x N1 x M2 (10 x N1 x M2) Note 2
+0.64,,6.4 x N1 (10 x N1)
+1.28,,10.24 x N1 (8 x N1)
+2.56,,58.88 x N1 (23 x N1)
+"NOTE 1:For ATG UEs capable of antennaArrayType-r18, N1 = 3 when network assistance on ATG cells reference locations is provided, otherwise N1 = 4.Otherwise, N1 = 1.NOTE 2:When SMTC < = 40 ms, M2 = 1; and when SMTC > 40 ms, M2 = 1.5.",,

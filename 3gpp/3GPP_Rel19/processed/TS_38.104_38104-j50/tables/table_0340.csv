@@ -1,0 +1,8 @@
+Number of TX,Number of RX,Propagation conditions and,Frequency offset,SNR (dB),
+antennas,antennas,correlation matrix (Annex G),,Burst format 0,Burst format 1
+1,2,AWGN,0,-14.5,-16.5
+,,TDLC300-100 Low,400 Hz,-6.6,N/A
+,4,AWGN,0,-16.7,-18.8
+,,TDLC300-100 Low,400 Hz,-11.9,N/A
+,8,AWGN,0,-18.9,-21.3
+,,TDLC300-100 Low,400 Hz,-15.8,N/A

@@ -1,0 +1,11 @@
+Modulation,,MPR for bandwidth class B(dB),,MPR for bandwidth class C(dB),
+,,inner,outer,inner,outer
+DFT-s-OFDM,Pi/2 BPSK,1.0,3.5,2.5,7
+,QPSK,1.0,3.5,2.5,7
+,16QAM,1.5,3.5,2.5,7
+,64QAM,3.0,4.0,5,7
+,256QAM,5.5,6.0,7,7.5
+CP-OFDM,QPSK,2.0,4.0,3.5,8
+,16QAM,2.5,4.0,3.5,8
+,64QAM,3.5,4.0,5,8
+,256QAM,6.5,6.5,7,8

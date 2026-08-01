@@ -1,0 +1,12 @@
+Parameter,Ch BW,Allocated RBs,DFT-OFDM Symbols per Sub-Frame,Mod’n,Target Coding rate,Payload size,Transport block CRC,Number of code blocks per Sub-Frame (Note 1),Total number of bits per Sub-Frame,Total symbols per Sub-Frame,UE Category
+Unit,MHz,,,,,Bits,Bits,,Bits,,
+,10 - 20,10,12,16QAM,3/4,4264,24,1,5760,1440,≥ 2
+,10 - 20,20,12,16QAM,1/3,4008,24,1,11520,2880,≥ 2
+,10 - 20,30,12,16QAM,3/4,12960,24,3,17280,4320,≥ 2
+,10 - 20,40,12,16QAM,3/4,16992,24,3,23040,5760,≥ 2
+,20,50,12,16QAM,3/4,21384,24,4,28800,7200,≥ 2
+,20,60,12,16QAM,2/3,23688,24,4,34560,8640,≥ 2
+,20,70,12,16QAM,1/2,19848,24,4,40320,10080,≥ 2
+,20,80,12,16QAM,1/2,22920,24,4,46080,11520,≥ 2
+,20,90,12,16QAM,2/5,20616,24,4,51840,12960,≥ 2
+"Note 1:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)Note 2:For the channel bandwidth of 10Mhz, the allocated RBs are distributed over the channel bandwidth at the RB index = {N, N+5, N+10, …, N+45 for N = 0, …, NInterlace-1 } where NInterlace is 1, …, 4 for the allocated RBs of 10, …, 40, respectively.Note 3:For the channel bandwidth of 20Mhz, the allocated RBs are distributed over the channel bandwidth at the RB index = {N, N+10, N+20, …, N+90 for N = 0, …, NInterlace-1 } where NInterlace is 1, .., 9 for the allocated RBs of 10, …, 90, respectively.",,,,,,,,,,,

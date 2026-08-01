@@ -1,0 +1,24 @@
+Parameter,,Unit,Test 1,Test 1a
+Downlink power allocation,,dB,0,0
+,,dB,0 (Note 1),0 (Note 1)
+,,dB,-3,-3
+Beamforming model,,,4 layer precoding based on WB PMI feedback,4 layer precoding based on WB PMI feedback
+Cell-specific reference signals,,,"Antenna ports 0,1","Antenna ports 0,1"
+CSI reference signals,,,"Antenna ports 15,…,18","Antenna ports 15,…,18"
+Beamforming model,,,Annex B.4.3,Annex B.4.3
+CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS,,Subframes,5 / 2,5 / 2
+CSI reference signal configuration,,,3,3
+Zero-power CSI-RS configurationICSI-RS /ZeroPowerCSI-RS bitmap,,Subframes / bitmap,3 /0001000000000000,3 /0001000000000000
+at antenna port,,dBm/15kHz,-98,-98
+Symbols for unused PRBs,,,OCNG (Note 3),OCNG (Note 3)
+Number of allocated resource blocks (Note 2),,PRB,50,50
+Simultaneous transmission,,,No,No
+PDSCH transmission mode,,,9,9
+Precoding granularity,,,50,50
+PMI delay,,,8,8
+Reporting interval,,,1,1
+Reporting mode,,,PUSCH 3-1,PUSCH 3-1
+alternativeCodeBookEnabledFor4TX-r12,,,False,False
+CodeBookSubsetRestriction bitmap,,,0xFFFF000000000000,0xFFFF000000000000
+DMRS OCC length per port,,,2,4
+"Note 1:.Note 2:50 resource blocks are allocated in sub-frames 1,2,3,4,6,7,8,9 and 41 resource blocks (RB0–RB20 and RB30–RB49) are allocated in sub-frame 0.Note 3:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated.",,,,

@@ -1,0 +1,14 @@
+EUTRA ProSe Band,EUTRA Operating Band,ProSe UE transmit,,,ProSe UE receive,,,ProSe Duplex Mode,ProSe Direct,
+,,FUL_low   –  FUL_high,,,FDL_low  –  FDL_high,,,,Disc.,Comm.
+2,2,1850 MHz,–,1910 MHz,1850 MHz,–,1910 MHz,HD,Yes,
+3,3,1710 MHz,–,1785 MHz,1710 MHz,–,1785 MHz,HD,Yes,Yes
+4,4,1710 MHz,–,1755 MHz,1710 MHz,–,1755 MHz,HD,Yes,
+7,7,2500 MHz,–,2570 MHz,2500 MHz,–,2570 MHz,HD,Yes,Yes
+14,14,788 MHz,–,798 MHz,788 MHz,–,798 MHz,HD,Yes,Yes
+20,20,832 MHz,–,862 MHz,832 MHz,–,862 MHz,HD,Yes,Yes
+26,26,814 MHz,–,849 MHz,814 MHz,–,849 MHz,HD,Yes,Yes
+28,28,703 MHz,–,748 MHz,703 MHz,–,748 MHz,HD,Yes,Yes
+31,31,452.5 MHz,–,457.5 MHz,452.5 MHz,–,457.5 MHz,HD,Yes,Yes
+41,41,2496 MHz,–,2690 MHz,2496 MHz,–,2690 MHz,HD,Yes,
+68,68,698 MHz,–,728 MHz,698 MHz,–,728 MHz,HD,Yes,Yes
+72,72,451 MHz,–,456 MHz,451 MHz,–,456 MHz,HD,Yes,Yes

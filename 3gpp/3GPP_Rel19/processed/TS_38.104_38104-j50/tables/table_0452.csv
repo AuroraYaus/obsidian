@@ -1,0 +1,3 @@
+Number of TX antennas,Number of demodulation branches,Cyclic prefix,Propagation conditions and correlation matrix (Annex G),Target BLER,FRC(Annex A),Additional DM-RS position,SNR(dB)
+1,2,Normal,TDLA30-300,1% (Note1),G-FR2-A3A-7,Pos1,-11.2
+"NOTE 1:BLER is defined as residual BLER, i.e. ratio of incorrectly received transport blocks/sent transport blocks, independently of the number of HARQ transmission(s) for each transport block",,,,,,,

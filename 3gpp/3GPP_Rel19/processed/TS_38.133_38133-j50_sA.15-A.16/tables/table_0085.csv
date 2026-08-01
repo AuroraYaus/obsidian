@@ -1,0 +1,50 @@
+Parameter,Unit,Test configuration,Cell 1,
+,,,T1,T2
+TDD configuration,,"1, 4, 7, 8",N/A,
+,,"2, 5",TDDConf.1.1,
+,,"3, 6",TDDConf.2.1,
+PDSCH RMC configuration,,"1, 4, 7, 8",SR.1.1 FDD,
+,,"2, 5",SR.1.1 TDD,
+,,"3, 6",SR.2.1 TDD,
+RMSI CORESET RMC,,"1, 4, 7, 8",CR.1.1 FDD,
+configuration,,"2, 5",CR.1.1 TDD,
+,,"3, 6",CR.2.1 TDD,
+Dedicated CORESET RMC,,"1, 4, 7, 8",CCR.1.1 FDD,
+configuration,,"2, 5",CCR.1.1 TDD,
+,,"3, 6",CCR.2.1 TDD,
+SSB configuration,,"1, 4, 7, 8",SSB.1 FR1,
+,,"2, 5",SSB.1 FR1,
+,,"3, 6",SSB.1 RedCap FR1,
+SMTC configuration,,"1, 4, 7, 8",SMTC.2,
+,,"2, 5",SMTC.1,
+,,"3, 6",SMTC.1,
+OCNG Pattern,,"1, 2, 3, 4, 5, 6, 7, 8",OP.1,
+Initial DL BWP configuration,,"1, 2, 3, 4, 5, 6, 7, 8",DLBWP.0.1,
+Initial UL BWP configuration,,"1, 2, 3, 4, 5, 6, 7, 8",ULBWP.0.1,
+RLM-RS,,"1, 2, 3, 4, 5, 6, 7, 8",SSB,
+Qrxlevmin,dBm/SCS,"1, 2, 4, 5",-140,
+,,"3, 6",-137,
+,dBm/SCS,"1, 4, 7, 8",-98,
+,,"2, 5",-98,
+,,"3, 6",-95,
+,dBm/15 kHz,"1, 2, 3, 4, 5, 6, 7, 8",-98,
+SS-RSRP,dBm/SCS,"1, 4, 7, 8",-102,-86
+,,"2, 5",-102,-86
+,,"3, 6",-99,-83
+,dB,"1, 4, 7, 8",-4,12
+,,"2, 5",,
+,,"3, 6",,
+,dB,"1, 4, 7, 8",-4,12
+,,"2, 5",,
+,,"3, 6",,
+Io,dBm/9.36 MHz,"1, 4, 7, 8",-68.60,-57.78
+,dBm/9.36 MHz,"2, 5",-68.60,-57.78
+,dBm/18.36 MHz,"3, 6",-65.67,-54.85
+Tre-selection,s,"1, 2, 3, 4, 5, 6, 7, 8",0,
+SnonintrasearchP,dB,"1, 2, 3, 4, 5, 6, 7, 8",Not sent,
+"Threshx, highP",dB,"1, 2, 3, 4, 5, 6, 7, 8",48,
+"Threshserving, lowP",dB,"1, 2, 3, 4, 5, 6, 7, 8",44,
+"Threshx, lowP (Note 2)",dB,"1, 2, 3, 4, 5, 6, 7, 8",50,
+Propagation Condition,,"1, 2, 3, 4, 5, 6, 7, 8",AWGN,
+Antenna Configuration,,,1x1,
+"NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:This refers to the value of  Threshx, high  which is included in NR system information, and is a threshold for the E-UTRA target cell",,,,

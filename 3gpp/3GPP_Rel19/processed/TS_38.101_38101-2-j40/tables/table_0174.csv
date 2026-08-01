@@ -1,0 +1,4 @@
+Frequency Range,Maximum Level,Measurement bandwidth
+30 MHz  f < 1000 MHz,-36 dBm,100 kHz
+1 GHz  f < 12.75 GHz,-30 dBm,1 MHz
+12.75 GHz ≤ f ≤ 2nd harmonic of the upper frequency edge of the UL operating band in GHz,-13 dBm,1 MHz

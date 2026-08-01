@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TSSB_measurement_period_intra</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>max(200 ms, 5 x max(80 ms, SMTC period ))Note 1 x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320 ms</td>
+    <td>max(200 ms, ceil(1.5x 5) x max(80 ms, SMTC period,DRX cycle)) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320 ms</td>
+    <td>5 x DRX cycle x CSSFintra</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identifiedNOTE 2:Requirements only apply when measurement gap is not configured, or measurement gap is fully non-overlapped with SMTC on any carrier on which UE indicates ‘no-gap-with-interruption’ via NeedForInterruptionInfoNR-r18.</td>
+  </tr>
+</table>

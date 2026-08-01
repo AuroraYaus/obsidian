@@ -1,0 +1,23 @@
+Parameter,,Value
+Transform precoding,,Disabled
+Example TDD UL-DL pattern (Note 1),,"60 kHz and 120kHz SCS:DDSUU or DSUUU, S=10D:2G:2U"
+HARQ,Maximum number of HARQ transmissions,4
+,RV sequence,"0, 3, 0,3 (Note 2)"
+DM-RS,DM-RS configuration type,1
+,DM-RS duration,single-symbol DM-RS
+,Additional DM-RS symbols,pos1
+,Number of DM-RS CDM group(s) without data,2
+,Ratio of PUSCH EPRE to DM-RS EPRE,-3 dB
+,DM-RS port(s),0
+,DM-RS sequence generation,"NID=0, nSCID =0"
+Time domain,PUSCH mapping type,B
+resource,Start symbol index,0
+,Allocation length,14
+,PUSCH aggregation factor,n2
+pusch-TimeDomainWindowLength,,2 slots
+Frequency domain,RB assignment,Full applicable test bandwidth
+resource,Frequency hopping,Disabled
+Code block group based PUSCH transmission,,Disabled
+PT-RS,Frequency density (KPT-RS),Disabled
+configuration,Time density (LPT-RS),Disabled
+"NOTE 1:The same TDD requirements are applicable to different UL-DL patterns with more than one consecutive UL slots when both pusch-TimeDomainWindowLength and PUSCH aggregation factor are configured as 2 slots. The UL (re)transmission of PUSCH is only scheduled for the actual TDW including 2 consecutive UL slots.NOTE 2:The effective RV sequence is {0,2,3,1} with slot aggregation.",,

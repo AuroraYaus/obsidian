@@ -1,0 +1,5 @@
+Parameters,,,
+Channel Bandwidth[MHz],Carrier centre frequency (FC)[MHz],Uplink resource allocation,A-MPR[dB]
+20,5179.8 ≤ FC ≤ 5320.25499.8 ≤ FC ≤ 5700.2,L = 10 (RIV = 19),2
+,,Any other RIV,1
+NOTE 1:The carrier centre frequencies and corresponding EARFCN allowed for operation in Band 46 are specified in [12]. The uplink resource allocation is defined in Clause 8.1.4 of [6].,,,

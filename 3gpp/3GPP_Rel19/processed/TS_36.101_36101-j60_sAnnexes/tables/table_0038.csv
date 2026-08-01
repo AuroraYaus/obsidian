@@ -1,0 +1,15 @@
+Parameter,Unit,Value,,
+Channel bandwidth,MHz,1.4 – 20,1.4 – 20,1.4 – 20
+Allocated resource blocks,,1,1,1
+Number of subcarriers,,2 out of 3,3,6
+DFT-OFDM Symbols per Sub-Frame,,12,12,12
+Modulation,,π/2 BPSK,QPSK,QPSK
+Target Coding rate,,1/3,1/3,1/3
+Payload size,Bits,32,72,72
+Transport block CRC,Bits,24,24,24
+Number of code blocks,,1,1,1
+Total number of bits per resource unit,Bits,192,288,288
+Total symbols per resource unit,,192,144,144
+Tx time,ms,8,4,2
+UE UL Category,,M1/M2,M1/M2,M1/M2
+"NOTE 1:  If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)",,,,

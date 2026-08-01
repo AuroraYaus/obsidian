@@ -1,0 +1,18 @@
+Parameter,Unit,Test configuration,Value,Comment
+NR RF Channel Number,,Config 1,1: Cell 1 and Cell 32: Cell 2,Two TDD carrier frequencies are used for the NR cells.
+Active cell,,Config 1,NR cell 1 (PCell),Cell 1 is the PCell and the DL-AoD reference cell in the positioning assistance data.
+Neighbour cell,,Config 1,"NR cell 2, NR cell 3",Cell 2 is an inter-frequency cell neighbor cellCell 3 is a neighbour cell in the positioning assistance data.
+Gap Pattern Id,,Config 1,0 for MeasGapId #01 for MeasGapId #1,As specified in clause 9.1.2-1.
+Measurement gap offset,,Config 1,7 for MeasGapId #0 11 for MeasGapId #1,
+A3-Offset,dB,Config 1,-6,
+Hysteresis,dB,Config 1,0,
+CP length,,Config 1,Normal,
+TimeToTrigger,s,Config 1,0,
+Filter coefficient,,Config 1,0,L3 filtering is not used
+DRX,,Config 1,OFF,DRX is not used
+Time offset between cell 1 and neighbour cell 2,,Config 1,3s,Synchronous cells.
+Time offset between cell 1 and neighbour cell 3,,Config 1,3s,Synchronous cells.
+Expected RSTD between cell 1 and cell 3,s,Config 1,3,
+Expected RSTD uncertainty between cell 1 and cell 3,s,Config 1,5,
+T1,s,Config 1,5,
+T2,s,Config 1,11,

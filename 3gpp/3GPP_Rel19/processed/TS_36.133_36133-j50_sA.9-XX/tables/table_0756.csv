@@ -1,0 +1,16 @@
+Parameter,,Unit,Value,Comment
+E-UTRA RF Channel Number,,,"1, 2",
+Active cell,,,Cell 1,
+Neighbour cell,,,Cell 2,Cell to be identified.
+CP length,,,Normal,
+DRX,,,OFF,
+A3,Offset,dB,-6,
+,Hysteresis,dB,0,
+,Time To Trigger,S,0,
+Filter coefficient,,,0,L3 filtering is not used
+Gap pattern ID,,,0,
+Rmax,,,8,As defined in mPDCCH-NumRepetition in [3]
+G,,,10,As defined in mPDCCH-startSF-UESS in [3]
+X,,,scheme10,As defined in measGapSharingScheme in [3]
+T1,,S,5,
+T2,,S,5,

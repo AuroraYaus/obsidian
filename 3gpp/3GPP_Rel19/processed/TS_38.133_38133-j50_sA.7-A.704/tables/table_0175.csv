@@ -1,0 +1,25 @@
+Parameter,,Unit,Value,,,,Comment
+,,,Test 1A,Test 1B,Test 2A,Test 2B,
+Initial conditions,Active cell,,Cell 1,,,,
+,Neighbouring cell,,Cell 2,,,,Cell 2 is the candidate cell
+Final condition,Active cell,,Cell 2,,,,
+A3-Offset,,dB,-15,,,,
+Hysteresis,,dB,0,,,,
+Time To Trigger,,s,0,,,,
+Filter coefficient,,,0,,,,L3 filtering is not used
+DRX,,,OFF,,,,DRX is not used
+Access Barring Information,,-,Not Sent,,,,No additional delays in random access procedure.
+Time offset between cells,,,0.3 s,,,,RTD between cells is less than CP
+deriveSSB-IndexFromCell,,,Enabled,,,,
+LTM-CSI-ReportConfig,L1-RSRP reporting period,slot,320,,,,Periodic L1-RSRP reporting configured
+,nrOfReportedCells,,n1,,,,Report candidate cell’s (Cell 2) L1-RSRP measurement results.
+,nrOfReportedRS-PerCell,,n1,,,,
+,spCellInclusion,,N/A,,,,
+ltm-DL-OrJointTCI-StateToAddModList,CandidateTCI-State#1,,DlorJoint TCI.State.0,DlorJoint TCI.State.2,DlorJoint TCI.State.1,DlorJoint TCI.State.3,"As specified in clause A.3.16B.In test 1A and 1B, CandidateTCI-State#1 and/or CandidateTCI-UL-State#1 are configured for early TCI state activation.CandidateTCI-State#2 and/or CandidateTCI-UL-State#1 are configured for TCI state indication in cell switch command.In test 2A and 2B, CandidateTCI-State#1 and/or CandidateTCI-UL-State#1 areconfigured for TCI state indication in cell switch command."
+,CandidateTCI-State#2,,DlorJoint TCI.State.1,DlorJoint TCI.State.3,N/A,N/A,
+ltm-UL-TCI-StatesToAddModList,CandidateTCI-UL-State#1,,N/A,UL TCI.State.0,N/A,UL TCI.State.0,
+ltm-ConfigComplete,,,True,,,,Candidate cell’s configuration is complete configuration
+T1,,s,<3,,,,
+T2,,s,0.2,,,,
+T3,,s,0.1,,,,
+T4,,s,0.2,,,,

@@ -1,0 +1,8 @@
+"Min(TRS BW, SRS BW) (RB)",,,Margin (Tc Note 1)
+SCS = 15 kHz,SCS = 30 kHz,SCS = 60 kHz,
+≥ 24,N/A,N/A,160
+≥ 52,≥ 24,N/A,80
+≥ 104,≥ 48,≥ 24,56
+N/A,≥ 132,≥ 64,24
+N/A,N/A,≥ 132,24
+"NOTE 1:Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2: If SRS and TRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies.",,,

@@ -1,0 +1,59 @@
+<table>
+  <tr>
+    <td>Scenario</td>
+    <td>CSSFoutside_gap,i for FR1 PSCC</td>
+    <td>CSSFoutside_gap,i for FR1 SCC</td>
+    <td>CSSFoutside_gap,i for FR2 PSCC</td>
+    <td>CSSFoutside_gap,i for FR2 SCC where neighbour cell measurement is required Note 2</td>
+    <td>CSSFoutside_gap,i  for FR2 SCC where neighbour cell measurement is not required</td>
+    <td>CSSFoutside_gap,i for inter-frequency MO with no measurement gp</td>
+  </tr>
+  <tr>
+    <td>EN-DC with FR1 only CA</td>
+    <td>1+NPSCC_CSIRS+NPSCC_CCA_RSSI/CO</td>
+    <td>NSCC_SSB +Y+2x NSCC_CSIRS+ NSCC_CCA_RSSI/CO- NSCC_OD-SSB</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>NSCC_SSB +Y+2x NSCC_CSIRS+ NSCC_CCA_RSSI/CO</td>
+  </tr>
+  <tr>
+    <td>EN-DC withFR2 only intra band CA</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>1+NPSCC_CSIRS</td>
+    <td>N/A</td>
+    <td>NSCC_SSB +Y+2x NSCC_CSIRS- NSCC_OD-SSB</td>
+    <td>NSCC_SSB +Y+2x NSCC_CSIRS</td>
+  </tr>
+  <tr>
+    <td>EN-DC withFR2 only inter band CA</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>1+NPSCC_CSIRS</td>
+    <td>2x(1+ NSCC_CSIRS_FR2_NCM) Note 3,5</td>
+    <td>2×( NSCC_SSB +Y+2x NSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM) - NSCC_OD-SSB</td>
+    <td>2×( NSCC_SSB +Y+2x NSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM)</td>
+  </tr>
+  <tr>
+    <td>EN-DC withFR1 +FR2 CA (FR1 PSCell) Note 1</td>
+    <td>1+NPSCC_CSIRS</td>
+    <td>2×( NSCC_SSB +Y+2xNSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM) - NSCC_OD-SSB</td>
+    <td>N/A</td>
+    <td>2x(1+NSCC_CSIRS_FR2_NCM) Note 3</td>
+    <td>2×( NSCC_SSB +Y+2x NSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM) - NSCC_OD-SSB</td>
+    <td>2×( NSCC_SSB +Y+2x NSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM)</td>
+  </tr>
+  <tr>
+    <td>EN-DC withFR1 +FR2 CA (FR2 PSCell) Note 1</td>
+    <td>N/A</td>
+    <td>NSCC_SSB +Y+2x NSCC_CSIRS- NSCC_OD-SSB</td>
+    <td>1+NPSCC_CSIRS</td>
+    <td>N/A</td>
+    <td>NSCC_SSB+Y+2x NSCC_CSIRS- NSCC_OD-SSB</td>
+    <td>NSCC_SSB+Y+2x NSCC_CSIRS</td>
+  </tr>
+  <tr>
+    <td colspan="7">NOTE 1:Only one NR FR1 operating band and one NR FR2 operating band are included for FR1+FR2 inter-band EN-DC.NOTE 2:Selection of FR2 SCC where neighbour cell measurement is required follows clause 9.2.3.2. NOTE 3:CSSFoutside_gap,i =1 if  only one SCell is configured and no inter-frequency MO without gap and only SSB based L3 measurement is configured on SCC; CSSFoutside_gap,i =2 if only one SCell is configured and no inter-frequency MO without gap and either both SSB and CSI-RS based L3 configured or only CSI-RS based L3 measurement is configured on SCC.NOTE 4:Y is the number of configured inter-frequency MOs without MG that are being measured outside of MG; otherwise, it is 0.NOTE 5:Only two NR FR2 operating band are included for EN-DC with FR2 only inter-band CA NOTE 6:NPSCC_CSIRS=1 if PSCC is with either both SSB and CSI-RS based L3 configured or only CSI-RS based L3 measurement configured; otherwise, NPSCC_CSIRS =0.NOTE 7:NSCC_CSIRS=Number of configured SCell(s) with either both SSB and CSI-RS based L3 measurement configured or only CSI-RS based L3 measurement configuredNOTE 8:NSCC_CSIRS_FR2_NCM=1 if FR2 SCC, where neighbour cell measurement is required, is with either both SSB and CSI-RS configured or only CSI-RS measurement configured; otherwise, NSCC_CSIRS_FR2_NCM=0.NOTE 9:NSCC_SSB=Number of configured SCell(s) with only SSB based L3 measurement configured, which is measured without MG. For UE supporting multiCarrierSingleReportWithoutGap-r19 for intra-frequency measurements without MG, NSCC_SSB is the number of SCCs to be measured following the principles specified in clause 9.2.3.1 and 9.2.3.2.NOTE 10:NPSCC_CCA_RSSI/CO= 1 if PSCC is configured with RSSI/CO measurements without MG when RMTC and SMTC are overlapping; NSCC_CCA_RSSI/CO = Number of MOs for SCell(s) configured with RSSI/CO measurements without MG when RMTC and SMTC are overlapping.NOTE 11If a measurement object configured by PSCell and an NR inter-RAT measurement object configured by E-UTRAN PCell are on the same serving carrier, they shall be counted as one intra-frequency measurement object, provided that they meet the measurement object merging conditions [in clause 9.1.3.2], otherwise they are counted separately as two measurement objects.NOTE 12:NSCC_OD-SSB=Number of configured OD-SSB SCell(s) when only OD-SSB is configured in the SCell and without activated OD-SSB transmission.</td>
+  </tr>
+</table>

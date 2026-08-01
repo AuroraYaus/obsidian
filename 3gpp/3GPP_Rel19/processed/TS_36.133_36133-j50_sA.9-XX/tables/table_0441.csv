@@ -1,0 +1,27 @@
+,,nCell 1,,,nCell 2,,
+,,T0,T1,T2,T0,T1,T2
+BWchannel,kHz,180,,,180,,
+NPBCH_RA,dB,0,,,0,,
+NPBCH_RB,dB,,,,,,
+NPSS_RA,dB,,,,,,
+NSSS_RA,dB,,,,,,
+NPDCCH_RA,dB,,,,,,
+NPDCCH_RB,dB,,,,,,
+NPDSCH_RA,dB,,,,,,
+NPDSCH_RB,dB,,,,,,
+NOCNG_RANote 1,dB,,,,,,
+NOCNG_RBNote 1,dB,,,,,,
+Qrxlevmin,dBm,-156,,,-156,,
+Pcompensation,dB,0,,,0,,
+Qhysts,dB,0,,,0,,
+"Qoffsets, n",dB,0,,,0,,
+Cell_selection_and_reselection_quality_measurement,,NRSRP,,,NRSRP,,
+,dBm/15 kHz,-98,,,,,
+,dB,10,-12,-12,-infinity,-infinity,-2.7
+Note2,dB,10,-12,-12,-infinity,-infinity,-2.7
+NRSRP Note2,dBm/15 kHz,-88,-110,-110,-infinity,-infinity,-100.7
+Treselection,s,0,,,0,,
+Propagation Condition,,AWGN,,,AWGN,,
+Antenna Configuration,,1x1,,,1x1,,
+Timing offset to nCell 1,ms,0,,,,,
+Note 1:NOCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Es/Iot and NRSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,,

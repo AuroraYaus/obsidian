@@ -1,0 +1,13 @@
+Parameter,NR operating band groups Note1,Minimum SSB_RP,,SSB Ês/Iot
+,,dBm / SCSSSB,,dB
+,,SCSSSB = 15 kHz,SCSSSB = 30 kHz,
+Conditions,"NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A",-125,-122,-4
+,"NR_FDD_FR1_B, NR_TDD_FR1_B",-124.5,-121.5,
+,"NR_FDD_FR1_C, NR_TDD_FR1_C",-124,-121,
+,"NR_FDD_FR1_D, NR_TDD_FR1_D",-124.5,-120.5,
+,"NR_FDD_FR1_E, NR_TDD_FR1_E",-123,-120,
+,NR_FDD_FR1_F,-122.5,-119.5,
+,"NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G",-122,-119,
+,NR_FDD_FR1_H,-121.5,-118.5,
+,NR_FDD_ FR1_N,-118.5,-115.5,
+NOTE 1:NR operating band groups are defined in clause 3.5.2.,,,,

@@ -1,0 +1,9 @@
+Case,Measurement filter centre frequency,"Condition on BS maximum aggregate TRP / 10 MHz, PTRP_10MHz(NOTE)","Maximum levelPTRP,N,MAX",Measurement bandwidth
+A: for DTT frequencies where,"N*8 + 306 MHz,21 ≤ N ≤ 60",PTRP_10MHz  59 dBm,0 dBm,8 MHz
+broadcasting is protected,"N*8 + 306 MHz,21 ≤ N ≤ 60",36  PTRP_10MHz < 59 dBm,PTRP_10MHz – 59 dBm,8 MHz
+,"N*8 + 306 MHz,21 ≤ N ≤ 60",PTRP_10MHz < 36 dBm,-23 dBm,8 MHz
+B: for DTT frequencies where,"N*8 + 306 MHz,21 ≤ N ≤ 60",PTRP_10MHz  59 dBm,10 dBm,8 MHz
+broadcasting is subject to an,"N*8 + 306 MHz,21 ≤ N ≤ 60",36  PTRP_10MHz < 59 dBm,PTRP_10MHz – 49 dBm,8 MHz
+intermediate level of protection,"N*8 + 306 MHz,21 ≤ N ≤ 60",PTRP_10MHz < 36 dBm,-13 dBm,8 MHz
+C: for DTT frequencies where broadcasting is not protected,"N*8 + 306 MHz,21 ≤ N ≤ 60",N/A,22 dBm,8 MHz
+"NOTE:PTRP_10MHz (dBm) is defined by PTRP_10MHz = P10MHz + Gant + 9dB, where Gant is 17 dBi.",,,,

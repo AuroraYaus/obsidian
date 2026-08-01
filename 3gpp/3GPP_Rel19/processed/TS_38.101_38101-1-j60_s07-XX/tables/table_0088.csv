@@ -1,0 +1,5 @@
+Rx Parameter,Units,Channel bandwidth,,,,
+,,5 MHz3,10 MHz,20 MHz,30 MHz,40 MHz
+Power in Transmission Bandwidth Configuration,dBm,-251,-251,-251,-231,-221
+,,-272,-272,-272,-252,-242
+NOTE 1:Reference measurement channel is A.7.3 for 64 QAM.NOTE 2:Reference measurement channel is A.7.4 for 256 QAM.NOTE 3:The CBW is only applicable for PS UE in n14.,,,,,,

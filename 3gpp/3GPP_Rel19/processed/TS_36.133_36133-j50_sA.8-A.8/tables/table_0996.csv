@@ -1,0 +1,12 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,1,Only one TDD carrier frequency is used.
+Channel Bandwidth (BWchannel),MHz,5,
+Active cell,,Cell 1,E-UTRA TDD Cell1 on RF channel number 1
+Uplink/Downlink Configuration,,Config 0,
+Special Subframe Configuration,,6,
+CP length of Cell 1,,Normal,
+Layer 3 filtering,,Disabled,L3 filtering is not used
+drx-Configuration,,DRX_P1,As specified in Table A.3.12.2-1
+T1,s,3,
+T2,s,5.24,
+T3,s,5.24,

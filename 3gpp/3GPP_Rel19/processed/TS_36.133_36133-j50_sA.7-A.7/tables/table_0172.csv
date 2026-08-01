@@ -1,0 +1,6 @@
+Parameter,Unit,Test 4,,
+,,T1,T2,T3
+BWchannel,MHz,5,,
+OCNG Pattern defined in A.3.2.1.16 (FDD),,OP.16 FDD,,
+"SNR Note 1,2",dB,-2.3,-5.7,-12.2
+"Note 1:See Table A.7.3.1.1-2 for other cell specific test parameters. Note 2:The SNR values are specifed for testing a UE which supports 2RX on at least one band. For testing of a UE which supports 4RX on all bands, the SNR during T3 is modified as specified in section A.3.8.1.",,,,

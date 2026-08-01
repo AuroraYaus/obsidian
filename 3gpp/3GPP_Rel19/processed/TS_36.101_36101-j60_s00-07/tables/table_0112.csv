@@ -1,0 +1,7 @@
+Parameters,,,
+Channel bandwidth(MHz),Carrier centre frequency (FC)(MHz),Uplink resource allocation,A-MPR(dB)
+20,3580 ≤ FC ≤ 3670,L = 10 (RIV = 19),1
+,,Any other RIV,2
+,3560 ≤ FC < 35803670 < FC ≤ 3690,L = 10 (RIV = 19),4
+,,Any other RIV,4
+NOTE 1:The uplink resource allocation is defined in Clause 8.1.4 of TS 36.213 [6].,,,

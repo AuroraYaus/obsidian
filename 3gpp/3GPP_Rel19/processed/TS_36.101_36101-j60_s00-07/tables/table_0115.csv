@@ -1,0 +1,6 @@
+Channel bandwidth [MHz],LCRB,Allocation positions,Modulation / A-MPR [dB],,,
+,,,QPSK,16-QAM,64-QAM,256-QAM
+1.4,all,all,0,0,0,0
+3,= 15,RBstart = 0,1,0.5,0,0
+5,15,RBstart  2orRBstart + LCRB  23,1,0.5,0,0
+10,18,RBstart  2orRBstart + LCRB  48,1,0.5,0,0

@@ -1,0 +1,19 @@
+Parameter,,,Unit,Test 1
+Communication resource pool configuration,,,,As specified in Table A.9-3(Configuration #3-V2X)
+at antenna port,,,dBm/15kHz,-98
+Active cell(s),,,,Cell 1 (Serving cell)
+Cell 1,Cyclic prefix,,,Normal
+,Cell ID,,,0
+,Downlink power allocation,,dB,0
+,,,dB,0 (Note 1)
+,,,dB,0
+,OCNG Pattern (Note 2),,,OP.1 FDD
+,Propagation channel,,,AWGN
+,Antenna configuration,,,1x2 Low
+,RSRP,,dBm/15kHz,-92
+Sidelink UE 1,Sidelink Transmissions,,,PSCCH+PSSCH
+,Timing offset (Note 3),,,CP/2-24Ts
+,Frequency offset (Note 4),,Hz,+1300
+,Synchronization source,,,Cell 1
+,Antenna configuration,,,1x2 Low
+Note 1:.Note 2:OCNG is used to fully allocate the available resource blocks to virtual UEs.Note 3:Time offset of Sidelink UE receive signal with respect to Cell1 reference timing.Note 4:Frequency offset of Sidelink UE with respect to Cell 1 reference frequency.,,,,

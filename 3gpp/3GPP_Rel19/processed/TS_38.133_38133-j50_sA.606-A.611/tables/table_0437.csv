@@ -1,0 +1,46 @@
+Parameter,Config,Unit,Value
+SSB ARFCN,1~2,,freq1
+Duplex mode,1~2,,TDD
+TDD configuration,1,,TDDConf.1.1
+,2,,TDDConf.2.1
+BWchannel,1,MHz,"10: NPRB,c = 52"
+,2,,"40: NPRB,c = 106"
+PDSCH Reference measurement channel,1,,SR.1.1 TDD
+,2,,SR.2.1 TDD
+RMSI CORESET Reference Channel,1,,CR.1.1 TDD
+,2,,CR.2.1 TDD
+Dedicated CORESET Reference Channel,1,,CCR.1.1 TDD
+,2,,CCR.2.1 TDD
+SSB configuration,1,,SSB.1 FR1
+,2,,SSB.2 FR1
+OCNG Patterns Note6,1~2,,OP.1
+TRS configuration,1,,TRS.1.1 TDD
+,2,,TRS.1.2 TDD
+,,,
+Initial BWP Configuration,1~2,,DLBWP.0.1ULBWP.0.1
+Dedicated BWP configuration,1~2,,DLBWP.1.1ULBWP.1.1
+SMTC configuration,1~2,,SMTC.1
+Time offset between DL from serving cell and OCNG from test system,1~2,s,17.67
+EPRE ratio of PSS to SSS,1~2,dB,0
+EPRE ratio of PBCH DMRS to SSS,,,
+EPRE ratio of PBCH to PBCH DMRS,,,
+EPRE ratio of PDCCH DMRS to SSS,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,
+EPRE ratio of PDSCH DMRS to SSS,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,,
+EPRE ratio of OCNG DMRS to SSSNote 1,,,
+EPRE ratio of OCNG to OCNG DMRS Note 1,,,
+on CLI-RSSI measurement resource Note2,1,dBm/15 kHz,-106
+,2,,-106
+on CLI-RSSI measurement resource Note2,1,dBm/ BWP SCS,-106
+,2,,-103
+on CLI-RSSI measurement resource,1~2,dB,-Infinity
+RSRP on CLI-RSSI measurement resource Note3,1~2,dBm/ BWP SCS,-Infinity
+Io on CLI-RSSI measurement resource Note3,1,dBm/9.36 MHz,-78.05
+,2,dBm/38.16 MHz,-71.96
+Io on CLI-RSSI measurement resource Note3,1,dBm/1.08MHz,-87.43
+,2,,-87.44
+on CLI-RSSI measurement resource,1~2,dB,-Infinity
+Propagation condition,1~2,,AWGN
+Antenna configuration,1~2,,1x2
+NOTE 1:OCNG shall be used such that a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4:RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5:The test configuration excludes support for band n51 and it is not required to run this test on band n51 in this release of the specificationNOTE 6:OCNG is not transmitted in the CLI-RSSI measurement resources.,,,

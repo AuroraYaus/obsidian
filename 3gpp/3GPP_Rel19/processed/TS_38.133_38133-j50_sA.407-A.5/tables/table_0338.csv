@@ -1,0 +1,12 @@
+Parameter,,Unit,Value,Comment
+RF Channel Number,,,"1, 2",Two radio channels are used for this test. One for E-UTRA cell and second for NR Cell
+Initial,Active PCell,,Cell 1,PCell on RF channel number 1.
+Condition,Deactivated cell,,Cell2,SCell on RF channel number 2.
+Final,Active PCell,,Cell 1,PCell on RF channel number 1.
+Condition,Deactivated cell,,Cell2,PSCell deactivated on RF channel number 2.
+DRX,,,OFF,Continuous monitoring of primary cell
+Scheduling request resource priodicity,,,20 ms,"At the starting of period T3, UE sends a SR on PUCCH for PSCell"
+T1,,s,1,During this time the PCell shall be known and Cell 2 shall be unknown.
+T2,,s,1,During this time the UE adds the PSCell.
+T3,,s,1,During this time the UE sends CSI reports for PSCell.
+T4,,s,1,During this time the UE releases the PSCell.

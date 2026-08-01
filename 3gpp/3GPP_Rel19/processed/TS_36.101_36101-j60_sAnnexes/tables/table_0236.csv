@@ -1,0 +1,31 @@
+Parameter,Unit,Value,,,,,,,
+Reference channel,,R.68 FDD,R.68-1 FDD,R.68-2 FDD,R.68-3 FDD,R.68-4 FDD,R.68-5 FDD,R.68-6 FDD,R.68-7 FDD
+Channel bandwidth,MHz,20,15,10,5,10,15,20,5
+Allocated resource blocks (Note 4),,Note 5,Note 6,Note 7,Note 8,Note 7,Note 6,Note 5,Note 8
+Allocated subframes per Radio Frame,,10,10,10,10,10,10,10,10
+Modulation,,256QAM,256QAM,256QAM,256QAM,256QAM,256QAM,256QAM,256QAM
+Coding Rate,,,,,,,,,
+"For Sub-Frames 3,4,8,9",,0.85,0.88,0.85,0.85,0.78,0.79,0.78,0.85
+"For Sub-Frames 1,2,6,7",,0.74,0.74,0.74,0.77,0.78,0.79,0.78,0.77
+For Sub-Frame 5,,0.75,0.77,0.77,0.79,0.82,0.82,0.786,0.79
+For Sub-Frame 0,,0.76,0.77,0.78,0.84,0.83,0.82,0.80,0.84
+Information Bit Payload (Note 4),,,,,,,,,
+"For Sub-Frames 3,4,8,9",Bits,97896,75376,48936,24496,84760,128496,169544,42368
+"For Sub-Frames 1,2,6,7",,84760,63776,42368,21384,84760,128496,169544,42368
+For Sub-Frame 5,Bits,81176,61664,40576,19848,81176,124464,161760,39232
+For Sub-Frame 0,Bits,84760,63776,42368,21384,84760,128496,169544,39232
+Number of Code Blocks (Notes 3 and 4),,,,,,,,,
+"For Sub-Frames 3,4,8,9",Bits,16,13,8,4,14,21,28,7
+"For Sub-Frames 1,2,6,7",,14,11,7,4,14,21,28,7
+For Sub-Frame 5,Bits,14,11,7,4,14,21,27,7
+For Sub-Frame 0,Bits,14,11,7,4,14,21,28,7
+Binary Channel Bits (Note 4),,,,,,,,,
+"For Sub-Frames 3,4,8,9",Bits,115200,86400,57600,28800,108800,163200,217600,54400
+"For Sub-Frames 1,2,6,7",,115200,86400,57600,28800,108800,163200,217600,54400
+For Sub-Frame 5,Bits,109440,80640,52992,25344,99968,152192,206592,47744
+For Sub-Frame 0,Bits,111936,83136,54336,25536,102656,157056,211456,48256
+Number of layers,,2,2,2,2,4,4,4,4
+Max. Throughput averaged over 1 frame (Note 4),Mbps,89.656,68.205,44.816,22.475,84.4016,128.093,168.766,41.741
+UE Categories,,11-12,11-12,11-12,11-12,11-12,11-12,11-12,11-12
+UE DL Categories,,≥ 11,≥ 11,≥ 11,≥ 11,13-14,13-14,13-14,13-14
+"Note 1:1 symbol allocated to PDCCH for all tests.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4].Note 3:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).Note 4: Given per component carrier per codeword.Note 5:Resource blocks nPRB = 4..99 are allocated for the user data in sub-frame 5, and resource blocks nPRB = 0..99 in sub-frames 0,1,2,3,4,6,7,8,9.Note 6:Resource blocks nPRB = 4..74 are allocated for the user data in sub-frame 5, and resource blocks nPRB = 0..74 in sub-frames 0,1,2,3,4,6,7,8,9.Note 7:Resource blocks nPRB = 3..49 are allocated for the user data in sub-frame 5, and resource blocks nPRB = 0..49 in sub-frames 0,1,2,3,4,6,7,8,9.Note 8:Resource blocks nPRB = 2..24 are allocated for the user data in sub-frame 5, and resource blocks nPRB = 0..24 in sub-frames 0,1,2,3,4,6,7,8,9.",,,,,,,,,

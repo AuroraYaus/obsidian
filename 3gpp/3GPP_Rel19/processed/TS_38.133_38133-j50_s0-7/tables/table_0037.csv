@@ -1,0 +1,6 @@
+eDRX_IDLE cycle length [s],"Tdetect,NR_Inter_Relax [s] (number of eDRX IDLE cycles)","Tmeasure,NR_Inter_Relax [s] (number of eDRX IDLE cycles)","Tevaluate,NR_Inter_Relax [s] (number of eDRX IDLE cycles)"
+,,,
+2.56,58.88 x K1 (23 x K1),2.56 x K1 (1 x K1),7.68 x K1 (3 x K1)
+5.12,117.76 x K1 (23 x K1),5.12 x K1 (1 x K1),10.24 x K1 (2 x K1)
+10.24,235.52 x K1 (23 x K1),10.24 x K1 (1 x K1),20.48 x K1 (2 x K1)
+NOTE 1:Void.NOTE 2:K1 = 3 is the measurement relaxation factor applicable for UE fulfilling the cellEdgeEvaluation [2] criterion.,,,

@@ -1,0 +1,4 @@
+Test Number,Reference Channel,OCNG Pattern,,,Propagation Conditions (Note 1),,,Antenna Configuration and Correlation Matrix (Note 2),Reference Value,
+,,Cell 1,Cell 2,Cell 3,Cell 1,Cell 2,Cell 3,,Pm-an (%),SNR (dB) (Note 3)
+1,R.19,OP.1 TDD,OP.1 TDD,OP.1 TDD,EPA5,EVA5,EVA5,2x2 Low,0.1,5.7
+"Note 1:The propagation conditions for Cell 1, Cell 2 and Cell 3 are statistically independent.Note 2:The correlation matrix and antenna configuration apply for Cell 1, Cell 2 and Cell 3.Note 3:SNR corresponds to of Cell 1.",,,,,,,,,,

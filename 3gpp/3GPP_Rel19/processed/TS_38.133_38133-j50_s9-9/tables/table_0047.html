@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TPSS/SSS_sync_intra</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>Ceil(5 x Kp) x measCycleSCell x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320 ms</td>
+    <td>Ceil(5 x Kp) x max(measCycleSCell, 1.5xDRX cycle) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt; 320 ms</td>
+    <td>Ceil(5 x Kp) x max(measCycleSCell, DRX cycle) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:The requirements also apply to CC with deactivated SCell in SCG.NOTE 2:The requirements also apply to CC with deactivated SDL SCell when UE supports featureSetCombinationLowBandSwitching-r19 and configured with LowBandCA-Switching-r19.</td>
+  </tr>
+</table>

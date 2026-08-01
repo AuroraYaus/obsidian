@@ -1,0 +1,21 @@
+Parameter,Unit,Value
+Special subframe configuration (Note 1),,4
+Cyclic prefix,,Normal
+Cell ID,,0
+Inter-TTI Distance,,1
+Maximum number of HARQ transmission,,4
+Redundancy version coding sequence,,"{0,0,1,2} for 64QAM"
+Number of OFDM symbols for PDCCH per component carrier,OFDM symbols,1
+Cross carrier scheduling,,Not configured
+Number of EPDCCH sets,,1
+EPDCCH transmission type,,Localized
+Number of PRB per EPDCCH set and EPDCCH PRB pair allocation,,"2 PRB pairs10MHz BW: Resource blocks nPRB = 48, 4915MHz BW: Resource blocks nPRB = 70, 7120MHz BW: Resource blocks nPRB = 98, 99"
+EPDCCH Starting Symbol,,Derived from CFI (i.e. default behaviour)
+ECCE Aggregation Level,,2 ECCEs
+Number of EREGs per ECCE,,4 for normal subframe and for special subframe
+EPDCCH scheduling,,EPDCCH candidate is randomly assigned in each subframe
+EPDCCH precoder(Note 2),,Fixed PMI 0
+EPDCCH monitoring SF pattern,,UL-DL configuration 1: 1101111111  0000000000UL-DL configuration 5: 1100111001  0000000000
+Timing advance,μs,100
+Propagation condition,,Static propagation conditionNo external noise sources are applied
+Note 1:As specified in Table 4.2-1 in TS 36.211 [4].Note 2: EPDCCH precoder parameters are defined for tests with 2 x 2 antenna configuration,,

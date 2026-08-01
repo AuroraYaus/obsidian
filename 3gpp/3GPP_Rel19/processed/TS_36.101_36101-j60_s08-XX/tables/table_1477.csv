@@ -1,0 +1,9 @@
+Test,Bandwidth (MHz),Number of bits of a DL-SCH transport block received within a TTI,Measurement channel,Reference value
+,,,,PDSCH TB success rate (%)
+1,10,10296,R.31-1 FDD (NOTE 2),95
+2,10,25456,R.31-2 FDD (NOTE 2),95
+3A,10,36696 (NOTE 1),R.31-3A FDD (NOTE 2),85
+3B,10+10,25456,R.31-2 FDD (NOTE 2),95
+4A,10+10,75376 (NOTE 3),R.31-4 FDD (NOTE 2),85
+6C,10+20,36696 (NOTE 1) for 10MHz CC75376 (NOTE 3) for 20MHz CC,R.31-3A FDD for 10MHz CCR.31-4 FDD for 20MHz CC,85
+"NOTE 1:35160 bits for sub-frame 5.NOTE 2:PDSCH scheduling pattern is changed as per the following bitmap that repeats every 40ms, and applies to all the serving cells..PDSCH scheduling subframe bitmap = {01110111 11110111 11110111 11110111 11111110}.NOTE 3:71112 bits for sub-frame 5.",,,,

@@ -1,0 +1,4 @@
+Test,Number of,Number of,Cyclic,Propagation,Additional,Channel bandwidth / SNR (dB)
+Number,TX antennas,demodulation branches,Prefix,conditions and correlation matrix (Annex G),DM-RS configuration,50 MHz
+1,1,2,Normal,TDLA30-75 Low,No additional DM-RS,0.1
+,,,,,Additional DM-RS,-0.2

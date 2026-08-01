@@ -1,0 +1,3 @@
+Sub-block gap size (Wgap) where the limit applies,BS adjacent channel centre frequency offset below or above the sub-block edge (inside the gap),Assumed adjacent channel carrier (informative),Filter on the adjacent channel frequency and corresponding filter bandwidth,ACLR limit
+Wgap ≥ 60 MHz,10 MHz,20MHz E-UTRA carrier,Square (BWConfig),35 dB
+Wgap ≥ 80 MHz,30 MHz,20MHz E-UTRA carrier,Square (BWConfig),40 dB

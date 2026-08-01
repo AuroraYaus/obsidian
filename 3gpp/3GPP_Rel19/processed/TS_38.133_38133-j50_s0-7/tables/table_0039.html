@@ -1,0 +1,45 @@
+<table>
+  <tr>
+    <td>eDRX_IDLE cycle length [s]</td>
+    <td>DRX cycle length [s]</td>
+    <td>PTW length [s] (number of 1.28 s periods)</td>
+    <td>Tdetect,NR_Inter_Relax [s] (number of DRX cycles Note 3)</td>
+    <td>Tmeasure,NR_Inter_Relax [s] (number of DRX cycles Note 3)</td>
+    <td>Tevaluate,NR_Inter_Relax [s] (number of DRX cycles Note 3)</td>
+  </tr>
+  <tr>
+    <td>20.48 ≤  eDRX_IDLE cycle length ≤[163.84]</td>
+    <td>0.32</td>
+    <td>≥3.84 (3)</td>
+    <td>(23 x K1)eDRX_cycle_length×23PTW/DRX_cycle_lengthx K1</td>
+    <td>0.32 x M2 x K1 (1 x M2 x K1)</td>
+    <td>0.64 x M2 x K1 (2 x M2 x K1)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>0.64</td>
+    <td>≥3.84 (3)</td>
+    <td></td>
+    <td>0.64 x K1 (1 x K1)</td>
+    <td>1.28 x K1 (2 x K1)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>1.28</td>
+    <td>≥7.68 (6)</td>
+    <td></td>
+    <td>1.28 x K1 (1 x K1)</td>
+    <td>2.56 x K1 (2 x K1)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>2.56</td>
+    <td>≥15.36 (12)</td>
+    <td></td>
+    <td>2.56 x K1 (1 x K1)</td>
+    <td>5.12 x K1 (2 x K1)</td>
+  </tr>
+  <tr>
+    <td colspan="6">NOTE 1:The number of DRX cycles in this table correspond to the DRX cycles within PTWs.NOTE 2:The eDRX_IDLE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 3: The lower bound of PTW length is derived based on .NOTE 4:M2 = 1.5 if SMTC periodicity of measured intra-frequency cell &gt; 20 ms; otherwise M2=1. If different SMTC periodicities are configured for different cells, the SMTC periodicity in this note is the one used by the cell being identified. During PSS/SSS detection, the periodicity of the SMTC configured for the intra-frequency carrier is assumed, and if the actual SSB transmission periodicity is greater than the SMTC configured for the intra-frequency carrier, longer Tdetect, NR_intra is expected.NOTE 5:K1 = 3 is the measurement relaxation factor applicable for UE fulfilling the cellEdgeEvaluation [2] criterion.Tevaluate,NR_Inter_Relax*DRX_cycle1.28*1.28</td>
+  </tr>
+</table>

@@ -1,0 +1,138 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Unit</td>
+    <td colspan="2">Test 1</td>
+  </tr>
+  <tr>
+    <td>Bandwidth</td>
+    <td>kHz</td>
+    <td colspan="2">200</td>
+  </tr>
+  <tr>
+    <td>Operation mode</td>
+    <td></td>
+    <td colspan="2">Stand-alone</td>
+  </tr>
+  <tr>
+    <td>Uplink downlink configuration (Note 4)</td>
+    <td></td>
+    <td colspan="2">4</td>
+  </tr>
+  <tr>
+    <td>Special subframe configuration (Note 5)</td>
+    <td></td>
+    <td colspan="2">4</td>
+  </tr>
+  <tr>
+    <td>Carrier type</td>
+    <td></td>
+    <td colspan="2">Non-anchor</td>
+  </tr>
+  <tr>
+    <td>Number of NRS ports</td>
+    <td></td>
+    <td colspan="2">1</td>
+  </tr>
+  <tr>
+    <td>Propagation condition and antenna configuration</td>
+    <td></td>
+    <td colspan="2">AWGN (1 x 1)</td>
+  </tr>
+  <tr>
+    <td>SNR (Note 2)</td>
+    <td>dB</td>
+    <td>10</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td>Ior(j)</td>
+    <td>dB[mW/15kHz]</td>
+    <td>-88</td>
+    <td>-87</td>
+  </tr>
+  <tr>
+    <td>Noc(j)</td>
+    <td>dB[mW/15kHz]</td>
+    <td>-98</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td>Max number of HARQ transmissions</td>
+    <td></td>
+    <td colspan="2">1</td>
+  </tr>
+  <tr>
+    <td>NPDCCH repetition number</td>
+    <td>subframe</td>
+    <td colspan="2">1</td>
+  </tr>
+  <tr>
+    <td>Rmax (npdcch-NumRepetitions-r13)</td>
+    <td>subframe</td>
+    <td colspan="2">4</td>
+  </tr>
+  <tr>
+    <td>G (nPDCCH-startSF-USS-r13)</td>
+    <td>subframe</td>
+    <td colspan="2">2</td>
+  </tr>
+  <tr>
+    <td>Scheduling delay field (IDelay)</td>
+    <td></td>
+    <td colspan="2">1</td>
+  </tr>
+  <tr>
+    <td>(ack-NACK-NumRepetitions-r13)NRepAN</td>
+    <td></td>
+    <td colspan="2">1</td>
+  </tr>
+  <tr>
+    <td>ACK/NACK resource field</td>
+    <td></td>
+    <td colspan="2">0</td>
+  </tr>
+  <tr>
+    <td>NPDCCH reference channel</td>
+    <td></td>
+    <td colspan="2">R.NB.3 TDD</td>
+  </tr>
+  <tr>
+    <td>(npdcch-Offset-USS-r13)αoffset</td>
+    <td></td>
+    <td colspan="2">0</td>
+  </tr>
+  <tr>
+    <td>CQI reporting period</td>
+    <td>ms</td>
+    <td colspan="2">80</td>
+  </tr>
+  <tr>
+    <td>NPDSCH repetition number</td>
+    <td>subframe</td>
+    <td colspan="2">1</td>
+  </tr>
+  <tr>
+    <td>Resource assignment field (ISF) (Note 6)</td>
+    <td></td>
+    <td colspan="2">3</td>
+  </tr>
+  <tr>
+    <td>downlinkBitmap-r13 and dl-Gap-r13</td>
+    <td></td>
+    <td colspan="2">Not configured</td>
+  </tr>
+  <tr>
+    <td>dl-GapNonAnchor-r13 and downlinkBitmapNonAnchor-r13</td>
+    <td></td>
+    <td colspan="2">Not configured</td>
+  </tr>
+  <tr>
+    <td>OCNG pattern</td>
+    <td></td>
+    <td colspan="2">NB.OP.1</td>
+  </tr>
+  <tr>
+    <td colspan="4">Note 1:Reference measurement channel RC.33 TDD according to Table A.4-1 with one sided dynamic OCNG Pattern NB.OP.1 TDD as described in Annex A.5.3.1. For the subframes the reference measurement channel is not scheduled, NRS is transmitted with OCNG pattern NB.OP.1 TDD.Note 2:The minimum requirements shall be fulfilled for at least one of the two SNR(s) and the respective wanted signal input level.Note 3:MAC CE Downlink Channel Quality Report Command is triggered every 80 subframes, where NPDCCH scheduling MAC CE (NPDSCH) is transmitted in subframe n. UL grant is transmitted in subframe n+40. Note 4:As specified in Table 4.2-2 in TS 36.211 [4].Note 5:As specified in Table 4.2-1 in TS 36.211 [4].Note 6:Set the number of subframes (NSF) for NPDSCH to 4 for NPDSCH transmitting MAC CE Downlink Channel Quality Report Command.</td>
+  </tr>
+</table>

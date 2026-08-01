@@ -1,0 +1,15 @@
+Parameter,,,Unit,Cell 1,,Cell 2,
+,,,,T1,T2,T1,T2
+BWchannel,,Config 1,MHz,"3: NPRB,c = 15",,,
+,,Config 2,,"3: NPRB,c = 12",,,
+BWP BW,,Config 1,MHz,"3: NPRB,c = 15",,,
+,,Config 2,,"3: NPRB,c = 12",,,
+PDSCH Reference measurement channel,,Config 1,,SR.1.2 FDD,,,
+,,Config 2,,SR.1.3 FDD,,,
+CORESET Reference Channel,,Config 1,,CR.1.3 FDD,,,
+,,Config 2,,CR.1.2 FDD,,,
+SSB Configuration,,"Config 1,2",,SSB.13 FR1,,,
+IoNote1,Config 1,,dBm/2.7 MHz,-66.81,-64.11,-66.81,-64.11
+,Config 2,,dBm/2.16 MHz,-67.78,-65.07,-67.78,-65.07
+Propagation condition,,,-,AWGN,,AWGN,
+NOTE 1:Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,,

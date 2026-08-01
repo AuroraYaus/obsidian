@@ -1,0 +1,12 @@
+Reference channel,A4-1,A4-2,A4-3,A4-4,A4-5,A4-6,A4-7,A4-8
+Allocated resource blocks,1,1,6,15,25,50,75,100
+DFT-OFDM Symbols per subframe,12,10,12,12,12,12,12,12
+Modulation,16QAM,16QAM,16QAM,16QAM,16QAM,16QAM,16QAM,16QAM
+Code rate,3/4,3/4,3/4,3/4,3/4,3/4,3/4,3/4
+Payload size (bits),408,376,2600,6456,10680,21384,32856,43816
+Transport block CRC (bits),24,24,24,24,24,24,24,24
+Code block CRC size (bits),0,0,0,24,24,24,24,24
+Number of code blocks - C,1,1,1,2,2,4,6,8
+Coded block size including 12bits trellis termination (bits),1308,1212,7884,9804,16140,16140,16524,16524
+Total number of bits per sub-frame,576,480,3456,8640,14400,28800,43200,57600
+Total symbols per sub-frame,144,120,864,2160,3600,7200,10800,14400

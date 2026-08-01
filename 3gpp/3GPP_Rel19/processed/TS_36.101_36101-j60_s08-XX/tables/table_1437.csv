@@ -1,0 +1,12 @@
+Test number,Cell,Bandwidth (MHz),Reference Channel,MBSFN RS type,OCNG Pattern,Propagationcondition,Correlation Matrix and antenna,Reference value,,MBMS UE Category
+,,,,,,,,BLER (%),SNR(dB),
+1,PCell,10,N/A,N/A,OP.1 FDD,AWGN,1x1,N/A,N/A,N/A
+,MBMS Dedicated Cell,10,R.106-1 FDD,Type 1,N/A,MBSFN channel model (Table B.2.6.3-1),1x1,1,18.5,≥ 2
+,MBMS Dedicated Cell,6,R.106-3 FDD,Type 1,N/A,MBSFN channel model (Table B.2.6.3-1),1x1,1,18.5,≥ 2
+,MBMS Dedicated Cell,7,R.106-4 FDD,Type 1,N/A,MBSFN channel model (Table B.2.6.3-1),1x1,1,18.5,≥ 2
+,MBMS Dedicated Cell,8,R.106-5 FDD,Type 1,N/A,MBSFN channel model (Table B.2.6.3-1),1x1,1,18.5,≥ 2
+2,PCell,10,N/A,N/A,OP.1 FDD,AWGN,1x1,N/A,N/A,N/A
+,MBMS Dedicated Cell,10,R.106-2FDD,Type 2,N/A,MBSFN channel model (Table B.2.6.3-1),1x1,1,20.2,≥ 2
+,MBMS Dedicated Cell,6,R.106-6FDD,Type 2,N/A,MBSFN channel model (Table B.2.6.3-1),1x1,1,20.2,≥ 2
+,MBMS Dedicated Cell,7,R.106-7FDD,Type 2,N/A,MBSFN channel model (Table B.2.6.3-1),1x1,1,20.2,≥ 2
+,MBMS Dedicated Cell,8,R.106-8FDD,Type 2,N/A,MBSFN channel model (Table B.2.6.3-1),1x1,1,20.2,≥ 2

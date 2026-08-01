@@ -1,0 +1,4 @@
+SS Block frequency position SSREF(MHz),GSCN,Note
+920.73,41637,Only applicable for 12 PRB transmission bandwidth configuration within 3 MHz channel (with 15 PRB maximum transmission bandwidth configuration) with punctured PBCH defined in TS 38.211 [6] clause 7.4.3.1.
+921.45,41638,Only applicable for 20 PRB transmission bandwidth configuration within 5 MHz channel (with 25 PRB maximum transmission bandwidth configuration) with unpunctured PBCH defined in TS 38.211 [6] clause 7.4.3.1.
+NOTE 1:SCell with 12 PRB transmission bandwidth configuration within 3 MHz channel bandwidth or 20 PRB transmission bandwidth configuration within 5 MHz channel bandwidth will be configured only in band n100 and only with SS Block frequency positions defined in this table.,,

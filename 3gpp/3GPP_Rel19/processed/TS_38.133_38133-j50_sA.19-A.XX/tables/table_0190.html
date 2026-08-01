@@ -1,0 +1,116 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td rowspan="2">Test configuration</td>
+    <td rowspan="2">Value</td>
+    <td rowspan="2">Comment</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Initial condition</td>
+    <td>Active cell</td>
+    <td></td>
+    <td>1-12</td>
+    <td>Cell 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">T2 end condition</td>
+    <td>Active cell</td>
+    <td></td>
+    <td>1-12</td>
+    <td>Cell 2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Neighbour cells</td>
+    <td></td>
+    <td>1-12</td>
+    <td>Cell 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">RF Channel Number</td>
+    <td></td>
+    <td>1-12</td>
+    <td>1,2</td>
+    <td>Cell 1 is on RF channel 1Cell 2 is on RF channel 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Time offset between cells</td>
+    <td></td>
+    <td>1-12</td>
+    <td>3 ms</td>
+    <td>Asynchronous cells</td>
+  </tr>
+  <tr>
+    <td colspan="2">Access Barring Information</td>
+    <td>-</td>
+    <td>1-12</td>
+    <td>Not Sent</td>
+    <td>No additional delays in random access procedure.</td>
+  </tr>
+  <tr>
+    <td colspan="2">SSB configuration</td>
+    <td></td>
+    <td>1-12</td>
+    <td>SSB.1 FR1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">SMTC configuration</td>
+    <td></td>
+    <td>1-12</td>
+    <td>SMTC.6</td>
+    <td>Configured in SIB4 for Cell 1 and Cell 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX cycle length</td>
+    <td>s</td>
+    <td>1-12</td>
+    <td>1.28</td>
+    <td>The value shall be used for all cells in the test.</td>
+  </tr>
+  <tr>
+    <td colspan="2">PRACH configuration index</td>
+    <td></td>
+    <td>1-12</td>
+    <td>102</td>
+    <td>The detailed configuration is specified in TS 38.211 [6] clause 6.3.3.2</td>
+  </tr>
+  <tr>
+    <td colspan="2">rangeToBestCell</td>
+    <td></td>
+    <td>1-12</td>
+    <td>Not configured</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Ephemeris information</td>
+    <td></td>
+    <td>1-12</td>
+    <td>Note 1</td>
+    <td>The detailed configuration is specified in SIB19</td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td>1-12</td>
+    <td>&gt;7</td>
+    <td>During T1, Cell 2 shall be powered off, and during the off time the physical cell identity shall be changed, The intention is to ensure that Cell 2 has not been detected by the UE prior to the start of period T2</td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td>1-12</td>
+    <td>70</td>
+    <td>T2 needs to be defined so that cell re-selection reaction time is taken into account.</td>
+  </tr>
+  <tr>
+    <td colspan="6">Note 1:Detailed ephemeris information is provided in TS 38.508-1 [38]</td>
+  </tr>
+</table>

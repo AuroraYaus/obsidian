@@ -1,0 +1,4 @@
+Frequency Range,BS channel bandwidth of the lowest/highest carrier received (MHz),Wanted signal mean power (dBm),Interfering signal mean power (dBm)
+FR2-1,"50, 100, 200, 400",EISREFSENS + 6 dB (Note 3),EISREFSENS_50M + 27.7 + ΔFR2_REFSENS (Note 1)EISREFSENS_50M + 26.7 + ΔFR2_REFSENS (Note 2)
+FR2-2,"100, 400, 800, 1600, 2000",EISREFSENS + 6 dB (Note 3),EISREFSENS_50M + 28.7 + ΔFR2_REFSENS (Note 4)
+NOTE 1:Applicable to bands defined within the frequency spectrum range of 24.25 – 33.4 GHzNOTE 2:Applicable to bands defined within the frequency spectrum range of 37 – 52.6 GHzNOTE 3:EISREFSENS is given in clause 10.3.3NOTE 4:Applicable to bands defined within the frequency spectrum range of 57 – 71 GHz,,,

@@ -1,0 +1,9 @@
+Parameter,,Unit,
+Downlink power allocation,ρA,dB,0
+,ρB,dB,0 (Note 1)
+,,dB,0
+at antenna portNoc,,dBm/15kHz,at antenna portNoc
+PDSCH transmission mode in PCell,,,1
+Subcarrier spacing for MBSFN cell,,kHz,2.5 kHz
+Bandwidth,,MHz,10(Note 2)
+Note 1:  = 0.Note 2: For both Pcell and Scell.PB,,,

@@ -1,0 +1,4 @@
+Parameter,Values,Comments
+SwitchingPattern,0000001111111110000000011100000111111000,"Switching pattern is bitmap with periodicity of 40ms, and hence the pattern is 40 bits long. In the bitmap, a bit value of ‘0’ for a first slot indicates that the UE can transmit/receive on the PCell in the first slot, and a bit value of ‘1’ for a second slot indicates that the UE can receive on the SCell in the second slot"
+SwitchingGap-Duration for PCell to SCell (N1),3,
+SwitchingGap-Duration for SCell to PCell (N2),4,

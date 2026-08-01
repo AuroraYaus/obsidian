@@ -1,0 +1,36 @@
+Parameter,,Unit,Test 1
+Bandwidth,,MHz,10
+Transmission mode,,,9
+Uplink downlink configuration,,,2
+Special subframe configuration,,,4
+Propagation channel,,,EPA5
+Precoding granularity(only for reporting and following PMI),,PRB,50
+Correlation and antenna configuration,,,4*2 ULA Low
+Cell-specific reference signals,,,"Antenna ports 0,1"
+Beamforming model,,,B.4.6  (Note 4)
+CSI reference signal configuration List,,,"{0,1}"
+Number of CSI-RS ports (Nk),,,"{4,4}"
+CSI-RS-SubframeConfig  List,,,"{9,9}"
+eMIMO-Type,,,Class B
+Number of NZP-CSI resources (K),,,2 for following CRI
+NZP-CSI-RS-ID-List,,,"{0,1}"
+eMIMO-Type2,,,Class B
+NZP-CSI-RS-ID,,,{0}
+alternativeCodebookEnabledCLASSB_K1,,,FALSE
+codebookSubsetRestriction,,,001111
+Reporting mode,,,PUSCH 3-1
+Physical channel for CRI(1) reporting,,,PUSCH
+Reporting interval for CRI(1) reporting,,ms,40 (Note 5)
+Physical channel for RI(2)/CQI(2)/PMI(2) reporting,,,PUSCH
+Reporting Interval for RI(2)/CQI(2)/PMI(2)  reporting,,ms,10
+Downlink power allocation,,dB,0
+,,dB,0
+,Pc,dB,-3
+,,dB,-3
+Rank Number of PDSCH,,,1
+Measurement channel,,,R.44A-1 TDD
+OCNG Pattern,,,OP.1 TDD
+Max number of HARQ transmissions,,,4
+Redundancy version coding sequence,,,"{0,1,2,3}"
+Scheduled PDSCH SFs,,,"SF 0,1,3,6,8,9"
+"Note 1:For random precoder selection, the precoder shall be updated in each TTI (1 ms granularity).Note 2:If the UE reports in an available uplink reporting instance at subrame SF#n based on CRI,PMI estimation at a downlink SF not later than SF#(n-4), this reported CRI, PMI cannot be applied at the eNB downlink before SF#(n+4).Note 3:To avoid collisions between CQI/PMI reports and HARQ-ACK it is necessary to report both on PUSCH instead of PUCCH.Note 4:The precoder matrix as specified in Table 6.3.4.2.3-1of [4].For following PMI, PMI equals to UE reported PMI(2) for eMIMO-Type2 “Class B”.Note 5:PDCCH DCI format 0 with a trigger for aperiodic CSI of eMIMIO-Type shall be transmitted in downlink SF#4 to allow aperiodic CRI(1) to be transmitted on uplink SF#4. PDCCH DCI format 0 with a trigger for aperiodic CSI of eMIMIO-Type2 shall be transmitted in downlink SF#4 to allow aperiodic RI(2)/CQI(2)/PMI(2) to be transmitted on uplink SF#2.",,,

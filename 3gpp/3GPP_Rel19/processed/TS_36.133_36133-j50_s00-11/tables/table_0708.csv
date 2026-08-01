@@ -1,0 +1,15 @@
+Accuracy,Conditions,,,,
+,CRSÊs/Iot Note 6,Downlink transmission bandwidth of PCell,Io range Note 5,,
+,,,E-UTRA operating band groups Note 8,"MinimumIo Note 1, 7",MaximumIo
+Ts Note 2,dB,MHz,,dBm/15kHz Note 7,dBm/BWChannel
+20,-7.76,≤ 3 MHz,"FDD_A Note 9, TDD_A",-121,-50
+,,,"FDD_B1, FDD_B2",-120.5,-50
+,,,"FDD_C, TDD_C",-120,-50
+,,,FDD_D,-119.5,-50
+,,,"FDD_E, TDD_E",-119,-50
+,,,FDD_F,-118.5,-50
+,,,FDD_G Note 4,-118,-50
+,,,FDD_H,-117.5,-50
+,,,FDD_N,-114.5,-50
+10,-7.76,≥ 5 MHz,Note 3,Note 3,Note 3
+"NOTE 1:This Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2:Ts is the basic timing unit defined in TS 36.211.NOTE 3:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with downlink bandwidth ≤ 3 MHz.NOTE 4:Except Band 29.NOTE 5:Io is defined in subframes indicated for PCell measurements by the time domain measurement resource restriction pattern. The specified Io range applies to CRS and non-CRS symbols. Io may be different in different symbols within a subframe.NOTE 6:CRS Ês/Iot is in subframes indicated for PCell measurements by the time-domain measurement resource restriction pattern.NOTE 7:The condition level is increased by ∆>0, when applicable, as described in Sections B.4.2 and B.4.3.NOTE 8:E-UTRA operating band groups are as defined in Section 3.5.NOTE 9:Except Band 32, Band 75, Band 76.",,,,,

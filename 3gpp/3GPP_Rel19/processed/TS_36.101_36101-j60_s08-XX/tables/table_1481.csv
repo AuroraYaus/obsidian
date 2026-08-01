@@ -1,0 +1,11 @@
+Parameter,,Unit,Test 1
+Communication resource pool configuration,,,As specified in Table A.9-1(Configuration #1-V2X)
+at antenna port,,dBm/15kHz,-98
+Active cell(s),,,None
+Sidelink UE 1,Sidelink Transmissions,,PSCCH+PSSCH
+,Timing offset (Note 1),,CP/2-12Ts
+,Frequency offset (Note 2),Hz,+600
+,Synchronization,,GNSS or GNSS-equivalent
+,Antenna configuration,,1x2 Low
+,PSSCH RMC,,CD.9
+"Note 1:Time offset of Sidelink UE receive signal with respect to GNSS reference timing.Note 2:Frequency offset of Sidelink UE with respect to GNSS reference frequency.Note 3: Cyclic shift for PSCCH DMRS is randomly selected between {0, 3, 6, 9} for each PSCCH transmission.",,,

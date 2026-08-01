@@ -1,0 +1,14 @@
+Parameter,Unit,SyncRef UE 1,,
+,,T1,T2,T3
+E-UTRA RF Channel Number,,1,,
+BWchannelNote 4,MHz,5 or 10,,
+ProSe Direct Communication resource pool configuration,,As specified in Table A.3.12.5-1(Configuration #1)Note resource pool is same as Configuration #2 used by ProSe UE.,,
+syncOffsetIndicator,,Set same as syncOffsetIndicator1 in ProSe Direct Communication preconfiguration,,
+slssid,,30,,
+inCoverage,,TRUE,,
+networkControlledSyncTx,,ON,,
+Note1,dBm/15 kHz,-96,,
+,dB,5.5,-3.5,5.5
+"S-RSRP Note2, Note3",dBm/15 kHz,-90.5,-99.5,-90.5
+Propagation Condition,,AWGN,,
+Note 1:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 2:RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 3:SSSS Es/Iot is set the same as PSSS/PSBCH Es/Iot.Note 4:This test is according to the principle defined in section A.3.12.3.,,,,

@@ -1,0 +1,29 @@
+Parameter,,Unit,Cell 2
+Angle of arrival configuration,,,Setup 1 according to table A.3.15
+Assumption for UE beamsNote 5,,,Fine
+Note1,NR_TDD_FR2_A,dBm/15 kHz,-112
+,NR_TDD_FR2_B,,
+,NR_TDD_FR2_F,,
+,NR_TDD_FR2_G,,
+,NR_TDD_FR2_T,,
+,NR_TDD_FR2_Y,,
+Note1,NR_TDD_FR2_A,dBm/SCS,-103
+,NR_TDD_FR2_B,,
+,NR_TDD_FR2_F,,
+,NR_TDD_FR2_G,,
+,NR_TDD_FR2_T,,
+,NR_TDD_FR2_Y,,
+SS-RSRPNote2,NR_TDD_FR2_A,dBm/SCS Note3,-85
+,NR_TDD_FR2_B,,
+,NR_TDD_FR2_F,,
+,NR_TDD_FR2_G,,
+,NR_TDD_FR2_T,,
+,NR_TDD_FR2_Y,,
+,,dB,18
+IoNote2,NR_TDD_FR2_A,dBm/95.04 MHz,-56
+,NR_TDD_FR2_B,Note4,
+,NR_TDD_FR2_F,,
+,NR_TDD_FR2_G,,
+,NR_TDD_FR2_T,,
+,NR_TDD_FR2_Y,,
+"NOTE 1:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 2:SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3:SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 4: Equivalent power received by an antenna with 0 dBi gain at the centre of the quiet zoneNOTE 5: Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementation",,,

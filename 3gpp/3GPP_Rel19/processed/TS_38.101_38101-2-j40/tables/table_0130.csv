@@ -1,0 +1,7 @@
+Parameter,Unit,Average EVM level,Reference signal EVM level
+Pi/2 BPSK,%,30.0,30.0
+QPSK,%,17.5,17.5
+16 QAM,%,12.5,12.5
+64 QAM,%,8.0,8.0
+256 QAM1,%,3.5,3.5
+NOTE 1: Refer to clause 6.1 for 256 QAM applicability.,,,

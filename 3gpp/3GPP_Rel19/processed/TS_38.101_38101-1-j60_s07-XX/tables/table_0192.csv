@@ -1,0 +1,8 @@
+Test configurations,Carriers,Rx Power in transmission bandwidth configuration (dBm),channel bandwidth,Center of BWanother Relative to edge of BWwanted
+1,Wanted carrier,REFSENS NOTE 4 + 1,BWwanted ≤ BWanother,"< max (5/2* BWanother, 50MHz"
+,Another wanted carrier,Power of wanted carrier + 25,,
+2,Wanted carrier,REFSENS NOTE 4 + 1,BWwanted > BWanother,
+,Another wanted carrier,Power of wanted carrier + 25 – 10*log10(BWwanted /BWanother),,
+3,Wanted carrier,REFSENS NOTE 4 + 1,NA,"≥ max (5/2* BWanother, 50MHz)"
+,Another wanted carrier,Power of wanted carrier + 25,,
+"NOTE 1:The transmitter shall be set to 24dB below PCMAX_L,f,c at the minimum uplink configuration specified in Table 7.3.2-3 with PCMAX_L,f,c as defined in clause 6.2A.4.NOTE 2:BWwanted is the channel bandwidth of wanted carrier. BWanother is the channel bandwidth of another wanted carrier with 25 dB power imbalance.NOTE 3:It’s allowed to use one of test configurations to verify the RX power imbalance requirement for type 2 UE.NOTE 4:When a UE reports intraBandNR-CA-non-collocated-r18, the REFSENS is the reference sensitivity level for two antenna ports in Table 7.3.2-1b. When a UE reports intraBandNR-CA-non-collocated-r19, the REFSENS is further modified by the amount of ΔRIB,4R given in Table 7.3.2-2 for four antenna ports.NOTE 5: Void.NOTE 6:Only FWA UE is intended for supporting intraBandNR-CA-non-collocated-r19.",,,,

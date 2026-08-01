@@ -1,0 +1,5 @@
+Test condition,DUTorientation,Linkangle,Measurementangle,Diagram
+Free spaceDUT Orientation 1 (default),α = 0º;β = -90º;γ = 0º,θLink;ϕLinkwith polarization referencePolLink = θ or ϕ,θMeas;ϕMeaswith polarization reference PolMeas = θ or ϕ,
+Free spaceDUT Orientation 2 – Option 1(based on re-positioning approach),α = 180º;β = 90º;γ = 0º,θLink;ϕLinkwith polarization referencePolLink = θ or ϕ,θMeas;ϕMeaswith polarization reference PolMeas = θ or ϕ,
+Free spaceDUT Orientation 2 – Option 2(based on re-positioning approach),α = 0º;β = 90º;γ = 0º,θLink;ϕLinkwith polarization referencePolLink = θ or ϕ,θMeas;ϕMeaswith polarization reference PolMeas = θ or ϕ,
+"NOTE 1:A polarization reference, as defined in relation to the reference coordinate system in J.1-1, is maintained for each signal angle, link or interferer angle, and measurement angle.NOTE 2:The combination of rotations is captured by matrix M=Rz()•Ry()•Rx()",,,,

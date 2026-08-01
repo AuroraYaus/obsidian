@@ -1,0 +1,999 @@
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "Annex A (normative):Test Cases", "paragraph_index": 1, "style": "Heading8"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.1Purpose of annex", "paragraph_index": 2, "style": "Heading1"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.2Requirement classification for statistical testing", "paragraph_index": 5, "style": "Heading1"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.2.1Types of requirements in TS 36.133", "paragraph_index": 9, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.2.1.1Time and delay requirements on UE higher layer actions", "paragraph_index": 10, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.2.1.2Measurements of power levels, relative powers and time", "paragraph_index": 17, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.2.1.3Implementation requirements", "paragraph_index": 22, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.2.1.4Physical layer timing requirements", "paragraph_index": 26, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3RRM test configurations", "paragraph_index": 30, "style": "Heading1"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1Reference Measurement Channels", "paragraph_index": 31, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.1PDSCH", "paragraph_index": 32, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.1.1FDD", "paragraph_index": 33, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.1.2TDD", "paragraph_index": 40, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.1.3FDD for UE category 0", "paragraph_index": 47, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.1.4HD-FDD for UE category 0", "paragraph_index": 50, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.1.5TDD for UE category 0", "paragraph_index": 53, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.1.6Frame Structure 3", "paragraph_index": 56, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.2PCFICH/PDCCH/PHICH", "paragraph_index": 59, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.2.1FDD", "paragraph_index": 60, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.2.2TDD", "paragraph_index": 63, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.2.3HD-FDD for UE category 0", "paragraph_index": 66, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.2.4FS 3", "paragraph_index": 69, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.3MPDCCH Reference Channels for Cat-M1 UEs", "paragraph_index": 72, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.3.1FDD in CEModeA", "paragraph_index": 74, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.3.2HD-FDD in CEModeA", "paragraph_index": 77, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.3.3TDD in CEModeA", "paragraph_index": 80, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.3.4FDD in CEModeB", "paragraph_index": 83, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.3.5HD-FDD in CEModeB", "paragraph_index": 86, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.3.6TDD in CEModeB", "paragraph_index": 89, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.4PDSCH Reference Channel for Cat-M1 UEs", "paragraph_index": 92, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.4.1FDD in CEModeA", "paragraph_index": 93, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.4.2HD-FDD in CEModeA", "paragraph_index": 96, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.4.3TDD in CEModeA", "paragraph_index": 99, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.4.4FDD in CEModeB", "paragraph_index": 102, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.4.5HD-FDD in CEModeB", "paragraph_index": 105, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.4.6TDD in CEModeB", "paragraph_index": 108, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.5NPDSCH Reference Channel for UE category NB1", "paragraph_index": 111, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.5.1HD-FDD in-band operation", "paragraph_index": 112, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.5.2Void", "paragraph_index": 115, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.5.3HD-FDD standalone operation", "paragraph_index": 116, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.5.4Void", "paragraph_index": 119, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.5.5HD-FDD guard band operation", "paragraph_index": 120, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.5.6Void", "paragraph_index": 123, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.5.7TDD in-band operation", "paragraph_index": 124, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.5.8TDD standalone operation", "paragraph_index": 127, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.5.9TDD guard band operation", "paragraph_index": 130, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.5.10NTN-TDD standalone operation", "paragraph_index": 133, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.6NPDCCH Reference Channel for UE category NB1", "paragraph_index": 136, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.6.1In-band operation", "paragraph_index": 137, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.6.2Void", "paragraph_index": 142, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.6.3Standalone operation", "paragraph_index": 143, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.6.4Void", "paragraph_index": 146, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.6.5Guard band operation", "paragraph_index": 147, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.1.6.6Void", "paragraph_index": 152, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2OFDMA Channel Noise Generator (OCNG)", "paragraph_index": 153, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1OCNG Patterns for FDD", "paragraph_index": 154, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.1OCNG FDD pattern 1: outer resource blocks allocation in 10 MHz", "paragraph_index": 163, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.2OCNG FDD pattern 2: full bandwidth allocation in 10 MHz", "paragraph_index": 166, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.3OCNG FDD pattern 3: outer resource blocks allocation in 1.4 MHz", "paragraph_index": 169, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.4OCNG FDD pattern 4: full bandwidth allocation in 1.4 MHz", "paragraph_index": 172, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.5OCNG FDD pattern 5: outer resource blocks allocation in 10 MHz (without MBSFN)", "paragraph_index": 175, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.6OCNG FDD pattern 6: full bandwidth allocation in 10 MHz (without MBSFN)", "paragraph_index": 178, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.7OCNG FDD pattern 7: full bandwidth allocation in 1.4 MHz (without MBSFN)", "paragraph_index": 181, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.8OCNG FDD pattern 8: outer resource blocks allocation in 10 MHz for MBSFN ABS", "paragraph_index": 184, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.9OCNG FDD pattern 9: full bandwidth allocation in 10 MHz for MBSFN ABS", "paragraph_index": 187, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.10OCNG FDD pattern 10: outer resource blocks allocation in 10 MHz with user data in every subframe (without MBSFN)", "paragraph_index": 190, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.11OCNG FDD pattern 11: outer resource blocks allocation in 20 MHz", "paragraph_index": 193, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.12OCNG FDD pattern 12: full bandwidth allocation in 20 MHz", "paragraph_index": 196, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.13OCNG FDD pattern 13: outer resource blocks allocation in 20 MHz (without MBSFN)", "paragraph_index": 199, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.14OCNG FDD pattern 14: full bandwidth allocation in 20 MHz (without MBSFN)", "paragraph_index": 202, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.15OCNG FDD pattern 15: outer resource blocks allocation in 5 MHz", "paragraph_index": 205, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.16OCNG FDD pattern 16: full bandwidth allocation in 5 MHz", "paragraph_index": 208, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.17OCNG FDD pattern 17: outer resource blocks allocation in 20 MHz with user data in every subframe (without MBSFN)", "paragraph_index": 211, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.18OCNG FDD pattern 18: outer resource blocks allocation in 5 MHz (without MBSFN)", "paragraph_index": 214, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.19OCNG FDD pattern 19: full bandwidth allocation in 5 MHz (without MBSFN)", "paragraph_index": 217, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.20OCNG FDD pattern 20: outer resource blocks allocation in 5 MHz with user data in every subframe (without MBSFN)", "paragraph_index": 220, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.21OCNG FDD pattern 21: Generic resource blocks allocation (without MBSFN)", "paragraph_index": 223, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.1.22OCNG FDD pattern 22: Generic resource blocks allocation in 5MHz (without MBSFN)", "paragraph_index": 226, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2OCNG Patterns for TDD", "paragraph_index": 229, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2.1OCNG TDD pattern 1: outer resource blocks allocation in 10 MHz", "paragraph_index": 238, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2.2OCNG TDD pattern 2: full bandwidth allocation in 10 MHz", "paragraph_index": 243, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2.3OCNG TDD pattern 3: outer resource blocks allocation in 1.4 MHz", "paragraph_index": 246, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2.4OCNG TDD pattern 4: full bandwidth allocation in 1.4 MHz", "paragraph_index": 249, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2.5OCNG TDD pattern 5: outer resource blocks allocation in 10 MHz for MBSFN ABS", "paragraph_index": 252, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2.6OCNG TDD pattern 6: full bandwidth allocation in 10 MHz for MBSFN ABS", "paragraph_index": 257, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2.7OCNG TDD pattern 7: outer resource blocks allocation in 20 MHz", "paragraph_index": 260, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2.8OCNG TDD pattern 8: full bandwidth allocation in 20 MHz", "paragraph_index": 265, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2.9OCNG TDD pattern 9: outer resource blocks allocation in 5 MHz", "paragraph_index": 268, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2.10OCNG TDD pattern 10: full bandwidth allocation in 5 MHz", "paragraph_index": 273, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.2.11OCNG TDD pattern 11: Generic resource blocks allocation (without MBSFN)", "paragraph_index": 276, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.3OCNG Patterns for Narrowband IoT", "paragraph_index": 279, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.3.1Narrowband IoT OCNG FDD pattern 1: In-band NB-IoT in 10 MHz EUTRAN cell", "paragraph_index": 288, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.3.2Narrowband IoT OCNG FDD pattern 2: guard band NB-IoT in 10 MHz EUTRAN cell", "paragraph_index": 291, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.3.3Narrowband IoT OCNG FDD pattern 3: standalone NB-IoT", "paragraph_index": 294, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.3.4Narrowband IoT OCNG FDD pattern 4: In-band NB-IoT in 5 MHz EUTRAN cell", "paragraph_index": 297, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.3.5Narrowband IoT OCNG FDD pattern 5: guard band NB-IoT in 5 MHz EUTRAN cell", "paragraph_index": 300, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.3.6Narrowband IoT OCNG TDD pattern 1: In-band NB-IoT in 10 MHz EUTRAN cell", "paragraph_index": 303, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.3.7Narrowband IoT OCNG TDD pattern 2: guard band NB-IoT in 10 MHz EUTRAN cell", "paragraph_index": 306, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.3.8Narrowband IoT OCNG TDD pattern 3: standalone NB-IoT", "paragraph_index": 309, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.3.9Narrowband IoT OCNG FDD pattern 6: In-band NB-IoT in 5 MHz NTN NR cell", "paragraph_index": 312, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.3.10Narrowband IoT OCNG NTN TDD pattern 4: standalone NB-IoT", "paragraph_index": 315, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.4OCNG Patterns for V2X sidelink", "paragraph_index": 318, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.4.1V2X sidelink OCNG TDD pattern 1: outer resource blocks allocation in 10 MHz", "paragraph_index": 324, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.2.4.2V2X sidelink OCNG TDD pattern 2: outer resource blocks allocation in 10 MHz", "paragraph_index": 327, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.3Reference DRX Configurations", "paragraph_index": 330, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.4ABS Transmission Configurations", "paragraph_index": 333, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.4.1Non-MBSFN ABS Transmission Configurations", "paragraph_index": 334, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.4.1.1Non-MBSFN ABS Transmission, 1x2 antenna with PBCH", "paragraph_index": 335, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.4.1.2Non-MBSFN ABS Transmission, 2x2 antenna without PBCH", "paragraph_index": 338, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.4.2MBSFN ABS Transmission Configurations", "paragraph_index": 343, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.4.2.1MBSFN ABS Transmission, 1x2 antenna", "paragraph_index": 344, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.4.2.2MBSFN ABS Transmission, 2x2 antenna", "paragraph_index": 347, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.5Impact of Reference Sensitivity Degradation with Carrier Aggregation on Test Cases", "paragraph_index": 352, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.5.1Impact of Reference Sensitivity Degradation due to Insertion Loss", "paragraph_index": 353, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.6Carrier Aggregation Test Cases with Different Channel Bandwidth Combinations", "paragraph_index": 355, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.6.1Introduction", "paragraph_index": 356, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.7Test Cases with Different Channel Bandwidths", "paragraph_index": 359, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.7.1Introduction", "paragraph_index": 360, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.7.2Principle of testing", "paragraph_index": 362, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8Antenna Configuration", "paragraph_index": 364, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.1Antenna connection for 4 Rx capable UEs", "paragraph_index": 366, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.1.1 Introduction", "paragraph_index": 367, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.1.2 Principle of testing", "paragraph_index": 369, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.1.2.1 Single carrier tests", "paragraph_index": 370, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.1.2.2Carrier aggregation and Dual connectivity tests", "paragraph_index": 377, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.1.2.3Antenna connection for bands where 2RX is supported", "paragraph_index": 385, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.1.2.4Antenna connection for bands where 4RX is supported", "paragraph_index": 387, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.2Antenna connection for 8 Rx capable UEs", "paragraph_index": 389, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.2.1Introduction", "paragraph_index": 390, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.2.2Principle of testing", "paragraph_index": 392, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.2.2.1Single carrier tests", "paragraph_index": 393, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.2.2.2Carrier aggregation and Dual connectivity tests", "paragraph_index": 397, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.2.2.3Antenna connection for bands where 2RX is supported", "paragraph_index": 401, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.2.2.4Antenna connection for bands where 4RX is supported", "paragraph_index": 403, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.8.2.2.5Antenna connection for bands where 8RX is supported", "paragraph_index": 405, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.9Carrier Aggregation Test Cases with Different Duplex Modes", "paragraph_index": 407, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.9.1Introduction", "paragraph_index": 408, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.9.2Principle of testing", "paragraph_index": 410, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.10Carrier Aggregation Test Cases with Different CA Configurations", "paragraph_index": 413, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.10.1Introduction", "paragraph_index": 414, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.10.2Principle of testing", "paragraph_index": 416, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.11Test Cases for Synchronous and Asynchronous Dual Connectivity", "paragraph_index": 420, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.11.1Introduction", "paragraph_index": 421, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.11.2Principle of Testing", "paragraph_index": 423, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12Proximity-based Services", "paragraph_index": 426, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.1Introduction", "paragraph_index": 427, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.2Reference DRX configurations for ProSe tests", "paragraph_index": 429, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.3Test Cases with Different Channel Bandwidths", "paragraph_index": 432, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.3.1Introduction", "paragraph_index": 433, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.3.2Principle of testing", "paragraph_index": 435, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.4Reference resource pool configurations for ProSe Direct Discovery", "paragraph_index": 438, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.5Reference resource pool configurations for ProSe Direct Communication", "paragraph_index": 449, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.6Reference Measurement Channels for ProSe Direct Discovery", "paragraph_index": 454, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.6.1FDD", "paragraph_index": 455, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.7Reference measurement channels for ProSe Direct Communication", "paragraph_index": 458, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.7.1FDD", "paragraph_index": 459, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.8ProSe Receive Traffic Generator", "paragraph_index": 464, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.8.1ProSe Direct Communication Receive Traffic Generator for FDD", "paragraph_index": 466, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.12.8.2ProSe Direct Discovery Receive Traffic Generator for FDD", "paragraph_index": 469, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.13Time Offset between Cells", "paragraph_index": 472, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.13.1Introduction", "paragraph_index": 473, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.13.2Definition", "paragraph_index": 475, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.14Carrier Aggregation under operation with Frame Structure 3 Test Cases with Different Duplex Modes", "paragraph_index": 477, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.14.1Introduction", "paragraph_index": 478, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.14.2Principle of testing", "paragraph_index": 480, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.15Dual connectivity test cases with different combination of duplex mode", "paragraph_index": 482, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.15.1Introduction", "paragraph_index": 483, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.15.2Principle of testing", "paragraph_index": 485, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.16Reference PRACH Configurations", "paragraph_index": 487, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.17Listen before talk model", "paragraph_index": 490, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.17.1Introduction", "paragraph_index": 491, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.17.2Definition", "paragraph_index": 493, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.18Reference NPRACH Configurations", "paragraph_index": 499, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.19Dual connectivity test cases with different bandwidth combinations", "paragraph_index": 507, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.19.1Introduction", "paragraph_index": 508, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.19.2Principle of testing", "paragraph_index": 510, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.20Category M1 UE Test Cases", "paragraph_index": 512, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.20.1Introduction", "paragraph_index": 513, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.20.2Principle of Cat-M1 UE Testing", "paragraph_index": 515, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.20.3Principle of Cat-M1 UE testing for inter-frequency RSTD measurement period requirements with measurement gaps", "paragraph_index": 522, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.21V2V Sidelink Communication on Dedicated V2V Carrier", "paragraph_index": 524, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.21.1Introduction", "paragraph_index": 525, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.21.2Reference resource pool configurations for V2V Sidelink Communication", "paragraph_index": 527, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.21.3Reference measurement channels for V2V Sidelink Communication", "paragraph_index": 530, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.22Category 1bis UE Test Cases", "paragraph_index": 535, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.22.1Introduction", "paragraph_index": 536, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.22.2Principle of Category 1bis UE Testing", "paragraph_index": 538, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.23Category NB2 UE Test Cases", "paragraph_index": 542, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.23.1Introduction", "paragraph_index": 543, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.23.2Principle of Category NB2 UE Testing", "paragraph_index": 545, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.24V2X sidelink communication", "paragraph_index": 549, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.24.1Introduction", "paragraph_index": 550, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.24.2Reference resource pool configurations for V2X Sidelink Communication", "paragraph_index": 552, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.24.3Reference measurement channels for V2X Sidelink Communication", "paragraph_index": 557, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.25Category M2 UE Test Cases", "paragraph_index": 564, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.25.1Introduction", "paragraph_index": 565, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.25.2Principle of Cat-M2 UE Testing", "paragraph_index": 567, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.25.3Principle of Cat-M2 UE testing for inter-frequency RSTD measurement period requirements with measurement gaps", "paragraph_index": 573, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.26sTTI and processing time reduction test cases with different sTTI/processing time reduction scheme", "paragraph_index": 576, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.26.1Introduction", "paragraph_index": 577, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.26.2Principle of testing", "paragraph_index": 579, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.27LTE INACTIVE Cell Re-selection Test Cases", "paragraph_index": 581, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.27.1Introduction", "paragraph_index": 582, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.27.2Principle of INACTIVE cell re-selection Testing", "paragraph_index": 584, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.28Testing related to Satellite access", "paragraph_index": 587, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.28.1Introduction", "paragraph_index": 588, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.28.2Principle of testing GSO and NGSO scenarios", "paragraph_index": 590, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.28.2Principle of testing different RRM requirements", "paragraph_index": 596, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.28.3Principle of testing different ephemeris formats", "paragraph_index": 602, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.28.4General setup for SIB31/SIB-31-NB", "paragraph_index": 604, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.28.5Satellite specific parameters configuration", "paragraph_index": 608, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.28.5.1Satellite specific configuration for serving cell", "paragraph_index": 609, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.3.28.5.2Satellite specific configuration for neighbour cell", "paragraph_index": 613, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4E-UTRAN RRC_IDLE state", "paragraph_index": 617, "style": "Heading1"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2Cell Re-Selection", "paragraph_index": 618, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.1E-UTRAN FDD – FDD Intra frequency case", "paragraph_index": 619, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.1.1Test Purpose and Environment", "paragraph_index": 620, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.1.2Test Requirements", "paragraph_index": 627, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.2E-UTRAN TDD – TDD Intra frequency case", "paragraph_index": 639, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.2.1Test Purpose and Environment", "paragraph_index": 640, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.2.2Test Requirements", "paragraph_index": 647, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.3E-UTRAN FDD – FDD Inter frequency case", "paragraph_index": 659, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.3.1Test Purpose and Environment", "paragraph_index": 660, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.3.2Test Requirements", "paragraph_index": 667, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.4E-UTRAN FDD – TDD Inter frequency case", "paragraph_index": 680, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.4.1Test Purpose and Environment", "paragraph_index": 681, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.4.2Test Requirements", "paragraph_index": 688, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.5E-UTRAN TDD – FDD Inter frequency case", "paragraph_index": 700, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.5.1Test Purpose and Environment", "paragraph_index": 701, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.5.2Test Requirements", "paragraph_index": 708, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.6E-UTRAN TDD – TDD: Inter frequency case", "paragraph_index": 720, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.6.1Test Purpose and Environment", "paragraph_index": 721, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.6.2Test Requirements", "paragraph_index": 728, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.7E-UTRAN FDD – FDD Inter frequency case in the existence of non-allowed CSG cell", "paragraph_index": 740, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.7.1Test Purpose and Environment", "paragraph_index": 741, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.7.2Test Requirements", "paragraph_index": 748, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.8E-UTRAN TDD – TDD Inter frequency case in the existence of non-allowed CSG cell", "paragraph_index": 758, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.8.1Test Purpose and Environment", "paragraph_index": 759, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.8.2Test Requirements", "paragraph_index": 766, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.9E-UTRAN FDD – FDD Intra frequency case for 5MHz bandwidth", "paragraph_index": 776, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.9.1Test Purpose and Environment", "paragraph_index": 777, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.9.2Test Requirements", "paragraph_index": 784, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.10E-UTRAN FDD – FDD reselection using an increased number of carriers", "paragraph_index": 786, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.10.1Test Purpose and Environment", "paragraph_index": 787, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.10.2Test Requirements", "paragraph_index": 797, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.11E-UTRAN TDD – TDD reselection using an increased number of carriers", "paragraph_index": 804, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.11.1Test Purpose and Environment", "paragraph_index": 805, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.11.2Test Requirements", "paragraph_index": 815, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.12E-UTRAN FDD – FDD Intra frequency case for Cat-M1 UE in normal coverage", "paragraph_index": 822, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.12.1Test Purpose and Environment", "paragraph_index": 823, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.12.2Test Requirements", "paragraph_index": 830, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.13E-UTRAN HD – FDD Intra frequency case for Cat-M1 UE in normal coverage", "paragraph_index": 842, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.13.1Test Purpose and Environment", "paragraph_index": 843, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.13.2Test Requirements", "paragraph_index": 850, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.14E-UTRAN TDD – TDD Intra frequency case for Cat-M1 UE in normal coverage", "paragraph_index": 862, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.14.1Test Purpose and Environment", "paragraph_index": 863, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.14.2Test Requirements", "paragraph_index": 870, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.15 E-UTRAN FDD – FDD Intra frequency case for Cat-M1 UE in enhanced coverage", "paragraph_index": 882, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.15.1Test Purpose and Environment", "paragraph_index": 883, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.15.2Test Requirements", "paragraph_index": 890, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.16 E-UTRAN HD – FDD Intra frequency case for Cat-M1 UE in enhanced coverage", "paragraph_index": 902, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.16.1Test Purpose and Environment", "paragraph_index": 903, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.16.2Test Requirements", "paragraph_index": 910, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.17 E-UTRAN TDD – TDD Intra frequency case for Cat-M1 UE in enhanced coverage", "paragraph_index": 922, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.17.1Test Purpose and Environment", "paragraph_index": 923, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.17.2Test Requirements", "paragraph_index": 930, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.18 HD – FDD Intra frequency case for UE Category NB1 In-Band mode in normal coverage", "paragraph_index": 942, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.18.1Test Purpose and Environment", "paragraph_index": 943, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.18.2Test Requirements", "paragraph_index": 952, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.19HD – FDD Intra frequency case for UE Category NB1 In-Band mode in enhanced coverage", "paragraph_index": 964, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.19.1Test Purpose and Environment", "paragraph_index": 965, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.19.2Test Requirements", "paragraph_index": 974, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.20E-UTRAN FDD – FDD Intra frequency case for UE Category 1bis", "paragraph_index": 986, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.20.1Test Purpose and Environment", "paragraph_index": 987, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.20.2Test Requirements", "paragraph_index": 994, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.21E-UTRAN TDD – TDD Intra frequency case for UE Category 1bis", "paragraph_index": 1006, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.21.1Test Purpose and Environment", "paragraph_index": 1007, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.21.2Test Requirements", "paragraph_index": 1014, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.22E-UTRAN FDD – FDD Intra frequency case for UE configured with highSpeedEnhancedMeasFlag", "paragraph_index": 1026, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.22.1Test Purpose and Environment", "paragraph_index": 1027, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.22.2Test Requirements", "paragraph_index": 1034, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.23E-UTRAN TDD – TDD Intra frequency case for UE configured with highSpeedEnhancedMeasFlag", "paragraph_index": 1046, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.23.1Test Purpose and Environment", "paragraph_index": 1047, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.23.2Test Requirements", "paragraph_index": 1054, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.24HD – FDD Inter frequency case for UE Category NB1 In-Band mode in enhanced coverage", "paragraph_index": 1066, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.24.1Test Purpose and Environment", "paragraph_index": 1067, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.24.2Test Requirements", "paragraph_index": 1076, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.25E-UTRAN FDD – FDD Inter frequency case for Cat-M1 UE in normal coverage", "paragraph_index": 1088, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.25.1Test Purpose and Environment", "paragraph_index": 1089, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.25.2Test Requirements", "paragraph_index": 1096, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.26E-UTRAN HD – FDD Inter frequency case for Cat-M1 UE in normal coverage", "paragraph_index": 1108, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.26.1Test Purpose and Environment", "paragraph_index": 1109, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.26.2Test Requirements", "paragraph_index": 1116, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.27E-UTRAN TDD – FDD Inter frequency case for Cat-M1 UE in normal coverage", "paragraph_index": 1128, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.27.1Test Purpose and Environment", "paragraph_index": 1129, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.27.2Test Requirements", "paragraph_index": 1136, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.28E-UTRAN FDD – FDD Inter frequency case for Cat-M1 UE in enhanced coverage", "paragraph_index": 1148, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.28.1Test Purpose and Environment", "paragraph_index": 1149, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.28.2Test Requirements", "paragraph_index": 1156, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.29E-UTRAN HD – FDD Inter frequency case for Cat-M1 UE in enhanced coverage", "paragraph_index": 1168, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.29.1Test Purpose and Environment", "paragraph_index": 1169, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.29.2Test Requirements", "paragraph_index": 1176, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.30E-UTRAN TDD Inter frequency case for Cat-M1 UE in enhanced coverage", "paragraph_index": 1188, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.30.1Test Purpose and Environment", "paragraph_index": 1189, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.30.2Test Requirements", "paragraph_index": 1196, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.31E-UTRAN FDD – FDD Inter frequency case for UE Category 1bis", "paragraph_index": 1208, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.31.1Test Purpose and Environment", "paragraph_index": 1209, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.31.2Test Requirements", "paragraph_index": 1216, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.32E-UTRAN FDD – TDD Inter frequency case for UE Category 1bis", "paragraph_index": 1228, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.32.1Test Purpose and Environment", "paragraph_index": 1229, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.32.2Test Requirements", "paragraph_index": 1236, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.33E-UTRAN TDD – FDD Inter frequency case for UE Category 1bis", "paragraph_index": 1248, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.33.1Test Purpose and Environment", "paragraph_index": 1249, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.33.2Test Requirements", "paragraph_index": 1256, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.34E-UTRAN TDD – TDD: Inter frequency case for UE Category 1bis", "paragraph_index": 1268, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.34.1Test Purpose and Environment", "paragraph_index": 1269, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.34.2Test Requirements", "paragraph_index": 1276, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.35E-UTRAN TDD - TDD Intra frequency case for UE Category NB1 In-Band mode in normal coverage", "paragraph_index": 1288, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.35.1Test Purpose and Environment", "paragraph_index": 1289, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.35.2Test Requirements", "paragraph_index": 1298, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.36E-UTRAN TDD – TDD Intra frequency case for UE Category NB1 In-Band mode in enhanced coverage", "paragraph_index": 1310, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.36.1Test Purpose and Environment", "paragraph_index": 1311, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.36.2Test Requirements", "paragraph_index": 1320, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.37E-UTRAN TDD – TDD Inter frequency case for UE Category NB1 In-Band mode in enhanced coverage", "paragraph_index": 1332, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.37.1Test Purpose and Environment", "paragraph_index": 1333, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.37.2Test Requirements", "paragraph_index": 1342, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.38HD – FDD Intra frequency case for UE Category NB1 In-Band mode in normal coverage with serving cell RRM measurement relaxation", "paragraph_index": 1355, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.38.1Test Purpose and Environment", "paragraph_index": 1356, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.38.2Test Requirements", "paragraph_index": 1365, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.39E-UTRAN FDD – FDD Intra frequency case for UE configured with highSpeedEnhMeasFlag2-r16", "paragraph_index": 1377, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.39.1Test Purpose and Environment", "paragraph_index": 1378, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.39.2Test Requirements", "paragraph_index": 1385, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.40E-UTRAN TDD – TDD Intra frequency case for UE configured with highSpeedEnhMeasFlag2-r16", "paragraph_index": 1397, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.40.1Test Purpose and Environment", "paragraph_index": 1398, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.40.2Test Requirements", "paragraph_index": 1405, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.41 HD – FDD Intra frequency case for UE Category NB1 In-Band mode in normal coverage with UE specific DRX", "paragraph_index": 1418, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.41.1Test Purpose and Environment", "paragraph_index": 1419, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.41.2Test Requirements", "paragraph_index": 1428, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.42HD – FDD Intra frequency case for UE Category NB1 In-Band mode in enhanced coverage with UE specific DRX", "paragraph_index": 1440, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.42.1Test Purpose and Environment", "paragraph_index": 1441, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.42.2Test Requirements", "paragraph_index": 1450, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.43HD – FDD Inter frequency case for UE Category NB1 In-Band mode in enhanced coverage with UE specific DRX", "paragraph_index": 1463, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.43.1Test Purpose and Environment", "paragraph_index": 1464, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.43.2Test Requirements", "paragraph_index": 1473, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.44E-UTRAN TDD - TDD Intra frequency case for UE Category NB1 In-Band mode in normal coverage with UE specific DRX", "paragraph_index": 1486, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.44.1Test Purpose and Environment", "paragraph_index": 1487, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.44.2Test Requirements", "paragraph_index": 1496, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.45E-UTRAN TDD – TDD Intra frequency case for UE Category NB1 In-Band mode in enhanced coverage with UE specific DRX", "paragraph_index": 1508, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.45.1Test Purpose and Environment", "paragraph_index": 1509, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.45.2Test Requirements", "paragraph_index": 1518, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.46E-UTRAN TDD – TDD Inter frequency case for UE Category NB1 In-Band mode in enhanced coverage with UE specific DRX", "paragraph_index": 1531, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.46.1Test Purpose and Environment", "paragraph_index": 1532, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.46.2Test Requirements", "paragraph_index": 1541, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.47HD – FDD Intra frequency case for UE Category NB1 In-Band mode in normal coverage with serving cell RRM measurement relaxation with UE specific DRX", "paragraph_index": 1554, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.47.1Test Purpose and Environment", "paragraph_index": 1555, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.47.2Test Requirements", "paragraph_index": 1564, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.48E-UTRAN FD-FDD RSS based Intra frequency case for Cat-M1 UE in normal coverage", "paragraph_index": 1577, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.48.1Test Purpose and Environment", "paragraph_index": 1578, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.48.2Test Requirements", "paragraph_index": 1586, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.49E-UTRAN HD-FDD RSS based Intra frequency case for Cat-M1 UE in normal coverage", "paragraph_index": 1598, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.49.1Test Purpose and Environment", "paragraph_index": 1599, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.49.2Test Requirements", "paragraph_index": 1608, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.50E-UTRAN TDD RSS based Intra frequency case for Cat-M1 UE in normal coverage", "paragraph_index": 1620, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.50.1Test Purpose and Environment", "paragraph_index": 1621, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.50.2Test Requirements", "paragraph_index": 1629, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.51 E-UTRAN FD-FDD RSS based Intra frequency case for Cat-M1 UE in enhanced coverage", "paragraph_index": 1641, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.51.1Test Purpose and Environment", "paragraph_index": 1642, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.51.2Test Requirements", "paragraph_index": 1650, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.52 E-UTRAN HD-FDD RSS based Intra frequency case for Cat-M1 UE in enhanced coverage", "paragraph_index": 1662, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.52.1Test Purpose and Environment", "paragraph_index": 1663, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.52.2Test Requirements", "paragraph_index": 1671, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.53 E-UTRAN TDD RSS based Intra frequency case for Cat-M1 UE in enhanced coverage", "paragraph_index": 1683, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.53.1Test Purpose and Environment", "paragraph_index": 1684, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.53.2Test Requirements", "paragraph_index": 1692, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.54E-UTRAN FDD – FDD Intra frequency case for Cat-M1 UE in normal coverage with serving cell RRM measurement relaxation", "paragraph_index": 1704, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.54.1Test Purpose and Environment", "paragraph_index": 1705, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.54.2Test Requirements", "paragraph_index": 1712, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.55E-UTRAN HD – FDD Intra frequency case for Cat-M1 UE in normal coverage with serving cell RRM measurement relaxation", "paragraph_index": 1725, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.55.1Test Purpose and Environment", "paragraph_index": 1726, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.55.2Test Requirements", "paragraph_index": 1733, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.56E-UTRAN TDD – TDD Intra frequency case for Cat-M1 UE in normal coverage", "paragraph_index": 1745, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.56.1Test Purpose and Environment", "paragraph_index": 1746, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.2.56.2Test Requirements", "paragraph_index": 1753, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3E-UTRAN to UTRAN Cell Re-Selection", "paragraph_index": 1765, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1E-UTRAN FDD – UTRAN FDD:", "paragraph_index": 1766, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.1EUTRA FDD-UTRA FDD cell reselection: UTRA FDD is of higher priority", "paragraph_index": 1767, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.1.1Test Purpose and Environment", "paragraph_index": 1768, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.1.2Test Requirements", "paragraph_index": 1777, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.2EUTRA FDD-UTRA FDD cell reselection: UTRA FDD is of lower priority", "paragraph_index": 1787, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.2.1Test Purpose and Environment", "paragraph_index": 1788, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.2.2Test Requirements", "paragraph_index": 1797, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.3EUTRA FDD-UTRA FDD cell reselection in fading propagation conditions: UTRA FDD is of lower priority", "paragraph_index": 1806, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.3.1Test Purpose and Environment", "paragraph_index": 1807, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.3.2Test Requirements", "paragraph_index": 1816, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.4EUTRA FDD-UTRA FDD cell reselection: UTRA FDD is of lower priority for 5MHz bandwidth", "paragraph_index": 1827, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.4.1Test Purpose and Environment", "paragraph_index": 1828, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.4.2Test Requirements", "paragraph_index": 1834, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.5Idle mode FDD to UTRA FDD interRAT reselection", "paragraph_index": 1836, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.5.1Test Purpose and Environment", "paragraph_index": 1837, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.1.5.2Test Requirements", "paragraph_index": 1847, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.2E-UTRAN FDD – UTRAN TDD:", "paragraph_index": 1858, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.2.1Test Purpose and Environment", "paragraph_index": 1859, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.2.1.1Void", "paragraph_index": 1860, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.2.1.21.28Mcps TDD option", "paragraph_index": 1861, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.2.1.3Void", "paragraph_index": 1871, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.2.2Test Requirements", "paragraph_index": 1872, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.2.2.11.28Mcps TDD option", "paragraph_index": 1873, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.2AE-UTRA FDD to UTRA TDD cell re-selection for IncMon", "paragraph_index": 1883, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.2A.1Test Purpose and Environment", "paragraph_index": 1884, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.2A.2Test Requirements", "paragraph_index": 1896, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.3E-UTRAN TDD – UTRAN FDD:", "paragraph_index": 1908, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.3.1Test Purpose and Environment", "paragraph_index": 1909, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.3.2Test Requirements", "paragraph_index": 1918, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.3AIdle mode TDD to UTRA FDD interRAT reselection", "paragraph_index": 1927, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.3A.1Test Purpose and Environment", "paragraph_index": 1928, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.3A.2Test Requirements", "paragraph_index": 1940, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4E-UTRAN TDD – UTRAN TDD:", "paragraph_index": 1951, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.1E-UTRA to UTRA TDD cell re-selection: UTRA is of higher priority", "paragraph_index": 1952, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.1.1Test Purpose and Environment", "paragraph_index": 1953, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.1.2Test Requirements", "paragraph_index": 1966, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.2E-UTRA to UTRA TDD cell re-selection: UTRA is of lower priority", "paragraph_index": 1979, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.2.1Test Purpose and Environment", "paragraph_index": 1980, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.2.2Test Requirements", "paragraph_index": 1993, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.3EUTRA TDD-UTRA TDD cell reselection in fading propagation conditions: UTRA TDD is of lower priority", "paragraph_index": 2005, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.3.1Test Purpose and Environment", "paragraph_index": 2006, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.3.2Test Requirements", "paragraph_index": 2015, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.4E-UTRA TDD to UTRA TDD cell re-selection for IncMon", "paragraph_index": 2026, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.4.1Test Purpose and Environment", "paragraph_index": 2027, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.3.4.4.2Test Requirements", "paragraph_index": 2039, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.4E-UTRAN to GSM Cell Re-Selection", "paragraph_index": 2051, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.4.1E-UTRAN FDD – GSM:", "paragraph_index": 2052, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.4.1.1Test Purpose and Environment", "paragraph_index": 2053, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.4.1.2Test Requirements", "paragraph_index": 2062, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.4.2E-UTRAN TDD – GSM:", "paragraph_index": 2070, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.4.2.1Test Purpose and Environment", "paragraph_index": 2071, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.4.2.2Test Requirements", "paragraph_index": 2080, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.5E-UTRAN to HRPD Cell Re-Selection", "paragraph_index": 2088, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.5.1E-UTRAN FDD – HRPD", "paragraph_index": 2089, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.5.1.1E-UTRAN FDD – HRPD Cell Reselection: HRPD is of Lower Priority", "paragraph_index": 2090, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.5.1.1.1Test Purpose and Environment", "paragraph_index": 2091, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.5.1.1.2Test Requirements", "paragraph_index": 2101, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.5.2E-UTRAN TDD – HRPD", "paragraph_index": 2110, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.5.2.1E-UTRAN TDD – HRPD Cell Reselection: HRPD is of Lower Priority", "paragraph_index": 2111, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.5.2.1.1Test Purpose and Environment", "paragraph_index": 2112, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.5.2.1.2Test Requirements", "paragraph_index": 2122, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.6E-UTRAN to cdma2000 1X Cell Re-Selection", "paragraph_index": 2131, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.6.1E-UTRAN FDD – cdma2000 1X", "paragraph_index": 2132, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.6.1.1E-UTRAN FDD – cdma2000 1X Cell Reselection: cdma2000 1X is of Lower Priority", "paragraph_index": 2133, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.6.1.1.1Test Purpose and Environment", "paragraph_index": 2134, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.6.1.1.2Test Requirements", "paragraph_index": 2144, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.6.2E-UTRAN TDD – cdma2000 1X", "paragraph_index": 2153, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.6.2.1E-UTRAN TDD –cdma2000 1X Cell Reselection: cdma2000 1X is of Lower Priority", "paragraph_index": 2154, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.6.2.1.1Test Purpose and Environment", "paragraph_index": 2155, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.6.2.1.2Test Requirements", "paragraph_index": 2165, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7Idle State Positioning Measurement for UE category NB1", "paragraph_index": 2174, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.1HD – FDD Intra frequency case for UE Category NB1 standalone mode in enhanced coverage", "paragraph_index": 2175, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.1.1Test Purpose and Environment", "paragraph_index": 2176, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.1.2Test Requirements", "paragraph_index": 2190, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.2HD – FDD Inter frequency case for UE Category NB1 standalone mode in enhanced coverage", "paragraph_index": 2201, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.2.1Test Purpose and Environment", "paragraph_index": 2202, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.4.2Test Requirements", "paragraph_index": 2216, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.3TDD Intra frequency case for UE Category NB1 standalone mode in enhanced coverage", "paragraph_index": 2227, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.3.1Test Purpose and Environment", "paragraph_index": 2228, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.3.2Test Requirements", "paragraph_index": 2241, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.4TDD Inter frequency case for UE Category NB1 standalone mode in enhanced coverage", "paragraph_index": 2252, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.4.1Test Purpose and Environment", "paragraph_index": 2253, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.4.7.4.2Test Requirements", "paragraph_index": 2266, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5E-UTRAN RRC CONNECTED Mode Mobility", "paragraph_index": 2277, "style": "Heading1"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1E-UTRAN Handover", "paragraph_index": 2278, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.1E-UTRAN FDD - FDD Intra frequency handover", "paragraph_index": 2279, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.1.1Test Purpose and Environment", "paragraph_index": 2280, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.1.2Test Requirements", "paragraph_index": 2288, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.2E-UTRAN TDD - TDD Intra frequency handover", "paragraph_index": 2295, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.2.1Test Purpose and Environment", "paragraph_index": 2296, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.2.2Test Requirements", "paragraph_index": 2304, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.3E-UTRAN FDD – FDD Inter frequency handover", "paragraph_index": 2311, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.3.1Test Purpose and Environment", "paragraph_index": 2312, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.3.2Test Requirements", "paragraph_index": 2320, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.4E-UTRAN TDD – TDD Inter frequency handover", "paragraph_index": 2327, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.4.1Test Purpose and Environment", "paragraph_index": 2328, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.4.2Test Requirements", "paragraph_index": 2336, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.5E-UTRAN FDD – FDD Inter frequency handover: unknown target cell", "paragraph_index": 2343, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.5.1Test Purpose and Environment", "paragraph_index": 2344, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.5.2Test Requirements", "paragraph_index": 2352, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.6 E-UTRAN TDD – TDD Inter frequency handover; unknown Target Cell", "paragraph_index": 2359, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.6.1Test Purpose and Environment", "paragraph_index": 2360, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.6.2Test Requirements", "paragraph_index": 2367, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.7E-UTRAN FDD – TDD Inter frequency handover", "paragraph_index": 2374, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.7.1Test Purpose and Environment", "paragraph_index": 2375, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.7.2Test Requirements", "paragraph_index": 2385, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.8E-UTRAN TDD – FDD Inter frequency handover", "paragraph_index": 2392, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.8.1Test Purpose and Environment", "paragraph_index": 2393, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.8.2Test Requirements", "paragraph_index": 2403, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.9E-UTRAN FDD - FDD Intra frequency handover for 5MHz bandwidth", "paragraph_index": 2410, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.9.1Test Purpose and Environment", "paragraph_index": 2411, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.9.2Test Requirements", "paragraph_index": 2417, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.10E-UTRAN FDD - FDD Intra frequency handover for UE category 0", "paragraph_index": 2419, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.10.1Test Purpose and Environment", "paragraph_index": 2420, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.10.2Test Requirements", "paragraph_index": 2428, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.11E-UTRAN HD - FDD Intra frequency handover for UE category 0", "paragraph_index": 2435, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.11.1Test Purpose and Environment", "paragraph_index": 2436, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.11.2Test Requirements", "paragraph_index": 2444, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.12E-UTRAN TDD - TDD Intra frequency handover for UE category 0", "paragraph_index": 2451, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.12.1Test Purpose and Environment", "paragraph_index": 2452, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.12.2Test Requirements", "paragraph_index": 2460, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.13E-UTRAN FDD-FDD Intra frequency handover for Cat-M1 UEs in CEModeA", "paragraph_index": 2467, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.13.1Test Purpose and Environment", "paragraph_index": 2468, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.13.2Test Requirements", "paragraph_index": 2477, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.14E-UTRAN HD-FDD Intra frequency handover for Cat-M1 UEs in CEModeA", "paragraph_index": 2484, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.14.1Test Purpose and Environment", "paragraph_index": 2485, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.14.2Test Requirements", "paragraph_index": 2494, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.15E-UTRAN TDD Intra frequency handover for Cat-M1 UEs in CEModeA", "paragraph_index": 2501, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.15.1Test Purpose and Environment", "paragraph_index": 2502, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.15.2Test Requirements", "paragraph_index": 2511, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.16E-UTRAN FDD-FDD Intra frequency handover for Cat-M1 UEs in CEModeB", "paragraph_index": 2518, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.16.1Test Purpose and Environment", "paragraph_index": 2519, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.16.2Test Requirements", "paragraph_index": 2528, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.17E-UTRAN HD-FDD Intra frequency handover for Cat-M1 UEs in CEModeB", "paragraph_index": 2535, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.17.1Test Purpose and Environment", "paragraph_index": 2536, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.17.2Test Requirements", "paragraph_index": 2545, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.18E-UTRAN TDD Intra frequency handover for Cat-M1 UEs in CEModeB", "paragraph_index": 2552, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.18.1Test Purpose and Environment", "paragraph_index": 2553, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.18.2Test Requirements", "paragraph_index": 2562, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.19E-UTRAN FDD - FDD Intra frequency handover for UE Category 1bis", "paragraph_index": 2569, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.19.1Test Purpose and Environment", "paragraph_index": 2570, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.19.2Test Requirements", "paragraph_index": 2578, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.20E-UTRAN TDD - TDD Intra frequency handover for UE Category 1bis", "paragraph_index": 2585, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.20.1Test Purpose and Environment", "paragraph_index": 2586, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.20.2Test Requirements", "paragraph_index": 2594, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.21E-UTRAN FDD - FDD Intra frequency RACH-less handover", "paragraph_index": 2601, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.21.1Test Purpose and Environment", "paragraph_index": 2602, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.21.2Test Requirements", "paragraph_index": 2610, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.22E-UTRAN TDD - TDD Intra frequency RACH-less handover", "paragraph_index": 2617, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.22.1Test Purpose and Environment", "paragraph_index": 2618, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.22.2Test Requirements", "paragraph_index": 2626, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.23E-UTRAN FDD – FDD Inter frequency RACH-less handover", "paragraph_index": 2633, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.23.1Test Purpose and Environment", "paragraph_index": 2634, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.23.2Test Requirements", "paragraph_index": 2642, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.24E-UTRAN TDD – TDD Inter frequency RACH-less handover", "paragraph_index": 2649, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.24.1Test Purpose and Environment", "paragraph_index": 2650, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.24.2Test Requirements", "paragraph_index": 2658, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.25E-UTRAN FDD - FDD Intra frequency make-before-break handover", "paragraph_index": 2665, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.25.1Test Purpose and Environment", "paragraph_index": 2666, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.25.2Test Requirements", "paragraph_index": 2674, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.26E-UTRAN TDD - TDD Intra frequency make-before-break handover", "paragraph_index": 2683, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.26.1Test Purpose and Environment", "paragraph_index": 2684, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.26.2Test Requirements", "paragraph_index": 2692, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.27E-UTRAN FDD inter frequency handover for Cat-M1 UEs in CEModeA", "paragraph_index": 2701, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.27.1Test Purpose and Environment", "paragraph_index": 2702, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.27.2Test Requirements", "paragraph_index": 2711, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.28E-UTRAN HD-FDD inter frequency handover for Cat-M1 UEs in CEModeA", "paragraph_index": 2718, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.28.1Test Purpose and Environment", "paragraph_index": 2719, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.28.2Test Requirements", "paragraph_index": 2728, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.29E-UTRAN TDD inter frequency handover for Cat-M1 UEs in CEModeA", "paragraph_index": 2735, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.29.1Test Purpose and Environment", "paragraph_index": 2736, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.29.2Test Requirements", "paragraph_index": 2745, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.30E-UTRAN FDD inter frequency handover for Cat-M1 UEs in CEModeB", "paragraph_index": 2752, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.30.1Test Purpose and Environment", "paragraph_index": 2753, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.30.2Test Requirements", "paragraph_index": 2762, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.31E-UTRAN HD-FDD inter frequency handover for Cat-M1 UEs in CEModeB", "paragraph_index": 2769, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.31.1Test Purpose and Environment", "paragraph_index": 2770, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.31.2Test Requirements", "paragraph_index": 2779, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.32E-UTRAN TDD inter frequency handover for Cat-M1 UEs in CEModeB", "paragraph_index": 2786, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.32.1Test Purpose and Environment", "paragraph_index": 2787, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.32.2Test Requirements", "paragraph_index": 2796, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.33E-UTRAN FDD-FDD Intra frequency handover for Cat-M1 UEs in CEModeA without SFN acquisition", "paragraph_index": 2803, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.33.1Test Purpose and Environment", "paragraph_index": 2804, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.13.2Test Requirements", "paragraph_index": 2813, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.34E-UTRAN HD-FDD Intra frequency handover for Cat-M1 UEs in CEModeA without SFN acquisition", "paragraph_index": 2820, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.34.1Test Purpose and Environment", "paragraph_index": 2821, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.34.2Test Requirements", "paragraph_index": 2830, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.35E-UTRAN TDD Intra frequency handover for Cat-M1 UEs in CEModeA without SFN acquisition", "paragraph_index": 2837, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.35.1Test Purpose and Environment", "paragraph_index": 2838, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.35.2Test Requirements", "paragraph_index": 2847, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.36E-UTRAN FDD-FDD Intra frequency handover for Cat-M1 UEs in CEModeB without SFN acquisition", "paragraph_index": 2854, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.36.1Test Purpose and Environment", "paragraph_index": 2855, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.36.2Test Requirements", "paragraph_index": 2864, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.37E-UTRAN HD-FDD Intra frequency handover for Cat-M1 UEs in CEModeB without SFN acquisition", "paragraph_index": 2871, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.37.1Test Purpose and Environment", "paragraph_index": 2872, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.37.2Test Requirements", "paragraph_index": 2881, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.38E-UTRAN TDD Intra frequency handover for Cat-M1 UEs in CEModeB without SFN acquisition", "paragraph_index": 2888, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.38.1Test Purpose and Environment", "paragraph_index": 2889, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.38.2Test Requirements", "paragraph_index": 2898, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.39E-UTRAN FDD - FDD Intra frequency handover with direct SCell activation", "paragraph_index": 2905, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.39.1Test Purpose and Environment", "paragraph_index": 2906, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.39.2Test Requirements", "paragraph_index": 2916, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.40E-UTRAN TDD - TDD Intra frequency handover with direct SCell activation", "paragraph_index": 2931, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.40.1Test Purpose and Environment", "paragraph_index": 2932, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.40.2Test Requirements", "paragraph_index": 2942, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.41E-UTRAN FDD – FDD Intra-band Inter-frequency sync DAPS handover", "paragraph_index": 2956, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.41.1Test Purpose and Environment", "paragraph_index": 2957, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.41.2Test Requirements", "paragraph_index": 2969, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.42E-UTRAN FDD – FDD Intra-band Inter-frequency async DAPS handover", "paragraph_index": 2979, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.42.1Test Purpose and Environment", "paragraph_index": 2980, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.42.2Test Requirements", "paragraph_index": 2992, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.43E-UTRAN FDD – FDD Inter-band Inter-frequency sync DAPS handover", "paragraph_index": 3002, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.43.1Test Purpose and Environment", "paragraph_index": 3003, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.43.2Test Requirements", "paragraph_index": 3015, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.44E-UTRAN FDD – FDD Inter-band Inter-frequency async DAPS handover", "paragraph_index": 3025, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.44.1Test Purpose and Environment", "paragraph_index": 3026, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.44.2Test Requirements", "paragraph_index": 3038, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.45E-UTRAN FDD - FDD Intra frequency DAPS handover", "paragraph_index": 3048, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.45.1Test Purpose and Environment", "paragraph_index": 3049, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.45.1Test Requirements", "paragraph_index": 3060, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.46E-UTRAN TDD - TDD Intra frequency DAPS handover", "paragraph_index": 3072, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.46.1Test Purpose and Environment", "paragraph_index": 3073, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.46.2Test Requirements", "paragraph_index": 3084, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.47E-UTRAN FDD - FDD Intra frequency conditional handover", "paragraph_index": 3095, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.47.1Test Purpose and Environment", "paragraph_index": 3096, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.47.2Test Requirements", "paragraph_index": 3104, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.48E-UTRAN TDD - TDD Intra frequency conditional handover", "paragraph_index": 3113, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.48.1Test Purpose and Environment", "paragraph_index": 3114, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.48.2Test Requirements", "paragraph_index": 3122, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.49E-UTRAN FDD - FDD Inter frequency conditional handover", "paragraph_index": 3131, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.49.1Test Purpose and Environment", "paragraph_index": 3132, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.49.2Test Requirements", "paragraph_index": 3140, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.50E-UTRAN TDD - TDD Inter frequency conditional handover", "paragraph_index": 3149, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.50.1Test Purpose and Environment", "paragraph_index": 3150, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.50.2Test Requirements", "paragraph_index": 3158, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.51E-UTRAN FDD - TDD Inter frequency conditional handover", "paragraph_index": 3167, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.51.1Test Purpose and Environment", "paragraph_index": 3168, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.51.2Test Requirements", "paragraph_index": 3178, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.52E-UTRAN TDD - FDD Inter frequency conditional handover", "paragraph_index": 3187, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.152.1Test Purpose and Environment", "paragraph_index": 3188, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.52.2Test Requirements", "paragraph_index": 3199, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.53E-UTRAN TDD – TDD Intra-band Inter-frequency sync DAPS handover", "paragraph_index": 3208, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.53.1Test Purpose and Environment", "paragraph_index": 3209, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.53.2Test Requirements", "paragraph_index": 3221, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.54E-UTRAN TDD – TDD Inter-band Inter-frequency sync DAPS handover", "paragraph_index": 3231, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.54.1Test Purpose and Environment", "paragraph_index": 3232, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.54.2Test Requirements", "paragraph_index": 3244, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.55E-UTRAN FDD - TDD inter-band inter-frequency synchronous DAPS handover", "paragraph_index": 3254, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.55.1Test Purpose and Environment", "paragraph_index": 3255, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.56E-UTRAN TDD - FDD inter-band inter-frequency synchronous DAPS handover", "paragraph_index": 3281, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.56.1Test Purpose and Environment", "paragraph_index": 3282, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.56.2Test Requirements", "paragraph_index": 3297, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.57E-UTRAN FDD – TDD Inter-band Inter-frequency async DAPS handover", "paragraph_index": 3309, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.57.1Test Purpose and Environment", "paragraph_index": 3310, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.57.2Test Requirements", "paragraph_index": 3322, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.58E-UTRAN TDD – FDD Inter-band Inter-frequency async DAPS handover", "paragraph_index": 3332, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.58.1Test Purpose and Environment", "paragraph_index": 3333, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.1.58.2Test Requirements", "paragraph_index": 3345, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2E-UTRAN Handover to other RATs", "paragraph_index": 3355, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.1E-UTRAN FDD – UTRAN FDD Handover", "paragraph_index": 3356, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.1.1Test Purpose and Environment", "paragraph_index": 3357, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.1.2Test Requirements", "paragraph_index": 3367, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.2E-UTRAN TDD - UTRAN FDD Handover", "paragraph_index": 3374, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.2.1Test Purpose and Environment", "paragraph_index": 3375, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.2.2Test Requirements", "paragraph_index": 3384, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.3 E-UTRAN FDD- GSM Handover", "paragraph_index": 3391, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.3.1Test Purpose and Environment", "paragraph_index": 3392, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.3.2Test Requirements", "paragraph_index": 3403, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.4E-UTRAN TDD - UTRAN TDD Handover", "paragraph_index": 3411, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.4.1Test Purpose and Environment", "paragraph_index": 3412, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.4.1.1Void", "paragraph_index": 3413, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.4.1.21.28 Mcps TDD option", "paragraph_index": 3414, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.4.1.3Void", "paragraph_index": 3425, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.4.2Test Requirements", "paragraph_index": 3426, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.4.2.1Void", "paragraph_index": 3427, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.4.2.21.28 Mcps TDD option", "paragraph_index": 3428, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.4.2.3Void", "paragraph_index": 3437, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.5E-UTRAN FDD – UTRAN TDD Handover", "paragraph_index": 3438, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.5.1Test Purpose and Environment", "paragraph_index": 3439, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.5.1.3Void", "paragraph_index": 3451, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.5.2Test Requirements", "paragraph_index": 3452, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.5.2.1Void", "paragraph_index": 3453, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.5.2.21.28 Mcps TDD option", "paragraph_index": 3454, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.5.2.3Void", "paragraph_index": 3463, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.6E-UTRAN TDD - GSM Handover", "paragraph_index": 3464, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.6.1Test Purpose and Environment", "paragraph_index": 3465, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.6.2Test Requirements", "paragraph_index": 3476, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.7E-UTRAN FDD – UTRAN FDD Handover; Unknown Target Cell", "paragraph_index": 3484, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.7.1Test Purpose and Environment", "paragraph_index": 3485, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.7.2Test Requirements", "paragraph_index": 3494, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.8E-UTRAN FDD - GSM Handover; Unknown Target Cell", "paragraph_index": 3501, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.8.1Test Purpose and Environment", "paragraph_index": 3502, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.8.2Test Requirements", "paragraph_index": 3511, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.9E-UTRAN TDD - GSM Handover; Unknown Target Cell", "paragraph_index": 3519, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.9.1Test Purpose and Environment", "paragraph_index": 3520, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.9.2Test Requirements", "paragraph_index": 3529, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.10E-UTRAN TDD to UTRAN TDD handover: unknown target cell", "paragraph_index": 3537, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.10.1Test Purpose and Environment", "paragraph_index": 3538, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.10.2Test Requirements", "paragraph_index": 3548, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.10AE-UTRAN FDD – UTRAN FDD Multicarrier Handover with two target cells", "paragraph_index": 3557, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.10A.1Test Purpose and Environment", "paragraph_index": 3558, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.10A.2Test Requirements", "paragraph_index": 3568, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.10BE-UTRAN TDD – UTRAN FDD Multicarrier Handover with two target cells", "paragraph_index": 3575, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.10B.1Test Purpose and Environment", "paragraph_index": 3576, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.10B.2Test Requirements", "paragraph_index": 3586, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.11E-UTRAN FDD – UTRAN FDD Handover for 5MHz Bandwidth", "paragraph_index": 3593, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.11.1Test Purpose and Environment", "paragraph_index": 3594, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.2.11.2Test Requirements", "paragraph_index": 3601, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3E-UTRAN Handover to Non-3GPP RATs", "paragraph_index": 3603, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.1E-UTRAN FDD – HRPD Handover", "paragraph_index": 3604, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.1.1Test Purpose and Environment", "paragraph_index": 3605, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.1.2Test Requirements", "paragraph_index": 3615, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.2E-UTRAN FDD – cdma2000 1X Handover", "paragraph_index": 3622, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.2.1Test Purpose and Environment", "paragraph_index": 3623, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.2.2Test Requirements", "paragraph_index": 3633, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.3E-UTRAN FDD – HRPD Handover; Unknown Target Cell", "paragraph_index": 3639, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.3.1Test Purpose and Environment", "paragraph_index": 3640, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.3.2Test Requirements", "paragraph_index": 3650, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.4E-UTRAN FDD – cdma2000 1X Handover; Unknown Target cell", "paragraph_index": 3656, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.4.1Test Purpose and Environment", "paragraph_index": 3657, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.4.2Test Requirements", "paragraph_index": 3667, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.5E-UTRAN TDD – HRPD Handover", "paragraph_index": 3673, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.5.1Test Purpose and Environment", "paragraph_index": 3674, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.5.2Test Requirements", "paragraph_index": 3684, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.6E-UTRAN TDD – cdma2000 1X Handover", "paragraph_index": 3691, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.6.1Test Purpose and Environment", "paragraph_index": 3692, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.5.3.6.2Test Requirements", "paragraph_index": 3702, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6RRC Connection Control", "paragraph_index": 3708, "style": "Heading1"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1RRC Re-establishment", "paragraph_index": 3709, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.1E-UTRAN FDD Intra-frequency RRC Re-establishment", "paragraph_index": 3710, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.1.1Test Purpose and Environment", "paragraph_index": 3711, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.1.2Test Requirements", "paragraph_index": 3718, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.2E-UTRAN FDD Inter-frequency RRC Re-establishment", "paragraph_index": 3732, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.2.1Test Purpose and Environment", "paragraph_index": 3733, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.2.2Test Requirements", "paragraph_index": 3740, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.3E-UTRAN TDD Intra-frequency RRC Re-establishment", "paragraph_index": 3754, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.3.1Test Purpose and Environment", "paragraph_index": 3755, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.3.2Test Requirements", "paragraph_index": 3762, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.4E-UTRAN TDD Inter-frequency RRC Re-establishment", "paragraph_index": 3776, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.4.1Test Purpose and Environment", "paragraph_index": 3777, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.4.2Test Requirements", "paragraph_index": 3784, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.5E-UTRAN FDD Intra-frequency RRC Re-establishment for 5MHz bandwidth", "paragraph_index": 3798, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.5.1Test Purpose and Environment", "paragraph_index": 3799, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.5.2Test Requirements", "paragraph_index": 3806, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.6E-UTRAN FD-FDD Intra-frequency RRC Re-establishment for UE category 0", "paragraph_index": 3808, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.6.1Test Purpose and Environment", "paragraph_index": 3809, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.6.2Test Requirements", "paragraph_index": 3816, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.7E-UTRAN HD-FDD Intra-frequency RRC Re-establishment for UE category 0", "paragraph_index": 3830, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.7.1Test Purpose and Environment", "paragraph_index": 3831, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.7.2Test Requirements", "paragraph_index": 3838, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.8E-UTRAN TDD Intra-frequency RRC Re-establishment for UE category 0", "paragraph_index": 3852, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.8.1Test Purpose and Environment", "paragraph_index": 3853, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.8.2Test Requirements", "paragraph_index": 3860, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.9E-UTRAN FD-FDD Intra-frequency RRC Re-establishment for Cat-M1 UE in CEModeA", "paragraph_index": 3874, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.9.1Test Purpose and Environment", "paragraph_index": 3875, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.9.2Test Requirements", "paragraph_index": 3882, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.10E-UTRAN HD-FDD Intra-frequency RRC Re-establishment for Cat-M1 UE in CEModeA", "paragraph_index": 3896, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.10.1Test Purpose and Environment", "paragraph_index": 3897, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.10.2Test Requirements", "paragraph_index": 3904, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.11E-UTRAN TDD Intra-frequency RRC Re-establishment for Cat-M1 UE in CEModeA", "paragraph_index": 3918, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.11.1Test Purpose and Environment", "paragraph_index": 3919, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.11.2Test Requirements", "paragraph_index": 3926, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.12E-UTRAN FD-FDD Intra-frequency RRC Re-establishment for Cat-M1 UE in CEModeB", "paragraph_index": 3940, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.12.1Test Purpose and Environment", "paragraph_index": 3941, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.12.2Test Requirements", "paragraph_index": 3948, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.13E-UTRAN HD-FDD Intra-frequency RRC Re-establishment for Cat-M1 UE in CEModeB", "paragraph_index": 3962, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.13.1Test Purpose and Environment", "paragraph_index": 3963, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.13.2Test Requirements", "paragraph_index": 3970, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.14E-UTRAN TDD Intra-frequency RRC Re-establishment for Cat-M1 UE in CEModeB", "paragraph_index": 3984, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.14.1Test Purpose and Environment", "paragraph_index": 3985, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.14.2Test Requirements", "paragraph_index": 3992, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.15HD-FDD Intra-frequency RRC Re-establishment for UE category NB1 in In-Band mode under enhanced coverage", "paragraph_index": 4006, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.15.1Test Purpose and Environment", "paragraph_index": 4007, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.15.2Test Requirements", "paragraph_index": 4016, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.16HD-FDD Inter-frequency RRC Re-establishment for UE category NB1 in In-Band mode under normal coverage", "paragraph_index": 4029, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.16.1Test Purpose and Environment", "paragraph_index": 4030, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.16.2Test Requirements", "paragraph_index": 4039, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.17E-UTRAN FD-FDD Inter-frequency RRC Re-establishment for Cat-M1 UE in CEModeA", "paragraph_index": 4052, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.17.1Test Purpose and Environment", "paragraph_index": 4053, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.17.2Test Requirements", "paragraph_index": 4060, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.18E-UTRAN HD-FDD Inter-frequency RRC Re-establishment for Cat-M1 UE in CEModeA", "paragraph_index": 4074, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.18.1Test Purpose and Environment", "paragraph_index": 4075, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.18.2Test Requirements", "paragraph_index": 4082, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.19E-UTRAN TDD-TDD Inter-frequency RRC Re-establishment for Cat-M1 UE in CEModeA", "paragraph_index": 4096, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.19.1Test Purpose and Environment", "paragraph_index": 4097, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.19.2Test Requirements", "paragraph_index": 4104, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.20E-UTRAN FD-FDD Inter-frequency RRC Re-establishment for Cat-M1 UE in CEModeB", "paragraph_index": 4118, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.20.1Test Purpose and Environment", "paragraph_index": 4119, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.20.2Test Requirements", "paragraph_index": 4126, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.21E-UTRAN HD-FDD Inter-frequency RRC Re-establishment for Cat-M1 UE in CEModeB", "paragraph_index": 4140, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.21.1Test Purpose and Environment", "paragraph_index": 4141, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.21.2Test Requirements", "paragraph_index": 4148, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.22E-UTRAN TDD Inter-frequency RRC Re-establishment for Cat-M1 UE in CEModeB", "paragraph_index": 4162, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.22.1Test Purpose and Environment", "paragraph_index": 4163, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.22.2Test Requirements", "paragraph_index": 4170, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.23E-UTRAN TDD Inter-frequency RRC Re-establishment for UE category NB1 in In-Band mode under normal coverage", "paragraph_index": 4184, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.23.1Test Purpose and Environment", "paragraph_index": 4185, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.23.2Test Requirements", "paragraph_index": 4194, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.24E-UTRAN TDD - TDD Intra-frequency RRC Re-establishment for UE category NB1 in In-Band mode under enhanced coverage", "paragraph_index": 4207, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.24.1Test Purpose and Environment", "paragraph_index": 4208, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.1.24.2Test Requirements", "paragraph_index": 4217, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2Random Access", "paragraph_index": 4230, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.1E-UTRAN FDD – Contention Based Random Access Test", "paragraph_index": 4231, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.1.1Test Purpose and Environment", "paragraph_index": 4232, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.1.2Test Requirements", "paragraph_index": 4239, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.1.2.1Random Access Response Reception", "paragraph_index": 4241, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.1.2.2No Random Access Response Reception", "paragraph_index": 4247, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.1.2.3Receiving a NACK on msg3", "paragraph_index": 4252, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.1.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4255, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.1.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4258, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.1.2.6Contention Resolution Timer expiry", "paragraph_index": 4261, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.2E-UTRAN FDD – Non-Contention Based Random Access Test", "paragraph_index": 4264, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.2.1Test Purpose and Environment", "paragraph_index": 4265, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.2.2Test Requirements", "paragraph_index": 4272, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.2.2.1Random Access Response Reception", "paragraph_index": 4274, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.2.2.2No Random Access Response Reception", "paragraph_index": 4280, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.3E-UTRAN TDD – Contention Based Random Access Test", "paragraph_index": 4285, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.3.1Test Purpose and Environment", "paragraph_index": 4286, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.3.2Test Requirements", "paragraph_index": 4293, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.3.2.1Random Access Response Reception", "paragraph_index": 4295, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.3.2.2No Random Access Response reception", "paragraph_index": 4301, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.3.2.3Receiving a NACK on msg3", "paragraph_index": 4306, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.3.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4309, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.3.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4312, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.3.2.6Contention Resolution Timer expiry", "paragraph_index": 4315, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.4E-UTRAN TDD – Non-Contention Based Random Access Test", "paragraph_index": 4318, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.4.1Test Purpose and Environment", "paragraph_index": 4319, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.4.2Test Requirements", "paragraph_index": 4326, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.4.2.1Random Access Response Reception", "paragraph_index": 4328, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.4.2.2No Random Access Response Reception", "paragraph_index": 4334, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.5E-UTRAN FDD – Contention Based Random Access Test for 5MHz bandwidth", "paragraph_index": 4339, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.5.1Test Purpose and Environment", "paragraph_index": 4340, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.5.2Test Requirements", "paragraph_index": 4345, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.6E-UTRAN FDD – Non-contention Based Random Access Test for 5MHz bandwidth", "paragraph_index": 4347, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.6.1Test Purpose and Environment", "paragraph_index": 4348, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.6.2Test Requirements", "paragraph_index": 4353, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.7E-UTRAN FDD – Non-Contention Based Random Access Test For SCell", "paragraph_index": 4355, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.7.1Test Purpose and Environment", "paragraph_index": 4356, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.7.2Test Requirements", "paragraph_index": 4363, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.7.2.1Random Access Response Reception", "paragraph_index": 4365, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.7.2.2No Random Access Response Reception", "paragraph_index": 4371, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.7.2.3Stop Preamble transmission if maximum number of preamble transmission counter has been reached", "paragraph_index": 4376, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.8E-UTRAN TDD – Non-Contention Based Random Access Test For SCell", "paragraph_index": 4381, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.8.1Test Purpose and Environment", "paragraph_index": 4382, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.8.2Test Requirements", "paragraph_index": 4390, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.8.2.1Random Access Response Reception", "paragraph_index": 4392, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.8.2.2No Random Access Response Reception", "paragraph_index": 4398, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.8.2.3Stop Preamble transmission if maximum number of preamble transmission counter has been reached", "paragraph_index": 4403, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.93DL/3UL TDD CA Non-Contention Based Random Access Test for 2 SCells", "paragraph_index": 4408, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.9.1Test Purpose and Environment", "paragraph_index": 4409, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.9.2Test Requirements", "paragraph_index": 4417, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.9.2.1Random Access Response Reception", "paragraph_index": 4419, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.9.2.2No Random Access Response Reception", "paragraph_index": 4432, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.9.2.3Stop Preamble transmission if maximum number of preamble transmission counter has been reached", "paragraph_index": 4443, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.10E-UTRAN FDD Contention Based Random Access Test for Cat-M1 UEs in Normal Coverage", "paragraph_index": 4454, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.10.1Test Purpose and Environment", "paragraph_index": 4455, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.10.2Test Requirements", "paragraph_index": 4464, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.10.2.1Random Access Response Reception", "paragraph_index": 4466, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.10.2.2No Random Access Response Reception", "paragraph_index": 4472, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.10.2.3Receiving a NACK on msg3", "paragraph_index": 4477, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.10.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4480, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.10.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4483, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.10.2.6Contention Resolution Timer expiry", "paragraph_index": 4486, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.10.2.7PRACH Resource Selection", "paragraph_index": 4489, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.11E-UTRAN HD-FDD Contention Based Random Access Test for Cat-M1 UEs in Normal Coverage", "paragraph_index": 4492, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.11.1Test Purpose and Environment", "paragraph_index": 4493, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.11.2Test Requirements", "paragraph_index": 4502, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.11.2.1Random Access Response Reception", "paragraph_index": 4504, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.11.2.2No Random Access Response Reception", "paragraph_index": 4510, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.11.2.3Receiving a NACK on msg3", "paragraph_index": 4515, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.11.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4518, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.11.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4521, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.11.2.6Contention Resolution Timer expiry", "paragraph_index": 4524, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.11.2.7PRACH Resource Selection", "paragraph_index": 4527, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.12E-UTRAN TDD Contention Based Random Access Test for Cat-M1 UEs in Normal Coverage", "paragraph_index": 4530, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.12.1Test Purpose and Environment", "paragraph_index": 4531, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.12.2Test Requirements", "paragraph_index": 4540, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.12.2.1Random Access Response Reception", "paragraph_index": 4542, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.12.2.2No Random Access Response Reception", "paragraph_index": 4548, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.12.2.3Receiving a NACK on msg3", "paragraph_index": 4553, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.12.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4556, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.12.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4559, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.12.2.6Contention Resolution Timer expiry", "paragraph_index": 4562, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.12.2.7PRACH Resource Selection", "paragraph_index": 4565, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.13E-UTRAN FDD Contention Based Random Access Test for Cat-M1 UEs in Enhanced Coverage", "paragraph_index": 4568, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.13.1Test Purpose and Environment", "paragraph_index": 4569, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.13.2Test Requirements", "paragraph_index": 4578, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.13.2.1Random Access Response Reception", "paragraph_index": 4580, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.13.2.2No Random Access Response Reception", "paragraph_index": 4586, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.13.2.3Receiving a NACK on msg3", "paragraph_index": 4591, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.13.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4594, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.13.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4597, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.13.2.6Contention Resolution Timer expiry", "paragraph_index": 4600, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.13.2.7PRACH Resource Selection", "paragraph_index": 4603, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.14E-UTRAN HD-FDD Contention Based Random Access Test for Cat-M1 UEs in Enhanced Coverage", "paragraph_index": 4606, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.14.1Test Purpose and Environment", "paragraph_index": 4607, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.14.2Test Requirements", "paragraph_index": 4616, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.14.2.1Random Access Response Reception", "paragraph_index": 4618, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.14.2.2No Random Access Response Reception", "paragraph_index": 4624, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.14.2.3Receiving a NACK on msg3", "paragraph_index": 4629, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.14.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4632, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.14.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4635, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.14.2.6Contention Resolution Timer expiry", "paragraph_index": 4638, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.14.2.7PRACH Resource Selection", "paragraph_index": 4641, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.15E-UTRAN TDD Contention Based Random Access Test for Cat-M1 UEs in Enhanced Coverage", "paragraph_index": 4644, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.15.1Test Purpose and Environment", "paragraph_index": 4645, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.15.2Test Requirements", "paragraph_index": 4654, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.15.2.1Random Access Response Reception", "paragraph_index": 4656, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.15.2.2No Random Access Response Reception", "paragraph_index": 4662, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.15.2.3Receiving a NACK on msg3", "paragraph_index": 4667, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.15.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4670, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.15.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4673, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.15.2.6Contention Resolution Timer expiry", "paragraph_index": 4676, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.15.2.7PRACH Resource Selection", "paragraph_index": 4679, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.16Contention Based Random Access Test for UE category NB1 UEs In-band mode in normal coverage", "paragraph_index": 4682, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.16.1Test Purpose and Environment", "paragraph_index": 4683, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.16.2Test Requirements", "paragraph_index": 4694, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.16.2.1Random Access Response Reception", "paragraph_index": 4696, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.16.2.2No Random Access Response Reception", "paragraph_index": 4702, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.16.2.3Receiving a NACK on msg3", "paragraph_index": 4707, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.16.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4710, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.16.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4713, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.16.2.6Contention Resolution Timer expiry", "paragraph_index": 4716, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.16.2.7NPRACH Resource Selection", "paragraph_index": 4719, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.17Contention Based Random Access Test for UE category NB1 UEs In-band mode in Enhanced Coverage", "paragraph_index": 4722, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.17.1Test Purpose and Environment", "paragraph_index": 4723, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.17.2Test Requirements", "paragraph_index": 4734, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.17.2.1Random Access Response Reception", "paragraph_index": 4736, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.17.2.2No Random Access Response Reception", "paragraph_index": 4742, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.17.2.3Receiving a NACK on msg3", "paragraph_index": 4747, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.17.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4750, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.17.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4753, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.17.2.6Contention Resolution Timer expiry", "paragraph_index": 4756, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.17.2.7NPRACH Resource Selection", "paragraph_index": 4759, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.18Contention Based Random Access on Non-anchor Carrier Test for UE category NB1 UEs In-band mode in Enhanced Coverage", "paragraph_index": 4762, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.18.1Test Purpose and Environment", "paragraph_index": 4763, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.18.2Test Requirements", "paragraph_index": 4772, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.18.2.1Random Access Response Reception", "paragraph_index": 4774, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.18.2.2No Random Access Response Reception", "paragraph_index": 4780, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.18.2.3Receiving a NACK on msg3", "paragraph_index": 4785, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.18.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4788, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.18.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4791, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.18.2.6Contention Resolution Timer expiry", "paragraph_index": 4794, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.18.2.7NPRACH Resource Selection", "paragraph_index": 4797, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.19TDD Contention Based Random Access Test for UE category NB1 UEs In-band mode in normal coverage", "paragraph_index": 4800, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.19.1Test Purpose and Environment", "paragraph_index": 4801, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.19.2Test Requirements", "paragraph_index": 4810, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.19.2.1Random Access Response Reception", "paragraph_index": 4812, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.19.2.2No Random Access Response Reception", "paragraph_index": 4818, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.19.2.3Receiving a NACK on msg3", "paragraph_index": 4823, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.19.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4826, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.19.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4829, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.19.2.6Contention Resolution Timer expiry", "paragraph_index": 4832, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.19.2.7NPRACH Resource Selection", "paragraph_index": 4835, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.20TDD Contention Based Random Access Test for UE category NB1 UEs In-band mode in enhanced coverage", "paragraph_index": 4838, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.20.1Test Purpose and Environment", "paragraph_index": 4839, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.20.2Test Requirements", "paragraph_index": 4848, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.20.2.1Random Access Response Reception", "paragraph_index": 4850, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.20.2.2No Random Access Response Reception", "paragraph_index": 4856, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.20.2.3Receiving a NACK on msg3", "paragraph_index": 4861, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.20.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4864, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.20.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4867, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.20.2.6Contention Resolution Timer expiry", "paragraph_index": 4870, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.20.2.7NPRACH Resource Selection", "paragraph_index": 4873, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.21TDD Contention Based Random Access on Non-anchor Carrier Test for UE category NB1 UEs In-band mode in Enhanced Coverage", "paragraph_index": 4876, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.21.1Test Purpose and Environment", "paragraph_index": 4877, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.21.2Test Requirements", "paragraph_index": 4886, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.21.2.1Random Access Response Reception", "paragraph_index": 4888, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.21.2.2No Random Access Response Reception", "paragraph_index": 4894, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.21.2.3Receiving a NACK on msg3", "paragraph_index": 4899, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.21.2.4Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 4902, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.21.2.5Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 4905, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.21.2.6Contention Resolution Timer expiry", "paragraph_index": 4908, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.2.21.2.7NPRACH Resource Selection", "paragraph_index": 4911, "style": "Heading5"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3RRC Connection Release with Redirection", "paragraph_index": 4914, "style": "Heading2"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.1Redirection from E-UTRAN FDD to UTRAN FDD", "paragraph_index": 4915, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.1.1Test Purpose and Environment", "paragraph_index": 4916, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.1.2Test Requirements", "paragraph_index": 4925, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.2Redirection from E-UTRAN TDD to UTRAN FDD", "paragraph_index": 4936, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.2.1Test Purpose and Environment", "paragraph_index": 4937, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.2.2Test Requirements", "paragraph_index": 4946, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.3Redirection from E-UTRAN FDD to GERAN when System Information is provided", "paragraph_index": 4957, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.3.1Test Purpose and Environment", "paragraph_index": 4958, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.3.2Test Requirements", "paragraph_index": 4967, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.4Redirection from E-UTRAN TDD to GERAN when System Information is provided", "paragraph_index": 4976, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.4.1Test Purpose and Environment", "paragraph_index": 4977, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.4.2Test Requirements", "paragraph_index": 4986, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.5E-UTRA TDD RRC connection release redirection to UTRA TDD", "paragraph_index": 4993, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.5.1Test Purpose and Environment", "paragraph_index": 4994, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.5.2Test Requirements", "paragraph_index": 5003, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.6E-UTRA FDD RRC connection release redirection to UTRA TDD", "paragraph_index": 5012, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.6.1Test Purpose and Environment", "paragraph_index": 5013, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A. 6.3.6.2Test Requirements", "paragraph_index": 5022, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.7E-UTRA TDD RRC connection release redirection to UTRA TDD without SI provided", "paragraph_index": 5031, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.7.1Test Purpose and Environment", "paragraph_index": 5032, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.7.2Test Requirements", "paragraph_index": 5041, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.8E-UTRA FDD RRC connection release redirection to UTRA TDD without SI provided", "paragraph_index": 5050, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.8.1Test Purpose and Environment", "paragraph_index": 5051, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.8.2Test Requirements", "paragraph_index": 5060, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.9Redirection from E-UTRAN FDD to UTRAN FDD without System Information", "paragraph_index": 5069, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.9.1Test Purpose and Environment", "paragraph_index": 5070, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.9.2Test Requirements", "paragraph_index": 5079, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.10Redirection from E-UTRAN FDD to GERAN when System Information is not provided", "paragraph_index": 5090, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.10.1Test Purpose and Environment", "paragraph_index": 5091, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.10.2Test Requirements", "paragraph_index": 5100, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.11Redirection from E-UTRAN TDD to GERAN when System Information is not provided", "paragraph_index": 5109, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.11.1Test Purpose and Environment", "paragraph_index": 5110, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.11.2Test Requirements", "paragraph_index": 5119, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.12E-UTRAN TDD RRC connection release redirection to UTRAN FDD without SI provided", "paragraph_index": 5128, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.12.1Test Purpose and Environment", "paragraph_index": 5129, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.12.2Test Requirements", "paragraph_index": 5138, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.13Redirection from E-UTRA to NR FR1 for redcap UE", "paragraph_index": 5148, "style": "Heading3"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.13.1Test Purpose and Environment", "paragraph_index": 5149, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.13.2Test Parameters", "paragraph_index": 5151, "style": "Heading4"}
+{"source": "36133-j50_sA.1-A.6.docx", "section": "", "title": "A.6.3.13.3Test Requirements", "paragraph_index": 5162, "style": "Heading4"}

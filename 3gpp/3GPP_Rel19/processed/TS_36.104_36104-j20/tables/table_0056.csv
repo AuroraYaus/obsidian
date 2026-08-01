@@ -1,0 +1,4 @@
+"Frequency offset of measurement filter 3dB point, f","Frequency offset of measurement filter centre frequency, f_offset",Minimum requirement,Measurement bandwidth (Note 8)
+0 MHz  f < 3 MHz,0.05 MHz  f_offset < 3.05 MHz,,100 kHz
+3 MHz  f < 6 MHz,3.05 MHz  f_offset < 6.05 MHz,-40 dBm,100 kHz
+6 MHz  f  fmax,6.5 MHz  f_offset < f_offsetmax,(Note 11),1MHz

@@ -1,0 +1,6 @@
+SCH Ês/Iot,,CRS measurement bandwidth Note2 [RB],CRS Ês/Iot,Tmeasure_inter_FS3_CRS_DRX [ms]
+0 ≤ SCH Ês/Iot,,<25,-6 ≤ CRS Ês/Iot,"(5*Nfreq +M*N)*Max{TDMTC_periodicity, MGRP, DRX cycle length}"
+-6 ≤ SCH Ês/Iot < 0,,<25,,"(20*Nfreq +M*N)*Max{TDMTC_periodicity, MGRP, DRX cycle length}"
+0 ≤ SCH Ês/Iot,,25,0 ≤ CRS Ês/Iot,"(1*Nfreq +M*N)*Max{TDMTC_periodicity, MGRP, DRX cycle length}"
+-6 ≤ SCH Ês/Iot < 0,,25,,"(4*Nfreq +M*N)*Max{TDMTC_periodicity, MGRP, DRX cycle length}"
+NOTE 1:Discovery signal occasion duration (ds-OccasionDuration) is 1 ms.NOTE 2:The requirements for measurement bandwidth 25 RB are optional.,,,,

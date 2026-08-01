@@ -1,0 +1,4 @@
+Configuration,Physical Layer Measurement period: TMeasurement_Period _Inter_FDD [ms] (normal performance),Physical Layer Measurement period: TMeasurement_Period _Inter_FDD [ms] (reduced performance),Measurement bandwidth [RB]
+0,"1440 x Kn x Nfreq,n","1440 x Kr x Nfreq,r",6
+1 (Note),"960 x Kn x  Nfreq,n","960 x Kr x  Nfreq,r",50
+Note:This configuration is optional,,,

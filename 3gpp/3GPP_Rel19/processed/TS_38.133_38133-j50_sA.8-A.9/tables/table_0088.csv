@@ -1,0 +1,11 @@
+Parameter,Unit,Value,Comment
+RF Channel Number,,1,HD carrier in Band n47 or n38
+Channel Bandwidth (BWchannel) Note 1,MHz,"20 (NPRB,c = 50) or40 (NPRB,c = 100)",
+SCS,kHz,30,
+Active cell,,None,
+Active SyncRef UE,,None,
+V2X sidelink communication preconfiguration,,As specified in section A.3.21.2,IE values unless specified otherwise in this test.
+PSCCH Reference Measurement Channel,,CC.1A HD,As specified in table A.3.21.3-1
+PSSCH Reference Measurement Channel,,CD.1A HD,As specified in table A.3.21.3-2
+Propagation condition,,AWGN,
+NOTE 1:The UE is only required to be tested in one of the supported test configurations.,,,

@@ -1,0 +1,8 @@
+Reported value,Measured quantity value,Unit
+CSI_RSRP_00,CSI_RSRP  -140,dBm
+CSI_RSRP _01,-140  CSI_RSRP < -139,dBm
+CSI_RSRP _02,-139  CSI_RSRP < -138,dBm
+…,…,…
+CSI_RSRP _95,-46  CSI_RSRP < -45,dBm
+CSI_RSRP _96,-45  CSI_RSRP < -44,dBm
+CSI_RSRP _97,-44  CSI_RSRP,dBm

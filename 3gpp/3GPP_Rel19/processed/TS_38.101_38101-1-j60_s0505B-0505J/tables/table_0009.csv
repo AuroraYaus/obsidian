@@ -1,0 +1,30 @@
+SUL band combination with CA,Uplink CAconfiguration or SUL configuration,NR Band,Channel bandwidth (MHz) (NOTE 1),Bandwidth combination set
+CA_n41A-n95A_n79A-n98A,SUL_n41A-n95ASUL_n79A-n98ACA_n41A-n79A,n41,"10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100",0
+,,n79,"10, 20, 30,40, 50, 60, 70, 80, 90, 100",
+,,n95,"5, 10, 15",
+,,n98,"5, 10, 15, 20, 25, 30, 40",
+CA_n41A-n98A_n79A-n95A,SUL_n41A-n98ASUL_n79A-n95ACA_n41A-n79A,n41,"10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100",0
+,,n79,"10, 20, 30,40, 50, 60, 70, 80, 90, 100",
+,,n95,"5, 10, 15",
+,,n98,"5, 10, 15, 20, 25, 30, 40",
+CA_n41A-n83A_n79A-n98A,SUL_n41A-n83ASUL_n79A-n98ACA_n41A-n79A,n41,"10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100",0
+,,n79,"10, 20, 30,40, 50, 60, 70, 80, 90, 100",
+,,n83,"5, 10, 15, 20,30",
+,,n98,"5, 10, 15, 20, 25, 30, 40",
+CA_n41A-n83A_n79A-n95A,SUL_n41A-n83ASUL_n79A-n95ACA_n41A-n79A,n41,"10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100",0
+,,n79,"10, 20, 30,40, 50, 60, 70, 80, 90, 100",
+,,n83,"5, 10, 15, 20,30",
+,,n95,"5, 10, 15",
+CA_n41C_n95A-n98A,SUL_n41A-n95ASUL_n41A-n98ACA_n41C,n41,CA_n41C_BCS4 and 5,4 and 5
+,,n95,See n95 channel bandwidths in Table 5.3.5-1 for each carrier,
+,,n98,See n98 channel bandwidths in Table 5.3.5-1 for each carrier,
+CA_n78C_n80A-n84A,SUL_n78A-n80ASUL_n78A-n84ACA_n78C3,n78,CA_n78C_BCS1,0
+,,n80,"5, 10, 15, 20, 25, 30, 40",
+,,n84,"5, 10, 15, 20, 25, 30, 40, 50",
+CA_n78C_n81A-n84A,SUL_n78A-n81ASUL_n78A-n84ACA_n78C3,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100CA_n78C_BCS1",0
+,,n81,"5, 10, 15, 20",
+,,n84,"5, 10, 15, 20, 25, 30, 40, 50",
+CA_n78C_n84A-n89A,SUL_n78A-n84ASUL_n78A-n89ACA_n78C,n78,CA_n78C_BCS1,0
+,,n84,"5, 10, 15, 20, 25, 30, 40, 50",
+,,n89,"5, 10, 15, 20",
+NOTE 1:The SCS of each channel bandwidth for NR band refers to Table 5.3.5-1.NOTE 2:Void.NOTE 3:Minimum requirements for Power Class 2 are applicable for this uplink combination with up to 2Tx antenna connectors in this downlink/uplink combination.,,,,

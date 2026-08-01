@@ -1,0 +1,11 @@
+Parameter,Units,TRP0,,,,TRP1,,,
+,,SSB0,,SSB2,,SSB1,,SSB3,
+,,T1,T2,T1,T2,T1,T2,T1,T2
+Angle of arrival configuration,,Setup 7 according to clause A.3.15.7,,,,,,,
+,,AoA1,,AoA2,,AoA2,,AoA3,
+Assumption for UE beams Note 6,,Rough,,,,,,,
+Ês,dBm/SCS,-80.6,-80.6,-Infinity,-80.6,-80.6,-80.6,-Infinity,-80.6
+SS B_RP Note 2,dBm/ SCS,-80.6,-80.6,-Infinity,-80.6,-80.6,-80.6,-Infinity,-80.6
+BB Note 7,dB,8.3,8.3,-Infinity,8.3,8.3,8.3,-Infinity,8.3
+IoNote2,dBm/95.04 MHz Note4,-56.0,-56.0,- Infinity,-56.0,-56.0,-56.0,- Infinity,-56.0
+"NOTE 1:VoidNOTE 2:SS B_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3:VoidNOTE 4:Equivalent power received by an antenna with 0 dBi gain at the centre of the quiet zoneNOTE 5:As observed with 0 dBi gain antenna at the center of the quiet zone.NOTE 6: Information about types of UE beam is given in clause B.2.1.3 and does not limit UE implementation or test system implementation.NOTE 7:Calculation of Es/IotBB includes the effect of UE internal noise up to the value assumed for the associated Refsens requirement in clause 7.3.2 of TS 38.101-2 [19], and an allowance of 1 dB for UE multi-band relaxation factor ΔMBP from TS 38.101-2 [19] Table 6.2.1.3-4.",,,,,,,,,

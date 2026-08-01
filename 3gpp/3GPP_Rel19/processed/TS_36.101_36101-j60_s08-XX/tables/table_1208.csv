@@ -1,0 +1,18 @@
+Parameter,,Unit,Test 1
+Bandwidth,,MHz,10
+Transmission mode,,,6
+Propagation channel,,,EVA5
+Precoding granularity,,PRB,50
+Correlation and antenna configuration,,,Low 2 x 2
+Downlink power allocation,,dB,-3
+,,dB,-3
+,,dB,0
+,,dB[mW/15kHz],-98
+Reporting mode,,,PUSCH 3-1
+Reporting interval,,ms,1
+PMI delay (Note 2),,ms,8
+Measurement channel,,,R. 10 FDD
+OCNG Pattern,,,OP.1 FDD
+Max number of HARQ transmissions,,,4
+Redundancy version coding sequence,,,"{0,1,2,3}"
+"Note 1:For random precoder selection, the precoder shall be updated in each TTI (1 ms granularity).Note 2:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).",,,

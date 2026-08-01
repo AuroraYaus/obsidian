@@ -1,0 +1,31 @@
+parameter,,,Unit,TP 1,TP 2,TP 3
+Downlink power allocation,,,dB,0,0,0
+,,,dB,0 (Note 1),0,0
+,,,dB,-3,-3,-3
+Beamforming model,,,,As specified in clause B.4.1,As specified in clause B.4.1,N/A
+Cell-specific reference signals,,,,"Antenna ports 0,1","Antenna ports 0,1","Antenna ports 0,1"
+CSI reference signals 0,,,,"Antenna ports {15,16}",N/A,N/A
+CSI-RS 0 periodicity and subframe offset TCSI-RS / ∆CSI-RS,,,Subframes,5 / 4,N/A,N/A
+CSI reference signal 0 configuration,,,,0,N/A,N/A
+CSI reference signals 1,,,,N/A,"Antenna ports {15,16}",N/A
+CSI-RS 1 periodicity and subframe offset TCSI-RS / ∆CSI-RS,,,Subframes,N/A,5 / 4,N/A
+CSI reference signal 1 configuration,,,,N/A,8,N/A
+Zero-power CSI-RS 0 configurationICSI-RS /ZeroPower CSI-RS bitmap,,,Subframes/bitmap,4/0010000000000000,N/A,N/A
+Zero-power CSI-RS1 configurationICSI-RS /ZeroPower CSI-RS bitmapS,,,Subframes/bitmap,N/A,4/0000010000000000,N/A
+(Note 2),,,dB,Reference Value in Table 8.3.2.4.5-3,Reference Value in Table 8.3.2.4.5-3,8.45
+at antenna port,,,dBm/15kHz,-98,-98,N/A
+BWChannel,,,MHz,10,10,10
+Cyclic Prefix,,,,Normal,Normal,Normal
+Cell Id,,,,0,1,128
+Number of control OFDM symbols,,,,2,2,2
+Timing offset to TP 1,,,,N/A,-0.5,3
+Frequency offset to TP 1,,,Hz,N/A,200,-100
+Number of allocated resource blocks,,,PRB,50,50,N/A
+PDSCH transmission mode,,,,10,10,9
+Probability of occurrence of PDSCH transmission(Note 3),,,%,30,70,N/A
+Symbols for unused PRBs,,,,OCNG (Note 4),OCNG (Note 4),N/A
+Interference model,,,,N/A,N/A,As specified in clause B.5.4
+Probability of occurrence of transmission in interference cells,,,%,N/A,N/A,20
+Probability of occurrence of transmission rank in interfering cells,Rank 1,,%,N/A,N/A,80
+,Rank 2,,%,N/A,N/A,20
+"Note 1:Note 2:of TP 1 is set the same as that of TP 2.Note 3:PDSCH transmission from TP 1 and TP 2 shall be randomly determined independently for each subframe. Probabilities of occurrence of PDSCH transmission from TPs are specified.Note 4:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated.",,,,,,

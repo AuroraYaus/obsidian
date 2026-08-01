@@ -1,0 +1,13 @@
+Parameter,,Value,,
+,,SCS 15 kHz (µ=0),SCS 30 kHz (µ=1),SCS 60 kHz (µ=2)
+TDD Slot Configuration pattern (Note 1),,DDDSU,7DS2U,14DS1S24U
+Special Slot Configuration (Note 2),,10D+2G+2U,6D+4G+4U,"S1=12D+2G, S2=6G+8U"
+referenceSubcarrierSpacing,,15 kHz,30 kHz,60 kHz
+UL-DL configuration,dl-UL-TransmissionPeriodicity,5 ms,5 ms,5 ms
+,nrofDownlinkSlots,3,7,14
+,nrofDownlinkSymbols,10,6,12
+,nrofUplinkSlot,1,2,4
+,nrofUplinkSymbols,2,4,8
+Number of HARQ Processes,,8,8,16
+The number of slots between PDSCH and corresponding HARQ-ACK information (Note 3),,"K1 = 4 if mod(i,5) = 0K1 = 3 if mod(i,5) = 1K1 = 2 if mod(i,5) = 2where i is slot index per frame; i = {0,…,9}","K1 = 8 if mod(i,10) = 0K1 = 7 if mod(i,10) = 1K1 = 6 if mod(i,10) = 2K1 = 5 if mod(i,10) = 3K1 = 4 if mod(i,10) = 4K1 = 3 if mod(i,10) = 5K1 = 2 if mod(i,10) = 6where i is slot index per frame; i = {0,…,19}","K1 = 13 if mod(i,20) = 2K1 = 12 if mod(i,20) = 3K1 = 11 if mod(i,20) = 4K1 = 10 if mod(i,20) = 5K1 = 9 if mod(i,20) = 6K1 = 8 if mod(i,20) = 7K1 = 7 if mod(i,20) = 8K1 = 6 if mod(i,20) = 9K1 = 6 if mod(i,20) = 10K1 = 6 if mod(i,20) = 11K1 = 6 if mod(i,20) = 12K1 = 6 if mod(i,20) = 13where i is slot index per frame; i = {0,…,39}"
+"NOTE 1:D denotes a slot with all DL symbols; S denotes a slot with a mix of DL, UL and guard symbols; U denotes a slot with all UL symbols. The field is for information.NOTE 2:D, G, U denote DL, guard and UL symbols, respectively. The field is for information.NOTE 3:i is the slot index per frame.NOTE 4:A -2ms or +3ms time offset to the NR configuration pattern relative to the E-UTRA UL-DL configuration must be apply in the TDD intra-band EN-DC.",,,,

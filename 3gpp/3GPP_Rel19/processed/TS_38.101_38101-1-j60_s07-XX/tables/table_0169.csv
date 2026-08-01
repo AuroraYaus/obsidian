@@ -1,0 +1,4 @@
+Operating band,Parameter,Unit,Range1,Range 2,Range 3
+,Pinterferer,dBm,-45,-30,-15
+n46,Finterferer (CW),MHz,N/A,-200 < f – FDL_low ≤ -3*BWChannel_CAor3*BWChannel_CA ≤ f – FDL_high < 200,"1 ≤ f ≤ FDL_low – MAX(200,3*BWChannel_CA)orFDL_high + MAX(200,3*BWChannel_CA)≤ f ≤ 12750"
+"NOTE 1:The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm, for FInterferer > 4200 MHz.",,,,,

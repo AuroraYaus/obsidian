@@ -1,0 +1,10 @@
+Angle of arrival,NR operating bands,Minimum SSB_RP Note 2,SSB Ês/Iot
+,,dBm / SCSSSB,dB
+,,SCSSSB = 120 kHz,
+All angles Note 1,n257,"-101,2",≥1
+,n258,"-101,2",
+,n259,-95.7,
+,n260,-96.9,
+,n261,-101.2,
+,n262,"-93,5",
+"NOTE 1:For UEs that support multiple FR2 bands, the Minimum SSB_RP values for all angles are increased by MBS,n, the UE multi-band relaxation factor in dB specified in clause 6.2.1.NOTE 2:Values specified at the radiated requirements reference point to give minimum SSB Ês/Iot, with no applied noise.",,,

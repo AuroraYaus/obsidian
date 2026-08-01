@@ -1,0 +1,10 @@
+Channel Bandwidth[MHz],Carrier centre frequency (FC)[MHz],Parameters,Region A,,,Region B,,Region C,
+10,1462 < FC ≤1465,RBstart,43-50,,,,,,
+,,LCRB [RBs],≤ 3,> 3 and ≤ 25,≥ 32,,,,
+,,A-MPR [dB],≤ 4,≤ 3,≤ 3,,,,
+15,1456.3 < FC ≤ 1462.5,RBstart,56-75,,,64-75,,60-75,
+,,LCRB [RBs],≥ 36,,,≥ 13 and ≤ 35,,≥ 5 and ≤ 12,< 5
+,,A-MPR [dB],≤ 3,,,≤ 2,,≤ 3,≤ 4
+20,1450.8 < FC ≤ 1460,RBstart,71-100,,,>76,,,
+,,LCRB [RBs],≥ 36,,,≥ 7 and ≤ 35,< 7,,
+,,A-MPR [dB],≤ 3,,,≤ 3,≤ 4,,

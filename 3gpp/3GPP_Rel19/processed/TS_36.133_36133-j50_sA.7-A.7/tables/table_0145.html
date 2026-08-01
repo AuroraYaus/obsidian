@@ -1,0 +1,182 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="2">PCFICH/PDCCH/PHICH parameters</td>
+    <td></td>
+    <td>R.9 TDD</td>
+    <td>As specified in clause A.3.1.2.2.None of the PDCCH are intended for the UE under test</td>
+  </tr>
+  <tr>
+    <td colspan="2">OCNG parameters</td>
+    <td></td>
+    <td>OP.2 TDD</td>
+    <td>As specified in clause A.3.2.2.2.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Serving cell</td>
+    <td></td>
+    <td>Cell 1</td>
+    <td>Cell 1 is on E-UTRA RF channel number 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Neighbor cell</td>
+    <td></td>
+    <td>Cell 2</td>
+    <td>Cell 2 is the aggressor cell on E-UTRA RF channel number 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Neighbor cell ABS configuration</td>
+    <td></td>
+    <td>Non-MBSFN ABS</td>
+    <td>As defined in Table A.3.4.1.2-1</td>
+  </tr>
+  <tr>
+    <td colspan="2">CP length</td>
+    <td></td>
+    <td>Normal</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">E-UTRA RF Channel Number</td>
+    <td></td>
+    <td>1</td>
+    <td>One E-UTRA TDD carrier frequency is used.</td>
+  </tr>
+  <tr>
+    <td colspan="2">E-UTRA Channel Bandwidth (BWchannel)</td>
+    <td>MHz</td>
+    <td>10</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Correlation Matrix and Antenna Configuration</td>
+    <td></td>
+    <td>2x2 Low</td>
+    <td>Correlation Matrix and Antenna Configuration are defined in TS 36.101 [5] Annex B.2.3.2</td>
+  </tr>
+  <tr>
+    <td rowspan="6">Out of sync transmission parameters (Note 1)</td>
+    <td>DCI format</td>
+    <td></td>
+    <td>1A</td>
+    <td>As defined in clause 5.3.3.1.3 in TS 36.212</td>
+  </tr>
+  <tr>
+    <td>Number of Control OFDM symbols</td>
+    <td></td>
+    <td>3</td>
+    <td rowspan="5">Out of sync threshold Qout and the corresponding hypothetical PDCCH/PCFICH transmission parameters are as specified in clause 7.6.1 and Table 7.6.1-1 respectively.</td>
+  </tr>
+  <tr>
+    <td>Aggregation level</td>
+    <td>CCE</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>A, B</td>
+    <td></td>
+    <td>-3</td>
+  </tr>
+  <tr>
+    <td>Ratio of PDCCH to RS EPRE</td>
+    <td>dB</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Ratio of PCFICH to RS EPRE</td>
+    <td>dB</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Physical cell ID PCI</td>
+    <td></td>
+    <td>(PCIcell1-PCIcell2 )mod3 != 0</td>
+    <td>Cell IDs are chosen such that CRS from cells 1 and 2 do not overalp in frequency.</td>
+  </tr>
+  <tr>
+    <td colspan="2">ABS pattern</td>
+    <td></td>
+    <td>10000000001000000000</td>
+    <td>TDD ABS Pattern Info IE is configured in Cell 2 as defined in clause 9.2.54 in TS 36.423 [28]. The first/leftmost bit corresponds to the subframe #0 of the radio frame satisfying SFN mod x = 0, where x is the size of the bit string (20) divided by 10.No MBSFN subframes are cofigured in the ABS subframes.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Time domain measurement resource restriction pattern</td>
+    <td></td>
+    <td>10000000001000000000</td>
+    <td>MeasSubframePattern IE is configured in UE for serving cell measurement as defined in clause 6.3.6 in TS 36.331.</td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX</td>
+    <td></td>
+    <td>OFF</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Layer 3 filtering</td>
+    <td></td>
+    <td>Enabled</td>
+    <td>Counters:N310 = 1; N311 = 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">T310 timer</td>
+    <td>ms</td>
+    <td>0</td>
+    <td>T310 is disabled</td>
+  </tr>
+  <tr>
+    <td colspan="2">T311 timer</td>
+    <td>ms</td>
+    <td>1000</td>
+    <td>T311 is enabled</td>
+  </tr>
+  <tr>
+    <td colspan="2">Periodic CQI reporting mode</td>
+    <td></td>
+    <td>PUCCH 1-0</td>
+    <td>As defined in table 7.2.2-1 in TS 36.213.</td>
+  </tr>
+  <tr>
+    <td colspan="2">CQI reporting periodicity</td>
+    <td>ms</td>
+    <td>1</td>
+    <td>Minimum CQI reporting periodicity</td>
+  </tr>
+  <tr>
+    <td colspan="2">Time offset between cells</td>
+    <td>s</td>
+    <td>3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation channel</td>
+    <td></td>
+    <td>ETU30</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td>0.4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">T3</td>
+    <td>s</td>
+    <td>0.5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="5">Note 1: PDCCH/PCFICH corresponding to the out of sync transmission parameters need not be included in the Reference Measurement Channel.</td>
+  </tr>
+</table>

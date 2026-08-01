@@ -1,0 +1,18 @@
+Parameter,Unit,Test 1,Value,Comment
+,,,,
+NR RF Channel Number,,Config 1,"1,2,3",
+E-UTRA RF Channel Number,,NA,NA,
+Active cell,,Config 1,"NR cell 1 (PCell),NR cell 2(SCell),",
+Neighbour cell,,Config 1,NR cell 3,
+SMTC-SSB parameters on NR RF Channels,,Config 1,SSB.1 FR1,As specified in clause A.3.10.1 for FR1
+A3-Offset,dB,Config 1,-6,
+Hysteresis,dB,Config 1,0,
+A3-Threshold,dBm,Config 1,-11,
+CP length,,Config 1,Normal,
+TimeToTrigger,s,Config 1,0,
+Filter coefficient,,Config 1,0,L3 filtering is not used
+DRX,,Config 1,OFF,DRX is not used
+Time offset between serving and neighbour cells,,Config 1,3 s,Synchronous NR CASynchronous EN-DC
+,,Config 1,3s,Synchronous cells
+T1,s,Config 1,5,
+T2,s,Config 1,2,

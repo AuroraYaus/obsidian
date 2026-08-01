@@ -1,0 +1,4 @@
+Configuration,TEvaluate_CBD_CSI-RS_Redcap (ms),
+"non-DRX, DRX cycle ≤ 320 ms","Max(25, Ceil(MCBD  P  N  PCBD)  TCSI-RS)",
+DRX cycle > 320 ms,Ceil(MCBD  P  N  PCBD)  TDRX,
+NOTE:TCSI-RS is the periodicity of CSI-RS resource in the set . TDRX is the DRX cycle length.q1,,

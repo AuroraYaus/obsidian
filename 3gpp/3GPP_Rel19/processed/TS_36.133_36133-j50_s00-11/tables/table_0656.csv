@@ -1,0 +1,5 @@
+Condition NOTE1,TPSS/SSS_sync_irat_RedCap
+No DRX,"Max(600ms, 7  Max(MGRP, SMTC period))  Nfreq_RedCap"
+DRX cycle ≤ 320ms,"Max(600ms, Ceil(7 *1.5)  Max(MGRP, SMTC period, DRX cycle))  Nfreq_RedCap"
+DRX cycle > 320ms,7  DRX cycle  Nfreq_RedCap
+NOTE 1: DRX or non DRX requirements apply according to the conditions described in section 3.6.1 of TS 38.133 [50].,

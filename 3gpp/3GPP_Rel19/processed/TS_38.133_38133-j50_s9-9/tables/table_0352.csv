@@ -1,0 +1,5 @@
+Configuration,TL1-RSRP_Prediction_Period_SSB (ms)
+non-DRX,"max(TReport, ceil(KBM*M*P*N)*TSSB+Tinference)"
+DRX cycle ≤ 320ms,"max(TReport, ceil(1.5*KBM*M*P*N)*max(TDRX,TSSB) +Tinference)"
+DRX cycle > 320ms,ceil(1.5*KBM*M*P*N)*TDRX+Tinference
+"Note:TSSB = ssb-periodicityServingCell is the periodicity of the SSB-Index configured for L1-RSRP measurement. TDRX is the DRX cycle length. TReport is configured periodicity for reporting. Tinference is the time required for model inference, which is defined by d' as specified according to clause 5.4 in TS 38.214 [26].",

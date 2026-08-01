@@ -1,0 +1,6 @@
+V2X multi-carrier configuration,Parameter,Units,Frequency,,
+,,,Range 1,Range 2,Range 3
+,PInterferer,dBm,-44,-30,-15
+"V2X_47B, V2X_47C, V2X_47C1",FInterferer (CW),MHz,FDL_low -30 toFDL_low -60,FDL_low -60 toFDL_low -85,FDL_low -85 to1 MHz
+,,,FDL_high +30 toFDL_high + 60,FDL_high +60 toFDL_high +85,FDL_high +85 to+12750 MHz
+NOTE 1:The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 4400 MHz.NOTE 2:The requirement is applied for multi-carrier intra-band concurrent receptions when 2 carrier transmissions are activated at the same time.,,,,,

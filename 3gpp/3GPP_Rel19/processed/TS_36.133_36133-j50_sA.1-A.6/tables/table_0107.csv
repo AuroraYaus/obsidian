@@ -1,0 +1,13 @@
+Parameter,Unit,Value
+Reference channel,,D.1 FDD
+Channel bandwidth,MHz,5
+Allocated resource blocks,,2
+Subcarriers per resource block,,12
+Allocated subframes per Discovery period,,1
+DFT-OFDM Symbols per subframe (see note),,11
+Modulation,,QPSK
+Information Bit Payload,,232
+Transport block CRC,Bits,24
+Maximum number of HARQ transmissions,,1
+Binary Channel Bits (see note),Bits,528
+"Note1:PSDCH transmissions are rate-matched for 12 DFT-OFDM symbols per subframe, and the last symbol shall be punctured as per TS 36.211.",,

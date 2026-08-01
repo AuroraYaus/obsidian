@@ -1,0 +1,21 @@
+EN-DC configuration / channel allocations /MSD,,,,,,,
+EN-DC configuration,E-UTRA/NR band,FC (UL)(MHz),Channel bandwidth(MHz),ULallocation (LCRB),FC (DL)(MHz),MSD(dB),Duplex mode
+DC_(n)3AA,3,N/A,15,N/A,1842.5,6.2,FDD
+,n3,1770.0,30,10 (RBstart = 150),1865.0,N/A,
+DC_(n)5AA,5,N/A,5,N/A,871.5,5.2,FDD
+,n5,839,20,20 (RBend = 105),884,N/A,
+DC_(n)8AA,8,N/A,10,N/A,935,[20.4],FDD
+,n8,905,20,20 (RBstart = 86),950,N/A,
+DC_(n)12AA,12,N/A,5,N/A,733.5,4.5,FDD
+,n12,711,10,20 (RBend = 51),741,N/A,
+DC_(n)71AA,71,668,10,10 (RBstart = 0),622,17.2,FDD
+,n71,678,10,10 (RBend = 51),632,29.4,
+DC_(n)71AA4,71,668,10,10 (RBstart = 0),622,17.2,
+,n71,678,101,10 (RBend = 51),634.5,29.1,
+DC_(n)71AA3,71,N/A,10,N/A,642.0,21.3,
+,n71,673.0,20,5 (RBstart = 0),627.0,N/A,
+DC_(n)71AA4,71,N/A,5,N/A,639.5,6.8,
+,n71,670.5,151,5 (RBstart = 2),627.0,N/A,
+DC_(n)71AA5,71,N/A,5,N/A,634.5,6.4,
+,n71,670.5,15,5 (RBstart = 0),624.5,N/A,
+"NOTE 1:In accordance to BCS1, the NR uplink bandwidth is specified as in this table, but the corresponding NR downlink bandwidth is 5 MHz larger.NOTE 2:The transmitters powers shall be set to PUMAX, as defined in TS 38.101-1 [2], TS 38.101-2 [3], and TS 36.101 [4], with additional limits on configured maximum output power for the uplink according to clause 6.2B.4.NOTE 3:Applicable only to BCS 2.NOTE 4:Applicable only to BCS 1.NOTE 5:Applicable only to BCS 0.",,,,,,,

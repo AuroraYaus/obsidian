@@ -1,0 +1,185 @@
+NR CA configuration,Uplink CA configuration,NR Band,Channel bandwidth (MHz) (note 3),Bandwidth combination set
+CA_n12A-n257A,CA_n12A-n257A,n12,"5, 10, 15",0
+,,n257,"50, 100, 200, 400",
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,See n257 channel bandwidths in Table 5.3.5-1,
+CA_n12A-n257G,CA_n12A-n257A/G,n12,"5, 10, 15",0
+,,n257,CA_n257G,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257G,
+CA_n12A-n257H,CA_n12A-n257A/G/H,n12,"5, 10, 15",0
+,,n257,CA_n257H,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257H,
+CA_n12A-n257I,CA_n12A-n257A/G/H/I,n12,"5, 10, 15",0
+,,n257,CA_n257I,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257I,
+CA_n12A-n257J,CA_n12A-n257A/G/H/I/J,n12,"5, 10, 15",0
+,,n257,CA_n257J,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257J,
+CA_n12A-n257K,CA_n12A-n257A/G/H/I/J/K,n12,"5, 10, 15",0
+,,n257,CA_n257K,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257K,
+CA_n12A-n257L,CA_n12A-n257A/G/H/I/J/K/L,n12,"5, 10, 15",0
+,,n257,CA_n257L,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257L,
+CA_n12A-n257M,CA_n12A-n257A/G/H/I/J/K/L/M,n12,"5, 10, 15",0
+,,n257,CA_n257M,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257M,
+CA_n12A-n257O,CA_n12A-n257A/O,n12,"5, 10, 15",0
+,,n257,CA_n257O,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257O,
+CA_n12A-n257P,CA_n12A-n257A/O/P,n12,"5, 10, 15",0
+,,n257,CA_n257P,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257P,
+CA_n12A-n257Q,CA_n12A-n257A/O/P/Q,n12,"5, 10, 15",0
+,,n257,CA_n257Q,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257Q,
+CA_n12A-n258A,CA_n12A-n258A,n12,"5, 10, 15",0
+,,n258,"50, 100, 200, 400",
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,See n258 channel bandwidths in Table 5.3.5-1,
+CA_n12A-n258G,CA_n12A-n258A/G,n12,"5, 10, 15",0
+,,n258,CA_n258G,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258G,
+CA_n12A-n258H,CA_n12A-n258A/G/H,n12,"5, 10, 15",0
+,,n258,CA_n258H,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258H,
+CA_n12A-n258I,CA_n12A-n258A/G/H/I,n12,"5, 10, 15",0
+,,n258,CA_n258I,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258I,
+CA_n12A-n258J,CA_n12A-n258A/G/H/I/J,n12,"5, 10, 15",0
+,,n258,CA_n258J,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258J,
+CA_n12A-n258K,CA_n12A-n258A/G/H/I/J/K,n12,"5, 10, 15",0
+,,n258,CA_n258K,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258K,
+CA_n12A-n258L,CA_n12A-n258A/G/H/I/J/K/L,n12,"5, 10, 15",0
+,,n258,CA_n258L,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258L,
+CA_n12A-n258M,CA_n12A-n258A/G/H/I/J/K/L/M,n12,"5, 10, 15",0
+,,n258,CA_n258M,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258M,
+CA_n12A-n258O,CA_n12A-n258A/O,n12,"5, 10, 15",0
+,,n258,CA_n258O,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258O,
+CA_n12A-n258P,CA_n12A-n258A/O/P,n12,"5, 10, 15",0
+,,n258,CA_n258P,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258P,
+CA_n12A-n258Q,CA_n12A-n258A/O/P/Q,n12,"5, 10, 15",0
+,,n258,CA_n258Q,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258Q,
+CA_n12A-n260A,CA_n12A-n260A,n12,"5, 10, 15",0
+,,n260,"50, 100, 200, 400",
+CA_n12A-n260G,CA_n12A-n260A/G,n12,"5, 10, 15",0
+,,n260,CA_n260G,
+CA_n12A-n260H,CA_n12A-n260A/G/H,n12,"5, 10, 15",0
+,,n260,CA_n260H,
+CA_n12A-n260I,CA_n12A-n260A/G/H/I,n12,"5, 10, 15",0
+,,n260,CA_n260I,
+CA_n12A-n260J,CA_n12A-n260A/G/H/I/J,n12,"5, 10, 15",0
+,,n260,CA_n260J,
+CA_n12A-n260K,CA_n12A-n260A/G/H/I/J/K,n12,"5, 10, 15",0
+,,n260,CA_n260K,
+CA_n12A-n260L,CA_n12A-n260A/G/H/I/J/K/L,n12,"5, 10, 15",0
+,,n260,CA_n260L,
+CA_n12A-n260M,CA_n12A-n260A/G/H/I/J/K/L/M,n12,"5, 10, 15",0
+,,n260,CA_n260M,
+CA_n12A-n260O,CA_n12A-n260A/O,n12,"5, 10, 15",0
+,,n260,CA_n260O,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n260,CA_n260O,
+CA_n12A-n260P,CA_n12A-n260A/O/P,n12,"5, 10, 15",0
+,,n260,CA_n260P,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n260,CA_n260P,
+CA_n12A-n260Q,CA_n12A-n260A/O/P/Q,n12,"5, 10, 15",0
+,,n260,CA_n260Q,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n260,CA_n260Q,
+CA_n12A-n261A,CA_n12A-n261A,n12,"5, 10, 15",0
+,,n261,"50, 100, 200, 400",
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,See n261 channel bandwidths in Table 5.3.5-1,
+CA_n12A-n261G,CA_n12A-n261A/G,n12,"5, 10, 15",0
+,,n261,CA_n261G,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261G,
+CA_n12A-n261H,CA_n12A-n261A/G/H,n12,"5, 10, 15",0
+,,n261,CA_n261H,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261H,
+CA_n12A-n261I,CA_n12A-n261A/G/H/I,n12,"5, 10, 15",0
+,,n261,CA_n261I,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261I,
+CA_n12A-n261J,CA_n12A-n261A/G/H/I/J,n12,"5, 10, 15",0
+,,n261,CA_n261J,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261J,
+CA_n12A-n261K,CA_n12A-n261A/G/H/I/J/K,n12,"5, 10, 15",0
+,,n261,CA_n261K,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261K,
+CA_n12A-n261L,CA_n12A-n261A/G/H/I/J/K/L,n12,"5, 10, 15",0
+,,n261,CA_n261L,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261L,
+CA_n12A-n261M,CA_n12A-n261A/G/H/I/J/K/L/M,n12,"5, 10, 15",0
+,,n261,CA_n261M,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261M,
+CA_n12A-n261O,CA_n12A-n261A/O,n12,"5, 10, 15",0
+,,n261,CA_n261O,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261O,
+CA_n12A-n261P,CA_n12A-n261A/O/P,n12,"5, 10, 15",0
+,,n261,CA_n261P,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261P,
+CA_n12A-n261Q,CA_n12A-n261A/O/P/Q,n12,"5, 10, 15",0
+,,n261,CA_n261Q,
+,,n12,See n12 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261Q,
+CA_n14A-n260A,CA_n14A-n260A,n14,"5, 10",0
+,,n260,"50, 100, 200, 400",
+CA_n14A-n260G,CA_n14A-n260A/G,n14,"5, 10",0
+,,n260,CA_n260G,
+CA_n14A-n260H,CA_n14A-n260A/G/H,n14,"5, 10",0
+,,n260,CA_n260H,
+CA_n14A-n260I,CA_n14A-n260A/G/H/I,n14,"5, 10",0
+,,n260,CA_n260I,
+CA_n14A-n260J,CA_n14A-n260A/G/H/I/J,n14,"5, 10",0
+,,n260,CA_n260J,
+CA_n14A-n260K,CA_n14A-n260A/G/H/I/J/K,n14,"5, 10",0
+,,n260,CA_n260K,
+CA_n14A-n260L,CA_n14A-n260A/G/H/I/J/K/L,n14,"5, 10",0
+,,n260,CA_n260L,
+CA_n14A-n260M,CA_n14A-n260A/G/H/I/J/K/L/M,n14,"5, 10",0
+,,n260,CA_n260M,
+CA_n18A-n257A,CA_n18A-n257A,n18,"5, 10, 15",0
+,,n257,"50, 100, 200, 400",
+CA_n18A-n257G,CA_n18A-n257A/G,n18,"5, 10, 15",0
+,,n257,CA_n257G,
+CA_n18A-n257H,CA_n18A-n257A/G/H,n18,"5, 10, 15",0
+,,n257,CA_n257H,
+CA_n18A-n257I,CA_n18A-n257A/G/H/I,n18,"5, 10, 15",0
+,,n257,CA_n257I,

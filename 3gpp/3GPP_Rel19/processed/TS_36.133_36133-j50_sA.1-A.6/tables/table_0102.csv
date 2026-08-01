@@ -1,0 +1,35 @@
+Information Element,,,,Value
+discRxPool,cp-Len,,,Normal
+,discPeriod,,,rf32
+,numRetx,,,0
+,numRepetition,,,1
+,tf-ResourceConfig,prb-Num,,12
+,,prb-Start,,0
+,,prb-End,,23
+,,offsetIndicator,,163
+,,subframeBitmap,,110000000000000000000000000000000000000000
+,txParameters,,,not present
+,rxParameters,,,not present
+discTxPoolCommon/discTxPoolDedicated,cp-Len,,,Normal
+,discPeriod,,,rf32
+,numRetx,,,0
+,numRepetition,,,1
+,tf-ResourceConfig,prb-Num,,2
+,,prb-Start,,3
+,,prb-End,,5
+,,offsetIndicator,,163
+,,subframeBitmap,,100000000000000000000000000000000000000000
+,txParameters,txParametersGeneral,alpha,al0
+,,,p0,31
+,,ue-SelectedResourceConfig,poolSelection,random
+,,,txProbability,p100
+,rxParameters,,,not present
+discTxPowerInfo,discMaxTxPower,,,23
+SL-SyncConfig,syncCP-Len,,,Normal
+,syncOffsetIndicator,,,38 (158 mod 40)
+,slssid,,,30
+,txParameters,txParametersGeneral,alpha,al0
+,,,p0,31
+,,syncTxThreshIC,,0 (-infinity)
+,rxParamsNCell,,,not present
+discInterFreqList,,,,not present

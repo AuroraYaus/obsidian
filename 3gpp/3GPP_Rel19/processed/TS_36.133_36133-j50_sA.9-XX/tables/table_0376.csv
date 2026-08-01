@@ -1,0 +1,8 @@
+Parameter,Unit,Value,Comment
+CP length,,Normal,
+DRX,,OFF,
+DCI format,,6-1B,As defined in Table 4.7.3-1.
+M-PDCCH aggregation level,,24,
+T1 Note 1,s,1,
+T2 Note 2,s,-,
+Note 1: Prior to this period the UE has camped on the active cell and is in idle mode. The UE initiates a random access procedure.Note 2:     This period begins from the start of the random access response. Enough time should be allowed to verify both accuracy requirements in Table 9.1.21.24-1.,,,

@@ -1,0 +1,17 @@
+ChannelBandwidth (MHz),FFT size,Cyclic prefix length for symbols 113 in FFT samples,EVM window length W,Ratio of W to total CP length for symbols 1131 (%)
+5,256,18,9,50
+10,512,36,18,50
+15,768,54,27,50
+20,1024,72,36,50
+25,1024,72,36,50
+30,1536,108,54,50
+35,1536,108,54,50
+40,2048,144,72,50
+45,2048,144,72,50
+50,2048,144,72,50
+60,3072,216,108,50
+70,3072,216,108,50
+80,4096,288,144,50
+90,4096,288,144,50
+100,4096,288,144,50
+NOTE 1:These percentages are informative and apply to a slot's symbols 1 through 13. Symbol 0 has a longer CP and therefore a lower percentage.,,,,

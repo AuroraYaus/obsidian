@@ -1,0 +1,11 @@
+Parameter,Test
+Number of UCI information bits,1
+Number of symbols,1
+Intra-slot frequency hopping,N/A
+Group and sequence hopping,neither
+Hopping ID,0
+Initial cyclic shift,0
+First symbol,13
+Number of interlaces,1
+Interlace index,0Note1
+"NOTE 1:RBs 0,10,20,…, 100  are allocated for 15kHz SCS and RBs 0,5,10,…, 50  are allocated for 30kHz SCS",

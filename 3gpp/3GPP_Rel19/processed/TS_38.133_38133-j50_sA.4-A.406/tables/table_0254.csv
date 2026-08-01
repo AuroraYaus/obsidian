@@ -1,0 +1,21 @@
+Parameter,Unit,Test configuration,Value,Comment
+Active cell,,"1, 2",E-UTRAN Cell 1 and NR Cell 2,
+Neighbour cell,,"1, 2",NR Cell 3,Cell to be identified.
+RF Channel Number,,"1, 2",1: Cell 12: Cell 2 and Cell 3,
+Measurement gap type,,"1, 2",Per-UE gaps,
+Measurement gap repitition periodicity,ms,"1, 2",40,
+Measurement gap length,ms,"1, 2",6,
+Measurement gap offset,ms,"1, 2",39,
+SSB configuration,,"1, 2",SSB.1 FR1,
+SMTC configuration,,"1, 2",SMTC.2,
+CSI-RS parameters,,"1, 2",CSI-RS.1.2 FDD resource #0,
+A3-Offset,dB,"1, 2",-4.5,
+CP length,,"1, 2",Normal,
+Hysteresis,dB,"1, 2",0,
+Time To Trigger,s,"1, 2",0,
+Filter coefficient,,"1, 2",0,L3 filtering is not used
+DRX,,"1, 2",N/A,OFF
+Time offset between PCell and PSCell,,"1, 2",3 s,Synchronous EN-DC
+Time offset between serving and neighbour cells,,"1, 2",3 ms,Asynchronous cells.The timing of Cell 3 is 3 ms later than the timing of Cell 2.
+T1,s,"1, 2",5,
+T2,s,"1, 2",5,

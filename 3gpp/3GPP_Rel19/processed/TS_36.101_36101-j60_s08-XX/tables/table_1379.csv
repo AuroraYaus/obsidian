@@ -1,0 +1,32 @@
+Parameter,,Unit,Test 1,Test 2,Test 3,Test 4
+Bandwidth,,MHz,10,,,
+PDSCH transmission mode,,,9,,,
+Downlink power allocation,,dB,0,,,
+,,dB,0,,,
+,Pc,dB,0,,,-3
+,,dB,0,,,-3
+Uplink downlink configuration,,,1,,,
+Special subframe configuration,,,4,,,
+Propagation condition and antenna configuration,,,2 x 4 EPA5,,,4 x 4 EPA5
+Cell-specific reference signals,,,Antenna ports 0,,,
+CSI reference signals,,,"Antenna ports 15, 16",,,Antenna ports 15-18
+Beamforming Model,,,As specified in Section B.4.3,,,
+CSI reference signal configuration,,,4,,,
+CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS,,,5/4,,,
+CodeBookSubsetRestriction bitmap,,,000011 for fixed RI = 1010000 for fixed RI = 2010011 for UE reported RI,,,Note 4
+Antenna correlation,,,Low,Low,High,Low
+RI configuration,,,Fixed RI=2 and follow RI,Fixed RI=1 and follow RI,Fixed RI=1 and follow RI,Fixed RI=2 and follow RI
+SNR,,dB,-4,16,16,25
+,,dB[mW/15kHz],-98,-98,-98,-98
+,,dB[mW/15kHz],-102,-82,-82,-73
+Maximum number of HARQ transmissions,,,1,,,
+Reporting mode,,,PUCCH 1-1,,,
+Physical channel for CQI/ PMI reporting,,,PUSCH (Note 3),,,
+PUCCH report type for CQI/ PMI,,,2,,,
+Physical channel for RI reporting,,,PUCCH Format 2,,,
+Reporting periodicity,,ms,Npd = 5,,,
+PMI and CQI delay,,ms,10,,,
+ACK/NACK feedback mode,,,Bundling,,,
+cqi-pmi-ConfigurationIndex,,,4,,,
+ri-ConfigurationInd,,,1,,,
+"Note 1:If the UE reports in an available uplink reporting instance at subframe SF#n based on PMI and CQI estimation at a downlink subframe not later than SF#(n-4), this reported PMI and wideband CQI cannot be applied at the eNB downlink before SF#(n+4).Note 2:Reference measurement channel RC.9 TDD / RC.9B TDD respectively for Test 1-3 / 4 according to Table A.4-1 with one sided dynamic OCNG Pattern OP.1 TDD as described in Annex A.5.2.1.Note 3:To avoid collisions between CQI/PMI reports and HARQ-ACK it is necessary to report both on PUSCH instead of PUCCH. PDCCH DCI format 0 shall be transmitted in downlink SF#4 and #9 to allow periodic CQI/PMI to multiplex with the HARQ-ACK on PUSCH in uplink SF#3 and #8.Note 4:The following precoders are allowed in Test 4:               “0x0000 0000 FFFF 0000” for RI=2               “0xFFFF FFFF FFFF FFFF” for UE reported RI",,,,,,

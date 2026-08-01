@@ -1,0 +1,27 @@
+Parameter,,Unit,"Test 1, 2, 3A, 3B, 4A, 6C"
+Communication resource pool configuration Note 5,,,As specified in Table A.7.2.1-5(Configuration #5-FDD)
+Active cell(s),,,"Cell 1 (PCell)Cell 2 (SCell) for Test 3B, 4A, 6C"
+Cell 1,Test parameters,,"As specified in clause 8.7.1: Table 8.7.1-1 and Test 1, 2, 3A , 3B, 4A, 6C in Table 8.7.1-2"
+Active Sidelink UE(s),,,"Sidelink UE 1, Sidelink UE 2"
+Sidelink UE 1,Sidelink Transmissions,,PSCCH + PSSCH
+,PSCCH RMC,,10 MHz: CC.2 FDD with ITRP=0 (NOTE 1)
+,PSCCH subframe allocation,,As defined by TS 36.213 with  = 0
+,PSCCH RB allocation,,
+,PSSCH RMC,,10 MHz: CD.7 FDD
+,PSSCH subframe allocation,,As per time repetition pattern specified in PSCCH
+,PSSCH RB allocation,,Fully allocated
+,Time offset (NOTE 3),s,0
+,Frequency offset (NOTE 4),Hz,0
+,Propagation Channel,,Static propagation conditionNo external noise sources are applied
+,Antenna configuration,,1x2 Low
+,at antenna port,dBm/15kHz,-85
+Sidelink UE 2,Sidelink Transmissions,,PSCCH (NOTE 2)
+,PSCCH RMC,,10 MHz: CC.2 FDD with ITRP=1 (NOTE 1)
+,PSCCH subframe allocation,,As defined by TS 36.213 with  = 1
+,PSCCH RB allocation,,
+,Time offset (NOTE 3),s,0
+,Frequency offset (NOTE 4),Hz,0
+,Propagation Channel,,Static propagation conditionNo external noise sources are applied
+,Antenna configuration,,1x2 Low
+,at antenna port,dBm/15kHz,-85
+"NOTE 1: For NTRP = 8 (FDD) and trpt-Subset = 001, ITRP = 0 corresponds to a time repetition pattern of (1,0,0,0,0,0,0,0), ITRP = 1 corresponds to a time repetition pattern of (0,1,0,0,0,0,0,0).NOTE 2:Sidelink UE 2 transmits PSCCH but not PSSCH.NOTE 3:Time offset of Sidelink UE receive signal with respect to Cell 1 downlink timing at the tested UE.NOTE 4:Frequency offset of Sidelink UE with respect to Cell 1 uplink frequency.NOTE 5:Sidelink Communication resources are configured on the primary serving cell.",,,

@@ -1,0 +1,3 @@
+,"Test requirement Notes1,2,3,4"
+Cell 2,SSB_RP1 -δ +Gmin +X ≤ Reported RSRP(dBm) ≤ SSB_RP1 +δ +Gmax
+"NOTE 1:SSB_RPn is the equivalent power received by an antenna with 0 dBi gain at the centre of the quiet zone configured in the test for the cell n under considerationNOTE 2:δ is the RSRP absolute accuracy requirement from Table 10.1.5.1.1-1, selected according to the Io used in the testNOTE 3:Gmin and Gmax are the minimum and maximum UE gain values from Table B.2.1.5.1-1, selected according to the UE power class NOTE 4:X is the Spherical coverage gain difference in dB, derived as (UE Refsens - UE Spherical coverage) from TS 38.101-2 [19] clauses 7.3.2 and 7.3.4, selected according to the UE power class and operating band. X is always a negative value.",

@@ -1,0 +1,24 @@
+Parameter,Unit,Value,,,,,
+Channel bandwidth,MHz,1.4,3,5,10,15,20
+Allocated resource blocks,,6,15,25,50,75,100
+Subcarriers per resource block,,12,12,12,12,12,12
+Allocated subframes per Radio Frame,,8,9,9,9,9,9
+Modulation,,1024QAM,1024QAM,1024QAM,1024QAM,1024QAM,1024QAM
+Target Coding Rate,,4/5,4/5,4/5,4/5,4/5,4/5
+Number of HARQ Processes,Processes,8,8,8,8,8,8
+Maximum number of HARQ transmissions,,1,1,1,1,1,1
+Information Bit Payload per Sub-Frame,,,,,,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",Bits,6456,15840,26416,55056,81176,110136
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,N/A,11832,21384,52752,78704,105528
+Transport block CRC,Bits,24,24,24,24,24,24
+Number of Code Blocks per Sub-Frame(Note 3),,,,,,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",,2,3,5,9,14,18
+For Sub-Frame 5,,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,,N/A,2,4,9,13,18
+Binary Channel Bits Per Sub-Frame,,,,,,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",Bits,7560,18900,31500,69000,103500,138000
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,N/A,14700,27300,64800,99300,133800
+Max. Throughput averaged over 1 frame,kbps,5164.8,13855.2,23271.2,49320,72811.2,98661.6
+"Note 1:2 symbols allocated to PDCCH for 20 MHz, 15 MHz and 10 MHz channel BW. 3 symbols allocated to PDCCH for 5 MHz, 3 MHz and 1.4 MHz.Note 2:Reference signal, Synchronization signals and PBCH allocated as per TS 36.211 [4].Note 3:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).",,,,,,,

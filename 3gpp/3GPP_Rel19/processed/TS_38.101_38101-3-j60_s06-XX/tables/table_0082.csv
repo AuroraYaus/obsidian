@@ -1,0 +1,3 @@
+Parameter,Unit,Level
+PInterferer (CW),dBm,-441
+"NOTE 1:The requirement applies when , where  and  are the carrier frequencies for lower frequency band UL and higher frequency band DL, respectively.  and  are the channel bandwidths configured for lower frequency band UL carrier and higher frequency band DL carrier in MHz, respectively.fInterferer± fULLB- fDLHB≤(BWULLB+ BWDLHB)/2fULLBfDLHBBWULLBBWDLHB",,

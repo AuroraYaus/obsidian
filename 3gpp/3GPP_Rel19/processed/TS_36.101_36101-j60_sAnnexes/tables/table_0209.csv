@@ -1,0 +1,23 @@
+Parameter,Unit,Value
+Reference channel,,R.108 TDD
+Channel bandwidth,MHz,10
+Uplink-Downlink Configuration (Note 3),,2
+Allocated resource blocks,,44
+Allocated subframes per Radio Frame,,4
+Modulation,,QPSK
+Target Coding Rate,,1/2
+Information Bit Payload,,
+"For Sub-Frames 0,5 (Non CSI-RS subframe)",Bits,472
+"For Sub-Frames 4,9 (CSI-RS subframe)",Bits,472
+"For Sub-Frames 1,6",,N/A
+Number of Code Blocks per Sub-Frame(Note 5),,
+"For Sub-Frames 0,5 (Non CSI-RS subframe)",,1
+"For Sub-Frames 4,9 (CSI-RS subframe)",,1
+"For Sub-Frames 1,6",,N/A
+Binary Channel Bits Per Sub-Frame,,
+"For Sub-Frames 0,5 (Non CSI-RS subframe)",Bits,960
+"For Sub-Frames 4,9 (CSI-RS subframe)",Bits,896
+"For Sub-Frames 1,6",,N/A
+Max. Throughput averaged over 1 frame,Mbps,0.1888
+UE Category,,≥ 1
+"Note 1:2 symbols allocated to PDCCH.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4]Note 3:As per Table 4.2-2 in TS 36.211 [4].Note 4:Allocated PRB positions for PDSCH are {2, 3, 4, 5} within the assigned narrowband. Allocated PRB positions for MPDCCH are {0, 1} within the assigned narrowband.Note 5:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)",,

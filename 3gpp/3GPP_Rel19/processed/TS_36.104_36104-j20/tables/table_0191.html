@@ -1,0 +1,72 @@
+<table>
+  <tr>
+    <td>E-UTRAchannel bandwidth of the lowest/highest carrier received [MHz]</td>
+    <td>Wanted signal mean power [dBm]</td>
+    <td>Interfering signal mean power [dBm]</td>
+    <td>Interfering RB centre frequency offset from the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap [kHz]</td>
+    <td>Type of interfering signal</td>
+  </tr>
+  <tr>
+    <td rowspan="2">3</td>
+    <td rowspan="2">PREFSENS + 14dB*</td>
+    <td>-36</td>
+    <td>±270</td>
+    <td>CW</td>
+  </tr>
+  <tr>
+    <td>-36</td>
+    <td>±780</td>
+    <td>3.0 MHz E-UTRA signal, 1 RB**</td>
+  </tr>
+  <tr>
+    <td rowspan="2">5</td>
+    <td rowspan="2">PREFSENS + 14dB*</td>
+    <td>-36</td>
+    <td>±360****</td>
+    <td>CW</td>
+  </tr>
+  <tr>
+    <td>-36</td>
+    <td>±1060</td>
+    <td>5 MHz E-UTRA signal, 1 RB**</td>
+  </tr>
+  <tr>
+    <td rowspan="2">10</td>
+    <td rowspan="2">PREFSENS + 14dB*(***)</td>
+    <td>-36</td>
+    <td>±325****</td>
+    <td>CW</td>
+  </tr>
+  <tr>
+    <td>-36</td>
+    <td>±1240</td>
+    <td>5 MHz E-UTRA signal, 1 RB**</td>
+  </tr>
+  <tr>
+    <td rowspan="2">15</td>
+    <td rowspan="2">PREFSENS + 14dB*(***)</td>
+    <td>-36</td>
+    <td>±380****</td>
+    <td>CW</td>
+  </tr>
+  <tr>
+    <td>-36</td>
+    <td>±1600</td>
+    <td>5MHz E-UTRA signal, 1 RB**</td>
+  </tr>
+  <tr>
+    <td rowspan="2">20</td>
+    <td rowspan="2">PREFSENS + 14dB*(***)</td>
+    <td>-36</td>
+    <td>±345****</td>
+    <td>CW</td>
+  </tr>
+  <tr>
+    <td>-36</td>
+    <td>±1780</td>
+    <td>5MHz E-UTRA signal, 1 RB**</td>
+  </tr>
+  <tr>
+    <td colspan="5">Note*:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5c.Note**:Interfering signal consisting of one resource block positioned at the stated offset, the channel bandwidth of the interfering signal is located adjacently to the lower/upper Base Station RF Bandwidth edge.Note***:This requirement shall apply only for a FRC A1-3 mapped to the frequency range at the channel edge adjacent to the interfering signals.Note****:The frequency offset shall be adjusted to accommodate the IMD product to fall in the NB-IoT RB for NB-IoT in-band operation.Note*****:If a BS RF receiver fails the test of the requirement, the test shall be performed with the CW interfering signal frequency shifted away from the wanted signal by 180 kHz and the E-UTRA interfering signal frequency shifted away from the wanted signal by 360 kHz. If the BS RF receiver still fails the test after the frequency shift, then the BS RF receiver shall be deemed to fail the requirement.</td>
+  </tr>
+</table>

@@ -1,0 +1,16 @@
+Parameter,,Unit,Test configuration,Value,Comment
+Initial condition,Active cell,,"1, 2",Cell 1,The UE camps on cell 1 in the initial phase
+,Neighbour cells,,"1, 2",Cell 2,
+T1 end condition,Active cell,,"1, 2",Cell 2,The UE reselects to cell 2 during T1 period
+,Neighbour cells,,"1, 2",Cell 1,
+Final condition,Active cell,,"1, 2",Cell 1,The UE reselects to cell 1 during T2 period
+,Neighbour cells,,"1,2",Cell 2,
+RF Channel Number,,,"1, 2",1,
+Time offset between cells,,,"1, 2",3 s,Synchronous cells
+Access Barring Information,,-,"1, 2",Not Sent,No additional delays in random access procedure.
+SMTC configuration,,,"1, 2",SMTC pattern 1,
+DRX cycle length,,s,"1, 2",0.64,The value shall be used for all cells in the test.
+PRACH configuration index,,,"1, 2",190,The detailed configuration is specified in TS 38.211 clause 6.3.3.2
+rangeToBestCell,,,"1, 2",Not configured,
+T1,,s,"1, 2",100,
+T2,,s,"1, 2",100,

@@ -1,0 +1,6 @@
+Operating Band,Centre Frequency of Interfering Signal [MHz],,,Wanted Signal mean power (dBm),Interfering Signal mean power (dBm),Type of Interfering Signal
+"n46, n96, n102",(FUL_low -500)(FUL_high +ΔfOOB),toto,(FUL_low -ΔfOOB)(FUL_high +500),PREFSENS +6dB,-35,CW carrier
+,1(FUL_high +500),toto,(FUL_low -500)12750,PREFSENS +6dB,-15,CW carrier
+n104,(FUL_low -100)(FUL_high +ΔfOOB),toto,(FUL_low -ΔfOOB)(FUL_high +100),PREFSENS +6dB,-35,CW carrier
+,1(FUL_high +100),toto,(FUL_low -100)12750,PREFSENS +6dB,-15,CW carrier
+"NOTE 1:For band n46, n96, n102, PREFSENS depends on the BS channel bandwidth as specified in tables 7.2.2-2a, 7.2.2-2b, 7.2.2-3a, 7.2.2-3b.NOTE 2:For band n104, PREFSENS depends on the BS channel bandwidth as specified in tables 7.2.2-1a, 7.2.2-2c, 7.2.2-3c.",,,,,,

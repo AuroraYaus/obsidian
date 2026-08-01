@@ -1,14 +1,3 @@
----
-type: spec
-aliases:
-  - README
-tags:
-  - 3gpp
-  - rel19
-  - processed
-  - index
-source_spec: "3GPP_Rel19/processed/TS_38.214_38214-j30/README.md"
----
 # TS 38.214 38214-j30
 
 ## Files

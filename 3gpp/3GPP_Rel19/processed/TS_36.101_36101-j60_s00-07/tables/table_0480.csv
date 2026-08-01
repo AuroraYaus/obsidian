@@ -1,0 +1,3 @@
+Frequency Range,Maximum Level,Measurement bandwidth,NOTE
+5795 MHz  f < 5815MHz,-65 dBm (EIRP),1 MHz,
+"NOTE:The EIRP requirement is converted to conducted requirement depend on the supported post antenna connector gain Gpost connector declared by the UE following the principle described in annex I. The additional Rx spurious emission limits, only apply when the network signaling value NS_33 or NS_34 is indicated.",,,

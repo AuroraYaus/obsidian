@@ -1,0 +1,18 @@
+Parameter,,Unit,Value,Comment
+,,,,
+Initial condition,Active cell,,Cell 1,
+T2 end condition,Active cell,,Cell 2,
+,Neighbour cells,,Cell 1,
+Final condition,Active cell,,Cell 1,
+,Neighbour cells,,Cell 2,
+RF Channel Number,,,1,
+Time offset between cells,,,3 ms,Asynchronous cells
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+DRX cycle length,,s,1.28,The value shall be used for all cells in the test.
+PRACH configuration index,,,102,The detailed configuration is specified in TS 38.211 [6] clause 6.3.3.2
+rangeToBestCell,,,Not configured,
+T1,,s,>7,"During T1, Cell 2 shall be powered off, and during the off time the physical cell identity shall be changed, The intention is to ensure that Cell 2 has not been detected by the UE prior to the start of period T2"
+T2,,s,40(NOTE 1),T2 needs to be defined so that cell re-selection reaction time is taken into account.
+T3,,s,"15(NOTE 1, 3)",T3 needs to be defined so that cell re-selection reaction time is taken into account.
+UE position,,,NOTE 2,
+"NOTE 1:If the test is performed in a NGSO configuration, and the scaling factor Kmulti_SMTC defined in clause 4.2C.2.3 is greater than 1, according to UE capabilities, the duration of times T2 and T3 shall be scaled for the same factor to allow the UE to complete the cell reselection within the duration of the test case.NOTE 2:For Config 3, the UE position is set by AT command according to G.4.2 of TS 38.101-5 [43] at the beginning if the test, and remains unchanged during the test.NOTE 3:For Config 3, UE can reselect from cell 1 to cell 2 during T2 only.The testing procedure in T3 can be skipped.",,,,

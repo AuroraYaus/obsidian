@@ -1,0 +1,13 @@
+Parameter,,Unit,Cell 1,Cell 2,Cell 3
+Downlink power allocation,PBCH_RAOCNG_RA,dB,-3,-3,-3
+,PBCH_RBOCNG_RB,dB,-3,-3,-3
+at antenna port,,dBm/15kHz,-98,N/A,N/A
+Es/Noc,,dB,Reference Value in Table 8.6.2.2.3-2,4,2
+BWChannel,,MHz,1.4,1.4,1.4
+Time Offset between Cells,,s,N/A,3,-1
+Frequency shift between Cells,,Hz,N/A,300,-100
+Cell Id,,,0,126,1
+ABS Pattern (Note 4),,,N/A,00000000010000000001,00000000010000000001
+Unused RE-s and PRB-s,,,OCNG,OCNG,OCNG
+Cyclic prefix,,,Normal,Normal,Normal
+"Note 1:The number of the CRS ports in Cell1, Cell2 and Cell 3is the same.Note 2:SIB-1 will not be transmitted in Cell2 and Cell 3 in the test.Note 3:The PBCH transmission from Cell 1, Cell 2 and Cell 3 overlap. The same PBCH transmission redundancy version is used for Cell 1, Cell 2 and Cell 3.Note 4:ABS pattern as defined in [9]. PDSCH other than SIB1/paging and its associated PDCCH/PCFICH are transmitted in the serving cell subframe when the subframe is overlapped with the ABS subframe of aggressor cell and the subframe is available in the definition of the reference channel.",,,,,

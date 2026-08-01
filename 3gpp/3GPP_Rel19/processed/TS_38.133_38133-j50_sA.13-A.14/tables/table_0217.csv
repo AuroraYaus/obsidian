@@ -1,0 +1,4 @@
+Configuration,Description
+1,"GSO, FDD duplex mode, 15 kHz SSB SCS, 10 MHz bandwidth"
+2,"NGSO, FDD duplex mode, 15 kHz SSB SCS, 10 MHz bandwidth"
+"NOTE:If UE supports both NGSO and GSO, the test case Config 1 can be skipped if the UE passes test case Config 2.",

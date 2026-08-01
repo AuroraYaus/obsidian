@@ -1,0 +1,41 @@
+<table>
+  <tr>
+    <td>Frequency offset of measurement filter 3dB point, f</td>
+    <td>Frequency offset of measurement filter centre frequency, f_offset</td>
+    <td>Minimum requirement (Note 1, 2)</td>
+    <td>Measurement bandwidth (Note 8)</td>
+  </tr>
+  <tr>
+    <td>0 MHz  f &lt; 0.05 MHz</td>
+    <td>0.015 MHz  f_offset &lt; 0.065 MHz</td>
+    <td></td>
+    <td>30 kHz</td>
+  </tr>
+  <tr>
+    <td>0.05 MHz  f &lt; 0.16 MHz</td>
+    <td>0.065 MHz  f_offset &lt; 0.175 MHz</td>
+    <td></td>
+    <td>30 kHz</td>
+  </tr>
+  <tr>
+    <td>0.16 MHz  f &lt; 5 MHz(Note 8)</td>
+    <td>0.175 MHz  f_offset &lt; 5.05 MHz</td>
+    <td></td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td>5 MHz  f &lt; min(10 MHz, Δfmax)</td>
+    <td>5.05 MHz  f_offset &lt; min(10.05 MHz, f_offsetmax)</td>
+    <td>-41 dBm</td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td>10 MHz  f  fmax</td>
+    <td>10.05 MHz  f_offset &lt; f_offsetmax</td>
+    <td>-41 dBm (Note 10)</td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:The limits in this table only apply for operation with a standalone NB-IoT carrier adjacent to the Base Station RF Bandwidth edge.NOTE 2:In case the carrier adjacent to the RF bandwidth edge is a standalone NB-IoT carrier, the value of X = PNB-IoTcarrier – 20, where PNB-IoTcarrier is the power level of the standalone NB-IoT carrier adjacent to the RF bandwidth edge. In other cases, X = 0.</td>
+  </tr>
+</table>

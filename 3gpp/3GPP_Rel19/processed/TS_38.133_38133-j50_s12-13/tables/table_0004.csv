@@ -1,0 +1,5 @@
+Frequency Range of sidelink,SCS of sidelink signals (kHz),Te
+FR1,15,12*64*Tc
+,30,8*64*Tc
+,60,5*64*Tc
+NOTE 1:Tc is the basic timing unit defined in TS 38.211 [6].,,

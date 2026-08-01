@@ -1,0 +1,15 @@
+,,NR Band / SCS / Channel bandwidth / Duplex mode,,,,,
+NR V2X Band,SCSkHz,5 MHz3,10 MHz,20 MHz,30 MHz,40 MHz,Duplex Mode
+n14,15,20,20,,,,HD
+,30,,10,,,,
+,60,,,,,,
+n38,15,,50,105,160,216,HD
+,30,,24,50,75,105,
+,60,,102,24,36,50,
+n47,15,,50,105,160,216,HD
+,30,,24,50,75,105,
+,60,,102,24,36,50,
+n79,15,,50,105,160,216,HD
+,30,,24,50,75,105,
+,60,,102,24,36,50,
+"NOTE 1:The sidelink allocated RB (LCRB) size could be adjusted according to resource pool configuration in [7].NOTE 2:For the case, 11 RB is allowed for S-SSB Block.NOTE 3:The CBW is only applicable for PS UE in n14.",,,,,,,

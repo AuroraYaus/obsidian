@@ -1,0 +1,65 @@
+V2X con-current operating band cofiguration,Spurious emission,,,,,,
+,Protected band,Frequency range (MHz),,,Maximum Level (dBm),MBW (MHz),NOTE
+V2X_1A_n47A,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_n1A_47A,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+,,,,,,,
+,,,,,,,
+V2X_8A_n47A,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_n8A_47A,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_3_n47,,,,,,,
+,,,,,,,
+,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_20_n38,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_n3_47,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_n34_47,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_34_n47,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+,,,,,,,
+,,,,,,,
+,,,,,,,
+V2X_n39_47,,,,,,,
+,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_39_n47,,,,,,,
+,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_n40_47,,,,,,,
+,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_40_n47,,,,,,,
+,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_n71_47,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_n78_47,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+V2X_n79_47,,,,,,,
+,Frequency range,5925,-,5950,-30,1,"3, 4"
+,Frequency range,5815,-,5855,-30,1,3
+"NOTE 1:Void.NOTE 2:Void.NOTE 3:Applicable when NS_33 is configured by the pre-configured radio parameters for power class 3 V2X UE.NOTE 4:In the frequency range x-5950MHz, SE requirement of -30dBm/MHz should be applied; where x = max (5925, fc + 15), where fc is the channel centre frequency.",,,,,,,

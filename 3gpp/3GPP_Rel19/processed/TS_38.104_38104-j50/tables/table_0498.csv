@@ -1,0 +1,5 @@
+Test,Number of,Number of,Cyclic,Propagation,Additional,Channel bandwidth / SNR (dB)
+Number,TX antennas,Demodulationbranches,Prefix,conditions and correlation matrix (Annex G),DM-RS configuration,400
+1,1,2,Normal,TDLA10-650 Low,No additional DM-RS,0.5
+,,,,,Additional DM-RS,0.5
+2,1,2,Normal,TDLA10-650 Low,No additional DM-RS,2

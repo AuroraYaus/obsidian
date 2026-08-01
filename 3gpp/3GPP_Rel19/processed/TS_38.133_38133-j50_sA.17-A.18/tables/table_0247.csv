@@ -1,0 +1,23 @@
+Parameter,,Unit,Value,Comment
+Reference cell,,,Cell 1,"Reference cell is the cell in the DL-TDOA assistance data with respect to which the RSTD measurement is defined, as specified in TS 38.215 [4] and TS 37.355 [34]. The reference cell is the PCell in this test case."
+Neighbor cells,,,Cell 2 and Cell 3,Cell 2 and Cell 3 appear at the first and second places in the neighbour cell list in the DL-TDOA assistance data.
+BWchannel,,MHz,"400: NRB,c = 264",
+SSB configuration,Config 1,,SSB.1 RedCap FR2,
+SMTC configuration,Config 1,,SMTC.1 RedCap,
+PDSCH RMC configuration,Config 1,,SR.3.2 TDD,
+RMSI CORESET RMC configuration,Config 1,,CR.3.1 TDD,
+Dedicated CORESET RMC configuration,Config 1,,CCR.3.1 TDD,
+PRS Configuration,Config 1,,PRS.1.6 FR2,PRS configured with frequency hopping as specified in clause A.3.31
+Physical cell ID PCI,,,(PCI of Cell 1 – PCI of Cell 2)mod6=0and(PCI of Cell 1 – PCI of Cell 3)mod6=0,The cell PCIs are selected such that the relative shifts of PRS patterns among cells are as given by the test parameters
+CP length,,,Normal,
+DRX,,s,0.64,
+Radio frame receive time offset between the cells at the UE antenna connector,,s,Cell 2 to Cell 1: 0Cell 3 to Cell 1: 3,PRS are transmitted from synchronous cells
+Expected RSTD,,s,Cell 2: 3 Cell 3: 3Other neighbour cells: randomly between -3 and 3,The expected RSTD is what is expected at the receiver. The corresponding parameter in the DL-TDOA assistance data specified in TS 37.355 [34] is the expectedRSTD indicator
+Expected RSTD uncertainty for all neighbour cells,,s,5,The corresponding parameter in the DL-TDOA assistance data specified in TS 37.355 [34] is the expectedRSTD-Uncertainty index
+Number of cells provided in DL-TDOA assistance data,,,3,Including the reference cell
+PRS muting info,,,Cell 1: ‘10’Cell 2: ‘01’Cell 3: ‘10’,Correponds to prs-MutingInfo defined in TS 37.355 [34]
+PRS resource RE offset,,,Cell 1: 0Cell 2: 0Cell 3: 1,Cell 1 and Cell 3 are configured with different resource offsets
+T1,,s,3,The length of the time interval from the beginning of each test
+T2,,s,1.28,The length of the time interval that follows immediately after time interval T1
+AoA setup,,,Setup 1,As defined in clause A.3.15.1
+Beam assumption,,,Rough,"Information about types of UE beam is given in annex B.2.1.3, and does not limit UE implementation or test system implementation"

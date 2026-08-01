@@ -1,0 +1,30 @@
+Paramater,Unit,Test Configuration,Value,Comment
+Active PCell,,"1, 2, 3",Cell 1,
+Active SCell,,"1, 2, 3",Cell 2,
+Neighbour cell,,"1, 2, 3",Cell 3,Cell to be identified.
+RF Channel Number,,"1, 2, 3",1: Cell 12: Cell 2 and Cell 3,
+Measurement gap type,,"1, 2, 3",Per-UE gaps,
+Measurement gap repitition periodicity,ms,"1, 2, 3",40,
+Measurement gap length,ms,"1, 2, 3",6,
+Measurement gap offset,ms,"1, 2, 3",39,
+DL CCA model,,,As specified in clause A.3.26.2.1,
+UL CCA model,,,As specified in clause A.3.26.2.2,
+DBT window configuration,,"1, 2, 3","Cell 1: N/ACell 2,3: DBT.1",
+CSI-RS parameters in Cell 1,,1,CSI-RS.1.2 FDD resource #0,
+,,2,CSI-RS.1.2 TDD resource #0,
+,,3,CSI-RS.2.2 TDD resource #0,
+A3-Offset,dB,"1, 2, 3",-4.5,
+Event A3 measurement quantity,,,SS-RSRP,
+CP length,,"1, 2, 3",Normal,
+Hysteresis,dB,"1, 2, 3",0,
+Time To Trigger,s,"1, 2, 3",0,
+Filter coefficient,,"1, 2, 3",0,L3 filtering is not used
+DRX,,"1, 2, 3",,OFF
+Time offset between Cell 1 and Cell 2,,1,3 ms,Asynchronous cells.The timing of Cell 2 is 3ms later than the timing of Cell 1.
+,,2,3 ms,Synchronous cells
+,,3,3 ms,Synchronous cells
+deriveSSB-IndexFromCell,,1,False,
+,,2,True,
+,,3,True,
+T1,s,"1, 2, 3",5,
+T2,s,"1, 2, 3",5,

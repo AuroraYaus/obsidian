@@ -1,0 +1,5 @@
+SL-DRX cycleNote 1 [ms],"Tmeasure,PSBCH-RSRP [ms]"
+No SL-DRX,320
+SL-DRX cycle ≤ 160 ms,320
+SL-DRX cycle > 160 ms,2 x SL-DRX cycle
+"NOTE 1:If multiple SL-DRX cycles are configured, the SL-DRX cycle is the shortest one.",

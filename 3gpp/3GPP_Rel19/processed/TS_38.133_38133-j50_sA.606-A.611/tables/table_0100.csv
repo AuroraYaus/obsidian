@@ -1,0 +1,22 @@
+Parameter,Unit,Test configuration,Value,Comment
+RF Channel Number,,,1: Cell 12: Cell 2,"Two NR radio channels (1, 2) are used for this test"
+PCell,,"1, 2, 3",Cell 1,
+SCell,,"1, 2, 3",Cell 2,Cell 2 is the cell with SSB adaptation
+SSB configuration,,1,SSB.9 FR1,
+,,2,SSB.9 FR1,
+,,3,SSB.10 FR1,
+SMTC configuration,,1,SMTC.11,
+,,2,SMTC.10,
+,,3,SMTC.10,
+A2-threshold,dBm,"1, 2, 3",-130,
+CP length,,"1, 2, 3",Normal,
+Hysteresis,dB,"1, 2, 3",0,
+Time To Trigger,s,"1, 2, 3",0,
+Filter coefficient,,"1, 2, 3",0,L3 filtering is not used
+DRX,,"1, 2, 3",,OFF
+Time offset between Cell 1 and Cell 2,,1,3 ms,Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1
+,,2,3 s,Synchronous cells
+,,3,3 s,Synchronous cells
+T1,s,"1, 2, 3",2,
+T2,s,"1, 2, 3",1,
+T3,s,"1, 2, 3",1,

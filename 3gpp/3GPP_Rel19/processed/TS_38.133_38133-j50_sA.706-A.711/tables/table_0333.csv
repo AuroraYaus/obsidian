@@ -1,0 +1,14 @@
+Parameter,Unit,Value,Comment
+RF Channel Number,,"1, 2",Two NR radio channels are used for this test. Cell 1 uses RF channel 1. Cell 2 and Cell 3 use RF channel 2.
+Hysteresis,dB,0,
+A6-Offset,dBm,-11,
+TimeToTrigger,s,0,
+Filter coefficient,,0,L3 filtering is not used
+DRX,,OFF,DRX is not used
+NCSG Pattern Id,,0,As specified in clause Table 9.1.9.3-1.
+NCSG offset,ms,39,
+NCSG mgta,ms,0,
+Time offset between Cell 2 and Cell 3,us,3,Synchronous cells
+SCell measurement cycle (measCycleSCell),ms,160,
+T1,s,5,
+T2,s,15,

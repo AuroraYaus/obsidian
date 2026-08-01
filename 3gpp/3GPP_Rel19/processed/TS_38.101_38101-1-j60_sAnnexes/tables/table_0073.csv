@@ -1,0 +1,480 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2022-12,RAN#98-e,RP-223315,1207,1,B,CR related to Introduction of new LTE TDD Band in 1670 – 1675 MHz,18.0.0
+2022-12,RAN#98-e,RP-223328,1217,,B,Big CR for FWA MPR and A-MPR for n71 and n85,18.0.0
+2022-12,RAN#98-e,RP-223331,1227,,B,"Big CR to 38.101-1 Introduce RF requirements for HPUE inter- band CA with y(y=2,3,4) bands downlink and x bands uplink (x =1,2)",18.0.0
+2022-12,RAN#98-e,RP-223333,1228,,B,"Big CR for TS 38.101-1, Introduction of new R18 Uu+V2X band combinations",18.0.0
+2022-12,RAN#98-e,RP-223332,1232,,B,BigCR for High power UE for inter-band CA with power class 2 on single carrier uplink on FDD band,18.0.0
+2022-12,RAN#98-e,RP-223324,1244,,B,big CR 38.101-1 new combinations Rel-18 NR Intra-band,18.0.0
+2022-12,RAN#98-e,RP-223326,1247,,B,"big CR 38.101-1 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2)",18.0.0
+2022-12,RAN#98-e,RP-223325,1248,,B,Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-1,18.0.0
+2022-12,RAN#98-e,RP-223329,1250,,B,Big CR on TS38.101-1 Addition of intra-band CA Combinations with PC2 and PC1.5,18.0.0
+2022-12,RAN#98-e,RP-223318,1255,,B,Big CR for 38.101-1 introduce UL MIMO configurations for Rel-18,18.0.0
+2022-12,RAN#98-e,RP-223327,1256,,B,Big CR on Introduction of completed SUL band combinations into TS 38.101-1,18.0.0
+2022-12,RAN#98-e,RP-223325,1264,,B,"Big CR to reflect the completed NR inter-band CA DC combinations for  3 bands DL with x bands UL (x=1,2) into TS 38.101-1",18.0.0
+2022-12,RAN#98-e,RP-223319,1280,,B,Introduction of APT 600 MHz band,18.0.0
+2023-03,RAN#99,RP-230527,1281,,F,Updates to spurious emissions UE coexistence table,18.1.0
+2023-03,RAN#99,RP-230535,1282,,B,CR related to Introduction of NR TDD Band n54,18.1.0
+2023-03,RAN#99,RP-230519,1289,,A,CR TS 38.101-1: Correction on NR V2X requirements in Rel-18,18.1.0
+2023-03,RAN#99,RP-230605,1294,1,B,UE RF requirements for supporting intra-band non-collocated CA for 2MIMO layer case,18.1.0
+2023-03,RAN#99,RP-230501,1296,,A,CR for TS 38.101-1 Rel-18: Adding missing harmonic mixing MSD for CA_n25-n71,18.1.0
+2023-03,RAN#99,RP-230517,1298,,A,TS 38.101-1 Rel-18 CAT-A: Correction to co-existence requirements of band n8 and n100,18.1.0
+2023-03,RAN#99,RP-230504,1300,,A,CR for TS 38.101-1 Rel-18 CAT-A: Corrections on band combinations for UE co-existence,18.1.0
+2023-03,RAN#99,RP-230507,1302,,A,CR for TS 38.101-1 Rel-18 CAT-A: Correction to NRU spectrum emission mask,18.1.0
+2023-03,RAN#99,RP-230501,1305,,A,CR for TS 38.101-1 Rel-18: Correction for wrong reference in NS_50,18.1.0
+2023-03,RAN#99,RP-230544,1309,1,F,CR 38.101-1: Rel-18 Band combinations bug fixing and adding missing fallbacks,18.1.0
+2023-03,RAN#99,RP-230512,1313,,A,CR to 38.101-1: Correction of PC1 ACLR definition R18,18.1.0
+2023-03,RAN#99,RP-230544,1315,,A,NR CA corrections R18,18.1.0
+2023-03,RAN#99,RP-230513,1317,,A,CR 38.101-1 correction to A-MPR for NS_24 R18,18.1.0
+2023-03,RAN#99,RP-230549,1318,,B,Big CR for High-power UE operation for fixed-wireless/vehicle-mounted use cases in LTE bands and NR bands,18.1.0
+2023-03,RAN#99,RP-230549,1320,,A,CR to 38.101-1: Corection to PC1 UTRA ACLR for bands n71 and n85.,18.1.0
+2023-03,RAN#99,RP-230502,1324,,A,Addition of configuration for carrier aggregation RMCs,18.1.0
+2023-03,RAN#99,RP-230516,1328,1,A,CR to introduce emissions specifications for certain LTE_V2X band combinations,18.1.0
+2023-03,RAN#99,RP-230509,1338,,A,Clarification of the CA_NS indication and NS values for n77 in Canada [n77 Canada],18.1.0
+2023-03,RAN#99,RP-230547,1339,,B,Big CR for NR CA band combinations with two SUL cells in Rel-18,18.1.0
+2023-03,RAN#99,RP-230519,1341,,A,CR for 38.101-1 Corrections to the section 6.2D,18.1.0
+2023-03,RAN#99,RP-230558,1342,,B,Big CR to 38.101-1 Introduce DL interruption clarification for CA conduting Tx Switching,18.1.0
+2023-03,RAN#99,RP-230519,1345,,F,CR on NR-U A-MPR for PC5 VLP in NS_61,18.1.0
+2023-03,RAN#99,RP-230543,1346,,B,big CR 38.101-1 new combinations Rel-18 NR Intra-band,18.1.0
+2023-03,RAN#99,RP-230519,1350,,A,Rel18 Cat A CR Introduce the missing Pcmax tolerance requirement for PC2 intra-band NC UL CA,18.1.0
+2023-03,RAN#99,RP-230519,1352,,A,Rel18 Cat A CR Add verification clarification for OOB emission and SE emission for intra-band NC UL CA,18.1.0
+2023-03,RAN#99,RP-230502,1355,,A,Rel18 Cat A CR Correct the wrong table and clause that clause 6.2A.3.1.1 refer to,18.1.0
+2023-03,RAN#99,RP-230504,1359,1,A,CR to clarify duplex mode of SDL bands,18.1.0
+2023-03,RAN#99,RP-230501,1362,,A,CR to add band n29 to blocking requirements,18.1.0
+2023-03,RAN#99,RP-230507,1373,,A,Correct the scaling number for MPR/A-MPR and NS_04 SEM requirement,18.1.0
+2023-03,RAN#99,RP-230519,1375,,A,Correct the Pcmax for intra-band non-contiguous CA to support HPUE,18.1.0
+2023-03,RAN#99,RP-230544,1376,,B,Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-1,18.1.0
+2023-03,RAN#99,RP-230562,1377,,B,Big CR to reflect the completed 4Rx support for NR FR1 bands (<2.6GHz) into TS 38.101-1,18.1.0
+2023-03,RAN#99,RP-230519,1378,,A,CR to 38.101-1 R18 corrections on A-MPR for CA_NC_NS_04,18.1.0
+2023-03,RAN#99,RP-230502,1381,,A,CR on Harmonic mixing MSD for CA_n8A-n79A (R18 CAT-A),18.1.0
+2023-03,RAN#99,RP-230559,1384,,B,Big CR to TS 38.101-1: Adding channel BW support in existing NR bands,18.1.0
+2023-03,RAN#99,RP-230546,1385,,B,"big CR 38.101-1 NR Inter-band CA/DC for y bands DL (y=4, 5, 6) with x bands UL (x=1, 2)",18.1.0
+2023-03,RAN#99,RP-230514,1386,,A,Frequency range definition update for TS 38.101-1 (Rel-18),18.1.0
+2023-03,RAN#99,RP-230519,1393,,A,Clarification on Time mask for Tx switching for SA (Rel-18),18.1.0
+2023-03,RAN#99,RP-230503,1400,,A,CR for Rel-18 38.101-1 to correct the configurations for CA_n46M/N/O,18.1.0
+2023-03,RAN#99,RP-230532,1401,,B,Big CR for 38.101-1 introduce UL MIMO configurations for Rel-18,18.1.0
+2023-03,RAN#99,RP-230547,1403,,B,Big CR on Introduction of completed SUL band combinations into TS 38.101-1,18.1.0
+2023-03,RAN#99,RP-230549,1405,,B,Big CR for Rel-18 Simultaneous Rx/Tx inter-band combinations,18.1.0
+2023-03,RAN#99,RP-230513,1407,,A,CR for TS 38.101-1 to correct the delta MPR (R18),18.1.0
+2023-03,RAN#99,RP-230503,1411,,A,CR for TS 38.101-1 to clarify the inner outer condition for almost contiguous RB allocation (R18),18.1.0
+2023-03,RAN#99,RP-230501,1414,,A,CR for TS 38.101-1 to clarify band n34 protection for band n1 and n65 (R18),18.1.0
+2023-03,RAN#99,RP-230501,1417,,A,CR for TS 38.101-1 to clarify Out-of-band blocking exception for band n20 and n28 (R18),18.1.0
+2023-03,RAN#99,RP-230552,1418,,B,Big CR on TS38.101-1 Addition of intra-band CA Combinations with PC2,18.1.0
+2023-03,RAN#99,RP-230501,1427,,A,Additional maximum power reduction for NS_21 (Rel-18),18.1.0
+2023-03,RAN#99,RP-230513,1430,,A,CR for 38.101-1: Band combination corrections (Rel-18 Cat A),18.1.0
+2023-03,RAN#99,RP-230519,1432,,A,CR for 38.101-1: Clarification of PC1.5 requirements (Rel-18 Cat A),18.1.0
+2023-03,RAN#99,RP-230503,1436,,A,CR to TS 38.101-1 on humidity condition for normal temperature,18.1.0
+2023-03,RAN#99,RP-230545,1439,,B,"Big CR to reflect the completed NR inter-band CA DC combinations for  3 bands DL with x bands UL (x=1,2) into TS 38.101-1",18.1.0
+2023-03,RAN#99,RP-230516,1441,,A,CR for TS 38.101-1 on cleanups for V2X operating bands and channel bandwidth (R18_CAT_A),18.1.0
+2023-03,RAN#99,RP-230504,1459,,A,"Output power for NS_38, NS_40, and NS_41",18.1.0
+2023-03,RAN#99,RP-230504,1464,1,A,CR to TS 38.101-1 Rel-18 Minimum guardband and missing ULCA power class,18.1.0
+2023-03,RAN#99,RP-230533,1467,,F,Corection to Band n105 in coexistence table,18.1.0
+2023-03,RAN#99,RP-230519,1469,,A,"CR for TS 38.101-1, Correction of minor errors in suffix E (NR V2X/Sidelink) requirements",18.1.0
+2023-03,RAN#99,RP-230501,1471,,A,CR to TS 38.101-1 Rel-18 4Rx for SUL,18.1.0
+2023-03,RAN#99,RP-230519,1472,,A,CR to update NS_50 PC2 A-MPR,18.1.0
+2023-03,RAN#99,RP-230507,1475,,F,CR to return he Eq1 for intra-band UL CA contiguous,18.1.0
+2023-03,RAN#99,RP-230554,1476,,B,Big CR for 38.101-1 on High power UE for FR1 NR inter-band CA/DC or SUL band combination with y DL-x UL and PCm (m<3) and high power on TDD,18.1.0
+2023-06,RAN#100,RP-231355,1484,,F,CR to K1 and PdschNumOfHarqProcess for DL-CA,18.2.0
+2023-06,RAN#100,RP-231356,1488,,A,FR1 OOB requirements correction,18.2.0
+2023-06,RAN#100,RP-231343,1501,,A,Update to UL-MIMO requirements  (Rel-18),18.2.0
+2023-06,RAN#100,RP-231350,1504,,A,CR to correct the A-MPR table for NS_05/NS_05U,18.2.0
+2023-06,RAN#100,RP-231389,1505,1,B,CR for 38.101-1: Time mask for switching across three or four uplink bands,18.2.0
+2023-06,RAN#100,RP-231384,1513,,B,BigCR for High power UE for inter-band CA with power class 2 on single carrier uplink on FDD band,18.2.0
+2023-06,RAN#100,RP-231377,1515,,B,Big CR on Introduction of completed SUL band combinations into TS 38.101-1,18.2.0
+2023-06,RAN#100,RP-231348,1517,,A,CR for TS 38.101-1 to modify the errors in table 7.6.4-1 due to the introduction of equation-based method (R18),18.2.0
+2023-06,RAN#100,RP-231343,1519,,A,CR for TS 38.101-1 to modify the errors for SUL_n78A-n80A configuration (R18),18.2.0
+2023-06,RAN#100,RP-231367,1521,,F,On RF requirements for intra-band non-collocated CA,18.2.0
+2023-06,RAN#100,RP-231355,1531,,A,CR to TS38.101-1 Correction to out-of-band blocking table,18.2.0
+2023-06,RAN#100,RP-231374,1534,,F,NR interband 2UL CA co-ex simplication R18,18.2.0
+2023-06,RAN#100,RP-231378,1535,1,B,Big CR for FWA HPUE,18.2.0
+2023-06,RAN#100,RP-231383,1538,,B,Big CR to 38.101-1 new combinations for Rel-18 NR HPUE Inter-band,18.2.0
+2023-06,RAN#100,RP-231375,1539,1,B,"Big CR to reflect the completed NR inter-band CA DC combinations for  3 bands DL with x bands UL (x=1,2) into TS 38.101-1",18.2.0
+2023-06,RAN#100,RP-231355,1543,,A,CR for TS 38.101-1 on corrections to the minimum guardband calculation (R18_CAT_A),18.2.0
+2023-06,RAN#100,RP-231351,1546,,A,Rel-18 CR to 38 101-1 for Clarification of UL Tx Switching,18.2.0
+2023-06,RAN#100,RP-231355,1549,,A,Rel18 Cat A CR for 38.101-1 Correct the MSD test configuration for CA_n18-n41,18.2.0
+2023-06,RAN#100,RP-231343,1554,,A,CR to TS38.101-1: Generalize the increase higher power limit requirements for current CA band combinations,18.2.0
+2023-06,RAN#100,RP-231355,1557,,A,CR to TS38.101-1: Correction on terms for NR DC Pcmax,18.2.0
+2023-06,RAN#100,RP-231374,1558,,B,CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-1,18.2.0
+2023-06,RAN#100,RP-231379,1560,,B,CR on PC 1.5 for FR1 TDD single bands,18.2.0
+2023-06,RAN#100,RP-231385,1565,,B,Big CR to TS 38.101-1: Adding channel BW support in existing NR bands,18.2.0
+2023-06,RAN#100,RP-231356,1569,,A,CR for Rel-18 38.101-1 to correct CA_n46N_BCS0 to  CA_n46N_BCS1 for inter-band CA including CA_n46N,18.2.0
+2023-06,RAN#100,RP-231368,1570,,B,Big CR for 38.101-1 introduce UL MIMO configurations for Rel-18,18.2.0
+2023-06,RAN#100,RP-231349,1577,,F,CR to 38.101-1 add the missing additional spurious emissions for CA_n5B,18.2.0
+2023-06,RAN#100,RP-231350,1581,,A,CR to TS38.101-1 on corrections for DMRS bundling with Tx Switching (Rel-18),18.2.0
+2023-06,RAN#100,RP-231388,1585,1,F,CR for TS 38.101-1 Rel-18 CAT-F: Corrections on band combinations for UE co-existence,18.2.0
+2023-06,RAN#100,RP-231351,1588,,A,CR for TS 38.101-1: Adding missing requirements for NR-U Rel-18 CAT-A,18.2.0
+2023-06,RAN#100,RP-231351,1590,,A,CR for TS 38.101-1: Adding missing requirements for NR-U Rel-18 CAT-A,18.2.0
+2023-06,RAN#100,RP-231343,1591,2,B,Introduction of enhancements for unlicensed access to 38.101-1,18.2.0
+2023-06,RAN#100,RP-231375,1592,,F,CR for 38.101-1 18.1.0 Bug fixes for CA/DC tables,18.2.0
+2023-06,RAN#100,RP-231377,1595,,F,CR for 38.101-1: Single SUL CA combination notation modifications,18.2.0
+2023-06,RAN#100,RP-231356,1599,,A,Update of FR1 UL MIMO EVM measurement description,18.2.0
+2023-06,RAN#100,RP-231356,1605,,A,"CR to 38.101-1 Rel-18 Cat A, FRC correction",18.2.0
+2023-06,RAN#100,RP-231349,1610,,A,"CR to 38.101-1 Rel-18 Cat A,   Missing MSD correction",18.2.0
+2023-06,RAN#100,RP-231343,1615,,A,CR to clarify DC location wording,18.2.0
+2023-06,RAN#100,RP-231381,1616,,B,Big CR on TS38.101-1 Addition of intra-band CA Combinations,18.2.0
+2023-06,RAN#100,RP-231338,1617,1,F,CR on R18 TS38.101-1 Modification on the PC2 and PC1.5 note on the CA configuration with UL single carrier,18.2.0
+2023-06,RAN#100,RP-231373,1618,,B,big CR 38.101-1 new combinations Rel-18 NR Intra-band,18.2.0
+2023-06,RAN#100,RP-231383,1622,,A,CR to TS 38.101-1 (Rel-18): Alignment of PC2 uplink/downlink frequency locations to PC3 in configuration,18.2.0
+2023-06,RAN#100,RP-231383,1625,,A,CR to TS 38.101-1 (Rel-18): Correction of an invalid channel bandwidth in 3DL/2UL inter-band reference sensitivity testing for both PC3 and PC2,18.2.0
+2023-06,RAN#100,RP-231376,1627,,B,"big CR 38.101-1 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2)",18.2.0
+2023-06,RAN#100,RP-231385,1630,1,F,CR 38.101-1 for correction of Notes in Table 5.3.5-1,18.2.0
+2023-06,RAN#100,RP-231356,1635,,F,CR for 38.101-1: Foob clarification and n5 and n26 protection for B26/n26,18.2.0
+2023-06,RAN#100,RP-231342,1636,,A,CR on PC2 for adding note to CA_n77C and CA_n78C,18.2.0
+2023-06,RAN#100,RP-231349,1637,,A,CR on MSD for shared spectrum band,18.2.0
+2023-06,RAN#100,RP-231389,1638,,B,CR for 38.101-1 to clarify the time mask for switching with multiple TAGs,18.2.0
+2023-06,RAN#100,RP-231343,1639,,B,Addition of 30 KHz SCS for Sync Raster for Band n53,18.2.0
+2023-06,RAN#100,RP-231386,1640,,B,Big CR for TS 38.101-1 Rel-18 Simultaneous Rx/Tx inter-band combinations,18.2.0
+2023-09,RAN#101,RP-232521,1642,,B,Big CR to 38.101-1 new combinations for Rel-18 NR HPUE Inter-band,18.3.0
+2023-09,RAN#101,RP-232520,1643,,B,big CR 38.101-1 new combinations Rel-18 NR Intra-band,18.3.0
+2023-09,RAN#101,RP-232505,1644,,F,CR to TS 38.101-1 Rel-18 Corrections to UE co-existence requirements,18.3.0
+2023-09,RAN#101,RP-232505,1646,1,A,CR to TS 38.101-1 Rel-18 Introduction of TDD uplink RMC for shorter transients,18.3.0
+2023-09,RAN#101,RP-232505,1649,1,A,CR to TS 38.101-1 Rel-18 SUL MSD alignment,18.3.0
+2023-09,RAN#101,RP-232505,1651,1,F,CR to TS 38.101-1 Rel-18 Corrections to cross-band MSD and CA_n7-n38 fallback,18.3.0
+2023-09,RAN#101,RP-232505,1653,,F,CR to TS 38.101-1 Rel-18 Removing triple uplink configurations and corrections to 2UL CA exceptions,18.3.0
+2023-09,RAN#101,RP-232520,1655,1,F,CR for 38.101-1 18.2.0 Bug fixes for CA/DC tables,18.3.0
+2023-09,RAN#101,RP-232487,1659,,A,CR for TS 38.101-1 Rel-18 CAT-A: Introducing modification for NS_43 A-MPR region,18.3.0
+2023-09,RAN#101,RP-232499,1660,1,F,[NR_unlic_enh-Core] CR for TS 38.101-1 Rel-18: Corrections to NS_53 A-MPR for 100MHz,18.3.0
+2023-09,RAN#101,RP-232490,1662,,A,CR for TS 38.101-1 Rel-18 CAT-A: Adding missing channel bandwidth for NS_01,18.3.0
+2023-09,RAN#101,RP-232504,1666,,A,CR to clarify pi2BPSK note,18.3.0
+2023-09,RAN#101,RP-232489,1671,,A,[NR_CADC_R16_2BDL_xBUL] Correction of a note number for CA_n77A-n78A (R18),18.3.0
+2023-09,RAN#101,RP-232525,1674,,A,[TEI18] CR 38.101-1: Various maintenance issues R18,18.3.0
+2023-09,RAN#101,RP-232515,1677,1,B,CR to 38.101-1 Introduction of dedicated spectrum less than 5MHz for FR1,18.3.0
+2023-09,RAN#101,RP-232498,1680,1,A,[NR_RF_FR1-Core] Correction to EVM measurement point for DFTs-OFDM DM-RS Type 2,18.3.0
+2023-09,RAN#101,RP-232521,1683,,B,BigCR for High power UE for FDD single band PC2,18.3.0
+2023-09,RAN#101,RP-232520,1685,,A,Correction of band n77 channel bandwidth in configuration 2DL/2UL inter-band harmonic mixing testing for PC3,18.3.0
+2023-09,RAN#101,RP-232520,1687,,A,Correction of n48 channel bandwidth in configuration for PC3,18.3.0
+2023-09,RAN#101,RP-232487,1692,,A,CR for 38101-1: Almost contiguos NBC change reversal,18.3.0
+2023-09,RAN#101,RP-232498,1695,,A,CR for 38.101-1: CA_NS_27 and CA_NS_46 fix,18.3.0
+2023-09,RAN#101,RP-232520,1696,,B,Big CR for NR CA band combinations with two SUL cells in Rel-18,18.3.0
+2023-09,RAN#101,RP-232525,1697,1,B,CR for TS 38.101-1: Adding asymmetric channel bandwidth of UL 15/ DL 35 MHz for n66 [n66_asymBW],18.3.0
+2023-09,RAN#101,RP-232513,1702,1,F,Correction of applicability of time mask for Tx swtiching with dual TAG,18.3.0
+2023-09,RAN#101,RP-232489,1704,,A,[NR_CADC_R17_2BDL_xBUL-Core]CR for missing MSD due to 4th order harmonic mixing requirements,18.3.0
+2023-09,RAN#101,RP-232505,1710,,A,CR to TS 38.101-1: correction of Pcmax tolerance for 2Tx (Rel-18),18.3.0
+2023-09,RAN#101,RP-232489,1716,,A,[NR_CADC_R17_2BDL_xBUL-Core ] CR on MSD for shared spectrum band,18.3.0
+2023-09,RAN#101,RP-232486,1718,,A,[NR_6GHz-Core] CR to 38.101-1: applicability note for n104,18.3.0
+2023-09,RAN#101,RP-232489,1720,,A,[NR_DL1024QAM_FR1-Core] CR to 38.101-1: correction of FRC reference for maximum input level for 1024 QAM R18,18.3.0
+2023-09,RAN#101,RP-232520,1721,,B,Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-1,18.3.0
+2023-09,RAN#101,RP-232522,1722,,B,CR to reflect the completed 4Rx support for NR FR1 bands (<2.6GHz) into TS 38.101-1,18.3.0
+2023-09,RAN#101,RP-232520,1723,,B,"Big CR to reflect the completed NR inter-band CA DC combinations for  3 bands DL with x bands UL (x=1,2) into TS 38.101-1",18.3.0
+2023-09,RAN#101,RP-232487,1730,,A,CR for Rel-18 38.101-1 to correct the superscript and some notes for 2 bands inter-band CA related to simultaneous Rx/Tx.,18.3.0
+2023-09,RAN#101,RP-232502,1735,,A,[NR_newRAT-Core]Editorial modification CR for TS 38.101-1_V2,18.3.0
+2023-09,RAN#101,RP-232498,1736,,A,[NR_RF_FR1_enh-Core] Editorial modification CR for TS 38.101-1,18.3.0
+2023-09,RAN#101,RP-232498,1738,,A,[NR_RF_FR1_enh] Supplementation of HPUE SAR schemes for Intra-band UL CA requirements (R18),18.3.0
+2023-09,RAN#101,RP-232496,1739,,A,[NR_RF_TxD] Editorial modification CR for TS 38.101-1,18.3.0
+2023-09,RAN#101,RP-232499,1743,,A,CR for correcting the SEM for intra-band contiguous CA operation,18.3.0
+2023-09,RAN#101,RP-232503,1750,,A,[NR_newRAT-Perf] CR: Correction of FRC for maximum input level for 256QAM,18.3.0
+2023-09,RAN#101,RP-232489,1753,,A,[NR_CADC_R16_2BDL_xBUL-Core] CR to 38.101-1 R18 add the missing Tx requirement for CA_n25-n71,18.3.0
+2023-09,RAN#101,RP-232501,1758,,A,[NR_newRAT-Core] CR for TS 38.101-1 to modify MSD due to harmonic mixing interference (R18),18.3.0
+2023-09,RAN#101,RP-232496,1760,,A,"NR_SAR_PC2_interB_SUL_2BUL]Rel18 Cat A CR for 38.101-1 Correct ?PPowerClass,CA relevant requirement in clause 6.2A.1.3 for inter-band ULCA",18.3.0
+2023-09,RAN#101,RP-232486,1763,,A,[NR_6GHz_unlic_full] CR 38.101-1 correction to A-MPR requirements_R18,18.3.0
+2023-09,RAN#101,RP-232503,1768,,A,[NR_RF_FR1-Core] Editorial correction to 6.2A.4 (Rel-18),18.3.0
+2023-09,RAN#101,RP-232488,1771,,A,[NR_cov_enh-Core] Update of FR1 DMRS bundling measurements,18.3.0
+2023-09,RAN#101,RP-232518,1772,,B,Big CR for 38.101-1 introduce UL MIMO configurations for Rel-18,18.3.0
+2023-09,RAN#101,RP-232520,1773,,B,"big CR 38.101-1 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2)",18.3.0
+2023-09,RAN#101,RP-232521,1775,,B,Big CR on TS38.101-1 Addition of intra-band CA Combinations,18.3.0
+2023-09,RAN#101,RP-232489,1777,,A,[NR_CADC_R17_2BDL_xBUL-Core] CR on TS38.101-1 Modification on MSD due to UL harmonic interference for CA _n48A-n66A,18.3.0
+2023-09,RAN#101,RP-232522,1780,,B,Big CR to TS 38.101-1: Adding channel BW support in existing NR bands,18.3.0
+2023-09,RAN#101,RP-232522,1785,,F,"CR to 38.101-1 correction on CA_n34-n41, CA_n40-n41-n79 for simultaneous RxTx",18.3.0
+2023-09,RAN#101,RP-232501,1789,,A,[NR_newRAT-Core] Correction of intraband contiguous CA ACS requirements,18.3.0
+2023-09,RAN#101,RP-232498,1792,,A,[NR_RF_FR1] Correction of intraband non-contiguous CA ACS requirements,18.3.0
+2023-09,RAN#101,RP-232518,1797,,B,CR adding REFSENS for HD-FDD RedCap UE for band n105,18.3.0
+2023-09,RAN#101,RP-232498,1799,,A,[NR_RF_FR1-Core] CR for TS38101-1 Clarifying applicable power classes for NR CA,18.3.0
+2023-12,RAN#102,RP-233361,1810,,B,Introduction of higherPowerLimit-r17 into NR CA of PC3+PC5 including UL Intra band CA,18.4.0
+2023-12,RAN#102,RP-233361,1811,,B,Introduction of delta PPowerClass report,18.4.0
+2023-12,RAN#102,RP-233331,1815,,A,Fc terminology update,18.4.0
+2023-12,RAN#102,RP-233340,1818,,A,CR for Intra-band UL CA MPR clarification,18.4.0
+2023-12,RAN#102,RP-233369,1821,,B,BigCR for High power UE for FDD single band PC2,18.4.0
+2023-12,RAN#102,RP-233369,1822,1,B,CR to R18 TS38.101-1 to introduce PC2 UTRA ACLR,18.4.0
+2023-12,RAN#102,RP-233348,1826,,A,CR for TS 38.101 Rel-18 correcting the starting RB location for NS_07,18.4.0
+2023-12,RAN#102,RP-233368,1828,1,B,TS 38.101-1 big CR for NR_700800900_combo_enh,18.4.0
+2023-12,RAN#102,RP-233368,1829,,F,CR Bug Fixes for Band Combinations in 38101-1-i30_s00-05,18.4.0
+2023-12,RAN#102,RP-233336,1832,,A,CR on TS38.101-1 for simplification of NR V2X UE coexistence in Rel-18 (Cat. A),18.4.0
+2023-12,RAN#102,RP-233351,1834,,F,[NR_RF_TxD-Core] Correction to 7.3G REFSENS for TxD (Rel-18),18.4.0
+2023-12,RAN#102,RP-233368,1835,,F,CR to R18 TS38.101-1 to align frequency range restriction for MSD,18.4.0
+2023-12,RAN#102,RP-233368,1842,,A,CR for 38.101-1 UE to UE coex  R18,18.4.0
+2023-12,RAN#102,RP-233366,1845,1,B,CR for 38.101-1: Introduction of n106,18.4.0
+2023-12,RAN#102,RP-233363,1850,,F,CR to TS 38.101-1 on clarification of applicable SS raster entries for 3 MHz channel bandwidth,18.4.0
+2023-12,RAN#102,RP-233371,1851,,F,Corrections on requirements for NR-U enhancements,18.4.0
+2023-12,RAN#102,RP-233348,1857,,A,CR to TS38.101-1 Rel-18 CAT-A: On harmonisation network signalling requirements,18.4.0
+2023-12,RAN#102,RP-233369,1860,,A,CR to TS 38.101-1 (Rel-18): Correction of an Fc location for a 100MHz channel bandwidth of band n77,18.4.0
+2023-12,RAN#102,RP-233369,1868,,B,CR for TS 38.101-1 to introduce indication of modified MPR behaviour for band n34 and n40,18.4.0
+2023-12,RAN#102,RP-233364,1869,1,B,Big CR for TS 38.101-1 for NR ATG,18.4.0
+2023-12,RAN#102,RP-233368,1870,1,B,CR for 38.101-1: Add delta RIB requirements for CA_n78C_n84A-n89A,18.4.0
+2023-12,RAN#102,RP-233332,1875,,A,[NR_newRAT] CR for clarification on applicability of Rx antenna number for Rx requirements for TS 38.101-1,18.4.0
+2023-12,RAN#102,RP-233361,1876,,B,CR for 38.101-1: Time mask for switching across three or four uplink bands,18.4.0
+2023-12,RAN#102,RP-233365,1877,1,B,Introduction of an enhanced channel raster,18.4.0
+2023-12,RAN#102,RP-233369,1880,,B,Big CR to 38.101-1 new combinations for Rel-18 NR HPUE Inter-band,18.4.0
+2023-12,RAN#102,RP-233332,1883,,A,[NR_newRAT-Core] Editorial modification CR for TS 38.101-1,18.4.0
+2023-12,RAN#102,RP-233364,1886,3,B,Rel-18 CR for 38.101-1 New BS signalling implementation for non-collocated scenario,18.4.0
+2023-12,RAN#102,RP-233339,1887,,A,[NR_n41_BW-Core] Support of PC1.5 for n41 30MHz in Japan (R18),18.4.0
+2023-12,RAN#102,RP-233361,1894,,F,[NR_MC_enh-Core]CR for DL interruption note improvement,18.4.0
+2023-12,RAN#102,RP-233339,1899,,A,"[NR_n30-Core] CR to add resolution BW for Additional SEM for NS_21 - TS38.101-1, Rel-18, Cat-A",18.4.0
+2023-12,RAN#102,RP-233332,1903,,A,"[NR_newRAT-Core] CR to remove the word capable in power class 3 capable UE - TS38.101-1, Rel-18, Cat-A",18.4.0
+2023-12,RAN#102,RP-233340,1906,,A,"[NR_RF_FR1-Core] CR concerning the RMS average used in EVM measurement with transient period - TS38.101-1, Rel-18, Cat-A",18.4.0
+2023-12,RAN#102,RP-233370,1907,2,B,Big CR to 38.101-1 Simultaneous Rx-Tx basket,18.4.0
+2023-12,RAN#102,RP-233370,1908,,B,Big CR to TS 38.101-1: Adding channel BW support in existing NR bands,18.4.0
+2023-12,RAN#102,RP-233362,1909,3,B,Running CR to TS 38.101-1 - Introduction of Aerial UEs support,18.4.0
+2023-12,RAN#102,RP-233366,1910,,B,CR to TS 38.101-1 - Introduction of bands n31 and n72,18.4.0
+2023-12,RAN#102,RP-233339,1913,,A,[NR_n38_BW2] Clarify A-MPR values for NS_44 - Rel18,18.4.0
+2023-12,RAN#102,RP-233368,1914,1,B,Big CR to reflect the completed NR inter-band CA DC combinations for 3 bands DL with up to 2 bands UL into TS 38.101-1,18.4.0
+2023-12,RAN#102,RP-233337,1917,,A,[NR_CADC_R16_2BDL_xBUL] CR for TS 38.101-1 to correct inter-band NR DC configuration table (R18_CAT A),18.4.0
+2023-12,RAN#102,RP-233368,1918,1,B,"big CR 38.101-1 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2)",18.4.0
+2023-12,RAN#102,RP-233368,1921,,A,Rel18 Cat A CR for 38.101-1 Add missing Uplink configurations for PC3 CA_n46M-n48B-n96A and CA_n46M-n48(4A)-n96D,18.4.0
+2023-12,RAN#102,RP-233368,1923,,A,Rel18 Cat A CR for 38.101-1 Add missing MSD due to UL harmonic interference for PC3 CA_n71-n78 in clause 7.3A.4,18.4.0
+2023-12,RAN#102,RP-233368,1925,,B,Big CR on Introduction of completed SUL band combinations into TS 38.101-1,18.4.0
+2023-12,RAN#102,RP-233332,1929,,A,[NR_newRAT-Core] CR for 38.101-1 to clarify the applicable bands for additional UTRA ACLR requirements. (R18),18.4.0
+2023-12,RAN#102,RP-233345,1931,,A,[NR_BCS4-Core] CR for 38.101-1 to modify the MSD value for CA_20-n78 harmonic mixing and NOTE2 in harmonic mixing table (R18),18.4.0
+2023-12,RAN#102,RP-233370,1934,1,B,R18 38101-1 CR for 3Tx inter-band CA,18.4.0
+2023-12,RAN#102,RP-233370,1935,,B,R18 38101-1 CR for low band 4Rx,18.4.0
+2023-12,RAN#102,RP-233361,1936,,B,Big CR for NR SL evoluation,18.4.0
+2023-12,RAN#102,RP-233361,1938,1,B,CR to 38.101 for introduction of MPR reduction,18.4.0
+2023-12,RAN#102,RP-233371,1939,1,F,Spectrum emission mask for operation with shared spectrum channel access R18,18.4.0
+2023-12,RAN#102,RP-233363,1940,1,B,TS 38.101-1 big CR for NR_ENDC_RF_FR1_enh2,18.4.0
+2023-12,RAN#102,RP-233366,1941,1,B,TS 38.101-1 big CR for NR_bands_UL_MIMO_R18,18.4.0
+2023-12,RAN#102,RP-233368,1945,1,B,TS 38.101-1 big CR for NR_CADC_R18_2BDL_xBUL,18.4.0
+2023-12,RAN#102,RP-233371,1948,1,F,CR for introducing NR-U uplink CA for NS_53 and NS_54,18.4.0
+2023-12,RAN#102,RP-233371,1949,,F,CR to TS38.101-1 for NR-U NS table reference,18.4.0
+2023-12,RAN#102,RP-233345,1951,1,A,"[NR_CADC_R17_3BDL_2BUL-Core] CR for 38.101-1 to add missing IMD5 for CA_n48-n66-n70 with UL CA_n48-n66 (Rel-18, Cat. A)",18.4.0
+2023-12,RAN#102,RP-233368,1952,,B,big CR for addition of NR CA Intra-band FR1,18.4.0
+2023-12,RAN#102,RP-233369,1953,,F,CR for 38.101-1: HPUE Band Combination Corrections,18.4.0
+2023-12,RAN#102,RP-233366,1955,1,B,CR to TS38.101-1: Introduction of n109,18.4.0
+2023-12,RAN#102,RP-233331,1959,,A,[NR_newRAT] CR to 38.101-1 on FRC correction,18.4.0
+2023-12,RAN#102,RP-233331,1963,,A,[NR_newRAT] CR to 38.101-1 on FRC deletion for 5MHz 30 KHz,18.4.0
+2023-12,RAN#102,RP-233361,1964,1,B,CR to 38.101-1: Introduction of eRedCap,18.4.0
+2023-12,RAN#102,RP-233345,1966,,A,"[NR_CADC_R17_2BDL_xBUL] CR to 38.101-1, n3-n77(2A) test point correction",18.4.0
+2023-12,RAN#102,RP-233340,1972,,A,Correction of ?T_RxSRS for SRS resource set consisting of two SRS ports,18.4.0
+2024-03,RAN#103,RP-240601,1984,,F,CR: Correction to remedy 3GU error of CR1907r2,18.5.0
+2024-03,RAN#103,RP-240613,1988,1,F,Adding support for the VLP mode in US,18.5.0
+2024-03,RAN#103,RP-240597,1989,,F,CR Bug Fixes for Band Combinations in 38101-1-i40_s00-05,18.5.0
+2024-03,RAN#103,RP-240558,1991,,A,CR to 38.101-1 on correction of CA_n2A-n78A UL configuration,18.5.0
+2024-03,RAN#103,RP-240612,1994,,B,CR for 38101-1 to add PC1.5 for band n39 and annex L for band n39,18.5.0
+2024-03,RAN#103,RP-240607,1995,2,F,CR for 38101-1 to update ATG related signaling name,18.5.0
+2024-03,RAN#103,RP-240603,1998,,F,(NR_cov_enh2-Core) Correction on dpc-Reporting-FR1 related requirements,18.5.0
+2024-03,RAN#103,RP-240606,1999,2,F,(NR_ENDC_RF_FR1_enh2-Core) Correction on delta TRxSRS related texts for 8Rx,18.5.0
+2024-03,RAN#103,RP-240600,2000,,B,BigCR for High power UE for intra-band and inter-band CA with power class 2 on single carrier uplink on FDD band,18.5.0
+2024-03,RAN#103,RP-240599,2001,,B,BigCR for High power UE for FDD single band PC2,18.5.0
+2024-03,RAN#103,RP-240562,2002,,F,CR to TS 38.101-1 Rel-18 Corrections to UL configuration for asymmetric ULDL,18.5.0
+2024-03,RAN#103,RP-240607,2008,1,F,Modification on power imbalance requirements,18.5.0
+2024-03,RAN#103,RP-240576,2011,,A,CR to TS38.101-1 Rel-18 CAT-A: On corrections for NR-U R16 A-MPR requirements,18.5.0
+2024-03,RAN#103,RP-240557,2013,,A,CR to TS38.101-1 Rel-18 CAT-A: On corrections for NR-U R17 A-MPR requirements,18.5.0
+2024-03,RAN#103,RP-240613,2014,,F,CR to TS38.101-1 Rel-18 CAT-F: On corrections for NR-U R18 A-MPR requirements,18.5.0
+2024-03,RAN#103,RP-240574,2018,,A,(NR_RF_FR1) Introduction of missing DMRS configuration restriction for intra-ULCA in FR1,18.5.0
+2024-03,RAN#103,RP-240599,2035,,B,FWA Big CR,18.5.0
+2024-03,RAN#103,RP-240614,2039,,F,(TEI18) CR for 38.101-1 corrections for  UL CA conigurations R18,18.5.0
+2024-03,RAN#103,RP-240552,2043,,A,(TEI16) almost contiguous A-MPR for PC2,18.5.0
+2024-03,RAN#103,RP-240597,2045,,F,(NR_CADC_R18_2BDL_xBUL-Core) Correction for MSD IMD test points R18,18.5.0
+2024-03,RAN#103,RP-240574,2048,,A,CA MPR correction,18.5.0
+2024-03,RAN#103,RP-240606,2049,,F,(NR_ENDC_RF_FR1_enh2-Core ) 4Tx RF issues,18.5.0
+2024-03,RAN#103,RP-240606,2050,1,F,(NR_ENDC_RF_FR1_enh2-Core ) Power class for Lower MSD verification – TS38.101-1,18.5.0
+2024-03,RAN#103,RP-240587,2053,,F,(NR_MC_enh-Core) CR for 38.101-1: Correction on time mask for Rel-18 Tx switching,18.5.0
+2024-03,RAN#103,RP-240597,2057,,A,CR to TS 38.101-1 (Rel-18): CR for removing n48(A-C) intra-band CA configuration,18.5.0
+2024-03,RAN#103,RP-240597,2058,,B,Big CR to reflect the completed NR inter-band CA DC combinations for 3 bands DL with up to 2 bands UL into TS 38.101-1,18.5.0
+2024-03,RAN#103,RP-240558,2060,,A,(NR_CADC_R17_3BDL_2BUL) CR for TS 38.101-1 on inter-band CA for n46-n48-n96 (R18_CAT_A),18.5.0
+2024-03,RAN#103,RP-240594,2065,,B,TS 38.101-1 big CR for NR_bands_UL_MIMO_R18,18.5.0
+2024-03,RAN#103,RP-240607,2068,3,F,Rel-18 CR for 38.101-1 NonCol_IntraB_ENDC_NR_CA,18.5.0
+2024-03,RAN#103,RP-240600,2069,,B,Big CR to 38.101-1 new combinations for Rel-18 NR HPUE Inter-band,18.5.0
+2024-03,RAN#103,RP-240614,2076,1,F,CR for Rel-18 38.101-1 to unify the minimum guardband symbol,18.5.0
+2024-03,RAN#103,RP-240603,2078,1,F,CR for Rel-18 38.101-1 is to modify the requirements for eRedCap,18.5.0
+2024-03,RAN#103,RP-240597,2082,,F,(NR_newRAT-Core) Correct the equation in the NOTE for harmonic mixing MSD,18.5.0
+2024-03,RAN#103,RP-240597,2089,,B,TS 38.101-1 big CR for NR_CADC_R18_2BDL_xBUL,18.5.0
+2024-03,RAN#103,RP-240601,2090,,B,CR to reflect the completed 4Rx support for NR FR1 bands (<2.6GHz) into TS 38.101-1,18.5.0
+2024-03,RAN#103,RP-240558,2096,,A,"(NR_CADC_R17_2BDL_xBUL-Core) CR to correct carrier frequencies used in REFSENS exceptions due to IMD for CA_n26-n70 - TS38.101-1, Rel-18, Cat-A",18.5.0
+2024-03,RAN#103,RP-240561,2100,,F,"(NR_n48-Core) CR to correct or add note applicable for specific channel bandwidths for CA including band n48 - TS38.101-1, Rel-18, Cat-F",18.5.0
+2024-03,RAN#103,RP-240613,2102,1,F,"(NR_RF_FR1_enh-Core, 4Rx_low_NR_band_handheld_3Tx_NR_CA_ENDC-Core) CR to add clarification regarding the configurations of the UL CCs for suffix H - TS38.101-1, Rel-18, Cat-F",18.5.0
+2024-03,RAN#103,RP-240565,2106,1,A,"(NR_newRAT-Core) CR to correct ""Supplement"" to ""Supplementary"" in the definition of the suffix used for SUL - TS38.101-1, Rel-18, Cat-F",18.5.0
+2024-03,RAN#103,RP-240597,2108,,B,big CR 38.101-1 new combinations Rel-18 NR Intra-band,18.5.0
+2024-03,RAN#103,RP-240601,2109,,F,CR 38.101-1 for corrections in tables 5.2-1 and 5.3.5-1,18.5.0
+2024-03,RAN#103,RP-240597,2110,,F,CR 38.101-1 correcting 2 bands configuration tables,18.5.0
+2024-03,RAN#103,RP-240597,2111,,F,CR 38.101-1 correcting 3 bands configuration tables,18.5.0
+2024-03,RAN#103,RP-240598,2112,,F,CR 38.101-1 correcting 4 and 5 bands configuration tables,18.5.0
+2024-03,RAN#103,RP-240598,2113,,B,Big CR on Introduction of completed SUL band combinations into TS 38.101-1,18.5.0
+2024-03,RAN#103,RP-240557,2115,,F,(NR_CA_R17_3BDL_1BUL-Core) CR for TS 38.101-1 to add missing combo CA_n3A-n8A-n79A (R18),18.5.0
+2024-03,RAN#103,RP-240564,2119,,A,(NR_newRAT-Core) CR for TS 38.101-1 to correct the Finterferer (offset) for intra-band CA ACS and IBB requirements (R18),18.5.0
+2024-03,RAN#103,RP-240558,2121,,A,(NR_CADC_R17_2BDL_xBUL-Core) CR for TS 38.101-1 to clarify the applicable SCS when UE testing (R18),18.5.0
+2024-03,RAN#103,RP-240601,2122,,F,Big CR for 3Tx NR inter-band UL CA and EN-DC basket WI (38.101-1),18.5.0
+2024-03,RAN#103,RP-240613,2123,,F,Big CR for Low band 4Rx for handheld UE and 3Tx for inter-band UL CA and EN-DC (38.101-1),18.5.0
+2024-03,RAN#103,RP-240603,2124,,F,(NR_SL_enh2-Core) BigCR to TS38.101-1 for Sidelink enhancement,18.5.0
+2024-03,RAN#103,RP-240611,2137,1,F,CR for TS 38.101-1 to maintain low band combos,18.5.0
+2024-03,RAN#103,RP-240587,2138,,F,bigCR to 38.101-1 Corrections for aerial NR UEs,18.5.0
+2024-03,RAN#103,RP-240587,2139,,F,BigCR to 38.101 for Corrections for MPR reduction,18.5.0
+2024-03,RAN#103,RP-240608,2140,1,F,CR to TS 38.101-1: correction on enhanced channel raster,18.5.0
+2024-03,RAN#103,RP-240574,2143,,A,(NR_RF_FR1) CR to TS 38.101-1: Channel raster to resource element mapping,18.5.0
+2024-03,RAN#103,RP-240606,2146,,F,(NR_ENDC_RF_FR1_enh2-Core) Correction of Lower-MSD requirements for NR CA,18.5.0
+2024-03,RAN#103,RP-240564,2150,,A,(NR_newRAT-Core) CR to remove the word capable in power class related requirements,18.5.0
+2024-03,RAN#103,RP-240564,2154,,A,(NR_newRAT-Core) CR to TS38.101-1: Correction of band number in uplink configuration for reference sensitivity table,18.5.0
+2024-03,RAN#103,RP-240599,2155,,B,Big CR on TS38.101-1 Addition of intra-band CA Combinations,18.5.0
+2024-03,RAN#103,RP-240598,2156,,B,"big CR 38.101-1 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2)",18.5.0
+2024-03,RAN#103,RP-240606,2160,1,F,R18 Cat-F CR 38.101-1 correction CR for 4Tx requirements,18.5.0
+2024-03,RAN#103,RP-240558,2167,,A,[NR_CADC_R17_2BDL_xBUL] CR for 38.101-1: Correct missing CA_n71-n77 Harmonic,18.5.0
+2024-03,RAN#103,RP-240597,2168,,F,[NR_CADC_R18_2BDL_xBUL] CR for 38.101-1: Correct n25 instead of n41 for CA_n41(3A)-n85A,18.5.0
+2024-03,RAN#103,RP-240557,2170,,A,[NR_BCS4-Core] CR for 38.101-1: Maximum Aggregated BW for BCS5,18.5.0
+2024-03,RAN#103,RP-240576,2172,1,A,(NR_unlic-Core) Correction CR for NS_59 in TS38.101-1_V2,18.5.0
+2024-03,RAN#103,RP-240613,2173,1,F,"(NR_unlic_enh-Core) Correction CR for NS_63, NS_64 in TS38.101-1",18.5.0
+2024-03,RAN#103,RP-240606,2176,2,F,(NR_FR1_lessthan_5MHz_BW-Core) CR to TS 38.101-1 for sub 5MHz channel bandwidth,18.5.0
+2024-03,RAN#103,RP-240603,2178,,F,(NR_cov_enh2-Core) CR to TS38.101-1 on higher power limit for inter-band CA with an intra-band component,18.5.0
+2024-03,RAN#103,RP-240597,2179,1,F,CR to R18 38101-1 to correct Note on PC2 CA_n71-n77 IMD5 MSD,18.5.0
+2024-03,RAN#103,RP-240597,2183,1,F,(NR_CADC_R18_2BDL_xBUL) CR to R18 38101-1 to correct channel bandwidths in MSD test points,18.5.0
+2024-03,RAN#103,RP-240588,2184,,F,Big CR for 38.101-1 for SRS aggregation for positioning,18.5.0
+2024-03,RAN#103,RP-240606,2185,,F,Big CR for lower MSD for inter-band CA/EN-DC/DC,18.5.0
+2024-03,RAN#103,RP-240606,2186,,F,Big CR for 38.101-1 on less than 5MHz,18.5.0
+2024-03,RAN#103,RP-240603,2187,,F,Big CR for 38.101-1 on MC,18.5.0
+2024-03,RAN#103,RP-240572,2189,,A,Compensating for post antenna connector gain impact to unwanted emissions for n101 band,18.5.0
+2024-03,RAN#103,RP-240598,2190,,F,Big CR to 38.101-1 for two SUL cells,18.5.0
+2024-03,RAN#103,RP-240855,2191,4,B,CR 38.101-1 addition of 2Rx XR exception for REFSENS [2Rx_XR_Device],18.5.0
+2024-06,RAN#104,RP-241461,2200,,B,CR: Simultaneous Rx-Tx to remedy the de-implementation of CR1907r2,18.6.0
+2024-06,RAN#104,RP-241489,2201,,F,Clarification for the mandatory support of enhanced channel raster for the TN bands,18.6.0
+2024-06,RAN#104,RP-241382,2203,,A,CR to fix CBW listing of NS_37 emission requirements,18.6.0
+2024-06,RAN#104,RP-241394,2205,,A,CR to 38.101-1 on Wgap correction for CA_n2(2A) REFSENS requirement,18.6.0
+2024-06,RAN#104,RP-241491,2206,,F,CR to 38.101-1 on corrections for n109 UE channel BW table misalignment in Table 5.3.5-1,18.6.0
+2024-06,RAN#104,RP-241393,2214,,A,CR to align NR carrier centre frequencies with LTE for NS_24,18.6.0
+2024-06,RAN#104,RP-241443,2215,,F,CR Bugfix 38101-1-i50_s0505B-0505C,18.6.0
+2024-06,RAN#104,RP-241443,2216,1,F,CR Bug Fixes 38101-1-i50_s0505A03-0505A03,18.6.0
+2024-06,RAN#104,RP-241483,2218,2,F,(NR_ATG-Core) CR for 38101-1 on ATG UE Tx Rfrequirement,18.6.0
+2024-06,RAN#104,RP-241484,2220,1,F,(NonCol_intraB_ENDC_NR_CA-Core) On applicability of diversity characteristic,18.6.0
+2024-06,RAN#104,RP-241494,2222,,F,CR on updating UE capability name for 2Rx XR UEs [2Rx_XR_Device],18.6.0
+2024-06,RAN#104,RP-241393,2226,,A,CR for TS 38.101-1 Rel-18 correcting maximum transmission bandwidth for NS_04,18.6.0
+2024-06,RAN#104,RP-241483,2228,1,B,Big CR of TS 38.101-1 for ATG,18.6.0
+2024-06,RAN#104,RP-241395,2230,,A,(NR_CADC_R17_3BDL_2BUL) CR to 38.101-1: Adding note to CA_n7-n8-n78 for IMD4,18.6.0
+2024-06,RAN#104,RP-241461,2231,,B,Big CR to 38.101-1 on simultaneous Rx-Tx basket,18.6.0
+2024-06,RAN#104,RP-241388,2234,,A,CR 38.101-1 correction CR for Rx requirements with TxD indication,18.6.0
+2024-06,RAN#104,RP-241493,2235,,F,R18 Cat-F CR 38.101-1 correction CR for 3Tx requirements,18.6.0
+2024-06,RAN#104,RP-241478,2236,,F,R18 Cat-F CR 38.101-1 correction CR for 4Tx requirements,18.6.0
+2024-06,RAN#104,RP-241460,2237,,B,BigCR for High power UE for intra-band and inter-band CA with power class 2 on single carrier uplink on FDD band,18.6.0
+2024-06,RAN#104,RP-241456,2238,,B,BigCR for High power UE for FDD single band PC2,18.6.0
+2024-06,RAN#104,RP-241465,2244,,F,Correction of parameter name for dpc-Reporting-FR1 for range 1 SA,18.6.0
+2024-06,RAN#104,RP-241453,2245,,D,(NR_CADC_R18_yBDL_xBUL) CR for 38.101-1: Table format corrections,18.6.0
+2024-06,RAN#104,RP-241459,2246,,F,(HPUE_FR1_TDD_NR_CADC_SUL_R18) CR for 38.101-1: Corrections for missing PC2 CA_n41C and MOP Table,18.6.0
+2024-06,RAN#104,RP-241402,2259,,A,(NR_RF_FR1_enh-Core) CR to 38.101-1 R18 corrections on Pcmax tolerance for intra-band contiguous CA with UL MIMO,18.6.0
+2024-06,RAN#104,RP-241382,2261,,A,CR for Rel-18 to correct the signalling IE for FR1 Intra-band non-contiguous CA in clause 6.2A.2.2.0.,18.6.0
+2024-06,RAN#104,RP-241478,2262,,F,CR for TS 38.101-1: some update on EVM requirement for 4Tx UL MIMO,18.6.0
+2024-06,RAN#104,RP-241483,2266,,F,CR on MOP and configured transmitted power for ATG UE,18.6.0
+2024-06,RAN#104,RP-241391,2270,,A,(LTE_NR_DC_CA_enh) CR to TS 38.101-1: correction of Pcmax tolerance for NR DC (Rel-18),18.6.0
+2024-06,RAN#104,RP-241389,2273,,F,(5G_V2X_NRSL) CR to TS 38.101-1: correction of Pcmax tolerance for sidelink (Rel-18),18.6.0
+2024-06,RAN#104,RP-241394,2281,1,F,"(NR_CA_R16_intra-Core, , ) CR to add notes for SCS restrictions on CBWs in CA configurations - TS38.101-1, Rel-18",18.6.0
+2024-06,RAN#104,RP-241395,2283,,A,"(NR_CADC_R17_3BDL_2BUL) CR to correct n66 transmission bandwidth used in REFSENS exceptions due to IMD5 for CA_n5-n48-n66 - TS38.101-1, Rel-18",18.6.0
+2024-06,RAN#104,RP-241383,2287,,A,(NR_newRAT-Core)Correct the Pcmax tolerance for inter-band CA and TxD,18.6.0
+2024-06,RAN#104,RP-241478,2288,,F,CR for TS 38.101-1: 4Rx/8Rx applicability for Lower-MSD requirements,18.6.0
+2024-06,RAN#104,RP-241451,2289,,B,TS 38.101-1 big draft CR for NR_CADC_R18_2BDL_xBUL,18.6.0
+2024-06,RAN#104,RP-241492,2293,,A,Cat A CR to TS 38.101-1 Rel-18 NR-U Nominal channel spacing,18.6.0
+2024-06,RAN#104,RP-241450,2297,,B,CR 38.101-1 adding intra-band NR CA configurations,18.6.0
+2024-06,RAN#104,RP-241477,2302,1,F,Introduce asymmetric UL DL channel BW combinations for n28,18.6.0
+2024-06,RAN#104,RP-241405,2303,2,F,CR to 38.101-1 on Aerial Specific Pmax Values,18.6.0
+2024-06,RAN#104,RP-241478,2304,,F,CR on 38.101-1: adding missing 8Rx requirements,18.6.0
+2024-06,RAN#104,RP-241477,2305,,F,NS_17 correction on Band n28 3 MHz operation in Japan,18.6.0
+2024-06,RAN#104,RP-241455,2308,1,F,CR to TS 38.101-1: n100-n101 Car radio receiver requirements,18.6.0
+2024-06,RAN#104,RP-241455,2309,,B,Big CR High-power UE operation for fixed-wireless/vehicle-mounted use cases in LTE bands and NR bands,18.6.0
+2024-06,RAN#104,RP-241443,2310,,F,CR for 38.101-1 Correction of cell issues,18.6.0
+2024-06,RAN#104,RP-241462,2311,,F,Big CR for 3Tx NR inter-band basket WI 38.101-1,18.6.0
+2024-06,RAN#104,RP-241402,2313,,A,(NR_RF_FR1_enh-Core) CR for TS 38.101-1: Add ACLR requirement for PC2 intra-band non-contiguous UL CA,18.6.0
+2024-06,RAN#104,RP-241402,2315,,A,(NR_RF_FR1_enh-Core) CR for TS 38.101-1: Corrections on intra-band UL contiguous CA with UL MIMO for PC3,18.6.0
+2024-06,RAN#104,RP-241477,2317,1,F,CR for TS 38.101-1: Define the reserved GSCN / ARFCN-ValueNR and NR operating band,18.6.0
+2024-06,RAN#104,RP-241456,2321,1,B,CR to TS 38.101-1: Addition of PC2 for n7,18.6.0
+2024-06,RAN#104,RP-241467,2326,,F,CR to TS38.101-1 for Sidelink enhancement  cover RAN4#110bis,18.6.0
+2024-06,RAN#104,RP-241464,2331,,F,(NR_MC_enh-Core) CR for 38.101-1: Correction on time mask for Rel-18 Tx switching,18.6.0
+2024-06,RAN#104,RP-241454,2335,,B,Big CR on Introduction of completed SUL band combinations into TS 38.101-1,18.6.0
+2024-06,RAN#104,RP-241483,2336,2,F,(NR_ATG-Core) CR for TS 38.101-1 to modify the note for ACS requirements 4dB below Pcmax,18.6.0
+2024-06,RAN#104,RP-241453,2339,,B,"big CR 38.101-1 new combinations Rel-18 NR Inter-band CA/DC for y bands DL with x bands UL (y=4,5,6, x=1,2)",18.6.0
+2024-06,RAN#104,RP-241457,2341,1,B,Big CR on TS38.101-1 Addition of intra-band CA Combinations,18.6.0
+2024-06,RAN#104,RP-241453,2343,,B,(NR_CADC_R18_yBDL_xBUL)  CR for TS 38101-1 to clarify 1 UL configuration for NR CA,18.6.0
+2024-06,RAN#104,RP-241452,2344,,B,Big CR to reflect the completed NR inter-band CA DC combinations for 3 bands DL with up to 2 bands UL into TS 38.101-1,18.6.0
+2024-06,RAN#104,RP-241382,2348,,A,(NR_newRAT-Core) CR for TS 38.101-1 on UE additional spurious emissions (R18_CAT_A),18.6.0
+2024-06,RAN#104,RP-241398,2351,,A,CR to TS 38.101-1: Clarification on band-specific post antenna gain values for the FRMCS operation,18.6.0
+2024-06,RAN#104,RP-241398,2353,,A,CR to TS 38.104: clarifications on RMR terminology and related operating bands,18.6.0
+2024-06,RAN#104,RP-241478,2361,,F,(NR_ENDC_RF_FR1_enh2-Core) Correction on lowerMSD verification,18.6.0
+2024-06,RAN#104,RP-241388,2367,,A,Rel-18 SUL configuration correction for REFSENS for DL in n24 and UL in n99,18.6.0
+2024-06,RAN#104,RP-241493,2369,,F,CR for correction of condition for 3Tx SAR solution,18.6.0
+2024-06,RAN#104,RP-241494,2370,,B,CR to support uplink Tx switching for CA with two contiguous aggregated carriers in each band [2CC-2CC_ULTx_switching],18.6.0
+2024-06,RAN#104,RP-241459,2371,,B,Big CR to 38.101-1 new combinations for Rel-18 NR HPUE Inter-band,18.6.0
+2024-09,RAN#105,RP-242156,2374,,A,CR to R18 38.101-1 to add 25MHz CBW to NS_18 emissions requirement,18.7.0
+2024-09,RAN#105,RP-242188,2376,,F,CR for 38.101-1: Correction on the SL-U RB set and intra-cell guard band determination,18.7.0
+2024-09,RAN#105,RP-242159,2377,1,F,Clarification for the enhanced channel raster and carrier aggregation,18.7.0
+2024-09,RAN#105,RP-242163,2380,,F,(NR_FDD_ULn28_DLn75_n76) CR to 38.101-1 on Channel raster for Band n109,18.7.0
+2024-09,RAN#105,RP-242158,2387,,A,(NR_CADC_R17_2BDL_xBUL) Removal of CA combinations containing n48(A-C),18.7.0
+2024-09,RAN#105,RP-242173,2391,,A,CR for TS 38.101-1 Rel-18 correction on the terminology of emission bandwidth for NS_04,18.7.0
+2024-09,RAN#105,RP-242196,2392,1,F,(NR_pos_enh2-Core) CR to 38.101-1 on positioning IE correction,18.7.0
+2024-09,RAN#105,RP-242184,2394,,A,(NR_redcap-Core) Correction of the channel raster for RedCap UEs by added entries,18.7.0
+2024-09,RAN#105,RP-242155,2399,,A,(NR_6GHz_unlic_EU-Core) CR for TS 38.101-1 on UE transmitter power for the Pcmax tolerance for NR unlicensed operation (R18_CAT_A),18.7.0
+2024-09,RAN#105,RP-242158,2401,,F,(NR_CADC_R18_3BDL_xBUL-Core) CR for TS 38.101-1 on UE configured power relaxation for special component bands (R18),18.7.0
+2024-09,RAN#105,RP-242163,2402,1,F,(NR_FR1_lessthan_5MHz_BW-Core) CR for TS 38.101-1 on narrow band blocking for 3MHz channel bandwidth,18.7.0
+2024-09,RAN#105,RP-242186,2404,,F,(NR_RF_FR1_enh-Core) CR for TS 38.101-1: Corrections on intra-band UL contiguous CA with UL MIMO for PC3,18.7.0
+2024-09,RAN#105,RP-242159,2405,,F,CR on 38.101-1 Update the IE names for coverage enhancement,18.7.0
+2024-09,RAN#105,RP-242157,2407,,A,Remove the superscript NOTE 1 for intra-band contiguous CA,18.7.0
+2024-09,RAN#105,RP-242174,2410,,A,(NR_n28_BW-Core) Apply ?MPR to the total MOP reduction,18.7.0
+2024-09,RAN#105,RP-242183,2412,1,F,(NR_PC2_CA_R17_2BDL_2BUL) Remove superscript NOTE 6 for PC2 TDD-TDD inter-band CA,18.7.0
+2024-09,RAN#105,RP-242152,2413,,F,CR 38.101-1 addtion of ETSI TC RT based on ECC Decision(20)02 reference to NB blocking,18.7.0
+2024-09,RAN#105,RP-242155,2415,1,F,CR 38.101-1 Clarifications for non-collocated requirements,18.7.0
+2024-09,RAN#105,RP-242190,2418,,A,CR on typo for A-MPR of NR unlicensed band,18.7.0
+2024-09,RAN#105,RP-242188,2419,,F,CR on missing NS values for SL-U(R18),18.7.0
+2024-09,RAN#105,RP-242156,2425,,F,CR 38.101-1 correcting the table for NR operating bands in FR1,18.7.0
+2024-09,RAN#105,RP-242158,2426,,F,CR 38.101-1 correcting 2 bands NR CA configuration tables,18.7.0
+2024-09,RAN#105,RP-242158,2427,,F,CR 38.101-1 correcting 3 bands NR CA configuration tables,18.7.0
+2024-09,RAN#105,RP-242158,2428,,F,CR 38.101-1 correcting 4 bands NR CA configuration tables,18.7.0
+2024-09,RAN#105,RP-242158,2432,,A,CR on MSD value correction for power class 5 cross band isolation,18.7.0
+2024-09,RAN#105,RP-242174,2436,,A,(NR_newRAT-core) CR for TS 38.101-1 R18 correction on AMPR for NS_10,18.7.0
+2024-09,RAN#105,RP-242149,2442,,A,"(5G_V2X_NRSL-Core) CR to correct the name of the feature ""V2X con-current operation"" to ""V2X concurrent operation"" - TS38.101-1",18.7.0
+2024-09,RAN#105,RP-242191,2447,,A,(TEI16) CR to correct (typo) of the definitions of the symbols Nrb_agg - TS38.101-1,18.7.0
+2024-09,RAN#105,RP-242188,2449,1,F,(NR_SL_enh2-Core) CR to add third level clause suffixes for V2X - TS38.101-1,18.7.0
+2024-09,RAN#105,RP-242186,2452,1,A,Correction for value B for non-contiguous uplink carrier aggregation,18.7.0
+2024-09,RAN#105,RP-242158,2457,2,F,CR for NR CA Harmonic Mixing clean-up PC3 PC5,18.7.0
+2024-09,RAN#105,RP-242158,2459,1,F,CR Adding missing MSD for CA_n2A-n66A and for CA_n25A-n66A PC3,18.7.0
+2024-09,RAN#105,RP-242150,2460,2,F,CR for NR CA Harmonic Mixing clean-up PC2 PC1.5,18.7.0
+2024-09,RAN#105,RP-242156,2461,1,F,(NR_ATG-Core) CR for TS 38.101-1 to clarify the Tx requirements definition for ATG UE,18.7.0
+2024-09,RAN#105,RP-242189,2463,,A,(NR_SUL_combos_R17-Core) CR for TS 38.101-1 to clarify the applicability for NUL carriers (R18),18.7.0
+2024-09,RAN#105,RP-242158,2465,1,F,CR to TS 38.101-1 Rel-18 NR CA Uplink Harmonic clean-up PC3,18.7.0
+2024-09,RAN#105,RP-242150,2466,1,F,CR to TS 38.101-1 Rel-18 NR CA Uplink Harmonic clean-up PC2,18.7.0
+2024-09,RAN#105,RP-242163,2470,1,F,Cat F CR to TS 38.101-1 Rel-18 REFSENS Corrections,18.7.0
+2024-09,RAN#105,RP-242158,2471,1,F,CR to TS 38.101-1 Rel-18 Intra-band CA REFSENS corrections,18.7.0
+2024-09,RAN#105,RP-242158,2472,1,F,CR to TS 38.101-1 Rel-18 Corrections to ACLR for CA_NC_NS_100,18.7.0
+2024-09,RAN#105,RP-242191,2476,,A,Cat A CR to TS 38.101-1 Rel-18 Power Class 4 clean-up,18.7.0
+2024-09,RAN#105,RP-242158,2477,1,F,CR to TS 38.101-1 Rel-18 Dual-UL IMD corrections,18.7.0
+2024-09,RAN#105,RP-242150,2478,,F,( HPUE_FR1_TDD_NR_CADC_SUL_R18 ) CR to TS 38.101-1 for missing HPUE TDD configurations,18.7.0
+2024-09,RAN#105,RP-242171,2481,,A,(NR_n41_BW-Core) CR to TS 38.101-1: NS_47 correction,18.7.0
+2024-09,RAN#105,RP-242150,2484,,F,( HPUE_FR1_FDD_NR_CADC_R18 ) CR to TS 38.101-1 for missing HPUE FDD configurations,18.7.0
+2024-09,RAN#105,RP-242191,2489,,A,(TEI) On missing BCS set definition for asymmetric TDD,18.7.0
+2024-09,RAN#105,RP-242156,2492,,F,3MHz channel bandwidth optional for frequency bands n31 and n72,18.7.0
+2024-09,RAN#105,RP-242152,2493,,F,(LTE_NR_HPUE_FWVM_R18-Core) Clarification on FRMCS PC1 applicability for bands n100 and n101,18.7.0
+2024-09,RAN#105,RP-242171,2496,1,F,"(NR_n14-Core, TEI16) Correction of notes for UE output power",18.7.0
+2024-09,RAN#105,RP-242150,2497,,F,(HPUE_FR1_FDD_NR_CADC_R18-Core) CR for 38.101-1: Corrections for CA_n71A-n77A PC2 n71,18.7.0
+2024-09,RAN#105,RP-242150,2498,,F,( HPUE_NR_FR1_FDD) CR for 38.101-1 NS_06 corrections,18.7.0
+2024-09,RAN#105,RP-242158,2499,1,F,(CA and HPUE) CR for 38.101-1: Various corrections for CA and HPUE,18.7.0
+2024-09,RAN#105,RP-242173,2503,1,A,CR to 38.101-1 Rel-18: Corrections of NR operating bands clause in FR1,18.7.0
+2024-09,RAN#105,RP-242156,2505,1,F,CR to R18 38101-1 to add 35MHz CBW to NS_35 definition,18.7.0
+2024-12,RAN#106,RP-243054,2515,1,A,(NR_newRAT-Core) Replacement of dual with 2Tx,18.8.0
+2024-12,RAN#106,RP-243054,2516,,F,IE and UE capability name corrections (38.101-1),18.8.0
+2024-12,RAN#106,RP-243048,2517,,F,Removal of non-existing UE capabilities and associated texts,18.8.0
+2024-12,RAN#106,RP-243042,2519,,F,CR to TS 38.101-1 on addition of 3 MHz CBW in Annex D,18.8.0
+2024-12,RAN#106,RP-243038,2520,1,F,(NR_cov_enh2) Note clarification on applicability conditions of boost in 38.101-1 Rel-18,18.8.0
+2024-12,RAN#106,RP-243040,2523,,A,(NR_eMIMO) Clarification of Rel-15 pi2BPSK variant in wording  in 38.101-1 Rel-18,18.8.0
+2024-12,RAN#106,RP-243023,2526,1,A,(5G_V2X_NRSL-Core) CR to 38.101-1 Rel-18 Cat-A for 7.6E.3.1 Out-of-band blocking for V2X non-concurrent operation,18.8.0
+2024-12,RAN#106,RP-243052,2528,,A,(NR_n30-Core) n30 NS_21 AMPR correction CR to 38.101-1 (cat-A),18.8.0
+2024-12,RAN#106,RP-243055,2532,,A,(NR_newRAT-Core) Correction to IBB for intraband contiguous CA,18.8.0
+2024-12,RAN#106,RP-243036,2536,,F,CR Bugfix 38101-1-i70_s0505A03-0505A03,18.8.0
+2024-12,RAN#106,RP-243036,2537,,F,(NR_CADC_R18_2BDL_xBUL) CR for 38.101-1: CA_n77-n85 PC3 IMD MSD correction,18.8.0
+2024-12,RAN#106,RP-243063,2539,,A,(NR_RF_FR1_enh-Core) CR on typo for carrier leakage of intra-band NC CA (R18),18.8.0
+2024-12,RAN#106,RP-243025,2544,,F,(HPUE_FR1_TDD_NR_CADC_SUL_R18) CR for TS 38.101-1 to add the missing combo CA_n3A-n28A-n41A-n77A,18.8.0
+2024-12,RAN#106,RP-243037,2549,1,F,(NR_channel_raster_enh) CR for TS 38.101-1: Add bands supporting enhanced channel raster,18.8.0
+2024-12,RAN#106,RP-243023,2550,,F,(4Rx_low_NR_band_handheld_3Tx_NR_CA_ENDC) CR for TS 38.101-1 to correct the wrong referenced clause number for 3Tx,18.8.0
+2024-12,RAN#106,RP-243025,2551,1,F,CR 38.101-1 adding missing PC2 harmonic mixing MSD for CA_n26-n78,18.8.0
+2024-12,RAN#106,RP-243025,2552,2,F,CR 38.101-1 correcting PC2 and PC3 IMD MSDs,18.8.0
+2024-12,RAN#106,RP-243035,2554,,A,(NR_CADC_R17_2BDL_xBUL-Core) CR on 38.101-1 [R18] Some corrections on the MSD table,18.8.0
+2024-12,RAN#106,RP-243063,2556,1,F,(NR_redcap_enh-Core) Add eRedCap in the context of requirements,18.8.0
+2024-12,RAN#106,RP-243063,2559,,A,(NR_RF_FR1) Update the ACLR description for intra-band NC CA,18.8.0
+2024-12,RAN#106,RP-243054,2561,,A,(NR_newRAT-Core) CR to TS38.101-1: Correction on applicability of minimum requirements,18.8.0
+2024-12,RAN#106,RP-243036,2564,1,F,CR 38.101-1 Some editorials and minor clarifications for NR CA,18.8.0
+2024-12,RAN#106,RP-243036,2567,,F,(NR_CADC_R18_2BDL_xBUL-Core) CR for TS 38.101-1 to fix the BCS 4 and 5 configurations placement for CA_n1-n40,18.8.0
+2024-12,RAN#106,RP-243052,2570,,F,(NR_SUL_combos_R18-Core) CR for TS 38.101-1 to align the MSD table format for SUL combos (R18),18.8.0
+2024-12,RAN#106,RP-243036,2571,1,F,Corrections to Harmonic Mixing UL RB allocations and MSD for NR CA,18.8.0
+2024-12,RAN#106,RP-243052,2574,1,A,CR on n28 30MHz channel confinement,18.8.0
+2024-12,RAN#106,RP-243025,2575,1,F,Re-adding Cross-band and Harmonic Mixing MSD for TDD PC2 UE's supportingTX Diversity,18.8.0
+2024-12,RAN#106,RP-243054,2580,,A,(NR_newRAT-Core) CR to modify MBW definition - TS38.101-1,18.8.0
+2024-12,RAN#106,RP-243067,2582,,A,"(NR_newRAT-Core, TEI17) CR to correct the note 1 indication from NS_05 to NS_05U - TS38.101-1",18.8.0
+2024-12,RAN#106,RP-243052,2585,,A,(NR_n53-Core) CR to correct Note 6 of Table 7.6.3-2 regarding band n53 OOB - TS38.101-1,18.8.0
+2024-12,RAN#106,RP-243029,2588,,F,(LTE_NR_Simult_RxTx_R18) CR to correct the note index of CA_n3-n40-n41 in Table 6_2A_4_2_4_1 - TS38.101-1,18.8.0
+2024-12,RAN#106,RP-243064,2589,,F,(NR_SL_enh2-Core) Removal of note index in a table for A-MPR for NS_65 - TS38.101-1,18.8.0
+2024-12,RAN#106,RP-243038,2591,,F,(NR_cov_enh2-Core) CR to 38.101-1 for power boosting feature supporting CA,18.8.0
+2024-12,RAN#106,RP-243036,2598,,F,Cleanup on 38.101-1 for FR1 inter-band DC configuration grouping,18.8.0
+2024-12,RAN#106,RP-243036,2603,1,F,CR for TS 38.101-1-i70 Corrections to UL harmonic MSD,18.8.0
+2024-12,RAN#106,RP-243025,2604,1,F,(HPUE_FR1_TDD_NR_CADC_SUL_R18) CR for TS 38.101-1-i70 Correction to valid CA configurations and power class,18.8.0
+2024-12,RAN#106,RP-243036,2605,1,F,(NR_CADC_R18_2BDL_xBUL-Core) CR for TS 38.101-1-i70 Introducing missing n85 3MHz RSD,18.8.0
+2024-12,RAN#106,RP-243023,2607,,A,CR to TS 38.101-1: DL CA HPUE,18.8.0
+2024-12,RAN#106,RP-243024,1336,,F,CR to 38.101-3 correcting duplicated UL configuration,18.8.0

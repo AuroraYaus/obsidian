@@ -1,0 +1,17 @@
+Parameter,Unit,Value,Comment
+UE configured E-UTRA RF Channel Number,,1,Serving cell
+UE is configured UTRA RF channel numbers,,"2, 3, 4, 5, 6, 7, 8","7 UTRA TDD carrier frequencies are used in the UE neighbour cell list. Frequencies 5,6, 7,and 8 are indicated to have reduced performance"
+Test equipment configuration,,"Cell 1 uses E-UTRA RF cannel number 1Cell 2,3,4 are randomly selected to use different frequencies selected from frequencies 2,3,4,5,6,7, 8",
+Active cell,,Cell 1,E-UTRA TDD cell
+Gap Pattern Id,,0,As specified in TS 36.133 clause 8.1.2.1.
+CP length of cell 1,,normal,
+Inter-RAT measurement quantity,,UTRA TDD PCCPCH RSCP,
+B1 Threshold,dBm,-75,UTRA TDD PCCPCH RSCP threshold for event B1
+Hysteresis,dB,0,
+Ofn,dB,0,
+TimeToTrigger,s,0,
+Filter coefficient,,0,L3 filtering is not used
+DRX,,OFF,
+Scaling factor configurations,,8,
+T1,s,5,
+T2,s,205,

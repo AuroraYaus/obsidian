@@ -1,0 +1,13 @@
+Accuracy,,Conditions,,,,
+Normal condition,Extreme condition,Ês/Iot,Io Note 1 range,,,
+,,,E-UTRA operating band groups Note 3,Minimum Io,,Maximum Io
+dB,dB,dB,,dBm/15kHz Note 2,dBm/BWChannel,dBm/BWChannel
+6,9,-6 dB,"FDD-M1_A, TDD-M1_A",-121,N/A,-70
+,,,FDD-M1_B,-120.5,N/A,-70
+,,,FDD-M1_D,-119.5,N/A,-70
+,,,"FDD-M1_E, TDD-M1_E",-119,N/A,-70
+,,,FDD-M1_F,-118.5,N/A,-70
+,,,FDD-M1_G,-118,N/A,-70
+,,,FDD-M1_N,-114.5,N/A,-70
+8,11,-6 dB,"FDD-M1_A, TDD-M1_A, FDD-M1_D, FDD-M1_E, TDD-M1_E, FDD-M1_F, FDD-M1_G, FDD-M1_N",N/A,-70,-50
+"NOTE 1:Io is assumed to have constant EPRE across the bandwidth.NOTE 2:The condition level is increased by ∆>0, when applicable, as described in Sections B.4.2 and B.4.3.NOTE 3:E-UTRA operating band groups are as defined in Section 3.5.",,,,,,

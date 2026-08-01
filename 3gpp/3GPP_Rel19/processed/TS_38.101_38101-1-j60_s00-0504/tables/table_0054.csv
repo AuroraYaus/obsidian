@@ -1,0 +1,38 @@
+NR Operating Band,TX – RX carrier centre frequencyseparation
+n1,190 MHz
+n2,80 MHz
+n3,95 MHz
+n5,45 MHz
+n7,120 MHz
+n8,45 MHz
+n12,30 MHz
+n13,-31 MHz
+n14,-30 MHz
+n18,45 MHz
+n20,-41 MHz
+n24,"-101.5, -120.5 MHz"
+n25,80 MHz
+n26,45 MHz
+n28,55 MHz
+n30,45 MHz
+n31,10 MHz
+n65,190 MHz
+n66,400 MHz
+n68,55 MHz
+n70,300 MHz
+n71,-46 MHz
+n72,10 MHz
+n74,48 MHz
+n85,30 MHz
+n87,10 MHz
+n88,10 MHz
+n91,570 MHz – 595 MHz(NOTE 2)
+n92,575 MHz – 680 MHz (μ = 0)580 MHz – 675 MHz (μ = 1)(NOTE 2)
+n93,517 MHz – 547 MHz(NOTE 2)
+n94,522 MHz – 632 MHz (μ = 0)527 MHz – 627 MHz (μ = 1)(NOTE 2)
+n100,45 MHz
+n105,-51 MHz
+n106,39 MHz
+n109,704 MHz - 809 MHz (μ = 0)709 MHz - 804 MHz (μ = 1)(NOTE 2)
+n110,"40 MHz, 42 MHz"
+NOTE 1:VoidNOTE 2:The range of TX-RX frequency separation given paired UL and DL channel bandwidths BWUL and BWDL is given by the respective lower and upper limit FDL_low – FUL_high + 0.5(BWDL + BWUL) and FDL_high – FUL_low – 0.5(BWDL + BWUL). The UL and DL channel bandwidth combinations specified in Table 5.3.5-1 and 5.3.6-1 depend on the subcarrier spacing configuration μ [6].,

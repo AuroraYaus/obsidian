@@ -1,0 +1,15 @@
+Parameter,Unit,Test configuration,Value,Comment
+Active cell,,1,Cell 1,Cell 1 is the PCell in NR-Multi-RTT-ProvideAssistanceData [34].
+Neighbour cell,,1,Cell 2,Cell 2 is a neighbour cell in NR-Multi-RTT-ProvideAssistanceData [34].
+RF Channel Number,,1,1,For both Cell 1 and Cell 2
+BWchannel,MHz,1,"200: NPRB,c = 132",
+SSB configuration,,1,SSB.3 FR2,
+SMTC configuration,,1,SMTC.1,
+Measurement gap,,1,GP#24 or GP#13 Note 1,
+CP length,,1,Normal,
+DRX,,1,OFF,
+Time offset between serving and neighbour cells,s,1,3,Synchronous cells
+Number of cells provided in assistance data,,1,4,Including the reference cell
+T1,s,1,5,
+T2,s,1,20,
+"NOTE 1:GP#24 is configured if UE supports MG#24, otherwise GP#13 is configured.",,,,

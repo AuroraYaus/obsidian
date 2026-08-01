@@ -1,0 +1,26 @@
+PRACH preamble format,SCS (kHz),Measurement period (ms)
+0,1.25,0.903125
+1,1.25,2.284375
+2,1.25,3.352604
+3,5,0.903125
+A1,15,0.142708
+,30,0.071354
+A2,15,0.285417
+,30,0.142708
+A3,15,0.428125
+,30,0.2140625
+B1,15,0.140365
+,30,0.070182
+B4,15,0.83046875
+,30,0.415234375
+A1/B1,15,0.142708 ms for first six occasion0.140365 ms for the last occasion
+,30,0.071354 ms for first six occasion0.070182 ms for the last occasion
+A2/B2,15,0.285417 ms for first two occasion0.278385 ms for the third occasion
+,30,0.142708 ms for first two occasion0.1391925 ms for the third occasion
+A3/B3,15,0.428125 ms for the first occasion0.41640625 ms for the second occasion
+,30,0.2140625 ms for the first occasion0.208203125 ms for the second occasion
+C0,15,0.10703125
+,30,0.053515625
+C2,15,0.333333
+,30,0.166667
+"NOTE:For PRACH on PRACH occasion start from the beginning of 0.5 ms or span the boundary of 0.5 ms of the subframe, the measurement period will plus 0.032552 μs",,

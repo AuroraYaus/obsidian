@@ -1,0 +1,9 @@
+Accuracy for 2 PFLs,Accuracy for 3 PFLs,Conditions,,,,,
+,,PRS Ês/Iot,PRS SCS,PRS bandwidth per PFLNote 1,PRS resource repetition ()          Note 2TrepPRS*LPRS/KcombPRS,Io Note 3 range,
+,,,,,,Minimum Io,Maximum Io
+Tc Note 4,,dB,kHz,PRB,,dBm/SCS,dBm/BWChannel
+11,6,(PRS Ês/Iot)ref ≥-6dB (PRS Ês/Iot)i ≥-13dB,60,≥ 64,≥ 1,"Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival",-50
+5,4,,,≥ 132,≥ 1,Note 5,Note 5
+6,4,,120,≥ 64,≥ 1,"Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival",-50
+3,2,,,≥ 128,≥ 1,Note 5,Note 5
+"NOTE 1:Minimum PRS bandwidth per PFL, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i among all the aggregated PFLs.NOTE 2: Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i.  are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3:Io is assumed to have constant EPRE across the bandwidth.NOTE 4:Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.TrepPRS, LPRS ,KcombPRS",,,,,,,

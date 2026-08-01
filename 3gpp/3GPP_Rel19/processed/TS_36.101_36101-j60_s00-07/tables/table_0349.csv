@@ -1,0 +1,31 @@
+E-UTRA Band / Channel bandwidth of the affected DL band / NRB / Duplex mode,,,,,,,,
+EUTRA CA Configuration,E-UTRA Band,1.4 MHz,3 MHz,5 MHz,10 MHz,15 MHz,20 MHz,Duplex Mode
+CA_1A-7A-38A,1,,,25,45,451,451,FDD
+CA_1A-40A,1,,,25,50,75,100,FDD
+,40,,,25,50,75,100,TDD
+CA_3A-7A-38A,3,,,25,50,501,501,FDD
+CA_3C-7A-38A,3,,,25,50,501,501,FDD
+CA_3A-40ACA_3A-40CCA_3A-40DCA_3A-40E,3,6,15,25,50,501,501,FDD
+,40,,,25,50,75,100,TDD
+CA_3A-40A-40A,3,,,25,50,,,FDD
+,40,,,,50,,100,TDD
+CA_3A-41ACA_3A-3A-41A,3,,15,25,50,501,501,FDD
+,41,,,25,50,75,100,TDD
+CA_3A-41CCA_3C-41ACA_3C-41D,3,,,25,50,501,501,FDD
+,41,,,25,50,75,100,TDD
+CA_3A-41D,3,,,25,50,501,501,FDD
+,41,,,25,50,75,100,TDD
+CA_3C-41C,3,,,25,50,501,501,FDD
+,41,,,25,50,75,100,TDD
+"CA_7A-40A,CA_7A-40C,CA_7A-40D,CA_7A-40E",7,,,25,50,75,751,FDD
+,40,,,25,50,75,100,TDD
+"CA_7A-42A,CA_7A-42A-42A",7,,,25,50,75,751,FDD
+,42,,,25,50,75,100,TDD
+"CA_25A-41A, CA_25A-41C, CA_25A-41D, CA_25A-41E, CA_25A-41F,CA_25A-25A-41A, CA_25A-25A-41C, CA_25A-25A-41D, CA_25A-25A-41E, CA_25A-25A-41F",25,,,25,50,75,100,FDD
+,41,,,25,50,75,100,TDD
+"CA_28A-40A,CA_28A-40C",28,,,25,251,251,251,FDD
+,40,,,25,50,75,100,TDD
+CA_28A-71A,28,,,25,25,25,25,FDD
+,71,,,25,25,20,20,FDD
+CA_38A-66ACA_38C-66A,38,,,100,100,100,100,TDD
+"NOTE 1:1 refers to the UL resource blocks shall be located as close as possible to the downlink operating band but confined within the transmission bandwidth configuration for the channel bandwidth (Table 5.6-1).NOTE 2:the UL configuration applies regardless of the channel bandwidth of the low band unless the UL resource blocks exceed that specified in Table 7.3.1-2 for the uplink bandwidth in which case the allocation according to Table 7.3.1-2 applies.NOTE 3:UL allocation when the separation between the lower edge of the uplink channel in Band 1 and the upper edge of the downlink channel in Band 3 is < 60 MHz.NOTE 4:UL allocation when the separation between the lower edge of the uplink channel in Band 1 and the upper edge of the downlink channel in Band 3 is ≥ 60 MHz.NOTE 5:5 refers to Band 20; in the case of 15MHz channel bandwidth, the UL resource blocks shall be located at RBstart 11 and in the case of 20MHz channel bandwidth, the UL resource blocks shall be located at RBstart 16",,,,,,,,

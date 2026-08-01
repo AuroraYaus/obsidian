@@ -1,0 +1,13 @@
+Parameter,,Unit,Value,Comment
+RF Channel Number,,,1,One NR NTN satellite RF channel
+Initial conditions,Active cell,,Cell 1,FDD duplex mode cell
+,Neighbouring cell,,Cell 2,FDD duplex mode cell
+Final condition,Active cell,,Cell 2,
+Satellite configuration,Config 1,,RMC in [A.x],For NGSO satellite configuration
+"UE position (L,B, H)",,,"(0, 0, 0)","Set by any pre-configured means.(L,B,H) is Geodetic coordinate, where L is latitude, B is longitude, and H is height."
+t1-Threshold-r17.condEventT1-r17,,s,T2,Entering condition
+duration-r17.condEventT1-r17,,slot,1000,Give 1 s search duration
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+Time offset between cells,,,3 s,Synchronous cells
+T1,,s,5,
+T2,,s,2,

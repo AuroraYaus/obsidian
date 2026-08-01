@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <td>Configuration</td>
+    <td>TEvaluate_BFD_SSB_Redcap (ms) for Redcap UE with 2 Rx</td>
+    <td>TEvaluate_BFD_SSB_Redcap (ms) for 1 Rx Redcap</td>
+  </tr>
+  <tr>
+    <td>no DRX</td>
+    <td>Max(50, Ceil(5  P)  TSSB)</td>
+    <td>[ Max(50, Ceil(10  P)  TSSB)]</td>
+  </tr>
+  <tr>
+    <td>DRX cycle ≤ 320 ms</td>
+    <td>Max(50, Ceil(7.5  P)  Max(TDRX,TSSB))</td>
+    <td>[ Max(50, Ceil(15  P)  Max(TDRX,TSSB)) ]</td>
+  </tr>
+  <tr>
+    <td>DRX cycle &gt; 320 ms</td>
+    <td>Ceil(5  P)  TDRX</td>
+    <td>[ Ceil(10  P)  TDRX]</td>
+  </tr>
+  <tr>
+    <td colspan="3">NOTE:TSSB is the periodicity of SSB in the set . TDRX is the DRX cycle length.q0</td>
+  </tr>
+</table>

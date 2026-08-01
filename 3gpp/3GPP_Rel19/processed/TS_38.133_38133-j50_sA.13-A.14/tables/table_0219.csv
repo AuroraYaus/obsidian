@@ -1,0 +1,15 @@
+Parameter,,Unit,Test 1,,,,
+,,,T1,T2,T3,T4,T5
+EPRE ratio of PDCCH DMRS to SSSPDCCH_beta,,dB,4,,,,
+EPRE ratio of PDCCH to PDCCH DMRSPDCCH_DMRS_beta,,dB,,,,,
+EPRE ratio of PBCH DMRS to SSSPBCH_beta,,dB,0,,,,
+EPRE ratio of PBCH to PBCH DMRSPSS_beta,,dB,,,,,
+EPRE ratio of PSS to SSSSSS_beta,,dB,,,,,
+EPRE ratio of PDSCH DMRS to SSS PDSCH_beta,,dB,,,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,dB,,,,,
+EPRE ratio of OCNG DMRS to SSS,,dB,,,,,
+EPRE ratio of OCNG to OCNG DMRS,,dB,,,,,
+SNR on RLM-RS,"Config 1, 2",dB,1,-7,-15,-4.5,1
+,"Config 1, 2",dBm/15 kHz,-98,,,,
+Propagation condition,,,NTN-TDLC5-200,,,,
+"NOTE 1:OCNG shall be used such that the resources in Cell 1 are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:The uplink resources for CSI reporting are assigned to the UE prior to the start of time period T1.NOTE 3:NZP CSI-RS resource set configuration for CSI reporting are assigned to the UE prior to the start of time period T1.NOTE 4:Measurement gap configuration is assigned to the UE prior to the start of time period T1.NOTE 5:The timers and layer 3 filtering related parameters are configured prior to the start of time period T1.NOTE 6:The signal contains PDCCH for UEs other than the device under test as part of OCNG.NOTE 7:SNR levels correspond to the signal to noise ratio over the SSS REs.NOTE 8:The SNR in time periods T1, T2, T3, T4 and T5 is denoted as SNR1, SNR2, SNR3, SNR4 and SNR5 respectively in figure A.14.4.1.8.1-1.NOTE 9:The SNR values are specified for testing a UE which supports 2RX on at least one band. For testing of a UE which supports 4RX on all bands, the SNR during T3 is specified in clause A.3.6.1.1.",,,,,,,

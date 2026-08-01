@@ -1,0 +1,12 @@
+Parameter,Unit,Relay UE 1,,,,,Relay UE 2,,,,
+,,T1,T2,T3,T4,T5,T1,T2,T3,T4,T5
+E-UTRA RF Channel Number,,1 (UL frequency),,,,,,,,,
+BWchannel Note 4,MHz,5,,,,,,,,,
+ProSe Direct Discovery resource pool configuration,,As specified in Table A.7.5.12.1-2,,,,,,,,,
+Transmission frequency,,Every discovery period (40ms) with 3 retransmissions per period,,,,,,,,,
+Resource allocation,,Non-overlapping PRBs,,,,,,,,,
+Note1,dBm/15 kHz,-97,,,,,,,,,
+,dB,-inf,-inf,10.5,10.5,-1.5,-inf,-inf,-inf,-inf,10.5
+"SD-RSRP Note2, Note 3",dBm/15 kHz,-inf,-inf,-86.5,-86.5,-98.5,-inf,-inf,-inf,-inf,-86.5
+Propagation Condition,,AWGN,,,,,,,,,
+Note 1:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 2:SD-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Note 3:SSSS Es/Iot is set the same as PSSS/PSBCH Es/Iot.Note 4:This test is according to the principle defined in section A.3.12.3.,,,,,,,,,,,

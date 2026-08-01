@@ -1,0 +1,7 @@
+Test number,Bandwidth,Aggregation level,Reference Channel,OCNG Pattern,Propagation Condition,Antenna configuration and correlation Matrix,Reference value,
+,,,,,,,Pm-dsg (%),SNR (dB)
+1,20 MHz,4 CCE,R.3 FS3,OP.1 FS3,EVA5,2 x 2 Low,1,0.2
+2,20 MHz,4 CCE,R.3 FS3,OP.1 FS3,EVA5,2 x 2 Low,1,0.2
+3,20 MHz,4 CCE,R.3 FS3,OP.1 FS3,EVA5,2 x 2 Low,1,0.3
+4,20 MHz,4 CCE,R.3 FS3,OP.1 FS3,EVA5,2 x 2 Low,1,0.1
+"Note1： UE is required to fulfill only one test among test 1-4 depending on it’s capability for endingDwPTS and secondSlotStartingPosition. For UE don’t support endingDwPTS and secondSlotStartingPosition, it is required to fulfill test 1; For UE don’t support endingDwPTS and support secondSlotStartingPosition, it is required to fulfill test 2; For UE support endingDwPTS and don’t support secondSlotStartingPosition, it is required to fulfil test 3; and For UE support both endingDwPTS and secondSlotStartingPosition, it is required to fulfill test 4.",,,,,,,,

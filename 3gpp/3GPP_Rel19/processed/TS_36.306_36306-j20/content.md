@@ -1,14 +1,3 @@
----
-type: spec
-aliases:
-  - content
-tags:
-  - 3gpp
-  - rel19
-  - processed
-  - protocol-text
-source_spec: "3GPP_Rel19/processed/TS_36.306_36306-j20/content.md"
----
 # TS 36.306 36306-j20
 
 3GPP TS 36.306 V19.2.0 (2026-03)

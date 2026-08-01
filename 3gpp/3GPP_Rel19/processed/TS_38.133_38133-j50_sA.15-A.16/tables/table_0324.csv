@@ -1,0 +1,18 @@
+Parameter,Unit,Test configuration,Value,Comment
+Active cell,,"1, 2",Cell 1,
+Neighbour cell,,"1, 2",Cell 2,Cell to be identified.
+RF Channel Number,,"1, 2",1: Cell 1 and Cell 2,
+CD-SSB configuration,,"1, 2",SSB.1 FR1,
+NCD-SSB configuration,,"1,2",SSB.6 RedCap FR1 Note 1,
+SMTC configuration for CD-SSB,,"1, 2",SMTC.2,
+SMTC configuration for NCD-SSB,,"1, 2",SMTC.4 RedCap,
+A3-Offset,dB,"1, 2",-4.5,
+CP length,,"1, 2",Normal,
+Hysteresis,dB,"1, 2",0,
+Time To Trigger,s,"1, 2",0,
+Filter coefficient,,"1, 2",0,L3 filtering is not used
+DRX,ms,"1, 2",N/A,OFF
+Time offset between serving and neighbour cells,,"1, 2",3 ms,Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1.
+T1,s,"1, 2",5,
+T2,s,"1, 2",5,
+NOTE 1: NCD-SSB is configured within dedicated RedCap DL BWP.,,,,

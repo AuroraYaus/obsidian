@@ -1,0 +1,15 @@
+Parameter,Ch BW,Allocated RBs,DFT-OFDM Symbols per Sub-Frame,Mod’n,Target Coding rate,Payload size,Transport block CRC,Number of code blocks per Sub-Frame (Note 1),Total number of bits per Sub-Frame,Total symbols per Sub-Frame,UE Category
+Unit,MHz,,,,,Bits,Bits,,Bits,,
+,1.4 - 20,1,12,16QAM,1/2,256,24,1,576,144,M2
+,1.4 - 20,2,12,16QAM,1/2,552,24,1,1152,288,M2
+,1.4 - 20,3,12,16QAM,1/2,840,24,1,1728,432,M2
+,1.4 - 20,4,12,16QAM,1/2,1128,24,1,2304,576,M2
+,1.4 - 20,5,12,16QAM,1/2,1416,24,1,2880,720,M2
+,3 - 20,6,12,16QAM,1/2,1736,24,1,3456,864,M2
+,3 - 20,9,12,16QAM,1/2,2600,24,1,5184,1296,M2
+,3 - 20,12,12,16QAM,1/2,3496,24,1,6912,1728,M2
+,5 - 20,15,12,16QAM,1/2,4264,24,1,8640,2160,M2
+,5 - 20,18,12,16QAM,1/2,5160,24,1,10368,2592,M2
+,5 - 20,21,12,16QAM,1/2,5992,24,1,12096,3024,M2
+,5 - 20,24,12,16QAM,1/2,6968,24,2,13824,3456,M2
+"Note 1:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)Note 2:For HD-FDD UE, the uplink subframes are scheduled at the 4th, 5th and 6th subframes every 10ms for the channel bandwidth 5MHz/10MHz/15MHz/20MHz. For HD-FDD , the uplink subframes are scheduled at the 5th, 6th, and 7th subframes every 10msfor the channel bandwidth 1.4MHz/3MHz. Information bit payload is available if uplink subframe is scheduled.",,,,,,,,,,,

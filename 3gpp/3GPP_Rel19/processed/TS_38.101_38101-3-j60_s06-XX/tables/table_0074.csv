@@ -1,0 +1,4 @@
+V2X inter-band con-current band combinations,Operating Bands / Channel bandwidth of the affected DL band / MSD,,,,,
+V2X_20_n38,UL band,SL operation,10 MHz(dB),20 MHz(dB),30 MHz (dB),40 MHz(dB)
+,20,n38,10.7,7.7,5.8,4.7
+NOTE 1:These requirements apply when there is at least one individual RE within the uplink transmission bandwidth of the aggressor (lower) for which the 3rd transmitter harmonic is within the sidelink transmission bandwidth of a victim (higher) band.NOTE 2:The requirements should be verified for UL EARFCN of the aggressor (lower) band (superscript LB such that  in MHz and  with the carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the low band.NOTE 3: The MSD level applied to all supported SCSs in victim band.,,,,,,

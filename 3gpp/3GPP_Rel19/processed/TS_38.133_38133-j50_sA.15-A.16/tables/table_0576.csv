@@ -1,0 +1,16 @@
+Parameter,Unit,Test configuration,Value,Comment
+Reference cell,,"1, 2, 3, 4",Cell 1,Cell 1 is the PCell and the DL-AoD reference cell in the positioning assistance data.
+Neighbour cell,,"1, 2, 3, 4",Cell 2,Cell 2 is a neighbour cell in the positioning assistance data.
+RF Channel Number,,"1, 2, 3, 4",1: Cell 1 and Cell 2,
+BWchannel,MHz,"1, 2, 4","10: NRB,c = 52",
+,,3,"20: NRB,c = 51",
+SSB configuration,,"1, 2, 4",SSB.1 FR1,
+,,3,SSB.1 RedCap FR1,
+SMTC configuration,,"1, 2, 3, 4",SMTC.1 RedCap,
+CP length,,"1, 2, 3, 4",Normal,
+DRX,,"1, 2, 3, 4",1.28s,
+Time offset between serving and neighbour cells,ms,"1, 2, 3, 4",3,Synchronous cells
+Expected RSTD,ms,"1, 2, 3, 4",3,
+Expected RSTD uncertainty,ms,"1, 2, 3, 4",5,
+T1,s,"1, 2, 3, 4",2,
+T2,s,"1, 2, 3, 4",6,

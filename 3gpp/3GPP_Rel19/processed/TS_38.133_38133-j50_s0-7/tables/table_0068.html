@@ -1,0 +1,49 @@
+<table>
+  <tr>
+    <td>DRX cycle length [s]</td>
+    <td colspan="2">Scaling Factor (N1)</td>
+    <td>Tdetect,NR_Intra_RedCap_Relax [s] (number of DRX cycles)</td>
+    <td rowspan="2">Tmeasure,NR_Intra_RedCap_Relax [s] (number of DRX cycles)</td>
+    <td rowspan="2">Tevaluate,NR_Intra_RedCap_Relax[s] (number of DRX cycles)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR1</td>
+    <td>FR2Note1</td>
+  </tr>
+  <tr>
+    <td>0.32</td>
+    <td>1</td>
+    <td>8</td>
+    <td>11.52 x N1 x M2 x K1 (36 x N1 x M2 x K1)</td>
+    <td>1.28 x N1 x M2 x K1 (4 x N1 x M2 x K1)</td>
+    <td>5.12 x N1 x M2 x K1 (16 x N1 x M2 x K1)</td>
+  </tr>
+  <tr>
+    <td>0.64</td>
+    <td></td>
+    <td>5</td>
+    <td>17.92 x N1 x K1 (28 x N1 x K1)</td>
+    <td>1.28 x N1 x K1 (2 x N1 x K1)</td>
+    <td>5.12 x N1 x K1 (8 x N1 x K1)</td>
+  </tr>
+  <tr>
+    <td>1.28</td>
+    <td></td>
+    <td>4</td>
+    <td>32 x N1 x K1 (25 x N1 x K1)</td>
+    <td>1.28 x N1 x K1 (1 x N1 x K1)</td>
+    <td>6.4 x N1 x K1 (5 x N1 x K1)</td>
+  </tr>
+  <tr>
+    <td>2.56</td>
+    <td></td>
+    <td>3</td>
+    <td>58.88 x N1 x K1 (23 x N1 x K1)</td>
+    <td>2.56 x N1 x K1 (1 x N1 x K1)</td>
+    <td>7.68 x N1 x K1 (3 x N1 x K1)</td>
+  </tr>
+  <tr>
+    <td colspan="6">NOTE 1:Applies for RedCap UE of all supporting FR2 power classes.NOTE 2:M2 = 1.5 if SMTC periodicity of measured intra-frequency cell &gt; 20 ms; otherwise M2=1. NOTE 3:K1 = 3 is the measurement relaxation factor applicable for UE fulfilling the lowMobilityEvaluation [2] criterion.</td>
+  </tr>
+</table>

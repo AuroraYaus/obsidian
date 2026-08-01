@@ -1,0 +1,26 @@
+Parameter,Unit,,,,,,Value,,,,,
+Reference channel,,R.10 TDD,R.11 TDD,R.11-1 TDD,R.11-2 TDD,R.11-3 TDD Note 6,R.11-4 TDD,R.30 TDD,R.30-1 TDD,R.30-2 TDD,R.35 TDD,R.35-1 TDD
+Channel bandwidth,MHz,10,10,10,5,10,10,20,20,20,10,20
+Allocated resource blocks (Note 5),,50,50,50,25,40,50,100,100,100,50,100
+Uplink-Downlink Configuration (Note 3),,1,1,1,1,1,1,1,1,1,1,1
+Allocated subframes per Radio Frame (D+S),,3+2,3+2,2+2,3+2,3+2,2,3+2,2+2,2,2+2,2
+Modulation,,QPSK,16QAM,16QAM,16QAM,16QAM,QPSK,16QAM,16QAM,16QAM,64QAM,64QAM
+Target Coding Rate,,1/3,1/2,1/2,1/2,1/2,1/2,1/2,1/2,1/2,1/2,0.39
+Information Bit Payload (Note 5),,,,,,,,,,,,
+"For Sub-Frames 4,9",Bits,4392,12960,12960,5736,10296,6968,25456,25456,25456,19848,30576
+"For Sub-Frames 1,6",,3240,9528,9528,5160,9144,N/A,22920,21384,N/A,15840,N/A
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,4392,12960,N/A,4968,10296,N/A,25456,N/A,N/A,N/A,N/A
+Number of Code Blocks(Notes 4 and 5),,,,,,,,,,,,
+"For Sub-Frames 4,9",,1,3,3,1,2,2,5,5,5,4,5
+"For Sub-Frames 1,6",,1,2,2,1,2,N/A,4,4,N/A,3,N/A
+For Sub-Frame 5,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,,1,3,N/A,1,2,N/A,5,N/A,N/A,N/A,N/A
+Binary Channel Bits (Note 5),,,,,,,,,,,,
+"For Sub-Frames 4,9",Bits,13200,26400,26400,12000,21120,13200,52800,52800,52800,39600,79200
+"For Sub-Frames 1,6",,10656,21312,21312,10512,16992,10656,42912,42912,N/A,31968,N/A
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,12528,25056,N/A,10656,19776,12528,51456,N/A,N/A,N/A,N/A
+Max. Throughput averaged over 1 frame (Note 5),Mbps,1.966,5.794,4.498,2.676,4.918,1.39,12.221,9.368,5.091,7.138,6.115
+UE Category,,≥ 1,≥ 2,≥ 2,≥ 1,≥ 1,≥ 1,≥ 2,≥ 2,3,≥ 2,4
+"Note 1:2 symbols allocated to PDCCH for 20 MHz, 15 MHz and 10 MHz channel BW; 3 symbols allocated to PDCCH for 5 MHz and 3 MHz; 4 symbols allocated to PDCCH for 1.4 MHz. For subframe 1&6, only 2 OFDM symbols are allocated to PDCCH.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4].Note 3:As per Table 4.2-2 in TS 36.211 [4].Note 4:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).Note 5:Given per component carrier per codeword.Note 6:For R.11-3 resource blocks of RB6–RB45 are allocated.",,,,,,,,,,,,

@@ -1,0 +1,171 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td colspan="2">Test</td>
+  </tr>
+  <tr>
+    <td colspan="2">Bandwidth</td>
+    <td>MHz</td>
+    <td colspan="2">10</td>
+  </tr>
+  <tr>
+    <td colspan="2">Transmission mode</td>
+    <td></td>
+    <td colspan="2">2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Uplink downlink configuration</td>
+    <td></td>
+    <td colspan="2">2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Special subframe configuration</td>
+    <td></td>
+    <td colspan="2">4</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI-MeasSubframeSet-r12</td>
+    <td></td>
+    <td colspan="2">0001100000</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td colspan="2">-3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td colspan="2">-3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td colspan="2">0</td>
+  </tr>
+  <tr>
+    <td colspan="2">SNR in CSI subframe set 0</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">SNR in CSI subframe set 1</td>
+    <td>dB</td>
+    <td>10</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td>-98</td>
+    <td>-97</td>
+  </tr>
+  <tr>
+    <td colspan="2">for CSI subframe set 0</td>
+    <td>dB[mW/15kHz]</td>
+    <td>-98</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td colspan="2">for CSI subframe set 1</td>
+    <td>dB[mW/15kHz]</td>
+    <td>-108</td>
+    <td>-108</td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation channel</td>
+    <td></td>
+    <td colspan="2">Clause B.2.4 with s, a = 1, Hz</td>
+  </tr>
+  <tr>
+    <td colspan="2">Antenna configuration</td>
+    <td></td>
+    <td colspan="2">2x2</td>
+  </tr>
+  <tr>
+    <td colspan="2">CRS reference signals</td>
+    <td></td>
+    <td colspan="2">Antenna port 0 and 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Zero-Power CSI-RS configuration 0ICSI-RS / ZeroPowerCSI-RS bitmap</td>
+    <td></td>
+    <td colspan="2">3 /0000010000000000</td>
+  </tr>
+  <tr>
+    <td colspan="2">Zero-Power CSI-RS configuration 1ICSI-RS / ZeroPowerCSI-RS bitmap</td>
+    <td></td>
+    <td colspan="2">4 /0100000000000000</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH scheduled subframes for CSI subframe set 0</td>
+    <td></td>
+    <td colspan="2">8,9</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH scheduled subframes for CSI subframe set 1</td>
+    <td></td>
+    <td colspan="2">3,4</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting interval (Note 4)</td>
+    <td>ms</td>
+    <td colspan="2">10 per subframe set</td>
+  </tr>
+  <tr>
+    <td colspan="2">CQI delay</td>
+    <td>ms</td>
+    <td colspan="2">15 for CSI subframe set 015 for CSI subframe set 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting mode</td>
+    <td></td>
+    <td colspan="2">PUSCH 3-0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Sub-band size</td>
+    <td>RB</td>
+    <td colspan="2">6 (full size)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Max number of HARQ transmissions</td>
+    <td></td>
+    <td colspan="2">1</td>
+  </tr>
+  <tr>
+    <td colspan="2">ACK/NACK feedback mode</td>
+    <td></td>
+    <td colspan="2">Multiplexing</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of EPDCCH Sets Configured</td>
+    <td></td>
+    <td colspan="2">2 (Note 5,6)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of PRB per EPDCCH Set</td>
+    <td></td>
+    <td colspan="2">4</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPDCCH Subframe Monitoring</td>
+    <td></td>
+    <td colspan="2">NA</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPDCCH Aggregation level</td>
+    <td></td>
+    <td colspan="2">8ECCE</td>
+  </tr>
+  <tr>
+    <td colspan="2">EPDCCH beamforming model</td>
+    <td></td>
+    <td colspan="2">Annex B.4.4</td>
+  </tr>
+  <tr>
+    <td colspan="5">Note 1:If the UE reports in an available uplink reporting instance at subframe SF#n based on CQI estimation at a downlink subframe not later than SF#(n-4), this reported subband or wideband CQI cannot be applied at the eNB downlink before SF#(n+4)Note 2:Reference measurement channel RC.17 TDD according to Table A.4-1 with one/two sided dynamic OCNG Pattern OP.1/2 TDD as described in Annex A.5.2.1/2.Note 3:In the test, the minimum requirements shall be fulfilled for at least one of the two SNR(s) and the respective wanted signal input level for each subframe set separately..Note 4:For CSI subframe set 0, PDCCH DCI format 0 with a trigger for aperiodic CQI shall be transmitted in downlink SF#3 to allow aperiodic CQI/PMI/RI to be transmitted on uplink SF #7. For CSI subframe set 1, PDCCH DCI format 0 with a trigger for aperiodic CQI shall be transmitted in downlink SF#8 to allow aperiodic CQI/PMI/RI to be transmitted on uplink SF#2.Note 5:In case UE supports EPDCCH, the PDSCH scheduling grants are transmitted via EPDCCH, otherwise PDCCH is used.Note 6:The two sets are distributed EPDCCH sets and non-overlapping with PRB = {0, 3, 6, 9} for the first set and PRB = {40, 43, 46, 49} for the second set. EPDCCH set is selected after scheduling decision for PDSCH to avoid collision between PDSCH and EPDCCH PRBs, respectively. EPDCCH is only transmitted from one set. The starting symbol for EPDCCH is derived from the PCFICH. RRC signalling epdcch-StartSymbol-r11is not configured</td>
+  </tr>
+</table>

@@ -1,0 +1,5 @@
+BW [MHz],5,,10,,15,,20,
+"(WBindex,SCstart)","(0,≤36)","(0, ≤6)","(0,≤30)","(0,≤12)","(0,≤24)","(0,≤12)","(0,0)","(0,0)"
+Lcsc,2,6,2,6,2,6,2,3
+AMPR [dB],≤1.5,≤ 0.5,≤1.5,≤0.5,≤1.5,≤0.5,≤1.5,≤0.5
+"NOTE 1:WBindex is the wideband index that is defined in [4].NOTE2:Lcsc is the length of the continuous subcarrier, SCstart is the subcarrier offset relative to the first subcarrier of the first PRB indicated with WBindex",,,,,,,,

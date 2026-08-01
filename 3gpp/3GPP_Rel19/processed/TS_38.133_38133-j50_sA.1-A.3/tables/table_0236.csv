@@ -1,0 +1,15 @@
+PRS Parameters,Values,,,,,,
+Reference channel,PRS.1.1 FR1,PRS.1.2 FR1,PRS.1.3 FR1,,PRS.1.4 FR1,,PRS.1.5 FR1
+Resource index in resource set,0,0,0,1,0,1,1
+PRS periodicity,160ms,,,,,,
+PRS Resource set slot offset Note 1,10 ms,,,,,,
+PRS Resource slot offset (slot) Note 1,0,4,0,,4,,4
+PRS RE offset Note 1,0,,0,1,0,1,1
+SCS,15kHz,,,,,,
+PRS comb size,2,4,2,,4,,4
+Number of PRS symbol,4,4,4,,4,,4
+Repetion factor,2,1,2,,1,,6
+PRS resource time gap (slot),1,1,1,,1,,1
+PRB numbers containing PRS within channel BW Note 1,0-23,0-103,0-23,,0-103,,0-267
+PRS Start PRB,0,,,,,,
+NOTE 1:Unless otherwise specified in the test case.,,,,,,,

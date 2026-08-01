@@ -1,0 +1,8 @@
+Rx Parameter,Units,SL CA bandwidth class
+,,B
+"Pw in Transmission Bandwidth Configuration, per CC",dBm,PREFSENS_SL + NR SL CA bandwidth class specific value below
+,dB,16.0
+BWInterferer,MHz,10
+"FIoffset, case 1",MHz,15
+"FIoffset, case 2",MHz,25
+NOTE 1:The interferer is QPSK modulated PUSCH containing data and reference symbols. Normal cyclic prefix is used.,,

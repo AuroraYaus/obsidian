@@ -1,0 +1,108 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Unit</td>
+    <td colspan="3">Values</td>
+  </tr>
+  <tr>
+    <td>Reference channel</td>
+    <td></td>
+    <td>R.79 FDD</td>
+    <td>R.103 FDD</td>
+    <td>R.104 FDD</td>
+  </tr>
+  <tr>
+    <td>Channel bandwidth</td>
+    <td>MHz</td>
+    <td>10</td>
+    <td>10</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Allocated DL subframes per Radio Frame</td>
+    <td></td>
+    <td>Note 3</td>
+    <td>Note 5</td>
+    <td>Note 3Note 6</td>
+  </tr>
+  <tr>
+    <td>Allocated DL subframes per Radio Frame</td>
+    <td></td>
+    <td>Note 3</td>
+    <td>Note 5</td>
+    <td>Note 3</td>
+  </tr>
+  <tr>
+    <td>Modulation</td>
+    <td></td>
+    <td>16QAM</td>
+    <td>QPSK</td>
+    <td>64QAM</td>
+  </tr>
+  <tr>
+    <td>Target Coding Rate</td>
+    <td></td>
+    <td>1/2</td>
+    <td>1/3</td>
+    <td>0.4</td>
+  </tr>
+  <tr>
+    <td>Information Bit Payload</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>For Sub-Frames 0,1,2,3,4,5,6,7,8,9</td>
+    <td>Bits</td>
+    <td>744</td>
+    <td>224</td>
+    <td>968</td>
+  </tr>
+  <tr>
+    <td>Number of Code Blocks</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>For Sub-Frames 0,1,2,3,4,5,6,7,8,9</td>
+    <td>Code blocks</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Binary Channel Bits</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>For Sub-Frames 0,1,2,3,4,5,6,7,8,9</td>
+    <td>Bits</td>
+    <td>1584</td>
+    <td>792</td>
+    <td>2376</td>
+  </tr>
+  <tr>
+    <td>Max. Throughput averaged over 1 frame</td>
+    <td>Mbps</td>
+    <td>0.149</td>
+    <td>0.0187</td>
+    <td>0.194</td>
+  </tr>
+  <tr>
+    <td>UE DL Category</td>
+    <td></td>
+    <td>M1, M2 ≥ 0</td>
+    <td>M1, M2</td>
+    <td>M1, M2</td>
+  </tr>
+  <tr>
+    <td colspan="5">Note 1:2 symbols allocated to PDCCH.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4].Note 3: The downlink subframes are scheduled at the 0th and 1st subframes every 10ms. Information bit payload is available if downlink subframe is scheduled (starting from 0th subframe). The corresponding MPDCCH is scheduled 2 subframes before the corresponding PDSCH transmissions.Note 4:Allocated PRB positions for PDSCH are {3, 4, 5} within the assigned narrowband. Allocated PRB positions for MPDCCH are {0, 1} within the assigned narrowband.Note 5:The downlink subframes are scheduled at the 0th subframes every 12ms. Information bit payload is available if downlink subframe is scheduled (starting from 5th subframe). The corresponding MPDCCH is scheduled 5 subframes before the corresponding PDSCH transmissions.Note 6: For case with 14 HARQ processes, scheduling pattern is 17ms. In every scheduling period, subframes from 0 to 11 are used for MPDCCH and MPDSCH transmission, the corresponding MPDCCH is scheduled 2 subframes before the corresponding PDSCH transmissions which are scheduled in subframes from 2 to 11. The corresponding MPDCCH is scheduled 7 subframes before the corresponding PDSCH transmissions which are scheduled in subframes 0 and 1. Subframe 13 is used for ACK/NACK feedback corresponding to MPDSCH transmitted in subframe from 0 to 3; Subframe 14 is used for ACK/NACK feedback corresponding to MPDSCH transmitted in subframe from 4 to 7; Subframe 15 is used for ACK/NACK feedback corresponding to MPDSCH transmitted in subframe from 8 to 11. Subframes 12 and 16 are used for gaps.</td>
+  </tr>
+</table>

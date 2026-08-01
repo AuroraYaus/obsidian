@@ -1,0 +1,4 @@
+Measurement category,Ecat,Note
+"Intra-frequency Note 1,2",9,"Events for any one or a combination of intra-frequency SS-RSRP, SS-RSRQ, SS-SINR,  CSI-RSRP, CSI-RSRQ, and CSI-SINR for NG-RAN intra-frequency cells"
+Inter-frequency Note 2,10,"Events for any one or a combination of inter-frequency SS-RSRP, SS-RSRQ, SS-SINR, CSI-RSRP, CSI-RSRQ, and CSI-SINR for NG-RAN inter-frequency cells"
+"NOTE 1:When the UE is configured with SCell carrier frequencies, Ecat for Intra-frequency is applied per corresponding NR serving frequency.NOTE 2: Applicable for UE configured with SA NR operation mode.",,

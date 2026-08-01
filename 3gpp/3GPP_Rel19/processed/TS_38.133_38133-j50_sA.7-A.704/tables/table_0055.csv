@@ -1,0 +1,27 @@
+Parameter,,,Unit,Value,Comment
+RF Channel Number,,,,"1, 2, 3","Three radio channels are used for this test. One for FR1 source PCell, second for E-UTRA target PCell and third for target NR PSCell"
+Initial,Active PCell,,,Cell 1,PCell on RF channel number 1.
+Condition,Neighbour cell,,,"Cell 2, Cell 3",Neighbour cell on RF channel number 2 and 3.
+Final Condition,Active PCell,,,Cell 2,E-UTRA PCell on RF channel number 2.
+,Active PSCell,,,Cell 3,PSCell on RF channel number 3.
+,Neighbour Cell,,,Cell 1,RF channel number 1
+NR measurement quantity,,,,SS-RSRP,
+E-UTRAN measurement quantity,,,,RSRP,
+Event B2,,Threshold1,dBm,As specified in table A.6.3.1.4-3,Absolute NR SS-RSRP threshold for event B2
+,,Threshold2EUTRAN,dBm,-98,Absolute E-UTRAN RSRP threshold for event B2
+,,Hysteresis,dB,0,
+,,TimeToTrigger,s,0,
+Event B1,,Hysteresis,dB,0,Hysteresis for evaluation of event B1.
+,,Threshold RSRP,dBm,-93,Actual RSRP threshold for event B1. Needs to take absolute accuracy tolerance in clause 9.1.11.1 into account plus margin.
+,,Time to Trigger,s,0,
+Filter coefficient,,,,0,L3 filtering is not used
+DRX,,,,OFF,Non-DRX test
+Access Barring Information,,,-,Not sent,No additional delays in random access procedure
+Time offset between cell 1 and 2,,,,3 ms,Asynchronous cells
+Gap pattern configuration Id,,,,0,As specified in table 9.1.2-1 started before T2 starts
+Cell-individual offset for cells on RF channel number 2,,,dB,0,Individual offset for cells on primary component carrier.
+Cell-individual offset for cells on RF channel number 3,,,dB,0,Individual offset for cells on carrier frequency of Cell 3.
+T1,,,s,5,
+T2,,,s,≤5,During this time the cell 2 and cell 3 shall be known.
+T3,,,s,1,During this time the UE perform HO with PSCell addition.
+T4,,,s,0.5,During this time the UE sends CSI reports for PSCell (Cell 3).

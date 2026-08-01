@@ -1,0 +1,6 @@
+,Spectrum emission limit (dBm) / measurement bandwidth for each channel bandwidth,,,,,
+ΔfOOB MHz,25+100RB (24.95MHz),50+50RB (19.9 MHz),50+100RB (29.9 MHz),75+100RB (34.85 MHz),100+100RB (39.8 MHz),Measurementbandwidth
+± 0 - 1,-13,,,,,1 % channel bandwidth
+± 1 - X,-13,,,,,1 MHz
+< – X or > X when3540 MHz < ΔfOOB < 3710 MHz,-25,,,,,
+NOTE:X is aggregated channel bandwidth as defined in clause 5.6A,,,,,,

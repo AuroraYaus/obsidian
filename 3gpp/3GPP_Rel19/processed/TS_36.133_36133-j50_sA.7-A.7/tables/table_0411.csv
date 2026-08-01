@@ -1,0 +1,17 @@
+Parameter,,Unit,Value,Comment
+Active cell,,,Cell 1,Cell 1 is on E-UTRA RF channel number 1
+CP length,,,Normal,
+Early Out of sync transmission parameters (Note 1),DCI format,,6-1B,As defined in section 5.3.3.1.12 in TS 36.212
+,Number of OFDM symbols for legacy control channels,,2,Early Out of sync threshold Q E1_out_CatM1 and the corresponding hypothetical MPDCCH transmission parameters are as specified in section 7.19.4 and Table 7.19.4-4 respectively.
+,M-PDCCH aggregation level,eCCE,16,
+,M-PDCCH repetition level,,64,
+,"A, B",,-3,
+DRX,,,OFF,
+Layer 3 filtering,,,Enabled,Counters:N310 = 1; N311 = 1
+T310 timer,,ms,1800,T310 is enabled
+T314 timer,,ms,0,T314 is disabled
+T311 timer,,ms,1000,T311 is enabled
+T1,,s,2,
+T2,,s,0.8,
+T3,,s,1.8,
+Note 1:MPDCCH corresponding to the early out of sync transmission parameters need not be included in the Reference Measurement Channel.,,,,

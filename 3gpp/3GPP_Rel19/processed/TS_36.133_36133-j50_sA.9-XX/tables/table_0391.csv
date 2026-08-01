@@ -1,0 +1,4 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,"1, 2",RF channel 1 is servingRF channel 2 is non-serving
+Channel Bandwidth (BWchannel),MHz,10,On both Band 47 and E-UTRA band
+Active cell,,Cell 1,Serving cell on RF channel number 1

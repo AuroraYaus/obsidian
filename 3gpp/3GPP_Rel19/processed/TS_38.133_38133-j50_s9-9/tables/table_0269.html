@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TSSB_time_index_inter</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>max(120 ms, ceil( 3 x Kp ) x SMTC period)Note 1 x CSSFinter</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320 ms</td>
+    <td>max(120 ms, ceil (1.5 x 3 x Kp) x max(SMTC period,DRX cycle)) x CSSFinter</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320 ms</td>
+    <td>Ceil(3 x Kp) x DRX cycle x CSSFinter</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:SMTC period is the SMTC period in SMTC configuration which is associated with the target cell to be measured configured in SSB-MTC4List-r17.</td>
+  </tr>
+</table>

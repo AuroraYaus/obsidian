@@ -1,0 +1,12 @@
+Parameter,Unit,Test 1,,,Test 2,,,
+,,Cell 1,Cell 2,,Cell 1,,Cell 2,
+Angle of arrival configuration,,Setup 1 according to clause A.3.15.1,,,Setup 1according to clause A.3.15.1,,,
+Assumption for UE beamsNote 9,,Rough,,,,,,
+Note1,dBm/15 kHzNote4,-95,,,,-95,,
+Note1,dBm/SCSNote3,-86,,,,-86,,
+,dB,3,,,,3,,
+SSB_RPNote2,dBm/SCS Note4,-83,,-83,,-89,,-89
+SS-RSRQ Note2,dB,-14.77,,-14.77,,-16.81,,-16.81
+,dB,-1.76,,-1.76,,-4.76,,-4.76
+IoNote2,dBm/95.04 MHz Note4,-50,,,,-54,,
+"NOTE 1:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 2:SS-RSRQ, SSB_RP, and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3:SS-RSRQ and SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 4:Equivalent power received by an antenna with 0 dBi gain at the centre of the quiet zoneNOTE 5:As observed with 0 dBi gain antenna at the centre of the quiet zoneNOTE 6:VoidNOTE 7:VoidNOTE 8:VoidNOTE 9:Information about types of UE beam is given in clause B.2.1.3, and does not limit UE implementation or test system implementation",,,,,,,,

@@ -1,0 +1,52 @@
+Parameter,Config,Unit,Value
+SSB ARFCN,1~3,,freq1
+Duplex mode,1,,FDD
+,2,,TDD
+,3,,TDD
+TDD Configuration,1,,N/A
+,2,,TDDConf.1.1
+,3,,TDDConf.2.1
+BWchannel,1,MHz,"10: NPRB,c = 52"
+,2,,"10: NPRB,c = 52"
+,3,,"40: NPRB,c = 106"
+PDSCH Reference measurement channel,1,,SR.1.1 FDD
+,2,,SR.1.1 TDD
+,3,,SR.2.1 TDD
+RMSI CORESET Reference Channel,1,,CR.1.1 FDD
+,2,,CR.1.1 TDD
+,3,,CR.2.1 TDD
+Dedicated CORESET Reference Channel,1,,CCR.1.1 FDD
+,2,,CCR.1.1 TDD
+,3,,CCR.2.1 TDD
+SSB configuration,1,,SSB.3 FR1
+,2,,SSB.3 FR1
+,3,,SSB.4 FR1
+CSI-RS configuration,1,,CSI-RS 1.3 FDD
+,2,,CSI-RS 1.3 TDD
+,3,,CSI-RS 2.3 TDD
+OCNG Patterns,1~3,,OP.1
+TRS Configuration,1,,TRS.1.1 FDD
+,2,,TRS.1.1 TDD
+,3,,TRS.1.2 TDD
+Initial BWP Configuration,1~3,,DLBWP.0.1ULBWP.0.1
+Dedicated BWP configuration,1~3,,DLBWP.1.1ULBWP.1.1
+SMTC configuration,1~3,,SMTC.1
+DRX configuration,1~3,,Off
+reportConfigType,1~3,,aperiodic
+reportQuantity,1~3,,cri-RSRP
+Number of reported RS,1~3,,2
+qcl-Info,1~3,,SSB#0 for resource#0
+,,,SSB#1 for resource#1
+reportSlotOffsetList,1~3,slots,8
+T1,1~3,s,5
+EPRE ratio of PSS to SSS,1~3,dB,0
+EPRE ratio of PBCH DMRS to SSS,,,
+EPRE ratio of PBCH to PBCH DMRS,,,
+EPRE ratio of PDCCH DMRS to SSS,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,
+EPRE ratio of PDSCH DMRS to SSS,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,,
+EPRE ratio of OCNG DMRS to SSSNote 1,,,
+EPRE ratio of OCNG to OCNG DMRS Note 1,,,
+Propagation condition,1~3,,AWGN
+NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.,,,

@@ -1,0 +1,23 @@
+Parameter,,Unit,Test 1,Test 2
+Unused RE-s and PRB-s,,,OCNG,OCNG
+Cell ID,,,0,0
+Downlink power allocation,,dB,-3,-3
+,,dB,-3,-3
+,,dB,0,0
+at antenna port,,dBm/15kHz,-98,-98
+CSI-RS signals,,,"Antenna ports 15, 16","Antenna ports 15, 16"
+CSI-RS periodicity and subframe offset,,,5 / 2,5 / 2
+CSI-RS configuration,,,0,0
+Zero-power CSI-RS configuration,,,Not configured,Not configured
+Subframe configuration,,,Non-MBSFN,Non-MBSFN
+Precoder update granularity,,SREG,2,2
+,,ms,1,1
+Beamforming precoder,,,Annex B.4.2,Annex B.4.2
+Cell specific reference signal,,,"0, 1","0, 1"
+DL TTI length,,,Slot,Subslot
+DMRS position indicator,,,N/A,"0 for subslots 1,3, and 51 for subslots 2 and 4"
+Configured SPDCCH-PRB sets,,,"{Set 1, Set 2}","{Set 1, Set 2}"
+SPDCCH-PRB set used for DCI transmission,,,Set 1,Set 2
+Used/Unused SPDCCH resource indication,,,’10’,N/A
+PDSCH transmission mode,,,TM9,TM9
+DCI format,,,7-1F,7-1F

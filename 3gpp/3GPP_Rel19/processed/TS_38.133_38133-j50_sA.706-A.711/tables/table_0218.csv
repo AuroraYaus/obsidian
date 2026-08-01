@@ -1,0 +1,17 @@
+Parameter,Unit,Test configuration,Value,Comment
+NR RF Channel Number,,Config 1,"1, 2",Two FR2 NR carrier frequencies is used.
+Active cell,,Config 1,NR cell 1 (PCell),NR Cell 1 is on NR RF channel number 1.
+Neighbour cell,,Config 1,NR cell 2,NR cell 2 is on NR RF channel number 2.
+Gap Pattern Id,,Config 1,13,As specified in clause 9.1.2-1.
+Measurement gap offset,,Config 1,39,
+SMTC-SSB parameters,,Config 1,SSB.3 FR2,As specified in clause A.3.10.2
+SI-RNTI scheduling rate,ms,,20 ms,S-RNTI scheduled on 8 occasions per 160 ms transmission period
+A3-Offset,dB,Config 1,-15,
+Hysteresis,dB,Config 1,0,
+CP length,,Config 1,Normal,
+TimeToTrigger,s,Config 1,0,
+Filter coefficient,,Config 1,0,L3 filtering is not used
+DRX,,Config 1,OFF,DRX is not used
+Time offset between serving and neighbour cells,,Config 1,3s,Synchronous cells.
+T1,s,Config 1,<10,"UE expected to report event A3 for cell 2 within 5,2 s (PC1)or 3.5 s (other PC) of the start of T1. Test equipment shall configure CGI reporting within 3 s after receiving the event A3 report. T2 begins 10 ms after test equipment has transmitted the RRC reconfiguration to configure CGI reporting."
+T2,s,Config 1,1,

@@ -1,0 +1,7 @@
+DRX cycle length [s],Value,,,
+,1.28 ≤ PTW length [s] < 2.56,2.56 ≤ PTW length [s] < 5.12,5.12 ≤ PTW length [s] < 10.24,10.24 ≤ PTW length [s]
+0.32,1,"Min(n , 2)","Min(n , 4)","Min(n , 8)"
+0.64,N/A,1,"Min(n , 2)","Min(n , 4)"
+1.28,N/A,N/A,1,"Min(n , 2)"
+2.56,N/A,N/A,N/A,1
+Note:n is signalled by the network by using num-DRX-CyclesRelaxed defined in TS 36.331 [2].,,,,

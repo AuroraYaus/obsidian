@@ -1,0 +1,6 @@
+Parameter,NR sidelink operating band groups Note1,Minimum S-SSB_RP,,S-SSB Ês/Iot
+,,dBm/SCSS-SSB,,dB
+,,SCSS-SSB = 15 kHz,SCSS-SSB = 30 kHz,
+,NR_CCA_FR1_I,-117,-114,0
+,NR_CCA_FR1_J,-116.5,-113.5,0
+NOTE 1:NR sidelink operating band groups are as defined in section 3.5 for the corresponding NR operating bands.NOTE 2: The SyncRef UE transmission frequency shall be accurate to within ±5 PPM compared to the absolute frequency.,,,,

@@ -1,0 +1,14 @@
+Channelbandwidth (MHz),FFT size,CP length for symbols 16 and 8-13 in FFT samples,EVM window length W,Ratio of W to total CP length for symbols 16 and 8-13 (Note) (%)
+3,256,18,8,44.4
+5,512,36,14,40
+7,512,36,14,40
+10,1024,72,28,40
+15,1536,108,44,40
+20,2048,144,58,40
+25,2048,144,72,50
+30,3072,216,108,50
+35,3072,216,108,50
+40,4096,288,144,50
+45,4096,288,144,50
+50,4096,288,144,50
+NOTE:These percentages are informative and apply to a slot's symbols 1 to 6 and 8 to 13. Symbols 0 and 7 have a longer CP and therefore a lower percentage.,,,,

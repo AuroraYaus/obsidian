@@ -1,0 +1,13 @@
+Accuracy for2 PFLs,Accuracy for3 PFLs,Conditions,,,,,
+,,PRS Ês/Iot,PRS bandwidth per PFL,PRS SCS,PRS resource repetitionNote 3(TrepPRS*LPRS/KcombPRS,IoNote 4 range,
+,,,,,,MinimumIoNote 1,MaximumIo
+TcNote 5,TcNote 5,dB,PRB,kHz,,dBm / SCSPRS,dBm/BWChannel
+±(6+),±(3+),-3,≥64,60,≥1,"Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival",-50
+±(3+),±(2+),,≥132,,≥1,NOTE 6,NOTE 6
+±(3+),±(2+),,≥64,120,≥1,"Same value as PRP in table B.2.14-2, according to UE Power class, operating band and angle of arrival",-50
+±(2+),±(1+),,≥128,,≥1,NOTE 6,NOTE 6
+±(9+),±(4+),-13,≥64,60,≥1,NOTE 6,NOTE 6
+±(4+),±(3+),,≥132,,≥1,NOTE 6,NOTE 6
+±(4+),±(3+),,≥64,120,≥1,NOTE 6,NOTE 6
+±(2+),±(1+),,≥128,,≥1,NOTE 6,NOTE 6
+"NOTE 1:This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2:NR operating band groups are as defined in Section 3.5.NOTE 3: are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34].NOTE 4:The Io is defined in PRS slots. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same slot.NOTE 5:Tc is the basic timing unit defined in TS 38.211 [6].NOTE 6:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 7:  is the margin determined from table 10.1.25A.2-6, where the PRS BW refers to the sum of the PRS PRB numbers across the aggregated PFLs.TrepPRS, LPRS ,KcombPRS",,,,,,,

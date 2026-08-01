@@ -1,0 +1,6 @@
+Parameter,,Unit,Cell 2 (GSM),,
+,,,T1,T2,
+Absolute RF Channel Number,,,ARFCN 1,,
+RXLEV,dBm,,-90,-75,
+RXLEV_ACCESS_MIN,dBm,,-105,,
+MS_TXPWR_MAX_CCH,dBm,,24,,

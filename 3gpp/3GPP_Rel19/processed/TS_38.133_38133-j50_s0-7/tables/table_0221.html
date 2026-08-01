@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <td>Serving cell</td>
+    <td>FR of target NR</td>
+    <td colspan="2">Tidentify_intra_NR [ms]</td>
+  </tr>
+  <tr>
+    <td>SSB Ês/Iot (dB)</td>
+    <td>cell</td>
+    <td>Known NR cell</td>
+    <td>Unknown NR cell</td>
+  </tr>
+  <tr>
+    <td>≥ -8</td>
+    <td>FR1-NTN</td>
+    <td>MAX (200 ms, 5 x TSMTC)</td>
+    <td>Kmulti_SMTC * MAX (800 ms, 10 x TSMTC)</td>
+  </tr>
+  <tr>
+    <td>&lt; -8</td>
+    <td>FR1-NTN</td>
+    <td>N/A</td>
+    <td>k * 800 ms Note1, 3</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:The UE is not required to successfully identify a cell on any NR frequency layer when TSMTC &gt; 20 ms and serving cell SSB Ês/Iot &lt; -8 dB.NOTE 2:Kmulti_SMTC is defined in clause 9.2C.5.1.NOTE 3:k = 1 if the cells on the target frequency are served by GEO. k = (N+1) if the cells on the target frequency are served by LEO, where N is the number of different satellites associated to the list of configured neighbour cells in ntn-NeighCellConfigList and ntn-NeighCellConfigListExt.</td>
+  </tr>
+</table>

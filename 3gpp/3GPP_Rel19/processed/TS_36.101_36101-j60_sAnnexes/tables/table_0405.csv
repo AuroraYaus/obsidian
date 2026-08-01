@@ -1,0 +1,28 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2024-12,RAN#106,RP-243078,6071,,B,Big CR on Introduction of completed R19 x(1<=x<=6) DL y(y<=2) UL CA band combinations to TS 36.101,19.0.0
+2024-12,RAN#106,,,,,Editorial update,19.0.1
+2025-03,RAN#107,RP-250618,6077,,B,CR related to Introduction of new LTE FDD Band 111,19.1.0
+2025-03,RAN#107,RP-250582,6081,,A,CR 36.101 R19 Removal of brackets,19.1.0
+2025-03,RAN#107,RP-250578,6082,,A,CR 36.101 Correction of CA_40-42 R19,19.1.0
+2025-03,RAN#107,RP-250619,6089,,B,Big CR on Introduction of completed R19 x(1<=x<=6) DL y(y<=2) UL CA band combinations to TS 36.101,19.1.0
+2025-03,RAN#107,RP-250583,6094,,A,(LTE410_Europe_PPDR-Core) CR to TS 36.101: UTRA ACLR exceptions,19.1.0
+2025-03,RAN#107,RP-250609,6096,,A,(LTE-RF) Correction of reference to Suspended version of ITU-R SM.329 Recommendation,19.1.0
+2025-06,RAN#108,RP-250938,6097,,F,CR Bugfixes and missing Fallbacks 36101,19.2.0
+2025-06,RAN#108,RP-250938,6098,,B,draftCR on Introduction of new LTE band combinations LTE_CA_R19_xBDL_yBUL,19.2.0
+2025-06,RAN#108,RP-250911,6104,,A,(LTE_CA_R15_2DL2UL-Core) Add some missing uplink CA band configurations in TS36.101,19.2.0
+2025-06,RAN#108,RP-250939,6105,2,B,"CR to TS 36.101: New bands for LTE based 5G terrestrial broadcast for early deployments, Rel-19",19.2.0
+2025-06,RAN#108,RP-250923,6107,,A,"(LTE_terr_bcast_bands_part2-Core) CR to TS 36.101: terminology alignment for the ""LTE based 5G terrestrial broadcast"" feature",19.2.0
+2025-06,RAN#108,RP-250913,6111,,A,[LTE_CA_R16_intra-Core] CR to TS36.101-j10: Clarification of PC2 CA_NS_04 requirements - CatF,19.2.9
+2025-09,RAN#109,RP-252410,6114,,B,Big CR on Introduction of completed R19 x(1<=x<=6) DL y(y<=2) UL CA band combinations to TS 36.101,19.3.0
+2025-09,RAN#109,RP-252389,6116,,A,CR to TS 36.101-1: Missing reference to the updated ECC/DEC/(22)07 decision on harmonised technical conditions for the usage of aerial UE,19.3.0
+2025-09,RAN#109,RP-252377,6120,,A,(LTE_CA_R16_intra-Core) CR to TS36.101-j20: Correction to PC2 CA_NS_04 requirements - CatA,19.3.0
+2025-09,RAN#109,RP-252399,6121,1,F,(TEI19) CR to TS36.101-j20: Corrections to B28 and CA_28 UE coex spurious emissions – CatF [UE_coex_spurs_CA],19.3.0
+2025-09,RAN#109,RP-252395,6123,1,A,CR for TS 36.101 Remove the spurious emission requirements for band combinations coexisting with PHS system R19 [PHS_System],19.3.0
+2025-12,RAN#110,RP-253625,6132,,B,Big CR for LTE_terr_bcast_Ph2_demod,19.4.0
+2025-12,RAN#110,RP-253626,6124,,F,CR-Bugfix 36101-j30_s00-07,19.4.0
+2025-12,RAN#110,RP-253626,6131,1,B,Big CR on Introduction of completed R19 x(1=x=6) DL y(y=2) UL CA band combinations to TS 36.101,19.4.0
+2025-12,RAN#110,RP-253668,6127,,A,(LTE_CA_R17_xBDL_2BUL-Core) CR to 36.101 to correct inter-band CA operating bands with four bands_R19_CAT_A,19.4.0
+2026-03,RAN#111,RP-260450,6133,,F,CR-Bugfix 36.101,19.5.0
+2026-03,RAN#111,RP-260450,6134,,F,CR 36.101 correcting LTE CA configuration,19.5.0
+2026-06,RAN#112,RP-261400,6136,1,A,"(LTE_CA_R18_xBDL_yBUL, TEI18) Addition of missing requirements for LTE CA configuration CA_48A-66A with UL CA_48A-66A",19.6.0

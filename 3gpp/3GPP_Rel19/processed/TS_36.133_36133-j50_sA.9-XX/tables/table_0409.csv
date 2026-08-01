@@ -1,0 +1,11 @@
+Parameter,,Unit,Value,Comment
+E-UTRA RF Channel Number,,-,2,TDD carrier in Band 47
+Channel Bandwidth (BWchannel),,MHz,10,
+V2X sidelink Communication configuration,,-,As specified in Table A.3.24.2-2 (Configuration #2),IE values unless specified otherwise in this test.
+Number of Active Sidelink UEs per sc-period,,-,8,"Sidelink UE i = 0, .., 7"
+Active Sidelink UEs,V2X sidelink Communication configuration,-,As specified in Table A.3.24.2-2 (Configuration #2),IE values unless specified otherwise in this test.
+,PSCCH Reference Measurement Channel,-,CC.1A TDD,As specified in Table A.3.24.3.1-1
+,PSSCH Reference Measurement Channel,-,CD.1A TDD,As specified in Table A.3.24.3.1-2
+,numSubchannel-r14 included in v2x-CommTxPoolNormal-r14,-,1,ENUMERATED {n1}
+,startRB-Subchannel-r14 included in v2x-CommTxPoolNormal-r14,-,i,"For Sidelink UE i = 0, .., 7"
+,RSRP,dBm/15kHz,-98,

@@ -1,0 +1,16 @@
+Parameter,Unit,Values,,,
+Reference channel,,R.90 FDD,R.91 FDD,R.92-1 FDD,R.92-2 FDD
+Channel bandwidth,MHz,10,10,10,10
+Allocated resource blocks,,18 (Note 7),18 (Note 7),36 (Note 8),36 (Note 8)
+Allocated DL subframes,,Note 3,Note 4,Note 5,Note 6
+Modulation,,QPSK,QPSK,QPSK,QPSK
+Target Coding Rate,,1/3,1/10,1/2,1/2
+Information Bit Payload,,,,,
+"For Sub-Frames 0,1,2,3,4,5,6,7,8,9",Bits,1544,488,4392,4392
+Number of Code Blocks,,,,,
+"For Sub-Frames 0,1,2,3,4,5,6,7,8,9",Code blocks,1,1,1,1
+Binary Channel Bits,,,,,
+"For Sub-Frames 0,1,2,3,4,5,6,7,8,9",Bits,4752,4752,9504,9504
+Max. Throughput averaged over one period,kbps,48.25,3.8125,219.6,439.2
+UE DL Category,,M2,M2,≥ 1,≥ 1
+"Note 1:2 symbols allocated to PDCCHNote 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4]Note 3:The downlink subframes are scheduled at the 0th to 24th subframes every period=32 ms. Information bit payload is available at the 17th to 24th subframes with repetition. MPDCCH are scheduled at the 0th to 15th subframes with repetition. (Starting from the 0th subframe)Note 4:The downlink subframes are scheduled at the 0th to 96th subframes every period=128 ms. Information bit payload is available at the 65th to 96th subframes with repetition. MPDCCH are scheduled at the 0th to 63rd subframes with repetition. (Starting from the 0th subframe)Note 5:The downlink subframes are scheduled at the 0th to 12th subframes every period= 20 ms. Information bit payload is available at the 9th to 12th subframes with repetition. MPDCCH are scheduled at the 0th to 7th subframes with repetition. (Starting from the 0th subframe)Note 6:The downlink subframes are scheduled at the 0th to 4th subframes every period=10 ms. Information bit payload is available at the 3rd to 4th subframes with repetition. MPDCCH are scheduled at the 0th to 1st subframes with repetition. (Starting from the 0th subframe)Note 7:Allocated PRB positions are {0, 1, …, 17} within the assigned wideband.Note 8:Allocated PRB positions are {1, 2, 3, …, 18, 31, 32, …, 48}.Note 9:Allocated PRB positions for MPDCCH are {0, 1, 2, 3, 4, 5} within the scheduled narrowband.",,,,,

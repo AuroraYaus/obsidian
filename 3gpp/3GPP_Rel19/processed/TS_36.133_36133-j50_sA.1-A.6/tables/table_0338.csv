@@ -1,0 +1,20 @@
+Parameter,,Unit,Value,Comment
+PDSCH parameters,,,DL Reference Measurement Channel R.0 FDD,As specified in clause A.3.1.1.1
+PCFICH/PDCCH/PHICH parameters,,,DL Reference Measurement Channel R.6 FDD,As specified in clause A.3.1.2.1
+Initial conditions,Active cell,,Cell 1,Cell 1 is on RF channel number 1
+,Neighbouring cell,,Cell 2,Cell 2 is on RF channel number 2
+Final condition,Active cell,,Cell 2,
+E-UTRA RF channel number,,,"1, 2",Two FDD carriers are used
+Channel Bandwidth (BWchannel),,MHz,10,
+A3-Offset,,dB,-4,
+Hysteresis,,dB,0,
+TimeToTrigger,,s,0,
+Filter coefficient,,,0,L3 filtering is not used
+DRX,,,DRX_L,As specified in clause A.3.3
+PRACH configuration,,,4,As specified in table 5.7.1-2 in TS 36.211
+Access Barring Information,,-,Not sent,No additional delays in random access procedure
+Time offset between cells,,,3 ms,Asynchronous cells
+Gap pattern configuration Id,,,0,As specified in Table 8.1.2.1-1 started before T2 starts
+T1,,s,5,
+T2,,s,5,
+T3,,s,1,

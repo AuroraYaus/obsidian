@@ -1,0 +1,12 @@
+Modulation,,MPR for bandwidth class B(dB),,,MPR for bandwidth class C(dB),,
+,,inner,Outer11,Outer22,inner,Outer11,Outer22
+DFT-s-OFDM,Pi/2 BPSK,2,5.5,11.5,2.5,6,13
+,QPSK,2,5.5,,2.5,6,
+,16QAM,2.5,5.5,,3,6,
+,64QAM,4.5,6,,5,6,
+,256QAM,6,6.5,,6.5,6.5,
+CP-OFDM,QPSK,2.5,6.5,12,3.5,7,14
+,16QAM,3,7,,3.5,7,
+,64QAM,5,7,,5,7,
+,256QAM,7.5,7.5,,7.5,7.5,
+NOTE 1: Outer 1 MPR for Pi/2 BPSK and QPSK is reduced by 2dB for aggregated allocation bandwidth > 10MHz NOTE 2: Outer 2 MPR is reduced by 4.5dB for aggregated allocation bandwidth > 10MHz,,,,,,,

@@ -1,0 +1,19 @@
+Parameter,Unit,"Active Sidelink UE i(i = 0, .., 19)",
+,,T1,T2
+E-UTRA RF Channel Number,-,1,
+BWchannel Note 4,MHz,10,
+PSCCH RMC (defined in A.3.24.3),-,CC.1A HD,
+PSSCH RMC (defined in A.3.24.3),-,CD.1B HD,
+OCNG pattern defined in A.3.2.4,-,VOP.1 HD,
+Note1,dBm/15 kHz,-103,-113
+PSCCH,dB,5,
+PSSCH,dB,2,
+PSCCH  Note2,dB,5,
+PSSCH  Note2,dB,2,
+S-RSRP Note 2,dB,-101,-111
+S-RSSI1 Note 2 Note3,dBm/0.9 MHz,-80.15,-90.15
+S-RSSI2 Note 2 Note4,dBm/0.9 MHz,-80.15,-90.15
+S-RSSI3 Note 2 Note5,dBm/0.9 MHz,-65.18,-75.18
+Antenna Configuration,-,1x2,
+Propagation Condition,-,AWGN,
+"Note 1:Interference from other UEs and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 2:Es/Iot, S-RSRP and S-RSSI levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 3:S-RSSI1 is the S-RSSI level measured on subchannel #1.Note 4:S-RSSI2 is the S-RSSI level measured on subchannel #3.Note 5:S-RSSI3 is the S-RSSI level measured on subchannel #0/2/4.",,,

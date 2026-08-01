@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Condition</td>
+    <td>TPSS/SSS_sync_intra_CCA</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>max(600 ms, (5+LPSS/SSS,gaps) x max(MGRP, SMTC period)) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320 ms</td>
+    <td>max(600 ms, ceil(1.5x (5+LPSS/SSS,gaps)) x max(DRX cycle, MGRP, SMTC period)) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320ms</td>
+    <td>(5+LPSS/SSS,gaps) x DRX cycle x CSSFintra</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:When DRX is not configured, LPSS/SSS,gaps is the number of SMTC occasions not available at the UE during TPSS/SSS_sync_intra_CCA for PSS/SSS detection, where LPSS/SSS,gaps &lt;LPSS/SSS,gaps,max. When DRX is configured, LPSS/SSS,gaps is the number of DRX cycles in which at least one SMTC occasion is not available at the UE during TPSS/SSS_sync_intra_CCA for PSS/SSS detection, where LPSS/SSS,gaps &lt;LPSS/SSS,gaps,max. When configured with DRX, the UE is not required to determine the availability of SMTC occasions more frequent than once per DRX cycle. When configured with measurement gaps, the UE is not required to determine the availability of SMTC occasions more frequent than once during MGRP. FFS: The UE is not required to determine the availability of SMTC occasions more frequent than what is required by CSSFintra.NOTE 2:LPSS/SSS,gaps,max =7 for Max(DRX cycle, SMTC period, MGRP)≤40ms where DRX cycle is 0 for non-DRX, LPSS/SSS,gaps,max =5 for 40ms&lt;Max(DRX cycle, SMTC period, MGRP)≤320ms, LPSS/SSS,gaps,max =3 for DRX cycle&gt;320ms.NOTE 3:Upon exceeding LPSS/SSS,gaps,max, the UE is not required to meet the requirements for PSS/SSS detection.</td>
+  </tr>
+</table>

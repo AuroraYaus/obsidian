@@ -1,0 +1,8 @@
+Configuration,PCell,SUL
+1,"15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode","SUL: 15 kHz SCS, 10 MHz bandwidth, SUL duplex mode"
+2,"15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode","SUL: 30kHz SCS, 40 MHz bandwidth, SUL duplex mode"
+3,"15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode","SUL: 15 kHz SCS, 10 MHz bandwidth, SUL duplex mode"
+4,"15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode","SUL: 30kHz SCS, 40 MHz bandwidth, SUL duplex mode"
+5,"30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode","SUL: 15 kHz SCS, 10 MHz bandwidth, SUL duplex mode"
+6,"30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode","SUL: 30kHz SCS, 40 MHz bandwidth, SUL duplex mode"
+Note 1:The UE is only required to be tested in one of the supported test configurationsNote 2:Void,,

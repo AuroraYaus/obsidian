@@ -1,0 +1,16 @@
+Parameter,,Unit,Test 1
+Number of PDCCH symbols,,symbols,2
+Unused RE-s and PRB-s,,,OCNG
+Cell ID,,,0
+Downlink power allocation,,dB,-6
+,,dB,-6
+,,dB,0
+at antenna port,,dBm/15kHz,-98
+Subframe configuration,,,Non-MBSFN
+Cell specific reference signal,,,"Antenna ports 0,1,2,3"
+DL TTI length,,,Slot
+Configured SPDCCH-PRB sets,,,"{Set 1, Set 2}"
+SPDCCH-PRB set used for DCI transmission,,,Set 1
+Used/Unused SPDCCH resource indication,,,N/A
+PDSCH transmission mode,,,TM3
+DCI format,,,7-1B

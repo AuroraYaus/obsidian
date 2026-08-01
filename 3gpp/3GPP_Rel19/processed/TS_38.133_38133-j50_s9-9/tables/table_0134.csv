@@ -1,0 +1,4 @@
+"Condition NOTE1,2",T RSSI_measurement_period_intra_cca
+No DRX,"max(reportInterval, max(rmtc-Periodicity, MGRP) x CSSFintra)"
+DRX,"max(reportInterval, max(rmtc-Periodicity, MGRP,DRX cycle) x CSSFintra)"
+"NOTE 1:DRX or non DRX requirements apply according to the conditions described in clause 3.6.1NOTE 2:CSSFintra is a carrier specific scaling factor and is determined according to CSSFwithin_gap,i in clause 9.1.5.2 for measurement conducted within measurement gaps.",

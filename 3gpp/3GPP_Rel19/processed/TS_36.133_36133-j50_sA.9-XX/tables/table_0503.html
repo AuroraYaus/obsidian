@@ -1,0 +1,179 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td colspan="2">Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="2">NB-IoT operational mode</td>
+    <td></td>
+    <td colspan="2">Standalone</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Active cell</td>
+    <td></td>
+    <td colspan="2">nCell 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">CP length</td>
+    <td></td>
+    <td colspan="2">Normal</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Satellite informationS</td>
+    <td>Config 1</td>
+    <td></td>
+    <td colspan="2">SSC.1</td>
+    <td>GSO</td>
+  </tr>
+  <tr>
+    <td>Config 2</td>
+    <td></td>
+    <td colspan="2">SSC.2</td>
+    <td>NGSO HD-FDD</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Config 3</td>
+    <td></td>
+    <td colspan="2">SSC.2</td>
+    <td>NGSO TDD</td>
+  </tr>
+  <tr>
+    <td rowspan="7">In sync transmission parameters(Note 1)</td>
+    <td>DCI format</td>
+    <td></td>
+    <td colspan="2">Format N1</td>
+    <td>As defined in TS 36.212 [21]</td>
+  </tr>
+  <tr>
+    <td>Number of OFDM symbols for legacy control channels</td>
+    <td></td>
+    <td colspan="2">3</td>
+    <td rowspan="2">In sync threshold Qin_NB-IoT and the corresponding hypothetical NPDCCH transmission parameters are as specified in clause 7.23A.2 and Table 7.23A.2-1 respectively for HD-FDD and clause 7.23B.2 and Table 7.23B.2-1 respectively for TDD, where NPDCCH Repetition level = Rmax/4 for HD-FDD and Rmax/2 for TDD, and Rmax is a configurable parameter defined in TS 36.331.G=48 for config 3</td>
+  </tr>
+  <tr>
+    <td>NPDCCH aggregation level</td>
+    <td>eCCE</td>
+    <td colspan="2">2</td>
+  </tr>
+  <tr>
+    <td rowspan="2">NPDCCH repetition level</td>
+    <td rowspan="2"></td>
+    <td>Config 1 Config 2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Config 3</td>
+    <td rowspan="3">1</td>
+  </tr>
+  <tr>
+    <td>Ratio of NPDSCH to NRS EPRE</td>
+    <td></td>
+    <td colspan="2">0</td>
+  </tr>
+  <tr>
+    <td>Ratio of NPDCCH to NRS EPRE</td>
+    <td></td>
+    <td colspan="2">0</td>
+  </tr>
+  <tr>
+    <td rowspan="7">Out of sync transmission parameters(Note 1)</td>
+    <td>DCI format</td>
+    <td></td>
+    <td colspan="2">Format N1</td>
+    <td>As defined in TS 36.212[21]</td>
+  </tr>
+  <tr>
+    <td>Number of OFDM symbols for legacy control channels</td>
+    <td></td>
+    <td colspan="2">3</td>
+    <td rowspan="2">Out of sync threshold Qout_NB-IoT and the corresponding hypothetical NPDCCH transmission parameters are as specified in clause 7.23A.2/7.23B.2 and Table 7.23A.2-1/7.23B.2-1 respectively, where NPDCCH Repetition level = Rmax, and Rmax is a configurable parameter defined in TS 36.331.G=48 for config 3</td>
+  </tr>
+  <tr>
+    <td>NPDCCH aggregation level</td>
+    <td>eCCE</td>
+    <td colspan="2">2</td>
+  </tr>
+  <tr>
+    <td rowspan="2">NPDCCH repetition level</td>
+    <td rowspan="2"></td>
+    <td>Config 1 Config 2</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>Config 3</td>
+    <td rowspan="3">2</td>
+  </tr>
+  <tr>
+    <td>Ratio of NPDSCH to NRS EPRE</td>
+    <td></td>
+    <td colspan="2">0</td>
+  </tr>
+  <tr>
+    <td>Ratio of NPDCCH to RS EPRE</td>
+    <td>dB</td>
+    <td colspan="2">0</td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX cycle</td>
+    <td>ms</td>
+    <td colspan="2">256</td>
+    <td>See Table A.13.4.3.4.1-4</td>
+  </tr>
+  <tr>
+    <td colspan="2">Layer 3 filtering</td>
+    <td></td>
+    <td colspan="2">Enabled</td>
+    <td>Counters:N310 = 1; N311 = 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">T310 timer</td>
+    <td>ms</td>
+    <td colspan="2">4000</td>
+    <td>T310 is enabled</td>
+  </tr>
+  <tr>
+    <td colspan="2">T311 timer</td>
+    <td>ms</td>
+    <td colspan="2">1000</td>
+    <td>T311 is enabled</td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td colspan="2">4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">dT</td>
+    <td>s</td>
+    <td colspan="2">1.4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td colspan="2">2.12</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">dT</td>
+    <td>s</td>
+    <td colspan="2">1.4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">T3</td>
+    <td>s</td>
+    <td colspan="2">4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="6">Note 1: NPDCCH corresponding to the in-sync and out of sync transmission parameters need not be included in the Reference Measurement Channel.</td>
+  </tr>
+</table>

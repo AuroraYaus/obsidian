@@ -1,0 +1,24 @@
+BS channel bandwidth (MHz),Subcarrier spacing (kHz),Reference measurement channel,Wanted signal mean power (dBm),Interfering signal mean power (dBm) / BWConfig,Type of interfering signal
+20,15,G-FR1-A2-4,-63.5,-75.2,AWGN
+,30,G-FR1-A2-5,-63.5,,
+,60,G-FR1-A2-6,-63.8,,
+30,15,G-FR1-A2-4,-63.5,-73.4,AWGN
+,30,G-FR1-A2-5,-63.5,,
+,60,G-FR1-A2-6,-63.8,,
+40,15,G-FR1-A2-4,-63.5,-72.1,AWGN
+,30,G-FR1-A2-5,-63.5,,
+,60,G-FR1-A2-6,-63.8,,
+50,15,G-FR1-A2-4,-63.5,-71.1,AWGN
+,30,G-FR1-A2-5,-63.5,,
+,60,G-FR1-A2-6,-63.8,,
+60,30,G-FR1-A2-5,-63.5,-70.3,AWGN
+,60,G-FR1-A2-6,-63.8,,
+70,30,G-FR1-A2-5,-63.5,-69.7,AWGN
+,60,G-FR1-A2-6,-63.8,,
+80,30,G-FR1-A2-5,-63.5,-69.1,AWGN
+,60,G-FR1-A2-6,-63.8,,
+90,30,G-FR1-A2-5,-63.5,-68.5,AWGN
+,60,G-FR1-A2-6,-63.8,,
+100,30,G-FR1-A2-5,-63.5,-68.1,AWGN
+,60,G-FR1-A2-6,-63.8,,
+"NOTE 1:The wanted signal mean power is the power level of a single instance of the corresponding reference measurement channel. This requirement shall be met for each consecutive application of a single instance of the reference measurement channel mapped to disjoint frequency ranges with a width corresponding to the number of resource blocks of the reference measurement channel each, except for one instance that might overlap one other instance to cover the full BS channel bandwidth.",,,,,

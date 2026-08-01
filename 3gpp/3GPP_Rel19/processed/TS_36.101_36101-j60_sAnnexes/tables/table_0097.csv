@@ -1,0 +1,6 @@
+Duplex,Table,Name,PMCH BW,Mod,TCR,RB,RBOffset,UE Categ,Notes
+SDO,,,,,,,,,
+SDO,Table A.3.18.1-1,R.PMCH.1 – R.PMCH.6,"6. 7, 8","QPSK, 64QAM","1/3, 3/4","30, 35, 40",,,15 kHz SCS
+SDO,Table A.3.18.1-2,R.PMCH.7 – R.PMCH.12,"6. 7, 8","QPSK, 64QAM","1/3, 3/4","30, 35, 40",,,2.5 kHz SCS
+SDO,Table A.3.18.1-3,R.PMCH.13 – R.PMCH.18,"6. 7, 8","QPSK, 64QAM","1/3, 3/4","30, 35, 40",,,1.25 kHz SCS
+SDO,Table A.3.18.1-4,R.PMCH.19 – R.PMCH.24,"6. 7, 8","QPSK, 64QAM","1/3, 3/4","30, 35, 40",,,0.37 kHz SCS

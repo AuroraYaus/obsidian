@@ -1,0 +1,7 @@
+Parameter,Unit,Value
+Number of HARQ processes,Processes,None
+Subcarrier spacing,kHz,15 kHz
+Allocated subframes per Radio Frame (Note 1),,6 subframes
+Number of OFDM symbols for PDCCH,,2
+Cyclic Prefix,,Extended
+"Note1:For FDD mode, up to 6 subframes (#1/2/3/6/7/8) are available for MBMS, in line with TS 36.331.",,

@@ -1,0 +1,19 @@
+Parameter,Unit,Values
+Reference channel,,R.95 TDD
+Channel bandwidth,MHz,10
+Allocated resource blocks (Note 4),,3
+Allocated subframes per Radio Frame (D+S),,4+2
+Modulation,,16QAM
+Target Coding Rate,,1/2
+Information Bit Payload,,
+"For Sub-Frames 0,4,5,9",Bits,744
+"For Sub-Frames 1,6",Bits,440
+Number of Code Blocks,,
+"For Sub-Frames 0,4,5,9",Code blocks,1
+"For Sub-Frames 0,4,5,9",Code blocks,1
+Binary Channel Bits,,
+"For Sub-Frames 0,4,5,9",Bits,1536
+"For Sub-Frames 1,6",Bits,1248
+Max. Throughput averaged over 1 frames,Mbps,0.3856
+UE DL Category,,M2
+"Note 1:2 symbols allocated to PDCCH.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4].Note 3:As per Table 4.2-2 in TS 36.211 [4].Note 4:Allocated PRB positions for PDSCH are {3, 4, 5} within the assigned narrowband. Allocated PRB positions for MPDCCH are {0, 1} within the assigned narrowband.",,

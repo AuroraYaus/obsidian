@@ -1,0 +1,17 @@
+Parameter,,Unit,Value,Comment
+Initial condition,Active cell,,Cell 1,E-UTRAN cell
+T1 end condition,Active cell,,Cell1,UE shall perform reselection to cell 1 during T1 for subsequent iterations of the test
+,Neighbour cell,,Cell2,1.28 Mcps TDD OPTION cell
+T2 end condition,Active cell,,Cell2,UE shall perform reselection to cell 2 during T2
+,Neighbour cell,,Cell1,E-UTRA TDD cell
+Uplink-downlink configuration of cell 1,,,1,As specified in table 4.2.2 in TS 36.211
+Special subframe configuration of cell 1,,,6,As specified in table 4.2.1 in TS 36.211
+PRACH configuration of cell 1,,,53,As specified in table 4.7.1-3 in TS 36.211
+CP length of cell 1,,,Normal,
+Time offset between cells,,,3 ms,Asynchronous cells
+Access Barring Information,,-,Not sent,No additional delays in random access procedure.
+Treselection,,s,0,
+DRX cycle length,,s,"1,28",
+HCS,,,Not used,
+T1,,s,85,
+T2,,s,25,

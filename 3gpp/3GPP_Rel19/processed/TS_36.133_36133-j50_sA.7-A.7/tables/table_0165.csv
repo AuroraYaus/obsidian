@@ -1,0 +1,43 @@
+Parameter,,,Unit,Value,,,Comment
+,,,,Test 1,,,
+,,,,Cell 1,Cell 2,Cell 3,
+PCFICH/PDCCH/PHICH parameters,,,,R.9 TDD,R.9 TDD,R.9 TDD,As specified in section A.3.1.2.2. None of the PDCCH are intended for the UE under test
+OCNG parameters,,,,OP.2 TDD,OP.2 TDD,OP.2 TDD,As specified in section A.3.2.2.2.
+Active cell,,,,PCell,Neighbor Cell,Neighbor Cell,"Cell 1, Cell 2 and Cell 3 are on E-UTRA RF channel number 1"
+CP length,,,,Normal,Normal,Normal,
+E-UTRA RF Channel Number,,,,1,1,1,One E-UTRA TDD carrier frequency is used.
+E-UTRA Channel Bandwidth (BWchannel),,,MHz,10,10,10,
+Correlation Matrix and Antenna Configuration,,,,2x2 Low,2x2 Low,2x2 Low,Correlation Matrix and Antenna Configuration are defined in TS 36.101 [5] Annex B.2.3.2
+Neighbor Cell ABS configuration,,,,N/A,Non-MBSFN ABS,,As defined in Table A.3.4.1.2-1
+ABS Pattern,,,,N/A,‘00001000000000100000’,‘00001000000000100000’,"TDD ABS Pattern Info IE, as defined in TS 36.423 [28], clause 9.2.54. Configured in Cell 2 and Cell 3.The first/leftmost bit corresponds to the Pcell subframe #0 of the radio frame satisfying SFN mod x = 0, where x is the size of the bit string (20) divided by 10. No MBSFN subframes are configured in the ABS subframes."
+Time domain measurement resource restriction pattern,,,,‘00001000000000100000’,N/A,N/A,"Time domain measurement resource restriction pattern for serving cell measurement signalled to the UE in message measSubframePatternPCell-r10 as defined in TS 36.331, clause 6.3.2."
+CRS assistant information,physCellld,,,N/A,see PCI conditions below,see PCI conditions below,The CRS assistance information is provided for Cell 2 and Cell 3 in CRS-AssistanceInfo. It includes a single MBSFN-SubframeConfig element with subframe allocation oneFrame=’000000’
+,antennaPortsCount,,,,an2,an2,
+,mbsfn-SubframeConfigList,,,,oneFrame = ‘000000’,oneFrame = ‘000000’,
+Time offset from Cell 1,,,us,0,3,2,
+Frequency offset,,,Hz,0,300,-100,
+Physical Cell ID,,,,PCIcell1,"(PCIcell1-PCIcell2 ) mod3 = 0,PCIcell1 not equal to PCIcell2",(PCIcell1-PCIcell3 ) mod3! = 0,Cell PCIs are selected so that all conditions are met
+In sync transmission parameters (Note 1),,DCI format,,1C,1C,1C,As defined in section 5.3.3.1.4 in TS 36.212
+,,Number of Control OFDM symbols,,3,3,3,In sync threshold Qin and the corresponding hypothetical PDCCH/PCFICH transmission parameters are as specified in section and Table 7.6.1-2 respectively.
+,,Aggregation level,CCE,4,4,4,
+,,"A, B",,-3,-3,-3,
+,,Ratio of PDCCH to RS EPRE,,-3,Non-ABS and ABS subframe channel powers defined in Table A.3.4.1.2-2.,,
+,,Ratio of PCFICH to RS EPRE,,1,,,
+Out of sync transmission parameters (Note 1),,DCI format,,1A,1A,1A,As defined in section 5.3.3.1.3 in TS 36.212
+,,Number of Control OFDM symbols,,3,3,3,Out of sync threshold Qout and the corresponding hypothetical PDCCH/PCFICH transmission parameters are as specified in section 7.6.1 and Table 7.6.1-1 respectively.
+,,Aggregation level,CCE,8,8,8,
+,,"A, B",,-3,-3,-3,
+,,Ratio of PDCCH to RS EPRE,dB,1,Non-ABS and ABS subframe channel powers defined in Table A.3.4.1.2-2.,,
+,,Ratio of PCFICH to RS EPRE,dB,1,,,
+DRX,,,,OFF,OFF,OFF,
+Layer 3 filtering,,,,Enabled,Disable,Disable,Counters:N310 = 1; N311 = 1
+T310 timer,,,ms,2000,N/A,,T310 is enabled
+T311 timer,,,ms,1000,,,T311 is enabled
+Periodic CQI reporting mode,,,,PUCCH 1-0,,,As defined in table 7.2.2-1 in TS 36.213.
+CQI reporting periodicity,,,ms,1,,,Minimum CQI reporting periodicity
+T1,,,s,0.5,N/A,,
+T2,,,s,0.4,,,
+T3,,,s,1.46,,,
+T4,,,s,0.4,,,
+T5,,,s,1,,,
+Note 1: PDCCH/PCFICH corresponding to the in-sync and out of sync transmission parameters need not be included in the Reference Measurement Channel.,,,,,,,

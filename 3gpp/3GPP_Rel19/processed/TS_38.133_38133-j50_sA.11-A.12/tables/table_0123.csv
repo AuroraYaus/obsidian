@@ -1,0 +1,28 @@
+Parameter,Unit,Test configuration,Cell 1,,Cell 2,
+,,,T1,T2,T1,T2
+TDD configuration,,1,TDDConf.1.1 CCA,,TDDConf.1.1 CCA,
+DL CCA probability for semi-static channel access (PCCA_DL),,1,PCCA_DL=0.9375,,PCCA_DL=0.9375,
+DL CCA probability for for dynamic static channel access (PCCA_DL_1),,1,PCCA_DL_1=0.75,,PCCA_DL_1=0.75,
+DL CCA probability for for dynamic static channel access (PCCA_DL_2),,1,PCCA_DL_2=0.75,,PCCA_DL_2=0.75,
+UL CCA probability PCCA_UL,,1,PCCA_UL=1,,PCCA_UL=1,
+LCCA_DL,,1,Test 1: LCCA_DL = 5Test 2: LCCA_DL = 3,,Test 1: LCCA_DL = 5Test 2: LCCA_DL = 3,
+WCCA_DL,ms,1,Test 1: WCCA_DL = 600Test 2: WCCA_DL = 5120,,Test 1: WCCA_DL = 600Test 2: WCCA_DL = 5120,
+PDSCH RMC configuration,,1,SR.1.1 CCA,,N/A,
+RMSI CORESET RMC configuration,,1,CR.1.1 CCA,,N/A,
+Dedicated CORESET RMC configuration,,1,CCR.1.1 CCA,,N/A,
+OCNG Patterns,,"1, 2, 3",OP.1,,OP.1,
+TRS Configuration,,1,TRS.1.2 TDD,,N/A,
+IInitial BWP configuration,,1,DLBWP.0.1 ULBWP.0.1,,DLBWP.0.1 ULBWP.0.1,
+Active DL BWP configuration,,1,DLBWP.1.1,,DLBWP.1.1,
+Active UL BWP configuration,,1,ULBWP.1.1,,ULBWP.1.1,
+RLM-RS,,1,SSB,,SSB,
+Note 2,dBm/SCS,1,-95,,,
+Note 2,dBm/15 kHz,1,-98,,,
+,dB,1,4,-1.46,-Infinity,-1.46
+,,2,,,,
+,,3,,,,
+,dB,1,4,4,-Infinity,4
+SS-RSRP Note 3,dBm/SCS kHz,1,-91,[-91],-Infinity,-91
+Io,dBm/38.16 MHz,1,-58.50,-56.16,[-58.50,-56.16
+Propagation Condition,,1,AWGN,,,
+"NOTE 1:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols. For cells with CCA model, OCNG is transmitted only in the slots with downlink transmission burst and is not transmitted during the muted slots or during DBT window.",,,,,,

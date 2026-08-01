@@ -1,0 +1,7 @@
+Band-width,Sub-test (Note 2),Reference channel,OCNG pattern,Propa-gation condition,Correlation matrix and antenna config.,Reference value,
+,,,,,,Fraction of norminal maximum throughput (%) (Note 1),SNR (dB)
+20MHz,1,R.1 FS3,OP.1 FS3,EVA5,4x2 Low,70,18.7
+,2,R.1 FS3,OP.1  FS3,EVA5,4x2 Low,70,18.6
+,3,R.1 FS3,OP.1 FS3,EVA5,4x2 Low,70,18.9
+,4,R.1 FS3,OP.1 FS3,EVA5,4x2 Low,70,19
+"Note 1: Fraction of nominal maximum throughput is calculated based on random transmission occasions of PDSCH.Note 2: An UE is required to fulfill only one test of Sub-test 1-4 depending on UE capabilities of endingDwPTS and secondSlotStartingPosition. For an UE not supporting both endingDwPTS and secondSlotStartingPosition, it is required to fulfill Sub-test 1; For an UE not supporting endingDwPTS but supporting secondSlotStartingPosition, it is required to fulfill Sub-test 2; For an UE supporting endingDwPTS but  not supporting secondSlotStartingPosition, it is  required to fulfil Sub-test 3; and For an UE supporting both endingDwPTS and secondSlotStartingPosition, it is required to fulfill Sub-test 4.",,,,,,,

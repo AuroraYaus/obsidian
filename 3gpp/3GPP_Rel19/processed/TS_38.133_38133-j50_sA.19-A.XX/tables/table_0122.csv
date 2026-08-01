@@ -1,0 +1,43 @@
+Parameter,Unit,Test configuration,Cell 1,,Cell 2,,Cell 3,
+,,,,,,,,
+TDD configuration,,"1,1A",N/A,,N/A,,N/A,
+,,"2,2A",TDDConf.1.1,,TDDConf.1.1,,TDDConf.1.1,
+,,"3,3A",TDDConf.2.1,,TDDConf.2.1,,TDDConf.2.1,
+PDSCH RMC configuration,,"1,1A",SR.1.1 FDD,,N/A,,N/A,
+,,"2,2A",SR.1.1 TDD,,,,,
+,,"3,3A",SR.2.1 TDD,,,,,
+RMSI CORESET RMC configuration,,"1,1A",CR.1.1 FDD,,N/A,,N/A,
+,,"2,2A",CR.1.1 TDD,,N/A,,N/A,
+,,"3,3A",CR.2.1 TDD,,N/A,,N/A,
+Dedicated CORESET RMC configuration,,"1,1A",CCR.1.1 FDD,,N/A,,N/A,
+,,"2,2A",CCR.1.1 TDD,,N/A,,N/A,
+,,"3,3A",CCR.2.1 TDD,,N/A,,N/A,
+OCNG Patterns,,"1, 2, 3,1A,2A,3A",OP.1,,OP.1,,OP.1,
+TRS configuration,,"1,1A",TRS.1.1 FDD,,N/A,,N/A,
+,,"2,2A",TRS.1.1 TDD,,N/A,,N/A,
+,,"3,3A",TRS.1.2 TDD,,N/A,,N/A,
+Initial BWP configuration,,"1, 2, 3,1A,2A,3A",DLBWP.0.1 ULBWP.0.1,,DLBWP.0.1 ULN/A,,DLBWP.0.1 ULN/A,
+Active DL BWP configuration,,"1, 2, 3,1A,2A,3A",DLBWP.1.1,,DLBWP.1.1,,DLBWP.1.1,
+Active UL BWP configuration,,"1, 2, 3,1A,2A,3A",ULBWP.1.1,,N/A,,N/A,
+RLM-RS,,"1, 2, 3,1A,2A,3A",SSB,,SSB,,SSB,
+Note 2,dBm/SCS,"1,1A",-98,,,,,
+,,"2,2A",-98,,,,,
+,,"3,3A",-95,,,,,
+Note 2,dBm/15 kHz,"1,1A",-98,,,,,
+,,"2,2A",,,,,,
+,,"3,3A",,,,,,
+,dB,"1,1A",4,4,4,-1.46,-Infinity,-1.46
+,,"2,2A",,,,,,
+,,"3,3A",,,,,,
+,dB,"1,1A",4,4,4,4,-Infinity,4
+,,"2,2A",,,,,,
+,,"3,3A",,,,,,
+SSB_RP Note 3,dBm/SCS kHz,"1,1A",-94,-94,-94,-94,-Infinity,-94
+,,"2,2A",-94,-94,-94,-94,-Infinity,-94
+,,"3,3A",-91,-91,-91,-91,-Infinity,-91
+Io,dBm/9.36 MHz,"1,1A",-64.60,-64.60,-64.60,-62.25,-64.60,-62.25
+,dBm/9.36 MHz,"2,2A",-64.60,-64.60,-64.60,-62.25,-64.60,-62.25
+,dBm/38.16 MHz,"3,3A",-58.50,-58.50,-58.50,-56.16,-58.50,-56.16
+Propagation Condition,,"1,2,1A,2A",AWGN + 220Hz,,,,,
+,,"3,3A",AWGN +500Hz,,,,,
+NOTE 1:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,,,

@@ -1,0 +1,61 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Cell Status</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="3">Test Preparation</td>
+  </tr>
+  <tr>
+    <td>Initial Condition</td>
+    <td>Cell 1 is active</td>
+    <td>Clean up the UE memory to be free from previously stored cell information for proximity detection.Turn on the UE and allow sufficient time for the UE to select to Cell 1.</td>
+  </tr>
+  <tr>
+    <td>Time duration T1</td>
+    <td>Cell 1 and Cell 2 are active</td>
+    <td>Turn on Cell 2 at the start of T1. Perform manual CSG selection towards Cell 2. The UE is expected to store necessary information for later  proximity detection.</td>
+  </tr>
+  <tr>
+    <td>End condition</td>
+    <td></td>
+    <td>Turn off the UE. Turn off Cell 1 and Cell 2.</td>
+  </tr>
+  <tr>
+    <td colspan="3">Negative Test</td>
+  </tr>
+  <tr>
+    <td>Initial Condition</td>
+    <td>Cell 3 is active</td>
+    <td>Turn on Cell 3.Turn on the UE and set up the UE in connected mode with Cell 3..</td>
+  </tr>
+  <tr>
+    <td>Time duration T2</td>
+    <td>Cell 3 is active</td>
+    <td>Configure the UE with proximity indication control by sending the Reconfiguration message with ReportProximityConfig at the start of T2. The UE is not expected to report “entering” proximity in the negative test.</td>
+  </tr>
+  <tr>
+    <td>End condition</td>
+    <td></td>
+    <td>Turn off the UE. Turn off Cell 3.</td>
+  </tr>
+  <tr>
+    <td colspan="3">Positive Test</td>
+  </tr>
+  <tr>
+    <td>Initial Condition</td>
+    <td>Cell 1 is active</td>
+    <td>Turn on Cell 1.Turn on the UE and set up the UE in connected mode with Cell 1.</td>
+  </tr>
+  <tr>
+    <td>Time duration T3</td>
+    <td>Cell 1 and Cell 2 are active</td>
+    <td>Turn on Cell 2 at the start of T3.Configure the UE with proximity indication control by sending the Reconfiguration message with reportProximityConfig at the start of T3. The UE is expected to report “entering” proximity before end of T3.</td>
+  </tr>
+  <tr>
+    <td>End condition</td>
+    <td></td>
+    <td>Turn off the UE. Turn off Cell 1 and Cell 2.</td>
+  </tr>
+</table>

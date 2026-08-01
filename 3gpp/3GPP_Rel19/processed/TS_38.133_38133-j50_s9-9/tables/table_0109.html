@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TSSB_measurement_period_intra</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>5 x KNCSG x measCycleSCellx CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320 ms</td>
+    <td>5 x KNCSG x max(measCycleSCell, 1.5xDRX cycle) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt; 320 ms</td>
+    <td>5 x KNCSG x max(measCycleSCell, DRX cycle) x CSSFintra</td>
+  </tr>
+</table>

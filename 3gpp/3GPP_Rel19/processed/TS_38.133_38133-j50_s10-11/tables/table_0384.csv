@@ -1,0 +1,5 @@
+"Min(PRS BW, SRS BW) (PRB)",,,Margin (Tc Note 1)
+SCS = 15 kHz,SCS = 30 kHz,SCS = 60 kHz,
+≥ 52,N/A,N/A,80
+N/A,48,24,56
+"NOTE 1:Tc is the basic timing unit defined in TS 38.211 [6].NOTE 2:If SRS and PRS have different SCS, the margin corresponding to the smallest RS BW in MHz applies.NOTE 3:PRS BW and SRS BW refer to BW per hop.",,,

@@ -1,0 +1,9 @@
+eDRX_IDLE cycle length [s],DRX cycle length [s],PTW length [s] (number of 1.28 s periods),Scaling Factor (N1) Note1,"Tdetect,NR_Inter_RedCap [s] (number of DRX cycles or eDRX cycles Note 3)","Tmeasure,NR_Inter_RedCap [s] (number of DRX cycles or eDRX cycles Note 3)","Tevaluate,NR_Inter_RedCap [s] (number of DRX cycles or eDRX cycles Note 3)"
+2.56,-,-,3,58.88 x N1 (23 x N1),2.56 x N1 (1 x N1),7.68 x N1 (3 x N1)
+5.12,-,-,3,117.76 x N1 (23 x N1),5.12 x N1 (1 x N1),10.24 x N1 (2 x N1)
+10.24,-,-,3,235.52 x N1 (23 x N1),10.24 x N1 (1 x N1),20.48 x N1 (2 x N1)
+20.48 ≤  eDRX_IDLE cycle length ≤10485.76,0.32,≥5.12 (4),8,(23 x N1)eDRX_cycle_length×23×N1PTW/DRX_cycle_length,0.32 x N1 (1 x N1),0.64 x N1 (2 x N1)
+,0.64,≥6.4 (5),5,,0.64 x N1 (1 x N1),1.28 x N1 (2 x N1)
+,1.28,≥10.24 (8),4,,1.28 x N1 (1 x N1),2.56 x N1 (2 x N1)
+,2.56,≥15.36 (12),3,,2.56 x N1 (1 x N1),5.12 x N1 (2 x N1)
+"NOTE 1: Applies for RedCap UE of all power class.NOTE 2: The number of DRX cycles in this table corresponds to the DRX cycles within PTWs, when PTW is configured.NOTE 3: The eDRX_IDLE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 4: Number of eDRX cycles when eDRX_IDLE cycle length equals 2.56 s, 5.12 s and 10.24 s. Otherwise, number of DRX cycles.NOTE 5: The lower bound of PTW length is derived based on .NOTE 6: When eDRX=20.48 s and DRX=0.32 s, UE is allowed to perform cell evaluation within PTW in every 2 eDRX cycles.Tevaluate,NR_Inter_RedCap*DRX_cycle1.28*1.28",,,,,,

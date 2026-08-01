@@ -1,0 +1,41 @@
+Parameter,Unit,Cell 1
+Frequency Range,,FR2
+Duplex mode,,TDD
+TDD configuration,,TDDConf.3.1
+BWchannel,,"100 MHz: NPRB,c = 66"
+Data PRBs allocated,,24
+Initial DL BWP Configuration,,DLBWP.0.2
+Dedicated DL BWP Configuration,,DLBWP.1.1
+Initial UL BWP Configuration,,ULBWP.0.2
+Dedicated UL BWP Configuration,,ULBWP.1.1
+PDSCH Reference measurement channel,,SR.3.1 TDD
+RMSI CORESET parameters,,CR.3.1 TDD
+Dedicated CORESET parameters,,CCR.3.1 TDD
+OCNG Patterns,,OP.5
+SSB Configuration,,SSB.1 FR2
+SMTC Configuration,,SMTC.1
+DL TCI State,,DLorJoint TCI.State.0
+PL-RS Configuration for CSI-RS#0,,Resource #4 in TRS.2.1 TDD for UL TCI.State.2
+PL-RS Configuration for CSI-RS#1,,Resource #4 in TRS.2.2 TDD for UL TCI.State.3
+PL-RS Configuration for CSI-RS#2,,Resource #4 in TRS.2.4 TDD for UL TCI.State.4
+PL-RS Configuration for CSI-RS#3,,Resource #4 in TRS.2.5 TDD for UL TCI.State.5
+UL TCI State-0 Configuration,,UL TCI.State.2
+UL TCI State-1 Configuration,,UL TCI.State.3
+UL TCI State-2 Configuration,,UL TCI.State.4
+UL TCI State-3 Configuration,,UL TCI.State.5
+reportConfigType,,ssb-Index-RSRP
+reportConfigType,,periodic
+timeRestrictionForChannelMeasurements,,configured
+TRS Configuration,,TRS.2.1 TDD
+Correlation Matrix and Antenna Configuration,,1x2 Low
+EPRE ratio of PSS to SSS,dB,0
+EPRE ratio of PBCH DMRS to SSS,,
+EPRE ratio of PBCH to PBCH DMRS,,
+EPRE ratio of PDCCH DMRS to SSS,,
+EPRE ratio of PDCCH to PDCCH DMRS,,
+EPRE ratio of PDSCH DMRS to SSS,,
+EPRE ratio of PDSCH to PDSCH,,
+EPRE ratio of OCNG DMRS to SSSNote 1,,
+EPRE ratio of OCNG to OCNG DMRSNote 1,,
+Propagation Condition,,AWGN
+NOTE 1:OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.,,

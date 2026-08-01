@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TSSB_time_index_intra_less_than_5Mhz</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>max(120ms, ceil(7 x Kp) x SMTC period) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320 ms</td>
+    <td>max(120ms, ceil(M2 x 7 x Kp) x max(SMTC period, DRX cycle)) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320 ms</td>
+    <td>ceil(7 x Kp) x DRX cycle x CSSFintra</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:When highSpeedMeasFlag-r16 is not configured, M2 = 1.5; When highSpeedMeasFlag-r16 is configured, M2 = 1.5 if SMTC periodicity &gt; 40 ms; otherwise M2=1.NOTE 2:When highSpeedMeasFlag-r16 is configured, the requirements apply only to UE supporting either measurementEnhancement-r16 or intraNR-MeasurementEnhancement-r16.</td>
+  </tr>
+</table>

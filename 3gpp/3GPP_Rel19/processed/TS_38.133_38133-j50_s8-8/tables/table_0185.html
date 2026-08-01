@@ -1,0 +1,24 @@
+<table>
+  <tr>
+    <td>Configuration</td>
+    <td rowspan="2">TEvaluate_BFD_SSB_CCA (ms)</td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td>no DRX</td>
+    <td>Max(200, Ceil(12*P* N)*TSSB)</td>
+  </tr>
+  <tr>
+    <td>DRX cycle ≤ 320 ms</td>
+    <td>Max(200, Ceil(1.5*10*P* N)*Max(TDRX,TSSB))</td>
+  </tr>
+  <tr>
+    <td>DRX cycle &gt; 320 ms</td>
+    <td>Ceil(10*P* N)*TDRX</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:TSSB is the periodicity of SSB in the set . TDRX is the DRX cycle length.q0</td>
+  </tr>
+</table>

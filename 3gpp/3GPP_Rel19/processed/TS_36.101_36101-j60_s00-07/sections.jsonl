@@ -1,0 +1,481 @@
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "Foreword", "paragraph_index": 1, "style": "Heading1"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "1Scope", "paragraph_index": 33, "style": "Heading1"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "2References", "paragraph_index": 35, "style": "Heading1"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "3Definitions, symbols and abbreviations", "paragraph_index": 57, "style": "Heading1"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "3.1Definitions", "paragraph_index": 58, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "3.2Symbols", "paragraph_index": 102, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "3.3Abbreviations", "paragraph_index": 192, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "4General", "paragraph_index": 271, "style": "Heading1"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "4.1Relationship between minimum requirements and test requirements", "paragraph_index": 272, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "4.2Applicability of minimum requirements", "paragraph_index": 276, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "4.3Void", "paragraph_index": 286, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "4.3AApplicability of feature-specific minimum requirements", "paragraph_index": 287, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "4.4RF requirements in later releases", "paragraph_index": 315, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5Operating bands and channel arrangement", "paragraph_index": 319, "style": "Heading1"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.1General", "paragraph_index": 320, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.2Void", "paragraph_index": 323, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.3Void", "paragraph_index": 324, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.4Void", "paragraph_index": 325, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.5Operating bands", "paragraph_index": 326, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.5AOperating bands for CA", "paragraph_index": 330, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.5BOperating bands for UL-MIMO", "paragraph_index": 350, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.5COperating bands for Dual Connectivity", "paragraph_index": 353, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.5DOperating bands for ProSe", "paragraph_index": 359, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.5EOperating bands for UE category 0, UE category M1 and M2 and UE category 1bis", "paragraph_index": 366, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.5FOperating bands for category NB1 and NB2", "paragraph_index": 370, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.5GOperating bands for V2X Communication", "paragraph_index": 376, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.5HOperating bands for LTE based 5G terrestrial broadcast", "paragraph_index": 386, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.5KOperating bands for Aerial UE", "paragraph_index": 390, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6Channel bandwidth", "paragraph_index": 393, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6.1Channel bandwidths per operating band", "paragraph_index": 400, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6AChannel bandwidth for CA", "paragraph_index": 406, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6A.1Channel bandwidths per operating band for CA", "paragraph_index": 440, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6BChannel bandwidth for UL-MIMO", "paragraph_index": 463, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6B.1Void", "paragraph_index": 465, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6CChannel bandwidth for Dual Connectivity", "paragraph_index": 466, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6C.1Void", "paragraph_index": 470, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6DChannel bandwidth for ProSe", "paragraph_index": 476, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6D.1Channel bandwidths per operating band for ProSe", "paragraph_index": 477, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6FChannel bandwidth for category NB1 and NB2", "paragraph_index": 483, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6GChannel bandwidth for V2X Communication", "paragraph_index": 491, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6G.1Channel bandwidths per operating band for V2X Communication", "paragraph_index": 492, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6HPMCH bandwidth for LTE based 5G terrestrial broadcast", "paragraph_index": 505, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.6H.1PMCH bandwidths per operating band for LTE based 5G terrestrial broadcast", "paragraph_index": 511, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7Channel arrangement", "paragraph_index": 515, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.1Channel spacing", "paragraph_index": 516, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.1AChannel spacing for CA", "paragraph_index": 520, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.1FChannel spacing for category NB1 and NB2", "paragraph_index": 526, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.1HChannel spacing for LTE based 5G terrestrial broadcast", "paragraph_index": 528, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.2Channel raster", "paragraph_index": 532, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.2AChannel raster for CA", "paragraph_index": 534, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.2FChannel raster for category NB1 and NB2", "paragraph_index": 536, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.3Carrier frequency and EARFCN", "paragraph_index": 538, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.3FCarrier frequency and EARFCN for category NB1 and NB2", "paragraph_index": 545, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.3HCarrier frequency and EARFCN for LTE based 5G terrestrial broadcast", "paragraph_index": 554, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.4TX–RX frequency separation", "paragraph_index": 558, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.4ATX–RX frequency separation for CA", "paragraph_index": 563, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.4ETX–RX frequency separation for category M1 and M2", "paragraph_index": 565, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "5.7.4FTX–RX frequency separation for category NB1 and NB2", "paragraph_index": 567, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6Transmitter characteristics", "paragraph_index": 569, "style": "Heading1"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.1General", "paragraph_index": 570, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2Transmit power", "paragraph_index": 574, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.1Void", "paragraph_index": 575, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.2UE maximum output power", "paragraph_index": 576, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.2AUE maximum output power for CA", "paragraph_index": 592, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.2BUE maximum output power for UL-MIMO", "paragraph_index": 616, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.2CVoid", "paragraph_index": 635, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.2DUE maximum output power for ProSe", "paragraph_index": 637, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.2EUE maximum output power for Category M1 and M2 UE", "paragraph_index": 640, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.2FUE maximum output power for category NB1 and NB2", "paragraph_index": 644, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.2GUE maximum output power for V2X Communication", "paragraph_index": 648, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.2KUE maximum output power for Aerial UE", "paragraph_index": 664, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.3UE maximum output power for modulation / channel bandwidth", "paragraph_index": 667, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "5.67", "title": "- 3.07A; 0.33< A ≤0.77", "paragraph_index": 679, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.3AUE Maximum Output power for modulation / channel bandwidth for CA", "paragraph_index": 699, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "9.2", "title": "- 40A ; 0.025≤ A < 0.05", "paragraph_index": 714, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "8", "title": "– 16A; 0.05≤ A < 0.25", "paragraph_index": 715, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "4.83", "title": "– 3.33A; 0.25 ≤ A ≤ 0.4,", "paragraph_index": 716, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "3.83", "title": "– 0.83A; 0.4 ≤ A ≤ 1,", "paragraph_index": 717, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "9.2", "title": "- 40A; 0.025 ≤ A < 0.05", "paragraph_index": 720, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "8", "title": "– 16A; 0.05 ≤ A < 0.16", "paragraph_index": 721, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "9.2", "title": "- 40A ; 0.04 ≤ A < 0.075", "paragraph_index": 731, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "8", "title": "– 16A; 0.075 ≤ A < 0.25", "paragraph_index": 732, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "4.83", "title": "– 3.33A; 0.25 ≤ A ≤ 0.4,", "paragraph_index": 733, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "3.83", "title": "– 0.83A; 0.4 ≤ A ≤ 1,", "paragraph_index": 734, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "8.5", "title": "– 7.5A ; 0.2 ≤ A < 0.6", "paragraph_index": 744, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "5.5", "title": "– 2.5A ; 0.6 ≤ A ≤ 1", "paragraph_index": 745, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "8.5", "title": "– 7.5A ; 0.2 ≤ A < 0.4", "paragraph_index": 748, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "5.5", "title": "; 0.4 ≤ A ≤ 1", "paragraph_index": 749, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "9.2", "title": "- 40A ; 0.025 ≤ A < 0.05", "paragraph_index": 758, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "8", "title": "– 16A; 0.05≤ A < 0.25", "paragraph_index": 759, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "9.2", "title": "- 40A; 0.025 ≤ A < 0.05", "paragraph_index": 763, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "8", "title": "– 16A; 0.05 ≤ A < 0.16", "paragraph_index": 764, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.3BUE maximum output power for modulation / channel bandwidth for UL-MIMO", "paragraph_index": 786, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.3DUE maximum output power for modulation / channel bandwidth for ProSe", "paragraph_index": 791, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.3EUE maximum output power for modulation / channel bandwidth for category M1 and M2", "paragraph_index": 808, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.3FUE maximum output power for modulation / channel bandwidth for category NB1 and NB2", "paragraph_index": 830, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.3GUE maximum output power for modulation / channel bandwidth for V2X Communication", "paragraph_index": 838, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.3G.1MPR for Power class 3 V2X UE", "paragraph_index": 840, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "5.5", "title": "–5.833A; 0.2< A ≤0.6", "paragraph_index": 848, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "8", "title": "- 15A ; 0.1 ≤ A < 0.2", "paragraph_index": 862, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "5.75", "title": "– 3.75A; 0.2 ≤ A < 0.6", "paragraph_index": 863, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "3.5", "title": "; 0.6≤ A ≤ 1For intra-band contiguous multi-carrier operation bandwidth class C the allowed Maximum Power Reduction (MPR) for the maximum output power can be specified as follows. In case the modulation format is different on different component carriers then the MPR is determined by the rules applied to higher order of those modulations.", "paragraph_index": 864, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "8.5", "title": "- 20A ; 0.1 ≤ A < 0.2", "paragraph_index": 868, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "5.25", "title": "– 2.5A; 0.2 ≤ A < 0.6", "paragraph_index": 869, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "3.5", "title": "; 0.6≤ A ≤ 1", "paragraph_index": 870, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.3G.2MPR for Power class 2 V2X UE", "paragraph_index": 871, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "8.5", "title": "– 20.0A; 0.2< A ≤0.3", "paragraph_index": 879, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "2.5", "title": "; 0.3< A ≤1.00", "paragraph_index": 880, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "12.0", "title": "– 30.0A; 0.1< A ≤0.3", "paragraph_index": 882, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "3.0", "title": "; 0.3< A ≤1.00", "paragraph_index": 883, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.3KUE maximum output power for modulation / channel bandwidth for Aerial UE", "paragraph_index": 887, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4UE maximum output power with additional requirements", "paragraph_index": 890, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4AUE maximum output power with additional requirements for CA", "paragraph_index": 985, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.1A-MPR for CA_NS_01 for CA_1C", "paragraph_index": 1003, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.2A-MPR for CA_NS_02 for CA_1C", "paragraph_index": 1014, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.3A-MPR for CA_NS_03 for CA_1C", "paragraph_index": 1025, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.4A-MPR for CA_NS_04", "paragraph_index": 1035, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.5A-MPR for CA_NS_05 for CA_38C", "paragraph_index": 1072, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.6A-MPR for CA_NS_06", "paragraph_index": 1082, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.7A-MPR for CA_NS_07", "paragraph_index": 1092, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.8A-MPR for CA_NS_08", "paragraph_index": 1102, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "23", "title": "– 120A; 0.025 ≤ A < 0.05", "paragraph_index": 1110, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "17.53", "title": "– 10.59A; 0.05 ≤ A ≤ 0.9", "paragraph_index": 1111, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.9Void", "paragraph_index": 1114, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.10A-MPR for CA_NS_10", "paragraph_index": 1115, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "18.50", "title": "- 20.00 A;0.05 ≤ A < 0.2", "paragraph_index": 1130, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "15.50", "title": "- 5.00 A;0.2 ≤ A < 1", "paragraph_index": 1131, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "10.88", "title": "- 5.88 A;0.15 ≤ A < 1", "paragraph_index": 1137, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "13.78", "title": "- 9.78 A; 0.08 < A <= 1.00", "paragraph_index": 1176, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "14.13", "title": "-14.06 A; 0.08 < A <= 0.40", "paragraph_index": 1179, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "9.17", "title": "– 1.67 A;0.40 < A <= 1.00", "paragraph_index": 1180, "style": null}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.11A-MPR for CA_NS_11", "paragraph_index": 1181, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.12A-MPR for CA_NS_12", "paragraph_index": 1185, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.13A-MPR for CA_NS_13", "paragraph_index": 1189, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.14A-MPR for CA_NS_17", "paragraph_index": 1193, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4A.15A-MPR for CA_NS_18", "paragraph_index": 1197, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4BUE maximum output power with additional requirements for UL-MIMO", "paragraph_index": 1201, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4DUE maximum output power with additional requirements for ProSe", "paragraph_index": 1205, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4EUE maximum output power with additional requirements for category M1 and M2 UE", "paragraph_index": 1209, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4FUE maximum output power with additional requirements for category NB1 and NB2 UE", "paragraph_index": 1271, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.4GUE maximum output power with additional requirements for V2X Communication", "paragraph_index": 1276, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.5Configured transmitted power", "paragraph_index": 1295, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.5AConfigured transmitted power for CA", "paragraph_index": 1344, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.5BConfigured transmitted power for UL-MIMO", "paragraph_index": 1416, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.5CConfigured transmitted power for Dual Connectivity", "paragraph_index": 1429, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.5DConfigured transmitted power for ProSe", "paragraph_index": 1462, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.5FConfigured transmitted Power for category NB1 and NB2", "paragraph_index": 1502, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.5GConfigured transmitted power for V2X Communication", "paragraph_index": 1521, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.2.5KConfigured transmitted power for Aerial UE", "paragraph_index": 1598, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3Output power dynamics", "paragraph_index": 1604, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.1(Void)", "paragraph_index": 1605, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.2Minimum output power", "paragraph_index": 1606, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.2.1Minimum requirement", "paragraph_index": 1608, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.2AUE Minimum output power for CA", "paragraph_index": 1612, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.2A.1Minimum requirement for CA", "paragraph_index": 1614, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.2BUE Minimum output power for UL-MIMO", "paragraph_index": 1619, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.2B.1Minimum requirement", "paragraph_index": 1621, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.2CVoid", "paragraph_index": 1626, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.2DUE Minimum output power for ProSe", "paragraph_index": 1628, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.2FUE Minimum output power for category NB1 and NB2", "paragraph_index": 1631, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.2GUE Minimum output power for V2X Communication", "paragraph_index": 1633, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.3Transmit OFF power", "paragraph_index": 1641, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.3.1.Minimum requirement", "paragraph_index": 1643, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.3AUE Transmit OFF power for CA", "paragraph_index": 1647, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.3A.1Minimum requirement for CA", "paragraph_index": 1649, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.3BUE Transmit OFF power for UL-MIMO", "paragraph_index": 1654, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.3B.1Minimum requirement", "paragraph_index": 1656, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.3DTransmit OFF power for ProSe", "paragraph_index": 1660, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.3FTransmit OFF power for category NB1 and NB2", "paragraph_index": 1668, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.3GTransmit OFF power for V2X Communication", "paragraph_index": 1670, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4ON/OFF time mask", "paragraph_index": 1676, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.1General ON/OFF time mask", "paragraph_index": 1677, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.2PRACH and SRS time mask", "paragraph_index": 1691, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.2.1PRACH time mask", "paragraph_index": 1692, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.2.2SRS time mask", "paragraph_index": 1698, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.3Slot / Sub frame boundary time mask for subframe TTI", "paragraph_index": 1719, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.4PUCCH / PUSCH / SRS time mask for subframe TTI", "paragraph_index": 1734, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.5Symbol / Subslot boundary time mask for subslot TTI", "paragraph_index": 1750, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.6Subslot PUCCH / subslot PUSCH / SRS time mask for subslot TTI", "paragraph_index": 1764, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.7Symbol / Slot boundary time mask for slot TTI", "paragraph_index": 1784, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.8Slot PUCCH / slot PUSCH / SRS time mask for slot TTI", "paragraph_index": 1789, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.9Consecutive subslot and slot TTI or consecutive subslot and subframe TTI  time mask", "paragraph_index": 1793, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.10Consecutive subframe and subslot TTI or consecutive slot and subslot TTI time mask", "paragraph_index": 1799, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4.11Consecutive TTI and slot TTI or consecutive slot TTI and TTI time mask", "paragraph_index": 1809, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4AON/OFF time mask for CA", "paragraph_index": 1813, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4BON/OFF time mask for UL-MIMO", "paragraph_index": 1815, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4DON/OFF time mask for ProSe", "paragraph_index": 1819, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4D.1General time mask for ProSe", "paragraph_index": 1822, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4D.2PSSS/SSSS time mask", "paragraph_index": 1827, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4D.3PSSS / SSSS / PSBCH time mask", "paragraph_index": 1839, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4D.4PSSCH / SRS time mask", "paragraph_index": 1849, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4FON/OFF time mask for category NB1 and NB2", "paragraph_index": 1853, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4F.1General ON/OFF time mask", "paragraph_index": 1854, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4F.2NPRACH time mask", "paragraph_index": 1856, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4GON/OFF time mask for V2X Communication", "paragraph_index": 1863, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.4G.1PSSS / SSSS / PSBCH time mask", "paragraph_index": 1871, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5Power Control", "paragraph_index": 1878, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5.1Absolute power tolerance", "paragraph_index": 1879, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5.1.1Minimum requirements", "paragraph_index": 1881, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5.2Relative Power tolerance", "paragraph_index": 1887, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5.2.1Minimum requirements", "paragraph_index": 1890, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5.3Aggregate power control tolerance", "paragraph_index": 1898, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5.3.1Minimum requirement", "paragraph_index": 1900, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5APower control for CA", "paragraph_index": 1904, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5A.1Absolute power tolerance", "paragraph_index": 1906, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5A.1.1Minimum requirements", "paragraph_index": 1909, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5A.2Relative power tolerance", "paragraph_index": 1912, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5A.2.1Minimum requirements", "paragraph_index": 1913, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5A.3Aggregate power control tolerance", "paragraph_index": 1926, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5A.3.1Minimum requirements", "paragraph_index": 1928, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5BPower control for UL-MIMO", "paragraph_index": 1931, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5DPower Control for ProSe", "paragraph_index": 1938, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5D.1Absolute power tolerance", "paragraph_index": 1940, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5EPower control for category M1 and M2", "paragraph_index": 1942, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5E.1Absolute power tolerance", "paragraph_index": 1943, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5E.2Relative Power tolerance", "paragraph_index": 1948, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5E.3Aggregate power control tolerance", "paragraph_index": 1953, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5E.3.1Minimum requirement", "paragraph_index": 1957, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5FPower Control for category NB1 and NB2", "paragraph_index": 1965, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5F.1Absolute power tolerance", "paragraph_index": 1967, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5F.2Relative power tolerance", "paragraph_index": 1975, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5F.3Aggregate power control tolerance for category NB1 and NB2", "paragraph_index": 1981, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5F.3.1Minimum requirement", "paragraph_index": 1983, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5GPower Control for V2X Communication", "paragraph_index": 1988, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.3.5G.1Absolute power tolerance", "paragraph_index": 1993, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.4Void", "paragraph_index": 2000, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5Transmit signal quality", "paragraph_index": 2001, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.1Frequency error", "paragraph_index": 2002, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.1A Frequency error for CA", "paragraph_index": 2004, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.1BFrequency error for UL-MIMO", "paragraph_index": 2008, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.1DFrequency error for ProSe", "paragraph_index": 2010, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.1EFrequency error for UE category M1 and M2", "paragraph_index": 2013, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.1FFrequency error for UE category NB1 and NB2", "paragraph_index": 2019, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.1GFrequency error for V2X Communication", "paragraph_index": 2024, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2Transmit modulation quality", "paragraph_index": 2029, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2.1Error Vector Magnitude", "paragraph_index": 2036, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2.1.1Minimum requirement", "paragraph_index": 2042, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2.2Carrier leakage", "paragraph_index": 2048, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2.2.1Minimum requirements", "paragraph_index": 2050, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2.3In-band emissions", "paragraph_index": 2054, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2.3.1Minimum requirements", "paragraph_index": 2057, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2.4EVM equalizer spectrum flatness", "paragraph_index": 2062, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2.4.1Minimum requirements", "paragraph_index": 2064, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2ATransmit modulation quality for CA", "paragraph_index": 2073, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2A.1Error Vector Magnitude", "paragraph_index": 2076, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2A.2Carrier leakage for CA", "paragraph_index": 2082, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2A.2.1Minimum requirements", "paragraph_index": 2084, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2A.3In-band emissions", "paragraph_index": 2088, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2A.3.1Minimum requirement for CA", "paragraph_index": 2089, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2BTransmit modulation quality for UL-MIMO", "paragraph_index": 2098, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2B.1Error Vector Magnitude", "paragraph_index": 2106, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2B.2Carrier leakage", "paragraph_index": 2108, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2B.3In-band emissions", "paragraph_index": 2110, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2B.4EVM equalizer spectrum flatness for UL-MIMO", "paragraph_index": 2112, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2DTransmit modulation quality for ProSe", "paragraph_index": 2114, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2D.1Error Vector Magnitude", "paragraph_index": 2117, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2D.2Carrier leakage", "paragraph_index": 2121, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2D.3In-band emissions", "paragraph_index": 2123, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2D.4EVM equalizer spectrum flatness for ProSe", "paragraph_index": 2125, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2ETransmit modulation quality for category M1 and M2", "paragraph_index": 2127, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2E.1Error Vector Magnitude", "paragraph_index": 2128, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2E.2Carrier leakage", "paragraph_index": 2130, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2E.2.1Minimum requirements", "paragraph_index": 2132, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2E.3In-band emissions", "paragraph_index": 2134, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2E.3.1Minimum requirements", "paragraph_index": 2136, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2FTransmit modulation quality for Category NB1 and NB2", "paragraph_index": 2140, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2F.1Error Vector Magnitude", "paragraph_index": 2141, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2F.2Carrier leakage", "paragraph_index": 2143, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2F.3In-band emissions", "paragraph_index": 2147, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2GTransmit modulation quality for V2X Communication", "paragraph_index": 2152, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2G.1Error Vector Magnitude", "paragraph_index": 2157, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2G.2Carrier leakage", "paragraph_index": 2162, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2G.3In-band emissions", "paragraph_index": 2165, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.5.2G.4EVM equalizer spectrum flatness", "paragraph_index": 2168, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6Output RF spectrum emissions", "paragraph_index": 2171, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.1Occupied bandwidth", "paragraph_index": 2175, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.1.1Additional minimum requirement for E-UTRA (network signalled value “NS_29”)", "paragraph_index": 2179, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.1AOccupied bandwidth for CA", "paragraph_index": 2181, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.1BOccupied bandwidth for UL-MIMO", "paragraph_index": 2186, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.1FOccupied bandwidth for category NB1 and NB2", "paragraph_index": 2192, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.1GOccupied bandwidth for V2X Communication", "paragraph_index": 2194, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2Out of band emission", "paragraph_index": 2200, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.1Spectrum emission mask", "paragraph_index": 2202, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.1.1Minimum requirement", "paragraph_index": 2204, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.1ASpectrum emission mask for CA", "paragraph_index": 2209, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2Additional spectrum emission mask", "paragraph_index": 2224, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2.1Minimum requirement (network signalled value \"NS_03\", “NS_11”, \"NS_20\", and “NS_21”)", "paragraph_index": 2226, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2.2Minimum requirement (network signalled value \"NS_04\")", "paragraph_index": 2232, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2.3Minimum requirement (network signalled value \"NS_06\" or “NS_07”)", "paragraph_index": 2238, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2.4Minimum requirement (network signalled value \"NS_33\" or “NS_34”)", "paragraph_index": 2244, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2.5Minimum requirement (network signalled value “NS_27” and “NS_43”)", "paragraph_index": 2252, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2.6Minimum requirement (network signalled value \"NS_28”)", "paragraph_index": 2257, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2.7Minimum requirement (network signalled value \"NS_35\")", "paragraph_index": 2262, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2AAdditional Spectrum Emission Mask for CA", "paragraph_index": 2268, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2A.1Minimum requirement (network signalled value \"CA_NS_04\")", "paragraph_index": 2270, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2A.2Minimum requirement CA_66B (network signalled value \"CA_NS_09\")", "paragraph_index": 2276, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2A.3Minimum requirement CA_66C (network signalled value \"CA_NS_09\")", "paragraph_index": 2282, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2A.4Minimum requirement CA_48B and CA_48C (network signalled value \"CA_NS_10\")", "paragraph_index": 2288, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.2A.5Minimum requirement CA_2C (network signalled value \"CA_NS_11\")", "paragraph_index": 2294, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.3Adjacent Channel Leakage Ratio", "paragraph_index": 2301, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.3.1Minimum requirement E-UTRA", "paragraph_index": 2305, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.3.1aAdditional minimum requirement for E-UTRA (network signalled value “NS_29”)", "paragraph_index": 2322, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.3.1AVoid", "paragraph_index": 2326, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.3.1AaVoid", "paragraph_index": 2327, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.3.2Minimum requirements UTRA", "paragraph_index": 2328, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.3.2AMinimum requirement UTRA for CA", "paragraph_index": 2336, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.3.3AMinimum requirements for CA E-UTRA", "paragraph_index": 2347, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.4Void", "paragraph_index": 2358, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2.4.1Void", "paragraph_index": 2359, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2AVoid", "paragraph_index": 2360, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2BOut of band emission for UL-MIMO", "paragraph_index": 2362, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2CVoid", "paragraph_index": 2366, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2DOut of band emission for ProSe", "paragraph_index": 2368, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2FOut of band emission for category NB1 and NB2", "paragraph_index": 2371, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2F.1Spectrum emission mask", "paragraph_index": 2372, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2F.2Additional Spectrum Emission Mask for Category NB1 and NB2", "paragraph_index": 2381, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2F.2.1Minimum requirement (network signalled value \"NS_02\")", "paragraph_index": 2383, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2F.2.2Minimum requirement (network signalled value \"NS_03\")", "paragraph_index": 2387, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2F.3Adjacent Channel Leakage Ratio for category NB1 and NB2", "paragraph_index": 2391, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.2GOut of band emission for V2X Communication", "paragraph_index": 2395, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3Spurious emissions", "paragraph_index": 2405, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.1Minimum requirements", "paragraph_index": 2408, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.1AMinimum requirements for CA", "paragraph_index": 2415, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.2Spurious emission band UE co-existence", "paragraph_index": 2428, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.2ASpurious emission band UE co-existence for CA", "paragraph_index": 2436, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3Additional spurious emissions", "paragraph_index": 2447, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.1", "title": "Minimum requirement (network signalled value \"NS_05\")", "paragraph_index": 2450, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.2", "title": "Minimum requirement (network signalled value “NS_07”)", "paragraph_index": 2457, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.3", "title": "Minimum requirement (network signalled value “NS_08”)", "paragraph_index": 2461, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.4", "title": "Minimum requirement (network signalled value “NS_09”)", "paragraph_index": 2465, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.5", "title": "Minimum requirement (network signalled value \"NS_12\")", "paragraph_index": 2471, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.6", "title": "Minimum requirement (network signalled value “NS_13”)", "paragraph_index": 2475, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.7", "title": "Minimum requirement (network signalled value “NS_14”)", "paragraph_index": 2479, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.8", "title": "Minimum requirement (network signalled value “NS_15”)", "paragraph_index": 2483, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.9", "title": "Minimum requirement (network signalled value “NS_16”)", "paragraph_index": 2487, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.10", "title": "Minimum requirement (network signalled value “NS_17”)", "paragraph_index": 2491, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.11", "title": "Minimum requirement (network signalled value “NS_18”)", "paragraph_index": 2495, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.12", "title": "Minimum requirement (network signalled value “NS_19”)", "paragraph_index": 2499, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "6.6.3.3.13", "title": "Minimum requirement (network signalled value “NS_11”)", "paragraph_index": 2503, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.14Minimum requirement (network signalled value “NS_20”)", "paragraph_index": 2507, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.15Minimum requirement (network signalled value “NS_21”)", "paragraph_index": 2511, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.16Minimum requirement (network signalled value \"NS_22\")", "paragraph_index": 2516, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.17Minimum requirement (network signalled value “NS_23”)", "paragraph_index": 2520, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.18Void", "paragraph_index": 2524, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.19Minimum requirement (network signalled value \"NS_04\")", "paragraph_index": 2526, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.20Minimum requirement (network signalled value “NS_24”)", "paragraph_index": 2531, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.21Minimum requirement (network signalled value “NS_25”)", "paragraph_index": 2535, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.22Minimum requirement (network signalled value “NS_26”)", "paragraph_index": 2539, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.23Minimum requirement (network signalled value “NS_27” and “NS_43”)", "paragraph_index": 2543, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.24Minimum requirement (network signalled value “NS_28”)", "paragraph_index": 2547, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.25Minimum requirement (network signalled value “NS_29”)", "paragraph_index": 2551, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.26Minimum requirement (network signalled value “NS_30”)", "paragraph_index": 2555, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.27Minimum requirement (network signalled value “NS_31”)", "paragraph_index": 2563, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.28Minimum requirement (network signalled value “NS_36”)", "paragraph_index": 2573, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.29Minimum requirement (network signalled value “NS_38”)", "paragraph_index": 2577, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.30Minimum requirement (network signalled value “NS_39”)", "paragraph_index": 2581, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.31Minimum requirement (network signalled value “NS_40” and “NS_41”)", "paragraph_index": 2585, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.32Minimum requirement (network signalled value “NS_42”)", "paragraph_index": 2589, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.33Minimum requirement (network signalled value “NS_44”)", "paragraph_index": 2593, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.34Minimum requirement (network signalled value “NS_45”)", "paragraph_index": 2597, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.35Minimum requirement (network signalled value “NS_56”)", "paragraph_index": 2603, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3.36Minimum requirement (network signalled value “NS_62”)", "paragraph_index": 2607, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3AAdditional spurious emissions for CA", "paragraph_index": 2611, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.1Minimum requirement for CA_1C (network signalled value \"CA_NS_01\")", "paragraph_index": 2614, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.2 Minimum requirement for CA_1C (network signalled value \"CA_NS_02\")", "paragraph_index": 2618, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.3Minimum requirement for CA_1C (network signalled value \"CA_NS_03\")", "paragraph_index": 2622, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.4Minimum requirement for CA_38C (network signalled value \"CA_NS_05\")", "paragraph_index": 2626, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.5Minimum requirement for CA_7C (network signalled value \"CA_NS_06\")", "paragraph_index": 2630, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.6Minimum requirement for CA_39C and CA_39C-41A (network signalled value \"CA_NS_07\")", "paragraph_index": 2634, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.7Minimum requirement for CA_42C (network signalled value \"CA_NS_08\")", "paragraph_index": 2638, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.8Minimum requirement for CA_41C and CA_41D (network signalled value \"CA_NS_04\")", "paragraph_index": 2642, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.9Void", "paragraph_index": 2646, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.10Minimum requirement for CA_48B and CA_48C (network signalled value \"CA_NS_10\")", "paragraph_index": 2647, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.11Minimum requirement for CA_28C (network signalled value \"CA_NS_12\")", "paragraph_index": 2651, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3.3A.12Minimum requirement for CA_28C (network signalled value \"CA_NS_13\")", "paragraph_index": 2655, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3AVoid", "paragraph_index": 2659, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3BSpurious emission for UL-MIMO", "paragraph_index": 2661, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3CVoid", "paragraph_index": 2665, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3DSpurious emission for ProSe", "paragraph_index": 2667, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3FSpurious emission for category NB1 and NB2", "paragraph_index": 2670, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3F.1Additional spurious emissions", "paragraph_index": 2672, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3F.1.2 Minimum requirement (network signalled value \"NS_06\")", "paragraph_index": 2675, "style": "Heading5"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3GSpurious emission for V2X Communication", "paragraph_index": 2679, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6.3KSpurious emission for Aerial UE", "paragraph_index": 2694, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6AVoid", "paragraph_index": 2704, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.6BVoid", "paragraph_index": 2705, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.7Transmit intermodulation", "paragraph_index": 2706, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.7.1Minimum requirement", "paragraph_index": 2708, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.7.1AMinimum requirement for CA", "paragraph_index": 2713, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.7.1BMinimum requirement for UL-MIMO", "paragraph_index": 2720, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.7.1FMinimum requirement for category NB1 and NB2", "paragraph_index": 2724, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.7.1GMinimum requirement for V2X Communication", "paragraph_index": 2728, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.8Void", "paragraph_index": 2733, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.8AVoid", "paragraph_index": 2734, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.8BTime alignment error for UL-MIMO", "paragraph_index": 2735, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.8B.1Minimum Requirements", "paragraph_index": 2738, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.8CVoid", "paragraph_index": 2740, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.8DVoid", "paragraph_index": 2741, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.8EVoid", "paragraph_index": 2742, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.8FVoid", "paragraph_index": 2743, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "6.8GTime alignment error", "paragraph_index": 2744, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7Receiver characteristics", "paragraph_index": 2746, "style": "Heading1"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.1General", "paragraph_index": 2747, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.2Diversity characteristics", "paragraph_index": 2759, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3Reference sensitivity power level", "paragraph_index": 2764, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3.1Minimum requirements (QPSK)", "paragraph_index": 2767, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3.1AMinimum requirements (QPSK) for CA", "paragraph_index": 2799, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3.1BMinimum requirements (QPSK) for UL-MIMO", "paragraph_index": 2876, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3.1DMinimum requirements (QPSK) for ProSe", "paragraph_index": 2878, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3.1EMinimum requirements (QPSK) for UE category 0, M1, M2 and 1bis", "paragraph_index": 2891, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3.1FMinimum requirements for UE category NB1 and NB2", "paragraph_index": 2920, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3.1F.1Reference sensitivity for UE category NB1 and NB2", "paragraph_index": 2921, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3.1F.2Void", "paragraph_index": 2925, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3.1GMinimum requirements (QPSK) for V2X", "paragraph_index": 2926, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3.1HMinimum requirements for LTE based 5G terrestrial broadcast", "paragraph_index": 2945, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.3.2Void", "paragraph_index": 2949, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.4Maximum input level", "paragraph_index": 2950, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.4.1Minimum requirements", "paragraph_index": 2952, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.4.1AMinimum requirements for CA", "paragraph_index": 2956, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.4.1BMinimum requirements for UL-MIMO", "paragraph_index": 2965, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.4.1DMinimum requirements for ProSe", "paragraph_index": 2967, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.4.1FMinimum requirements for category NB1 and NB2", "paragraph_index": 2971, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.4.1GMinimum requirements for V2X", "paragraph_index": 2973, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.4.1HMinimum requirements for LTE based 5G terrestrial broadcast", "paragraph_index": 2981, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.4AVoid", "paragraph_index": 2985, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.4A.1Void", "paragraph_index": 2986, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.5Adjacent Channel Selectivity (ACS)", "paragraph_index": 2987, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.5.1Minimum requirements", "paragraph_index": 2989, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.5.1AMinimum requirements for CA", "paragraph_index": 2997, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.5.1BMinimum requirements for UL-MIMO", "paragraph_index": 3021, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.5.1DMinimum requirements for ProSe", "paragraph_index": 3023, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.5.1FMinimum requirements for category NB1 and NB2", "paragraph_index": 3031, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.5.1GMinimum requirements for V2X", "paragraph_index": 3035, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.5.1HMinimum requirements for LTE based 5G terrestrial broadcast", "paragraph_index": 3051, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6Blocking characteristics", "paragraph_index": 3059, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.1In-band blocking", "paragraph_index": 3061, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.1.1Minimum requirements", "paragraph_index": 3065, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.1.1AMinimum requirements for CA", "paragraph_index": 3072, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.1.1DMinimum requirements for ProSe", "paragraph_index": 3092, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.1.1FMinimum requirements for category NB1 and NB2", "paragraph_index": 3101, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.1.1GMinimum requirements for V2X", "paragraph_index": 3105, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.1.1HMinimum requirements for LTE based 5G terrestrial broadcast", "paragraph_index": 3117, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.2Out-of-band blocking", "paragraph_index": 3123, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.2.1Minimum requirements", "paragraph_index": 3126, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.2.1AMinimum requirements for CA", "paragraph_index": 3134, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.2.1DMinimum requirements for ProSe", "paragraph_index": 3158, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.2.1FMinimum requirements for category NB1 and NB2", "paragraph_index": 3167, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.2.1GMinimum requirements for V2X", "paragraph_index": 3172, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.2.1HMinimum requirements for LTE based 5G terrestrial broadcast", "paragraph_index": 3186, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.3Narrow band blocking", "paragraph_index": 3193, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.3.1Minimum requirements", "paragraph_index": 3195, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.3.1AMinimum requirements for CA", "paragraph_index": 3200, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.3.1DMinimum requirements for ProSe", "paragraph_index": 3207, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6.3.1HMinimum requirements for LTE based 5G terrestrial broadcast", "paragraph_index": 3214, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6AVoid", "paragraph_index": 3216, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.6BBlocking characteristics for UL-MIMO", "paragraph_index": 3218, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.7Spurious response", "paragraph_index": 3220, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.7.1Minimum requirements", "paragraph_index": 3222, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.7.1AMinimum requirements for CA", "paragraph_index": 3229, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.7.1BMinimum requirements for UL-MIMO", "paragraph_index": 3241, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.7.1DMinimum requirements for ProSe", "paragraph_index": 3243, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.7.1FMinimum requirements for UE category NB1 and NB2", "paragraph_index": 3252, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.7.1GMinimum requirements for V2X", "paragraph_index": 3256, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.7.1HMinimum requirements for LTE based 5G terrestrial broadcast", "paragraph_index": 3268, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.8Intermodulation characteristics", "paragraph_index": 3274, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.8.1Wide band intermodulation", "paragraph_index": 3276, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.8.1.1Minimum requirements", "paragraph_index": 3278, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.8.1AMinimum requirements for CA", "paragraph_index": 3283, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.8.1BMinimum requirements for UL-MIMO", "paragraph_index": 3295, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.8.1DMinimum requirements for ProSe", "paragraph_index": 3297, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.8.1FMinimum requirements for category NB1 and NB2", "paragraph_index": 3306, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.8.1GMinimum requirements", "paragraph_index": 3310, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.8.1HMinimum requirements for LTE based 5G terrestrial broadcast", "paragraph_index": 3318, "style": "Heading4"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.8.2Void", "paragraph_index": 3322, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.9Spurious emissions", "paragraph_index": 3323, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.9.1Minimum requirements", "paragraph_index": 3325, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.9.1AMinimum requirements", "paragraph_index": 3332, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.10Receiver image", "paragraph_index": 3336, "style": "Heading2"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.10.1Void", "paragraph_index": 3337, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.10.1AMinimum requirements for CA", "paragraph_index": 3338, "style": "Heading3"}
+{"source": "36101-j60_s00-07.docx", "section": "", "title": "7.10.1GMinimum requirements for V2X Communication", "paragraph_index": 3344, "style": "Heading3"}

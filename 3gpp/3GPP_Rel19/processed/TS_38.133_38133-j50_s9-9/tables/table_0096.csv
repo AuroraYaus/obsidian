@@ -1,0 +1,6 @@
+DRX cycle,T SSB_measurement_period_intra
+No DRX,Ceil( 5 x Kgap ) x measCycleSCell x CSSFintra
+DRX cycle≤ 160ms,"Ceil(5 x Kgap) x max(measCycleSCell, M2Note 1 x DRX cycle) x CSSFintra"
+160ms < DRX cycle≤ 320ms,"Ceil(4 x Kgap) x max(measCycleSCell, M2Note 1 x DRX cycle) x CSSFintra"
+DRX cycle>320ms,"Ceil(Y Note 2 x Kgap ) x max(measCycleSCell, DRX cycle) x CSSFintra"
+"NOTE 1:M2 = 1.5 if SMTC periodicity > 40 ms, otherwise M2=1NOTE 2:Y=3 when SMTC <= 40ms, Y=5 when SMTC > 40ms",

@@ -1,0 +1,59 @@
+Parameter,,Unit,Cell 3
+Frequency Range,,,FR1
+Duplex mode,ConfigSCell 1,,FDD
+,"ConfigSCell 2,3",,TDD
+TDD configuration,ConfigSCell 1,,Not Applicable
+,ConfigSCell 2,,TDDConf.1.1
+,ConfigSCell 3,,TDDConf.1.2
+BWchannel,ConfigSCell 1,,"10 MHz: NRB,c = 52"
+,ConfigSCell 2,,"10 MHz: NRB,c = 52"
+,ConfigSCell 3,,"40 MHz: NRB,c = 106"
+Active BWP ID,,,0
+Initial BWP,ConfigSCell 1,,DLBWP.0.2
+Configuration,ConfigSCell 2,,
+,ConfigSCell 3,,
+Active BWP-0,ConfigSCell 1,,DLBWP.0.2
+Configuration,ConfigSCell 2,,
+,ConfigSCell 3,,
+Active BWP-1,ConfigSCell 1,,N/A
+Configuration,ConfigSCell 2,,
+,ConfigSCell 3,,
+Active BWP-2,ConfigSCell 1,,N/A
+Configuration,ConfigSCell 2,,
+,ConfigSCell 3,,
+PDSCH Reference,ConfigSCell 1,,SR.1.1 FDD
+measurement channel,ConfigSCell 2,,SR.1.1 TDD
+,ConfigSCell 3,,SR.2.1 TDD
+RMSI CORESET,ConfigSCell 1,,CR.1.1 FDD
+parameters,ConfigSCell 2,,CR.1.1 TDD
+,ConfigSCell 3,,CR.2.1 TDD
+Dedicated CORESET,ConfigSCell 1,,CCR.1.1 FDD
+"parameters, Test 1",ConfigSCell 2,,CCR.1.1 TDD
+,ConfigSCell 3,,CCR.2.1 TDD
+Dedicated CORESET,ConfigSCell 1,,CCR.1.5 FDD
+"parameters, Test 2",ConfigSCell 2,,CCR.1.5 TDD
+,ConfigSCell 3,,CCR.2.3 TDD
+OCNG Patterns,,,OP.1
+SSB Configuration,"ConfigSCell 1,2",,SSB.1 FR1
+,ConfigSCell 3,,SSB.2 FR1
+SMTC Configuration,,,SMTC.1
+TRS Configuration,ConfigSCell 1,,TRS.1.1 FDD
+,ConfigSCell 2,,TRS.1.1 TDD
+,ConfigSCell 3,,TRS.1.2 TDD
+Antenna Configuration,,,1x2
+Propagation Condition,,,AWGN
+EPRE ratio of PSS to SSS,,,
+EPRE ratio of PBCH DMRS to SSS,,,
+EPRE ratio of PBCH to PBCH DMRS,,,
+EPRE ratio of PDCCH DMRS to SSS,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,dB,0
+EPRE ratio of PDSCH DMRS to SSS,,,
+EPRE ratio of PDSCH to PDSCH,,,
+EPRE ratio of OCNG DMRS to SSS Note 1,,,
+EPRE ratio of OCNG to OCNG DMRS Note 1,,,
+NocNote 2,,dBm/15 kHz,-104
+SS-RSRP Note 3,,dBm/15 kHz,-87
+Ês/Iot,,dB,17
+Ês/Noc,,dB,17
+IoNote3,"ConfigSCell 1,2",dBm/9.36 MHz,-58.96
+,ConfigSCell 3,dBm/38.16 MHz,-52.86

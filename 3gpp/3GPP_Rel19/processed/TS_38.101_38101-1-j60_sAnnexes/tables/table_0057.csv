@@ -1,0 +1,17 @@
+Parameter,Unit,Value,,,,,,
+Channel bandwidth,MHz,10,20,30,40,60,80,100
+Subcarrier spacing,kHz,60,60,60,60,[60],[60],[60]
+Subchannel size,,10,12,12,10,[15],[15],[15]
+Allocated resource blocks,,10,24,36,50,[75],[105],[135]
+MCS Index,,23,23,23,23,[23],[23],[23]
+MCS Table for TBS determination,256QAM,,,,,,,
+Modulation,,256QAM,256QAM,256QAM,256QAM,[256QAM],[256QAM],[256QAM]
+Transport Block Size,,4480,15880,25608,36896,[57376],[81976],[106576]
+Transport block CRC,Bits,24,24,24,24,[24],[24],[24]
+LDPC base graph,,1,1,1,1,[1],[1],[1]
+Number of Code Blocks per Slot,,1,2,4,5,[7],[10],[13]
+Beta offset for 2nd stage SCI,,6.25,6.25,6.25,6.25,[6.25],[6.25],[6.25]
+value when  2nd stage SCI rate matchγ,,3,3,3,3,[3],[3],[3]
+Binary Channel Bits per Slot,,5760,20544,33216,48000,[74400],[106080],[137760]
+Max. Throughput averaged over 100ms,Mbps,1.792,6.352,10.243,14.758,[22.9504],[32.7904],[42.6304]
+"NOTE 1:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).NOTE 2: is the number of vacant resource elements in the resource block to which the last coded symbol of the 2nd-stage SCI belongs.γ",,,,,,,,

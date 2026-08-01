@@ -1,0 +1,8 @@
+,Spectrum emission limit (dBm) / measurement bandwidthfor each ENBW,,,,,
+ΔfOOBMHz,15 MHz,20 MHz,40 MHz,50 MHz,> 50 MHz,Measurementbandwidth
+± 0 - 1,-10,-10,-10,,,2 % ENBW
+,,,,-10,,1 MHz
+± 1 - 5,-10,,,,,1 MHz
+± 5 - X,-13,,,,,
+± X - (ENBW + 5 MHz),-25,,,,,
+NOTE:X is defined as the sum of the emission bandwidth of the component carriers plus the guard band between contiguous CCs.,,,,,,

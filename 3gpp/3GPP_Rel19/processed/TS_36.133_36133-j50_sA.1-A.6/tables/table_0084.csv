@@ -1,0 +1,11 @@
+Allocation,Relative power level  [dB],,,NR Control and Data Region,NPDCCH and NPDSCHData
+,Subframe,,,,
+,"0, 4","5, 9","1-3, 6-8",,
+0 – ( nCell[1]RB -1)(Note 5),N/A,N/A,N/A,Note 1,N/A
+nCell[1]RB(Note 5),0 (Note 3),0 (Note 3),0 (Note 3),N/A,Note 2
+( nCell[1]RB +1 ) – ( nCell[…]RB -1)(Note 5),N/A,N/A,N/A,Note 1,N/A
+nCell[…]RB(Note 5),0 (Note 3),0 (Note 3),N/A,N/A,Note 2
+( nCell[...]RB +1 ) – ( nCell[N]RB -1)(Note 5),N/A,N/A,N/A,Note 1,N/A
+nCell[N]RB(Note 5),0 (Note 3),0 (Note 3),0 (Note 3),N/A,Note 2
+( nCell[N]RB+1 ) – 24(Note 5),N/A,N/A,N/A,Note 1,N/A
+"Note 1:OCNG pattern, OP.1, for NR cell is specified in Clause A.3.2.1.4 in TS 38.133 [50].Note 2:This physical resource block is assigned to a virtual UE for transmission of NPDCCH or NPDSCH; the data transmitted over the NOCNG NPDCCH or NPDSCH shall be uncorrelated QPSK modulated pseudo random data. The parameter is used to scale the power of NPDCCH and NPDSCH.If two transmit antennas with NBRS are used in the test, the NPDCCH and NPDSCH parts of NOCNG shall be transmitted to the virtual users by both transmit antennas with NBRS and according to the antenna transmission mode 2. The parameter applies to each antenna port separately, so the transmit power of the NPDCCH and NPDSCH parts of NOCNG is equal between both the transmit antennas with NBRS used in the test. The antenna transmission modes are specified in clause 7.1 in TS 36.213.Note 3:Value of is applicable to PRBs not used for transmission of NPSS, NSSS, and NPBCH in anchor cells.Note 4:SI transmissions, and NPDCCH and NPDSCH for the UE under test, have precedence over OCNG and NOCNG.Note 5:nCell[k]RB is the index of the RB used for allocation of the NB-IoT cell k with k = {1, .., N} with N the total number of the NB-IoT cells belonging to the same NR donor cell as specified in the individual tests. The RB allocated to N NB-IoT cells shall not overlap with the SSB of the NR donor.N/A:Not Applicable",,,,,

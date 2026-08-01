@@ -1,0 +1,32 @@
+Parameter,,Unit,Cell 1,Cell 2,Cell 3
+Downlink power allocation,,dB,-6,-6,-6
+,,dB,-6 (Note 1),-6 (Note 1),-6 (Note 1)
+,,dB,3,3,3
+at antenna port,,dBm/15kHz,-98,N/A,N/A
+,,dB,N/A,10.45,4.6
+BWChannel,,MHz,10,10,10
+Cyclic prefix,,,Normal,Normal,Normal
+Subframe Configuration,,,Non-MBSFN,Non-MBSFN,Non-MBSFN
+Cell ID,,,0,1,6
+Cell-specific reference signals,,,"Antenna ports 0,1,2,3",,
+Number of control OFDM symbols (CFI),,,2,2,2
+PDSCH transmission mode,,,6,N/A,N/A
+Coverage enhancement mode,,,CE Mode A,N/A,N/A
+OFDM starting symbol (startSymbolBR),,,2,N/A,N/A
+Maximum number of repetitions(mpdcch-NumRepetition),,,1,N/A,N/A
+Frequency hopping(mpdcch-pdsch-HoppingConfig),,,Disabled,N/A,N/A
+MPDCCH transmission duration,,ms,1,N/A,N/A
+Starting subframe configuration for MPDCCH(mpdcch_startSF_UESS),,,1,N/A,N/A
+Precoding granularity,,PRB,6,N/A,N/A
+PMI delay (Note 2),,ms,10,N/A,N/A
+Reporting interval,,ms,10,N/A,N/A
+Reporting mode,,,PUCCH 1-1,N/A,N/A
+Physical channel for CQIreporting,,,PUSCH(Note4),,
+CodeBookSubsetRestriction bitmap,,,001111,N/A,N/A
+Time offset relative to Cell 1,,s,N/A,3,-1
+Frequency shift relative to Cell 1,,Hz,N/A,300,-100
+Interference model,,,N/A,As specified in clause B.5.3,As specified in clause B.5.3
+Probability of occurrence of transmission in interference cells,,%,N/A,20,20
+Probability of occurrence of transmission rank in interfering cells,Rank 1,%,N/A,80,80
+,Rank 2,%,N/A,20,20
+"Note 1:.Note 2:If the UE reports in an available uplink reporting instance at subframe SF #n based on PMI estimation at a downlink SF not later than SF#(n-4). This reported PMI cannot be applied at the eNB downlink before SF#(n+4).Note 3:For each test, DC subcarrier puncturing shall be considered.Note 4:To avoid collisions between CQI reports and HARQ-ACK it is necessary to report both on PUSCH instead of PUCCH. PDCCH DCI format 6-0A shall be transmitted in downlink SF#1 to allow periodic CQI to multiplex with the HARQ-ACK on PUSCH in uplink subframe SF#5.",,,,,

@@ -1,0 +1,6 @@
+eDRX_IDLE cycle and eDRX INACTIVE cycle length [s],RAN DRX length [s],eDRX INACTIVEPTW length [s] (number of 1.28 s periods),Scaling Factor (N1),"Tdetect,NR_Intra_RedCap [s] (number of RAN DRX cycles)","Tmeasure,NR_Intra_RedCap [s] (number of RAN DRX cycles Note 5)","Tevaluate,NR_Intra_RedCap [s] (number of RAN DRX cycles Note 5)"
+2.56 ≤eDRX_IDLE cycle length ≤ 10485.7620.48 ≤eDRX_INACTIVE cycle length ≤10485.76,0.32,≥5.12 (4),8,(23 x N1)eDRX_cycle_length×23×N1PTW/DRX_cycle_length,0.32 x N1 (1 x N1),0.64 x N1 (2 x N1)
+,0.64,≥6.4 (5),5,,0.64 x N1 (1 x N1),1.28 x N1 (2 x N1)
+,1.28,≥10.24 (8),4,,1.28 x N1 (1 x N1),2.56 x N1 (2 x N1)
+,2.56,≥15.36 (12),3,,2.56 x N1 (1 x N1),5.12 x N1 (2 x N1)
+"NOTE 1:RAN DRX cycle in this table is UE specific DRX value configured by RRC specified in [1].NOTE 2:Applies for RedCap UE of all power class.NOTE 3:The number of RAN DRX cycles in this table is given for the DRX cycles within RAN configured PTWs.NOTE 4:eDRX INACTIVE PTW in this table is RAN configured PTW.NOTE 5:The eDRX_IDLE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 6:The lower bound of PTW length is derived based on .NOTE 7:When eDRX=20.48 s and DRX=0.32 s, UE is allowed to perform cell evaluation within PTW in every 2 eDRX cycles.Tevaluate,NR_Intra_RedCap*DRX_cycle1.28*1.28",,,,,,

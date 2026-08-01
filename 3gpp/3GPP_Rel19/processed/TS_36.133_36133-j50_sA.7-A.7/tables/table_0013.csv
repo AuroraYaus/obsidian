@@ -1,0 +1,7 @@
+Parameter,Unit,Cell 1,,,Cell 2,,
+,,Test 1,Test 2,Test 3,Test 1,Test 2,Test 3
+Channel Bandwidth (BWchannel),MHz,20,20,20,10,10,10
+PDCCH/PCFICH/PHICH Reference measurement channelNote3,,R.10 TDD,R.10 TDD,R.10 TDD,R.6 TDD,R.6 TDD,R.6 TDD
+OCNG PatternNote4,,OP.8 TDD,OP.8 TDD,OP.8 TDD,OP.2 TDD,OP.2 TDD,OP.2 TDD
+IoNote6,dBm/18 MHz,-62.5,-62.5,-62.5,N/A,N/A,N/A
+,dBm/9 MHz,N/A,N/A,N/A,-65.5,-65.5,-65.5

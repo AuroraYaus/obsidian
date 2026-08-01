@@ -1,0 +1,8 @@
+PPW Parameters,Unit,Values
+Reference PPW,,PPW.1
+Periodicity,slot,Note 1
+Offset,slot,Note 2
+Length,ms,10
+Type,,Same as the value reported in prsProcessingType-r17
+Priority,,st1
+NOTE 1:Same as PRS resource set periodicity as used in the test case.NOTE 2:Same as PRS resource with smallest offset as used in the test case.,,

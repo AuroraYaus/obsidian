@@ -1,0 +1,8 @@
+Number,Number,Cyclic,Propagation,Additional,Channel bandwidth / SNR (dB),,,
+of TX antennas,of RX antennas,Prefix,conditions and correlation matrix (Annex G),DM-RS configuration,10 MHz,20 MHz,40 MHz,100 MHz
+1,2,Normal,TDLC300-100 Low,No additional DM-RS,3.1,2.8,3.1,2.8
+,,,,Additional DM-RS,2.8,2.3,3.1,2.2
+,4,Normal,TDLC300-100 Low,No additional DM-RS,-1.7,-1.9,-1.7,-2.1
+,,,,Additional DM-RS,-2.0,-2.5,-2.5,-2.4
+,8,Normal,TDLC300-100 Low,No additional DM-RS,-5.6,-5.5,-5.5,-5.5
+,,,,Additional DM-RS,-6.2,-6.1,-6.4,-6.2

@@ -1,0 +1,19 @@
+Parameter,,Unit,Value,Comment
+RF Channel Number,,,"1, 2",One is E-UTRA RF channel and one is NR RF channel
+Initial conditions,Active PCell,,Cell 1,On E-UTRA RF channel number 1.
+,E-UTRA Neighbouring cell,,Cell 2,On E-UTRA RF channel number 1.
+,Active PSCell,,Cell 3,On NR RF channel number 2.
+,NR Neighbouring cell,,Cell 4,On NR RF channel number 2.
+Final conditions,Active PCell,,Cell 2,
+,Active PSCell,,Cell 4,
+CP length,,,Normal,"Applicable to Cell 1, Cell 2, Cell 3 and Cell 4."
+A3-Offset,,dB,0,
+Hysteresis,,dB,0,
+Time To Trigger,,s,0,
+Filter coefficient,,,0,L3 filtering is not used
+DRX,,,OFF,Continuous monitoring of primary cell
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+Time offset between same RAT cells,,µs,3,Synchronous cells
+T1,,s,5,
+T2,,s,5,
+T3,,s,1,

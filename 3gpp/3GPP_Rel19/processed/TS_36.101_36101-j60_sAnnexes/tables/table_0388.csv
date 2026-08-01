@@ -1,0 +1,5 @@
+Parameter,Unit,Value,Note
+Transmitted power spectral density,dBm/15 kHz,Test specific,shall be kept constant throughout all OFDM symbols
+Cell-specific reference signal power ratio,,0 dB,Applicble for In-band operation
+Narrowband reference signal power ratio,,0 dB,Applicble for Stand-alone and Guard-band operation
+Narrowband refefence signal power over cell-specific reference signal power,,0 dB,Applicable for In-band operation

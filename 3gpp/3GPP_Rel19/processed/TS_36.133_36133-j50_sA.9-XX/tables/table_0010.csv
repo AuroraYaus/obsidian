@@ -1,0 +1,11 @@
+Parameter,Unit,Value,Comment
+Serving cell (PCell),,Cell 1,The aggressor cell to Cell 2
+Neighbour cell,,Cell 2,Cell to be measured
+PCell ABS configuration,,Non-MBSFN ABS,As defined in Table A.3.4.1.1-1
+CP length,,Normal,For both cells in the test
+DRX,,,OFF
+Time offset between cells,,3 s,Synchronous cells
+Physical cell ID PCI,,(PCIcell1 - PCIcell2 )mod6 !=0,Cell PCIs for Cell 1 and Cell 2 are selected randomly so that the condition is met
+ABS pattern,,‘1000000010000000100000001000000010000000’,"Non-MBSFN ABS. FDD ABS Pattern Info IE, as defined in TS 36.423 [28], clause 9.2.54. Configured in Cell 1.The first/leftmost bit corresponds to the subframe #0 of a radio frame satisfying SFN mod x  = 0, where x is the size of the bit string (40) divided by 10. No MBSFN subframes are cofigured in the ABS subframes in Cell 1."
+Time-domain measurement resource restriction pattern for neighbour cell measurements on RF Channel 1,,‘1000000010000000100000001000000010000000’,"Configured for Cell 2 measurements by measSubframePattern-Neigh IE in measSubframePatternConfig-Neigh, as defined in TS 36.331 [2], clause 6.3.5. measSubframeCellList contains Cell 2."
+Time-domain measurement resource restriction pattern for serving cell measurements,,‘0100000001000000010000000100000001000000’,Configured for measurements on Cell 1.

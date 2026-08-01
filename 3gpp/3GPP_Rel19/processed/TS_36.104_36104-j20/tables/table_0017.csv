@@ -1,0 +1,3 @@
+Input Conditions,"Output power, Pout"
+Ioh > CRS Ês + + 30 dBand CRS Ês ≥  -127dBm,≤ 10 dBm
+Ioh ≤  CRS Ês +  + 30 dBand CRS Ês ≥ -127dBm,"≤ max(8 dBm, min(20 dBm,  CRS Ês +  + 85 dB))"

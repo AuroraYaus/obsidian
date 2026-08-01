@@ -1,0 +1,7 @@
+Parameter,Unit,Value,Comment
+Channel bandwidth for cells on primary carrier (BWchannel),MHz,10,Channel bandwidth for cells on primary component carrier
+PDSCH parameters for cells on primary carriers,,DL Reference Measurement Channel R.0 TDD,As specified in section A.3.1.1.2
+PCFICH/PDCCH/PHICH parameters for cells on primary carriers,,DL Reference Measurement Channel R.6 TDD,As specified in section A.3.1.2.2
+Channel bandwidth for cells on secondary carriers (BWchannel),MHz,5,Channel bandwidth for cells on secondary component carrier
+PCFICH/PDCCH/PHICH parameters for cells on secondary carrier,,DL Reference Measurement Channel R.11 TDD,As specified in section A.3.1.2.2
+Note 1:See Table A.8.16.4.1-1 for other general test parameters.Note 2:This test verifies the RRM requirement which is independent of channel bandwidth and is performed according to the principle defined in section A.3.6.1.,,,

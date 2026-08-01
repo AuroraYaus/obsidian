@@ -1,0 +1,21 @@
+Parameter,,Unit,Test configuration,Value,Comment
+,,,,,
+Initial condition,Active cell,,"1, 2, 3",Cell 1,
+T1 end condition,Active cell,,"1, 2, 3",Cell 2,
+,Neighbour cells,,"1, 2, 3",Cell 1,
+RF Channel Number,,,"1, 2, 3",2,
+Time offset between cells,,,1,3 ms,Asynchronous cells
+,,,2,3 s,Synchronous cells
+,,,3,3 s,Synchronous cells
+Access Barring Information,,-,"1, 2, 3",Not Sent,No additional delays in random access procedure.
+SSB configuration,,,1,SSB.1 FR1,
+,,,2,SSB.1 FR1,
+,,,3,SSB.2 FR1,
+SMTC configuration,,,1,SMTC.2,Configured in SIB2 of Cell 1
+,,,,SMTC.6,Configured in SIB2 of Cell 2
+,,,2,SMTC.1,
+,,,3,SMTC.1,
+DRX cycle length,,s,"1, 2, 3",1.28,The value shall be used for all cells in the test.
+PRACH configuration index,,,"1, 2, 3",102,The detailed configuration is specified in TS 38.211 clause 6.3.3.2
+rangeToBestCell,,,"1, 2, 3",Not configured,
+T1,,s,"1, 2, 3",9,T1 needs to be defined so that cell re-selection reaction time is taken into account.

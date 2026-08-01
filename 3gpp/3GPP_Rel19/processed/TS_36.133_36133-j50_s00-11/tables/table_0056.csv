@@ -1,0 +1,8 @@
+eDRX_IDLE cycle length [s],DRX cycle length [s],,PTW length [s] (number of 2.56s periods),"Tdetect,NB_Inter_EC [s] (number of DRX cycles)","Tmeasure,NB_Inter_EC [s] (number of DRX cycles)","Tevaluate,NB_interEC[s] (number of DRX cycles)"
+20.48 ≤ eDRX_IDLE cycle length ≤ 10485.76,0.32,≥12.8 (5),,(406),1.28 (4),10.24 (32)
+,0.64,≥12.8 (5),,,1.28 (2),10.24 (16)
+,1.28,≥15.36 (6),,,1.28 (1),12.8 (10)
+,2.56,≥17.92 (7),,,2.56 (1),15.36 (6)
+,5.12,≥23.04 (9),,,5.12 (1),20.48 (4)
+,10.24,≥33.28 (13),,,10.24 (1),30.72 (3)
+NOTE 1:The number of DRX cycles in this table is given for the DRX cycles within PTWs.NOTE 2:The eDRX_IDLE cycle lengths are as specified in Section X of TS 24.008 [34].,,,,,,

@@ -1,0 +1,5 @@
+Condition NOTE1,TSSB_time_index_inter
+No DRX,"Max(120 ms, Ceil(3 * Kgap x N1 Note 3) Max(MGRP , SMTC period))  CSSFinter"
+DRX cycle ≤ 320 ms,"Max(120 ms, Ceil(3  1.5 * Kgap x N1 Note 3)  Max(MGRP, SMTC period, DRX cycle))  CSSFinter"
+DRX cycle > 320 ms,Ceil(3 * Kgap x N1 Note 3) DRX cycle  CSSFinter
+"NOTE 1:DRX or non DRX requirements apply according to the conditions described in clause 3.6.1NOTE 2:For a UE supporting concurrent gaps, the MRGP above is the MRGP of the measurement gap associated with the target frequency layer to be measured if concurrent measurement gaps are configured.NOTE 3:For ATG UE capable of antennaArrayType-r18, N1 = 3 when network assistance on ATG cells reference locations is provided, otherwise N1 = 4.Otherwise, N1 = 1.",

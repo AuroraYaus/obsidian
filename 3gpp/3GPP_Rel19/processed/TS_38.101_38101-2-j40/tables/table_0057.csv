@@ -1,0 +1,13 @@
+Modulation,,"MPRWT (dB), BWchannel = 400 MHz",,
+,,Outer RB allocations,Inner RB allocations,
+,,,Region 1,Region 2
+DFT-s-OFDM,Pi/2 BPSK,≤ 5.5,0.0,≤ 3.0
+,QPSK,≤ 6.5,0.0,≤ 3.5
+,16 QAM,≤ 6.5,≤ 4.5,≤ 4.5
+,64 QAM,≤ 6.5,≤ 6.5,≤ 6.5
+,256 QAM1,≤ 9.5,≤ 9.5,≤ 9.5
+CP-OFDM,QPSK,≤ 7.0,≤ 5.0,≤ 5.0
+,16 QAM,≤ 7.0,≤ 6.5,≤ 6.5
+,64 QAM,≤ 9.0,≤ 9.0,≤ 9.0
+,256 QAM1,≤ 12,≤ 12,≤ 12
+NOTE 1: Refer to clause 6.1 for 256 QAM applicability.,,,,

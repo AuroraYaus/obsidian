@@ -1,0 +1,8 @@
+Frequency Range of sidelink,SCS of SSB signals ( kHz),SCS of sidelink signals (kHz),Te
+FR1,15,15,14*64*Tc
+,,30,12*64*Tc
+,,60,12*64*Tc
+,30,15,10*64*Tc
+,,30,10*64*Tc
+,,60,9*64*Tc
+NOTE 1:Tc is the basic timing unit defined in TS 38.211 [6].,,,

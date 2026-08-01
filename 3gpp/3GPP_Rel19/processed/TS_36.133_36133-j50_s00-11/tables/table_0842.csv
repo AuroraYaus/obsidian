@@ -1,0 +1,18 @@
+Reported value,NPDCCH repetition level,NPDSCH transport block error probability not exceeding 0.1,,,
+,,Modulation,Code rate x 1024,Repetition,Efficiency
+noMeasurement,No measurement reporting,Out of range,,,
+candidateRep-A,1,QPSK,221,1,0.4316
+candidateRep-B,2,QPSK,140,1,0.2737
+candidateRep-C,4,QPSK,81,1,0.1579
+candidateRep-D,8,QPSK,81,2,0.0789
+candidateRep-E,16,QPSK,81,4,0.0395
+candidateRep-F,32,QPSK,81,8,0.0198
+candidateRep-G,1,QPSK,336.8,1,0.6579
+candidateRep-H,1,QPSK,453.6,1,0.8860
+candidateRep-I,1,QPSK,579.4,1,1.1316
+candidateRep-J,1,QPSK,759,1,1.4825
+candidateRep-K,1,16QAM,487.3,1,1.9035
+candidateRep-L,1,16QAM,541.2,1,2.1140
+candidateRep-M,1,16QAM,658,1,2.5702
+candidateRep-N,1,16QAM,783.7,1,3.0614
+candidateRep-O,1,16QAM,837.6,1,3.2719

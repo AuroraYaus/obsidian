@@ -1,0 +1,7 @@
+Accuracy,,Conditions,,,,,
+Normal condition,Extreme condition,CSI-RS Ês/Iot Note 2,Io Note 1 range,,,,
+,,,NR operating band groups Note 4,Minimum Io,,,Maximum Io
+dB,dB,dB,,dBm / SCSCSI-RS,,dBm/BWChannel,dBm/BWChannel
+,,,,SCSCSI-RS = 15 kHz,SCSCSI-RS = 30 kHz,,
+±6,±7,-3,NR_FDD_SAB_FR1_A,-121,-118,N/A,-50
+NOTE 1:Io is assumed to have constant EPRE across the bandwidth.NOTE 2:The parameter CSI-RS Ês/Iot is the minimum CSI-RS Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3:VoidNOTE 4:NR operating band groups in FR1 are as defined in clause 3.5.2A.,,,,,,,

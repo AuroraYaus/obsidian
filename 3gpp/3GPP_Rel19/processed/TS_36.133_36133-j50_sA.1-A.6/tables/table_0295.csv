@@ -1,0 +1,16 @@
+Parameter,,Unit,Cell 2 (UTRA),,,,
+Timeslot Number,,,0,,,DwPTS,
+,,,T1,,T2,T1,T2
+UTRA RF Channel Number (Note1),,,Channel 2,,,,
+PCCPCH_Ec/Ior,dB,,-3,,-3,,
+DwPCH_Ec/Ior,dB,,,,,0,0
+OCNS_Ec/Ior,dB,,-3,,-3,,
+,dB,,11,,11,11,11
+,dBm/1.28 MHz,,-80,,,,
+PCCPCH RSCP,dBm,,-72,-72,,n.a.,n.a.
+Propagation Condition,,,AWGN,,,,
+Qrxlevmin,dBm,,-103,,,,
+"Qoffset1s,n",dB,,"C1, C2: 0",,,,
+Qhyst1s,dB,,0,,,,
+"Threshx, high (Note2)",dB,,46 (-94dBm),,,,
+"Note1: In the case of multi-frequency cell, the UTRA RF Channel Number is the primary frequency’s channel number.Note2:This refers to the value of Threshx, high  which is included in UTRA system information, and is a threshold for the E-UTRA target cell",,,,,,,

@@ -1,0 +1,5 @@
+Base Station Type,Wanted Signal mean power (dBm),Mean power of interfering signals (dBm),Type of interfering signals
+Wide Area BS,PREFSENS +6 dB,-52,
+Medium Range BS,PREFSENS +6 dB,-47,See Table 7.7.2-2
+Local Area BS,PREFSENS +6 dB,-44,
+"NOTE 1:PREFSENS depends on the RAT and the BS class. For NR, PREFSENS depends also on the BS channel bandwidth, see clause 7.2. For NB-IoT, PREFSENS depends also on the sub-carrier spacing as specified in tables 7.2.1-5, 7.2.1-5a and 7.2.1-5c of TS 36.104 [13].",,,

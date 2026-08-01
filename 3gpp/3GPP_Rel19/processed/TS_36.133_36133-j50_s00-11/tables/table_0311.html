@@ -1,0 +1,40 @@
+<table>
+  <tr>
+    <td colspan="2">WLAN RSSI measurement configuration</td>
+    <td>DRX cycle length (s)</td>
+    <td rowspan="2">TWLAN_RSSI_DRX  (s)</td>
+  </tr>
+  <tr>
+    <td>Type of Measurement</td>
+    <td>Minimum number of APs measured during TWLAN_RSSI</td>
+  </tr>
+  <tr>
+    <td>Measurement of serving AP</td>
+    <td>1</td>
+    <td>0.002 ≤ DRX-cycle ≤ 0.320</td>
+    <td>MAX (0.5, 5*LDRX)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Measurement of one known neighbor AP on a single channel</td>
+    <td rowspan="2">1</td>
+    <td>0.002 ≤ DRX-cycle ≤ 0.320</td>
+    <td>MAX (5, 25*LDRX)</td>
+  </tr>
+  <tr>
+    <td>0.320 &lt; DRX-cycle ≤ 2.56</td>
+    <td>MAX (5, 20*LDRX)</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Measurement of 3 unknown neighbor APs</td>
+    <td rowspan="2">3</td>
+    <td>0.002 ≤ DRX-cycle ≤ 0.320</td>
+    <td>MAX (30, 150*LDRX)</td>
+  </tr>
+  <tr>
+    <td>0.320 &lt; DRX-cycle ≤ 2.56</td>
+    <td>MAX (30, 120*LDRX)</td>
+  </tr>
+  <tr>
+    <td colspan="4">Note 1:LDRX is the length of DRX cycle in second(s)</td>
+  </tr>
+</table>

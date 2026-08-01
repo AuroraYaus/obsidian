@@ -1,0 +1,47 @@
+<table>
+  <tr>
+    <td>Frequency offset of measurement filter 3dB point, f</td>
+    <td>Frequency offset of measurement filter centre frequency, f_offset</td>
+    <td>Minimum requirement (Note 1)</td>
+    <td>Measurement bandwidth (Note 8)</td>
+  </tr>
+  <tr>
+    <td>0 MHz  f &lt; 1 MHz</td>
+    <td>0.05 MHz  f_offset &lt; 1.05 MHz</td>
+    <td></td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td>1 MHz  f &lt; min(10 MHz, fmax)</td>
+    <td>1.05 MHz  f_offset &lt; min(10.05 MHz, f_offsetmax)</td>
+    <td></td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td>10 MHz  f &lt; min(20 MHz, fmax)</td>
+    <td>10.05 MHz  f_offset &lt; min(20.05 MHz, f_offsetmax)</td>
+    <td></td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td>20 MHz  f &lt; min(170 MHz, fmax)</td>
+    <td>20.05 MHz  f_offset &lt; min(170.05 MHz, f_offsetmax)</td>
+    <td>Max(Prated,c - 62.6dB, -40dBm)</td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td>170 MHz  f &lt; min(206 MHz, fmax)</td>
+    <td>170.05 MHz  f_offset &lt; min(206.05 MHz, f_offsetmax)</td>
+    <td>Max(Prated,c - 64.6dB, -40dBm)</td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td>206 MHz  f  fmax</td>
+    <td>206.05 MHz  f_offset &lt; f_offsetmax</td>
+    <td>Max(Prated,c - 69.6dB, -40dBm)</td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:For a BS supporting non-contiguous spectrum operation within any operating band, the minimum requirement within sub-block gaps is calculated as a cumulative sum of contributions from adjacent sub blocks on each side of the sub block gap. Exception is f ≥ 20 MHz from both adjacent sub blocks on each side of the sub-block gap, where the minimum requirement within sub-block gaps shall be Max(Prated,c - 62.6dB, -40 dBm)/100kHz.</td>
+  </tr>
+</table>

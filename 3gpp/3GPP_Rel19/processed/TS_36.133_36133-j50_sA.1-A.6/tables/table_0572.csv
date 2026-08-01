@@ -1,0 +1,7 @@
+Parameter,Unit,Value,Comments
+BWchannel,MHz,5,
+OCNG Pattern Note 1,,OP.15/16 FDD Note 1,As defined in A.3.2.1.15/16.
+PDSCH parameters Note 2,,DL Reference Measurement Channel R.5 FDD Note 2,As defined in A.3.1.1.1.
+PCFICH/PDCCH/PHICH parameters,,DL Reference Measurement Channel R.11 FDD,As defined in A.3.1.2.1.
+Io Note 2,dBm/4.5 MHz,-68.5,
+Note 1:OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols. The OCNG pattern is chosen during the test according to the presence of a DL reference measurement channel.Note 2:The DL PDSCH reference measurement channel is used in the test only when a downlink transmission dedicated to the UE under test is required.Note 3:See Table A.6.2.1.1-1 for the other parameters.Note 4:This test is according to the principle defined in section A.3.7.2.,,,

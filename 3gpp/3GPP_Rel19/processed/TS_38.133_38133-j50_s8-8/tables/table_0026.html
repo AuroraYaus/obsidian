@@ -1,0 +1,34 @@
+<table>
+  <tr>
+    <td>Configuration</td>
+    <td colspan="2">TEvaluate_out_SSB,CCA (ms)</td>
+    <td>TEvaluate_in_SSB,CCA (ms)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RLM-RS SSB Es/IotNote4 ≥-7 dB</td>
+    <td>RLM-RS SSB Es/Iot Note4 &lt;-7 dB</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>no DRX</td>
+    <td>Max(200, Ceil(17*P)*TSSB)</td>
+    <td>Max(200, Ceil(24*P)*TSSB)</td>
+    <td>Max(100, Ceil((5+Lin)*P)*TSSB)</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤320</td>
+    <td>Max(200, Ceil(1.5*15*P)*Max(TDRX,TSSB))</td>
+    <td>Max(200, Ceil(1.5*20*P)*Max(TDRX,TSSB))</td>
+    <td>Max(100, Ceil(1.5*(5+Lin)*P)*Max(TDRX,TSSB))</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320</td>
+    <td>Ceil(13*P)*TDRX</td>
+    <td>Ceil(16*P)*TDRX</td>
+    <td>Ceil((5+Lin)*P)*TDRX</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:TSSB is the periodicity of the SSB configured for RLM. TDRX is the DRX cycle length.NOTE 2:When DRX is not configured, Lin is the number of RLM-RS SSB occasions which are not available at the UE during TEvaluate_in_SSB,CCA, where Lin ≤ Lin,max. When DRX is configured, Lin is the number of DRX cycles in which at least one RLM-RS SSB occasion is not available at the UE during TEvaluate_in_SSB,CCA, where Lin ≤ Lin,max. The UE is not required to determine the availability of SSB occasions more frequent than Once per Max(10 ms, P * TSSB) if no DRX is used, Once per Max(10 ms, Ceil(1.5 * P) * Max(TDRX, TSSB)) if DRX cycle ≤ 320 ms, Once per P * TDRX if DRX cycle &gt; 320 ms.NOTE 3:Lin,max=7 for Max(TDRX,TSSB) ≤ 40 assuming TDRX=0 for non-DRX case, Lin,max=5 for 40&lt;Max(TDRX,TSSB)≤320,Lin,max=3 for TDRX&gt;320.NOTE 4:RLM-RS SSB Es/Iot is the averaged Es/Iot over the most recent previous out-of-sync evaluation period.</td>
+  </tr>
+</table>

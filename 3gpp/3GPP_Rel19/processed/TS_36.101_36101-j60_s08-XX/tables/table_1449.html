@@ -1,0 +1,107 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Test 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Resource pool configuration</td>
+    <td></td>
+    <td>As specified in Table A.7.1.1-4(Configuration #4-FDD)</td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX configuration</td>
+    <td></td>
+    <td>As specified in Table 11.1.2-1</td>
+  </tr>
+  <tr>
+    <td colspan="2">at antenna port</td>
+    <td>dBm/15kHz</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td colspan="2">Active cell(s)</td>
+    <td></td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td colspan="2">Active Sidelink UE(s)</td>
+    <td></td>
+    <td>Sidelink UEs 1, 2</td>
+  </tr>
+  <tr>
+    <td rowspan="8">Sidelink UE 1</td>
+    <td>Sidelink Transmissions</td>
+    <td></td>
+    <td>SLSS + PSBCH</td>
+  </tr>
+  <tr>
+    <td>networkControlledSyncTx</td>
+    <td></td>
+    <td>ON</td>
+  </tr>
+  <tr>
+    <td>slssid</td>
+    <td></td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>inCoverage (in MIB-SL)</td>
+    <td></td>
+    <td>TRUE</td>
+  </tr>
+  <tr>
+    <td>syncOffsetIndicator</td>
+    <td></td>
+    <td>Set same as syncOffsetIndicator1 in Configuration #4-FDD</td>
+  </tr>
+  <tr>
+    <td>Propagation channel</td>
+    <td></td>
+    <td>EPA5</td>
+  </tr>
+  <tr>
+    <td>Antenna configuration</td>
+    <td></td>
+    <td>1x2 Low</td>
+  </tr>
+  <tr>
+    <td>at antenna port</td>
+    <td>dBm/15kHz</td>
+    <td>-82</td>
+  </tr>
+  <tr>
+    <td rowspan="6">Sidelink UE 2</td>
+    <td>Sidelink Transmissions</td>
+    <td></td>
+    <td>PSDCH</td>
+  </tr>
+  <tr>
+    <td>PSDCH RB allocation</td>
+    <td></td>
+    <td>PRB pairs {2i..2i+1}, where i is chosen randomly uniformly from [0,11] (for 5MHz) or [0,24] (for 10MHz) in each discovery period.</td>
+  </tr>
+  <tr>
+    <td>Time offset (Note 1)</td>
+    <td>s</td>
+    <td>+1</td>
+  </tr>
+  <tr>
+    <td>Frequency offset (Note 2)</td>
+    <td>Hz</td>
+    <td>+200</td>
+  </tr>
+  <tr>
+    <td>Propagation Channel</td>
+    <td></td>
+    <td>EPA5</td>
+  </tr>
+  <tr>
+    <td>Antenna configuration</td>
+    <td></td>
+    <td>1x2 Low</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:Time offset of Sidelink UE 2 receive signal timing with respect to Sidelink UE 1 receive signal timing at the tested UE.NOTE 2:Frequency offset of Sidelink UE 2 with respect to Sidelink UE 1 transmit frequency.</td>
+  </tr>
+</table>

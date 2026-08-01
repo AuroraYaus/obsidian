@@ -1,0 +1,12 @@
+Parameter,Unit,Value,,,
+Reference configuration for satellite assistance information for neighbor cell,,NSC.1,NSC.2,NSC.3,NSC.4
+Scenario,,GSO or GEO (as per test definition),NGSO,GSO or GEO (as per test definition),NGSO
+Interval between adjacent epoch time,s,10.24,2.56,10.24,2.56
+neighValidityDuration-r18,s,900,5,900,5
+k-Mac-r18,ms,Not configured,Not configured,Not configured,Not configured
+nta-Common-r18,,0,0,0,0
+nta-CommonDrift-r18,,0,0,0,0
+nta-CommonDriftVariation-r18,,0,0,0,0
+ephemerisInfo,,Same as used for serving satellite,,According to Annex B.8 NOTE1,
+t-ServiceStartNeigh-r18,,NOTE 2,,,
+"Note 1: The ephemeris information for those neighbor cells shall be different than that used for the serving cell, i.e., these cells are associated to a different satellite. Note 2: Unless otherwise stated in the test case, t-serviceStartNeigh-r18 is not configured for the neighbor satellite.",,,,,

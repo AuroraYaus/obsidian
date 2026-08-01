@@ -1,0 +1,14 @@
+E-UTRAchannel bandwidth of the lowest/highest carrier received [MHz],Interfering signal centre frequency offset from the lower/upper Base Station RF Bandwidth edge [MHz],Type of interfering signal
+3,±4.5,CW
+,±10.5,3 MHz E-UTRA signal (Note 3)
+5,±7.5,CW
+,±17.5,5 MHz E-UTRA signal
+10,±7.375,CW
+,±17.5,5 MHz E-UTRA signal
+15,±7.25,CW
+,±17.5,5 MHz E-UTRA signal
+20,±7.125,CW
+,±17.5,5 MHz E-UTRA signal (Note 1)
+20,±7.125,CW
+,±24,20 MHz E-UTRA signal (Note 2)
+Note 1:This type of interfering signal is not applied for Band 46.Note 2:This type of interfering signal is only applied for Band 46.Note 3:3 MHz channel bandwidth is not applicable to guard band operation.,,

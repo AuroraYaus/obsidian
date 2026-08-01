@@ -1,0 +1,8 @@
+Parameter,Value,,Comments
+Reference configuration,DRX_S,DRX_L,As defined in 4.8.2.1.5 in TS 36.508
+onDurationTimer,psf2,psf6,
+drx-InactivityTimer,psf100,psf1920,
+drx-RetransmissionTimer,psf16,psf16,
+longDRX-CycleStartOffset,"sf40, 0","sf1280, 0",
+shortDRX,disabled,disabled,
+Note:For further information see clause 6.3.2 in TS 36.331.,,,

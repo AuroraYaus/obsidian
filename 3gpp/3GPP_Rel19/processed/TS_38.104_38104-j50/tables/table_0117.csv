@@ -1,0 +1,12 @@
+BS channel bandwidth (MHz),Sub-carrier spacing (kHz),Reference measurement channel,"Reference sensitivity power level, PREFSENS (dBm)"
+20,15,G-FR1-A1-14 (Note 2),-99.1
+,30,G-FR1-A1-15 (Note 2),-96.1
+,60,G-FR1-A1-6 (Note 1),-89.7
+40,15,G-FR1-A1-16 (Note 2),-96.0
+,30,G-FR1-A1-17 (Note 2),-93.0
+,60,G-FR1-A1-6 (Note 1),-89.7
+60,30,G-FR1-A1-18 (Note 2),-91.4
+,60,G-FR1-A1-6 (Note 1),-89.7
+80,30,G-FR1-A1-19 (Note 2),-90.1
+,60,G-FR1-A1-6 (Note 1),-89.7
+"Note 1:PREFSENS is the power level of a single instance of the reference measurement channel. This requirement shall be met for each consecutive application of a single instance of the reference measurement channel mapped to disjoint frequency ranges with a width corresponding to the number of resource blocks of the reference measurement channel each, except for one instance that might overlap one other instance to cover the full BS channel bandwidth.Note 2:PREFSENS is the power level of a single instance of the reference measurement channel. This requirement shall be met for each interleaved application of a single instance of the reference measurement channel mapped to disjoint frequency ranges with a width corresponding to the number of resource blocks of the reference measurement channel each, except for one instance that might overlap one other instance to cover the full BS channel bandwidth.Note 3:For 60kHz SCS reference measurement channel is reused from Table 7.2.2-2.",,,

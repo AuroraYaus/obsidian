@@ -1,0 +1,25 @@
+Parameter,Unit,Cell 1,
+,,T1,T2
+E-UTRAN RF Channel Number,,1,
+BWchannel,MHz,10,
+OCNG Pattern defined in A.3.2.2.1 (OP.1 TDD),,OP.1 TDD,
+PBCH_RA,dB,0,
+PBCH_RB,dB,,
+PSS_RA,dB,,
+SSS_RA,dB,,
+PCFICH_RB,dB,,
+PHICH_RA,dB,,
+PHICH_RB,dB,,
+PDCCH_RA,dB,,
+PDCCH_RB,dB,,
+PDSCH_RA,dB,,
+PDSCH_RB,dB,,
+OCNG_RANote 1,dB,,
+OCNG_RBNote 1,dB,,
+,dB,4,4
+Note 3,dBm/15 kHz,-98,
+,dB,4,4
+RSRP Note 4,dBm/15 kHz,-94,-94
+SCH_RP,dBm/15 kHz,-94,-94
+Propagation Condition,,AWGN,
+Note 1:OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.Note 3:Interference from other cells and noise sources not specified in the test is assumed to be constant   over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 4:RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,

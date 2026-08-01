@@ -1,0 +1,8 @@
+MPDCCH Repetition,Pm-Dsg (%),Ês/Iot,Io Note 1 range,,,
+,,,E-UTRA operating band groups Note 3,Minimum Io,,Maximum Io
+,,dB,,dBm/15kHz,dBm/BWChannel,dBm/BWChannel
+R NOTE 1,≤1,-6 dB ≤ Ês/Iot ≤ -3 dB,FDD-M1_SAB_A,-121,N/A,-70
+,,,FDD-M1_SAB_B,-120.5,N/A,-70
+R/4 NOTE 1,>1,-6 dB ≤ Ês/Iot ≤ -3 dB,FDD-M1_SAB_A,-121,N/A,-70
+,,,FDD-M1_SAB_B,-120.5,N/A,-70
+NOTE 1:R is the reported MPDCCH repetition level that UE has reported in DCQR MAC CE or Short DCQR MAC CE.NOTE 2:Io is assumed to have constant EPRE across the bandwidth.NOTE 3:E-UTRA operating band groups are as defined in Section 3.5.,,,,,,

@@ -1,0 +1,5 @@
+Configuration,TEvaluate_BFD_CSI-RS (ms)
+no DRX,"Max(50, Ceil(MBFD  P  N  PBFD*PTRP)  TCSI-RS)"
+DRX cycle ≤ 320 ms,"Max(50, Ceil(1.5 × MBFD  P  N  PBFD*PTRP)  Max(TDRX, TCSI-RS))"
+DRX cycle > 320 ms,Ceil(MBFD  P  N  PBFD*PTRP)  TDRX
+"NOTE:TCSI-RS is the periodicity of CSI-RS resource in the two sets  and . TDRX is the DRX cycle length.q0,0q0,1",

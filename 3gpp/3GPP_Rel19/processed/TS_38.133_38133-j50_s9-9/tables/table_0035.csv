@@ -1,0 +1,7 @@
+NR,Total number of interrupted slots on serving cells,,,,,,,,,
+SCS,When MG timing advance of 0 ms is applied,,,,,When MG timing advance of 0.5 ms is applied,,,,
+(kHz),MGL=20 ms,MGL=10 ms,MGL=6 ms,MGL=4 ms,MGL=3 ms,MGL=20 ms,MGL=10 ms,MGL=6 ms,MGL=4 ms,MGL=3 ms
+15,20,10,6,4,3,21Note 2,11Note 2,7Note 2,5Note 2,4Note 2
+30,40,20,12,8,6,40,20,12,8,6
+60,80,40,24,16,12,80,40,24,16,12
+NOTE 1:VoidNOTE 2:Non-overlapped half-slots occur before and after the measurement gap. Whether a UE can receive and/or transmit in those half-slots is up to UE implementation.,,,,,,,,,,

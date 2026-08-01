@@ -1,0 +1,16 @@
+Parameter,,Unit,Test 1,,Test 2,
+Bandwidth,,MHz,10,,,
+PDSCH transmission mode,,,1,,,
+Downlink power allocation,,dB,0,,,
+,,dB,0,,,
+,,dB,0,,,
+Propagation condition and antenna configuration,,,AWGN (1 x 1),,,
+SNR (Note 2),,dB,0,1,6,7
+,,dB[mW/15kHz],-98,-97,-92,-91
+,,dB[mW/15kHz],-98,,-98,
+Max number of HARQ transmissions,,,1,,,
+Physical channel for CQI reporting,,,PUCCH Format 2,,,
+PUCCH Report Type,,,4,,,
+Reporting periodicity,,ms,Npd = 5,,,
+cqi-pmi-ConfigurationIndex,,,6,,,
+"Note 1:Reference measurement channel RC.4 FDD according to Table A.4-1 with one/two sided dynamic OCNG Pattern OP.2 FDD as described in Annex A.5.1.2.Note 2:For each test, the minimum requirements shall be fulfilled for at least one of the two SNR(s) and the respective wanted signal input level.",,,,,,

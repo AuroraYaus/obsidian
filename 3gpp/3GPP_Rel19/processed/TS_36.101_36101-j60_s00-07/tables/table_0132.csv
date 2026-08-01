@@ -1,0 +1,10 @@
+"Channel Bandwidth, MHz","Carrier Centre Frequency, Fc, MHz",A-MPR
+20+5 / 5 + 20,FL + BWCA/2 ≤ FC <FL + 3*BWCA/2 - 10 MHzFH - 3*BWCA/2 + 10 MHz ≤ FC ≤FH - BWCA/2,Table 6.2.4A.10-2
+,FL + 3*BWCA/2 - 10 MHz ≤ FC < FH - 3*BWCA/2 + 10 MHz,Table 6.2.4A.10-3
+20+10 / 10 + 20,FL + BWCA/2 ≤ FC <FL + 3*BWCA/2 - 10 MHzFH - 3*BWCA/2 + 10 MHz ≤ FC ≤FH - BWCA/2,Table 6.2.4A.10-2
+,FL + 3*BWCA/2 - 10 MHz ≤FC < FH - 3*BWCA/2 + 10 MHz,Table 6.2.4A.10-3
+20+15 / 15 + 20,FL + BWCA/2 ≤ FC<FL + 3*BWCA/2 - 10 MHzFH - 3*BWCA/2 + 10 MHz ≤ FC ≤FH - BWCA/2,Table 6.2.4A.10-2
+,FL + 3*BWCA/2 - 10 MHz ≤FC < FH - 3*BWCA/2 + 10 MHz,Table 6.2.4A.10-3
+20+20,FL + BWCA/2 ≤ FC <FL + 3*BWCA/2 - 10 MHzFH - 3*BWCA/2 + 10 MHz ≤ FC ≤FH - BWCA/2,Table 6.2.4A.10-2
+,FL + 3*BWCA/2 - 10 MHz ≤FC < FH - 3*BWCA/2 + 10 MHz,Table 6.2.4A.10-3
+"NOTE:FL = 3550 MHz, FH = 3700 MHz and BWCA is the combined bandwidth of the contiguous CCs in the CA combination indicated.",,

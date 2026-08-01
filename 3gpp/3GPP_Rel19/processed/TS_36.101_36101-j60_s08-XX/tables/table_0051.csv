@@ -1,0 +1,3 @@
+Test num.,CA Band-width combination,Requirement,UE category
+1,6x20MHz,As specified in Table 8.2.1.1.1-5 per CC,"8, ≥11"
+"NOTE 1:The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 8.1.2.3NOTE 2:30usec timing difference between PCell and any SCell, which is not within the same band or sub-block as PCell, is applied in inter-band CA case, where PCell can be assigned on any CC.",,,

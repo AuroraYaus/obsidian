@@ -1,0 +1,7 @@
+Neighouring cell SCH Ês/Iot: Q2 [dB],Gap pattern ID,Cell identification delay (Tidentify_intra_UE cat M1),Measurement delay (Tmeasure_intra_UE cat M1)
+-15≤ Q2 < -6,0,"Max(400 * rmax* G / 1000, 320.8) * Kintra_M1_EC *  KRSTD_M1_EC s","Max(5 * rmax* G, 800) * Kintra_M1_EC *  KRSTD_M1_EC ms Note1Max(5 * rmax* G, 1600) * Kintra_M1_EC *  KRSTD_M1_EC ms Note2"
+,1,"Max(400 * rmax* G / 1000, 321.6) * Kintra_M1_EC *  KRSTD_M1_EC s","Max(5 * rmax* G, 1600) * Kintra_M1_EC *  KRSTD_M1_EC ms Note1Max(5 * rmax* G, 3200) * Kintra_M1_EC *  KRSTD_M1_EC ms Note2"
+Q2-6,0,"Max(20 * rmax* G / 1000, 21.8)* Kintra_M1_EC *  KRSTD_M1_EC s","Max(5 * rmax* G, 800) * Kintra_M1_EC *  KRSTD_M1_EC ms Note1Max(5 * rmax* G, 1600) * Kintra_M1_EC *  KRSTD_M1_EC ms Note2"
+,1,"Max(20 * rmax* G / 1000, 22.6)* Kintra_M1_EC *  KRSTD_M1_EC s","Max(5 * rmax* G, 1600) * Kintra_M1_EC *  KRSTD_M1_EC ms Note1Max(5 * rmax* G, 3200) * Kintra_M1_EC *  KRSTD_M1_EC ms Note2"
+N/A,N/A,N/A,"Max(rmax*G, TRSS) x 5 (Note 3)"
+Note1:Under TDD UL/DL configuration other than 0.Note2:Under TDD UL/DL configuration 0. Note3:It is the measurement period for RSRP measured on RSS signals defined in RSS-Config [2].,,,

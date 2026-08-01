@@ -1,0 +1,11 @@
+Parameter,Unit,Value,Comment
+RF Channel Number,,"1, 2",Two NR RF channels
+Active PCell,,Cell 1,PCell on NR RF channel number 1.
+Configured deactivated SCell,,Cell 2,Deactivated SCell on NR RF channel number 2.
+CP length,,Normal,Applicable to Cell 1 and Cell 2
+DRX,,OFF,
+Measurement gap pattern Id,,OFF,
+SCell measurement cycle (measCycleSCell),ms,640,
+maxMIMO-Layers,,"4, 2",Test 1 and Test 2：4Test 4：2
+nonCollocatedTypeNR-CA-v1900,,"type 4, type1, absent",Test 1: type 4Test 2: type 1Test 3: absent
+T1,s,10,

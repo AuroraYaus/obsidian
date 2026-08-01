@@ -1,0 +1,16 @@
+Accuracy,,Conditions,,,,,
+Normal condition,Extreme condition,SSB Ês/Iot Note 2,Io Note 1 range,,,,
+,,,NR operating band groups Note 3,Minimum Io,,,Maximum Io
+dB,dB,dB,,dBm / SCSSSB,,dBm/BWChannel,dBm/BWChannel
+,,,,SCSSSB = 15 kHz,SCSSSB = 30 kHz,,
+,,,"NR_FDD_FR1_A, NR_TDD_FR1_A,NR_SDL_FR1_A",-121,-118,N/A,-70
+,,,"NR_FDD_FR1_B,NR_TDD_FR1_B",-120.5,-117.5,N/A,-70
+,,,"NR_FDD_FR1_C, NR_TDD_FR1_C",-120,-117,N/A,-70
+6,10.5,-4,"NR_FDD_FR1_D, NR_TDD_FR1_D",-119.5,-116.5,N/A,-70
+,,,"NR_FDD_FR1_E, NR_TDD_FR1_E",-119,-116,N/A,-70
+,,,NR_FDD_FR1_F,-118.5,-115.5,N/A,-70
+,,,"NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G",-118,-115,N/A,-70
+,,,NR_FDD_FR1_H,-117.5,-114.5,N/A,-70
+,,,NR_FDD_FR1_N,-114.5,-111.5,N/A,-70
+9.5,12.5,-4,"NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A, NR_FDD_FR1_B, NR_TDD_FR1_B, NR_FDD_FR1_C, NR_TDD_FR1_C, NR_FDD_FR1_D, NR_TDD_FR1_D, NR_FDD_FR1_E, NR_TDD_FR1_E, NR_FDD_FR1_F,NR_FDD_FR1_G, NR_TDD_FR1_G, NR_SDL_FR1_G, NR_FDD_FR1_H,NR_FDD_FR1_N",N/A,N/A,-70,-50
+NOTE 1:Io is assumed to have constant EPRE across the bandwidth.NOTE 2:VoidNOTE 3:NR operating band groups in FR1 are as defined in clause 3.5.2.,,,,,,,

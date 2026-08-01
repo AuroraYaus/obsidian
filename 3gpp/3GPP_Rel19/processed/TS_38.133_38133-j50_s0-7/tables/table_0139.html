@@ -1,0 +1,39 @@
+<table>
+  <tr>
+    <td>eDRX_IDLE cycle andeDRX_INACTIVE cycle length [s]</td>
+    <td>RAN DRX cycle length [s]</td>
+    <td>eDRX INACTIVE PTW length [s] (number of 1.28 s periods)</td>
+    <td>Tdetect,NR_Inter [s] (number of DRX or eDRX INACTIVE cycles)</td>
+    <td>Tmeasure,NR_Inter [s] (number of DRX or eDRX INACTIVE cycles)</td>
+    <td>Tevaluate,NR_Inter [s] (number of DRX or eDRX INACTIVE cycles)</td>
+  </tr>
+  <tr>
+    <td rowspan="4">20.48≤eDRX_IDLE cycle length ≤ 10485.7620.48 ≤eDRX_INACTIVE cycle length ≤ 10485.76</td>
+    <td>0.32</td>
+    <td>≥1.28 (1)</td>
+    <td rowspan="4">(23)eDRX_cycle_length×23PTW/DRX_cycle_length</td>
+    <td>0.32 x 1.5 (1 x 1.5)</td>
+    <td>0.64 x 1.5 (2 x 1.5)</td>
+  </tr>
+  <tr>
+    <td>0.64</td>
+    <td>≥1.28 (1)</td>
+    <td>0.64 (1)</td>
+    <td>1.28 (2)</td>
+  </tr>
+  <tr>
+    <td>1.28</td>
+    <td>≥2.56 (2)</td>
+    <td>1.28 (1)</td>
+    <td>2.56 (2)</td>
+  </tr>
+  <tr>
+    <td>2.56</td>
+    <td>≥5.12 (4)</td>
+    <td>2.56 (1)</td>
+    <td>5.12 (2)</td>
+  </tr>
+  <tr>
+    <td colspan="6">NOTE 1:RAN DRX cycle in this table is UE specific DRX value configured by RRC specified in [1].NOTE 2:The number of RAN DRX cycles in this table is given for the DRX cycles within RAN configured PTWs.NOTE 3:eDRX INACTIVE PTW in this table is RAN configured PTW [1].NOTE 4:The number of DRX cycles in this table is given for the DRX cycles within RAN PTWs.NOTE 5:The eDRX_INACTIVE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 6:The lower bound of PTW length is derived based on .Tevaluate,NR_Inter*DRX_cycle1.28*1.28</td>
+  </tr>
+</table>

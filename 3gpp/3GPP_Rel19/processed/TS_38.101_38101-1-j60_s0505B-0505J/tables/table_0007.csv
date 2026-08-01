@@ -1,0 +1,44 @@
+SUL band combination with CA,SUL configuration,NR Band,Channel bandwidth (MHz) (NOTE 1),Bandwidth combination set
+CA_n41C-n80A,SUL_n41A-n80ACA_n41C-n80A,n41,CA_n41C_BCS1,0
+,,n80,"5, 10, 15, 20, 25, 30, 40",
+CA_n41C-n81A,SUL_n41A-n81ACA_n41C-n81A,n41,CA_n41C_BCS4 and 5,4 and 5
+,,n81,See n81 channel bandwidths in Table 5.3.5-1 for each carrier,
+CA_n41C-n83A,SUL_n41A-n83ACA_n41C-n83A,n41,CA_n41C_BCS1,0
+,,n83,"5, 10, 15, 20, 30",
+CA_n41C-n95A,SUL_n41A-n95ACA_n41C-n95A,n41,CA_n41C_BCS1,0
+,,n95,"5, 10, 15",
+,,n41,CA_n41C_BCS4 and 5,4 and 5
+,,n95,See n95 channel bandwidths in Table 5.3.5-1 for each carrier,
+CA_n41C-n97A,SUL_n41A-n97ACA_n41C-n97A,n41,CA_n41C_BCS4 and 5,4 and 5
+,,n97,See n97 channel bandwidths in Table 5.3.5-1 for each carrier,
+CA_n41C-n98A,SUL_n41A-n98ACA_n41C-n98A,n41,CA_n41C_BCS1,0
+,,n98,"5, 10, 15, 20, 25, 30, 40",
+CA_n78C-n80A,SUL_n78A-n80ACA_n78C-n80A,n78,CA_n78C_BCS1,0
+,,n80,"5, 10, 15, 20, 25, 30, 40",
+,,n78,CA_n78C_BCS4 and 5,4 and 5
+,,n80,See n80 channel bandwidths in Table 5.3.5-1 for each carrier,
+CA_n78C-n81A,SUL_n78A-n81ACA_n78C-n81A,n78,CA_n78C_BCS1,0
+,,n81,"5, 10, 15, 20",
+,,n78,CA_n78C_BCS4 and 5,4 and 5
+,,n81,See n81 channel bandwidths in Table 5.3.5-1 for each carrier,
+CA_n78C-n84A,SUL_n78A-n84ACA_n78C-n84A,n78,CA_n78C_BCS1,0
+,,n84,"5, 10, 15, 20, 25, 30, 40, 50",
+,,n78,CA_n78C_BCS4 and 5,4 and 5
+,,n84,See n84 channel bandwidths in Table 5.3.5-1 for each carrier,
+CA_n78C-n89A,SUL_n78A-n89ACA_n78C-n89A,n78,CA_n78C_BCS1,0
+,,n89,"5, 10, 15, 20",
+CA_n79C-n80A,SUL_n79A-n80ACA_n79C-n80A,n79,CA_n79C_BCS0,0
+,,n80,"5, 10, 15, 20, 25, 30, 40",
+CA_n79C-n83A,SUL_n79A-n83ACA_n79C-n83A,n79,CA_n79C_BCS0,0
+,,n83,"5, 10, 15, 20, 30",
+CA_n79C-n95A,SUL_n79A-n95ACA_n79C-n95A,n79,CA_n79C_BCS0,0
+,,n95,"5, 10, 15",
+,,n79,CA_n79C_BCS4 and 5,4 and 5
+,,n95,See n95 channel bandwidths in Table 5.3.5-1 for each carrier,
+CA_n79C-n97A,SUL_n79A-n97ACA_n79C-n97A,n79,CA_n79C_BCS4 and 5,4 and 5
+,,n97,See n97 channel bandwidths in Table 5.3.5-1 for each carrier,
+CA_n79C-n98A,SUL_n79A-n98ACA_n79C-n98A,n79,CA_n79C_BCS0,0
+,,n98,"5, 10, 15, 20, 25, 30, 40",
+,,n79,CA_n79C_BCS4 and 5,4 and 5
+,,n98,See n98 channel bandwidths in Table 5.3.5-1 for each carrier,
+NOTE 1:The SCS of each channel bandwidth for NR band refers to Table 5.3.5-1.,,,,

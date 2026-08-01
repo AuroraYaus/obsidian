@@ -1,0 +1,6 @@
+,NR Slot length,BWP switch delay TBWPswitchDelay (slots),,
+,(ms),Type 1Note 1,Type 2Note 1,
+0,1,1,3,
+1,0.5,2,5,
+2,0.25,3,9,
+"NOTE 1:Depends on UE capability.NOTE 2:If the BWP switch involves changing of SCS, the BWP switch delay is determined by the smaller SCS between the SCS before BWP switch and the SCS after BWP switch.",,,,

@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TPSS/SSS_sync_intra</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>Ceil(5 x Kp x N1Note 1,2) x measCycleSCell x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320 ms</td>
+    <td>Ceil(5 x Kp x N1Note 1,2) x max(measCycleSCell, 1.5xDRX cycle) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt; 320 ms</td>
+    <td>Ceil(5 x Kp x N1Note 1,2) x max(measCycleSCell, DRX cycle) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:   For ATG UE capable of antennaArrayType-r18, N1 = 3 when network assistance information on ATG cells reference locations is provided, otherwise N1 = 4.Otherwise, N1 = 1.NOTE 2:   For ATG UE capable of antennaArrayType-r18, for the SCC measurement, N1=1 when the network indication neighSCellMeasSkipping is set to ‘enable’ to UE and inter-band carrier aggregation within FR1 is configured and UE not capable of antennaArrayType-r18 on the other serving carrier or UE support two simultaneous separate Rx beams, or when the network indication neighSCellMeasSkipping is set to ‘enable’ to UE and SMTC occasion for PCC and SCC are not overlapped in the time domain and intra-band carrier aggregation within FR1 is configured or inter-band carrier aggregation within FR1 is configured and UE support one common Rx beam. Otherwise, N1 = 3 when network assistance information on ATG cells reference locations is provided, N1 = 4 when network assistance information on ATG cells reference locations is not provided.</td>
+  </tr>
+</table>

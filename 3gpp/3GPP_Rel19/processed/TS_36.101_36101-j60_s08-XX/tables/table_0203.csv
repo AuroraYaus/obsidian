@@ -1,0 +1,4 @@
+Test Number,Reference Channel,OCNG Pattern,,Propagation Conditions (Note 1),,Correlation Matrix and Antenna Configuration,Reference Value,,UE Category
+,,Cell 1,Cell 2,Cell 1,Cell 2,,Fraction of Maximum Throughput (%) Note 5,SNR (dB) (Note 2),
+1,R.11 TDD Note 4,OP.1 TDD,OP.1 TDD,EVA 5,EVA 5,2x2 Low,70,14.0,≥2
+"Note 1:The propagation conditions for Cell 1 and Cell2 are statistically independent.Note 2:SNR corresponds to of cell 1.Note 3:The correlation matrix and antenna configuration apply for Cell 1 and Cell 2.Note 4:Cell 1 Reference channel is modified: PDSCH other than SIB1/paging and its associated PDCCH/PCFICH are transmitted in the serving cell subframe when the subframe is overlapped with the ABS subframe of aggressor cell and the subframe is available in the definition of the reference channel.Note 5:The maximum Throughput is calculated from the total Payload in 2 subframes, averaged over 20ms.",,,,,,,,,

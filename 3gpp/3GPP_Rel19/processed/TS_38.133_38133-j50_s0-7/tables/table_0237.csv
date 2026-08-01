@@ -1,0 +1,7 @@
+Frequency Range,SCS of uplink signals (kHz),Tq,Tp
+1,15,5.5*64*Tc,5.5*64*Tc
+,30,5.5*64*Tc,5.5*64*Tc
+,60,5.5*64*Tc,5.5*64*Tc
+2,60,2.5*64*Tc,2.5*64*Tc
+,120,2.5*64*Tc,2.5*64*Tc
+NOTE:Tc is the basic timing unit defined in TS 38.211 [6],,,

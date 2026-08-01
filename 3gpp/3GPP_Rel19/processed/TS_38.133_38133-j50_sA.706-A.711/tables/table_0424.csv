@@ -1,0 +1,19 @@
+Parameter,Config,Unit,Test 1,,Test 2,
+,,,Cell 1,Cell 2,Cell 1,Cell 2
+Angle of arrival configuration,1~2,,Setup 4b according to clause A.3.15.4.2,,Setup 4b according to clause A.3.15.4.2,
+,,,AoA1 Spherical coverage,AoA2 Rx Beam Peak,AoA1 Spherical coverage,AoA2 Rx Beam Peak
+Assumption for UE beamsNote 7,1~2,,Rough,,Rough,
+Note1,1,dBm/15 kHzNote4,-90.6,-90.6,(Table B.2.3-2 Rx Beam PeakNote 8 +1.97 dB),(Table B.2.3-2 Rx Beam PeakNote 8 -3.03 dB)
+,2,,-93.7,-93.7,,
+Note1,1,dBm/SCSNote4,-81.6,-81.6,(Table B.2.3-2 Rx Beam PeakNote 8 +11.0 dB),(Table B.2.3-2 Rx Beam PeakNote 8 +6.0 dB)
+,2,,-81.7,-81.7,(Table B.2.3-2 Rx Beam PeakNote 8 +14.0 dB),(Table B.2.3-2 Rx Beam PeakNote 8 +9.0 dB)
+,1~2,dB,6.0,6.0,17.0,-1.0
+SSB_RPNote2,1,dBm/SCS,-75.6,-75.6,(Table B.2.3-2 Rx Beam PeakNote 8 +28.0 dB),(Table B.2. 3-2 Rx Beam PeakNote 8 +5.0 dB)
+,2,,-75.7,-75.7,(Table B.2.3-2 Rx Beam PeakNote 8 +31.0 dB),(Table B.2. 3-2 Rx Beam PeakNote 8 +8.0 dB)
+(SSB_RPCell 1 – SSB_RPCell 2),1~2,dB,0,,23.00,
+BBNote6,1,dB,5.26,5.96,9.53,-3.46
+,2,,4. 61,5.91,,
+IoNote2,1,dBm/95.04 MHz Note4,-50.00,-50.00,(Table B.2.3-2 Rx Beam PeakNote 8 +52.68 dB),(Table B.2.3-2 Rx Beam PeakNote 8 +33.13 dB)
+,2,,-50.09,-50.09,(Table B.2.3-2 Rx Beam PeakNote 8 +55.69 dB),(Table B.2.3-2 Rx Beam PeakNote 8 +36.14 dB)
+(Iofreq 1 – Io freq 2),1~2,dB,0,,19.55,
+"NOTE 1:Where used, interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 2:SSB_RP, Es/Iot, Io, (SSB_RPCell 2 – SSB_RPCell 1) and (Iofreq 2 – Io freq 1) levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3:VoidNOTE 4:Equivalent power received by an antenna with 0 dBi gain at the centre of the quiet zoneNOTE 5:VoidNOTE 6:Calculation of Es/IotBB includes the effect of UE internal noise up to the value assumed for the associated Refsens requirement in clause 7.3.2 of TS 38.101-2 [19], and an allowance of 1 dB for UE multi-band relaxation factor ΔMBP or ΔMBS from TS 38.101-2 [19] Table 6.2.1.3-4. NOTE 7:Information about types of UE beam is given in clause B.2.1.3, and does not limit UE implementation or test system implementationNOTE 8:The value in table B.2.3-2 is the Minimum SSB_RP for SCSSSB = 120 kHz, selected according to the operating band of Cell 2 and UE power class, without ∆MBP,n adjustment.",,,,,,

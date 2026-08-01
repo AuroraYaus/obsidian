@@ -1,0 +1,4 @@
+Parameter,Config,Unit,Value
+DRX configuration,1~3,,Off
+Propagation condition,"1,2",,AWGN+220 Hz
+,3,,AWGN+500 Hz

@@ -1,0 +1,22 @@
+Parameter,Unit,Value,,,Comment
+,,Test 1,Test 2,,
+PCell,,Cell 1,,,PCell is on RF channel 1 (PCC).
+SCell 1,,Cell 2,,,SCell 1 on RF channel 2 (SCC1).
+SCell 2,,Cell 3,,,SCell 2 on RF channel 3 (SCC2). Cell 3 is the assistance data reference cell.
+Other neighbor cell,,Cell 4,,,Neighbor cell on RF channel 3 (SCC2).
+PRS configuration index,,171 for all cells on PCC181 for all cells on SCC1191 for all cells on SCC2,,,"This corresponds to periodicity of 320 ms and PRS subframe offset of  DL subframes, as defined in TS 36.211 [16], Table 6.10.4.3-1"
+Physical cell ID PCI,,(PCI of Cell 3 – PCI of Cell 4)mod6=0,,,The PCIs of Cell 1 and Cell 2 are selected randomly. PCIs of Cell 3 and Cell 4 are selected randomly such that the relative subcarrier shifts of PRS patterns among these cells are as given by the condition
+CP length,,Normal,,,
+DRX,,ON,,,DRX parameters are further specified in Table A.8.17.10.1-3
+Radio frame receive time offset between  the cells at the UE antenna connector,s,Cell 1 to Cell 3: 1Cell 2 to Cell 3: -1Cell 4 to Cell 3: 3,,,PRS are transmitted from synchronous cells
+"Time alignment errors between cell1, cell2 and cell3",s,Time alignment error as specified in 3GPP TS 36.104 [30] clause 6.5.3.1.,,,The value of time alignment error depends upon the type of carrier aggregation.
+Expected RSTD,s,Cell 4: 2Other neighbour cells: randomly between -3 and 3,,Cell 1: -2Cell 2: 0 Cell 4: 2Other neighbour cells: randomly between -3 and 3,The expected RSTD is what is expected at the receiver. The corresponding parameter in the OTDOA assistance data specified in TS 36.355 [24] is the expectedRSTD indicator
+Expected RSTD uncertainty for all neighbour cells,s,5,,,The corresponding parameter in the OTDOA assistance data specified in TS 36.355 [24] is the expectedRSTD-Uncertainty index
+Cells in OTDOA assistance data,,16 cells in total,,,"The list includes the reference cell (received in OTDOA-ReferenceCellInfo [24]) and 15 other cells, all received in OTDOA-ProvideAssistanceData [24].Cell 1 and Cell 2 (when included) appears at random places in the first half of the neighbour cell list in the OTDOA assistance data. Cell 4 always appears at random places in the second half of the list."
+,,OTDOA neighbor cells include Cell 4 and other 14 cells on SCC2,"OTDOA neighbor cells include Cell 1 and other 3 cells on PCC, Cell 2 and other 3 cells on SCC1 and Cell 4 and other 6 cells on SCC2",,
+‘prs-SubframeOffset,,"Cells on PCC: 300Cells on SCC1: 310Cells on SCC2, except reference cell: 0",,,"Subframe offset, counted in full  subframes. The corresponding parameter in the OTDOA assistance data is prs-SubframeOffset specified in TS 36.355 [24]"
+slotNumberOffset,,"Cells on PCC: 0Cells on SCC1: 0Cells on SCC2, except reference cell: 0",,,The slot number offset at the transmitter between a neighbour cell and the assistance data reference cell. The corresponding parameter in the OTDOA assistance data is slotNumberOffset specified in TS 36.355 [24].
+PRS muting info,,Cell 1: ‘11110000’Cell 2: ‘00001111’Cell 3: ‘11110000’Cell 4: ‘00001111’,Cell 1: ‘1111111100000000’Cell 2: ‘0000000011111111’Cell 3: ‘1111111100000000’Cell 4:0000000011111111’,,Correponds to prs-MutingInfo defined in TS 36.355 [24]
+T1,s,3,,,The length of the time interval from the beginning of each test
+T2,s,1.28,2.48,,The length of the time interval that follows immediately after time interval T1
+T3,s,1.28,2.48,,The length of the time interval that follows immediately after time interval T2

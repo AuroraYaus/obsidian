@@ -1,0 +1,15 @@
+Parameter,Ch BW,Allocated RBs,UDL Configuration (Note 2),DFT-OFDM Symbols per Sub-Frame,Mod’n,Target Coding rate,"Payload size for Sub-Frame 2, 3, 7, 8",Transport block CRC,Number of code blocks per Sub-Frame (Note 1),"Total number of bits per Sub-Frame for Sub-Frame 2, 3, 7, 8","Total symbols per Sub-Frame for Sub-Frame 2, 3, 7, 8",UE Category
+Unit,MHz,,,,,,Bits,Bits,,Bits,,
+,1.4 - 20,1,1,12,16QAM,1/2,256,24,1,576,144,M2
+,1.4 - 20,2,1,12,16QAM,1/2,552,24,1,1152,288,M2
+,1.4 - 20,3,1,12,16QAM,1/2,840,24,1,1728,432,M2
+,1.4 - 20,4,1,12,16QAM,1/2,1128,24,1,2304,576,M2
+,1.4 - 20,5,1,12,16QAM,1/2,1416,24,1,2880,720,M2
+,3 - 20,6,1,12,16QAM,1/2,1736,24,1,3456,864,M2
+,3 - 20,9,1,12,16QAM,1/2,2600,24,1,5184,1296,M2
+,3 - 20,12,1,12,16QAM,1/2,3496,24,1,6912,1728,M2
+,5 - 20,15,1,12,16QAM,1/2,4264,24,1,8640,2160,M2
+,5 - 20,18,1,12,16QAM,1/2,5160,24,1,10368,2592,M2
+,5 - 20,21,1,12,16QAM,1/2,5992,24,1,12096,3024,M2
+,5 - 20,24,1,12,16QAM,1/2,6968,24,2,13824,3456,M2
+"Note 1:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).Note 2:As per Table 4.2-2 in TS 36.211 [4].",,,,,,,,,,,,

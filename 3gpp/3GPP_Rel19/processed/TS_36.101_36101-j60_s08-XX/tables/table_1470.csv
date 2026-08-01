@@ -1,0 +1,5 @@
+Test num.,Band-width,Sidelink UE,PSSCH Reference channel,Reference value,
+,,,,Fraction of maximum throughput (%),SNR (dB) of PSSCH
+1,5 / 10 MHz,1,CD.5 FDD,(NOTE 1),24.35
+,,2,CD.5 FDD,70,2.4
+NOTE 1:There is no throughput requirement for Sidelink UE 1.,,,,,

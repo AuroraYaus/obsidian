@@ -1,0 +1,10 @@
+Configuration,Description
+1,"NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode, E-UTRAN FDD"
+2,"NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode, E-UTRAN FDD"
+3,"NR 30 kHz SSB SCS, 20 MHz bandwidth, TDD duplex mode, E-UTRAN FDD"
+4,"NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode, E-UTRAN TDD"
+5,"NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode, E-UTRAN TDD"
+6,"NR 30 kHz SSB SCS, 20 MHz bandwidth, TDD duplex mode, E-UTRAN TDD"
+7,"NR 15 kHz SSB SCS, 10 MHz bandwidth, HD-FDD duplex mode. E-UTRAN FDD"
+8,"NR 15 kHz SSB SCS, 10 MHz bandwidth, HD-FDD duplex mode. E-UTRAN TDD"
+NOTE:The UE is only required to be tested in one of the supported test configurations,

@@ -1,0 +1,7 @@
+Rx Parameter,Units,NR-U CA bandwidth class
+,,"B, C, D, E, M, N, O"
+"Pw in Transmission Bandwidth Configuration, per CC",dBm,REFSENS + 14 dB
+PInterferer,dBm,Aggregated power + 22.5 – 10log10(BWChannel_CA/20) dB
+BWInterferer,MHz,20
+FInterferer (offset),MHz,10 + Foffset/-10 - Foffset
+"NOTE 1:The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3F.2-3 with PCMAX_L,f,c defined in clause 6.2.4 .NOTE 2:The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to MHz with SCS the sub-carrier spacing of the carrier closest to the interferer in MHz. The interferer is an NR signal with an SCS equal to that of the closest carrier.NOTE 3:The interferer consists of the RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1.",,

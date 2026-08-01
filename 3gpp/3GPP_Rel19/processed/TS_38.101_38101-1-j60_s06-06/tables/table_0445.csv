@@ -1,0 +1,11 @@
+Protected range(MHz),Channel bandwidth/Spectrum emission limit(dBm),Measurement bandwidth
+,"20, 40, 60, 80, [100] MHz",
+f < 5650,-27,1 MHz
+5650 ≤ f < 5700,-27 to 10,
+5700 ≤ f < 5720,10 to 15.6,
+5720 < f ≤ 5725,15.6 to 27,
+5850 ≤ f ≤ 5855,27 to 15.6,
+5855 < f ≤ 5875,15.6 to 10,
+5875 < f ≤ 5925,10 to -27,
+5925 < f,-27,
+NOTE: The minimum requirement when specified as a range denotes the emission requirement at the end points of the protected range.  The requirement within the protected range is obtained by linear interpolation between the requirements at the end points.,,

@@ -1,0 +1,4 @@
+Parameter,Unit,Value,Comment
+PDSCH parameters,,DL Reference Measurement Channel R.3 TDD,As specified in section A.3.1.1.2
+PCFICH/PDCCH/PHICH parameters,,DL Reference Measurement Channel R.10 TDD,As specified in section A.3.1.2.2
+Note 1:See Table A.8.20.4.1.1-1 for other general test parameters.Note 2:This test verifies the RRM requirement which is independent of channel bandwidth and is performed according to the principle defined in section A.3.6.1.,,,

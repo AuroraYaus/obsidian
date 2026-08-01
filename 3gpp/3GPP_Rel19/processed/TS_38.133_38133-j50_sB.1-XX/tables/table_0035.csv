@@ -1,0 +1,16 @@
+Parameter,Angle of arrival,NR operating bands,"Minimum SSB_RP Note 2, Note 3",,,,,,SSB Ês/Iot,NZP-IMR Ês/Iot
+,,,dBm / SCSSSB,,,,,,dB,dB
+,,,SCSSSB = 120 kHz,,,,,SCSSSB = 240 kHz,,
+,,,UE Power class,,,,,UE Power class,,
+,,,1,2,3,4,5,"1, 2, 3, 4, 5",,
+Conditions,Rx Beam Peak,n257,-104.3,-107.8,-106.1,-121.8+Y4,-117.4+Y5,(Value for SCSSSB = 120 kHz) +3 dB,≥0,≥0
+,,n258,-104.3,-107.8,-106.1,-121.8+Y4,-117.6+Y5,,,
+,,n259,,,-102.5,,-114.5+Y5,,,
+,,n260,-101.3,,-103.5,-119.8+Y4,,,,
+,,n261,-104.3,-107.8,-106.1,-121.8+Y4,,,,
+,Spherical coverage Note 1,n257,-96.3,-96.8,-95.2,-112.8+Z4,-109.4+Z5,(Value for SCSSSB = 120 kHz) +3 dB,≥0,≥0
+,,n258,-96.3,-96.8,-95.2,-112.8+Z4,-109.6+Z5,,,
+,,n259,,,-88.7,,-106.5+Z5,,,
+,,n260,-93.3,,-90.9,-107.8+Z4,,,,
+,,n261,-96.3,-96.8,-95.2,-112.8+Z4,,,,
+"NOTE 1:Values based on EIS spherical coverage as defined in clause 7.3.4 of TS 38.101-2 [19]. Side condition applies for directions in which EIS spherical coverage requirement is met.NOTE 2:Values specified at the Reference point to give minimum SSB Ês/Iot, with no applied noise.NOTE 3:For UEs that support multiple FR2 bands, Rx Beam Peak values are increased by ∆MBP,n and Spherical coverage values are increased by ∆MBS,n, the UE multi-band relaxation factor in dB specified in clause 6.2.1 of TS 38.101-2 [19].",,,,,,,,,,

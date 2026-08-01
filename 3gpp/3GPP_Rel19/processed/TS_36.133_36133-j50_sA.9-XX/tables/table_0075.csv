@@ -1,0 +1,31 @@
+Parameter,,Unit,Test 1,,Test 2,,Test 3,
+,,,Cell 1,Cell 2,Cell 1,Cell 2,Cell 1,Cell 2
+E-UTRA RF Channel Number,,,1,,1,,1,
+BWchannel,,MHz,5,,5,,5,
+Measurement bandwidth,,,10—15,,10—15,,10—15,
+PDSCH Reference measurement channel,,,R.18 HD-FDD,-,R.18 HD-FDD,-,R.18 HD-FDD,-
+PDSCH allocation,,,Follows R.18 HD-FDD,-,Follows R.18 HD-FDD,-,Follows R.18 HD-FDD,-
+MPDCCH Reference measurement channel,,,R.14 HD-FDD,,R.14 HD-FDD,,R.14 HD-FDD,
+OCNG Patterns,,,OP.22 FDD,OP.19 FDD,OP.22 FDD,OP.19 FDD,OP.22 FDD,OP.19 FDD
+PBCH_RA,,dB,0,0,0,0,0,0
+PBCH_RB,,,,,,,,
+PSS_RA,,,,,,,,
+SSS_RA,,,,,,,,
+PCFICH_RB,,,,,,,,
+PHICH_RA,,,,,,,,
+PHICH_RB,,,,,,,,
+MPDCCH_RA,,,,,,,,
+MPDCCH_RB,,,,,,,,
+PDSCH_RA,,,,,,,,
+PDSCH_RB,,,,,,,,
+OCNG_RANote1,,,,,,,,
+OCNG_RBNote1,,,,,,,,
+Note2,Bands FDD-M1_N,dBm/15 kHz,-103,,-83,,-109.5,
+,,dB,6,1,6,1,3,-1
+Note3,,dB,2.46,-5.97,2.46,-5.97,0.46,-5.76
+RSRPNote3,Bands FDD-M1_N,dBm/15 kHz,-97,-102,-77,-82,-106.5,-110.5
+IoNote3,Bands FDD-M1_N,dBm/4.5 MHz,-70.28,,-50.27,,-78.94,
+Propagation condition,,-,AWGN,,AWGN,,AWGN,
+Antenna Configuration,,,1x1,,1x1,,1x1,
+Timing offset to Cell 1,,ms,-,3,-,3,-,3
+"Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:Es/Iot, RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:For Band 26, the tests shall be performed with the carrier frequency of the assigned E-UTRA channel bandwidth within 865-894 MHz.Note 5:E-UTRA operating band groups are as defined in Section 3.5.",,,,,,,,

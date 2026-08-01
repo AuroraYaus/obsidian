@@ -1,0 +1,6 @@
+UL band,DL band,UL Fc,UL BW,SCS of UL band,UL RB Allocation,DL Fc,DL BW,MSD,Cross-bandInterferencesource
+,,(MHz),(MHz),(kHz),LCRB,(MHz),(MHz),(dB),
+n5,n28,834,20,15,20 (RBstart=0),788,30,3.1,ACLR2
+n28,,733,30,15,25 (RBstart=135),,,,ACLR1
+n26,n28,824,20,15,25 (RBstart=0),788,30,13.5,ACLR1
+n28,,733,30,15,25 (RBstart=135),,,,ACLR1

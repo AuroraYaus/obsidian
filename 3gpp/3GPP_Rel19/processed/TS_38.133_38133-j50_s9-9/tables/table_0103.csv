@@ -1,0 +1,4 @@
+DRX cycle,TPSS/SSS_sync_intra
+No DRX,5 x KNCSG x measCycleSCellx CSSFintra
+DRX cycle≤ 320 ms,"5 x KNCSG x max(measCycleSCell, 1.5xDRX cycle) x CSSFintra"
+DRX cycle> 320 ms,"5 x KNCSG x max(measCycleSCell, DRX cycle) x CSSFintra"

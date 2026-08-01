@@ -1,0 +1,15 @@
+Parameter,,Unit,Value,Comment
+E-UTRA RF Channel Number,,,1,
+Active cell,,,Cell 1,
+CP length,,,Normal,
+DRX,,,OFF,
+A2,Threshold,dB,-96,
+,Hysteresis,dB,0,
+,Time To Trigger,S,0,
+Filter coefficient,,,0,L3 filtering is not used
+Rmax,,,8,As defined in mPDCCH-NumRepetition in [3]
+G,,,1,As defined in mPDCCH-startSF-UESS in [3]
+T1,,S,5,
+T2,,S,5,
+Special subframe configuration,,,6,As specified in table 4.2-1 in TS 36.211. The same configuration in both cells
+Uplink-downlink configuration,,,1,As specified in table 4.2-2 in TS 36.211. The same configuration in both cells

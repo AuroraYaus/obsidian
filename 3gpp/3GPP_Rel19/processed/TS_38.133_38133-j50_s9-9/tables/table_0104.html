@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TPSS/SSS_sync_intra</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>Mpss/sss_with_ncsg x KNCSG x measCycleSCellx CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320 ms</td>
+    <td>Mpss/sss_with_ncsg x KNCSG x max(measCycleSCell, 1.5xDRX cycle) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt; 320 ms</td>
+    <td>Mpss/sss_with_ncsg x KNCSG x max(measCycleSCell, DRX cycle) x CSSFintra</td>
+  </tr>
+</table>

@@ -1,0 +1,3 @@
+BS channel bandwidth of the lowest/highest carrier received (MHz),Wanted signal mean power (dBm),Interfering signal mean power (dBm)
+"20, 30, 40, 50, 60, 70, 80, 90, 100 (Note 1)",PREFSENS + 6 dB,Wide Area BS: -55Medium Range BS: -50Local Area BS: -47
+"NOTE 1:The SCS for the lowest/highest carrier received is the lowest SCS supported by the BS for that bandwidth.NOTE 2:PREFSENS depends on the RAT. For NR, PREFSENS depends also on the BS channel bandwidth as specified in tables 7.2.2-1a, 7.2.2-2c, 7.2.2-3c.",,

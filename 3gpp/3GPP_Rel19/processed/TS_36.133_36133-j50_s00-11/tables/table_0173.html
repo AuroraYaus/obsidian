@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TCycle,i</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>max (80ms, SMTC period) x Nfreq</td>
+  </tr>
+  <tr>
+    <td>DRX cycle ≤ 320ms</td>
+    <td>1.5 * max (80ms, SMTC period, DRX cycle) x Nfreq</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320ms</td>
+    <td>DRX cycle x Nfreq</td>
+  </tr>
+</table>

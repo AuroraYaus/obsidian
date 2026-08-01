@@ -1,0 +1,22 @@
+Parameter,Unit,Cell 2,,,,,Cell 3,,,,
+,,T0,T1,T2,T3,T4,T0,T1,T2,T3,T4
+UTRA RF Channel Number,,"Randomly selected from 1, 2, 3 such that cell 2 is in the normal performance group",,,,,"Randomly selected from 4, 5, 6 such that cell 3 is in the reduced performance group",,,,
+CPICH_Ec/Ior,dB,-10,,,,,-10,,,,
+PCCPCH_Ec/Ior,dB,-12,,,,,-12,,,,
+SCH_Ec/Ior,dB,-12,,,,,-12,,,,
+PICH_Ec/Ior,dB,-15,,,,,-15,,,,
+OCNS_Ec/Ior,dB,-0.941,,,,,0.941,,,,
+,dB,+11,+11,+11,-5,+11,+11,-5,+11,+11,+11
+,"dBm/3,84 MHz",-70,,,,,-70,,,,
+CPICH_Ec/Io,dB,-10.33,-10.33,-10.33,-16.191,-10.33,-10.33,-16.19,-10.33,-10.33,-10.33
+CPICH_RSCP,dBm,-69,-69,-69,-85,-69,-69,-85,-69,-69,-69
+Propagation Condition,,AWGN,,,,,AWGN,,,,
+Qqualmin,dB,-20,,,,,-20,,,,
+Qrxlevmin,dBm,-115,,,,,-115,,,,
+QrxlevminEUTRA,dBm,-140,,,,,-140,,,,
+UE_TXPWR_MAX_RACH,dBm,21,,,,,21,,,,
+Treselection,s,0,,,,,0,,,,
+Sprioritysearch1,dB,40,,,,,40,,,,
+Sprioritysearch2,dB,0,,,,,0,,,,
+"Threshx,high (Note 1)",dB,50,,,,,50,,,,
+"Note 1:This refers to the value of Threshx, high which is included in UTRA system information, and is a threshold for the E-UTRA target cell",,,,,,,,,,,

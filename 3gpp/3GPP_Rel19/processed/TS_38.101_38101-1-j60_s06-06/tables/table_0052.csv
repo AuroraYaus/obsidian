@@ -1,0 +1,12 @@
+Modulation/Waveform,,A1(dB),A2(dB),A3(dB),A4(dB),A5(dB)
+,,Outer/Inner,Outer/Inner,Outer/Inner,Outer/Inner,Outer/Inner
+DFT-s-OFDM,PI/2 BPSK,≤ 13,≤ 11,≤ 8,≤ 8.5,≤ 3
+,QPSK,≤ 13,≤ 11,≤ 8,≤ 8.5,≤ 3
+,16 QAM,≤ 13,≤ 11,≤ 8,≤ 8.5,≤ 3
+,64 QAM,≤ 13,≤ 11,≤ 8,≤ 8.5,
+,256 QAM,≤ 13,≤ 11,≤ 8,≤ 8.5,
+CP-OFDM,QPSK,≤ 13,≤ 12.5,≤ 8,≤ 9.5,≤ 4
+,16 QAM,≤ 13,≤ 12.5,≤ 8,≤ 9.5,≤ 4
+,64 QAM,≤ 13,≤ 12.5,≤ 8,≤ 9.5,
+,256 QAM,≤ 13,≤ 12.5,≤ 8,≤ 9.5,
+NOTE 1:PC1.5 assumes 2Tx.,,,,,,

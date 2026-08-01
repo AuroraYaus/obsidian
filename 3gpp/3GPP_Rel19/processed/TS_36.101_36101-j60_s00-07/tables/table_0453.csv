@@ -1,0 +1,8 @@
+Parameter,Unit,Channel Bandwidth,,,,,
+,,1.4 MHz,3 MHz,5 MHz,10 MHz,15 MHz,20 MHz
+Pw,dBm,PREFSENS_ProSe + channel-bandwidth specific value below,,,,,
+,,,,16,13,14,16
+Puw (CW),dBm,,,-55,-55,-55,-55
+Fuw (offset forf = 15 kHz),MHz,,,2.7075,5.2125,7.7025,10.2075
+Fuw (offset forf = 7.5 kHz),MHz,,,,,,
+NOTE 1:Reference measurement channel is specified in Annex A.6.2.,,,,,,,

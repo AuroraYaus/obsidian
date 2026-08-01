@@ -1,0 +1,16 @@
+,CSI-IM.1.1 FDD,CSI-IM.1.2 FDD,CSI-IM.1.3 FDD
+Resource Type,periodic,aperiodic,periodic
+Resource Set Config,,,
+csi-IM-ResourceSetId,0,0,0
+Resource Config,,,
+csi-IM-ResourceId,0 for resource #0,10 for resource #0,2 for resource #0
+,1 for resource #1,11 for resource #1,3 for resource #1
+csi-IM-ResourceElementPattern,pattern1,pattern1,pattern1
+subcarrierLocation-p1,s0,s0,s0
+symbolLocation-p1,6 for resource #0,7 for resource #0,6 for resource #0
+,10 for resource #1,11 for resource #1,10 for resource #1
+Period (slots),slot20,n.a.,slot10
+Offset,1,n.a.,2
+startingRB,0,0,0
+nrofRBs,276 (Note 1),276 (Note 1),276 (Note 1)
+"NOTE 1:If the configured value of PRBs is larger than the width of the corresponding BWP relevant for the test case, the test Equipment shall implement CSI-RS only in the width of that BWP.",,,

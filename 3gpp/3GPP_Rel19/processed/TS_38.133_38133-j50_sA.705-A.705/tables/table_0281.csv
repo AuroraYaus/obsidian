@@ -1,0 +1,7 @@
+Parameter,Unit,Value,Comment
+NR RF Channel Number,,1,One NR radio channel is used for this test
+Active PCell,,Cell 1,PCell on RF channel number 1.
+CP length,,Normal,
+DRX,,OFF,
+T1,s,0.8,
+T2,s,0.2,

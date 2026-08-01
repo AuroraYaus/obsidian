@@ -1,0 +1,7 @@
+Parameter,Unit,,Test 1
+at antenna port,,dBm/15kHz,-93 (Note 1)
+,,dBm/15kHz,-96 (Note 2)
+NPDCCH repetition number,,subframe,1 for Test 1
+(npdcch-NumRepetitions-r13),,subframe,4 for Test 1
+(nPDCCH-startSF-USS-r13),,,2
+Note 1:This noise is applied to all subframes from the end of the NPDCCH to the end of the following NPDSCH transmission;Note 2:This noise is applied to all subframes from the end of the NPDSCH to the end of the following NPDCCH transmission.,,,

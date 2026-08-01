@@ -1,0 +1,16 @@
+Parameter,,Unit,Test 1
+Downlink power allocation,,dB,-6
+,,dB,-6 (Note 1)
+,,dB,0
+at antenna port,,dBm/15kHz,-98
+Cell-specific reference signals,,,"Antenna ports 0,1,2,3"
+PDSCH transmission mode,,,4
+PDSCH rank,,,4
+Precoding granularity,,PRB,50
+PMI delay,,ms,10 or 11
+Reporting interval,,ms,1 or 4
+Reporting mode,,,PUSCH 3-1
+CodeBookSubsetRestriction bitmap,,,0xFFFF000000000000
+Uplink-Downlink Configuration,,,1
+Special subframe configuration,,,4
+Note 1:.,,,

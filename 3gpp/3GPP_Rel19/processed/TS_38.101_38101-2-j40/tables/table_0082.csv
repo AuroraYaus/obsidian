@@ -1,0 +1,2 @@
+NR CA Band,Value (dB),Condition
+CA_n257A-n259A,"Max(0, 6 - 10*log10(Max(1.0, LRB,min*12*SCS/1e6)))","LRB,min = Min (LRB,n257 , LRB,n259 ), where LRB,n is the number of non-zero power UL RBs in band ‘n’"

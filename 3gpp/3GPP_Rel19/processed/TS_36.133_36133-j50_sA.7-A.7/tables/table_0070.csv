@@ -1,0 +1,17 @@
+Parameter,Unit,Value,
+,,Test 1,Test 2
+NB-IoT Operation mode,,In-band,In-band
+DRX,,OFF,ON
+Special subframe configuration,,6,
+Uplink-downlink configuration,,1,
+NPRACH configuration,,NPRACH.R-2,
+NPDCCH repetition level,,32,32
+npdcch-StartSF-USS Note 2,,v2,v2
+npdcch-NumRepetitions-r13 Note 2,,r32,r32
+NPUSCH resource units,,1,1
+NPUSCH repetition level,,128,128
+NPUSCH subcarrier spacing,kHz,15,15
+NPUSCH number of subcarriers,,1,1
+NPUSCH modulation,, /4QPSK, /4QPSK
+NPUSCH Transport block size,Bits,40,40
+Note 1:DRX related parameters are defined in Table A.7.1.28.1-4.Note 2:For further information see clause 6.7.3.2 in TS 36.331 [2].,,,

@@ -1,0 +1,44 @@
+UL band,DL band,UL BW,SCS of UL band,UL RB Allocation,DL BW,MSD,UL/DL fc condition,UL/DL harmonic order
+,,(MHz),(kHz),LCRB,(MHz),(dB),,
+n41,5,10,15,25,5,27.3,NOTE 4,UL1/DL3
+n41,26,10,15,25,5,26.8,NOTE 4,UL1/DL3
+n41,18,10,15,25,5,29.3,NOTE 4,UL1/DL3
+n77,2,10,15,25,5,9.2,NOTE 6,UL1/DL2
+n77,2,10,15,25,20,4.5,NOTE 6,UL1/DL2
+n77,3,10,15,25,5,8.1,NOTE 6,UL1/DL2
+n77,3,10,15,25,20,3.8,NOTE 6,UL1/DL2
+n77,12,10,15,25,5,34,NOTE 1,UL1/DL5
+n77,12,10,15,25,10,31,NOTE 1,UL1/DL5
+n77,13,10,15,25,5,34,NOTE 1,UL1/DL5
+n77,13,10,15,25,10,31,NOTE 1,UL1/DL5
+n77,14,10,15,25,5,34,NOTE 1,UL1/DL5
+n77,14,10,15,25,10,31,NOTE 1,UL1/DL5
+n77,19,10,15,25,5,9.8,NOTE 6,UL1/DL2
+n77,19,10,15,25,15,5.9,NOTE 6,UL1/DL2
+n77,28,10,15,25,5,34,NOTE 1,UL1/DL5
+n77,28,10,15,25,20,26.5,NOTE 1,UL1/DL5
+n772,29,10,15,25,5,34,NOTE 1,UL1/DL5
+n772,29,10,15,25,10,31,NOTE 1,UL1/DL5
+n77,40,10,15,12,5,17.7,NOTE 4,UL2/DL3
+n77,40,10,15,12,20,11.9,NOTE 4,UL2/DL3
+n77,41,10,15,12,5,17.7,NOTE 4,UL2/DL3
+n77,41,10,15,12,20,11.9,NOTE 4,UL2/DL3
+n78,3,10,15,25,5,8.1,NOTE 6,UL1/DL2
+n78,3,10,15,25,20,3.8,NOTE 6,UL1/DL2
+n78,8,10,15,25,5,8.1,NOTE 5,UL1/DL4
+n78,8,10,15,25,10,5.7,NOTE 5,UL1/DL4
+n78,5,10,15,25,5,8.1,NOTE 5,UL1/DL4
+n78,13,10,15,25,5,34,NOTE 1,UL1/DL5
+n78,19,10,15,25,5,9.8,NOTE 5,UL1/DL4
+n78,19,10,15,25,15,5.9,NOTE 5,UL1/DL4
+n78,28,10,15,25,5,34,NOTE 1,UL1/DL5
+n78,28,10,15,25,20,26.5,NOTE 1,UL1/DL5
+n78,40,10,15,12,5,17.7,NOTE 4,UL2/DL3
+n78,40,10,15,12,20,11.9,NOTE 4,UL2/DL3
+n78,41,10,15,12,5,17.7,NOTE 4,UL2/DL3
+n78,41,10,15,12,20,11.9,NOTE 4,UL2/DL3
+n79,19,10,15,25,5,32.5,NOTE 1,UL1/DL5
+n79,19,10,15,25,15,27.7,NOTE 1,UL1/DL5
+n79,21,10,15,25,5,42.3,NOTE 3,UL1/DL3
+n79,21,10,15,25,15,37.5,NOTE 3,UL1/DL3
+"NOTE 1:The requirements should be verified for DL EARFCN of the victim (lower) band (superscript LB) such that  and   with  the DL carrier frequency in the lower band and  the UL carrier frequency and  the channel bandwidth configured in the higher band, both in MHz.NOTE 2:For a UE which supports this band combination only when the Band n77 frequency range restriction defined in NOTE 12 of Table 5.2-1 from TS 38.101-1 applies, the MSD test point(s) cannot be verified for the band combination and the test point(s) can be skipped.NOTE 3: The requirements should be verified for DL EARFCN or NR ARFCN of the victim (lower) band (superscript LB) such that   and   with  the DL carrier frequency in the lower band and  the UL carrier frequency and  the channel bandwidth in the higher band, both in MHz.NOTE 4: The requirements should be verified for DL EARFCN of the  victim (lower) band (superscript LB) such that  and  with the DL carrier frequency in the lower band and  the UL carrier frequency  and  the channel bandwidth in the higher band, both in MHz.NOTE 5:The requirements should be verified for UL NR-ARFCN of the aggressor (higher) band (superscript HB) such that   in MHz and  with  the carrier frequency in the victim (lower) band and  the channel bandwidth configured in the higher bandNOTE 6:The requirements should be verified for DL EARFCN or NR ARFCN of the victim (lower) band (superscript LB) such that  and    with   the DL carrier frequency in the lower band and  the UL carrier frequency in the higher band, both in MHz. NOTE 7:The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.FUL_lowHB+BWChannelHB/2≤fULHB≤FUL_highHB-BWChannelHB/2fULHBBWChannelHBFUL_lowHB+BWChannelHB/2≤fULHB≤FUL_highHB-BWChannelHB/2fULHBBWChannelHB fDLLB=fULHB/0.150.1FUL_lowHB+BWChannelHB/2≤fULHB≤FUL_highHB-BWChannelHB/2fULHBBWChannelHBFUL_lowHB+BWChannelHB/2≤fULHB≤FUL_highHB-BWChannelHB/2fDLLB=fULHB/0.20.1FUL_lowHB+BWChannelHB/2≤fULHB≤FUL_highHB-BWChannelHB/2fULHB",,,,,,,,

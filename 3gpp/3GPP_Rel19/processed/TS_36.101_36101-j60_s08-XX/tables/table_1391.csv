@@ -1,0 +1,5 @@
+PQI set index,Parameters in each PQI set,,DL transmission hypothesis for each PQI Set,
+,NZP CSI-RS Index (For quasi co-location),ZP CSI-RS configuration,TP 1,TP 2
+PQI set 0,CSI-RS 0,ZP CSI-RS 0,PDSCH,Blank
+PQI set 1,CSI-RS 1,ZP CSI-RS 1,Blank,PDSCH
+PQI set 2,CSI-RS 0 for CW1CSI-RS 1 for CW2,ZP CSI-RS 0,PDSCH,PDSCH

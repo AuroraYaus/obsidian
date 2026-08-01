@@ -1,0 +1,12 @@
+"Reported Quantity Value,path_i","Measured Quantity Value,path",Unit
+,,
+path_00000,path < -8175,Tc
+path_00001,-8175  path < -8174.5,Tc
+path_00002,-8174.5  path < -8174,Tc
+,,…
+path_16350,-0.5  path < 0,Tc
+path_16351,0  path < 0.5,Tc
+…,…,…
+path_32699,8174  path < 8174.5,Tc
+path_32700,8174.5  path < 8175,Tc
+path_32701,8175  path,Tc

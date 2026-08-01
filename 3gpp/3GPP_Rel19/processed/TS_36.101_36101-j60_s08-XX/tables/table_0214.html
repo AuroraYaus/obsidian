@@ -1,0 +1,78 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Test 1</td>
+    <td>Test 2</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td>-6</td>
+    <td>-6</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>-6 (Note 1)</td>
+    <td>-6 (Note 1)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>3</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td colspan="2">at antenna port</td>
+    <td>dBm/15kHz</td>
+    <td>-98</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td colspan="2">Precoding granularity</td>
+    <td>PRB</td>
+    <td>6</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td colspan="2">PMI delay (Note 2)</td>
+    <td>ms</td>
+    <td>10 or 11</td>
+    <td>10 or 11</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting interval</td>
+    <td>ms</td>
+    <td>1 or 4 (Note 3)</td>
+    <td>1 or 4 (Note 3)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting mode</td>
+    <td></td>
+    <td>PUSCH 1-2</td>
+    <td>PUSCH 3-1</td>
+  </tr>
+  <tr>
+    <td colspan="2">CodeBookSubsetRestriction bitmap</td>
+    <td></td>
+    <td>0000000000000000000000000000000000000000000000001111111111111111</td>
+    <td>0000000000000000000000000000000000000000000000001111111111111111</td>
+  </tr>
+  <tr>
+    <td colspan="2">ACK/NACK feedback mode</td>
+    <td></td>
+    <td>Multiplexing</td>
+    <td>Multiplexing</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH transmission mode</td>
+    <td></td>
+    <td>4</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td colspan="5">Note 1:.Note 2:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).Note 3:For Uplink - downlink configuration 1 the reporting interval will alternate between 1ms and 4ms.</td>
+  </tr>
+</table>

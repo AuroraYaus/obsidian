@@ -1,0 +1,97 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Test configuration</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Initial condition</td>
+    <td>Active cell</td>
+    <td></td>
+    <td>1, 2, 3, 4, 5, 6</td>
+    <td>Cell 1</td>
+    <td rowspan="2">The UE camps on Cell 1 in the initial phase, it fulfills Low Mobility relaxation measurements criterion, and during T1 period the UE reselects to Cell 2</td>
+  </tr>
+  <tr>
+    <td>Neighbour cells</td>
+    <td></td>
+    <td>1, 2, 3, 4, 5, 6</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td rowspan="2">T1 end condition</td>
+    <td>Active cell</td>
+    <td></td>
+    <td>1, 2, 3, 4, 5, 6</td>
+    <td>Cell 2</td>
+    <td rowspan="2">The UE shall perform reselection to Cell 2 during T1</td>
+  </tr>
+  <tr>
+    <td>Neighbour cells</td>
+    <td></td>
+    <td>1, 2, 3, 4, 5, 6</td>
+    <td>Cell 1</td>
+  </tr>
+  <tr>
+    <td rowspan="2">T2 end condition</td>
+    <td>Active cell</td>
+    <td></td>
+    <td>1, 2, 3, 4, 5, 6</td>
+    <td>Cell 1</td>
+    <td rowspan="2">The UE shall perform reselection to Cell 1 with higher priority during T2 for iteration of the tests.</td>
+  </tr>
+  <tr>
+    <td>Neighbour cells</td>
+    <td></td>
+    <td>1, 2, 3, 4, 5, 6</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Access Barring Information</td>
+    <td>-</td>
+    <td>1, 2, 3, 4, 5, 6</td>
+    <td>Not Sent</td>
+    <td>No additional delays in random access procedure.</td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX cycle length</td>
+    <td>s</td>
+    <td>1, 2, 3, 4, 5, 6</td>
+    <td>0.64</td>
+    <td>The value shall be used for all cells in the test.</td>
+  </tr>
+  <tr>
+    <td colspan="2">NR PRACH configuration index</td>
+    <td></td>
+    <td>1, 2, 3, 4, 5, 6</td>
+    <td>102</td>
+    <td>The detailed configuration is specified in TS 38.211 [6] clause 6.3.3.2</td>
+  </tr>
+  <tr>
+    <td rowspan="2" colspan="2">E-UTRAN PRACH configuration index</td>
+    <td rowspan="2"></td>
+    <td>1, 2, 3</td>
+    <td>53</td>
+    <td rowspan="2">As specified in table 5.7.1-2 in TS 36.211 [23]</td>
+  </tr>
+  <tr>
+    <td>4, 5, 6</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td>1, 2, 3, 4, 5, 6</td>
+    <td>24</td>
+    <td>T1 needs to be defined so that cell re-selection reaction time is taken into account.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td>1, 2, 3, 4, 5, 6</td>
+    <td>24</td>
+    <td>T2 needs to be defined so that cell re-selection reaction time is taken into account.</td>
+  </tr>
+</table>

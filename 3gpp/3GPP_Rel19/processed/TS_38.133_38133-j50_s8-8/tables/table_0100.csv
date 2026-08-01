@@ -1,0 +1,6 @@
+,NR Slot length (ms),Uplink Tx switching period Note1,,
+,,35µs,140µs,210µs
+0,1,2,3,4
+1,0.5,3,6,8
+2,0.25,4,10,14
+Note 1: Uplink Tx switching period depends on UE capability.Note 2: RTD=9 µs is assumed to derive the DL interruption length.,,,,

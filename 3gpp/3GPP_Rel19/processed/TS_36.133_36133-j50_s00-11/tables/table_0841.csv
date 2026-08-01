@@ -1,0 +1,9 @@
+NPDCCH Repetition,Pm-Dsg (%),Conditions,,,,
+,,Ês/Iot,Io NOTE 1 range,,,
+,,,E-UTRA/NR operating band groups NOTE 2,Minimum Io,,Maximum Io
+,,dB,,dBm/15kHz,dBm/BWChannel,dBm/BWChannel
+R NOTE 1,≤1,-6 dB,NFDD_G,-122.9,N/A,-70
+R/4 NOTE 1,>1,-6 dB,NFDD_G,-122.9,N/A,-70
+R NOTE 1,≤1,-15 ≤ Ês/Iot ≤ -6 dB,NFDD_G,- 122.9,N/A,-70
+R/8 NOTE 1,>1,-15 ≤ Ês/Iot ≤ -6 dB,NFDD_G,- 122.9,N/A,-70
+NOTE 1:R is the reported NPDCCH repetition level that UE has reported in CQI-NPDCCH-NB or CQI-NPDCCH-Short-NB. NOTE 2:Io is assumed to have constant EPRE across the bandwidth.NOTE 3:E-UTRA/NR operating band groups are as defined in Section 3.5.,,,,,,

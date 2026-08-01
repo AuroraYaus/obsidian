@@ -1,0 +1,8 @@
+Parameter,Unit,,
+Reference channel,,R.sTTI.10 TDD,R.sTTI.11 TDD
+Number of transmitter antennas,,4,2
+Channel bandwidth,MHz,10,10
+Aggregation level,SCCE,2,8
+DCI Format,,7-1C,7-1F
+Cell ID,,0,0
+Payload (without CRC),Bits,34,30

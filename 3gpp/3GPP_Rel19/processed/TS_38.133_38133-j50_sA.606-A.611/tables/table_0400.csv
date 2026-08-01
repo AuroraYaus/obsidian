@@ -1,0 +1,19 @@
+Parameter,Unit,Test configuration,Cell 1,
+,,,T1,T2
+TDD configuration,,1,TDDConf.2.4,
+SBFD configuration,,1,SBFD.2 FR1,
+PDSCH RMC configuration,,1,SR.2.1 TDD,
+PUSCH parameters,,1,N/A,
+RMSI CORESET RMC configuration,,1,CR.2.1 TDD,
+Dedicated CORESET RMC configuration,,1,CCR.2.1 TDD,
+OCNG Patterns Note 3,,1,OP.1,
+TRS Configuration,,1,TRS.1.2 TDD,
+Initial BWP configuration,,1,DLBWP.0.1 ULBWP.0.1,
+Active DL BWP configuration,,1,DLBWP.1.1,
+Active UL BWP configuration,,1,ULBWP.1.1,
+on L1-CLI-RSSI measurement resource Note 2,dBm/30 kHz,1,-113,-105
+on L1-CLI-RSSI measurement resource Note 2,dBm/SCS,1,-113,-105
+Io on L1-CLI-RSSI measurement resource,dBm/98.28 MHz,1,-78.94,-70.94
+Io on L1-CLI-RSSI measurement resource,dBm/1.08 MHz,1,-97.44,-89.44
+Propagation Condition,,1,AWGN,
+NOTE 1:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:OCNG is not transmitted in the CLI-RSSI measurement resources.,,,,

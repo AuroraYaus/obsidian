@@ -1,0 +1,28 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,1,
+Channel Bandwidth (BWchannel),MHz,5,
+Active cell,,Cell 1,E-UTRA FDD Cell1 on RF channel number 1
+Uplink/Downlink Configuration,,Config 0,
+Special Subframe Configuration,,6,
+CP length of Cell 1,,Normal,
+drx-Configuration,,DRX_P1,As specified in Table A.3.12.2-1
+ProSe Direct Discovery resource pool configuration,,As specified in Table A.3.12.4-3(Configuration #3),IE values unless specified otherwise in this test.
+PDCCH/PCFICH/PHICH Reference measurement channelNote1,,R.11 TDD,
+OCNG PatternNote2,,OP.10 TDD,
+PBCH_RA,dB,0,
+PBCH_RB,,,
+PSS_RA,,,
+SSS_RA,,,
+PCFICH_RB,,,
+PHICH_RA,,,
+PHICH_RB,,,
+PDCCH_RA,,,
+PDCCH_RB,,,
+OCNG_RANote3,,,
+OCNG_RBNote3,,,
+,dBm/15 kHz,-98,
+,dB,3,
+RSRP Note4,dBm/15 kHz,-95,
+SCH_RP Note 4,dBm/15 kHz,-95,
+Propagation condition,,AWGN,
+"Note 1:For the reference measurement channels, see clause A.3.1.Note 2:For the OCNG pattern, see clause A.3.2.Note 3:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 4:RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.",,,

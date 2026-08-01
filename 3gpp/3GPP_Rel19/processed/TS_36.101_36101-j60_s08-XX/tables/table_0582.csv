@@ -1,0 +1,45 @@
+Test,Measurement channel,Reference value
+,,TB success rate [%]
+1,R.68 FDD,85
+2,R.68-1 FDD,85
+2A,R.68-1 FDD for 15MHz CCR.68-3 FDD for 5MHz CC,85
+3,R.68-2 FDD for 10MHz CCR.68-1 FDD for 15MHz CC,85
+3A,R.68 FDD for 20MHz CCR.68-3 FDD for 5MHz CC,85
+4,R.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+6,R.68-1 FDD for 15MHz CCR.68 FDD for 20MHz CC,85
+7,R.68 FDD,85
+8,R.68 FDD,85
+9,R.68-1 FDD for 15MHz CCR.68 FDD for 20MHz CC,85
+10,R.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+11,R.68-1 FDD for 15MHz CCR.68 FDD for 20MHz CC,85
+12,R.68-2 FDD for 10MHz CCR.68-1 FDD for 15MHz CCR.68 FDD for 20MHz CC,85
+13,R.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+14,R.68-2 FDD for 10MHz CCR.68-1 FDD for 15MHz CC,85
+15,R.68-3 FDD for 5MHz CCR.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+15A,R.68-3 FDD for 5MHz CCR.68-1 FDD for 15MHz CCR.68 FDD for 20MHz CC,85
+15B,R.68-3 FDD for 5MHz CCR.68-2 FDD for 10MHz CC,85
+15C,R.68-3 FDD for 5MHz CCR.68 FDD for 20MHz CC,85
+15D,R.68-2 FDD for 10MHz CC,85
+15E,R.68-3 FDD for 5MHz CCR.68-2 FDD for 10MHz CC,85
+16,R.68 FDD,85
+17,R.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+18,R.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+18A,R.68-3 FDD for 5MHz CCR.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+18B,R.68-3 FDD for 5MHz CCR.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+18C,R.68-1 FDD for 15MHz CCR.68 FDD for 20MHz CC,85
+18D,R.68-1 FDD for 15MHz CCR.68 FDD for 20MHz CC,85
+18E,R.68-2 FDD for 10MHz CCR.68-1 FDD for 15MHz CCR.68 FDD for 20MHz CC,85
+18F,R.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+18G,R.68-3 FDD for 5MHz CCR.68 FDD for 20MHz CC,85
+18H,R.68-3 FDD for 5MHz CCR.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+18I,R.68-2 FDD for 10MHz CC,85
+19,R.68 FDD,85
+19A,R.68-1 FDD for 15MHz CCR.68 FDD for 20MHz CC,85
+19B,R.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+19C,R.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+19D,R.68-3 FDD for 5MHz CCR.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+19E,R.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+19F,R.68-2 FDD for 10MHz CCR.68 FDD for 20MHz CC,85
+20,R.68 FDD,85
+21,R.68 FDD,85
+"Note 1:For 2 layer transmissions, 2 transport blocks are received within a TTI.Note 2:The TB success rate is defined as TB success rate = 100%*NDL_correct_rx/ (NDL_newtx + NDL_retx), where NDL_newtx is the number of newly transmitted DL transport blocks, NDL_retx is the number of retransmitted DL transport blocks, and NDL_correct_rx is the number of correctly received DL transport blocks.",,

@@ -1,0 +1,4 @@
+TPC command,UL channel,Aggregate power tolerance within 21 ms
+0 dB,PUCCH,±2.5 dB
+0 dB,PUSCH,±3.5 dB
+NOTE: The UE transmission gap is 4 ms. TPC command is transmitted via PDCCH 4 subframes preceding each PUCCH/PUSCH transmission.,,

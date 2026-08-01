@@ -1,0 +1,16 @@
+Parameter,Unit,Test configuration,Value,Comment
+NR RF Channel Number,,Config 1,1: Cell 1 and Cell 2,One TDD carrier frequency is used for the NR cells.
+Active cell,,Config 1,NR Cell 1 (PCell),Cell 1 is the PCell and the DL-AoD reference cell in the positioning assistance data.
+Neighbour cell,,Config 1,NR Cell 2,Cell 2 is a neighbour cell in the positioning assistance data.
+PPW configuration,,Config 1,PPW.1,As specified in clause A.3.33
+SMTC parameters,,Config 1,SMTC.1,As specified in clause A.3.11
+SSB parameters,,Config 1,SSB.3 FR2,As specified in clause A.3.10.2
+CP length,,Config 1,Normal,
+DRX,,Config 1,OFF,DRX is not used
+Time offset between serving and neighbour cells,s,Config 1,"0.58, 2.0 or 3 Note 1",
+Expected RSTD,s,Config 1,0,
+Expected RSTD uncertainty,s,Config 1,Same as time offset between serving and neighbour cells,
+Number of cells provided in assistance data,,Config 1,4,Including the reference cell
+T1,s,Config 1,5,
+T2,s,Config 1,7,
+"NOTE 1:If UE indicates support of CP length for the receive time difference threshold, the time offset is set to 0.58 us; If UE indicates support of 1/4 symbol length for the receive time difference threshold, the time offset is set to 2.0 us, otherwise 3 us.",,,,

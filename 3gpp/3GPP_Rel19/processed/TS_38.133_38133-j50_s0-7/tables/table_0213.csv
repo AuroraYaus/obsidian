@@ -1,0 +1,5 @@
+Serving cell,FR of target NR,Tidentify_intra_NR [ms],
+SSB Ês/Iot (dB),cell,Known NR cell,Unknown NR cell
+≥ -8,FR2,N/A,"MAX (1000 ms, 10 xN2 x TSMTC))"
+,,,
+"NOTE 1:The UE is not required to successfully identify a cell on any NR frequency layer when TSMTC > 20 ms and serving cell SSB Ês/Iot < -8 dB.NOTE 2:When SMTC <= 40 ms, N2=2 when highSpeedMeasFlagFR2-r17 = set1; N2=6 when highSpeedMeasFlagFR2-r17 = set2.",,,

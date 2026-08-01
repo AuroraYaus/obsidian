@@ -1,0 +1,4 @@
+NR CA configuration,Uplink CA configuration or single uplink carrier,NR Band,Channel bandwidth (MHz) (NOTE 1),Bandwidth combination set
+CA_n3A-n39A,n3n39,n3,"5, 10, 15, 20, 25, 30",0
+,,n39,"5, 10, 15, 20, 25, 30, 35, 40",
+"NOTE 1:For each channel bandwidth of each component carrier, refer to Table 5.3.5-1 for the applicable SCSs. For a given band, not all UE channel bandwidths support the same SCSs.",,,,

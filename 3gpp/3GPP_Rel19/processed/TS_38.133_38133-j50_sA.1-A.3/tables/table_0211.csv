@@ -1,0 +1,22 @@
+Field,Value,Comment
+SL-UE-SelectedConfig-r16,,
+sl-PSSCH-TxConfigList-r16,,1 entry
+SL-PSSCH-TxConfig-r16[1],,Entry 1
+sl-TypeTxSync-r16,Not present,"When this filed is absent, the configuration is applicable for all synchronization reference types."
+sl-ThresUE-Speed-r16,kmph200,"UE shall apply the parameters in sl-ParametersAboveThres-r16 if UE absolute speed is higher than 200 km/h, otherwise UE shall apply the parameters in sl-ParametersBelowThres-r16"
+sl-ParametersAboveThres-r16,,
+sl-MinMCS-PSSCH-r16,0,The minimum MCS index value can be used for PSSCH transmission.
+sl-MaxMCS-PSSCH-r16,15,The maximum MCS index value can be used for PSSCH transmission.
+sl-MinSubChannelNumPSSCH-r16,1,The minimum number of subchannels can be used for PSSCH transmission.
+sl-MaxSubchannelNumPSSCH-r16,1,The maximum number of subchannels can be used for PSSCH transmission.
+sl-MaxTxTransNumPSSCH-r16,1,The maximum transmission number for PSSCH (including new transmission and retransmission).
+sl-MaxTxPower-r16,Not present,Not applicable
+sl-ParametersBelowThres-r16,,
+sl-MinMCS-PSSCH-r16,4,Same as above
+sl-MaxMCS-PSSCH-r16,25,Same as above
+sl-MinSubChannelNumPSSCH-r16,1,Same as above
+sl-MaxSubchannelNumPSSCH-r16,1,Same as above
+sl-MaxTxTransNumPSSCH-r16,1,Same as above
+sl-MaxTxPower-r16,Not present,Same as above
+sl-ProbResourceKeep-r16,v0dot8,The probability of UE keeping current resource is 80% when the resource reselection counter reaches 0 (see TS 38.321 [7]).
+sl-ReselectAfter-r16,n1,Resource reselection is triggered after 1 sidelink transmission is skipped (see TS 38.321 [7]).

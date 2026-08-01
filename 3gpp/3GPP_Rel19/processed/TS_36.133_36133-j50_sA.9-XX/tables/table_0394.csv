@@ -1,0 +1,7 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,1,Band 47 TDD
+Channel Bandwidth (BWchannel),MHz,10,
+V2X sidelink communication configuration,,As specified in Table A.3.22.2-2(Configuration #2),IE values unless specified otherwise in this test.
+PSCCH Reference Measurement Channel,,CC.1A,Defined in Table A.3.22.3-1
+PSSCH Reference Measurement Channel,,CD.1A,Defined in Table A.3.22.3-2
+Propagation condition,,AWGN,

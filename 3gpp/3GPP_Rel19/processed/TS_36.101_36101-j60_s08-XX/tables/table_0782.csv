@@ -1,0 +1,5 @@
+,Bandwidth and MCS,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category,DL UE category
+,,,,,,Fraction of MaximumThroughput (%),SNR (dB),,
+1,10 MHz64 QAM,R.36 TDD,OP.1 TDD,EPA5,4x4 Low,70,10.4,≥2,≥6
+2,10 MHz256QAM,R.72 TDD,OP.1 TDD,EPA5,4x4 Low,70,17.5,11-12,≥11
+3,10MHz 1024QAM,R.102 TDD,OP.1 TDD,EPA5,4x4 Low,70,28.6,TBD,"20, ≥ 22"

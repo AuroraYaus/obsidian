@@ -1,0 +1,8 @@
+Attribute,Out-of-sync
+DCI format,6-1A
+Starting OFDM symbols,4; Bandwidth = 1.4MHz
+Maximum MPDCCH repetition level,Rmax Note1
+Aggregation level (ECCE),L’max Note2
+MPDCCH Transmission type,Distributed
+Power offset between CRS and DMRS antenna ports of MPDCCH,0dB
+"Note 1:Rmax is determined by the configurable parameter mPDCCH-NumRepetition defined in 36.331 and Rmax>1 to trigger Out-of-snych.Note 2:L’max is derived from the configurable parameter numberPRB-Pairs defined in 36.331. L’max is 24, 16 and 8, if numberPRB-Pairs is 6, 4 and 2, respectively.",

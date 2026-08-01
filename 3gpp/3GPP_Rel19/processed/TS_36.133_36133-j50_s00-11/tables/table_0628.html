@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Condition NOTE1,2,3,4</td>
+    <td>TSSB_time_index_NR_cca</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>Max(120ms, (3 + Lind,gaps) max(MGRP, SMTC period))  CSSFNR,EN-DC</td>
+  </tr>
+  <tr>
+    <td>DRX cycle ≤ 320ms</td>
+    <td>Max(120ms, ceil((3 + Lind,gaps)  1.5)  max(MGRP, SMTC period, DRX cycle))  CSSFNR,EN-DC</td>
+  </tr>
+  <tr>
+    <td>DRX cycle &gt; 320ms</td>
+    <td>(3 + Lind,gaps)  DRX cycle  CSSFNR,EN-DC</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1: DRX or non DRX requirements apply according to the conditions described in clause 3.6.1  of TS 38.133 [50]NOTE 2: In EN-DC operation, the parameters, timers and scheduling requests referred to in clause 3.6.1 of TS 38.133 [50] are for the secondary cell group. The DRX cycle is the DRX cycle of the secondary cell group.NOTE 3:Lind,gaps is the number of SMTC occasions not available at the UE during TSSB_time_index_NR_cca, where Lind,gaps ≤ Lind,gaps,max. When configured with DRX, the UE is not required to determine the availability of SMTC occasions more frequent than once per DRX cycle. When configured with measurement gaps, the UE is not required to determine the availability of SMTC occasions more frequent than once during MGRP.NOTE 4:Lind,gaps,max = 5 for max(DRX cycle, SMTC period, MGRP) ≤ 40 ms, Lind,gaps,max = 3 for max(DRX cycle, SMTC period, MGRP) ≤ 320 ms, and Lind,gaps,max = 2 for DRX cycle &gt; 320 ms.</td>
+  </tr>
+</table>

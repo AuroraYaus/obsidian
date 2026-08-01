@@ -1,0 +1,6 @@
+DRX cycle,T SSB_measurement_period_intra
+No DRX,"max(200 ms, ceil( 5 x Kgap ) x max(MGRP, SMTC period)) Note 1 x CSSFintra"
+DRX cycle≤ 160 ms,"max(200 ms, ceil(M2Note 2 x 5 x Kgap) x max(MGRP, SMTC period,DRX cycle)) x CSSFintra"
+160 ms < DRX cycle≤ 320 ms,"max(200 ms, ceil(M2Note 2 x 4 x Kgap) x max(MGRP, DRX cycle)) x CSSFintra"
+DRX cycle>320 ms,"Ceil(Y Note 3 x Kgap ) x max(MGRP, DRX cycle) x CSSFintra"
+"NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identifiedNOTE 2:M2 = 1.5 if SMTC periodicity > 40 ms, otherwise M2=1NOTE 3:Y=3 when SMTC <= 40 ms, Y=5 when SMTC > 40 msNOTE 4:When highSpeedMeasFlag-r16 is configured, the requirements apply only to UE supporting either measurementEnhancement-r16 or intraNR-MeasurementEnhancement-r16 on measurements of the primary component carrier and do not apply to measurements of a secondary component carrier with active SCell.NOTE 5:For a UE supporting concurrent GAPs, if multiple concurrent GAPs are configured, the MGRP is the periodicity of the activated Pre-MG or the MG pattern associated to the intra-frequency layer.NOTE 6:When highSpeedMeasCA-Scell-r17 is configured, the requirements also apply to UE on measurements of secondary component carrier with active SCell.",

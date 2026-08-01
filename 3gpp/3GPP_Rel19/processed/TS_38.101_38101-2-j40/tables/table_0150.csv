@@ -1,0 +1,4 @@
+Frequency range,Maximum ripple (dB)
+|FUL_Meas – F_center| ≤ X MHz (Range 1),6 (p-p)
+|FUL_Meas – F_center| > X MHz(Range 2),9 (p-p)
+"NOTE 1:FUL_Meas refers to the sub-carrier frequency for which the equalizer coefficient is evaluatedNOTE 2:F_center refers to the center frequency of the CCNOTE 3:X, in MHz, is equal to 30 % of the CC bandwidth",

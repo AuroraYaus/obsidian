@@ -1,0 +1,8 @@
+ΔfOOB(MHz),5MHz,10MHz,15 MHz,20 MHz,Measurement bandwidth (unless otherwise stated)
+0-0.1,-15,-18,-20,-21,30 kHz
+0.1-6,-13,-13,-13,-13,100 kHz
+6-10,-251,-13,-13,-13,100 kHz
+10-15,,-251,-13,-13,100 kHz
+15-20,,,-251,-13,100 kHz
+20-25,,,,-25,1 MHz
+Note 1:The measurement bandwidth shall be 1 MHz,,,,,

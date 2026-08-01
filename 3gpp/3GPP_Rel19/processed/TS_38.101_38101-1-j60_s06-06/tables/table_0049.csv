@@ -1,0 +1,9 @@
+"Channel Bandwidth, (MHz)","Carrier Centre Frequency, Fc, (MHz)",RBstart*12*SCS(MHz),LCRB*12*SCS(MHz),A-MPR
+30MHz,Fc=2560-2560.020,≤5.04,≤1.44,A1
+,,">5.04, ≤9.6",≤1.44,A2
+,,>24.48,≤1.44,A3
+,,≤9.6,>21,A2
+,,,">14.4, <21",A4
+,,≤6.12,">10, ≤14.4",A4
+,,,">1.44, <10",A2
+NOTE:The A-MPR values are listed in Table 6.2.3.18-2.,,,,

@@ -1,0 +1,3 @@
+Gap pattern ID,Cell identification delay (Tidentify_inter_UE cat M1_NC),Measurement delay (Tmeasure_inter_UE cat M1_NC_NC)
+0,1.44 * Kinter_M1_NC * Ksatellite_inter_i  seconds,480 * Kinter_M1_NC *  Ksatellite_inter_i  ms
+1,2.88 * Kinter_M1_NC * Ksatellite_inter_i  seconds,960 * Kinter_M1_NC * Ksatellite_inter_i  ms

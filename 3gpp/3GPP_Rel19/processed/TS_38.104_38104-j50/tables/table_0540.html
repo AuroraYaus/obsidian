@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <td>BS channel bandwidth of the lowest/highest carrier received(MHz)</td>
+    <td>Wanted signal mean power (dBm) (Note 1)</td>
+    <td>Interfering signal mean power (dBm)</td>
+    <td>Interfering signal centre frequency minimum offset from the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap (MHz)</td>
+    <td>Type of interfering signal</td>
+  </tr>
+  <tr>
+    <td rowspan="2">20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100</td>
+    <td>EISREFSENS + 6 dB</td>
+    <td>Wide Area BS: -25 - ΔOTAREFSENSMedium Range BS: -32 - ΔOTAREFSENSLocal Area BS: -35 - ΔOTAREFSENS</td>
+    <td rowspan="2">±30</td>
+    <td rowspan="2">20 MHz CP-OFDM NR signal30 kHz SCS, 51 RBs</td>
+  </tr>
+  <tr>
+    <td>EISminSENS + 6 dB</td>
+    <td>Wide Area BS: -25 - ΔminSENSMedium Range BS: -32 - ΔminSENSLocal Area BS: -35 - ΔminSENS</td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE 1:EISREFSENS is given in clause 12.6.3.NOTE 2:For lowest/highest carrier which is configured in DU/UD SBFD operation, the interference only applies when DL subband is adjacent to Base Station RF Bandwidth edge.</td>
+  </tr>
+</table>

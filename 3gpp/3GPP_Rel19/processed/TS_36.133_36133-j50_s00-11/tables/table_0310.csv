@@ -1,0 +1,5 @@
+WLAN RSSI measurement configuration,,TWLAN_RSSI [seconds]
+Type of Measurement,Minimum number of APs measured during TWLAN_RSSI,
+Measurement of serving AP,1,0.5
+Measurement of known neighbor AP on a single channel,1,5
+Measurement of multiple unknown neighbor APs,3,30

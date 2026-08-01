@@ -1,0 +1,12 @@
+Frequency range of uplink operating band of the,System type to co-locate with,Limits (dBm/100kHz)(Note 1),,
+co-located BS (MHz)(Note 4),,WA BS,MR BS,LA BS
+824 - 849,GSM850 or CDMA850,-98,-91,-70
+876 - 915,GSM900,-98,-91,-70
+1710 - 1785,DCS1800,-98,-91,-80
+1850 - 1910,PCS1900,-98,-91,-80
+"49, 51/n51, n91, n93",E-UTRA or NR,N/A,N/A,-88
+"46/n46, 53/n53",E-UTRA or NR,N/A,-91,-88
+"n100, n101",NR,-96,N/A,N/A
+"n96, n102",NR,N/A,-90,-87
+n104,NR,-95,-90,-87
+Other operating band,"UTRA, E-UTRA or NR",-96,-91,-88

@@ -1,0 +1,5 @@
+Condition NOTE1,T SSB_measurement_period_inter
+No DRX,"Max(200 ms, Ceil(8 x Kgap)  Max(MGRP, SMTC period NOTE2))  CSSFinter  K_satellite"
+DRX cycle ≤ 320 ms,"Max(200 ms, Ceil(8  1.5 x Kgap)  Max(MGRP, SMTC period, DRX cycle))  CSSFinter  K_satellite"
+DRX cycle > 320 ms,Ceil(8 x Kgap)  DRX cycle  CSSFinter  K_satellite
+NOTE 1:DRX or non DRX requirements apply according to the conditions described in clause 3.6.1NOTE 2:SMTC period is the SMTC period in SMTC configuration which is associated with the target cell to be measured configured in SSB-MTC4List-r17.,

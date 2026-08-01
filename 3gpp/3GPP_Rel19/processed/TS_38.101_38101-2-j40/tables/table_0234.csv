@@ -1,0 +1,6 @@
+Rx Parameter,Units,Value
+Power in LP-WUS transmission BW config,dBm,REFSENSLP-WUS2 + 14.0 dB
+PInterferer (min.),dBm,REFSENSLP-WUS 2 + ACS4 + 16.0 dB
+BWInterferer,MHz,BWChannel
+FInterferer (offset),MHz,BWChannel / -BWChannel
+NOTE 1:The interferer consists of the Reference measurement channel specified in Annex A.3.3.2 with one sided dynamic OCNG Pattern OP.1 TDD as described in Annex A.5.2.1 and set-up according to Annex C.NOTE 2:REFSENSLP-WUS is specified in clause 7.3M.2NOTE 3:The absolute value of the interferer offset FInterferer (offset) shall be further adjusted to (CEIL(|FInterferer(offset)|/SCS) + 0.5)*SCS MHz with SCS the sub-carrier spacing of the wanted signal in MHz. Wanted and interferer signal have same SCS.NOTE 4:Defined in table 7.5M.2-1,,

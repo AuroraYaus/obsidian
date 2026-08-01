@@ -1,0 +1,12 @@
+Pre-coding,Modulation,RB Allocation (Note 2),"RB Allocation (Note 3, Note 4)",
+,,Full/Partial,Full (dB),Partial (dB)
+DFT-s-OFDM,PI/2 BPSK4,See Table PC5 MPR,≤ 2.0,≤ 3.0
+,QPSK,,≤ 2.5,≤ 3.5
+,16 QAM,,≤ 3.0,≤ 3.5
+,64 QAM,,≤ 3.5,≤ 4.5
+,256 QAM,,≤ 5.0,≤ 5.5
+CP-OFDM,QPSK,,≤ 4.5,≤ 5.0
+,16 QAM,,≤ 4.5,≤ 5.5
+,64 QAM,,≤ 5.5,≤ 5.5
+,256 QAM,,≤ 7.0,≤ 7.0
+"NOTE 1:Full allocation A-MPR applies when all RB’s in a 20 MHz channel or all RB’s in all sub-bands for wideband operation are fully allocated and all sub-bands are transmitted.  Partial allocation A-MPR applies when one or more RB’s in one or more sub-bands are not allocated or when not all transmitted sub-bands for wideband operation are transmitted.NOTE 2:Applicable for all valid channels and bandwidths other than those enumerated in NOTE 3 and NOTE 4.NOTE 3:Applicable for 40 MHz channels centered at the nearest NR-ARFCN corresponding to [5965 MHz], and 80 MHz channels centered at the nearest NR-ARFCN corresponding to [5985 MHz].NOTE 4:Applicable for 20 MHz channels centered at the nearest NR-ARFCN corresponding to [6415 MHz],  40 MHz channels centered at the nearest NR-ARFCN corresponding to [6405 MHz] and 80 MHz channels centered at the nearest NR-ARFCN corresponding to [6385 MHz].NOTE 5:Applicable to Pi/2-BPSK modulation when IE powerBoostPi2BPSK is set to 0.NOTE 6:Channel bandwidth sizes of 60MHz and 100MHz are not applicable for this network signalling.",,,,

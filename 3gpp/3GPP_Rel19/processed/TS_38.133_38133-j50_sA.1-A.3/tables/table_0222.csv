@@ -1,0 +1,5 @@
+Parameter,PUCCH.SRI.0,PUCCH.SRI.1
+pucch-SpatialRelationInfoId,Id0,Id1
+referenceSignal,SSB0,SSB1
+PUCCH-PathlossReferenceRS,SSB0,SSB1
+NOTE 1:referenceSignal configurations towards which the spatial relation are configured in a test-specific manner.,,

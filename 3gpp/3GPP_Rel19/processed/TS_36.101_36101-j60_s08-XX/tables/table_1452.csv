@@ -1,0 +1,5 @@
+Test num.,Band-width,Sidelink UE,Reference channel,Reference value,
+,,,,BLER of PSDCH (%),SNR (dB)
+1,5 MHz,1,D.1 FDD,(NOTE 1),24.3
+,,2,D.1 FDD,30,6.9
+NOTE 1:There is no BLER requirement for Sidelink UE 1.,,,,,

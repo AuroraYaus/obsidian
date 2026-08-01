@@ -1,0 +1,9 @@
+Parameter,,Unit,Transmit diversity
+Downlink power allocation,PBCH_RA,dB,-3
+,PBCH_RB,dB,-3
+at antenna port,,dBm/15kHz,-98
+Cyclic prefix,,,Normal
+Cell ID,,,0
+Repetition of the physical broadcast channel (Note 1),,,Enabled
+Cyclic prefix,,,Normal
+Note 1:as specified in Table 6.6.4-1 in TS 36.211 [4].,,,

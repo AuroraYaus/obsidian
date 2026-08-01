@@ -1,0 +1,113 @@
+<table>
+  <tr>
+    <td>Measurement gap pattern configuration</td>
+    <td>Serving cell</td>
+    <td>Measurement PurposeNote 5</td>
+    <td>Applicable Gap Pattern Id</td>
+  </tr>
+  <tr>
+    <td>Per-UE</td>
+    <td>E-UTRA + FR1, or</td>
+    <td>non-NR RAT Note1,2</td>
+    <td>0,1,2,3</td>
+  </tr>
+  <tr>
+    <td>Measurement gap</td>
+    <td>E-UTRA + FR2, or E-UTRA + FR1 + FR2</td>
+    <td>FR1 and/or FR2 Note 6,7</td>
+    <td>0-11, 24, 25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>non-NR RATNote1,2 and FR1 and/or FR2 Note 6,7</td>
+    <td>0, 1, 2, 3, 4, 6, 7, 8,10, 24</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>E-UTRA and, FR1 if configured</td>
+    <td>non-NR RAT Note1,2</td>
+    <td>0,1,2,3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR2 if configured</td>
+    <td></td>
+    <td>No gap</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>E-UTRA and, FR1 if configured</td>
+    <td>FR1 only Note 6,7</td>
+    <td>0-11,24,25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR2 if configured</td>
+    <td></td>
+    <td>No gap</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>E-UTRA and, FR1 if configured</td>
+    <td>FR2 only Note 6,7</td>
+    <td>No gap</td>
+  </tr>
+  <tr>
+    <td>Per-FR</td>
+    <td>FR2 if configured</td>
+    <td></td>
+    <td>12-25</td>
+  </tr>
+  <tr>
+    <td>measurement gap</td>
+    <td>E-UTRA and, FR1 if configured</td>
+    <td>non-NR RAT Note1,2 and FR1 Note 6,7</td>
+    <td>0, 1, 2, 3, 4, 6, 7, 8,10,24</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR2 if configured</td>
+    <td></td>
+    <td>No gap</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>E-UTRA and, FR1 if configured</td>
+    <td>FR1 and FR2 Note 6,7</td>
+    <td>0-11,24,25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR2 if configured</td>
+    <td></td>
+    <td>12-25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>E-UTRA and, FR1 if configured</td>
+    <td>non-NR RAT Note1,2 and FR2 Note 6,7</td>
+    <td>0, 1, 2, 3, 4, 6, 7, 8,10,24</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR2 if configured</td>
+    <td></td>
+    <td>12-25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>E-UTRA and, FR1 if configured</td>
+    <td>Non-NR RAT Note1,2 and FR1 and FR2Note 6,7</td>
+    <td>0, 1, 2, 3, 4, 6, 7, 8,10,24</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR2 if configured</td>
+    <td></td>
+    <td>12-25</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE:In E-UTRA-NR dual connectivity mode, if GSM or UTRA TDD or UTRA FDD inter-RAT frequency layer is configured to be monitored, only measurement gap pattern #0 and #1 can be used for per-FR gap in E-UTRA and FR1 if configured, or for per-UE gap. In NR-E-UTRA dual connectivity mode, if UTRA FDD inter-RAT frequency layer is configured to be monitored for SRVCC, only measurement gap pattern #0 and #1 can be used for per-FR gap in E-UTRA and FR1 if configured, or for per-UE gap.NOTE 1:In E-UTRA-NR dual connectivity mode, non-NR RAT includes E-UTRA, UTRA and/or GSM. In NR-E-UTRA dual connectivity mode, non-NR RAT means E-UTRA, and UTRA for SRVCC.NOTE 2:VoidNOTE 3:When E-UTRA inter-frequency RSTD measurements are configured and the UE requires measurement gaps for performing such measurements, only Gap Pattern #0 can be used.NOTE 4:For UE supporting supportedGapPattern-NRonly-NEDC or measGapPatterns-NRonly-ENDC-r16 but not supporting supportedGapPattern for the corresponding gap patterns among GP2-11, the corresponding gap patterns are not applicable to measurement of non-NR RATs as defined in NOTE 1.NOTE 5:Inclusion of positioning measurements: Measurement purpose which includes E-UTRA measurements includes also E-UTRA RSRP and E-UTRA RSRQ measurements for E-CID.NOTE 6:Measurement gap patterns #24 and #25 can be requested [2] only when the UE is configured at least with any of RSTD, UE Rx-Tx, PRS-RSRP, PRS-RSRPP, RSCP or RSCPD measurements requiring such gaps and can only be used during the corresponding positioning measurement periodNOTE 7:Inclusion of positioning measurements for measurement gaps: Measurement purpose which includes any of FR1 and FR2 measurements includes also RSTD, UE Rx-Tx, PRS-RSRP, PRS-RSRPP, RSCP and RSCPD measurements.</td>
+  </tr>
+</table>

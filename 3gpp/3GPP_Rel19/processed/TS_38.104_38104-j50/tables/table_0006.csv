@@ -1,0 +1,72 @@
+NR operating band,"Uplink (UL) operating bandBS receive / UE transmitFUL,low   –  FUL,high(MHz)","Downlink (DL) operating bandBS transmit / UE receiveFDL,low   –  FDL,high(MHz)",Duplex mode,Notes
+n1,1920 – 1980,2110 – 2170,FDD,
+n2,1850 – 1910,1930 – 1990,FDD,
+n3,1710 – 1785,1805 – 1880,FDD,
+n5,824 – 849,869 – 894,FDD,
+n7,2500 – 2570,2620 – 2690,FDD,
+n8,880 – 915,925 – 960,FDD,
+n12,699 – 716,729 – 746,FDD,
+n13,777 – 787,746 – 756,FDD,
+n14,788 – 798,758 – 768,FDD,
+n18,815 – 830,860 – 875,FDD,
+n20,832 – 862,791 – 821,FDD,
+n24,1626.5 – 1660.5,1525 – 1559,FDD,Note 7
+n25,1850 – 1915,1930 – 1995,FDD,
+n26,814 – 849,859 – 894,FDD,
+n28,703 – 748,758 – 803,FDD,
+n29,N/A,717 – 728,SDL,
+n30,2305 – 2315,2350 – 2360,FDD,
+n31,452.5 – 457.5,462.5 – 467.5,FDD,
+n34,2010 – 2025,2010 – 2025,TDD,Note 12
+n38,2570 – 2620,2570 – 2620,TDD,
+n39,1880 – 1920,1880 – 1920,TDD,
+n40,2300 – 2400,2300 – 2400,TDD,
+n41,2496 – 2690,2496 – 2690,TDD,
+n46,5150 – 5925,5150 – 5925,TDD,"Note 3, Note 12"
+n48,3550 – 3700,3550 – 3700,TDD,
+n50,1432 – 1517,1432 – 1517,TDD,
+n51,1427 – 1432,1427 – 1432,TDD,Note 12
+n53,2483.5 – 2495,2483.5 – 2495,TDD,Note 12
+n54,1670 – 1675,1670 – 1675,TDD,Note 12
+n65,1920 – 2010,2110 – 2200,FDD,
+n66,1710 – 1780,2110 – 2200,FDD,
+n67,N/A,738 – 758,SDL,
+n68,698 – 728,753 – 783,FDD,
+n70,1695 – 1710,1995 – 2020,FDD,
+n71,663 – 698,617 – 652,FDD,
+n72,451 – 456,461 – 466,FDD,
+n74,1427 – 1470,1475 – 1518,FDD,
+n75,N/A,1432 – 1517,SDL,
+n76,N/A,1427 – 1432,SDL,
+n77,3300 – 4200,3300 – 4200,TDD,Note 11
+n78,3300 – 3800,3300 – 3800,TDD,
+n79,4400 – 5000,4400 – 5000,TDD,
+n80,1710 – 1785,N/A,SUL,
+n81,880 – 915,N/A,SUL,
+n82,832 – 862,N/A,SUL,
+n83,703 – 748,N/A,SUL,
+n84,1920 – 1980,N/A,SUL,
+n85,698 – 716,728 – 746,FDD,
+n86,1710 – 1780,N/A,SUL,
+n87,410 - 415,420 – 425,FDD,
+n88,412 - 417,422 - 427,FDD,
+n89,824 – 849,N/A,SUL,
+n90,2496 – 2690,2496 – 2690,TDD,
+n91,832 – 862,1427 – 1432,FDD,Note 2
+n92,832 – 862,1432 – 1517,FDD,Note 2
+n93,880 – 915,1427 – 1432,FDD,Note 2
+n94,880 – 915,1432 – 1517,FDD,Note 2
+n95,2010 – 2025,N/A,SUL,Note 1
+n96,5925 – 7125,5925 – 7125,TDD,"Note 3, Note 4, Note 12"
+n97,2300 – 2400,N/A,SUL,Note 5
+n98,1880 – 1920,N/A,SUL,Note 5
+n99,1626.5 – 1660.5,N/A,SUL,Note 6
+n100,874.4 – 880,919.4 – 925,FDD,Note 10
+n101,1900 – 1910,1900 – 1910,TDD,"Note 10, Note 12"
+n102,5925 – 6425,5925 – 6425,TDD,"Note 3, Note 4, Note 12"
+n104,6425 – 7125,6425 – 7125,TDD,
+n105,663 – 703,612 – 652,FDD,
+n106,896 – 901,935 – 940,FDD,
+n109,703 – 733,1432 – 1517,FDD,Note 2
+n110,1390 - 1395,1432 - 1435,FDD,
+"NOTE 1:This band is applicable in China only.NOTE 2:Variable duplex operation does not enable dynamic variable duplex configuration by the network, and is used such that DL and UL frequency ranges are supported independently in any valid frequency range for the band.NOTE 3:This band is restricted to operation with shared spectrum channel access as defined in TS 37.213 [20].NOTE 4:This band is applicable only in countries/regions designating this band for shared-spectrum access use subject to country-specific conditions.NOTE 5:The requirements for this band are applicable only where no other NR or E-UTRA TDD operating band(s) are used within the frequency range of this band in the same geographical area. For scenarios where other NR or E-UTRA TDD operating band(s) are used within the frequency range of this band in the same geographical area, special co-existence requirements may apply that are not covered by the 3GPP specifications. NOTE 6:UL operation is restricted to 1627.5 – 1637.5 MHz and 1646.5 – 1656.5 MHz per FCC Order DA 20-48 [25].NOTE 7:DL operation is restricted to 1526-1536 MHz frequency range. UL operation is restricted to 1627.5 – 1637.5 MHz and 1646.5 – 1656.5 MHz per FCC Order 20-51 [24].NOTE 8:VoidNOTE 9:   Operating band n200 is a reserved value.NOTE 10: This band is applicable to CEPT countries subject to ECC Decision (20)02 [21], for the RMR application.NOTE 11:In the USA this band is restricted to 3450 – 3550 MHz and 3700 – 3980 MHz. In Canada this band is restricted to 3450 – 3650 MHz and 3650 – 3980 MHz. NOTE 12: This TDD band is not applicable to SBFD operation.",,,,

@@ -1,0 +1,9 @@
+Parameter,Unit,Value,Comment
+NR RF Channel Number,,1,One NR radio channel is used for this test
+Active PCell,,Cell 1,PCell on RF channel number 1.
+CP length,,Normal,
+DRX,,OFF,
+L1-RSRP reporting period,slot,160,Periodic L1-RSRP reporting configured
+Number of RS for L1-RSRP reporting,,2,Two source RSs in TCI state 0 and 1.
+T1,s,0.2,
+T2,s,2,

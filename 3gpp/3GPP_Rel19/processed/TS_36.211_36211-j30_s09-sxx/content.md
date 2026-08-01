@@ -1,14 +1,3 @@
----
-type: spec
-aliases:
-  - content
-tags:
-  - 3gpp
-  - rel19
-  - processed
-  - protocol-text
-source_spec: "3GPP_Rel19/processed/TS_36.211_36211-j30_s09-sxx/content.md"
----
 # TS 36.211 36211-j30_s09-sxx
 
 ## 9Sidelink

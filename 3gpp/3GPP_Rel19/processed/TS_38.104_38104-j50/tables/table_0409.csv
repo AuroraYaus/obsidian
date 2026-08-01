@@ -1,0 +1,6 @@
+Spurious frequency range,Basic limit(Note 4),Measurement bandwidth,Notes
+30 MHz – 1 GHz,-36 dBm,100 kHz,Note 1
+1 GHz – 12.75 GHz,,1 MHz,"Note 1, Note 2"
+12.75 GHz – 5th harmonic of the upper frequency edge of the UL operating band in GHz,-30 dBm,1 MHz,"Note 1, Note 2, Note 3"
+12.75 GHz - 26 GHz,-30 dBm,1 MHz,"Note 1, Note 2, Note 6"
+"NOTE 1:Measurement bandwidths as in ITU-R SM.329 [2], s4.1.NOTE 2:Upper frequency as in ITU-R SM.329 [2], s2.5 table 1.NOTE 3:Applies for Band for which the upper frequency edge of the UL operating band is greater than 2.55 GHz and less than or equal to 5.2 GHz.NOTE 4:Additional limits may apply regionally.NOTE 5:The frequency range from ΔfOBUE below the lowest frequency of the BS transmitter operating band to ΔfOBUE above the highest frequency of the BS transmitter operating band may be excluded from the requirement. ΔfOBUE is defined in clause 9.7.1. For multi-band RIB, the exclusion applies for all supported operating bands.NOTE 6:Applies for Band for which the upper frequency edge of the UL operating band is greater than 5.2 GHz.",,,

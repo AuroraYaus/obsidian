@@ -1,0 +1,14 @@
+Test,Measurement channel,Reference value
+,,TB success rate [%]
+1,R.68 TDD,85
+2,R.68-1 TDD for 15MHz CCR.68 TDD for 20MHz CC,85
+3,R.68 TDD,85
+4,R.68 TDD,85
+5,R.68-1 TDD for 15MHz CCR.68 TDD for 20MHz CC,85
+6,R.68 TDD,85
+7,R.68-1 TDD for 15MHz CCR.68 TDD for 20MHz CC,85
+8,R.68 TDD,85
+9,R.68-1 TDD for 15MHz CCR.68 TDD for 20MHz CC,85
+10,R.68 TDD,85
+11,R.68 TDD,85
+"Note 1:For 2 layer transmissions, 2 transport blocks are received within a TTI.Note 2:The TB success rate is defined as TB success rate = 100%*NDL_correct_rx/ (NDL_newtx + NDL_retx), where NDL_newtx is the number of newly transmitted DL transport blocks, NDL_retx is the number of retransmitted DL transport blocks, and NDL_correct_rx is the number of correctly received DL transport blocks.",,

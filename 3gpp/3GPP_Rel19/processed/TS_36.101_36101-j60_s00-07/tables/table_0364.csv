@@ -1,0 +1,17 @@
+Channel bandwidth,,,,,,,
+E-UTRA Band,1.4 MHz(dBm),3 MHz(dBm),5 MHz(dBm),10 MHz(dBm),15 MHz(dBm),20 MHz(dBm),Duplex Mode
+2,-100.2,-97.2,-95.5,-92.5,-90.7,-89.5,FDD
+3,-99.2,-96.2,-94.5,-91.5,-89.7,-88.5,FDD
+4,-102.2,-99.2,-97.5,-94.5,-92.7,-91.5,FDD
+5,-100.7,-97.7,-95.5,-92.5,,,FDD
+8,-99.7,-96.7,-94.5,-91.5,,,FDD
+13,,,-94,-91,,,FDD
+20,,,-94.5,-91.5,-88.2,-87,FDD
+25,-98.7,-95.7,-94,-91,-89.2,-88,FDD
+26,-100.2,-97.2,-953,-923,-90.23,,FDD
+28,,-97.7,-96,-93,-91.2,-88.5,FDD
+39,,,-97.5,-94.5,-92.7,-91.5,TDD
+40,,,-97.5,-94.5,-92.7,-91.5,TDD
+41,,,-95.5,-92.5,-90.7,-89.5,TDD
+111,-96.5,-93.7,-91.8,-78.1,,,FDD
+NOTE 1:The transmitter shall be set to PUMAX as defined in subclause 6.2.5NOTE 2:Reference measurement channel is A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1NOTE 3:The requirement is modified by -0.5 dB when the carrier frequency of the assigned E-UTRA channel bandwidth is within 865-894 MHz,,,,,,,

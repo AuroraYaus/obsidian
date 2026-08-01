@@ -1,0 +1,5 @@
+Condition NOTE1,TPSS/SSS_sync_irat
+No DRX,"max(600ms, ceil(Mpss/sss_sync_irat  Kp)  max(TLB, SMTC period))  Nfreq"
+DRX cycle ≤ 320ms,"max(600ms, ceil(Mpss/sss_sync_irat  Kp  1.5)  max(TLB, SMTC period, DRX cycle))  Nfreq"
+DRX cycle > 320ms,"ceil(Mpss/sss_sync_irat  Kp)  max(TLB, DRX cycle)  Nfreq"
+NOTE 1: DRX or non DRX requirements apply according to the conditions described in section 5.,

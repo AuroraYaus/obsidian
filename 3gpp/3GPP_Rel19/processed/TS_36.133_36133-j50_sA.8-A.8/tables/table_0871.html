@@ -1,0 +1,101 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td>PDSCH parameters</td>
+    <td></td>
+    <td>DL Reference Measurement Channel R.0 FDD</td>
+    <td>As specified in section A.3.1.1.1</td>
+  </tr>
+  <tr>
+    <td>PDSCH allocation</td>
+    <td></td>
+    <td>2—3</td>
+    <td>13—36</td>
+  </tr>
+  <tr>
+    <td>PCFICH/PDCCH/PHICH parameters</td>
+    <td></td>
+    <td>DL Reference Measurement Channel R.6 FDD</td>
+    <td>As specified in section A.3.1.2.1</td>
+  </tr>
+  <tr>
+    <td>A3-Offset</td>
+    <td>dB</td>
+    <td>-4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Hysteresis</td>
+    <td>dB</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>TimeToTrigger</td>
+    <td>s</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Filter coefficient</td>
+    <td></td>
+    <td>0</td>
+    <td>L3 filtering is not used</td>
+  </tr>
+  <tr>
+    <td>DRX</td>
+    <td></td>
+    <td>off</td>
+    <td>As specified in section A.3.3</td>
+  </tr>
+  <tr>
+    <td>PRACH configuration</td>
+    <td></td>
+    <td>4</td>
+    <td>As specified in table 5.7.1-2 in 3GPP TS 36.211</td>
+  </tr>
+  <tr>
+    <td>Access Barring Information</td>
+    <td>-</td>
+    <td>Not sent</td>
+    <td>No additional delays in random access procedure</td>
+  </tr>
+  <tr>
+    <td>Time offset between cells</td>
+    <td></td>
+    <td>3 ms</td>
+    <td>Asynchronous cells</td>
+  </tr>
+  <tr>
+    <td>Gap pattern configuration Id</td>
+    <td></td>
+    <td>0</td>
+    <td>As specified in Table 8.1.2.1-1 started before T1 starts</td>
+  </tr>
+  <tr>
+    <td>Time duration T1</td>
+    <td>s</td>
+    <td>[10]</td>
+    <td>Defined to give enough time for the UE to complete the manual reselection to Cell 2.</td>
+  </tr>
+  <tr>
+    <td>Time duration T2</td>
+    <td>s</td>
+    <td>[360]</td>
+    <td>Defined to be longer enough to see whether the UE will report enter “proximity” indication.</td>
+  </tr>
+  <tr>
+    <td>Time duration T3 Note 1</td>
+    <td>s</td>
+    <td>[&lt;=360]</td>
+    <td>The time duration for a UE to report enters “proximity” when the UE is near a CSG cell.</td>
+  </tr>
+  <tr>
+    <td colspan="4">Note 1:The maximum allowed time duration for the UE to decide either entering or leaving “proximity” is 360s. To reduce test time, T3 may end once UE reports entering “proximity”.Note 2:The test case assumes an environment where CSG proximity detection results not being impact by non-3GPP signals, such as GPS and WiFi. When the test case is being executed, the UE may ignore any radio signals which are not provided by the test setup which it would otherwise use in proximity estimation.</td>
+  </tr>
+</table>

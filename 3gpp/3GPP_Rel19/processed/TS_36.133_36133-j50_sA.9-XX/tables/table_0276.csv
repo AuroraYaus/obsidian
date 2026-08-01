@@ -1,0 +1,24 @@
+Parameter,Unit,Value,Comment
+NB-IoT operational mode,,Inband,
+Reference cell,,nCell 1,
+Neighbor cells,,"nCell 2, eCell 1 and eCell 2",
+NPDCCH parameters,,R.26 HD-FDD,As defined in section A.3.1.6.1
+nprsID,,Test1: (nprsID of Cell 1 – nprsID of Cell 2)mod6=1Test2: (nprsID of Cell 1 – nprsID of Cell 2)mod6=0,As defined in TS36.355 [24]
+NPRS Type,,Test1: Type 1Test2: Type 2,As defined in TS36.211
+nprs-period,ms,1280,As defined in TS36.355 [24]
+nprs-startSF,,sf0,Subframe offset of the NPRS positioning occasion as defined in TS36.355 [24]
+nprs-slotNumberOffset,,0,As defined in TS36.355 [24]
+nprs-SubframeOffset,,640,As defined in TS36.355 [24]
+Number of consecutive downlink positioning subframesnprs-NumSF,,640,As defined in TS36.355 [24]
+NPRS muting info,,nCell 1: ‘1111111100000000’nCell 2: ‘1111111100000000’,Correponds to nprs-MutingInfoB defined in TS 36.355 [24]
+PartA Configuration,,as in the following 3 rows:,
+subframePattern10,,‘0111001110’,Correponds to subframePattern10-r14 defined in TS 36.355 [24]
+nprsSequenceInfo nCell1,,BWchannel 5MHz: 54BWchannel 10MHz: 130,Correponds to nprsSequenceInfo defined in TS 36.355 [24]
+nprsSequenceInfo nCell2,,BWchannel 5MHz: 59BWchannel 10MHz: 135,Correponds to nprsSequenceInfo defined in TS 36.355 [24]
+CP length,,Normal,
+NPRACH Configuration,,NPRACH.R-1,Refer to A.3.18
+DRX cycle length,,1.28,The value shall be used for all cells in the test.
+Expected RSTD,s,nCell 2: 3Other neighbour cells: randomly between -3 and 3,The expected RSTD is what is expected at the receiver. The corresponding parameter in the OTDOA assistance data specified in TS 36.355 [24] is the expectedRSTD indicator
+Expected RSTD uncertainty for all neighbour cells,s,5,The corresponding parameter in the OTDOA assistance data specified in TS 36.355 [24] is the expectedRSTD-Uncertainty index
+Number of cells provided in OTDOA assistance data,,16,Including the reference cell
+Measurement period,s,[20.48],Derived according to the RSTD measurement period in clause 4.8.3

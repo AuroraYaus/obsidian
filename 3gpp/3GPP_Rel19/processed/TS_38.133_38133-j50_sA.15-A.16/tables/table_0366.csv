@@ -1,0 +1,6 @@
+Config,Description
+1,"15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode"
+2,"15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode"
+3,"30 kHz SSB SCS, 20 MHz bandwidth, TDD duplex mode"
+4,"15 kHz SSB SCS, 10 MHz bandwidth, HD-FDD duplex mode,"
+"NOTE 1:The UE is only required to be tested in one of the supported test configurationsNOTE 2:target NR cell has the same SCS, BW and duplex mode as NR serving cell",

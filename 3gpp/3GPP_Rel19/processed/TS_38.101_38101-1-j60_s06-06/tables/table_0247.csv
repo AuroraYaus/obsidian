@@ -1,0 +1,5 @@
+,RB Allocation2,,,,RB Allocation3,,,
+,Outer RB set configuration,,Inner RB set configuration,,Outer RB set configuration,,Inner RB set configuration,
+# of S-SSB repetition/RBset,> 2,2,> 2,2,> 2,2,> 2,2
+Contiguous/ Non-contiguous sub-band RB sets,≤ 35.0,≤ 32.0,≤ 24.0,≤ 13.0,≤ 11.5,≤ 15.5,≤ 10.0,≤ 12.5
+"NOTE 1:The A-MPR shall apply to all SCS in all active 20 MHz sub-bands contiguously or non-contiguously allocated in the channel.NOTE 2:Applicable for 20 MHz channels centered at the nearest NR-ARFCN corresponding to 5955 MHz, 40 MHz channels centered at the nearest NR-ARFCN corresponding to 5965 MHz, 60 MHz channels centered at the nearest NR-ARFCN corresponding to 5975 and 5995 MHz, 80 MHz channels centered at the nearest NR-ARFCN corresponding to 5985 MHz and 100 MHz channels centered at the nearest NR-ARFCN corresponding to 5995 and 6055 MHz.  NOTE 3:Applicable for all valid channels other than those enumerated under NOTE 2.",,,,,,,,

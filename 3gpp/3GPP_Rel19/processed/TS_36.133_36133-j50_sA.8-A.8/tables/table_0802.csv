@@ -1,0 +1,14 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,"1, 2",Two radio channels are used for this test
+Active PCell,,Cell 1,Primary cell on RF channel number 1.
+Deconfigured deactivated SCell,,Cell 2,Deconfigured deactivated secondary cell on RF channel number 2.
+CP length,,Normal,
+Gap Pattern Id,,0,As specified in clause 8.1.2.1.
+DRX,,OFF,Continuous monitoring of primary cell
+CQI/PMI periodicity and offset configuration index,,0,
+Cell-individual offset for cells on RF channel number 1,dB,0,Individual offset for cells on PCC.
+Cell-individual offset for cells on RF channel number 2,dB,0,Individual offset for cells on SCC1.
+SCell measurement cycle (measCycleSCell),ms,320,
+T1,s,1,"During this time the PCell shall be known and the SCell1 is detected, and UE shall report a valid CQI for PCell."
+T2,s,Ndirect,During this time the UE shall be configured with directly activated SCell1.
+T3,s,1,During this time the UE shall report a valid CQI for both PCell and SCell1.

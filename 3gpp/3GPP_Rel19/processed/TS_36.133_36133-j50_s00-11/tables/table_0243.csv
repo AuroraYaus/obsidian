@@ -1,0 +1,5 @@
+NCSG Pattern Id,"Visible interruption length before measurement (VIL1, ms)","Measurement Length during which there is no gap (ML, ms)","Visible interruption length after measurement (VIL2, ms)","Visible interruption Repetition Period(VIRP, ms)",Purpose
+0,1,4,DL: 1UL: 2,40,"Interruption control according to requirements in sections 7.8.2.5, 7.8.2.6, 7.8.2.9, 7.8.2.12, 7.10.2.1, 7.10.2.2, 7.10.2.3"
+1,1,4,DL: 1UL: 2,80,"Interruption control according to requirements in sections 7.8.2.5, 7.8.2.6, 7.8.2.9, 7.8.2.12, 7.10.2.1, 7.10.2.2, 7.10.2.3"
+2,2,3,2,40,"Interruption control according to requirements in sections 7.8.2.5, 7.8.2.6, 7.8.2.9, 7.8.2.12, 7.10.2.1, 7.10.2.2, 7.10.2.3"
+3,2,3,2,80,"Interruption control according to requirements in sections 7.8.2.5, 7.8.2.6, 7.8.2.9, 7.8.2.12, 7.10.2.1, 7.10.2.2, 7.10.2.3"

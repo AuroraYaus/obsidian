@@ -1,0 +1,7 @@
+eDRX_IDLE cycle length [s],Tserv [s],"Tdetect,NR_Intra (number of Tserv)","Tmeasure,NR_Intra (number of Tserv)","Tevaluate,NR_Intra (number of Tserv)"
+,,,,
+2.56 ≤eDRX_IDLE cycle length ≤ 10485.76,0.32 ≤ Tserv < 0.64,36 x M2,4 x M2,16 x M2
+,0.64 ≤ Tserv < 1.28,28,2,8
+,1.28 ≤ Tserv < 2.56,25,1,5
+,2.56 ≤ Tserv,23,1,3
+"NOTE 1: Tdetect,NR_Intra, Tmeasure,NR_Intra and Tevaluate,NR_Intra in seconds depend on the number N of Tserv and are calculated as N * Tserv.",,,,

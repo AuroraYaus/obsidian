@@ -1,0 +1,18 @@
+E-UTRA – NR configuration /Bandwidth combination set,,,,,,
+DownlinkEN-DC configuration,Uplink EN-DC configurations,Component carriers in order of increasing carrier frequency,,,Maximum aggregated bandwidth (MHz),Bandwidth combination set
+,,Channel bandwidths for E-UTRA carrier (MHz),Channel bandwidths for NR carrier (MHz),Channel bandwidths for E-UTRA carrier (MHz),,
+"DC_(n)3CA5,6",DC_3A_n3A2,See CA_3C Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-1,"10, 20, 25",,50,0
+,,,"10, 20, 25",See CA_3C Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-1,,
+DC_(n)3CA7,DC_(n)3AA2DC_3A_n3A2,See CA_3C Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-1,"10, 20, 25",,50,0
+,,,"10, 20, 25",See CA_3C Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-1,,
+"DC_(n)48CA5,6",DC_48A_n48A2,See CA_48C Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-1,"5, 10, 15, 20, 40",,80,0
+,,,"5, 10, 15, 20, 40",See CA_48C Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-1,,
+"DC_(n)48DA5,6",DC_48A_n48A2,See CA_48D Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-1,"5, 10, 15, 20, 40",,100,0
+,,,"5, 10, 15, 20, 40",See CA_48D Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-1,,
+DC_48A-(n)48AA5,DC_48A_n48A2,See CA_48A-48A Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-3,"5, 10, 15, 20, 40",,80,0
+,,,"5, 10, 15, 20, 40",See CA_48A-48A Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-3,,
+"DC_66A-(n)66AA4,5",DC_66A_n66A2,See CA_66A-66A Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-3,"5,10,15,20, 25, 30, 40",,80,0
+,,,"5,10,15,20, 25, 30, 40",See CA_66A-66A Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-3,,
+"DC_66A-(n)66AA4,7",DC_(n)66AA2DC_66A_n66A2,See CA_66A-66A Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-3,"5,10,15,20, 25, 30, 40",,80,0
+,,,"5,10,15,20, 25, 30, 40",See CA_66A-66A Bandwidth Combination Set 0 in TS 36.101 Table 5.6A.1-3,,
+"NOTE 1:Void.NOTE 2:Only single switched UL is supported.NOTE 3:Requirements in this specification apply for NR SCS of 15 kHz only.NOTE 4:For TDD bands, the minimum requirements only apply for non-simultaneous Rx/Tx between all carriers.NOTE 5: The UE supporting these configurations indicates intraBandENDC-Support-UL = ‘non-contiguous’ with intraBandENDC-Support absent. NOTE 6:The minimum requirements also apply for the intra-band non-contiguous fallback resulting from releasing an Scell within the sub-block bandwidth of the downlink configuration.NOTE 7:The UE supporting these configurations indicates intraBandENDC-Support-UL = ‘both’ with intraBandENDC-Support absent.",,,,,,

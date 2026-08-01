@@ -1,0 +1,35 @@
+Parameter,Unit,Test 1,
+,,Cell 1,Cell 2
+E-UTRA RF Channel Number,,1,2
+BWchannel,MHz,51020,20
+Listen before talk model,,Not applicable,Not used
+Measurement bandwidth,,6,
+PDSCH Reference measurement channel defined in A.3.1.1.1,,5MHz: R.5 FDD10MHz: R.0 FDD20MHz: R.4 FDD,R0.FS3
+PDCCH/PCFICH/PHICH Reference measurement channel defined in A.3.1.2.1,,5MHz: R.11 FDD10MHz: R.6 FDD20MHz: R.10 FDD,R0.FS3
+OCNG Patterns defined in A.3.2.1.1 (OP.1 FDD) and A.3.2.1.2 (OP.2 FDD),,5MHz: OP.15 FDD10MHz: OP.1 FDD20MHz: OP.11 FDD,OP.14 FDD
+PBCH_RA,dB,0,0
+PBCH_RB,,,
+PSS_RA,,,
+SSS_RA,,,
+PCFICH_RB,,,
+PHICH_RA,,,
+PHICH_RB,,,
+PDCCH_RA,,,
+PDCCH_RB,,,
+PDSCH_RA,,,
+PDSCH_RB,,,
+OCNG_RANote1,,,
+OCNG_RBNote1,,,
+in subframes not corresponding to RSSI measurement time configuration (RMTC),dBm/15 kHz,-106,-106
+in subframes corresponding to RSSI measurement time configuration (RMTC) where system frame number mod 12 = 2 (Note 1),dBm/15 kHz,-106,-90.28
+in subframes corresponding to RSSI measurement time configuration (RMTC) where system frame number mod 12 is not equal to 2 (Note 1),dBm/15 kHz,-106,-97.28
+in subframes not corresponding to RSSI measurement time configuration (RMTC),dB,2.5,2.5
+in subframes corresponding to RSSI measurement time configuration (RMTC),dB,2.5,-Infinity
+RSRP in subframes not corresponding to RSSI measurement time configuration (RMTC),dBm/15 kHz,-103.5,-103.5
+RSRP in subframes corresponding to RSSI measurement time configuration (RMTC),,-103.5,-Infinity
+Io within measurement bandwidth in subframes corresponding to RSSI measurement time configuration (RMTC) where system frame number mod 12 = 2 (Note 1),dBm/1.08 MHz,-83,-71.73
+Io within measurement bandwidth in subframes corresponding to RSSI measurement time configuration (RMTC) where system frame number mod 12 is not equal to 2 (Note 1),dBm/1.08 MHz,-83,-78.73
+Io within measurement bandwidth in subframes not corresponding to RSSI measurement time configuration (RMTC),dBm/1.08 MHz,-83,-83
+Propagation condition,-,AWGN,
+channelOccupancyThreshold,dBm,-75.2,
+Note 1:Accumulated system frame number is used to avoid a configuration not matching the test purpose at the boundary of hyper frame numbers.,,,

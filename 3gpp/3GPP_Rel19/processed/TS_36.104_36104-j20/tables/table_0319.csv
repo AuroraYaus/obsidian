@@ -1,0 +1,20 @@
+Reference channel,A15-1,A15-2
+Sub carrier spacing (kHz),15,3.75
+Number of tone,1,1
+Modulation,π/4 QPSK,π/4 QPSK
+Diversity,No,No
+Frequency offset,0,0
+IMCS / ITBS,7 / 7,7 / 7
+Payload size (bits),104,104
+Allocated resource units,1,1
+Transport block CRC (bits),24,24
+Coding rate (target),2/3,2/3
+Coding Rate,0.67,0.67
+Code block CRC size (bits),0,0
+Number of code blocks – C,1,1
+Total symbols per resource unit,96,96
+Total number of bits per resource unit,192,192
+Tx time (ms),8,32
+Frequency offset,0,0
+Channel estimation length (ms) Note 1,4,16
+Note 1:Channel estimation lengths are included in the table for information only.,,

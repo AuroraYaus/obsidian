@@ -1,0 +1,5 @@
+Configuration,Description
+1,"NR Uu: 15 kHz SSB SCS, 20 MHz BW, FDD duplex mode"
+2,"NR Uu: 15 kHz SSB SCS, 20 MHz BW, TDD duplex mode"
+3,"NR Uu: 30 kHz SSB SCS, 40 MHz BW, TDD duplex mode"
+NOTE 1:The UE is only required to pass in one of the supported test configurations in FR1.,

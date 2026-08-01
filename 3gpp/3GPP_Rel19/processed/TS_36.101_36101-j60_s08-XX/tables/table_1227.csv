@@ -1,0 +1,4 @@
+Parameter,Test 1a,Test 1b
+,[3.0],[3.0]
+UE Category,≥2,≥2
+"Note1:For UE that indicates support of density reduction for Class A, test 1b will be run and test 1a will be skipped. Otherwise, test 1a will be run and test 1b will be skipped.",,

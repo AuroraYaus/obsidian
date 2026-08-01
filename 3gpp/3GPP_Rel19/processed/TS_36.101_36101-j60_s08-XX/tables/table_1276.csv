@@ -1,0 +1,35 @@
+Parameter,,Unit,Cell 1,Cell 2,Cell 3
+Bandwidth,,MHz,10,10,10
+PDSCH transmission mode,,,3,As defined in Note 1,As defined in Note 1
+Downlink power allocation,,dB,-3,-3,-3
+,,dB,-3,-3,-3
+,,dB,0,N/A,N/A
+Propagation condition and antenna configuration,,,2×2 EPA5 (Note 2),2×2 EPA5 (Note 2),2×2 EPA5 (Note 2)
+CodeBookSubsetRestriction bitmap,,,01 for fixed RI = 110 for fixed RI = 211 for UE reported RI,As defined in Note 1,As defined in Note 1
+at antenna port,,dB[mW/15kHz],-98 (Note 3),N/A,N/A
+,,dB[mW/15kHz],-98 (Note 4),N/A,N/A
+,,dB[mW/15kHz],-93 (Note 5),N/A,N/A
+,,dB,Reference Value in Table 9.5.4.1-2 for each test,12,10
+,,dB[mW/15kHz],Reference Value in Table 9.5.4.1-2 for each test,-86,-88
+Subframe Configuration,,,Non-MBSFN,Non-MBSFN,Non-MBSFN
+Time Offset between Cells,,s,N/A,3,-1
+Frequency shift between Cells,,Hz,N/A,300,-100
+Cell Id,,,0,126,1
+ABS pattern (Note 6),,,N/A,1000000010000000100000001000000010000000,1000000010000000100000001000000010000000
+RLM/RRM Measurement Subframe Pattern (Note 7),,,1000000010000000100000001000000010000000,N/A,N/A
+CSI Subframe Sets (Note 8),"CCSI,0",,1000000010000000100000001000000010000000,N/A,N/A
+,"CCSI,1",,01111111 01111111 01111111 01111111 01111111,N/A,N/A
+Number of control OFDM symbols,,,3,Note 9,Note 9
+Maximum number of HARQ transmissions,,,1,N/A,N/A
+Reporting mode,,,PUCCH 1-0,N/A,N/A
+Physical channel for CQI reporting,,,PUCCH format 2,N/A,N/A
+PUCCH Report Type for CQI,,,4,N/A,N/A
+Physical channel for RI reporting,,,PUCCH Format 2,N/A,N/A
+PUCCH Report Type for RI,,,3,N/A,N/A
+Reporting periodicity,,ms,Npd= 10,N/A,N/A
+cqi-pmi-ConfigurationIndex,,,11,N/A,N/A
+ri-ConfigurationInd,,,5,N/A,N/A
+cqi-pmi-ConfigurationIndex2,,,10,N/A,N/A
+ri-ConfigurationInd2,,,2,N/A,N/A
+Cyclic prefix,,,Normal,Normal,Normal
+"Note 1:Downlink physical channel setup in Cell 2 and Cell 3 in accordance with Annex C.3.3 applying OCNG pattern OP.5 FDD as defined in Annex A.5.1.5.Note 2:The propagation conditions for Cell 1, Cell 2 and Cell 3 are statistically independent.Note 3:This noise is applied in OFDM symbols #1, #2, #3, #5, #6, #8, #9, #10,#12, #13 of a subframe overlapping with the aggressor ABS.Note 4:This noise is applied in OFDM symbols #0, #4, #7, #11 of a subframe overlapping with the aggressor ABS.Note 5:This noise is applied in all OFDM symbols of a subframe overlapping with aggressor non-ABSNote 6:ABS pattern as defined in [9]. PDSCH other than SIB1/paging and its associated PDCCH/PCFICH are transmitted in the serving cell subframe when the subframe is overlapped with the ABS subframe of aggressor cell and the subframe is available in the definition of the reference channel.Note 7:Time-domain measurement resource restriction pattern for PCell measurements as defined in [7]Note 8:As configured according to the time-domain measurement resource restriction pattern for CSI measurements defined in [7].Note 9:The number of control OFDM symbols is not available for ABS and is 3 for the subframe indicated by “0” of ABS pattern.Note 10:If the UE reports in an available uplink reporting instance at subframe SF#n based on CQI estimation at a downlink subframe not later than SF#(n-4), this reported wideband CQI cannot be applied at the eNB downlink before SF#(n+4).Note 11:Reference measurement channel in Cell 1 RC.2 FDD according to Table A.4-1 with one sided dynamic OCNG Pattern OP.1 FDD as described in Annex A.5.1.1.Note 12:The number of the CRS ports in Cell1, Cell2 and Cell 3 is the same.Note 13:SIB-1 will not be transmitted in Cell2 and Cell 3 in this test.",,,,,

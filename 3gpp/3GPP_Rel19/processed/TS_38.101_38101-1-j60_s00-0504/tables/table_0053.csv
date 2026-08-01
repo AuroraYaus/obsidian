@@ -1,0 +1,14 @@
+NR operating band,SS Block SCS,SS Block pattern1,Range of GSCN(First – <Step size> – Last)
+n5,15 kHz,Case A,30987 – <1> – 31100
+n12,15 kHz,Case A,30288 – <1> – 30359
+n26,15 kHz,Case A,30937 – <1> – 31100
+n28,15 kHz,Case A,30432 – <1> – 30644
+n31,15 kHz,Case A,28955 – <1> – 28967
+n72,15 kHz,Case A,28947 – <1> – 28959
+n85,15 kHz,Case A,30282 – <1> – 30359
+n87,15 kHz,Case A,28743 – <1> – 28754
+n88,15 kHz,Case A,28752 – <1> – 28764
+n100,15 kHz,Case A,"31240 – <1> – 31242,31244 – <1> – 31253, 416372"
+n106,15 kHz,Case A,31317 – <1> – 31329
+n110,15 kHz,Case A,33802 – <1> – 33804
+NOTE 1:SS Block pattern is defined in clause 4.1 in TS 38.213 [8].NOTE 2:Only applicable for 12 PRB transmission bandwidth configuration within 3 MHz channel with punctured PBCH defined in TS 38.211 [6] clause 7.4.3.1.,,,

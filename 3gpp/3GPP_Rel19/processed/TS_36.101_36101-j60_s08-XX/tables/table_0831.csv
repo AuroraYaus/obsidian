@@ -1,0 +1,24 @@
+Parameter,,Unit,Cell 1,Cell 2
+Downlink power allocation,PDCCH_RAOCNG_RA,dB,-3,-3
+,PHICH_RA,dB,-3,N/A
+,PCFICH_RBPDCCH_RBOCNG_RB,dB,-3,-3
+,PHICH_RB,dB,-3,N/A
+Cell-specific reference signals,,,"Antenna ports 0,1,2,3",
+at antenna port,,dBm/15kHz,-98,
+,,dB,As defined in Table 8.10.2.1.4-2,13.91
+BWChannel,,MHz,10,10
+Cyclic Prefix,,,Normal,Normal
+Cell ID,,,0,1
+UL/DL Configuration,,,0,0
+Special Subframe Configuration,,,4,4
+Subframe Configuration,,,Non-MBSFN,Non-MBSFN
+Number of DL control region OFDM symbols,,,2,
+CFI indicated in PCFICH,,,2,
+PHICH Ng (Note 1),,,1/6,N/A
+PHICH duration,,,Normal,N/A
+PDSCH TM,,,4,N/A
+Interference model,,,NA,As specified in clause B.7.1
+Unused RE-s and PRB-s (Note 2),,,OCNG,OCNG
+Time Offset relative to Cell 1,,s,N/A,2
+Frequency shift relative to Cell 1,,Hz,N/A,200
+Note 1:According to Clause 6.9 in TS 36.211 [4].Note 2:For Cell 2 unused RE-s and PRB-s do not include control region REs.,,,,

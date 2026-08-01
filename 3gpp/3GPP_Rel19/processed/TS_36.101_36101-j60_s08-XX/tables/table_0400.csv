@@ -1,0 +1,26 @@
+Parameter,,Unit,TP 1,TP 2
+Downlink power allocation,,dB,0,0
+,,dB,0 (Note 1),0
+,,dB,-3,-3
+Beamforming model,,,Random beamforming (rank 1),Random beamforming (rank 1)
+Cell-specific reference signals,,,"Antenna ports 0,1","Antenna ports 0,1"
+CSI reference signals 0,,,"Antenna ports {15,16}",N/A
+CSI-RS 0 periodicity and subframe offset TCSI-RS / ∆CSI-RS,,Subframes,5 / 2,
+CSI reference signal 0 configuration,,,0,
+CSI reference signals 1,,,N/A,"Antenna ports {15,16}"
+CSI-RS 1 periodicity and subframe offset TCSI-RS / ∆CSI-RS,,Subframes,,5 / 2
+CSI reference signal 1 configuration,,,,8
+Zero-power CSI-RS 0 configurationICSI-RS / ZeroPower CSI-RS bitmap,,Subframes/bitmap,2/0010000000000000,N/A
+Zero-power CSI-RS1 configurationICSI-RS / ZeroPower CSI-RS bitmap,,Subframes/bitmap,N/A,2/0010000000000000
+,,dB,SNR1,SNR2 = SNR1
+at antenna port,,dBm/15kHz,-98,-98
+BWChannel,,MHz,10,10
+Cyclic Prefix,,,Normal,Normal
+Cell ID,,,0,126
+Number of control OFDM symbols / PDSCH start,,,2,2
+Timing offset relative to TP 1,,us,N/A,2
+Frequency offset relative to TP 1,,Hz,N/A,200
+"qcl-Operation, ‘PDSCH RE Mapping and Quasi-Co-Location Indicator’",,,"Type C, ‘00’",
+PDSCH transmission mode (Note 2),,,10,10
+Number of allocated resource block,,,50,50
+Note 1:Note 2:PDSCH transmission is done from both TPs (CW1 is transmitted from TP 1 and CW2 is transmitted from TP 2),,,,

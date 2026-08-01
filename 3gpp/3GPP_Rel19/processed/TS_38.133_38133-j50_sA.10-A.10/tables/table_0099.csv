@@ -1,0 +1,12 @@
+Parameter,Config,Unit,SSB#0,,SSB#1,
+,,,T1,T2,T1,T2
+"DL CCA Probability PCCA_DL Note 4,6","1,2",,0.9375,0.9375,0.9375,0.9375
+DL CCA Probability PCCA_DL Note 4.7,"1,2",,0.75/0.75,0.75/0.75,0.75/0.75,0.75/0.75
+UL CCA probability PCCA_UL,"1,2",,1.0,1.0,1.0,1.0
+Note2,"1,2",dBm/15 kHz,-94.65,,,
+Note2,"1,2",dBm/SSB SCS,-91.65,,,
+,"1,2",dB,0,0,-Infinity,3
+SSB RSRP Note3,"1,2",dBm/SSB SCS,-91.65,-91.65,-Infinity,-88.65
+Io Note3,"1,2",dBm/38.16 MHz,-57.59,-57.59,-60.61,-55.84
+,"1,2",dB,0,0,-Infinity,3
+NOTE 1: The resources for uplink transmission are assigned to the UE prior to the start of time period T2.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4:DL and UL CCA probabilities apply for UE supporting any one or both semi-static channel access or dynamic channel access and for network configuring any of semi-static channel occupancy or dynamic channel occupancy.NOTE 5:The signal levels apply for SSS REs when the discovery burst is transmitted during DBT windows.NOTE 6:For UE supporting semi-static channel access and network configuring semi-static channel occupancy. NOTE 7:For UE supporting dynamic channel access and network configuring dynamic channel occupancy. The first value corresponds PCCA_DL1 and the second value corresponds to the PCCA_DL2.,,,,,,

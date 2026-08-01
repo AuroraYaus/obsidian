@@ -1,0 +1,22 @@
+Parameter,,Value
+Transform precoding,,Disabled
+Uplink-downlink allocation for TDD,,"120 kHz SCS:3D1S1U, S=10D:2G:2U"
+Channel bandwidth,,"120 kHz SCS: 50MHz, 200 MHz"
+HARQ,Maximum number of HARQ transmissions,4
+,RV sequence,"0, 2, 3, 1"
+DM-RS,DM-RS configuration type,1
+,DM-RS duration,single-symbol DM-RS
+,DM-RS position (l0),2
+,Additional DM-RS position,"pos0, pos1, pos2"
+,Number of DM-RS CDM group(s) without data,2
+,Ratio of PUSCH EPRE to DM-RS EPRE,-3 dB
+,DM-RS port,{0}
+Time domain resource assignment,DM-RS sequence generation,"NID0=0, nSCID =0 for moving UENID0=1, nSCID =1 for stationary UE"
+,PUSCH mapping type,B
+,Allocation length,10
+Frequency domain resource assignment,RB assignment,50 MHz CBW/120kHz SCS: 16 RB for each UE200MHz CBW/120kHz SCS: 66 RB for each UE
+,Starting PRB index,"Moving UE: 0 Stationary UE: 16 for 50MHz CBW, 66 for 200MHz CBW for SCS 120kHz"
+,Frequency hopping,Disabled
+SRS resource allocation,Slots in which sounding RS is transmitted (Note 1),For TDD: -last symbol in slot #3  in radio frames for 120KHz
+,SRS resource allocation,"120 kHz SCS: -CSRS = 9, BSRS =0, for 32 RB-CSRS = 33, BSRS =0, for 132 RB"
+"NOTE 1.The transmission of SRS is optional. And the transmission comb and SRS periodic are configured as KTC = 2, and TSRS = 80 respectively.",,

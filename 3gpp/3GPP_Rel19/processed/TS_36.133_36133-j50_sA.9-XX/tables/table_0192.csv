@@ -1,0 +1,27 @@
+Parameter,,Unit,Test 1,Test 2
+,,,Cell 2,Cell 2
+CPICH_Ec/Ior,,dB,-10,-10
+PCCPCH_Ec/Ior,,dB,-12,-12
+SCH_Ec/Ior,,dB,-12,-12
+PICH_Ec/Ior,,dB,-15,-15
+DPCH_Ec/Ior,,dB,-,-
+OCNS_Ec/Ior,,dB,-0.94,-0.94
+Ioc,"Band I, IV, VI, X, XI, XIX, XXI",dBm/3.84 MHz,-60.00,-94.46
+,"Band II, V, VII",,,-92.46
+,"Band XXV, XXVI",,,-90.96 (Note 3)
+,"Band III, VIII, XII, XIII, XIV, XX, XXII",,,-91.46
+,Band IX (Note 2),,,-93.46
+Îor/Ioc,,dB,9.54,-9.54
+"CPICH RSCP, Note 1","Band I, IV, VI, X, XI, XIX, XXI",dBm,-60.46,-114.0
+,"Band II, V, VII",,,-112.0
+,"Band XXV, XXVI",,,-110.5 (Note 3)
+,"Band III, VIII, XII, XIII, XIV, XX, XXII",,,-111.0
+,Band IX (Note 2),,,-113.0
+"Io, Note 1","Band I, IV, VI, X, XI, XIX, XXI",dBm/3.84 MHz,-50.00,-94.0
+,"Band II, V, VII",,,-92.0
+,"Band XXV, XXVI",,,-90.5 (Note 3)
+,"Band III, VIII, XII, XIII, XIV, XX, XXII",,,-91.0
+,Band IX (Note 2),,,-93.0
+Propagation condition,,-,AWGN,AWGN
+"NOTE 1:CPICH RSCP and Io levels have been calculated from other parameters for information purposes. They are not settable parameters themselves.NOTE 2:For the UE which supports both Band III and Band IX operating frequencies, the measurement performance requirements for Band III shall apply to the multi-band UE.NOTE 3: The test parameter is modified by -1.5 dB when the carrier frequency of the assigned UTRA channel is within 869-894 MHz for the UE which supports both Band V and Band XXVI operating frequencies.",,,,
+Tests shall be done sequentially. Test 1 shall be done first. After test 1 has been executed test parameters for test 2 shall be set within 5 seconds so that UE does not loose the Cell 2 in between the tests.,,,,

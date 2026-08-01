@@ -1,0 +1,525 @@
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6Transmitter characteristics", "paragraph_index": 1, "style": "Heading1"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.1General", "paragraph_index": 2, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2Void", "paragraph_index": 6, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2ATransmitter power for CA", "paragraph_index": 7, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2A.1UE maximum output power for CA", "paragraph_index": 8, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2A.1.1Inter-band CA between FR1 and FR2", "paragraph_index": 9, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2A.2UE maximum output power reduction for CA", "paragraph_index": 12, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2A.2.1Inter-band CA between FR1 and FR2", "paragraph_index": 13, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2A.3UE additional maximum output power reduction for CA", "paragraph_index": 15, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2A.4Configured output power for CA", "paragraph_index": 17, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2A.4.1Configured output power level", "paragraph_index": 18, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2A.4.2ΔTIB,c for CA", "paragraph_index": 21, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2A.4.2.1ΔTIB,c for Inter-band CA between FR1 and FR2", "paragraph_index": 22, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2BTransmitter power for DC", "paragraph_index": 27, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.1UE maximum output power for DC", "paragraph_index": 28, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.1.1Intra-band contiguous EN-DC", "paragraph_index": 29, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.1.1aIntra-band contiguous NE-DC", "paragraph_index": 51, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.1.2Intra-band non-contiguous EN-DC", "paragraph_index": 56, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.1.3Inter-band EN-DC within FR1", "paragraph_index": 73, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.1.3aInter-band NE-DC within FR1", "paragraph_index": 99, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.1.4Inter-band EN-DC including FR2", "paragraph_index": 103, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.1.4a(Void)", "paragraph_index": 105, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.1.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 106, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2UE maximum output power reduction for DC", "paragraph_index": 108, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.0General", "paragraph_index": 109, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.1Intra-band contiguous EN-DC", "paragraph_index": 111, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.1.1General", "paragraph_index": 112, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.1a(Void)", "paragraph_index": 134, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.1.2MPR for power class 3 and power class 2", "paragraph_index": 135, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.2Intra-band non-contiguous EN-DC", "paragraph_index": 154, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.2.1General", "paragraph_index": 155, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.2.2MPR for power class 3 and power class 2", "paragraph_index": 177, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.3Inter-band EN-DC within FR1", "paragraph_index": 196, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.3aInter-band NE-DC within FR1", "paragraph_index": 198, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.4Inter-band EN-DC including FR2", "paragraph_index": 200, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.4a(Void)", "paragraph_index": 202, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.2.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 203, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3UE additional maximum output power reduction for EN-DC", "paragraph_index": 205, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.1Intra-band contiguous EN-DC", "paragraph_index": 206, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.1.0General", "paragraph_index": 207, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.1.1A-MPR for DC_(n)71AA", "paragraph_index": 212, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "8.10", "title": "- 2.00*A;0.30 < A ≤ 0.80", "paragraph_index": 230, "style": "B3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "8.00", "title": "- 3.33*A;   0.30 < A ≤ 0.60", "paragraph_index": 234, "style": "B3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.1.2A-MPR for NS_04", "paragraph_index": 250, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.2Intra-band non-contiguous EN-DC", "paragraph_index": 329, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.2.0General", "paragraph_index": 330, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.2.1A-MPR for NS_04", "paragraph_index": 334, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.3Inter-band EN-DC within FR1", "paragraph_index": 380, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.3AInter-band NE-DC within FR1", "paragraph_index": 388, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.4Inter-band EN-DC including FR2", "paragraph_index": 394, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.4A(Void)", "paragraph_index": 396, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.3.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 397, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4Configured output power for DC", "paragraph_index": 399, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.1Configured output power level", "paragraph_index": 400, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.1.1Intra-band contiguous EN-DC", "paragraph_index": 401, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.1.1aIntra-band contiguous NE-DC", "paragraph_index": 500, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.1.2Intra-band non-contiguous EN-DC", "paragraph_index": 537, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.1.3aInter-band NE-DC within FR1", "paragraph_index": 645, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.1.4Inter-band EN-DC including FR2", "paragraph_index": 720, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.1.4a(Void)", "paragraph_index": 725, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.1.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 726, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2ΔTIB,c for DC", "paragraph_index": 732, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.0General", "paragraph_index": 733, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.1Intra-band contiguous EN-DC", "paragraph_index": 736, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.1a(Void)", "paragraph_index": 738, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.2Intra-band non-contiguous EN-DC", "paragraph_index": 739, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.3Inter-band EN-DC within FR1", "paragraph_index": 741, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.3.1ΔTIB,c for EN-DC two bands", "paragraph_index": 742, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.3.2ΔTIB,c for EN-DC three bands", "paragraph_index": 745, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.3.3ΔTIB,c for EN-DC four bands", "paragraph_index": 748, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.3.4ΔTIB,c for EN-DC five bands", "paragraph_index": 751, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.3.5ΔTIB,c for EN-DC six bands", "paragraph_index": 754, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.3aInter-band NE-DC within FR1", "paragraph_index": 757, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.4Inter-band EN-DC including FR2", "paragraph_index": 761, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.4.1ΔTIB,c for EN-DC two bands", "paragraph_index": 762, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.4.2ΔTIB,c for EN-DC three bands", "paragraph_index": 765, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.4.3ΔTIB,c for EN-DC four bands", "paragraph_index": 768, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.4.4ΔTIB,c for EN-DC five bands", "paragraph_index": 771, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.4.5Void", "paragraph_index": 774, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.4a(Void)", "paragraph_index": 775, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 776, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.5.1ΔTIB,c for EN-DC three bands", "paragraph_index": 777, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.5.2ΔTIB,c for EN-DC four bands", "paragraph_index": 780, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.5.3ΔTIB,c for EN-DC five bands", "paragraph_index": 782, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.4.2.5.4ΔTIB,c for EN-DC six bands", "paragraph_index": 784, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.5Configured output power for NR-DC", "paragraph_index": 786, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.5.1Configured output power level", "paragraph_index": 787, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2B.5.1.1Inter-band NR-DC between FR1 and FR2", "paragraph_index": 788, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2ETransmitter power for V2X in FR1", "paragraph_index": 791, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.1UE maximum output power for V2X", "paragraph_index": 792, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.1.1UE maximum output power for Intra-band contiguous V2X", "paragraph_index": 793, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.1.2UE maximum output power for Intra-band non-contiguous V2X", "paragraph_index": 797, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.1.3UE maximum output power for Inter-band V2X", "paragraph_index": 801, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.2UE maximum output power reduction for V2X", "paragraph_index": 805, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.2.1UE maximum output power reduction for Intra-band V2X", "paragraph_index": 806, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.2.2UE maximum output power reduction for Inter-band V2X", "paragraph_index": 808, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.3UE additional maximum output power reduction for V2X", "paragraph_index": 810, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.3.1UE additional maximum output power reduction for Intra-band V2X", "paragraph_index": 811, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.3.2UE additional maximum output power reduction for Inter-band V2X", "paragraph_index": 813, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.4Configured output power for V2X", "paragraph_index": 815, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.4.1UE configured output power for Intra-band V2X", "paragraph_index": 816, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2E.4.2UE configured output power for Inter-band V2X", "paragraph_index": 818, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2HTransmitter power for DC with UL MIMO", "paragraph_index": 840, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.1UE maximum output power for DC with UL MIMO", "paragraph_index": 841, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.1.1void", "paragraph_index": 842, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.1.2void", "paragraph_index": 843, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.1.3Inter-band EN-DC with UL MIMO within FR1", "paragraph_index": 844, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.2UE maximum output power reduction for DC with UL MIMO", "paragraph_index": 892, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.2.1void", "paragraph_index": 893, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.2.2void", "paragraph_index": 894, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.2.3Inter-band EN-DC with UL MIMO within FR1", "paragraph_index": 895, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.3UE additional maximum output power reduction for EN-DC with UL MIMO", "paragraph_index": 897, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.3.1void", "paragraph_index": 898, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.3.2void", "paragraph_index": 899, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.3.3Inter-band EN-DC with UL MIMO within FR1", "paragraph_index": 900, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.4Configured output power for DC with UL MIMO", "paragraph_index": 902, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.4.1Configured output power level", "paragraph_index": 903, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.4.1.1void", "paragraph_index": 904, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2H.4.1.2void", "paragraph_index": 905, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2LTransmitter power for DC with Tx Diversity", "paragraph_index": 912, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.1UE maximum output power for DC with Tx Diversity", "paragraph_index": 913, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.1.1void", "paragraph_index": 914, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.1.2void", "paragraph_index": 915, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.1.3Inter-band EN-DC with Tx Diversity within FR1", "paragraph_index": 916, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.2UE maximum output power reduction for DC with Tx Diversity", "paragraph_index": 959, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.2.1void", "paragraph_index": 960, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.2.2void", "paragraph_index": 961, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.2.3Inter-band EN-DC with Tx Diversity within FR1", "paragraph_index": 962, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.3UE additional maximum output power reduction for EN-DC with Tx Diversity", "paragraph_index": 964, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.3.1void", "paragraph_index": 965, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.3.2void", "paragraph_index": 966, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.3.3Inter-band EN-DC with Tx Diversity within FR1", "paragraph_index": 967, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.4Configured output power for DC with Tx Diversity", "paragraph_index": 969, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.4.1Configured output power level", "paragraph_index": 970, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.4.1.1void", "paragraph_index": 971, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.2L.4.1.2void", "paragraph_index": 972, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3Output power dynamics", "paragraph_index": 979, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3AOutput power dynamics for CA", "paragraph_index": 981, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3BOutput power dynamics for DC", "paragraph_index": 983, "style": "Heading2Head2A2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3B.0General", "paragraph_index": 984, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3B.1Output power dynamics for EN-DC with UL sharing from UE perspective", "paragraph_index": 987, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3B.1.1E-UTRA and NR switching time mask for TDM based UL sharing from UE perspective", "paragraph_index": 988, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3B.1a(Void)", "paragraph_index": 999, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3B.2Output power dynamics for intra-band EN-DC without dual PA capability", "paragraph_index": 1000, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3B.2a(Void)", "paragraph_index": 1006, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3B.3Output power dynamics for intra-band EN-DC with dual PA capability", "paragraph_index": 1007, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3B.3a(Void)", "paragraph_index": 1013, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3B.4Output power dynamics for switching between two uplink carriers", "paragraph_index": 1014, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3B.4.1E-UTRA and NR switching time mask between two uplink carriers", "paragraph_index": 1015, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3B.5Output power dynamics for inter-band EN-DC", "paragraph_index": 1025, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3EOutput power dynamics for V2X", "paragraph_index": 1031, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3E.1General", "paragraph_index": 1032, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3E.2Output power dynamics for intra-band V2X operation", "paragraph_index": 1034, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3E.3Output power dynamics for inter-band V2X con-current operation", "paragraph_index": 1039, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3HOutput power dynamics for DC with UL MIMO", "paragraph_index": 1041, "style": "Heading2Head2A2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3H.0General", "paragraph_index": 1042, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3H.1void", "paragraph_index": 1045, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3H.2void", "paragraph_index": 1046, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3H.3Output power dynamics for inter-band EN-DC with UL MIMO", "paragraph_index": 1047, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3LOutput power dynamics for DC with Tx Diversity", "paragraph_index": 1049, "style": "Heading2Head2A2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3L.0General", "paragraph_index": 1050, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3L.1void", "paragraph_index": 1053, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3L.2void", "paragraph_index": 1054, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.3L.3Output power dynamics for inter-band EN-DC with Tx Diversity", "paragraph_index": 1055, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4Void", "paragraph_index": 1057, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4ATransmit signal quality for CA", "paragraph_index": 1058, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4A.1Frequency error for CA", "paragraph_index": 1059, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4A.2Transmit modulation quality for CA", "paragraph_index": 1061, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4BTransmit signal quality for DC", "paragraph_index": 1064, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.1Frequency error for DC", "paragraph_index": 1065, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.1.1Frequency error for Intra-band contiguous EN-DC", "paragraph_index": 1066, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.1.1aFrequency error for Intra-band contiguous NE-DC", "paragraph_index": 1068, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.1.2Frequency error for Intra-band non-contiguous EN-DC", "paragraph_index": 1070, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.1.3Frequency error for inter-band EN-DC within FR1", "paragraph_index": 1072, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.1.3aFrequency error for inter-band NE-DC within FR1", "paragraph_index": 1074, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.1.4Frequency error for inter-band EN-DC including FR2", "paragraph_index": 1076, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.1.4a(Void)", "paragraph_index": 1078, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.1.5Frequency error for inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1079, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2Transmit modulation quality for DC", "paragraph_index": 1081, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.1Transmit modulation quality for Intra-band contiguous EN-DC", "paragraph_index": 1082, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.1.1Error Vector Magnitude", "paragraph_index": 1083, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.1.2Carrier leakage", "paragraph_index": 1086, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.1.3In-band emissions", "paragraph_index": 1088, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.1aTransmit modulation quality for Intra-band contiguous NE-DC", "paragraph_index": 1091, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.1a.1Error Vector Magnitude", "paragraph_index": 1092, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.1a.2Carrier leakage", "paragraph_index": 1095, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.1a.3In-band emissions", "paragraph_index": 1097, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.2Transmit modulation quality for Intra-band non-contiguous EN-DC", "paragraph_index": 1100, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.2.1Error Vector Magnitude", "paragraph_index": 1101, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.2.2Carrier leakage", "paragraph_index": 1104, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.2.3In-band emissions", "paragraph_index": 1106, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.3aTransmit modulation quality for Inter-band NE-DC within FR1", "paragraph_index": 1111, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.4Transmit modulation quality for Inter-band EN-DC including FR2", "paragraph_index": 1113, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.4a(Void)", "paragraph_index": 1116, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4B.2.5Transmit modulation quality for inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1117, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4ETransmit signal quality for V2X operation in FR1", "paragraph_index": 1119, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4E.1Frequency error for V2X", "paragraph_index": 1120, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4E.2Transmit modulation quality for V2X", "paragraph_index": 1123, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4E.2.1Transmit modulation quality for Intra-band V2X", "paragraph_index": 1124, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4E.2.2.1Error Vector Magnitude", "paragraph_index": 1125, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4E.2.2.2Carrier leakage", "paragraph_index": 1128, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4E.2.2.3In-band emissions", "paragraph_index": 1130, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4E.2.2Transmit modulation quality for Inter-band V2X", "paragraph_index": 1132, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4HTransmit signal quality for DC with UL MIMO", "paragraph_index": 1134, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4H.1Frequency error for DC with UL MIMO", "paragraph_index": 1135, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4H.1.1void", "paragraph_index": 1136, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4H.1.2void", "paragraph_index": 1137, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4H.1.3Frequency error for inter-band EN-DC with UL MIMO within FR1", "paragraph_index": 1138, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4H.2Transmit modulation quality for DC with UL MIMO", "paragraph_index": 1140, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4H.2.1void", "paragraph_index": 1141, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4H.2.2void", "paragraph_index": 1142, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4H.2.3Transmit modulation quality for inter-band EN-DC with UL MIMO within FR1", "paragraph_index": 1143, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4LTransmit signal quality for DC with Tx Diversity", "paragraph_index": 1145, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4L.1Frequency error for DC with Tx Diversity", "paragraph_index": 1146, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4L.1.1void", "paragraph_index": 1147, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4L.1.2void", "paragraph_index": 1148, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4L.1.3Frequency error for inter-band EN-DC with Tx Diversity within FR1", "paragraph_index": 1149, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4L.2Transmit modulation quality for DC with Tx Diversity", "paragraph_index": 1151, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4L.2.1void", "paragraph_index": 1152, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4L.2.2void", "paragraph_index": 1153, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.4L.2.3Transmit modulation quality for inter-band EN-DC with Tx Diversity within FR1", "paragraph_index": 1154, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5Void", "paragraph_index": 1156, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5AOutput RF spectrum emissions for CA", "paragraph_index": 1157, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5A.1Occupied bandwidth for CA", "paragraph_index": 1158, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5A.2Out-of-band emissions for CA", "paragraph_index": 1160, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5A.3Spurious emissions for CA", "paragraph_index": 1162, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5A.3.1Inter-band CA between FR1 and FR2", "paragraph_index": 1163, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5A.4Transmit intermodulation for CA", "paragraph_index": 1166, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5BOutput RF spectrum emissions for DC", "paragraph_index": 1168, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.1Occupied bandwidth for EN-DC", "paragraph_index": 1169, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.1.1Intra-band contiguous EN-DC", "paragraph_index": 1170, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.1.2Intra-band non-contiguous EN-DC", "paragraph_index": 1172, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.1.3Inter-band EN-DC within FR1", "paragraph_index": 1174, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.1.3a(Void)", "paragraph_index": 1176, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.1.4Inter-band EN-DC including FR2", "paragraph_index": 1177, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.1.4a(Void)", "paragraph_index": 1179, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.1.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1180, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2Out-of-band emissions for DC", "paragraph_index": 1182, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.1Intra-band contiguous EN-DC", "paragraph_index": 1183, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.1.1Spectrum emissions mask", "paragraph_index": 1187, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.1.2Additional spectrum emissions mask", "paragraph_index": 1193, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.1.2.1Requirements for network signalled value \"NS_35\"", "paragraph_index": 1194, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.1.2.2Requirements for network signalled value \"NS_04\"", "paragraph_index": 1198, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.1.3Adjacent channel leakage ratio", "paragraph_index": 1204, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.2Intra-band non-contiguous EN-DC", "paragraph_index": 1209, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.2.1Spectrum emissions mask", "paragraph_index": 1210, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.2.2Additional spectrum emissions mask", "paragraph_index": 1212, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.2.3Adjacent channel leakage ratio", "paragraph_index": 1214, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.3Inter-band EN-DC within FR1", "paragraph_index": 1216, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.3a(Void)", "paragraph_index": 1218, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.4Inter-band EN-DC including FR2", "paragraph_index": 1219, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.4aInter-band NE-DC including FR2", "paragraph_index": 1221, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.2.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1223, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3Spurious emissions for DC", "paragraph_index": 1225, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.1Intra-band contiguous EN-DC", "paragraph_index": 1226, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.1.1General spurious emissions", "paragraph_index": 1227, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.1.2Spurious emission band UE co-existence", "paragraph_index": 1229, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.2Intra-band non-contiguous EN-DC", "paragraph_index": 1234, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.2.1General spurious emissions", "paragraph_index": 1235, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.2.2Spurious emission band UE co-existence", "paragraph_index": 1237, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.3Inter-band EN-DC within FR1", "paragraph_index": 1242, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.3.2Spurious emission band UE co-existence", "paragraph_index": 1247, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.3aInter-band NE-DC within FR1", "paragraph_index": 1253, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.3a.1Void", "paragraph_index": 1254, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.3a.2Spurious emission band UE co-existence", "paragraph_index": 1255, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.4Inter-band EN-DC including FR2", "paragraph_index": 1259, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.4.0General spurious emission", "paragraph_index": 1260, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.4.1Spurious emission band UE co-existence", "paragraph_index": 1262, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.4a(Void)", "paragraph_index": 1266, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.4a.1(Void)", "paragraph_index": 1267, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1268, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.5.0General spurious emission", "paragraph_index": 1269, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.3.5.1Spurious emission band UE co-existence", "paragraph_index": 1271, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.4Additional spurious emissions", "paragraph_index": 1275, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.4.1General", "paragraph_index": 1276, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.4.1.1Void", "paragraph_index": 1279, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.4.2Intra-band contiguous EN-DC", "paragraph_index": 1280, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.4.2.1Minimum requirement (network signalled value \"NS_04\")", "paragraph_index": 1281, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.4.3Intra-band non-contiguous EN-DC", "paragraph_index": 1285, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.4.3.1Minimum requirement (network signalled value \"NS_04\")", "paragraph_index": 1286, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.4.4Inter-band EN-DC within FR1", "paragraph_index": 1290, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.4.4a(Void)", "paragraph_index": 1292, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.4.5Inter-band EN-DC including FR2", "paragraph_index": 1293, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.4.6Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1295, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.5Transmit intermodulation for DC", "paragraph_index": 1297, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.5.1Intra-band contiguous EN-DC", "paragraph_index": 1298, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.5.1a(Void)", "paragraph_index": 1300, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.5.2Intra-band non-contiguous EN-DC", "paragraph_index": 1301, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.5.3Inter-band EN-DC within FR1", "paragraph_index": 1303, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.5.3a(Void)", "paragraph_index": 1305, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.5.4Inter-band EN-DC including FR2", "paragraph_index": 1306, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.5.4a(Void)", "paragraph_index": 1308, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5B.5.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1309, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5EOutput RF spectrum emissions for V2X operation in FR1", "paragraph_index": 1311, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.1Occupied bandwidth", "paragraph_index": 1312, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.1.1Intra-band V2X", "paragraph_index": 1313, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.1.2inter-band V2X con-current operation", "paragraph_index": 1315, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.2Out-of-band emissions", "paragraph_index": 1317, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.2.1Intra-band V2X", "paragraph_index": 1318, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.2.2Inter-band V2X con-current operation", "paragraph_index": 1320, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.3Spurious emissions", "paragraph_index": 1322, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.3.1Intra-band V2X", "paragraph_index": 1323, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.3.1.1General spurious emissions", "paragraph_index": 1324, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.3.1.2Spurious emission band UE co-existence", "paragraph_index": 1326, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.3.2 Inter-band V2X con-current operation", "paragraph_index": 1328, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.3.2.1General spurious emissions", "paragraph_index": 1329, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.3.2.2Spurious emission band UE co-existence", "paragraph_index": 1331, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.4Transmit intermodulation", "paragraph_index": 1337, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.4.1Intra-band V2X", "paragraph_index": 1338, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5E.4.2Inter-band V2X con-current operation", "paragraph_index": 1340, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5HOutput RF spectrum emissions for DC with UL MIMO", "paragraph_index": 1342, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.1Occupied bandwidth for EN-DC with UL MIMO", "paragraph_index": 1343, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.1.1void", "paragraph_index": 1344, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.1.2void", "paragraph_index": 1345, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.1.3Inter-band EN-DC with UL MIMO within FR1", "paragraph_index": 1346, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.2Out-of-band emissions for DC with UL MIMO", "paragraph_index": 1348, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.2.1void", "paragraph_index": 1349, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.2.2void", "paragraph_index": 1350, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.2.3Inter-band EN-DC with UL MIMO within FR1", "paragraph_index": 1351, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.3Spurious emissions for DC with UL MIMO", "paragraph_index": 1353, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.3.1void", "paragraph_index": 1354, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.3.2void", "paragraph_index": 1355, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.4Additional spurious emissions for DC with UL MIMO", "paragraph_index": 1358, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.4.1void", "paragraph_index": 1359, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.4.2void", "paragraph_index": 1360, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.4.3Inter-band EN-DC with UL MIMO within FR1", "paragraph_index": 1361, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.5Transmit intermodulation for DC with UL MIMO", "paragraph_index": 1363, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.5.1void", "paragraph_index": 1364, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.5.2void", "paragraph_index": 1365, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5H.5.3Inter-band EN-DC with UL MIMO within FR1", "paragraph_index": 1366, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5LOutput RF spectrum emissions for DC with Tx Diversity", "paragraph_index": 1368, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.1Occupied bandwidth for EN-DC with Tx Diversity", "paragraph_index": 1369, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.1.1void", "paragraph_index": 1370, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.1.2void", "paragraph_index": 1371, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.1.3Inter-band EN-DC with Tx Diversity within FR1", "paragraph_index": 1372, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.2Out-of-band emissions for DC with Tx Diversity", "paragraph_index": 1374, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.2.1void", "paragraph_index": 1375, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.2.2void", "paragraph_index": 1376, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.2.3Inter-band EN-DC with Tx Diversity within FR1", "paragraph_index": 1377, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.3Spurious emissions for DC with Tx Diversity", "paragraph_index": 1379, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.3.1void", "paragraph_index": 1380, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.3.2void", "paragraph_index": 1381, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.3.3Inter-band EN-DC with Tx Diversity within FR1", "paragraph_index": 1382, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.4Additional spurious emissions for DC with Tx Diversity", "paragraph_index": 1385, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.4.1void", "paragraph_index": 1386, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.4.2void", "paragraph_index": 1387, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.4.3Inter-band EN-DC with Tx Diversity within FR1", "paragraph_index": 1388, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.5Transmit intermodulation for DC with Tx Diversity", "paragraph_index": 1390, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.5.1void", "paragraph_index": 1391, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.5.2void", "paragraph_index": 1392, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.5L.5.3Inter-band EN-DC with Tx Diversity within FR1", "paragraph_index": 1393, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.6BBeam correspondence for DC", "paragraph_index": 1395, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.6B.1Void", "paragraph_index": 1396, "style": "Heading3Underrubrik2H3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.6B.2Void", "paragraph_index": 1397, "style": "Heading3Underrubrik2H3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.6B.3Void", "paragraph_index": 1398, "style": "Heading3Underrubrik2H3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.6B.4Inter-band EN-DC including FR2", "paragraph_index": 1399, "style": "Heading3Underrubrik2H3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.6B.4a(Void)", "paragraph_index": 1401, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "6.6B.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1402, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7Receiver characteristics", "paragraph_index": 1404, "style": "Heading1"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.1General", "paragraph_index": 1405, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.2Void", "paragraph_index": 1428, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3Void", "paragraph_index": 1429, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3AReference sensitivity for CA", "paragraph_index": 1430, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3A.1General", "paragraph_index": 1431, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3A.2Reference sensitivity power level for CA", "paragraph_index": 1434, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3A.3ΔRIB,c for CA", "paragraph_index": 1435, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3A.3.1ΔRIB,c for Inter-band CA between FR1 and FR2", "paragraph_index": 1440, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3A.4Void", "paragraph_index": 1445, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3BReference sensitivity level for DC", "paragraph_index": 1446, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.1General", "paragraph_index": 1447, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2Reference sensitivity for DC", "paragraph_index": 1456, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.1Intra-band contiguous EN-DC", "paragraph_index": 1457, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.1a(Void)", "paragraph_index": 1462, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.2Intra-band non-contiguous EN-DC", "paragraph_index": 1463, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3Inter-band EN-DC within FR1", "paragraph_index": 1469, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.0General", "paragraph_index": 1470, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.1Reference sensitivity exceptions due to UL harmonic interference for EN-DC in NR FR1", "paragraph_index": 1563, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.2Reference sensitivity exceptions due to receiver harmonic mixing for EN-DC in NR FR1", "paragraph_index": 1572, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.3Void", "paragraph_index": 1581, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.4Reference sensitivity exceptions due to cross band isolation for EN-DC in NR FR1", "paragraph_index": 1582, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.5MSD for intermodulation interference due to dual uplink operation for EN-DC in NR FR1", "paragraph_index": 1593, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.5.1MSD test points for intermodulation interference due to dual uplink operation for PC3 EN-DC in NR FR1 involving two bands", "paragraph_index": 1601, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.5.2MSD test points for intermodulation interference due to dual uplink operation for EN-DC in NR FR1 involving three bands", "paragraph_index": 1606, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.5.3Void", "paragraph_index": 1613, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.5.4MSD test points for intermodulation interference due to dual uplink operation for EN-DC in NR FR1 involving four bands", "paragraph_index": 1614, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3aInter-band NE-DC within FR1", "paragraph_index": 1617, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3a.0General", "paragraph_index": 1618, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3a.1Reference sensitivity exceptions due to UL harmonic interference for NE-DC in NR FR1", "paragraph_index": 1620, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3a.2Reference sensitivity exceptions due to receiver harmonic mixing for NE-DC in NR FR1", "paragraph_index": 1622, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3a.3Reference sensitivity exceptions due to cross band isolation for NE-DC in NR FR1", "paragraph_index": 1626, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3a.4MSD for intermodulation interference due to dual uplink operation for NE-DC in NR FR1", "paragraph_index": 1632, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3a.4.1(Reserved)", "paragraph_index": 1633, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3a.4.2MSD test points for intermodulation interference due to dual uplink operation for NE-DC in NR FR1 involving three bands", "paragraph_index": 1634, "style": "Heading6"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.4Inter-band EN-DC including FR2", "paragraph_index": 1637, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.4.1Void", "paragraph_index": 1638, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1639, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.5.1Reference sensitivity exceptions due to UL harmonic interference for EN-DC including both FR1 and FR2", "paragraph_index": 1640, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.6Void", "paragraph_index": 1642, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.2.3.7Lower-MSD requirements for inter-band EN-DC within FR1", "paragraph_index": 1643, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3ΔRIB,c, ΔRIBNC for DC", "paragraph_index": 1653, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.0General", "paragraph_index": 1654, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.1Intra-band contiguous EN-DC", "paragraph_index": 1660, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.2Intra-band non-contiguous EN-DC", "paragraph_index": 1661, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.3Inter-band EN-DC within FR1", "paragraph_index": 1666, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.3.1ΔRIB,c for EN-DC in two bands", "paragraph_index": 1667, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.3.2ΔRIB,c for EN-DC three bands", "paragraph_index": 1670, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.3.3ΔRIB,c for EN-DC four bands", "paragraph_index": 1673, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.3.4ΔRIB,c for EN-DC five bands", "paragraph_index": 1676, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.3.5ΔRIB,c for EN-DC six bands", "paragraph_index": 1679, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.3aInter-band NE-DC within FR1", "paragraph_index": 1682, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.4Inter-band EN-DC including FR2", "paragraph_index": 1686, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.4.1ΔRIB,c for EN-DC in two bands", "paragraph_index": 1687, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.4.2ΔRIB,c for EN-DC three bands", "paragraph_index": 1690, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.4.3ΔRIB,c for EN-DC four bands", "paragraph_index": 1693, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.4.4ΔRIB,c for EN-DC five bands", "paragraph_index": 1696, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.4.5Void", "paragraph_index": 1699, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.4a(Void)", "paragraph_index": 1700, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1701, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.5.2ΔRIB,c for EN-DC three bands", "paragraph_index": 1702, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.5.3ΔRIB,c for EN-DC four bands", "paragraph_index": 1705, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.5.4ΔRIB,c for EN-DC five bands", "paragraph_index": 1707, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3B.3.5.5ΔRIB,c for EN-DC six bands", "paragraph_index": 1709, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3EReference sensitivity for V2X operation in FR1", "paragraph_index": 1711, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3E.1General", "paragraph_index": 1712, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3E.2Reference sensitivity for V2X", "paragraph_index": 1714, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3E.2.1Intra-band contiguous V2X", "paragraph_index": 1715, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3E.2.2Intra-band non-contiguous V2X", "paragraph_index": 1717, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3E.2.3Inter-band V2X con-current operation", "paragraph_index": 1719, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3E.2.3.0General", "paragraph_index": 1720, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.3E.2.3.1Reference sensitivity exception due to UL harmonic problem", "paragraph_index": 1731, "style": "Heading5"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4Void", "paragraph_index": 1737, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4AMaximum input level for CA", "paragraph_index": 1738, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4BMaximum input level for DC in FR1", "paragraph_index": 1740, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4B.1Intra-band contiguous EN-DC in FR1", "paragraph_index": 1741, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4B.1a(Void)", "paragraph_index": 1745, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4B.2Intra-band non-contiguous EN-DC in FR1", "paragraph_index": 1746, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4B.3Inter-band EN-DC within FR1", "paragraph_index": 1749, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4B.3a(Void)", "paragraph_index": 1751, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4B.4Inter-band EN-DC including FR2", "paragraph_index": 1752, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4B.4a(Void)", "paragraph_index": 1754, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4B.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1755, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.4EMaximum input level for V2X operation in FR1", "paragraph_index": 1757, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.5Void", "paragraph_index": 1760, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.5AAdjacent channel selectivity for CA", "paragraph_index": 1761, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.5BAdjacent channel selectivity for DC in FR1", "paragraph_index": 1763, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.5B.1Intra-band contiguous EN-DC in FR1", "paragraph_index": 1764, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.5B.1a(Void)", "paragraph_index": 1770, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.5B.2Intra-band non-contiguous EN-DC in FR1", "paragraph_index": 1771, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.5B.3Inter-band EN-DC within FR1", "paragraph_index": 1775, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.5B.3a(Void)", "paragraph_index": 1777, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.5B.4Inter-band EN-DC including FR2", "paragraph_index": 1778, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.5B.4a(Void)", "paragraph_index": 1780, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.5EAdjacent channel selectivity for V2X operation in FR1", "paragraph_index": 1783, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6Void", "paragraph_index": 1786, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6ABlocking characteristics for CA", "paragraph_index": 1787, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6BBlocking characteristics for DC in FR1", "paragraph_index": 1789, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.1General", "paragraph_index": 1790, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.2In-band blocking for DC in FR1", "paragraph_index": 1791, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.2.1Intra-band contiguous EN-DC in FR1", "paragraph_index": 1792, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.2.1a(Void)", "paragraph_index": 1796, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.2.2Intra-band non-contiguous EN-DC in FR1", "paragraph_index": 1797, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.2.3Inter-band EN-DC within FR1", "paragraph_index": 1801, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.2.3a(Void)", "paragraph_index": 1803, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.2.4Inter-band EN-DC including FR2", "paragraph_index": 1804, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.2.4a(Void)", "paragraph_index": 1806, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.2.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1807, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.2.6Void", "paragraph_index": 1809, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.3Out-of-band blocking for DC in FR1", "paragraph_index": 1812, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.3.1Intra-band contiguous EN-DC in FR1", "paragraph_index": 1813, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.3.1a(Void)", "paragraph_index": 1818, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.3.2Intra-band non-contiguous EN-DC in FR1", "paragraph_index": 1819, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.3.3Inter-band EN-DC within FR1", "paragraph_index": 1822, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.3.3a(Void)", "paragraph_index": 1835, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.3.4Inter-band EN-DC including FR2", "paragraph_index": 1836, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.3.4a(Void)", "paragraph_index": 1838, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.3.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1839, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.4Narrow band blocking for DC in FR1", "paragraph_index": 1841, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.4.1Intra-band contiguous EN-DC in FR1", "paragraph_index": 1842, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.4.1a(Void)", "paragraph_index": 1846, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.4.2Intra-band non-contiguous EN-DC in FR1", "paragraph_index": 1847, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.4.3Inter-band EN-DC within FR1", "paragraph_index": 1851, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.4.3a(Void)", "paragraph_index": 1853, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.4.4Inter-band EN-DC including FR2", "paragraph_index": 1854, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.4.4a(Void)", "paragraph_index": 1856, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6B.4.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1857, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.6EBlocking characteristics for V2X in FR1", "paragraph_index": 1859, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.7Void", "paragraph_index": 1863, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.7ASpurious response for CA", "paragraph_index": 1864, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.7BSpurious response for DC in FR1", "paragraph_index": 1866, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.7B.1Intra-band contiguous EN-DC in FR1", "paragraph_index": 1867, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.7B.1a(Void)", "paragraph_index": 1871, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.7B.2Intra-band non-contiguous EN-DC in FR1", "paragraph_index": 1872, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.7B.3Inter-band EN-DC within FR1", "paragraph_index": 1875, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.7B.4a(Void)", "paragraph_index": 1882, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.7B.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1883, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.7ESpurious response for V2X in FR1", "paragraph_index": 1885, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8Void", "paragraph_index": 1888, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8AIntermodulation characteristics for CA", "paragraph_index": 1889, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8BIntermodulation characteristics for DC in FR1", "paragraph_index": 1891, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8B.1General", "paragraph_index": 1892, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8B.2Wide band Intermodulation", "paragraph_index": 1893, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8B.2.1Intra-band contiguous EN-DC in FR1", "paragraph_index": 1894, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8B.2.1a(Void)", "paragraph_index": 1898, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8B.2.2Intra-band non-contiguous EN-DC in FR1", "paragraph_index": 1899, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8B.2.3Inter-band EN-DC within FR1", "paragraph_index": 1903, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8B.2.3a(Void)", "paragraph_index": 1905, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8B.2.4Inter-band EN-DC including FR2", "paragraph_index": 1906, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8B.2.4a(Void)", "paragraph_index": 1908, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8B.2.5Inter-band EN-DC including both FR1 and FR2", "paragraph_index": 1909, "style": "Heading4"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.8EIntermodulation characteristics for V2X operation in FR1", "paragraph_index": 1911, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.9Void", "paragraph_index": 1914, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.9ASpurious emissions for CA", "paragraph_index": 1915, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.9BSpurious emissions for DC in FR1", "paragraph_index": 1917, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.9B.1Intra-band contiguous EN-DC in FR1", "paragraph_index": 1918, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.9B.1a(Void)", "paragraph_index": 1920, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.9B.2Intra-band non-contiguous EN-DC in FR1", "paragraph_index": 1921, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.9B.3Inter-band EN-DC within FR1", "paragraph_index": 1923, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.9B.3a(Void)", "paragraph_index": 1925, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.9B.4Inter-band EN-DC including FR2", "paragraph_index": 1926, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.9B.4a(Void)", "paragraph_index": 1928, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.10Void", "paragraph_index": 1931, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.10AVoid", "paragraph_index": 1932, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.10BPower imbalance for DC in FR1", "paragraph_index": 1933, "style": "Heading2"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.10B.1General", "paragraph_index": 1934, "style": "Heading3"}
+{"source": "38101-3-j60_s06-XX.docx", "section": "", "title": "7.10B.3Inter-band EN-DC within FR1", "paragraph_index": 1939, "style": "Heading3"}

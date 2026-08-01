@@ -1,0 +1,14 @@
+Field,Value,Comment
+srsBandwidthConfiguration,Bw5,
+srsSubframeConfiguration,sc3,Once every 5 subframes
+ackNackSrsSimultaneousTransmission,FALSE,
+srsMaxUpPTS,N/A,
+srsBandwidth,0,No hopping
+srsHoppingBandwidth,hbw0,
+frequencyDomainPosition,0,
+Duration,TRUE,Indefinite duration
+Srs-ConfigurationIndex,17,SRS periodicity of 20.
+transmissionComb,0,
+cyclicShift,cs0,No cyclic shift
+SRS-AntennaPort,an1,Number of antenna ports used for SRS transmission
+Note 1:For further information see clause 6.3.2 in TS 36.331.,,

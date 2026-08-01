@@ -1,0 +1,95 @@
+<table>
+  <tr>
+    <td>Measurement category</td>
+    <td>Ecat</td>
+    <td>Note</td>
+  </tr>
+  <tr>
+    <td>Intra-frequency Note 1,2,3,4,5</td>
+    <td>9</td>
+    <td>Events for any one or a combination of intra-frequency SS-RSRP, SS-RSRQ, SS-SINR,  CSI-RSRP, CSI-RSRQ, and CSI-SINR for NG-RAN intra-frequency cells</td>
+  </tr>
+  <tr>
+    <td>Inter-frequency Note 2,3,4,5</td>
+    <td>10</td>
+    <td>Events for any one or a combination of inter-frequency SS-RSRP, SS-RSRQ, SS-SINR, CSI-RSRP, CSI-RSRQ, and CSI-SINR for NG-RAN inter-frequency cells</td>
+  </tr>
+  <tr>
+    <td>Inter-RAT (E-UTRA FDD, E-UTRA TDD) Note 2,4,5</td>
+    <td>10</td>
+    <td>Only applicable for UE with this (inter-RAT) capability. These reporting criteria apply for any E-UTRA carrier frequencies other than the carrier frequency of the E-UTRA PSCell or E-UTRA SCell.</td>
+  </tr>
+  <tr>
+    <td>Inter-RAT (E-UTRA FDD, E-UTRA TDD) RSTD Note 2,4,5</td>
+    <td>1</td>
+    <td>Inter-RAT RSTD measurement reporting for UE supporting OTDOA; 1 report capable of minimum 16 inter-RAT cell measurements.Only applicable for UE with this (inter-RAT RSTD via LPP [22]) capability. These reporting criteria apply for any E-UTRA carrier frequencies other than the carrier frequency of the E-UTRA PSCell or E-UTRA SCell.</td>
+  </tr>
+  <tr>
+    <td>Inter-RAT (E-UTRA FDD, E-UTRA TDD) RSRP and RSRQ measurements for E-CID Note 2,4,5</td>
+    <td>1</td>
+    <td>Inter-RAT RSRP and RSRQ measurements for E-CID reported to E-SMLC via LPP [22]. One report capable of at least in total 10 inter-RAT RSRP and RSRQ measurements. Applicable to UE capable of reporting inter-RAT RSRP and RSRQ to E-SMLC via LPP. These reporting criteria apply for any E-UTRA carrier frequencies other than the carrier frequency of the E-UTRA PSCell or E-UTRA SCell.</td>
+  </tr>
+  <tr>
+    <td>Intra-frequency RSSI and channel occupancy measurements with CCA Note 1,2,3</td>
+    <td>1</td>
+    <td>One report capable of one RSSI and one channel occupancy measurements over a channel [TS 37.213] with CCA. Applicable for UE capable of performing and reporting RSSI and channel occupancy on carrier frequencies under CCA.</td>
+  </tr>
+  <tr>
+    <td>Inter-frequency RSSI and channel occupancy measurements with CCA Note 2,3</td>
+    <td>1</td>
+    <td>One report capable of one RSSI and one channel occupancy measurements over a channel [TS 37.213] with CCA. Applicable for UE capable of performing and reporting RSSI and channel occupancy on carrier frequencies under CCA.</td>
+  </tr>
+  <tr>
+    <td>Intra-frequency SSB-based measurements for NR E-CID Note 1,2,3,4,5</td>
+    <td>1</td>
+    <td>Intra-frequency SS-RSRP and SS-RSRQ measurements for NR E-CID reported to LMF via LPP [34]. One report capable of at least in total 9 intra-frequency SS-RSRP and SS-RSRQ measurements. Applicable to UE capable of reporting at least one of SS-RSRP and SS-RSRQ to LMF via LPP.</td>
+  </tr>
+  <tr>
+    <td>Intra-frequency CSI-RS based measurements for NR E-CID Note 1,2,3,4,5</td>
+    <td>1</td>
+    <td>Intra-frequency CSI-RSRP and CSI-RSRQ measurements for NR E-CID reported to LMF via LPP [22]. One report capable of at least in total 9 intra-frequency CSI-RSRP and/or CSI-RSRQ measurements. Applicable to UE capable of reporting any of CSI-RSRP and CSI-RSRQ to LMF via LPP, as indicated in nr-ECID-MeasSupported-r16.</td>
+  </tr>
+  <tr>
+    <td>Inter-frequency SSB-based measurements for NR E-CID Note 2,3,4,5</td>
+    <td>1</td>
+    <td>Inter-frequency SS-RSRP and SS-RSRQ measurements for NR E-CID reported to LMF via LPP [34]. One report capable of at least in total 10 inter-frequency SS-RSRP and SS-RSRQ measurements. Applicable to UE capable of reporting at least one of SS-RSRP and SS-RSRQ to LMF via LPP.</td>
+  </tr>
+  <tr>
+    <td>Inter-frequency CSI-RS based measurements for NR E-CID Note 2,3,4,5</td>
+    <td>1</td>
+    <td>Inter-frequency CSI-RSRP and CSI-RSRQ measurements for NR E-CID reported to LMF via LPP [22]. One report capable of at least in total 10 inter-frequency CSI-RSRP and CSI-RSRQ measurements. Applicable to UE capable of reporting any of CSI-RSRP and CSI-RSRQ to LMF via LPP, as indicated in nr-ECID-MeasSupported-r16.</td>
+  </tr>
+  <tr>
+    <td>DL RSTD Note 2,4,5</td>
+    <td>1</td>
+    <td>DL RSTD measurement reporting; 1 report capable of multiple (within the UE PRS measurement capability, nr-DL-TDOA-MeasCapability, indicated via LPP [34]) DL RSTD measurements and if supported also multiple corresponding DL PRS-RSRP measurements configured for DL-TDOA. Only applicable for UE capable of reporting measurements for DL-TDOA to LMF via LPP [34].</td>
+  </tr>
+  <tr>
+    <td>UE Rx-Tx time difference Note 2,4,5</td>
+    <td>1</td>
+    <td>UE Rx-Tx time difference measurement reporting; 1 report capable of multiple (within the UE PRS measurement capability, nr-DL-PRS-MeasCapability, indicated via LPP [34] for multi-RTT) UE Rx-Tx time difference measurements and if supported also multiple corresponding DL PRS-RSRP measurements configured for multi-RTT. Only applicable for UE capable of reporting measurements for multi-RTT to LMF via LPP [34].</td>
+  </tr>
+  <tr>
+    <td>DL PRS-RSRP Note 2,4,5</td>
+    <td>1</td>
+    <td>DL PRS-RSRP measurement reporting; 1 report capable of multiple (within the UE PRS measurement capability, nr-DL-PRS-MeasCapability, indicated via LPP [34] for AoD) DL PRS-RSRP measurements configured for DL-AoD. Only applicable for UE capable of reporting measurements for DL-AoD to LMF via LPP [34].</td>
+  </tr>
+  <tr>
+    <td>DL PRS-RSRPP Note 2,4,5</td>
+    <td>1</td>
+    <td>DL PRS-RSRPP measurement reporting; 1 report capable of multiple (within the UE PRS measurement capability, nr-DL-PRS-MeasCapability, indicated via LPP [34] for AoD) DL PRS-RSRPP measurements configured for DL-AoD. Only applicable for UE capable of reporting measurements for DL-AoD to LMF via LPP [34].</td>
+  </tr>
+  <tr>
+    <td>SRS-RSRP Note 2,3,4,5</td>
+    <td>1</td>
+    <td>SRS-RSRP measurement reporting for CLI; 1 report capable of up to 32 SRS resources measurements. Only applicable for UE supporting cli-SRS-RSRP-Meas-r16.</td>
+  </tr>
+  <tr>
+    <td>CLI-RSSI Note 2,3,4,5</td>
+    <td>1</td>
+    <td>CLI-RSSI measurement reporting for CLI; 1 report capable of up to 64 CLi-RSSI resources measurements. Only applicable for UE supporting cli-RSSI-Meas-r16.</td>
+  </tr>
+  <tr>
+    <td colspan="3">NOTE 1:When the UE is configured with PSCell and SCell carrier frequencies, Ecat for Intra-frequency is applied per corresponding NR serving frequency.NOTE 2: Applicable for UE configured with SA NR operation mode.NOTE 3: Applicable for UE configured with EN-DC operation mode.NOTE 4: Applicable for UE configured with NE-DC operation mode.NOTE 5: Applicable for UE configured with NR-DC operation mode.</td>
+  </tr>
+</table>

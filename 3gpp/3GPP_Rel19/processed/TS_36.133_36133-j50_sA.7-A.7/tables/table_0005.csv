@@ -1,0 +1,15 @@
+Field,Value,,,,Comment
+,Test 1,Test 2,Test 3,Test 4,
+srsBandwidthConfiguration,bw5,bw5,bw7,bw5,
+srsSubframeConfiguration,sc3,sc3,sc3,sc3,Once every 5 subframes
+ackNackSrsSimultaneousTransmission,FALSE,FALSE,FALSE,FALSE,
+srsMaxUpPTS,FALSE,FALSE,FALSE,FALSE,
+srsBandwidth,0,0,0,0,No hopping
+srsHoppingBandwidth,hbw0,hbw0,hbw0,hbw0,
+frequencyDomainPosition,0,0,0,0,
+duration,TRUE,TRUE,TRUE,TRUE,Indefinite duration
+Srs-ConfigurationIndex,15,85,15,325,"SRS periodicity of 10, 80, 10 and 320 ms for Test 1, 2, 3 and 4 respectively."
+transmissionComb,0,0,0,0,
+cyclicShift,cs0,cs0,cs0,cs0,No cyclic shift
+SRS-AntennaPort,an1,,,,Number of antenna ports used for SRS transmission
+Note: For further information see clause 6.3.2 in TS 36.331.,,,,,

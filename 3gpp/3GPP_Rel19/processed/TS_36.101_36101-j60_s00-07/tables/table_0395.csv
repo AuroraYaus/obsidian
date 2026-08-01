@@ -1,0 +1,11 @@
+E-UTRA band,Rx Parameter,Units,Channel bandwidth,,,,,
+,,,1.4 MHz,3 MHz,5 MHz,10 MHz,15 MHz,20 MHz
+46,Power in Transmission Bandwidth Configuration,dBm,,,,-56.5,,-50.5
+,PInterferer,dBm,-25,,,,,
+,BWInterferer,MHz,,,,20,,20
+,FInterferer (offset),MHz,,,,15+0.0075/-15-0.0075,,20+0.0025/-20-0.0025
+49,Power in Transmission Bandwidth Configuration,,,,,-56.5,,-56.5
+,PInterferer,,-25,,,,,
+,BWInterferer,,,,,10,,20
+,FInterferer (offset),,,,,10+0.0125/-10-0.0125,,20+0.0025/-20-0.0025
+"NOTE 1:In a band capable of unplink operation, the transmitter shall be set to 24dB below PCMAX_L at the minimum uplink configuration specified in Table 7.3.1-2 with PCMAX_L as defined in subclause 6.2.5.NOTE 2:The interferer consists of the Reference measurement channel specified in Annex A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD/FS3 as described in Annex A.5.1.1/A.5.2.1/A.5.4.1 and set-up according to Annex C.3.1.",,,,,,,,

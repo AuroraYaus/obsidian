@@ -1,0 +1,108 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="2">NR RF Channel Number</td>
+    <td></td>
+    <td>1</td>
+    <td>TDD carrier in Band n47 or n38</td>
+  </tr>
+  <tr>
+    <td colspan="2">Channel Bandwidth (BWchannel) Note 2</td>
+    <td>MHz</td>
+    <td>20 (NPRB,c = 50) or40 (NPRB,c = 100)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">SCS</td>
+    <td>kHz</td>
+    <td>30</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">V2X sidelink communication pre-configuration</td>
+    <td></td>
+    <td>As specified in table A.3.21.2-1 and A.3.21.2-3</td>
+    <td>IE values unless specified otherwise in this test.</td>
+  </tr>
+  <tr>
+    <td colspan="2">sl-TimeResource-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>1111111111</td>
+    <td>Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3])</td>
+  </tr>
+  <tr>
+    <td colspan="2">sl-NumSubchannel-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>5</td>
+    <td>Indicates the number of sub-channels for TX resource pool</td>
+  </tr>
+  <tr>
+    <td colspan="2">sl-SubchannelSize-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>10</td>
+    <td>Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of Active Sidelink UEs</td>
+    <td></td>
+    <td>100</td>
+    <td>Active Sidelink UE i = 0, .., 49</td>
+  </tr>
+  <tr>
+    <td colspan="2">SL-ThresPSSCH-RSRP</td>
+    <td></td>
+    <td>12</td>
+    <td>Corresponding -106 dBm as defined in section 6.3.5 in TS38.331[2]</td>
+  </tr>
+  <tr>
+    <td rowspan="6">Active Sidelink UEs (UE i = 0, .., 99)</td>
+    <td>V2X sidelink Communication preconfiguration</td>
+    <td></td>
+    <td>As specified in table A.3.21.2-1And A.3.21.2-3</td>
+    <td>IE values unless specified otherwise in this test.</td>
+  </tr>
+  <tr>
+    <td>sl-TimeResource-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>{1i} Note1</td>
+    <td>Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3])</td>
+  </tr>
+  <tr>
+    <td>sl-NumSubchannel-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>1</td>
+    <td>Indicates the number of sub-channels for TX resource pool</td>
+  </tr>
+  <tr>
+    <td>sl-StartRB-Subchannel-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>floor(i/20)x10</td>
+    <td>Indicates the lowest PRB index of the subchannel with the lowest index.UE 0~19 start PRB=0;UE 20~39 start PRB=10;UE 40~59 start PRB=20;UE 60~79 start PRB=30;UE 80~99 start PRB=40;</td>
+  </tr>
+  <tr>
+    <td>sl-SubchannelSize-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>10</td>
+    <td>Indicates the minimum granularity in frequency domain for the sensing for PSSCH resource selection in the unit of PRB</td>
+  </tr>
+  <tr>
+    <td>sl-ResourceReservePeriod2-r16</td>
+    <td>ms</td>
+    <td>10</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Timing offset among Active Sidelink UEs</td>
+    <td>s</td>
+    <td>CP/2</td>
+    <td>Synchronous</td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE 1:{1i} is a sequence of nine 0’s with one 1 in (mod(i,10 )+1’th position.NOTE 2:The UE is only required to be tested in one of the supported test configurations.</td>
+  </tr>
+</table>

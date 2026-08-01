@@ -1,0 +1,257 @@
+EN-DC Configuration,Spurious emission,,,,,,
+,Protected band,Frequency range (MHz),,,Maximum Level (dBm),MBW (MHz),NOTE
+DC_1_n26,Frequency range,738,,799,-50,1,
+,Frequency range,799,,803,-40,1,5
+DC_1_n28,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+,Frequency range,662,-,694,-26.2,6,5
+DC_2_n14,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_2_n28,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_3_n20,Frequency range,758,-,788,-50,1,
+DC_3_n28,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_3_n34,Frequency range,1884.5,-,1915.7,-41,0.3,3
+DC_4_n5,Frequency range,859,-,869,-27,1,
+DC_4_n28,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_5_n7,Frequency range,859,-,869,-27,1,
+DC_5_n28,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_5_n40,Frequency range,859,-,869,-27,1,
+DC_5_n48,Frequency range,859,-,869,-27,1,
+DC_5_n66,Frequency range,859,-,869,-27,1,
+DC_5_n78DC_5_n89_ULSUP-TDM_n78,Frequency range,859,-,869,-27,1,
+DC_5_n79,Frequency range,859,-,869,-27,1,
+DC_7_n28,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_8_n1,Frequency range,860,-,890,-40,1,"5, 12"
+DC_8_n3,Frequency range,860,-,890,-40,1,5. 12
+DC_8_n7,Frequency range,860,-,890,-40,1,"5, 12"
+DC_8_n20,Frequency range,758,-,788,-50,1,
+DC_8_n28,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+,Frequency range,860,-,890,-40,1,"5, 12"
+DC_8_n34,Frequency range,860,-,890,-40,1,"5, 12"
+"DC_8_n41,DC_8_n81_ULSUP-TDM_n41",Frequency range,860,-,890,-40,1,"5, 12"
+DC_8_n77,Frequency range,860,-,890,-40,1,"5, 12"
+DC_8_n78DC_8_n81_ULSUP-TDM_n78,Frequency range,860,-,890,-40,1,"5, 12"
+DC_8_n79DC_8_n81_ULSUP-TDM_n79,Frequency range,860,-,890,-40,1,"5, 12"
+DC_11_n1,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_11_n3,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_11_n28,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,773,-,803,-50,1,
+,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_11_n41,Frequency range,945,-,960,-50,1,
+DC_11_n77,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_11_n78,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_11_n79,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_13_n2,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_13_n5,Frequency range,859,-,869,-27,1,
+,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_13_n7,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_13_n25,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_13_n48,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_13_n66,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,803,-35,0.00625,5
+DC_13_n71,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_13_n77,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_14_n2,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_14_n30,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_14_n77,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_14_n66,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_18_n28,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,799,-50,1,
+,Frequency range,799,-,803,-40,1,5
+,Frequency range,860,-,890,-40,1,
+,Frequency range,945,-,960,-50,1,5
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_18_n41,Frequency range,945,-,960,-50,1,
+DC_13_n78,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_18_n3,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_18_n77,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_18_n78,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_18_n79,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_19_n1,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_19_n77,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_19_n78,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_19_n79,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_20_n1,Frequency range,758,-,788,-50,1,
+DC_20_n3,Frequency range,758,-,788,-50,1,
+DC_20_n41,Frequency range,758,-,788,-50,1,
+DC_20_n50,Frequency range,758,-,788,-50,1,
+DC_20_n51,Frequency range,758,-,788,-50,1,
+"DC_20A_91A_ULSUP-TDM,DC_20A_92A_ULSUP-TDM",Frequency range,758,-,788,-50,1,
+DC_21_n1,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_21_n28,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+DC_21_n77,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_21_n78,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_21_n79,Frequency range,945,-,960,-50,1,
+,Frequency range,2545,-,2575,-50,1,
+,Frequency range,2595,-,2645,-50,1,
+DC_26_n41,Frequency range,703,-,799,-50,1,
+,Frequency range,799,-,803,-40,1,5
+,Frequency range,945,-,960,-50,1,
+DC_26_n77,Frequency range,703,-,799,-50,1,
+,Frequency range,799,-,803,-40,1,5
+,Frequency range,945,-,960,-50,1,
+DC_26_n78,Frequency range,703,-,799,-50,1,
+,Frequency range,799,-,803,-40,1,5
+,Frequency range,945,-,960,-50,1,
+DC_26_n79,Frequency range,703,-,799,-50,1,
+,Frequency range,799,-,803,-40,1,5
+,Frequency range,945,-,960,-50,1,
+DC_28_n1,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_28_n2,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_28_n3,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_28_n5,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+,Frequency range,773,-,803,-50,1,
+DC_28_n7,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_28_n8,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_28_n38,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_28_n40,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_28_n41DC_28_n83_ULSUP-TDM_n41,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_28_n50,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_28_n51,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_28_n66,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_28_n77,Frequency range,758,-,773,-32,1,
+,Frequency range,773,-,803,-50,1,
+DC_28_n78DC_28_n83_ULSUP-TDM_n78,Frequency range,758,-,773,-32,1,
+,Frequency range,773,-,803,-50,1,
+DC_28_n79,Frequency range,758,-,773,-32,1,
+,Frequency range,773,-,803,-50,1,
+DC_30_n14,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_38_n8,Frequency range,860,-,890,-40,1,"5, 12"
+DC_38_n28,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_38_n78,N/A,,,,,,
+DC_40_n77,N/A,,,,,,
+DC_41_n28,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_42_n77,N/A,,,,,,
+DC_42_n78,N/A,,,,,,
+DC_42_n79,N/A,,,,,,
+DC_48_n77,N/A,,,,,,
+DC_66_n14,Frequency range,769,-,775,-35,0.00625,5
+,Frequency range,799,-,805,-35,0.00625,5
+DC_66_n28,Frequency range,470,-,694,-42,8,"5, 17"
+,Frequency range,470,-,710,-26.2,6,14
+,Frequency range,662,-,694,-26.2,6,5
+,Frequency range,758,-,773,-32,1,5
+,Frequency range,773,-,803,-50,1,
+DC_68_n20,Frequency range,758,-,788,-50,1,
+DC_68_n38,Frequency range,2620,-,2645,-15.5,5,"5, 22, 26"
+,Frequency range,2645,-,2690,-40,1,"5, 22"
+DC_68_n41,Frequency range,2530,-,2535,-25,1,23
+,Frequency range,2505,-,2530,-30,1,23
+"NOTE 1:VoidNOTE 2:VoidNOTE 3:VoidNOTE 4:VoidNOTE 5:These requirements also apply for the frequency ranges that are less than FOOB (MHz) in Table 6.6.3.1-1, Table 6.6.3.1A-1 in TS 36.101 [4] or in Table 6.5.3.1-1 in TS 38.101-1 [2] from the edge of the channel bandwidth.NOTE 6:VoidNOTE 7:VoidNOTE 8:VoidNOTE 9:Applicable when the assigned E-UTRA or NR carrier is confined within 718 MHz and 748 MHz and when the channel bandwidth used is 5 or 10 MHz.NOTE 10:VoidNOTE 11:VoidNOTE 12:This requirement is applicable only for the following cases: A: for carriers of 5 MHz channel bandwidth when carrier centre frequency (Fc) is within the range 902.5 MHz ≤ Fc < 907.5 MHz with an uplink transmission bandwidth less than or equal to 20 RB; B: for carriers of 5 MHz channel bandwidth when carrier centre frequency (Fc) is within the range 907.5 MHz ≤ Fc ≤ 912.5 MHz without any restriction on uplink transmission bandwidth; C: for carriers of 10 MHz channel bandwidth when carrier centre frequency (Fc) is Fc = 910 MHz with an uplink transmission bandwidth less than or equal to 32 RB with RBstart > 3.NOTE 13:VoidNOTE 14:This requirement is applicable for 5 and 10 MHz E-UTRA or NR channel bandwidth allocated within 718-728MHz. For carriers of 10 MHz bandwidth, this requirement applies for an uplink transmission bandwidth less than or equal to 30 RB with RBstart > 1 and RBstart < 48.NOTE 15:VoidNOTE 16:VoidNOTE 17:This requirement is applicable in the case of a 10 MHz E-UTRA or NR carrier confined within 703 MHz and 733 MHz, otherwise the requirement of -25 dBm with a measurement bandwidth of 8 MHz applies.NOTE 18:VoidNOTE 19:VoidNOTE 20:Void.NOTE 21: VoidNOTE 22:Void",,,,,,,

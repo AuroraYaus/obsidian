@@ -1,0 +1,64 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2022-12,RAN#98-e,RP-223315,5890,1,B,CR related to Introduction of new LTE TDD Band in 1670 – 1675 MHz,18.0.0
+2022-12,RAN#98-e,RP-223317,5893,,B,CR for 36.101: UE RF requirements for band 8 intra-band contiguous CA,18.0.0
+2022-12,RAN#98-e,RP-223316,5896,,B,"Introduction of completed new LTE-A CA combinations to TS 36.101Note: Partially implemented because changes to 5.5A.3.1-1a, 5.5A.3.1-1c and 5.5A.3.1-1e are not included in the specification.Note: Partically implemented some tables as there was some conflicts related to the CR.",18.0.0
+2023-03,RAN#99,RP-230512,5898,,A,Updates related to NB1/NB2/M1/M2 support for Band 24/n24,18.1.0
+2023-03,RAN#99,RP-230527,5899,,F,Updates to spurious emissions UE coexistence table,18.1.0
+2023-03,RAN#99,RP-230524,5900,,B,CR related to Introduction of support of NB1/NB2/M1/M2 for LTE TDD Band 54,18.1.0
+2023-03,RAN#99,RP-230517,5902,,A,36.101 Rel18 CAT-A: Correction to co-existence requirements of band n8 and n100,18.1.0
+2023-03,RAN#99,RP-230516,5904,,A,CR for TS 36.101 Rel-18 CAT-A: Corrections on band combinations for UE co-existence,18.1.0
+2023-03,RAN#99,RP-230499,5907,,A,CR for TS 36.101 Rel-18 CAT-A: Corrections on CA_NS_10,18.1.0
+2023-03,RAN#99,RP-230508,5911,,A,CR for TS 36.101: P-Max definition correction for Band 14,18.1.0
+2023-03,RAN#99,RP-230499,5914,1,F,LTE interband 2UL CA co-ex simplication R18,18.1.0
+2023-03,RAN#99,RP-230525,5928,,A,CR for corrections on Rel-18 band combinations in TS36.101,18.1.0
+2023-03,RAN#99,RP-230499,5932,,A,CR for TS 36.101 Rel-18: Adding note 44 to B65 for spurious emission requirement,18.1.0
+2023-03,RAN#99,RP-230499,5936,,A,"Output power for NS_38, NS_40, and NS_41",18.1.0
+2023-03,RAN#99,RP-230533,5937,,B,Introduction of Band n105 in coexistence table,18.1.0
+2023-03,RAN#99,RP-230521,5938,,B,CR on MPR for LTE Intra-band CA with CC gap larger than 35 MHz,18.1.0
+2023-03,RAN#99,RP-230499,5941,,A,CR: Updates to applicability rules for LTE 8Rx requirements in TS 36.101(Rel-18),18.1.0
+2023-03,RAN#99,RP-230499,5942,,A,CR: Corrections on FRC for LTE SDR test for cases with 6DL_7DL CCs in TS 36.101 (Rel-18),18.1.0
+2023-03,RAN#99,RP-230525,5943,,B,Big CR on Introduction of completed R18 x(x<=6) DL y(y<=2) UL CA band combinations to TS 36.101,18.1.0
+2023-06,RAN#100,RP-231340,5951,,A,CR TS 36.101: Correction to point the Void Tables in Rel-18,18.2.0
+2023-06,RAN#100,RP-231362,5955,2,B,CR to TS36.101: the introduction of 900 MHz LTE new band,18.2.0
+2023-06,RAN#100,RP-231341,5966,,A,CR to TS 36.101 on relative humidity condition for normal temperature (R18_CAT_A),18.2.0
+2023-06,RAN#100,RP-231363,5972,,A,CR for corrections on Rel-18 band combinations in TS36.101,18.2.0
+2023-06,RAN#100,RP-231365,5973,1,F,CR for TS 36.101-1 Rel-18 CAT-F: Corrections on band combinations for UE co-existence,18.2.0
+2023-06,RAN#100,RP-231341,5979,,A,Correction of RMCs for power imbalance TC,18.2.0
+2023-06,RAN#100,RP-231363,5980,,B,Big CR on Introduction of completed R18 x(x<=6) DL y(y<=2) UL CA band combinations to TS 36.101,18.2.0
+2023-09,RAN#101,RP-232500,5983,,A,CR to TS 36.101 Rel-18 Removal of Cat-M2 REFSENS in B71,18.3.0
+2023-09,RAN#101,RP-232520,5987,1,F,CR for 36.101 18.2.0 Bug fixes for CA tables,18.3.0
+2023-09,RAN#101,RP-232511,5993,,B,CA 36.101: Addition of CAT-M operation for B106,18.3.0
+2023-09,RAN#101,RP-232486,5994,,A,CR 36.101: uplink inter-band carrier aggregation UEtoUE co-ex table cell border correction R18,18.3.0
+2023-09,RAN#101,RP-232485,6001,,A,[LTE_CA_R14_intra-Core] CR for adding Band46 downlink RMC definition,18.3.0
+2023-09,RAN#101,RP-232508,6002,,F,"[LTE_bands_R18_M1_M2_NB1-NB2-Core] CR to update NB1, NB2 ASE requirements for Band 54",18.3.0
+2023-09,RAN#101,RP-232521,6003,1,B,CR on addition of PC1 operation for band 12,18.3.0
+2023-09,RAN#101,RP-232509,6004,,B,Big CR on Introduction of completed R18 x(x<=6) DL y(y<=2) UL CA band combinations to TS 36.101,18.3.0
+2023-09,RAN#101,RP-232500,6008,,A,[TEI15] CR TS 36.101: Band 28 3 MHz operation for Japan [Japan_3MHz_n28],18.3.0
+2023-09,RAN#101,RP-232486,6011,,A,CR for TS 36.101 [LTE_CA_R16_2BDL_2BUL] Addition of missing CA operating bands (R18_CAT A),18.3.0
+2023-09,RAN#101,RP-232524,6015,1,F,[Ext_B12_LTE-Core] CR for 36.101: Correction for Band 85 UE coexistence,18.3.0
+2023-09,RAN#101,RP-232507,6016,1,B,Introduction of 5G broadcast UHF bands,18.3.0
+2023-12,RAN#102,RP-233336,6021,,A,CR on TS36.101 for simplification of LTE V2X UE co-existence in Rel-18 (Cat. A),18.4.0
+2023-12,RAN#102,RP-233356,6024,,A,CR for 36.101 UE to UE coex  R18,18.4.0
+2023-12,RAN#102,RP-233366,6026,,B,CR to TS36.101: introduction of NR bands n31 and n72,18.4.0
+2023-12,RAN#102,RP-233356,6027,1,B,Draft BigCr to TS 36.101:   Introduction of completed new LTE-A CA combinations,18.4.0
+2023-12,RAN#102,RP-233353,6029,,B,CR to TS 36.101: Additional OOBE requirements for Aerial Ues,18.4.0
+2024-03,RAN#103,RP-240577,6031,1,C,CR to remove brackets,18.5.0
+2024-03,RAN#103,RP-240555,6034,,A,CR to 36.101 on table referencing corrections for spurious emission band UE co-existence for CA,18.5.0
+2024-03,RAN#103,RP-240580,6035,,B,Big CR on High Power UE (Power Class 2) for LTE FDD Band 14,18.5.0
+2024-03,RAN#103,RP-240555,6038,,A,(LTE_CA_R17_xBDL_2BUL-Core) CR for TS 36.101 on inter-band CA operating bands (R18_CAT_A),18.5.0
+2024-03,RAN#103,RP-240584,6039,,F,(LTE_terr_bcast_bands_part2-Core) CR to 36.101: Correction of EARFCN for bands 107 and 108,18.5.0
+2024-03,RAN#103,RP-240577,6040,,F,bigCR to 36.101 Corrections for aerial LTE UEs,18.5.0
+2024-03,RAN#103,RP-240583,6044,,F,"(LTE_CA-Core, LTE_UAV_enh-Core) CR to TS 36.101: feature-agnostic approach implementation, Rel-18",18.5.0
+2024-03,RAN#103,RP-240581,6045,,B,Draft BigCr to TS 36.101:   Introduction of completed new LTE-A CA combinations,18.5.0
+2024-06,RAN#104,RP-241410,6047,1,F,CR Bug Fixes 36101-i50_s00-07,18.6.0
+2024-06,RAN#104,RP-241413,6048,1,F,CR to 36.101 on Aerial Specific Pmax Values,18.6.0
+2024-06,RAN#104,RP-241410,6049,,F,CR into 36.101 Correction to band combination tables,18.6.0
+2024-06,RAN#104,RP-241410,6050,,F,CR for 36.101 removal of illegal chacarters from CA acronymns,18.6.0
+2024-06,RAN#104,RP-241410,6051,,B,(LTE_CA_R18_xBDL_yBUL) BigCr to TS 36.101:   Introduction of completed new LTE-A CA combinations,18.6.0
+2024-06,RAN#104,RP-241455,6052,,B,Big CR TS 36.101 High-power UE operation for fixed-wireless/vehicle-mounted use cases in LTE bands,18.6.0
+2024-09,RAN#105,RP-242153,6055,,A,LTE Band 88 REFSENS UL allocation is missing R18,18.7.0
+2024-09,RAN#105,RP-242151,6066,,A,(LTE_CA_R16_intra-Core) CR to TS 36.101: B41 emissions,18.7.0
+2024-12,RAN#106,RP-243029,6067,1,F,Adding missing performance requirements for 6/7/8 MHz channel bandwidths for LTE-based 5G terrestrial broadcast,18.8.0
+2024-12,RAN#106,RP-243027,6070,1,F,CR 36.101 editorial changes for CA,18.8.0
+2024-12,RAN#106,RP-243029,6076,,A,"(LTE_V2X-Core) CR to correct the name of the feature ""V2X con-current operation"" to ""V2X concurrent operation"" - TS36.101",18.8.0

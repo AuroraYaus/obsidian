@@ -1,0 +1,29 @@
+UL band,DL band,UL BW,SCS of UL band,UL RB Allocation,DL BW,MSD,UL/DL fc condition,UL/DL harmonic order
+,,(MHz),(kHz),LCRB,(MHz),(dB),,
+n80,n77,5,15,12,10,23.9,NOTE 2,UL2/DL1direct-hit
+n80,n77,5,15,12,100,13.8,NOTE 2,UL2/DL1direct-hit
+n80,n78,5,15,12,10,23.9,NOTE 2,UL2/DL1direct-hit
+n80,n78,5,15,12,100,13.8,NOTE 2,UL2/DL1direct-hit
+n81,n41,5,15,8,10,13,NOTE 3,UL3/DL1direct-hit
+n81,n41,5,15,8,100,4.5,NOTE 3,UL3/DL1direct-hit
+n81,n78,5,15,6,10,10.8,NOTE 4,UL4/DL1direct-hit
+n81,n78,5,15,6,100,3.1,NOTE 4,UL4/DL1direct-hit
+n81,n79,5,15,5,40,6.8,NOTE 5,UL5/DL1direct-hit
+n81,n79,5,15,5,100,3.8,NOTE 5,UL5/DL1direct-hit
+n82,n78,5,15,6,10,10.8,NOTE 4,UL4/DL1direct-hit
+n82,n78,5,15,6,100,3.1,NOTE 4,UL4/DL1direct-hit
+n83,n78,5,15,5,10,10.4,NOTE 5,UL5/DL1direct-hit
+n83,n78,5,15,5,100,2.9,NOTE 5,UL5/DL1direct-hit
+n84,n77,5,15,12,10,23.9,NOTE 2,UL2/DL1direct-hit
+n84,n77,5,15,12,100,13.8,NOTE 2,UL2/DL1direct-hit
+n86,n78,5,15,12,10,23.9,NOTE 2,UL2/DL1direct-hit
+n86,n78,5,15,12,100,13.8,NOTE 2,UL2/DL1direct-hit
+n89,n78,5,15,6,10,10.5,NOTE 4,UL4/DL1direct-hit
+n89,n78,5,15,6,100,2.9,NOTE 4,UL4/DL1direct-hit
+n97,n79,5,15,12,10,35.5,NOTE 2,UL2/DL1direct-hit
+n97,n79,5,15,12,100,25.3,NOTE 2,UL2/DL1direct-hit
+n99,n77,5,15,12,10,23.9,NOTE 2,UL2/DL1direct-hit
+n99,n77,5,15,12,100,13.8,NOTE 2,UL2/DL1direct-hit
+n80,n104,5,15,6,20,11.7,NOTE 2,UL4/DL1direct-hit
+n80,n104,5,15,6,100,6.1,NOTE 2,UL4/DL1direct-hit
+"NOTE 1:The direct-hit requirements apply when there is at least one individual RE within the uplink transmission bandwidth of the aggressor (lower) band for which the 2nd / 3rd / 4th / 5th transmitter harmonic is within the downlink transmission bandwidth of a victim (higher) band. The requirements should be verified using RBstart = floor((NRB-LCRB)/2), where floor(x) is the greatest integer less than or equal to x, and where the UL parameters NRB and LCRB are respectively, the transmission bandwidth configuration and the number of RB’s for the specified UL band channel bandwidth and the UL band subcarrier spacing.NOTE 2:  The requirements should be verified for UL NR ARFCN of the aggressor (lower) band (superscript LB) such that in MHz and  with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band. This DL band may be affected by near-miss interference for which the MSD is not specified.NOTE 3:The requirements should be verified for UL NR ARFCN of the aggressor (lower) band (superscript LB) such that  in MHz and  with the carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the low band.NOTE 4:The requirements should be verified for UL EARFCN of the aggressor (lower) band (superscript LB) such that in MHz and  with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 5:The requirements should be verified for UL NR-ARFCN of the aggressor (lower) band (superscript LB) such that in MHz and  with carrier frequency in the victim (higher) band in MHz and  the channel bandwidth configured in the lower band.NOTE 6:The near-miss requirements are only applicable when direct-hit requirements do not apply. These requirements should be verified for downlink channel bandwidths no larger than 10 MHz and with a carrier frequency at  MHz offset from  in the victim (higher band) with , whereandare the channel bandwidths configured in the aggressor (lower) and victim (higher) bands in MHz, respectively.±10+BWChannelHB/2",,,,,,,,

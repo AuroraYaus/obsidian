@@ -1,0 +1,5 @@
+Attribute,Normal coverage
+DCI format,6-1A
+Starting OFDM symbols,2; Bandwidth >= 10MHz3; 3MHz <= Bandwidth < 10MHz4; Bandwidth = 1.4MHz
+MPDCCH repetition level Note1,1
+M-PDCCH Transmission type,Distributed

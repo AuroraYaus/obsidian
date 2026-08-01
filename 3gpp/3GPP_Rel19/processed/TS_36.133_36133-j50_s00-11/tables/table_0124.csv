@@ -1,0 +1,7 @@
+eDRX_IDLE cycle length [s],DRX cycle length [s],PTW length [s] (number of 1.28s periods),"Tdetect,EUTRAN_Inter_EC [s] (number of DRX or eDRX cycles Note 4) for neighboring cell with SCH Es/IoT: -15≤ Q2 < -6 [dB]","Tdetect,EUTRAN_Inter_EC [s] (number of DRX or eDRX cycles Note 4) for neighboring cell with SCH Es/IoT:Q2-6 [dB]","Tmeasure,EUTRAN_Inter_EC [s] (number of DRX or eDRX cycles Note 4)","Tevaluate,E-UTRAN_inter_EC[s] (number of DRX or eDRX cycles Note 4)"
+5.12,N/A,N/A,2078.72 (406),133.12 (26),5.12 (1),30.72 (6)
+10.24 ≤ eDRX_IDLE cycle length ≤ 2621.44,0.32,≥1.28 (1),Note 3 (406),Note 3 (26),0.32 (1),Note 3 (6)
+,0.64,≥1.28 (1),,,0.64 (1),Note 3 (6)
+,1.28,≥1.28 (1),,,1.28 (1),Note 3 (6)
+,2.56,≥2.56 (2),,,2.56 (1),Note 3 (6)
+"Note 1:The number of DRX cycles in this table is given for the DRX cycles within PTWs.Note 2:The eDRX_IDLE cycle lengths are as specified in Section 10.5.5.32 of TS 24.008 [34].Note 3:The detection period and the evaluation period depend on the number N of DRX cycles and are calculated according to the formula below:.Note 4:Number of eDRX cycles when eDRX_IDLE cycle length equals 5.12s, number of DRX cycles otherwise.",,,,,,

@@ -1,0 +1,55 @@
+Parameter,,Unit,Test 1,,Test 2,
+,,,Cell 1,Cell 2,Cell 1,Cell 2
+E-UTRA RF Channel Number,,,1,,1,
+Cell Ids,,,(Cell ID of cell 1 – Cell ID of cell 2) mod 3 ≠ 0,,(Cell ID of cell 1 – Cell ID of cell 2) mod 6 = 0,
+BWchannel,,MHz,10,,10,
+Measurement bandwidth,,,22—27,,22—27,
+PDSCH Reference measurement channel defined in A.3.1.1.1,,,R.0 FDD,-,R.0 FDD,-
+PDSCH allocation,,,13—36,-,13—36,-
+PDCCH/PCFICH/PHICH Reference measurement channel defined in A.3.1.2.1,,,R.6 FDD,-,R.6 FDD,-
+OCNG Patterns defined in A.3.2.1.1 (OP.1 FDD) and A.3.2.1.2 (OP.2 FDD),,,OP.1 FDD,-,OP.1 FDD,-
+PBCH_RA,,dB,0,0,0,0
+PBCH_RB,,,,0,,0
+PSS_RA,,,,0,,0
+SSS_RA,,,,0,,0
+PCFICH_RB,,,,-∞,,-∞
+PHICH_RA,,,,-∞,,-∞
+PHICH_RB,,,,-∞,,-∞
+PDCCH_RA,,,,-∞,,-∞
+PDCCH_RB,,,,-∞,,-∞
+PDSCH_RA,,,,-∞,,-∞
+PDSCH_RB,,,,-∞,,-∞
+OCNG_RANote1,,,,-∞,,-∞
+OCNG_RBNote1,,,,-∞,,-∞
+Note2,Bands FDD_A Note 8,dBm/15 kHz,-90,-90,-116,
+,"Bands FDD_B1, FDD_B2 Note 9",,,,-115.5,
+,Bands FDD_C,,,,-115,
+,Bands FDD_D,,,,-114.5,
+,"Bands FDD_E, FDD_F Note 5",,,,-114,
+,Bands FDD_G Note 7,,,,-113,
+,Bands FDD_H,,,,-112.5,
+CRS,,dB,5,-3.19,-5.46,-5.46
+RSRPNote3,Bands FDD_A Note 8,dBm/15 kHz,-85.00,-87.00,-120,-120
+,"Bands FDD_B1, FDD_B2 Note 9",,,,-119.5,-119.5
+,Bands FDD_C,,,,-119,-119
+,Bands FDD_D,,,,-118.5,-118.5
+,"Bands FDD_E, FDD_F Note 5",,,,-118,-118
+,Bands FDD_G Note 7,,,,-117,-117
+,Bands FDD_H,,,,-116.5,-116.5
+RS-SINRNote3,Bands FDD_A Note 8,dB,5,-3.19,-5.46,-5.46
+,"Bands FDD_B1, FDD_B2 Note 9",,,,,
+,Bands FDD_C,,,,,
+,Bands FDD_D,,,,,
+,"Bands FDD_E, FDD_F Note 5",,,,,
+,Bands FDD_G Note 7,,,,,
+,Bands FDD_H,,,,,
+IoNote3,Bands FDD_A Note 8,dBm/9 MHz,-55.69,-55.69,-86.56,
+,"Bands FDD_B1, FDD_B2 Note 9",,,,-86.06,
+,Bands FDD_C,,,,-85.56,
+,Bands FDD_D,,,,-85.06,
+,"Bands FDD_E, FDD_F Note 5",,,,-84.56,
+,Bands FDD_G Note 7,,,,-83.56,
+,Bands FDD_H,,,,-83.06,
+CRS,,dB,5,3,-4,-4
+Propagation condition,,-,AWGN,,AWGN,
+"Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:RS-SINR, RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:RSRP and RS-SINR minimum requirements are specified assuming independent interference and noise at each receiver antenna port.Note 5:For Band 26, the tests shall be performed with the carrier frequency of the assigned E-UTRA channel bandwidth within 865-894 MHz.Note 6:E-UTRA operating band groups are as defined in Section 3.5.Note 7:Except Band 29Note 8:Except Band 32, Band 75, Band 76.Note 9:For Band 74, the tests shall be performed with the carrier frequency of the assigned E-UTRA channel bandwidth within 1475.9-1510.9 MHz.",,,,,,

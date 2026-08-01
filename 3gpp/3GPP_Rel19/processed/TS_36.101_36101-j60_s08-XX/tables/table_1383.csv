@@ -1,0 +1,36 @@
+Parameter,,Unit,"Test 1-1                                                   (K,N)=(2,8)","Test 1-2                               (K,N)=(2,16))","Test 1-3                                          (K,N)=(4,32)","Test 1-4                                              (K,N)=(8,64)"
+Bandwidth,,MHz,10,,,
+Transmission mode,,,9,,,
+Uplink downlink configuration,,,2,,,
+Special subframe configuration,,,4,,,
+Propagation channel,,,EPA5,,,
+Beamforming model,,,Annex B.4.6,,,
+Precoding granularity,,PRB,50,,,
+Correlation and antenna configuration  (Note 1),,,4x2 XP High,8x2 XP High,8x2 XP High,8x2 XP High
+Cell-specific reference signals,,,"Antenna ports 0,1",,,
+eMIMO-Type,,,Class B,,,
+Number of NZP-CSI resources (K)(Note 3),,,2 for following CRI1 for fixed CRI,2 for following CRI1 for fixed CRI,4 for following CRI1 for fixed CRI,8 for following CRI1 for fixed CRI
+NZP-CSI-RS-ID-List,,,"{0,1}","{0,1}","{0,1,2,3 }","{0,1,2,3,4,5,6,7}"
+legacyCSRList,,,"{0,0}","{0,0}","{0,0,0,0}","{0,0,0,0,0,0,0,0}"
+CSI reference signal configuration List,,,"{0,1}","{0,1}","{0,1,2,3 }","{0,1,2,3,0,1,2,3}"
+Number of CSI-RS ports(Nk),,,"{4,4}","{8,8}","{8,8,8,8}","{8,8,8,8,8,8,8,8}"
+CSI-RS-SubframeConfig  List,,,"{9,9}","{9,9}","{9,9,9,9}","{8,8,8,8,9,9,9,9}"
+CodeBookSubsetRestriction with ID=0,,,0x0000 00000000 0001,0x0000 0000 0000 0020 0000 0000 0001,0x0000 0000 0000 0020 0000 0000 0001,0x0000 0000 0000 0020 0000 0000 0001
+alternativeCodeBookEnabledFor4TX-r12,,,FALSE,N/A,N/A,N/A
+Downlink power allocation,,dB,0,0,0,0
+,,dB,0,0,0,0
+,Pc,dB,-3,-6,-6,-6
+,,dB,-3,-3,-3,-3
+,,dB[mW/15kHz],-98,,,
+Reporting mode,,,PUSCH 3-1,,,
+Reporting interval,,ms,10,,,
+CRI Delay,,ms,12,,,
+PMI delay,,ms,12,,,
+Measurement channel,,,R.44A-1 TDD,R.44A-2 TDD,R.44A-2 TDD,R.44A-3 TDD
+OCNG Pattern,,,OP.1 TDD,,,
+Rank Number of PDSCH,,,1,,,
+Scheduled PDSCH SFs,,,"SF 0,1,3,6,8,9","SF 0,1,3,6,8,9","SF 0,1,3,6,8,9","SF 0,1,6,8,9"
+Max number of HARQ transmissions,,,4,,,
+Redundancy version coding sequence,,,"{0,1,2,3}",,,
+ACK/NACK feedback mode,,,Multiplexing,,,
+"Note 1:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).Note 2:PDSCH _RA= 0 dB, PDSCH_RB= 0 dB in order to have the same PDSCH and OCNG power per subcarrier at the receiver.Note 3:When one CSI-RS resource configured, the configurations according to NZP-CSI-RS-ID 0 are configured.Note 4:PDCCH DCI format 0 with a trigger for aperiodic CQI shall be transmitted in downlink SF#4 to allow aperiodic CRI/CQI/PMI/RI to be transmitted on uplink SF#2.",,,,,,

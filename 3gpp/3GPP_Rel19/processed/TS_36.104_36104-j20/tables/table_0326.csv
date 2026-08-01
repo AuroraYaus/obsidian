@@ -1,0 +1,16 @@
+Reference channel,A20-2
+Uplink resource allocation type,3
+Allocated resource blocks,50
+DFT-OFDM Symbols per subframe,11
+Modulation,16QAM
+Code rate,¾
+Payload size (bits),19848
+Transport block CRC (bits),24
+Code block CRC size (bits),24
+Number of code blocks – C,4
+Coded block size including 12bits trellis termination (bits),14988
+Total number of bits per the sub-frame with the PUSCH starting position at 25µs in symbol 0,26400
+Total number of bits per the sub-frame with the PUSCH starting position at symbol 0,28800
+Total symbols per the sub-frame with the PUSCH starting positon at 25µs in symbol 0,6600
+Total symbols per the sub-frame with the PUSCH starting positon at symbol 0,7200
+NOTE1:The PUSCH ending symbol for all scheduled subframes is the last symbol.,

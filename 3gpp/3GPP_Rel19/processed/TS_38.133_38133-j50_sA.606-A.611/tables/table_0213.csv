@@ -1,0 +1,9 @@
+Parameter,Unit,Test configuration,Cell 1,,,Cell 2,,
+,,,T1,T2,T3,T1,T2,T3
+BWchannel,MHz,Config 1,"10: NPRB,c = 52",,,"3: NPRB,c = 15",,
+BWP BW,MHz,Config 1,"10: NPRB,c = 52",,,"3: NPRB,c = 15",,
+PDSCH Reference measurement channel,,Config 1,SR.1.2 FDD,,,N/A,,
+CORESET Reference Channel,,Config 1,CR.1.3 FDD,,,N/A,,
+SSB parameters,,Config 1,SSB.1 FR1,,,SSB.13 FR1,,
+Io for Cell 1,dBm/9.36 MHz,Config 1,-62.26,,,N/A,,
+Io for Cell 2,dBm/2.7 MHz,Config 1,N/A,,,-75.45,-72.44,-72.44

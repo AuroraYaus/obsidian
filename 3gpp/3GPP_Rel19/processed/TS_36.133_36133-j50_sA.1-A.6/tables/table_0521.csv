@@ -1,0 +1,5 @@
+Parameter,Unit,Cell 1,,,Cell 2,,,,
+,,T1,T2,T3,T1,T2,,T3,
+BWchannel,MHz,5,,,5,,,,
+OCNG Patterns defined in A.3.2.1.15 (OP.15 FDD) and A.3.2.1.16 (OP.16 FDD),,OP.15 FDD,OP.15 FDD,OP.16 FDD,OP.16 FDD,,OP.16 FDD,,OP.15 FDD
+Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:See Table A.6.1.5.1-2 for the other parameters.,,,,,,,,,

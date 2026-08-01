@@ -1,0 +1,93 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td>-6</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>-6 (Note 1)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td colspan="2">at antenna port</td>
+    <td>dBm/15kHz</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td colspan="2">Precoding granularity</td>
+    <td>PRB</td>
+    <td>Wideband precoding for 1.4MHz, 4 for 3MHz and 5MHz CCs, 6 for 10MHz CCs, 8 for 15MHz and 20MHz CCs</td>
+  </tr>
+  <tr>
+    <td rowspan="2">PMI delay (Note 2)</td>
+    <td>FDD CC</td>
+    <td>ms</td>
+    <td>8</td>
+  </tr>
+  <tr>
+    <td>TDD CC</td>
+    <td>ms</td>
+    <td>10 or 11</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Reporting interval</td>
+    <td>FDD CC</td>
+    <td>ms</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>TDD CC</td>
+    <td>ms</td>
+    <td>1 or 4 (Note 3)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting mode</td>
+    <td></td>
+    <td>PUSCH 1-2</td>
+  </tr>
+  <tr>
+    <td colspan="2">CodeBookSubsetRestriction bitmap</td>
+    <td></td>
+    <td>0000000000000000000000000000000011111111111111110000000000000000</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI request field (Note 3)</td>
+    <td></td>
+    <td>‘10’</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH transmission mode</td>
+    <td></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td colspan="2">ACK/NACK transmission</td>
+    <td></td>
+    <td>Separate ACK/NACK feedbacks with PUCCH format 1b on the MCG and SCG</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI feedback</td>
+    <td></td>
+    <td>Separate PUSCH feedbacks on the MCG and SCG</td>
+  </tr>
+  <tr>
+    <td colspan="2">Time offset between MCG CC and SCG CC</td>
+    <td>μs</td>
+    <td>0 for UE under test supporting synchronous dual connectivity;334 for UE under test supporting both asynchronous and synchrounous dual connectivity (Note 6)</td>
+  </tr>
+  <tr>
+    <td colspan="4">Note 1:.Note 2:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).Note 3:Multiple CC-s under test are configured as the 1st set of serving cells by higher layers.Note 4:ACK/NACK bits are transmitted using PUSCH with PUCCH format 3.Note 5:The same PDSCH transmission mode is applied to each component carrier.Note 6:As defined in TS36.300 [11].Note 7: If the UE supports both SCG bearer and Split bearer, the SCG bearer is configured.</td>
+  </tr>
+</table>

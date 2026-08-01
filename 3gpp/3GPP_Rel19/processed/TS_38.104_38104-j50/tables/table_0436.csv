@@ -1,0 +1,20 @@
+Parameter,,Value
+Transform precoding,,Enabled
+Default TDD UL-DL pattern (Note 1),,"60 kHz and 120kHz SCS:3D1S1U, S=10D:2G:2U480kHz SCS:14D2S4U, S1=12D:2G0U, S2=0D:6G:8U"
+HARQ,Maximum number of HARQ transmissions,4
+,RV sequence,"0, 2, 3, 1"
+DM-RS,DM-RS configuration type,1
+,DM-RS duration,single-symbol DM-RS
+,Additional DM-RS position,"pos0, pos1"
+,Number of DM-RS CDM group(s) without data,2
+,Ratio of PUSCH EPRE to DM-RS EPRE,-3 dB
+,DM-RS port(s),0
+,DM-RS sequence generation,"NID0=0, group hopping and sequence hopping are disabled"
+Time domain,PUSCH mapping type,B
+resource,Start symbol,0
+assignment,Allocation length,10
+Frequency domain resource,RB assignment,FR2-1: 30 PRBs in the middle of the test bandwidthFR2-2: 64 PRBs in the middle of the test bandwidth
+assignment,Frequency hopping,Disabled
+Code block group based PUSCH transmission,,Disabled
+PT-RS,,Not configured
+NOTE 1:The same requirements are applicable to TDD with different UL-DL patterns.,,

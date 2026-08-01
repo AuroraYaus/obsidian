@@ -1,0 +1,23 @@
+Parameter,Unit,Value,,,
+Channel bandwidth,MHz,400,800,1600,2000
+Subcarrier spacing configuration,,6,6,6,6
+Allocated resource blocks,,33,62,124,148
+Subcarriers per resource block,,12,12,12,12
+Allocated slots per Frame (NOTE 6),,383 / 384,383 / 384,383 / 384,383 / 384
+MCS index,,24,24,24,24
+Modulation,,256QAM,256QAM,256QAM,256QAM
+Target Coding Rate,,4/5,4/5,4/5,4/5
+Maximum number of HARQ transmissions,,1,1,1,1
+Information Bit Payload per Slot,,,,,
+"For Slots 0 and Slot i, if mod(i, 5) = {3,4} for i from {0,…,1279}",Bits,N/A,N/A,N/A,N/A
+"For Slot i, if mod(i, 5) = {0,1,2} for i from {1,…,1279}",Bits,22032,42016,83976,98376
+Transport block CRC,Bits,24,24,24,24
+LDPC base graph,,1,1,1,1
+Number of Code Blocks per Slot,,,,,
+"For Slots 0 and Slot i, if mod(i, 5) = {3,4} for i from {0,…,1279}",CBs,N/A,N/A,N/A,N/A
+"For Slot i, if mod(i, 5) = {0,1,2} for i from {1,…,1279}",CBs,3,5,10,12
+Binary Channel Bits Per Slot,,,,,
+"For Slots 0 and Slot i, if mod(i, 5) = {3,4} for i from {0,…,1279}",Bits,N/A,N/A,N/A,N/A
+"For Slot i, if mod(i, 5) = {0,1,2} for i from {1,…,1279}",Bits,27288,51336,102672,122544
+Max. Throughput averaged over 1 frame (NOTE 7),Mbps,846.029,1613.414,3224.678,3777.638
+"NOTE 1:Additional parameters are specified in Table A.3.1-1 and Table A.3.3.1-1.NOTE 2:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).NOTE 3:SS/PBCH block is transmitted in slot 0 with periodicity 20 msNOTE 4:Slot i is slot index per 2 framesNOTE 5:PTRS is configured on symbols containing PDSCH with 1 port, per 2PRB in frequency domain, per symbol in time domain. Overhead for TBS calculation is assumed to be 6.NOTE 6:First number corresponds to the number slots allocated in the first frame of the RMC; second number corresponds to the number slots allocated in the second frame of the RMC.NOTE 7:Throughput is averaged over 2nd frame of RMC.",,,,,

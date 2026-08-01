@@ -1,0 +1,7 @@
+Number of TX antennas,Number of RX antennas,Cyclic prefix,Mapping Type,TO cycling (start:end)[µs],Channel Bandwidth [MHz],SCS [kHz],Propagation conditions and correlation matrix (Annex G),FRC(Annex A),SNR[dB]
+1,2,Normal,Type B,0:3.8,10,15,TDLC300-100 low,"G-FR1-A8-1,",7.0]
+,,,,,,,,or,
+,,,,,,,,G-FR1-A8-3,
+,,,,0:2,40,30,TDLC300-100 low,"G-FR1-A8-2,",7.6
+,,,,,,,,or,
+,,,,,,,,G-FR1-A8-4,

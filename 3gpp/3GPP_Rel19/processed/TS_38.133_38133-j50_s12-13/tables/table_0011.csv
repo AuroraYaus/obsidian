@@ -1,0 +1,5 @@
+SL-DRX cycleNote 1 [ms],"Tmeasure,PSBCH-RSRP_CCANote 3 [ms]"
+No SL-DRX,(2 + LPSBCH)*160
+SL-DRX cycle ≤ 160,(2 + LPSBCH)*160
+SL-DRX cycle > 160,(2 + LPSBCH)*SL-DRX cycle
+"NOTE 1:If multiple SL-DRX cycles are configured, the SL-DRX cycle is the shortest one.NOTE 2:LPSBCH is the number of S-SSB periods in which the SLSS is not available due to CCA failures during Tmeasure,PSBCH-RSRP_CCA, where LPSBCH ≤ LPSBCH,max and LPSBCH,max = 2.NOTE 3:Upon LPSBCH exceeding LPSBCH,max, the UE shall not reselect to the measured candidate SyncRef UE based on the measurement result.",

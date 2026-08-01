@@ -1,0 +1,12 @@
+IBB1 test Parameters,
+Category NB1 or NB2 signal power(Pwanted  ) / dBm,REFSENS + 6 dB
+Interferer,E-UTRA
+Interferer signal power(PInterferer ) / dBm,- 56 dBm
+Interferer bandwidth,5 MHz
+Interferer offset from category NB1 or NB2 channel edge,+7.5 MHz + 0.005 MHzand-7.5 MHz - 0.005 MHz
+IBB2 test Parameters,
+Category NB1 or NB2 signal power(Pwanted  ) / dBm,REFSENS + 6 dB
+Interferer,E-UTRA
+Interferer signal power(PInterferer ) / dBm,- 44 dBm
+Interferer bandwidth,5 MHz
+Interferer offset range from category NB1 or NB2 channel edge,From +12.5 MHz to FDL_high + 15 MHzandFrom -12.5 MHz to FDL_low - 15 MHz

@@ -1,0 +1,13 @@
+Parameter,Unit,Value,,,,
+Reference channel,,CD.1 FDD,CD.2 FDD,CD.3 FDD,CD.4 FDD,CD.5 FDD
+Channel bandwidth,MHz,5 / 10,5 / 10,5,10,5 / 10
+Allocated resource blocks,,10,10,25,50,2
+Subcarriers per resource block,,12,12,12,12,12
+DFT-OFDM Symbols per subframe (see Note 1),,11,11,11,11,11
+Modulation,,QPSK,16QAM,16QAM,16QAM,QPSK
+Transport Block Size,,872,2536,6456,12960,328
+Transport block CRC,Bits,24,24,24,24,24
+Maximum number of HARQ transmissions,,4,4,4,4,4
+"Binary Channel Bits (see Note 1,2)",Bits,2640,5280,13200,26400,528
+Max. Throughput averaged over one sc-period (bits/sc-period),,872,2536,6456,12960,328
+"Note 1:PSSCH transmissions are rate-matched for 12 DFT-OFDM symbols per subframe, and the last symbol shall be punctured as per TS 36.211.Note 2:Binary channel bits per HARQ transmission.Note 3:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).",,,,,,

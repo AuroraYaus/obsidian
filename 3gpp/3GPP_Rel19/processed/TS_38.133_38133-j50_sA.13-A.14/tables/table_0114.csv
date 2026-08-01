@@ -1,0 +1,4 @@
+Configuration,Description
+1,"GSO, NR FDD, 15 kHz SSB SCS, 10 MHz BW"
+2,"NGSO, NR FDD, 15 kHz SSB SCS, 10 MHz BW"
+"NOTE:If UE supports both NGSO and GSO, the GSO-based test cases can be skipped if the UE passes NGSO-based test cases.",

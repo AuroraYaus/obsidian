@@ -1,0 +1,8 @@
+Parameter,,xTyR configuration,,,,,,,
+,,1T2R,,2T4R,,1T4R,,,
+srs-ResourceId,,0,1,0,1,0,1,2,3
+startPosition,,5,3,5,3,5,3,5,3
+nrofSRS-Ports,,port1,port1,port2,port2,port1,port1,port1,port1
+nrofSymbols,,1,1,1,1,1,1,1,1
+periodicityAndOffset-p,"Config 1,2","sl40, 1","sl40, 1","sl40, 1","sl40, 1","sl40, 1","sl40, 1","sl40, 6","sl40, 6"
+,Config 3,"sl80, 3","sl80, 3","sl80, 3","sl80, 3","sl80, 3","sl80, 13","sl80, 13","sl80, 13"

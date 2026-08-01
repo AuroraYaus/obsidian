@@ -1,0 +1,10 @@
+,NR Slot length (ms) of victim cell,Interruption length (slots),,
+,,Sync,,Async
+0,1,1,,2
+1,0.5,2,,3
+2,0.25,Both aggressor cell and victim cell are on FR2,4,5
+,,Either aggressor cell or victim cell is on FR1,5,
+3,0.125,Aggressor cell is on FR2,8,9
+,,Aggressor cell is on FR1,9,
+5,0.03125,Aggressor cell is on FR1,33,33
+6,0.015625,Aggressor cell is on FR1,65,65

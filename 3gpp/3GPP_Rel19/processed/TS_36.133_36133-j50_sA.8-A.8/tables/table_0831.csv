@@ -1,0 +1,7 @@
+Parameter,Unit,Value,,Comment
+,,Test 1,Test 2,
+PCFICH/PDCCH/PHICH parameters,,DL Reference Measurement Channel R.11 TDD,,As specified in section A.3.1.2.1
+Channel Bandwidth (BWchannel),MHz,5,,
+PRS Transmission Bandwidth,RB,25,,PRS are transmitted over the system bandwidth
+PRS occasion length,,2,,
+Note 1:See Table A.8.17.2.1-1 for the other parameters.Note 2:This test verifies the RRM requirement which is independent of channel bandwidth and is performed according to the principle defined in section A.3.6.1.,,,,

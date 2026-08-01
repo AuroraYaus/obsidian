@@ -1,0 +1,158 @@
+<table>
+  <tr>
+    <td>CA configuration</td>
+    <td>SCS(PCC/SCC)(kHz)</td>
+    <td>Aggregated channel bandwidth (PCC+SCC)</td>
+    <td>Wgap / [MHz]</td>
+    <td>UL PCC allocation(LCRB)</td>
+    <td>SCCΔRIBNC (dB)</td>
+    <td>Duplex mode</td>
+  </tr>
+  <tr>
+    <td>CA_n1(2A)</td>
+    <td>15/15</td>
+    <td>5MHz + 5MHz</td>
+    <td>0.0 &lt; Wgap ≤ 50.0</td>
+    <td>25</td>
+    <td>0.5</td>
+    <td>FDD</td>
+  </tr>
+  <tr>
+    <td>CA_n2(2A)</td>
+    <td>15/15</td>
+    <td>5MHz + 5MHz</td>
+    <td>Wgap = 50.0</td>
+    <td>105</td>
+    <td>5.0</td>
+    <td>FDD</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Wgap = 30.0</td>
+    <td>25</td>
+    <td>0.0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>CA_n3(2A)</td>
+    <td>15/15</td>
+    <td>5MHz + 5MHz</td>
+    <td>Wgap = 65.0</td>
+    <td>125</td>
+    <td>4.7</td>
+    <td>FDD</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Wgap = 45.0</td>
+    <td>255</td>
+    <td>0.0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>CA_n5(2A)</td>
+    <td>15/15</td>
+    <td>15MHz + 5MHz</td>
+    <td>Wgap = 5.0</td>
+    <td>55</td>
+    <td>6.3</td>
+    <td>FDD</td>
+  </tr>
+  <tr>
+    <td>CA_n7(2A)</td>
+    <td>15/15</td>
+    <td>10MHz + 5MHz</td>
+    <td>Wgap = 55</td>
+    <td>325</td>
+    <td>0.0</td>
+    <td>FDD</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Wgap = 30</td>
+    <td>505</td>
+    <td>0.0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>CA_n12(2A)</td>
+    <td>15/15</td>
+    <td>5MHz + 5MHz</td>
+    <td>0.0 &lt; Wgap ≤ 7.0</td>
+    <td>5 (RBstart=12)</td>
+    <td>3</td>
+    <td>FDD</td>
+  </tr>
+  <tr>
+    <td>CA_n25(2A) 9</td>
+    <td>15/15</td>
+    <td>5MHz + 5MHz</td>
+    <td>Wgap = 55.0</td>
+    <td>105</td>
+    <td>5.0</td>
+    <td>FDD</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Wgap = 30.0</td>
+    <td>25</td>
+    <td>0.0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>CA_n25(2A) 10</td>
+    <td>15/15</td>
+    <td>40MHz + 5MHz</td>
+    <td>Wgap = 20.0</td>
+    <td>40 (RBstart = 176)</td>
+    <td>[24.6] 8</td>
+    <td>FDD</td>
+  </tr>
+  <tr>
+    <td>CA_n26(2A)</td>
+    <td>15/15</td>
+    <td>15MHz + 10MHz</td>
+    <td>Wgap = 10.0</td>
+    <td>5 (RBstart = 74)</td>
+    <td>25.2</td>
+    <td>FDD</td>
+  </tr>
+  <tr>
+    <td>CA_n66(2A)CA_n66(3A)</td>
+    <td>N/A</td>
+    <td>NOTE 1</td>
+    <td>NOTE 2</td>
+    <td>NOTE 3, NOTE 4</td>
+    <td>0.0</td>
+    <td>FDD</td>
+  </tr>
+  <tr>
+    <td>CA_n71(2A)</td>
+    <td>15/15</td>
+    <td>15MHz + 10MHz</td>
+    <td>Wgap = 10.0</td>
+    <td>5 (RBstart = 2)</td>
+    <td>22.2</td>
+    <td>FDD</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>25MHz + 5MHz11</td>
+    <td>Wgap = 5.0</td>
+    <td>20 (RBstart = 19)</td>
+    <td>25.1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="7">NOTE 1:All combinations of channel bandwidths defined in Table 5.5A.2-1.NOTE 2:All applicable sub-block gap sizes.NOTE 3:The PCC allocation is same as Transmission bandwidth configuration NRB as defined in Table 5.3.2-1. NOTE 4:The carrier center frequency of PCC in the DL operating band is configured closer to the UL operating band.NOTE 5:Refers to the UL resource blocks shall be located as close as possible to the downlink operating band but confined within the transmission.NOTE 6:Wgap is the sub-block gap between the two sub-blocks.NOTE 7:Void.NOTE 8: For operation with three or more non-contiguous component carriers, ΔRIBNC applies to all secondary component carriers.NOTE 9:Bandwidth Combination Set 0.NOTE 10:Bandwidth Combination Set 1NOTE 11: Applicable only to Bandwidth Combination Set 4 and 5 and for UEs supporting the symmetrical UL/DL channel bandwidths.</td>
+  </tr>
+</table>

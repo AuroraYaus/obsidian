@@ -1,0 +1,4 @@
+DRX cycle,TPSS/SSS_sync_intra_RedCap
+No DRX,"max(600 ms, 7 x max(MGRP, SMTC period)) x CSSFintra_RedCap"
+DRX cycle≤ 320 ms,"max(600 ms, ceil(1.5 x 7) x max(MGRP, SMTC period,DRX cycle)) x CSSFintra_RedCap"
+DRX cycle>320 ms,"7 x max(MGRP, DRX cycle) x CSSFintra_RedCap"

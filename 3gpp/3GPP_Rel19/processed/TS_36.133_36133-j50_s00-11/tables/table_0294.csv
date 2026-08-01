@@ -1,0 +1,4 @@
+eDRX_CONN cycle length (s),Tmeasure_ UTRA_FDD (s) (eDRX_CONN cycles) normal requirement,,Tmeasure_ UTRA_FDD (s) (eDRX_CONN cycles) normal requirement,
+,Gap period = 40 ms,Gap period = 80 ms,Gap period = 40 ms,Gap period = 80 ms
+2.56<eDRX_CONN cycle≤10.24,"Note (5* Kn* Nfreq,n)","Note (5* Kn* Nfreq,n)","Note (5* Kr* Nfreq,r)","Note (5* Kr* Nfreq,r)"
+Note: Time depends upon the eDRX_CONN cycle in use,,,,

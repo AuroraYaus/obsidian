@@ -1,0 +1,8 @@
+Parameter,,,Unit,Test 1
+Downlink power allocation,,,dB,-3
+,,,dB,-3 (Note 1)
+,,,dB,0
+at antenna port,,,dBm/15kHz,-98
+ACK/NACK feedback mode,,,,Bundling
+PDSCH transmission mode,,,,3
+Note 1:,,,,

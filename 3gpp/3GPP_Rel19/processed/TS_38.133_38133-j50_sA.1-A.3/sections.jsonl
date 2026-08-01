@@ -1,0 +1,416 @@
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "Annex A (normative):Test Cases", "paragraph_index": 1, "style": "Heading8"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.1Purpose of annex", "paragraph_index": 3, "style": "Heading1"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.2Requirement classification for statistical testing", "paragraph_index": 5, "style": "Heading1"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.2.1Types of requirements in TS 38.133", "paragraph_index": 9, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.2.1.1Time and delay requirements on UE higher layer actions", "paragraph_index": 10, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.2.1.2Measurements of power levels, relative powers and time", "paragraph_index": 17, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.2.1.3Implementation requirements", "paragraph_index": 22, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.2.1.4Physical layer timing requirements", "paragraph_index": 26, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.2.1.5Requirements under CCA", "paragraph_index": 30, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3RRM test configurations", "paragraph_index": 32, "style": "Heading1"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1Reference measurement channels", "paragraph_index": 33, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1.1PDSCH", "paragraph_index": 34, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1.1.1FDD", "paragraph_index": 35, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1.1.2TDD", "paragraph_index": 38, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1.2CORESET for RMSI scheduling", "paragraph_index": 46, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1.2.1FDD", "paragraph_index": 47, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1.2.2TDD", "paragraph_index": 50, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1.3CORESET for RMC scheduling", "paragraph_index": 58, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1.3.1FDD", "paragraph_index": 59, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1.3.2TDD", "paragraph_index": 66, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1.4TDD UL/DL configuration", "paragraph_index": 78, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1AReference measurement channels under CCA", "paragraph_index": 87, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1A.1PDSCH", "paragraph_index": 88, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1A.1.1TDD", "paragraph_index": 89, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1A.2CORESET for RMSI scheduling", "paragraph_index": 92, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1A.2.1TDD", "paragraph_index": 93, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1A.3CORESET for RMC scheduling", "paragraph_index": 96, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1A.3.1TDD", "paragraph_index": 97, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1A.4TDD UL/DL configuration", "paragraph_index": 100, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.1A.5RMC burst transmission model", "paragraph_index": 103, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.2.1Generic OFDMA Channel Noise Generator (OCNG)", "paragraph_index": 108, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.2.1.1OCNG pattern 1: Generic OCNG pattern for all unused REs", "paragraph_index": 110, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.2.1.2OCNG pattern 2: Generic OCNG pattern for all unused REs for 2AoA setup", "paragraph_index": 113, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.2.1.3OCNG pattern 3: Generic OCNG pattern for unused REs in the same bandwidth as CORESET", "paragraph_index": 116, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.2.1.4OCNG pattern 4: Generic OCNG pattern for all unused REs outside SSB slot(s)", "paragraph_index": 119, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.2.2Void", "paragraph_index": 125, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3Reference DRX configurations", "paragraph_index": 126, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.1DRX Configuration 1: DRX cycle = 40 ms and TAT = 500 ms", "paragraph_index": 127, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.2DRX Configuration 2: DRX cycle = 640 ms and TAT = 500 ms", "paragraph_index": 130, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.3DRX Configuration 3: DRX cycle = 40 ms and TAT = Infinity", "paragraph_index": 133, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.4DRX Configuration 4: DRX cycle = 160 ms and TAT = Infinity", "paragraph_index": 136, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.5DRX Configuration 5: DRX cycle = 320 ms and TAT = Infinity", "paragraph_index": 139, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.6DRX Configuration 6: DRX cycle = 320 ms and TAT = 500 ms", "paragraph_index": 142, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.7DRX Configuration 7: DRX cycle = 640 ms and TAT = Infinity", "paragraph_index": 145, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.8DRX Configuration 8: DRX cycle = 320 ms and TAT = Infinity", "paragraph_index": 148, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.9DRX Configuration 9: DRX cycle = 40 ms and TAT = 500 ms", "paragraph_index": 151, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.10DRX Configuration 10: DRX cycle = 640 ms and TAT = 500 ms", "paragraph_index": 154, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.11DRX Configuration 11: DRX cycle = 20 ms and TAT = Infinity", "paragraph_index": 157, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.12DRX Configuration 12: DRX cycle = 640 ms and TAT = Infinity", "paragraph_index": 160, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.13DRX Configuration X1: DRX cycle = 80 ms and TAT = Infinity", "paragraph_index": 163, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.3.14DRX Configuration 14: DRX cycle = 160 ms and TAT = Infinity", "paragraph_index": 166, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.4Test Cases with Different Channel Bandwidths", "paragraph_index": 169, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.4.1Test Cases with Different E-UTRA Channel Bandwidths", "paragraph_index": 170, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.4.1.1Introduction", "paragraph_index": 171, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.4.1.2Principle of testing", "paragraph_index": 173, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.5Test Cases for Synchronous and Asynchronous DC Operations", "paragraph_index": 175, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.5.1EN-DC Test Cases for Synchronous and Asynchronous EN-DC Operations", "paragraph_index": 176, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.5.1.1Introduction", "paragraph_index": 177, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.5.1.2Principle of Testing", "paragraph_index": 180, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6Antenna configurations", "paragraph_index": 182, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6.1Antenna configurations for FR1", "paragraph_index": 183, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6.1.1Antenna connection for 4 Rx capable UEs", "paragraph_index": 185, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6.1.1.1Introduction", "paragraph_index": 186, "style": "Heading5"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6.1.1.2Principle of testing", "paragraph_index": 188, "style": "Heading5"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6.1.2Antenna connection for 8 Rx capable UEs", "paragraph_index": 212, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6.1.2.1Introduction", "paragraph_index": 213, "style": "Heading5"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6.1.2.2Principle of testing", "paragraph_index": 215, "style": "Heading5"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6.1.3Antenna connection for 6 Rx capable UEs", "paragraph_index": 242, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6.1.3.1Introduction", "paragraph_index": 243, "style": "Heading5"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6.1.3.2Principle of testing", "paragraph_index": 245, "style": "Heading5"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6.2Antenna configurations for FR2", "paragraph_index": 257, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6AAntenna configurations with unlicensed bands", "paragraph_index": 261, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6A.1Antenna configurations for FR1", "paragraph_index": 262, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6A.1.1Antenna connection for 4 Rx capable UEs", "paragraph_index": 264, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6A.1.1.1Introduction", "paragraph_index": 265, "style": "Heading5"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.6A.1.1.2Principle of testing", "paragraph_index": 267, "style": "Heading5"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7EN-DC test setup", "paragraph_index": 291, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7.1Introduction", "paragraph_index": 292, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7.2E-UTRAN Serving Cell Parameters", "paragraph_index": 293, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7.2.1E-UTRAN Serving Cell Parameters for Tests with NR Cell(s) in FR1", "paragraph_index": 294, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7.2.2E-UTRAN Serving Cell Parameters for Tests with NR Cell(s) in FR2", "paragraph_index": 298, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7ANR FR1-FR2 test setup", "paragraph_index": 302, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7BEN-DC test setup with unlicensed bands", "paragraph_index": 304, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7B.1Introduction", "paragraph_index": 305, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7B.2E-UTRAN Serving Cell Parameters", "paragraph_index": 306, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7B.2.1E-UTRAN Serving Cell Parameters for Tests with NR Cell(s) under CCA in FR1", "paragraph_index": 307, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7CLTE-FR1/FR2 test setup", "paragraph_index": 311, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7DNE-DC test setup", "paragraph_index": 313, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7D.1Introduction", "paragraph_index": 314, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7D.2E-UTRAN Serving Cell Parameters", "paragraph_index": 315, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7D.2.1E-UTRAN Serving Cell Parameters for Tests with NR Cell(s) in FR1", "paragraph_index": 316, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.7D.2.2E-UTRAN Serving Cell Parameters for Tests with NR Cell(s) in FR2", "paragraph_index": 318, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8PRACH configurations", "paragraph_index": 320, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.1Introduction", "paragraph_index": 321, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.2PRACH configurations in FR1", "paragraph_index": 323, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.2.1FR1 PRACH configuration 1", "paragraph_index": 324, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.2.2FR1 PRACH configuration 2", "paragraph_index": 328, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.2.3FR1 PRACH configuration 3", "paragraph_index": 332, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.2.4FR1 PRACH configuration 4", "paragraph_index": 336, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.2.5FR1 PRACH configuration 5", "paragraph_index": 340, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.2.6FR1 PRACH configuration 6", "paragraph_index": 344, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.3PRACH configurations in FR2", "paragraph_index": 348, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.3.1FR2 PRACH configuration 1", "paragraph_index": 349, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.3.2FR2 PRACH configuration 2", "paragraph_index": 353, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.3.3FR2 PRACH configuration 3", "paragraph_index": 357, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.3.4FR2 PRACH configuration 4", "paragraph_index": 360, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.3.5FR2 PRACH configuration 5", "paragraph_index": 364, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8.3.6FR2 PRACH configuration 6", "paragraph_index": 368, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8APRACH configurations under CCA", "paragraph_index": 372, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8A.1Introduction", "paragraph_index": 373, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8A.2PRACH configurations in FR1", "paragraph_index": 375, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8A.2.1FR1 PRACH configuration 1 under CCA", "paragraph_index": 376, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.8A.2.2FR1 PRACH configuration 2 under CCA", "paragraph_index": 380, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9BWP configurations", "paragraph_index": 384, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9.1Introduction", "paragraph_index": 385, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9.2Downlink BWP configurations", "paragraph_index": 387, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9.2.1Initial BWP", "paragraph_index": 388, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9.2.2Dedicated BWP", "paragraph_index": 391, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9.3Uplink BWP configurations", "paragraph_index": 394, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9.3.1Initial BWP", "paragraph_index": 395, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9.3.2Dedicated BWP", "paragraph_index": 398, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9ABWP configurations for RedCap", "paragraph_index": 401, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9A.1Introduction", "paragraph_index": 402, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9A.2Downlink BWP configurations", "paragraph_index": 404, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9A.2.1Dedicated BWP", "paragraph_index": 405, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9A.3Uplink BWP configurations", "paragraph_index": 408, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.9A.3.1Dedicated BWP", "paragraph_index": 409, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10SSB Configurations", "paragraph_index": 412, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1SSB Configurations for FR1", "paragraph_index": 413, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.1SSB pattern 1 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 414, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.5SSB pattern 5 in FR1: SSB allocation for SSB SCS=15 kHz starting from odd SFN in 10 MHz", "paragraph_index": 426, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.6SSB pattern 6 in FR1: SSB allocation for SSB SCS=30 kHz starting from odd SFN in 40 MHz", "paragraph_index": 429, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.7SSB pattern 7 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 432, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.8SSB pattern 8 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz", "paragraph_index": 435, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.9SSB pattern 9 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 438, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.10SSB pattern 10 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz", "paragraph_index": 441, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.11SSB pattern 11 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 444, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.12SSB pattern 12 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz", "paragraph_index": 447, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.13SSB pattern 13 in FR1: SSB allocation for SSB SCS=15 kHz in 3 MHz", "paragraph_index": 450, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.14SSB pattern 14 in FR1: SSB allocation for SSB SCS=15 kHz with 160 ms periodicity in 10MHz", "paragraph_index": 453, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.15SSB pattern 15 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 456, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.16SSB pattern 16 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 459, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.17SSB pattern 17 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 462, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.18SSB pattern 18 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz", "paragraph_index": 465, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.19SSB pattern 19 in FR1: SSB allocation for SSB SCS=30 kHz in 40 MHz", "paragraph_index": 468, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.20SSB pattern 20 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 471, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.21SSB pattern 21 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 474, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.23SSB pattern 23 in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 480, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.1.24SSB pattern 24 in FR1: SSB allocation for SSB SCS=30 kHz in 100 MHz", "paragraph_index": 483, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2SSB Configurations for FR2", "paragraph_index": 486, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.1SSB pattern 1 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 487, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.2SSB pattern 2 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 490, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.3SSB pattern 3 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 493, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.4SSB pattern 4 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 496, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.5SSB pattern 5 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 499, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.6SSB pattern 6 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 502, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.7SSB pattern 7 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 505, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.8SSB pattern 8 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 508, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.9SSB pattern 9 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 511, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.10SSB pattern 10 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 514, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.19SSB pattern 19 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 541, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.20SSB pattern 20 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 544, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.21SSB pattern 21 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 547, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.22SSB pattern 22 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 550, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.23SSB pattern 23 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 553, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.24SSB pattern 24 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 556, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.25SSB pattern 25 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 559, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.26SSB pattern 26 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 562, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.27SSB pattern 27 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 565, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.28SSB pattern 28 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 568, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.29SSB pattern 29 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 571, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.30SSB pattern 30 in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 574, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.31SSB pattern 31 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 577, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.32SSB pattern 32 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 580, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.33SSB pattern 33 in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 583, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10.2.34SSB pattern 34 in FR2: SSB allocation for SSB SCS=120 kHz in 200 MHz", "paragraph_index": 586, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10ASSB Configurations under CCA", "paragraph_index": 589, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10A.1SSB Configurations under CCA for FR1", "paragraph_index": 590, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10A.1.1SSB pattern 1 under CCA for semi-static channel access: SSB allocation for SSB SCS=30 kHz in 40 MHz", "paragraph_index": 591, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10A.1.2SSB pattern 2 under CCA for dynamic channel access: SSB allocation for SSB SCS=30 kHz in 40 MHz", "paragraph_index": 594, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10A.1.3SSB pattern 3 under CCA for semi-static channel access: SSB allocation for SSB SCS=30 kHz in 40 MHz", "paragraph_index": 597, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10A.1.4SSB pattern 4 under CCA for dynamic channel access: SSB allocation for SSB SCS=30 kHz in 40 MHz", "paragraph_index": 600, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10BSSB Configurations for RedCap", "paragraph_index": 603, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.1SSB Configurations for FR1", "paragraph_index": 604, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.1.1SSB pattern 1 for RedCap in FR1: SSB allocation for SSB SCS=30 kHz in 20 MHz", "paragraph_index": 605, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.1.2SSB pattern 2 for RedCap in FR1: SSB allocation for SSB SCS=30 kHz in 20 MHz", "paragraph_index": 608, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.1.3SSB pattern 3 for RedCap in FR1: SSB allocation for SSB SCS=30 kHz starting from odd SFN in 20 MHz", "paragraph_index": 611, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.1.4SSB pattern 4 for RedCap in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 614, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.1.5SSB pattern 5 for RedCap in FR1: SSB allocation for SSB SCS=30 kHz in 20 MHz", "paragraph_index": 617, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.1.6SSB pattern 6 for RedCap in FR1: SSB allocation for SSB SCS=15 kHz in 10 MHz", "paragraph_index": 620, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.1.7SSB pattern 7 for RedCap in FR1: SSB allocation for SSB SCS=30 kHz in 20 MHz", "paragraph_index": 623, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.2SSB Configurations for FR2", "paragraph_index": 626, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.2.1SSB pattern 1 for RedCap in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 627, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.2.2SSB pattern 2 for RedCap in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 630, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.2.3SSB pattern 3 for RedCap in FR2: SSB allocation for SSB SCS=120 kHz in 100 MHz", "paragraph_index": 633, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.2.4SSB pattern 4 for RedCap in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 636, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.10B.2.5SSB pattern 5 for RedCap in FR2: SSB allocation for SSB SCS=240 kHz in 100 MHz", "paragraph_index": 639, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11SMTC Configurations", "paragraph_index": 642, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.1SMTC pattern 1: SMTC period = 20 ms with SMTC duration = 1 ms", "paragraph_index": 643, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.2SMTC pattern 2: SMTC period = 20 ms with SMTC duration = 5 ms", "paragraph_index": 646, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.3SMTC pattern 3: SMTC period = 160 ms with SMTC duration = 1 ms", "paragraph_index": 649, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.4SMTC pattern 4: SMTC period = 20 ms with SMTC duration = 1 ms", "paragraph_index": 652, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.5SMTC pattern 5: SMTC period = 20 ms with SMTC duration = 5 ms", "paragraph_index": 655, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.6SMTC pattern 6: SMTC period = 20 ms with SMTC duration = 5 ms", "paragraph_index": 658, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.7SMTC pattern 7: SMTC period = 20 ms with SMTC duration = 5 ms", "paragraph_index": 661, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.8SMTC pattern 8: SMTC period = 10 ms with SMTC duration = 1 ms", "paragraph_index": 664, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.9SMTC pattern 9: SMTC period = 20 ms with SMTC duration = 1 ms", "paragraph_index": 667, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.10SMTC pattern 10: SMTC period = 80 ms with SMTC duration = 1 ms", "paragraph_index": 670, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.11SMTC pattern 11: SMTC period = 80 ms with SMTC duration = 5 ms", "paragraph_index": 673, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.12SMTC pattern 12: SMTC period = 20 ms with SMTC duration = 5 ms", "paragraph_index": 676, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.13SMTC pattern 13: SMTC period = 160 ms with SMTC duration = 1 ms", "paragraph_index": 679, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11.14SMTC pattern 14: SMTC period = 20 ms with SMTC duration = 1 ms", "paragraph_index": 682, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11ASMTC Configurations for RedCap", "paragraph_index": 685, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11A.0Introduction", "paragraph_index": 686, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11A.1SMTC pattern 1 for RedCap: SMTC period = 40 ms with SMTC duration = 1 ms", "paragraph_index": 688, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11A.2SMTC pattern 2 for RedCap: SMTC period = 80 ms with SMTC duration = 1 ms", "paragraph_index": 690, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11A.3SMTC pattern 3 for RedCap: SMTC period = 40 ms with SMTC duration = 1 ms", "paragraph_index": 693, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.11A.4SMTC pattern 4 for RedCap: SMTC period = 80 ms with SMTC duration = 5 ms", "paragraph_index": 696, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.12Test Cases with Different CC Configurations", "paragraph_index": 699, "style": "Heading2Head2A2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.12.1 EN-DC Test Cases with Different EN-DC Configurations", "paragraph_index": 700, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.12.1.1Introduction", "paragraph_index": 701, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.12.1.2Principle of testing", "paragraph_index": 703, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.12.2Carrier Aggregation Test Cases with Different CA Configurations", "paragraph_index": 706, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.12.2.1Introduction", "paragraph_index": 707, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.12.2.2Principle of testing", "paragraph_index": 709, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.13Test Cases in SA and EN-DC Operations", "paragraph_index": 712, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.13.1Introduction", "paragraph_index": 713, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.13.2Principle of Testing", "paragraph_index": 716, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.13BTest Cases for EN-DC and NE-DC Operations", "paragraph_index": 740, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.13B.1Active BWP switch Test Cases for EN-DC and NE-DC Operations", "paragraph_index": 741, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.13B.1.1Introduction", "paragraph_index": 742, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.13B.1.2Principle of Testing", "paragraph_index": 745, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.13B.2SFTD accuracy Test Cases for EN-DC and NE-DC Operations", "paragraph_index": 747, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.13B.2.1Introduction", "paragraph_index": 748, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.13B.2.2Principle of Testing", "paragraph_index": 751, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.14CSI-RS configurations", "paragraph_index": 753, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.14.1FDD", "paragraph_index": 754, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.14.2TDD", "paragraph_index": 759, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15Angle of Arrival (AoA) for FR2 RRM test cases", "paragraph_index": 772, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.1Setup 1: Single AoA in Rx beam peak direction", "paragraph_index": 774, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.2Setup 2: Single AoA in non Rx beam peak direction", "paragraph_index": 776, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.2.1Setup 2a: Single AoA in non Rx beam peak direction without change in direction", "paragraph_index": 777, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.2.2Setup 2b: Single AoA in non Rx beam peak direction with change in direction", "paragraph_index": 779, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.3Setup 3: 2 AoAs", "paragraph_index": 781, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.4Setup 4: 2 AoAs, 1 AoA in Rx beam peak direction, 1 in non Rx beam peak", "paragraph_index": 785, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.4.1Setup 4a: 2 AoAs, 1 AoA in Rx beam peak direction, 1 in non Rx beam peak without change in direction", "paragraph_index": 786, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.4.2Setup 4b: 2 AoAs, 1 AoA in Rx beam peak direction, 1 in non Rx beam peak with change in direction", "paragraph_index": 788, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.4.3Setup 4c: 2 AoAs, 1 AoA in Rx beam peak direction, 1 in non Rx beam peak for power class 6 UE supporting simultaneous reception from multiple directions", "paragraph_index": 791, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.5Setup 5: 2 AoAs for simultaneous reception with QCL Type-D", "paragraph_index": 794, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.6Setup 6: 3 AoAs for simultaneous reception with different QCL Type-D", "paragraph_index": 798, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.7Setup 7: 3 AoAs", "paragraph_index": 803, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15.8Setup 8: 4 AoAs", "paragraph_index": 805, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15CAngle of Arrival (AoA) for FR2-NTN RRM test cases", "paragraph_index": 808, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15C.1Setup 1: Single AoA", "paragraph_index": 810, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.15C.2Setup 2: 2 AoAs", "paragraph_index": 812, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.16TCI State Configuration", "paragraph_index": 814, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.16.1Introduction", "paragraph_index": 815, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.16.2TCI states", "paragraph_index": 817, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.16AUnified TCI State Configuration", "paragraph_index": 821, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.16A.1Introduction", "paragraph_index": 822, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.16A.2DLorJoint TCI states", "paragraph_index": 824, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.16A.3UL TCI states", "paragraph_index": 829, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.16BLTM Candidate TCI State Configuration", "paragraph_index": 832, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.16B.1Introduction", "paragraph_index": 833, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.16B.2LTM candidate DLorJoint TCI states", "paragraph_index": 835, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.16B.3LTM candidate UL TCI states", "paragraph_index": 838, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.17Configurations of CSI-RS for tracking", "paragraph_index": 841, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.17.1Configuration of CSI-RS for tracking for FR1", "paragraph_index": 842, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.17.1.1FDD", "paragraph_index": 843, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.17.1.2TDD", "paragraph_index": 858, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.17.2Configuration of CSI-RS for tracking for FR2", "paragraph_index": 877, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.17.2.1TDD", "paragraph_index": 878, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.17.2.2FDD", "paragraph_index": 891, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.18Additional definitions related to OTA testing for FR2 RRM test cases", "paragraph_index": 894, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.18.1Introduction", "paragraph_index": 895, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.18.2PRACH Power Measurement", "paragraph_index": 897, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.19Test applicability for DAPS handover", "paragraph_index": 899, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.19.1Introduction", "paragraph_index": 900, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.19.2Principle of testing", "paragraph_index": 902, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20MsgA configurations", "paragraph_index": 912, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20.1Introduction", "paragraph_index": 913, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20.2MsgA configurations in FR1", "paragraph_index": 915, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20.2.1FR1 MsgA configuration 1", "paragraph_index": 916, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20.2.2FR1 MsgA configuration 2", "paragraph_index": 920, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20.3MsgA configurations in FR2", "paragraph_index": 924, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20.3.1FR2 MsgA configuration 1", "paragraph_index": 925, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20.3.2FR2 MsgA configuration 2", "paragraph_index": 929, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20AMsgA configurations under CCA", "paragraph_index": 933, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20A.1Introduction", "paragraph_index": 934, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20A.2MsgA configurations in FR1", "paragraph_index": 936, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20A.2.1FR1 MsgA configuration 1 under CCA", "paragraph_index": 937, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.20A.2.2FR1 MsgA configuration 2 under CCA", "paragraph_index": 941, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21V2X sidelink communication", "paragraph_index": 945, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21.1Introduction", "paragraph_index": 946, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21.2Reference resource pool configurations for V2X Sidelink Communication", "paragraph_index": 948, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21.3Reference measurement channels for V2X Sidelink Communication", "paragraph_index": 955, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21.4Reference SL-DRX configurations", "paragraph_index": 960, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21.4.1SL-DRX Configuration 1: SL-DRX cycle = 40 ms", "paragraph_index": 961, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21.4.2SL-DRX Configuration 2: SL-DRX cycle = 320 ms", "paragraph_index": 964, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21.4.3SL-DRX Configuration 3: SL-DRX cycle = 640 ms", "paragraph_index": 967, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21ANR Sidelink Measurements for Positioning", "paragraph_index": 970, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21A.1Introduction", "paragraph_index": 971, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21A.2NR SL-PRS configurations", "paragraph_index": 973, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.21A.2.1NR SL-PRS configurations for FR1", "paragraph_index": 974, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.22CSI-IM configurations", "paragraph_index": 977, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.22.1FDD", "paragraph_index": 978, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.22.2TDD", "paragraph_index": 981, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.23Spatial Relation Configuration", "paragraph_index": 988, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.23.1Introduction", "paragraph_index": 989, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.23.2Spatial Relation", "paragraph_index": 991, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.24SRS configuration", "paragraph_index": 996, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.25Channel bandwidth (CBW) configurations", "paragraph_index": 1003, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.25.1DL UE specific CBW", "paragraph_index": 1004, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.25.2UL UE specific CBW", "paragraph_index": 1007, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.26CCA model", "paragraph_index": 1010, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.26.1Introduction", "paragraph_index": 1011, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.26.2CCA model for operation on a carrier frequency with CCA in FR1", "paragraph_index": 1013, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.26.2.1DL CCA model", "paragraph_index": 1014, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "2", "title": "Transmit the discovery burst based on p1 in the first candidate position. If p1 ≤ PCCA_DL, the discovery burst is transmitted at the first candidate SSB location; else if lCCA is larger than or equal to LCCA_DL, the discovery burst is transmitted at the first candidate SSB location, otherwise the discovery burst is muted. If DRX cycle is used, then the decision whether the discover burst is muted or not is repeated for the rest of the DRX cycle.", "paragraph_index": 1030, "style": "B10"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "1", "title": "Generate a uniform random variable p1 from the range [0, 1] for the first candidate position.", "paragraph_index": 1032, "style": "B10"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "2", "title": "Transmit the discovery burst based on p1 in the first candidate position: if p1 ≤ PCCA_DL1, the discovery burst is transmitted at first candidate SSB location, else the test equipment shall:", "paragraph_index": 1033, "style": "B10"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.26.2.2UL CCA model", "paragraph_index": 1038, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.26.3CCA model for operation on a carrier frequency with CCA in FR2-2", "paragraph_index": 1048, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.26.3.1DL CCA model", "paragraph_index": 1049, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "1", "title": "- Generate a uniform random variable p from the range [0, 1].", "paragraph_index": 1054, "style": "B10"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "2", "title": "- If p > PCCA_DL,", "paragraph_index": 1055, "style": "B10"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "2", "title": "- If p ≤ PCCA_DL,", "paragraph_index": 1059, "style": "B10"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.26.3.2UL CCA model", "paragraph_index": 1063, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.26.4CCA model for operation on a sidelink carrier frequency with CCA", "paragraph_index": 1072, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.26.4.1CCA model for SyncRef UE", "paragraph_index": 1073, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "1", "title": "- Generate a uniform random variable p1 from the range [0, 1] for the first candidate S-SSB occasion.", "paragraph_index": 1081, "style": "B10"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "2", "title": "- Transmit the S-SSB based on p1 in the first candidate occasion:", "paragraph_index": 1082, "style": "B10"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.27Void", "paragraph_index": 1089, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.27.1Void", "paragraph_index": 1090, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.27.2Void", "paragraph_index": 1091, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.27.3Void", "paragraph_index": 1092, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.27.4Void", "paragraph_index": 1093, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.27.5Void", "paragraph_index": 1094, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.28Discovery Burst Transmission Window configuration under CCA", "paragraph_index": 1095, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.28.1DBT Window pattern 1: DBT Window period = 20 ms with DBT Window duration = 1 ms", "paragraph_index": 1096, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.29Testing principles for UE capable of only NR bands with shared spectrum access", "paragraph_index": 1099, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.29.1Introduction", "paragraph_index": 1100, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.29.2Principle of testing for UE capable of EN-DC with only NR bands with shared spectrum access", "paragraph_index": 1102, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.29.3Principle of testing for UE capable of SA operation with only NR bands with shared spectrum access", "paragraph_index": 1106, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.30CSI-RS configurations for RRM", "paragraph_index": 1110, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.30.1FDD", "paragraph_index": 1111, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.30.2TDD", "paragraph_index": 1114, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.31PRS Configurations", "paragraph_index": 1121, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.31.1PRS Configurations for FR1", "paragraph_index": 1122, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.31.1.1PRS pattern 1 in FR1: SCS=15 kHz", "paragraph_index": 1123, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.31.1.2PRS pattern 2 in FR1: SCS=30 kHz", "paragraph_index": 1126, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.31.2PRS Configurations for FR2", "paragraph_index": 1129, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.31.2.1PRS pattern 1 in FR2: SCS=120 kHz", "paragraph_index": 1130, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.32NR sidelink discovery", "paragraph_index": 1133, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.32.1Introduction", "paragraph_index": 1134, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.32.2Reference resource pool configurations for NR Sidelink Discovery", "paragraph_index": 1136, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.32.3Principle of Testing", "paragraph_index": 1140, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.33PRS Processing Window (PPW) configurations", "paragraph_index": 1142, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.34Testing principles for test cases related to PRS measurements", "paragraph_index": 1145, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.34.1Introduction", "paragraph_index": 1146, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.34.2Test cases in RRC_INACTIVE state", "paragraph_index": 1148, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.34.3Test cases for PRS measurements with gaps in RRC_CONNECTED state", "paragraph_index": 1156, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.34.4Test cases for PRS measurements without gaps in RRC_CONNECTED state", "paragraph_index": 1162, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.34.5Testing principles for positioning measurements by aggregating PRS resources from multiple PFLs", "paragraph_index": 1170, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.34.6Testing principles for carrier phase measurement for positioning", "paragraph_index": 1172, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.34.7Test cases in RRC_IDLE state", "paragraph_index": 1177, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.35Testing principle for RedCap UE", "paragraph_index": 1180, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.35.1Introduction", "paragraph_index": 1181, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.35.2Principle of testing for FR1", "paragraph_index": 1183, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.35.3Principle of testing for FR2", "paragraph_index": 1186, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.35.4Principle of testing for PRS measurement", "paragraph_index": 1188, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.36Testing related to Satellite access", "paragraph_index": 1195, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.36.1Introduction", "paragraph_index": 1196, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.36.2Principle of testing GSO and NGSO scenarios", "paragraph_index": 1198, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.36.3Principle of testing different RRM requirements", "paragraph_index": 1210, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.36.4Principle of testing different ephemeris formats", "paragraph_index": 1219, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.36.5General setup for SIB19", "paragraph_index": 1225, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.36.6Satellite specific parameters configuration", "paragraph_index": 1229, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.36.6.1Satellite specific configuration for serving cell", "paragraph_index": 1230, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.36.6.2Satellite specific configuration for neighbour cell", "paragraph_index": 1235, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.37Reference Cell DTX configurations", "paragraph_index": 1240, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.37.1Cell DTX Configuration 1: Cell DTX cycle = 160 ms and TAT = Infinity", "paragraph_index": 1241, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.38DL-PRS Measurement Time Window configurations", "paragraph_index": 1244, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.39Testing related to RedCap UE with Satellite Access", "paragraph_index": 1247, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.39.1Introduction", "paragraph_index": 1248, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.39.2Principle of testing 1Rx and 2Rx (e)RedCap UE in FR1", "paragraph_index": 1250, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.39.3Principle of testing GSO and NGSO scenarios", "paragraph_index": 1253, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.39.4Principle of testing different RRM requirements", "paragraph_index": 1259, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.39.5Principle of testing HD-FDD RedCap UE", "paragraph_index": 1265, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.39.6Principle of testing different ephemeris formats", "paragraph_index": 1268, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.39.7General setup for SIB19", "paragraph_index": 1274, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.39.8Satellite specific parameters configuration", "paragraph_index": 1278, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.39.8.1Satellite specific configuration for serving cell", "paragraph_index": 1279, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.39.8.2Satellite specific configuration for neighbour cell", "paragraph_index": 1284, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.40Testing principles for eEMR based fast SCell activation", "paragraph_index": 1289, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.40.1Introduction", "paragraph_index": 1290, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.40.2Principle of testing", "paragraph_index": 1292, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41Test configurations related to SBFD", "paragraph_index": 1296, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.1SBFD configurations for FR1", "paragraph_index": 1297, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.1.0Introduction", "paragraph_index": 1298, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.1.1SBFD.1 FR1", "paragraph_index": 1302, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.1.2SBFD.2 FR1", "paragraph_index": 1305, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.2SBFD configurations for FR2", "paragraph_index": 1308, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.2.0Introduction", "paragraph_index": 1309, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.2.1SBFD.1 FR2", "paragraph_index": 1312, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.2.2SBFD.2 FR2", "paragraph_index": 1315, "style": "Heading4"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.3Principle of testing L1-RSRP and L1-SINR measurements", "paragraph_index": 1318, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.4Collision configurations between CSI-RS and UL scheduling for SBFD", "paragraph_index": 1321, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.5Configurations of DL RMC for SBFD", "paragraph_index": 1323, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.6Configurations of OCNG for SBFD", "paragraph_index": 1325, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.41.7Configuration of Noc for SBFD", "paragraph_index": 1327, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.42LP-SS configurations", "paragraph_index": 1329, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.42.1LP-SS Configuration 1: M=1", "paragraph_index": 1330, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.42.2LP-SS Configuration 2: M=4", "paragraph_index": 1333, "style": "Heading3"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.43Test conditions for AI/ML", "paragraph_index": 1336, "style": "Heading2"}
+{"source": "38133-j50_sA.1-A.3.docx", "section": "", "title": "A.3.43.1Channel models for AI/ML based Beam Management FR2", "paragraph_index": 1337, "style": "Heading3"}

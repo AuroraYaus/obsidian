@@ -1,0 +1,26 @@
+Parameter,,,Unit,Test 1,Test 2,
+Bandwidth,,,MHz,20,,
+PDSCH transmission mode,,,,3,,
+Downlink power allocation,,,dB,-3,,
+,,,dB,-3,,
+,,,dB,0,,
+Propagation condition and antenna configuration,,,,Clause B.1 (2x2),,
+SNR in subframes with 6 dB power boost (Note 2),,,dB,9,,10
+SNR in subframes with 0 dB power boost (Note 2),,,dB,3,,4
+in subframes with 6 dB power,,,dB[mW/15kHz],-89,,-88
+in subframes with 0 dB power,,,dB[mW/15kHz],-95,,-94
+,,,dB[mW/15kHz],-98,,
+MBSFN subframe Configuration,,,,Non-MBSFN,,
+Cell Id,,,,0,,
+dmtc-Periodicity,,,ms,80,,
+dmtc-Offset,,,,0,,
+Number of control OFDM symbols,,,,3,,
+Max number of HARQ transmissions,,,,1,,
+Reporting mode,,,,PUSCH 3-0,,
+PDSCH transmission model,Basic model,,,As specified in Section B.7,,
+,subframeStartPosition,,,s0,,
+,Number of occupied symbols per subframe,,,14,,
+,The number of subframes set () per burstS1S1,,,"{3,8}",,
+,Random variable p defined in B.8,,,0.5,,
+,Power configuration for each burst,,,is randomly selected from 6 dB power boosting or 0 dB power boosting with equal probability,,
+"Note 1:Reference measurement channel RC.2A FDD according to Table A.4-1 with one sided dynamic OCNG Pattern OP.1 FS3 as described in Annex A.5.4.1, except for category 1 UE use RC.4A FDD with two sided dynamic OCNG Pattern OP.2 FS3 as described in Annex A.5.4.2.Note 2:For each test, the minimum requirements shall be fulfilled for at least one of the two SNR(s) and the respective wanted signal input level.",,,,,,

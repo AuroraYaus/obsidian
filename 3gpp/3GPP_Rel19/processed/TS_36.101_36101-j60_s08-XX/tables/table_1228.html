@@ -1,0 +1,161 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Test 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Bandwidth</td>
+    <td>MHz</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td colspan="2">Transmission mode</td>
+    <td></td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation channel</td>
+    <td></td>
+    <td>EPA5</td>
+  </tr>
+  <tr>
+    <td colspan="2">Precoding granularity</td>
+    <td>PRB</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td colspan="2">Correlation and antenna configuration</td>
+    <td></td>
+    <td>High XP 4 x 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Beamforming model</td>
+    <td></td>
+    <td>Annex B.4.3</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-specific reference signals</td>
+    <td></td>
+    <td>Antenna ports 0,1</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI reference signals</td>
+    <td></td>
+    <td>Antenna ports15,…,18</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RSTCSI-RS / ∆CSI-RS</td>
+    <td></td>
+    <td>5/ 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI-RS reference signal configuration</td>
+    <td></td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td colspan="2">CodeBookSubsetRestriction bitmap</td>
+    <td></td>
+    <td>0x0000 0000 0000 FFFF 0000 00FF</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Pc</td>
+    <td>dB</td>
+    <td>-3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>-3</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting mode</td>
+    <td></td>
+    <td>PUCCH 1-1 submode1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting interval</td>
+    <td>ms</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td colspan="2">PMI delay (Note 2)</td>
+    <td>ms</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td colspan="2">Physical channel for CQI/PMI reporting</td>
+    <td></td>
+    <td>PUSCH (Note 3)</td>
+  </tr>
+  <tr>
+    <td colspan="2">PUCCH Report Type for CQI/second PMI</td>
+    <td></td>
+    <td>2b</td>
+  </tr>
+  <tr>
+    <td colspan="2">Physical channel for RI reporting</td>
+    <td></td>
+    <td>PUSCH</td>
+  </tr>
+  <tr>
+    <td colspan="2">PUCCH Report Type for RI/ first PMI</td>
+    <td></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td colspan="2">cqi-pmi-ConfigurationIndex</td>
+    <td></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td colspan="2">ri-ConfigIndex</td>
+    <td></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Measurement channel</td>
+    <td></td>
+    <td>R.60 FDD</td>
+  </tr>
+  <tr>
+    <td colspan="2">OCNG Pattern</td>
+    <td></td>
+    <td>OP.1 FDD</td>
+  </tr>
+  <tr>
+    <td colspan="2">Max number of HARQ transmissions</td>
+    <td></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td colspan="2">Redundancy version coding sequence</td>
+    <td></td>
+    <td>{0,1,2,3}</td>
+  </tr>
+  <tr>
+    <td colspan="2">alternativeCodeBookEnabledFor4TX-r12</td>
+    <td></td>
+    <td>True</td>
+  </tr>
+  <tr>
+    <td colspan="4">Note 1:For random precoder selection, the precoder shall be updated in each TTI (1 ms granularity)Note 2:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).Note 3:To avoid collisions between CQI/PMI reports and HARQ-ACK it is necessary to report both on PUSCH instead of PUCCH.Note 4:PDSCH _RA= 0 dB, PDSCH_RB= 0 dB in order to have the same PDSCH and OCNG power per subcarrier at the receiver.Note 5:Randomization of the principle beam direction shall be used as specified in B.2.3A.4</td>
+  </tr>
+</table>

@@ -1,0 +1,10 @@
+Parameter,Unit,Value,Comment
+RF Channel Number,,"1, 2, 3",One is E-UTRAN RF channel and the other two are NR RF channels
+Active PCell,,Cell 1,PCell on E-UTRAN RF channel number 1.
+Configured PSCell,,Cell 2,Configured PSCell on NR RF channel number 2.
+Configured SCell,,Cell 3,Configured activated secondary cell on NR RF channel number 3.
+CP length,,Normal,"Applicable to Cell 1, Cell 2 and Cell 3."
+DRX,,OFF,Continuous monitoring of primary cell
+Filter coefficient,,0,L3 filtering is not used
+T1,s,0.2,
+T2,ms,40,

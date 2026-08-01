@@ -1,0 +1,13 @@
+Parameter,Unit,Value,,,,,
+Channel bandwidth,MHz,1.4,3,5,10,15,20
+Allocated resource blocks,,6,6,6,6,6,6
+DFT-OFDM Symbols per Sub-Frame,,12,12,12,12,12,12
+Modulation,,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK
+Target Coding rate,,1/3,1/3,1/3,1/3,1/3,1/3
+Payload size,Bits,600,600,600,600,600,600
+Transport block CRC,Bits,24,24,24,24,24,24
+Number of code blocks per Sub-Frame (NOTE 1),,1,1,1,1,1,1
+Total number of bits per Sub-Frame,Bits,1728,1728,1728,1728,1728,1728
+Total symbols per Sub-Frame,,864,864,864,864,864,864
+UE UL Category,,M1,M1,M1,M1,M1,M1
+"NOTE 1:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)NOTE 2:For HD-FDD UE with , the uplink subframes are scheduled at the 4th, 5th and 6th subframes every 10ms for the channel bandwidth 5MHz/10MHz/15MHz/20MHz. For HD-FDD UE, the uplink subframes are scheduled at the 5th, 6th and 7th subframes every 10ms for the channel bandwidth 1.4MHz/3MHz. Information bit payload is available if uplink subframe is scheduled.  is total number of absolute subframes a PUSCH with repetition spans [4].NOTE 3:For HD-FDD UE with , MPDCCH are scheduled at 0th DL subframe every +5 subframes (starting from the 0th subframe). The associated PUSCH is scheduled at the 4th to (+3)-th UL subframes every +5 subframes. Information bit payload is available if uplink subframe is scheduled.",,,,,,,

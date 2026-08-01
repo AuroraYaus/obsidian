@@ -1,0 +1,13 @@
+Parameter,NR operating band groups Note1,Minimum CSI-RS_RP,,,CSI-RS Ês/Iot,NZP-IMR Ês/Iot
+,,dBm / SCSSSB,,,dB,dB
+,,SCSCSI-RS = 15 kHz,SCSCSI-RS = 30 kHz,SCSCSI-RS = 60 kHz,,
+Conditions,"NR_FDD_FR1_A, NR_TDD_FR1_A, NR_SDL_FR1_A",-121,-118,-115,0,0
+,"NR_FDD_FR1_B,NR_TDD_FR1_B",-120.5,-117.5,-114.5,,
+,"NR_FDD_FR1_C,NR_TDD_FR1_C",-120,-117,-114,,
+,"NR_FDD_FR1_D, NR_TDD_FR1_D",-119.5,-116.5,-113.5,,
+,"NR_FDD_FR1_E, NR_TDD_FR1_E",-119,-116,-113,,
+,NR_FDD_FR1_F,-118.5,-115.5,-112.5,,
+,"NR_FDD_FR1_G, NR_TDD_FR1_G,NR_SDL_FR1_G",-118,-115,-112,,
+,NR_FDD_FR1_H,-117.5,-114.5,-111.5,,
+,NR_FDD_ FR1_N,-114.5,-111.5,-108.5,,
+NOTE 1:NR operating band groups are defined in clause 3.5.2.,,,,,,

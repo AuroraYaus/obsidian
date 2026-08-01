@@ -1,0 +1,5 @@
+Configuration,TSRS_measurement_period (ms)
+No DRX,"Max(60, 3 X TSRS)"
+DRX cycle ≤ 320 ms,"Max(60, Ceil(1.5 X 3) X max(TSRS, TDRX))"
+DRX cycle > 320 ms,3 X TDRX
+"NOTE:TSRS is SRS measurement periodicity configured SRS-PeriodicityAndOffset, and TDRX is the DRX cycle length.",

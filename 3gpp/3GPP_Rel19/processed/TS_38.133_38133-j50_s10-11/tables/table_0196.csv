@@ -1,0 +1,9 @@
+Accuracy,,Conditions,,,,,
+Normal condition,Extreme condition,PRS Ês/Iot,PRS BW,Repetition factor (TrepPRS*LPRS/KcombPRS),Io Note 6 range,,
+,,,,,MinimumIo Note 1dBm / SCSPRS,,MaximumIo
+dB,dB,dB,PRB,-,dBm / SCSPRS,,dBm/BWChannel
+,,,,,dBm/120 kHz Note 5,dBm/60 kHz Note 5,
+±5,±8,≥0,≥48,All,"Same value as PRP in Table B.2.14-2, according to UE Power class, operating band and angle of arrival",,-50
+±8.5,±11.5,≥-6,48 ≤ BW ≤ 64,All,Note 3,,
+±6,±9,,BW >64,All,Note 3,,
+"NOTE 1:This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2:PRS bandwidth is as indicated in prs-Bandwidth in the OTDOA or DL-AoD assistance data defined in [34].NOTE 3:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth ≥ 48 PRB.NOTE 4:The serving cell, the reference cell, and the measured neighbour cell i are on the same carrier frequency.NOTE 5:The condition level is increased by ∆>0, when applicable, as described in clauses B.3.2 and B.3.3.NOTE 6:The Io is defined in PRS positioning subframes. The same Io range applies to PRS and non-PRS symbols. Io levels are different in PRS and non-PRS symbols within the same subframe.NOTE 7:NR operating band groups are as defined in clause 3.5.2.",,,,,,,

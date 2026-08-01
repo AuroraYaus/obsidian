@@ -1,0 +1,157 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Unit</td>
+    <td colspan="3">Value</td>
+  </tr>
+  <tr>
+    <td>Channel bandwidth</td>
+    <td>MHz</td>
+    <td>400</td>
+    <td>800</td>
+    <td>1600</td>
+  </tr>
+  <tr>
+    <td>Subcarrier spacing configuration</td>
+    <td></td>
+    <td>5</td>
+    <td>5</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Allocated resource blocks</td>
+    <td></td>
+    <td>66</td>
+    <td>124</td>
+    <td>248</td>
+  </tr>
+  <tr>
+    <td>Subcarriers per resource block</td>
+    <td></td>
+    <td>12</td>
+    <td>12</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>Allocated slots per Frame (NOTE 6)</td>
+    <td></td>
+    <td>191 / 192</td>
+    <td>191 / 192</td>
+    <td>191 / 192</td>
+  </tr>
+  <tr>
+    <td>MCS index</td>
+    <td></td>
+    <td>19</td>
+    <td>19</td>
+    <td>19</td>
+  </tr>
+  <tr>
+    <td>Modulation</td>
+    <td></td>
+    <td>64QAM</td>
+    <td>64QAM</td>
+    <td>64QAM</td>
+  </tr>
+  <tr>
+    <td>Target Coding Rate</td>
+    <td></td>
+    <td>1/2</td>
+    <td>1/2</td>
+    <td>1/2</td>
+  </tr>
+  <tr>
+    <td>Maximum number of HARQ transmissions</td>
+    <td></td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Information Bit Payload per Slot</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>For Slots 0 and Slot i, if mod(i, 5) = {3,4} for i from {0,…,639}</td>
+    <td>Bits</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>For Slot i, if mod(i, 5) = {0,1,2} for i from {1,…,639}</td>
+    <td>Bits</td>
+    <td>20496</td>
+    <td>37896</td>
+    <td>75792</td>
+  </tr>
+  <tr>
+    <td>Transport block CRC</td>
+    <td>Bits</td>
+    <td>24</td>
+    <td>24</td>
+    <td>24</td>
+  </tr>
+  <tr>
+    <td>LDPC base graph</td>
+    <td></td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Number of Code Blocks per Slot</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>For Slots 0 and Slot i, if mod(i, 5) = {3,4} for i from {0,…,639}</td>
+    <td>CBs</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>For Slot i, if mod(i, 5) = {0,1,2} for i from {1,…,639}</td>
+    <td>CBs</td>
+    <td>3</td>
+    <td>5</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>Binary Channel Bits Per Slot</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>For Slots 0 and Slot i, if mod(i, 5) = {3,4} for i from {0,…,639}</td>
+    <td>Bits</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>For Slot i, if mod(i, 5) = {0,1,2} for i from {1,…,639}</td>
+    <td>Bits</td>
+    <td>40986</td>
+    <td>77004</td>
+    <td>154008</td>
+  </tr>
+  <tr>
+    <td>Max. Throughput averaged over 1 frame (NOTE 7)</td>
+    <td>Mbps</td>
+    <td>393.523</td>
+    <td>727.603</td>
+    <td>1455.206</td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE 1:Additional parameters are specified in Table A.3.1-1 and Table A.3.3.1-1.NOTE 2:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).NOTE 3:SS/PBCH block is transmitted in slot 0 with periodicity 20 msNOTE 4:Slot i is slot index per 2 framesNOTE 5:PTRS is configured on symbols containing PDSCH with 1 port, per 2PRB in frequency domain, per symbol in time domain. Overhead for TBS calculation is assumed to be 6.NOTE 6:First number corresponds to the number slots allocated in the first frame of the RMC; second number corresponds to the number slots allocated in the second frame of the RMC.NOTE 7:Throughput is averaged over 2nd frame of RMC.</td>
+  </tr>
+</table>

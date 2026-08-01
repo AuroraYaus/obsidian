@@ -1,0 +1,17 @@
+Field,Value,Comment
+c-SRS,16,Frequency hopping is disabled
+b-SRS,0,
+b-hop,0,
+freqDomainPosition,0,Frequency domain position of SRS
+freqDomainShift,0,
+groupOrSequenceHopping,neither,No group or sequence hopping
+SRS-PeriodicityAndOffset,sl5=4,Once every 5 slots
+pathlossReferenceRS,ssb-Index=0,SSB #0 is used for SRS path loss estimation
+usage,Codebook,Codebook based UL transmission
+startPosition,0,"resourceMapping setting. SRS on last symbol of slot, and 1 symbols for SRS without repetition."
+nrofSymbols,n1,
+repetitionFactor,n1,
+combOffset-n2,0,transmissionComb setting
+cyclicShift-n2,0,
+nrofSRS-Ports,port1,Number of antenna ports used for SRS transmission
+NOTE:For further information see clause 6.3.2 in TS 38.331 [2].,,

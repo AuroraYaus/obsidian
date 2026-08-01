@@ -1,0 +1,92 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td>RF Channel Number</td>
+    <td></td>
+    <td>1,2</td>
+    <td>Two radio channels (1, 2) are used for this test</td>
+  </tr>
+  <tr>
+    <td>Active PCell</td>
+    <td></td>
+    <td>Cell 1</td>
+    <td>Primary cell on NR RF channel number 1.</td>
+  </tr>
+  <tr>
+    <td>Configured deactivated SCell</td>
+    <td></td>
+    <td>Cell 2</td>
+    <td>Configured deactivated secondary cell on NR RF channel number 2</td>
+  </tr>
+  <tr>
+    <td>CP length</td>
+    <td></td>
+    <td>Normal</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>DRX</td>
+    <td></td>
+    <td>OFF</td>
+    <td>Continuous monitoring of primary cell</td>
+  </tr>
+  <tr>
+    <td>CQI/PMI periodicity and offset configuration index</td>
+    <td></td>
+    <td>0</td>
+    <td>CQI reporting for SCell every fourth slot</td>
+  </tr>
+  <tr>
+    <td>SCell measurement cycle (measCycleSCell)</td>
+    <td>ms</td>
+    <td>160</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Cell 2 timing offset to Cell 1</td>
+    <td>s</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Time alignment error between Cell 2 and Cell 1</td>
+    <td>s</td>
+    <td>TAE as specified in TS 38.104 [13] clause 6.5.3.1.</td>
+    <td>The value of time alignment error depends upon the type of carrier aggregation.</td>
+  </tr>
+  <tr>
+    <td>T1</td>
+    <td>s</td>
+    <td>7</td>
+    <td>During this time the PCell shall be known and the SCell configured and detected.</td>
+  </tr>
+  <tr>
+    <td>T2</td>
+    <td>s</td>
+    <td>1</td>
+    <td>During this time the UE shall activate the SCell.</td>
+  </tr>
+  <tr>
+    <td>T3</td>
+    <td>s</td>
+    <td>1</td>
+    <td>During this time the UE shall deactivate the SCell.</td>
+  </tr>
+  <tr>
+    <td>THARQ</td>
+    <td>ms</td>
+    <td>k1NR slot length×</td>
+    <td>k1 is a number of slots and is indicated by the PDSCH-to-HARQ-timing-indicator field in the DCI format, if present, or provided by dl-DataToUL-ACK, the value of k should be the minimum value defined in TS 38.213 [3] depends on UE’s capability</td>
+  </tr>
+  <tr>
+    <td>TCSI_Reporting</td>
+    <td>ms</td>
+    <td>10+5⋅2µDL</td>
+    <td>the delay (in ms) including uncertainty in acquiring the first available downlink CSI reference resource, UE processing time for CSI reporting (clause 5.2.2.5 in TS 38.214) and uncertainty in acquiring the first available CSI reporting resources as specified in TS 38.331 [2] is the subcarrier spacing configuration for DLµDL</td>
+  </tr>
+</table>

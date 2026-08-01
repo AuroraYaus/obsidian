@@ -1,0 +1,11 @@
+Parameter,Unit,Config,Cell 1,Cell 2,,,,
+,,,,T1,T2,,T3,T4
+BWchannel,MHz,1,,"3: NPRB,c = 15",,,,
+Data PRBs allocated,,1,,12,,,,
+PDSCH Reference Measurement Channel,,1,,SR.1.3 FDD,,,,
+RMSI CORESET parameters,,1,,CR.1.2 FDD,,,,
+Dedicated CORESET parameters,,1,,CCR.1.6 FDD,,,,
+PDSCH/PDCCH subcarrier spacing,kHz,1,,15,,,,
+SSB configuration,,1,,SSB.13 FR1,,,,
+IoNote,dBm/2.7MHz,1,,N/A,,–59.4 dBm,,
+NOTE :Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,,,

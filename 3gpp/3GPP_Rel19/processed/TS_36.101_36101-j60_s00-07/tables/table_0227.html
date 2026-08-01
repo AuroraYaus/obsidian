@@ -1,0 +1,49 @@
+<table>
+  <tr>
+    <td>Para-meter</td>
+    <td>Unit</td>
+    <td>Meas BWNOTE 1</td>
+    <td colspan="2">Limit</td>
+    <td>remark</td>
+    <td>Applicable Frequencies</td>
+  </tr>
+  <tr>
+    <td>General</td>
+    <td>dB</td>
+    <td>BW of 1 RB (180KHz rectangular)</td>
+    <td colspan="2"></td>
+    <td>The reference value is the average power per allocated RB in the allocated component carrier</td>
+    <td>Any RB in the non allocated component carrier.The frequency raster of the RBs is derived when this component carrier is allocated with RBs</td>
+  </tr>
+  <tr>
+    <td>IQ Image</td>
+    <td>dB</td>
+    <td>BW of 1 RB (180KHz rectangular)</td>
+    <td colspan="2">-25NOTE 2</td>
+    <td>The reference value is the average power per allocated RB in the allocated component carrier</td>
+    <td>The frequencies of the contiguous non-allocated RBs are unknown.The frequency raster of the RBs is derived when this component carrier is allocated with RBs</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Carrier leakage</td>
+    <td rowspan="4">dBc</td>
+    <td rowspan="4">BW of 1 RB (180KHz rectangular)</td>
+    <td colspan="2">NOTE 3</td>
+    <td>The reference value is the total power of the allocated RBs in the allocated component carrier</td>
+    <td rowspan="4">The frequencies of the up to 2 non-allocated RBs are unknown.The frequency raster of the RBs is derived when this component carrier is allocated with RBs</td>
+  </tr>
+  <tr>
+    <td>-25</td>
+    <td>Output power &gt; 0 dBm</td>
+  </tr>
+  <tr>
+    <td>-20</td>
+    <td>-30 dBm ≤ Output power ≤ 0 dBm</td>
+  </tr>
+  <tr>
+    <td>-10</td>
+    <td>-40 dBm  Output power &lt; -30 dBm</td>
+  </tr>
+  <tr>
+    <td colspan="7">NOTE1:Resolution BWs smaller than the measurement BW may be integrated to achieve the measurement bandwidth.NOTE 2:Exceptions to the general limit is are allowed for up to +1 RBs within a contiguous width of +1 non-allocated RBs.NOTE 3:Two Exceptions to the general limit are allowed for up to two contiguous non-allocated RBsNOTE 4:NOTES 1, 5, 6, 7, 8, 9 from Table 6.5.2A.3.1-1 apply for Table 6.5.2A.3.1-2 as well.NOTE 5: for measured non-allocated RB in the non allocated component carrier may take non-integer values when the carrier spacing between the CCs is not a multiple of RB.NOTE 6:For V2X intra-band contiguous multi-carrier operation the in-band emission requirement (General, IQ Image or Carrier leakage) of each channel is calculated separately as Pgeneral, PSSCH,c(i), PIQ, PSSCH,c(i), PLO, PSSCH,c(i), Pgeneral, PSCCH,c(i), PIQ, PSCCH,c(i), PLO, PSCCH,c(i) for each carrier respectively.  In-band emissions combined limit for the aggregated bandwidth is evaluated in each non-allocated RB. For each such RB, the minimum requirement is calculated as the PsumIBE.CA, where PsumIBE.CA is the linear sum of Pgeneral, PSSCH,c(i), PIQ, PSSCH,c(i), PLO, PSSCH,c(i), Pgeneral, PSCCH,c(i), PIQ, PSCCH,c(i), PLO, PSCCH,c(i) for all carriers.</td>
+  </tr>
+</table>

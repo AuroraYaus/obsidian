@@ -1,0 +1,136 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Test 1, 2, 3A, 3B, 4A, 6C</td>
+  </tr>
+  <tr>
+    <td colspan="2">Communication resource pool configuration Note 5</td>
+    <td></td>
+    <td>As specified in Table A.7.2.1-5(Configuration #5-FDD)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Active cell(s)</td>
+    <td></td>
+    <td>Cell 1 (PCell)Cell 2 (SCell) for Test 3B, 4A, 6C</td>
+  </tr>
+  <tr>
+    <td>Cell 1</td>
+    <td>Test parameters</td>
+    <td></td>
+    <td>As specified in clause 8.7.1: Table 8.7.1-1 and Test 1, 2, 3A , 3B, 4A, 6C in Table 8.7.1-2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Active Sidelink UE(s)</td>
+    <td></td>
+    <td>Sidelink UE 1, Sidelink UE 2</td>
+  </tr>
+  <tr>
+    <td rowspan="12">Sidelink UE 1</td>
+    <td>Sidelink Transmissions</td>
+    <td></td>
+    <td>PSCCH + PSSCH</td>
+  </tr>
+  <tr>
+    <td>PSCCH RMC</td>
+    <td></td>
+    <td>10 MHz: CC.2 FDD with ITRP=0 (NOTE 1)</td>
+  </tr>
+  <tr>
+    <td>PSCCH subframe allocation</td>
+    <td></td>
+    <td rowspan="2">As defined by TS 36.213 with  = 0</td>
+  </tr>
+  <tr>
+    <td>PSCCH RB allocation</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>PSSCH RMC</td>
+    <td></td>
+    <td>10 MHz: CD.7 FDD</td>
+  </tr>
+  <tr>
+    <td>PSSCH subframe allocation</td>
+    <td></td>
+    <td>As per time repetition pattern specified in PSCCH</td>
+  </tr>
+  <tr>
+    <td>PSSCH RB allocation</td>
+    <td></td>
+    <td>Fully allocated</td>
+  </tr>
+  <tr>
+    <td>Time offset (NOTE 3)</td>
+    <td>s</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Frequency offset (NOTE 4)</td>
+    <td>Hz</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Propagation Channel</td>
+    <td></td>
+    <td>Static propagation conditionNo external noise sources are applied</td>
+  </tr>
+  <tr>
+    <td>Antenna configuration</td>
+    <td></td>
+    <td>1x2 Low</td>
+  </tr>
+  <tr>
+    <td>at antenna port</td>
+    <td>dBm/15kHz</td>
+    <td>-85</td>
+  </tr>
+  <tr>
+    <td rowspan="9">Sidelink UE 2</td>
+    <td>Sidelink Transmissions</td>
+    <td></td>
+    <td>PSCCH (NOTE 2)</td>
+  </tr>
+  <tr>
+    <td>PSCCH RMC</td>
+    <td></td>
+    <td>10 MHz: CC.2 FDD with ITRP=1 (NOTE 1)</td>
+  </tr>
+  <tr>
+    <td>PSCCH subframe allocation</td>
+    <td></td>
+    <td rowspan="2">As defined by TS 36.213 with  = 1</td>
+  </tr>
+  <tr>
+    <td>PSCCH RB allocation</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Time offset (NOTE 3)</td>
+    <td>s</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Frequency offset (NOTE 4)</td>
+    <td>Hz</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Propagation Channel</td>
+    <td></td>
+    <td>Static propagation conditionNo external noise sources are applied</td>
+  </tr>
+  <tr>
+    <td>Antenna configuration</td>
+    <td></td>
+    <td>1x2 Low</td>
+  </tr>
+  <tr>
+    <td>at antenna port</td>
+    <td>dBm/15kHz</td>
+    <td>-85</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1: For NTRP = 8 (FDD) and trpt-Subset = 001, ITRP = 0 corresponds to a time repetition pattern of (1,0,0,0,0,0,0,0), ITRP = 1 corresponds to a time repetition pattern of (0,1,0,0,0,0,0,0).NOTE 2:Sidelink UE 2 transmits PSCCH but not PSSCH.NOTE 3:Time offset of Sidelink UE receive signal with respect to Cell 1 downlink timing at the tested UE.NOTE 4:Frequency offset of Sidelink UE with respect to Cell 1 uplink frequency.NOTE 5:Sidelink Communication resources are configured on the primary serving cell.</td>
+  </tr>
+</table>

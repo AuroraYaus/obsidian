@@ -1,0 +1,3 @@
+V2X configuration,Power class 2(dBm),Tolerance(dB),Power class 3(dBm),Tolerance(dB)
+V2X_(n)47AA,,,23,+2/-31
+"NOTE 1:If all transmitted resource blocks over all component carriers are confined within FUL_low and FUL_low + 4 MHz or/and FUL_high – 4 MHz and FUL_high, the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dBNOTE 2:Power Class 3 is the default power class unless otherwise stated.NOTE 3:Only single switched UL is supported",,,,

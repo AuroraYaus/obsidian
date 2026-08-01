@@ -1,0 +1,12 @@
+ACS1 test Parameters,,
+Interferer,GSM (GMSK),E-UTRA
+Category NB1 or NB2 signal power(Pwanted  ) / dBm,REFSENS + 14 dB,
+Interferer signal power(PInterferer ) / dBm,REFSENS + 42 dB,REFSENS + 47 dB
+Interferer bandwidth,200 kHz,5 MHz
+Interferer offset from category NB1 or NB2 channel edge,±200 kHz,±2.5 MHz
+ACS2 test Parameters,,
+Interferer,GSM (GMSK),E-UTRA
+Category NB1 or NB2 signal power(Pwanted  ) / dBm,-53 dBm,-58 dBm
+Interferer signal power(PInterferer ) / dBm,-25 dBm,
+Interferer bandwidth,200 kHz,5 MHz
+Interferer offset from category NB1 or NB2 channel edge,±200 kHz,±2.5 MHz

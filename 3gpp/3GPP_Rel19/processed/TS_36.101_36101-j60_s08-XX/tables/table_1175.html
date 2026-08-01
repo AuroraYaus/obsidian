@@ -1,0 +1,129 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td colspan="2">Test 1</td>
+    <td colspan="2">Test 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Bandwidth</td>
+    <td>MHz</td>
+    <td colspan="4">10 MHz</td>
+  </tr>
+  <tr>
+    <td colspan="2">Transmission mode</td>
+    <td></td>
+    <td colspan="4">1 (port 0)</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td colspan="4">0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td colspan="4">0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td colspan="4">0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Uplink downlink configuration</td>
+    <td></td>
+    <td colspan="4">2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Special subframe configuration</td>
+    <td></td>
+    <td colspan="4">4</td>
+  </tr>
+  <tr>
+    <td colspan="2">SNR (Note 3)</td>
+    <td>dB</td>
+    <td>8</td>
+    <td>9</td>
+    <td>13</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td>-90</td>
+    <td>-89</td>
+    <td>-85</td>
+    <td>-84</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td colspan="2">-98</td>
+    <td colspan="2">-98</td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation channel</td>
+    <td></td>
+    <td colspan="4">Clause B.2.4 with s, a = 1, Hz</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting periodicity</td>
+    <td>ms</td>
+    <td colspan="4">NP = 5</td>
+  </tr>
+  <tr>
+    <td colspan="2">CQI delay</td>
+    <td>ms</td>
+    <td colspan="4">10 or 11</td>
+  </tr>
+  <tr>
+    <td colspan="2">Physical channel for CQI reporting</td>
+    <td></td>
+    <td colspan="4">PUSCH (Note 4)</td>
+  </tr>
+  <tr>
+    <td colspan="2">PUCCH Report Type for wideband CQI</td>
+    <td></td>
+    <td colspan="4">4</td>
+  </tr>
+  <tr>
+    <td colspan="2">PUCCH Report Type for subband CQI</td>
+    <td></td>
+    <td colspan="4">1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Max number of HARQ transmissions</td>
+    <td></td>
+    <td colspan="4">1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Subband size (k)</td>
+    <td>RBs</td>
+    <td colspan="4">6 (full size)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of bandwidth parts (J)</td>
+    <td></td>
+    <td colspan="4">3</td>
+  </tr>
+  <tr>
+    <td colspan="2">K</td>
+    <td></td>
+    <td colspan="4">1</td>
+  </tr>
+  <tr>
+    <td colspan="2">cqi-pmi-ConfigIndex</td>
+    <td></td>
+    <td colspan="4">3</td>
+  </tr>
+  <tr>
+    <td colspan="2">ACK/NACK feedback mode</td>
+    <td></td>
+    <td colspan="4">Multiplexing</td>
+  </tr>
+  <tr>
+    <td colspan="7">Note 1:If the UE reports in an available uplink reporting instance at subframe SF#n based on CQI estimation at a downlink subframe not later than SF#(n-4), this reported subband or wideband CQI cannot be applied at the eNB downlink before SF#(n+4).Note 2:Reference measurement channel RC.3 TDD according to Table A.4-1 with one/two sided dynamic OCNG Pattern OP.1/2 TDD as described in Annex A.5.2.1/2.Note 3:For each test, the minimum requirements shall be fulfilled for at least one of the two SNR(s) and the respective wanted signal input level.Note 4:To avoid collisions between CQI reports and HARQ-ACK it is necessary to report both on PUSCH instead of PUCCH. PDCCH DCI format 0 shall be transmitted in downlink SF#3 and #8 to allow periodic CQI to multiplex with the HARQ-ACK on PUSCH in uplink subframe SF#7 and #2.Note 5:CQI reports for the short subband (having 2RBs in the last bandwidth part) are to be disregarded and data scheduling according to the most recent subband CQI report for bandwidth part with j=1.Note 6:In the case where wideband CQI is reported, data is to be scheduled according to the most recently used subband CQI report.</td>
+  </tr>
+</table>

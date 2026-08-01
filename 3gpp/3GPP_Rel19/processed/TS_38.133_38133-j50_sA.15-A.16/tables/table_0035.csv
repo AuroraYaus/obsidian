@@ -1,0 +1,10 @@
+Parameter,,,Unit,Value,Comment
+RF Channel Number,,"Config 1,2,3",,"1, 2, 3","Three NR radio channels are used for this test, Cell 1, Cell 2 and Cell 3 use RF channel 1, 2 and 3 respectively."
+A4-Offset,,"Config 1,2,3",dBm,-120,
+Time offset between cells,,"Config 1,2,3",,3 s,Synchronous cells
+Initial conditions,Source  cell,"Config 1,2,3",,Cell 1,Source Cell
+,Target cell,,,Cell 2,Neighbour cell
+,SCell,,,Cell 3,SCell is not added and activated
+Final condition,Source cell,"Config 1,2,3",,Cell 2,Cell 2 is Source cell after handover
+,Neighbour cell,,,Cell 1,Neighbour cell
+,SCell,,,Cell 3,SCell is added and activated

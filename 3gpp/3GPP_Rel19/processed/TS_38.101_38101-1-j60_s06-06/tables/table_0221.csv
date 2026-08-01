@@ -1,0 +1,5 @@
+"Channel Bandwidth, MHz",Carrier frequency (MHz),A-MPR parameters for region definitions,,A-MPR
+,,RBstart or RBend,LCRB,
+40,5885,RBstart ≤ floor(NRB*0.2) or RBend ≥ NRB - floor(NRB*0.2),LCRB ≤floor(NRB*0.2),Region 1
+,,The RB allocation is in Region 2 allocation for all other allocations which are not a Region1 or Region3 allocation.,,Region 2
+,,floor(NRB /3.5) ≤ RBstart ≤ NRB –floor(NRB /3.5) – LCRB,LCRB ≤ceil(NRB/3.5),Region 3

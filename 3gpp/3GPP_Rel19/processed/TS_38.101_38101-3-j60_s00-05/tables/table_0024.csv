@@ -1,0 +1,301 @@
+NR CA configuration,Uplink CA configuration,NR Band,Channel bandwidth (MHz) (note 3),Bandwidth combination set
+CA_n28A-n257A,CA_n28A-n257A,n28,"5, 10, 15, 20",0
+,,n257,"50, 100, 200, 400",
+CA_n28A-n257D,CA_n28A-n257A/D,n28,"5, 10, 15, 20",0
+,,n257,CA_n257D,
+CA_n28A-n257G,CA_n257GCA_n28A-n257A/G,n28,"5, 10, 15, 20",0
+,,n257,CA_n257G,
+CA_n28A-n257H,CA_n257G/HCA_n28A-n257A/G/H,n28,"5, 10, 15, 20",0
+,,n257,CA_n257H,
+CA_n28A-n257I,CA_n257G/H/ICA_n28A-n257A/G/H/I,n28,"5, 10, 15, 20",0
+,,n257,CA_n257I,
+CA_n28A-n258A,CA_n28A-n258A,n28,"5, 10, 15, 20",0
+,,n258,"50, 100, 200, 400",
+CA_n28A-n258B,CA_n28A-n258A,n28,"5, 10, 15, 20",0
+,,n258,CA_n258B,
+CA_n28A-n258C,CA_n28A-n258A,n28,"5, 10, 15, 20",0
+,,n258,CA_n258C,
+CA_n28A-n258D,CA_n28A-n258A,n28,"5, 10, 15, 20",0
+,,n258,CA_n258D,
+CA_n28A-n258E,CA_n28A-n258A,n28,"5, 10, 15, 20",0
+,,n258,CA_n258E,
+CA_n28A-n258F,CA_n28A-n258A,n28,"5, 10, 15, 20",0
+,,n258,CA_n258F,
+CA_n28A-n258G,CA_n28A-n258A/G,n28,"5, 10, 15, 20",0
+,,n258,CA_n258G,
+CA_n28A-n258H,CA_n28A-n258A/G/H,n28,"5, 10, 15, 20",0
+,,n258,CA_n258H,
+CA_n28A-n258I,CA_n28A-n258A/G/H/I,n28,"5, 10, 15, 20",0
+,,n258,CA_n258I,
+CA_n28A-n258J,CA_n28A-n258A/G/H/I,n28,"5, 10, 15, 20",0
+,,n258,CA_n258J,
+CA_n28A-n258K,CA_n28A-n258A/G/H/I,n28,"5, 10, 15, 20",0
+,,n258,CA_n258K,
+CA_n28A-n258L,CA_n28A-n258A/G/H/I,n28,"5, 10, 15, 20",0
+,,n258,CA_n258L,
+CA_n28A-n258M,CA_n28A-n258A/G/H/I,n28,"5, 10, 15, 20",0
+,,n258,CA_n258M,
+CA_n28A-n258R2,CA_n28A-n258A/R2,n28,"5, 10, 15, 20, 25, 30",0
+,,n258,CA_n258R2,
+CA_n28A-n258R3,CA_n28A-n258A/R2/R3,n28,"5, 10, 15, 20, 25, 30",0
+,,n258,CA_n258R3,
+CA_n28A-n258R4,CA_n28A-n258A/R2/R3/R4,n28,"5, 10, 15, 20, 25, 30",0
+,,n258,CA_n258R4,
+CA_n28A-n258R5,CA_n28A-n258A/R2/R3/R4,n28,"5, 10, 15, 20, 25, 30",0
+,,n258,CA_n258R5,
+CA_n28A-n258R6,CA_n28A-n258A/R2/R3/R4,n28,"5, 10, 15, 20, 25, 30",0
+,,n258,CA_n258R6,
+CA_n28A-n258R7,CA_n28A-n258A/R2/R3/R4,n28,"5, 10, 15, 20, 25, 30",0
+,,n258,CA_n258R7,
+CA_n28A-n258R8,CA_n28A-n258A/R2/R3/R4,n28,"5, 10, 15, 20, 25, 30",0
+,,n258,CA_n258R8,
+CA_n28A-n258R9,CA_n28A-n258A/R2/R3/R4,n28,"5, 10, 15, 20, 25, 30",0
+,,n258,CA_n258R9,
+CA_n28A-n258R10,CA_n28A-n258A/R2/R3/R4,n28,"5, 10, 15, 20, 25, 30",0
+,,n258,CA_n258R10,
+CA_n30A-n257A,CA_n30A-n257A,n30,"5, 10",0
+,,n257,"50, 100, 200, 400",
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,See n257 channel bandwidths in Table 5.3.5-1,
+CA_n30A-n257G,CA_n30A-n257A/G,n30,"5, 10",0
+,,n257,CA_n257G,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257G,
+CA_n30A-n257H,CA_n30A-n257A/G/H,n30,"5, 10",0
+,,n257,CA_n257H,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257H,
+CA_n30A-n257I,CA_n30A-n257A/G/H/I,n30,"5, 10",0
+,,n257,CA_n257I,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257I,
+CA_n30A-n257J,CA_n30A-n257A/G/H/I/J,n30,"5, 10",0
+,,n257,CA_n257J,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257J,
+CA_n30A-n257K,CA_n30A-n257A/G/H/I/J/K,n30,"5, 10",0
+,,n257,CA_n257K,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257K,
+CA_n30A-n257L,CA_n30A-n257A/G/H/I/J/K/L,n30,"5, 10",0
+,,n257,CA_n257L,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257L,
+CA_n30A-n257M,CA_n30A-n257A/G/H/I/J/K/L/M,n30,"5, 10",0
+,,n257,CA_n257M,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257M,
+CA_n30A-n257O,CA_n30A-n257A/O,n30,"5, 10",0
+,,n257,CA_n257O,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257O,
+CA_n30A-n257P,CA_n30A-n257A/O/P,n30,"5, 10",0
+,,n257,CA_n257P,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257P,
+CA_n30A-n257Q,CA_n30A-n257A/O/P/Q,n30,"5, 10",0
+,,n257,CA_n257Q,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,CA_n257Q,
+CA_n30A-n258A,CA_n30A-n258A,n30,"5, 10",0
+,,n258,"50, 100, 200, 400",
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,See n258 channel bandwidths in Table 5.3.5-1,
+CA_n30A-n258G,CA_n30A-n258A/G,n30,"5, 10",0
+,,n258,CA_n258G,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258G,
+CA_n30A-n258H,CA_n30A-n258A/G/H,n30,"5, 10",0
+,,n258,CA_n258H,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258H,
+CA_n30A-n258I,CA_n30A-n258A/G/H/I,n30,"5, 10",0
+,,n258,CA_n258I,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258I,
+CA_n30A-n258J,CA_n30A-n258A/G/H/I/J,n30,"5, 10",0
+,,n258,CA_n258J,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258J,
+CA_n30A-n258K,CA_n30A-n258A/G/H/I/J/K,n30,"5, 10",0
+,,n258,CA_n258K,
+,,n30,"5, 10",4 and 5
+,,n258,CA_n258K,
+CA_n30A-n258L,CA_n30A-n258A/G/H/I/J/K/L,n30,"5, 10",0
+,,n258,CA_n258L,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258L,
+CA_n30A-n258M,CA_n30A-n258A/G/H/I/J/K/L/M,n30,"5, 10",0
+,,n258,CA_n258M,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258M,
+CA_n30A-n258O,CA_n30A-n258A/O,n30,"5, 10",0
+,,n258,CA_n258O,
+,,n30,"5, 10",4 and 5
+,,n258,CA_n258O,
+CA_n30A-n258P,CA_n30A-n258A/O/P,n30,"5, 10",0
+,,n258,CA_n258P,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258P,
+CA_n30A-n258Q,CA_n30A-n258A/O/P/Q,n30,"5, 10",0
+,,n258,CA_n258Q,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n258,CA_n258Q,
+CA_n30A-n260A,CA_n30A-n260A,n30,"5, 10",0
+,,n260,"50, 100, 200, 400",
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n260,See n260 channel bandwidths in Table 5.3.5-1,
+CA_n30A-n260G,CA_n30A-n260A/G,n30,"5, 10",0
+,,n260,CA_n260G,
+CA_n30A-n260H,CA_n30A-n260A/G/H,n30,"5, 10",0
+,,n260,CA_n260H,
+CA_n30A-n260I,CA_n30A-n260A/G/H/I,n30,"5, 10",0
+,,n260,CA_n260I,
+CA_n30A-n260J,CA_n30A-n260A/G/H/I/J,n30,"5, 10",0
+,,n260,CA_n260J,
+CA_n30A-n260K,CA_n30A-n260A/G/H/I/J/K,n30,"5, 10",0
+,,n260,CA_n260K,
+CA_n30A-n260L,CA_n30A-n260A/G/H/I/J/K/L,n30,"5, 10",0
+,,n260,CA_n260L,
+CA_n30A-n260M,CA_n30A-n260A/G/H/I/J/K/L/M,n30,"5, 10",0
+,,n260,CA_n260M,
+CA_n30A-n260O,CA_n30A-n260A/O,n30,"5, 10",0
+,,n260,CA_n260O,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n260,CA_n260O,
+CA_n30A-n260P,CA_n30A-n260A/O/P,n30,"5, 10",0
+,,n260,CA_n260P,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n260,CA_n260P,
+CA_n30A-n260Q,CA_n30A-n260A/O/P/Q,n30,"5, 10",0
+,,n260,CA_n260Q,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n260,CA_n260Q,
+CA_n30A-n261A,CA_n30A-n261A,n30,"5, 10",0
+,,n261,"50, 100, 200, 400",
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,See n261 channel bandwidths in Table 5.3.5-1,
+CA_n30A-n261G,CA_n30A-n261A/G,n30,"5, 10",0
+,,n261,CA_n261G,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261G,
+CA_n30A-n261H,CA_n30A-n261A/G/H,n30,"5, 10",0
+,,n261,CA_n261H,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261H,
+CA_n30A-n261I,CA_n30A-n261A/G/H/I,n30,"5, 10",0
+,,n261,CA_n261I,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261I,
+CA_n30A-n261J,CA_n30A-n261A/G/H/I/J,n30,"5, 10",0
+,,n261,CA_n261J,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261J,
+CA_n30A-n261K,CA_n30A-n261A/G/H/I/J/K,n30,"5, 10",0
+,,n261,CA_n261K,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261K,
+CA_n30A-n261L,CA_n30A-n261A/G/H/I/J/K/L,n30,"5, 10",0
+,,n261,CA_n261L,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261L,
+CA_n30A-n261M,CA_n30A-n261A/G/H/I/J/K/L/M,n30,"5, 10",0
+,,n261,CA_n261M,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261M,
+CA_n30A-n261O,CA_n30A-n261A/O,n30,"5, 10",0
+,,n261,CA_n261O,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261O,
+CA_n30A-n261P,CA_n30A-n261A/O/P,n30,"5, 10",0
+,,n261,CA_n261P,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261P,
+CA_n30A-n261Q,CA_n30A-n261A/O/P/Q,n30,"5, 10",0
+,,n261,CA_n261Q,
+,,n30,See n30 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n261,CA_n261Q,
+CA_n34A-n258A,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,"50, 100, 200, 400",
+CA_n34A-n258B,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258B,
+CA_n34A-n258C,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258C,
+CA_n34A-n258D,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258D,
+CA_n34A-n258E,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258E,
+CA_n34A-n258F,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258F,
+CA_n34A-n258G,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258G,
+CA_n34A-n258H,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258H,
+CA_n34A-n258I,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258I,
+CA_n34A-n258J,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258J,
+CA_n34A-n258K,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258K,
+CA_n34A-n258L,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258L,
+CA_n34A-n258M,CA_n34A-n258A,n34,"5, 10, 15",0
+,,n258,CA_n258M,
+CA_n38A-n257A,CA_n38A-n257A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n257,"50, 100, 200, 400",
+CA_n38A-n257G,CA_n38A-n257A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n257,CA_n257G,
+CA_n38A-n257H,CA_n38A-n257A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n257,CA_n257H,
+CA_n38A-n257I,CA_n38A-n257A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n257,CA_n257I,
+CA_n38A-n257J,CA_n38A-n257A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n257,CA_n257J,
+CA_n38A-n257K,CA_n38A-n257A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n257,CA_n257K,
+CA_n38A-n257L,CA_n38A-n257A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n257,CA_n257L,
+CA_n38A-n257M,CA_n38A-n257A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n257,CA_n257M,
+CA_n38A-n258A,CA_n38A-n258A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,"50, 100, 200, 400",
+CA_n38A-n258G,CA_n38A-n258A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258G,
+CA_n38A-n258H,CA_n38A-n258A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258H,
+CA_n38A-n258I,CA_n38A-n258A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258I,
+CA_n38A-n258J,CA_n38A-n258A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258J,
+CA_n38A-n258K,CA_n38A-n258A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258K,
+CA_n38A-n258L,CA_n38A-n258A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258L,
+CA_n38A-n258M,CA_n38A-n258A,n38,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258M,
+CA_n39A-n258A,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,"50, 100, 200, 400",
+CA_n39A-n258B,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258B,
+CA_n39A-n258C,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258C,
+CA_n39A-n258D,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258D,
+CA_n39A-n258E,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258E,
+CA_n39A-n258F,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258F,
+CA_n39A-n258G,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258G,
+CA_n39A-n258H,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258H,
+CA_n39A-n258I,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258I,
+CA_n39A-n258J,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258J,
+CA_n39A-n258K,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258K,
+CA_n39A-n258L,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258L,
+CA_n39A-n258M,CA_n39A-n258A,n39,"5, 10, 15, 20, 25, 30, 40",0
+,,n258,CA_n258M,

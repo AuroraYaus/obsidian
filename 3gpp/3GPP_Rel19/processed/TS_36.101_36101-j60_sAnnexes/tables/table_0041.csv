@@ -1,0 +1,18 @@
+Parameter,Unit,Value,,,,,
+Channel bandwidth,MHz,1.4,3,5,10,15,20
+Allocated resource blocks,,6,15,25,36,36,36
+Uplink-Downlink Configuration (Note 2),,1,1,1,1,1,1
+DFT-OFDM Symbols per Sub-Frame,,12,12,12,12,12,12
+Modulation,,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK
+Target Coding rate,,1/3,1/5,1/8,1/10,1/10,1/10
+Payload size,,,,,,,
+"For Sub-Frame 2,3,7,8",Bits,600,872,904,1000,1000,1000
+Transport block CRC,Bits,24,24,24,24,24,24
+Number of code blocks per Sub-Frame (Note 1),,,,,,,
+"For Sub-Frame 2,3,7,8",,1,1,1,1,1,1
+Total number of bits per Sub-Frame,,,,,,,
+"For Sub-Frame 2,3,7,8",Bits,1728,4320,7200,10368,10368,10368
+Total symbols per Sub-Frame,,,,,,,
+"For Sub-Frame 2,3,7,8",,864,2160,3600,5184,5184,5184
+UE UL Category,,0,0,0,0,0,0
+"NOTE 1:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)NOTE 2:As per Table 4.2-2 in TS 36.211",,,,,,,

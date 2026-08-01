@@ -1,0 +1,517 @@
+NR CA configuration,Uplink CA configuration,,NR Band,Channel bandwidth (MHz) (note 3),Bandwidth combination set
+CA_n77A-n257A,CA_n77A-n257A,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",0
+,,,n257,"50, 100, 200, 400",
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n257,See n257 channel bandwidths in Table 5.3.5-1,
+CA_n77A-n257D,CA_n77A-n257A/D,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",0
+,,,n257,CA_n257D,
+CA_n77A-n257E,CA_n77A-n257A,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",0
+,,,n257,CA_n257E,
+CA_n77A-n257F,CA_n77A-n257A,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",0
+,,,n257,CA_n257F,
+CA_n77A-n257G,CA_n257GCA_n77A-n257A/G,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n257,CA_n257G,
+,CA_n77A-n257A/G,n77,,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n257,,CA_n257G,
+CA_n77A-n257H,CA_n257G/HCA_n77A-n257A/G/H,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n257,CA_n257H,
+CA_n77A-n257I,CA_n257G/H/ICA_n77A-n257A/G/H/I,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n257,CA_n257I,
+CA_n77A-n257J,CA_n257G/H/I/JCA_n77A-n257A/G/H/I/J,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n257,CA_n257J,
+CA_n77A-n257K,CA_n257G/H/I/J/KCA_n77A-n257A/G/H/I/J/K,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n257,CA_n257K,
+CA_n77A-n257L,CA_n257G/H/I/J/K/LCA_n77A-n257A/G/H/I/J/K/L,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n257,CA_n257L,
+CA_n77A-n257M,CA_n257G/H/I/J/K/L/MCA_n77A-n257A/G/H/I/J/K/L/M,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n257,CA_n257M,
+CA_n77A-n257O,CA_n77A-n257A/O,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n257,CA_n257O,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n257,CA_n257O,
+CA_n77A-n257P,CA_n77A-n257A/O/P,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n257,CA_n257P,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n257,CA_n257P,
+CA_n77A-n257Q,CA_n77A-n257A/O/P/Q,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n257,CA_n257Q,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n257,CA_n257Q,
+CA_n77A-n257(2A),CA_n77A-n257A,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",0
+,,,n257,CA_n257(2A),
+CA_n77A-n257(2G),CA_n77A-n257A/G,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",0
+,,,n257,CA_n257(2G),
+CA_n77A-n257(A-G),CA_n77A-n257A/G,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",0
+,,,n257,CA_n257(A-G),
+CA_n77C-n257A,CA_n77A-n257A,,n77,CA_n77C,0
+,,,n257,"50, 100, 200, 400",
+CA_n77C-n257D,CA_n77A-n257A,,n77,CA_n77C,0
+,,,n257,CA_n257D,
+CA_n77C-n257E,CA_n77A-n257A,,n77,CA_n77C,0
+,,,n257,CA_n257E,
+CA_n77C-n257F,CA_n77A-n257A,,n77,CA_n77C,0
+,,,n257,CA_n257F,
+CA_n77C-n257G,CA_n77A-n257A,,n77,CA_n77C,0
+,,,n257,CA_n257G,
+CA_n77C-n257H,CA_n77A-n257A,,n77,CA_n77C,0
+,,,n257,CA_n257H,
+CA_n77C-n257I,CA_n77A-n257A,,n77,CA_n77C,0
+,,,n257,CA_n257I,
+CA_n77C-n257J,CA_n77A-n257A,,n77,CA_n77C,0
+,,,n257,CA_n257J,
+CA_n77C-n257K,CA_n77A-n257A,,n77,CA_n77C,0
+,,,n257,CA_n257K,
+CA_n77C-n257L,CA_n77A-n257A,,n77,CA_n77C,0
+,,,n257,CA_n257L,
+CA_n77C-n257M,CA_n77A-n257A,,n77,CA_n77C,0
+,,,n257,CA_n257M,
+CA_n77(2A)-n257A,CA_n77(2A)CA_n77A-n257A,,n77,CA_n77(2A),0
+,,,n257,"50, 100, 200, 400",
+CA_n77(2A)-n257D,CA_n77A-n257A/D,,n77,CA_n77(2A),0
+,,,n257,CA_n257D,
+CA_n77(2A)-n257G,CA_n77(2A)CA_n77A-n257A/G,,n77,CA_n77(2A),0
+,,,n257,CA_n257G,
+CA_n77(2A)-n257H,CA_n77A-n257A/G/H,,n77,CA_n77(2A),0
+,,,n257,CA_n257H,
+CA_n77(2A)-n257I,CA_n77A-n257A/G/H/I,,n77,CA_n77(2A),0
+,,,n257,CA_n257I,
+CA_n77(2A)-n257J,CA_n77A-n257A/G/H/I/J,,n77,CA_n77(2A),0
+,,,n257,CA_n257J,
+CA_n77(2A)-n257K,CA_n77A-n257A/G/H/I/J/K,,n77,CA_n77(2A),0
+,,,n257,CA_n257K,
+CA_n77(2A)-n257L,CA_n77A-n257A/G/H/I/J/K/L,,n77,CA_n77(2A),0
+,,,n257,CA_n257L,
+CA_n77(2A)-n257M,CA_n77A-n257A/G/H/I/J/K/L/M,,n77,CA_n77(2A),0
+,,,n257,CA_n257M,
+CA_n77(3A)-n257A,CA_n77A-n257A,,n77,CA_n77(3A),0
+,,,n257,"50, 100, 200, 400",
+CA_n77(3A)-n257D,CA_n77A-n257A/D,,n77,CA_n77(3A),0
+,,,n257,CA_n257D,
+CA_n77(3A)-n257G,CA_n77A-n257A/G,,n77,CA_n77(3A),0
+,,,n257,CA_n257G,
+CA_n77(3A)-n257H,CA_n77A-n257A/G/H,,n77,CA_n77(3A),0
+,,,n257,CA_n257H,
+CA_n77(3A)-n257I,CA_n77A-n257A/G/H/I,,n77,CA_n77(3A),0
+,,,n257,CA_n257I,
+CA_n77A-n258A,CA_n77A-n258A,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n258,"50, 100, 200, 400",
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,See n258 channel bandwidths in Table 5.3.5-1,
+CA_n77A-n258D,CA_n77A-n258A/D,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n258,CA_n258D,
+CA_n77A-n258G,CA_n77A-n258A/G,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n258,CA_n258G,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258G,
+CA_n77A-n258H,CA_n77A-n258A/G/H,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n258,CA_n258H,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258H,
+CA_n77A-n258I,CA_n77A-n258A/G/H/I,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n258,CA_n258I,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258I,
+CA_n77A-n258J,CA_n77A-n258A/G/H/I/J,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n258,CA_n258J,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258J,
+CA_n77(2A)-n258A,CA_n77A-n258A,,n77,CA_n77(2A),0
+,,,n258,"50, 100, 200, 400",
+CA_n77A-n258K,CA_n77A-n258A/G/H/I/J/K,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n258,CA_n258K,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258K,
+CA_n77A-n258L,CA_n77A-n258A/G/H/I/J/K/L,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n258,CA_n258L,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258L,
+CA_n77A-n258M,CA_n77A-n258A/G/H/I/J/K/L/M,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n258,CA_n258M,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258M,
+CA_n77A-n258O,CA_n77A-n258A/O,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n258,CA_n258O,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258O,
+CA_n77A-n258P,CA_n77A-n258A/O/P,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n258,CA_n258P,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258P,
+CA_n77A-n258Q,CA_n77A-n258A/O/P/Q,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n258,CA_n258Q,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258Q,
+CA_n77(2A)-n258D,CA_n77A-n258A/D,,n77,CA_n77(2A),0
+,,,n258,CA_n258D,
+CA_n77(2A)-n258G,CA_n77A-n258A/G,,n77,CA_n77(2A),0
+,,,n258,CA_n258G,
+CA_n77(2A)-n258H,CA_n77A-n258A/G/H,,n77,CA_n77(2A),0
+,,,n258,CA_n258H,
+CA_n77(2A)-n258I,CA_n77A-n258A/G/H/I,,n77,CA_n77(2A),0
+,,,n258,CA_n258I,
+CA_n77(2A)-n258J,CA_n77A-n258A/G/H/I/J,,n77,CA_n77(2A),0
+,,,n258,CA_n258J,
+CA_n77(3A)-n258A,CA_n77A-n258A,,n77,CA_n77(3A),0
+,,,n258,"50, 100, 200, 400",
+CA_n77(3A)-n258D,CA_n77A-n258A/D,,n77,CA_n77(3A),0
+,,,n258,CA_n258D,
+CA_n77(3A)-n258G,CA_n77A-n258A/G,,n77,CA_n77(3A),0
+,,,n258,CA_n258G,
+CA_n77(3A)-n258H,CA_n77A-n258A/G/H,,n77,CA_n77(3A),0
+,,,n258,CA_n258H,
+CA_n77(3A)-n258I,CA_n77A-n258A/G/H/I,,n77,CA_n77(3A),0
+,,,n258,CA_n258I,
+CA_n77(3A)-n258J,CA_n77A-n258A/G/H/I/J,,n77,CA_n77(3A),0
+,,,n258,CA_n258J,
+CA_n77A-n258(2A),CA_n77A-n258A,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n258,CA_n258(2A),
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258(2A),
+CA_n77A-n258(2G),CA_n77A-n258A/G,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",0
+,,,n258,CA_n258(2G),
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258(2G),
+CA_n77A-n258(3A),CA_n77A-n258A,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n258,CA_n258(3A),
+CA_n77A-n258(4A),CA_n77A-n258A,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n258,CA_n258(4A),
+CA_n77A-n258(5A),CA_n77A-n258A,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n258,CA_n258(5A),
+CA_n77A-n258(A-D),CA_n77A-n258A/D,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n258,CA_n258(A-D),
+CA_n77A-n258(A-G),CA_n77A-n258A/G,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",0
+,,,n258,CA_n258(A-G),
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258(A-G),
+CA_n77A-n258(A-H),CA_n77A-n258A/G/H,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n258,CA_n258(A-H),
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258(A-H),
+CA_n77A-n258(A-I),CA_n77A-n258A/G/H/I,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258(A-I),
+CA_n77A-n258(A-J),CA_n77A-n258A/G/H/I/J,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258(A-J),
+CA_n77A-n258(D-G),CA_n77A-n258A/D/G,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n258,CA_n258(D-G),
+CA_n77A-n258(G-H),CA_n77A-n258A/G/H,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n258,CA_n258(G-H),
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258(G-H),
+CA_n77A-n258(G-I),CA_n77A-n258A/G/H/I,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258(G-I),
+CA_n77A-n258(G-J),CA_n77A-n258A/G/H/I/J,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n258,CA_n258(G-J),
+CA_n77(2A)-n258(2A),CA_n77A-n258A,,n77,CA_n77(2A),0
+,,,n258,CA_n258(2A),
+CA_n77(2A)-n258(2G),CA_n77A-n258A/G,,n77,CA_n77(2A),0
+,,,n258,CA_n258(2G),
+CA_n77(2A)-n258(A-D),CA_n77A-n258A/D,,n77,CA_n77(2A),0
+,,,n258,CA_n258(A-D),
+CA_n77(2A)-n258(A-G),CA_n77A-n258A/G,,n77,CA_n77(2A),0
+,,,n258,CA_n258(A-G),
+CA_n77(2A)-n258(A-H),CA_n77A-n258A/G/H,,n77,CA_n77(2A),0
+,,,n258,CA_n258(A-H),
+CA_n77(2A)-n258(D-G),CA_n77A-n258A/D/G,,n77,CA_n77(2A),0
+,,,n258,CA_n258(D-G),
+CA_n77(2A)-n258(G-H),CA_n77A-n258A/G/H,,n77,CA_n77(2A),0
+,,,n258,CA_n258(G-H),
+CA_n77A-n259A,CA_n77A-n259A,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",0
+,,,n259,"50, 100, 200, 400",
+CA_n77A-n259G,CA_n259GCA_n77A-n259A/G,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n259,CA_n259G,
+CA_n77A-n259H,CA_n259G/HCA_n77A-n259A/G/H,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n259,CA_n259H,
+CA_n77A-n259I,CA_n259G/H/ICA_n77A-n259A/G/H/I,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n259,CA_n259I,
+CA_n77A-n259J,CA_n259G/H/I/JCA_n77A-n259A/G/H/I/J,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n259,CA_n259J,
+CA_n77A-n259K,CA_n259G/H/I/J/KCA_n77A-n259A/G/H/I/J/K,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n259,CA_n259K,
+CA_n77A-n259L,CA_n259G/H/I/J/K/LCA_n77A-n259A/G/H/I/J/K/L,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n259,CA_n259L,
+CA_n77A-n259M,CA_n259G/H/I/J/K/L/MCA_n77A-n259A/G/H/I/J/K/L/M,,n77,"10, 15, 20, 40, 50, 60, 80, 100",0
+,,,n259,CA_n259M,
+CA_n77A-n260A,CA_n77A-n260A,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,"50, 100, 200, 400",
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n260,See n260 channel bandwidths in Table 5.3.5-1,
+CA_n77A-n260G,CA_n77A-n260A/G,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260G,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n260,CA_n260G,
+CA_n77A-n260H,CA_n77A-n260A/G/H,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260H,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n260,CA_n260H,
+CA_n77A-n260I,CA_n77A-n260A/G/H/I,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260I,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n260,CA_n260I,
+CA_n77A-n260J,CA_n77A-n260A/G/H/I/J,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260J,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n260,CA_n260J,
+CA_n77A-n260K,CA_n77A-n260A/G/H/I/J/K,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260K,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n260,CA_n260K,
+CA_n77A-n260L,CA_n77A-n260A/G/H/I/J/K/L,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260L,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n260,CA_n260L,
+CA_n77A-n260M,CA_n77A-n260A/G/H/I/J/K/L/M,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260M,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n260,CA_n260M,
+CA_n77A-n260O,CA_n77A-n260A/O,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260O,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n260,CA_n260O,
+CA_n77A-n260P,CA_n77A-n260A/O/P,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260P,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n260,CA_n260P,
+CA_n77A-n260Q,CA_n77A-n260A/O/P/Q,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260Q,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n260,CA_n260Q,
+CA_n77A-n260R2,CA_n77A-n260A/R2,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260R2,
+CA_n77A-n260R3,CA_n77A-n260A/R2/R3,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260R3,
+CA_n77A-n260R4,CA_n77A-n260A/R2/R3/R4,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260R4,
+CA_n77A-n260R5,CA_n77A-n260A/R2/R3/R4,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260R5,
+CA_n77A-n260R6,CA_n77A-n260A/R2/R3/R4,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260R6,
+CA_n77A-n260R7,CA_n77A-n260A/R2/R3/R4,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260R7,
+CA_n77A-n260R8,CA_n77A-n260A/R2/R3/R4,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260R8,
+CA_n77A-n260R9,CA_n77A-n260A/R2/R3/R4,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260R9,
+CA_n77A-n260R10,CA_n77A-n260A/R2/R3/R4,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n260,CA_n260R10,
+CA_n77C-n260A,CA_n77A-n260A,,n77,CA_n77C,0
+,,,n260,"50, 100, 200, 400",
+CA_n77C-n260G,CA_n77A-n260A/G,,n77,CA_n77C,0
+,,,n260,CA_n260G,
+CA_n77C-n260H,CA_n77A-n260A/G/H,,n77,CA_n77C,0
+,,,n260,CA_n260H,
+CA_n77C-n260I,CA_n77A-n260A/G/H/I,,n77,CA_n77C,0
+,,,n260,CA_n260I,
+CA_n77C-n260J,CA_n77A-n260A/G/H/I,,n77,CA_n77C,0
+,,,n260,CA_n260J,
+CA_n77C-n260K,CA_n77A-n260A/G/H/I,,n77,CA_n77C,0
+,,,n260,CA_n260K,
+CA_n77C-n260L,CA_n77A-n260A/G/H/I,,n77,CA_n77C,0
+,,,n260,CA_n260L,
+CA_n77C-n260M,CA_n77A-n260A/G/H/I,,n77,CA_n77C,0
+,,,n260,CA_n260M,
+CA_n77(2A)-n260A,CA_n77(2A)CA_n77A-n260A,,n77,CA_n77(2A)_BCS1,0
+,,,n260,"50, 100, 200, 400",
+CA_n77(2A)-n260G,CA_n77(2A)CA_n77A-n260A/G,,n77,CA_n77(2A)_BCS1,0
+,,,n260,CA_n260G,
+CA_n77(2A)-n260H,CA_n77(2A)CA_n77A-n260A/G/H,,n77,CA_n77(2A)_BCS1,0
+,,,n260,CA_n260H,
+CA_n77(2A)-n260I,CA_n77(2A)CA_n77A-n260A/G/H/I,,n77,CA_n77(2A)_BCS1,0
+,,,n260,CA_n260I,
+CA_n77(2A)-n260J,CA_n77(2A)CA_n77A-n260A/G/H/I/J,,n77,CA_n77(2A)_BCS1,0
+,,,n260,CA_n260J,
+CA_n77(2A)-n260K,CA_n77(2A)CA_n77A-n260A/G/H/I/J/K,,n77,CA_n77(2A)_BCS1,0
+,,,n260,CA_n260K,
+CA_n77(2A)-n260L,CA_n77(2A)CA_n77A-n260A/G/H/I/J/K/L,,n77,CA_n77(2A)_BCS1,0
+,,,n260,CA_n260L,
+CA_n77(2A)-n260M,CA_n77(2A)CA_n77A-n260A/G/H/I/J/K/L/M,,n77,CA_n77(2A)_BCS1,0
+,,,n260,CA_n260M,
+CA_n77(3A)-n260A,CA_n77A-n260A,,n77,CA_n77(3A)_BCS 4 and 5,4 and 5
+,,,n260,"50, 100, 200, 400",
+CA_n77(3A)-n260G,CA_n77A-n260A/G,,n77,CA_n77(3A)_BCS 4 and 5,4 and 5
+,,,n260,CA_n260G,
+CA_n77(3A)-n260H,CA_n77A-n260A/G/H,,n77,CA_n77(3A)_BCS 4 and 5,4 and 5
+,,,n260,CA_n260H,
+CA_n77(3A)-n260I,CA_n77A-n260A/G/H/I,,n77,CA_n77(3A)_BCS 4 and 5,4 and 5
+,,,n260,CA_n260I,
+CA_n77(3A)-n260J,CA_n77A-n260A/G/H/I/J,,n77,CA_n77(3A)_BCS 4 and 5,4 and 5
+,,,n260,CA_n260J,
+CA_n77(3A)-n260K,CA_n77A-n260A/G/H/I/J/K,,n77,CA_n77(3A)_BCS 4 and 5,4 and 5
+,,,n260,CA_n260K,
+CA_n77(3A)-n260L,CA_n77A-n260A/G/H/I/J/K/L,,n77,CA_n77(3A)_BCS 4 and 5,4 and 5
+,,,n260,CA_n260L,
+CA_n77(3A)-n260M,CA_n77A-n260A/G/H/I/J/K/L/M,,n77,CA_n77(3A)_BCS 4 and 5,4 and 5
+,,,n260,CA_n260M,
+CA_n77A-n261A,CA_n77A-n261A,,n77,"10, 15, 20, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,"50, 100, 200, 400",
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n261,See n261 channel bandwidths in Table 5.3.5-1,
+CA_n77A-n261D,CA_n77A-n261A/D,,n77,"10, 15, 20, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261D,
+CA_n77A-n261G,CA_n77A-n261A/G,,n77,"10, 15, 20, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261G,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n261,CA_n261G,
+CA_n77A-n261H,CA_n77A-n261A/G/H,,n77,"10, 15, 20, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261H,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n261,CA_n261H,
+CA_n77A-n261I,CA_n77A-n261A/G/H/I,,n77,"10, 15, 20, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261I,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n261,CA_n261I,
+CA_n77A-n261J,CA_n77A-n261A/G/H/I/J,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261J,
+CA_n77A-n261K,CA_n77A-n261A/G/H/I/J/K,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261K,
+CA_n77A-n261L,CA_n77A-n261A/G/H/I/J/K/L,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261L,
+CA_n77A-n261M,CA_n77A-n261A/G/H/I/J/K/L/M,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261M,
+CA_n77A-n261O,CA_n77A-n261A/O,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261O,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n261,CA_n261O,
+CA_n77A-n261P,CA_n77A-n261A/O/P,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261P,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n261,CA_n261P,
+CA_n77A-n261Q,CA_n77A-n261A/O/P/Q,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261Q,
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n261,CA_n261Q,
+CA_n77A-n261(2A),CA_n77A-n261A,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(2A),
+,,,n77,See n77 channel bandwidths in Table 5.3.5-1,4 and 5
+,,,n261,CA_n261(2A),
+CA_n77A-n261(2G),CA_n77A-n261A/G,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(2G),
+CA_n77A-n261(2H),CA_n77A-n261A/G/H,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(2H),
+CA_n77A-n261(2I),CA_n77A-n261A/G/H/I,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(2I),
+CA_n77A-n261(3A),CA_n77A-n261A,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(3A),
+CA_n77A-n261(4A),CA_n77A-n261A,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(4A),
+CA_n77A-n261(A-G),CA_n77A-n261A/G,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(A-G),
+CA_n77A-n261(A-H),CA_n77A-n261A/G/H,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(A-H),
+CA_n77A-n261(A-I),CA_n77A-n261A/G/H/I,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(A-I),
+CA_n77A-n261(G-H),CA_n77A-n261A/G/H,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(G-H),
+CA_n77A-n261(G-I),CA_n77A-n261A/G/H/I,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(G-I),
+CA_n77A-n261(H-I),CA_n77A-n261A/G/H/I,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 701, 80, 90, 100",0
+,,,n261,CA_n261(H-I),
+CA_n77A-n261(A-J),CA_n77A-n261A/G/H/I,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261(A-J),
+CA_n77A-n261(A-K),CA_n77A-n261A/G/H/I,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261(A-K),
+CA_n77A-n261(A-L),CA_n77A-n261A/G/H/I,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261(A-L),
+CA_n77A-n261(A-G-H),CA_n77A-n261A/G/H,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261(A-G-H),
+CA_n77A-n261(A-G-I),CA_n77A-n261A/G/H/I,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261(A-G-I),
+CA_n77A-n261(2A-H),CA_n77A-n261A/G/H,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261(2A-H),
+CA_n77A-n261(2A-G),CA_n77A-n261A/G,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261(2A-G),
+CA_n77A-n261(2A-I),CA_n77A-n261A/G/H/I,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261(2A-I),
+CA_n77A-n261(A-2G),CA_n77A-n261A/G,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,,n261,CA_n261(A-2G),
+CA_n77C-n261A,CA_n77A-n261A,,n77,CA_n77C,0
+,,,n261,"50, 100, 200, 400",
+CA_n77C-n261G,CA_n77A-n261A/G,,n77,CA_n77C,0
+,,,n261,CA_n261G,
+CA_n77C-n261H,CA_n77A-n261A/G/H,,n77,CA_n77C,0
+,,,n261,CA_n261H,
+CA_n77C-n261I,CA_n77A-n261A/G/H/I,,n77,CA_n77C,0
+,,,n261,CA_n261I,
+CA_n77C-n261J,CA_n77A-n261A/G/H/I/J,,n77,CA_n77C,0
+,,,n261,CA_n261J,
+CA_n77C-n261K,CA_n77A-n261A/G/H/I/J/K,,n77,CA_n77C,0
+,,,n261,CA_n261K,
+CA_n77C-n261L,CA_n77A-n261A/G/H/I/J/K/L,,n77,CA_n77C,0
+,,,n261,CA_n261L,
+CA_n77C-n261M,CA_n77A-n261A/G/H/I/J/K/L/M,,n77,CA_n77C,0
+,,,n261,CA_n261M,
+CA_n77C-n261(G-H),CA_n77A-n261A/G/H,,n77,CA_n77C,0
+,,,n261,CA_n261(G-H),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(G-H),
+CA_n77C-n261(2H),CA_n77A-n261A/G/H,,n77,CA_n77C,0
+,,,n261,CA_n261(2H),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(2H),
+CA_n77C-n261(G-I),CA_n77A-n261A/G/H/I,,n77,CA_n77C,0
+,,,n261,CA_n261(G-I),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(G-I),
+CA_n77C-n261(A-G-H),CA_n77A-n261A/G/H,,n77,CA_n77C,0
+,,,n261,CA_n261(A-G-H),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(A-G-H),
+CA_n77C-n261(H-I),CA_n77A-n261A/G/H/I,,n77,CA_n77C,0
+,,,n261,CA_n261(H-I),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(H-I),
+CA_n77C-n261(2A-G),CA_n77A-n261A/G,,n77,CA_n77C,0
+,,,n261,CA_n261(2A-G),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(2A-G),
+CA_n77C-n261(2A-H),CA_n77A-n261A/G/H,,n77,CA_n77C,0
+,,,n261,CA_n261(2A-H),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(2A-H),
+CA_n77C-n261(2A-I),CA_n77A-n261A/G/H/I,,n77,CA_n77C,0
+,,,n261,CA_n261(2A-I),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(2A-I),
+CA_n77C-n261(2A),CA_n77A-n261A,,n77,CA_n77C,0
+,,,n261,CA_n261(2A),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(2A),
+CA_n77C-n261(3A),CA_n77A-n261A,,n77,CA_n77C,0
+,,,n261,CA_n261(3A),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(3A),
+CA_n77C-n261(2G),CA_n77A-n261A/G,,n77,CA_n77C,0
+,,,n261,CA_n261(2G),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(2G),
+CA_n77C-n261(A-2G),CA_n77A-n261A/G,,n77,CA_n77C,0
+,,,n261,CA_n261(A-2G),
+,,,n48,CA_n77C_BCS1,1
+,,,n261,CA_n261(A-2G),
+CA_n77C-n261(A-G),CA_n77A-n261A/G,,n48,CA_n77C,0
+,,,n261,CA_n261(A-G),
+,,,n48,CA_n77C_BCS1,1
+,,,n261,CA_n261(A-G),
+CA_n77C-n261(A-H),CA_n77A-n261A/G/H,,n77,CA_n77C,0
+,,,n261,CA_n261(A-H),
+,,,n48,CA_n77C_BCS1,1
+,,,n261,CA_n261(A-H),
+CA_n77C-n261(A-I),CA_n77A-n261A/G/H/I,,n77,CA_n77C,0
+,,,n261,CA_n261(A-I),
+,,,n48,CA_n77C_BCS1,1
+,,,n261,CA_n261(A-I),
+CA_n77C-n261(A-G-I),CA_n77A-n261A/G/H/I,,n77,CA_n77C,0
+,,,n261,CA_n261(A-G-I),
+,,,n77,CA_n77C_BCS1,1
+,,,n261,CA_n261(A-G-I),
+CA_n77(2A)-n257E,CA_n77A-n257A,,n77,CA_n77(2A),0
+,,,n257,CA_n257E,
+CA_n77(2A)-n257F,CA_n77A-n257A,,n77,CA_n77(2A),0
+,,,n257,CA_n257F,
+CA_n77(2A)-n261A,CA_n77A-n261A,,n77,CA_n77(2A)_BCS4 and 5,4 and 5
+,,,n261,See n261 channel bandwidths in Table 5.3.5-1,
+CA_n77(2A)-n261G,CA_n77A-n261A/G,,n77,CA_n77(2A)_BCS4 and 5,4 and 5
+,,,n261,CA_n261G,
+CA_n77(2A)-n261H,CA_n77A-n261A/G/H,,n77,CA_n77(2A)_BCS4 and 5,4 and 5
+,,,n261,CA_n261H,
+CA_n77(2A)-n261I,CA_n77A-n261A/G/H/I,,n77,CA_n77(2A)_BCS4 and 5,4 and 5
+,,,n261,CA_n261I,

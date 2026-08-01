@@ -1,14 +1,3 @@
----
-type: spec
-aliases:
-  - content
-tags:
-  - 3gpp
-  - rel19
-  - processed
-  - protocol-text
-source_spec: "3GPP_Rel19/processed/TS_38.213_38213-j30/content.md"
----
 # TS 38.213 38213-j30
 
 3GPP TS 38.213 V19.3.0 (2026-03)

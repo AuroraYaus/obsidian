@@ -1,0 +1,9 @@
+Field,Value
+drx-onDurationTimer,1 ms
+drx-InactivityTimer,1 ms
+drx-RetransmissionTimerDL,1 slot
+drx-RetransmissionTimerUL,1 slot
+drx-LongCycleStartOffset,640 ms
+shortDRX,disable
+TimeAlignmentTimer,500 ms
+NOTE:This DRX configuration is applicable for NR serving cell. The DRX cycle and time alignment timer parameters are specified in clause 6.3.2 in TS 38.331 [2],

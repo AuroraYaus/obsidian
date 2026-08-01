@@ -1,0 +1,334 @@
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4EN-DC tests with all NR cells in FR1", "paragraph_index": 1, "style": "Heading1"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.1Void", "paragraph_index": 2, "style": "Heading2"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.2Void", "paragraph_index": 3, "style": "Heading2"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3RRC_CONNECTED state mobility", "paragraph_index": 4, "style": "Heading2"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.1Void", "paragraph_index": 5, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.2RRC Connection Mobility Control", "paragraph_index": 6, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.2.1Void", "paragraph_index": 7, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.2.2Random Access", "paragraph_index": 8, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.2.2.14-step RA type contention based random access test in FR1 for PSCell in EN-DC", "paragraph_index": 9, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.2.2.24-step RA type n on-contention based random access test in FR1 for PSCell in EN-DC", "paragraph_index": 42, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.2.2.32-step RA type contention based random access test in FR1 for PSCell in EN-DC", "paragraph_index": 73, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.2.2.42-step RA type non-contention based random access test in FR1 for PSCell in EN-DC", "paragraph_index": 98, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.2.3Void", "paragraph_index": 124, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.3Handover with PSCell from EN-DC to EN-DC with known target PSCell in FR1", "paragraph_index": 125, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.3.1Test Purpose and Environment", "paragraph_index": 126, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.3.3.2Test Requirements", "paragraph_index": 138, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4Timing", "paragraph_index": 161, "style": "Heading2"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.1UE transmit timing", "paragraph_index": 162, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.1.1NR UE Transmit Timing Test for FR1", "paragraph_index": 163, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.1.1.1Test Purpose and environment", "paragraph_index": 164, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.1.1.2Test requirements", "paragraph_index": 173, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.1.2NR UE Transmit Timing Test for two TRPs in FR1", "paragraph_index": 186, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.1.2.1Test Purpose and environment", "paragraph_index": 187, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.1.2.2Test requirements", "paragraph_index": 198, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.1.3NR UE Transmit Timing Test with 2-TA and two TRPs for FR1 UE supporting single DCI", "paragraph_index": 210, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.1.3.1Test Purpose and environment", "paragraph_index": 211, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.1.3.2Test requirements", "paragraph_index": 221, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.2UE timer accuracy", "paragraph_index": 233, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.3Timing advance", "paragraph_index": 234, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.3.1EN-DC FR1 timing advance adjustment accuracy", "paragraph_index": 235, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.3.1.1Test Purpose and Environment", "paragraph_index": 236, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.3.1.2Test Parameters", "paragraph_index": 238, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.3.1.3Test Requirements", "paragraph_index": 253, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.3.2EN-DC FR1 timing advance adjustment accuracy for asymmetric DL sTRP/UL mTRP deployment with two TAs", "paragraph_index": 257, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.3.2.1Test Purpose and Environment", "paragraph_index": 258, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.3.2.2Test Parameters", "paragraph_index": 260, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.4.3.2.3Test Requirements", "paragraph_index": 275, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5Signaling characteristics", "paragraph_index": 279, "style": "Heading2"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1Radio link Monitoring", "paragraph_index": 280, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.1Radio Link Monitoring Out-of-sync Test for FR1 PSCell configured with SSB-based RLM RS in non-DRX mode", "paragraph_index": 286, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.1.1Test Purpose and Environment", "paragraph_index": 287, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.1.2Test Requirements", "paragraph_index": 300, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.2Radio Link Monitoring In-sync Test for FR1 PSCell configured with SSB-based RLM RS in non-DRX mode", "paragraph_index": 305, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.2.1Test Purpose and Environment", "paragraph_index": 306, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.2.2Test Requirements", "paragraph_index": 318, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.3Radio Link Monitoring Out-of-sync Test for FR1 PSCell configured with SSB-based RLM RS in DRX mode", "paragraph_index": 322, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.3.1Test Purpose and Environment", "paragraph_index": 323, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.3.2Test Requirements", "paragraph_index": 336, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.4Radio Link Monitoring In-sync Test for FR1 PSCell configured with SSB-based RLM RS in DRX mode", "paragraph_index": 341, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.4.1Test Purpose and Environment", "paragraph_index": 342, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.4.2Test Requirements", "paragraph_index": 355, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.5EN-DC Radio Link Monitoring Out-of-sync Test for FR1 PSCell configured with CSI-RS-based RLM in non-DRX mode", "paragraph_index": 359, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.5.1Test Purpose and Environment", "paragraph_index": 360, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.5.2Test Requirements", "paragraph_index": 374, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.6EN-DC Radio Link Monitoring In-sync Test for FR1 PSCell configured with CSI-RS-based RLM in non-DRX mode", "paragraph_index": 379, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.6.1Test Purpose and Environment", "paragraph_index": 380, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.6.2Test Requirements", "paragraph_index": 393, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.7EN-DC Radio Link Monitoring Out-of-sync Test for FR1 PSCell configured with CSI-RS-based RLM in DRX mode", "paragraph_index": 397, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.7.1Test Purpose and Environment", "paragraph_index": 398, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.7.2Test Requirements", "paragraph_index": 413, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.8EN-DC Radio Link Monitoring In-sync Test for FR1 PSCell configured with CSI-RS-based RLM in DRX mode", "paragraph_index": 418, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.8.1Test Purpose and Environment", "paragraph_index": 419, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.8.2Test Requirements", "paragraph_index": 435, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.9Radio Link Monitoring Out-of-sync Test for FR1 PSCell configured with SSB-based RLM RS for UE fulfilling relaxed measurement criterion", "paragraph_index": 439, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.9.1Test Purpose and Environment", "paragraph_index": 440, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.10EN-DC Radio Link Monitoring Out-of-sync Test for FR1 PSCell configured with CSI-RS-based RLM in non-DRX mode when CD-SSB is outside active BWP", "paragraph_index": 456, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.10.1Test Purpose and Environment", "paragraph_index": 457, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.11Radio Link Monitoring Out-of-sync Test for FR1 PSCell configured with SSB-based RLM RS in non-DRX mode when CD-SSB is outside active BWP", "paragraph_index": 464, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.11.1Test Purpose and Environment", "paragraph_index": 465, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.11.2Test Requirements", "paragraph_index": 469, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.12EN-DC Radio Link Monitoring Out-of-sync Test for FR1 PSCell configured with SSB-based RLM RS in non-DRX mode for UE supporting NCD-SSB based measurement outside active BWP", "paragraph_index": 471, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.12.1Test Purpose and Environment", "paragraph_index": 472, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.1.12.2Test Requirements", "paragraph_index": 485, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2Interruption", "paragraph_index": 490, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.1E-UTRAN – NR FR1 interruptions at transitions between active and non-active during DRX in synchronous EN-DC", "paragraph_index": 491, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.1.1Test Purpose and Environment", "paragraph_index": 492, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.1.2Test Requirements", "paragraph_index": 502, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.2E-UTRAN – NR FR1 interruptions at transitions between active and non-active during DRX in asynchronous EN-DC", "paragraph_index": 508, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.2.1Test Purpose and Environment", "paragraph_index": 509, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.2.2Test Requirements", "paragraph_index": 519, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.3E-UTRAN – NR FR1 interruptions during measurements on deactivated NR SCC in synchronous EN-DC", "paragraph_index": 525, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.3.1Test Purpose and Environment", "paragraph_index": 526, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.3.2Test Requirements", "paragraph_index": 539, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.4E-UTRAN – NR FR1 interruptions during measurements on deactivated NR SCC in asynchronous EN-DC", "paragraph_index": 550, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.4.1Test Purpose and Environment", "paragraph_index": 551, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.4.2Test Requirements", "paragraph_index": 564, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.5E-UTRAN – NR FR1 interruptions during measurements on deactivated E-UTRAN SCC in synchronous EN-DC", "paragraph_index": 574, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.5.1Test Purpose and Environment", "paragraph_index": 575, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.5.2Test Requirements", "paragraph_index": 584, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.6E-UTRAN – NR FR1 interruptions during measurements on deactivated E-UTRAN SCC in asynchronous EN-DC", "paragraph_index": 590, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.6.1Test Purpose and Environment", "paragraph_index": 591, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.6.2Test Requirements", "paragraph_index": 601, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.7Void", "paragraph_index": 609, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.8E-UTRAN - NR FR1 interruptions at NR SRS carrier based switching in asynchronous EN-DC", "paragraph_index": 610, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.8.1Test Purpose and Environment", "paragraph_index": 611, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.8.2Test Requirements", "paragraph_index": 622, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.9E-UTRAN – NR interruptions at E-UTRA SRS carrier based switching", "paragraph_index": 630, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.9.1Test Purpose and Environment", "paragraph_index": 631, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.9.2Test Requirements", "paragraph_index": 642, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.10E-UTRAN – NR FR1 interruptions due to RRM and RLM/BFD measurements on deactivated NR PSCell", "paragraph_index": 647, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.10.1Test Purpose and Environment", "paragraph_index": 648, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.10.2Test Requirements", "paragraph_index": 657, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.11E-UTRAN - NR FR1 interruptions at NR SRS antenna port switching with 1 SRS symbol in a slot in synchronous EN-DC", "paragraph_index": 660, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.11.1Test Purpose and Environment", "paragraph_index": 661, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.11.2Test Requirements", "paragraph_index": 678, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.12E-UTRAN - NR FR1 interruptions at NR SRS antenna port switching in asynchronous EN-DC", "paragraph_index": 683, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.2.12.1Test Purpose and Environment", "paragraph_index": 684, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3SCell Activation and Deactivation Delay", "paragraph_index": 706, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.1SCell Activation and deactivation of known SCell in FR1 for 160 ms SCell measurement cycle", "paragraph_index": 707, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.1.1Test Purpose and Environment", "paragraph_index": 708, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.1.2Test Requirements", "paragraph_index": 727, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.2SCell Activation and deactivation of known SCell in FR1 for 640 ms SCell measurement cycle", "paragraph_index": 736, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.2.1Test Purpose and Environment", "paragraph_index": 737, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.2.2Test Requirements", "paragraph_index": 741, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.3SCell Activation and deactivation of unknown SCell in FR1", "paragraph_index": 743, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.3.1Test Purpose and Environment", "paragraph_index": 744, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.3.2Test Requirements", "paragraph_index": 754, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.4SCell Activation and deactivation of multiple unknown SCells in FR1 with single activation/deactivation command", "paragraph_index": 756, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.4.1Test Purpose and Environment", "paragraph_index": 757, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.4.2Test Requirements", "paragraph_index": 772, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.5Direct SCell activation at SCell addition of known SCell in FR1", "paragraph_index": 776, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.5.1Test Purpose and Environment", "paragraph_index": 777, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.5.2Test Requirements", "paragraph_index": 794, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.6Fast SCell Activation of known SCell in FR1 for 160 ms SCell measurement cycle", "paragraph_index": 801, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.6.1Test Purpose and Environment", "paragraph_index": 802, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.6.2Test Requirements", "paragraph_index": 815, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.7Fast SCell Activation of known SCell in FR1 for 640 ms SCell measurement cycle", "paragraph_index": 822, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.7.1Test Purpose and Environment", "paragraph_index": 823, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.7.2Test Requirements", "paragraph_index": 829, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.8SCell Activation and deactivation of unknown SCell in FR1 for UE capable of short measurement interval", "paragraph_index": 832, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.8.1Test Purpose and Environment", "paragraph_index": 833, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.8.2Test Requirements", "paragraph_index": 843, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.9SCell Activation of unknown SCell with valid L3 measurement results in FR1 for 160 ms SCell measurement cycle", "paragraph_index": 846, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.9.1Test Purpose and Environment", "paragraph_index": 847, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.9.2Test Requirements", "paragraph_index": 870, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.10SCell Activation of multiple unknown SCells in FR1 with L3 reporting with single activation/deactivation command in non-DRX", "paragraph_index": 880, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.10.1Test Purpose and Environment", "paragraph_index": 881, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.10.2Test Requirements", "paragraph_index": 898, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.11TRS-based SCell Activation of SSB-less SCell in FR1 collocated inter-band", "paragraph_index": 901, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.11.1Test Purpose and Environment", "paragraph_index": 902, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.11.2Test Requirements", "paragraph_index": 916, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.12Inter-band SSB-less Scell activation using A-TRS", "paragraph_index": 926, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.12.1Test Purpose and Environment", "paragraph_index": 927, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.3.12.2Test Requirements", "paragraph_index": 941, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.4UE UL carrier RRC reconfiguration Delay", "paragraph_index": 948, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.4.1UE UL carrier RRC reconfiguration Delay", "paragraph_index": 949, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.4.1.1 Test Purpose and Environment", "paragraph_index": 951, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.4.1.2Test Requirements", "paragraph_index": 962, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5Beam Failure Detection and Link recovery procedures", "paragraph_index": 966, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.1EN-DC Beam Failure Detection and Link Recovery Test for FR1 PSCell configured with SSB-based BFD and LR in non-DRX mode", "paragraph_index": 967, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.1.1Test Purpose and Environment", "paragraph_index": 968, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.1.2Test Requirements", "paragraph_index": 983, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.2EN-DC Beam Failure Detection and Link Recovery Test for FR1 PSCell configured with SSB-based BFD and LR in DRX mode", "paragraph_index": 990, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.2.1Test Purpose and Environment", "paragraph_index": 991, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.2.2Test Requirements", "paragraph_index": 1006, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.3EN-DC Beam Failure Detection and Link Recovery Test for FR1 PSCell configured with CSI-RS-based BFD and LR in non-DRX mode", "paragraph_index": 1013, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.3.1Test Purpose and Environment", "paragraph_index": 1014, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.3.2Test Requirements", "paragraph_index": 1027, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.4EN-DC Beam Failure Detection and Link Recovery Test for FR1 PSCell configured with CSI-RS-based BFD and LR in DRX mode", "paragraph_index": 1034, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.4.1Test Purpose and Environment", "paragraph_index": 1035, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.4.2Test Requirements", "paragraph_index": 1051, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.5EN-DC Beam Failure Detection and Link Recovery Test for FR1 SCell configured with CSI-RS-based BFD and SSB-based LR in non-DRX mode", "paragraph_index": 1058, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.5.1Test Purpose and Environment", "paragraph_index": 1059, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.5.2Test Requirements", "paragraph_index": 1072, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.6EN-DC Beam Failure Detection and Link Recovery Test for FR1 SCell configured with CSI-RS-based BFD and SSB-based LR in DRX mode", "paragraph_index": 1080, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.6.1Test Purpose and Environment", "paragraph_index": 1081, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.6.2Test Requirements", "paragraph_index": 1094, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.7EN-DC TRP specific Beam Failure Detection and Link Recovery Test for FR1 PSCell configured with SSB-based BFD and LR in non-DRX mode", "paragraph_index": 1102, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.7.1Test Purpose and Environment", "paragraph_index": 1103, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.7.2Test Requirements", "paragraph_index": 1117, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.8EN-DC TRP specific Beam Failure Detection and Link Recovery Test for FR1 SCell configured with CSI-RS-based BFD and SSB-based LR in non-DRX mode", "paragraph_index": 1125, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.8.1Test Purpose and Environment", "paragraph_index": 1126, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.5.8.2Test Requirements", "paragraph_index": 1141, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6Active BWP switch", "paragraph_index": 1148, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.1DCI-based and Timer-based Active BWP Switch", "paragraph_index": 1149, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.1.1E-UTRAN – NR PSCell FR1 DL active BWP switch in non-DRX in synchronous EN-DC", "paragraph_index": 1150, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.1.2E-UTRAN – NR PSCell FR1 DL active BWP switch with FR1 SCell in non-DRX in synchronous EN-DC", "paragraph_index": 1193, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.2RRC-based Active BWP Switch", "paragraph_index": 1244, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.3Simultaneous DCI-based and Timer-based Active BWP Switch on multiple CCs", "paragraph_index": 1272, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.3.1Simultaneous E-UTRAN – NR PSCell FR1 DL active BWP switch in non-DRX in EN-DC on multiple CCs", "paragraph_index": 1273, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.4Simultaneous RRC-based Active BWP Switch on multiple CCs", "paragraph_index": 1321, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.4.1E-UTRAN – NR PSCell FR1 DL active BWP switch in non-DRX in synchronous EN-DC on multiple CCs", "paragraph_index": 1322, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.4.1.1Test Purpose and Environment", "paragraph_index": 1323, "style": "Heading6"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.4.1.2Test Requirements", "paragraph_index": 1348, "style": "Heading6"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.4.2E-UTRAN – NR FR1 PSCell SCell dormancy switch of two FR1 SCells inside active time", "paragraph_index": 1352, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.4.2.1Test Purpose and Environment", "paragraph_index": 1353, "style": "Heading6"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.4.2.2Test Requirements", "paragraph_index": 1393, "style": "Heading6"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.5SCell dormancy switch", "paragraph_index": 1406, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.5.1E-UTRAN – NR FR1 PSCell SCell dormancy switch of single FR1 SCell outside active time", "paragraph_index": 1407, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.5.2E-UTRAN – NR FR1 PSCell SCell dormancy switch of two FR1 SCells inside active time", "paragraph_index": 1449, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.5.2.1Test Purpose and Environment", "paragraph_index": 1450, "style": "Heading6"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.6.5.2.2Test Requirements", "paragraph_index": 1484, "style": "Heading6"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.7PSCell addition and release delay", "paragraph_index": 1497, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.7.1Addition and Release Delay of known NR PSCell", "paragraph_index": 1498, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.7.1.1Test purpose and environment", "paragraph_index": 1499, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.7.1.2Test Requirements", "paragraph_index": 1513, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.8DL Interruptions at switching between two uplink carriers", "paragraph_index": 1527, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.8.1Test Purpose and Environment", "paragraph_index": 1528, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.8.2Test Requirements", "paragraph_index": 1545, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.9UE specific CBW change", "paragraph_index": 1549, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.9.1UE specific CBW change on FR1 NR PSCell with non-DRX in synchronous EN- DC", "paragraph_index": 1550, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.9.1.1Test Purpose and Environment", "paragraph_index": 1551, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.9.1.2Test Requirements", "paragraph_index": 1573, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.10PSCell activation and deactivation delay", "paragraph_index": 1577, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.10.1PSCell activation and deactivation delay", "paragraph_index": 1578, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.10.1.1Test purpose and environment", "paragraph_index": 1579, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.10.1.2Test Requirements", "paragraph_index": 1592, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.11Conditional PSCell addition and release delay (FR1 EN-DC)", "paragraph_index": 1605, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.11.1Conditional PSCell Addition and Release Delay", "paragraph_index": 1606, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.11.1.1Test purpose and environment", "paragraph_index": 1607, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.11.1.2Test Parameters", "paragraph_index": 1609, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.5.11.1.3Test Requirements", "paragraph_index": 1622, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6Measurement procedure", "paragraph_index": 1628, "style": "Heading2"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1Intra-frequency Measurements", "paragraph_index": 1629, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.1EN-DC event triggered reporting tests without gap under non-DRX", "paragraph_index": 1630, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.1.1Test purpose and Environment", "paragraph_index": 1631, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.1.2Test parameters", "paragraph_index": 1633, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.1.3Test Requirements", "paragraph_index": 1641, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.2EN-DC event triggered reporting tests without gap under DRX", "paragraph_index": 1646, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.2.1Test purpose and Environment", "paragraph_index": 1647, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.2.2Test parameters", "paragraph_index": 1649, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.2.3Test Requirements", "paragraph_index": 1658, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.3EN-DC event triggered reporting tests with per-UE gaps under non-DRX", "paragraph_index": 1664, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.3.1Test purpose and Environment", "paragraph_index": 1665, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.3.2Test parameters", "paragraph_index": 1667, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.3.3Test Requirements", "paragraph_index": 1676, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.4EN-DC event triggered reporting tests with per-UE gaps under DRX", "paragraph_index": 1681, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.4.1Test purpose and Environment", "paragraph_index": 1682, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.4.2Test parameters", "paragraph_index": 1684, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.4.3Test Requirements", "paragraph_index": 1694, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.5EN-DC event triggered reporting tests without gap under non-DRX with SSB index reading", "paragraph_index": 1700, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.5.1Test purpose and Environment", "paragraph_index": 1701, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.5.2Test parameters", "paragraph_index": 1703, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.5.3Test Requirements", "paragraph_index": 1710, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.6EN-DC event triggered reporting tests with SSB index reading with per-UE gaps", "paragraph_index": 1715, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.6.1Test purpose and Environment", "paragraph_index": 1716, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.6.2Test parameters", "paragraph_index": 1718, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.6.3Test Requirements", "paragraph_index": 1727, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.7EN-DC event triggered reporting tests under DRX for UE configured with highSpeedMeasFlag-r16", "paragraph_index": 1732, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.7.1Test purpose and Environment", "paragraph_index": 1733, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.7.2Test parameters", "paragraph_index": 1735, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.7.3Test Requirements", "paragraph_index": 1744, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.8EN-DC event triggered reporting tests for FR1 cell without SSB time index detection when DRX is used for UE configured with highSpeedMeasCA-Scell-r17", "paragraph_index": 1749, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.8.1Test Purpose and Environment", "paragraph_index": 1750, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.8.2Test Requirements", "paragraph_index": 1762, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.9EN-DC event triggered reporting tests without gap under non-DRX with NCD-SSB", "paragraph_index": 1766, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.9.1Test purpose and Environment", "paragraph_index": 1767, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.9.2Test parameters", "paragraph_index": 1769, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.9.3Test Requirements", "paragraph_index": 1777, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.10EN-DC event triggered reporting tests without gap under non-DRX when CD-SSB is outside active BWP", "paragraph_index": 1782, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.110.1Test purpose and Environment", "paragraph_index": 1783, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.1.10.2Test Requirements", "paragraph_index": 1787, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2Inter-frequency Measurements", "paragraph_index": 1789, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.1EN-DC event triggered reporting tests for FR1 cell without SSB time index detection when DRX is not used", "paragraph_index": 1790, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.1.1Test Purpose and Environment", "paragraph_index": 1791, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.1.2Test Requirements", "paragraph_index": 1802, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.2EN-DC event triggered reporting tests for FR1 cell without SSB time index detection when DRX is used", "paragraph_index": 1806, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.2.1Test Purpose and Environment", "paragraph_index": 1807, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.2.2Test Requirements", "paragraph_index": 1820, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.3Void", "paragraph_index": 1825, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.4Void", "paragraph_index": 1826, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.5EN-DC event triggered reporting tests for FR1 cell with SSB time index detection when DRX is not used", "paragraph_index": 1827, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.5.1Test Purpose and Environment", "paragraph_index": 1828, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.5.2Test Requirements", "paragraph_index": 1840, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.6EN-DC event triggered reporting tests for FR1 cell with SSB time index detection when DRX is used", "paragraph_index": 1844, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.6.1Test Purpose and Environment", "paragraph_index": 1845, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.6.2Test Requirements", "paragraph_index": 1858, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.7Void", "paragraph_index": 1863, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.8Void", "paragraph_index": 1864, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.9EN-DC event triggered reporting tests for FR1 cell without SSB time index detection when DRX is used for UE configured with highSpeedMeasInterFreq-r17", "paragraph_index": 1865, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.9.1Test Purpose and Environment", "paragraph_index": 1866, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.9.2Test Requirements", "paragraph_index": 1878, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.10EN-DC: event triggered reporting tests under non-DRX in FR1 for UE supporting threeCarrierMeasWithoutGap-r19", "paragraph_index": 1882, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.10.1Test purpose and Environment", "paragraph_index": 1883, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.10.2Test parameters", "paragraph_index": 1886, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.2.10.3Test Requirements", "paragraph_index": 1897, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.3Void", "paragraph_index": 1901, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4L1-RSRP measurement for beam reporting", "paragraph_index": 1902, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.1SSB based L1-RSRP measurement when DRX is not used", "paragraph_index": 1903, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.1.1Test Purpose and Environment", "paragraph_index": 1904, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.1.2Test parameters", "paragraph_index": 1908, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.1.3Test Requirements", "paragraph_index": 1916, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.2SSB based L1-RSRP measurement when DRX is used", "paragraph_index": 1919, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.2.1Test Purpose and Environment", "paragraph_index": 1920, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.2.2Test parameters", "paragraph_index": 1924, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.2.3Test Requirements", "paragraph_index": 1932, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.3CSI-RS based L1-RSRP measurement when DRX is not used", "paragraph_index": 1936, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.3.1Test Purpose and Environment", "paragraph_index": 1937, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.3.2Test parameters", "paragraph_index": 1941, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.3.3Test Requirements", "paragraph_index": 1949, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.4CSI-RS based L1-RSRP measurement when DRX is used", "paragraph_index": 1953, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.4.1Test Purpose and Environment", "paragraph_index": 1954, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.4.2Test parameters", "paragraph_index": 1958, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.4.3Test Requirements", "paragraph_index": 1966, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.5SSB based L1-RSRP measurement when DRX is used for UE configured with highSpeedMeasFlag-r16", "paragraph_index": 1970, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.5.1Test Purpose and Environment", "paragraph_index": 1971, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.5.2Test parameters", "paragraph_index": 1975, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.5.3Test Requirements", "paragraph_index": 1983, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.6CSI-RS based L1-RSRP measurement when DRX is not used when CD-SSB is outside active BWP", "paragraph_index": 1986, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.6.1Test Purpose and Environment", "paragraph_index": 1987, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.7SSB based L1-RSRP measurement when DRX is not used when CD-SSB is outside active BWP", "paragraph_index": 1994, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.7.1Test Purpose and Environment", "paragraph_index": 1995, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.7.2Test Requirements", "paragraph_index": 1999, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.8SSB based L1-RSRP measurement for UE supporting NCD-SSB based L1 measurement outside active BWP when DRX is not used", "paragraph_index": 2001, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.8.1Test Purpose and Environment", "paragraph_index": 2002, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.8.2Test parameters", "paragraph_index": 2006, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.4.8.3Test Requirements", "paragraph_index": 2014, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.5CLI measurements", "paragraph_index": 2017, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.5.1SRS-RSRP measurement with non-DRX", "paragraph_index": 2018, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.5.1.1Test Purpose and Environment", "paragraph_index": 2019, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.5.1.2Test Parameters", "paragraph_index": 2023, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.5.1.3Test Requirements", "paragraph_index": 2034, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.5.2CLI-RSSI measurement with non-DRX", "paragraph_index": 2039, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.5.2.1Test Purpose and Environment", "paragraph_index": 2040, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.5.2.2Test Parameters", "paragraph_index": 2044, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.5.2.3Test Requirements", "paragraph_index": 2053, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.6.1.2Test Requirements", "paragraph_index": 2070, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.7L1-SINR measurement for beam reporting", "paragraph_index": 2078, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.7.2L1-SINR measurement with SSB based CMR and dedicated IMR when DRX is used", "paragraph_index": 2096, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.7.2.1Test Purpose and Environment", "paragraph_index": 2097, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.7.2.2Test parameters", "paragraph_index": 2101, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.7.2.3Test Requirements", "paragraph_index": 2109, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.7.3L1-SINR measurement with CSI-RS based CMR and dedicated IMR configured when DRX is used", "paragraph_index": 2112, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.7.3.1Test Purpose and Environment", "paragraph_index": 2113, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.7.3.2Test parameters", "paragraph_index": 2117, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.7.3.3Test Requirements", "paragraph_index": 2125, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.8CSI-RS based intra-frequency Measurement", "paragraph_index": 2129, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.8.1EN-DC event triggered reporting tests without gap under DRX", "paragraph_index": 2130, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.8.1.1Test purpose and Environment", "paragraph_index": 2131, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.8.1.2Test Requirements", "paragraph_index": 2142, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.9CSI-RS based inter-frequency Measurement", "paragraph_index": 2147, "style": "Heading3"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.9.1EN-DC event triggered reporting tests for FR1 cell when non-DRX is used", "paragraph_index": 2148, "style": "Heading4"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.9.1.1Test Purpose and Environment", "paragraph_index": 2149, "style": "Heading5"}
+{"source": "38133-j50_sA.4-A.406.docx", "section": "", "title": "A.4.6.9.1.2Test Requirements", "paragraph_index": 2161, "style": "Heading5"}

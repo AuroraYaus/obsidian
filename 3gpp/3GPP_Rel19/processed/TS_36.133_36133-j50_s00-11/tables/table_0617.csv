@@ -1,0 +1,7 @@
+DRX cycle length (s),TIdentify Inter (s) (DRX cycles),
+,"Gap period = 40 ms, 20 ms",Gap period = 80 ms
+≤ 0.16,Non DRX Requirements in clause 8.17.3.1 are applicable,Non DRX Requirements in clause 8.17.3.1 are applicable
+0.256,"5.12*CSSFE-UTRA, NSA (20*CSSFE-UTRA, NSA)","7.68*CSSFE-UTRA, NSA (30*CSSFE-UTRA, NSA)"
+0.32,"6.4*CSSFE-UTRA, NSA (20*CSSFE-UTRA, NSA)","7.68*CSSFE-UTRA, NSA (24*CSSFE-UTRA, NSA)"
+0.32< DRXcycle ≤2.56,"Note (20* CSSFE-UTRA, NSA)","Note (20*CSSFE-UTRA, NSA)"
+Note:Time depends upon the DRX cycle in use,,

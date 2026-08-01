@@ -1,0 +1,7 @@
+DRX cycle length (s),TEvaluate_Qout_DRX  and TEvaluate_Qin_DRX  (s) (DRX cycles),
+≤ 0.01,Non-DRX requirements in clause 7.11.2.1 are applicable.,
+0.01 < DRX cycle ≤0.04,Note (40),
+0.04 < DRX cycle ≤ 0. 16,Note  (20),
+0. 16 < DRX cycle ≤ 0.64,Note  (10),
+0.64 < DRX cycle ≤ 2.56,Note  (5),
+Note:Evaluation period length in time depends on the length of the DRX cycle in use,,

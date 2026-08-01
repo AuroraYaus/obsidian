@@ -1,0 +1,6 @@
+Parameter,,Unit,Value,Comment
+Initial,Active PCell,,Cell 1,PCell on RF channel number 1.
+,Neighbour cell,,"Cell2, Cell 3",Neighbour cells with 12 PRB SSB bandwidth on RF channel number 2.
+Final,Active PCell,,Cell 1,PCell on RF channel number 1.
+Condition,active PSCell,,Cell 3,PSCell with 12 PRB SSB bandwidth on RF channel number 2.
+,Neighbour cell,,Cell2,Neighbour cell with 12 PRB SSB bandwidth on RF channel number 2.

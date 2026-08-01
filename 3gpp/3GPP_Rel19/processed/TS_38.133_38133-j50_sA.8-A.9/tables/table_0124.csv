@@ -1,0 +1,27 @@
+Parameter,,Unit,Value,Comment
+NR RF Channel Number,,,1,HD carrier in Band n47 or n38
+Channel Bandwidth (BWchannel)Note 2,,MHz,"20 (NPRB,c = 50) or 40 (NPRB,c = 100)",
+SCS,,kHz,30,
+V2X sidelink communication configuration,,,As specified in table A.3.21.2-1 and A.3.21.2-3,IE values unless specified otherwise in this test.
+sl-TimeResource-r16 included in SL-ResourcePool,,,1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111,"Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3])"
+sl-NumSubchannel-r16 included in SL-ResourcePool,,,1,ENUMERATED {n1}
+sl-SubchannelSize included in SL-ResourcePool,,,10,ENUMERATED {n10}
+sl-StartRB-Subchannel-r16,,,0,
+threshS-RSSI-CBR,,,19,Corresponding -74 dBm as defined in section 6.3.8 in TS38.331[2]
+Active Cell Note 3,,,Cell 1,
+Number of Active Sidelink UEs every 50 ms,,,4,"Active Sidelink UE i, where i = 0, 1, 2, 3"
+"Active Sidelink UEs (i = 0,1,2,3)",V2X sidelink Communication configuration,,As specified in table A.3.21.2-1and A.3.21.2-3,IE values unless specified otherwise in this test.
+,sl-TimeResource-r16 included in SL-ResourcePool,,{1i}Note1,"Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3])"
+,sl-NumSubchannel-r16 included in SL-ResourcePool,,1,
+,sl-SubchannelSize included in SL-ResourcePool,,10,
+Timing offset between V2X UE and Active Sidelink UEs,,s,CP/2,Synchronous
+c1-Threshold-r16Note 3,,,2,Corresponding 0.02 as defined in section 6.3.2 in TS38.331[2]
+sl-CBR-RangeConfigList-r16 Note 4,,,[2 100],Two ranges are defined by this list: 0 to 0.02 and 0.02 to 1
+sl-CR-Limit-r16 Note 4,,,10000 and 10,"Corresponding to the two CBR ranges: if CBR > 0.02, CR ≤ 0.001, otherwise CR > 0.001"
+sl-Thres-RSRP-r16 Note 4,,,12,Configure threshold <-98.64 dBm/30kHz to ensure not blocking transmission
+Hysteresis,,,0,
+Time To Trigger,,s,0,
+Filter coefficient,,,0,L3 filtering is not used
+T1,,s,5,
+T2,,s,5,
+NOTE 1:{1i} is a sequence of ninety nine 0’s with one 1 in i+1’th position.NOTE 2:The UE is only required to be tested in one of the channel bandwidths.NOTE 3:Only for UE supporting both Uu and sidelink operation.NOTE 4: Only for UE supporting sidelink operation but not supporting Uu.,,,,

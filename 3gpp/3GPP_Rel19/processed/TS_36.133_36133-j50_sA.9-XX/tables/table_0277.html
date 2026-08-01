@@ -1,0 +1,156 @@
+<table>
+  <tr>
+    <td rowspan="2">Parameter</td>
+    <td rowspan="2">Unit</td>
+    <td colspan="2">Test1</td>
+    <td colspan="2">Test2</td>
+  </tr>
+  <tr>
+    <td>nCell 1</td>
+    <td>nCell 2</td>
+    <td>nCell 1</td>
+    <td>nCell 2</td>
+  </tr>
+  <tr>
+    <td>BWchannel</td>
+    <td>kHz</td>
+    <td>180</td>
+    <td>180</td>
+    <td>180</td>
+    <td>180</td>
+  </tr>
+  <tr>
+    <td>PRB location within eCell</td>
+    <td></td>
+    <td>eCell 1 BWchannel 5MHz: 17eCell 1 BWchannel 10MHz: 30</td>
+    <td>eCell 2 BWchannel 5MHz: 22eCell 2 BWchannel 10MHz: 35</td>
+    <td>eCell 1 BWchannel 5MHz: 17eCell 1 BWchannel 10MHz: 30</td>
+    <td>eCell 2 BWchannel 5MHz: 22eCell 2 BWchannel 10MHz: 35</td>
+  </tr>
+  <tr>
+    <td>NPBCH_RA</td>
+    <td rowspan="10">dB</td>
+    <td rowspan="10">0</td>
+    <td rowspan="10">0</td>
+    <td rowspan="10">0</td>
+    <td rowspan="10">0</td>
+  </tr>
+  <tr>
+    <td>NPBCH_RB</td>
+  </tr>
+  <tr>
+    <td>NPSS_RA</td>
+  </tr>
+  <tr>
+    <td>NSSS_RA</td>
+  </tr>
+  <tr>
+    <td>NPDCCH_RA</td>
+  </tr>
+  <tr>
+    <td>NPDCCH_RB</td>
+  </tr>
+  <tr>
+    <td>NPDSCH_RA</td>
+  </tr>
+  <tr>
+    <td>NPDSCH_RB</td>
+  </tr>
+  <tr>
+    <td>OCNG_RA Note 1</td>
+  </tr>
+  <tr>
+    <td>OCNG_RB Note 1</td>
+  </tr>
+  <tr>
+    <td>NPRS_RA</td>
+    <td>dB</td>
+    <td>-13</td>
+    <td>-17</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Note 2</td>
+    <td>dBm/15 kHz</td>
+    <td>-98</td>
+    <td>-98</td>
+    <td>-98</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td>NPRS</td>
+    <td>dB</td>
+    <td>-6</td>
+    <td>-13</td>
+    <td>-2.37</td>
+    <td>-8.02</td>
+  </tr>
+  <tr>
+    <td>NPRS  Note 3</td>
+    <td>dB</td>
+    <td>-6</td>
+    <td>-13</td>
+    <td>-3.01</td>
+    <td>-10.01</td>
+  </tr>
+  <tr>
+    <td>Io Note 3</td>
+    <td>dBm/180 kHz</td>
+    <td>-80.20</td>
+    <td>-83.20</td>
+    <td>-85.60</td>
+    <td>-85.60</td>
+  </tr>
+  <tr>
+    <td>NPRP Note 3</td>
+    <td>dBm/15 kHz</td>
+    <td>-104</td>
+    <td>-111</td>
+    <td>-100.37</td>
+    <td>-106.02</td>
+  </tr>
+  <tr>
+    <td>NRSRP Note 3</td>
+    <td>dBm/ 15 kHz</td>
+    <td>-91</td>
+    <td>-94</td>
+    <td>-100.37</td>
+    <td>-106.02</td>
+  </tr>
+  <tr>
+    <td>Note 3</td>
+    <td>dB</td>
+    <td>7</td>
+    <td>4</td>
+    <td>-2.37</td>
+    <td>-8.02</td>
+  </tr>
+  <tr>
+    <td>Propagation Condition</td>
+    <td></td>
+    <td>AWGN</td>
+    <td>AWGN</td>
+    <td>AWGN</td>
+    <td>AWGN</td>
+  </tr>
+  <tr>
+    <td>Antenna Configuration</td>
+    <td></td>
+    <td>1x1</td>
+    <td>1x1</td>
+    <td>1x1</td>
+    <td>1x1</td>
+  </tr>
+  <tr>
+    <td>Timing offset to nCell 1</td>
+    <td>us</td>
+    <td>N/A</td>
+    <td>3</td>
+    <td>N/A</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td colspan="6">Note 1: OCNG shall be used such that active cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols other than those in the subframes with transmitted NPRS.Note 2: Interference from other cells and noise sources not specified in the test are assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3: If NPRS_RA is not “N/A”, , NPRS , Io, NRSRP and NPRP levels have been derived from other parameters and are given for information purpose. If NPRS_RA is “N/A”, Io and NRSRP levels have been derived from other parameters and are given for information purpose. These are not settable test parameters. Interference conditions shall be applied to all PRS symbols of DL positioning subframes.</td>
+  </tr>
+</table>

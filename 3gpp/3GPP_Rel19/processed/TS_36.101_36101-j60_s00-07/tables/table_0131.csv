@@ -1,0 +1,23 @@
+CA_42C: CA_NS_08,RBstart,Condition,RBend,LCRB [RBs],"A-MPR for QPSK, 16 QAM, 64 QAM and 256 QAM [dB]"
+100RB / 100RB,≤ 21,Or,≥ 178,≤ 25,≤ 12
+,,,,> 25 and ≤ 80,≤ 6
+,≥ 0,N/A,N/A,> 80 and ≤ 172,≤ 8
+,,,,> 172,≤ 9
+,> 21 and ≤ 58,Or,≥ 141 and < 178,< 48,≤ 3
+,> 21,And,< 178,≥ 48 and ≤ 80,≤ 4
+100RB / 75RBAnd75RB / 100RB,≤ 12,Or,≥ 162,≤ 25,≤ 12
+,,,,> 25 and ≤ 75,≤ 6
+,≥ 0,N/A,N/A,> 75 and <172,≤ 8
+,,,,≥172,9
+,> 12 and ≤ 49,Or,≥ 125 and < 162,< 54,≤ 3
+,> 12,And,< 162,≥ 54 and  ≤75,≤ 5
+,> 49,And,< 125,≥ 36 and < 54,≤ 2
+100RB / 50RBAnd50RB / 100RB,≤ 5,Or,≥ 144,≤ 16,≤ 12
+,,,,> 16 and ≤ 61,≤ 6
+,≥ 0,N/A,N/A,> 61,≤ 8
+,> 5,And,< 144,≥ 36 and ≤ 61,≤ 5
+,> 5 and ≤ 41,Or,≥ 108 and < 144,< 36,≤ 3
+100RB / 25RBAnd25RB / 100RB,≤ 31,Or,≥ 92,≤ 34,≤ 4
+,,,,> 34 and ≤ 44,≤ 5
+,≥ 0,N/A,N/A,> 44,≤ 8
+"NOTE 1:RBstart indicates the lowest RB index of transmitted resource blocksNOTE 2:LCRB is the length of a contiguous resource block allocationNOTE 3:RBend indicates the highest RB index of transmitted resource blocksNOTE 4:If condition is “and” both RBstart and RBend constraints need to be met. If condition is “or” either RBstart or RBend constraints need to be metNOTE 5:For intra-subframe frequency hopping which intersects regions, notes 1, 2, 3 and 4 apply on a per slot basis. For intra-slot or intra-subslot frequency hopping which intersects regions, notes 1,2,3 and 4 apply on a per Tno_hopping basis.NOTE 6:For intra-subframe frequency hopping which intersects regions, the larger A-MPR value may be applied for both slots in the subframe. For intra-slot frequency hopping which intersects regions, the larger A-MPR value may be applied for the slot. For intra-subslot frequency hopping which intersects regions, the larger A-MPR value may be applied for the subslot.",,,,,

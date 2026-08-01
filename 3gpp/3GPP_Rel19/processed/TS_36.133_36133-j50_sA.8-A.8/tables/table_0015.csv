@@ -1,0 +1,22 @@
+Parameter,Unit,Value,Comment
+PDSCH parameters,,DL Reference Measurement Channel R.0 FDD,As specified in clause A.3.1.1.1
+PCFICH/PDCCH/PHICH parameters,,DL Reference Measurement Channel R.6 FDD,As specified in clause A.3.1.2.1
+PCell,,Cell 1,Also the aggressor cell. Active in T1 and T2
+Neighbour cell,,Cell 2,Cell to be identified. Active only in T2.
+PCell ABS configuration,,Non-MBSFN ABS,As defined in Table A.3.4.1.1-1
+E-UTRA RF Channel Number,,1,One FDD carrier frequency is used
+Channel Bandwidth (BWchannel),MHz,10,For all cells in the test
+A3-Offset,dB,-11,
+Event A3 measurement quantity,,RSRP,
+CP length,,Normal,
+Hysteresis,dB,0,
+Time To Trigger,s,0,
+Filter coefficient,,0,L3 filtering is not used
+DRX,,,OFF
+Time offset between cells,,3 s,Synchronous cells
+T1,s,5,
+T2,s,5,
+Physical cell ID PCI,,(PCIcell1 - PCIcell2 )mod6 !=0,Cell PCIs are selected so that the condition is met
+ABS pattern,,‘1000000010000000100000001000000010000000’,"FDD ABS Pattern Info IE, as defined in TS 36.423 [28], clause 9.2.54. Configured in Cell 1 during T1.The first/leftmost bit corresponds to the subframe #0 of the radio frame satisfying SFN mod x = 0, where x is the size of the bit string (40) divided by 10. No MBSFN subframes are cofigured in the ABS subframes."
+Time domain measurement resource restriction pattern for neighbour cell measurements on RF Channel 1,,‘1000000010000000100000001000000010000000’,"Time domain measurement resource restriction pattern for neighbor cell measurement signalled to the UE in measSubframePattern-Neigh IE in measSubframePatternConfig-Neigh, as defined in TS 36.331, clause 6.3.5.Configured during T1 for Cell 2 measurements."
+Time domain measurement resource restriction pattern for PCell measurements,,‘0100000001000000010000000100000001000000’,Configured during T1 for Cell 1 measurements

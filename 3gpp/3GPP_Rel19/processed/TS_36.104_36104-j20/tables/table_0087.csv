@@ -1,0 +1,6 @@
+System type for E-UTRA to co-exist with,Frequency range for co-existence requirement,Maximum Level,Measurement Bandwidth,Note
+E-UTRA Band 46a,5150 - 5250 MHz,-40 dBm,1 MHz,This is only applicable to E-UTRA BS operating in Band 46c or 46d.
+E-UTRA Band 46b,5250 - 5350 MHz,-40 dBm,1 MHz,This is only applicable to E-UTRA BS operating in Band 46c or 46d.
+E-UTRA Band 46c,5470 - 5725 MHz,-40 dBm,1 MHz,This is only applicable to E-UTRA BS operating in Band 46a or 46b.
+E-UTRA Band 46d,5725 - 5925 MHz,-40 dBm,1 MHz,This is only applicable to E-UTRA BS operating in Band 46a or 46b.
+NOTE 1:This requirement may apply to E-UTRA BS operating in certain regions.,,,,

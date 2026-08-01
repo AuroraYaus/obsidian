@@ -1,0 +1,10 @@
+E-UTRA Band,Rx parameter,Units,CA Bandwidth Class,,,,
+,,,B,C,D,E,F
+46,Power per CC in Aggregated Transmission Bandwidth Configuration,dBm,REFSENS + CA Bandwidth Class specific value below,,,,
+,,,,12,13.8,15,
+,PInterferer 1(CW),dBm,-46,,,,
+,PInterferer 2(Modulated),dBm,-46,,,,
+,BWInterferer 2,MHz,,20,20,20,
+,FInterferer 1(Offset),MHz,,–Foffset-30/+ Foffset+30,–Foffset-30/+ Foffset+30,–Foffset-30/+ Foffset+30,
+,FInterferer 2(Offset),MHz,2*FInterferer 1,,,,
+"NOTE 1:The transmitter shall be set to 4dB below PCMAX_L,c or PCMAX_L as defined in subclause 6.2.5A.NOTE 2:Reference measurement channel is specified in Annex A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD/FS3 as described in Annex A.5.1.1/A.5.2.1/A.5.4.1.NOTE 3:The modulated interferer consists of the Reference measurement channel specified in Annex A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD/FS3 as described in Annex A.5.1.1/A.5.2.1/A.5.4.1 with set-up according to Annex C.3.1.NOTE 4:The interfering modulated signal is 20 MHz E-UTRA signal as described in Annex D interference setting 2;NOTE 5:The Finterferer 1 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the CW interferer and Finterferer 2 (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the modulated interferer.",,,,,,,

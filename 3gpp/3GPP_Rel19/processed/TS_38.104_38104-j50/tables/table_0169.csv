@@ -1,0 +1,12 @@
+BS channel bandwidth (MHz),Reference measurement channel,Wanted signal mean power (dBm),Interfering signal mean power (dBm) / BWConfig,Type of interfering signal
+3,,,-78.6,"DFT-s-OFDM NR signal, 15 kHz SCS,6 RBs"
+5,,,-76.4,"DFT-s-OFDM NR signal, 15 kHz SCS,10 RBs"
+7,,,-74.6,"DFT-s-OFDM NR signal, 15 kHz SCS,15 RBs"
+"10, 15, 20, 25, 30, 35",FRC A14-1 in Annex A.14 in TS 36.104 [13],-119.3,-72.4,"DFT-s-OFDM NR signal, 15 kHz SCS,25 RBs"
+"40, 45, 50",,,-66.4,"DFT-s-OFDM NR signal, 15 kHz SCS, 100 RBs"
+3,,,-78.6,"DFT-s-OFDM NR signal, 15 kHz SCS,6 RBs"
+5,,,-76.4,"DFT-s-OFDM NR signal, 15 kHz SCS,10 RBs"
+7,,,-74.6,"DFT-s-OFDM NR signal, 15 kHz SCS,15 RBs"
+"10, 15, 20, 25, 30, 35",FRC A14-2 in Annex A.14 in TS 36.104 [13],-125.2,-72.4,"DFT-s-OFDM NR signal, 15 kHz SCS,25 RBs"
+"40, 45, 50",,,-66.4,"DFT-s-OFDM NR signal, 15 kHz SCS, 100 RBs"
+"NOTE:Interfering signal is placed in one side of the Fc, while the NB-IoT PRB is placed on the other side. Both interfering signal and NB-IoT PRB are placed at the middle of the available PRB locations. The wanted NB-IoT tone is placed at the centre of this NB-IoT PRB.",,,,

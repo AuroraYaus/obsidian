@@ -1,0 +1,4 @@
+DRX cycle length (s),"Tmeasure, E-UTRAN FDD (s) (DRX cycles)"
+≤0.08,Non-DRX requirements in clause 9.4.2.2 apply
+0.08< DRX-cycle ≤ 10.24,Note1 ((5*+ Lcancel * DRX-cycle) CSSFinterRAT x Ceil(Kgap_EUTRA))
+"NOTE 1:The time depends on the DRX cycle length.NOTE 2:CSSFinterRAT is as defined in clause 9.4.2.2.NOTE 3:Kgap_EUTRA is only applicable for a UE supporting concurrent GAPs. Otherwise Kgap_EUTRA =1NOTE 4:   Lcancel is the number of gap occasions cancelled during Tmeasure, E-UTRAN FDD for measurement.",

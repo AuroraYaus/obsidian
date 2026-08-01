@@ -1,0 +1,9 @@
+Accuracy,Conditions,
+,SRS Ês/Iot,SRS bandwidth range
+,,
+dB,dB,PRB
+±5.5,Ês/Iot ≥ +3,32 ≤ BW < 64
+±5.5,,64 ≤  BW < 132
+±5.5,,132 ≤ BW
+±8,Ês/Iot ≥ -13,64 ≤ BW < 132
+±7,,132 ≤ BW

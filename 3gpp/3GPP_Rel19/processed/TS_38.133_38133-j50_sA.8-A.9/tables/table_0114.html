@@ -1,0 +1,169 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="2">NR RF Channel Number</td>
+    <td></td>
+    <td>1</td>
+    <td>HD carrier in Band n47 and n38</td>
+  </tr>
+  <tr>
+    <td colspan="2">Channel Bandwidth (BWchannel) Note 2</td>
+    <td>MHz</td>
+    <td>20 (NPRB,c = 50) or 40 (NPRB,c = 100)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">SCS</td>
+    <td>kHz</td>
+    <td>30</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">V2X sidelink communication pre-configuration</td>
+    <td></td>
+    <td>As specified in table A.3.21.2-2</td>
+    <td>IE values unless specified otherwise in this test.</td>
+  </tr>
+  <tr>
+    <td colspan="2">sl-TimeResource-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</td>
+    <td>Indicates the bitmap of the TX and Rx resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213[3])</td>
+  </tr>
+  <tr>
+    <td colspan="2">sl-NumSubchannel-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>1</td>
+    <td>Indicates the number of sub-channels for TX resource pool</td>
+  </tr>
+  <tr>
+    <td colspan="2">sl-SubchannelSize-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>10</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">sl-StartRB-Subchannel-r16</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of Active Sidelink UEs</td>
+    <td></td>
+    <td>130</td>
+    <td>Active Sidelink UE i = 0, .., 129</td>
+  </tr>
+  <tr>
+    <td colspan="2">SL-Thres-RSRP-r16</td>
+    <td></td>
+    <td>13</td>
+    <td>Corresponding -104 dBm as defined in section 6.3.5 in TS38.331[2]</td>
+  </tr>
+  <tr>
+    <td rowspan="5">Active Sidelink UEs(UE i=0-99)</td>
+    <td>V2X sidelink Communication preconfiguration</td>
+    <td></td>
+    <td>As specified in table A.3.21.2-2</td>
+    <td>IE values unless specified otherwise in this test.</td>
+  </tr>
+  <tr>
+    <td>sl-TimeResource-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>{1i}Note1</td>
+    <td>Indicates the bitmap of the TX resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213 [3])</td>
+  </tr>
+  <tr>
+    <td>sl-NumSubchannel-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>1</td>
+    <td>Indicates the number of sub-channels for TX resource pool</td>
+  </tr>
+  <tr>
+    <td>sl-SubchannelSize-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>10</td>
+    <td>Indicates the size of sub-channels for TX resource pool</td>
+  </tr>
+  <tr>
+    <td>sl-ResourceReservePeriod2-r16</td>
+    <td>ms</td>
+    <td>50</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="7">Active Sidelink UEs(UE i= 100-129)</td>
+    <td>V2X sidelink Communication preconfiguration</td>
+    <td></td>
+    <td>As specified in table A.3.21.2-2</td>
+    <td>IE values unless specified otherwise in this test.</td>
+  </tr>
+  <tr>
+    <td>sl-TimeResource-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>{1i}Note1</td>
+    <td>Indicates the bitmap of the TX resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 38.213 [3])</td>
+  </tr>
+  <tr>
+    <td>sl-NumSubchannel-r16 included in SL-ResourcePool</td>
+    <td></td>
+    <td>1</td>
+    <td>Indicates the number of sub-channels for TX resource pool</td>
+  </tr>
+  <tr>
+    <td>sl-SubchannelSize included in SL-ResourcePool</td>
+    <td></td>
+    <td>10</td>
+    <td>Indicates the size of sub-channels for TX resource pool</td>
+  </tr>
+  <tr>
+    <td>sl-MultiReserveResource-r16</td>
+    <td></td>
+    <td>enabled</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>sl-MaxNumPerReserve-r16</td>
+    <td></td>
+    <td>n2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>sl-ResourceReservePeriod2-r16</td>
+    <td></td>
+    <td>0</td>
+    <td>Unit:ms</td>
+  </tr>
+  <tr>
+    <td colspan="2">Timing offset among Active Sidelink UEs</td>
+    <td>s</td>
+    <td>CP/2</td>
+    <td>Synchronous</td>
+  </tr>
+  <tr>
+    <td colspan="2">T0</td>
+    <td>s</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>ms</td>
+    <td>50</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>ms</td>
+    <td>50</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE 1:       {1i} is a sequence of ninety-nine 0’s with one 1 in (mod(i,100)+1)’th position.NOTE 2:     The UE is only required to be tested in one of the supported test configurations.</td>
+  </tr>
+</table>

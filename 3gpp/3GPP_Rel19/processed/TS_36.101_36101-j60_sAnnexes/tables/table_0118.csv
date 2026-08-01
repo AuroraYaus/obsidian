@@ -1,0 +1,28 @@
+Parameter,Unit,Value,,,,,
+Channel bandwidth,MHz,1.4,3,5,10,15,20
+Allocated resource blocks,,6,15,25,50,75,100
+Subcarriers per resource block,,12,12,12,12,12,12
+Uplink-Downlink Configuration (Note 5),,1,1,1,1,1,1
+Allocated subframes per Radio Frame,,2,3+2,3+2,3+2,3+2,3+2
+Modulation,,64QAM,64QAM,64QAM,64QAM,64QAM,64QAM
+Target Coding Rate,,3/4,3/4,3/4,3/4,3/4,3/4
+Number of HARQ Processes,Processes,7,7,7,7,7,7
+Maximum number of HARQ transmissions,,1,1,1,1,1,1
+Information Bit Payload per Sub-Frame,,,,,,,
+"For Sub-Frames 4,9",Bits,2984,8504,14112,30576,46888,61664
+"For Sub-Frames 1,6",Bits,N/A,6968,11448,23688,35160,46888
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,N/A,6968,12576,30576,45352,61664
+Transport block CRC,Bits,24,24,24,24,24,24
+Number of Code Blocks per Sub-Frame(Note 4),,,,,,,
+"For Sub-Frames 4,9",,1,2,3,5,8,11
+"For Sub-Frames 1,6",,N/A,2,2,4,6,8
+For Sub-Frame 5,,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,,N/A,2,3,5,8,11
+Binary Channel Bits per Sub-Frame,,,,,,,
+"For Sub-Frames 4,9",Bits,4104,11340,18900,41400,62100,82800
+"For Sub-Frames 1,6",,N/A,9828,16668,33768,50868,67968
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,N/A,9252,16812,39312,60012,80712
+Max. Throughput averaged over 1 frame,kbps,596.8,3791.2,6369.6,13910,20945,27877
+"Note 1:For normal subframes(0,4,5,9), 2 symbols allocated to PDCCH for 20 MHz, 15 MHz and 10 MHz channel BW; 3 symbols allocated to PDCCH for 5 MHz and 3 MHz; 4 symbols allocated to PDCCH for 1.4 MHz. For special subframe (1&6), only 2 OFDM symbols are allocated to PDCCH for all BWs.Note 2:For 1.4MHz, no data shall be scheduled on special subframes(1&6) to avoid problems with insufficient PDCCH performance.Note 3:Reference signal, Synchronization signals and PBCH allocated as per TS 36.211 [4].Note 4:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).Note 5:As per Table 4.2-2 in TS 36.211 [4].",,,,,,,

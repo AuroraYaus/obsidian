@@ -1,0 +1,19 @@
+Parameter,,Unit,Cell 1,Cell 2
+Bandwidth,,MHz,10 MHz,
+Uplink downlink configuration,,,4,
+Special subframe configuration,,,4,
+Downlink power allocation,,dB,-3,0
+,,,-3 (Note 1),0
+,,,0,0
+Cell-specific reference signals,,,"Antenna ports 0,1","Antenna ports 0,1"
+Cyclic Prefix,,,Normal,Normal
+Cell ID,,,0,1
+Transmission mode,,,3,NA (Note 4)
+at antenna port,,dBm/15kHz,-98,N/A
+(Note 3),,dB,Reference Value in Table 8.2.2.3.6-2,10
+Correlation and antenna configuration,,,Low (2x2),Low (2x2)
+Max number of HARQ transmissions,,,4,N/A
+Redundancy version coding sequence,,,"{0,1,2,3}",N/A
+nw-BasedCRS-InterferenceMitigation-r15,,,Disabled,Enabled
+CRS transmission,,,On,CRS is configured with CRS muting pattern as ‘10UU11111110UU111000’ where every 20 subframes consist of 11 subframes with full system BW CRS and 9 subframes with CRS only on the center 6 PRBs (Note 5)
+"Note 1:Note 2:Cell 1 is the serving cell. Cell 2 is the interfering cell.Note 3:All cells are time-synchronous.Note 4:Cell 2 has no PDSCH/PDCCH configuredNote 5:The muting pattern ‘10UU11111110UU111000’ follows the Uplink downlink configuration 4 where U indicates uplink subframes, 1 indicates DL subframes with full system BW CRS configured and 0 indicateds DL subframes including special subframes with CRS only on the center 6 PRBs configured.",,,,

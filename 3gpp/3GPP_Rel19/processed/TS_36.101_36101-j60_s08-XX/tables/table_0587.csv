@@ -1,0 +1,16 @@
+CA config,Bandwidth/ Bandwidth combination(MHz),Cat. 1,Cat. 1bis,Cat. 2,Cat. 3,Cat. 4,"Cat. 6,7","Cat. 9, 10","Cat. 11, 12",DL Cat. 15
+,,,,,,,,,"DL Cat. 11, 12",
+Single carrier,10,1,1A,2,-,-,-,-,-,-
+,15,-,-,-,3A,3A,-,-,-,-
+,20,-,1B,-,3,4,6,-,-,-
+CA with 2CCs,20+20,-,-,--,3(Note 4),4 (Note 4),6A,6A,-,-
+,15+20,-,-,-,3(Note 4),4 (Note 4),6B,6B,-,-
+CA with 3 CCs,3x20,-,-,-,-,-,6A,7,7,-
+,15+20+20,-,-,-,-,-,6A,7A,7A,-
+CA with 4 CCs,4x20,-,-,-,-,-,-,7,8,8
+,15+3x20,-,-,-,-,-,-,7,9,9
+CA with 5 CCs,5x20,,,,,,,,10,10
+,15+4x20,,,,,,,,11,11
+CA with 6 CCs,6x20,,,,,,,,12,12
+CA with 7 CCs,7x20,,,,,,,,13,13
+"Note 1:If DL category is signalled by the UE under test, then select the test point according to UE DL Category. Otherwise, select the test point according to the UE category signalled.Note 2:For non-CA UE, test is selected for maximum supported bandwidth.Note 3:Void.Note 4:If the intra-band contiguous CA is the only CA configuration supported by category 3 or 4 UE, single carrier test is selected.Note 5:The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 8.1.2.3.",,,,,,,,,,

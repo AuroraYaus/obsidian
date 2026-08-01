@@ -1,0 +1,22 @@
+Channel Bandwidth [MHz],Parameters,,,,,,,,,,,,,,,,
+5,Fc [MHz],< 2007.5,,,2007.5 ≤ Fc < 2012.5,,,,,,,,,,2012.5 ≤ Fc ≤ 2017.5,,
+,RBstart,≤24,,,0-3,,,,,,,4-6,,,≤24,,
+,LCRB [RBs],>0,,,15-19,,,≥20,,,,≥18,,,1-25,,
+,A-MPR [dB],≤17,,,≤1,,,≤4,,,,≤2,,,≤ 0,,
+10,Fc [MHz],2005,,,,,,,,,,,,,,,
+,RBstart,0-25,,,,26-34,,,,,,,,,35-49,,
+,LCRB [RBs],>0,,,,8-15,,,,,>15,,,,>0,,
+,A-MPR [dB],≤16,,,,≤2,,,,,≤5,,,,≤ 6,,
+,Fc [MHz],2015,,,,,,,,,,,,,,,
+,RBstart,0-5,,,,,,,,6-10,,,,,,,
+,LCRB [RBs],≥32,,,,,,,,≥40,,,,,,,
+,A-MPR [dB],≤4,,,,,,,,≤2,,,,,,,
+15,Fc [MHz],2012.5,,,,,,,,,,,,,,,
+,RBstart,0-14,,,,,15-24,,,,,,,,25-39,,61-74
+,LCRB [RBs],1-9 & 40-75,,10-39,,,24-29,,,,,,≥30,,≥36,,≤6
+,A-MPR [dB],≤11,,≤6,,,≤1,,,,,,≤7,,≤5,,≤6
+20,Fc [MHz],2010,,,,,,,,,,,,,,,
+,RBstart,0-21,22-31,,,,,,32-38,,,,,39-49,,50-68,69-99
+,LCRB [RBs],>0,1-9 & 31-75,,,10-30,,,≥15,,,,,≥24,,≥25,>0
+,A-MPR [dB],≤17,≤12,,,≤6,,,≤9,,,,,≤7,,≤5,≤16
+NOTE 1:When NS_20 is signaled the minimum requirements for the 10 MHz bandwidth are specified for EUTRA UL carrier center frequencies of 2005 MHz or 2015 MHz.NOTE 2:When NS_20 is signaled the minimum requirements for the 15 MHz channel bandwidth are specified for EUTRA UL carrier center frequency of 2012.5 MHz.,,,,,,,,,,,,,,,,,

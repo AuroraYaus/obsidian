@@ -1,0 +1,169 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH parameters</td>
+    <td></td>
+    <td>DL Reference Measurement Channel R.0 FDD</td>
+    <td>As specified in clause A.3.1.1.1</td>
+  </tr>
+  <tr>
+    <td colspan="2">PCFICH/PDCCH/PHICH parameters</td>
+    <td></td>
+    <td>DL Reference Measurement Channel R.6 FDD</td>
+    <td>As specified in clause A.3.1.2.1</td>
+  </tr>
+  <tr>
+    <td colspan="2">E-UTRA RF Channel Number</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>Two radio channels are used for this test</td>
+  </tr>
+  <tr>
+    <td colspan="2">Active PCell</td>
+    <td></td>
+    <td>Cell 1</td>
+    <td>Primary cell on RF channel number 1.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Configured deactivated SCell</td>
+    <td></td>
+    <td>Cell 2</td>
+    <td>Configured deactivated secondary cell on RF channel number 2.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Neighbour cell</td>
+    <td></td>
+    <td>Cell 3</td>
+    <td>Neighbor cell to be identified on RF channel number 2.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Channel Bandwidth (BWchannel)</td>
+    <td>MHz</td>
+    <td>10</td>
+    <td>Channel bandwidth for cells on primary and secondary component carriers</td>
+  </tr>
+  <tr>
+    <td colspan="2">CP length</td>
+    <td></td>
+    <td>Normal</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX</td>
+    <td></td>
+    <td>OFF</td>
+    <td>Continuous monitoring of primary cell</td>
+  </tr>
+  <tr>
+    <td rowspan="3">A2</td>
+    <td>Hysteresis</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Hysteresis for evaluation of event A2.</td>
+  </tr>
+  <tr>
+    <td>Threshold RSRP</td>
+    <td>dBm</td>
+    <td>-93</td>
+    <td>Actual RSRP threshold for event A2. Needs to take absolute accuracy tolerance in clause 9.1.11.1 into account plus margin.</td>
+  </tr>
+  <tr>
+    <td>Time To Trigger</td>
+    <td>s</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="4">A6</td>
+    <td>Hysteresis</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Hysteresis for evaluation of event A6.</td>
+  </tr>
+  <tr>
+    <td>Offset</td>
+    <td>dB</td>
+    <td>-6</td>
+    <td>Offset parameter for evaluation of event A6. Needs to take relative accuracy tolerance in clause 9.1.11.2 into account plus margin.</td>
+  </tr>
+  <tr>
+    <td>Report on leave</td>
+    <td></td>
+    <td>False</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Time To Trigger</td>
+    <td>s</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-individual offset for cells on RF channel number 1</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Individual offset for cells on primary component carrier.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-individual offset for cells on RF channel number 2</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Individual offset for cells on secondary component carrier.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Filter coefficient</td>
+    <td></td>
+    <td>0</td>
+    <td>L3 filtering is not used</td>
+  </tr>
+  <tr>
+    <td colspan="2">SCell measurement cycle (measCycleSCell)</td>
+    <td>ms</td>
+    <td>160</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell2 timing offset to cell1</td>
+    <td>s</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Time alignment error between cell2 and cell1</td>
+    <td>s</td>
+    <td>≤ Time alignment error as specified in TS 36.104 [30] clause 6.5.3.1.</td>
+    <td>The value of time alignment error depends upon the type of carrier aggregation.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell3 timing offset to cell1</td>
+    <td>s</td>
+    <td>3</td>
+    <td>Synchronous cells</td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td>5</td>
+    <td>During this time the UE shall be aware of cells 1 and 2 but not cell 3.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td>≤5</td>
+    <td>UE shall report Event A6 within 1.6s (10×scellMeasCycle)</td>
+  </tr>
+  <tr>
+    <td colspan="2">T3</td>
+    <td>s</td>
+    <td>5</td>
+    <td>UE shall report Event A2 within 200 ms and 480ms for cells 1 and 2, respectively.</td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE:This test verifies the RRM requirement which is independent of channel bandwidth and is performed according to the principle defined in section A.3.6.1.</td>
+  </tr>
+</table>

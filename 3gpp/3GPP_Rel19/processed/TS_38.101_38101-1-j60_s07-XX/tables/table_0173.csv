@@ -1,0 +1,5 @@
+RX parameter,Units,NR CA bandwidth class,,,
+,,B,C,D,
+Power in transmission bandwidth configuration,dBm,REFSENS + CA bandwidth class specific value below,,,
+,dB,9,9,9,
+"NOTE 1:The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.",,,,,

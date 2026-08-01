@@ -1,0 +1,8 @@
+Parameter,Unit,Value,Comment
+CP length,,Normal,
+DRX,,OFF,
+DCI format,,6-1B,As defined in Table 8.13.3.8-1.
+M-PDCCH aggregation level,,24,
+T1,s,1,
+T2 Note 1,s,≥ 1,
+Note 1: The active cell should send a DCQR command MAC CE at the start of T2. Enough time should be allowed to verify both accuracy requirements in Table 9.1.21.24-2.,,,

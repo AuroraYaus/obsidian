@@ -1,0 +1,19 @@
+Parameter,Unit,Value
+Transmission mode,,3
+Cyclic prefix,,Normal
+Cell ID,,0
+Inter-TTI Distance,,1
+Number of HARQ processes per component carrier,Processes,8
+Maximum number of HARQ transmission,,4
+Redundancy version coding sequence,,"{0,0,1,2} for 64QAM, 256QAM and 1024QAM"
+Number of OFDM symbols for PDCCH per component carrier,OFDM symbols,1
+Cross carrier scheduling,,Not configured
+Propagation condition,,Static propagation conditionNo external noise sources are applied
+at antenna port,dBm/15kHz,-85
+Antenna configuration,2 layer CC,2x2 or 2x4
+,4 layer CC,4x4
+Codebook subsetrestriction,2 layer CC,10
+,4 layer CC,1000
+Downlin powerallocation,2 layer CC,"= -3dB,  = -3dB,  = 0dB"
+,4 layer CC,"= -6dB,  = -6dB,  = 3dB"
+Symbols for unused PRBs,,OP.1 FDD

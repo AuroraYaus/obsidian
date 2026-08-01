@@ -1,0 +1,33 @@
+<table>
+  <tr>
+    <td>SCS (kHz)</td>
+    <td colspan="9">(BW[MHz], LCRB)</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>(10, 50)</td>
+    <td>(15, 75)</td>
+    <td>(20, 100)</td>
+    <td>(25, 128)</td>
+    <td>(30, 160)</td>
+    <td>(35, 180)</td>
+    <td>(40, 216)</td>
+    <td>(45, 240)</td>
+    <td>(50, 270)</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>(10, 24)</td>
+    <td>(15, 36)</td>
+    <td>(20, 50)</td>
+    <td>(25, 64)</td>
+    <td>(30, 75)</td>
+    <td>(35, 90)</td>
+    <td>(40, 100)</td>
+    <td>(45, 108)</td>
+    <td>(50, 128)</td>
+  </tr>
+  <tr>
+    <td colspan="10">NOTE 1:A Lcrb value for 30kHz SCS that is not defined in this table can be determined as the closest integer number that is lower or equal to half the corresponding Lcrb value for 15kHz SCS and satisfies the following equation:  (where X, Y and Z are non-negative integers), except for 1 RB LCRB for 15 kHz SCS which is kept to 1 RB LCRB for 30 kHz SCS.NOTE 2:A value of RBstart for 30kHz SCS is determined as the closest integer number that is lower or equal to half the corresponding RBstart for 15 kHz SCS. If RBstart + LCRB would exceed NRB, RBstart is adjusted so that UL RB allocation fits inside NRB.Number of RBs= 2X×3Y×5Z</td>
+  </tr>
+</table>

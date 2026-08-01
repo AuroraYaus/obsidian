@@ -1,0 +1,5 @@
+Test Number,Cell,Band-width,Reference Channel,OCNG Pattern,Propagation Conditions,Correlation Matrix and Antenna,Refence value,,Timing relative to PCell (µs),UE Category
+,,,,,,,Fraction of MaximumThroughput (%),SNR (dB),,
+1,PCell,10MHz,R.35-4 FDD,OP.1 FDD,EPA200,2x2 Low,70,21.15,N/A,≥3
+,SCell,10MHz,R.35-3 FDD,,EPA200,2x2 Low,60,15.18,-30.26,
+Note 1:The EPA200 propagation channels applied to PCell and SCell are statistically independent.Note 2: The applicability and test rules of requirements for different CA configurations and bandwidth combination sets are defined in 8.1.2.3.,,,,,,,,,,

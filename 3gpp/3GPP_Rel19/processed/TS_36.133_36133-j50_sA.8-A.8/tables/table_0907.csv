@@ -1,0 +1,33 @@
+Parameter,Unit,Cell 1,,,Cell 2,,,Cell 3,,
+,,T1,T2,T3,T1,T2,T3,T1,T2,T3
+E-UTRA RF Channel Number,,1,,,2,,,2,,
+BWchannel,MHz,10,,,10,,,10,,
+Measurement bandwidth,,13-37,,,13-37,,,13-37,,
+PDSCH parameters:DL Reference Measurement Channel,,R.0 FDD,,,-,,,-,,
+PCFICH/PDCCH/PHICH parameters:DL Reference Measurement Channel,,R.6 FDD,,,R.6 FDD,,,R.6 FDD,,
+OCNG Patterns defined in A.3.2.1.1 (OP.1 FDD) and in A.3.2.1.2 (OP.2  FDD),,OP.1 FDD,,,OP.2 FDD,,,OP.2 FDD,,
+PBCH_RA,dB,0,,,0,,,0,,
+PBCH_RB,dB,,,,,,,,,
+PSS_RA,dB,,,,,,,,,
+SSS_RA,dB,,,,,,,,,
+PCFICH_RB,dB,,,,,,,,,
+PHICH_RA,dB,,,,,,,,,
+PHICH_RB,dB,,,,,,,,,
+PDCCH_RA,dB,,,,,,,,,
+PDCCH_RB,dB,,,,,,,,,
+PDSCH_RA,dB,,,,,,,,,
+PDSCH_RB,dB,,,,,,,,,
+OCNG_RANote 1,dB,,,,,,,,,
+OCNG_RBNote 1,dB,,,,,,,,,
+NocNote 2,dBm/15 kHz,-101,,,-101,,,,,
+Ês/Noc,dB,19,19,-3,19,19,-3,-infinity,19,-3
+Ês/Iot,dB,19,19,-3,19,-0.05,-4.76,-infinity,-0.05,-4.76
+RSRP Note 3,dBm/15 kHz,-82,-82,-104,-82,-82,-104,-infinity,-82,-104
+SCH_RP Note 3,dBm/15 kHz,-82,-82,-104,-82,-82,-104,-infinity,-82,-104
+Io Note 3,dBm/9MHz,-54.16,-54.16,-71.45,-54.16,-51.18,-70.20,Specified in columns for Cell 2,,
+Propagation Condition,,ETU30,,,ETU30,,,ETU30,,
+Correlation Matrix and Antenna Configuration,,1x2 Low,,,1x2 Low,,,1x2 Low,,
+Timing offset to Cell 1,s,-,,,0,,,-,,
+Time alignment error relative to cell 1 Note 5,s,-,,,≤ TAE,,,N/A,,
+Timing offset to Cell 2,s,-,,,-,,,2.3 (CP/2),,
+"Note 1:OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.Note 3:Es/Iot, RSRP and SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.Note 5:Time alignment error (TAE) as specified in TS 36.104 [30] clause 6.5.3.1. The TAE value depends upon the type of carrier aggregation.",,,,,,,,,,

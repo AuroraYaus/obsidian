@@ -1,0 +1,23 @@
+Parameter,Unit,Value,Comment
+RF Channel Number,,"1, 2","Two NR radio channel (1, 2) are used for this test"
+Active PCell,,Cell 1,Primary cell on NR RF channel number 1 FR1
+SCell,,Cell 2,Secondary cell on NR RF channel number 2 FR2 configured by RRC during the test.
+CP length,,Normal,
+DRX,,OFF,Continuous monitoring of primary cell
+Cell-individual offset for cells on NR channel number,dB,0,Individual offset for cells on primary component carrier.
+SCell measurement cycle (measCycleSCell),ms,160,
+Cell 2 timing offset to cell1,ms,0,
+Time alignment error between cell2 and cell1,ms,£ Time alignment error as specified in TS 38.104 [13] clause 7.5.3.1.,The value of time alignment error depends upon the type of carrier aggregation.
+T1,s,10,During this time UE connects to PCell and early measurement report on the carrier frequency of Cell 2 is configured.
+T2,s,30,During this time UE is in RRC_IDLE state and Cell 2 becomes detectable.
+T3,s,5,"During this time UE determines the validity of idle/inactive and reselection measurements by performing validity check, or if the measurements meet the accuracy requirements."
+T4,s,1,During this time UE shall send a valid measurement report with SSB index of Cell 2 to the PCell.
+T5,s,5,During this time SCell (Cell 2) is configured via RRC signalling and the UE completes the activation of SCell (Cell 2).
+,,,
+Filter coefficient,,0,L3 filtering is not used
+measIdleValidityDuration-r18,s,5,Applicable and configured when UE supporting measValidationReportEMR-r18 is tested in this test.
+measReselectionValidityDuration-r18,s,5,Applicable and configured when UE supporting measValidationReportReselectionMeasurements is tested in this test.
+measIdleDuration-r16,s,60,Value for timer T331 for UE performing idle/inactive measurements while in RRC_IDLE or RRC_INACTIVE.
+PRACH configuration index,,102,The detailed configuration is specified in TS 38.211 clause 6.3.3.2.
+THARQ,ms,Config 1: 2Config 2: 3Config 3: 2.5,"k1NR slot length, where k1 is a number of slots and is indicated by the PDSCH-to-HARQ-timing-indicator field in the DCI format, if present, or provided by dl-DataToUL-ACK, the value of k1 should be the minimum value defined in TS 38.213 [3] that will meet the timing constraints of this test case.×"
+TCSI_Reporting,ms,15,"The delay (in ms) including uncertainty in acquiring the first available downlink CSI reference resource, UE processing time for CSI reporting (clause 5.2.2.5 in TS 38.214 [26]) and uncertainty in acquiring the first available CSI reporting resources as specified in TS 38.331 [2]"

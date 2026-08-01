@@ -1,0 +1,44 @@
+Parameter,Unit,Value,,,,,,,,
+Reference channel,,R.31-1 TDD,R.31-2 TDD,R.31-3 TDD,R.31-3A TDD,R.31-4 TDD,R.31-4A TDD,R.31-5 TDD,R.31-5A TDD,R.31-6 TDD
+Channel bandwidth,MHz,10,10,20,15,20,20,15,15,10
+Allocated resource blocks,,Note 6,Note 7,Note 8,Note 9,Note 8,Note 8,Note 11,Note 11,Note 7
+Uplink-Downlink Configuration (Note 3),,5,5,5,1,1,2,1,2,1
+Number of HARQ Processes per component carrier,Processes,15,15,15,7,7,10,7,10,7
+Allocated subframes per Radio Frame (D+S),,8+1,8+1,8+1,4,4,6+2,4,6+2,4
+Modulation,,64QAM,64QAM,64QAM,64QAM,64QAM,64QAM,64QAM,64QAM,64QAM
+Target Coding Rate,,,,,,,,,,
+"For Sub-Frames 4,9",,0.40,0.59,0.59,0.87,0.88,0.88,0.85,0.85,0.85
+"For Sub-Frames 3,8",,0.40,0.59,0.59,N/A,N/A,0.88,N/A,0.85,N/A
+For Sub-Frame 7,,0.40,0.59,0.59,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frames 0,,0.40,0.62,0.61,0.90,0.90,0.90,0.88,0.88,0.90
+For Sub-Frames 1,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frames 5,,0.40,0.64,0.62,0.88,0.87,0.87,0.87,0.87,0.88
+For Sub-Frames 6,,0.40,0.60,0.60,N/A,N/A,N/A,N/A,N/A,N/A
+Information Bit Payload,,,,,,,,,,
+"For Sub-Frames 4,9",Bits,10296,25456,51024,51024,75376,75376,55056,55056,36696
+"For Sub-Frames 3,8",Bits,10296,25456,51024,0,0,75376,0,55056,0
+For Sub-Frame 7,Bits,10296,25456,51024,0,0,N/A,0,N/A,0
+For Sub-Frame 0,Bits,10296,25456,51024,51024,75376,75376,55056,55056,36696
+For Sub-Frame 1,Bits,0,0,0,0,0,0,0,0,0
+For Sub-Frame 5,Bits,10296,25456,51024,51024,71112,71112,52752,52752,35160
+For Sub-Frame 6,Bits,10296,25456,51024,0,0,0,0,0,0
+Number of Code Blocks per Sub-Frame(Note 4),,,,,,,,,,
+"For Sub-Frames 4,9",,2,5,9,9,13,13,9,9,6
+"For Sub-Frames 3,8",,2,5,9,N/A,N/A,13,N/A,9,N/A
+For Sub-Frame 7,,2,5,9,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,,2,5,9,9,13,13,9,9,6
+For Sub-Frame 1,,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 5,,2,5,9,9,12,12,9,9,6
+For Sub-Frame 6,Bits,2,5,9,n/a,N/A,N/A,N/A,N/A,N/A
+Binary Channel Bits Per Sub-Frame,,,,,,,,,,
+"For Sub-Frames 4,9",Bits,26100,43200,86400,58752,86400,86400,64800,64800,43200
+"For Sub-Frames 3,8",Bits,26100,43200,86400,0,0,86400,0,64800,0
+For Sub-Frame 7,Bits,26100,43200,86400,0,0,86400,0,64800,0
+For Sub-Frame 0,Bits,26100,41184,84384,56736,84384,84384,62784,62784,41184
+For Sub-Frame 1,Bits,0,0,0,0,0,0,0,0,0
+For Sub-Frame 5,Bits,26100,40176,82512,58320,82512,82512,60912,60912,40176
+For Sub-Frame 6,Bits,26100,42768,85968,N/A,N/A,0,N/A,0,N/A
+Number of layers,,1,2,2,2,2,2,2,2,2
+Max. Throughput averaged over 1 frame (Note 10),Mbps,8.237,20.365,40.819,20.409,29.724,52.337,25.330,38.309,14.525
+UE Category,,≥ 1,≥ 2,≥ 2,≥ 2,≥ 3,≥ 3,≥ 3,≥ 3,≥ 2
+"Note 1:1 symbol allocated to PDCCH for all tests.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4].Note 3:As per Table 4.2-2 in TS 36.211 [4].Note 4:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).Note 5:Resource blocks nPRB = 0..2 are allocated for SIB transmissions in sub-frame 5 for all bandwidths.Note 6:Resource blocks nPRB = 6..14,30..49 are allocated for the user data in all subframes.Note 7:Resource blocks nPRB = 3..49 are allocated for the user data in sub-frame 5, and resource blocks nPRB = 0..49 in the available downlink sub-frames according to uplink downlink configurations used .Note 8:Resource blocks nPRB = 4..99 are allocated for the user data in sub-frame 5, and resource blocks nPRB = 0..99 in sub-frames 0,3,4,6,7,8,9.Note 9:Resource blocks nPRB = 4..71 are allocated for the user data in all sub-framesNote10:Given per component carrier per codeword.Note11:Resource blocks nPRB = 4..74 are allocated for the user data in sub-frame 5, and resource blocks nPRB = 0..74 in other downlink sub-frames.",,,,,,,,,,

@@ -1,0 +1,6 @@
+BS channel bandwidth of lowest/highest carrier transmitted BWChannel (MHz),BS adjacent channel centre frequency offset below the lowest or above the highest carrier centre frequency transmitted,Assumed adjacent channel carrier (informative),Filter on the adjacent channel frequency and corresponding filter bandwidth,ACLR limit
+FR1 channel bandwidth as defined in Table 5.3.2-1,BWChannel,NR of same BW (Note 2),Square (BWConfig),"45 dB,38 dB (Note 4)"
+,2 x BWChannel,NR of same BW (Note 2),Square (BWConfig),"45 dB,38 dB(Note 4)"
+,BWChannel /2 + 2.5 MHz,5 MHz E-UTRA,Square (4.5 MHz),45 dB (Note 3)
+,BWChannel /2 + 7.5 MHz,5 MHz E-UTRA,Square (4.5 MHz),45 dB (Note 3)
+"NOTE 1:BWChannel and BWConfig are the BS channel bandwidth and transmission bandwidth configuration of the lowest/highest carrier transmitted on the assigned channel frequency.NOTE 2:With SCS that provides largest transmission bandwidth configuration (BWConfig).NOTE 3:The requirements are applicable when the band is also defined for E-UTRA or UTRA.NOTE 4:For BS operating in band n104, ACLR requirement 38 dB applies. For BS operating in other bands, ACLR requirement 45 dB applies.",,,,

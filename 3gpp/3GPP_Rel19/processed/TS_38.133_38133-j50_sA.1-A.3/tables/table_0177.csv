@@ -1,0 +1,6 @@
+Parameter,UL TCI.State.0,UL TCI.State.1,UL TCI.State.2,UL TCI.State.3,UL TCI.State.4,UL TCI.State.5
+ul-TCIState-Id,Id0,Id1,Id2,Id3,Id4,Id5
+referenceSignal Note1,SSB0,SSB1,Resource #4 in TRS resource set 1 Note2,Resource #4 in TRS resource set 2 Note2,Resource #4 in TRS resource set 3 Note2,Resource #4 in TRS resource set 4 Note2
+pathlossReferenceRS,Resource #4 in TRS resource set 1 Note2,Resource #4 in TRS resource set 1 Note2,Resource #4 in TRS resource set 1 Note2,Resource #4 in TRS resource set 2 Note2,Resource #4 in TRS resource set 3 Note2,Resource #4 in TRS resource set 4 Note2
+additionalPCI,N/A,configured Note3,N/A,N/A,N/A,N/A
+"NOTE 1:referenceSignal configurations towards which the UL TCI states are configured are defined in a test-specific manner.NOTE 2:Reference TRS resource sets are defined in clause A.3.17, and the applicable TRS resource set(s) are specified in each test case. When a single TRS resource set is configured in a test case, it is considered as resource set 1.NOTE 3:Only one PCI than serving cell PCI is included in the additionalPCIList, and the additionalPCIIndex is configured as 0.",,,,,,

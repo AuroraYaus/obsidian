@@ -1,0 +1,9 @@
+MIMO layer,Bandwidth (MHz),FDD,LAA supporting end partial SF,LAA supporting initial partial SF but not supporting end partial SF,LAA not supporting both initial and end partial SF
+2 layer,5,R.68-3 FDD,N/A,N/A,N/A
+,10,R.68-2 FDD,N/A,N/A,N/A
+,15,R.68-1 FDD,N/A,NA,NA
+,20,R.68 FDD,R.12 FS3,R.13 FS3,R.11 FS3
+4 layer,5,R.68-7 FDD,N/A,N/A,N/A
+,10,R.68-4 FDD,N/A,N/A,N/A
+,15,R.68-5 FDD,N/A,N/A,N/A
+,20,R.68-6 FDD,R.15 FS3,R.16 FS3,R.14 FS3

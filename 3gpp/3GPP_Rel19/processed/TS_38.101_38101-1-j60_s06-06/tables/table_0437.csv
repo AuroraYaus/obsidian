@@ -1,0 +1,7 @@
+Spectrum emission limit (dBr) / Aggregated channel bandwidth,,
+ΔfOOB(MHz),"10, 20, 40, 60, 80, 100 MHz",Measurement bandwidth(MBW)
+± 0-1,/ 1MHz-20 ∆fOOB,[100kHz]3
+± 1-(BWChannel_CA / 2),– 20 – 8 |ΔfOOB – 1 MHz| / (BWChannel_CA / 2 – 1 MHz),1 MHz
+± (BWChannel_CA / 2)-BWChannel_CA,– 16 – 24 |ΔfOOB| / BWChannel_CA,
+< - BWChannel_CA or > BWChannel_CA,-40,
+"NOTE 1:VoidNOTE 2:VoidNOTE 3:The measured value shall be scaled by a factor equal to the ratio of the reference bandwidth (1 MHz) to the measurement bandwidth before the emission limit (dBr) is applied.NOTE 4:The carrier leakage exceptions from Table 6.4F.2.3-1 apply and carrier leakage contribution shall be removed prior to setting the 0dBr level of the mask, the reported carrier frequency location in txDirectCurrentLocation field of the UplinkTxDirectCurrentBWP can be used to cancel the carrier leakage contribution. If txDirectCurrentLocation is not available or is reported with value 3300 or 3301, a carrier frequency location at the center of the channel shall be assumed.",,

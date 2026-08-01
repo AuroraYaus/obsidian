@@ -1,0 +1,12 @@
+Parameter,Unit,Value,,Comment
+RF Channel Number,,1,,
+SSB configuration,,SSB.1 FR2,,
+SMTC configuration,,SMTC pattern 1,,
+CSI-RS configuration for CSI reporting,,CSI-RS.3.4A TDD,CSI-RS.3.5A TDD,2 CSI-RS resources configured
+CSI-RS resource index,,0,1,
+reportConfigType,,periodic,periodic,
+reportQuantity,,cri-RSRP,cri-RSRP,
+CSI reporting periodicity,slot,80,80,
+DRX cycle length,s,OFF,,
+T1,s,0.8,,
+T2,s,0.5,,

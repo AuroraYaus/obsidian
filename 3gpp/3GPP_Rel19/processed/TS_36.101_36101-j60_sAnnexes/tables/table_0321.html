@@ -1,0 +1,99 @@
+<table>
+  <tr>
+    <td colspan="3">Information Element</td>
+    <td>Value</td>
+  </tr>
+  <tr>
+    <td>discRxPool(iPool),iPool = 0…NPool-1</td>
+    <td>cp-Len</td>
+    <td></td>
+    <td>Normal</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>discPeriod</td>
+    <td></td>
+    <td>rf32</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>numRetx</td>
+    <td></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>numRepetition</td>
+    <td></td>
+    <td>=2 if NPool &gt; 10,=1 otherwise</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>tf-ResourceConfig</td>
+    <td>prb-Num</td>
+    <td>5MHz: min{24, 2N-24*iPool} / 210MHz: 2515MHz: min{74, 2N-74*iPool} / 220MHz: 50</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>prb-Start</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>prb-End</td>
+    <td>5 MHz: min{24, 2N-24*iPool} - 110 MHz: 4915 MHz: min{74, 2N-74*iPool} - 120 MHz: 99</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>offsetIndicator</td>
+    <td>163</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>subframeBitmap</td>
+    <td>a(0), a(1), …, a(39), s.t.a(i * NPool + iPool) = 1, i = 0,..,K;a(k) = 0 otherwisewhereK = 1 is NPool  &gt; 10, K = 3 otherwise</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>txParameters</td>
+    <td></td>
+    <td>not present</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>rxParameters</td>
+    <td></td>
+    <td>not present</td>
+  </tr>
+  <tr>
+    <td>discTxPoolCommon</td>
+    <td></td>
+    <td></td>
+    <td>not present</td>
+  </tr>
+  <tr>
+    <td>discTxPowerInfo</td>
+    <td></td>
+    <td></td>
+    <td>not present</td>
+  </tr>
+  <tr>
+    <td>SL-SyncConfig</td>
+    <td></td>
+    <td></td>
+    <td>not present</td>
+  </tr>
+  <tr>
+    <td>discInterFreqList</td>
+    <td></td>
+    <td></td>
+    <td>not present</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1: The resource pool configuration description is parameterized using channel BWs, number of configured resource pools (NPool), and maximum number of configured Sidelink UE to be supported (N).</td>
+  </tr>
+</table>

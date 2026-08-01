@@ -1,0 +1,70 @@
+,,E-UTRA CA configuration / Bandwidth combination set,,,,,,
+E-UTRACA configuration,Uplink CA configurations (NOTE 1),Component carriers in order of increasing carrier frequency,,,,,Maximum aggregated bandwidth [MHz],Bandwidth combination set
+,,Channel bandwidths for carrier [MHz],Channel bandwidths for carrier [MHz],Channel bandwidths for carrier [MHz],Channel bandwidths for carrier [MHz],Channel bandwidths for carrier [MHz],,
+CA_1A-1A,-,"5, 10, 15, 20","5, 10, 15, 20",,,,40,0
+CA_2A-2A,-,"5, 10, 15, 20","5, 10, 15, 20",,,,40,0
+CA_3A-3A,-,"5, 10, 15, 20","5, 10, 15, 20",,,,40,0
+,,"5, 10","5, 10, 15, 20",,,,30,1
+,,5,3,,,,10,2
+,,"3, 5",5,,,,,
+CA_4A-4A,CA_4A-4A,"5, 10, 15, 20","5, 10, 15, 20",,,,40,0
+,,"5, 10","5, 10",,,,20,1
+CA_5A-5A,-,"5,10","5,10",,,,20,0
+,,3,5,,,,8,1
+CA_7A-7A,-,5,15,,,,40,0
+,,10,"10, 15",,,,,
+,,15,"15, 20",,,,,
+,,20,20,,,,,
+,,"5, 10, 15, 20","5, 10, 15, 20",,,,40,1
+,,"5, 10, 15, 20","5, 10",,,,30,2
+,,"10, 15, 20","10, 15, 20",,,,40,3
+CA_12A-12A,-,5,5,,,,10,0
+CA_23A-23A,-,5,10,,,,15,0
+CA_25A-25A,-,"5, 10","5, 10",,,,20,0
+,,"5, 10, 15, 20","5, 10, 15, 20",,,,40,1
+CA_40A-40A,-,"10, 20","10, 20",,,,40,0
+,,"10,15,20","10,15,20",,,,40,1
+CA_40A-40C,CA_40C,20,See CA_40C Bandwidth Combination Set 1 in Table 5.6A.1-1,,,,60,0
+,,See CA_40C Bandwidth Combination Set 1 in Table 5.6A.1-1,,20,,,,
+CA_40C-40C,CA_40C,See CA_40C Bandwidth Combination Set 1 in Table 5.6A.1-1,,See CA_40C Bandwidth Combination Set 1 in Table 5.6A.1-1,,,80,0
+CA_41A-41A,-,"10, 15, 20","10, 15, 20",,,,40,0
+,,"5, 10, 15, 20","5, 10, 15, 20",,,,40,1
+CA_41A-41C,CA_41C,"5, 10, 15, 20",See CA_41C Bandwidth Combination Set 1 in Table 5.6A.1-1,,,,60,0
+,,See CA_41C Bandwidth Combination Set 1 in Table 5.6A.1-1,,"5, 10, 15, 20",,,,
+CA_41A-41D,CA_41C,"5, 10, 15, 20",See CA_41D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,,80,0
+,,See CA_41D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,"5, 10, 15, 20",,,
+CA_41C-41C,CA_41C,See CA_41C Bandwidth Combination Set 0 in Table 5.6A.1-1,,See CA_41C Bandwidth Combination Set 0 in Table 5.6A.1-1,,,80,0
+CA_41C-41D,CA_41C,See CA_41C Bandwidth Combination Set 0 in Table 5.6A.1-1,,See CA_41D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,100,0
+,,See CA_41D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,See CA_41C Bandwidth Combination Set 0 in Table 5.6A.1-1,,,
+CA_42A-42A,-,"5, 10, 15, 20","5, 10, 15, 20",,,,40,0
+,,"10, 15, 20","10, 15, 20",,,,40,1
+CA_42A-42C,CA_42C,"5, 10, 15, 20",See CA_42C Bandwidth Combination Set 0 in Table 5.6A.1-1,,,,60,0
+,,See CA_42C Bandwidth Combination Set 0 in Table 5.6A.1-1,,"5, 10, 15, 20",,,,
+,,"10, 15, 20",See CA_42C Bandwidth Combination Set 1 in Table 5.6A.1-1,,,,60,1
+,,See CA_42C Bandwidth Combination Set 1 in Table 5.6A.1-1,,"10, 15, 20",,,,
+CA_42A-42D,CA_42C,"5, 10, 15, 20",See CA_42D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,,80,0
+,,See CA_42D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,"5, 10, 15, 20",,,
+CA_42C-42C,CA_42C,See CA_42C Bandwidth Combination Set 0 in Table 5.6A.1-1,,See CA_42C Bandwidth Combination Set 0 in Table 5.6A.1-1,,,80,0
+,,See CA_42C Bandwidth Combination Set 1 in Table 5.6A.1-1,,See CA_42C Bandwidth Combination Set 1 in Table 5.6A.1-1,,,80,1
+CA_43A-43A,-,"5, 10, 15, 20","5, 10, 15, 20",,,,40,0
+CA_46A-46A2,-,20,20,,,,40,0
+CA_46A-46C2,-,20,See CA_46C Bandwidth Combination Set 0 in Table 5.6A.1-1,,,,60,0
+,,See CA_46C Bandwidth Combination Set 0 in Table 5.6A.1-1,,20,,,,
+CA_46A-46D2,-,20,See CA_46D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,,80,0
+,,See CA_46D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,20,,,
+CA_48A-48A,-,"5, 10, 15, 20","5, 10, 15, 20",,,,40,0
+CA_48A-48C,-,"5, 10, 15, 20",See CA_48C Bandwidth Combination Set 0 in Table 5.6A.1-1,,,,60,0
+,,See CA_48C Bandwidth Combination Set 0 in Table 5.6A.1-1,,"5, 10, 15, 20",,,,
+CA_48A-48D,-,"5, 10, 15, 20",See CA_48D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,,80,0
+,,See CA_48D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,"5, 10, 15, 20",,,
+CA_48C-48C,CA_48C,See CA_48C Bandwidth Combination Set 0 in Table 5.6A.1-1,,See CA_48C Bandwidth Combination Set 0 in Table 5.6A.1-1,,,80,0
+CA_48C-48D,-,See CA_48C Bandwidth Combination Set 0 in Table 5.6A.1-1,,See CA_48D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,100,0
+,,See CA_48D Bandwidth Combination Set 0 in Table 5.6A.1-1,,,See CA_48C Bandwidth Combination Set 0 in Table 5.6A.1-1,,,
+CA_48A-48E,-,"5, 10, 15, 20",See CA_48E Bandwidth Combination Set 0 in Table 5.6A.1-1,,,,100,0
+,,See CA_48E Bandwidth Combination Set 0 in Table 5.6A.1-1,,,,"5, 10, 15, 20",,
+CA_66A-66A,-,"5, 10, 15, 20","5, 10, 15, 20",,,,40,0
+CA_66A-66B,-,"5, 10, 15, 20",See CA_66B Bandwidth Combination Set 0 in Table 5.6A.1-1,,,,40,0
+,,See CA_66B Bandwidth Combination Set 0 in Table 5.6A.1-1,,"5, 10, 15, 20",,,,
+CA_66A-66C,-,"5, 10, 15, 20",See CA_66C Bandwidth Combination Set 0 in Table 5.6A.1-1,,,,60,0
+,,See CA_66C Bandwidth Combination Set 0 in Table 5.6A.1-1,,"5, 10, 15, 20",,,,
+NOTE 1:Uplink CA configurations are the configurations supported by the present release of specifications.NOTE 2:Restricted to E-UTRA operation when inter-band carrier aggregation is configured. The downlink operating band is paired with the uplink operating band (external) of the carrier aggregation configuration that is supporting the configured Pcell.,,,,,,,,

@@ -1,0 +1,47 @@
+Parameter,,Unit,Configuration,Cell 1,,
+,,,,T1,T2,T3
+RF channel number,,,"1, 2, 3, 4",1,,
+Duplex mode,,,"1, 2",FDD,,
+,,,"3, 4",TDD,,
+BWchannel,,MHz,"1, 2, 3","10: NPRB,c = 52",,
+,,,4,"40: NPRB,c = 106",,
+PDSCH reference measurement channel,,,"1, 2",SR.1.1 FDD,,
+,,,3,SR.1.1 TDD,,
+,,,4,SR.2.1 TDD,,
+CORSET reference channel,,,"1, 2",CR.1.1 FDD,,
+,,,3,CR.1.1 TDD,,
+,,,4,CR.2.1 TDD,,
+TRS configuration,,,"1, 2",TRS.1.1 FDD,,
+,,,3,TRS.1.1 TDD,,
+,,,4,TRS.1.2 TDD,,
+OCNG patternNote1,,,"1, 2, 3, 4",OP.1,,
+BWP,Initial DL BWP,,"1, 2, 3, 4",DLBWP.0.1,,
+,Dedicated DL BWP,,,DLBWP.1.1,,
+,Initial UL BWP,,,ULBWP.0.1,,
+,Dedicated UL BWP,,,ULBWP.1.1,,
+SMTC configuration,,,"1, 2, 3, 4",SMTC.1,,
+SSB configuration,,,"1, 2, 3",SSB.1 FR1,,
+,,,4,SSB.2 FR1,,
+b2-Threshold1,,dBm,"1, 2, 3",-96,,
+,,,4,-93,,
+EPRE ratio of PSS to SSS,,dB,"1, 2, 3, 4",0,,
+EPRE ratio of PBCH_DMRS to SSS,,,,,,
+EPRE ratio of PBCH to PBCH_DMRS,,,,,,
+EPRE ratio of PDCCH_DMRS to SSS,,,,,,
+EPRE ratio of PDCCH to PDCCH_DMRS,,,,,,
+EPRE ratio of PDSCH_DMRS to SSS,,,,,,
+EPRE ratio of PDSCH to PDSCH_DMRS,,,,,,
+EPRE ratio of OCNG DMRS to SSS,,,,,,
+EPRE ratio of OCNG to OCNG DMRS,,,,,,
+NocNote2,,dBm/15 KHz,"1, 2, 3, 4",-100,-104,-100
+NocNote2,,dBm/SCS,"1, 2, 3",-100,-104,-100
+,,,4,-97,-101,-97
+Ês/Noc,,dB,"1, 2, 3, 4",12,0,-4
+Ês/IotNote3,,dB,"1, 2, 3, 4",12,0,-4
+SS-RSRPNote3,,dBm/SCS,"1, 2, 3",-88,-104,-104
+,,,4,-85,-101,-101
+IoNote3,,dBm/9.36 MHz,"1, 2, 3",-59.78,-73.04,-70.59
+,,,4,-53.68,-66.9448,-64.49
+Propagation condition,,,"1, 2, 3, 4",AWGN,,
+Antenna Configuration and Correlation Matrix,,,"1, 2, 3, 4",1x2 Low,,
+"NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 3:Ês/Iot, SS-RSRP, and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.",,,,,,

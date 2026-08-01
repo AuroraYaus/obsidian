@@ -1,0 +1,31 @@
+Parameter,,,Unit,Test-1,Comments
+SSB Configuration,,Config 1,,SSB pattern 2 in FR1,"As defined in clause A.3.10, except for number of SSBs per SS-burst and SS/PBCH block index as below"
+Number of SSBs per SS-burst,,,,2,Different from the definition in clause A.3.10
+SS/PBCH block index,,,,"0,1",Different from the definition in clause A.3.10
+Duplex Mode for Cell 1,,Config 1,,TDD,
+TDD Configuration,,Config 1,,TDDConf.2.1,
+OCNG Pattern Note 1,,,,OP.1,As defined in clause A.3.2.1.
+PDSCH parameters Note 4,,Config 1,,SR.2.1 TDD,As defined in clause A.3.1.1.
+NR RF Channel Number,,,,1,
+EPRE ratio of PSS to SSS,,,dB,0,
+EPRE ratio of PBCH_DMRS to SSS,,,dB,,
+EPRE ratio of PBCH to PBCH_DMRS,,,dB,,
+EPRE ratio of PDCCH_DMRS to SSS,,,dB,,
+EPRE ratio of PDCCH to PDCCH_DMRS,,,dB,,
+EPRE ratio of PDSCH_DMRS to SSS,,,dB,,
+EPRE ratio of PDSCH to PDSCH_DMRS,,,dB,,
+msgA-RSRP-ThresholdSSB,,,dBm,RSRP_51,"The actual value of the threshold is -105 dBm, as defined in TS 38.331 [2]."
+SSB with index 0,,,dB,3,Power of SSB with index 0 is set to be above configured msgA-RSRP-ThresholdSSB
+,,Config 1,dBm/15kHz,-101,
+,,,dB,3,
+,SS-RSRP Note 3,,dBm/ SCS,-95,
+SSB with index 1,,,dB,-17,Power of SSB with index 1 is set to be below configured msgA-RSRP-ThresholdSSB
+,,Config 1,dBm/15kHz,-101,
+,,,dB,-17,
+,SS-RSRP Note 3,,dBm/ SCS,-115,
+Io Note 2,,Config 1,dBm,-62.2/38.16 MHz,For symbols without SSB index 1
+ss-PBCH-BlockPower,,,dBm/ SCS,-5,As defined in clause 6.3.2 in TS 38.331 [2].
+Configured UE transmitted power (),,,dBm,23,As defined in clause 6.2.4 in TS 38.101-1 [18].
+MsgA Configuration,,,,FR1 MsgA configuration 2,As defined in clause A.3.20.2.2.
+Propagation Condition,,,-,AWGN,
+"NOTE 1:OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols. The OCNG pattern is chosen during the test according to the presence of a DL reference measurement channel.NOTE 2:SS-RSRP, Es/Iot and Io levels have been derived from other parameters for information purpose. They are not settable parameters.NOTE 3:The DL PDSCH reference measurement channel is used in the test only when a downlink transmission dedicated to the UE under test is required.",,,,,

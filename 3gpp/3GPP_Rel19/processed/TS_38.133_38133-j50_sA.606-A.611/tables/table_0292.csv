@@ -1,0 +1,29 @@
+Parameter,Unit,Test configuration,Value,Comment
+Active cell,,"1, 2, 3",Cell 1,
+Neighbour cell,,"1, 2, 3",Cell 2,Cell to be identified.
+RF Channel Number,,"1, 2, 3",1: Cell 1 and Cell 2,
+Measurement gap type,,"1, 2, 3",Per-UE gaps,
+Measurement gap repitition periodicity,ms,"1, 2, 3",40,
+Measurement gap length,ms,"1, 2, 3",6,
+Measurement gap offset,ms,"1, 2, 3",39,
+SSB configuration,,1,SSB.1 FR1,
+,,2,SSB.1 FR1,
+,,3,SSB.2 FR1,
+SMTC configuration,,1,SMTC.2,
+,,2,SMTC.1,
+,,3,SMTC.1,
+CSI-RS parameters,,1,CSI-RS.1.2 FDD resource #0,
+,,2,CSI-RS.1.2 TDD resource #0,
+,,3,CSI-RS.2.2 TDD resource #0,
+A3-Offset,dB,"1, 2, 3",-4.5,
+CP length,,"1, 2, 3",Normal,
+Hysteresis,dB,"1, 2, 3",0,
+Time To Trigger,s,"1, 2, 3",0,
+Filter coefficient,,"1, 2, 3",0,L3 filtering is not used
+DRX,ms,"1, 2, 3",,OFF
+Time offset between serving and neighbour cells,,1,3 ms,Asynchronous cells.The timing of Cell 2 is 3 ms later than the timing of Cell 1.
+,,2,3 s,Synchronous cells
+,,3,3 s,Synchronous cells
+T1,s,"1, 2, 3",0.1,
+T2,s,"1, 2, 3",0.1,
+T3,s,"1, 2, 3",5,

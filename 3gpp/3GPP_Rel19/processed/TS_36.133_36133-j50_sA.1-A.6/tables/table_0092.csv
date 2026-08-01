@@ -1,0 +1,18 @@
+Physical Channels and Signals,Parameters,"EPRE, [dB]",
+,,Non-ABS,ABS
+PBCH,PBCH_RA,0,N/A
+,PBCH_RB,0,N/A
+PSS,PSS_RA,0,N/A
+SSS,SSS_RA,0,N/A
+PCFICH,PCFICH_RB,0,-Inf
+PHICH,PHICH_RA,0,-Inf
+,PHICH_RB,0,-Inf
+PDCCH,PDCCH_RA,0,-Inf
+,PDCCH_RB,0,-Inf
+PDSCH,PDSCH_RA,0,-Inf
+,PDSCH_RB,0,-Inf
+PMCH,PMCH_RA,0,-Inf
+,PMCH_RB,0,-Inf
+OCNG,OCNG_RA,0,-Inf
+,OCNG_RB,0,-Inf
+NOTE:1x2 antenna configuration is assumed,,,

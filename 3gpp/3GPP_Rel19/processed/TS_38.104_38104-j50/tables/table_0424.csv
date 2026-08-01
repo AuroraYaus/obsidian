@@ -1,0 +1,11 @@
+Frequency Range,BS channel bandwidth (MHz),Subcarrier spacing (kHz),Reference measurement channel,Wanted signal mean power (dBm)(Note 2),Interfering signal mean power (dBm)(Note 2),Type of interfering signal
+FR2-1,50,60,G-FR2-A1-4,EISREFSENS_50M + ΔFR2_REFSENS,EISREFSENS_50M + 10 + ΔFR2_REFSENS,"DFT-s-OFDM NR signal, 60 kHz SCS, 32 RB"
+,"100,200",60,G-FR2-A1-1,EISREFSENS_50M + 3 + ΔFR2_REFSENS,EISREFSENS_50M + 13 + ΔFR2_REFSENS,"DFT-s-OFDM NR signal, 60 kHz SCS, 64 RB"
+,50,120,G-FR2-A1-5,EISREFSENS_50M + ΔFR2_REFSENS,EISREFSENS_50M + 10 + ΔFR2_REFSENS,"DFT-s-OFDM NR signal, 120 kHz SCS, 16 RB"
+,"100,200,400",120,G-FR2-A1-2,EISREFSENS_50M + 3 + ΔFR2_REFSENS,EISREFSENS_50M + 13 + ΔFR2_REFSENS,"DFT-s-OFDM NR signal, 120 kHz SCS, 32 RB"
+FR2-2,"100,400",120,G-FR2-A1-2,EISREFSENS_50M + 3 + ΔFR2_REFSENS,EISREFSENS_50M + 13 + ΔFR2_REFSENS,"DFT-s-OFDM NR signal, 120 kHz SCS, 32 RB"
+,400,480,G-FR2-A1-8,EISREFSENS_50M + 9 + ΔFR2_REFSENS,EISREFSENS_50M + 19+ ΔFR2_REFSENS,"DFT-s-OFDM NR signal, 480 kHz SCS, 32 RB"
+,"800, 1600",480,G-FR2-A1-6,EISREFSENS_50M + 12 + ΔFR2_REFSENS,EISREFSENS_50M + 22 + ΔFR2_REFSENS,"DFT-s-OFDM NR signal, 480 kHz SCS, 54 RB"
+,400,960,G-FR2-A1-9,EISREFSENS_50M + 9 + ΔFR2_REFSENS,EISREFSENS_50M + 19+ ΔFR2_REFSENS,"DFT-s-OFDM NR signal, 960 kHz SCS, 16 RB"
+,"800, 1600, 2000",960,G-FR2-A1-7,EISREFSENS_50M + 12 + ΔFR2_REFSENS,EISREFSENS_50M + 22+ ΔFR2_REFSENS,"DFT-s-OFDM NR signal, 960 kHz SCS, 27 RB"
+"NOTE 1:Wanted and interfering signal are placed adjacently around Fc, where the Fc is defined for BS channel bandwidth of the wanted signal according to the table 5.4.2.2-1. The aggregated wanted and interferer signal shall be centred in the BS channel bandwidth of the wanted signal.NOTE 2:EISREFSENS_50M is defined in clause 10.3.3.",,,,,,

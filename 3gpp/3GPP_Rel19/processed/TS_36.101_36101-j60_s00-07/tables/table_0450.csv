@@ -1,0 +1,8 @@
+Parameter,Unit,Channel Bandwidth,,,,,
+,,1.4 MHz,3 MHz,5 MHz,10 MHz,15 MHz,20 MHz
+Pw,dBm,PREFSENS + channel-bandwidth specific value below,,,,,
+,,22,18,16,13,14,16
+Puw (CW),dBm,-55,-55,-55,-55,-55,-55
+Fuw (offset forf = 15 kHz),MHz,0.9075,1.7025,2.7075,5.2125,7.7025,10.2075
+Fuw (offset forf = 7.5 kHz),MHz,,,,,,
+"NOTE 1:The transmitter shall be set a 4 dB below PCMAX_L at the minimum uplink configuration specified in Table 7.3.1-2 with PCMAX_L as defined in subclause 6.2.5.NOTE 2:Reference measurement channel is specified in Annex A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1.NOTE 3:The PREFSENS power level is specified in Table 7.3.1-1 and Table 7.3.1-1a for two and four antenna ports, respectively.NOTE 4:For DL category M1 and M2 UE, the reference sensitivity for category M1 in table 7.3.1E-3 and category M2 in Table 7.3.1E-8 should be used as PREFSENS for Pw.NOTE5:For DL category M1 and M2 UE, the parameters for the applicable channel bandwidth apply.NOTE6:For DL category M1 UE, the parameter, Pw, for all the channel bandwidth will be PREFSENS +22 dBm.NOTE7:For DL category M2 UE, the parameter, Pw, for all channel bandwidths greater than 3 MHz will be PREFSENS +16 dBm.",,,,,,,

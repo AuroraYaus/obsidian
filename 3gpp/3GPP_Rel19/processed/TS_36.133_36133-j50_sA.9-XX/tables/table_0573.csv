@@ -1,0 +1,32 @@
+Parameter,Unit,Test configuration,Cell 1,,,Cell 2,,
+,,,T1,T2,T3,T1,T2,T3
+Satellite information,,1,NSC.1,SSC.1,SSC.1,SSC.1,NSC.1,NSC.1
+,,2,NSC.2,SSC.2,SSC.2,SSC.2,NSC.2,NSC.2
+E-UTRA RF Channel number,,"1, 2",1,,,2,,
+BWchannel,MHz,"1, 2",1.4,,,1.4,,
+OCNG Patterns defined in A.3.2.1.6,,"1, 2",OP.7 FDD,,,OP.7 FDD,,
+PBCH_RA,dB,"1, 2",-3,,,-3,,
+PBCH_RB,dB,,,,,,,
+PSS_RA,dB,,,,,,,
+SSS_RA,dB,,,,,,,
+MPDCCH_RA,dB,,,,,,,
+MPDCCH_RB,dB,,,,,,,
+PDSCH_RA,dB,"1, 2",,,,,,
+PDSCH_RB,,,,,,,,
+dB,,,,,,,,
+OCNG_RANote 1,dB,,,,,,,
+OCNG_RBNote 1,dB,,,,,,,
+Qrxlevmin,dBm,"1, 2",-140,,,-140,,
+Note 2,dBm/15 kHz,"1, 2",-98,,,,,
+,dB,"1, 2",14,14,14,-4,-infinity,12
+,dB,"1, 2",14,14,14,-4,-infinity,12
+RSRP Note 3,dBm/15 KHz,"1, 2",-84,-84,-84,-102,-infinity,-86
+TreselectionEUTRAN,s,"1, 2",0,,,0,,
+Snonintrasearch,dB,"1, 2",50,,,Not sent,,
+"Threshx, high",dB,"1, 2",48,,,48,,
+"Threshserving, low",dB,"1, 2",44,,,44,,
+"Threshx, low",dB,"1, 2",50,,,50,,
+Propagation Condition,,"1, 2",AWGN,,,,,
+Antenna Configuration,,"1, 2",1x1,,,1x1,,
+Timing offset to Cell 1,ms,"1, 2",-,,,3,,
+Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,,,

@@ -1,0 +1,14 @@
+Parameter,,Unit,Single antenna port,Transmit diversity
+Uplink downlink configuration (Note 1),,,1,1
+Special subframe configuration (Note 2),,,4,4
+Downlink power allocation,PDCCH_RAPHICH_RAOCNG_RA,dB,0,-3
+,PCFICH_RBPDCCH_RBPHICH_RBOCNG_RB,dB,0,-3
+PHICH duration,,,Normal,Normal
+PHICH Ng (Note 3),,,Ng = 1,Ng = 1
+PDCCH Content,,,UL Grant should be included with the proper information aligned with A.3.6.,
+Unused RE-s and PRB-s,,,OCNG,OCNG
+Cell ID,,,0,0
+at antenna port,,dBm/15kHz,-98,-98
+Cyclic prefix,,,Normal,Normal
+ACK/NACK feedback mode,,,Multiplexing,Multiplexing
+Note 1:as specified in Table 4.2-2 in TS 36.211 [4]Note 2:as specified in Table 4.2-1 in TS 36.211 [4]Note 3:according to Clause 6.9 in TS 36.211 [4],,,,

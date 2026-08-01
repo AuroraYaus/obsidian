@@ -1,0 +1,25 @@
+<table>
+  <tr>
+    <td rowspan="3">Allocation</td>
+    <td colspan="3">Relative power level  [dB]</td>
+    <td rowspan="2">NPDCCH and NPDSCHData</td>
+  </tr>
+  <tr>
+    <td colspan="3">Subframe</td>
+  </tr>
+  <tr>
+    <td>0, 5, 9</td>
+    <td>1, 6Note 5</td>
+    <td>3, 4, 8Note 3</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>0 (Note 2)</td>
+    <td>0</td>
+    <td>0</td>
+    <td>Note 1</td>
+  </tr>
+  <tr>
+    <td colspan="5">Note 1:This physical resource block is assigned to a virtual UE for transmission of NPDCCH or NPDSCH; the data transmitted over the NOCNG NPDCCH or NPDSCH shall be uncorrelated QPSK modulated pseudo random data. The parameter is used to scale the power of NPDCCH and NPDSCH.If two transmit antennas with NBRS are used in the test, the NPDCCH and NPDSCH parts of NOCNG shall be transmitted to the virtual users by both transmit antennas with NBRS and according to the antenna transmission mode 2. The parameter applies to each antenna port separately, so the transmit power of the NPDCCH and NPDSCH parts of NOCNG is equal between both the transmit antennas with NBRS used in the test. The antenna transmission modes are specified in clause 7.1 in TS 36.213.Note 2:Value of is applicable to PRBs not used for transmission of NPSS, NSSS and NPBCH in anchor cell (= 0).Note 3:Subframes available for DL transmission depends on the Uplink-Downlink configuration in Table 4.2-2 in TS 36.211 [16].Note 4:SI transmissions, and NPDCCH and NPDSCH for the UE under test, have precedence over NOCNG.Note 5:Whether NPDSCH transmissions are carried out in DwPTS depends on the special subframe configuration in use.</td>
+  </tr>
+</table>

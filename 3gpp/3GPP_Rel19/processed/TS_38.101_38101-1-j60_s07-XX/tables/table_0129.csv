@@ -1,0 +1,6 @@
+RX parameter,Units,Value,
+Power in LP-WUS transmission BW configuration,dBm,REFSENSLP-WUS3 + 14.0 dB,
+Pinterferer4,dBm,REFSENSLP-WUS3 + ACS4 + 16.0 dB,
+BWinterferer,MHz,3,5
+Finterferer (offset),MHz,3 /- 3,BWChannel /2 + 2.5/-(BWChannel /2 + 2.5)
+NOTE 1:The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 2:The interferer consists of the NR interferer RMC specified in Annexes A.3.2.2 and A.3.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD for the DL-signal as described in Annex A.5.1.1/A.5.2.1.NOTE 3:REFSENSLP-WUS is the value specified in clause 7.3M.2 according to type 1 LR and type 2 LR respectively.NOTE 4:Defined in table 7.5M-1 according to type 1 LR and type 2 LR respectively.|Finterferer|/SCS+0.5SCS,,,

@@ -1,0 +1,7 @@
+,GSMACLR,UTRAACLR
+ACLR,20 dB,37 dB
+Adjacent channel center frequency offsetfrom category NB1 or NB2 Channel edge,±200 kHz,±2.5 MHz
+Adjacent channelmeasurement bandwidth,180 kHz,3.84 MHz
+Measurement filter,Rectangular,RRC-filter α=0.22
+Category NB1 and NB2 channel measurement bandwidth,180 kHz,180 kHz
+Category NB1 and NB2 channel Measurement filter,Rectangular,Rectangular

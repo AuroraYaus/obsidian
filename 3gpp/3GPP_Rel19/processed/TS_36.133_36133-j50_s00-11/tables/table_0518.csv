@@ -1,0 +1,6 @@
+Neighouring cell SCH Ês/Iot: Q2 [dB],Gap pattern ID,Cell identification delay (Tidentify_intra_UE cat M1) for neighbouring cell SCH Ês/Iot (Q): -15≤ Q2 < -6 [dB],Measurement delay (Tmeasure_intra_UE cat M1)
+-15≤ Q2 < -6,0,320.8 * Kinter_M1_EC *  KRSTD_M1_EC s,800 * Kinter _M1_EC *  KRSTD_M1_EC ms Note11600 * Kinter _M1_EC *  KRSTD_M1_EC ms Note2
+,1,321.6 * Kinter_M1_EC s,1600 * Kinter_M1_EC ms Note13200 * Kinter_M1_EC ms Note2
+Q2-6,0,21.8 * Kinter_M1_EC *  KRSTD_M1_EC S,800 * Kinter_M1_EC *  KRSTD_M1_EC ms Note11600 * Kinter_M1_EC *  KRSTD_M1_EC ms Note2
+,1,22.6 * Kinter_M1_EC S,1600 * Kinter_M1_EC ms Note13200 * Kinter_M1_EC ms Note2
+Note 1:Under TDD UL/DL configuration other than 0.Note 2:Under TDD UL/DL configuration 0.,,,

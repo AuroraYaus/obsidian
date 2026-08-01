@@ -1,0 +1,22 @@
+Parameter,Unit,Test configuration,Value,Comment
+NR RF Channel Number,,Config 1,"1, 2, 3",Three FR2 NR carrier frequencies are used.
+Active cell,,Config 1,NR cell 1 (PCell),NR Cell 1 is on NR RF channel number 1.
+1 st Neighbour cell,,Config 1,NR cell 2,NR cell 2 is on NR RF channel number 2.
+2nd Neighbour cell,,Config 1,NR cell 3,NR cell 3 is on NR RF channel number 3.
+Measurement Gap Pattern Id,,Config 1,13,As specified in table 9.1.2-1.
+NCSG Pattern Id,,Config 1,14,As specified in table 9.1.9.3-1.
+Measurement Gap offset,ms,Config 1,39,
+NCSG offset,ms,Config 1,4,
+Measurement Gap priority,,Config 1,2,Second level priority
+NCSG priority,,Config 1,1,Highest priority
+SMTC-SSB parameters,,Config 1,SSB.3 FR2,As specified in clause A.3.10.2
+offsetMO,dB,Config 1,16,Applied to NR Cell 2 and NR Cell 3 measurement objects
+A3-Offset,dB,Config 1,-11,
+Hysteresis,dB,Config 1,0,
+CP length,,Config 1,Normal,
+TimeToTrigger,s,Config 1,0,
+Filter coefficient,,Config 1,0,L3 filtering is not used
+DRX,,Config 1,OFF,DRX is not used
+Time offset between serving and neighbour cells,,Config 1,3s,Synchronous cells.
+T1,s,Config 1,5,
+T2,s,Config 1,11 for PC1 and PC5; 7 for other PC,

@@ -1,0 +1,69 @@
+Duplex,Table,Name,BW,Mod,TCR,RB,RBOffset,UE Categ,Notes
+FDD,Table A.2.2.2.1-1,,1.4 - 20,QPSK,1/3,1,,≥ 1,
+FDD,Table A.2.2.2.1-1,,1.4 - 20,QPSK,1/3,2,,≥ 1,
+FDD,Table A.2.2.2.1-1,,1.4 - 20,QPSK,1/3,3,,≥ 1,
+FDD,Table A.2.2.2.1-1,,1.4 - 20,QPSK,1/3,4,,≥ 1,
+FDD,Table A.2.2.2.1-1,,1.4 - 20,QPSK,1/3,5,,≥ 1,
+FDD,Table A.2.2.2.1-1,,3 - 20,QPSK,1/3,6,,≥ 1,
+FDD,Table A.2.2.2.1-1,,3 - 20,QPSK,1/3,8,,≥ 1,
+FDD,Table A.2.2.2.1-1,,3 - 20,QPSK,1/3,9,,≥ 1,
+FDD,Table A.2.2.2.1-1,,3 - 20,QPSK,1/3,10,,≥ 1,
+FDD,Table A.2.2.2.1-1,,3 - 20,QPSK,1/3,12,,≥ 1,
+FDD,Table A.2.2.2.1-1,,5 - 20,QPSK,1/3,15,,≥ 1,
+FDD,Table A.2.2.2.1-1,,5 - 20,QPSK,1/3,16,,≥ 1,
+FDD,Table A.2.2.2.1-1,,5 - 20,QPSK,1/3,18,,≥ 1,
+FDD,Table A.2.2.2.1-1,,5 - 20,QPSK,1/3,20,,≥ 1,
+FDD,Table A.2.2.2.1-1,,5 - 20,QPSK,1/3,24,,≥ 1,
+FDD,Table A.2.2.2.1-1,,10 - 20,QPSK,1/3,25,,≥ 1,
+FDD,Table A.2.2.2.1-1,,10 - 20,QPSK,1/3,27,,≥ 1,
+FDD,Table A.2.2.2.1-1,,10 - 20,QPSK,1/3,30,,≥ 1,
+FDD,Table A.2.2.2.1-1,,10 - 20,QPSK,1/3,32,,≥ 1,
+FDD,Table A.2.2.2.1-1,,10 - 20,QPSK,1/3,36,,≥ 1,
+FDD,Table A.2.2.2.1-1,,10 - 20,QPSK,1/3,40,,≥ 1,
+FDD,Table A.2.2.2.1-1,,10 - 20,QPSK,1/3,45,,≥ 1,
+FDD,Table A.2.2.2.1-1,,10 - 20,QPSK,1/3,48,,≥ 1,
+FDD,Table A.2.2.2.1-1,,15 - 20,QPSK,1/3,50,,≥ 1,
+FDD,Table A.2.2.2.1-1,,15 - 20,QPSK,1/3,54,,≥ 1,
+FDD,Table A.2.2.2.1-1,,15 - 20,QPSK,1/4,60,,≥ 1,
+FDD,Table A.2.2.2.1-1,,15 - 20,QPSK,1/4,64,,≥ 1,
+FDD,Table A.2.2.2.1-1,,15 - 20,QPSK,1/4,72,,≥ 1,
+FDD,Table A.2.2.2.1-1,,20,QPSK,1/5,75,,≥ 1,
+FDD,Table A.2.2.2.1-1,,20,QPSK,1/5,80,,≥ 1,
+FDD,Table A.2.2.2.1-1,,20,QPSK,1/5,81,,≥ 1,
+FDD,Table A.2.2.2.1-1,,20,QPSK,1/6,90,,≥ 1,
+FDD,Table A.2.2.2.1-1,,20,QPSK,1/6,96,,≥ 1,
+FDD / HD-FDD,Table A.2.2.2.1-1a,,1.4 - 20,QPSK,1/3,1,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,1.4 - 20,QPSK,1/3,2,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,1.4 - 20,QPSK,1/3,3,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,1.4 - 20,QPSK,1/3,4,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,1.4 - 20,QPSK,1/3,5,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,3-20,QPSK,1/3,6,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,3-20,QPSK,1/3,8,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,3-20,QPSK,1/3,9,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,3-20,QPSK,1/3,10,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,3-20,QPSK,1/4,12,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,5-20,QPSK,1/5,15,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,5-20,QPSK,1/5,16,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,5-20,QPSK,1/6,18,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,5-20,QPSK,1/6,20,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,5-20,QPSK,1/8,24,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,10-20,QPSK,1/8,25,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,10-20,QPSK,1/8,27,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1a,,10-20,QPSK,1/10,30,,-,UE UL category 0
+FDD / HD-FDD,Table A.2.2.2.1-1b,,1.4-20,QPSK,1/3,1,,-,UE UL category M1
+FDD / HD-FDD,Table A.2.2.2.1-1b,,1.4-20,QPSK,1/3,2,,-,UE UL category M1
+FDD / HD-FDD,Table A.2.2.2.1-1b,,1.4-20,QPSK,1/3,3,,-,UE UL category M1
+FDD / HD-FDD,Table A.2.2.2.1-1b,,1.4-20,QPSK,1/3,4,,-,UE UL category M1
+FDD / HD-FDD,Table A.2.2.2.1-1b,,1.4-20,QPSK,1/3,5,,-,UE UL category M1
+FDD / HD-FDD,Table A.2.2.2.1-1b,,3-20,QPSK,1/3,6,,-,UE UL category M1
+FDD / HD-FDD,Table A.2.2.2.1-1c,,1.4-20,QPSK,1/3,1,,-,UE UL category M2
+FDD / HD-FDD,Table A.2.2.2.1-1c,,1.4-20,QPSK,1/3,2,,-,UE UL category M2
+FDD / HD-FDD,Table A.2.2.2.1-1c,,1.4-20,QPSK,1/3,3,,-,UE UL category M2
+FDD / HD-FDD,Table A.2.2.2.1-1c,,1.4-20,QPSK,1/3,4,,-,UE UL category M2
+FDD / HD-FDD,Table A.2.2.2.1-1c,,1.4-20,QPSK,1/3,5,,-,UE UL category M2
+FDD / HD-FDD,Table A.2.2.2.1-1c,,3-20,QPSK,1/3,6,,-,UE UL category M2
+FDD / HD-FDD,Table A.2.2.2.1-1c,,3-20,QPSK,1/3,9,,-,UE UL category M2
+FDD / HD-FDD,Table A.2.2.2.1-1c,,3-20,QPSK,1/3,12,,-,UE UL category M2
+FDD / HD-FDD,Table A.2.2.2.1-1c,,5-20,QPSK,1/3,15,,-,UE UL category M2
+FDD / HD-FDD,Table A.2.2.2.1-1c,,5-20,QPSK,1/3,18,,-,UE UL category M2
+FDD / HD-FDD,Table A.2.2.2.1-1c,,5-20,QPSK,1/3,21,,-,UE UL category M2

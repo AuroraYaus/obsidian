@@ -1,0 +1,110 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Value</td>
+  </tr>
+  <tr>
+    <td colspan="2">Transform precoding</td>
+    <td>Disabled</td>
+  </tr>
+  <tr>
+    <td colspan="2">Uplink-downlink allocation for TDD</td>
+    <td>15 kHz SCS:3D1S1U, S=10D:2G:2U30 kHz SCS:7D1S2U, S=6D:4G:4U</td>
+  </tr>
+  <tr>
+    <td colspan="2">Channel bandwidth</td>
+    <td>15 kHz SCS: 5Mhz, 10 MHz30 kHz SCS: 10MHz, 40 MHz</td>
+  </tr>
+  <tr>
+    <td colspan="2">MCS</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td>HARQ</td>
+    <td>Maximum number of HARQ transmissions</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RV sequence</td>
+    <td>0, 2, 3, 1</td>
+  </tr>
+  <tr>
+    <td>DM-RS</td>
+    <td>DM-RS configuration type</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>DM-RS duration</td>
+    <td>single-symbol DM-RS</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>DM-RS position (l0)</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Additional DM-RS position</td>
+    <td>pos2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Number of DM-RS CDM group(s) without data</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Ratio of PUSCH EPRE to DM-RS EPRE</td>
+    <td>-3 dB</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>DM-RS port</td>
+    <td>{0}</td>
+  </tr>
+  <tr>
+    <td>Time domain resource assignment</td>
+    <td>DM-RS sequence generation</td>
+    <td>NID0=0, nSCID =0 for moving UENID0=1, nSCID =1 for stationary UE</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>PUSCH mapping type</td>
+    <td>Both A and B</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Allocation length</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td>Frequency domain resource assignment</td>
+    <td>RB assignment</td>
+    <td>5 MHz CBW/15kHz SCS: 12 RB for each UE10MHz CBW/15kHz SCS: 25 RB for each UE10MHz CBW/30kHz SCS: 12 RB for each UE40MHz CBW/30kHz SCS: 50 RB for each UE</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Starting PRB index</td>
+    <td>Moving UE: 0 Stationary UE: 12 for 5MHz, 25 for 10 MHz CBW for SCS 15kHz, and 12 for 10MHz, 50 for 40 MHz CBW for SCS 30kHz</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Frequency hopping</td>
+    <td>Disabled</td>
+  </tr>
+  <tr>
+    <td>SRS resource allocation</td>
+    <td>Slots in which sounding RS is transmitted (Note 1)</td>
+    <td>For FDD: slot #1 in radio framesFor TDD: -last symbol in slot #3  in radio frames for 15KHz-last symbol in slot #7  in radio frames for 30KHz</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>SRS resource allocation</td>
+    <td>15 kHz SCS: CSRS = 5, BSRS =0, for 20 RBCSRS = 11, BSRS =0, for 40 RB30 kHz SCS: CSRS =5, BSRS =0, for 20 RBCSRS = 21, BSRS =0, for 80 RB</td>
+  </tr>
+  <tr>
+    <td colspan="3">NOTE 1.The transmission of SRS is optional. And the transmission comb and SRS periodicity are configured as KTC = 2, and TSRS = 10 for 15 kHz SCS, TSRS = 20 for 30 kHz SCS respectively.</td>
+  </tr>
+</table>

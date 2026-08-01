@@ -1,0 +1,16 @@
+Parameter,Unit,Config,Value,Comment
+Active cell,,1,PCell (Cell 1),
+Neighbour cell,,1,Cell 2,Cell to be identified.
+RF Channel Number,,1,1: Cell 1 and Cell 2,One TDD carrier frequency is used for the NR cells.
+SMTC configuration,,1,SMTC.1,20 ms SMTC periodicity
+Measurement gap pattern,,1,13,Half of the SMTC occasions are overlapped in MG.
+Measurement gap offset,,1,39,
+A3-Offset,dB,1,-11,
+CP length,,1,Normal,
+Hysteresis,dB,1,0,
+Time To Trigger,s,1,0,
+Filter coefficient,,1,0,L3 filtering is not used
+DRX,,1,OFF,
+Time offset between Cell 1 and Cell 2,,1,3 s,Synchronous cells
+T1,s,1,5,
+T2,s,1,5,

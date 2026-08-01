@@ -1,0 +1,64 @@
+Parameter,,Unit,Cell 3
+Frequency Range,,,FR1
+Duplex mode,ConfigSCell 1,,FDD
+,"ConfigSCell 2,3",,TDD
+TDD configuration,ConfigSCell 1,,Not Applicable
+,ConfigSCell 2,,TDDConf.1.1
+,ConfigSCell 3,,TDDConf.2.1
+BWchannel,ConfigSCell 1,,Note 8
+,ConfigSCell 2,,Note 8
+,ConfigSCell 3,,Note 8
+BWoccupied,ConfigSCell 1,RB,52 Note 6
+,ConfigSCell 2,,52 Note 6
+,ConfigSCell 3,,106 Note 7
+Initial BWP Configuration,ConfigSCell 1,,DLBWP.0.1
+,ConfigSCell 2,,DLBWP.0.1
+,ConfigSCell 3,,DLBWP.0.1
+Dedicated DL BWP Configuration,ConfigSCell 1,,DLBWP.1.1
+,ConfigSCell 2,,DLBWP.1.1
+,ConfigSCell 3,,DLBWP.1.1
+Initial UL BWP Configuration,ConfigSCell 1,,ULBWP.0.1
+,ConfigSCell 2,,ULBWP.0.1
+,ConfigSCell 3,,ULBWP.0.1
+Dedicated UL BWP Configuration,ConfigSCell 1,,ULBWP.1.1
+,ConfigSCell 2,,ULBWP.1.1
+,ConfigSCell 3,,ULBWP.1.1
+PDSCH Reference measurement channel,ConfigSCell 1,,-
+,ConfigSCell 2,,-
+,ConfigSCell 3,,-
+RMSI CORESET parameters,ConfigSCell 1,,CR.1.1 FDD
+,ConfigSCell 2,,CR.1.1 TDD
+,ConfigSCell 3,,CR.2.1 TDD
+PDCCH CORESET parameters,ConfigSCell 1,,CCR.1.1 FDD
+,ConfigSCell 2,,CCR.1.1 TDD
+,ConfigSCell 3,,CCR.2.1 TDD
+TRS configuration,ConfigSCell 1,,TRS.1.1 FDD
+,ConfigSCell 2,,TRS.1.1 TDD
+,ConfigSCell 3,,TRS.1.2 TDD
+OCNG Patterns,"ConfigSCell 1,2",,OP.1 Note 6
+,ConfigSCell 3,,OP.1 Note 7
+SSB Configuration,"ConfigSCell 1,2",,SSB.1 FR1
+,ConfigSCell 3,,SSB.2 FR1
+SMTC Configuration,,,SMTC.1
+TCI state,,,TCI.State.0
+Correlation Matrix and Antenna Configuration,,,1x2 Low
+EPRE ratio of PSS to SSS,,dB,0
+EPRE ratio of PBCH DMRS to SSS,,,
+EPRE ratio of PBCH to PBCH DMRS,,,
+EPRE ratio of PDCCH DMRS to SSS,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,
+EPRE ratio of PDSCH DMRS to SSS,,,
+EPRE ratio of PDSCH to PDSCH,,,
+EPRE ratio of OCNG DMRS to SSS Note 1,,,
+EPRE ratio of OCNG to OCNG DMRS Note 1,,,
+NocNote 2,,dBm/15 kHz,-104
+SS-RSRP Note 3,,dBm/15 kHz,-87
+Ês/Iot,,dB,17
+Ês/Noc,,dB,17
+IoNote3,"ConfigSCell 1,2",dBm/ 9.36 MHz,-58.96
+,ConfigSCell 3,dBm/ 38.16 MHz,-52.86
+Time offset to Cell 1 Note 4,"ConfigSCell 1,2",s,500 + Time offset to Cell 2
+,ConfigSCell 3,,250 + Time offset to Cell 2
+Time offset to Cell 2 Note 5,,s,3
+Propagation Condition,,,AWGN
+"NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modeled as AWGN of appropriate power for Noc to be fulfilled within BWoccupied.NOTE 3:SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4:Receive time difference of signals received between subframe timing boundary of E-UTRA PCell and slot timing boundary of PSCell at the UE antenna connector including time alignment error between the two cellsNOTE 5:Receive time difference between slot boundaries of signals received from the two cells at the UE antenna connector including time alignment error between the two cells.NOTE 6:All UL/DL transmission shall be confined within BWoccupied (i.e. 10 MHz, 52 RBs) from FC,low, and Io is independent of the BWchannel configured.NOTE 7:All UL/DL transmission shall be confined within BWoccupied (i.e. 40 MHz, 106 RBs) from FC,low, and Io is independent of the BWchannel configured.NOTE 8:NRB,c. is derived from Table 5.3.2-1 in TS 38.101-1[18] with configured BWchannel.",,,

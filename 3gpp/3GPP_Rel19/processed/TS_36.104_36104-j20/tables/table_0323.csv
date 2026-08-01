@@ -1,0 +1,13 @@
+Reference channel,A18-1,A18-2,A18-3,A18-4,A18-5,A18-6
+Allocated resource blocks,6,15,25,50,75,100
+DFT-OFDM Symbols in UpPTS,5,5,5,5,5,5
+Modulation,16QAM,16QAM,16QAM,16QAM,16QAM,16QAM
+Code rate,0.65,0.65,0.65,0.65,0.65,0.65
+Payload size (bits) (Note 1),840,2152,3880,7736,12216,15840
+Transport block CRC (bits),24,24,24,24,24,24
+Code block CRC size (bits),0,0,24,24,24,24
+Number of code blocks - C,1,1,1,2,2,3
+Coded block size including 12bits trellis termination (bits),2604,6540,17724,11724,18516,15948
+Total number of bits in UpPTS,1440,3600,6000,12000,18000,24000
+Total symbols in UpPTS,360,900,1500,3000,4500,6000
+"Note 1:for special subframe configuration with more than 3 UpPTS SC-FDMA data symbols, the UE shall determine the TBS using .",,,,,,

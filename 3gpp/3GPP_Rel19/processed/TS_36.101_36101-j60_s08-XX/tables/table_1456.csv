@@ -1,0 +1,5 @@
+Test num.,Band-width,Sidelink UE,Reference channel,Reference value,
+,,,,BLER of PSDCH (%)NOTE 1,SNR (dB)
+1,5 MHz,2,D.1 FDD,30,4.6
+,,3,D.1 FDD,30,4.6
+NOTE 1: The BLER is measured after 5 D2D Discovery periods (1600 frames) of lead time during which the test UE detects and synchronizes to Sidelink UE 1 SLSS.,,,,,

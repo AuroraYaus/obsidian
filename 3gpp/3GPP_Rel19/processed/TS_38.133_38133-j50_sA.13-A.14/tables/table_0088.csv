@@ -1,0 +1,31 @@
+Parameter,Unit,Test configuration,Cell 1,,Cell 2,,
+,,,T1,T2,T1,,T2
+Satellite information,,1,SSC.1,,NSC.1,,
+,,,,,,,
+PDSCH RMC  configuration,,1,SR.1.1 FDD,,SR.1.1 FDD,,
+RMSI CORESET  RMC configuration,,1,CR.1.1 FDD,,CR.1.1 FDD,,
+Dedicated CORESET  RMC configuration,,1,CCR.1.1 FDD,,CCR.1.1 FDD,,
+OCNG Pattern,,1,OP.1 defined in A.3.2.1,,OP.1 defined in A.3.2.1,,
+Initial DL BWP configuration,,1,DLBWP.0.1,,DLBWP.0.1,,
+Initial UL BWP configuration,,1,ULBWP.0.1,,ULBWP.0.1,,
+RLM-RS,,1,SSB,,SSB,,
+Qrxlevmin,dBm/SCS,1,-140,,-140,,
+Pcompensation,dB,1,0,,0,,
+Qhysts,dB,1,0,,0,,
+"Qoffsets, n",dB,1,0,,0,,
+Cell_selection_and_reselection_quality_measurement,,1,SS-RSRP,,SS-RSRP,,
+,dB,1,14,14,-4,12,
+Note2,dBm/SCS,1,-98,,,,
+Note2,dBm/15 kHz,1,-98,,,,
+,dB,1,14,14,-4,,12
+SS-RSRP Note3,dBm/SCS,1,-84,-84,-102,,-86
+Io,dBm/9.36 MHz,1,-55.88,-55.88,-68.60,,-57.78
+Treselection,s,1,0,0,0,,0
+SnonintersearchP,dB,1,Not sent,,Not sent,,
+"Threshx, highP",dB,1,48,,48,,
+"Threshserving, lowP",dB,1,44,,44,,
+"Threshx, lowP",dB,1,50,,50,,
+SSearchDeltaP,dB,1,3,,3,,
+TSearchDeltaP,s,1,5,,5,,
+Propagation Condition,,1,AWGN,,,,
+NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,,

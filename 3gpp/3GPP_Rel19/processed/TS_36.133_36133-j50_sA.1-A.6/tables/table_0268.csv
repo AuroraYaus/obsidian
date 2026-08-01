@@ -1,0 +1,22 @@
+Parameter,Unit,Cell 2 (UTRA),,,
+,,T1,T2,T3,T4
+UTRA RF Channel Number,,Channel 2,,,
+CPICH_Ec/Ior,dB,-10,,,
+PCCPCH_Ec/Ior,dB,-12,,,
+SCH_Ec/Ior,dB,-12,,,
+PICH_Ec/Ior,dB,-15,,,
+OCNS_Ec/Ior,dB,-0.941,,,
+,dB,13,13,13,13
+,"dBm/3,84 MHz",70,,,
+CPICH_Ec/Io,dB,-10.21,-10.21,-10.21,-10.21
+CPICH_RSCP,dBm,-67,-67,-67,-67
+Propagation Condition,,AWGN,,,
+Qqualmin,dB,-20,,,
+Qrxlevmin,dBm,-115,,,
+QrxlevminEUTRA,dBm,-140,,,
+UE_TXPWR_MAX_RACH,dBm,21,,,
+Treselection,s,0,,,
+Sprioritysearch1,dB,42,,,
+Sprioritysearch2,dB,0,,,
+"Threshx, high (Note 1)",dB,44,,,
+"Note 1 : This refers to the value of  Threshx, high  which is included in UTRA system information, and is a threshold for the E-UTRA target cell",,,,,

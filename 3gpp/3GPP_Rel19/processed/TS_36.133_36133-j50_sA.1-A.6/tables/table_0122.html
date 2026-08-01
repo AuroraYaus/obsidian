@@ -1,0 +1,65 @@
+<table>
+  <tr>
+    <td colspan="4">Derivation Path: TS 36.331 [3] clause 9.3.2, SL-V2X-Preconfiguration</td>
+  </tr>
+  <tr>
+    <td>Information Element</td>
+    <td>Value/remark</td>
+    <td>Comment</td>
+    <td>Condition</td>
+  </tr>
+  <tr>
+    <td>SL-V2X-PreconfigCommPool-r14 ::= SEQUENCE {</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>sl-OffsetIndicator-r14</td>
+    <td>0</td>
+    <td>Indicates the offset of the first subframe of a resource pool within a SFN cycle. If absent, the resource pool starts from first subframe of SFN=0.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>sl-Subframe-r14 included in SL-PreconfigV2X-TxPoolList</td>
+    <td>1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</td>
+    <td>Indicates the bitmap of the TX resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 36.213 [23])</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>sl-Subframe-r14 included in SL-PreconfigV2X-RxPoolList</td>
+    <td>1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</td>
+    <td>Indicates the bitmap of the RX resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 36.213 [23])</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>adjacencyPSCCH-PSSCH-r14</td>
+    <td>True</td>
+    <td>Adjacent: TURENon-adjacent: FALSE</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>sizeSubchannel-r14</td>
+    <td>5</td>
+    <td>Minimum bandwidth of subchannel for adjacent transmission</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>startRB-Subchannel-r14</td>
+    <td>0</td>
+    <td>Indicates the lowest RB index of the subchannel with the lowest index.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>startRB-PSCCH-Pool-r14</td>
+    <td>0</td>
+    <td>Indicates the lowest RB index of the PSCCH pool</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>}</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>

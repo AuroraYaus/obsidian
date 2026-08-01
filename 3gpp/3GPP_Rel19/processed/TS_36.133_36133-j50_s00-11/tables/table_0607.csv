@@ -1,0 +1,6 @@
+measGapSharingScheme,Value of X (%)
+‘00’,Equal splitting
+‘01’,25
+‘10’,50
+‘11’,75
+"Note: It is left to UE implementation to determine which measurement gap sharing scheme in the table to be applied, when MeasGapSharingScheme is absent and there is no stored value in the field.",

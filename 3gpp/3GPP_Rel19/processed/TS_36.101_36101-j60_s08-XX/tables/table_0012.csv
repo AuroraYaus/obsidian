@@ -1,0 +1,8 @@
+CA capability,Bandwidth combination for FDD CA,Bandwidth combination for TDD CA,Bandwidth combination for TDD-FDD CA,Bandwidth combination for CA with LAA SCell(s)
+CA7_C,NA,NA,NA,NA
+CA7_A2,NA,7×20MHz,20(FDD)+6x20(TDD)MHz2x20(FDD)+5x20(TDD)MHz,"10(FDD)+ 6×20(LAA)MHz,15(FDD)+ 6×20(LAA)MHz,20(FDD)+ 6×20(LAA)MHz,20(TDD)+ 6×20(LAA)MHz"
+CA7_A3,NA,NA,20(FDD)+6x20(TDD)MHz2x20(FDD)+5x20(TDD)MHz,NA
+CA7_A4,7×20MHz,NA,20(FDD)+6x20(TDD)MHz2x20(FDD)+5x20(TDD)MHz,NA
+CA7_A5,NA,NA,NA,NA
+CA7_N2,NA,NA,NA,NA
+NOTE 1:This table is only for information and applicability and test rules of CA performance requirements are specified in 8.1.2.3 and 9.1.1.2.,,,,

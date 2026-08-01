@@ -1,0 +1,45 @@
+Parameter,,,Unit,Test 1,,Test 2,
+,,,,Cell 2,Cell 3,Cell 2,Cell 3
+SSB ARFCN,,,,freq1,freq2,freq1,freq2
+Duplex mode,,"Config 1, 2",,TDD,,,
+TDD configuration,,"Config 1, 2",,TDDConf.1.1 CCA,,,
+BWchannel,,"Config 1, 2",,"40: NRB,c = 106",,,
+BWP BW,,"Config 1, 2",MHz,"40: NRB,c = 106",,,
+Gap pattern ID,,,,0,,,
+DRX Cycle,,,ms,Not Applicable,,,
+PDSCH Reference measurement channel,,"Config 1, 2",,SR.1.1 CCA,,SR.1.1 CCA,
+RMSI CORESET Reference Channel,,"Config 1, 2",,CR.1.1 CCA,,CR.1.1 CCA,
+Dedicated CORESET Reference Channel,,"Config 1, 2",,CCR.1.1 CCA,,CCR.1.1 CCA,
+TRS configuration,,"Config 1, 2",,TRS.1.2 TDD,,TRS.1.2 TDD,
+OCNG Patterns,,,,OCNG pattern 1,,,
+Time offset with Cell 2,,"Config 1, 2",s,-,3,-,3
+SMTC configuration,,"Config 1, 2",,SMTC.1,,,
+SSB configuration,Semi-static channel access,"Config 1, 2",,SSB.1 CCA (As defined in A.3.10A),,,
+,Dynamic channel access,,,SSB.2 CCA (As defined in A.3.10A),,,
+DBT Window Configuration,,"Config 1, 2",,DBT.1(As defined in A.3.28.1),,,
+DL CCA model,,"Config 1, 2",,As specified in clause A.3.26.2.1,,,
+UL CCA model,,"Config 1, 2",,As specified in clause A.3.26.2.2,,,
+PDSCH/PDCCH subcarrier spacing,,"Config 1, 2",kHz,30 kHz,,,
+EPRE ratio of PSS to SSS,,,dB,0,0,0,0
+EPRE ratio of PBCH DMRS to SSS,,,,,,,
+EPRE ratio of PBCH to PBCH DMRS,,,,,,,
+EPRE ratio of PDCCH DMRS to SSS,,,,,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,,,,,
+EPRE ratio of PDSCH DMRS to SSS,,,,,,,
+EPRE ratio of PDSCH to PDSCH,,,,,,,
+EPRE ratio of OCNG DMRS to SSS(Note 1),,,,,,,
+EPRE ratio of OCNG to OCNG DMRS (Note 1),,,,,,,
+Note2,"Config 1, 2",NR_CCA_FR1_I,dBm/15kHz,-86.27,-86.27,-112,-112
+,,NR_CCA_FR1_J,,,,-111.5,-111.5
+Note2,"Config 1, 2",NR_CCA_FR1_I,dBm/SCS,-83.27,-83.27,-109,-109
+,,NR_CCA_FR1_J,,,,-108.5,-108.5
+,,,dB,-1.75,-1.75,3,-1.75
+,,,dB,-1.75,-1.75,3,-1.75
+SS-RSRPNote3,"Config 1, 2",NR_CCA_FR1_I,dBm/SCS,-85.02,-85.02,-106,-110.75
+,,NR_CCA_FR1_J,,,,-105.5,-110.25
+SS-RSRQ Note3,,NR_CCA_FR1_I,dB,-14.77,-14.77,-12.56,-14.76
+,,NR_CCA_FR1_J,,,,,
+IoNote3,"Config 1, 2",NR_CCA_FR1_I,dBm/38.16MHz,-50,-50,-73.19,-75.23
+,,NR_CCA_FR1_J,,,,-72.69,-74.73
+Propagation condition,,,,AWGN,AWGN,AWGN,AWGN
+"Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:SS-RSRQ, SS-RSRP, and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:SS-RSRQ, SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.Note 5:NR operating band groups are as defined in Section 3.5.2.Note 6:      For UE supporting both semi-static and dynamic cannel access, the UE must be tested under both dynamic and semi-static channel occupancy configurations.",,,,,,,

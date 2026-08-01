@@ -1,0 +1,24 @@
+Parameter,,Unit,Test 1
+Communication resource pool configuration,,,As specified in Table A.7.2.1-1(Configuration #1-FDD)
+at antenna port (NOTE 1),,dBm/15kHz,-98
+Active cell(s),,,None
+Sidelink UE 1,Sidelink Transmissions,,SLSS + PSBCH
+,networkControlledSyncTx,,ON
+,slssid,,30
+,inCoverage (in MIB-SL),,FALSE
+,syncOffsetIndicator,,Set same as syncOffsetIndicator1 in Configuration #1-FDD
+,Propagation channel,,EPA5
+,Antenna configuration,,1x2 Low
+,at antenna port,dBm/15kHz,-85
+Sidelink UE 2,Sidelink Transmissions,,PSCCH + PSSCH
+,PSCCH RMC,,As specified in Table 12.3.1-2
+,PSCCH subframe allocation,,As defined by TS 36.213 with  chosen randomly (uniformly) in every sc-period
+,PSCCH RB allocation,,
+,PSSCH RMC,,CD.1 FDD
+,PSSCH subframe allocation,,As per time repetition pattern specified in PSCCH
+,PSSCH RB allocation,,First transmission: Chosen randomly (uniformly) among the allowed RBs as per TS36.213HARQ retransmission: As per frequency hopping indicated in PSCCH and specified in TS36.213
+,Time offset (NOTE 2),s,+1
+,Frequency offset (NOTE 3),Hz,+200
+,Propagation Channel,,EVA70
+,Antenna configuration,,1x2 Low
+NOTE 1: Applicable to both DL channel and ProSe Direct Communication Subframes on UL.NOTE 2: Time offset of Sidelink UE 2 receive signal timing with respect to Sidelink UE 1 receive signal timing at the tested UE.NOTE 3: Frequency offset of Sidelink UE 2 with respect to Sidelink UE 1 transmit frequency.,,,

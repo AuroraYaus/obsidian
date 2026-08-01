@@ -1,0 +1,73 @@
+Parameter,,,,Unit,Value,Comment
+,,,,,Test 1,
+Active PCell,,,,,Cell 1,
+E-UTRA RF Channel Number,,,,,1,
+Active PSCell,,,,,Cell 2,
+RF Channel Number for PSCell,,,,,2,
+Active SCell,,,,,Cell 3,
+RF Channel Number for SCell,,,,,3,
+Duplex mode,,,"Config 1, 4",,FDD,
+,,,"Config 2, 3, 5, 6",,TDD,
+BWchannel,,,"Config 1, 4",,"10: NRB,c = 52",
+,,,"Config 2, 5",MHz,"10: NRB,c = 52",
+,,,"Config 3, 6",,"40: NRB,c = 106",
+DL initial BWP configuration,,,"Config 1, 2, 3, 4, 5, 6",,DLBWP.0.1,
+DL dedicated BWP configuration,,,"Config 1, 2, 3, 4, 5, 6",,DLBWP.1.1,
+UL initial BWP configuration,,,"Config 1, 2, 3, 4, 5, 6",,ULBWP.0.1,
+UL dedicated BWP configuration,,,"Config 1, 2, 3, 4, 5, 6",,ULBWP.1.1,
+TDD Configuration,,,"Config 1, 4",,Not Applicable,
+,,,"Config 2, 5",,TDDConf.1.1,
+,,,"Config 3, 6",,TDDConf.2.1,
+CORESET Reference,,,"Config 1, 4",,CR.1.1 FDD,A.3.1.2
+Channel,,,"Config 2, 5",,CR.1.1 TDD,
+,,,"Config 3, 6",,CR.2.1 TDD,
+SSB Configuration,,,"Config 1, 4",,SSB.1 FR1,A.3.10
+,,,"Config 2, 5",,SSB.1 FR1,
+,,,"Config 3, 6",,SSB.2 FR1,
+SMTC Configuration,,,"Config 1, 2, 3, 4, 5, 6",,SMTC.1,A.3.11
+PDSCH/PDCCH subcarrier spacing,,,"Config 1, 2, 4, 5",kHz,15,
+,,,"Config 3, 6",,30,
+PRACH Configuration,,,"Config 1, 2, 4, 5",,Table A.3.8.2.2-1,
+,,,"Config 3, 6",,Table A.3.8.2.2-1,
+csi-RS-Index assigned as beam failure detection RS in set q0 in activated SCell,,,,,0,
+OCNG parameters,,,,,OP.1,A.3.2.1
+CP length,,,,,Normal,
+Correlation Matrix and Antenna Configuration,,,,,2x2 Low,
+Beam failure detection,,,DCI format,,1-0,
+transmission parameters,,,Number of Control OFDM symbols,,2,
+,,,Aggregation level,CCE,8,
+,,,Ratio of hypothetical PDCCH RE energy to average CSI-RS RE energy,dB,0,
+,,,Ratio of hypothetical PDCCH DMRS energy to average CSI-RS RE energy,dB,0,
+,,,DMRS precoder granularity,,REG bundle size,
+,,,REG bundle size,,6,
+DRX,,,,,DRX.7,A.3.3.7
+Gap pattern ID,,,,,N.A.,
+schedulingRequestID-BFR-SCell-r16,,,,,absent,"When the field is absent, the random access procedure will be triggered for SCell BFR"
+SSB Index assigned as CBD RS (q1) in activated SCell,,,,,1,
+rlmInSyncOutOfSyncThreshold,,,,,absent,"When the field is absent, the UE applies the value 0. (Table 8.1.1-1)."
+rsrp-ThresholdBFR,"Config 1, 2, 4, 5",,,dBm/SCS,-98,Threshold used
+,"Config 3, 6",,,,-95,for Qin_LR_SSB
+powerControlOffsetSS,,,,,db0,Used for deriving rsrp-ThresholdCSI-RS
+beamFailureInstanceMaxCount,,,,,n1,"see TS 38.321 [7], clause 5.17"
+beamFailureDetectionTimer,,,,,pbfd4,"see TS 38.321 [7], clause 5.17"
+CSI-RS configuration for q0 in activated SCell,,"Config 1, 4",,,CSI-RS.1.2 FDD,A.3.14
+,,"Config 2, 5",,,CSI-RS.1.2 TDD,
+,,"Config 3, 6",,,CSI-RS.2.2 TDD,
+CSI-RS configuration for CSI reporting,,"Config 1, 4",,,CSI-RS.1.1 FDD,A.3.14
+,,"Config 2, 5",,,CSI-RS.1.1 TDD,
+,,"Config 3, 6",,,CSI-RS.2.1 TDD,
+TRS configuration,,"Config 1, 4",,,TRS.1.1 FDD,
+,,"Config 2, 5",,,TRS.1.1 TDD,
+,,"Config 3, 6",,,TRS.1.2 TDD,
+csi-RS-Index assigned as RLM RS in PSCell,,"Config 1, 4",,,CSI-RS.1.2 FDD,A.3.14
+,,"Config 2, 5",,,CSI-RS.1.2 TDD,
+,,"Config 3, 6",,,CSI-RS.2.2 TDD,
+T310 Timer,,,,ms,1000,
+N310,,,,,2,
+T1,,,,s,1,During this time the the UE shall be fully synchronized to cell 1
+T2,,,,s,8.37,
+T3,,,,s,6.44,
+T4,,,,s,0,
+T5,,,,s,1.97,
+D1,,,,s,1.93,
+NOTE 1:UE-specific PDCCH is not transmitted after T1 starts.,,,,,,

@@ -1,0 +1,8 @@
+,NR Slot length (ms),X (slots),Interruption length (slots),
+0,1,1,"2 + TSMTC_duration * Nslotsubframe,μ",
+1,0.5,1,"2 + TSMTC_duration * Nslotsubframe,μ",
+2,0.25,2,"4 + TSMTC_duration * Nslotsubframe,μ",
+3,0.125,4,"8 + TSMTC_duration * Nslotsubframe,μ",
+5,0.03125,16,"32 + TSMTC_duration * Nslotsubframe,μ",
+6,0.015625,32,"64 + TSMTC_duration * Nslotsubframe,μ",
+"NOTE 1:TSMTC_duration measured in subframes is the longest SMTC duration among all above active serving cells and the deactivated SCell to be measured i;If UE does not receive SCell activation command before the end of FMW, TSMTC duration is x ms where x = the number of consecutive subframes in one OD-SSB burstNOTE 2: is as defined in TS 38.211 [6].Nslotsubframe,μ",,,,

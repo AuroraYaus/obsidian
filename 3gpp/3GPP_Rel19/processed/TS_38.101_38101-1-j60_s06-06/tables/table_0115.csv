@@ -1,0 +1,12 @@
+Modulation,,MPR for bandwidth class C(dB),,
+,,Inner,Outer11,Outer22
+DFT-s-OFDM,Pi/2 BPSK,4.5,9,16
+,QPSK,4.5,9,
+,16QAM,4.5,9,
+,64QAM,6.5,9,
+,256QAM,8,9,
+CP-OFDM,QPSK,5,9.5,16.5
+,16QAM,5,9.5,
+,64QAM,6.5,9.5,
+,256QAM,9,9.5,
+NOTE 1: Outer 1 MPR for Pi/2 BPSK and QPSK is reduced by 2dB for aggregated allocation bandwidth > 10MHz NOTE 2: Outer 2 MPR is reduced by 4.5dB for aggregated allocation bandwidth > 10MHzNOTE 3: UE indicating TxD supportedNOTE 4: This table is targeted to large FWA form factor with 20 dB or above antenna isolation.,,,,

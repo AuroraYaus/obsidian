@@ -1,0 +1,19 @@
+Channel bandwidth,Power in transmission bandwidth configuration [dBm]
+3 MHz,REFSENS + 6.0 dB
+5 MHz,REFSENS + 6.0 dB
+7 MHz,REFSENS + 6.0 dB
+10 MHz,REFSENS + 6.0 dB
+15 MHz,REFSENS + 7.0 dB
+20 MHz,REFSENS + 9.0 dB
+25 MHz,REFSENS + 10.0 dB
+30 MHz,REFSENS + 11.0 dB
+35 MHz,REFSENS + 11.5 dB
+40 MHz,REFSENS + 12.0 dB
+45 MHz,REFSENS + 12.5 dB
+50 MHz,REFSENS + 13.0 dB
+60 MHz,REFSENS + 14.0 dB
+70 MHz,REFSENS + 14.5 dB
+80 MHz,REFSENS + 15.0 dB
+90 MHz,REFSENS + 15.5 dB
+100 MHz,REFSENS + 16.0 dB
+"NOTE: The transmitter shall be set to 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4.",

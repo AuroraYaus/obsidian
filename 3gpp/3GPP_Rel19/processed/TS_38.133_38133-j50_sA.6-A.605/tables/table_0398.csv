@@ -1,0 +1,60 @@
+Parameter,,Unit,Cell 2,
+,,,T1,T2
+Duplex mode,ConfigSCell 1,,FDD,
+,"ConfigSCell 2,3",,TDD,
+TDD configuration,ConfigSCell 2,,TDDConf.1.1,
+,ConfigSCell 3,,TDDConf.2.1,
+BWchannel,"ConfigSCell 1,2",MHz,"10: NPRB,c = 52",
+,ConfigSCell 3,,"40: NPRB,c = 106",
+BWP configuration,Initial DL,,N/A,DLBWP.0.1
+,Initial UL,,,N/A
+,Dedicated DL,,,DLBWP.1.1
+,Dedicated UL,,,N/A
+TCI state,,,N/A,TCI.State.0
+CSI-RS configuration for CSI reporting,ConfigSCell 1,,N/A,CSI-RS.1.1 FDD
+,ConfigSCell 2,,,CSI-RS.1.1 TDD
+,ConfigSCell 3,,,CSI-RS.2.1 TDD
+TRS Configuration,ConfigSCell 1,,N/A,TRS.1.1 FDD
+,ConfigSCell 2,,,TRS.1.1 TDD
+,ConfigSCell 3,,,TRS.1.2 TDD
+PDSCH Reference measurement channel,ConfigSCell 1,,N/A,SR.1.1 FDD
+,ConfigSCell 2,,,SR.1.1 TDD
+,ConfigSCell 3,,,SR.2.1 TDD
+Dedicated CORESET parameters,ConfigSCell 1,,N/A,CCR.1.1 FDD
+,ConfigSCell 2,,,CCR.1.1 TDD
+,ConfigSCell 3,,,CCR.2.1 TDD
+RMSI CORESET parameters,ConfigSCell 1,,N/A,
+,ConfigSCell 2,,,
+,ConfigSCell 3,,,
+OCNG Pattern,,,OP.1,
+SSB Configuration,"ConfigSCell 1,2",,SSB.21 FR1,
+,ConfigSCell 3,,SSB.22 FR1,
+OD-SSB Configuration,"ConfigSCell 1,2",,SSB.16 FR1,
+,ConfigSCell 3,,SSB.18 FR1,
+SMTC configuration,,,SMTC.10,
+reportConfigType,,,N/A,
+reportQuantity,,,N/A,
+CSI reporting periodicity,"ConfigSCell 1,2",slot,N/A,
+,ConfigSCell 3,,N/A,
+CSI reporting offset,"ConfigSCell 1,2",slot,N/A,
+,ConfigSCell 3,,N/A,
+EPRE ratio of PSS to SSS,,dB,0,
+EPRE ratio of PBCH DMRS to SSS,,,,
+EPRE ratio of PBCH to PBCH DMRS,,,,
+EPRE ratio of PDCCH DMRS to SSS,,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,,
+EPRE ratio of PDSCH DMRS to SSS,,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,,,
+EPRE ratio of OCNG DMRS to SSS Note1,,,,
+EPRE ratio of OCNG to OCNG DMRS Note1,,,,
+Noc Note2,"ConfigSCell 1,2",dBm/SCS,-104,
+,ConfigSCell 3,,-101,
+Ês/Iot,,dB,17,
+Ês/Noc,,dB,17,
+SS-RSRP Note3,"ConfigSCell 1,2",dBm/SCS,-87,
+,ConfigSCell 3,,-84,
+Io Note3,"ConfigSCell 1,2",dBm/9.36 MHz,-59.0,
+,ConfigSCell 3,dBm/38.16 MHz,-52.9,
+Propagation condition,,,AWGN,
+Correlation Matrix and Antenna Configuration,,,1x2 Low,
+"NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 3:SS-RSRP, SCH_RP, and Io levels have been derived from other parameters for information purpose. They are not settable parameters themselves.",,,,

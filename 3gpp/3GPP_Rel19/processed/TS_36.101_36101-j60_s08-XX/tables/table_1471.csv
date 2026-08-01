@@ -1,0 +1,52 @@
+Parameter,,,Unit,Test 1
+Communication resource pool configuration,,,,As specified in Table A.7.2.1-3(Configuration #3-FDD)
+DRX configuration,,,,As specified in Table 12.1.2-1
+at antenna port (Note 3),,,dBm/15kHz,-98
+Active cell(s),,,,Cell 1 (Serving cell)
+Cell 1,Cyclic prefix,,,Normal
+,Cell ID,,,0
+,Downlink power allocation,,dB,0
+,,,dB,0 (NOTE 1)
+,,,dB,0
+,OCNG Pattern NOTE 2,,,OP.1 FDD
+,Propagation channel,,,AWGN
+,Antenna configuration,,,1x2
+,RSRP,,dBm/15kHz,-92
+Active Sidelink UE(s),,,,"Sidelink UE 1, Sidelink UE 2, Sidelink UE 3"
+Sidelink UE 1,Sidelink Transmissions,,,SLSS + PSBCH
+,networkControlledSyncTx,,,ON
+,slssid,,,30
+,inCoverage (in MIB-SL),,,TRUE
+,syncOffsetIndicator,,,Set same as syncOffsetIndicator in Configuration #3-FDD
+,Time offset (NOTE 5),,ms,+12.51 ms
+,Frequency offset (NOTE 6),,Hz,-100 Hz
+,Propagation channel,,,EPA5
+,Antenna configuration,,,1x2 Low
+,at antenna port,,dBm/15kHz,-85
+Sidelink UE 2,Sidelink Transmissions,,,PSCCH + PSSCH
+,Resource pool,,,commRxPool(0)
+,PSCCH RMC,,,5MHz: CC.1 FDD10 MHz: CC.2 FDD(NOTE 5)
+,PSCCH subframe allocation,,,As defined by TS 36.213 with  chosen randomly (uniformly) in every sc-period
+,PSCCH RB allocation,,,
+,of PSCCH at antenna port,,dBm/15kHz,-85
+,PSSCH RMC,,,As specified in Table 12.6.1-2
+,PSSCH subframe allocation,,,As per time repetition pattern specified in PSCCH
+,PSSCH RB allocation,,,First transmission: Chosen randomly (uniformly) among the allowed RBs as per TS36.213HARQ retransmission: As per frequency hopping indicated in PSCCH and specified in TS36.213
+,"Time offset (NOTE 4, 5)",,,PSCCH: +1sPSSCH: +1s – 288Ts
+,Frequency offset (NOTE 6),,Hz,+200
+,Propagation Channel,,,EVA70
+,Antenna configuration,,,1x2 Low
+Sidelink UE 3,Sidelink Transmissions,,,PSCCH + PSSCH
+,Resource pool,,,commRxPool(1)
+,PSCCH RMC,,,5MHz: CC.5 FDD10 MHz: CC.6 FDD
+,PSCCH subframe allocation,,,As defined by TS 36.213 with  chosen randomly (uniformly) in every sc-period
+,PSCCH RB allocation,,,
+,of PSCCH at antenna port,,dBm/15kHz,-85
+,PSSCH RMC,,,As specified in Table 12.6.1-2
+,PSSCH subframe allocation,,,As per time repetition pattern specified in PSCCH
+,PSSCH RB allocation,,,First transmission: Chosen randomly (uniformly) among the allowed RBs as per TS36.213HARQ retransmission: As per frequency hopping indicated in PSCCH and specified in TS36.213
+,Time offset (NOTE 5),,ms,+12.509
+,Frequency offset (NOTE 6),,Hz,+300
+,Propagation Channel,,,EVA70
+,Antenna configuration,,,1x2 Low
+"NOTE 1:.NOTE 2:OCNG is used to fully allocate the available resource blocks to virtual UEs.NOTE 3: Applicable to both DL channel and ProSe Direct Communication Subframes on UL.NOTE 4: Timing advance indication in PSSCH is set as 18 (=288Ts) in this test. PSSCH timing is advanced with respect to PSCCH timing by the quantity (i.e., PSSCH timing shall be +1s – 288Ts in this test).NOTE 5:Time offset of Sidelink UE receive signal with respect to Cell 1 downlink timing at the tested UE.NOTE 6:Frequency offset of Sidelink UE with respect to Cell 1 uplink frequency.",,,,

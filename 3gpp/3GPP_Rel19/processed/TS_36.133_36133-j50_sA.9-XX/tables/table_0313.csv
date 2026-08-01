@@ -1,0 +1,26 @@
+Parameter,Unit,Test1,
+,,nCell 1,nCell 2
+BWchannel,kHz,180,180
+PRB location within eCell,,eCell 1 BWchannel 10MHz: 30,eCell 2 BWchannel 10MHz: 35
+NPBCH_RA,dB,0,0
+NPBCH_RB,,,
+NPSS_RA,,,
+NSSS_RA,,,
+NPDCCH_RA,,,
+NPDCCH_RB,,,
+NPDSCH_RA,,,
+NPDSCH_RB,,,
+OCNG_RA Note 1,,,
+OCNG_RB Note 1,,,
+NPRS_RA,,,
+Note 2,dBm/15 kHz,-98,-98
+NPRS,dB,-6,-13
+NPRS  Note 3,dB,-6,-13
+Io Note 3,dBm/15kHz,-86.93,-86.93
+NPRP Note 3,dBm/15 kHz,-104,-111
+NRSRP Note 3,dBm/ 15 kHz,-104,-111
+Note 3,dB,-6,-13
+Propagation Condition,,AWGN,AWGN
+Antenna Configuration,,1x1,1x1
+Timing offset to nCell 1,us,N/A,3
+"Note 1:OCNG shall be used such that active cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols other than those in the subframes with transmitted NPRS.Note 2:Interference from other cells and noise sources not specified in the test are assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:If NPRS_RA is not “N/A”, , NPRS , Io, NRSRP and NPRP levels have been derived from other parameters and are given for information purpose. If NPRS_RA is “N/A”, Io and NRSRP levels have been derived from other parameters and are given for information purpose. These are not settable test parameters. Interference conditions shall be applied to all PRS symbols of DL positioning subframes.",,,

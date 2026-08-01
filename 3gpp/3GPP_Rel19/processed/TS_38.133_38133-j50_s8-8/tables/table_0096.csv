@@ -1,0 +1,9 @@
+,length (ms) of victim cell,switching time (us) Note 1,Sub carrier spacing for aggressor cell (kHz),,,
+,,,60,120,480,960
+0,1,≤ 200,2,2,2,2
+1,0.5,≤ 200,2,2,2,2
+2,0.25,≤ 200,3,3,2,2
+3,0.125,≤ 200,4,4,3,3
+5,0.03125,≤ 200,11,10,8,8
+6,0.015625,≤ 200,21,18,15,15
+NOTE 1:NR SRS carrier switching time is UE capability indicated by higher layer parameter SRS-SwitchingTimeNR.,,,,,,

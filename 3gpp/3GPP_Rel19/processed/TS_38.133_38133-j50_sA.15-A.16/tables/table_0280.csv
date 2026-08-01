@@ -1,0 +1,29 @@
+Parameter,,Unit,Test 1,,,,
+,,,T1,T2,T3,T4,T5
+EPRE ratio of PDCCH DMRS to SSS,,dB,0,,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,dB,,,,,
+EPRE ratio of PBCH DMRS to SSS,,dB,,,,,
+EPRE ratio of PBCH to PBCH DMRS,,dB,,,,,
+EPRE ratio of PSS to SSS,,dB,,,,,
+EPRE ratio of PDSCH DMRS to SSS,,dB,,,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,dB,,,,,
+EPRE ratio of OCNG DMRS to SSS,,dB,,,,,
+EPRE ratio of OCNG to OCNG DMRS,,dB,,,,,
+SNR_CSI-RS of set q0,Config 1,dB,5,-3,-12,-12,-12
+,Config 2,,5,-3,-12,-12,-12
+,Config 3,,5,-3,-12,-12,-12
+,Config 4,,5,-3,-12,-12,-12
+SNR_CSI-RS of set q1,Config 1,dB,-10,-10,10,10,10
+,Config 2,,-10,-10,10,10,10
+,Config 3,,-10,-10,10,10,10
+,Config 4,,-10,-10,10,10,10
+CSI-RS_RP of set q1,Config 1,dB/SCS kHz,-110,-110,-88,-88,-88
+,Config 2,,-110,-110,-88,-88,-88
+,Config 3,,-107,-107,-85,-85,-85
+,Config 4,,-110,-110,-88,-88,-88
+,Config 1,dBm/15 KHz,-98,,,,
+,Config 2,,-98,,,,
+,Config 3,,-98,,,,
+,Config 4,,-98,,,,
+Propagation condition,,,TDL-C 300 ns 100 Hz,,,,
+"NOTE 1:OCNG shall be used such that the resources in Cell 1 are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:The uplink resources for CSI reporting are assigned to the UE prior to the start of time period T1.NOTE 3:NZP CSI-RS resource set configuration for CSI reporting are assigned to the UE prior to the start of time period T1.NOTE 4:VoidNOTE 5:The timers and layer 3 filtering related parameters are configured prior to the start of time period T1.NOTE 6:The signal contains PDCCH for UEs other than the device under test as part of OCNG.NOTE 7:SNR levels correspond to the signal to noise ratio over the REs carrying CSI-RS.NOTE 8:The SNR in time periods T1, T2, T3, T4 and T5 is denoted as SNR1, SNR2 and SNR3 respectively in figure A.16.5.2.8.1-1.NOTE 9:The SNR values are specified for testing a UE which supports 2 RX on at least one band.",,,,,,,

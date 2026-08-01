@@ -1,0 +1,4 @@
+Test number,Band-width,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category,UE DL category
+,,,,,,Fraction of MaximumThroughput (%),SNR (dB),,
+1,10 MHz,R.13 FDD,OP.1 FDD,EVA5,4x2 Low,70,-3.2,≥1,≥4
+2,10MHz1024QAM,R.101 FDD,OP.1 FDD,EPA5,4x2 Low,70,25.1,TBD,"20, ≥ 22"

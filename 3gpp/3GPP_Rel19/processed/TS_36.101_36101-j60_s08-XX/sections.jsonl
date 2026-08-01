@@ -1,0 +1,871 @@
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8Performance requirement", "paragraph_index": 1, "style": "Heading1"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1General", "paragraph_index": 4, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.1Receiver antenna capability", "paragraph_index": 5, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.1.1Simultaneous unicast and MBMS operations", "paragraph_index": 16, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.1.2Dual-antenna receiver capability in idle mode", "paragraph_index": 17, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2Applicability of requirements", "paragraph_index": 18, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.1Applicability of requirements for different channel bandwidths", "paragraph_index": 19, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.2Definition of CA capability", "paragraph_index": 22, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.2ADefinition of dual connectivity capability", "paragraph_index": 55, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.3Applicability and test rules for different CA configurations and bandwidth combination sets", "paragraph_index": 67, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.3AApplicability and test rules for different dual connectivity configuration and bandwidth combination set", "paragraph_index": 73, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.3BApplicability and test rules for different TDD-FDD CA configurations and bandwidth combination sets", "paragraph_index": 80, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.3CApplicability and test rules for SDR tests for 4Rx capable UEs", "paragraph_index": 86, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.3DApplicability and test rules for different CA with LAA SCell(s) configurations and bandwidth combination sets", "paragraph_index": 101, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.3EApplicability and test rules for SDR tests for 8Rx capable UEs", "paragraph_index": 107, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.4Test coverage for different number of component carriers", "paragraph_index": 114, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.5Applicability of performance requirements for Type B receiver", "paragraph_index": 131, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.6Applicability of performance requirements for 4Rx capable UEs", "paragraph_index": 133, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.6.1Applicability rule and antenna connection for single carrier tests with 2Rx", "paragraph_index": 135, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.6.2Applicability rule and antenna connection for CA and DC tests with 2Rx", "paragraph_index": 147, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.6.3Applicability rule and antenna connection for single carrier tests with 4Rx", "paragraph_index": 151, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.6.4Applicability rule for 256QAM tests", "paragraph_index": 153, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.6.5Applicability rule and antenna connection for CA and DC tests with 4Rx", "paragraph_index": 155, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.6.6Applicability rule for Type C with 4Rx", "paragraph_index": 164, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.6.7Applicability rule for 1024QAM tests", "paragraph_index": 168, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.7Applicability of Enhanced Downlink Control Channel Performance Requirements", "paragraph_index": 170, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.8Applicability of performance requirements for CDM-multiplexed DM RS with interfering simultaneous transmission (FRC) with multiple CSI-RS configurations", "paragraph_index": 174, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.8AApplicability of performance requirements for UE supporting coverage enhancement", "paragraph_index": 176, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.9Applicability of SDR requirements for CA and LAA", "paragraph_index": 192, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.10Applicability of performance requirements for Multi-user Superposed Transmission", "paragraph_index": 198, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.11Applicability CRS interference mitigation receivers performance requirements", "paragraph_index": 202, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.12Applicability of performance requirements for 8Rx capable UEs", "paragraph_index": 206, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.12.1Applicability rule and antenna connection for single carrier PDSCH tests", "paragraph_index": 209, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.12.2Applicability rule and antenna connection for control channel tests", "paragraph_index": 237, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.2.12.3Applicability rule and antenna connection for CA and DC tests", "paragraph_index": 245, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.1.3UE category and UE DL category", "paragraph_index": 263, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2Demodulation of PDSCH (Cell-Specific Reference Symbols)", "paragraph_index": 266, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1FDD (Fixed Reference Channel)", "paragraph_index": 267, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.1Single-antenna port performance", "paragraph_index": 272, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.1.1Minimum Requirement", "paragraph_index": 274, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.1.2Void", "paragraph_index": 303, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.1.3Void", "paragraph_index": 304, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.1.4Minimum Requirement 1 PRB allocation in presence of MBSFN", "paragraph_index": 305, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.1.4AMinimum Requirement 1 PRB allocation in presence of FeMBMS Unicast-mixed Cell under CA", "paragraph_index": 312, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.2Transmit diversity performance", "paragraph_index": 318, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.2.1Minimum Requirement 2 Tx Antenna Port", "paragraph_index": 319, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.2.2Minimum Requirement 4 Tx Antenna Port", "paragraph_index": 325, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.2.3Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS)", "paragraph_index": 331, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.2.3AMinimum Requirement 2 Tx Antenna Ports (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 338, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.2.4Enhanced Performance Requirement Type A - 2 Tx Antenna Ports with TM3 interference model", "paragraph_index": 344, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.2.5Enhanced Performance Requirement Type B - 2 Tx Antenna Ports with TM2 interference model", "paragraph_index": 350, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.2.6Enhanced Performance Requirement Type B - 2 Tx Antenna Ports with TM9 interference model", "paragraph_index": 356, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.2.7Minimum Requirement 2 Tx Antenna Port (Superposed transmission)", "paragraph_index": 362, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.3Open-loop spatial multiplexing performance", "paragraph_index": 368, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.3.1Minimum Requirement 2 Tx Antenna Port", "paragraph_index": 369, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.3.1ASoft buffer management test", "paragraph_index": 398, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.3.1BEnhanced Performance Requirement Type C –2Tx Antenna Ports", "paragraph_index": 406, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.3.1CEnhanced Performance Requirement Type C - 2 Tx Antenna Ports with TM1 interference", "paragraph_index": 412, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.3.2Minimum Requirement 4 Tx Antenna Port", "paragraph_index": 418, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.3.3Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS)", "paragraph_index": 424, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.3.4Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 436, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.3.5Minimum Requirement 2 Tx Antenna Port (Superposed transmission)", "paragraph_index": 442, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.3.6Minimum Requirement 2 Tx Antenna Port (network-based CRS interference mitigation)", "paragraph_index": 448, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4Closed-loop spatial multiplexing performance", "paragraph_index": 454, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.1Minimum Requirement Single-Layer Spatial Multiplexing 2 Tx Antenna Port", "paragraph_index": 455, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.1AMinimum Requirement Single-Layer Spatial Multiplexing 4 Tx Antenna Port", "paragraph_index": 461, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.1BEnhanced Performance Requirement Type A - Single-Layer Spatial Multiplexing 2 Tx Antenna Port with TM4 interference model", "paragraph_index": 468, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.1CMinimum Requirement Single-Layer Spatial Multiplexing 2 Tx Antenna Ports (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 474, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.1DEnhanced Performance Requirement Type B - Single-layer Spatial Multiplexing 2 Tx Antenna Port with TM4 interference model", "paragraph_index": 480, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.1EMinimum Requirement Single-Layer Spatial Multiplexing 2 Tx Antenna Ports with CRS assistance information", "paragraph_index": 486, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.1FMinimum Requirement Single-Layer Spatial Multiplexing 4 Tx Antenna Ports with CRS assistance information", "paragraph_index": 492, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.2Minimum Requirement Multi-Layer Spatial Multiplexing 2 Tx Antenna Port", "paragraph_index": 499, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.2AEnhanced Performance Requirement Type C – Multi-layer Spatial Multiplexing 2Tx Antenna Ports", "paragraph_index": 505, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.3Minimum Requirement Multi-Layer Spatial Multiplexing 4 Tx Antenna Port", "paragraph_index": 511, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.3AMinimum Requirement Multi-Layer Spatial Multiplexing 4 Tx Antenna Port for dual connectivity", "paragraph_index": 540, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.4.4Minimum Requirement Multi-Layer Spatial Multiplexing 2 Tx Antenna Port (Superposed transmission)", "paragraph_index": 550, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.5MU-MIMO", "paragraph_index": 556, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.6[Control channel performance: D-BCH and PCH]", "paragraph_index": 557, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.7Carrier aggregation with power imbalance", "paragraph_index": 558, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.7.1Minimum Requirement", "paragraph_index": 560, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.8Intra-band non-contiguous carrier aggregation with timing offset", "paragraph_index": 567, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.8.1Minimum Requirement", "paragraph_index": 569, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.9HST-SFN performance", "paragraph_index": 575, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.9.1Minimum Requirement", "paragraph_index": 576, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.9.2Minimum Requirement for Rel-16 further enhanced HST", "paragraph_index": 600, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.10Intra-band contiguous carrier aggregation with minimum channel spacing", "paragraph_index": 606, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.1.10.1Minimum Requirement", "paragraph_index": 608, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2TDD (Fixed Reference Channel)", "paragraph_index": 616, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.1Single-antenna port performance", "paragraph_index": 620, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.1.1Minimum Requirement", "paragraph_index": 622, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.1.2Void", "paragraph_index": 653, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.1.3Void", "paragraph_index": 654, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.1.4Minimum Requirement 1 PRB allocation in presence of MBSFN", "paragraph_index": 655, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.2Transmit diversity performance", "paragraph_index": 662, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.2.1Minimum Requirement 2 Tx Antenna Port", "paragraph_index": 663, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.2.2Minimum Requirement 4 Tx Antenna Port", "paragraph_index": 669, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.2.3Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS)", "paragraph_index": 675, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.2.3AMinimum Requirement 2 Tx Antenna Ports (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 682, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.2.4Enhanced Performance Requirement Type A – 2 Tx Antenna Ports with TM3 interference model", "paragraph_index": 688, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.2.5Minimum Requirement 2 Tx Antenna Port (when EIMTA-MainConfigServCell-r12 is configured)", "paragraph_index": 694, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.2.6Enhanced Performance Requirement Type B - 2 Tx Antenna Ports with TM2 interference model", "paragraph_index": 700, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.2.7Enhanced Performance Requirement Type B - 2 Tx Antenna Ports with TM9 interference model", "paragraph_index": 706, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.2.8Minimum Requirement 2 Tx Antenna Port (Superposed transmission)", "paragraph_index": 712, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.3Open-loop spatial multiplexing performance", "paragraph_index": 718, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.3.1Minimum Requirement 2 Tx Antenna Port", "paragraph_index": 719, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.3.1ASoft buffer management test", "paragraph_index": 750, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.3.1BEnhanced Performance Requirement Type C - 2Tx Antenna Ports", "paragraph_index": 756, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.3.1CEnhanced Performance Requirement Type C - 2 Tx Antenna Ports with TM1 interference", "paragraph_index": 762, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.3.2Minimum Requirement 4 Tx Antenna Port", "paragraph_index": 768, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.3.3Minimum Requirement 2Tx antenna port (demodulation subframe overlaps with aggressor cell ABS)", "paragraph_index": 774, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.3.4Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 786, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.3.5Minimum Requirement 2 Tx Antenna Port (Superposed transmission)", "paragraph_index": 792, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.3.6Minimum Requirement 2 Tx Antenna Port (network-based CRS interference mitigation)", "paragraph_index": 798, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4Closed-loop spatial multiplexing performance", "paragraph_index": 804, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.1Minimum Requirement Single-Layer Spatial Multiplexing 2 Tx Antenna Port", "paragraph_index": 805, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.1AMinimum Requirement Single-Layer Spatial Multiplexing 4 Tx Antenna Port", "paragraph_index": 811, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.1BEnhanced Performance Requirement Type A – Single-Layer Spatial Multiplexing 2 Tx Antenna Port with TM4 interference model", "paragraph_index": 817, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.1CMinimum Requirement Single-Layer Spatial Multiplexing 2 Tx Antenna Ports (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 823, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.1DEnhanced Performance Requirement Type B - Single-layer Spatial Multiplexing 2 Tx Antenna Port with TM4 interference model", "paragraph_index": 829, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.1EMinimum Requirement Single-Layer Spatial Multiplexing 2 Tx Antenna Ports with CRS assistance information", "paragraph_index": 835, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.1FMinimum Requirement Single-Layer Spatial Multiplexing 4 Tx Antenna Ports with CRS assistance information", "paragraph_index": 841, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.2Minimum Requirement Multi-Layer Spatial Multiplexing 2 Tx Antenna Port", "paragraph_index": 848, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.2AEnhanced Performance Requirement Type C Multi-Layer Spatial Multiplexing 2 Tx Antenna Port", "paragraph_index": 854, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.3Minimum Requirement Multi-Layer Spatial Multiplexing 4 Tx Antenna Port", "paragraph_index": 860, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.3AMinimum Requirement Multi-Layer Spatial Multiplexing 4 Tx Antenna Port for dual connectivity", "paragraph_index": 891, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.4Void", "paragraph_index": 903, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.4.5Minimum Requirement Multi-Layer Spatial Multiplexing 2 Tx Antenna Port (Superposed transmission)", "paragraph_index": 904, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.5MU-MIMO", "paragraph_index": 910, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.6[Control channel performance: D-BCH and PCH]", "paragraph_index": 911, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.7Carrier aggregation with power imbalance", "paragraph_index": 912, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.7.1Minimum Requirement", "paragraph_index": 914, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.8Intra-band contiguous carrier aggregation with minimum channel spacing", "paragraph_index": 921, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.8.1Minimum Requirement", "paragraph_index": 923, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.9HST-SFN performance", "paragraph_index": 929, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.9.1Minimum Requirement", "paragraph_index": 930, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.2.9.2Minimum Requirement for Rel-16 further enhanced HST", "paragraph_index": 954, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3TDD FDD CA (Fixed Reference Channel)", "paragraph_index": 960, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.1Single-antenna port performance", "paragraph_index": 965, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.1.1Minimum Requirement for FDD PCell", "paragraph_index": 967, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.1.2Minimum Requirement for TDD PCell", "paragraph_index": 993, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.2Open-loop spatial multiplexing performance 2Tx Antenna port", "paragraph_index": 1019, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.2.1Minimum Requirement for FDD PCell", "paragraph_index": 1020, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.2.1ASoft buffer management test for FDD PCell", "paragraph_index": 1046, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.2.2Minimum Requirement for TDD PCell", "paragraph_index": 1052, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.2.2ASoft buffer management test for TDD PCell", "paragraph_index": 1078, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.3Closed-loop spatial multiplexing performance 4Tx Antenna Port", "paragraph_index": 1084, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.3.1Minimum Requirement for FDD PCell", "paragraph_index": 1085, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.3.2Minimum Requirement for TDD PCell", "paragraph_index": 1111, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.4Minimum Requirement for Closed-loop spatial multiplexing performance 4Tx Antenna Port for dual connectivity", "paragraph_index": 1137, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.5HST-SFN performance", "paragraph_index": 1147, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.5.0General", "paragraph_index": 1148, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.5.1Minimum Requirement for FDD PCell", "paragraph_index": 1150, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.3.5.2Minimum Requirement for TDD PCell", "paragraph_index": 1170, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.4LAA", "paragraph_index": 1190, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.4.1Closed-loop spatial multiplexing performance 4Tx Antenna Port", "paragraph_index": 1191, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.4.1.1FDD PCell (FDD single carrier)", "paragraph_index": 1192, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.2.4.1.2TDD PCell (TDD single carrier)", "paragraph_index": 1218, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3Demodulation of PDSCH (User-Specific Reference Symbols)", "paragraph_index": 1245, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1FDD", "paragraph_index": 1246, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.1Single-layer Spatial Multiplexing", "paragraph_index": 1250, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.1AEnhanced Performance Requirement Type A – Single-layer Spatial Multiplexing with TM9 interference model", "paragraph_index": 1258, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.1BSingle-layer Spatial Multiplexing (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 1264, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.1CEnhanced Performance Requirement Type B – Single-layer Spatial Multiplexing with TM9 interference model", "paragraph_index": 1270, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.1DEnhanced Performance Requirement Type B – Single-layer Spatial Multiplexing with CRS interference model", "paragraph_index": 1276, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.1EEnhanced Performance Requirement Type B – Single-layer Spatial Multiplexing with TM3 interference model", "paragraph_index": 1282, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.1FEnhanced Performance Requirement Type B – Single-layer Spatial Multiplexing with TM10 serving cell configuration and TM9 interference model", "paragraph_index": 1288, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.1GSingle-layer Spatial Multiplexing (CRS assistance information is configured)", "paragraph_index": 1294, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.1HSingle-layer Spatial Multiplexing (With Enhanced DMRS table configured)", "paragraph_index": 1300, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.1ISingle-layer Spatial Multiplexing (with assistance information for simultaneous transmition interfering PDSCH)", "paragraph_index": 1306, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.2Dual-Layer Spatial Multiplexing", "paragraph_index": 1312, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.2AEnhanced Performance Requirement Type C - Dual-Layer Spatial Multiplexing", "paragraph_index": 1318, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.3Performance requirements for DCI format 2D and non Quasi Co-located Antenna Ports", "paragraph_index": 1324, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.3.1Minimum requirement with Same Cell ID (with single NZP CSI-RS resource)", "paragraph_index": 1325, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.3.2Minimum requirements with Same Cell ID (with multiple NZP CSI-RS resources)", "paragraph_index": 1333, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.3.3Minimum requirement with Different Cell ID and Colliding CRS (with single NZP CSI-RS resource)", "paragraph_index": 1341, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.3.4Minimum requirement with Different Cell ID and non-colliding CRS (with single NZP CSI-RS resource and CRS assistance information is configured)", "paragraph_index": 1348, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.3.5Minimum requirements with different Cell ID and non-colliding CRS (with multiple NZP CSI-RS resources and CRS assistance information is configured)", "paragraph_index": 1356, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.3.6Minimum requirements for QCL Type C and 2 Layers Spatial Multiplexing", "paragraph_index": 1364, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.1.4Performance Requirements for semiOpenLoop transmission", "paragraph_index": 1372, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2TDD", "paragraph_index": 1378, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.1Single-layer Spatial Multiplexing", "paragraph_index": 1382, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.1ASingle-layer Spatial Multiplexing (with multiple CSI-RS configurations)", "paragraph_index": 1395, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.1BEnhanced Performance Requirement Type A – Single-layer Spatial Multiplexing with TM9 interference model", "paragraph_index": 1403, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.1CSingle-layer Spatial Multiplexing (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 1409, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.1DEnhanced Performance Requirement Type B – Single-layer Spatial Multiplexing with TM9 interference", "paragraph_index": 1415, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.1EEnhanced Performance Requirement Type B – Single-layer Spatial Multiplexing with CRS interference model", "paragraph_index": 1421, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.1FEnhanced Performance Requirement Type B – Single-layer Spatial Multiplexing with TM3 interference", "paragraph_index": 1427, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.1GEnhanced Performance Requirement Type B – Single-layer Spatial Multiplexing with TM10 serving cell configuration and TM9 interference model", "paragraph_index": 1433, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.1HSingle-layer Spatial Multiplexing (CRS assistance information is configured)", "paragraph_index": 1439, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.1ISingle-layer Spatial Multiplexing (With Enhanced DMRS table configured)", "paragraph_index": 1445, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.1JSingle-layer Spatial Multiplexing (with assistance information for simultaneous transmition interfering PDSCH)", "paragraph_index": 1451, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.2Dual-Layer Spatial Multiplexing", "paragraph_index": 1457, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.2AEnhanced Performance Requirement Type C - Dual-Layer Spatial Multiplexing", "paragraph_index": 1463, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.3Dual-Layer Spatial Multiplexing (with multiple CSI-RS configurations)", "paragraph_index": 1469, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.4Performance requirements for DCI format 2D and non Quasi Co-located Antenna Ports", "paragraph_index": 1475, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.4.1Minimum requirement with Same Cell ID (with single NZP CSI-RS resource)", "paragraph_index": 1476, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.4.2Minimum requirements with Same Cell ID (with multiple NZP CSI-RS resources)", "paragraph_index": 1484, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.4.3Minimum requirement with Different Cell ID and Colliding CRS (with single NZP CSI-RS resource)", "paragraph_index": 1492, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.4.4Minimum requirement with Different Cell ID and non-Colliding CRS (with single NZP CSI-RS resource and CRS assistance information is configured)", "paragraph_index": 1498, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.4.5Minimum requirements with different Cell ID and non-colliding CRS (with multiple NZP CSI-RS resources and CRS assistance information is configured)", "paragraph_index": 1506, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.4.6Minimum requirements for QCL Type C and 2 Layers Spatial Multiplexing", "paragraph_index": 1514, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.2.5Performance Requirements for semiOpenLoop transmission", "paragraph_index": 1522, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.3LAA", "paragraph_index": 1528, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.3.1Dual-Layer Spatial Multiplexing with DM-RS", "paragraph_index": 1529, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.3.1.1FDD PCell (FDD single carrier)", "paragraph_index": 1530, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.3.3.1.2TDD Pcell (TDD single carrier)", "paragraph_index": 1557, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4Demodulation of PDCCH/PCFICH", "paragraph_index": 1584, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.1FDD", "paragraph_index": 1586, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.1.1Single-antenna port performance", "paragraph_index": 1590, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.1.2Transmit diversity performance", "paragraph_index": 1594, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.1.2.1Minimum Requirement 2 Tx Antenna Port", "paragraph_index": 1595, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.1.2.2Minimum Requirement 4 Tx Antenna Port", "paragraph_index": 1599, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "8.4.1.2.3", "title": "Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS)", "paragraph_index": 1603, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.1.2.4Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 1614, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.1.2.5Enhanced Downlink Control Channel Performance Requirement Type A - 2 Tx Antenna Port under Asynchronous Network", "paragraph_index": 1626, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.1.2.6Enhanced Downlink Control Channel Performance Requirement Type A - 2 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 1632, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.1.2.7Enhanced Downlink Control Channel Performance Requirement Type B - 2 Tx Antenna Port with Colliding CRS Dominant Interferer", "paragraph_index": 1638, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.1.2.8Enhanced Downlink Control Channel Performance Requirement Type B - 2 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 1644, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.1.2.9Enhanced Downlink Control Channel Performance Requirement Type A - 4 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 1650, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2TDD", "paragraph_index": 1657, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2.1Single-antenna port performance", "paragraph_index": 1661, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2.2Transmit diversity performance", "paragraph_index": 1665, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2.2.1Minimum Requirement 2 Tx Antenna Port", "paragraph_index": 1666, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2.2.2Minimum Requirement 4 Tx Antenna Port", "paragraph_index": 1670, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2.2.3Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS)", "paragraph_index": 1674, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2.2.4Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 1685, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2.2.5Enhanced Downlink Control Channel Performance Requirement Type A - 2 Tx Antenna Port with Colliding CRS Dominant Interferer", "paragraph_index": 1697, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2.2.6Enhanced Downlink Control Channel Performance Requirement Type A - 2 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 1703, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2.2.7Enhanced Downlink Control Channel Performance Requirement Type B - 2 Tx Antenna Port with Colliding CRS Dominant Interferer", "paragraph_index": 1709, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2.2.8Enhanced Downlink Control Channel Performance Requirement Type B - 2 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 1715, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.2.2.9Enhanced Downlink Control Channel Performance Requirement Type A - 4 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 1721, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.3LAA", "paragraph_index": 1728, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.3.1Transmit diversity performance", "paragraph_index": 1732, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.3.1.1FDD Pcell (FDD single carrier)", "paragraph_index": 1733, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.4.3.1.2TDD Pcell (TDD single carrier)", "paragraph_index": 1743, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5Demodulation of PHICH", "paragraph_index": 1753, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.1FDD", "paragraph_index": 1755, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.1.1Single-antenna port performance", "paragraph_index": 1759, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.1.2Transmit diversity performance", "paragraph_index": 1763, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.1.2.1Minimum Requirement 2 Tx Antenna Port", "paragraph_index": 1764, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.1.2.2Minimum Requirement 4 Tx Antenna Port", "paragraph_index": 1768, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.1.2.3Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS)", "paragraph_index": 1772, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.1.2.4Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 1778, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.1.2.5Enhanced Downlink Control Channel Performance Requirement Type A - 2 Tx Antenna Ports under Asynchronous Network", "paragraph_index": 1784, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.1.2.6Enhanced Downlink Control Channel Performance Requirement Type A - 2 Tx Antenna Ports with Non-Colliding CRS Dominant Interferer", "paragraph_index": 1790, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.1.2.7Enhanced Downlink Control Channel Performance Requirement Type B - 2 Tx Antenna Ports with Colliding CRS Dominant Interferer", "paragraph_index": 1796, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.1.2.8Enhanced Downlink Control Channel Performance Requirement Type B - 2 Tx Antenna Ports with Non-Colliding CRS Dominant Interferer", "paragraph_index": 1802, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.2TDD", "paragraph_index": 1808, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.2.1Single-antenna port performance", "paragraph_index": 1812, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.2.2Transmit diversity performance", "paragraph_index": 1816, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.2.2.1Minimum Requirement 2 Tx Antenna Port", "paragraph_index": 1817, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.2.2.2Minimum Requirement 4 Tx Antenna Port", "paragraph_index": 1821, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.2.2.3Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS)", "paragraph_index": 1825, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.2.2.4Minimum Requirement 2 Tx Antenna Port (demodulation subframe overlaps with aggressor cell ABS and CRS assistance information are configured)", "paragraph_index": 1831, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.2.2.5Enhanced Downlink Control Channel Performance Requirement Type A - 2 Tx Antenna Ports with Colliding CRS Dominant Interferer", "paragraph_index": 1837, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.2.2.6Enhanced Downlink Control Channel Performance Requirement Type A - 2 Tx Antenna Ports with Non-Colliding CRS Dominant Interferer", "paragraph_index": 1843, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.2.2.7Enhanced Downlink Control Channel Performance Requirement Type B - 2 Tx Antenna Ports with Colliding CRS Dominant Interferer", "paragraph_index": 1849, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.5.2.2.8Enhanced Downlink Control Channel Performance Requirement Type B - 2 Tx Antenna Ports with Non-Colliding CRS Dominant Interferer", "paragraph_index": 1855, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6Demodulation of PBCH", "paragraph_index": 1861, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.1FDD", "paragraph_index": 1865, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.1.1Single-antenna port performance", "paragraph_index": 1868, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.1.2Transmit diversity performance", "paragraph_index": 1872, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.1.2.1Minimum Requirement 2 Tx Antenna Port", "paragraph_index": 1873, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.1.2.2Minimum Requirement 4 Tx Antenna Port", "paragraph_index": 1877, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.1.2.3Minimum Requirement 2 Tx Antenna Port under Time Domain Measurement Resource Restriction with CRS Assistance Information", "paragraph_index": 1881, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.2TDD", "paragraph_index": 1887, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.2.1Single-antenna port performance", "paragraph_index": 1890, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.2.2Transmit diversity performance", "paragraph_index": 1894, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.2.2.1Minimum Requirement 2 Tx Antenna Port", "paragraph_index": 1895, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.2.2.2Minimum Requirement 4 Tx Antenna Port", "paragraph_index": 1899, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.6.2.2.3Minimum Requirement 2 Tx Antenna Port under Time Domain Measurement Resource Restriction with CRS Assistance Information", "paragraph_index": 1903, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7Sustained downlink data rate provided by lower layers", "paragraph_index": 1909, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.1FDD (single carrier and CA)", "paragraph_index": 1914, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.2TDD (single carrier and CA)", "paragraph_index": 1934, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.3FDD (EPDCCH scheduling)", "paragraph_index": 1954, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.4TDD (EPDCCH scheduling)", "paragraph_index": 1965, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.5TDD FDD CA", "paragraph_index": 1976, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.5.1Minimum Requirement FDD PCell", "paragraph_index": 1980, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.5.2Minimum Requirement TDD PCell", "paragraph_index": 1992, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.6FDD (DC)", "paragraph_index": 2004, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.7TDD (DC)", "paragraph_index": 2019, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.8TDD FDD (DC)", "paragraph_index": 2034, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.9FDD (4 Rx)", "paragraph_index": 2049, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.10TDD (4 Rx)", "paragraph_index": 2069, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.11TDD FDD CA (4 Rx)", "paragraph_index": 2088, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.11.1Void", "paragraph_index": 2104, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.12LAA", "paragraph_index": 2110, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.12.1FDD CA in licensed bands", "paragraph_index": 2111, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.12.2TDD CA in licensed bands", "paragraph_index": 2128, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.12.3TDD-FDD CA in licensed bands", "paragraph_index": 2145, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.13FDD DC (4 Rx)", "paragraph_index": 2162, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.14TDD DC (4 Rx)", "paragraph_index": 2178, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.15TDD FDD DC (4 Rx)", "paragraph_index": 2194, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.16FDD (1024QAM and up to 4Rx supported)", "paragraph_index": 2210, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.17TDD (1024QAM and up to 4 Rx supported)", "paragraph_index": 2234, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.18TDD FDD CA (1024QAM and up to 4 Rx supported)", "paragraph_index": 2258, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.7.19TDD (8 Rx)", "paragraph_index": 2282, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8Demodulation of EPDCCH", "paragraph_index": 2298, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.1Distributed Transmission", "paragraph_index": 2300, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.1.1FDD", "paragraph_index": 2301, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.1.1.1Void", "paragraph_index": 2309, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.1.2TDD", "paragraph_index": 2312, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.1.2.1Void", "paragraph_index": 2319, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.2Localized Transmission with TM9", "paragraph_index": 2322, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.2.1FDD", "paragraph_index": 2323, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.2.1.1Void", "paragraph_index": 2332, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.2.1.2Void", "paragraph_index": 2336, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.2.2TDD", "paragraph_index": 2343, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.2.2.1Void", "paragraph_index": 2353, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.2.2.2Void", "paragraph_index": 2356, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.3Localized transmission with TM10 Type B quasi co-location type", "paragraph_index": 2362, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.3.1FDD", "paragraph_index": 2363, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.3.2TDD", "paragraph_index": 2369, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.4Enhanced Downlink Control Channel Performance Requirements Type A - Localized Transmission with CRS Interference Model", "paragraph_index": 2375, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.4.1FDD", "paragraph_index": 2376, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.4.2TDD", "paragraph_index": 2382, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.5Enhanced Downlink Control Channel Performance Requirements Type A - Distributed Transmission with TM9 Interference Model", "paragraph_index": 2388, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.5.1TDD", "paragraph_index": 2389, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.6Enhanced Downlink Control Channel Performance Requirements Type A - Distributed Transmission with TM3 Interference Model", "paragraph_index": 2395, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.8.6.1FDD", "paragraph_index": 2396, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9Demodulation (single receiver antenna)", "paragraph_index": 2402, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.1PDSCH", "paragraph_index": 2404, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.1.1FDD and half-duplex FDD (Fixed Reference Channel)", "paragraph_index": 2405, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.1.1.1Transmit diversity performance (Cell-Specific Reference Symbols)", "paragraph_index": 2409, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.1.1.2Closed-loop spatial multiplexing performance (Cell-Specific Reference Symbols)", "paragraph_index": 2416, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.1.1.3Closed-loop spatial multiplexing performance (User-Specific Reference Symbols)", "paragraph_index": 2436, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.1.2TDD (Fixed Reference Channel)", "paragraph_index": 2450, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.1.2.1Transmit diversity performance (Cell-Specific Reference Symbols)", "paragraph_index": 2454, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.1.2.2Closed-loop spatial multiplexing performance (Cell-Specific Reference Symbols)", "paragraph_index": 2461, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.1.2.3Closed-loop spatial multiplexing performance (User-Specific Reference Symbols)", "paragraph_index": 2481, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.2PHICH", "paragraph_index": 2495, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.2.1FDD and half-duplex FDD", "paragraph_index": 2496, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.2.1.1Transmit diversity performance", "paragraph_index": 2497, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.2.2TDD", "paragraph_index": 2501, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.2.2.1Transmit diversity performance", "paragraph_index": 2502, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.3PBCH", "paragraph_index": 2506, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.3.1FDD and half-duplex FDD", "paragraph_index": 2507, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.3.1.1Transmit diversity performance", "paragraph_index": 2508, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.3.2TDD", "paragraph_index": 2512, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.3.2.1Transmit diversity performance", "paragraph_index": 2513, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.4PDCCH/PCFICH", "paragraph_index": 2517, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.4.1FDD and half-duplex FDD", "paragraph_index": 2518, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.4.1.1Enhanced Downlink Control Channel Performance Requirement Type A - 2 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 2519, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.4.1.2Enhanced Downlink Control Channel Performance Requirement Type A - 4 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 2525, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.4.2TDD", "paragraph_index": 2532, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.4.2.1Enhanced Downlink Control Channel Performance Requirement Type A - 2 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 2533, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.9.4.2.2Enhanced Downlink Control Channel Performance Requirement Type A - 4 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 2539, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10Demodulation (4 receiver antenna ports)", "paragraph_index": 2546, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1PDSCH", "paragraph_index": 2548, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1FDD (Fixed Reference Channel)", "paragraph_index": 2549, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.1Transmit diversity performance with 2Tx Antenna Ports (Cell-Specific Reference Symbols)", "paragraph_index": 2553, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.1ATransmit diversity performance wit Enhanced Performance Requirement Type A - 2 Tx Antenna Ports with TM3 interference model", "paragraph_index": 2559, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.2Open-loop spatial multiplexing performance with 2Tx Antenna Ports (Cell-Specific Reference Symbols)", "paragraph_index": 2565, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.3Closed-loop spatial multiplexing Enhanced Performance Requirements Type A - Single-Layer Spatial Multiplexing 2 Tx Antenna Port with TM4 interference model (Cell-Specific Reference Symbols)", "paragraph_index": 2571, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.4Closed-loop spatial multiplexing performance, Dual-Layer Spatial Multiplexing 4 Tx Antenna Port (Cell-Specific Reference Symbols)", "paragraph_index": 2577, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.4AEnhanced Performance Requirement Type C - Dual-Layer Spatial Multiplexing with 2Tx Antenna Ports", "paragraph_index": 2583, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.5Enhanced Performance Requirement Type A – Single-layer Spatial Multiplexing with TM9 interference model (User-Specific Reference Symbols)", "paragraph_index": 2589, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.5ASingle-layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 2595, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.5BSingle-layer Spatial Multiplexing (With Enhanced DMRS table configured)", "paragraph_index": 2601, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.6Dual-Layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 2607, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.6AEnhanced Performance Requirement Type C - Dual-Layer Spatial Multiplexing", "paragraph_index": 2613, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.6BDual-Layer Spatial Multiplexing with altCQI-Table-1024QAM configured (User-Specific Reference Symbols)", "paragraph_index": 2619, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.7Open-loop spatial multiplexing, 3 Layer Multiplexing with 4 Tx Antenna Ports (Cell-Specific Reference Symbols)", "paragraph_index": 2625, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.7AEnhanced Performance Requirement Type C - Open-loop spatial multiplexing, 3 Layer Multiplexing with 4 Tx Antenna Ports (Cell-Specific Reference Symbols)", "paragraph_index": 2631, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.8Closed-loop spatial multiplexing performance, 4 Layers spatial multiplexing 4 Tx antennas (Cell-Specific Reference Symbols)", "paragraph_index": 2637, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "8.10.1.1.94", "title": "Layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 2643, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.9AEnhanced Performance Requirement Type C - 4 Layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 2649, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.10Closed loop spatial multiplexing performance - Single-Layer Spatial Multiplexing 2 Tx Antenna Port with CRS assistance information (Cell-Specific Reference Symbols)", "paragraph_index": 2655, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.11Closed loop spatial multiplexing performance - Single-Layer Spatial Multiplexing 4 Tx Antenna Port with CRS assistance information (Cell-Specific Reference Symbols)", "paragraph_index": 2662, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.12Closed loop spatial multiplexing performance - Single-Layer Spatial Multiplexing with CRS assistance information (User-Specific Reference Symbols)", "paragraph_index": 2669, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.13Performance requirements for DCI format 2D and non Quasi Co-located Antenna Ports", "paragraph_index": 2676, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.1.14HST-SFN performance", "paragraph_index": 2693, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2TDD (Fixed Reference Channel)", "paragraph_index": 2700, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.1Transmit diversity performance with 2Tx Antenna Ports (Cell-Specific Reference Symbols)", "paragraph_index": 2704, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.1ATransmit diversity performance with Enhanced Performance Requirement Type A – 2 Tx Antenna Ports with TM3 interference model", "paragraph_index": 2710, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.2Open-loop spatial multiplexing performance  with 2Tx Antenna Ports (Cell-Specific Reference Symbols)", "paragraph_index": 2716, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.3Closed-loop spatial multiplexing Enhanced Performance Requirements Type A - Single-Layer Spatial Multiplexing 2 Tx Antenna Port with TM4 interference model (Cell-Specific Reference Symbols)", "paragraph_index": 2722, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.4Closed-loop spatial multiplexing performance, Dual-Layer Spatial Multiplexing 4 Tx Antenna Ports (Cell-Specific Reference Symbols)", "paragraph_index": 2728, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.4AEnhanced Performance Requirement Type C - Dual-Layer Spatial Multiplexing with 2Tx Antenna Ports", "paragraph_index": 2734, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.5Enhanced Performance Requirement Type A – Single-layer Spatial Multiplexing with TM9 interference model (User-Specific Reference Symbols)", "paragraph_index": 2740, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.5ASingle-layer Spatial Multiplexing (with multiple CSI-RS configurations)", "paragraph_index": 2746, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.5BSingle-layer Spatial Multiplexing (With Enhanced DMRS table configured)", "paragraph_index": 2754, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.6Dual-Layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 2760, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.6AEnhanced Performance Requirement Type C - Dual-Layer Spatial Multiplexing", "paragraph_index": 2766, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.6BDual-Layer Spatial Multiplexing with altCQI-Table-1024QAM configured (User-Specific Reference Symbols)", "paragraph_index": 2772, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.7Open-loop spatial multiplexing, 3 Layer Multiplexing with 4 Tx Antenna Ports (Cell-Specific Reference Symbols)", "paragraph_index": 2778, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.7AEnhanced Performance Requirement Type C - Open-loop spatial multiplexing, 3 Layer Multiplexing with 4 Tx Antenna Ports (Cell-Specific Reference Symbols)", "paragraph_index": 2784, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.8Closed-loop spatial multiplexing performance, 4 Layers spatial multiplexing 4 Tx antennas", "paragraph_index": 2790, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "8.10.1.2.94", "title": "Layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 2796, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.9AEnhanced Performance Requirement Type C - 4 Layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 2802, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.10Closed loop spatial multiplexing performance - Single-Layer Spatial Multiplexing 2 Tx Antenna Port with CRS assistance information (Cell-Specific Reference Symbols)", "paragraph_index": 2808, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.11Closed loop spatial multiplexing performance - Single-Layer Spatial Multiplexing 4 Tx Antenna Port with CRS assistance information (Cell-Specific Reference Symbols)", "paragraph_index": 2815, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.12Closed loop spatial multiplexing performance - Single-Layer Spatial Multiplexing with CRS assistance information (User-Specific Reference Symbols)", "paragraph_index": 2822, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.13Performance requirements for DCI format 2D and non Quasi Co-located Antenna Ports", "paragraph_index": 2829, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.1.2.14HST-SFN performance", "paragraph_index": 2846, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.2PDCCH/PCFICH", "paragraph_index": 2856, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.2.1FDD", "paragraph_index": 2857, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.2.1.1Single-antenna port performance", "paragraph_index": 2861, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.2.1.2Transmit diversity performance with 2 Tx Antenna Ports", "paragraph_index": 2865, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.2.1.3Transmit diversity performance with 4 Tx Antenna Ports", "paragraph_index": 2869, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.2.1.4Enhanced Downlink Control Channel Performance Requirement Type A - 4 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 2873, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.2.2TDD", "paragraph_index": 2880, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.2.2.1Single-antenna port performance", "paragraph_index": 2883, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.2.2.2Transmit diversity performance with 2 Tx Antenna Ports", "paragraph_index": 2887, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.2.2.3Transmit diversity performance with 4 Tx Antenna Ports", "paragraph_index": 2891, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.2.2.4Enhanced Downlink Control Channel Performance Requirement Type A - 4 Tx Antenna Port with Non-Colliding CRS Dominant Interferer", "paragraph_index": 2895, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.3PHICH", "paragraph_index": 2902, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.3.1FDD", "paragraph_index": 2904, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.3.1.1Single Tx Antenna Port performance", "paragraph_index": 2908, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.3.1.2Transmit diversity performance with 2 Tx Antenna Ports", "paragraph_index": 2912, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.3.1.3Transmit diversity performance with 4 Tx Antenna Ports", "paragraph_index": 2916, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.3.2TDD", "paragraph_index": 2920, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.3.2.1Single Tx Antenna Port performance", "paragraph_index": 2924, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.3.2.2Transmit diversity performance with 2 Tx Antenna Ports", "paragraph_index": 2928, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.3.2.3Transmit diversity performance with 4 Tx Antenna Ports", "paragraph_index": 2932, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.4ePDCCH", "paragraph_index": 2936, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.4.1Distributed Transmission with 4Rx", "paragraph_index": 2938, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.4.1.1FDD", "paragraph_index": 2939, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.4.1.2TDD", "paragraph_index": 2946, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.4.2Localized Transmission with TM9 and 4Rx", "paragraph_index": 2953, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.4.2.1FDD", "paragraph_index": 2954, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.10.4.2.2TDD", "paragraph_index": 2962, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11Demodulation (UE supporting coverage enhancement)", "paragraph_index": 2970, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.1PDSCH", "paragraph_index": 2975, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.1.1FDD and half-duplex FDD (Fixed Reference Channel)", "paragraph_index": 2976, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.1.1.1Closed-loop spatial multiplexing performance (Cell-Specific Reference Symbols)", "paragraph_index": 2980, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.1.1.2Closed-loop spatial multiplexing performance (User-Specific Reference Symbols)", "paragraph_index": 3001, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.1.1.3Transmit diversity performance (Cell-Specific Reference Symbols)", "paragraph_index": 3010, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.1.2TDD (Fixed Reference Channel)", "paragraph_index": 3025, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.1.2.1Closed-loop spatial multiplexing performance (Cell-Specific Reference Symbols)", "paragraph_index": 3029, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.1.2.2Closed-loop spatial multiplexing performance (User-Specific Reference Symbols)", "paragraph_index": 3050, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.1.2.3Transmit diversity performance (Cell-Specific Reference Symbols)", "paragraph_index": 3057, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2MPDCCH", "paragraph_index": 3072, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.1FDD and half-duplex FDD", "paragraph_index": 3074, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.1.1CE Mode A", "paragraph_index": 3079, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.1.2CE Mode B", "paragraph_index": 3083, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.1.3CE Mode A with TM9 interference model", "paragraph_index": 3087, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.1.4CE Mode A with CRS interference model", "paragraph_index": 3094, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.1.5CE Mode A and CE Mode B when CRS-ChEstMPDCCH-Config is configured", "paragraph_index": 3101, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.2.5CE Mode A and CE Mode B when CRS-ChEstMPDCCH-Config is configured", "paragraph_index": 3110, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.2TDD", "paragraph_index": 3117, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.2.1CE Mode A", "paragraph_index": 3122, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.2.2CE Mode B", "paragraph_index": 3126, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.2.3CE Mode A with TM9 interference model", "paragraph_index": 3130, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.2.2.4CE Mode A with CRS interference model", "paragraph_index": 3137, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.3PBCH", "paragraph_index": 3144, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.3.1FDD and half-duplex FDD", "paragraph_index": 3150, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.3.1.1Transmit diversity performance", "paragraph_index": 3153, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.3.2TDD", "paragraph_index": 3157, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.11.3.2.1Transmit diversity performance", "paragraph_index": 3160, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12Demodulation of Narrowband IoT", "paragraph_index": 3164, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.1NPDSCH", "paragraph_index": 3165, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.1.1.1Minimum Requirements for In-band", "paragraph_index": 3171, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.1.1.2Minimum Requirements for Standalone/Guard-band", "paragraph_index": 3177, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.1.1.3Minimum Requirements for Standalone for UE Category NB2", "paragraph_index": 3183, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.1.1.4Minimum Requirements for Standalone for UE with multiple TBs interleaved transmission", "paragraph_index": 3188, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.1.1.5Minimum Requirements for Standalone for UE with 16-QAM", "paragraph_index": 3195, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.1.2TDD", "paragraph_index": 3202, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.1.2.1Minimum Requirements for In-band", "paragraph_index": 3207, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.1.2.2Minimum Requirements for Standalone/Guard-band", "paragraph_index": 3213, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.1.2.3Minimum Requirements for Standalone for UE Category NB2", "paragraph_index": 3219, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.1.2.4Minimum Requirements for Standalone for UE with 16-QAM", "paragraph_index": 3225, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.2NPDCCH", "paragraph_index": 3231, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.2.1Half-duplex FDD", "paragraph_index": 3233, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.2.1.1Single-antenna performance", "paragraph_index": 3239, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.2.1.2Transmit diversity performance", "paragraph_index": 3243, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.2.2TDD", "paragraph_index": 3247, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.2.2.1Single-antenna performance", "paragraph_index": 3253, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.2.2.2Transmit diversity performance", "paragraph_index": 3257, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.3Demodulation of NPBCH", "paragraph_index": 3261, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.3.1HD-FDD", "paragraph_index": 3266, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.3.1.1Single-antenna port performance with single NPBCH TTI", "paragraph_index": 3269, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.3.1.2Transmit diversity performance", "paragraph_index": 3273, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.3.2TDD", "paragraph_index": 3278, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.3.2.1Single-antenna port performance with single NPBCH TTI", "paragraph_index": 3281, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.12.3.2.2Transmit diversity performance", "paragraph_index": 3285, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13Demodulation of PDSCH CA and DC(4 receiver antenna ports)", "paragraph_index": 3290, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1FDD (CA and DC)", "paragraph_index": 3291, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1.1Closed-loop spatial multiplexing performance", "paragraph_index": 3295, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1.1.1Minimum Requirement Multi-Layer Spatial Multiplexing 4 Tx Antenna Port", "paragraph_index": 3296, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1.1.2Minimum Requirement Multi-Layer Spatial Multiplexing 4 Tx Antenna Port for dual connectivity", "paragraph_index": 3315, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1.1.3Minimum Requirement Multi-Layer Spatial Multiplexing 4 Tx Antenna Port with 256QAM", "paragraph_index": 3325, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1.1.4Minimum Requirement Four-Layer Spatial Multiplexing 4 Tx Antenna Port", "paragraph_index": 3334, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1.2Dual-Layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 3343, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1.2.1Minimum Requirement Dual-Layer Spatial Multiplexing 2 Tx Antenna Port", "paragraph_index": 3344, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1.3Enhanced Performance Requirements Type A Closed-loop spatial multiplexing", "paragraph_index": 3362, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1.3.1Minimum Requirement Single-Layer Spatial Multiplexing 2 Tx Antenna Port with TM4 interference model (Cell-Specific Reference Symbols)", "paragraph_index": 3363, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1.4Enhanced Performance Requirement Type A - Single-layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 3372, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.1.4.1Minimum Requirement Enhanced Performance Requirement Type A – Single-layer Spatial Multiplexing with TM9 interference model (User-Specific Reference Symbols)", "paragraph_index": 3373, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.2TDD (CA and DC)", "paragraph_index": 3382, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.2.1Closed-loop spatial multiplexing performance", "paragraph_index": 3386, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.2.1.1Minimum Requirement Multi-Layer Spatial Multiplexing 4 Tx Antenna Port", "paragraph_index": 3387, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.2.1.2Minimum Requirement Multi-Layer Spatial Multiplexing 4 Tx Antenna Port for dual connectivity", "paragraph_index": 3405, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.2.1.3Minimum Requirement Multi-Layer Spatial Multiplexing 4 Tx Antenna Port with 256QAM", "paragraph_index": 3417, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.2.1.4Minimum Requirement Four-Layer Spatial Multiplexing 4 Tx Antenna Port", "paragraph_index": 3426, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.2.2Dual-Layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 3435, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.2.2.1Minimum Requirement Dual-Layer Spatial Multiplexing 2 Tx Antenna Port", "paragraph_index": 3436, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.2.4Enhanced Performance Requirement Type A - Single-layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 3464, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.2.4.1Minimum Requirement Enhanced Performance Requirement Type A – Single-layer Spatial Multiplexing with TM9 interference model (User-Specific Reference Symbols)", "paragraph_index": 3465, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3TDD-FDD (CA and DC)", "paragraph_index": 3474, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.1Closed-loop spatial multiplexing performance 4Tx Antenna Port", "paragraph_index": 3479, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.1.1Minimum Requirement for FDD PCell", "paragraph_index": 3480, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.1.2Minimum Requirement for TDD PCell", "paragraph_index": 3501, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.2Dual-Layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 3522, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.2.1Minimum Requirement Dual-Layer Spatial Multiplexing 2 Tx Antenna Port for FDD PCell", "paragraph_index": 3523, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.2.2Minimum Requirement Dual-Layer Spatial Multiplexing 2 Tx Antenna Port for TDD PCell", "paragraph_index": 3544, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.3Enhanced Performance Requirements Type A Closed-loop spatial multiplexing", "paragraph_index": 3565, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.3.1Minimum Requirement Single-Layer Spatial Multiplexing 2 Tx Antenna Port with TM4 interference model (Cell-Specific Reference Symbols) for FDD PCell", "paragraph_index": 3566, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.3.2Minimum Requirement Single-Layer Spatial Multiplexing 2 Tx Antenna Port with TM4 interference model (Cell-Specific Reference Symbols) for TDD PCell", "paragraph_index": 3577, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.4Enhanced Performance Requirement Type A - Single-layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 3588, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.4.1Minimum Requirement Enhanced Performance Requirement Type A – Single-layer Spatial Multiplexing with TM9 interference model (User-Specific Reference Symbols) for FDD PCell", "paragraph_index": 3589, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.4.2Minimum Requirement Enhanced Performance Requirement Type A – Single-layer Spatial Multiplexing with TM9 interference model (User-Specific Reference Symbols) for TDD PCell", "paragraph_index": 3600, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.5Closed-loop spatial multiplexing performance 4Tx Antenna Port for DC", "paragraph_index": 3611, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.5.1Minimum Requirement for FDD PCell", "paragraph_index": 3612, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.5.2Minimum Requirement for TDD PCell", "paragraph_index": 3624, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.6Closed-loop spatial multiplexing performance 4Tx Antenna Port with 256QAM", "paragraph_index": 3636, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.6.1Minimum Requirement for FDD PCell", "paragraph_index": 3637, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.6.2Minimum Requirement for TDD PCell", "paragraph_index": 3649, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.7Closed-loop spatial multiplexing performance 4Tx Antenna Port with Four layers", "paragraph_index": 3661, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.7.1Minimum Requirement for FDD PCell", "paragraph_index": 3662, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.13.3.7.2Minimum Requirement for TDD PCell", "paragraph_index": 3674, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14Demodulation (UE supporting Short TTI)", "paragraph_index": 3686, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.1Slot-PDSCH and Subslot-PDSCH", "paragraph_index": 3688, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.1.1FDD (Fixed Reference Channel)", "paragraph_index": 3689, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.1.1.1Open-loop spatial multiplexing performance", "paragraph_index": 3693, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.1.1.2Closed-loop spatial multiplexing performance (User-Specific Reference Signals)", "paragraph_index": 3701, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.1.2TDD (Fixed Reference Channel)", "paragraph_index": 3709, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.1.2.1Open-loop spatial multiplexing performance", "paragraph_index": 3713, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.1.2.2Closed-loop spatial multiplexing performance (User-Specific Reference Signals)", "paragraph_index": 3721, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.2SPDCCH", "paragraph_index": 3729, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.2.1FDD", "paragraph_index": 3731, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.2.1.1Mimimum requirement", "paragraph_index": 3737, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.2.2TDD", "paragraph_index": 3741, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.14.2.2.1Mimimum requirement", "paragraph_index": 3747, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.15Demodulation (8 receiver antenna ports)", "paragraph_index": 3751, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.15.1PDSCH", "paragraph_index": 3752, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.15.1.1Void", "paragraph_index": 3753, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.15.1.2TDD (Fixed Reference Channel)", "paragraph_index": 3754, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.15.1.2.1Transmit diversity performance with 2Tx Antenna Ports (Cell-Specific Reference Symbols)", "paragraph_index": 3758, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.15.1.2.2Open-loop spatial multiplexing performance with 2Tx Antenna Ports (Cell-Specific Reference Symbols)", "paragraph_index": 3764, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "8.15.1.2.38", "title": "Layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 3770, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.15.2CA", "paragraph_index": 3776, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.15.2.1Void", "paragraph_index": 3777, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.15.2.2TDD", "paragraph_index": 3778, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "8.15.2.2.1Eight Layer Spatial Multiplexing (User-Specific Reference Symbols)", "paragraph_index": 3782, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9Reporting of Channel State Information", "paragraph_index": 3792, "style": "Heading1"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.1General", "paragraph_index": 3793, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.1.1Applicability of requirements", "paragraph_index": 3797, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.1.1.1Applicability of requirements for different channel bandwidths", "paragraph_index": 3798, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.1.1.2Applicability and test rules for different CA configurations and bandwidth combination sets", "paragraph_index": 3801, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.1.1.2AApplicability and test rules for different TDD-FDD CA configurations and bandwidth combination sets", "paragraph_index": 3808, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.1.1.3Test coverage for different number of componenet carriers", "paragraph_index": 3814, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.1.1.4Applicability of performance requirements for 4Rx capable UEs", "paragraph_index": 3818, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.1.1.4.1Applicability rule and antenna connection for single carrier tests with 2Rx", "paragraph_index": 3819, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.1.1.4.2Applicability rule and antenna connection for CA tests with 2Rx", "paragraph_index": 3832, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.1.1.4.3Applicability rule and antenna connection for single carrier tests with 4Rx", "paragraph_index": 3838, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.1.1.5Applicability of requirements for UEs supporting coverage enhancement", "paragraph_index": 3840, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2CQI reporting definition under AWGN conditions", "paragraph_index": 3843, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.1Minimum requirement PUCCH 1-0 (Cell-Specific Reference Symbols)", "paragraph_index": 3845, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.1.1FDD", "paragraph_index": 3846, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.1.2TDD", "paragraph_index": 3853, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.1.3FDD (CSI measurements in case two CSI subframe sets are configured)", "paragraph_index": 3857, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.1.4TDD (CSI measurements in case two CSI subframe sets are configured)", "paragraph_index": 3861, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.1.5FDD (CSI measurements in case two CSI subframe sets are configured and with CRS assistance information)", "paragraph_index": 3865, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.1.6TDD (CSI measurements in case two CSI subframe sets are configured and with CRS assistance information)", "paragraph_index": 3871, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.1.7FDD (Modulation and TBS index Table 2 and 4-bit CQI Table 2 are used)", "paragraph_index": 3877, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.1.8TDD (Modulation and TBS index Table 2 and 4-bit CQI Table 2 are used)", "paragraph_index": 3882, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.1.9FDD (Modulation and TBS index Table 3 and 4-bit CQI Table 4 are used)", "paragraph_index": 3887, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.1.10TDD (Modulation and TBS index Table 3 and 4-bit CQI Table 4 are used)", "paragraph_index": 3892, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.2Minimum requirement PUCCH 1-1 (Cell-Specific Reference Symbols)", "paragraph_index": 3897, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.2.1FDD", "paragraph_index": 3899, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.2.2TDD", "paragraph_index": 3905, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.3Minimum requirement PUCCH 1-1 (CSI Reference Symbols)", "paragraph_index": 3911, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.3.1FDD", "paragraph_index": 3913, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.3.1AFDD (With channelMeasRestriction configured)", "paragraph_index": 3919, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.3.2TDD", "paragraph_index": 3925, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.3.2ATDD (With channelMeasRestriction configured)", "paragraph_index": 3931, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.4Minimum requirement PUCCH 1-1 (With Single CSI Process)", "paragraph_index": 3937, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.4.1FDD", "paragraph_index": 3940, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.4.1AFDD (With interferenceMeasRestriction configured)", "paragraph_index": 3947, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.4.2TDD", "paragraph_index": 3954, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.4.2ATDD (With interferenceMeasRestriction configured)", "paragraph_index": 3961, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.5Minimum requirement PUCCH 1-1 (when csi-SubframeSet –r12 and EIMTA-MainConfigServCell-r12 are configured)", "paragraph_index": 3968, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.6Minimum requirement PUSCH 3-0 (Cell-Specific Reference Symbols)", "paragraph_index": 3972, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.6.1Frame structure type 3 with FDD Pcell", "paragraph_index": 3973, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.6.2Frame structure type 3 with TDD Pcell", "paragraph_index": 3983, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.7Minimum requirement PUSCH 3-1 (CSI Reference Symbol)", "paragraph_index": 3993, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.7.1Frame structure type 3 wth FDD Pcell", "paragraph_index": 3994, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.2.7.2Frame structure type 3 wth TDD Pcell", "paragraph_index": 4005, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3CQI reporting under fading conditions", "paragraph_index": 4016, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1Frequency-selective scheduling mode", "paragraph_index": 4017, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.1Minimum requirement PUSCH 3-0 (Cell-Specific Reference Symbols)", "paragraph_index": 4019, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.1.1FDD", "paragraph_index": 4020, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.1.2TDD", "paragraph_index": 4030, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.1.3FDD (CSI measurements in case two CSI subframe sets are configured and with CRS assistance information)", "paragraph_index": 4040, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.1.4TDD (CSI measurements in case two CSI subframe sets are configured and with CRS assistance information)", "paragraph_index": 4050, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.1.5TDD (when csi-SubframeSet –r12 is configured)", "paragraph_index": 4060, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.2Minimum requirement PUSCH 3-1 (CSI Reference Symbol)", "paragraph_index": 4071, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.2.1FDD", "paragraph_index": 4072, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.2.2TDD", "paragraph_index": 4082, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.2.3FDD (Modulation and TBS index Table 2 and 4-bit CQI Table 2 are used)", "paragraph_index": 4092, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.2.4TDD (Modulation and TBS index Table 2 and 4-bit CQI Table 2 are used)", "paragraph_index": 4103, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.2.5Void", "paragraph_index": 4114, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.1.2.6TDD (when csi-SubframeSet –r12 is configured with one CSI process)", "paragraph_index": 4119, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.2Frequency non-selective scheduling mode", "paragraph_index": 4130, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.2.1Minimum requirement PUCCH 1-0 (Cell-Specific Reference Symbol)", "paragraph_index": 4132, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.2.1.1FDD", "paragraph_index": 4133, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.2.1.2TDD", "paragraph_index": 4147, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.2.2Minimum requirement PUCCH 1-1 (CSI Reference Symbol)", "paragraph_index": 4156, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.2.2.1FDD", "paragraph_index": 4157, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.2.2.2TDD", "paragraph_index": 4166, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.3Frequency-selective interference", "paragraph_index": 4176, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.3.1Minimum requirement PUSCH 3-0 (Cell-Specific Reference Symbol)", "paragraph_index": 4178, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.3.1.1FDD", "paragraph_index": 4179, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.3.1.2TDD", "paragraph_index": 4188, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.3.2Void", "paragraph_index": 4197, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.3.2.1Void", "paragraph_index": 4198, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.3.2.2Void", "paragraph_index": 4199, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.4UE-selected subband CQI", "paragraph_index": 4200, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.4.1Minimum requirement PUSCH 2-0 (Cell-Specific Reference Symbols)", "paragraph_index": 4202, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.4.1.1FDD", "paragraph_index": 4203, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.4.1.2TDD", "paragraph_index": 4211, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.4.2Minimum requirement PUCCH 2-0 (Cell-Specific Reference Symbols)", "paragraph_index": 4219, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.4.2.1FDD", "paragraph_index": 4220, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.4.2.2TDD", "paragraph_index": 4228, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.5Additional requirements for enhanced receiver Type A", "paragraph_index": 4236, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.5.1Minimum requirement PUCCH 1-0 (Cell-Specific Reference Symbol)", "paragraph_index": 4238, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.5.1.1FDD", "paragraph_index": 4239, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.5.1.2TDD", "paragraph_index": 4246, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.5.2Minimum requirement PUCCH 1-1 (CSI Reference Symbol)", "paragraph_index": 4254, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.5.2.1FDD", "paragraph_index": 4255, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.5.2.2TDD", "paragraph_index": 4262, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.6Minimum requirement (With multiple CSI processes)", "paragraph_index": 4270, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.6.1FDD", "paragraph_index": 4274, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.6.2TDD", "paragraph_index": 4288, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.7Minimum requirement PUSCH 3-2", "paragraph_index": 4302, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.7.1FDD", "paragraph_index": 4303, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.7.2TDD", "paragraph_index": 4313, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.8Additional requirements for enhanced receiver Type B", "paragraph_index": 4323, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.8.1Minimum requirement PUCCH 1-1 (Cell-Specific Reference Symbols)", "paragraph_index": 4325, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.8.1.1FDD", "paragraph_index": 4326, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.8.1.2TDD", "paragraph_index": 4332, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.8.2Minimum requirement PUCCH 1-1 (CSI Reference Symbols)", "paragraph_index": 4339, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.8.2.1FDD", "paragraph_index": 4340, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.8.2.2TDD", "paragraph_index": 4346, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.8.3Minimum requirement with CSI process", "paragraph_index": 4353, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.8.3.1FDD", "paragraph_index": 4354, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.3.8.3.2TDD", "paragraph_index": 4361, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4Reporting of Precoding Matrix Indicator (PMI)", "paragraph_index": 4368, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1Single PMI", "paragraph_index": 4385, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.1Minimum requirement PUSCH 3-1 (Cell-Specific Reference Symbols)", "paragraph_index": 4386, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.1.1FDD", "paragraph_index": 4387, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.1.2TDD", "paragraph_index": 4394, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.2Minimum requirement PUCCH 2-1 (Cell-Specific Reference Symbols)", "paragraph_index": 4401, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.2.1FDD", "paragraph_index": 4402, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.2.2TDD", "paragraph_index": 4408, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.3Minimum requirement PUSCH 3-1 (CSI Reference Symbol)", "paragraph_index": 4414, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.3.1FDD", "paragraph_index": 4415, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.3.2TDD", "paragraph_index": 4421, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.3.3FDD (with Class A 12Tx codebook)", "paragraph_index": 4427, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.3.4TDD (with Class A 12Tx codebook)", "paragraph_index": 4433, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.3.5FDD (with Class A 24Tx codebook)", "paragraph_index": 4439, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.3.6TDD (with Class A 24Tx codebook)", "paragraph_index": 4445, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.4Minimum requirement PUCCH 1-1 (CSI Reference Symbol)", "paragraph_index": 4451, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.4.1FDD (with 4Tx enhanced codebook)", "paragraph_index": 4452, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.4.2TDD (with 4Tx enhanced codebook)", "paragraph_index": 4458, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.4.3FDD (with Class B alternative codebook for one CSI-RS resource configured)", "paragraph_index": 4464, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1.4.4TDD (with Class B alternative codebook for one CSI-RS resource configured)", "paragraph_index": 4470, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1aVoid", "paragraph_index": 4476, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1a.1Void", "paragraph_index": 4477, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1a.1.1Void", "paragraph_index": 4478, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.1a.1.2Void", "paragraph_index": 4479, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2Multiple PMI", "paragraph_index": 4480, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.1Minimum requirement PUSCH 1-2 (Cell-Specific Reference Symbols)", "paragraph_index": 4481, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.1.1FDD", "paragraph_index": 4482, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.1.2TDD", "paragraph_index": 4488, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.2Minimum requirement PUSCH 2-2 (Cell-Specific Reference Symbols)", "paragraph_index": 4495, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.2.1FDD", "paragraph_index": 4496, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.2.2TDD", "paragraph_index": 4502, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.3Minimum requirement PUSCH 1-2 (CSI Reference Symbol)", "paragraph_index": 4508, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.3.1FDD", "paragraph_index": 4509, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.3.2TDD", "paragraph_index": 4515, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.3.3FDD (with 4Tx enhanced codebook)", "paragraph_index": 4521, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.3.4TDD (with 4Tx enhanced codebook)", "paragraph_index": 4527, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.3.5FDD (with Class A 16Tx codebook)", "paragraph_index": 4533, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.3.6TDD (with Class A 16Tx codebook)", "paragraph_index": 4539, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.3.7FDD (with Class A 32Tx codebook)", "paragraph_index": 4545, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.3.8TDD (with Class A 32Tx codebook)", "paragraph_index": 4551, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.3.9FDD (with Class A 16Tx advanced codebook)", "paragraph_index": 4557, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.2.3.10TDD (with Class A 16Tx advanced codebook)", "paragraph_index": 4563, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.4.3Void", "paragraph_index": 4569, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5Reporting of Rank Indicator (RI)", "paragraph_index": 4570, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.1Minimum requirement (Cell-Specific Reference Symbols)", "paragraph_index": 4574, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.1.1FDD", "paragraph_index": 4575, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.1.2TDD", "paragraph_index": 4584, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.2Minimum requirement (CSI Reference Symbols)", "paragraph_index": 4594, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.2.1FDD", "paragraph_index": 4595, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.2.2TDD", "paragraph_index": 4604, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.3Minimum requirement (CSI measurements in case two CSI subframe sets are configured)", "paragraph_index": 4613, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.3.1FDD", "paragraph_index": 4614, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.3.2TDD", "paragraph_index": 4622, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.4Minimum requirement (CSI measurements in case two CSI subframe sets are configured and CRS assistance information are configured)", "paragraph_index": 4630, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.4.1FDD", "paragraph_index": 4631, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.4.2TDD", "paragraph_index": 4640, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.5Minimum requirement (with CSI process)", "paragraph_index": 4649, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.5.1FDD", "paragraph_index": 4655, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.5.5.2TDD", "paragraph_index": 4665, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.6Additional requirements for carrier aggregation", "paragraph_index": 4676, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.6.1Periodic reporting on multiple cells (Cell-Specific Reference Symbols)", "paragraph_index": 4678, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.6.1.1FDD", "paragraph_index": 4679, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.6.1.2TDD", "paragraph_index": 4735, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.6.1.3TDD-FDD CA with FDD PCell", "paragraph_index": 4791, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.6.1.4TDD-FDD CA with TDD PCell", "paragraph_index": 4847, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.7CSI reporting (Single receiver antenna)", "paragraph_index": 4903, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.7.1CQI reporting definition under AWGN conditions", "paragraph_index": 4905, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.7.1.1FDD and half-duplex FDD", "paragraph_index": 4906, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.7.1.2TDD", "paragraph_index": 4910, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "9.7.1.3", "title": "FDD (Category 1bis UE)", "paragraph_index": 4914, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "9.7.1.4", "title": "TDD (Category 1bis UE)", "paragraph_index": 4918, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.7.2CQI reporting under fading conditions", "paragraph_index": 4922, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.7.2.1FDD and half-duplex FDD", "paragraph_index": 4923, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.7.2.2TDD", "paragraph_index": 4933, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "9.7.2.3", "title": "FDD (Category 1bis UE)", "paragraph_index": 4943, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "9.7.2.4", "title": "TDD (Category 1bis UE)", "paragraph_index": 4953, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8CSI reporting (UE supporting coverage enhancement)", "paragraph_index": 4963, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.1CQI reporting definition under AWGN conditions", "paragraph_index": 4968, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.1.1FDD and half-duplex FDD", "paragraph_index": 4969, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.1.2TDD", "paragraph_index": 4973, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.2UE-selected subband CQI", "paragraph_index": 4977, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.2.1FDD and half-duplex FDD", "paragraph_index": 4978, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.2.2TDD", "paragraph_index": 4986, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.3CQI reporting definition for UE supporting 64QAM under AWGN", "paragraph_index": 4994, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.3.1FDD and half-duplex FDD", "paragraph_index": 4995, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.3.2TDD", "paragraph_index": 4999, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.4CQI reporting definition for UE supporting alternative table under AWGN", "paragraph_index": 5003, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.4.1FDD and half-duplex FDD", "paragraph_index": 5004, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.4.2TDD", "paragraph_index": 5008, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.5PMI reporting with PUCCH 1-1 (CSI Reference Symbol)", "paragraph_index": 5011, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.5.1FDD", "paragraph_index": 5017, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.8.5.2TDD", "paragraph_index": 5023, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9CSI reporting for 4Rx UE", "paragraph_index": 5030, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1CQI reporting definition under AWGN conditions", "paragraph_index": 5031, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.1Minimum requirement PUCCH 1-0 with Rank 1 (Cell-Specific Reference Symbols)", "paragraph_index": 5033, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.1.1FDD", "paragraph_index": 5034, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.1.2TDD", "paragraph_index": 5038, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.2Minimum requirement PUCCH 1-1 with Rank 2 (CSI Reference Symbols)", "paragraph_index": 5042, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.2.1FDD", "paragraph_index": 5044, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.2.2TDD", "paragraph_index": 5050, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.3Minimum requirement PUCCH 1-1 with Rank 4 (Cell-Specific Reference Symbols)", "paragraph_index": 5056, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.3.1FDD", "paragraph_index": 5058, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.3.2TDD", "paragraph_index": 5064, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.4Minimum requirement PUCCH 1-1 with Rank 3 (CSI Reference Symbols)", "paragraph_index": 5070, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.4.1FDD", "paragraph_index": 5072, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.1.4.2TDD", "paragraph_index": 5078, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.2CQI reporting definition under fading conditions", "paragraph_index": 5084, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.2.1Minimum requirement PUCCH 1-0 (Cell-Specific Reference Symbol) for enhanced receiver Type A", "paragraph_index": 5085, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.2.1.1FDD", "paragraph_index": 5087, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.2.1.2TDD", "paragraph_index": 5095, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.2.2Minimum requirement PUCCH 1-1 (CSI Reference Symbol) for enhanced receiver Type A", "paragraph_index": 5103, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.2.2.1FDD", "paragraph_index": 5105, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.2.2.2TDD", "paragraph_index": 5113, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.3Reporting of Precoding Matrix Indicator (PMI) for 4Rx UE", "paragraph_index": 5121, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.3.1Minimum requirement PUSCH 3-1 (CSI Reference Symbol)", "paragraph_index": 5126, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.3.1.1TDD", "paragraph_index": 5127, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.4Reporting of Rank Indicator (RI)", "paragraph_index": 5133, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.4.1Minimum requirement (Cell-Specific Reference Symbols)", "paragraph_index": 5138, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.4.1.1FDD", "paragraph_index": 5139, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.4.1.2TDD", "paragraph_index": 5148, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.4.2Minimum requirement (CSI Reference Symbols)", "paragraph_index": 5157, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.4.2.1FDD", "paragraph_index": 5158, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.9.4.2.2TDD", "paragraph_index": 5167, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.10Reporting of CSI-RS Resource Indicator (CRI)", "paragraph_index": 5176, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.10.1Minimum requirement (PUSCH 3-1)", "paragraph_index": 5191, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.10.1.1FDD", "paragraph_index": 5192, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.10.1.2TDD", "paragraph_index": 5198, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.10.2Minimum requirement (PUSCH 3-1, QCL Type C)", "paragraph_index": 5204, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.10.2.1FDD", "paragraph_index": 5205, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.10.2.2TDD", "paragraph_index": 5215, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.11Reporting of Hybrid Channel state information", "paragraph_index": 5225, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.11.1Minimum requirement (with eMIMO-Type configured as Class B with more than one CSI-RS resource configured and eMIMO-Type2 as Class B with one CSI-RS resource configured)", "paragraph_index": 5226, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.11.1.1FDD", "paragraph_index": 5233, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.11.1.2TDD", "paragraph_index": 5239, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.12CSI reporting (UE supporting Short TTI)", "paragraph_index": 5245, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.12.1CQI reporting under fading conditions (Cell-Specific Reference Symbol)", "paragraph_index": 5247, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.12.1.1FDD", "paragraph_index": 5249, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.12.1.2TDD", "paragraph_index": 5262, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.12.2CQI reporting under fading conditions (CSI Reference Symbol)", "paragraph_index": 5273, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.12.2.1FDD", "paragraph_index": 5274, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.12.2.2TDD", "paragraph_index": 5287, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.13CSI reporting for 8Rx UE", "paragraph_index": 5298, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.13.1CQI reporting definition under AWGN conditions", "paragraph_index": 5299, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.13.1.1Minimum requirement PUCCH 1-1 with Rank 4 (CSI Reference Symbols)", "paragraph_index": 5301, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.13.1.2.1Void", "paragraph_index": 5303, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.13.1.2.2TDD", "paragraph_index": 5304, "style": "Heading5"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.14CSI reporting of Narrowband IoT", "paragraph_index": 5310, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.14.1CQI reporting definition under AWGN conditions", "paragraph_index": 5312, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.14.1.1Half-duplex FDD", "paragraph_index": 5313, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "9.14.1.2TDD", "paragraph_index": 5317, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10Performance requirement (MBMS)", "paragraph_index": 5321, "style": "Heading1"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.1FDD (Fixed Reference Channel)", "paragraph_index": 5322, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.1.1Minimum requirement", "paragraph_index": 5330, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.2TDD (Fixed Reference Channel)", "paragraph_index": 5337, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.2.1Minimum requirement", "paragraph_index": 5341, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.3FDD (Fixed Reference Channel) with FeMBMS", "paragraph_index": 5348, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.3.1Minimum requirement for FeMBMS Unicast-mixed Cell under CA", "paragraph_index": 5350, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.3.1.1Minimum requirement with 1.25kHz subcarrier spacing", "paragraph_index": 5351, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.3.1.2Minimum requirement with 7.5kHz subcarrier spacing", "paragraph_index": 5358, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.3.2Minimum requirement for FeMBMS Unicast-mixed Cell as Non-Serving Cell", "paragraph_index": 5365, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.3.2.1Minimum requirement with 1.25kHz subcarrier spacing", "paragraph_index": 5366, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.3.2.2Minimum requirement with 7.5kHz subcarrier spacing", "paragraph_index": 5373, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.3.3Minimum requirement for MBMS Dedicated cell", "paragraph_index": 5380, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.3.3.1Minimum requirement with 1.25kHz subcarrier spacing", "paragraph_index": 5381, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.3.3.2Minimum requirement with 7.5kHz subcarrier spacing", "paragraph_index": 5388, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.3.3.3Minimum requirement with 15kHz subcarrier spacing", "paragraph_index": 5395, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "10.4", "title": "FDD with LTE based 5G terrestrial broadcast", "paragraph_index": 5401, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.4.1Minimum requirement for PMCH decoding", "paragraph_index": 5406, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.4.1.1Minimum requirement with 0.37kHz subcarrier spacing", "paragraph_index": 5407, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.4.1.2Minimum requirement with 2.5kHz subcarrier spacing", "paragraph_index": 5414, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.4.1.3Minimum requirement with 1.25kHz subcarrier spacing", "paragraph_index": 5421, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.4.2Minimum requirement for CAS detection", "paragraph_index": 5428, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "10.4.2.1Minimum requirement for PBCH detection", "paragraph_index": 5429, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11Performance requirement (ProSe Direct Discovery)", "paragraph_index": 5434, "style": "Heading1"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.1General", "paragraph_index": 5436, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.1.1Applicability of requirements", "paragraph_index": 5437, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.1.2Reference DRX configuration", "paragraph_index": 5442, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.2Demodulation of PSDCH (single link performance)", "paragraph_index": 5445, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.2.1FDD (in-coverage)", "paragraph_index": 5448, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.2.2TDD (in-coverage)", "paragraph_index": 5454, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.2.3FDD (out-of-coverage)", "paragraph_index": 5460, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.3Power imbalance performance with two links", "paragraph_index": 5466, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.3.1FDD", "paragraph_index": 5468, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.3.2TDD", "paragraph_index": 5474, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.4Multiple timing reference test", "paragraph_index": 5481, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.4.1FDD", "paragraph_index": 5483, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.5Maximum Sidelink processes test", "paragraph_index": 5489, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.5.1FDD", "paragraph_index": 5492, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "11.5.2TDD", "paragraph_index": 5498, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12Performance requirement (ProSe Direct Communication)", "paragraph_index": 5505, "style": "Heading1"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.1General", "paragraph_index": 5507, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.1.1Applicability of requirements", "paragraph_index": 5508, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.1.1.1Applicability of requirements for different channel bandwidths", "paragraph_index": 5509, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.1.1.2Test coverage for different number of component carriers", "paragraph_index": 5511, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.1.1.3Applicability and test rules for different CA configurations and bandwidth combination sets", "paragraph_index": 5513, "style": "Heading4"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.1.2Reference DRX configuration", "paragraph_index": 5517, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.2Demodulation of PSSCH", "paragraph_index": 5520, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.2.1FDD", "paragraph_index": 5522, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.3Demodulation of PSCCH", "paragraph_index": 5528, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.3.1FDD", "paragraph_index": 5530, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.4Demodulation of PSBCH", "paragraph_index": 5536, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.4.1FDD", "paragraph_index": 5538, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.5Power imbalance performance with two links", "paragraph_index": 5544, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.5.1FDD", "paragraph_index": 5546, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.6Multiple timing reference test", "paragraph_index": 5552, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.6.1FDD", "paragraph_index": 5554, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.7Maximum Sidelink processes test", "paragraph_index": 5560, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.7.1FDD", "paragraph_index": 5562, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "12.8Sustained downlink data rate with active Sidelink", "paragraph_index": 5568, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "13Void", "paragraph_index": 5577, "style": "Heading1"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14Performance requirement (V2X Sidelink Communication)", "paragraph_index": 5578, "style": "Heading1"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.1General", "paragraph_index": 5580, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.1.1Applicability of requirements", "paragraph_index": 5581, "style": "Heading3"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.2Demodulation of PSSCH", "paragraph_index": 5587, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.3Demodulation of PSCCH", "paragraph_index": 5594, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.4Power imbalance performance with two links", "paragraph_index": 5601, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.5Demodulation of PSBCH", "paragraph_index": 5608, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.6Demodulation of PSSCH with eNB based synchronization", "paragraph_index": 5615, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.7Soft buffer test", "paragraph_index": 5622, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.8PSCCH/PSSCH decoding capability test", "paragraph_index": 5629, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.9Sustained downlink data rate with active sidelink", "paragraph_index": 5638, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.10Soft buffer test (CA)", "paragraph_index": 5648, "style": "Heading2"}
+{"source": "36101-j60_s08-XX.docx", "section": "", "title": "14.11PSCCH/PSSCH decoding capability test (CA)", "paragraph_index": 5660, "style": "Heading2"}

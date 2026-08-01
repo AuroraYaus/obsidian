@@ -1,0 +1,4 @@
+Number,Number of,Propagation,Frequency,SNR (dB),,,,,
+of TX antennas,demodulation branches,conditions and correlation matrix (Annex G),offset,Burst format A1,Burst format A2,Burst format A3,Burst format B4,Burst format C0,Burst format C2
+1,2,AWGN,0,-8.9,-11.9,-13.5,-15.8,-6.0,-11.8
+,,TDLA30-300 Low,4000 Hz,-1.6,-3.8,-4.8,-6.9,1.1,-3.9

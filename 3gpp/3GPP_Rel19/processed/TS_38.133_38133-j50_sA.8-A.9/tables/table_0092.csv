@@ -1,0 +1,44 @@
+Parameter,,Unit,Cell 1
+RF Channel Number,,,2
+Duplex Mode,Config 1,,FDD
+,"Config 2,3",,TDD
+TDD configuration,Config 1,,Not Applicable
+,Config 2,,TDDConf.1.1
+,Config 3,,TDDConf.2.1
+Channel Bandwidth (BWchannel),"Config 1,2",MHz,"10: NPRB,c = 52"
+,Config 3,,"40: NPRB,c = 106"
+Initial BWP Configuration,,,DLBWP.0.1ULBWP.0.1
+Dedicated BWP Configuration,,,DLBWP.1.1ULBWP.1.1
+DRX Cycle,,,N/A
+PDSCH Reference measurement channel,Config 1,,SR.1.1 FDD
+,Config 2,,SR.1.1 TDD
+,Config 3,,SR.2.1 TDD
+CORESET Reference Channel,Config 1,,CR.1.1 FDD
+,Config 2,,CR.1.1 TDD
+,Config 3,,CR.2.1 TDD
+Dedicated CORESET Reference Channel,Config 1,,CCR.1.1 FDD
+,Config 2,,CCR.1.1 TDD
+,Config 3,,CCR.2.1 TDD
+SSB configuration,"Config 1,2",,SSB.1 FR1
+,Config 3,,SSB.2 FR1
+SMTC Configuration,,,SMTC.2
+OCNG Patterns,,,OP.1
+EPRE ratio of PSS to SSS,,dB,0
+EPRE ratio of PBCH DMRS to SSS,,,
+EPRE ratio of PBCH to PBCH DMRS,,,
+EPRE ratio of PDCCH DMRS to SSS,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,
+EPRE ratio of PDSCH DMRS to SSS,,,
+EPRE ratio of PDSCH to PDSCH,,,
+EPRE ratio of OCNG DMRS to SSS(Note 1),,,
+EPRE ratio of OCNG to OCNG DMRS (Note 1),,,
+Note2,"Config 1,2,3",dBm/15 kHz,-98
+Note2,"Config 1,2",dBm/SCS,-98
+,Config 3,,-95
+,,dB,3
+SS-RSRP Note3,"Config 1,2",dBm/SCS,-95
+,Config 3,,-92
+Io Note 3,"Config 1,2",dBm/9.36 MHz,-65.2
+,Config 3,dBm/38.1 MHz,-59.2
+Propagation Condition,,,AWGN
+NOTE 1:OCNG shall be used such that cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,

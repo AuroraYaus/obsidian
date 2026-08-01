@@ -1,0 +1,6 @@
+eDRX_IDLE cycle and eDRX INACTIVE cycle length [s],T [s],eDRX INACTIVE PTW length [s] (number of 1.28 s periods),Nserv_RedCap [number of T Note 3]
+20.48 ≤ eDRX_IDLE cycle length ≤10485.7620.48 ≤ eDRX_ INACTIVE cycle length ≤10485.76,0.32,≥ 1.28 (1),M1*2
+,0.64,≥ 1.28 (1) (M1=1) or ≥ 2.56 (2) (M1=2),M1*2
+,1.28,≥2.56 (2),2
+,2.56,≥5.12 (4),2
+NOTE 1:RAN DRX cycle in this table is UE specific DRX value configured by RRC specified in [1].NOTE 2:The number of RAN DRX cycles in this table is given for the DRX cycles within RAN configured PTWs.NOTE 3:eDRX INACTIVE PTW in this table is RAN configured PTW.NOTE 4:Nserv_RedCap requirements are only defined within a single eDRX INACTIVE PTW duration.NOTE 5:T is determined according to clause 7.1 in [1].NOTE 6:The eDRX_INACTIVE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 7:The lower bound of PTW length is derived based on .Nserv_RedCap *DRX_cycle1.28*1.28,,,

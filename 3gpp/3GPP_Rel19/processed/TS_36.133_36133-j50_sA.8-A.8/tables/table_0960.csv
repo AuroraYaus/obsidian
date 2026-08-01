@@ -1,0 +1,21 @@
+Parameter,,Unit,Value,Comment
+E-UTRA RF Channel Number,,,"1, 2",Two radio channels are used for this test
+Initial Condition,Active PCell,,Cell1,PCell on RF channel number 1.
+,Neighbour cell,,Cell2,Neighbour cell on RF channel number 2.
+Final Condition,Active PCell,,Cell1,PCell on RF channel number 1.
+,PSCell,,Cell2,PSCell on RF channel number 2.
+A4,Hysteresis,dB,0,Hysteresis for evaluation of event A4.
+,Threshold RSRP,dBm,-93,Actual RSRP threshold for event A4. Needs to take absolute accuracy tolerance in section 9.1.11.1 into account plus margin.
+,Time To Trigger,s,0,
+CP length,,,Normal,
+DRX,,,OFF,Continuous monitoring of primary cell
+Measurement gap pattern Id,,,0,Gaps are configured before T2 and released before T3.
+CQI/PMI periodicity and offset configuration index on cell2,,,0,CQI reporting for PSCell every second subframe
+Cell-individual offset for cells on RF channel number 1,,dB,0,Individual offset for cells on primary component carrier.
+Cell-individual offset for cells on RF channel number 2,,dB,0,Individual offset for cells on carrier frequency of cell2.
+T1,,s,5,During this time the PCell shall be known and cell2 shall be unknown.
+T2,,s,≤ 5,During this time the UE shall identify neighbour cell (cell2) and report event A4.
+T3,,s,1,During this time the UE adds the PSCell.
+T4,,s,1,During this time the UE sends CSI reports for PSCell.
+T5,,s,1,During this time the UE releases the PSCell.
+Note 1:This test verifies the RRM requirement which is independent of channel bandwidth and is performed according to the principle defined in section A.3.6.1.Note 2:A UE capable of both synchronous and asynchronous DC operations is not required to pass this test case in accordance with the principle defined in section A.3.6.11.,,,,

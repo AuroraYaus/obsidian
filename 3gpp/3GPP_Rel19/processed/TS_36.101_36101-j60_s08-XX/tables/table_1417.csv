@@ -1,0 +1,7 @@
+Test number,Bandwidth,Reference Channel,OCNG Pattern,Propagationcondition,Correlation Matrix and antenna,Reference value,,MBMS UE Category
+,,,,,,BLER (%),SNR(dB),
+1,10 MHz,R.37 FDD,OP.4 FDD,MBSFN channel model (Table B.2.6-1),1x2 low,1,4.1,≥1
+2,10 MHz,R.38 FDD,OP.4 FDD,,,,11.0,≥1
+3,10 MHz,R.39 FDD,OP.4 FDD,,,,20.1,≥2
+,5.0MHz,R.39-1 FDD,OP.4 FDD,,,,20.5,1
+4,1.4 MHz,R.40 FDD,OP.4 FDD,,,,6.6,≥1

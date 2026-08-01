@@ -1,0 +1,18 @@
+Parameter,,Unit,Cell 1,Cell 2,Cell 3
+,,,T2,T2,T2
+NR RF Channel Number,,,1,1,1
+Correlation Matrix and Antenna Configuration,,,1x2 Low,1x2 Low,1x2 Low
+OCNG patterns defined in A.3.2.1,,,OP.1,OP.1,OP.1
+PRACH configuration,,,FR1 PRACH configuration 1,FR1 PRACH configuration 1,FR1 PRACH configuration 1
+Note 3,Config 1,dBm/SCS,-98,-98,-98
+,Config 2,dBm/SCS,-98,-98,-98
+,Config 3,dBm/SCS,-95,-95,-95
+PRS,Config 1,dB,1,-1.2,-1.2
+,Config 2,dB,1,-1.2,-1.2
+,Config 3,dB,1,-1.2,-1.2
+Io Note 4,Config 1,dBm/19.08 MHz,-61.18,-61.18,-61.18
+,Config 2,dBm/19.08 MHz,-61.18,-61.18,-61.18
+,Config 3,dBm/47.88 MHz,-57.20,-57.20,-57.20
+PRS,,dB,-3,-6,-6
+Propagation Condition,,,AWGN,,
+"NOTE 1: OCNG shall be used such that all active cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols, except for slots where PRS is transmitted by any of the cells.NOTE 2:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.NOTE 3:Interference from other cells and noise sources not specified in the test are assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 4:Io levels apply only for symbols where PRS is transmitted.",,,,,

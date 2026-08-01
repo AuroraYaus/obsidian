@@ -1,0 +1,19 @@
+,SRS.3 TDD,SRS.6 TDD,PDC-SRS.3,POS-SRS.3,
+Field,Value,,,,Comment
+c-SRS,17,17,"Same as NRB,c in the test case","Same as NRB,c in the test case",
+b-SRS,0,0,0,n.a.,
+b-hop,0,0,0,n.a.,Frequency hopping is disabled
+groupOrSequenceHopping,neither,neither,neither,neither,No group or sequence hopping
+freqDomainPosition,0,0,0,0,Frequency domain position of SRS
+freqDomainShift,0,0,0,0,
+pathlossReferenceRSssb-Index,0,0,0,0,SSB #0 is used for SRS path loss estimation
+usage,antennaSwitching,antennaSwitching,usagePDC-r17,n.a.,
+startPosition,1,1,5,5,resourceMapping setting
+nrofSymbols,1,1,4,4,SRS symbols belong to the same SRS resource.
+repetitionFactor,n1,n1,n1,n.a.,without repetition.
+transmissionComb,n2,n2,n4,n4,
+combOffset-n2,0,0,0,0,transmissionComb setting
+cyclicShift-n2,0,0,0,0,
+nrofSRS-Ports,port1,port1,port1,port1,Number of antenna ports used for SRS resource transmission
+resourceType,Periodic,Aperiodic,Periodic,Periodic,
+periodicityAndOffset-p,"sl320, 3",N/A,"Sl1280, 160","Sl1280, 160",SRS transmission periodicity

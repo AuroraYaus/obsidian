@@ -1,0 +1,219 @@
+NR CA configuration,Uplink CA configuration or single uplink carrier10,NR Band,Channel bandwidth (MHz) (NOTE 3),Bandwidth combination set
+CA_n48A-n53A,-,n48,"5, 10, 15, 20, 40, 50, 60, 80, 90, 100",0
+,,n53,"5, 10",
+CA_n48(2A)-n53A,-,n48,CA_n48(2A)_BCS0,0
+,,n53,"5, 10",
+CA_n48A-n66A,CA_n48A-n66A,n48,"5, 10, 15, 20, 40, 506, 606, 806, 906, 1006",0
+,,n66,"5, 10, 15, 20, 40",
+,,n48,"5, 10, 15, 20, 40, 506, 606, 806, 906, 1006",1
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",2
+,,n66,"5, 10, 15, 20, 25, 30, 40,",
+,n668,n48,See n48 channel bandwidths in Table 5.3.5-1,4 and 5
+,CA_n48A-n66A,n66,See n66 channel bandwidths in Table 5.3.5-1,
+CA_n48A-n66B,CA_n48A-n66A,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n66,CA_n66B_BCS0,
+CA_n48A-n66(2A),CA_n48A-n66A,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n66,CA_n66(2A)_BCS0,
+,,n48,See n48 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,CA_n66(2A)_BCS 4 and 5,
+CA_n48A-n66(3A),CA_n48A-n66A,n48,See n48 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,CA_n66(3A)_BCS 4 and 5,
+CA_n48B-n66A,CA_n48BCA_n48A-n66A,n48,CA_n48B_BCS0,0
+,,n66,"5, 10, 15, 20, 40",
+,,n48,CA_n48B_BCS1,1
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n48,CA_n48B_BCS2,2
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,CA_n48BCA_n48A-n66ACA_n48B-n66A,n48,CA_n48B_BCS 4 and 5,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+CA_n48B-n66B,CA_n48A-n66A,n48,CA_n48B_BCS0,0
+,,n66,CA_n66B_BCS0,
+,,n48,CA_n48B_BCS2,1
+,,n66,CA_n66B_BCS0,
+CA_n48B-n66(2A),CA_n48BCA_n48A-n66A,n48,CA_n48B_BCS2,0
+,,n66,CA_n66(2A)_BCS0,
+,,n48,CA_n48B_BCS2,1
+,,n66,CA_n66(2A)_BCS1,
+,,n48,CA_n48B_BCS2,2
+,,n66,CA_n66(2A)_BCS2,
+,CA_n48BCA_n48A-n66ACA_n48B-n66A,n48,CA_n48B_BCS 4 and 5,4 and 5
+,,n66,CA_n66(2A)_BCS 4 and 5,
+CA_n48C-n66A,CA_n48BCA_n48A-n66A,n48,CA_n48C_BCS0,0
+,,n66,"5, 10, 15, 20, 40",
+,,n48,CA_n48C_BCS0,1
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+CA_n48C-n66B,CA_n48A-n66A,n48,CA_n48C_BCS1,0
+,,n66,CA_n66B_BCS0,
+CA_n48(2A)-n66A,CA_n48A-n66A,n48,CA_n48(2A)_BCS0,0
+,,n66,"5, 10, 15, 20, 40",
+,,n48,CA_n48(2A)_BCS0,1
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n48,CA_n48(2A)_BCS1,2
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n48,CA_n48(2A)_BCS 4 and 5,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+CA_n48(2A)-n66B,CA_n48A-n66A,n48,CA_n48(2A)_BCS1,0
+,,n66,CA_n66B_BCS0,
+CA_n48(2A)-n66(2A),CA_n48A-n66A,n48,CA_n48(2A)_BCS1,0
+,,n66,CA_n66(2A)_BCS0,
+,,n48,CA_n48(2A)_BCS 4 and 5,4 and 5
+,,n66,CA_n66(2A)_BCS 4 and 5,
+CA_n48(3A)-n66A,CA_n48A-n66A,n48,CA_n48(3A)_BCS0,0
+,,n66,"5, 10, 15, 20, 40",
+CA_n48(A-B)-n66A,CA_n48A-n66A,n48,CA_n48(A-B)_BCS0,0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n48,CA_n48(A-B)_BCS1,1
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n48,CA_n48(A-B)_BCS 4 and 5,4 and 5
+,,n66,See n66 channel bandwidths in Table 5.3.5-1,
+CA_n48A-n70A,CA_n48A-n70A,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n70,"5, 10, 15, 201, 251",
+CA_n48(2A)-n70A,CA_n48A-n70A,n48,CA_n48(2A)_BCS1,0
+,,n70,"5, 10, 15, 20, 25",
+CA_n48(3A)-n70A,CA_n48A-n70A,n48,CA_n48(3A)_BCS0,0
+,,n70,"5, 10, 15, 20, 25",
+CA_n48B-n70A,CA_n48A-n70A,n48,CA_n48B_BCS2,0
+,,n70,"5, 10, 15, 201, 251",
+CA_n48A-n71A,CA_n48A-n71A,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n71,"5, 10, 15, 20",
+CA_n48A-n71(2A),CA_n48A-n71A,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n71,CA_n71(2A)_BCS0,
+CA_n48(2A)-n71A,CA_n48A-n71A,n48,CA_n48(2A)_BCS1,0
+,,n71,"5, 10, 15, 20",
+CA_n48(2A)-n71(2A),CA_n48A-n71A,n48,CA_n48(2A)_BCS1,0
+,,n71,CA_n71(2A)_BCS0,
+CA_n48(3A)-n71A,CA_n48A-n71A,n48,CA_n48(3A)_BCS0,0
+,,n71,"5, 10, 15, 20",
+CA_n48(4A)-n71A,CA_n48A-n71A,n48,CA_n48(4A)_BCS0,0
+,,n71,"5, 10, 15, 20",
+CA_n48B-n71A,CA_n48A-n71A,n48,CA_n48B_BCS2,0
+,,n71,"5, 10, 15, 20",
+CA_n48B-n71(2A),CA_n48A-n71A,n48,CA_n48B_BCS2,0
+,,n71,CA_n71(2A)_BCS0,
+CA_n48C-n71A,CA_n48A-n71A,n48,CA_n48C_BCS0,0
+,,n71,"5, 10, 15, 20",
+CA_n48A-n77A,"n778,9",n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n48,See n48 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n77,See n77 channel bandwidths in Table 5.3.5-1,
+CA_n48A-n77C,"n778,9CA_n77C8,9",n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n77,CA_n77C_BCS0,
+,,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",1
+,,n77,CA_n77C_BCS1,
+,,n48,See n48 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n77,CA_n77C_BCS4 and 5,
+CA_n48A-n77(2A),-,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n77,CA_n77(2A)_BCS0,
+,,n48,See n48 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n77,CA_n77(2A)_BCS4 and 5,
+CA_n48(2A)-n77A,"n778,9",n48,CA_n48(2A)_BCS0,0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n48,CA_n48(2A)_BCS1,1
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n48,CA_n48(2A)_BCS4 and 5,4 and 5
+,,n77,See n77 channel bandwidths in Table 5.3.5-1,
+CA_n48(2A)-n77C,"n778,9CA_n77C8,9",n48,CA_n48(2A)_BCS0,0
+,,n77,CA_n77C_BCS0,
+,,n48,CA_n48(2A)_BCS0,1
+,,n77,CA_n77C_BCS1,
+,,n48,CA_n48(2A)_BCS1,2
+,,n77,CA_n77C_BCS0,
+,,n48,CA_n48(2A)_BCS1,3
+,,n77,CA_n77C_BCS1,
+,,n48,CA_n48(2A)_BCS4 and 5,4 and 5
+,,n77,CA_n77C_BCS4 and 5,
+CA_n48(2A)-n77(2A),-,n48,CA_n48(2A)_BCS0,0
+,,n77,CA_n77(2A)_BCS0,
+,,n48,CA_n48(2A)_BCS4 and 5,4 and 5
+,,n77,CA_n77(2A)_BCS4 and 5,
+CA_n48(3A)-n77A,-,n48,CA_n48(3A)_BCS0,0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+CA_n48B-n77A,"CA_n48Bn778,9",n48,CA_n48B_BCS0,0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n48,CA_n48B_BCS1,1
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n48,CA_n48B_BCS2,2
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,"n778,9CA_n48B",n48,CA_n48B_BCS4 and 5,4 and 5
+,,n77,See n77 channel bandwidths in Table 5.3.5-1,
+CA_n48B-n77C,"n778,9CA_n48BCA_n77C8,9",n48,CA_n48B_BCS0,0
+,,n77,CA_n77C_BCS0,
+,,n48,CA_n48B_BCS0,1
+,,n77,CA_n77C_BCS1,
+,,n48,CA_n48B_BCS2,2
+,,n77,CA_n77C_BCS0,
+,,n48,CA_n48B_BCS2,3
+,,n77,CA_n77C_BCS1,
+,,n48,CA_n48B_BCS4 and 5,4 and 5
+,,n77,CA_n77C_BCS4 and 5,
+CA_n48(A-B)-n77A,"n778,9",n48,CA_n48(A-B)_BCS0,0
+,CA_n48B,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n48,CA_n48(A-B)_BCS1,1
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+CA_n48(A-B)-n77C,"n778,9CA_n48BCA_n77C",n48,CA_n48(A-B)_BCS1,0
+,,n77,CA_n77C_BCS1,
+CA_n48A-n96A,CA_n48A-n96A,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n96,"20, 40, 60, 80",
+CA_n48(2A)-n96A,CA_n48A-n96A,n48,CA_n48(2A)_BCS0,0
+,,n96,"20, 40, 60, 80",
+CA_n48(2A)-n96B,CA_n48A-n96B,n48,CA_n48(2A)_BCS0,0
+,,n96,CA_n96B_BCS0,
+CA_n48(2A)-n96C,CA_n48A-n96A,n48,CA_n48(2A)_BCS0,0
+,,n96,CA_n96C_BCS0,
+CA_n48(2A)-n96D,CA_n48A-n96A,n48,CA_n48(2A)_BCS0,0
+,,n96,CA_n96D_BCS0,
+CA_n48(2A)-n96E,CA_n48A-n96A,n48,CA_n48(2A)_BCS0,0
+,,n96,CA_n96E_BCS0,
+CA_n48(3A)-n96A,CA_n48A-n96A,n48,CA_n48(3A)_BCS0,0
+,,n96,"20, 40, 60, 80",
+CA_n48(3A)-n96B,CA_n48A-n96B,n48,CA_n48(3A)_BCS0,0
+,,n96,CA_n96B_BCS0,
+CA_n48(3A)-n96C,CA_n48A-n96A,n48,CA_n48(3A)_BCS0,0
+,,n96,CA_n96C_BCS0,
+CA_n48(3A)-n96D,CA_n48A-n96A,n48,CA_n48(3A)_BCS0,0
+,,n96,CA_n96D_BCS0,
+CA_n48(3A)-n96E,CA_n48A-n96A,n48,CA_n48(3A)_BCS0,0
+,,n96,CA_n96E_BCS0,
+CA_n48(4A)-n96A,CA_n48A-n96A,n48,CA_n48(4A)_BCS0,0
+,,n96,"20, 40, 60, 80",
+CA_n48(4A)-n96B,CA_n48A-n96A,n48,CA_n48(4A)_BCS0,0
+,,n96,CA_n96B_BCS0,
+CA_n48(4A)-n96C,CA_n48A-n96A,n48,CA_n48(4A)_BCS0,0
+,,n96,CA_n96C_BCS0,
+CA_n48(4A)-n96D,CA_n48A-n96A,n48,CA_n48(4A)_BCS0,0
+,,n96,CA_n96D_BCS0,
+CA_n48(4A)-n96E,CA_n48A-n96A,n48,CA_n48(4A)_BCS0,0
+,,n96,CA_n96E_BCS0,
+CA_n48A-n96B,CA_n48A-n96A,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n96,CA_n96B_BCS0,
+CA_n48A-n96C,CA_n48A-n96A,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n96,CA_n96C_BCS0,
+CA_n48A-n96D,CA_n48A-n96A,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n96,CA_n96D_BCS0,
+CA_n48A-n96E,CA_n48A-n96A,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",0
+,,n96,CA_n96E_BCS0,
+CA_n48B-n96A,CA_n48A-n96ACA_n48B-n96A,n48,CA_n48B_BCS0,0
+,,n96,"20, 40, 60, 80",
+CA_n48B-n96B,CA_n48A-n96ACA_n48B-n96A,n48,CA_n48B_BCS0,0
+,,n96,CA_n96B_BCS0,
+CA_n48B-n96C,CA_n48A-n96ACA_n48B-n96A,n48,CA_n48B_BCS0,0
+,,n96,CA_n96C_BCS0,
+CA_n48B-n96D,CA_n48A-n96ACA_n48B-n96A,n48,CA_n48B_BCS0,0
+,,n96,CA_n96D_BCS0,
+CA_n48B-n96E,CA_n48A-n96ACA_n48B-n96A,n48,CA_n48B_BCS0,0
+,,n96,CA_n96E_BCS0,
+CA_n48C-n96A,CA_n48A-n96A,n48,CA_n48C_BCS0,0
+,,n96,"20, 40, 60, 80",
+CA_n48C-n96B,CA_n48A-n96A,n48,CA_n48C_BCS0,0
+,,n96,CA_n96B_BCS0,
+CA_n48C-n96C,CA_n48A-n96A,n48,CA_n48C_BCS0,0
+,,n96,CA_n96C_BCS0,
+CA_n48C-n96D,CA_n48A-n96A,n48,CA_n48C_BCS0,0
+,,n96,CA_n96D_BCS0,
+CA_n48C-n96E,CA_n48A-n96A,n48,CA_n48C_BCS0,0
+,,n96,CA_n96E_BCS0,
+CA_n50A-n77A,CA_n50A-n77A,n50,n50 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n77,n77 channel bandwidths in Table 5.3.5-1,
+CA_n50A-n78A,CA_n50A-n78A,n50,"5, 10, 15, 20, 30, 40, 50, 60, 801",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",

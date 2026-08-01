@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TSSB_time_index_intra_less_than_5MHz</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>Ceil(7 x Kp) x measCyclePSCell x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320ms</td>
+    <td>Ceil(7 x Kp) x max(measCyclePSCell, 1.5xDRX cycle) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt; 320ms</td>
+    <td>Ceil(7 x Kp) x max(measCyclePSCell, DRX cycle) x CSSFintra</td>
+  </tr>
+</table>

@@ -1,0 +1,12 @@
+"Channel Bandwidth, MHz",Regions,,A-MPR
+,RBstart*12*SCSMHz,LCRB*12*SCSMHz,
+5 MHz,≤ 1.08,>0,A1
+,≥ 1.08 and ≤ 2.7,≥ 1.8,A2
+10 MHz,≤2.16,>0,A3
+,≥ 2.34 and  ≤ 3.78,≥ (12*SCS*RB_start/1MHz) + 1.62,A4
+,≥ 2.34 and ≤ 4.32,≥ (0.5*12*SCS*RB_start/1MHz) + 0.63and< (12*SCS*RB_start/1MHz) + 1.62,A5
+,>4.32,≥ 7.2 -(12*SCS*RB_start/1MHz),A6
+15 MHz,≤ 4.14,>0,A7
+,> 4.14 and ≤ 6.12,≥ (12*SCS*RB_start/1MHz) + 2.16,A8
+,> 4.14 and ≤ 7.2,≥ (0.5*12*SCS*RB_start/1MHz) + 0.63and < (12*SCS*RB_start/1MHz) + 2.16,A9
+,> 7.2,≥ 11.0 -(12*SCS*RB_start/1MHz),A10

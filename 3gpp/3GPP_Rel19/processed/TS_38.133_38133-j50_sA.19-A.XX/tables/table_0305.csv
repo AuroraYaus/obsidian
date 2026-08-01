@@ -1,0 +1,40 @@
+Parameter,,,Unit,Test 1,,Test 2,,Test 3,
+,,,,Cell 1,Cell 2,Cell 1,Cell 2,Cell 1,Cell 2
+Cell ID,,,,489,0,489,0,489,0
+SSB ARFCN,,,,freq1,,freq1,,freq1,
+BWchannel,,"Config 1,2,3,4",MHz,"10: NPRB,c = 52",,,,,
+BWP BW,,"Config 1,2,3,4",,"10: NPRB,c = 52",,,,,
+Downlink initial BWP configuration,,,,DLBWP.0.1,,,,,
+Downlink dedicated BWP configuration,,,,DLBWP.1.1,,,,,
+Uplink initial BWP configuration,,,,ULBWP.0.1,,,,,
+Uplink dedicated BWP configuration,,,,ULBWP.1.1,,,,,
+Satellite information,,"Config 1,3",,SSC.1,NSC.1,SSC.1,NSC.1,SSC.1,NSC.1
+,,"Config 2,4",,SSC.2,NSC.2,SSC.2,NSC.2,SSC.2,NSC.2
+TRS configuration,,"Config 1,2,3,4",,TRS.1.1 FDD,NA,TRS.1.1 FDD,NA,TRS.1.1 FDD,NA
+DRX Cycle,,"Config 1,2,3,4",ms,Not Applicable,,,,,
+PDSCH Reference measurement channel,,"Config 1,2,3,4",,SR.1.1 FDD,-,SR.1.1 FDD,-,SR.1.1 FDD,-
+RMSI CORESET Reference Channel,,"Config 1,2,3,4",,CR.1.1 FDD,-,CR.1.1 FDD,-,CR.1.1 FDD,-
+Control channel RMC,,"Config 1,2,3,4",,CCR.1.1 FDD,-,CCR.1.1 FDD,-,CCR.1.1 FDD,-
+SSB configuration,,"Config 1,2,3,4",,SSB.1 FR1,SSB.1 FR1,SSB.1 FR1,SSB.1 FR1,SSB.1 FR1,SSB.1 FR1
+Time offset with Cell 1,,"Config 1,2,3,4",ms,-,3,-,3,-,3
+SMTC configuration,,"Config 1,2,3,4",,SMTC.2,,,,,
+OCNG Patterns,,,,OCNG pattern 1,,,,,
+PDSCH/PDCCH subcarrier spacing,,"Config 1,2,3,4",kHz,15 kHz,,,,,
+EPRE ratio of PSS to SSS,,,dB,0,0,0,0,0,0
+EPRE ratio of PBCH DMRS to SSS,,,,,,,,,
+EPRE ratio of PBCH to PBCH DMRS,,,,,,,,,
+EPRE ratio of PDCCH DMRS to SSS,,,,,,,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,,,,,,,
+EPRE ratio of PDSCH DMRS to SSS,,,,,,,,,
+EPRE ratio of PDSCH to PDSCH,,,,,,,,,
+EPRE ratio of OCNG DMRS to SSS(Note 1),,,,,,,,,
+EPRE ratio of OCNG to OCNG DMRS (Note 1),,,,,,,,,
+Note2,"Config 1,2,3,4",R_FDD_SAB_FR1_A,dBm/15Khz,-106,,-88,,-114,
+Note2,"Config 1,2,3,4",,dBm/SCS,-106,,-88,,Same as Noc/15 kHz,
+,,,dB,2.46,-5.97,2.46,-5.97,-0.01,-4.76
+,,,dB,6,1,6,1,3,0
+SS-RSRPNote3,"Config 1,2,3,4",NR_FDD_SAB_FR1_A,dBm/SCS,-100,-105,-82,-87,-111.00,-114.00
+IoNote3,"Config 1,2,3,4",NR_FDD_SAB_FR1_A,dBm/9.36 MHz,-70.09,,-52.09,,-80.03,
+Propagation condition,,,-,AWGN,,,,,
+Antenna configuration,,,,1x1,,,,,
+NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4:SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.,,,,,,,,,

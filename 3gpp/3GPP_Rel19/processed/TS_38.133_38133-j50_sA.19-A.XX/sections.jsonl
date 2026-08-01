@@ -1,0 +1,695 @@
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19NR standalone tests for ATG", "paragraph_index": 1, "style": "Heading1"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1RRC_IDLE state mobility", "paragraph_index": 2, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.1Cell reselection to FR1 intra-frequency NR case", "paragraph_index": 3, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.1.1Test Purpose and Environment", "paragraph_index": 4, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.1.2Test Parameters", "paragraph_index": 6, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.1.3Test Requirements", "paragraph_index": 16, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.2Cell reselection to FR1 inter-frequency NR case", "paragraph_index": 30, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.2.1Test Purpose and Environment", "paragraph_index": 31, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.2.2Test Parameters", "paragraph_index": 33, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.2.3Test Requirements", "paragraph_index": 43, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.3Cell reselection to FR1 inter-frequency NR case for UE configured with hs-ATG-cellReselectionSet-r18", "paragraph_index": 57, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.3.1Test Purpose and Environment", "paragraph_index": 58, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.3.2Test Parameters", "paragraph_index": 60, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.1.3.3Test Requirements", "paragraph_index": 70, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2RRC_CONNECTED state mobility", "paragraph_index": 80, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.1Handover", "paragraph_index": 81, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.1.1Intra-frequency handover from FR1 to FR1; known target cell", "paragraph_index": 82, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A19.2.1.1.1Test Purpose and Environment", "paragraph_index": 83, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.1.1.2Test Parameters", "paragraph_index": 85, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.1.2.3Test Requirements", "paragraph_index": 97, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.1.2Inter-frequency handover from FR1 to FR1; unknown target cell", "paragraph_index": 104, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.1.2.1Test Purpose and Environment", "paragraph_index": 105, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.1.2.2Test Parameters", "paragraph_index": 107, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.1.2.3Test Requirements", "paragraph_index": 118, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.2Conditional Handover", "paragraph_index": 126, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.2.1Intra-frequency distance-based conditional Handover from FR1 to FR1", "paragraph_index": 127, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.2.1.1Test Purpose and Environment", "paragraph_index": 128, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.2.1.2Test Parameters", "paragraph_index": 130, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.2.1.3Test Requirements", "paragraph_index": 141, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.2.2Inter-frequency distance-based conditional Handover from FR1 to FR1", "paragraph_index": 156, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.2.2.1Test Purpose and Environment", "paragraph_index": 157, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.2.2.2Test Parameters", "paragraph_index": 159, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.2.2.3Test Requirements", "paragraph_index": 170, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3RRC Connection Mobility Control", "paragraph_index": 185, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.1SA: RRC Re-establishment", "paragraph_index": 186, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.1.1Intra-frequency RRC Re-establishment in FR1 for ATG", "paragraph_index": 187, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.1.1.1Test Purpose and Environment", "paragraph_index": 188, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.1.1.2 Test Requirements", "paragraph_index": 197, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.1.2Inter-frequency RRC Re-establishment in FR1 with unknown target cell without serving cell timing for ATG", "paragraph_index": 200, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.1.2.1Test Purpose and Environment", "paragraph_index": 201, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.1.2.2Test Requirements", "paragraph_index": 212, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.2Random Access for ATG UE", "paragraph_index": 228, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.2.1.1Test Purpose and Environment", "paragraph_index": 230, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.2.1.2Test Requirements", "paragraph_index": 239, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.2.2.1Test Purpose and Environment", "paragraph_index": 242, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.2.2.2Test Requirements", "paragraph_index": 251, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.2.32-step RA type contention based random access test in FR1 for NR standalone", "paragraph_index": 253, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.2.3.1Test Purpose and Environment", "paragraph_index": 254, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.2.3.2Test Requirements", "paragraph_index": 263, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.2.42-step RA type non-contention based test in FR1 for NR standalone", "paragraph_index": 265, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.2.4.1Test Purpose and Environment", "paragraph_index": 266, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.2.4.2Test Requirements", "paragraph_index": 275, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.3.1.1Test Purpose and Environment", "paragraph_index": 279, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.3.1.2Test Parameters", "paragraph_index": 281, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.2.3.3.1.3Test Requirements", "paragraph_index": 292, "style": "Heading6"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.3Timing", "paragraph_index": 303, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.3.1UE transmit timing", "paragraph_index": 304, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.3.1.1ATG UE Transmit Timing Test for FR1", "paragraph_index": 305, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.3.1.1.1Test Purpose and environment", "paragraph_index": 306, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.3.1.1.2Test requirements", "paragraph_index": 314, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.3.2UE timer accuracy", "paragraph_index": 327, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.3.3Timing advance", "paragraph_index": 328, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.3.3.1SA FR1 timing advance adjustment accuracy", "paragraph_index": 329, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.3.3.1.1Test Purpose and Environment", "paragraph_index": 330, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.3.3.1.2Test Parameters", "paragraph_index": 332, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.3.3.1.3Test Requirements", "paragraph_index": 343, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4Signalling characteristics", "paragraph_index": 347, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1Radio link Monitoring", "paragraph_index": 348, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.1Radio Link Monitoring Out-of-sync Test for FR1 PCell configured with SSB-based RLM RS in non-DRX mode", "paragraph_index": 353, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.1.1Test Purpose and Environment", "paragraph_index": 354, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.1.2Test Requirements", "paragraph_index": 369, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.2Radio Link Monitoring In-sync Test for FR1 PCell configured with SSB-based RLM RS in non-DRX mode", "paragraph_index": 374, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.2.1Test Purpose and Environment", "paragraph_index": 375, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.2.2Test Requirements", "paragraph_index": 389, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.3Radio Link Monitoring Out-of-sync Test for FR1 PCell configured with CSI-RS-based RLM in non-DRX mode", "paragraph_index": 393, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.3.1Test Purpose and Environment", "paragraph_index": 394, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.3.2Test Requirements", "paragraph_index": 410, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.4Radio Link Monitoring In-sync Test for FR1 PCell configured with CSI-RS-based RLM in non-DRX mode", "paragraph_index": 415, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.4.1Test Purpose and Environment", "paragraph_index": 416, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.1.4.2Test Requirements", "paragraph_index": 430, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.2Beam Failure Detection and Link recovery procedures", "paragraph_index": 434, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.2.1Beam Failure Detection and Link Recovery Test for FR1 PCell configured with SSB-based BFD and LR in non-DRX mode", "paragraph_index": 435, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.2.1.1Test Purpose and Environment", "paragraph_index": 436, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.2.1.2Test Requirements", "paragraph_index": 452, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.2.2Beam Failure Detection and Link Recovery Test for FR1 PCell configured with CSI-RS-based BFD and LR in non-DRX mode", "paragraph_index": 459, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.2.2.1Test Purpose and Environment", "paragraph_index": 460, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.2.2.2Test Requirements", "paragraph_index": 477, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.2.3Beam Failure Detection and Link Recovery Test for FR1 SCell configured with with CSI-RS-based BFD and SSB-based LR in non-DRX mode", "paragraph_index": 484, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.2.3.1Test Purpose and Environment", "paragraph_index": 485, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.2.3.2Test Requirements", "paragraph_index": 496, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.3Active BWP switch", "paragraph_index": 504, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.3.1DCI-based and Timer-based Active BWP Switch", "paragraph_index": 505, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.3.1.1NR FR1 DL active BWP switch with non-DRX in SA", "paragraph_index": 506, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.3.2RRC-based Active BWP Switch", "paragraph_index": 544, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.3.2.1NR FR1 DL active BWP switch of Cell with non-DRX in SA", "paragraph_index": 545, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.4UE specific CBW change", "paragraph_index": 574, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A19.4.4.1UE specific CBW change on PCell in FR1 in non-DRX", "paragraph_index": 575, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A19.4.4.1.1Test Purpose and Environment", "paragraph_index": 576, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.4.1.2Test Requirements", "paragraph_index": 601, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.5Pathloss reference signal switching delay", "paragraph_index": 606, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.5.1MAC-CE based pathloss reference signal switch delay", "paragraph_index": 607, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.5.1.1Test Purpose and Environment", "paragraph_index": 608, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.5.1.2Test Requirements", "paragraph_index": 633, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.6Interruption", "paragraph_index": 641, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.6.1SA interruptions at NR SRS antenna port switching with 1 SRS symbol in a slot in NR-CA", "paragraph_index": 642, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.6.1.1Test Purpose and Environment", "paragraph_index": 643, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.6.1.2Test Parameters", "paragraph_index": 645, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.6.1.3Test Requirements", "paragraph_index": 656, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.6.2SA interruptions at NR SRS antenna port switching with more than 1 SRS symbol in a slot in NR-CA", "paragraph_index": 660, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.6.2.1Test Purpose and Environment", "paragraph_index": 661, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.6.2.2Test Parameters", "paragraph_index": 663, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.6.2.3Test Requirements", "paragraph_index": 674, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7SCell Activation and Deactivation Delay for ATG", "paragraph_index": 677, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.1SCell Activation and deactivation of known SCell in FR1 in non-DRX for 160 ms SCell measurement cycle", "paragraph_index": 678, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.1.1Test Purpose and Environment", "paragraph_index": 679, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.1.2Test Requirements", "paragraph_index": 698, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.2SCell Activation and deactivation of known SCell in FR1 in non-DRX for 640 ms SCell measurement cycle", "paragraph_index": 706, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.2.1Test Purpose and Environment", "paragraph_index": 707, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.2.2Test Requirements", "paragraph_index": 711, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.3SCell Activation and deactivation of unknown SCell in FR1 in non-DRX", "paragraph_index": 713, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.3.1Test Purpose and Environment", "paragraph_index": 714, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.3.2Test Requirements", "paragraph_index": 725, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.4Direct SCell activation at SCell addition of known SCell in FR1", "paragraph_index": 727, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.4.1Test Purpose and Environment", "paragraph_index": 728, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.4.2Test Requirements", "paragraph_index": 748, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.5Direct SCell activation at handover with known SCell in FR1", "paragraph_index": 753, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.5.1Test Purpose and Environment", "paragraph_index": 754, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.5.2Test Requirements", "paragraph_index": 771, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.6Fast SCell Activation of known SCell in FR1 in non-DRX for 160 ms SCell measurement cycle", "paragraph_index": 786, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.6.1Test Purpose and Environment", "paragraph_index": 787, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.6.2Test Requirements", "paragraph_index": 800, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.7Fast SCell Activation of known SCell in FR1 in non-DRX for 640 ms SCell measurement cycle", "paragraph_index": 806, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.7.1Test Purpose and Environment", "paragraph_index": 807, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.7.2Test Requirements", "paragraph_index": 815, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.8SCell Activation of unknown SCell with valid L3 measurement results in FR1 in non-DRX for 160 ms SCell measurement cycle", "paragraph_index": 817, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.8.1Test Purpose and Environment", "paragraph_index": 818, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.8.2Test Requirements", "paragraph_index": 841, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.9TRS based SCell Activation of SSB-less SCell in FR1 inter-band CA in non-DRX for ATG", "paragraph_index": 849, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.9.1Test Purpose and Environment", "paragraph_index": 850, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.4.7.9.2Test Requirements", "paragraph_index": 866, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5Measurement procedure", "paragraph_index": 874, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1Intra-frequency Measurements", "paragraph_index": 875, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.1SA event triggered reporting tests without gap without SSB index reading under non-DRX", "paragraph_index": 876, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.1.1Test purpose and Environment", "paragraph_index": 877, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.1.2Test parameters", "paragraph_index": 879, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.1.3Test Requirements", "paragraph_index": 887, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.2SA event triggered reporting tests with per-UE gaps under non-DRX", "paragraph_index": 892, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.2.1Test purpose and Environment", "paragraph_index": 893, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.2.2Test parameters", "paragraph_index": 895, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.2.3Test Requirements", "paragraph_index": 902, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.3SA event triggered reporting tests without gap under non-DRX with SSB index reading", "paragraph_index": 907, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.3.1Test purpose and Environment", "paragraph_index": 908, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.3.2Test parameters", "paragraph_index": 910, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.3.3Test Requirements", "paragraph_index": 916, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.4SA event triggered reporting tests with per-UE gaps under non-DRX with SSB index reading", "paragraph_index": 921, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.4.1Test purpose and Environment", "paragraph_index": 922, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.4.2Test parameters", "paragraph_index": 924, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.4.3Test Requirements", "paragraph_index": 931, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.5Event triggered reporting tests on SCC with deactivated SCell under non-DRX with measurement cycle of 640ms", "paragraph_index": 936, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.5.1Test purpose and Environment", "paragraph_index": 937, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.5.2Test parameters", "paragraph_index": 940, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.1.5.3Test Requirements", "paragraph_index": 952, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.2Inter-frequency Measurements", "paragraph_index": 964, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.2.1.2Test parameters", "paragraph_index": 968, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.2.1.3Test Requirements", "paragraph_index": 981, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.2.2.2Test parameters", "paragraph_index": 990, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.2.3.2Test parameters", "paragraph_index": 1006, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.2.3.3Test Requirements", "paragraph_index": 1013, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.3L1-RSRP measurement for beam reporting for ATG", "paragraph_index": 1018, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.3.1SSB based L1-RSRP measurement when DRX is not used", "paragraph_index": 1019, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.3.1.1Test Purpose and Environment", "paragraph_index": 1020, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.3.1.2Test parameters", "paragraph_index": 1024, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.3.1.3Test Requirements", "paragraph_index": 1030, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.3.2CSI-RS based L1-RSRP measurement when DRX is not used", "paragraph_index": 1032, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.3.2.1Test Purpose and Environment", "paragraph_index": 1033, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.3.2.2Test parameters", "paragraph_index": 1037, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.3.2.3Test Requirements", "paragraph_index": 1043, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.4L1-SINR measurement for beam reporting for ATG", "paragraph_index": 1045, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.4.1L1-SINR measurement with CSI-RS based CMR and no dedicated IMR configured when DRX is not used", "paragraph_index": 1046, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.4.1.3Test Requirements", "paragraph_index": 1057, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.4.2L1-SINR measurement with SSB based CMR and dedicated IMR when DRX is not used", "paragraph_index": 1059, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.4.2.1Test Purpose and Environment", "paragraph_index": 1060, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.4.2.2Test parameters", "paragraph_index": 1064, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.4.2.3Test Requirements", "paragraph_index": 1070, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.4.3L1-SINR measurement with CSI-RS based CMR and dedicated IMR configured when DRX is not used", "paragraph_index": 1072, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.4.3.1Test Purpose and Environment", "paragraph_index": 1073, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.4.3.2Test parameters", "paragraph_index": 1077, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.4.3.3Test Requirements", "paragraph_index": 1083, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.5NR measurements with autonomous gaps for ATG", "paragraph_index": 1085, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.5.1SA intra-frequency CGI identification of NR neighbor cell in FR1", "paragraph_index": 1086, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.5.1.1Test Purpose and Environment", "paragraph_index": 1087, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.5.1.2Test Parameters", "paragraph_index": 1091, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.5.5.1.3Test Requirements", "paragraph_index": 1098, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6Measurement Performance requirements", "paragraph_index": 1100, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.1SS-RSRP for ATG UE", "paragraph_index": 1105, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.1.1SA: intra-frequency case measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1106, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.1.1.1Test Purpose and Environment", "paragraph_index": 1107, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.1.1.2Test parameters", "paragraph_index": 1109, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.1.1.3Test Requirements", "paragraph_index": 1117, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.1.2SA inter-frequency case measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1119, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.1.2.1Test Purpose and Environment", "paragraph_index": 1120, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.1.2.2Test parameters", "paragraph_index": 1126, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.1.2.3Test Requirements", "paragraph_index": 1130, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.2SS-RSRQ for ATG UE", "paragraph_index": 1132, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.2.1SA: Intra-frequency measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1133, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.2.1.1Test Purpose and Environment", "paragraph_index": 1134, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.2.1.2Test Parameters", "paragraph_index": 1136, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.2.1.3Test Requirements", "paragraph_index": 1144, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.2.2SA Inter-frequency measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1146, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.2.2.1Test Purpose and Environment", "paragraph_index": 1147, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.2.2.2Test Parameters", "paragraph_index": 1149, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.2.2.3Test Requirements", "paragraph_index": 1157, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.3SS-SINR for ATG UE", "paragraph_index": 1159, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.3.1SA intra-frequency measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1160, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.3.1.1Test Purpose and Environment", "paragraph_index": 1161, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.3.1.2Test Parameters", "paragraph_index": 1163, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.3.1.3Test Requirements", "paragraph_index": 1171, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.3.2SA Inter-frequency measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1173, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.3.2.1Test Purpose and Environment", "paragraph_index": 1174, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.3.2.2Test Parameters", "paragraph_index": 1176, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.3.2.3Test Requirements", "paragraph_index": 1184, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.4L1-RSRP measurement for beam reporting for ATG UE", "paragraph_index": 1186, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.4.1SSB based L1-RSRP measurement", "paragraph_index": 1187, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.4.1.1Test Purpose and Environment", "paragraph_index": 1188, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.4.1.2Test parameters", "paragraph_index": 1194, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.4.1.3Test Requirements", "paragraph_index": 1199, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.4.2CSI-RS based L1-RSRP measurement on resource set with repetition off", "paragraph_index": 1201, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.4.2.1Test Purpose and Environment", "paragraph_index": 1202, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.4.2.2Test parameters", "paragraph_index": 1208, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.4.2.3Test Requirements", "paragraph_index": 1213, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5L1-SINR measurement for beam reporting based CMR for ATG UE", "paragraph_index": 1215, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.1L1-SINR measurement with CSI-RS based CMR and no dedicated IMR configured and CSI-RS resource set with repetition off", "paragraph_index": 1216, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.1.1Test Purpose and Environment", "paragraph_index": 1217, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.1.2Test parameters", "paragraph_index": 1223, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.1.3Test Requirements", "paragraph_index": 1228, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.2L1-SINR measurement with SSB based CMR and dedicated IMR", "paragraph_index": 1230, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.2.1Test Purpose and Environment", "paragraph_index": 1231, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.2.2Test parameters", "paragraph_index": 1237, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.2.3Test Requirements", "paragraph_index": 1242, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.3L1-SINR measurement with CSI-RS based CMR and dedicated IMR", "paragraph_index": 1244, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.3.1Test Purpose and Environment", "paragraph_index": 1245, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.3.2Test parameters", "paragraph_index": 1251, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.5.3.3Test Requirements", "paragraph_index": 1256, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.6CSI-RSRP for ATG UE", "paragraph_index": 1258, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.6.1SA: intra-frequency case measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1259, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.6.1.1Test Purpose and Environment", "paragraph_index": 1260, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.6.1.2Test parameters", "paragraph_index": 1262, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.6.1.3Test Requirements", "paragraph_index": 1270, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.6.2SA inter-frequency case measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1272, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.6.2.1Test Purpose and Environment", "paragraph_index": 1273, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.6.2.2Test parameters", "paragraph_index": 1279, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.6.2.3Test Requirements", "paragraph_index": 1283, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.7CSI-RSRQ for ATG UE", "paragraph_index": 1285, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.7.1SA: Intra-frequency measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1286, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.7.1.1Test Purpose and Environment", "paragraph_index": 1287, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.7.1.2Test Parameters", "paragraph_index": 1289, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.7.1.3Test Requirements", "paragraph_index": 1297, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.7.2SA Inter-frequency measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1299, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.7.2.1Test Purpose and Environment", "paragraph_index": 1300, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.7.2.2Test Parameters", "paragraph_index": 1302, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.7.2.3Test Requirements", "paragraph_index": 1310, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.8CSI-SINR for ATG UE", "paragraph_index": 1312, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.8.1SA intra-frequency measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1313, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.8.1.1Test Purpose and Environment", "paragraph_index": 1314, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.8.1.2Test Parameters", "paragraph_index": 1316, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.8.1.3Test Requirements", "paragraph_index": 1324, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.8.2SA Inter-frequency measurement accuracy with FR1 serving cell and FR1 target cell", "paragraph_index": 1326, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.8.2.1Test Purpose and Environment", "paragraph_index": 1327, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.8.2.2Test Parameters", "paragraph_index": 1329, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.19.6.8.2.3Test Requirements", "paragraph_index": 1337, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20NR standalone tests for RedCap UE with Satellite Access", "paragraph_index": 1339, "style": "Heading1"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1RRC_IDLE state mobility", "paragraph_index": 1340, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.1Cell reselection to FR1 intra-frequency NR case for 1Rx RedCap UE", "paragraph_index": 1341, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.1.1Test Purpose and Environment", "paragraph_index": 1342, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.1.2Test Parameters", "paragraph_index": 1344, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.1.3Test Requirements", "paragraph_index": 1353, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.2Cell reselection to FR1 intra-frequency NR case  for 2Rx RedCap UE", "paragraph_index": 1355, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.2.1Test Purpose and Environment", "paragraph_index": 1356, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.2.2Test Parameters", "paragraph_index": 1358, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.2.3Test Requirements", "paragraph_index": 1363, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.3Cell reselection to FR1 intra-frequency NR cell for 1Rx RedCap UE configured with the feature for enhanced requirements", "paragraph_index": 1365, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.3.1Test Purpose and Environment", "paragraph_index": 1366, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.3.2Test Parameters", "paragraph_index": 1368, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.3.3Test Requirements", "paragraph_index": 1375, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.4Cell reselection to FR1 intra-frequency NR cell for 2Rx RedCap UE configured with the feature for enhanced requirements", "paragraph_index": 1377, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.4.1Test Purpose and Environment", "paragraph_index": 1378, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.4.2Test Parameters", "paragraph_index": 1380, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.4.3Test Requirements", "paragraph_index": 1385, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.5Time-based measurement initiation to FR1 intra-frequency NR cell reselection for 1Rx RedCap UE", "paragraph_index": 1387, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.5.1Test Purpose and Environment", "paragraph_index": 1388, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.5.2Test Parameters", "paragraph_index": 1390, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.5.3Test Requirements", "paragraph_index": 1397, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.6Time-based measurement initiation to FR1 intra-frequency NR cell reselection for 2Rx RedCap UE", "paragraph_index": 1399, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.6.1Test Purpose and Environment", "paragraph_index": 1400, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.6.2Test Parameters", "paragraph_index": 1402, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.6.3Test Requirements", "paragraph_index": 1407, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.7Location-based measurement initiation to FR1 inter-frequency NR cell reselection for 1Rx RedCap UE", "paragraph_index": 1409, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.7.1Test Purpose and Environment", "paragraph_index": 1410, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.7.2Test Parameters", "paragraph_index": 1412, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.7.3Test Requirements", "paragraph_index": 1419, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.8Location-based measurement initiation to FR1 inter-frequency NR cell reselection for 2Rx RedCap UE", "paragraph_index": 1421, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.8.1Test Purpose and Environment", "paragraph_index": 1422, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.8.2Test Parameters", "paragraph_index": 1424, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.8.3Test Requirements", "paragraph_index": 1429, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.9Cell reselection to FR1 inter-frequency NR case for UE fulfilling low mobility relaxed measurement criterion for 1Rx RedCap UE", "paragraph_index": 1431, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.9.1Test Purpose and Environment", "paragraph_index": 1432, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.9.2Test Parameters", "paragraph_index": 1434, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.9.3Test Requirements", "paragraph_index": 1443, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.10Cell reselection to FR1 inter-frequency NR case for UE fulfilling low mobility relaxed measurement criterion for 2Rx RedCap UE", "paragraph_index": 1445, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.10.1Test Purpose and Environment", "paragraph_index": 1446, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.10.2Test Parameters", "paragraph_index": 1448, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.10.3Test Requirements", "paragraph_index": 1453, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.11Cell reselection to FR1 inter-frequency NR case for UE fulfilling not-at-cell edge relaxed measurement criterion for 1Rx RedCap UEs", "paragraph_index": 1455, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.11.1Test Purpose and Environment", "paragraph_index": 1456, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.11.2Test Parameters", "paragraph_index": 1458, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.11.3Test Requirements", "paragraph_index": 1467, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.12Cell reselection to FR1 inter-frequency NR case for UE fulfilling not-at-cell edge relaxed measurement criterion for 2Rx RedCap UEs", "paragraph_index": 1469, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.12.1Test Purpose and Environment", "paragraph_index": 1470, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.12.2Test Parameters", "paragraph_index": 1472, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.12.3Test Requirements", "paragraph_index": 1477, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.13Cell reselection to FR1 inter-RAT for NR NTN carrier for 1Rx RedCap UE", "paragraph_index": 1479, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.13.1Test purpose and Environment", "paragraph_index": 1480, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.13.2Test Parameters", "paragraph_index": 1482, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.13.3Test requirements", "paragraph_index": 1495, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.14Cell reselection to FR1 inter-RAT for NR NTN carrier for 2Rx RedCap UE", "paragraph_index": 1497, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.14.1Test purpose and Environment", "paragraph_index": 1498, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.14.2Test Parameters", "paragraph_index": 1500, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.14.3Test requirements", "paragraph_index": 1505, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.15Cell re-selection to FR1 inter-frequency NR case with TN carrier for 1Rx RedCap UE", "paragraph_index": 1507, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.15.1Test purpose and Environment", "paragraph_index": 1508, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.15.2Test parameters", "paragraph_index": 1510, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.15.3Test requirements", "paragraph_index": 1520, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.16Cell re-selection to FR1 inter-frequency NR case with TN carrier for 2Rx RedCap UE", "paragraph_index": 1522, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.16.1Test purpose and Environment", "paragraph_index": 1523, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.16.2Test parameters", "paragraph_index": 1525, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.1.16.3Test requirements", "paragraph_index": 1529, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2RRC_CONNECTED state mobility", "paragraph_index": 1531, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1Handover", "paragraph_index": 1532, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.1Intra-frequency SAN Handover from FR1 to FR1 for 1Rx RedCap UE", "paragraph_index": 1533, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.1.1Test Purpose and Environment", "paragraph_index": 1534, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.1.2Test Parameters", "paragraph_index": 1536, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.1.3Test Requirements", "paragraph_index": 1543, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.2Intra-frequency SAN Handover from FR1 to FR1 for 2Rx RedCap UE", "paragraph_index": 1545, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.2.1Test Purpose and Environment", "paragraph_index": 1546, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.2.2Test Parameters", "paragraph_index": 1548, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.2.3Test Requirements", "paragraph_index": 1550, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.3Inter-frequency SAN Handover from FR1 to FR1 for 1Rx RedCap UE", "paragraph_index": 1552, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.3.1Test Purpose and Environment", "paragraph_index": 1553, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.3.2Test Parameters", "paragraph_index": 1555, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.3.3Test Requirements", "paragraph_index": 1558, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.4Inter-frequency SAN Handover from FR1 to FR1 for 2Rx RedCap UE", "paragraph_index": 1560, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.4.1Test Purpose and Environment", "paragraph_index": 1561, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.4.2Test Parameters", "paragraph_index": 1563, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.4.3Test Requirements", "paragraph_index": 1565, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.5Intra-frequency SAN RACH-less Handover from FR1 to FR1 for 1Rx RedCap UE", "paragraph_index": 1567, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.5.1Test Purpose and Environment", "paragraph_index": 1568, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.5.2Test Parameters", "paragraph_index": 1570, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.5.3Test Requirements", "paragraph_index": 1573, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.6Intra-frequency SAN RACH-less Handover from FR1 to FR1 for 2Rx RedCap UE", "paragraph_index": 1575, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.6.1Test Purpose and Environment", "paragraph_index": 1576, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.6.2Test Parameters", "paragraph_index": 1578, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.6.3Test Requirements", "paragraph_index": 1580, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.7Intra-frequency SAN time-based conditional Handover from FR1 to FR1 for 1Rx RedCap UE", "paragraph_index": 1582, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.7.1Test Purpose and Environment", "paragraph_index": 1583, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.7.2Test Parameters", "paragraph_index": 1585, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.7.3Test Requirements", "paragraph_index": 1592, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.8Intra-frequency SAN time-based conditional Handover from FR1 to FR1 for 2Rx RedCap UE", "paragraph_index": 1594, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.8.1Test Purpose and Environment", "paragraph_index": 1595, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.8.2Test Parameters", "paragraph_index": 1597, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.8.3Test Requirements", "paragraph_index": 1599, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.9Inter-frequency SAN distance-based conditional Handover from FR1 to FR1 for 1Rx RedCap UE", "paragraph_index": 1601, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.9.1Test Purpose and Environment", "paragraph_index": 1602, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.9.2Test Parameters", "paragraph_index": 1604, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.9.3Test Requirements", "paragraph_index": 1607, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.10Inter-frequency SAN distance-based conditional Handover from FR1 to FR1 for 2Rx RedCap UE", "paragraph_index": 1609, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.10.1Test Purpose and Environment", "paragraph_index": 1610, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.10.2Test Parameters", "paragraph_index": 1612, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.10.3Test Requirements", "paragraph_index": 1614, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.11Intra-frequency SAN time-based conditional Handover without L3 measurement criteria from FR1 to FR1 for 1Rx RedCap UE", "paragraph_index": 1616, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.11.1Test Purpose and Environment", "paragraph_index": 1617, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.11.2Test Parameters", "paragraph_index": 1619, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.11.3Test Requirements", "paragraph_index": 1624, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.12Intra-frequency SAN time-based conditional Handover without L3 measurement criteria from FR1 to FR1 for 2Rx RedCap UE", "paragraph_index": 1626, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.12.1Test Purpose and Environment", "paragraph_index": 1627, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.12.2Test Parameters", "paragraph_index": 1629, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.12.3Test Requirements", "paragraph_index": 1631, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.13Inter-frequency SAN distance-based conditional Handover without L3 measurement criteria from FR1 to FR1 for 1Rx RedCap UE", "paragraph_index": 1633, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.13.1Test Purpose and Environment", "paragraph_index": 1634, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.13.2Test Parameters", "paragraph_index": 1636, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.13.3Test Requirements", "paragraph_index": 1645, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.14Inter-frequency SAN distance-based conditional Handover without L3 measurement criteria from FR1 to FR1 for 2Rx RedCap UE", "paragraph_index": 1647, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.14.1Test Purpose and Environment", "paragraph_index": 1648, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.14.2Test Parameters", "paragraph_index": 1650, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.1.14.3Test Requirements", "paragraph_index": 1652, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2RRC Connection Mobility Control", "paragraph_index": 1654, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.1SA: RRC Re-establishment for SAN", "paragraph_index": 1655, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.1.1Intra-frequency RRC Re-establishment in FR1 for 1 Rx RedCap UE", "paragraph_index": 1656, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.1.2Intra-frequency RRC Re-establishment in FR1 for 2 Rx RedCap UE", "paragraph_index": 1681, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.1.3Inter-frequency RRC Re-establishment in FR1 for 1 Rx RedCap UE", "paragraph_index": 1706, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.1.4Inter-frequency RRC Re-establishment in FR1 for 2 Rx RedCap UE", "paragraph_index": 1732, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.2Random Access", "paragraph_index": 1758, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.2.14-step RA type contention based random access test in FR1 for NR standalone for 1 Rx RedCap UE", "paragraph_index": 1759, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.2.24-step RA type contention based random access test in FR1 for NR standalone for 2 Rx RedCap UE", "paragraph_index": 1796, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.2.34-step RA type non-contention based random access test in FR1 for NR standalone for 1 Rx RedCap UE", "paragraph_index": 1833, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.2.44-step RA type non-contention based random access test in FR1 for NR standalone for 2 Rx RedCap UE", "paragraph_index": 1864, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.3RRC Connection Release with Redirection", "paragraph_index": 1895, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.3.1Redirection from NR in FR1 to NR in FR1 for 1 Rx RedCap UE", "paragraph_index": 1896, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.2.3.2Redirection from NR in FR1 to NR in FR1 for 2 Rx RedCap UE", "paragraph_index": 1919, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3Satellite switching with re-synchronization from FR1 to FR1 for RedCap UE with Satellite Access", "paragraph_index": 1942, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.1RACH-based Hard Satellite switching with re-synchronization from FR1 to FR1 for RedCap UEs with 2Rx RedCap UE", "paragraph_index": 1943, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.1.1Test Purpose and Environment", "paragraph_index": 1944, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.1.2Test Parameters", "paragraph_index": 1946, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.1.3Test Requirements", "paragraph_index": 1959, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.2RACH-based Hard Satellite switching with re-synchronization from FR1 to FR1 for RedCap UEs with 1 Rx RedCap UE", "paragraph_index": 1968, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.2.1Test Purpose and Environment", "paragraph_index": 1969, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.2.2Test Parameters", "paragraph_index": 1971, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.2.3Test Requirements", "paragraph_index": 1984, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.3RACH-less Soft Satellite switching with re-synchronization from FR1 to FR1 for 2Rx RedCap UEs", "paragraph_index": 1993, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.3.1Test Purpose and Environment", "paragraph_index": 1994, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.3.2Test Parameters", "paragraph_index": 1996, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.3.3Test Requirements", "paragraph_index": 2010, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.4RACH-less Soft Satellite switching with re-synchronization from FR1 to FR1 for 1Rx RedCap UEs", "paragraph_index": 2018, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.4.1Test Purpose and Environment", "paragraph_index": 2019, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.4.2Test Parameters", "paragraph_index": 2021, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.2.3.4.3Test Requirements", "paragraph_index": 2023, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.3Timing for RedCap UE with Satellite Access", "paragraph_index": 2025, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.3.1UE transmit timing for RedCap UE with Satellite Access", "paragraph_index": 2026, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.3.1.1NR UE Transmit Timing Test for FR1", "paragraph_index": 2027, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.3.1.1.1Test Purpose and environment", "paragraph_index": 2028, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.3.1.1.2Test requirements", "paragraph_index": 2036, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.3.2Timing advance for RedCap UE with Satellite Access", "paragraph_index": 2038, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.3.2.1SA FR1 timing advance adjustment accuracy for RedCap UE", "paragraph_index": 2039, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.3.2.1.1Test Purpose and Environment", "paragraph_index": 2040, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.3.2.1.2Test Parameters", "paragraph_index": 2042, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.3.2.1.3Test Requirements", "paragraph_index": 2054, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4Signalling characteristics for RedCap UE with Satellite Access", "paragraph_index": 2056, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1Radio link Monitoring", "paragraph_index": 2057, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.1Radio Link Monitoring Out-of-sync Test for FR1 SAN PCell configured with SSB-based RLM RS in non-DRX mode for 2Rx RedCap UE with NTN", "paragraph_index": 2058, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.1.1Test Purpose and Environment", "paragraph_index": 2059, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.1.2Test Requirements", "paragraph_index": 2065, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.2Radio Link Monitoring Out-of-sync Test for FR1 SAN PCell configured with SSB-based RLM RS in non-DRX mode for 1Rx RedCap UE with NTN", "paragraph_index": 2067, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.2.1Test Purpose and Environment", "paragraph_index": 2068, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.2.2Test Requirements", "paragraph_index": 2075, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.3Radio Link Monitoring In-sync Test for FR1 SAN PCell configured with SSB-based RLM RS in DRX mode for 2Rx RedCap UE with NTN", "paragraph_index": 2077, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.3.1Test Purpose and Environment", "paragraph_index": 2078, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.3.2Test Requirements", "paragraph_index": 2082, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.4Radio Link Monitoring In-sync Test for FR1 SAN PCell configured with SSB-based RLM RS in DRX mode for 1Rx RedCap UE with NTN", "paragraph_index": 2084, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.4.1Test Purpose and Environment", "paragraph_index": 2085, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.4.2Test Requirements", "paragraph_index": 2092, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.5Radio Link Monitoring Out-of-sync Test for FR1 SAN PCell configured with CSI-RS-based RLM in non-DRX mode for 2Rx RedCap UE with NTN", "paragraph_index": 2094, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.5.1Test Purpose and Environment", "paragraph_index": 2095, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.5.2Test Requirements", "paragraph_index": 2099, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.6Radio Link Monitoring Out-of-sync Test for FR1 SAN PCell configured with CSI-RS-based RLM in non-DRX mode for 1Rx RedCap UE with NTN", "paragraph_index": 2101, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.6.1Test Purpose and Environment", "paragraph_index": 2102, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.6.2Test Requirements", "paragraph_index": 2109, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.7Radio Link Monitoring In-sync Test for FR1 SAN PCell configured with CSI-RS-based RLM in DRX mode for 2Rx RedCap UE with NTN", "paragraph_index": 2111, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.7.1Test Purpose and Environment", "paragraph_index": 2112, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.7.2Test Requirements", "paragraph_index": 2116, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.8Radio Link Monitoring In-sync Test for FR1 SAN PCell configured with CSI-RS-based RLM in DRX mode for 1Rx RedCap UE with NTN", "paragraph_index": 2118, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.8.1Test Purpose and Environment", "paragraph_index": 2119, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.1.8.2Test Requirements", "paragraph_index": 2126, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2Beam Failure Detection and Link recovery procedures for RedCap UE with satellite access", "paragraph_index": 2128, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.1Beam Failure Detection and Link Recovery Test for FR1 PCell for satellite access configured with SSB-based BFD and LR in non-DRX mode for 1Rx RedCap UE", "paragraph_index": 2129, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.1.1Test Purpose and Environment", "paragraph_index": 2130, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.1.2Test Requirements", "paragraph_index": 2139, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.2Beam Failure Detection and Link Recovery Test for FR1 PCell for satellite access configured with SSB-based BFD and LR in non-DRX mode for 2Rx RedCap UE", "paragraph_index": 2141, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.2.1Test Purpose and Environment", "paragraph_index": 2142, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.2.2Test Requirements", "paragraph_index": 2149, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.3Beam Failure Detection and Link Recovery Test for FR1 PCell for satellite access configured with SSB-based BFD and LR in DRX mode for 1Rx RedCap UE", "paragraph_index": 2151, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.3.1Test Purpose and Environment", "paragraph_index": 2152, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.3.2Test Requirements", "paragraph_index": 2159, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.4Beam Failure Detection and Link Recovery Test for FR1 PCell for satellite access configured with SSB-based BFD and LR in DRX mode for 2Rx RedCap UE", "paragraph_index": 2161, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.4.1Test Purpose and Environment", "paragraph_index": 2162, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.4.2Test Requirements", "paragraph_index": 2169, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.5Beam Failure Detection and Link Recovery Test for FR1 PCell for satellite access configured with CSI-RS-based BFD and LR in non-DRX mode for 1Rx RedCap UE", "paragraph_index": 2171, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.5.1Test Purpose and Environment", "paragraph_index": 2172, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.5.2Test Requirements", "paragraph_index": 2179, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.6Beam Failure Detection and Link Recovery Test for FR1 PCell for satellite access configured with CSI-RS-based BFD and LR in non-DRX mode for 2Rx RedCap UE", "paragraph_index": 2181, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.6.1Test Purpose and Environment", "paragraph_index": 2182, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.6.2Test Requirements", "paragraph_index": 2189, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.7Beam Failure Detection and Link Recovery Test for FR1 PCell for satellite access configured with CSI-RS-based BFD and LR in DRX mode for 1Rx RedCap UE", "paragraph_index": 2191, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.7.1Test Purpose and Environment", "paragraph_index": 2192, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.7.2Test Requirements", "paragraph_index": 2199, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.8Beam Failure Detection and Link Recovery Test for FR1 PCell for satellite access configured with CSI-RS-based BFD and LR in DRX mode for 2Rx RedCap UE", "paragraph_index": 2201, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.8.1Test Purpose and Environment", "paragraph_index": 2202, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.2.8.2Test Requirements", "paragraph_index": 2209, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.3Active BWP switch for RedCap UE with Satellite Access", "paragraph_index": 2211, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.3.1DCI-based and Timer-based Active BWP Switch", "paragraph_index": 2212, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.3.1.1NR FR1 DL active BWP switch with non-DRX in SA", "paragraph_index": 2213, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.3.2RRC-based Active BWP Switch", "paragraph_index": 2222, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.3.2.1NR FR1 DL active BWP switch of Cell with non-DRX in SA", "paragraph_index": 2223, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.3.2.1.2Test Requirements", "paragraph_index": 2230, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.4UE specific CBW change for RedCap UE with Satellite Access", "paragraph_index": 2232, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.4.1UE specific CBW change on PCell in FR1 in non-DRX", "paragraph_index": 2233, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.4.1.1Test Purpose and Environment", "paragraph_index": 2234, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.4.1.2Test Requirements", "paragraph_index": 2244, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.5Pathloss reference signal switching delay for RedCap UE with Satellite Access", "paragraph_index": 2246, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.5.1MAC-CE based pathloss reference signal switch delay", "paragraph_index": 2247, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.5.1.1Test Purpose and Environment", "paragraph_index": 2248, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.4.5.1.2Test Requirements", "paragraph_index": 2254, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5Measurement procedure", "paragraph_index": 2256, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1Intra-frequency Measurements", "paragraph_index": 2257, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.1SA event triggered reporting tests without gap under non-DRX for 1Rx RedCap UE", "paragraph_index": 2258, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.1.1Test purpose and Environment", "paragraph_index": 2259, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.1.2Test parameters", "paragraph_index": 2261, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.1.3Test Requirements", "paragraph_index": 2267, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.2SA event triggered reporting tests without gap under non-DRX for 2Rx RedCap UE", "paragraph_index": 2269, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.2.1Test purpose and Environment", "paragraph_index": 2270, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.2.2Test parameters", "paragraph_index": 2272, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.2.3Test Requirements", "paragraph_index": 2278, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.3SA event triggered reporting tests without gap under DRX for 1Rx RedCap UE", "paragraph_index": 2280, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.3.1Test purpose and Environment", "paragraph_index": 2281, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.3.2Test parameters", "paragraph_index": 2283, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.3.3Test Requirements", "paragraph_index": 2289, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.4SA event triggered reporting tests without gap under DRX for 2Rx RedCap UE", "paragraph_index": 2295, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.4.1Test purpose and Environment", "paragraph_index": 2296, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.4.2Test parameters", "paragraph_index": 2298, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.4.3Test Requirements", "paragraph_index": 2304, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.5SA event triggered reporting tests without gap under non-DRX with SSB index reading for 1Rx RedCap UE", "paragraph_index": 2306, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.5.1Test purpose and Environment", "paragraph_index": 2307, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.5.2Test parameters", "paragraph_index": 2309, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.5.3Test Requirements", "paragraph_index": 2315, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.6SA event triggered reporting tests without gap under non-DRX with SSB index reading for 2Rx RedCap UE", "paragraph_index": 2320, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.6.1Test purpose and Environment", "paragraph_index": 2321, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.6.2Test parameters", "paragraph_index": 2323, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.6.3Test Requirements", "paragraph_index": 2329, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.7SA event triggered reporting tests with single measurement gap under non-DRX for satellite access for 1Rx RedCap UE", "paragraph_index": 2331, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.7.1Test purpose and Environment", "paragraph_index": 2332, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.7.2Test parameters", "paragraph_index": 2334, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.7.3Test Requirements", "paragraph_index": 2340, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.8SA event triggered reporting tests with single measurement gap under non-DRX for satellite access for 2Rx RedCap UE", "paragraph_index": 2342, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.8.1Test purpose and Environment", "paragraph_index": 2343, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.8.2Test parameters", "paragraph_index": 2345, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.8.3Test Requirements", "paragraph_index": 2351, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.9SA event triggered reporting tests with FNO concurrent gaps under DRX for satellite access for 1Rx RedCap UE", "paragraph_index": 2353, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.9.1Test purpose and Environment", "paragraph_index": 2354, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.9.2Test parameters", "paragraph_index": 2356, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.9.3Test Requirements", "paragraph_index": 2362, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.10SA event triggered reporting tests with FNO concurrent gaps under DRX for satellite access for 2Rx RedCap UE", "paragraph_index": 2368, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.10.1Test purpose and Environment", "paragraph_index": 2369, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.10.2Test parameters", "paragraph_index": 2371, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.10.3Test Requirements", "paragraph_index": 2377, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.11SA event triggered reporting tests with PPO concurrent gaps under non-DRX with SSB index reading for satellite access for 1Rx RedCap UE", "paragraph_index": 2379, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.11.1Test purpose and Environment", "paragraph_index": 2380, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.11.2Test parameters", "paragraph_index": 2382, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.11.3Test Requirements", "paragraph_index": 2388, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.12SA event triggered reporting tests with PPO concurrent gaps under non-DRX with SSB index reading for satellite access for 2Rx RedCap UE", "paragraph_index": 2393, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.12.1Test purpose and Environment", "paragraph_index": 2394, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.12.2Test parameters", "paragraph_index": 2396, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.1.12.3Test Requirements", "paragraph_index": 2402, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2Inter-frequency Measurements", "paragraph_index": 2404, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.1SA event triggered reporting tests for FR1 without SSB time index detection when DRX is used with single gap for 2Rx RedCap UE with satellite access", "paragraph_index": 2405, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.1.1Test Purpose and Environment", "paragraph_index": 2406, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.1.2Test Requirements", "paragraph_index": 2413, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.2SA event triggered reporting tests for FR1 without SSB time index detection when DRX is used with single gap for 1Rx RedCap UE with satellite access", "paragraph_index": 2415, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.2.1Test Purpose and Environment", "paragraph_index": 2416, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.2.2Test Requirements", "paragraph_index": 2424, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.3SA event triggered reporting tests for FR1 with SSB time index detection when DRX is not used with single gap for 2Rx RedCap UE with satellite access", "paragraph_index": 2429, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.3.1Test Purpose and Environment", "paragraph_index": 2430, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.3.2Test Requirements", "paragraph_index": 2435, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.4SA event triggered reporting tests for FR1 with SSB time index detection when DRX is not used with single gap for 1Rx RedCap UE with satellite access", "paragraph_index": 2437, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.4.1Test Purpose and Environment", "paragraph_index": 2438, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.4.2Test Requirements", "paragraph_index": 2446, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.5SA event triggered reporting tests for FR1 without SSB time index detection when DRX is not used with two gaps in fully non-overlapped for 2Rx RedCap UE with satellite access", "paragraph_index": 2450, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.5.1Test Purpose and Environment", "paragraph_index": 2451, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.5.2Test Requirements", "paragraph_index": 2456, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.6SA event triggered reporting tests for FR1 without SSB time index detection when DRX is not used with two gaps in fully non-overlapped for 1Rx RedCap UE with satellite access", "paragraph_index": 2458, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.6.1Test Purpose and Environment", "paragraph_index": 2459, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.6.2Test Requirements", "paragraph_index": 2467, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.7SA event triggered reporting tests for FR1 without SSB time index detection when DRX is not used with two gaps in partially partial overalpping for 2Rx RedCap UE with satellite access", "paragraph_index": 2471, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.7.1Test Purpose and Environment", "paragraph_index": 2472, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.7.2Test Requirements", "paragraph_index": 2477, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.8SA event triggered reporting tests for FR1 without SSB time index detection when DRX is not used with two gaps in partially partial overalpping for 1Rx RedCap UE with satellite access", "paragraph_index": 2479, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.8.1Test Purpose and Environment", "paragraph_index": 2480, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.8.2Test Requirements", "paragraph_index": 2488, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.9Event triggered reporting test without gap under non-DRX for 2Rx RedCap UE with satellite access", "paragraph_index": 2492, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.9.1Test purpose and Environment", "paragraph_index": 2493, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.9.2Test parameters", "paragraph_index": 2495, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.9.3Test Requirements", "paragraph_index": 2499, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.10Event triggered reporting test without gap under non-DRX for 1Rx RedCap UE with satellite access", "paragraph_index": 2501, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.10.1Test purpose and Environment", "paragraph_index": 2502, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.10.2Test parameters", "paragraph_index": 2504, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.10.3Test Requirements", "paragraph_index": 2508, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.11Event triggered reporting tests without gap under DRX for 2Rx RedCap UE with satellite access", "paragraph_index": 2510, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.11.1Test purpose and Environment", "paragraph_index": 2511, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.11.2Test parameters", "paragraph_index": 2513, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.11.3Test Requirements", "paragraph_index": 2517, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.12Event triggered reporting tests without gap under DRX for 1Rx RedCap UE with satellite access", "paragraph_index": 2523, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.12.1Test purpose and Environment", "paragraph_index": 2524, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.12.2Test parameters", "paragraph_index": 2526, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.2.12.3Test Requirements", "paragraph_index": 2533, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3L1-RSRP measurement for beam reporting for (e)RedCap UE with Satellite Access", "paragraph_index": 2539, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.1SSB based L1-RSRP measurement for (e)RedCap UE with satellite access when DRX is not used for 1Rx (e)RedCap UE with NTN", "paragraph_index": 2540, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.1.1Test Purpose and Environment", "paragraph_index": 2541, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.1.2Test parameters", "paragraph_index": 2545, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.1.3Test Requirements", "paragraph_index": 2553, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.2SSB based L1-RSRP measurement for (e)RedCap UE with satellite access when DRX is not used for 2Rx (e)RedCap UE with NTN", "paragraph_index": 2556, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.2.1Test Purpose and Environment", "paragraph_index": 2557, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.2.2Test parameters", "paragraph_index": 2561, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.2.3Test Requirements", "paragraph_index": 2569, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.3CSI-RS based L1-RSRP measurement for (e)RedCap UE with satellite access when DRX is used for 1Rx (e)RedCap UE with NTN", "paragraph_index": 2572, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.3.1Test Purpose and Environment", "paragraph_index": 2573, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.3.2Test parameters", "paragraph_index": 2577, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.3.3Test Requirements", "paragraph_index": 2585, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.4CSI-RS based L1-RSRP measurement for (e)RedCap UE with satellite access when DRX is used for 2Rx (e)RedCap UE with NTN", "paragraph_index": 2589, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.4.1Test Purpose and Environment", "paragraph_index": 2590, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.4.2Test parameters", "paragraph_index": 2594, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.5.3.4.3Test Requirements", "paragraph_index": 2602, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6Measurement Performance requirements", "paragraph_index": 2606, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1SS-RSRP for SAN", "paragraph_index": 2607, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.1SA: intra-frequency case measurement accuracy with FR1 serving cell and FR1 target cell for 1Rx RedCap UE", "paragraph_index": 2608, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.1.1Test Purpose and Environment", "paragraph_index": 2609, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.1.2Test parameters", "paragraph_index": 2611, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.1.3Test Requirements", "paragraph_index": 2618, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.2SA: intra-frequency case measurement accuracy with FR1 serving cell and FR1 target cell for 2Rx RedCap UE", "paragraph_index": 2620, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.2.1Test Purpose and Environment", "paragraph_index": 2621, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.2.2Test parameters", "paragraph_index": 2623, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.2.3Test Requirements", "paragraph_index": 2630, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.3SA inter-frequency case measurement accuracy with FR1 serving cell and FR1 target cell for 1Rx RedCap UE", "paragraph_index": 2632, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.3.1Test Purpose and Environment", "paragraph_index": 2633, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.3.2Test parameters", "paragraph_index": 2638, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.3.3Test Requirements", "paragraph_index": 2642, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.4SA inter-frequency case measurement accuracy with FR1 serving cell and FR1 target cell for 2Rx RedCap UE", "paragraph_index": 2644, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.4.1Test Purpose and Environment", "paragraph_index": 2645, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.4.2Test parameters", "paragraph_index": 2650, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.1.4.3Test Requirements", "paragraph_index": 2654, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2SS-RSRQ", "paragraph_index": 2656, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.1SA: Intra-frequency measurement accuracy with FR1 serving cell and FR1 target cell for satellite access for 1Rx RedCap UE", "paragraph_index": 2657, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.1.1Test Purpose and Environment", "paragraph_index": 2658, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.1.2Test Parameters", "paragraph_index": 2660, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.1.3Test Requirements", "paragraph_index": 2666, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.2SA: Intra-frequency measurement accuracy with FR1 serving cell and FR1 target cell for satellite access for 2Rx RedCap UE", "paragraph_index": 2668, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.2.1Test Purpose and Environment", "paragraph_index": 2669, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.2.2Test Parameters", "paragraph_index": 2671, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.2.3Test Requirements", "paragraph_index": 2677, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.3SA Inter-frequency measurement accuracy with FR1 serving cell and FR1 target cell for satellite access for 1Rx RedCap UE", "paragraph_index": 2679, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.3.1Test Purpose and Environment", "paragraph_index": 2680, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.3.2Test Parameters", "paragraph_index": 2682, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.3.3Test Requirements", "paragraph_index": 2688, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.4SA Inter-frequency measurement accuracy with FR1 serving cell and FR1 target cell for satellite access for 2Rx RedCap UE", "paragraph_index": 2690, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.4.1Test Purpose and Environment", "paragraph_index": 2691, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.4.2Test Parameters", "paragraph_index": 2693, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.2.4.3Test Requirements", "paragraph_index": 2699, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3SS-SINR", "paragraph_index": 2701, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.1SA intra-frequency measurement accuracy with FR1 serving cell and FR1 target cell for 1Rx RedCap UE", "paragraph_index": 2702, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.1.1Test Purpose and Environment", "paragraph_index": 2703, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.1.2Test Parameters", "paragraph_index": 2705, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.1.3Test Requirements", "paragraph_index": 2711, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.2SA intra-frequency measurement accuracy with FR1 serving cell and FR1 target cell for 2Rx RedCap UE", "paragraph_index": 2713, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.2.1Test Purpose and Environment", "paragraph_index": 2714, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.2.2Test Parameters", "paragraph_index": 2716, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.2.3Test Requirements", "paragraph_index": 2722, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.3SA Inter-frequency measurement accuracy with FR1 serving cell and FR1 target cell for 1Rx RedCap UE", "paragraph_index": 2724, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.3.1Test Purpose and Environment", "paragraph_index": 2725, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.3.2Test Parameters", "paragraph_index": 2727, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.3.3Test Requirements", "paragraph_index": 2733, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.4SA Inter-frequency measurement accuracy with FR1 serving cell and FR1 target cell for 2Rx RedCap UE", "paragraph_index": 2735, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.4.1Test Purpose and Environment", "paragraph_index": 2736, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.4.2Test Parameters", "paragraph_index": 2738, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.3.4.3Test Requirements", "paragraph_index": 2744, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4L1-RSRP measurement for beam reporting", "paragraph_index": 2746, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.1SSB based L1-RSRP measurement for 1Rx RedCap UE", "paragraph_index": 2747, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.1.1Test Purpose and Environment", "paragraph_index": 2748, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.1.2Test parameters", "paragraph_index": 2752, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.1.3Test Requirements", "paragraph_index": 2757, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.2SSB based L1-RSRP measurement for 2Rx RedCap UE", "paragraph_index": 2759, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.2.1Test Purpose and Environment", "paragraph_index": 2760, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.2.2Test parameters", "paragraph_index": 2764, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.2.3Test Requirements", "paragraph_index": 2769, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.3CSI-RS based L1-RSRP measurement on resource set with repetition off for 1Rx RedCap UE", "paragraph_index": 2771, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.3.1Test Purpose and Environment", "paragraph_index": 2772, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.3.2Test parameters", "paragraph_index": 2776, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.3.3Test Requirements", "paragraph_index": 2781, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.4CSI-RS based L1-RSRP measurement on resource set with repetition off for 2Rx RedCap UE", "paragraph_index": 2783, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.4.1Test Purpose and Environment", "paragraph_index": 2784, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.4.2Test parameters", "paragraph_index": 2788, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.20.6.4.4.3Test Requirements", "paragraph_index": 2793, "style": "Heading5"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21NR standalone tests for LP-WUR", "paragraph_index": 2795, "style": "Heading1"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1RRC_IDLE state mobility", "paragraph_index": 2796, "style": "Heading2"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.1UE exits offloading mode to legacy mode with LR using LP-SS signal", "paragraph_index": 2797, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.1.1Test Purpose and Environment", "paragraph_index": 2798, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.1.2Test Parameters", "paragraph_index": 2800, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.1.3Test Requirements", "paragraph_index": 2809, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.2UE exits from relaxed measurement mode with LR using PSS/SSS in FR1", "paragraph_index": 2820, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.2.1Test Procedure and Environment", "paragraph_index": 2821, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.2.2Test Parameters", "paragraph_index": 2823, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.2.3Test Requirements", "paragraph_index": 2831, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.3UE exits relaxed measurement mode to legacy mode with LR using LP-SS signal", "paragraph_index": 2842, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.3.1Test Purpose and Environment", "paragraph_index": 2843, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.3.2Test Parameters", "paragraph_index": 2845, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.3.3Test Requirements", "paragraph_index": 2853, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.4UE exit from relaxed measurement mode with LR using PSS/SSS in FR2", "paragraph_index": 2863, "style": "Heading3"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.4.1Test Purpose and Environment", "paragraph_index": 2864, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.4.2Test Parameters", "paragraph_index": 2866, "style": "Heading4"}
+{"source": "38133-j50_sA.19-A.XX.docx", "section": "", "title": "A.21.1.4.3Test Requirements", "paragraph_index": 2874, "style": "Heading4"}

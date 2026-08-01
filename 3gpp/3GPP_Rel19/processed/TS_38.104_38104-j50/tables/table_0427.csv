@@ -1,0 +1,17 @@
+Number of TX antennas,Number of demodulation branches,Cyclic prefix,Propagation conditions and correlation matrix (Annex G),Fraction of maximum throughput,FRC(Annex A),Additional DM-RS position,PT-RS,SNR(dB)
+1,2,Normal,TDLA30-300 Low,70 %,G-FR2-A3-2,pos0,No,-2.1
+,,,,,G-FR2-A3-14,pos1,No,-2.4
+,,Normal,TDLA30-300 Low,70 %,G-FR2-A4-2,pos0,Yes,12.2
+,,,,,,,No,11.2
+,,,,,G-FR2-A4-12,pos1,Yes,11.2
+,,,,,,,No,10.6
+,,Normal,TDLA30-75 Low,70 %,G-FR2-A5-2,pos0,Yes,14.2
+,,,,,,,No,13.3
+,,,,,G-FR2-A5-7,pos1,Yes,13.7
+,,,,,,,No,13.1
+2,,Normal,TDLA30-300 Low,70 %,G-FR2-A3-7,pos0,No,1.5
+,,,,,G-FR2-A3-19,pos1,No,1.2
+,,Normal,TDLA30-300 Low,70 %,G-FR2-A7-2,pos0,Yes,16.0
+,,,,,,,No,14.9
+,,,,,G-FR2-A7-7,pos1,Yes,13.8
+,,,,,,,No,13.1

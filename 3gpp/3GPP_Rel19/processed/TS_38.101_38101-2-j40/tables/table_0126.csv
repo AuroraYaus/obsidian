@@ -1,0 +1,11 @@
+Operating band,Channel bandwidth(MHz),Minimum output power(dBm),Measurement bandwidth(MHz)
+"n257, n258, n259, n260, n261, n262",50,-13,47.58
+,100,-13,95.16
+,200,-13,190.20
+,400,-13,380.28
+n263,100,-13,95.16
+,400,-13,381.12
+,800,-13,715.20
+,1600,-13,1429.44
+,2000,-13,1705.92
+NOTE 1:n260 is not applied for power class 2.NOTE 2:n259 is not applied for power class 4.,,,

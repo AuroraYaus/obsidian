@@ -1,0 +1,37 @@
+Band combination for SUL,"ΔTIB,c for NR bands (dB)3",,
+,Component band in order of bands in configuration4,,
+CA_n1_n78-n80,0.6,0.8,0.6
+CA_n1_n78-n81,0.3,0.8,0.6
+CA_n1_n78-n84,0.6,0.8,0.6
+CA_n1_n78-n89,0.6,0.8,0.6
+CA_n3_n41-n80,0.5,0.31 / 0.82,0.5
+CA_n3_n78-n80,0.6,0.8,0.6
+CA_n3_n78-n84,0.6,0.8,0.6
+CA_n3_n79-n80,0.3,0.8,0.3
+CA_n5_n78-n84,0.6,0.8,0.6
+CA_n5_n78-n89,0.6,0.8,0.6
+CA_n8_n78-n81,0.6,0.8,0.6
+CA_n8_n78-n84,0.6,0.8,0.3
+CA_n28_n41-n83,0.3,0.3,0.3
+CA_n28_n79-n83,0.5,0.8,0.5
+CA_n41_n79-n80,0.31 / 0.82,0.8,0.3
+CA_n41_n79-n83,0.3,0.8,0.5
+CA_n41_n79-n95,0.3,0.8,0.3
+CA_n41_n79-n97,0.5,0.5,0.5
+CA_n41_n79-n98,0.3,0.8,0.3
+CA_n41_n95-n98,0.5,0.3,0.5
+CA_n78_n1-n80,0.8,0.6,0.6
+CA_n78_n1-n81,0.8,0.3,0.6
+CA_n78_n1-n89,0.8,0.6,0.6
+CA_n78_n3-n84,0.8,0.6,0.6
+CA_n78_n5-n84,0.8,0.6,0.6
+CA_n78_n8-n84,0.8,0.6,0.3
+CA_n78_n80-n84,0.8,0.6,0.6
+CA_n78_n81-n84,0.8,0.6,0.3
+CA_n78_n84-n89,0.8,0.6,0.6
+CA_n79_n41-n80,0.31 / 0.82,0.8,0.3
+CA_n79_n41-n83,0.3,0.8,0.5
+CA_n79_n41-n95,0.3,0.8,0.3
+CA_n79_n41-n97,0.5,0.5,0.5
+CA_n79_n41-n98,0.3,0.8,0.3
+"NOTE 1:The requirement is applied for UE transmitting on the frequency range of 2515-2690MHz.NOTE 2:The requirement is applied for UE transmitting on the frequency range of 2496-2515MHz.NOTE 3:“-” denotes ΔTIB,c = 0.NOTE 4:The component band order in the configuration should be listed by the order of NR bands, such as for CA_n1_n78-n80 the band order from left to right is n1, n78 and n80.",,,

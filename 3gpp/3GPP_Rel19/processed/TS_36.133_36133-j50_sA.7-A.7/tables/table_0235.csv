@@ -1,0 +1,7 @@
+Field,Value,,Comment
+,Cell 1,Cell 2,
+onDurationTimer,psf2,psf2,As specified in section 6.3.2 in 3GPP TS 36.331
+drx-InactivityTimer,psf1,psf1,
+drx-RetransmissionTimer,psf1,psf1,
+longDRX-CycleStartOffset,sf640,sf40,
+shortDRX,disable,disable,

@@ -1,0 +1,22 @@
+,Field,SRSConf.1,SRSConf.2,Comments
+SRS-ResourceSet,srs-ResourceSetId,0,0,
+,srs-ResourceIdList,0,0,
+,resourceType,Periodic,Periodic,
+,Usage,Codebook,Codebook,
+SRS-Resource,SRS-ResourceId,0,0,
+,nrofSRS-Ports,Port1,Port1,
+,transmissionComb,n2,n2,
+,combOffset-n2,0,0,
+,cyclicShift-n2,0,0,
+,resourceMapping startPosition,0,0,
+,resourceMapping nrofSymbols,n1,n1,
+,resourceMappingrepetitionFactor,n1,n1,
+,freqDomainPosition,0,0,
+,freqDomainShift,0,0,
+,freqHopping c-SRS,"14 for test configuration 1,225 for test configuration 3",25,"Matches NPRB,c"
+,freqHopping b-SRS,0,0,
+,freqHopping b-hop,0,0,
+,groupOrSequenceHopping,Neither,Neither,
+,resourceType,Periodic,Periodic,
+,periodicityAndOffset-p,"sl1, 0","sl640, 0",Offset to align with DRx periodicity
+,sequenceId,0,0,Any 10 bit number

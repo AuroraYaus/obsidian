@@ -1,0 +1,4 @@
+Sub-block or Inter RF Bandwidth gap size (Wgap) where the limit applies,BS adjacent channel centre frequency offset below or above the sub-block edge or the Base Station RF Bandwidth edge (inside the gap),Assumed adjacent channel carrier (informative),Filter on the adjacent channel frequency and corresponding filter bandwidth,ACLR limit
+Wgap ≥ 15 MHz,2.5 MHz,3.84 Mcps UTRA,RRC (3.84 Mcps),45 dB
+Wgap ≥ 20 MHz,7.5 MHz,3.84 Mcps UTRA,RRC (3.84 Mcps),45 dB
+"NOTE:The RRC filter shall be equivalent to the transmit pulse shape filter defined in TS 25.104 [6], with a chip rate as defined in this table.",,,,

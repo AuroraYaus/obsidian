@@ -1,0 +1,10 @@
+Channel bandwidth [MHz],Parameters,Region A,,Region B
+10,RBstart,,,0-6
+,LCRB [RBs],,,≥40
+,A-MPR [dB],,,≤1
+15,RBstart,0-6,,7-20
+,LCRB [RBs],≤18,≥36,≥42
+,A-MPR [dB],≤2,≤3,≤2
+20,RBstart,0-14,,15-30
+,LCRB [RBs],≤40,≥45,≥50
+,A-MPR [dB],≤2,≤3,≤2

@@ -1,0 +1,39 @@
+<table>
+  <tr>
+    <td>eDRX_IDLE cycle length [s]</td>
+    <td>DRX cycle length [s]</td>
+    <td>PTW length [s] (number of 1.28 s periods)</td>
+    <td>Tdetect,NR_Inter_RedCap_Relax [s] (number of DRX cycles)</td>
+    <td>Tmeasure,NR_Inter_RedCap_Relax [s] (number of DRX cycles)</td>
+    <td>Tevaluate,NR_Inter_RedCap_Relax [s] (number of DRX cycles)</td>
+  </tr>
+  <tr>
+    <td rowspan="4">20.48 ≤  eDRX_IDLE cycle length ≤[163.84]</td>
+    <td>0.32</td>
+    <td>≥6.4 (5)</td>
+    <td rowspan="4">(23 x K3)K3× eDRX_cycle_length×23PTW/DRX_cycle_length</td>
+    <td>0.32 x M2 x K3 (1 x M2 x K3)</td>
+    <td>0.64 x M2 x K3 (2 x M2 x K3)</td>
+  </tr>
+  <tr>
+    <td>0.64</td>
+    <td>≥12.8 (10)</td>
+    <td>0.64 x K3 (1 x K3)</td>
+    <td>1.28 x K3 (2 x K3)</td>
+  </tr>
+  <tr>
+    <td>1.28</td>
+    <td>≥15.36 (12)</td>
+    <td>1.28 x K3 (1 x K3)</td>
+    <td>2.56 x K3 (2 x K3)</td>
+  </tr>
+  <tr>
+    <td>2.56</td>
+    <td>≥30.72 (4)</td>
+    <td>2.56 x K3 (1 x K3)</td>
+    <td>5.12 x K3 (2 x K3)</td>
+  </tr>
+  <tr>
+    <td colspan="6">NOTE 1:The number of DRX cycles in this table corresponds to the DRX cycles within PTWs.NOTE 2:The eDRX_IDLE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 3: The lower bound of PTW length is derived based on .NOTE 4:K3 = 6 is the measurement relaxation factor applicable for UE fulfilling the stationaryMobilityEvaluation [2] criterion.Tevaluate,NR_Inter_RedCap_Relax*DRX_cycle1.28*1.28</td>
+  </tr>
+</table>

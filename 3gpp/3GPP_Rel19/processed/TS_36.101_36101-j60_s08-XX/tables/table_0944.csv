@@ -1,0 +1,14 @@
+Test num.,CA Band-width combination,Requirement,UE category
+1,4x20MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+2,10MHz+20MHz+20MHz+20MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+3,10MHz+10MHz+20MHz+20MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+4,5MHz+10MHz+20MHz+20MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+5,5MHz+10MHz+10MHz+20MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+6,15+3x20MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+7,2x15+2x20MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+8,10+15+2x20MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+9,3x10+20MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+10,2x5+2x20MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+11,2x5+10+20MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+12,4x10MHz,As specified in Table 8.13.1.1.1-2 per CC depending on either 2Rx CC or 4Rx CC,≥8
+NOTE 1: The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 8.1.2.6.,,,

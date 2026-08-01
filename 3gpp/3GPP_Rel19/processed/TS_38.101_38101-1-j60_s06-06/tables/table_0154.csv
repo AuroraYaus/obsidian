@@ -1,0 +1,3 @@
+NR SL CA band Configuration,Class 1 (dBm),Tolerance (dB),Class 2 (dBm),Tolerance (dB),Class 3 (dBm),Tolerance (dB),Class 4 (dBm),Tolerance (dB)
+SLCA _n47B,,,26,+2/-3,23,+2/-3,,
+"NOTE 1:PPowerClass is the maximum UE power specified without taking into account the tolerance NOTE 2:For intra-band SL CA UE, the maximum power requirement apply to the total transmitted power over all component carriers (per UE).",,,,,,,,

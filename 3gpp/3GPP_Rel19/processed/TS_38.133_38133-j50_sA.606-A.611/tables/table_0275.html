@@ -1,0 +1,74 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td>RF Channel Number</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>Two radio channels are used for this test</td>
+  </tr>
+  <tr>
+    <td>Active PCell</td>
+    <td></td>
+    <td>Cell 1</td>
+    <td>PCell on RF channel number 1 in FR1</td>
+  </tr>
+  <tr>
+    <td>PSCell</td>
+    <td></td>
+    <td>Cell 2</td>
+    <td>PSCell on RF channel number 2 in LTE. Cell 2 is of higher priority.</td>
+  </tr>
+  <tr>
+    <td>DRX</td>
+    <td></td>
+    <td>OFF</td>
+    <td>For both PCell and PSCell once configured</td>
+  </tr>
+  <tr>
+    <td>PRACH configuration in Cell 2</td>
+    <td></td>
+    <td>PRACH_2CE</td>
+    <td>PRACH configuration as specified in clause A.3.16 in TS 36.133</td>
+  </tr>
+  <tr>
+    <td>T331</td>
+    <td>s</td>
+    <td>300</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>CSI reporting periodicity and offset configuration for Cell 2</td>
+    <td>ms</td>
+    <td>2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>T1</td>
+    <td>s</td>
+    <td>0.5</td>
+    <td>During this time the PCell is known and PSCell is configured.</td>
+  </tr>
+  <tr>
+    <td>T2</td>
+    <td>s</td>
+    <td>0.5</td>
+    <td>PSCell access.</td>
+  </tr>
+  <tr>
+    <td>T3 + T4</td>
+    <td>s</td>
+    <td>66</td>
+    <td>During this time the UE is configured to perform inter-RAT measurements in idle mode on the PSCell carrier.</td>
+  </tr>
+  <tr>
+    <td>T5</td>
+    <td>s</td>
+    <td>0.5</td>
+    <td>UE is paged and connection is setup. Network requests measurement report from the UE.</td>
+  </tr>
+</table>

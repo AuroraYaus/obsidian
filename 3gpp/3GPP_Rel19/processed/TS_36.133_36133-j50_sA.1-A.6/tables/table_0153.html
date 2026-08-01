@@ -1,0 +1,135 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td>T0</td>
+    <td>Active cell</td>
+    <td></td>
+    <td>Cell1</td>
+    <td>T0 is repeated on each repetition of the test. In T0 the test equipment selects frequencies for cell 2,3,4 and then time is allowed for the UE to identify the neighbour cells.  See cell specific parameters for detailed settings.</td>
+  </tr>
+  <tr>
+    <td>T1 start condition</td>
+    <td>Active cell</td>
+    <td></td>
+    <td>Cell 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">T1 end condition</td>
+    <td>Active cell</td>
+    <td></td>
+    <td>Cell 2</td>
+    <td>UE shall perform reselection to cell 2 during T1</td>
+  </tr>
+  <tr>
+    <td>Neighbour cell</td>
+    <td></td>
+    <td>Cell 1, cell 3, cell 4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">T2 end condition</td>
+    <td>Active cell</td>
+    <td></td>
+    <td>Cell 3</td>
+    <td>UE shall perform reselection to cell 3 during T2</td>
+  </tr>
+  <tr>
+    <td>Neighbour cell</td>
+    <td></td>
+    <td>Cell 1, cell 2, cell 4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">T3 end condition</td>
+    <td>Active cell</td>
+    <td></td>
+    <td>Cell4</td>
+    <td>UE shall perform reselection to cell 4 during T3</td>
+  </tr>
+  <tr>
+    <td>Neighbour cell</td>
+    <td></td>
+    <td>Cell 1, cell 2, cell 3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>T4 end condition</td>
+    <td>Active cell</td>
+    <td></td>
+    <td>Cell1</td>
+    <td>UE shall perform reselection to cell 1 during T4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Neighbour cell</td>
+    <td></td>
+    <td>Cell 2, cell 3, cell 4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">UE configured E-UTRA RF Channel Number</td>
+    <td></td>
+    <td>1, 2,3,4,5,6,7,8,9</td>
+    <td>Serving cell and eight xDD carrier frequencies are used in the UE neighbour cell list. Frequencies 5,6,7,8 and 9 are indicated to have reduced performance</td>
+  </tr>
+  <tr>
+    <td colspan="2">Test eqipment configuration</td>
+    <td></td>
+    <td>Cell 1 uses UTRA RF channel number 1Cells 2,3,4 are randomly selected to use different frequencies selected from frequencies 2,3,4,5,6,7,8,9</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">PRACH configuration</td>
+    <td></td>
+    <td>4</td>
+    <td>As specified in table 5.7.1-2 in TS 36.211 [16]</td>
+  </tr>
+  <tr>
+    <td colspan="2">Access Barring Information</td>
+    <td>-</td>
+    <td>Not Sent</td>
+    <td>No additional delays in random access procedure.</td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX cycle length</td>
+    <td>s</td>
+    <td>1.28</td>
+    <td>The value shall be used for all cells in the test.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T0</td>
+    <td>s</td>
+    <td>(Test equipment frequency selection and configuration time) + 960</td>
+    <td>T0 is defined so that the Test equipment selects frequencies and configures the cells, then the UE cell detection time is taken into account.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td>25</td>
+    <td>T1 need to be defined so that cell re-selection reaction time is taken into account.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td>200</td>
+    <td>T2 need to be defined so that cell re-selection reaction time is taken into account</td>
+  </tr>
+  <tr>
+    <td colspan="2">T3</td>
+    <td>s</td>
+    <td>200</td>
+    <td>T3 need to be defined so that cell re-selection reaction time is taken into account.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T4</td>
+    <td>s</td>
+    <td>25</td>
+    <td>T4 need to be defined so that cell re-selection reaction time is taken into account</td>
+  </tr>
+</table>

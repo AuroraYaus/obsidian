@@ -1,0 +1,28 @@
+Paramter,Unit,Value
+Reference channel,,R.78 FDD
+Channel bandwidth,MHz,10
+Allocated resource blocks,,50 (Note 3)
+Allocated subframes per Radio Frame,,9
+Modulation,,16QAM
+Target Coding Rate,,1/2
+Information Bit Payload,,
+For Sub-Frames (Non CSI-RS subframe),Bits,11448
+For Sub-Frames (CSI-RS subframe),Bits,9912
+For Sub-Frames (ZeroPowerCSI-RS subframe),Bits,N/A
+For Sub-Frame 5,Bits,N/A
+For Sub-Frame 0,,9528
+Number of Code Blocks per Sub-Frame,Code blocks,
+For Sub-Frames (Non CSI-RS subframe),Code blocks,2
+For Sub-Frames (CSI-RS subframe),Bits,2
+For Sub-Frames (ZeroPowerCSI-RS subframe),Bits,N/A
+For Sub-Frame 5,,N/A
+For Sub-Frame 0,Bits,2
+Binary Channel Bits Per Sub-Frame,,
+For Sub-Frames (Non CSI-RS subframe),,24000
+For Sub-Frames (CSI-RS subframe),Bits,20800
+For Sub-Frames (ZeroPowerCSI-RS subframe),Bits,N/A
+For Sub-Frame 5,Bits,N/A
+For Sub-Frame 0,Bits,19680
+Max. Throughput averaged over 1 frame,Mbps,9.804
+UE Category,,≥ 2
+"Note 1:2 symbols allocated to PDCCH.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4].Note 3:50 resource blocks are allocated in sub-frames 1, 2, 3, 4, 6, 7, 8, 9 and 41 resource blocks (RB0–RB20 and RB30–RB49) are allocated in sub-frame 0.Note 4:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).",,

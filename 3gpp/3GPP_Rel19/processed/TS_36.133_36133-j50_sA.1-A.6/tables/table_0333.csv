@@ -1,0 +1,29 @@
+Parameter,Unit,nCell 1,,nCell 2,,,,nCell 3,
+,,T2 and T4,T3 and T5,T2 and T4,,T3 and T5,,T2 and T4,T3 and T5
+BWchannel,kHz,200,,200,,,,200,
+NB-IoT RF Channel Number,,1,,2,,,,2,
+NPDSCH parameters Note 2,,R.18 NB-TDD,,N/A,,,,N/A,
+NPDCCH parameters Note 2,,R.30 NB-TDD,,N/A,,,,N/A,
+OCNG patterns,,NOP.3 TDD,,N/A,NOP.3 TDD,,,NOP.3 TDD,N/A
+NPBCH_RA,dB,0,,0,,,,0,N/A
+NPBCH_RB,,,,,,,,,
+NPSS_RA,,,,,,,,,
+NSSS_RA,,,,,,,,,
+NPDCCH_RA,,,,,,,,,
+NPDCCH_RB,,,,,,,,,
+NPDSCH_RA,,,,,,,,,
+NPDSCH_RB,,,,,,,,,
+OCNG_RA Note 1,,,,,,,,,
+OCNG_RB Note 1,,,,,,,,,
+NPRS_RA,dB,-3,N/A,N/A,,0,,0,N/A
+Note 3,dBm/15 kHz,-98,-98,-98,,-95,,-98,-95
+NPRS,dB,-15,-Infinity,-Infinity,,-15,,-15,-Infinity
+NPRS  Note 4,dB,-15,-Infinity,-Infinity,,-15,,-15,-Infinity
+Io Note 4,dBm/180kHz,-87.17,-87.20,-87.17,,-87.15,,-87.17,-87.15
+NPRP Note 4,dBm/15 kHz,-113,-Infinity,-Infinity,,-110,,-113,-Infinity
+NRSRP Note 4,dBm/ 15 kHz,-110,-110,-113,,-110,,-113,-Infinity
+Note 4,dB,-12,-12,-15,,-15,,-15,-Infinity
+Propagation Condition,,AWGN,,,,,,,
+Antenna Configuration,,1x1,,,,,,,
+Timing offset to nCell 1,s,N/A,,1,,,-1,,
+"Note 1:OCNG shall be used such that active cells (all, except Cell 3 in T3) are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols other than those in the subframes with transmitted NPRS.Note 3:Interference from other cells and noise sources not specified in the test are assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 4:If NPRS_RA is not “N/A”, , NPRS , Io, NRSRP and NPRP levels have been derived from other parameters and are given for information purpose. If NPRS_RA is “N/A”, Io and NRSRP levels have been derived from other parameters and are given for information purpose. These are not settable test parameters. Interference conditions shall be applied to all PRS symbols of DL positioning subframes.",,,,,,,,,

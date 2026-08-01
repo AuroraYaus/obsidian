@@ -1,0 +1,6 @@
+DRX cycle,TPSS/SSS_sync_intra
+No DRX,"max(600 ms, ceil(M1Note 2 x Kp x Klayer1_measurement)  x SMTC period)Note 1 x CSSFintra"
+DRX cycle≤ 80 ms,"max(600 ms, ceil(M1Note 2 x Kp x Klayer1_measurement) x max(SMTC period,DRX cycle)) x CSSFintra"
+80 ms< DRX cycle≤ 320 ms,"ceil(1.5 x Mpss/sss_sync_w/o_gaps Note 3 x Kp x Klayer1_measurement) x max(SMTC period,DRX cycle) x CSSFintra"
+DRX cycle>320 ms,ceil(Mpss/sss_sync_w/o_gaps Note 3  x Kp x Klayer1_measurement)  x DRX cycle x CSSFintra
+"NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identifiedNOTE 2:For UE supporting power class 6, M1 = 6 if highSpeedMeasFlagFR2-r17 = set1 or M1 = 18 if highSpeedMeasFlagFR2-r17 = set2NOTE 3: Void",

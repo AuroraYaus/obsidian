@@ -1,0 +1,11 @@
+Parameter,,Unit,Single antenna port,Transmit diversity
+Number of PDCCH symbols,,symbols,2,2
+PHICH Ng (Note 1),,,1,1
+PHICH duration,,,Normal,Normal
+Unused RE-s and PRB-s,,,OCNG,OCNG
+Cell ID,,,0,0
+Downlink power allocation,PDCCH_RAPHICH_RAOCNG_RA,dB,0,-3
+,PCFICH_RBPDCCH_RBPHICH_RBOCNG_RB,dB,0,-3
+at antenna port,,dBm/15kHz,-98,-98
+Cyclic prefix,,,Normal,Normal
+Note 1:According to Clause 6.9 in TS 36.211 [4],,,,

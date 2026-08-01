@@ -1,0 +1,14 @@
+Config,Cell 1,Cell 2,"Cell 3, Cell 4, Cell 5",DCI 2_6 of Cell 2
+1,LTE FDD,"15 kHz SSB SCS, FDD","120 kHz SSB SCS, TDD",within 3 OFDM symbols
+2,LTE FDD,"15 kHz SSB SCS, TDD","120 kHz SSB SCS, TDD",within 3 OFDM symbols
+3,LTE FDD,"30 kHz SSB SCS, TDD","120 kHz SSB SCS, TDD",within 3 OFDM symbols
+4,LTE TDD,"15 kHz SSB SCS, FDD","120 kHz SSB SCS, TDD",within 3 OFDM symbols
+5,LTE TDD,"15 kHz SSB SCS, TDD","120 kHz SSB SCS, TDD",within 3 OFDM symbols
+6,LTE TDD,"30 kHz SSB SCS, TDD","120 kHz SSB SCS, TDD",within 3 OFDM symbols
+7,LTE FDD,"15 kHz SSB SCS, FDD","120 kHz SSB SCS, TDD",after 3 OFDM symbols
+8,LTE FDD,"15 kHz SSB SCS, TDD","120 kHz SSB SCS, TDD",after 3 OFDM symbols
+9,LTE FDD,"30 kHz SSB SCS, TDD","120 kHz SSB SCS, TDD",after 3 OFDM symbols
+10,LTE TDD,"15 kHz SSB SCS, FDD","120 kHz SSB SCS, TDD",after 3 OFDM symbols
+11,LTE TDD,"15 kHz SSB SCS, TDD","120 kHz SSB SCS, TDD",after 3 OFDM symbols
+12,LTE TDD,"30 kHz SSB SCS, TDD","120 kHz SSB SCS, TDD",after 3 OFDM symbols
+"NOTE 1:10 MHz bandwidth for Cell 2 with 15 kHz SSB SCS.NOTE 2:40 MHz bandwidth for Cell 2 with 30 kHz SSB SCS.NOTE 3:100 MHz bandwidth for Cell 3,4,5.NOTE 4:The UE is only required to be tested in one of the supported test configurations.",,,,

@@ -1,0 +1,10 @@
+Parameter,Unit,Set 1
+Refence symbol,,CRS
+Number of PRB per SPDCCH-PRB set,,16
+Transmission type,,Localized
+Number of OFDM symbols,,1
+Number of PRBs per SPDCCH-PRB set (Note 1),,16
+Rate Matching mode,,Mode 1
+SPDCCH L1 Reuse Indication,,Not configured
+Aggregatoin level,SCCE,4
+"Note 1:PRB = {0, 1, …, 15}.",,

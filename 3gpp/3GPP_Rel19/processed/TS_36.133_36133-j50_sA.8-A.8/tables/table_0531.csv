@@ -1,0 +1,11 @@
+Parameter,Unit,Cell 1,,,,Cell 2,,,Cell 3,,,,
+,,T1,T2,,T3,T1,T2,T3,T1,,T2,T3,
+BWchannel,MHz,20,,,,20,,,20,,,,
+OCNG Patterns defined in A.3.2.1.11 (OP.11 FDD) and in A.3.2.1.12 (OP.12  FDD),,OP.11 FDD,,,,OP.12 FDD,,,OP.12 FDD,,,,
+NocNote 2,dBm/15 kHz,-104,,,,-104,,,,,,,
+RSRP Note 3,dBm/15 kHz,-85,-85,-107,,-85,-85,-107,-infinity,-85,,,-107
+Ês/Iot,dB,19,19,-3,,19,-0.05,-4.76,-infinity,-0.05,,,-4.76
+SCH_RP Note 3,dBm/15 kHz,-85,-85,-107,,-85,-85,-107,-infinity,-85,,,-107
+Ês/Noc,dB,19,19,-3,,19,19,-3,-infinity,19,,,-3
+,,,,,,,,,,,,,
+Note:See Table A.8.16.1.1-2 for other cell-specific test parameters.,,,,,,,,,,,,,

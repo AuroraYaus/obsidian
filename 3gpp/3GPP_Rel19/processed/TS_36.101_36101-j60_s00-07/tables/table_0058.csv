@@ -1,0 +1,8 @@
+Modulation,Channel bandwidth / Transmission bandwidth (NRB),,,,,,MPR (dB)
+,1.4MHz,3.0MHz,5MHz,10MHz,15MHz,20MHz,
+QPSK,> 5,> 4,> 8,> 12,> 16,> 18,≤ 1
+16 QAM,≤ 5,≤ 4,≤ 8,≤ 12,≤ 16,≤ 18,≤ 1
+16 QAM,> 5,> 4,> 8,> 12,> 16,> 18,≤ 2
+64 QAM,≤ 5,≤ 4,≤ 8,≤ 12,≤ 16,≤ 18,≤ 2
+64 QAM,> 5,> 4,> 8,> 12,> 16,> 18,≤ 3
+256 QAM,≥ 1,,,,,,≤ 5

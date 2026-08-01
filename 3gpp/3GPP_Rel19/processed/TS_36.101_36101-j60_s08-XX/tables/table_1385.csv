@@ -1,0 +1,36 @@
+Parameter,,Unit,Fixed TP1 case,,Follow CRI case,
+,,,TP 1,TP 2,TP 1,TP 2
+Downlink power allocation,,dB,0,0,0,0
+,,dB,0 (Note 1),0,0 (Note 1),0
+,,dB,-3,-3,-3,-3
+,,dB,SNR1 (Note 2),SNR2 = SNR1 – [9] dB,SNR1 (Note 2),SNR2 = SNR1 – [9] dB
+at antenna port,,dBm/15kHz,-98,,,
+BWChannel,,MHz,10,,,
+Cyclic Prefix,,,Normal,,,
+PDSCH transmission mode,,,10,,,
+Number of allocated resource block,,,50,,,
+Cell ID,,,0,126,0,126
+Number of control OFDM symbols / PDSCH start,,,2,2,2,2
+Cell-specific reference signals,,,"Antenna ports 0,1",,,
+eMIMO-Type,,,Class B,,,
+CSI reference signals 0,,,"Antenna ports {15,16}",N/A,"Antenna ports {15,16}",NA
+CSI-RS 0 periodicity and subframe offset TCSI-RS / ∆CSI-RS,,Subframes,5 / 2,,5 / 2,
+CSI reference signal 0 configuration,,,0,,0,
+CSI reference signals 1,,,N/A,"Antenna ports {15,16}",N/A,"Antenna ports {15,16}"
+CSI-RS 1 periodicity and subframe offset TCSI-RS / ∆CSI-RS,,Subframes,,5 / 2,,5 / 2
+CSI reference signal 1 configuration,,,,8,,8
+CodeBookSubsetRestriction for CSI-RS 0,,,001111,N/A,001111,N/A
+CodeBookSubsetRestriction for CSI-RS 1,,,N/A,001111,N/A,001111
+Zero-power CSI-RS 0 configurationICSI-RS / ZeroPower CSI-RS bitmap,,Subframes/bitmap,2/0010000000000000,N/A,2/0010000000000000,N/A
+Zero-power CSI-RS1 configurationICSI-RS / ZeroPower CSI-RS bitmap,,Subframes/bitmap,N/A,2/0010000000000000,N/A,2/0010000000000000
+Timing offset relative to TP 1,,us,N/A,0,N/A,0
+Frequency offset relative to TP 1,,Hz,N/A,0,N/A,0
+"qcl-Operation, ‘PDSCH RE Mapping and Quasi-Co-Location Indicator’",,,"Type B, ‘00’Table 9.10.2.1-2",,"Type C, PQI based on UE reportingTable 9.10.2.1-3",
+Reporting mode,,,PUSCH 3-1,,,
+Reporting interval,,ms,5,,,
+CRI Delay,,ms,8,,,
+PMI delay,,ms,8,,,
+Measurement channel,,,R.97 FDD,,,
+Correlation and antenna configuration,,,2x2 Low,,,
+Propagation channel,,,EPA5,,,
+Note 1:Note 2:TP1 SNR based on SNR value derived for exact test metric verification and can be equal to  or,,,,,,

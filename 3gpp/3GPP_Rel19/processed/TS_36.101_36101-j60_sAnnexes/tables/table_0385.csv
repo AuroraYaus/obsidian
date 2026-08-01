@@ -1,0 +1,10 @@
+Physical Channel,EPRE Ratio
+PBCH,PBCH_RA = A+
+,PBCH_RB = B+
+PSS,PSS_RA = 0 (Note 2)
+SSS,SSS_RA = 0 (Note 2)
+PDSCH,PDSCH_RA = A
+,PDSCH_RB = B
+PCFICH,PCFICH_RB = B+
+PDCCH,PDCCH_RA = A+
+,PDCCH_RB = B+

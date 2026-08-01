@@ -1,0 +1,24 @@
+Parameter,Unit,Value,,,,,,,,,,
+Channel bandwidth,MHz,"10,15, 20 (NOTE 5)",10,15,20,25,30,40,50,60,80,100
+Subcarrier spacing configuration,,1,1,1,1,1,1,1,1,1,1,1
+Allocated resource blocks,,7,24,38,51,65,78,106,133,162,217,273
+Subcarriers per resource block,,12,12,12,12,12,12,12,12,12,12,12
+Allocated slots per Frame,,17,17,17,17,17,17,17,17,17,17,17
+MCS Index,,23,23,23,23,23,23,23,23,23,23,23
+MCS Table for TBS determination,,256QAM,,,,,,,,,,
+Modulation,,256 QAM,256 QAM,256 QAM,256 QAM,256 QAM,256 QAM,256 QAM,256 QAM,256 QAM,256 QAM,256 QAM
+Target Coding Rate,,4/5,4/5,4/5,4/5,4/5,4/5,4/5,4/5,4/5,4/5,4/5
+Maximum number of HARQ transmissions,,1,1,1,1,1,1,1,1,1,1,1
+Information Bit Payload per Slot,,,,,,,,,,,,
+"For Slots 0,1,2",Bits,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+"For Slots 3,…,19",Bits,4736,16136,25608,33816,44040,52224,71688,90176,108552,147576,184424
+Transport block CRC,Bits,24,24,24,24,24,24,24,24,24,24,24
+LDPC base graph,,1,1,1,1,1,1,1,1,1,1,1
+Number of Code Blocks per Slot,,,,,,,,,,,,
+"For Slots 0,1,2",CBs,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+"For Slots 3,…,19",CBs,1,2,4,5,6,7,9,11,13,18,22
+Binary Channel Bits per Slot,,,,,,,,,,,,
+"For Slots 0,1,2",Bits,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+"For Slots 3,…,19",Bits,6048,20736,32832,44064,56160,67392,91584,114912,139968,187488,235872
+Max. Throughput averaged over 1 frame,Mbps,8.051,27.431,43.534,57.487,74.868,88.781,121.870,153.299,184.538,250.879,313.521
+"NOTE 1:Additional parameters are specified in Table A.3.1-1 and Table A.3.2.1-1.NOTE 2:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).NOTE 3:SS/PBCH block is transmitted in slot 0 of each frameNOTE 4:Slot i is slot index per frameNOTE 5:Channel bandwidths in this column only apply to UEs supporting IE supportOfERedCap-r18.",,,,,,,,,,,,

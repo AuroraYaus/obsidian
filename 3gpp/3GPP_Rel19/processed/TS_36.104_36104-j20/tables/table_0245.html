@@ -1,0 +1,104 @@
+<table>
+  <tr>
+    <td rowspan="2" colspan="2">Parameter</td>
+    <td rowspan="2">Unit</td>
+    <td colspan="2">Wanted intra-cell UEs (Note 1)</td>
+    <td>Inter-cell interfering UE</td>
+  </tr>
+  <tr>
+    <td>UE1</td>
+    <td>UE2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cyclic Prefix</td>
+    <td></td>
+    <td colspan="3">Normal</td>
+  </tr>
+  <tr>
+    <td colspan="2">Uplink-downlink allocation for TDD</td>
+    <td></td>
+    <td colspan="3">Configuration 1 (2:2)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Maximum number of HARQ transmissions</td>
+    <td></td>
+    <td colspan="2">4</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2">RV sequence</td>
+    <td></td>
+    <td colspan="2">0, 2, 3, 1, 0, 2, 3, 1</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell Id</td>
+    <td></td>
+    <td colspan="2">0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Inter-cell interference model</td>
+    <td></td>
+    <td colspan="2">N/A</td>
+    <td>As specified in clause B.6.2</td>
+  </tr>
+  <tr>
+    <td rowspan="2">DIP (Note 2)</td>
+    <td>Set 1</td>
+    <td>dB</td>
+    <td colspan="2">N/A</td>
+    <td>-5.45</td>
+  </tr>
+  <tr>
+    <td>Set 2</td>
+    <td>dB</td>
+    <td colspan="2">N/A</td>
+    <td>-0.43</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Relative power of intra-cell UEs (Note 3)</td>
+    <td>Set 1</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>0</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Set 2</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>3</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="2">Time offset</td>
+    <td>us</td>
+    <td>-1</td>
+    <td>1</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Frequency offset</td>
+    <td>Hz</td>
+    <td>-200</td>
+    <td>200</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Demodulation reference signal for PUSCH</td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td>6</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>,</td>
+    <td></td>
+    <td colspan="3">=0,  =0Group hopping and sequence hopping are disabled.</td>
+  </tr>
+  <tr>
+    <td colspan="6">Note 1:Two intra-cell UEs, i.e., UE1 and UE2, are configured for tests with 2 RX antennas.Note 2:The respective received energy of each inter-cell interferer relative to   is defined by its associated DIP value as specified in clause B.6.1. DIP set 1 and set 2 are derived respectively in homogeneous and heterogeneous network scenarios.Note 3:For set 1, equal average received signal energy is configured for the intra-cell UEs, while short-term variation remains. For set 2, the average received signal energy of UE2 is 3 dB higher than that of UE1.</td>
+  </tr>
+</table>

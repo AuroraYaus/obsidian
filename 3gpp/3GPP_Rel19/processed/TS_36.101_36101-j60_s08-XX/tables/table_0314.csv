@@ -1,0 +1,6 @@
+Test number,Aggregated Bandwidth (MHz),,,Minimum performance requirement,UE Category
+,Total,FDD CC,TDD CC,,
+1,2x20,20,20,As defined in Table 8.2.3.3.2-2 and Table 8.2.3.3.2-3 per CC,≥5
+2,20+10,10,20,As defined in Table 8.2.3.3.2-2 and Table 8.2.3.3.2-3 per CC,≥5
+3,20+15,15,20,As defined in Table 8.2.3.3.2-2 and Table 8.2.3.3.2-3 per CC,≥5
+Note 1: The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 8.1.2.3B,,,,,

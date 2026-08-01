@@ -1,0 +1,15 @@
+Reference channel,G-FR1-A2-7,G-FR1-A2-8,G-FR1-A2-9,G-FR1-A2-10,G-FR1-A2-11,G-FR1-A2-12,G-FR1-A2-13,G-FR1-A2-14
+Channel bandwidth (MHz),10,10,20,20,40,40,60,80
+Subcarrier spacing (kHz),15,30,15,30,15,30,30,30
+Allocated resource blocks,5,4,10,10,21,21,32,43
+CP-OFDM Symbols per slot (Note 1),12,12,12,12,12,12,12,12
+Modulation,16QAM,16QAM,16QAM,16QAM,16QAM,16QAM,16QAM,16QAM
+Code rate (Note 2),2/3,2/3,2/3,2/3,2/3,2/3,2/3,2/3
+Payload size (bits),1864,1480,3752,3752,7808,7808,11784,15880
+Transport block CRC (bits),16,16,16,16,24,24,24,24
+Code block CRC size (bits),-,-,-,-,-,-,24,24
+Number of code blocks - C,1,1,1,1,1,1,2,2
+Code block size including CRC (bits) (Note 3),1880,1496,3768,3768,7832,7832,5928,7976
+Total number of bits per slot,2880,2304,5760,5760,12096,12096,18432,24768
+Total symbols per slot,720,576,1440,1440,3024,3024,4608,6192
+"NOTE 1:DM-RS configuration type = 1 with DM-RS duration = single-symbol DM-RS, additional DM-RS position = pos1 with l0= 2, l = 11 as per table 6.4.1.1.3-3 of TS 38.211 [9].NOTE 2:MCS index 16 and target coding rate = 658/1024 are adopted to calculate payload size.NOTE 3:Code block size including CRC (bits) equals to K' in sub-clause 5.2.2 of TS 38.212 [15].NOTE 4:For reference channel A2-7, the allocated RB’s are uniformly spaced over the channel bandwidth at RB index N, N+10, N+20, N+30, N+40 where N={0,1,2,3,4,5,6,7,8,9}.  NOTE 5:For reference channel A2-8, the allocated RB’s are uniformly spaced over the channel bandwidth at RB index N, N+5, N+10, N+15 where N={0,1,2,3,4}.NOTE 6:For reference channel A2-9, the allocated RB’s are uniformly spaced over the channel bandwidth at RB index  N, N+10,N+20,..N+90 where N={0,1,2,3,...,9}.NOTE 7:For reference channel A2-10, the allocated RB’s are uniformly spaced over the channel bandwidth at RB index N, N+5,N+10,.., N+45 where N={0,1,2,3,4}.NOTE 8:For reference channel A2-11, the allocated RB’s are uniformly spaced over the channel bandwidth at RB index  N, N+10,N+20,...,N+200 where N={0,1,2,3,4,...,9}.NOTE 9:For reference channel A2-12, the allocated RB’s are uniformly spaced over the channel bandwidth at RB index N, N+5, N+10, ..., N+100 where N={0,1,2,3,4}.NOTE 10:For reference channel A2-13, the allocated RB’s are uniformly spaced over the channel bandwidth at RB index N, N+5,N+10,..., N+155 where N={0,1,2,3,4}.NOTE 11:For reference channel A2-14, the allocated RB’s are uniformly spaced over the channel bandwidth at RB index N, N+5,N+10,..., N+210 where N={0,1,2,3,4}.",,,,,,,,

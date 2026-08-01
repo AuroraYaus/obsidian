@@ -1,0 +1,6 @@
+Parameter,Unit,Set 1,Set 2
+Refence symbol,,CRS,DMRS
+Transmission type,,Localized,Distributed
+Number of OFDM symbols,,1,Note 2
+Number of PRBs per SPDCCH-PRB set (Note 1),,16,16
+"Note 1:The two SPDCCH-PRB sets are non-overlapping with PRB = {0, 1, …, 15} for Set 1 and PRB = {0, 1, 6, 7, 12, 13, 18, 19, 28, 29, 34, 35, 40, 41, 46, 47} for Set 2. Note 2:2 OFDM symbols for slot-based SPDCCH. 2 OFDM symbols for subslot indices 2, 3, and 4, and 3 OFDM symbols for subslot indices 1 and 5 for subslot-based SPDCCH.",,,

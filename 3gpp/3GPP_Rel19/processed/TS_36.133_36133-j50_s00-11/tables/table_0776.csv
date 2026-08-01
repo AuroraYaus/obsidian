@@ -1,0 +1,14 @@
+Accuracy,Conditions,,,,
+,Ês/Iot,Downlink transmissionbandwidth of PCell,Io Note 1 range,,
+,,,E-UTRA operating band groups Note 3,Minimum Io,Maximum Io
+Ts Note 2,dB,RB,,dBm/15kHz,dBm/BWChannel
+20,-3 dB,≥ 6,"FDD-M1_A, TDD-M1_A",-121,-50
+,,,FDD-M1_B,-120.5,-50
+,,,"FDD-M1_C, TDD-M1_C",-120,-50
+,,,FDD-M1_D,-119.5,-50
+,,,"FDD-M1_E, TDD-M1_E",-119,-50
+,,,FDD-M1_F,-118.5,-50
+,,,FDD-M1_G,-118,-50
+,,,FDD-M1_H,-117.5,-50
+,,,FDD-M1_N,-114.5,-50
+"NOTE 1:When in dBm/15kHz, the minimum Io condition is expressed as the average Io per RE over all REs in that symbol. Io may be different in different symbols within a subframe.NOTE 2:Ts is the basic timing unit defined in TS 36.211.NOTE 3:E-UTRA operating band groups are as defined in Section 3.5.",,,,,

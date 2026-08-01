@@ -1,0 +1,6 @@
+eDRX_IDLE cycle length [s],DRX cycle length [s],PTW length [s] (number of 1.28 s periods),"Tdetect,NR_Intra [s] (number of DRX cycles Note 3)","Tmeasure,NR_Intra [s] (number of DRX cycles Note 3)","Tevaluate,NR_Intra [s] (number of DRX cyclesNote 3)"
+20.48 ≤  eDRX_IDLE cycle length ≤[163.84],0.32,≥3.84 (3),(23 x K1)eDRX_cycle_length×23PTW/DRX_cycle_lengthx K1,0.32 x M2 x K1 (1 x M2 x K1),0.64 x M2 x K1 (2 x M2 x K1)
+,0.64,≥3.84 (3),,0.64 x K1 (1 x K1),1.28 x K1 (2 x K1)
+,1.28,≥7.68 (6),,1.28 x K1 (1 x K1),2.56 x K1 (2 x K1)
+,2.56,≥15.36 (12),,2.56 x K1 (1 x K1),5.12 x K1 (2 x K1)
+"NOTE 1:The number of DRX cycles in this table corresponds to the DRX cycles within PTWs.NOTE 2:The eDRX_IDLE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 3: The lower bound of PTW length is derived based on .NOTE 4:M2 = 1.5 if SMTC periodicity of measured intra-frequency cell > 20 ms; otherwise M2=1. NOTE 5:K1 = 3 is the measurement relaxation factor applicable for UE fulfilling the lowMobilityEvaluation [2] criterion.Tevaluate,NR_Intra*DRX_cycle1.28*1.28",,,,,

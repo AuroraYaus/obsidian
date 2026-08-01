@@ -1,0 +1,5 @@
+Condition NOTE1,TSSB_time_index_inter NOTE3
+No DRX,"Max(120 ms, ceil((3+ Lcancel,index)  Kgap)  Max(MGRP , SMTC period))  CSSFinter"
+DRX cycle ≤ 320 ms,"Max(120 ms, ceil((3+ Lcancel,index)  1.5  Kgap)  Max(MGRP, SMTC period, DRX cycle))  CSSFinter"
+DRX cycle > 320 ms,"ceil((3+ Lcancel,index)  Kgap)  DRX cycle  CSSFinter"
+"NOTE 1:DRX or non-DRX requirements apply according to the conditions described in clause 3.6.1.NOTE 2:For a UE supporting concurrent gaps, the MGRP above is the MGRP of the activated Pre-MG or the measurement gap associated with the target frequency layer to be measured if concurrent gaps are configured.NOTE 3:Lcancel,index is the the number of cancelled measurement gap occasions overlapping with SMTC during TSSB_time_index_inter. When DRX is configured, Lcancel,index is the number of DRX cycles in which at least one measurement gap occasion overlapping with SMTC is cancelled during TSSB_time_index_inter.",

@@ -1,0 +1,14 @@
+E-UTRAchannel bandwidth [MHz],Wanted signal mean power [dBm],Interfering signal mean power [dBm],Interfering RB centre frequency offset from the channel edge of the wanted signal [kHz],Type of interfering signal
+1.4,PREFSENS + 14dB*,-36,270,CW
+,,-36,790,"1.4 MHz E-UTRA signal, 1 RB**"
+3,PREFSENS + 14dB*,-36,270,CW
+,,-36,780,"3.0 MHz E-UTRA signal, 1 RB**"
+5,PREFSENS + 14dB*,-36,360,CW
+,,-36,1060,"5 MHz E-UTRA signal, 1 RB**"
+10,PREFSENS + 14dB*(***),-36,325,CW
+,,-36,1240,"5 MHz E-UTRA signal, 1 RB**"
+15,PREFSENS + 14dB*(***),-36,380,CW
+,,-36,1600,"5MHz E-UTRA signal, 1 RB**"
+20,PREFSENS + 14dB*(***),-36,345,CW
+,,-36,1780,"5MHz E-UTRA signal, 1 RB**"
+"Note*:PREFSENS is related to the channel bandwidth as specified in Table 7.2.1-3.Note**:Interfering signal consisting of one resource block positioned at the stated offset, the channel bandwidth of the interfering signal is located adjacently to the channel edge of the wanted signal.Note***:    This requirement shall apply only for a FRC A1-3 mapped to the frequency range at the channel edge adjacent to the interfering signals.",,,,

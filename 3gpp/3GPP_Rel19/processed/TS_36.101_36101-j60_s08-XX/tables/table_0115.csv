@@ -1,0 +1,4 @@
+Test Number,Reference Channel,OCNG Pattern,,,Propagation Conditions (Note1),,,Correlation Matrix and Antenna Configuration (Note 2),Reference Value,,UE Category
+,,Cell 1,Cell 2,Cell 3,Cell 1,Cell 2,Cell 3,,Fraction of Maximum Throughput (%),SNR (dB) (Note 3),
+1,R.36 FDD,OP.1FDD,N/A,N/A,EVA5,EVA5,EVA5,4x2 low,70,14.0,≥2
+"Note 1:The propagation conditions for Cell 1, Cell 2 and Cell 3 are statistically independent.Note 2:The correlation matrix and antenna configuration apply for Cell 1, Cell 2 and Cell 3.Note 3:SNR corresponds to  of cell 1.",,,,,,,,,,,

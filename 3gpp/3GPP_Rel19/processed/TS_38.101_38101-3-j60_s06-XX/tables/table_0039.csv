@@ -1,0 +1,4 @@
+Frequency band(MHz),Channel bandwidth / Spectrum emission limit (dBm),Measurement bandwidth
+2495 ≤ f < 2496,-13,"1 % of Channel BW for contiguous BW up to 100 MHz,1 MHz for contiguous BW  > 100 MHz"
+2490.5 ≤ f < 2495,-13,1 MHz
+0 < f < 2490.5,-25,1 MHz

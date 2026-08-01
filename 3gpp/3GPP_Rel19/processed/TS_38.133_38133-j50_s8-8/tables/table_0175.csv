@@ -1,0 +1,5 @@
+Configuration,TEvaluate_BFD_CSI-RS (ms)
+no DRX,Ceil(MBFD  P  PBFD)  measCyclePscell
+DRX cycle ≤ 320 ms,"Ceil(1.5 × MBFD  P  PBFD)  Max(TDRX, measCyclePscell)"
+DRX cycle > 320 ms,"Ceil(MBFD  P  PBFD)  Max(TDRX, measCyclePscell)"
+NOTE:DRX cycle is the configured DRX cycle of the PSCell. measCyclePSCell is the measurement cycle length of the deactivated PSCell.,

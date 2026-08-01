@@ -1,0 +1,33 @@
+E-UTRA Band,REFSENS (dBm),Duplex Mode
+1,-103,HD-FDD
+2,-101,HD-FDD
+3,-100,HD-FDD
+4,-103,HD-FDD
+5,-101.5,HD-FDD
+7,-101,HD-FDD
+8,-100.5,HD-FDD
+11,-1033,HD-FDD
+12,-100,HD-FDD
+13,-100,HD-FDD
+14,-100,HD-FDD
+18,-1034,HD-FDD
+19,-103,HD-FDD
+20,-100.5,HD-FDD
+21,-1033,HD-FDD
+24,-103.5,HD-FDD
+25,-99.5,HD-FDD
+26,-101,HD-FDD
+27,-101.5,HD-FDD
+28,-101.5,HD-FDD
+31,-97.3,HD-FDD
+…,,
+71,-100.2,HD-FDD
+72,-97.3,HD-FDD
+73,-97.3,HD-FDD
+74,-103,HD-FDD
+85,-100,HD-FDD
+87,-97.3,HD-FDD
+88,-97.3,HD-FDD
+106,-100.5,HD-FDD
+111,-97.3,HD-FDD
+"NOTE 1:The transmitter shall be set to PUMAX as defined in subclause 6.2.5NOTE 2:Reference measurement channel is A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1NOTE 3:For the UE which supports both Band 11 and Band 21 the reference sensitivity level is FFS.NOTE 4:For a UE that support both Band 18 and Band 26, the reference sensitivity level for Band 26 applies for the applicable channel bandwidths.NOTE 5:  For cat M1 the same reference sensitivity requirement applies for all applicable channel bandwidths (Table 5.6.1-1)",,

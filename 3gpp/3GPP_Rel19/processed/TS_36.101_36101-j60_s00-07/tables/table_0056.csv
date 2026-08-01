@@ -1,0 +1,4 @@
+V2X intra-band multi-carrier configuration,Class 1 (dBm),Tolerance (dB),Class 2 (dBm),Tolerance (dB),Class 3 (dBm),Tolerance (dB),Class 4 (dBm),Tolerance (dB)
+V2X_47B,,,,,23,±2,,
+V2X_47C,,,,,23,±2,,
+"NOTE 1: PPowerClass is the maximum UE power specified without taking into account the toleranceNOTE 2: For intra-band multi-carrier operation, the maximum power requirement should apply to the total transmitted power over all component carriers (per UE).",,,,,,,,

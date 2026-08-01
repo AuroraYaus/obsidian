@@ -1,0 +1,17 @@
+Parameter,Unit,Value,Comment
+PDSCH parameters,,DL Reference Measurement Channel R.0 FDD,As specified in section A.3.1.1.1
+PDSCH allocation,,2—3,13—36
+PCFICH/PDCCH/PHICH parameters,,DL Reference Measurement Channel R.6 FDD,As specified in section A.3.1.2.1
+A3-Offset,dB,-4,
+Hysteresis,dB,0,
+TimeToTrigger,s,0,
+Filter coefficient,,0,L3 filtering is not used
+DRX,,off,As specified in section A.3.3
+PRACH configuration,,4,As specified in table 5.7.1-2 in 3GPP TS 36.211
+Access Barring Information,-,Not sent,No additional delays in random access procedure
+Time offset between cells,,3 ms,Asynchronous cells
+Gap pattern configuration Id,,0,As specified in Table 8.1.2.1-1 started before T1 starts
+Time duration T1,s,[10],Defined to give enough time for the UE to complete the manual reselection to Cell 2.
+Time duration T2,s,[360],Defined to be longer enough to see whether the UE will report enter “proximity” indication.
+Time duration T3 Note 1,s,[<=360],The time duration for a UE to report enters “proximity” when the UE is near a CSG cell.
+"Note 1:The maximum allowed time duration for the UE to decide either entering or leaving “proximity” is 360s. To reduce test time, T3 may end once UE reports entering “proximity”.Note 2:The test case assumes an environment where CSG proximity detection results not being impact by non-3GPP signals, such as GPS and WiFi. When the test case is being executed, the UE may ignore any radio signals which are not provided by the test setup which it would otherwise use in proximity estimation.",,,

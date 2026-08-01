@@ -1,0 +1,101 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Value</td>
+  </tr>
+  <tr>
+    <td colspan="2">Transform precoding</td>
+    <td>Disabled</td>
+  </tr>
+  <tr>
+    <td rowspan="2" colspan="2">Channel bandwidth</td>
+    <td>15 kHz SCS: 10 MHz</td>
+  </tr>
+  <tr>
+    <td>30 kHz SCS: 40 MHz</td>
+  </tr>
+  <tr>
+    <td colspan="2">MCS</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>DM-RS</td>
+    <td>DM-RS configuration type</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>DM-RS duration</td>
+    <td>single-symbol DM-RS</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>DM-RS position (l0)</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Additional DM-RS position</td>
+    <td>pos2 or pos1</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Number of DM-RS CDM group(s) without data</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Ratio of PUSCH EPRE to DM-RS EPRE</td>
+    <td>-3 dB</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>DM-RS port</td>
+    <td>{0}</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>DM-RS sequence generation</td>
+    <td>NID0=0, nSCID = 0</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Time domain resource assignment</td>
+    <td>PUSCH mapping type</td>
+    <td>Both A and B</td>
+  </tr>
+  <tr>
+    <td>Allocation length</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Frequency domain resource assignment</td>
+    <td>RB assignment</td>
+    <td>2 PRBs</td>
+  </tr>
+  <tr>
+    <td>Starting PRB index</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>Frequency hopping</td>
+    <td>Disabled</td>
+  </tr>
+  <tr>
+    <td>Time offset (TO) Cycling (µs)</td>
+    <td>start:end</td>
+    <td>15k SCS: 0:3.8</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>30k SCS: 0:2</td>
+  </tr>
+  <tr>
+    <td>Test Metric</td>
+    <td>BLER</td>
+    <td>0.01</td>
+  </tr>
+  <tr>
+    <td colspan="3">NOTE 1:A single requirement is defined that is applicable regardless of whether pos1 or pos2 is configured for the additional DM-RS positionNOTE 2:The power ratio between preamble and msgA (msgA-DeltaPreamble) is set to be sufficient to achieve 100% preamble detection. The SNR for the requirement is defined on the msgA PUSCH</td>
+  </tr>
+</table>

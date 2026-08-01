@@ -1,0 +1,5 @@
+"Frequency offset of measurement filter -3 dB point,  f","Frequency offset of measurement filter centre frequency, f_offset",Limit,Measurement bandwidth
+0 MHz  f < 0.1*BWcontiguous,0.5 MHz  f_offset < 0.1* BWcontiguous +0.5 MHz,"Min(-5 dBm, Max(Prated,t,TRP – 33 dB, -12 dBm))",1 MHz
+0.1*BWcontiguous  f < fB,0.1* BWcontiguous +0.5 MHz  f_offset < fB +0.5 MHz,"Min(-13 dBm, Max(Prated,t,TRP – 41 dB, -20 dBm))",1 MHz
+fB  f < fmax,fB +5 MHz  f_offset < f_ offsetmax,"Min(-5 dBm, Max(Prated,t,TRP – 31 dB, -10 dBm))",10 MHz
+"NOTE 1:For non-contiguous spectrum operation within any operating band the limit within sub-block gaps is calculated as a cumulative sum of contributions from adjacent sub-blocks on each side of the sub-block gap, where the contribution from the far-end sub-block shall be scaled according to the measurement bandwidth of the near-end sub-block. NOTE 2:fB = 2*BWcontiguous when BWcontiguous ≤ 500 MHz, otherwise fB = BWcontiguous + 500 MHz.",,,

@@ -1,0 +1,11 @@
+Parameter,Value
+Modulation order,QSPK
+First PRB prior to frequency hopping,0
+Intra-slot frequency hopping,enabled
+Frist PRB after frequency hopping,The largest PRB index – (Number of PRBs – 1) (Note 1)
+Number of PRBs,9
+Number of symbols,2
+The number of UCI information bits,22
+First symbol,12
+DM-RS sequence generation,NID0=0
+"Note 1 : For 3MHz, the first PRB after frequency hopping is 3.",

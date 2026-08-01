@@ -1,0 +1,8 @@
+Channel bandwidth confined to 1427-1432MHz (B51),,,,,,,,,,
+Channel bandwidth [MHz],Carrier centre frequency (FC)[MHz],Parameters,Region A,,Region B,,Region C,,Region D,
+3MHz,1428.5 MHz ≤ FC ≤  1430.5 MHZ,RBstart,0,,1– 2,,3 – 6,,,
+,,LCRB [RBs],1,≥2,2,≥ 3,5-6,≥8,,
+,,A-MPR [dB],≤ 11,≤ 16,≤ 9,≤ 15,≤ 12,≤ 14,,
+5MHz,1429.5 MHz ≤ FC ≤ 1432 MHz,RBstart,0 - 1,,2 – 4,,5 – 7,,8 – 10,
+,,LCRB [RBs],2,≥3,4-6,≥ 7,8-10,≥11,12,≥15
+,,A-MPR [dB],≤ 12,≤ 16,≤ 13,≤ 16,≤ 12,≤ 15,≤ 10,≤ 12

@@ -1,0 +1,24 @@
+Parameter,Unit,Value,
+,,Test 1,Test 2
+RF Channel Number,,1,1
+BWchannel,kHz,200,200
+NPDSCH parameter,,R.18 HD-FDD,R.18 HD-FDD
+NPDCCH parameter,,R.30 HD-FDD,R.30 HD-FDD
+NOCNG Patterns,,NOP.3 FDD,NOP.3 FDD
+NPBCH_RA,dB,0,0
+NPBCH_RB,,,
+NPSS_RA,,,
+NSSS_RA,,,
+NPDCCH_RA,,,
+NPDCCH_RB,,,
+NPDSCH_RA,,,
+NPDSCH_RB,,,
+NOCNG_RA Note1,,,
+NOCNG_RB Note1,,,
+,dBm/15 kHz,-88,-88
+,dB,-11,-11
+,dB,-11,-11
+Antenna Configuration,,1x1,1x1
+Propagation condition,-,AWGN with time varying Doppler and delay shifts,AWGN with time varying Doppler and delay shifts
+UE position,,"set by AT command at the beginning, and should keep unchanged during the test",
+Note 1NOCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.,,,

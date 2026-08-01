@@ -1,0 +1,29 @@
+Parameter,Unit,Value,,,,,
+Channel bandwidth,MHz,1.4,3,5,10,15,20
+Allocated resource blocks (Note 6),,4,8,16,16,16,16
+Subcarriers per resource block,,12,12,12,12,12,12
+Allocated subframes per Radio Frame (Note 4),,2,2,8,8,8,8
+Modulation,,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK
+Target Coding Rate,,1/3,1/3,1/3,1/3,1/3,1/3
+Number of HARQ Processes,Processes,8,8,8,8,8,8
+Maximum number of HARQ transmissions,,1,1,1,1,1,1
+Information Bit Payload per Sub-Frame,,,,,,,
+"For Sub-Frames 3,8",Bits,256,680,1384,1384,1384,1384
+"For Sub-Frames 0,1,2,5,7,9",Bits,N/A,N/A,N/A,N/A,1384,1384
+For Sub-Frame 4,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 6,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+Transport block CRC,Bits,24,24,24,24,24,24
+Number of Code Blocks per Sub-Frame,,,,,,,
+"For Sub-Frames 3,8",Bits,1,1,1,1,1,1
+"For Sub-Frames 0,1,2,5,7,9",Bits,N/A,N/A,1,1,1,1
+For Sub-Frame 4,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 6,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+Binary Channel Bits Per Sub-Frame,,,,,,,
+"For Sub-Frames 3,8",Bits,912,2016,4032,4416,4416,4416
+"For Sub-Frames 0,1,2,5,7,9",Bits,N/A,N/A,N/A,N/A,4416,4416
+For Sub-Frame 4,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 6,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+Max. Throughput averaged over 1 frame for FDD,kbps,51.2,136.0,276.8,276.8,1107.2,1107.2
+Max. Throughput averaged over 1 frames for HD-FDD,kbps,25.6,68.0,138.4,138.4,415.2,415.2
+UE DL Category,,M2,M2,M2,M2,M2,M2
+"Note 1:2 symbols allocated to PDCCH for 20 MHz, 15 MHz and 10MHz channel BW. 3 symbols allocated to PDCCH for 5 MHz and 3 MHz. 4 symbols allocated to PDCCH for 1.4 MHzNote 2:Reference signal, Synchronization signals and PBCH allocated as per TS 36.211.Note 3:The scheduled wideband other than 1.4MHz/3MHz/5MHz/15MHz channel bandwidth avoids the centre of the channel where some REs of the same PRBs are occupied by PBCH and synchronization signals.Note 4:For HD-FDD UE, PDSCH are scheduled at the 3rd subframe every 1 radio frame for 1.4MHz/3MHz/5MHz/10MHz channel bandwidth. For other channel bandwidth, PDSCH are scheduled at the 0th, 1st and 2nd subframes every 1 radio frame. Information bit payload is available if downlink subframe is scheduled. The corresponding MPDCCH is scheduled 2 subframes before the corresponding PDSCH transmission.Note 5:2 resource blocks allocated to MPDCCH.Note 6:4 resource blocks in each narrowband allocated to PDSCH.",,,,,,,

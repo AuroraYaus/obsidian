@@ -1,0 +1,6 @@
+Wideband operation channel bandwidth (MHz),Sub-band configuration exceptions
+40,"10, 01"
+60,None
+80,"1100, 0011, 0100, 0010"
+100,"00111, 11100, 00011, 11000"
+NOTE 1:The sub-band configuration is represented as a bitmap where ‘1’ indicates that a sub-band is transmitted and ‘0’ indicates a sub-band is not transmitted.  The bitmap is ordered with MSB mapped to the lowest frequency sub-band and LSB mapped to highest frequency sub-band within the wideband channel.NOTE 2:Void.,

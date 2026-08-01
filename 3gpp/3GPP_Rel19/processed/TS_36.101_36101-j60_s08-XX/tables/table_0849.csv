@@ -1,0 +1,12 @@
+Parameter,Unit,CE Mode A,CE Mode B
+Inter-TTI Distance,,1,1
+Number of HARQ processes per component carrier,Processes,8 or 10 or 14(Note 2),2
+Maximum number of HARQ transmission,,4,4
+Redundancy version coding sequence rvidx (Note 1),,"{0, 2, 3, 1} for QPSK and 16QAM","{0,0,0,0,2,2,2,2,3,3,3,3,1,1,1,1…} for QPSK"
+Number of OFDM symbols for PDCCH per component carrier,OFDM symbols,"4 for 1.4 MHz bandwidth, 3 for 3 MHz and 5 MHz bandwidths,2 for 10 MHz, 15 MHz and 20 MHz bandwidths","4 for 1.4 MHz bandwidth, 3 for 3 MHz and 5 MHz bandwidths,2 for 10 MHz, 15 MHz and 20 MHz bandwidths"
+Cyclic Prefix,,Normal,Normal
+Beamforming Precoder for MPDCCH,,Annex B.4.4,Annex B.4.4
+Precoder update granularity for MPDCCH,,Frequency domain: 1 PRBTime domain: identical during the hopping period (interval-FDD for CE Mode A),Frequency domain: 1 PRBTime domain: identical during the hopping period (interval-FDD for CE Mode B)
+BL/CE DL subframe comfiguration (fdd-DownlinkOrTddSubframeBitmapBR),,1111111111,1111111111
+HARQ bundling(ce-HARQ-AckBundling),,"For test 7 in clause 8.11.1.1.3.1, enabled,otherwise, disabled",Disabled
+"Note 1:rvidx is defined in TS 36.213 [6] Table 7.1.7.1-2.Note 2:For the tests except test 7 in clause 8.11.1.1.3.1, for UE supporting ce-pdsch-tenProcesses-r13, the number of HARQ processese are set to 10, otherwise, it is set to 8.For the test 7 in clause 8.11.1.1.3.1, the number of HARQ processes is set to 14.",,,

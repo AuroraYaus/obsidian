@@ -1,0 +1,10 @@
+Clause suffix,Variant
+None,Single Carrier
+A,Carrier Aggregation (CA)
+B,Dual-Connectivity (DC)
+C,Supplement Uplink (SUL)
+D,UL MIMO
+K,Simultaneous reception or transmission in multiple directions
+M,Low Power Wake-Up Signal (LP-WUS/WUR)
+N,Non-simultaneous reception or transmission in multiple directions
+"NOTE 1:Suffix D in this specification represents either polarized UL MIMO or spatial UL MIMO. RF requirements are same. If UE supports both kinds of UL MIMO, then RF requirements only need to be verified under either polarized or spatial UL MIMO.NOTE 2:Suffix K applies to simultaneous reception or transmission with different TCI states and different QCL-TypeD reference signals across the TCI states.NOTE 3:Suffix N applies to reception and transmission with reference signal associated with the UL TCI state is different from the QCL-TypeD associated with the DL TCI state.",

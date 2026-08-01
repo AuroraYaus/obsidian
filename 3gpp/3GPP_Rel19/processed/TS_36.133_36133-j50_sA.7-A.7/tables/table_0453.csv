@@ -1,0 +1,8 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,2,UL carrier frequency
+Channel Bandwidth (BWchannel),MHz,5,
+ProSe Direct Discovery resource pool configuration,,As specified in Table A.3.12.4-5(Configuration #5),IE values unless specified otherwise in this test.Broadcasted in SIB19 by Cell 1 on RF channel 1
+discInterFreqList/ carrierFreq,,RF channel 2 (UL frequency),
+freqInfo/ul-CarrierFreq,,RF channel 2 (UL frequency),
+rxParamsAddNeighFreq/physCellId,,"{phyCellId of Cell 2, phyCellId of Cell 3}",
+txParamsAddNeighFreq/physCellId,,"{phyCellId of Cell 2, phyCellId of Cell 3}",

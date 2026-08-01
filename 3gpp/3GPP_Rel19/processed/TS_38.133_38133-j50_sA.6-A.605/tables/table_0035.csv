@@ -1,0 +1,16 @@
+Parameter,,Unit,Test configuration,Value,Comment
+Initial condition,Active cell,,"1, 2, 3, 4, 5, 6",Cell 1,The UE camps on Cell 1 in the initial phase and during T2 period the UE reselects to Cell 2.
+T2 end,Active cell,,"1, 2, 3, 4, 5, 6",Cell 2,The UE shall perform reselection to cell
+condition,Neighbour cell,,"1, 2, 3, 4, 5, 6",Cell 1,2 during T2.
+T3 end,Active cell,,"1, 2, 3, 4, 5, 6",Cell 1,The UE shall perform reselection to cell
+condition,Neighbour cell,,"1, 2, 3, 4, 5, 6",Cell 2,1 during T3 for iteration of the tests.
+Access Barring Information,,-,"1, 2, 3, 4, 5, 6",Not Sent,No additional delays in random access procedure.
+DRX cycle length,,s,"1, 2, 3, 4, 5, 6",1.28,The value shall be used for all cells in the test.
+NR PRACH configuration index,,,"1, 2, 3, 4, 5, 6",102,The detailed configuration is specified in TS 38.211 [6] clause 6.3.3.2
+E-UTRAN PRACH configuration index,,,"1, 2, 3",53,As specified in table 5.7.1-2 in TS 36.211 [23]
+,,,"4, 5, 6",4,
+E-UTRAN PRACH,,,"1, 2, 3",53,As specified in table 5.7.1-2 in
+configuration index,,,"4, 5, 6",4,TS 36.211 [23]
+T1,,s,"1, 2, 3, 4, 5, 6",>7,"During T1, Cell 2 shall be powered off, and during the off time the physical cell identity shall be changed. The intention is to ensure that Cell 2 has not been detected by the UE prior to the start of period T2."
+T2,,s,"1, 2, 3, 4, 5, 6",75,T2 needs to be defined so that cell re-selection reaction time is taken into account.
+T3,,s,"1, 2, 3, 4, 5, 6",15,T3 needs to be defined so that cell re-selection reaction time is taken into account.

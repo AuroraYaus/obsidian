@@ -1,0 +1,28 @@
+ParameterNote 5,Unit,T1,,T2,
+,,Cell 2,Cell 3,Cell 2,Cell 3
+Physical cell ID,,489,0,489,0
+SSB ARFCN,,freq1,,freq1,
+Duplex mode,,TDD,,TDD,
+TDD configuration,,TDDConf.3.1,,TDDConf.3.1,
+BWchannel,MHz,"100: NPRB,c = 66",,"100: NPRB,c = 66",
+PDSCH Reference measurement channel,,SR.3.1 TDD,-,SR.3.1 TDD,-
+RMSI CORESET Reference Channel,,CR.3.1 TDD,-,CR.3.1 TDD,-
+Dedicated CORESET Reference Channel,,CCR.3.1 TDD,-,CCR.3.1 TDD,-
+OCNG Patterns,,OP.3,OP.3,OP.3,OP.3
+SSB configuration,,SSB.3 FR2,SSB.3 FR2,SSB.3 FR2,SSB.3 FR2
+SMTC configuration,,SMTC.1,SMTC.1,SMTC.1,SMTC.1
+CSI-RS configuration for RRM,,CSI-RS.RRM.FR2.1 TDD,CSI-RS.RRM.FR2.1 TDD,CSI-RS.RRM.FR2.1 TDD,CSI-RS.RRM.FR2.1 TDD
+Time offset with Cell 2,s,-,0.58,-,0.58
+PDSCH/PDCCH subcarrier spacing,kHz,120,120,120,120
+EPRE ratio of PSS to SSS,dB,0,0,0,0
+EPRE ratio of PBCH_DMRS to SSS,,,,,
+EPRE ratio of PBCH to PBCH_DMRS,,,,,
+EPRE ratio of PDCCH_DMRS to SSS,,,,,
+EPRE ratio of PDCCH to PDCCH_DMRS,,,,,
+EPRE ratio of PDSCH_DMRS to SSS,,,,,
+EPRE ratio of PDSCH to PDSCH_DMRS,,,,,
+EPRE ratio of OCNG DMRS to SSSNote 1,,,,,
+EPRE ratio of OCNG to OCNG DMRS Note 1,,,,,
+Propagation conditions,,AWGN,AWGN,AWGN,AWGN
+Antenna configuration,,1x2,1x2,1x2,1x2
+NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:VoidNOTE 3:VoidNOTE 4:VoidNOTE 5: All parameters apply for configuration 1 and 2NOTE 6: Void,,,,,

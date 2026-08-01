@@ -1,0 +1,18 @@
+Parameter,,Unit,Value,Comment
+Initial condition,Active cell,,Cell1,
+,Neighbour cells,,Cell2,
+T2 end condition,Active cell,,Cell2,
+,Neighbour cells,,Cell1,
+Final condition,Visited cell,,Cell1,
+E-UTRA RF Channel Number,,,1,Only one carrier frequency is used.
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+PRACH Configuration,,,PRACH_2CE,Refer to A.3.16
+Rmax,,,[128],
+maxDurationFactor,,,[one4th],WUS config. Wmax = 32 (=1/4*Rmax)
+numPOs,,,[n1],WUS config. Single PO mapped to each WUS occasion
+timeOffsetDRX,,,[ms40],WUS config. Gap between the end of WUS duration to the associated PO
+numDRX-CycleRelaxed,,,[4],Serving cell RRM measurement is relaxed by
+DRX cycle length,,s,0.64,The value shall be used for all cells in the test.
+T1,,s,>7,"During T1, Cell 2 shall be powered off, and during the off time the physical cell identity shall be changed, The intention is to ensure that Cell 2 has not been detected by the UE prior to the start of period T2"
+T2,,s,40,T2 need to be defined so that cell re-selection reaction time is taken into account.
+T3,,s,15,T3 need to be defined so that cell re-selection reaction time is taken into account.

@@ -1,0 +1,8 @@
+Parameter,E-UTRA ProSe operating band groups Note 3,MinimumProSe SCH_RP Note 1,ProSe SCH Ês/Iot Note 4
+,,dBm/15kHz,dB
+,FDD_D,-125.5,-4
+,FDD_E,-125,
+,FDD_F,-124.5,
+,FDD_G,-124,
+,FDD_N,-120.5,
+"NOTE 1:This condition level is increased by ∆>0, when applicable, as described in Sections B.4.2 and B.4.3.NOTE 2:VoidNOTE 3:E-UTRA ProSe operating band groups are as defined in Section 3.5 for the corresponding E-UTRA operating bands.NOTE 4: ProSe SCH Ês/Iot for a SyncRef UE is the minimum of the Ês/Iot of PSSS/PSBCH and the Ês/Iot of SSSS",,,

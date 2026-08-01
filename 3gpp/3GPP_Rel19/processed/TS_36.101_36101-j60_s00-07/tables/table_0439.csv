@@ -1,0 +1,6 @@
+CA configuration,Parameter,Units,Frequency,,
+,,,Range 1,Range 2,Range 3
+,PInterferer,dBm,-44,-30,-15
+"CA_1C, CA_2C, CA_3B, CA_3C, CA_5B, CA_7B, CA_7C, CA_8B, CA_12B, CA_23B, CA_27B, CA_28C, CA_38C, CA_39C, CA_40C, CA_40D, CA_40E, CA_40F, CA_41C, CA_41D, CA_41E, CA_41F, CA_42C1, CA_42D1, CA_42E1, CA_42F1, CA_43C1, CA_48B1, CA_48C1, CA_48D1, CA_48E1, CA_48F1, CA_66B, CA_66C, CA_66D, CA_70C",FInterferer (CW),MHz,FDL_low -15 toFDL_low -60,FDL_low -60 toFDL_low -85,FDL_low -85 to1 MHz
+,,,FDL_high +15 toFDL_high + 60,FDL_high +60 toFDL_high +85,FDL_high +85 to+12750 MHz
+"NOTE 1:The power level of the interferer (PInterferer) for this CA configuration for Range 3 shall be modified to -20 dBm for FInterferer > 2800 MHz and FInterferer < 4400 MHz. The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 2800 MHz and FInterferer < 4800 MHz when UE supports both E-UTRA band B42 and NR bands n77, n78.",,,,,

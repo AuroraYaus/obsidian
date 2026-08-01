@@ -1,0 +1,21 @@
+Parameter,Unit,Value,Comment
+Cell 1 PDSCH parameters,,DL Reference Measurement Channel R.0 TDD,As specified in clause A.3.1.1.2
+Cell 1 PCFICH/PDCCH/PHICH parameters,,DL Reference Measurement Channel R.6 TDD,As specified in clause A.3.1.2.2
+Cell1 Special subframe configuration,,6,As specified in table 4.2-1 in TS 36.211.
+Cell1 Uplink-downlink configuration,,1,As specified in TS 36.211 clause 4.2 Table 4.2-2.
+Cell 2 PCFICH/PDCCH/PHICH parameters,,DL Reference Measurement Channel R.6 FDD,As specified in clause A.3.1.2.1
+Cell 1 E-UTRA TDD RF Channel Number,,1,One TDD carrier frequency is used.
+Cell 2 E-UTRA FDD RF Channel Number,,2,One FDD carrier frequency is used.
+Channel Bandwidth (BWchannel),MHz,10,
+Active cell,,Cell 1,Cell 1 is on RF channel number 1
+Neighbour cell,,Cell 2,Cell 2 is on RF channel number 2
+Gap Pattern Id,,0,As specified in TS 36.133 clause 8.1.2.1.
+A3-Offset,dB,-6,
+Hysteresis,dB,0,
+CP length,,Normal,
+TimeToTrigger,s,0,
+Filter coefficient,,0,L3 filtering is not used
+DRX,,OFF,OFF
+Time offset between cells,,3 ms,Asynchronous cells
+T1,s,5,
+T2,s,5,

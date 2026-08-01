@@ -1,0 +1,15 @@
+Information Element,,,Value (20MHz),
+SL-V2X-PreconfigCommPool-r14,sl-OffsetIndicator-r14,,0,
+,sl-Subframe-r14,bs20-r14,0xFFFFF,
+,adjacencyPSCCH-PSSCH-r14,,TRUE,
+,sizeSubchannel-r14,,n10,n5
+,numSubchannel-r14,,n10,n20
+,startRB-Subchannel-r14,,0,
+,startRB-PSCCH-Pool-r14,,not present,
+,dataTxParameters-r14,P0-SL-r12,-126,
+,zoneID-r14,,not present,
+,threshS-RSSI-CBR-r14,,not present,
+,cbr-pssch-TxConfigList-r14,,not present,
+,resourceSelectionConfigP2X-r14,,not present,
+,syncAllowed-r14,,not present,
+,restrictResourceReservationPeriod-r14,,not present,

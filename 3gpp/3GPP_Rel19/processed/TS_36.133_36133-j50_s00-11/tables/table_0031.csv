@@ -1,0 +1,7 @@
+DRX cycle length [s],"Tdetect,NR_Inter_CCA [s] (number of DRX cycles)","Tmeasure,NR_Inter_CCA [s] (number of DRX cycles)","Tevaluate,NR_Inter_CCA [s] (number of DRX cycles)"
+,,,
+0.32,0.32x([36]+Md) {([36]+ Md) },0.32x([4]+Mm){([4]+ Mm) },0.32x([16]+Me){([16]+ Me) }
+0.64,0.64x([28]+ Md)  {[28]+ Md },0.64x([2]+ Mm) {[2]+ Mm },0.64x([8]+ Me) {[8]+ Me }
+1.28,1.28x([25]+ Md){[25]+ Md },1.28x([1]+ Mm){[1]+ Mm },1.28x([5]+ Me) {[5]+ Me }
+2.56,2.56x([23]+ Md){[23]+ Md },2.56x([1]+ Mm){[1]+ Mm },2.56x([3]+ Me) {[3]+ Me }
+"Note 1:Md, Mm, Me are the number of DRX cycles each with at least one SMTC occasion not available at the UE during the Tdetect,NR_Inter_CCA,, Tmeasure,NR_Inter_CCA and Tevaluate,NR_Inter_CCA, respectively. Mm,max, Md,max and Me,max are the maximum values of Mm, Md and Me, respectively.Note 2:Mm ≤ Mm,max, where: Mm,max = [16] for DRX cycle = 0.32 seconds, Mm,max = [8] for DRX cycle = 0.64 seconds, Mm,max = [4] for DRX cycle = 1.28 seconds, Mm,max = [4] for DRX cycle = 2.56 seconds,Note 3:Md ≤ Md,max, where: Md,max = [4] * Mm,max,Note 4:Me ≤ Me,max, where: Me,max = [2] * Mm,max,",,,

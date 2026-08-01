@@ -1,0 +1,5 @@
+BS type,Operating band characteristics (MHz),ΔfOBUE (MHz)
+BS type 1-O,"FDL,high – FDL,low  < 100",10
+,"100 MHz ≤ FDL,high – FDL,low  ≤ 900",40
+BS type 2-O,"FDL,high – FDL,low ≤ 4000",1500
+,"4000 < FDL,high – FDL,low ≤ 14000",3500

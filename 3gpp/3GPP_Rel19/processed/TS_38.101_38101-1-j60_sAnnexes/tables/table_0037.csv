@@ -1,0 +1,24 @@
+Parameter,Unit,,Value,,,,,,,,,
+Channel bandwidth,MHz,10,15,20,25,30,40,50,60,70,80,100
+Subcarrier spacing configuration,,2,2,2,2,2,2,2,2,2,2,2
+Allocated resource blocks,,11,18,24,31,38,51,65,79,93,107,135
+Subcarriers per resource block,,12,12,12,12,12,12,12,12,12,12,12
+Allocated slots per Frame,,24,24,24,24,24,24,24,24,26,24,24
+MCS Index,,24,24,24,24,24,24,24,24,24,24,24
+MCS Table for TBS determination,,64QAM,,,,,,,,,,
+Modulation,,64 QAM,64 QAM,64 QAM,64 QAM,64 QAM,64 QAM,64 QAM,64 QAM,64 QAM,64 QAM,64 QAM
+Target Coding Rate,,3/4,3/4,3/4,3/4,3/4,3/4,3/4,3/4,3/4,3/4,3/4
+Maximum number of HARQ transmissions,,1,1,1,1,1,1,1,1,1,1,1
+Information Bit Payload per Slot,,,,,,,,,,,,
+"For Slots 0,1,2,3 and Slot i, if mod(i, 20) = {14,15,16,17,18,19} for i from {0,…,39}",Bits,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+"For Slot i, if mod(i, 20) = {0,…, 13} for i from {4,…,39}",Bits,5376,8712,11784,15112,18432,25104,31752,38936,45096,52224,65576
+Transport block CRC,Bits,24,24,24,24,24,24,24,24,24,24,24
+LDPC base graph,,1,1,1,1,1,1,1,1,1,1,1
+Number of Code Blocks per Slot,,,,,,,,,,,,
+"For Slots 0,1,2,3 and Slot i, if mod(i, 20) = {14,15,16,17,18,19} for i from {0,…,39}",CBs,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+"For Slot i, if mod(i, 20) = {0,…, 13} for i from {4,…,39}",CBs,1,2,2,2,3,3,4,5,6,7,8
+Binary Channel Bits per Slot,,,,,,,,,,,,
+"For Slots 0,1,2,3 and Slot i, if mod(i, 20) = {14,15,16,17,18,19} for i from {0,…,39}",Bits,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+"For Slot i, if mod(i, 20) = {0,…, 13} for i from {4,…,39}",Bits,7128,11664,15552,20088,24624,33048,42120,51192,60264,69336,87480
+Max. Throughput averaged over 1 frame,Mbps,12.902,20.909,28.282,36.269,44.237,60.250,76.205,93.446,108.23,125.338,157.382
+"NOTE 1:Additional parameters are specified in Table A.3.1-1 and Table A.3.3.1-1.NOTE 2:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).NOTE 3:SS/PBCH block is transmitted in slot #0 of each frameNOTE 4:Slot i is slot index per frame",,,,,,,,,,,,

@@ -1,0 +1,33 @@
+<table>
+  <tr>
+    <td>Operating band</td>
+    <td>Parameter</td>
+    <td>Unit</td>
+    <td>Case 1</td>
+    <td>Case 2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Pinterferer</td>
+    <td>dBm</td>
+    <td>-56</td>
+    <td>-44</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Finterferer (offset)</td>
+    <td>MHz</td>
+    <td>-CBW/2 –FIoffset, case 1andCBW/2 +FIoffset, case 1</td>
+    <td>≤ -CBW/2 –FIoffset, case 2and≥ CBW/2 +FIoffset, case 2</td>
+  </tr>
+  <tr>
+    <td>n46, n96, n102</td>
+    <td>Finterferer</td>
+    <td></td>
+    <td>NOTE 2</td>
+    <td>FDL_low – 3*CBWtoFDL_high + 3*CBW,NOTE 4</td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE 1:The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with an SCS equal to that of the wanted signal.NOTE 2:For each carrier frequency, the requirement applies for two interferer carrier frequencies: a: -CBW/2 – FIoffset, case 1; b: CBW/2 + FIoffset, case 1NOTE 3:CBW denotes the channel bandwidth of the wanted signalNOTE 4:Interferer carrier frequencies in the frequency range for Case 2 shall be located at discrete frequencies in integer multiples of 20 MHz offset from -CBW/2 – FIoffset, case 2 and CBW/2 + FIoffset, case 2</td>
+  </tr>
+</table>

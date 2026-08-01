@@ -1,0 +1,8 @@
+NR band,Parameter,Unit,Channel Bandwidth (MHz),,,,,,,
+,,,3,5,7,10,15,20,"25, 30, 35, 40, 45, 50","60, 70, 80, 90, 100"
+"n1, n2, n3, n5, n7, n8, n12, n13, n14, n18, n20, n24, n25, n26, n28, n29, n30, n31, n34, n38, n39, n40, n41, n48, n50, n51, n53, n65, n66, n67, n68, n70, n71, n72, n74, n75, n76, n85, n87, n88, n100, n101, n106, n110",Pw,dBm,PREFSENS + channel-bandwidth specific value below,,,,,,,
+,,dB,18,16,14,13,14,16,16,16
+,Puw (CW),dBm,-55,,,,,,,
+,Fuw (offset SCS= 15 kHz) 4,MHz,BWChannel2+0.2SCS+0.5+0.5SCS,,,,,,"BWChannel2+BWGB,ChannelSCS+0.5+0.5SCS",NA
+,Fuw (offset SCS= 30 kHz)4,MHz,NA,,,,,,,"BWChannel2+BWGB,ChannelSCS+0.5+0.5SCS"
+"NOTE 1:The transmitter shall be set a 4 dB below PCMAX_L,f,c at the minimum UL configuration specified in Table 7.3.2-3 with PCMAX_L,f,c defined in clause 6.2.4NOTE 2:Reference measurement channel is specified in Annexes A.3.2 and A.3.3 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1.NOTE 3:The PREFSENS power level is specified in Table 7.3.2-1a, Table 7.3.2-1b, Table 7.3.2-2, Table 7.3.2-2aa and Table 7.3.2-2a for two, four, six and eight antenna ports, respectively.NOTE 4:Fuw shall be rounded to half of SCS.NOTE 5:For SDL bands, requirements shall be applied only for CA band combination cases.",,,,,,,,,,

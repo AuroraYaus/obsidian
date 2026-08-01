@@ -1,0 +1,3 @@
+RX parameter,Units,Value
+LP-WUS power boosting,dB,0.0
+"NOTE 1:The interfering NR RBs consists of CP-OFDM QPSK with the same SCS as LP-WUS, in all PRB in the DL transmission BW configuration not occupied by either LP-WUS or Guard RBNOTE 2:0dB power boost means equal PSD between NR RBs and LP-WUS RBs.",,

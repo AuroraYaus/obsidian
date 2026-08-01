@@ -1,0 +1,7 @@
+Accuracy,,Conditions,,,,
+Normal condition,Extreme condition,"CSI-RSCMRÊs/Iot Note 2, Note 4",Io Note 1 range,,,
+,,,Minimum Io,,,Maximum Io
+dB,dB,dB,dBm / SCSCSI-RS Note 3,,dBm/BWChannel,dBm/BWChannel
+,,,SCSCSI-RS = 60 kHz,SCSCSI-RS = 120 kHz,,
+±4.5,±5.5,≥-3,"Same value as CSI-RS_RP in clause B.2.8.1, according to UE Power class, operating band and angle of arrival",,N/A,-50
+"NOTE 1:Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2:The parameter CSI-RS CMR Ês/Iot is the minimum CSI-RS CMR Ês/Iot of the pair of CSI-RS resources to which the requirement applies.NOTE 3:Values based on Refsens and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 4:In the te Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.st cases, the CSI-RS CMR Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.",,,,,,

@@ -1,0 +1,20 @@
+Test,Bandwidth (MHz),Transmission mode,Antenna configuration,Codebook subset restriction,Downlink power allocation (dB),,,at antenna port (dBm/15kHz),ACK/NACK feedback mode,Symbols for unused PRBs
+,,,,,,,,,,
+1,10,1,1 x 2,N/A,0,0,0,-85,Bundling,OP.6 TDD
+1A,10,1,1x1,N/A,0,0,0,-85,Bundling,OP.6 TDD
+1B,20,1,1x1,N/A,0,0,0,-85,Bundling,OP.6 TDD
+2,10,3,2 x 2,10,-3,-3,0,-85,Bundling,OP.1 TDD
+3,20,3,2 x 2,10,-3,-3,0,-85,Bundling,OP.1 TDD
+3A,15,3,2 x 2,10,-3,-3,0,-85,Muliplexing,OP.2 TDD
+"4,6",20,3,2 x 2,10,-3,-3,0,-85,Multiplexing,OP.1 TDD
+6A,2x20,3,2 x 2,10,-3,-3,0,-85,- (Note 1),OP.1 TDD
+6B,20+15,3,2 x 2,10,-3,-3,0,-85,(Note 1),OP.1 TDD
+7,3x20,3,2 x 2,10,-3,-3,0,-85,(Note 2),OP.1 TDD
+7A,15+20+20,3,2 x 2,10,-3,-3,0,-85,(Note 2),OP.1 TDD
+8,4x20,3,2 x 2,10,-3,-3,0,-85,(Note 2),OP.1 TDD
+9,15+3x20,3,2 x 2,10,-3,-3,0,-85,(Note 2),OP.1 TDD
+10,5x20,3,2 x 2,10,-3,-3,0,-85,(Note 2),OP.1 TDD
+11,15+4x20,3,2 x 2,10,-3,-3,0,-85,(Note 2),OP.1 TDD
+12,6x20,3,2 x 2,10,-3,-3,0,-85,(Note 2),OP.1 TDD
+13,7x20,3,2 x 2,10,-3,-3,0,-85,(Note 2),OP.1 TDD
+Note 1:PUCCH format 1b with channel selection is used to feedback ACK/NACK.Note 2:PUCCH format 3 is used to feedback ACK/NACK.,,,,,,,,,,

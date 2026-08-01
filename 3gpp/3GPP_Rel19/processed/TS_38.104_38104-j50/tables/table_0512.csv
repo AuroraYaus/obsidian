@@ -1,0 +1,5 @@
+PRACH,PRACH SCS,Time error tolerance,,
+preamble,(kHz),AWGN,TDLA30-300,TDLA10-650
+"A1, A2, A3, B4,",60,0.13 us,0.28 us,N/A
+"C0, C2",120,0.07 us,0.22 us,N/A
+,480,18 ns,N/A,68 ns

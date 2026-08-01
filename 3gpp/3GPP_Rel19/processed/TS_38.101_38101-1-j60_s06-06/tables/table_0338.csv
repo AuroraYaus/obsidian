@@ -1,0 +1,5 @@
+Channel bandwidth,(MHz),"5,10,15,20","25,30,35,40,45,50","60,70,80,90,100"
+REF_SCS,(kHz),15,,30
+Minimum output power,(dBm),-15,-15+10log10 (BWChannel /20),-15+10log10 (BWChannel /20)
+Measurement bandwidth,(MHz),MBW=REF_SCS*(12*NRB+1)/1000,,
+NOTE:The minimum output power value is rounded to the nearest number down to one decimal point.,,,,

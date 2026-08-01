@@ -1,0 +1,114 @@
+<table>
+  <tr>
+    <td colspan="3">Parameter</td>
+    <td>Unit</td>
+    <td>Test configuration</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td>Initial condition</td>
+    <td colspan="2">Active cell</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>Cell 1</td>
+    <td>The UE camps on cell 1 in the initial phase</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2">Neighbour cells</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>Cell 2</td>
+    <td>The UE has received SIB26 with OD-SIB1 configuration information for cell 2.</td>
+  </tr>
+  <tr>
+    <td>T1 end condition(final condition)</td>
+    <td colspan="2">Active cell</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>Cell 2</td>
+    <td rowspan="2">The UE reselects to low priority cell 2 during T1 period performing PRACH transmission and OD-SIB1 request with PRACH transmission and OD-SIB1 acquisition according to [2, TS 38.331]. Upon OD-SIB1 acquisition it performs RACH transmissions for Tracking Area update.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2">Neighbour cells</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>Cell 1</td>
+  </tr>
+  <tr>
+    <td colspan="3">RF Channel Number</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>1,2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">Time offset between cells</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>3 s</td>
+    <td>Synchronous cells</td>
+  </tr>
+  <tr>
+    <td colspan="3">Access Barring Information</td>
+    <td>-</td>
+    <td>1, 2</td>
+    <td>Not Sent</td>
+    <td>No additional delays in random access procedure.</td>
+  </tr>
+  <tr>
+    <td rowspan="2" colspan="3">SSB configuration</td>
+    <td rowspan="2"></td>
+    <td>1</td>
+    <td>SSB.1 FR2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>SSB.2 FR2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">SMTC configuration</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>SMTC pattern 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">DRX cycle length</td>
+    <td>s</td>
+    <td>1, 2</td>
+    <td>0.64</td>
+    <td>The value shall be used for all cells in the test.</td>
+  </tr>
+  <tr>
+    <td colspan="3">PRACH configuration index</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>190</td>
+    <td>The detailed configuration is specified in TS 38.211 clause 6.3.3.2</td>
+  </tr>
+  <tr>
+    <td colspan="3">rangeToBestCell</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>Not configured</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2" colspan="2">T1</td>
+    <td>PC2/3/4</td>
+    <td rowspan="2">s</td>
+    <td>1, 2</td>
+    <td>28</td>
+    <td rowspan="2">T1 needs to be long enough to allow cell re-selection to already known cell.</td>
+  </tr>
+  <tr>
+    <td>PC1</td>
+    <td>1, 2</td>
+    <td>54</td>
+  </tr>
+</table>

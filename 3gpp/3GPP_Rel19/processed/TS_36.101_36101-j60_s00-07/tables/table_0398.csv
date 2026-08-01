@@ -1,0 +1,7 @@
+Rx Parameter,Units,CA Bandwidth Class,,,,
+,,B,C,D,E,F
+"Pw in Transmission Bandwidth Configuration, per CC",dBm,"-50.5 +10log10(NRB,c/ NRB agg)","-47.5 +10log10(NRB,c/NRB agg)","-45.7+10log10(NRB,c/NRB agg)","-44.5 +10log10(NRB,c/NRB agg)","-43.5 +10log10(NRB,c/NRB agg)"
+PInterferer,dBm,-25,,,,
+BWInterferer,MHz,5,5,5,5,5
+FInterferer (offset),MHz,2.5+ Foffset/-2.5- Foffset,2.5+ Foffset/-2.5- Foffset,2.5+ Foffset/-2.5- Foffset,2.5+ Foffset/-2.5- Foffset,2.5+ Foffset/-2.5- Foffset
+"NOTE 1:The transmitter shall be set to 24dB below PCMAX_L,c or PCMAX_L as defined in subclause 6.2.5A.NOTE 2:The interferer consists of the Reference measurement channel specified in Annex 3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1 and set-up according to Annex C.3.1NOTE 3:The Finterferer (offset) is the frequency separation of the center frequency of the carrier closest to the interferer and the center frequency of the adjacent channel interferer and shall be further adjusted to MHz to be offset from the sub-carrier raster.",,,,,,

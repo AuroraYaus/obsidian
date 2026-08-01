@@ -1,0 +1,25 @@
+Parameter,,Unit,Value
+Uplink downlink configuration (Note 1) for TDD CC,,,1
+Special subframe configuration (Note 2) for TDD CC,,,4
+Downlink power allocation,,dB,-3
+,,dB,-3
+,,dB,0
+Cyclic prefix,,,Normal
+Cell ID,,,0
+Inter-TTI Distance,,,1
+Maximum number of HARQ processes per component carrier,FDD PCell,Processes,8 for FDD and TDD CCs
+,TDD PCell,Processes,11 for FDD CC; 7 for TDD CC
+Maximum number of HARQ transmission,,,4
+Redundancy version coding sequence,,,"{0,0,1,2} for 64QAM, 256QAM"
+Number of OFDM symbols for PDCCH per component carrier,,OFDM symbols,1
+Cross carrier scheduling,,,Not configured
+Propagation condition,,,Static propagation conditionNo external noise sources are applied
+Transmission mode,,,TM3
+Codebook subset restriction,,,10
+Antenna configuration,,,2 x 2
+at antenna port (dBm/15kHz),,,-85
+Symbols for unused PRBs,,,"OP.1 FDD for FDD CC,OP.1 TDD for TDD CC"
+ACK/NACK feedback mode,,,PUCCH format 3
+Downlink HARQ-ACK timing,FDD PCell,,As specified in Clause 7.3.3 in TS36.213 [6]
+,TDD PCell,,As specified in Clause 7.3.4 in TS36.213 [6]
+Note 1:as specified in Table 4.2-2 in TS 36.211 [4].Note 2:as specified in Table 4.2-1 in TS 36.211 [4].,,,

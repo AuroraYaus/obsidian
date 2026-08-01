@@ -1,0 +1,9 @@
+Parameter,Unit,Value,Comment
+PDSCH parameters (E-UTRAN FDD),,DL Reference Measurement Channel R.0 FDD,As specified in clause A.3.1.1.1.
+PCFICH/PDCCH/PHICH parameters(E-UTRAN FDD),,DL Reference Measurement Channel R.6 FDD,As specified in clause A.3.1.2.1.
+Active cell,-,Cell 1,
+DRX,-,OFF,
+Gap pattern Id,,1,As specified in TS 36.133 clause 8.1.2.1.
+Filtering coefficient,-,0,L3 filtering is not used.
+Inter-RAT measurement quantity,,GSM Carrier RSSI,
+Monitored cell list size,,6 GSM neighbours including ARFCN 1,Included in the Measurement control information

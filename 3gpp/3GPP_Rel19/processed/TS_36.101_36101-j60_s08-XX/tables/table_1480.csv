@@ -1,0 +1,6 @@
+Test num.,Bandwidth,PSSCH Reference channel,Propagation condition,Reference value,
+,,,,PSSCH BLER (%),SNR (dB) of PSSCH
+1,20 MHz,CD.8,EVA180,10,14.2
+2,10 MHz,CD.9,EVA2700,,5.4
+3,20 MHz,CD.13,EVA180,,12.5
+4,10 MHz,CD.14,EVA2700,,2.8

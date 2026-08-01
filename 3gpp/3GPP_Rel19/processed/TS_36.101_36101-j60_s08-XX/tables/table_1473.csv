@@ -1,0 +1,27 @@
+Parameter,,,Unit,Test 1
+Communication resource pool configuration,,,,As specified in Table A.7.2.1-4(Configuration #4-FDD)
+DRX configuration,,,,As specified in Table 12.1.2-1
+Active cell(s),,,,Cell 1 (Serving cell)
+Cell 1,Cyclic prefix,,,Normal
+,Cell ID,,,0
+,Downlink power allocation,,dB,0
+,,,dB,0 (NOTE 1)
+,,,dB,0
+,OCNG Pattern (Note 2),,,OP.1 FDD
+,Propagation channel,,,Static propagation conditionNo external noise sources are applied
+,Antenna configuration,,,1x2
+,RSRP,,dBm/15kHz,-85
+Active Sidelink UE(s),,,,"Sidelink UE i, 0 ≤ i ≤ 15"
+"Sidelink UE i,0 ≤ i ≤ 15",Sidelink Transmissions,,,PSCCH + PSSCH
+,Resource pool,,,commRxPool()
+,PSCCH RMC,,,5MHz: CC.1 FDD with ITRP=i%8 (NOTE 3)10 MHz: CC.2 FDD with ITRP= i%8 (NOTE 3)
+,PSCCH subframe allocation,,,As defined by TS 36.213 with  = i
+,PSCCH RB allocation,,,
+,PSSCH RMC,,,As specified in Table 12.7.1-2
+,PSSCH subframe allocation,,,As per time repetition pattern specified in PSCCH
+,PSSCH RB allocation,,,Fully allocated
+,Time offset (NOTE 4),,s,0
+,Frequency offset (NOTE 5),,Hz,0
+,Propagation Channel,,,Static propagation conditionNo external noise sources are applied
+,Antenna configuration,,,1x2 Low
+"NOTE 1:.NOTE 2:OCNG is used to fully allocate the available resource blocks to virtual UEs.NOTE 3: For NTRP = 8 (FDD) and trpt-Subset = 001, ITRP = 0 corresponds to a time repetition pattern of (1,0,0,0,0,0,0,0), ITRP = 1 corresponds to a time repetition pattern of (0,1,0,0,0,0,0,0), etc.NOTE 4:Time offset of Sidelink UE receive signal with respect to Cell 1 downlink timing at the tested UE.NOTE 5:Frequency offset of Sidelink UE with respect to Cell 1 uplink frequency.",,,,

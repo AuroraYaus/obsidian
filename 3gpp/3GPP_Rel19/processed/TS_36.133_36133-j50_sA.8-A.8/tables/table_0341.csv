@@ -1,0 +1,13 @@
+Parameter,Unit,Cell 2,,,,Cell 3,,,,Cell 4,,,
+,,T1,,T2,,T1,,T2,,T1,,T2,
+Timeslot Number,,0,DwPTS,0,DwPTS,0,DwPTS,0,DwPTS,0,DwPTS,0,DwPTS
+UTRA RF Channel Number (NOTE1),,"Randomly selected from 2,3,4 such that cell 2 is in the normal performance group",,,,"Randomly selected from 5,6,7,8 such that cell 3 is in the reduced performance group",,,,"Randomly selected from 5,6,7,8 such that cell 4 is in the reduced performance group. Cell 4 RF channel is different from Cell 3 RF channel.",,,
+PCCPCH_Ec/Ior,dB,-Infinity,,-3,,-Infinity,,-3,,-Infinity,,-3,
+DwPCH_Ec/Ior,dB,-Infinity,,,0,-Infinity,,,0,-Infinity,,,0
+OCNS_Ec/Ior,,-Infinity,,-3,,-Infinity,,-3,,-Infinity,,-3,
+,dB,-Infinity,,9,,-Infinity,,9,,-Infinity,,9,
+,dBm/1.28 MHz,-70,,,,-70,,,,-70,,,
+PCCPCH_RSCP Note 3,dB,-Infinity,,-64,,-Infinity,,-64,,-Infinity,,-64,
+Io Note 3,dBm/1.28 MHz,-70.00,,-60.49,,-70.00,,-60.49,,-70.00,,-60.49,
+Propagation Condition,,Case 3 (NOTE2),,,,Case 3 (NOTE2),,,,Case 3 (NOTE2),,,
+NOTE1:The DPCH of the cell is located in a timeslot other than 0.NOTE2:Case 3 propagation conditions are specified in TS25.102 Annex BNOTE3:PCCPCH_RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves,,,,,,,,,,,,,

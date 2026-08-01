@@ -1,0 +1,17 @@
+Parameter,,Unit,Value,Comment
+Initial conditions,Active cell,,Cell 1,
+,Neighbouring cell,,Cell 2,
+Final condition,Active cell,,Cell 2,
+A3-Offset,,dB,0,
+Hysteresis,,dB,0,
+Time To Trigger,,s,0,
+Filter coefficient,,,0,L3 filtering is not used
+DRX,,,,OFF
+CP length,,,Normal,
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+PRACH configuration,,,PRACH_4CE,As specified in clause  A.3.16
+PRACH initial CE level,,,0,Specified in handover message
+T1,,s,5,
+T2,,s,5,
+T3,,s,5,
+Gap pattern ID,,,1,

@@ -1,0 +1,11 @@
+,Field,Config,SRSConf.1
+CLI-RSSI,rssi-ResourceId,1~4,0
+measurement,rssi-SCS,"1,3",15 kHz
+resource,,"2,4",30 kHz
+,startPRB,1~4,0
+,nrofPRBs,"1,3",52
+,,"2,4",106
+,startPosition,1~4,3
+,nrofSymbols,1~4,11
+,rssi-PeriodicityAndOffset,"1,3","sl20, 9"
+,,"2,4","sl40, 19"

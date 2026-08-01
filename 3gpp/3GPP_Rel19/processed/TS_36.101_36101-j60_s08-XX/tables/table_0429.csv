@@ -1,0 +1,4 @@
+Test number,Bandwidth and MCS,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category
+,,,,,,Fraction of MaximumThroughput (%),SNR (dB),
+1,10 MHz64QAM 1/2,R.44 TDD,OP.1 TDD,EPA5,2x2 Low,70,22.1,≥2
+Note 1:The reference channel applies to both the input signal under test and the interfering signal.,,,,,,,,

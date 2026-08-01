@@ -1,0 +1,310 @@
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5Signaling characteristics", "paragraph_index": 1, "style": "Heading2"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1Radio link Monitoring", "paragraph_index": 2, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.1Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with SSB-based RLM RS in non-DRX mode", "paragraph_index": 5, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.1.1Test Purpose and Environment", "paragraph_index": 6, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.1.2Test Requirements", "paragraph_index": 20, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.2Radio Link Monitoring In-sync Test for FR2 PCell configured with SSB-based RLM RS in non-DRX mode", "paragraph_index": 25, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.2.1Test Purpose and Environment", "paragraph_index": 26, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.2.2Test Requirements", "paragraph_index": 40, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.3Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with SSB-based RLM RS in DRX mode", "paragraph_index": 44, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.3.1Test Purpose and Environment", "paragraph_index": 45, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.3.2Test Requirements", "paragraph_index": 58, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.4Radio Link Monitoring In-sync Test for FR2 PCell configured with SSB-based RLM RS in DRX mode", "paragraph_index": 63, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.4.1Test Purpose and Environment", "paragraph_index": 64, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.4.2Test Requirements", "paragraph_index": 76, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.5Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with CSI-RS-based RLM in non-DRX mode", "paragraph_index": 80, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.5.1Test Purpose and Environment", "paragraph_index": 81, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.5.2Test Requirements", "paragraph_index": 94, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.6Radio Link Monitoring In-sync Test for FR2 PCell configured with CSI-RS-based RLM in non-DRX mode", "paragraph_index": 99, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.6.1Test Purpose and Environment", "paragraph_index": 100, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.6.2Test Requirements", "paragraph_index": 111, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.7Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with CSI-RS-based RLM in DRX mode", "paragraph_index": 115, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.7.1Test Purpose and Environment", "paragraph_index": 116, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.7.2Test Requirements", "paragraph_index": 128, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.8Radio Link Monitoring In-sync Test for FR2 PCell configured with CSI-RS-based RLM in DRX mode", "paragraph_index": 133, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.8.1Test Purpose and Environment", "paragraph_index": 134, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.8.2Test Requirements", "paragraph_index": 147, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.9UE Radio Link Monitoring Scheduling Restrictions on FR2", "paragraph_index": 151, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.9.1Test Purpose and Environment", "paragraph_index": 152, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.9.2Test Requirements", "paragraph_index": 163, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.10Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with SSB-based RLM RS in non-DRX mode for UE supporting fast beam sweeping in multi-Rx", "paragraph_index": 167, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.10.1Test Purpose and Environment", "paragraph_index": 168, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.10.2Test Requirements", "paragraph_index": 183, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.11Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with CSI-RS-based RLM in non-DRX mode when CD-SSB is outside active BWP", "paragraph_index": 188, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.11.1Test Purpose and Environment", "paragraph_index": 189, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.12Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with SSB-based RLM RS in non-DRX mode when CD-SSB is outside active BWP", "paragraph_index": 195, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.12.1Test Purpose and Environment", "paragraph_index": 196, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.12.2Test Requirements", "paragraph_index": 200, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.13Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with SSB-based RLM RS in non-DRX mode for UE supporting NCD-SSB based measurement outside active BWP", "paragraph_index": 202, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.13.1Test Purpose and Environment", "paragraph_index": 203, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.13.2Test Requirements", "paragraph_index": 218, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.14Radio Link Monitoring In-sync Test for FR2 PCell configured with CSI-RS-based RLM in DRX mode  for a UE operating with SBFD", "paragraph_index": 223, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.14.1Test Purpose and Environment", "paragraph_index": 224, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.1.14.2Test Requirements", "paragraph_index": 238, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.2Interruption", "paragraph_index": 242, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.2.1Interruptions during measurements on deactivated NR SCC in FR2", "paragraph_index": 243, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.2.1.1Test Purpose and Environment", "paragraph_index": 244, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.2.1.2Test Requirements", "paragraph_index": 256, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.2.2SA interruptions at NR SRS carrier-based switching", "paragraph_index": 265, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.2.2.1Test Purpose and Environment", "paragraph_index": 266, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.2.2.2Test Parameters", "paragraph_index": 268, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.2.2.3Test Requirements", "paragraph_index": 279, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3SCell Activation and Deactivation Delay", "paragraph_index": 282, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.1SCell Activation and deactivation for SCell in FR2 intra-band in non-DRX", "paragraph_index": 283, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.1.1Test Purpose and Environment", "paragraph_index": 284, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.1.2Test Requirements", "paragraph_index": 295, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.2SCell Activation and deactivation for FR1+FR2 inter-band with target SCell in FR2", "paragraph_index": 297, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.2.1Test Purpose and Environment", "paragraph_index": 298, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.2.2Test Requirements", "paragraph_index": 314, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "3", "title": "ms + TFirstSSB_MAX + 15*TSMTC_MAX + 8*Trs + TL1-RSRP, measure + TL1-RSRP, report", "paragraph_index": 317, "style": null}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.3SCell Activation and deactivation for SCell in FR2 inter-band in non-DRX", "paragraph_index": 328, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.3.1Test Purpose and Environment", "paragraph_index": 329, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.3.2Test Requirements", "paragraph_index": 346, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.4Direct SCell activation at SCell addition of known SCell in FR2", "paragraph_index": 357, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.4.1Test Purpose and Environment", "paragraph_index": 358, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.4.2Test Requirements", "paragraph_index": 374, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.5Direct SCell activation at handover with known SCell in FR2", "paragraph_index": 388, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.5.1Test Purpose and Environment", "paragraph_index": 389, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.5.2Test Requirements", "paragraph_index": 403, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.6PUCCH SCell activation and deactivation for FR1+FR2 inter-band with target SCell in FR2 and known", "paragraph_index": 418, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.6.1Test Purpose and Environment", "paragraph_index": 419, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.6.2Test Requirements", "paragraph_index": 438, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.7PUCCH SCell activation and deactivation delay requirements of FR2 unknown cell with FR1 PCell", "paragraph_index": 446, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.7.1Test Purpose and Environment", "paragraph_index": 447, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.7.2Test Requirements", "paragraph_index": 465, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.8SCell Activation and deactivation for known PUCCH SCell in FR2 inter-band in non-DRX", "paragraph_index": 472, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.8.1Test Purpose and Environment", "paragraph_index": 473, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.8.2Test Requirements", "paragraph_index": 495, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.9PUCCH SCell Activation and deactivation of unknown SCell in FR2", "paragraph_index": 510, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.9.1Test Purpose and Environment", "paragraph_index": 511, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.9.2Test Requirements", "paragraph_index": 530, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.10SCell Activation and deactivation of FR2 known PUCCH SCell and one FR2 unknown SCell with FR2 PCell", "paragraph_index": 541, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.10.1Test Purpose and Environment", "paragraph_index": 542, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.10.2Test Requirements", "paragraph_index": 566, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.11PUCCH SCell activation and deactivation delay requirements of FR2 unknown cell with FR2 PCell", "paragraph_index": 585, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.11.1PUCCH SCell activation with non-PUCCH SCell in a secondary PUCCH Group", "paragraph_index": 586, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.11.1.1Test Purpose and Environment", "paragraph_index": 587, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.11.1.2Test Requirements", "paragraph_index": 608, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.11.2PUCCH SCell activation with non-PUCCH SCell in a primary PUCCH Group", "paragraph_index": 616, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.11.2.1Test Purpose and Environment", "paragraph_index": 617, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.11.2.2Test Requirements", "paragraph_index": 638, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.12Void", "paragraph_index": 646, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.13SCell Activation for SCell in FR2 intra-band in non-DRX", "paragraph_index": 647, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.13.1Test Purpose and Environment", "paragraph_index": 648, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.13.2Test Requirements", "paragraph_index": 659, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.14SCell Activation for known SCell in FR2 inter-band", "paragraph_index": 665, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.14.1Test Purpose and Environment", "paragraph_index": 666, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.14.2Test Requirements", "paragraph_index": 681, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.15PUCCH SCell activation and deactivation with FR1 PCell based on L3 reporting after SCell activation command", "paragraph_index": 689, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.15.1Test Purpose and Environment", "paragraph_index": 690, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.15.2Test Requirements", "paragraph_index": 711, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.16PUCCH SCell activation and deactivation with FR2 PCell based on L3 reporting after SCell activation command", "paragraph_index": 720, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.16.1Test Purpose and Environment", "paragraph_index": 721, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.16.2Test Requirements", "paragraph_index": 740, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.17SCell Activation and deactivation for SCell in FR2 inter-band in DRX for UE capable of small beam sweeping factors and/or short measurement interval", "paragraph_index": 749, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.17.1Test Purpose and Environment", "paragraph_index": 750, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.17.2Test Requirements", "paragraph_index": 766, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "3", "title": "ms + TFirstSSB_MAX, enhanced + 15*TSMTC_MAX, enhanced + X1*Trs, enhanced + TL1-RSRP, enhanced_measure + TL1-RSRP, report", "paragraph_index": 770, "style": "B10"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "3", "title": "ms + TFirstSSB_MAX, enhanced + 15*TSMTC_MAX, enhanced + X1*Trs, enhanced + TL1-RSRP, enhanced_measure + TL1-RSRP, report", "paragraph_index": 779, "style": "B10"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "3", "title": "ms + TFirstSSB_MAX, enhanced + 15*TSMTC_MAX, enhanced + 8*Trs, enhanced + TL1-RSRP, enhanced_measure + TL1-RSRP, report", "paragraph_index": 788, "style": null}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.18SCell Activation and deactivation for FR1+FR2 inter-band with target SCell in FR2, in DRX, for UE capable of small beam sweeping factors and/or short measurement interval", "paragraph_index": 797, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.18.1Test Purpose and Environment", "paragraph_index": 798, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.18.2Test Requirements", "paragraph_index": 816, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "3", "title": "ms + TFirstSSB_MAX, enhanced + 15*TSMTC_MAX, enhanced + X1*Trs, enhanced + TL1-RSRP, enhanced_measure + TL1-RSRP, report", "paragraph_index": 820, "style": null}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "3", "title": "ms + TFirstSSB_MAX, enhanced + 15*TSMTC_MAX, enhanced + X1*Trs, enhanced + TL1-RSRP, enhanced_measure + TL1-RSRP, report", "paragraph_index": 829, "style": null}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "3", "title": "ms + TFirstSSB_MAX, enhanced + 15*TSMTC_MAX, enhanced + 8*Trs, enhanced + TL1-RSRP, enhanced_measure + TL1-RSRP, report", "paragraph_index": 838, "style": null}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.19SCell Activation and deactivation of FR2 unknown SCell with FR1 PCell in non-DRX with L3 reporting during activation", "paragraph_index": 847, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.19.1Test Purpose and Environment", "paragraph_index": 848, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.19.2Test Requirements", "paragraph_index": 868, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.20SCell Activation and Deactivation of FR2 unkown SCell with FR2 PCell in non-DRX with L3 reporting during activation", "paragraph_index": 882, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.20.1Test Purpose and Environment", "paragraph_index": 883, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.20.2Test Requirements", "paragraph_index": 903, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.21OD-SSB based SCell Activation and deactivation of unknown SCell in FR2 DRX mode(OD-SSB Case 1)", "paragraph_index": 917, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.21.1Test Purpose and Environment", "paragraph_index": 918, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.21.2Test Requirements", "paragraph_index": 938, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.22OD-SSB based SCell Activation for known SCell in FR2 inter-band", "paragraph_index": 946, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.22.1Test Purpose and Environment", "paragraph_index": 947, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.22.2Test Requirements", "paragraph_index": 962, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.23EMR based SCell activation of unknown SCell in FR2", "paragraph_index": 972, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.23.1Test Purpose and Environment", "paragraph_index": 973, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.23.2Test Requirements", "paragraph_index": 996, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.24EMR based SCell activation of unknown SCell in FR2 in RRC Inactive", "paragraph_index": 1005, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.24.1Test Purpose and Environment", "paragraph_index": 1006, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.25PUCCH SCell Activation of unknown SCell for UE supporting EMR in FR2", "paragraph_index": 1039, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.25.1Test Purpose and Environment", "paragraph_index": 1040, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.3.25.2Test Requirements", "paragraph_index": 1064, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.4Void", "paragraph_index": 1069, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5Beam Failure Detection and Link recovery procedures", "paragraph_index": 1070, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.1Beam Failure Detection and Link Recovery Test for FR2 PCell configured with SSB-based BFD and LR in non-DRX mode", "paragraph_index": 1071, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.1.1Test Purpose and Environment", "paragraph_index": 1072, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.1.2Test Requirements", "paragraph_index": 1087, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.2Beam Failure Detection and Link Recovery Test for FR2 PCell configured with SSB-based BFD and LR in DRX mode", "paragraph_index": 1094, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.2.1Test Purpose and Environment", "paragraph_index": 1095, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.2.2Test Requirements", "paragraph_index": 1110, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.3Beam Failure Detection and Link Recovery Test for FR2 PCell configured with CSI-RS-based BFD and LR in non-DRX mode", "paragraph_index": 1117, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.3.1Test Purpose and Environment", "paragraph_index": 1118, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.3.2Test Requirements", "paragraph_index": 1133, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.4Beam Failure Detection and Link Recovery Test for FR2 PCell configured with CSI-RS-based BFD and LR in DRX mode", "paragraph_index": 1140, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.4.1Test Purpose and Environment", "paragraph_index": 1141, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.4.2Test Requirements", "paragraph_index": 1158, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.5Scheduling availability restriction during Beam Failure Detection and Link Recovery for FR2 PCell configured with SSB-based BFD and LR in non-DRX mode", "paragraph_index": 1165, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.5.1Test Purpose and Environment", "paragraph_index": 1166, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.5.2Test Requirements", "paragraph_index": 1179, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.6Beam Failure Detection and Link Recovery Test for FR2 SCell configured with CSI-RS-based BFD and LR in non-DRX mode", "paragraph_index": 1184, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.6.1Test Purpose and Environment", "paragraph_index": 1185, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.6.2Test Requirements", "paragraph_index": 1198, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.7Beam Failure Detection and Link Recovery Test for FR2 SCell configured with CSI-RS-based BFD and LR in DRX mode", "paragraph_index": 1205, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.7.1Test Purpose and Environment", "paragraph_index": 1206, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.7.2Test Requirements", "paragraph_index": 1219, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.8Beam Failure Detection and Link Recovery Test for FR2 PCell configured with CSI-RS-based BFD and LR in DRX mode for UE fulfilling relaxed measurement criterion", "paragraph_index": 1226, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.8.1Test Purpose and Environment", "paragraph_index": 1227, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.8.2Test Requirements", "paragraph_index": 1240, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.9TRP specific Beam Failure Detection and Link Recovery Test for FR2 SCell configured with CSI-RS-based BFD and LR in DRX mode", "paragraph_index": 1247, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.9.1Test Purpose and Environment", "paragraph_index": 1248, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.9.2Test Requirements", "paragraph_index": 1259, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.10TRP specific Beam Failure Detection and Link Recovery Test for FR2 PCell configured with SSB-based BFD and LR in non-DRX mode", "paragraph_index": 1267, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.10.1Test Purpose and Environment", "paragraph_index": 1268, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.10.2Test Requirements", "paragraph_index": 1281, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.11Beam Failure Detection and Link Recovery Test for FR2-2 PCell configured with CSI-RS-based BFD and LR in non-DRX mode", "paragraph_index": 1289, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.11.1Test Purpose and Environment", "paragraph_index": 1290, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.11.2Test Requirements", "paragraph_index": 1303, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.12Beam Failure Detection and Link Recovery Test for FR2-2 PCell configured with CSI-RS-based BFD and LR in DRX mode", "paragraph_index": 1310, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.12.1Test Purpose and Environment", "paragraph_index": 1311, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.12.2Test Requirements", "paragraph_index": 1325, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.13Scheduling availability restriction during Beam Failure Detection and Link Recovery for FR2-2 PCell configured with SSB-based BFD and LR in non-DRX mode", "paragraph_index": 1332, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.13.1Test Purpose and Environment", "paragraph_index": 1333, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.13.2Test Requirements", "paragraph_index": 1344, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.14TRP specific Beam Failure Detection and Link Recovery for FR2 PCell configured with CSI-RS-based BFD and LR and multi-Rx operation in DRX mode", "paragraph_index": 1349, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.14.1Test Purpose and Environment", "paragraph_index": 1350, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.14.2Test Requirements", "paragraph_index": 1368, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.15Beam Failure Detection and Link Recovery Test for FR2 Pcell configured with CSI-RS-based BFD and LR in non-DRX mode for a UE operating with SBFD", "paragraph_index": 1377, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.15.1Test Purpose and Environment", "paragraph_index": 1378, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.5.15.2Test Requirements", "paragraph_index": 1388, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6Active BWP switch", "paragraph_index": 1395, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.1DCI-based and Timer-based Active BWP Switch", "paragraph_index": 1396, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.1.1NR FR2- NR FR2 DL active BWP switch of SCell with non-DRX in SA", "paragraph_index": 1397, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.1.2NR FR1- NR FR2 DL active BWP switch of SCell with non-DRX in SA", "paragraph_index": 1443, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.1.3NR FR2 DL active BWP switch with non-DRX in SA", "paragraph_index": 1491, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.1.3.1Test Purpose and Environment", "paragraph_index": 1492, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.1.3.2Test Requirements", "paragraph_index": 1519, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.1.4NR FR2-2- NR FR2-2 DL active BWP switch of SCell with non-DRX in SA", "paragraph_index": 1527, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.1.4.1Test Purpose and Environment", "paragraph_index": 1528, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.1.4.2Test Requirements", "paragraph_index": 1561, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.2RRC-based Active BWP Switch", "paragraph_index": 1573, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.2.1.1Test Purpose and Environment", "paragraph_index": 1575, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.2.1.2Test Requirements", "paragraph_index": 1598, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.2.2NR FR2-2 DL active BWP switch of PCell with non-DRX in SA", "paragraph_index": 1603, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.2.2.1Test Purpose and Environment", "paragraph_index": 1604, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.2.2.2Test Requirements", "paragraph_index": 1627, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.3Simultaneous DCI-based and Timer-based Active BWP Switch on multiple CCs", "paragraph_index": 1632, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.3.1.1Test Purpose and Environment", "paragraph_index": 1634, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.3.1.2Test Requirements", "paragraph_index": 1662, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.4SCell dormancy switch", "paragraph_index": 1668, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.4.1NR FR2 PCell SCell dormancy switch of single FR2 SCell inside active time", "paragraph_index": 1669, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.4.1.1Test Purpose and Environment", "paragraph_index": 1670, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.4.1.2Test Requirements", "paragraph_index": 1690, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.4.2NR FR1 PCell SCell dormancy switch of two FR2 SCells outside active time", "paragraph_index": 1699, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.4.2.1Test Purpose and Environment", "paragraph_index": 1700, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.4.2.2Test Requirements", "paragraph_index": 1726, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.5Simultaneous RRC-based Active BWP Switch on multiple CCs", "paragraph_index": 1731, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.5.1Active BWP switch on multiple SCells with non-DRX in SA", "paragraph_index": 1732, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.5.2NR FR2-2 Active BWP switch on multiple SCells with non-DRX in SA", "paragraph_index": 1760, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.5.2.1Test Purpose and Environment", "paragraph_index": 1761, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.6.5.2.2Test Requirements", "paragraph_index": 1784, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7PSCell addition and release delay", "paragraph_index": 1788, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.1Addition and Release Delay of known NR PSCell", "paragraph_index": 1789, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.1.1Test Purpose and Environment", "paragraph_index": 1790, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.1.2Test Requirements", "paragraph_index": 1808, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.2Addition and Release Delay of unknown NR PSCell in", "paragraph_index": 1813, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.2.1Test Purpose and Environment", "paragraph_index": 1814, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.2.2Test Requirements", "paragraph_index": 1829, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.3Addition and Release Delay of known NR PSCell in FR2-2", "paragraph_index": 1834, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.3.1Test Purpose and Environment", "paragraph_index": 1835, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.3.2Test Requirements", "paragraph_index": 1853, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.4Addition and Release Delay of unknown NR PSCell in FR2-2", "paragraph_index": 1858, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.4.1Test Purpose and Environment", "paragraph_index": 1859, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.7.4.2Test Requirements", "paragraph_index": 1874, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8Active TCI state switch delay", "paragraph_index": 1879, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.1MAC-CE based active TCI state switch", "paragraph_index": 1880, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.2RRC based active TCI state switch", "paragraph_index": 1911, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.3MAC-CE based active TCI state switch for HST FR2 scenario", "paragraph_index": 1939, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.3.1NR PCell FR2 HST active TCI state switch for a known TCI state", "paragraph_index": 1940, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.3.1.1Test Purpose and Environment", "paragraph_index": 1941, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.3.1.2Test Requirements", "paragraph_index": 1967, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.3.2NR PCell FR2 HST active TCI state switch for PC6 UE supporting tciStateSwitchIndr18 for a known TCI state", "paragraph_index": 1973, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.3.2.1Test Purpose and Environment", "paragraph_index": 1974, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.3.2.2Test Requirements", "paragraph_index": 2000, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.4DCI based active TCI state switch with m-DCI for simultaneous reception", "paragraph_index": 2007, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.4.1Test Purpose and Environment", "paragraph_index": 2008, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.4.2Test Requirements", "paragraph_index": 2035, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.5Single-DCI FR2 DCI based active TCI state switch with known target TCI states for simultaneous reception", "paragraph_index": 2039, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.5.1Test Purpose and Environment", "paragraph_index": 2040, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.8.5.1.2Test Requirements", "paragraph_index": 2065, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.9Uplink spatial relation switch delay", "paragraph_index": 2069, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.9.1.1.1Test Purpose and Environment", "paragraph_index": 2072, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.9.1.1.2Test Requirements", "paragraph_index": 2092, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.9.2RRC based spatial relation switch", "paragraph_index": 2098, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.9.2.1NR PCell FR2 spatial relation switch associated with a known DL-RS", "paragraph_index": 2099, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.9.2.1.1Test Purpose and Environment", "paragraph_index": 2100, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.9.2.1.2Test Requirements", "paragraph_index": 2119, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.10UE specific CBW change", "paragraph_index": 2123, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.10.1NR FR2 UE specific CBW change of PCell with non-DRX in SA", "paragraph_index": 2124, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.10.1.1Test Purpose and Environment", "paragraph_index": 2125, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.10.1.2Test Requirements", "paragraph_index": 2150, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.11UE UL carrier RRC reconfiguration Delay", "paragraph_index": 2155, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.11.1UE UL carrier RRC reconfiguration Delay", "paragraph_index": 2156, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.11.1.1Test Purpose and Environment", "paragraph_index": 2157, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.11.1.2Test Requirements", "paragraph_index": 2167, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.12Conditional PSCell addition and release delay (FR2 SA)", "paragraph_index": 2172, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.12.1Addition and Release Delay of PSCell", "paragraph_index": 2173, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.12.1.1Test purpose and environment", "paragraph_index": 2174, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.12.1.2Test Parameters", "paragraph_index": 2176, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.12.1.3Test Requirements", "paragraph_index": 2190, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13Unified TCI state switching delay", "paragraph_index": 2196, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.1MAC-CE based active joint TCI state switching", "paragraph_index": 2197, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.1.1NR PCell FR2 active joint TCI state switch for a known TCI state", "paragraph_index": 2198, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.1.1.1Test Purpose and Environment", "paragraph_index": 2199, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.1.1.2Test parameters", "paragraph_index": 2206, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.1.1.3Test Requirements", "paragraph_index": 2221, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.2MAC-CE based active uplink TCI state switch", "paragraph_index": 2228, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.2.1NR FR2 PCell uplink TCI state switch for a known TCI state", "paragraph_index": 2229, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.2.1.1Test Purpose and Environment", "paragraph_index": 2230, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.2.1.2Test parameters", "paragraph_index": 2242, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.2.1.3Test Requirements", "paragraph_index": 2254, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.3MAC-CE based active downlink TCI state switch", "paragraph_index": 2260, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.3.1NR PCell FR2 active downlink TCI state switch to cell with additional PCI for a known TCI state", "paragraph_index": 2261, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.3.1.1Test Purpose and Environment", "paragraph_index": 2262, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.3.1.2Test Parameters", "paragraph_index": 2266, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.3.1.3Test Requirements", "paragraph_index": 2287, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.4sDCI MAC-CE based joint TCI state switching", "paragraph_index": 2293, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.4.1NR PCell FR2 dual downlink and uplink TCI state switch in sDCI for known case", "paragraph_index": 2294, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.4.1.1Test Purpose and Environment", "paragraph_index": 2295, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.4.1.2Test parameters", "paragraph_index": 2301, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.4.1.3Test Requirements", "paragraph_index": 2319, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.5MAC-CE based dual downlink TCI state switching delay for unified TCI for single-DCI mTRP", "paragraph_index": 2326, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.5.1NR PCell FR2 dual downlink TCI state switch in sDCI for known case", "paragraph_index": 2327, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.5.1.1Test Purpose and Environment", "paragraph_index": 2328, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.5.1.2Test Parameters", "paragraph_index": 2332, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.5.1.3Test Requirements", "paragraph_index": 2351, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.6MAC-CE based active uplink TCI state switch for single-DCI mTRP", "paragraph_index": 2357, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.6.1NR FR2 PCell uplink TCI state switch for two known TCI states", "paragraph_index": 2358, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.6.1.1Test Purpose and Environment", "paragraph_index": 2359, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.6.1.2Test parameters", "paragraph_index": 2372, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.13.6.1.3Test Requirements", "paragraph_index": 2385, "style": "Heading6"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.14PSCell RACH-less based Activation and deactivation for FR1+FR2 inter-band with target PSCell in FR2", "paragraph_index": 2391, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.14.1Test Purpose and Environment", "paragraph_index": 2392, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.14.2Test Requirements", "paragraph_index": 2410, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.15Void", "paragraph_index": 2422, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.16UE L1-RSRP Scheduling and Measurement Restrictions on FR2-1", "paragraph_index": 2423, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.16.1Test Purpose and Environment", "paragraph_index": 2424, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.16.2Test Requirements", "paragraph_index": 2447, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.17SCG Activation and deactivation for FR1+FR1 inter-band with target PSCell in FR1", "paragraph_index": 2453, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.17.1Test Purpose and Environment", "paragraph_index": 2454, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.17.2Test Requirements", "paragraph_index": 2474, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.18Subsequent conditional PSCell addition/change", "paragraph_index": 2496, "style": "Heading3"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.18.1Intra-frequency subsequent CPC from FR1-FR2 NR-DC to FR1-FR2 NR-DC", "paragraph_index": 2497, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.18.1.1Test purpose and environment", "paragraph_index": 2498, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.18.1.2Test Requirements", "paragraph_index": 2515, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.18.2Inter-frequency subsequent CPA from FR1-FR2 NR-DC to FR1-FR2 NR-DC", "paragraph_index": 2529, "style": "Heading4"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.18.2.1Test Purpose and Environment", "paragraph_index": 2530, "style": "Heading5"}
+{"source": "38133-j50_sA.705-A.705.docx", "section": "", "title": "A.7.5.18.2.2Test Requirements", "paragraph_index": 2548, "style": "Heading5"}

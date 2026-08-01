@@ -1,0 +1,24 @@
+Parameter,Unit,nCell 1,,,,,nCell 2,,,,
+,,T1,T2,T3,T4,T5,T1,T2,T3,T4,T5
+BWchannel,kHz,200,,,,,200,,,,
+PRB location within eCell,-,eCell1 BWchannel 10MHz: 30,,,,,eCell1 BWchannel 10MHz: 30,,,,
+NPDSCH parameters,,eCell1 BWchannel 10MHz: R.22 TDD,,,,,eCell1 BWchannel 10MHz: R.22 TDD,,,,
+NPDCCH parameters,,eCell1 BWchannel 10MHz: R.34 TDD,,,,,eCell1 BWchannel 10MHz: R.34 TDD,,,,
+NPBCH_RA,dB,0,,,,,0,,,,
+NPBCH_RB,dB,,,,,,,,,,
+NPSS_RA,dB,,,,,,,,,,
+NSSS_RA,dB,,,,,,,,,,
+NPDCCH_RA,dB,,,,,,,,,,
+NPDCCH_RB,dB,,,,,,,,,,
+NPDSCH_RA,dB,,,,,,,,,,
+NPDSCH_RB,dB,,,,,,,,,,
+NOCNG_RANote 1,dB,,,,,,,,,,
+NOCNG_RBNote 1,dB,,,,,,,,,,
+,dBm/15 kHz,Specified in Table A.8.1.54.1-3,,,,,,,,,
+,dB,9,-3,-3,-Infinity,-Infinity,-Infinity,-Infinity,4,4,4
+Note2,dB,9,-3,-3,-Infinity,-Infinity,-Infinity,-Infinity,4,4,4
+NRSRP Note2,dBm/15 kHz,-89,-101,-101,-Infinity,-Infinity,-Infinity,-Infinity,-94,-94,-94
+Propagation Condition,,AWGN,,,,,AWGN,,,,
+Antenna Configuration,,1x1,,,,,1x1,,,,
+Timing offset to nCell 1,ms,-,,,,,3,,,,
+Note 1:NOCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Es/Iot and NRSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,,,,,,

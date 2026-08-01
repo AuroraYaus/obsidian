@@ -1,0 +1,172 @@
+CA configuration,Aggregated channel bandwidth (PCC+SCC),Wgap / [MHz],UL PCC allocation,ΔRIBNC (dB),Duplex mode
+CA_1A-1A,25RB + 25RB,0.0 < Wgap ≤ 50.0,251,0.5,FDD
+,25RB + 50RB,0.0 < Wgap ≤ 45.0,251,0.5,
+,25RB + 75RB,0.0 < Wgap ≤ 40.0,251,0.5,
+,25RB + 100RB,0.0 < Wgap ≤ 35.0,251,0.5,
+,50RB + 25RB,0.0 < Wgap ≤ 45.0,501,0.5,
+,50RB + 50RB,0.0 < Wgap ≤ 40.0,501,0.5,
+,50RB + 75RB,0.0 < Wgap ≤ 35.0,501,0.5,
+,50RB + 100RB,0.0 < Wgap ≤ 30.0,501,0.5,
+,75RB + 25RB,0.0 < Wgap ≤ 40.0,751,0.5,
+,75RB + 50RB,0.0 < Wgap ≤ 35.0,751,0.5,
+,75RB + 75RB,0.0 < Wgap ≤ 30.0,751,0.5,
+,75RB + 100RB,0.0 < Wgap ≤ 25.0,751,0.5,
+,100RB + 25RB,20.0 < Wgap ≤ 35.0,901,0.5,
+,,0.0 < Wgap ≤ 20.0,1001,0.5,
+,100RB + 50RB,15.0 < Wgap ≤ 30.0,901,0.5,
+,,0.0 < Wgap ≤ 15.0,1001,0.5,
+,100RB + 75RB,10.0 < Wgap ≤ 25.0,901,0.5,
+,,0.0 < Wgap ≤ 10.0,1001,0.5,
+,100RB + 100RB,5.0 < Wgap ≤ 20.0,901,0.5,
+,,0.0 < Wgap ≤ 5.0,1001,0.5,
+CA_2A-2A,25RB+25RB,30.0 < Wgap ≤ 50.0,121,5.3,FDD
+,,0.0 < Wgap ≤ 30.0,251,0,
+,25RB+50RB,25.0 < Wgap ≤ 45.0,121,4.4,
+,,0.0 < Wgap ≤ 25.0,251,0,
+,25RB+75RB,20.0 < Wgap ≤ 40.0,121,4.2,
+,,0.0 < Wgap ≤ 20.0,251,0,
+,25RB+100RB,15.0 < Wgap ≤ 35.0,121,3.8,
+,,0.0 < Wgap ≤ 15.0,251,0,
+,50RB+25RB,15.0 < Wgap ≤ 45.0,121,5.9,
+,,0.0 < Wgap ≤ 15.0,321,0,
+,50RB+50RB,10.0 < Wgap ≤ 40.0,121,4.6,
+,,0.0 < Wgap ≤ 10.0,321,0,
+,50RB+75RB,5.0 < Wgap ≤ 35.0,121,4.1,
+,,0.0 < Wgap ≤ 5.0,321,0,
+,50RB+100RB,0.0 < Wgap ≤ 30.0,121,4.0,
+,75RB+25RB,10.0 < Wgap ≤ 40.0,1212,6.7,
+,,0.0 < Wgap ≤ 10.0,361,0,
+,75RB+50RB,5.0 < Wgap ≤ 35.0,1212,5.4,
+,,0.0 < Wgap ≤ 5.0,361,0,
+,75RB+75RB,0.0 < Wgap  ≤ 30.0,1212,4.6,
+,75RB+100RB,0.0 < Wgap ≤ 25.0,1212,4.2,
+,100RB+25RB,0.0 < Wgap ≤ 35.0,1613,7.2,
+,100RB+50RB,0.0 < Wgap ≤ 30.0,1613,5.8,
+,100RB+75RB,0.0 < Wgap ≤ 25.0,1613,5.0,
+,100RB+100RB,0.0 < Wgap ≤ 20.0,1613,4.6,
+CA_3A-3A,15RB+25RB,47.0 < Wgap ≤ 67.0,121,4.5,FDD
+,,0.0 < Wgap ≤ 47.0,151,0,
+,25RB+15RB,47.0 < Wgap ≤ 67.0,121,4.9,
+,,0.0 < Wgap ≤ 47.0,251,0,
+,25RB+25RB,45.0 < Wgap ≤ 65.0,121,4.7,
+,,0.0 < Wgap ≤ 45.0,251,0,
+,25RB+50RB,40.0 < Wgap ≤ 60.0,121,3.8,
+,,0.0 < Wgap ≤ 40.0,251,0,
+,25RB+75RB,35.0 < Wgap ≤ 55.0,121,3.6,
+,,0.0 < Wgap ≤ 35.0,251,0,
+,25RB+100RB,30.0 < Wgap ≤ 50.0,121,3.4,
+,,0.0 < Wgap ≤ 30.0,251,0,
+,50RB+25RB,30.0 < Wgap ≤ 60.0,129,5.1,
+,,0.0 < Wgap ≤ 30.0,321,0,
+,50RB+50RB,25.0 < Wgap ≤ 55.0,129,4.3,
+,,0.0 < Wgap ≤ 25.0,321,0,
+,50RB+75RB,20.0 < Wgap ≤ 50.0,129,3.8,
+,,0.0 < Wgap ≤ 20.0,321,0,
+,50RB+100RB,15.0 < Wgap ≤ 45.0,129,3.4,
+,,0.0 < Wgap ≤ 15.0,321,0,
+,75RB+25RB,25.0 < Wgap ≤ 55.0,1210,6.0,
+,,0.0 < Wgap ≤ 25.0,321,0,
+,75RB+50RB,20.0 < Wgap ≤ 50.0,1210,4.7,
+,,0.0 < Wgap ≤ 20.0,321,0,
+,75RB+75RB,15.0 < Wgap  ≤ 45.0,1210,4.2,
+,,0.0 < Wgap ≤ 15.0,321,0,
+,75RB+100RB,10.0 < Wgap ≤ 40.0,1210,3.8,
+,,0.0 < Wgap ≤ 10.0,321,0,
+,100RB+25RB,15.0 < Wgap ≤ 50.0,1611,6.5,
+,,0.0 < Wgap ≤ 15.0,321,0,
+,100RB+50RB,10.0 < Wgap ≤ 45.0,1611,5.1,
+,,0.0 < Wgap  ≤ 10.0,321,0,
+,100RB+75RB,5.0 < Wgap ≤ 40.0,1611,4.5,
+,,0.0 < Wgap  ≤ 5.0,321,0,
+,100RB+100RB,0.0 < Wgap ≤ 35.0,1611,4.1,
+CA_4A-4A,NOTE 6,NOTE 7,NOTE 8,0.0,FDD
+CA_5A-5A,25RB+25RB,NOTE 7,121,5.3,FDD
+,25RB+50RB,NOTE 7,121,4.4,
+,50RB+25RB,NOTE 7,121,5.9,
+,50RB+50RB,NOTE 7,121,4.6,
+CA_7A-7A,25RB+25RB,0< Wgap ≤ 60,25,0.0,FDD
+,25RB+50RB,0 < Wgap ≤ 55,25,0.0,
+,25RB+75RB,0 < Wgap ≤ 50,25,0.0,
+,25RB+100RB,0 < Wgap ≤ 45,25,0.0,
+,50RB+25RB,30 < Wgap ≤ 55,321,0.0,
+,,0 < Wgap ≤ 30,50,0.0,
+,50RB+50RB,25.0 < Wgap ≤ 50.0,321,0.0,
+,,0.0 < Wgap ≤ 25.0,50,0.0,
+,50RB+75RB,20 < Wgap ≤ 45,321,0.0,
+,,0 < Wgap ≤ 20,50,0.0,
+,50RB+100RB,15 < Wgap ≤ 40,321,0.0,
+,,0 < Wgap ≤ 15,50,0.0,
+,75RB+25RB,20.0 < Wgap ≤ 50.0,321,0.0,
+,,0.0 < Wgap ≤ 20.0,501,0.0,
+,75RB+50RB,20.0 < Wgap ≤ 45.0,321,0.0,
+,,0.0 < Wgap ≤ 20.0,501,0.0,
+,75RB+75RB,15.0 < Wgap ≤ 40.0,321,0.0,
+,,0.0 < Wgap ≤ 15.0,501,0.0,
+,75RB+100RB,10 < Wgap ≤ 35,321,0.0,
+,,0 < Wgap ≤ 10,501,0.0,
+,100RB+25RB,25 < Wgap ≤ 45,321,0.0,
+,,0 < Wgap ≤ 25,451,0.0,
+,100RB+50RB,20 < Wgap ≤ 40,321,0.0,
+,,0 < Wgap  ≤ 20,451,0.0,
+,100RB+75RB,15.0 < Wgap ≤ 35.0,361,0.0,
+,,0.0 < Wgap ≤ 15.0,501,0.0,
+,100RB+100RB,15.0 < Wgap ≤ 30.0,321,0.0,
+,,0.0 < Wgap ≤ 15.0,451,0.0,
+CA_12A-12A,25RB+25RB,0.0 < Wgap ≤ 7.0,518,3,FDD
+CA_23A-23A,NOTE 6,NOTE 7,NOTE 8,0.0,FDD
+CA_25A-25A,25RB+25RB,30.0 < Wgap ≤ 55.0,101,5.0,FDD
+,,0.0 < Wgap ≤ 30.0,251,0.0,
+,25RB+50RB,25.0 < Wgap ≤ 50.0,101,4.5,
+,,0.0 < Wgap ≤ 25.0,251,0.0,
+,25RB+75RB,20 < Wgap ≤ 45,101,4.3,
+,,0 < Wgap ≤ 20,251,0,
+,25RB+100RB,15 < Wgap ≤ 40,101,4.1,
+,,0 < Wgap ≤ 15,251,0,
+,50RB+25RB,15.0 < Wgap ≤ 50.0,104,5.5,
+,,0.0 < Wgap ≤ 15.0,321,0.0,
+,50RB+50RB,10.0 < Wgap ≤ 45.0,104,5.0,
+,,0.0 < Wgap ≤ 10.0,321,0.0,
+,50RB+75RB,5 < Wgap ≤ 40,104,4.5,
+,,0 < Wgap ≤ 5,321,0,
+,50RB+100RB,0 < Wgap ≤ 35,104,4.2,
+,75RB+25RB,10 < Wgap ≤ 45,1014,7.6,
+,,0 < Wgap ≤ 10,321,0,
+,75RB+50RB,5 < Wgap ≤ 40,1014,6.7,
+,,0 < Wgap ≤ 5,321,0,
+,75RB+75RB,0 < Wgap ≤ 35,1014,5.6,
+,75RB+100RB,0 < Wgap ≤ 30,1014,4.8,
+,100RB+25RB,0 < Wgap ≤ 40,1215,8,
+,100RB+50RB,0 < Wgap ≤ 35,1215,6.7,
+,100RB+75RB,0 < Wgap ≤ 30,1215,6.1,
+,100RB+100RB,0 < Wgap ≤ 25,1215,5.7,
+CA_25A-25A-25A,25RB+25RB+25RB,Wgap_L  = Wgap_H  = 25 MHz,101,5.0,FDD
+,,Wgap_L  = Wgap_H  = 5 MHz,251,0.0,
+,50RB+50RB+50RB,Wgap_L  = Wgap_H  = 17.5 MHz,104,5.0,
+,75RB+75RB+75RB,Wgap_L  = Wgap_H  = 10 MHz,1014,5.6,
+,100RB+100RB+100RB,Wgap_L  = Wgap_H  = 2.5 MHz,1215,5.7,
+CA_40A-40A,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_40A-40C,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_40C-40C,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_41A-41A,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_41A-41C,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_41A-41D,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_41C-41C,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_41A-41A-41A,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_41A-41A-41C,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_42A-42A,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_42A-42C,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_42A-42D,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_42C-42C,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_48A-48A,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_48A-48A-48A,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_48A-48A-48A-48A,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_48A-48C,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_48A-48D,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_48A-48E,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_48C-48C,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_48C-48D,NOTE 6,NOTE 7,NOTE 8,0.0,TDD
+CA_66A-66A,NOTE 6,NOTE 7,"NOTE 8, NOTE 16",0.0,FDD
+CA_66A-66A-66A,NOTE 6,NOTE 7,"NOTE 8, NOTE 16",0.0,FDD
+CA_66A-66B,NOTE 6,NOTE 7,"NOTE 8, NOTE 16",0.0,FDD
+CA_66A-66C,NOTE 6,NOTE 7,"NOTE 8, NOTE 16",0.0,FDD
+"NOTE 1:1 refers to the UL resource blocks shall be located as close as possible to the downlink operating band but confined within the transmission.NOTE 2:Wgap is the sub-block gap between the two sub-blocks.NOTE 3:The carrier center frequency of PCC in the UL operating band is configured closer to the DL operating band.NOTE 4:4 refers to the UL resource blocks shall be located at RBstart=33.NOTE 5:For the TDD intra-band non-contiguous CA configurations, the minimum requirements apply only in synchronized operation between all component carriers.NOTE 6:All combinations of channel bandwidths defined in Table 5.6A.1-3.NOTE 7:All applicable sub-block gap sizes.NOTE 8:The PCC allocation is same as Transmission bandwidth configuration NRB as defined in Table 5.6-1. In case of uplink sub-block is TDD intra-band contiguous CA then the uplink PCC and SCC allocations are the same as NRB_agg defined in Table 7.3.1A-1.NOTE 9:9 refers to the UL resource blocks shall be located at RBstart=25.NOTE 10:10 refers to the UL resource blocks shall be located at RBstart=35.NOTE 11:11 refers to the UL resource blocks shall be located at RBstart=50.NOTE 12:12 refers to the UL resource blocks shall be located at RBstart=39.NOTE 13:13 refers to the UL resource blocks shall be located at RBstart=57.NOTE 14:14 refers to the UL resource blocks shall be located at RBstart=44.NOTE 15:15 refers to the UL resource blocks shall be located at RBstart=62.NOTE 16:The carrier center frequency of PCC in the DL operating band is configured closer to the UL operating band.NOTE 17:VoidNOTE 18:18 refers to the UL resource blocks shall be located at RBstart=12.NOTE 19:For operations with 4 antenna ports, the MSD in the applicable bands shall be modified by the absolute value of ΔRIB,4R in Table 7.3.1-1a when MSD > 0.",,,,,

@@ -1,0 +1,6 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,1,UL carrier frequency
+Channel Bandwidth (BWchannel),MHz,5,
+ProSe Direct Discovery resource pool configuration,,As specified in Table A.3.12.4-1(Configuration #1),IE values unless specified otherwise in this test.
+networkControlledSyncTx,,Not configured,
+syncTxThreshIC,dBm/15 kHz,-95,In SIB19

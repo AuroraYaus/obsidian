@@ -1,0 +1,10 @@
+Parameter,,Unit,Test 1- 5,Test 6- 8,Test 9- 15,Test 16- 18,Test 19
+Downlink power allocation,,dB,0,0,0,0,0
+,,dB,0 (Note 1),0 (Note 1),0 (Note 1),0 (Note 1),0 (Note 1)
+,,dB,0,0,0,0,0
+at antenna port,,dBm/15kHz,-98,-98,-98,-98,-98
+Symbols for unused PRBs,,,OCNG (Note 2),OCNG (Note 2),OCNG (Note 2),OCNG (Note 2),OCNG (Note 2)
+Modulation,,,QPSK,16QAM,64QAM,16QAM,QPSK
+ACK/NACK feedback mode,,,Multiplexing,Multiplexing,Multiplexing,Multiplexing,Multiplexing
+PDSCH transmission mode,,,1,1,1,1,1
+"Note 1:Note 2:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated.Note 3:VoidNote 4:Void",,,,,,,

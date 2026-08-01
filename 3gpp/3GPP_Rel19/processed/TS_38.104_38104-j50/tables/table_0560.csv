@@ -1,0 +1,15 @@
+Reference channel,G-FR1-A3-35,G-FR1-A3-36,G-FR1-A3-37,G-FR1-A3-38
+Number of TBoMS slots,2,4,2,4
+Subcarrier spacing [kHz],15,15,30,30
+Allocated resource blocks per slot,5,5,5,5
+Data bearing CP-OFDM Symbols per slot (Note 1),12,12,12,12
+Modulation,QPSK,QPSK,QPSK,QPSK
+Code rate (Note 2),193/1024,193/1024,193/1024,193/1024
+Payload size (bits),552,1128,552,1128
+Transport block CRC (bits),16,16,16,16
+Code block CRC size (bits),-,-,-,-
+Number of code blocks - C,1,1,1,1
+Code block size including CRC (bits) (Note 2),568,1144,568,1144
+Total number of bits over all TBoMS slots,2880,5760,2880,5760
+Total resource elements over all TBoMS slots,1440,2880,1440,2880
+"NOTE 1:DM-RS configuration type = 1 with DM-RS duration = single-symbol DM-RS and the number of DM-RS CDM groups without data is 2, Additional DM-RS position = pos1 with l0= 2 as per Table 6.4.1.1.3-3 of TS 38.211 [9].NOTE 2:Code block size including CRC (bits) equals to K' in sub-clause 5.2.2 of TS 38.212 [15].",,,,

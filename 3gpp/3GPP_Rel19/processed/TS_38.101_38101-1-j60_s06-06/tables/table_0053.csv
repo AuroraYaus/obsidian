@@ -1,0 +1,18 @@
+Channel Bandwidth (MHz),RBstart*12*SCS (MHz),LCRB*12*SCS (MHz),A-MPR
+25 MHz,≤ LCRB*12*SCS - 5,> 5,A7
+,≤ 6.48,≤ 1.44,A8
+,,≤ 3.6,A9
+30 MHz,≤ LCRB*12*SCS - 5,> 5,A7
+,≤ 8.64,≤ 1.44,A8
+,,≤ 3.6,A9
+35 MHz,≤ 1.62,> 0,A1
+,"> 1.62, ≤ 9.36",≤ 9.0,A3
+,"> 1.62, ≤ 13.68",> 9.0,A2
+,"> 13.68, ≤ 30.6","> max (29.7 –RBstart *12*SCS, 0)",A6
+,> 30.6,> 0,A5
+40 MHz,≤ 4.32,> 0,A1
+,"> 4.32, ≤ 10.44",≤ 10.8,A3
+,"> 4.32, ≤ 18",> 10.8,A2
+,"> 18, ≤ 31.68","> max (31.68 – RBstart*12*SCS, 0)",A6
+,> 31.68,> 0,A5
+NOTE 1:The A-MPR values are specified in Table 6.2.3.19-2.,,,

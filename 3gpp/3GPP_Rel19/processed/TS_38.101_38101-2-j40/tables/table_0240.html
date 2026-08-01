@@ -1,0 +1,105 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td colspan="4">Value</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>SCS 60 kHz (µ=2)</td>
+    <td>SCS 120 kHz (µ=3)</td>
+    <td>SCS 480 kHz (µ=5)</td>
+    <td>SCS 960 kHz (µ=6)</td>
+  </tr>
+  <tr>
+    <td colspan="2">TDD Slot Configuration pattern (Note 1)</td>
+    <td>DDDSUUUU</td>
+    <td>7DS8U</td>
+    <td>31DS32U</td>
+    <td>63DS64U</td>
+  </tr>
+  <tr>
+    <td colspan="2">Special Slot Configuration (Note 2)</td>
+    <td>S=4D+6G+4U</td>
+    <td>S=12D+2G</td>
+    <td>S=2D+12G</td>
+    <td>S=2D+12G</td>
+  </tr>
+  <tr>
+    <td colspan="2">referenceSubcarrierSpacing</td>
+    <td>60 kHz</td>
+    <td>120 kHz</td>
+    <td>480 kHz</td>
+    <td>960 kHz</td>
+  </tr>
+  <tr>
+    <td>UL-DL configuration</td>
+    <td>dl-UL-TransmissionPeriodicity</td>
+    <td>2 ms</td>
+    <td>2 ms</td>
+    <td>2 ms</td>
+    <td>2ms</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>nrofDownlinkSlots</td>
+    <td>3</td>
+    <td>7</td>
+    <td>31</td>
+    <td>63</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>nrofDownlinkSymbols</td>
+    <td>4</td>
+    <td>12</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>nrofUplinkSlot</td>
+    <td>4</td>
+    <td>8</td>
+    <td>32</td>
+    <td>64</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>nrofUplinkSymbols</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Indexes of active UL slots</td>
+    <td>mod(slot index, 40) = {36,…,39}</td>
+    <td>mod(slot index, 80) = {72,…,79}</td>
+    <td>mod(slot index, 320) = {288,…,319}</td>
+    <td>mod(slot index, 640) = {576,…,639}</td>
+  </tr>
+  <tr>
+    <td colspan="2">Indexes of active UL slots for UL Gap test</td>
+    <td>mod(slot index, 40) = {12,…,15, 36,…,39}</td>
+    <td>mod(slot index, 80) = {24,…,31 ,72,…,79}</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Indexes of the UL slots for UL Gap when UL gap pattern configuration 3 (IE UL-GapFR2-Config-r17) is configured</td>
+    <td>mod(slot index,40)={7, 28}</td>
+    <td>mod(slot index, 80) = {15,56}</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Indexes of the UL slots for UL Gap when UL gap pattern configuration 1 (IE UL-GapFR2-Config-r17) is configured</td>
+    <td>mod(slot index,160)={20, 21, 22,23, 28, 29,30,31}</td>
+    <td>mod(slot index, 320) = {8, … ,15}</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="6">NOTE 1:D denotes a slot with all DL symbols; S denotes a slot with a mix of DL, UL and guard symbols; U denotes a slot with all UL symbols. The field is for information.NOTE 2:D, G, U denote DL, guard and UL symbols, respectively. The field is for information.</td>
+  </tr>
+</table>

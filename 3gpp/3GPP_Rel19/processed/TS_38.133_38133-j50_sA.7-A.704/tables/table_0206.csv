@@ -1,0 +1,23 @@
+,Field,SRSConf.1,,SRSConf.2,,Comments
+SRS-ResourceSet,srs-ResourceSetId,0,1,0,1,
+,srs-ResourceIdList,0,1,0,1,
+,resourceType,Periodic,Periodic,Periodic,Periodic,
+,Usage,Codebook,Codebook,Codebook,Codebook,
+SRS-Resource,SRS-ResourceId,0,1,0,0,
+,nrofSRS-Ports,Port1,Port1,Port1,Port1,
+,transmissionComb,n2,n2,n2,n2,
+,combOffset-n2,0,0,0,0,
+,cyclicShift-n2,0,0,0,0,
+,resourceMappingstartPosition,0,0,0,0,
+,resourceMappingnrofSymbols,n1,n1,n1,n1,
+,resourceMappingrepetitionFactor,n1,n1,n1,n1,
+,freqDomainPosition,0,0,0,0,
+,freqDomainShift,0,0,0,0,
+,freqHoppingc-SRS,17,17,17,17,"Matches NPRB,c"
+,freqHoppingb-SRS,0,0,0,0,
+,freqHoppingb-hop,0,0,0,0,
+,groupOrSequenceHopping,Neither,Neither,Neither,Neither,
+,resourceType,Periodic,Periodic,Periodic,Periodic,
+,periodicityAndOffset-p,"sl2, 0","sl2, 1","sl2560, 4","sl2560, 9",Offset to align with DRX periodicity
+,sequenceId,0,0,0,0,Any 10 bit number
+,TCI state,DLorJoint TCI.State.0,DLorJoint TCI.State.1,DLorJoint TCI.State.0,DLorJoint TCI.State.1,

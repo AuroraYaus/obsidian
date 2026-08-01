@@ -1,0 +1,8 @@
+Parameter,Config,Unit,DL slots,SBFD slots
+Note1,1,dBm/15 kHz,-94.65,
+Note1,1,dBm/SSB SCS,-91.65,
+,1,dB,0,3
+CSI-RS RSRP  Note2,1,dBm/SSB SCS,-91.65,-88.65
+Io Note2,1,dBm/98.28 MHz,-52.43,-75.43
+,1,dB,0,3
+NOTE 1:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 2:CSI-RS RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,

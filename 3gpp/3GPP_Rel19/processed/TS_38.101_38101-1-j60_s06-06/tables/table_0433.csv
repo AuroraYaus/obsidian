@@ -1,0 +1,4 @@
+,Maximum Transmission Power (dBm EIRP1),Emission Limit in Frequency Range 5795-5815 (dBm/MHz EIRP1)
+Condition 1,10,-65
+Condition 2,10,-45
+NOTE 1:The EIRP requirement is converted to conducted requirement depend on the supported post antenna connector gain Gpost connector declared by the UE following the principle described in annex I in [11].,,

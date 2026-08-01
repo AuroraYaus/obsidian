@@ -1,0 +1,20 @@
+Parameter,Unit,Value,,
+Reference channel,,R.81 TDD,R.81-1 TDD,R.81-2 TDD
+Channel bandwidth,MHz,10,10,10
+Allocated resource blocks (Note 4),,6,6,6
+Uplink-Downlink Configuration (Note 3),,1,1,1
+Allocated PDSCH subframes,,Note 6,Note 7,Note 8
+Modulation,,QPSK,QPSK,QPSK
+Target Coding Rate,,1/10,1/10,1/10
+Information Bit Payload,,,,
+"For Sub-Frames 0,4,5,9",Bits,152,152,152
+"For Sub-Frames 1,6",Bits,N/A,N/A,N/A
+Number of Code Blocks,,,,
+"For Sub-Frames 0,4,5,9",Code blocks,1,1,1
+"For Sub-Frames 1,6",Clode blocls,N/A,N/A,N/A
+Binary Channel Bits,,,,
+"For Sub-Frames 0,4,5,9",Bits,1584,1584,1584
+"For Sub-Frames 1,6",,N/A,N/A,N/A
+Max. Throughput averaged over one period,kbps,0.297,0.594,1.9
+UE DL Category,,"M1, ≥ 0",≥1,≥1
+"Note 1:2 symbols allocated to PDCCH.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4].Note 3:As per Table 4.2-2 in TS 36.211 [4].Note 4:Allocated PRB positions are {0, 1, 2, 3, 4, 5} within the assigned narrowband.Note 5: The allocated PRB positions are {0, 1, 2, 3, 4, 5} within the assigned narrowband. If it is not the BL/CE DL subframes, MPDCCH/PDSCH transmission is postponed until the next BL/CE DL subframe. Note the DL subframes in the TDD uplink-downlink configuration are considered as the BL/CE DL subframes.Note 6:MPDCCH are scheduled at the 0th to 63rd BL/CE DL subframes with repetition every period=512ms. The associated PDSCH is scheduled at the 65th to 128th BL/CE DL subframes with repetition every 512ms (starting from the 0th subframe).Note 7:MPDCCH are scheduled at the 0th to 31rd BL/CE DL subframes with repetition every period=256ms. The associated PDSCH is scheduled at the 33rd to 64 rd BL/CE DL subframes with repetition every 256ms (starting from the 0th subframe).Note 8:MPDCCH are scheduled at the 0th to 7rd BL/CE DL subframes with repetition every period=80ms. The associated PDSCH is scheduled at the 9rd to 24 rd BL/CE DL subframes with repetition every 80ms (starting from the 0th subframe).",,,,

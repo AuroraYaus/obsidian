@@ -1,0 +1,8 @@
+Parameter,Unit,Value
+NB-IoT operational mode,,Standalone
+CP Length,,Normal
+DRX,,OFF
+NPRACH configuration,,As specified in A.3.18
+NPUSCH repetition level,,1
+NPDCCH carrier index (npdcch-CarrierIndex-r14),,1 (Note 1)
+Note 1:Index of non-anchor carrier configured in SystemInformationBlockType22-NB (See TS 36.331 [2]),,

@@ -1,0 +1,7 @@
+DRX cycle length [s],Scaling Factor (N1),,"Tdetect,NR_Inter_RedCap_Relax [s] (number of DRX cycles)","Tmeasure,NR_Inter_RedCap_Relax [s] (number of DRX cycles)","Tevaluate,NR_Inter_RedCap_Relax [s] (number of DRX cycles)"
+,FR1,FR2Note1,,,
+0.32,1,8,11.52 x N1 x 1.5 x K3 (36 x N1 x 1.5 x K3),1.28 x N1 x 1.5 x K3 (4 x N1 x 1.5 x K3),5.12 x N1 x 1.5 x K3 (16 x N1 x 1.5 x K3)
+0.64,,5,17.92x N1 x K3 (28 x N1 x K3),1.28 x N1 x K3 (2 x N1 x K3),5.12 x N1 x K3 (8 x N1 x K3)
+1.28,,4,32 x N1 x K3 (25 x N1 x  K3),1.28 x N1 x K3 (1 x N1 x K3),6.4 x N1 x K3 (5 x N1 x K3)
+2.56,,3,58.88 x N1 x K3 (23 x N1 x K3),2.56 x N1 x K3 (1 x N1 x K3),7.68 x N1 x K3 (3 x N1 x K3)
+NOTE 1:Applies for RedCap UE of all supporting power class.NOTE 2:K3 = 6 is the measurement relaxation factor applicable for UE fulfilling the stationaryMobilityEvaluation [2] criterion.,,,,,

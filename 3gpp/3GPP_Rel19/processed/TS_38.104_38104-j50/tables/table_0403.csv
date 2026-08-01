@@ -1,0 +1,17 @@
+BS channel bandwidth of the lowest/highest carrier received (MHz),Interfering RB centre frequency offset to  the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap (kHz) (Note 2),Type of interfering signal
+5,"±(350 + m*180),m=0, 1, 2, 3, 4, 9, 14, 19, 24","5 MHz DFT-s-OFDM NR signal, 15 kHz SCS, 1 RB"
+"7, 10","±(355 + m*180),m=0, 1, 2, 3, 4, 9, 14, 19, 24",
+15,"±(360 + m*180),m=0, 1, 2, 3, 4, 9, 14, 19, 24",
+20,"±(350 + m*180),m=0, 1, 2, 3, 4, 9, 14, 19, 24",
+25,"±(565 + m*180),m=0, 1, 2, 3, 4, 29, 54, 79, 99","20 MHz DFT-s-OFDM NR signal, 15 kHz SCS, 1 RB"
+30,"±(570 + m*180),m=0, 1, 2, 3, 4, 29, 54, 79, 99",
+35,"±(560+m*180),m=0, 1, 2, 3, 4, 29, 54, 79, 99",
+40,"±(565 + m*180),m=0, 1, 2, 3, 4, 29, 54, 79, 99",
+45,"±(570+m*180),m=0, 1, 2, 3, 4, 29, 54, 79, 99",
+50,"±(560 + m*180),m=0, 1, 2, 3, 4, 29, 54, 79, 99",
+60,"±(570 + m*180),m=0, 1, 2, 3, 4, 29, 54, 79, 99",
+70,"±(565 + m*180),m=0, 1, 2, 3, 4, 29, 54, 79, 99",
+80,"±(560 + m*180),m=0, 1, 2, 3, 4, 29, 54, 79, 99",
+90,"±(570 + m*180),m=0, 1, 2, 3, 4, 29, 54, 79, 99",
+100,"±(565 + m*180),m=0, 1, 2, 3, 4, 29, 54, 79, 99",
+"NOTE 1:Interfering signal consisting of one resource block is positioned at the stated offset, the channel bandwidth of the interfering signal is located adjacently to the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap. NOTE 2:The centre of the interfering RB refers to the frequency location between the two central subcarriers.",,

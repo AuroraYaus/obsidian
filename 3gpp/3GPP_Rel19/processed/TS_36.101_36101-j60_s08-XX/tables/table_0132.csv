@@ -1,0 +1,9 @@
+Test num.,Band-width combination,Requirement,UE category
+1,2x20 MHz,As specified in Table 8.2.1.4.3A-2 per CC,≥5
+2,15+20 MHz,As specified in Table 8.2.1.4.3A-2 per CC,≥5
+3,10+20MHz,As specified in Table 8.2.1.4.3A-2 per CC,≥5
+4,2x15 MHz,As specified in Table 8.2.1.4.3A-2 per CC,≥5
+5,2x10 MHz,As specified in Table 8.2.1.4.3A-2 per CC,≥3
+6,15+5 MHz,As specified in Table 8.2.1.4.3A-2 per CC,≥3
+7,10+15 MHz,As specified in Table 8.2.1.4.3A-2 per CC,≥5
+Note 1:The OCNG pattern applies for each CC.Note 2: The applicability of requirements for different dual connectvity configurations and bandwidth combination sets is defined in 8.1.2.3A.,,,

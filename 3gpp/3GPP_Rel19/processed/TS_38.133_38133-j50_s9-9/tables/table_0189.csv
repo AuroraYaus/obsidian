@@ -1,0 +1,6 @@
+"Condition NOTE1,2",TPSS/SSS_sync_inter
+No DRX,"max(600 ms, N1  Max(MGRP, SMTC period))  CSSFinterN1 = 7"
+DRX cycle ≤ 160 ms,"max(600 ms, ceil(N2) x max(MGRP, SMTC period, DRX cycle)) x CSSFinterN2 = 7 x M2"
+160 ms < DRX cycle ≤ 320 ms,ceil(N3) x DRX cycle x CSSFinterN3 = 7 x M2
+DRX cycle>320 ms,N4 x DRX cycle x CSSFinter
+"NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identifiedNOTE 2:M2 = 1.5 if SMTC periodicity > 40 ms, otherwise M2=1NOTE 3:N4=6 if SMTC periodicity > 40 ms, otherwise N4=5",

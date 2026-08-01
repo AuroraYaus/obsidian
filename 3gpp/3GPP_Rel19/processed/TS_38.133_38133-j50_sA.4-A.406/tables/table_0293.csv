@@ -1,0 +1,11 @@
+Parameter,Config,Unit,CSI-RS#0,CSI-RS#1
+Note1,1~6,dBm/15 kHz,-94.65,
+Note1,"1,2,4,5",dBm/SSB SCS,-94.65,
+,"3,6",,-91.65,
+,1~6,dB,0,3
+CSI-RS RSRP Note2,"1,2,4,5",dBm/SSB SCS,-94.65,-91.65
+,"3,6",,-91.65,-88.65
+Io Note2,"1,2,4,5",dBm/9.36 MHz,-63.69,-61.93
+,"3,6",dBm/38.16 MHz,-57.59,-55.84
+,1~6,dB,0,3
+NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3: CSI-RS RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,

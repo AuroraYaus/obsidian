@@ -1,0 +1,7 @@
+Parameter,Unit,Value
+Scheduling delay field (),,0
+NPDSCH Repetition number,,1
+at antenna port for NPDSCH,dBm/15kHz,-98
+(ack-NACK-NumRepetitions-r13),,1
+ACK/NACK resource field,,0
+Reference channel for NPDSCH,,R.NB.6 TDD and R.NB.6-1 TDD for one NRS antenna port; R.NB.5 TDD and R.NB.5-1 TDD for two NRS antenna ports

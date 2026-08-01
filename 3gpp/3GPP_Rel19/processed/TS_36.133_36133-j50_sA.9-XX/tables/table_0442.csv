@@ -1,0 +1,4 @@
+Configuration,Description
+1,"GSO, HD-FDD duplex mode"
+2,"NGSO, HD-FDD duplex mode"
+"Note 1: If UE supports both NGSO and GSO, the test case Config 1 can be skipped if the UE passes test case Config 2. Note 2: Config 2 is applicable when SIB33 is provided to the UE.",

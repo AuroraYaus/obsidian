@@ -1,0 +1,17 @@
+Group,E-UTRA FDD,,E-UTRA TDD,
+,Band group notation,Operating bands,Band group notation,Operating bands
+A,FDD-0_A,4,TDD-0_A,39
+B,FDD-0_B,-,TDD-0_B,-
+C,FDD-0_C,-,TDD-0_C,-
+D,FDD-0_D,-,TDD-0_D,-
+E,FDD-0_E,"2, 5",TDD-0_E,41
+F,FDD-0_F,26 Note 1,TDD-0_F,-
+G,FDD-0_G,"3, 8, 13, 20, 106",TDD-0_G,-
+H,FDD-0_H,25,TDD-0_H,-
+I,FDD-0_I,-,TDD-0_I,-
+J,FDD-0_J,-,TDD-0_J,-
+K,FDD-0_K,-,TDD-0_K,-
+L,FDD-0_L,-,TDD-0_L,-
+M,FDD-0_M,-,TDD-0_M,-
+N,FDD-0_N,111,TDD-0_N,-
+NOTE 1:The minimum Io condition for Band 26 is reduced by 0.5 dB when the carrier frequency of the assigned E-UTRA channel bandwidth is within 865-894 MHz.,,,,

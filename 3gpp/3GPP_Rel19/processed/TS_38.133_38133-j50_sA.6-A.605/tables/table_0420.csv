@@ -1,0 +1,10 @@
+Parameter,Unit,Test configuration,Value,Comment
+RF Channel Number,,"Config 1,2,3, 4, 5, 6","1, 2",Two UL radio channels are used for this test.
+Active cell,,"Config 1,2,3, 4, 5, 6",FR1 PCellFR1 SUL,PCell on RF channel number 1FR1 SUL on RF channel number 2
+CP length,,"Config 1,2,3, 4, 5, 6",Normal,
+DRX,,"Config 1,2,3, 4, 5, 6",OFF,
+Measurement gap pattern Id,,"Config 1,2,3, 4, 5, 6",OFF,
+Filter coefficient,,"Config 1,2,3, 4, 5, 6",0,L3 filtering is not used
+T1,s,"Config 1,2,3, 4, 5, 6",5,
+T2,s,"Config 1,2,3, 4, 5, 6",5,
+T3,s,"Config 1,2,3, 4, 5, 6",5,

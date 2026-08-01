@@ -1,0 +1,54 @@
+Parameter,,Unit,Cell 1
+NR RF channel number,,,1
+Duplex mode,"Config  1, 4",,FDD
+,"Config 2, 3, 5, 6",,TDD
+TDD Configuration,"Config 1, 4",,N/A
+,"Config 2, 5",,TDDConf.1.1
+,"Config 3, 6",,TDDConf.2.1
+BWchannel,"Config 1, 4",MHz,"10: NPRB,c = 52 (FDD)"
+,"Config 2, 5",,"10: NPRB,c = 52 (TDD)"
+,"Config 3, 6",,"40: NPRB,c = 106 (TDD)"
+Gap pattern Id,,,0
+PDSCH reference measurement channel,"Config 1, 4",,SR.1.1 FDD
+,"Config 2, 5",,SR.1.1 TDD
+,"Config 3, 6",,SR.2.1 TDD
+RMSI CORSET reference channel,"Config 1, 4",,CR.1.1 FDD
+,"Config 2, 5",,CR.1.1 TDD
+,"Config 3, 6",,CR.2.1 TDD
+Dedicated CORSET reference channel,"Config 1, 4",,CCR.1.1 FDD
+,"Config 2, 5",,CCR.1.1 TDD
+,"Config 3, 6",,CCR.2.1 TDD
+CSI-RS for tracking,"Config 1, 4",,TRS.1.1 FDD
+,"Config 2, 5",,TRS.1.1 TDD
+,"Config 3, 6",,TRS.1.2 TDD
+BWP configurations,Initial DL BWP,,DLBWP.0.1
+,Dedicated DL BWP,,DLBWP.1.1
+,Initial UL BWP,,ULBWP.0.1
+,Dedicated UL BWP,,ULBWP.1.1
+OCNG patternNote1,,,OP.1
+SMTC configuration,,,SMTC.1
+SSB configuration,"Config 1, 2, 4, 5",,SSB.1 FR1
+,"Config 3, 6",,SSB.2 FR1
+EPRE ratio of PSS to SSS,,dB,0
+EPRE ratio of PBCH_DMRS to SSS,,,
+EPRE ratio of PBCH to PBCH_DMRS,,,
+EPRE ratio of PDCCH_DMRS to SSS,,,
+EPRE ratio of PDCCH to PDCCH_DMRS,,,
+EPRE ratio of PDSCH_DMRS to SSS,,,
+EPRE ratio of PDSCH to PDSCH_DMRS,,,
+EPRE ratio of OCNG DMRS to SSS,,,
+EPRE ratio of OCNG to OCNG DMRS,,,
+NocNote2,,dBm/15 kHz,-104
+NocNote2,"Config 1, 2, 4, 5",dBm/SCS,-104
+,"Config 3, 6",,-101
+Ês/Noc,,dB,17
+Ês/IotNote3,,dB,17
+SS-RS-SINRNote3,"Config 1, 2, 4, 5",dBm/SCS,-87
+,"Config 3, 6",,-84
+SSB_RPNote3,"Config 1, 2, 4, 5",dBm/SCS,-87
+,"Config 3, 6",,-84
+IoNote3,"Config 1, 2, 4, 5",dBm/9.36 MHz,-58.96
+,"Config 3, 6",dBm/38.16 MHz,-52.87
+Propagation condition,,,AWGN
+Antenna Configuration and Correlation Matrix,,,1x2
+"NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:Ês/Iot, SS-RS-SINR, SSB_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.",,,

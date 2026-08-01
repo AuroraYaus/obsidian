@@ -1,0 +1,7 @@
+Accuracy,,Conditions,,
+Normal condition,Extreme condition,Io Note 1 range,,
+,,E-UTRA operating band groups Note 4,Minimum Io,Maximum Io
+dB,dB,,dBm/15kHz Note 3,dBm/BWChannel
+3.5,6.5,FS3_G,-118,-50
+5.5,8.5,Note 2,Note 2,Note 2
+"NOTE 1:Io is assumed to have constant EPRE across the bandwidth.NOTE 2:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.NOTE 3:The condition level is increased by ∆>0, when applicable, as described in Sections B.4.2 and B.4.3.NOTE 4:E-UTRA operating band groups are as defined in Section 3.5.",,,,

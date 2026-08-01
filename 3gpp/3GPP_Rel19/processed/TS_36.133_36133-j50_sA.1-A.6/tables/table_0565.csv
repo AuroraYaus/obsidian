@@ -1,0 +1,8 @@
+Field,Value,Comment
+powerRampingStep,dB2,
+preambleInitialReceivedTargetPower,dBm-120,
+preambleTransMax,n6,
+ra-ResponseWindowSize,sf10,10 sub-frames
+mac-ContentionResolutionTimer,sf48,48 sub-frames
+maxHARQ-Msg3Tx,4,
+Note: For further information see Clause 6.3.2 in TS 36.331.,,

@@ -1,0 +1,58 @@
+<table>
+  <tr>
+    <td rowspan="2">eDRX_IDLE cycle length [s]</td>
+    <td rowspan="2">DRX or eDRX INACTIVE cycle length [s]</td>
+    <td rowspan="2">Scaling Factor (N1)</td>
+    <td rowspan="2">Tdetect,NR_Intra_Relax [s] (number of DRX or eDRX INACTIVE cycles)</td>
+    <td rowspan="2">Tmeasure,NR_Intra_Relax [s] (number of DRX or eDRX INACTIVE cycles)</td>
+    <td rowspan="2">Tevaluate,NR_Intra_Relax [s] (number of DRX or eDRX INACTIVE cycles)</td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td rowspan="6">20.48 ≤eDRX_IDLE cycle length ≤10485.76</td>
+    <td>0.32</td>
+    <td>8</td>
+    <td>11.52 x N1 x M2 x K1  (36 x N1 x M2 x K1)</td>
+    <td>1.28 x N1 x M2 x K1 (4 x N1 x M2 x K1)</td>
+    <td>5.12 x N1 x M2 x K1 (16 x N1 x M2 x K1)</td>
+  </tr>
+  <tr>
+    <td>0.64</td>
+    <td>5</td>
+    <td>17.92x N1 x K1 (28 x N1 x K1)</td>
+    <td>1.28 x N1 x K1 (2 x N1 x K1)</td>
+    <td>5.12 x N1 x K1 (8 x N1 x K1)</td>
+  </tr>
+  <tr>
+    <td>1.28</td>
+    <td>4</td>
+    <td>32 x N1 x K1 (25 x N1 x K1)</td>
+    <td>1.28 x N1 x K1 (1 x N1 x K1)</td>
+    <td>6.4 x N1 x K1 (5 x N1 x K1)</td>
+  </tr>
+  <tr>
+    <td>2.56</td>
+    <td>3</td>
+    <td>58.88 x N1 x K1 (23 x N1 x K1)</td>
+    <td>2.56 x N1 x K1 (1 x N1 x K1)</td>
+    <td>7.68 x N1 x K1 (3 x N1 x K1)</td>
+  </tr>
+  <tr>
+    <td>5.12</td>
+    <td>3</td>
+    <td>117.76 x N1 x K1 (23 x N1 x K1)</td>
+    <td>5.12 x N1 x K1 (1 x N1 x K1)</td>
+    <td>15.36 x N1 x K1 (3 x N1 x K1)</td>
+  </tr>
+  <tr>
+    <td>10.24</td>
+    <td>3</td>
+    <td>235.52 x N1 x K1 (23 x N1 x K1)</td>
+    <td>10.24 x N1 x K1 (1 x N1 x K1)</td>
+    <td>30.72 x N1 x K1 (3 x N1 x K1)</td>
+  </tr>
+  <tr>
+    <td colspan="6">NOTE 1:M2 = 1.5 if SMTC periodicity of measured intra-frequency cell &gt; 20 ms; otherwise M2=1.NOTE 2:K1 = 3 is the measurement relaxation factor applicable for UE fulfilling the lowMobilityEvaluation [2] criterion or fulfilling the cellEdgeEvaluation [2] criterion.</td>
+  </tr>
+</table>

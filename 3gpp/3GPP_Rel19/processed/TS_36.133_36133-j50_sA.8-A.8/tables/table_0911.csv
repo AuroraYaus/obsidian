@@ -1,0 +1,41 @@
+Parameter,Unit,Cell 1,,,Cell 2,,,Cell 3,,,
+,,T1,T2,T3,T1,T2,T3,T1,,T2,T3
+E-UTRA RF Channel Number,,1,,,2,,,2,,,
+BWchannel,MHz,10,,,10,,,10,,,
+Measurement bandwidth,nPRB,13-37,,,13-37,,,13-37,,,
+PDSCH parameters,,DL Reference Measurement Channel R.0 FDD as in A.3.1.1.1,,,,,,,,,
+PCFICH/PDCCH/PHICH parameters,,DL Reference Measurement Channel R.6 FDD as in A.3.1.2.1,,,DL Reference Measurement Channel R.6 FDD as in A.3.1.2.1,,,DL Reference Measurement Channel R.6 FDD as in A.3.1.2.1,,,
+Correlation Matrix and Antenna Configuration,,1x2 Low,,,1x2 Low,,,1x2 Low,,,
+OCNG Patterns defined in A.3.2.1.1 (OP.1 FDD) and in A.3.2.1.2 (OP.2  FDD),,OP.1 FDD,,,OP.2 FDD,,,OP.2 FDD,,,
+PBCH_RA,dB,0,,,0,,,0,,,
+PBCH_RB,dB,,,,,,,,,,
+PSS_RA,dB,,,,,,,,,,
+SSS_RA,dB,,,,,,,,,,
+PCFICH_RB,dB,,,,,,,,,,
+PHICH_RA,dB,,,,,,,,,,
+PHICH_RB,dB,,,,,,,,,,
+PDCCH_RA,dB,,,,,,,,,,
+PDCCH_RB,dB,,,,,,,,,,
+PDSCH_RA,dB,,,,,,,,,,
+PDSCH_RB,dB,,,,,,,,,,
+OCNG_RANote 1,dB,,,,,,,,,,
+OCNG_RBNote 1,dB,,,,,,,,,,
+NocNote 2,dBm/15 kHz,-101,,,-101,,,,,,
+RSRP Note 3,dBm/15 kHz,-104,-84,-84,-104,-84,-84,-infinity,,-infinity,-84
+CSI-RSRP Note 3,dBm/15 kHz,-98,-78,-78,-98,-78,-78,-infinity,,-infinity,-78
+SCH_RP Note 3,dBm/15 kHz,-104,-84,-84,-104,-84,-84,-infinity,,-infinity,-84
+CRS Ês/Noc,dB,-3,17,17,-3,17,17,-infinity,,-infinity,17
+CSI-RS Ês/Noc,dB,3,23,23,3,23,23,-infinity,,- infinity,23
+CRS Ês/Iot,dB,-3,17,17,-3,17,-0.09,-infinity,,-infinity,-0.09
+CSI-RS Ês/Iot,dB,3,23,23,3,23,5.91,-infinity,,-infinity,5.91
+CSI-RS resource configurations [16],,2,,,4,,,,6,,
+p-C-r10 [2],dB,-6,,,-6,,,,-6,,
+CSI-RS periodicity,ms,10,,,10,,,,10,,
+CSI-RS subframe offset,,0,,,0,,,,0,,
+CSI-RS individual offset [2],[dB],0,,,0,,,,0,,
+CSI-RS muting,,Enable,,,Enable,,,,Enable,,
+Propagation Condition,,ETU30,,,ETU30,,,,ETU30,,
+Time offset to cell 1,us,0,,,0,,,,2.3 (CP/2),,
+Time alignment error relative to cell1 Note 5,us,-,,,≤ TAE,,,,N/A,,
+Timing offset to Cell 2,s,-,,,-,,,,2.3 (CP/2),,
+"Note 1:OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.Note 3:RSRP, CSI-RSRP and SCH_RP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:The resources for uplink transmission are assigned to the UE prior to the start of time period T2. Note 5:Time alignment error (TAE) as specified in TS 36.104 [30] clause 6.5.3.1. The TAE value depends upon the type of carrier aggregation.",,,,,,,,,,,

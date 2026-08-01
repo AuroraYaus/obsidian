@@ -1,0 +1,45 @@
+Parameter,,Unit,Test 1,,Test 2,
+,,,Cell 1,Cell 2,Cell 1,Cell 2
+E-UTRA RF Channel Number,,,1,2,1,2
+BWchannel,,MHz,10,10,10,10
+Measurement bandwidth,,,22—27,,22—27,
+PDCCH/PCFICH/PHICH Reference measurement channel defined in A.3.1.2.1,,,R.6 FDD,,R.6 FDD,
+OCNG Patterns defined in A.3.2.1.1 (OP.1 FDD) and A.3.2.1.2 (OP.2 FDD),,,OP.1 FDD,OP.2 FDD,OP.1 FDD,OP.2 FDD
+PBCH_RA,,dB,0,0,0,0
+PBCH_RB,,,,,,
+PSS_RA,,,,,,
+SSS_RA,,,,,,
+PCFICH_RB,,,,,,
+PHICH_RA,,,,,,
+PHICH_RB,,,,,,
+PDCCH_RA,,,,,,
+PDCCH_RB,,,,,,
+PDSCH_RA,,,,,,
+PDSCH_RB,,,,,,
+OCNG_RANote 1,,,,,,
+OCNG_RBNote 1,,,,,,
+Note2,Bands FDD_A Note 8,dBm/15 kHz,[-95],[-95],( for Channel 2 +8dB),[-117]
+,"Bands FDD_B1, FDD_B2 Note 9",,,,,[-116.5]
+,Bands FDD_C,,,,,[-116]
+,Bands FDD_D,,,,,[-115.5]
+,"Bands FDD_E, FDD_F Note 5",,,,,[-115]
+,Bands FDD_G Note 7,,,,,[-114]
+,Bands FDD_H,,,,,[-113.5]
+,,dB,[10],[10],13,[-4]
+RSRPNote3,Bands FDD_A Note 8,dBm/15 kHz,[-85],[-85],(RSRP for Cell 2 +25dB),[-121]
+,"Bands FDD_B1, FDD_B2 Note 9",,,,,[-120.5]
+,Bands FDD_C,,,,,[-120]
+,Bands FDD_D,,,,,[-119.5]
+,"Bands FDD_E, FDD_F Note 5",,,,,[-119]
+,Bands FDD_G Note 7,,,,,[-118]
+,Bands FDD_H,,,,,[-117.5]
+IoNote3,Bands FDD_A Note 8,dBm/9 MHz,[-56.81],[-56.81],(Io for Channel 2 +19.75dB),[-87.76]
+,"Bands FDD_B1, FDD_B2 Note 9",,,,,[-87.26]
+,Bands FDD_C,,,,,[-86.76]
+,Bands FDD_D,,,,,[-86.26]
+,"Bands FDD_E, FDD_F Note 5",,,,,[-85.76]
+,Bands FDD_G Note 7,,,,,[-84.76]
+,Bands FDD_H,,,,,[-84.26]
+,,dB,[10],[10],13,[-4]
+Propagation condition,,-,AWGN,,AWGN,
+"Note 1:OCNG shall be used such that both cells are fully allocated, and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.Note 5:For Band 26, the tests shall be performed with the carrier frequency of assigned E-UTRA channel bandwidth within 865-894 MHz.Note 6:E-UTRA operating band groups are as defined in Section 3.5.Note 7:Except Band 29.Note 8:Except Band 32, Band 75, Band 76.Note 9:For Band 74, the tests shall be performed with the carrier frequency of the assigned E-UTRA channel bandwidth within 1475.9-1510.9 MHz.",,,,,,

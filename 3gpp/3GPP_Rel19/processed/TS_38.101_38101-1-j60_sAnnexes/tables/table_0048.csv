@@ -1,0 +1,15 @@
+Parameter,Value,remark
+Number of HARQ Processes,1,
+Channel state,AWGN,
+Subcarriers per resource block,12,
+sl-PSSCH-DMRS-TimePatternList,2,symbol4 and symbol 10 in each slotFDMed with PSSCH within DMRS symbolFrequency density is ½
+CP-OFDM symbols per slot (Note1),12 for all slots,Excluding the first OFDM symbol in one SL slot used for AGC
+PSCCH resource,"10 PRBs, 3 symbols in time domain",
+Slot number in 10ms,10*2μ,"for 15kHz, 30kHz, 60kHzμ=0,1,2"
+PT-RS,disable,
+CSI-RS,disable,
+x-overhead,0,
+PSFCH period,0,
+2nd stage SCI payload size,59,35bits SCI-2A + 24bits CRC
+Redundancy Version,RV0,For channel coding
+Alpha value for SCI-2,1,

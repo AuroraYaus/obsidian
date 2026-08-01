@@ -1,0 +1,4 @@
+RX parameter,Units,Value
+Power in LP-WUS,dBm,Type-2 REFSENSLP-WUS
+LP-WUS power boosting2,dB,0
+"NOTE 1:LP-WUS is configured in NR carrier with 0 guard RB on each side of LP-WUS signal.NOTE 2:0dB power boost means equal PSD between NR RBs and LP-WUS RBs.NOTE 3:The NR signal occupies the remaining RB resources within the maximum transmission bandwidth configuration, excluding the LP-WUS RBs and the guard RB between the NR and LP-WUS signals.",,

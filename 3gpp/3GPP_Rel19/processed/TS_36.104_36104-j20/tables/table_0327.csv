@@ -1,0 +1,13 @@
+Reference channel,A21-1,A21-2,A21-3,A21-4,A21-5,A21-6
+Allocated resource blocks,6,15,25,50,75,100
+DFT-OFDM Symbols per subframe,12,12,12,12,12,12
+Modulation,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK
+Code rate,0.61,0.62,0.61,0.61,0.60,0.61
+MCS index,10,10,10,10,10,10
+Payload size (bits),1032,2664,4392,8760,12960,17568
+Transport block CRC (bits),24,24,24,24,24,24
+Code block CRC size (bits),0,0,0,24,24,24
+Number of code blocks - C,1,1,1,2,3,3
+Coded block size including 12bits trellis termination (bits),3180,8076,13260,13260,13068,17676
+Total number of bits per sub-frame,1728,4320,7200,14400,21600,28800
+Total symbols per sub-frame,864,2160,3600,7200,10800,14400

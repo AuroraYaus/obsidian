@@ -1,0 +1,4 @@
+Channel bandwidth of E-UTRA lowest/highest carrier transmitted BWChannel [MHz],BS adjacent channel centre frequency offset below the lowest or above the highest carrier centre frequency transmitted,Assumed adjacent channel carrier (informative),Filter on the adjacent channel frequency and corresponding filter bandwidth,ACLR limit
+"10, 20",BWChannel,E-UTRA of same BW,Square (BWConfig),35 dB
+,2 x BWChannel,E-UTRA of same BW,Square (BWConfig),40 dB
+NOTE 1:BWChannel and BWConfig are the channel bandwidth and transmission bandwidth configuration of the E-UTRA lowest/highest carrier transmitted on the assigned channel frequency.,,,,

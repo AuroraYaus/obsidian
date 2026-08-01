@@ -1,0 +1,5 @@
+DRX cycle,TSSB_measurement_period_intra
+No DRX,"Ceil(5 x Kp x N1 Note 2,3) x measCycleSCell x CSSFintra"
+DRX cycle≤ 320 ms,"Ceil(1.5x 5 x Kp x N1 Note 2,3) x max(measCycleSCell, 1.5xDRX cycle) x CSSFintra"
+DRX cycle> 320 ms,"Ceil(5 x Kp x N1 Note 2,3) x max(measCycleSCell, DRX cycle) x CSSFintra"
+"NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identifiedNOTE 2:For ATG UE capable of antennaArrayType-r18, N1 = 3 when network assistance on ATG cells reference locations is provided, otherwise N1 = 4.Otherwise, N1 = 1.NOTE 3:   For ATG UE capable of antennaArrayType-r18, N1=1 when the network indication skippingSCCneighbourCellMeas is set to ‘enable’ to UE. Otherwise, N1 = 3 when network assistance information on ATG cells reference locations is provided, N1 = 4 when network assistance information on ATG cells reference locations is not provided.",

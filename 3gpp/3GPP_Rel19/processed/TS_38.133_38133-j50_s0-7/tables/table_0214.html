@@ -1,0 +1,40 @@
+<table>
+  <tr>
+    <td>Serving cell</td>
+    <td>Frequency range</td>
+    <td colspan="2">Tidentify_intra_NR_CCA [ms]</td>
+  </tr>
+  <tr>
+    <td>SSB Ês/Iot (dB)</td>
+    <td>(FR) of target NR cell</td>
+    <td>Known NR cell</td>
+    <td>Unknown NR cell</td>
+  </tr>
+  <tr>
+    <td>≥ -8</td>
+    <td>FR1</td>
+    <td>MAX (200 ms, (5+K1) x TSMTC)</td>
+    <td>MAX (800 ms, (10+ K1) x TSMTC)</td>
+  </tr>
+  <tr>
+    <td>≥ -8</td>
+    <td>FR2-2</td>
+    <td>N/A</td>
+    <td>MAX (1000 ms, N  x (10+ K3) x TSMTC)</td>
+  </tr>
+  <tr>
+    <td>&lt; -8</td>
+    <td>FR1</td>
+    <td>N/A</td>
+    <td>(800+20 x K1 )Note1</td>
+  </tr>
+  <tr>
+    <td>&lt; -8</td>
+    <td>FR2-2</td>
+    <td>N/A</td>
+    <td>N  x (440+20 x K3 )Note1</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:The UE is not required to successfully identify a cell on any NR frequency layer with CCA when TSMTC &gt; 20 ms and serving cell SSB Ês/Iot &lt; -8 dB.NOTE 2:K1 is the number of SMTC occasions not available at the UE during RRC re-establishment period on the carrier with CCA. NOTE 3:K3 is the number of SMTC occasion groups not available at the UE during RRC re-establishment period on the carrier with CCA. An SMTC occasion group consists of N consecutive SMTC occasions. An SMTC occasion group is not available, when at least one SMTC occasion in the group is not transmitted by the gNB. N is equal to 12.</td>
+  </tr>
+</table>

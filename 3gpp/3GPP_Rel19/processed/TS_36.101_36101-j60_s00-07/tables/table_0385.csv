@@ -1,0 +1,9 @@
+Rx Parameter,Units,CA Bandwidth Class,,,,,
+,,A,B,C,D,E,F
+Power in largest Transmission Bandwidth Configuration CC,dBm,,-282,-252,-252,-262,-272
+,,,-303,-273,-273,-283,-293
+,,,-304,-274,-274,-284,-294
+Power in each other CC,dBm,,"-28+ 10log(NRB,c /NRB,largest BW) 2","-25 + 10log(NRB,c /NRB,largest BW) 2","-25 + 10log(NRB,c /NRB,largest BW) 2","-26 + 10log(NRB,c /NRB,largest BW) 2","-27 + 10log(NRB,c /NRB,largest BW) 2"
+,,,"-30+ 10log(NRB,c /NRB,largest BW) 3","-27 + 10log(NRB,c /NRB,largest BW) 3","-27 + 10log(NRB,c /NRB,largest BW) 3","-28 + 10log(NRB,c /NRB,largest BW) 3","-29 + 10log(NRB,c /NRB,largest BW) 3"
+,,,"-30+ 10log(NRB,c /NRB,largest BW) 4","-27 + 10log(NRB,c /NRB,largest BW) 4","-27 + 10log(NRB,c /NRB,largest BW) 4","-28 + 10log(NRB,c /NRB,largest BW) 4","-29 + 10log(NRB,c /NRB,largest BW) 4"
+"NOTE 1:The transmitter shall be set to 4dB below PCMAX_L,c or PCMAX_L as defined in subclause 6.2.5A.NOTE 2:Reference measurement channel is Annex A.3.2: 64QAM, R=3/4 variant with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1.NOTE 3:Reference measurement channel is Annex A.3.2: 256QAM, R=4/5 variant with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1.NOTE 4:Reference measurement channel is Annex A.3.2: 1024QAM, R=4/5 variant with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1.",,,,,,,

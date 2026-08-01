@@ -1,0 +1,12 @@
+Parameter,Unit,Value
+Uplink downlink configuration (Note 1),,1
+Special subframe configuration (Note 2),,4
+Cyclic prefix,,Normal
+Cell ID,,0
+Inter-TTI Distance,,1
+Number of HARQ processes per component carrier,Processes,7
+Maximum number of HARQ transmission,,4
+Redundancy version coding sequence,,"{0,1,2,3} for QPSK and 16QAM{0,0,1,2} for 64QAM, 256QAM and 1024QAM"
+Number of OFDM symbols for PDCCH per component carrier,OFDM symbols,"4 for 1.4 MHz bandwidth, 3 for 3 MHz and 5 MHz bandwidths,2 for 10 MHz, 15 MHz and 20 MHz bandwidths unless otherwise stated"
+Cross carrier scheduling,,Not configured
+Note 1:as specified in Table 4.2-2 in TS 36.211 [4].Note 2:as specified in Table 4.2-1 in TS 36.211 [4].,,

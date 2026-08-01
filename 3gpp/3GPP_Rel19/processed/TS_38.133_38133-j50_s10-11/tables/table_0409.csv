@@ -1,0 +1,20 @@
+Accuracy,,Conditions,,,,,,
+Normal condition,Extreme condition,SL- PRS Ês/Iot,SL-PRS SCS,SL-PRS BW Note 2,"Number of SL-PRS samples, S",NR operating band group Note 5,Io Note 4 range,
+,,,,,,,MinimumIo Note 1,MaximumIo
+dB,dB,dB,kHz,PRB,-,,dBm / SCSPRS,dBm/ BWChannel
+±3.3,±7.9,≥-3 dB,15,48,≥4,NR_TDD_FR1_B,-123.5,-50
+,,,,,,NR_TDD_FR1_C,-123,-50
+,,,,,,NR_FDD_FR1_G,-121,-50
+,,,,,,NR_TDD_FR1_J,-119.5,-50
+±5.3,±9.8,,,> 48,≥1,Note 3,,
+±4.7,±9.2,,,≥ 96,≥1,Note 3,,
+±4.5,±9.0,,30,≥ 24,≥4,NR_TDD_FR1_B,-120.5,-50
+,,,,,,NR_TDD_FR1_C,-120,-50
+,,,,,,NR_FDD_FR1_G,-118,-50
+,,,,,,NR_TDD_FR1_J,-116.5,-50
+±5.0,±9.5,,,> 48,≥1,Note 3,,
+±4.6,±9.1,,60,≥ 24,≥4,NR_TDD_FR1_B,-117.5,-50
+,,,,,,NR_TDD_FR1_C,-117,-50
+,,,,,,NR_FDD_FR1_G,-115,-50
+,,,,,,NR_TDD_FR1_J,-113.5,-50
+NOTE 1:This minimum Io condition is expressed as the average Io per RE over all REs in an OFDM symbol.NOTE 2:SL-PRS bandwidth is as indicated in sl-PRS-BW in the SL-PRS-AssistanceData defined in TS 38.355 [37].NOTE 3:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the SL-PRS bandwidth of the smallest PRB number for the corresponding SCS.NOTE 4:The Io is defined in PRS positioning slots. The same Io range applies to SL-PRS and non-SL-PRS symbols. Io levels are different in SL-PRS and non-SL-PRS symbols within the same slot.NOTE 5:NR operating band groups are as defined in Section 3.5.2.,,,,,,,,

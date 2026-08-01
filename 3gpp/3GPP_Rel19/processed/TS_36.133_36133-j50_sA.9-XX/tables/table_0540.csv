@@ -1,0 +1,24 @@
+Parameter,,Unit,Value,Comment
+NB-IOT operational mode,,,In-band in NTN NR,
+Initial condition,Active cell,,nCell1,
+,Neighbour cells,,"nrCell1, nrCell2, nCell2",
+Final condition,Active cell,,nCell2,
+NR RF Channel Number,,,"1, 2",Two FDD carrier frequencies are used. One carrier frequency is used for nrCell1 and the other for nrCell2.
+Satellite information,Config 1,,SSC.1,
+,Config 2,,SSC.2,
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+NPRACH Configuration,,,NPRACH.R-1,Refer to A.3.18
+NPDCCH repetition level,,,8,NPDCCH Rmax
+N310,,-,1,Maximum consecutive out-of-sync indications from lower layers
+N311,,-,1,Minimum consecutive in-sync indications from lower layers
+T310,,ms,0,Radio link failure timer; T310 is disabled
+T311-v13xy,,ms,15000,RRC re-establishment timer
+DRX,,,256,See Table A.13.5.5.1-5
+T1,,ms,5,
+T2,,ms,1300,
+T3,,ms,8500,
+T4,,ms,5200,
+T5,,ms,8520,
+s-MeasureInter,,dBm,-95,
+s-MeasureDeltaP,,dB,6,
+t-MeasureDeltaP,,s,60,

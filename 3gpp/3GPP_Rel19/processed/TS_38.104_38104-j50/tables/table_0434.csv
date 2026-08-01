@@ -1,0 +1,6 @@
+Number of TX antennas,Number of demodulation branches,Cyclic prefix,Propagation conditions and correlation matrix (annex G),Fraction of maximum throughput,FRC(annex A),Additional DM-RS position,PT-RS,SNR(dB)
+1,2,Normal,TDLA10-650,70 %,G-FR2-A3B-4,pos1,No,-0.2
+,,Normal,TDLA10-650,70 %,G-FR2-A4-22,pos1,Yes,11.2
+,,Normal,TDLD10-200,70 %,G-FR2-A5-12,pos1,Yes,12.6
+2,,Normal,TDLA10-650,70 %,G-FR2-A3B-9,pos1,No,4
+,,Normal,TDLA10-650,70 %,G-FR2-A7-12,pos1,Yes,14

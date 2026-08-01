@@ -1,0 +1,38 @@
+Parameter,Unit,Configuration,Cell 2,,
+,,,T1,T2,T3
+RF channel number,,"1, 2",2,,
+Duplex mode,,1,FDD,,
+,,2,TDD,,
+TDD special subframe configurationNote1,,2,6,,
+TDD uplink-downlink configurationNote1,,2,1,,
+BWchannel,MHz,"1, 2","10 MHz: NPRB,c = 50",,
+PRACH ConfigurationNote2,,1,4,,
+,,2,53,,
+PDSCH parameters:DL Reference Measurement ChannelNote3,,1,10 MHz: R.3 FDD,,
+,,2,10 MHz: R.0 TDD,,
+PCFICH/PDCCH/PHICH parameters:DL Reference Measurement ChannelNote3,,1,10 MHz: R.6 FDD,,
+,,2,10 MHz: R.6 TDD,,
+OCNG PatternsNote3,,1,10 MHz: OP.10 FDD,,
+,,2,10 MHz: OP.1 TDD,,
+PBCH_RA,dB,"1, 2",0,,
+PBCH_RB,,,,,
+PSS_RA,,,,,
+SSS_RA,,,,,
+PCFICH_RB,,,,,
+PHICH_RA,,,,,
+PHICH_RB,,,,,
+PDCCH_RA,,,,,
+PDCCH_RB,,,,,
+PDSCH_RA,,,,,
+PDSCH_RB,,,,,
+OCNG_RANote4,,,,,
+OCNG_RBNote4,,,,,
+NocNote5,dBm/15 kHz,"1, 2",-98,,
+Ês/Noc,dB,"1, 2",-Infinity,8,8
+Ês/IotNote6,dB,"1, 2",-Infinity,8,8
+RSRPNote6,dBm/15 kHz,"1, 2",-Infinity,-90,-90
+SCH_RPNote6,dBm/15 kHz,"1, 2",-Infinity,-90,-90
+IoNote6,dBm/9 MHz,"1, 2","-67.21+10log(NPRB,c/100)","-58.57+10log(NPRB,c/100)","-58.57+10log(NPRB,c/100)"
+Propagation Condition,,"1, 2",AWGN,,
+Antenna Configuration and Correlation Matrix Note7,,"1, 2",1x2 Low,,
+"NOTE 1:Special subframe and uplink-downlink configurations are specified in table 4.2-1 in TS 36.211 [23].NOTE 2:PRACH configurations are specified in table 5.7.1-2 and table 5.7.1-3 in TS 36.211 [23].NOTE 3:DL RMCs and OCNG patterns are specified in clauses A 3.1 and A 3.2 of TS 36.133 [15] respectively.NOTE 4:OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 5:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 6:Ês/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 7:Propagation condition and correlation matrix are defined in clause B.2 in TS 36.101 [25].",,,,,

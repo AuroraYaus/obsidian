@@ -1,0 +1,18 @@
+Parameter,,Unit,Value,Comment
+Initial conditions,PCell,,Cell 1,
+,neighbour cell,,Cell 2,
+,Target cell,,Cell 3,
+Final condition,PCell,,Cell 3,
+,SCell,,Cell 2,
+,neighbour cell,,Cell 1,
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+PRACH configuration index,,,FR1 PRACH configuration 1,As specified in table 6.3.3.2-3 in TS 38.211 [6]
+Time offset between cells,,,3 s,Synchronous cells
+Measurement gap pattern,,,gp0,Measurement gap is used during parts of time period T1 for detection of Cell 2.
+T1,,s,7,UE is in connected mode with PCell and SCell 1 (Cell 2) is in activated state. UE receives a handover command
+T2,,s,Ndirect,UE shall accomplish the activation of the SCell
+T3,,s,1,
+A3-offset,,dB,-15,
+THARQ,,slot,k,"k is a number of slots indicated by the PDSCH-to-HARQ_feedback timing indicator field in a corresponding DCI format or provided by dl-DataToUL-ACK if the PDSCH-to-HARQ feedback timing field is not present in the DCI format, the value is defined in 38.213 [3]"
+TCSI_Reporting,,ms,2,the delay uncertainty in acquiring the first available CSI reporting resources as specified in TS 38.331 [2]
+k,,ms,,As specified in clause 4.3 of TS 38.213 [3]

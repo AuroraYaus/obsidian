@@ -1,0 +1,30 @@
+Parameter,,Unit,Value,Comment
+PCFICH/PDCCH/PHICH parameters,,,R.9.FDD,As specified in clause A.3.1.2.1.None of the PDCCH are intended for the UE under test
+OCNG parameters,,,OP.6 FDD for the serving cell (Cell 1)OP.9 FDD for the neighbour cell (Cell 2),As specified in clause A.3.2.1.6 and A.3.2.1.9 respectively
+Serving cell (PCell),,,Cell 1,Cell 1 is on E-UTRA RF channel number 1
+Neighbor cell,,,Cell 2,Aggressor cell on E-UTRA RF channel number 1
+Neighbor cell ABS configuration,,,MBSFN  ABS,As defined in Table A.3.4.2.2-1
+CP length,,,Normal,
+E-UTRA RF Channel Number,,,1,One E-UTRA FDD carrier frequency is used.
+E-UTRA Channel Bandwidth (BWchannel),,MHz,10,
+Correlation Matrix and Antenna Configuration,,,2x2 Low,Correlation Matrix and Antenna Configuration are defined in TS 36.101 [5] Annex B.2.3.2
+Out of sync transmission parameters (Note 1),DCI format,,1A,As defined in clause 5.3.3.1.3 in TS 36.212
+,Number of Control OFDM symbols,,3,Out of sync threshold Qout and the corresponding hypothetical PDCCH/PCFICH transmission parameters are as specified in clause 7.6.1 and Table 7.6.1-1 respectively.
+,Aggregation level,CCE,8,
+,"A, B",,-3,
+,Ratio of PDCCH to RS EPRE,dB,1,
+,Ratio of PCFICH to RS EPRE,dB,1,
+DRX,,,OFF,
+Layer 3 filtering,,,Enabled,Counters:: N310 = 1; N311 = 1
+T310 timer,,ms,0,T310 is disabled
+T311 timer,,ms,1000,T311 is enabled
+Periodic CQI reporting mode,,,PUCCH 1-0,As defined in table 7.2.2-1 in TS 36.213.
+CQI reporting periodicity,,ms,2,Minimum CQI reporting periodicity
+Time offset between cells,,,3 s,Synchronous cells
+T1,,s,1,
+T2,,s,0.4,
+T3,,s,0.5,
+Physical cell ID PCI,,,"(PCIcell1-PCIcell2 ) mod 3 = 0, PCIcell1 not equal to PCIcell2",Cell IDs are chosen such that CRS from cells 1 and 2 overlap in frequency
+ABS pattern,,,‘0100000010000000100000000010000001000000’,"FDD ABS Pattern Info IE, as defined in TS 36.423 [28], clause 9.2.54. Configured in Cell 2.The first/leftmost bit corresponds to the PCell subframe #0 of the radio frame satisfying SFN mod x = 0, where x is the size of the bit string (40) divided by 10. MBSFN subframes are cofigured in the ABS subframes."
+Time domain measurement resource restriction pattern,,,‘0100000010000000100000000010000001000000’,"Time domain measurement resource restriction pattern for serving cell measurement signalled to the UE in message measSubframePattern-Serv-r10 as defined in TS 36.331, clause 6.3.2."
+Note 1:PDCCH/PCFICH corresponding to the out of sync transmission parameters need not be included in the Reference Measurement Channel,,,,

@@ -1,0 +1,32 @@
+Parameter,Unit,Cell 1,,Cell 2,
+,,T1,T2,T1,T2
+E-UTRA RF Channel Number,,1,,"Randomly selected from 2,3,4,5,6,7,8 such that cell 2 is in the normal performance group",
+BWchannel,MHz,5MHz: NRB = 2510MHz: NRB = 50,,"5MHz: NRB,= 2510MHz: NRB,= 50",
+Measurement bandwidth,,5MHz: 10-1510MHz: 22-27,,5MHz: 10-1510MHz: 22-27,
+PDSCH Reference measurement channel defined in A.3.1.1.,,5MHz: R.5 FDD 10MHz: R.0 FDD,,-,
+PDSCH allocation,,5MHz: 7-1710MHz: 13-36,,-,
+PDCCH/PCFICH/PHICH Reference measurement channel defined in A.3.1.2.,,5MHz: R.11 FDD10MHz: R.6 FDD,,5MHz: R.11 FDD10MHz: R.6 FDD,
+OCNG Patterns defined in A.3.2.,,5MHz: OP.15 FDD10MHz: OP.1 FDD,,5MHz: OP.16 FDD10MHz: OP.2 FDD,
+PBCH_RA,dB,0,,0,
+PBCH_RB,dB,,,,
+PSS_RA,dB,,,,
+SSS_RA,dB,,,,
+PCFICH_RB,dB,,,,
+PHICH_RA,dB,,,,
+PHICH_RB,dB,,,,
+PDCCH_RA,dB,,,,
+PDCCH_RB,dB,,,,
+PDSCH_RA,dB,,,,
+PDSCH_RB,dB,,,,
+OCNG_RANote 1,dB,,,,
+OCNG_RBNote 1,dB,,,,
+Note 3,dBm/15 kHz,-98,,-98,
+,dB,4,4,-Infinity,7
+,dB,4,4,-Infinity,7
+RSRP Note 4,dBm/15 kHz,-94,-94,-Infinity,-91
+SCH_RP Note 4,dBm/15 kHz,-94,-94,-Infinity,-91
+IoNote 4,dBm/ BWchannel,"-64.76+10log(NRB,c/50)","-64.76+10log(NRB,c/50)","-70.22+10log(NRB,c/50)","-62.43+10log(NRB,c/50)"
+Propagation Condition,,ETU70,,ETU70,
+Correlation Matrix and Antenna Configuration,,1x2 Low,,1x2 Low,
+Timing offset to cell 1,ms,-,,3,
+"Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.Note 3:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.Note 4:Es/Iot, RSRP, SCH_RP  and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.",,,,,

@@ -1,0 +1,6 @@
+eDRX_IDLE cycle length [s],"Tdetect, NR_Inter_RedCap_Relax [s] (number of DRX cycles)","Tmeasure, NR_Inter_RedCap_Relax [s] (number of DRX cycles)","Tevaluate, NR_Inter_RedCap_Relax [s] (number of DRX cycles)"
+,,,
+2.56,58.88 x K3 (23 x K3),2.56 x K3 (1 x K3),5.12 x K3 (2 x K3)
+5.12,117.76 x K3 (23 x K3),5.12 x K3 (1 x K3),10.24 x K3 (2 x K3)
+10.24,235.52 x K3 (23 x K3),10.24 x K3 (1 x K3),20.48 x K3 (2 x K3)
+"NOTE 1:M2 = 1.5 if SMTC periodicity of measured intra-frequency cell > 20 ms; otherwise M2=1. If different SMTC periodicities are configured for different cells, the SMTC periodicity in this note is the one used by the cell being identified. During PSS/SSS detection, the periodicity of the SMTC configured for the intra-frequency carrier is assumed, and if the actual SSB transmission periodicity is greater than the SMTC configured for the intra-frequency carrier, longer Tdetect, NR_Inter_RedCap_Relax is expected.NOTE 2:K3 = 6 is the measurement relaxation factor applicable for UE fulfilling the stationaryMobilityEvaluation [2] criterion.",,,

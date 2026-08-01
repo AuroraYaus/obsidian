@@ -1,0 +1,9 @@
+NR Band,Value of additionalSpectrumEmission,,,,,,,
+,0,1,2,3,4,5,6,7
+n257,NS_200,NS_202,NS_205,,,,,
+n258,NS_200,NS_201(NOTE 2),NS_202,NS_203,NS_205,,,
+n259,NS_200,,,,,,,
+n260,NS_200,,,,,,,
+n261,NS_200,,,,,,,
+n263,NS_200,NS_204,,,,,,
+"NOTE 1:additionalSpectrumEmission corresponds to an information element of the same name defined in sub-clause 6.3.2 of TS 38.331 [13]. NOTE 2:NS_201 is obsolete, the associated additional spurious emission requirements are not applicable.",,,,,,,,

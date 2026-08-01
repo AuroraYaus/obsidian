@@ -1,0 +1,9 @@
+eDRX_IDLE cycle length [s],DRX cycle length [s],PTW length [s] (number of 1.28 s periods),Scaling Factor (N1),Nserv_RedCap [number of DRX or eDRX cycles Note 3]
+2.56,N/A,N/A,1,N1*2
+5.12,N/A,N/A,,N1*2
+10.24,N/A,N/A,,N1*2
+20.48 ≤ eDRX_IDLE cycle length ≤10485.76,0.32,≥[1.28] (1),,N1*M1*2
+,0.64,≥ 1.28 (1) (M1=1) or ≥ 2.56 (2) (M1=2),,N1*M1*2
+,1.28,≥2.56 (2),,N1*2
+,2.56,≥5.12 (4),,N1*2
+"NOTE 1: The number of DRX cycles in this table corresponds to the DRX cycles within PTWs, when PTW is configured.NOTE 2: The eDRX_IDLE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 3: Number of eDRX cycles when eDRX_IDLE cycle length equals 2.56 s, 5.12 s and 10.24 s. Otherwise, number of DRX cycles.NOTE 4: The lower bound of PTW length is derived based on .Nserv_RedCap *DRX_cycle1.28*1.28",,,,

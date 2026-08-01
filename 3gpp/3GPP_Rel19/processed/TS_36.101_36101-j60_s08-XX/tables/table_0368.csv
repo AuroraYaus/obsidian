@@ -1,0 +1,25 @@
+Parameter,,,Unit,Cell 1,Cell 2,Cell 3
+Downlink power allocation,,,dB,0,0,0
+,,,dB,0 (Note 1),0,0
+,,,dB,-3,-3,-3
+Cell-specific reference signals,,,,"Antenna ports 0,1","Antenna ports 0,1","Antenna ports 0,1"
+at antenna port,,,dBm/15kHz,-98,,
+,,,dB,N/A,13.91,3.34
+BWChannel,,,MHz,10,10,10
+Cyclic Prefix,,,,Normal,Normal,Normal
+Cell Id,,,,0,1,6
+Number of control OFDM symbols,,,,3,3,3
+CFI indicated in PCFICH,,,,3,3,3
+PDSCH transmission mode,,,,9,9,9
+Interference model,,,,N/A,As specified in clause B.6.4,As specified in clause B.6.4
+Precoding,,,,Random wideband precoding per TTI,As specified in clause B.6.4,As specified in clause B.6.4
+CSI reference signals,,,,"Antenna ports 15, 16, 17, 18","Antenna ports 15, 16","Antenna ports 15, 16"
+CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS,,,Subframes,10 / 1,10 / 1,10 / 1
+CSI reference signal configuration,,,,5,6,7
+Zero-power CSI-RS configurationICSI-RS /ZeroPowerCSI-RS bitmap,,,Subframes / bitmap,6 /1000000000000000,6 /0100000000000000,6 /0010000000000000
+Time offset to cell 1,,,us,N/A,2,3
+Frequency offset to cell 1,,,Hz,N/A,200,300
+MBSFN,,,,Not configured,Not configured,Not configured
+NeighCellsInfo-r12(Note 4),p-aList-r12,,,N/A,"{dB-6, dB-3, dB0}","{dB-6, dB-3, dB0}"
+,transmissionModeList-r12,,,N/A,"{2,3,4,8,9}","{2,3,4,8,9}"
+"Note 1:Note 2:Cell 1 is the serving cell. Cell 2, 3 are the interfering cells.Note 3:CSI-RS configurations are according to [4] subclause 6.10.5.2.Note 4:NeighCellsInfo-r12 is described in subclause 6.3.2 of [7].",,,,,,

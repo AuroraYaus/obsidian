@@ -1,0 +1,5 @@
+DRX cycle,TPSS/SSS_sync_intra_ODSSB
+No DRX,Ceil(5 x Kp_OD-SSB) x measCycleSCell x CSSFintra
+DRX cycle≤ 320 ms,"Ceil(5 x Kp_OD-SSB) x max(measCycleSCell, 1.5xDRX cycle) x CSSFintra"
+DRX cycle> 320 ms,"Ceil(5 x Kp_OD-SSB) x max(measCycleSCell, DRX cycle) x CSSFintra"
+NOTE 1:The requirements also apply to CC with deactivated SCell in SCG.,

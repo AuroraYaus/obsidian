@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <td rowspan="2">Wideband operation channel bandwidth (MHz)</td>
+    <td colspan="2">Contiguous sub-band configuration2</td>
+    <td colspan="2">Non-contiguous sub-band configuration2</td>
+  </tr>
+  <tr>
+    <td>Outer</td>
+    <td>Inner</td>
+    <td>Outer</td>
+    <td>Inner</td>
+  </tr>
+  <tr>
+    <td>40</td>
+    <td>11, 10, 01</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>60</td>
+    <td>111, 110, 011, 100, 001</td>
+    <td>010</td>
+    <td>101</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>80</td>
+    <td>1111, 1110, 0111, 1100, 0011, 1000, 0001</td>
+    <td>0110, 0100, 0010</td>
+    <td>1101, 1011, 1010, 0101, 1001</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>11111, 11110, 01111, 11100, 00111, 11000, 00011, 10000, 00001</td>
+    <td>01110, 01100, 00110, 01000, 00010, 00100</td>
+    <td>11011, 11010, 01011, 11001, 10011, 10101, 10110, 01101, 10100, 00101, 10010, 01001, 11101, 10111, 10001</td>
+    <td>01010</td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE 1:The sub-band configuration is represented as a bitmap where ‘1’ indicates that a sub-band is transmitted and ‘0’ indicates a sub-band is not transmitted.  The bitmap is ordered with MSB mapped to the lowest frequency sub-band and LSB mapped to highest frequency sub-band within the wideband channel.NOTE 2:Only contiguous sub-band configuration applies to PSCCH/PSSCH. Both contiguous and non-contiguous sub-band configuration apply to PSFCH and S-SSB.</td>
+  </tr>
+</table>

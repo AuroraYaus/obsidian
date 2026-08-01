@@ -1,0 +1,11 @@
+Parameter,,Value
+,,SCS 15 kHz (µ0)
+TDD Slot Configuration pattern (Note 1),,2DS2U
+Special Slot Configuration (Note 2),,10D+2G+2U
+referenceSubcarrierSpacing,,15 kHz
+UL-DL configuration,dl-UL-TransmissionPeriodicity,5 ms
+,nrofDownlinkSlots,2
+,nrofDownlinkSymbols,10
+,nrofUplinkSlot,2
+,nrofUplinkSymbols,2
+"NOTE 1:D denotes a slot with all DL symbols; S denotes a slot with a mix of DL, UL and guard symbols; U denotes a slot with all UL symbols. The field is for information.NOTE 2:D, G, U denote DL, guard and UL symbols, respectively. The field is for information.",,

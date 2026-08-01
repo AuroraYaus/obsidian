@@ -1,0 +1,12 @@
+OCNG Parameters,Control Region,Data Region
+Probe,Transmitting the serving beam,
+Resource allocation,Unused REs (Note 1) in the symbols where SSB/CSI-RS are not transmitted from both the serving beam probe and non-serving beam probe.,Unused REs (Note 2) in the symbols where SSB/CSI-RS are not transmitted from both the serving beam probe and non-serving beam probe.
+Channel,PDCCH,PDSCH
+Contents,Virtual UE IDs,Uncorrelated pseudo random QPSK modulated data
+Antenna transmission scheme,Same as used in PDCCH RMC,Same as used in PDSCH RMC
+Subcarrier spacing,Same as used in PDCCH RMC,Same as used in PDSCH RMC
+Aggregation level,Same as used in PDCCH RMC,N/A
+Code rate,Same as used in PDCCH RMC,Same as used in PDSCH RMC
+Transmit Power,Same as used in PDCCH RMC,Same as used in PDSCH RMC
+CP length,Same as used in PDCCH RMC,Same as used in PDSCH RMC
+"NOTE 1:REs not used in the active CORESETs where PDCCH is scheduled for the UE under test. REs for OCNG shall not be allocated outside the allocated bandwidth of the CORESET of the serving cell.NOTE 2:REs not allocated to any physical channels, CORESET, SSB or any other reference signal within the allocated bandwidth of the CORESET of the serving cell. REs for OCNG shall not be allocated outside the allocated bandwidth of the CORESET of the serving cell.NOTE 3:No OCNG is transmitted from the probe transmitting non-serving beam.",,

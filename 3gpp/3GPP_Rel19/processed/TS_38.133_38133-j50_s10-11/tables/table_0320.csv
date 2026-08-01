@@ -1,0 +1,13 @@
+Reported value,Measured quantity value (DL RSCPD),Unit
+DL_RSCPD_0000,-180 ≤ DL RSCPD < -179.9,degree
+DL_RSCPD_0001,-179.9 ≤ DL RSCPD < -179.8,degree
+DL_RSCPD_0002,-179.8 ≤ DL RSCPD < -179.7,degree
+…,…,…
+DL_RSCPD_1798,-0.2 ≤ DL RSCPD < -0.1,degree
+DL_RSCPD_1799,-0.1 ≤ DL RSCPD < 0,degree
+DL_RSCPD_1800,0 ≤ DL RSCPD < 0.1,degree
+DL_RSCPD_1801,0.1 ≤ DL RSCPD < 0.2,degree
+DL_RSCPD_1802,0.2 ≤ DL RSCPD < 0.3,degree
+…,…,…
+DL_RSCPD_3598,179.8 ≤ DL RSCPD < 179.9,degree
+DL_RSCPD_3599,179.9 ≤ DL RSCPD < 180,degree

@@ -1,0 +1,12 @@
+Parameter,Test
+Number of information bits,2
+Number of symbols,14
+Intra-slot frequency hopping,N/A
+Group and sequence hopping,neither
+Hopping ID,0
+Initial cyclic shift,0
+First symbol,0
+Index of orthogonal cover code (timeDomainOCC),0
+Number of interlace,1
+Interlace index,0Note1
+"NOTE 1:RBs 0,10,20,…, 100  are allocated for 15kHz SCS and RBs 0,5,10,…, 50  are allocated for 30kHz SCS",

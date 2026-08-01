@@ -1,0 +1,143 @@
+<table>
+  <tr>
+    <td>Measurement gap pattern configuration</td>
+    <td>Serving cell</td>
+    <td>Measurement Purpose NOTE 2</td>
+    <td>Applicable Gap Pattern Id</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR1 NOTE5, orFR1 + FR2</td>
+    <td>non-NR RAT NOTE3,6</td>
+    <td>0,1,2,3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>FR1 and/or FR2 NOTE 8,9</td>
+    <td>0-11, 24, 25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>non-NR RAT and FR1 and/or FR2 NOTE3,6,8,9</td>
+    <td>0, 1, 2, 3, 4, 6, 7, 8,10, 24</td>
+  </tr>
+  <tr>
+    <td>Per-UE measurement</td>
+    <td>FR2 NOTE5</td>
+    <td>non-NR RAT only NOTE3,6</td>
+    <td>0,1,2,3</td>
+  </tr>
+  <tr>
+    <td>gap</td>
+    <td></td>
+    <td>FR1 only NOTE 8.9</td>
+    <td>0-11, 24, 25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>FR1 and FR2 NOTE 8,9</td>
+    <td>0-11, 24, 25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>non-NR RAT and FR1 and/or FR2 NOTE3,6,8,9</td>
+    <td>0, 1, 2, 3, 4, 6, 7, 8,10, 24</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>FR2 only NOTE 8,9</td>
+    <td>12-25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR1 if configured</td>
+    <td>non-NR RAT only</td>
+    <td>0,1,2,3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR2 if configured</td>
+    <td>NOTE3,6</td>
+    <td>No gap</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR1 if configured</td>
+    <td>FR1 only NOTE 8.9</td>
+    <td>0-11,24,25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR2 if configured</td>
+    <td></td>
+    <td>No gap</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR1 if configured</td>
+    <td>FR2 only NOTE 8.9</td>
+    <td>No gap</td>
+  </tr>
+  <tr>
+    <td>Per-FR</td>
+    <td>FR2 if configured</td>
+    <td></td>
+    <td>12-25</td>
+  </tr>
+  <tr>
+    <td>measurement</td>
+    <td>FR1 if configured</td>
+    <td>non-NR RAT and</td>
+    <td>0, 1, 2, 3, 4, 6, 7, 8,10,24</td>
+  </tr>
+  <tr>
+    <td>gap</td>
+    <td>FR2 if configured</td>
+    <td>FR1 NOTE3,6,8,9</td>
+    <td>No gap</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR1 if configured</td>
+    <td>FR1 and FR2NOTE 8.9</td>
+    <td>0-11, 24,25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR2 if configured</td>
+    <td></td>
+    <td>12-25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR1 if configured</td>
+    <td>non-NR RAT and</td>
+    <td>0, 1, 2, 3, 4, 6, 7, 8,10,24</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR2 if configured</td>
+    <td>FR2 NOTE3,6,8,9</td>
+    <td>12-25</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR1 if configured</td>
+    <td>non-NR RAT and FR1 and FR2 NOTE3,6,8,9</td>
+    <td>0, 1, 2, 3, 4, 6, 7, 8,10,24</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>FR2 if configured</td>
+    <td></td>
+    <td>12-25</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:When E-UTRA inter-RAT RSTD measurements are configured and the UE requires measurement gaps for performing such measurements, only Gap Pattern #0 can be used.NOTE 2:Measurement purpose which includes E-UTRA measurements includes also inter-RAT E-UTRA RSRP and RSRQ measurements for E-CID; measurement purpose which includes E-UTRA measurements includes also E-UTRA RSRP and E-UTRA RSRQ measurements for E-CID.NOTE 3:VoidNOTE4:If per-UE measurement gap is configured with MG timing advance of TMG ms, the measurement gap starts at time TMG ms advanced to the end of the latest subframe occurring immediately before the configured measurement gap among all serving cells subframes.If per-FR measurement gap for FR1 is configured with MG timing advance of TMG ms, the measurement gap for FR1 starts at time TMG ms advanced to the end of the latest subframe occurring immediately before the configured measurement gap among serving cells subframes in FR1.If per-FR measurement gap for FR2 is configured with MG timing advance of TMG ms, the measurement gap for FR2 starts at time TMG ms advanced to the end of the latest subframe occurring immediately before the configured measurement gap among serving cells subframes in FR2.TMG is the MG timing advance value provided in mgta according to [2].In determining the measurement gap starting point, UE shall use the DL timing of the latest subframe occurring immediately before the configured measurement gap among serving cells.NOTE 5:NR-DC in Rel-15 only includes the scenarios where all serving cells in MCG in FR1 and all serving cells in SCG in FR2. NOTE 6:In NR single carrier, NR CA, and NR-DC mode, non-NR RAT means E-UTRA, and UTRA for SRVCC. In NR single carrier, NR CA, and NR-DC mode, if UTRA FDD inter-RAT frequency layer is configured to be monitored for SRVCC, only measurement gap pattern #0 and #1 can be used for per-FR gap in E-UTRA and FR1 if configured, or for per-UE gap.NOTE 7:For UE only supporting supportedGapPattern-NRonly for any gap patterns among GP2-11, the corresponding gap patterns are not applicable to measurement of non-NR RATs as defined in NOTE 6.NOTE 8:Measurement gap patterns #24 and #25 can be requested [2] only when the UE is configured with any of RSTD, UE Rx-Tx time difference, PRS-RSRP, PRS-RSRPP, RSCP or RSCPD measurements requiring such gaps and can only be used during the corresponding positioning measurement period.NOTE 9:Inclusion of positioning measurements for measurement gaps: Measurement purpose which includes any of FR1 and FR2 measurements includes also RSTD, UE Rx-Tx time difference, PRS-RSRP, PRS-RSRPP , RSCP and RSCPD measurements.</td>
+  </tr>
+</table>

@@ -1,0 +1,5 @@
+Positioning subframe configuration period,Number of PRS positioning occasions,
+,f2 Note1,f1 and f2 Note2
+160 ms,32,64
+>160 ms,16,32
+"Note 1:When inter-frequency RSTD measurements are performed over the reference cell and neighbour cells, which belong to the FDD inter-frequency carrier frequency f2.Note 2:When inter-frequency RSTD measurements are performed over the reference cell and the neighbour cells, which belong to the serving FDD carrier frequency f1 and the FDD inter-frequency carrier frequency f2 respectively.",,

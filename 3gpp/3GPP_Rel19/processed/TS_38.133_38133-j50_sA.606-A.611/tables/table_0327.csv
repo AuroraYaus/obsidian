@@ -1,0 +1,17 @@
+Parameter,Unit,Test configuration,Value,Comment
+,,,,
+NR RF Channel Number,,"Config 1,2,3","1, 2",Two FR1 NR carrier frequencies are used.
+Active cell,,"Config 1,2,3",NR Cell 1 (PCell),NR Cell 1 is on NR RF channel number 1.
+Neighbour cell,,"Config 1,2,3",NR Cell 2 and 3,NR Cell 2 is on NR RF channel number 1. NR Cell 3 is on the NR RF channel 2.
+Gap Pattern Id,,"Config 1,2,3",1 for MeasGapId #1 (80 ms MGRP) 0 for MeasGapId #2 (40 ms MGRP),As specified in clause 9.1.2-1.
+Measurement gap offset,ms,"Config 1,2,3",79 for MeasGapId #14 for MeasGapId #2,
+A3-Offset,dB,"Config 1,2,3",-6,
+Hysteresis,dB,"Config 1,2,3",0,
+CP length,,"Config 1,2,3",Normal,
+TimeToTrigger,s,"Config 1,2,3",0,
+Filter coefficient,,"Config 1,2,3",0,L3 filtering is not used
+DRX,,"Config 1,2,3",OFF,DRX is not used
+Time offset between serving and neighbour cell,,"Config 1, 2, 3",3s,The timing of Cell 2 is 3s later than the timing of Cell 1.
+,,"Config 1, 2, 3",5 ms,The timing of Cell 3 is 5 ms later than the timing of Cell 1.
+T1,s,"Config 1,2,3",2,
+T2,s,"Config 1,2,3",2,

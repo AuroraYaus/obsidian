@@ -1,0 +1,11 @@
+SSB Parameters,Values,
+Channel bandwidth,100 MHz,
+SSB SCS,120 kHz,
+SSB periodicity (TSSB),20 ms,
+Number of SSBs per SS-burst,2,
+SS/PBCH block index,2,3
+Symbol numbers containing SSBs Note 2,2-5,6-9
+Slot numbers containing SSB Note 2,1,1
+SFN containing SSB,"SFN mod (max(TSSB,10 ms)/10 ms) = 0",
+PRB numbers containing SSBs within channel BW,"(RBJ, PRBJ+1,.…, PRBJ+19)Note 1",
+NOTE 1:PRBs containing SSB can be configured in any frequency location within the cell bandwidth according to the allowed synchronization raster defined in TS 38.104 [13]. NOTE 2:These values have been derived from other parameters for information purposes (as per TS 38.213 [3]). They are not settable parameters themselves.,,

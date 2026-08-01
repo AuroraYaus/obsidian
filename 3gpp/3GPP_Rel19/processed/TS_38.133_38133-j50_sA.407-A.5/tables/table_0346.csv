@@ -1,0 +1,15 @@
+Parameter,Unit,Config,Value,Comment
+Active cell,,1~4,E-UTRAN PCell (Cell 1)PSCell (Cell 2),
+Neighbour cell,,1~4,Cell 3,Cell to be identified.
+RF Channel Number,,1~4,1: Cell 12: Cell 2 and Cell 3,One TDD carrier frequency is used for the NR cells and one TDD or FDD carrier frequency is used for E-UTRAN cell.
+SMTC configuration,,1~4,SMTC.1,
+A3-Offset,dB,1~4,-11,
+CP length,,1~4,Normal,
+Hysteresis,dB,1~4,0,
+Time To Trigger,s,1~4,0,
+Filter coefficient,,1~4,0,L3 filtering is not used
+DRX,,1~4,OFF,
+Time offset between Cell 1 and Cell 2,,1~4,3 s,Synchronous EN-DC
+Time offset between Cell 2 and Cell 3,,1~4,3 s,Synchronous cells
+T1,s,1~4,5,
+T2,s,1~4,5,

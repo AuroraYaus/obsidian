@@ -1,0 +1,5 @@
+Channel BW,Parameter,Region,,,,,,,
+5 MHz,"(NB_index, SCstart)","(0, ≤4)","(0, ≤72)","(3, >=48)","(3, >=60)","(0, ≤14)","(0, ≤72)","(3, >=48)","(3, >=60)"
+,Lcsc,"2,3","2,3","2,3","2,3",6,6,6,6
+,A-MPR [dB],≤3,≤1,≤1,≤3,≤2,≤1,≤1,≤2
+"Note 1:Lcsc is the length of the continuous subcarrier, SCstart is the subcarrier offset relative to the first subcarrier of the first PRB of NB indicated with NBindex.Note 2:Lcsc is the length of the continuous subcarrier, SCstart is the subcarrier offset relative to the first subcarrier of the first PRB of NB indicated with NBindex.",,,,,,,,,

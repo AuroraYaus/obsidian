@@ -1,0 +1,22 @@
+NR CA configuration,Uplink CA configuration or single uplink carrier4,NR Band,Channel bandwidth (MHz),Bandwidth combination set
+CA_n41(A-C),"n412,3CA_n41C2,3",n41,"10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,n41,CA_n41C_BCS2,
+,,n41,See n41 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n41,CA_n41C_BCS4 and 5,
+CA_n41(2A-C),"n412,3CA_n41C",n41,CA_n41(2A)_BCS3,0
+,,n41,CA_n41C_BCS1,
+,,n41,CA_n41(2A)_BCS4 and 5,4 and 5
+,,n41,CA_n41C_BCS4 and 5,
+CA_n48(A-B),CA_n48B,n48,"5, 10, 15, 20, 40, 501, 601, 801, 901, 1001",0
+,,n48,CA_n48B_BCS0,
+,,n48,"5, 10, 15, 20, 30, 40, 501, 601, 701, 801, 901, 1001",1
+,,n48,CA_n48B_BCS2,
+,,n48,See n48 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n48,CA_n48B_BCS4 and 5,
+CA_n78(A-C),CA_n78C,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",0
+,,n78,CA_n78C_BCS0,
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",1
+,,n78,CA_n78C_BCS1,
+,,n78,See n78 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n78,CA_n78C_BCS4 and 5,
+"NOTE 1:This UE channel bandwidth is applicable only to downlinkNOTE 2:Minimum requirements for Power Class 2 are applicable for this uplink combination or single uplink carrier in this downlink/uplink combinationNOTE 3:Minimum requirements for Power Class 1.5 are applicable for this uplink combination or single uplink carrier in this downlink/uplink combinationNOTE 4:Only single uplink carriers with power class other than PC3 are listed.NOTE 5:For each channel bandwidth of each component carrier, refer to Table 5.3.5-1 for the applicable SCSs. For a given band, not all UE channel bandwidths support the same SCSs.",,,,

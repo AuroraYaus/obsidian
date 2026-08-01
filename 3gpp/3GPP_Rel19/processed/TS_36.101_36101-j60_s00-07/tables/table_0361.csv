@@ -1,0 +1,14 @@
+Channel bandwidth,,,,,,,
+E-UTRAProSe Band,1.4 MHz(dBm),3 MHz(dBm),5 MHz(dBm),10 MHz(dBm),15 MHz(dBm),20 MHz(dBm),Duplex Mode
+2,,,-104.1,-104.1,-104.1,-104.1,HD
+3,,,-103.1,-103.1,-103.1,-103.1,HD
+4,,,-106.1,-106.1,-106.1,-106.1,HD
+7,,,-103.8,-103.8,-103.8,-103.8,HD
+14,,,-103.1,-103.1,,,HD
+20,,,-103.2,-103.2,-102.2,-102.2,HD
+26,,,-103.55,-103.5 5,-103.5 5,,HD
+28,,,-104.4,-104.4,-104.4,-102.9,HD
+31,,,-99.5,,,,HD
+68,,,-104.4,-104.4,-104.4,,HD
+72,,,-99.5,,,,HD
+"NOTE 1:Reference measurement channel is A.6.2NOTE 2:The signal power is specified per portNOTE 3:For the UE which supports both Band 3 and Band 9 the reference sensitivity level is FFS.NOTE 4:For the UE which supports both Band 11 and Band 21 the reference sensitivity level is FFS.NOTE 5:5 indicates that the requirement is modified by -0.5 dB when the carrier frequency of the assigned E-UTRA channel bandwidth is within 865-894 MHz.NOTE 6:For a UE that support both Band 18 and Band 26, the reference sensitivity level for Band 26 applies for the applicable channel bandwidths.",,,,,,,

@@ -1,0 +1,9 @@
+Test num.,CA Band-width combination,Requirement,UE category
+1,5x20MHz,As specified in Table 8.2.1.4.3-5 per CC,"8, ≥11"
+2,15MHz+4x20MHz,As specified in Table 8.2.1.4.3-5 per CC,"8, ≥11"
+3,10MHz+4x20MHz,As specified in Table 8.2.1.4.3-5 per CC,"8, ≥11"
+4,2x10MHz+3x20MHz,As specified in Table 8.2.1.4.3-5 per CC,"8, ≥11"
+5,5MHz+10MHz+3x20MHz,As specified in Table 8.2.1.4.3-5 per CC,"8, ≥11"
+6,3x10MHz+2x20MHz,As specified in Table 8.2.1.4.3-5 per CC,"8, ≥11"
+7,4x10MHz+20MHz,As specified in Table 8.2.1.4.3-5 per CC,"8, ≥11"
+NOTE 1: The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 8.1.2.3,,,

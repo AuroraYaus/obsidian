@@ -1,0 +1,96 @@
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "Annex B (normative):Conditions for RRM requirements applicability for operating bands", "paragraph_index": 1, "style": "Heading8"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.1Conditions for NR RRC_IDLE state mobility", "paragraph_index": 3, "style": "Heading1"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.1.1Introduction", "paragraph_index": 4, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.1.2Conditions for measurements on NR intra-frequency cells for cell re-selection", "paragraph_index": 8, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.1.2AConditions for measurements on NR intra-frequency cells under CCA for cell re-selection", "paragraph_index": 21, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.1.3Conditions for measurements on NR inter-frequency cells for cell re-selection", "paragraph_index": 27, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.1.3AConditions for measurements on NR inter-frequency cells under CCA for cell re-selection", "paragraph_index": 32, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.1.4Conditions for measurements on NR intra-frequency cells for cell re-selection for RedCap", "paragraph_index": 36, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.1.5Conditions for measurements on NR inter-frequency cells for cell re-selection for RedCap", "paragraph_index": 52, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.1.6Conditions for measurements on NR intra-frequency cells for cell re-selection for satellite access", "paragraph_index": 56, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.1.7Conditions for measurements on NR inter-frequency cells for cell re-selection for satellite access", "paragraph_index": 61, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.1.8Conditions for measurements on NR serving cells by LP-WUR", "paragraph_index": 64, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2Conditions for UE measurements procedures and performance requirements in RRC_CONNECTED state", "paragraph_index": 72, "style": "Heading1"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1Introduction", "paragraph_index": 73, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.1General", "paragraph_index": 74, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.2Derivation of Minimum SSB_RP values for FR1", "paragraph_index": 82, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.3Derivation of Minimum SSB_RP values for FR2", "paragraph_index": 84, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.3.1Minimum SSB_RP values for Rx Beam Peak angle of arrival", "paragraph_index": 87, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "12", "title": "is the number of subcarriers in a PRB;", "paragraph_index": 96, "style": "B10"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.3.2Minimum SSB_RP values for angle of arrival within Spherical coverage", "paragraph_index": 104, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "12", "title": "is the number of subcarriers in a PRB;", "paragraph_index": 113, "style": "B10"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.4Gain to SS-RSRP and CSI-RSRP measurement point for FR1", "paragraph_index": 121, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.5Gain to SS-RSRP and CSI-RSRP measurement point for FR2", "paragraph_index": 123, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.5.1Gain to SS-RSRP and CSI-RSRP measurement point for Rx Beam Peak angle of arrival", "paragraph_index": 124, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.5.2Gain to SS-RSRP measurement point for different frequency", "paragraph_index": 132, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.5.3Alignment of Rough beam to Rx beam Peak", "paragraph_index": 136, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.6Gain to PRS-RSRP measurement point for FR2", "paragraph_index": 141, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.6.1Gain to PRS-RSRP measurement point for Rx Beam Peak angle of arrival", "paragraph_index": 142, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.7Derivation of Minimum SSB_RP values for FR2-NTN for satellite access", "paragraph_index": 151, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.7.1Minimum SSB_RP values for Rx Beam", "paragraph_index": 152, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "12", "title": "is the number of subcarriers in a PRB;", "paragraph_index": 161, "style": "B10"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.1.8Gain to SS-RSRP for FR2-NTN for satellite access", "paragraph_index": 169, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.2Conditions for NR intra-frequency measurements", "paragraph_index": 177, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.3Conditions for NR inter-frequency measurements", "paragraph_index": 191, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.4Conditions for NR L1-RSRP reporting", "paragraph_index": 205, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.4.1Conditions for SSB based L1-RSRP reporting", "paragraph_index": 206, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.4.2Conditions for CSI-RS based L1-RSRP reporting", "paragraph_index": 220, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.5Conditions for RRC connection release with redirection to NR", "paragraph_index": 233, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.6Void", "paragraph_index": 246, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.6.1Void", "paragraph_index": 247, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.6.2Void", "paragraph_index": 250, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.7Conditions for SRS-RSRP measurements", "paragraph_index": 251, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.8Conditions for NR L1-SINR reporting", "paragraph_index": 259, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.8.1Conditions for L1-SINR reporting with CSI-RS based CMR and no dedicated IMR configured", "paragraph_index": 260, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.8.2Conditions for L1-SINR reporting with SSB based CMR and dedicated IMR configured", "paragraph_index": 270, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.8.2.1L1-SINR reporting with SSB based CMR and dedicated ZP-IMR configured", "paragraph_index": 271, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.8.2.2L1-SINR reporting with SSB based CMR and dedicated NZP-IMR configured", "paragraph_index": 281, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.8.3Conditions for L1-SINR reporting with CSI-RS based CMR and dedicated IMR configured", "paragraph_index": 294, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.8.3.1L1-SINR reporting with CSI-RS based CMR and dedicated ZP-IMR configured", "paragraph_index": 295, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.8.3.2L1-SINR reporting with CSI-RS based CMR and dedicated NZP-IMR configured", "paragraph_index": 305, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.9Conditions for NR intra-frequency measurements under CCA", "paragraph_index": 319, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.10Conditions for NR inter-frequency measurements under CCA", "paragraph_index": 324, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.11Conditions for NR L1-RSRP reporting under CCA", "paragraph_index": 329, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.11.1Conditions for SSB based L1-RSRP reporting", "paragraph_index": 330, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.12Conditions for NR CSI-RS based intra-frequency measurements", "paragraph_index": 335, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.13Conditions for NR CSI-RS based inter-frequency measurements", "paragraph_index": 346, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.14Conditions for NR PRS-based measurements", "paragraph_index": 357, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.15Conditions for NR intra-frequency measurements for RedCap", "paragraph_index": 368, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.16Conditions for NR inter-frequency measurements for RedCap", "paragraph_index": 381, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.17Conditions for NR intra-frequency measurements for satellite access", "paragraph_index": 394, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.18Conditions for NR inter-frequency measurements for satellite access", "paragraph_index": 400, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.19Conditions for NR L1-RSRP reporting for satellite access", "paragraph_index": 406, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.19.1Conditions for SSB based L1-RSRP reporting for satellite access", "paragraph_index": 407, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.19.2Conditions for CSI-RS based L1-RSRP reporting for satellite access", "paragraph_index": 412, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.2.20Conditions for RRC connection release with redirection to NR for satellite access", "paragraph_index": 417, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3RRM Requirements Exceptions", "paragraph_index": 422, "style": "Heading1"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.1Introduction", "paragraph_index": 423, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.2Receiver sensitivity relaxation for CA", "paragraph_index": 425, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.2.1Receiver sensitivity relaxation for UE supporting CA in FR1", "paragraph_index": 426, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.2.2Receiver sensitivity relaxation for UE configured with CA in FR1", "paragraph_index": 430, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.2.2.1Inter-band carrier aggregation", "paragraph_index": 431, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.2.2.2Reference sensitivity exceptions due to UL harmonic interference for CA", "paragraph_index": 435, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.2.2.3Reference sensitivity exceptions due to intermodulation interference due to 2UL CA", "paragraph_index": 443, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.2.3Receiver sensitivity relaxation for UE supporting CA in FR2", "paragraph_index": 450, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.2.4Receiver sensitivity relaxation for UE configured with CA in FR2", "paragraph_index": 451, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.2.4.1Intra-band contiguous carrier aggregation", "paragraph_index": 452, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.2.4.2Intra-band non-contiguous carrier aggregation", "paragraph_index": 454, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.3Receiver sensitivity relaxation for DC", "paragraph_index": 456, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.3.1Receiver sensitivity relaxation for EN-DC", "paragraph_index": 457, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.3.2Receiver sensitivity relaxation for NE-DC", "paragraph_index": 459, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.4Receiver sensitivity relaxation for SUL", "paragraph_index": 461, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.4.1Receiver sensitivity relaxation for UE supporting SUL in FR1", "paragraph_index": 462, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.4.2Receiver sensitivity relaxation for UE configured with SUL in FR1", "paragraph_index": 465, "style": "Heading3"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.3.4.2.1Reference sensitivity exceptions due to UL harmonic interference for SUL", "paragraph_index": 466, "style": "Heading4"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.4Conditions for V2X", "paragraph_index": 474, "style": "Heading1"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.4.1Test parameters for GNSS signals", "paragraph_index": 475, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.4.2Conditions for PSBCH-RSRP Accuracy Requirements", "paragraph_index": 479, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.4.3Conditions for Selection/Reselection to Intra-frequency SyncRef UE", "paragraph_index": 484, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.4.4Conditions for L1 SL-RSRP Accuracy Requirements", "paragraph_index": 489, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.4.5Conditions for PSBCH-RSRP Accuracy Requirements under CCA", "paragraph_index": 494, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.4.6Conditions for Selection/Reselection to Intra-frequency SyncRef UE under CCA", "paragraph_index": 499, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.4.7Conditions for L1 SL-RSRP Accuracy Requirements under CCA", "paragraph_index": 504, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.4AConditions for NR Sidelink Positioning Measurement Procedures and Performance Requirements", "paragraph_index": 509, "style": "Heading1"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.4A.1Conditions for NR SL-PRS based measurements", "paragraph_index": 510, "style": "Heading2"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "B.5High level test procedure for SAN RRM tests", "paragraph_index": 515, "style": "Heading1"}
+{"source": "38133-j50_sB.1-XX.docx", "section": "", "title": "Annex C (informative):Change history", "paragraph_index": 528, "style": "Heading8"}

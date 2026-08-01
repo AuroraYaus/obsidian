@@ -1,0 +1,7 @@
+Test num.,Band-width,Sidelink UE,PSSCH Reference channel,Reference value,
+,,,,Fraction of maximum throughput (%) (NOTE 1),SNR (dB)
+1,10 MHz,2,CD.4 FDD,70,3.0
+,,3,CD.2 FDD,70,2.8
+,5 MHz,2,CD.3 FDD,70,2.9
+,,3,CD.2 FDD,70,2.8
+NOTE 1:The throughput is measured after 40 radio frames of lead time during which the test UE detects and synchronizes to Sidelink UE 1.,,,,,

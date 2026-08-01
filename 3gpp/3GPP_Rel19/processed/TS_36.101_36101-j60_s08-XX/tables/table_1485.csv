@@ -1,0 +1,11 @@
+Parameter,,Unit,Test 1
+Communication resource pool configuration,,,As specified in Table A.9-1(Configuration #1-V2X)
+at antenna port,,dBm/15kHz,-98
+Active cell(s),,,None
+Sidelink UE 1,Sidelink Transmissions,,SLSS+PSBCH (Note 3)
+,slssid,,169
+,Time offset (Note 1),s,0
+,Frequency offset (Note 2),Hz,0
+,Synchronization source,,GNSS
+,Antenna configuration,,1x2 Low
+Note 1:Time offset of Sidelink UE receive signal with respect to GNSS reference timing.Note 2:Frequency offset of Sidelink UE with respect to GNSS reference frequency.Note 3: PSBCH transmits together with corresponding SLSS in the same subframe.,,,

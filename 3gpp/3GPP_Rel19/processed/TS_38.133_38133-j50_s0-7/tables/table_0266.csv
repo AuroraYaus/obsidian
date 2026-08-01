@@ -1,0 +1,5 @@
+Sub-carrier spacing of E-UTRA cell in MCG (kHz),DL Sub-carrier spacing of cell in SCG (kHz) Note1,Maximum receive timing difference (µs)
+15,15,3
+15,30,3
+15,60,3
+"NOTE 1:DL Sub-carrier spacing is min{SCSSS, SCSDATA}.NOTE 2:The requirement in this table is also applicable for intra-band synchronous NE-DC.",,

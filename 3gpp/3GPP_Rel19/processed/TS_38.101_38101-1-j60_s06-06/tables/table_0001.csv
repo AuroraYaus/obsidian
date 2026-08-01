@@ -1,0 +1,65 @@
+NRband,Class 1 (dBm),Tolerance (dB),Class 1.5 (dBm),Tolerance (dB),Class 2 (dBm),Tolerance (dB),Class 3 (dBm),Tolerance (dB)
+n1,,,,,26,+2/-3,23,±2
+n2,,,,,26,+2/-33,23,±23
+n3,,,,,26,+2/-33,23,±23
+n5,,,,,26,+2/-33,23,±2
+n7,316,+2/-3,,,26,+2/-33,23,±23
+n8,,,,,26,+2/-33,23,±23
+n12,,,,,,,23,±23
+n13,,,,,26,+2/-3,23,±2
+n14,"316,7",+2/-3,,,26,+2/-3,23,±2
+n18,,,,,,,23,±2
+n20,,,,,,,23,±23
+n24,,,,,,,23,+2/-33
+n25,316,+2/-3,,,26,+2/-33,23,±23
+n26,,,,,26,+2/-33,23,±23
+n28,,,,,26,+2/-33,23,+2/-2.5
+n30,,,,,,,23,±2
+n31,316,+2/-3,,,,,23,±2
+n34,,,295,+2/-3,26,+2/-3,23,±2
+n38,,,,,,,23,±2
+n39,,,295,+2/-3,26,+2/-3,23,±2
+n40,316,+2/-3,295,+2/-3,26,+2/-3,23,±2
+n41,316,+2/-3,295,+2/-33,26,+2/-33,23,±23
+n47,,,,,,,23,±2
+n48,,,,,,,23,+2/-3
+n50,,,,,,,23,±2
+n51,,,,,,,23,±2
+n53,,,,,,,23,±2
+n54,,,,,,,23,±2
+n65,,,,,,,23,±2
+n66,316,+2/-3,,,26,+2/-3,23,±2
+n68,,,,,,,23,±2
+n70,,,,,26,+2/-3,23,±2
+n71,316,+2/-3,,,26,+2/-3,23,+2/-2.5
+n72,316,+2/-3,,,,,23,±2
+n74,,,,,,,23,±2
+n77,316,+2/-3,295,+2/-3,26,+2/-3,23,+2/-3
+n78,316,+2/-3,295,+2/-3,26,+2/-3,23,+2/-3
+n79,,,295,+2/-3,26,+2/-3,23,+2/-3
+n80,,,,,26,+2/-33,23,±23
+n81,,,,,,,23,±2
+n82,,,,,,,23,±2
+n83,,,,,,,23,+2/-2.5
+n84,,,,,26,+2/-3,23,±2
+n85,316,+2/-3,,,26,+2/-33,23,±23
+n86,,,,,,,23,±2
+n87,,,,,,,23,±2
+n88,,,,,,,23,±2
+n89,,,,,,,23,±2
+n91,,,,,,,23,"±23, 4"
+n92,,,,,,,23,"±23, 4"
+n93,,,,,,,23,"±23, 4"
+n94,,,,,,,23,"±23, 4"
+n95,,,,,26,+2/-3,23,±2
+n97,,,,,26,+2/-3,23,±2
+n98,,,,,26,+2/-3,23,±2
+n99,,,,,,,23,+2/-33
+n100,"316, 8",+2/-3,,,,,23,±2
+n101,"316, 8",+2/-3,,,,,23,±2
+n104,,,295,+2/-3,26,+2/-3,23,+2/-3
+n105,,,,,,,23,+2/-2.5
+n106,,,,,,,23,±2
+n109,,,,,,,23,"±23, 4"
+n110,,,,,,,23,±2
+"NOTE 1:PPowerClass is the maximum UE power specified without taking into account the tolerance.NOTE 2:Power class 3 is default power class unless otherwise stated.NOTE 3:Refers to the transmission bandwidths confined within FUL_low and FUL_low + 4 MHz or FUL_high – 4 MHz and FUL_high, the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB.NOTE 4:The maximum output power requirement is relaxed by reducing the lower tolerance limit by 0.3 dB.NOTE 5:Achieved via Tx diversity.NOTE 6:Generally, PC1 UE is not targeted for smartphone form factor.NOTE 7:The UE power class 1 requirements for Band n14 are applicable for public safety scenario only.NOTE 8:PC1 in Band n100 and n101 is allowed only for FRMCS cab-radio’s, i.e. user equipments installed on trains with external antenna on top of the train roof at approximately 4m over ground.",,,,,,,,

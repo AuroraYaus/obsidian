@@ -1,0 +1,6 @@
+Configuration,TL1-RSRP_Measurement_Period_SSB (ms)
+non-DRX,"max(TReport, ceil(M*P*N1Note2)*TSSB)"
+DRX cycle ≤ 80 ms,"max(TReport, ceil(M*P*N1Note2*M2)*max(TDRX,TSSB))"
+80 ms< DRX ≤ 320 ms,"max(TReport, ceil(1.5*M*P*N)*max(TDRX,TSSB))"
+DRX cycle > 320 ms,ceil(1.5*M*P*N)*TDRX
+"Note1:TSSB = ssb-periodicityServingCell is the periodicity of the SSB-Index configured for L1-RSRP measurement. TDRX is the DRX cycle length. TReport is configured periodicity for reporting.Note 2:Scaling factor N1 = 2 when highSpeedMeasFlagFR2-r17 = set1 or scaling factor N1 = 6 when highSpeedMeasFlagFR2-r17 = set2, if UE does not support simultaneousReceptionTwoQCL-r18 or when highSpeedDeploymentTypeFR2-r17 is not configured as bidirectional. Scaling factor N1 = 1.5 when highSpeedMeasFlagFR2-r17 is configured to set1 or scaling factor N1 = 4 when highSpeedMeasFlagFR2-r17 is configured to set2, if UE supports simultaneousReceptionTwoQCL-r18 and when highSpeedDeploymentTypeFR2-r17 is configured as bidirectional.Note 3:M2 = 1.5 if SMTC periodicity > 40 ms; otherwise M2 = 1",

@@ -1,0 +1,7 @@
+Parameter,Unit,Value
+DCI format,,DCI format N1
+scheduling delay field (),,For tests in 8.12.1.1.4: 1For others: 1 for the first HARQ process;2 for the second HARQ process if configured
+(ack-NACK-NumRepetitions-r13),,1
+ACK/NACK resource field,,0
+Reference channel for NPDCCH,,R.NB.3 FDD for one NRS antenna port; R.NB.4 FDD for two NRS antenna ports
+(npdcch-Offset-USS-r13),,0

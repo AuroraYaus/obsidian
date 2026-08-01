@@ -1,0 +1,24 @@
+Parameter,Unit,Value,Comment
+,,Test 1,
+TDD Configuration,,TDDConf.3.1,
+SBFD configuration,,SBFD.2 FR2,A.3.41
+BWchannel,,"100: NPRB,c = 66",
+Data PRBs allocated,,66,
+PDSCH/PDCCH subcarrier spacing,kHz,120,
+PDSCH Reference Channel,,SR.3.2 TDD,A.3.1.1
+RMSI CORESET Reference Channel,,CR.3.1 TDD,A.3.1.2
+Dedicated CORESET Reference Channel,,CCR.3.1 TDD,A.3.1.3
+SSB Configuration,,SSB.34 FR2,A.3.10.2
+CSI-RS for tracking,,TRS.2.1 TDD,A.3.17.2
+CSI-RS configuration for BFD/CBD/RLM,,CSI-RS.3.2 TDD,A.3.14.2
+CSI-RS configuration for CSI reporting,,CSI-RS.3.1 TDD,A.3.14.2
+CSI reporting periodicity,slot,40,
+CSI reporting offset,slot,4,
+T310,ms,1000,
+N310,,2,
+T1,s,1,The UE shall be fully synchronized to cell 1 during T1
+T2,s,1.17,
+T3,s,0.98,
+T4,s,0,
+T5,s,0.39,
+D1,s,0.35,

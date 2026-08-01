@@ -1,0 +1,6 @@
+Frequency Range,SCS of SSB signals (kHz),SCS of uplink signals (kHz),Te_NTN,
+FR2-NTN,120,60,13*64*Tc,
+,,120,7.5*64*Tc,
+,240,60,13*64*Tc,
+,,120,7.5*64*Tc,
+"NOTE 1:Tc is the basic timing unit defined in TS 38.211 [6]NOTE 2:Te_NTN for 120 kHz UL SCS applies under all the following conditions:- LOS channel between UE and each GNSS satellite - The GNSS signal power level greater than or equal to the applicable value specified in Table 6.2-1 of TS 38.171- The GNSS satellite allocation is no less than the applicable value speicifed in Table 6.2-2 of TS 38.171- The velocity change within one second does not result in the position difference with respect to the projected position, based on the position and velocity obtained one second before, exceeding 10 meters.NOTE 3:The requirement with 120 kHz SCS for mobile VSAT served by NGSO applies only to UEs that indicate ‘mobile’ via UE capability ntn-VSAT-AntennaType-r19. The requirement applies when the interval between adjacent epoch times does not exceed 5.12 sec.",,,,

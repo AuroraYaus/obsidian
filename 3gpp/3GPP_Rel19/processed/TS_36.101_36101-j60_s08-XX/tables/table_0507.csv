@@ -1,0 +1,24 @@
+Parameter,,Unit,Cell 1,Cell 2
+Uplink downlink configuration,,,1,1
+Special subframe configuration,,,4,4
+Downlink power allocation,PDCCH_RAPHICH_RAOCNG_RA,dB,-3,-3
+,PCFICH_RBPDCCH_RBPHICH_RBOCNG_RB,dB,-3,-3
+at antenna port,,dBm/15kHz,-100.5 (Note 1),N/A
+,,dBm/15kHz,-98 (Note 2),N/A
+,,dBm/15kHz,-95.3 (Note 3),N/A
+,,dB,Reference Value in Table 8.4.2.2.3-2,1.5
+BWChannel,,MHz,10,10
+Subframe Configuration,,,Non-MBSFN,Non-MBSFN
+Time Offset between Cells,,μs,2.5 (synchronous cells),
+Cell Id,,,0,1
+ABS pattern (Note 4),,,N/A,0000010001 0000000001
+RLM/RRM Measurement Subframe Pattern(Note 5),,,0000000001 0000000001,N/A
+CSI Subframe Sets(Note 6),"CCSI,0",,0000010001 0000000001,N/A
+,"CCSI,1",,1100101000 1100111000,N/A
+Number of control OFDM symbols,,,3,3
+ACK/NACK feedback mode,,,Multiplexing,N/A
+PHICH Ng (Note 9),,,1,N/A
+PHICH duration,,,extended,N/A
+Unused RE-s and PRB-s,,,OCNG,OCNG
+Cyclic prefix,,,Normal,Normal
+"Note 1:This noise is applied in OFDM symbols #1, #2, #3, #5, #6, #8, #9, #10,#12, #13 of a subframe overlapping with the aggressor ABS.Note 2:This noise is applied in OFDM symbols #0, #4, #7, #11 of a subframe overlapping with the aggressor ABS.Note 3:This noise is applied in OFDM symbols of a subframe overlapping with aggressor non-ABSNote 4:ABS pattern as defined in [9]. PDCCH/PCFICH other than that associated with SIB1/Paging are transmitted in the serving cell subframe when the subframe is overlapped with the ABS subframe of aggressor cell.Note 5:Time-domain measurement resource restriction pattern for PCell measurements as defined in [7].Note 6:As configured according to the time-domain measurement resource restriction pattern for CSI measurements defined in [7].Note 7:Cell 1 is the serving cell. Cell 2 is the aggressor cell. The number of the CRS ports in Cell1 and Cell2 is the same.Note 8:SIB-1 will not be transmitted in Cell2 in the test.Note 9:According to Clause 6.9 in TS 36.211 [4]",,,,

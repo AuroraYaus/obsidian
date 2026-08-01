@@ -1,0 +1,68 @@
+Parameter,Config,Unit,Test 1,
+,,,Cell 1,Cell 2
+PRS ARFCN,"1,2,3,4",,freq1,Freq1
+BWchannel,1,MHz,"50: NRB,c = 270",
+,2,,"50: NRB,c = 270",
+,3,,"100: NRB,c = 273",
+,4,,"50: NRB,c = 270",
+Duplex mode,1,,FDD,
+,2,,TDD,
+,3,,TDD,
+,4,,HD-FDD,
+TDD configuration,1,,N/A,
+,2,,TDDConf.1.1,
+,3,,TDDConf.2.1,
+,4,,N/A,
+PDSCH Reference measurement channel,1,,SR.1.1 FDD,-
+,2,,SR.1.1 TDD,
+,3,,SR.2.1 TDD,
+,4,,SR.1.1 FDD,
+RMSI CORESET Reference Channel,1,,CR.1.1 FDD,-
+,2,,CR.1.1 TDD,-
+,3,,CR.2.1 TDD,-
+,4,,CR.1.1 FDD,
+Dedicated CORESET Reference Channel,1,,CCR.1.1 FDD,-
+,2,,CCR.1.1 TDD,-
+,3,,CCR.2.1 TDD,-
+,4,,CCR.1.1 FDD,-
+SSB configuration,1,,SSB.1 FR1,
+,2,,SSB.1 FR1,
+,3,,SSB.1 RedCap FR1,
+,4,,SSB.1 FR1,
+OCNG Patterns,"1,2,3,4",,OP.1,
+TRS configuration,1,,TRS.1.1 FDD,-
+,2,,TRS.1.1 TDD,
+,3,,TRS.1.2 TDD,
+,4,,TRS.1.1 FDD,
+Initial BWP Configuration,"1,2,3,4",,DLBWP.0.1ULBWP.0.1,
+Time offset with Cell 1,"1,4",s,-,3
+,"2,3",,-,3
+SMTC configuration,"1,4",,SMTC.2,
+,"2,3",,SMTC.1,
+PRS configuration,1,,PRS.1.3 FR1,
+,2,,PRS.1.3 FR1,
+,3,,PRS.2.3 FR1,
+,4,,PRS.1.3 FR1,
+PRS muting info,"1,2,3,4",,‘10’,‘01’
+Expected RSTD,"1, 2, 3, 4",s,N/A,3
+Expected RSTD uncertainty,"1, 2, 3, 4",s,N/A,5
+EPRE ratio of PSS to SSS,"1,2,3,4",dB,0,0
+EPRE ratio of PBCH DMRS to SSS,,,,
+EPRE ratio of PBCH to PBCH DMRS,,,,
+EPRE ratio of PDCCH DMRS to SSS,,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,,
+EPRE ratio of PDSCH DMRS to SSS,,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,,,
+EPRE ratio of OCNG DMRS to SSSNote 1,,,,
+EPRE ratio of OCNG to OCNG DMRS Note 1,,,,
+Note2,"1,2,4",dBm/ SCS,-98,
+,3,,-95,
+,"1,2,3,4",dB,-6,-13
+PRS-RSRPNote3,"1,2,4",dBm/SCS,-103.7,-109.9
+,3,,-100.7,-106.9
+IoNote3,"1,2,4",dBm/48.6MHz,-61.44,-61.44
+,3,dBm/98.28MHz,-58.6,-58.6
+,"1,2,3,4",dB,-5.7,-11.9
+Propagation condition,"1,2,3,4",-,AWGN,
+Antenna configuration,"1,2,3,4",,1x2,
+NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4:RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.,,,,

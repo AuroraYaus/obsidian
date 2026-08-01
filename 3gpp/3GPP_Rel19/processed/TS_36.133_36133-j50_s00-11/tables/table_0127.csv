@@ -1,0 +1,5 @@
+Positioning subframe configuration period,Number of NPRS positioning occasions,
+,f1 Note1,f1 and f2 Note2
+160 ms,16*,32*
+>160 ms,8*,16*
+"Note 1:When only intra-frequency RSTD measurements are performed over cells belonging to the serving carrier frequency f1.Note 2:When intra-frequency RSTD and inter-frequency RSTD measurements are performed over cells belonging to the serving carrier frequency f1 and one inter-frequency carrier frequency f2, respectively.",,

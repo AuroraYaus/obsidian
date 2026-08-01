@@ -1,0 +1,12 @@
+Parameter,Unit,Test 1,,Test 2,,Test 3,
+DL timeslot number,,0,,DwPTS,,0,DwPTS
+UTRA RF Channel number Note2,,Channel 2,,Channel 2,,Channel 2,
+PCCPCH_Ec/Ior,dB,-3,,-3,,-3,
+DwPCH_Ec/Ior,dB,,0,,0,,0
+OCNS_Ec/Ior,dB,-3,,-3,,-3,
+Ioc,dBm/1.28MHz,-54.1,,-75.2,,-97,
+Îor/Ioc,dB,2,,5,,0,
+PCCPCH RSCP Note1,dBm,-55.1,,-73.2,,-100,
+Io Note1,dBm/1.28MHz,-50,,-69,,-94,
+Propagation condition,,AWGN,,,,,
+"Note 1:PCCPCH RSCP and Io levels have been calculated from other parameters for information purposes. They are not settable parameters themselves.Note 2:In the case of multi-frequency network of 1.28 Mcps TDD, the UTRA RF Channel Number can be set for the primary frequency in this test.",,,,,,,

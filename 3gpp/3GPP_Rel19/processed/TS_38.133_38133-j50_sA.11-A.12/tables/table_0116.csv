@@ -1,0 +1,8 @@
+Parameter,Unit,Value,Comment
+NR RF Channel Number,,1,One NR radio channel is used for this test
+Active Cell,,Cell 1,Cell on RF channel number 1.
+CP length,,Normal,
+DL CCA model,,As specified in clause A.3.26.2.1,
+UL CCA model,,As specified in clause A.3.26.2.2,
+DRX,,OFF,
+T1,s,0.2,

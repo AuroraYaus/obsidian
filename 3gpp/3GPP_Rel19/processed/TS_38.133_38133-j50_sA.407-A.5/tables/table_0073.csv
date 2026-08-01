@@ -1,0 +1,13 @@
+Parameter,,Unit,Test-1,Comments
+AoA setup,,,Setup 1,As defined in A.3.15.1
+Assumption for UE beamsNote 2,,,Rough,
+SSB with,Es Note1,dBm/SCS,-80.6,Power of SSB with index 0 is set to be above configured msgA-RSRP-ThresholdSSB
+index 0,SSB_RP,dBm/SCS,-80.6,
+,Es/IotBB,dB,21.09,
+,Io,dBm/95.04 MHz,-56.01,Io in symbols containing SSB index 0
+SSB with,Es Note1,dBm/SCS,-95.0,Power of SSB with index 1 is set to be below configured msgA-RSRP-ThresholdSSB
+index 1,SSB_RP,dBm/SCS,-95.0,
+,Es/IotBB,dB,6.69,
+,Io,dBm/95.04 MHz,-70.41,Io in symbols containing SSB index 1
+Propagation Condition,,-,No external noise (Note 3),
+"NOTE 1:No artificial noise is applied in this test.NOTE 2:Information about types of UE beam is given in B.2.1.3, and does not limit UE implementation or test system implementationNOTE 3: The downlink connection between the System Simulator and the UE is without Additive White Gaussian Noise, and has no fading or multipath effects as specified in TS 38.521-2 B.0 [38].",,,,

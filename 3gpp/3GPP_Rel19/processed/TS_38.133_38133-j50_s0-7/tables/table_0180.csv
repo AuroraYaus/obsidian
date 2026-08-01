@@ -1,0 +1,4 @@
+Measurement,FR1
+RSRP1,"(T1 – min(640 ms, M1* T)) ≤ T1’ ≤ (T1 + min(640 ms, M1* T))"
+RSRP2,"(T2 – min(640 ms, M1* T)) ≤ T2’ ≤ T2"
+NOTE 1:T is determined according to clause 7.1 in [1].,

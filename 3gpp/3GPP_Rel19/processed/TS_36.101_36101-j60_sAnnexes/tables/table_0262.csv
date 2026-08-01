@@ -1,0 +1,25 @@
+Parameter,Unit,
+Reference channel,,R.sTTI.1 FDD
+Channel bandwidth,MHz,10
+Allocated resource blocks,,50
+Allocated subframes per Radio Frame,,8
+Modulation,,16QAM
+Target Coding Rate,,1/2
+Information Bit Payload,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",,
+Slot index 0,Bits,11448
+Slot index 1,Bits,14112
+"For Sub-Frames 0,5",,N/A
+Number of Code Blocks,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",,
+Slot index 0,,2
+Slot index 1,,4
+"For Sub-Frame 0,5",,N/A
+Binary Channel Bits,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",,
+Slot index 0,Bits,22400
+Slot index 1,Bits,28288
+"For Sub-Frame 0,5",,N/A
+Max. Throughput averaged over 1 frame,Mbps,20.448
+UE Category,,≥2
+"Note 1: For an information bit payload first transmitted at slot 0, any retransmission happens only on slot 0. For an information bit payload first transmitted at slot 1, any retransmission happens on only slot 1.",,

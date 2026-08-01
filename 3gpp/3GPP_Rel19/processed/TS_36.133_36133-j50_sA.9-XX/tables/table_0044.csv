@@ -1,0 +1,53 @@
+Parameter,,Unit,Test 1,,
+,,,Cell 1,Cell 2,Cell 3
+E-UTRA RF Channel Number,,,1,2,
+BWchannel,,MHz,10,,
+Special subframe configurationNote1,,,6,,
+Uplink/downlink configurationNote1,,,1,,
+Timing offset to Cell 1,,s,-,0,3
+Time alignment error between cell 2 and cell 1,,,-,Time alignment error as specified in 3GPP TS 36.104 [30] clause 6.5.3.1,-
+DMTC period,,ms,160,160,
+DMTC period offset,,ms,0,10,
+Discovery signal occasion duration,,ms,2,2,
+CSI-RS resource configuration,,,2,4,6
+CSI-RS periodicity,,ms,10,10,10
+CSI-RS subframe offset,,ms,0,0,0
+CSI-RS individual offset[2],,dB,0,0,0
+CSI-RS muting,,,Enable,Enable,Enable
+Measurement bandwidth,,,22—27,,
+PDSCH Reference measurement channel defined in A.3.1.1.2,,,R.0 TDD,R.0 TDD,-
+PDSCH allocation,,,13—36,13—36,-
+PDCCH/PCFICH/PHICH Reference measurement channel defined in A.3.1.2.2,,,R.6 TDD,,
+OCNG Patterns defined in A.3.2.2.1 (OP.1 TDD) and A.3.2.2.2 (OP.2 TDD),,,OP.1 TDD,OP.1 TDD,OP.2 TDD
+PBCH_RA,,dB,0,0,0
+PBCH_RB,,,,,
+PSS_RA,,,,,
+SSS_RA,,,,,
+PCFICH_RB,,,,,
+PHICH_RA,,,,,
+PHICH_RB,,,,,
+PDCCH_RA,,,,,
+PDCCH_RB,,,,,
+PDSCH_RA,,,,,
+PDSCH_RB,,,,,
+OCNG_RANote2,,,,,
+OCNG_RBNote2,,,,,
+p-C-r10[2],,dB,-6,-6,-6
+Note3,Bands TDD_A,dBm/15 kHz,-117,( for Channel 1 +1dB),
+,Bands TDD_C,,-116,,
+,Bands TDD_E,,-115,,
+CRS,,dB,-4,0.46,-5.76
+CSI-RS,,dB,2,6.46,0.24
+RSRPNote4,Bands TDD_A,dBm/15 kHz,-121,(RSRP for Cell 1 +8dB),(RSRP for Cell 1 +4dB)
+,Bands TDD_C,,-120,,
+,Bands TDD_E,,-119,,
+CSI-RSRPNote4,Bands TDD_A,dBm/15 kHz,-115,(CSI-RSRP for Cell 1 +8dB),(CSI-RSRP for Cell 1 +4dB)
+,Bands TDD_C,,-114,,
+,Bands TDD_E,,-113,,
+IoNote4,Bands TDD_A,dBm/9 MHz,-87.76,(Io for Channel 1 +5.33dB),
+,Bands TDD_C,,-86.76,,
+,Bands TDD_E,,-85.76,,
+CRS,,dB,-4,3,-1
+CSI-RS,,dB,2,9,5
+Propagation condition,,-,AWGN,,
+"Note 1:For special subframe and uplink-downlink configurations see Tables 4.2-1 and 4.2-2 in TS 36.211.Note 2:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 3:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 4:RSRP, CSI-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io levels are calculated in CRS symbols of measurement subframe.Note 5:RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.Note 6: The selection of the bands for testing depends on the configuration of the carrier aggregation supported by the UEs.Note 7:This test verifies the RRM requirement which is independent of channel bandwidth and is performed according to the principle defined in section A.3.6.1.Note 8:E-UTRA operating band groups are as defined in Section 3.5.Note 9:DMTC configurations are provided to the UE in the measDS-Config (in TS36.331) before the beginning of the test",,,,,

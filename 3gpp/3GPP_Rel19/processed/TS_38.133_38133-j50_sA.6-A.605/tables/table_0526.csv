@@ -1,0 +1,18 @@
+Parameter,,Unit,Value,Comment
+RF Channel Number,,,"1, 2",Two radio channels are used for this test. One for PCell and second for NR PSCell
+Initial,Active PCell,,Cell 1,PCell on RF channel number 1.
+,Neighbour cell,,Cell2,Neighbour cell on RF channel number 1.
+Final,Active PCell,,Cell 1,PCell on RF channel number 1.
+Condition,Neighbour Cell,,Cell2,PSCell released on RF channel number 1.
+A4,Hysteresis,dB,0,Hysteresis for event A4
+,Threshold RSRP,dBm,-118,Threshold for event A4
+,Time to Trigger,s,0,Time to trigger for event A4
+DRX,,,OFF,Continuous monitoring of primary cell
+Measurement gap pattern Id,,,0,Gaps are configured before T2 and released before T3.
+PRACH configuration on cell2,,,FR1 PRACH configuration 1,Captured in clause A.3.8.2.1
+Cell-individual offset for cells on RF channel number 1,,dB,0,Individual offset for cells on primary component carrier.
+Cell-individual offset for cells on RF channel number 2,,dB,0,Individual offset for cells on carrier frequency of cell2.
+T1,,s,5,During this time the PCell is known and Cell 2 is unknown.
+T2,,s,7,During this time Cell 2 meets the addition condition and UE adds this PSCell.
+T3,,s,1,During this time the UE sends CSI reports for Cell 2. And the test system shall send an RRC message instructing the UE to release the PSCell.
+T4,,s,1,During this time the UE releases the Cell 2.

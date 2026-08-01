@@ -1,0 +1,10 @@
+Accuracy,,Conditions,,,,
+Normal condition,Extreme condition,Io Note 1 range,,,,
+,,NR operating band groups Note 2,Minimum Io,,,Maximum Io
+dB,dB,,dBm / SCSSSB,,dBm/BWChannel,dBm/BWChannel
+,,,SCSSSB = 15 kHz,SCSSSB = 30 kHz,,
+[3.5],[6.5],NR_CCA_FR1_I,-117,-114,N/A,-70
+,,NR_CCA_FR1_J,-116.5,-113.5,,
+[5.5],[8.5],NR_CCA_FR1_I,N/A,N/A,-70,-50
+,,NR_CCA_FR1_J,,,,
+NOTE 1:Io is assumed to have constant EPRE across the bandwidth.NOTE 2:NR operating band groups are as defined in clause 3.5.2.,,,,,,

@@ -1,0 +1,4 @@
+TTI pattern,TREF,Teval,Teval with frequency hopping
+Subframe,1 subframe,1 slot,1 slot
+Subslot,2 OS,2 OS,"Min(Tno_hopping, 2OS)"
+Slot,7 OS,7 OS,"Min(Tno_hopping, 7OS)"

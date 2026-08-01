@@ -1,0 +1,14 @@
+Parameter,Unit,Value
+SSS transmit power,W,Test specific
+EPRE ratio of PSS to SSS,dB,0
+EPRE ratio of PBCH to SSS,dB,0
+EPRE ratio of PBCH to PBCH DMRS,dB,0
+EPRE ratio of PDCCH to SSS,dB,0
+EPRE ratio of PDCCH to PDCCH DMRS,dB,0
+EPRE ratio of PDSCH to SSS,dB,0
+EPRE ratio of PDSCH to PDSCH DMRS (Note 1),dB,-3
+EPRE ratio of CSI-RS to SSS,dB,0
+EPRE ratio of PTRS to PDSCH,dB,Test specific
+EPRE ratio of OCNG DMRS to SSS,dB,0
+EPRE ratio of OCNG to OCNG DMRS (Note 1),dB,0
+"NOTE 1:No boosting is applied to any of the channels except PDSCH DMRS. For PDSCH DMRS, 3 dB power boosting is applied assuming DMRS Type 1 configuration when DMRS and PDSCH are TDM'ed and only half of the DMRS REs are occupied.NOTE 2:Number of DMRS CDM groups without data for PDSCH DMRS configuration for OCNG is set to 1.",,

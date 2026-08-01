@@ -1,0 +1,16 @@
+Parameter,Angle of arrival,NR operating bands,"Minimum CSI_RP Note 2, Note 3",,,,,CSI-RS Ês/Iot
+,,,dBm / SCSCSI-RS,,,,,dB
+,,,SCSCSI-RS = 120 kHz,,,,SCSCSI-RS = 60 kHz,
+,,,UE power class,,,,UE power class,
+,,,1,2,3,4,"1, 2, 3, 4",
+Conditions,Rx Beam Peak,n257,-108.3,-111.8,-110.1,-125.8+Y4,(Value for SCSCSI-RS = 120 kHz) - 3 dB,≥-4
+,,n258,-108.3,-111.8,-110.1,-125.8+Y4,,
+,,n259,,,-106.5,-122.7+Y4,,
+,,n260,-105.3,,-107.5,-123.8+Y4,,
+,,n261,-108.3,-111.8,-110.1,-125.8+Y4,,
+,Spherical coverage Note 1,n257,-100.3,-100.8,-99.2,-116.8+Z4,(Value for SCSCSI-RS = 120 kHz) - 3 dB,≥-4
+,,n258,-100.3,-100.8,-99.2,-116.8+Z4,,
+,,n259,,,-93.7,-113.7+Z4,,
+,,n260,-97.3,,-94.9,-111.8+Z4,,
+,,n261,-100.3,-100.8,-99.2,-116.8+Z4,,
+"NOTE 1:Values based on EIS spherical coverage as defined in clause 7.3.4 of TS 38.101-2 [19]. Side condition applies for directions in which EIS spherical coverage requirement is met.NOTE 2:Values specified at the Reference point to give minimum CSI-RS Ês/Iot, with no applied noise.NOTE 3:For UEs that support multiple FR2 bands, Rx Beam Peak values are increased by ∆MBP,n and Spherical coverage values are increased by ∆MBS,n, the UE multi-band relaxation factor in dB specified in clause 6.2.1 of TS 38.101-2 [19].",,,,,,,,

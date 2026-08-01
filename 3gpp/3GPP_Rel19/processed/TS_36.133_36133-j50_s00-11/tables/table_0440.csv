@@ -1,0 +1,7 @@
+Gap pattern ID,DRX cycle length (s),Tmeasure_intra_UE cat M1_NC (s) (DRX cycles)
+0,<0.128,0.48 * Kintra_M1_NC *  KRSTD_M1_NC (Note1)
+,0.128≤DRX-cycle≤2.56,Note 2 (5 * Kintra_M1_NC *  KRSTD_M1_NC)
+1,<0.256,0.960 * Kintra_M1_NC *  KRSTD_M1_NC (Note 1)
+,0.256≤DRX-cycle≤2.56,Note 2 (*Kintra_M1_NC *  KRSTD_M1_NC)
+N/A,N/A,"Max(DRX cycle length, TRSS ) x 3(Note 3)"
+Note 1:Number of DRX cycle depends upon the DRX cycle in useNote 2:Time depends upon the DRX cycle in use Note 3It is the measurement period for RSRP measured on RSS signals defined in RSS-Config [2].,,

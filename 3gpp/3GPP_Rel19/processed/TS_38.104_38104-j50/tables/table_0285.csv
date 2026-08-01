@@ -1,0 +1,10 @@
+Number of TX antennas (Note 1),Number of RX antennas (Note 1),Cyclic prefix,Propagation conditions and correlation matrix (Annex G),,INR Set,Fraction of  maximum throughput,FRC(Annex A),Additional DM-RS position,SNR(dB)
+,,,Tested signal,Interferer,,,,,
+1,2,Normal,TDLC300-100 Low,TDLC300-100 Low,Set 1*,70%,G-FR1-A4-10,pos1,14.3
+,,,TDLA30-10 Low,,Set 2,,,,14.7
+,4,,TDLC300-100 Low,,Set 1*,,,,10.4
+,,,TDLA30-10 Low,,Set 2,,,,11.1
+,8,,TDLC300-100 Low,,Set 1*,,,,6.6
+,,,TDLA30-10 Low,,Set 2,,,,6.8
+Note*:Not applicable for Local Area BS.,,,,,,,,,
+Note 1:Antenna configuration applies for each of the tested signal and interferers.Note 2:The propagation conditions for the tested signal and interferers are statistically independent.,,,,,,,,,

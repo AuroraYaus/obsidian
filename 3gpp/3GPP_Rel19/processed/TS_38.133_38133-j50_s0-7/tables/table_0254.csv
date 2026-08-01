@@ -1,0 +1,6 @@
+Sub-carrier spacing in E-UTRA PCell (kHz),UL Sub-carrier spacing for data in PSCell (kHz),Maximum uplink transmission timing difference (µs)
+15,15,500
+15,30,250
+15,60,125
+15,120Note1,62.5
+"NOTE 1:For E-UTRA FDD-NR FDD intra-band EN-DC, for which the requirement is defined in clause 7.5.3 and this Table 7.5.2-1 is also applicable, the scenario with 120 kHz PSCell does not exist.",,

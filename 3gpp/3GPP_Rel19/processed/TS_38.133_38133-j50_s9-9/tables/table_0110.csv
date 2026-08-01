@@ -1,0 +1,4 @@
+DRX cycle,TSSB_measurement_period_intra
+No DRX,Mmeas_period with_ncsg x KNCSG x measCycleSCellx CSSFintra
+DRX cycle≤ 320 ms,"Mmeas_period with_ncsg x KNCSG x measCycleSCell, 1.5xDRX cycle) x CSSFintra"
+DRX cycle> 320 ms,"Mmeas_period with_ncsg x KNCSG x measCycleSCell, DRX cycle) x CSSFintra"

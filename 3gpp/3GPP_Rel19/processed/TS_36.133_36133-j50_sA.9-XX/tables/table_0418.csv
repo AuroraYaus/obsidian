@@ -1,0 +1,7 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,-,"1, 2, 3",RF channel 1 is non-V2X sidelink carrierRF channel 2 and 3 are V2X sidelink carrier
+Channel Bandwidth (BWchannel),MHz,10,
+Active cell,-,Cell 1,PCell on RF channel number 1
+CP length of Cell 1,-,Normal,
+T1,s,5,
+T2,s,5,

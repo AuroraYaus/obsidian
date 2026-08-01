@@ -1,0 +1,15 @@
+Accuracy,,Conditions,,,,
+Normal condition,Extreme condition,Ês/Iot,Io Note 2 range,,,
+,,,E-UTRA operating band groups Note 4,Minimum Io,,Maximum Io
+dB,dB,dB,,"dBm/15kHz Note 1, 3",dBm/BWChannel,dBm/BWChannel
+4.5,9,-4 dB,"FDD_A, TDD_A",-121,N/A,-70
+,,,"FDD_B1, FDD_B2",-120.5,N/A,-70
+,,,"FDD_C, TDD_C",-120,N/A,-70
+,,,FDD_D,-119.5,N/A,-70
+,,,"FDD_E, TDD_E",-119,N/A,-70
+,,,FDD_F,-118.5,N/A,-70
+,,,FDD_G,-118,N/A,-70
+,,,FDD_H,-117.5,N/A,-70
+,,,FDD_N,-114.5,N/A,-70
+8,11,-4 dB,"FDD_A, TDD_A, FDD_B1, FDD_B2, FDD_C, TDD_C, FDD_D, FDD_E, TDD_E, FDD_F, FDD_G, FDD_H, FDD_N",N/A,-70,-50
+"NOTE 1:This minimum Io condition is expressed as the average Io per RE over all REs in that symbol.NOTE 2:Io is defined in subframes indicated by the time domain measurement resource restriction pattern configured for performing RSRP measurements of this cell. The Io range defined by the minimum and the maximum Io levels applies to CRS and non-CRS symbols. Io may be different in different symbols within a subframe.NOTE 3:The condition level is increased by ∆>0, when applicable, as described in Sections B.4.2 and B.4.3.NOTE 4:E-UTRA operating band groups are as defined in Section 3.5.",,,,,,

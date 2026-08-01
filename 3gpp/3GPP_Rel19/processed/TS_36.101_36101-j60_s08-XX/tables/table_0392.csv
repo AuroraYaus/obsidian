@@ -1,0 +1,23 @@
+parameter,,Unit,TP 1,TP 2
+Downlink power allocation,,dB,0,0
+,,dB,0 (Note 1),0
+,,dB,-3,-3
+Beamforming model,,,N/A,As specified in clause B.4.2
+Cell-specific reference signals,,,"Antenna ports 0,1","Antenna ports 0,1"
+CSI reference signals 0,,,N/A,"Antenna ports {15,16}"
+CSI-RS 0 periodicity and subframe offset TCSI-RS / ∆CSI-RS,,Subframes,N/A,5 / 2
+CSI reference signal 0 configuration,,,N/A,0
+Zero-power CSI-RS 0 configurationICSI-RS /ZeroPower CSI-RS bitmap,,Subframes/bitmap,N/A,2/0010000000000000
+,,dB,Reference point in Table 8.3.1.3.3-2 + 4dB,Reference Value in Table 8.3.1.3.3-2
+at antenna port,,dBm/15kHz,-98,-98
+BWChannel,,MHz,10,10
+Cyclic Prefix,,,Normal,Normal
+Cell Id,,,0,126
+Number of control OFDM symbols,,,1,2
+Timing offset between TPs,,us,N/A,0
+Frequency offset between TPs,,Hz,N/A,200
+"qcl-Operation, ‘PDSCH RE Mapping and Quasi-Co-Location Indicator’",,,"Type B, ‘00’",
+PDSCH transmission mode,,,Blank,10
+Number of allocated resource block,,,N/A,50
+Symbols for unused PRBs,,,N/A,OCNG(Note2)
+"Note 1:Note 2:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated.",,,,

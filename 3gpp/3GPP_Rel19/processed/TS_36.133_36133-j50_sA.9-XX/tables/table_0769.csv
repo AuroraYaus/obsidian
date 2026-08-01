@@ -1,0 +1,44 @@
+Parameter,,Unit,Test configuration,Test 1,,Test 2,,Test 3,
+,,,,Cell 1,Cell 2,Cell 1,Cell 2,Cell 1,Cell 2
+E-UTRA RF Channel Number,,,"1, 2",1,,1,,1,
+BWchannel,,MHz,"1, 2",1.4,,1.4,,1.4,
+Satellite information,,,1,SSC.1,NSC.3,SSC.1,NSC.3,SSC.1,NSC.3
+,,,2,SSC.2,NSC.4,SSC.2,NSC.4,SSC.2,NSC.4
+PDSCH Reference measurement channel,,,"1, 2",R.48 FDD,-,R.48 FDD,-,R.48 FDD,-
+PDSCH allocation,,,"1, 2",Follows R.48 FDD,-,Follows R.48 FDD,-,Follows R.48 FDD,-
+MPDCCH Reference measurement channel,,,"1, 2",R.46 FDD,,R.46 FDD,,R.46 FDD,
+OCNG Patterns,,,"1, 2",OP.7 FDD,OP.7 FDD,OP.7 FDD,OP.7 FDD,OP.7 FDD,OP.7 FDD
+PBCH_RA,,dB,"1, 2",0,0,0,0,0,0
+PBCH_RB,,,,,,,,,
+PSS_RA,,,,,,,,,
+SSS_RA,,,,,,,,,
+PCFICH_RB,,,,,,,,,
+PHICH_RA,,,,,,,,,
+PHICH_RB,,,,,,,,,
+MPDCCH_RA,,,,,,,,,
+MPDCCH_RB,,,,,,,,,
+PDSCH_RA,,,,,,,,,
+PDSCH_RB,,,,,,,,,
+OCNG_RANote1,,,,,,,,,
+OCNG_RBNote1,,,,,,,,,
+Note2,"Bands FDD-M1_SAB_A, FDD-M1_SAB_B",dBm/15 kHz,"1, 2",-106,,-86,,-116,
+,,dB,"1, 2",6,1,6,1,3,-1
+,,dB,"1, 2",2.5,-6,2.5,-6,0.46,-5.76
+RSRPNote3,"Bands FDD-M1_SAB_A, FDD-M1_SAB_B",dBm/15 kHz,"1, 2",-100,-105,-80,-85,-113,-117
+,,,,,,,,-112.5,-116.5
+,,,,,,,,-112,-116
+,,,,,,,,-111.5,-115.5
+,,,,,,,,-111,-115
+,,,,,,,,-110,-114
+,,,,,,,,-109.5,-113.5
+IoNote3,"FDD-M1_SAB_A, FDD-M1_SAB_B",dBm/9 MHz,"1, 2",-70.27,,-50.27,,-82.43,
+,,,,,,,,-81.93,
+,,,,,,,,-81.43,
+,,,,,,,,-80.93,
+,,,,,,,,-80.43,
+,,,,,,,,-79.43,
+,,,,,,,,-78.93,
+Propagation condition,,-,"1, 2",AWGN,,AWGN,,AWGN,
+Antenna Configuration,,,"1, 2",1x1,,1x1,,1x1,
+Timing offset to Cell 1,,ms,"1, 2",-,3,-,3,-,3
+"Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:Es/Iot, RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:E-UTRA operating band groups are as defined in Section 3.5. Note 5:For Band 74, the tests shall be performed with the carrier frequency of the assigned E-UTRA channel bandwidth within 1475.9-1510.9 MHz.",,,,,,,,,

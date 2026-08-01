@@ -1,0 +1,7 @@
+Rx Parameter,Units,V2X Bandwidth Class,,,,
+,,B,C/ C1,D,E,F
+"Pw in Transmission Bandwidth Configuration, per CC",dBm,REFSENS + V2X Bandwidth Class specific value below,,,,
+,,9,12,,,
+BWInterferer,MHz,10,10,,,
+"FIoffset, case 1",MHz,15,15,,,
+"FIoffset, case 2",MHz,25,25,,,

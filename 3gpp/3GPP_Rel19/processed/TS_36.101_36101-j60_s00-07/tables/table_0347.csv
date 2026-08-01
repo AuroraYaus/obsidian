@@ -1,0 +1,19 @@
+E-UTRA Band / Channel bandwidth of the affected DL band / NRB / Duplex mode,,,,,,,,
+EUTRA CA Configuration,UL band,1.4 MHz,3 MHz,5 MHz,10 MHz,15 MHz,20 MHz,Duplex mode
+"CA_1A-3A1, 2",1,,,25,25,25,25,FDD
+"CA_1A-3A1, 3",1,,,25,45,45,45,FDD
+"CA_1A-1A-3A 1, 2",1,,,25,25,25,25,FDD
+"CA_1A-1A-3A 1, 3",1,,,25,45,45,45,FDD
+"CA_1A-1A-3A-3A1, 2",1,,,25,25,25,25,FDD
+"CA_1A-1A-3A-3A1, 3",1,,,25,45,45,45,FDD
+"CA_1A-3C1, 2",1,,,25,25,25,25,FDD
+"CA_1A-3C1, 3",1,,,25,45,45,45,FDD
+"CA_1A-1A-3C1, 2",1,,,25,25,25,25,FDD
+"CA_1A-1A-3C1, 3",1,,,25,45,45,45,FDD
+"CA_1C-3A1, 2",1,,,25,25,25,25,FDD
+"CA_1C-3A1, 3",1,,,25,45,45,45,FDD
+CA_12A-71A,71,,,20,20,,,FDD
+CA_12A-71A,12,,,20,20,,,FDD
+CA_18A-28A4,18,,,18,18,,,FDD
+CA_19A-28A4,19,,,18,18,,,FDD
+NOTE 1:refers to the UL resource blocks shall be located as close as possible to the downlink channel in Band 3 but confined within the transmission bandwidth configuration for the channel bandwidth (Table 5.6-1) in the uplink channel in Band 1.NOTE 2:UL allocation when the separation between the lower edge of the uplink channel in Band 1 and the upper edge of the downlink channel in Band 3 is < 60 MHzNOTE 3:UL allocation when the separation between the lower edge of the uplink channel in Band 1 and the upper edge of the downlink channel in Band 3 is ≥ 60 MHz.NOTE 4:refers to the UL resource blocks shall be located as close as possible to the downlink channel in Band 28 but confined within the transmission bandwidth configuration for the channel bandwidth (Table 5.6-1).,,,,,,,,

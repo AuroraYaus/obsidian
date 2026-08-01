@@ -1,0 +1,25 @@
+Parameter,Unit,,Value
+Reference channel,,R.1 HD-FDD,R.2 HD-FDD
+Channel bandwidth,MHz,10,10
+Number of transmitter antennas,,1,2
+Allocated resource blocks (Note 4),,24,24
+Allocated subframes per Radio Frame,,10,10
+Modulation,,QPSK,QPSK
+Target Coding Rate,,1/10,1/10
+Information Bit Payload,,,
+"For Sub-Frames 4, 9,",Bits,0,0
+For Sub-Frame 5 (Note 7),Bits,424,424
+For Sub-Frame 0 (Note 7),Bits,648,648
+"For Sub-Frame 1, 2, 3, 6, 7, 8",Bits,0,0
+Number of Code Blocks per Sub-Frame(Note 5),,,
+"For Sub-Frames 4, 9",,0,0
+For Sub-Frame 5,,1,1
+For Sub-Frame 0,,1,1
+"For Sub-Frame 1, 2, 3, 6, 7, 8",,0,0
+Binary Channel Bits Per Sub-Frame,,,
+"For Sub-Frames 4, 9",Bits,0,0
+For Sub-Frame 5,Bits,6336,6048
+For Sub-Frame 0,Bits,5784,5520
+"For Sub-Frame 1, 2, 3, 6, 7, 8",Bits,0,0
+Max. Throughput averaged over 1 frame,kbps,-,-
+"Note 1:2 symbols allocated to PDCCH for 10 MHz channel BW. 4 symbols allocated to PDCCH for 1.4 MHz channel BW. 3 OFDM symbols allocated to PDCCH for 5 MHz channel BW.Note 2:Reference signal, synchronization signals and PBCH allocated as defined in 3GPP TS 36.211 [16].Note 3:If necessary the information bit payload size can be adjusted to facilitate the test implementation. The payload sizes are defined in 3GPP TS 36.213 [3].Note 4:Allocation is located in the middle of bandwidth.Note 5:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)Note 6:PDSCH allocation applies only to subframes not configured as PRS subframes.Note 7: Sub-frame 0 or sub-frame 5 is randomly scheduled in downlink.",,,

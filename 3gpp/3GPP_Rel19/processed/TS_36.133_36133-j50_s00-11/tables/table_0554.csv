@@ -1,0 +1,6 @@
+Attribute,CEModeA
+DCI format,6-1A
+Starting OFDM symbols,4; Bandwidth = 1.4MHz
+MPDCCH repetition level Note1,1
+M-PDCCH Transmission type,Distributed
+Note 1:Not applicable if repetition number in DL quality information is larger than 1.Note 2:Not applicable if repetition number in DL quality information equals to 1.,

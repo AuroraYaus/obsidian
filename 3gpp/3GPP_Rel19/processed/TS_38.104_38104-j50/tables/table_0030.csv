@@ -1,0 +1,71 @@
+NR operating band,SS Block SCS,SS Block pattern(NOTE 1),Range of GSCN(First – <Step size> – Last)
+n1,15 kHz,Case A,5279 – <1> – 5419
+n2,15 kHz,Case A,4829 – <1> – 4969
+n3,15 kHz,Case A,4517 – <1> – 4693
+n5,15 kHz,Case A,2177 – <1> – 2230
+,30 kHz,Case B,2183 – <1> – 2224
+n7,15 kHz,Case A,6554 – <1> – 6718
+n8,15 kHz,Case A,2318 – <1> – 2395
+n12,15 kHz,Case A,1828 – <1> – 1858
+n13,15 kHz,Case A,1871 – <1> – 1885
+n14,15 kHz,Case A,1901 – <1> – 1915
+n18,15 kHz,Case A,2156 – <1> – 2182
+n20,15 kHz,Case A,1982 – <1> – 2047
+n24,15 kHz,Case A,3818 – <1> – 3892
+,30 kHz,Case B,3824 – <1> – 3886
+n25,15 kHz,Case A,4829 – <1> – 4981
+n26,15 kHz,Case A,2153 – <1> – 2230
+n28,15 kHz,Case A,1901 – <1> – 2002
+n29,15 kHz,Case A,1798 – <1> – 1813
+n30,15 kHz,Case A,5879 – <1> – 5893
+n31,15 kHz,Case A,1161 – <1> – 1162
+n34,15 kHz,Case A,NOTE 3
+,30 kHz,Case C,5036 – <1> – 5050
+n38,15 kHz,Case A,NOTE 2
+,30 kHz,Case C,6437 – <1> – 6538
+n39,15 kHz,Case A,NOTE 4
+,30 kHz,Case C,4712 – <1> – 4789
+n40,30 kHz,Case C,5762 – <1> – 5989
+n41,15 kHz,Case A,6246 – <3> – 6717
+,30 kHz,Case C,6252 – <3> – 6714
+n465,30 kHz,Case C,8993 – <1> – 9530
+n48,30 kHz,Case C,7884 – <1> – 7982
+n50,30 kHz,Case C,3590 – <1> – 3781
+n51,15 kHz,Case A,3572 – <1> – 3574
+n53,15 kHz,Case A,6215 – <1> – 6232
+,30 kHz,Case C,6221 – <1> – 6226
+n54,15 kHz,Case A,4181 - <1> - 4182
+n65,15 kHz,Case A,5279 – <1> – 5494
+n66,15 kHz,Case A,5279 – <1> – 5494
+,30 kHz,Case B,5285 – <1> – 5488
+n67,15 kHz,Case A,1850 – <1> – 1888
+n68,15 kHz,Case A,1888 – <1> – 1951
+n70,15 kHz,Case A,4993 – <1> – 5044
+n71,15 kHz,Case A,1547 – <1> – 1624
+n72,15 kHz,Case A,1157 – <1> – 1159
+n74,15 kHz,Case A,3692 – <1> – 3790
+n75,15 kHz,Case A,3584 – <1> – 3787
+n76,15 kHz,Case A,3572 – <1> – 3574
+n77,30 kHz,Case C,7711 – <1> – 8329
+n78,30 kHz,Case C,7711 – <1> – 8051
+n79,30 kHz,Case C,8480 – <16> – 88807
+,,,8475 – <1> – 88848
+n85,15 kHz,Case A,1826 – <1> – 1858
+n87,15 kHz,Case A,1055 – <1> – 1057
+n88,15 kHz,Case A,1061 – <1> – 1062
+n90,15 kHz,Case A,6246 – <1> – 671710
+,15 kHz,Case A,6245 – <1> – 671811
+,30 kHz,Case C,6252 – <1> – 6714
+n91,15 kHz,Case A,3572 – <1> – 3574
+n92,15 kHz,Case A,3584 – <1> – 3787
+n93,15 kHz,Case A,3572 – <1> – 3574
+n94,15 kHz,Case A,3584 – <1> – 3787
+n966,30 kHz,Case C,9531 – <1> – 10363
+n100,15 kHz,Case A,"2303 – <1> – 2307, 4163812"
+n101,15 kHz,Case A,4754 – <1> – 4768
+,30 kHz,Case C,4760 – <1> – 4764
+n1029,30 kHz,Case C,9531 – <1> – 9877
+n104,30 kHz,Case C,9882 – <7> – 10358
+n105,15 kHz,Case A,1535 – <1> – 1624
+n109,15 kHz,Case A,3584 – <1> – 3787
+"NOTE 1:SS Block pattern is defined in clause 4.1 in TS 38.213 [10].NOTE 2:The applicable SS raster entries are GSCN = {6432, 6443, 6457, 6468, 6479, 6493, 6507, 6518, 6532, 6543}NOTE 3:The applicable SS raster entries are GSCN = {5032, 5043, 5054}NOTE 4:The applicable SS raster entries are GSCN = {4707, 4715, 4718, 4729, 4732, 4743, 4747, 4754, 4761, 4768, 4772, 4782, 4786, 4793}NOTE 5:The following GSCN are allowed for operation in band n46:GSCN = {8996, 9010, 9024, 9038, 9051, 9065, 9079, 9093, 9107, 9121, 9218, 9232, 9246, 9260, 9274, 9288, 9301, 9315, 9329, 9343, 9357, 9371, 9385, 9402, 9416, 9430, 9444, 9458, 9472, 9485, 9499, 9513}.NOTE 6:The following GSCN are allowed for operation in band n96:GSCN = { 9548, 9562, 9576, 9590, 9603, 9617, 9631, 9645, 9659, 9673, 9687, 9701, 9714, 9728, 9742, 9756, 9770, 9784, 9798, 9812, 9826, 9840, 9853, 9867, 9881, 9895, 9909, 9923, 9937, 9951, 9964, 9978, 9992, 10006, 10020, 10034, 10048, 10062, 10076, 10090, 10103, 10117, 10131, 10145, 10159, 10173, 10187, 10201, 10214, 10228, 10242, 10256, 10270, 10284, 10298, 10312, 10325, 10339, 10353}.NOTE 7:The SS raster entries apply for channel bandwidths larger than or equal to 40 MHz.NOTE 8: The SS raster entries apply for channel bandwidths smaller than 40 MHz.NOTE 9:The following GSCN are allowed for operation in band n102:GSCN = {9535, 9548, 9562, 9576, 9590, 9603, 9617, 9631, 9645, 9659, 9673, 9687, 9701, 9714, 9728, 9742, 9756, 9770, 9784, 9798, 9812, 9826, 9840, 9853, 9867}NOTE 10:The SS raster entries apply for channel bandwidths larger than or equal to 10 MHz.NOTE 11:The SS raster entries apply for channel bandwidth equal to 5 MHz.NOTE 12:Only applicable for 20 PRB transmission bandwidth configuration within 5 MHz channel with unpunctured PBCH defined in TS 38.211 [9] clause 7.4.3.1.",,,

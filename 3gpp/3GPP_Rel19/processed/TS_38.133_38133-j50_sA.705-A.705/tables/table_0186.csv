@@ -1,0 +1,66 @@
+Parameter,,,Unit,Value,Comment
+,,,,Test 1,Same configuration for both TRP whereever applicbale
+Active PCell,,,,Cell 1,
+RF Channel Number for PCell,,,,1,
+Duplex mode,,"Config 1,2",,TDD,
+TDD Configuration,,"Config 1,2",,TDDConf.3.1,
+BW channel,,"Config 1,2",,"100: NPRB,c = 66",
+Data PRBs allocated,,"Config 1,2",,66,
+PDSCH/PDCCH subcarrier spacing,,"Config 1,2",kHz,120,
+DL initial BWP configuration,,"Config 1,2",,DLBWP.0.1,
+DL dedicated BWP configuration,,"Config 1,2",,DLBWP.1.1,
+UL initial BWP configuration,,"Config 1,2",,ULBWP.0.1,
+UL dedicated BWP configuration,,"Config 1,2",,ULBWP.1.1,
+PDSCH Reference Channel,,Config 1,,SR.3.2 TDD,
+,,Config 2,,SR.3.3 TDD,
+RMSI CORESET Reference Channel,,Config 1,,CR.3.1 TDD,
+,,Config 2,,CR.3.2 TDD,
+Dedicated CORESET Reference Channel,,Config 1,,CCR.3.1 TDD,A.3.1.2
+,,Config 2,,CCR.3.7 TDD,
+OCNG parameters,,"Config 1,2",,OP.1,
+CP length,,"Config 1,2",,Normal,
+PDSCH/PDCCH TCI state,,"Config 1,2",,TCI.State.0,
+CSI-RS for tracking,,"Config 1,2",,TRS.2.1 TDD,
+CSI-RS configuration for CSI reporting,,"Config 1,2",,CSI-RS.3.1 TDD,
+reportConfigType,,"Config 1,2",,periodic,
+reportQuantity,,"Config 1,2",,cri-RI-PMI-CQI,
+CSI reporting periodicity,,"Config 1,2",slot,40,
+CSI reporting offset,,"Config 1,2",slot,4,
+SSB Configuration for TRP0,,Config 1,,SSB.1 FR2,
+,,Config 2,,SSB.2 FR2,
+SSB Configuration for TRP1,,Config 1,,SSB.9 FR2,
+,,Config 2,,SSB.10 FR2,
+SMTC Configuration,,"Config 1,2",,SMTC.3,A.3.10
+PRACH Configuration,,"Config 1,2",,FR2 PRACH configuration 2,A.3.8.3.2
+DRX configuration,,"Config 1,2",,OFF,
+"SSB Index assigned as BFD RS (q0,0)",,"Config 1,2",,0,
+"SSB Index assigned as CBD RS (q1,0)",,"Config 1,2",,1,
+"SSB Index assigned as BFD RS (q0,1)",,"Config 1,2",,2,
+"SSB Index assigned as CBD RS (q1,1)",,"Config 1,2",,3,
+SSB Index assigned as RLM RS,,"Config 1,2",,"0,1,2,3",
+Beam failure detection transmission parameters,,DCI format,,1-0,
+,,Number of Control OFDM symbols,,2,
+,,Aggregation level,CCE,8,
+,,Ratio of hypothetical PDCCH RE energy to average CSI-RS RE energy,dB,0,
+,,Ratio of hypothetical PDCCH DMRS energy to average CSI-RS RE energy,dB,0,
+,,DMRS precoder granularity,,REG bundle size,
+,,REG bundle size,,6,
+Gap pattern ID,,,,gp0,
+gapOffset,,,,0,
+schedulingRequestID-BFR- r17,,,,Configured,
+Periodicity of PUCCH for SR configuration for BFR on PCell,,,slot,40,5 ms
+rlmInSyncOutOfSyncThreshold,,,,absent,"When the field is absent, the UE applies the value 0. (Table 8.1.1-1)."
+rsrp-ThresholdSSB,Config 1,,dBm/SCS,-95,Threshold used for Qin_LR_SSB
+,Config 2,,,-92,
+powerControlOffsetSS,,,,db0,Used for deriving rsrp-ThresholdCSI-RS
+beamFailureInstanceMaxCount,,,,n1,"see TS 38.321 [7], clause 5.17"
+beamFailureDetectionTimer,,,,pbfd4,"see TS 38.321 [7], clause 5.17"
+T310 Timer,,,ms,1000,
+N310,,,,2,
+T1,,,s,1,During this time the the UE shall be fully synchronized to cell 1
+T2,,,s,2.61,
+T3,,,s,1.64,
+T4,,,s,0,
+T5,,,s,1.01,
+D1,,,s,0.97,
+NOTE 1:All configurations are assigned to the UE prior to the start of time period T1.NOTE 2:UE-specific PDCCH is not transmitted after T1 starts.,,,,,

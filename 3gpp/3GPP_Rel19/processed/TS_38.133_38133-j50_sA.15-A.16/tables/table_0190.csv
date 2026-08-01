@@ -1,0 +1,6 @@
+Configuration,Description
+1,"NR FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz"
+2,"NR TDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz"
+3,"NR TDD, SSB SCS 30 kHz, data SCS 30 kHz, BW 20 MHz"
+4,"NR HD-FDD, SSB SCS 15 kHz, data SCS 15 kHz, BW 10 MHz"
+NOTE:The UE is only required to be tested in one of the supported test configurations,

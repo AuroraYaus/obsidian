@@ -1,0 +1,8 @@
+Field,Test1,Test2,Comment,
+,Value,Value,,
+onDurationTimer,psf1,psf1,,
+drx-InactivityTimer,psf1,psf1,,
+drx-RetransmissionTimer,psf1,psf1,,
+longDRX-CycleStartOffset,sf40,sf1280,,
+shortDRX,disable,disable,,
+Note:For further information see clause 6.3.2 in TS 36.331.,,,,

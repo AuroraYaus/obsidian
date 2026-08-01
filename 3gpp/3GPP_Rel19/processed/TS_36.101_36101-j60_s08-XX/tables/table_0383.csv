@@ -1,0 +1,4 @@
+Test number,Bandwidth and MCS,Reference Channel,OCNG Pattern,,Propagation Condition,,Correlation Matrix and Antenna Configuration,Reference value,,UE Category
+,,,Cell1,Cell 2,Cell 1,Cell 2,,Fraction of MaximumThroughput (%),SNR (dB),
+1,10 MHz16QAM 1/2,R.51 FDD,OP.1 FDD,N/A,ETU5,ETU5,2x2 Low,70,14.2,≥2
+Note 1:The propagation conditions for Cell 1 and Cell 2 are statistically independent.Note 2:Correlation matrix and antenna configuration parameters apply for each of Cell 1 and Cell 2.Note 3: SNR corresponds to  of Cell 1.,,,,,,,,,,

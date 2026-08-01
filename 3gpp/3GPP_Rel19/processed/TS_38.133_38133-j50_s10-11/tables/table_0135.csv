@@ -1,0 +1,8 @@
+Accuracy,,Conditions,,,
+Normal condition,Extreme condition,Io Note 1 range,,,
+,,Minimum Io,,,Maximum Io
+dB,dB,dBm / SCSSRS Note 2,,dBm/BWChannel,dBm/BWChannel
+,,SCSSRS = 60 kHz,SCSSRS = 120 kHz,,
+5,8,"Same value as SRS_RP in Table B.2.7-2, according to UE Power class, operating band and angle of arrival",,N/A,-70
+7,10,Note 4,,-70,-50
+"NOTE 1:Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 2:Values based on REFSENS and EIS spherical coverage as defined in clauses 7.3.2 and 7.3.4 of TS 38.101-2 [19]. Applicable side condition selected depending on angle of arrival.NOTE 3:In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.",,,,,

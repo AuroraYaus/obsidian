@@ -1,0 +1,10 @@
+SUL band combination with intra-band non-contiguous CA,SUL configuration,NR Band,Channel bandwidth (MHz) (NOTE 1),Bandwidth combination set
+CA_n41(2A)-n99A,SUL_n41A-n99A,n41,CA_n41(2A)_BCS0,0
+,,n99,"5, 10",
+CA_n48(2A)-n99A,SUL_n48A-n99A,n48,CA_n48(2A)_BCS0,0
+,,n99,"5, 10",
+CA_n77(2A)-n99A,SUL_n77A-n99A,n77,CA_n77(2A)_BCS0,0
+,,n99,"5, 10",
+CA_n78(2A)-n86A,SUL_n78A-n86A,n78,CA_n78(2A)_BCS0,0
+,,n86,"5, 10, 15, 20",
+NOTE 1:The SCS of each channel bandwidth for NR band refers to Table 5.3.5-1.,,,,

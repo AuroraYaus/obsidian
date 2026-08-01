@@ -1,0 +1,10 @@
+DRX cycle length (s),"Tidentify, UTRA_FDD (s) (DRX cycles)",
+,Gap ID # 0,Gap ID # 1
+≤0.04,Non DRX Requirements in clause 8.17.7.2.1are applicable,Non DRX Requirements in clause 8.17.7.2.1 are applicable
+0.04<DRX cycle≤0.08,"Note (45*CSSFUTRA,NSA)","Note (95*CSSFUTRA,NSA)"
+0.128,"3.84*CSSFUTRA,NSA (30*CSSFUTRA,NSA)","8.0*CSSFUTRA,NSA (62.5*CSSFUTRA,NSA)"
+0.16,"4.0*CSSFUTRA,NSA (25* CSSFUTRA,NSA)","8.0*NCSSFUTRA,NSA (50*CSSFUTRA,NSA)"
+0.256,"6.4*CSSFUTRA,NSA (25*CSSFUTRA,NSA)","8.96*CSSFUTRA,NSA (35*CSSFUTRA,NSA)"
+0.32,"8*CSSFUTRA,NSA (25*CSSFUTRA,NSA)","8.96*CSSFUTRA,NSA (28*CSSFUTRA,NSA)"
+0.32<DRX cycle≤2.56,"Note (25*CSSFUTRA,NSA)","Note (25*CSSFUTRA,NSA)"
+Note:Time depends upon the DRX cycle in use,,

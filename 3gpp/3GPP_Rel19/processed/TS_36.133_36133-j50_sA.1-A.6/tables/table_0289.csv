@@ -1,0 +1,6 @@
+Time phase,Target cell,Requirement for reselection delay (seconds)
+T0,Cell 1,
+T1,Cell 2 (normal performance group),59
+T2,Cell 1 (normal performance group),21
+T3,Cell 3 (reduced performance group),347
+T4,Cell 1 (normal performance group),21

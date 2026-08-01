@@ -1,0 +1,6 @@
+"Condition NOTE1,2",T SSB_measurement_period_inter
+No DRX,"max(200 ms, 7  Max(MGRP, SMTC period))  CSSFinter"
+DRX cycle ≤ 160 ms,"max(200 ms, ceil(7 x M2 NOTE3) x max(MGRP, SMTC period, DRX cycle)) x CSSFinter"
+160 ms < DRX cycle ≤ 320 ms,ceil(7 x M2 NOTE3) x DRX cycle x CSSFinter
+DRX cycle>320 ms,4 x M2 NOTE3 x DRX cycle x CSSFinter
+"NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identifiedNOTE 2:In EN-DC operation, the parameters, timers and scheduling requests referred to in clause 3.6.1 are for the secondary cell group. The DRX cycle is the DRX cycle of the secondary cell group.NOTE 3:M2 = 1.5 if SMTC periodicity > 40 ms, otherwise M2=1",

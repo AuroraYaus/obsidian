@@ -1,0 +1,5 @@
+Test number,Band-width,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category
+,,,,,,Fraction of MaximumThroughput (%),SNR (dB),
+1 NOTE 2,10 MHz,R.87-1 FDD,OP.1 FDD,HST-SFN-500,2x2,70,9.7,≥ 1
+2,10 MHz,R.87 FDD,OP.1 FDD,HST-500,2x2,70,11.4,≥ 1
+"NOTE 1:Test case applicability is defined in 8.1.2.6.NOTE 2:The requirement defined is based on the normarliazed channel model, i.e.the power of each tap is normalized to the instantaneous total received power from four taps.",,,,,,,,

@@ -1,0 +1,7 @@
+Wideband operation channel bandwidth (MHz),Contiguous sub-band configuration2,,Non-contiguous sub-band configuration2,
+,Outer,Inner,Outer,Inner
+40,"11, 10, 01",N/A,N/A,N/A
+60,"111, 110, 011, 100, 001",010,101,N/A
+80,"1111, 1110, 0111, 1100, 0011, 1000, 0001","0110, 0100, 0010","1101, 1011, 1010, 0101, 1001",N/A
+100,"11111, 11110, 01111, 11100, 00111, 11000, 00011, 10000, 00001","01110, 01100, 00110, 01000, 00010, 00100","11011, 11010, 01011, 11001, 10011, 10101, 10110, 01101, 10100, 00101, 10010, 01001, 11101, 10111, 10001",01010
+NOTE 1:The sub-band configuration is represented as a bitmap where ‘1’ indicates that a sub-band is transmitted and ‘0’ indicates a sub-band is not transmitted.  The bitmap is ordered with MSB mapped to the lowest frequency sub-band and LSB mapped to highest frequency sub-band within the wideband channel.NOTE 2:Only contiguous sub-band configuration applies to PSCCH/PSSCH. Both contiguous and non-contiguous sub-band configuration apply to PSFCH and S-SSB.,,,,

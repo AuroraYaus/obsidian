@@ -1,0 +1,35 @@
+Parameter,,Unit,Cell 2
+Frequency Range,,,FR1
+Duplex mode,ConfigSCell 1,,FDD
+BWchannel,ConfigSCell 1,,NOTE 8
+BWoccupied,ConfigSCell 1,RB,52 NOTE 6
+Initial DL BWP Configuration,ConfigSCell 1,,DLBWP.0.1
+Dedicated DL BWP Configuration,ConfigSCell 1,,DLBWP.1.1
+Initial UL BWP Configuration,ConfigSCell 1,,N/A
+Dedicated UL BWP Configuration,"Config 1,2,3",,N/A
+PDSCH Reference measurement channel,ConfigSCell 1,,SR.1.1 FDD
+CSI-RS for tracking,ConfigSCell 1,,TRS.1.1 FDD
+RMSI CORESET parameters,ConfigSCell 1,,CR.1.1 FDD
+Dedicated CORESET parameters,ConfigSCell 1,,CCR.1.1 FDD
+OCNG Patterns,ConfigSCell 1,,OP.1 NOTE 6
+SMTC Configuration,,,SMTC.4
+SSB Configuration,ConfigSCell 1,,SSB.5 FR1
+Correlation Matrix and Antenna Configuration,,,1x2 Low
+EPRE ratio of PSS to SSS,,dB,0
+EPRE ratio of PBCH DMRS to SSS,,,
+EPRE ratio of PBCH to PBCH DMRS,,,
+EPRE ratio of PDCCH DMRS to SSS,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,
+EPRE ratio of PDSCH DMRS to SSS,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,,
+EPRE ratio of OCNG DMRS to SSS Note 1,,,
+EPRE ratio of OCNG to OCNG DMRS Note 1,,,
+NocNote 2,,dBm/15 kHz,-104
+SS-RSRP Note 3,,dBm/15 kHz,-87
+Ês/Iot,,dB,17
+Ês/Noc,,dB,17
+NocNote 2,ConfigSCell 1,dBm/SCS,-104
+IoNote3,ConfigSCell 1,dBm/9.36 MHz,-58.96
+Time offset to Cell 1 NOTE 4,,s,3
+Propagation Condition,,,AWGN
+"NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modeled as AWGN of appropriate power for Noc to be fulfilled within BWoccupied.NOTE 3:SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselvess.NOTE 4:Receive time difference between slot boundaries of signals received from the two cells at the UE antenna connector including time alignment error between the two cells.NOTE 5:For unpaired spectrum, a DL BWP is linked with an UL BWP. DLBWP.0.2 is linked with ULBWP.0.2 defined in clause 12 of TS 38.213 [3].NOTE 6:All UL/DL transmission shall be confined within BWoccupied (i.e. 10 MHz, 52 PRBs) from FC,low, and Io is independent of the BWchannel configured.NOTE 7:All UL/DL transmission shall be confined within BWoccupied (i.e. 40 MHz, 106 PRBs) from FC,low, and Io is independent of the BWchannel configured.NOTE 8:NPRB,c. is derived from Table 5.3.2-1 in TS38.101-1[18] with configured BWchannel.",,,

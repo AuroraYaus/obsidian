@@ -1,0 +1,20 @@
+Parameter,,,Unit,Test 1,,,,
+,,,,T1,T2,T3,T4,T5
+DL CCA probability PCCA,,"Note 10, 12",,1.0,0.9375,0.9375,0.9375,0.9375
+,,"Note 11, 12",,1.0/1.0,0.75/0.75,0.75/0.75,0.75/0.75,0.75/0.75
+UL CCA probability PCCA,,,,1.0,1.0,1.0,1.0,1.0
+EPRE ratio of PDCCH DMRS to SSS,,,dB,0,,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,dB,,,,,
+EPRE ratio of PBCH DMRS to SSS,,,dB,,,,,
+EPRE ratio of PBCH to PBCH DMRS,,,dB,,,,,
+EPRE ratio of PSS to SSS,,,dB,,,,,
+EPRE ratio of PDSCH DMRS to SSS,,,dB,,,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,,dB,,,,,
+EPRE ratio of OCNG DMRS to SSS,,,dB,,,,,
+EPRE ratio of OCNG to OCNG DMRS,,,dB,,,,,
+SNR_SSB of set q0,Config 1,,dB,5,-3,-12,-12,-12
+SNR_SSB of set q1,Config 1,,dB,-10,-10,10,10,10
+SSB_RP of set q1,Config 1,,dBm/SCS kHz,-105,-105,-85,-85,-85
+,Config 1,,dBm/15 KHz,-98,,,,
+Propagation condition,,,,TDL-C 300 ns 100 Hz,,,,
+"NOTE 1:OCNG shall be used such that the resources in Cell 1 are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols. For cells with CCA model, OCNG is transmitted only in the slots with downlink transmission burst and is not transmitted during the muted slots or during DBT window.NOTE 2:The uplink resources for CSI reporting are assigned to the UE prior to the start of time period T1.NOTE 3:NZP CSI-RS resource set configuration for CSI reporting are assigned to the UE prior to the start of time period T1.NOTE 4:Measurement gap configuration is assigned to the UE prior to the start of time period T1.NOTE 5:The timers and layer 3 filtering related parameters are configured prior to the start of time period T1.NOTE 6:The signal contains PDCCH for UEs other than the device under test as part of OCNG.NOTE 7:SNR levels correspond to the signal to noise ratio the transmitted SSS REs during DBT window.NOTE 8:The SNR in time periods T1, T2, T3, T4 and T5 is denoted as SNR1, SNR2 and SNR3 respectively in figure A.4.5.5.1.1-1.NOTE 9:The SNR values are specified for testing a UE which supports 2RX on at least one band. For testing of a UE which supports 4RX on all bands, the SNR during T3 is modified as specified in clause A.3.6A.NOTE 10:For UE supporting semi-static channel access and network configuring semi-static channel occupancy. NOTE 11:For UE supporting dynamic channel access and network configuring dynamic channel occupancy. The first value corresponds PCCA_DL1 and the second value corresponds to the PCCA_DL2.NOTE 12:For UE supporting both semi-static and dynamic cannel access, the UE can be tested under dynamic channel occupancy only.",,,,,,,,

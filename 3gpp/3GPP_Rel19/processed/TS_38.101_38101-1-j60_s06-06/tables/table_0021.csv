@@ -1,0 +1,12 @@
+Modulation/ Waveform,,A (dB),
+,,Channel bandwidth: 5 MHz,
+,,Outer,Inner
+DFT-s-OFDM,QPSK,≤ 15.5,≤ 12
+,16 QAM,≤ 14.5,≤ 11
+,64 QAM,≤ 14.5,≤ 10
+,256 QAM,≤ 12.5,≤ 7.5
+CP-OFDM,QPSK,≤ 14.5,≤ 10
+,16 QAM,≤ 14.5,≤ 10
+,64 QAM,≤ 14,≤ 8
+,256 QAM,≤ 11,≤ 5.5
+NOTE 1:The A-MPR for NS_40 is the total backoff and is obtained by taking the maximum value of MPR + A-MPR specified in Table 6.2.3-1 and Table 6.2.4-30a in TS 36.101 and MPR + A specified in Table 6.2.2-1 and Table 6.2.3.5-1.,,,

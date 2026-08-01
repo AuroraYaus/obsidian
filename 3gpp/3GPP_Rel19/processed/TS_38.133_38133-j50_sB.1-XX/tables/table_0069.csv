@@ -1,0 +1,852 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2022-12,RAN#98-e,RP-223319,2692,1,B,CR to TS 38.133: Introduction of NR band n105,18.0.0
+2023-03,RAN#99,RP-230514,2792,,A,CR on R17 feMIMO for scheduling restriction in inter cell beam management in R18,18.1.0
+2023-03,RAN#99,RP-230504,2796,,A,CR on TC for FR2 inter-frequency relative accuracy in R18,18.1.0
+2023-03,RAN#99,RP-230504,2800,,A,CR on TC for known PSCell addition in R18,18.1.0
+2023-03,RAN#99,RP-230504,2804,,A,CR to SNR on RLM-RS2 for FR2 CSI-RS based RLM OOS/IS tests,18.1.0
+2023-03,RAN#99,RP-230506,2808,,A,CR to SNR of q0 level for BFD and LR in FR2,18.1.0
+2023-03,RAN#99,RP-230504,2812,,A,CR to ConfigNo of SSB Configuration and CSI-RS for tracking in redirection test,18.1.0
+2023-03,RAN#99,RP-230514,2818,,A,CR on L3-RSSI measurement for NR up to 71 GHz,18.1.0
+2023-03,RAN#99,RP-230518,2822,,A,CR on NR RedCap measurement requirement in IDLE mode with eDRX R18,18.1.0
+2023-03,RAN#99,RP-230516,2826,,A,CR on SMTC collision in R18,18.1.0
+2023-03,RAN#99,RP-230514,2835,,A,CR for Unified TCI State switching requirements for UL,18.1.0
+2023-03,RAN#99,RP-230518,2837,,A,CR on CG-SDT test cases for RedCap UEs,18.1.0
+2023-03,RAN#99,RP-230519,2839,,A,CR correction of SDT test cases,18.1.0
+2023-03,RAN#99,RP-230517,2841,,A,CR on requirements applicability of PRS measurement,18.1.0
+2023-03,RAN#99,RP-230507,2843,,A,CR on PUCCH SCell activation requirement,18.1.0
+2023-03,RAN#99,RP-230516,2845,,A,CR on clarification for UE acquiring system information during handover,18.1.0
+2023-03,RAN#99,RP-230517,2847,,A,CR on the applicability of timing error margin  in positioning accuracy requirements,18.1.0
+2023-03,RAN#99,RP-230506,2850,,A,CR on positioning test case in R16,18.1.0
+2023-03,RAN#99,RP-230519,2854,,A,CR on FR2 PSCell SSB-based BFD and CBD test maintenance for UE fulfilling relaxed measurement criterion,18.1.0
+2023-03,RAN#99,RP-230499,2859,,A,Sidelinek R16 resource selection test configuration correction R18 mirror,18.1.0
+2023-03,RAN#99,RP-230519,2861,,A,Sidelinek R17 resource selection test configuration correction R18 mirror,18.1.0
+2023-03,RAN#99,RP-230514,2866,,A,FR1 HST L1-RSRP test configuration correction R18 mirror,18.1.0
+2023-03,RAN#99,RP-230509,2868,,A,CR on scheduling restriction when deriveSSB-IndexFromCellInter is configured,18.1.0
+2023-03,RAN#99,RP-230512,2871,,A,CR for R17 MR-DC Enh on R18 38.133,18.1.0
+2023-03,RAN#99,RP-230519,2875,,A,CR on test case for R17 SL in SL-DRX mode on R18 38.133,18.1.0
+2023-03,RAN#99,RP-230500,2878,,A,Correction on TCs for direct scell activation in R18(Cat-A),18.1.0
+2023-03,RAN#99,RP-230516,2882,,A,Maintenance core part CR on of MG enh R18,18.1.0
+2023-03,RAN#99,RP-230516,2884,,A,Maintenance perf part CR on of MG enh R18,18.1.0
+2023-03,RAN#99,RP-230516,2889,,A,CR on editorial change for CSI-RS based intra-frequency measurements,18.1.0
+2023-03,RAN#99,RP-230535,2903,,B,CR related to Introduction of NR TDD Band n54,18.1.0
+2023-03,RAN#99,RP-230507,2908,,A,Correction on SRS configurations for SRS antenna switching test cases in R18,18.1.0
+2023-03,RAN#99,RP-230507,2911,,A,CR on TC maintenance for NR-U R18,18.1.0
+2023-03,RAN#99,RP-230510,2915,,A,CR on CCA model for FR2-2 R18,18.1.0
+2023-03,RAN#99,RP-230510,2917,,A,CR on test case maintenance for FR2-2 R18,18.1.0
+2023-03,RAN#99,RP-230518,2923,,A,Correction on measurement requirements with eDRX for RedCap UE R18,18.1.0
+2023-03,RAN#99,RP-230518,2925,,A,Correction on measurement requirement in idle mode and connected mode for RedCap UE for RedCap R18,18.1.0
+2023-03,RAN#99,RP-230518,2927,,A,Correction to FR2 RedCap test cases_R18,18.1.0
+2023-03,RAN#99,RP-230518,2929,,A,Correction to RedCap RMCs and FR1 RedCap test cases_R18,18.1.0
+2023-03,RAN#99,RP-230516,2930,1,B,DL interruption for Tx switching across 3/4 bands,18.1.0
+2023-03,RAN#99,RP-230519,2933,,A,Adding relaxation factor on measurement relaxation requirements R18,18.1.0
+2023-03,RAN#99,RP-230506,2936,,A,PRS measurement period for Deferred MT-LR with event “Periodic Location”,18.1.0
+2023-03,RAN#99,RP-230509,2938,,A,Correction of table reference for NR Timing Advance,18.1.0
+2023-03,RAN#99,RP-230517,2940,,A,CR to 38.133 correction of measurement period requirements for positioning measurements,18.1.0
+2023-03,RAN#99,RP-230517,2942,,A,CR to 38.133 performance requirements for positioning measurements,18.1.0
+2023-03,RAN#99,RP-230503,2946,,A,CR on measurement requirements with per-FR gap R18,18.1.0
+2023-03,RAN#99,RP-230506,2952,,A,CR on positioning test cases R18,18.1.0
+2023-03,RAN#99,RP-230506,2955,,A,CR on positioning accuracy requirements R18,18.1.0
+2023-03,RAN#99,RP-230516,2957,,A,CR on pre-MG related requirements R18,18.1.0
+2023-03,RAN#99,RP-230516,2959,,A,CR on NCSG related requirements R18,18.1.0
+2023-03,RAN#99,RP-230516,2961,,A,CR on HO requirements for NTN R18,18.1.0
+2023-03,RAN#99,RP-230516,2963,,A,CR on MG requirements for NTN R18,18.1.0
+2023-03,RAN#99,RP-230517,2965,,A,CR on PRS measurement requirements for INACTIVE R18,18.1.0
+2023-03,RAN#99,RP-230517,2969,,A,CR on accuracy requirements for Rel-17 positioning R18,18.1.0
+2023-03,RAN#99,RP-230515,2971,,A,CR on requirements for UE Rx-Tx measurement for PDC R18,18.1.0
+2023-03,RAN#99,RP-230515,2973,,A,CR on TCs for PDC measurement R18,18.1.0
+2023-03,RAN#99,RP-230515,2975,,A,CR on SDT RRM test case for FR2 R18,18.1.0
+2023-03,RAN#99,RP-230507,2978,,A,Correction to CBW change TCs_R18,18.1.0
+2023-03,RAN#99,RP-230513,2984,,A,CR on correction of eMIMO test cases R18,18.1.0
+2023-03,RAN#99,RP-230514,2986,,A,CR on maintaining RRM requirements for NR FeMIMO R18,18.1.0
+2023-03,RAN#99,RP-230515,2990,1,A,CR on test cases for HST FR1,18.1.0
+2023-03,RAN#99,RP-230518,2992,,A,CR on RedCap Idle mode(38.133),18.1.0
+2023-03,RAN#99,RP-230518,2994,,A,CR on RedCap Measurement,18.1.0
+2023-03,RAN#99,RP-230518,3008,,A,Corrections to inter-frequency NR and inter-RAT E-UTRAN measurements for RedCap,18.1.0
+2023-03,RAN#99,RP-230518,3014,,A,Formal CR to Rel-18 TS 38.133: on missing Rel-16 relaxation for RedCap IDLE mode,18.1.0
+2023-03,RAN#99,RP-230519,3020,,A,Formal CR to Rel-18 38.133: correction on CG-SDT transmission,18.1.0
+2023-03,RAN#99,RP-230505,3028,,A,R18 Cat-A CR CLI measurement testcase correction,18.1.0
+2023-03,RAN#99,RP-230505,3029,,A,R18 Cat-A CR SA NR-LTE HO testcase correction,18.1.0
+2023-03,RAN#99,RP-230513,3044,,A,Correction to FR1 band groups in 38.133,18.1.0
+2023-03,RAN#99,RP-230513,3046,,A,Conditions for missing FR2 band and power class for positioning in 38.133,18.1.0
+2023-03,RAN#99,RP-230500,3051,,A,Correction to Idle Mode CA/DC Measurement Tests in TS 38.133,18.1.0
+2023-03,RAN#99,RP-230516,3057,,A,CR on TS 38.133 (Rel-18) Corrections on cell reselection for NTN (CAT. A),18.1.0
+2023-03,RAN#99,RP-230517,3059,,A,CR - Correction to UE scheduling availability for PRS measurements without gaps,18.1.0
+2023-03,RAN#99,RP-230510,3065,,A,CR on TC - L1 RSRP measurement for beam reporting,18.1.0
+2023-03,RAN#99,RP-230507,3072,,A,CR on RLM OOS and IS tests with no DRX in NR-U standalone mode,18.1.0
+2023-03,RAN#99,RP-230507,3073,,A,CR on BFD and LR tests in NR-U standalone mode,18.1.0
+2023-03,RAN#99,RP-230515,3076,,A,FR2 HST TCI state switch test case maintenance CR R18 mirror,18.1.0
+2023-03,RAN#99,RP-230505,3079,,A,CR to TS 38.133: Corrections to NR RRM test cases (Rel 18),18.1.0
+2023-03,RAN#99,RP-230506,3082,,A,CR to TS 38.133: Corrections to NR positioning requirements (Rel 18),18.1.0
+2023-03,RAN#99,RP-230518,3084,,A,CR to TS 38.133: Corrections to NR RedCap test cases (Rel 18),18.1.0
+2023-03,RAN#99,RP-230518,3087,,A,CR on active BWP switch  test cases,18.1.0
+2023-03,RAN#99,RP-230514,3088,,A,CR for Unified TCI State switching requirements-R18,18.1.0
+2023-03,RAN#99,RP-230507,3089,,A,CR on SRS antenna port switching corrections in TS38.133 R17,18.1.0
+2023-03,RAN#99,RP-230515,3090,,A,CR to 38.133 on Rel-17 HST FR2 RRM and Measurement Accuracy,18.1.0
+2023-03,RAN#99,RP-230515,3091,1,A,CR on R17 HST FR2 test case of SSB based L1-RSRP measurement,18.1.0
+2023-03,RAN#99,RP-230516,3092,,A,CR Removal of editors note from concurrent gaps,18.1.0
+2023-03,RAN#99,RP-230514,3097,,A,CR on applicability of requirements for measurement restriction,18.1.0
+2023-03,RAN#99,RP-230516,3098,,A,CR on R17 Measurement Gap enhancement,18.1.0
+2023-03,RAN#99,RP-230506,3099,,A,CR to TS38.133: Revise the Measured quantity value(ZoA),18.1.0
+2023-03,RAN#99,RP-230506,3100,,A,"CR to TS38.133:Revise the abbreviation of AoA, A-AoA and ZoA",18.1.0
+2023-03,RAN#99,RP-230516,3101,2,A,Maintenance CR on cell reselection requirements for satellite access,18.1.0
+2023-03,RAN#99,RP-230515,3102,,A,CR to 38.133 on Rel-17 HST FR2 UL TX Timing,18.1.0
+2023-03,RAN#99,RP-230511,3104,,A,Big CR for NR NTN RRM performance requirements (Rel-18),18.1.0
+2023-03,RAN#99,RP-230516,3105,2,A,CR to38.133: Complement the assistance information for NTN neighbour cell measurement,18.1.0
+2023-03,RAN#99,RP-230514,3106,,A,CR on RRM core requirements of FeMIMO,18.1.0
+2023-06,RAN#100,RP-231358,3112,,A,"CR on relationship between SNR, RSRP level and thresholds for FR1 BFD and LR",18.2.0
+2023-06,RAN#100,RP-231357,3116,,A,CR (CAT-A) on R15 NR Inter-RAT measurements testcase correction,18.2.0
+2023-06,RAN#100,RP-231346,3118,,A,CR (CAT-A) on R17 TRP specific BFD testcase correction,18.2.0
+2023-06,RAN#100,RP-231357,3124,,A,CR to TS 38.133: Corrections to NR RRM test cases (Rel 18),18.2.0
+2023-06,RAN#100,RP-231354,3131,,A,Corrections to RRM HST A.6.1.1.7 (Rel-18),18.2.0
+2023-06,RAN#100,RP-231357,3143,,A,CR to FR2 RLM In-syn test cases  (Cat-A Rel-18),18.2.0
+2023-06,RAN#100,RP-231341,3145,,A,CR on updates for R17 per-FR gap capability,18.2.0
+2023-06,RAN#100,RP-231343,3147,,A,38133 Cat.A CR on PUCCH SCell activation delay,18.2.0
+2023-06,RAN#100,RP-231345,3149,,A,CR on R17 positioning performance requirements,18.2.0
+2023-06,RAN#100,RP-231355,3157,,A,CR of known cell condition for HO on 38.133 R18,18.2.0
+2023-06,RAN#100,RP-231341,3161,,A,Clarification on MRTD/MTTD and interruption requirement for EN-DC in Rel-18,18.2.0
+2023-06,RAN#100,RP-231340,3163,,A,CR on Interruption requirements at SCG activation/deactivation(Rel-18),18.2.0
+2023-06,RAN#100,RP-231344,3168,,A,CR on measurement capability for NR NTN,18.2.0
+2023-06,RAN#100,RP-231350,3174,,A,CR on test cases for HST FR1,18.2.0
+2023-06,RAN#100,RP-231344,3176,,A,CR for editorial modification for 4.2C.2.3 Measurements of intra-frequency NR cells in 38.133,18.2.0
+2023-06,RAN#100,RP-231341,3178,,A,CR on UE capability when deriveSSB-IndexFromCellInter is configured,18.2.0
+2023-06,RAN#100,RP-231345,3182,,A,"CR to TS 38.133: Supplement the impact of the measurement period(RSTD, PRS-RSRP, UE Rx-Tx)  in general aspects of gapless measurement",18.2.0
+2023-06,RAN#100,RP-231350,3192,1,A,CR on eDRX requirements,18.2.0
+2023-06,RAN#100,RP-231346,3194,,A,CR on maintenance of feMIMO RRM requirements in R18,18.2.0
+2023-06,RAN#100,RP-231357,3198,,A,Correction to inter-RAT NR measurement TCs_R18,18.2.0
+2023-06,RAN#100,RP-231357,3202,,A,Correction to inter-frequency NR measurement TCs_R18,18.2.0
+2023-06,RAN#100,RP-231343,3205,,A,Correction to UE specific CBW RMCs_R18,18.2.0
+2023-06,RAN#100,RP-231350,3207,,A,Correction to FR1 RedCap test cases RMCs and side conditions_R18,18.2.0
+2023-06,RAN#100,RP-231350,3209,,A,Correction to FR2 RedCap test cases_R18,18.2.0
+2023-06,RAN#100,RP-231347,3214,,A,CR on Random access on carrier with CCA in FR2-2 R18,18.2.0
+2023-06,RAN#100,RP-231347,3216,,A,CR on test case maintenance for FR2-2 R18,18.2.0
+2023-06,RAN#100,RP-231389,3219,1,F,DL interruption for Tx switching across 3/4 bands,18.2.0
+2023-06,RAN#100,RP-231354,3223,,A,Correction on Nserv for FR2 HST R18,18.2.0
+2023-06,RAN#100,RP-231340,3225,,A,clause number update for MRDC,18.2.0
+2023-06,RAN#100,RP-231344,3227,,A,CR on Cell Reselection for RRC Inactive in NTN (Cat. A),18.2.0
+2023-06,RAN#100,RP-231344,3229,,A,CR on Duration for reselection test cases in NGSO scenarios (Cat. A),18.2.0
+2023-06,RAN#100,RP-231350,3231,,A,CR: Correction of Measurement conditions for RedCap for 1Rx,18.2.0
+2023-06,RAN#100,RP-231350,3233,,A,CR on RedCap L1-RSRP,18.2.0
+2023-06,RAN#100,RP-231350,3235,,A,CR on RedCap HO,18.2.0
+2023-06,RAN#100,RP-231343,3237,,A,CR on ConMGs,18.2.0
+2023-06,RAN#100,RP-231343,3242,,A,Maintenance core part CR on of MG enh R18,18.2.0
+2023-06,RAN#100,RP-231343,3244,,A,Maintenance core part CR on of MG enh R18,18.2.0
+2023-06,RAN#100,RP-231344,3252,,A,(Cat A) CR on NTN specific parameters configuration for NTN test cases,18.2.0
+2023-06,RAN#100,RP-231340,3257,,A,CR on direct SCell activation requirements R18,18.2.0
+2023-06,RAN#100,RP-231343,3259,,A,CR on NCSG related requirements R18,18.2.0
+2023-06,RAN#100,RP-231343,3261,,A,CR on concurrent MG related requirements R18,18.2.0
+2023-06,RAN#100,RP-231344,3263,,A,CR on mobility requirements for NTN R18,18.2.0
+2023-06,RAN#100,RP-231344,3265,,A,CR on MG requirements for NTN R18,18.2.0
+2023-06,RAN#100,RP-231345,3267,,A,CR on PRS measurement requirements for INACTIVE R18,18.2.0
+2023-06,RAN#100,RP-231345,3269,,A,CR on measurement requirements for TEG R18,18.2.0
+2023-06,RAN#100,RP-231345,3271,,A,CR on accuracy requirements for Rel-17 positioning R18,18.2.0
+2023-06,RAN#100,RP-231343,3273,,A,CR on SDT RRM test case R18,18.2.0
+2023-06,RAN#100,RP-231358,3277,,A,CR on maintaining antenna connections for 4Rx capable UEs R18,18.2.0
+2023-06,RAN#100,RP-231354,3280,,A,CR on maintaining PL-RS switching delay requirements R18,18.2.0
+2023-06,RAN#100,RP-231343,3285,,A,CR on correction to interruption requirements for inter-band CA R18,18.2.0
+2023-06,RAN#100,RP-231346,3287,,A,CR on maintaining RRM requirements for NR FeMIMO R17,18.2.0
+2023-06,RAN#100,RP-231344,3295,,A,CR on R17 NTN CHO,18.2.0
+2023-06,RAN#100,RP-231355,3297,,A,CR on R15 SCell activation requirements,18.2.0
+2023-06,RAN#100,RP-231354,3300,,A,CR for definition of PL-RS maintained in section 8.14,18.2.0
+2023-06,RAN#100,RP-231342,3304,,A,CR for Measurement period requirements,18.2.0
+2023-06,RAN#100,RP-231340,3312,,A,CR correcting RRM DCCA SCell activation and deactivation test case,18.2.0
+2023-06,RAN#100,RP-231358,3314,,A,CR to 38.133 Corrections to PRS-RSRPP measurement accuracy requirements,18.2.0
+2023-06,RAN#100,RP-231345,3316,,A,CR to 38.133 Corrections to positioning measurement core requirements,18.2.0
+2023-06,RAN#100,RP-231340,3325,,A,Update (Rel-18) of RRM DCCA SCell activation and deactivation test cases,18.2.0
+2023-06,RAN#100,RP-231356,3331,,A,38.133 R18 Cat.A CR on interruptions at SCell activation and deactivation,18.2.0
+2023-06,RAN#100,RP-231346,3351,,A,CR for Unified TCI State switching requirements (Rel-18),18.2.0
+2023-06,RAN#100,RP-231354,3352,,A,Update to RRM idle mode HST test cases,18.2.0
+2023-06,RAN#100,RP-231343,3354,,A,Formal CR to Rel-18 TS 38.133 on SDT maintenance (Mirror),18.2.0
+2023-06,RAN#100,RP-231350,3356,,A,Formal CR to Rel-18 TS 38.133: on RedCap maintenance in TS 38.133,18.2.0
+2023-06,RAN#100,RP-231350,3358,,A,Formal CR to Rel-18 TS 38.133: on RedCap Perf maintenance in TS 38.133,18.2.0
+2023-06,RAN#100,RP-231346,3360,,A,CR on maintenance of FeMIMO,18.2.0
+2023-06,RAN#100,RP-231350,3364,,A,Corrections to RedCap Measurement Requirements,18.2.0
+2023-06,RAN#100,RP-231350,3366,,A,Correction to offset for cell specific RSRP thresholds for 1Rx Redcap UE in 38.133,18.2.0
+2023-06,RAN#100,RP-231350,3370,,A,Corrections of SDT Test Case Parameters for RedCap,18.2.0
+2023-09,RAN#101,RP-232497,3374,,A,[NR_redcap-Perf] CR (CAT-A) NR Inter-RAT measurements testcase correction for redcap UE,18.3.0
+2023-09,RAN#101,RP-232487,3378,,A,CR (CAT-A) on FR2 Active TCI state switch delay testcase correction,18.3.0
+2023-09,RAN#101,RP-232493,3380,,A,NR_MG_enh-Core Maintenance core part CR R18,18.3.0
+2023-09,RAN#101,RP-232493,3382,,A,NR_MG_enh-Perf Maintenance core part CR R18,18.3.0
+2023-09,RAN#101,RP-232488,3385,,A,LTE_NR_DC_CA_enh-Perf Update of RRM DCCA SCell activation and deactivation test cases,18.3.0
+2023-09,RAN#101,RP-232492,3387,,A,NR_IIOT_URLLC_enh-Perf Update (Rel-18) of RRM propagation delay compensation test cases,18.3.0
+2023-09,RAN#101,RP-232488,3389,,A,LTE_NR_DC_enh2-Perf Update of MR_DC test cases for fast Scell activation test cases,18.3.0
+2023-09,RAN#101,RP-232488,3391,,A,LTE_NR_DC_enh2-Perf Update of CPAC test cases,18.3.0
+2023-09,RAN#101,RP-232498,3393,,A,NR_RF_FR1_enh-Perf Corrections in test parameters of DL interruptions at switching between UL carriers testcase,18.3.0
+2023-09,RAN#101,RP-232503,3395,,F,[NR_newRAT-Perf] CR to FR1 Beam failure detection requirement,18.3.0
+2023-09,RAN#101,RP-232503,3399,,A,[NR_newRAT-Perf] CR to BWP Switch Delay TCs,18.3.0
+2023-09,RAN#101,RP-232497,3403,,A,[NR_redcap-Perf] CR to event triggered reporting tests with per-UE gaps under DRX for RedCap,18.3.0
+2023-09,RAN#101,RP-232500,3406,,A,On NE-DC requirement,18.3.0
+2023-09,RAN#101,RP-232502,3412,,A,[NR_newRAT-Perf] CR for Active TCI State switch test requirements - Rel18,18.3.0
+2023-09,RAN#101,RP-232499,3415,,A,[NR_RRM_enh-Perf] Editorial CR for Spatial relation info switch test requirements - Rel18,18.3.0
+2023-09,RAN#101,RP-232500,3420,,A,CR on additional UE gain - R18,18.3.0
+2023-09,RAN#101,RP-232493,3426,,A,CR on NCSG interruption requirement [NR_MG_enh-Core] - R18,18.3.0
+2023-09,RAN#101,RP-232491,3432,,A,NR_HST-Perf Clarification to RRM HST A.6.1.1.7 (Rel-18),18.3.0
+2023-09,RAN#101,RP-232495,3437,,A,CR on R17 positioning performance requirements,18.3.0
+2023-09,RAN#101,RP-232495,3448,,A,[NR_pos_enh-Core] PRS-RSRPP shall be captured in measurement procedure.,18.3.0
+2023-09,RAN#101,RP-232495,3452,,A,[NR_pos_enh-Core] The correction of IE for positioning core requirements.,18.3.0
+2023-09,RAN#101,RP-232494,3454,,A,[NR_NTN_solutions -Core] Modify the condition for collision between concurrent measurement gaps.,18.3.0
+2023-09,RAN#101,RP-232497,3468,1,A,[NR_redcap-Core] CR to Rel-18 TS 38.133: on NR RedCap Re-establishment,18.3.0
+2023-09,RAN#101,RP-232513,3469,1,F,CR on DL interruption for Tx switching across 3/4 bands,18.3.0
+2023-09,RAN#101,RP-232489,3472,,A,"[NR_feMIMO-Perf] CR of correction on parameter typos in TC4.5.5.7, TC5.5.5.8, TC6.5.5.7, TC7.5.5.9, TC7.5.5.10 for R18",18.3.0
+2023-09,RAN#101,RP-232501,3475,,A,[NR_newRAT-Core] Correction to P factor for RLM BFD CBD and L1RSRP_R18,18.3.0
+2023-09,RAN#101,RP-232496,3478,,A,[NR_UE_pow_sav-Perf] Correction to relaxed idle measurement TCs_R18,18.3.0
+2023-09,RAN#101,RP-232499,3481,,A,[NR_RRM_Enh-Perf] Correction to simultaneous BWP switching TCs_R18,18.3.0
+2023-09,RAN#101,RP-232497,3483,,A,[NR_redcap-Core] Cleaning up of RedCap measurement reporting requirements_R18,18.3.0
+2023-09,RAN#101,RP-232497,3485,,A,[NR_redcap-Perf] Cleaning up of RedCap measurement accuracy requirements_R18,18.3.0
+2023-09,RAN#101,RP-232499,3488,,A,[NR_unlic-Perf] CR on TC maintenance for NR-U R18,18.3.0
+2023-09,RAN#101,RP-232491,3497,,A,[NR_HST_FR2-Core]Correction on measurement period for R17 FR2 HST,18.3.0
+2023-09,RAN#101,RP-232488,3499,,A,[LTE_NR_DC_enh2-Perf]Correction on PSCell activation and conditional PSCell addition tests,18.3.0
+2023-09,RAN#101,RP-232497,3505,,F,Correction to RedCap core requirements,18.3.0
+2023-09,RAN#101,RP-232497,3507,,F,Correction to performance part requirements for RedCapNOTE: Partially CR Implementation. Some table values were not related to current specification and could not be all implemented.,18.3.0
+2023-09,RAN#101,RP-232495,3510,,A,[NR_pos_enh] CR on per FR PRS gap in case of concurrent gaps in Rel-18,18.3.0
+2023-09,RAN#101,RP-232500,3514,1,A,CR 38.133 Correction of normative text in requirements,18.3.0
+2023-09,RAN#101,RP-232499,3517,,A,[NR_RRM_Enh-Perf] CR: Correction of SRS configuration for SRS carrier based switching tests,18.3.0
+2023-09,RAN#101,RP-232495,3520,,A,[NR_pos-Perf] CR on Rx-Tx accuracy requirements R18,18.3.0
+2023-09,RAN#101,RP-232493,3522,,A,[NR_MG_enh-Core] CR on Rel-17 MGE requirements R18,18.3.0
+2023-09,RAN#101,RP-232494,3524,,A,[NR_NTN_solutions-Core] CR on MG and scheduling restriction in NTN R18,18.3.0
+2023-09,RAN#101,RP-232494,3526,,A,[NR_NTN_solutions-Core] CR on NTN measurement requirements R18,18.3.0
+2023-09,RAN#101,RP-232495,3528,,A,[NR_pos_enh-Core] CR on requirements for PRS measurement outside MG R18,18.3.0
+2023-09,RAN#101,RP-232495,3531,,A,[NR_pos_enh-Perf] CR on positioning measurement reporting R18,18.3.0
+2023-09,RAN#101,RP-232488,3533,,A,[NR_CSIRS_L3meas-Core] Correction to requirements for CSI-RS measurement R18,18.3.0
+2023-09,RAN#101,RP-232487,3537,,A,CR on maintaining SS-RSRQ/SS-SINR measurement accuracy tests R18,18.3.0
+2023-09,RAN#101,RP-232494,3541,,A,CR on maintaining UE transmit timing tests for NTN R18,18.3.0
+2023-09,RAN#101,RP-232516,3542,,B,BigCR on RRM requirements for supporting intra-band non-collocated NR-CA,18.3.0
+2023-09,RAN#101,RP-232497,3544,,A,NR_redcap-Core Formal CR to Rel-18 TS 38.133: on RedCap maintenance in TS 38.133,18.3.0
+2023-09,RAN#101,RP-232497,3546,1,A,NR_redcap-Perf Formal CR to Rel-18 TS 38.133: on RedCap Perf maintenance in TS 38.133,18.3.0
+2023-09,RAN#101,RP-232500,3549,,A,TEI16:CR on MRTD-MTTD and interruption requirements for non-collocated inter-band EN-DC R18,18.3.0
+2023-09,RAN#101,RP-232494,3555,,A,[NR_NTN_solutions-Core] CR on R17 NTN,18.3.0
+2023-09,RAN#101,RP-232489,3560,,A,[NR_feMIMO-Core]CR on maintenance of feMIMO RRM requirements in R18,18.3.0
+2023-09,RAN#101,RP-232497,3570,,A,NR_redcap-Core: CR 38.133 Corrections to Inter-RAT measurements for RedCap,18.3.0
+2023-09,RAN#101,RP-232497,3572,,A,NR_redcap-Perf: CR 38.133 Corrections of SDT Test Case Parameters for RedCap,18.3.0
+2023-09,RAN#101,RP-232497,3574,,A,NR_redcap-Perf: CR 38.133 Corrections to NR measurements with autonomous gaps for RedCap,18.3.0
+2023-09,RAN#101,RP-232500,3576,,A,TEI17: CR 38.133 Correction to report mapping description for NR Timing Advance,18.3.0
+2023-09,RAN#101,RP-232493,3578,,A,NR_MG_enh-Core: Corrections to L1 measurement impact for Rel-17 MG enhancements,18.3.0
+2023-09,RAN#101,RP-232493,3580,,A,NR_MG_enh-Core: Corrections to Inter frequency measurements for Rel-17 MG enhancements,18.3.0
+2023-09,RAN#101,RP-232495,3582,,A,NR_pos_enh-Core: CR 38.133 Correction to MG patterns for independent measurement gaps,18.3.0
+2023-09,RAN#101,RP-232495,3584,,A,NR_pos_enh-Core: CR 38.133 Clean-up of NR positioning requirements in RRC_INACTIVE,18.3.0
+2023-09,RAN#101,RP-232490,3586,,A,NR_ext_71 GHz CR 38.133 - RRM timing requirements,18.3.0
+2023-09,RAN#101,RP-232496,3588,,A,NR_SmallData_INACTIVE CR 38.133 Test cases,18.3.0
+2023-09,RAN#101,RP-232499,3591,,A,NR_unlic CR correcting NR-U infra frequency RSRP test cases,18.3.0
+2023-09,RAN#101,RP-232499,3594,,A,NR_unlic CR correcting NR-U RRC re-establishment RSRP test cases,18.3.0
+2023-09,RAN#101,RP-232494,3597,,A,[NR_NTN_Solutions] CR 38.133 (Cat. A) on Transmit Timing Requirements,18.3.0
+2023-09,RAN#101,RP-232494,3598,,A,[NR_NTN_Solutions]  CR 38.133 (Cat. A) on Time and Location Based Measurement Initiation,18.3.0
+2023-09,RAN#101,RP-232502,3602,,A,[NR_newRAT-Perf ] Correction in A.8.4.2.8 (Rel-18),18.3.0
+2023-09,RAN#101,RP-232497,3604,,A,[NR_redcap-Perf ] Correction in Redcap Radio Link Monitoring In-sync Test in DRX mode for 2 Rx (Rel-18),18.3.0
+2023-09,RAN#101,RP-232515,3609,,B,Big CR to TS38.133 on enhanced NR support for FR2 HST,18.3.0
+2023-09,RAN#101,RP-232503,3617,,A,[NR_newRAT-Perf] Inter-frequency measurement for UE capable of independentGapConfig (Cat-A Rel-18),18.3.0
+2023-09,RAN#101,RP-232490,3621,,A,[NR_ext_to_71 GHz-Perf] Inter-frequency measurement for FR2-2 UE capable of independentGapConfig (Cat-A Rel-18),18.3.0
+2023-09,RAN#101,RP-232494,3625,,A,[NR_NTN_solutions-Perf] Editorial correction in NTN section of A.3.36.3 (Cat-A Rel-18),18.3.0
+2023-09,RAN#101,RP-232503,3631,,A,2AoA Relative angular offset between active probes for PC1 devices (Rel-18),18.3.0
+2023-09,RAN#101,RP-232497,3633,,A,[NR_redcap-Perf] CR on RedCap test-cases R18,18.3.0
+2023-09,RAN#101,RP-232499,3638,,A,[NR_unlic-Perf] CR to correct NR-U test cases R18,18.3.0
+2023-09,RAN#101,RP-232514,3646,1,B,CR on introduction of the requirements for IDC enhancements for NR and MR-DC,18.3.0
+2023-09,RAN#101,RP-232494,3649,,A,CR for TS 38.133 - Correction of satellite access clause for Timing Advance adjustment,18.3.0
+2023-09,RAN#101,RP-232516,3650,,B,Big CR to TS 38.133 on NR ATG RRM core requirements,18.3.0
+2023-09,RAN#101,RP-232515,3651,,B,Big CR to TS 38.133 on RRM core requirements for NR support for dedicated spectrum less than 5 MHz for FR1,18.3.0
+2023-09,RAN#101,RP-232493,3653,,A,[NR_MG_enh2-Core] CR on R17 NCSG,18.3.0
+2023-09,RAN#101,RP-232493,3655,,A,[NR_MG_enh2-Core] CR on R17 Concurrent MGs,18.3.0
+2023-12,RAN#102,RP-233342,3663,,A,CR on R16 positioning test cases,18.4.0
+2023-12,RAN#102,RP-233349,3665,,A,CR on R17 positioning test cases,18.4.0
+2023-12,RAN#102,RP-233349,3667,,A,"[NR_NTN_solutions-Perf] CR to TS 38.133 annex for NTN test condition  (CAT A, Rel-18)",18.4.0
+2023-12,RAN#102,RP-233341,3671,,A,[NR_RRM_Enh-Perf] Maintenance perf part CR on event triggered reporting tests with additional mandatory gap pattern R18,18.4.0
+2023-12,RAN#102,RP-233347,3674,,A,[NR_MG_enh-Core] Update on scheduling availability requirements for NCSG R18,18.4.0
+2023-12,RAN#102,RP-233347,3676,,A,[NR_MG_enh-Perf] Maintenance CR for MGE perf part R18,18.4.0
+2023-12,RAN#102,RP-233341,3678,,A,[NR_RRM_enh-Perf]  CR for Spatial relation info switch test requirements - Rel18,18.4.0
+2023-12,RAN#102,RP-233330,3689,,A,On MRTD/MTTD requirement for inter-band non-collocated EN-DC/NE-DC (R18),18.4.0
+2023-12,RAN#102,RP-233364,3696,1,B,Big CR to TS 38.133 on R18 SCell activation enhancement,18.4.0
+2023-12,RAN#102,RP-233361,3701,1,B,Big CR for RRM requirements for NR sidelink evolution,18.4.0
+2023-12,RAN#102,RP-233364,3702,1,F,Big CR to TS 38.133 on Air-to-ground network for NR,18.4.0
+2023-12,RAN#102,RP-233346,3704,,A,[NR_HST_FR1_enh] Inter-frequency measurement for NR FR1 HST-R18mirror,18.4.0
+2023-12,RAN#102,RP-233363,3705,1,B,Big CR to TS 38.133 for RRM requirements for NR FR2 multi-Rx chain DL reception,18.4.0
+2023-12,RAN#102,RP-233333,3707,,A,"[NR_newRAT-Perf, NR_feMIMO-Perf] CR to FR1 Beam failure detection requirement",18.4.0
+2023-12,RAN#102,RP-233350,3715,,A,[NR_redcap-Perf] CR to CSI-RS-based RLM for 2Rx RedCap,18.4.0
+2023-12,RAN#102,RP-233364,3718,1,F,CR on measurement requirement in ATG,18.4.0
+2023-12,RAN#102,RP-233347,3722,,A,Draft CR on ConMGs capability,18.4.0
+2023-12,RAN#102,RP-233342,3725,,A,CR on CSSF in NR-U,18.4.0
+2023-12,RAN#102,RP-233338,3728,,A,Draft CR on inter-frequency measurement without gap in CHO,18.4.0
+2023-12,RAN#102,RP-233333,3732,,A,[NR_newRAT-Perf] CR of correction in TC A.6.5.5.4,18.4.0
+2023-12,RAN#102,RP-233346,3734,,A,[NR_feMIMO-Perf] CR of correction in TC A.6.5.5.7,18.4.0
+2023-12,RAN#102,RP-233340,3737,,A,Correction on measurements for UE configured with relaxed measurement criterion,18.4.0
+2023-12,RAN#102,RP-233362,3738,1,B,Big CR to TS 38.133 on Dual TxRx Multi-SIM for NR,18.4.0
+2023-12,RAN#102,RP-233350,3740,,A,[NR_redcap-Core] CR to Rel-18 TS 38.133: on NR RedCap HO,18.4.0
+2023-12,RAN#102,RP-233366,3741,,B,CR to TS 38.133:  Introduction of 900 MHz NR Band in the US,18.4.0
+2023-12,RAN#102,RP-233333,3746,,A,[NR_newRAT-Perf] Correction to CORESET RMC and SS-RSRQ accuracy test cases_R18,18.4.0
+2023-12,RAN#102,RP-233350,3751,,A,[NR_redcap-Perf] Correction to FR1 RedCap test cases,18.4.0
+2023-12,RAN#102,RP-233361,3754,,F,Modification on DL interruption for Tx switching across 3/4 bands,18.4.0
+2023-12,RAN#102,RP-233361,3756,1,B,Big CR on network energy saving,18.4.0
+2023-12,RAN#102,RP-233344,3759,,A,Correction to Fast SCell activation and PSCell activation tests,18.4.0
+2023-12,RAN#102,RP-233350,3761,,A,Modification on interruption in paging reception for HD-FDD RedCap UEs,18.4.0
+2023-12,RAN#102,RP-233364,3762,1,B,Big CR for R18 RRM enhancement - FR1+FR1 NR-DC,18.4.0
+2023-12,RAN#102,RP-233366,3765,,B,CR to TS 38.133 - Introduction of band n109,18.4.0
+2023-12,RAN#102,RP-233346,3767,,A,CR on relative angular offsets between 2 active probes for FR2 HST PC6,18.4.0
+2023-12,RAN#102,RP-233366,3770,,B,CR to TS 38.133:  Introduction of NR bands n31 and n72,18.4.0
+2023-12,RAN#102,RP-233334,3772,,A,[NR_newRAT-Perf] Draft CR on FR1-FR2 test cases for HO with PSCell,18.4.0
+2023-12,RAN#102,RP-233346,3776,,A,"[NR_HST_FR2] CR for 38.133: Corrections in HST FR2 RRM requirements and test (Rel-18, Cat A)",18.4.0
+2023-12,RAN#102,RP-233351,3779,,A,[NR_UE_pow_sav_enh-Perf] CR to TS 38.133: Corrections to Enhanced Power Saving test cases (Rel 18),18.4.0
+2023-12,RAN#102,RP-233350,3781,,A,[NR_redcap-Perf] CR to TS 38.133: Corrections to RedCap test cases (Rel 18),18.4.0
+2023-12,RAN#102,RP-233349,3783,,A,[NR_NTN_solutions-Perf] CR to TS 38.133: Corrections to NR NTN test cases (Rel 18),18.4.0
+2023-12,RAN#102,RP-233371,3784,,F,Big CR to specify RRM requirements on enhanced NR support for Rel-18 FR2 HST,18.4.0
+2023-12,RAN#102,RP-233351,3789,,A,[NR_UE_pow_sav_enh-Core]CR on maintaining RLM/BFD relaxation requirements R18,18.4.0
+2023-12,RAN#102,RP-233346,3791,,A,[NR_FeMIMO-Core]CR on maintaining L1-RSRP requirements for inter-cell BM R18,18.4.0
+2023-12,RAN#102,RP-233346,3793,,A,[NR_FeMIMO-Perf] Corrections to unified TCI states switching test cases R18,18.4.0
+2023-12,RAN#102,RP-233347,3796,,A,[NR_MG_enh-Core] CR on Rel-17 MGE requirements R18,18.4.0
+2023-12,RAN#102,RP-233347,3798,,A,[NR_IIOT_URLLC_enh-Perf] CR on performance requirements for PDC measurement R18,18.4.0
+2023-12,RAN#102,RP-233350,3800,,A,[NR_redcap-Core] CR on INACTIVE requirements R18,18.4.0
+2023-12,RAN#102,RP-233361,3803,1,B,Big CR to TS 38.133 on Enhanced support of reduced capability NR devices,18.4.0
+2023-12,RAN#102,RP-233341,3806,,A,Correction of measurement gap parameters for additional rel-16 mandatory gap patterns test case,18.4.0
+2023-12,RAN#102,RP-233350,3808,,A,DraftCR: L1-RSRP measurement for beam reporting accuracy,18.4.0
+2023-12,RAN#102,RP-233350,3811,,A,Correction of requirements and parameters for RedCap testing,18.4.0
+2023-12,RAN#102,RP-233341,3821,,A,[NR_RRM_Enh-Perf] CR on TCs for UE specific CBW change R18,18.4.0
+2023-12,RAN#102,RP-233365,3822,1,B,Big CR to TS 38.133 on Completion of specification support for bandwidth part operation without restriction in NR,18.4.0
+2023-12,RAN#102,RP-233334,3826,,A,NR_newRAT-Perf CR clarification on MAC-CE based TCI state switch delay,18.4.0
+2023-12,RAN#102,RP-233344,3832,,A,LTE_NR_DC_enh2-Core CR for correting removing Tidentify_inter_without_index,18.4.0
+2023-12,RAN#102,RP-233347,3833,,A,CR on ConMGs,18.4.0
+2023-12,RAN#102,RP-233349,3835,,A,CR to 38.133 on PRS-RSRPP accuracy requirement,18.4.0
+2023-12,RAN#102,RP-233349,3836,1,F,CR to 38.133 correction of PRS-RSRP measurement period requirement,18.4.0
+2023-12,RAN#102,RP-233341,3844,,A,[NR_RRM_enh-Core] CR on the SCell activation,18.4.0
+2023-12,RAN#102,RP-233342,3853,,A,[NR_unlic-Perf] HO test cases under CCA update,18.4.0
+2023-12,RAN#102,RP-233350,3855,,A,[NR_redcap-Perf] redCap HO test cases update,18.4.0
+2023-12,RAN#102,RP-233349,3861,,A,[NR_NTN_solutions -Core]: Modify the condition for NTN gradual timing adjustment.,18.4.0
+2023-12,RAN#102,RP-233349,3863,,A,[  NR_pos_enh-Core]:Modify positioning measurements related in RRC_INACTIVE and RRC_CONNECTED state.,18.4.0
+2023-12,RAN#102,RP-233351,3866,,A,[NR_UE_pow_sav_enh-Core]: Modify the IE for RLM,18.4.0
+2023-12,RAN#102,RP-233342,3870,,A,[NR_unlic-Core]: Modify the condition for gradual timing adjustment.,18.4.0
+2023-12,RAN#102,RP-233361,3878,1,B,Big CR on RRM Core Requirements for Positioning Enhancement in Rel-18,18.4.0
+2023-12,RAN#102,RP-233349,3890,,A,[NR_NTN_solutions-Core] CR to 38.133 on Measurement Req. For NTN,18.4.0
+2023-12,RAN#102,RP-233350,3893,,A,Corrections of SDT Test Case Parameters for RedCap,18.4.0
+2023-12,RAN#102,RP-233341,3898,,A,Corrections to NR Measurements with Autonomous Gaps,18.4.0
+2023-12,RAN#102,RP-233350,3901,,F,Editorial corrections to rel-17 RedCap test cases,18.4.0
+2023-12,RAN#102,RP-233364,3907,1,B,Big CR to TS 38.133 on Further enhancements on NR and MR-DC measurement gaps and measurements without gaps,18.4.0
+2023-12,RAN#102,RP-233350,3909,1,A,NR_redcap-Perf Formal CR to Rel-18 TS 38.133: on RedCap Perf maintenance in TS 38.133,18.4.0
+2023-12,RAN#102,RP-233342,3932,,A,[NR_unlic] EN-DC intra-frequency measurement test cases for NR-U – R18,18.4.0
+2023-12,RAN#102,RP-233350,3934,,A,[NR_redcap] RLM and BFD test cases in FR2 RedCap – R18,18.4.0
+2023-12,RAN#102,RP-233350,3936,,A,[NR_redcap] High priority search with eDRX in IDLE mode – R18,18.4.0
+2023-12,RAN#102,RP-233350,3938,,A,[NR_redcap] Correction CR for eDRX operation in IDLE mode – RedCap clauses (R18),18.4.0
+2023-12,RAN#102,RP-233350,3940,,A,[NR_redcap] Correction CR for eDRX operation in IDLE mode – Non-RedCap clauses (R18),18.4.0
+2023-12,RAN#102,RP-233351,3947,,A,[NR_SmallData_INACTIVE-Perf] Formal CR to Rel-18 TS 38.133 on SDT test cases (Mirror),18.4.0
+2023-12,RAN#102,RP-233366,3950,1,B,Introduction of the NTN L-/S-band to TS 38.133,18.4.0
+2023-12,RAN#102,RP-233364,3951,,B,Big CR to TS 38.133 on intra-band non-collocated EN-DC/NR-CA deployment,18.4.0
+2023-12,RAN#102,RP-233971,3952,1,B,Big CR to TS 38.133 on Further NR mobility enhancements,18.4.0
+2023-12,RAN#102,RP-233361,3953,,B,Big CR to TS 38.133 on NR MIMO evolution for downlink and uplink,18.4.0
+2024-03,RAN#103,RP-240571,3967,,A,(NR_pos-Perf) CR on positioning test cases in R18 - Cat A,18.5.0
+2024-03,RAN#103,RP-240571,3969,,A,(NR_pos_enh-Perf) CR on R17 positioning test cases in connected mode - Cat A,18.5.0
+2024-03,RAN#103,RP-240561,3972,,F,[NR_MG_enh-Core] CR 38.133 Correction of normative text in requirements,18.5.0
+2024-03,RAN#103,RP-240552,3975,,A,[TEI17] CR 38.133 Correction of normative text in requirements,18.5.0
+2024-03,RAN#103,RP-240566,3983,,A,(NR_newRAT-Perf) CR to A.6.3.2.1.3 Intra-freq RRC re-establishment,18.5.0
+2024-03,RAN#103,RP-240569,3985,,A,"(NR_newRAT-Perf, NR_UE_pow_sav_enh-Perf, NR_redcap-Perf) CR to EPRE ratio of PDCCH and PDCCH DMRS for RLM tests",18.5.0
+2024-03,RAN#103,RP-240569,3989,,A,"(NR_newRAT-Perf,NR_redcap-Perf) CR to FR1 SA intra-frequency SS-RSRQ measurement accuracy",18.5.0
+2024-03,RAN#103,RP-240566,3993,,A,"(NR_newRAT-Perf) CR to CORESET and PDSCH RMCs of A.5.6.1.3, A.5.3.1.4 SSB SCS 240 kHz config",18.5.0
+2024-03,RAN#103,RP-240573,3995,,A,(NR_redcap-Perf) CR to A.16.4.1.2 UE transmit timing test and A.16.5.2.2 BFD and LR for RedCap,18.5.0
+2024-03,RAN#103,RP-240561,4001,,A,(NR_MG_enh-Core) CR on Rel-17 MGE requirements – R18,18.5.0
+2024-03,RAN#103,RP-240555,4003,,A,(LTE_NR_DC_enh2) CR for missing test case of E-UTRAN – NR FR2 interruptions during measurements on deactivated NR PSCell - R18,18.5.0
+2024-03,RAN#103,RP-240555,4005,1,A,(LTE_NR_DC_enh2) Maintenance CR for test caes - A.4.5.2.10 - R18,18.5.0
+2024-03,RAN#103,RP-240559,4008,1,F,CR on combination of HST and RRM relaxation - R18,18.5.0
+2024-03,RAN#103,RP-240607,4009,1,B,Interruption test case for intra-band non-collcoated NR CA,18.5.0
+2024-03,RAN#103,RP-240559,4015,,F,(NR_feMIMO-Core) CR for active state list switching delay requirements for UTCI state -R18,18.5.0
+2024-03,RAN#103,RP-240562,4021,,A,(NR_newRAT) CR on NR-E-UTRAN HO requirement maintenance R18,18.5.0
+2024-03,RAN#103,RP-240575,4024,,A,(NR_unlic-Core)CR on max function for cell detection in NR-U R18,18.5.0
+2024-03,RAN#103,RP-240570,4028,1,A,(NR_NTN_solutions-Core) CR on RSRP/RSRQ/SINR Requirements for NR-NTN-Rel18,18.5.0
+2024-03,RAN#103,RP-240589,4039,,F,CR to TS 38.133 on RRM core requirements for enhanced NR sidelink relay,18.5.0
+2024-03,RAN#103,RP-240573,4041,,A,(NR_redcap-Perf) CR to TS 38.133: Corrections to RedCap RRM test cases (Rel 18),18.5.0
+2024-03,RAN#103,RP-240571,4043,,A,(NR_NTN_solutions-Perf) CR to TS 38.133: Corrections to NR NTN test cases (Rel 18),18.5.0
+2024-03,RAN#103,RP-240567,4052,,A,(NR_newRAT-Perf) 38.133 CR on corrections for SMTC configuration – R18,18.5.0
+2024-03,RAN#103,RP-240592,4056,,B,(NR_ATG-Perf) BigCR to TS 38.133 Correction of core requirements for NR ATG,18.5.0
+2024-03,RAN#103,RP-240575,4089,,A,(NR_RRM_Enh-Perf) Maintenance perf part CR on event triggered reporting tests with additional mandatory gap pattern (Rel-18),18.5.0
+2024-03,RAN#103,RP-240575,4098,,A,(NR_RRM_Enh-Perf) Correction to CGI measurement test cases_R18,18.5.0
+2024-03,RAN#103,RP-240572,4102,,A,(NR_redcap-Core) Correction to RedCap core requirements_R18,18.5.0
+2024-03,RAN#103,RP-240573,4104,,A,(NR_redcap-Perf) Correction to RedCap measurement test cases_R18,18.5.0
+2024-03,RAN#103,RP-240573,4106,,A,(NR_redcap-Perf) Correction to RedCap inactive and connected state test cases_R18,18.5.0
+2024-03,RAN#103,RP-240575,4109,,F,(NR_RRM_enh2-Perf) CR on location of SCell activation test cases  R18 (Cat F),18.5.0
+2024-03,RAN#103,RP-240603,4110,,F,Big CR on requirements maintenance for R18 NES,18.5.0
+2024-03,RAN#103,RP-240603,4111,,F,Modification on DL interruption for Tx switching across 3/4 bands,18.5.0
+2024-03,RAN#103,RP-240572,4113,,A,(NR_redcap-Core) Correction on relaxation measurement requirements for RedCap inactive UE with idle eDRX>10.24 s,18.5.0
+2024-03,RAN#103,RP-240567,4117,,A,(NR_newRAT-Perf) Corrections to TCI states switching test cases R18,18.5.0
+2024-03,RAN#103,RP-240568,4121,,A,(NR_newRAT-Perf) Correcting propagation condition of test cases not configuring Noc Rel-18,18.5.0
+2024-03,RAN#103,RP-240591,4122,,B,CR on introducing antenna connections for 8Rx capable UEs,18.5.0
+2024-03,RAN#103,RP-240559,4127,,A,(NR_HST_FR1_enh-Core) Maintenance CR on IDLE mode HST UE mobility R18,18.5.0
+2024-03,RAN#103,RP-240563,4132,,A,(NR_newRAT-Core) CR to correct PSCell addition delay requirements,18.5.0
+2024-03,RAN#103,RP-240555,4135,,A,(LTE_NR_DC_CA_enh-Core) CR to correct Inactive mode CA/DC measurement requirements,18.5.0
+2024-03,RAN#103,RP-240575,4137,,A,(NR_RRM_enh2-Core) CR to correct HO with PSCell delay requirements,18.5.0
+2024-03,RAN#103,RP-240563,4141,,A,(NR_newRAT-Core) CR to correct and clarify Rel-15 TCI state switching delay requirements,18.5.0
+2024-03,RAN#103,RP-240575,4146,,A,(NR_RRM_enh-Perf) corrections for FR2 inter-band SCell activation TC – R18,18.5.0
+2024-03,RAN#103,RP-240561,4148,,A,[NR_MG_enh-Perf] Maintenance CR for MGE perf part R18,18.5.0
+2024-03,RAN#103,RP-240569,4150,,A,(NR_NTN_solutions-Core) CR on condtional handover delay for NTN,18.5.0
+2024-03,RAN#103,RP-240603,4153,,F,Big CR for RRM requirements for NR sidelink evolution maintenance,18.5.0
+2024-03,RAN#103,RP-240606,4154,,F,Big CR to TS 38.133 for RRM requirements for NR FR2 multi-Rx chain DL reception,18.5.0
+2024-03,RAN#103,RP-240572,4156,,A,(NR_redcap-Core) CR on handover requirements for RedCap,18.5.0
+2024-03,RAN#103,RP-240606,4162,,A,[NR_HST_FR2_enh-Core] CR on the scheduling restriction of R17 FR2 HST,18.5.0
+2024-03,RAN#103,RP-240561,4163,,A,[NR_MG_enh-Core] CR on the scheduling restriction of R17 NCSG,18.5.0
+2024-03,RAN#103,RP-240575,4165,,A,[NR_RRM_enh2-Perf] CR on Test case of PUCCH SCell and fast SCell activation of R17 enhancement,18.5.0
+2024-03,RAN#103,RP-240555,4175,,A,(LTE_NR_DC_enh2-Core) CR corrections for SCG Activation and Deactivation Delay,18.5.0
+2024-03,RAN#103,RP-240572,4182,,A,Corrections in RRC_INACTIVE for RedCap,18.5.0
+2024-03,RAN#103,RP-240568,4193,,A,(NR_newRAT-Perf)CR on test cases for SCell activation delay reduction in R18,18.5.0
+2024-03,RAN#103,RP-240573,4197,,A,(NR_redcap-Perf) Correction of requirements and parameters for RedCap testing,18.5.0
+2024-03,RAN#103,RP-240559,4210,,A,(NR_FeMIMO) CR correcting unified TCI state switching requirements,18.5.0
+2024-03,RAN#103,RP-240559,4212,,A,(NR_ext_to_71 GHz) CR corrections RRM core requirements,18.5.0
+2024-03,RAN#103,RP-240564,4220,,A,(NR_newRAT-Core) CR on MG related requirements R18,18.5.0
+2024-03,RAN#103,RP-240575,4223,,A,(NR_RRM_enh-Core) CR on multiple SCell activation requirements R18,18.5.0
+2024-03,RAN#103,RP-240570,4225,,A,(NR_NTN_solutions-Core) CR on Rel-17 NTN RRM requirements R18,18.5.0
+2024-03,RAN#103,RP-240603,4236,,F,Big CR to TS 38.133 on NR MIMO evolution for downlink and uplink,18.5.0
+2024-03,RAN#103,RP-240606,4237,,F,bigCR to TS 38.133 on Enhanced HST FR2 Core Requirements Maintenance,18.5.0
+2024-03,RAN#103,RP-240552,4242,,A,"CR to 38.133 CatA R18 on PC1,5,6 RRM Parameters for RAN5",18.5.0
+2024-03,RAN#103,RP-240607,4243,,F,Big CR to TS 38.133 on R18 SCell activation enhancement maintenance,18.5.0
+2024-03,RAN#103,RP-240606,4244,,F,BigCR for 38.133 on RRM core requirements for NR support for dedicated spectrum less than 5 MHz for FR1,18.5.0
+2024-03,RAN#103,RP-240571,4246,,A,(NR_pos_enh-Perf) CR to 38.133 Corrections to PRS-RSRPP accuracy requirement,18.5.0
+2024-03,RAN#103,RP-240570,4248,,A,(NTN_Solutions) CR on 38.133 for applicability of time-based measurement initiation in Idle Mode (Rel. 18),18.5.0
+2024-03,RAN#103,RP-240571,4255,,A,(NR_pos_enh-Perf) CR on R17 positioning test cases in inactive mode- Cat A,18.5.0
+2024-03,RAN#103,RP-240571,4257,,A,(NR_pos_enh-Core) CR on positioning core requirements in RRC_INACTIVE state in R18 - Cat A,18.5.0
+2024-03,RAN#103,RP-240568,4261,,A,(NR_newRAT-Perf) Inter-frequency measurement for UE capable of independentGapConfig (Cat-A Rel-18),18.5.0
+2024-03,RAN#103,RP-240607,4263,,F,Big CR to TS 38.133 on Further enhancements on NR and MR-DC measurement gaps and measurements without gaps,18.5.0
+2024-03,RAN#103,RP-240573,4265,,A,(NR_redcap-Perf) Formal CR to Rel-18 TS 38.133: on RedCap Perf maintenance in TS 38.133,18.5.0
+2024-03,RAN#103,RP-240575,4267,,A,(NR_SmallData_INACTIVE-Perf) Formal CR to Rel-18 TS 38.133 on SDT test cases (Mirror),18.5.0
+2024-03,RAN#103,RP-240576,4269,,A,(NR_unlic-Perf) UL CCA model (R18),18.5.0
+2024-03,RAN#103,RP-240576,4272,,A,(NR_unlic-Perf) CR for NR-U TC correction (R18),18.5.0
+2024-03,RAN#103,RP-240573,4276,,A,(NR_redcap-Perf) Correction CR for RRC re-establishment TCs for RedCap (R18),18.5.0
+2024-03,RAN#103,RP-240608,4280,,F,Big CR to TS 38.133 on core maintenance for Completion of specification support for BWP without restriction in NR,18.5.0
+2024-03,RAN#103,RP-240607,4281,,F,Big CR for core maintenance on intra-band non-collocated EN-DC/NR-CA deployment,18.5.0
+2024-03,RAN#103,RP-240588,4282,,F,Big CR on RRM Core Maintenance for Positioning Enhancement,18.5.0
+2024-03,RAN#103,RP-240587,4283,,B,Big CR on RRM performance requirements for NR Multi-carrier enhancements,18.5.0
+2024-03,RAN#103,RP-240589,4284,,F,Big CR on Core maintenance for Further NR mobility enhancements,18.5.0
+2024-03,RAN#103,RP-240604,4285,,F,Big CR on Core maintenance for NR Dual TxRx Multi-SIM,18.5.0
+2024-03,RAN#103,RP-240603,4287,,F,Big CR on Core maintenance for Enhanced support of reduced capability NR devices,18.5.0
+2024-03,RAN#103,RP-240607,4289,,F,BigCR to TS 38.133 Correction of core requirements for NR ATG,18.5.0
+2024-06,RAN#104,RP-241401,4318,,A,(NR_redcap-Perf)   CR to A.16.6.2.9 and A.16.6.2.10 SMTC settings,18.6.0
+2024-06,RAN#104,RP-241399,4320,,A,(NR_MG_enh-Perf) Correction to A.7.6.15.3 Event triggered reporting test for FR2 concurrent gap,18.6.0
+2024-06,RAN#104,RP-241399,4322,,A,(NR_MG_enh-Perf)   Correction to A.7.6.16.2 Event triggered reporting test with NCSG for FR2,18.6.0
+2024-06,RAN#104,RP-241384,4326,,A,CR on test for scheduling availability during BFD/CBD in FR2,18.6.0
+2024-06,RAN#104,RP-241384,4330,,A,(NR_newRAT-Perf) CR on test for SCell activation,18.6.0
+2024-06,RAN#104,RP-241488,4336,1,F,Big CR to TS 38.133 on core requirement maintenance for Completion of specification support for BWP without restriction in NR,18.6.0
+2024-06,RAN#104,RP-241442,4337,1,B,Big CR to TS 38.133 on performance requirements for Completion of specification support for BWP without restriction in NR,18.6.0
+2024-06,RAN#104,RP-241481,4343,1,F,Big CR to TS 38.133 on core requirement maintenance for Even Further RRM enhancemen for NR and MR-DC,18.6.0
+2024-06,RAN#104,RP-241437,4344,1,B,Big CR to TS 38.133 on performance requirements for Even Further RRM enhancement for NR and MR-DC,18.6.0
+2024-06,RAN#104,RP-241465,4345,,F,Addition of the FR1 DPC reporting mapping table.,18.6.0
+2024-06,RAN#104,RP-241428,4346,,B,Big CR to TS38.133 on Sidelink relay enhancement RRM performance,18.6.0
+2024-06,RAN#104,RP-241397,4348,1,A,(NR_HST_FR1_enh) Deactivated Scell measurement for NR FR1 HST R18 mirror,18.6.0
+2024-06,RAN#104,RP-241385,4352,1,A,(NR_newRAT-Perf) R15 SUL test setup correction R18 mirror,18.6.0
+2024-06,RAN#104,RP-241384,4359,,A,(NR_newRAT_Perf) CR for test case of intra-frequency handover from FR2 to FR2 R18,18.6.0
+2024-06,RAN#104,RP-241404,4362,,A,(NR_unlic-Perf) CR to TS 38.133: Corrections to NR-U test cases (Rel 18),18.6.0
+2024-06,RAN#104,RP-241401,4368,,A,[NR_redcap-Perf] Correction to Cell specific test parameters for E-UTRAN inter-RAT NR handover affecting to A.18.2.1.1 (Rel-18),18.6.0
+2024-06,RAN#104,RP-241384,4372,,A,(NR_newRAT-Perf) Inter-RAT measurement for UE capable of independentGapConfig (Cat-A Rel-18),18.6.0
+2024-06,RAN#104,RP-241404,4379,,A,(NR_unlic-Perf) CR for NR-U TC correction (R18),18.6.0
+2024-06,RAN#104,RP-241404,4382,,A,(NR_unlic-Perf) Removal of Interruption during SCell operations and RSSI and CO Measurement reporting TCs for NR-U (R18),18.6.0
+2024-06,RAN#104,RP-241404,4385,,A,(NR_unlic-Perf) OCNG modeling for NR-U (R18),18.6.0
+2024-06,RAN#104,RP-241401,4387,,A,(NR_redcap-Perf) Correction CR for RRC re-establishment TCs for RedCap (R18),18.6.0
+2024-06,RAN#104,RP-241401,4389,,A,(NR_redcap-Perf) Correction CR for inter-RAT measurement TCs for RedCap clause A.18.3.1(R18),18.6.0
+2024-06,RAN#104,RP-241420,4393,,B,Big CR on performance part of NR_MIMO_evo_DL_UL,18.6.0
+2024-06,RAN#104,RP-241399,4395,,A,(NR_MG_enh-Perf) Maintenance CR for MGE perf part R18,18.6.0
+2024-06,RAN#104,RP-241388,4404,,A,(TEI17) 38.133 CR addressing pervious conditions,18.6.0
+2024-06,RAN#104,RP-241473,4406,,F,(NR_Mob_enh2-Core) 38.133 CR addressing pervious conditions,18.6.0
+2024-06,RAN#104,RP-241388,4408,,A,(TEI17) 38.133 CR addressing the use of expected to in normative text,18.6.0
+2024-06,RAN#104,RP-241396,4415,,A,(NR_ext_to_71 GHz-Core) 38.133 CR addressing duplication of clause number,18.6.0
+2024-06,RAN#104,RP-241399,4420,,A,CR on Rel-17 NCSG requirements (Rel-18 spec),18.6.0
+2024-06,RAN#104,RP-241483,4421,1,F,Big CR to TS 38.133 Correction of core requirements for NR ATG,18.6.0
+2024-06,RAN#104,RP-241483,4422,1,F,Big CR to TS 38.133 Correction of performance requirements for NR ATG,18.6.0
+2024-06,RAN#104,RP-241421,4423,1,B,Big CR for RRM performance requirements for NR sidelink evolution,18.6.0
+2024-06,RAN#104,RP-241403,4433,,A,[NR_UE_pow_sav-Core] Corrections and clarifications,18.6.0
+2024-06,RAN#104,RP-241404,4436,,A,[NR_unlic-Perf] Correction for NR-U test case,18.6.0
+2024-06,RAN#104,RP-241400,4438,,A,[NR_Redcap-Core] Corrections and clarifications,18.6.0
+2024-06,RAN#104,RP-241477,4446,1,F,BigCR for NR_FR1_lessthan_5 MHz_BW,18.6.0
+2024-06,RAN#104,RP-241397,4449,,F,CR on combination of HST and RRM relaxation,18.6.0
+2024-06,RAN#104,RP-241403,4452,,A,CR on applicability conditions for SDT,18.6.0
+2024-06,RAN#104,RP-241386,4459,,A,[NR_NTN_solutions-Core] CR for the TCI state indication of R17 NTN,18.6.0
+2024-06,RAN#104,RP-241400,4460,,A,[NR_redcap-Core] CR for the TCI state indication of R17 RedCap,18.6.0
+2024-06,RAN#104,RP-241392,4461,,A,[NR_RRM_enh2-Perf] CR on R17 test cases of unknown PUCCH SCell and fast SCell activation in FR1,18.6.0
+2024-06,RAN#104,RP-241385,4464,,A,[NR_newRAT-Perf] CR for R15 test case of  L1-RSRP measurement,18.6.0
+2024-06,RAN#104,RP-241435,4465,,B,Big CR to TS 38.133 on performance requirements for NR FR2 multi-Rx chain DL reception,18.6.0
+2024-06,RAN#104,RP-241400,4468,1,A,(NR_redcap-Core) CR on handover requirements for RedCap,18.6.0
+2024-06,RAN#104,RP-241402,4485,,A,(NR_RF_FR1-Perf) Correction to Rel-16 Tx switching RRM test cases_R18,18.6.0
+2024-06,RAN#104,RP-241402,4487,,A,(NR_RF_FR1_enh-Perf) Correction to Rel-17 Tx switching RRM test cases_R18,18.6.0
+2024-06,RAN#104,RP-241401,4491,,A,(NR_redcap-Perf) Correction to RedCap RRM test cases_R18,18.6.0
+2024-06,RAN#104,RP-241418,4492,,F,(NR_MC_enh-Perf) Correction to multi-carrier enhancement RRM test cases_R18,18.6.0
+2024-06,RAN#104,RP-241392,4500,,A,CR Correcting propagation condition Rel-17 (Cat F),18.6.0
+2024-06,RAN#104,RP-241400,4517,,F,(NR_redcap-Core) Correction to RedCap relaxed measurement requirements_R18,18.6.0
+2024-06,RAN#104,RP-241397,4522,1,F,CR to 38.133 on HST FR2 Enhanced RRM Core Maintenance,18.6.0
+2024-06,RAN#104,RP-241388,4526,,A,CR to 38.133 Rel-18 CatA on Missing PC1 Test Parameters for RAN5,18.6.0
+2024-06,RAN#104,RP-241388,4528,,A,"CR to 38.133 Rel-18 CatA on PC5,6 RRM Test Configuration Parameters for RAN5",18.6.0
+2024-06,RAN#104,RP-241383,4532,1,F,(NR_newRAT-Core) CR for Rel-15 TCI state switching requirements - Rel-18,18.6.0
+2024-06,RAN#104,RP-241387,4540,,A,(NR_NTN_solutions-Perf) CR on modification on the filed name with LEO in NTN related features in Rel-18 perf requirements,18.6.0
+2024-06,RAN#104,RP-241436,4541,1,B,Big CR to TS 38.133 on Rel-18 HST FR2 RRM performance requirements,18.6.0
+2024-06,RAN#104,RP-241400,4544,,A,(NR_redcap-Core)Correction on measurement requirements for RedCap UE,18.6.0
+2024-06,RAN#104,RP-241403,4550,,A,(NR_SmallData_INACTIVE) CR correcting SDT test cases,18.6.0
+2024-06,RAN#104,RP-241401,4552,1,A,(NR_redcap-Perf) CR correcting SDT test cases for RedCap,18.6.0
+2024-06,RAN#104,RP-241400,4555,,A,(NR_redcap-Core) eDRX requirements for CG-SDT for non-RedCap UE,18.6.0
+2024-06,RAN#104,RP-241403,4558,,A,Correction of parameters for FR2 SA event triggered without gap tests,18.6.0
+2024-06,RAN#104,RP-241399,4561,,A,(NR_pos-Core) CR on measurement requirements for R16 positioning R18,18.6.0
+2024-06,RAN#104,RP-241399,4563,,A,(NR_MG_enh-Core) CR on Rel-17 MGE core requirements R18,18.6.0
+2024-06,RAN#104,RP-241386,4565,,A,(NR_NTN_solutions-Core) CR on Rel-17 NTN RRM requirements R18,18.6.0
+2024-06,RAN#104,RP-241473,4566,1,F,Big CR to TS 38.133 on core requirement maintenance for Further NR mobility enhancements,18.6.0
+2024-06,RAN#104,RP-241426,4567,1,B,Big CR to TS 38.133 on performance requirements for Further NR mobility enhancements,18.6.0
+2024-06,RAN#104,RP-241397,4569,,A,(NR_HST_FR1_enh-Perf) CR on Test cases for NR FR1 HST R18,18.6.0
+2024-06,RAN#104,RP-241396,4584,,F,[NR_ext_to_71 GHz-Core] Removal of square brackets,18.6.0
+2024-06,RAN#104,RP-241386,4589,,A,(NR_NTN_solutions –Core) Modify the S criteria for NTN measurements of intra-frequency NR cell in RRC IDLEINACTIVE state,18.6.0
+2024-06,RAN#104,RP-241480,4593,1,F,Big CR to TS 38.133 on core requirement maintenance for NR FR2 multi-Rx chain DL reception,18.6.0
+2024-06,RAN#104,RP-241401,4595,,A,(NR_redcap-Perf) Formal CR to Rel-18 TS 38.133 on RedCap SDT test cases (Mirror),18.6.0
+2024-06,RAN#104,RP-241438,4597,1,B,Big CR to TS 38.133 on performance requirements for R18 NR and MR-DC measurement gaps and measurements without gaps,18.6.0
+2024-06,RAN#104,RP-241400,4599,,A,(NR_redcap-Core) Formal CR to Rel-18 TS 38.133: on RedCap Handover,18.6.0
+2024-06,RAN#104,RP-241400,4601,,A,(NR_redcap-Core) Formal CR to Rel-18 TS 38.133: on eDRX non-RedCap for INACTIVE mode,18.6.0
+2024-06,RAN#104,RP-241401,4603,,A,(NR_redcap-Perf) Formal CR to Rel-18 TS 38.133: on RedCap Perf maintenance,18.6.0
+2024-06,RAN#104,RP-241466,4604,1,F,Big CR on core maintenance of NR_MIMO_evo_DL_UL,18.6.0
+2024-06,RAN#104,RP-241482,4607,1,F,Big CR to TS 38.133 on core requirement maintenance for R18 NR and MR-DC measurement gaps and measurements without gaps,18.6.0
+2024-06,RAN#104,RP-241472,4612,,F,Big CR on Core maintenance for NR Dual TxRx Multi-SIM,18.6.0
+2024-06,RAN#104,RP-241472,4613,,B,Big CR on performance requirements for NR Dual TxRx Multi-SIM,18.6.0
+2024-06,RAN#104,RP-241471,4614,,F,Big CR to 38.133 on RRM core requirements for Positioning Enhancements,18.6.0
+2024-06,RAN#104,RP-241432,4615,,B,BigCr Introducing agreed test cases and common parameters for NR_FR1_lessthan_5 MHz_BW,18.6.0
+2024-06,RAN#104,RP-241470,4616,,F,Big CR to TS 38.133 on core requirement maintenance for NR Network energy saving,18.6.0
+2024-06,RAN#104,RP-241424,4617,,B,Big CR to TS 38.133 on performance requirements for NR Network energy saving,18.6.0
+2024-06,RAN#104,RP-241469,4618,,F,Big CR on Core maintenance for Enhanced support of reduced capability NR devices,18.6.0
+2024-06,RAN#104,RP-241429,4619,,F,Big CR to TS 38.133 on RRM core requirements for NR NTN enhancement,18.6.0
+2024-06,RAN#104,RP-241429,4620,,B,Big CR to TS 38.133 on RRM performance requirements for NR NTN enhancement,18.6.0
+2024-06,RAN#104,RP-241385,4623,,A,(NR_newRAT-Perf) Correction to intra-frequency re-establishment test case_R18,18.6.0
+2024-06,RAN#104,RP-241387,4624,,A,(NR_NTN_solutions-Perf) CR on 14.2.1.6 (Cat-A Rel-18),18.6.0
+2024-09,RAN#105,RP-242175,4628,,A,(NR_newRAT-Perf) CR to A.6.7.1.2.2 config 3 duplex mode,18.7.0
+2024-09,RAN#105,RP-242185,4630,,A,(NR_redcap-Perf) CR to A.16.7.1.3 and A.16.7.1.4 for typo correction,18.7.0
+2024-09,RAN#105,RP-242185,4632,,A,(NR_redcap-Perf) CR to 1x1 antenna configuration in FR1,18.7.0
+2024-09,RAN#105,RP-242185,4633,,F,(NR_redcap-Perf) CR to A.16.6.2.9 Table A.16.6.2.9.1-2 T2,18.7.0
+2024-09,RAN#105,RP-242184,4635,1,A,(NR_redcap-Core) CR to 38.133 on eDRX requirements in IDLE mode for RedCap UE,18.7.0
+2024-09,RAN#105,RP-242156,4636,,F,(NR_ATG-Perf) CR on test case for R18 ATG performance,18.7.0
+2024-09,RAN#105,RP-242170,4638,1,F,CR to TS 38.133 on performance requirements for further NR mobility enhancements,18.7.0
+2024-09,RAN#105,RP-242184,4639,1,F,CR to 38.133 on eDRX requirements in INACTIVE mode for eRedCap UE,18.7.0
+2024-09,RAN#105,RP-242152,4642,,A,(LTE_NR_DC_CA_enh-Core) CR on IDLE mode CA/DC measurements,18.7.0
+2024-09,RAN#105,RP-242170,4645,,A,(NR_Mob_enh-Core) CR on abbreviation of DAPS,18.7.0
+2024-09,RAN#105,RP-242168,4647,,A,(NR_MG_enh-Core) CR on Rel-17 gap enhancements,18.7.0
+2024-09,RAN#105,RP-242182,4649,,A,(NR_NTN_solutions-Perf) CR on Rel-17 NTN core and accuracy requirements,18.7.0
+2024-09,RAN#105,RP-242183,4651,,A,(NR_pos_enh-Perf) CR on R17 positioning test cases in RRC_INACTIVE state,18.7.0
+2024-09,RAN#105,RP-242168,4652,1,F,CR on Rel-18 gap enhancements,18.7.0
+2024-09,RAN#105,RP-242178,4653,1,F,CR on Rel-18 NR NTN core requirements,18.7.0
+2024-09,RAN#105,RP-242169,4656,1,F,CR for eUTCI state switching requirements,18.7.0
+2024-09,RAN#105,RP-242169,4657,,F,CR for correcting sDCI mTRP based test cases,18.7.0
+2024-09,RAN#105,RP-242165,4662,1,F,CR on multi-RX core performance maintenance,18.7.0
+2024-09,RAN#105,RP-242160,4666,,A,CR on RSRP Measurement Report Mapping - R18,18.7.0
+2024-09,RAN#105,RP-242168,4668,,A,CR for minimum requirement at transitions - R18,18.7.0
+2024-09,RAN#105,RP-242168,4669,,F,CR for R18 gap core requirements maintenance,18.7.0
+2024-09,RAN#105,RP-242157,4670,2,F,CR for BWP wor maintenance,18.7.0
+2024-09,RAN#105,RP-242170,4673,,F,CR for testability for eEMR FR1-FR2 test cases,18.7.0
+2024-09,RAN#105,RP-242163,4674,,F,(NR_FR1_lessthan_5 MHz_BW-Perf) test case of FR1 intra-frequency handover for less than 5 MHz,18.7.0
+2024-09,RAN#105,RP-242181,4676,,A,(NR_NTN_solutions-Core) CR on update field name of NTN features for NGSO,18.7.0
+2024-09,RAN#105,RP-242166,4677,,F,CR on clean up TC for TRP specific BFD for multi-Rx,18.7.0
+2024-09,RAN#105,RP-242162,4684,,A,CR 38.133 Addressing incomplete Rel-17 requirements in section 8,18.7.0
+2024-09,RAN#105,RP-242168,4686,,A,(NR_MG_enh-Core) CR on Rel-17 NCSG pattern (Rel-18 spec),18.7.0
+2024-09,RAN#105,RP-242189,4688,,A,(NR_UE_pow_sav_enh-Core) Clarification to RLM/BFD relaxation with short DRX R18 Cat.A,18.7.0
+2024-09,RAN#105,RP-242187,4689,2,F,38.133 CR on multilple SCell activation with L3 reporting,18.7.0
+2024-09,RAN#105,RP-242187,4690,,F,CR on FR2 unknown SCell activation with FG31-1 in FR1+FR2 and FR2+FR2 scenarios,18.7.0
+2024-09,RAN#105,RP-242155,4692,1,F,Correction CR on NES based CHO HO delay TCs,18.7.0
+2024-09,RAN#105,RP-242175,4696,,A,(NR_newRAT-Perf) CR to TS 38.133: Corrections to RRM FR2 test cases (Rel 18),18.7.0
+2024-09,RAN#105,RP-242175,4700,,A,(NR_newRAT-Perf) CR to TS 38.133: Corrections to RRM FR2 conditions for PC1 (Rel 18),18.7.0
+2024-09,RAN#105,RP-242182,4702,1,A,CR on maintenance of RRM performance requirements in NR_NTN_solutions WI_R18,18.7.0
+2024-09,RAN#105,RP-242170,4705,1,F,(NR_Mob_enh2-Perf) CR on performance maintenance for R18 mobility,18.7.0
+2024-09,RAN#105,RP-242181,4708,,A,(NR_NTN_solutions-Core) CR to TS 38.133 specification corrections for NR NTN,18.7.0
+2024-09,RAN#105,RP-242181,4710,,A,(NR_NTN_solutions-Core) CR to TS 38.133 measurement procedure related corrections for NR NTN,18.7.0
+2024-09,RAN#105,RP-242182,4712,,A,(NR_NTN_solutions-Perf) CR to TS 38.133 measurement accuracy related corrections for NR NTN,18.7.0
+2024-09,RAN#105,RP-242184,4714,,A,(NR_redcap-Core) CR to TS 38.133 specification corrections for NR Redcap,18.7.0
+2024-09,RAN#105,RP-242156,4715,,F,(NR_ATG-Core) CR to TS 38.133 corrections of measurement requirement for ATG,18.7.0
+2024-09,RAN#105,RP-242178,4716,1,F,(NR_NTN_enh-Core) CR to TS 38.133 specification corrections of for NR NTN enh,18.7.0
+2024-09,RAN#105,RP-242168,4718,,A,(NR_MG_enh-Perf) Maintenance CR for MGE perf part,18.7.0
+2024-09,RAN#105,RP-242165,4719,,F,Remove CBD RRM requirement for scheduling and measurement restriction relaxation,18.7.0
+2024-09,RAN#105,RP-242166,4720,,F,Applicability for the test case of L1-RSRP group-based beam reporting,18.7.0
+2024-09,RAN#105,RP-242173,4724,,A,(NR_newRAT) NR-E-UTRAN HO requirement maintenance,18.7.0
+2024-09,RAN#105,RP-242184,4726,,A,(NR_Redcap-Core) CR correcting and clarifying the handover interruption time requirements,18.7.0
+2024-09,RAN#105,RP-242157,4732,1,F,CR clarifying and correcting the handover interruption time requirements,18.7.0
+2024-09,RAN#105,RP-242165,4734,1,F,CR on BFD and CBD for multi-RX operation,18.7.0
+2024-09,RAN#105,RP-242168,4735,1,F,CR on concurrent gap with Pre-MG and network-controlled activation/deactivation  (A.6.6.22.2),18.7.0
+2024-09,RAN#105,RP-242170,4736,2,F,CR on fast CA/DC,18.7.0
+2024-09,RAN#105,RP-242170,4737,1,F,CR on L1-RSRP measurement for LTM,18.7.0
+2024-09,RAN#105,RP-242163,4739,,A,(NR_feMIMO-Perf)Correction of test configurations for Rel-17 FeMIMO,18.7.0
+2024-09,RAN#105,RP-242167,4740,1,F,(NR_HST_FR2) CR to 38.133 on HST FR2 RRM Performance Corrections,18.7.0
+2024-09,RAN#105,RP-242167,4742,,A,(NR_HST_FR2) CR to 38.133 with corrections and missing RRM parameters,18.7.0
+2024-09,RAN#105,RP-242168,4743,1,F,CR correction of interruption requirements for needForInterruptions-R18,18.7.0
+2024-09,RAN#105,RP-242168,4744,2,F,CR correction of requirements for measurements without gaps with interruptions,18.7.0
+2024-09,RAN#105,RP-242169,4746,,F,CR corrections of RRM performance requirements for NR MIMO Evo FR2 UE transmit timing,18.7.0
+2024-09,RAN#105,RP-242169,4747,,F,CR corrections of RRM performance requirements for NR MIMO Evo sDCI mTRP FR2 separate UL TCI state switching,18.7.0
+2024-09,RAN#105,RP-242186,4750,,A,(NR_RRM_enh2-Core) Correction CR to multiple SCell activation with PUCCH SCell Cat.A,18.7.0
+2024-09,RAN#105,RP-242155,4751,,F,Correction CR to intra-band non-collocated NRCA,18.7.0
+2024-09,RAN#105,RP-242175,4755,,A,(NR_newRAT-Perf) Correction to FR1 BFR test cases_R18,18.7.0
+2024-09,RAN#105,RP-242175,4759,,A,(NR_newRAT-Perf) Correction to PRACH RMCs_R18,18.7.0
+2024-09,RAN#105,RP-242186,4762,,A,(NR_RF_FR1-Perf) Correction to Rel-16 UL Tx switching test cases_R18,18.7.0
+2024-09,RAN#105,RP-242160,4765,,A,(NR_CSIRS_L3meas-Perf) Correction to CSI-RS L3 measurement test cases_R18,18.7.0
+2024-09,RAN#105,RP-242186,4767,,A,(NR_RF_FR1_enh-Perf) Correction to Rel-17 UL Tx switching test cases_R18,18.7.0
+2024-09,RAN#105,RP-242185,4769,,A,(NR_redcap-Perf) Correction to FR1 RedCap BFR test cases_R18,18.7.0
+2024-09,RAN#105,RP-242185,4771,,A,(NR_redcap-Perf) Correction to FR2 RedCap RLM test cases_R18,18.7.0
+2024-09,RAN#105,RP-242167,4772,1,F,(NR_MC_enh-Perf) Correction to Rel-18 UL Tx switching test cases_R18,18.7.0
+2024-09,RAN#105,RP-242186,4774,,A,(NR_RRM_enh2-Core) CR on PUCCH SCell activation with multiple SCells R18 (Cat A),18.7.0
+2024-09,RAN#105,RP-242187,4776,,A,(NR_RRM_enh2-Perf) CR on TC maintenance for PUCCH Scell activation R18 (Cat A),18.7.0
+2024-09,RAN#105,RP-242176,4781,,A,(NR_newRAT-Perf) CR on TC for BWP switching R18 (Cat A),18.7.0
+2024-09,RAN#105,RP-242165,4782,,F,CR on TCI state switching requirements maintenance for R18 FR2 multi-RX,18.7.0
+2024-09,RAN#105,RP-242165,4783,1,F,CR on measurement restriction requirements maintenance for R18 FR2 multi-RX,18.7.0
+2024-09,RAN#105,RP-242166,4784,,F,CR on TC maintenance for Rel-18 Multi-Rx,18.7.0
+2024-09,RAN#105,RP-242187,4786,,F,CR on TC maintenance for R18 eFeRRM SCell activation,18.7.0
+2024-09,RAN#105,RP-242170,4789,1,F,Corrections on LTM TCI state activation,18.7.0
+2024-09,RAN#105,RP-242170,4792,1,F,Correction on LTM test cases,18.7.0
+2024-09,RAN#105,RP-242170,4793,2,F,Correction on validity check test cases,18.7.0
+2024-09,RAN#105,RP-242167,4794,,F,Update DCI based BWP switch delay on multiple CCs in multi-carrier enhancement,18.7.0
+2024-09,RAN#105,RP-242167,4795,,F,Correction on test case of Cell reselection to FR2 inter-frequency NR case,18.7.0
+2024-09,RAN#105,RP-242184,4796,,F,Correction to measurement requirements with inactive eDRX,18.7.0
+2024-09,RAN#105,RP-242155,4797,2,F,Update on SSB-less based SCell activation,18.7.0
+2024-09,RAN#105,RP-242173,4801,,A,"(NR_newRAT-Core) Corrections on measurement restriction for RLM, BFD and CBD R18",18.7.0
+2024-09,RAN#105,RP-242156,4802,1,F,CR on core requirements maintenance for R18 ATG,18.7.0
+2024-09,RAN#105,RP-242177,4803,,F,( NR_NTN_enh-Core) Formal CR on interruption time in handover delay for NR SAN FR2-NTN – NR SAN FR2-NTN Handover,18.7.0
+2024-09,RAN#105,RP-242157,4806,1,F,CR on test cases for BWP operation without restriction,18.7.0
+2024-09,RAN#105,RP-242165,4807,1,F,CR on measurement restriction requirements for multi-Rx,18.7.0
+2024-09,RAN#105,RP-242166,4808,1,F,CR on test cases for m-DCI based TCI dual states switch for multi-Rx,18.7.0
+2024-09,RAN#105,RP-242187,4810,1,D,CR to TS 38.133 on RRM SCG activation deactivation test case  for FR1-FR1 inter-band NR-DC with target Pscell in FR1,18.7.0
+2024-09,RAN#105,RP-242162,4812,1,F,CR on FR1 Type-1 gap + periodic MUSIM gap for SSB-based measurements in inter-frequency layers,18.7.0
+2024-09,RAN#105,RP-242184,4817,,A,CR to 38.133: Correction to priority level of relaxed inter-RAT measurements,18.7.0
+2024-09,RAN#105,RP-242169,4821,,F,CR on test cases of UE transmit timing from two TRPs in FR1,18.7.0
+2024-09,RAN#105,RP-242179,4822,1,F,Correction on test cases for Rel-18 NTN,18.7.0
+2024-09,RAN#105,RP-242170,4826,1,F,CR for Rel-18 LTM maintenance,18.7.0
+2024-09,RAN#105,RP-242170,4827,2,F,CR for Rel-18 eEMR test cases,18.7.0
+2024-09,RAN#105,RP-242166,4829,1,F,CR for Rel-18 multi-Rx performance part maintenance,18.7.0
+2024-09,RAN#105,RP-242157,4833,2,F,(NR_BWP_wor-Core) CR on 38.133 BWP operation without restriction Core,18.7.0
+2024-09,RAN#105,RP-242157,4834,1,F,(NR_BWP_wor-Perf) CR to 38.133 Test case of L1-RSRP for Option C,18.7.0
+2024-09,RAN#105,RP-242186,4837,,A,(NR_RRM_enh2-Core)CR on SRS antenna switching interruption requirements(R18 mirror),18.7.0
+2024-09,RAN#105,RP-242170,4839,1,F,CR on R18 LTM RRM core requirements,18.7.0
+2024-09,RAN#105,RP-242155,4841,1,F,CR on test cases for Cell DTX,18.7.0
+2024-09,RAN#105,RP-242168,4842,,A,(NR_MG_enh-Core) CR on 38.133 MG enh on NCSG-r18,18.7.0
+2024-09,RAN#105,RP-242181,4849,,A,(NR_NTN_solutions-Core) CR on Rel-17 NTN measurement requirements R18,18.7.0
+2024-09,RAN#105,RP-242168,4852,,F,CR on requirements for inter-RAT LTE measurement without gap,18.7.0
+2024-09,RAN#105,RP-242168,4853,1,F,CR on TCs for Case 1,18.7.0
+2024-09,RAN#105,RP-242168,4854,,F,CR on TCs for NFG,18.7.0
+2024-09,RAN#105,RP-242163,4855,1,F,CR on RRM core requirements for less than 5 MHz BW,18.7.0
+2024-09,RAN#105,RP-242163,4856,,F,CR on TCs for less than 5 MHz operation,18.7.0
+2024-09,RAN#105,RP-242157,4857,,F,CR on HO TCs for option C,18.7.0
+2024-09,RAN#105,RP-242177,4858,,F,CR on Rx-Tx measurement requirements for NTN,18.7.0
+2024-09,RAN#105,RP-242178,4859,1,F,CR on requirements for satellite switch with re-sync,18.7.0
+2024-09,RAN#105,RP-242179,4860,1,F,CR on measurement accuracy requirements for FR2-NTN,18.7.0
+2024-09,RAN#105,RP-242179,4861,,F,CR on AoA setup for FR2-NTN test,18.7.0
+2024-09,RAN#105,RP-242163,4862,,F,CR introducing test case for Radio Link Monitoring In-sync Test for FR1 PCell with 3 MHz Channel Bandwidth configured with SSB-based RLM RS in DRX modeNOTE: The was not implemented due to CR choversheet issue,18.7.0
+2024-09,RAN#105,RP-242162,4864,,A,CR to 38.133 on Gradual timing adjustment,18.7.0
+2024-09,RAN#105,RP-242179,4867,,F,CR to 38.133 on test cases for L3-RSRP Measurement Accuracy in FR2-NTNNOTE: This CR introduce new test case with TBD for some test parameters in tables,18.7.0
+2024-09,RAN#105,RP-242179,4868,,F,CR to 38.133 on test case for L1-RSRP measurement procedures on FR2-NTNNOTE: This change includes TBD for AoA setup clause.,18.7.0
+2024-09,RAN#105,RP-242179,4870,1,F,CR to 38.133 on Derivation of Side conditions for NTN measurement performance on FR2-NTN,18.7.0
+2024-09,RAN#105,RP-242178,4872,1,F,CR to 38.133 on Measurement Procedures Requirements,18.7.0
+2024-09,RAN#105,RP-242170,4874,,F,Correction the chapter number on subsequent conditional PSCell addition/change,18.7.0
+2024-09,RAN#105,RP-242165,4878,1,F,CR to TS 38.133 on core requirement maintenance for NR FR2 multi-Rx,18.7.0
+2024-09,RAN#105,RP-242166,4879,1,F,CR to TS 38.133 on maintenance of multi-rx TC,18.7.0
+2024-09,RAN#105,RP-242169,4883,1,F,CR to TS 38.133 on UL Transmit timing for MIMO Evolution.,18.7.0
+2024-09,RAN#105,RP-242169,4884,,F,CR to TS 38.133: TC for TDCP measurements,18.7.0
+2024-09,RAN#105,RP-242155,4886,1,F,CR on TC for A-TRS based inter-band SSB-less SCell activation delay for EN-DC,18.7.0
+2024-09,RAN#105,RP-242178,4887,2,F,Modify NR NTN cell re-selection measurement in RRC CONNECTED state,18.7.0
+2024-09,RAN#105,RP-242178,4888,1,F,Modify NR NTN cell re-selection measurement in RRC IDLEINACTIVE state,18.7.0
+2024-09,RAN#105,RP-242178,4889,1,F,Supplement the NR NTN cell re-selection requirements in RRC IDLE state,18.7.0
+2024-09,RAN#105,RP-242178,4890,1,F,Supplement the NR NTN cell re-selection requirements in RRC INACTIVE state,18.7.0
+2024-09,RAN#105,RP-242177,4892,,A,(NR_NTN_enh–Core) Modify the NR NTN RRC Re-establishment requirements .NOTE: CR changes in clause 6.2C.1.2.1 related to annex B as it conflicts with another CR that provides a difference reference clause.,18.7.0
+2024-09,RAN#105,RP-242156,4894,1,F,CR on R18 ATG measurement,18.7.0
+2024-09,RAN#105,RP-242165,4895,1,F,CR on R18 multi-Rx L1 measurement,18.7.0
+2024-09,RAN#105,RP-242165,4896,1,F,CR on R18 multi-Rx link recovery procedures,18.7.0
+2024-09,RAN#105,RP-242155,4897,3,F,(NonCol_intraB_ENDC_NR_CA-Core) CR on SCell addition interruption_R18,18.7.0
+2024-09,RAN#105,RP-242174,4905,,A,(NR_newRAT-Core) CR on SCell activation in FR2_R18,18.7.0
+2024-09,RAN#105,RP-242162,4907,,A,(NR_eMIMO-Core) CR on candidate beam detection_R18,18.7.0
+2024-09,RAN#105,RP-242187,4909,,A,(NR_RRM_enh-Core) CR on multiple SCell activation in FR2_R18,18.7.0
+2024-09,RAN#105,RP-242163,4910,,A,(  NR_FeMIMO-Core) CR on TRP specific candidate beam detection_R18,18.7.0
+2024-09,RAN#105,RP-242152,4911,,A,(LTE_NR_DC_enh2-Core) CR on fast SCell activation in FR2_R18,18.7.0
+2024-09,RAN#105,RP-242170,4912,,F,CR for missing test case of enhanced CHO,18.7.0
+2024-09,RAN#105,RP-242166,4916,,F,CR on L1-RSRP measurement accuracy requirements for multi-Rx,18.7.0
+2024-09,RAN#105,RP-242185,4920,,A,(NR_redcap-Perf) Formal CR to Rel-18 TS 38.133: on RedCap Perf maintenance,18.7.0
+2024-09,RAN#105,RP-242188,4924,,A,(NR_RRM_enh-Perf) CR to 38.133: Correction to NR SRS carrier based switching test cases,18.7.0
+2024-09,RAN#105,RP-242168,4927,,A,(NR_MG_enh-Core) CR 38.133 Corrections to Pre-MG activation/deactivation,18.7.0
+2024-09,RAN#105,RP-242168,4928,1,F,CR 38.133 Corrections to Case 1 requirements for NR_MG_enh2,18.7.0
+2024-09,RAN#105,RP-242190,4932,,A,(NR_unlic-Perf) CR for NR-U TC correction – clause A.10 (R18)NOTE: CR changes in clause A.10.1.2 was not implemented as the test case already exist.,18.7.0
+2024-09,RAN#105,RP-242190,4935,,A,(NR_unlic-Perf) CR for NR-U TC correction – clause A.11 (R18),18.7.0
+2024-09,RAN#105,RP-242190,4938,,A,(NR_unlic-Perf) CR for NR-U TC correction – clause A.12 (R18),18.7.0
+2024-09,RAN#105,RP-242190,4941,,A,(NR_unlic-Perf) CR for NR-U TC correction – clause A.13 (R18),18.7.0
+2024-09,RAN#105,RP-242185,4943,,A,(NR_redcap-Perf) Correction CR for RedCap TCs (R18),18.7.0
+2024-09,RAN#105,RP-242188,4946,1,F,(NR_SL_enh2-Core) CR 38.133 Clarification on V2X and SL bands,18.7.0
+2024-09,RAN#105,RP-242170,4949,1,F,CR to 38.133 on LTM test case maintenance,18.7.0
+2024-09,RAN#105,RP-242166,4950,,F,CR on multi-RX performance requirement maintenance,18.7.0
+2024-09,RAN#105,RP-242168,4951,1,F,CR on concurrent Pre-MG dynamic collision,18.7.0
+2024-09,RAN#105,RP-242195,4953,,F,Big CR to 38133 for RRM core part for expanded and improved NR positioning,18.7.0
+2024-12,RAN#106,RP-243045,4961,,A,Corrections of the propagation conditions for cell reselection with highSpeedMeasInterFreq-r17,18.8.0
+2024-12,RAN#106,RP-243055,4965,,A,(NR_newRAT-Perf) CR to A.6.6.3.1 to A.6.6.3.3 on duplex mode and LTE RF channel number,18.8.0
+2024-12,RAN#106,RP-243062,4967,,A,(NR_redcap-Perf) CR to A.16.5.3 on PDCCH and PDSCH max HARQ transmission,18.8.0
+2024-12,RAN#106,RP-243062,4969,,A,(NR_redcap-Perf) CR to CORESET RMC for RLM 1Rx RedCap,18.8.0
+2024-12,RAN#106,RP-243062,4971,,A,(NR_redcap-Perf) CR to A.16.6.1.7 Dedicated CORESET RMC,18.8.0
+2024-12,RAN#106,RP-243062,4973,,A,(NR_redcap-Perf) CR to A.16.6.2.9 redundant T2 parameter value,18.8.0
+2024-12,RAN#106,RP-243062,4976,,A,(NR_redcap-Perf) CR to A.16.3.1.7 to A.16.3.1.10 for Handover,18.8.0
+2024-12,RAN#106,RP-243062,4978,,A,(NR_redcap-Perf) CR to A.16.1.2.4 on missing configuration number,18.8.0
+2024-12,RAN#106,RP-243062,4980,,A,(NR_redcap-Perf) CR to A.16.6.1.10 SMTC configuration for CD-SSB,18.8.0
+2024-12,RAN#106,RP-243062,4982,,A,(NR_redcap-Perf) CR to A.18.1.1.1 E-UTRA cell re-selection to NR cell,18.8.0
+2024-12,RAN#106,RP-243051,4985,,A,(NR_Mob_enh-Core) Correction CR for Rel-16 CHO delay requirements,18.8.0
+2024-12,RAN#106,RP-243051,4986,1,F,CR for Rel-18 LTM core requirements,18.8.0
+2024-12,RAN#106,RP-243051,4987,,F,Correction CR for Rel-18 CHO enhancements,18.8.0
+2024-12,RAN#106,RP-243044,4988,,F,CR for Rel-18 multi-Rx AoA setup,18.8.0
+2024-12,RAN#106,RP-243062,4991,,A,(NR_redcap-Perf) CR to TS 38.133 on test cases for RedCap UE,18.8.0
+2024-12,RAN#106,RP-243041,4993,,A,(NR_ext_to_71GHz-Perf) CR to TS 38.133 on test cases in FR2-2 with CCA,18.8.0
+2024-12,RAN#106,RP-243034,4994,2,F,(NR_ATG-Core) CR to TS 38.133 on core maintenance for R18 ATG,18.8.0
+2024-12,RAN#106,RP-243051,4995,2,F,CR to TS 38.133 on core maintenance for R18 NR mobility enhancements,18.8.0
+2024-12,RAN#106,RP-243051,4996,,F,CR to TS 38.133 on performance requirements for R18 NR mobility enhancements,18.8.0
+2024-12,RAN#106,RP-243048,4998,2,F,(NR_MG_enh2-Core) CR on core requirements of Rel-18 gap enhancements,18.8.0
+2024-12,RAN#106,RP-243056,4999,1,F,(NR_NTN_enh-Core) CR on core requirements of Rel-18 NR NTN enhancements,18.8.0
+2024-12,RAN#106,RP-243033,5000,,F,(NonCol_intraB_ENDC_NR_CA-Core) CR on interruption requirements for intra-band CADC,18.8.0
+2024-12,RAN#106,RP-243063,5002,,A,(NR_RRM_enh2-Perf) CR on test cases of PUCCH SCell activation and deactivation delay requirements,18.8.0
+2024-12,RAN#106,RP-243063,5004,,A,(NR_RRM_enh2-Core) CR on PUCCH SCell activation and deactivation delay requirements with Multiple SCells,18.8.0
+2024-12,RAN#106,RP-243051,5007,1,F,CR on core requirements for R18 mobility,18.8.0
+2024-12,RAN#106,RP-243051,5008,1,F,CR on performance maintenance for R18 mobility,18.8.0
+2024-12,RAN#106,RP-243064,5010,,D,Editorial corrections to sections 7 and 8,18.8.0
+2024-12,RAN#106,RP-243039,5012,,F,Removal of brackets for MUSIM capability,18.8.0
+2024-12,RAN#106,RP-243051,5013,,F,Removal of unnecessary conditions for LTM,18.8.0
+2024-12,RAN#106,RP-243054,5017,,A,(NR_newRAT) Restoring SCell interruption requirement,18.8.0
+2024-12,RAN#106,RP-243028,5020,,A,(LTE_NR_DC_CA_enh) Removal of brackets for R16 SCell activation improvements,18.8.0
+2024-12,RAN#106,RP-243028,5022,,A,(LTE_NR_DC_enh2-Core) Removal of brackets for R17 SCell activation improvements,18.8.0
+2024-12,RAN#106,RP-243056,5023,1,F,(NR_NTN_enh-Core) CR on NTN CHO requirements TEI18,18.8.0
+2024-12,RAN#106,RP-243048,5024,1,F,(NR_MG_enh2-Core) CR on Rel18 MG RRM requirements,18.8.0
+2024-12,RAN#106,RP-243055,5028,,A,(NR_newRAT-Perf) CR to TS 38.133: Corrections to RRM FR2 test cases for high power classes (Rel 18),18.8.0
+2024-12,RAN#106,RP-243059,5030,,A,(NR_NTN_solutions-Perf) CR to TS 38.133: Corrections to NR NTN RRM test cases (Rel 18),18.8.0
+2024-12,RAN#106,RP-243032,5033,1,F,Corrections for inter-band SSB-less SCell activation TCs,18.8.0
+2024-12,RAN#106,RP-243033,5034,,F,38.133 CR on intra-band non-collocated EN-DC and NRCA,18.8.0
+2024-12,RAN#106,RP-243060,5037,,A,(NR_unlic-Perf) CR for NR-U TC correction (R18),18.8.0
+2024-12,RAN#106,RP-243060,5040,,A,(NR_unlic-Perf) Missing idle-mode conditions for NR-U in 38.133 annex B (R18),18.8.0
+2024-12,RAN#106,RP-243055,5046,,A,CR on MGTA 0.25ms for per-UE MG (Cat-A Rel-18),18.8.0
+2024-12,RAN#106,RP-243059,5048,,A,CR on Fading for RLM and BFD-LR test cases (Cat-A Rel-18),18.8.0
+2024-12,RAN#106,RP-243028,5057,,A,(LTE_NR_DC_enh2-Core) CR on alignment of RAN4 requirements with RAN2 procedures,18.8.0
+2024-12,RAN#106,RP-243035,5062,1,F,Clarification for HO within NR_BWP_wor-Core,18.8.0
+2024-12,RAN#106,RP-243064,5063,1,F,CR Section 9 specification quality improvement,18.8.0
+2024-12,RAN#106,RP-243064,5066,,A,(NR_UE_pow_sav-Core) CR on relaxed measurement in IDLE/INACTIVe mode,18.8.0
+2024-12,RAN#106,RP-243064,5069,,A,(NR_RRM_Enh-Perf) CR on adding Note in test parameter tables for multiple unknown SCells activation test case,18.8.0
+2024-12,RAN#106,RP-243064,5070,,F,(NR_RRM_enh3-Perf) CR on adding Note in test parameter tables for SCell activation test cases,18.8.0
+2024-12,RAN#106,RP-243064,5071,,F,CR on specification quality improvement for clause A.4 in TS 38.133,18.8.0
+2024-12,RAN#106,RP-243059,5073,,A,(NR_NTN_solutions-Perf) CR on correction of test parameters and requirements for TCs for inter-frequency cell reselection on FR1 NR NTN,18.8.0
+2024-12,RAN#106,RP-243056,5074,,F,CR to TS 38.133 paging interruption requirement correction for NR NTN enh,18.8.0
+2024-12,RAN#106,RP-243059,5080,,A,(NR_NTN_solutions-Core) Modify NR NTN cell re-selection measurement in RRC IDLE  state.,18.8.0
+2024-12,RAN#106,RP-243063,5083,,A,(NR_redcap-Core) Modify CG-SDT requirements for RedCap.,18.8.0
+2024-12,RAN#106,RP-243063,5092,,A,(NR_redcap-Core)Correction on RedCap UE,18.8.0
+2024-12,RAN#106,RP-243063,5094,,A,(NR_RRM_enh2) Correction on HO with PSCell,18.8.0
+2024-12,RAN#106,RP-243055,5107,,A,(NR_newRAT-Perf) Correction to RLM scheduling restriction test cases_R18,18.8.0
+2024-12,RAN#106,RP-243034,5110,,A,(NR_2step_RACH-Perf) Correction to 2-step RACH RRM RMCs and test cases_R18,18.8.0
+2024-12,RAN#106,RP-243039,5113,,A,(NR_CSIRS_L3meas-Perf) Correction to CSI-RS based mobility measurement test cases_R18,18.8.0
+2024-12,RAN#106,RP-243062,5115,,A,(NR_redcap-Perf) Correction to RedCap 2-step RACH RRM test cases_R18,18.8.0
+2024-12,RAN#106,RP-243062,5117,,A,(NR_redcap-Perf) Correction to RedCap measurement and radio link monitoring test cases_R18,18.8.0
+2024-12,RAN#106,RP-243033,5123,,F,Correction on SCell activation delay for UE supporting intra-band non-collocated,18.8.0
+2024-12,RAN#106,RP-243051,5124,1,F,Corrections on LTM core requirements,18.8.0
+2024-12,RAN#106,RP-243051,5125,,F,Corrections on TC for NR conditional handover including target MCG and candidate SCG,18.8.0
+2024-12,RAN#106,RP-243045,5127,1,F,Correction on IE for UE capability for PC6 UE,18.8.0
+2024-12,RAN#106,RP-243057,5129,1,F,CR on performance requirements maintenance for R18 NTN,18.8.0
+2024-12,RAN#106,RP-243044,5131,1,F,CR on core part requirements maintenance for multi-Rx,18.8.0
+2024-12,RAN#106,RP-243044,5132,1,F,CR on AoA setup for multi-Rx,18.8.0
+2024-12,RAN#106,RP-243061,5139,,A,(NR_pos_enh-Core) CR on Rel-17 positioning requirements,18.8.0
+2024-12,RAN#106,RP-243054,5142,1,F,(NR_newRAT-Core) Correction on SCell activation delay,18.8.0
+2024-12,RAN#106,RP-243056,5143,1,F,(NR_NTN_enh-Core) Modify NR NTN core requirements in RRC Connected state,18.8.0
+2024-12,RAN#106,RP-243049,5146,1,F,CR corrections of RRM core requirements for NR MIMO Evo,18.8.0
+2024-12,RAN#106,RP-243049,5147,2,F,CR corrections of RRM performance requirements for NR MIMO Evo,18.8.0
+2024-12,RAN#106,RP-243039,5151,1,F,(NR_DualTxRx_MUSIM-Core) CR on 38.133 MUSIM Core,18.8.0
+2024-12,RAN#106,RP-243048,5153,1,F,(NR_MG_enh2-Core) CR on 38.133 MG enh2 on NeedForGaps,18.8.0
+2024-12,RAN#106,RP-243056,5154,1,F,CR for updating the note for NTN frequency range definition in RLM requirements,18.8.0
+2024-12,RAN#106,RP-243064,5156,1,F,CR on R18 FR2 SCell activation delay reduction,18.8.0
+2024-12,RAN#106,RP-243049,5159,1,F,CR on R18 MIMO RRM requirements,18.8.0
+2024-12,RAN#106,RP-243059,5161,,A,(NR_NTN_solutions-Core) CR on measurement requirements for NTN R18,18.8.0
+2024-12,RAN#106,RP-243048,5163,,A,(NR_MG_enh-Core) CR on measurement requirements for con-MG R18,18.8.0
+2024-12,RAN#106,RP-243042,5164,,F,CR on RRM core requirements for less than 5MHz BW,18.8.0
+2024-12,RAN#106,RP-243042,5165,,F,CR on test configurations for less than 5MHz BW,18.8.0
+2024-12,RAN#106,RP-243048,5166,1,F,CR on NFG requirements,18.8.0
+2024-12,RAN#106,RP-243048,5167,,F,CR on TCs for R18 MGE,18.8.0
+2024-12,RAN#106,RP-243035,5168,1,F,CR on TCs for option C for BWP without restriction,18.8.0
+2024-12,RAN#106,RP-243056,5169,1,F,CR on Rx-Tx measurement requirements for NTN,18.8.0
+2024-12,RAN#106,RP-243056,5170,,F,CR on RLM requriements for FR2-NTN,18.8.0
+2024-12,RAN#106,RP-243057,5175,1,F,CR to TS 38.133 Satellite switching with re-synchronization test case correction for NR NTN enh,18.8.0
+2024-12,RAN#106,RP-243064,5177,1,F,CR on RRM requirements for eFeRRM,18.8.0
+2024-12,RAN#106,RP-243032,5178,,F,CR on core part of R18 NES,18.8.0
+2024-12,RAN#106,RP-243032,5179,1,F,CR on perf part of R18 NES,18.8.0
+2024-12,RAN#106,RP-243034,5180,2,F,CR on core part of R18 ATG,18.8.0
+2024-12,RAN#106,RP-243034,5181,,F,CR on perf part of R18 ATG,18.8.0
+2024-12,RAN#106,RP-243033,5183,,F,CR on core part of R18 NonCol_intraB_ENDC_NR_CA,18.8.0
+2024-12,RAN#106,RP-243064,5184,1,F,CR on core part of R18 SCell activation enhancement,18.8.0
+2024-12,RAN#106,RP-243048,5185,1,F,CR on CSSF of R18 Concurrent MGs,18.8.0
+2024-12,RAN#106,RP-243048,5186,1,F,CR on test case of R18 NFG enhancement,18.8.0
+2024-12,RAN#106,RP-243044,5188,1,F,maintenance CR for test cases for multi-rx,18.8.0
+2024-12,RAN#106,RP-243061,5194,,A,(NR_pos-Perf) CAT-A CR to 38.133 (Release 18) on corrections to accuracy requirement for UE Rx-Tx measurement,18.8.0
+2024-12,RAN#106,RP-243032,5199,1,F,38.133 CR on handover delays for NES-based CHO,18.8.0
+2024-12,RAN#106,RP-243056,5208,1,F,(NR_NTN_enh-Core) Formal CR on Interruption time for hard satellite switch,18.8.0
+2024-12,RAN#106,RP-243059,5210,,A,[NR_NTN_solutions-Perf] Correction in derive parameters in A.14.4.2.4 and A.14.4.2.6 (Rel-18),18.8.0
+2024-12,RAN#106,RP-243064,5211,1,F,CR on NR standalone tests with all NR cells in FR1 for RedCap,18.8.0
+2024-12,RAN#106,RP-243064,5219,,F,CR 38.133 RRM specification improvement for clauses 10 to A_3,18.8.0
+2024-12,RAN#106,RP-243064,5220,,F,CR 38.133 RRM specification improvement for clause A_6,18.8.0
+2024-12,RAN#106,RP-243069,5227,,B,Big CR to 38133 for RRM performance part for expanded and improved NR positioning,18.8.0
+2024-12,RAN#106,RP-243070,5228,,F,Big CR to 38133 for RRM core part for expanded and improved NR positioning,18.8.0
+2024-12,RAN#106,RP-243064,5229,,F,CR for RRM Spec Improvement (section 1~6),18.8.0
+2025-03,RAN#107,RP-250608,5237,1,F,(NR_RRM_enh3-Core) CR for RRM Spec Improvement (section A.7),18.9.0
+2025-03,RAN#107,RP-250579,5241,,A,(NR_newRAT-Core) CR for RRM measurement on deactivated SCC - R18,18.9.0
+2025-03,RAN#107,RP-250587,5245,,A,(NR_RRM_Enh-Perf) CR on A.4.6.6.1 for EN-DC intra-frequency CGI identification - R18,18.9.0
+2025-03,RAN#107,RP-250591,5247,,A,(NR_MG_enh-Core) CR on RRM requirements for NCSG - R18,18.9.0
+2025-03,RAN#107,RP-250605,5249,,F,CR on core requirements for R18 mobility,18.9.0
+2025-03,RAN#107,RP-250605,5251,,F,(NR_Mob_enh2-Pref) Correction on test cases for Idle mode fast CA/DC measurement,18.9.0
+2025-03,RAN#107,RP-250608,5252,,F,(NR_redcap_enh-Core) Correction on eRedCap UE,18.9.0
+2025-03,RAN#107,RP-250597,5254,,A,(NR_RRM_enh2) Correction on NR PSCell Addition Delay requirements,18.9.0
+2025-03,RAN#107,RP-250597,5261,,A,(NR_SL_enh-Core) CR on correction of wrong indentation for Selection / Reselection of V2X Synchronization Reference Source,18.9.0
+2025-03,RAN#107,RP-250608,5262,,F,(NR_SL_enh2-Core) CR on correction of wrong indentation for Selection / Reselection of Sidelink Synchronization Reference Source with CCA,18.9.0
+2025-03,RAN#107,RP-250605,5267,1,F,CR on maintenance for R18 mobility,18.9.0
+2025-03,RAN#107,RP-250606,5268,1,F,(NR_NTN_enh-Core) CR on adding FR2 term in the requirement tables in cell re-selection for NTN,18.9.0
+2025-03,RAN#107,RP-250582,5275,,A,(LTE_NR_DC_CA_enh-Core) CR on R16 EMR,18.9.0
+2025-03,RAN#107,RP-250585,5278,,A,(NR_UE_pow_sav-Core) CR on R16 measurement relaxation for low mobility,18.9.0
+2025-03,RAN#107,RP-250588,5281,,A,(NR_unlic-Core) CR on R16 CSSF_outside gap for SA scenario,18.9.0
+2025-03,RAN#107,RP-250591,5283,,A,(NR_MG_enh-Core) CR on the interruption of deactivated SCell measurement when NCSG is configured,18.9.0
+2025-03,RAN#107,RP-250597,5287,,A,(NR_RRM_enh2-Core) CR on R17 handover with PSCell change,18.9.0
+2025-03,RAN#107,RP-250601,5288,,F,(NR_ATG-Core) CR on location-based CHO of R18 ATG,18.9.0
+2025-03,RAN#107,RP-250603,5289,,F,(NR_MG_enh2-Core) CR on Case 2 of R18 Concurrent MGs,18.9.0
+2025-03,RAN#107,RP-250605,5290,,F,(NR_Mob_enh2-Core) CR on R18 CHO with PSCell change,18.9.0
+2025-03,RAN#107,RP-250590,5292,,A,(NR_ext_to_71GHz-Perf) CR to TS 38.133 on test cases in FR2-2 with CCA,18.9.0
+2025-03,RAN#107,RP-250601,5293,,F,(NR_ATG-Core) CR to TS 38.133 on core maintenance for R18 ATG,18.9.0
+2025-03,RAN#107,RP-250606,5294,,F,(NR_NTN_enh-Core) CR on core requirements of Rel-18 NR NTN enhancements,18.9.0
+2025-03,RAN#107,RP-250607,5296,1,F,CR on correction on interruption requirements for SRS  BW aggregation,18.9.0
+2025-03,RAN#107,RP-250605,5298,1,F,(NR_Mob_enh2-Core) CR on Rel-18 LTM,18.9.0
+2025-03,RAN#107,RP-250601,5302,1,F,CR on handover requirements for BWP without restriction,18.9.0
+2025-03,RAN#107,RP-250601,5303,,F,CR on Pre-MG requirements for ATG,18.9.0
+2025-03,RAN#107,RP-250607,5305,1,F,CR on core requirements of positioning enhancements,18.9.0
+2025-03,RAN#107,RP-250606,5308,,F,(NR_NTN_enh-Core) Correction IE for NR NTN in RRC connected state,18.9.0
+2025-03,RAN#107,RP-250606,5309,1,F,(NR_NTN_enh-Core) Correction on NR NTN handover delay,18.9.0
+2025-03,RAN#107,RP-250606,5310,1,F,(NR_NTN_enh-Core) Modify NR NTN cell re-selection measurement in RRC IDLE  state.,18.9.0
+2025-03,RAN#107,RP-250593,5312,,A,(NR_NTN_solutions-Core) Correction on NR NTN in RRC connected state_R18,18.9.0
+2025-03,RAN#107,RP-250587,5315,,A,(NR_RF_FR1-Perf) Correction to Rel-16 Tx switching RRM test cases_R18,18.9.0
+2025-03,RAN#107,RP-250592,5317,,A,(NR_RF_FR1_enh-Perf) Correction to Rel-17 Tx switching RRM test cases_R18,18.9.0
+2025-03,RAN#107,RP-250603,5318,,F,(NR_MC_enh-Perf) Correction to multi-carrier enhancement RRM test cases_R18,18.9.0
+2025-03,RAN#107,RP-250605,5323,1,F,(NR_MIMO_evo_DL_UL-Core) CR on core requirements maintenance for R18 MIMO,18.9.0
+2025-03,RAN#107,RP-250608,5325,,F,(NR_RRM_enh3-Perf) CR on TC maintenance for Rel-18 eFeRRM,18.9.0
+2025-03,RAN#107,RP-250600,5326,1,F,(Netw_Energy_NR-Perf) CR on TC maintenance for Rel-18 NES SSB-less,18.9.0
+2025-03,RAN#107,RP-250600,5327,,F,(Netw_Energy_NR-Perf) CR on TC maintenance for Rel-18 NES CHO,18.9.0
+2025-03,RAN#107,RP-250608,5328,,F,CR on specification improvement for 38.133 A.5,18.9.0
+2025-03,RAN#107,RP-250605,5330,,F,(NR_Mob_enh2-Perf) Corrections on TC for LTM PDCCH-order Random Access,18.9.0
+2025-03,RAN#107,RP-250608,5332,1,F,(NR_redcap_enh-Core) Correction to TA validation requirements for RedCap R18,18.9.0
+2025-03,RAN#107,RP-250602,5333,1,F,(NR_HST_FR2_enh-Core) Correction on inter-frequency cell identification without gap requirements for FR2 HST,18.9.0
+2025-03,RAN#107,RP-250597,5339,1,F,(NR_SmallData_INACTIVE-Core) CR on CG-SDT requirements R18,18.9.0
+2025-03,RAN#107,RP-250595,5341,,A,(NR_pos_enh-Core) CR on requirements for PRS measurement outside MG R18,18.9.0
+2025-03,RAN#107,RP-250606,5343,,F,CR on measurement requirements for FR2-NTN,18.9.0
+2025-03,RAN#107,RP-250606,5344,,F,CR on UL timing TC for FR2-NTN,18.9.0
+2025-03,RAN#107,RP-250607,5345,1,F,CR on RRM requirements for SL positioning,18.9.0
+2025-03,RAN#107,RP-250607,5347,,F,CR on accuracy requirements for RedCap positioning,18.9.0
+2025-03,RAN#107,RP-250580,5351,,F,(NR_newRAT-Perf) CR on the correction of band group notations in the SSB_RP and SSB conditions tables R18,18.9.0
+2025-03,RAN#107,RP-250585,5354,,F,(NR_newRAT-Perf)CR on the correction of band group notations in the accuracy requirements tables R18,18.9.0
+2025-03,RAN#107,RP-250606,5356,1,F,(NR_NTN_enh-Core) Formal CR for TS 38.133 on positioning measurement for NTN,18.9.0
+2025-03,RAN#107,RP-250603,5357,1,F,(NR_MG_enh2-Core) CR on 38.133 MG enh2 on NCSGs,18.9.0
+2025-03,RAN#107,RP-250605,5358,1,F,CR for LTM core part maintenance,18.9.0
+2025-03,RAN#107,RP-250587,5361,,A,(NR_RRM_enh-Core)Correction on RRC based BWP switch delay for multiple CCs,18.9.0
+2025-03,RAN#107,RP-250608,5363,1,F,CR on R18 RRM_enh3 core requirements,18.9.0
+2025-03,RAN#107,RP-250607,5367,1,F,CR 38.133 remaining core issues for SL positioning,18.9.0
+2025-03,RAN#107,RP-250580,5373,,A,(NR_newRAT-Perf) CR to TS 38.133: Corrections to NR RRM test cases (Rel 18),18.9.0
+2025-03,RAN#107,RP-250588,5376,,A,(NR_unlic-Perf) CR to TS 38.133: Corrections to NR-U RRM test cases (Rel 18),18.9.0
+2025-03,RAN#107,RP-250585,5379,,A,(NR_pos-Perf) CR to TS 38.133: Corrections to NR Positioning test cases (Rel 18),18.9.0
+2025-03,RAN#107,RP-250595,5381,,A,(NR_pos_enh-Perf) CR to TS 38.133: Corrections to NR Enhanced Positioning test cases (Rel 18),18.9.0
+2025-03,RAN#107,RP-250594,5383,,A,(NR_NTN_solutions-Perf) CR to TS 38.133: Corrections to NR NTN RRM test cases (Rel 18),18.9.0
+2025-03,RAN#107,RP-250596,5385,,A,(NR_redcap-Perf) CR to TS 38.133: Corrections to RedCap RRM test cases (Rel 18),18.9.0
+2025-03,RAN#107,RP-250605,5387,,F,CR on PL1_sharing for L1-RSRP intra-frequency and inter-frequency neighbour cells,18.9.0
+2025-03,RAN#107,RP-250595,5389,,A,(NR_pos_enh-Perf) CAT-A   CR to 38.133 on performance requirement for PRS-RSRP and UE Rx-Tx measurements,18.9.0
+2025-03,RAN#107,RP-250607,5390,1,F,CR to 38.133 on core requirements for CPP,18.9.0
+2025-03,RAN#107,RP-250607,5391,,F,CR to 38.133 on core requirements for LPHAP,18.9.0
+2025-03,RAN#107,RP-250607,5392,1,F,CR to 38.133 on test case for LPHAP,18.9.0
+2025-03,RAN#107,RP-250607,5393,,F,CR to 38.133 on performance requirements for carrier phase measurement for NR positioning,18.9.0
+2025-03,RAN#107,RP-250606,5394,,F,(NR_NTN_enh-Core) Formal CR for TS 38.133 on positioning measurement accuracy requirements for NTN,18.9.0
+2025-03,RAN#107,RP-250599,5401,,F,(LTE_NR_DC_enh2) CR for correcting interruptions during measurements on deactivated NR PSCell,18.9.0
+2025-03,RAN#107,RP-250596,5403,,A,(NR_redcap-Perf) Corrections in A.16.7.1.3 and A.16.7.1.4 on derived parameters (Rel 18),18.9.0
+2025-03,RAN#107,RP-250594,5405,,A,(NR_NTN_solutions-Perf) Remove NR NTN testing scenarios for BFR in SCell (Rel 18),18.9.0
+2025-03,RAN#107,RP-250580,5409,,A,(NR_newRAT-Perf) Corrections in A.4.7.1.2 and A.6.7.1.2 on derived parameters (Rel 18),18.9.0
+2025-03,RAN#107,RP-250605,5410,1,F,CR on R18 LTM RRM core requirements,18.9.0
+2025-03,RAN#107,RP-250606,5415,2,F,Corrections to UE transmit timing for Satellite Access,18.9.0
+2025-03,RAN#107,RP-250608,5417,,F,CR to 38.133: Addition of sub test using SR for SCell action with valid L3 results,18.9.0
+2025-03,RAN#107,RP-250600,5419,1,F,CR to TS 38.133 on core requirement maintenance for NES,18.9.0
+2025-03,RAN#107,RP-250608,5420,1,F,38.133 CR on PUCCH SCell activation with L3 report,18.9.0
+2025-03,RAN#107,RP-250604,5421,1,F,CR for Rel-18 Less Than 5MHz Performance partNOTE: This CR was partially implemented as Table A.6.5.1.13.1-3 and Table A.6.5.1.14.1-3 was not based on latest specification and was not implementable.,18.9.0
+2025-03,RAN#107,RP-250603,5423,1,F,(NR_MG_enh2-Perf) CR on MGE2 R18 performance,18.9.0
+2025-03,RAN#107,RP-250603,5426,1,F,CR to TS 38133 on NeedForInterruption,18.9.0
+2025-03,RAN#107,RP-250602,5427,,F,CR for Rel-18 multi-Rx test case maintenance,18.9.0
+2025-03,RAN#107,RP-250605,5428,,F,CR corrections of RRM performance requirements for NR MIMO Evo,18.9.0
+2025-03,RAN#107,RP-250587,5432,,A,(NR_RF_FR1) CR on TC for DL interruptions at switching between two uplink carriers in FDD-TDD CA (R18),18.9.0
+2025-03,RAN#107,RP-250611,5434,,F,CR to TS 38.133 on Inter-frequency measurements reporting requirements [NR_inter-freq_report],18.9.0
+2025-03,RAN#107,RP-250594,5439,,A,(NR_NTN_solutions-Perf) CR on L1-RSRP accuracy requirements for FR1 SAN (Cat-A Rel-18),18.9.0
+2025-03,RAN#107,RP-250605,5440,1,F,(NR_Mob_enh2-Core) CR on PDCCH order PRACH timeline (Cat-F Rel-18),18.9.0
+2025-03,RAN#107,RP-250603,5442,1,F,CR38.133 Corrections to CSSF requirements,18.9.0
+2025-03,RAN#107,RP-250588,5445,,A,(NR_unlic-Perf) Correction CR for A.12.5.1.1,18.9.0

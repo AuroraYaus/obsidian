@@ -1,0 +1,16 @@
+BW [MHz],10 MHz,,
+"(NBindex,SCstart)","(0, <48)","(0,48-84)","(0, ≥240)"
+Lcsc,≥2,≥2,≥2
+AMPR [dB],≤12,≤6,≤14.5
+"(NBindex,SCstart)","(1, <24)","(1,24-72)","(1, ≥264)"
+Lcsc,≥2,≥2,≥2
+AMPR [dB],≤12,≤6,≤14.5
+"(NBindex,SCstart)","(2, <60)",,"(2, ≥252)"
+Lcsc,≥2,,≥2
+AMPR [dB],≤6,,≤1.5
+"(NBindex,SCstart)","(3, <48)",,"(3, ≥216)"
+Lcsc,≥2,,≥2
+AMPR [dB],≤6,,≤1.5
+"(NBindex,SCstart)","(4, <36)",,"(4, ≥192)"
+Lcsc,≥2,,≥2
+AMPR [dB],≤3,,≤1.5

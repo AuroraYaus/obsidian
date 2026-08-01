@@ -1,0 +1,24 @@
+Parameter,Unit,Test configuration,Cell 1,,,Cell 2,,
+,,,T1,T2,T3,T1,T2,T3
+Satellite information,,1,SSC.1,,,NSC.1,,
+,,2,SSC.2,,,NSC.2,,
+RF Channel Number,,"1, 2",1,,,2,,
+PDSCH RMC configuration,,"1, 2",SR.1.1 FDD,,,SR.1.1 FDD,,
+RMSI CORESET RMC configuration,,"1, 2",CR.1.1 FDD,,,CR.1.1 FDD,,
+Dedicated CORESET RMC configuration,,"1, 2",CCR.1.1 FDD,,,CCR.1.1 FDD,,
+OCNG Pattern,,"1, 2",OP.1 defined in A.3.2.1,,,OP.1 defined in A.3.2.1,,
+TRS configuration,,"1, 2",TRS.1.1 FDD,,,TRS.1.1 FDD,,
+Initial DL BWP configuration,,"1, 2",DLBWP.0.1,,,DLBWP.0.1,,
+Initial UL BWP configuration,,"1, 2",ULBWP.0.1,,,ULBWP.0.1,,
+Active DL BWP configuration,,"1, 2",DLBWP.1.1,N/A,N/A,N/A,N/A,DLBWP.1.1
+Active UL BWP configuration,,"1, 2",ULBWP.1.1,N/A,N/A,N/A,N/A,ULBWP.1.1
+SSB configuration,,"1, 2",SSB.1 FR1,,,SSB.1 FR1,,
+RLM-RS,,"1, 2",SSB,,,SSB,,
+,dB,"1, 2",4,-infinity,-infinity,-infinity,-infinity,7
+Note2,dBm/SCS,"1, 2",-98,,,,,
+Note2,dBm/15 kHz,"1, 2",-98,,,,,
+,dB,"1, 2",4,-infinity,-infinity,-infinity,-infinity,7
+SS-RSRP Note3,dBm/SCS,"1, 2",-94,-infinity,-infinity,-infinity,-infinity,-91
+Io,dBm/9.36 MHz,"1, 2",-64.59,-70. 05,-70. 05,-70. 05,-70. 05,-62.26
+Propagation Condition,,"1, 2",AWGN,,,,,
+NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:SS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,,,

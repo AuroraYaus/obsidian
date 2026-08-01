@@ -1,0 +1,113 @@
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12V2X Requirements", "paragraph_index": 1, "style": "Heading1"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.1Introduction", "paragraph_index": 2, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.2UE Transmit Timing", "paragraph_index": 19, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.2.1Introduction", "paragraph_index": 20, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.2.2GNSS as synchronization reference source", "paragraph_index": 27, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.2.3NR Cell as synchronization reference source", "paragraph_index": 33, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.2.4E-URTAN Cell as synchronization reference source", "paragraph_index": 39, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.2.5SyncRef UE as synchronization reference source", "paragraph_index": 45, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3Initiation/Cease of SLSS Transmissions", "paragraph_index": 52, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3.1Introduction", "paragraph_index": 53, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3.1.1Initiation/Cease of SLSS transmissions with NR cell as synchronization reference source", "paragraph_index": 59, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3.1.2Initiation/Cease of SLSS transmissions with EUTRAN cell as synchronization reference source", "paragraph_index": 77, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3.1.3Initiation/Cease of SLSS transmissions with GNSS as synchronization reference source", "paragraph_index": 90, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3.1.4Initiation/Cease of SLSS transmissions with SyncRef UE as synchronization reference source", "paragraph_index": 98, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3AInitiation/Cease of SLSS Transmissions with CCA", "paragraph_index": 111, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3A.1Introduction", "paragraph_index": 112, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3A.1.1Initiation/Cease of SLSS transmissions with NR cell as synchronization reference source", "paragraph_index": 118, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3A.1.2Initiation/Cease of SLSS transmissions with EUTRAN cell as synchronization reference source", "paragraph_index": 121, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3A.1.3Initiation/Cease of SLSS transmissions with GNSS as synchronization reference source", "paragraph_index": 124, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.3A.1.4Initiation/Cease of SLSS transmissions with SyncRef UE as synchronization reference source", "paragraph_index": 127, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.4Selection / Reselection of V2X Synchronization Reference Source", "paragraph_index": 140, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.4ASelection / Reselection of Sidelink Synchronization Reference Source with CCA", "paragraph_index": 172, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.5L1 SL-RSRP measurements", "paragraph_index": 204, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.5.1Introduction", "paragraph_index": 205, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.5.2SL-RSRP measurements", "paragraph_index": 207, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.6Congestion Control measurements", "paragraph_index": 211, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.7Interruption", "paragraph_index": 216, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.7.1Interruptions to WAN due to V2X Sidelink Communication", "paragraph_index": 217, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.7.2V2X Sidelink Communication Dropping due to synchronization source change", "paragraph_index": 223, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.7.3Interruptions to WAN due to switching between E-UTRA V2X Sidelink and NR V2X Sidelink", "paragraph_index": 279, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.7.4Interruptions to WAN at transitions between active and non-active during SL-DRX", "paragraph_index": 285, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.7.5Interruptions to V2X sidelink at transitions between active and non-active during DRX", "paragraph_index": 297, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.7.6Interruptions to V2X sidelink due to Active BWP switching Requirement", "paragraph_index": 301, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.7.7Interruptions to WAN due to SyncRef UE detection and/or Sensing during SL DRX off duration", "paragraph_index": 307, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.7.8Interruptions at NR sidelink discovery configuration", "paragraph_index": 310, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.7.9Interruptions to WAN due to sidelink carrier addition/release", "paragraph_index": 316, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.8Reliability of GNSS signal", "paragraph_index": 326, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.9Scheduling availability", "paragraph_index": 330, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.9.1Scheduling availability of UE switching between E-UTRA sidelink and NR sidelink", "paragraph_index": 331, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.9.2Scheduling availability of UE switching between Uu uplink  and V2X sidelink", "paragraph_index": 341, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.10Selection / Reselection of relay UE", "paragraph_index": 352, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.10.1Introduction", "paragraph_index": 353, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.10.2Selection / Reselection of relay UE", "paragraph_index": 358, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.11Component Carrier Addition and Release Delay for Sidelink Carrier Aggregation", "paragraph_index": 366, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12.12Selection / Reselection of Synchronization Reference Source for NR SL Carrier Aggregation", "paragraph_index": 369, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12ANR Sidelink Measurements for Positioning", "paragraph_index": 395, "style": "Heading1"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.1Introduction", "paragraph_index": 396, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.2SL RSTD measurements", "paragraph_index": 406, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.2.1Introduction", "paragraph_index": 407, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.2.3Measurement Capability", "paragraph_index": 413, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.2.4Measurement Reporting Requirements", "paragraph_index": 416, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.2.5Measurements Period Requirements", "paragraph_index": 423, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.3SL PRS-RSRP measurements", "paragraph_index": 442, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.3.1Introduction", "paragraph_index": 443, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.3.2Requirements Applicability", "paragraph_index": 446, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.3.4Measurement Reporting Requirements", "paragraph_index": 452, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.3.5Measurements Period Requirements", "paragraph_index": 459, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.4SL Rx-Tx measurements", "paragraph_index": 472, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.4.1Introduction", "paragraph_index": 473, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.4.2Requirements Applicability", "paragraph_index": 476, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.4.3Measurement Capability", "paragraph_index": 480, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.4.4Measurement Reporting Requirements", "paragraph_index": 482, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.4.5Measurement Period Requirements", "paragraph_index": 489, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.5SL PRS-RSRPP measurements", "paragraph_index": 509, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.5.1Introduction", "paragraph_index": 510, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.5.2Requirements Applicability", "paragraph_index": 512, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.5.3Measurement Capability", "paragraph_index": 515, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.5.4Measurement Reporting Requirements", "paragraph_index": 517, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.5.5Measurement Period Requirements", "paragraph_index": 524, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.6SL AoA measurements", "paragraph_index": 537, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.6.1Introduction", "paragraph_index": 538, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.6.2Requirements Applicability", "paragraph_index": 541, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.6.3Measurement Capability", "paragraph_index": 545, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.6.4Measurement Reporting Requirements", "paragraph_index": 548, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.6.5Measurement Period Requirements", "paragraph_index": 554, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.7SL RTOA measurements", "paragraph_index": 571, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.7.1Introduction", "paragraph_index": 572, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.7.2Requirements Applicability", "paragraph_index": 575, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.7.3Measurement Capability", "paragraph_index": 579, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.7.4Measurement Reporting Requirements", "paragraph_index": 581, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "12A.7.5Measurement Period Requirements", "paragraph_index": 587, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13Measurement Performance Requirements for NR gNB", "paragraph_index": 603, "style": "Heading1"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.1UL-RTOA", "paragraph_index": 604, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.1.1Report mapping", "paragraph_index": 605, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.1.1AAdditional Path Report Mapping for UL-RTOA", "paragraph_index": 634, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.2gNB Rx-Tx time difference", "paragraph_index": 663, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.2.1Report mapping", "paragraph_index": 664, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.2.1AAdditional Path Report Mapping for gNB Rx-Tx", "paragraph_index": 693, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.2.2Measurement Accuracy Requirements", "paragraph_index": 722, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.2.2.1Introduction", "paragraph_index": 723, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.2.2.2Requirements", "paragraph_index": 725, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.3UL SRS RSRP measurement", "paragraph_index": 737, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.3.1Report mapping", "paragraph_index": 738, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.3.2Measurement accuracy requirements", "paragraph_index": 743, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.3.2.1Introduction", "paragraph_index": 744, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.3.2.2Requirements", "paragraph_index": 746, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.4AoA/ZoA", "paragraph_index": 757, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.4.1Report mapping", "paragraph_index": 758, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.5Timing advance (TADV)", "paragraph_index": 766, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.5.1Report mapping", "paragraph_index": 767, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.6UL SRS RSRPP measurement", "paragraph_index": 774, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.6.1Report mapping", "paragraph_index": 775, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.7gNB Rx-Tx time difference measurements for RTT-based PDC", "paragraph_index": 780, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.7.1Report mapping", "paragraph_index": 781, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.7.2Measurement Accuracy Requirements", "paragraph_index": 787, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.7.2.1Introduction", "paragraph_index": 788, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.7.2.2Requirements", "paragraph_index": 790, "style": "Heading4"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.8UL-RSCP measurement", "paragraph_index": 802, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.8.1Report mapping", "paragraph_index": 803, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.9UL SRS-TDCT measurement", "paragraph_index": 808, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.9.1Report mapping", "paragraph_index": 809, "style": "Heading3"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.10UL SRS-TDCP measurement", "paragraph_index": 827, "style": "Heading2"}
+{"source": "38133-j50_s12-13.docx", "section": "", "title": "13.10.1Report mapping", "paragraph_index": 828, "style": "Heading3"}

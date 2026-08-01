@@ -1,0 +1,7 @@
+OperatingBand,Downlink,,,Uplink,,
+,FDL_low (MHz),NOffs-DL,Range of NDL,FUL_low (MHz),NOffs-UL,Range of NUL
+107,612,70706,70706 – 71105,N/A,,
+108,470,71106,71106 – 73385,N/A,,
+112,470,73486,73486 – 74865,N/A,,
+113,606,74866,74866 – 75785,N/A,,
+NOTE 1: The channel numbers that designate carrier frequencies so close to the operating band edges that the broadcast carrier with PMCH bandwidth extends beyond the operating band edge shall not be used.,,,,,,

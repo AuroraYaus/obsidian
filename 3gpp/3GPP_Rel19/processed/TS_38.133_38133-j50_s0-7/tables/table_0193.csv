@@ -1,0 +1,7 @@
+eDRX_IDLE cycle length [s],Tserv [s],Scaling Factor (N1),"Tdetect,NR_Intra (number of Tserv)","Tmeasure,NR_Intra (number of Tserv)","Tevaluate,NR_Intra (number of Tserv)"
+,,,,,
+2.56 ≤eDRX_IDLE cycle length ≤ 10485.76,0.32 ≤ Tserv < 0.64,8,[36 x N1 x M2],[4 x N1 x M2],[16 x N1 x M2]
+,0.64 ≤ Tserv < 1.28,5,[28 x N1],[2 x N1],[8 x N1]
+,1.28 ≤ Tserv < 2.56,4,[25 x N1],[1 x N1],[5 x N1]
+,2.56 ≤ Tserv,3,[23 x N1],[1 x N1],[3 x N1]
+"NOTE 1:Tdetect,NR_Intra, Tmeasure,NR_Intra and Tevaluate,NR_Intra in seconds depend on the number N of Tserv and are calculated as N * Tserv.",,,,,

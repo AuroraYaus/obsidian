@@ -1,0 +1,9 @@
+Config,Description
+,LTE PCell + NR PSCell Note 2
+1,"LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode"
+2,"LTE FDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode"
+3,"LTE FDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode"
+4,"LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode"
+5,"LTE TDD, NR 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode"
+6,"LTE TDD, NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode"
+NOTE 1: The UE is only required to be tested in one of the supported test configurationsNOTE 2: The duplex mode of the LTE SCell is determined based on the band combination to be tested.,

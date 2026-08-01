@@ -1,0 +1,26 @@
+Parameter,Unit,Value,,,,,
+Reference channel,,,R.5 TDD,R.6 TDD,R.7 TDD,R.8 TDD,R.9 TDD
+Channel bandwidth,MHz,1.4,3,5,10,15,20
+Allocated resource blocks,,,15,25,50,75,100
+Uplink-Downlink Configuration (Note 3),,,1,1,1,1,1
+Allocated subframes per Radio Frame (D+S),,,3+2,3+2,3+2,3+2,3+2
+Modulation,,64QAM,64QAM,64QAM,64QAM,64QAM,64QAM
+Target Coding Rate,,,3/4,3/4,3/4,3/4,3/4
+Information Bit Payload,,,,,,,
+"For Sub-Frames 4,9",Bits,,8504,14112,30576,46888,61664
+"For Sub-Frames 1,6",Bits,,6968,11448,23688,35160,46888
+For Sub-Frame 5,Bits,,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,,6968,12576,30576,45352,61664
+Number of Code Blocks per Sub-Frame(Note 4),,,,,,,
+"For Sub-Frames 4,9",,,2,3,5,8,11
+"For Sub-Frames 1,6",,,2,2,4,6,8
+For Sub-Frame 5,,,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,,,2,3,5,8,11
+Binary Channel Bits Per Sub-Frame,,,,,,,
+"For Sub-Frames 4,9",Bits,,11340,18900,41400,62100,82800
+"For Sub-Frames 1,6",Bits,,9828,16668,33768,50868,67968
+For Sub-Frame 5,Bits,,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,,9252,16812,39312,60012,80712
+Max. Throughput averaged over 1 frame,Mbps,,3.791,6.370,13.910,20.945,27.877
+UE Category,,,≥ 1,≥ 2,≥ 2,≥ 2,≥ 3
+"Note 1:2 symbols allocated to PDCCH for 20 MHz, 15 MHz and 10 MHz channel BW; 3 symbols allocated to PDCCH for 5 MHz and 3 MHz; 4 symbols allocated to PDCCH for 1.4 MHz. For subframe 1&6, only 2 OFDM symbols are allocated to PDCCH.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4]Note 3:As per Table 4.2-2 TS 36.211 [4].Note 4:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).",,,,,,,

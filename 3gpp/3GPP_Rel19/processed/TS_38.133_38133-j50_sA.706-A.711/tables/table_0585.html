@@ -1,0 +1,146 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reference cell</td>
+    <td></td>
+    <td>Cell 1, Cell 4</td>
+    <td>Reference cell is the cell in the DL-TDOA assistance data with respect to which the RSTD measurement is defined, as specified in TS 38.215 [4] and TS 37.355 [34]. The reference cell is the PCell in this test case.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Neighbor cells</td>
+    <td></td>
+    <td>Cell 2, Cell 3, Cell 4, Cell 5 and Cell 6</td>
+    <td>Cell 2, Cell 3, Cell 4, Cell 5 and Cell 6 appear at the first, second, third, fourth and fifth places in the neighbour cell list in the DL-TDOA assistance data.</td>
+  </tr>
+  <tr>
+    <td colspan="2">BWchannel</td>
+    <td>MHz</td>
+    <td>200: NRB,c = 132</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>SSB configuration</td>
+    <td>Config 1</td>
+    <td></td>
+    <td>SSB.2 FR2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>SMTC configuration</td>
+    <td>Config 1</td>
+    <td></td>
+    <td>SMTC.1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>PDSCH RMC configuration</td>
+    <td>Config 1</td>
+    <td></td>
+    <td>SR.1.1 FDD</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>RMSI CORESET RMC configuration</td>
+    <td>Config 1</td>
+    <td></td>
+    <td>CR.3.1 TDD</td>
+    <td>As specified in clause A.3.1.2.1</td>
+  </tr>
+  <tr>
+    <td>Dedicated CORESET RMC configuration</td>
+    <td>Config 1</td>
+    <td></td>
+    <td>CR.1.1 FDD</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>PRS Configuration</td>
+    <td>Config 1</td>
+    <td></td>
+    <td>PRS.1.4. FR2</td>
+    <td>As specified in clause A.3. 31</td>
+  </tr>
+  <tr>
+    <td colspan="2">Physical cell ID PCI</td>
+    <td></td>
+    <td>(PCI of Cell 1 – PCI of Cell 2)mod6=0and(PCI of Cell 1 – PCI of Cell 3)mod6=0and(PCI of Cell 1 – PCI of Cell 4)mod6=0and(PCI of Cell 1 – PCI of Cell 5)mod6=0and(PCI of Cell 1 – PCI of Cell 6)mod6=0</td>
+    <td>The cell PCIs are selected such that the relative shifts of PRS patterns among cells are as given by the test parameters</td>
+  </tr>
+  <tr>
+    <td colspan="2">CP length</td>
+    <td></td>
+    <td>Normal</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX</td>
+    <td>s</td>
+    <td>0.64</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Radio frame receive time offset between the cells at the UE antenna connector</td>
+    <td>s</td>
+    <td>Cell 2, Cell 4, Cell 5 to Cell 1: 0Cell 3, Cell 6 to Cell 1: 3</td>
+    <td>PRS are transmitted from synchronous cells</td>
+  </tr>
+  <tr>
+    <td colspan="2">Expected RSTD</td>
+    <td>s</td>
+    <td>Cell 2 to 6: 3Other neighbour cells: randomly between -3 and 3</td>
+    <td>The expected RSTD is what is expected at the receiver. The corresponding parameter in the DL-TDOA assistance data specified in TS 37.355 [34] is the expectedRSTD indicator</td>
+  </tr>
+  <tr>
+    <td colspan="2">Expected RSTD uncertainty for all neighbour cells</td>
+    <td>s</td>
+    <td>5</td>
+    <td>The corresponding parameter in the DL-TDOA assistance data specified in TS 37.355 [34] is the expectedRSTD-Uncertainty index</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of cells provided in DL-TDOA assistance data</td>
+    <td></td>
+    <td>6</td>
+    <td>Including the reference cells</td>
+  </tr>
+  <tr>
+    <td colspan="2">PRS muting info</td>
+    <td></td>
+    <td>Cell 1, Cell 4: ‘10’Cell 2, Cell 5: ‘01’Cell 3, Cell 6: ‘10’</td>
+    <td>Correponds to prs-MutingInfo defined in TS 37.355 [34]</td>
+  </tr>
+  <tr>
+    <td colspan="2">PRS resource RE offset</td>
+    <td></td>
+    <td>Cell 1, Cell 4: 0Cell 2, Cell 5: 0Cell 3, Cell 6: 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td>3</td>
+    <td>The length of the time interval from the beginning of each test</td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td>1.28</td>
+    <td>The length of the time interval that follows immediately after time interval T1</td>
+  </tr>
+  <tr>
+    <td colspan="2">AoA setup</td>
+    <td></td>
+    <td>Setup 1</td>
+    <td>As defined in A.3.15.1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Beam assumption</td>
+    <td></td>
+    <td>Rough</td>
+    <td>Information about types of UE beam is given in clause B.2.1.3, and does not limit UE implementation or test system implementation</td>
+  </tr>
+</table>

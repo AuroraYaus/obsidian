@@ -1,0 +1,24 @@
+E-UTRA Band / Channel bandwidth / NRB / Duplex mode,,,,,,,
+E-UTRA Band,1.4 MHz,3 MHz,5 MHz,10 MHz,15 MHz,20 MHz,Duplex Mode
+1,,,25,50,75,100,FDD
+2,6,15,25,50,501,501,FDD
+3,6,15,25,50,501,501,FDD
+4,6,15,25,50,75,100,FDD
+5,6,15,25,251,,,FDD
+7,,,25,50,75,751,FDD
+8,6,15,25,251,,,FDD
+12,6,15,201,201,,,FDD
+13,,,201,201,,,FDD
+18,,,25,25,25,,FDD
+20,,,25,201,202,202,FDD
+26,6,15,25,251,251,,FDD
+28,,15,25,251,251,251,FDD
+31,6,53,53,,,,FDD
+34,,,25,50,75,,
+39,,,25,50,75,100,TDD
+40,,,25,50,75,100,TDD
+41,,,25,50,75,100,TDD
+66,6,15,25,50,75,100,FDD
+72,6,53,53,,,,FDD
+111,6,101,101,101,,,FDD
+"NOTE 1:1 refers to the UL resource blocks shall be located as close as possible to the downlink operating band but confined within the transmission bandwidth configuration for the channel bandwidth (Table 5.6-1).NOTE 2:2 refers to Band 20; in the case of 15MHz channel bandwidth, the UL resource blocks shall be located at RBstart 11 and in the case of 20MHz channel bandwidth, the UL resource blocks shall be located at RBstart 16.NOTE 3:3 refers to Bands 31 and 72; in the case of 3 MHz channel bandwidth, the UL resource blocks shall be located at RBstart 9 and in the case of 5 MHz channel bandwidth, the UL resource blocks shall be located at RBstart 10.",,,,,,,

@@ -1,0 +1,32 @@
+Parameter,Unit,Cell 1,,,Cell 2,,,Cell 3,,,Cell 4,,
+,,T1,T2,T3,T1,T2,T3,T1,T2,T3,T1,T2,T3
+E-UTRA RF Channel Number,,1,,,2,,,3,,,,,
+BWchannel,,"5MHz: NRB,c = 2510MHz: NRB,c = 5020MHz: NRB,c = 100",,,"5MHz: NRB,c = 2510MHz: NRB,c = 5020MHz: NRB,c = 100",,,"5MHz: NRB,c = 2510MHz: NRB,c = 5020MHz: NRB,c = 100",,,,,
+PDSCH parameters:DL Reference Measurement Channel,,5MHz: R.5 FDD 10MHz: R.0 FDD20MHz: R.4 FDD,,,-,,,-,,,-,,
+PCFICH/PDCCH/PHICH parameters:DL Reference Measurement Channel,,5MHz: R.11 FDD 10MHz: R.6 FDD20MHz: R.10 FDD,,,5MHz: R.11 TDD 10MHz: R.6 TDD20MHz: R.10 TDD,,,5MHz: R.11 TDD 10MHz: R.6 TDD20MHz: R.10 TDD,,,5MHz: R.11 TDD 10MHz: R.6 TDD20MHz: R.10 TDD,,
+OCNG Patterns,,5MHz: OP.15 FDD 10MHz: OP.1 FDD20MHz: OP.11 FDD,,,5MHz: OP.10 TDD 10MHz: OP.2 TDD20MHz: OP.8 TDD,,,5MHz: OP.10 TDD 10MHz: OP.2 TDD20MHz: OP.8 TDD,,,5MHz: OP.10 TDD 10MHz: OP.2 TDD20MHz: OP.8 TDD,,
+PBCH_RA,dB,0,,,0,,,0,,,0,,
+PBCH_RB,dB,,,,,,,,,,,,
+PSS_RA,dB,,,,,,,,,,,,
+SSS_RA,dB,,,,,,,,,,,,
+PCFICH_RB,dB,,,,,,,,,,,,
+PHICH_RA,dB,,,,,,,,,,,,
+PHICH_RB,dB,,,,,,,,,,,,
+PDCCH_RA,dB,,,,,,,,,,,,
+PDCCH_RB,dB,,,,,,,,,,,,
+PDSCH_RA,dB,,,,,,,,,,,,
+PDSCH_RB,dB,,,,,,,,,,,,
+OCNG_RANote 1,dB,,,,,,,,,,,,
+OCNG_RBNote 1,dB,,,,,,,,,,,,
+NocNote 2,dBm/15 KHz,-104,,,-104,,,-104,,,,,
+Ês/Noc,dB,17,17,-3,-infinity,17,-3,17,17,-3,-infinity,17,-3
+Ês/Iot Note 3,dB,17,17,-3,-infinity,17,-3,17,-0.09,-4.76,-infinity,-0.09,-4.76
+RSRP Note 3,dBm/15 kHz,-87,-87,-107,-infinity,-87,-107,-87,-87,-107,-infinity,-87,-107
+SCH_RP Note 3,dBm/15 kHz,-87,-87,-107,-infinity,-87,-107,-87,-87,-107,-infinity,-87,-107
+Io Note 3,dBm/Ch BW,"-59.13+10log(NRB,c /50)","-59.13+10log(NRB,c /50)","-74.45+10log(NRB,c /50)","-76.22+10log(NRB,c /50)","-59.13+10log(NRB,c /50)","-74.45+10log(NRB,c /50)","-59.13+10log(NRB,c /50)","-56.17+10log(NRB,c /50)","-73.20+10log(NRB,c /50)",Specified in columns for Cell 3,,
+Propagation Condition,,AWGN,,,ETU70,,,ETU70,,,ETU70,,
+Correlation Matrix and Antenna Configuration,,1x2,,,1x2 Low,,,1x2 Low,,,1x2 Low,,
+Timing offset to Cell 1,s,-,,,0,,,0,,,3,,
+Time alignment error relative to cell 1 Note 5,s,-,,,≤ TAE,,,≤ TAE,,,N/A,,
+Time alignment error relative to cell 2 Note 5,s,-,,,-,,,≤ TAE,,,N/A,,
+"Note 1:OCNG shall be used such that all cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.Note 3:Es/Iot, RSRP, SCH_RP and Io have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.Note 5:       Time alignment error (TAE) as specified in TS 36.104 [30] clause 6.5.3.1. The TAE value depends upon the type of carrier aggregation.",,,,,,,,,,,,,

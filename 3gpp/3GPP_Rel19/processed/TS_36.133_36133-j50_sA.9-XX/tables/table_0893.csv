@@ -1,0 +1,29 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2025-03,RAN#107,RP-250618,7365,,B,CR related to Introduction of new LTE FDD Band 111,19.0.0
+2025-03,RAN#107,,,,,Minor editorial change,19.0.1
+2025-06,RAN#108,RP-250923,7380,,A,CR on rsrp-ThresholdsPrachInfoList for IoT NTN test cases,19.1.0
+2025-06,RAN#108,RP-250923,7381,,A,CR on random access test case for IoT NTN test,19.1.0
+2025-06,RAN#108,RP-250923,7384,,A,CR on maintenance for Rel-18 IoT NTN R19 (cat A),19.1.0
+2025-06,RAN#108,RP-250937,7386,,B,CR to TS 36.133: Introduction of a new IoT NTN S-band,19.1.0
+2025-09,RAN#109,RP-252389,7388,,A,CR on location-based cell reselection for IoT NTN enhancement,19.2.0
+2025-09,RAN#109,RP-252407,7394,,B,(IoT_NTN_TDD) Big CR 36.133 R19 UE RRM,19.2.0
+2025-09,RAN#109,RP-252406,7395,,B,BigCR for R19 IoT_NTN_Ph3-Core,19.2.0
+2025-12,RAN#110,RP-253624,7401,,F,CR on core requirements for IoT NTN TDD,19.3.0
+2025-12,RAN#110,RP-253624,7403,,F,CR  with Editorial Correction for IoT NTN TDD Requirements,19.3.0
+2025-12,RAN#110,RP-253624,7404,1,F,(IoT_NTN_TDD-Perf) CR on removing support for segmented precompensation,19.3.0
+2025-12,RAN#110,RP-253629,7396,,F,CR on channel quality report in Msg-3-EDT for anchor carrier,19.3.0
+2025-12,RAN#110,RP-253629,7402,,F,CR on conditional HARQ-ACK feedback for CB-Msg3 Requirements,19.3.0
+2025-12,RAN#110,RP-253684,7399,,A,(TEI18) Updates related to NB-IoT inband operation in NTN NR [NTNNBIoT_inbandNTNNR],19.3.0
+2026-03,RAN#111,RP-260447,7406,,B,Introduction of test case for CB-Msg3 procedure for NB-IoT with Satellite Access,19.4.0
+2026-03,RAN#111,RP-260438,7408,,B,CR on IoT NTN timing tests for NGSO,19.4.0
+2026-03,RAN#111,RP-260453,7412,,A,(LTE_NBIoT_eMTC_NTN_req-Core) CR on RRM core requirements for IoT NTN R19,19.4.0
+2026-03,RAN#111,RP-260448,7407,3,B,Big CR on 36.133 for IoT_NTN_TDD,19.4.0
+2026-06,RAN#112,RP-261401,7415,,A,(NR_MG_enh2-Core) CR on inter-RAT NR measurement without gap (R19),19.5.0
+2026-06,RAN#112,RP-261389,7416,,F,Maintenance CR for RRM aspects under IoT_NTN_TDD – general corrections,19.5.0
+2026-06,RAN#112,RP-261389,7417,,F,Maintenance CR for updating NPRACH config for IoT_NTN_TDD to avoid overlap across coverage levels,19.5.0
+2026-06,RAN#112,RP-261389,7418,,F,Maintenance CR for updating measurement conditions of IoT_NTN_TDD,19.5.0
+2026-06,RAN#112,RP-261389,7419,1,F,(IoT_NTN_Ph3-Core) CR on k-Offset-r17 change,19.5.0
+2026-06,RAN#112,RP-261389,7420,,F,(IoT_NTN_Ph3-Core) CR to introduce requirements for CQI reporting on CB-Msg3 for eMTC,19.5.0
+2026-06,RAN#112,RP-261394,7422,,F,(NR_IoT_NTN_req_test_enh-Perf) CR on NGSO channel model for RRM test cases,19.5.0
+2026-06,RAN#112,RP-261400,7424,,A,(IoT_NTN_enh-Core) CR on RRM core requirements for IoT NTN R19,19.5.0

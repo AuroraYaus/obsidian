@@ -1,0 +1,18 @@
+Channel Bandwidth MHz,"Carrier Center Frequency, Fc, MHz",Regions,,,A-MPR
+,,RBend *12*SCSMHz,RBstart *12*SCSMHz,LCRB *12*SCSMHz,
+51,Fc < 1925,N/A,≤ 0.18,≥ 3.24,A1
+101,Fc < 1930.7,N/A,≥ 0,≥ 1.35* RBstart*12*SCS + 4.32,A2
+,,N/A,≤ 1.8,≤ 2.16,A3
+,,N/A,≥ 0,< 1.35* RBstart*12*SCS + 4.32≥ 1.2* RBstart*12*SCS + 3.6,A4
+102,Fc < 1930.7,≥ 8.1,N/A,< 1.2* RBstart*12*SCS + 3.6≥ 2.34,A10
+151,1927.5 ≤ Fc < 1932.5,N/A,≥ 0,≥ 1.2* RBstart*12*SCS + 4.68,A5
+,,N/A,≤ 3.6,≤ 3.96,A6
+,,N/A,≥ 0,< 1.2* RBstart *12*SCS + 4.68≥ RBstart *12*SCS + 3.6> 3.96,A7
+,1932.5 ≤ Fc < 1938.2,N/A,≤ 1.8,≥ 8.28,A8
+,,N/A,≤ 1.62,≤ 2.16,A3
+152,1927.5 ≤ Fc < 1932.5,≥ 12.24,N/A,< RBstart *12*SCS + 3.6≥ 2.88,A10
+,1932.5 ≤ Fc < 1938.2,≥ 12.24,N/A,≤ 8.28≥ 2.88,A10
+201,Fc < 1945.7,N/A,≥ 0,≥ 1.0* RBstart *12*SCS + 4.14,A9
+,,N/A,≤ 4.68,< 1.0* RBstart *12*SCS + 4.14≤ 6.48,A6
+202,Fc < 1945.7,≥ 16.2,N/A,< 1.0* RBstart *12*SCS + 4.14≥ 2.88,A10
+NOTE 1: These regions apply to both NS_05 and NS_05U.NOTE 2: These regions only apply to NS_05U.,,,,,

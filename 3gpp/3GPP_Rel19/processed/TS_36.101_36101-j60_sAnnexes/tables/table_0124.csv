@@ -1,0 +1,28 @@
+Parameter,Unit,Value,,,,,
+Channel bandwidth,MHz,1.4,3,5,10,15,20
+Allocated resource blocks (Note 7),,2,8,15,15,15,15
+Subcarriers per resource block,,12,12,12,12,12,12
+Uplink-Downlink Configuration (Note 5),,1,1,1,1,1,1
+Allocated subframes per Radio Frame,,2,2,2,2,2,2
+Modulation,,16QAM,16QAM,16QAM,16QAM,16QAM,16QAM
+Target Coding Rate,,3/5,3/5,1/2,1/2,1/2,1/2
+Number of HARQ Processes,Processes,7,7,7,7,7,7
+Maximum number of HARQ transmissions,,1,1,1,1,1,1
+Information Bit Payload per Sub-Frame,,,,,,,
+"For Sub-Frames 4,9",Bits,552,2280,4008,4008,4008,4008
+"For Sub-Frames 1,6",Bits,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+Transport block CRC,Bits,24,24,24,24,24,24
+Number of Code Blocks per Sub-Frame(Note 4),,,,,,,
+"For Sub-Frames 4,9",,1,1,1,1,1,1
+"For Sub-Frames 1,6",,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 5,,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,,N/A,N/A,N/A,N/A,N/A,N/A
+Binary Channel Bits per Sub-Frame,,,,,,,
+"For Sub-Frames 4,9",Bits,912,4032,7560,7560,7560,7560
+"For Sub-Frames 1,6",,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,N/A,N/A,N/A,N/A,N/A,N/A
+Max. Throughput averaged over 1 frame,kbps,110.4,456.0,801.6,801.6,801.6,801.6
+"Note 1:For normal subframes(0,4,5,9), 4 symbols allocated to PDCCH for 1.4MHz channel bandwidth, and 3 symbols allocated for all other channel bandwidths. For special subframe (1&6), only 2 OFDM symbols are allocated to PDCCH for all BWs.Note 2:For 1.4MHz, no data shall be scheduled on special subframes(1&6) to avoid problems with insufficient PDCCH performance.Note 3:Reference signal, Synchronization signals and PBCH allocated as per TS 36.211 [4].Note 4:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).Note 5:As per Table 4.2-2 in TS 36.211 [4].Note 6:2 resource blocks allocated to MPDCCH.Note 7:2 resource blocks allocated to PDSCH for 1.4MHz channel bandwidth. 2 narrowbands and 4 resource blocks in each narrowband allocated to PDSCH for 3MHz channel bandwidth. For 5MHz/10MHz/15MHz/20MHz channel bandwidth, configure 3 narrowbands and 5 resource blocks in each narrowband allocated to PDSCH.",,,,,,,

@@ -1,0 +1,22 @@
+Operating Band,Centre Frequency of Interfering Signal [MHz],,,Interfering Signal mean power [dBm],Wanted Signal mean power [dBm],Interfering signal centre frequency minimum frequency offset from the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap [MHz],Type of Interfering Signal
+"1-7, 9-11, 13-14, 18,19, 21-23, 24, 27, 30, 33-45, 48-54, 65, 66, 68, 70, 106",(FUL_low -20),to,(FUL_high +20),-35,PREFSENS +6dB (Note 1),See table 7.6.1.1-2,See table 7.6.1.1-2
+,1(FUL_high +20),toto,(FUL_low -20)12750,-15,PREFSENS +6dB (Note 1),,CW carrier
+"8, 26, 28, 111",(FUL_low  -20),to,(FUL_high +10),-35,PREFSENS +6dB (Note 1),See table 7.6.1.1-2,See table 7.6.1.1-2
+,1(FUL_high +10),toto,(FUL_low  -20)12750,-15,PREFSENS +6dB (Note 1),,CW carrier
+12,(FUL_low  -20),to,(FUL_high +13),-35,PREFSENS +6dB (Note 1),See table 7.6.1.1-2,See table 7.6.1.1-2
+,1(FUL_high +13),toto,(FUL_low  -20)12750,-15,PREFSENS +6dB (Note 1),,CW carrier
+17,(FUL_low  -20),to,(FUL_high +18),-35,PREFSENS +6dB (Note 1),See table 7.6.1. 1-2,See table 7.6.1.1-2
+,1(FUL_high +18),toto,(FUL_low  -20)12750,-15,PREFSENS +6dB (Note 1),,CW carrier
+"20, 71",(FUL_low  -11),to,(FUL_high +20),-35,PREFSENS +6dB (Note 1),See table 7.6.1. 1-2,See table 7.6.1.1-2
+,1,to,(FUL_low  -11)12750,-15,PREFSENS +6dB (Note 1),,CW carrier
+,(FUL_high +20),to,,,,,
+25,(FUL_low  -20),to,(FUL_high +15),-35,PREFSENS +6dB (Note 1),See table 7.6.1. 1-2,See table 7.6.1.1-2
+,1(FUL_high +15),toto,(FUL_low  -20)12750,-15,PREFSENS +6dB (Note 1),,CW carrier
+"31, 72, 73, 74, 87, 88",(FUL_low -20),to,(FUL_high +5),-35,PREFSENS +6dB (Note 1),See table 7.6.1.1-2,See table 7.6.1.1-2
+,1(FUL_high +5),toto,(FUL_low -20)12750,-15,PREFSENS +6dB (Note 1),,CW carrier
+46,(FUL_low -20),to,(FUL_high +20),-35,PREFSENS +6dB (Note 1),See table 7.6.1.1-2,See table 7.6.1.1-2
+,(FUL_low -500)(FUL_high +20),toto,(FUL_low -20)(FUL_high +500),-35,PREFSENS +6dB (Note 1),,CW carrier
+,1(FUL_high +500),toto,(FUL_low -500)12750,-15,PREFSENS +6dB (Note 1),,CW carrier
+85,(FUL_low  -20),to,(FUL_high +12),-35,PREFSENS +6dB (Note 1),See table 7.6.1. 1-2,See table 7.6.1.1-2
+,1(FUL_high +12),toto,(FUL_low -20)12750,-15,PREFSENS +6dB (Note 1),,CW carrier
+"Note 1:PREFSENS depends on the channel bandwidth as specified in Table 7.2.1-2Note 2:For a BS capable of multiband operation, in case of interfering signal that is not in the in-band blocking frequency range of the operating band where the wanted signal is present, and not in the in-band blocking frequency range of an adjacent or overlapping operating band, the wanted signal mean power is equal to PREFSENS + 1.4 dB.",,,,,,,

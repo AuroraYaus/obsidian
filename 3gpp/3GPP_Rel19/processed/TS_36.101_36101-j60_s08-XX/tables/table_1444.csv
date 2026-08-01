@@ -1,0 +1,7 @@
+Parameter,Value,Comments
+onDurationTimer,psf1,
+drx-InactivityTimer,psf1,
+drx-RetransmissionTimer,psf1,
+longDRX-CycleStartOffset,"sf2560, 0",
+shortDRX,disabled,
+NOTE 1:For further information see clause 6.3.2 in TS 36.331.,,

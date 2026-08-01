@@ -1,0 +1,18 @@
+Parameter,,Unit,Value,Comment
+Initial conditions,Active cell,,Cell 1,On the carrier under CCA
+,Neighbouring cell,,Cell 2,On the carrier under CCA
+Final condition,Active cell,,Cell 2,On the carrier under CCA
+DL CCA model,"Dynamic channel accessNote 1, 3",,As specified in clause A.3.26.2.1,
+,"Semi-static channel access Note 2, 3",,,
+UL CCA model,"Dynamic channel access Note 1, 3",,As specified in clause A.3.26.2.2,
+,"Semi-static channel access Note 2,3",,,
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+Time offset between cells,,,3 s,Synchronous cells
+T304,,ms,500,
+LCCA_DL,,,5,
+WCCA_DL,,ms,T304,
+LCCA_UL,,,5,
+WCCA_UL,,ms,T304,
+T1,,s,5,
+T2,,s,≥ Tinterrupt,Tinterrupt is defined in clause 6.1B.1.2
+"NOTE 1:For a UE supporting dynamic channel access and network configuring dynamic channel occupancy.NOTE 2:For a UE supporting semi-static channel access and network configuring semi-static channel occupancy.NOTE 3:For a UE supporting both semi-static and dynamic channel access, the UE can be tested under dynamic channel occupancy only.",,,,

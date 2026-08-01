@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TSSB_measurement_period_intra_RedCap</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>max(400 ms, Mmeas_period with_gaps_RedCap  x max(MGRP, SMTC period)) x CSSFintra_RedCap</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320 ms</td>
+    <td>max(400 ms, ceil(1.5 x Mmeas_period with_gaps_RedCap) x max(MGRP, SMTC period, DRX cycle)) Note 1 x CSSFintra_RedCap</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320 ms</td>
+    <td>Mmeas_period with_gaps_RedCap  x max(MGRP, DRX cycle) x CSSFintra_RedCap</td>
+  </tr>
+</table>

@@ -1,0 +1,13 @@
+Parameter,Unit,Value,,Comment
+,,Test 1,Test 2,
+NR RF Channel Number,,"1, 2",,Two NR radio channels are used for this test
+Active PCell,,Cell 1,,PCell on RF channel number 1.
+Active SCell,,Cell 2,,SCell on RF channel number 2.
+CP length,,Normal,,
+DRX,,ON,,For both PCell and SCell
+Cell-individual offset for cells on RF channel number 1,dB,0,,Individual offset for cells on PCC.
+Cell-individual offset for cells on RF channel number 2,dB,0,,Individual offset for cells on SCC.
+Cell2 timing offset to cell1,s,3,,Time alignment error as specified in TS 38.104 [13] clause 6.5.3.1.
+OFDM symbol range in slot for transmission of DCI with dormancy indication,,0 – 2,3 – 11,
+T1,s,0.2,,
+T2,s,0.2,,

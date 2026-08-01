@@ -1,0 +1,25 @@
+Parameter,,Unit,Test 1
+Bandwidth,,MHz,10
+Transmission mode,,,9
+Propagation channel,,,EVA5
+Precoding granularity(only for reporting and following PMI),,PRB,6
+Correlation and antenna configuration,,,LowULA 4 x 2
+Cell-specific reference signals,,,"Antenna ports 0,1"
+CSI reference signals,,,"Antenna ports15,…,18"
+Beamforming model,,,Annex B.4.3
+CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS,,,5/ 1
+CSI-RS reference signal configuration,,,8
+CodeBookSubsetRestriction bitmap,,,0x0000 0000 0000 FFFF
+Downlink power allocation,,dB,0
+,,dB,0
+,Pc,dB,-3
+,,dB,-3
+,,dB[mW/15kHz],-98
+Reporting mode,,,PUSCH 1-2
+Reporting interval,,ms,5
+PMI delay,,ms,8
+Measurement channel,,,"R.45-1 FDD for UE Category 1, R.45 FDD for UE Category ≥2"
+OCNG Pattern,,,OP.7 FDD for UE Category 1OP.1 FDD for UE Category ≥2
+Max number of HARQ transmissions,,,4
+Redundancy version coding sequence,,,"{0,1,2,3}"
+"Note 1:For random precoder selection, the precoders shall be updated in each TTI (1 ms granularity).Note 2:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).Note 3:Void.Note 4:PDSCH _RA= 0 dB, PDSCH_RB= 0 dB in order to have the same PDSCH and OCNG power per subcarrier at the receiver.",,,

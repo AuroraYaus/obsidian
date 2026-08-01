@@ -1,0 +1,6 @@
+Parameter,Scenario X,Scenario Y,Scenario Z
+Channel model,Stationary UE: AWGNMoving UE: TDLC300-400,Stationary UE: AWGN Moving UE: AWGN,Stationary UE: AWGNMoving UE: AWGN
+UE speed,120 km/h,350 km/h,500 km/h
+CP length,Normal,Normal,Normal
+A,15 kHz: 10 s30 kHz: 5 s,15 kHz: 10 s30 kHz: 5 s120 kHz: 1.25 s,15 kHz: 10 s 30 kHz: 5 s
+,15 kHz: 0.04 s-130 kHz: 0.08 s-1,15 kHz: 0.13 s-130 kHz: 0.26 s-1120 kHz: 1.04 s-1,15 kHz: 0.18 s-130 kHz: 0.36 s-1

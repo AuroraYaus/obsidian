@@ -1,0 +1,166 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td colspan="6">Value</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reference channel</td>
+    <td></td>
+    <td>CC.1 FDD</td>
+    <td>CC.2 FDD</td>
+    <td>CC.3 FDD</td>
+    <td>CC.4 FDD</td>
+    <td>CC.5 FDD</td>
+    <td>CC.6 FDD</td>
+  </tr>
+  <tr>
+    <td colspan="2">Channel bandwidth</td>
+    <td>MHz</td>
+    <td>5</td>
+    <td>10</td>
+    <td>5</td>
+    <td>10</td>
+    <td>5</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td colspan="2">Allocated resource blocks</td>
+    <td></td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Subcarriers per resource block</td>
+    <td></td>
+    <td>12</td>
+    <td>12</td>
+    <td>12</td>
+    <td>12</td>
+    <td>12</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td colspan="2">DFT-OFDM Symbols per subframe (see Note 1)</td>
+    <td></td>
+    <td>11</td>
+    <td>11</td>
+    <td>11</td>
+    <td>11</td>
+    <td>11</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td colspan="2">Modulation</td>
+    <td></td>
+    <td>QPSK</td>
+    <td>QPSK</td>
+    <td>QPSK</td>
+    <td>QPSK</td>
+    <td>QPSK</td>
+    <td>QPSK</td>
+  </tr>
+  <tr>
+    <td colspan="2">Transport Block Size</td>
+    <td>Bits</td>
+    <td>41</td>
+    <td>43</td>
+    <td>41</td>
+    <td>43</td>
+    <td>41</td>
+    <td>43</td>
+  </tr>
+  <tr>
+    <td rowspan="7">Information bits</td>
+    <td>Frequency hopping flag</td>
+    <td></td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>RB assignment</td>
+    <td></td>
+    <td colspan="6">Set as per PSSCH RB allocation specific in the test</td>
+  </tr>
+  <tr>
+    <td>Hopping bits</td>
+    <td></td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>1Type 2 Hopping</td>
+    <td>(1,1)Type 2 Hopping</td>
+    <td>0Type 1 Hopping</td>
+    <td>(1,0)Type 1 Hopping</td>
+  </tr>
+  <tr>
+    <td>Time resource pattern (ITRP)</td>
+    <td></td>
+    <td colspan="6">8 (unless specified otherwise in the test)(Note 3)</td>
+  </tr>
+  <tr>
+    <td>Modulation and coding scheme</td>
+    <td></td>
+    <td colspan="6">Set as the PSSCH MCS specified in the test</td>
+  </tr>
+  <tr>
+    <td>Timing advance indication</td>
+    <td></td>
+    <td colspan="6">0 (unless specified otherwise in the test)</td>
+  </tr>
+  <tr>
+    <td>Group destination ID</td>
+    <td></td>
+    <td colspan="6">As set by higher layers</td>
+  </tr>
+  <tr>
+    <td colspan="2">Transport block CRC</td>
+    <td>Bits</td>
+    <td>16</td>
+    <td>16</td>
+    <td>16</td>
+    <td>16</td>
+    <td>16</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td colspan="2">Maximum number of HARQ transmissions</td>
+    <td></td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Binary Channel Bits (see Note 1,2)</td>
+    <td>Bits</td>
+    <td>264</td>
+    <td>264</td>
+    <td>264</td>
+    <td>264</td>
+    <td>264</td>
+    <td>264</td>
+  </tr>
+  <tr>
+    <td colspan="2">Max. Throughput averaged over one sc-period (bits/sc-period)</td>
+    <td></td>
+    <td>41</td>
+    <td>43</td>
+    <td>41</td>
+    <td>43</td>
+    <td>41</td>
+    <td>43</td>
+  </tr>
+  <tr>
+    <td colspan="9">Note 1:PSCCH transmissions are rate-matched for 12 DFT-OFDM symbols per subframe, and the last symbol shall be punctured as per TS 36.211.Note 2:Binary channel bits per HARQ transmission.NOTE 3: For NTRP = 8 (FDD) and trpt-Subset = 010, ITRP = 8 corresponds to a time repetition pattern of (1,1,0,0,0,0,0,0) as per TS 36.213.</td>
+  </tr>
+</table>

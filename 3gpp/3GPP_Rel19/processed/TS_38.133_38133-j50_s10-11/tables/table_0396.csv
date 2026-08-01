@@ -1,0 +1,9 @@
+Accuracy,,Conditions,,,,
+Normal condition,Extreme condition,Io Note 1 range,,,,
+,,NR V2X operating band groups Note 2,Minimum Io,,,Maximum Io
+dB,dB,,dBm/SCSSL,,,dBm/BWChannel
+,,,SCSSL = 15 kHz,SCSSL = 30 kHz,SCSSL = 60 kHz,
+2.5,5.5,NR_TDD_FR1_B,-120.5,-117.5,-114.5,-50
+,,NR_TDD_FR1_J,-116.5,-113.5,-110.5,-50
+4.5,7.5,Note 3,Note 3,Note 3,Note 3,Note 3
+NOTE 1:Io is assumed to have constant EPRE across the bandwidth.NOTE 2:NR V2X operating band groups are as defined in clause 3.5 for the corresponding NR operating bands.NOTE 3:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding highest accuracy requirement.,,,,,,

@@ -1,0 +1,15 @@
+Field,Value,Comment
+UL bandwidth,50 RBs,Same as the DL bandwidth
+srsBandwidthConfiguration,bw5,
+srsSubframeConfiguration,sc1,
+ackNackSrsSimultaneousTransmission,FALSE,
+srsMaxUpPTS,N/A,Not applicable for FDD
+srsBandwidth,0,No hopping
+srsHoppingBandwidth,hbw0,
+frequencyDomainPosition,0,
+Duration,TRUE,Indefinite duration
+srs-ConfigIndex,0,SRS periodicity of 2ms
+transmissionComb,0,
+cyclicShift,cs0,No cyclic shift
+srsAntennaPort,an1,Number of SRS antenna ports
+Note:For further information see clause 6.3.2 in TS 36.331.,,

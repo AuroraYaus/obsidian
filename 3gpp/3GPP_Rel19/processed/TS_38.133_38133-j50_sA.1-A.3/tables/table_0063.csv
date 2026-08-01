@@ -1,0 +1,12 @@
+Field,Value,Comment
+prach-ConfigurationIndex,190,"Preamble Format C2, with 10 ms PRACH periodicity, and other detailed configuration defined in table 6.3.3.2-4 in TS 38.211 [6]"
+msg1-FDM,One,One PRACH transmission occasions FDMed in one time instance.
+msg1-FrequencyStart,0,
+zeroCorrelationZoneConfig,11,"N-CS configuration, NCS = 23"
+preambleReceivedTargetPower,dBm-120,
+preambleTransMax,n6,
+powerRampingStep,dB2,
+ssb-perRACH-Occasion,oneFourth,OneFourth: 1 SSB associated with 4 RACH occasions
+prach-RootSequenceIndex,0,"Logic sequence index = 0, resulting in root sequence = 1."
+ltm-prach-SubcarrierSpacing,Same as UL carrier SCS,
+NOTE:For further information see clause 6.3.2 in TS 38.331 [2].,,

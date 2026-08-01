@@ -1,0 +1,5 @@
+,UL Gap Length (UGL) [ms],UL gap repetition periodicity (UGRP) [ms]
+UL MGP #0,1.0,20
+UL MGP #1,1.0,40
+UL MGP #2,0.5,160
+UL MGP #3,0.125 when SCS of active UL BWP =120 kHz0.25 when SCS of active UL BWP =60 kHz,5

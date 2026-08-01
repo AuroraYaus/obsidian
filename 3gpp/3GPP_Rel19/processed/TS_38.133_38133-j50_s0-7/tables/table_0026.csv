@@ -1,0 +1,7 @@
+DRX cycle length [s],Scaling Factor (N1),,,"Tdetect,NR_Intra [s] (number of DRX cycles)","Tmeasure,NR_Intra [s] (number of DRX cycles)","Tevaluate,NR_Intra[s] (number of DRX cycles)"
+,FR1,FR2-1Note1,FR2-2 Note2,,,
+0.32,1,8,12,11.52 x N1 x M2 x K1 (36 x N1 x M2 x K1),1.28 x N1 x M2 x K1 (4 x N1 x M2 x K1),5.12 x N1 x M2 x K1 (16 x N1 x M2 x K1)
+0.64,,5,8,17.92 x N1 x K1 (28 x N1 x K1),1.28 x N1 x K1 (2 x N1 x K1),5.12 x N1 x K1 (8 x N1 x K1)
+1.28,,4,6,32 x N1 x K1 (25 x N1 x K1),1.28 x N1 x K1 (1 x N1 x K1),6.4 x N1 x K1 (5 x N1 x K1)
+2.56,,3,5,58.88 x N1 x K1 (23 x N1 x K1),2.56 x N1 x K1 (1 x N1 x K1),7.68 x N1 x K1 (3 x N1 x K1)
+"NOTE 1:Applies for UE supporting FR2-1 power class 2&3&4. For UE supporting FR2-1 power class 1 or 5, N1 = 8 for all DRX cycle length.NOTE 2:Applies for UE supporting FR2-2 power class 2&3. For UE supporting FR2-2 power class 1, N1 = 12 for all DRX cycle length.NOTE 3:M2 = 1.5 if SMTC periodicity of measured intra-frequency cell > 20 ms; otherwise M2=1. If high layer signalling smtc2-LP-r16 is configured, for cells indicated in the pci-List parameter in smtc2-LP-r16, the SMTC periodicity corresponds to the value of higher layer parameter smtc2-LP-r16; for the other cells, the SMTC periodicity corresponds to the value of higher layer parameter smtc.NOTE 4:K1 = 3 is the measurement relaxation factor applicable for UE fulfilling the cellEdgeEvaluation [2] criterion.",,,,,,

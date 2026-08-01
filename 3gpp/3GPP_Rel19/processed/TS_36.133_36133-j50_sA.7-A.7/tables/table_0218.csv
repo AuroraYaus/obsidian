@@ -1,0 +1,28 @@
+Parameter,,Unit,Cell 1 (PCell),,,Cell 2 (PSCell),,
+,,,T1,T2,T3,T1,T2,T3
+E-UTRA RF Channel Number,,,1,,,2,,
+E-UTRA Channel Bandwidth (BWchannel),,MHz,"5, 10, 20",,,"5, 10, 20",,
+PCFICH/PDCCH/PHICH parameters.None of the PDCCH are intended for the UE under test.,,,5MHz: R.12 FDD10MHz: R.7 FDD20MHz: R.13 FDD,,,5MHz: R.12 FDD10MHz: R.7 FDD20MHz: R.13 FDD,,
+Correlation Matrix and Antenna Configuration,,,2x2 Low,,,2x2 Low,,
+OCNG Pattern defined in A.3.2.1 (FDD),,,5MHz: OP.16 FDD10MHz: OP.2 FDD20MHz: OP.12 FDD,,,5MHz: OP.16 FDD10MHz: OP.2 FDD20MHz: OP.12 FDD,,
+"A, B",,,-3,,,-3,,
+PCFICH_RB,,dB,1,,,1,,
+PDCCH_RA,,dB,1,,,1,,
+PDCCH_RB,,dB,1,,,1,,
+PBCH_RA,,dB,-3,,,-3,,
+PBCH_RB,,dB,,,,,,
+PSS_RA,,dB,,,,,,
+SSS_RA,,dB,,,,,,
+PHICH_RA,,dB,,,,,,
+PHICH_RB,,dB,,,,,,
+PDSCH_RA,,dB,,,,,,
+PDSCH_RB,,dB,,,,,,
+OCNG_RANote1,,dB,,,,,,
+OCNG_RBNote1,,dB,,,,,,
+"SNR Note 6,8",5MHz BWchannel,dB,-2.3,-2.3,-2.3,-2.3,-5.7,-12.2
+,10MHz BWchannel,dB,-2.3,-2.3,-2.3,-2.3,-6.2,-12.2
+,20MHz BWchannel,dB,-2.9,-2.9,-2.9,-2.9,-6.8,-12.8
+,,dBm/15 kHz,-98,,,-98,,
+Propagation condition,,,ETU 70 Hz,,,ETU 70 Hz,,
+Receive time offset to cell1 Note 7,,μs,-,,,500,,
+"Note 1:OCNG shall be used such that the resources in Cell 1 and Cell 2 are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:The uplink resources for CQI reporting are assigned to the UE prior to the start of time period T1.Note 3:The timers and layer 3 filtering related parameters are configured prior to the start of time period T1.Note 4:The signal contains PDCCH for UEs other than the device under test as part of OCNG.Note 5:SNR levels correspond to the signal to noise ratio over the cell-specific reference signal REs.Note 6:The SNR in time periods T1, T2 and T3 is denoted as SNR1, SNR2 and SNR3 respectively in figure A.7.3.39.1-1.Note 7:Receive time difference between subframe boundaries of signals received from the two cells at the UE antenna connector including time alignment error between the two cells. Note 8:The SNR values are specifed for testing a UE which supports 2RX on the PSCell frequency. For testing of a UE which only supports 4RX on the PSCell frequency, the SNR during T3 is modified as specified in section A.3.8.1.",,,,,,,,

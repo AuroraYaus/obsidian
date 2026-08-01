@@ -1,0 +1,30 @@
+Parameter,Unit,Cell 1,,Cell 2,
+,,T1,T2,T1,T2
+E-UTRA RF Channel Number,,1,,1,
+BWchannel,MHz,"5MHz: NRB,c = 2510MHz: NRB,c = 5020MHz: NRB,c = 100",,"5MHz: NRB,c = 2510MHz: NRB,c = 5020MHz: NRB,c = 100",
+PDSCH parameters,,5MHz: R.5 FDD 10MHz: R.0 FDD20MHz: R.4 FDD,,-,
+PCFICH/PDCCH/PHICH parameters,,5MHz: R.11 FDD 10MHz: R.6 FDD20MHz: R.10 FDD,,-,
+OCNG Patterns defined in A.3.2.1,,5MHz: OP.15 FDD 10MHz: OP.1 FDD20MHz: OP.11 FDD,,5MHz: OP.16 FDD 10MHz: OP.2 FDD20MHz: OP.12 FDD,
+PBCH_RA,dB,-3,,-3,
+PBCH_RB,dB,,,,
+PSS_RA,dB,,,,
+SSS_RA,dB,,,,
+PCFICH_RB,dB,,,,
+PHICH_RA,dB,,,,
+PHICH_RB,dB,,,,
+PDCCH_RA,dB,,,,
+PDCCH_RB,dB,,,,
+PDSCH_RA,dB,,,,
+PDSCH_RB,dB,,,,
+OCNG_RANote 1,dB,,,,
+OCNG_RBNote 1,dB,,,,
+Note 2,dBm/15 KHz,-98,,,
+,dB,4,4,-Infinity,4
+,dB,4,-1.46,-Infinity,-1.46
+RSRP Note 3,dBm/15 KHz,-94,-94,-Infinity,-94
+SCH_RP Note 3,dBm/15 KHz,-94,-94,-Infinity,-94
+Io Note 3,dBm/Ch BW,"-64.76+10log(NRB,c /50)","-62.42+10log(NRB,c /50)",Specified in columns for Cell 1,
+Propagation Condition,,AWGN,,AWGN 1750Hz Note 4,
+Antenna Configuration,,2x2,,2x2,
+Timing offset to Cell 1Synchronous cells,us,-,,3,
+"Note 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:Es/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:The AWGN 1750Hz condition is a non fading propagation channel with one tap. Doppler shift is a constant 1750Hz.",,,,,

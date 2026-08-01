@@ -1,0 +1,22 @@
+Parameter,Unit,nCell 1,,,,,
+,,T1,dT,T2,,dT,T3
+BWchannel,kHz,200,,,,,
+OCNG Pattern as defined in  A.3.2.3.3 Note 1,,"Config 1, Config 2",,,NOP.3 FDD,,
+,,Config 3,,,NOP.4.TDD,,
+NPDCCH parameters defined in A.3.1.6.3,,R.30 HD-FDD,,,,,
+NPDSCH_RA,dB,0,,,,,
+NPDSCH_RB,dB,,,,,,
+NPDCCH_RA,dB,,,,,,
+NPDCCH_RB,dB,,,,,,
+NPBCH_RA,dB,,,,,,
+NPBCH_RB,dB,,,,,,
+NPSS_RA,dB,,,,,,
+NSSS_RA,dB,,,,,,
+OCNG_RANote1,dB,,,,,,
+OCNG_RBNote1,dB,,,,,,
+,dBm/15 kHz,-98,,,,,
+"SNR Note 5, Note 6 (Config 1, Config 2)",dB,-3.1,Note 7,-14.1,,Note 8,-3.1
+"SNR Note 5, Note 6 (Config 3)",dB,7,Note 7,-8,,Note 8,7
+Propagation condition,,AWGN,,,,,
+Antenna Configuration,,1x1,,,,,
+"Note 1:OCNG shall be used such that the resources in ncell1 are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:The uplink resources for CQI reporting are assigned to the UE prior to the start of time period T1.Note 3:The timers and layer 3 filtering related parameters are configured prior to the start of time period T1.Note 4:The signal contains NPDCCH for UEs other than the device under test as part of OCNG.Note 5:SNR levels correspond to the signal to noise ratio over the cell-specific reference signal REs.Note 6:The SNR in time periods T1, T2 and T3 is denoted as SNR1, SNR2, and SNR1 respectively in figure A.13.4.3.5.1-1.Note 7:The Test system shall reduce its transmit power in steps of (((SNR2-SNR1) / (10*dT)) dB every 100ms till SNR2 is achieved at the end of dT.Note 8:The Test system shall increase its transmit power in steps of (((SNR1-SNR2) / (10*dT)) dB every 100ms till SNR1 is achieved at the end of dT.",,,,,,,

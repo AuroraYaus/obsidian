@@ -1,0 +1,13 @@
+Parameter,Unit,Cell 2 (UTRA),,,,,
+Timeslot Number,,0,,,DwPTS,,
+,,T1,T2,T3,T1,T2,T3
+UTRA RF Channel Number Note 21,,Channel 2,,,,,
+PCCPCH_Ec/Ior,dB,-3,,,,,
+DwPCH_Ec/Ior,dB,,,,0,,
+OCNS_Ec/Ior,dB,-3,,,,,
+,dB,-3,11,11,-3,11,11
+,dBm/1.28 MHz,-80,,,,,
+PCCPCH RSCP Note 2,dBm,-86,-72,-72,n.a.,,
+Io Note 2,dBm/1.28 MHz,-78.24,-68.67,-68.67,,,
+Propagation Condition,,AWGN,,,,,
+"Note 1: In the case of multi-frequency cell, the UTRA RF Channel Number is the primary frequency’s channel number.Note 2:PCCPCH_RSCP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.",,,,,,,

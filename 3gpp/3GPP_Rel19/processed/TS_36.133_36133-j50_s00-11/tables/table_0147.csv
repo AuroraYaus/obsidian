@@ -1,0 +1,14 @@
+SCH Ês/Iot of neighboring cell: Q2 [dB],eDRX_IDLE cycle length [s],DRX_INACTIVE cycle length [s],"Tdetect,EUTRAN_Inter_EC [s] (number of DRX cycles)","Tmeasure,EUTRAN_Inter_EC [s] (number of DRX cycles)","Tevaluate,E-UTRAN_inter_EC[s] (number of DRX cycles)"
+-15≤ Q2 < -6,5.12 ≤eDRX_IDLE cycle length ≤ 2621.44,0.32,330.24 (1032),1.28 (4),10.24 (32)
+,,0.64,330.24 (516),1.28 (2),10.24 (16)
+,,1.28,524.8 (410),1.28 (1),12.8 (10)
+,,2.56,1039.36 (406),2.56 (1),15.36 (6)
+,,5.12,2078.72 (406),5.12 (1),30.72 (6)
+,,10.24 Note 1,4157.44 (406),10.24 (1),61.44 (6)
+Q2-6,,0.32,16.64 (52),1.28 (4),10.24 (32)
+,,0.64,23.04 (36),1.28 (2),10.24 (16)
+,,1.28,38.4 (30),1.28 (1),12.8 (10)
+,,2.56,66.56 (26),2.56 (1),15.36 (6)
+,,5.12,337.92 (26),5.12 (1),30.72 (6)
+,,10.24 Note 1,675.84 (26),10.24 (1),61.44 (6)
+Note 1:DRX_INACTIVE cycle length of 10.24s applies when eDRX_IDLE cycle length is >= 10.24s.,,,,,

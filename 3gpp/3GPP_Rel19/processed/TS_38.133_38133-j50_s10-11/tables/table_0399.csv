@@ -1,0 +1,9 @@
+Accuracy,,Conditions,,,,,
+Normal condition,Extreme condition,Ês/Iot Note 3,Io Note 1 range,,,,
+,,,NR sidelink operating band groups Note 2,Minimum Io,,,Maximum Io
+dB,dB,dB,,dBm/SCS,,dBm/BWChannel,dBm/BWChannel
+,,,,SCS = 15 kHz,SCS = 30 kHz,,
+4.5,9,0 dB,NR_CCA_FR1_I,-117,-114,N/A,-70
+,,,NR_CCA_FR1_J,-116.5,-113.5,N/A,-70
+8,11,0 dB,NR_CCA_FR1_I NR_CCA_FR1_J,N/A,N/A,-70,-50
+NOTE 1:Io is assumed to have constant EPRE across the bandwidth.NOTE 2:NR sidelink operating band groups are as defined in clause 3.5 for the corresponding NR operating bands.NOTE 3:The parameter Ês/Iot is the Ês/Iot of PSCCH-DMRS and/or PSSCH-DMRS.,,,,,,,

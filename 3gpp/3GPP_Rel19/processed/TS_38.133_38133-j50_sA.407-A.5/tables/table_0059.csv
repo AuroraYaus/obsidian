@@ -1,0 +1,15 @@
+Parameter,,Unit,Value,Comment
+RF Channel Number,,,"1, 2, 3",Three radio channels are used for this test. One for NR cell and second for E-UTRAN Cell
+Initial conditions,Active cell,,Cell 1,PCell on RF channel number 1.
+,Active PSCell,,Cell 3,PSCell released on RF channel number 3.
+Final Condition,Active PCell,,Cell2,PCell on RF channel number 2.
+,Active PSCell,,Cell4,PSCell released on RF channel number 3.
+A3-Offset,,dB,0,
+Hysteresis,,dB,0,
+Time To Trigger,,s,0,
+Filter coefficient,,,0,L3 filtering is not used
+Measurement gap pattern ID,,,0,Gaps are configured before T2 and released before T3
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+T1,,s,5,
+T2,,s,5,
+T3,,S,1,

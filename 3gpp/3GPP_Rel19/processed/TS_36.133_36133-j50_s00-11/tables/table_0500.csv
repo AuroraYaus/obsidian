@@ -1,0 +1,11 @@
+Neighbouring cell SCH Ês/Iot: Q2 [dB],TDD Uplink-downlinkconfiguration,Gap pattern ID,DRX cycle length (s),Tmeasure_intra_UE cat M1 (s) (DRX cycles)
+Q2-15,Other than 0,0,≤0.16,0.8 * Kintra_M1_EC *  KRSTD_M1_EC (Note1)
+,,,0.16<DRX-cycle≤2.56,Note2 (5 * Kintra_M1_EC *  KRSTD_M1_EC)
+,,1,≤0.32,1.6 * Kintra_M1_EC *  KRSTD_M1_EC (Note1)
+,,,0.32<DRX-cycle≤2.56,Note2(5 * Kintra_M1_EC *  KRSTD_M1_EC)
+,0,0,≤0.32,1.6 * Kintra_M1_EC *  KRSTD_M1_EC (Note1)
+,,,0.32<DRX-cycle≤2.56,Note2 (5 * Kintra_M1_EC *  KRSTD_M1_EC)
+,,1,≤0.64,3.2 * Kintra_M1_EC *  KRSTD_M1_EC (Note1)
+,,,0.64<DRX-cycle≤2.56,Note2 (5 * Kintra_M1_EC *  KRSTD_M1_EC)
+N/A,N/A,N/A,N/A,"Max(DRX cycle length, TRSS) x 5 (Note 3)"
+Note 1:Number of DRX cycle depends upon the DRX cycle in use.Note 2:Time depends upon the DRX cycle in use. Note 3:It is the measurement period for RSRP measured on RSS signals defined in RSS-Config [2].,,,,

@@ -1,0 +1,20 @@
+Parameter,,Unit,Cell 1,Cell 2
+Downlink power allocation,,dB,-3,-3
+,,dB,-3 (NOTE 1),-3
+,,dB,0,N/A
+at antenna port,,dBm/15kHz,-102 (NOTE 2),N/A
+,,dBm/15kHz,-98 (NOTE 3),N/A
+,,dBm/15kHz,-94.8 (NOTE 4),N/A
+,,dB,Reference Value in Table 8.2.1.2.3-2,6
+BWChannel,,MHz,10,10
+Subframe Configuration,,,Non-MBSFN,Non-MBSFN
+Time Offset between Cells,,s,2.5 (synchronous cells),
+Cell Id,,,0,1
+ABS pattern (NOTE 5),,,N/A,11000100 11000000 11000000 11000000 11000000
+RLM/RRM Measurement Subframe Pattern (NOTE 6),,,1000000010000000100000001000000010000000,N/A
+CSI Subframe Sets (NOTE7),"CCSI,0",,11000100 11000000 11000000 11000000 11000000,N/A
+,"CCSI,1",,00111011 00111111 00111111 00111111 00111111,N/A
+Number of control OFDM symbols,,,2,2
+PDSCH transmission mode,,,2,N/A
+Cyclic prefix,,,Normal,Normal
+"NOTE 1:.NOTE 2:This noise is applied in OFDM symbols #1, #2, #3, #5, #6, #8, #9, #10,#12, #13 of a subframe overlapping with the aggressor ABS.NOTE 3:This noise is applied in OFDM symbols #0, #4, #7, #11 of a subframe overlapping with the aggressor ABS.NOTE 4:This noise is applied in all OFDM symbols of a subframe overlapping with aggressor non-ABSNOTE 5:ABS pattern as defined in [9].NOTE 6:Time-domain measurement resource restriction pattern for PCell measurements as defined in [7]NOTE 7:As configured according to the time-domain measurement resource restriction pattern for CSI measurements defined in [7].NOTE 8:Cell 1 is the serving cell. Cell 2 is the aggressor cell. The number of the CRS ports in Cell1 and Cell2 is the same.NOTE 9:SIB-1 will not be transmitted in Cell2 in this test.",,,,

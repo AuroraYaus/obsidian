@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Configuration</td>
+    <td>TL1-RSRP_Measurement_Period_SSB_CDP (ms)</td>
+  </tr>
+  <tr>
+    <td>non-DRX</td>
+    <td>max(TReport, ceil(M*P*N)*TSSB_CDP)</td>
+  </tr>
+  <tr>
+    <td>DRX cycle ≤ 320 ms</td>
+    <td>max(TReport, ceil(1.5*M*P*N)*max(TDRX,TSSB_CDP))</td>
+  </tr>
+  <tr>
+    <td>DRX cycle &gt; 320 ms</td>
+    <td>ceil(1.5*M*P*N)*TDRX</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE:TSSB_CDP is the periodicity of the SSB-Index configured for inter-cell L1-RSRP measurement. TDRX is the DRX cycle length. TReport is configured periodicity for reporting.</td>
+  </tr>
+</table>

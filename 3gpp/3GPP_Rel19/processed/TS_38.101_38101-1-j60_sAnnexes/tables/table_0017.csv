@@ -1,0 +1,21 @@
+HARQ process number,,CCs with the same duplex mode and SCS with PCell,CCs with different duplex mode and/or SCS with PCell
+FDD 15 kHz +,FDD PCell,4,N/A
+FDD 15 kHz CA,,,
+FDD 15 kHz +,15kHz PCell,8,8
+FDD 30 kHz CA,30kHz PCell,8,8
+FDD 15 kHz +,FDD PCell,4,8
+TDD 15 kHz CA,TDD PCell,8,8
+FDD 15 kHz +,FDD PCell,4,8
+TDD 30 kHz CA,TDD PCell,10,8
+TDD 15 kHz +,TDD PCell,8,N/A
+TDD 15 kHz CA,,,
+TDD 15 kHz +,15kHz PCell,8,12
+TDD 30 kHz CA,30kHz PCell,8,8
+FDD 30 kHz +,FDD PCell,8,N/A
+FDD 30 kHz CA,,,
+FDD 30 kHz +,FDD PCell,8,8
+TDD 15 kHz CA,TDD PCell,8,16
+FDD 30 kHz +,FDD PCell,8,8
+TDD 30 kHz CA,TDD PCell,8,16
+TDD 30 kHz +,TDD PCell,8,N/A
+TDD 30 kHz CA,,,

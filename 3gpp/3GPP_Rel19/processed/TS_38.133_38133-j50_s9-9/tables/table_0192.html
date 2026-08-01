@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Condition NOTE1,2</td>
+    <td>TSSB_time_index_inter</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>Max(200 ms, Ceil(Kgap  MSSB_index_inter)  Max(MGRP, measCyclePSCell))  CSSFinter</td>
+  </tr>
+  <tr>
+    <td>DRX cycle ≤ 320 ms</td>
+    <td>Max(200 ms, Ceil(1.5 * Kgap  MSSB_index_inter)  Max(MGRP, measCyclePSCell, DRX cycle))  CSSFinter</td>
+  </tr>
+  <tr>
+    <td>DRX cycle &gt; 320 ms</td>
+    <td>Ceil(Kgap MSSB_index_inter)  Max(measCyclePSCell, DRX cycle)  CSSFinter</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:DRX or non DRX requirements apply according to the conditions described in clause 3.6.1. NOTE 2:In EN-DC operation, the parameters, timers and scheduling requests referred to in clause 3.6.1 are for the secondary cell group. The DRX cycle is the DRX cycle of the secondary cell group.NOTE 3:For a UE supporting concurrent GAPs, the MGRP above is the MGRP of the activated Pre-MG or the measurement gap associated with the target frequency layer to be measured if concurrent GAPs are configured.</td>
+  </tr>
+</table>

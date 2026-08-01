@@ -1,0 +1,31 @@
+Parameter,,Unit,CE Mode A,CE Mode B
+OFDM starting symbol (startSymbolLC),,symbols,2,2
+Unused RE-s and PRB-s,,,OCNG,OCNG
+Cell ID,,,0,0
+Downlink power allocation,,dB,-3,0
+,,dB,-3,0
+,,dB,0,-3
+,δ,dB,3,0
+at antenna port,,dBm/15kHz,-98,-98
+Cyclic prefix,,,Normal,Normal
+Subframe Configuration,,,Non-MBSFN,Non-MBSFN
+Precoder Update Granularity,,PRB,1,1
+,,ms,5 (Note 2),20 (Note 2)
+Beamforming Pre-Coder,,,Annex B.4.4,Annex B.4.4
+Cell Specific Reference Signal,,,Port 0 and 1,Port 0 and 1
+Number of PRB per MPDCCH Set,,,4,2+4
+Transmission type,,,Distributed,Localized
+Frequency hopping,,,Diabled,Enabled
+Number of frequency hopping narrowbands,,,N/A,4
+Frequency hopping offset,,,N/A,1
+Frequency hopping interval,,ms,N/A,20
+Value of G in MPDCCH start subframe (mpdcch-startSF-UESS) (Note 4),,,5,5
+Maximum number of repetitions(mPDCCH-NumRepetition),,,16,32
+MPDCCH repetition number,,,16,32
+MPDCCH narrowband (mpdcch-Narrowband),,,1,7
+PDSCH TM,,,TM2,TM2
+DCI Format,,,6-1A,6-1B
+TDD UL/DL Configuration,,,0,0
+TDD Special Subframe,,,1,1
+fdd-DownlinkOrTddSubframeBitmapBR,,,1000010000,1000010000
+"Note 1:For each test, DC subcarrier puncturing shall be considered.Note 2:Same precoding matrix is used for a PRB across subframes during the frequency hopping interval.Note 3:The special subframes are not supported by MPDCCH, and are assumed as non- BL/CE DL subframes.Note 4:For MPDCCH UE-specific search space the formula for the start subframe k0 is given in TS 36.213 [6] clause 9.1.5.Note 5:If not otherwise stated, the values in this table refer to parameters in TS 36.211 [4] or/and TS 36.213 [6] as appropriate.",,,,

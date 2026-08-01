@@ -1,0 +1,21 @@
+Parameter,,Unit,Cell 1,Cell 2,Cell 3
+NR RF Channel Number,,,1,1,2
+Positiong frequency layer,,,1,1,2
+BWchannel,,MHz,"200: NPRB,c = 132","200: NPRB,c = 132","200: NPRB,c = 132"
+Correlation Matrix and Antenna Configuration,,,1x2 Low,1x2 Low,1x2 Low
+OCNG patterns defined in A.3.2.1,,,OP.1,N/A,N/A
+EPRE ratio of PBCH DMRS to SSS,,,,,
+EPRE ratio of PBCH to PBCH DMRS,,,,,
+EPRE ratio of PDCCH DMRS to SSS,,,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,,,
+EPRE ratio of PDSCH DMRS to SSS,,,,,
+EPRE ratio of PDSCH to PDSCH,,,,,
+EPRE ratio of OCNG DMRS to SSS(Note 1),,,,,
+EPRE ratio of OCNG to OCNG DMRS (Note 1),,,,,
+Note 3,Config 1,dBm/SCS,-89,,
+PRS,,dB,-Infinity,-Infinity,-Infinity
+Io Note 4,Config 1,dBm/190.08 MHz,-53.99,-53.99,-57.00
+SSB_RP Note4,Config 1,dBm/SCS,-89,-Infinity,-Infinity
+SSB,,dB,0,-Infinity,-Infinity
+Propagation Condition,,,AWGN,,
+NOTE 1: OCNG shall be used such that active cell (Cell 1) is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols other than those in the slots with transmitted PRS.NOTE 2:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.NOTE 3: Interference from other cells and noise sources not specified in the test are assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 4: SSB_RP and Io levels have been derived from other parameters and are given for information purpose. These are not settable test parameters.,,,,,

@@ -1,0 +1,20 @@
+Parameter,,Unit,Value,,,Comment
+,,,Test 1,Void,Test 2,
+Initial conditions,Active cell,,Cell 1,,,
+,Neighbouring cell,,Cell 2,,,Cell 2 is the candidate cell
+Final condition,Active cell,,Cell 1,,,"After transmitting PRACH on Cell 2, UE shall be back to Cell 1."
+A3-Offset,,dB,-6,,,
+Hysteresis,,dB,0,,,
+Time To Trigger,,ms,0,,,
+Filter coefficient,,,0,,,L3 filtering is not used
+DRX,,,OFF,,,DRX is not used
+Time offset between cells,,,2 s,,,RTD between cells is less than CP
+deriveSSB-IndexFromCell,,,Enabled,,,
+EarlyUL-SyncConfig,frequencyInfoUL,,NR RF Channel Number 1,,,Same as Cell 1
+,PRACH configuration,,FR1 PRACH configuration 5,,,RACH bandwidth is within active UL BWP of Cell 1
+,bwp-GenericParameters,,ULBWP.0.1,,,
+,n-TimingAdvanceOffset,Tc,25600,,,
+ltm-DL-OrJointTCI-StateToAddModList,CandidateTCI-State#1,,DlorJoint TCI.State.0,,N/A,As specified in clause A.3.16B.Configured for early TCI state activation for test 1.
+Ltm-ConfigComplete,,,True,,,Candidate cell’s configuration is complete configuration
+T1,,s,0.3,,,
+T2,,s,0.5,,,

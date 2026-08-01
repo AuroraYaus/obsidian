@@ -1,0 +1,187 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Unit</td>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td>Bandwidth</td>
+    <td>MHz</td>
+    <td colspan="2">10 MHz</td>
+  </tr>
+  <tr>
+    <td>Transmission mode</td>
+    <td></td>
+    <td colspan="2">9</td>
+  </tr>
+  <tr>
+    <td>Uplink downlink configuration</td>
+    <td></td>
+    <td colspan="2">2</td>
+  </tr>
+  <tr>
+    <td>Special subframe configuration</td>
+    <td></td>
+    <td colspan="2">4</td>
+  </tr>
+  <tr>
+    <td>Cyclic Prefix</td>
+    <td></td>
+    <td>Normal</td>
+    <td>Normal</td>
+  </tr>
+  <tr>
+    <td>Cell ID</td>
+    <td></td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>SINR (Note 8)</td>
+    <td>dB</td>
+    <td>[-4]</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB[mW/15kHz]</td>
+    <td>-98</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td>Propagation channel</td>
+    <td></td>
+    <td>EPA5</td>
+    <td>Static (Note 7)</td>
+  </tr>
+  <tr>
+    <td>Correlation and antenna configuration</td>
+    <td></td>
+    <td>Low (2 x 4)</td>
+    <td>(1 x 4)</td>
+  </tr>
+  <tr>
+    <td>Beamforming Model</td>
+    <td></td>
+    <td>As specified in Section B.4.3 (Note 10, 11)</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>DIP (Note 4)</td>
+    <td>dB</td>
+    <td>N/A</td>
+    <td>-0.41</td>
+  </tr>
+  <tr>
+    <td>Cell-specific reference signals</td>
+    <td></td>
+    <td>Antenna ports 0,1</td>
+    <td>Antenna port 0</td>
+  </tr>
+  <tr>
+    <td>CSI reference signals</td>
+    <td></td>
+    <td>Antenna ports 15,16</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>CSI-RS periodicity and subframe offset</td>
+    <td></td>
+    <td>5/3</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>CSI-RS reference signal configuration</td>
+    <td></td>
+    <td>2</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Zero-power CSI-RS configurationICSI-RS /       ZeroPowerCSI-RS bitmap</td>
+    <td>Subframes / bitmap</td>
+    <td>N/A</td>
+    <td>3 /0010000000000000</td>
+  </tr>
+  <tr>
+    <td>CodeBookSubsetRestriction bitmap</td>
+    <td></td>
+    <td>001111</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Reference measurement channel</td>
+    <td></td>
+    <td>Note 2</td>
+    <td>R.2A TDD</td>
+  </tr>
+  <tr>
+    <td>Reporting mode</td>
+    <td></td>
+    <td>PUCCH 1-1</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Reporting periodicity</td>
+    <td>ms</td>
+    <td>Npd = 5</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>CQI delay</td>
+    <td>ms</td>
+    <td>10</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Physical channel for CQI/PMI reporting</td>
+    <td></td>
+    <td>PUSCH (Note 3)</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>PUCCH Report Type for CQI/PMI</td>
+    <td></td>
+    <td>2</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Physical channel for RI reporting</td>
+    <td></td>
+    <td>PUCCH Format 2</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>PUCCH Report Type for RI</td>
+    <td></td>
+    <td>3</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>cqi-pmi-ConfigurationIndex</td>
+    <td></td>
+    <td>3</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ri-ConfigIndex</td>
+    <td></td>
+    <td>805 (Note 9)</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>Max number of HARQ transmissions</td>
+    <td></td>
+    <td>1</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>ACK/NACK feedback mode</td>
+    <td></td>
+    <td>Multiplexing</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td colspan="4">Note 1:If the UE reports in an available uplink reporting instance at subframe SF#n based on CQI estimation at a downlink SF not later than SF#(n-4), this reported wideband CQI cannot be applied at the eNB downlink before SF#(n+4)Note 2:Reference measurement channel RC.11 TDD according to Table A.4-1 with one sided dynamic OCNG Pattern OP.1 TDD as described in Annex A.5.2.1.Note 3:To avoid collisions between CQI/ PMI reports and HARQ-ACK it is necessary to report both on PUSCH instead of PUCCH. PDCCH DCI format 0 shall be transmitted in downlink SF#3 and #8 to allow periodic CQI/ PMI to multiplex with the HARQ-ACK on PUSCH in uplink subframe SF#2 and #7.Note 4:The respective received power spectral density of each interfering cell relative to  is defined by its associated DIP value as specified in clause B.5.1.Note 5:Two cells are considered in which Cell 1 is the serving cell and Cell 2 is the interfering cell. Intefering cell is fully loaded.Note 6: Both cells are time-synchronous.Note 7:Static channel is used for the interference model. In case for white Gaussian noise model Cell 2 is not present.Note 8:SINR corresponds to  of Cell 1 as defined in clause 8.1.1.Note 9:RI reporting interval is set to the maximum allowable length of 160ms to minimise collisions between RI, CQI/PMI and HARQ-ACK reports. In the case when all three reports collide, it is expected that CQI/PMI reports will be dropped, while RI and HARQ-ACK will be multiplexed. At eNB, CQI report collection shall be skipped every 160ms during performance verification and the reported CQI in subframe SF#7 of the previous frame is applied in downlink subframes until a new CQI (after CQI/PMI dropping) is available. Note 10:The precoder in clause B.4.3 follows UE recommended PMI.Note 11:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).</td>
+  </tr>
+</table>

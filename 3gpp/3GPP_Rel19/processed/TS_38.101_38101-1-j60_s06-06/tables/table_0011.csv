@@ -1,0 +1,8 @@
+Parameter,Symbol,Value,,Related condition
+,,CP-OFDM,DFT-s-OFDM,
+Max allocation start in IMD3 region,"fstart,max,IMD3",0.33 BWChannel,,"RBstart ≤ fstart,max,IMD3 / (12SCS)"
+Max allocation BW in IMD3 region,"AWmax,IMD3",4 MHz,,"LCRB ≤ AWmax,IMD3 / (12SCS)"
+Freq. offset required to avoid A-MPR in IMD3 region,offsetIMD3,BWChannel – 6 MHz,,FC - BWChannel/2 ≥ FUL_low + offsetIMD3
+Right edge of regrowth region,start,0.08 BWChannel,,RBstart ≤ LCRB/2 + start / (12SCS)
+Max allocation BW in regrowth region,"AWmax,regrowth",100 MHz,,"LCRB ≤ Min(LCRB,Max, AWmax,regrowth / (12SCS))"
+Freq. offset required to avoid A-MPR in regrowth region,offsetregrowth,"Max (10 MHz, 0.25* BWChannel MHz)","Max (10 MHz, 0.45* BWChannel MHz)",FC - BWChannel/2 ≥ FUL_low + offsetregrowth

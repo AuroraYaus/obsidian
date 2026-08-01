@@ -1,0 +1,52 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Symbol</td>
+    <td colspan="2">Value</td>
+    <td>Related condition</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>CP-OFDM</td>
+    <td>DFT-s-OFDM</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Max allocation start in IMD3 region</td>
+    <td>fstart,max,IMD3</td>
+    <td colspan="2">0.33 BWChannel</td>
+    <td>RBstart ≤ fstart,max,IMD3 / (12SCS)</td>
+  </tr>
+  <tr>
+    <td>Max allocation BW in IMD3 region</td>
+    <td>AWmax,IMD3</td>
+    <td colspan="2">4 MHz</td>
+    <td>LCRB ≤ AWmax,IMD3 / (12SCS)</td>
+  </tr>
+  <tr>
+    <td>Freq. offset required to avoid A-MPR in IMD3 region</td>
+    <td>offsetIMD3</td>
+    <td colspan="2">BWChannel – 6 MHz</td>
+    <td>FC - BWChannel/2 ≥ FUL_low + offsetIMD3</td>
+  </tr>
+  <tr>
+    <td>Right edge of regrowth region</td>
+    <td>start</td>
+    <td colspan="2">0.08 BWChannel</td>
+    <td>RBstart ≤ LCRB/2 + start / (12SCS)</td>
+  </tr>
+  <tr>
+    <td>Max allocation BW in regrowth region</td>
+    <td>AWmax,regrowth</td>
+    <td colspan="2">100 MHz</td>
+    <td>LCRB ≤ Min(LCRB,Max, AWmax,regrowth / (12SCS))</td>
+  </tr>
+  <tr>
+    <td>Freq. offset required to avoid A-MPR in regrowth region</td>
+    <td>offsetregrowth</td>
+    <td>Max (10 MHz, 0.25* BWChannel MHz)</td>
+    <td>Max (10 MHz, 0.45* BWChannel MHz)</td>
+    <td>FC - BWChannel/2 ≥ FUL_low + offsetregrowth</td>
+  </tr>
+</table>

@@ -1,0 +1,164 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td colspan="2">Test 1</td>
+    <td colspan="2">Test 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Bandwidth</td>
+    <td>MHz</td>
+    <td colspan="4">10</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH transmission mode</td>
+    <td></td>
+    <td colspan="4">9</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td colspan="4">0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td colspan="4">0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td colspan="4">-3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td colspan="4">-3</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-specific reference signals</td>
+    <td></td>
+    <td colspan="4">Antenna ports 0, 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">e-MIMO Type</td>
+    <td></td>
+    <td colspan="4">Class B</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of CSI-RS resource (K)</td>
+    <td></td>
+    <td colspan="4">1</td>
+  </tr>
+  <tr>
+    <td colspan="2">channelMeasRestriction</td>
+    <td></td>
+    <td colspan="4">Enable</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI reference signals</td>
+    <td></td>
+    <td colspan="4">Antenna ports 15,…,18</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS</td>
+    <td></td>
+    <td colspan="4">5/1</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI reference signal configuration</td>
+    <td></td>
+    <td colspan="4">0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation condition and antenna configuration</td>
+    <td></td>
+    <td colspan="4">Clause B.1 (4 x 2)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Beamforming Model</td>
+    <td></td>
+    <td colspan="4">As specified in Section B.4.3</td>
+  </tr>
+  <tr>
+    <td colspan="2">CodeBookSubsetRestriction bitmap</td>
+    <td></td>
+    <td colspan="4">0x0000 0000 0100 0000</td>
+  </tr>
+  <tr>
+    <td colspan="2">SNR (Note 2)</td>
+    <td>dB</td>
+    <td>[7]</td>
+    <td>[8]</td>
+    <td>[13]</td>
+    <td>[14]</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td>-91</td>
+    <td>-90</td>
+    <td>-85</td>
+    <td>-84</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td colspan="2">-98</td>
+    <td colspan="2">-98</td>
+  </tr>
+  <tr>
+    <td colspan="2">Max number of HARQ transmissions</td>
+    <td></td>
+    <td colspan="4">1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Physical channel for CQI/PMI reporting</td>
+    <td></td>
+    <td colspan="4">PUSCH (Note3)</td>
+  </tr>
+  <tr>
+    <td colspan="2">PUCCH Report Type for CQI/PMI</td>
+    <td></td>
+    <td colspan="4">2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Physical channel for RI reporting</td>
+    <td></td>
+    <td colspan="4">PUCCH Format 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">PUCCH Report Type for RI</td>
+    <td></td>
+    <td colspan="4">3</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting periodicity</td>
+    <td>ms</td>
+    <td colspan="4">Npd = 10</td>
+  </tr>
+  <tr>
+    <td colspan="2">CQI delay</td>
+    <td>ms</td>
+    <td colspan="4">8</td>
+  </tr>
+  <tr>
+    <td colspan="2">cqi-pmi-ConfigurationIndex</td>
+    <td></td>
+    <td colspan="4">12</td>
+  </tr>
+  <tr>
+    <td colspan="2">ri-ConfigIndex</td>
+    <td></td>
+    <td colspan="4">1</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH scheduled sub-frames</td>
+    <td></td>
+    <td colspan="4">1,2,3,4,7,8,9</td>
+  </tr>
+  <tr>
+    <td colspan="7">NOTE 1:Reference measurement channel RC.7 FDD according to Table A.4-1 with one sided dynamic OCNG Pattern OP.1 FDD as described in Annex A.5.1.1.NOTE 2:For each test, the minimum requirements shall be fulfilled for at least one of the two SNR(s) and the respective wanted signal input level.NOTE 3:To avoid collisions between CQI/PMI reports and HARQ-ACK it is necessary to report both on PUSCH instead of PUCCH. PDCCH DCI format 0 shall be transmitted in downlink SF#1 to allow periodic CQI/PMI to multiplex with the HARQ-ACK on PUSCH in uplink #5.NOTE 4:In sub-frame 6, transmission power of CSI-RS REs is 9dB lower than CRS REs, in sub-frame 1, there is no power offset between CSI-RS REs and CRS REs.</td>
+  </tr>
+</table>

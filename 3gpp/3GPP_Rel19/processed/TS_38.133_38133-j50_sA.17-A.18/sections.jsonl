@@ -1,0 +1,450 @@
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17NR standalone tests with one or more NR cells in FR2 for RedCap", "paragraph_index": 1, "style": "Heading1"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1SA: RRC_IDLE state mobility for RedCap", "paragraph_index": 2, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1Cell re-selection to NR", "paragraph_index": 3, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.1Cell reselection to FR2 intra-frequency NR case for 2 Rx", "paragraph_index": 4, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.1.1Test Purpose and Environment", "paragraph_index": 5, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.1.2Test Parameters", "paragraph_index": 7, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.1.3Test Requirements", "paragraph_index": 15, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.2Cell reselection to FR2 inter-frequency NR case", "paragraph_index": 27, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.2.1Test Purpose and Environment", "paragraph_index": 28, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.2.2Test Parameters", "paragraph_index": 30, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.2.3Test Requirements", "paragraph_index": 38, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.3Cell reselection to FR2 intra-frequency NR case for UE fulfilling stationary relaxed measurement criterion for 2 Rx UE", "paragraph_index": 50, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.3.1Test Purpose and Environment", "paragraph_index": 51, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.3.2Test Parameters", "paragraph_index": 53, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.3.3Test Requirements", "paragraph_index": 61, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.4Cell reselection to FR2 inter-frequency NR case for UE fulfilling stationary mobility relaxed measurement criterion for 2 Rx UE", "paragraph_index": 71, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.4.1Test Purpose and Environment", "paragraph_index": 72, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.4.2Test Parameters", "paragraph_index": 74, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.1.1.4.3Test Requirements", "paragraph_index": 82, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.2SA: RRC_INACTIVE state mobility for RedCap", "paragraph_index": 95, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.2.1Configured Grant based Small Data Transmissions (CG-SDT) for RedCap", "paragraph_index": 96, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.2.1.1TA validation for CG-SDT in FR2 for RedCap", "paragraph_index": 97, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.2.1.1.1Test Purpose and Environment", "paragraph_index": 98, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.2.1.1.2Test Requirements", "paragraph_index": 126, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.2.2Cell Reselection for Positioning", "paragraph_index": 132, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.2.2.1Cell reselection to FR2 intra-frequency NR case with RRC_INACTIVE eDRX and positioning SRS", "paragraph_index": 133, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.2.2.1.1Test Purpose and Environment", "paragraph_index": 134, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.2.2.1.2Test Parameters", "paragraph_index": 136, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.2.2.1.3Test Requirements", "paragraph_index": 138, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3RRC_CONNECTED state mobility for RedCap", "paragraph_index": 141, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.1Handover for RedCap", "paragraph_index": 142, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.1.1Intra-frequency handover from FR2 to FR2; unknown target cell for 2 Rx", "paragraph_index": 143, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.1.1.1Test Purpose and Environment", "paragraph_index": 144, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.1.1.2Test Parameters", "paragraph_index": 146, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.1.1.3Test Requirements", "paragraph_index": 155, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.1.2Inter-frequency handover from FR2 to FR2; unknown target cell for 2 Rx", "paragraph_index": 162, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.1.2.1Test Purpose and Environment", "paragraph_index": 163, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.1.2.2Test Parameters", "paragraph_index": 165, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.1.2.3 Test Requirements", "paragraph_index": 174, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2RRC Connection Mobility Control for RedCap", "paragraph_index": 181, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.1SA: RRC Re-establishment", "paragraph_index": 182, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.1.1Intra-frequency RRC Re-establishment in FR2", "paragraph_index": 183, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.1.1.1Test Purpose and Environment", "paragraph_index": 184, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.1.2Inter-frequency RRC Re-establishment in FR2", "paragraph_index": 207, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.1.2.1Test Purpose and Environment", "paragraph_index": 208, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.1.3Intra-frequency RRC Re-establishment in FR2 without serving cell timing", "paragraph_index": 232, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.1.3.1Test Purpose and Environment", "paragraph_index": 233, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.1.3.2Test Requirements", "paragraph_index": 242, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2Random Access", "paragraph_index": 256, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.14-step RA type contention based random access test in FR2 for NR Standalone", "paragraph_index": 257, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.1.1Test Purpose and Environment", "paragraph_index": 258, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.1.2Test Requirements", "paragraph_index": 267, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.24-step RA type non-contention based random access test in FR2 for NR Standalone", "paragraph_index": 296, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.2.1Test Purpose and Environment", "paragraph_index": 297, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.2.2Test Requirements", "paragraph_index": 306, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.32-step RA type contention based random access test in FR2 for NR Standalone", "paragraph_index": 329, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.3.1Test Purpose and Environment", "paragraph_index": 330, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.3.2Test Requirements", "paragraph_index": 339, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.42-step RA type non-contention based random access test in FR2 for NR Standalone", "paragraph_index": 356, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.4.1Test Purpose and Environment", "paragraph_index": 357, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.2.4.2Test Requirements", "paragraph_index": 366, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.3SA: RRC Connection Release with Redirection", "paragraph_index": 384, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.3.1Redirection from NR in FR2 to NR in FR2", "paragraph_index": 385, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.3.1.1Test Purpose and Environment", "paragraph_index": 386, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.3.1.2Test Parameters", "paragraph_index": 388, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.3.2.3.1.3Test Requirements", "paragraph_index": 397, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.4Timing", "paragraph_index": 408, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.4.1UE transmit timing", "paragraph_index": 409, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.4.1.1NR UE Transmit Timing Test for FR2", "paragraph_index": 410, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.4.1.1.1Test Purpose and environment", "paragraph_index": 411, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.4.1.1.2Test requirements", "paragraph_index": 424, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.4.2UE timer accuracy", "paragraph_index": 436, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.4.3Timing advance", "paragraph_index": 437, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.4.3.1SA FR2 timing advance adjustment accuracy", "paragraph_index": 438, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.4.3.1.1Test Purpose and Environment", "paragraph_index": 439, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.4.3.1.2Test Parameters", "paragraph_index": 441, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.4.3.1.3 Test Requirements", "paragraph_index": 457, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5Signaling characteristics for RedCap", "paragraph_index": 461, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1Radio link Monitoring for RedCap", "paragraph_index": 462, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.1Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with SSB-based RLM RS in non-DRX mode", "paragraph_index": 463, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.1.1Test Purpose and Environment", "paragraph_index": 464, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.1.2Test Requirements", "paragraph_index": 479, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.2Radio Link Monitoring In-sync Test for FR2 PCell configured with SSB-based RLM RS in non-DRX mode", "paragraph_index": 484, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.2.1Test Purpose and Environment", "paragraph_index": 485, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.2.2Test Requirements", "paragraph_index": 499, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.3Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with SSB-based RLM RS in DRX mode", "paragraph_index": 503, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.3.1Test Purpose and Environment", "paragraph_index": 504, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.3.2Test Requirements", "paragraph_index": 517, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.4Radio Link Monitoring In-sync Test for FR2 PCell configured with SSB-based RLM RS in DRX mode", "paragraph_index": 522, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.4.1Test Purpose and Environment", "paragraph_index": 523, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.4.2Test Requirements", "paragraph_index": 535, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.5Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with CSI-RS-based RLM in non-DRX mode", "paragraph_index": 539, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.5.1Test Purpose and Environment", "paragraph_index": 540, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.5.2Test Requirements", "paragraph_index": 553, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.6Radio Link Monitoring In-sync Test for FR2 PCell configured with CSI-RS-based RLM in non-DRX mode", "paragraph_index": 559, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.6.1Test Purpose and Environment", "paragraph_index": 560, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.6.2Test Requirements", "paragraph_index": 571, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.7Radio Link Monitoring Out-of-sync Test for FR2 PCell configured with CSI-RS-based RLM in DRX mode", "paragraph_index": 575, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.7.1Test Purpose and Environment", "paragraph_index": 576, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.7.2Test Requirements", "paragraph_index": 587, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.8Radio Link Monitoring In-sync Test for FR2 PCell configured with CSI-RS-based RLM in DRX mode", "paragraph_index": 593, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.8.1Test Purpose and Environment", "paragraph_index": 594, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.8.2Test Requirements", "paragraph_index": 607, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.9UE Radio Link Monitoring Scheduling Restrictions on FR2", "paragraph_index": 611, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.9.1Test Purpose and Environment", "paragraph_index": 612, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.1.9.2Test Requirements", "paragraph_index": 624, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2Beam Failure Detection and Link recovery procedures", "paragraph_index": 626, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.1Beam Failure Detection and Link Recovery Test for FR2 PCell configured with SSB-based BFD and LR in non-DRX mode", "paragraph_index": 627, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.1.1Test Purpose and Environment", "paragraph_index": 628, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.1.2Test Requirements", "paragraph_index": 641, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.2Beam Failure Detection and Link Recovery Test for FR2 PCell configured with SSB-based BFD and LR in DRX mode", "paragraph_index": 648, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.2.1Test Purpose and Environment", "paragraph_index": 649, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.2.2Test Requirements", "paragraph_index": 662, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.3Beam Failure Detection and Link Recovery Test for FR2 PCell configured with CSI-RS-based BFD and LR in non-DRX mode", "paragraph_index": 669, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.3.1Test Purpose and Environment", "paragraph_index": 670, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.3.2Test Requirements", "paragraph_index": 683, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.4Beam Failure Detection and Link Recovery Test for FR2 PCell configured with CSI-RS-based BFD and LR in DRX mode", "paragraph_index": 690, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.4.1Test Purpose and Environment", "paragraph_index": 691, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.4.2Test Requirements", "paragraph_index": 704, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.5Scheduling availability restriction during Beam Failure Detection and Link Recovery for FR2 PCell configured with SSB-based BFD and LR in non-DRX mode for 2 Rx UE", "paragraph_index": 711, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.5.1Test Purpose and Environment", "paragraph_index": 712, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.2.5.2Test Requirements", "paragraph_index": 725, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.3Active BWP switch for RedCap", "paragraph_index": 730, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.3.1DCI-based and Timer-based Active BWP Switch", "paragraph_index": 731, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.3.1.1NR FR2 DL active BWP switch with non-DRX in SA", "paragraph_index": 732, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.3.1.1.1Test Purpose and Environment", "paragraph_index": 733, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.3.1.1.2Test Requirements", "paragraph_index": 760, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.3.2RRC-based Active BWP Switch", "paragraph_index": 768, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.3.2.1NR FR2 DL active BWP switch of PCell with non-DRX in SA", "paragraph_index": 769, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.3.2.1.1Test Purpose and Environment", "paragraph_index": 770, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.3.2.1.2Test Requirements", "paragraph_index": 793, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.4Active TCI state switch delay", "paragraph_index": 798, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.4.1MAC-CE based active TCI state switch", "paragraph_index": 799, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.4.1.1NR PCell FR2 active TCI state switch for a known TCI state", "paragraph_index": 800, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.4.1.1.1Test Purpose and Environment", "paragraph_index": 801, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.4.1.1.2Test Requirements", "paragraph_index": 823, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.4.2RRC based active TCI state switch", "paragraph_index": 828, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.4.2.1NR PCell FR2 active TCI state switch for a known TCI state", "paragraph_index": 829, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.4.2.1.1Test Purpose and Environment", "paragraph_index": 830, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.4.2.1.2Test Requirements", "paragraph_index": 852, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.5Uplink spatial relation switch delay", "paragraph_index": 855, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.5.1MAC-CE based Spatial Relation switch", "paragraph_index": 856, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.5.1.1NR PCell FR2 spatial relation associated with known DL-RS", "paragraph_index": 857, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.5.1.1.1Test Purpose and Environment", "paragraph_index": 858, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.5.1.1.2Test Requirements", "paragraph_index": 878, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.5.2RRC based spatial relation switch", "paragraph_index": 884, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.5.2.1NR PCell FR2 spatial relation switch associated with a known DL-RS", "paragraph_index": 885, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.5.2.1.2Test Requirements", "paragraph_index": 905, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.6UE specific CBW change", "paragraph_index": 909, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.6.1NR FR2 UE specific CBW change of PCell with non-DRX in SA", "paragraph_index": 910, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.6.1.1Test Purpose and Environment", "paragraph_index": 911, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.5.6.1.2Test Requirements", "paragraph_index": 936, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6Measurement procedure for RedCap", "paragraph_index": 941, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1Intra-frequency Measurements", "paragraph_index": 942, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1.1SA event triggered reporting test without gap under non-DRX", "paragraph_index": 943, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1.1.1Test purpose and Environment", "paragraph_index": 944, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1.1.2Test Requirements", "paragraph_index": 959, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1.2SA event triggered reporting test without gap under DRX", "paragraph_index": 967, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1.2.1Test purpose and Environment", "paragraph_index": 968, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.7.6.1.2.2Test Requirements", "paragraph_index": 974, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1.3SA event triggered reporting test with per-UE gaps under non-DRX", "paragraph_index": 985, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1.3.1Test purpose and Environment", "paragraph_index": 986, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1.3.2Test Requirements", "paragraph_index": 1002, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1.4SA event triggered reporting test with per-UE gaps under DRX", "paragraph_index": 1010, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1.4.1Test purpose and Environment", "paragraph_index": 1011, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.1.4.2Test Requirements", "paragraph_index": 1028, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2Inter-frequency Measurements", "paragraph_index": 1039, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.1SA event triggered reporting tests For FR2 without SSB time index detection when DRX is not used (PCell in FR2)", "paragraph_index": 1040, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.1.1Test Purpose and Environment", "paragraph_index": 1041, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.1.2Test Requirements", "paragraph_index": 1053, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "5120", "title": "for UE supporting power class 1, or", "paragraph_index": 1055, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "3200", "title": "for UE supporting other power class.", "paragraph_index": 1056, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.2SA event triggered reporting tests For FR2 without SSB time index detection when DRX is used (PCell in FR2)", "paragraph_index": 1059, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.2.1Test Purpose and Environment", "paragraph_index": 1060, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.2.2Test Requirements", "paragraph_index": 1073, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "7680", "title": "for UE supporting power class 1, or", "paragraph_index": 1075, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "4800", "title": "for UE supporting other power class.", "paragraph_index": 1076, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "81920", "title": "for UE supporting power class 1, or", "paragraph_index": 1078, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "51200", "title": "for UE supporting other power class.", "paragraph_index": 1079, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.3SA event triggered reporting tests For FR2 with SSB time index detection when DRX is not used (PCell in FR2)", "paragraph_index": 1082, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.3.1Test Purpose and Environment", "paragraph_index": 1083, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.3.2Test Requirements", "paragraph_index": 1094, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "6720", "title": "for UE supporting power class 1, or", "paragraph_index": 1096, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "4160", "title": "for UE supporting other power class.", "paragraph_index": 1097, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.4SA event triggered reporting tests For FR2 with SSB time index detection when DRX is used (PCell in FR2) for 2 RX UE", "paragraph_index": 1100, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.4.1Test Purpose and Environment", "paragraph_index": 1101, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.2.4.2Test Requirements", "paragraph_index": 1113, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "10080", "title": "for UE supporting power class 1, or", "paragraph_index": 1115, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "6240", "title": "for UE supporting other power class.", "paragraph_index": 1116, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "107520", "title": "for UE supporting power class 1, or", "paragraph_index": 1119, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "66560", "title": "for UE supporting other power class.", "paragraph_index": 1120, "style": "B10"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3L1-RSRP measurement for beam reporting", "paragraph_index": 1123, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.1SSB based L1-RSRP measurement when DRX is not used", "paragraph_index": 1124, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.1.1Test Purpose and Environment", "paragraph_index": 1125, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.1.2Test parameters", "paragraph_index": 1128, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.1.3Test Requirements", "paragraph_index": 1130, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.2SSB based L1-RSRP measurement when DRX is used", "paragraph_index": 1136, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.2.1Test Purpose and Environment", "paragraph_index": 1137, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.2.2Test parameters", "paragraph_index": 1142, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.2.3Test Requirements", "paragraph_index": 1150, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.3CSI-RS based L1-RSRP measurement when DRX is not used", "paragraph_index": 1156, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.3.1Test Purpose and Environment", "paragraph_index": 1157, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.3.2Test parameters", "paragraph_index": 1161, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.3.3Test Requirements", "paragraph_index": 1169, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.4CSI-RS based L1-RSRP measurement when DRX is used", "paragraph_index": 1175, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.4.1Test Purpose and Environment", "paragraph_index": 1176, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.3.4.2Test parameters", "paragraph_index": 1180, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.7.6.3.3.3Test Requirements", "paragraph_index": 1188, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.4.1SA interfrequency CGI reporting in autonomous gaps test (PCell in FR2) for 2 RX UE", "paragraph_index": 1195, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.4.1.1Test Purpose and Environment", "paragraph_index": 1196, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.4.1.2Test Requirements", "paragraph_index": 1208, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.5RSTD measurements", "paragraph_index": 1214, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.5.1NR RSTD measurement reporting delay test case for RedCap UE without FH in FR2 SA", "paragraph_index": 1215, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.5.1.1Test Purpose and Environment", "paragraph_index": 1216, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.5.1.2Test Requirements", "paragraph_index": 1234, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.5.2NR RSTD measurement reporting delay test case with PRS frequency hopping", "paragraph_index": 1240, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.5.2.1Test Purpose and Environment", "paragraph_index": 1241, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.5.2.2Test Requirements", "paragraph_index": 1259, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.6UE Rx-Tx Measurements", "paragraph_index": 1264, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.6.1UE Rx-Tx measurement reporting delay for single positioning frequency layer in FR2 SA without RX FH in RRC_CONNECTED mode", "paragraph_index": 1265, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.6.1.1Test purpose and environment", "paragraph_index": 1266, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.6.1.2Test requirements", "paragraph_index": 1282, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.6.2UE Rx-Tx time difference measurement with Rx FH for single positioning frequency layer in FR2 SA in RRC_CONNECTED state", "paragraph_index": 1288, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.6.2.1Test purpose and environment", "paragraph_index": 1289, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.6.2.2Test requirements", "paragraph_index": 1305, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.7PRS-RSRP measurements", "paragraph_index": 1311, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.7.1PRS-RSRP measurement delay test case for RedCap positioning without Rx FH in RRC_CONNECTED state in FR2", "paragraph_index": 1312, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.7.1.1PRS-RSRP measurement delay test case for single positioning frequency layer", "paragraph_index": 1313, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.7.1.1.1Test Purpose and Environment", "paragraph_index": 1314, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.7.1.1.2Test Requirements", "paragraph_index": 1327, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.7.1.2PRS-RSRP measurement delay test case for dual positioning frequency layer", "paragraph_index": 1331, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.7.1.2.1Test Purpose and Environment", "paragraph_index": 1332, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.7.1.2.2Test Requirements", "paragraph_index": 1345, "style": "Heading6"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.7.2PRS-RSRP measurement delay with FH in RRC_CONNECTED state in FR2", "paragraph_index": 1349, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.7.2.1Test Purpose and Environment", "paragraph_index": 1350, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.7.2.2Test Requirements", "paragraph_index": 1363, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.8PRS-RSRPP Measurements", "paragraph_index": 1368, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.8.1PRS-RSRPP measurement delay without FH in RRC_CONNECTED state in FR2", "paragraph_index": 1369, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.8.1.1Test Purpose and Environment", "paragraph_index": 1370, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.8.1.2Test Requirements", "paragraph_index": 1383, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.8.2PRS-RSRPP measurement with Rx FH reporting delay test case for single positioning frequency layer in FR2 SA in RRC_CONNECTED state", "paragraph_index": 1387, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.8.2.1Test Purpose and Environment", "paragraph_index": 1388, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.6.8.2.2Test Requirements", "paragraph_index": 1401, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7Measurement Performance requirements", "paragraph_index": 1406, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.1SS-RSRP", "paragraph_index": 1407, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.1.1SA intra-frequency case measurement accuracy with FR2 serving cell and FR2 target cell", "paragraph_index": 1408, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.1.1.1Test Purpose and Environment", "paragraph_index": 1409, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.1.1.2Test parameters", "paragraph_index": 1411, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.1.1.3Test Requirements", "paragraph_index": 1419, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.1.2SA inter-frequency case measurement accuracy with FR2 serving cell and FR2 target cell", "paragraph_index": 1432, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.1.2.1Test Purpose and Environment", "paragraph_index": 1433, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.1.2.2Test parameters", "paragraph_index": 1437, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.1.2.3Test Requirements", "paragraph_index": 1444, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.2SS-RSRQ", "paragraph_index": 1456, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.2.1SA intra-frequency measurement accuracy with FR2 serving cell and FR2 target cell", "paragraph_index": 1457, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.2.1.1Test Purpose and Environment", "paragraph_index": 1458, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.2.1.2Test Parameters", "paragraph_index": 1460, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.2.1.3Test Requirements", "paragraph_index": 1468, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.2.2SA Inter-frequency measurement accuracy with FR2 serving cell and FR2 TDD target cell for 2 Rx UE", "paragraph_index": 1470, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.2.2.1Test Purpose and Environment", "paragraph_index": 1471, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.2.2.2Test parameters", "paragraph_index": 1473, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.2.2.3Test Requirements", "paragraph_index": 1481, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.2.3SA Inter-frequency measurement accuracy with FR2 serving cell and FR2 TDD target cell", "paragraph_index": 1484, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.3L1-RSRP measurement for beam reporting", "paragraph_index": 1485, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.3.1SSB based L1-RSRP measurement", "paragraph_index": 1486, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.3.1.1Test Purpose and Environment", "paragraph_index": 1487, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.3.1.2Test parameters", "paragraph_index": 1490, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.3.1.3Test Requirements", "paragraph_index": 1492, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.3.2CSI-RS based L1-RSRP measurement on resource set with repetition off", "paragraph_index": 1502, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.3.2.1Test Purpose and Environment", "paragraph_index": 1503, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.3.2.2Test parameters", "paragraph_index": 1506, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.3.2.3Test Requirements", "paragraph_index": 1508, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.4SS-SINR", "paragraph_index": 1518, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.4SA intra-frequency case measurement accuracy with FR2 serving cell and FR2 target cell for 2Rx UE", "paragraph_index": 1519, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.4.1.1Test Purpose and Environment", "paragraph_index": 1520, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.4.1.2Test parameters", "paragraph_index": 1522, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.4.1.3Test Requirements", "paragraph_index": 1530, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.5RSTD measurements", "paragraph_index": 1533, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.5.1RSTD measurement accuracy test case for RedCap UE without FH", "paragraph_index": 1534, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.5.1.1Test purpose and Environment", "paragraph_index": 1535, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.5.1.2Test Requirements", "paragraph_index": 1547, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.6UE Rx-Tx Measurements", "paragraph_index": 1564, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.6.1UE Rx-Tx measurement accuracy for single positioning frequency layer in FR2 SA without RX FH in RRC_CONNECTED mode", "paragraph_index": 1565, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.6.1.1Test purpose and environment", "paragraph_index": 1566, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.6.1.2Test parameters", "paragraph_index": 1576, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.6.1.3Test requirements", "paragraph_index": 1580, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.6.2SA: UE Rx-Tx time difference measurement accuracy with Rx FH in RRC_CONNECTED state in FR2", "paragraph_index": 1582, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.6.2.1Test purpose and Environment", "paragraph_index": 1583, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.6.2.2Test parameters", "paragraph_index": 1593, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.6.2.3Test requirements", "paragraph_index": 1598, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.7PRS-RSRP Measurements", "paragraph_index": 1601, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.7.1PRS-RSRP measurement accuracy without FH in RRC_CONNECTED state in FR2", "paragraph_index": 1602, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.7.1.1Test Purpose and Environment", "paragraph_index": 1603, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.7.1.2Test parameters", "paragraph_index": 1605, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.7.1.3Test Requirements", "paragraph_index": 1613, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.7.2PRS-RSRP measurement accuracy with FH in RRC_CONNECTED state in FR2", "paragraph_index": 1617, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.7.2.1Test Purpose and Environment", "paragraph_index": 1618, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.7.2.2Test parameters", "paragraph_index": 1620, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.7.2.3Test Requirements", "paragraph_index": 1628, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.8PRS-RSRPP Measurements", "paragraph_index": 1632, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.8.1PRS-RSRPP measurement accuracy without FH in RRC_CONNECTED state in FR2", "paragraph_index": 1633, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.8.1.1Test Purpose and Environment", "paragraph_index": 1634, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.8.1.2Test parameters", "paragraph_index": 1636, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.8.1.3Test Requirements", "paragraph_index": 1644, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.8.2SA: PRS-RSRPP measurement accuracy with Rx FH in RRC_CONNECTED state in FR2", "paragraph_index": 1648, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.8.2.1Test purpose and Environment", "paragraph_index": 1649, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.8.2.2Test parameters", "paragraph_index": 1651, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.7.8.2.3Test requirements", "paragraph_index": 1659, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8Measurement Procedure for RedCap in RRC_INACTIVE", "paragraph_index": 1663, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.1RSTD Measurements", "paragraph_index": 1664, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.1.1NR RSTD measurement reporting delay test case for RedCap UE without FH in FR2 SA in RRC_INACTIVE state", "paragraph_index": 1665, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.1.1.1Test Purpose and Environment", "paragraph_index": 1666, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.1.1.2Test Requirements", "paragraph_index": 1685, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.1.2NR RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA in RRC_INACTIVE state", "paragraph_index": 1690, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.1.2.1Test Purpose and Environment", "paragraph_index": 1691, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.1.2.2Test Requirements", "paragraph_index": 1710, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.1.3NR RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA in RRC_INACTIVE state with eDRX > 10.24s", "paragraph_index": 1714, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.1.3.1Test purpose and environment", "paragraph_index": 1715, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.1.3.2Test requirements", "paragraph_index": 1717, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.2UE Rx-Tx Measurements", "paragraph_index": 1724, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.2.1UE Rx-Tx measurement reporting delay for single positioning frequency layer in FR2 SA without RX FH in RRC_INACTIVE mode", "paragraph_index": 1725, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.2.1.1Test purpose and environment", "paragraph_index": 1726, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.2.1.2Test requirements", "paragraph_index": 1741, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.2.2UE Rx-Tx time difference measurement with Rx FH for single positioning frequency layer in FR2 SA in RRC_INACTIVE state", "paragraph_index": 1746, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.2.2.1Test purpose and environment", "paragraph_index": 1747, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.2.2.2Test requirements", "paragraph_index": 1762, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.2.3UE Rx-Tx time difference measurements for single positioning frequency layer with eDRX > 10.24s in FR2 SA", "paragraph_index": 1767, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.2.3.1Test purpose and environment", "paragraph_index": 1768, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.2.3.2Test requirements", "paragraph_index": 1770, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.3PRS-RSRP Measurements", "paragraph_index": 1777, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.3.1PRS-RSRP reporting delay test case for single positioning frequency layer in RRC_INACTIVE", "paragraph_index": 1778, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.3.1.1Test Purpose and Environment", "paragraph_index": 1779, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.3.1.2Test Requirements", "paragraph_index": 1792, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.3.2.2Test Requirements", "paragraph_index": 1810, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.3.3PRS-RSRP reporting delay in RRC_INACTIVE with eDRX", "paragraph_index": 1814, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.3.3.1Test Purpose and Environment", "paragraph_index": 1815, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.3.3.2Test Requirements", "paragraph_index": 1828, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.4PRS-RSRPP Measurements", "paragraph_index": 1834, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.4.1PRS-RSRPP measurement delay without FH in RRC_INACTIVE state in FR2", "paragraph_index": 1835, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.4.1.1Test Purpose and Environment", "paragraph_index": 1836, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.4.2PRS-RSRPP measurement with Rx FH reporting delay test case for single positioning frequency layer in FR2 SA in RRC_INACTIVE state", "paragraph_index": 1853, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.4.2.1Test Purpose and Environment", "paragraph_index": 1854, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.4.2.2Test Requirements", "paragraph_index": 1868, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.4.3PRS-RSPP reporting delay in RRC_INACTIVE state with eDRX > 10.24s", "paragraph_index": 1872, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.4.3.1Test purpose and environment", "paragraph_index": 1873, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.8.4.3.2Test requirements", "paragraph_index": 1875, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9Measurement Performance Requirements for RedCap in RRC_INACTIVE", "paragraph_index": 1882, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.1RSTD Measurements", "paragraph_index": 1883, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.1.1RSTD measurement accuracy test case for RedCap UE without FH in FR2 in RRC_INACTIVE state", "paragraph_index": 1884, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.1.1.1Test purpose and Environment", "paragraph_index": 1885, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.1.1.2Test Requirements", "paragraph_index": 1897, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.1.2RSTD measurement accuracy test case for RedCap UE with FH in FR2 in RRC_INACTIVE state", "paragraph_index": 1899, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.1.2.1Test purpose and Environment", "paragraph_index": 1900, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.1.2.2Test Requirements", "paragraph_index": 1911, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.2UE Rx-Tx Measurements", "paragraph_index": 1913, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.2.1UE Rx-Tx measurement accuracy for single positioning frequency layer in FR2 SA without RX FH in RRC_INACTIVE mode", "paragraph_index": 1914, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.2.1.1Test purpose and environment", "paragraph_index": 1915, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.2.1.2Test parameters", "paragraph_index": 1924, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.2.1.3Test requirements", "paragraph_index": 1928, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.2.2SA: UE Rx-Tx time difference measurement accuracy with Rx FH in RRC_INACTIVE state in FR2", "paragraph_index": 1930, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.2.2.1Test purpose and Environment", "paragraph_index": 1931, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.2.2.2Test parameters", "paragraph_index": 1940, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.2.2.3Test requirements", "paragraph_index": 1947, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.3PRS-RSRP Measurements", "paragraph_index": 1949, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.3.2PRS-RSRP measurement accuracy with FH in RRC_INACTIVE state in FR2", "paragraph_index": 1965, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.3.2.1Test Purpose and Environment", "paragraph_index": 1966, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.3.2.2Test parameters", "paragraph_index": 1968, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.3.2.3Test Requirements", "paragraph_index": 1976, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.4PRS-RSRPP Measurements", "paragraph_index": 1980, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.4.1SA: PRS-RSRPP measurement accuracy with Rx FH in RRC_INACTIVE state in FR2", "paragraph_index": 1981, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.4.1.1Test Purpose and Environment", "paragraph_index": 1982, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.4.1.2Test parameters", "paragraph_index": 1984, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.4.1.3Test Requirements", "paragraph_index": 1992, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.4.2SA: PRS-RSRPP measurement accuracy with Rx FH in RRC_INACTIVE state in FR2", "paragraph_index": 1996, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.4.2.1Test Purpose and Environment", "paragraph_index": 1997, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.4.2.2Test parameters", "paragraph_index": 1999, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.9.4.2.3Test Requirements", "paragraph_index": 2007, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10Measurement Procedure for RedCap in RRC_IDLE", "paragraph_index": 2011, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.1RSTD Measurements", "paragraph_index": 2012, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.1.1NR RSTD measurement reporting delay test case for RedCap UE without FH in FR2 SA in RRC_IDLE state without eDRX", "paragraph_index": 2013, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.1.1.1Test Purpose and Environment", "paragraph_index": 2014, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.1.1.2Test Requirements", "paragraph_index": 2033, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.1.2NR RSTD without FH measurement reporting delay test case for single positioning frequency layer in FR2 SA in RRC_IDLE state with eDRX > 10.24s", "paragraph_index": 2038, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.1.2.1Test purpose and environment", "paragraph_index": 2039, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.1.2.2Test requirements", "paragraph_index": 2041, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.2PRS-RSRP Measurements", "paragraph_index": 2048, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.2.1PRS-RSRP measurement delay test case for single positioning frequency layer in RRC_IDLE", "paragraph_index": 2049, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.2.1.1Test Purpose and Environment", "paragraph_index": 2050, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.2.1.2Test Requirements", "paragraph_index": 2063, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.2.2PRS-RSRP reporting delay test case in RRC_IDLE state in FR2 when eDRX cycle > 10.24s", "paragraph_index": 2067, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.2.2.1Test Purpose and Environment", "paragraph_index": 2068, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.10.2.2.2Test Requirements", "paragraph_index": 2076, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11Measurement Performance Requirements for RedCap in RRC_IDLE", "paragraph_index": 2078, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.1RSTD Measurements", "paragraph_index": 2079, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.1.1RSTD measurement accuracy test case for RedCap UE without FH in FR2 in RRC_IDLE state without eDRX", "paragraph_index": 2080, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.1.1.1Test purpose and Environment", "paragraph_index": 2081, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "11.1.1.2Test Requirements", "paragraph_index": 2093, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.1.2RSTD without FH measurement accuracy test case for single positioning frequency layer in FR2 SA in RRC_IDLE state with eDRX > 10.24s", "paragraph_index": 2095, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.1.2.1Test purpose and environment", "paragraph_index": 2096, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.1.2.2Test requirements", "paragraph_index": 2108, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.2PRS-RSRP Measurements", "paragraph_index": 2111, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.2.1PRS-RSRP measurement accuracy test case for RedCap UE in FR2 in RRC_IDLE state", "paragraph_index": 2112, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.2.1.1Test Purpose and Environment", "paragraph_index": 2113, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.2.1.2Test parameters", "paragraph_index": 2115, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.2.2PRS-RSRP measurement accuracy test case in RRC_IDLE state in FR2 when eDRX cycle > 10.24s", "paragraph_index": 2127, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.2.2.1Test purpose and Environment", "paragraph_index": 2128, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.2.2.1Test parameters", "paragraph_index": 2130, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.17.11.2.2.2Test Requirements", "paragraph_index": 2137, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18E-UTRA standalone tests for NR RRM for RedCap", "paragraph_index": 2140, "style": "Heading1"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.1RRC_IDLE state mobility", "paragraph_index": 2141, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.1.1Inter-RAT NR Cell re-selection", "paragraph_index": 2142, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.1.1.1E-UTRA Cell reselection to higher priority NR target Cell in FR1", "paragraph_index": 2143, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.1.1.1.1Test Purpose and Environment", "paragraph_index": 2144, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.1.1.1.2Test Requirements", "paragraph_index": 2155, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.2RRC_CONNECTED state mobility", "paragraph_index": 2165, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.2.1Handover", "paragraph_index": 2166, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.2.1.1E-UTRAN - NR handover in FR1", "paragraph_index": 2167, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.2.1.1.1Test Purpose and Environment", "paragraph_index": 2168, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.2.1.1.2Test Requirements", "paragraph_index": 2181, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.2.2RRC connection release with redirection", "paragraph_index": 2188, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.2.2.1Redirection from E-UTRA to NR FR1 for redcap UE", "paragraph_index": 2189, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.2.2.1.1Test Purpose and Environment", "paragraph_index": 2190, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.2.2.1.2Test Parameters", "paragraph_index": 2192, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.2.2.1.3Test Requirements", "paragraph_index": 2203, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3Measurement procedure", "paragraph_index": 2214, "style": "Heading2"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1E-UTRA – NR Inter-RAT Measurements", "paragraph_index": 2215, "style": "Heading3"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.1NR Inter-RAT event triggered reporting tests for FR1 without SSB time index detection when DRX is not used", "paragraph_index": 2216, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.1.1Test Purpose and Environment", "paragraph_index": 2217, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.1.2Test Requirements", "paragraph_index": 2229, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.2NR Inter-RAT event triggered reporting tests for FR1 without SSB time index detection when DRX is used", "paragraph_index": 2233, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.2.1Test Purpose and Environment", "paragraph_index": 2234, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.2.2Test Requirements", "paragraph_index": 2246, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.3NR Inter-RAT event triggered reporting tests for FR1 with SSB time index detection when DRX is not used", "paragraph_index": 2251, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.3.1Test Purpose and Environment", "paragraph_index": 2252, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.3.2Test Requirements", "paragraph_index": 2264, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.4NR Inter-RAT event triggered reporting tests for FR1 with SSB time index detection when DRX is used", "paragraph_index": 2268, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.4.1Test Purpose and Environment", "paragraph_index": 2269, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.4.2Test Requirements", "paragraph_index": 2281, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.5NR Inter-RAT event triggered reporting tests for FR2 without SSB time index detection when DRX is not used", "paragraph_index": 2286, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.5.1Test Purpose and Environment", "paragraph_index": 2287, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.5.2Test Requirements", "paragraph_index": 2299, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.6NR Inter-RAT event triggered reporting tests for FR2 without SSB time index detection when DRX is used", "paragraph_index": 2306, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.6.1Test Purpose and Environment", "paragraph_index": 2307, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.6.2Test Requirements", "paragraph_index": 2319, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.7NR Inter-RAT event triggered reporting tests for FR2 with SSB time index detection when DRX is not used", "paragraph_index": 2328, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.7.1Test Purpose and Environment", "paragraph_index": 2329, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.7.2Test Requirements", "paragraph_index": 2341, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.8NR Inter-RAT event triggered reporting tests for FR2 with SSB time index detection when DRX is used", "paragraph_index": 2348, "style": "Heading4"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.8.1Test Purpose and Environment", "paragraph_index": 2349, "style": "Heading5"}
+{"source": "38133-j50_sA.17-A.18.docx", "section": "", "title": "A.18.3.1.8.2Test Requirements", "paragraph_index": 2361, "style": "Heading5"}

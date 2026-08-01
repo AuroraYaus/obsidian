@@ -1,0 +1,5 @@
+DRX cycle length (s),"Tmeasure,GSM (s) (DRX cycles)"
+≤0.064,Non DRX Requirements are applicable
+0.064<DRX-cycle≤ 0.08,"Note  (6*Kn*Nfreq,n)"
+0.08<DRX-cycle≤ 2.56,"Note  (5*Kn*Nfreq,n)"
+Note: Time depends upon the DRX cycle in use,

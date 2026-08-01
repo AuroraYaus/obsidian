@@ -1,0 +1,12 @@
+V2X concurrent band Configuration,Class 1 (dBm),Tolerance (dB),Class 2 (dBm),Tolerance (dB),Class 3 (dBm),Tolerance (dB),Class 4 (dBm),Tolerance (dB)
+V2X_3A-47A,,,,,23,+2/-34,,
+V2X_5A-47A,,,,,23,+2/-34,,
+V2X_7A-47A,,,,,23,+2/-34,,
+V2X_8A-47A,,,,,23,+2/-34,,
+V2X_20A-47A,,,,,23,+2/-34,,
+V2X_28A-47A,,,,,23,+2/-34,,
+V2X_34A-47A,,,,,23,+2/-34,,
+V2X_39A-47A,,,,,23,+2/-34,,
+V2X_41A-47A,,,,,23,+2/-34,,
+V2X_71A-47A,,,,,23,+2/-34,,
+"NOTE 1:The concurrent band combinations is used for V2X Service.NOTE 2:PPowerClass is the maximum UE power specified without taking into account the toleranceNOTE 3:For inter-band concurrent aggregation the maximum power requirement apply to the total transmitted power over all component carriers (per UE).NOTE 4:4 refers to the transmission bandwidths (Figure 5.6-1) confined within FUL_low and FUL_low + 4 MHz or FUL_high – 4 MHz and FUL_high, the maximum output power requirement is relaxed by reducing the lower tolerance limit by 1.5 dB",,,,,,,,

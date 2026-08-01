@@ -1,0 +1,6 @@
+Modulation,,Channel bandwidth/MPR (dB),
+,,Outer RB allocations,Inner RB allocations
+CP-OFDM,QPSK,≤ 4.5,≤ 2.5
+,16QAM,≤ 4.5,≤ 2.5
+,64 QAM,≤ 4.5,
+,256 QAM,≤ 7.0,

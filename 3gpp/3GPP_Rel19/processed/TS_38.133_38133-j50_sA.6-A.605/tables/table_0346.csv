@@ -1,0 +1,19 @@
+Parameter,Unit,Value,Comment
+RF Channel Number,,"1,2,3","Three NR radio channel (1, 2, 3) are used for this test"
+Active Cell,,Cell 1,Primary cell on NR RF channel number 1.
+Configured deactivated PUCCH SCell,,Cell 2,Configured deactivated PUCCH SCell on NR RF channel number 2 which is an inter-band CC to PCC of Cell 1;
+Configured deactivated SCell,,Cell 3,Configured deactivated SCell on NR RF channel number 3 which is an inter-band CC to PCC of Cell 1 and SCC of Cell 2
+CP length,,Normal,
+DRX,,OFF,Continuous monitoring of primary cell
+Cell 2 timing offset to cell1,s,0,
+Cell 3 timing offset to cell1,s,0,
+Time alignment error between cell2 and cell1,s,Time alignment error as specified in TS 38.104 [13] clause 6.5.3.1.,The value of time alignment error depends upon the type of carrier aggregation.
+Time alignment error between cell3 and cell1,s,Time alignment error as specified in TS 38.104 [13] clause 6.5.3.1.,The value of time alignment error depends upon the type of carrier aggregation.
+SCell measurement cycle (measCycleSCell),ms,160,
+,,,
+T1,ms,100,"During this time the PSCell shall be known and the SCell configured, but not detected."
+T2,s,1,During this time the UE shall activate the SCell.
+T3,s,1,During this time the UE shall deactivate the SCell.
+THARQ,ms,k1NR slot length,"k1 is a number of slots indicated by the PDSCH-to-HARQ_feedback timing indicator field in a corresponding DCI format or provided by dl-DataToUL-ACK if the PDSCH-to-HARQ feedback timing field is not present in the DCI format, the value is defined in  38.213 [3]"
+TCSI_Reporting,ms,15,"the delay (in ms) including uncertainty in acquiring the first available downlink CSI reference resource, UE processing time for CSI reporting (clause 5.2.2.5 in TS 38.214 [26]) TS 38.214 [26] and uncertainty in acquiring the first available CSI reporting resources as specified in TS 38.331 [2]"
+k,slot,,As specified in clause 4.3 of TS 38.213 [3]

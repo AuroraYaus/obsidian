@@ -1,0 +1,11 @@
+Channel Bandwidth(MHz),Modulation/Waveform,,Region A1aRBstart ≤ 1.44MHz/12/SCSLCRB ≤ 0.54 MHz/12/SCS,Region A1bRBstart ≤ 1.44MHz/12/SCSLCRB > 0.54 MHz/12/SCSLCRB ≤ 2.16MHz/12/SCS,Region A2LCRB > 5.4MHz/12/SCS,Region A3bRBend ≥ 7.74MHz/12/SCSLCRB > 0.54 MHz/12/SCSLCRB ≤ 2.16MHz/12/SCS,Region A3aRBend ≥ 7.74MHz/12/SCSLCRB ≤ 0.54 MHz/12/SCS
+,,,Outer/Inner,,Outer,Outer/Inner,
+10,DFT-s-OFDM,PI/2 BPSK,6,3,4,3,6
+,,QPSK,6,3,4,3,6
+,,16 QAM,6,3,4,3,6
+,,64 QAM,6,3,4,3,6
+,,256 QAM,6,3,4,3,6
+,CP-OFDM,QPSK,6,4,5.5,4,6
+,,16 QAM,6,4,5.5,4,6
+,,64 QAM,6,4,5.5,4,6
+,,256 QAM,6,4,5.5,4,6

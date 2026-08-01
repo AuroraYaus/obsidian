@@ -1,0 +1,12 @@
+Parameter,,Value
+schedulingRequestId,,0
+sr-ProhibitTimer,,16ms
+sr-TransMax,,n4
+periodicityAndOffset,,Sl2
+PUCCH resource ID,,0
+PUCCH resource,Starting PRB,To be determined by RAN5
+,intraSlotFrequencyHopping,disabled
+,Format,format 2
+,nrofPRBs,2
+,nrofSymbols,1
+,startingSymbolIndex,0

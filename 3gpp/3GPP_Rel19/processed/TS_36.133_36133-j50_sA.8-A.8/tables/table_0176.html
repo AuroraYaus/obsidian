@@ -1,0 +1,163 @@
+<table>
+  <tr>
+    <td rowspan="2">Parameter</td>
+    <td rowspan="2">Unit</td>
+    <td colspan="2">Cell 1</td>
+    <td colspan="2">Cell 2</td>
+  </tr>
+  <tr>
+    <td>T1</td>
+    <td>T2</td>
+    <td>T1</td>
+    <td>T2</td>
+  </tr>
+  <tr>
+    <td>E-UTRA RF Channel Number</td>
+    <td></td>
+    <td colspan="2">1</td>
+    <td colspan="2">1</td>
+  </tr>
+  <tr>
+    <td>BWchannel</td>
+    <td>MHz</td>
+    <td colspan="2">5MHz: NRB,c = 2510MHz: NRB,c = 5020MHz: NRB,c = 100</td>
+    <td colspan="2">5MHz: NRB,c = 2510MHz: NRB,c = 5020MHz: NRB,c = 100</td>
+  </tr>
+  <tr>
+    <td>PDSCH parameters:</td>
+    <td></td>
+    <td colspan="2">5MHz: R.4 TDD 10MHz: R.0 TDD20MHz: R.3 TDD</td>
+    <td colspan="2">-</td>
+  </tr>
+  <tr>
+    <td>PCFICH/PDCCH/PHICH parameters:</td>
+    <td></td>
+    <td colspan="2">5MHz: R.11 TDD 10MHz: R.6 TDD20MHz: R.10 TDD</td>
+    <td colspan="2">-</td>
+  </tr>
+  <tr>
+    <td>OCNG Pattern defined in A.3.2.2</td>
+    <td></td>
+    <td colspan="2">5MHz: OP.9 TDD 10MHz: OP.1 TDD20MHz: OP.7 TDD</td>
+    <td colspan="2">5MHz: OP.10 TDD 10MHz:OP.2 TDD20MHz: OP.8 TDD</td>
+  </tr>
+  <tr>
+    <td>PBCH_RA</td>
+    <td>dB</td>
+    <td rowspan="13" colspan="2">-3</td>
+    <td rowspan="13" colspan="2">-3</td>
+  </tr>
+  <tr>
+    <td>PBCH_RB</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>PSS_RA</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>SSS_RA</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>PCFICH_RB</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>PHICH_RA</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>PHICH_RB</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>PDCCH_RA</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>PDCCH_RB</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>PDSCH_RA</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>PDSCH_RB</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>OCNG_RANote 1</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>OCNG_RBNote 1</td>
+    <td>dB</td>
+  </tr>
+  <tr>
+    <td>Note 2</td>
+    <td>dBm/15 kHz</td>
+    <td colspan="4">-98</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>4</td>
+    <td>4</td>
+    <td>-Infinity</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>4</td>
+    <td>-1.46</td>
+    <td>-Infinity</td>
+    <td>-1.46</td>
+  </tr>
+  <tr>
+    <td>RSRP Note 3</td>
+    <td>dBm/15 kHz</td>
+    <td>-94</td>
+    <td>-94</td>
+    <td>-Infinity</td>
+    <td>-94</td>
+  </tr>
+  <tr>
+    <td>SCH_RP Note 3</td>
+    <td>dBm/15 kHz</td>
+    <td>-94</td>
+    <td>-94</td>
+    <td>-Infinity</td>
+    <td>-94</td>
+  </tr>
+  <tr>
+    <td>Io Note 3</td>
+    <td>dBm/Ch BW</td>
+    <td>-64.76+10log(NRB,c /50)</td>
+    <td>-62.42+10log(NRB,c /50)</td>
+    <td colspan="2">Specified in columns for Cell 1</td>
+  </tr>
+  <tr>
+    <td>Propagation Condition</td>
+    <td></td>
+    <td colspan="2">AWGN</td>
+    <td colspan="2">AWGN 1750Hz Note 4</td>
+  </tr>
+  <tr>
+    <td>Antenna Configuration</td>
+    <td></td>
+    <td colspan="2">2x2</td>
+    <td colspan="2">2x2</td>
+  </tr>
+  <tr>
+    <td>Timing offset to Cell 1Synchronous cells</td>
+    <td>us</td>
+    <td colspan="2">-</td>
+    <td colspan="2">3</td>
+  </tr>
+  <tr>
+    <td colspan="6">Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:Es/Iot, RSRP, SCH_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:The AWGN 1750Hz condition is a non fading propagation channel with one tap. Doppler shift is a constant 1750Hz.</td>
+  </tr>
+</table>

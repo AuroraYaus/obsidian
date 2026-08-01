@@ -1,0 +1,5 @@
+Operating band,Units,Adjacent channel selectivity / Channel bandwidth,,,,,,
+,,50MHz,100MHz,200MHz,400MHz,800 MHz,1600 MHz,2000 MHz
+"n257, n258, n261",dB,23,23,23,23,N/A,N/A,N/A
+"n259, n260, n262",dB,22,22,22,22,N/A,N/A,N/A
+n263,dB,N/A,21,N/A,21,20,20,20

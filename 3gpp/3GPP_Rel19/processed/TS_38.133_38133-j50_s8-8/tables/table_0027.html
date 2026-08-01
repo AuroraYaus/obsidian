@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td>Configuration</td>
+    <td rowspan="2">TEvaluate_out_SSB,CCA (ms)</td>
+    <td>TEvaluate_in_SSB,CCA (ms)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>no DRX</td>
+    <td>Max(200, Ceil(12*P* N)*TSSB)</td>
+    <td>Max(100, Ceil((5 +Lin)*P* N)*TSSB)</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤320</td>
+    <td>Max(200, Ceil(1.5*10*P* N)*Max(TDRX,TSSB))</td>
+    <td>Max(100, Ceil(1.5*(5 +Lin)*P* N)*Max(TDRX,TSSB))</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320</td>
+    <td>Ceil(10*P* N)*TDRX</td>
+    <td>Ceil((5+Lin)*P* N)*TDRX</td>
+  </tr>
+  <tr>
+    <td colspan="3">NOTE 1:TSSB is the periodicity of the SSB configured for RLM. TDRX is the DRX cycle length.NOTE 2:When DRX is not configured, Lin is the number of RLM-RS SSB occasions groups which are not available at the UE during TEvaluate_in_SSB,CCA, where Lin ≤ Lin,max. An RLM-RS SSB occasions group consists of N consecutive RLM-RS SSB occasions, and the RLM-RS SSB occasions group is not available at the UE when at least one RLM-SSB occasion in the group is not transmitted by the gNB. When DRX is configured, Lin is the number of DRX cycles groups which are not available at the UE during TEvaluate_in_SSB,CCA, where Lin ≤ Lin,max. A DRX group consists of N DRX cycles, and the DRX group is not available when there is at least one DRX in which at least one RLM-RS SSB occasion is not available. The UE is not required to determine the availability of SSB occasions more frequent than once per DRX cycle length, when configured with DRX.NOTE 3:Lin,max=7 for Max(TDRX,TSSB) ≤ 40 assuming TDRX=0 for non-DRX case, Lin,max=5 for 40&lt;Max(TDRX,TSSB)≤320,Lin,max=3 for TDRX&gt;320.</td>
+  </tr>
+</table>

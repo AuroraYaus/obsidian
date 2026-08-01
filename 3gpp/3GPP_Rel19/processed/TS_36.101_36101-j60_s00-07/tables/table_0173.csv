@@ -1,0 +1,9 @@
+Table 6.2.4G-4: A-MPR for NS_34 Resource pool,Carrier frequency(MHz),Resources Blocks (NRB),A-MPR (dB)
+Adjacent,5860,<20,15
+,,>20 and <30,13
+,,>30,12
+,"5870, 5900, 5880, 5890, 5900",<15 or >40,1
+Non-Adjacent,5860,-,12.5
+,"5910, 5920",<10,5.5
+,,>10 and <20,3
+,"5870, 5880, 5890, 5900",<10,5.5

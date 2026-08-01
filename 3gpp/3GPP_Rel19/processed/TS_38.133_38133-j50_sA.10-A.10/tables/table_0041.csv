@@ -1,0 +1,11 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,1,One E-UTRA radio channel is used for this test
+NR RF Channel Number,,2,One NR radio channel is used for this test
+Active PCell,,Cell 1,PCell on RF channel number 1.
+Active PSCell,,Cell 2,PSCell on RF channel number 2.
+CP length,,Normal,
+DRX,,OFF,
+lbt-FailureDetectionTimer [2],ms,80,Parameter configured by IE: LBT-FailureRecoveryConfig [1]
+lbt-FailureInstanceMaxCount [2],,4,Parameter configured by IE: LBT-FailureRecoveryConfig [1]
+T1,s,0.1,During T1 consistent LBT failure is detected on active UL BWP-1
+T2,s,0.1,During T2 UE sends PRACH on active UL BWP-2

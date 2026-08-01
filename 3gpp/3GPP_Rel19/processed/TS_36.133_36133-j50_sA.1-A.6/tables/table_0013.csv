@@ -1,0 +1,10 @@
+Parameter,Unit,Value,,
+Reference channel,,R.3 HD-FDD,R.4 HD-FDD,R.5 HD-FDD
+Channel bandwidth,MHz,10,10,10
+Number of transmitter antennas,,1,2,2
+Control region OFDM symbolsNote1,symbols,2,2,3
+Aggregation level,CCE,8,8,8
+DCI Format,,Note 3,Note 3,Note 3
+Cell ID,,Note 4,Note 4,Note 4
+Payload (without CRC),Bits,Note 5,Note 5,Note 5
+"Note 1: The control region consists of PCFICH, PHICH and PDCCH.Note 2: DCI formats are defined in TS 36.212.Note 3: DCI format shall depend upon the test configuration.Note 4: Cell ID shall depend upon the test configuration.Note 5: Payload size shall depend upon the test configuration.Note 6: For PDCCH using SI/RA/P-RNTI, Aggregation level 4 is used.Note 7: Sub-frame 0 or sub-frame 5 is randomly scheduled in downlink.",,,,

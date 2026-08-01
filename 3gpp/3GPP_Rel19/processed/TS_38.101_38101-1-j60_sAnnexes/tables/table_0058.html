@@ -1,0 +1,353 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Switching Pattern for Low-band CA</td>
+    <td>LowBandCA-Switching-r19 -&gt; switchingPattern-r19</td>
+    <td>A bitmap of slots</td>
+    <td>00011 00110 01100 11001 11100 11001 10011 00110</td>
+  </tr>
+  <tr>
+    <td>Period of Switching Pattern</td>
+    <td>Slots</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>Slots on the PCell</td>
+    <td></td>
+    <td>A bit value of ‘0’ in LBCA-SwitchingPattern</td>
+  </tr>
+  <tr>
+    <td>Slots on the SCell</td>
+    <td></td>
+    <td>A bit value of ‘1’ in LBCA-SwitchingPattern</td>
+  </tr>
+  <tr>
+    <td rowspan="15">Switch-from DL slot on the PCell/SCell</td>
+    <td>Slot Location</td>
+    <td></td>
+    <td>Mod(i, 20) = 2, 4, 6, 8, 10, 12, 14, 16, 18</td>
+  </tr>
+  <tr>
+    <td>The number of Switch-from Slot</td>
+    <td></td>
+    <td>18 slots for each period of 40 slots.</td>
+  </tr>
+  <tr>
+    <td>CORESET frequency domain allocation</td>
+    <td></td>
+    <td>Full BW</td>
+  </tr>
+  <tr>
+    <td>CORESET time domain allocation</td>
+    <td></td>
+    <td>2 OFDM symbol at the begin of each slot</td>
+  </tr>
+  <tr>
+    <td>PDSCH mapping type</td>
+    <td></td>
+    <td>Type A</td>
+  </tr>
+  <tr>
+    <td>PDSCH start symbol index (S)</td>
+    <td></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Number of consecutive PDSCH symbols (L)</td>
+    <td></td>
+    <td>12 - gapDurationPCelltoSCell-r19 for the slot indicated as ‘0’ in the LBCA-SwitchingPatternOr 12 - gapDurationSCelltoPCell-r19 for the slot indicated as ‘1’ in the LBCA-SwitchingPattern</td>
+  </tr>
+  <tr>
+    <td>PDSCH PRB bundling</td>
+    <td>PRBs</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Dynamic PRB bundling</td>
+    <td></td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>Overhead value for TBS determination</td>
+    <td></td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>First DMRS position for Type A PDSCH mapping</td>
+    <td></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>DMRS type</td>
+    <td></td>
+    <td>Type 1</td>
+  </tr>
+  <tr>
+    <td>Number of additional DMRS</td>
+    <td></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>FDM between DMRS and PDSCH</td>
+    <td></td>
+    <td>Disable</td>
+  </tr>
+  <tr>
+    <td>The number of slots between PDSCH and corresponding HARQ-ACK information (K1 Value)</td>
+    <td>Slots</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td rowspan="15">Switch-to DL slot on the PCell/SCell</td>
+    <td>Slot Location</td>
+    <td></td>
+    <td>Mod(i, 20) = 3, 5, 7, 9, 11, 13, 15, 17, 19</td>
+  </tr>
+  <tr>
+    <td>The number of Switch-from Slot</td>
+    <td></td>
+    <td>18 slots for every period of 40 slots.</td>
+  </tr>
+  <tr>
+    <td>CORESET frequency domain allocation</td>
+    <td></td>
+    <td>Full BW</td>
+  </tr>
+  <tr>
+    <td>CORESET time domain allocation</td>
+    <td></td>
+    <td>2 OFDM symbol at the begin of each slot</td>
+  </tr>
+  <tr>
+    <td>PDSCH mapping type</td>
+    <td></td>
+    <td>Type A</td>
+  </tr>
+  <tr>
+    <td>PDSCH start symbol index (S)</td>
+    <td></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Number of consecutive PDSCH symbols (L)</td>
+    <td></td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>PDSCH PRB bundling</td>
+    <td>PRBs</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>Dynamic PRB bundling</td>
+    <td></td>
+    <td>false</td>
+  </tr>
+  <tr>
+    <td>Overhead value for TBS determination</td>
+    <td></td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>First DMRS position for Type A PDSCH mapping</td>
+    <td></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>DMRS type</td>
+    <td></td>
+    <td>Type 1</td>
+  </tr>
+  <tr>
+    <td>Number of additional DMRS</td>
+    <td></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>FDM between DMRS and PDSCH</td>
+    <td></td>
+    <td>Disable</td>
+  </tr>
+  <tr>
+    <td>The number of slots between PDSCH and corresponding HARQ-ACK information (K1 Value)</td>
+    <td>Slots</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td colspan="2">HARQ process number</td>
+    <td></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td colspan="2">Subcarrier spacing</td>
+    <td>kHz</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td colspan="2">Subcarrier spacing configuration µ</td>
+    <td></td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Subcarriers per resource block</td>
+    <td></td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td colspan="2">Allocated slots per period of 40 slots on the PCell</td>
+    <td>Slots</td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <td colspan="2">Allocated slots per period of 40 slots on the SCell</td>
+    <td>Slots</td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <td colspan="2">MCS Index</td>
+    <td></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td colspan="2">MCS Table for TBS determination</td>
+    <td></td>
+    <td>64QAM / table 5.1.3.1-1: MCS index table 1 for PDSCH in TS 38.214</td>
+  </tr>
+  <tr>
+    <td colspan="2">Modulation</td>
+    <td></td>
+    <td>QPSK</td>
+  </tr>
+  <tr>
+    <td colspan="2">Target Coding Rate R x [1024]</td>
+    <td></td>
+    <td>308</td>
+  </tr>
+  <tr>
+    <td colspan="2">Maximum number of HARQ transmissions</td>
+    <td></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Channel bandwidth</td>
+    <td></td>
+    <td rowspan="5">These parameters can refer to Table A.8.1-2 for differernt channel bandwidth. As PCell and SCell can be configured with different channel bandwidth, TBS per slot for PCell and SCell could be different.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Allocated resource blocks</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Information Bit Payload (TBS) per Slot</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of Code Blocks per Slot</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of Code Blocks per Slot</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Max. Throughput averaged over 4 frame</td>
+    <td>Mbps</td>
+    <td>(18*TBSPCell + 18*TBSSCell) / 0.04 / 10^6</td>
+  </tr>
+  <tr>
+    <td colspan="2">RTDP2S (NOTE2)</td>
+    <td>µs</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">RTDS2P (NOTE2)</td>
+    <td>µs</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">NTA</td>
+    <td>Tc</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">NTA,offset</td>
+    <td>Tc</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">gapDurationPCelltoSCell-r19</td>
+    <td>Symbol</td>
+    <td>‘1’ for 35us of  switchingPeriodForFDD-SDL-r19‘2’ for 70us of  switchingPeriodForFDD-SDL-r19‘3’ for 140us of  switchingPeriodForFDD-SDL-r19</td>
+  </tr>
+  <tr>
+    <td colspan="2">gapDurationSCelltoPCell-r19</td>
+    <td>Symbol</td>
+    <td>‘1’ for 35us of  switchingPeriodForFDD-SDL-r19‘2’ for 70us of  switchingPeriodForFDD-SDL-r19‘3’ for 140us of  switchingPeriodForFDD-SDL-r19</td>
+  </tr>
+  <tr>
+    <td>CSIRS for tracking</td>
+    <td>First subcarrier index in the PRB used for CSI-RS (k0)</td>
+    <td></td>
+    <td>0 for CSI-RS resource 1,2,3,4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>OFDM symbols in the PRB used for CSIRS</td>
+    <td></td>
+    <td>l0 = 6 for CSI-RS resource 1 and 3l0 = 10 for CSI-RS resource 2 and 4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Number of CSI-RS ports</td>
+    <td></td>
+    <td>1 for CSI-RS resource 1,2,3,4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>CDM Type</td>
+    <td></td>
+    <td>&#x27;No CDM&#x27; for CSI-RS resource 1,2,3,4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Density (ρ)</td>
+    <td></td>
+    <td>3 for CSI-RS resource 1,2,3,4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>CSIRS periodicity</td>
+    <td>Slots</td>
+    <td>40 for CSI-RS resource 1,2,3,4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>CSIRS offset</td>
+    <td>Slots</td>
+    <td>For PCell FDD band, CSI-RS offset are:0 for CSI-RS resource 1 and 21 for CSI-RS resource 3 and 4For SCell SDL band, CSI-RS offset are:20 for CSI-RS resource 1 and 221 for CSI-RS resource 3 and 4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Frequency Occupation</td>
+    <td></td>
+    <td>Start PRB 0Number of PRB = BWP size</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>QCL info</td>
+    <td></td>
+    <td>TCI state #0</td>
+  </tr>
+  <tr>
+    <td colspan="2">PTRS configuration</td>
+    <td></td>
+    <td>PTRS is not configured</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:Slot i is slot index per four frames.NOTE 2:The definition is referred to the clause 5.2.2 and 5.2.3 of TR 38.768</td>
+  </tr>
+</table>

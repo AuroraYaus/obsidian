@@ -1,0 +1,5 @@
+"Frequency offset of measurement filter 3dB point, f","Frequency offset of measurement filter centre frequency, f_offset",Basic limits,Measurement bandwidth
+0 MHz  f < 20 MHz,0.05 MHz  f_offset < 20.05 MHz,-22dBm-720f_offsetMHz-0.05,100 kHz
+"20 MHz  f <min(40 MHz, fmax)","20.05 MHz  f_offset <min(40.05 MHz, f_offsetmax)",-29 dBm,100 kHz
+40 MHz  f  fmax,40.05 MHz  f_offset < f_offsetmax,-29 dBm,100 kHz
+"NOTE 1:For a BS supporting non-contiguous spectrum operation within any operating band the emission limits within sub-block gaps is calculated as a cumulative sum of contributions from adjacent sub-blocks on each side of the sub-block gap. Exception is f ≥ 40MHz from both adjacent sub-blocks on each side of the sub-block gap, where the emission limits within sub-block gaps shall be -29 dBm/100kHz.NOTE 2:For a multi-band connector with Inter RF Bandwidth gap < 2*ΔfOBUE the emission limits within the Inter RF Bandwidth gaps is calculated as a cumulative sum of contributions from adjacent sub-blocks or RF Bandwidth on each side of the Inter RF Bandwidth gap.NOTE 3:The requirement is not applicable when fmax < 40 MHz.",,,

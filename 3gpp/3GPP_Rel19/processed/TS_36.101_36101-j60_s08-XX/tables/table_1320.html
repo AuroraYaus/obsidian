@@ -1,0 +1,88 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>PCell</td>
+    <td>SCell1</td>
+    <td>SCell2, SCell3</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH transmission mode</td>
+    <td></td>
+    <td colspan="3">1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Uplink downlink configuration</td>
+    <td></td>
+    <td>2</td>
+    <td colspan="2">2 for TDD CellN/A for FDD Cell</td>
+  </tr>
+  <tr>
+    <td colspan="2">Special subframe configuration</td>
+    <td></td>
+    <td>4</td>
+    <td colspan="2">4 for TDD CellN/A for FDD Cell</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td colspan="3">0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td colspan="3">0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation condition and antenna configuration</td>
+    <td></td>
+    <td colspan="3">AWGN (1 x 2)</td>
+  </tr>
+  <tr>
+    <td colspan="2">SNR</td>
+    <td>dB</td>
+    <td>12</td>
+    <td>6</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td>-86</td>
+    <td>-92</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td>-98</td>
+    <td>-98</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td colspan="2">Physical channel for CQI reporting</td>
+    <td></td>
+    <td colspan="3">PUCCH Format 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">PUCCH Report Type</td>
+    <td></td>
+    <td colspan="3">4</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting periodicity</td>
+    <td>ms</td>
+    <td colspan="3">Npd = 20</td>
+  </tr>
+  <tr>
+    <td colspan="2">cqi-pmi-ConfigurationIndex</td>
+    <td></td>
+    <td>18</td>
+    <td>23 (shift of 5 ms relative to Pcell)</td>
+    <td>28 for SCell 2 (shift of 10 ms relative to Pcell) , 33 for SCell 3 (shift of 15ms relative to PCell)</td>
+  </tr>
+  <tr>
+    <td colspan="6">Note 1:3 symbols are allocated to PDCCH. No PDSCH for user data is scheduled for the UE with one sided dynamic OCNG Pattern OP.1 FDD and OP.1 TDD as described in Annex A.5.1.1 and A.5.2.1.Note 2:VoidNote 3:Void</td>
+  </tr>
+</table>

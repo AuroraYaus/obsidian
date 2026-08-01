@@ -1,0 +1,8 @@
+,CA bandwidth class / CA NRACLR / Measurement bandwidth
+,Any CA bandwidth class
+"CA NRACLR for band n257, n258, n261",17 dB
+"CA NRACLR for band n259, n260, n262",16 dB
+CA NRACLR for band n263,15 dB
+NR channel measurement bandwidth1,BWChannel_CA  – 2*BWGB
+Adjacent channel centre frequency offset (in MHz),+ BWChannel_CA/- BWChannel_CA
+NOTE 1:BWGB is defined in clause 5.3A.2.,

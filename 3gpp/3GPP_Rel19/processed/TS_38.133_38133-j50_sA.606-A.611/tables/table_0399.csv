@@ -1,0 +1,11 @@
+Parameter,Unit,Test configuration,Value,Comment
+Active cell,,1,NR Cell 1,
+RF Channel Number,,1,1: Cell 1,
+SSB configuration,,1,SSB.24 FR1,
+SMTC configuration,,1,SMTC.1,
+CLI-RSSI-MeasResource,,1,A.6.6.32.2.2-3,
+CP length,,1,Normal,
+DRX,,1,DRX.7,
+Time offset between DL from serving cell and OCNG from test system,s,1,17.67,
+T1,s,1,5,
+T2,s,1,2,

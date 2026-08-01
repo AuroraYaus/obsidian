@@ -1,0 +1,29 @@
+Parameter,Unit,Test1,,Test2,
+,,Cell1,Cell2,Cell1,Cell2
+E-UTRA RF Channel Number,,1,2,1,2
+GapOffset,,18,N/A,11,N/A
+Gap Pattern ID,,0,N/A,0,N/A
+PRS configuration Index,,12,19,2,12
+PRS subframe offset,,N/A,7,N/A,10
+PBCH_RA,dB,0,0,0,0
+PBCH_RB,,,,,
+PSS_RA,,,,,
+SSS_RA,,,,,
+PCFICH_RB,,,,,
+PHICH_RA,,,,,
+PHICH_RB,,,,,
+PDCCH_RA,,,,,
+PDCCH_RB,,,,,
+OCNG_RANote1,,,,,
+OCNG_RBNote1,,,,,
+PRS_RA,dB,-3,0,-3,0
+Note2,dBm/15 kHz,-98,,,
+PRS,dB,-6,-13,-6,-13
+PRS  Note3,dB,-6,-13,-6,-13
+Io Note3,dBm/1.08 MHz,-79.25,-79.39,N/A,N/A
+,dBm/9 MHz,N/A,N/A,-70.04,-70.18
+PRP Note3,dBm/15kHz,-104,-111,-104,-111
+Note 3,dB,-3,-13,-3,-13
+RSRP Note 3,dBm/15kHz,-101,-111,-101,-111
+Propagation condition,,AWGN,,,
+"Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols (other than those in the PRS subframes).Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:, PRS , Io, RSRP and PRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io values are derived in the case that there is no PBCH, PSS or SSS in the OFDM symbols carrying PRS.",,,,,

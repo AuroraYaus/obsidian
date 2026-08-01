@@ -1,0 +1,13 @@
+Parameter,,Unit,Value
+Downlink power allocation,,dB,-6
+,,dB,-6 (Note 1)
+,,dB,3
+at antenna port,,dBm/15kHz,-98
+Precoding granularity,,PRB,"4 for 3MHz and 5MHz CCs, 6 for 10MHz CCs, 8 for 15MHz and 20MHz CCs"
+PMI delay (Note 2),,ms,8
+Reporting interval,,ms,1
+Reporting mode,,,PUSCH 1-2
+CodeBookSubsetRestriction bitmap,,,0000000000000000000000000000000011111111111111110000000000000000
+CSI request field (Note 3),,,‘10’
+PDSCH transmission mode,,,4
+"Note 1:.Note 2:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).Note 3:Multiple CC-s under test are configured as the 1st set of serving cells by higher layers.Note 4:ACK/NACK bits are transmitted using PUSCH with PUCCH format 1b with channel selection configured for Tests in Table 8.2.1.4.3-4, and with PUCCH format 3 for Tests in Table 8.2.1.4.3-6.Note 5:The same PDSCH transmission mode is applied to each component carrier.",,,

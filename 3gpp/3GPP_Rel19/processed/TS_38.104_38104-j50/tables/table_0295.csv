@@ -1,0 +1,12 @@
+Parameter,Test
+Number of information bits,2
+Number of PRBs,1
+Number of symbols,14
+First PRB prior to frequency hopping,0
+Intra-slot frequency hopping,enabled
+First PRB after frequency hopping,The largest PRB index – (nrofPRBs – 1)
+Group and sequence hopping,neither
+Hopping ID,0
+Initial cyclic shift,0
+First symbol,0
+Index of orthogonal cover code (timeDomainOCC),0

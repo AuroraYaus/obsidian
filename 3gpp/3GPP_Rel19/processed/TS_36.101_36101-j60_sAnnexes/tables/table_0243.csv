@@ -1,0 +1,34 @@
+Parameter,Unit,Value,,,,,,
+Reference channel,,R.31E-1 FDD,R.31E-2 FDD,R.31E-3 FDD,R.31E-3A FDD,R.31E-3C FDD,R.31E-4 FDD,R.31E-4B FDD
+Channel bandwidth,MHz,10,10,20,10,15,20,15
+Allocated resource blocks (Note 8),,Note 5,Note 6,Note 7,Note 6,Note 9,Note 7,Note 10
+Allocated subframes per Radio Frame,,10,10,10,10,10,10,10
+Modulation,,64QAM,64QAM,64QAM,64QAM,64QAM,64QAM,64QAM
+Coding Rate (subframes with PDCCH USS monitoring),,,,,,,,
+"For Sub-Frame 1,2,3,4,6,7,8,9,",,0.3972,0.5926,0.5933,0.8533,0.8725,0.8763,0.8533
+For Sub-Frame 5,,0.3972,0.6441,0.6246,0.8889,0.8855,0.8702,0.8762
+For Sub-Frame 0,,0.3972,0.6282,0.6106,0.9046,0.9105,0.9018,0.8868
+Coding Rate (subframes with EPDCCH USS monitoring),,,,,,,,
+"For Sub-Frame 1,2,3,4,6,7,8,9,",,0.4114,0.6047,0.5993,0.8707,0.8855,0.8851,0.8649
+For Sub-Frame 5,,0.4114,0.6584,0.6312,0.9086,0.8990,0.8794,0.8889
+For Sub-Frame 0,,0.4114,0.6418,0.6170,0.9242,0.9246,0.9112,0.8993
+Information Bit Payload (Note 8),,,,,,,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",Bits,10296,25456,51024,36696,51024,75376,55056
+For Sub-Frame 5,Bits,10296,25456,51024,35160,51024,71112,52752
+For Sub-Frame 0,Bits,10296,25456,51024,36696,51024,75376,55056
+Number of Code Blocks(Notes 3 and 8),,,,,,,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",Bits,2,5,9,6,9,13,9
+For Sub-Frame 5,Bits,2,5,9,6,9,12,9
+For Sub-Frame 0,Bits,2,5,9,6,9,13,9
+Binary Channel Bits (Note 8)(subframes with PDCCH USS monitoring),,,,,,,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",Bits,26100,43200,86400,43200,58752,86400,64800
+For Sub-Frame 5,Bits,26100,39744,82080,39744,57888,82080,60480
+For Sub-Frame 0,Bits,26100,40752,83952,40752,56304,83952,62352
+Binary Channel Bits (Note 8)(subframes with EPDCCH USS monitoring),,,,,,,,
+"For Sub-Frames 1,2,3,4,6,7,8,9",Bits,25200,42336,85536,42336,57888,85536,63936
+For Sub-Frame 5,Bits,25200,38880,81216,38880,57024,81216,59616
+For Sub-Frame 0,Bits,25200,39888,83088,39888,55440,83088,61488
+Number of layers,,1,2,2,2,2,2,2
+Max. Throughput averaged over 1 frame (Note 8),Mbps,10.296,25.456,51.024,36.542,51.024,74.950,54.826
+UE Categories,,≥ 1,≥ 2,≥ 2,≥ 2,≥ 3,≥ 3,≥ 4
+"Note 1:1 symbol allocated to PDCCH for all tests.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211.Note 3:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).Note 4:Resource blocks nPRB = 0..2 are allocated for SIB transmissions in sub-frame 5 for all bandwidths.Note 5:Resource blocks nPRB = 6..14,30..49 are allocated for the user data in all sub-frames.Note 6:Resource blocks nPRB = 3..49 are allocated for the user data in sub-frame 5, and resource blocks nPRB = 0..49 in sub-frames 0,1,2,3,4,6,7,8,9.Note 7:Resource blocks nPRB = 4..99 are allocated for the user data in sub-frame 5, and resource blocks nPRB = 0..99 in sub-frames 0,1,2,3,4,6,7,8,9.Note 8: Given per component carrier per codeword.Note 9:Resource blocks nPRB = 4..71 are allocated for the user data in sub-frames 0,1,2,3,4,5,6,7,8,9.Note 10:Resource blocks nPRB = 4..74 are allocated for the user data in sub-frame 5, and resource blocks nPRB = 0..74 in sub-frames 0,1,2,3,4,6,7,8,9.",,,,,,,,

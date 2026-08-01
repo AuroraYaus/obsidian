@@ -1,0 +1,13 @@
+Parameter,Unit,Value,Comment
+PDSCH parameters,,5MHz: R.5 FDD10MHz: R.0 FDD20MHz: R.4 FDD5MHz: OP.4 TDD10MHz: OP.0 TDD20MHz: OP.3 TDD,As specified in clause A.3.1.1.1
+PCFICH/PDCCH/PHICH parameters,,5MHz: R.11 FDD10MHz: R.6 FDD20MHz: R.10 FDD5MHz: OP.11 TDD10MHz: OP.6 TDD20MHz: OP.10 TDD,As specified in clause A.3.1.2.1
+E-UTRA RF Channel Number,,"1, 2",Two FDD carrier frequencies are used.
+Channel Bandwidth (BWchannel),MHz,"5MHz, NRB,c = 2510MHz, NRB,c = 5020MHz, NRB,c = 100","5MHz, NRB,c = 2510MHz, NRB,c = 5020MHz, NRB,c = 100"
+PCell,,Cell 1,Cell 1 is on RF channel number 1
+SCell,,Cell 2,Cell 2 is on RF channel number 2
+CP length,,Normal,
+DRX,,OFF,OFF
+T331,S,300,
+T1,S,10,"Prior to T1 UE shall be fully synchronized to cell 1 and cell 2. During T1 UE shall be configured with CA with Cell 1 as PCell and Cell 2 as SCell. Cell 2, SCell, shall be configured and activated. The UE shall be configured for periodic CSI reporting in the PCell with a reporting periodicity of [5] ms. T1 starts when the SCell is activated. When UE reports valid CQI for the activated SCell T2 is started."
+T2,S,3,During T2 RRC Connection is configured with idle mode CA measurements in cell 2. Connection is released after configuration and valid CQI report has been transmitted for the SCell.
+T4,S,10,UE is paged for connection setup. During the connection setup the UE is requested to send an early measurement report.

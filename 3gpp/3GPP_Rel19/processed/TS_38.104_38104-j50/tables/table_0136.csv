@@ -1,0 +1,4 @@
+BS channel bandwidth of the lowest/highest carrier received (MHz),Wanted signal mean power (dBm),Interfering signal mean power (dBm)
+3,PREFSENS + 8 dB,Wide Area BS: -52Medium Range BS: -47Local Area BS: -44
+"5, 7, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100  (Note 1)",PREFSENS + 6 dB,
+"NOTE 1:The SCS for the lowest/highest carrier received is the lowest SCS supported by the BS for that bandwidth.NOTE 2:PREFSENS depends on the RAT. For NR, PREFSENS depends also on the BS channel bandwidth as specified in tables 7.2.2-1, 7.2.2-2, 7.2.2-3. For NB-IoT, PREFSENS depends also on the sub-carrier spacing as specified in tables 7.2.1-5, 7.2.1-5a and 7.2.1-5c of TS 36.104 [13].",,

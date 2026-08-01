@@ -1,0 +1,9 @@
+Gap pattern ID,DRX cycle length (s),Tidentify_inter_UE cat M1_NC (s) (DRX cycles)
+0,≤0.04,1.44 * Kinter_M1 *  KRSTD_M1_NC (Note 1)
+,0.04<DRX-cycle≤0.08,Note 2 (40 * Kinter_M1 *  KRSTD_M1_NC)
+,0.128,3.2 * Kinter_M1 *  KRSTD_M1_NC (25 * Kinter_M1 *  KRSTD_M1_NC)
+,0.128<DRX-cycle≤2.56,Note 2(20 * Kinter_M1 *  KRSTD_M1_NC)
+1,<0.128,2.88 * Kinter_M1 *  KRSTD_M1_NC (Note 1)
+,0.128,3.2 * Kinter_M1 *  KRSTD_M1_NC (25 * Kinter_M1 *  KRSTD_M1_NC)
+,0.128<DRX-cycle≤2.56,Note 2(20 * Kinter_M1 *  KRSTD_M1_NC)
+Note 1:Number of DRX cycle depends upon the DRX cycle in useNote 2:Time depends upon the DRX cycle in use,,

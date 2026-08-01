@@ -1,0 +1,26 @@
+Parameter,Unit,Cell 1,
+,,T1,T2
+E-UTRA RF Channel Number,,1,
+BWchannel,MHz,10,
+PBCH_RA,dB,0,0
+PBCH_RB,dB,,
+PSS_RA,dB,,
+SSS_RA,dB,,
+PCFICH_RB,dB,,
+PHICH_RA,dB,,
+PHICH_RB,dB,,
+PDCCH_RA,dB,,
+PDCCH_RB,dB,,
+PDSCH_RA,dB,,
+PDSCH_RB,dB,,
+OCNG_RANote1,dB,,
+OCNG_RBNote1,dB,,
+Qrxlevmin,dBm/15kHz,-140,-140
+,dBm/15kHz,-98,
+RSRP,dBm/15kHz,-87,-101
+,dB,11,-3
+Snonintrasearch,dB,Not sent,
+"Threshserving, low",dB,46 (-94dBm),
+"Threshx, low (Note2)",dB,24 (-79dBm),
+Propagation Condition,,AWGN,
+"Note1:OCNG shall be used such that cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note2:This refers to the value of Threshx, low  which is included in E-UTRA system information, and is a threshold for the UTRA target cell",,,

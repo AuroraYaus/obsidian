@@ -1,0 +1,5 @@
+Serving cell SSB Ês/Iot (dB) and SMTC configuration,FR of target NR cell,"Tidentify_inter_NR, i [ms]",
+,,Known NR cell,Unknown NR cell
+≥ -8 and SMTC is configured,FR1,"MAX (200 ms, 6 x TSMTC, i)","K_satellite * MAX (800 ms, 13 x TSMTC, i)"
+< -8 or SMTC is not configured,FR1,N/A,"k * MAX(800 ms, 22 x Tsearch,i) Note2"
+"NOTE 1:K_satellite is defined in clause 9.3C.4.NOTE 2:k = 1 if the cells on the target frequency are served by GEO. k = (N+1) if the cells on the target frequency are served by LEO, where N is the number of different satellites associated to the list of configured neighbour cells in ntn-NeighCellConfigList and ntn-NeighCellConfigListExt.",,,

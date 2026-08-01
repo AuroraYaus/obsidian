@@ -1,0 +1,21 @@
+Parameter,Unit,Test configuration,Value,Comment
+highSpeedMeasCA-Scell-r17,,"Config 1,2,3,4,5,6",Present,To enable high speed measurement enhancements
+E-UTRA RF Channel Number,,"Config 1,2,3,4,5,6",1,One E-UTRAN carrier frequencies is used.
+NR RF Channel Number,,"Config 1,2,3,4,5,6","1, 2",Two FR1 NR carrier frequencies are used.
+Active cell,,"Config 1,2,3,4,5,6",LTE Cell 1 (PCell) and NR cell 2 (PScell),LTE Cell 1 is on E-UTRA RF channel number 1.NR Cell 2 is on NR RF channel number 1.
+Deactivated Scell,,"Config 1A,2A,3A",NR cell 3,NR cell 3 is on NR RF channel number 2.
+Neighbour cell,,"Config 1A,2A,3A",NR cell 4,NR cell 4 is on NR RF channel number 2.
+A6-Offset,dB,"Config 1,2,3,4,5,6",-4.5,
+Hysteresis,dB,"Config 1,2,3,4,5,6",0,
+CP length,,"Config 1,2,3,4,5,6",Normal,
+Measurement gap pattern Id,,,OFF,
+SCell measurement cycle (measCycleSCell),,"Config 1,2,3,4,5,6",160 ms,
+TimeToTrigger,s,"Config 1,2,3,4,5,6",0,
+Filter coefficient,,"Config 1,2,3,4,5,6",0,As specified in clause A.3.3
+DRX,,"Config 1,2,3,4,5,6",DRX.4,
+Time offset between PCell and PSCell,,"Config 1,2,3,4,5,6",3 s,Synchronous EN-DC
+Time alignment error between Cell 2 and Cell 3,s,Time alignment error as specified in TS 38.104 [13] clause 6.5.3.1.,The value of time alignment error depends upon the type of carrier aggregation.,Time alignment error between Cell 2 and Cell 3
+Time offset between serving l and neighbour cells,,"Config 1,4",3 ms,Asynchronous cells.The timing of Cell 4 is 3 ms later than the timing of Cell 3.
+,,"Config 2,3,5,6",3 s,Synchronous cells.
+T1,s,"Config 1,2,3,4,5,6",5,
+T2,s,"Config 1,2,3,4,5,6",1,

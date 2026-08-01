@@ -1,0 +1,42 @@
+Parameter,,,Unit,Cell 1,Cell 2
+,,,,T1 ~ T4,T1 ~ T4
+NR RF Channel Number,,,,1,1
+Assumption for UE beamsNote 6,,,,Rough,Rough
+AoA setup,,,,Setup 1 as defined in A.3.15,
+Duplex mode,,,,TDD,
+TDD configuration,,,,TDDConf.3.1,
+BWchannel,,,MHz,"100: NPRB,c = 66",
+BWP BW,,,MHz,"100: NPRB,c = 66",
+PDSCH Reference,,,,SR3.1 TDD,
+CORESET Reference Channel,,,,CR3.1 TDD,
+Control Channel RMC,,,,CCR.3.1 TDD,
+CP length,,,,Normal,
+TRS configuration,,,,TRS.2.1 TDD,
+OCNG Patterns,,,,OP.1,
+SMTC Configuration,,,,SMTC.1,
+SSB Configuration,,,,SSB.3 FR2,
+PDSCH/PDCCH subcarrier spacing,,,kHz,120,
+PUCCH/PUSCH subcarrier spacing,,,kHz,120,
+PRACH configuration,,,,FR2 PRACH configuration 6,
+PDSCH/PDCCH TCI state,,,,TCI.State.2,
+BWP configuration,,Initial DL BWP,,DLBWP.0.1,
+,,Dedicated DL BWP,,DLBWP.1.1,
+,,Initial UL BWP,,ULBWP.0.1,
+,,Dedicated UL BWP,,ULBWP.1.1,
+EPRE ratio of PSS to SSS,,,dB,0,
+EPRE ratio of PBCH DMRS to SSS,,,,,
+EPRE ratio of PBCH to PBCH DMRS,,,,,
+EPRE ratio of PDCCH DMRS to SSS,,,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,,,
+EPRE ratio of PDSCH DMRS to SSS,,,,,
+EPRE ratio of PDSCH to PDSCH,,,,,
+EPRE ratio of OCNG DMRS to SSS(Note 1),,,,,
+EPRE ratio of OCNG to OCNG DMRS (Note 1),,,,,
+Note2,,,dBm/15 kHz,-104.7,
+Note2,,,dBm/SCS,-95.7,
+,,,dB,-1.8,0
+,,,dB,6,7
+SSB_RP,,,dBm/SCS,-89.7,-88.7
+IoNote3,,,dBm/95.04 MHz,-56.7,-56.7
+Propagation condition,,,-,AWGN,AWGN
+NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,

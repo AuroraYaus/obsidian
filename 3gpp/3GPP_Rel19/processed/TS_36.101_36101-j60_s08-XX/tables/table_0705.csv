@@ -1,0 +1,27 @@
+Parameter,,Unit,Cell 1,Cell 2,Cell 3
+Uplink downlink Configuration,,,1,1,1
+Special subframe configuration,,,4,4,4
+Downlink power allocation,,dB,-6,-6,-6
+,,dB,-6 (Note 1),-6 (Note 1),-6 (Note 1)
+,,dB,3,3,3
+at antenna port,,dBm/15kHz,-98,N/A,N/A
+,,dB,N/A,10.45,4.6
+BWChannel,,MHz,10,10,10
+Cyclic prefix,,,Normal,Normal,Normal
+Subframe Configuration,,,Non-MBSFN,Non-MBSFN,Non-MBSFN
+Cell ID,,,0,1,6
+Cell-specific reference signals,,,"Antenna ports 0,1,2,3",,
+Number of control OFDM symbols (CFI),,,2,2,2
+PDSCH transmission mode,,,4,N/A,N/A
+Precoding granularity,,PRB,50,N/A,N/A
+PMI delay (Note 2),,ms,8,N/A,N/A
+Reporting interval,,ms,1 or 4 (Note 4),N/A,N/A
+Reporting mode,,,PUSCH 3-1,N/A,N/A
+CodeBookSubsetRestriction bitmap,,,000000000000FFFF,N/A,N/A
+Time offset relative to Cell 1,,s,N/A,3,-1
+Frequency shift relative to Cell 1,,Hz,N/A,300,-100
+Interference model,,,N/A,As specified in clause B.5.3,As specified in clause B.5.3
+Probability of occurrence of transmission in interference cells,,%,N/A,20,20
+Probability of occurrence of transmission rank in interfering cells,Rank 1,%,N/A,80,80
+,Rank 2,%,N/A,20,20
+"Note 1:.Note 2:If the UE reports in an available uplink reporting instance at subframe SF #n based on PMI estimation at a downlink SF not later than SF #(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).Note 3:SIB-1 will not be transmitted in Cell 2 and Cell 3 in this test.Note 4:For Uplink - downlink configuration 1 the reporting interval will alternate between 1ms and 4ms.",,,,,

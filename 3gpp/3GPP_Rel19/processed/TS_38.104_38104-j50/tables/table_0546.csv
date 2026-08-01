@@ -1,0 +1,14 @@
+Reference channel,G-FR2-A1-1,G-FR2-A1-2,G-FR2-A1-3,G-FR2-A1-4,G-FR2-A1-5,G-FR2-A1-6,G-FR2-A1-7,G-FR2-A1-8,G-FR2-A1-9
+Subcarrier spacing (kHz),60,120,120,60,120,480,960,480,960
+Allocated resource blocks,66,32,66,33,16,66,33,33,17
+CP-OFDM Symbols per slot (Note 1),12,12,12,12,12,12,12,12,12
+Modulation,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK,QPSK
+Code rate (Note 2),1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3,1/3
+Payload size (bits),5632,2792,5632,2856,1416,5632,2856,2856,1480
+Transport block CRC (bits),24,16,24,16,16,24,16,16,16
+Code block CRC size (bits),-,-,-,-,-,-,-,-,-
+Number of code blocks - C,1,1,1,1,1,1,1,1,1
+Code block size including CRC (bits) (Note 3),5656,2808,5656,2872,1432,5656,2872,2872,1496
+Total number of bits per slot,19008,9216,19008,9504,4608,19008,9504,9504,4896
+Total symbols per slot,9504,4608,9504,4752,2304,9504,4752,4752,2448
+"NOTE 1:DM-RS configuration type = 1 with DM-RS duration = single-symbol DM-RS, additional DM-RS position = pos1 with l0 = 2, l = 11 as per table 6.4.1.1.3-3 of TS 38.211 [9].NOTE 2:MCS index 4 and target coding rate = 308/1024 are adopted to calculate payload size.NOTE 3:Code block size including CRC (bits) equals to K' in sub-clause 5.2.2 of TS 38.212 [15].",,,,,,,,,

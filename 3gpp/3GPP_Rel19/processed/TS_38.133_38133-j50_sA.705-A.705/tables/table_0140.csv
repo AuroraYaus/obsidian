@@ -1,0 +1,11 @@
+Parameter,Unit,Cell 1,,,Cell 2,,
+,,T1,T2,T3,T1,T2,T3
+Angle of arrival configuration,,Setup 1 according to table A.3.15.1,,,,,
+Assumption for UE beams Note 7,,Rough,,,Rough,,
+Note 1,dBm/15kHz,"Link only, see clause A.3.7A",,,-104.7,,
+Note 1,dBm/SCS,,,,-95.7,,
+,dB,,,,-∞,7,7
+,dB,,,,-∞,7,7
+"SSB_RPNote 2, Note 4",dBm/SCS,,,,-∞,-88.7,-88.7
+"IoNote 2, Note 4",dBm/95.04 MHz,,,,-66.68,-58.92,-58.92
+"NOTE 1:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 2:Es/Iot, SSB_RP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 3:VoidNOTE 4:Equivalent power received by an antenna with 0 dBi gain at the centre of the quiet zoneNOTE 5:VoidNOTE 6:VoidNOTE 7:Information about types of UE beam is given in clause B.2.1.3 and does not imit UE implementation or test system implementation.",,,,,,,

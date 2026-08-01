@@ -1,0 +1,8 @@
+Frequency band(MHz),Channel bandwidth / Spectrum emission limit (dBm),Measurement bandwidth,NOTE
+,10,,
+0.009 < f ≤ 2473.5,-25,1 MHz,
+2473.5 < f ≤ 2478.5,-13,1 MHz,
+2478.5< f ≤ 2483.5,-10,1 MHz,
+2495 ≤ f < 2496,-13,1% of Channel Bandwidth,
+2496< f ≤ 2505,-13,1 MHz,
+2505 ≤ f ≤ 5th harmonic of the upper frequency edge of the UL operating band,-25,1 MHz,

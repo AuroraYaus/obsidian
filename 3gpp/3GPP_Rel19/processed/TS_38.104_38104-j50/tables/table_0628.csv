@@ -1,0 +1,4 @@
+Model,Number of channel taps,Delay spread(r.m.s.),Maximum excess tap delay (span),Delay resolution
+TDLA30,12,30 ns,290 ns,5 ns
+TDLB100,12,100 ns,480 ns,5 ns
+TDLC300,12,300 ns,2595 ns,5 ns

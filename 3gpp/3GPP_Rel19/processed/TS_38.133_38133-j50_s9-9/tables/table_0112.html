@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Condition</td>
+    <td>TSSB_time_index_intra_CCA</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>max(120 ms, ceil((3+Lind) x Kp ) x SMTC period)Note 1 x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320 ms</td>
+    <td>max(120 ms, ceil (1.5 x (3+Lind) x Kp) x max(SMTC period,DRX cycle)) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320 ms</td>
+    <td>Ceil((3+Lind) x Kp) x DRX cycle x CSSFintra</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identifiedNOTE 2:When DRX is not configured, Lind is the number of SMTC occasions not available at the UE during TSSB_time_index_intra_CCA for index detection, where Lind ≤ Lind,max. When DRX is configured, Lind is the number of DRX cycles in which at least one SMTC occasion is not available at the UE during TSSB_time_index_intra_CCA for index detection, where Lind ≤ Lind,max. When configured with DRX, the UE is not required to determine the availability of SMTC occasions more frequent than once per DRX cycle. FFS: The UE is not required to determine the availability of SMTC occasions more frequent than what is required by CSSFintra.NOTE 3:Lind,max = 5 for Max(DRX cycle,SMTC period)≤40 ms where DRX cycle is 0 for non-DRX, Lind,max = 3 for 40 ms&lt;Max(DRX cycle,SMTC period)≤320 ms, Lind,max =2 for DRX cycle&gt;320 ms.NOTE 4:Upon exceeding Lind,max over the period of time TSSB_time_index_intra_CCA, the UE has to restart the time index detection procedure.</td>
+  </tr>
+</table>

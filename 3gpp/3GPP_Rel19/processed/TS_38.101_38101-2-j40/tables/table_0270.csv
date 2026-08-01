@@ -1,0 +1,8 @@
+OCNG ApplianceOCNG Parameters,Control Region (Core Set),Data Region
+Resources allocated,All unused REs (Note 1),All unused REs (Note 2)
+Structure,PDCCH,PDSCH
+Content,Uncorrelated pseudo random QPSK modulated data,Uncorrelated pseudo random QPSK modulated data
+Transmission scheme for multipleantennas ports transmission,Single Tx port transmission,Spatial multiplexing using any precoding matrix with dimensions same as the precoding matrix for PDSCH
+Subcarrier Spacing,Same as for RMC PDCCH in the active BWP,Same as for RMC PDSCH in the active BWP
+Power Level,Same as for RMC PDCCH,Same as for RMC PDSCH
+"Note 1: All unused REs in the active CORESETS appointed by the search spaces in use.Note 2: Unused available REs refer to REs in PRBs not allocated for any physical channels, CORESETs, synchronization signals or reference signals in channel bandwidth.",,

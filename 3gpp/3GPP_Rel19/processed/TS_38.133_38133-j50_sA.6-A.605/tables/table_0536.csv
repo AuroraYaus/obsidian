@@ -1,0 +1,8 @@
+Configuration,Description
+1,"PCell: 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode. PSCell: FDD"
+2,"PCell: 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode. PSCell: FDD"
+3,"PCell: 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode. PSCell: FDD"
+4,"PCell: 15 kHz SSB SCS, 10 MHz bandwidth, FDD duplex mode. PSCell: TDD"
+5,"PCell: 15 kHz SSB SCS, 10 MHz bandwidth, TDD duplex mode. PSCell: TDD"
+6,"PCell: 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode. PSCell: TDD"
+NOTE:The UE is only required to pass in one of the supported test configurations in FR1,

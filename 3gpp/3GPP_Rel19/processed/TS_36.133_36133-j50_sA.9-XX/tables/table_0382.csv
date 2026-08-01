@@ -1,0 +1,18 @@
+Parameter,,Unit,Value,Comment
+E-UTRA RF Channel Number,,,1,
+Channel Bandwidth (BWchannel),,MHz,5 or 10,According to principle defined in clause A.3.12.3
+Active cell,,,None,
+Active SyncRef UE,,,SyncRef UE 1,Transmitting SLSS+MIB-SL on uplink of RF channel number 1
+ProSe Direct Communication preconfiguration,,,As specified in Table A.3.12.5-2(Configuration #2),IE values unless specified otherwise in this test.
+syncTxThreshOoC,,,11 (+infinity),
+,,dBm/15 kHz,-98,
+SyncRef UE 1,syncCP-Len,,Normal,
+,syncOffsetIndicator,,Set same as syncOffsetIndicator1 in ProSe Direct Communication preconfiguration,
+,slssid,,30,
+,inCoverage,,TRUE,In MIB-SL
+,networkControlledSyncTx,,ON,
+,ProSe Direct Communication resource pool configuration,,As specified in Table A.3.12.5-1(Configuration #1),IE values unless specified otherwise in this test; Note resource pool is same as Configuration #2 used by ProSe UE.
+,,,3,
+,"S-RSRP Note1, Note 2",,-95,
+Propagation condition,,,AWGN,
+Note 1:RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 2:SSSS Es/Iot is set the same as PSSS/PSBCH Es/Iot.,,,,

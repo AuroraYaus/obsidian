@@ -1,0 +1,121 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="2">RF Channel Number</td>
+    <td></td>
+    <td>1, 2</td>
+    <td>Three radio channels are used for this test. One for NR Cell 1, second for NR Cell 2 and Cell 3</td>
+  </tr>
+  <tr>
+    <td>Initial</td>
+    <td>Active PCell</td>
+    <td></td>
+    <td>Cell 1,Cell 2</td>
+    <td>Cell 1: NR PCell on RF channel number 1.Cell 2: NR PSCell on RF channel number 2</td>
+  </tr>
+  <tr>
+    <td>Condition</td>
+    <td>Neighbour cell</td>
+    <td></td>
+    <td>Cell 3</td>
+    <td>Neighbour cell on RF channel number 2.</td>
+  </tr>
+  <tr>
+    <td>Final</td>
+    <td>Active PCell</td>
+    <td></td>
+    <td>Cell 1,Cell 3</td>
+    <td>Cell 1: PCell on RF channel number 1.Cell 3:NR PSCell on RF channel number 2</td>
+  </tr>
+  <tr>
+    <td>Condition</td>
+    <td>Neighbour Cell</td>
+    <td></td>
+    <td>Cell 2</td>
+    <td>PSCell changed on RF channel number 2.</td>
+  </tr>
+  <tr>
+    <td>A4</td>
+    <td>Hysteresis</td>
+    <td>dB</td>
+    <td>0</td>
+    <td rowspan="3">Used to trigger conditional PSCell addition of Cell 2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Threshold RSRP</td>
+    <td>dBm</td>
+    <td>-118</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Time to Trigger</td>
+    <td>s</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">A3</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Used to trigger conditional PSCell change from Cell 2 to Cell 3</td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX</td>
+    <td></td>
+    <td>OFF</td>
+    <td>Continuous monitoring of primary cell</td>
+  </tr>
+  <tr>
+    <td colspan="2">Gap pattern ID</td>
+    <td></td>
+    <td>gp0</td>
+    <td>Gaps are configured during T1, T2 and released upon T3 starts.</td>
+  </tr>
+  <tr>
+    <td colspan="2">PRACH configuration on cell2 and cell3</td>
+    <td></td>
+    <td>FR2 configuration 2</td>
+    <td>Captured in A.3.8.3.2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-individual offset for cells on RF channel number 1</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Individual offset for cells on primary component carrier.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-individual offset for cells on RF channel number 2</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Individual offset for cells on carrier frequency of cell2.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-individual offset for cells on RF channel number 2</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Individual offset for cells on carrier frequency of cell3.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td>1</td>
+    <td>During this time the PCell is known and Cell 2 is unknown.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td>5</td>
+    <td>During this time Cell 2 meets the PSCell addition condition and UE adds this PSCell.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T3</td>
+    <td>s</td>
+    <td>5</td>
+    <td>During this time Cell 3 meets the PSCell change condition and UE sends PRACH to Cell 3.</td>
+  </tr>
+</table>

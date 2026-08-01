@@ -1,0 +1,69 @@
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2022-12,RAN#98-e,RP-223324,0518,,B,big CR 38.101-2 new combinations Rel-18 NR Intra-band,18.0.0
+2022-12,RAN#98-e,RP-223325,0522,,B,Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-2,18.0.0
+2023-03,RAN#99,RP-230519,0532,,A,CR on updating the name of UE capability for UL gap,18.1.0
+2023-03,RAN#99,RP-230543,0533,1,F,CR 38.101-2: Rel-18 Band combinations bug fixing,18.1.0
+2023-03,RAN#99,RP-230514,0535,,A,CR for TS 38.101-2: FR2-2 power class content,18.1.0
+2023-03,RAN#99,RP-230501,0539,,A,Addition of FR2 UL MIMO EVM measurement description,18.1.0
+2023-03,RAN#99,RP-230502,0553,,A,CR to F_Ioffset and F_Interferer (offset) adjustment in ACS and IBB,18.1.0
+2023-03,RAN#99,RP-230502,0557,,A,CR on ‘Annex G Difference of relative phase and power errors’ for FR2 UL coherent MIMO,18.1.0
+2023-03,RAN#99,RP-230502,0565,,A,On handheld UE and FWA UE definitions,18.1.0
+2023-03,RAN#99,RP-230514,0567,,A,Apply NOTE1 for n263 intra-band CA,18.1.0
+2023-03,RAN#99,RP-230544,0568,,B,Big CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-2,18.1.0
+2023-03,RAN#99,RP-230503,0582,,A,CR for Rel-18 38.101-2 to correct the UL configuration for CA_n258C,18.1.0
+2023-03,RAN#99,RP-230503,0591,,A,CR to TS 38.101-2 on humidity condition for normal temperature,18.1.0
+2023-06,RAN#100,RP-231347,0598,,A,Maintenance CR to RF requirements for n263 (Rel-18),18.2.0
+2023-06,RAN#100,RP-231355,0603,,A,CR for TS 38.101-2 on corrections to the minimum guardband calculation (R18_CAT_A),18.2.0
+2023-06,RAN#100,RP-231374,0604,,B,CR to reflect the completed NR inter band CA DC combinations for 2 bands DL with up to 2 bands UL into TS 38.101-2,18.2.0
+2023-06,RAN#100,RP-231356,0613,,A,Update of FR2 UL MIMO EVM measurement description,18.2.0
+2023-06,RAN#100,RP-231343,0617,,A,CR to clarify DC location wording,18.2.0
+2023-06,RAN#100,RP-231373,0618,,B,big CR 38.101-2 new combinations Rel-18 NR Intra-band,18.2.0
+2023-09,RAN#101,RP-232520,0621,,B,big CR 38.101-2 new combinations Rel-18 NR Intra-band,18.3.0
+2023-09,RAN#101,RP-232505,0623,,A,CR to TS 38.101-2 on correction of maximum input level (Rel-18),18.3.0
+2023-09,RAN#101,RP-232490,0629,,A,[NR_ext_to_71GHz-Core] CR to TS38.101-2: Adding FR2-2 MPR table numbers to parameters definition,18.3.0
+2023-09,RAN#101,RP-232490,0640,,A,[NR_ext_to_71GHz-Core] Editorial modification CR for TS 38.101-2,18.3.0
+2023-09,RAN#101,RP-232515,0641,,B,CR for power class 6 intra-band CA requirements,18.3.0
+2023-09,RAN#101,RP-232501,0646,,A,[NR_newRAT-Core] Correction of AMPR requirement for CA,18.3.0
+2023-09,RAN#101,RP-232488,0648,,A,[NR_cov_enh-Core] Update of FR2 DMRS bundling measurements,18.3.0
+2023-09,RAN#101,RP-232515,0649,1,B,Feature CR for RF requirements of FR2 HST multi-panel operation,18.3.0
+2023-09,RAN#101,RP-232501,0653,,A,[NR_newRAT-Core] CR on editorial correction for UE orientation illustrations,18.3.0
+2023-09,RAN#101,RP-232487,0658,,A,CR for clarification on maxUplinkDutyCycle-FR2,18.3.0
+2023-12,RAN#102,RP-233331,0663,,A,Fc terminology update,18.4.0
+2023-12,RAN#102,RP-233363,0665,1,B,Feature CR for FR2 multi-Rx,18.4.0
+2023-12,RAN#102,RP-233363,0666,1,B,CR for Rel-18 38.101-2 to introduce FR2-1 UL 256 QAM RF requirements,18.4.0
+2023-12,RAN#102,RP-233331,0670,,A,CR for Rel-18 38.101-2 to correct some errors in the clause of the spectrum emission mask for CA.,18.4.0
+2023-12,RAN#102,RP-233331,0674,,A,CR for Rel-18 38.101-2 to introduce the missed sub-clause 6.5A.2.2 as void,18.4.0
+2023-12,RAN#102,RP-233332,0678,,A,CR to 38.101-2 on adding missing definition of EIS spherical coverage link angle(Rel-18),18.4.0
+2023-12,RAN#102,RP-233351,0683,,A,[NR_RF_FR2_req_enh] Removal of interlaced channel bandwidths for CA BW class fallback groups 1-4,18.4.0
+2023-12,RAN#102,RP-233361,0684,1,B,CR to introduce configured transmitted power for STxMP,18.4.0
+2023-12,RAN#102,RP-233368,0686,,B,CR for 38.101-2 to add new configurations for the existing NR intra-band CA configurations,18.4.0
+2023-12,RAN#102,RP-233368,0687,,B,big CR for addition of NR CA Intra-band FR2,18.4.0
+2023-12,RAN#102,RP-233363,0689,2,B,Introducing beam correspondence requirement for initial access and RRC_INACTIVE,18.4.0
+2024-03,RAN#103,RP-240562,0695,,A,(NR_newRAT-Core) CR on receiver sensitivity reference antenna - R18,18.5.0
+2024-03,RAN#103,RP-240562,0699,,A,(NR_newRAT-Core) Correction to CA A-MPR requirements,18.5.0
+2024-03,RAN#103,RP-240572,0701,,A,CR to TS 38.101-2 Correction on beam correspondence for RedCap Rel-18,18.5.0
+2024-03,RAN#103,RP-240563,0705,,A,(NR_newRAT-Core) FR2 ACS interferer specification fix,18.5.0
+2024-03,RAN#103,RP-240614,0714,1,F,CR for Rel-18 38.101-2 to unify the minimum guardband symbol.,18.5.0
+2024-03,RAN#103,RP-240603,0715,,F,(NR_MIMO_evo_DL_UL-Core) CR for TS38.101-2: Remove redundant illustration from the statement of tolerance in configured transmitted power for STxMP,18.5.0
+2024-03,RAN#103,RP-240597,0717,,B,big CR 38.101-2 new combinations Rel-18 NR Intra-band,18.5.0
+2024-03,RAN#103,RP-240564,0725,,A,(NR_newRAT-Core) Clarification on requirements for initial access and RRC_Inactive,18.5.0
+2024-03,RAN#103,RP-240565,0729,,A,(NR_newRAT-Core) CR for Rel-18 TS 38.101-2 on correction of MPR requirement for CA,18.5.0
+2024-03,RAN#103,RP-240559,0731,,A,Clarification of highSpeedMeasFlag-r17 in PC6 spherical coverage requirement,18.5.0
+2024-03,RAN#103,RP-240606,0732,2,F,Beam correspondence requirement for power classes other than PC3 in initial access and RRC_INACTIVE,18.5.0
+2024-03,RAN#103,RP-240606,0733,,F,CR to 38.101-2 on RMC for UL 256QAM,18.5.0
+2024-03,RAN#103,RP-240603,0734,,F,CR to 38.101-2 on FR2 sTxMP,18.5.0
+2024-03,RAN#103,RP-240606,0735,,F,CR for TS 38.101-2 MultiRx PC3 RF requirement applicable frequency range,18.5.0
+2024-06,RAN#104,RP-241479,0737,,F,CR for Rel-18 TS 38.101-2 on correction of the MPR rule for CA,18.6.0
+2024-06,RAN#104,RP-241400,0740,,A,CR for TS 38.101-2 Rel-18 clarification on Redcap Applicability in FR2 power classes,18.6.0
+2024-06,RAN#104,RP-241451,0741,,B,TS 38.101-2 big draft CR for NR_CADC_R18_2BDL_xBUL,18.6.0
+2024-06,RAN#104,RP-241450,0742,,B,CR 38.101-2 adding intra-band NR CA configurations,18.6.0
+2024-06,RAN#104,RP-241394,0745,,A,(NR_CA_R17_intra-Core) CR for 38.101-2 to correct UL configurations for intra-band non-contiguous CA,18.6.0
+2024-06,RAN#104,RP-241383,0750,1,A,(NR_newRAT-Core) CR for TS 38.101-2 Correction on the modifiedMPR table,18.6.0
+2024-09,RAN#105,RP-242164,0754,,A,"CR to TS 38.101-2: Correction on Measurement BW for FR2 PC5, 6",18.7.0
+2024-09,RAN#105,RP-242184,0757,,A,(NR_redcap-Core) CR for TS 38.101-2 to modify the applicable maximum BW for PC7 RedCap UE (R18),18.7.0
+2024-12,RAN#106,RP-243054,0760,,F,IE and UE capability name corrections (38.101-2),18.8.0
+2024-12,RAN#106,RP-243043,0762,,A,(NR_FR2_FWA_Bn257_Bn258-Core) Rel-18 Reference correction in PC5 UL-MIMO MPR and A-MPR requirements,18.8.0
+2024-12,RAN#106,RP-243035,0766,,F,(NR_CA_R18_Intra-Core) Corrections on intra-band contiguous CA configurations for CA_n258,18.8.0
+2025-03,RAN#107,RP-250591,0768,,A,(NR_HST_FR2-Core) Rel-18 Minor correction in PC6 UL-MIMO Maximum Output Power requirements,18.9.0
+2025-03,RAN#107,RP-250584,0784,,A,(NR_n259-Core) CR to add missing in-band blocking requirement for n259 intra-band contiguous CA,18.9.0
+2025-03,RAN#107,RP-250609,0789,,F,(NR_newRAT-Core) Correction of reference to Suspended version of ITU-R SM.329 Recommendation,18.9.0

@@ -1,0 +1,24 @@
+Parameter,Unit,Test configuration,Value,,,,Comment
+,,,Test 1,Test 2,Test 3,Test 4,
+PCell,,1,Cell 1,,,,
+SCell,,1,Cell 2,,,,
+Neighbour cell,,1,Cell 3,,,,Cell to be identified.
+RF Channel Number,,1,1,,,,cell 1
+RF Channel Number,,1,2,,,,Cell 2 and Cell 3
+Measurement gap type,,1,,,,,No measurement gaps configured
+SSB configuration,,1,SSB.1 FR2,,,,for all cells
+SMTC configuration,,1,SMTC.1,,,,all cells
+CSI-RS parameters,,1,CSI-RS.3.2 FDD,,,,
+"CSI reporting periodicity, Non-dormant BWP",ms,,2,,,,
+"CSI reporting periodicity, Dormant BWP",ms,,40,,,,
+Timing offset between the cells,ms,,0,,,,
+Triggering DCI format,,,1_1,0_1,1_1,0_1,Triggering DCI format
+OFDM symbol range in slot for transmission of DCI with dormancy indication,,,0 – 2,,3 – 11,,Test1 and Test3 are based on that triggering DCI is received within the first three OFDM symbols of a slot. Test2 and Test4 are based on that the triggering DCI is received after the first three OFDM symbols of a slot
+A3-Offset,dB,1,-4.5,,,,
+CP length,,1,Normal,,,,
+Hysteresis,dB,1,0,,,,
+Time To Trigger,s,1,0,,,,
+Filter coefficient,,1,0,,,,L3 filtering is not used
+DRX,,1,OFF,,,,
+T1,s,1,5,,,,
+T2,s,1,5,,,,

@@ -1,0 +1,28 @@
+Parameter,Unit,nCell 1,,,nCell 2,,
+,,T1,T2,T3,T1,T2,T3
+BWchannel,kHz,180,,,180,,
+PRB location within eCell,-,eCell 1 BWchannel 10MHz: 30,,,eCell 2 BWchannel 10MHz: 30,,
+NPBCH_RA,dB,-3,,,-3,,
+NPBCH_RB,dB,,,,,,
+NPSS_RA,dB,,,,,,
+NSSS_RA,dB,,,,,,
+NPDCCH_RA,dB,,,,,,
+NPDCCH_RB,dB,,,,,,
+NPDSCH_RA,dB,,,,,,
+NPDSCH_RB,dB,,,,,,
+NOCNG_RANote 1,dB,,,,,,
+NOCNG_RBNote 1,dB,,,,,,
+Qrxlevmin,dBm,-156,-156,-156,-156,-156,-156
+Pcompensation,dB,0,0,0,0,0,0
+Qhysts,dB,0,0,0,0,0,0
+"Qoffsets, n",dB,0,0,0,0,0,0
+Cell_selection_and_reselection_quality_measurement,,NRSRP,,,NRSRP,,
+,dBm/15 kHz,Specified in Table A.4.2.45.1-3,,,,,
+,dB,-9,-9,-0.7,-infinity,-0.7,-9
+Note2,dB,-9,-11.67,-1.21,-infinity,-1.21,-11.67
+NRSRP Note2,dBm/15 kHz,-107,-107,-98.7,-infinity,-98.7,-107
+Treselection,s,0,0,0,0,0,0
+Propagation Condition,,AWGN,,,AWGN,,
+Antenna Configuration,,2x1,,,2x1,,
+Timing offset to nCell 1,ms,-,,,3,,
+Note 1:NOCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Es/Iot and NRSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,,

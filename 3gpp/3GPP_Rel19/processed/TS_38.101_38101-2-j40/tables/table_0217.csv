@@ -1,0 +1,11 @@
+NR CA band combination,NR band,"ΔRIB,S,n (dB)",,,
+,,PC1,PC2,PC3,PC5
+CA_n257-n259,n257,,3.5,3.5,[2.5]
+,n259,,3.5,3.5,[2.5]
+CA_n258-n260,n258,,,3.5,
+,n260,,,3.5,
+CA_n258-n261,n258,,,3.5,
+,n261,,,3.5,
+CA_n260-n261,n260,[2.5],,3.5,
+,n261,[2.5],,3.5,
+"Note:For each power class, band combinations without specified ΔRIB,S,n are not enabled for inter-band downlink carrier aggregation in this release.",,,,,

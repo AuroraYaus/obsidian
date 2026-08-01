@@ -1,0 +1,7 @@
+SBFD Parameters,Values
+SCS,120kHz
+Frequency domain configuration,"DU, 50 MHz in D subband, 50 MHz in U subband"
+SBFD starting slot index,1
+SBFD starting symbol index,0
+SBFD ending slot index,3
+SBFD ending symbol index,13

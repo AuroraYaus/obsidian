@@ -1,0 +1,7 @@
+Parameter,Unit,Value,,,
+Reference channel,,R.21,R.22,R.23,R.23-1
+Number of transmitter antennas,,1,2,4,1
+Channel bandwidth,MHz,1.4,1.4,1.4,1.4
+Modulation,,QPSK,QPSK,QPSK,QPSK
+Target coding rate,,40/1920,40/1920,40/1920,40/4416
+Payload (without CRC),Bits,24,24,24,24

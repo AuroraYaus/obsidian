@@ -1,0 +1,115 @@
+<table>
+  <tr>
+    <td rowspan="2">Parameter</td>
+    <td rowspan="2">Unit</td>
+    <td colspan="2">Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td>Test1</td>
+    <td>Test2</td>
+  </tr>
+  <tr>
+    <td>NR RF Channel Number</td>
+    <td></td>
+    <td colspan="2">1, 2, 3</td>
+    <td>Three NR radio channels are used for this test</td>
+  </tr>
+  <tr>
+    <td>Active PCell</td>
+    <td></td>
+    <td colspan="2">Cell 1</td>
+    <td>PCell on RF channel number 1 in FR1</td>
+  </tr>
+  <tr>
+    <td>Active SCell 1</td>
+    <td></td>
+    <td colspan="2">Cell 2</td>
+    <td>SCell 1 on RF channel number 2 in FR2</td>
+  </tr>
+  <tr>
+    <td>Active SCell 2</td>
+    <td></td>
+    <td colspan="2">Cell 3</td>
+    <td>SCell 2 on RF channel number 3 in FR2</td>
+  </tr>
+  <tr>
+    <td>CSI reporting periodicity, Non-dormant BWP</td>
+    <td>ms</td>
+    <td colspan="2">2</td>
+    <td>CSI reporting periodicity for periodic reporting of CQI for PCell and non-dormant SCells</td>
+  </tr>
+  <tr>
+    <td>CSI reporting periodicity, Dormant BWP</td>
+    <td>ms</td>
+    <td colspan="2">40</td>
+    <td>CSI reporting periodicity for periodic reporting of CQI for dormant SCells</td>
+  </tr>
+  <tr>
+    <td>CP length</td>
+    <td></td>
+    <td colspan="2">Normal</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>DRX</td>
+    <td></td>
+    <td colspan="2">DRX.8</td>
+    <td>For both PCell and SCells. See clause A.3.3.8.</td>
+  </tr>
+  <tr>
+    <td>ps-Offset</td>
+    <td></td>
+    <td colspan="2">Depending on UE capability</td>
+    <td>Monitoring of DCI 2_6 ahead of start of drx-onDurationTimer. Value of ps-Offset shall correspond to SCell dormancy switching time for switching of two SCells, as specified in clause 8.6.2A. Actual value depends on reported UE capabilities.</td>
+  </tr>
+  <tr>
+    <td>ps-WakeUp</td>
+    <td></td>
+    <td colspan="2">true</td>
+    <td>Wake up for onDuration in case DCI format 2_6 is not detected.</td>
+  </tr>
+  <tr>
+    <td>Cell 2 timing offset to Cell 1</td>
+    <td>µs</td>
+    <td colspan="2">&lt;24</td>
+    <td>Timing offset shall be less than MRTD for FR1-FR2 CA, and leave margin for timing difference between Cell 2 and Cell 3.</td>
+  </tr>
+  <tr>
+    <td>Cell 3 timing offset to Cell 2</td>
+    <td>ns</td>
+    <td colspan="2">&lt;260</td>
+    <td>Timing offset shall be less than MRTD for FR2 intra-band non-contiguous CA.</td>
+  </tr>
+  <tr>
+    <td>OFDM symbol range in slot for transmission of DCI with dormancy indication</td>
+    <td></td>
+    <td>0 – 2</td>
+    <td>3 – 11</td>
+    <td>Test1 is based on that triggering DCI is received within the first three OFDM symbols of a slot.Test2 is based on that the triggering DCI is received later than within the first three OFDM symbols of a slot.</td>
+  </tr>
+  <tr>
+    <td>T1</td>
+    <td>s</td>
+    <td colspan="2">0.2</td>
+    <td>During this time the SCells are switched from non-dormancy to dormancy.</td>
+  </tr>
+  <tr>
+    <td>T2</td>
+    <td>s</td>
+    <td colspan="2">10</td>
+    <td>During this time the SCells are dormant.</td>
+  </tr>
+  <tr>
+    <td>T3</td>
+    <td>s</td>
+    <td colspan="2">0.2</td>
+    <td>During this time the UE is not scheduled in PCell.</td>
+  </tr>
+  <tr>
+    <td>T4</td>
+    <td>s</td>
+    <td colspan="2">0.2</td>
+    <td>During this time the SCells are switched from dormancy to non-dormancy.</td>
+  </tr>
+</table>

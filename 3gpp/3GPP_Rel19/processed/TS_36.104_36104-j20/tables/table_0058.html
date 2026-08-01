@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td>Frequency offset of measurement filter 3dB point, f</td>
+    <td>Frequency offset of measurement filter centre frequency, f_offset</td>
+    <td>Minimum requirement (Note 1, 2)</td>
+    <td>Measurement bandwidth (Note 8)</td>
+  </tr>
+  <tr>
+    <td>0 MHz  f &lt; 1.4 MHz</td>
+    <td>0.05 MHz  f_offset &lt; 1.45 MHz</td>
+    <td></td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td>1.4 MHz  f &lt; 2.8 MHz</td>
+    <td>1.45 MHz  f_offset &lt; 2.85 MHz</td>
+    <td>Prated,c -55dB</td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td>2.8 MHz  f  fmax</td>
+    <td>2.85 MHz  f_offset &lt; f_offsetmax</td>
+    <td>-25dBm</td>
+    <td>100 kHz</td>
+  </tr>
+  <tr>
+    <td colspan="4">NOTE 1:For a BS supporting non-contiguous spectrum operation within any operating band the minimum requirement within sub-block gaps is calculated as a cumulative sum of contributions from adjacent sub blocks on each side of the sub block gap. Exception is f ≥ 10MHz from both adjacent sub blocks on each side of the sub-block gap, where the minimum requirement within sub-block gaps shall be -25dBm/100kHz.NOTE 2:For BS supporting multi-band operation with Inter RF Bandwidth gap &lt; 20MHz the minimum requirement within the Inter RF Bandwidth gaps is calculated as a cumulative sum of contributions from adjacent sub-blocks or RF Bandwidth on each side of the Inter RF Bandwidth gap.</td>
+  </tr>
+</table>

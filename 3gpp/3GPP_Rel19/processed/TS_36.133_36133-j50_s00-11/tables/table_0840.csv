@@ -1,0 +1,6 @@
+Reported value,NPDCCH repetition level
+noMeasurements,No measurement reporting
+candidateRep-1,Rmax/8 (NOTE 1)
+candidateRep-2,Rmax (NOTE 3)
+candidateRep-3,4×Rmax (NOTE 2)
+"NOTE 1:When Rmax is less than 8, set candidateRep-1 to 1.NOTE 2:When Rmax is more than 512, set candidateRep-3 to 2048.NOTE 3:When Rmax is 1, set candidateRep-2 to 2.",

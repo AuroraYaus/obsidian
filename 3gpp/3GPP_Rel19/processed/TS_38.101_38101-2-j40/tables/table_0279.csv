@@ -1,0 +1,11 @@
+Preamble format,Cyclic prefix length,Nominal FFT size1,EVM window length W in FFT samples,Ratio of W to CP2
+A1,11522-,81922-,5762-,50.0%
+A2,23042-,81922-,17282-,75.0%
+A3,34562-,81922-,28802-,83.3%
+B1,8642-,81922-,2882-,33.3%
+B2,14402-,81922-,8642-,60.0%
+B3,20162-,81922-,14402-,71.4%
+B4,37442-,81922-,31682-,84.6%
+C0,49602-,81922-,43842-,88.4%
+C2,81922-,81922-,76162-,93.0%
+Note 1:The use of other FFT sizes is possible as long as appropriate scaling of the window length is appliedNote 2:These percentages are informative,,,,

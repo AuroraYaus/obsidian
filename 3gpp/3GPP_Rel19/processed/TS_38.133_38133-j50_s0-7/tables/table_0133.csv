@@ -1,0 +1,9 @@
+eDRX_IDLE cycle length [s],DRX or eDRX INACTIVE cycle length [s],"Tdetect,NR_Intra [s] (number of DRX or eDRX INACTIVE cycles)","Tmeasure,NR_Intra [s] (number of DRX or eDRX INACTIVE cycles)","Tevaluate,NR_Intra [s] (number of DRX or INACTIVE eDRX cycles)"
+,,,,
+2.56 ≤eDRX_IDLE cycle length ≤ 10485.76,0.32,11.52 x M2 (36 x M2),1.28 x M2 (4 x M2),5.12 x M2 (16 x M2)
+,0.64,17.92 (28),1.28 (2),5.12 (8)
+,1.28,32 (25),1.28 (1),6.4 (5)
+,2.56,58.88 (23),2.56 (1),7.68 (3)
+,5.12,117.76 (23),5.12 (1),15.36 (3)
+,10.24,235.52 (23),10.24 (1),30.72 (3)
+NOTE1:M2 = 1.5 if SMTC periodicity of measured intra-frequency cell > 20 ms; otherwise M2=1.,,,,

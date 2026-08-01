@@ -1,0 +1,14 @@
+Parameter,Unit,Value,,,,,
+Channel bandwidth,MHz,1.4,3,5,10,15,20
+Allocated resource blocks,,,,2,2,2,2
+Subcarriers per resource block,,,,12,12,12,12
+Allocated subframes per Discovery period,,,,1,1,1,1
+DFT-OFDM Symbols per subframe (see note),,,,11,11,11,11
+Modulation,,,,QPSK,QPSK,QPSK,QPSK
+Transport Block Size,,,,232,232,232,232
+Transport block CRC,Bits,,,24,24,24,24
+Maximum number of HARQ transmissions,,,,1,1,1,1
+Binary Channel Bits (see note),Bits,,,528,528,528,528
+Max. Throughput averaged over 1 Discovery period of 320ms,kbps,,,0.725,0.725,0.725,0.725
+UE Category,,,,≥ 1,≥ 1,≥ 1,≥ 1
+"Note1:PSDCH transmissions are rate-matched for 12 DFT-OFDM symbols per subframe, and the last symbol shall be punctured as per TS 36.211.NOTE2: Throughput is 232 bits per Discovey period. The discovery period is configured as 320ms in the test.",,,,,,,

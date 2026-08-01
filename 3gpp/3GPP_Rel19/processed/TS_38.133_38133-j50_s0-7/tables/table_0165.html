@@ -1,0 +1,44 @@
+<table>
+  <tr>
+    <td>eDRX_IDLE cycle andeDRX_INACTIVE cycle length [s]</td>
+    <td>RAN DRX cycle length [s]</td>
+    <td>eDRX INACTIVE PTW length [s] (number of 1.28 s periods)</td>
+    <td>Scaling Factor (N1) Note1</td>
+    <td>Tdetect,NR_Intra_RedCap_Relax [s] (number of DRX or eDRX INACTIVE cycles)</td>
+    <td>Tmeasure,NR_Intra_RedCap_Relax [s] (number of DRX or eDRX INACTIVE cycles)</td>
+    <td>Tevaluate,NR_Intra_RedCap_Relax [s] (number of DRX or eDRX INACTIVE cycles)</td>
+  </tr>
+  <tr>
+    <td rowspan="4">20.48≤eDRX_IDLE cycle length ≤163.8420.48 ≤eDRX_INACTIVE cycle length ≤163.84</td>
+    <td>0.32</td>
+    <td>≥5.12 (4)</td>
+    <td>8</td>
+    <td rowspan="4">(23 x N1 x Kx)eDRXcyclelength×23×N1PTWDRXcyclelength x Kx</td>
+    <td>0.32 x N1 x Kx (1 x N1 x Kx)</td>
+    <td>0.64 x N1 x Kx (2 x N1 x Kx)</td>
+  </tr>
+  <tr>
+    <td>0.64</td>
+    <td>≥6.4 (5)</td>
+    <td>5</td>
+    <td>0.64 x N1 x Kx (1 x N1 x Kx)</td>
+    <td>1.28 x N1 x Kx (2 x N1 x Kx)</td>
+  </tr>
+  <tr>
+    <td>1.28</td>
+    <td>≥10.24 (8)</td>
+    <td>4</td>
+    <td>1.28 x N1 x Kx (1 x N1 x Kx)</td>
+    <td>2.56 x N1 x Kx (2 x N1 x Kx)</td>
+  </tr>
+  <tr>
+    <td>2.56</td>
+    <td>≥15.36 (12)</td>
+    <td>3</td>
+    <td>2.56 x N1 x Kx (1 x N1 x Kx)</td>
+    <td>5.12 x N1 x Kx (2 x N1 x Kx)</td>
+  </tr>
+  <tr>
+    <td colspan="7">NOTE 1:Applies for RedCap UE of all power class.NOTE 2:The number of DRX cycles in this table is given for the DRX cycles within RAN PTWs.NOTE 3:The eDRX_INACTIVE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 4:The lower bound of PTW length is derived based on .NOTE 5:When eDRX_INACTIVE=20.48 s and DRX=0.32 s, UE is allowed to perform cell evaluation within PTW in every 2 eDRX_INACTIVE cycles.NOTE 6:RAN DRX cycle in this table is UE specific DRX value configured by RRC specified in [1].NOTE 7:The number of RAN DRX cycles in this table is given for the DRX cycles within RAN configured PTWs.NOTE 8:eDRX INACTIVE PTW in this table is RAN configured PTW [1].NOTE 9:Kx = 6 is the measurement relaxation factor applicable for UE fulfilling the stationaryMobilityEvaluation [2] criterion. Kx = 3 is the measurement relaxation factor applicable for UE fulfilling the lowMobilityEvaluation [2] criterion or fulfilling the cellEdgeEvaluation [2] criterion.Tevaluate,NR_Inter_RedCap*DRX_cycle1.28*1.28</td>
+  </tr>
+</table>

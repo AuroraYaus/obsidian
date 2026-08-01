@@ -1,0 +1,10 @@
+Parameter,NR operating band groups Note1,Minimum SRS_RP,,,SRS Ês/Iot
+,,dBm / SCSSRS,,,dB
+,,SCSSRS = 15 kHz,SCSSRS = 30 kHz,SCSSRS = 60 kHz,
+,NR_TDD_FR1_A,-120,-117,-114,
+,NR_TDD_FR1_C,-119,-116,-113,
+Conditions,NR_TDD_FR1_D,-118.5,-115.5,-112.5,1
+,NR_TDD_FR1_E,-118,-115,-112,
+,NR_TDD_FR1_F,-117.5,-114.5,-111.5,
+,NR_TDD_FR1_G,-117,-114,-111,
+NOTE 1:NR operating band groups are defined in clause 3.5.2.,,,,,

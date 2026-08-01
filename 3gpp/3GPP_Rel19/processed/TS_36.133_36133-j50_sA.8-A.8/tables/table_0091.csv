@@ -1,0 +1,14 @@
+Parameter,Unit,Value,Comment
+Active cell,,Cell 1,
+Neighbour cell,,Cell 2,Cell to be identified.
+Channel Bandwidth (BWchannel),MHz,10,
+CP length,,Normal,
+A3-Offset,dB,-16,
+Hysteresis,dB,0,
+Time To Trigger,s,0,
+Filter coefficient,,0,L3 filtering is not used
+DRX,,OFF,
+si-RequestForHO,,TRUE,As specified in clause 5.5.3.1 in TS 36.331.
+T1,s,5,
+T2,s,325,
+T3,s,7,

@@ -1,0 +1,4 @@
+NR V2X intra-band concurrent operating configuration,NR Band,Interface,Channel bandwidth (MHz) (NOTE 1),Bandwidth combination set
+V2X_n79B,n79,Uu,"40, 50, 60, 80, 100",0
+,n79,PC5,"10, 20, 30, 40",
+NOTE 1: The SCS of each channel bandwidth for NR band refers to Table 5.3.5-1.,,,,

@@ -1,0 +1,12 @@
+Modulation,,MPR for bandwidth class C(dB),
+,,Inner,outer
+DFT-s-OFDM,Pi/2 BPSK,4.5,9
+,QPSK,4.5,9
+,16QAM,4.5,8
+,64QAM,7,9
+,256QAM,9,9.5
+CP-OFDM,QPSK,5.0,9.5
+,16QAM,5.0,9.5
+,64QAM,6.5,9.5
+,256QAM,8.5,9.5
+NOTE 1: UE indicating TxD supported,,,

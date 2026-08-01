@@ -1,0 +1,18 @@
+Parameter,Unit,Value,Comment
+PDSCH parameters (E-UTRAN TDD),,DL Reference Measurement Channel R.0 TDD,As specified in clause A.3.1.1.2
+PCFICH/PDCCH/PHICH parameters (E-UTRAN TDD),,DL Reference Measurement Channel R.6 TDD,As specified in clause A.3.1.2.2
+Gap Pattern Id,,1,As specified in TS 36.133 clause 8.1.2.1.
+Active cell,,Cell 1,Cell 1 is on E-UTRA RF channel number 1.
+Neighbour cell,,Cell 2,Cell 2 is on UTRA RF channel number 1.
+CP length,,Normal,Applicable to cell 1
+E-UTRA RF Channel Number,,1,One E-UTRA TDD carrier frequency is used.
+UTRA RF Channel Number,,1,One UTRA TDD carrier frequency is used.
+E-UTRA Channel Bandwidth (BWchannel),MHz,10,
+Uplink-downlink configuration of cell 1,,1,As specified in table 4.2.2 in TS 36.211
+Special subframe configuration of cell 1,,6,As specified in table 4.2.1 in TS 36.211
+Inter-RAT (UTRA TDD) measurement quantity,,P-CCPCH RSCP,
+Filter coefficient,,0,L3 filtering is not used.
+DRX,,OFF,
+Monitored UTRA TDD cell list size,,None,No explicit neighbour list is provided to the UE
+T1,s,>5,"During T1, cell 2 shall be powered off, and during the off time the primary scrambling code shall be changed, The intention is to ensure that cell 2 has not been detected by the UE prior to the start of period T2."
+T2,s,14,

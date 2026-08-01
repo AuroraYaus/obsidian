@@ -1,0 +1,22 @@
+,E-UTRA channelBW of the lowest/highest carrier received [MHz],NB-IoT Wanted signal mean power [dBm],Interfering signal mean power [dBm],Type of interfering signal
+Wide Area BS,3,PREFSENS + 11 dB (Note 1),-49,See Table 7.5.1-2
+,5,PREFSENS + 8 dB (Note 1),-49,See Table 7.5.1-2
+,10,PREFSENS + 6 dB (Note 1),-49,See Table 7.5.1-2
+,15,PREFSENS + 6 dB (Note 1),-49,See Table 7.5.1-2
+,20,PREFSENS + 6 dB (Note 1),-49,See Table 7.5.1-2
+Local Area BS,3,PREFSENS + 11 dB (Note 2),-41,See Table 7.5.1-2
+,5,PREFSENS + 8 dB (Note 2),-41,See Table 7.5.1-2
+,10,PREFSENS + 6 dB (Note 2),-41,See Table 7.5.1-2
+,15,PREFSENS + 6 dB (Note 2),-41,See Table 7.5.1-2
+,20,PREFSENS + 6 dB (Note 2),-41,See Table 7.5.1-2
+Medium Range BS,3,PREFSENS + 11 dB (Note 3),-44,See Table 7.5.1-2
+,5,PREFSENS + 8 dB (Note 3),-44,See Table 7.5.1-2
+,10,PREFSENS + 6 dB (Note 3),-44,See Table 7.5.1-2
+,15,PREFSENS + 6 dB (Note 3),-44,See Table 7.5.1-2
+,20,PREFSENS + 6 dB (Note 3),-44,See Table 7.5.1-2
+Home BS,3,PREFSENS + 19 dB (Note 4),-33,See Table 7.5.1-2
+,5,PREFSENS + 16 dB (Note 4),-33,See Table 7.5.1-2
+,10,PREFSENS + 14 dB (Note 4),-33,See Table 7.5.1-2
+,15,PREFSENS + 14 dB (Note 4),-33,See Table 7.5.1-2
+,20,PREFSENS + 14 dB (Note 4),-33,See Table 7.5.1-2
+Note 1:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5.Note 2:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5a.Note 3:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5c.Note 4:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5b.,,,,

@@ -1,0 +1,19 @@
+parameter,,Unit,Test 1,Test 2
+Downlink power allocation,,dB,0,
+,,dB,0 (Note 1),
+,,dB,-3,
+Beamforming model,,,Annex B.4.1,Annex B.4.3
+Cell-specific reference signals,,,"Antenna ports 0,1","Antenna ports 0,1"
+CSI reference signals,,,"Antenna ports 15,…,18","Antenna ports 15,16"
+CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS,,Subframes,5 / 2,5 / 2
+CSI reference signal configuration,,,0,0
+Zero-power CSI-RS configurationICSI-RS /ZeroPowerCSI-RS bitmap,,Subframes / bitmap,3 /0001000000000000,3 /0001000000000000
+at antenna port,,dBm/15kHz,-98,-98
+Symbols for unused PRBs,,,OCNG (Note 4),OCNG (Note 3)
+Reporting mode,,,N/A,PUSCH 3-1
+Reporting interval,,,N/A,5
+PMI delay (Note 4),,,N/A,8
+CodeBookSubsetRestriction bitmap,,,N/A,001111
+Number of allocated resource blocks (Note 2),,PRB,6,50
+PDSCH transmission mode,,,9,
+"Note 1:.Note 2:The modulation symbols of the signal under test are mapped onto antenna port 7 or 8.Note 3:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated.Note 4:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).",,,,

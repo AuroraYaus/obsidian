@@ -1,0 +1,30 @@
+Parameter,Unit,Value,,,
+Reference channel,,R.45TDD,R.45-1TDD,R.45-2TDD,R.45ATDD
+Channel bandwidth,MHz,10,10,10,10
+Allocated resource blocks,,504,39,504,504
+Uplink-Downlink Configuration (Note 3),,1,1,1,1
+Allocated subframes per Radio Frame (D+S),,4+2,4+2,4+2,4+2
+Allocated subframes per Radio Frame,,5,5,10,5
+Modulation,,16QAM,16QAM,64QAM,16QAM
+Target Coding Rate,,1/2,1/2,,1/2
+Information Bit Payload,,,,,
+For Sub-Frames 4 and 9  (Non CSI-RS subframe),Bits,N/A,N/A,N/A,N/A
+For Sub-Frames 4 and 9  (CSI-RS subframe),Bits,11448,8760,[18336],11448
+"For Sub-Frames 1,6",Bits,7736,7480,[11832],7736
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,9528,8760,[14688],9528
+Number of Code Blocks per Sub-Frame(Note 5),,,,,
+For Sub-Frames  4 and 9   (Non CSI-RS subframe),,N/A,N/A,N/A,N/A
+For Sub-Frames 4 and 9   (CSI-RS subframe),,2,2,,2
+"For Sub-Frames 1,6",,2,2,,2
+For Sub-Frame 5,,N/A,N/A,,N/A
+For Sub-Frame 0,,2,2,,2
+Binary Channel Bits Per Sub-Frame,,,,,
+For Sub-Frames 4 and 9  (Non CSI-RS subframe),Bits,N/A,N/A,,N/A
+For Sub-Frames 4 and 9  (CSI-RS subframe),Bits,22400,17472,[33600],23200
+"For Sub-Frames 1,6",Bits,15744,14976,[23616],15744
+For Sub-Frame 5,Bits,N/A,N/A,N/A,N/A
+For Sub-Frame 0,Bits,19680,18720,[29520],19680
+Max. Throughput averaged over 1 frame,Mbps,4.7896,4.1240,7.3296,4.7896
+UE Category,,≥ 2,≥ 1,≥ 2,≥ 2
+"Note 1:2 symbols allocated to PDCCH for 20 MHz, 15 MHz and 10 MHz channel BW; 3 symbols allocated to PDCCH for 5 MHz and 3 MHz; 4 symbols allocated to PDCCH for 1.4 MHz. For subframe 1&6, only 2 OFDM symbols are allocated to PDCCH.Note 2:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4].Note 3:As per Table 4.2-2 in TS 36.211 [4].Note 4:For R.45 and R.45-2, 50 resource blocks are allocated in sub-frames 4,9 and 41 resource blocks (RB0–RB20 and RB30–RB49) are allocated in sub-frame 0 and the DwPTS portion of sub-frames 1,6. For R.45-1, 39 resource blocks are allocated in sub-frames 0,4,9 and the DwPTS portion of sub-frames 1,6 (RB0–RB20 and RB30–RB47).Note 5:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).Note 6:Localized allocation started from RB #0 is applied.",,,,,

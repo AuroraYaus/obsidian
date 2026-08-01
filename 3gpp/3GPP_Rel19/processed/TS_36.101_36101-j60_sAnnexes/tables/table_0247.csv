@@ -1,0 +1,7 @@
+Parameter,Unit,Value,,,,,
+Reference channel,,R.55 FDD,R.56 FDD,R.57 FDD,R.58 FDD,R.59 FDD,R.55-1 FDD
+Number of transmitter antennas,,2,2,2,2,2,2
+Channel bandwidth,MHz,10,10,10,10,10,10
+Number of OFDM symbols for PDCCH,symbols,2,2,1,1,1,2
+Aggregation level,ECCE,4,16,2,8,2,4
+DCI Format,,2A,2A,2C,2C,2D,2C

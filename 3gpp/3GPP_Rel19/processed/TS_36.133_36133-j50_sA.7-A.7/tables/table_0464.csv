@@ -1,0 +1,29 @@
+Parameter,Unit,Cell1
+E-UTRA RF Channel Number,,1
+E-UTRA RF Channel Number,,1
+Serving/Non-serving,,Serving
+BWchannel Note 5,MHz,5 or 10
+Correlation Matrix and Antenna Configuration,,1x2 Low
+drx-Configuration,,None
+"PDCCH/PCFICH/PHICH Reference measurement channelNote1, Note 5",,5 MHz: R.11 FDD10 MHz: R.6 FDD
+"PDSCH Reference measurement channel defined in A.3.1.1.1Note1, Note 5",,5MHz: R.7 FDD 10MHz: R.3 FDD
+OCNG Pattern defined in A.3.2.1,,5 MHz: OP.20 FDD 10 MHz: OP.10 FDD
+PCFICH_RB,dB,0
+PDCCH_RA,dB,
+PDCCH_RB,dB,
+PBCH_RA,dB,
+PBCH_RB,dB,
+PSS_RA,dB,
+SSS_RA,dB,
+PHICH_RA,dB,
+PHICH_RB,dB,
+PDSCH_RA,dB,
+PDSCH_RB,dB,
+OCNG_RANote1,dB,
+OCNG_RBNote1,dB,
+,dB,16
+,dBm/15 kHz,-98
+RSRP Note4,dBm/15 kHz,-82
+SCH_RP Note 4,dBm/15 kHz,-82
+Propagation condition,,AWGN
+"Note 1:For the reference measurement channels, see clause A.3.1.Note 2:For the OCNG pattern, see clause A.3.2.Note 3:OCNG shall be used such that cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 4:RSRP and SCH_RP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 5: This test is according to the principle defined in section A.3.12.3.",,

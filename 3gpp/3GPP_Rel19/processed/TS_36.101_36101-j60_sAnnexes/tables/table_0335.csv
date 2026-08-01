@@ -1,0 +1,11 @@
+Parameter,Unit,Value,,,,
+Reference channel,,CD.8,CD.9,CD.10,CD.11,CD.12
+Channel bandwidth,MHz,20,10,20,20,20
+Allocated resource blocks,,8,3,3,96,8
+DFT-OFDM Symbols per subframe (see Note 1),,9,9,9,9,9
+Modulation,,16QAM,QPSK,QPSK,16QAM,QPSK
+Transport Block Size,Bits,1800,208,504,31704,552
+Transport block CRC,Bits,24,24,24,24,24
+Number of PSSCH transmissions,,1,2,1,2,1
+Binary Channel Bits (see Note 2),Bits,3456,648,648,41472,1728
+"Note 1:PSSCH transmissions are rate-matched for 10 DFT-OFDM symbols per subframe, and the last symbol shall be punctured as per TS 36.211.Note 2:Binary Channel Bits are calculated under assumption of 9 symbols.Note 3:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit).",,,,,,

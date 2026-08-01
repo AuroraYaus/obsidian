@@ -1,0 +1,46 @@
+Parameter,Unit,Test configuration,Test 1,,Test 2,
+,,,Cell 1,Cell 2,Cell 1,Cell 2
+RF Channel Number,,"1,2,3",1,1,1,1
+DRX,s,"1,2,3",1.28,,1.28,
+Time offset with Cell 1,s,"1, 2, 3",N/A,3,N/A,3
+TDD configuration,,1,N/A,N/A,N/A,N/A
+,,2,TDDConf.1.1,TDDConf.1.1,TDDConf.1.1,TDDConf.1.1
+,,3,TDDConf.2.1,TDDConf.2.1,TDDConf.2.1,TDDConf.2.1
+PDSCH RMC configuration,,1,SR.1.1 FDD,N/A,SR.1.1 FDD,N/A
+,,2,SR.1.1 TDD,,SR.1.1 TDD,
+,,3,SR.2.1 TDD,,SR.2.1 TDD,
+RMSI CORESET RMC configuration,,1,CR.1.1 FDD,N/A,CR.1.1 FDD,N/A
+,,2,CR.1.1 TDD,,CR.1.1 TDD,
+,,3,CR.2.1 TDD,,CR.2.1 TDD,
+Dedicated CORESET RMC configuration,,1,CCR.1.1 FDD,N/A,CCR.1.1 FDD,N/A
+,,2,CCR.1.1 TDD,,CCR.1.1 TDD,
+,,3,CCR.2.1 TDD,,CCR.2.1 TDD,
+OCNG Patterns,,"1, 2, 3",OP.1,OP.1,OP.1,OP.1
+Initial BWP configuration,,"1, 2, 3",DLBWP.0.1 ULBWP.0.1,N/A,DLBWP.0.1 ULBWP.0.1,N/A
+PRS configuration,,1,PRS.1.1 FR1,PRS.1.1 FR1,PRS.1.2 FR1,PRS.1.2 FR1
+,,2,PRS.1.1 FR1,PRS.1.1 FR1,PRS.1.2 FR1,PRS.1.2 FR1
+,,3,PRS.2.1 FR1,PRS.2.1 FR1,PRS.2.2 FR1,PRS.2.2 FR1
+PRS Resource slot offset,slot,"1, 2, 3",0,4,0,4
+SRS configuration,,1,POS-SRS.1,N/A,POS-SRS.1,N/A
+,,2,POS-SRS.1,N/A,POS-SRS.1,N/A
+,,3,POS-SRS.2,N/A,POS-SRS.2,N/A
+Note 2,dBm/SCS,1,-98,,-98,
+,,2,-98,,-98,
+,,3,-95,,-95,
+Note 2,dBm/15 kHz,1,-98,,-98,
+,,2,,,,
+,,3,,,,
+PRS,dB,1,-2.41,-12.12,-2.41,-12.12
+,,2,,,,
+,,3,,,,
+PRS,dB,1,-2,-10,-2,-10
+,,2,,,,
+,,3,,,,
+PRS-RSRP Note 3,dBm/SCS kHz,1,-100,-108,-100,-108
+,,2,-100,-108,-100,-108
+,,3,-97,-105,-97,-105
+Io,dBm/19.08 MHz,1,-64.57,-64.57,-64.57,-64.57
+,dBm/19.08 MHz,2,-64.57,-64.57,-64.57,-64.57
+,dBm/47.88 MHz,3,-60.59,-60.59,-60.59,-60.59
+Propagation Condition,,"1, 2, 3",AWGN,,AWGN,
+NOTE 1:Void.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:PRS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,

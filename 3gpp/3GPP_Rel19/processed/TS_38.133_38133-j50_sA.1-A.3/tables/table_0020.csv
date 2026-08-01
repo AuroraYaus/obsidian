@@ -1,0 +1,12 @@
+Parameter,Unit,Value
+Reference channel,,TDDConf.2.4
+referenceSubcarrierSpacing,kHz,30
+TDD UL/DL pattern 1 Note 2,,‘3D1S1U’S=’10DL:2GP:2UL’
+dl-UL-TransmissionPeriodicity,ms,2.5
+nrofDownlinkSlots,,3
+nrofDownlinkSymbols,,10
+nrofUplinkSlot,,1
+nrofUplinkSymbols,,2
+TDD UL/DL pattern 2 Note 2,,Not configured
+dl-UL-TransmissionPeriodicity,ms,Not configured
+NOTE 1:As specified in TS 38.213 [3] and TS 38.331 [2].NOTE 2:For information,,

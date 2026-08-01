@@ -1,0 +1,272 @@
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "Annex A (normative): Measurement channels", "paragraph_index": 1, "style": "Heading8"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.1General", "paragraph_index": 2, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2UL reference measurement channels", "paragraph_index": 5, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.1General", "paragraph_index": 6, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.1.1Applicability and common parameters", "paragraph_index": 8, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.1.2Determination of payload size", "paragraph_index": 21, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.1.3Overview of UL reference measurement channels", "paragraph_index": 31, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2Reference measurement channels for FDD", "paragraph_index": 66, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.1Full RB allocation", "paragraph_index": 67, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.1.1QPSK", "paragraph_index": 68, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.1.216-QAM", "paragraph_index": 77, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.1.364-QAM", "paragraph_index": 86, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.1.4256 QAM", "paragraph_index": 89, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.2Partial RB allocation", "paragraph_index": 92, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.2.1QPSK", "paragraph_index": 95, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.2.216-QAM", "paragraph_index": 104, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.2.364-QAM", "paragraph_index": 113, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.2.4256 QAM", "paragraph_index": 116, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.3Void", "paragraph_index": 119, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.2.4subPRB allocation", "paragraph_index": 122, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3Reference measurement channels for TDD", "paragraph_index": 126, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.1Full RB allocation", "paragraph_index": 128, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.1.1QPSK", "paragraph_index": 129, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.1.216-QAM", "paragraph_index": 140, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.1.364-QAM", "paragraph_index": 151, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.1.4256 QAM", "paragraph_index": 154, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.2Partial RB allocation", "paragraph_index": 157, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.2.1QPSK", "paragraph_index": 160, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.2.216-QAM", "paragraph_index": 171, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.2.364-QAM", "paragraph_index": 182, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.2.4256 QAM", "paragraph_index": 185, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.3Void", "paragraph_index": 188, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.3.4subPRB allocation", "paragraph_index": 191, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.4Reference measurement channels for UE category NB1", "paragraph_index": 195, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.5Reference measurement channels for LAA", "paragraph_index": 200, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.5.1Full RB allocation", "paragraph_index": 201, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.5.1.1QPSK", "paragraph_index": 202, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.5.1.216QAM", "paragraph_index": 205, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.5.1.364QAM", "paragraph_index": 208, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.5.2Partial RB allocation", "paragraph_index": 211, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.5.2.1QPSK", "paragraph_index": 213, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.5.2.216QAM", "paragraph_index": 216, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.2.5.2.364QAM", "paragraph_index": 219, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3DL reference measurement channels", "paragraph_index": 222, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.1General", "paragraph_index": 223, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.1.1Overview of DL reference measurement channels", "paragraph_index": 235, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.2Reference measurement channel for receiver characteristics", "paragraph_index": 289, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3Reference measurement channels for PDSCH performance requirements (FDD)", "paragraph_index": 364, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.1Single-antenna transmission (Common Reference Symbols)", "paragraph_index": 365, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.2Multi-antenna transmission (Common Reference Symbols)", "paragraph_index": 382, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.2.1Two antenna ports", "paragraph_index": 383, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.2.2Four antenna ports", "paragraph_index": 405, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.3Reference Measurement Channel for UE-Specific Reference Symbols", "paragraph_index": 415, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.3.0Two antenna ports (no CSI-RS)", "paragraph_index": 416, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.3.1Two antenna port (CSI-RS)", "paragraph_index": 423, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.3.2Four antenna ports (CSI-RS)", "paragraph_index": 434, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.3.2AEight antenna ports (CSI-RS)", "paragraph_index": 454, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.3.3Twelve antenna port (CSI-RS)", "paragraph_index": 460, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.3.4Sixteen antenna port (CSI-RS)", "paragraph_index": 464, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.3.5Twenty-four antenna port (CSI-RS)", "paragraph_index": 469, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.3.3.6Thirty-two antenna port (CSI-RS)", "paragraph_index": 473, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4Reference measurement channels for PDSCH performance requirements (TDD)", "paragraph_index": 477, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.1Single-antenna transmission (Common Reference Symbols)", "paragraph_index": 478, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.2Multi-antenna transmission (Common Reference Signals)", "paragraph_index": 496, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.2.1Two antenna ports", "paragraph_index": 497, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.2.2Four antenna ports", "paragraph_index": 521, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.3Reference Measurement Channels for UE-Specific Reference Symbols", "paragraph_index": 531, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.3.1Single antenna port (Cell Specific)", "paragraph_index": 532, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.3.2Two antenna ports (Cell Specific)", "paragraph_index": 540, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.3.3Two antenna ports (CSI-RS)", "paragraph_index": 548, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.3.4Four antenna ports (CSI-RS)", "paragraph_index": 557, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.3.5Eight antenna ports (CSI-RS)", "paragraph_index": 583, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.3.6Twelve antenna ports (CSI-RS)", "paragraph_index": 604, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.3.7Sixteen antenna ports (CSI-RS)", "paragraph_index": 608, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.3.8Twenty-four antenna ports (CSI-RS)", "paragraph_index": 612, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.4.3.9Thirty-two antenna ports (CSI-RS)", "paragraph_index": 616, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.5Reference measurement channels for PDCCH/PCFICH performance requirements", "paragraph_index": 620, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.5.1FDD", "paragraph_index": 621, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.5.2TDD", "paragraph_index": 626, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.5.3LAA", "paragraph_index": 631, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.6Reference measurement channels for PHICH performance requirements", "paragraph_index": 636, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.7Reference measurement channels for PBCH performance requirements", "paragraph_index": 640, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.8Reference measurement channels for MBMS performance requirements", "paragraph_index": 644, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.8.1FDD", "paragraph_index": 645, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.8.2TDD", "paragraph_index": 667, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.9Reference measurement channels for sustained downlink data rate provided by lower layers", "paragraph_index": 674, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.9.1FDD", "paragraph_index": 675, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.9.2TDD", "paragraph_index": 684, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.9.3FDD (EPDCCH scheduling)", "paragraph_index": 695, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.9.4TDD (EPDCCH scheduling)", "paragraph_index": 698, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.9.5LAA", "paragraph_index": 701, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.10Reference Measurement Channels for EPDCCH performance requirements", "paragraph_index": 706, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.10.1FDD", "paragraph_index": 707, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.10.2TDD", "paragraph_index": 710, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.11Reference Measurement Channels for MPDCCH performance requirements", "paragraph_index": 713, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.11.1FDD and half-duplex FDD", "paragraph_index": 714, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.11.2TDD", "paragraph_index": 717, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.12Reference measurement channels for NPDSCH performance requirements", "paragraph_index": 720, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.12.1In-band", "paragraph_index": 721, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.12.1.2Two-antenna transmission", "paragraph_index": 722, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.12.2Standalone/Guard-band", "paragraph_index": 727, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.12.2.1 Single-antenna transmission", "paragraph_index": 728, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.13Reference measurement channels for NPDCCH performance requirements", "paragraph_index": 737, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.13.1Half-duplex FDD", "paragraph_index": 738, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.13.2TDD", "paragraph_index": 741, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.14Reference measurement channels for NPBCH performance requirements for Cat NB1 UEs", "paragraph_index": 744, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.15Reference Measurement Channels for LAA SCell with frame structure Type-3", "paragraph_index": 747, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.15.1Multi-antenna transmission (Common Reference Symbols)", "paragraph_index": 748, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.15.1.1Four antenna ports", "paragraph_index": 749, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.15.2Reference Measurement Channel for UE-Specific Reference Symbols", "paragraph_index": 752, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.15.2.1Two antenna ports (CSI-RS)", "paragraph_index": 753, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.16Reference measurement channels for Slot-PDSCH and Subslot-PDSCH performance requirements", "paragraph_index": 759, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.16.1FDD", "paragraph_index": 760, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.16.2TDD", "paragraph_index": 769, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.17Reference measurement channels for SPDCCH performance requirements", "paragraph_index": 774, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.17.1FDD", "paragraph_index": 775, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.17.2TDD", "paragraph_index": 778, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.18Reference Measurement Channels for LTE based 5G broadcast PMCH receiver requirements", "paragraph_index": 781, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.3.18.1SDO", "paragraph_index": 782, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.4CSI reference measurement channels", "paragraph_index": 791, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5OFDMA Channel Noise Generator (OCNG)", "paragraph_index": 865, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.1OCNG Patterns for FDD", "paragraph_index": 866, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.1.1OCNG FDD pattern 1: One sided dynamic OCNG FDD pattern", "paragraph_index": 873, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.1.2OCNG FDD pattern 2: Two sided dynamic OCNG FDD pattern", "paragraph_index": 877, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.1.3OCNG FDD pattern 3: 49 RB OCNG allocation with MBSFN in 10 MHz", "paragraph_index": 881, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.1.3AOCNG FDD pattern 3A: 49 RB OCNG allocation with MBSFN enhancement in 10 MHz", "paragraph_index": 884, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.1.4OCNG FDD pattern 4: One sided dynamic OCNG FDD pattern for MBMS transmission", "paragraph_index": 887, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.1.4AOCNG FDD pattern 4A: One sided dynamic OCNG FDD pattern for enhanced MBMS transmission", "paragraph_index": 891, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.1.5OCNG FDD pattern 5: One sided dynamic 16QAM modulated OCNG FDD pattern", "paragraph_index": 895, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.1.6OCNG FDD pattern 6: dynamic OCNG FDD pattern when user data is in 2 non-contiguous blocks", "paragraph_index": 899, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.1.8OCNG FDD pattern 8: Dynamic OCNG FDD pattern for TM10 transmission", "paragraph_index": 907, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.2OCNG Patterns for TDD", "paragraph_index": 911, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.2.1OCNG TDD pattern 1: One sided dynamic OCNG TDD pattern", "paragraph_index": 917, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.2.2OCNG TDD pattern 2: Two sided dynamic OCNG TDD pattern", "paragraph_index": 921, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.2.3OCNG TDD pattern 3: 49 RB OCNG allocation with MBSFN in 10 MHz", "paragraph_index": 925, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.2.4OCNG TDD pattern 4: One sided dynamic OCNG TDD pattern for MBMS transmission", "paragraph_index": 928, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.2.5OCNG TDD pattern 5: One sided dynamic 16QAM modulated OCNG TDD pattern", "paragraph_index": 932, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.2.6OCNG TDD pattern 6: dynamic OCNG TDD pattern when user data is in 2 non-contiguous blocks", "paragraph_index": 937, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.2.8OCNG TDD pattern 8: Dynamic OCNG TDD pattern for TM10 transmission", "paragraph_index": 945, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.3OCNG Patterns for Narrowband IoT", "paragraph_index": 949, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.3.1Narrowband IoT OCNG pattern 1", "paragraph_index": 954, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.4OCNG Patterns for frame structure type 3", "paragraph_index": 957, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.4.1OCNG FS3 pattern 1: One sided dynamic OCNG frame structure type 3 pattern", "paragraph_index": 964, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.5.4.2OCNG FS3 pattern 2: Two sided dynamic OCNG frame structure 3 pattern", "paragraph_index": 968, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.6Sidelink reference measurement channels", "paragraph_index": 972, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.6.1General", "paragraph_index": 973, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.6.1.1Overview of ProSe reference measurement channels", "paragraph_index": 982, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.6.2Reference measurement channel for receiver characteristics", "paragraph_index": 986, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.6.3Reference measurement channels for PSDCH performance requirements", "paragraph_index": 998, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.6.4Reference measurement channels for PSCCH performance requirements", "paragraph_index": 1001, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.6.5Reference measurement channels for PSSCH performance requirements", "paragraph_index": 1004, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.6.6Reference measurement channels for PSBCH performance requirements", "paragraph_index": 1009, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.7Sidelink reference resource pool configurations", "paragraph_index": 1013, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.7.1Reference resource pool configurations for ProSe Direct Discovery demodulation tests", "paragraph_index": 1014, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.7.1.1FDD", "paragraph_index": 1015, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.7.1.2TDD", "paragraph_index": 1024, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.7.2Reference resource pool configurations for ProSe Direct Communication demodulation tests", "paragraph_index": 1029, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.7.2.1FDD", "paragraph_index": 1030, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.8V2X reference measurement channels", "paragraph_index": 1041, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.8.1General", "paragraph_index": 1042, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.8.1.1Overview of V2X reference measurement channels", "paragraph_index": 1051, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.8.2Reference measurement channel for receiver characteristics", "paragraph_index": 1055, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.8.3Reference measurement channel for transmitter characteristics", "paragraph_index": 1065, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.8.4Reference measurement for PSCCH performance requirements", "paragraph_index": 1073, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.8.5Reference measurement for PSSCH performance requirements", "paragraph_index": 1076, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.8.6Reference measurement for PSBCH performance requirements", "paragraph_index": 1081, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "A.9V2X reference resource pool configurations", "paragraph_index": 1084, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "Annex B (normative): Propagation conditions", "paragraph_index": 1097, "style": "Heading8"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.1Static propagation condition", "paragraph_index": 1099, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.1.1UE Receiver with 2Rx", "paragraph_index": 1100, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.1.2UE Receiver with 4Rx", "paragraph_index": 1109, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.1.3UE Receiver with 8Rx", "paragraph_index": 1118, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2Multi-path fading propagation conditions", "paragraph_index": 1128, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.1Delay profiles", "paragraph_index": 1134, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.2Combinations of channel model parameters", "paragraph_index": 1144, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3MIMO Channel Correlation Matrices", "paragraph_index": 1148, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3.1Definition of MIMO Correlation Matrices", "paragraph_index": 1150, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3.2MIMO Correlation Matrices at High, Medium and Low Level", "paragraph_index": 1161, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3AMIMO Channel Correlation Matrices using cross polarized antennas", "paragraph_index": 1180, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3A.1Definition of MIMO Correlation Matrices using cross polarized antennas", "paragraph_index": 1183, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3A.2Spatial Correlation Matrices using cross polarized antennas at eNB and UE sides", "paragraph_index": 1196, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3A.2.1Spatial Correlation Matrices at eNB side", "paragraph_index": 1197, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3A.2.2Spatial Correlation Matrices at UE side", "paragraph_index": 1201, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3A.4Beam steering approach", "paragraph_index": 1217, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3BMIMO Channel Correlation Matrices using two-dimension cross polarized antennas at eNB and cross polarized antennas at UE", "paragraph_index": 1230, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3B.1Definition of MIMO Correlation Matrices using two-dimension cross polarized antennas at eNB and cross polarized antennas at UE", "paragraph_index": 1240, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3B.2Spatial Correlation Matrices using two-dimension cross polarized antennas at eNB and cross polarized antennas at UE", "paragraph_index": 1258, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3B.2.1Spatial Correlation Matrices at eNB side", "paragraph_index": 1259, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3B.2.2Spatial Correlation Matrices at UE side", "paragraph_index": 1266, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3B.3MIMO Correlation Matrices using two-dimension cross polarized antennas at eNB and cross polarized antennas at UE", "paragraph_index": 1269, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3B.4Beam steering approach", "paragraph_index": 1280, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.3B.4ABeam steering approach with dual cluster beams", "paragraph_index": 1302, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.4Propagation conditions for CQI tests", "paragraph_index": 1325, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.4.1Propagation conditions for CQI tests with multiple CSI processes", "paragraph_index": 1329, "style": "Heading4"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.5Void", "paragraph_index": 1333, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.6MBSFN Propagation Channel Profile", "paragraph_index": 1334, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.6.1Subcarrier spacing 15kHz or 7.5kHz", "paragraph_index": 1335, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.6.2Subcarrier spacing 1.25kHz", "paragraph_index": 1339, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.6.3Subcarrier spacing 0.37kHz", "paragraph_index": 1345, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.2.6.4Subcarrier spacing 2.5kHz", "paragraph_index": 1349, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.3High speed train scenario", "paragraph_index": 1353, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.3AHST-SFN scenario", "paragraph_index": 1371, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.3BHST-SFN scenario for 500 km/h speed", "paragraph_index": 1403, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.3CHST scenario for 500 km/h speed", "paragraph_index": 1407, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.4Beamforming Model", "paragraph_index": 1411, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.4.1Single-layer random beamforming (Antenna port 5, 7, or 8)", "paragraph_index": 1412, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.4.1ASingle-layer random beamforming (Antenna port 7, 8, 11 or 13 with enhanced DMRS table configured)", "paragraph_index": 1419, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.4.2Dual-layer random beamforming (antenna ports 7 and 8)", "paragraph_index": 1426, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.4.3Generic beamforming model (antenna ports 7-14)", "paragraph_index": 1431, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.4.4Random beamforming for EPDCCH distributed transmission (Antenna port 107 and 109)", "paragraph_index": 1440, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.4.5Random beamforming for EPDCCH localized transmission (Antenna port 107, 108, 109 or 110)", "paragraph_index": 1445, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.4.6Beamforming model for CRI test", "paragraph_index": 1448, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.5Interference models for enhanced performance requirements Type-A", "paragraph_index": 1470, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.5.1Dominant interferer proportion", "paragraph_index": 1472, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.5.2Transmission mode 3 interference model", "paragraph_index": 1476, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.5.3Transmission mode 4 interference model", "paragraph_index": 1482, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.5.4Transmission mode 9 interference model", "paragraph_index": 1488, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.6Interference models for enhanced performance requirements Type-B", "paragraph_index": 1494, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.6.1Transmission mode 2 interference model", "paragraph_index": 1496, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.6.2Transmission mode 3 interference model", "paragraph_index": 1501, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.6.3Transmission mode 4 interference model", "paragraph_index": 1508, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.6.4Transmission mode 9 interference model", "paragraph_index": 1515, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.6.5CRS interference model", "paragraph_index": 1523, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.6.6Random interference model", "paragraph_index": 1526, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.7Interference models for enhanced downlink control channel performance requirements Type A and B", "paragraph_index": 1534, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.7.1PDCCH, PCFICH and PHICH interference model", "paragraph_index": 1536, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.8Burst transmission models for Frame structure type 3", "paragraph_index": 1552, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.8.1Burst transmission model for one LAA SCell", "paragraph_index": 1554, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "B.8.2Burst transmission model for multiple LAA SCell(s)", "paragraph_index": 1563, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "Annex C (normative): Downlink Physical Channels", "paragraph_index": 1574, "style": "Heading8"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "C.1General", "paragraph_index": 1575, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "C.2Set-up", "paragraph_index": 1577, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "C.3Connection", "paragraph_index": 1581, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "C.3.1Measurement of Receiver Characteristics", "paragraph_index": 1583, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "C.3.2Measurement of Performance requirements", "paragraph_index": 1593, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "C.3.3Aggressor cell power allocation for Measurement of Performance Requirements when ABS is Configured", "paragraph_index": 1605, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "C.3.4Power Allocation for Measurement of Performance Requirements when Quasi Co-location Type B: same Cell ID", "paragraph_index": 1611, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "C.3.5Simplified CA testing method", "paragraph_index": 1620, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "C.3.6Measurement of Receiver Characteristics for Narrowband IoT", "paragraph_index": 1625, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "Annex D (normative): Characteristics of the interfering signal", "paragraph_index": 1633, "style": "Heading8"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "D.1General", "paragraph_index": 1635, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "D.2Interference signals", "paragraph_index": 1638, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "Annex E (normative): Environmental conditions", "paragraph_index": 1645, "style": "Heading8"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "E.1General", "paragraph_index": 1647, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "E.2Environmental", "paragraph_index": 1649, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "E.2.1Temperature", "paragraph_index": 1651, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "E.2.2Voltage", "paragraph_index": 1656, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "E.2.3Vibration", "paragraph_index": 1662, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "Annex F (normative): Transmit modulation", "paragraph_index": 1667, "style": "Heading8"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.1Measurement Point", "paragraph_index": 1669, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.2Basic Error Vector Magnitude measurement", "paragraph_index": 1676, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.3Basic in-band emissions measurement", "paragraph_index": 1687, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.4Modified signal under test", "paragraph_index": 1704, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.5Window length", "paragraph_index": 1738, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.5.1Timing offset", "paragraph_index": 1739, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.5.2Window length", "paragraph_index": 1741, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.5.3Window length for normal CP", "paragraph_index": 1743, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.5.4Window length for Extended CP", "paragraph_index": 1747, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.5.5Window length for PRACH", "paragraph_index": 1751, "style": "Heading2"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.5.FWindow length for category NB1", "paragraph_index": 1755, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.6Averaged EVM", "paragraph_index": 1758, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.6.FAveraged EVM for category NB1", "paragraph_index": 1779, "style": "Heading3"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "F.7Spectrum Flatness", "paragraph_index": 1783, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "Annex G (informative): Reference sensitivity level in lower SNR", "paragraph_index": 1786, "style": "Heading8"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "G.1General", "paragraph_index": 1788, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "G.2Typical receiver sensitivity performance (QPSK)", "paragraph_index": 1793, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "G.3Reference measurement channel for REFSENSE in lower SNR", "paragraph_index": 1803, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "Annex H (normative): Modified MPR behavior", "paragraph_index": 1809, "style": "Heading8"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "H.1Indication of modified MPR behavior", "paragraph_index": 1810, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "Annex I (normative): Supported Post Antenna Gain", "paragraph_index": 1814, "style": "Heading8"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "I.1Declared Supported Post Antenna Gain for UE", "paragraph_index": 1815, "style": "Heading1"}
+{"source": "36101-j60_sAnnexes.docx", "section": "", "title": "Annex J (informative): Change history", "paragraph_index": 1822, "style": "Heading8"}

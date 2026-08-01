@@ -1,0 +1,27 @@
+Parameter,,Unit,Value,Comment
+PDSCH parameters,,,DL Reference Measurement Channel R.0 TDD,As specified in clause A.3.1.1.2
+PCFICH/PDCCH/PHICH parameters,,,DL Reference Measurement Channel R.6 TDD,As specified in clause A.3.1.2.2
+Initial conditions,Active cell,,Cell 1,E-UTRAN TDD cell
+,Neighbouring cell,,Cell 2,HRPD cell
+Final condition,Active cell,,Cell 2,HRPD cell
+Channel Bandwidth (BWchannel),,MHz,10,
+Gap Pattern Id,,,0,As specified in Table 8.1.2.1-1 started before T2 starts
+E-UTRAN TDD measurement quantity,,,RSRP,
+Inter-RAT (HRPD) measurement quantity,,,CDMA2000 HRPD Pilot Strength,
+b2-Threshold1,,dBm,-90,Absolute E-UTRAN RSRP threshold for event B2
+b2-Threshold2-CDMA2000,,dB,-7,Absolute ‘CDMA2000 HRPD Pilot Strength’ threshold for event B2
+Hysteresis,,dB,0,
+TimeToTrigger,,s,0,
+Filter coefficient,,,0,L3 filtering is not used
+DRX,,,OFF,Non-DRX test
+Access Barring Information,,-,Not sent,No additional delays in random access procedure
+E-UTRA RF Channel Number,,,1,One E-UTRA TDD carrier frequency is used.
+E-UTRA Channel Bandwidth (BWchannel),,MHz,10,
+Uplink-downlink configuration of cell 1,,,1,As specified in table 4.2.2 in TS 36.211
+Special subframe configuration of cell 1,,,6,As specified in table 4.2.1 in TS 36.211
+HRPD RF Channel Number,,,1,One HRPD carrier frequency is used.
+HRPD neighbour cell list size,,,8,HRPD cells on HRPD RF channel 1 provided in the cell list before T2.
+cdma2000-SearchWindowSize,,,8 (60 PN chips),Search window size as defined in clause 6.3.5 in TS 36.331
+T1,,s,5,
+T2,,s,10,
+T3,,s,1,

@@ -1,0 +1,3 @@
+CA configuration,SCS(kHz),Aggregated channel bandwidth (PCC+SCC),UL PCC allocation,SCCΔRIBC1 (dB),SCCΔRIBC2 (dB),Duplex mode
+CA_n71B,15/15,30 MHz + 5 MHz,20 (RBstart = 0),5.6 3,7.73,FDD
+NOTE 1: Applicable to UE supporting PC2 with 1Tx. NOTE 2: Applicable to UE supporting PC2 with 2Tx.NOTE 3: Applicable only to BCS 4 and 5 and for UEs supporting the optional symmetrical UL/DL channel bandwidths.,,,,,,

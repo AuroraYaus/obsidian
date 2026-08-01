@@ -1,0 +1,8 @@
+NR band,Parameter,Unit,Case 1,Case 2,Case 3,Case 4,Case 5
+,Pinterferer,dBm,-56,-44,-15,-38,-224
+,Finterferer (offset),MHz,"-BWChannel/2 – FIoffset, case 1andBWChannel/2 + FIoffset, case 1","≤ -BWChannel/2 – FIoffset, case 2and≥ BWChannel/2 + FIoffset, case 2",,-BWChannel/2-11,
+"n1, n2, n3, n5, n7, n8, n12, n13, n14, n18, n20, n24, n25, n26, n28, n29, n31, n34, n38, n39, n40, n41, n483, n50, n51, n53, n54, n65, n66, n67, n68, n70, n72, n74, n75, n76, n85, n87, n88 n91, n92, n93, n94, n100, n101, n106, n110",Finterferer,MHz,NOTE 2,FDL_low – 15toFDL_high + 15,,,
+n30,Finterferer,MHz,NOTE 2,FDL_low – 15toFDL_high + 15,,FDL_low – 11,
+n71,Finterferer,MHz,NOTE 2,FDL_low – 12 to FDL_high + 15,FDL_low – 12,,
+n105,Finterferer,MHz,NOTE 2,FDL_low – 12toFDL_high + 15,,,FDL_low – 7
+"NOTE 1:The absolute value of the interferer offset Finterferer (offset) shall be further adjusted to MHz with SCS the sub-carrier spacing of the wanted signal in MHz. The interferer is an NR signal with 15 kHz SCS.NOTE 2:For each carrier frequency, the requirement applies for two interferer carrier frequencies: a: -BWChannel/2 – FIoffset, case 1; b: BWChannel/2 + FIoffset, case 1NOTE 3:n48 follows the requirement in this frequency range according to the general requirement defined in Clause 7.1.NOTE 4:For Band n105 channels overlapping the 612 - 617 MHz frequency range, Pinterferer is modified to -34 dBm.NOTE 5:For SDL bands, requirements shall be applied only for CA band combination cases.",,,,,,,

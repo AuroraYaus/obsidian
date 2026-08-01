@@ -1,0 +1,31 @@
+Parameter,Unit,Values,,,,,,
+Reference channel,,R.87 TDD,R.87-1 TDD,R.aa TDD,R.bb TDD,R.87-2 TDD,R.87-3 TDD,R.87-4 TDD
+Channel bandwidth,MHz,10,10,10,10,5,15,20
+Allocated resource blocks (Note 4),,50,50,50,50,25,75,100
+Uplink-Downlink Configuration (Note 2),,1,1,1,1,1,1,1
+Allocated number of PDCCH symbols,,2,2,2,2,2,2,2
+Allocated subframes per Radio Frame (D+S),,2+2,2+2,3+2,3+2,2+2,2+2,2+2
+Modulation,,64QAM,16QAM,QPSK,16QAM,64QAM,64QAM,64QAM
+Target Coding Rate,,,,,,,,
+"For Sub-Frames 4,9",,0.39,0.44,0.61,0.3,0.39,0.39,0.39
+"For Sub-Frames 1,6",,0.36,0.40,0.54,0.27,0.36,0.36,0.36
+For Sub-Frames 0,,N/A,N/A,0.64,0.32,N/A,N/A,N/A
+For Sub-Frames 5,,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+Information Bit Payload (Note 4),,,,,,,,
+"For Sub-Frames 4,9",Bits,15264,11448,7992,7992,7736,22920,30576
+"For Sub-Frames 1,6",Bits,11448,8504,5736,5736,5544,16992,22920
+For Sub-Frames 0,Bits,N/A,N/A,7992,7992,N/A,N/A,N/A
+For Sub-Frames 5,,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+Number of Code Blocks(Notes 3 and 4),,,,,,,,
+"For Sub-Frames 4,9",,3,4,2,2,2,4,5
+"For Sub-Frames 1,6",,2,4,2,2,2,2,2
+For Sub-Frames 0,,N/A,N/A,2,2,N/A,N/A,N/A
+For Sub-Frames 5,,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+Binary Channel Bits  (Note 4),,,,,,,,
+"For Sub-Frames 4,9",Bits,39600,26400,13200,26400,19800,59400,79200
+"For Sub-Frames 1,6",,31968,21312,10656,21312,15768,48168,64368
+For Sub-Frames 0,,N/A,N/A,12528,25056,N/A,N/A,N/A
+For Sub-Frames 5,,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+Max. Throughput averaged over 1 frame (Note 4),Mbps,5.342,3.99,3.5448,3.5448,2.656,7.982,10.699
+UE Category,,≥ 1,≥ 1,≥ 1,≥ 2,≥ 1,≥ 1,≥ 1
+"Note 1:Reference signal, synchronization signals and PBCH allocated as per TS 36.211 [4]Note 2:As per Table 4.2-2 in TS 36.211 [4].Note 3:If more than one Code Block is present, an additional CRC sequence of L = 24 Bits is attached to each Code Block (otherwise L = 0 Bit)Note 4: Given per component carrier per codeword.",,,,,,,,

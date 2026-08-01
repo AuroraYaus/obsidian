@@ -1,0 +1,45 @@
+<table>
+  <tr>
+    <td>NR band</td>
+    <td>Parameter</td>
+    <td>Unit</td>
+    <td>Range1</td>
+    <td>Range 2</td>
+    <td>Range 3</td>
+  </tr>
+  <tr>
+    <td>n77, n78 (NOTE 3)</td>
+    <td>Pinterferer</td>
+    <td>dBm</td>
+    <td>-44</td>
+    <td>-30</td>
+    <td>-15</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Finterferer (CW)</td>
+    <td>MHz</td>
+    <td>-60 &lt; f – FDL_low ≤      -3*BWChannelor3*BWChannel ≤ f – FDL_high &lt; 60</td>
+    <td>-200 &lt; f – FDL_low ≤    -MAX(60,3*BWChannel)orMAX(60,3*BWChannel) ≤ f – FDL_high &lt; 200</td>
+    <td>1 ≤ f ≤ FDL_low – MAX(200,3*BWChannel)orFDL_high                      + MAX(200,3*BWChannel)≤ f ≤ 12750</td>
+  </tr>
+  <tr>
+    <td>n79 (NOTE 4)</td>
+    <td>Finterferer (CW)</td>
+    <td>MHz</td>
+    <td>N/A</td>
+    <td>-150 &lt; f – FDL_low ≤           -MAX(60,3*BWChannel)orMAX(60,3*BWChannel) ≤ f – FDL_high &lt; 150</td>
+    <td>1 ≤ f ≤ FDL_low – MAX(150,3*BWChannel)orFDL_high                      + MAX(150,3*BWChannel)≤ f ≤ 12750</td>
+  </tr>
+  <tr>
+    <td>n104 (NOTE 5)</td>
+    <td>Finterferer (CW)</td>
+    <td>MHz</td>
+    <td>N/A</td>
+    <td>-150 &lt; f – FDL_low ≤  -MAX(60,3*BWChannel)orMAX(60,3*BWChannel) ≤ f – FDL_high &lt; 150</td>
+    <td>1 ≤ f ≤ FDL_low – MAX(150,3*BWChannel)orFDL_high                      + MAX(150,3*BWChannel)≤ f ≤ 12750</td>
+  </tr>
+  <tr>
+    <td colspan="6">NOTE 1:The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer &gt; 6000 MHz.NOTE 2:BWChannel denotes the channel bandwidth of the wanted signalNOTE 3:The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm, for FInterferer &gt; 2700 MHz and FInterferer &lt; 4800 MHz. For BWChannel &gt; 15 MHz, the requirement for Range 1 is not applicable and Range 2 applies from the frequency offset of 3*BWChannel from the band edge. For BWChannel larger than 60 MHz, the requirement for Range 2 is not applicable and Range 3 applies from the frequency offset of 3*BWChannel from the band edge.NOTE 4:The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm, for FInterferer &gt; 3650 MHz and FInterferer &lt; 5750 MHz. For BWChannel ≥ 40 MHz, the requirement for Range 2 is not applicable and Range 3 applies from the frequency offset of 3*BWChannel from the band edge.NOTE 5:The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm, for FInterferer &gt; 5175 MHz. For BWChannel &gt; 60 MHz, the requirement for Range 2 is not applicable and Range 3 applies from the frequency offset of 3*BWChannel from the band edge. The power level of the interferer (PInterferer) for Range 2 shall be modified to -33 dBm for the range 5925 – MAX(60,3*CBW) ≤ f &lt; FDL_low -  MAX(60,3*CBW).</td>
+  </tr>
+</table>

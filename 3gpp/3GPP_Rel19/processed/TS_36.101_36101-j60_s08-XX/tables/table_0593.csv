@@ -1,0 +1,11 @@
+Test,Number of bits of a DL-SCH transport block received within a TTI,Measurement channel,Reference value
+,,,TB success rate [%]
+1,10296,R.31E-1 FDD,95
+2,25456,R.31E-2 FDD,95
+3,51024,R.31E-3 FDD,95
+3A,36696 (Note 2),R.31E-3A FDD,85
+3C,51024,R.31E-3C FDD,85
+4,75376 (Note 3),R.31E-4 FDD,85
+4B,55056 (Note 5),R.31E-4B FDD,85
+6,75376 (Note 3),R.31E-4 FDD,85
+"Note 1:For 2 layer transmissions, 2 transport blocks are received within a TTI.Note 2:35160 bits for sub-frame 5.Note 3:71112 bits for sub-frame 5.Note 4:The TB success rate is defined as TB success rate = 100%*NDL_correct_rx/ (NDL_newtx + NDL_retx), where NDL_newtx is the number of newly transmitted DL transport blocks, NDL_retx is the number of retransmitted DL transport blocks, and NDL_correct_rx is the number of correctly received DL transport blocks.Note 5:52752 bits for sub-frame 5.",,,

@@ -1,0 +1,8 @@
+Rx Parameter,Units,PMCH bandwidth
+,,"6, 7, or 8 MHz"
+Power in Transmission Bandwidth Configuration,dBm,REFSENS + 6
+PInterferer 1(CW),dBm,-46
+PInterferer 2(Modulated),dBm,-46
+FInterferer 1(Offset),MHz,-BW/2 – 7.5/+BW/2 + 7.5
+FInterferer 2(Offset),MHz,2*FInterferer 1
+NOTE 1:Reference measurement channel is specified in Annex A.3.18.NOTE 2:   BW refers to 10 MHz,,

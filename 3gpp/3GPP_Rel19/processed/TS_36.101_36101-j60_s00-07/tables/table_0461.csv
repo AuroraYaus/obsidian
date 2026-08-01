@@ -1,0 +1,6 @@
+Parameter,Unit,Level
+Psignal,dBm,REFSENS+6
+PInterferer (CW),dBm,-44
+FInterferer,MHz,Spurious response frequencies
+Number of spurious response frequencies,,"24 (in OOB range 1, 2, 3)"
+"NOTE 1:Reference measurement channel is specified in Annex A.3.2.NOTE 2:The REFSENS power level is specified in 7.3.1F.1-1.NOTE 3:OOB range 1, 2, 3 refers to Table 7.6.2.1F-1.",,

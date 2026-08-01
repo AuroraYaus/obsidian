@@ -1,0 +1,24 @@
+Parameter,Unit,Cell 1,
+,,T1,T2
+E-UTRA RF Channel Number,,1,
+BWchannelNote 4,MHz,5 or 10,
+OCNG Patterns defined in A.3.2.1.2 Note 4,,5 MHz: OP.16 FDD10 MHz: OP.2 FDD,
+PBCH_RA,dB,0,
+PBCH_RB,,,
+PSS_RA,,,
+SSS_RA,,,
+PCFICH_RB,,,
+PHICH_RA,,,
+PHICH_RB,,,
+PDCCH_RA,,,
+PDCCH_RB,,,
+PDSCH_RA,,,
+PDSCH_RB,,,
+OCNG_RANote 1,,,
+OCNG_RBNote 1,,,
+Note2,dBm/15 kHz,-98,
+,dB,-infinity,-3
+RSRP Note3,dBm/15 kHz,-infinity,-101
+SCH_RP Note3,dBm/15 kHz,-infinity,-101
+Propagation Condition,,AWGN,
+Note 1:OCNG shall be used such that cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3:RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 4:This test is according to the principle defined in section A.3.12.3.,,,

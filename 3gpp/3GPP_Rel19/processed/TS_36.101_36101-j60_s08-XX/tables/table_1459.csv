@@ -1,0 +1,24 @@
+Parameter,,,Unit,Test 1-7
+Discovery resource pool configuration,,,,"As specified in Table A.7.1.2-2(Configuration #2-TDD)with parameters BWChannel, NPools = Number of configured resource pools (as specified in Table 11.5.2-2), and N = discSupportedProc"
+DRX configuration,,,,As specified in Table 11.1.2-1
+Active cell(s),,,,Cell 1 (Serving cell)
+Cell 1,Cyclic prefix,,,Normal
+,Uplink downlink configuration (NOTE 3),,,0
+,Special subframe configuration (NOTE 4),,,4
+,Cell ID,,,0
+,Downlink power allocation,,dB,0
+,,,dB,0 (NOTE 1)
+,,,dB,0
+,OCNG Pattern NOTE 2,,,OP.1 TDD
+,Propagation channel,,,Static propagation conditionNo external noise sources are applied
+,Antenna configuration,,,1x2
+,RSRP,,dBm/15kHz,-85
+Active Sidelink UE(s),,,,"Sidelink UE i, i = 0, …, discSupportedProc-1"
+Sidelink UE i,Sidelink Transmissions,,,PSDCH (D.1 TDD)
+,PSDCH Resource pool (NOTE 5),,,
+,PSDCH RB allocation (NOTE 5),,,"PRB pairs {2*(i % NMAX_SF),2*(i % NMAX_SF)+1}"
+,Time offset (NOTE 6),,s,0
+,Frequency offset (NOTE 7),,Hz,0
+,Propagation Channel,,,Static propagation conditionNo external noise sources are applied
+,Antenna configuration,,,1x2 Low
+"NOTE 1:.NOTE 2:OCNG is used to fully allocate the available resource blocks to virtual UEs.NOTE 3:As specified in Table 4.2-2 in TS 36.211 [4].NOTE 4:As specified in Table 4.2-1 in TS 36.211 [4].NOTE 5: NMAX_SF represents the maximum number of Sidelink UEs transmitting in one subframe. NMAX_SF  = 12 (5 MHz), 25 (10MHz), 37 (15MHz), 50 (10MHz).NOTE 6: Time offset of Sidelink UE receive signal with respect to Cell 1 downlink timing at the tested UE.NOTE 7: Frequency offset of Sidelink UE with respect to Cell 1 uplink frequency.",,,,

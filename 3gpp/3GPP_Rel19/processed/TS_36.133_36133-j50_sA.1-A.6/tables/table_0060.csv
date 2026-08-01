@@ -1,0 +1,5 @@
+OCNGPatternName,,,Bandwidth(MHz),Allocation,Relative power level  [dB],,,,PDSCH Data
+,,,,,Subframe,,,,
+,,,,,0,5,"4, 9","1 – 3, 6 – 8",
+OP.22 FDD,,5,"0 – 24Note 1,2",0,0,0,0,Note 3,
+"Note 1:The OCNG pattern is used only for a serving cell of the UE under test.Note 2:The OCNG allocation applied to all downlink physical resource bloacks (PRBs) except the REs that are allocated for the PDSCH for the UE under test.Note 3:OCNG PRBs are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated. The parameter  is used to scale the power of PDSCH.Note 4:If two or more transmit antennas with CRS are used in the test, the PDSCH part of OCNG shall be transmitted to the virtual users by all the transmit antennas with CRS and according to the antenna transmission mode 2. The parameter applies to each antenna port separately, so the transmit power of the PDSCH part of OCNG is equal between all the transmit antennas with CRS used in the test. The antenna transmission modes are specified in clause 7.1 in TS 36.213.",,,,,,,,,

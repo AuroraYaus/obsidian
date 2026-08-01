@@ -1,0 +1,14 @@
+Reference channel,G-FR1-A4-31A,G-FR1-A4-31,G-FR1-A4-32A,G-FR1-A4-32
+Subcarrier spacing [kHz],15,15,30,30
+Allocated resource blocks,12,25,12,50
+CP-OFDM Symbols per slot (Note 1),11,11,11,11
+Modulation,16QAM,16QAM,16QAM,16QAM
+Code rate (Note 2),658/1024,658/1024,658/1024,658/1024
+Payload size (bits),4032,8456,4032,16896
+Transport block CRC (bits),24,24,24,24
+Code block CRC size (bits),-,24,-,24
+Number of code blocks - C,1,2,1,3
+Code block size including CRC (bits) (Note 2),4056,4264,4056,5664
+Total number of bits per slot,6336,13200,6336,26400
+Total symbols per slot,1584,3300,1584,6600
+"NOTE 1:DM-RS configuration type  = 1 with DM-RS duration = single-symbol DM-RS and the number of DM-RS CDM groups without data is 2, Additional DM-RS position = pos2, l0 = 2 for PUSCH mapping type A, l0 = 2 for PUSCH mapping type B, as per table 6.4.1.1.3-3 of TS 38.211 [9].NOTE 2:Code block size including CRC (bits) equals to K' in clause 5.2.2 of TS 38.212 [15].",,,,

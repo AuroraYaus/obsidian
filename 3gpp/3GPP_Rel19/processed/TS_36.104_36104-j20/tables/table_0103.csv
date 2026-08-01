@@ -1,0 +1,13 @@
+E-UTRAchannel bandwidth [MHz],Reference measurement channel,"Reference sensitivity power level, PREFSENS [dBm]"
+1.4,FRC A1-1 in Annex A.1,-98.8
+3,FRC A1-2 in Annex A.1,-95.0
+3,FRC A1-6 in Annex A.1 1 for E-UTRA with NB-IoT in-band operation (Note 3),-95.0 (Note 2)
+5,FRC A1-3 in Annex A.1,-93.5
+5,FRC A1-7 in Annex A.1 for E-UTRA with NB-IoT in-band operation,-93.5 (Note 2)
+10,FRC A1-3 in Annex A.1 (Note),-93.5
+10,FRC A1-7 in Annex A.1 for E-UTRA with NB-IoT in-band operation (Note 4),-93.5 (Note 2)
+15,FRC A1-3 in Annex A.1 (Note),-93.5
+15,FRC A1-7 in Annex A.1 for E-UTRA4with NB-IoT in-band operation (Note 4),-93.5 (Note 2)
+20,FRC A1-3 in Annex A.1 (Note),-93.5
+20,FRC A1-7 in Annex A.1 for E-UTRA with NB-IoT in-band operation (Note 4),-93.5 (Note 2)
+"Note 1:PREFSENS is the power level of a single instance of the reference measurement channel. This requirement shall be met for each consecutive application of a single instance of FRC A1-3 mapped to disjoint frequency ranges with a width of 25 resource blocks eachNote 2:The requirements apply to BS that supports E-UTRA with NB-IoT in-band operation.Note 3:PREFSENS is the power level of a single instance of the reference measurement channel. This requirement shall be met for a single instance of FRC A1-6 mapped to the 12 E-UTRA resource blocks adjacent to the NB-IoT PRB.Note 4:PREFSENS is the power level of a single instance of the reference measurement channel. This requirement shall be met for a single instance of FRC A1-7 mapped to the 24 E-UTRA resource blocks adjacent to the NB-IoT PRB, and for each consecutive application of a single instance of FRC A1-3 mapped to disjoint frequency ranges with a width of 25 resource blocks each.",,

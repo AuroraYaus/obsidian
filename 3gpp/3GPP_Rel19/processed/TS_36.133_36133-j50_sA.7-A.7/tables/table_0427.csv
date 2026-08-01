@@ -1,0 +1,8 @@
+Field,Cell1,Cell2,Comment
+,Value,Value,
+onDurationTimer,psf1,psf1,As specified in clause 6.3.2 in TS 36.331
+drx-InactivityTimerNote 1,psf1,psf1,
+drx-RetransmissionTimer,psf1,psf1,
+longDRX-CycleStartOffset,sf80,Sf160,
+shortDRX,disable,disable,
+Note 1:UE is continuously scheduled in PCell,,,

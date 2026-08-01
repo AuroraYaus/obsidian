@@ -1,0 +1,21 @@
+Parameter,,Unit,Value
+,,,Test 1
+BWchannel,Config 1,MHz,"3: NRB,c = 12"
+,,,
+RMSI CORESET Reference Channel,Config 1,,CR.1.2 FDD
+,,,
+Dedicated CORESET Reference Channel,Config 1,,CCR.1.6 FDD
+,Config 1,,SSB.13 FR1
+SSB Configuration,,,
+In sync transmission parameters,"Number of Control OFDM symbols, Config 1",,2
+,,,
+,"Aggregation level, Config 1",,2
+,,,
+,"Mapping from REG to CCE, Config 1",,Distributed
+,,,
+Out of sync transmission parameters,,,
+,"Number of Control OFDM symbols, Config 1",,2
+,,,
+,"Aggregation level, Config 1",,4
+,,,
+,"Mapping from REG to CCE, Config 1",,Distributed

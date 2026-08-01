@@ -1,0 +1,41 @@
+Parameters,,Test 1,,,
+,,Units,Cell 1,Cell 2,Cell 3
+BWchannel_CA Note 1,,MHz,5,5,5
+Measurement bandwidth,,,10-15,10-15,10-15
+PDSCH Reference measurement channel defined in A.3.1.1.1,,,R.5 FDD,R.5 FDD,N/A
+PDSCH allocation,,,7-17,7-17,-
+PDCCH/PCFICH/PHICH Reference measurement channel defined  in A.3.1.2.1,,,R.11 FDD,R.11 FDD,R.11  FDD
+OCNG Patterns defined in A.3.2.1.15 (OP.15 FDD) and A.3.2.1.16 (OP.16 FDD),,,OP.15 FDD,OP.15 FDD,OP.16FDD
+Note2,Bands FDD_A,dBm/15 kHz,-119.5,-116,-116
+,"Bands FDD_B1, FDD_B2 Note 6",,-119,-115.5,-115.5
+,Bands FDD_C,,-118.5,-115,-115
+,Bands FDD_D,,-118,-114.5,-114.5
+,"Bands FDD_E, FDD_F",,-117.5,-114,-114
+,Bands FDD_G,,-116.5,-113,-113
+,Bands FDD_H,,-116,-112.5,-112.5
+,Bands FDD_N,,-113,-109.5,-109.5
+RSRPNote2,Bands FDD_A,dBm/15 kHz,-123.5,-120,-120
+,"Bands FDD_B1, FDD_B2 Note 6",,-123,-119.5,-119.5
+,Bands FDD_C,,-122.5,-119,-119
+,Bands FDD_D,,-122,-118.5,-118.5
+,"Bands FDD_E, FDD_F",,-121.5,-118,-118
+,Bands FDD_G,,-120.5,-117,-117
+,Bands FDD_H,,-120,-116.5,-116.5
+,Bands FDD_N,,-117,-113.5,-113.5
+RSRQNote2,Bands FDD_A,dB,-16.25,-17.34,-17.34
+,"Bands FDD_B1, FDD_B2 Note 6",,,,
+,Bands FDD_C,,,,
+,Bands FDD_D,,,,
+,"Bands  FDD_E, FDD_F",,,,
+,Bands FDD_G,,,,
+,Bands FDD_H,,,,
+,Bands FDD_N,,,,
+IoNote2,Bands FDD_A Note 5,dBm/4.5MHz,-93.26,-88.67,
+,"Bands FDD_B1 Note 5,FDD_B2 Note 5 Note 6",,-92.76,-88.17,
+,Bands FDD_C Note 5,,-92.26,-87.67,
+,Bands FDD_D,,-91.76,-87.17,
+,"Bands FDD_E, FDD_F Note 5",,-91.26,-86.67,
+,Bands FDD_G Note 5,,-90.26,-85.67,
+,Bands FDD_H Note 5,,-89.76,-85.17,
+,Bands FDD_N Note 5,,-86.76,-82.76,
+"Note 1:This test verifies the RRM requirement which is independent of channel bandwidth and is performed according to the principle defined in section A.3.6.1.Note 2:RSRQ, RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 3:See Table A.9.2.5.2-1 for the other parametersNote 4:E-UTRA operating band groups are as defined in Section 3.5.Note 5:The test applies for E-UTRA operating bands in this band group which are supporting 5MHz + 5MHz channel bandwidth.Note 6:For Band 74, the tests shall be performed with the carrier frequency of the assigned E-UTRA channel bandwidth within 1475.9-1510.9 MHz.",,,,,

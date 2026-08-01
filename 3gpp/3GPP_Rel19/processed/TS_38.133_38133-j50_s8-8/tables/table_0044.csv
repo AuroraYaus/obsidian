@@ -1,0 +1,15 @@
+Attribute,Value for BLER Configuration #0
+Channel BW,3MHz
+DL Transmission BW,15 PRBs
+DCI format,1-0
+Number of control OFDM symbols,3
+Aggregation level (CCE),8
+Ratio of hypothetical PDCCH RE energy to average SSS RE energy,4dB
+Ratio of hypothetical PDCCH DMRS energy to average SSS RE energy,4dB
+Bandwidth (PRBs),15
+Sub-carrier spacing (kHz),SCS of the active DL BWP
+DMRS precoder granularity,REG bundle size
+REG bundle size,6
+CP length,Normal
+Mapping from REG to CCE,Non-DistributedNote 1
+"NOTE 1:For 15 PRB Transmission BW, distributed mapping may lead to unexpected out-of-sync indication.",

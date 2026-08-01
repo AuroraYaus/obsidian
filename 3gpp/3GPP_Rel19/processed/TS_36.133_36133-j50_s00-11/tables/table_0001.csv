@@ -1,0 +1,18 @@
+Group,E-UTRA FDD,,E-UTRA TDD,,E-UTRA Frame Structure 3,
+,Band group notation,Operating bands,Band group notation,Operating bands,Band group notation,Operating bands
+A,FDD_A,"1, 4, 6, 10, 11, 18, 19, 21, 23, 24, 32 Note 2, 67Note 2, 69Note 2, 70Note 7, 75 Note 2, 76 Note 2",TDD_A,"33, 34, 35, 36, 37, 38, 39, 40, 45, 50, 51, 53, 54",FS3_A,-
+B,FDD_B1,"65, 66 Note 5",TDD_B,-,FS3_B,-
+,FDD_B2,74Note 8,,,,
+C,FDD_C,"9, 30",TDD_C,"42, 43, 48, 52",FS3_C,-
+D,FDD_D,"28, 68",TDD_D,-,FS3_D,-
+E,FDD_E,"2, 5, 7, 27",TDD_E,"41, 44",FS3_E,-
+F,FDD_F,26 Note 3,TDD_F,-,FS3_F,-
+G,FDD_G,"3, 8, 12, 13, 14, 17, 20, 22, 29 Note 2, 71, 85, 106",TDD_G,47 Note4,FS3_G,"46 Note 2, 49 Note 2"
+H,FDD_H,25,TDD_H,-,FS3_H,-
+I,FDD_I,-,TDD_I,-,FS3_I,-
+J,FDD_J,-,TDD_J,-,FS3_J,-
+K,FDD_K,-,TDD_K,-,FS3_K,-
+L,FDD_L,-,TDD_L,-,FS3_L,-
+M,FDD_M,-,TDD_M,-,FS3_M,-
+N,FDD_N,"31, 72, 73, 87, 88, 111",TDD_N,-,FS3_N,-
+NOTE 1:The bands within the same group have the same Io conditions in a corresponding requirement in this specification.NOTE 2:This band is used only for E-UTRA carrier aggregation with other E-UTRA bands.NOTE 3:The minimum Io condition for Band 26 is reduced by 0.5 dB when the carrier frequency of the assigned E-UTRA channel bandwidth is within 865-894 MHz.NOTE 4:This band is used only for V2V operation.NOTE 5: The range 2180-2200 MHz of the DL operating band 66 is restricted to E-UTRA operation when carrier aggregation is configured.NOTE 6:VoidNOTE 7:The range 2010-2020 MHz of the DL operating band is restricted to E-UTRA operation when carrier aggregation is configured and TX-RX separation is 300 MHz The range 2005-2020 MHz of the DL operating band is restricted to E-UTRA operation when carrier aggregation is configured and TX-RX separation is 295 MHzNOTE 8:The minimum Io condition for Band 74 is reduced by 0.5 dB when the carrier frequency of the assigned E-UTRA channel bandwidth is within 1475.9-1510.9 MHz.,,,,,,

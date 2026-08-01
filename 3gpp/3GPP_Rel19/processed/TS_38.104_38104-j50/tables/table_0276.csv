@@ -1,0 +1,4 @@
+Number of TX antennas,Number of RX antennas,Cyclic prefix,Propagation conditions and correlation matrix (Annex G),Frequency offset,Fraction of maximum throughput,FRC(Annex A),Additional DM-RS position,SNR(dB)
+1,2,Normal,AWGN,200,70 %,G-FR1- A13-1,pos1,19.1
+,,Normal,AWGN,200,70 %,G-FR1- A14-1,pos1,19.4
+2,2,Normal,AWGN,200,70 %,G-FR1- A5-17,pos1,14.5

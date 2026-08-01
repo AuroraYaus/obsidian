@@ -1,0 +1,11 @@
+Band combination for SUL,"ΔRIB,c for NR bands (dB)1",,,
+,Component band in order of bands in configuration2,,,
+CA_n1-n3_n78-n80,0.2,0.2,0.5,N/A
+CA_n1-n3_n78-n84,0.2,0.2,0.5,N/A
+CA_n28-n79_n41-n83,0.2,-,0.8,N/A
+CA_n28-n41_n79-n83,0.2,-,0.8,N/A
+CA_n41-n95_n79-n98,0.5,0.5,N/A,N/A
+CA_n41-n98_n79-n95,0.5,0.5,N/A,N/A
+CA_n41-n83_n79-n98,0.5,0.5,N/A,N/A
+CA_n41-n83_n79-n95,0.5,0.5,N/A,N/A
+"NOTE 1:“-” denotes ΔRIB,c = 0 and ΔRIB,c is not applicable to SUL band(s).NOTE 2:The component band order in the configuration should be listed by the order of NR bands, such as for CA_n28-n79_n41-n83 the order of band is n28, n41, n79 and n83.",,,,

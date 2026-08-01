@@ -1,0 +1,32 @@
+Parameter,,Unit,CE Mode A (Test 1),CE Mode B (Test 1)
+OFDM starting symbol (startSymbolLC),,symbols,2,2
+Unused RE-s and PRB-s,,,OCNG,OCNG
+Cell ID,,,0,0
+Downlink power allocation,ρA,dB,-3,0
+,ρB,dB,-3,0
+,,dB,0,-3
+,δ,dB,3,0
+at antenna port,,dBm/15kHz,-98,-98
+Cyclic prefix,,,Normal,Normal
+Subframe Configuration,,,Non-MBSFN,Non-MBSFN
+Precoder Update Granularity,,PRB,N/A,Note 2
+,,ms,N/A,Note 2
+Beamforming Pre-Coder,,,Note 2,Note 2
+Cell Specific Reference Signal,,,Port 0 and 1,Port 0 and 1
+Number of PRB per MPDCCH Set,,,4,2+4
+Transmission type,,,Distributed,Localized
+Frequency hopping,,,Disabled,Enabled
+Number of frequency hopping narrowbands,,,N/A,4
+Frequency hopping offset,,,N/A,1
+Frequency hopping interval,,ms,N/A,16
+Value of G in MPDCCH start subframe (mpdcch-startSF-UESS) (Note 3),,,1.5,1.5
+Maximum number of repetitions (mPDCCH-NumRepetition),,,16,32
+MPDCCH repetition number,,,16,32
+MPDCCH narrowband (mpdcch-Narrowband),,,1,7
+PDSCH TM,,,TM2,TM2
+DCI Format,,,6-1A,6-1B
+fdd-DownlinkOrTddSubframeBitmapBR,,,1111111111,1111111111
+mpdcch-crs-config,,,Configured,Configured
+Power offset between CRS and DMRS antenna ports of MPDCCH,,dB,0,0
+mpdcch-crs-localized-mapping-type,,,N/A,Not configured
+"Note 1:For each test, DC subcarrier puncturing shall be considered.Note 2:TS 36.211 6.8B.5.Note 3:For MPDCCH UE-specific search space the formula for the start subframe k0 is given in TS 36.213 [6] clause 9.1.5.Note 4:If not otherwise stated, the values in this table refer to parameters in TS 36.211 [4] or/and TS 36.213 [6] as appropriate.",,,,

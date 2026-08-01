@@ -1,0 +1,4 @@
+E-UTRA or NR Band / Channel bandwidth of the affected DL band / UL RB allocation of the agressor band,,,,,
+UL band,SL operation,10MHz(LCRB),20 MHz(LCRB),30 MHz(LCRB),40 MHz(LCRB)
+20,n38,25,50,50,50
+NOTE 1:The UL configuration applies regardless of the channel bandwidth of the UL band unless the UL resource blocks exceed that specified in Table 7.3.1-2 in TS 36.101 [4] or Table 7.3.2-3 in TS 38.101-1 [2] for the uplink bandwidth in which case the allocation according to Table 7.3.1-2 in TS 36.101 [4] or Table 7.3.2-3 in TS 38.101-1 [2] applies,,,,,

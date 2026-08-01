@@ -1,0 +1,3 @@
+Sub-block or Inter RF Bandwidth gap size (Wgap) where the limit applies,BS adjacent channel centre frequency offset below or above the sub-block edge or the Base Station RF Bandwidth edge (inside the gap),Assumed adjacent channel carrier (informative),Filter on the adjacent channel frequency and corresponding filter bandwidth,CACLR limit
+5 MHz ≤ Wgap < 15 MHz,2.5 MHz,5MHz E-UTRA carrier,Square (BWConfig),45 dB
+10 MHz < Wgap < 20 MHz,7.5 MHz,5MHz  E-UTRA carrier,Square (BWConfig),45 dB

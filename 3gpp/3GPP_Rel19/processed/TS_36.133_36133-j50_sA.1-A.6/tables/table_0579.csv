@@ -1,0 +1,6 @@
+Field,Value,Comment
+powerRampingStep,dB2,
+preambleInitialReceivedTargetPower,dBm-120,
+preambleTransMax,n6,
+ra-ResponseWindowSize,sf10,10 sub-frames
+Note 1:For further information see Clause 6.3.2 in TS 36.331.,,

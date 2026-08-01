@@ -1,0 +1,20 @@
+Accuracy,Conditions,,,,,,
+,SL-PRS Ês/Iot,SL-PRS SCS,SL-PRS bandwidthNote 1,"Number of samples, S",Io Note 2 range,,
+,,,,,NR operating band groups Note 3,Minimum Io,Maximum Io
+Tc Note 4,dB,kHz,PRB,,,dBm/SCS,dBm/BWChannel
+±97,(SL-PRS Ês/Iot)ref ≥0 dB(SL-PRS Ês/Iot)i ≥-3 dB,15,48,≥ 4,NR_TDD_FR1_B,-123.5,-50
+,,,,,NR_TDD_FR1_C,-123,-50
+,,,,,NR_FDD_FR1_G,-121,-50
+,,,,,NR_TDD_FR1_J,-119.5,-50
+±133,,,>48,≥ 1,Note 5,Note 5,Note 5
+±91,,,≥ 96,≥ 1,Note 5,Note 5,Note 5
+±138,,30,≥ 24,≥ 4,NR_TDD_FR1_B,-120.5,-50
+,,,,,NR_TDD_FR1_C,-120,-50
+,,,,,NR_FDD_FR1_G,-118,-50
+,,,,,NR_TDD_FR1_J,-116.5,-50
+±99,,,>48,≥ 1,Note 5,Note 5,Note 5
+±83,,60,≥ 24,≥ 4,NR_TDD_FR1_B,-117.5,-50
+,,,,,NR_TDD_FR1_C,-117,-50
+,,,,,NR_FDD_FR1_G,-115,-50
+,,,,,NR_TDD_FR1_J,-113.5,-50
+"NOTE 1:Minimum SL-PRS bandwidth, which is the minimum of the SL-PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2:Io is assumed to have constant EPRE across the bandwidth.NOTE 3:NR operating band groups in FR1 are as defined in clause 3.5.2.NOTE 4:Tc is the basic timing unit defined in TS 38.211 [6].NOTE 5:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the SL-PRS bandwidth of the smallest PRB number for the corresponding SCS.",,,,,,,

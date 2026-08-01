@@ -1,0 +1,12 @@
+Parameter,,Unit,Test 1
+Downlink power allocation,,dB,-3
+,,dB,-3 (Note 1)
+,,dB,0
+at antenna port,,dBm/15kHz,-98
+Precoding granularity,,PRB,6
+PMI delay (Note 2),,ms,8
+Reporting interval,,ms,8
+Reporting mode,,,PUSCH 1-2
+CodeBookSubsetRestriction bitmap,,,001111
+PDSCH transmission mode,,,4
+"Note 1:.Note 2:If the UE reports in an available uplink reporting instance at subrame SF#n based on PMI estimation at a downlink SF not later than SF#(n-4), this reported PMI cannot be applied at the eNB downlink before SF#(n+4).",,,

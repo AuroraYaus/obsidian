@@ -1,0 +1,4 @@
+Frequency range,Maximum Ripple [dB]
+FUL_Meas – FUL_Low ≥ 5 MHz and FUL_High – FUL_Meas ≥ 5 MHz(Range 1),4 (p-p)
+FUL_Meas – FUL_Low < 5 MHz or FUL_High – FUL_Meas < 5 MHz(Range 2),12 (p-p)
+NOTE 1:FUL_Meas refers to the sub-carrier frequency for which the equalizer coefficient is evaluatedNOTE 2:FUL_Low and FUL_High refer to each E-UTRA frequency band specified in Table 5.5-1,

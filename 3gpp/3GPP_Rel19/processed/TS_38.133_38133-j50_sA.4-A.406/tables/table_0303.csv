@@ -1,0 +1,12 @@
+Parameter,Config,Unit,SSB#0,,SSB#1,
+,,,T1,T2,T1,T2
+Note2,1~6,dBm/15 kHz,-94.65,,,
+Note2,"1,2,4,5",dBm/SSB SCS,-94.65,,,
+,"3,6",,-91.65,,,
+,1~6,dB,0,0,-Infinity,3
+SSB RSRP Note3,"1,2,4,5",dBm/SSB SCS,-94.65,-94.65,-Infinity,-91.65
+,"3,6",,-91.65,-91.65,-Infinity,-88.65
+Io Note3,"1,2,4,5",dBm/9.36 MHz,-63.69,-63.69,-66.70,-61.93
+,"3,6",dBm/38.16 MHz,-57.59,-57.59,-60.61,-55.84
+,1~6,dB,0,0,-Infinity,3
+NOTE 1: The resources for uplink transmission are assigned to the UE prior to the start of time period T2.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,

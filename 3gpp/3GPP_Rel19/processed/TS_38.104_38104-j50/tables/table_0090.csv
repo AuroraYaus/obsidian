@@ -1,0 +1,11 @@
+System type to co-exist with (Note 7),Frequency range for co-existence requirement (MHz) (Note 8),Basic limits (dBm),Measurement bandwidth,Notes
+GSM850 or CDMA850,869 - 894,-57,100 kHz,Note 1
+,824  849,-61,,
+GSM900,921  960,-57,,
+,876 - 915,-61,,
+DCS1800,1805  1880,-47,,
+,1710 - 1785,-61,,
+PCS1900,1930  1990,-47,,
+,1850  1910,-61,,
+"UTRA, E-UTRA or NR",Frequency range of downlink operating band of the BS to co-exist with,-52,1 MHz,"Note 1, Note 9"
+,Frequency range of uplink operating band of the BS to co-exist with,-49,,"Note 1, Note 4, Note 5, Note 6"

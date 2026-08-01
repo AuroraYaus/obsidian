@@ -1,0 +1,9 @@
+Parameter,Unit,Test configuration,Value,Comment
+RF Channel Number,,Config 1,"1, 2, 3",Three radio channels are used for this test.
+Active cell,,Config 1,Cell 1: FR1 PCellCell 2: FR1 SCellCell 3: FR1 SCell,FR1 PCell on RF channel number 1FR1 SCell on RF channel number 2FR1 SCell on RF channel number 3
+CP length,,Config 1,Normal,
+DRX,,Config 1,OFF,
+Measurement gap pattern Id,,Config 1,OFF,
+Filter coefficient,,Config 1,0,L3 filtering is not used
+CSI-RS configuration for L1-RSRP reporting,,Config 1,Cell 1: CSI-RS.1.5 FDDCell 2: CSI-RS.2.5 TDDCell 3: CSI-RS.2.5 TDD,
+T1,s,Config 1,5,

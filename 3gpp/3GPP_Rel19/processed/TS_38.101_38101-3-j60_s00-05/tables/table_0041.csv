@@ -1,0 +1,17 @@
+EN-DC configuration,Uplink EN-DC configuration(note 1),Single UL allowed
+DC_1A_n1A,DC_1A_n1A5,Yes5
+DC_2A_n2A,DC_2A_n2A5,Yes5
+DC_3A_n3A,DC_3A_n3A,Yes7
+DC_5A_n5A,DC_5A_n5A5,Yes5
+DC_7A_n7A6,DC_7A_n7A5,Yes5
+DC_40A_n40ADC_40C_n40ADC_40D_n40A,DC_40A_n40A5,Yes5
+DC_41A_n41ADC_41C_n41ADC_41D_n41A,DC_41A_n41A,Yes4
+DC_48A_n48A,DC_48A_n48A5,Yes5
+DC_48A-48A_n48A,DC_48A_n48A5,Yes5
+DC_48C_n48A,DC_48A_n48A5,Yes5
+DC_48D_n48A,DC_48A_n48A5,Yes5
+DC_66A_n66A,DC_66A_n66A5,Yes5
+DC_66B_n66A,DC_66A_n66A5,Yes5
+DC_66A-66A_n66A,DC_66A_n66A5,Yes5
+DC_71A_n71A3,DC_71A_n71A5,Yes5
+"NOTE 1:Uplink EN-DC configurations are the configurations supported by the present release of specifications.NOTE 2:Void.NOTE 3:For TDD bands, the minimum requirements only apply for non-simultaneous Rx/Tx between all carriers.NOTE 4:Single UL allowed due to potential emission issues, not self-interference.NOTE 5:Only single switched UL is supported.NOTE 6: Requirements in this specification apply for NR SCS of 15 kHz only.NOTE 7:Single UL allowed due to potential emission issues and self-interference.NOTE 8:The PC2 Uplink EN-DC configuration supported in Table 6.2B.1.2-1 is applicable to the same EN-DC configuration.NOTE 9:The PC1.5 Uplink EN-DC configuration supported in Table 6.2B.1.2-1 is applicable to the same EN-DC configuration.NOTE 10:The UE supporting the configurations indicates intraBandENDC-Support = ‘non-contiguous’ with intraBandENDC-Support-UL absent.",,

@@ -1,0 +1,8 @@
+NR,Total number of interrupted slots on FR2 serving cells,,,,,,,,,
+SCS,When MG timing advance of 0 ms is applied,,,,,When MG timing advance of 0.25 ms is applied,,,,
+(kHz),MGL=20 ms,MGL=10 ms,MGL=5.5 ms,MGL=3.5 ms,MGL=1.5 ms,MGL=20 ms,MGL=10 ms,MGL=5.5 ms,MGL=3.5 ms,MGL=1.5 ms
+60,80,40,22,14,6,80,40,22,14,6
+120,160,80,44,28,12,160,80,44,28,12
+480 Note3,640,320,176,112,48,640,320,176,112,48
+960 Note3,1280,640,352,224,96,1280,640,352,224,96
+"NOTE 1:The total number of interrupted slots is based on that SFN and subframe reference for per-FR gap in FR2 indicated by high layer parameter refServCellIndicator is an FR2 serving cell.NOTE 2:Slot occurs before or after the measurement gap may be interrupted additionally if SFN and subframe reference for per-FR gap in FR2 indicated by high layer parameter refServCellIndicator is an FR1 serving cell.NOTE 3:For NR SCSs of 480 kHz and 960 kHz, total number of interrupted slots on FR2-2 serving cells during MGL for NR standalone operation (single carrier, NR CA and NR-DC) with per-UE measurement gap or per-FR measurement gap for FR2-2.NOTE 4:If UE is configured with per-UE measurement gap, the MG timing advance of 0.25 is applicable only for FR2 NR SA (with both single carrier and NR CA configuration).",,,,,,,,,,

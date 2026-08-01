@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>DRX cycle</td>
+    <td>TSSB_time_index_intra</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>max(120ms, ceil(7 x Kp x Klayer1_measurement) x Kmulti_SMTC x SMTC period)Note 1 x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle≤ 320ms</td>
+    <td>max(120ms, ceil (1.5 x 7 x Kp x Klayer1_measurement) x Kmulti_SMTC x max(SMTC period,DRX cycle)) x CSSFintra</td>
+  </tr>
+  <tr>
+    <td>DRX cycle&gt;320ms</td>
+    <td>Ceil (7 x Kp x Klayer1_measurement) x Kmulti_SMTC x DRX cycle x CSSFintra</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identified</td>
+  </tr>
+</table>

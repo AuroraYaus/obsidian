@@ -1,0 +1,28 @@
+Parameter,,Unit,Value
+Number of PDCCH symbols,,symbols,1 (Note 1)
+EPDCCH starting symbol,,symbols,2 (Note 1)
+PHICH duration,,,Normal
+Unused RE-s and PRB-s,,,OCNG
+Cell ID,,,0
+Downlink power allocation,,dB,0
+,,dB,0
+,,dB,-3
+,,dB,0
+at antenna port,,dBm/15kHz,-98
+Cyclic prefix,,,Normal
+Subframe Configuration,,,Non-MBSFN
+Precoder Update Granularity,,PRB,1
+,,ms,1
+Beamforming Pre-Coder,,,Annex B.4.5
+Cell Specific Reference Signal,,,Port 0 and 1
+CSI-RS Reference Signal,,,Port 15 and 16
+CSI-RS reference signal resource configuration,,,0
+CSI reference signal subframe configuration ICSI-RS,,,0
+ZP-CSI-RS configuration bitmap,,,0000010000000000
+ZP-CSI-RS subframe configuration IZP-CSI-RS,,,0
+Number of EPDCCH Sets,,,2 (Note 2)
+EPDCCH Subframe Monitoring patternsubframePatternConfig-r11,,,1100011000  1100010000  1100011000  1100001000   1100011000  1000011000  1100011000 (Note 3)
+PDSCH TM,,,TM9
+TDD UL/DL Configuration,,,0
+TDD Special Subframe,,,1 (Note 4)
+"Note 1:The starting symbol for EPDCCH is signalled with epdcch-StartSymbol-r11. However, CFI is set to 1.Note 2:The first set is distributed transmission with PRB = {0, 49} and the second set is localized transmission with PRB = {0, 7, 14, 21, 28, 35, 42, 49}. ePDCCH is scheduled in the second set for all tests.Note 3:EPDCCH is scheduled in every SF. UE is required to monitor ePDCCH for UE-specific search space only in SFs configured by subframePatternConfig-r11. Legacy PDCCH is not scheduled.Note 4:Demodulation performance is averaged over normal and special subframe.",,,

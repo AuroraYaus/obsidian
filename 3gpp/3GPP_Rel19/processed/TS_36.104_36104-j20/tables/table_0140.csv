@@ -1,0 +1,6 @@
+,NB-IoTchannel bandwidth of the lowest/highest carrier received [kHz],Wanted signal mean power [dBm],Interfering signal mean power [dBm],Type of interfering signal
+Wide Area BS,200,PREFSENS + 12 dB (Note 1),-49,See Table 7.5.1-2a
+Local Area BS,200,PREFSENS + 12 dB (Note 2),-41,See Table 7.5.1-2a
+Medium Range BS,200,PREFSENS + 12 dB (Note 3),-44,See Table 7.5.1-2a
+Home BS,200,PREFSENS + 20 dB (Note 4),-33,See Table 7.5.1-2a
+Note 1:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5.Note 2:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5a.Note 3:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5c.Note 4:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5b.,,,,

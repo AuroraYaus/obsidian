@@ -1,0 +1,994 @@
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "Foreword", "paragraph_index": 1, "style": "Heading1"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "1Scope", "paragraph_index": 34, "style": "Heading1"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "2References", "paragraph_index": 36, "style": "Heading1"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3Definitions, symbols and abbreviations", "paragraph_index": 86, "style": "Heading1"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.1Definitions", "paragraph_index": 87, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "1", "title": "Rx RedCap: RedCap UE for which requirements are derived assuming 1 Rx branch.", "paragraph_index": 89, "style": null}
+{"source": "38133-j50_s0-7.docx", "section": "2", "title": "Rx RedCap: RedCap UE for which requirements are derived assuming 2 Rx branches.", "paragraph_index": 90, "style": null}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.2Symbols", "paragraph_index": 127, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.3Abbreviations", "paragraph_index": 163, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.4Test tolerances", "paragraph_index": 387, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.5Frequency bands grouping", "paragraph_index": 389, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.5.1Introduction", "paragraph_index": 390, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.5.2NR operating bands in FR1", "paragraph_index": 393, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.5.2ANR operating bands for satellite access in FR1", "paragraph_index": 398, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.5.3NR operating bands in FR2", "paragraph_index": 402, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6Applicability of requirements in this specification version", "paragraph_index": 406, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.1RRC connected state requirements in DRX", "paragraph_index": 415, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.2Number of serving carriers", "paragraph_index": 426, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.2.1Number of serving carriers for SA", "paragraph_index": 427, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.2.2Number of serving carriers for EN-DC", "paragraph_index": 431, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.2.3Number of serving carriers for NE-DC", "paragraph_index": 436, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.2.4Number of serving carriers for NR-DC", "paragraph_index": 441, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.3Applicability for intra-band FR2", "paragraph_index": 446, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.4Applicability for FR2 UE power classes", "paragraph_index": 448, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.5Applicability for SDL bands", "paragraph_index": 450, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.6Applicability of requirements for NGEN-DC operation", "paragraph_index": 452, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.7Applicability of QCL", "paragraph_index": 454, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.9Applicability of requirements for scheduling availability", "paragraph_index": 474, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.10Applicability of requirements for measurement restrictions", "paragraph_index": 480, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.11Applicability of requirements for Redcap UEs", "paragraph_index": 483, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.11.1RRC connected state requirements in DRX", "paragraph_index": 484, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.11.2Applicability for FR2 Redcap UE power classes", "paragraph_index": 486, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.11.3Applicability of QCL", "paragraph_index": 488, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.12Applicability of requirements for Satellite Access", "paragraph_index": 490, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.13Applicability of requirements for FR2", "paragraph_index": 494, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.14Applicability of requirements for FR2 Power Class 6", "paragraph_index": 501, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.15Applicability of requirements for per-FR gap", "paragraph_index": 505, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.16Applicability of requirements for ATG", "paragraph_index": 509, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.17Applicability of requirements for MUSIM gaps", "paragraph_index": 511, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.18Applicability of requirements for a UE operating on a cell with less than 5 MHz BW", "paragraph_index": 513, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.19Applicability of requirements for multi-Rx operation in FR2-1", "paragraph_index": 515, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.20Applicability of requirements for RedCap UE with satellite access", "paragraph_index": 518, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.21Applicability of requirements for UE supporting L3 fast beam sweeping operation in FR2-1", "paragraph_index": 521, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.22Applicability of requirements for UE with LP-WUR", "paragraph_index": 531, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "3.6.23Applicability of requirements for SBFD", "paragraph_index": 533, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4SA: RRC_IDLE state mobility", "paragraph_index": 535, "style": "Heading1"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.1Cell Selection", "paragraph_index": 536, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2Cell Re-selection", "paragraph_index": 542, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.1Introduction", "paragraph_index": 543, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2Requirements", "paragraph_index": 549, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.1UE measurement capability", "paragraph_index": 550, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.2Measurement and evaluation of serving cell", "paragraph_index": 557, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.3Measurements of intra-frequency NR cells", "paragraph_index": 580, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.4Measurements of inter-frequency NR cells", "paragraph_index": 614, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.5Measurements of inter-RAT E-UTRAN cells", "paragraph_index": 672, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.6Maximum interruption in paging reception", "paragraph_index": 706, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.7General requirements", "paragraph_index": 712, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.8Minimum requirement at transitions", "paragraph_index": 722, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.9Measurements of intra-frequency NR cells for UE configured with relaxed measurement criterion", "paragraph_index": 734, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.9.1Introduction", "paragraph_index": 735, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.9.2Measurements for UE fulfilling low mobility criterion", "paragraph_index": 740, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.9.3Measurements for UE fulfilling not-at-cell edge criterion", "paragraph_index": 758, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.9.4Measurements for UE fulfilling low mobility and not-at-cell edge criteria", "paragraph_index": 776, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.10Measurements of inter-frequency NR cells for UE configured with relaxed measurement criterion", "paragraph_index": 782, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.10.1Introduction", "paragraph_index": 783, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.10.2Measurements for UE fulfilling low mobility criterion", "paragraph_index": 788, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.10.3Measurements for UE fulfilling not-at-cell edge criterion", "paragraph_index": 818, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.10.4Measurements for UE fulfilling low mobility and not-at-cell edge criterion", "paragraph_index": 846, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.11Measurements of inter-RAT E-UTRAN cells for UE configured with relaxed measurement criterion", "paragraph_index": 854, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.11.1Introduction", "paragraph_index": 855, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.11.2Measurements for UE fulfilling low mobility criterion", "paragraph_index": 860, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.11.3Measurements for UE fulfilling with not-at-cell edge criterion", "paragraph_index": 887, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.11.4Measurements for UE fulfilling low mobility and not-at-cell edge criterion", "paragraph_index": 910, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2.2.12Measurements of inter-frequency NR cells with NTN carrier", "paragraph_index": 918, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2ACell Re-selection when subject to CCA", "paragraph_index": 967, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2A.1Introduction", "paragraph_index": 968, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2A.2Requirements", "paragraph_index": 977, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2A.2.1UE measurement capability", "paragraph_index": 978, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2A.2.2Measurement and evaluation when subject to CCA on the serving cell", "paragraph_index": 985, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2A.2.3Measurements of intra-frequency NR cells when subject to CCA on the serving cell and target cell", "paragraph_index": 998, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2A.2.4Measurements of inter-frequency NR cells when subject to CCA on the target cell", "paragraph_index": 1017, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2A.2.5Measurements of inter-RAT E-UTRAN cells when subject to CCA on the serving cell", "paragraph_index": 1047, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2A.2.6Maximum interruption in paging reception when subject to CCA on the target cell", "paragraph_index": 1049, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2A.2.7General requirements", "paragraph_index": 1056, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2BCell Re-selection for RedCap", "paragraph_index": 1058, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.1Introduction", "paragraph_index": 1059, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2Requirements", "paragraph_index": 1064, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.1UE measurement capability for RedCap", "paragraph_index": 1065, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.1.1UE measurement capability for 1 Rx RedCap", "paragraph_index": 1066, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.1.2UE measurement capability for 2 Rx RedCap", "paragraph_index": 1073, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.2Measurement and evaluation of serving cell for RedCap UE", "paragraph_index": 1075, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.3Measurements of intra-frequency NR cells for RedCap UE", "paragraph_index": 1095, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.4Measurements of inter-frequency NR cells for RedCap UE", "paragraph_index": 1121, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "5", "title": "dB in FR1 or 6.5 dB in FR2 for reselections based on ranking or", "paragraph_index": 1127, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "6", "title": "dB in FR1 or 7.5 dB in FR2 for SS-RSRP reselections based on absolute priorities or", "paragraph_index": 1128, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "4", "title": "dB in FR1 and 4 dB in FR2 for SS-RSRQ reselections based on absolute priorities", "paragraph_index": 1129, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "6", "title": "dB in FR1 for reselections based on ranking or", "paragraph_index": 1131, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "7", "title": "dB in FR1 for SS-RSRP reselections based on absolute priorities or", "paragraph_index": 1132, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "5", "title": "dB in FR1 for SS-RSRQ reselections based on absolute priorities.", "paragraph_index": 1133, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.5Measurements of inter-RAT E-UTRAN cells for RedCap UE", "paragraph_index": 1164, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.6Maximum interruption in paging reception for RedCap", "paragraph_index": 1187, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.7General requirements for RedCap", "paragraph_index": 1189, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.8Minimum requirement at transitions", "paragraph_index": 1191, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9Measurements of intra-frequency NR cells for UE configured with relaxed measurement criterion for RedCap", "paragraph_index": 1213, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.1Introduction", "paragraph_index": 1214, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.2Measurements for UE fulfilling stationary criterion", "paragraph_index": 1222, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.3Measurements for a UE fulfilling not-at-cell edge while stationary criterion", "paragraph_index": 1242, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.3AMeasurements for a UE fulfilling stationary and not-at-cell-edge criteria", "paragraph_index": 1249, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.4Measurements for a UE fulfilling low mobility and stationary criteria", "paragraph_index": 1257, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.5Measurements for a UE fulfilling low mobility and not-at-cell-edge while stationary criteria", "paragraph_index": 1262, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.6Measurements for a UE fulfilling not-at-cell edge and not-at-cell edge while stationary criteria", "paragraph_index": 1267, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.7Measurements for a UE fulfilling low mobility and not-at-cell edge criteria and not-at-cell-edge while stationary criteria", "paragraph_index": 1272, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.8Measurements for a UE fulfilling low mobility, not-at-cell edge and stationary criterion", "paragraph_index": 1277, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.9Measurements for UE fulfilling low mobility criterion", "paragraph_index": 1282, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.10Measurements for UE fulfilling not-at-cell edge criterion", "paragraph_index": 1302, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.9.11Measurements for UE fulfilling low mobility and not-at-cell edge criteria", "paragraph_index": 1322, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10Measurements of inter-frequency NR cells for UE configured with relaxed measurement criterion", "paragraph_index": 1328, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.1Introduction", "paragraph_index": 1329, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.2Measurements for UE fulfilling stationary criterion", "paragraph_index": 1337, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.3Measurements for a UE fulfilling not-at-cell edge while stationary  criterion", "paragraph_index": 1358, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.3AMeasurements for a UE fulfilling stationary and not-at-cell-edge criterion", "paragraph_index": 1367, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.4Measurements for a UE fulfilling low mobility and stationary criteria", "paragraph_index": 1378, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.5Measurements for a UE fulfilling low mobility and not-at-cell-edge while stationary criteria", "paragraph_index": 1383, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.6Measurements for a UE fulfilling not-at-cell edge and not-at-cell edge while stationary criteria", "paragraph_index": 1388, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.7Measurements for a UE fulfilling low mobility and not-at-cell edge criteria and not-at-cell-edge while stationary criteria", "paragraph_index": 1393, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.8Measurements for a UE fulfilling low mobility, not-at-cell edge and stationary  criteria", "paragraph_index": 1398, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.9Measurements for UE fulfilling low mobility criterion", "paragraph_index": 1405, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.10Measurements for UE fulfilling not-at-cell edge criterion", "paragraph_index": 1426, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.10.11Measurements for UE fulfilling low mobility and not-at-cell edge criterion", "paragraph_index": 1447, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11Measurements of inter-RAT E-UTRAN cells for UE configured with relaxed measurement criterion", "paragraph_index": 1455, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.1Introduction", "paragraph_index": 1456, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.2Measurements for UE fulfilling stationary criterion", "paragraph_index": 1464, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.3Measurements for a UE fulfilling not-at-cell edge while stationary criterion", "paragraph_index": 1480, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.3AMeasurements for a UE fulfilling stationary and not-at-cell-edge criterion", "paragraph_index": 1489, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.4Measurements for a UE fulfilling low mobility and stationary criteria", "paragraph_index": 1498, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.5Measurements for a UE fulfilling low mobility and not-at-cell-edge while stationary  criteria", "paragraph_index": 1503, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.6Measurements for a UE fulfilling not-at-cell edge and not-at-cell edge while stationary criteria", "paragraph_index": 1508, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.7Measurements for a UE fulfilling low mobility and not-at-cell edge criteria and not-at-cell-edge while stationary criteria", "paragraph_index": 1513, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.8Measurements for a UE fulfilling low mobility, not-at-cell edge and stationary  criteria", "paragraph_index": 1518, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.9Measurements for UE fulfilling low mobility criterion", "paragraph_index": 1525, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.10Measurements for UE fulfilling with not-at-cell edge criterion", "paragraph_index": 1541, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2B.2.11.11Measurements for UE fulfilling low mobility and not-at-cell edge criterion", "paragraph_index": 1557, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2CCell Re-selection for NR UE for Satellite Access", "paragraph_index": 1565, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.1Introduction", "paragraph_index": 1566, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2Requirements", "paragraph_index": 1578, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2.1UE measurement capability", "paragraph_index": 1579, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2.2Measurement and evaluation of serving cell", "paragraph_index": 1586, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2.3Measurements of intra-frequency NR cells", "paragraph_index": 1605, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2.4Measurements of inter-frequency NR cells", "paragraph_index": 1655, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2.5Maximum interruption in paging reception", "paragraph_index": 1719, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2.6Minimum requirement at transitions", "paragraph_index": 1734, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2.7Measurements of intra-frequency NR cells for UE configured with relaxed measurement criterion", "paragraph_index": 1736, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2.8Measurements of inter-frequency NR cells for UE configured with relaxed measurement criterion", "paragraph_index": 1738, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2.9General requirements", "paragraph_index": 1740, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2.10Measurements of inter-frequency NR cells with TN carrier", "paragraph_index": 1742, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.2.11Measurements of inter-RAT E-UTRAN cells with TN carrier", "paragraph_index": 1805, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.3Void", "paragraph_index": 1825, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2C.4Void", "paragraph_index": 1826, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2DCell Re-selection for ATG", "paragraph_index": 1827, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2D.1Introduction", "paragraph_index": 1828, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2D.2Requirements", "paragraph_index": 1833, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2D.2.1UE measurement capability", "paragraph_index": 1834, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2D.2.2Measurement and evaluation of serving cell", "paragraph_index": 1838, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2D.2.3Measurements of intra-frequency NR cells", "paragraph_index": 1847, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2D.2.4Measurements of inter-frequency NR cells", "paragraph_index": 1865, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2D.2.5Maximum interruption in paging reception", "paragraph_index": 1898, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2D.2.6General requirements", "paragraph_index": 1900, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2ECell Re-selection for NR RedCap UE with Satellite Access", "paragraph_index": 1902, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.1Introduction", "paragraph_index": 1903, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2Requirements for RedCap UE with Satellite Access", "paragraph_index": 1915, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.1UE measurement capability for RedCap with Satellite Access", "paragraph_index": 1916, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.1.1UE measurement capability for 1Rx RedCap UEs", "paragraph_index": 1917, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.1.2UE measurement capability for 2Rx RedCap UEs", "paragraph_index": 1924, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.2Measurement and evaluation of serving cell for RedCap UEs", "paragraph_index": 1926, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.3Measurements of intra-frequency NR cells for RedCap UE", "paragraph_index": 1948, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.4Measurements of inter-frequency NR cells for RedCap UE", "paragraph_index": 1982, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "5", "title": "dB in FR1 for reselections based on ranking or", "paragraph_index": 1988, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "6", "title": "dB in FR1 for SS-RSRP reselections based on absolute priorities or", "paragraph_index": 1989, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "4", "title": "dB in FR1 for SS-RSRQ reselections based on absolute priorities", "paragraph_index": 1990, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "6", "title": "dB in FR1 for reselections based on ranking or", "paragraph_index": 1992, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "7", "title": "dB in FR1 for SS-RSRP reselections based on absolute priorities or", "paragraph_index": 1993, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "5", "title": "dB in FR1 for SS-RSRQ reselections based on absolute priorities.", "paragraph_index": 1994, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.5Maximum interruption in paging reception", "paragraph_index": 2036, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.6Minimum requirement at transitions for RedCap UE", "paragraph_index": 2045, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.7Measurements of intra-frequency NR cells for RedCap UE configured with relaxed measurement criterion", "paragraph_index": 2047, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.7.1Introduction", "paragraph_index": 2048, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.7.2Measurements for UE fulfilling low mobility criterion", "paragraph_index": 2054, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.7.3Measurements for UE fulfilling not-at-cell edge criterion", "paragraph_index": 2062, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.7.4Measurements for UE fulfilling low mobility and not-at-cell edge criteria", "paragraph_index": 2070, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.8Measurements of inter-frequency NR cells for UE configured with relaxed measurement criterion", "paragraph_index": 2076, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.8.1Introduction", "paragraph_index": 2077, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.8.2Measurements for UE fulfilling low mobility criterion", "paragraph_index": 2083, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.8.3Measurements for UE fulfilling not-at-cell edge criterion", "paragraph_index": 2092, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.8.4Measurements for UE fulfilling low mobility and not-at-cell edge criterion", "paragraph_index": 2101, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.9General requirements", "paragraph_index": 2109, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.10Measurements of inter-frequency NR cells with TN carrier", "paragraph_index": 2116, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "5", "title": "dB in FR1 for reselections based on ranking or", "paragraph_index": 2124, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "6", "title": "dB in FR1 for SS-RSRP reselections based on absolute priorities or", "paragraph_index": 2125, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "4", "title": "dB in FR1 for SS-RSRQ reselections based on absolute priorities", "paragraph_index": 2126, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "6", "title": "dB in FR1 for reselections based on ranking or", "paragraph_index": 2128, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "7", "title": "dB in FR1 for SS-RSRP reselections based on absolute priorities or", "paragraph_index": 2129, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "5", "title": "dB in FR1 for SS-RSRQ reselections based on absolute priorities.", "paragraph_index": 2130, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "5", "title": "dB in FR1 for reselections based on ranking or", "paragraph_index": 2153, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "6", "title": "dB in FR1 for SS-RSRP reselections based on absolute priorities or", "paragraph_index": 2154, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "4", "title": "dB in FR1 for SS-RSRQ reselections based on absolute priorities", "paragraph_index": 2155, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "6", "title": "dB in FR1 for reselections based on ranking or", "paragraph_index": 2157, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "7", "title": "dB in FR1 for SS-RSRP reselections based on absolute priorities or", "paragraph_index": 2158, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "5", "title": "dB in FR1 for SS-RSRQ reselections based on absolute priorities.", "paragraph_index": 2159, "style": "B20"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.2E.2.11Measurements of inter-RAT E-UTRAN cells with TN carrier", "paragraph_index": 2177, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3Minimization of Drive Tests (MDT)", "paragraph_index": 2199, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3.1Introduction", "paragraph_index": 2200, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3.2Measurement Requirements", "paragraph_index": 2207, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3.3Requirements for Relative Time Stamp Accuracy", "paragraph_index": 2221, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3.4Requirements for Relative Time Stamp Accuracy for RRC Connection Establishment Failure Log Reporting", "paragraph_index": 2224, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3.5Requirements for Relative Time Stamp Accuracy for Radio Link Failure and Handover Failure Log Reporting", "paragraph_index": 2228, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3CMinimization of Drive Tests (MDT) for Satellite Access", "paragraph_index": 2233, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3C.1Introduction", "paragraph_index": 2234, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3C.2Measurement Requirements", "paragraph_index": 2241, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3C.3Requirements for Relative Time Stamp Accuracy", "paragraph_index": 2253, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3C.4Requirements for Relative Time Stamp Accuracy for RRC Connection Establishment Failure Log Reporting", "paragraph_index": 2256, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3C.5Requirements for Relative Time Stamp Accuracy for Radio Link Failure and Handover Failure Log Reporting", "paragraph_index": 2260, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3DMinimization of Drive Tests (MDT) for NR RedCap UE with Satellite Access", "paragraph_index": 2265, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3D.1Introduction", "paragraph_index": 2266, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3D.2Measurement Requirements", "paragraph_index": 2272, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3D.3Requirements for Relative Time Stamp Accuracy", "paragraph_index": 2277, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3D.4Requirements for Relative Time Stamp Accuracy for RRC Connection Establishment Failure Log Reporting", "paragraph_index": 2279, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.3D.5Requirements for Relative Time Stamp Accuracy for Radio Link Failure and Handover Failure Log Reporting", "paragraph_index": 2281, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.4Idle Mode CA/DC Measurements", "paragraph_index": 2283, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.4.1Introduction", "paragraph_index": 2284, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.4.2Measurement Requirements", "paragraph_index": 2286, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.4.2.1Detected cell requirement during state transition and Idle mode", "paragraph_index": 2288, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.4.2.2Measurements of inter-frequency CA/DC candidate cells", "paragraph_index": 2298, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.4.2.3Measurements on serving cell", "paragraph_index": 2317, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.4.2.4Measurements of E-UTRAN inter-RAT DC candidate cells", "paragraph_index": 2319, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5NR measurements for positioning", "paragraph_index": 2328, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.1Introduction", "paragraph_index": 2329, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.2RSTD measurements", "paragraph_index": 2338, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.2.1Introduction", "paragraph_index": 2339, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.2.2Requirements Applicability", "paragraph_index": 2341, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.2.3Measurement Capability", "paragraph_index": 2344, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.2.4Measurement Reporting Requirements", "paragraph_index": 2346, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.2.5Measurements Period Requirements", "paragraph_index": 2355, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.2.6Measurements Period Requirements with Bandwidth Aggregation", "paragraph_index": 2422, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.3PRS-RSRP measurements", "paragraph_index": 2493, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.3.1Introduction", "paragraph_index": 2494, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.3.2Requirements applicability", "paragraph_index": 2496, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.3.3Measurement Capability", "paragraph_index": 2499, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.3.4Measurement Reporting Requirements", "paragraph_index": 2501, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.3.5Measurement Period Requirements", "paragraph_index": 2510, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.4PRS-RSRPP measurements", "paragraph_index": 2565, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.4.1Introduction", "paragraph_index": 2566, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.4.2Requirements Applicability", "paragraph_index": 2568, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.4.3Measurement Capability", "paragraph_index": 2571, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.4.4Measurement Reporting Requirements", "paragraph_index": 2573, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.4.5Measurement Period Requirements", "paragraph_index": 2582, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.5Measurement requirements for DL RSCPD reported with RSTD", "paragraph_index": 2584, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.5.1Introduction", "paragraph_index": 2585, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.5.2Requirements Applicability", "paragraph_index": 2587, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.5.3Measurement Capability", "paragraph_index": 2591, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.5.4Measurement Reporting Requirements", "paragraph_index": 2593, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5.5.5Measurements Period Requirements", "paragraph_index": 2602, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5AReporting Delay Requirements for DL AI/ML Positioning", "paragraph_index": 2689, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5A.1Introduction", "paragraph_index": 2690, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5A.2Measurements Period Requirements", "paragraph_index": 2700, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.5A.3Measurements Period Requirements with Bandwidth Aggregation", "paragraph_index": 2760, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6NR measurements for positioning for RedCap", "paragraph_index": 2821, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.1Introduction", "paragraph_index": 2822, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.2RSTD measurements for RedCap", "paragraph_index": 2831, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.2.1Introduction", "paragraph_index": 2832, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.2.2Requirements Applicability", "paragraph_index": 2834, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.2.3Measurement Capability", "paragraph_index": 2838, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.2.4Measurement Reporting Requirements", "paragraph_index": 2840, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.2.5Measurements Period Requirements without RX FH", "paragraph_index": 2846, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.2.6Measurement Period Requirements with RX FH", "paragraph_index": 2867, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.3PRS-RSRP measurements for RedCap", "paragraph_index": 2901, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.3.1Introduction", "paragraph_index": 2902, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.3.2Requirements applicability", "paragraph_index": 2904, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.3.3Measurement Capability", "paragraph_index": 2908, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.3.4Measurement Reporting Requirements", "paragraph_index": 2910, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.3.5Measurement Period Requirements without RX FH", "paragraph_index": 2920, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.3.6Measurement Period Requirements with RX FH", "paragraph_index": 2973, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.4PRS-RSRPP measurements for RedCap", "paragraph_index": 3010, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.4.1Introduction", "paragraph_index": 3011, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.4.2Requirements Applicability", "paragraph_index": 3013, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.4.3Measurement Capability", "paragraph_index": 3017, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.4.4Measurement Reporting Requirements", "paragraph_index": 3019, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.4.5Measurement Period Requirements without RX FH", "paragraph_index": 3029, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.6.4.6Measurement Period Requirements with RX FH", "paragraph_index": 3031, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.7Measurement report for fast CA/DC setup", "paragraph_index": 3033, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.7.1Introduction", "paragraph_index": 3034, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.7.2Void", "paragraph_index": 3041, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.7.3Measurement Report Requirements", "paragraph_index": 3042, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8IDLE mode measurement for LP-WUS operation", "paragraph_index": 3055, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.1Introduction", "paragraph_index": 3056, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "4.8.2", "title": "Requirements", "paragraph_index": 3061, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "4.8.2.1", "title": "UE Measurement Capability", "paragraph_index": 3062, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "4.8.2.1.1", "title": "LP-WUR measurement capability", "paragraph_index": 3063, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "4.8.2.1.2", "title": "MR measurement capability with LP-WUR", "paragraph_index": 3065, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.2LP-WUR Serving cell measurement and evaluation requirement", "paragraph_index": 3069, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.2.1General description", "paragraph_index": 3070, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.2.2LP-WUR measurement and evaluation requirements for PSS/SSS", "paragraph_index": 3083, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.2.3LP-WUR measurement and evaluation requirements for LP-SS", "paragraph_index": 3094, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.3Measurement and evaluation of serving cell by MR", "paragraph_index": 3106, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.3.1Requirements for evaluation of cell selection criterion", "paragraph_index": 3108, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.3.2Requirements for evaluation of LP-WUS related conditions", "paragraph_index": 3116, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.3AMeasurement and evaluation of serving cell by RedCap UE", "paragraph_index": 3124, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.3A.1Requirements for evaluation of cell selection criterion for RedCap UE", "paragraph_index": 3127, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.3A.2Requirements for evaluation of LP-WUS related conditions for RedCap UE", "paragraph_index": 3129, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "4.8.2.4", "title": "Measurements of intra-frequency NR cells for UE with LP-WUR", "paragraph_index": 3131, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.4AMeasurements of intra-frequency NR cells for RedCap UE with LP-WUR", "paragraph_index": 3144, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.5Measurements of inter-frequency NR cells for UE with LP-WUR", "paragraph_index": 3159, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.5.1Introduction", "paragraph_index": 3160, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.5.2Measurements for UE with LP-WUR fulfilling relaxed measurement criterion", "paragraph_index": 3164, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.5.3Measurements for UE with LP-WUR fulfilling serving cell measurement offloading criterion", "paragraph_index": 3177, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.5AMeasurements of inter-frequency NR cells for Redcap with LP-WUR", "paragraph_index": 3185, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.5A.1Introduction", "paragraph_index": 3186, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.5A.2Measurements for UE with LP-WUR fulfilling relaxed measurement criterion", "paragraph_index": 3190, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.5A.3Measurements for UE with LP-WUR fulfilling serving cell measurement offloading criterion", "paragraph_index": 3198, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "4.8.2.6", "title": "Measurements of inter-RAT E-UTRAN cells for UE with LP-WUR", "paragraph_index": 3203, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.6.1Introduction", "paragraph_index": 3204, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.6.2Measurements for UE fulfilling relaxed measurement criteria", "paragraph_index": 3208, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.6.3Measurements for UE fulfilling serving cell measurement offloading entry criteria", "paragraph_index": 3221, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.6AMeasurements of inter-RAT E-UTRAN cells for RedCap with LP-WUR", "paragraph_index": 3229, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.6A.1Introduction", "paragraph_index": 3230, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.6A.2Measurements for UE fulfilling relaxed measurement criteria", "paragraph_index": 3234, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "4.8.2.6A.3Measurements for UE fulfilling serving cell measurement offloading entry criteria", "paragraph_index": 3242, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5SA: RRC_INACTIVE state mobility", "paragraph_index": 3248, "style": "Heading1"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1Cell Re-selection", "paragraph_index": 3249, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.1Introduction", "paragraph_index": 3250, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2Requirements", "paragraph_index": 3253, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.1UE measurement capability", "paragraph_index": 3254, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.2Measurement and evaluation of serving cell", "paragraph_index": 3256, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.3Measurements of intra-frequency NR cells", "paragraph_index": 3281, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.4Measurements of inter-frequency NR cells", "paragraph_index": 3294, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.5Measurements of inter-RAT E-UTRAN cells", "paragraph_index": 3310, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.6Maximum interruption in paging reception", "paragraph_index": 3318, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.7General requirements", "paragraph_index": 3320, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.8Measurement of inter-frequency NR cells with NTN carrier", "paragraph_index": 3329, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.9Minimum requirement at transitions", "paragraph_index": 3331, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.10Measurements of intra-frequency NR cells for UE configured with relaxed measurement criterion", "paragraph_index": 3333, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.11Measurements of inter-frequency NR cells for UE configured with relaxed measurement criterion", "paragraph_index": 3340, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1.2.12Measurements of inter-RAT E-UTRAN cells for UE configured with relaxed measurement criterion", "paragraph_index": 3347, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1ACell Re-selection with CCA", "paragraph_index": 3352, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1A.1Introduction", "paragraph_index": 3353, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1A.2Requirements", "paragraph_index": 3356, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1A.2.1UE measurement capability", "paragraph_index": 3357, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1A.2.2Measurement and evaluation when CCA is used on the serving cell", "paragraph_index": 3359, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1A.2.3Measurements of intra-frequency NR cells when CCA is used on the serving cell and target cell", "paragraph_index": 3361, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1A.2.4Measurements of inter-frequency NR cells when CCA is used on the target cell", "paragraph_index": 3363, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1A.2.5Measurements of inter-RAT E-UTRAN cells when CCA is used on the serving cell", "paragraph_index": 3365, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1A.2.6Maximum interruption in paging reception when CCA is used on the target cell", "paragraph_index": 3367, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1A.2.7General requirements", "paragraph_index": 3369, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1BCell Re-selection for RedCap", "paragraph_index": 3371, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.1Introduction", "paragraph_index": 3372, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2Requirements", "paragraph_index": 3373, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2.1UE measurement capability", "paragraph_index": 3374, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2.2Measurement and evaluation of serving cell", "paragraph_index": 3376, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2.3Measurements of intra-frequency NR cells", "paragraph_index": 3401, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2.4Measurements of inter-frequency NR cells", "paragraph_index": 3413, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2.5Measurements of inter-RAT E-UTRAN cells", "paragraph_index": 3425, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2.6Maximum interruption in paging reception", "paragraph_index": 3433, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2.7General requirements", "paragraph_index": 3436, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2.8Minimum requirement at transitions", "paragraph_index": 3438, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2.9Measurements of intra-frequency NR cells for UE configured with relaxed measurement criterion", "paragraph_index": 3440, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2.10Measurements of inter-frequency NR cells for UE configured with relaxed measurement criterion", "paragraph_index": 3453, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1B.2.11Measurements of inter-RAT E-UTRAN cells for UE configured with relaxed measurement criterion", "paragraph_index": 3466, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1CCell Re-selection for Satellite Access", "paragraph_index": 3475, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.1Introduction", "paragraph_index": 3476, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.2Requirements", "paragraph_index": 3479, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.2.1UE measurement capability", "paragraph_index": 3480, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.2.2Measurement and evaluation of serving cell", "paragraph_index": 3482, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.2.3Measurements of intra-frequency NR cells", "paragraph_index": 3484, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.2.4Measurements of inter-frequency NR cells", "paragraph_index": 3486, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.2.5Maximum interruption in paging reception", "paragraph_index": 3488, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.2.6General requirements", "paragraph_index": 3490, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.2.7Measurements of inter-frequency NR cells with TN carrier", "paragraph_index": 3492, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.2.8Measurements of inter-RAT E-UTRAN cells with TN carrier", "paragraph_index": 3494, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.3Void", "paragraph_index": 3496, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1C.4Void", "paragraph_index": 3498, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1DCell Re-selection for ATG", "paragraph_index": 3499, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1D.1Introduction", "paragraph_index": 3500, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1D.2Requirements", "paragraph_index": 3503, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1D.2.1UE measurement capability", "paragraph_index": 3504, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1D.2.2Measurement and evaluation of serving cell", "paragraph_index": 3506, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1D.2.3Measurements of intra-frequency NR cells", "paragraph_index": 3508, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1D.2.4Measurements of inter-frequency NR cells", "paragraph_index": 3510, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1D.2.5Maximum interruption in paging reception", "paragraph_index": 3512, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1D.2.6General requirements", "paragraph_index": 3514, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1ECell Re-selection for RedCap UE with Satellite Access", "paragraph_index": 3516, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1E.1Introduction", "paragraph_index": 3517, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1E.2Requirements", "paragraph_index": 3523, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1E.2.1UE measurement capability", "paragraph_index": 3524, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1E.2.2Measurement and evaluation of serving cell", "paragraph_index": 3526, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1E.2.3Measurements of intra-frequency NR cells", "paragraph_index": 3542, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1E.2.4Measurements of inter-frequency NR cells", "paragraph_index": 3547, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1E.2.5Maximum interruption in paging reception", "paragraph_index": 3552, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1E.2.6General requirements", "paragraph_index": 3555, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1E.2.7Minimum requirement at transitions", "paragraph_index": 3560, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1E.2.8Measurements of inter-frequency NR cells with TN carrier", "paragraph_index": 3562, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.1E.2.9Measurements of inter-RAT E-UTRAN cells with TN carrier", "paragraph_index": 3564, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.2Void", "paragraph_index": 3566, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.2BConfigured Grant based Small Data Transmissions (CG-SDT) for RedCap", "paragraph_index": 3567, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.2B.1Introduction", "paragraph_index": 3568, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.2B.2Requirements on UE synchronization for small data transmissions for RedCap", "paragraph_index": 3572, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.2B.2.1Void", "paragraph_index": 3575, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.2B.3TA validation requirements for RedCap", "paragraph_index": 3576, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.2B.3.1Void", "paragraph_index": 3602, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.2B.3.2Void", "paragraph_index": 3604, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.2B.4Scheduling restriction", "paragraph_index": 3605, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.2B.5Applicability conditions for CG-SDT for RedCap", "paragraph_index": 3607, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3Minimization of Drive Tests (MDT)", "paragraph_index": 3611, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3.1Introduction", "paragraph_index": 3612, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3.2Measurement Requirements", "paragraph_index": 3619, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3.3Requirements for Relative Time Stamp Accuracy", "paragraph_index": 3621, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3.4Requirements for Relative Time Stamp Accuracy for RRC Connection Establishment Failure Log Reporting", "paragraph_index": 3623, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3.5Requirements for Relative Time Stamp Accuracy for Radio Link Failure and Handover Failure Log Reporting", "paragraph_index": 3625, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3.6Requirements for Relative Time Stamp Accuracy for RRC Resume Failure Log Reporting", "paragraph_index": 3627, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3CMinimization of Drive Tests (MDT) for Satellite Access", "paragraph_index": 3629, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3C.1Introduction", "paragraph_index": 3630, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3C.2Measurement Requirements", "paragraph_index": 3637, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3C.3Requirements for Relative Time Stamp Accuracy", "paragraph_index": 3639, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3C.4Requirements for Relative Time Stamp Accuracy for RRC Connection Establishment Failure Log Reporting", "paragraph_index": 3641, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3C.5Requirements for Relative Time Stamp Accuracy for Radio Link Failure and Handover Failure Log Reporting", "paragraph_index": 3643, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3C.6Requirements for Relative Time Stamp Accuracy for RRC Resume Failure Log Reporting", "paragraph_index": 3645, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3DMinimization of Drive Tests (MDT) for NR RedCap UE with Satellite Access", "paragraph_index": 3647, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3D.1Introduction", "paragraph_index": 3648, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3D.2Measurement Requirements", "paragraph_index": 3654, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3D.3Requirements for Relative Time Stamp Accuracy", "paragraph_index": 3656, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3D.4Requirements for Relative Time Stamp Accuracy for RRC Connection Establishment Failure Log Reporting", "paragraph_index": 3658, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3D.5Requirements for Relative Time Stamp Accuracy for Radio Link Failure and Handover Failure Log Reporting", "paragraph_index": 3660, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.3D.6Requirements for Relative Time Stamp Accuracy for RRC Resume Failure Log Reporting", "paragraph_index": 3662, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.4Inactive Mode CA/DC Measurements", "paragraph_index": 3664, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.4.1Introduction", "paragraph_index": 3665, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.4.2Measurement Requirements", "paragraph_index": 3667, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.4.2.1Detected cell requirement during state transition and inactive mode", "paragraph_index": 3669, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.4.2.2Measurements of inter-frequency CA/DC candidate cells", "paragraph_index": 3671, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.4.2.3Measurements on serving cell", "paragraph_index": 3673, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.4.2.4Measurements on E-UTRAN inter-RAT DC candidate cells", "paragraph_index": 3675, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5Configured Grant based Small Data Transmissions (CG-SDT)", "paragraph_index": 3677, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5.1Introduction", "paragraph_index": 3678, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5.2Requirements on UE synchronization for small data transmissions", "paragraph_index": 3680, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5.3TA validation requirements", "paragraph_index": 3683, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5.4Scheduling restriction", "paragraph_index": 3709, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5.4.1Scheduling availability of UE performing measurements in TDD bands on FR1", "paragraph_index": 3710, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5.4.2Scheduling availability of UE performing measurements with a different subcarrier spacing than PDSCH/PDCCH on FR1", "paragraph_index": 3715, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5.4.3Scheduling availability of UE performing measurements on FR2", "paragraph_index": 3721, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5.5Applicability conditions for SDT", "paragraph_index": 3728, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "The UE is allowed to delay the reception of PRS resources on the positioning frequency layer until the SDT session is completed if the measurement using PRS resource overlaps with the SDT resources.", "paragraph_index": 3733, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5DConfigured Grant based Small Data Transmissions (CG-SDT) for ATG", "paragraph_index": 3734, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5D.1Scheduling availability of UE performing measurements on FR1", "paragraph_index": 3736, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5EConfigured Grant based Small Data Transmissions (CG-SDT) for RedCap UEs with NTN", "paragraph_index": 3749, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5E.1Introduction", "paragraph_index": 3750, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5E.2Requirements on UE synchronization for small data transmissions", "paragraph_index": 3754, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5E.3TA validation requirements", "paragraph_index": 3757, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5E.4Scheduling restriction", "paragraph_index": 3762, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.5E.5Applicability conditions for SDT", "paragraph_index": 3764, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6NR measurements for positioning", "paragraph_index": 3768, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.1Introduction", "paragraph_index": 3769, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.1ACell re-selection for positioning", "paragraph_index": 3781, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.1A.1Measurement and evaluation of serving cell", "paragraph_index": 3792, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.1A.2Measurements of intra-frequency NR cells", "paragraph_index": 3809, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.2RSTD measurements", "paragraph_index": 3821, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.2.1Introduction", "paragraph_index": 3822, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.2.2Requirements Applicability", "paragraph_index": 3824, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.2.3Measurement Capability", "paragraph_index": 3827, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.2.5Measurements Period Requirements", "paragraph_index": 3839, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.2.6Measurements Period Requirements with Bandwidth Aggregation", "paragraph_index": 3909, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.3PRS-RSRP measurements", "paragraph_index": 3977, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.3.1Introduction", "paragraph_index": 3978, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.3.2Requirements applicability", "paragraph_index": 3980, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.3.3Measurement Capability", "paragraph_index": 3983, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.3.4Measurement Reporting Requirements", "paragraph_index": 3985, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.3.5Measurement Period Requirements", "paragraph_index": 3995, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.4UE Rx-Tx time difference measurements", "paragraph_index": 4053, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.4.1Introduction", "paragraph_index": 4054, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.4.2Requirements Applicability", "paragraph_index": 4056, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.4.3Measurement Capability", "paragraph_index": 4061, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.4.4Measurement Reporting Requirements", "paragraph_index": 4063, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.4.5Measurement Period Requirements", "paragraph_index": 4073, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.4.6Measurement Period Requirements with Bandwidth Aggregation", "paragraph_index": 4142, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.5PRS-RSRPP measurements", "paragraph_index": 4212, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.5.1Introduction", "paragraph_index": 4213, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.5.2Requirements Applicability", "paragraph_index": 4215, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.5.3Measurement Capability", "paragraph_index": 4218, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.5.4Measurement Reporting Requirements", "paragraph_index": 4220, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.5.5Measurement Period Requirements", "paragraph_index": 4230, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.6TA validation requirements for positioning", "paragraph_index": 4232, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.6.1Introduction", "paragraph_index": 4233, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.6.2TA validation requirements", "paragraph_index": 4235, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.6.3TA validation requirements when configured with validity area", "paragraph_index": 4254, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.7Measurement requirements for DL RSCPD reported with RSTD", "paragraph_index": 4277, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.7.1Introduction", "paragraph_index": 4278, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.7.2Requirements Applicability", "paragraph_index": 4280, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.7.3Measurement Capability", "paragraph_index": 4284, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.7.4Measurement Reporting Requirements", "paragraph_index": 4286, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.7.5Measurements Period Requirements", "paragraph_index": 4292, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.8Measurement requirements for DL RSCP reported with UE Rx-Tx time difference", "paragraph_index": 4340, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.8.1Introduction", "paragraph_index": 4341, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.8.2Requirements Applicability", "paragraph_index": 4343, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.8.3Measurement Capability", "paragraph_index": 4348, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.8.4Measurement Reporting Requirements", "paragraph_index": 4350, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6.8.5Measurement Period Requirements", "paragraph_index": 4362, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6ANR measurements for positioning for RedCap", "paragraph_index": 4415, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.1Introduction", "paragraph_index": 4416, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.2Cell re-selection for positioning", "paragraph_index": 4425, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.2.1Measurement and evaluation of serving cell", "paragraph_index": 4436, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.2.2Measurements of intra-frequency NR cells", "paragraph_index": 4453, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.3TA validation requirements for positioning SRS", "paragraph_index": 4465, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.3.1Introduction", "paragraph_index": 4466, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.3.2TA validation requirements", "paragraph_index": 4468, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.3.3TA validation requirements when configured with validity area", "paragraph_index": 4470, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.4RSTD measurements for RedCap", "paragraph_index": 4474, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.4.1Introduction", "paragraph_index": 4475, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.4.2Requirements applicability", "paragraph_index": 4478, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.4.3Measurement Capability", "paragraph_index": 4485, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.4.4Measurement Reporting Requirements", "paragraph_index": 4487, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.4.5Measurement Period Requirement without RX FH", "paragraph_index": 4500, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.4.6Measurement Period Requirement with RX FH", "paragraph_index": 4571, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.5PRS-RSRP measurements for RedCap", "paragraph_index": 4609, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.5.1Introduction", "paragraph_index": 4610, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.5.2Requirements applicability", "paragraph_index": 4613, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.5.3Measurement Capability", "paragraph_index": 4620, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.5.4Measurement Reporting Requirements", "paragraph_index": 4622, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.5.5Measurement Period Requirements without RX FH", "paragraph_index": 4635, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.5.6Measurement Period Requirement with RX FH", "paragraph_index": 4696, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.6UE Rx-Tx time difference measurements for RedCap", "paragraph_index": 4735, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.6.1Introduction", "paragraph_index": 4736, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.6.2Requirements Applicability", "paragraph_index": 4739, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.6.3Measurement Capability", "paragraph_index": 4748, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.6.4Measurement Reporting Requirements", "paragraph_index": 4750, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.6.5Measurement Period Requirements without RX FH", "paragraph_index": 4763, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.6.6Measurement Period Requirements with RX FH", "paragraph_index": 4778, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.7PRS-RSRPP measurements for RedCap", "paragraph_index": 4817, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.7.1Introduction", "paragraph_index": 4818, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.7.2Requirements applicability", "paragraph_index": 4821, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.7.3Measurement Capability", "paragraph_index": 4828, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.7.4Measurement Reporting Requirements", "paragraph_index": 4830, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.7.5Measurement Period Requirements without FH", "paragraph_index": 4841, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6A.7.6Measurement period requirement with FH", "paragraph_index": 4843, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6BReporting Delay Requirements for DL AI/ML Positioning", "paragraph_index": 4845, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6B.1Introduction", "paragraph_index": 4846, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6B.2Measurements Period Requirements", "paragraph_index": 4858, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.6B.3Measurements Period Requirements with Bandwidth Aggregation", "paragraph_index": 4921, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7Random access based Small Data Transmissions (RA-SDT)", "paragraph_index": 4981, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7.1Introduction", "paragraph_index": 4982, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7.2Requirements for small data transmissions based on 2-step RA", "paragraph_index": 4984, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7.3Requirements for small data transmissions based on 4-step RA", "paragraph_index": 4986, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7.4Applicability conditions for SDT", "paragraph_index": 4988, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7BRandom access based Small Data Transmissions (RA-SDT) for RedCap", "paragraph_index": 4994, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7B.1Introduction", "paragraph_index": 4995, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7B.2Requirements for small data transmissions based on 2-step RA", "paragraph_index": 4999, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7B.3Requirements for small data transmissions based on 4-step RA", "paragraph_index": 5001, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7B.4Applicability conditions for RA-SDT for RedCap", "paragraph_index": 5003, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7DRandom access based Small Data Transmissions (RA-SDT) for ATG", "paragraph_index": 5007, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7ERandom access based Small Data Transmissions (RA-SDT) for RedCap UEs with NTN", "paragraph_index": 5009, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7E.1Introduction", "paragraph_index": 5010, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7E.2Requirements for small data transmissions based on 2-step RA", "paragraph_index": 5014, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7E.3Requirements for small data transmissions based on 4-step RA", "paragraph_index": 5016, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.7E.4Applicability conditions for RA-SDT", "paragraph_index": 5018, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.8Measurement report for fast CA/DC setup", "paragraph_index": 5022, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.8.1Introduction", "paragraph_index": 5023, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.8.2Void", "paragraph_index": 5030, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.8.3Measurement Report Requirements", "paragraph_index": 5031, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.9INACTIVE mode measurement for LP-WUS operation", "paragraph_index": 5033, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.9.1Introduction", "paragraph_index": 5034, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "5.9.2", "title": "Requirements", "paragraph_index": 5039, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "5.9.2.1", "title": "UE measurement capability", "paragraph_index": 5040, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "5.9.2.1.1", "title": "LP-WUR measurement capability", "paragraph_index": 5041, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "5.9.2.1.2", "title": "MR measurement capability with LP-WUR", "paragraph_index": 5043, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.9.2.2LP-WUR serving cell measurement and evaluation requirements", "paragraph_index": 5045, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.9.2.3Measurement and evaluation of serving cell by MR", "paragraph_index": 5047, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.9.2.3AMeasurement and evaluation of serving cell by Redcap", "paragraph_index": 5049, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.9.2.4Measurements of intra-frequency NR cells for UE with LP-WUR", "paragraph_index": 5051, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.9.2.4AMeasurements of intra-frequency NR cells for RedCap UE with LP-WUR", "paragraph_index": 5053, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.9.2.5Measurements of inter-frequency NR cells for UE with LP-WUR", "paragraph_index": 5055, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.9.2.5AMeasurements of inter-frequency NR cells for Redcap with LP-WUR", "paragraph_index": 5057, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.9.2.6Measurements of inter-RAT E-UTRAN cells for UE with LP-WUR", "paragraph_index": 5060, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "5.9.2.6AMeasurements of inter-RAT E-UTRAN cells for Redcap with LP-WUR", "paragraph_index": 5062, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6RRC_CONNECTED state mobility", "paragraph_index": 5064, "style": "Heading1"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1Handover", "paragraph_index": 5065, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1NR Handover", "paragraph_index": 5066, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.1Introduction", "paragraph_index": 5067, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.2NR FR1 - NR FR1 Handover", "paragraph_index": 5075, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.2.1Handover delay", "paragraph_index": 5077, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.2.2Interruption time", "paragraph_index": 5081, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.3NR FR2- NR FR1 Handover", "paragraph_index": 5106, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.3.1Handover delay", "paragraph_index": 5108, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.3.2Interruption time", "paragraph_index": 5112, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.4NR FR2- NR FR2 Handover", "paragraph_index": 5137, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.4.1Handover delay", "paragraph_index": 5139, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.4.2Interruption time", "paragraph_index": 5143, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.5NR FR1- NR FR2 Handover", "paragraph_index": 5173, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.5.1Handover delay", "paragraph_index": 5175, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.1.5.2Interruption time", "paragraph_index": 5179, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.2NR Handover to other RATs", "paragraph_index": 5208, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.2.1NR – E-UTRAN Handover", "paragraph_index": 5209, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.2.1.1Introduction", "paragraph_index": 5210, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.2.1.2Handover delay", "paragraph_index": 5212, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.2.1.3Interruption time", "paragraph_index": 5218, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.2.2NR – UTRAN Handover", "paragraph_index": 5226, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.2.2.1Introduction", "paragraph_index": 5227, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.2.2.2Handover delay", "paragraph_index": 5229, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.2.2.3Interruption time", "paragraph_index": 5233, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.3NR DAPS Handover", "paragraph_index": 5248, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.3.1Introduction", "paragraph_index": 5249, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.3.2NR FR1 - NR FR1 DAPS Handover", "paragraph_index": 5255, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.3.2.1DAPS handover delay", "paragraph_index": 5262, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.3.2.2Interruption time", "paragraph_index": 5275, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.3.3NR FR2- NR FR1 DAPS Handover", "paragraph_index": 5297, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.3.3.1DAPS handover delay", "paragraph_index": 5302, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.3.3.2Interruption time", "paragraph_index": 5314, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.3.4NR FR1- NR FR2 DAPS Handover", "paragraph_index": 5323, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.3.4.1DAPS handover delay", "paragraph_index": 5328, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.3.4.2Interruption time", "paragraph_index": 5341, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.4NR Conditional Handover", "paragraph_index": 5350, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.4.1Introduction", "paragraph_index": 5351, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.4.2NR FR1 – NR FR1 conditional handover", "paragraph_index": 5353, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.4.2.2Measurement time", "paragraph_index": 5369, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.4.3NR FR2 – NR FR1 conditional handover", "paragraph_index": 5401, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.4.4NR FR2 – NR FR2 conditional handover", "paragraph_index": 5405, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.4.4.1Handover delay", "paragraph_index": 5407, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.4.4.2Measurement time", "paragraph_index": 5421, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.4.4.3Preparation time", "paragraph_index": 5435, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.4.4.4Interruption time", "paragraph_index": 5443, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.4.5NR FR1 – NR FR2 conditional handover", "paragraph_index": 5454, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5NR Handover with PSCell", "paragraph_index": 5458, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.1Introduction", "paragraph_index": 5459, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.2Handover with PSCell from NR SA to EN-DC", "paragraph_index": 5465, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.2.1Interruption time for inter-RAT HO from NR to E-UTRAN", "paragraph_index": 5471, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.2.2PSCell addition in HO with PSCell for NR SA to EN-DC", "paragraph_index": 5480, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.3HO with PSCell from NE-DC to NE-DC", "paragraph_index": 5491, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.3.1Handover delay", "paragraph_index": 5493, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.3.2HO with PSCell - PCell Interruption time", "paragraph_index": 5497, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.3.3PSCell addition/change in NE-DC to NE-DC HO with PSCell", "paragraph_index": 5504, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.4HO with PSCell from NR-DC to NR-DC", "paragraph_index": 5510, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.5Handover with PSCell from NR SA to EN-DC with PSCell using CCA", "paragraph_index": 5546, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.5.1Introduction", "paragraph_index": 5547, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.5.2NR SA to EN-DC HO with PSCell- NR to E-UTRA HO Interruption time", "paragraph_index": 5552, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.5.5.3NR SA to EN-DC HO with PSCell - NR PSCell Addition Delay requirements", "paragraph_index": 5562, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.6NR Conditional Handover including target MCG and target SCG", "paragraph_index": 5578, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.6.1Conditional handover including target MCG in FR1 and target SCG in FR1 in NR-DC", "paragraph_index": 5579, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.6.1.1CHO with PSCell – PCell Interruption time", "paragraph_index": 5595, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.6.1.2CHO with PSCell – PSCell change delay", "paragraph_index": 5605, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.6.2Conditional handover including target MCG in FR1 and target SCG in FR2 in NR-DC", "paragraph_index": 5618, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.6.2.2CHO with PSCell – PSCell change delay", "paragraph_index": 5644, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.7NR Conditional Handover including target MCG and candidate SCG", "paragraph_index": 5657, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.7.1Conditional handover including target MCG and candidate SCG for CPC in FR1 NR-DC", "paragraph_index": 5658, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.7.1.1PCell conditional handover delay", "paragraph_index": 5670, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.7.1.2PSCell conditional change delay", "paragraph_index": 5688, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.7.2Conditional handover including target MCG in FR1 and Candidate SCG for CPC in FR2 in NR-DC", "paragraph_index": 5704, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.7.2.1PCell handover delay", "paragraph_index": 5717, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1.7.2.2PSCell conditional change delay", "paragraph_index": 5735, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1AVoid", "paragraph_index": 5751, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1A.1Void", "paragraph_index": 5752, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1A.1.1Void", "paragraph_index": 5753, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1A.1.2Void", "paragraph_index": 5754, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1A.1.2.1Void", "paragraph_index": 5755, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1A.1.2.2Void", "paragraph_index": 5756, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1BHandover to target cell using CCA", "paragraph_index": 5757, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1B.1NR Handover", "paragraph_index": 5758, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1B.1.1Introduction", "paragraph_index": 5759, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1B.1.2NR FR1 - NR FR1 Handover", "paragraph_index": 5763, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1B.1.2.1Handover delay", "paragraph_index": 5765, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1B.1.2.2Interruption time", "paragraph_index": 5769, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1B.1.3NR FR2-2 NR FR2-2 Handover", "paragraph_index": 5782, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1B.1.3.1Handover delay", "paragraph_index": 5784, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1B.1.3.2Interruption time", "paragraph_index": 5788, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1B.1.4NR FR1- NR FR2-2 Handover", "paragraph_index": 5806, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1B.1.4.1Handover delay", "paragraph_index": 5808, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1B.1.4.2Interruption time", "paragraph_index": 5812, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1CHandover for SAN", "paragraph_index": 5830, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.1NR SAN Handover", "paragraph_index": 5831, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.1.1Introduction", "paragraph_index": 5832, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.1.2NR SAN FR1 – NR SAN FR1 Handover", "paragraph_index": 5834, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.1.2.1Handover delay", "paragraph_index": 5836, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.1.2.2Interruption time", "paragraph_index": 5842, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.1.3NR SAN FR2-NTN – NR SAN FR2-NTN Handover", "paragraph_index": 5870, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.1.3.1Handover delay", "paragraph_index": 5872, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.1.3.2Interruption time", "paragraph_index": 5876, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2NR SAN Conditional Handover", "paragraph_index": 5891, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2.1Introduction", "paragraph_index": 5892, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2.2NR SAN FR1 – NR SAN FR1 conditional handover", "paragraph_index": 5894, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2.2.1Handover delay", "paragraph_index": 5896, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2.2.2Measurement time", "paragraph_index": 5907, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2.2.3Preparation time", "paragraph_index": 5933, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2.2.4Interruption time", "paragraph_index": 5935, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2.3NR SAN FR1 – NR SAN FR1 conditional handover without L3 measurement criteria", "paragraph_index": 5946, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2.3.1Handover delay", "paragraph_index": 5948, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2.3.2Preparation time", "paragraph_index": 5960, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2.3.3Interruption time", "paragraph_index": 5962, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.2.4NR SAN FR2-NTN – NR SAN FR2-NTN conditional handover", "paragraph_index": 5974, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.3NR SAN Satellite switching with re-synchronization", "paragraph_index": 5978, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.3.1Introduction", "paragraph_index": 5979, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.3.2NR SAN FR1 – NR SAN FR1 Satellite switching with re-synchronization", "paragraph_index": 5981, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.3.2.1Satellite switching delay", "paragraph_index": 5985, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.3.2.2Interruption time for hard satellite switch with re-sync", "paragraph_index": 5989, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.3.3NR SAN FR2 – NR SAN FR2 Satellite switching with re-synchronization", "paragraph_index": 6021, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.3.3.1Satellite switching delay", "paragraph_index": 6026, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.3.3.2Interruption time for hard satellite switch with re-sync", "paragraph_index": 6030, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1C.3.3.3Satellite switch delay for soft satellite switch with re-sync", "paragraph_index": 6038, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1DHandover for RedCap", "paragraph_index": 6050, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1D.1NR Handover", "paragraph_index": 6051, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1D.1.1Introduction", "paragraph_index": 6052, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1D.1.2NR FR1 - NR FR1 Handover", "paragraph_index": 6060, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1D.1.2.1Handover delay", "paragraph_index": 6062, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1D.1.2.2Interruption time", "paragraph_index": 6066, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1D.1.3NR FR2- NR FR2 Handover", "paragraph_index": 6094, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1D.1.3.1Handover delay", "paragraph_index": 6096, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1D.1.3.2Interruption time", "paragraph_index": 6100, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1D.2NR Handover to other RATs", "paragraph_index": 6130, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1D.2.1NR – E-UTRAN Handover", "paragraph_index": 6131, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1EHandover for ATG", "paragraph_index": 6134, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.1NR Handover", "paragraph_index": 6135, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.1.1Introduction", "paragraph_index": 6136, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.1.2NR FR1 - NR FR1 Handover", "paragraph_index": 6138, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.1.2.1Handover delay", "paragraph_index": 6140, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.1.2.2Interruption time", "paragraph_index": 6144, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.2NR Conditional Handover", "paragraph_index": 6160, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.2.1Introduction", "paragraph_index": 6161, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.2.2NR FR1 – NR FR1 conditional handover", "paragraph_index": 6163, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.2.2.1Handover delay", "paragraph_index": 6165, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.2.2.2Measurement time", "paragraph_index": 6175, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.2.2.3Preparation time", "paragraph_index": 6187, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1E.2.2.4Interruption time", "paragraph_index": 6189, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1FHandover for RedCap UE with satellite access", "paragraph_index": 6191, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.1NR SAN Handover", "paragraph_index": 6192, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.1.1Introduction", "paragraph_index": 6193, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.1.2NR SAN FR1 – NR SAN FR1 Handover", "paragraph_index": 6198, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.1.2.1Handover delay", "paragraph_index": 6200, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.1.2.2Interruption time", "paragraph_index": 6204, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.2NR SAN Conditional Handover", "paragraph_index": 6214, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.2.1Introduction", "paragraph_index": 6215, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.2.2NR SAN FR1 – NR SAN FR1 conditional handover", "paragraph_index": 6217, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.2.2.1Handover delay", "paragraph_index": 6222, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.2.2.2Measurement time", "paragraph_index": 6227, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.2.2.3Preparation time", "paragraph_index": 6232, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.2.2.4Interruption time", "paragraph_index": 6234, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.2.3NR SAN FR1 – NR SAN FR1 conditional handover without L3 measurement criteria", "paragraph_index": 6236, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.2.3.1Handover delay", "paragraph_index": 6240, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.2.3.2Preparation time", "paragraph_index": 6244, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.2.3.3Interruption time", "paragraph_index": 6246, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.3NR SAN Satellite switching with re-synchronization", "paragraph_index": 6250, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.3.1Introduction", "paragraph_index": 6251, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.3.2NR SAN FR1 – NR SAN FR1 Satellite switching with re-synchronization", "paragraph_index": 6253, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.3.2.1Satellite switching delay", "paragraph_index": 6257, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.3.2.2Interruption time for hard satellite switch with re-sync", "paragraph_index": 6261, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.1F.3.2.3Satellite switch delay for soft satellite switch with re-sync", "paragraph_index": 6267, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2RRC Connection Mobility Control", "paragraph_index": 6275, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.1SA: RRC Re-establishment", "paragraph_index": 6276, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.1.1Introduction", "paragraph_index": 6277, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.1.2Requirements", "paragraph_index": 6283, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.1ARRC Re-establishment with CCA", "paragraph_index": 6312, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.1A.1Introduction", "paragraph_index": 6313, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.1A.2Requirements", "paragraph_index": 6319, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.1A.2.1UE Re-establishment with CCA delay requirement", "paragraph_index": 6324, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.1BSA: RRC Re-establishment for RedCap", "paragraph_index": 6349, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.1B.1Introduction", "paragraph_index": 6350, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.1B.2Requirements", "paragraph_index": 6355, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2Random access", "paragraph_index": 6364, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.1Introduction", "paragraph_index": 6365, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2Requirements for 4-step RA type", "paragraph_index": 6367, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.1Contention based random access", "paragraph_index": 6372, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.1.1Correct behaviour when transmitting Random Access Preamble", "paragraph_index": 6373, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.1.2Correct behaviour when receiving Random Access Response", "paragraph_index": 6377, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.1.3Correct behaviour when not receiving Random Access Response", "paragraph_index": 6380, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.1.4Correct behaviour when receiving an UL grant for msg3 retransmission", "paragraph_index": 6382, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.1.5SA: Correct behaviour when receiving a message over Temporary C-RNTI", "paragraph_index": 6384, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.1.6Correct behaviour when contention Resolution timer expires", "paragraph_index": 6387, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.2Non-Contention based random access", "paragraph_index": 6389, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.2.1Correct behaviour when transmitting Random Access Preamble", "paragraph_index": 6390, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.2.2Correct behaviour when receiving Random Access Response", "paragraph_index": 6395, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.2.3Correct behaviour when not receiving Random Access Response", "paragraph_index": 6400, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.2.3UE behaviour when configured with supplementary UL", "paragraph_index": 6402, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.3Requirements for 2-step RA type", "paragraph_index": 6404, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.3.1Contention based random access", "paragraph_index": 6409, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.3.1.1Correct behaviour when transmitting MsgA", "paragraph_index": 6410, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.3.1.2Correct behaviour when receiving MsgB", "paragraph_index": 6415, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.3.1.3Correct behaviour when not receiving MsgB", "paragraph_index": 6420, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.3.2Non-Contention based random access", "paragraph_index": 6422, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.3.2.1Correct behaviour when transmitting MsgA", "paragraph_index": 6423, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.3.2.2Correct behaviour when receiving MsgB", "paragraph_index": 6426, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.3.2.3Correct behaviour when not receiving MsgB", "paragraph_index": 6430, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2.3.3UE behaviour when configured with supplementary UL", "paragraph_index": 6432, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2ARandom access when CCA is used on target frequency", "paragraph_index": 6434, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.1Introduction", "paragraph_index": 6435, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.2Requirements for 4-step RA type", "paragraph_index": 6437, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.2.1Contention based random access", "paragraph_index": 6442, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.2.1.1Correct behaviour when transmitting Random Access Preamble", "paragraph_index": 6443, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.2.1.2Correct behaviour when receiving Random Access Response", "paragraph_index": 6448, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.2.1.3Correct behaviour when not receiving Random Access Response", "paragraph_index": 6451, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.2.1.4Correct behaviour when receiving an UL grant for msg3 retransmission", "paragraph_index": 6453, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.2.1.6Correct behaviour when contention Resolution timer expires", "paragraph_index": 6458, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.2.2Non-Contention based random access", "paragraph_index": 6460, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.2.2.1Correct behaviour when transmitting Random Access Preamble", "paragraph_index": 6461, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.2.2.2Correct behaviour when receiving Random Access Response", "paragraph_index": 6466, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.2.2.3Correct behaviour when not receiving Random Access Response", "paragraph_index": 6471, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.3Requirements for 2-step RA type", "paragraph_index": 6473, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.3.1Contention based random access", "paragraph_index": 6478, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.3.1.1Correct behaviour when transmitting MsgA", "paragraph_index": 6479, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.3.1.2Correct behaviour when receiving MsgB", "paragraph_index": 6486, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.3.1.3Correct behaviour when not receiving MsgB", "paragraph_index": 6491, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.3.2Non-Contention based random access", "paragraph_index": 6493, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.3.2.1Correct behaviour when transmitting MsgA", "paragraph_index": 6494, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.3.2.2Correct behaviour when receiving MsgB", "paragraph_index": 6499, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2A.3.2.3Correct behaviour when not receiving MsgB", "paragraph_index": 6503, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2BRandom access for RedCap", "paragraph_index": 6505, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2B.1Introduction", "paragraph_index": 6506, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2B.2Requirements", "paragraph_index": 6513, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2CPDCCH ordered Random Access for LTM", "paragraph_index": 6515, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2C.1Introduction", "paragraph_index": 6516, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.2C.2PDCCH ordered Random Access delay", "paragraph_index": 6525, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.3SA: RRC Connection Release with Redirection", "paragraph_index": 6546, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.3.1Introduction", "paragraph_index": 6547, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.3.2Requirements", "paragraph_index": 6552, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.3.2.1RRC connection release with redirection to NR", "paragraph_index": 6553, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.3.2.2RRC connection release with redirection to E-UTRAN", "paragraph_index": 6567, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.3.2.3RRC connection release with redirection to NR carrier subject to CCA", "paragraph_index": 6579, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.3ASA: RRC Connection Release with Redirection for RedCap", "paragraph_index": 6602, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.3A.1Introduction", "paragraph_index": 6603, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.3A.2Requirements", "paragraph_index": 6605, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.3A.2.1RRC connection release with redirection to NR", "paragraph_index": 6606, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2.3A.2.2RRC connection release with redirection to E-UTRAN", "paragraph_index": 6613, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2CRRC Connection Mobility Control for Satellite Access", "paragraph_index": 6615, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.1SA: RRC Re-establishment for Satellite Access", "paragraph_index": 6616, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.1.1Introduction", "paragraph_index": 6617, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.1.2Requirements", "paragraph_index": 6620, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.1.2.1UE Re-establishment delay requirement", "paragraph_index": 6625, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.1.2.2UE Re-establishment delay requirement for VSAT", "paragraph_index": 6654, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2Random access for satellite access", "paragraph_index": 6658, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.1Introduction", "paragraph_index": 6659, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2Requirements for 4-step RA type", "paragraph_index": 6661, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2.1Contention based random access", "paragraph_index": 6666, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2.1.1Correct behaviour when transmitting Random Access Preamble", "paragraph_index": 6667, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2.1.2Correct behaviour when receiving Random Access Response", "paragraph_index": 6670, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2.1.3Correct behaviour when not receiving Random Access Response", "paragraph_index": 6673, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2.1.4Correct behaviour when receiving an UL grant for msg3 retransmission", "paragraph_index": 6675, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2.1.5SA: Correct behaviour when receiving a message over Temporary C-RNTI", "paragraph_index": 6677, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2.1.6Correct behaviour when Contention Resolution Timer expires", "paragraph_index": 6680, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2.2Non-Contention based random access", "paragraph_index": 6682, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2.2.1Correct behaviour when transmitting Random Access Preamble", "paragraph_index": 6683, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2.2.2Correct behaviour when receiving Random Access Response", "paragraph_index": 6687, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.2.2.3Correct behaviour when not receiving Random Access Response", "paragraph_index": 6692, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.3Requirements for 2-step RA type", "paragraph_index": 6694, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.3.1Contention based random access", "paragraph_index": 6699, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.3.1.1Correct behaviour when transmitting MsgA", "paragraph_index": 6700, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.3.1.2Correct behaviour when receiving MsgB", "paragraph_index": 6705, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.3.1.3Correct behaviour when not receiving MsgB", "paragraph_index": 6710, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.3.2Non-Contention based random access", "paragraph_index": 6712, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.3.2.1Correct behaviour when transmitting MsgA", "paragraph_index": 6713, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.3.2.2Correct behaviour when receiving MsgB", "paragraph_index": 6716, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.2.3.2.3Correct behaviour when not receiving MsgB", "paragraph_index": 6720, "style": "Heading6"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.3SA: RRC Connection Release with Redirection for Satellite Access", "paragraph_index": 6722, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.3.1Introduction", "paragraph_index": 6723, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.3.2Requirements", "paragraph_index": 6726, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2C.3.2.1RRC connection release with redirection to NR", "paragraph_index": 6727, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2DRRC Connection Mobility Control for ATG", "paragraph_index": 6743, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.1SA: RRC Re-establishment", "paragraph_index": 6744, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.1.1Introduction", "paragraph_index": 6745, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.1.2Requirements", "paragraph_index": 6748, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.1.2.1UE Re-establishment delay requirement", "paragraph_index": 6753, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.2Random access", "paragraph_index": 6775, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.2.1Introduction", "paragraph_index": 6776, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.2.2Requirements for 4-step RA type", "paragraph_index": 6778, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.2.3Requirements for 2-step RA type", "paragraph_index": 6780, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.3SA: RRC Connection Release with Redirection", "paragraph_index": 6782, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.3.1Introduction", "paragraph_index": 6783, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.3.2Requirements", "paragraph_index": 6785, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2D.3.2.1RRC connection release with redirection to NR", "paragraph_index": 6786, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2ERRC Connection Mobility Control for RedCap UE with Satellite Access", "paragraph_index": 6799, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2E.1SA: RRC Re-establishment for RedCap UE with Satellite Access", "paragraph_index": 6800, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2E.1.1Introduction", "paragraph_index": 6801, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2E.1.2Requirements", "paragraph_index": 6807, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2E.2Random access for RedCap UE with satellite access", "paragraph_index": 6815, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2E.2.1Introduction", "paragraph_index": 6816, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2E.2.2Requirements", "paragraph_index": 6823, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2E.3SA: RRC Connection Release with Redirection for RedCap UE with Satellite Access", "paragraph_index": 6827, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2E.3.1Introduction", "paragraph_index": 6828, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2E.3.2Requirements", "paragraph_index": 6830, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.2E.3.2.1RRC connection release with redirection to NR", "paragraph_index": 6831, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3L1/L2-Triggered Mobility", "paragraph_index": 6837, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3.1LTM PCell Cell Switch", "paragraph_index": 6838, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3.1.1Introduction", "paragraph_index": 6839, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3.1.2LTM Cell Switch delay", "paragraph_index": 6881, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3.1.3Interruption time", "paragraph_index": 6889, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3.2Conditional L1/L2-Triggered Mobility", "paragraph_index": 6931, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3.2.1Introduction", "paragraph_index": 6932, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3.2.2CLTM Cell Switch delay", "paragraph_index": 6944, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3.2.2.1Measurement time", "paragraph_index": 6954, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3.2.2.2CLTM RRC processing time", "paragraph_index": 6971, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3.2.2.3Interruption time", "paragraph_index": 6985, "style": "Heading5"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "6.3.2.3Subsequent CLTM Cell Switch delay", "paragraph_index": 7015, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7Timing", "paragraph_index": 7021, "style": "Heading1"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1UE transmit timing", "paragraph_index": 7022, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1.1Introduction", "paragraph_index": 7023, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1.2Requirements", "paragraph_index": 7041, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1.2.1Gradual timing adjustment", "paragraph_index": 7061, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1.2.2Void", "paragraph_index": 7071, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1.2.3One shot large UL timing adjustment for FR2 Power Class 6 UE", "paragraph_index": 7073, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1.2.4UE transmit timing for positioning measurements", "paragraph_index": 7087, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1AUE transmit timing for RedCap", "paragraph_index": 7096, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1A.1Introduction", "paragraph_index": 7097, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1A.2Requirements", "paragraph_index": 7099, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1A.2.1Gradual timing adjustment", "paragraph_index": 7113, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1A.2.2UE transmit timing for positioning measurements", "paragraph_index": 7121, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1CUE transmit timing for Satellite Access", "paragraph_index": 7123, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1C.1Introduction", "paragraph_index": 7124, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1C.2Requirements", "paragraph_index": 7126, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1C.2.1Gradual timing adjustment", "paragraph_index": 7150, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1DUE transmit timing for ATG", "paragraph_index": 7159, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1D.1Introduction", "paragraph_index": 7160, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1D.2Requirements", "paragraph_index": 7162, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1D.2.1Gradual timing adjustment", "paragraph_index": 7173, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1EUE transmit timing for RedCap with Satellite Access", "paragraph_index": 7181, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1E.1Introduction", "paragraph_index": 7182, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1E.2Requirements", "paragraph_index": 7184, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.1E.2.1Gradual timing adjustment", "paragraph_index": 7189, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2UE timer accuracy", "paragraph_index": 7191, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2.1Introduction", "paragraph_index": 7192, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2.2Requirements", "paragraph_index": 7194, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2AUE timer accuracy for RedCap", "paragraph_index": 7201, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2A.1Introduction", "paragraph_index": 7202, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2A.2Requirements", "paragraph_index": 7204, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2CUE timer accuracy for satellite access", "paragraph_index": 7211, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2C.1Introduction", "paragraph_index": 7212, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2C.2Requirements", "paragraph_index": 7214, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2DUE timer accuracy for ATG", "paragraph_index": 7222, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2D.1Introduction", "paragraph_index": 7223, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2D.2Requirements", "paragraph_index": 7225, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2EUE timer accuracy for RedCap with Satellite Access", "paragraph_index": 7232, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2E.1Introduction", "paragraph_index": 7233, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.2E.2Requirements", "paragraph_index": 7235, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3Timing advance", "paragraph_index": 7237, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3.1Introduction", "paragraph_index": 7238, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3.2Requirements", "paragraph_index": 7240, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3.2.1Timing Advance adjustment delay", "paragraph_index": 7241, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3.2.2Timing Advance adjustment accuracy", "paragraph_index": 7243, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3ATiming Advance for RedCap", "paragraph_index": 7247, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3A.1Introduction", "paragraph_index": 7248, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3A.2Requirements", "paragraph_index": 7250, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3A.2.1Timing Advance adjustment delay", "paragraph_index": 7251, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3A.2.2Timing Advance adjustment accuracy", "paragraph_index": 7253, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3CTiming advance for satellite access", "paragraph_index": 7257, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3C.1Introduction", "paragraph_index": 7258, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3C.2Requirements", "paragraph_index": 7260, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3C.2.1Timing Advance adjustment delay", "paragraph_index": 7261, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3C.2.2Timing Advance adjustment accuracy", "paragraph_index": 7263, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3DTiming advance for ATG", "paragraph_index": 7269, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3D.1Introduction", "paragraph_index": 7270, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3D.2Requirements", "paragraph_index": 7272, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3D.2.1Timing Advance adjustment delay", "paragraph_index": 7273, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3D.2.2Timing Advance adjustment accuracy", "paragraph_index": 7275, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3ETiming advance for RedCap with Satellite Access", "paragraph_index": 7279, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3E.1Introduction", "paragraph_index": 7280, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3E.2Requirements", "paragraph_index": 7282, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3E.2.1Timing Advance adjustment delay", "paragraph_index": 7283, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.3E.2.2Timing Advance adjustment accuracy", "paragraph_index": 7285, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.4Cell phase synchronization accuracy", "paragraph_index": 7287, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.4.1Definition", "paragraph_index": 7288, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.4.2Minimum requirements", "paragraph_index": 7290, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.5Maximum Transmission Timing Difference", "paragraph_index": 7292, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.5.1Introduction", "paragraph_index": 7293, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.5.2Minimum requirements for inter-band EN-DC", "paragraph_index": 7301, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.5.2.1Minimum requirements for inter-band synchronous EN-DC", "paragraph_index": 7306, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.5.3Minimum requirements for intra-band EN-DC", "paragraph_index": 7324, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.5.4Minimum requirements for NR Carrier Aggregation", "paragraph_index": 7330, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.5.5Minimum requirements for inter-band NE-DC", "paragraph_index": 7346, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.5.5.1Minimum requirements for inter-band synchronous NE-DC", "paragraph_index": 7351, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.5.6Minimum requirements for inter-band NR-DC", "paragraph_index": 7357, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.5.7Minimum requirements for multi-TRP", "paragraph_index": 7364, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6Maximum Receive Timing Difference", "paragraph_index": 7372, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6.1Introduction", "paragraph_index": 7373, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6.2Minimum requirements for inter-band EN-DC", "paragraph_index": 7385, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6.2.1Minimum requirements for inter-band synchronous EN-DC", "paragraph_index": 7391, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6.3Minimum requirements for intra-band EN-DC", "paragraph_index": 7409, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6.4Minimum requirements for NR Carrier Aggregation", "paragraph_index": 7416, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6.5Minimum requirements for inter-band NE-DC", "paragraph_index": 7437, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6.5.1Minimum requirements for inter-band synchronous NE-DC", "paragraph_index": 7442, "style": "Heading4"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6.6Minimum requirements for inter-band NR-DC", "paragraph_index": 7448, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6.7Minimum requirements for PC6 UE in FR2", "paragraph_index": 7458, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6.8Minimum requirements for Multi-TRPs", "paragraph_index": 7462, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6DMaximum Receive Timing Difference for ATG UE", "paragraph_index": 7473, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6D.1Introduction", "paragraph_index": 7474, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.6D.2Minimum requirements for NR Carrier Aggregation", "paragraph_index": 7476, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.7deriveSSB-IndexFromCell tolerance", "paragraph_index": 7480, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.7.1Minimum requirements", "paragraph_index": 7481, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.7AderiveSSB-IndexFromCell tolerance for RedCap", "paragraph_index": 7489, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.7A.1Minimum requirements", "paragraph_index": 7490, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.7DDeriveSSB-IndexFromCell tolerance for ATG", "paragraph_index": 7492, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.7D.1Minimum requirements", "paragraph_index": 7493, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.8Void", "paragraph_index": 7496, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.9deriveSSB-IndexFromCellInter-r17 tolerance", "paragraph_index": 7497, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.9.1Minimum requirements", "paragraph_index": 7498, "style": "Heading3"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.9DDeriveSSB-IndexFromCellInter-r17 tolerance for ATG", "paragraph_index": 7500, "style": "Heading2"}
+{"source": "38133-j50_s0-7.docx", "section": "", "title": "7.9D.1Minimum requirements", "paragraph_index": 7501, "style": "Heading3"}

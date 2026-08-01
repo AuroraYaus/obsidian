@@ -1,0 +1,16 @@
+E-UTRA band,Rx Parameter,Units,Channel bandwidth,,,,,,,
+,,,1.4 MHz,3 MHz,,5 MHz,10 MHz,15 MHz,,20 MHz
+46,Power in Transmission Bandwidth Configuration,dBm,REFSENS + channel bandwidth specific value below,,,,,,,
+,,,,,,,6,,,9
+,PInterferer 1(CW),dBm,-46,,,,,,,
+,PInterferer 2(Modulated),dBm,-46,,,,,,,
+,BWInterferer 2,,,,,,20,,,20
+,FInterferer 1(Offset),MHz,,,,,-BW/2-30/+BW/2+30,,,-BW/2 – 30/+BW/2 + 30
+,FInterferer 2(Offset),MHz,2*FInterferer 1,,,,,,,
+49,Power in Transmission Bandwidth Configuration,dBm,,,,,6,,,6
+,PInterferer 1(CW),dBm,-46,,,,,,,
+,PInterferer 2(Modulated),dBm,-46,,,,,,,
+,BWInterferer 2,MHz,,,,,10,,,20
+,FInterferer 1(Offset),MHz,,,,,-BW/2-15/+BW/2+15,,,-BW/2 – 30/+BW/2 + 30
+,FInterferer 2(Offset),MHz,2*FInterferer 1,,,,,,,
+NOTE 1:The transmitter shall be set to 4dB below PCMAX_L at the minimum uplink configuration specified in Table 7.3.1-2 with PCMAX_L as defined in subclause 6.2.5.NOTE 2:Reference measurement channel is specified in Annex A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD/FS3 as described in Annex A.5.1.1/A.5.2.1/A.5.4.1.NOTE 3:The modulated interferer consists of the Reference measurement channel specified in Annex A.3.2 with one sided dynamic OCNG Pattern OP.1 FDD/TDD as described in Annex A.5.1.1/A.5.2.1.,,,,,,,,,,

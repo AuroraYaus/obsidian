@@ -1,0 +1,45 @@
+Parameter,,Unit,Test 1,
+,,,Cell 1,Cell 2
+E-UTRA RF Channel Number,,,1,2
+BWchannel,,MHz,10,10
+Gap Pattern Id,,,0,-
+Antenna Configuration,,,1x2,1x2
+Time offset between cell 2 and cell 1,,s,3,
+Measurement bandwidth,,,22-27,
+PDSCH Reference measurement channel defined in A.3.1.1.1,,,R.0 FDD,-
+PDSCH allocation,,,-,-
+PDCCH/PCFICH/PHICH Reference measurement channel defined in A.3.1.2.1,,,R.6 FDD,-
+OCNG Patterns defined in A.3.2.1.1 (OP.1 FDD),,,OP.1 FDD,-
+PBCH_RA,,dB,0,0
+PBCH_RB,,,,0
+PSS_RA,,,,0
+SSS_RA,,,,0
+PCFICH_RB,,,,-∞
+PHICH_RA,,,,-∞
+PHICH_RB,,,,-∞
+PDCCH_RA,,,,-∞
+PDCCH_RB,,,,-∞
+PDSCH_RA,,,,-∞
+PDSCH_RB,,,,-∞
+OCNG_RANote1,,,,-∞
+OCNG_RBNote1,,,,-∞
+Note2,"Symbols with CRS, PSS, SSS or PBCH",dBm/15 kHz,-103.85,-103.85
+,All the other symbols,,-94.75,-94.75
+,,dB,-3,-3
+RSRPNote3,,dBm/15 kHz,-106.85,-106.85
+RSRQNote3,Subframe 0,dB,-14.54,-14.54
+,Subframes other than 0,,-14.14,-14.14
+New RSRQNote3,Subframe 0,dB,-19.57,-19.57
+,Subframe 5,,-20.93,-20.93
+,Subframe other than 0 or 5,,-21.66,-21.66
+Io in subframe 0Note3,Symbol 0/4/11,dBm/ 9 MHz,-75.72,-75.72
+,Symbol 1/2/3/12/13,,-66.97,-66.97
+,Symbol 5/6/8/9/10,,-75.81,-75.81
+,Symbol 7,,-75.52,-75.52
+Io in subframe 5Note3,Symbol 0/4/7/11,dBm/ 9 MHz,-75.72,-75.72
+,Symbol 1/2/3/8/9/10/12/13,,-66.97,-66.97
+,Symbol 5/6,,-75.81,-75.81
+Io in subframes other than 0 or 5 Note3,Symbol 0/4/7/11,dBm/ 9 MHz,-75.72,-75.72
+,Symbol 1/2/3/5/6/8/9/10/12/13,,-66.97,-66.97
+Propagation condition,,-,AWGN,
+"Note 1: OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2: Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3: RSRQ, RSRP, new RSRQ and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. The new RSRQ values assume RSSI averaging over all OFDM symbols of the subframe.Note 4: RSRP and RSRQ minimum requirements are specified assuming independent interference and noise at each receiver antenna port.",,,,

@@ -1,0 +1,6 @@
+Field,Value,Comment
+onDurationTimer,pp1,As specified in clause 6.3.2 in TS 36.331
+drx-InactivityTimer,pp0,
+drx-RetransmissionTimer,pp0,
+longDRX-CycleStartOffset,Sf256,
+shortDRX,disable,

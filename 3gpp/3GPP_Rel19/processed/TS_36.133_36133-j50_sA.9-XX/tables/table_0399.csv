@@ -1,0 +1,10 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,1,TDD carrier in Band 47 is used.
+Channel Bandwidth (BWchannel),MHz,10,
+Active cell,,None,
+Active SyncRef UE,,SyncRef UE 1,Transmitting SLSS+MIB-SL on RF channel number 1
+V2X sidelink Communication preconfiguration,,As specified in Table A.3.24.2-1(Configuration #1),IE values unless specified otherwise in this test.
+syncTxThreshOoC,dBm/15 kHz,-100,
+T1,s,3,
+T2,s,5.24,
+T3,s,5.24,

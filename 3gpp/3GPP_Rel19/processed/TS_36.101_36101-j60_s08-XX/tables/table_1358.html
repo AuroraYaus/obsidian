@@ -1,0 +1,159 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td colspan="2">Test 1</td>
+    <td colspan="2">Test 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Bandwidth</td>
+    <td>MHz</td>
+    <td colspan="4">10</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH transmission mode</td>
+    <td></td>
+    <td colspan="4">9</td>
+  </tr>
+  <tr>
+    <td colspan="2">Uplink downlink configuration</td>
+    <td></td>
+    <td colspan="4">2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Special subframe configuration</td>
+    <td></td>
+    <td colspan="4">4</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td colspan="4">0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td colspan="4">0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td colspan="4">-6</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td colspan="4">-3</td>
+  </tr>
+  <tr>
+    <td colspan="2">CRS reference signals</td>
+    <td></td>
+    <td colspan="4">Antenna ports 0, 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI reference signals</td>
+    <td></td>
+    <td colspan="4">Antenna ports 15,…,22</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS</td>
+    <td></td>
+    <td colspan="4">5/ 3</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI reference signal configuration</td>
+    <td></td>
+    <td colspan="4">0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation condition and antenna configuration</td>
+    <td></td>
+    <td colspan="4">Clause B.1 (8 x 4)</td>
+  </tr>
+  <tr>
+    <td colspan="2">Beamforming Model</td>
+    <td></td>
+    <td colspan="4">As specified in Section B.4.3</td>
+  </tr>
+  <tr>
+    <td colspan="2">CodeBookSubsetRestriction bitmap</td>
+    <td></td>
+    <td colspan="4">0x0000 0000 0020 0000 0000 0001 0000</td>
+  </tr>
+  <tr>
+    <td colspan="2">SNR (Note 2)</td>
+    <td>dB</td>
+    <td>2</td>
+    <td>3</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td>-96</td>
+    <td>-95</td>
+    <td>-90</td>
+    <td>-89</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td colspan="2">-98</td>
+    <td colspan="2">-98</td>
+  </tr>
+  <tr>
+    <td colspan="2">Max number of HARQ transmissions</td>
+    <td></td>
+    <td colspan="4">1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Physical channel for CQI/PMI reporting</td>
+    <td></td>
+    <td colspan="4">PUSCH (Note 3)</td>
+  </tr>
+  <tr>
+    <td colspan="2">PUCCH Report Type for CQI/second PMI</td>
+    <td></td>
+    <td colspan="4">2b</td>
+  </tr>
+  <tr>
+    <td colspan="2">Physical channel for RI reporting</td>
+    <td></td>
+    <td colspan="4">PUSCH</td>
+  </tr>
+  <tr>
+    <td colspan="2">PUCCH Report Type for RI/ first PMI</td>
+    <td></td>
+    <td colspan="4">5</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting periodicity</td>
+    <td>ms</td>
+    <td colspan="4">Npd = 5</td>
+  </tr>
+  <tr>
+    <td colspan="2">CQI delay</td>
+    <td>ms</td>
+    <td colspan="4">10 or 11</td>
+  </tr>
+  <tr>
+    <td colspan="2">cqi-pmi-ConfigurationIndex</td>
+    <td></td>
+    <td colspan="4">3</td>
+  </tr>
+  <tr>
+    <td colspan="2">ri-ConfigIndex</td>
+    <td></td>
+    <td colspan="4">805 (Note 4)</td>
+  </tr>
+  <tr>
+    <td colspan="2">ACK/NACK feedback mode</td>
+    <td></td>
+    <td colspan="4">Multiplexing</td>
+  </tr>
+  <tr>
+    <td colspan="7">Note 1:Reference measurement channel RC.7 TDD according to Table A.4-1 with one sided dynamic OCNG Pattern OP.1 TDD as described in Annex A.5.2.1.Note 2:For each test, the minimum requirements shall be fulfilled for at least one of the two SNR(s) and the respective wanted signal input level.Note 3:To avoid collisions between CQI/PMI reports and HARQ-ACK it is necessary to report both on PUSCH instead of PUCCH. PDCCH DCI format 0 shall be transmitted in downlink SF#3 and #8 to allow periodic CQI/PMI to multiplex with the HARQ-ACK on PUSCH in uplink SF#7 and #2.Note 4:RI reporting interval is set to the maximum allowable length of 160ms to minimise collisions between RI, CQI/PMI and HARQ-ACK reports. In the case when all three reports collide, it is expected that CQI/PMI reports will be dropped, while RI and HARQ-ACK will be multiplexed. At eNB, CQI report collection shall be skipped every 160ms during performance verification.</td>
+  </tr>
+</table>

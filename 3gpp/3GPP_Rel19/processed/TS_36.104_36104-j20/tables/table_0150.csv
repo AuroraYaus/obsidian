@@ -1,0 +1,3 @@
+NB-IoTchannel bandwidth of the lowest/highest carrier received [kHz],Wanted signal mean power [dBm],Interfering signal mean power [dBm],Interfering signal centre frequency offset to the lower/upper Base Station RF Bandwidth edge or sub-block edge inside a sub-block gap [kHz],Type of interfering signal
+200,PREFSENS + 19.5dB (Note),-44,±100,180 kHz NB-IoT signal
+Note:PREFSENS depends on the sub-carrier spacing as specified in Table 7.2.1-5a.,,,,

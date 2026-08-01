@@ -1,0 +1,7 @@
+,,Level,,,,
+Parameter,Unit,100 MHz,400 MHz,800 MHz,1600 MHz,2000 MHz
+UE EIRP,dBm,-13,-11,-8,-5,-4
+UE EIRP for UL 16 QAM,dBm,-10,-8,-5,-2,-1
+UE EIRP for UL 64 QAM,dBm,-6,-4,-1,2,3
+Operating conditions,Normal Conditions,,,,,
+NOTE 1:PTRS is configured for 16 QAM and 64 QAM,,,,,,

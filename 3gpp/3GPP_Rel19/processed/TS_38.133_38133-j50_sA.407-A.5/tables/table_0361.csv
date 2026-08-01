@@ -1,0 +1,5 @@
+Parameter,Unit,Config,Cell 2,,Cell 3,
+,,,T1,T2,T1,T2
+Intial BWP configuration,,1~4,DLBWP.0.1ULBWP.0.1,,-,
+Active DL BWP configuration,,1~4,DLBWP.1.5,,-,
+Active UL BWP configuration,,1~4,ULBWP.1.5,,-,

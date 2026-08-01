@@ -1,0 +1,31 @@
+Parameter,,Unit,Test 1
+Duplex mode,,,TDD
+TDD Configuration,,,TDDConf.1.1 CCA
+BWchannel,,MHz,"40: NPRB,c = 106"
+DL CCA model,,,As specified in clause A.3.26.2.1
+"DL CCA probability for semi-static channel accessNote6,8",PCCA,,0.75
+"DL CCA probability for dynamic channel accessNote7,8",PCCA_DL_1,,0.75
+,PCCA_DL_2,,0.75
+"SSB configuration for semi-static channel accessNote6,8",,,SSB.1 CCA
+"SSB configuration for dynamic channel accessNote7,8",,,SSB.2 CCA
+SMTC configuration,,,SMTC.1
+DBT window configuration,,,DBT.1
+OCNG Patterns,,,OP.1
+EPRE ratio of PSS to SSS,,dB,0
+EPRE ratio of PBCH DMRS to SSS,,,
+EPRE ratio of PBCH to PBCH DMRS,,,
+EPRE ratio of PDCCH DMRS to SSS,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,
+EPRE ratio of PDSCH DMRS to SSS,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,,
+EPRE ratio of OCNG DMRS to SSSNote 1,,,
+EPRE ratio of OCNG to OCNG DMRS Note 1,,,
+Noc Note2,,dBm/15 kHz,-104
+Noc Note2,,dBm/SSB SCS,-101
+Ês/Iot,,dB,-3
+Ês/Noc,,dB,-3
+SS-RSRP Note3,,dBm/SCS,-104
+Io Note3,,dBm/38.16 MHz,-68.18
+Propagation condition,,,AWGN
+Antenna configuration,,,1x2
+"NOTE 1:OCNG shall be used such that the cell is fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols in slots with downlink transmission bursts. For cells with CCA model, OCNG is transmitted only in the slots with downlink transmission burst and is not transmitted during the muted slots or during DBT window.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 3:SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4:SS-RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.NOTE 5: The test configuration excludes support for band n51 and it is not required to run this test on band n51 in this release of the specificationNOTE 6:For UE supporting semi-static channel access and network configuring semi-static channel occupancy.NOTE 7:For UE supporting dynamic channel access and network configuring dynamic channel occupancy.NOTE 8:For UE supporting both semi-static and dynamic cannel access, the UE must be tested under both dynamic and semi-static channel occupancy configurations.",,,

@@ -1,0 +1,14 @@
+Parameter,Unit,Cell 2 (UTRA TDD),,,,
+Timeslot Number,,0,,,DwPTS,
+,,T1,,T2,T1,T2
+UTRA RF Channel NumberNote1,,Channel 1,,,,
+P-CCPCH_Ec/Ior,dB,-4.77,,-4.77,,
+DwPCH_Ec/Ior,dB,,,,0,0
+OCNS_Ec/IorNote2,dB,-1.76,,-1.76,,
+,dB,-inf,,8,-inf,8
+,dBm/1.28 MHz,-80,,,,
+P-CCPCH RSCP Note3,dBm,-inf,-76.77,,n.a.,n.a.
+P-CCPCH_Ec/Io Note3,dB,-inf,-5.41,,n.a.,n.a.
+DwPCH_Ec/Io Note3,dB,n.a.,n.a.,,-inf,-0.64
+Propagation Condition,,AWGN,,,,
+"Note 1:In the case of multi-frequency cell, the UTRA RF Channel Number is the primary frequency’s channel number.Note 2:The power of the OCNS channel that is added shall make the total power from the cell to be equal to Ior.Note 3:P-CCPCH RSRP, PCCPCH_Ec/Io and DwPCH_Ec/Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.",,,,,,

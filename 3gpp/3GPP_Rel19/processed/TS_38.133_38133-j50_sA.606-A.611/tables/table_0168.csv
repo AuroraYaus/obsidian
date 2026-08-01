@@ -1,0 +1,16 @@
+Parameter,Unit,Test configuration,Neighbour cell UE,
+,,,T1,T2
+Note 2,dBm/15 kHz,1,-98,
+,,2,,
+Note 2,dBm/SCS,1,-98,
+,,2,-95,
+,dB,1,-infinity,4
+,,2,,
+,dB,1,-infinity,4
+,,2,,
+SRS-RSRP Note 3,dBm/SCS kHz,1,-infinity,-94
+,,2,-infinity,-91
+Io,dBm/9.36 MHz,1,-70.05,-64.59
+,dBm/38.16 MHz,2,-63.96,-58.50
+Propagation Condition,,"1, 2",AWGN,
+NOTE 1:The resources for uplink transmission are assigned to the UE prior to the start of time period T2.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 3:SRS-RSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,

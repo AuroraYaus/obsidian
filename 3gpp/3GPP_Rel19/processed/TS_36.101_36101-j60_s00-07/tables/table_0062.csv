@@ -1,0 +1,13 @@
+Modulation,CA bandwidth Class D,,,,,MPR (dB)
+,50 RB + 75 RB + 100RB,50 RB + 100 RB + 100 RB,75 RB + 75 RB + 100 RB,75 RB + 100 RB + 100 RB,100 RB + 100 RB + 100 RB,
+QPSK,> 12 and ≤ 50,> 12 and ≤ 50,> 16 and ≤ 75,> 16 and ≤ 75,> 18 and ≤ 100,≤ 1
+QPSK,> 50 and ≤ 125,> 50 and ≤ 150,> 75 and ≤ 150,> 75 and ≤ 175,> 100 and ≤ 200,≤ 2
+QPSK,> 125,> 150,> 150,> 175,> 200,≤ 3
+16 QAM,≤ 12,≤ 12,≤ 16,≤ 16,≤ 18,≤ 1
+16 QAM,> 12 and ≤ 50,> 12 and ≤ 50,> 16 and ≤ 75,> 16 and ≤ 75,> 18 and ≤ 100,≤ 2
+16 QAM,> 50 and ≤ 125,> 50 and ≤ 150,> 75 and ≤ 150,> 75 and ≤ 175,> 100 and ≤ 200,≤ 3
+16 QAM,> 125,> 150,> 150,>175,> 200,≤ 3.5
+64 QAM,≤ 12 allocation wholly contained within a single CC,≤ 12 and allocation wholly contained within a single CC,≤ 16 and allocation wholly contained within a single CC,≤ 16 and allocation wholly contained within a single CC,≤ 18 and allocation wholly contained within a single CC,≤ 2
+64 QAM,> 12 allocation wholly contained within a single CC or allocation extends across two CC’s,> 12 allocation wholly contained within a single CC or allocation extends across two CC’s,> 16 allocation wholly contained within a single CC or allocation extends across two CC’s,> 16 allocation wholly contained within a single CC or allocation extends across two CC’s,> 18 allocation wholly contained within a single CC or allocation extends across two CC’s,≤ 3
+64 QAM,allocation extends across three CC’s,allocation extends across three CC’s,allocation extends across three CC’s,allocation extends across three CC’s,allocation extends across three CC’s,≤ 4.0
+256 QAM,≥ 1,,,,,≤ 5.5

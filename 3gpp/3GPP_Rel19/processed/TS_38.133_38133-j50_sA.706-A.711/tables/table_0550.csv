@@ -1,0 +1,32 @@
+Parameter,Config,Unit,Test 1,Test 2
+SSB ARFCN,1,,freq1,freq1
+Duplex mode,1,,TDD,TDD
+TDD Configuration,1,,TDDConf.3.1,TDDConf.3.1
+BWchannel,1,MHz,"100: NPRB,c = 66","100: NPRB,c = 66"
+PDSCH Reference measurement channel,1,,SR.3.1 TDD,SR.3.1 TDD
+RMSI CORESET Reference Channel,1,,CR.3.1 TDD,CR.3.1 TDD
+Dedicated CORESET Reference Channel,1,,CCR.3.1 TDD,CCR.3.1 TDD
+SSB configuration,1,,SSB.1 FR2,SSB.1 FR2
+OCNG Patterns,1,,OP.1,OP.1
+Initial BWP Configuration,1,,DLBWP.0.1ULBWP.0.1,DLBWP.0.1ULBWP.0.1
+Dedicated BWP configuration,1,,DLBWP.1.1ULBWP.1.1,DLBWP.1.1ULBWP.1.1
+TRS Configuration,1,,TRS.2.1 TDD,TRS.2.1 TDD
+PDCCH/PDSCH TCI Configuration,1,,TCI.State.2,TCI.State.2
+SMTC configuration,1,,SMTC.1,SMTC.1
+CSI-RS resource sets,1,,TBD,TBD
+reportConfigType,1,,periodic,periodic
+reportQuantity,1,,cri-RSRP,cri-RSRP
+Number of reported RS,1,,2,2
+L1-RSRP reporting period,1,,slot80,slot80
+Propagation condition,1,,AWGN,AWGN
+Antenna configuration,1,,1x2,1x2
+EPRE ratio of PSS to SSS,1,dB,0,0
+EPRE ratio of PBCH DMRS to SSS,,,,
+EPRE ratio of PBCH to PBCH DMRS,,,,
+EPRE ratio of PDCCH DMRS to SSS,,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,,
+EPRE ratio of PDSCH DMRS to SSS,,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,,,
+EPRE ratio of OCNG DMRS to SSSNote 1,,,,
+EPRE ratio of OCNG to OCNG DMRS Note 1,,,,
+NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.,,,,

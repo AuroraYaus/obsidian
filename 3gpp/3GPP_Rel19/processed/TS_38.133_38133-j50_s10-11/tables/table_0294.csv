@@ -1,0 +1,8 @@
+Reported value,Measured quantity value,Unit
+RSSI_00,RSSI < 100,dBm
+RSSI_01,-100  RSSI < 99,dBm
+RSSI_02,-99  RSSI < 98,dBm
+…,…,…
+RSSI_74,-27  RSSI < -26,dBm
+RSSI_75,-26  RSSI < -25,dBm
+RSSI_76,-25  RSSI,dBm

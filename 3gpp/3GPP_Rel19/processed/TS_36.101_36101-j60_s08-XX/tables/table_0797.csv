@@ -1,0 +1,10 @@
+Parameter,,Unit,
+Downlink power allocation,,dB,-6
+,,dB,-6 (Note 1)
+,,dB,0
+at antenna port,,dBm/15kHz,-98
+Cell-specific reference signals,,,"Antenna Ports 0,1,2,3"
+PDSCH transmission mode,,,3
+PDSCH rank,,,3
+CodeBookSubsetRestriction bitmap,,,0100
+Note 1:.,,,

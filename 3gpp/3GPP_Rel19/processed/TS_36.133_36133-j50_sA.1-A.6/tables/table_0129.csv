@@ -1,0 +1,10 @@
+Parameter,Unit,Test 1
+Interval between adjacent epoch time,s,"LEO: 2.56GEO, GSO: 10.24"
+ntn-UlSyncValidityDuration,s,"LEO: 5sGEO, GSO: 900s"
+k-Offset-r17,ms,"LEO: 14GEO, GSO: 258"
+kmac,ms,Not configured
+ta-Common,,0
+ta-CommonDrift,,0
+ta-CommonDriftVariant,,0
+ephemerisInfo,,According to Annex B.8
+ta-Report,,Not configured

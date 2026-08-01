@@ -1,0 +1,6 @@
+Number of TX antennas,Number of demodulation branches,Cyclic Prefix,Propagation conditions and correlation matrix,Number of PRBs,Additional DM-RS configuration,Channel bandwidth / SNR (dB)
+,,,(annex G),,,400 MHz
+1,2,Normal,TDLA10-650 Low,1,No additional DM-RS,3.6
+,,,,,Additional DM-RS,[-3.4]
+1,2,Normal,TDLA10-650 Low,16,No additional DM-RS,-9.1
+,,,,,Additional DM-RS,[-9.0]

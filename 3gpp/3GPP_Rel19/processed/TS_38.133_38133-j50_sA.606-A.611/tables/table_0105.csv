@@ -1,0 +1,5 @@
+Parameter,Unit,Test configuration,Value,Comment
+T2,ms,"Config 1,2,3",1100,T2=T2_1+T2_2+delta. T2 starts with T2_1 followed directly by T2_2.
+T2_1,ms,"Config 1,2,3",600,"Corresponds to TPSS/SSS_sync_inter for Lcancel,PSS/SSS=5."
+T2_2,ms,"Config 1,2,3",440,"Corresponds to TSSB_measurement_period_inter for Lcancel,meas=3."
+"NOTE:Config 1, 2, 3 are defined in table A.6.6.2.1.1-1 in clause A.6.6.2.1.1.",,,,

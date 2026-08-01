@@ -1,0 +1,11 @@
+Parameter,Unit,Value,,,
+NPDCCH Reference channel,-,R.42 HD-FDD,R.43 HD-FDD,R.44 HD-FDD,R.45 HD-FDD
+LTE Carrier bandwidth,MHz,5,5,5,5
+Allocated resource blocks for NB-ioTNote1,PRB,1,1,1,1
+Number of transmitter antennas,-,1,2,1,2
+DCI Format,-,N1,N1,N0,N0
+Aggregation level,NCCE,2,2,2,2
+Maximum number of repetitions,-,Note 2,Note 2,Note 2,Note 2
+Payload (without CRC),Bits,Note 3,Note 3,Note 3,Note 3
+Cell ID,-,Note 4,Note 4,Note 4,Note 4
+Note 1:Allocation is located in the middle of narrowband.Note 2:Maximum number of repetitions shall depend upon the test configuration.Note 3:Payload size shall depend upon the test configuration.Note 4:Cell ID shall depend upon the test configuration.,,,,,

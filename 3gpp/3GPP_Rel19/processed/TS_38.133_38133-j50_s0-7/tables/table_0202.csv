@@ -1,0 +1,5 @@
+,NR Slot length (ms),Interruption length X (slotsNote 1),Tinterrupt2 (slotsNote 1) for asynchronous DAPS HO
+0,1,1,2
+1,0.5,2,3
+2,0.25,4,5
+NOTE 1:The same SCS of source cell and target cell is assumed.NOTE 2:It is assumed that the BWP of target cell is the same as the BWP of source cell.NOTE 3:Void,,,

@@ -1,0 +1,8 @@
+Number of Tx antennas,Number of RX antennas,Cyclic Prefix,Propagation Conditions and correlation matrix (Annex B),Channel Bandwidth / SNR [dB],,,,,
+,,,,1.4MHz,3MHz,5MHz,10 MHz,15MHz,20MHz
+1,2,Normal,EPA 5 Low,-,-,-,-3.7,-3.8,-3.8
+,,,EVA70 Low,-,-,-,-3.5,-3.6,-3.7
+,4,Normal,EPA 5 Low,-,-,-,-7.3,-7.4,-7.5
+,,,EVA70 Low,-,-,-,-7.2,-7.3,-7.3
+,8,Normal,EPA 5 Low,-,-,-,-11.1,-10.9,-11.1
+,,,EVA70 Low,-,-,-,-10.9,-11.0,-11.0

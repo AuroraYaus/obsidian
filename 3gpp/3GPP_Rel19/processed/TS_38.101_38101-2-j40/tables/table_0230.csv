@@ -1,0 +1,5 @@
+Operating band,Units,Adjacent channel selectivity / CA bandwidth class
+,,All CA bandwidth class
+"n257, n258, n261",dB,23
+"n259, n260, n262",dB,22
+n263,dB,21for BWChannel_CA ≤ 400 MHz.20 for BWChannel_CA > 400 MHz.

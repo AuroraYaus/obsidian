@@ -1,0 +1,17 @@
+Operating Band,3MHz(dB),5MHz(dB),7MHz(dB),10MHz(dB),15MHz(dB),20MHz(dB),25MHz(dB),30 MHz (dB),35 MHz (dB),40MHz(dB),45 MHz (dB),50MHz(dB)
+n1,,0,,0,0,0,0,0,-,0,0,0
+n2,,1.2,,1.2,1.3,1.2,1.2,5.84,6.04,6.54,,
+n3,,1.4,,1.5,1.5,1.5,1.6,1.7,2.8,54,5.54,6.04
+n5,1.1,1.1,1.1,1.2,1.4,4.54,6.14,,,,,
+n7,,0.9,,1.0,1.0,1.0,1.1,1.1,1.1,1.1,,5.34
+n8,,1.3,,1.4,2.14,5.84,6.14,6.54,7.04,,,
+n13,,1.2,,1.3,,,,,,,,
+n14,,1.1,,1.3,,,,,,,,
+n25,,1.5,,1.5,1.6,1.6,1.7,6.04,6.24,6.74,7.14,
+n26,1.1,1.1,1.1,1.2,1.4,5.24,6.14,6.54,,,,
+n28,1.1,1.1,,1.1,1.3,3.04,6.64,7.94,,8.24,,
+n66,,0,,0,0,0,0,0,0,0,0,
+n71,,1.1,,1.1,1.7,5.54,6.94,"6.22,47.23,4","6.52,47.33,4",,,
+n70,,0,,0,0,0,0,,,,,
+n85,1.2,1.2,,1.4,6.44,,,,,,,
+NOTE 1:The transmitter shall be set to PUMAX as defined in clause 6.2G.4NOTE 2:Applies to UEs that support a maximum uplink BW of 20 MHz and to UEs that support a maximum uplink BW of 25MHz in this band.NOTE 3:Applies to UEs that support optional symmetric UL/DL for this BW.NOTE 4:The requirement shall be met with uplink transmission bandwidth equal to but not less than that specified in Table 7.3.2-3.,,,,,,,,,,,,

@@ -1,0 +1,8 @@
+Config,Description
+1,"LTE FDD, NR 15 kHz SSB and CSI-RS SCS, 10 MHz bandwidth, FDD duplex mode"
+2,"LTE FDD, NR 15 kHz SSB and CSI-RS SCS, 10 MHz bandwidth, TDD duplex mode"
+3,"LTE FDD, NR 30 kHz SSB and CSI-RS SCS, 40 MHz bandwidth, TDD duplex mode"
+4,"LTE TDD, NR 15 kHz SSB and CSI-RS SCS, 10 MHz bandwidth, FDD duplex mode"
+5,"LTE TDD, NR 15 kHz SSB and CSI-RS SCS, 10 MHz bandwidth, TDD duplex mode"
+6,"LTE TDD, NR 30 kHz SSB and CSI-RS SCS, 40 MHz bandwidth, TDD duplex mode"
+NOTE:The UE is only required to be tested in one of the supported test configurations,

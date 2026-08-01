@@ -1,0 +1,5 @@
+Parameter,Angle of arrival,NR operating band,Minimum SSB_RP or LS-SS_RP,,SSB or LP-SS Ês/Iot
+,,,dBm / SCSSSB,,dB
+,,,SCSSSB = 60 kHz,SCSSSB = 120 kHz,
+Conditions,Rx Beam Peak,NR operating bands in Table 5.2-1 in [19],--77.3 + xNote 1,-.80.5 + xNote 1,-3
+NOTE 1:X is specified for UE power class 3 and 7 in Table 7.3M.2-1 in [19],,,,,

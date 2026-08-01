@@ -1,0 +1,35 @@
+Parameter,,Unit,Cell 1,Cell 2,Cell 3
+Number of PDCCH symbols,,symbols,1 (Note 1),2,2
+EPDCCH starting symbol,,symbols,2 (Note 1),N/A,N/A
+PHICH duration,,,Normal,Normal,Normal
+Unused RE-s and PRB-s,,,OCNG,N/A,N/A
+Cell ID,,,0,1,6
+Downlink power allocation,,dB,0,-3,-3
+,,dB,0,-3,-3
+,,dB,-3,0,0
+,δ,dB,0,0,0
+Cell-specific reference signals,,,"Antenna ports 0,1","Antenna ports 0,1","Antenna ports 0,1"
+at antenna port,,dBm/15kHz,-98,,
+,,dB,N/A,13.91,3.34
+BWChannel,,MHz,10,10,10
+Cyclic Prefix,,,Normal,Normal,Normal
+Subframe Configuration,,,Non-MBSFN,Non-MBSFN,Non-MBSFN
+EPDCCH Precoder Update Granularity,,PRB,1,N/A,N/A
+,,ms,1,N/A,N/A
+EPDCCH Beamforming Pre-Coder,,,Annex B. 4.5,N/A,N/A
+CSI-RS Reference Signal,,,Port 15 and 16,N/A,N/A
+CSI-RS reference signal resource configuration,,,0,N/A,N/A
+CSI reference signal subframe configuration ICSI-RS,,,2,N/A,N/A
+ZP-CSI-RS configuration bitmap,,,0000010000000000,N/A,N/A
+ZP-CSI-RS subframe configuration IZP-CSI-RS,,,2,N/A,N/A
+Number of EPDCCH Sets,,,1,N/A,N/A
+EPDCCH Set type,,,Localized,N/A,N/A
+Number of PRB per EPDCCH Set,,,8,N/A,N/A
+EPDCCH Set PRBs,,,"0, 7, 14, 21, 28, 35, 42, 49",N/A,N/A
+PDSCH TM,,,TM9,N/A,N/A
+Interference model,,,N/A,As specified in clause B.6.5,As specified in clause B.6.5
+Time offset to cell 1,,s,N/A,2,3
+Frequency offset to cell 1,,Hz,N/A,200,300
+TDD UL/DL Configuration,,,0,0,0
+TDD Special Subframe,,,1 (Note 4),1,1
+Note 1:The starting symbol for EPDCCH is signalled with epdcch-StartSymbol-r11. CFI is set to 1.Note 2:EPDCCH is scheduled in every subframe. EPDCCH Subframe Monitoring pattern is not configured.Note 3:Demodulation performance is averaged over normal and special subframes.,,,,,

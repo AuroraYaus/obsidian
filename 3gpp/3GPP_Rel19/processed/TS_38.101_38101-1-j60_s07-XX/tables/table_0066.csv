@@ -1,0 +1,9 @@
+Operating band / SCS / Channel bandwidth / REFSENS,,,,
+Operating band,SCSkHz,Channel bandwidth (MHz),REFSENS (dBm)1,Duplex Mode
+n46,15,"20, 40",-89.2 + 10log10(NRB/105),HD
+,30,"20, 40, 60, 80, 100",-89.4 + 10log10(NRB/50),
+,60,"20, 40, 60, 80, 100",-89.6 + 10log10(NRB/24),
+"n96, n102",15,"20, 40",-88.7 + 10log10(NRB/105),HD
+,30,"20, 40, 60, 80, 100",-88.9 + 10log10(NRB/50),
+,60,"20, 40, 60, 80, 100",-89.1 + 10log10(NRB/24),
+NOTE 1:The REFSENS value is rounded to the nearest number down to one decimal point. “NRB” in REFSENS formula is the maximum transmission bandwidth configuration as defined in Table 7.3E.2F.2-3,,,,

@@ -1,0 +1,3 @@
+Test number,Bandwidth and MCS,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category
+,,,,,,Fraction of MaximumThroughput (%),SNR (dB),
+1,10 MHz16QAM 1/2,R.11 TDD,OP.1 TDD,EVA5,"2x8 Medium correlation B, ULA",70,1.4,≥2

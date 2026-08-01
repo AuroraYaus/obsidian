@@ -1,0 +1,3 @@
+Parameter,Unit,Cell1,Cell2,Cell3
+Io Note1,dBm/18 MHz,-67.03,-67.00,-67.00
+"Note 1:Io level has been derived from other parameters for information purposes. It is not settable parameter itself. Io values are derived in the case that there is no PBCH, PSS or SSS in the OFDM symbols carrying PRSNote 2:See Table A.9.8.5.1-2 for other cell specific test parameters.",,,,

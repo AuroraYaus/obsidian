@@ -1,0 +1,28 @@
+,,nCell 1,,,nCell 2,,
+,,T1,T2,T3,T1,T2,T3
+BWchannel,kHz,180,,,180,,
+PRB location within nrCell,,2Note3,,,2Note3,,
+NPBCH_RA,dB,0,,,0,,
+NPBCH_RB,dB,,,,,,
+NPSS_RA,dB,,,,,,
+NSSS_RA,dB,,,,,,
+NPDCCH_RA,dB,,,,,,
+NPDCCH_RB,dB,,,,,,
+NPDSCH_RA,dB,,,,,,
+NPDSCH_RB,dB,,,,,,
+NOCNG_RANote 1,dB,,,,,,
+NOCNG_RBNote 1,dB,,,,,,
+Qrxlevmin,dBm,-140,,,-140,,
+Pcompensation,dB,0,,,0,,
+Qhysts,dB,0,,,0,,
+"Qoffsets, n",dB,0,,,0,,
+Cell_selection_and_reselection_quality_measurement,,NRSRP,,,NRSRP,,
+,dBm/15 kHz,Specified in Table A.13.1.1.8.1-4,,,,,
+,dB,17,13,17,-infinity,17,13
+Note2,dB,17,13,17,-infinity,17,13
+NRSRP Note2,dBm/15 kHz,-81,-85,-81,-infinity,-81,-85
+Treselection,s,0,,,0,,
+Propagation Condition,,AWGN,,,AWGN,,
+Antenna Configuration,,1x1,,,1x1,,
+Timing offset to nCell 1,ms,0,,,,,
+Note 1:NOCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Es/Iot and NRSRP levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 3:NB-IoT PRB location does not overlap with the PRBs allocated to the SSB of the NTN NR channel.,,,,,,,

@@ -1,0 +1,12 @@
+Parameter,Config,Unit,SSB#0,,,,,
+,,,T1,T2,T3,T4,T5,T6
+Note1,"1, 2, 3, 4",dBm/15 kHz,-100,,,,,
+Note1,"1, 2, 4",dBm/SSB SCS,-100,,,,,
+,3,dBm/SSB SCS,-97,,,,,
+,"1, 2, 3, 4",dB,0,12,0,14,14,0
+SS RSRP Note2,"1, 2, 4",dBm/SSB SCS,-100,-88,-100,-86,-86,-100
+,3,dBm/SSB SCS,-97,-85,-97,-83,-83,-97
+Io Note2,"1, 2, 4",dBm/ 9.36 MHz,-69.04,-59.78,-69.04,-57.88,-57.88,-69.04
+,3,dBm/ 18.36 MHz,-66.11,-56.86,-66.11,-54.95,-54.95,-66.11
+,"1, 2, 3, 4",dB,0,12,0,14,14,0
+NOTE 1:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.NOTE 2: SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.,,,,,,,,

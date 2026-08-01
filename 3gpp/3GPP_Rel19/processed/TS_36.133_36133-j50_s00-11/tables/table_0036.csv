@@ -1,0 +1,24 @@
+Parameter,Unit,Cell 1,Cell 2
+EARFCN Note1,,Channel 1,Channel 2
+CSG indicator,,False,True
+Physical cell identityNote1,,1,2
+CSG identity,,Not sent,Sent(Already stored in UE allow-list from previous visit)
+Propagation conditions,,"Static, non multipath",
+CSG cell previously visited by UE,,Yes,
+PBCH_RA,dB,0,0
+PBCH_RB,dB,,
+PSS_RA,dB,,
+SSS_RA,dB,,
+PCFICH_RB,dB,,
+PHICH_RA,dB,,
+PHICH_RB,dB,,
+PDCCH_RA,dB,,
+PDCCH_RB,dB,,
+PDSCH_RA,dB,,
+PDSCH_RB,dB,,
+OCNG_RANote 1,dB,,
+OCNG_RBNote 1,dB,,
+Qrxlevmin,dBm,-140,-140
+,dBm/15 kHz,Off,
+RSRP Note2,dBm/15 KHz,-110,-110
+"Note 1:For this requirement to be applicable, the EARFCN and physical cell identity for cell 1 and cell 2 shall be unchanged from when the CSG cell was visited previouslyNote 2:Chosen to ensure that CSG autonomous search has a high probability of success on every attempt made by UE",,,

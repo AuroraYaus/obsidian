@@ -1,0 +1,3 @@
+Configuration,TEvaluate_BFD_CSI-RS Relax (ms)
+"Max(TDRX, TCSI-RS) ≤ 80 ms","Max(50  K4, Ceil(K2 × 1.5 × MBFD  P N  PBFD)  Max(TDRX, TCSI-RS))"
+"NOTE 1:TCSI-RS is the periodicity of CSI-RS resource in the set . TDRX is the DRX cycle length and no longer than 80 ms.NOTE 2:K2 is the relaxation factor. K2 = 2 NOTE 3:K4 is the relaxation factor for the lower bound. K4 = K2, if 1 < K2 ≤ 2; K4 = 1 otherwise.",

@@ -1,0 +1,7 @@
+Attribute,Value
+DCI format,1C
+Number of control OFDM symbols,2; Bandwidth  10 MHz3; 3 MHz  Bandwidth  10 MHz4; Bandwidth = 1.4 MHz
+Aggregation level (CCE),4
+Ratio of PDCCH RE energy to average RS RE energy,0 dB; when single antenna port is used for cell-specific reference signal transmission by the PCell or PSCell.-3 dB; when two or four antenna ports are used for cell-specific reference signal transmission by the PCell or PSCell.
+Ratio of PCFICH RE energy to average RS RE energy,4 dB; when single antenna port is used for cell-specific reference signal transmission by the PCell or PSCell.1 dB; when two or four antenna ports are used for cell-specific reference signal transmission by the PCell or PSCell.
+Note 1:DCI format 1C is defined in clause 5.3.3.1.4 in TS 36.212 [21].Note 2:A hypothetical PCFICH transmission corresponding to the number of control symbols shall be assumed.,

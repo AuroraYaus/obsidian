@@ -1,0 +1,142 @@
+<table>
+  <tr>
+    <td>Parameter</td>
+    <td>Unit</td>
+    <td>Test configuration</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td>Reference cell</td>
+    <td></td>
+    <td>1</td>
+    <td>Cell 1</td>
+    <td>Reference cell is the cell in the DL-TDOA assistance data with respect to which the RSTD measurement is defined, as specified in TS 38.215 [4] and TS 37.355 [34]. The reference cell is the PCell in this test case.</td>
+  </tr>
+  <tr>
+    <td>Neighbour cells</td>
+    <td></td>
+    <td>1</td>
+    <td>Cell 2 and Cell 3</td>
+    <td>Cell 2 and Cell 3 appear at the first and second places in the neighbour cell list in the DL-TDOA assistance data.</td>
+  </tr>
+  <tr>
+    <td>RF Channel Number</td>
+    <td></td>
+    <td>1</td>
+    <td>1</td>
+    <td>For Cell 1, Cell 2 and Cell 3</td>
+  </tr>
+  <tr>
+    <td>BWchannel</td>
+    <td>MHz</td>
+    <td>1</td>
+    <td>100: NRB,c = 66</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>SSB configuration</td>
+    <td></td>
+    <td>1</td>
+    <td>SSB.3 FR2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>SMTC configuration</td>
+    <td></td>
+    <td>1</td>
+    <td>SMTC.1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>CP length</td>
+    <td></td>
+    <td>1</td>
+    <td>Normal</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>DRX</td>
+    <td>s</td>
+    <td>1</td>
+    <td>0.64</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>eDRX cycle length (for both RAN and CN)</td>
+    <td>s</td>
+    <td>1</td>
+    <td>40.96</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>PTW length (for both RAN and CN)</td>
+    <td>s</td>
+    <td>1</td>
+    <td>1.28</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Reporting periodicity</td>
+    <td>s</td>
+    <td>1</td>
+    <td>20</td>
+    <td>reportingInterval for periodic reporting defined in TS 37.355 [34].</td>
+  </tr>
+  <tr>
+    <td>Time offset between serving and neighbour cells</td>
+    <td>s</td>
+    <td>1</td>
+    <td>Cell 2 to Cell 1: 0Cell 3 to Cell 1: 3</td>
+    <td>Synchronous cells</td>
+  </tr>
+  <tr>
+    <td>Expected RSTD</td>
+    <td>s</td>
+    <td>1</td>
+    <td>Cell 2: 3Cell 3: 3Other neighbour cells: randomly between -3 and 3</td>
+    <td>The expected RSTD is what is expected at the receiver. The corresponding parameter in the DL-TDOA assistance data specified in TS 37.355 [34] is the expectedRSTD indicator</td>
+  </tr>
+  <tr>
+    <td>Expected RSTD uncertainty</td>
+    <td>s</td>
+    <td>1</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Number of cells provided in DL-TDOA assistance data</td>
+    <td></td>
+    <td>1</td>
+    <td>3</td>
+    <td>Including the reference cell</td>
+  </tr>
+  <tr>
+    <td>PRS muting info</td>
+    <td></td>
+    <td>1</td>
+    <td>Cell 1: ‘10’Cell 2: ‘01’Cell 3: ‘10’</td>
+    <td>Correponds to NR-MutingPattern-r16 in DL-PRS-MutingOption1-r16 defined in TS 37.355 [34]</td>
+  </tr>
+  <tr>
+    <td>PRS resource RE offset</td>
+    <td></td>
+    <td>1</td>
+    <td>Cell 1: 0Cell 2: 0Cell 3: 1</td>
+    <td>Cell 1 and Cell 3 are configured with different resource offsets</td>
+  </tr>
+  <tr>
+    <td>T1</td>
+    <td>s</td>
+    <td>1</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>T2</td>
+    <td>s</td>
+    <td>1</td>
+    <td>41</td>
+    <td></td>
+  </tr>
+</table>

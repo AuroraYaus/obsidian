@@ -1,0 +1,7 @@
+Accuracy,,Conditions,,,
+Normal condition,Extreme condition,SSB Ês/Iot,Io Note 2 range,,
+,,,Minimum Io,,Maximum Io
+dB,dB,dB,dBm / SCSSSB Note 1,,dBm/BWChannel
+,,,SCSSSB = 120 kHz,SCSSSB = 240 kHz,
+7,10,≥-4,"Same value as SSB_RP derived from annex B.2.18, according to UE VSAT type",,-50
+"NOTE 1:Values based on EIS as defined in clause 10.3 of TS 38.101-5 [42]. Applicable side condition selected depending on angle of arrival.NOTE 2:Io specified at the Reference point, and assumed to have constant EPRE across the bandwidth.NOTE 3:In the test cases, the SSB Ês/Iot and related parameters may need to be adjusted to ensure Ês/Iot at UE baseband is above the value defined in this table.NOTE 4:The parameter SSB Ês/Iot is the minimum SSB Ês/Iot of the pair of cells to which the requirement applies.",,,,,

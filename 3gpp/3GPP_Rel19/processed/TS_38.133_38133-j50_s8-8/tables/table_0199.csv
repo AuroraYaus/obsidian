@@ -1,0 +1,15 @@
+Attribute,Value for BLER
+Channel BW,3 MHz
+[DL Transmission BW],15 PRBs
+DCI format,1-0
+Number of control OFDM symbols,3
+Aggregation level (CCE),8 Note 1
+Ratio of hypothetical PDCCH RE energy to average SSS RE energy,0 dB
+Ratio of hypothetical PDCCH DMRS energy to average SSS RE energy,0 dB
+Bandwidth (PRBs),15
+Sub-carrier spacing (kHz),Same as the SCS of RMSI CORESET
+DMRS precoder granularity,REG bundle size
+REG bundle size,6
+CP length,Normal
+Mapping from REG to CCE,Non-DistributedNote2
+"NOTE 1:PDCCH puncturing as defined in TS 38.214 [26] applies.NOTE 2:For 15PRB Transmission BW, distributed mapping may lead to unexpected beam failure detection.",

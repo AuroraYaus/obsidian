@@ -1,0 +1,3 @@
+E-UTRAchannel bandwidth [MHz],Wanted signal mean power [dBm],Interfering signal mean power [dBm],Interfering signal centre frequency [MHz],Type of interfering signal
+10,PREFSENS + 22dB*,+3,"701.5, 707.5",5MHz E-UTRA signal
+"Note*:PREFSENS depends on the channel bandwidth as specified in TS 36.104 [2] clause 7.2.1.Note**:Refer to TS 36.141, E-UTRA Test Mode 1.1 (E-TM1.1) The interfering signal shall be applied to the receiver antenna respectively.",,,,

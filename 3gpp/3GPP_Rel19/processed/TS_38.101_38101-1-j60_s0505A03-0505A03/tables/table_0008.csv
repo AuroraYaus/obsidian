@@ -1,0 +1,197 @@
+NR CA configuration,Uplink CA configuration or single uplink carrier10,NR Band,Channel bandwidth (MHz) (NOTE 3),Bandwidth combination set
+CA_n26A-n28A,CA_n26A-n28A16,n26,"5, 10, 15, 20",0
+,,n28,"5, 10, 15, 20",
+,,n26,"5, 10, 15, 20, 25, 30",1
+,,n28,"5, 10, 15, 20, 25, 30",
+CA_n26A-n29A,-,n26,"5, 10, 15, 20, 25, 30",0
+,,n29,"5, 10",
+CA_n26A-n48A,CA_n26A-n48A,n26,"5, 10, 15, 20, 25, 30",0
+,,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",
+CA_n26A-n48(2A),CA_n26A-n48A,n26,"5, 10, 15, 20, 25, 30",0
+,,n48,CA_n48(2A)_BCS0,
+CA_n26A-n66A,CA_n26A-n66A,n26,"5, 10, 15, 20",0
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+CA_n26A-n66(2A),CA_n26A-n66A,n26,"5, 10, 15, 20",0
+,,n66,CA_n66(2A)_BCS0,
+CA_n26A-n66(3A),-,n26,"5, 10, 15, 20",0
+,,n66,CA_n66(3A)_BCS0,
+CA_n26A-n70A,CA_n26A-n70A,n26,"5, 10, 15, 20",0
+,,n70,"5, 10, 15, 201, 251",
+CA_n26A-n71A,-,n26,"5, 10, 15, 20",0
+,,n71,"5, 10, 15, 20",
+CA_n26A-n77A,CA_n26A-n77A,n26,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+CA_n26A-n78A,"n268n788,9CA_n26A-n78A8,13,14",n26,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+CA_n26A-n78C,"n268n788,9CA_n26A-n78A8,13,14CA_n78C8",n26,"5, 10, 15, 20",0
+,,n78,CA_n78C_BCS0,
+CA_n26A-n78(A-C),CA_n78CCA_n26A-n78A,n26,"5, 10, 15, 20, 25, 30",0
+,,n78,CA_n78(A-C)_BCS1,
+CA_n26(2A)-n78A,"n268n788,9CA_n26(2A)CA_n26A-n78A8,13,14",n26,CA_n26(2A)_BCS0,0
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+CA_n26(2A)-n78C,"n268n788,9CA_n26A-n78A8,13,14CA_n26(2A)CA_n78C8",n26,CA_n26(2A)_BCS0,0
+,,n78,CA_n78C_BCS0,
+CA_n26A-n78(2A),"n268n788,9CA_n26A-n78A8,13,14CA_n78(2A)8",n26,"5, 10, 15, 20, 25, 30",0
+,,n78,CA_n78(2A)_BCS0,
+,CA_n78(2A),n26,n26 channel bandwidths in Table 5.3.5-1,4 and 5
+,"CA_n26A-n78A8,13,14",n78,CA_n78(2A)_BCS4 and 5,
+CA_n26(2A)-n78(2A),"n268n788,9CA_n26(2A)CA_n78(2A)8CA_n26A-n78A8,13,14",n26,CA_n26(2A)_BCS0,0
+,,n78,CA_n78(2A)_BCS0,
+CA_n26(2A)-n78(A-C),CA_n26(2A)CA_n26A-n78ACA_n78C,n26,CA_n26(2A)_BCS0,0
+,,n78,CA_n78(A-C)_BCS1,
+CA_n28A-n34A,"n348,9CA_n28A-n34A8",n28,"5, 10, 15, 20, 30",0
+,,n34,"5, 10, 15",
+CA_n28A-n38A,-,n28,"5, 10, 15, 20, 30",0
+,,n38,"5, 10, 15, 20, 25, 30, 40",
+CA_n28A-n39A,n398CA_n28A-n39A8,n28,"5, 10, 15, 20, 30",0
+,,n39,"5, 10, 15, 20, 25, 30, 40",
+,,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n39,See n39 channel bandwidths in Table 5.3.5-1,
+CA_n28A-n40A,"n408,9CA_n28A-n40A8",n28,"5, 10, 15, 20",0
+,,n40,"5, 10, 15, 20, 25, 30, 40, 50, 60, 80",
+,,n28,"5, 10, 15, 20, 25, 30",1
+,,n40,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n40,See n40 channel bandwidths in Table 5.3.5-1,
+CA_n28A-n40B,-,n28,"5, 10, 15, 20",0
+,,n40,CA_n40B_BCS0,
+,,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n40,CA_n40B_BCS4 and 5,
+CA_n28A-n41A,"n418,9CA_n28A-n41A8,13,14",n28,"5, 10, 15, 20",0
+,,n41,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n28,"5, 10, 15, 20, 30",1
+,,n41,"10, 15, 20, 30, 40, 50, 60, 80, 90, 100",
+,,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n41,See n41 channel bandwidths in Table 5.3.5-1,
+CA_n28A-n41(2A),CA_n41(2A)CA_n28A-n41A,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n41,CA_n41(2A)_BCS4 and 5,
+CA_n28A-n41B,CA_n28A-n41A,n28,"5, 10",0
+,,n41,CA_n41B_BCS0,
+CA_n28A-n41C,"n418,9CA_n41C8CA_n28A-n41A8,13,14",n28,"5, 10, 15, 20, 30",0
+,,n41,CA_n41C_BCS1,
+,"n418,9CA_n41C8CA_n28A-n41A8,13,14CA_n28A-n41C",n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n41,CA_n41C_BCS4 and 5,
+CA_n28A-n46A,CA_n28A-n46A,n28,"5, 10, 15, 20",0
+,,n46,"20, 40, 60, 80",
+CA_n28A-n46C,CA_n28A-n46A,n28,"5, 10, 15, 20",0
+,,n46,CA_n46C_BCS0,
+CA_n28A-n46D,CA_n28A-n46A,n28,"5, 10, 15, 20",0
+,,n46,CA_n46D_BCS0,
+CA_n28A-n46(2A),CA_n28A-n46A,n28,"5, 10, 15, 20",0
+,,n46,CA_n46(2A)_BCS0,
+CA_n28A-n50A,CA_n28A-n50A,n28,"5, 10, 15, 20",0
+,,n50,"5, 10, 15, 20, 40, 50, 60, 801",
+CA_n28A-n67A18,-,n28,n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n67,n67 channel bandwidths in Table 5.3.5-1,
+CA_n28A-n71A,-,n28,"5, 10, 15, 20, 30",0
+,,n71,"5, 10, 15, 20",
+CA_n28A-n74A,CA_n28A-n74A,n28,"5, 10, 15, 20, 30",0
+,,n74,"5, 10, 15, 20",
+CA_n28A-n75A23,-,n28,"5, 10, 15, 20",0
+,,n75,"5, 10, 15, 20",
+,,n28,"5, 10, 15, 20",1
+,,n75,"5, 10, 15, 20, 25, 30, 40, 50",
+,,n28,"5, 10, 15, 20, 25, 30",2
+,,n75,"5, 10, 15, 20, 25, 30, 40, 50",
+,,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n75,See n75 channel bandwidths in Table 5.3.5-1,
+CA_n28A-n77A,"n778,9CA_n28A-n77A8",n28,"5, 10, 15, 20",0
+,,n77,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n28,"5, 10, 15, 20, 25, 30",1
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n77,See n77 channel bandwidths in Table 5.3.5-1,
+CA_n28A-n77C,CA_n28A-n77A,n28,"5, 10, 15, 20",0
+,,n77,CA_n77C_BCS1,
+CA_n28A-n77(2A),"n778,9CA_n77(2A)8CA_n28A-n77A8",n28,"5, 10, 15, 20",0
+,,n77,CA_n77(2A)_BCS0,
+,,n28,"5, 10, 15, 20, 25, 30",1
+,,n77,CA_n77(2A)_BCS1,
+,,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n77,CA_n77(2A)_BCS4 and 5,
+CA_n28A-n77(3A),"n778,9CA_n77(2A)8CA_n28A-n77A8",n28,"5, 10",0
+,,n77,CA_n77(3A)_BCS0,
+,,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n77,CA_n77(3A)_BCS4 and 5,
+CA_n28A-n78A,"n788,9CA_n28A-n78A8,13,14",n28,"5, 10, 15, 20",0
+,,n78,"10, 15, 20, 40, 50, 60, 80, 90, 100",
+,,n28,"5, 10, 15, 20, 30",1
+,,n78,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n78,See n78 channel bandwidths in Table 5.3.5-1,
+CA_n28A-n78C,"n788,9CA_n28A-n78A8,13,14CA_n78C8",n28,"5, 10, 15, 20",0
+,,n78,CA_n78C_BCS1,
+CA_n28A-n78(2A),"n788,9CA_n78(2A)8CA_n28A-n78A8,13, 14",n28,"5, 10, 15, 20",0
+,,n78,CA_n78(2A)_BCS0,
+,,n28,"5, 10, 15, 20",1
+,,n78,CA_n78(2A)_BCS2,
+,,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n78,CA_n78(2A)_BCS4 and 5,
+CA_n28A-n78(A-C),CA_n28A-n78ACA_n78C,n28,"5, 10, 15, 20, 25, 30",0
+,,n78,CA_n78(A-C)_BCS1,
+CA_n28A-n79A,"n798,9CA_n28A-n79A8,13,14",n28,"5, 10, 15, 20, 30",0
+,,n79,"40, 50, 60, 80, 100",
+,,n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n79,See n79 channel bandwidths in Table 5.3.5-1,
+CA_n28A-n79C,"n798,9CA_n79C8",n28,"5, 10, 15, 20, 30",0
+,,n79,CA_n79C_BCS0,
+,"n798,9CA_n79C8CA_n28A-n79A8CA_n28A-n79C",n28,See n28 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n79,CA_n79C_BCS4 and 5,
+CA_n28A-n94A,-,n28,"5, 10, 15, 20",0
+,,n94,"5, 10, 15, 20",
+CA_n28A-n102A,CA_n28A-n102A,n28,"5, 10, 15, 20, 25, 30",0
+,,n102,"20, 40, 60, 80, 100",
+CA_n28A-n102(2A),CA_n28A-n102A,n28,"5, 10, 15, 20, 25, 30",0
+,,n102,CA_n102(2A)_BCS0,
+CA_n28A-n102B,CA_n28A-n102ACA_n28A-n102B,n28,"5, 10, 15, 20, 25, 30",0
+,,n102,CA_n102B_BCS0,
+CA_n28A-n102C,CA_n28A-n102ACA_n28A-n102C,n28,"5, 10, 15, 20, 25, 30",0
+,,n102,CA_n102C_BCS0,
+CA_n28A-n102D,CA_n28A-n102A,n28,"5, 10, 15, 20, 25, 30",0
+,,n102,CA_n102D_BCS0,
+CA_n28A-n102E,CA_n28A-n102A,n28,"5, 10, 15, 20, 25, 30",0
+,,n102,CA_n102E_BCS0,
+CA_n28A-n105A,-,n28,"5, 10, 15, 20, 25, 30",0
+,,n105,"5, 10, 15, 20, 25, 30, 35",
+CA_n29A-n30A,-,n29,"5, 10",0
+,,n30,"5, 10",
+CA_n29A-n48A,-,n29,"5, 10",0
+,,n48,"5, 10, 15, 20, 30, 40, 506, 606, 706, 806, 906, 1006",
+CA_n29A-n66A,n668,n29,"5, 10",0
+,,n66,"5, 10, 15, 20, 40",
+,,n29,"5, 10",1
+,,n66,"5, 10, 15, 20, 25, 30, 40",
+,,n29,n29 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,n66 channel bandwidths in Table 5.3.5-1,
+CA_n29A-n66B,n668,n29,"5, 10",0
+,,n66,CA_n66B_BCS0,
+CA_n29A-n66(2A),n668,n29,"5, 10",0
+,,n66,CA_n66(2A)_BCS0,
+,,n29,"5, 10",1
+,,n66,CA_n66(2A)_BCS1,
+,-,n29,n29 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,CA_n66(2A)_BCS4 and 5,
+CA_n29A-n66(3A),n668,n29,"5, 10",0
+,,n66,CA_n66(3A)_BCS0,
+,-,n29,n29 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n66,CA_n66(3A)_BCS 4 and 5,
+CA_n29A-n70A,n708,n29,"5, 10",0
+,,n70,"5, 10, 15, 201,, 251",
+,-,n29,n29 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n70,n70 channel bandwidths in Table 5.3.5-1,
+CA_n29A-n71A17,n718,n29,"5, 10",0
+,,n71,"5, 10, 15, 20",
+,-,n29,n29 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n71,n71 channel bandwidths in Table 5.3.5-1,
+CA_n29A-n71(2A),-,n29,"5, 10",0
+,,n71,CA_n71(2A)_BCS0,
+CA_n29A-n77A,"n778, 9",n29,"5, 10",0
+,,n77,"10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100",
+,-,n29,n29 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n77,n77 channel bandwidths in Table 5.3.5-1,
+CA_n29A-n77(2A),"n778, 9",n29,"5, 10",0
+,,n77,CA_n77(2A)_BCS1,
+,CA_n77(2A),n29,n29 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n77,CA_n77(2A)_BCS4 and 5,
+CA_n29A-n77(3A),CA_n77(2A),n29,n29 channel bandwidths in Table 5.3.5-1,4 and 5
+,,n77,CA_n77(3A)_BCS4 and 5,

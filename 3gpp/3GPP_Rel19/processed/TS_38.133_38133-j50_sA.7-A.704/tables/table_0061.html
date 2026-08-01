@@ -1,0 +1,180 @@
+<table>
+  <tr>
+    <td colspan="3">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="3">RF Channel Number</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>Three radio channels are used for this test. One for FR1 source PCell, second for E-UTRA target PCell and third for target NR PSCell</td>
+  </tr>
+  <tr>
+    <td>Initial</td>
+    <td colspan="2">Active PCell</td>
+    <td></td>
+    <td>Cell 1</td>
+    <td>PCell on RF channel number 1.</td>
+  </tr>
+  <tr>
+    <td>Condition</td>
+    <td colspan="2">Neighbour cell</td>
+    <td></td>
+    <td>Cell 2, Cell 3</td>
+    <td>Neighbour cell on RF channel number 2 and 3.</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Final Condition</td>
+    <td colspan="2">Active PCell</td>
+    <td></td>
+    <td>Cell 2</td>
+    <td>E-UTRA PCell on RF channel number 2.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Active PSCell</td>
+    <td></td>
+    <td>Cell 3</td>
+    <td>PSCell on RF channel number 3.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Neighbour Cell</td>
+    <td></td>
+    <td>Cell 1</td>
+    <td>RF channel number 1</td>
+  </tr>
+  <tr>
+    <td colspan="3">NR measurement quantity</td>
+    <td></td>
+    <td>SS-RSRP</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">E-UTRAN measurement quantity</td>
+    <td></td>
+    <td>RSRP</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Event B1</td>
+    <td>Hysteresis</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Hysteresis for evaluation of event B1.</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>b1-Threshold RSRP</td>
+    <td>dBm</td>
+    <td>-93</td>
+    <td>Actual RSRP threshold for event B1. Needs to take absolute accuracy tolerance in clause 9.1.11.1 into account plus margin.</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>Time to Trigger</td>
+    <td>s</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Event B2</td>
+    <td>b2-Threshold1</td>
+    <td>dBm</td>
+    <td>As specified in table A.6.3.1.4-3</td>
+    <td>Absolute NR SS-RSRP threshold for event B2</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>b2-Threshold2EUTRAN</td>
+    <td>dBm</td>
+    <td>-98</td>
+    <td>Absolute E-UTRAN RSRP threshold for event B2</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>Hysteresis</td>
+    <td>dB</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>TimeToTrigger</td>
+    <td>s</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">Filter coefficient</td>
+    <td></td>
+    <td>0</td>
+    <td>L3 filtering is not used</td>
+  </tr>
+  <tr>
+    <td colspan="3">DRX</td>
+    <td></td>
+    <td>OFF</td>
+    <td>Non-DRX test</td>
+  </tr>
+  <tr>
+    <td colspan="3">Access Barring Information</td>
+    <td>-</td>
+    <td>Not sent</td>
+    <td>No additional delays in random access procedure</td>
+  </tr>
+  <tr>
+    <td colspan="3">PRACH configuration on Cell 3</td>
+    <td></td>
+    <td>FR2 configuration 2</td>
+    <td>Captured in A.3.8.3.2</td>
+  </tr>
+  <tr>
+    <td colspan="3">Time offset between cell 1 and 2</td>
+    <td></td>
+    <td>3 ms</td>
+    <td>Asynchronous cells</td>
+  </tr>
+  <tr>
+    <td colspan="3">Gap pattern configuration Id</td>
+    <td></td>
+    <td>0</td>
+    <td>As specified in table 9.1.2-1 started before T2 starts</td>
+  </tr>
+  <tr>
+    <td colspan="3">Cell-individual offset for cells on RF channel number 2</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Individual offset for cells on primary component carrier.</td>
+  </tr>
+  <tr>
+    <td colspan="3">Cell-individual offset for cells on RF channel number 3</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Individual offset for cells on carrier frequency of Cell 3.</td>
+  </tr>
+  <tr>
+    <td colspan="3">T1</td>
+    <td>s</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">T2</td>
+    <td>s</td>
+    <td>≤5</td>
+    <td>During this time the cell 2 and cell 3 shall be known.</td>
+  </tr>
+  <tr>
+    <td colspan="3">T3</td>
+    <td>s</td>
+    <td>1</td>
+    <td>During this time the UE perform HO with PSCell addition.</td>
+  </tr>
+  <tr>
+    <td colspan="3">T4</td>
+    <td>s</td>
+    <td>0.5</td>
+    <td>During this time the UE sends CSI reports for PSCell (Cell 3).</td>
+  </tr>
+</table>

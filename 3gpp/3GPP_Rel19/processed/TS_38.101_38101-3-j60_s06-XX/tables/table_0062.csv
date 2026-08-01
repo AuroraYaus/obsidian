@@ -1,0 +1,5 @@
+UL band,DL band,UL BW,SCS of UL band,UL RB Allocation,DL BW,MSD,UL/DL fc condition,UL/DL harmonic order
+,,(MHz),(kHz),LCRB,(MHz),(dB),,
+42,n40,5,15,12 (RBstart=0),5,14.7,NOTE 1,UL2/DL3
+42,n40,5,15,12 (RBstart=0),20,9.1,NOTE 1,UL2/DL3
+"NOTE 1:The requirements should be verified for DL EARFCN of the  victim (lower) band (superscript LB) such that  with the DL carrier frequency in the lower band and  the UL carrier frequency in the higher band, both in MHz.  fDLLB=fULHB/0.150.1fULHB",,,,,,,,

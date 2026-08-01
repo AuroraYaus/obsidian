@@ -1,0 +1,5 @@
+Frequency band(MHz),Aggregated bandwidth / Spectrum emission limit (dBm),MBW
+,"25, 30, 35, 40 MHz (Note 1)",
+3400 ≤ f ≤ 3800,"-23 (Note 2, Note 4)",5 MHz
+,-40 (Note 3),1 MHz
+"NOTE 1:Possible aggregated bandwidth for CA_42C as specified in Table 5.6A.1-1.NOTE 2:This requirement applies within an offset between 5 MHz and 25 MHz from the lower and from the upper edge of the channel bandwidth, whenever these frequencies overlap with the specified frequency band.NOTE 3:This requirement applies from 3400 MHz to 25 MHz below the lower E-UTRA channel edge and from 25 MHz above the upper E-UTRA channel edge to 3800 MHz.NOTE 4:This emission limit might imply risk of harmful interference to UE(s) operating in the protected operating band.",,

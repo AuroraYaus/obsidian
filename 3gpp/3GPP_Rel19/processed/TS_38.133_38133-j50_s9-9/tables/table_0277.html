@@ -1,0 +1,21 @@
+<table>
+  <tr>
+    <td>Condition NOTE1</td>
+    <td>TPSS/SSS_sync_inter</td>
+  </tr>
+  <tr>
+    <td>No DRX</td>
+    <td>Max(600 ms, Ceil(10 x Kgap)  Max(MGRP, SMTC period NOTE2))  CSSFinter  K_satellite</td>
+  </tr>
+  <tr>
+    <td>DRX cycle ≤ 320 ms</td>
+    <td>Max(600 ms, Ceil(10*1.5 x Kgap)  Max(MGRP, SMTC periodNOTE2, DRX cycle))  CSSFinter  K_satellite</td>
+  </tr>
+  <tr>
+    <td>DRX cycle &gt; 320 ms</td>
+    <td>Ceil(10 x Kgap)  DRX cycle  CSSFinter  K_satellite</td>
+  </tr>
+  <tr>
+    <td colspan="2">NOTE 1:DRX or non DRX requirements apply according to the conditions described in clause 3.6.1NOTE 2:SMTC period is the SMTC period in SMTC configuration which is associated with the target cell to be measured configured in SSB-MTC4List-r17.</td>
+  </tr>
+</table>

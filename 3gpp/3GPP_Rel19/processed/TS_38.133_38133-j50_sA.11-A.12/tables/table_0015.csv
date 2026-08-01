@@ -1,0 +1,33 @@
+Parameter,Unit,Test configuration,Cell 1,,
+,,,T1,T2,T3
+TDD configuration,,"1, 2",TDDConf.1.1.CCA,,
+DL CCA probability for semi-static channel access (PCCA_DL),,"1, 2",0.9,,
+DL CCA probability for for dynamic static channel access (PCCA_DL_1),,"1, 2",0.75,,
+DL CCA probability for for dynamic static channel access (PCCA_DL_2),,"1, 2",0.5,,
+UL CCA probability PCCA_UL,,"1, 2",1,,
+"Md,max",,"1, 2",16,,
+"Mm,max",,"1, 2",4,,
+"Me,max",,"1, 2",8,,
+PDSCH parameters,,"1, 2",SR.1.1 CCA,,
+RMSI CORESET parameters,,"1, 2",CR.1.1 CCA,,
+Dedicated CORESET parameters,,"1, 2",CCR.1.1 CCA,,
+SSB parameters,,"1, 2",SSB.1 CCA for semi-static channel access;SSB.2 CCA for dynamic channel access,,
+NR SMTC parameters,,"1, 2",SMTC.1,,
+OCNG Pattern,,"1, 2",OP.1 defined in A.3.2.1,,
+Initial DL BWP configuration,,"1, 2",DLBWP.0,,
+Initial UL BWP configuration,,"1, 2",ULBWP.0,,
+RLM-RS,,"1, 2",SSB,,
+Qrxlevmin,dBm/SCS,"1, 2",-137,,
+,dBm/SCS,"1, 2",-95,,
+,dBm/15 kHz,"1, 2",-98,,
+SS-RSRP,,"1, 2",-81,-81,-81
+,dB,"1, 2",14,14,14
+,dB,"1, 2",14,14,14
+Io,dBm/38.16 MHz,"1, 2",-49.79,-49.79,-49.79
+Treselection,s,"1, 2",0,,
+Snonintrasearch,dB,"1, 2",50,,
+"Threshx, high (Note 2)",dB,"1, 2",48,,
+"Threshserving, low",dB,"1, 2",44,,
+"Threshx, low",dB,"1, 2",50,,
+Propagation Condition,,"1, 2",AWGN,,
+"NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:This refers to the value of  Threshx, high  which is included in NR system information, and is a threshold for the E-UTRA target cellNOTE 3:For UE supporting both semi-static and dynamic cannel access, the UE must be tested under both dynamic and semi-static channel occupancy configurations.",,,,,

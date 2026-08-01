@@ -1,0 +1,24 @@
+Parameter,,Unit,Value
+CORESET frequency domain allocation,,,Full BW
+CORESET time domain allocation,,,2 OFDM symbols at the begin of each slot
+PDSCH mapping type,,,Type A
+PDSCH start symbol index (S),,,2
+Number of consecutive PDSCH symbols (L),,,12
+PDSCH PRB bundling,,PRBs,2
+Dynamic PRB bundling,,,false
+MCS table for TBS determination,,,64QAM
+Overhead value for TBS determination,,,0
+First DMRS position for Type A PDSCH mapping,,,2
+DMRS type,,,Type 1
+Number of additional DMRS,,,2
+FDM between DMRS and PDSCH,,,Disable
+CSIRS for tracking,First subcarrier index in the PRB used for CSI-RS (k0),,"0 for CSI-RS resource 1,2"
+,OFDM symbols in the PRB used for CSIRS,,l0 = 8 for CSI-RS resource 1l0 = 12 for CSI-RS resource 2
+,Number of CSI-RS ports,,"1 for CSI-RS resource 1,2"
+,CDM Type,,"'No CDM' for CSI-RS resource 1,2"
+,Density (ρ),,"3 for CSI-RS resource 1,2"
+,CSIRS periodicity,Slots,60 kHz SCS: 80 for CSI-RS resources 1 and 2120 kHz SCS: 160 for CSI-RS resources 1 and 2
+,CSIRS offset,Slots,60 kHz SCS: 40 for CSI-RS resources 1 and 2120kHz SCS: 80 for CSI-RS resources 1 and 2
+,Frequency Occupation,,Start PRB 0Number of PRB = BWP size
+,QCL info,,TCI state #0
+PTRS configuration,,,PTRS is not configured

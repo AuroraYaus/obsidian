@@ -1,0 +1,5 @@
+SCS(kHz),40 MHz,60 MHz,80 MHz,100 MHz
+15,105-6-105(216),N/A,N/A,N/A
+30,50-6-50(106),50-6-50-6-50(162),50-6-50-5-50-6-50(217),50-6-50-6-49-6-50-6-50(273)
+60,23-5-23(51),23-5-23-5-23(79),23-5-23-5-23-5-23(107),23-5-23-5-23-5-23-5-23(135)
+NOTE 1:The intra-cell guard band is denoted TBW0-GB0-…-GBN_RBset-2-TBWN_RBset-1 for N_RBset > 1 number of RB-sets with TBWr the maximum transmission bandwidth (PRB) of RB-set r and GBr the guard band (PRB) above the upper edge of RB-set r. The RB-set 0 is starting at the first common resource block (CRB) of the carrier as indicated by offsetToCarrier. The total transmission bandwidth configuration (size of resource grid) including guard bands is given in between parentheses.,,,,

@@ -1,0 +1,7 @@
+Field,Comment,
+,Value,
+onDurationTimer,psf20,As specified in clause 6.3.2 in TS 36.331
+drx-InactivityTimer,psf1920,
+drx-RetransmissionTimer,psf16,
+longDRX-CycleStartOffset,sf1280,
+shortDRX,disable,

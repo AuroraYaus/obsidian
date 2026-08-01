@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <td>Attribute</td>
+    <td>Out-of-sync</td>
+    <td>In-sync</td>
+  </tr>
+  <tr>
+    <td>DCI format</td>
+    <td>6-1B</td>
+    <td>6-1B</td>
+  </tr>
+  <tr>
+    <td>Starting OFDM symbols</td>
+    <td>2; Bandwidth &gt;= 10MHz3; 3MHz &lt;= Bandwidth &lt; 10MHz4; Bandwidth = 1.4MHz</td>
+    <td>2; Bandwidth &gt;= 10MHz3; 3MHz &lt;= Bandwidth &lt; 10MHz4; Bandwidth = 1.4MHz</td>
+  </tr>
+  <tr>
+    <td>Maximum M-PDCCH repetition level</td>
+    <td>RmaxNote1</td>
+    <td>Rmax/2Note1</td>
+  </tr>
+  <tr>
+    <td>Aggregation level (ECCE)</td>
+    <td>L’max Note2</td>
+    <td>L’max-2 Note2</td>
+  </tr>
+  <tr>
+    <td>M-PDCCH Transmission type</td>
+    <td>Distributed</td>
+    <td>Distributed</td>
+  </tr>
+  <tr>
+    <td colspan="3">NOTE 1:Rmax is determined by the configurable parameter mPDCCH-NumRepetition defined in 36.331 and Rmax&gt;1.NOTE 2:L’max and L’max-2 is derived from the configurable parameter numberPRB-Pairs defined in 36.331. L’max is 24, 16 and 8, if numberPRB-Pairs is 6, 4 and 2, respectively. L’max-2 is the aggregation levels two levels below L’max, and L’max-2 is 8, 4 and 2, if numberPRB-Pairs is 6, 4 and 2, respectively.</td>
+  </tr>
+</table>

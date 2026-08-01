@@ -1,0 +1,15 @@
+Parameter,Unit,Value,Comment
+RF Channel Number,,"1,2,3,4","One E-UTRAN radio channel (1) and three NR radio channels (2,3,4) are used for this test"
+Active PCell,,Cell 1,Primary cell on E-UTRAN RF channel number 1.As specified in clause A.3.7.2.2
+Active PSCell,,Cell 2,Primary secondary cell on NR RF channel number 2 in FR1.
+Configured deactivated SCells,,"Cell 3 (PUCCH SCell 1), Cell 4(DL SCell 2)","Configured deactivated secondary cell on NR RF channel number 3 and RF channel number 4, both in FR2"
+CP length,,Normal,
+DRX,,OFF,Continuous monitoring of primary cell
+SCell measurement cycle (measCycleSCell),ms,160,For both Cell 3 and Cell 4
+TimeAlignmentTimer,ms,1280,Cell 1 and Cell 2 in pTAG.
+TimeAlignmentTimerSTAG,ms,1280,Cell 3 and Cell 4 in sTAG
+T1,s,1,During this time Cell 3 and Cell 4 is configured and undetected.
+T2,s,2,During this time the UE shall activate the SCell.
+T3,s,1,During this time the UE shall deactivate the SCell.
+THARQ,ms,k1NR slot length×,"k1 is a number of slots indicated by the PDSCH-to-HARQ_feedback timing indicator field in a corresponding DCI format or provided by dl-DataToUL-ACK if the PDSCH-to-HARQ feedback timing field is not present in the DCI format, the value is defined in  38.213 [3]"
+k,slot,,As specified in clause 4.3 of TS 38.213 [3]

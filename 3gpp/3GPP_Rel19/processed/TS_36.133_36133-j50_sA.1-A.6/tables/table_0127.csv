@@ -1,0 +1,25 @@
+Type of Test Cases,Coverage mode(s) Applicable for Testing,
+,CEModeA,CEModeB
+A.4 E-UTRAN RRC IDLE State: Intra-frequency Cell Re-Selection Tests for Category M1 UE,X,X
+A.4 E-UTRAN RRC IDLE State: Intrer-frequency Cell Re-Selection Tests for Category M1 UE,X,X
+A.5 E-UTRAN RRC CONNECTED Mode Mobility: E-UTRAN Intra-frequency with SFN acquisition Handover Tests for Category M1 UE,X,
+A.5 E-UTRAN RRC CONNECTED Mode Mobility: E-UTRAN Inter-frequency with SFN acquisition Handover Tests for Category M1 UE,X,
+A.5 E-UTRAN RRC CONNECTED Mode Mobility: E-UTRAN Intra-frequency without SFN acquisition Handover Tests for Category M1 UE,,X
+A.5 E-UTRAN RRC CONNECTED Mode Mobility: E-UTRAN Inter-frequency without SFN acquisition Handover Tests for Category M1 UE,,X
+A.5 RRC Connection Control: E-UTRAN Intra-frequency RRC Re-Restablishment Tests for Category M1 UE,,X
+A.5 RRC Connection Control: E-UTRAN Inter-frequency RRC Re-Restablishment Tests for Category M1 UE,,X
+A.6 E-UTRAN Contention Based Random Access Tests for Cat-M1 UE,,X
+A.7 Timing and Signalling Characteristics: E-UTRAN UE Transmit Timing Timing Accuracy Tests for Category M2 UE,,X
+A.7 Timing and Signalling Characteristics: E-UTRAN Timing Advance Adjustment Accuracy Tests for Cat-M1 UE,,X
+A.7.3 Radio Link Monitoring: E-UTRAN Radio Link Monitoring Tests for Category M1 UE,X,
+A.7.3 Radio Link Monitoring: E-UTRAN Radio Link Monitoring Tests for for Early In-sync and Early Out-of-sync for Category M1 UE,,X
+A.8 Measurements Procedures: E-UTRAN Intra-frequency Event Triggered Reporting under Fading Propagation Conditions Tests for Category M1 UE,X,X
+A.8 Measurements Procedures: E-UTRAN Inter-frequency Event Triggered Reporting under Fading Propagation Conditions Tests for Category M1 UE,X,X
+A.8 Measurements Procedures: E-UTRAN Intra-frequency Serving Cell Event Triggered Reporting under Fading Propagation Conditions Tests for Category M1 UE without Gaps,X,N/A
+A.8 Measurements Procedures: E-UTRAN Intra-frequency Identification of a New CGI of E-UTRA cell using Autonomous Gaps Tests for Category M1 UE,N/A,X
+A.8.12 Measurements Procedures: E-UTRAN Intra-frequency RSTD measurement reporting delay tests for Category M2 UE,X,X
+A.8.13 Measurements Procedures: E-UTRAN Inter-frequency RSTD measurement reporting delay tests for Category M2 UE,X,X
+A.9 Measurement Performance Requirements: RSRP Intra-Frequency Measurement Accuracy Tests for Category M2 UE,X,X
+A.9.7 Measurement Performance Requirements: E-UTRAN UE Rx–Tx Time Difference Measurement Accuracy Tests for Category M2 UE,X,N/A
+A.9.8 Measurement Performance Requirements: E-UTRAN Intra-frequency RSTD Measurement Accuracy Tests for Category M2 UE,X,X
+A.9.8 Measurement Performance Requirements: E-UTRAN Inter-frequency RSTD Measurement Accuracy Tests for Category M2 UE,X,X

@@ -1,0 +1,5 @@
+Configuration,TL1-RSRP_Measurement_Period_CSI-RS (ms)
+non-DRX,"max(TReport, ceil((M+L1)*P)* max(TCSI-RS, Tproc))"
+DRX cycle ≤ 320 ms,"max(TReport, ceil(K *(M+L1)*P)*max(TDRX,TCSI-RS, Tproc))"
+DRX cycle > 320 ms,ceil((M+L1)*P)*TDRX
+"NOTE 1:TCSI-RS is the periodicity of CSI-RS configured for L1-RSRP measurement. TDRX is the DRX cycle length. TReport is configured periodicity for reporting.NOTE 2:the requirements are applicable provided that the CSI-RS resource configured for L1-RSRP measurement is transmitted with Density = 3.NOTE 3:K = 1 when TCSI-RS ≤ 40 ms and highSpeedMeasFlag-r16 or highSpeedMeasCA-Scell-r17 are configured; otherwise K = 1.5.NOTE 4:When highSpeedMeasFlag-r16 is configured, the requirements apply only to UE supporting either measurementEnhancement-r16 or intraNR-MeasurementEnhancement-r16 or measurementEnhancementCA-r17.NOTE 5:If UE indicates ‘full’ or ‘partial’ for timeline-r19 in sbfd-Aware-r19 and the CSI-RS resource for CMR is across 2 DL subbands, Tproc = 8ms; otherwise Tproc = 0.",

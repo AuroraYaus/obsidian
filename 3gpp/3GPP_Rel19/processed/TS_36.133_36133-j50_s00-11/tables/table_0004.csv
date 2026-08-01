@@ -1,0 +1,17 @@
+Group,E-UTRA FDD,,E-UTRA TDD,
+,Band group notation,Operating bands,Band group notation,Operating bands
+A,FDD-M1_A,"1, 4, 11, 18, 19, 21,24",TDD-M1_A,"39, 40, 54"
+B,FDD-M1_B,"66 Note 2, 74 Note 3",TDD-M1_B,-
+C,FDD-M1_C,-,TDD-M1_C,-
+D,FDD-M1_D,28,TDD-M1_D,-
+E,FDD-M1_E,"2, 5, 7, 27",TDD-M1_E,"41, 42, 43, 48"
+F,FDD-M1_F,26 Note 1,TDD-M1_F,-
+G,FDD-M1_G,"3, 8, 12, 13, 20, 85, 106",TDD-M1_G,-
+H,FDD-M1_H,25,TDD-M1_H,-
+I,FDD-M1_I,-,TDD-M1_I,-
+J,FDD-M1_J,-,TDD-M1_J,-
+K,FDD-M1_K,-,TDD-M1_K,-
+L,FDD-M1_L,-,TDD-M1_L,-
+M,FDD-M1_M,-,TDD-M1_M,-
+N,FDD-M1_N,"31, 72, 73, 87, 88, 111",TDD-M1_N,-
+NOTE 1:The minimum Io condition for Band 26 is reduced by 0.5 dB when the carrier frequency of the assigned E-UTRA channel bandwidth is within 865-894 MHz.NOTE 2:The range 2180-2200 MHz of the DL operating band 66 is restricted to E-UTRA operation when carrier aggregation is configured.NOTE 3:The minimum Io condition for Band 74 is reduced by 0.5 dB when the carrier frequency of the assigned E-UTRA channel bandwidth is within 1475.9-1510.9 MHz.,,,,

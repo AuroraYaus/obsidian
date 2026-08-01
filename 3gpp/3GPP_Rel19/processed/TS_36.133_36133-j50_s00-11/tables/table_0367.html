@@ -1,0 +1,70 @@
+<table>
+  <tr>
+    <td>Measurement category</td>
+    <td>Ecat</td>
+    <td colspan="2">Note</td>
+  </tr>
+  <tr>
+    <td>Intra-frequency Note 1, 5, 6</td>
+    <td>10</td>
+    <td colspan="2">Events for any one or a combination of intra-frequency RSRP, RSRQ, and RS-SINRNote4 for E-UTRA intra-frequency cells</td>
+  </tr>
+  <tr>
+    <td>Intra-frequency UE Rx-Tx time difference Note 5</td>
+    <td>2</td>
+    <td colspan="2">Intra-frequency UE Rx-Tx time difference measurements reported to E-UTRAN via RRC and to positioning server via LPP. Applies for UE supporting both LPP and UE Rx-Tx time difference measurement.</td>
+  </tr>
+  <tr>
+    <td>Intra-frequency RSTD Note 2, 5, 6</td>
+    <td>1</td>
+    <td colspan="2">Intra-frequency RSTD measurement reporting for UE supporting OTDOA; 1 report capable of minimum 16 cell measurements for the intra-frequency</td>
+  </tr>
+  <tr>
+    <td>Intra-frequency RSRP and RSRQ measurements for E-CID Note 5, 6</td>
+    <td>1</td>
+    <td colspan="2">Intra-frequency RSRP and RSRQ measurements for E-CID reported to E-SMLC via LPP [24]. One report capable of at least in total 9 intra-frequency RSRP and RSRQ measurements. Applicable to UE capable of reporting RSRP and RSRQ to E-SMLC via LPP.</td>
+  </tr>
+  <tr>
+    <td>Intra-frequency RSSI and channel occupancy measurements under operation with frame structure 3</td>
+    <td>1</td>
+    <td colspan="2">One report capable of one UE RSSI and channel occupancy measurement s per serving carrier frequency. Applicable for UE capable of performing and reporting UE RSSI and channel occupancy under operation with frame structure 3.</td>
+  </tr>
+  <tr>
+    <td>Inter-frequency Note 5, 6</td>
+    <td>10 / 28</td>
+    <td colspan="2">Events for any one or a combination of inter-frequency RSRP, RSRQ, and RS-SINRNote4 for E-UTRA inter-frequency cells (see note 3)</td>
+  </tr>
+  <tr>
+    <td>Inter-frequency RSTD Note 2, 5, 6</td>
+    <td>1</td>
+    <td colspan="2">Inter-frequency RSTD measurement reporting for UE supporting OTDOA; 1 report capable of minimum 16 cell measurements for at least one inter-frequency. Only applicable as specified in Section 8.1.2.6.</td>
+  </tr>
+  <tr>
+    <td>Inter-frequency RSSI and channel occupancy measurements under operation with frame structure 3</td>
+    <td>1</td>
+    <td colspan="2">One report capable of one UE RSSI and channel occupancy measurement s for an inter-frequency. Applicable for UE capable of performing and reporting UE RSSI and channel occupancy under operation with frame structure 3.</td>
+  </tr>
+  <tr>
+    <td>Inter-RAT (GSM, cdma2000 1 x RTT and HRPD) Note 5</td>
+    <td>5</td>
+    <td colspan="2">Only applicable for UE with this (inter-RAT) capability. This requirement (Ecat = 5) is per supported RAT.</td>
+  </tr>
+  <tr>
+    <td>Inter-RAT (UTRAN FDD, UTRAN TDD) Note 5</td>
+    <td>5 or 11</td>
+    <td colspan="2">Only applicable for UE with this (inter-RAT) capability. This requirement (Ecat = 5 or 11) is per supported RAT. For UE which indicate support for Increased UE carrier monitoring UTRA Ecat = 11.</td>
+  </tr>
+  <tr>
+    <td>Inter-RAT NR carrier frequency Note 5</td>
+    <td>10</td>
+    <td colspan="2">Events for NR cells on all inter-RAT NR carrier frequencies for UE capable of EN-DC operation. Only applicable for UE with this capability and measurements on any of the NR carrier frequencies other than the carrier frequency of the NR PSCell or NR SCell.</td>
+  </tr>
+  <tr>
+    <td>MBSFN measurements for MDT</td>
+    <td>1</td>
+    <td colspan="2">MBSFN measurement reporting for UE supporting MBSFN measurements (MBSFN RSRP, MBSFN RSRQ, and MCH BLER) for MDT [2]; 1 report capable of minimum 1 MBSFN RSRP measurement [4], 1 MBSFN RSRQ measurement [4], and 1 MCH BLER measurement [4].</td>
+  </tr>
+  <tr>
+    <td colspan="4">Note 1:When the UE is configured with SCell, PSCell, PCell or NR PSCell carrier frequency, Ecat for Intra-frequency is applied per serving frequency.Note 2:When the UE is configured with one SCell carrier frequency, the UE shall be capable of supporting at least 2 reporting criteria for all RSTD measurements configured to be performed on PCell carrier frequency, SCell carrier frequency and inter-frequency carrier. When the UE is configured with two SCell carrier frequencies, the UE shall be capable of supporting at least 3 reporting criteria for all RSTD measurements configured to be performed on PCell carrier frequency, the two SCell carrier frequencies and inter-frequency carrier. These requirements apply when there is a single on-going LPP OTDOA location session.Note 3: Support of Ecat of 28 for Measurement category Inter-frequency is applied for a UE supporting increased number of carriers to monitor beyond 3.Note 4:For UEs supporting RS-SINR measurementsNote 5:Applicable for UE configured with EN-DC operation mode.Note 6:Applicable for UE configured with NE-DC operation mode.</td>
+  </tr>
+</table>

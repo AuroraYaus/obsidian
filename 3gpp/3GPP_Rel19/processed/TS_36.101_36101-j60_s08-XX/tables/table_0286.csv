@@ -1,0 +1,14 @@
+Test number,Aggregated Bandwidth (MHz),,,Minimum performance requirement,UE Category
+,Total,FDD CC,TDD CC,,
+1,15+4×20,15+2×20,2×20,As defined in Table 8.2.3.1.2-2 and Table 8.2.3.1.2-3 per CC,"8, ≥11"
+2,2×15+3×20,2×15+20,2×20,As defined in Table 8.2.3.1.2-2 and Table 8.2.3.1.2-3 per CC,"8, ≥11"
+3,4x20+20,4x20,20,As defined in Table 8.2.3.2.1-2 and Table 8.2.3.2.1-3 per CC,"8, ≥11"
+4,3x20+2x20,3x20,2x20,As defined in Table 8.2.3.2.1-2 and Table 8.2.3.2.1-3 per CC,"8, ≥11"
+5,2x20+3x20,2x20,3X20,As defined in Table 8.2.3.2.1-2 and Table 8.2.3.2.1-3 per CC,"8, ≥11"
+6,20+4x20,20,4x20,As defined in Table 8.2.3.2.1-2 and Table 8.2.3.2.1-3 per CC,"8, ≥11"
+7,10+4x20,10,4x20,As defined in Table 8.2.3.2.1-2 and Table 8.2.3.2.1-3 per CC,"8, ≥11"
+8,10+20+3x20,10+20,3x20,As defined in Table 8.2.3.2.1-2 and Table 8.2.3.2.1-3 per CC,"8, ≥11"
+9,2x10+3x20,2x10,3x20,As defined in Table 8.2.3.2.1-2 and Table 8.2.3.2.1-3 per CC,"8, ≥11"
+10,10+2×20+2×20,10+2x20,2x20,As defined in Table 8.2.3.2.1-2 and Table 8.2.3.2.1-3 per CC,"8, ≥11"
+11,10+15+20+2x20,10+15+20,2x20,As defined in Table 8.2.3.2.1-2 and Table 8.2.3.2.1-3 per CC,"8, ≥11"
+Note 1: The applicability of requirements for different CA configurations and bandwidth combination sets is defined in 8.1.2.3B.,,,,,

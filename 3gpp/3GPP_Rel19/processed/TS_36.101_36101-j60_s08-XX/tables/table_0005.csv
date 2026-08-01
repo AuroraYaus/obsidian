@@ -1,0 +1,7 @@
+CA Capability,CA Capability Description
+CA4_C,Intra-band contiguous CA
+CA4_A2,Inter-band CA (two bands)
+CA4_A3,Inter-band CA (three bands)
+CA4_A4,Inter-band CA (four bands)
+CA4_N2,Intra-band non-contiguous CA (with two sub-blocks)
+NOTE 1:CA4_C corresponds to E-UTRA CA configurations and bandwidth combination sets defined in Table 5.6A.1-1 for 3 DL CCs. CA4_A2 corresponds to E-UTRA CA configurations and bandwidth combination sets defined in Table 5.6A.1-2 for 3 DL CCs. CA4_A3 corresponds to E-UTRA CA configurations and bandwidth combination sets defined in and Table 5.6A.1-2a for 3 DL CCs.CA4_A4 corresponds to E-UTRA CA configurations and bandwidth combination sets defined in and Table 5.6A.1-2b for 4 DL CCs CA4_N2 corresponds to E-UTRA CA configurations and bandwidth combination sets defined in Table 5.6A.1-3 for 3 DL CCs.,

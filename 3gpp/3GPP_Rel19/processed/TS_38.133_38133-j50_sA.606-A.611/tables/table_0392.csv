@@ -1,0 +1,45 @@
+Parameter,Config,Unit,Cell 1
+SSB ARFCN,1~2,,freq1
+Duplex mode,1,,FDD
+,2,,TDD
+TDD Configuration,1,,N/A
+,2,,TDDConf.2.1
+BWchannel,1,MHz,"10: NPRB,c = 52"
+,2,,"40: NPRB,c = 106"
+PDSCH Reference measurement channel,1,,SR.1.1 FDD
+,2,,SR.2.1 TDD
+RMSI CORESET Reference Channel,1,,CR.1.1 FDD
+,2,,CR.2.1 TDD
+Dedicated CORESET Reference Channel,1,,CCR.1.1 FDD
+,2,,CCR.2.1 TDD
+OCNG Patterns,1~2,,OP.1
+Initial BWP Configuration,1~2,,DLBWP.0.1ULBWP.0.1
+TRS configuration for TRP1,1,,TRS.1.1 FDD
+,2,,TRS.1.2 TDD
+TRS configuration for TRP2,1,,TRS.1.1 FDD (except k0 should be 1)
+,2,,TRS.1.2 TDD (except k0 should be 1)
+Dedicated BWP configuration,1~2,,DLBWP.1.1ULBWP.1.1
+reportConfigType,1~2,,aperiodic
+reportQuantity,1~2,,CJTC-F
+EPRE ratio of PSS to SSS,1~2,dB,0
+EPRE ratio of PBCH DMRS to SSS,,,
+EPRE ratio of PBCH to PBCH DMRS,,,
+EPRE ratio of PDCCH DMRS to SSS,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,
+EPRE ratio of PDSCH DMRS to SSS,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,,
+EPRE ratio of OCNG DMRS to SSSNote 1,,,
+EPRE ratio of OCNG to OCNG DMRS Note 1,,,
+Noc,1,dBm/15 kHz,-98
+,2,,
+Note 2,1,dBm/SCS,-98
+,2,,-95
+TRS  Note 3,1~2,dB,3
+TRS  Note 3,1~2,dB,3
+TRS-RSRP Note 3,1,dBm/SSB SCS,-95
+,2,,-92
+Io,1,dBm/9.36 MHz,-65.3
+,2,dBm/38.16 MHz,-59.2
+Propagation condition,1~2,,TDL-C 300 ns 10 Hz
+Antenna configuration,1~2,,1x2
+NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for to be fulfilled.NOTE 3:The configuration applies to both TRP1 and TRP2,,,

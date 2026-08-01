@@ -1,0 +1,41 @@
+Parameter,,Unit,Test 1,,Test 2,,Test 3,
+,,,Cell 1,Cell 2,Cell 1,Cell 2,Cell 1,Cell 2
+E-UTRA RF Channel Number,,,1,,1,,1,
+BWchannel,,MHz,10,,10,,10,
+Measurement bandwidth,,,22—27,,22—27,,22—27,
+PDSCH Reference measurement channel defined in A.3.1.1.2,,,R.0 TDD,-,R.0 TDD,-,R.0 TDD,-
+PDSCH allocation,,,13—36,-,13—36,-,13—36,-
+PDCCH/PCFICH/PHICH Reference measurement channel defined in A.3.1.2.2,,,R.6 TDD,,R.6 TDD,,R.6 TDD,
+OCNG Patterns defined in A.3.2.2.5 (OP.5 TDD) and A.3.2.2.2 (OP.2 TDD),,,OP.5 TDD,OP.2 TDD,OP.5 TDD,OP.2 TDD,OP.5 TDD,OP.2 TDD
+PBCH_RA,,dB,Note 6,0,Note 6,0,Note 6,0
+PBCH_RB,,,,,,,,
+PCFICH_RB,,,,,,,,
+PHICH_RA,,,,,,,,
+PHICH_RB,,,,,,,,
+PDCCH_RA,,,,,,,,
+PDCCH_RB,,,,,,,,
+PDSCH_RA,,,,,,,,
+PDSCH_RB,,,,,,,,
+OCNG_RANote1,,,,,,,,
+OCNG_RBNote1,,,,,,,,
+PSS_RA,,dB,-4,0,-4,0,-4,0
+SSS_RA,,dB,-4,0,-4,0,-4,0
+Note2,Bands TDD_A,dBm/15 kHz,-84.76,,-103.85,,-116,
+,Bands TDD_C,,,,,,-115,
+,Bands TDD_E,,,,,,-114,
+CRS,,dB,5,-2,5,-2,5,-4
+"CRS Note 5, 7In the 1st OFDM symbol",,dB,2.88,-8.19,2.88,-8.19,3.54,-10.19
+"CRS  Note 5 in OFDM symbols 4,7,11",,dB,2.88,-2,2.88,-2,3.54,-4
+SCH,,dB,-1.12,-5.54,-1.12,-5.54,-0.46,-7.54
+"RSRP Note 3,4,5",Bands TDD_A,dBm/15 kHz,-79.76,-86.76,-98.85,-105.85,-111,-120
+,Bands TDD_C,,,,,,-110,-119
+,Bands TDD_E,,,,,,-109,-118
+"Note 3,4,5","Bands TDD_A, TDD_C, TDD_E",dB,-12.60,-15.02,-12.60,-15.02,-12.38,-16.36
+Note 3 in the 1st OFDM symbol,Bands TDD_A,dBm/9 MHz,-50.17,-53.64,-69.26,-72.73,-81.63,-85.37
+,Bands TDD_C,,,,,,-80.63,-84.37
+,Bands TDD_E,,,,,,-79.63,-83.37
+Note 3in OFDM symbols other than the 1st one,Bands TDD_A,dBm/9 MHz,-50.17,-54.85,-69.26,-73.94,-81.63,-86.76
+,Bands TDD_C,,,,,,-80.63,-85.76
+,Bands TDD_E,,,,,,-79.63,-84.76
+Propagation condition,,-,AWGN,,AWGN,,AWGN,
+"Note 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled. Applies to all subframes.Note 3:RSRQ, RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves. Io levels are calculated in CRS symbols of measurement restricted subframes.Note 4:RSRP and RSRQ minimum requirements are specified assuming independent interference and noise at each receiver antenna port.Note 5:Applies to restricted measurement subframes of the respective cell.Note 6:Non-ABS and ABS subframe channel powers defined in Table A.3.4.2.1-1.Note 7:In the 1st  OFDM symbol, Cell 2 is not expected to meet the Es/Iot side condition in 9.1.5.2.Note 8:E-UTRA operating band groups are as defined in Section 3.5.",,,,,,,,

@@ -1,0 +1,8 @@
+NR,Number of interrupted slots on serving cells
+SCS,When MG timing advance of 0 ms is applied
+(kHz),VIL=1 ms
+15,1
+30,2
+60,4
+120,8
+NOTE 1:NR SCS of 120 kHz is only applicable to the case with per-UE NCSG.NOTE 2:Void.,

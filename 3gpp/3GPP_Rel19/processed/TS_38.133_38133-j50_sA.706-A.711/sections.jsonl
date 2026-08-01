@@ -1,0 +1,925 @@
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6Measurement procedure", "paragraph_index": 1, "style": "Heading2"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1Intra-frequency Measurements", "paragraph_index": 2, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.1SA event triggered reporting test without gap under non-DRX", "paragraph_index": 3, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.1.1Test purpose and Environment", "paragraph_index": 4, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.1.2Test Requirements", "paragraph_index": 19, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.2SA event triggered reporting test without gap under DRX", "paragraph_index": 27, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.2.1Test purpose and Environment", "paragraph_index": 28, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.2.2Test Requirements", "paragraph_index": 44, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.3SA event triggered reporting test with per-UE gaps under non-DRX", "paragraph_index": 55, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.3.1Test purpose and Environment", "paragraph_index": 56, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.3.2Test Requirements", "paragraph_index": 72, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.4SA event triggered reporting test with per-UE gaps under DRX", "paragraph_index": 80, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.4.1Test purpose and Environment", "paragraph_index": 81, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.4.2Test Requirements", "paragraph_index": 98, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.5SA event triggered reporting test without gap under non-DRX for UE configured with highSpeedMeasFlagFR2-r17", "paragraph_index": 109, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.5.1Test purpose and Environment", "paragraph_index": 110, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.5.2Test Requirements", "paragraph_index": 125, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.6SA event triggered reporting test without gap under non-DRX for FR2-2", "paragraph_index": 131, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.6.1Test purpose and Environment", "paragraph_index": 132, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.6.2Test Requirements", "paragraph_index": 147, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.7SA event triggered reporting test without gap under DRX for FR2-2", "paragraph_index": 162, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.7.1Test purpose and Environment", "paragraph_index": 163, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.7.2Test Requirements", "paragraph_index": 177, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.8SA event triggered reporting test with per-UE gaps under non-DRX for FR2-2", "paragraph_index": 202, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.8.1Test purpose and Environment", "paragraph_index": 203, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.8.2Test Requirements", "paragraph_index": 219, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.9SA event triggered reporting test with per-UE gaps under DRX for FR2-2", "paragraph_index": 234, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.9.1Test purpose and Environment", "paragraph_index": 235, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.9.2Test Requirements", "paragraph_index": 250, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.10SA event triggered reporting test with SSB time index detection without gap under non-DRX for FR2-2", "paragraph_index": 275, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.10.1Test purpose and Environment", "paragraph_index": 276, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.10.2Test Requirements", "paragraph_index": 291, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.11SA event triggered reporting test with SSB time index detection with per-UE gaps under non-DRX for FR2-2", "paragraph_index": 299, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.11.1Test purpose and Environment", "paragraph_index": 300, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.11.2Test Requirements", "paragraph_index": 316, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.12SA event triggered reporting test without gap under non-DRX when CD-SSB is outside active BWP", "paragraph_index": 324, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.12.1Test purpose and Environment", "paragraph_index": 325, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.12.2Test Requirements", "paragraph_index": 330, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.13SA event triggered reporting test without gap under non-DRX with NCD-SSB", "paragraph_index": 332, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.13.1Test purpose and Environment", "paragraph_index": 333, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.13.2Test Requirements", "paragraph_index": 348, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.14SA event triggered reporting test without gap under non-DRX for power class 6 UE supporting measEnhCAInterFreqFR2-r18", "paragraph_index": 356, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.14.1Test Purpose and Environment", "paragraph_index": 357, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.14.2Test Requirements", "paragraph_index": 368, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.15SA event triggered reporting test without gap for SCell under non-DRX based on OD-SSB", "paragraph_index": 372, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.15.1Test purpose and Environment", "paragraph_index": 373, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.15.2Test Requirements", "paragraph_index": 388, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.16SA event triggered reporting test without gap under non-DRX on deactivated SCell based on OD-SSB", "paragraph_index": 396, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.16.1Test purpose and Environment", "paragraph_index": 397, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.16.2Test Requirements", "paragraph_index": 411, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.17SA event triggered reporting test under non-DRX on Rx BSF optimization for SSB based intra-frequency measurement without MG", "paragraph_index": 418, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.17.1Test purpose and Environment", "paragraph_index": 419, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.17.2Test Requirements", "paragraph_index": 432, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.18SA event triggered reporting test with per-UE gaps under DRX for UE supporting multi-Rx based L3 measurement in FR2", "paragraph_index": 439, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.18.1Test purpose and Environment", "paragraph_index": 440, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.18.2Test Requirements", "paragraph_index": 455, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "1002", "title": "ms for UE supporting fastRx-BSF-MeasDelayReduction-r19, the values of which are 2.", "paragraph_index": 457, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "1422", "title": "ms for UE supporting fastRx-BSF-MeasDelayReduction-r19, the values of which are 4.", "paragraph_index": 458, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "2162", "title": "ms for UE supporting fastRx-BSF-MeasDelayReduction-r19, the values of which are 6.", "paragraph_index": 459, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7682", "title": "ms for UE supporting fastRx-BSF-MeasDelayReduction-r19, the values of which are 2.", "paragraph_index": 461, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "15362", "title": "ms for UE supporting fastRx-BSF-MeasDelayReduction-r19, the values of which are 4.", "paragraph_index": 462, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "23042", "title": "ms for UE supporting fastRx-BSF-MeasDelayReduction-r19, the values of which are 6.", "paragraph_index": 463, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.19SA event triggered reporting test without gap under non-DRX for UE configured with cssf-Config", "paragraph_index": 468, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.19.1Test purpose and Environment", "paragraph_index": 469, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.1.19.2Test Requirements", "paragraph_index": 484, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2Inter-frequency Measurements", "paragraph_index": 492, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.1SA event triggered reporting tests for FR2 without SSB time index detection when DRX is not used (PCell in FR2)", "paragraph_index": 493, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.1.1Test Purpose and Environment", "paragraph_index": 494, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.1.2Test Requirements", "paragraph_index": 506, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "5120", "title": "for UE supporting power class 1, or", "paragraph_index": 508, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3200", "title": "for UE supporting other power class.", "paragraph_index": 509, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.2SA event triggered reporting tests for FR2 without SSB time index detection when DRX is used (PCell in FR2)", "paragraph_index": 512, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.2.1Test Purpose and Environment", "paragraph_index": 513, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.2.2Test Requirements", "paragraph_index": 526, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7680", "title": "for UE supporting power class 1, or", "paragraph_index": 528, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "4800", "title": "for UE supporting other power class.", "paragraph_index": 529, "style": null}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "81920", "title": "for UE supporting power class 1, or", "paragraph_index": 531, "style": null}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "51200", "title": "for UE supporting other power class.", "paragraph_index": 532, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.3SA event triggered reporting tests for FR2 with SSB time index detection when DRX is not used (PCell in FR2)", "paragraph_index": 535, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.3.1Test Purpose and Environment", "paragraph_index": 536, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.3.2Test Requirements", "paragraph_index": 548, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6720", "title": "for UE supporting power class 1, or", "paragraph_index": 550, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "4160", "title": "for UE supporting other power class.", "paragraph_index": 551, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.4SA event triggered reporting tests for FR2 with SSB time index detection when DRX is used (PCell in FR2)", "paragraph_index": 554, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.4.1Test Purpose and Environment", "paragraph_index": 555, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.4.2Test Requirements", "paragraph_index": 568, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10080", "title": "for UE supporting power class 1, or", "paragraph_index": 570, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6240", "title": "for UE supporting other power class.", "paragraph_index": 571, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "107520", "title": "for UE supporting power class 1, or", "paragraph_index": 573, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "66560", "title": "for UE supporting other power class.", "paragraph_index": 574, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.5SA event triggered reporting tests for FR2 without SSB time index detection when DRX is not used (PCell in FR1)", "paragraph_index": 577, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.5.1Test Purpose and Environment", "paragraph_index": 578, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.5.2Test Requirements", "paragraph_index": 590, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "5120", "title": "for UE supporting power class 1, or", "paragraph_index": 592, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3200", "title": "for UE supporting other power class.", "paragraph_index": 593, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "2560", "title": "for UE supporting power class 1, or", "paragraph_index": 595, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "1600", "title": "for UE supporting other power class.", "paragraph_index": 596, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.6SA event triggered reporting tests for FR2 without SSB time index detection when DRX is used (PCell in FR1)", "paragraph_index": 599, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.6.1Test Purpose and Environment", "paragraph_index": 600, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.6.2Test Requirements", "paragraph_index": 613, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7680", "title": "for UE supporting power class 1, or", "paragraph_index": 615, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "4800", "title": "for UE supporting other power class.", "paragraph_index": 616, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "81920", "title": "for UE supporting power class 1, or", "paragraph_index": 618, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "51200", "title": "for UE supporting other power class.", "paragraph_index": 619, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.7SA event triggered reporting tests for FR2 with SSB time index detection when DRX is not used (PCell in FR1)", "paragraph_index": 622, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.7.1Test Purpose and Environment", "paragraph_index": 623, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.7.2Test Requirements", "paragraph_index": 635, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6720", "title": "for UE supporting power class 1, or", "paragraph_index": 637, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "4160", "title": "for UE supporting other power class.", "paragraph_index": 638, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3360", "title": "for UE supporting power class 1, or", "paragraph_index": 640, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "2080", "title": "for UE supporting other power class.", "paragraph_index": 641, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.8SA event triggered reporting tests for FR2 with SSB time index detection when DRX is used (PCell in FR1)", "paragraph_index": 644, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.8.1Test Purpose and Environment", "paragraph_index": 645, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.8.2Test Requirements", "paragraph_index": 658, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10080", "title": "for UE supporting power class 1, or", "paragraph_index": 660, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6240", "title": "for UE supporting other power class.", "paragraph_index": 661, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "107520", "title": "for UE supporting power class 1, or", "paragraph_index": 663, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "66560", "title": "for UE supporting other power class.", "paragraph_index": 664, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.9SA event triggered reporting tests For FR2 without SSB time index detection when DRX is not used (PCell in FR2) (rel16 additional mandatory gap pattern 17)", "paragraph_index": 667, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.9.1Test Purpose and Environment", "paragraph_index": 668, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.9.2Test Requirements", "paragraph_index": 679, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.10SA event triggered reporting test without gap under non-DRX", "paragraph_index": 683, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.10.1Test Purpose and Environment", "paragraph_index": 684, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.10.2Test Requirements", "paragraph_index": 697, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.11SA event triggered reporting test without gap under DRX", "paragraph_index": 705, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.11.1Test Purpose and Environment", "paragraph_index": 706, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.11.2Test Requirements", "paragraph_index": 720, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.12SA event triggered reporting tests for FR2-2 without SSB time index detection when DRX is not used (PCell in FR2-2)", "paragraph_index": 728, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.12.1Test Purpose and Environment", "paragraph_index": 729, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.12.2Test Requirements", "paragraph_index": 741, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7.68", "title": "s (96*40 ms + 96*40 ms) for UE supporting power class 1, or", "paragraph_index": 744, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "4.8", "title": "s (60*40 ms +60*40 ms) for UE supporting other power class.", "paragraph_index": 745, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "11.52", "title": "s (192*40 ms + 96*40 ms) for UE supporting power class 1, or", "paragraph_index": 747, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7.2", "title": "s (120*40 ms +60*40 ms) for UE supporting other power class.", "paragraph_index": 748, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "15.36", "title": "s (288*40 ms + 96*40 ms) for UE supporting power class 1, or", "paragraph_index": 750, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "9.6", "title": "s (180*40 ms +60*40 ms) for UE supporting other power class.", "paragraph_index": 751, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.13SA event triggered reporting tests for FR2-2 without SSB time index detection when DRX is used (PCell in FR2-2)", "paragraph_index": 754, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.13.1Test Purpose and Environment", "paragraph_index": 755, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.13.2Test Requirements", "paragraph_index": 768, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "11.52", "title": "s (96*40 ms*1.5 + 96*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 771, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7.2", "title": "s (60*40 ms*1.5 + 60*40 ms*1.5) for UE supporting other power class.", "paragraph_index": 772, "style": null}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "17.28", "title": "s (192*40 ms*1.5 + 96*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 774, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10.80", "title": "s (120*40 ms*1.5 + 60*40 ms*1.5) for UE supporting other power class.", "paragraph_index": 775, "style": null}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "23.04", "title": "s (288*40 ms*1.5 + 96*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 777, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "14.40", "title": "s (180*40 ms*1.5 + 60*40 ms*1.5)  for UE supporting other power class.", "paragraph_index": 778, "style": null}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "122.88", "title": "s (96*640 ms + 96*640 ms) for UE supporting power class 1, or", "paragraph_index": 781, "style": null}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "76.80", "title": "s (60*640 ms + 60*640 ms) for UE supporting other power class.", "paragraph_index": 782, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "184.32", "title": "s (192*640 ms + 96*640 ms) for UE supporting power class 1, or", "paragraph_index": 784, "style": null}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "115.20", "title": "s (120*640 ms + 60*640 ms) for UE supporting other power class.", "paragraph_index": 785, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "245.76", "title": "s (288*640 ms + 96*640 ms) for UE supporting power class 1, or", "paragraph_index": 787, "style": null}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "153.60", "title": "s (180*640 ms + 60*640 ms) for UE supporting other power class.", "paragraph_index": 788, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.14SA event triggered reporting tests for FR2-2 with SSB time index detection when DRX is not used (PCell in FR2-2)", "paragraph_index": 791, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.14.1Test Purpose and Environment", "paragraph_index": 792, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.14.2Test Requirements", "paragraph_index": 804, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10.56", "title": "s (96*40 ms + 96*40 ms+72*40 ms) for UE supporting power class 1, or", "paragraph_index": 807, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6.72", "title": "s (60*40 ms+60*40 ms+48*40 ms) for UE supporting other power class.", "paragraph_index": 808, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "14.4", "title": "s (192*40 ms + 96*40 ms+72*40 ms) for UE supporting power class 1, or", "paragraph_index": 810, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "9.12", "title": "s (120*40 ms+60*40 ms+48*40 ms) for UE supporting other power class.", "paragraph_index": 811, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "18.24", "title": "s (288*40 ms + 96*40 ms+72*40 ms) for UE supporting power class 1, or", "paragraph_index": 813, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "11.52", "title": "s (180*40 ms+60*40 ms+48*40 ms) for UE supporting other power class.", "paragraph_index": 814, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.15SA event triggered reporting tests for FR2-2 with SSB time index detection when DRX is used (PCell in FR2-2)", "paragraph_index": 817, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.15.1Test Purpose and Environment", "paragraph_index": 818, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.15.2Test Requirements", "paragraph_index": 831, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "15.84", "title": "s (96*40 ms*1.5+96*40 ms*1.5+72*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 834, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10.08", "title": "s (60*40 ms*1.5+60*40 ms*1.5+48*40 ms*1.5) for UE supporting other power class.", "paragraph_index": 835, "style": null}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "21.6", "title": "s (192*40 ms*1.5+96*40 ms*1.5+72*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 837, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "13.68", "title": "s (120*40 ms*1.5+60*40 ms*1.5+48*40 ms*1.5) for UE supporting other power class.", "paragraph_index": 838, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "27.36", "title": "s (288*40 ms*1.5+96*40 ms*1.5+48*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 840, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "17.28", "title": "s (180*40 ms*1.5+60*40 ms*1.5+48*40 ms*1.5) for UE supporting other power class.", "paragraph_index": 841, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "168.96", "title": "s (96*640 ms+96*640 ms+72*640 ms) for UE supporting power class 1, or", "paragraph_index": 844, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "107.52", "title": "s (60*640 ms+60*640 ms+48*640 ms) for UE supporting other power class.", "paragraph_index": 845, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "230.4", "title": "s (192*640 ms+96*640 ms+72*640 ms) for UE supporting power class 1, or", "paragraph_index": 847, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "145.92", "title": "s (120*640 ms+60*640 ms+48*640 ms) for UE supporting other power class.", "paragraph_index": 848, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "291.84", "title": "s (288*640 ms+96*640 ms+72*640 ms)  for UE supporting power class 1, or", "paragraph_index": 850, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "184.32", "title": "s (180*640 ms+60*640 ms+48*640 ms)  for UE supporting other power class.", "paragraph_index": 851, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.16SA event triggered reporting tests for FR2-2 without SSB time index detection when DRX is not used (PCell in FR1)", "paragraph_index": 854, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.16.1Test Purpose and Environment", "paragraph_index": 855, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.16.2Test Requirements", "paragraph_index": 867, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7.68", "title": "s (96*40 ms+96*40 ms) for UE supporting power class 1, or", "paragraph_index": 870, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "4.8", "title": "s (60*40 ms + 60*40 ms) for UE supporting other power class.", "paragraph_index": 871, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "11.52", "title": "s (192*40 ms+96*40 ms) for UE supporting power class 1, or", "paragraph_index": 873, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7.2", "title": "s (120*40 ms + 60*40 ms) for UE supporting other power class.", "paragraph_index": 874, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "15.36", "title": "s (288*40 ms+96*40 ms) for UE supporting power class 1, or", "paragraph_index": 876, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "9.6", "title": "s (180*40 ms + 60*40 ms) for UE supporting other power class.", "paragraph_index": 877, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3.84", "title": "s (96*20 ms+96*20 ms) for UE supporting power class 1, or", "paragraph_index": 880, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "2.4", "title": "s (60*20 ms + 60*20 ms) for UE supporting other power class.", "paragraph_index": 881, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "5.76", "title": "s (192*20 ms+96*20 ms) for UE supporting power class 1, or", "paragraph_index": 883, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3.6", "title": "s (120*20 ms + 60*20 ms) for UE supporting other power class.", "paragraph_index": 884, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7.68", "title": "s (288*20 ms+96*20 ms) for UE supporting power class 1, or", "paragraph_index": 886, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "4.8", "title": "s (180*20 ms + 60*20 ms) for UE supporting other power class.", "paragraph_index": 887, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.17SA event triggered reporting tests for FR2-2 without SSB time index detection when DRX is used (PCell in FR1)", "paragraph_index": 890, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.17.1Test Purpose and Environment", "paragraph_index": 891, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.17.2Test Requirements", "paragraph_index": 904, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "11.52", "title": "s (96*40 ms*1.5 + 96*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 907, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7.2", "title": "s (60*40 ms*1.5 + 60*40 ms*1.5)  for UE supporting other power class.", "paragraph_index": 908, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "17.28", "title": "s (192*40 ms*1.5 + 96*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 910, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10.80", "title": "s (120*40 ms*1.5 + 60*40 ms*1.5) for UE supporting other power class.", "paragraph_index": 911, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "23.04", "title": "s (288*40 ms*1.5 + 96*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 913, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "14.40", "title": "s (180*40 ms*1.5 + 60*40 ms*1.5) for UE supporting other power class.", "paragraph_index": 914, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "122.80", "title": "s (96*640 ms + 96*640 ms) for UE supporting power class 1, or", "paragraph_index": 917, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "76.80", "title": "s (60*640 ms + 60*640 ms) for UE supporting other power class.", "paragraph_index": 918, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "184.32", "title": "s (192*640 ms + 96*640 ms) for UE supporting power class 1, or", "paragraph_index": 920, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "115.20", "title": "s (120*640 ms + 60*640 ms) for UE supporting other power class.", "paragraph_index": 921, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "245.76", "title": "s (288*640 ms + 96*640 ms) for UE supporting power class 1, or", "paragraph_index": 923, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "153.60", "title": "s (180*640 ms + 60*640 ms) for UE supporting other power class.", "paragraph_index": 924, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.18SA event triggered reporting tests for FR2-2 with SSB time index detection when DRX is not used (PCell in FR1)", "paragraph_index": 927, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.18.1Test Purpose and Environment", "paragraph_index": 928, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.18.2Test Requirements", "paragraph_index": 940, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10.56", "title": "s (96*40 ms+96*40 ms+72*40 ms) for UE supporting power class 1, or", "paragraph_index": 943, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6.72", "title": "s (60*40 ms + 60*40 ms+48*40 ms) for UE supporting other power class.", "paragraph_index": 944, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "14.4", "title": "s (192*40 ms+96*40 ms+72*40 ms) for UE supporting power class 1, or", "paragraph_index": 946, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "9.12", "title": "s (120*40 ms + 60*40 ms+48*40 ms) for UE supporting other power class.", "paragraph_index": 947, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "18.24", "title": "s (288*40 ms+96*40 ms+72*40 ms) for UE supporting power class 1, or", "paragraph_index": 949, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "11.52", "title": "s (180*40 ms + 60*40 ms+48*40 ms) for UE supporting other power class.", "paragraph_index": 950, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "5.28", "title": "s (96*20 ms+96*20 ms+72*20 ms)for UE supporting power class 1, or", "paragraph_index": 953, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3.36", "title": "s (60*20 ms + 60*20 ms+48*20 ms) for UE supporting other power class.", "paragraph_index": 954, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7.2", "title": "s (192*20 ms+96*20 ms+72*20 ms) for UE supporting power class 1, or", "paragraph_index": 956, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "4.56", "title": "s (120*20 ms + 60*20 ms+48*20 ms) for UE supporting other power class.", "paragraph_index": 957, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "9.12", "title": "s (288*20 ms+96*20 ms+72*20 ms) for UE supporting power class 1, or", "paragraph_index": 959, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "5.76", "title": "s (180*20 ms + 60*20 ms+48*20 ms) for UE supporting other power class.", "paragraph_index": 960, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.19SA event triggered reporting tests for FR2-2 with SSB time index detection when DRX is used (PCell in FR1)", "paragraph_index": 963, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.19.1Test Purpose and Environment", "paragraph_index": 964, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.19.2Test Requirements", "paragraph_index": 977, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "15.84", "title": "s (96*40 ms*1.5+96*40 ms*1.5+72*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 980, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10.08", "title": "s (60*40 ms*1.5+60*40 ms*1.5+48*40 ms*1.5) for UE supporting other power class.", "paragraph_index": 981, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "21.6", "title": "s (192*40 ms*1.5+96*40 ms*1.5+72*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 983, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "13.68", "title": "s (120*40 ms*1.5+60*40 ms*1.5+48*40 ms*1.5) for UE supporting other power class.", "paragraph_index": 984, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "27.36", "title": "s (288*40 ms*1.5+96*40 ms*1.5+72*40 ms*1.5) for UE supporting power class 1, or", "paragraph_index": 986, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "17.28", "title": "s (180*40 ms*1.5+60*40 ms*1.5+48*40 ms*1.5) for UE supporting other power class.", "paragraph_index": 987, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "168.69", "title": "s (96*640 ms+96*640 ms+72*640 ms) for UE supporting power class 1, or", "paragraph_index": 990, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "107.52", "title": "s (60*640 ms+60*640 ms+48*640 ms) for UE supporting other power class.", "paragraph_index": 991, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "230.4", "title": "s (192*640 ms+96*640 ms+72*640 ms) for UE supporting power class 1, or", "paragraph_index": 993, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "145.92", "title": "s (120*640 ms+60*640 ms+48*640 ms) for UE supporting other power class.", "paragraph_index": 994, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "291.84", "title": "s (288*640 ms+96*640 ms+72*640 ms) for UE supporting power class 1, or", "paragraph_index": 996, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "184.32", "title": "s (180*640 ms+60*640 ms+48*640 ms) for UE supporting other power class.", "paragraph_index": 997, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.20SA event triggered reporting tests for FR2 with measurement gap with priority and two periodic MUSIM gaps configured", "paragraph_index": 1000, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.20.1Test Purpose and Environment", "paragraph_index": 1001, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.20.2Test Requirements", "paragraph_index": 1015, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10240", "title": "for UE supporting power class 1, or", "paragraph_index": 1017, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6400", "title": "for UE supporting other power class.", "paragraph_index": 1018, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.21SA event triggered reporting tests for FR2 with measurement gap without priority and periodic MUSIM gap configured", "paragraph_index": 1021, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.21.1Test Purpose and Environment", "paragraph_index": 1022, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.21.2Test Requirements", "paragraph_index": 1034, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.22SA event triggered reporting tests with SSB time index detection when DRX is not used (PCell in FR2) for FR2 power class 6 UE configured with highSpeedMeasFlagFR2-r17", "paragraph_index": 1042, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.22.1Test Purpose and Environment", "paragraph_index": 1043, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.22.2Test Requirements", "paragraph_index": 1054, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.23SA event triggered reporting tests without SSB time index detection when DRX is not used (PCell in FR2) for FR2 power class 6 UE configured with highSpeedMeasFlagFR2-r17", "paragraph_index": 1058, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.23.1Test Purpose and Environment", "paragraph_index": 1059, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.23.2Test Requirements", "paragraph_index": 1071, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.24SA event triggered reporting tests for FR2 without SSB time index detection when DRX is not used (FR1+FR2 CA and LTE+ FR2 EN-DC) for UE supporting [CSSF enhancement for one CC measurement per-band]", "paragraph_index": 1075, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.24.1Test Purpose and Environment", "paragraph_index": 1076, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.24.2Test Requirements", "paragraph_index": 1093, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6400", "title": "for UE supporting power class 1, or", "paragraph_index": 1095, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3840", "title": "for UE supporting other power class.", "paragraph_index": 1096, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3200", "title": "for UE supporting power class 1, or", "paragraph_index": 1098, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "1920", "title": "for UE supporting other power class.", "paragraph_index": 1099, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.25SA event triggered reporting tests for FR2 under non-DRX in FR1+FR2 CA for UE supporting threeCarrierMeasWithoutGap-r19", "paragraph_index": 1102, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.25.1Test purpose and Environment", "paragraph_index": 1103, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.25.2Test parameters", "paragraph_index": 1106, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.25.3Test Requirements", "paragraph_index": 1117, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.26SA event triggered reporting tests without gap under non-DRX in FR1+FR2 CA for UE supporting threeCarrierMeasWithoutGap-r19", "paragraph_index": 1123, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.26.1Test purpose and Environment", "paragraph_index": 1124, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.26.2Test parameters", "paragraph_index": 1126, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.26.3Test Requirements", "paragraph_index": 1142, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "1600", "title": "for UE supporting power class 1, or", "paragraph_index": 1144, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "960", "title": "for UE supporting other power class.", "paragraph_index": 1145, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "1600", "title": "for UE supporting power class 1 for A3 event, or", "paragraph_index": 1147, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "960", "title": "for UE supporting other power class for A3 event.", "paragraph_index": 1148, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "5760", "title": "from the beginning of time period T2 for A6 event.", "paragraph_index": 1149, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.27SA serving cell quality triggered reporting tests for FR2 with SSB time index detection when DRX is used (PCell in FR2)", "paragraph_index": 1152, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.27.1Test Purpose and Environment", "paragraph_index": 1153, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.27.2Test Requirements", "paragraph_index": 1166, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "1562", "title": "for UE supporting fastRx-BSF-MeasDelayReduction-r19, the values of which are 2.", "paragraph_index": 1168, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3122", "title": "for UE supporting fastRx-BSF-MeasDelayReduction-r19, the values of which are 4.", "paragraph_index": 1169, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "4682", "title": "for UE supporting fastRx-BSF-MeasDelayReduction-r19, the values of which are 6.", "paragraph_index": 1170, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "16642", "title": "for UE supportingfastRx-BSF-MeasDelayReduction-r19, the values of which are 2.", "paragraph_index": 1172, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "33282", "title": "for UE supportingfastRx-BSF-MeasDelayReduction-r19, the values of which are 4.", "paragraph_index": 1173, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "49922", "title": "for UE supporting fastRx-BSF-MeasDelayReduction-r19, the values of which are 6.", "paragraph_index": 1174, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.28SA event triggered reporting tests for FR2 without SSB time index detection when DRX is used", "paragraph_index": 1177, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.28.1Test Purpose and Environment", "paragraph_index": 1178, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.2.28.2Test Requirements", "paragraph_index": 1189, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "5440", "title": "for UE supporting power class 1 or power class 5, or", "paragraph_index": 1191, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "8320", "title": "for UE supporting other power class.", "paragraph_index": 1192, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3L1-RSRP measurement for beam reporting", "paragraph_index": 1197, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.1SSB based L1-RSRP measurement when DRX is not used", "paragraph_index": 1198, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.1.1Test Purpose and Environment", "paragraph_index": 1199, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.1.2Test parameters", "paragraph_index": 1204, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.1.3Test Requirements", "paragraph_index": 1212, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.2SSB based L1-RSRP measurement when DRX is used", "paragraph_index": 1218, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.2.1Test Purpose and Environment", "paragraph_index": 1219, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.2.2Test parameters", "paragraph_index": 1224, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.2.3Test Requirements", "paragraph_index": 1232, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.3CSI-RS based L1-RSRP measurement when DRX is not used", "paragraph_index": 1238, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.3.1Test Purpose and Environment", "paragraph_index": 1239, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.3.2Test parameters", "paragraph_index": 1243, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.3.3Test Requirements", "paragraph_index": 1251, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.4CSI-RS based L1-RSRP measurement when DRX is used", "paragraph_index": 1257, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.4.1Test Purpose and Environment", "paragraph_index": 1258, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.4.2Test parameters", "paragraph_index": 1262, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.3.3Test Requirements", "paragraph_index": 1270, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.5SSB based L1-RSRP measurement when DRX is used for power class 6 UE configured with highSpeedMeasFlagFR2-r17", "paragraph_index": 1276, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.5.1Test Purpose and Environment", "paragraph_index": 1277, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.5.2Test parameters", "paragraph_index": 1282, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.5.3Test Requirements", "paragraph_index": 1290, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.6Inter-cell SSB based L1-RSRP measurements on FR2 SCell when DRX is not used", "paragraph_index": 1294, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.6.1Test Purpose and Environment", "paragraph_index": 1295, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.6.2Test parameters", "paragraph_index": 1300, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.6.3Test Requirements", "paragraph_index": 1310, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.7SSB based L1-RSRP measurement for FR2-2 when DRX is used", "paragraph_index": 1316, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.7.1Test Purpose and Environment", "paragraph_index": 1317, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.7.2Test parameters", "paragraph_index": 1322, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.7.3Test Requirements", "paragraph_index": 1329, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.8CSI-RS based L1-RSRP measurement when DRX is not used and when CD-SSB is outside active BWP", "paragraph_index": 1335, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.8.1Test Purpose and Environment", "paragraph_index": 1336, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.9SSB based L1-RSRP measurement when DRX is not used when CD-SSB is outside active BWP", "paragraph_index": 1343, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.9.1Test Purpose and Environment", "paragraph_index": 1344, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.9.2Test Requirements", "paragraph_index": 1348, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.10SSB based L1-RSRP measurement for UE supporting NCD-SSB based L1 measurement outside active BWP when DRX is not used", "paragraph_index": 1350, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.10.1Test Purpose and Environment", "paragraph_index": 1351, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.10.2Test parameters", "paragraph_index": 1356, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.10.3Test Requirements", "paragraph_index": 1364, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.11SSB based L1-RSRP measurement when DRX is used for power class 6 UE supporting simultaneousReceptionTwoQCL-r18", "paragraph_index": 1370, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.11.1Test Purpose and Environment", "paragraph_index": 1371, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.11.2Test parameters", "paragraph_index": 1375, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.11.3Test Requirements", "paragraph_index": 1383, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.12SSB based L1-RSRP measurement when DRX is not used", "paragraph_index": 1387, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.12.1Test Purpose and Environment", "paragraph_index": 1388, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.12.2Test parameters", "paragraph_index": 1394, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.12.3Test Requirements", "paragraph_index": 1405, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.13Event Triggered Reporting for the UE initiated beam management", "paragraph_index": 1414, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.13.1Test Purpose and Environment", "paragraph_index": 1415, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.13.2Test parameters", "paragraph_index": 1419, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.13.3Test Requirements", "paragraph_index": 1428, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.14CSI-RS based UE-initiated/event-driven beam management of event2", "paragraph_index": 1432, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.14.1Test Purpose and Environment", "paragraph_index": 1433, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.14.2Test parameters", "paragraph_index": 1437, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.14.3Test Requirements", "paragraph_index": 1445, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.15Event triggered reporting for UE initiated beam management for UE configured with Inter-cell SSB based L1-RSRP measurement on FR2 when DRX is not used", "paragraph_index": 1448, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.15.1Test Purpose and Environment", "paragraph_index": 1449, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.15.2Test parameters", "paragraph_index": 1454, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.15.3Test Requirements", "paragraph_index": 1464, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.16CSI-RS based L1-RSRP measurement when DRX is not used with SBFD", "paragraph_index": 1468, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.16.1Test Purpose and Environment", "paragraph_index": 1469, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.16.2Test parameters", "paragraph_index": 1473, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.3.16.3Test Requirements", "paragraph_index": 1481, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.4CLI measurements", "paragraph_index": 1485, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.4.1SRS-RSRP measurement with non-DRX", "paragraph_index": 1486, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.4.1.1Test Purpose and Environment", "paragraph_index": 1487, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.4.1.2Test Parameters", "paragraph_index": 1491, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.4.1.3Test Requirements", "paragraph_index": 1502, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.4.2CLI-RSSI measurement with non-DRX", "paragraph_index": 1507, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.4.2.1Test Purpose and Environment", "paragraph_index": 1508, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.4.2.2Test Parameters", "paragraph_index": 1512, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.4.2.3Test Requirements", "paragraph_index": 1523, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.5.1SA interfrequency CGI reporting in autonomous gaps test (PCell in FR2)", "paragraph_index": 1529, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.5.1.1Test Purpose and Environment", "paragraph_index": 1530, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.5.1.2Test Requirements", "paragraph_index": 1542, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6L1-SINR measurement for beam reporting", "paragraph_index": 1547, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.2L1-SINR measurement with SSB based CMR and dedicated IMR when DRX is used", "paragraph_index": 1565, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.2.1Test Purpose and Environment", "paragraph_index": 1566, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.2.2Test parameters", "paragraph_index": 1571, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.2.3Test Requirements", "paragraph_index": 1579, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.3L1-SINR measurement with CSI-RS based CMR and dedicated IMR configured when DRX is used", "paragraph_index": 1585, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.3.1Test Purpose and Environment", "paragraph_index": 1586, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.3.2Test parameters", "paragraph_index": 1590, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.3.3Test Requirements", "paragraph_index": 1598, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.4L1-SINR measurement with SSB based CMR and dedicated IMR with SBFD", "paragraph_index": 1602, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.4.1Test Purpose and Environment", "paragraph_index": 1603, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.4.2Test parameters", "paragraph_index": 1608, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.6.4.3Test Requirements", "paragraph_index": 1616, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.7CSI-RS based intra-frequency Measurements", "paragraph_index": 1622, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.7.1SA event triggered reporting test without gap under DRX for CSI-RS based intra-frequency measurement", "paragraph_index": 1623, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.7.1.1Test purpose and Environment", "paragraph_index": 1624, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.7.1.2Test Requirements", "paragraph_index": 1638, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.8CSI-RS based inter-frequency Measurements", "paragraph_index": 1646, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.8.1SA event triggered reporting tests for FR2 CSI-RS based measurement when non-DRX is used (PCell in FR2)", "paragraph_index": 1647, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.8.1.1Test Purpose and Environment", "paragraph_index": 1648, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.8.1.2Test Requirements", "paragraph_index": 1660, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10880", "title": "for UE supporting power class 1, or", "paragraph_index": 1662, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6720", "title": "for UE supporting other power class", "paragraph_index": 1663, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9RSTD measurements", "paragraph_index": 1667, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.1 NR RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA", "paragraph_index": 1668, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.1.1Test Purpose and Environment", "paragraph_index": 1669, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.1.2Test Requirements", "paragraph_index": 1686, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.2 NR RSTD measurement reporting delay test case for dual positioning frequency layers in FR2 SA", "paragraph_index": 1691, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.2.1Test Purpose and Environment", "paragraph_index": 1692, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.2.2Test Requirements", "paragraph_index": 1709, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.3NR RSTD measurement reporting delay test case for single positioning frequency layer with reduced number of samples in FR2 SA", "paragraph_index": 1714, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.3.1Test Purpose and Environment", "paragraph_index": 1715, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.3.2Test Requirements", "paragraph_index": 1732, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.4NR RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA without measurement gap", "paragraph_index": 1737, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.4.1Test Purpose and Environment", "paragraph_index": 1738, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.4.2Test Requirements", "paragraph_index": 1755, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.5NR RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA in RRC_CONNECTED state with Rx TEG", "paragraph_index": 1760, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.5.1Test Purpose and Environment", "paragraph_index": 1761, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.5.2Test Requirements", "paragraph_index": 1780, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.6NR RSTD measurement reporting delay test case for PRS aggregation in FR2 SA in RRC_CONNECTED mode", "paragraph_index": 1785, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.6.1Test Purpose and Environment", "paragraph_index": 1786, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.9.6.2Test Requirements", "paragraph_index": 1805, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10 PRS-RSRP measurements", "paragraph_index": 1811, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.1 PRS-RSRP reporting delay test case for single positioning frequency layer", "paragraph_index": 1812, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.1.1Test Purpose and Environment", "paragraph_index": 1813, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.1.2Test Requirements", "paragraph_index": 1826, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.2PRS-RSRP reporting delay test case for dual positioning frequency layer", "paragraph_index": 1830, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.2.1Test Purpose and Environment", "paragraph_index": 1831, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.2.2Test Requirements", "paragraph_index": 1844, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.3PRS-RSRP reporting delay test case for reduced number of samples", "paragraph_index": 1848, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.3.1Test Purpose and Environment", "paragraph_index": 1849, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.3.2Test Requirements", "paragraph_index": 1862, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.4PRS-RSRP reporting delay test case for single positioning frequency layer outside MG", "paragraph_index": 1866, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.4.1Test Purpose and Environment", "paragraph_index": 1867, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.10.4.2Test Requirements", "paragraph_index": 1881, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11UE Rx-Tx time difference measurements", "paragraph_index": 1885, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.1UE Rx-Tx time difference measurements for single positioning frequency layer in FR2 SA", "paragraph_index": 1886, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.1.1Test purpose and environment", "paragraph_index": 1887, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.1.2Test requirements", "paragraph_index": 1903, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.2UE Rx-Tx time difference measurement period for dual positioning frequency layers in FR2 SA", "paragraph_index": 1908, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.2.1Test purpose and environment", "paragraph_index": 1909, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.2.2Test requirements", "paragraph_index": 1925, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.3UE Rx-Tx time difference measurements for single positioning frequency layer in FR2 SA with reduced sample number", "paragraph_index": 1930, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.3.1Test purpose and environment", "paragraph_index": 1931, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.3.2Test requirements", "paragraph_index": 1946, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.4UE Rx-Tx time difference measurements without gaps in FR2 SA", "paragraph_index": 1951, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.4.1Test purpose and environment", "paragraph_index": 1952, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.4.2Test requirements", "paragraph_index": 1967, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.5UE Rx-Tx time difference measurements for single positioning frequency layer in FR2 SA with RxTx TEG", "paragraph_index": 1972, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.5.1Test purpose and environment", "paragraph_index": 1973, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.5.2Test requirements", "paragraph_index": 1988, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.6UE Rx-Tx time difference measurements with PRS bandwidth aggregation in FR2 SA", "paragraph_index": 1994, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.6.1Test purpose and environment", "paragraph_index": 1995, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.11.6.2Test requirements", "paragraph_index": 2012, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.12PRS-RSRPP measurements", "paragraph_index": 2018, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.12.1 PRS-RSRPP reporting delay test case for single positioning frequency layer in FR2 in RRC_CONNECTED state", "paragraph_index": 2019, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.12.1.1Test Purpose and Environment", "paragraph_index": 2020, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.12.1.2Test Requirements", "paragraph_index": 2033, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.12.2PRS-RSRPP reporting delay test case for reduced number of samples for single positioning frequency layer in FR2 in RRC_CONNECTED state", "paragraph_index": 2037, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.12.2.1Test Purpose and Environment", "paragraph_index": 2038, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.12.2.2Test Requirements", "paragraph_index": 2051, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.12.3PRS-RSRPP reporting delay test case for gapless measurement in FR2", "paragraph_index": 2055, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.12.3.1Test Purpose and Environment", "paragraph_index": 2056, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.12.3.2Test Requirements", "paragraph_index": 2070, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.13UE Rx-Tx time difference measurements for PDC", "paragraph_index": 2074, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.13.1UE Rx-Tx time difference measurement for propagation delay compensation using PRS in FR2", "paragraph_index": 2075, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.13.1.1Test purpose and environment", "paragraph_index": 2076, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.13.1.2Test requirements", "paragraph_index": 2092, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.13.2UE Rx-Tx time difference measurement for propagation delay compensation using TRS in FR2", "paragraph_index": 2097, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.13.2.1Test purpose and environment", "paragraph_index": 2098, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.13.2.2Test requirements", "paragraph_index": 2114, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.14SA event triggered reporting tests with Pre-MG", "paragraph_index": 2120, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.14.1Intra-frequency measurement test with SA event triggered reporting tests: with autonomous activation/deactivation of Pre-MG in FR2", "paragraph_index": 2121, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.14.1.1Test purpose and Environment", "paragraph_index": 2122, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.14.1.2Test parameters", "paragraph_index": 2124, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.14.1.3Test Requirements", "paragraph_index": 2146, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.14.2Intra-frequency measurement test with SA event triggered reporting tests: with network-controlled activation/deactivation of Pre-MG in FR2", "paragraph_index": 2156, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.14.2.1Test purpose and Environment", "paragraph_index": 2157, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.14.2.2Test parameters", "paragraph_index": 2159, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.14.2.3Test Requirements", "paragraph_index": 2180, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.15SA event triggered reporting tests with concurrent gaps", "paragraph_index": 2190, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.15.1SA event triggered reporting tests For FR2 with fully non-overlapping concurrent MGs for SSB-based inter-frequency measurements", "paragraph_index": 2191, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.15.1.1Test Purpose and Environment", "paragraph_index": 2192, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.15.1.2Test Requirements", "paragraph_index": 2204, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10240", "title": "for UE supporting power class 1 and 5, or", "paragraph_index": 2206, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6400", "title": "for UE supporting other power class.", "paragraph_index": 2207, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.15.2SA event triggered reporting tests For FR2 with concurrent measurement gaps without SSB time index detection when DRX is not used (PCell in FR2)", "paragraph_index": 2210, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.15.2.1Test Purpose and Environment", "paragraph_index": 2211, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.15.2.2Test Requirements", "paragraph_index": 2222, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10240", "title": "for UE supporting power class 1 and 5, or", "paragraph_index": 2224, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6400", "title": "for UE supporting other power class.", "paragraph_index": 2225, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.15.3SA event triggered reporting tests for FR2 concurrent gap with partially partial overlapping scenario for SSB-based measurements and PRS-based measurement", "paragraph_index": 2228, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.15.3.1Test Purpose and Environment", "paragraph_index": 2229, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.15.3.2Test Requirements", "paragraph_index": 2242, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10240", "title": "for UE supporting power class 1 and 5, or", "paragraph_index": 2244, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6400", "title": "for UE supporting other power class.", "paragraph_index": 2245, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.16SA event triggered reporting tests with NCSG", "paragraph_index": 2251, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.16.1SA event triggered reporting test with per-UE NCSG under non-DRX", "paragraph_index": 2252, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.16.1.1Test purpose and Environment", "paragraph_index": 2253, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.16.1.2Test Requirements", "paragraph_index": 2272, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.16.2SA event triggered reporting tests on inter-frequency measurement with NCSG for FR2 when DRX is not used (PCell in FR2)", "paragraph_index": 2281, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.16.2.1Test Purpose and Environment", "paragraph_index": 2282, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.16.2.2Test Requirements", "paragraph_index": 2294, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "5120", "title": "for UE supporting power class 1 and 5, or", "paragraph_index": 2296, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3200", "title": "for UE supporting other power class.", "paragraph_index": 2297, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.16.3Event triggered reporting test on deactivated SCell measurement via NCSG in FR2 in non-DRX", "paragraph_index": 2302, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.16.3.1Test Purpose and Environment", "paragraph_index": 2303, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.16.3.2Test Requirements", "paragraph_index": 2318, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "12.8", "title": "s for UE supporting power class 1 and 5, or", "paragraph_index": 2320, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "7.68", "title": "s for UE supporting other power class.", "paragraph_index": 2321, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.17SA event triggered reporting tests for concurrent measurement gaps with Pre-MG in FR2", "paragraph_index": 2327, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.17.1SA event triggered reporting test for FR2 with one pre-configured gap and one measurement gap", "paragraph_index": 2328, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.17.1.1Test Purpose and Environment", "paragraph_index": 2329, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.17.1.2Test Requirements", "paragraph_index": 2350, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "5120", "title": "for UE supporting power class 1 and 5, or", "paragraph_index": 2353, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3200", "title": "for UE supporting other power class.", "paragraph_index": 2354, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10240", "title": "for UE supporting power class 1 and 5, or", "paragraph_index": 2358, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6400", "title": "for UE supporting other power class.", "paragraph_index": 2359, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6480", "title": "for UE supporting power class 1 and 5, or", "paragraph_index": 2363, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3920", "title": "for UE supporting other power class.", "paragraph_index": 2364, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.17.2Inter-frequency measurement test with SA event triggered reporting tests: with autonomous activation/deactivation of Pre-MGs in FR2", "paragraph_index": 2368, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.17.2.1Test purpose and Environment", "paragraph_index": 2369, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.17.2.2Test parameters", "paragraph_index": 2371, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.17.2.3Test Requirements", "paragraph_index": 2394, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.18SA event triggered reporting tests with concurrent gaps and NCSG", "paragraph_index": 2404, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.18.1SA event triggered reporting tests For FR2 with concurrent measurement gaps and NCSG without SSB time index detection when DRX is not used (PCell in FR2)", "paragraph_index": 2405, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.18.1.1Test Purpose and Environment", "paragraph_index": 2406, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.18.1.2Test Requirements", "paragraph_index": 2419, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "10240", "title": "for UE supporting power class 1 and 5, or", "paragraph_index": 2421, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "6400", "title": "for UE supporting other power class.", "paragraph_index": 2422, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.19SA event triggered reporting tests with NeedForGap in FR2", "paragraph_index": 2428, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.19.1SA event triggered reporting test for UE indicating NeedforInterruptionInfoNR under non-DRX and no interruption outside configured measurement gaps", "paragraph_index": 2429, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.19.1.1Test purpose and Environment", "paragraph_index": 2430, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.19.1.2Test Requirements", "paragraph_index": 2448, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.19.2SA event triggered reporting test without gap under non-DRX", "paragraph_index": 2457, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.19.2.1Test purpose and Environment", "paragraph_index": 2458, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.19.2.2Test Requirements", "paragraph_index": 2474, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.19.3SA event triggered reporting test without gap without interruption under non-DRX", "paragraph_index": 2484, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.19.3.1Test Purpose and Environment", "paragraph_index": 2485, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.19.3.2Test Requirements", "paragraph_index": 2498, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20LTM Intra-frequency L1-RSRP measurement", "paragraph_index": 2508, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.1Intra-frequency SSB based L1-RSRP measurement in FR2", "paragraph_index": 2509, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.1.1Test Purpose and Environment", "paragraph_index": 2510, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.1.2Test parameters", "paragraph_index": 2515, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.1.3Test Requirements", "paragraph_index": 2536, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.2Intra-frequency SSB based L1-RSRP measurement in FR2 with event triggered reporting", "paragraph_index": 2539, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.2.1Test Purpose and Environment", "paragraph_index": 2540, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.2.2Test parameters", "paragraph_index": 2544, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.2.3Test Requirements", "paragraph_index": 2561, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.3CSI-RS based L1-RSRP intra-frequency measurement for neighbour cell in FR2 without SSB based L1-RSRP measurement", "paragraph_index": 2565, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.3.1Test purpose and Environment", "paragraph_index": 2566, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.3.2Test parameters", "paragraph_index": 2571, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.3.3Test Requirements", "paragraph_index": 2596, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.4Intra-frequency CSI-RS based L1-RSRP measurement in FR2", "paragraph_index": 2606, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.4.1Test Purpose and Environment", "paragraph_index": 2607, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.20.4.3Test Requirements", "paragraph_index": 2634, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.21LTM Inter-frequency L1-RSRP measurement with measurement gap", "paragraph_index": 2639, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.21.1Inter-frequency SSB-based L1-RSRP measurement with measurement gap for LTM in FR2", "paragraph_index": 2640, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.21.1.1Test Purpose and Environment", "paragraph_index": 2641, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.21.1.2Test parameters", "paragraph_index": 2646, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.21.1.3Test Requirements", "paragraph_index": 2661, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.21.2Inter-frequency SSB-based L1-RSRP measurement with measurement gap in FR2 with event triggered reporting", "paragraph_index": 2665, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.21.2.3Test Requirements", "paragraph_index": 2681, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.22LTM Inter-frequency L1-RSRP measurement without measurement gap", "paragraph_index": 2686, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.22.1Inter-frequency SSB based L1-RSRP measurement without measurement gap in FR2", "paragraph_index": 2687, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.22.1.1Test Purpose and Environment", "paragraph_index": 2688, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.22.1.2Test parameters", "paragraph_index": 2693, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.22.1.3Test Requirements", "paragraph_index": 2712, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.23Idle Mode CA/DC Measurements", "paragraph_index": 2716, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.23.1Test case for Idle mode fast CA/DC eEMR measurement for FR2 without valid reporting", "paragraph_index": 2717, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.23.1.1Test Purpose and Environment", "paragraph_index": 2718, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.23.1.2Test Requirements", "paragraph_index": 2735, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.23.2Test case for Idle mode fast CA/DC cell reselection measurement for FR2 without valid reporting", "paragraph_index": 2740, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.23.2.1Test Purpose and Environment", "paragraph_index": 2741, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.23.2.2Test Requirements", "paragraph_index": 2759, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.23.3 Test case for Idle mode fast CA/DC cell reselection measurement for FR2 with valid reporting", "paragraph_index": 2764, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.23.3.1Test Purpose and Environment", "paragraph_index": 2765, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.23.3.2Test Requirements", "paragraph_index": 2782, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.24RSCPD measurements", "paragraph_index": 2789, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.24.1NR RSCPD with RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA in RRC_CONNECTED state", "paragraph_index": 2790, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.24.1.1Test Purpose and Environment", "paragraph_index": 2791, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.24.1.2Test Requirements", "paragraph_index": 2809, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.25RSCP measurements", "paragraph_index": 2815, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.25.1DL RSCP with UE Rx-Tx time difference measurements for single positioning frequency layer in FR2 SA", "paragraph_index": 2816, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.25.1.1Test purpose and environment", "paragraph_index": 2817, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.25.1.2Test requirements", "paragraph_index": 2833, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.26Inter-RAT Measurements", "paragraph_index": 2838, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.26.1SA event triggered reporting test without gap under non-DRX for UE configured with [MeasuringoneCCperFR2band] in FR2 inter-band CA", "paragraph_index": 2839, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.26.1.1Test purpose and Environment", "paragraph_index": 2840, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.26.1.2Test Requirements", "paragraph_index": 2854, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "5120", "title": "for UE supporting power class 1, or", "paragraph_index": 2856, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "3200", "title": "for UE supporting other power class.", "paragraph_index": 2857, "style": "B10"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.27L1 CLI measurements", "paragraph_index": 2860, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.27.1L1-SRS-RSRP measurement with DRX with SBFD", "paragraph_index": 2861, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.27.1.1Test Purpose and Environment", "paragraph_index": 2862, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.27.1.2Test Parameters", "paragraph_index": 2866, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.27.1.3Test Requirements", "paragraph_index": 2879, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.27.2L1-CLI-RSSI measurement with DRX with SBFD", "paragraph_index": 2882, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.27.2.1Test Purpose and Environment", "paragraph_index": 2883, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.27.2.2Test Parameters", "paragraph_index": 2887, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.27.2.3Test Requirements", "paragraph_index": 2899, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.28LTM Inter-frequency L1-RSRP event triggered reporting without measurement gap", "paragraph_index": 2902, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.28.1Inter-frequency SSB based L1-RSRP measurement without measurement gap in FR2", "paragraph_index": 2903, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.28.1.1Test Purpose and Environment", "paragraph_index": 2904, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.28.1.2Test parameters", "paragraph_index": 2908, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.28.1.3Test Requirements", "paragraph_index": 2923, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.29LTM Inter-frequency L1-RSRP measurement with measurement gap cancellation", "paragraph_index": 2927, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.29.1Inter-frequency SSB-based L1-RSRP measurement with measurement gap cancellation for LTM in FR2", "paragraph_index": 2928, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.29.1.1Test Purpose and Environment", "paragraph_index": 2929, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.29.1.2Test parameters", "paragraph_index": 2933, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.29.1.3Test Requirements", "paragraph_index": 2945, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.30DL AI/ML positioning reporting delay test case for single positioning frequency layer in FR2 SA", "paragraph_index": 2950, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.30.1Test Purpose and Environment", "paragraph_index": 2951, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.6.30.2Test Requirements", "paragraph_index": 2969, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7Measurement Performance requirements", "paragraph_index": 2975, "style": "Heading2"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1SS-RSRP", "paragraph_index": 2980, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.1SA intra-frequency case measurement accuracy with FR2 serving cell and FR2 target cell", "paragraph_index": 2981, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.1.1Test Purpose and Environment", "paragraph_index": 2982, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.1.2Test parameters", "paragraph_index": 2984, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.1.3Test Requirements", "paragraph_index": 2992, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.2SA inter-frequency case measurement accuracy with FR2 serving cell and FR2 target cell", "paragraph_index": 3005, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.2.1Test Purpose and Environment", "paragraph_index": 3006, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.2.2Test parameters", "paragraph_index": 3010, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.2.3Test Requirements", "paragraph_index": 3016, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.3SA inter-frequency measurement accuracy with FR1 serving cell and FR2 target cell", "paragraph_index": 3028, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.3.1Test Purpose and Environment", "paragraph_index": 3029, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.3.2Test parameters", "paragraph_index": 3033, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.1.3.3Test Requirements", "paragraph_index": 3039, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.2SS-RSRQ", "paragraph_index": 3047, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.2.1SA intra-frequency measurement accuracy with FR2 serving cell and FR2 target cell", "paragraph_index": 3048, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.2.1.1Test Purpose and Environment", "paragraph_index": 3049, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.2.1.2Test Parameters", "paragraph_index": 3051, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.2.1.3Test Requirements", "paragraph_index": 3059, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.2.2SA Inter-frequency measurement accuracy with FR2 serving cell and FR2 TDD target cell", "paragraph_index": 3061, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.2.2.1Test Purpose and Environment", "paragraph_index": 3062, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.2.2.2Test Parameters", "paragraph_index": 3064, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.2.2.3Test Requirements", "paragraph_index": 3072, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.3SS-SINR", "paragraph_index": 3075, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.3.1SA intra-frequency case measurement accuracy with FR2 serving cell and FR2 target cell", "paragraph_index": 3076, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.3.1.1Test Purpose and Environment", "paragraph_index": 3077, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.3.1.2Test Parameters", "paragraph_index": 3079, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.3.1.3Test Requirements", "paragraph_index": 3087, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.3.2SA Inter-frequency measurement accuracy with FR2 serving cell and FR2 TDD target cell", "paragraph_index": 3089, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.3.2.1Test Purpose and Environment", "paragraph_index": 3090, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.3.2.2Test Parameters", "paragraph_index": 3092, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.3.2.3Test Requirements", "paragraph_index": 3100, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4L1-RSRP measurement for beam reporting", "paragraph_index": 3103, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.1SSB based L1-RSRP measurement", "paragraph_index": 3104, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.1.1Test Purpose and Environment", "paragraph_index": 3105, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.1.2Test parameters", "paragraph_index": 3110, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.1.3Test Requirements", "paragraph_index": 3117, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.2CSI-RS based L1-RSRP measurement on resource set with repetition off", "paragraph_index": 3127, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.2.1Test Purpose and Environment", "paragraph_index": 3128, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.2.2Test parameters", "paragraph_index": 3133, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.2.3Test Requirements", "paragraph_index": 3140, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.3CSI-RS based L1-RSRP measurement with SBFD DUD", "paragraph_index": 3150, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.3.1Test Purpose and Environment", "paragraph_index": 3151, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.3.2Test parameters", "paragraph_index": 3156, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.3.3Test Requirements", "paragraph_index": 3163, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.4CSI-RS based L1-RSRP measurement with SBFD DU", "paragraph_index": 3173, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.4.1Test Purpose and Environment", "paragraph_index": 3174, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.4.2Test parameters", "paragraph_index": 3179, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.4.4.3Test Requirements", "paragraph_index": 3186, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.5CLI measurements", "paragraph_index": 3196, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.5.1SA SRS-RSRP measurement accuracy with FR2 serving cell", "paragraph_index": 3197, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.5.1.1Test Purpose and Environment", "paragraph_index": 3198, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.5.1.2Test parameters", "paragraph_index": 3202, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.5.1.3Test Requirements", "paragraph_index": 3211, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.5.2SA CLI-RSSI measurement accuracy with FR2 serving cell", "paragraph_index": 3219, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.5.2.1Test Purpose and Environment", "paragraph_index": 3220, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.5.2.2Test parameters", "paragraph_index": 3224, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.5.2.3Test Requirements", "paragraph_index": 3233, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6L1-SINR measurement for beam reporting", "paragraph_index": 3241, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6.1.1Test Purpose and Environment", "paragraph_index": 3243, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6.1.2Test parameters", "paragraph_index": 3248, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6.1.3Test Requirements", "paragraph_index": 3255, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6.2L1-SINR measurement with SSB based CMR and dedicated IMR", "paragraph_index": 3264, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6.2.1Test Purpose and Environment", "paragraph_index": 3265, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6.2.2Test parameters", "paragraph_index": 3270, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6.2.3Test Requirements", "paragraph_index": 3277, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6.3L1-SINR measurement with CSI-RS based CMR and dedicated IMR", "paragraph_index": 3286, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6.3.1Test Purpose and Environment", "paragraph_index": 3287, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6.3.2Test parameters", "paragraph_index": 3292, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.6.3.3Test Requirements", "paragraph_index": 3300, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.7CSI-RSRP", "paragraph_index": 3308, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.7.1SA intra-frequency case measurement accuracy with FR2 serving cell and FR2 target cell", "paragraph_index": 3309, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.7.1.1Test Purpose and Environment", "paragraph_index": 3310, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.7.1.2Test parameters", "paragraph_index": 3312, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.7.1.3Test Requirements", "paragraph_index": 3320, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.7.2SA inter-frequency case measurement accuracy with FR2 serving cell and FR2 target cell", "paragraph_index": 3333, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.7.2.1Test Purpose and Environment", "paragraph_index": 3334, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.7.2.2Test parameters", "paragraph_index": 3338, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.7.2.3Test Requirements", "paragraph_index": 3344, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.8CSI-RSRQ", "paragraph_index": 3356, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.8.1SA intra-frequency measurement accuracy with FR2 serving cell and FR2 target cell", "paragraph_index": 3357, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.8.1.1Test Purpose and Environment", "paragraph_index": 3358, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.8.1.2Test Parameters", "paragraph_index": 3360, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.8.1.3Test Requirements", "paragraph_index": 3368, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.8.2SA Inter-frequency measurement accuracy with FR2 serving cell and FR2 TDD target cell", "paragraph_index": 3370, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.8.2.1Test Purpose and Environment", "paragraph_index": 3371, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.8.2.2Test Parameters", "paragraph_index": 3373, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.8.2.3Test Requirements", "paragraph_index": 3380, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.9CSI-SINR", "paragraph_index": 3383, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.9.1SA intra-frequency case measurement accuracy with FR2 serving cell and FR2 target cell", "paragraph_index": 3384, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.9.1.1Test Purpose and Environment", "paragraph_index": 3385, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.9.1.2Test Parameters", "paragraph_index": 3387, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.9.1.3Test Requirements", "paragraph_index": 3395, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.9.2SA Inter-frequency measurement accuracy with FR2 serving cell and FR2 TDD target cell", "paragraph_index": 3398, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.9.2.1Test Purpose and Environment", "paragraph_index": 3399, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.9.2.2Test Parameters", "paragraph_index": 3401, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.9.2.3Test Requirements", "paragraph_index": 3409, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10RSTD measurements", "paragraph_index": 3412, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.1RSTD measurement accuracy test case for single positioning frequency layer", "paragraph_index": 3413, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.1.1Test purpose and Environment", "paragraph_index": 3414, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.1.2Test Requirements", "paragraph_index": 3424, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.2RSTD measurement accuracy test case for dual positioning frequency layer", "paragraph_index": 3426, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.2.1Test purpose and Environment", "paragraph_index": 3427, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.2.2Test Requirements", "paragraph_index": 3437, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.3RSTD measurement accuracy test case with reduced number of samples for single positioning frequency layer in FR2 in RRC_CONNECTED state", "paragraph_index": 3439, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.3.1Test purpose and Environment", "paragraph_index": 3440, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.3.2Test Requirements", "paragraph_index": 3450, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.4RSTD measurement accuracy test case with Rx TEG", "paragraph_index": 3452, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.4.1Test purpose and Environment", "paragraph_index": 3453, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.4.2Test Requirements", "paragraph_index": 3465, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.5NR RSTD measurement accuracy test case for PRS aggregation in FR2 SA in RRC_CONNECTED mode", "paragraph_index": 3468, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.5.1Test purpose and Environment", "paragraph_index": 3469, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.10.5.2Test Requirements", "paragraph_index": 3481, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.11PRS-RSRP measurements", "paragraph_index": 3484, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.11.1SA measurement accuracy with PRS in FR2", "paragraph_index": 3485, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.11.1.1Test Purpose and Environment", "paragraph_index": 3486, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.11.1.2Test parameters", "paragraph_index": 3488, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.11.1.3Test Requirements", "paragraph_index": 3496, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.11.2SA measurement accuracy with PRS in FR2 with reduced sample number", "paragraph_index": 3500, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.11.2.1Test Purpose and Environment", "paragraph_index": 3501, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.11.2.2Test parameters", "paragraph_index": 3503, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.11.2.3Test Requirements", "paragraph_index": 3511, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12UE Rx-Tx time difference measurements", "paragraph_index": 3515, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.1UE Rx-Tx time difference measurement accuracy for single positioning frequency layer in FR2 SA", "paragraph_index": 3516, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.1.1Test purpose and environment", "paragraph_index": 3517, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.1.2Test parameters", "paragraph_index": 3527, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.1.3Test requirements", "paragraph_index": 3532, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.2UE Rx-Tx time difference measurement accuracy with reduced number of samples in FR2 SA", "paragraph_index": 3534, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.2.1Test purpose and environment", "paragraph_index": 3535, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.2.2Test parameters", "paragraph_index": 3546, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.2.3Test requirements", "paragraph_index": 3550, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.3UE Rx-Tx time difference measurement accuracy with RxTx TEG", "paragraph_index": 3552, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.3.1Test purpose and environment", "paragraph_index": 3553, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.3.2Test parameters", "paragraph_index": 3565, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.3.3Test requirements", "paragraph_index": 3569, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.4UE Rx-Tx time difference measurement accuracy with PRS bandwidth aggregation in FR2 SA", "paragraph_index": 3573, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.4.1Test purpose and environment", "paragraph_index": 3574, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.12.4.2Test requirements", "paragraph_index": 3591, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.13PRS-RSRPP measurements", "paragraph_index": 3594, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.13.1SA measurement accuracy with PRS in FR2", "paragraph_index": 3595, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.13.1.1Test Purpose and Environment", "paragraph_index": 3596, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.13.1.2Test parameters", "paragraph_index": 3598, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.13.1.3Test Requirements", "paragraph_index": 3606, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.13.2SA measurement accuracy with reduced PRS samples in FR2", "paragraph_index": 3610, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.13.2.1Test Purpose and Environment", "paragraph_index": 3611, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.13.2.2Test parameters", "paragraph_index": 3614, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.13.2.3Test Requirements", "paragraph_index": 3622, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.14L1-RSRP measurement for group-based beam reporting", "paragraph_index": 3626, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.14.1SSB based L1-RSRP measurement", "paragraph_index": 3627, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.14.1.1Test Purpose and Environment", "paragraph_index": 3628, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.14.1.2Test parameters", "paragraph_index": 3634, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.14.1.3Test Requirements", "paragraph_index": 3641, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.14.2CSI-RS based L1-RSRP measurement on resource set with repetition off", "paragraph_index": 3651, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.14.2.1Test Purpose and Environment", "paragraph_index": 3652, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.14.2.2Test parameters", "paragraph_index": 3657, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.14.2.3Test Requirements", "paragraph_index": 3664, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.15LTM L1-RSRP measurement", "paragraph_index": 3674, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.15.1SSB based inter-frequency L1-RSRP measurement", "paragraph_index": 3675, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.15.1.1Test Purpose and Environment", "paragraph_index": 3676, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.15.1.2Test parameters", "paragraph_index": 3686, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.15.1.3Test Requirements", "paragraph_index": 3693, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.15.2CSI-RS based L1-RSRP measurement on resource set with repetition off", "paragraph_index": 3701, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.15.2.1Test Purpose and Environment", "paragraph_index": 3702, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.15.2.2Test parameters", "paragraph_index": 3715, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.15.2.3Test Requirements", "paragraph_index": 3722, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.16RSCPD Measurements", "paragraph_index": 3729, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.16.1RSCPD with RSTD measurement accuracy in FR2 SA in RRC_CONNECTED", "paragraph_index": 3730, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.16.1.1Test purpose and environment", "paragraph_index": 3731, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.16.1.2Test parameters", "paragraph_index": 3740, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.16.1.3Test requirements", "paragraph_index": 3746, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.17RSCP with UE Rx-Tx time difference measurements", "paragraph_index": 3748, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.17.1RSCP with UE Rx-Tx time difference measurement accuracy in FR2 SA", "paragraph_index": 3749, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.17.1.1Test purpose and environment", "paragraph_index": 3750, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.17.1.2Test parameters", "paragraph_index": 3760, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.17.1.3Test requirements", "paragraph_index": 3764, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.18L1 CLI measurements", "paragraph_index": 3766, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.18.1SA L1-SRS-RSRP measurement accuracy with FR2 serving cell with SBFD", "paragraph_index": 3767, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.18.1.1Test Purpose and Environment", "paragraph_index": 3768, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.18.1.2Test parameters", "paragraph_index": 3772, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.18.1.3Test Requirements", "paragraph_index": 3782, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.18.2L1-CLI-RSSI measurement accuracy in FR2 with SBFD", "paragraph_index": 3790, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.18.2.1Test Purpose and Environment", "paragraph_index": 3791, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.18.2.2Test parameters", "paragraph_index": 3795, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.7.18.2.3Test Requirements", "paragraph_index": 3805, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8Measurement procedure in RRC_INACTIVE", "paragraph_index": 3809, "style": "Heading2"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1RSTD measurements", "paragraph_index": 3810, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.1NR RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA in RRC_INACTIVE state", "paragraph_index": 3811, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.1.1Test Purpose and Environment", "paragraph_index": 3812, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.1.2Test Requirements", "paragraph_index": 3830, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.2NR RSTD measurement reporting delay test case with reduced number of samples in RRC_INACTIVE, FR1 SA", "paragraph_index": 3835, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.2.1Test Purpose and Environment", "paragraph_index": 3836, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.2.2Test Requirements", "paragraph_index": 3854, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.3NR RSTD measurement reporting delay test case for PRS aggregation in FR2 SA in RRC_INACTIVE state", "paragraph_index": 3860, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.3.1Test purpose and environment", "paragraph_index": 3861, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.3.2Test requirements", "paragraph_index": 3879, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.4NR RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA in RRC_INACTIVE state with eDRX > 10.24s", "paragraph_index": 3885, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.4.1Test purpose and environment", "paragraph_index": 3886, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.1.4.2Test requirements", "paragraph_index": 3902, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.2PRS-RSRP measurements", "paragraph_index": 3910, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.2.1PRS-RSRP reporting delay test case for single positioning frequency layer in RRC_INACTIVE", "paragraph_index": 3911, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.2.1.1Test Purpose and Environment", "paragraph_index": 3912, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.2.1.2Test Requirements", "paragraph_index": 3925, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.2.2PRS-RSRP reporting delay test case with reduced number of samples in RRC_INACTIVE", "paragraph_index": 3929, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.2.2.1Test purpose and Environment", "paragraph_index": 3930, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.2.2.2Test Requirements", "paragraph_index": 3945, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.2.3PRS-RSRP reporting delay in RRC_INACTIVE with eDRX", "paragraph_index": 3950, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.2.3.1Test Purpose and Environment", "paragraph_index": 3951, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.2.3.2Test Requirements", "paragraph_index": 3964, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3UE Rx-Tx time difference measurements", "paragraph_index": 3970, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.1UE Rx-Tx time difference measurements for single positioning frequency layer in FR2 SA", "paragraph_index": 3971, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.1.1Test purpose and environment", "paragraph_index": 3972, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.1.2Test requirements", "paragraph_index": 3986, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.2UE Rx-Tx time difference measurement with reduced number of samples in RRC_INACTIVE, FR2 SA", "paragraph_index": 3991, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.2.1Test purpose and environment", "paragraph_index": 3992, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.2.2Test requirements", "paragraph_index": 4008, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.3UE Rx-Tx time difference measurements with PRS bandwidth aggregation in FR2 SA", "paragraph_index": 4014, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.3.1Test purpose and environment", "paragraph_index": 4015, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.3.2Test requirements", "paragraph_index": 4031, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.4UE Rx-Tx time difference measurements for single positioning frequency layer with eDRX > 10.24s in FR2 SA", "paragraph_index": 4037, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.4.1Test purpose and environment", "paragraph_index": 4038, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.3.4.2Test requirements", "paragraph_index": 4052, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.4PRS-RSRPP measurements", "paragraph_index": 4060, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.4.1PRS-RSRPP reporting delay test case for single positioning frequency layer in FR2 in RRC_INACTIVE state", "paragraph_index": 4061, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.4.1.1Test Purpose and Environment", "paragraph_index": 4062, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.4.1.2Test Requirements", "paragraph_index": 4075, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.4.2PRS-RSRPP reporting delay test with reduced number of samples for single positioning frequency layer in FR2 in RRC_INACTIVE state", "paragraph_index": 4079, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.4.2.1Test Purpose and Environment", "paragraph_index": 4080, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.4.2.2Test Requirements", "paragraph_index": 4093, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.4.3PRS-RSPP reporting delay in RRC_INACTIVE state with eDRX > 10.24s in FR2", "paragraph_index": 4098, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.4.3.1Test purpose and environment", "paragraph_index": 4099, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.4.3.2Test requirements", "paragraph_index": 4114, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.5RSCPD Measurements", "paragraph_index": 4121, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.5.1DL RSCPD reported with RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA in RRC_INACTIVE state", "paragraph_index": 4122, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.5.1.1Test Purpose and Environment", "paragraph_index": 4123, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.5.1.2Test Requirements", "paragraph_index": 4130, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.6RSCP Measurements", "paragraph_index": 4136, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.6.1DL RSCP with UE Rx-Tx time difference measurements in RRC_INACTIVE for single positioning frequency layer in FR2 SA", "paragraph_index": 4137, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.6.1.1Test purpose and environment", "paragraph_index": 4138, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.8.6.1.2Test requirements", "paragraph_index": 4152, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9Measurement performance requirements in RRC_INACTIVE", "paragraph_index": 4158, "style": "Heading2"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.1RSTD measurements", "paragraph_index": 4159, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.1.1RSTD measurement accuracy test case for single positioning frequency layer in FR2 in RRC_INACTIVE state", "paragraph_index": 4160, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.1.1.1Test purpose and Environment", "paragraph_index": 4161, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.1.1.2Test Requirements", "paragraph_index": 4171, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.1.2RSTD measurement accuracy test case with reduced number of samples for single positioning frequency layer in FR2 in RRC_INACTIVE state", "paragraph_index": 4173, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.1.2.1Test purpose and Environment", "paragraph_index": 4174, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.1.2.2Test Requirements", "paragraph_index": 4184, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.2PRS-RSRP measurements", "paragraph_index": 4204, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.2.1SA measurement accuracy with PRS in FR2 in RRC_INACTIVE", "paragraph_index": 4205, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.2.1.1Test Purpose and Environment", "paragraph_index": 4206, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.2.1.2Test parameters", "paragraph_index": 4208, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.2.1.3Test Requirements", "paragraph_index": 4216, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.2.2PRS-RSRP measurements with reduced number of sample in RRC_INACTIVE", "paragraph_index": 4220, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.2.2.1Test Purpose and Environment", "paragraph_index": 4221, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.2.2.2Test parameters", "paragraph_index": 4223, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.2.2.3Test Requirements", "paragraph_index": 4231, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3UE Rx-Tx time difference measurements", "paragraph_index": 4235, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3.1UE Rx-Tx time difference measurements in RRC_INACTIVE", "paragraph_index": 4236, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3.1.1Test purpose and environment", "paragraph_index": 4237, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3.1.2Test parameters", "paragraph_index": 4246, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3.1.3Test requirements", "paragraph_index": 4250, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3.2UE Rx-Tx time difference measurement accuracy with reduced number of samples in FR2 SA", "paragraph_index": 4252, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3.2.1Test purpose and environment", "paragraph_index": 4253, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3.2.2Test parameters", "paragraph_index": 4263, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3.2.3Test requirements", "paragraph_index": 4267, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3.3UE Rx-Tx time difference measurement accuracy with PRS bandwidth aggregation in FR2 SA in RRC_INACTIVE state", "paragraph_index": 4270, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3.3.1Test purpose and environment", "paragraph_index": 4271, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.3.3.2Test requirements", "paragraph_index": 4287, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.4PRS-RSRPP measurements", "paragraph_index": 4290, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.4.1SA measurement accuracy in FR2 in RRC INACTIVE", "paragraph_index": 4291, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.4.1.1Test Purpose and Environment", "paragraph_index": 4292, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.4.1.2Test parameters", "paragraph_index": 4294, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.4.1.3Test Requirements", "paragraph_index": 4302, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.4.2SA measurement accuracy with reduced PRS samples in FR2 in RRC INACTIVE", "paragraph_index": 4306, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.4.2.1Test Purpose and Environment", "paragraph_index": 4307, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.4.2.2Test parameters", "paragraph_index": 4309, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.4.2.3Test Requirements", "paragraph_index": 4317, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.5RSCPD Measurements", "paragraph_index": 4321, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.5.1RSCPD with RSTD measurement accuracy in FR2 SA in RRC_INACTIVE", "paragraph_index": 4322, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.5.1.1Test purpose and environment", "paragraph_index": 4323, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.5.1.2Test parameters", "paragraph_index": 4331, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.5.1.3Test requirements", "paragraph_index": 4337, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.6RSCP Measurements", "paragraph_index": 4339, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.6.1RSCP with UE Rx-Tx time difference measurement accuracy in FR2 SA", "paragraph_index": 4340, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.6.1.1Test purpose and environment", "paragraph_index": 4341, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.6.1.2Test parameters", "paragraph_index": 4350, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.9.6.1.3Test requirements", "paragraph_index": 4354, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10Measurement Procedure in RRC_IDLE", "paragraph_index": 4357, "style": "Heading2"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.1RSTD Measurements", "paragraph_index": 4358, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.1.1NR RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA in RRC_IDLE state for non-RedCap UE", "paragraph_index": 4359, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.1.1.1Test purpose and environment", "paragraph_index": 4360, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.1.1.2Test requirements", "paragraph_index": 4378, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.1.2NR RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA in RRC_IDLE state with eDRX > 10.24s", "paragraph_index": 4384, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.1.2.1Test purpose and environment", "paragraph_index": 4385, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.1.2.2Test requirements", "paragraph_index": 4401, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.1.3NR RSTD measurement reporting delay test case for PRS aggregation in FR2 SA in RRC_IDLE state", "paragraph_index": 4408, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.1.3.1Test purpose and environment", "paragraph_index": 4409, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.1.3.2Test requirements", "paragraph_index": 4412, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.2PRS-RSRP Measurements", "paragraph_index": 4418, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.2.1PRS-RSRP reporting delay test case for single positioning frequency layer in RRC_IDLE state for non-RedCap UE in FR2", "paragraph_index": 4419, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.2.1.1Test Purpose and Environment", "paragraph_index": 4420, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.2.1.2Test Requirements", "paragraph_index": 4433, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.2.2PRS-RSRP reporting delay test case in RRC_IDLE state in FR2 when eDRX cycle > 10.24s", "paragraph_index": 4438, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.2.2.1Test Purpose and Environment", "paragraph_index": 4439, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.2.2.2Test Requirements", "paragraph_index": 4447, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.3RSCPD Measurements", "paragraph_index": 4449, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.3.1DL RSCPD reported with RSTD measurement reporting delay test case for single positioning frequency layer in FR2 SA in RRC_IDLE state", "paragraph_index": 4450, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.3.1.1Test Purpose and Environment", "paragraph_index": 4451, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.10.3.1.2Test Requirements", "paragraph_index": 4458, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11Measurement Performance Requirements in RRC_IDLE", "paragraph_index": 4464, "style": "Heading2"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.1RSTD Measurements", "paragraph_index": 4465, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.1.1NR RSTD measurement accuracy test case for single positioning frequency layer in FR2 SA in RRC_IDLE state for non-RedCap UE", "paragraph_index": 4466, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.1.1.1Test purpose and environment", "paragraph_index": 4467, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.1.1.2Test requirements", "paragraph_index": 4478, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.1.2RSTD measurement accuracy test case for single positioning frequency layer in FR2 SA in RRC_IDLE state with eDRX > 10.24s", "paragraph_index": 4481, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.1.2.1Test purpose and environment", "paragraph_index": 4482, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.1.2.2Test requirements", "paragraph_index": 4494, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.1.3NR RSTD measurement accuracy test case for PRS aggregation in FR2 SA in RRC_IDLE state", "paragraph_index": 4497, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.1.3.1Test purpose and environment", "paragraph_index": 4498, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.1.3.2Test requirements", "paragraph_index": 4501, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.2PRS-RSRP measurements", "paragraph_index": 4504, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.2.1PRS-RSRP measurement accuracy test case for non-RedCap UE in FR2 in RRC_IDLE state", "paragraph_index": 4505, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.2.1.1Test Purpose and Environment", "paragraph_index": 4506, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.2.1.2Test parameters", "paragraph_index": 4508, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.2.1.3Test Requirements", "paragraph_index": 4516, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.2.2PRS-RSRP measurement accuracy test case in RRC_IDLE state in FR2 for case 2 when eDRX cycle > 10.24s", "paragraph_index": 4520, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.2.2.1Test purpose and Environment", "paragraph_index": 4521, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.2.2.1Test parameters", "paragraph_index": 4523, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.2.2.2Test Requirements", "paragraph_index": 4530, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.3RSCPD measurements", "paragraph_index": 4533, "style": "Heading3"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.3.1RSCPD with RSTD measurement accuracy in FR2 SA in RRC_IDLE", "paragraph_index": 4534, "style": "Heading4"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.3.1.1Test purpose and environment", "paragraph_index": 4535, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.3.1.2Test parameters", "paragraph_index": 4543, "style": "Heading5"}
+{"source": "38133-j50_sA.706-A.711.docx", "section": "", "title": "A.7.11.3.1.3Test requirements", "paragraph_index": 4549, "style": "Heading5"}

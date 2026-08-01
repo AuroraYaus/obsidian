@@ -1,0 +1,7 @@
+SBFD Parameters,Values
+SCS,30 kHz
+Frequency domain configuration,"DUD, 40MHz in 1st D subband, 20MHz in U subband, 40MHz in 2nd D subband"
+SBFD starting slot index,1
+SBFD starting symbol index,0
+SBFD ending slot index,3
+SBFD ending symbol index,13

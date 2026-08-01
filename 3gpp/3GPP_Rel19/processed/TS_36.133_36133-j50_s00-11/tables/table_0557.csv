@@ -1,0 +1,7 @@
+Neighouring cell SCH Ês/Iot: Q2 [dB],Gap pattern ID,Cell identification delay (Tidentify_intra_UE cat M1),Measurement delay (Tmeasure_intra_UE cat M1)
+-15≤ Q2 < -6,0,"Max(400 * rmax* G / 1000, 320.8) * Kintra_M1_EC *  KSatellite_intra s","Max(5 * rmax* G, 800) * Kintra_M1_EC *  KSatellite_intra ms"
+,1,"Max(400 * rmax* G / 1000, 321.6) * Kintra_M1_EC *  KSatellite_intra s","Max(5 * rmax* G, 1600) * Kintra_M1_EC *  KSatellite_intra ms"
+Q2-6,0,"Max(20 * rmax* G / 1000, 21.8)* Kintra_M1_EC *  KSatellite_intra s","Max(5 * rmax* G, 800) *  Kintra_M1_EC *  KSatellite_intra ms"
+,1,"Max(20 * rmax* G / 1000, 22.6)* Kintra_M1_EC *  KSatellite_intra s","Max(5 * rmax* G, 1600) * Kintra_M1_EC *  KSatellite_intra ms"
+N/A,N/A,N/A,"Max(rmax*G, TRSS) x 5 (Note 1)"
+Note 1:It is the measurement period for RSRP measured on RSS signals defined in RSS-Config [2].,,,

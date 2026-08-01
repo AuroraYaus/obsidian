@@ -1,0 +1,10 @@
+Frequency range(MHz),Channel bandwidth / Spectrum emission limit (dBm),Measurement bandwidth,NOTE
+,5 MHz,,
+1541 ≤ f ≤ 1559,-102,2kHz,Averaged over any 2 millisecond active transmission interval
+1559≤ f ≤ 1608,-85,700Hz,
+1608≤ f ≤ 1610,-85 +5/2 (f-1608),700Hz,
+1610≤ f ≤ 1625,-80+ 66/15 (f-1610),700Hz,
+1541 ≤ f ≤ 1608,-75,1MHz,Averaged over any 2 millisecond active transmission interval
+1608≤ f ≤ 1610,-75 + 5/2 (f-1608),1MHz,
+1610≤ f ≤ 1625,-70+ 66/15 (f-1610),1MHz,
+NOTE 1:The EIRP requirement in regulation is converted to conducted requirement using 0 dBi antenna.,,,

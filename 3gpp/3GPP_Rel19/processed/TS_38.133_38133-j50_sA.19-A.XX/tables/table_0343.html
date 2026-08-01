@@ -1,0 +1,175 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Test configuration</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td>Initialcondition</td>
+    <td>Active Cell</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>Cell 1</td>
+    <td rowspan="2">The UE camps on Cell 1 in the initial phase and enters into relaxed measurement mode before the end of T1 period</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Neighbour Cells</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td>T2 end condition</td>
+    <td>Active Cell</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>Cell 1</td>
+    <td rowspan="2">The UE shall fulfil the relaxed measurement criterion based on measurement and evaluation by MR during T1 period</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Neighbour Cells</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td rowspan="2">T3 end condition</td>
+    <td>Active Cell</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>Cell 1</td>
+    <td rowspan="2">During T2 period, the UE shall exist the relaxed measurement mode based on measurement and evaluation by LP-WUR using LP-SS, and reselect to Cell 2 based on measurement and evaluation by MR</td>
+  </tr>
+  <tr>
+    <td>Neighbour Cells</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>Cell 2</td>
+  </tr>
+  <tr>
+    <td colspan="2">RF Channel Number</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Time offset between Cells</td>
+    <td rowspan="3"></td>
+    <td>1</td>
+    <td>3 ms</td>
+    <td>Asynchronous Cells</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>2</td>
+    <td>3 s</td>
+    <td>Synchronous Cells</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>3</td>
+    <td>3 s</td>
+    <td>Synchronous Cells</td>
+  </tr>
+  <tr>
+    <td colspan="2">Access Barring Information</td>
+    <td>-</td>
+    <td>1, 2, 3</td>
+    <td>Not Sent</td>
+    <td>No additional delays in random access procedure.</td>
+  </tr>
+  <tr>
+    <td colspan="2">SSB configuration</td>
+    <td rowspan="3"></td>
+    <td>1</td>
+    <td>SSB.1 FR1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>2</td>
+    <td>SSB.1 FR1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>3</td>
+    <td>SSB.2 FR1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">LP-SS configuration</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>LP-SS.2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="4" colspan="2">SMTC configuration</td>
+    <td rowspan="4"></td>
+    <td rowspan="2">1</td>
+    <td>SMTC pattern 2</td>
+    <td>Configured in SIB2 of Cell 1</td>
+  </tr>
+  <tr>
+    <td>SMTC pattern 6</td>
+    <td>Configured in SIB2 of Cell 2</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>SMTC pattern 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>SMTC pattern 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX cycle length</td>
+    <td>s</td>
+    <td>1, 2, 3</td>
+    <td>0.64</td>
+    <td>The value shall be used for all Cells in the test.</td>
+  </tr>
+  <tr>
+    <td colspan="2">PRACH configuration index</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>102</td>
+    <td>The detailed configuration is specified in TS 38.211 clause 6.3.3.2</td>
+  </tr>
+  <tr>
+    <td colspan="2">rangeToBestCell</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>Not configured</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td>1, 2, 3</td>
+    <td>&gt;7</td>
+    <td>During T1, Cell 2 shall be powered off, and during the off time the physical cell identity shall be changed, the intention is to ensure that Cell 2 has not been detected by the UE prior to the start of period T2.Before the end of T1, the UE enters relaxed measurement mode.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td>1, 2, 3</td>
+    <td>15</td>
+    <td>T2 is based on the LR evaluation period based on LP-SS plus MR wake up period. During T2, only LP-SS signal is transmitted and the SSB signal from Cell 1 will not be transmitted</td>
+  </tr>
+  <tr>
+    <td colspan="2">T3</td>
+    <td>s</td>
+    <td>1, 2, 3</td>
+    <td>11</td>
+    <td>T3 needs to be defined so that cell re-selection time is taken into account.</td>
+  </tr>
+</table>

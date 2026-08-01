@@ -1,0 +1,6 @@
+SCH Ês/Iot,,CSI-RS measurement bandwidth Note2 [RB],CSI-RS Ês/Iot,Tmeasure_inter_FS3_CSI-RS [ms]
+0 ≤ SCH Ês/Iot,,<25,0 ≤ CSI-RS Ês/Iot,"(5*Nfreq +M*N)*Max{TDMTC_periodicity, MGRP}"
+-6 ≤ SCH Ês/Iot < 0,,<25,,"(20*Nfreq +M*N)*Max{TDMTC_periodicity, MGRP }"
+0 ≤ SCH Ês/Iot,,25,0 ≤ CSI-RS Ês/Iot,"(1*Nfreq +M*N)*Max{TDMTC_periodicity, MGRP}"
+-6 ≤ SCH Ês/Iot < 0,,25,,"(4*Nfreq +M*N)*Max{TDMTC_periodicity, MGRP}"
+NOTE 1:Discovery signal occasion duration (ds-OccasionDuration) is 1 ms.NOTE 2:The requirements for measurement bandwidth 25 RB are optional.,,,,

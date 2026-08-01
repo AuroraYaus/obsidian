@@ -1,0 +1,6 @@
+Parameter,NR V2X operating band groups Note1,Minimum S-SSB_RP,,,S-SSB Ês/Iot
+,,dBm/SCSS-SSB,,,dB
+,,SCSS-SSB = 15 kHz,SCSS-SSB = 30 kHz,SCSS-SSB = 60 kHz,
+,NR_TDD_FR1_B,-120.5,-117.5,-114.5,0
+,NR_TDD_FR1_J,-116.5,-113.5,-110.5,0
+NOTE 1:NR V2X operating band groups are as defined in section 3.5 for the corresponding NR operating bands.NOTE 2: The SyncRef UE transmission frequency shall be accurate to within ±5 PPM compared to the absolute frequency.,,,,,

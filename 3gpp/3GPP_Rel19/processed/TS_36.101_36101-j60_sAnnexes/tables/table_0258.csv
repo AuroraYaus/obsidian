@@ -1,0 +1,7 @@
+Parameter,Unit,Value,
+Reference channel,,R.NB.3 TDD,R.NB.4 TDD
+Number of NRS ports,,1,2
+Channel bandwidth,MHz,0.2,0.2
+Aggregation level,NCCE,2,2
+DCI Format,,N1,N1
+Payload (without CRC),Bits,23,23

@@ -1,0 +1,15 @@
+Parameter,,Unit,Pcell,Scell1,"Scell2, 3"
+PDSCH transmission mode,,,1,,
+Uplink downlink configuration,,,2,,
+Special subframe configuration,,,4,,
+Downlink power allocation,,dB,0,,
+,,dB,0,,
+Propagation condition and antenna configuration,,,AWGN (1 x 2),,
+SNR,,dB,12,6,0
+,,dB[mW/15kHz],-86,-92,-98
+,,dB[mW/15kHz],-98,-98,-98
+Physical channel for CQI reporting,,,PUCCH Format 2,,
+PUCCH Report Type,,,4,,
+Reporting periodicity,,ms,Npd = 20,,
+cqi-pmi-ConfigurationIndex,,,18,23 (shift of 5 ms relative to Pcell),"28 (shift of 10 ms relative to Pcell) , 33 for Scell3 (shift of 15ms relative to Pcell)"
+Note 1:3 symbols are allocated to PDCCH. No PDSCH for user data is scheduled for the UE with one sided dynamic OCNG Pattern OP.1 TDD as described in Annex A.5.2.1.Note 2:Void,,,,,

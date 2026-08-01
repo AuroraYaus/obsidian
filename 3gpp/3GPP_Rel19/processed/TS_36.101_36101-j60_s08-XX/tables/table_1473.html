@@ -1,0 +1,137 @@
+<table>
+  <tr>
+    <td colspan="3">Parameter</td>
+    <td>Unit</td>
+    <td>Test 1</td>
+  </tr>
+  <tr>
+    <td colspan="3">Communication resource pool configuration</td>
+    <td></td>
+    <td>As specified in Table A.7.2.1-4(Configuration #4-FDD)</td>
+  </tr>
+  <tr>
+    <td colspan="3">DRX configuration</td>
+    <td></td>
+    <td>As specified in Table 12.1.2-1</td>
+  </tr>
+  <tr>
+    <td colspan="3">Active cell(s)</td>
+    <td></td>
+    <td>Cell 1 (Serving cell)</td>
+  </tr>
+  <tr>
+    <td rowspan="9">Cell 1</td>
+    <td colspan="2">Cyclic prefix</td>
+    <td></td>
+    <td>Normal</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell ID</td>
+    <td></td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>0 (NOTE 1)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">OCNG Pattern (Note 2)</td>
+    <td></td>
+    <td>OP.1 FDD</td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation channel</td>
+    <td></td>
+    <td>Static propagation conditionNo external noise sources are applied</td>
+  </tr>
+  <tr>
+    <td colspan="2">Antenna configuration</td>
+    <td></td>
+    <td>1x2</td>
+  </tr>
+  <tr>
+    <td colspan="2">RSRP</td>
+    <td>dBm/15kHz</td>
+    <td>-85</td>
+  </tr>
+  <tr>
+    <td colspan="3">Active Sidelink UE(s)</td>
+    <td></td>
+    <td>Sidelink UE i, 0 ≤ i ≤ 15</td>
+  </tr>
+  <tr>
+    <td rowspan="12">Sidelink UE i,0 ≤ i ≤ 15</td>
+    <td colspan="2">Sidelink Transmissions</td>
+    <td></td>
+    <td>PSCCH + PSSCH</td>
+  </tr>
+  <tr>
+    <td colspan="2">Resource pool</td>
+    <td></td>
+    <td>commRxPool()</td>
+  </tr>
+  <tr>
+    <td colspan="2">PSCCH RMC</td>
+    <td></td>
+    <td>5MHz: CC.1 FDD with ITRP=i%8 (NOTE 3)10 MHz: CC.2 FDD with ITRP= i%8 (NOTE 3)</td>
+  </tr>
+  <tr>
+    <td colspan="2">PSCCH subframe allocation</td>
+    <td></td>
+    <td rowspan="2">As defined by TS 36.213 with  = i</td>
+  </tr>
+  <tr>
+    <td colspan="2">PSCCH RB allocation</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">PSSCH RMC</td>
+    <td></td>
+    <td>As specified in Table 12.7.1-2</td>
+  </tr>
+  <tr>
+    <td colspan="2">PSSCH subframe allocation</td>
+    <td></td>
+    <td>As per time repetition pattern specified in PSCCH</td>
+  </tr>
+  <tr>
+    <td colspan="2">PSSCH RB allocation</td>
+    <td></td>
+    <td>Fully allocated</td>
+  </tr>
+  <tr>
+    <td colspan="2">Time offset (NOTE 4)</td>
+    <td>s</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Frequency offset (NOTE 5)</td>
+    <td>Hz</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation Channel</td>
+    <td></td>
+    <td>Static propagation conditionNo external noise sources are applied</td>
+  </tr>
+  <tr>
+    <td colspan="2">Antenna configuration</td>
+    <td></td>
+    <td>1x2 Low</td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE 1:.NOTE 2:OCNG is used to fully allocate the available resource blocks to virtual UEs.NOTE 3: For NTRP = 8 (FDD) and trpt-Subset = 001, ITRP = 0 corresponds to a time repetition pattern of (1,0,0,0,0,0,0,0), ITRP = 1 corresponds to a time repetition pattern of (0,1,0,0,0,0,0,0), etc.NOTE 4:Time offset of Sidelink UE receive signal with respect to Cell 1 downlink timing at the tested UE.NOTE 5:Frequency offset of Sidelink UE with respect to Cell 1 uplink frequency.</td>
+  </tr>
+</table>

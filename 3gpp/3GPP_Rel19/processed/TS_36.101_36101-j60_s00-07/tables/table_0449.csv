@@ -1,0 +1,6 @@
+Operating band,1,Units,Frequency,,
+,,,Range 1,Range 2,Range 3
+,FInterferer (CW),MHz,FDL_low -15 toFDL_low -60,FDL_low -60 toFDL_low -85,FDL_low -85 to1 MHz
+,,,FDL_high +15 toFDL_high + 60,FDL_high +60 toFDL_high +85,FDL_high +85 to+12750 MHz
+107,PInterferer,dBm,-44,-30,-15
+"108, 112,113",,,-44,-35,-20

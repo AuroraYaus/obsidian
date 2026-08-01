@@ -1,0 +1,13 @@
+Parameter,Unit,,Cell 2 (UTRA),,
+,,,T1,,T2
+CPICH_Ec/Ior,dB,-10,,,
+PCCPCH_Ec/Ior,dB,-12,,,
+SCH_Ec/Ior,dB,-12,,,
+PICH_Ec/Ior,dB,-15,,,
+DCH_Ec/Ior,dB,Note 1,,,
+OCNS_Ec/Ior,dB,Note 2,,,
+,dB,infinity,,-1.8,
+,"dBm/3,84 MHz",70,,-70,
+CPICH_Ec/Io,dB,infinity,,-14,
+Propagation Condition,AWGN,,,,
+Note 1:The DPCH level is controlled by the power control loopNote 2:The power of the OCNS channel that is added shall make the total power from the cell to be equal to Ior .,,,,,

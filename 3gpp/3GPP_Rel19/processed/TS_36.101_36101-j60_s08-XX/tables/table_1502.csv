@@ -1,0 +1,12 @@
+Parameter,,Unit,Test 3,Test 4
+Communication resource pool configuration,,,As specified in Table A.9-5 and A.9-6 (Configuration #5-V2X and #6-V2X),As specified in Table A.9-6 (Configuration #6-V2X)
+V2X Tx format(SL-V2X-TxProfileList-r15),,,SL-V2X-TxProfile-r15 = rel15,
+Active cell(s),,,None,
+"Sidelink UE i,0 ≤ i ≤ 29",Sidelink Transmissions,,PSCCH + PSSCH,
+,Timing offset (Note 1),s,0,
+,Frequency offset (Note 2),Hz,0,
+,Synchronization source,,GNSS or GNSS-equivalent,
+,Propagation Channel,,Static propagation conditionNo external noise sources are applied,
+,Antenna configuration,,1x2,
+,PSSCH RMC,,CD.19 and CD.20,CD.20
+"Note 1:Time offset of Sidelink UE receive signal with respect to GNSS reference timing.Note 2:Frequency offset of Sidelink UE with respect to GNSS reference frequency.Note 3:Cyclic shift for PSCCH DMRS is randomly selected between {0, 3, 6, 9} for each PSCCH transmission.",,,,

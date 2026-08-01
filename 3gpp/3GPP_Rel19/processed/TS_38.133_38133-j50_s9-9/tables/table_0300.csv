@@ -1,0 +1,11 @@
+"NACK/NACK, ECGI, FDD",Configuration of the serving cell in which the transmitted ACK/NACKs are counted,
+,Duplex mode configuration,SCS
+66,FDD,15 kHz
+145,FDD,30 kHz
+298,FDD,60 kHz
+28,TDD Note 1,15 kHz
+67,TDD Note 1,30 kHz
+144,TDD Note 1,60 kHz
+175,TDD Note 2,60 kHz
+363,TDD Note 2,120 kHz
+NOTE 1:TDD UL-DL configuration is as specified in Table A.3.3.1-1 of TS 38.101-1 [18].NOTE 2:TDD UL-DL configuration is as specified in Table A.3.3.1-1 of TS 38.101-2 [19].,,

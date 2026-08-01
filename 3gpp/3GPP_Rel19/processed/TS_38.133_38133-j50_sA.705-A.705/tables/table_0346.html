@@ -1,0 +1,122 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="2">RF Channel Number</td>
+    <td></td>
+    <td>1, 2, 3</td>
+    <td>Three NR radio channels are used for this test.</td>
+  </tr>
+  <tr>
+    <td>Initial</td>
+    <td>Active serving cells</td>
+    <td></td>
+    <td>Cell 1</td>
+    <td>Cell 1: NR PCell on RF channel number 1</td>
+  </tr>
+  <tr>
+    <td>Condition</td>
+    <td>Neighbour cell</td>
+    <td></td>
+    <td>Cell 2,Cell 3</td>
+    <td>Cell 2:NR PSCell on RF channel number 2Neighbour cell on RF channel number 3</td>
+  </tr>
+  <tr>
+    <td>Final</td>
+    <td>Active serving cells</td>
+    <td></td>
+    <td>Cell 1, Cell 3</td>
+    <td>Cell 1: PCell on RF channel number 1Cell 3:NR PSCell on RF channel number 3</td>
+  </tr>
+  <tr>
+    <td>Condition</td>
+    <td>Neighbour Cell</td>
+    <td></td>
+    <td>Cell 2</td>
+    <td>Neighbour cell on RF channel number 2.</td>
+  </tr>
+  <tr>
+    <td rowspan="2">A4</td>
+    <td>Hysteresis</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Hysteresis for evaluation of event A4.</td>
+  </tr>
+  <tr>
+    <td>Threshold RSRP</td>
+    <td>dBm</td>
+    <td>-118</td>
+    <td>A4 event is used to trigger conditional PSCell addition of Cell 2 and Cell 3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Time to Trigger</td>
+    <td>s</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">DRX</td>
+    <td></td>
+    <td>OFF</td>
+    <td>Continuous monitoring of primary cell</td>
+  </tr>
+  <tr>
+    <td colspan="2">Gap pattern ID</td>
+    <td></td>
+    <td>gp0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">PRACH configuration on cell2 and cell3</td>
+    <td></td>
+    <td>FR2 configuration 2</td>
+    <td>Captured in A.3.8.3.2</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-individual offset for cells on RF channel number 1</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Individual offset for cells on primary component carrier.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-individual offset for cells on RF channel number 2</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Individual offset for cells on carrier frequency of cell2.</td>
+  </tr>
+  <tr>
+    <td colspan="2">Cell-individual offset for cells on RF channel number 3</td>
+    <td>dB</td>
+    <td>0</td>
+    <td>Individual offset for cells on carrier frequency of cell3.</td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td>1</td>
+    <td>UE is connected to Cell 1 (NR PCell) on radio channel 1, but is not aware of Cell 2 (NR PSCell 1) on radio channel 2 and Cell 3 (NR PSCell 2) on radio channel 3</td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td>&lt;7</td>
+    <td>During this time PSCell 1 meets the PSCell addition condition and the UE adds the PSCell (cell 2).</td>
+  </tr>
+  <tr>
+    <td colspan="2">T3</td>
+    <td>s</td>
+    <td>1</td>
+    <td>During this time the UE releases the PSCell (cell 2).</td>
+  </tr>
+  <tr>
+    <td colspan="2">T4</td>
+    <td>s</td>
+    <td>&lt;7</td>
+    <td>During this time PSCell 2 meets the PSCell addition condition and the UE adds the PSCell (cell 3).</td>
+  </tr>
+</table>

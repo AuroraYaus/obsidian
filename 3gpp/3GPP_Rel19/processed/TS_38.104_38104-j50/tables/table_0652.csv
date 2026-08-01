@@ -1,0 +1,209 @@
+Change history,,,,,,,
+Date,Meeting,TDoc,CR,Rev,Cat,Subject/Comment,New version
+2017-05,RAN4#83,R4-1704619,,,,Specification skeleton,0.0.1
+2017-05,RAN4#83,R4-1705332,,,,Specification skeleton (revised),0.0.2
+2017-05,RAN4#83,R4-1706228,,,,Specification skeleton (revised),0.0.3
+2017-07,RAN4-NR AH #2,R4-1706983,,,,"Agreed Text Proposal in RAN4 NR AH #2:R4-1706955, ""TP to TS 38.104: BS classification for NR BS""",0.1.0
+2018-08,RAN4#84,R4-1709212,,,,"Agreed Text Proposal in RAN4 #84:R4-1708872, ""TP to TS 38.104 BS transmitter transient period""",0.2.0
+2018-10,RAN4#84bis,R4-1711970,,,,"Agreed Text Proposal in RAN4 #84bis:R4-1710199, ""TP for TS 38.104: out of band blocking (10.4)""R4-1710587, ""TP for TS 38.104: Relationship with other core specifications (4.1)""R4-1710588, ""TP for TS 38.104: Relationship between minimum requirements and test requirements (4.2)""R4-1710589, ""TP for TS 38.104: Regional requirements (4.5)""R4-1710591, ""TP for TS 38.104: Conducted transmitter characteristics (general) (6.1)""R4-1710593, ""TP for TS 38.104: Operating band unwanted emissions (conducted) (6.6.4)""R4-1710594, ""TP for TS 38.104: Conducted receiver characteristics (General) (7.1)""R4-1710595, ""TP for TS 38.104: Radiated transmitter characteristics (General) (9.1)""R4-1710598, ""TP for TS 38.104: Radiated receiver characteristics (General) (10.1)""R4-1711325, ""TP to TS38.104: OTA Output power dynamics (9.4)""R4-1711363, ""TP to TS 38.104 - Occupied bandwidth (6.6.2)""R4-1711745, ""TP to TS 38.104 - Conducted and radiated requirement reference points (4.3)""R4-1711746, ""TP for TS 38.104: Adding applicability table to clause 4.6""R4-1711747, ""TP for TS 38.104: Operating bands and channel arrangements. (5)""R4-1711748, ""TP to TS38.104: conducted NR BS output power (6.2)""R4-1711750, ""TP for TS 38.104: Transmit ON/OFF power (6.4)""R4-1711753, ""TP for TS 38.104: Time alignment error requirements (6.5)""R4-1711754, ""TP for TS 38.104: Unwanted emissions, General (Conducted) (6.6.1)""R4-1711755, ""TP to TS 38.104: Occupied bandwidth for FR1 and FR2 NR BS (9.7)""R4-1711756, ""TP to TS 38.104: Transmitter spurious emissions (conducted) (6.6.5)""R4-1711757, ""TP for TS 38.104:Conducted BS transmitter intermodulation for FR1 (section 6.7)""R4-1711758, ""TP to TS 38.104: Reference Sensitivity (conducted) (7.2)""R4-1711759, ""TP to TS 38.104: NR BS conducted ACLR requirement in FR1 (6.6.3)""R4-1711760, ""TP to TS38.104: conducted NR BS receiver spurious emissions (7.6)""R4-1711761, ""TP to TS38.104: Radiated NR BS transmit power; FR1 (9.2)""R4-1711762, ""TP to TS38.104: OTA base station output power, FR1 (9.3)""R4-1711763, ""TP for TS 38.104: OTA Transmit ON/OFF power (9.5)""R4-1711764, ""TP to TS 38.104 - OTA ACLR""R4-1711765, ""TP for TS 38.104: OTA Operating band unwanted emissions and Spectrum emissions mask (9.7.4)""R4-1711766, ""TP for TS 38.104: OTA Spurious emission (9.7.5)""R4-1711767, ""TP for TS 38.104: Adding specification text for OTA TX IMD requirement in clause 9.8""R4-1711768, ""TP to TS 38.104: OTA Sensitivity (10.2)""R4-1711771, ""TP to TS38.104: OTA receiver spurious emissions, FR1 (10.7)""R4-1711772, ""TP to TS 38.104: Receiver Intermodulation (10.8)""R4-1711811, ""TP to TS 38.104: NR BS conducted in-band selectivity and blocking requirements in FR1 (7.4)""R4-1711950, ""TP to TS 38.104: Modulation Quality Skeleton (6.5)""R4-1711951, ""TP to TS38.104: frequency error for FR1 NR BS (6.5&9.6)""R4-1711952, ""TP to TS 38.104: OTA reference sensitivity (10.3)""",0.3.0
+2017-11,RAN4#84bis,R4-1711971,,,,"Alignment of structure, terminology, and definitions between clauses.",0.4.0
+2017-12,RAN4#85,R4-1714544,,,,"Agreed Text Proposal in RAN4 #85:R4-1712614, ""TP to TS 38.104 - OTA sensitivity (10.2)""R4-1712648, ""TP to TS 38.104: corrections for the applicability of ""BS type"" and ""requirement set"" definitions""R4-1712964, ""TP for TS 38.104: out of band blocking (7.5)""R4-1713631, ""TP to 38.104 on introduction of n71""R4-1713632, ""TP to 38.104, clause 4.7 (Requirements for contiguous and non-contiguous spectrum)""R4-1713633, ""TP to 38.104, clause 4.8 (Requirements for BS capable of multi-band operation)""R4-1713634, ""TP to 38.104, clause 6.6.4.2.6 (basic limits for additional requirements for operating band unwanted emissions)""R4-1714116, ""TP to TS 38.104: Revision of the TRP definition""R4-1714117, ""TP to TS 38.104: Radiated NR BS transmit power; 2-O (9.2.3)""R4-1714121, ""TP to TS 38.104: OTA Output power dynamics (9.4)""R4-1714125, ""TP to TS 38.104 v0.4.0: OTA TDD Off power""R4-1714127, ""TP for TS 38.104: OTA frequency error (9.6.1)""R4-1714129, ""TP to TS 38.104: NR BS conducted CACLR requirements in FR1 (6.6.3)""R4-1714134, ""TP to TS 38.104v0.4.0: Absolute levels for FR2 ACLR absolute levels for NR BS""R4-1714136, ""TP for TS 38.104: Update of OTA TX IM requirement for sub-clause 4.9 and sub-clause 9.8""R4-1714141, ""TP to TS 38.104: Reference Sensitivity (conducted) (7.2)""R4-1714142, ""TP to TS 38.104: NR BS FRCs for receiver requirements""R4-1714150, ""TP to TS 38.104 - OTA out of band blocking FR1 (10.6)""R4-1714306, ""TP for TS 38.104: Adding of TRP in terminology in clause 3""R4-1714307, ""TP to TS 38.104 - Conducted and radiated requirement reference points (4.3)""R4-1714308, ""TP for TS 38.104: Base station classes (4.4)""R4-1714310, ""TP to TS 38.104: Directional and TRP requirements identification (directional vs. TRP)""R4-1714312, ""TP for TS 38.104: Update of applicability table in sub-clause 4.6""R4-1714313, ""TP to TS 38.104: Operating bands (5.1-5.3)""R4-1714315, ""TP to TS38.104: frequency error for NR BS (6.5&9.6)""R4-1714316, ""TP for TS 38.104: Adding text for clause 6.5.2 Modulation quality""R4-1714317, ""TP to TS 38.104: Dynamic Range for FR1 (conducted)""R4-1714318, ""TP to TS38.104: ICS requirement (7.8&10.9)""R4-1714319, ""TP for TS 38.104: Adding text for clause 9.6.4 Modulation quality""R4-1714320, ""TP for TS 38.104: OTA Spurious emission (9.7.5)""R4-1714321, ""TP for TS 38.104: OTA Dynamic range (10.4)""R4-1714390, ""TP to TS 38.104: FR2 RX IM OTA, 10.8.3""R4-1714428, ""TP to TS 38.104 v0.4.0: Time alignment for CA""R4-1714430, ""TP to TS 38.104: Transmitter spurious emissions (conducted) (6.6.5)""R4-1714432, ""TP to TS 38.104: Output Power Dynamics for FR1 (conducted)""R4-1714433, ""TP to TS 38.104: OTA Rx spurious emissions for BS type O 2 (10.7.3)""R4-1714435, ""TP to TS 38.104: FR2 REFSENS""R4-1714437, ""TP for TS 38.104: Conducted Adjacent Channel Leakage Power Ratio (ACLR) (6.6.3)""R4-1714439, ""TP for TS 38.104: Receiver spurious emission (7.6)""R4-1714476, ""TP to TR 38.104: Channel arrangement (5.4)""R4-1714493, ""TP for TS 38.104: Operating band unwanted emissions (6.6.4)""R4-1714515, ""TP for TS 38.104: OTA Out-of-band emissions (9.7.4)""R4-1714517, ""TP to TS 38.104: OTA base station output power, 2-O (9.3.3)""R4-1714518, ""TP to TS 38.104: ACS and blocking update""R4-1714520, ""Draft TP to TS 38.104: OTA In-band selectivity and blocking (10.5)""R4-1714525, ""TP to TS 38.104: FR1 RX IM conducted 7.7""R4-1714526, ""TP to TS 38.104: FR1 RX IM OTA 10.8.2""",0.5.0
+2017-12,RAN#78,RP-172268,,,,Presented to TSG RAN for approval.,1.0.0
+2017-12,RAN#78,,,,,Approved by plenary – Rel-15 spec under change control,15.0.0
+2018-03,RAN#79,RP-180264,0004,,F,TS 38.104 Combined updates (NSA) from RAN4 #86 and AH-1801,15.1.0
+2018-06,RAN#80,RP-181076,0005,,F,TS 38.104 Combined updates (NSA) from RAN4 #86bis and RAN4 #87,15.2.0
+2018-09,RAN#81,RP-181896,0008,,F,TS 38.104 Combined updates from RAN4 #88,15.3.0
+2018-12,RAN#82,RP-182837,0016,1,F,CR to TS 38.104 on Combined updates from RAN4 #88bis and #89 (including 7.5 kHz carrier shift in UL for remaining bands),15.4.0
+2018-12,RAN#82,RP-182362,0017,,B,CR to 38.104 on Combined CRs for BS Demodulation performance,15.4.0
+2019-03,RAN#83,RP-190403,0019,,F,"CR to TS 38.104 on Combined updates from RAN4 #90This document combines the proposed changes in the following Draft CRs from RAN4 #90:-R4-1900284, ""Draft CR on NR PUCCH format2 performance requirements for TS 38.104""-R4-1900763, ""Draft CR to TS 38.104: Update of performance  requirement numbers for DFT-s-OFDM based PUSCH""-R4-1900876, ""Draft CR to TS 38.104: On RX spurious emissions requirement""-R4-1900968, ""Draft CR for 38.104: Performance requirements for NR PUCCH format 1""-R4-1901329, ""Draft CR to 38.104: Annex C.6 correction""-R4-1901330, ""Draft CR to 38.104: Abbreviations addition""-R4-1901387, ""Draft CR to TS 38.104 BS demodulation PUCCH format 0 requirements""-R4-1901474, ""Draft CR to TS 38.104: Corrections on transmitter co-existence and co-location requirements""-R4-1901483, ""Draft CR to TS 38.104: Corrections on general intermodulation requirement""-R4-1902239, ""Draft CR to TS 38.104: Addition of missing EIRP/EIS definitions in terminology in clause 3.1""-R4-1902241, ""Draft CR to 38.104; clarification of BS power limits""-R4-1902245, ""Draft CR to 38.104: Correction to FR2 OTA Interfering signal mean power units""-R4-1902246, ""Draft CR to 38.104; Correction to definition of OTA reference sensitivity""-R4-1902260, ""draft CR to TS 38.104 - update emissions scaling""-R4-1902338, ""Draft CR: Update on FR1 range extension for TS38.104""-R4-1902389, ""draftCR for 38.104 on PUSCH requirements with CP-OFDM and FR1""-R4-1902394, ""Draft CR to TS 38.104 – PUSCH requirements with CP-OFDM for FR2""-R4-1902396, ""CR: Updates to PUCCH formats 3 and 4 performance requirements in TS 38.104""-R4-1902444, ""Draft CR to TS 38.104: Editorial CR for BS demodulation requirements""-R4-1902561, ""Draft CR for updating PRACH performance requirements in TS38.104""-R4-1902571, ""Corrections to 38.104 Delay profile calculation""-R4-1902642, ""Draft CR to TS 38.104: Correction on multi-band operation related requirements""",15.5.0
+2019-06,RAN#84,RP-191240,0029,,F,"CR to TS 38.104 Combined updates from RAN4 #90bis and RAN4#91From RAN4 #90bis:-R4-1903105, ""Draft CR to TS 38.104: Corrections on terminologies and editorial errors""-R4-1903319, ""Draft CR to TS 38.104: removal of unused definition: ""minimum EIRP level under extreme condition""""-R4-1903320, ""Draft CR to TS 38.104: OSDD information correction""-R4-1903457, ""Draft CR to TS 38.104: Removal of FFS for FR2 TDD OFF power level requirement in clause 9.5""-R4-1903499, ""Draft CR to 38.104: Correction to unwanted emissions mask for bands n7 and n38""-R4-1903836, ""Draft CR to TS 38.104: Correction on description on multi-band operation in section 4.8""-R4-1904024, ""Draft CR to TS 38.104 Applicability rules for BS demodulation""-R4-1904234, ""draftCR: Correlation matrix for 8Rx in TS 38.104""-R4-1904723, ""Draft CR to TS 38.104: Update of performance requirements for DFT-s-OFDM based PUSCH""-R4-1904726, ""draftCR for 38.104 on PUSCH requirements with CP-OFDM and FR1""-R4-1904729, ""Draft CR on PRACH performance requirements in TS38.104""-R4-1904734, ""Draft CR on TS 38.104 Performance requirement for PUCCH format 1""-R4-1904735, ""Draft CR on NR PUCCH format2 performance requirements for TS 38.104""-R4-1904739, ""Draft CR to TS 38.104 BS demodulation PUCCH format 0 requirements""-R4-1904745, ""draftCR: Updates to PUCCH formats 3 and 4 performance requirements in TS 38.104""-R4-1904799, ""Draft CR to TS 38.104: FRC update for PUSCH FR1 mapping type B and FR2 DMRS 1+1""-R4-1904816, ""Draft CR : Clarification on step 5 and step 6 for delay profiles calculation (38.104)""-R4-1904842, ""Draft CR to TS 38.104 BS demodulation CP-OFDM PUSCH FR2 requirements""-R4-1905126, ""draft CR to 38.104 for TAE requirements""-R4-1905139, ""draft CR to TS 38.104 on  EVM measurement (Annex B and C)""-R4-1905140, ""Draft CR: editorial correction on FR1 spurious emission requirement in TS38.104""-R4-1905143, ""Draft CR for TS 38.104:  Addition of NOTE for transmitter intermodulation requirements in certain regions""-R4-1905144, ""Draft CR to TS 38.104: FRC reference corrections for the Rx requirements""-R4-1905145, ""Draft CR to TS 38.104: Clarification on application of interfering signal offsets for ACS, blocking and intermodulation requirements""-R4-1905148, ""Draft CR to TS 38.104: Corrections on out-of-band blocking requirement""From RAN4 #91:-R4-1906002, ""Draft CR to 38.104: Subclause 6.7 and 9.8 transmitter intermodulation – correction of interfering signal type""-R4-1906096, ""Draft CR to 38.104: Correction of frequency range for OTA spurious emissions""-R4-1906311, ""Draft CR to 38.104: Correction on FRC (Annex A)""-R4-1906346, ""Removal of n65 in Rel-15 38.104""-R4-1906915, ""Draft CR to TS 38.104: Clarification on application of interfering signal offsets for OTA ACS, blocking and intermodulation requirements""-R4-1906918, ""Draft CR to TS 38.104: Clarification on type of interfering signal for ACS, in-band blocking and ICS requirements""-R4-1907110, ""Draft CR to TS 38.104: correction of the fundamental frequency limit of 2.55GHz for the spurious emissions""-R4-1907246, ""Draft CR to TS 38.104: Update of performance requirements for DFT-s-OFDM based PUSCH""-R4-1907249, ""Draft CR to TS 38.104: Correction on the terminology in PUSCH FRC tables""-R4-1907252, ""Draft CR to TS38.104: Updates of PRACH performance requirements""-R4-1907255, ""Draft CR on NR PUCCH format2 performance requirements for TS 38.104""-R4-1907258, ""Draft CR on NR UCI on PUSCH performance requirements for TS 38.104""-R4-1907261, ""draftCR: Updates to PUCCH formats 3 and 4 performance requirements in TS 38.104""-R4-1907266, ""Draft CR on TS 38.104 Performance requirement for PUCCH format 1""-R4-1907267, ""Draft CR on TS 38.104 Performance requirement for multi-slot PUCCH format 1""-R4-1907272, ""Draft CR to TS 38.104 BS demodulation PUCCH format 0 requirements""-R4-1907275, ""Draft CR to TS 38.104 BS demodulation CP-OFDM PUSCH FR2 requirements""-R4-1907277, ""draftCR for 38.104 on PUSCH requirements with CP-OFDM and FR1""-R4-1907629, ""Draft CR to 38.104: Term “reference signal” replacing by term “ideal signal” in EVM context""-R4-1907634, ""Draft CR to 38.104: corrections to the EVM annex""-R4-1907659, ""Draft CR to TS 38.104 on Spurious emission Category B in FR2""-R4-1907661, ""Draft CR to 38.104 Definition of contiguous transmission bandwidth""-R4-1907662, ""Draft CR to 38.104: BS TAE requirements""-R4-1907664, ""Draft CR to 38.104: Clarification of interferer RB frequency for narrowband blocking""-R4-1907672, ""Draft CR for TS 38.104: Correction on EVM""-R4-1907689, ""Correction to CA carrier spacing""",15.6.0
+2019-06,RAN#84,RP-191252,0024,1,B,CR to TS38.104 to introducing spectrum sharing on band n41,16.0.0
+2019-06,RAN#84,RP-191242,0025,,B,Introduction of band n14 - CR to TS 38.104,16.0.0
+2019-06,RAN#84,RP-191246,0026,,B,Introduction of band n30 - CR to TS 38.104,16.0.0
+2019-06,RAN#84,RP-191244,0028,,B,introduce n18 into TS38.104,16.0.0
+2019-06,RAN#84,RP-191250,0030,1,B,n65 introduction to 38.104,16.0.0
+2019-06,RAN#84,RP-191251,0031,,B,Addition channel bandwidth of 30MHz for n50 in TS 38.104,16.0.0
+2019-06,RAN#84,RP-191248,0032,,B,CR to 38.104: Introduction of n48,16.0.0
+2019-09,RAN#85,RP-192049,0034,,A,"CR to T 38.104: Implementation of endorsed draft CRs from RAN4#92 (Rel-16)(Mirrors changes in R4-1908440 for Rel-15 TS 38.104)-R4-1907940, ""Draft CR to TS 38.104: Correction on the terminology in FRC tables in A.1 and A.2""-R4-1908307, ""Draft CR to TS 38.104: Clarification on application of OTA receiver requirements for BS supporting polarization""-R4-1908387, ""Draft CR for TS38.104: editorial correction for reference meausrement channel""-R4-1908619, ""Draft CR to TS38.104: Correction on interferer frequency offset values for ACS""-R4-1908629, ""Draft CR to TS38.104: Corrections on EVM window length (Annex B.5.2, C.5.2)""-R4-1908774, ""DraftCR to 38.104: Editorial Corrections to redudant units in clause 10.8.3""-R4-1908805, ""Draft CR to 38.104: Limits in FCC title 47 for OTA operating band unwanted emissions (9.7)""-R4-1909270, ""Draft CR to TS 38.104: Receiver spurious emissions frequency correction""-R4-1909309, ""DraftCR to TS 38.104: text corrections, Rel-15""-R4-1909310, ""DraftCR to 38.104: correction of TAB connectors mapping to TAB connector TX min cell group, Rel-15""-R4-1909416, ""draft CR 38.104 - correct reference to annex F""-R4-1910066, ""Draft CR to TS 38.104: Update of performance requirements for DFT-s-OFDM based PUSCH""-R4-1910069, ""Draft CR on NR PUCCH format2 performance requirements for TS 38.104""-R4-1910072, ""Draft CR on NR UCI on PUSCH performance requirements for TS 38.104""-R4-1910075, ""draftCR for 38.104 on PUSCH requirements with CP-OFDM and FR1""-R4-1910078, ""Draft CR to TS38.104: Updates to NR PRACH performance requirements""-R4-1910081, ""Draft CR to TS 38.104 BS demodulation PUCCH format 0 requirements""-R4-1910084, ""Draft CR to TS 38.104 BS demodulation CP-OFDM PUSCH FR2 requirements""-R4-1910088, ""Draft CR for 38.104: Performance requirements for NR PUCCH format 1""-R4-1910089, ""Draft CR for 38.104: Performance requirements for NR multi-slot PUCCH""-R4-1910094, ""draftCR: Updates to PUCCH formats 3 and 4 performance requirements in TS 38.104""-R4-1910431, ""Corrections to EVM calculations in 38.141-1 annex B""-R4-1910462, ""Draft CR to 38.104: Correction on regional requirements (4.5)""-R4-1910493, ""Draft CR to TS 38.104 correction to Annex C.7""-R4-1910606, ""Draft CR for TS 38.104: Channel spacing for adjacent NR carriers""",16.1.0
+2019-09,RAN#85,RP-192032,0035,1,B,CR to introduce 30MHz bandwidth of n41 to TS 38.104,16.1.0
+2019-09,RAN#85,RP-192029,0036,,B,CR on Introduction and Protection of SUL band n89 into TS 38.104,16.1.0
+2019-09,RAN#85,RP-192031,0037,,B,CR for TS 38.104: adding wider channel bandwidths in Band n7,16.1.0
+2019-09,RAN#85,RP-192034,0039,,B,n29 introduction to 38.104,16.1.0
+2019-12,RAN#86,RP-192999,0049,1,A,CR to TS 38.104: Update of performance requirements for DFT-s-OFDM based PUSCH (Rel-16),16.2.0
+2019-12,RAN#86,RP-193013,0050,1,B,Introduction of 2010-2025MHz SUL band into Rel-16 TS 38.104,16.2.0
+2019-12,RAN#86,RP-193034,0055,,A,Sync raster to SSB resource element mapping,16.2.0
+2019-12,RAN#86,RP-192999,0057,,A,CR on correction of NR PUCCH format2 performance requirements (Rel-16) for TS 38.104,16.2.0
+2019-12,RAN#86,RP-192999,0059,1,A,CR on correction of NR UCI on PUSCH performance requirements (Rel-16) for TS 38.104,16.2.0
+2019-12,RAN#86,RP-192999,0061,,A,CR on correction on FRC table for FR1 PUSCH performance requirements (Rel-16) for TS 38.104,16.2.0
+2019-12,RAN#86,RP-192999,0063,1,A,CR for 38.104 on PUSCH requirements with CP-OFDM and FR1,16.2.0
+2019-12,RAN#86,RP-193034,0065,,A,CR for TS38.104: Corrections on channel bandwdith for band n34,16.2.0
+2019-12,RAN#86,RP-193035,0067,,A,CR to TS38.104: Editorial corrections,16.2.0
+2019-12,RAN#86,RP-193035,0070,1,A,CR to 38.104 on Editorial corrections (Rel-16),16.2.0
+2019-12,RAN#86,RP-193034,0074,,A,CR to 38.104 on Receiver spurious emission requirements,16.2.0
+2019-12,RAN#86,RP-193021,0075,1,F,CR to remove square brackets for n90 in TS38.104,16.2.0
+2019-12,RAN#86,RP-192999,0077,,A,Updates to PRACH requirements in TS 38.104 for Rel-16,16.2.0
+2019-12,RAN#86,RP-193034,0081,,A,CR to TS 38.104: Correction on interference level of receiver dynamic range requirement,16.2.0
+2019-12,RAN#86,RP-193034,0083,,A,CR to TS 38.104: Finalization of interfering RB centre frequency offsets in receiver narrowband blocking requirement,16.2.0
+2019-12,RAN#86,RP-193034,0085,,A,CR to TR 38.104: Correction of table reference of interfering signal for ACS requirement,16.2.0
+2019-12,RAN#86,RP-193034,0087,,A,CR to TS 38.104: Correction on interfering signal frequency offsets for receiver intermodulation requirements,16.2.0
+2019-12,RAN#86,RP-193034,0089,,A,CR to TS 38.104 on corrections to channel raster entries for NR band (Rel-16),16.2.0
+2019-12,RAN#86,RP-193035,0097,,A,CR to TS38.104: further updates on the abbreviations (section 3.3)-R16,16.2.0
+2019-12,RAN#86,RP-193023,0098,1,B,CR to TS 38.104 - NB-IoT introduction,16.2.0
+2019-12,RAN#86,RP-192999,0100,,F,CR to TS 38.104 BS demodulation PUCCH format 0 requirements,16.2.0
+2019-12,RAN#86,RP-192999,0102,1,F,CR to TS 38.104 BS demodulation CP-OFDM PUSCH FR2 requirements,16.2.0
+2019-12,RAN#86,RP-193017,0103,,B,CR to 38.104 - Band n75 - wider CBW,16.2.0
+2019-12,RAN#86,RP-193018,0105,,B,CR for TS 38.104: adding wider channel bandwidths in Band n77/n78,16.2.0
+2019-12,RAN#86,RP-193016,0106,,B,CR for TS 38.104: Addition channel bandwidth of 40MHz for n38,16.2.0
+2019-12,RAN#86,RP-193035,0108,,A,CR to 38.104: Correction on FR2 Category B OBUE mask,16.2.0
+2019-12,RAN#86,RP-193002,0110,,A,CR Frame averaging for EVM Annex B and C in TS 38.104,16.2.0
+2019-12,RAN#86,RP-193035,0112,,A,"CR to TS 38.104: OTA TAE correction, Rel-16",16.2.0
+2019-12,RAN#86,RP-193035,0114,,A,"CR to TS 38.104: MR BS class terminology correction, Rel-16",16.2.0
+2019-12,RAN#86,RP-192999,0116,1,F,CR: Updates for PUCCH formats 3 and 4 performance requirements in TS 38.104 (Rel-16),16.2.0
+2019-12,RAN#86,RP-193035,0118,,A,Correction of limit for TX spurios BS type 1-H,16.2.0
+2019-12,RAN#86,RP-192999,0119,,A,CR for 38.104: Performance requirements for NR PUCCH format 1,16.2.0
+2019-12,RAN#86,RP-192999,0120,,A,CR for 38.104: Performance requirements for NR multi-slot PUCCH,16.2.0
+2019-12,RAN#86,RP-193035,0122,,A,CR to TS 38.104: Editorial corrections,16.2.0
+2019-12,RAN#86,RP-193035,0124,,A,CR to TS 38.104: Clarification for the number of interfering signals,16.2.0
+2020-03,RAN#87,RP-200381,0126,,B,Introduction of n26,16.3.0
+2020-03,RAN#87,RP-200382,0127,1,B,Introduction of n53,16.3.0
+2020-03,RAN#87,RP-200384,0131,,B,Introducing new channel bandwidth for band n28,16.3.0
+2020-03,RAN#87,RP-200410,0132,,F,CR to TS 38.104: Corrections on NB-IoT operation in NR channel bandwidth,16.3.0
+2020-03,RAN#87,RP-200398,0134,1,A,CR to TS 38.104: Corrections on rated carrier output power symbols,16.3.0
+2020-03,RAN#87,RP-200379,0136,1,C,CR for 38.104: new FRC tables for FR2 PUSCH 2T2R MCS12,16.3.0
+2020-03,RAN#87,RP-200407,0137,2,B,CR for 38.104: introduction of UL timing adjustment,16.3.0
+2020-03,RAN#87,RP-200407,0138,2,B,CR for 38.104: Appendix for UL timing adjustment,16.3.0
+2020-03,RAN#87,RP-200386,0139,,B,CR for TS 38.104: adding wider channel bandwidths for n66,16.3.0
+2020-03,RAN#87,RP-200398,0142,,A,CR to TS 38.104: Regional requirements,16.3.0
+2020-03,RAN#87,RP-200392,0143,,F,Maintenance on the BS BW for n92 and n94,16.3.0
+2020-03,RAN#87,RP-200398,0145,,A,IntraSlot frequency hopping applicability in the one OFDM symbol test case,16.3.0
+2020-03,RAN#87,RP-200383,0146,1,B,CR to 38.104 Band n1 - wider CBW - Additional Channel BW,16.3.0
+2020-03,RAN#87,RP-200385,0148,,B,CR to 38.104 Band n38 - wider CBW - Additional Channel BW,16.3.0
+2020-03,RAN#87,RP-200398,0149,,A,CR to TS 38.104 editorial correction R16 catA,16.3.0
+2020-03,RAN#87,RP-200407,0156,1,B,CR for TS 38.104: Introduction of PRACH demodulation requirements for NR HST,16.3.0
+2020-03,RAN#87,RP-200407,0157,2,B,CR for 38.104: HST PUSCH demodulation requirements introduction,16.3.0
+2020-03,RAN#87,RP-200407,0158,2,B,CR for 38.104: HST PUSCH demodulation Annex including both FRC and channel model,16.3.0
+2020-03,RAN#87,RP-200379,0159,1,C,CR for 38.104: Performance requirements for FR2 PUSCH 2T2R 16QAM,16.3.0
+2020-06,RAN#88,RP-200986,0164,,A,CR for 38.104: Performance requirements clarification of PUSCH BS Type O-2 PT-RS configuration for MCS 2,16.4.0
+2020-06,RAN#88,RP-201043,0167,,F,CR for 38.104: Performance requirements for FR2 PUSCH 2T2R 16QAM,16.4.0
+2020-06,RAN#88,RP-200986,0176,,A,CR to TS 38.104: Correction to out-of-band blocking requirements in subclause 7.5 and subclause 10.6,16.4.0
+2020-06,RAN#88,RP-200986,0178,,A,CR to TS 38.104: Correction on the CA nominal channel spacing,16.4.0
+2020-06,RAN#88,RP-200986,0180,,A,30k SSB SCS for n50,16.4.0
+2020-06,RAN#88,RP-200986,0182,,A,Addition of 30k SSB SCS for Band n38,16.4.0
+2020-06,RAN#88,RP-200972,0185,,B,CR to TS 38.104: Introduction of FR2 DL 256QAM,16.4.0
+2020-06,RAN#88,RP-200977,0190,,B,CR for TS 38.104: adding 50 MHz CBW for n1,16.4.0
+2020-06,RAN#88,RP-200986,0195,,A,CR to 38.104: Adding missing clause on Radiated Performance requirements for multi-slot PUCCH (11.3.1),16.4.0
+2020-06,RAN#88,RP-200980,0198,,B,CR to TS 38.104 - Add 40 MHz CBW in band n3,16.4.0
+2020-06,RAN#88,RP-200982,0199,,B,CR to TS 38.104 - Add 50 MHz CBW in band n65,16.4.0
+2020-06,RAN#88,RP-200986,0209,,A,CR to 38.104 on Receiver spurious emissions exclusion band (Rel-16),16.4.0
+2020-06,RAN#88,RP-200986,0211,,A,CR to 38.104 on EESS protection for bands n257 and n258 (Rel-16),16.4.0
+2020-06,RAN#88,RP-200986,0213,,A,TS38.104 draft CR on 30KHz SSB SCS for n40 (Rel-16),16.4.0
+2020-06,RAN#88,RP-200986,0207,1,A,CR to 38.104 on Removal of brackets and TBD (Rel-16),16.4.0
+2020-06,RAN#88,RP-200975,0165,1,B,CR for 38.104: HST PUSCH demodulation requirements,16.4.0
+2020-06,RAN#88,RP-200975,0166,1,B,CR for 38.104: HST PUSCH demodulation FRC and channel model annexes,16.4.0
+2020-06,RAN#88,RP-200975,0186,1,F,CR for 38.104 Introduction of PRACH demodulation requirements for NR HST,16.4.0
+2020-06,RAN#88,RP-200975,0187,1,B,CR for 38.104: Performance requirements for UL timing adjustment,16.4.0
+2020-06,RAN#88,RP-201043,0168,1,B,CR for TS 38.104: Introduce PUSCH performance requirements at 30% throughput test point,16.4.0
+2020-06,RAN#88,RP-200986,0172,1,F,UCI multiplexed on PUSCH requirement,16.4.0
+2020-06,RAN#88,RP-200978,0205,1,B,CR  to 38.104 for  Introduction of band n259,16.4.0
+2020-09,RAN#89,RP-201497,0218,1,B,CR for 38.104: HST PUSCH demodulation requirements,16.5.0
+2020-09,RAN#89,RP-201497,0219,1,B,CR for 38.104: HST PUSCH demodulation FRC and channel model annexes,16.5.0
+2020-09,RAN#89,RP-201502,0220,1,B,Introduction of LTE/NR spectrum sharing in band 48/n48 frequency range,16.5.0
+2020-09,RAN#89,RP-201512,0222,,A,CR to TS 38.104: Correction of co-location requirement in subclause 7.5.3,16.5.0
+2020-09,RAN#89,RP-201512,0224,,A,CR to TS38.104: Add 30k SSB SCS for Band n34 and n39,16.5.0
+2020-09,RAN#89,RP-201512,0227,1,A,CR to TS 38.104: OTA receiver spurious requirements for EESS protection (rel-16),16.5.0
+2020-09,RAN#89,RP-201499,0228,,F,CR for 38.104: Performance requirements for UL timing adjustment,16.5.0
+2020-09,RAN#89,RP-201507,0229,,F,Correction to NB-IoT Bands with n26,16.5.0
+2020-09,RAN#89,RP-201512,0233,1,A,"CR to 38.104: Annex B and C clarification on equlisation calculation (B.6, C.6)",16.5.0
+2020-09,RAN#89,RP-202101,0238,1,C,7.5 kHz UL shift for LTE/NR spectrum sharing in Band 38/n38,16.5.0
+2020-09,RAN#89,RP-202113,0239,1,B,CR to TS 38.104: Introduction of NR-U into BS core specification,16.5.0
+2020-12,RAN#90,RP-202422,0242,1,F,CR for 38.104: HST PUSCH demodulation requirements,16.6.0
+2020-12,RAN#90,RP-202416,0243,1,B,CR for 38.104: Ultra high reliability BS demodulation requirements,16.6.0
+2020-12,RAN#90,RP-202416,0244,1,B,CR for 38.104: Low latency BS demodulation requirements,16.6.0
+2020-12,RAN#90,RP-202415,0245,2,B,CR to TS 38.104 BS demodulation requirements for 2-step RACH,16.6.0
+2020-12,RAN#90,RP-202414,0247,1,F,CR to TS 38.104 with NR-U remaining open issues updates,16.6.0
+2020-12,RAN#90,RP-202415,0248,1,B,CR on BS demodulation requirements for 2-step RACH for FR2,16.6.0
+2020-12,RAN#90,RP-202416,0249,1,B,CR to TS 38.104: Addition of BS performance requirements for URLLC PUSCH repetition Type A,16.6.0
+2020-12,RAN#90,RP-202422,0250,1,B,CR for 38.104: Introduction of performance requirements for NR HST PRACH under fading channel,16.6.0
+2020-12,RAN#90,RP-202423,0257,1,F,Adding FRC table description in Annex in TS38.104 v16.5.0,16.6.0
+2020-12,RAN#90,RP-202488,0261,,A,CR to 38.104 on Category B OTA spurious emissions for and n257,16.6.0
+2020-12,RAN#90,RP-202451,0240,,B,Introduction of 1880-1920MHz SUL band into Rel-17 TS 38.104,17.0.0
+2020-12,RAN#90,RP-202452,0241,,B,Introduction of 2300-2400MHz SUL band into Rel-17 TS 38.104,17.0.0
+2020-12,RAN#90,RP-202448,0253,,B,CR to TS 38.104: introduction of NR band n13,17.0.0
+2020-12,RAN#90,RP-202453,0258,1,B,Big CR to 38.104 - Additional Channel BW,17.0.0
+2020-12,RAN#90,RP-202456,0214,3,B,LTE/NR spectrum sharing in Band 40/n40,17.0.0
+2021-03,RAN#91e,RP-210096,0262,2,B,CR for TS 38.104 Introduction of SUL for UL of NR band n24,17.1.0
+2021-03,RAN#91e,RP-210078,0264,,A,CR for 38.104: HST PUSCH demodulation requirements,17.1.0
+2021-03,RAN#91e,RP-210068,0266,,A,CR for 38.104: Low latency FR1 BS demodulation requirements,17.1.0
+2021-03,RAN#91e,RP-210068,0268,,A,CR for 38.104: Ultra high reliability BS demodulation requirements,17.1.0
+2021-03,RAN#91e,RP-210068,0270,,A,CR on PUSCH repetition type A and PUSCH mapping type B radiated performance requirement for TS 38.104,17.1.0
+2021-03,RAN#91e,RP-210117,0273,,A,"CR to TS 38.104: Additions of regional requirements for n41 and n90 in Japan, Rel-17",17.1.0
+2021-03,RAN#91e,RP-210073,0275,,A,CR on correction 2-step RACH performance requirements for FR2 in 38.104 (Rel-17),17.1.0
+2021-03,RAN#91e,RP-210078,0277,,A,CR for 38.104: Cleanup for performance requirements of NR HST PRACH under,17.1.0
+2021-03,RAN#91e,RP-210068,0279,,A,CR to TS 38.104: Correction of BS performance requirements for URLLC PUSCH repetition Type A,17.1.0
+2021-03,RAN#91e,RP-210084,0282,,A,CR to TS 38.104: system parameters maintenance for NR-U,17.1.0
+2021-03,RAN#91e,RP-210084,0284,,A,CR to TS 38.104: corrections of NR-U BS Tx requirements,17.1.0
+2021-03,RAN#91e,RP-210084,0286,,A,CR to TS 38.104: corrections of NR-U BS Rx requirements,17.1.0
+2021-03,RAN#91e,RP-210117,0289,,A,CR to TS 38.104: EESS protection requirement correction,17.1.0
+2021-03,RAN#91e,RP-210189,0291,,B,Big CR to 38.104 - Additional Channel BW,17.1.0
+2021-03,RAN#91e,RP-210117,0294,,A,CR to TS38.104: Correction on the Aggregated Channel Bandwidth,17.1.0
+2021-03,RAN#91e,RP-210097,0295,,B,CR to 38.104: Introduction of n24,17.1.0
+2021-03,RAN#91e,RP-210084,0297,,A,CR to TS 38.104 corrections to NR-U BS RF Tx requirements,17.1.0
+2021-03,RAN#91e,RP-210084,0299,,A,CR to TS 38.104 corrections to NR-U BS RF Rx requirements,17.1.0
+2021-06,RAN#92,RP-211117,0305,,A,Correction of the channel raster of n259 for TS 38.104,17.2.0
+2021-06,RAN#92,RP-211095,0307,,A,CR to TS 38.104: Corrections on frequency offset symbols for spectrum emission mask for non-transmitted channels,17.2.0
+2021-06,RAN#92,RP-211079,0310,,F,CR to TS 38.104 on BS channel bandwidth per operating band,17.2.0
+2021-06,RAN#92,RP-211105,0314,,A,CR on correction of PUSCH repetition type A and PUSCH mapping type B radiated performance requirements for TS 38.104,17.2.0
+2021-06,RAN#92,RP-211121,0318,1,B,CR to TS 38.104: Introduction of band n262,17.2.0
+2021-06,RAN#92,RP-211115,0319,,B,Big CR to TS 38.104: Adding channel BW support in existing NR bands,17.2.0
+2021-06,RAN#92,RP-211116,0320,1,B,CR to TS 38.104: Introduction of band n67,17.2.0
+2021-06,RAN#92,RP-211116,0321,1,B,CR to TS 38.104: Introduction of band n85,17.2.0
+2021-06,RAN#92,RP-211095,0323,,A,CR to 38.104 with correction of NR-U 60 MHz and 80 MHz channels,17.2.0
+2021-06,RAN#92,RP-211094,0325,,A,Big CR for NR-U BS demodulation requirements in TS 38.104 (Rel-17),17.2.0
+2021-06,RAN#92,RP-211108,0329,,A,CR for 38.104: HST PUSCH demodulation requirements and spec maintenance,17.2.0
+2021-06,RAN#92,RP-211108,0331,,A,CR for 38.104: Low latency and ultra-low BLER FR1 BS demodulation requirements,17.2.0
+2021-06,RAN#92,RP-211090,0333,,A,CR to 38.104: In-band blocking for multi-band Base Stations,17.2.0
+2021-09,RAN#93,RP-211907,0343,,B,Big CR to TS 38.104: Adding channel BW support in existing NR bands,17.3.0
+2021-09,RAN#93,RP-211909,0341,,B,CR for TS 38.104: introduction of channel bandwidths 35MHz and 45MHzNOTEThe CR is not implemented,17.3.0
+2021-09,RAN#93,RP-211910,0348,,B,Introduction of the UL 7.5kHz shift for NR TDD band n34 and n39 in 38.104 R17,17.3.0
+2021-09,RAN#93,RP-211926,0351,,F,"Big CR for TS 38.104 Maintenance Demod part (Rel-17, CAT F)",17.3.0
+2021-09,RAN#93,RP-211926,0354,,A,"Big CR for TS 38.104 Maintenance RF part (Rel-17, CAT A)",17.3.0
+2021-12,RAN#94,RP-212835,0356,,B,Big CR to TS 38.104: Adding channel BW support in existing NR bands,17.4.0
+2021-12,RAN#94,RP-212836,0357,,F,CR to TS 38.104 - Fix to band n85 introduction,17.4.0
+2021-12,RAN#94,RP-212825,0355,2,B,CR for TS 38.104: 1024QAM,17.4.0
+2021-12,RAN#94,RP-212824,0360,,F,"Big CR for TS 38.104 Maintenance RF part (Rel-17, CAT F)",17.4.0
+2021-12,RAN#94,RP-212850,0362,,F,"Big CR for TS 38.104 Maintenance Demod part (Rel-17, CAT F)",17.4.0
+2021-12,RAN#94,RP-213147,0363,,B,CR for TS 38.104: introduction of channel bandwidths 35MHz and 45MHzNOTEThe CR is a resubmission of CR R4-2114918 of RP-211909,17.4.0
+2022-03,RAN#95-e,RP-220377,0364,1,B,CR for TS 38.104: capturing HAPS requirements,17.5.0
+2022-03,RAN#95-e,RP-220347,0365,1,B,CR to TS38.104 on introduction of upper 700MHz A block,17.5.0
+2022-03,RAN#95-e,RP-220357,0369,1,B,CR for 38.104 to introduce n102,17.5.0
+2022-03,RAN#95-e,RP-220361,0372,,B,BigCR for TS38.104: Introduction of conformance testing requirements for FR1 PUSCH 256QAM,17.5.0
+2022-03,RAN#95-e,RP-220334,0374,,F,"Big CR for TS 38.104 Maintenance RF part (Rel-17, CAT F)",17.5.0
+2022-03,RAN#95-e,RP-220334,0376,,A,"Big CR for TS 38.104 Maintenance Demod part (Rel-17, CAT A)",17.5.0
+2022-03,RAN#95-e,RP-220376,0378,,B,Big CR to 38.104: RMR 1900MHz band n101 introduction,17.5.0
+2022-06,RAN#96,RP-221680,0379,,B,Big CR on FR2 HST BS demodulation requirement for TS 38.104,17.6.0
+2022-06,RAN#96,RP-221684,0380,1,B,CR to TS 38.104 - Tx requirements: RMR 900MHz band introduction,17.6.0
+2022-06,RAN#96,RP-221671,0381,,B,Big CR to TS 38.104: Adding channel BW support in existing NR bands,17.6.0
+2022-06,RAN#96,RP-221684,0382,1,B,CR to 38.104 on introduction of n100 (system parameters),17.6.0
+2022-06,RAN#96,RP-221673,0383,1,B,CR to TS38.104 the introduction of 6425-7125MHz,17.6.0
+2022-06,RAN#96,RP-221676,0384,,B,Big CR to 38.104 for Rel-17 NR extension up to 71 GHz introduction,17.6.0
+2022-06,RAN#96,RP-221684,0385,,B,"CR to TS 38.104: RMR900 Rx requirements for band n100, Rel-17",17.6.0
+2022-06,RAN#96,RP-221676,0386,,B,Big CR on extending NR to 71GHz for TS 38.104,17.6.0
+2022-06,RAN#96,RP-221655,0389,,F,"Big CR for TS 38.104 Maintenance RF part (Rel-17, CAT F)",17.6.0
+2022-06,RAN#96,RP-221659,0391,,A,"Big CR for TS 38.104 Maintenance Demod part (Rel-17, CAT A)",17.6.0
+2022-09,RAN#97,RP-222038,0394,1,F,CR to 38.104 on n100 corrections,17.7.0
+2022-09,RAN#97,RP-222041,0395,,F,Big CR on FR2 HST BS demodulation requirement for TS 38.104,17.7.0
+2022-09,RAN#97,RP-222050,0401,1,B,CR for 38.104: Add 5 MHz channel BW for n41,17.7.0
+2022-09,RAN#97,RP-222026,0404,,F,"Big CR for TS 38.104 Maintenance RF part (Rel-17, CAT F)",17.7.0
+2022-09,RAN#97,RP-222026,0407,,F,"Big CR for TS 38.104 Maintenance Demod part (Rel-17, CAT F)",17.7.0
+2022-09,RAN#97,RP-222051,0408,,F,"Big CR to 38.104 for Rel-17  NR extension up to 71 GHz maintenance (Rel-17, CAT F)",17.7.0
+2022-09,RAN#97,RP-222051,0410,,B,Big CR of TS38.104 on system parameter updates for FR2-2,17.7.0
+2022-12,RAN#98-e,RP-223307,0411,,F,CR to TS 38.104 on reference to FRCs,17.8.0
+2022-12,RAN#98-e,RP-223307,0412,,F,CR to TS 38.104: Correction of guardband for FR2-2 in sub-clause 5.3.3,17.8.0
+2022-12,RAN#98-e,RP-223300,0413,,B,Big CR for coverage enhancement performance requirements for TS38.104,17.8.0
+2022-12,RAN#98-e,RP-223308,0414,1,B,Corrections for 100MHz CBW inclusion for n46 n96 and n102,17.8.0
+2022-12,RAN#98-e,RP-223309,0415,,F,CR to TS 38.104 on tables for BS channel bandwidths,17.8.0
+2022-12,RAN#98-e,RP-223297,0419,,F,CR for TS38.104 correction on normal PUSCH requirements (Rel-17),17.8.0
+2022-12,RAN#98-e,RP-223309,0424,2,F,"CR to 38.104: Spurious emission requirements, Rel-17",17.8.0
+2022-12,RAN#98-e,RP-223302,0426,,B,"Big CR for TS 38.104 Demodulation requirements for Enhanced IIOT and URLLC support (Rel-17, CAT B)",17.8.0
+2022-12,RAN#98-e,RP-223298,0429,,F,CR for 38.104: define home class as one kind of LA BS,17.8.0
+2022-12,RAN#98-e,RP-223524,0432,1,A,CR on R17 TS 38.104 to add channel raster exception for band n28 [n28_BS40MHz_raster],17.8.0

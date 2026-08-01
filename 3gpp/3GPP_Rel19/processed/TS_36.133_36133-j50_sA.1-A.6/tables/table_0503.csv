@@ -1,0 +1,15 @@
+Parameter,,Unit,Value,Comment
+PDSCH parameters,,,DL Reference Measurement Channel R.0 FDD,As specified in clause A.3.1.1.1
+PCFICH/PDCCH/PHICH parameters,,,DL Reference Measurement Channel R.6 FDD,As specified in clause A.3.1.2.1
+Initial conditions,Active cell,,Cell 1,E-UTRAN FDD cell
+,Neighbouring cell,,Cell 2,cdma2000 1X cell
+Final condition,Active cell,,Cell 2,cdma2000 1X cell
+Channel Bandwidth (BWchannel),,MHz,10,
+DRX,,,OFF,Non-DRX test
+Access Barring Information,,-,Not sent,No additional delays in random access procedure
+E-UTRA RF Channel Number,,,1,One E-UTRA FDD carrier frequency is used.
+E-UTRA Channel Bandwidth (BWchannel),,MHz,10,
+cdma2000 1X RF Channel Number,,,1,One HRPD carrier frequency is used.
+cdma2000-SearchWindowSize,,,8 (60 PN chips),Search window size as defined in clause 6.3.5 in TS 36.331
+T1,,s,5,
+T2,,s,1,

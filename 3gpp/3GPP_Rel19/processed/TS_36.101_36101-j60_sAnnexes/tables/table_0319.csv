@@ -1,0 +1,21 @@
+Information Element,,,,Value,
+,,,,5MHz,10MHz
+preconfigSync,syncCP-Len-r12,,,Normal,
+,syncOffsetIndicator1,,,1,
+,syncOffsetIndicator2,,,2,
+,syncTxParameters,,,23,
+,syncTxThreshOoC,,,0 (-110dBm / 15kHz),
+,filterCoefficient,,,fc0,
+,syncRefMinHyst,,,dB0,
+,syncRefDiffHyst,,,dB0,
+,syncTxPeriodic,,,TRUE,
+preconfigDisc,discRxPoolList(0),cp-Len,,Normal,
+,,discPeriod,,rf4,
+,,numRetx,,0,
+,,numRepetition,,1,
+,,tf-ResourceConfig,prb-Num,12,25
+,,,prb-Start,0,0
+,,,prb-End,23,49
+,,,offsetIndicator,0,
+,,,subframeBitmap,0000000010000000000000000000000000000000,
+,,txParameters,,not present,

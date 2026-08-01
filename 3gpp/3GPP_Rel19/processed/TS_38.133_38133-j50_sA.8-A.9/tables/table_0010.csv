@@ -1,0 +1,11 @@
+Parameter,Unit,Test,Value,Comment
+,,configuration,,
+Active cell,,"1, 2, 3, 4, 5, 6",E-UTRAN Cell 1,
+Neighbour cell,,"1, 2, 3, 4, 5, 6",NR Cell 2,Cell 2 is of higher priority.
+RF Channel Number,,"1, 2, 3, 4, 5, 6",1: Cell 12: Cell 2,
+DRX cycle length,s,"1, 2, 3, 4, 5, 6",1.28,
+Time offset between Cell 1 and Cell 2,,"1, 2, 3, 4, 5, 6",3 s,
+T1,s,"1, 2, 3, 4, 5, 6",0.5,
+T2,s,"1, 2, 3, 4, 5, 6",71,
+T3,s,"1, 2, 3, 4, 5, 6",2,
+T331,s,"1, 2, 3, 4, 5, 6",300,

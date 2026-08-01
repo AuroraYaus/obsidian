@@ -1,0 +1,8 @@
+eDRX_IDLE cycle length [s],DRX or eDRX INACTIVE cycle length [s],"Tdetect, EUTRAN [s] (number of DRX or eDRX INACTIVE cycles)","Tmeasure, EUTRAN [s] (number of DRX or eDRX INACTIVE cycles)","Tevaluate, EUTRAN [s] (number of DRX or eDRX INACTIVE cycles)"
+,,,,
+2.56 ≤eDRX_IDLE cycle length ≤ 10485.76,0.32,11.52 x 1.5 (36 x 1.5),1.28 x 1.5 (4 x 1.5),5.12 x 1.5 (16 x 1.5)
+,0.64,17.92 (28),1.28 (2),5.12 (8)
+,1.28,32 (25),1.28 (1),6.4 (5)
+,2.56,58.88 (23),2.56 (1),7.68 (3)
+,5.12,117.76 (23),5.12 (1),15.36 (3)
+,10.24,235.52(23),10.24 (1),30.72 (3)

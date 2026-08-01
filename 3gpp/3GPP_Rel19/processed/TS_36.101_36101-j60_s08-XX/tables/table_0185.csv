@@ -1,0 +1,6 @@
+Test number,Bandwidth,Reference Channel,OCNG Pattern,Propagation Condition,Correlation Matrix and Antenna Configuration,Reference value,,UE Category
+,,,,,,Fraction of MaximumThroughput (%),SNR (dB),
+1(Note 2),10 MHz,R.11-1 TDD,OP.1 TDD,EVA70,2x2 Low,70,13.1,≥2
+2,10 MHz,R.35 TDD,OP.1 TDD,EVA200,2x2 Low,70,20.3,≥2
+3,10 MHz,R.35-2 TDD,OP.1 TDD,ETU600,2x2 Low,70,21.1,≥2
+"Note 1:Void.Note 2:For UE that supports CRS interference handling, the CRS assistance information defined in [7] is provided. The CRS assistance information includes two aggressor cells with 2 CRS ports and cell ID of agressor cells are 1 and 128. For UE that does not support CRS interference handling, CRS assistance information is not provided.",,,,,,,,

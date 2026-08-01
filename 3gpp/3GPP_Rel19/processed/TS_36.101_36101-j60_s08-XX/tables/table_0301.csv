@@ -1,0 +1,15 @@
+Test num.,Band-width,,Reference channel,OCNG pattern,Propa-gation condi-tion,Correlation matrix and antenna config.,Reference value,,UE category
+,,,,,,,Fraction of maximum throughput (%),SNR (dB),
+1,PCell,20MHz,R.30-2 TDD,OP.1 TDD (Note 1)),EVA70,2x2 Low,70,13.2,3
+,SCell,20MHz,R.30 FDD,OP.1 FDD (Note 1,,,70,13.2,
+2,PCell,20MHz,R.35-1 TDD,OP.1 TDD (Note 1),EVA70,2x2 Low,70,16.2,4
+,SCell,20MHz,R.35-1 FDD,OP.1 FDD (Note 1),,,70,16.2,
+3,PCell,20MHz,R.30-2 TDD,OP.1 TDD (Note 1),EVA70,2x2 Low,70,13.2,3
+,SCell,10MHz,R.35-3 FDD,OP.1 FDD (Note 1),,,70,16.0,
+4,PCell,20MHz,R.35-1 TDD,OP.1 TDD (Note 1),EVA70,2x2 Low,70,16.2,4
+,SCell,10MHz,R.35-3 FDD,OP.1 FDD (Note 1),,,70,15.8,
+5,PCell,20MHz,R.30-2 TDD,OP.1 TDD (Note 1),EVA70,2x2 Low,70,13.2,3
+,SCell,15MHz,R.35-2 FDD,OP.1 FDD (Note 1),,,70,15.8,
+6,PCell,20MHz,R.35-1 TDD,OP.1 TDD (Note 1),EVA70,2x2 Low,70,16.2,4
+,SCell,15MHz,R.35-2 FDD,OP.1 FDD (Note 1),,,70,15.8,
+Note 1:The OCNG pattern applies for each CC.Note 2:The applicability and test rules of requirements for different CA configurations and bandwidth combination sets are defined in 8.1.2.3B.,,,,,,,,,

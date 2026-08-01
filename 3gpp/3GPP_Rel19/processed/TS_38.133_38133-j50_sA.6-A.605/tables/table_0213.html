@@ -1,0 +1,224 @@
+<table>
+  <tr>
+    <td rowspan="2" colspan="3">Parameter</td>
+    <td rowspan="2">Unit</td>
+    <td colspan="4">Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td>Test 1</td>
+    <td>Void</td>
+    <td>Test 2</td>
+    <td>Void</td>
+  </tr>
+  <tr>
+    <td>Initial L3 conditions</td>
+    <td colspan="2">Active cell</td>
+    <td></td>
+    <td colspan="4">Cell 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2">Neighbouring cell</td>
+    <td></td>
+    <td colspan="4">Cell 2, Cell 3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Final L3 condition</td>
+    <td colspan="2">Active cell</td>
+    <td></td>
+    <td colspan="4">Cell 2, Cell 3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">a3-Offset</td>
+    <td>dB</td>
+    <td colspan="4">-6</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">hysteresis</td>
+    <td>dB</td>
+    <td colspan="4">0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">timeToTrigger</td>
+    <td>s</td>
+    <td colspan="4">0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">Filter coefficient</td>
+    <td></td>
+    <td colspan="4">0</td>
+    <td>L3 filtering is not used</td>
+  </tr>
+  <tr>
+    <td rowspan="2" colspan="2">Initial L1 conditions</td>
+    <td>Active cell</td>
+    <td></td>
+    <td colspan="4">Cell 1 (T1~T3), Cell 2 (T4~T6)</td>
+    <td>Cell 1 is PCell for initial CLTM cell switch and Cell 2 is PCell for subsequent CLTM cell switch</td>
+  </tr>
+  <tr>
+    <td>Neighbouring cell</td>
+    <td></td>
+    <td colspan="4">Cell 2, Cell 3</td>
+    <td>Cell 2 is target cell for initial CLTM cell switch and Cell 3 is target cell for subsequent CLTM cell switch</td>
+  </tr>
+  <tr>
+    <td colspan="2">Final L1 condition</td>
+    <td>Active cell</td>
+    <td></td>
+    <td colspan="4">Cell 2, Cell 3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">ltm3-Offset-r19</td>
+    <td>dB</td>
+    <td colspan="4">-6</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">hysteresis-r19</td>
+    <td>dB</td>
+    <td colspan="4">0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">timeToTrigger-r19</td>
+    <td>s</td>
+    <td colspan="4">0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">Filter coefficient</td>
+    <td></td>
+    <td colspan="4">0</td>
+    <td>L1 filtering is not used</td>
+  </tr>
+  <tr>
+    <td colspan="3">includeBeamMeasurements</td>
+    <td></td>
+    <td colspan="4">True</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">DRX</td>
+    <td></td>
+    <td colspan="4">OFF</td>
+    <td>DRX is not used</td>
+  </tr>
+  <tr>
+    <td colspan="3">Access Barring Information</td>
+    <td>-</td>
+    <td colspan="4">Not Sent</td>
+    <td>No additional delays in random access procedure.</td>
+  </tr>
+  <tr>
+    <td colspan="3">Time offset between cells</td>
+    <td></td>
+    <td colspan="4">2 s</td>
+    <td>RTD between cells is less than CP</td>
+  </tr>
+  <tr>
+    <td colspan="3">deriveSSB-IndexFromCell</td>
+    <td></td>
+    <td colspan="4">Enabled</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="4">EarlyUL-SyncConfig</td>
+    <td colspan="2">frequencyInfoUL</td>
+    <td></td>
+    <td colspan="4">NR RF Channel Number 1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">PRACH configuration</td>
+    <td></td>
+    <td colspan="4">FR1 PRACH configuration 5</td>
+    <td>RACH bandwidth is within active UL BWP of PCell</td>
+  </tr>
+  <tr>
+    <td colspan="2">bwp-GenericParameters</td>
+    <td></td>
+    <td colspan="4">ULBWP.0.1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">n-TimingAdvanceOffset</td>
+    <td>Tc</td>
+    <td colspan="4">25600</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">ltm-CSI-SSB-ResourceList</td>
+    <td></td>
+    <td colspan="4">SSB 0 of candidate cell</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">ltm-DL-OrJointTCI-StateToAddModList</td>
+    <td colspan="2">CandidateTCI-State#1</td>
+    <td></td>
+    <td>DLorJoint TCI.State.0</td>
+    <td></td>
+    <td>DLorJoint TCI.State.1</td>
+    <td></td>
+    <td rowspan="2">As specified in clause A.3.16B.In Test 1, CandidateTCI-State#1 is configured for early TCI state activation. CandidateTCI-State#2 is selected by the UE.In Test 2, CandidateTCI-State#1 is selected by the UE.</td>
+  </tr>
+  <tr>
+    <td colspan="2">CandidateTCI-State#2</td>
+    <td></td>
+    <td>DLorJoint TCI.State.1</td>
+    <td></td>
+    <td>N/A</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">ltm-ConfigComplete</td>
+    <td></td>
+    <td colspan="4">True</td>
+    <td>Candidate cell’s configuration is complete configuration</td>
+  </tr>
+  <tr>
+    <td colspan="3">T1</td>
+    <td>s</td>
+    <td colspan="4">&lt;3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">T2</td>
+    <td>s</td>
+    <td colspan="4">0.2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">T3</td>
+    <td>s</td>
+    <td colspan="4">0.1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">T4</td>
+    <td>s</td>
+    <td colspan="4">0.1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">T5</td>
+    <td>s</td>
+    <td colspan="4">0.2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="3">T6</td>
+    <td>s</td>
+    <td colspan="4">0.1</td>
+    <td></td>
+  </tr>
+</table>

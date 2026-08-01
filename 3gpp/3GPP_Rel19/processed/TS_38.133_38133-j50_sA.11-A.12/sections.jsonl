@@ -1,0 +1,347 @@
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11NR Standalone Tests with NR PCell under CCA and Other NR Cells in FR1", "paragraph_index": 1, "style": "Heading1"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1RRC_IDLE state mobility", "paragraph_index": 3, "style": "Heading2"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.1Cell re-selection with both source and target NR carrier frequencies under CCA", "paragraph_index": 4, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.1.1Cell reselection to FR1 intra-frequency NR cells when subject to CCA on the serving and target cell", "paragraph_index": 5, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.1.1.1Test Purpose and Environment", "paragraph_index": 6, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.1.1.2Test Parameters", "paragraph_index": 8, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.1.1.3Test Requirements", "paragraph_index": 16, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.1.2Cell reselection to FR1 inter-frequency NR case when subject to CCA on the serving and target cell", "paragraph_index": 28, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.1.2.1Test Purpose and Environment", "paragraph_index": 29, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.1.2.2Test Parameters", "paragraph_index": 31, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.1.2.3Test Requirements", "paragraph_index": 39, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.2Cell re-selection to NR with source NR carrier frequency under CCA", "paragraph_index": 51, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.2.1Cell reselection to FR1 inter-frequency NR case when serving cell is subject to CCA", "paragraph_index": 52, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.2.1.1Test Purpose and Environment", "paragraph_index": 53, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.2.1.2Test Parameters", "paragraph_index": 55, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.2.1.3Test Requirements", "paragraph_index": 63, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.3Cell re-selection from NR carrier with target NR carrier frequency under CCA", "paragraph_index": 77, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.3.1Cell reselection to FR1 inter-frequency NR case when target cell is subject to CCA", "paragraph_index": 78, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.3.1.1Test Purpose and Environment", "paragraph_index": 79, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.3.1.2Test Parameters", "paragraph_index": 81, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.3.1.3Test Requirements", "paragraph_index": 89, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "1.28", "title": "x (5 + Me) + TSI_CCA s. Me is the number of DRX cycles with at least one SMTC where there are no SSBs available during the Tevaluate,NR_Intra_CCA. If Me > Me,max the UE is required to restart the evaluation of Cell 2.", "paragraph_index": 93, "style": null}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.4Inter-RAT cell re-selection to E-UTRAN with source NR carrier frequency under CCA", "paragraph_index": 103, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.4.1Cell reselection to higher priority E-UTRAN when serving cell is subject to CCA", "paragraph_index": 104, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.4.1.1Test Purpose and Environment", "paragraph_index": 105, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.4.1.2Test Parameters", "paragraph_index": 107, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.4.1.3Test Requirements", "paragraph_index": 117, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.4.2Cell reselection to lower priority E-UTRAN when serving cell is subject to CCA", "paragraph_index": 127, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.4.2.1Test Purpose and Environment", "paragraph_index": 128, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.1.4.2.2Test Requirements", "paragraph_index": 139, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2RRC_CONNECTED state mobility", "paragraph_index": 148, "style": "Heading2"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1Handover", "paragraph_index": 149, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.1Intra-frequency handover from FR1 carrier under CCA to FR1 carrier under CCA; known target cell", "paragraph_index": 150, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.1.1Test Purpose and Environment", "paragraph_index": 151, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.1.2Test Parameters", "paragraph_index": 153, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.1.3 Test Requirements", "paragraph_index": 163, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.2Intra-frequency handover from FR1 carrier under CCA to FR1 carrier under CCA; unknown target cell", "paragraph_index": 174, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.2.1Test Purpose and Environment", "paragraph_index": 175, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.2.2Test Parameters", "paragraph_index": 177, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.2.3Test Requirements", "paragraph_index": 186, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.3Inter-frequency handover from FR1 carrier under CCA to FR1 carrier under CCA; unknown target cell", "paragraph_index": 197, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.3.1Test Purpose and Environment", "paragraph_index": 198, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.3.2Test Parameters", "paragraph_index": 200, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.3.3Test Requirements", "paragraph_index": 209, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.4Inter-frequency handover from FR1 carrier under CCA to FR1; known target cell", "paragraph_index": 220, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.4.1Test Purpose and Environment", "paragraph_index": 221, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.4.2Test Parameters", "paragraph_index": 223, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.4.3Test Requirements", "paragraph_index": 233, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.5Inter-frequency handover from FR1 carrier under CCA to FR1; unknown target cell", "paragraph_index": 240, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.5.1Test Purpose and Environment", "paragraph_index": 241, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.5.2Test Parameters", "paragraph_index": 243, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.5.3 Test Requirements", "paragraph_index": 253, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.6Inter-frequency handover from FR1 to FR1 carrier under CCA; unknown target cell", "paragraph_index": 260, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.6.1Test Purpose and Environment", "paragraph_index": 261, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.6.2Test Parameters", "paragraph_index": 263, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.6.3Test Requirements", "paragraph_index": 272, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.7 SA NR FR1 carrier under CCA - E-UTRAN handover with known target cell", "paragraph_index": 283, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.7.1Test Purpose and Environment", "paragraph_index": 284, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.7.2Test Requirements", "paragraph_index": 297, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.8SA NR FR1 carrier under CCA - E-UTRAN handover with unknown target cell", "paragraph_index": 304, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.8.1Test Purpose and Environment", "paragraph_index": 305, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.8.2Test Requirements", "paragraph_index": 318, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.9Handover with PSCell from NR SA to EN-DC with known target PSCell using CCA", "paragraph_index": 325, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.9.1Test Purpose and Environment", "paragraph_index": 326, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.1.9.2Test Requirements", "paragraph_index": 350, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2RRC connection mobility control", "paragraph_index": 373, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.1RRC re-establishment", "paragraph_index": 374, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.1.1Intra-frequency RRC Re-establishment with CCA in FR1", "paragraph_index": 375, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.1.2Inter-frequency RRC Re-establishment with CCA in FR1", "paragraph_index": 404, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.1.4Inter-frequency RRC Re-establishment from NR FR1 carrier without CCA to NR FR1 carrier under CCA", "paragraph_index": 465, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2Random Access", "paragraph_index": 492, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.14-step RA type contention-based random access for NR PCell with CCA", "paragraph_index": 493, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.1.1Test Purpose and Environment", "paragraph_index": 494, "style": "Heading6"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.1.2Test Requirements", "paragraph_index": 501, "style": "Heading6"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.1.2.1Random Access Preamble Transmission", "paragraph_index": 503, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.1.2.2Random Access Response Reception", "paragraph_index": 511, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.1.2.3No Random Access Response Reception", "paragraph_index": 517, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.1.2.4Receiving an UL grant for msg3 retransmission", "paragraph_index": 522, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.1.2.5Reception of an Incorrect Message over Temporary C-RNTI", "paragraph_index": 525, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.1.2.6Reception of a Correct Message over Temporary C-RNTI", "paragraph_index": 528, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.1.2.7Contention Resolution Timer expiry", "paragraph_index": 531, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.24-step RA type non-contention based random access for NR PSCell with CCA", "paragraph_index": 534, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.2.1Test Purpose and Environment", "paragraph_index": 535, "style": "Heading6"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.2.2Test Requirements", "paragraph_index": 542, "style": "Heading6"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.2.2.1SSB-based Random Access Preamble Transmission", "paragraph_index": 544, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.2.2.2Random Access Response Reception", "paragraph_index": 553, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.2.2.3No Random Access Response Reception", "paragraph_index": 559, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.32-step RA type contention-based random access for NR PCell with CCA", "paragraph_index": 564, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.3.1Test Purpose and Environment", "paragraph_index": 565, "style": "Heading6"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.3.2Test Requirements", "paragraph_index": 572, "style": "Heading6"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.3.2.1MsgA Transmission", "paragraph_index": 574, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.3.2.2MsgB Reception", "paragraph_index": 582, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.3.2.3No MsgB Reception", "paragraph_index": 589, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.42-step RA type non-contention-based random access for NR PCell with CCA", "paragraph_index": 594, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.4.1Test Purpose and Environment", "paragraph_index": 595, "style": "Heading6"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.4.2Test Requirements", "paragraph_index": 602, "style": "Heading6"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.4.2.1MsgA Transmission", "paragraph_index": 604, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.4.2.2MsgB Reception", "paragraph_index": 613, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.2.4.2.3No MsgB Reception", "paragraph_index": 622, "style": "Heading7"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.3RRC connection release with redirection", "paragraph_index": 630, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.3.1Redirection from NR FR1 carrier under CCA to NR FR1 carrier under CCA", "paragraph_index": 631, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.2.2.3.2Redirection from NR FR1 carrier without CCA to NR FR1 carrier with CCA", "paragraph_index": 654, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.3Timing", "paragraph_index": 679, "style": "Heading2"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.3.1UE transmit timing", "paragraph_index": 680, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.3.1.1UE Transmit Timing Test with PCell under DL CCA", "paragraph_index": 681, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.3.1.1.1Test Purpose and environment", "paragraph_index": 682, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.3.1.1.2Test requirements", "paragraph_index": 692, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.3.2UE timing advance", "paragraph_index": 704, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.3.2.1UE Timing Advance Adjustment Accuracy with PCell under DL CCA", "paragraph_index": 705, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.3.2.1.1Test Purpose and Environment", "paragraph_index": 706, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.3.2.1.2Test Parameters", "paragraph_index": 708, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.3.2.1.3Test Requirements", "paragraph_index": 723, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4Signalling characteristics", "paragraph_index": 727, "style": "Heading2"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1Radio link monitoring", "paragraph_index": 728, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.1Introduction", "paragraph_index": 729, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.2Radio link monitoring out-of-sync test for PCell configured with SSB-based RLM RS in non-DRX mode", "paragraph_index": 735, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.2.1Test purpose and environment", "paragraph_index": 736, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.2.2Test requirements", "paragraph_index": 750, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.3Radio link monitoring in-sync test for PCell configured with SSB-based RLM RS in non-DRX mode", "paragraph_index": 755, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.3.1Test purpose and environment", "paragraph_index": 756, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.3.2Test requirements", "paragraph_index": 768, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.4Void", "paragraph_index": 772, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.4.1Void", "paragraph_index": 773, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.4.2Void", "paragraph_index": 774, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.5Void", "paragraph_index": 775, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.5.1Void", "paragraph_index": 776, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.1.5.2Void", "paragraph_index": 777, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.2Void", "paragraph_index": 778, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.3SCell activation and deactivation delay", "paragraph_index": 779, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.3.1SCell Activation and Deactivation of known SCell with PCell and SCell under CCA, 160 ms SCell measurement cycle", "paragraph_index": 780, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.3.1.1Test Purpose and Environment", "paragraph_index": 781, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.3.1.2Test Requirements", "paragraph_index": 797, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.3.2SCell Activation and Deactivation of known SCell with PCell and SCell under CCA, 640 ms SCell measurement cycle", "paragraph_index": 805, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.3.2.1Test Purpose and Environment", "paragraph_index": 806, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.3.2.2Test Requirements", "paragraph_index": 813, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.3.3SCell Activation and Deactivation of unknown SCell with PCell and SCell under CCA", "paragraph_index": 821, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.3.3.1Test Purpose and Environment", "paragraph_index": 822, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.3.3.2Test Requirements", "paragraph_index": 829, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.4Beam failure detection and link recovery procedures", "paragraph_index": 837, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.4.1Beam Failure Detection and Link Recovery Test for FR1 PCell configured with SSB-based BFD and LR in non-DRX mode", "paragraph_index": 838, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.4.1.1Test Purpose and Environment", "paragraph_index": 839, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.4.1.2Test Requirements", "paragraph_index": 850, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.4.2Beam Failure Detection and Link Recovery Test for FR1 PCell configured with SSB-based BFD and LR in DRX mode", "paragraph_index": 857, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.4.2.1Test Purpose and Environment", "paragraph_index": 858, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.4.2.2Test Requirements", "paragraph_index": 869, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.5Active BWP switching", "paragraph_index": 876, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.5.1UL active BWP switch delay with consistent UL LBT failure on PCell subject to UL CCA", "paragraph_index": 877, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.5.1.1Test Purpose and Environment", "paragraph_index": 878, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.5.1.2Test Requirements", "paragraph_index": 904, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.5.2DCI-based and Timer-based Active BWP Switch", "paragraph_index": 917, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.5.2.1NR FR1- NR FR1 DL active BWP switch of PCell with non-DRX in SA", "paragraph_index": 918, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.5.2.2NR FR1 DL active BWP switch with non-DRX in SA", "paragraph_index": 962, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.5.3RRC-based Active BWP Switch", "paragraph_index": 996, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.5.3.1NR FR1 DL active BWP switch of Cell with non-DRX in SA", "paragraph_index": 997, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.4.6Void", "paragraph_index": 1024, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5Measurement procedure", "paragraph_index": 1025, "style": "Heading2"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1Intra-frequency measurements", "paragraph_index": 1026, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.1Event-triggered reporting tests on PCC without gaps under non-DRX", "paragraph_index": 1027, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.1.1Test purpose and environment", "paragraph_index": 1028, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.1.2Test parameters", "paragraph_index": 1030, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.1.3Test Requirements", "paragraph_index": 1039, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.2Event-triggered reporting tests on PCC without gaps under DRX", "paragraph_index": 1045, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.2.1Test purpose and environment", "paragraph_index": 1046, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.2.2Test parameters", "paragraph_index": 1048, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.2.3Test Requirements", "paragraph_index": 1058, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.3Void", "paragraph_index": 1065, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.4Void", "paragraph_index": 1066, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.5Void", "paragraph_index": 1067, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.6Void", "paragraph_index": 1068, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.7Void", "paragraph_index": 1069, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.8Void", "paragraph_index": 1070, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.9Void", "paragraph_index": 1071, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.10Void", "paragraph_index": 1072, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.11Void", "paragraph_index": 1073, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.1.12Void", "paragraph_index": 1074, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2Inter-frequency measurements", "paragraph_index": 1075, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.1Void", "paragraph_index": 1076, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.2Void", "paragraph_index": 1077, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.3Event triggered reporting tests for FR1 with CCA without SSB time index detection when DRX is not used", "paragraph_index": 1078, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.3.1Test Purpose and Environment", "paragraph_index": 1079, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.3.2Test Requirements", "paragraph_index": 1090, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.4Event triggered reporting tests for FR1 with CCA without SSB time index detection when DRX is used", "paragraph_index": 1099, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.4.1Test Purpose and Environment", "paragraph_index": 1100, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.4.2Test Requirements", "paragraph_index": 1116, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.5Event triggered reporting tests for FR1 with CCA with SSB time index detection when DRX is not used", "paragraph_index": 1127, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.5.1Test Purpose and Environment", "paragraph_index": 1128, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.5.2Test Requirements", "paragraph_index": 1139, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.6Event triggered reporting tests for FR1 with CCA with SSB time index detection when DRX is used", "paragraph_index": 1149, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.6.1Test Purpose and Environment", "paragraph_index": 1150, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.6.2Test Requirements", "paragraph_index": 1166, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.7Event triggered reporting tests for FR1 without SSB time index detection when DRX is not used", "paragraph_index": 1178, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.7.1Test Purpose and Environment", "paragraph_index": 1179, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.7.2Test Requirements", "paragraph_index": 1190, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.8Event triggered reporting tests for FR1 without SSB time index detection when DRX is used", "paragraph_index": 1199, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.8.1Test Purpose and Environment", "paragraph_index": 1200, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.8.2Test Requirements", "paragraph_index": 1216, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.9Event triggered reporting tests for FR1 with SSB time index detection when DRX is not used", "paragraph_index": 1227, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.9.1Test Purpose and Environment", "paragraph_index": 1228, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.9.2Test Requirements", "paragraph_index": 1239, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.10Event triggered reporting tests for FR1 with SSB time index detection when DRX is used", "paragraph_index": 1249, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.10.1Test Purpose and Environment", "paragraph_index": 1250, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.2.10.2Test Requirements", "paragraph_index": 1266, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.3Inter-RAT E-UTRAN measurements", "paragraph_index": 1278, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.3.1SA NR - E-UTRAN event-triggered reporting in non-DRX in FR1", "paragraph_index": 1279, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.3.1.1Test Purpose and Environment", "paragraph_index": 1280, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.3.1.2Test Requirements", "paragraph_index": 1292, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.3.2SA NR - E-UTRAN event-triggered reporting in DRX in FR1", "paragraph_index": 1296, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.3.2.1Test Purpose and Environment", "paragraph_index": 1297, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.3.2.2Test Requirements", "paragraph_index": 1310, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4L1-RSRP measurements for beam reporting", "paragraph_index": 1315, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.1SSB based L1-RSRP measurement when DRX is not used", "paragraph_index": 1316, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.1.1Test Purpose and Environment", "paragraph_index": 1317, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.1.2Test parameters", "paragraph_index": 1321, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.1.3Test Requirements", "paragraph_index": 1330, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.2SSB based L1-RSRP measurement when DRX is used", "paragraph_index": 1333, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.2.1Test Purpose and Environment", "paragraph_index": 1334, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.2.2Test parameters", "paragraph_index": 1338, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.2.3Test Requirements", "paragraph_index": 1347, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.3SSB based L1-RSRP measurement on SCC when DRX is not used", "paragraph_index": 1350, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.3.1Test Purpose and Environment", "paragraph_index": 1351, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.3.2Test parameters", "paragraph_index": 1355, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.3.3Test Requirements", "paragraph_index": 1364, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.4SSB based L1-RSRP measurement on SCC when DRX is used", "paragraph_index": 1368, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.4.1Test Purpose and Environment", "paragraph_index": 1369, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.4.2Test parameters", "paragraph_index": 1373, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.5.4.4.3Test Requirements", "paragraph_index": 1382, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6Measurement performance", "paragraph_index": 1386, "style": "Heading2"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.1SS-RSRP", "paragraph_index": 1387, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.1.1Intra-frequency measurement accuracy on a carrier frequency with CCA", "paragraph_index": 1388, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.1.1.1Test Purpose and Environment", "paragraph_index": 1389, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.1.1.2Test parameters", "paragraph_index": 1391, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.1.1.3Test Requirements", "paragraph_index": 1397, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.1.2Intra-frequency measurement accuracy on SCC on a carrier frequency with CCA", "paragraph_index": 1399, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.1.2.1Test Purpose and Environment", "paragraph_index": 1400, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.1.2.2Test parameters", "paragraph_index": 1402, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.1.2.3Test Requirements", "paragraph_index": 1408, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2SS-RSRQ", "paragraph_index": 1410, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.1Intra-frequency measurement accuracy", "paragraph_index": 1411, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.1.1Test Purpose and Environment", "paragraph_index": 1412, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.1.2Test Parameters", "paragraph_index": 1414, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.1.3Test Requirements", "paragraph_index": 1420, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.2Inter-frequency measurement accuracy", "paragraph_index": 1422, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.2.1Test Purpose and Environment", "paragraph_index": 1423, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.2.2Test Parameters", "paragraph_index": 1425, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.2.3Test Requirements", "paragraph_index": 1431, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.3Intra-frequency measurement accuracy on SCC", "paragraph_index": 1433, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.3.1Test Purpose and Environment", "paragraph_index": 1434, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.3.2Test Parameters", "paragraph_index": 1436, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.3.3Test Requirements", "paragraph_index": 1442, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.4Inter-frequency measurement accuracy", "paragraph_index": 1444, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.4.1Test Purpose and Environment", "paragraph_index": 1445, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.4.2Test Parameters", "paragraph_index": 1447, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.2.4.3Test Requirements", "paragraph_index": 1455, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3SS-SINR", "paragraph_index": 1457, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.1Intra-frequency measurement accuracy", "paragraph_index": 1458, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.1.1Test Purpose and Environment", "paragraph_index": 1459, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.1.2Test Parameters", "paragraph_index": 1461, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.1.3Test Requirements", "paragraph_index": 1467, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.2Inter-frequency measurement accuracy", "paragraph_index": 1469, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.2.1Test Purpose and Environment", "paragraph_index": 1470, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.2.2Test Parameters", "paragraph_index": 1472, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.2.3Test Requirements", "paragraph_index": 1478, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.3Intra-frequency measurement accuracy on SCC", "paragraph_index": 1480, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.3.1Test Purpose and Environment", "paragraph_index": 1481, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.3.2Test Parameters", "paragraph_index": 1483, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.3.3Test Requirements", "paragraph_index": 1489, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.4Inter-frequency measurement accuracy", "paragraph_index": 1491, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.4.1Test Purpose and Environment", "paragraph_index": 1492, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.4.2Test Parameters", "paragraph_index": 1494, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.3.4.3Test Requirements", "paragraph_index": 1502, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.4L1-RSRP measurement for beam reporting with CCA serving cell", "paragraph_index": 1504, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.4.1SSB based L1-RSRP measurement", "paragraph_index": 1505, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.4.1.1Test Purpose and Environment", "paragraph_index": 1506, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.4.1.2Test parameters", "paragraph_index": 1510, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.4.1.3Test Requirements", "paragraph_index": 1517, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5RSSI", "paragraph_index": 1519, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.1Intra-frequency RSSI measurement accuracy on PCC with CCA", "paragraph_index": 1520, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.1.1Test Purpose and Environment", "paragraph_index": 1521, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.1.2Test parameters", "paragraph_index": 1523, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.1.3Test Requirements", "paragraph_index": 1531, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.2Intra-frequency RSSI measurement accuracy on SCC with CCA", "paragraph_index": 1533, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.2.1Test Purpose and Environment", "paragraph_index": 1534, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.2.2Test parameters", "paragraph_index": 1536, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.2.3Test Requirements", "paragraph_index": 1544, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.3Inter-frequency RSSI measurement accuracy on a carrier with CCA", "paragraph_index": 1546, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.3.1Test Purpose and Environment", "paragraph_index": 1547, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.3.2Test parameters", "paragraph_index": 1549, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.5.3.3Test Requirements", "paragraph_index": 1557, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6Channel occupancy", "paragraph_index": 1559, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.1Intra-frequency channel occupancy measurement accuracy on PCC with CCA", "paragraph_index": 1560, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.1.1Test Purpose and Environment", "paragraph_index": 1561, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.1.2Test parameters", "paragraph_index": 1563, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.1.3Test Requirements", "paragraph_index": 1571, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.2Intra-frequency channel occupancy measurement accuracy on SCC with CCA", "paragraph_index": 1573, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.2.1Test Purpose and Environment", "paragraph_index": 1574, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.2.2Test parameters", "paragraph_index": 1576, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.2.3Test Requirements", "paragraph_index": 1584, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.3Inter-frequency channel occupancy measurement accuracy on a carrier with CCA", "paragraph_index": 1586, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.3.1Test Purpose and Environment", "paragraph_index": 1587, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.3.2Test parameters", "paragraph_index": 1589, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.6.3.3Test Requirements", "paragraph_index": 1597, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.7E-UTRAN RSRP", "paragraph_index": 1599, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.8E-UTRAN RSRQ", "paragraph_index": 1600, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.11.6.9E-UTRAN SINR", "paragraph_index": 1601, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12E-UTRA Standalone Tests with at Least One NR Cell under CCA", "paragraph_index": 1602, "style": "Heading1"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.1RRC_IDLE state mobility", "paragraph_index": 1603, "style": "Heading2"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.1.1Inter-RAT cell re-selection to NR on a carrier frequency with CCA", "paragraph_index": 1604, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.1.1.1E-UTRA Cell reselection to higher priority NR target Cell in FR1 when target cell is subject to CCA", "paragraph_index": 1605, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.1.1.1.1Test Purpose and Environment", "paragraph_index": 1606, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.1.1.1.2Test Requirements", "paragraph_index": 1617, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.2RRC_CONNECTED state mobility", "paragraph_index": 1629, "style": "Heading2"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.2.1Handover", "paragraph_index": 1630, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.2.1.1E-UTRAN - NR with CCA handover", "paragraph_index": 1631, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.2.1.1.1Test Purpose and Environment", "paragraph_index": 1632, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.2.1.1.2Test Requirements", "paragraph_index": 1645, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.3Void", "paragraph_index": 1655, "style": "Heading2"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4Measurement procedure", "paragraph_index": 1656, "style": "Heading2"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.1E-UTRANNR inter-RAT SFTD measurements", "paragraph_index": 1657, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.1.1E-UTRA – NR Inter-RAT SFTD Measurement Delay with NR under CCA in non-DRX", "paragraph_index": 1658, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.1.1.1Test Purpose and Environment", "paragraph_index": 1659, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.1.1.2Test Requirements", "paragraph_index": 1670, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2E-UTRANNR inter-RAT measurements on NR carrier frequency under CCA", "paragraph_index": 1674, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.1E-UTRA-NR inter-RAT event triggered reporting tests for FR1 without SSB time index detection when DRX is not used", "paragraph_index": 1675, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.1.1Test Purpose and Environment", "paragraph_index": 1676, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.1.2Test Requirements", "paragraph_index": 1689, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.2E-UTRA-NR inter-RAT event triggered reporting tests for FR1 without SSB time index detection when DRX is used", "paragraph_index": 1693, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.2.1Test Purpose and Environment", "paragraph_index": 1694, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.2.2Test Requirements", "paragraph_index": 1707, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.3NR Inter-RAT event triggered reporting tests for FR1 with SSB time index detection when DRX is not used", "paragraph_index": 1712, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.3.1Test Purpose and Environment", "paragraph_index": 1713, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.3.2Test Requirements", "paragraph_index": 1726, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.4NR Inter-RAT event triggered reporting tests for FR1 with SSB time index detection when DRX is used", "paragraph_index": 1730, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.4.1Test Purpose and Environment", "paragraph_index": 1731, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.4.2Test Requirements", "paragraph_index": 1744, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.5Void", "paragraph_index": 1749, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.4.2.6Void", "paragraph_index": 1750, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.5Measurement performance", "paragraph_index": 1751, "style": "Heading2"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.5.1E-UTRANNR SFTD", "paragraph_index": 1752, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.5.1.1Inter-RAT SFTD accuracy with NR target cell under CCA", "paragraph_index": 1753, "style": "Heading4"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.5.1.1.1Test Purpose", "paragraph_index": 1754, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.5.1.1.2Test Environment", "paragraph_index": 1756, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.5.1.1.3Test Requirements", "paragraph_index": 1766, "style": "Heading5"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.5.2Void", "paragraph_index": 1768, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.5.3Void", "paragraph_index": 1769, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.5.4Void", "paragraph_index": 1770, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.5.5Void", "paragraph_index": 1771, "style": "Heading3"}
+{"source": "38133-j50_sA.11-A.12.docx", "section": "", "title": "A.12.5.6Void", "paragraph_index": 1772, "style": "Heading3"}

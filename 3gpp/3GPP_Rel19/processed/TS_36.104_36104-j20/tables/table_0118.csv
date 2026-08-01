@@ -1,0 +1,12 @@
+NB-IoTchannel bandwidth [MHz],Reference measurement channel,Wanted signal mean power [dBm],Interfering signal mean power [dBm] / BWChannel,Type of interfering signal
+3*,FRC A15-1 in Annex A.15,-99.7,-84.2,AWGN
+,FRC A15-2 in Annex A.15,-105.6,,
+5,FRC A15-1 in Annex A.15,-99.7,-82.0,AWGN
+,FRC A15-2 in Annex A.15,-105.6,,
+10,FRC A15-1 in Annex A.15,-99.7,-79.0,AWGN
+,FRC A15-2 in Annex A.15,-105.6,,
+15,FRC A15-1 in Annex A.15,-99.7,-77.2,AWGN
+,FRC A15-2 in Annex A.15,-105.6,,
+20,FRC A15-1 in Annex A.15,-99.7,-76.0,AWGN
+,FRC A15-2 in Annex A.15,-105.6,,
+Note*:3 MHz channel bandwidth is not applicable to guard band operation.,,,,

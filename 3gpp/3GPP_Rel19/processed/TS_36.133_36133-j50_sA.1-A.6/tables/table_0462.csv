@@ -1,0 +1,16 @@
+Parameter,,Unit,Value,Comment
+PDSCH parameters,,,DL Reference Measurement Channel R.0 FDD,As specified in clause A.3.1.1.1
+PCFICH/PDCCH/PHICH parameters,,,DL Reference Measurement Channel R.6 FDD,As specified in clause A.3.1.2.1
+Gap Pattern Id,,,1,As specified in TS 36.133 section8.1.2.1.
+Initial conditions,Active cell,,Cell 1,
+,Neighbour cell,,Cell 2,
+Final conditions,Active cell,,Cell 2,
+Inter-RAT measurement quantity,,,GSM Carrier RSSI,
+Threshold other system,,dBm,-80,Absolute GSM carrier RSSI threshold for event B1.
+Hysteresis,,dB,0,
+Time to Trigger,,ms,0,
+Filter coefficient,,,0,L3 filtering is not used
+DRX,,,,OFF
+T1,,s,20,
+T2,,s,7,
+T3,,s,1,

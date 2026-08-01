@@ -1,0 +1,5 @@
+eDRX_IDLE cycle length [s],DRX cycle length [s],PTW length [s] (number of 1.28 s periods),"Tdetect,NR_Intra_RedCap [s] (number of eDRX cycles)","Tmeasure,NR_Intra_RedCap [s] (number of eDRX cycles)","Tevaluate,NR_Intra_RedCap [s] (number of eDRX cycles)"
+2.56,-,-,58.88 (23),2.56 (1),7.68 (3)
+5.12,-,-,117.76 (23),5.12 (1),10.24 (2)
+10.24,-,-,235.52 (23),10.24 (1),20.48 (2)
+NOTE 1:VoidNOTE 2:The eDRX_IDLE cycle lengths are as specified in section 10.5.5.32 of TS 24.008 [42].NOTE 3:Void NOTE 4: VoidNOTE 5:Void,,,,,

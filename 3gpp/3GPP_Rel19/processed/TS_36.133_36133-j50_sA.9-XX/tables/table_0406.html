@@ -1,0 +1,117 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+    <td>Comment</td>
+  </tr>
+  <tr>
+    <td colspan="2">E-UTRA RF Channel Number</td>
+    <td></td>
+    <td>1</td>
+    <td>TDD carrier in Band 47</td>
+  </tr>
+  <tr>
+    <td colspan="2">Channel Bandwidth (BWchannel)</td>
+    <td>MHz</td>
+    <td>10</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">V2X sidelink communication configuration</td>
+    <td></td>
+    <td>As specified in Table A.3.24.2-2(Configuration #2)</td>
+    <td>IE values unless specified otherwise in this test.</td>
+  </tr>
+  <tr>
+    <td colspan="2">sl-Subframe-r14 included in SL-configV2X-TxPoolList</td>
+    <td></td>
+    <td>1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</td>
+    <td>Indicates the bitmap of the TX resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 36.213 [23])</td>
+  </tr>
+  <tr>
+    <td colspan="2">numSubchannel-r14 included in SL-configV2X-TxPoolList</td>
+    <td></td>
+    <td>1</td>
+    <td>ENUMERATED {n1}</td>
+  </tr>
+  <tr>
+    <td colspan="2">threshS-RSSI-CBR</td>
+    <td></td>
+    <td>21</td>
+    <td>Corresponding -70dBm as defined in Section 6.3.8 in TS36.331</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of Active Sidelink UEs every 100ms</td>
+    <td></td>
+    <td>4</td>
+    <td>Active Sidelink UE i, where i = 0, 1, 2, 3</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Active Sidelink UEs</td>
+    <td>V2X sidelink Communication configuration</td>
+    <td></td>
+    <td>As specified in Table A.3.24.2-2(Configuration #2)</td>
+    <td>IE values unless specified otherwise in this test.</td>
+  </tr>
+  <tr>
+    <td>sl-Subframe-r14 included in SL-configV2X-TxPoolList</td>
+    <td></td>
+    <td>1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</td>
+    <td>Indicates the bitmap of the TX resource pool, which is defined by repeating the bitmap within a SFN cycle (see TS 36.213 [23])</td>
+  </tr>
+  <tr>
+    <td>numSubchannel-r14 included in SL-configV2X-TxPoolList</td>
+    <td></td>
+    <td>1</td>
+    <td>ENUMERATED {n1}</td>
+  </tr>
+  <tr>
+    <td>sl-OffsetIndicator-r14</td>
+    <td></td>
+    <td>i</td>
+    <td>For Active Sidelink UE i, where i = 0, 1, 2, 3</td>
+  </tr>
+  <tr>
+    <td colspan="2">Timing offset between V2X UE and Active Sidelink UEs</td>
+    <td>s</td>
+    <td>3</td>
+    <td>Synchronous</td>
+  </tr>
+  <tr>
+    <td colspan="2">v1-Threshold</td>
+    <td></td>
+    <td>2</td>
+    <td>Corresponding 0.02 as defined in Section 6.3.8 in TS36.331</td>
+  </tr>
+  <tr>
+    <td colspan="2">Hysteresis</td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Time To Trigger</td>
+    <td>s</td>
+    <td>0</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">Filter coefficient</td>
+    <td></td>
+    <td>0</td>
+    <td>L3 filtering is not used</td>
+  </tr>
+  <tr>
+    <td colspan="2">T1</td>
+    <td>s</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2">T2</td>
+    <td>s</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+</table>

@@ -1,0 +1,22 @@
+Parameter,,Unit,Value,Comment
+T0,Active cell,,Cell 1,"T0 is repeated on each repetition of the test. In T0 the test equipment selects frequencies for cell 2, 3 and then time is allowed for the UE to identify the neighbour cells.   See cell specific parameters for detailed settings."
+T1 start condition,Active cell,,Cell 1,
+T1 end condition,Active cell,,Cell 2,UE shall perform reselection to cell 2 during T1
+,Neighbour cell,,"Cell 1, cell 3",
+T2 end condition,Active cell,,Cell 1,UE shall perform reselection to cell 1 during T2
+,Neighbour cell,,"Cell 2, cell 3",
+T3 end condition,Active cell,,Cell 3,UE shall perform reselection to cell 3 during T3
+,Neighbour cell,,"Cell 1, cell 2",
+T4 end condition,Active cell,,Cell 1,UE shall perform reselection to cell 1 during T4
+,Neighbour cell,,"Cell 2, cell 3",
+UE configured E-UTRA RF Channel Number,,,1,"Serving cell and six UTRA FDD carrier frequencies are used in the UE neighbour cell list. Frequencies 5,6 and 7 are indicated to have reduced performance"
+UE configured UTRA RF Channel Number,,,"2,3,4,5,6,7",
+Test eqipment configuration,,,"Cell 1 uses E-UTRA RF channel number 1Cells 2,3,4 are randomly selected to use different frequencies selected from frequencies 2,3,4,5,6,7",
+PRACH configuration,,,4,As specified in table 5.7.1-2 in TS 36.211
+Access Barring Information,,-,Not Sent,No additional delays in random access procedure.
+DRX cycle length,,s,1.28,The value shall be used for all cells in the test.
+T0,,s,(test equipment frequency selection and configuration time) + 960,Initialisation time need to be defined so that cell detection time is taken into account.
+T1,,s,60,T1 need to be defined so that cell re-selection reaction time is taken into account.
+T2,,s,25,T2 need to be defined so that cell re-selection reaction time is taken into account
+T3,,s,350,T3 need to be defined so that cell re-selection reaction time is taken into account.
+T4,,s,25,T4 need to be defined so that cell re-selection reaction time is taken into account

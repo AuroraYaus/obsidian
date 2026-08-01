@@ -1,0 +1,12 @@
+Channel bandwidth,Carrier centre frequency (FC)(MHz),Parameters,Region,,,,,,
+5 MHz,"1630.0, 1630.3",RBstart,0,1,2,3,4,5,6
+,,LCRB [RBs],≤6,≤5,≤4,≤3,≤2,=1,≤2
+,,A-MPR [dB],≤13,≤9,≤7,≤5,≤3,≤3,0.3
+,1635,No A-MPR needed,,,,,,,
+,1649,,,,,,,,
+,1654,,,,,,,,
+10 MHz,1632.5,(RBstart),0,1,2,3,4,5,
+,,LCRB [RBs],≤6,≤5,≤4,≤3,≤2,=1,
+,,A-MPR [dB],≤8,≤4,≤3,≤2,≤2,≤1.5,
+,1651.5,No A-MPR needed,,,,,,,
+"Note 1:RBstart indicates the lowest RB index of transmitted resource blocks of the cell channel bandwidth. Note 2:LCRB is the length of a contiguous resource block allocationNote 3:For intra-subframe frequency hopping which intersects regions, notes 1 and 2 apply on a per slot basisNote 4:For intra-subframe frequency hopping which intersects regions, the larger A-MPR value may be applied for both slots in the subframe",,,,,,,,,

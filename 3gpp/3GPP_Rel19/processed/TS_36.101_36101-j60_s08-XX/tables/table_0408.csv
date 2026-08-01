@@ -1,0 +1,11 @@
+Parameter,,Unit,Test 1,Test 2,Test 3,Test 4,Test 5
+Downlink power allocation,,dB,0,0,0,0,0
+,,dB,0 (Note 1),0 (Note 1),0 (Note 1),0 (Note 1),0 (Note 1)
+,,dB,-3,-3,-3,-3,-3
+Cell-specific reference signals,,,Antenna port 0 and antenna port 1,,,,
+Beamforming model,,,Annex B.4.1,,,,
+at antenna port,,dBm/15kHz,-98,-98,-98,-98,-98
+Symbols for unused PRBs,,,OCNG (Note 4),OCNG (Note 4),OCNG (Note 4),OCNG (Note 4),OCNG (Note 4)
+Simultaneous transmission,,,No,No,No,"Yes(Note 3, 5)","Yes(Note 3, 5)"
+PDSCH transmission mode,,,8,8,8,8,8
+"Note 1:.Note 2:The modulation symbols of the signal under test is mapped onto antenna port 7 or 8.Note 3:Modulation symbols of an interference signal is mapped onto the antenna port (7 or 8) not used for the input signal under test.Note 4:These physical resource blocks are assigned to an arbitrary number of virtual UEs with one PDSCH per virtual UE; the data transmitted over the OCNG PDSCHs shall be uncorrelated pseudo random data, which is QPSK modulated.Note 5:The two UEs’ scrambling identities  are set to 0 for CDM-multiplexed DM RS with interfering simultaneous transmission test cases.",,,,,,,

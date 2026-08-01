@@ -1,0 +1,42 @@
+<table>
+  <tr>
+    <td rowspan="2">eDRX_IDLE cycle length [s]</td>
+    <td rowspan="2">Tserv [s]</td>
+    <td rowspan="2">Tdetect,NR_Intra (number of Tserv)</td>
+    <td rowspan="2">Tmeasure,NR_Intra (number of Tserv)</td>
+    <td rowspan="2">Tevaluate,NR_Intra (number of Tserv)</td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td>2.56 ≤eDRX_IDLE cycle length ≤ 10485.76</td>
+    <td>0.32 ≤ Tserv &lt; 0.64</td>
+    <td>[36 x M2]</td>
+    <td>[4 x M2]</td>
+    <td>[16 x M2]</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>0.64 ≤ Tserv &lt; 1.28</td>
+    <td>[28]</td>
+    <td>[2]</td>
+    <td>[8]</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>1.28 ≤ Tserv &lt; 2.56</td>
+    <td>[25]</td>
+    <td>[1]</td>
+    <td>[5]</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>2.56 ≤ Tserv</td>
+    <td>[23]</td>
+    <td>[1]</td>
+    <td>[3]</td>
+  </tr>
+  <tr>
+    <td colspan="5">NOTE 1:Tdetect,NR_Intra, Tmeasure,NR_Intra and Tevaluate,NR_Intra in seconds depend on the number N of Tserv and are calculated as N * Tserv.</td>
+  </tr>
+</table>

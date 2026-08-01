@@ -1,0 +1,7 @@
+Channel Bandwidth[MHz],Center Frequency[MHz],RB allocation,A-MPRBase  (dB),,,A-MPRstep (dB)
+,,,0 ≤ NGap / NRB < 0.15,0.15≤ NGap / NRB < 0.3,0.3≤ NGap / NRB ≤ 1,
+10,"5860, 5920",NRB =1,19.0,,,1.0
+,,NRB > 1,22.0,,,
+,"5870, 5880, 5890, 5900, 5910",NRB =1,5,,,0.8
+,,NRB > 1,14,7,18.5,
+Note 1:NGap is the gap RB amount between RBstart and RBend for contiguous and non-contiguous allocation simultaneous PSFCH transmission. (NGap = RBend - RBstart),,,,,,

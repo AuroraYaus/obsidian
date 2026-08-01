@@ -1,0 +1,18 @@
+Parameter,,Unit,Value
+,,,Test 1
+BWchannel,Config 1,MHz,"3: NPRB,c = 12"
+RMSI CORESET Reference Channel,Config 1,,CR.1.2 FDD
+Dedicated CORESET Reference Channel,Config 1,,CCR.1.6 FDD
+SSB Configuration,Config 1,,SSB.13 FR1
+,DCI format,,1-0
+,Number of Control OFDM symbols,,2
+,Aggregation level,CCE,2
+In sync transmission parameters,Ratio of hypothetical PDCCH RE energy to average SSS RE energy,dB,0
+,Ratio of hypothetical PDCCH DMRS energy to average SSS RE energy,dB,0
+,Number of Control OFDM symbols,,2
+,Aggregation level,CCE,4
+Out of sync transmission parameters,Ratio of hypothetical PDCCH RE energy to average SSS RE energy,dB,4
+,Ratio of hypothetical PDCCH DMRS energy to average SSS RE energy,dB,4
+,REG bundle size,,6
+,CP length,,Normal
+,Mapping from REG to CCE,,Distributed

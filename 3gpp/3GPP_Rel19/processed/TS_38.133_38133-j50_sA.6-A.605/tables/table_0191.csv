@@ -1,0 +1,27 @@
+Parameter,,Unit,Value,,,,Comment
+,,,Test 1,Void,Test 2,Void,
+Initial conditions,Active cell,,Cell 1,,,,
+,Neighbouring cell,,Cell 2,,,,Cell 2 is the candidate cell
+Final condition,Active cell,,Cell 2,,,,
+A3-Offset,,dB,-6,,,,
+Hysteresis,,dB,0,,,,
+Time To Trigger,,s,0,,,,
+Filter coefficient,,,0,,,,L3 filtering is not used
+maxNrofRS-IndexesToReport,,,1,,,,
+includeBeamMeasurements,,,True,,,,
+DRX,,,OFF,,,,DRX is not used
+Measurement gap pattern ID,,,gp0,,,,As specified in Table 9.1.2-1
+Measurement gap offset,,,39,,,,
+Access Barring Information,,-,Not Sent,,,,No additional delays in random access procedure.
+Time offset between cells,,,2 s,,,,
+LTM-CSI-ReportConfig,L1-RSRP reporting period,slot,80,,,,Periodic L1-RSRP reporting configured
+,nrOfReportedCells,,n1,,,,Report candidate cell’s (Cell 2) L1-RSRP measurement results.
+,nrOfReportedRS-PerCell,,n1,,,,
+,spCellInclusion,,N/A,,,,
+ltm-DL-OrJointTCI-StateToAddModList,CandidateTCI-State#1,,DLorJoint TCI.State.0,,DLorJoint TCI.State.1,,"As specified in clause A.3.16B.In test 1, CandidateTCI-State#1 is configured for early TCI state activation.CandidateTCI-State#2 is configured for TCI state indication in cell switch command.In test 2, CandidateTCI-State#1 is configured for TCI state indication in cell switch command."
+,CandidateTCI-State#2,,DLorJoint TCI.State.1,,N/A,,
+ltm-ConfigComplete,,,True,,,,Candidate cell’s configuration is complete configuration
+T1,,s,<3,,,,
+T2,,s,0.2,,,,
+T3,,s,0.2,,,,
+T4,,s,0.1,,,,

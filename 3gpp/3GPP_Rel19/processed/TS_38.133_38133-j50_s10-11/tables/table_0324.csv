@@ -1,0 +1,11 @@
+Accuracy(PRS Ês/Iot)ref ≥    0dB (PRS Ês/Iot)i ≥ -6dB,Conditions,,,,
+,PRS SCS,PRS bandwidthNote 1,PRS resource repetition ()          Note 2TrepPRS*LPRS/KcombPRS,Io Note 3 range,
+,,,,Minimum Io,Maximum Io
+degree,kHz,PRB,,dBm/SCS,dBm/BWChannel
+8,60,≥ 24,≥ 4,"Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival",-50
+5,,≥ 64,≥ 1,Note 4,Note 4
+3,,≥ 132,≥ 1,Note 4,Note 4
+9,120,≥ 32,≥ 4,"Same value as PRS_RP in table B.2.14-2, according to UE Power class, operating band and angle of arrival",-50
+6,,≥ 64,≥ 1,Note 4,Note 4
+5,,≥ 132,≥ 1,Note 4,Note 4
+"NOTE 1:Minimum PRS bandwidth, which is minimum of the PRS bandwidths of the reference resource and the measured neighbour resource i.NOTE 2: Minimum number of PRS resource repetitions among the reference resource and the measured neighbour resource i.  are configured by higher layer parameter dl-PRS-ResourceRepetitionFactor, dl-PRS-NumSymbols and dl-PRS-CombSizeN defined in TS 37.355 [34], respectively.NOTE 3:Io is assumed to have constant EPRE across the bandwidth.NOTE 4:The same bands and the same Io conditions for each band apply for this requirement as for the corresponding requirement with the PRS bandwidth of the smallest PRB number for the corresponding SCS.TrepPRS, LPRS ,KcombPRS",,,,,

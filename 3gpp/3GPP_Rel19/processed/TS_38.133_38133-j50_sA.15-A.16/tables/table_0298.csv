@@ -1,0 +1,55 @@
+Parameter,,,Unit,Cell 1
+Frequency Range,,,,FR1
+Duplex mode,,Config 1,,FDD
+,,"Config 2,3",,TDD
+,,Config 4,,HD-FDD
+TDD configuration,,"Config 1,4",,Not Applicable
+,,Config 2,,TDDConf.1.1
+,,Config 3,,TDDConf.2.1
+BWchannel,,Config 1,,"10 MHz: NPRB,c = 52"
+,,Config 2,,"10 MHz: NPRB,c = 52"
+,,Config 3,,"20 MHz: NPRB,c = 51"
+,,Config 4,,"10 MHz: NPRB,c = 52"
+Active DL BWP ID,,"Config 1,2, 3,4",,0
+Initial DL BWP Configuration (BWP-1),,"Config 1,2, 3,4",,DLBWP.0.1
+Initial UL BWP Configuration,,"Config 1,2, 3,4",,ULBWP.0.1
+Initial Condition,Active DL CBW Configureation (CBW-1),"Config 1, 2, 3,4",,DLCBW.1.1
+,Active UL CBWConfiguration (CBW-1),"Config 1, 2, 3,4",,ULCBW.1.1
+Final Condition,Active DL CBW Configureation (CBW-2),"Config 1, 2, 3,4",,DLCBW.1.2
+,Active UL CBWConfiguration (CBW-2),"Config 1, 2, 3,4",,ULCBW.1.2
+PDSCH Reference measurement channel,,"Config 1,4",,SR.1.1 FDD
+,,Config 2,,SR.1.1 TDD
+,,Config 3,,SR2.1 TDD
+RMSI CORESET parameters,,"Config 1,4",,CR.1.1 FDD
+,,Config 2,,CR.1.1 TDD
+,,Config 3,,CR2.1 TDD
+Dedicated CORESET parameters,,"Config 1,4",,CCR.1.1 FDD
+,,Config 2,,CCR.1.1 TDD
+,,Config 3,,CCR.2.1 TDD
+OCNG Patterns,,,,OP.1
+SSB Configuration,,"Config 1,2,4",,SSB.1 FR1
+,,Config 3,,SSB.1 RedCap FR1
+SMTC Configuration,,,,SMTC.1 RedCap FR1
+TRS Configuration,,"Config 1,4",,TRS.1.1 FDD
+,,Config 2,,TRS.1.1 TDD
+,,Config 3,,TRS.1.2 TDD
+Antenna Configuration,,,,1x2 Low
+Propagation Condition,,,,AWGN
+EPRE ratio of PSS to SSS,,,dB,0
+EPRE ratio of PBCH DMRS to SSS,,,,
+EPRE ratio of PBCH to PBCH DMRS,,,,
+EPRE ratio of PDCCH DMRS to SSS,,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,,
+EPRE ratio of PDSCH DMRS to SSS,,,,
+EPRE ratio of PDSCH to PDSCH DMRS,,,,
+EPRE ratio of OCNG DMRS to SSS(Note 1),,,,
+EPRE ratio of OCNG to OCNG DMRS(Note 1),,,,
+NocNote 2,,"Config 1,2,4",dBm/SCS,-104
+,,Config 3,,-101
+SS-RSRP Note 3,,"Config 1,2,4",dBm/SCS,-87
+,,Config 3,,-84
+Ês/Iot,,,dB,17
+Ês/Noc,,,dB,17
+IoNote3,,"Config 1,2,4",dBm/9.36 MHz,-58.96
+,,Config 3,dBm/18.36 MHz,-56.04
+"NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for Noc to be fulfilled.NOTE 3:SS-RSRP and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.NOTE 4:For unpaired spectrum, a DL BWP is linked with an UL BWP. DLBWP.0.1 is linked with ULBWP.0.1; DLBWP.1.1 is linked with ULBWP.1.1; as defined in clause 12 of TS 38.213 [3].",,,,

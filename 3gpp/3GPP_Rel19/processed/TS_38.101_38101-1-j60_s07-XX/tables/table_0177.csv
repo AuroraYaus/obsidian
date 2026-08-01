@@ -1,0 +1,5 @@
+Rx Parameter,Units,SL CA Bandwidth Class,,,,
+,,B,,,,
+"Pw in Transmission Bandwidth Configuration, per CC",dBm,PREFSENS_SL + SL CA Bandwidth Class specific value below,,,,
+,,9,,,,
+NOTE 1:The requirement is applied for multi-carrier intra-band concurrent receptions when 2 carrier transmissions are activated at the same time.NOTE 2:Reference measurement channel is A.7.2,,,,,,

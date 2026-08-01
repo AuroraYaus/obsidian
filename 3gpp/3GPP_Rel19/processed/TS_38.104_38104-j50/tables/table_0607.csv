@@ -1,0 +1,16 @@
+Reference channel,G-FR2-A9-1,G-FR2-A9-2,G-FR2-A9-3
+Subcarrier spacing [kHz],120,120,60
+Allocated resource blocks,32,132,66
+Data bearing CP-OFDM Symbols per slot (Note 1),9,9,9
+Modulation,256QAM,256QAM,256QAM
+Code rate (Note 2),682.5/1024,682.5/1024,682.5/1024
+Payload size (bits),18432,75792,37896
+Transport block CRC (bits),24,24,24
+Code block CRC size (bits),24,24,24
+Number of code blocks - C,3,9,5
+Code block size including CRC (bits) (Note 2),6176,8448,7608
+Total number of bits per slot without PT-RS,27648,114048,57024
+Total number of bits per slot with PT-RS (Note 3),26496,109296,54648
+Total resource elements per slot without PT-RS,3456,14256,7128
+Total resource elements per slot with PT-RS (Note 3),3312,13662,6831
+"NOTE 1:DM-RS configuration type = 1 with DM-RS duration = single-symbol DM-RS and the number of DM-RS CDM groups without data is 2, Additional DM-RS position = pos0 with l0= 0 as per Table 6.4.1.1.3-3 of TS 38.211 [9].NOTE 2:Code block size including CRC (bits) equals to K' in sub-clause 5.2.2 of TS 38.212 [15].NOTE 3:PT-RS configuration KPT-RS =2, LPT-RS =1.",,,

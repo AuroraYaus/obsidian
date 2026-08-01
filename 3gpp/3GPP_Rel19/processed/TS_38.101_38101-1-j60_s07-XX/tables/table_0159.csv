@@ -1,0 +1,9 @@
+NR band,Parameter,Units,Range 1,Range 2,Range 3
+n14,Pinterferer,dBm,-44,-30,-15
+,Finterferer (CW),MHz,-60 < f – FDL_low < -15or15 < f – FDL_high < 60,-85 < f – FDL_low ≤ -60or60 ≤ f – FDL_high < 85,1 ≤ f ≤ FDL_low – 85orFDL_high + 85 ≤ f≤ 12750
+n47,Pinterferer,dBm,-44,-30,-15
+,Finterferer (CW),MHz,FDL_low -30 toFDL_low -60,FDL_low -60 toFDL_low -85,FDL_low -85 to1 MHz
+,,,FDL_high +30 toFDL_high + 60,FDL_high +60 toFDL_high +85,FDL_high +85 to+12750 MHz
+n38,Pinterferer,dBm,-44,-30,-15
+,Finterferer (CW),MHz,FDL_low -30 toFDL_low -60,FDL_low -60 toFDL_low -85,FDL_low -85 to1 MHz
+NOTE 1:The power level of the interferer (PInterferer) for Range 3 shall be modified to -20 dBm for FInterferer > 4400 MHz.,,,,,

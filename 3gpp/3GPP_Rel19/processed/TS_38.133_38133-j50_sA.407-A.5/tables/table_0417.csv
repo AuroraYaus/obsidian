@@ -1,0 +1,13 @@
+Parameter,Unit,Test configuration,Cell 2,
+,,,T1,T2
+TDD configuration,,1,TDDConf.3.1,
+PDSCH RMC configuration,,1,SR.3.1 TDD,
+RMSI CORESET RMC configuration,,1,CR.3.1 TDD,
+Dedicated CORESET RMC configuration,,1,CCR.3.1 TDD,
+OCNG Patterns,,1,OP.1,
+TRS configuration,,,TRS.2.1. TDD,
+PDSCH/PDCCH TCI state,,1,TCI.State.2,
+Initial BWP configuration,,1,DLBWP.0.1 ULBWP.0.1,
+Active DL BWP configuration,,1,DLBWP.1.1,
+Active UL BWP configuration,,1,ULBWP.1.1,
+Propagation Condition,,1,AWGN,

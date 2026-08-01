@@ -1,0 +1,55 @@
+Parameter,,TestConfig.,Unit,Value,Comment
+,,,,Test 1,
+Active PCell,,1,,Cell 1,
+RF Channel Number,,1,,1,
+Duplex mode,,1,,TDD,
+TDD Configuration,,1,,TDDConf.3.1,
+BWchannel,,1,,"100: NPRB,c = 66",
+Data PRBs allocated,,1,,66,
+PDSCH/PDCCH subcarrier spacing,,1,kHz,120,
+DL initial BWP configuration,,1,,DLBWP.0.1,
+DL dedicated BWP configuration,,1,,DLBWP.1.1,
+UL initial BWP configuration,,1,,ULBWP.0.1,
+UL dedicated BWP configuration,,1,,ULBWP.1.1,
+PDSCH Reference Channel,,1,,SR.3.2 TDD,
+RMSI CORESET Reference Channel,,1,,CR.3.1 TDD,
+Dedicated CORESET Reference Channel,,1,,CCR.3.1 TDD,
+OCNG parameters,,1,,OP.1,
+CP length,,1,,Normal,
+PDSCH/PDCCH TCI state,,1,,TCI.State.0,
+CSI-RS for tracking,,1,,TRS.2.1 TDD,
+SSB Configuration,,1,,SSB.1 FR2,
+SMTC Configuration,,1,,SMTC.3,
+PRACH Configuration,,1,,FR2 PRACH configuration 4,A.3.8.3.4
+DRX configuration,,1,,OFF,
+CSI-RS configuration for BFD/CBD/RLM,,1,,CSI-RS.3.2 TDD,A.3.14.2
+CSI-RS index assigned as BFD RS (q0),,1,,0,
+CSI-RS index assigned as CBD RS (q1),,1,,1,
+CSI-RS index assigned as RLM RS,,1,,"0,1",
+Beam failure detection transmission parameters,DCI format,1,,1-0,
+,Number of Control OFDM symbols,1,,2,
+,Aggregation level,1,CCE,8,
+,Ratio of hypothetical PDCCH RE energy to average SSS RE energy,1,dB,0,
+,Ratio of hypothetical PDCCH DMRS energy to average SSS RE energy,1,dB,0,
+,DMRS precoder granularity,1,,REG bundle size,
+,REG bundle size,1,,6,
+Gap pattern ID,,1,,N/A,
+rlmInSyncOutOfSyncThreshold,,1,,absent,Value 0 is applied. (Table 8.1.1-1).
+rsrp-ThresholdSSB,,1,dBm/SCS,-95,Threshold used for Qin_LR_SSB
+powerControlOffsetSS,,1,,db0,Used for deriving rsrp-ThresholdCSI-RS
+beamFailureInstanceMaxCount,,1,,n1,"see TS 38.321 [7], clause 5.17"
+beamFailureDetectionTimer,,1,,pbfd4,"see TS 38.321 [7], clause 5.17"
+CSI-RS configuration for CSI reporting,,1,,CSI-RS.3.1 TDD,A.3.14.2
+reportConfigType,,1,,periodic,
+reportQuantity,,1,,cri-RI-PMI-CQI,
+CSI reporting periodicity,,1,slot,40,
+CSI reporting offset,,1,slot,4,
+T310,,1,ms,1000,
+N310,,1,,2,
+T1,,1,s,1,The UE shall be fully synchronized to cell 1 during T1
+T2,,1,s,1.17,
+T3,,1,s,0.9,
+T4,,1,s,0,
+T5,,1,s,0.31,
+D1,,1,s,0.27,
+NOTE 1:UE-specific PDCCH is not transmitted after T1 starts.,,,,,

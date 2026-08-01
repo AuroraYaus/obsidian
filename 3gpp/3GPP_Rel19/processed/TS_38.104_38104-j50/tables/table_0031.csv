@@ -1,0 +1,17 @@
+NR operating band,SS Block SCS,SS Block pattern(note 1),Range of GSCN(First – <Step size> – Last)
+n257,120 kHz,Case D,22388 – <1> – 22558
+,240 kHz,Case E,22390 – <2> – 22556
+n258,120 kHz,Case D,22257 – <1> – 22443
+,240 kHz,Case E,22258 – <2> – 22442
+n259,120 kHz,Case D,23140 – <1> – 23369
+,240 kHz,Case E,23142 – <2> – 23368
+n260,120 kHz,Case D,22995 – <1> – 23166
+,240 kHz,Case E,22996 – <2> – 23164
+n261,120 kHz,Case D,22446 – <1> – 22492
+,240 kHz,Case E,22446 – <2> – 22490
+n262,120 kHz,Case D,23586 – <1> – 23641
+,240 kHz,Case E,23588 – <2> – 23640
+n263,120 kHz,Case D,Table 5.4.3.3-3
+,480 kHz,Case F,
+,960 kHz2,Case G,24162 – <6> – 24954
+NOTE 1:SS Block pattern is defined in section 4.1 in TS 38.213 [10].NOTE 2:SS Block SCS of 960 kHz is not used for initial access.,,,

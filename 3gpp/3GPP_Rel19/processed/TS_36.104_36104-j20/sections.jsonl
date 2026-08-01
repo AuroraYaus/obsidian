@@ -1,0 +1,258 @@
+{"source": "36104-j20.docx", "section": "", "title": "Foreword", "paragraph_index": 260, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "1Scope", "paragraph_index": 292, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "2References", "paragraph_index": 294, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "3Definitions, symbols and abbreviations", "paragraph_index": 331, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "3.1Definitions", "paragraph_index": 332, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "3.2Symbols", "paragraph_index": 407, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "3.3Abbreviations", "paragraph_index": 466, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "4General", "paragraph_index": 544, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "4.1Relationship between minimum requirements and test requirements", "paragraph_index": 545, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "4.2Base station classes", "paragraph_index": 549, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "4.3Regional requirements", "paragraph_index": 558, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "4.4Applicability of requirements", "paragraph_index": 563, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "4.5Requirements for BS capable of multi-band operation", "paragraph_index": 567, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "5Operating bands and channel arrangement", "paragraph_index": 575, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "5.1General", "paragraph_index": 576, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "5.2Void", "paragraph_index": 579, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "5.3Void", "paragraph_index": 580, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "5.4Void", "paragraph_index": 581, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "5.5Operating bands", "paragraph_index": 582, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "5.6Channel bandwidth", "paragraph_index": 599, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "5.7Channel arrangement", "paragraph_index": 640, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "5.7.1Channel spacing", "paragraph_index": 641, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "5.7.1ACA Channel spacing", "paragraph_index": 650, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "5.7.2Channel raster", "paragraph_index": 656, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "5.7.3Carrier frequency and EARFCN", "paragraph_index": 658, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "5.7.4EARFCN sets for Type B multi-carrier downlink transmissions and conversion to Type 2 channel access for multi-carrier uplink transmissions on multiple Scells configured in Band 46", "paragraph_index": 673, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "5.8Requirements for contiguous and non-contiguous spectrum", "paragraph_index": 686, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "6Transmitter characteristics", "paragraph_index": 689, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "6.1General", "paragraph_index": 690, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "6.2Base station output power", "paragraph_index": 697, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "6.2.1Minimum requirement", "paragraph_index": 711, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.2.2Additional requirement (regional)", "paragraph_index": 715, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.2.3Home BS output power for adjacent UTRA channel protection", "paragraph_index": 722, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.2.4Home BS output power for adjacent E-UTRA channel protection", "paragraph_index": 734, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.2.5Home BS Output Power for co-channel E-UTRA protection", "paragraph_index": 748, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.3Output power dynamics", "paragraph_index": 765, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "6.3.1RE Power control dynamic range", "paragraph_index": 769, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.3.1.1Minimum requirements", "paragraph_index": 771, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.3.2Total power dynamic range", "paragraph_index": 775, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.3.2.1Minimum requirements", "paragraph_index": 779, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.3.3NB-IoT RB power dynamic range for in-band or guard band operation", "paragraph_index": 783, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.3.3.1Minimum Requirement", "paragraph_index": 786, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.4Transmit ON/OFF power", "paragraph_index": 790, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "6.4.1Transmitter OFF power", "paragraph_index": 792, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.4.1.1Minimum Requirement", "paragraph_index": 795, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.4.2Transmitter transient period", "paragraph_index": 798, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.4.2.1Minimum requirements", "paragraph_index": 802, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.5Transmitted signal quality", "paragraph_index": 806, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "6.5.1Frequency error", "paragraph_index": 808, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.5.1.1Minimum requirement", "paragraph_index": 810, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.5.2Error Vector Magnitude", "paragraph_index": 815, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.5.3Time alignment error", "paragraph_index": 823, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.5.3.1Minimum Requirement", "paragraph_index": 828, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.5.4DL RS power", "paragraph_index": 836, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.5.4.1Minimum requirements", "paragraph_index": 841, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6Unwanted emissions", "paragraph_index": 844, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.0Unwanted emissions for LTE based 5G terrestrial broadcast", "paragraph_index": 849, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.1Occupied bandwidth", "paragraph_index": 853, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.1.1Minimum requirement", "paragraph_index": 857, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.2Adjacent Channel Leakage power Ratio (ACLR)", "paragraph_index": 862, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.2.0Additional requirements for LTE based 5G terrestrial broadcast", "paragraph_index": 868, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.2.1Minimum requirement", "paragraph_index": 870, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.2.2Cumulative ACLR requirement in non-contiguous spectrum", "paragraph_index": 899, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3Operating band unwanted emissions", "paragraph_index": 922, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.1Minimum requirements for Wide Area BS (Category A)", "paragraph_index": 955, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.2Minimum requirements for Wide Area BS (Category B)", "paragraph_index": 970, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.2.1Category B requirements (Option 1)", "paragraph_index": 972, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.2.2Category B (Option 2)", "paragraph_index": 987, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.2AMinimum requirements for Local Area BS (Category A and B)", "paragraph_index": 998, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.2BMinimum requirements for Home BS (Category A and B)", "paragraph_index": 1006, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.2CMinimum requirements for Medium Range BS (Category A and B)", "paragraph_index": 1014, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.2DMinimum requirements for Local Area and Medium Range BS in Band 46 (Category A and B)", "paragraph_index": 1028, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.2EMinimum requirements for standalone NB-IoT Wide Area BS", "paragraph_index": 1034, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.2FMinimum requirements for standalone NB-IoT Local Area BS", "paragraph_index": 1038, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.2GMinimum requirements for standalone NB-IoT Home BS (Category A and B)", "paragraph_index": 1042, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.2HMinimum requirements for standalone NB-IoT Medium Range BS", "paragraph_index": 1046, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.3Additional requirements", "paragraph_index": 1053, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.3.4Additional requirements for LTE based 5G terrestrial broadcast", "paragraph_index": 1110, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.4Transmitter spurious emissions", "paragraph_index": 1113, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.4.1Mandatory Requirements", "paragraph_index": 1117, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.4.1.1Spurious emissions (Category A)", "paragraph_index": 1119, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.4.1.2Spurious emissions (Category B)", "paragraph_index": 1124, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.4.2Protection of the BS receiver of own or different BS", "paragraph_index": 1129, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.4.2.1Minimum Requirement", "paragraph_index": 1131, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.4.3Additional spurious emissions requirements", "paragraph_index": 1135, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.4.3.1Minimum Requirement", "paragraph_index": 1138, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.4.4Co-location with other base stations", "paragraph_index": 1194, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.4.4.1Minimum Requirement", "paragraph_index": 1198, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "6.6.4.5Additional transmitter spurious emissions requirements for LTE based 5G terrestrial broadcast", "paragraph_index": 1210, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "6.7Transmitter intermodulation", "paragraph_index": 1213, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "6.7.1Minimum requirement", "paragraph_index": 1216, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "6.7.2Additional requirement for Band 41", "paragraph_index": 1231, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "7Receiver characteristics", "paragraph_index": 1235, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "7.1General", "paragraph_index": 1236, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "7.2Reference sensitivity level", "paragraph_index": 1248, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "7.2.1Minimum requirement", "paragraph_index": 1250, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "7.3Dynamic range", "paragraph_index": 1279, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "7.3.1Minimum requirement", "paragraph_index": 1281, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "7.4In-channel selectivity", "paragraph_index": 1315, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "7.4.1Minimum requirement", "paragraph_index": 1317, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "7.5Adjacent Channel Selectivity (ACS) and narrow-band blocking", "paragraph_index": 1347, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "7.5.1Minimum requirement", "paragraph_index": 1349, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "7.6Blocking", "paragraph_index": 1416, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "7.6.1General blocking requirement", "paragraph_index": 1417, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "7.6.1.1Minimum requirement", "paragraph_index": 1419, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "7.6.2Co-location with other base stations", "paragraph_index": 1465, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "7.6.2.1Minimum requirement", "paragraph_index": 1468, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "7.6.3Additional requirement (regional)", "paragraph_index": 1475, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "7.7Receiver spurious emissions", "paragraph_index": 1477, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "7.7.1Minimum requirement", "paragraph_index": 1482, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "7.8Receiver intermodulation", "paragraph_index": 1487, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "7.8.1Minimum requirement", "paragraph_index": 1489, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8Performance requirement", "paragraph_index": 1542, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "8.1General", "paragraph_index": 1543, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2Performance requirements for PUSCH", "paragraph_index": 1557, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.1Requirements in multipath fading propagation conditions", "paragraph_index": 1558, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.1.1Minimum requirements", "paragraph_index": 1562, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.2Requirements for UL timing adjustment", "paragraph_index": 1589, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.2.1Minimum requirements", "paragraph_index": 1595, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.3Requirements for high speed train", "paragraph_index": 1599, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.3.1Minimum requirements", "paragraph_index": 1604, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.4Requirements for HARQ-ACK multiplexed on PUSCH", "paragraph_index": 1608, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.4.1Minimum requirement", "paragraph_index": 1614, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.5Requirements for PUSCH with TTI bundling and enhanced HARQ pattern", "paragraph_index": 1618, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.5.1Minimum requirements", "paragraph_index": 1627, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.6Enhanced performance requirement type A in multipath fading propagation conditions with synchronous interference", "paragraph_index": 1631, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.6.1Minimum requirements", "paragraph_index": 1638, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.6AEnhanced performance requirement type A in multipath fading propagation conditions with asynchronous interference", "paragraph_index": 1652, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.6A.1Minimum requirements", "paragraph_index": 1659, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.7Requirements for PUSCH supporting coverage enhancement", "paragraph_index": 1673, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.8Requirements for PUSCH of Frame structure type 3", "paragraph_index": 1697, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.9Enhanced performance requirement type B in multipath fading propagation conditions", "paragraph_index": 1703, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.9.1Minimum requirements", "paragraph_index": 1711, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.2.10Requirements for PUSCH supporting subPRB transmission", "paragraph_index": 1725, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3Performance requirements for PUCCH", "paragraph_index": 1750, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.1DTX to ACK performance", "paragraph_index": 1751, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.1.1Minimum requirement", "paragraph_index": 1754, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.2ACK missed detection requirements for single user PUCCH format 1a", "paragraph_index": 1762, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.2.1Minimum requirements", "paragraph_index": 1766, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.3CQI performance requirements for PUCCH format 2", "paragraph_index": 1772, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.3.1Minimum requirements", "paragraph_index": 1776, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.4ACK missed detection requirements for multi user PUCCH format 1a", "paragraph_index": 1782, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.4.1Minimum requirement", "paragraph_index": 1786, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.5ACK missed detection requirements for PUCCH format 1b with Channel Selection", "paragraph_index": 1790, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.5.1Minimum requirements", "paragraph_index": 1795, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.6ACK missed detection requirements for PUCCH format 3", "paragraph_index": 1799, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.6.1Minimum requirements", "paragraph_index": 1805, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.7NACK to ACK requirements for PUCCH format 3", "paragraph_index": 1811, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.7.1Minimum requirement", "paragraph_index": 1820, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.8CQI performance requirements for PUCCH format 2 with DTX detection", "paragraph_index": 1824, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.8.1Minimum requirements", "paragraph_index": 1833, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.9PUCCH performance requirements for coverage enhancement", "paragraph_index": 1837, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.9.1DTX to ACK performance", "paragraph_index": 1838, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.9.1.1Minimum requirement", "paragraph_index": 1840, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.9.2ACK missed detection requirements for single user PUCCH format 1a", "paragraph_index": 1847, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.9.2.1Minimum requirements", "paragraph_index": 1849, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.9.3CQI performance requirements for PUCCH format 2", "paragraph_index": 1853, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.9.3.1Minimum requirements", "paragraph_index": 1856, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.10ACK missed detection requirements for PUCCH format 4", "paragraph_index": 1860, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.10.1Minimum requirements", "paragraph_index": 1868, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.11ACK missed detection requirements for PUCCH format 5", "paragraph_index": 1874, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.3.11.1Minimum requirements", "paragraph_index": 1879, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.4Performance requirements for PRACH", "paragraph_index": 1883, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "8.4.1PRACH False alarm probability", "paragraph_index": 1884, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.4.1.1Minimum requirement", "paragraph_index": 1887, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.4.2PRACH detection requirements", "paragraph_index": 1889, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.4.2.1Minimum requirements", "paragraph_index": 1892, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5Performance requirements for Narrowband IoT", "paragraph_index": 1907, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.1Requirements for NPUSCH format 1", "paragraph_index": 1908, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.1.1Requirements", "paragraph_index": 1909, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.1.1.1Minimum requirements", "paragraph_index": 1915, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.2Performance requirements for NPUSCH format 2", "paragraph_index": 1927, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.2.1DTX to ACK performance", "paragraph_index": 1928, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.2.1.1Minimum requirement", "paragraph_index": 1931, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.2.2ACK missed detection requirements", "paragraph_index": 1938, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.2.2.1Minimum requirements", "paragraph_index": 1940, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.3Performance requirements for NPRACH", "paragraph_index": 1946, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.3.1NPRACH False alarm probability", "paragraph_index": 1947, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.3.1.1Minimum requirement", "paragraph_index": 1950, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.3.2NPRACH detection requirements", "paragraph_index": 1952, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.5.3.2.1Minimum requirements", "paragraph_index": 1957, "style": "Heading5"}
+{"source": "36104-j20.docx", "section": "", "title": "8.6Performance requirements for subslot-PUSCH", "paragraph_index": 1963, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "8.6.1Requirements", "paragraph_index": 1964, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.6.1.1Minimum requirements", "paragraph_index": 1968, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.7Performance requirements for SPUCCH", "paragraph_index": 1978, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "8.7.1ACK missed detection requirements for single user SPUCCH format 1a", "paragraph_index": 1979, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.7.1.1Minimum requirements", "paragraph_index": 1981, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "8.7.2ACK missed detection requirements for SPUCCH format 4", "paragraph_index": 1985, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "8.7.2.1Minimum requirements", "paragraph_index": 1988, "style": "Heading4"}
+{"source": "36104-j20.docx", "section": "", "title": "9Void", "paragraph_index": 1993, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "Annex A (normative): Reference measurement channels", "paragraph_index": 1995, "style": "Heading8"}
+{"source": "36104-j20.docx", "section": "", "title": "A.1Fixed Reference Channels for reference sensitivity and in-channel selectivity (QPSK, R=1/3)", "paragraph_index": 2006, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.2Fixed Reference Channels for dynamic range (16QAM, R=2/3)", "paragraph_index": 2011, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.3Fixed Reference Channels for performance requirements (QPSK 1/3)", "paragraph_index": 2015, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.4Fixed Reference Channels for performance requirements (16QAM 3/4)", "paragraph_index": 2018, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.5Fixed Reference Channels for performance requirements (64QAM 5/6)", "paragraph_index": 2021, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.6PRACH Test preambles", "paragraph_index": 2024, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.7Fixed Reference Channels for UL timing adjustment (Scenario 1)", "paragraph_index": 2033, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.8Fixed Reference Channels for UL timing adjustment (Scenario 2)", "paragraph_index": 2036, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.9Multi user PUCCH test", "paragraph_index": 2039, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.10PUCCH transmission on two antenna ports test", "paragraph_index": 2043, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.11Fixed Reference Channel for PUSCH with TTI bundling and enhanced HARQ pattern", "paragraph_index": 2046, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.12Fixed Reference Channels for performance requirements (QPSK 0.36)", "paragraph_index": 2049, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.13Fixed Reference Channels for performance requirements (16QAM 1/2)", "paragraph_index": 2052, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.14Fixed Reference Channels for NB-IOT reference sensitivity (π/2 BPSK, R=1/3)", "paragraph_index": 2055, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.15Fixed Reference Channels for NB-IoT dynamic range (π/4 QPSK, R=2/3)", "paragraph_index": 2059, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.16Fixed Reference Channels for NB-IoT NPUSCH format 1", "paragraph_index": 2063, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.16.1One PRB", "paragraph_index": 2064, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "A.17Fixed Reference Channels for performance requirements (256QAM 5/6)", "paragraph_index": 2069, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.18Fixed Reference Channels for PUSCH transmission in UpPTS (16QAM 0.65)", "paragraph_index": 2072, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.19Fixed Reference Channels for PUSCH transmission in UpPTS (256QAM 0.69)", "paragraph_index": 2075, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.20 Fixed Reference Channels for PUSCH of Frame structure type 3", "paragraph_index": 2078, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.21Fixed Reference Channels for performance requirements (QPSK 3/5)", "paragraph_index": 2083, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.22Fixed Reference Channels for performance requirements (64QAM 1/2)", "paragraph_index": 2086, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.23Fixed Reference Channels for SubPRB allocation reference sensitivity (π/2 BPSK, R=1/3)", "paragraph_index": 2089, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.24Fixed Reference Channel for subslot-PUSCH", "paragraph_index": 2093, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "A.25Fixed Reference Channels for PUSCH with SubPRB transmission", "paragraph_index": 2096, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "Annex B (normative): Propagation conditions", "paragraph_index": 2099, "style": "Heading8"}
+{"source": "36104-j20.docx", "section": "", "title": "B.1Static propagation condition", "paragraph_index": 2100, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "B.2Multi-path fading propagation conditions", "paragraph_index": 2102, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "B.3High speed train condition", "paragraph_index": 2113, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "B.4Moving propagation conditions", "paragraph_index": 2153, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "B.5Multi-Antenna channel models", "paragraph_index": 2162, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "B.5.1Definition of MIMO Correlation Matrices", "paragraph_index": 2164, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "B.5.2MIMO Correlation Matrices at High, Medium and Low Level", "paragraph_index": 2177, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "B.5AMulti-Antenna channel models using cross polarized antennas", "paragraph_index": 2194, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "B.5A.1Definition of MIMO Correlation Matrices using cross polarized antennas", "paragraph_index": 2200, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "B.5A.2Spatial Correlation Matrices at UE and eNB sides", "paragraph_index": 2216, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "B.5A.2.1Spatial Correlation Matrices at UE side", "paragraph_index": 2217, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "B.5A.2.2Spatial Correlation Matrices at eNB side", "paragraph_index": 2221, "style": "Heading3"}
+{"source": "36104-j20.docx", "section": "", "title": "B.5A.3MIMO Correlation Matrices using cross polarized antennas", "paragraph_index": 2225, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "B.6Interference model for enhanced performance requirements type A and type B", "paragraph_index": 2232, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "B.6.1Dominant interferer proportion", "paragraph_index": 2234, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "B.6.2Interference model for synchronous scenario", "paragraph_index": 2238, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "B.6.3Interference model for asynchronous scenario", "paragraph_index": 2241, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "Annex C (normative): Characteristics of the interfering signals", "paragraph_index": 2246, "style": "Heading8"}
+{"source": "36104-j20.docx", "section": "", "title": "Annex D (normative): Environmental requirements for the BS equipment", "paragraph_index": 2253, "style": "Heading8"}
+{"source": "36104-j20.docx", "section": "60", "title": "721-3-3\"Stationary use at weather protected locations\" [13]", "paragraph_index": 2255, "style": "EX"}
+{"source": "36104-j20.docx", "section": "60", "title": "721-3-4\"Stationary use at non weather protected locations\" [14]", "paragraph_index": 2256, "style": "EX"}
+{"source": "36104-j20.docx", "section": "", "title": "Annex E (normative): Error Vector Magnitude", "paragraph_index": 2258, "style": "Heading8"}
+{"source": "36104-j20.docx", "section": "", "title": "E.1Reference point for measurement", "paragraph_index": 2259, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "E.2Basic unit of measurement", "paragraph_index": 2263, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "E.3Modified signal under test", "paragraph_index": 2273, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "E.4Estimation of frequency offset", "paragraph_index": 2283, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "E.5Estimation of time offset", "paragraph_index": 2287, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "E.5.1Window length", "paragraph_index": 2297, "style": "Heading2"}
+{"source": "36104-j20.docx", "section": "", "title": "E.6Estimation of TX chain amplitude and frequency response parameters", "paragraph_index": 2315, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "E.7Averaged EVM", "paragraph_index": 2328, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "Annex F (Informative): Unwanted emission requirements for multi-carrier BS", "paragraph_index": 2342, "style": "Heading8"}
+{"source": "36104-j20.docx", "section": "", "title": "F.1General", "paragraph_index": 2343, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "F.2Multi-carrier BS of different E-UTRA channel bandwidths", "paragraph_index": 2350, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "F.3Multi-carrier BS of E-UTRA and UTRA", "paragraph_index": 2352, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "Annex G (Informative):Regional requirement for protection of DTT", "paragraph_index": 2354, "style": "Heading8"}
+{"source": "36104-j20.docx", "section": "", "title": "G.1Regional requirement for protection of DTT", "paragraph_index": 2356, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "G.2Regional requirement for Public Safety LTE BS in Korea", "paragraph_index": 2362, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "Annex H (Informative): Calculation of EIRP based on manufacturer declarations and site specific conditions", "paragraph_index": 2377, "style": "Heading8"}
+{"source": "36104-j20.docx", "section": "", "title": "H.1Calculation of EIRP based on manufacturer declarations and site specific conditions", "paragraph_index": 2379, "style": "Heading1"}
+{"source": "36104-j20.docx", "section": "", "title": "Annex I (Informative): Change history", "paragraph_index": 2391, "style": "Heading8"}

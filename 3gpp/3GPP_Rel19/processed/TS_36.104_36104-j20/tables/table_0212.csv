@@ -1,0 +1,13 @@
+Number of TX antennas,Number of RX antennas,Cyclic prefix,Channel Bandwidth [MHz],Moving propagation conditions and correlation matrix (Annex B),FRC(Annex A),SNR[dB]
+1,2,Normal,1.4,Scenario 1 Low,A7-1,13.1
+,,,,Scenario 2 Low,A8-1,-1.9
+,,,3,Scenario 1 Low,A7-2,13.4
+,,,,Scenario 2 Low,A8-2,-1.5
+,,,5,Scenario 1 Low,A7-3,13.2
+,,,,Scenario 2 Low,A8-3,-1.6
+,,,10,Scenario 1 Low,A7-4,13.8
+,,,,Scenario 2 Low,A8-4,-1.8
+,,,15,Scenario 1 Low,A7-5,14.0
+,,,,Scenario 2 Low,A8-5,-1.8
+,,,20,Scenario 1 Low,A7-6,13.9
+,,,,Scenario 2 Low,A8-6,-1.8

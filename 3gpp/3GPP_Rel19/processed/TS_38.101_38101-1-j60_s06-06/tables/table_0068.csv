@@ -1,0 +1,11 @@
+Modulation/Waveform,A1,A2,A3,A4,A5,A6,A7
+,Outer/Inner,Outer/Inner,Outer,Outer,,,
+DFT-s-OFDM PI/2 BPSK,≤ 5,≤ 6.5,≤ 4,≤ 3,≤ 4,≤ 5.5,≤ 4
+DFT-s-OFDM QPSK,≤ 5,≤ 6.5,≤ 4,≤ 3,≤ 4,≤ 5.5,≤ 4
+DFT-s-OFDM 16 QAM,≤ 5,≤ 7,≤ 4,≤ 3,≤ 4.5,≤ 5.5,≤ 4
+DFT-s-OFDM 64 QAM,≤ 5,≤ 7.5,≤ 4.5,≤ 3,≤ 4.5,≤ 6,≤ 4
+DFT-s-OFDM 256 QAM,≤ 8,≤ 8,≤ 6,,≤ 5.5,≤ 6,≤ 6
+CP-OFDM QPSK,≤ 7,≤ 8,≤ 5.5,≤ 4.5,≤ 6,≤ 6.5,≤ 6
+CP-OFDM 16 QAM,≤ 7,≤ 8,≤ 5.5,≤ 4.5,≤ 6,≤ 7,≤ 6
+CP-OFDM 64 QAM,≤ 7.5,≤ 8,≤ 5.5,≤ 4.5,≤ 6.5,≤ 7,≤ 6
+CP-OFDM 256 QAM,≤ 10,≤ 10,≤ 7,,≤ 8,≤ 8,≤ 8

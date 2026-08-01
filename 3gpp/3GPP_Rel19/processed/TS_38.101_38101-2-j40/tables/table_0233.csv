@@ -1,0 +1,4 @@
+Operating band,Units,ACS (dB) (min.)
+"n257, n258, n261",dB,21.0 - X + Z
+"n259, n260, n262",dB,20.0 - X + Z
+"NOTE 1:ACS value is rounded to the next higher 0.5dB valueNOTE 2:Z = 10log10(NRB/ NRB,LP-WUS)NOTE 3:X is specified in Table 7.3M.2-1",,

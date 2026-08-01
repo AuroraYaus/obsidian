@@ -1,0 +1,6 @@
+Configuration,TEvaluate_BFD_SSB_CCA (ms),
+,BFD-RS SSB Es/Iot Note2 ≥ -7 dB,BFD-RS SSB Es/Iot Note2 < -7 dB
+no DRX,"Max(50, Ceil((10  P)  TSSB))","Max(50, Ceil((12  P)  TSSB))"
+DRX cycle ≤ 320 ms,"Max(50, Ceil(1.5  8  P)  Max(TDRX,TSSB))","Max(50, Ceil(1.5  10  P)  Max(TDRX,TSSB))"
+DRX cycle > 320 ms,Ceil(7  P)  TDRX,Ceil(8  P)  TDRX
+NOTE 1:TSSB is the periodicity of SSB in the set . TDRX is the DRX cycle length.NOTE 2:BFD-RS SSB Es/Iot is the averaged BFD-RS SSB Es/Iot over the most recent previous evaluation period.q0,,

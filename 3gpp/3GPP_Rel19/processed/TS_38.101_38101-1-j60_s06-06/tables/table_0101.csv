@@ -1,0 +1,13 @@
+NR CA Configuration,Class 1.5 (dBm),Tolerance (dB),Class 2 (dBm),Tolerance (dB),Class 3 (dBm),Tolerance (dB),Class 5 (dBm),Tolerance (dB)
+CA_n3B,,,,,23,+2/-2,,
+CA_n5B,,,,,23,+2/-2,,
+CA_n7B,,,,,23,+2/-2,,
+CA_n40B,,,26,+2/-3,23,+2/-2,,
+CA_n41B,,,26,+2/-3,23,+2/-2,,
+CA_n41C,295,+2/-3,26,+2/-3,23,+2/-2,,
+CA_n48B,,,,,23,+2/-3,,
+CA_n77C,295,+2/-3,26,+2/-3,23,+2/-3,,
+CA_n78C,295,+2/-3,26,+2/-3,23,+2/-3,,
+CA_n79C,295,+2/-3,26,+2/-3,23,+2/-3,,
+CA_n104C,295,+2/-3,26,+2/-3,23,+2/-3,,
+NOTE 1:An uplink CA configuration in which the band has NOTE 3 in Table 6.2.1-1 is allowed to reduce the lower tolerance limit by 1.5 dB when the transmission bandwidths of the band are confined within FUL_low and FUL_low + 4 MHz or FUL_high - 4 MHz and FUL_high.NOTE 2:PPowerClass is the maximum UE power specified without taking into account the tolerance.NOTE 3:For intra-band contiguous carrier aggregation the maximum power requirement shall apply to the total transmitted power over all component carriers (per UE).NOTE 4:Power class 3 is the default power class unless otherwise stated.NOTE 5:Applies to UE indicating TxD supported,,,,,,,,

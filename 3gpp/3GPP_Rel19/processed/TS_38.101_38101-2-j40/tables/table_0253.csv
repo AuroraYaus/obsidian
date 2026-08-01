@@ -1,0 +1,13 @@
+Parameter,,Value,,,
+,,SCS 60 kHz (µ=2),SCS 120 kHz (µ=3)),SCS 480 kHz (µ=5),SCS 960 kHz (µ=6)
+TDD Slot Configuration pattern (Note 1),,DDDSU,DDDSU,DDDSU,DDDSU
+Special Slot Configuration (Note 2),,S=4D+6G+4U,S=10D+2G+2U,S=10D+2G+2U,S=10D+2G+2U
+referenceSubcarrierSpacing,,60 kHz,120 kHz,480 kHz,960 kHz
+UL-DL configuration,dl-UL-TransmissionPeriodicity,1.25 ms,0.625 ms,0.3125 ms,0.15625 ms
+,nrofDownlinkSlots,3,3,3,3
+,nrofDownlinkSymbols,4,10,10,10
+,nrofUplinkSlot,1,1,1,1
+,nrofUplinkSymbols,4,2,2,2
+Number of HARQ Processes,,8,8,8,8
+The number of slots between PDSCH and corresponding HARQ-ACK information (Note 3),,"K1 = 4 if mod(i,5) = 0K1 =3 if mod(i,5) = 1K1 =7 if mod(i,5) = 2where i is slot index per frame; i = {0,…,39}","K1 = 4 if mod(i,5) = 0K1 =3 if mod(i,5) = 1K1 =7 if mod(i,5) = 2where i is slot index per frame; i = {0,…,79}","K1 = 4 if mod(i,5) = 0K1 =3 if mod(i,5) = 1K1 =7 if mod(i,5) = 2where i is slot index per frame; i = {0,…,319}","K1 = 4 if mod(i,5) = 0K1 =3 if mod(i,5) = 1K1 =7 if mod(i,5) = 2where i is slot index per frame; i = {0,…,639}"
+"NOTE 1:D denotes a slot with all DL symbols; S denotes a slot with a mix of DL, UL and guard symbols; U denotes a slot with all UL symbols. The field is for information.NOTE 2:D, G, U denote DL, guard and UL symbols, respectively. The field is for information.NOTE 3:i is the slot index per frame.",,,,,

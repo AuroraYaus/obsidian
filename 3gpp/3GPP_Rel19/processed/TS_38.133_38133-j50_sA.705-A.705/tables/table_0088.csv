@@ -1,0 +1,19 @@
+Parameter,Unit,Value,Comment
+RF Channel Number,,"1,2","Two NR radio channels are used for this test. RF channel number 1 is in band 1 and RF channel number 2 is in band 2, where bands 1 and 2 are inter-band CA operating bands in FR2 as specified in Table 5.2A.2-1 in TS 38.101-2 [19]."
+Active PCell,,Cell 1,Primary cell on NR RF channel number 1.
+Configured deactivated PUCCH SCell,,Cell 2,Configured deactivated secondary cell on NR RF channel number 2.
+Configured deactivated SCell,,Cell 3,Configured deactivated secondary cell on NR RF channel number 2.
+CP length,,Normal,
+DRX,,OFF,Continuous monitoring of primary cell
+CQI/PMI periodicity and offset configuration index,,0,CQI reporting for SCell every second subframe
+Cell-individual offset for cells on NR channel number,dB,0,Individual offset for cells on primary component carrier.
+SCell measurement cycle (measCycleSCell),ms,160,
+Cell 2 and Cell 3 timing offset to cell1,s,≤8,A random value from 0s to 8s
+T1,s,6,During this time the PUCCH SCell shall be known and the DL SCell configured and detected.
+T2,s,2,During this time the UE shall activate the SCell.
+T3,s,1,During this time the UE shall deactivate the SCell.
+T4,s,6,During this time the PUCCH SCell shall be known and the DL SCell configured and detected.
+T5,s,2,During this time the UE shall activate the PUCCH SCell and DL SCell.
+T6,s,1,During this time the UE shall deactivate the PUCCH SCell and DL SCell.
+THARQ,ms,k1NR slot length×,"k1 is a number of slots and is indicated by the PDSCH-to-HARQ-timing-indicator field in the DCI format, if present, or provided by dl-DataToUL-ACK, the value of k should be the minimum value defined in TS 38.213 [3] depends on UE’s capability"
+TCSI_Reporting,ms,2,the delay uncertainty in acquiring the first available CSI reporting resources as specified in TS 38.331 [2]

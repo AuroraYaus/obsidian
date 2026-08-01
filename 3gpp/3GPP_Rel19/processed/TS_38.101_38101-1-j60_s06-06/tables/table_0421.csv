@@ -1,0 +1,17 @@
+NR CA combination,Spurious emission,,,,,,
+,Protected Band,Frequency range (MHz),,,Maximum Level (dBm),MBW (MHz),NOTE
+CA_n26,"E-UTRA Band 1, 2, 3, 4, 5, 7, 11, 12, 13, 14, 17, 18,19, 21, 24, 25, 29, 30, 31, 34, 39, 40, 42, 43, 48, 50, 51, 65, 66, 70, 71, 73,74, 85, 103",FDL_low,-,FDL_high,-50,1,
+,"E-UTRA Band 41, 53, 54NR Band n77, n78, n79",FDL_low,-,FDL_high,-50,1,2
+,E-UTRA Band 26,FDL_low,-,FDL_high,-50,1,5
+,Frequency range,703,-,7993,-50,1,
+,Frequency range,7993,-,803,-40,1,5
+,Frequency range,945,-,960,-50,1,
+CA_n41,"E-UTRA Band 1, 2, 3, 4, 5, 8, 10, 12, 13, 14, 17, 24, 25, 26, 27, 28, 29, 30, 34, 39, 42, 44, 45, 48, 50, 51, 52, 54, 65, 66, 70, 71, 73, 74, 85, 103NR Band n77, n78, n100",FDL_low,-,FDL_high,-50,1,
+,NR Band n79,FDL_low,-,FDL_high,-50,1,"1, 2"
+,E-UTRA Band 40,FDL_low,-,FDL_high,-40,1,
+,"E-UTRA Band 9, 11, 18, 19, 21",FDL_low,-,FDL_high,-50,1,2
+CA_n77,"E-UTRA Band 1, 3, 5, 7, 8, 11, 18, 19, 20, 21, 26, 28, 34, 39, 40, 41, 54, 65NR Band n100, n101",FDL_low,-,FDL_high,-50,1,
+,,,,,,,
+CA_n78,"E-UTRA Band 1, 3, 5, 7, 8, 11, 18, 19, 20, 21, 26, 28, 34, 39, 40, 41, 65, n101",FDL_low,-,FDL_high,-50,1,
+,,,,,,,
+"NOTE 1:As exceptions, measurements with a level up to the applicable requirements defined in Table 6.5.3.1-2 are permitted for each assigned NR carrier used in the measurement due to 2nd, 3rd, 4th or 5th harmonic spurious emissions. Due to spreading of the harmonic emission the exception is also allowed for the first 1 MHz frequency range immediately outside the harmonic emission on both sides of the harmonic emission. This results in an overall exception interval centred at the harmonic emission of (2 MHz + N x LCRB x RBsize kHz), where N is 2, 3, 4, 5 for the 2nd, 3rd, 4th or 5th harmonic respectively. The exception is allowed if the measurement bandwidth (MBW) totally or partially overlaps the overall exception interval.NOTE 2:This requirement applies when the NR carrier is confined within 2545 – 2575 MHz or 2595 – 2645 MHz and the channel bandwidth is 10 or 20 MHzNOTE 3:This value is changed to 794MHz if channel bandwidth of one UL carrier is 20 MHz.NOTE 4:Void.NOTE 5:These requirements also apply for the frequency ranges that are less than FOOB (MHz) in Table 6.5.3.1-1 from the edge of the channel bandwidth.",,,,,,,

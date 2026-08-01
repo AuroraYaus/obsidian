@@ -1,0 +1,26 @@
+Parameter,Unit,Test1,,Test2,
+,,nCell 1,nCell 2,nCell 1,nCell 2
+BWchannel,kHz,180,180,180,180
+PRB location within eCell,,eCell 1 BWchannel 5MHz: 17eCell 1 BWchannel 10MHz: 30,eCell 2 BWchannel 5MHz: 22eCell 2 BWchannel 10MHz: 35,eCell 1 BWchannel 5MHz: 17eCell 1 BWchannel 10MHz: 30,eCell 2 BWchannel 5MHz: 22eCell 2 BWchannel 10MHz: 35
+NPBCH_RA,dB,0,0,0,0
+NPBCH_RB,,,,,
+NPSS_RA,,,,,
+NSSS_RA,,,,,
+NPDCCH_RA,,,,,
+NPDCCH_RB,,,,,
+NPDSCH_RA,,,,,
+NPDSCH_RB,,,,,
+OCNG_RA Note 1,,,,,
+OCNG_RB Note 1,,,,,
+NPRS_RA,dB,-13,-3,0,0
+Note 2,dBm/15 kHz,-110,-110,-98,-98
+NPRS,dB,-15,-15,-5,-13
+NPRS  Note 3,dB,-15,-15,-5.21,-14.19
+Io Note 3,dBm/180 kHz,-101.20,-111.20,-87.08,-87.08
+NPRP Note 3,dBm/15 kHz,-125,-125,-103,-111
+NRSRP Note 3,dBm/ 15 kHz,-112,-122,-103,-111
+Note 3,dB,-2,-12,-5,-13
+Propagation Condition,,AWGN,AWGN,AWGN,AWGN
+Antenna Configuration,,1x1,1x1,1x1,1x1
+Timing offset to nCell 1,us,N/A,3,N/A,3
+"Note 1: OCNG shall be used such that active cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols other than those in the subframes with transmitted NPRS.Note 2: Interference from other cells and noise sources not specified in the test are assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 3: If NPRS_RA is not “N/A”, , NPRS , Io, NRSRP and NPRP levels have been derived from other parameters and are given for information purpose. If NPRS_RA is “N/A”, Io and NRSRP levels have been derived from other parameters and are given for information purpose. These are not settable test parameters. Interference conditions shall be applied to all PRS symbols of DL positioning subframes.",,,,,

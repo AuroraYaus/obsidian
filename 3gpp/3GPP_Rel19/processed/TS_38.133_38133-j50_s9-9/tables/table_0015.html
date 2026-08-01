@@ -1,0 +1,65 @@
+<table>
+  <tr>
+    <td>Scenario</td>
+    <td>CSSFoutside_gap,i for FR1 PCC</td>
+    <td>CSSFoutside_gap,i for FR1 SCC</td>
+    <td>CSSFoutside_gap,i for FR2 PCC</td>
+    <td>CSSFoutside_gap,i for FR2 SCC where neighbour cell measurement is required</td>
+    <td>CSSF outside_gap,i for FR2 SCC where neighbour cell measurement is not required</td>
+    <td>CSSFoutside_gap,i for inter-frequency MO with no measurement gap</td>
+    <td>CSSFoutside_gap,i for E-UTRA inter-RAT MO with no measurement gap</td>
+  </tr>
+  <tr>
+    <td>FR1 only CA Note12</td>
+    <td>1+NPCC_CSIRS + NPCC_CCA_RSSI/CO</td>
+    <td>Ceil(0.5×(NSCC_SSB +2x NSCC_CSIRS+ NSCC_CCA_RSSI/CO)) +Y+Z</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Ceil(0.5×(NSCC_SSB +2x NSCC_CSIRS+ NSCC_CCA_RSSI/CO)) +Y+Z</td>
+    <td>(NSCC_SSB +Y+Z+2x NSCC_CSIRS</td>
+  </tr>
+  <tr>
+    <td>FR2 only intra band CA</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>1+NPCC_CSIRS</td>
+    <td>N/A</td>
+    <td>NSCC_SSB +Y+Z+2x NSCC_CSIRS</td>
+    <td>NSCC_SSB +Y+Z+2x NSCC_CSIRS</td>
+    <td>NSCC_SSB +Y+Z+2x NSCC_CSIRS</td>
+  </tr>
+  <tr>
+    <td>FR2 only inter band CA</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>1+NPCC_CSIRS</td>
+    <td>2*(1+ NSCC_CSIRS_FR2_NCM) Note 3,5</td>
+    <td>2×( NSCC_SSB +Y+Z+2x NSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM)</td>
+    <td>2×( NSCC_SSB +Y+Z+2x NSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM)</td>
+    <td>2×( NSCC_SSB +Y+Z+2x NSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM)</td>
+  </tr>
+  <tr>
+    <td>FR1 +FR2 CA (FR1 PCell) Note 1, Note 12</td>
+    <td>1+NPCC_CSIRS</td>
+    <td>NSCC_SSB+Y+Z +2* NSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM</td>
+    <td>N/A</td>
+    <td>1+ NSCC_CSIRS_FR2_NCM Note 3,5</td>
+    <td>NSCC_SSB+Y+Z +2x NSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM</td>
+    <td>NSCC_SSB+2*(Y+Z)+2x NSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM</td>
+    <td>2 x ( NSCC_SSB +Y+Z+2x NSCC_CSIRS -1-NSCC_CSIRS_ FR2_NCM)</td>
+  </tr>
+  <tr>
+    <td>FR1 +FR2 CA (FR2 PCell) Note 1</td>
+    <td>N/A</td>
+    <td>NSCC_SSB +Y+Z+2x NSCC_CSIRS</td>
+    <td>1+NPCC_CSIRS</td>
+    <td>N/A</td>
+    <td>NSCC_SSB +Y+Z+2x NSCC_CSIRS</td>
+    <td>NSCC_SSB +Y+Z+2x NSCC_CSIRS</td>
+    <td>NSCC_SSB +Y+Z+2x NSCC_CSIRS</td>
+  </tr>
+  <tr>
+    <td colspan="8">NOTE 1:Only one FR1 operating band and one FR2 operating band are included for FR1+FR2 inter-band CA.NOTE 2:Selection of FR2 SCC where neighbour cell measurement is required follows clause 9.2.3.2.NOTE 3:CSSFoutside_gap,i =1 if  only one SCell is configured and no inter-frequency MO without gap and only SSB based L3 measurement is configured on SCC; CSSFoutside_gap,i =2 if only one SCell is configured and no inter-frequency MO without gap and either both SSB and CSI-RS based L3 configured or only CSI-RS based L3 measurement is configured on SCC.NOTE 4:Y is the number of configured inter-frequency MOs without MG that are being measured outside of MG; otherwise, it is 0.NOTE 5:Only two NR FR2 operating bands are included for FR2 inter-band CA.NOTE 6:NPCC_CSIRS=1 if PCC is with either both SSB and CSI-RS based L3 configured or only CSI-RS based L3 measurement configured; otherwise, NPCC_CSIRS =0.NOTE 7:NSCC_CSIRS=Number of configured SCell(s) with either both SSB and CSI-RS based L3 measurement configured or only CSI-RS based L3 measurement configuredNOTE 8:NSCC_CSIRS_FR2_NCM=1 if FR2 SCC, where neighbour cell measurement is required, is with either both SSB and CSI-RS configured or only CSI-RS measurement configured; otherwise, NSCC_CSIRS_FR2_NCM=0.NOTE 9:NSCC_SSB=Number of configured SCell(s) with only SSB based L3 measurement configured, which is measured without MG.NOTE 10:NPCC_CCA_RSSI/CO= 1 if PSCC is configured with RSSI/CO measurements without MG when RMTC and SMTC are overlapping; NSCC_CCA_RSSI/CO = Number of MOs for SCell(s) configured with RSSI/CO measurements without MG when RMTC and SMTC are overlapping.NOTE 11:Z is the number of configured E-UTRA inter-RAT MOs without MG that are being measured outside of MG; otherwise, it is 0.NOTE 12: For UE supporting fr1-CA-NR-DC-r19 or fr1-FR2-CA-r19 indicated via threeCarrierMeasWithoutGap-r19 in SA operation mode, the Enhanced CSSFoutside_gap,i scaling factor does not apply for the E-UTRA inter-RAT MOs without MG that are being measured outside of MG.</td>
+  </tr>
+</table>

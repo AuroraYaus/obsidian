@@ -1,0 +1,6 @@
+DRX cycle,TSSB_measurement_period_intra
+No DRX,"max(200 ms, 5 x KNCSG x max(VIRP, SMTC period)) Note 1 x CSSFintra"
+DRX cycle≤ 160 ms,"max(200 ms, ceil(M2Note 2 x 5 x KNCSG) x max(VIRP, SMTC period,DRX cycle)) x CSSFintra"
+160 ms < DRX cycle≤ 320 ms,"max(200 ms, ceil(M2Note 2 x 4 x KNCSG) x max(VIRP, DRX cycle)) x CSSFintra"
+DRX cycle>320 ms,"Y Note 3 x KNCSG x max(VIRP, DRX cycle) x CSSFintra"
+"NOTE 1:If different SMTC periodicities are configured for different cells, the SMTC period in the requirement is the one used by the cell being identifiedNOTE 2:M2 = 1.5 if SMTC periodicity > 40 ms, otherwise M2=1NOTE 3:Y=3 when SMTC ≤ 40ms, Y=5 when SMTC > 40msNOTE 4:When highSpeedMeasFlag-r16 is configured, the requirements apply only to UE supporting either measurementEnhancement-r16 or [intraRAT-MeasurementEnhancement-r16] on measurements of the primary component carrier and do not apply to measurements of a secondary component carrier with active SCell.",

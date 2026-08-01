@@ -1,0 +1,146 @@
+<table>
+  <tr>
+    <td>CA_42C: CA_NS_08</td>
+    <td>RBstart</td>
+    <td>Condition</td>
+    <td>RBend</td>
+    <td>LCRB [RBs]</td>
+    <td>A-MPR for QPSK, 16 QAM, 64 QAM and 256 QAM [dB]</td>
+  </tr>
+  <tr>
+    <td rowspan="6">100RB / 100RB</td>
+    <td rowspan="2">≤ 21</td>
+    <td rowspan="2">Or</td>
+    <td rowspan="2">≥ 178</td>
+    <td>≤ 25</td>
+    <td>≤ 12</td>
+  </tr>
+  <tr>
+    <td>&gt; 25 and ≤ 80</td>
+    <td>≤ 6</td>
+  </tr>
+  <tr>
+    <td rowspan="2">≥ 0</td>
+    <td rowspan="2">N/A</td>
+    <td rowspan="2">N/A</td>
+    <td>&gt; 80 and ≤ 172</td>
+    <td>≤ 8</td>
+  </tr>
+  <tr>
+    <td>&gt; 172</td>
+    <td>≤ 9</td>
+  </tr>
+  <tr>
+    <td>&gt; 21 and ≤ 58</td>
+    <td>Or</td>
+    <td>≥ 141 and &lt; 178</td>
+    <td>&lt; 48</td>
+    <td>≤ 3</td>
+  </tr>
+  <tr>
+    <td>&gt; 21</td>
+    <td>And</td>
+    <td>&lt; 178</td>
+    <td>≥ 48 and ≤ 80</td>
+    <td>≤ 4</td>
+  </tr>
+  <tr>
+    <td rowspan="7">100RB / 75RBAnd75RB / 100RB</td>
+    <td rowspan="2">≤ 12</td>
+    <td rowspan="2">Or</td>
+    <td rowspan="2">≥ 162</td>
+    <td>≤ 25</td>
+    <td>≤ 12</td>
+  </tr>
+  <tr>
+    <td>&gt; 25 and ≤ 75</td>
+    <td>≤ 6</td>
+  </tr>
+  <tr>
+    <td rowspan="2">≥ 0</td>
+    <td rowspan="2">N/A</td>
+    <td rowspan="2">N/A</td>
+    <td>&gt; 75 and &lt;172</td>
+    <td>≤ 8</td>
+  </tr>
+  <tr>
+    <td>≥172</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>&gt; 12 and ≤ 49</td>
+    <td>Or</td>
+    <td>≥ 125 and &lt; 162</td>
+    <td>&lt; 54</td>
+    <td>≤ 3</td>
+  </tr>
+  <tr>
+    <td>&gt; 12</td>
+    <td>And</td>
+    <td>&lt; 162</td>
+    <td>≥ 54 and  ≤75</td>
+    <td>≤ 5</td>
+  </tr>
+  <tr>
+    <td>&gt; 49</td>
+    <td>And</td>
+    <td>&lt; 125</td>
+    <td>≥ 36 and &lt; 54</td>
+    <td>≤ 2</td>
+  </tr>
+  <tr>
+    <td rowspan="5">100RB / 50RBAnd50RB / 100RB</td>
+    <td rowspan="2">≤ 5</td>
+    <td rowspan="2">Or</td>
+    <td rowspan="2">≥ 144</td>
+    <td>≤ 16</td>
+    <td>≤ 12</td>
+  </tr>
+  <tr>
+    <td>&gt; 16 and ≤ 61</td>
+    <td>≤ 6</td>
+  </tr>
+  <tr>
+    <td>≥ 0</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>&gt; 61</td>
+    <td>≤ 8</td>
+  </tr>
+  <tr>
+    <td>&gt; 5</td>
+    <td>And</td>
+    <td>&lt; 144</td>
+    <td>≥ 36 and ≤ 61</td>
+    <td>≤ 5</td>
+  </tr>
+  <tr>
+    <td>&gt; 5 and ≤ 41</td>
+    <td>Or</td>
+    <td>≥ 108 and &lt; 144</td>
+    <td>&lt; 36</td>
+    <td>≤ 3</td>
+  </tr>
+  <tr>
+    <td rowspan="3">100RB / 25RBAnd25RB / 100RB</td>
+    <td rowspan="2">≤ 31</td>
+    <td rowspan="2">Or</td>
+    <td rowspan="2">≥ 92</td>
+    <td>≤ 34</td>
+    <td>≤ 4</td>
+  </tr>
+  <tr>
+    <td>&gt; 34 and ≤ 44</td>
+    <td>≤ 5</td>
+  </tr>
+  <tr>
+    <td>≥ 0</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>&gt; 44</td>
+    <td>≤ 8</td>
+  </tr>
+  <tr>
+    <td colspan="6">NOTE 1:RBstart indicates the lowest RB index of transmitted resource blocksNOTE 2:LCRB is the length of a contiguous resource block allocationNOTE 3:RBend indicates the highest RB index of transmitted resource blocksNOTE 4:If condition is “and” both RBstart and RBend constraints need to be met. If condition is “or” either RBstart or RBend constraints need to be metNOTE 5:For intra-subframe frequency hopping which intersects regions, notes 1, 2, 3 and 4 apply on a per slot basis. For intra-slot or intra-subslot frequency hopping which intersects regions, notes 1,2,3 and 4 apply on a per Tno_hopping basis.NOTE 6:For intra-subframe frequency hopping which intersects regions, the larger A-MPR value may be applied for both slots in the subframe. For intra-slot frequency hopping which intersects regions, the larger A-MPR value may be applied for the slot. For intra-subslot frequency hopping which intersects regions, the larger A-MPR value may be applied for the subslot.</td>
+  </tr>
+</table>

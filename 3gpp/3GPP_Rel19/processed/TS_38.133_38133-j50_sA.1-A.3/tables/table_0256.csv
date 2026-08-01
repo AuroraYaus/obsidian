@@ -1,0 +1,10 @@
+Parameter,SSC.1
+Interval between adjacent epoch time,10.24 s
+ntn-UlSyncValidityDuration,900 s
+cellSpecificKoffset,258 slots
+ta-Common,0
+ta-CommonDrift,0
+ta-CommonDriftVariant,0
+ntn-PolarizationDL,linear
+ntn-PolarizationUL,linear
+ephemerisInfo,Detailed ephemeris information is provided in TS 38.508-1 [38].

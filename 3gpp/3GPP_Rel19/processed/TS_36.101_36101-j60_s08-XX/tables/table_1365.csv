@@ -1,0 +1,22 @@
+Parameter,Unit,Cell 1,Cell 2
+Bandwidth,MHz,10 MHz,
+Transmission mode,,1 (port 0),
+Uplink downlink configuration,,2,
+Special subframe configuration,,4,
+Cyclic Prefix,,Normal,Normal
+Cell ID,,0,1
+SINR (Note 8),dB,-4,N/A
+,dB[mW/15kHz],-98,-98
+Propagation channel,,EPA5,Static (Note 7)
+Correlation and antenna configuration,,Low (1 x 4),(1 x 4)
+DIP (Note 4),dB,N/A,-0.41
+Reference measurement channel,,Note 2,R.2A TDD
+Reporting mode,,PUCCH 1-0,N/A
+Reporting periodicity,ms,Npd = 5,N/A
+CQI delay,ms,10 or 11,N/A
+Physical channel for CQI reporting,,PUSCH (Note 3),N/A
+PUCCH Report Type,,4,N/A
+cqi-pmi-ConfigurationIndex,,3,N/A
+Max number of HARQ transmissions,,1,N/A
+ACK/NACK feedback mode,,Multiplexing,N/A
+"Note 1:If the UE reports in an available uplink reporting instance at subframe SF#n based on CQI estimation at a downlink SF not later than SF#(n-4), this reported wideband CQI cannot be applied at the eNB downlink before SF#(n+4)Note 2:Reference measurement channel RC.1 TDD according to Table A.4-1 for Category 2-8 with one sided dynamic OCNG Pattern OP.1 TDD as described in Annex A.5.2.1 and RC.4 TDD according to Table A.4-1 for Category 1 with one/two sided dynamic OCNG Pattern OP.1/2 TDD as described in Annex A.5.2.1/2.Note 3:To avoid collisions between CQI reports and HARQ-ACK it is necessary to report both on PUSCH instead of PUCCH. PDCCH DCI format 0 shall be transmitted in downlink SF#3 and #8 to allow periodic CQI to multiplex with the HARQ-ACK on PUSCH in uplink subframe SF#7 and #2.Note 4:The respective received power spectral density of each interfering cell relative to  is defined by its associated DIP value as specified in clause B.5.1.Note 5:Two cells are considered in which Cell 1 is the serving cell and Cell 2 is the interfering cell. The number of the CRS ports in both cells is the same. Intefering cell is fully loaded.Note 6: Both cells are time-synchronous.Note 7:Static channel is used for the interference model. In case for white Gaussian noise model Cell 2 is not present.Note 8:SINR corresponds to  of Cell 1 as defined in clause 8.1.1.",,,

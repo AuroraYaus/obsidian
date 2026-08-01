@@ -1,0 +1,4 @@
+Configuration,Description of a cell with CCA,Description of a cell without CCA
+1,"NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode","LTE 10 MHz bandwidth, TDD duplex mode"
+2,"NR 30 kHz SSB SCS, 40 MHz bandwidth, TDD duplex mode","LTE 10 MHz bandwidth, FDD duplex mode"
+NOTE 1:The UE is only required to be tested in one of the supported test configurations.NOTE 2:The UE supporting SA operation only on NR band(s) with shared spectrum access is required to be tested.,,

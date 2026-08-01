@@ -1,0 +1,116 @@
+<table>
+  <tr>
+    <td colspan="2">Parameter</td>
+    <td>Unit</td>
+    <td>Value</td>
+  </tr>
+  <tr>
+    <td colspan="2">Bandwidth</td>
+    <td>MHz</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td colspan="2">PDSCH transmission mode</td>
+    <td></td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td rowspan="4">Downlink power allocation</td>
+    <td></td>
+    <td>dB</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>dB</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td colspan="2">Propagation condition and antenna configuration</td>
+    <td></td>
+    <td>Clause B.1 (2 x 2)</td>
+  </tr>
+  <tr>
+    <td colspan="2">SNR</td>
+    <td>dB</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td>-78</td>
+  </tr>
+  <tr>
+    <td colspan="2"></td>
+    <td>dB[mW/15kHz]</td>
+    <td>-98</td>
+  </tr>
+  <tr>
+    <td colspan="2">CRS reference signals</td>
+    <td></td>
+    <td>Antenna ports 0</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI reference signals</td>
+    <td></td>
+    <td>Antenna ports 15, 16</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI-RS periodicity and subframe offsetTCSI-RS / ∆CSI-RS</td>
+    <td></td>
+    <td>5/ 1</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI-RS reference signal configuration</td>
+    <td></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td colspan="2">CodeBookSubsetRestriction bitmap</td>
+    <td></td>
+    <td>000001</td>
+  </tr>
+  <tr>
+    <td colspan="2">Number of control OFDM symbols</td>
+    <td></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td colspan="2">Max number of HARQ transmissions</td>
+    <td></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td colspan="2">Reporting mode</td>
+    <td></td>
+    <td>PUSCH 3-1</td>
+  </tr>
+  <tr>
+    <td colspan="2">CSI request field</td>
+    <td></td>
+    <td>‘10’</td>
+  </tr>
+  <tr>
+    <td colspan="2">trigger1 (Note 2)</td>
+    <td></td>
+    <td>01000000</td>
+  </tr>
+  <tr>
+    <td colspan="2">trigger2  (Note 2)</td>
+    <td></td>
+    <td>00000000</td>
+  </tr>
+  <tr>
+    <td colspan="4">Note 1:PCell is used for HARQ ACK/NACK feedback and aperiodic CSI triggering/reporting. One sided dynamic OCNG Pattern OP.1 FDD as described in A.5.1.1 is transmitted on PCell on all RBs, but PDSCH for user data is not transmitted on PCell.Note 2:trigger1 and trigger2 are defined as TS 36.331 for aperiodicCSI-Trigger. They Indicate for which serving cell(s) the aperiodic CSI report is triggered when one or more SCells are configured. PDCCH DCI format 0 with a trigger for aperiodic CQI is transmitted periodically in subframe 1 and subframe 6 with 5ms periodicity.</td>
+  </tr>
+</table>

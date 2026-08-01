@@ -1,0 +1,7 @@
+Preamble format,Cyclic prefix length1,Nominal FFT size2,EVM window length W in FFT samples,Ratio of W to CP*
+0,3168,24576,3072,96.7%
+1,21024,24576,20928,99.5%
+2,6240,49152,6144,98.5%
+3,21024,49152,20928,99.5%
+4,448,4096,432,96.4%
+"Note 1: The unit is number of samples, sampling rate of 30.72MHz is assumedNote 2: The use of other FFT sizes is possible as long as appropriate scaling of the window length is appliedNote 3: These percentages are informative",,,,

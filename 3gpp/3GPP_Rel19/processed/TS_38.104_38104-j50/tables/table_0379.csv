@@ -1,0 +1,5 @@
+Parameter,Value
+Wanted signal,NR single carrier
+Interfering signal type,NR signal of 40 MHz channel bandwidth
+Interfering signal power level,"min(46 dBm, Prated,t,TRP)"
+Interfering signal centre frequency offset from the lower (upper) edge of the wanted signal,± 20 MHz± 60 MHz± 100 MHz

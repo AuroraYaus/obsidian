@@ -1,0 +1,4 @@
+Parameter,Unit,Value,Comment
+DRX,,DRX.8,DRX cycle = 320 ms and TAT = Infinity
+T1,ms,100,"During this time the PSCell shall be known and the SCell configured, but not detected."
+T2,s,[1],During this time the UE shall activate the SCell.

@@ -1,0 +1,15 @@
+Parameter,,Unit,Value,Comment
+SCS,,kHz,30,
+Initial condition,Active synchronization source,,GNSS,DUT transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 0 and in-coverage set as TRUE in MIB-SL.
+T2 end condition,Active synchronization source,,Sync Ref UE 1,DUT transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 336+59 and in-coverage set as FALSE in MIB-SL.
+Final condition,Active synchronization source,,Sync Ref UE 2,UE transmits for V2X Sidelink Communication and S-SSB with SLSS ID = 30 and in-coverage set as FALSE in MIB-SL.
+Active cell,,,None,
+Active SyncRef UEs,,,SyncRef UE 1SyncRef UE 2,Transmitting S-SSB on RF channel number 1
+Timing offset between SyncRef UE 1 and SyncRef UE 2,,ms,3,Asynchronous
+"Frequency offset of SyncRef UE 1,2",,ppm,0,
+V2X sidelink Communication preconfiguration,,,As specified in table A.3.21.2-2,IE values unless specified otherwise in this test.
+syncPriority,,,gnb,
+syncTxThreshOoC,,,13 (+infinity),
+T1,,s,24,
+T2,,s,16,
+T3,,s,16,

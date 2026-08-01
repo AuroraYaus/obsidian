@@ -1,0 +1,40 @@
+Parameter,,Unit,Test
+,,,Cell 1
+E-UTRA RF Channel Number,,,1
+BWchannel,,MHz,10
+Special subframe configurationNote1,,,6
+Uplink/downlink configurationNote1,,,1
+Measurement bandwidth,,,22—27
+PDSCH Reference measurement channel defined in A.3.1.1.2,,,R.0 TDD
+PDSCH allocation,,,13—36
+PDCCH/PCFICH/PHICH Reference measurement channel defined in A.3.1.2.2,,,R.6 TDD
+OCNG Patterns defined in A.3.2.2.1 (OP.1 TDD),,,OP.1 TDD
+PBCH_RA,,dB,0
+PBCH_RB,,,
+PSS_RA,,,
+SSS_RA,,,
+PCFICH_RB,,,
+PHICH_RA,,,
+PHICH_RB,,,
+PDCCH_RA,,,
+PDCCH_RB,,,
+PDSCH_RA,,,
+PDSCH_RB,,,
+OCNG_RANote2,,,
+OCNG_RBNote2,,,
+Note3,Bands TDD_A,dBm/15 kHz,-122
+,Bands TDD_C,,-121
+,Bands TDD_E,,-120
+,,dB,-4
+RSRPNote4,Bands TDD_A,dBm/15 kHz,-126
+,Bands TDD_C,,-125
+,Bands TDD_E,,-124
+RSRQNote4,Bands TDD_A,dB,-16.25
+,Bands TDD_C,,
+,Bands TDD_E,,
+IoNote4,Bands TDD_A,dBm/9 MHz,-92.76
+,Bands TDD_C,,-91.76
+,Bands TDD_E,,-90.76
+,,dB,-4
+Propagation condition,,-,AWGN
+"Note 1:For special subframe and uplink-downlink configurations see Tables 4.2-1 and 4.2-2 in TS 36.211.Note 2:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.Note 3:Interference from other cells and noise sources not specified in the test is assumed to be constant over subcarriers and time and shall be modelled as AWGN of appropriate power for  to be fulfilled.Note 4:RSRP, RSRQ and Io levels have been derived from other parameters for information purposes. They are not settable parameters themselves.Note 5:RSRP minimum requirements are specified assuming independent interference and noise at each receiver antenna port.Note 6:E-UTRA operating band groups are as defined in Section 3.5.",,,

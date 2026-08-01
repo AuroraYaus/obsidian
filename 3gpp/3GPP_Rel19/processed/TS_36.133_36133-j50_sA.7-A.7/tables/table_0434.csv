@@ -1,0 +1,11 @@
+Parameter,Unit,Value,Comment
+E-UTRA RF Channel Number,,"1, 2, 3",Two radio channels are used for this test
+PCell,,Cell 1,Primary cell on RF channel number 1
+PSCell,,Cell 2,Primary Secondary cell on RF channel number 2
+Configured SCell,,Cell 3,Configured deactivated secondary cell on RF channel number 3
+CP length,,Normal,
+DRX,,OFF,Continuous monitoring of primary cell
+Filter coefficient,,0,L3 filtering is not used
+T1,s,5,
+T2,s,5,UE shall perform SRS switching during T2
+NOTE:This test verifies the RRM requirement which is independent of channel bandwidth and is performed according to the principle defined in section A.3.6.1.,,,

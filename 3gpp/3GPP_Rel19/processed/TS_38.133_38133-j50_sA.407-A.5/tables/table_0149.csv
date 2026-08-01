@@ -1,0 +1,31 @@
+Parameter,,Unit,Cell 2
+Frequency Range,,,FR2
+Duplex mode,"Config 1,2",,TDD
+TDD configuration,"Config 1,2",,TDDConf.3.1
+BWchannel,"Config 1,2",MHz,"100: NPRB,c = 66"
+Data PRBs allocated,"Config 1,2",,66
+Downlink initial BWP Configuration,"Config 1,2",,DLBWP.0.1
+Downlink dedicated BWP Configuration,"Config 1,2",,DLBWP.1.1
+Uplink initial BWP configuration,"Config 1,2",,ULBWP.0.1
+Uplink dedicated BWP configuration,"Config 1,2",,ULBWP.1.1
+TRS configuration,"Config 1,2",,TRS.2.1 TDD
+TCI state,"Config 1,2",,TCI.State.0
+PDSCH Reference measurement channel,"Config 1,2",,SR.3.1 TDD
+RMSI CORESET Reference Channel,"Config 1,2",,CR.3.1 TDD
+RMC CORESET Reference Channel,"Config 1,2",,CCR.3.1 TDD
+OCNG Patterns,,,OP.1
+SSB Configuration,,,SSB.3 FR2
+SMTC Configuration,"Config 1,2",,SMTC.1
+EPRE ratio of PSS to SSS,,dB,0
+EPRE ratio of PBCH DMRS to SSS,,,
+EPRE ratio of PBCH to PBCH DMRS,,,
+EPRE ratio of PDCCH DMRS to SSS,,,
+EPRE ratio of PDCCH to PDCCH DMRS,,,
+EPRE ratio of PDSCH DMRS to SSS,,,
+EPRE ratio of PDSCH to PDSCH,,,
+EPRE ratio of OCNG DMRS to SSS(Note 1),,,
+EPRE ratio of OCNG to OCNG DMRS (Note 1),,,
+Ês/Noc,,dB,17
+Propagation Condition,,,AWGN
+Time offset to Cell 1 Note 2,,s,3
+NOTE 1:OCNG shall be used such that both cells are fully allocated and a constant total transmitted power spectral density is achieved for all OFDM symbols.NOTE 2:Receive time difference of signals received between subframe timing boundary of E-UTRA PCell and slot timing boundary of PSCell including time alignment error between the two cells,,,

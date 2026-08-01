@@ -1,0 +1,7 @@
+Inter-band NE-DC configuration,"ΔTIB,c for NR band / E-UTRA band (dB)1",
+,Component band in order of bands in configuration2,
+DC_n28_34,0.3,0.3
+DC_n28_39,0.3,0.3
+DC_n40_42,0,0.5
+DC_n41_34,0.3,0.3
+"NOTE *:“-” denotes ΔTIB,c = 0.NOTE **:The component band order in the configuration should be listed by the order of NR band and E-UTRA band respectively.",,

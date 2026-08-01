@@ -1,0 +1,9 @@
+Case,Measurement filter centre frequency,"Condition on BS maximum aggregate EIRP / 10 MHz, PEIRP_10MHz(Note)","Maximum LevelPEIRP,N,MAX",Measurement Bandwidth
+A: for DTT frequencies where broadcasting is protected,"N*8 + 306 MHz,21 ≤ N ≤ 60",PEIRP_10MHz  59 dBm,0  dBm,8 MHz
+,"N*8 + 306 MHz,21 ≤ N ≤ 60",36  PEIRP_10MHz < 59 dBm,PEIRP_10MHz – 59 dBm,8 MHz
+,"N*8 + 306 MHz,21 ≤ N ≤ 60",PEIRP_10MHz < 36 dBm,-23 dBm,8 MHz
+B: for DTT frequencies where broadcasting is subject to an intermediate level of protection,"N*8 + 306 MHz,21 ≤ N ≤ 60",PEIRP_10MHz  59 dBm,10 dBm,8 MHz
+,"N*8 + 306 MHz,21 ≤ N ≤ 60",36  PEIRP_10MHz < 59 dBm,PEIRP_10MHz – 49 dBm,8 MHz
+,"N*8 + 306 MHz,21 ≤ N ≤ 60",PEIRP_10MHz < 36 dBm,-13 dBm,8 MHz
+C: for DTT frequencies where broadcasting is not protected,"N*8 + 306 MHz,21 ≤ N ≤ 60",N.A.,22 dBm,8 MHz
+NOTE:     PEIRP_10MHz (dBm) is defined by the expression PEIRP_10MHz  = P10MHz + Gant  + 10*log10(Nant ),,,,
