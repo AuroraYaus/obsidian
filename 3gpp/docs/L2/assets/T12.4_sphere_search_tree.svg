@@ -41,7 +41,7 @@
 <rect x="277" y="230" width="134" height="14" rx="3" ry="3" fill="#ffffff"/>
 <text x="344" y="240" text-anchor="middle" font-size="10" fill="#6b7280" class="lat">pruned: d1&gt;r²=1.8</text>
 
-<!-- 节点 C：s1=−1+j，d1=0.01，最优路径 -->
+<!-- 节点 C：s1=−1+j，d1=0.014，最优路径 -->
 <line x1="552" y1="193" x2="474" y2="309" stroke="#cbd5e1" stroke-width="1.5"/>
 <line x1="552" y1="193" x2="526" y2="309" stroke="#16a34a" stroke-width="2.5"/>
 <line x1="552" y1="193" x2="578" y2="309" stroke="#cbd5e1" stroke-width="1.5"/>
@@ -50,7 +50,7 @@
 <rect x="525" y="194" width="54" height="14" rx="3" ry="3" fill="#ffffff"/>
 <text x="552" y="204" text-anchor="middle" font-size="10" fill="#16a34a" class="lat">s1=−1+j</text>
 <rect x="530.5" y="212" width="43" height="14" rx="3" ry="3" fill="#ffffff"/>
-<text x="552" y="222" text-anchor="middle" font-size="10" fill="#16a34a" class="lat">d1=0.01</text>
+<text x="552" y="222" text-anchor="middle" font-size="10" fill="#16a34a" class="lat">d1=0.014</text>
 
 <!-- 节点 D：s1=−1−j，d1=1.64 -->
 <line x1="760" y1="193" x2="682" y2="309" stroke="#cbd5e1" stroke-width="1.5"/>
