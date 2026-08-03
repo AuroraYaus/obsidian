@@ -54,4 +54,5 @@ MMSE 像"戴降噪耳机调音量"：你想听清一个人的话（目标符号�
 - [[CSI_SINR]]
 - [[Soft_Demodulation_软解调]]
 - [[MIMO_多天线系统]]
+- [[T12.3_linear_detectors_mf_zf_mmse]]
 - 关系语义：信道估计提供 H → MMSE 均衡分离符号（输出 soft 符号 + CSI）→ 软解调算 LLR → 译码。MMSE 是接收链路的"分离器"，其归一化危险点是位宽设计的边界（衔接 T21.1）。

@@ -54,4 +54,5 @@ source_spec: "接收机实现（非协议算法）; 通信检测理论"
 - [[MMSE_均衡]]
 - [[MIMO_多天线系统]]
 - [[Soft_Demodulation_软解调]]
+- [[T12.4_sphere_detection_detector_selection]]
 - 关系语义：球面检测是 MMSE 的"最优替代"——同一输入（y、H），不同代价（复杂度 vs 性能）；检测器输出的软信息进入软解调/LLR。

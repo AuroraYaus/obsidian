@@ -58,4 +58,5 @@ source_spec: "TS 38.211 Rel-19 §7.4.1.1（DMRS）; 接收机实现（非协议�
 - [[TDL_信道模型]]
 - [[MMSE_均衡]]
 - [[CSI_SINR]]
+- [[T12.5_channel_estimation_llr_reliability]]
 - 关系语义：信道估计（H 从哪来）→ 均衡/检测（怎么用 H）→ 软解调（LLR 怎么算）——接收链路的因果链；估计误差是译码器输入不可靠的根源之一（衔接 T2.10）。

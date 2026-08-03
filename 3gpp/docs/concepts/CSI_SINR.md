@@ -55,4 +55,5 @@ CSI 像"老师的批改笔"：信道质量好（SINR 高）的符号，老师把
 - [[MMSE_均衡]]
 - [[Channel_Estimation_信道估计]]
 - [[LLR_对数似然比]]
+- [[T12.5_channel_estimation_llr_reliability]]
 - 关系语义：信道估计 → post-eq SINR（CSI）→ LLR 加权 → 裁剪——CSI 是"信道质量 → 软信息可靠度"的翻译器。

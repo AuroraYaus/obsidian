@@ -55,4 +55,5 @@ source_spec: "接收机实现（非协议算法）; MIMO01 §3"
 - [[MMSE_均衡]]
 - [[Detector_Comparison_检测器对比]]
 - [[Fading_Channel_衰落信道]]
+- [[T12.2_diversity_combining_mrc]]
 - 关系语义：分集是 MIMO 接收的第一重收益（抗衰落），MRC 是合并工具，MMSE 是它的正则化推广。

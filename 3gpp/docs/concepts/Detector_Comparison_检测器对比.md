@@ -55,4 +55,6 @@ source_spec: "接收机实现（非协议算法）; MIMO01 §5-6"
 - [[CSI_SINR]]
 - [[Diversity_Combining_分集与合并]]
 - [[MIMO_多天线系统]]
+- [[T12.3_linear_detectors_mf_zf_mmse]]
+- [[T12.4_sphere_detection_detector_selection]]
 - 关系语义：检测器把每 RE 的矩阵模型变成符号估计，输出（+ CSI 加权）喂给软解调；MMSE 是线性默认、Sphere 是 ML 参考。
