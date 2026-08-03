@@ -62,4 +62,5 @@ ESS 像"按编号查目录"：DP 计数表是目录索引，均匀 bit 组成一
 - [[Distribution_Matching_分布匹配]]
 - [[MB_Distribution_MB分布]]
 - [[Probabilistic_Shaping_概率整形]]
+- [[T13.3_ess_enumerative_sphere_shaping]]
 - 关系语义：ESS 是 DM 的能量球实现（rate loss 更小）；MB 分布定义目标概率（ESS 的输入），DP 表是它的数学引擎，定点存储是它的工程形态。

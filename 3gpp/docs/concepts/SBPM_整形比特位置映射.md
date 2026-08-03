@@ -54,4 +54,5 @@ QAM label 像一列有固定职责的座位：sign 位是"队长位"（必须正
 - [[ESS_枚举球面整形]]
 - [[Selective_Scrambling_选择性加扰]]
 - [[QAM1024_1024QAM]]
+- [[T13.4_ps_embedding_four_access_points_bit_organization]]
 - 关系语义：SBPM 是"位置语义"的落实者——shaped bits 放对位置整形才有效（1024QAM 的 4 个幅度位是最大舞台）；它与标准交织、选择性加扰共同构成 PS 的 bit 组织层。

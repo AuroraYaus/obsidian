@@ -55,4 +55,5 @@ DM 像"洗牌机带标记"：一副等概率的牌（均匀 bit）洗成"红桃�
 - [[Probabilistic_Shaping_概率整形]]
 - [[MB_Distribution_MB分布]]
 - [[ESS_枚举球面整形]]
+- [[T13.3_ess_enumerative_sphere_shaping]]
 - 关系语义：DM 是"均匀 → 非均匀"的通用概念；ESS 是它的具体实现（能量球约束）；rate loss 是整形收益的必然代价，公平对比必须 TBS matching。

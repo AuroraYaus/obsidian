@@ -63,4 +63,6 @@ source_spec: "非 3GPP 标准（6G 候选）; Qualcomm evaluation-link-simulator
 - [[SBPM_整形比特位置映射]]
 - [[Selective_Scrambling_选择性加扰]]
 - [[LLR_Prior_LLR先验]]
+- [[T13.1_probabilistic_shaping_overview_shaping_gain]]
+- [[T13.6_tbs_matching_system_cost_roi]]
 - 关系语义：PS 是总纲，MB/DM/ESS/SBPM/选择性加扰/LLR prior 是它的组成部分；与 1024QAM 的幅度位结构天然契合。

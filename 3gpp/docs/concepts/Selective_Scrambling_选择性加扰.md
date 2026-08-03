@@ -55,4 +55,5 @@ source_spec: "非 3GPP 标准（6G 候选）; Qualcomm evaluation-link-simulator
 - [[Gold_序列加扰]]
 - [[SBPM_整形比特位置映射]]
 - [[Probabilistic_Shaping_概率整形]]
+- [[T13.4_ps_embedding_four_access_points_bit_organization]]
 - 关系语义：Gold 加扰是标准基底，选择性加扰是 PS 的扩展保护层；它与 SBPM 共享同一 bit 组织（哪行 shaped、哪行加扰），是"整形统计不被搅匀"的第二道防线。

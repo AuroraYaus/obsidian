@@ -58,4 +58,5 @@ PAS 像"分工打包"：货物（信息）分两路——一路走"慢速整形�
 - [[Distribution_Matching_分布匹配]]
 - [[ESS_枚举球面整形]]
 - [[SBPM_整形比特位置映射]]
+- [[T13.4_ps_embedding_four_access_points_bit_organization]]
 - 关系语义：PAS 是整形体系的骨架（amplitude/sign 分工），ESS 是其幅度映射器，SBPM 是 bit 组装器——三者协作构成整形收发链路的组织方式。

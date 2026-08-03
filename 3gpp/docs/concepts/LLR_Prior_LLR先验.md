@@ -61,4 +61,5 @@ LLR prior 像"给候选名单加底分"：标准解调把同一距离的所有�
 - [[Probabilistic_Shaping_概率整形]]
 - [[MB_Distribution_MB分布]]
 - [[Soft_Demodulation_软解调]]
+- [[T13.5_ps_receiver_llr_prior]]
 - 关系语义：MB 分布定义先验（TX 的目标概率 = RX 的先验），LLR prior 是接收端对它的感知；与 CSI 加权共同决定 LLR 可靠度，是 PS 增益兑现的最后一环。

@@ -60,4 +60,5 @@ MB 分布像"按距离定概率的抽奖"：奖品（星座点）离中心越近
 - [[Probabilistic_Shaping_概率整形]]
 - [[ESS_枚举球面整形]]
 - [[LLR_Prior_LLR先验]]
+- [[T13.2_mb_distribution_entropy_power_tradeoff]]
 - 关系语义：MB 分布定义"整形成什么样"（目标概率），ESS 实现"怎么整"（映射器），LLR prior 是接收端对同一分布的感知。
