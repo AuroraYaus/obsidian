@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1350" height="320" viewBox="0 0 1350 320">
+<style>
+text { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", "Helvetica Neue", Arial, sans-serif; }
+</style>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L10,4 L0,8 Z" fill="#64748b"/>
+  </marker>
+</defs>
+<rect width="1350" height="320" fill="#ffffff"/>
+<text x="675" y="28" text-anchor="middle" font-size="18" font-weight="700" fill="#111827">MIMO 接收链路总览：从天线域信号到一维 LLR 向量</text>
+<rect x="30" y="60" width="150" height="54" rx="8" ry="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+<text x="105" y="79" text-anchor="middle" font-size="13" font-weight="700" fill="#2563eb">天线域信号 y</text>
+<text x="105" y="99" text-anchor="middle" font-size="11" fill="#374151">每 RE 各天线观测</text>
+<rect x="220" y="60" width="150" height="54" rx="8" ry="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+<text x="295" y="79" text-anchor="middle" font-size="13" font-weight="700" fill="#16a34a">OFDM 解调</text>
+<text x="295" y="99" text-anchor="middle" font-size="11" fill="#374151">时域→频域 RE 网格</text>
+<rect x="410" y="60" width="150" height="54" rx="8" ry="8" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+<text x="485" y="79" text-anchor="middle" font-size="13" font-weight="700" fill="#ea580c">信道估计</text>
+<text x="485" y="99" text-anchor="middle" font-size="11" fill="#374151">Ĥ_est 天线域</text>
+<rect x="600" y="60" width="150" height="54" rx="8" ry="8" fill="#faf5ff" stroke="#9333ea" stroke-width="1.5"/>
+<text x="675" y="79" text-anchor="middle" font-size="13" font-weight="700" fill="#9333ea">预编码逆处理</text>
+<text x="675" y="99" text-anchor="middle" font-size="11" fill="#374151">H_eff=Ĥ·P 层域</text>
+<rect x="790" y="60" width="150" height="54" rx="8" ry="8" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5"/>
+<text x="865" y="79" text-anchor="middle" font-size="13" font-weight="700" fill="#db2777">检测器</text>
+<text x="865" y="99" text-anchor="middle" font-size="11" fill="#374151">MMSE / Sphere</text>
+<rect x="980" y="60" width="150" height="54" rx="8" ry="8" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+<text x="1055" y="79" text-anchor="middle" font-size="13" font-weight="700" fill="#ca8a04">软解调+CSI 加权</text>
+<text x="1055" y="99" text-anchor="middle" font-size="11" fill="#374151">逐比特 LLR</text>
+<rect x="1170" y="60" width="150" height="54" rx="8" ry="8" fill="#f1f5f9" stroke="#475569" stroke-width="1.5"/>
+<text x="1245" y="79" text-anchor="middle" font-size="13" font-weight="700" fill="#475569">一维 LLR 向量</text>
+<text x="1245" y="99" text-anchor="middle" font-size="11" fill="#374151">送入译码器</text>
+<line x1="180" y1="89" x2="220" y2="89" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<line x1="370" y1="89" x2="410" y2="89" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<line x1="560" y1="89" x2="600" y2="89" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<line x1="750" y1="89" x2="790" y2="89" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<line x1="940" y1="89" x2="980" y2="89" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<line x1="1130" y1="89" x2="1170" y2="89" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+<text x="105" y="140" text-anchor="middle" font-size="11" fill="#475569">y ∈ C^{Nrx×1}（每 RE）</text>
+<text x="295" y="140" text-anchor="middle" font-size="11" fill="#475569">Nrx×Nfft→Nrx×NRE</text>
+<text x="485" y="140" text-anchor="middle" font-size="11" fill="#475569">Ĥ_est ∈ C^{Nrx×Ntx}</text>
+<text x="675" y="140" text-anchor="middle" font-size="11" fill="#475569">H_eff ∈ C^{Nrx×Nlayers}</text>
+<text x="865" y="140" text-anchor="middle" font-size="11" fill="#475569">ŝ ∈ C^{Nlayers×1}</text>
+<text x="1055" y="140" text-anchor="middle" font-size="11" fill="#475569">LLR: Qm×Nlayers /RE</text>
+<text x="1245" y="140" text-anchor="middle" font-size="11" fill="#475569">L ∈ R^{G×1} 码字级</text>
+<text x="675" y="190" text-anchor="middle" font-size="12" fill="#1e293b">接收机只关心 H_eff = H·P：DMRS 也走预编码，信道估计直接给出层域等效信道</text>
+<text x="675" y="214" text-anchor="middle" font-size="12" fill="#1e293b">译码器对 RE 网格不可见：new_pdsch_decode 输出一维 LLR，MIMO 已在上游剥离（T2.6 原则）</text>
+</svg>
