@@ -100,7 +100,7 @@ source_spec: "TR 38.901; 接收机设计（非协议算法）"
   - 相干带宽与 SCS 无关 → numerology 设计要让 SCS ≪ B_c，否则每个 RE 都得单独估计
 - **协议锚点**：
   - TDL 参数：TR 38.901 Table 7.7.2-1（TDL-A~E 时延谱、RMS 延迟扩展）
-  - SCS/时隙：TS 38.211 Rel-19 §5.3.2（本地 `3GPP_Rel19/processed/TS_38.211_38211-j30/content.md`）
+  - SCS/时隙：TS 38.211 Rel-19 §4.2（Numerologies）与 §4.3.2（Slots）（本地 `3GPP_Rel19/processed/TS_38.211_38211-j30/content.md`）
 - **图谱关联**：`[[概念图谱入口]]`、`[[TDL_信道模型]]`、`[[Fading_Channel_衰落信道]]`、`[[Channel_Estimation_信道估计]]`、`[[Timing_Sync_定时同步]]`；关系语义：相干带宽/时间决定信道估计与均衡的颗粒度——相干带宽≫SCS 使每子载波估计可行，相干时间≫时隙使块级处理合理。
 
 - [ ] **Step 3: 结构验证两篇**

@@ -43,7 +43,7 @@ source_spec: "TR 38.901; 接收机设计（非协议算法）"
 ## 协议锚点
 
 - TDL 参数：TR 38.901 Table 7.7.2-1（TDL-A~E 时延谱、RMS 延迟扩展）。
-- SCS/时隙：TS 38.211 Rel-19 §5.3.2。
+- SCS/时隙：TS 38.211 Rel-19 §4.2（Numerologies）与 §4.3.2（Slots）。
 - 本地锚点：`3GPP_Rel19/processed/TS_38.211_38211-j30/content.md`。
 
 ## 图谱关联
