@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="460" viewBox="0 0 820 460">
+<style>
+.cjk  { font-family: "Noto Sans CJK SC", sans-serif; }
+.lat  { font-family: "Noto Sans", "DejaVu Sans", sans-serif; }
+</style>
+<rect width="820" height="460" fill="#ffffff"/>
+
+<!-- 标题 -->
+<text x="410" y="22" text-anchor="middle" font-size="17" font-weight="700" fill="#111827" class="cjk">MF / ZF / MMSE 线性检测器输出 SINR 对比（4×4 MIMO · 2 层 · 同一信道实现）</text>
+<text x="70" y="48" text-anchor="start" font-size="11" fill="#475569" class="cjk">输出 SINR (dB)</text>
+
+<!-- 网格与坐标轴 -->
+<line x1="70" y1="400" x2="790" y2="400" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="70" y1="343.33" x2="790" y2="343.33" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="70" y1="286.67" x2="790" y2="286.67" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="70" y1="230" x2="790" y2="230" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="70" y1="173.33" x2="790" y2="173.33" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="70" y1="116.67" x2="790" y2="116.67" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="70" y1="60" x2="790" y2="60" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="70" y1="400" x2="790" y2="400" stroke="#94a3b8" stroke-width="1.5"/>
+<line x1="70" y1="60" x2="70" y2="400" stroke="#94a3b8" stroke-width="1.5"/>
+
+<!-- Y 轴刻度 -->
+<line x1="66" y1="400" x2="70" y2="400" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="62" y="404" text-anchor="end" font-size="11" fill="#475569" class="lat">-2</text>
+<line x1="66" y1="343.33" x2="70" y2="343.33" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="62" y="347.33" text-anchor="end" font-size="11" fill="#475569" class="lat">2</text>
+<line x1="66" y1="286.67" x2="70" y2="286.67" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="62" y="290.67" text-anchor="end" font-size="11" fill="#475569" class="lat">6</text>
+<line x1="66" y1="230" x2="70" y2="230" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="62" y="234" text-anchor="end" font-size="11" fill="#475569" class="lat">10</text>
+<line x1="66" y1="173.33" x2="70" y2="173.33" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="62" y="177.33" text-anchor="end" font-size="11" fill="#475569" class="lat">14</text>
+<line x1="66" y1="116.67" x2="70" y2="116.67" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="62" y="120.67" text-anchor="end" font-size="11" fill="#475569" class="lat">18</text>
+<line x1="66" y1="60" x2="70" y2="60" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="62" y="64" text-anchor="end" font-size="11" fill="#475569" class="lat">22</text>
+
+<!-- X 轴刻度 -->
+<line x1="70" y1="400" x2="70" y2="406" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="70" y="426" text-anchor="middle" font-size="11" fill="#475569" class="lat">-5</text>
+<line x1="250" y1="400" x2="250" y2="406" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="250" y="426" text-anchor="middle" font-size="11" fill="#475569" class="lat">0</text>
+<line x1="430" y1="400" x2="430" y2="406" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="430" y="426" text-anchor="middle" font-size="11" fill="#475569" class="lat">5</text>
+<line x1="610" y1="400" x2="610" y2="406" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="610" y="426" text-anchor="middle" font-size="11" fill="#475569" class="lat">10</text>
+<line x1="790" y1="400" x2="790" y2="406" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="790" y="426" text-anchor="middle" font-size="11" fill="#475569" class="lat">15</text>
+<text x="790" y="452" text-anchor="end" font-size="11" fill="#475569" class="cjk">输入 SNR (dB)</text>
+
+<!-- MF：匹配滤波（干扰受限，饱和） -->
+<polyline points="70,355.23 250,319.68 430,301.40 610,294.18 790,291.77" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+<circle cx="70" cy="355.23" r="3" fill="#3b82f6"/>
+<circle cx="250" cy="319.68" r="3" fill="#3b82f6"/>
+<circle cx="430" cy="301.40" r="3" fill="#3b82f6"/>
+<circle cx="610" cy="294.18" r="3" fill="#3b82f6"/>
+<circle cx="790" cy="291.77" r="3" fill="#3b82f6"/>
+
+<!-- ZF：迫零（噪声放大，随 SNR 以 1 dB/dB 上移） -->
+<polyline points="70,375.07 250,304.23 430,233.40 610,162.57 790,91.73" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+<circle cx="70" cy="375.07" r="3" fill="#f59e0b"/>
+<circle cx="250" cy="304.23" r="3" fill="#f59e0b"/>
+<circle cx="430" cy="233.40" r="3" fill="#f59e0b"/>
+<circle cx="610" cy="162.57" r="3" fill="#f59e0b"/>
+<circle cx="790" cy="91.73" r="3" fill="#f59e0b"/>
+
+<!-- MMSE：正则化折中（全程最上） -->
+<polyline points="70,346.02 250,288.37 430,226.88 610,160.30 790,91.03" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+<circle cx="70" cy="346.02" r="3" fill="#16a34a"/>
+<circle cx="250" cy="288.37" r="3" fill="#16a34a"/>
+<circle cx="430" cy="226.88" r="3" fill="#16a34a"/>
+<circle cx="610" cy="160.30" r="3" fill="#16a34a"/>
+<circle cx="790" cy="91.03" r="3" fill="#16a34a"/>
+
+<!-- 10 dB 工作点数值标注 -->
+<text x="610" y="278" text-anchor="middle" font-size="10" fill="#3b82f6" class="lat">5.5</text>
+<text x="610" y="146" text-anchor="middle" font-size="10" fill="#f59e0b" class="lat">14.8</text>
+<text x="610" y="210" text-anchor="middle" font-size="10" fill="#16a34a" class="lat">14.9</text>
+
+<!-- 图例 -->
+<rect x="78" y="68" width="216" height="108" rx="6" ry="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+<text x="96" y="91" font-size="11" font-weight="700" fill="#334155" class="cjk">图例</text>
+<line x1="90" y1="111" x2="112" y2="111" stroke="#3b82f6" stroke-width="3"/>
+<text x="120" y="115" font-size="11" fill="#1e293b" class="cjk">MF（匹配滤波）</text>
+<line x1="90" y1="135" x2="112" y2="135" stroke="#f59e0b" stroke-width="3"/>
+<text x="120" y="139" font-size="11" fill="#1e293b" class="cjk">ZF（迫零）</text>
+<line x1="90" y1="159" x2="112" y2="159" stroke="#16a34a" stroke-width="3"/>
+<text x="120" y="163" font-size="11" fill="#1e293b" class="cjk">MMSE（最小均方误差）</text>
+
+<!-- 收敛说明 -->
+<text x="600" y="82" font-size="11" fill="#475569" class="cjk">高 SNR：MMSE 与 ZF 重合（σ²→0 极限）</text>
+
+<!-- csi ≥ 1 标注 -->
+<rect x="550" y="322" width="238" height="66" rx="6" ry="6" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+<text x="566" y="348" font-size="12" font-weight="700" fill="#166534" class="cjk">csi = 1 + SINR ≥ 1 恒成立</text>
+<text x="566" y="372" font-size="10" fill="#166534" class="cjk">（MMSE 理论下界；无偏化 β=(csi−1)/csi）</text>
+</svg>
