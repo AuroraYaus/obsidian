@@ -23,7 +23,7 @@ source_spec: "TR 38.901; 接收机设计（非协议算法）"
 
 ## 科学定义
 
-- **相干带宽**：$B_c \approx 1/(2\pi \tau_{rms})$；TDL-C 300 ns → ≈530 kHz ≫ 30 kHz SCS → 每个子载波内信道平坦，频选性主要体现为 RE 间 SNR 散布
+- **相干带宽**：$B_c \approx 1/(2\pi \tau_{rms})$；TDL-C（Tapped Delay Line，抽头时延线）300 ns → ≈530 kHz ≫ 30 kHz SCS（subcarrier spacing，子载波间距） → 每个子载波内信道平坦，频选性主要体现为 RE 间 SNR 散布
 - **相干时间**：$T_c \approx 0.423/f_d$；30 Hz 多普勒 → ≈14.1 ms ≫ 0.5 ms 时隙 → 时隙内准静态，块级处理合理
 - **速度换算**：$f_d = v \cdot f_c / c$；30 Hz @3.5 GHz = 9.3 km/h
 - **使用方式**：相干带宽决定估计/均衡的 RE 颗粒度（每子载波一组 H 即可）；相干时间决定信道更新频率（每时隙一次即可）

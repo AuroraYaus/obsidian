@@ -24,7 +24,7 @@ source_spec: "TS 38.214 §5.1.3; evaluation-link-simulator MCS 表"
 
 ## 科学定义
 
-- **标准表**：qam64 表（MCS 0-28，QPSK/16QAM/64QAM）、qam256 表（MCS 0-31，其中 28-31 保留）——3 列结构 [MCS, Qm, R×1024]，频谱效率（spectral efficiency，SE）= Qm×R/1024 严格成立
+- **标准表**：qam64 表（MCS 0-28，QPSK/16QAM/64QAM）、qam256 表（MCS 0-31，其中 28-31 保留）——仿真器内部解析为 3 列 [MCS, Qm, R×1024]；TS 38.214 表格本身为 4 列（含频谱效率），频谱效率（spectral efficiency，SE）= Qm×R/1024 严格成立
 - **PS 表**：ps_mcs_table1/2（MCS 5-27，5 列含 ν_MB；1024QAM 仅出现在 MCS 24-27，Qm=10）
 - **5 列结构**：[MCS, SE, Qm, R×1024, ν_MB]；SE = Qm×R/1024 只在标准表成立，PS 表不成立
 - **PS 表 SE ≠ Qm·R/1024**：MCS 10 表值 2.5704 vs 按 (Qm, R) 折算的 4.5——整形压缩了信息速率，SE 列直接列出整形后实际可达值，不能再由 Qm 与 R 相乘得出

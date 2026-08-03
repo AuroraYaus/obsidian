@@ -26,7 +26,7 @@ source_spec: "接收机实现（非协议算法）; MIMO01 §5-6"
 - **MF（匹配滤波）**：$\hat{s} = H^H y$——只匹配信道、完全忽略干扰；是 $\sigma^2 \to \infty$ 的极限（噪声主导时最合理）
 - **ZF（迫零）**：$\hat{s} = (H^H H)^{-1} H^H y$——完全消除干扰、但放大噪声；是 $\sigma^2 \to 0$ 的极限（噪声可忽略时最合理）
 - **MMSE（最小均方误差）**：$\hat{s} = H^H (H H^H + \sigma^2 I)^{-1} y$——用噪声功率做正则化的折中；相对 ZF 有 1-3 dB 增益；4×4 时约 100 MACs/tone、约 95K gates、约 20 cycles/tone
-- **Sphere（球面检测）**：半径约束的 ML 搜索——在 $\|y - Hs\|^2 \le r^2$ 的球内找最优符号组合（QR 分解建树 + FP/SE 剪枝）；性能 0 dB 损失（等价于 ML 最优）；约 100-1000 MACs/tone、约 150K gates、50-500 cycles/tone；低 SNR 时球内格点数 $\propto (r^2/\sigma^2)^{N_{\text{layers}}}$ 爆炸 → 退化为穷举
+- **Sphere（球面检测）**：半径约束的最大似然（Maximum Likelihood，ML）搜索——在 $\|y - Hs\|^2 \le r^2$ 的球内找最优符号组合（QR 分解建树 + FP/SE 剪枝）；性能 0 dB 损失（等价于 ML 最优）；约 100-1000 MACs/tone、约 150K gates、50-500 cycles/tone；低 SNR 时球内格点数 $\propto (r^2/\sigma^2)^{N_{\text{layers}}}$ 爆炸 → 退化为穷举
 - **性能排序**：MF ≤ ZF ≤ MMSE ≤ ML（Sphere）；**复杂度排序相反**——检测器的全部设计空间就是在这两个方向上取舍
 
 ## 直观模型
@@ -51,6 +51,7 @@ source_spec: "接收机实现（非协议算法）; MIMO01 §5-6"
 - [[概念图谱入口]]
 - [[MMSE_均衡]]
 - [[Sphere_Decoding_球面检测]]
+- [[LLR_Quantization_LLR量化]]
 - [[CSI_SINR]]
 - [[Diversity_Combining_分集与合并]]
 - [[MIMO_多天线系统]]

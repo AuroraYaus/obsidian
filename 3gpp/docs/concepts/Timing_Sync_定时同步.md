@@ -48,6 +48,7 @@ source_spec: "接收机实现（非协议算法）; evaluation-link-simulator"
 ## 图谱关联
 
 - [[概念图谱入口]]
+- [[Coherence_Bandwidth_Time_相干带宽与时间]]
 - [[Channel_Estimation_信道估计]]
 - [[TDL_信道模型]]
 - [[MMSE_均衡]]
