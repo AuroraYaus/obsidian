@@ -21,7 +21,9 @@
 | `MCS_Table_Effective_Code_Rate_MCS表与有效码率` | 4 张 MCS 表（qam64 0-28 / qam256 0-31（28-31 保留）/ ps_mcs_table1/2 5-27）；5 列结构 [MCS,SE,Qm,R×1024,ν_MB]；PS 表 SE ≠ Qm·R/1024（整形压缩信息速率）；R_eff=payloadTBS/(N_RE·Qm) | "菜单 vs 实付" | TS 38.214 §5.1.3 | SIM01 §4、PHY01 §6 |
 | `Geometric_Shaping_几何整形` | PS vs GS 对照：改使用概率 vs 改星座点位置；GS 需协商新星座表（标准流程难兼容）；DVB-S2X 商用先例（CCDM+MB）；Rel-19 无实证 | "改走法 vs 改路" | 非 3GPP 标准 | PS01 §1.2/§1.4 |
 
-### 增强（3 篇，只补缺失内容，不重构存量）
+### 增强（3 篇）
+
+> 增强规则：**六段式已合规**的笔记（Channel_Estimation、Probabilistic_Shaping）只补缺失内容，不重构存量；**旧式要点格式**的笔记（LLR_Quantization）重建为六段式，但保留全部现有内容。
 
 | 笔记 | 补充内容 |
 |---|---|
