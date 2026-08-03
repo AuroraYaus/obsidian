@@ -1,29 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="250" viewBox="0 0 900 250">
-<rect width="900" height="250" fill="white"/>
-<text x="450.0" y="24" text-anchor="middle" font-size="15" fill="#1565c0" font-weight="bold">不同 SCS 的 PRB 频域嵌套关系</text>
-<text x="90" y="75.0" text-anchor="end" font-size="13" fill="#1565c0" font-weight="bold">μ=0 · Δf=15 kHz</text>
-<rect x="100.0" y="55" width="700.0" height="30" fill="#1565c0" opacity="0.25" stroke="#1565c0" stroke-width="1.5"/>
-<text x="450.0" y="75.0" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">PRB 0</text>
-<text x="820" y="75.0" font-size="11" fill="#555">1×100% PRB = 12SC×1</text>
-<text x="90" y="130.0" text-anchor="end" font-size="13" fill="#2e7d32" font-weight="bold">μ=1 · Δf=30 kHz</text>
-<rect x="100.0" y="110" width="350.0" height="30" fill="#2e7d32" opacity="0.25" stroke="#2e7d32" stroke-width="1.5"/>
-<text x="275.0" y="130.0" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">PRB 0</text>
-<rect x="450.0" y="110" width="350.0" height="30" fill="#2e7d32" opacity="0.25" stroke="#2e7d32" stroke-width="1.5"/>
-<text x="625.0" y="130.0" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">PRB 1</text>
-<text x="820" y="130.0" font-size="11" fill="#555">2×50% PRB = 12SC×2</text>
-<text x="90" y="185.0" text-anchor="end" font-size="13" fill="#e65100" font-weight="bold">μ=2 · Δf=60 kHz</text>
-<rect x="100.0" y="165" width="175.0" height="30" fill="#e65100" opacity="0.25" stroke="#e65100" stroke-width="1.5"/>
-<text x="187.5" y="185.0" text-anchor="middle" font-size="11" fill="#e65100" font-weight="bold">PRB 0</text>
-<rect x="275.0" y="165" width="175.0" height="30" fill="#e65100" opacity="0.25" stroke="#e65100" stroke-width="1.5"/>
-<text x="362.5" y="185.0" text-anchor="middle" font-size="11" fill="#e65100" font-weight="bold">PRB 1</text>
-<rect x="450.0" y="165" width="175.0" height="30" fill="#e65100" opacity="0.25" stroke="#e65100" stroke-width="1.5"/>
-<text x="537.5" y="185.0" text-anchor="middle" font-size="11" fill="#e65100" font-weight="bold">PRB 2</text>
-<rect x="625.0" y="165" width="175.0" height="30" fill="#e65100" opacity="0.25" stroke="#e65100" stroke-width="1.5"/>
-<text x="712.5" y="185.0" text-anchor="middle" font-size="11" fill="#e65100" font-weight="bold">PRB 3</text>
-<text x="820" y="185.0" font-size="11" fill="#555">4×25% PRB = 12SC×4</text>
-<line x1="100.0" y1="85" x2="100.0" y2="165" stroke="#555" stroke-width="0.6" stroke-dasharray="3,3"/>
-<line x1="275.0" y1="85" x2="275.0" y2="165" stroke="#555" stroke-width="0.6" stroke-dasharray="3,3"/>
-<line x1="450.0" y1="85" x2="450.0" y2="165" stroke="#555" stroke-width="0.6" stroke-dasharray="3,3"/>
-<line x1="625.0" y1="85" x2="625.0" y2="165" stroke="#555" stroke-width="0.6" stroke-dasharray="3,3"/>
-<text x="450.0" y="235" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">SCS 翻倍 → PRB 物理带宽翻倍 → 同一频段内容纳的 PRB 数减半</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="250" viewBox="0 0 1000 250">
+<rect width="1000" height="250" fill="white"/>
+<text x="500.0" y="24" text-anchor="middle" font-size="15" fill="#1565c0" font-weight="bold">同一 720 kHz 频段内，不同 SCS 的 PRB 数量</text>
+<text x="170" y="75.0" text-anchor="end" font-size="13" fill="#1565c0" font-weight="bold">μ=0 · Δf=15 kHz</text>
+<rect x="180.0" y="55" width="160.0" height="30" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+<text x="260.0" y="75.0" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">PRB 0</text>
+<rect x="340.0" y="55" width="160.0" height="30" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+<text x="420.0" y="75.0" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">PRB 1</text>
+<rect x="500.0" y="55" width="160.0" height="30" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+<text x="580.0" y="75.0" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">PRB 2</text>
+<rect x="660.0" y="55" width="160.0" height="30" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+<text x="740.0" y="75.0" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">PRB 3</text>
+<text x="980" y="75.0" text-anchor="end" font-size="11" fill="#555">4×180 kHz = 720 kHz</text>
+<text x="170" y="130.0" text-anchor="end" font-size="13" fill="#2e7d32" font-weight="bold">μ=1 · Δf=30 kHz</text>
+<rect x="180.0" y="110" width="320.0" height="30" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+<text x="340.0" y="130.0" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">PRB 0</text>
+<rect x="500.0" y="110" width="320.0" height="30" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+<text x="660.0" y="130.0" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">PRB 1</text>
+<text x="980" y="130.0" text-anchor="end" font-size="11" fill="#555">2×360 kHz = 720 kHz</text>
+<text x="170" y="185.0" text-anchor="end" font-size="13" fill="#e65100" font-weight="bold">μ=2 · Δf=60 kHz</text>
+<rect x="180.0" y="165" width="640.0" height="30" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+<text x="500.0" y="185.0" text-anchor="middle" font-size="11" fill="#e65100" font-weight="bold">PRB 0</text>
+<text x="980" y="185.0" text-anchor="end" font-size="11" fill="#555">1×720 kHz = 720 kHz</text>
+<line x1="180.0" y1="85" x2="180.0" y2="165" stroke="#555" stroke-width="0.6" stroke-dasharray="3,3"/>
+<line x1="340.0" y1="85" x2="340.0" y2="165" stroke="#555" stroke-width="0.6" stroke-dasharray="3,3"/>
+<line x1="500.0" y1="85" x2="500.0" y2="165" stroke="#555" stroke-width="0.6" stroke-dasharray="3,3"/>
+<line x1="660.0" y1="85" x2="660.0" y2="165" stroke="#555" stroke-width="0.6" stroke-dasharray="3,3"/>
+<line x1="820.0" y1="85" x2="820.0" y2="165" stroke="#555" stroke-width="0.6" stroke-dasharray="3,3"/>
+<text x="500.0" y="235" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">每个 PRB 都是 12 个子载波；SCS 翻倍 → PRB 物理带宽翻倍 → 同一频段 PRB 数减半</text>
 </svg>
