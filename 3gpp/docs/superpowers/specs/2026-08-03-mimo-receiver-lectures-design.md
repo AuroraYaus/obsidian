@@ -13,14 +13,14 @@
 | 篇目（文件名） | 核心内容锚点 | 内嵌 Python 验证示例 | 素材来源 |
 |---|---|---|---|
 | `T12.1_mimo_receiver_chain_overview.md` MIMO 接收链路总览 | 每 RE 模型 y=H·P·x+n（H∈C^{Nrx×Ntx}、x∈C^{Nlayers}、n~CN(0,σ²I)）；层域等效信道 H_eff=H·P；发射功率归一化 E‖Px‖²=‖P‖_F²E_s、‖P‖_F=1 时天线域总功率恒等；单码字 ≤4 层（TS 38.211 §7.3.1.3）；transpose vs ctranspose 约定；接收机 RE 网格→LLR 向量流程；译码器对 RE 网格不可见（衔接 T2.6） | 预编码器构造（DFT/Hadamard/Identity）+ Frobenius 归一化后天线域功率守恒数值验证 | MIMO01 §1-2；概念笔记 MIMO_多天线系统、Detector_Comparison；L1 T2.6 |
-| `T12.2_diversity_combining_mrc.md` 分集与合并 | MRC 推导 ŝ=hᴴy/‖h‖²；SNR_out=‖h‖²/σ²~χ²₂ₙ；分集阶数 N：P(‖h‖²<ε)~ε^N/N!；32 支路→χ²₆₄、≈+15 dB（10log₁₀32）、0-6 dB 下 256QAM 可行；SIMO 1×N（test_simo 场景）；MMSE 单层=正则化 MRC（分母 ‖h‖²+σ² 避免深衰落除零）；分集 vs 波束赋形区别 | 蒙特卡洛：N=1/2/4/32 分支 MRC 深衰落概率（P(‖h‖²<ε)）随 ε 曲线 vs 理论 ε^N/N! | MIMO01 §3；概念笔记 Diversity_Combining；L1 T2.10 |
+| `T12.2_diversity_combining_mrc.md` 分集与合并 | MRC 推导 ŝ=hᴴy/‖h‖²；SNR_out=‖h‖²/σ²~χ²₂ₙ；分集阶数 N：P(‖h‖²<ε)~ε^N/N!；32 支路→χ²₆₄、≈+15 dB（10log₁₀32）、0-6 dB 下 256QAM 可行；SIMO 1×N（test_simo 场景）；MMSE 单层=正则化 MRC（分母 ‖h‖²+σ² 避免深衰落除零）；分集 vs 波束赋形区别 | 蒙特卡洛：N=1/2/4/32 分支 MRC 深衰落概率（P(‖h‖²<ε)）随 ε 曲线 vs 理论 ε^N/N! | MIMO01 §3；概念笔记 Diversity_Combining；L1 T2.15 |
 | `T12.3_linear_detectors_mf_zf_mmse.md` 线性检测器 MF/ZF/MMSE | MF ŝ=Hᴴy（σ²→∞ 极限）；ZF ŝ=(HᴴH)⁻¹Hᴴy（σ²→0 极限、消干扰放大噪声）；MMSE ŝ=Hᴴ(HHᴴ+σ²I)⁻¹y（正则化折中；相对 ZF 1-3 dB）；MMSE 推导（最小化 J(W)=E‖Wy−x‖²、Woodbury）；后验 MSE=σ²(HᴴH+σ²I)⁻¹；csi≥1 恒成立；无偏化归一化（effective_csi=max(csi−n_var,0)、mmse_gain、β=(csi−1)/csi）；0/0 与 ∞ 放大机理（csi→0）；±31 裁剪吸收（BLER 损失 <0.02 dB）；定点除法保护（csi_safe） | 固定随机 H：MF/ZF/MMSE 输出 SINR 对比 + csi≥1 恒成立数值验证 | MIMO01 §5；PHY01 §7；概念笔记 MMSE_均衡、Detector_Comparison；清单理论行（MMSE 推导/ZF/MF 两极限） |
 | `T12.4_sphere_detection_detector_selection.md` 球面检测与检测器选择 | ML 复杂度 2^(Qm·Nlayers)（256QAM×4=2³² 不可穷举）；半径约束 ‖y−H_eff·s‖²≤r²；QR 树搜索（‖Qᴴy−Rs‖² 上三角分层累加、深度优先、剪枝）；FP（区间枚举、收缩慢）vs SE（部分距离排序、快 2-3 倍）；白化（y/√n_var、H/√n_var）与 LLR 符号约定；低 SNR 球内格点爆炸退化为穷举；三检测器对比（MMSE 4×4 ~100 MACs/tone ~95K gates 1-3 dB 损失；Sphere ~100-1000 MACs ~150K gates 0 dB、50-500 cycles/tone、仅高 SNR） | 2×2 QPSK 穷举 ML vs 半径剪枝枚举结果一致性验证（小规模随机实例） | MIMO01 §6；analysis 03 §3；概念笔记 Sphere_Decoding、Detector_Comparison；清单理论行（球面检测） |
-| `T12.5_channel_estimation_llr_reliability.md` 信道估计与 LLR 可靠度 | 完美估计（nrPerfectChannelEstimate、上界参考）vs DMRS 实际估计；LS Ĥ_LS=Y_DMRS/X_DMRS（噪声放大 1/\|X\|²）；维纳滤波 Ĥ=R_HH(R_HH+σ²I)⁻¹Ĥ_LS（低 SNR 显著优、高 SNR 趋同、O(N_DMRS³)）；估计误差三途径（均衡输出偏置/CSI 失真/噪声方差失配；256QAM d_min≈0.16、偏移 0.08 翻转）；DMRS 走预编码→DMRS-based 估计直接给 H_eff；CSI 加权 LLR_out=LLR×csi（逐 RE 可靠度）；±31 裁剪与误差预算 | 1×1 信道：LS vs 维纳滤波估计 MSE 随 SNR（-5~20 dB）对比曲线 | MIMO01 §4/§7；概念笔记 Channel_Estimation、CSI_SINR；L1 T2.11 |
+| `T12.5_channel_estimation_llr_reliability.md` 信道估计与 LLR 可靠度 | 完美估计（nrPerfectChannelEstimate、上界参考）vs DMRS 实际估计；LS Ĥ_LS=Y_DMRS/X_DMRS（噪声放大 1/\|X\|²）；维纳滤波 Ĥ=R_HH(R_HH+σ²I)⁻¹Ĥ_LS（低 SNR 显著优、高 SNR 趋同、O(N_DMRS³)）；估计误差三途径（均衡输出偏置/CSI 失真/噪声方差失配；256QAM d_min≈0.16、偏移 0.08 翻转）；DMRS 走预编码→DMRS-based 估计直接给 H_eff；CSI 加权 LLR_out=LLR×csi（逐 RE 可靠度）；±31 裁剪与误差预算 | 1×1 信道：LS vs 维纳滤波估计 MSE 随 SNR（-5~20 dB）对比曲线 | MIMO01 §4/§7；概念笔记 Channel_Estimation、CSI_SINR；L1 T2.16 |
 
 ### 系列内衔接
 
-- T12.1 为地图篇（衔接 L1 T2.6/T2.10 + MIMO_多天线系统概念笔记）；T12.2-12.5 承接 T12.1
+- T12.1 为地图篇（衔接 L1 T2.6/T2.15 + MIMO_多天线系统概念笔记）；T12.2-12.5 承接 T12.1
 - 每篇 `## 本节学习目标` 末尾给出系列内"下一篇承接"说明（仿 T8.1 风格）
 - 篇目间互引：T12.3 引用 T12.2（MMSE=正则化 MRC）；T12.4 引用 T12.3（MMSE 基线）；T12.5 引用 T12.3（无偏化/CSI）
 

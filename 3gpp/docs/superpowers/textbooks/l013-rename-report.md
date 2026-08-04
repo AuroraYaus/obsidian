@@ -16,7 +16,7 @@
 ## 更新文件数
 
 - 提交总变更：**226 files changed, 1732 insertions(+), 1732 deletions(-)**（164 rename + 62 修改；增删完全对称）。
-- sed 批量替换 164 个文件（`grep -rlI "docs/L0\|docs/L1\|docs/L3" 3gpp/`），覆盖 .md/.py/.json/.sh/.txt/**SVG**。SVG 为超出脚本示例的合理延伸：30 个资产 SVG 的 `@note`/说明文字内嵌旧路径（如 `docs/L1/T2.17_...md 配套图`），一并替换，与 L2 提交对 SVG 的处理一致。
+- sed 批量替换 164 个文件（`grep -rlI "docs/L0\|docs/L1\|docs/L3" 3gpp/`），覆盖 .md/.py/.json/.sh/.txt/**SVG**。SVG 为超出脚本示例的合理延伸：30 个资产 SVG 的 `@note`/说明文字内嵌旧路径（如 `docs/L1/T2.18_...md 配套图`），一并替换，与 L2 提交对 SVG 的处理一致。
 - 替换顺序安全：单趟 sed 内 `docs/L0→docs/L0_协议阅读引导` → `docs/L1→docs/L1_基础` → `docs/L3→docs/L3_工程实现`，无嵌套误伤（已替换串不含后续匹配子串）；`docs/L2_协议算法`（已改名目录）未被触碰。
 - 手工处理（sed 无法覆盖的按目录名拼接/相对引用）：
   1. `3gpp/tools/consolidate_docs_terms.py`（L17/L18/L19 常量、L386/L392 的 `../L0/` 相对引用）
@@ -41,7 +41,7 @@
 
 ## 注意事项（concerns）
 
-1. **`.obsidian/graph.json`（9 处）与 `.obsidian/workspace.json`（18 处）仍含旧路径**（如 `docs/L1/assets/T2.12_timing_sync_fft_window.svg` 图谱查询、打开面板的文件路径）。与 L2 改名时情况相同：Obsidian 应用状态文件在仓库根、超出 `3gpp/` 范围，未改动也未纳入提交；Obsidian 重新打开/刷新后可自愈或需手动更新查询。
+1. **`.obsidian/graph.json`（9 处）与 `.obsidian/workspace.json`（18 处）仍含旧路径**（如 `docs/L1/assets/T2.7_timing_sync_fft_window.svg` 图谱查询、打开面板的文件路径）。与 L2 改名时情况相同：Obsidian 应用状态文件在仓库根、超出 `3gpp/` 范围，未改动也未纳入提交；Obsidian 重新打开/刷新后可自愈或需手动更新查询。
 2. **SVG 资产内容更新但未重渲染**：30 个 SVG 的说明文字（`@note` 等）已改为新路径，但未重新跑渲染脚本（图形内容无需变，仅文本路径变化，sed 直接改文本已等效）。下次运行 `tools/figures/*.py` 重渲染时输出一致。
 3. **`2026-06-25-docs-terminology-consolidation.md` 的 `docs/L0_terminology_glossary.md` 引用**（计划文档中的 3 处）原本就省略了 `L0/` 目录段，本次按实际文件位置修正为 `docs/L0_协议阅读引导/L0_terminology_glossary.md`。
 4. **ldpc 跨库路径**：`lte_nr_depth_gap_backlog.md` 中的 `ldpc/docs/L1_理论基础`、`ldpc/docs/L3_硬件实现`、`ldpc/docs/L2_算法实现`（本次还原）指向 ldpc 知识库，若 ldpc 库自身做同名改名需另行同步。

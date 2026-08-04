@@ -272,58 +272,58 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 
 从信道输出到译码器输入 LLR，覆盖 AWGN、调制、QAM、衰落与量化预览。
 
-### T2.1 AWGN 信道与噪声缩放
+### T2.9 AWGN 信道与噪声缩放
 
 | 项目 | 内容 |
 |:---|:---|
-| **编号** | T2.1 |
+| **编号** | T2.9 |
 | **前置** | T1.4, T1.5 |
 | **Prompt** | 请讲解加性白高斯噪声（AWGN）、高斯随机变量、SNR、Eb/N0、Es/N0、码率、调制阶数和噪声方差缩放。推导 BPSK 在 AWGN 下的 LLR，并给出固定随机种子的可复现实验。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1_基础/T2.7_AWGN_noise_scaling.md` |
+| **产出** | `docs/L1_基础/T2.9_AWGN_noise_scaling.md` |
 | **验收** | Learner can compute noise variance for a given code rate, modulation order, and Eb/N0, and generate reproducible noisy BPSK samples. |
 | **3GPP/证据** | 背景任务。 Modulation order linkage to TS 38.214 Rel-19 `38214-j30` §5.1.3/§6.1.4 and LTE equivalent anchors `待核验`. 本地证据路径： TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`. |
 
-### T2.2 BPSK/QPSK 软解调
+### T2.13 BPSK/QPSK 软解调
 
 | 项目 | 内容 |
 |:---|:---|
-| **编号** | T2.2 |
-| **前置** | T1.5, T2.1 |
+| **编号** | T2.13 |
+| **前置** | T1.5, T2.9 |
 | **Prompt** | 请讲解 BPSK 和 QPSK 星座映射、Gray 映射、接收采样模型、BPSK 精确 LLR 和 QPSK 逐比特 LLR。包含可用 Mermaid 表达的星座/流程图和一个小型数值软解调例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1_基础/T2.8_BPSK_QPSK_soft_demapping.md` |
+| **产出** | `docs/L1_基础/T2.13_BPSK_QPSK_soft_demapping.md` |
 | **验收** | Learner can derive BPSK LLR and compute QPSK bit LLRs for one received symbol. |
 | **3GPP/证据** | TS 36.211 Rel-19 `36211-j30_*` modulation clauses `待核验`; TS 38.211 Rel-19 `38211-j30` modulation clauses `待核验`. 本地证据路径： TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (精确分册 `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
-### T2.3 QAM 软解调与 Max-Log-MAP
+### T2.14 QAM 软解调与 Max-Log-MAP
 
 | 项目 | 内容 |
 |:---|:---|
-| **编号** | T2.3 |
-| **前置** | T2.2 |
+| **编号** | T2.14 |
+| **前置** | T2.13 |
 | **Prompt** | 请讲解 16QAM、64QAM、256QAM 的比特映射、精确比特 LLR 与 Max-Log-MAP 近似，说明实际译码器为什么使用近似、查表或最近距离简化。包含一个 16QAM 手算例子和一个 LLR 符号反转失败案例。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1_基础/T2.9_QAM_Max_Log_MAP_demapping.md` |
+| **产出** | `docs/L1_基础/T2.14_QAM_Max_Log_MAP_demapping.md` |
 | **验收** | Learner can compute approximate bit LLR for a 16QAM symbol and explain complexity growth for higher QAM. |
 | **3GPP/证据** | TS 38.214 Rel-19 `38214-j30` MCS modulation order sections §5.1.3/§6.1.4; TS 38.211 modulation clauses `待核验`; LTE anchors `待核验`. 本地证据路径： TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
-### T2.4 衰落信道与 LLR 可靠度
+### T2.15 衰落信道与 LLR 可靠度
 
 | 项目 | 内容 |
 |:---|:---|
-| **编号** | T2.4 |
-| **前置** | T2.1, T2.2 |
+| **编号** | T2.15 |
+| **前置** | T2.9, T2.13 |
 | **Prompt** | 请从译码器输入视角讲解 Rayleigh/Rician 衰落、均衡器输出和信道增益如何改变 LLR 可靠度。聚焦译码器看到的软比特与可靠度，不展开完整信道估计课程；包含一个单抽头衰落例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1_基础/T2.10_fading_channel_LLR_reliability.md` |
+| **产出** | `docs/L1_基础/T2.15_fading_channel_LLR_reliability.md` |
 | **验收** | Learner can explain why equalized symbols with low channel gain should have smaller LLR magnitude. |
 | **3GPP/证据** | 背景任务。 Link to physical channel and demodulation context in TS 36.211 Rel-19 `36211-j30_*` / TS 38.211 Rel-19 `38211-j30`, 精确锚点 `待核验`. 本地证据路径： TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (精确分册 `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
-### T2.5 LLR 裁剪、缩放与量化预览
+### T2.16 LLR 裁剪、缩放与量化预览
 
 | 项目 | 内容 |
 |:---|:---|
-| **编号** | T2.5 |
-| **前置** | T1.5, T2.1 |
+| **编号** | T2.16 |
+| **前置** | T1.5, T2.9 |
 | **Prompt** | 请引入 LLR 裁剪、缩放、量化、饱和，以及定点译码器为什么不能保留无限精度。包含过度自信 LLR、缩放不足 LLR 和符号错误三个例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1_基础/T2.11_LLR_clipping_scaling_quantization.md` |
+| **产出** | `docs/L1_基础/T2.16_LLR_clipping_scaling_quantization.md` |
 | **验收** | Learner can explain why LLR magnitude saturation changes decoder behavior and identify a likely LLR sign convention bug. |
 | **3GPP/证据** | 无需直接 3GPP 引用 for the quantization concept. Downstream decoder-family articles must cite their own Rel-19 protocol evidence. |
 
@@ -417,7 +417,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | 项目 | 内容 |
 |:---|:---|
 | **编号** | T4.3 |
-| **前置** | T1.5, T2.5 |
+| **前置** | T1.5, T2.15 |
 | **Prompt** | 请讲解混合自动重传请求（HARQ）、冗余版本、软缓存、Chase 合并与增量冗余直觉，以及为什么译码器输入会跨重传累积 LLR。包含一个软合并数值例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
 | **产出** | `docs/L1_基础/T4.3_HARQ_soft_combining_basics.md` |
 | **验收** | Learner can explain why retransmission LLRs are added or placed into a circular-buffer-derived soft buffer. |
@@ -439,7 +439,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | 项目 | 内容 |
 |:---|:---|
 | **编号** | T4.5 |
-| **前置** | T1.6, T2.1 |
+| **前置** | T1.6, T2.9 |
 | **Prompt** | 请讲解 BER、BLER、FER、吞吐、延迟、迭代次数、每比特能耗和面积吞吐取舍。说明如何绘制 BLER vs Eb/N0 曲线，以及为置信度需要多少帧。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
 | **产出** | `docs/L1_基础/T4.5_decoder_performance_metrics.md` |
 | **验收** | Learner can define BLER and explain why decoder studies usually focus on BLER for transport blocks. |
@@ -465,7 +465,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | 项目 | 内容 |
 |:---|:---|
 | **编号** | T5.1 |
-| **前置** | T2.5 |
+| **前置** | T2.15 |
 | **Prompt** | 请讲解译码 LLR 处理中使用的有符号定点表示、二进制补码、整数/小数划分、饱和、舍入和裁剪。包含 Q 格式例子和 Python 位级检查。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
 | **产出** | `docs/L1_基础/T5.1_fixed_point_numbers_for_LLR.md` |
 | **验收** | Learner can encode and decode signed fixed-point LLR values and explain saturation. |
@@ -800,7 +800,7 @@ NR LDPC 速率恢复、比特解交织、HARQ/RV/CBG、CRC 和边界案例。
 | 项目 | 内容 |
 |:---|:---|
 | **编号** | T9.2 |
-| **前置** | T9.1, T2.3 |
+| **前置** | T9.1, T2.14 |
 | **Prompt** | 请讲解 NR LDPC 按调制阶数进行的比特交织及其接收端反操作。说明 Qm 如何影响比特顺序、LLR 分组和解交织地址，包含小型 Qm 例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
 | **产出** | `docs/L2_协议算法/T9.2_NR_LDPC_bit_deinterleaving.md` |
 | **验收** | Learner can invert a toy LDPC bit interleaver for Qm=2 or Qm=4. |

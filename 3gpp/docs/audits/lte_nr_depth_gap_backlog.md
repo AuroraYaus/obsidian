@@ -89,8 +89,8 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 | B2-01 | `T1.4_probability_bayes_soft_decoding.md` | 深度 | `ldpc/docs/L1_理论基础/T1.3_概率与LLR基础.md` | 补联合概率、条件独立、全概率、边缘化；用 2 比特联合表说明“对未知变量求和”；增加 MAP 和 ML 的区别。 | 增加 Markdown 表格和 Python 小图可选；LaTeX 全检。 |
 | B2-02 | `T1.5_LLR_soft_decision.md` | 深度、工程 | `ldpc/docs/L1_理论基础/T1.3_概率与LLR基础.md` | 补概率到 LLR、LLR 到概率的互转；补独立观测下 LLR 可加的推导；增加两个接收机观测合并的数值例子；连接 HARQ soft combining。 | 必须补一张“概率比值到加法证据”的教学图或表。 |
 | B4-01 | `T1.6_information_theory_minimum_for_decoding.md` | 深度、突出 | `ldpc/docs/L1_理论基础/T1.4_信息论与信道容量.md` | 补 BSC/BEC/BI-AWGN 的直觉；解释容量、码率、容量差距、瀑布区、错误平层；说明这些不是协议门槛，而是性能分析语言。 | 建议 Python 图：容量边界、瀑布区、错误平层三段曲线。 |
-| B3-01 | `T2.7_AWGN_noise_scaling.md` | 深度、工程 | `ldpc/docs/L1_理论基础/T1.6_AWGN信道模型与噪声特性.md` | 补实基带和复基带噪声方差差异；补 `N0/2`、Eb/N0、Es/N0、码率、调制阶数换算；列四类 LLR scaling bug。 | 增加噪声缩放错误诊断表；可选 Python 曲线图。 |
-| B3-02 | `T2.9_QAM_Max_Log_MAP_demapping.md` | 深度、协议 | `ldpc/docs/L1_理论基础/T1.5_数字调制BPSK_QPSK_QAM.md` | 补 QAM 星座能量归一化、Gray 映射、1024QAM 复杂度、bit-channel 可靠性；核验 TS 36.211/38.211 调制入口。 | 若引用 1024QAM，必须记录 Rel-19 本地路径；建议补星座和 bit-channel 图。 |
+| B3-01 | `T2.9_AWGN_noise_scaling.md` | 深度、工程 | `ldpc/docs/L1_理论基础/T1.6_AWGN信道模型与噪声特性.md` | 补实基带和复基带噪声方差差异；补 `N0/2`、Eb/N0、Es/N0、码率、调制阶数换算；列四类 LLR scaling bug。 | 增加噪声缩放错误诊断表；可选 Python 曲线图。 |
+| B3-02 | `T2.14_QAM_Max_Log_MAP_demapping.md` | 深度、协议 | `ldpc/docs/L1_理论基础/T1.5_数字调制BPSK_QPSK_QAM.md` | 补 QAM 星座能量归一化、Gray 映射、1024QAM 复杂度、bit-channel 可靠性；核验 TS 36.211/38.211 调制入口。 | 若引用 1024QAM，必须记录 Rel-19 本地路径；建议补星座和 bit-channel 图。 |
 | B4-02 | `T4.5_decoder_performance_metrics.md` | 深度、图表 | `ldpc/docs/L2_算法实现/T5.8_错误平层与陷阱集.md` | 在 BER/BLER 指标外补曲线读法：waterfall、error-floor、iteration saturation、confidence interval；补高 SNR 统计成本。 | Python 性能曲线图必须标注教学示意，不得伪装真实仿真结果。 |
 | B1-03 | `T5.2_memory_banking_buffering_basics.md` | 工程 | `ldpc/docs/L1_理论基础/T1.2_编码线性代数.md`、`ldpc/docs/L3_硬件实现/T11.2_存储器架构设计.md` | 补稀疏矩阵存储、edge-major/layer-major、bank conflict 与译码器数据结构关系；连接 LDPC layered、Turbo interleaver、Polar path memory。 | 建议补统一 memory layout 对比表。 |
 
@@ -280,9 +280,9 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 影响章节：
 
-- `docs/L1_基础/T2.7_AWGN_noise_scaling.md`
-- `docs/L1_基础/T2.8_BPSK_QPSK_soft_demapping.md`
-- `docs/L1_基础/T2.9_QAM_Max_Log_MAP_demapping.md`
+- `docs/L1_基础/T2.9_AWGN_noise_scaling.md`
+- `docs/L1_基础/T2.13_BPSK_QPSK_soft_demapping.md`
+- `docs/L1_基础/T2.14_QAM_Max_Log_MAP_demapping.md`
 - `docs/L2_协议算法/T9.4_NR_LDPC_bit_deinterleaving.md`
 - `docs/L2_协议算法/T11.2_LTE_NR_rate_matching_comparison.md`
 

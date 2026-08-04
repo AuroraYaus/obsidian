@@ -28,5 +28,5 @@ source_spec: "TS 36.211/38.211 channel models"
 - [[AWGN_信道模型]]
 - [[LLR_对数似然比]]
 - [[HARQ_混合自动重传请求]]
-- [[T2.10_fading_channel_LLR_reliability]]
+- [[T2.15_fading_channel_LLR_reliability]]
 - 关系语义：衰落信道下 LLR 可信度时变，HARQ 通过分集对抗衰落。

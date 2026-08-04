@@ -28,13 +28,13 @@ AWGN 信道模型是最基本的通信信道：接收信号 y = x + n，其中 n
 ## 协议锚点
 
 - 调制与物理信道：TS 36.211/TS 38.211 定义调制方案和资源映射，不定义信道模型但暗含 AWGN 性能参考假设。
-- 本地锚点：`docs/L1_基础/T2.7_AWGN_noise_scaling.md`
+- 本地锚点：`docs/L1_基础/T2.9_AWGN_noise_scaling.md`
 
 ## 图谱关联
 
 - [[概念图谱入口]]
 - [[LLR_对数似然比]]
-- [[T2.7_AWGN_noise_scaling]]
-- [[T2.8_BPSK_QPSK_soft_demapping]]
-- [[T2.10_fading_channel_LLR_reliability]]
+- [[T2.9_AWGN_noise_scaling]]
+- [[T2.13_BPSK_QPSK_soft_demapping]]
+- [[T2.15_fading_channel_LLR_reliability]]
 - 关系语义：AWGN 是译码器输入 LLR 的噪声模型基础，Eb/N0 是所有 BLER 性能曲线的横轴。

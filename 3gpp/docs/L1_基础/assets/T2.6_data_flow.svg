@@ -5,22 +5,22 @@
 <rect x="260.0" y="60" width="380" height="48" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
 <text x="450" y="78" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">RE 网格</text>
 <text x="450" y="94" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">时频二维 · LTE或NR</text>
-<text x="634.0" y="102" text-anchor="end" font-size="9" fill="#888">T2.1–T2.5</text>
+<text x="634.0" y="102" text-anchor="end" font-size="9" fill="#888">T2.1–T2.4</text>
 <line x1="450" y1="108" x2="450" y2="118" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="260.0" y="118" width="380" height="48" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
 <text x="450" y="136" text-anchor="middle" font-size="12" fill="#6a1b9a" font-weight="bold">信道估计+均衡</text>
 <text x="450" y="152" text-anchor="middle" font-size="12" fill="#6a1b9a" font-weight="bold">DM-RS辅助 · 单抽头</text>
-<text x="634.0" y="160" text-anchor="end" font-size="9" fill="#888">T2.7</text>
+<text x="634.0" y="160" text-anchor="end" font-size="9" fill="#888">T2.9</text>
 <line x1="450" y1="166" x2="450" y2="176" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="260.0" y="176" width="380" height="48" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
 <text x="450" y="194" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">接收调制符号</text>
 <text x="450" y="210" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">y = h·x + n</text>
-<text x="634.0" y="218" text-anchor="end" font-size="9" fill="#888">T2.7</text>
+<text x="634.0" y="218" text-anchor="end" font-size="9" fill="#888">T2.9</text>
 <line x1="450" y1="224" x2="450" y2="234" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="260.0" y="234" width="380" height="48" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
 <text x="450" y="252" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">软解调</text>
 <text x="450" y="268" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">每RE→Q_m个LLR</text>
-<text x="634.0" y="276" text-anchor="end" font-size="9" fill="#888">T2.8–T2.9</text>
+<text x="634.0" y="276" text-anchor="end" font-size="9" fill="#888">T2.13–T2.14</text>
 <line x1="450" y1="282" x2="450" y2="292" stroke="#888" stroke-width="1.5" marker-end="url(#arrow)"/>
 <rect x="260.0" y="292" width="380" height="48" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
 <text x="450" y="310" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">速率恢复</text>
@@ -41,8 +41,8 @@
 <text x="670.0" y="128" font-size="10" fill="#6a1b9a">单抽头均衡 · 每子载波÷H_k</text>
 <text x="670.0" y="160" font-size="10" fill="#e65100">constellation symbol</text>
 <text x="670.0" y="176" font-size="10" fill="#e65100">非OFDM symbol（T2.1区分）</text>
-<text x="670.0" y="208" font-size="10" fill="#c62828">BPSK/QPSK: T2.8</text>
-<text x="670.0" y="224" font-size="10" fill="#c62828">16/64/256QAM: T2.9</text>
+<text x="670.0" y="208" font-size="10" fill="#c62828">BPSK/QPSK: T2.13</text>
+<text x="670.0" y="224" font-size="10" fill="#c62828">16/64/256QAM: T2.14</text>
 <text x="670.0" y="256" font-size="10" fill="#2e7d32">Turbo sub-block: T7</text>
 <text x="670.0" y="272" font-size="10" fill="#2e7d32">LDPC bit selection: T9</text>
 <text x="670.0" y="304" font-size="10" fill="#00695c">C个码块，各长度E_r</text>

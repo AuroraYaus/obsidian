@@ -424,7 +424,7 @@ frontmatter 沿用现有（type: definition、aliases、tags、source_spec 不�
 - **协议锚点**：
   - 译码器输入接口：TS 36.212/38.212 译码器要求（本地讲义 `T18.1_fixed_point_decoder_requirements`）
   - 仿真器口径：LLR 恒裁剪 ±31（6-bit signed）、48-bit SRAM word 装 8 个 LLR（PHY01 §12）
-- **图谱关联**：`[[概念图谱入口]]`、`[[LLR_对数似然比]]`、`[[Fixed_Point_Numbers_定点数]]`、`[[Soft_Demodulation_软解调]]`、`[[Detector_Comparison_检测器对比]]`；**必须保留现有 图谱关联 条目** `[[T2.11_LLR_clipping_scaling_quantization]]`、`[[T18.1_fixed_point_decoder_requirements]]`；关系语义：LLR 量化是软解调到译码器的格式转换；裁剪阈值决定动态范围预算，±31 同时吸收 MMSE 归一化放大。
+- **图谱关联**：`[[概念图谱入口]]`、`[[LLR_对数似然比]]`、`[[Fixed_Point_Numbers_定点数]]`、`[[Soft_Demodulation_软解调]]`、`[[Detector_Comparison_检测器对比]]`；**必须保留现有 图谱关联 条目** `[[T2.16_LLR_clipping_scaling_quantization]]`、`[[T18.1_fixed_point_decoder_requirements]]`；关系语义：LLR 量化是软解调到译码器的格式转换；裁剪阈值决定动态范围预算，±31 同时吸收 MMSE 归一化放大。
 
 - [ ] **Step 2: 结构验证**
 

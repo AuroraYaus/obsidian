@@ -40,7 +40,7 @@ LLR 像一个带方向的置信度刻度。`+8` 表示强烈相信 `0`，`+0.2` 
 
 - 调制与软解调来源：TS 36.211/TS 38.211 的调制、物理信道和资源映射章节。
 - 译码链路上下文：TS 36.212/TS 38.212 的 channel coding、rate matching 和接收侧逆操作说明。
-- 本地锚点示例：`docs/L1_基础/T1.5_LLR_soft_decision.md`；`docs/L1_基础/T2.8_BPSK_QPSK_soft_demapping.md`；`docs/L1_基础/T2.9_QAM_Max_Log_MAP_demapping.md`。
+- 本地锚点示例：`docs/L1_基础/T1.5_LLR_soft_decision.md`；`docs/L1_基础/T2.13_BPSK_QPSK_soft_demapping.md`；`docs/L1_基础/T2.14_QAM_Max_Log_MAP_demapping.md`。
 
 ## 图谱关联
 

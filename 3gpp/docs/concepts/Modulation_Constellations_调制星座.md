@@ -32,6 +32,6 @@ source_spec: "TS 36.211 §7.1; TS 38.211 §5.1"
 - [[AWGN_信道模型]]
 - [[LLR_对数似然比]]
 - [[Soft_Demodulation_软解调]]
-- [[T2.8_BPSK_QPSK_soft_demapping]]
-- [[T2.9_QAM_Max_Log_MAP_demapping]]
+- [[T2.13_BPSK_QPSK_soft_demapping]]
+- [[T2.14_QAM_Max_Log_MAP_demapping]]
 - 关系语义：调制星座决定软解调算法和 LLR 质量。

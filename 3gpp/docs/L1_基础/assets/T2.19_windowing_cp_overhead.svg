@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+@file    T2.19_windowing_cp_overhead.svg
+@brief   加窗消耗 CP 冗余示意图：同一 OFDM 符号时间轴上对比不加窗与加窗
+         时 CP 被多径尾巴与窗滚降占用的情况（教学参数：CP=72 samples、
+         多径尾=50、滚降=12，与正文手算例子一致）。
+@date    2026-08-04
+@note    时间轴为示意比例（真实 T_cp:T_u 约为 3.5%:96.5%），图注已声明。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560">
+<rect width="960" height="560" fill="#ffffff"/>
+<style>
+.title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 19px; font-weight: bold; fill: #111; }
+.label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 14px; fill: #222; }
+.small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #555; }
+.mono { font-family: monospace; font-size: 13px; fill: #333; }
+.axis { stroke: #444; stroke-width: 1.2; }
+.wincurve { stroke: #E64A19; stroke-width: 2; fill: none; }
+</style>
+
+<text x="480" y="32" text-anchor="middle" class="title">加窗消耗 CP 冗余：滚降从保护间隔里借时间</text>
+<text x="480" y="56" text-anchor="middle" class="small">教学参数：CP = 72 samples，多径尾巴 = 50 samples，窗滚降 = 12 samples；时间轴为示意比例，非真实 T_cp:T_u</text>
+
+<!-- ================= 上排：不加窗 ================= -->
+<text x="480" y="104" text-anchor="middle" class="label">不加窗（矩形符号）：CP 72 samples 全部可用于吸收多径</text>
+
+<rect x="152" y="165" width="78" height="34" fill="#FFF8E1" stroke="#FF8F00"/>
+<rect x="230" y="165" width="78" height="34" fill="#ECEFF1" stroke="#546E7A"/>
+<rect x="308" y="165" width="452" height="34" fill="#F3E5F5" stroke="#7B1FA2"/>
+<line x1="120" y1="210" x2="840" y2="210" class="axis"/>
+<line x1="230" y1="165" x2="230" y2="210" class="axis"/>
+<line x1="308" y1="165" x2="308" y2="210" class="axis"/>
+<line x1="760" y1="165" x2="760" y2="210" class="axis"/>
+
+<text x="269" y="186" text-anchor="middle" class="small" fill="#546E7A">CP：72</text>
+<text x="534" y="186" text-anchor="middle" class="small" fill="#7B1FA2">有用符号 T_u（示意）</text>
+<text x="191" y="152" text-anchor="middle" class="small">多径尾 50</text>
+<text x="330" y="228" text-anchor="middle" class="label" fill="#00838F">剩余余量 22 samples</text>
+<text x="191" y="228" text-anchor="middle" class="small">多径尾 50 samples</text>
+<text x="230" y="258" text-anchor="middle" class="small">t_start（符号起点）</text>
+<text x="330" y="258" text-anchor="middle" class="small">CP 结束</text>
+<text x="760" y="258" text-anchor="middle" class="small">t_start + T_symb</text>
+
+<!-- ================= 下排：加窗 ================= -->
+<text x="480" y="296" text-anchor="middle" class="label">加窗（滚降 12 samples）：上升沿与下降沿都占用保护时间</text>
+
+<rect x="230" y="345" width="13" height="34" fill="#FBE9E7" stroke="#E64A19"/>
+<rect x="243" y="345" width="41" height="34" fill="#FFF8E1" stroke="#FF8F00"/>
+<rect x="284" y="345" width="24" height="34" fill="#E0F7FA" stroke="#00838F"/>
+<rect x="308" y="345" width="452" height="34" fill="#F3E5F5" stroke="#7B1FA2"/>
+<rect x="760" y="345" width="13" height="34" fill="#FBE9E7" stroke="#E64A19"/>
+<line x1="120" y1="390" x2="840" y2="390" class="axis"/>
+<line x1="230" y1="345" x2="230" y2="390" class="axis"/>
+<line x1="308" y1="345" x2="308" y2="390" class="axis"/>
+<line x1="760" y1="345" x2="760" y2="390" class="axis"/>
+<path class="wincurve" d="M230,345 C236,345 241,345 243,345 M760,345 C766,345 771,345 773,345"/>
+
+<text x="236" y="330" text-anchor="middle" class="small" fill="#E64A19">滚降 12（上升沿）</text>
+<text x="766" y="330" text-anchor="middle" class="small" fill="#E64A19">滚降 12（下降沿）</text>
+<text x="534" y="366" text-anchor="middle" class="small" fill="#7B1FA2">有用符号 T_u</text>
+<text x="250" y="406" text-anchor="middle" class="small">多径尾 50 samples</text>
+<text x="296" y="426" text-anchor="middle" class="label" fill="#00838F">有效余量 10 samples</text>
+<text x="230" y="446" text-anchor="middle" class="small">t_start</text>
+<text x="330" y="446" text-anchor="middle" class="small">CP 结束</text>
+<text x="760" y="446" text-anchor="middle" class="small">t_start + T_symb</text>
+
+<!-- ================= 三种配置对比 ================= -->
+<rect x="120" y="474" width="200" height="58" rx="6" fill="#ECEFF1" stroke="#546E7A"/>
+<rect x="360" y="474" width="200" height="58" rx="6" fill="#E0F7FA" stroke="#00838F"/>
+<rect x="600" y="474" width="200" height="58" rx="6" fill="#FBE9E7" stroke="#E64A19"/>
+<text x="220" y="500" text-anchor="middle" class="label" fill="#546E7A">无窗</text>
+<text x="220" y="520" text-anchor="middle" class="mono">余量 22 samples</text>
+<text x="460" y="500" text-anchor="middle" class="label" fill="#00838F">滚降 12 samples</text>
+<text x="460" y="520" text-anchor="middle" class="mono">余量 10 samples</text>
+<text x="700" y="500" text-anchor="middle" class="label" fill="#E64A19">滚降 24 samples</text>
+<text x="700" y="520" text-anchor="middle" class="mono">余量 −2（失败）</text>
+</svg>

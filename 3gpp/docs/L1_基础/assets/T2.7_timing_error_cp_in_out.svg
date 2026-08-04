@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @file T2.7_timing_error_cp_in_out.svg
+     @brief CP 内误差 vs CP 外误差对比图：
+            场景①窗口起点在 CP 内（提前 4 采样）→ 循环卷积成立，仅频域线性相位（可被信道估计吸收）；
+            场景②窗口起点越出 CP（延后 12 采样）→ 循环卷积破坏，ISI/ICI 污染（子载波泄漏 + 星座 EVM 劣化）。
+     @date 2026-08-04
+     @note 左列时间条带（比例 2 px/采样），右列频域相位与星座观测；
+            场景②窗口尾部 12 个采样取自符号 N+1（橙红加深区）。
+            语义色系（按本节讲义自定）：有用数据=紫罗兰、CP/保护=深青、
+            污染/越界=橙红、中性=灰。 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 660" width="940" height="660">
+<rect width="940" height="660" fill="#ffffff"/>
+<style>
+.title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; }
+.label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; }
+.small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; }
+</style>
+
+<text x="470" y="32" text-anchor="middle" class="title" font-size="19" font-weight="bold" fill="#111">CP 内误差与 CP 外误差：两种截然不同的后果</text>
+<text x="470" y="56" text-anchor="middle" class="small" font-size="12" fill="#555">左列：FFT 窗口在符号条带上的位置；右列：对应的频域相位 / 子载波泄漏与星座观测</text>
+
+<text x="60" y="80" class="label" font-size="15" font-weight="bold" fill="#00695C">场景 ①：FFT 起点落在 CP 内（提前 4 采样）—— 循环卷积成立，仅相位参考平移</text>
+<text x="70" y="104" text-anchor="middle" class="small" font-size="12" fill="#333">CP</text>
+<text x="200" y="104" text-anchor="middle" class="small" font-size="12" fill="#333">T_u（N = 128）</text>
+<text x="368" y="104" text-anchor="middle" class="small" font-size="12" fill="#333">符号 N+1</text>
+
+<rect x="60" y="116" width="32" height="40" fill="#E0F2F1" stroke="#00897B" stroke-width="1.5"/>
+<rect x="92" y="116" width="256" height="40" fill="#EDE7F6" stroke="#5E35B1" stroke-width="1.5"/>
+<rect x="348" y="116" width="32" height="40" fill="#F5F5F5" stroke="#9E9E9E" stroke-width="1.2"/>
+<rect x="84" y="116" width="8" height="40" fill="#E0F2F1" opacity="0.55" stroke="#00897B" stroke-width="2.5" stroke-dasharray="7,3"/>
+<rect x="92" y="116" width="248" height="40" fill="#E0F2F1" opacity="0.55" stroke="#00897B" stroke-width="2.5" stroke-dasharray="7,3"/>
+
+<text x="60" y="178" class="small" font-size="12" fill="#333">窗口起点 m0−4（CP 内）：取 4 个 CP 采样补足一个完整循环周期</text>
+
+<text x="680" y="100" text-anchor="middle" class="label" font-size="15" font-weight="bold" fill="#5E35B1">频域观测：线性相位斜率</text>
+<rect x="460" y="115" width="440" height="140" fill="#FAFAFA" stroke="#444" stroke-width="1.2"/>
+<line x1="470" y1="140" x2="890" y2="250" stroke="#5E35B1" stroke-width="2.5"/>
+<text x="452" y="146" text-anchor="end" class="small" font-size="11" fill="#444">0</text>
+<text x="452" y="246" text-anchor="end" class="small" font-size="11" fill="#444">−(N−1)·2πΔm/N</text>
+<text x="470" y="276" text-anchor="middle" class="small" font-size="11" fill="#444">k = 0</text>
+<text x="886" y="276" text-anchor="middle" class="small" font-size="11" fill="#444">k = N−1</text>
+<text x="680" y="300" text-anchor="middle" class="small" font-size="12" fill="#5E35B1">相位斜率 = −2πΔm/N（每子载波）：沿 k 线性旋转，可被信道估计吸收</text>
+<text x="480" y="336" text-anchor="middle" class="small" font-size="12" fill="#333">信道估计吸收：估计到 Ĥ_k·e^(−j2πkΔm/N)，均衡后无系统残留——前提是窗口没有混入相邻符号</text>
+
+<line x1="60" y1="360" x2="880" y2="360" stroke="#9E9E9E" stroke-width="1.2"/>
+
+<text x="60" y="384" class="label" font-size="15" font-weight="bold" fill="#D84315">场景 ②：FFT 起点越出 CP（延后 12 采样）—— 循环卷积破坏，ISI + ICI</text>
+<text x="70" y="408" text-anchor="middle" class="small" font-size="12" fill="#333">CP</text>
+<text x="200" y="408" text-anchor="middle" class="small" font-size="12" fill="#333">T_u（N = 128）</text>
+<text x="368" y="408" text-anchor="middle" class="small" font-size="12" fill="#333">符号 N+1</text>
+
+<rect x="60" y="420" width="32" height="40" fill="#E0F2F1" stroke="#00897B" stroke-width="1.5"/>
+<rect x="92" y="420" width="256" height="40" fill="#EDE7F6" stroke="#5E35B1" stroke-width="1.5"/>
+<rect x="348" y="420" width="32" height="40" fill="#F5F5F5" stroke="#9E9E9E" stroke-width="1.2"/>
+<rect x="116" y="420" width="232" height="40" fill="#FBE9E7" opacity="0.55" stroke="#E64A19" stroke-width="2.5" stroke-dasharray="7,3"/>
+<rect x="348" y="420" width="24" height="40" fill="#FBE9E7" opacity="0.55" stroke="#E64A19" stroke-width="2.5" stroke-dasharray="7,3"/>
+<rect x="348" y="420" width="24" height="40" fill="#FFCCBC" stroke="#E64A19" stroke-width="1.5"/>
+
+<text x="60" y="482" class="small" font-size="12" fill="#333">窗口起点 m0+12：尾部 12 个采样越过边界，取自符号 N+1</text>
+
+<text x="580" y="400" text-anchor="middle" class="label" font-size="12" font-weight="bold" fill="#D84315">子载波泄漏示意</text>
+<rect x="460" y="420" width="240" height="150" fill="#FAFAFA" stroke="#444" stroke-width="1.2"/>
+<rect x="525" y="490" width="30" height="65" fill="#FFAB91" stroke="#E64A19" stroke-width="1.2"/>
+<rect x="565" y="450" width="30" height="105" fill="#E64A19" stroke="#BF360C" stroke-width="1.2"/>
+<rect x="605" y="490" width="30" height="65" fill="#FFAB91" stroke="#E64A19" stroke-width="1.2"/>
+<text x="540" y="440" text-anchor="middle" class="small" font-size="11" fill="#444">k−1</text>
+<text x="580" y="440" text-anchor="middle" class="small" font-size="11" fill="#444">k</text>
+<text x="620" y="440" text-anchor="middle" class="small" font-size="11" fill="#444">k+1</text>
+<text x="580" y="590" text-anchor="middle" class="small" font-size="11" fill="#D84315">其他子载波能量泄漏进来（ICI）</text>
+
+<text x="810" y="400" text-anchor="middle" class="label" font-size="12" font-weight="bold" fill="#D84315">均衡后星座散点</text>
+<rect x="720" y="420" width="180" height="150" fill="#FAFAFA" stroke="#444" stroke-width="1.2"/>
+<line x1="780" y1="470" x2="790" y2="470" stroke="#5E35B1" stroke-width="2"/>
+<line x1="785" y1="465" x2="785" y2="475" stroke="#5E35B1" stroke-width="2"/>
+<line x1="830" y1="470" x2="840" y2="470" stroke="#5E35B1" stroke-width="2"/>
+<line x1="835" y1="465" x2="835" y2="475" stroke="#5E35B1" stroke-width="2"/>
+<line x1="780" y1="520" x2="790" y2="520" stroke="#5E35B1" stroke-width="2"/>
+<line x1="785" y1="515" x2="785" y2="525" stroke="#5E35B1" stroke-width="2"/>
+<line x1="830" y1="520" x2="840" y2="520" stroke="#5E35B1" stroke-width="2"/>
+<line x1="835" y1="515" x2="835" y2="525" stroke="#5E35B1" stroke-width="2"/>
+<circle cx="786" cy="464" r="2.5" fill="#E64A19"/>
+<circle cx="794" cy="474" r="2.5" fill="#E64A19"/>
+<circle cx="780" cy="478" r="2.5" fill="#E64A19"/>
+<circle cx="836" cy="462" r="2.5" fill="#E64A19"/>
+<circle cx="842" cy="474" r="2.5" fill="#E64A19"/>
+<circle cx="832" cy="468" r="2.5" fill="#E64A19"/>
+<circle cx="784" cy="524" r="2.5" fill="#E64A19"/>
+<circle cx="794" cy="532" r="2.5" fill="#E64A19"/>
+<circle cx="778" cy="530" r="2.5" fill="#E64A19"/>
+<circle cx="836" cy="526" r="2.5" fill="#E64A19"/>
+<circle cx="842" cy="516" r="2.5" fill="#E64A19"/>
+<circle cx="832" cy="534" r="2.5" fill="#E64A19"/>
+<circle cx="776" cy="472" r="2.5" fill="#E64A19"/>
+<circle cx="790" cy="468" r="2.5" fill="#E64A19"/>
+<circle cx="788" cy="480" r="2.5" fill="#E64A19"/>
+<circle cx="826" cy="522" r="2.5" fill="#E64A19"/>
+<circle cx="830" cy="512" r="2.5" fill="#E64A19"/>
+<circle cx="838" cy="530" r="2.5" fill="#E64A19"/>
+<circle cx="786" cy="516" r="2.5" fill="#E64A19"/>
+<circle cx="792" cy="508" r="2.5" fill="#E64A19"/>
+<circle cx="780" cy="522" r="2.5" fill="#E64A19"/>
+<circle cx="834" cy="486" r="2.5" fill="#E64A19"/>
+<circle cx="842" cy="482" r="2.5" fill="#E64A19"/>
+<circle cx="828" cy="490" r="2.5" fill="#E64A19"/>
+<text x="810" y="590" text-anchor="middle" class="small" font-size="11" fill="#D84315">均衡后 QPSK 散点：EVM 增大，LLR 幅度失真</text>
+
+<text x="480" y="626" text-anchor="middle" class="small" font-size="12" fill="#333">CP 外误差：FFT 输入 = 两个符号数据混叠 → 子载波正交性丧失，全部子载波互相污染（ISI + ICI），线性相位模型不再成立</text>
+</svg>

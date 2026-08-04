@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T2.10_channel_estimation_error_constellation.svg
+  @brief   理想估计 vs 欠采样估计（快速衰落 + 稀疏 DM-RS）均衡后星座对比：相位残差旋转、幅度残差缩放、判决翻转
+  @date    2026-08-04
+  @note    ① 左面板：理想估计（低速/高密度 DM-RS），均衡后点紧贴发送星座，全部正确判决；
+② 右面板：欠采样估计（快速衰落），残余相位把整片星座旋转约 18°，个别点越过判决边界 → 误判；
+③ 空心圆 = 发送星座参考位置；实心点 = 均衡后接收点；
+④ 底部：256QAM 敏感性与接收机诊断字段。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 640" role="img">
+<title>信道估计误差对均衡后星座的影响</title>
+<rect width="900" height="640" fill="#ffffff"/>
+<style>
+.title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 18px; font-weight: bold; fill: #111; }
+.label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 13px; fill: #222; }
+.small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #555; }
+.mono { font-family: monospace; font-size: 13px; fill: #333; }
+</style>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#37474F"/></marker></defs>
+<text x="450" y="34" font-size="18" text-anchor="middle" class="free" font-weight="bold">信道估计误差对均衡后星座的影响</text>
+<text x="450" y="58" font-size="12" text-anchor="middle" class="free">Ĥ 幅度误差 → 星座缩放；Ĥ 相位误差 → 星座旋转；快衰落 + 稀疏 DM-RS 时插值跟不上 → 判决错误</text>
+<circle cx="70" cy="84" r="5" fill="#00897B"/>
+<text x="82" y="89" font-size="13" text-anchor="start" class="free">理想估计均衡后点</text>
+<circle cx="240" cy="84" r="5" fill="#AD1457"/>
+<text x="252" y="89" font-size="13" text-anchor="start" class="free">欠采样估计均衡后点</text>
+<circle cx="430" cy="84" r="6" fill="none" stroke="#90A4AE" stroke-width="1.8"/>
+<text x="442" y="89" font-size="13" text-anchor="start" class="free">发送星座参考位置</text>
+<rect x="60" y="104" width="380" height="396" rx="8" fill="#FDFDFB" stroke="#90A4AE" stroke-width="1.5"/>
+<text x="250" y="130" font-size="15" text-anchor="middle" class="free" font-weight="bold" fill="#00897B">理想估计（低速 / 高密度 DM-RS）</text>
+<line x1="250" y1="150" x2="250" y2="470" stroke="#B0BEC5" stroke-width="1.2" stroke-dasharray="6,5"/>
+<line x1="90" y1="296" x2="410" y2="296" stroke="#B0BEC5" stroke-width="1.2" stroke-dasharray="6,5"/>
+<circle cx="190" cy="236" r="7" fill="none" stroke="#78909C" stroke-width="1.6"/>
+<circle cx="310" cy="236" r="7" fill="none" stroke="#78909C" stroke-width="1.6"/>
+<circle cx="190" cy="356" r="7" fill="none" stroke="#78909C" stroke-width="1.6"/>
+<circle cx="310" cy="356" r="7" fill="none" stroke="#78909C" stroke-width="1.6"/>
+<circle cx="186" cy="232" r="3.5" fill="#00897B"/>
+<circle cx="194" cy="240" r="3.5" fill="#00897B"/>
+<circle cx="188" cy="242" r="3.5" fill="#00897B"/>
+<circle cx="192" cy="230" r="3.5" fill="#00897B"/>
+<circle cx="183" cy="238" r="3.5" fill="#00897B"/>
+<circle cx="197" cy="234" r="3.5" fill="#00897B"/>
+<circle cx="306" cy="232" r="3.5" fill="#00897B"/>
+<circle cx="314" cy="240" r="3.5" fill="#00897B"/>
+<circle cx="308" cy="242" r="3.5" fill="#00897B"/>
+<circle cx="312" cy="230" r="3.5" fill="#00897B"/>
+<circle cx="303" cy="238" r="3.5" fill="#00897B"/>
+<circle cx="317" cy="234" r="3.5" fill="#00897B"/>
+<circle cx="186" cy="352" r="3.5" fill="#00897B"/>
+<circle cx="194" cy="360" r="3.5" fill="#00897B"/>
+<circle cx="188" cy="362" r="3.5" fill="#00897B"/>
+<circle cx="192" cy="350" r="3.5" fill="#00897B"/>
+<circle cx="183" cy="358" r="3.5" fill="#00897B"/>
+<circle cx="197" cy="354" r="3.5" fill="#00897B"/>
+<circle cx="306" cy="352" r="3.5" fill="#00897B"/>
+<circle cx="314" cy="360" r="3.5" fill="#00897B"/>
+<circle cx="308" cy="362" r="3.5" fill="#00897B"/>
+<circle cx="312" cy="350" r="3.5" fill="#00897B"/>
+<circle cx="303" cy="358" r="3.5" fill="#00897B"/>
+<circle cx="317" cy="354" r="3.5" fill="#00897B"/>
+<text x="250" y="476" font-size="12" text-anchor="middle" class="free">均衡后点紧贴发送位置，全部正确判决</text>
+<rect x="480" y="104" width="380" height="396" rx="8" fill="#FDFDFB" stroke="#90A4AE" stroke-width="1.5"/>
+<text x="670" y="130" font-size="15" text-anchor="middle" class="free" font-weight="bold" fill="#AD1457">欠采样估计（快速衰落 / 低密度 DM-RS）</text>
+<line x1="670" y1="150" x2="670" y2="470" stroke="#B0BEC5" stroke-width="1.2" stroke-dasharray="6,5"/>
+<line x1="510" y1="296" x2="830" y2="296" stroke="#B0BEC5" stroke-width="1.2" stroke-dasharray="6,5"/>
+<circle cx="610" cy="236" r="7" fill="none" stroke="#9E9E9E" stroke-width="1.6"/>
+<circle cx="730" cy="236" r="7" fill="none" stroke="#9E9E9E" stroke-width="1.6"/>
+<circle cx="610" cy="356" r="7" fill="none" stroke="#9E9E9E" stroke-width="1.6"/>
+<circle cx="730" cy="356" r="7" fill="none" stroke="#9E9E9E" stroke-width="1.6"/>
+<circle cx="632" cy="224" r="3.5" fill="#AD1457"/>
+<circle cx="636" cy="230" r="3.5" fill="#AD1457"/>
+<circle cx="626" cy="220" r="3.5" fill="#AD1457"/>
+<circle cx="634" cy="232" r="3.5" fill="#AD1457"/>
+<circle cx="628" cy="227" r="3.5" fill="#AD1457"/>
+<circle cx="744" cy="262" r="3.5" fill="#AD1457"/>
+<circle cx="750" cy="266" r="3.5" fill="#AD1457"/>
+<circle cx="740" cy="258" r="3.5" fill="#AD1457"/>
+<circle cx="749" cy="270" r="3.5" fill="#AD1457"/>
+<circle cx="741" cy="255" r="3.5" fill="#AD1457"/>
+<circle cx="594" cy="338" r="3.5" fill="#AD1457"/>
+<circle cx="598" cy="344" r="3.5" fill="#AD1457"/>
+<circle cx="588" cy="334" r="3.5" fill="#AD1457"/>
+<circle cx="596" cy="346" r="3.5" fill="#AD1457"/>
+<circle cx="590" cy="341" r="3.5" fill="#AD1457"/>
+<circle cx="708" cy="375" r="3.5" fill="#AD1457"/>
+<circle cx="712" cy="381" r="3.5" fill="#AD1457"/>
+<circle cx="702" cy="371" r="3.5" fill="#AD1457"/>
+<circle cx="710" cy="383" r="3.5" fill="#AD1457"/>
+<circle cx="704" cy="378" r="3.5" fill="#AD1457"/>
+<circle cx="663" cy="268" r="8" fill="none" stroke="#AD1457" stroke-width="2"/>
+<circle cx="663" cy="268" r="3.5" fill="#AD1457"/>
+<text x="663" y="246" font-size="12" text-anchor="middle" class="free" fill="#AD1457">误判：落入相邻判决区</text>
+<text x="670" y="476" font-size="12" text-anchor="middle" class="free">残余相位把整片星座旋转约 18°；幅度残差扩大散布 → 越界误判</text>
+<rect x="60" y="520" width="380" height="100" rx="6" fill="#FFFFFF" stroke="#3F51B5" stroke-width="1.4"/>
+<text x="76" y="542" font-size="14" text-anchor="start" class="free" font-weight="bold" fill="#3F51B5">为什么 256QAM 更敏感</text>
+<text x="76" y="566" font-size="13" text-anchor="start" class="free">256QAM 归一化星座间距 d_min ≈ 0.15（2/√170）</text>
+<text x="76" y="590" font-size="13" text-anchor="start" class="free">估计偏差超过 d_min/2 ≈ 0.08 即硬判决翻转</text>
+<text x="76" y="612" font-size="13" text-anchor="start" class="free">相位残差 → 旋转；幅度残差 → 缩放</text>
+<rect x="480" y="520" width="380" height="100" rx="6" fill="#FFFFFF" stroke="#00897B" stroke-width="1.4"/>
+<text x="496" y="542" font-size="14" text-anchor="start" class="free" font-weight="bold" fill="#00897B">诊断字段（接收机）</text>
+<text x="496" y="566" font-size="13" text-anchor="start" class="free">pilot residual 与 data EVM 分开记录</text>
+<text x="496" y="590" font-size="13" text-anchor="start" class="free">Ĥ 幅相 heatmap：按 PRB × 符号展开</text>
+<text x="496" y="612" font-size="13" text-anchor="start" class="free">频域条纹 → 插值问题；时域条纹 → Doppler</text>
+<text x="450" y="642" font-size="12" text-anchor="middle" class="free">仿真验证：同时跑 perfect 与 practical 两条曲线，差值即信道估计损失</text>
+</svg>

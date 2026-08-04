@@ -69,7 +69,7 @@ source_spec: "Engineering methodology; decoder input signal conditioning"
 - [[Fixed_Point_Numbers_定点数]]
 - [[Soft_Demodulation_软解调]]
 - [[Detector_Comparison_检测器对比]]
-- [[T2.11_LLR_clipping_scaling_quantization]]
+- [[T2.16_LLR_clipping_scaling_quantization]]
 - [[T18.1_fixed_point_decoder_requirements]]
 - [[T21.3_llr_dynamic_range_clipping_tradeoff]]
 - 关系语义：LLR 量化是软解调到译码器的格式转换；裁剪阈值决定动态范围预算，±31 同时吸收 MMSE 归一化放大。

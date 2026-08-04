@@ -211,7 +211,7 @@ Task-count summary:
 | Module | Count | Range |
 |:---|---:|:---|
 | M1 | 6 | T1.1-T1.6 |
-| M2 | 5 | T2.1-T2.5 |
+| M2 | 5 | T2.1-T2.4 |
 | M3 | 5 | T3.1-T3.5 |
 | M4 | 6 | T4.1-T4.6 |
 | M5 | 5 | T5.1-T5.5 |
@@ -340,25 +340,25 @@ Decoder-family coverage:
 | `验收` | Learner can compute approximate bit LLR for a 16QAM symbol and explain complexity growth for higher QAM. |
 | `3GPP/证据` | TS 38.214 Rel-19 `38214-j30` MCS modulation order sections §5.1.3/§6.1.4; TS 38.211 modulation clauses `待核验`; LTE anchors `待核验`. Local evidence path(s): TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
-##### T2.4 Fading Channels and LLR Reliability
-
-| Item | Requirement |
-|:---|:---|
-| `编号` | T2.4 |
-| `前置` | T2.1, T2.2 |
-| `Prompt` | Explain Rayleigh/Rician fading at decoder input level, channel equalization output, and how channel gain changes LLR reliability. Keep the focus on what the decoder sees: soft bits plus reliability. Include one single-tap fading example. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1_基础/T2.4_fading_channel_LLR_reliability.md` |
-| `验收` | Learner can explain why equalized symbols with low channel gain should have smaller LLR magnitude. |
-| `3GPP/证据` | Background task. Link to physical channel and demodulation context in TS 36.211 Rel-19 `36211-j30_*` / TS 38.211 Rel-19 `38211-j30`, exact anchors `待核验`. Local evidence path(s): TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (exact part `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
-
-##### T2.5 LLR Clipping, Scaling, and Quantization Preview
+##### T2.5 Fading Channels and LLR Reliability
 
 | Item | Requirement |
 |:---|:---|
 | `编号` | T2.5 |
+| `前置` | T2.1, T2.2 |
+| `Prompt` | Explain Rayleigh/Rician fading at decoder input level, channel equalization output, and how channel gain changes LLR reliability. Keep the focus on what the decoder sees: soft bits plus reliability. Include one single-tap fading example. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
+| `产出` | `docs/L1_基础/T2.5_fading_channel_LLR_reliability.md` |
+| `验收` | Learner can explain why equalized symbols with low channel gain should have smaller LLR magnitude. |
+| `3GPP/证据` | Background task. Link to physical channel and demodulation context in TS 36.211 Rel-19 `36211-j30_*` / TS 38.211 Rel-19 `38211-j30`, exact anchors `待核验`. Local evidence path(s): TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (exact part `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
+
+##### T2.4 LLR Clipping, Scaling, and Quantization Preview
+
+| Item | Requirement |
+|:---|:---|
+| `编号` | T2.4 |
 | `前置` | T1.5, T2.1 |
 | `Prompt` | Introduce LLR clipping, scaling, quantization, saturation, and why fixed-point decoders cannot keep infinite precision. Include examples of overconfident LLR, under-scaled LLR, and sign error. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1_基础/T2.5_LLR_clipping_scaling_quantization.md` |
+| `产出` | `docs/L1_基础/T2.4_LLR_clipping_scaling_quantization.md` |
 | `验收` | Learner can explain why LLR magnitude saturation changes decoder behavior and identify a likely LLR sign convention bug. |
 | `3GPP/证据` | No direct 3GPP citation required for the quantization concept. Downstream decoder-family articles must cite their own Rel-19 protocol evidence. |
 
@@ -448,7 +448,7 @@ Decoder-family coverage:
 | Item | Requirement |
 |:---|:---|
 | `编号` | T4.3 |
-| `前置` | T1.5, T2.5 |
+| `前置` | T1.5, T2.4 |
 | `Prompt` | Explain hybrid automatic repeat request (HARQ), redundancy version, soft buffer, Chase combining vs incremental redundancy intuition, and why decoder input accumulates LLRs across transmissions. Include one soft-combining numeric example. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
 | `产出` | `docs/L1_基础/T4.3_HARQ_soft_combining_basics.md` |
 | `验收` | Learner can explain why retransmission LLRs are added or placed into a circular-buffer-derived soft buffer. |
@@ -494,7 +494,7 @@ Decoder-family coverage:
 | Item | Requirement |
 |:---|:---|
 | `编号` | T5.1 |
-| `前置` | T2.5 |
+| `前置` | T2.4 |
 | `Prompt` | Teach signed fixed-point representation, two's complement, integer/fraction split, saturation, rounding, and clipping for decoder LLR processing. Include Q-format examples and Python bit-level checks. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
 | `产出` | `docs/L1_基础/T5.1_fixed_point_numbers_for_LLR.md` |
 | `验收` | Learner can encode and decode signed fixed-point LLR values and explain saturation. |

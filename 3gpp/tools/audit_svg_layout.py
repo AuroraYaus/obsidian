@@ -10,7 +10,7 @@
      (4) text-text 无重叠；
      (5) 箭头 path 终点落在某条盒边上（容差 2px）；
      (6) 文本框边界与框外文字/其他文本框保持适当距离（投影间距 ≥ 8px，
-         含 class="free" 的框外文字——教训来源 2026-08-04 T2.14 图 3
+         含 class="free" 的框外文字——教训来源 2026-08-04 T2.10 图 3
          "仿真验证"文字与上方 rect 下边界仅约 2px）。
      字体测量用系统 Noto Sans CJK（Regular/Bold），与 SVG font-family 栈首项一致。
 @usage python3 tools/audit_svg_layout.py <svg 文件...>

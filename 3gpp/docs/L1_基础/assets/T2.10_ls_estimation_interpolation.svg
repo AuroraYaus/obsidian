@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T2.10_ls_estimation_interpolation.svg
+  @brief   从接收网格到全网格 Ĥ 的接收机链路：LS 除法 + 频率维/时间维插值；插值器与估计器均为接收机实现自由度
+  @date    2026-08-04
+  @note    ① 上排链路：接收网格 → 提取 DM-RS → LS 除法；下排：频率维插值 → 时间维插值 → 全网格 Ĥ；
+② 左下小网格：实色 = 导频（已得 Ĥ_LS），空白 = 待插值数据 RE；
+③ 边界双箭头示意频率维（沿 k）与时间维（沿 l）插值方向；
+④ 右下：插值器选项、欠采样判据（相干带宽/相干时间 vs 导频间隔）。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="670" viewBox="0 0 900 670" role="img">
+<title>LS 估计与二维插值链路</title>
+<rect width="900" height="670" fill="#ffffff"/>
+<style>
+.title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 18px; font-weight: bold; fill: #111; }
+.label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 13px; fill: #222; }
+.small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #555; }
+.mono { font-family: monospace; font-size: 13px; fill: #333; }
+</style>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#37474F"/></marker></defs>
+<text x="450" y="34" font-size="18" text-anchor="middle" class="free" font-weight="bold">LS 估计与二维插值：从 DM-RS 到全网格 Ĥ[k,l]</text>
+<text x="450" y="58" font-size="12" text-anchor="middle" class="free">先除法得到导频点估计，再沿频率维与时间维插值；插值器、滤波器与估计器均为接收机实现自由度</text>
+<rect x="60" y="96" width="200" height="104" rx="6" fill="#E8EAF6" stroke="#3F51B5" stroke-width="1.6"/>
+<text x="160" y="120" font-size="14" text-anchor="middle" class="free" font-weight="bold" fill="#3F51B5">① 接收网格 Y[k,l]</text>
+<text x="160" y="146" font-size="13" text-anchor="middle" class="free">FFT 输出：数据 + DM-RS</text>
+<text x="160" y="168" font-size="13" text-anchor="middle" class="free">信道与噪声混叠其中</text>
+<text x="160" y="190" font-size="13" text-anchor="middle" class="free">每个 RE 一个复数</text>
+<rect x="300" y="96" width="210" height="104" rx="6" fill="#E8EAF6" stroke="#3F51B5" stroke-width="1.6"/>
+<text x="405" y="120" font-size="14" text-anchor="middle" class="free" font-weight="bold" fill="#3F51B5">② 提取 DM-RS RE</text>
+<text x="405" y="146" font-size="13" text-anchor="middle" class="free">按 §7.4.1.1.2 位置表取</text>
+<text x="405" y="168" font-size="13" text-anchor="middle" class="free">已知 X_p、测得 Y_p</text>
+<text x="405" y="190" font-size="13" text-anchor="middle" class="free">每个导频得一个 Y/X 对</text>
+<rect x="550" y="96" width="200" height="104" rx="6" fill="#E8EAF6" stroke="#3F51B5" stroke-width="1.6"/>
+<text x="650" y="120" font-size="14" text-anchor="middle" class="free" font-weight="bold" fill="#3F51B5">③ LS 除法 Ĥ_p=Y_p/X_p</text>
+<text x="650" y="146" font-size="13" text-anchor="middle" class="free">逐导频一次复数除法</text>
+<text x="650" y="168" font-size="13" text-anchor="middle" class="free">噪声进入估计：Ĥ=H+N/X</text>
+<text x="650" y="190" font-size="13" text-anchor="middle" class="free">不需要信道统计先验</text>
+<path d="M 264,148 L 300,148" stroke="#37474F" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+<path d="M 514,148 L 550,148" stroke="#37474F" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+<rect x="60" y="250" width="200" height="104" rx="6" fill="#E0F2F1" stroke="#00897B" stroke-width="1.6"/>
+<text x="160" y="274" font-size="14" text-anchor="middle" class="free" font-weight="bold" fill="#00897B">④ 频率维插值（沿 k）</text>
+<text x="160" y="300" font-size="13" text-anchor="middle" class="free">相邻子载波信道响应平滑</text>
+<text x="160" y="322" font-size="13" text-anchor="middle" class="free">线性 / DFT / MMSE 均可</text>
+<text x="160" y="344" font-size="13" text-anchor="middle" class="free">边界处退化为外推</text>
+<rect x="300" y="250" width="210" height="104" rx="6" fill="#E0F2F1" stroke="#00897B" stroke-width="1.6"/>
+<text x="405" y="274" font-size="14" text-anchor="middle" class="free" font-weight="bold" fill="#00897B">⑤ 时间维插值（沿 l）</text>
+<text x="405" y="300" font-size="13" text-anchor="middle" class="free">相邻 OFDM 符号信道平滑</text>
+<text x="405" y="322" font-size="13" text-anchor="middle" class="free">Doppler 大 → 需更密 DM-RS</text>
+<text x="405" y="344" font-size="13" text-anchor="middle" class="free">slot 边缘只剩外推</text>
+<rect x="550" y="250" width="200" height="104" rx="6" fill="#ECEFF1" stroke="#37474F" stroke-width="2.0"/>
+<text x="650" y="274" font-size="14" text-anchor="middle" class="free" font-weight="bold" fill="#37474F">⑥ 全网格 Ĥ[k,l]</text>
+<text x="650" y="300" font-size="13" text-anchor="middle" class="free">供均衡、CSI、LLR 使用</text>
+<text x="650" y="322" font-size="13" text-anchor="middle" class="free">误差沿链路逐级放大</text>
+<text x="650" y="344" font-size="13" text-anchor="middle" class="free">导频处应回代校验</text>
+<path d="M 650,204 L 650,232 L 260,250" stroke="#37474F" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+<path d="M 264,302 L 300,302" stroke="#37474F" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+<path d="M 514,302 L 550,302" stroke="#37474F" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+<rect x="150" y="424" width="26" height="22" rx="0" fill="#FFF8E1" stroke="#FF8F00" stroke-width="1.5"/>
+<text x="161" y="444.7" font-size="13" text-anchor="middle" class="free" fill="#B26A00">Ĥ</text>
+<rect x="150" y="446" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="150" y="468" width="26" height="22" rx="0" fill="#FFF8E1" stroke="#FF8F00" stroke-width="1.5"/>
+<text x="161" y="488.7" font-size="13" text-anchor="middle" class="free" fill="#B26A00">Ĥ</text>
+<rect x="150" y="490" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="150" y="512" width="26" height="22" rx="0" fill="#FFF8E1" stroke="#FF8F00" stroke-width="1.5"/>
+<text x="161" y="532.7" font-size="13" text-anchor="middle" class="free" fill="#B26A00">Ĥ</text>
+<rect x="150" y="534" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="150" y="556" width="26" height="22" rx="0" fill="#FFF8E1" stroke="#FF8F00" stroke-width="1.5"/>
+<text x="161" y="576.7" font-size="13" text-anchor="middle" class="free" fill="#B26A00">Ĥ</text>
+<rect x="150" y="578" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="176" y="424" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="176" y="446" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="176" y="468" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="176" y="490" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="176" y="512" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="176" y="534" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="176" y="556" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="176" y="578" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="202" y="424" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="202" y="446" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="202" y="468" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="202" y="490" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="202" y="512" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="202" y="534" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="202" y="556" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="202" y="578" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="228" y="424" width="26" height="22" rx="0" fill="#FFF8E1" stroke="#FF8F00" stroke-width="1.5"/>
+<text x="234" y="444.7" font-size="13" text-anchor="middle" class="free" fill="#B26A00">Ĥ</text>
+<rect x="228" y="446" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="228" y="468" width="26" height="22" rx="0" fill="#FFF8E1" stroke="#FF8F00" stroke-width="1.5"/>
+<text x="234" y="488.7" font-size="13" text-anchor="middle" class="free" fill="#B26A00">Ĥ</text>
+<rect x="228" y="490" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="228" y="512" width="26" height="22" rx="0" fill="#FFF8E1" stroke="#FF8F00" stroke-width="1.5"/>
+<text x="234" y="532.7" font-size="13" text-anchor="middle" class="free" fill="#B26A00">Ĥ</text>
+<rect x="228" y="534" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="228" y="556" width="26" height="22" rx="0" fill="#FFF8E1" stroke="#FF8F00" stroke-width="1.5"/>
+<text x="234" y="576.7" font-size="13" text-anchor="middle" class="free" fill="#B26A00">Ĥ</text>
+<rect x="228" y="578" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="254" y="424" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="254" y="446" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="254" y="468" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="254" y="490" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="254" y="512" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="254" y="534" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="254" y="556" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="254" y="578" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="280" y="424" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="280" y="446" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="280" y="468" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="280" y="490" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="280" y="512" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="280" y="534" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="280" y="556" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<rect x="280" y="578" width="26" height="22" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
+<text x="142" y="439" font-size="11" text-anchor="end" class="free">k=0</text>
+<text x="142" y="483" font-size="11" text-anchor="end" class="free">k=2</text>
+<text x="142" y="527" font-size="11" text-anchor="end" class="free">k=4</text>
+<text x="142" y="571" font-size="11" text-anchor="end" class="free">k=6</text>
+<text x="128" y="511.7" font-size="12" text-anchor="start" class="free" transform="rotate(-90,128,511.7)">频域 → k</text>
+<text x="163" y="618" font-size="11" text-anchor="middle" class="free">l=0</text>
+<text x="189" y="618" font-size="11" text-anchor="middle" class="free">l=1</text>
+<text x="215" y="618" font-size="11" text-anchor="middle" class="free">l=2</text>
+<text x="241" y="618" font-size="11" text-anchor="middle" class="free">l=3</text>
+<text x="267" y="618" font-size="11" text-anchor="middle" class="free">l=4</text>
+<text x="293" y="618" font-size="11" text-anchor="middle" class="free">l=5</text>
+<text x="228" y="638" font-size="12" text-anchor="middle" class="free">时域 → l（6 个 OFDM 符号示意）</text>
+<line x1="176" y1="446" x2="176" y2="490" stroke="#3F51B5" stroke-width="1.6"/>
+<polygon points="176,446 170,454 182,454"/>
+<polygon points="176,490 170,482 182,482"/>
+<line x1="176" y1="446" x2="228" y2="446" stroke="#7B1FA2" stroke-width="1.6"/>
+<polygon points="228,446 220,440 220,452"/>
+<polygon points="176,446 184,440 184,452"/>
+<text x="350" y="436" font-size="13" text-anchor="start" class="free" font-weight="bold" fill="#3F51B5">频率维插值：沿 k（子载波）方向</text>
+<text x="350" y="462" font-size="13" text-anchor="start" class="free" font-weight="bold" fill="#7B1FA2">时间维插值：沿 l（符号）方向</text>
+<rect x="350" y="480" width="530" height="74" rx="6" fill="#FFFFFF" stroke="#AD1457" stroke-width="1.4"/>
+<text x="368" y="500" font-size="13" text-anchor="start" class="free" font-weight="bold" fill="#AD1457">欠采样判据（插值失效边界）</text>
+<text x="368" y="524" font-size="12" text-anchor="start" class="free">频域：相干带宽 B_c &lt; 2×Δk×SCS → 频域欠采样</text>
+<text x="368" y="546" font-size="12" text-anchor="start" class="free">时域：相干时间 T_c &lt; Δl×T_sym → 时域欠采样</text>
+<text x="350" y="580" font-size="13" text-anchor="start" class="free" font-weight="bold">插值器选项（接收机实现自由度）</text>
+<text x="350" y="598" font-size="12" text-anchor="start" class="free">线性插值：简单，但假设强；DFT 插值：时域加窗截断</text>
+<text x="350" y="620" font-size="12" text-anchor="start" class="free">MMSE/Wiener：最优，但需信道统计与矩阵求逆</text>
+<text x="228" y="660" font-size="12" text-anchor="middle" class="free">实色 = 导频位置（已得 Ĥ_LS）；空白 = 待插值的数据 RE</text>
+</svg>
