@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="660" viewBox="0 0 1040 660">
+<rect x="0" y="0" width="1040" height="660" fill="#FFFFFF"/>
+<text x="520" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#17212F">裁剪-损失权衡曲线：LLR 裁剪阈值 vs BLER 损失</text>
+<text x="520" y="68" text-anchor="middle" font-size="14" fill="#596879">素材口径：1024QAM 软解调 · 52PRB 链路仿真 · 损失为表上界</text>
+<rect x="699.5" y="486.7" width="290.5" height="73.3" fill="#FEF3C7" opacity="0.55"/>
+<text x="715" y="524" font-size="13" fill="#92400E">收益封顶区：损失 ≤ 0.02 dB</text>
+<text x="715" y="548" font-size="13" fill="#92400E">位宽成本线性上涨</text>
+<line x1="90" y1="413.3" x2="990" y2="413.3" stroke="#E5E7EB" stroke-width="1"/>
+<line x1="90" y1="340.0" x2="990" y2="340.0" stroke="#E5E7EB" stroke-width="1"/>
+<line x1="90" y1="266.7" x2="990" y2="266.7" stroke="#E5E7EB" stroke-width="1"/>
+<line x1="90" y1="193.3" x2="990" y2="193.3" stroke="#E5E7EB" stroke-width="1"/>
+<line x1="90" y1="486.7" x2="990" y2="486.7" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="6 4"/>
+<line x1="699.5" y1="120" x2="699.5" y2="491.7" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="6 4"/>
+<line x1="90" y1="560" x2="990" y2="560" stroke="#374151" stroke-width="1.5"/>
+<line x1="90" y1="120" x2="90" y2="560" stroke="#374151" stroke-width="1.5"/>
+<line x1="84" y1="560.0" x2="90" y2="560.0" stroke="#374151" stroke-width="1"/>
+<text x="68" y="564.0" text-anchor="end" font-size="13" fill="#374151">0.00</text>
+<line x1="84" y1="486.7" x2="90" y2="486.7" stroke="#374151" stroke-width="1"/>
+<text x="68" y="490.7" text-anchor="end" font-size="13" fill="#374151">0.02</text>
+<line x1="84" y1="413.3" x2="90" y2="413.3" stroke="#374151" stroke-width="1"/>
+<text x="68" y="417.3" text-anchor="end" font-size="13" fill="#374151">0.04</text>
+<line x1="84" y1="340.0" x2="90" y2="340.0" stroke="#374151" stroke-width="1"/>
+<text x="68" y="344.0" text-anchor="end" font-size="13" fill="#374151">0.06</text>
+<line x1="84" y1="266.7" x2="90" y2="266.7" stroke="#374151" stroke-width="1"/>
+<text x="68" y="270.7" text-anchor="end" font-size="13" fill="#374151">0.08</text>
+<line x1="84" y1="193.3" x2="90" y2="193.3" stroke="#374151" stroke-width="1"/>
+<text x="68" y="197.3" text-anchor="end" font-size="13" fill="#374151">0.10</text>
+<line x1="84" y1="120.0" x2="90" y2="120.0" stroke="#374151" stroke-width="1"/>
+<text x="68" y="124.0" text-anchor="end" font-size="13" fill="#374151">0.12</text>
+<line x1="90.0" y1="560" x2="90.0" y2="566" stroke="#374151" stroke-width="1"/>
+<line x1="402.2" y1="560" x2="402.2" y2="566" stroke="#374151" stroke-width="1"/>
+<line x1="699.5" y1="560" x2="699.5" y2="566" stroke="#374151" stroke-width="1"/>
+<line x1="990.0" y1="560" x2="990.0" y2="566" stroke="#374151" stroke-width="1"/>
+<polyline points="90.0,193.3 402.2,376.7 699.5,486.7 990.0,523.3" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="90.0" cy="193.3" r="5" fill="#2563EB"/>
+<circle cx="402.2" cy="376.7" r="5" fill="#2563EB"/>
+<circle cx="699.5" cy="486.7" r="6" fill="#DC2626"/>
+<circle cx="990.0" cy="523.3" r="5" fill="#2563EB"/>
+<text x="90.0" y="180.3" text-anchor="middle" font-size="13" fill="#1D4ED8">0.1</text>
+<text x="402.2" y="363.7" text-anchor="middle" font-size="13" fill="#1D4ED8">0.05</text>
+<text x="711.5" y="475.7" font-size="13" fill="#DC2626">0.02</text>
+<text x="985" y="509.3" text-anchor="end" font-size="13" fill="#1D4ED8">0.01</text>
+<text x="699.5" y="100" text-anchor="middle" font-size="15" font-weight="bold" fill="#DC2626">±31 工程拐点</text>
+<text x="985" y="476.7" text-anchor="end" font-size="13" fill="#DC2626">0.02 dB 阈值线</text>
+<text x="90" y="112" font-size="14" fill="#17212F">BLER 损失 (dB)（越小越好）</text>
+<text x="90.0" y="584" text-anchor="middle" font-size="14" fill="#17212F">±7</text>
+<text x="402.2" y="584" text-anchor="middle" font-size="14" fill="#17212F">±15</text>
+<text x="699.5" y="584" text-anchor="middle" font-size="14" fill="#17212F">±31</text>
+<text x="990.0" y="584" text-anchor="middle" font-size="14" fill="#17212F">±63</text>
+<text x="90.0" y="606" text-anchor="middle" font-size="13" fill="#596879">4-bit</text>
+<text x="402.2" y="606" text-anchor="middle" font-size="13" fill="#596879">5-bit</text>
+<text x="699.5" y="606" text-anchor="middle" font-size="13" fill="#596879">6-bit</text>
+<text x="990.0" y="606" text-anchor="middle" font-size="13" fill="#596879">7-bit</text>
+<text x="520" y="628" text-anchor="middle" font-size="13" fill="#596879">注：损失取素材仿真表上界（&lt;0.1 / &lt;0.05 / &lt;0.02 / &lt;0.01 dB）；0.02 dB 虚线为阈值线；±31 之后收益封顶</text>
+</svg>
