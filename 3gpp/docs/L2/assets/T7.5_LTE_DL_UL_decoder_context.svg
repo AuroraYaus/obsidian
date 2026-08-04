@@ -22,9 +22,9 @@
   </defs>
 
   <!-- ============ 标题 ============ -->
-  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433">LTE DL-SCH 与 UL-SCH：同一 Turbo core，不同 soft buffer namespace</text>
-  <text x="35" y="60" font-size="12" fill="#5A6A7A">读图顺序：左边是 UE 接收下行，右边是 eNB 接收上行。两条链路都进入 shared Turbo core，但进入 soft buffer 前的</text>
-  <text x="35" y="78" font-size="12" fill="#5A6A7A">key 不同；UL 必须包含 UE context，否则多 UE 会命中同一缓存。</text>
+  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433" class="free">LTE DL-SCH 与 UL-SCH：同一 Turbo core，不同 soft buffer namespace</text>
+  <text x="35" y="60" font-size="12" fill="#5A6A7A" class="free">读图顺序：左边是 UE 接收下行，右边是 eNB 接收上行。两条链路都进入 shared Turbo core，但进入 soft buffer 前的</text>
+  <text x="35" y="78" font-size="12" fill="#5A6A7A" class="free">key 不同；UL 必须包含 UE context，否则多 UE 会命中同一缓存。</text>
 
   <!-- ============ 顶部：可共享横带 ============ -->
   <g filter="url(#soft)">
@@ -70,16 +70,16 @@
     <path d="M 262 409 V 426" marker-end="url(#arrow)"/>
   </g>
 
-  <text x="95" y="510" font-size="12" font-weight="700" fill="#1B2433">key tokens</text>
+  <text x="95" y="508" font-size="12" font-weight="700" fill="#1B2433">key tokens</text>
   <g font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">
     <rect x="95" y="518" width="32" height="24" rx="6" fill="#3B6FB5"/>
-    <text x="111" y="535">DL</text>
-    <rect x="133" y="518" width="56" height="24" rx="6" fill="#5B82BE"/>
-    <text x="161" y="535">HARQ3</text>
-    <rect x="195" y="518" width="52" height="24" rx="6" fill="#7B9BC9"/>
-    <text x="221" y="535">TB17</text>
-    <rect x="253" y="518" width="48" height="24" rx="6" fill="#9CB3D6"/>
-    <text x="277" y="535">CB0</text>
+    <text x="111" y="535" font-size="12" font-weight="700" text-anchor="middle">DL</text>
+    <rect x="135" y="518" width="56" height="24" rx="6" fill="#5B82BE"/>
+    <text x="163" y="535" font-size="12" font-weight="700" text-anchor="middle">HARQ3</text>
+    <rect x="199" y="518" width="52" height="24" rx="6" fill="#7B9BC9"/>
+    <text x="225" y="535" font-size="12" font-weight="700" text-anchor="middle">TB17</text>
+    <rect x="259" y="518" width="48" height="24" rx="6" fill="#9CB3D6"/>
+    <text x="283" y="535" font-size="12" font-weight="700" text-anchor="middle">CB0</text>
   </g>
 
   <g filter="url(#soft)">
@@ -127,18 +127,18 @@
     <path d="M 737 409 V 426" marker-end="url(#arrow)"/>
   </g>
 
-  <text x="570" y="510" font-size="12" font-weight="700" fill="#1B2433">key tokens</text>
+  <text x="570" y="508" font-size="12" font-weight="700" fill="#1B2433">key tokens</text>
   <g font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">
     <rect x="570" y="518" width="32" height="24" rx="6" fill="#3E9E74"/>
-    <text x="586" y="535">UL</text>
-    <rect x="608" y="518" width="52" height="24" rx="6" fill="#55A98A"/>
-    <text x="634" y="535">UE17</text>
-    <rect x="666" y="518" width="56" height="24" rx="6" fill="#77BC9E"/>
-    <text x="694" y="535">HARQ3</text>
-    <rect x="728" y="518" width="52" height="24" rx="6" fill="#99CEB3"/>
-    <text x="754" y="535">TB17</text>
-    <rect x="786" y="518" width="48" height="24" rx="6" fill="#B8DFCB"/>
-    <text x="810" y="535">CB0</text>
+    <text x="586" y="535" font-size="12" font-weight="700" text-anchor="middle">UL</text>
+    <rect x="610" y="518" width="52" height="24" rx="6" fill="#55A98A"/>
+    <text x="636" y="535" font-size="12" font-weight="700" text-anchor="middle">UE17</text>
+    <rect x="670" y="518" width="56" height="24" rx="6" fill="#77BC9E"/>
+    <text x="698" y="535" font-size="12" font-weight="700" text-anchor="middle">HARQ3</text>
+    <rect x="734" y="518" width="52" height="24" rx="6" fill="#99CEB3"/>
+    <text x="760" y="535" font-size="12" font-weight="700" text-anchor="middle">TB17</text>
+    <rect x="794" y="518" width="48" height="24" rx="6" fill="#B8DFCB"/>
+    <text x="818" y="535" font-size="12" font-weight="700" text-anchor="middle">CB0</text>
   </g>
 
   <g filter="url(#soft)">
@@ -158,28 +158,28 @@
   <text x="55" y="730" font-size="12" fill="#5A6A7A">如果 eNB 侧 key 只写 direction=UL / HARQ3 / TB17 / CB0，那么 UE17 和 UE18 的重传会命中同一缓存地址。</text>
   <text x="55" y="746" font-size="12" fill="#5A6A7A">Turbo core 仍然会运行，但输入 LLR 已经混入错误历史。</text>
 
-  <text x="65" y="786" font-size="12" font-weight="700" fill="#1B2433">UE17 错误 key</text>
+  <text x="65" y="784" font-size="12" font-weight="700" fill="#1B2433">UE17 错误 key</text>
   <g font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">
     <rect x="65" y="794" width="32" height="24" rx="6" fill="#3E9E74"/>
-    <text x="81" y="811">UL</text>
-    <rect x="103" y="794" width="56" height="24" rx="6" fill="#77BC9E"/>
-    <text x="131" y="811">HARQ3</text>
-    <rect x="165" y="794" width="52" height="24" rx="6" fill="#99CEB3"/>
-    <text x="191" y="811">TB17</text>
-    <rect x="223" y="794" width="48" height="24" rx="6" fill="#B8DFCB"/>
-    <text x="247" y="811">CB0</text>
+    <text x="81" y="811" font-size="12" font-weight="700" text-anchor="middle">UL</text>
+    <rect x="105" y="794" width="56" height="24" rx="6" fill="#77BC9E"/>
+    <text x="133" y="811" font-size="12" font-weight="700" text-anchor="middle">HARQ3</text>
+    <rect x="169" y="794" width="52" height="24" rx="6" fill="#99CEB3"/>
+    <text x="195" y="811" font-size="12" font-weight="700" text-anchor="middle">TB17</text>
+    <rect x="229" y="794" width="48" height="24" rx="6" fill="#B8DFCB"/>
+    <text x="253" y="811" font-size="12" font-weight="700" text-anchor="middle">CB0</text>
   </g>
 
-  <text x="420" y="786" font-size="12" font-weight="700" fill="#1B2433">UE18 错误 key</text>
+  <text x="420" y="784" font-size="12" font-weight="700" fill="#1B2433">UE18 错误 key</text>
   <g font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">
     <rect x="420" y="794" width="32" height="24" rx="6" fill="#3E9E74"/>
-    <text x="436" y="811">UL</text>
-    <rect x="458" y="794" width="56" height="24" rx="6" fill="#77BC9E"/>
-    <text x="486" y="811">HARQ3</text>
-    <rect x="520" y="794" width="52" height="24" rx="6" fill="#99CEB3"/>
-    <text x="546" y="811">TB17</text>
-    <rect x="578" y="794" width="48" height="24" rx="6" fill="#B8DFCB"/>
-    <text x="602" y="811">CB0</text>
+    <text x="436" y="811" font-size="12" font-weight="700" text-anchor="middle">UL</text>
+    <rect x="460" y="794" width="56" height="24" rx="6" fill="#77BC9E"/>
+    <text x="488" y="811" font-size="12" font-weight="700" text-anchor="middle">HARQ3</text>
+    <rect x="524" y="794" width="52" height="24" rx="6" fill="#99CEB3"/>
+    <text x="550" y="811" font-size="12" font-weight="700" text-anchor="middle">TB17</text>
+    <rect x="584" y="794" width="48" height="24" rx="6" fill="#B8DFCB"/>
+    <text x="608" y="811" font-size="12" font-weight="700" text-anchor="middle">CB0</text>
   </g>
 
   <text x="745" y="790" font-size="12" font-weight="700" fill="#C4553D">同一个 key -&gt; 同一个缓存</text>

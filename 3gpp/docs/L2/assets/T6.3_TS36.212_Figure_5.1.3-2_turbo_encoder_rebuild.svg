@@ -34,9 +34,9 @@
   </defs>
 
   <!-- ============ 标题 ============ -->
-  <text x="40" y="34" font-size="18" font-weight="700" fill="#1B2433">TS 36.212 Figure 5.1.3-2 重建：LTE rate 1/3 Turbo 编码器结构</text>
-  <text x="40" y="58" font-size="12" fill="#5D6B80">依据 TS 36.212 Rel-19 §5.1.3.2.1/§5.1.3.2.2 和本地 media/image79.wmf 重建。</text>
-  <text x="40" y="74" font-size="12" fill="#5D6B80">实线表示信息编码阶段；虚线表示网格终止阶段使用的尾比特路径。</text>
+  <text x="40" y="34" font-size="18" font-weight="700" fill="#1B2433" class="free">TS 36.212 Figure 5.1.3-2 重建：LTE rate 1/3 Turbo 编码器结构</text>
+  <text x="40" y="58" font-size="12" fill="#5D6B80" class="free">依据 TS 36.212 Rel-19 §5.1.3.2.1/§5.1.3.2.2 和本地 media/image79.wmf 重建。</text>
+  <text x="40" y="74" font-size="12" fill="#5D6B80" class="free">实线表示信息编码阶段；虚线表示网格终止阶段使用的尾比特路径。</text>
 
   <!-- ============ 分支 1：第一组成编码器（脊线上方） ============ -->
   <g filter="url(#soft)">
@@ -116,18 +116,18 @@
   <text x="137" y="586" font-size="12" fill="#5D6B80" text-anchor="middle">来自组成编码器反馈端</text>
 
   <g filter="url(#soft)">
-    <rect x="255" y="510" width="185" height="80" rx="10" fill="#FFFFFF" stroke="#3E9E74" stroke-width="1.5"/>
+    <rect x="255" y="518" width="185" height="80" rx="10" fill="#FFFFFF" stroke="#3E9E74" stroke-width="1.5"/>
   </g>
-  <text x="347" y="540" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">前 3 个尾比特</text>
-  <text x="347" y="562" font-size="12" fill="#5D6B80" text-anchor="middle">upper switch lower</text>
-  <text x="347" y="578" font-size="12" fill="#5D6B80" text-anchor="middle">position；终止第一编码器</text>
+  <text x="347" y="548" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">前 3 个尾比特</text>
+  <text x="347" y="570" font-size="12" fill="#5D6B80" text-anchor="middle">upper switch lower</text>
+  <text x="347" y="586" font-size="12" fill="#5D6B80" text-anchor="middle">position；终止第一编码器</text>
 
   <g filter="url(#soft)">
-    <rect x="255" y="600" width="185" height="70" rx="10" fill="#FFFFFF" stroke="#3E9E74" stroke-width="1.5"/>
+    <rect x="255" y="608" width="185" height="78" rx="10" fill="#FFFFFF" stroke="#3E9E74" stroke-width="1.5"/>
   </g>
-  <text x="347" y="628" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">后 3 个尾比特</text>
-  <text x="347" y="650" font-size="12" fill="#5D6B80" text-anchor="middle">lower switch lower</text>
-  <text x="347" y="666" font-size="12" fill="#5D6B80" text-anchor="middle">position；终止第二编码器</text>
+  <text x="347" y="636" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">后 3 个尾比特</text>
+  <text x="347" y="658" font-size="12" fill="#5D6B80" text-anchor="middle">lower switch lower</text>
+  <text x="347" y="674" font-size="12" fill="#5D6B80" text-anchor="middle">position；终止第二编码器</text>
 
   <g filter="url(#soft)">
     <rect x="485" y="540" width="215" height="95" rx="10" fill="#FFFFFF" stroke="#8A6BBE" stroke-width="1.5"/>

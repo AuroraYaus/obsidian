@@ -26,9 +26,9 @@
   </defs>
 
   <!-- ============ 标题 ============ -->
-  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433">NR LDPC BG 子矩阵区域、QC lifting 与接收端用途</text>
-  <text x="35" y="60" font-size="12" fill="#5B6877">A/B/C/D/E 是工程教学分区，用来理解核心 parity、扩展 parity、近似双对角结构和 Raptor-like 扩展。</text>
-  <text x="35" y="78" font-size="12" fill="#5B6877">协议依据仍是 TS 38.212 Table 5.3.2-2/3 的 row、column、iLS 和 shift values。</text>
+  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433" class="free">NR LDPC BG 子矩阵区域、QC lifting 与接收端用途</text>
+  <text x="35" y="60" font-size="12" fill="#5B6877" class="free">A/B/C/D/E 是工程教学分区，用来理解核心 parity、扩展 parity、近似双对角结构和 Raptor-like 扩展。</text>
+  <text x="35" y="78" font-size="12" fill="#5B6877" class="free">协议依据仍是 TS 38.212 Table 5.3.2-2/3 的 row、column、iLS 和 shift values。</text>
 
   <!-- ============ 1. BG 五区结构 ============ -->
   <g filter="url(#soft)">
@@ -38,13 +38,13 @@
 
   <!-- 列头分带 -->
   <g font-size="10.5" font-weight="700" fill="#1B2433" text-anchor="middle">
-    <rect x="58" y="140" width="128" height="26" rx="6" fill="#DDE7F3"/>
-    <text x="122" y="158">systematic columns</text>
-    <rect x="186" y="140" width="64" height="26" rx="6" fill="#DDE7F3"/>
-    <text x="218" y="152" font-size="10">core</text>
-    <text x="218" y="164" font-size="10">parity</text>
-    <rect x="250" y="140" width="128" height="26" rx="6" fill="#DDE7F3"/>
-    <text x="314" y="158">extension parity</text>
+    <rect x="58" y="132" width="128" height="30" rx="6" fill="#DDE7F3"/>
+    <text x="122" y="150" font-size="10.5" font-weight="700" text-anchor="middle">systematic columns</text>
+    <rect x="186" y="132" width="64" height="30" rx="6" fill="#DDE7F3"/>
+    <text x="218" y="144" font-size="10" font-weight="700" text-anchor="middle">core</text>
+    <text x="218" y="156" font-size="10" font-weight="700" text-anchor="middle">parity</text>
+    <rect x="250" y="132" width="128" height="30" rx="6" fill="#DDE7F3"/>
+    <text x="314" y="150" font-size="10.5" font-weight="700" text-anchor="middle">extension parity</text>
   </g>
 
   <!-- 五个区域色块 -->
@@ -83,11 +83,11 @@
 
   <!-- 区域字母（避开稀疏非零标记） -->
   <g font-size="18" font-weight="700" fill="#1B2433" text-anchor="middle">
-    <text x="130" y="235">A</text>
-    <text x="218" y="224">B</text>
-    <text x="122" y="312">C</text>
-    <text x="228" y="306">D</text>
-    <text x="314" y="276">E</text>
+    <text x="130" y="235" font-size="18" font-weight="700" text-anchor="middle">A</text>
+    <text x="218" y="224" font-size="18" font-weight="700" text-anchor="middle">B</text>
+    <text x="122" y="312" font-size="18" font-weight="700" text-anchor="middle">C</text>
+    <text x="228" y="306" font-size="18" font-weight="700" text-anchor="middle">D</text>
+    <text x="314" y="276" font-size="18" font-weight="700" text-anchor="middle">E</text>
   </g>
 
   <text x="58" y="406" font-size="12" font-weight="700" fill="#5B6877">rows: upper=core, lower=extension</text>
@@ -139,7 +139,7 @@
 
   <!-- ============ 2. QC lifting（下排全宽） ============ -->
   <g filter="url(#soft)">
-    <rect x="35" y="520" width="930" height="140" rx="14" fill="#FAF5E4" stroke="#D9C179" stroke-width="1.5"/>
+    <rect x="35" y="520" width="930" height="148" rx="14" fill="#FAF5E4" stroke="#D9C179" stroke-width="1.5"/>
   </g>
   <text x="58" y="548" font-size="15" font-weight="700" fill="#D18A2F">2. QC lifting</text>
 

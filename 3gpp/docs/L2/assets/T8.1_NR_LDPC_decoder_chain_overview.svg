@@ -22,90 +22,90 @@
   </defs>
 
   <!-- ============ 标题 ============ -->
-  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433">NR LDPC 接收侧译码链路总览</text>
-  <text x="35" y="60" font-size="12" fill="#596879">读图顺序从左到右：软解调器给出 LLR；接收端先恢复速率匹配前的 LDPC 母码位置，再译码每个 CB；</text>
-  <text x="35" y="78" font-size="12" fill="#596879">CB 全部通过后拼接 TB，由 TB CRC 决定 HARQ 反馈。</text>
+  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433" class="free">NR LDPC 接收侧译码链路总览</text>
+  <text x="35" y="60" font-size="12" fill="#596879" class="free">读图顺序从左到右：软解调器给出 LLR；接收端先恢复速率匹配前的 LDPC 母码位置，再译码每个 CB；</text>
+  <text x="35" y="78" font-size="12" fill="#596879" class="free">CB 全部通过后拼接 TB，由 TB CRC 决定 HARQ 反馈。</text>
 
   <!-- ============ 七步译码链 ============ -->
   <g filter="url(#soft)">
-    <rect x="22" y="95" width="8" height="115" rx="4" fill="#3B6FB5"/>
+    <rect x="14" y="95" width="8" height="115" rx="4" fill="#3B6FB5"/>
     <rect x="30" y="95" width="120" height="115" rx="10" fill="#E7EFF9" stroke="#C9D4E0" stroke-width="1.2"/>
   </g>
   <text x="90" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">Demapper LLR</text>
   <g font-size="11.5" fill="#596879" text-anchor="middle">
-    <text x="90" y="148">来自软解调</text>
-    <text x="90" y="164">LLR，保留软可靠度。</text>
+    <text x="90" y="148" font-size="11.5" text-anchor="middle">来自软解调</text>
+    <text x="90" y="164" font-size="11.5" text-anchor="middle">LLR，保留软可靠度。</text>
   </g>
 
   <g filter="url(#soft)">
-    <rect x="152" y="95" width="8" height="115" rx="4" fill="#2E9AA6"/>
-    <rect x="160" y="95" width="120" height="115" rx="10" fill="#E3F4F6" stroke="#C9D4E0" stroke-width="1.2"/>
+    <rect x="158" y="95" width="8" height="115" rx="4" fill="#2E9AA6"/>
+    <rect x="166" y="95" width="120" height="115" rx="10" fill="#E3F4F6" stroke="#C9D4E0" stroke-width="1.2"/>
   </g>
-  <text x="220" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">Rate recovery</text>
+  <text x="226" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">Rate recovery</text>
   <g font-size="11.5" fill="#596879" text-anchor="middle">
-    <text x="220" y="148">按 RV/E/Ncb/Qm</text>
-    <text x="220" y="164">回填母码环形缓存。</text>
+    <text x="226" y="148" font-size="11.5" text-anchor="middle">按 RV/E/Ncb/Qm</text>
+    <text x="226" y="164" font-size="11.5" text-anchor="middle">回填母码环形缓存。</text>
   </g>
 
   <g filter="url(#soft)">
-    <rect x="282" y="95" width="8" height="115" rx="4" fill="#D18A2F"/>
-    <rect x="290" y="95" width="120" height="115" rx="10" fill="#FAF0DC" stroke="#C9D4E0" stroke-width="1.2"/>
+    <rect x="294" y="95" width="8" height="115" rx="4" fill="#D18A2F"/>
+    <rect x="302" y="95" width="120" height="115" rx="10" fill="#FAF0DC" stroke="#C9D4E0" stroke-width="1.2"/>
   </g>
-  <text x="350" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">LDPC decoder</text>
+  <text x="362" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">LDPC decoder</text>
   <g font-size="11.5" fill="#596879" text-anchor="middle">
-    <text x="350" y="148">按 BG/Zc 生成 H</text>
-    <text x="350" y="164">迭代更新并查</text>
-    <text x="350" y="180">syndrome。</text>
+    <text x="362" y="148" font-size="11.5" text-anchor="middle">按 BG/Zc 生成 H</text>
+    <text x="362" y="164" font-size="11.5" text-anchor="middle">迭代更新并查</text>
+    <text x="362" y="180" font-size="11.5" text-anchor="middle">syndrome。</text>
   </g>
 
   <g filter="url(#soft)">
-    <rect x="412" y="95" width="8" height="115" rx="4" fill="#8A6BBE"/>
-    <rect x="420" y="95" width="120" height="115" rx="10" fill="#F0EBF9" stroke="#C9D4E0" stroke-width="1.2"/>
+    <rect x="430" y="95" width="8" height="115" rx="4" fill="#8A6BBE"/>
+    <rect x="438" y="95" width="120" height="115" rx="10" fill="#F0EBF9" stroke="#C9D4E0" stroke-width="1.2"/>
   </g>
-  <text x="480" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">CB CRC</text>
+  <text x="498" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">CB CRC</text>
   <g font-size="11.5" fill="#596879" text-anchor="middle">
-    <text x="480" y="148">逐 CB 判断；失败则</text>
-    <text x="480" y="164">保留 HARQ 软信息。</text>
+    <text x="498" y="148" font-size="11.5" text-anchor="middle">逐 CB 判断；失败则</text>
+    <text x="498" y="164" font-size="11.5" text-anchor="middle">保留 HARQ 软信息。</text>
   </g>
 
   <g filter="url(#soft)">
-    <rect x="542" y="95" width="8" height="115" rx="4" fill="#3E9E74"/>
-    <rect x="550" y="95" width="120" height="115" rx="10" fill="#E5F4ED" stroke="#C9D4E0" stroke-width="1.2"/>
+    <rect x="566" y="95" width="8" height="115" rx="4" fill="#3E9E74"/>
+    <rect x="574" y="95" width="120" height="115" rx="10" fill="#E5F4ED" stroke="#C9D4E0" stroke-width="1.2"/>
   </g>
-  <text x="610" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">CB concat</text>
+  <text x="634" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">CB concat</text>
   <g font-size="11.5" fill="#596879" text-anchor="middle">
-    <text x="610" y="148">按 CB 序号拼接，</text>
-    <text x="610" y="164">不能按完成时间。</text>
+    <text x="634" y="148" font-size="11.5" text-anchor="middle">按 CB 序号拼接，</text>
+    <text x="634" y="164" font-size="11.5" text-anchor="middle">不能按完成时间。</text>
   </g>
 
   <g filter="url(#soft)">
-    <rect x="672" y="95" width="8" height="115" rx="4" fill="#8A6BBE"/>
-    <rect x="680" y="95" width="120" height="115" rx="10" fill="#F0EBF9" stroke="#C9D4E0" stroke-width="1.2"/>
+    <rect x="702" y="95" width="8" height="115" rx="4" fill="#8A6BBE"/>
+    <rect x="710" y="95" width="120" height="115" rx="10" fill="#F0EBF9" stroke="#C9D4E0" stroke-width="1.2"/>
   </g>
-  <text x="740" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">TB CRC</text>
+  <text x="770" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">TB CRC</text>
   <g font-size="11.5" fill="#596879" text-anchor="middle">
-    <text x="740" y="148">整 TB 终检，决定</text>
-    <text x="740" y="164">交付边界。</text>
+    <text x="770" y="148" font-size="11.5" text-anchor="middle">整 TB 终检，决定</text>
+    <text x="770" y="164" font-size="11.5" text-anchor="middle">交付边界。</text>
   </g>
 
   <g filter="url(#soft)">
-    <rect x="802" y="95" width="8" height="115" rx="4" fill="#C4553D"/>
-    <rect x="810" y="95" width="120" height="115" rx="10" fill="#F9ECEA" stroke="#C9D4E0" stroke-width="1.2"/>
+    <rect x="838" y="95" width="8" height="115" rx="4" fill="#C4553D"/>
+    <rect x="846" y="95" width="120" height="115" rx="10" fill="#F9ECEA" stroke="#C9D4E0" stroke-width="1.2"/>
   </g>
-  <text x="870" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">HARQ/CBG</text>
+  <text x="906" y="126" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">HARQ/CBG</text>
   <g font-size="11.5" fill="#596879" text-anchor="middle">
-    <text x="870" y="148">输出 ACK/NACK</text>
-    <text x="870" y="164">管理 CBG 重传和</text>
-    <text x="870" y="180">soft buffer。</text>
+    <text x="906" y="148" font-size="11.5" text-anchor="middle">输出 ACK/NACK</text>
+    <text x="906" y="164" font-size="11.5" text-anchor="middle">管理 CBG 重传和</text>
+    <text x="906" y="180" font-size="11.5" text-anchor="middle">soft buffer。</text>
   </g>
 
   <g stroke="#5D6B80" stroke-width="1.8" fill="none">
-    <path d="M 150 152 H 160" marker-end="url(#arrow)"/>
-    <path d="M 280 152 H 290" marker-end="url(#arrow)"/>
-    <path d="M 410 152 H 420" marker-end="url(#arrow)"/>
-    <path d="M 540 152 H 550" marker-end="url(#arrow)"/>
-    <path d="M 670 152 H 680" marker-end="url(#arrow)"/>
-    <path d="M 800 152 H 810" marker-end="url(#arrow)"/>
+    <path d="M 150 152 H 166" marker-end="url(#arrow)"/>
+    <path d="M 286 152 H 302" marker-end="url(#arrow)"/>
+    <path d="M 422 152 H 438" marker-end="url(#arrow)"/>
+    <path d="M 558 152 H 574" marker-end="url(#arrow)"/>
+    <path d="M 694 152 H 710" marker-end="url(#arrow)"/>
+    <path d="M 830 152 H 846" marker-end="url(#arrow)"/>
   </g>
 
   <!-- ============ 协议锚点落点表（全宽） ============ -->
@@ -115,11 +115,11 @@
   <text x="55" y="258" font-size="15" font-weight="700" fill="#1B2433">协议锚点如何落到接收端动作</text>
   <g font-size="12" font-weight="700" fill="#1F3A5F" text-anchor="middle">
     <rect x="55" y="285" width="200" height="26" rx="6" fill="#DDE7F3"/>
-    <text x="155" y="303">协议锚点</text>
+    <text x="155" y="303" font-size="12" font-weight="700" text-anchor="middle">协议锚点</text>
     <rect x="255" y="285" width="225" height="26" rx="6" fill="#DDE7F3"/>
-    <text x="367" y="303">对象</text>
+    <text x="367" y="303" font-size="12" font-weight="700" text-anchor="middle">对象</text>
     <rect x="480" y="285" width="465" height="26" rx="6" fill="#DDE7F3"/>
-    <text x="712" y="303">接收端动作</text>
+    <text x="712" y="303" font-size="12" font-weight="700" text-anchor="middle">接收端动作</text>
   </g>
   <g font-size="12">
     <text x="55" y="339" font-weight="700" fill="#3B6FB5">TS 38.212 §5.2.2</text>
@@ -145,15 +145,15 @@
   <text x="55" y="556" font-size="12" fill="#596879">两个 CB 都通过后，才按 r=0,1 的顺序拼接并检查 TB CRC。</text>
   <g font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">
     <rect x="55" y="588" width="76" height="26" rx="8" fill="#3E9E74"/>
-    <text x="93" y="606">CB0 pass</text>
+    <text x="93" y="606" font-size="12" font-weight="700" text-anchor="middle">CB0 pass</text>
     <rect x="139" y="588" width="76" height="26" rx="8" fill="#3E9E74"/>
-    <text x="177" y="606">CB1 pass</text>
+    <text x="177" y="606" font-size="12" font-weight="700" text-anchor="middle">CB1 pass</text>
     <rect x="223" y="588" width="122" height="26" rx="8" fill="#3B6FB5"/>
-    <text x="284" y="606">concat r order</text>
+    <text x="284" y="606" font-size="12" font-weight="700" text-anchor="middle">concat r order</text>
     <rect x="353" y="588" width="61" height="26" rx="8" fill="#8A6BBE"/>
-    <text x="383" y="606">TB CRC</text>
+    <text x="383" y="606" font-size="12" font-weight="700" text-anchor="middle">TB CRC</text>
     <rect x="422" y="588" width="76" height="26" rx="8" fill="#C4553D"/>
-    <text x="460" y="606">ACK/NACK</text>
+    <text x="460" y="606" font-size="12" font-weight="700" text-anchor="middle">ACK/NACK</text>
   </g>
   <text x="55" y="644" font-size="12" font-weight="700" fill="#1B2433">失败定位入口</text>
   <g font-size="12" fill="#596879">
@@ -177,26 +177,26 @@
   <text x="630" y="572" font-size="11.5" fill="#596879">汇合成可执行译码任务时必须携带的上下文。</text>
   <g font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">
     <rect x="630" y="600" width="32" height="26" rx="8" fill="#3B6FB5"/>
-    <text x="646" y="618">BG</text>
+    <text x="646" y="618" font-size="12" font-weight="700" text-anchor="middle">BG</text>
     <rect x="670" y="600" width="32" height="26" rx="8" fill="#3B6FB5"/>
-    <text x="686" y="618">Zc</text>
+    <text x="686" y="618" font-size="12" font-weight="700" text-anchor="middle">Zc</text>
     <rect x="775" y="600" width="56" height="26" rx="8" fill="#C4553D"/>
-    <text x="803" y="618">rvidx</text>
+    <text x="803" y="618" font-size="12" font-weight="700" text-anchor="middle">rvidx</text>
     <rect x="839" y="600" width="32" height="26" rx="8" fill="#3E9E74"/>
-    <text x="855" y="618">E</text>
+    <text x="855" y="618" font-size="12" font-weight="700" text-anchor="middle">E</text>
     <rect x="630" y="634" width="48" height="26" rx="8" fill="#3E9E74"/>
-    <text x="654" y="652">Ncb</text>
+    <text x="654" y="652" font-size="12" font-weight="700" text-anchor="middle">Ncb</text>
     <rect x="686" y="634" width="32" height="26" rx="8" fill="#8A6BBE"/>
-    <text x="702" y="652">Qm</text>
+    <text x="702" y="652" font-size="12" font-weight="700" text-anchor="middle">Qm</text>
     <rect x="775" y="634" width="32" height="26" rx="8" fill="#8A6BBE"/>
-    <text x="791" y="652">C</text>
+    <text x="791" y="652" font-size="12" font-weight="700" text-anchor="middle">C</text>
     <rect x="815" y="634" width="56" height="26" rx="8" fill="#72839B"/>
-    <text x="843" y="652">cb_id</text>
+    <text x="843" y="652" font-size="12" font-weight="700" text-anchor="middle">cb_id</text>
     <rect x="630" y="668" width="48" height="26" rx="8" fill="#72839B"/>
-    <text x="654" y="686">CRC</text>
+    <text x="654" y="686" font-size="12" font-weight="700" text-anchor="middle">CRC</text>
     <rect x="686" y="668" width="54" height="26" rx="8" fill="#72839B"/>
-    <text x="713" y="686">HARQ</text>
+    <text x="713" y="686" font-size="12" font-weight="700" text-anchor="middle">HARQ</text>
     <rect x="775" y="668" width="64" height="26" rx="8" fill="#C4553D"/>
-    <text x="807" y="686">CBGTI</text>
+    <text x="807" y="686" font-size="12" font-weight="700" text-anchor="middle">CBGTI</text>
   </g>
 </svg>

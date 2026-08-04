@@ -18,29 +18,29 @@
   </defs>
 
   <!-- ============ 标题 ============ -->
-  <text x="35" y="30" font-size="18" font-weight="700" fill="#1B2433">QC-LDPC 玩具基矩阵展开示例</text>
-  <text x="35" y="56" font-size="12" fill="#5B6877">基矩阵元素 -1 表示零矩阵；非负数 p 表示把 Zc x Zc 单位矩阵向右循环移位 p 次。</text>
-  <text x="35" y="74" font-size="12" fill="#5B6877">这里取 Zc=4，把 2x3 基矩阵展开为 8x12 的完整奇偶校验矩阵 H。</text>
+  <text x="35" y="30" font-size="18" font-weight="700" fill="#1B2433" class="free">QC-LDPC 玩具基矩阵展开示例</text>
+  <text x="35" y="56" font-size="12" fill="#5B6877" class="free">基矩阵元素 -1 表示零矩阵；非负数 p 表示把 Zc x Zc 单位矩阵向右循环移位 p 次。</text>
+  <text x="35" y="74" font-size="12" fill="#5B6877" class="free">这里取 Zc=4，把 2x3 基矩阵展开为 8x12 的完整奇偶校验矩阵 H。</text>
 
   <!-- ============ 基矩阵 B ============ -->
-  <text x="40" y="110" font-size="14" font-weight="700" fill="#3B6FB5">基矩阵 B</text>
+  <text x="40" y="110" font-size="14" font-weight="700" fill="#3B6FB5" class="free">基矩阵 B</text>
   <g font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">
     <rect x="40" y="122" width="52" height="38" fill="#FAF0DC" stroke="#C9D4E0" stroke-width="1.2"/>
-    <text x="66" y="147">0</text>
+    <text x="66" y="147" font-size="13" font-weight="700" text-anchor="middle">0</text>
     <rect x="92" y="122" width="52" height="38" fill="#EDF1F6" stroke="#C9D4E0" stroke-width="1.2"/>
-    <text x="118" y="147">-1</text>
+    <text x="118" y="147" font-size="13" font-weight="700" text-anchor="middle">-1</text>
     <rect x="144" y="122" width="52" height="38" fill="#FAF0DC" stroke="#C9D4E0" stroke-width="1.2"/>
-    <text x="170" y="147">2</text>
+    <text x="170" y="147" font-size="13" font-weight="700" text-anchor="middle">2</text>
     <rect x="40" y="160" width="52" height="38" fill="#FAF0DC" stroke="#C9D4E0" stroke-width="1.2"/>
-    <text x="66" y="185">1</text>
+    <text x="66" y="185" font-size="13" font-weight="700" text-anchor="middle">1</text>
     <rect x="92" y="160" width="52" height="38" fill="#FAF0DC" stroke="#C9D4E0" stroke-width="1.2"/>
-    <text x="118" y="185">0</text>
+    <text x="118" y="185" font-size="13" font-weight="700" text-anchor="middle">0</text>
     <rect x="144" y="160" width="52" height="38" fill="#EDF1F6" stroke="#C9D4E0" stroke-width="1.2"/>
-    <text x="170" y="185">-1</text>
+    <text x="170" y="185" font-size="13" font-weight="700" text-anchor="middle">-1</text>
   </g>
 
   <!-- ============ 展开后的 H ============ -->
-  <text x="240" y="110" font-size="14" font-weight="700" fill="#3E9E74">展开后的 H</text>
+  <text x="240" y="110" font-size="14" font-weight="700" fill="#3E9E74" class="free">展开后的 H</text>
 
   <!-- 六个 4x4 子块（每块一个矩形 + 网格描边） -->
   <g fill="none" stroke-width="1.5">
@@ -70,18 +70,18 @@
 
   <!-- 子块标签（白底胶囊；避开本块内的 1 标记位置） -->
   <g font-size="8.5" font-weight="700" text-anchor="middle">
-    <rect x="266" y="125" width="19" height="14" rx="3" fill="#FFFFFF"/>
-    <text x="275.5" y="136" fill="#D18A2F">P^0</text>
-    <rect x="311" y="125" width="25" height="14" rx="3" fill="#FFFFFF"/>
-    <text x="323.5" y="136" fill="#C4553D">zero</text>
-    <rect x="337" y="125" width="19" height="14" rx="3" fill="#FFFFFF"/>
-    <text x="346.5" y="136" fill="#D18A2F">P^2</text>
-    <rect x="262" y="170" width="19" height="14" rx="3" fill="#FFFFFF"/>
-    <text x="271.5" y="181" fill="#D18A2F">P^1</text>
-    <rect x="314" y="173" width="19" height="14" rx="3" fill="#FFFFFF"/>
-    <text x="323.5" y="184" fill="#D18A2F">P^0</text>
-    <rect x="360" y="173" width="23" height="14" rx="3" fill="#FFFFFF"/>
-    <text x="371.5" y="184" fill="#C4553D">zero</text>
+    <rect x="255" y="125" width="25" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="267.5" y="136" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^0</text>
+    <rect x="301" y="125" width="27" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="314.5" y="136" fill="#C4553D" font-size="8.5" font-weight="700" text-anchor="middle">zero</text>
+    <rect x="344" y="132" width="25" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="356.5" y="143" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^2</text>
+    <rect x="255" y="178" width="25" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="267.5" y="189" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^1</text>
+    <rect x="303" y="181" width="25" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="315.5" y="192" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^0</text>
+    <rect x="357" y="181" width="27" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="370.5" y="192" fill="#C4553D" font-size="8.5" font-weight="700" text-anchor="middle">zero</text>
   </g>
 
   <!-- ============ 读图要点（下排横带） ============ -->
