@@ -154,7 +154,7 @@
   <rect x="150" y="1330" width="300" height="30" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
   <text x="300" y="1350" font-size="12" fill="#263238" text-anchor="middle">Polar</text>
   <rect x="450" y="1330" width="1350" height="30" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
-  <text x="1125" y="1350" font-size="12" fill="#263238" text-anchor="middle">rate recovery, frozen mask, f/g LLR, partial sums, PM, prune order, CRC/RNTI</text>
+  <text x="1125" y="1351" font-size="12" fill="#263238" text-anchor="middle">rate recovery, frozen mask, f/g LLR, partial sums, PM, prune order, CRC/RNTI</text>
 
   <!-- 底线规则 -->
   <rect x="130" y="1380" width="1700" height="44" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>

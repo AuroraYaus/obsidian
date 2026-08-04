@@ -299,7 +299,7 @@
   <path class="link" data-src="f3" data-dst="f4" d="M 1606.0 1538.0 L 1618.0 1538.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
   <path class="link" data-src="f4" data-dst="f5" d="M 1978.0 1538.0 L 1990.0 1538.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
   <path class="link detour" data-src="f4" data-dst="f2" data-note="CRC fail and iter &lt; max_iter（回环沿泳道下方绕行，不穿 SISO B / DONE-ERROR）" d="M 1776.0 1586.0 L 1776.0 1640.0 L 682.0 1640.0 L 682.0 1586.0" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m94A3B8)"/>
-  <text class="note" x="1229.0" y="1665.0" text-anchor="middle" font-size="18.5" fill="#5B6472" stroke="#FBF9F3" stroke-width="6" paint-order="stroke">CRC fail and iter &lt; max_iter</text>
+  <text class="note" x="1229.0" y="1661.0" text-anchor="middle" font-size="18.5" fill="#5B6472" stroke="#FBF9F3" stroke-width="6" paint-order="stroke">CRC fail and iter &lt; max_iter</text>
   <g class="tbl" id="t2">
     <rect class="tblouter" x="80" y="1750" width="2240" height="272" rx="10" fill="#3F51C4" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
     <g class="cellg" id="t2_0_0" data-tbl="t2">

@@ -4,13 +4,13 @@
   <rect x="40" y="16" width="1200" height="60" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
   <text x="640" y="42" font-size="19" font-weight="700" fill="#152033" text-anchor="middle">T21.4 各阶段串行 cycle 需求 vs 61,440 时隙预算（对数刻度）</text>
   <text x="640" y="66" font-size="12.5" fill="#455A64" text-anchor="middle">52PRB · 4 层 · 1024QAM 峰值 · 素材 PHY01 §10.2 / analysis 06 §3.2 口径</text>
-  <rect x="172" y="91" width="14" height="14" fill="#2563EB"/>
-  <text x="192" y="103" font-size="13" fill="#374151" class="free">预算内（≤ 61,440 cycles）</text>
-  <rect x="540" y="91" width="14" height="14" fill="#D97706"/>
-  <text x="560" y="103" font-size="13" fill="#374151" class="free">超预算（需并行化）</text>
+  <rect x="172" y="84" width="14" height="14" fill="#2563EB"/>
+  <text x="194" y="103" font-size="13" fill="#374151" class="free">预算内（≤ 61,440 cycles）</text>
+  <rect x="540" y="84" width="14" height="14" fill="#D97706"/>
+  <text x="562" y="103" font-size="13" fill="#374151" class="free">超预算（需并行化）</text>
   <line x1="918" y1="98" x2="952" y2="98" stroke="#DC2626" stroke-width="2" stroke-dasharray="6 4"/>
   <text x="958" y="103" font-size="13" fill="#374151" class="free">61,440 预算线（0.5 ms @122.88 MHz）</text>
-  <text x="170" y="124" font-size="13" fill="#334155" class="free">串行 cycles（对数刻度）</text>
+  <text x="170" y="120" font-size="13" fill="#334155" class="free">串行 cycles（对数刻度）</text>
   <rect x="170" y="130.0" width="1060" height="297.0" fill="#FEF2F2" opacity="0.35"/>
   <rect x="170" y="427.0" width="1060" height="173.0" fill="#EFF6FF" opacity="0.35"/>
   <line x1="170" y1="532.9" x2="1230" y2="532.9" stroke="#CBD5E1" stroke-width="1"/>
@@ -40,19 +40,23 @@
   <text x="435.0" y="479.0" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="middle" class="free">20K · 33%</text>
   <text x="435.0" y="626" font-size="14" font-weight="700" fill="#17212F" text-anchor="middle" class="free">OFDM FFT</text>
   <text x="435.0" y="648" font-size="12" fill="#596879" text-anchor="middle" class="free">~20,480 cycles</text>
-  <rect x="569.7" y="423.7" width="84.0" height="176.3" fill="#CA8A04"/>
+  <rect x="569.7" y="423.7" width="84.0" height="3.3" fill="#CA8A04"/>
+  <rect x="569.7" y="427.0" width="84.0" height="173.0" fill="#CA8A04"/>
   <text x="611.7" y="411.7" font-size="13" font-weight="700" fill="#92400E" text-anchor="middle" class="free">65K · 1.1×</text>
   <text x="611.7" y="626" font-size="14" font-weight="700" fill="#17212F" text-anchor="middle" class="free">QAM 软解调</text>
   <text x="611.7" y="648" font-size="12" fill="#596879" text-anchor="middle" class="free">~65,000 cycles</text>
-  <rect x="746.3" y="370.4" width="84.0" height="229.6" fill="#D97706"/>
+  <rect x="746.3" y="370.4" width="84.0" height="56.6" fill="#D97706"/>
+  <rect x="746.3" y="427.0" width="84.0" height="173.0" fill="#D97706"/>
   <text x="788.3" y="358.4" font-size="13" font-weight="700" fill="#92400E" text-anchor="middle" class="free">162K · 2.6×</text>
   <text x="788.3" y="626" font-size="14" font-weight="700" fill="#17212F" text-anchor="middle" class="free">MMSE 均衡</text>
   <text x="788.3" y="648" font-size="12" fill="#596879" text-anchor="middle" class="free">~162,240 cycles</text>
-  <rect x="923.0" y="306.3" width="84.0" height="293.7" fill="#EA580C"/>
+  <rect x="923.0" y="306.3" width="84.0" height="120.7" fill="#EA580C"/>
+  <rect x="923.0" y="427.0" width="84.0" height="173.0" fill="#EA580C"/>
   <text x="965.0" y="294.3" font-size="13" font-weight="700" fill="#9A3412" text-anchor="middle" class="free">487K · 7.9×</text>
   <text x="965.0" y="626" font-size="14" font-weight="700" fill="#17212F" text-anchor="middle" class="free">Rhh+Cholesky</text>
   <text x="965.0" y="648" font-size="12" fill="#596879" text-anchor="middle" class="free">~486,720 cycles</text>
-  <rect x="1099.7" y="169.3" width="84.0" height="430.7" fill="#DC2626"/>
+  <rect x="1099.7" y="169.3" width="84.0" height="257.7" fill="#DC2626"/>
+  <rect x="1099.7" y="427.0" width="84.0" height="173.0" fill="#DC2626"/>
   <text x="1141.7" y="157.3" font-size="13" font-weight="700" fill="#B91C1C" text-anchor="middle" class="free">5.1M · 81×</text>
   <text x="1141.7" y="626" font-size="14" font-weight="700" fill="#17212F" text-anchor="middle" class="free">LDPC 解码</text>
   <text x="1141.7" y="648" font-size="12" fill="#596879" text-anchor="middle" class="free">~5.1M cycles</text>

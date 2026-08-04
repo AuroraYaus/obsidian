@@ -52,7 +52,7 @@
   <text x="724" y="472" font-size="13.5" font-weight="700" fill="#1D4ED8">62% 在"每 RE 的矩阵与信道状态"</text>
   <text x="724" y="504" font-size="13" fill="#334155">译码器只占 8%、LLR 缓冲只占 4% —— 结论反转</text>
   <text x="724" y="534" font-size="13" fill="#334155">"存储 8% 但面积 38%"：面积账还要另算逻辑（下一节）</text>
-  <rect x="830" y="544" width="280" height="58" rx="4" fill="#1E40AF"/>
+  <rect x="830" y="548" width="280" height="58" rx="4" fill="#1E40AF"/>
   <text x="970" y="565" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">MIMO 26% + CE 20% + PS 16%</text>
   <text x="970" y="593" font-size="13" fill="#E0E7FF" text-anchor="middle">= 62% —— 存储大头</text>
 

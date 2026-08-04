@@ -75,8 +75,8 @@
   </g>
 
   <!-- 总线（结构线，path 绘制不参与箭头端点审计） -->
-  <path d="M 180 460 H 1780" fill="none" stroke="#5B6B82" stroke-width="2.5"/>
-  <path d="M 660 430 V 460" fill="none" stroke="#5B6B82" stroke-width="2.5"/>
+  <path d="M 180 460 H 1780 V 500" fill="none" stroke="#5B6B82" stroke-width="2.5"/>
+  <path d="M 660 460 V 430" fill="none" stroke="#5B6B82" stroke-width="2.5"/>
 
   <!-- ============ 三张 lane map ============ -->
   <rect x="70" y="500" width="580" height="170" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
@@ -151,9 +151,9 @@
   <text x="1565" y="1061" font-size="12" fill="#263238" text-anchor="middle">path copy storm</text>
 
   <!-- ============ Non-coalesced Access Failure Case ============ -->
-  <rect x="80" y="1150" width="1800" height="44" rx="10" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
-  <rect x="94" y="1164" width="12" height="12" rx="3" fill="#B24A33"/>
-  <text x="116" y="1178" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Non-coalesced Access Failure Case</text>
+  <rect x="80" y="1150" width="1800" height="32" rx="10" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+  <rect x="94" y="1160" width="12" height="12" rx="3" fill="#B24A33"/>
+  <text x="116" y="1172" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Non-coalesced Access Failure Case</text>
   <!-- 四张失败卡 1190..1290 -->
   <g fill="#263238">
     <rect x="110" y="1190" width="420" height="100" rx="8" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
