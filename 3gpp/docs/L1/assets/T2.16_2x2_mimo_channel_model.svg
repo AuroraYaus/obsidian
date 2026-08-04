@@ -56,7 +56,7 @@
 <text x="462" y="269" text-anchor="middle" class="small" fill="#E65100">干扰</text>
 <text x="577" y="247" text-anchor="middle" class="mono" fill="#00695C">h11 = 0.9</text>
 <text x="577" y="269" text-anchor="middle" class="small" fill="#00695C">目标</text>
-<text x="520" y="318" text-anchor="middle" class="small">行 = 接收天线；列 = 发送层；h_ji：第 i 层到第 j 根接收天线的增益</text>
+<text x="520" y="324" text-anchor="middle" class="small">行 = 接收天线；列 = 发送层；h_ji：第 i 层到第 j 根接收天线的增益</text>
 
 <!-- 接收列 -->
 <text x="865" y="88" text-anchor="middle" class="label">接收观测</text>
@@ -81,9 +81,9 @@
 <line x1="640" y1="262" x2="790" y2="262" class="arrowline" marker-end="url(#arrow)"/>
 
 <!-- 噪声 -->
-<rect x="850" y="36" width="90" height="36" class="nbox"/>
-<text x="895" y="60" text-anchor="middle" class="small">噪声 n0</text>
-<line x1="895" y1="72" x2="895" y2="100" class="arrowline" marker-end="url(#arrow)"/>
+<rect x="850" y="26" width="90" height="36" class="nbox"/>
+<text x="895" y="50" text-anchor="middle" class="small">噪声 n0</text>
+<line x1="895" y1="62" x2="895" y2="100" class="arrowline" marker-end="url(#arrow)"/>
 <rect x="850" y="356" width="90" height="36" class="nbox"/>
 <text x="895" y="380" text-anchor="middle" class="small">噪声 n1</text>
 <line x1="895" y1="356" x2="895" y2="294" class="arrowline" marker-end="url(#arrow)"/>

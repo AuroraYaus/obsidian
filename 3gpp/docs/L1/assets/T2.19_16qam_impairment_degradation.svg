@@ -270,5 +270,5 @@
 <circle cx="781.7" cy="473.2" r="2.0" fill="#00796B" opacity="0.35"/>
 <circle cx="780.5" cy="450.9" r="2.0" fill="#00796B" opacity="0.35"/>
 <circle cx="764.9" cy="459.8" r="2.0" fill="#00796B" opacity="0.35"/>
-<text x="464" y="716" class="small">散布尺度由等效噪声方差 σ²eq 决定 → 直接压低 LLR 幅度（σ≈0.14 即 σ²eq≈0.02）</text>
+<text x="440" y="716" class="small">散布尺度由等效噪声方差 σ²eq 决定 → 直接压低 LLR 幅度（σ≈0.14 即 σ²eq≈0.02）</text>
 </svg>

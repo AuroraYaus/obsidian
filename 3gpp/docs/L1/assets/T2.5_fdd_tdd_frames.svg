@@ -2,75 +2,75 @@
 <rect width="900" height="360" fill="white"/>
 <text x="450.0" y="24" text-anchor="middle" font-size="15" fill="#1565c0" font-weight="bold">LTE 帧结构：FDD Type 1 与 TDD Type 2（配置 1）</text>
 <text x="50" y="83.0" font-size="13" fill="#1565c0" font-weight="bold">FDD 下行</text>
-<rect x="120" y="60" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+<rect x="120" y="60" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
 <text x="150.0" y="82.0" text-anchor="middle" font-size="10" fill="#1565c0">D0</text>
-<rect x="183" y="60" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+<rect x="183" y="60" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
 <text x="213.0" y="82.0" text-anchor="middle" font-size="10" fill="#1565c0">D1</text>
-<rect x="246" y="60" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+<rect x="246" y="60" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
 <text x="276.0" y="82.0" text-anchor="middle" font-size="10" fill="#1565c0">D2</text>
-<rect x="309" y="60" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+<rect x="309" y="60" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
 <text x="339.0" y="82.0" text-anchor="middle" font-size="10" fill="#1565c0">D3</text>
-<rect x="372" y="60" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+<rect x="372" y="60" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
 <text x="402.0" y="82.0" text-anchor="middle" font-size="10" fill="#1565c0">D4</text>
-<rect x="435" y="60" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+<rect x="435" y="60" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
 <text x="465.0" y="82.0" text-anchor="middle" font-size="10" fill="#1565c0">D5</text>
-<rect x="498" y="60" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+<rect x="498" y="60" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
 <text x="528.0" y="82.0" text-anchor="middle" font-size="10" fill="#1565c0">D6</text>
-<rect x="561" y="60" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+<rect x="561" y="60" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
 <text x="591.0" y="82.0" text-anchor="middle" font-size="10" fill="#1565c0">D7</text>
-<rect x="624" y="60" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+<rect x="624" y="60" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
 <text x="654.0" y="82.0" text-anchor="middle" font-size="10" fill="#1565c0">D8</text>
-<rect x="687" y="60" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+<rect x="687" y="60" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
 <text x="717.0" y="82.0" text-anchor="middle" font-size="10" fill="#1565c0">D9</text>
 <text x="50" y="119.0" font-size="13" fill="#e65100" font-weight="bold">FDD 上行</text>
-<rect x="120" y="100" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+<rect x="120" y="104" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
 <text x="150.0" y="122.0" text-anchor="middle" font-size="10" fill="#e65100">U0</text>
-<rect x="183" y="100" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+<rect x="183" y="104" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
 <text x="213.0" y="122.0" text-anchor="middle" font-size="10" fill="#e65100">U1</text>
-<rect x="246" y="100" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+<rect x="246" y="104" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
 <text x="276.0" y="122.0" text-anchor="middle" font-size="10" fill="#e65100">U2</text>
-<rect x="309" y="100" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+<rect x="309" y="104" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
 <text x="339.0" y="122.0" text-anchor="middle" font-size="10" fill="#e65100">U3</text>
-<rect x="372" y="100" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+<rect x="372" y="104" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
 <text x="402.0" y="122.0" text-anchor="middle" font-size="10" fill="#e65100">U4</text>
-<rect x="435" y="100" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+<rect x="435" y="104" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
 <text x="465.0" y="122.0" text-anchor="middle" font-size="10" fill="#e65100">U5</text>
-<rect x="498" y="100" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+<rect x="498" y="104" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
 <text x="528.0" y="122.0" text-anchor="middle" font-size="10" fill="#e65100">U6</text>
-<rect x="561" y="100" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+<rect x="561" y="104" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
 <text x="591.0" y="122.0" text-anchor="middle" font-size="10" fill="#e65100">U7</text>
-<rect x="624" y="100" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+<rect x="624" y="104" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
 <text x="654.0" y="122.0" text-anchor="middle" font-size="10" fill="#e65100">U8</text>
-<rect x="687" y="100" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+<rect x="687" y="104" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
 <text x="717.0" y="122.0" text-anchor="middle" font-size="10" fill="#e65100">U9</text>
-<text x="50" y="175.0" font-size="13" fill="#2e7d32" font-weight="bold">TDD 配置1</text>
-<rect x="120" y="152" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+<text x="42" y="175.0" font-size="13" fill="#2e7d32" font-weight="bold">TDD 配置1</text>
+<rect x="120" y="156" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
 <text x="150.0" y="174.0" text-anchor="middle" font-size="10" fill="#1565c0" font-weight="bold">D</text>
-<rect x="183" y="152" width="60" height="36" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
+<rect x="183" y="156" width="55" height="36" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
 <text x="213.0" y="174.0" text-anchor="middle" font-size="10" fill="#c62828" font-weight="bold">S</text>
-<rect x="246" y="152" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+<rect x="246" y="156" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
 <text x="276.0" y="174.0" text-anchor="middle" font-size="10" fill="#1565c0" font-weight="bold">D</text>
-<rect x="309" y="152" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
+<rect x="309" y="156" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
 <text x="339.0" y="174.0" text-anchor="middle" font-size="10" fill="#e65100" font-weight="bold">U</text>
-<rect x="372" y="152" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
+<rect x="372" y="156" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
 <text x="402.0" y="174.0" text-anchor="middle" font-size="10" fill="#e65100" font-weight="bold">U</text>
-<rect x="435" y="152" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+<rect x="435" y="156" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
 <text x="465.0" y="174.0" text-anchor="middle" font-size="10" fill="#1565c0" font-weight="bold">D</text>
-<rect x="498" y="152" width="60" height="36" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
+<rect x="498" y="156" width="55" height="36" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
 <text x="528.0" y="174.0" text-anchor="middle" font-size="10" fill="#c62828" font-weight="bold">S</text>
-<rect x="561" y="152" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
+<rect x="561" y="156" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
 <text x="591.0" y="174.0" text-anchor="middle" font-size="10" fill="#e65100" font-weight="bold">U</text>
-<rect x="624" y="152" width="60" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
+<rect x="624" y="156" width="55" height="36" rx="2" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
 <text x="654.0" y="174.0" text-anchor="middle" font-size="10" fill="#e65100" font-weight="bold">U</text>
-<rect x="687" y="152" width="60" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+<rect x="687" y="156" width="55" height="36" rx="2" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
 <text x="717.0" y="174.0" text-anchor="middle" font-size="10" fill="#1565c0" font-weight="bold">D</text>
 <text x="780" y="90" font-size="11" fill="#333" font-weight="bold">图例</text>
 <rect x="780" y="110" width="14" height="14" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-<text x="800" y="122" font-size="11" fill="#333">D = 下行</text>
-<rect x="780" y="128" width="14" height="14" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-<text x="800" y="140" font-size="11" fill="#333">U = 上行</text>
-<rect x="780" y="146" width="14" height="14" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
-<text x="800" y="158" font-size="11" fill="#333">S = 特殊子帧</text>
+<text x="804" y="122" font-size="11" fill="#333">D = 下行</text>
+<rect x="780" y="132" width="14" height="14" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+<text x="804" y="144" font-size="11" fill="#333">U = 上行</text>
+<rect x="780" y="154" width="14" height="14" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+<text x="804" y="166" font-size="11" fill="#333">S = 特殊子帧</text>
 <text x="450.0" y="228" text-anchor="middle" font-size="12" fill="#333">S = DwPTS（下行导频）+ GP（保护间隔）+ UpPTS（上行导频），GP 长度决定小区覆盖半径</text>
 <text x="450.0" y="340" text-anchor="middle" font-size="12" fill="#555">FDD: 上下行各独立频率并行传输 · TDD: 同频率时分交替，切换周期 5/10 ms</text>
 </svg>
