@@ -119,7 +119,7 @@ def declared_png_outputs(script: Path, project_root: Path) -> set[Path]:
 
 
 def png_mtimes(project_root: Path) -> dict[Path, int]:
-    """@brief  快照 L1/L2/L3/assets 目录下所有 PNG 文件的修改时间（纳秒级）。
+    """@brief  快照 L1_基础/L2_协议算法/L3_工程实现 assets 目录下所有 PNG 文件的修改时间（纳秒级）。
     @param  project_root  项目根目录。
     @return               路径到修改时间（ns）的映射，用于前后对比发现新生成的文件。
     @note   使用纳秒级 mtime 确保高精度对比，避免秒级精度漏报快速生成的同秒文件。"""

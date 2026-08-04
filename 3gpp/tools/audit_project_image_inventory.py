@@ -29,7 +29,7 @@ INVENTORY_PATH = Path("docs/audits/image_asset_inventory.md")
 MIGRATION_PATH = Path("docs/audits/python_figure_to_body_content_migration.md")
 IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+\.png)\)")
 RETAINED_ASSET_RE = re.compile(r"原图片资产：`([^`]+\.png)`")
-ASSET_PATH_RE = re.compile(r"`((?:\.\./)?(?:docs/)?L[123]/assets/[^`]+\.png|assets/[^`]+\.png)`")
+ASSET_PATH_RE = re.compile(r"`((?:\.\./)?(?:docs/)?L[123][^/]*/assets/[^`]+\.png|assets/[^`]+\.png)`")
 CLASSIFIED_STATUS_TOKENS = (
     "present_quality_pass",
     "body_referenced",
