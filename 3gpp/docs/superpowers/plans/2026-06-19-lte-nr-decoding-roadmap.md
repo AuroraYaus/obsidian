@@ -723,4 +723,4 @@ Final response should include:
 
 - [ ] **Step 4: Do not generate downstream lesson articles**
 
-Stop after the roadmap document is created and verified. Do not create files under `docs/L1`, `docs/L2`, or `docs/L3` unless the user separately approves generating article bodies.
+Stop after the roadmap document is created and verified. Do not create files under `docs/L1`, `docs/L2_协议算法`, or `docs/L3` unless the user separately approves generating article bodies.

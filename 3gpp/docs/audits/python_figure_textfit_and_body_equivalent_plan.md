@@ -76,7 +76,7 @@ source_spec: "docs/audits/python_figure_textfit_and_body_equivalent_plan.md"
 
 | 脚本 | 职责 |
 |:---|:---|
-| `tools/audit_python_figure_body_equivalents.py` | 扫描 `docs/L1/T*.md`、`docs/L2/T*.md`、`docs/L3/T*.md` 中的 PNG 保留资产记录，要求同一附近章节存在明确标记的 Mermaid 或 Markdown 等价块，并阻断正文 Markdown 图片嵌入。 |
+| `tools/audit_python_figure_body_equivalents.py` | 扫描 `docs/L1/T*.md`、`docs/L2_协议算法/T*.md`、`docs/L3/T*.md` 中的 PNG 保留资产记录，要求同一附近章节存在明确标记的 Mermaid 或 Markdown 等价块，并阻断正文 Markdown 图片嵌入。 |
 | `tools/audit_figure_text_fit_static.py` | 静态扫描 Python 绘图脚本中的文字裁剪风险：`lines[:N]`、直接长句 `draw.text()`、固定行高表格、无溢出断言的 `centered()`/`draw_centered_lines()`。 |
 
 ## 执行顺序
@@ -88,8 +88,8 @@ source_spec: "docs/audits/python_figure_textfit_and_body_equivalent_plan.md"
 - [x] 对每篇含 PNG 的讲义补 Mermaid/Markdown 等价块，优先处理失败清单。
 - [x] 更新资产清单、合规审查和最终状态。
 - [x] 全量运行图片几何、图片可读性、正文等价块和文本适配静态审计；术语、标题、深度和 LaTeX 审计未因本轮图文等价迁移修改对应规则，仍沿用既有全项目审计入口。
-- [x] 项目级图片一致性闭环：建立 `docs/L1`、`docs/L2`、`docs/L3` 的 PNG 引用台账审计，核对 68 个实物 PNG、66 个 Markdown PNG 引用、65 个唯一正文引用 PNG、3 个 evidence/compatibility 保留 PNG、资产清单和迁移台账一致性。
-- [x] 正文图片链接迁移为正文等价-only：移除 `docs/L1`、`docs/L2`、`docs/L3` 中 66 处 Markdown PNG 图片嵌入，改为 `原图片资产：` 文本记录；原 PNG 文件不删除，迁移台账更新为 66 个 `body_equivalent_only; asset_retained` 和 3 个 evidence/compatibility 保留资产。
+- [x] 项目级图片一致性闭环：建立 `docs/L1`、`docs/L2_协议算法`、`docs/L3` 的 PNG 引用台账审计，核对 68 个实物 PNG、66 个 Markdown PNG 引用、65 个唯一正文引用 PNG、3 个 evidence/compatibility 保留 PNG、资产清单和迁移台账一致性。
+- [x] 正文图片链接迁移为正文等价-only：移除 `docs/L1`、`docs/L2_协议算法`、`docs/L3` 中 66 处 Markdown PNG 图片嵌入，改为 `原图片资产：` 文本记录；原 PNG 文件不删除，迁移台账更新为 66 个 `body_equivalent_only; asset_retained` 和 3 个 evidence/compatibility 保留资产。
 - [ ] 全项目原尺寸逐图目检闭环：分类 `python_pil_drawn` / `python_pdf_crop` / `python_generated_from_table` / `external_or_unknown`，记录 68 个实物 PNG 的字体上下边距、相邻框距、箭头形态、连线端点、表格居中、底部说明区、协议源/crop 质量和残余风险，并对 PDF/Word 原表裁剪图记录源页、裁剪边界、分片可读性和禁止旧脚本覆盖规则。
 - [ ] 刷新迁移台账质量状态：`present` 不再只表示“附近有 marker”，而要区分 `present_quality_pass`、`present_low_quality`、`missing`、`not_applicable`；任何 `present_low_quality` 均不得写成完成。
 
@@ -107,4 +107,4 @@ source_spec: "docs/audits/python_figure_textfit_and_body_equivalent_plan.md"
 | 2026-06-22 | T8.4 图片返工。用户复查指出 `T8.4_LDPC_Tanner_syndrome_toy.png` 仍有文字覆盖和越框；本轮确认旧图中矩阵标题压列标、Tanner 标题贴变量节点、右侧消息流第 4 条越出面板且英文断词。 | 已修改 `tools/figures/render_ldpc_tanner_syndrome.py`：矩阵/Tanner 上部布局下移，右侧消息流面板增高，混合中英文 wrap 尽量保留英文 token，新增标题/节点间距和面板底部留白断言；PNG 重生成后尺寸 `(1600, 1180)`。`python3 tools/audit_figure_geometry.py tools/figures/render_ldpc_tanner_syndrome.py`、`python3 tools/audit_figure_readability.py tools/figures/render_ldpc_tanner_syndrome.py`、`python3 tools/audit_figure_text_fit_static.py tools/figures/render_ldpc_tanner_syndrome.py` 均输出 OK；同时把该脚本加入 `audit_figure_geometry.py --focus-only` 历史重点范围并新增回归测试。 |
 | 2026-06-22 | 全项目 Python 绘图脚本按最新规则重审并修正审计层漏项。新增阻断规则 `character_wrap` 和 `wrapped_without_layout_guard`，新增共享 token-aware helper `tools/figures/figure_text_fit.py`，替换旧的按字符换行逻辑；新增直接执行回归测试，修复共享 helper 在 `python tools/figures/render_*.py` 下导入失败的问题。 | `python3 -m py_compile tools/figures/*.py tools/figures/figure_text_fit.py` 退出码 0；`python3 tools/audit_figure_text_fit_static.py tools/figures` 输出 `FIGURE_TEXT_FIT_STATIC_AUDIT_OK`；`python3 tools/audit_figure_geometry.py --focus-only tools/figures` 和 `python3 tools/audit_figure_geometry.py tools/figures` 均输出 `FIGURE_GEOMETRY_AUDIT_OK`；`python3 tools/audit_figure_readability.py tools/figures` 输出 `FIGURE_READABILITY_AUDIT_OK`；逐个执行 58 个 Python 文件结果 `FIGURE_SCRIPT_RUNS total=58 failures=0`。 |
 | 2026-06-22 | 新增项目级图片一致性审计，关闭“资产目录全量 vs 正文引用 vs 清单登记 vs 迁移台账”漏层。初次审计发现 T8.3 的 5 张长表分片和 T8.8 的 2 张数值走读分片未进入资产清单/迁移台账，且 3 张完整拼接/兼容图未标注非正文引用状态。 | 新增 `tools/audit_project_image_inventory.py` 和单元测试；补登 7 张正文分片图；把 3 张完整图标为 `evidence_only; compatibility_retained; not_current_body_reference`。`python3 tools/audit_project_image_inventory.py` 输出 `PROJECT_IMAGE_INVENTORY_AUDIT_OK`。该结果证明台账一致，不等于 68 张 PNG 原尺寸逐图目检完成。 |
-| 2026-06-23 | 按“图片不链接，但不删除原图片文件”要求迁移正文：66 处 `![...](...png)` 改为 `原图片资产：` 文本记录，正文继续使用 Mermaid/Markdown 等价块承载内容。 | `rg -n '^!\\[[^\\]]*\\]\\([^)]*\\.png\\)' docs/L1 docs/L2 docs/L3 -g '*.md'` 无匹配；`python3 tools/audit_python_figure_body_equivalents.py docs/L1 docs/L2 docs/L3` 输出 `PYTHON_FIGURE_BODY_EQUIVALENT_AUDIT_OK`；`python3 tools/build_python_figure_migration_ledger.py` 输出 `rows=69 missing=0`；`python3 tools/audit_project_image_inventory.py` 输出 `PROJECT_IMAGE_INVENTORY_AUDIT_OK`。 |
+| 2026-06-23 | 按“图片不链接，但不删除原图片文件”要求迁移正文：66 处 `![...](...png)` 改为 `原图片资产：` 文本记录，正文继续使用 Mermaid/Markdown 等价块承载内容。 | `rg -n '^!\\[[^\\]]*\\]\\([^)]*\\.png\\)' docs/L1 docs/L2_协议算法 docs/L3 -g '*.md'` 无匹配；`python3 tools/audit_python_figure_body_equivalents.py docs/L1 docs/L2_协议算法 docs/L3` 输出 `PYTHON_FIGURE_BODY_EQUIVALENT_AUDIT_OK`；`python3 tools/build_python_figure_migration_ledger.py` 输出 `rows=69 missing=0`；`python3 tools/audit_project_image_inventory.py` 输出 `PROJECT_IMAGE_INVENTORY_AUDIT_OK`。 |

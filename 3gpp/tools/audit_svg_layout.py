@@ -2,7 +2,7 @@
 """@file audit_svg_layout.py
 @brief 手绘教学 SVG 的布局几何审计工具：检查文字宿主、越界、重叠、箭头落点与边界间距。
 @date 2026-08-04
-@note 服务 docs/L2/assets 手绘 SVG（PIL PNG 迁移项目）。
+@note 服务 docs/L2_协议算法/assets 手绘 SVG（PIL PNG 迁移项目）。
      规则（对应任务几何审计六条）：
      (1) 每个 text 必须完整落在某个 rect 内（class="free" 的页级标题/箭头标注豁免，仅查重叠）；
      (2) text 不与任何非宿主 rect 相交；
@@ -346,7 +346,7 @@ def audit_file(path: Path) -> tuple[bool, list[str]]:
 
 def main() -> int:
     """@brief 审计入口：逐个审计传入的 SVG 文件。
-    @usage python3 tools/audit_svg_layout.py docs/L2/assets/xxx.svg [...]
+    @usage python3 tools/audit_svg_layout.py docs/L2_协议算法/assets/xxx.svg [...]
     @args 路径列表（.svg 文件）
     @env  需要 PIL 与系统 Noto Sans CJK 字体
     @exit_code 0 = 全部 PASS，1 = 存在 FAIL

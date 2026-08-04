@@ -19,7 +19,7 @@ except ModuleNotFoundError:
 
 ROOT = Path(__file__).resolve().parents[2]
 CSV_PATH = ROOT / "3GPP_Rel19/processed/TS_38.212_38212-j30/tables/table_0012.csv"
-OUT_PATH = ROOT / "docs/L2/assets/T10.3_TS38.212_Table_5.3.1.2-1_Polar_sequence.png"
+OUT_PATH = ROOT / "docs/L2_协议算法/assets/T10.3_TS38.212_Table_5.3.1.2-1_Polar_sequence.png"
 
 COL = {
     "bg": "#FFFFFF",
@@ -77,7 +77,7 @@ def main() -> None:
     每组两列：rank（可靠性升序位置）和 Q(rank)（编码前 bit index）。
     检查点：Q(0)=0, Q(1)=1, Q(2)=2, Q(3)=4, Q(1023)=1023。
     数据来源：3GPP_Rel19/processed/TS_38.212_38212-j30/tables/table_0012.csv。
-    @see docs/L2/assets/T10.2_NR_Polar_N4_transform_frozen_mask.svg N=4 Polar 极化变换图（手绘 SVG，原 render_nr_polar_channel_polarization.py 已删除）
+    @see docs/L2_协议算法/assets/T10.2_NR_Polar_N4_transform_frozen_mask.svg N=4 Polar 极化变换图（手绘 SVG，原 render_nr_polar_channel_polarization.py 已删除）
     """
     pairs = read_pairs()
     groups = 8

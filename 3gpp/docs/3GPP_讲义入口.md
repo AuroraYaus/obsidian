@@ -19,7 +19,7 @@ source_spec: "3gpp/docs"
 | 概念图谱 | [[3gpp/docs/concepts/概念图谱入口]] |
 | L0 术语 | [[3gpp/docs/L0/L0_术语入口]] |
 | L1 基础 | [[3gpp/docs/L1/L1_基础入口]] |
-| L2 协议与算法 | [[3gpp/docs/L2/L2_协议算法入口]] |
+| L2 协议与算法 | [[3gpp/docs/L2_协议算法/L2_协议算法入口]] |
 | L3 工程实现 | [[3gpp/docs/L3/L3_工程实现入口]] |
 | 审计 | [[3gpp/docs/audits/审计入口]] |
 | 规划设计 | [[3gpp/docs/superpowers/规划设计入口]] |

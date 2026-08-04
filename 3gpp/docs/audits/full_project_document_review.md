@@ -11,7 +11,7 @@ source_spec: "docs/audits/full_project_document_review.md"
 # Full Project Document Review
 
 审查时间：2026-06-21  
-审查范围：已存在的 `docs/L1/T*.md`、`docs/L2/T*.md`、`docs/L3/T*.md`，共 94 篇讲义。最新总表见 `docs/audits/final_delivery_status.md`。  
+审查范围：已存在的 `docs/L1/T*.md`、`docs/L2_协议算法/T*.md`、`docs/L3/T*.md`，共 94 篇讲义。最新总表见 `docs/audits/final_delivery_status.md`。  
 审查原则：Prompt 是最低覆盖线，正文必须适当拓展；3GPP 相关知识点必须围绕协议精读；零基础讲义必须先解释概念、理论和直觉，再进入公式；LaTeX 必须全检，不抽检；图片必须逐图检查局部视觉几何。
 
 ## 审查对象
@@ -26,12 +26,12 @@ source_spec: "docs/audits/full_project_document_review.md"
 
 | 审计项 | 命令 | 结果 | 说明 |
 |:---|:---|:---|:---|
-| 术语首现 | `python3 tools/audit_lesson_terms.py docs/L1/T*.md docs/L2/T*.md docs/L3/T*.md` | `LESSON_TERM_AUDIT_OK` | 本轮补齐 L1/L2 多篇 3GPP/LTE/NR 标题后首现说明，避免标题被脚本忽略后正文首现失败。 |
-| 标题正式化 | `python3 tools/audit_markdown_headings.py docs/L1/T*.md docs/L2/T*.md docs/L3/T*.md` | `MARKDOWN_HEADING_AUDIT_OK` | 标题正式化审计通过。 |
-| 深度/协议索引风险 | `python3 tools/audit_lesson_depth.py --strict docs/L1/T*.md docs/L2/T*.md docs/L3/T*.md` | `LESSON_DEPTH_AUDIT_OK` | 全项目已通过深度审计。 |
-| LaTeX 全检 | `python3 tools/audit_latex_render.py docs/L1/T*.md`；`python3 tools/audit_latex_render.py docs/L2/T*.md`；`python3 tools/audit_latex_render.py docs/L3/T*.md` | L1 `LATEX_RENDER_AUDIT_OK formulas=2036`；L2 `LATEX_RENDER_AUDIT_OK formulas=3444`；L3 `LATEX_RENDER_AUDIT_OK formulas=948`；合计 6428。 | 全项目 94 篇讲义公式分段全检通过。 |
+| 术语首现 | `python3 tools/audit_lesson_terms.py docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md` | `LESSON_TERM_AUDIT_OK` | 本轮补齐 L1/L2 多篇 3GPP/LTE/NR 标题后首现说明，避免标题被脚本忽略后正文首现失败。 |
+| 标题正式化 | `python3 tools/audit_markdown_headings.py docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md` | `MARKDOWN_HEADING_AUDIT_OK` | 标题正式化审计通过。 |
+| 深度/协议索引风险 | `python3 tools/audit_lesson_depth.py --strict docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md` | `LESSON_DEPTH_AUDIT_OK` | 全项目已通过深度审计。 |
+| LaTeX 全检 | `python3 tools/audit_latex_render.py docs/L1/T*.md`；`python3 tools/audit_latex_render.py docs/L2_协议算法/T*.md`；`python3 tools/audit_latex_render.py docs/L3/T*.md` | L1 `LATEX_RENDER_AUDIT_OK formulas=2036`；L2 `LATEX_RENDER_AUDIT_OK formulas=3444`；L3 `LATEX_RENDER_AUDIT_OK formulas=948`；合计 6428。 | 全项目 94 篇讲义公式分段全检通过。 |
 | 图片几何/可读性 | `python3 tools/audit_figure_geometry.py tools/figures`；`python3 tools/audit_figure_readability.py tools/figures` | `FIGURE_GEOMETRY_AUDIT_OK`；`FIGURE_READABILITY_AUDIT_OK` | 本轮最终收尾已复跑。 |
-| 引用重建候选 | `python3 tools/audit_reference_rebuilds.py docs/L1/T*.md docs/L2/T*.md docs/L3/T*.md > docs/audits/reference_rebuild_candidates_full.txt` | 退出码 0，候选清单 1320 行 | 该脚本输出候选清单，不是硬失败；需要人工分类为已复现、项目内回链、自写公式、真实工具未运行边界或待核验项。 |
+| 引用重建候选 | `python3 tools/audit_reference_rebuilds.py docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md > docs/audits/reference_rebuild_candidates_full.txt` | 退出码 0，候选清单 1320 行 | 该脚本输出候选清单，不是硬失败；需要人工分类为已复现、项目内回链、自写公式、真实工具未运行边界或待核验项。 |
 
 ## 总体结论
 

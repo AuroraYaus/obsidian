@@ -431,7 +431,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
             md.write_text(
                 "# Lesson\n\n"
                 "## 接收端流程\n\n"
-                "图 T1-1 由 `tools/figures/render.py` 生成，输出到 `docs/L2/assets/figure.png`。读图顺序为：A 到 B。\n",
+                "图 T1-1 由 `tools/figures/render.py` 生成，输出到 `docs/L2_协议算法/assets/figure.png`。读图顺序为：A 到 B。\n",
                 encoding="utf-8",
             )
 
@@ -453,7 +453,7 @@ class PythonFigureBodyEquivalentAuditTests(unittest.TestCase):
                 "| 项目 | 记录 |\n"
                 "|:---|:---|\n"
                 "| 图片脚本 | `tools/figures/render.py` |\n"
-                "| 图片输出 | `docs/L2/assets/figure.png` |\n",
+                "| 图片输出 | `docs/L2_协议算法/assets/figure.png` |\n",
                 encoding="utf-8",
             )
 
@@ -696,7 +696,7 @@ class ProjectImageInventoryAuditTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            lesson_dir = root / "docs/L2"
+            lesson_dir = root / "docs/L2_协议算法"
             asset_dir = lesson_dir / "assets"
             audit_dir = root / "docs/audits"
             asset_dir.mkdir(parents=True)
@@ -728,7 +728,7 @@ class ProjectImageInventoryAuditTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            lesson_dir = root / "docs/L2"
+            lesson_dir = root / "docs/L2_协议算法"
             asset_dir = lesson_dir / "assets"
             audit_dir = root / "docs/audits"
             asset_dir.mkdir(parents=True)
@@ -743,14 +743,14 @@ class ProjectImageInventoryAuditTests(unittest.TestCase):
                 "# Inventory\n\n"
                 "| Asset | Script |\n"
                 "|:---|:---|\n"
-                "| `docs/L2/assets/figure.png` | `tools/figures/render.py` |\n",
+                "| `docs/L2_协议算法/assets/figure.png` | `tools/figures/render.py` |\n",
                 encoding="utf-8",
             )
             (audit_dir / "python_figure_to_body_content_migration.md").write_text(
                 "# Migration\n\n"
                 "| Lesson | Image | Script | Equivalent type | Status | Body location |\n"
                 "|:---|:---|:---|:---|:---|:---|\n"
-                "| `docs/L2/T1.md` | `assets/figure.png` | `tools/figures/render.py` | Mermaid | body_text_represented; asset_retained | `docs/L2/T1.md:3` |\n",
+                "| `docs/L2_协议算法/T1.md` | `assets/figure.png` | `tools/figures/render.py` | Mermaid | body_text_represented; asset_retained | `docs/L2_协议算法/T1.md:3` |\n",
                 encoding="utf-8",
             )
 
@@ -764,7 +764,7 @@ class ProjectImageInventoryAuditTests(unittest.TestCase):
 
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
-            lesson_dir = root / "docs/L2"
+            lesson_dir = root / "docs/L2_协议算法"
             asset_dir = lesson_dir / "assets"
             audit_dir = root / "docs/audits"
             asset_dir.mkdir(parents=True)
@@ -780,16 +780,16 @@ class ProjectImageInventoryAuditTests(unittest.TestCase):
                 "# Inventory\n\n"
                 "| Asset | Script |\n"
                 "|:---|:---|\n"
-                "| `docs/L2/assets/part1.png` | `tools/figures/render.py` |\n"
-                "| `docs/L2/assets/full.png` | `tools/figures/render.py` |\n",
+                "| `docs/L2_协议算法/assets/part1.png` | `tools/figures/render.py` |\n"
+                "| `docs/L2_协议算法/assets/full.png` | `tools/figures/render.py` |\n",
                 encoding="utf-8",
             )
             (audit_dir / "python_figure_to_body_content_migration.md").write_text(
                 "# Migration\n\n"
                 "| Lesson | Image | Script | Equivalent type | Status | Body location |\n"
                 "|:---|:---|:---|:---|:---|:---|\n"
-                "| `docs/L2/T1.md` | `assets/part1.png` | `tools/figures/render.py` | Markdown 等价表 | present_quality_pass; body_referenced | `docs/L2/T1.md:3` |\n"
-                "| `docs/L2/T1.md` | `assets/full.png` | `tools/figures/render.py` | not_applicable | evidence_only; not_current_body_reference | `docs/L2/T1.md:3` |\n",
+                "| `docs/L2_协议算法/T1.md` | `assets/part1.png` | `tools/figures/render.py` | Markdown 等价表 | present_quality_pass; body_referenced | `docs/L2_协议算法/T1.md:3` |\n"
+                "| `docs/L2_协议算法/T1.md` | `assets/full.png` | `tools/figures/render.py` | not_applicable | evidence_only; not_current_body_reference | `docs/L2_协议算法/T1.md:3` |\n",
                 encoding="utf-8",
             )
 

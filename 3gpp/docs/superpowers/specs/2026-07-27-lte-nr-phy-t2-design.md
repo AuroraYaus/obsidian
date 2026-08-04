@@ -48,10 +48,10 @@ source_spec: "docs/superpowers/specs/2026-07-27-lte-nr-phy-t2-design.md"
 | `docs/L1/T3.4_NR_LDPC_segmentation_rules.md` | T2.5→T2.11 |
 | `docs/L1/T3.5_NR_Polar_segmentation_crc.md` | T2.5→T2.11 |
 | `docs/L1/T4.5_decoder_performance_metrics.md` | T2.1→T2.7 |
-| `docs/L2/T9.1_NR_LDPC_rate_recovery_overview.md` | T2.5→T2.11 |
-| `docs/L2/T9.2_NR_LDPC_circular_buffer_states.md` | T2.5→T2.11 |
-| `docs/L2/T9.4_NR_LDPC_bit_deinterleaving.md` | T2.2→T2.8, T2.3→T2.9, T2.5→T2.11 |
-| `docs/L2/T10.7_NR_Polar_rate_recovery.md` | T2.5→T2.11 |
+| `docs/L2_协议算法/T9.1_NR_LDPC_rate_recovery_overview.md` | T2.5→T2.11 |
+| `docs/L2_协议算法/T9.2_NR_LDPC_circular_buffer_states.md` | T2.5→T2.11 |
+| `docs/L2_协议算法/T9.4_NR_LDPC_bit_deinterleaving.md` | T2.2→T2.8, T2.3→T2.9, T2.5→T2.11 |
+| `docs/L2_协议算法/T10.7_NR_Polar_rate_recovery.md` | T2.5→T2.11 |
 | `docs/L3/T17.2_LTE_Turbo_float_sim_plan.md` | T2.2→T2.8 |
 | `docs/L3/T18.1_fixed_point_decoder_requirements.md` | T2.5→T2.11 |
 

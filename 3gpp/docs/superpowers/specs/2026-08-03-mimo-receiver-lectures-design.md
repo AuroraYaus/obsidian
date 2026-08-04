@@ -26,13 +26,13 @@
 
 ## 格式规范
 
-- **模板**：沿用 L2 讲义模板（范本 `docs/L2/T8.1_NR_LDPC_decoder_chain_overview.md`）：
+- **模板**：沿用 L2 讲义模板（范本 `docs/L2_协议算法/T8.1_NR_LDPC_decoder_chain_overview.md`）：
   - frontmatter：`type: algorithm`、`aliases`（含 `T12.x <English title>`）、`tags`（`3gpp`、`docs`、`l2`、`lesson`）、`source_spec`
   - `# T12.x 中文标题`
   - `## 本节学习目标`：叙事 intro 段 + "学完本节后，应能做到：" bullets（6-8 条，动词开头、可检验）+ 系列内衔接段
   - `## 前置知识检查`：表格 `| 前置项 | 本节需要达到的程度 |`（引用 L1/L2 既有讲义与概念笔记）
   - 内容章节：公式 LaTeX（编号 `\tag{n}`）、表格、生活类比、数值实例
-  - **SVG 图（每篇至少 1 个，硬性要求）**：放理解关键处（接收链路流程图、检测器对比框图、星座/决策区域示意、估计流程框图、数值曲线等），存 `docs/L2/assets/`（命名 `T12.x_<英文主题>.svg`，与存量 `T10.x_*.png` 惯例一致）；**生成后强制按 CLAUDE.md 第 4 条视觉验证**：(1) Y 坐标扫描（提取全部 `<text>`/`<rect>`/`<line>` y 坐标，逐层核对间距 ≥ 8 px）(2) PNG 预览（cairosvg 或 ImageMagick convert 转 PNG 肉眼确认无交叠）——验证通过才允许写入资产目录并在正文引用；mermaid 图可作辅助，不能替代 SVG
+  - **SVG 图（每篇至少 1 个，硬性要求）**：放理解关键处（接收链路流程图、检测器对比框图、星座/决策区域示意、估计流程框图、数值曲线等），存 `docs/L2_协议算法/assets/`（命名 `T12.x_<英文主题>.svg`，与存量 `T10.x_*.png` 惯例一致）；**生成后强制按 CLAUDE.md 第 4 条视觉验证**：(1) Y 坐标扫描（提取全部 `<text>`/`<rect>`/`<line>` y 坐标，逐层核对间距 ≥ 8 px）(2) PNG 预览（cairosvg 或 ImageMagick convert 转 PNG 肉眼确认无交叠）——验证通过才允许写入资产目录并在正文引用；mermaid 图可作辅助，不能替代 SVG
   - `## 小结`：收束本节 + 指向下一篇
   - 与既有讲义/概念笔记的 `[[wikilink]]` 衔接
 - **内嵌 Python**：每篇 1 个 numpy 代码块（10-30 行，`python` 代码围栏，教学注释风格；DOXYGEN 完整头仅适用于 `sim/` 正式脚本，内嵌块不强制，若日后抽为正式脚本再补）
@@ -41,7 +41,7 @@
 
 ## 入口与集成
 
-- `docs/L2/L2_协议算法入口.md` 新增 `## M12 MIMO 接收机与检测器` 章节（在 M11 之后），挂 5 篇链接，与既有条目格式一致
+- `docs/L2_协议算法/L2_协议算法入口.md` 新增 `## M12 MIMO 接收机与检测器` 章节（在 M11 之后），挂 5 篇链接，与既有条目格式一致
 - `概念图谱入口.md` 不改动（概念笔记已在图谱）
 - 相关概念笔记补充指向讲义的图谱关联（可选，随讲义实施一并做）：Detector_Comparison/Diversity_Combining/Channel_Estimation/MMSE_均衡/Sphere_Decoding/CSI_SINR 各加 `[[T12.x_...]]` 链接
 

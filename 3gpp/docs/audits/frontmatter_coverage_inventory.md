@@ -34,5 +34,5 @@ source_spec: "Local vault scan 2026-07-19"
 ## 后续焦点
 
 1. 继续补正文内容、协议证据和图谱链接。
-2. 把 `docs/L1`、`docs/L2`、`docs/L3` 的内容深度和证据链继续往下填。
+2. 把 `docs/L1`、`docs/L2_协议算法`、`docs/L3` 的内容深度和证据链继续往下填。
 3. 逐步把 `3GPP_Rel19/processed/` 的目录说明页与正文讲义之间的双链收紧。

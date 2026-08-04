@@ -28,7 +28,7 @@ source_spec: "docs/superpowers/plans/2026-06-21-python-figure-body-equivalents.m
 - Create `tests/test_python_figure_audits.py`: unit tests for both audit scripts using temporary fixtures.
 - Create `docs/audits/python_figure_to_body_content_migration.md`: full migration ledger.
 - Modify selected `tools/figures/*.py`: remove silent truncation and add text-fit guards.
-- Modify `docs/L1/*.md`, `docs/L2/*.md`, `docs/L3/*.md`: add Mermaid/table equivalents near PNG read guides.
+- Modify `docs/L1/*.md`, `docs/L2_协议算法/*.md`, `docs/L3/*.md`: add Mermaid/table equivalents near PNG read guides.
 - Modify `docs/audits/image_asset_inventory.md` and `docs/audits/python_figure_textfit_and_body_equivalent_plan.md`: record completion status and commands.
 
 ## Tasks
@@ -67,7 +67,7 @@ source_spec: "docs/superpowers/plans/2026-06-21-python-figure-body-equivalents.m
 **Files:**
 - Create: `docs/audits/python_figure_to_body_content_migration.md`
 
-- [ ] Generate an inventory from Markdown image references under `docs/L1`, `docs/L2`, and `docs/L3`.
+- [ ] Generate an inventory from Markdown image references under `docs/L1`, `docs/L2_协议算法`, and `docs/L3`.
 - [ ] Record columns: lesson, image, script, equivalent type, status, body location.
 - [ ] Mark existing Mermaid/table equivalents as `present` when they satisfy the audit marker rule.
 - [ ] Mark missing equivalents as `missing`.
@@ -93,14 +93,14 @@ source_spec: "docs/superpowers/plans/2026-06-21-python-figure-body-equivalents.m
 
 **Files:**
 - Modify: `docs/L1/*.md`
-- Modify: `docs/L2/*.md`
+- Modify: `docs/L2_协议算法/*.md`
 
 - [ ] For each Python PNG in L1 and L2, add a nearby `图片内容正文等价` section.
 - [ ] Use Mermaid for flow/architecture/state images.
 - [ ] Use Markdown tables for protocol tables, numeric walkthroughs, descriptors, comparison matrices, and edge-case matrices.
 - [ ] For mixed images, add both `Mermaid 等价图` and `Markdown 等价表`.
 - [ ] Keep equations and protocol claims consistent with existing lesson text and evidence rows; do not introduce new unverified protocol facts.
-- [ ] Run `python3 tools/audit_python_figure_body_equivalents.py docs/L1 docs/L2` and resolve all L1/L2 findings.
+- [ ] Run `python3 tools/audit_python_figure_body_equivalents.py docs/L1 docs/L2_协议算法` and resolve all L1/L2 findings.
 
 ### Task 6: Add L3 Body Equivalents
 
@@ -143,10 +143,10 @@ python3 tools/audit_figure_readability.py tools/figures
 - Modify: `docs/audits/python_figure_to_body_content_migration.md`
 - Optionally create: `tools/audit_project_image_inventory.py`
 
-- [ ] Build a whole-project image reference ledger for `docs/L1`, `docs/L2`, and `docs/L3` with: lesson path, line number, raw PNG reference, resolved asset path, asset existence, unique/reused status, source type, generating script, and inventory row.
+- [ ] Build a whole-project image reference ledger for `docs/L1`, `docs/L2_协议算法`, and `docs/L3` with: lesson path, line number, raw PNG reference, resolved asset path, asset existence, unique/reused status, source type, generating script, and inventory row.
 - [ ] Classify each unique PNG as `python_pil_drawn`, `python_pdf_crop`, `python_generated_from_table`, or `external_or_unknown`; PDF/Word protocol table crops must be reviewed separately from hand-drawn PIL teaching figures.
 - [x] Check Markdown references against `docs/audits/image_asset_inventory.md`: every referenced PNG must exist and have an inventory row; every inventory PNG must record whether it is body-referenced; repeated references must list all use sites. 2026-06-22 新增 `tools/audit_project_image_inventory.py` 后输出 `PROJECT_IMAGE_INVENTORY_AUDIT_OK`，覆盖 68 个实物 PNG、66 个 Markdown PNG 引用、65 个唯一正文引用 PNG 和 3 个 evidence/compatibility 保留 PNG。
-- [x] Run body-equivalent quality audit for every body PNG reference, not just marker presence. Rows in `docs/audits/python_figure_to_body_content_migration.md` now distinguish `present_quality_pass; body_referenced` and `evidence_only; compatibility_retained; not_current_body_reference`; `python3 tools/audit_python_figure_body_equivalents.py docs/L1 docs/L2 docs/L3` 输出 `PYTHON_FIGURE_BODY_EQUIVALENT_AUDIT_OK`。
+- [x] Run body-equivalent quality audit for every body PNG reference, not just marker presence. Rows in `docs/audits/python_figure_to_body_content_migration.md` now distinguish `present_quality_pass; body_referenced` and `evidence_only; compatibility_retained; not_current_body_reference`; `python3 tools/audit_python_figure_body_equivalents.py docs/L1 docs/L2_协议算法 docs/L3` 输出 `PYTHON_FIGURE_BODY_EQUIVALENT_AUDIT_OK`。
 - [x] Run script-level checks for all `tools/figures/*.py`: `audit_figure_text_fit_static.py`, `audit_figure_readability.py`, `audit_figure_geometry.py --focus-only`, and `audit_figure_geometry.py`. 2026-06-22 最新规则复跑均输出 OK；逐个执行 58 个 Python 文件结果 `FIGURE_SCRIPT_RUNS total=58 failures=0`，其中 57 个为 `render_*.py` 绘图脚本，1 个为 `figure_text_fit.py` helper。
 - [ ] Record manual visual review evidence for all 68 physical PNGs: font top/bottom margin, adjacent box spacing, arrow shape/direction, connector endpoints, table cell centering, bottom-note area, protocol-source/crop quality, and residual risk.
 - [ ] Add a PDF/Word crop-specific review line for long protocol tables: source page/table number, crop rectangle, split-image readability, stitching boundary, and rule forbidding replacement by old CSV/PIL redraws unless explicitly approved.

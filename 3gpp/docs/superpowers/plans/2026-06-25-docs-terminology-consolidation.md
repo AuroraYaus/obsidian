@@ -15,7 +15,7 @@ source_spec: "docs/superpowers/plans/2026-06-25-docs-terminology-consolidation.m
 
 **Goal:** Move all repeated terminology explanations out of `docs/` lesson chapters into a single standalone glossary chapter, then remove redundant full-name explanations from the other lesson chapters.
 
-**Architecture:** Add one canonical glossary chapter under `docs/` that becomes the sole home for recurring abbreviations and brief definitions. Update the lesson chapters in `docs/L1`, `docs/L2`, and `docs/L3` to keep only the shorthand terms they need for readability, while removing the per-chapter term tables and first-use expansion boilerplate. Preserve chapter-specific semantic explanations only where the term is part of the lesson content itself, not where it is acting as a glossary entry.
+**Architecture:** Add one canonical glossary chapter under `docs/` that becomes the sole home for recurring abbreviations and brief definitions. Update the lesson chapters in `docs/L1`, `docs/L2_协议算法`, and `docs/L3` to keep only the shorthand terms they need for readability, while removing the per-chapter term tables and first-use expansion boilerplate. Preserve chapter-specific semantic explanations only where the term is part of the lesson content itself, not where it is acting as a glossary entry.
 
 **Tech Stack:** Markdown, Python scripts under `tools/`, existing lesson audit scripts.
 
@@ -36,7 +36,7 @@ source_spec: "docs/superpowers/plans/2026-06-25-docs-terminology-consolidation.m
 - Modify: `docs/L1/T0.1_LTE_NR_decoder_protocol_reading_map.md`
 
 **Interfaces:**
-- Consumes: the recurring abbreviations and definitions already present across `docs/L1`, `docs/L2`, and `docs/L3`
+- Consumes: the recurring abbreviations and definitions already present across `docs/L1`, `docs/L2_协议算法`, and `docs/L3`
 - Produces: a single glossary chapter linked from the reading map
 
 - [ ] **Step 1: Write the glossary content**
@@ -54,7 +54,7 @@ Run a focused Markdown readback on `docs/L0_terminology_glossary.md` and the upd
 ### Task 2: Remove redundant terminology tables from lesson chapters
 
 **Files:**
-- Modify every `docs/L1/T*.md`, `docs/L2/T*.md`, and `docs/L3/T*.md` lesson chapter that currently contains a `## 术语登场` or `## 本节缩写说明` section
+- Modify every `docs/L1/T*.md`, `docs/L2_协议算法/T*.md`, and `docs/L3/T*.md` lesson chapter that currently contains a `## 术语登场` or `## 本节缩写说明` section
 
 **Interfaces:**
 - Consumes: the canonical glossary chapter from Task 1
@@ -86,9 +86,9 @@ Do not change non-terminology audit lines unless they mention removed glossary c
 - Consumes: the updated glossary chapter and cleaned lesson chapters
 - Produces: passing terminology and heading audits for the docs tree
 
-- [ ] **Step 1: Run terminology audit over `docs/L1 docs/L2 docs/L3`**
+- [ ] **Step 1: Run terminology audit over `docs/L1 docs/L2_协议算法 docs/L3`**
 
-Execute `python3 tools/audit_lesson_terms.py docs/L1 docs/L2 docs/L3` and inspect any remaining failures.
+Execute `python3 tools/audit_lesson_terms.py docs/L1 docs/L2_协议算法 docs/L3` and inspect any remaining failures.
 
 - [ ] **Step 2: Fix any residual false positives or missed local definitions**
 
@@ -96,7 +96,7 @@ Adjust the affected lesson chapter if the remaining failure is caused by a remov
 
 - [ ] **Step 3: Re-run the audit plus a heading check**
 
-Re-run `python3 tools/audit_lesson_terms.py docs/L1 docs/L2 docs/L3` and `python3 tools/audit_markdown_headings.py docs/L1 docs/L2 docs/L3` to confirm the docs tree remains structurally valid.
+Re-run `python3 tools/audit_lesson_terms.py docs/L1 docs/L2_协议算法 docs/L3` and `python3 tools/audit_markdown_headings.py docs/L1 docs/L2_协议算法 docs/L3` to confirm the docs tree remains structurally valid.
 
 - [ ] **Step 4: Commit the terminology migration**
 

@@ -5,7 +5,7 @@
 @note 设计意图：使用 pdftoppm 将 PDF 源文件的第 21-24 页光栅化，然后按预定坐标裁剪、
   拼接表格片段，输出完整移位表（给 L1 讲义）和分段清晰表（给 L2 讲义）。
 @see docs/L1/T3.4_TS38.212_BG_shift_tables.md
-@see docs/L2/T8.3_TS38.212_BG_shift_table_detail.md
+@see docs/L2_协议算法/T8.3_TS38.212_BG_shift_table_detail.md
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 PDF = ROOT / "3GPP_Rel19/processed/TS_38.212_38212-j30/source.pdf"
 L1_ASSET_DIR = ROOT / "docs/L1/assets"
-L2_ASSET_DIR = ROOT / "docs/L2/assets"
+L2_ASSET_DIR = ROOT / "docs/L2_协议算法/assets"
 
 PAGE_SPECS = {
     "bg1": {
@@ -143,7 +143,7 @@ def save_split_table_images(tmpdir: Path, key: str) -> None:
 def main() -> None:
     """@brief 从 TS 38.212 PDF 中提取并拼接 BG1/BG2 移位表图片
     @note 输出产物：对 BG1 和 BG2 各生成一张完整拼接图和若干张分段清晰图，
-      分别放入 docs/L1/assets/ 和 docs/L2/assets/
+      分别放入 docs/L1/assets/ 和 docs/L2_协议算法/assets/
     @throws subprocess.CalledProcessError pdftoppm 渲染失败时由 check=True 传播"""
     with tempfile.TemporaryDirectory(prefix="ts38212_pdf_pages_") as tmp:
         tmpdir = Path(tmp)

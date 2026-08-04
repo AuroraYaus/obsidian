@@ -76,10 +76,10 @@ ls docs/L1/T2.[1-5]_*.md 2>/dev/null && echo "FAIL: old files still exist" || ec
 - `docs/L1/T3.4_NR_LDPC_segmentation_rules.md` — T2.5→T2.11
 - `docs/L1/T3.5_NR_Polar_segmentation_crc.md` — T2.5→T2.11
 - `docs/L1/T4.5_decoder_performance_metrics.md` — T2.1→T2.7
-- `docs/L2/T9.1_NR_LDPC_rate_recovery_overview.md` — T2.5→T2.11
-- `docs/L2/T9.2_NR_LDPC_circular_buffer_states.md` — T2.5→T2.11
-- `docs/L2/T9.4_NR_LDPC_bit_deinterleaving.md` — T2.2→T2.8, T2.3→T2.9, T2.5→T2.11
-- `docs/L2/T10.7_NR_Polar_rate_recovery.md` — T2.5→T2.11
+- `docs/L2_协议算法/T9.1_NR_LDPC_rate_recovery_overview.md` — T2.5→T2.11
+- `docs/L2_协议算法/T9.2_NR_LDPC_circular_buffer_states.md` — T2.5→T2.11
+- `docs/L2_协议算法/T9.4_NR_LDPC_bit_deinterleaving.md` — T2.2→T2.8, T2.3→T2.9, T2.5→T2.11
+- `docs/L2_协议算法/T10.7_NR_Polar_rate_recovery.md` — T2.5→T2.11
 - `docs/L3/T17.2_LTE_Turbo_float_sim_plan.md` — T2.2→T2.8
 - `docs/L3/T18.1_fixed_point_decoder_requirements.md` — T2.5→T2.11
 
@@ -108,8 +108,8 @@ sed -i '1s/^# T2\.5 /# T2.11 /' docs/L1/T2.11_LLR_clipping_scaling_quantization.
 ```bash
 cd /home/yys/AGENT/3gpp
 # 搜索 docs/（排除 audits/superpowers）中的残留旧引用
-grep -rn "T2\.1[^0-9]" docs/L1/ docs/L2/ docs/L3/ docs/L0/ --include="*.md" | grep -v "T2\.1[0-1]" && echo "WARNING" || echo "OK"
-grep -rn "T2\.[2-5][^0-9]" docs/L1/ docs/L2/ docs/L3/ docs/L0/ --include="*.md" | grep -v "T2\.2[^0-9]\|T2\.3[^0-9]\|T2\.4[^0-9]\|T2\.5[^0-9]" && echo "WARNING" || echo "OK"
+grep -rn "T2\.1[^0-9]" docs/L1/ docs/L2_协议算法/ docs/L3/ docs/L0/ --include="*.md" | grep -v "T2\.1[0-1]" && echo "WARNING" || echo "OK"
+grep -rn "T2\.[2-5][^0-9]" docs/L1/ docs/L2_协议算法/ docs/L3/ docs/L0/ --include="*.md" | grep -v "T2\.2[^0-9]\|T2\.3[^0-9]\|T2\.4[^0-9]\|T2\.5[^0-9]" && echo "WARNING" || echo "OK"
 ```
 
 ---
@@ -204,7 +204,7 @@ grep -rn "T2\.[2-5][^0-9]" docs/L1/ docs/L2/ docs/L3/ docs/L0/ --include="*.md" 
 ```bash
 # Phase 1: 搬迁 + 引用更新
 git add docs/L1/T2.[7-9]_*.md docs/L1/T2.1[0-1]_*.md
-git add docs/L1/T1.*.md docs/L1/T3.*.md docs/L1/T4.*.md docs/L2/ docs/L3/
+git add docs/L1/T1.*.md docs/L1/T3.*.md docs/L1/T4.*.md docs/L2_协议算法/ docs/L3/
 git commit -m "refactor: relocate T2.1-T2.5 to T2.7-T2.11, update all cross-references
 
 Co-Authored-By: Claude <noreply@anthropic.com>"

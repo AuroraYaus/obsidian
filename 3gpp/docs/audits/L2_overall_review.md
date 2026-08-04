@@ -12,7 +12,7 @@ source_spec: "docs/audits/L2_overall_review.md"
 
 ## 审查范围
 
-本报告覆盖 `docs/L2/T6.*.md` 到 `docs/L2/T11.*.md`，共 41 篇讲义：
+本报告覆盖 `docs/L2_协议算法/T6.*.md` 到 `docs/L2_协议算法/T11.*.md`，共 41 篇讲义：
 
 | 模块 | 范围 | 篇数 | 状态 |
 |:---|:---|---:|:---|
@@ -27,11 +27,11 @@ source_spec: "docs/audits/L2_overall_review.md"
 
 | 审计项 | 命令 | 结果 |
 |:---|:---|:---|
-| 缩写首现与术语 | `python3 tools/audit_lesson_terms.py docs/L2/T*.md` | `LESSON_TERM_AUDIT_OK` |
-| 标题正式化 | `python3 tools/audit_markdown_headings.py docs/L2/T*.md` | `MARKDOWN_HEADING_AUDIT_OK` |
-| 深度与零基础讲解 | `python3 tools/audit_lesson_depth.py --strict docs/L2/T*.md` | `LESSON_DEPTH_AUDIT_OK` |
-| LaTeX 渲染 | `python3 tools/audit_latex_render.py docs/L2/T*.md` | `LATEX_RENDER_AUDIT_OK formulas=3241` |
-| 引用重建候选 | `python3 tools/audit_reference_rebuilds.py docs/L2/T*.md` | `REFERENCE_REBUILD_AUDIT_CANDIDATES`，候选清单 544 行，已保存到 `docs/audits/reference_rebuild_candidates_L2.txt`。 |
+| 缩写首现与术语 | `python3 tools/audit_lesson_terms.py docs/L2_协议算法/T*.md` | `LESSON_TERM_AUDIT_OK` |
+| 标题正式化 | `python3 tools/audit_markdown_headings.py docs/L2_协议算法/T*.md` | `MARKDOWN_HEADING_AUDIT_OK` |
+| 深度与零基础讲解 | `python3 tools/audit_lesson_depth.py --strict docs/L2_协议算法/T*.md` | `LESSON_DEPTH_AUDIT_OK` |
+| LaTeX 渲染 | `python3 tools/audit_latex_render.py docs/L2_协议算法/T*.md` | `LATEX_RENDER_AUDIT_OK formulas=3241` |
+| 引用重建候选 | `python3 tools/audit_reference_rebuilds.py docs/L2_协议算法/T*.md` | `REFERENCE_REBUILD_AUDIT_CANDIDATES`，候选清单 544 行，已保存到 `docs/audits/reference_rebuild_candidates_L2.txt`。 |
 
 说明：引用重建脚本输出候选项，不等同于自动失败。L2 中大量候选来自“已在正文复现的协议表/图/公式”“明确交由专题章节复现”“仅作为背景锚点”“正文已标注不展开或待核验关闭条件”。后续若做最终交付，应按候选清单继续分类，不把候选项直接视为协议错误。
 
@@ -40,7 +40,7 @@ source_spec: "docs/audits/L2_overall_review.md"
 | 检查项 | 结果 |
 |:---|:---|
 | 图片脚本重生成 | `tools/figures/*.py` 共 32 个脚本全部运行成功。 |
-| PNG 边界检查 | 仅确认 `docs/L1/assets/*.png` 与 `docs/L2/assets/*.png` 共 36 张 PNG 的 top/bottom/left/right 非白边界计数均为 0；该项不等于局部视觉审计通过。 |
+| PNG 边界检查 | 仅确认 `docs/L1/assets/*.png` 与 `docs/L2_协议算法/assets/*.png` 共 36 张 PNG 的 top/bottom/left/right 非白边界计数均为 0；该项不等于局部视觉审计通过。 |
 | T11 新增图片 | T11.1-T11.5 五张图均重生成成功，边界检查通过；用户指出过的局部几何问题已修复并记录。 |
 | 全局视觉规则 | 规则已写入总纲、roadmap 和台账；这是后续逐图审计依据，不是 36 张图永久通过证明。 |
 | T6.3 底部说明框复修 | 用户指出 `T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png` 底部“接收端读图顺序”说明框纵向布局不协调。已修复脚本为 bbox-based 分区居中布局，重新生成图片，边界检查 `IMAGE_EDGE_CHECK (1800, 1280) {'top': 0, 'bottom': 0, 'left': 0, 'right': 0}`。 |

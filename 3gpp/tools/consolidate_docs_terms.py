@@ -14,7 +14,7 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DOCS_ROOT = PROJECT_ROOT / "docs"
-LESSON_ROOTS = [DOCS_ROOT / "L1", DOCS_ROOT / "L2", DOCS_ROOT / "L3"]
+LESSON_ROOTS = [DOCS_ROOT / "L1", DOCS_ROOT / "L2_协议算法", DOCS_ROOT / "L3"]
 GLOSSARY_PATH = DOCS_ROOT / "L0" / "L0_terminology_glossary.md"
 READING_MAP = DOCS_ROOT / "L1" / "T0.1_LTE_NR_decoder_protocol_reading_map.md"
 

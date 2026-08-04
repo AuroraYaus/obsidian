@@ -7,7 +7,7 @@ import unittest
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DOCS = PROJECT_ROOT / 'docs'
-LESSON_ROOTS = [DOCS / 'L1', DOCS / 'L2', DOCS / 'L3']
+LESSON_ROOTS = [DOCS / 'L1', DOCS / 'L2_协议算法', DOCS / 'L3']
 
 
 class DocsTerminologyConsolidationTest(unittest.TestCase):
