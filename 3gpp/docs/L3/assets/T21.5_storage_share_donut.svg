@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T21.5 存储子系统占比环形图：62% 在每 RE 矩阵与信道状态（视角反转）</title>
+  <rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="40" y="16" width="1200" height="60" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="640" y="42" font-size="19" font-weight="700" fill="#152033" text-anchor="middle">T21.5 存储子系统占比：62% 在"每 RE 的矩阵与信道状态"</text>
+  <text x="640" y="70" font-size="12.5" fill="#455A64" text-anchor="middle">52PRB 含 PS · 全系统 ~6.1 MB · 素材 PHY01 §8.4 / analysis 06 §1.4 口径</text>
+
+  <!-- 环形图：中心 (420,370)，外径 190、内径 115；自顶部起顺时针 -->
+  <!-- MIMO 26%：-90° → 3.6° -->
+  <path d="M 420 180 A 190 190 0 0 1 609.6 381.9 L 534.8 377.2 A 115 115 0 0 0 420 255 Z" fill="#1E40AF" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- 信道估计 20%：3.6° → 75.6° -->
+  <path d="M 609.6 381.9 A 190 190 0 0 1 467.3 553.9 L 448.6 481.3 A 115 115 0 0 0 534.8 377.2 Z" fill="#0369A1" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- PS 16%：75.6° → 133.2° -->
+  <path d="M 467.3 553.9 A 190 190 0 0 1 290.0 508.7 L 341.4 454.0 A 115 115 0 0 0 448.6 481.3 Z" fill="#6D28D9" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- OFDM 13%：133.2° → 180° -->
+  <path d="M 290.0 508.7 A 190 190 0 0 1 230.0 370.0 L 305.0 370.0 A 115 115 0 0 0 341.4 454.0 Z" fill="#475569" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- DMRS/Gold/其他 13%：180° → 226.8° -->
+  <path d="M 230.0 370.0 A 190 190 0 0 1 290.0 231.3 L 341.4 286.1 A 115 115 0 0 0 305.0 370.0 Z" fill="#64748B" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- LDPC 8%：226.8° → 255.6° -->
+  <path d="M 290.0 231.3 A 190 190 0 0 1 372.7 186.1 L 391.4 258.7 A 115 115 0 0 0 341.4 286.1 Z" fill="#B45309" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- LLR 4%：255.6° → 270° -->
+  <path d="M 372.7 186.1 A 190 190 0 0 1 420.0 180.0 L 420.0 255.0 A 115 115 0 0 0 391.4 258.7 Z" fill="#BE123C" stroke="#FFFFFF" stroke-width="2"/>
+
+  <!-- 环内标签（5 块 ≥13%）：名称 + 占比单行 -->
+  <text x="536.6" y="260.5" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">MIMO 矩阵族 · 26%</text>
+  <text x="543.3" y="471.9" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">信道估计 · 20%</text>
+  <text x="380.0" y="524.9" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">PS 子系统 · 16%</text>
+  <text x="273.3" y="433.8" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">OFDM 缓冲 · 13%</text>
+  <text x="273.3" y="306.2" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">DMRS/Gold · 13%</text>
+
+  <!-- 中心孔文字 -->
+  <text x="420" y="352" font-size="15" font-weight="700" fill="#152033" text-anchor="middle">全系统存储</text>
+  <text x="420" y="382" font-size="12.5" fill="#455A64" text-anchor="middle">~6.1 MB · 52PRB · 含 PS</text>
+
+  <!-- LDPC / LLR 外置标签与引线（小头，译码器视角对照） -->
+  <line x1="185" y1="110" x2="328.5" y2="203.4" stroke="#B45309" stroke-width="1.5"/>
+  <text x="185" y="100" font-size="14" font-weight="700" fill="#92400E" text-anchor="middle">LDPC 解码器 · 8%（消息 RAM ~0.5 MB）</text>
+  <line x1="655" y1="110" x2="396.2" y2="181.5" stroke="#BE123C" stroke-width="1.5"/>
+  <text x="655" y="100" font-size="14" font-weight="700" fill="#9F1239" text-anchor="middle">LLR 缓冲 · 4%（6-bit · 243.4 KB）</text>
+
+  <!-- 右侧：视角反转标注面板 -->
+  <text x="970" y="250" font-size="17" font-weight="700" fill="#152033" text-anchor="middle">视角反转：账本口径变了，结论跟着反转</text>
+  <rect x="700" y="268" width="540" height="100" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="724" y="294" font-size="14" font-weight="700" fill="#1E3A5F">译码器视角（T19.5 软缓存架构）</text>
+  <text x="724" y="326" font-size="13" fill="#334155">存储叙事以 soft buffer 与消息 RAM 为主</text>
+  <text x="724" y="356" font-size="13" fill="#334155">"译码器面积由 memory 主导"是这里的直觉</text>
+  <line x1="970" y1="368" x2="970" y2="404" stroke="#64748B" stroke-width="2.5"/>
+  <polygon points="964,400 976,400 970,410" fill="#64748B"/>
+  <text x="988" y="396" font-size="12.5" fill="#455A64">尺度拉远到完整 Modem（T21.1）</text>
+  <rect x="700" y="414" width="540" height="126" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="724" y="440" font-size="14" font-weight="700" fill="#1E40AF">Modem 视角（存储拆分 · 52PRB 含 PS）</text>
+  <text x="724" y="472" font-size="13.5" font-weight="700" fill="#1D4ED8">62% 在"每 RE 的矩阵与信道状态"</text>
+  <text x="724" y="504" font-size="13" fill="#334155">译码器只占 8%、LLR 缓冲只占 4% —— 结论反转</text>
+  <text x="724" y="534" font-size="13" fill="#334155">"存储 8% 但面积 38%"：面积账还要另算逻辑（下一节）</text>
+  <rect x="830" y="544" width="280" height="58" rx="4" fill="#1E40AF"/>
+  <text x="970" y="565" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">MIMO 26% + CE 20% + PS 16%</text>
+  <text x="970" y="593" font-size="13" fill="#E0E7FF" text-anchor="middle">= 62% —— 存储大头</text>
+
+  <!-- 底注 -->
+  <text x="640" y="640" font-size="12.5" fill="#455A64" text-anchor="middle">占比较素材 PHY01 §8.4 拆分表逐行圆整：13/20/26/4/8/16/13，合计 100%</text>
+  <text x="640" y="670" font-size="12.5" fill="#455A64" text-anchor="middle">U6 杠杆支点：LLR 缓冲 243.4 KB（6-bit）→ 8-bit 即 +33%</text>
+</svg>
