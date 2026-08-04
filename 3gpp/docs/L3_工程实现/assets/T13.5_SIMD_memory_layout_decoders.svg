@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T13.5_SIMD_memory_layout_decoders.svg
+  @brief   T13.5 三种译码器（Turbo/LDPC/Polar）的 SIMD 通道映射与存储布局对比图：
+           通道示例条带、lane 映射卡、布局对比表格与非合并访问失败案例。
+  @date    2026-08-04
+  @note    本次重绘自定语义色（不沿用 PIL 脚本色系）：
+           Turbo 钢蓝 / LDPC 翠绿 / Polar 紫罗兰 / SIMD lane 条带琥珀 /
+           lane map 白卡灰边 / 对比表格白底 / 失败案例面板珊瑚红。
+           布局：标题带 -> 三译码器卡片 -> SIMD lane 示例条带 -> 总线 -> 三张 lane map
+           -> 布局对比表格 -> Non-coalesced Access Failure Case -> 底线规则。
+           内容（节点、数值、连线关系）与 docs/L3_工程实现/T18.5 讲义及原 PIL 图语义一致；
+           替代 docs/L3_工程实现/assets/T13.5_SIMD_memory_layout_decoders.png。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="1380" viewBox="0 0 1960 1380" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T13.5 SIMD and Memory Layout for Decoders</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5B6B82"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 标题带 ============ -->
+  <rect x="40" y="18" width="1880" height="64" rx="10" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="980" y="42" font-size="20" font-weight="700" fill="#152033" text-anchor="middle">T13.5 SIMD and Memory Layout for Decoders</text>
+  <text x="980" y="68" font-size="12.5" fill="#455A64" text-anchor="middle">Protocol bit order is fixed; array layout is an implementation contract for cache, SIMD lanes and replay.</text>
+
+  <!-- ============ 三译码器卡片 ============ -->
+  <rect x="70" y="110" width="580" height="160" rx="10" fill="#D9E7F6" stroke="#2F5E94" stroke-width="1.5"/>
+  <rect x="84" y="124" width="12" height="12" rx="3" fill="#2F5E94"/>
+  <text x="106" y="138" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Turbo</text>
+  <line x1="84" y1="150" x2="630" y2="150" stroke="#2F5E94" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="176" font-size="12" fill="#263238" text-anchor="start">Three LLR streams, interleaver/deinterleaver address</text>
+  <text x="106" y="200" font-size="12" fill="#263238" text-anchor="start">maps, alpha/beta traces and extrinsic ping-pong buffers.</text>
+
+  <rect x="690" y="110" width="580" height="160" rx="10" fill="#D3EBDD" stroke="#177A5A" stroke-width="1.5"/>
+  <rect x="704" y="124" width="12" height="12" rx="3" fill="#177A5A"/>
+  <text x="726" y="138" font-size="16" font-weight="700" fill="#152033" text-anchor="start">LDPC</text>
+  <line x1="704" y1="150" x2="1250" y2="150" stroke="#177A5A" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="726" y="176" font-size="12" fill="#263238" text-anchor="start">Layer-major edges, Zc-lane groups, posterior LLR</text>
+  <text x="726" y="200" font-size="12" fill="#263238" text-anchor="start">read-modify-write and conflict-free message memory.</text>
+
+  <rect x="1310" y="110" width="580" height="160" rx="10" fill="#E3DCF2" stroke="#59419C" stroke-width="1.5"/>
+  <rect x="1324" y="124" width="12" height="12" rx="3" fill="#59419C"/>
+  <text x="1346" y="138" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Polar</text>
+  <line x1="1324" y1="150" x2="1870" y2="150" stroke="#59419C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1346" y="176" font-size="12" fill="#263238" text-anchor="start">Path-major state, node LLR memory, partial sums, path</text>
+  <text x="1346" y="200" font-size="12" fill="#263238" text-anchor="start">metric arrays and lazy-copy indirection.</text>
+
+  <!-- ============ SIMD lane 示例条带 ============ -->
+  <rect x="70" y="310" width="1180" height="120" rx="10" fill="#F8E8C8" stroke="#A8781E" stroke-width="1.5"/>
+  <rect x="84" y="324" width="12" height="12" rx="3" fill="#A8781E"/>
+  <text x="106" y="338" font-size="16" font-weight="700" fill="#152033" text-anchor="start">SIMD lane examples</text>
+  <g fill="#263238">
+    <rect x="106" y="356" width="120" height="52" rx="6" fill="#FFFFFF" stroke="#A8781E" stroke-width="1.2"/>
+    <text x="166" y="388" font-size="12" text-anchor="middle">lane0</text>
+    <rect x="238" y="356" width="120" height="52" rx="6" fill="#FFFFFF" stroke="#A8781E" stroke-width="1.2"/>
+    <text x="298" y="388" font-size="12" text-anchor="middle">lane1</text>
+    <rect x="370" y="356" width="120" height="52" rx="6" fill="#FFFFFF" stroke="#A8781E" stroke-width="1.2"/>
+    <text x="430" y="388" font-size="12" text-anchor="middle">lane2</text>
+    <rect x="502" y="356" width="120" height="52" rx="6" fill="#FFFFFF" stroke="#A8781E" stroke-width="1.2"/>
+    <text x="562" y="388" font-size="12" text-anchor="middle">lane3</text>
+    <rect x="634" y="356" width="120" height="52" rx="6" fill="#FFFFFF" stroke="#A8781E" stroke-width="1.2"/>
+    <text x="694" y="388" font-size="12" text-anchor="middle">lane4</text>
+    <rect x="766" y="356" width="120" height="52" rx="6" fill="#FFFFFF" stroke="#A8781E" stroke-width="1.2"/>
+    <text x="826" y="388" font-size="12" text-anchor="middle">lane5</text>
+    <rect x="898" y="356" width="120" height="52" rx="6" fill="#FFFFFF" stroke="#A8781E" stroke-width="1.2"/>
+    <text x="958" y="388" font-size="12" text-anchor="middle">lane6</text>
+    <rect x="1030" y="356" width="120" height="52" rx="6" fill="#FFFFFF" stroke="#A8781E" stroke-width="1.2"/>
+    <text x="1090" y="388" font-size="12" text-anchor="middle">lane7</text>
+  </g>
+
+  <!-- 总线（结构线，path 绘制不参与箭头端点审计） -->
+  <path d="M 180 460 H 1780 V 500" fill="none" stroke="#5B6B82" stroke-width="2.5"/>
+  <path d="M 660 460 V 430" fill="none" stroke="#5B6B82" stroke-width="2.5"/>
+
+  <!-- ============ 三张 lane map ============ -->
+  <rect x="70" y="500" width="580" height="170" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <rect x="84" y="514" width="12" height="12" rx="3" fill="#2F5E94"/>
+  <text x="106" y="528" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Turbo lane map</text>
+  <line x1="84" y1="540" x2="630" y2="540" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="566" font-size="12" fill="#263238" text-anchor="start">Run multiple code blocks or trellis windows in parallel;</text>
+  <text x="106" y="590" font-size="12" fill="#263238" text-anchor="start">interleaver gathers must be staged or cached.</text>
+
+  <rect x="690" y="500" width="580" height="170" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <rect x="704" y="514" width="12" height="12" rx="3" fill="#177A5A"/>
+  <text x="726" y="528" font-size="16" font-weight="700" fill="#152033" text-anchor="start">LDPC lane map</text>
+  <line x1="704" y1="540" x2="1250" y2="540" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="726" y="566" font-size="12" fill="#263238" text-anchor="start">Map local index 0..Zc-1 to lanes; keep edge messages</text>
+  <text x="726" y="590" font-size="12" fill="#263238" text-anchor="start">contiguous within a layer.</text>
+
+  <rect x="1310" y="500" width="580" height="170" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <rect x="1324" y="514" width="12" height="12" rx="3" fill="#59419C"/>
+  <text x="1346" y="528" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Polar lane map</text>
+  <line x1="1324" y1="540" x2="1870" y2="540" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1346" y="566" font-size="12" fill="#263238" text-anchor="start">Vectorize path candidates, node groups or PM comparisons;</text>
+  <text x="1346" y="590" font-size="12" fill="#263238" text-anchor="start">avoid copying full path state.</text>
+
+  <!-- ============ 布局对比表格 ============ -->
+  <rect x="80" y="730" width="1800" height="380" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="110" y="764" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Layout Comparison</text>
+  <line x1="100" y1="776" x2="1860" y2="776" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- 表头 790..830 -->
+  <rect x="110" y="790" width="230" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="225" y="815" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Object</text>
+  <rect x="340" y="790" width="470" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="575" y="815" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Turbo layout</text>
+  <rect x="810" y="790" width="470" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="1045" y="815" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">LDPC layout</text>
+  <rect x="1280" y="790" width="570" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="1565" y="815" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Polar layout</text>
+  <!-- 行 1 830..896 -->
+  <rect x="110" y="830" width="230" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="225" y="863" font-size="12" fill="#263238" text-anchor="middle">Hot LLR</text>
+  <rect x="340" y="830" width="470" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="575" y="863" font-size="12" fill="#263238" text-anchor="middle">stream-major int16 arrays</text>
+  <rect x="810" y="830" width="470" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1045" y="863" font-size="12" fill="#263238" text-anchor="middle">layer-major posterior</text>
+  <rect x="1280" y="830" width="570" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1565" y="863" font-size="12" fill="#263238" text-anchor="middle">node-major or path-major</text>
+  <!-- 行 2 896..962 -->
+  <rect x="110" y="896" width="230" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="225" y="929" font-size="12" fill="#263238" text-anchor="middle">Message</text>
+  <rect x="340" y="896" width="470" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="575" y="929" font-size="12" fill="#263238" text-anchor="middle">extrinsic ping-pong</text>
+  <rect x="810" y="896" width="470" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1045" y="929" font-size="12" fill="#263238" text-anchor="middle">edge-major CN/VN msg</text>
+  <rect x="1280" y="896" width="570" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1565" y="929" font-size="12" fill="#263238" text-anchor="middle">partial sum + node LLR</text>
+  <!-- 行 3 962..1028 -->
+  <rect x="110" y="962" width="230" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="225" y="995" font-size="12" fill="#263238" text-anchor="middle">SIMD unit</text>
+  <rect x="340" y="962" width="470" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="575" y="995" font-size="12" fill="#263238" text-anchor="middle">multi-CB or trellis slice</text>
+  <rect x="810" y="962" width="470" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1045" y="995" font-size="12" fill="#263238" text-anchor="middle">Zc lanes or edge block</text>
+  <rect x="1280" y="962" width="570" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1565" y="995" font-size="12" fill="#263238" text-anchor="middle">path pair or sorter block</text>
+  <!-- 行 4 1028..1094 -->
+  <rect x="110" y="1028" width="230" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="225" y="1061" font-size="12" fill="#263238" text-anchor="middle">Failure</text>
+  <rect x="340" y="1028" width="470" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="575" y="1061" font-size="12" fill="#263238" text-anchor="middle">random interleaver gather</text>
+  <rect x="810" y="1028" width="470" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1045" y="1061" font-size="12" fill="#263238" text-anchor="middle">stride/bank conflict</text>
+  <rect x="1280" y="1028" width="570" height="66" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1565" y="1061" font-size="12" fill="#263238" text-anchor="middle">path copy storm</text>
+
+  <!-- ============ Non-coalesced Access Failure Case ============ -->
+  <rect x="80" y="1150" width="1800" height="32" rx="10" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+  <rect x="94" y="1160" width="12" height="12" rx="3" fill="#B24A33"/>
+  <text x="116" y="1172" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Non-coalesced Access Failure Case</text>
+  <!-- 四张失败卡 1190..1290 -->
+  <g fill="#263238">
+    <rect x="110" y="1190" width="420" height="100" rx="8" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+    <text x="140" y="1218" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Gather storm</text>
+    <text x="140" y="1244" font-size="12" text-anchor="start">Turbo pi[j] jumps across cache lines; SIMD</text>
+    <text x="140" y="1268" font-size="12" text-anchor="start">lanes wait for scattered loads.</text>
+
+    <rect x="555" y="1190" width="420" height="100" rx="8" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+    <text x="585" y="1218" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Bank conflict</text>
+    <text x="585" y="1244" font-size="12" text-anchor="start">LDPC two edges hit the same SRAM bank in</text>
+    <text x="585" y="1268" font-size="12" text-anchor="start">one cycle; pipeline stalls.</text>
+
+    <rect x="1000" y="1190" width="420" height="100" rx="8" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+    <text x="1030" y="1218" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Path copy storm</text>
+    <text x="1030" y="1244" font-size="12" text-anchor="start">Polar prune copies full path arrays;</text>
+    <text x="1030" y="1268" font-size="12" text-anchor="start">bandwidth grows with list size.</text>
+
+    <rect x="1445" y="1190" width="405" height="100" rx="8" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+    <text x="1475" y="1218" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Cold trace</text>
+    <text x="1475" y="1244" font-size="12" text-anchor="start">Debug fields share hot arrays; cache lines</text>
+    <text x="1475" y="1268" font-size="12" text-anchor="start">carry data not used by decoder.</text>
+  </g>
+  <!-- 底线规则 -->
+  <rect x="80" y="1320" width="1800" height="44" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="980" y="1348" font-size="12.5" fill="#37474F" text-anchor="middle">Audit rule: separate protocol indexing from implementation layout, then prove scalar equivalence before enabling SIMD.</text>
+
+  <!-- ============ 箭头（3 条，path 终点落在盒边上） ============ -->
+  <g stroke="#5B6B82" stroke-width="2" fill="none">
+    <path d="M 360 460 L 360 500" marker-end="url(#arrow)"/>
+    <path d="M 980 460 L 980 500" marker-end="url(#arrow)"/>
+    <path d="M 1600 460 L 1600 500" marker-end="url(#arrow)"/>
+  </g>
+</svg>

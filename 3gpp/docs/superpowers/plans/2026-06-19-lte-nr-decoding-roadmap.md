@@ -291,7 +291,7 @@ For each card, convert the approved spec table into Chinese with the exact requi
 | **编号** | T1.1 |
 | **前置** | 无 |
 | **Prompt** | 请为通信新手讲解有限域 GF(2) 如何支撑 LTE/NR 译码器中的二元运算，覆盖异或加法、与乘法、多项式表示、CRC 与校验方程的关系、两个手算例子和一个固定输入的 Python 校验片段。写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| **产出** | `docs/L1/T1.1_GF2_binary_arithmetic_for_decoders.md` |
+| **产出** | `docs/L1_基础/T1.1_GF2_binary_arithmetic_for_decoders.md` |
 | **验收** | ... |
 | **3GPP/证据** | ... |
 ```
@@ -723,4 +723,4 @@ Final response should include:
 
 - [ ] **Step 4: Do not generate downstream lesson articles**
 
-Stop after the roadmap document is created and verified. Do not create files under `docs/L1`, `docs/L2_协议算法`, or `docs/L3` unless the user separately approves generating article bodies.
+Stop after the roadmap document is created and verified. Do not create files under `docs/L1_基础`, `docs/L2_协议算法`, or `docs/L3_工程实现` unless the user separately approves generating article bodies.

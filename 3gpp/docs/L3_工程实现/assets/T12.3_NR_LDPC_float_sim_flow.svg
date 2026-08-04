@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T12.3_NR_LDPC_float_sim_flow.svg
+  @brief   T12.3 NR LDPC 浮点仿真流程图：从 BG/Zc 协议参数、LDPC 编码、速率匹配到 AWGN+LLR
+           的仿真管线，以及译码器变体（BP/MS/NMS/OMS）对比、实验矩阵和工程检测点。
+  @date    2026-08-04
+  @note    本次重绘自定语义色（不沿用 PIL 脚本色系）：
+           Protocol Config 钢蓝 / TB/CB Builder 琥珀 / BG+Zc Select 紫罗兰 /
+           LDPC Encoder 橄榄 / Rate Match 青绿 / AWGN 翠绿 / Decoder Variants 玫红 /
+           Trace+Metrics 淡蓝灰 / Failure Replay Archive 冷灰。
+           布局为蛇形重设计：上行三节点（左向右）-> 下行三节点（右向左）->
+           变体对比链（下行折返向左）-> 实验矩阵 -> Engineering Checks。
+           内容（节点、数值、连线关系）与 docs/L3_工程实现/T17.3 讲义及原 PIL 图语义一致；
+           替代 docs/L3_工程实现/assets/T12.3_NR_LDPC_float_sim_flow.png。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1470" viewBox="0 0 1700 1470" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T12.3 NR LDPC Floating-Point Simulation Plan</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5B6B82"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 标题带 ============ -->
+  <rect x="40" y="18" width="1620" height="64" rx="10" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="850" y="42" font-size="20" font-weight="700" fill="#152033" text-anchor="middle">T12.3 NR LDPC Floating-Point Simulation Plan</text>
+  <text x="850" y="68" font-size="12.5" fill="#455A64" text-anchor="middle">BG/Zc protocol parameters, rate recovery, BP/MS/NMS/OMS variants, BLER outputs and failure replay</text>
+
+  <!-- ============ 上行三节点 ============ -->
+  <rect x="70" y="110" width="500" height="160" rx="10" fill="#D9E7F6" stroke="#2F5E94" stroke-width="1.5"/>
+  <rect x="84" y="124" width="12" height="12" rx="3" fill="#2F5E94"/>
+  <text x="106" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Protocol Config</text>
+  <line x1="84" y1="150" x2="550" y2="150" stroke="#2F5E94" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="176" font-size="12" fill="#263238" text-anchor="start">TS 38.212/38.214 refs, channel, A, R, Qm, rv,</text>
+  <text x="106" y="200" font-size="12" fill="#263238" text-anchor="start">BG rule, max_iter, decoder variant.</text>
+
+  <rect x="620" y="110" width="500" height="160" rx="10" fill="#F8E8C8" stroke="#A8781E" stroke-width="1.5"/>
+  <rect x="634" y="124" width="12" height="12" rx="3" fill="#A8781E"/>
+  <text x="656" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">TB/CB Builder</text>
+  <line x1="634" y1="150" x2="1100" y2="150" stroke="#A8781E" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="656" y="176" font-size="12" fill="#263238" text-anchor="start">TB CRC, LDPC segmentation, CB CRC,</text>
+  <text x="656" y="200" font-size="12" fill="#263238" text-anchor="start">filler, CBG and descriptor metadata.</text>
+
+  <rect x="1170" y="110" width="500" height="160" rx="10" fill="#E3DCF2" stroke="#59419C" stroke-width="1.5"/>
+  <rect x="1184" y="124" width="12" height="12" rx="3" fill="#59419C"/>
+  <text x="1206" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">BG + Zc Select</text>
+  <line x1="1184" y1="150" x2="1650" y2="150" stroke="#59419C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1206" y="176" font-size="12" fill="#263238" text-anchor="start">Base graph, Kb, lifting set, Zc, N, K,</text>
+  <text x="1206" y="200" font-size="12" fill="#263238" text-anchor="start">parity-check matrix identity.</text>
+
+  <!-- ============ 下行三节点（右向左） ============ -->
+  <rect x="1170" y="330" width="500" height="160" rx="10" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+  <rect x="1184" y="344" width="12" height="12" rx="3" fill="#5E7A24"/>
+  <text x="1206" y="358" font-size="15" font-weight="700" fill="#152033" text-anchor="start">LDPC Encoder</text>
+  <line x1="1184" y1="370" x2="1650" y2="370" stroke="#5E7A24" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1206" y="396" font-size="12" fill="#263238" text-anchor="start">QC-LDPC encode reference, systematic</text>
+  <text x="1206" y="420" font-size="12" fill="#263238" text-anchor="start">and parity regions, shortened/filler masks.</text>
+
+  <rect x="620" y="330" width="500" height="160" rx="10" fill="#CFE9E2" stroke="#15705C" stroke-width="1.5"/>
+  <rect x="634" y="344" width="12" height="12" rx="3" fill="#15705C"/>
+  <text x="656" y="358" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Rate Match + RV</text>
+  <line x1="634" y1="370" x2="1100" y2="370" stroke="#15705C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="656" y="396" font-size="12" fill="#263238" text-anchor="start">Circular buffer, k0, limited-buffer mode,</text>
+  <text x="656" y="420" font-size="12" fill="#263238" text-anchor="start">bit interleaving and transmitted positions.</text>
+
+  <rect x="70" y="330" width="500" height="160" rx="10" fill="#D3EBDD" stroke="#177A5A" stroke-width="1.5"/>
+  <rect x="84" y="344" width="12" height="12" rx="3" fill="#177A5A"/>
+  <text x="106" y="358" font-size="15" font-weight="700" fill="#152033" text-anchor="start">AWGN + LLR</text>
+  <line x1="84" y1="370" x2="550" y2="370" stroke="#177A5A" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="396" font-size="12" fill="#263238" text-anchor="start">Eb/N0 sweep, effective rate, noise seed,</text>
+  <text x="106" y="420" font-size="12" fill="#263238" text-anchor="start">demapper LLR, POS_ZERO convention.</text>
+
+  <!-- ============ 变体对比链：Decoder Variants -> Trace+Metrics -> Archive（左向右） ============ -->
+  <rect x="70" y="560" width="500" height="160" rx="10" fill="#F6DEE3" stroke="#A8425C" stroke-width="1.5"/>
+  <rect x="84" y="574" width="12" height="12" rx="3" fill="#A8425C"/>
+  <text x="106" y="588" font-size="15" font-weight="700" fill="#152033" text-anchor="start">LDPC Decoder Variants</text>
+  <line x1="84" y1="600" x2="550" y2="600" stroke="#A8425C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="626" font-size="12" fill="#263238" text-anchor="start">Flooding or layered BP, MS, NMS and</text>
+  <text x="106" y="650" font-size="12" fill="#263238" text-anchor="start">OMS with syndrome and CRC stopping records.</text>
+
+  <rect x="620" y="560" width="500" height="160" rx="10" fill="#DDE6F0" stroke="#4A6178" stroke-width="1.5"/>
+  <rect x="634" y="574" width="12" height="12" rx="3" fill="#4A6178"/>
+  <text x="656" y="588" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Trace + Metrics</text>
+  <line x1="634" y1="600" x2="1100" y2="600" stroke="#4A6178" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="656" y="626" font-size="12" fill="#263238" text-anchor="start">BG, Zc, rv, k0, E, Ncb, iter, syndrome,</text>
+  <text x="656" y="650" font-size="12" fill="#263238" text-anchor="start">CRC, BLER, BER, avg_iter.</text>
+
+  <rect x="1170" y="560" width="500" height="160" rx="10" fill="#EDF1F5" stroke="#6B7A8A" stroke-width="1.5"/>
+  <rect x="1184" y="574" width="12" height="12" rx="3" fill="#6B7A8A"/>
+  <text x="1206" y="588" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Failure Replay Archive</text>
+  <line x1="1184" y1="600" x2="1650" y2="600" stroke="#6B7A8A" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1206" y="626" font-size="12" fill="#263238" text-anchor="start">resolved config, seeds, vector.json,</text>
+  <text x="1206" y="650" font-size="12" fill="#263238" text-anchor="start">LLR arrays, decoded bits, trace and evidence.md.</text>
+
+  <!-- ============ 实验矩阵表格 ============ -->
+  <rect x="130" y="800" width="1460" height="380" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="160" y="834" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Experiment Matrix Example</text>
+  <line x1="150" y1="846" x2="1570" y2="846" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- 表头 870..910 -->
+  <rect x="150" y="870" width="140" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="220" y="895" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Case</text>
+  <rect x="290" y="870" width="220" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="400" y="895" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Variant</text>
+  <rect x="510" y="870" width="360" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="690" y="895" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Protocol params</text>
+  <rect x="870" y="870" width="340" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="1040" y="895" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Stop rule</text>
+  <rect x="1210" y="870" width="360" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="1390" y="895" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Saved evidence</text>
+  <!-- 行 1 910..966 -->
+  <rect x="150" y="910" width="140" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="220" y="938" font-size="12" fill="#263238" text-anchor="middle">smoke</text>
+  <rect x="290" y="910" width="220" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="400" y="938" font-size="12" fill="#263238" text-anchor="middle">MS</text>
+  <rect x="510" y="910" width="360" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="690" y="938" font-size="12" fill="#263238" text-anchor="middle">BG1/BG2 small set, rv0</text>
+  <rect x="870" y="910" width="340" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1040" y="938" font-size="12" fill="#263238" text-anchor="middle">100 frames or 20 errors</text>
+  <rect x="1210" y="910" width="360" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1390" y="938" font-size="12" fill="#263238" text-anchor="middle">metrics + first failures</text>
+  <!-- 行 2 966..1022 -->
+  <rect x="150" y="966" width="140" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="220" y="994" font-size="12" fill="#263238" text-anchor="middle">reference</text>
+  <rect x="290" y="966" width="220" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="400" y="994" font-size="12" fill="#263238" text-anchor="middle">BP + NMS</text>
+  <rect x="510" y="966" width="360" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="690" y="994" font-size="12" fill="#263238" text-anchor="middle">BG/Zc/R sweep, rv0</text>
+  <rect x="870" y="966" width="340" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1040" y="994" font-size="12" fill="#263238" text-anchor="middle">1000 frames or 100 errors</text>
+  <rect x="1210" y="966" width="360" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1390" y="994" font-size="12" fill="#263238" text-anchor="middle">config + curve data</text>
+  <!-- 行 3 1022..1078 -->
+  <rect x="150" y="1022" width="140" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="220" y="1050" font-size="12" fill="#263238" text-anchor="middle">harq</text>
+  <rect x="290" y="1022" width="220" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="400" y="1050" font-size="12" fill="#263238" text-anchor="middle">NMS</text>
+  <rect x="510" y="1022" width="360" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="690" y="1050" font-size="12" fill="#263238" text-anchor="middle">rv0, rv2, CBG masks</text>
+  <rect x="870" y="1022" width="340" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1040" y="1050" font-size="12" fill="#263238" text-anchor="middle">replay fixed frames</text>
+  <rect x="1210" y="1022" width="360" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1390" y="1050" font-size="12" fill="#263238" text-anchor="middle">soft buffer traces</text>
+  <!-- 行 4 1078..1134 -->
+  <rect x="150" y="1078" width="140" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="220" y="1106" font-size="12" fill="#263238" text-anchor="middle">edge</text>
+  <rect x="290" y="1078" width="220" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="400" y="1106" font-size="12" fill="#263238" text-anchor="middle">OMS</text>
+  <rect x="510" y="1078" width="360" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="690" y="1106" font-size="12" fill="#263238" text-anchor="middle">limited buffer, filler, short</text>
+  <rect x="870" y="1078" width="340" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1040" y="1106" font-size="12" fill="#263238" text-anchor="middle">injected failures</text>
+  <rect x="1210" y="1078" width="360" height="56" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1390" y="1106" font-size="12" fill="#263238" text-anchor="middle">full decoder dump</text>
+
+  <!-- ============ Engineering Checks 说明框 ============ -->
+  <rect x="130" y="1240" width="1460" height="150" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="160" y="1268" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Engineering Checks</text>
+  <line x1="150" y1="1280" x2="1570" y2="1280" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="1"/>
+  <g fill="#37474F">
+    <text x="160" y="1306" font-size="12.5" text-anchor="start">Record BG, Zc, lifting set, k0, Ncb, E, limited-buffer state and bit-interleaver mode for every frame.</text>
+    <text x="160" y="1330" font-size="12.5" text-anchor="start">Use identical payload/noise seeds when comparing BP, MS, NMS and OMS; otherwise the curves are not comparable.</text>
+    <text x="160" y="1354" font-size="12.5" text-anchor="start">Protocol evidence constrains BG selection, lifting and rate matching; BLER thresholds remain engineering goals.</text>
+  </g>
+
+  <!-- ============ 箭头（10 条，path 终点落在盒边上） ============ -->
+  <g stroke="#5B6B82" stroke-width="2" fill="none">
+    <path d="M 570 190 L 620 190" marker-end="url(#arrow)"/>
+    <path d="M 1120 190 L 1170 190" marker-end="url(#arrow)"/>
+    <path d="M 1420 270 L 1420 330" marker-end="url(#arrow)"/>
+    <path d="M 1170 410 L 1120 410" marker-end="url(#arrow)"/>
+    <path d="M 620 410 L 570 410" marker-end="url(#arrow)"/>
+    <path d="M 320 490 L 320 560" marker-end="url(#arrow)"/>
+    <path d="M 570 640 L 620 640" marker-end="url(#arrow)"/>
+    <path d="M 1120 640 L 1170 640" marker-end="url(#arrow)"/>
+  </g>
+</svg>

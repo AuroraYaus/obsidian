@@ -15,7 +15,7 @@ source_spec: "docs/superpowers/plans/2026-06-19-l1-remaining-lessons.md"
 
 **Goal:** Reconstruct the already-written L1 lessons so they read as zero-foundation teaching lectures with protocol close reading, theory introduction, explanation, and derivation before extending to later modules.
 
-**Architecture:** Each lesson is a standalone Markdown engineering lecture under `docs/L1/`. The writing structure is elastic: section titles and order should follow the topic, not a fixed template. Every lesson must still preserve auditable teaching ingredients: learning goals, prerequisite or concept setup, zero-foundation theory explanation, worked examples, derivation where relevant, receive-side or engineering consequence, verification, self-test answers, protocol/evidence boundary, execution/evidence record, and references. The project-wide 3GPP protocol-close-reading rule in `合规与遵从.md` applies: any 3GPP-related concept must be taught by Rel-19 protocol context, before/after chain, receive-side implications, and evidence boundaries.
+**Architecture:** Each lesson is a standalone Markdown engineering lecture under `docs/L1_基础/`. The writing structure is elastic: section titles and order should follow the topic, not a fixed template. Every lesson must still preserve auditable teaching ingredients: learning goals, prerequisite or concept setup, zero-foundation theory explanation, worked examples, derivation where relevant, receive-side or engineering consequence, verification, self-test answers, protocol/evidence boundary, execution/evidence record, and references. The project-wide 3GPP protocol-close-reading rule in `合规与遵从.md` applies: any 3GPP-related concept must be taught by Rel-19 protocol context, before/after chain, receive-side implications, and evidence boundaries.
 
 **Tech Stack:** Markdown, LaTeX math, Mermaid, Python verification snippets, SystemVerilog snippets, local 3GPP Rel-19 processed artifacts.
 
@@ -36,37 +36,37 @@ source_spec: "docs/superpowers/plans/2026-06-19-l1-remaining-lessons.md"
 
 ## Files
 
-- Create: `docs/L1/T2.1_AWGN_noise_scaling.md`
-- Create: `docs/L1/T2.2_BPSK_QPSK_soft_demapping.md`
-- Create: `docs/L1/T2.3_QAM_Max_Log_MAP_demapping.md`
-- Create: `docs/L1/T2.4_fading_channel_LLR_reliability.md`
-- Create: `docs/L1/T2.5_LLR_clipping_scaling_quantization.md`
-- Create: `docs/L1/T3.1_LTE_NR_CRC_families.md`
-- Create: `docs/L1/T3.2_transport_code_block_filler_bits.md`
-- Create: `docs/L1/T3.3_LTE_Turbo_segmentation_rules.md`
-- Create: `docs/L1/T3.4_NR_LDPC_segmentation_rules.md`
-- Create: `docs/L1/T3.5_NR_Polar_segmentation_crc.md`
-- Later only after T1-T3 are approved: `docs/L1/T4.*.md`
-- Later only after T1-T3 are approved: `docs/L1/T5.*.md`
+- Create: `docs/L1_基础/T2.1_AWGN_noise_scaling.md`
+- Create: `docs/L1_基础/T2.2_BPSK_QPSK_soft_demapping.md`
+- Create: `docs/L1_基础/T2.3_QAM_Max_Log_MAP_demapping.md`
+- Create: `docs/L1_基础/T2.4_fading_channel_LLR_reliability.md`
+- Create: `docs/L1_基础/T2.5_LLR_clipping_scaling_quantization.md`
+- Create: `docs/L1_基础/T3.1_LTE_NR_CRC_families.md`
+- Create: `docs/L1_基础/T3.2_transport_code_block_filler_bits.md`
+- Create: `docs/L1_基础/T3.3_LTE_Turbo_segmentation_rules.md`
+- Create: `docs/L1_基础/T3.4_NR_LDPC_segmentation_rules.md`
+- Create: `docs/L1_基础/T3.5_NR_Polar_segmentation_crc.md`
+- Later only after T1-T3 are approved: `docs/L1_基础/T4.*.md`
+- Later only after T1-T3 are approved: `docs/L1_基础/T5.*.md`
 
 ## Current Reconstruction Scope
 
-- Modify: `docs/L1/T1.1_GF2_binary_arithmetic_for_decoders.md`
-- Modify: `docs/L1/T1.2_GF2_polynomials_crc_remainders.md`
-- Modify: `docs/L1/T1.3_GF2_vectors_matrices.md`
-- Modify: `docs/L1/T1.4_probability_bayes_soft_decoding.md`
-- Modify: `docs/L1/T1.5_LLR_soft_decision.md`
-- Modify: `docs/L1/T1.6_information_theory_minimum_for_decoding.md`
-- Modify: `docs/L1/T2.1_AWGN_noise_scaling.md`
-- Modify: `docs/L1/T2.2_BPSK_QPSK_soft_demapping.md`
-- Modify: `docs/L1/T2.3_QAM_Max_Log_MAP_demapping.md`
-- Modify: `docs/L1/T2.4_fading_channel_LLR_reliability.md`
-- Modify: `docs/L1/T2.5_LLR_clipping_scaling_quantization.md`
-- Modify: `docs/L1/T3.1_LTE_NR_CRC_families.md`
-- Modify: `docs/L1/T3.2_transport_code_block_filler_bits.md`
-- Modify: `docs/L1/T3.3_LTE_Turbo_segmentation_rules.md`
-- Modify: `docs/L1/T3.4_NR_LDPC_segmentation_rules.md`
-- Modify: `docs/L1/T3.5_NR_Polar_segmentation_crc.md`
+- Modify: `docs/L1_基础/T1.1_GF2_binary_arithmetic_for_decoders.md`
+- Modify: `docs/L1_基础/T1.2_GF2_polynomials_crc_remainders.md`
+- Modify: `docs/L1_基础/T1.3_GF2_vectors_matrices.md`
+- Modify: `docs/L1_基础/T1.4_probability_bayes_soft_decoding.md`
+- Modify: `docs/L1_基础/T1.5_LLR_soft_decision.md`
+- Modify: `docs/L1_基础/T1.6_information_theory_minimum_for_decoding.md`
+- Modify: `docs/L1_基础/T2.1_AWGN_noise_scaling.md`
+- Modify: `docs/L1_基础/T2.2_BPSK_QPSK_soft_demapping.md`
+- Modify: `docs/L1_基础/T2.3_QAM_Max_Log_MAP_demapping.md`
+- Modify: `docs/L1_基础/T2.4_fading_channel_LLR_reliability.md`
+- Modify: `docs/L1_基础/T2.5_LLR_clipping_scaling_quantization.md`
+- Modify: `docs/L1_基础/T3.1_LTE_NR_CRC_families.md`
+- Modify: `docs/L1_基础/T3.2_transport_code_block_filler_bits.md`
+- Modify: `docs/L1_基础/T3.3_LTE_Turbo_segmentation_rules.md`
+- Modify: `docs/L1_基础/T3.4_NR_LDPC_segmentation_rules.md`
+- Modify: `docs/L1_基础/T3.5_NR_Polar_segmentation_crc.md`
 
 ## Module Tasks
 

@@ -4,7 +4,7 @@
 @date 2025
 @note 设计意图：以四个分面展示 188 条 (i,K,f1,f2) 参数，黄色高亮 B=10001 手算用到的 K=4992/5056
   和最大块长 K=6144，确保 Markdown 缩放后仍可逐行核验。
-@see docs/L1/T3.3_TS36.212_Table_5.1.3-3_interleaver.md
+@see docs/L1_基础/T3.3_TS36.212_Table_5.1.3-3_interleaver.md
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ except ModuleNotFoundError:
 
 ROOT = Path(__file__).resolve().parents[2]
 CSV_PATH = ROOT / "3GPP_Rel19/processed/TS_36.212_36212-j30/tables/table_0009.csv"
-OUT_PATH = ROOT / "docs/L1/assets/T3.3_TS36.212_Table_5.1.3-3.png"
+OUT_PATH = ROOT / "docs/L1_基础/assets/T3.3_TS36.212_Table_5.1.3-3.png"
 
 
 def load_entries() -> list[tuple[int, int, int, int]]:
@@ -165,7 +165,7 @@ def draw_group(
 
 def main() -> None:
     """@brief 渲染 TS 36.212 Table 5.1.3-3 完整交织器参数表
-    @note 输出文件: docs/L1/assets/T3.3_TS36.212_Table_5.1.3-3.png
+    @note 输出文件: docs/L1_基础/assets/T3.3_TS36.212_Table_5.1.3-3.png
     @note 四个分面按 i 范围 (1-47, 48-94, 95-141, 142-188) 布局，
       高亮色标注教学关键 K 值，底部附证据链说明
     @throws SystemExit CSV 解析后条目数不为 188 时退出"""

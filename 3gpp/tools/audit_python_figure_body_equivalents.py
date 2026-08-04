@@ -19,7 +19,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-DEFAULT_DOC_ROOTS = [Path("docs/L1"), Path("docs/L2_协议算法"), Path("docs/L3")]
+DEFAULT_DOC_ROOTS = [Path("docs/L1_基础"), Path("docs/L2_协议算法"), Path("docs/L3_工程实现")]
 IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+\.png)\)")
 RETAINED_ASSET_RE = re.compile(r"原图片资产：`([^`]+\.png)`")
 MARKERS = ("Mermaid 等价图", "Markdown 等价表", "图片内容正文等价")

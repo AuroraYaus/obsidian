@@ -11,7 +11,7 @@ import os, re, subprocess, sys
 from pathlib import Path
 
 PUPPETEER = "/home/yys/.npm-global/lib/node_modules/@mermaid-js/mermaid-cli/node_modules/puppeteer"
-DOCS_DIR  = Path(__file__).resolve().parent.parent.parent / "docs" / "L1"
+DOCS_DIR  = Path(__file__).resolve().parent.parent.parent / "docs" / "L1_基础"
 OUT_DIR   = Path.home() / "Downloads" / "3GPP_PPT_Screenshots"
 
 FILES = [

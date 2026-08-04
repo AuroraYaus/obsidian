@@ -11,7 +11,7 @@ source_spec: "docs/audits/final_delivery_status.md"
 # LTE/NR Decoding Final Delivery Status
 
 审查时间：2026-06-21  
-范围：`docs/L1/T*.md`、`docs/L2_协议算法/T*.md`、`docs/L3/T*.md`、`docs/audits/*.md`、`docs/L1/assets/*.png`、`docs/L2_协议算法/assets/*.png`、`docs/L3/assets/*.png`、`tools/figures/*.py`。
+范围：`docs/L1_基础/T*.md`、`docs/L2_协议算法/T*.md`、`docs/L3_工程实现/T*.md`、`docs/audits/*.md`、`docs/L1_基础/assets/*.png`、`docs/L2_协议算法/assets/*.png`、`docs/L3_工程实现/assets/*.png`、`tools/figures/*.py`。
 
 ## 当前完成范围
 
@@ -27,13 +27,13 @@ source_spec: "docs/audits/final_delivery_status.md"
 
 | 审计项 | 命令 | 最新结果 |
 |:---|:---|:---|
-| 术语首现 | `python3 tools/audit_lesson_terms.py docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md` | `LESSON_TERM_AUDIT_OK` |
-| 标题正式化 | `python3 tools/audit_markdown_headings.py docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md` | `MARKDOWN_HEADING_AUDIT_OK` |
-| 深度与协议索引化风险 | `python3 tools/audit_lesson_depth.py --strict docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md` | `LESSON_DEPTH_AUDIT_OK` |
-| 全项目 LaTeX 渲染 | `python3 tools/audit_latex_render.py docs/L1/T*.md`；`python3 tools/audit_latex_render.py docs/L2_协议算法/T*.md`；`python3 tools/audit_latex_render.py docs/L3/T*.md` | 分段全检通过：L1 `LATEX_RENDER_AUDIT_OK formulas=2036`，L2 `LATEX_RENDER_AUDIT_OK formulas=3444`，L3 `LATEX_RENDER_AUDIT_OK formulas=948`，合计 6428。 |
+| 术语首现 | `python3 tools/audit_lesson_terms.py docs/L1_基础/T*.md docs/L2_协议算法/T*.md docs/L3_工程实现/T*.md` | `LESSON_TERM_AUDIT_OK` |
+| 标题正式化 | `python3 tools/audit_markdown_headings.py docs/L1_基础/T*.md docs/L2_协议算法/T*.md docs/L3_工程实现/T*.md` | `MARKDOWN_HEADING_AUDIT_OK` |
+| 深度与协议索引化风险 | `python3 tools/audit_lesson_depth.py --strict docs/L1_基础/T*.md docs/L2_协议算法/T*.md docs/L3_工程实现/T*.md` | `LESSON_DEPTH_AUDIT_OK` |
+| 全项目 LaTeX 渲染 | `python3 tools/audit_latex_render.py docs/L1_基础/T*.md`；`python3 tools/audit_latex_render.py docs/L2_协议算法/T*.md`；`python3 tools/audit_latex_render.py docs/L3_工程实现/T*.md` | 分段全检通过：L1 `LATEX_RENDER_AUDIT_OK formulas=2036`，L2 `LATEX_RENDER_AUDIT_OK formulas=3444`，L3 `LATEX_RENDER_AUDIT_OK formulas=948`，合计 6428。 |
 | 图片几何审计 | `python3 tools/audit_figure_geometry.py tools/figures` | `FIGURE_GEOMETRY_AUDIT_OK` |
 | 图片可读性审计 | `python3 tools/audit_figure_readability.py tools/figures` | `FIGURE_READABILITY_AUDIT_OK` |
-| 引用重建候选 | `python3 tools/audit_reference_rebuilds.py docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md > docs/audits/reference_rebuild_candidates_full.txt` | 退出码 0，候选清单 1320 行；候选不是硬失败。 |
+| 引用重建候选 | `python3 tools/audit_reference_rebuilds.py docs/L1_基础/T*.md docs/L2_协议算法/T*.md docs/L3_工程实现/T*.md > docs/audits/reference_rebuild_candidates_full.txt` | 退出码 0，候选清单 1320 行；候选不是硬失败。 |
 
 ## Prompt 覆盖状态
 
@@ -45,9 +45,9 @@ Prompt 是最低覆盖线，不是写作上限。当前矩阵记录每篇的 roa
 
 | 范围 | 数量 | 状态 |
 |:---|---:|:---|
-| `docs/L1/assets/*.png` | 5 | 协议表格/图表复现资产和协议阅读地图图。 |
+| `docs/L1_基础/assets/*.png` | 5 | 协议表格/图表复现资产和协议阅读地图图。 |
 | `docs/L2_协议算法/assets/*.png` | 40 | T6-T11 协议图、算法图、流程图和对比图；包含 T8.3/T8.8 分片正文图和完整证据/兼容保留图。 |
-| `docs/L3/assets/*.png` | 23 | T12-T15 golden model、定点、RTL、验证、综合和最终证据图。 |
+| `docs/L3_工程实现/assets/*.png` | 23 | T12-T15 golden model、定点、RTL、验证、综合和最终证据图。 |
 | `tools/figures/*.py` | 58 | 57 个 `render_*.py` 绘图脚本和 1 个共享 helper `figure_text_fit.py`。 |
 
 当前资产清单见 `docs/audits/image_asset_inventory.md`。该清单记录 68 张 PNG、58 个 Python 文件、历史问题、修复状态和持续审计规则；项目级一致性审计 `python3 tools/audit_project_image_inventory.py` 已覆盖资产目录、正文引用、资产清单和迁移台账。边界检查、脚本运行成功和静态几何审计不能替代逐图局部视觉审计；后续任何图片新增、脚本修改或 PNG 重生成时，必须复查字体上下边距、相邻边框间距、箭头形态、连线起终点、底部说明框、表格字号和单元格居中。
@@ -56,8 +56,8 @@ Prompt 是最低覆盖线，不是写作上限。当前矩阵记录每篇的 roa
 
 | 主题 | 状态 | 证据 |
 |:---|:---|:---|
-| LTE/NR CRC 多项式 | L1/L2 已复现教学和协议入口；T3.1 承接多项式家族。 | `docs/L1/T3.1_LTE_NR_CRC_families.md`。 |
-| TS 36.212 Table 5.1.3-3 Turbo interleaver | 已图片化复现，按协议横向分组重建。 | `docs/L1/assets/T3.3_TS36.212_Table_5.1.3-3.png`；`tools/figures/render_lte_turbo_interleaver_table.py`。 |
+| LTE/NR CRC 多项式 | L1/L2 已复现教学和协议入口；T3.1 承接多项式家族。 | `docs/L1_基础/T3.1_LTE_NR_CRC_families.md`。 |
+| TS 36.212 Table 5.1.3-3 Turbo interleaver | 已图片化复现，按协议横向分组重建。 | `docs/L1_基础/assets/T3.3_TS36.212_Table_5.1.3-3.png`；`tools/figures/render_lte_turbo_interleaver_table.py`。 |
 | TS 36.212 Figure 5.1.3-2 Turbo encoder | 已教学重建并记录历史视觉修复。 | `docs/L2_协议算法/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png`。 |
 | TS 36.212 LTE rate matching / HARQ | 已覆盖 T7.1-T7.6；T7.3 已按 ring buffer/RV/soft combining 重写并绘图。 | `docs/L2_协议算法/T7.3_LTE_HARQ_soft_buffer_RV.md`；`docs/L2_协议算法/assets/T7.3_LTE_HARQ_RV_windows.png`。 |
 | TS 38.212 LDPC BG、lifting、rate recovery、CBG/HARQ | 已覆盖 T8/T9，含 BG 选择、lifting/QC、rate recovery、CBG partial retransmission。 | `docs/L2_协议算法/T8.*.md`；`docs/L2_协议算法/T9.*.md`；相关 L1/L2 PNG。 |

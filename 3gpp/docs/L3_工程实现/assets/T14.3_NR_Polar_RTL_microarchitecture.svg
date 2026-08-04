@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T14.3_NR_Polar_RTL_microarchitecture.svg
+  @brief   NR Polar 译码器 RTL 微架构（v2 手绘 SVG）：输入/掩码两卡 + CA-SCL 树流水线 + 路径状态存储带 + 低延迟 FSM 泳道
+  @date    2026-08-04
+  @note    语义与 docs/L3_工程实现/T19.3_NR_Polar_RTL_microarchitecture.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计。六项几何审计 + cairosvg 渲染验证通过。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="2500" height="2460" viewBox="0 0 2500 2460" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T14.3_NR_Polar_RTL_microarchitecture</title>
+  <defs>
+    <filter id="soft" x="-8%" y="-8%" width="120%" height="130%">      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A3B2A" flood-opacity="0.09"/>    </filter>
+    <marker id="m6E7A8C" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#6E7A8C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m94A3B8" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m6D4FBF" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#6D4FBF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m8A6B46" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#8A6B46" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m3F51C4" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#3F51C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m0E7A67" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#0E7A67" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="mB76E00" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#B76E00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="mB4405B" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#B4405B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m4A5A6A" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#4A5A6A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="2500" height="2460" fill="#FBF9F3"/>
+  <path d="M 88 56 l 9 9 l -9 9 l -9 -9 z" fill="#3F51C4" stroke="none"/>
+  <text class="title-main" x="116" y="68" font-size="40" font-weight="700" fill="#262B33">T14.3 NR Polar RTL Microarchitecture</text>
+  <text class="subtitle" x="116" y="108" font-size="20.5" fill="#5B6472">CA-SCL tree traversal, f/g engine, path memories, PM sorter, CRC/RNTI selector and low-latency control.</text>
+  <line x1="80" y1="130" x2="2420" y2="130" stroke="#D8D2C6" stroke-width="2"/>
+  <g class="card" id="c0">
+    <rect class="body" x="80" y="160" width="960" height="310" rx="12" fill="#FFFFFF" stroke="#3F51C4" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 92 160 H 1028 Q 1040 160 1040 172 V 206 H 80 V 172 Q 80 160 92 160 Z" fill="#3F51C4" stroke="none"/>
+    <text class="title" x="560.0" y="190" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Protocol Descriptor</text>
+  </g>
+  <g class="card" id="k0">
+    <rect class="body" x="110" y="240" width="900" height="52" rx="9" fill="#EEF1FE" stroke="#3F51C4" stroke-width="1.8"/>
+    <text class="title" x="560.0" y="272.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">A, K, E, N</text>
+  </g>
+  <g class="card" id="k1">
+    <rect class="body" x="110" y="304" width="900" height="52" rx="9" fill="#EEF1FE" stroke="#3F51C4" stroke-width="1.8"/>
+    <text class="title" x="560.0" y="336.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">crc_type, UCI/DCI context</text>
+  </g>
+  <g class="card" id="k2">
+    <rect class="body" x="110" y="368" width="900" height="52" rx="9" fill="#EEF1FE" stroke="#3F51C4" stroke-width="1.8"/>
+    <text class="title" x="560.0" y="400.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">RNTI context, list-size config</text>
+  </g>
+  <g class="card" id="c1">
+    <rect class="body" x="1080" y="160" width="960" height="310" rx="12" fill="#FFFFFF" stroke="#B76E00" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1092 160 H 2028 Q 2040 160 2040 172 V 206 H 1080 V 172 Q 1080 160 1092 160 Z" fill="#B76E00" stroke="none"/>
+    <text class="title" x="1560.0" y="190" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Mask / Rate Recovery</text>
+  </g>
+  <g class="card" id="q0">
+    <rect class="body" x="1110" y="240" width="900" height="52" rx="9" fill="#FDF4E3" stroke="#B76E00" stroke-width="1.8"/>
+    <text class="title" x="1560.0" y="272.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">Deinterleaved LLR</text>
+  </g>
+  <g class="card" id="q1">
+    <rect class="body" x="1110" y="304" width="900" height="52" rx="9" fill="#FDF4E3" stroke="#B76E00" stroke-width="1.8"/>
+    <text class="title" x="1560.0" y="336.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">info/frozen/PC masks</text>
+  </g>
+  <g class="card" id="q2">
+    <rect class="body" x="1110" y="368" width="900" height="52" rx="9" fill="#FDF4E3" stroke="#B76E00" stroke-width="1.8"/>
+    <text class="title" x="1560.0" y="400.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">valid bits, rate-recovery mode</text>
+  </g>
+  <path class="link" data-src="c0" data-dst="c1" d="M 1040.0 315.0 L 1080.0 315.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <g class="card" id="d0">
+    <rect class="body" x="80" y="540" width="560" height="320" rx="12" fill="#FFFFFF" stroke="#0E7A67" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 92 540 H 628 Q 640 540 640 552 V 586 H 80 V 552 Q 80 540 92 540 Z" fill="#0E7A67" stroke="none"/>
+    <text class="title" x="360.0" y="570" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Tree Controller</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="360.0" y="696.0">SC/SCL node order, frozen/information decisions and</tspan>
+      <tspan x="360.0" y="722.0">low-latency schedule.</tspan>
+    </text>
+  </g>
+  <g class="card" id="d1">
+    <rect class="body" x="680" y="540" width="560" height="320" rx="12" fill="#FFFFFF" stroke="#6D4FBF" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 692 540 H 1228 Q 1240 540 1240 552 V 586 H 680 V 552 Q 680 540 692 540 Z" fill="#6D4FBF" stroke="none"/>
+    <text class="title" x="960.0" y="570" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">f/g Engine</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="960.0" y="696.0">LLR f and g functions, saturation, partial-sum input and</tspan>
+      <tspan x="960.0" y="722.0">path-local state.</tspan>
+    </text>
+  </g>
+  <g class="card" id="d2">
+    <rect class="body" x="1280" y="540" width="560" height="320" rx="12" fill="#FFFFFF" stroke="#B4405B" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1292 540 H 1828 Q 1840 540 1840 552 V 586 H 1280 V 552 Q 1280 540 1292 540 Z" fill="#B4405B" stroke="none"/>
+    <text class="title" x="1560.0" y="570" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Path Manager</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1560.0" y="696.0">Path split, PM update, 2L candidates, sorter, prune and</tspan>
+      <tspan x="1560.0" y="722.0">lazy-copy remap.</tspan>
+    </text>
+  </g>
+  <g class="card" id="d3">
+    <rect class="body" x="1880" y="540" width="560" height="320" rx="12" fill="#FFFFFF" stroke="#4A5A6A" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1892 540 H 2428 Q 2440 540 2440 552 V 586 H 1880 V 552 Q 1880 540 1892 540 Z" fill="#4A5A6A" stroke="none"/>
+    <text class="title" x="2160.0" y="570" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">CRC Final Selector</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="2160.0" y="696.0">Parallel CRC/RNTI checks and final path selection among</tspan>
+      <tspan x="2160.0" y="722.0">surviving candidates.</tspan>
+    </text>
+  </g>
+  <path class="link" data-src="c1" data-dst="d0" d="M 1560.0 470.0 L 430.0 540.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="d0" data-dst="d1" d="M 640.0 700.0 L 680.0 700.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="d1" data-dst="d2" d="M 1240.0 700.0 L 1280.0 700.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="d2" data-dst="d3" d="M 1840.0 700.0 L 1880.0 700.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <g class="panel" id="lane0">
+    <rect class="panel" x="80" y="960" width="2360" height="320" rx="14" fill="#F0F2F5" stroke="#D8D2C6" stroke-width="1.5"/>
+  </g>
+  <g class="card" id="m0">
+    <rect class="body" x="110" y="1020" width="540" height="220" rx="12" fill="#FFFFFF" stroke="#8A7F6E" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 122 1020 H 638 Q 650 1020 650 1032 V 1066 H 110 V 1032 Q 110 1020 122 1020 Z" fill="#8A7F6E" stroke="none"/>
+    <text class="title" x="380.0" y="1050" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">LLR Memory</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="380.0" y="1126.0">Stores node LLRs per stage and path. Lazy-copy uses</tspan>
+      <tspan x="380.0" y="1152.0">state ids instead of full copy.</tspan>
+    </text>
+  </g>
+  <g class="card" id="m1">
+    <rect class="body" x="690" y="1020" width="540" height="220" rx="12" fill="#FFFFFF" stroke="#8A7F6E" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 702 1020 H 1218 Q 1230 1020 1230 1032 V 1066 H 690 V 1032 Q 690 1020 702 1020 Z" fill="#8A7F6E" stroke="none"/>
+    <text class="title" x="960.0" y="1050" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Partial Sum Memory</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="960.0" y="1126.0">Stores decided bits used by g function and tree</tspan>
+      <tspan x="960.0" y="1152.0">backtracking per path.</tspan>
+    </text>
+  </g>
+  <g class="card" id="m2">
+    <rect class="body" x="1270" y="1020" width="540" height="220" rx="12" fill="#FFFFFF" stroke="#8A7F6E" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1282 1020 H 1798 Q 1810 1020 1810 1032 V 1066 H 1270 V 1032 Q 1270 1020 1282 1020 Z" fill="#8A7F6E" stroke="none"/>
+    <text class="title" x="1540.0" y="1050" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">PM / Path State</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1540.0" y="1126.0">Path bits, PM, CRC state, valid flags, parent id and remap</tspan>
+      <tspan x="1540.0" y="1152.0">table.</tspan>
+    </text>
+  </g>
+  <g class="card" id="m3">
+    <rect class="body" x="1850" y="1020" width="560" height="220" rx="12" fill="#FFFFFF" stroke="#B76E00" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1862 1020 H 2398 Q 2410 1020 2410 1032 V 1066 H 1850 V 1032 Q 1850 1020 1862 1020 Z" fill="#B76E00" stroke="none"/>
+    <text class="title" x="2130.0" y="1050" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">2L -&gt; L Sorter</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="2130.0" y="1126.0">Critical bottleneck: compare candidate PM, tie-break,</tspan>
+      <tspan x="2130.0" y="1152.0">prune and copy state.</tspan>
+    </text>
+  </g>
+  <path class="link" data-src="m0" data-dst="m1" d="M 650.0 1130.0 L 690.0 1130.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="m1" data-dst="m2" d="M 1230.0 1130.0 L 1270.0 1130.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="m2" data-dst="m3" d="M 1810.0 1130.0 L 1850.0 1130.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link detour" data-src="m3" data-dst="m0" data-note="prune remap 回馈下一次 f/g 遍历（下方绕行，不穿 Partial Sum / PM-Path State）" d="M 2130.0 1240.0 L 2130.0 1300.0 L 380.0 1300.0 L 380.0 1240.0" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m94A3B8)"/>
+  <text class="note" x="1255.0" y="1325.0" text-anchor="middle" font-size="18.5" fill="#5B6472" stroke="#FBF9F3" stroke-width="6" paint-order="stroke">prune remap feeds next f/g traversal: bits, PM, LLR state, partial sum and CRC state must move together</text>
+  <g class="bar" id="bar2">
+    <rect class="body" x="80" y="1370" width="2360" height="44" fill="none" stroke="none"/>
+    <rect class="mark" x="80" y="1384" width="13" height="13" rx="3" fill="#4A5A6A" stroke="none"/>
+    <text class="title" x="106" y="1395" font-size="21.5" font-weight="700" fill="#262B33">CA-SCL Low-Latency Control FSM</text>
+    <line x1="464" y1="1390" x2="2440" y2="1390" stroke="#D8D2C6" stroke-width="2"/>
+  </g>
+  <g class="panel" id="lane1">
+    <rect class="panel" x="80" y="1430" width="2360" height="240" rx="14" fill="#F0F2F5" stroke="#D8D2C6" stroke-width="1.5"/>
+  </g>
+  <g class="card" id="f0">
+    <rect class="body" x="130" y="1490" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="310.0" y="1526.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">LOAD</text>
+    <text class="lines" text-anchor="middle" font-size="15" fill="#5B6472">
+      <tspan x="310.0" y="1552.0">Latch descriptor, masks and rate-recovered LLR.</tspan>
+    </text>
+  </g>
+  <g class="card" id="f1">
+    <rect class="body" x="502" y="1490" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="682.0" y="1526.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">TRAVERSE</text>
+    <text class="lines" text-anchor="middle" font-size="15" fill="#5B6472">
+      <tspan x="682.0" y="1552.0">Run f/g nodes and update partial sums.</tspan>
+    </text>
+  </g>
+  <g class="card" id="f2">
+    <rect class="body" x="874" y="1490" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="1054.0" y="1526.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">SPLIT</text>
+    <text class="lines" text-anchor="middle" font-size="15" fill="#5B6472">
+      <tspan x="1054.0" y="1552.0">Frozen keeps one; information creates 0/1</tspan>
+      <tspan x="1054.0" y="1574.0">candidates.</tspan>
+    </text>
+  </g>
+  <g class="card" id="f3">
+    <rect class="body" x="1246" y="1490" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="1426.0" y="1526.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">SORT / PRUNE</text>
+    <text class="lines" text-anchor="middle" font-size="15" fill="#5B6472">
+      <tspan x="1426.0" y="1552.0">Select best L paths and remap all state ids.</tspan>
+    </text>
+  </g>
+  <g class="card" id="f4">
+    <rect class="body" x="1618" y="1490" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="1798.0" y="1526.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">CRC CHECK</text>
+    <text class="lines" text-anchor="middle" font-size="15" fill="#5B6472">
+      <tspan x="1798.0" y="1552.0">Parallel CRC and optional RNTI final selector.</tspan>
+    </text>
+  </g>
+  <g class="card" id="f5">
+    <rect class="body" x="1990" y="1490" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="2170.0" y="1526.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">DONE/ERROR</text>
+    <text class="lines" text-anchor="middle" font-size="15" fill="#5B6472">
+      <tspan x="2170.0" y="1552.0">Commit selected path, status and failure</tspan>
+      <tspan x="2170.0" y="1574.0">bundle.</tspan>
+    </text>
+  </g>
+  <path class="link" data-src="f0" data-dst="f1" d="M 490.0 1538.0 L 502.0 1538.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="f1" data-dst="f2" d="M 862.0 1538.0 L 874.0 1538.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="f2" data-dst="f3" d="M 1234.0 1538.0 L 1246.0 1538.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="f3" data-dst="f4" d="M 1606.0 1538.0 L 1618.0 1538.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="f4" data-dst="f5" d="M 1978.0 1538.0 L 1990.0 1538.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link detour" data-src="f3" data-dst="f1" data-note="next bit while paths remain active（回环沿泳道下方绕行，不穿 SPLIT / CRC CHECK）" d="M 1426.0 1586.0 L 1426.0 1640.0 L 682.0 1640.0 L 682.0 1586.0" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m94A3B8)"/>
+  <text class="note" x="1054.0" y="1661.0" text-anchor="middle" font-size="18.5" fill="#5B6472" stroke="#FBF9F3" stroke-width="6" paint-order="stroke">next bit while paths remain active</text>
+  <g class="tbl" id="t1">
+    <rect class="tblouter" x="135" y="1750" width="2270" height="396" rx="10" fill="#3F51C4" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <g class="cellg" id="t1_0_0" data-tbl="t1">
+      <rect class="cell" x="135" y="1750" width="370" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="320.0" y="1777.0">Structure</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_1" data-tbl="t1">
+      <rect class="cell" x="505" y="1750" width="560" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="785.0" y="1777.0">RTL Object</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_2" data-tbl="t1">
+      <rect class="cell" x="1065" y="1750" width="780" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="1455.0" y="1777.0">Bottleneck / Risk</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_3" data-tbl="t1">
+      <rect class="cell" x="1845" y="1750" width="560" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="2125.0" y="1777.0">Required Debug</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_0" data-tbl="t1">
+      <rect class="cell" x="135" y="1794" width="370" height="88" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="320.0" y="1843.0">Tree traversal</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_1" data-tbl="t1">
+      <rect class="cell" x="505" y="1794" width="560" height="88" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="785.0" y="1843.0">node_state, stage, path_id</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_2" data-tbl="t1">
+      <rect class="cell" x="1065" y="1794" width="780" height="88" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1455.0" y="1843.0">Wrong node order changes f/g input.</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_3" data-tbl="t1">
+      <rect class="cell" x="1845" y="1794" width="560" height="88" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2125.0" y="1843.0">node_trace, stage_id</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_0" data-tbl="t1">
+      <rect class="cell" x="135" y="1882" width="370" height="88" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="320.0" y="1931.0">Path split</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_1" data-tbl="t1">
+      <rect class="cell" x="505" y="1882" width="560" height="88" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="785.0" y="1931.0">frozen/info mask, 0/1 candidates</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_2" data-tbl="t1">
+      <rect class="cell" x="1065" y="1882" width="780" height="88" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1455.0" y="1931.0">Frozen bit split or info bit forced.</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_3" data-tbl="t1">
+      <rect class="cell" x="1845" y="1882" width="560" height="88" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2125.0" y="1931.0">split_count, mask_hash</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_0" data-tbl="t1">
+      <rect class="cell" x="135" y="1970" width="370" height="88" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="320.0" y="2019.0">PM sorter</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_1" data-tbl="t1">
+      <rect class="cell" x="505" y="1970" width="560" height="88" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="785.0" y="2019.0">candidate_pm[2L], sort_order</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_2" data-tbl="t1">
+      <rect class="cell" x="1065" y="1970" width="780" height="88" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1455.0" y="2019.0">Comparator direction or tie-break unstable.</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_3" data-tbl="t1">
+      <rect class="cell" x="1845" y="1970" width="560" height="88" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2125.0" y="2019.0">pm_trace, prune_order</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_0" data-tbl="t1">
+      <rect class="cell" x="135" y="2058" width="370" height="88" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="320.0" y="2107.0">State copy</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_1" data-tbl="t1">
+      <rect class="cell" x="505" y="2058" width="560" height="88" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="785.0" y="2107.0">lazy-copy refs, remap table</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_2" data-tbl="t1">
+      <rect class="cell" x="1065" y="2058" width="780" height="88" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1455.0" y="2107.0">PM moves but LLR/partial/CRC state lags.</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_3" data-tbl="t1">
+      <rect class="cell" x="1845" y="2058" width="560" height="88" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2125.0" y="2107.0">parent_id, state_id</tspan>
+      </text>
+    </g>
+    <line x1="137" y1="1882" x2="2403" y2="1882" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="137" y1="1970" x2="2403" y2="1970" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="137" y1="2058" x2="2403" y2="2058" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="505" y1="1796" x2="505" y2="2144" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="695" y1="1796" x2="695" y2="2144" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="915" y1="1796" x2="915" y2="2144" stroke="#E0DACA" stroke-width="1"/>
+  </g>
+  <g class="foot" id="foot">
+    <rect class="body" x="130" y="2230" width="2240" height="170" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <rect class="footbar" x="130" y="2230" width="7" height="170" fill="#B76E00" stroke="none"/>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1250.0" y="2309.0">Protocol evidence fixes Polar construction inputs: reliability sequence, information/frozen/PC sets, CRC/RNTI context and rate recovery. RTL choices such as list size implementation, lazy copy, sorter topology, PM normalization and pipeline cuts</tspan>
+      <tspan x="1250.0" y="2338.0">are implementation strategy and must be closed by bit-exact path traces.</tspan>
+    </text>
+  </g>
+</svg>

@@ -24,7 +24,7 @@ HISTORICAL_FOCUS = {
     # T6.3/T7.5/T8.1/T8.2/T8.3/T8.4 的 PIL 渲染脚本已删除：图已改为手绘 SVG
     # docs/L2_协议算法/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.svg 等
     # render_t12_1_golden_model_layout.py 已删除：图已改为手绘 SVG
-    # docs/L3/assets/T12.1_golden_model_project_layout.svg
+    # docs/L3_工程实现/assets/T12.1_golden_model_project_layout.svg
 }
 
 GEOMETRY_HELPERS = (

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T13.3_NR_LDPC_fixed_point_model.svg
+  @brief   T13.3 NR LDPC 定点化模型数据流图：LLR 量化、CN 更新、分层 RMW 与校验停止的证据链路，
+           含 LDPC 定点检查点表格和位宽/算法选项卡（MS/NMS/OMS/Layered/Saturation）。
+  @date    2026-08-04
+  @note    本次重绘自定语义色（不沿用 PIL 脚本色系）：
+           Protocol Vector 钢蓝 / LLR Quantizer 琥珀 / CN Unit 紫罗兰 /
+           Layered Memory 青绿 / Syndrome/Report 玫红 / 检查点白底表格 /
+           选项五卡橄榄绿。布局：标题带 -> 五卡数据通路 -> LDPC Fixed-Point Checkpoints
+           表格 -> Bitwidth and Algorithm Options 五卡 -> 底线规则。
+           内容（节点、数值、连线关系）与 docs/L3_工程实现/T18.3 讲义及原 PIL 图语义一致；
+           替代 docs/L3_工程实现/assets/T13.3_NR_LDPC_fixed_point_model.png。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="1240" viewBox="0 0 1960 1240" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T13.3 NR LDPC Fixed-Point Model Plan</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5B6B82"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 标题带 ============ -->
+  <rect x="40" y="18" width="1880" height="64" rx="10" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="980" y="42" font-size="20" font-weight="700" fill="#152033" text-anchor="middle">T13.3 NR LDPC Fixed-Point Model Plan</text>
+  <text x="980" y="68" font-size="12.5" fill="#455A64" text-anchor="middle">LLR and message bitwidth, min1/min2, NMS/OMS, layered update and bit-exact evidence</text>
+
+  <!-- ============ 顶部：五卡数据通路 ============ -->
+  <rect x="70" y="110" width="360" height="170" rx="10" fill="#D9E7F6" stroke="#2F5E94" stroke-width="1.5"/>
+  <rect x="84" y="124" width="12" height="12" rx="3" fill="#2F5E94"/>
+  <text x="106" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Protocol Vector</text>
+  <line x1="84" y1="150" x2="410" y2="150" stroke="#2F5E94" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="176" font-size="12" fill="#263238" text-anchor="start">BG, Zc, lifting set, RV, k0, E, Ncb,</text>
+  <text x="106" y="200" font-size="12" fill="#263238" text-anchor="start">CBG masks and TS 38.212 evidence.</text>
+
+  <rect x="460" y="110" width="360" height="170" rx="10" fill="#F8E8C8" stroke="#A8781E" stroke-width="1.5"/>
+  <rect x="474" y="124" width="12" height="12" rx="3" fill="#A8781E"/>
+  <text x="496" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">LLR Quantizer</text>
+  <line x1="474" y1="150" x2="800" y2="150" stroke="#A8781E" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="496" y="176" font-size="12" fill="#263238" text-anchor="start">Apply width, Q format, sign convention,</text>
+  <text x="496" y="200" font-size="12" fill="#263238" text-anchor="start">clipping and soft-combine saturation.</text>
+
+  <rect x="850" y="110" width="360" height="170" rx="10" fill="#E3DCF2" stroke="#59419C" stroke-width="1.5"/>
+  <rect x="864" y="124" width="12" height="12" rx="3" fill="#59419C"/>
+  <text x="886" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">CN Unit</text>
+  <line x1="864" y1="150" x2="1190" y2="150" stroke="#59419C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="886" y="176" font-size="12" fill="#263238" text-anchor="start">Compute sign product, min1/min2,</text>
+  <text x="886" y="200" font-size="12" fill="#263238" text-anchor="start">MS/NMS/OMS correction and output</text>
+  <text x="886" y="224" font-size="12" fill="#263238" text-anchor="start">saturation.</text>
+
+  <rect x="1240" y="110" width="360" height="170" rx="10" fill="#CFE9E2" stroke="#15705C" stroke-width="1.5"/>
+  <rect x="1254" y="124" width="12" height="12" rx="3" fill="#15705C"/>
+  <text x="1276" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Layered Memory</text>
+  <line x1="1254" y1="150" x2="1580" y2="150" stroke="#15705C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1276" y="176" font-size="12" fill="#263238" text-anchor="start">Read old_R, form q=L-old_R, write new_R</text>
+  <text x="1276" y="200" font-size="12" fill="#263238" text-anchor="start">and updated posterior LLR per layer.</text>
+
+  <rect x="1630" y="110" width="300" height="170" rx="10" fill="#F6DEE3" stroke="#A8425C" stroke-width="1.5"/>
+  <rect x="1644" y="124" width="12" height="12" rx="3" fill="#A8425C"/>
+  <text x="1666" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Syndrome/Report</text>
+  <line x1="1644" y1="150" x2="1910" y2="150" stroke="#A8425C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1666" y="176" font-size="12" fill="#263238" text-anchor="start">Check syndrome, CB/TB CRC, stop reason,</text>
+  <text x="1666" y="200" font-size="12" fill="#263238" text-anchor="start">BLER loss and replay bundle.</text>
+
+  <!-- ============ LDPC Fixed-Point Checkpoints 表格 ============ -->
+  <rect x="80" y="340" width="1800" height="560" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="110" y="374" font-size="16" font-weight="700" fill="#152033" text-anchor="start">LDPC Fixed-Point Checkpoints</text>
+  <line x1="100" y1="386" x2="1860" y2="386" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- 表头 400..440 -->
+  <rect x="110" y="400" width="260" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="240" y="425" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Stage</text>
+  <rect x="370" y="400" width="460" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="600" y="425" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Integer Object</text>
+  <rect x="830" y="400" width="460" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="1060" y="425" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Compare Field</text>
+  <rect x="1290" y="400" width="560" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="1570" y="425" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Failure Signal</text>
+  <!-- 行 1 440..528 -->
+  <rect x="110" y="440" width="260" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="240" y="484" font-size="12" fill="#263238" text-anchor="middle">Rate recovery</text>
+  <rect x="370" y="440" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="600" y="484" font-size="12" fill="#263238" text-anchor="middle">LLR, masks, soft buffer</text>
+  <rect x="830" y="440" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1060" y="484" font-size="12" fill="#263238" text-anchor="middle">quantized_llr, observed_mask</text>
+  <rect x="1290" y="440" width="560" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1570" y="484" font-size="12" fill="#263238" text-anchor="middle">RV or filler mismatch</text>
+  <!-- 行 2 528..616 -->
+  <rect x="110" y="528" width="260" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="240" y="572" font-size="12" fill="#263238" text-anchor="middle">CN update</text>
+  <rect x="370" y="528" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="600" y="572" font-size="12" fill="#263238" text-anchor="middle">sign, min1, min2, NMS/OMS</text>
+  <rect x="830" y="528" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1060" y="572" font-size="12" fill="#263238" text-anchor="middle">cn_trace</text>
+  <rect x="1290" y="528" width="560" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1570" y="572" font-size="12" fill="#263238" text-anchor="middle">wrong sign or min2</text>
+  <!-- 行 3 616..704 -->
+  <rect x="110" y="616" width="260" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="240" y="660" font-size="12" fill="#263238" text-anchor="middle">Layered RMW</text>
+  <rect x="370" y="616" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="600" y="660" font-size="12" fill="#263238" text-anchor="middle">old_R, q, new_R, L</text>
+  <rect x="830" y="616" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1060" y="660" font-size="12" fill="#263238" text-anchor="middle">layer_trace</text>
+  <rect x="1290" y="616" width="560" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1570" y="660" font-size="12" fill="#263238" text-anchor="middle">old/new message mix</text>
+  <!-- 行 4 704..792 -->
+  <rect x="110" y="704" width="260" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="240" y="748" font-size="12" fill="#263238" text-anchor="middle">VN/posterior</text>
+  <rect x="370" y="704" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="600" y="748" font-size="12" fill="#263238" text-anchor="middle">posterior LLR and hard bits</text>
+  <rect x="830" y="704" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1060" y="748" font-size="12" fill="#263238" text-anchor="middle">posterior_snapshot</text>
+  <rect x="1290" y="704" width="560" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1570" y="748" font-size="12" fill="#263238" text-anchor="middle">saturation or sign error</text>
+  <!-- 行 5 792..880 -->
+  <rect x="110" y="792" width="260" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="240" y="836" font-size="12" fill="#263238" text-anchor="middle">Syndrome/CRC</text>
+  <rect x="370" y="792" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="600" y="836" font-size="12" fill="#263238" text-anchor="middle">syndrome, CB/TB CRC</text>
+  <rect x="830" y="792" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1060" y="836" font-size="12" fill="#263238" text-anchor="middle">stop_status, iter_used</text>
+  <rect x="1290" y="792" width="560" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1570" y="836" font-size="12" fill="#263238" text-anchor="middle">false early stop</text>
+
+  <!-- ============ Bitwidth and Algorithm Options ============ -->
+  <rect x="80" y="960" width="1800" height="44" rx="10" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+  <rect x="94" y="974" width="12" height="12" rx="3" fill="#5E7A24"/>
+  <text x="116" y="988" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Bitwidth and Algorithm Options</text>
+  <!-- 五张选项卡 1020..1130 -->
+  <g fill="#263238">
+    <rect x="110" y="1020" width="330" height="110" rx="8" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+    <text x="140" y="1048" font-size="14" font-weight="700" fill="#152033" text-anchor="start">MS</text>
+    <text x="140" y="1076" font-size="12" text-anchor="start">sign product plus min1/min2;</text>
+    <text x="140" y="1100" font-size="12" text-anchor="start">cheapest baseline</text>
+
+    <rect x="465" y="1020" width="330" height="110" rx="8" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+    <text x="495" y="1048" font-size="14" font-weight="700" fill="#152033" text-anchor="start">NMS</text>
+    <text x="495" y="1076" font-size="12" text-anchor="start">multiply MS magnitude by alpha_q</text>
+    <text x="495" y="1100" font-size="12" text-anchor="start">with fixed rounding</text>
+
+    <rect x="820" y="1020" width="330" height="110" rx="8" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+    <text x="850" y="1048" font-size="14" font-weight="700" fill="#152033" text-anchor="start">OMS</text>
+    <text x="850" y="1076" font-size="12" text-anchor="start">subtract beta_q and clamp negative</text>
+    <text x="850" y="1100" font-size="12" text-anchor="start">magnitude to zero</text>
+
+    <rect x="1175" y="1020" width="330" height="110" rx="8" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+    <text x="1205" y="1048" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Layered</text>
+    <text x="1205" y="1076" font-size="12" text-anchor="start">subtract old_R and add new_R</text>
+    <text x="1205" y="1100" font-size="12" text-anchor="start">before next layer</text>
+
+    <rect x="1530" y="1020" width="330" height="110" rx="8" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+    <text x="1560" y="1048" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Saturation</text>
+    <text x="1560" y="1076" font-size="12" text-anchor="start">count LLR, CN, VN and posterior</text>
+    <text x="1560" y="1100" font-size="12" text-anchor="start">clamp events</text>
+  </g>
+  <!-- 底线规则 -->
+  <rect x="80" y="1168" width="1800" height="44" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="980" y="1196" font-size="12.5" fill="#37474F" text-anchor="middle">Requirement rule: compare CN min1/min2, layered read-modify-write, posterior LLR and syndrome before judging fixed-point LDPC BLER loss.</text>
+
+  <!-- ============ 箭头 ============ -->
+  <g stroke="#5B6B82" stroke-width="2" fill="none">
+    <path d="M 430 195 L 460 195" marker-end="url(#arrow)"/>
+    <path d="M 820 195 L 850 195" marker-end="url(#arrow)"/>
+    <path d="M 1210 195 L 1240 195" marker-end="url(#arrow)"/>
+    <path d="M 1600 195 L 1630 195" marker-end="url(#arrow)"/>
+    <path d="M 440 1075 L 465 1075" marker-end="url(#arrow)"/>
+    <path d="M 795 1075 L 820 1075" marker-end="url(#arrow)"/>
+    <path d="M 1150 1075 L 1175 1075" marker-end="url(#arrow)"/>
+    <path d="M 1505 1075 L 1530 1075" marker-end="url(#arrow)"/>
+  </g>
+</svg>

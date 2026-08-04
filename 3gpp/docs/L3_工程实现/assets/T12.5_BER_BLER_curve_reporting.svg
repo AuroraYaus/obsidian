@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T12.5_BER_BLER_curve_reporting.svg
+  @brief   T12.5 BER/BLER 曲线报告流程图：从仿真运行到标准化 CSV、曲线绘制和失败诊断的完整报告管线，
+           含 metrics.csv 必需列定义、示意性 BLER 曲线和失败诊断闭环。
+  @date    2026-08-04
+  @note    本次重绘自定语义色（不沿用 PIL 脚本色系）：
+           Simulation Runs 钢蓝 / Normalized CSV 琥珀 / Curve Builder 紫罗兰 /
+           Report Package 青绿 / metrics.csv 表格白底灰边 / BLER 曲线深蓝 #1B6E8F /
+           诊断五卡珊瑚红。布局：标题带 -> 四卡报告管线 -> 表格+曲线并排 ->
+           失败诊断闭环（五卡链）-> 底线规则。
+           内容（节点、数值、连线关系）与 docs/L3_工程实现/T17.5 讲义及原 PIL 图语义一致；
+           替代 docs/L3_工程实现/assets/T12.5_BER_BLER_curve_reporting.png。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1260" viewBox="0 0 1900 1260" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T12.5 BER/BLER Curve Reporting</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5B6B82"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 标题带 ============ -->
+  <rect x="40" y="18" width="1820" height="64" rx="10" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="950" y="42" font-size="20" font-weight="700" fill="#152033" text-anchor="middle">T12.5 BER/BLER Curve Reporting</text>
+  <text x="950" y="68" font-size="12.5" fill="#455A64" text-anchor="middle">CSV schema, confidence intervals, stopping rules, plots and failure diagnosis for LTE Turbo, NR LDPC and NR Polar</text>
+
+  <!-- ============ 顶部四卡 ============ -->
+  <rect x="70" y="110" width="430" height="160" rx="10" fill="#D9E7F6" stroke="#2F5E94" stroke-width="1.5"/>
+  <rect x="84" y="124" width="12" height="12" rx="3" fill="#2F5E94"/>
+  <text x="106" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Simulation Runs</text>
+  <line x1="84" y1="150" x2="480" y2="150" stroke="#2F5E94" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="176" font-size="12" fill="#263238" text-anchor="start">LTE Turbo, NR LDPC and NR Polar emit</text>
+  <text x="106" y="200" font-size="12" fill="#263238" text-anchor="start">metrics.csv, frames.jsonl, seeds and failures.</text>
+
+  <rect x="530" y="110" width="430" height="160" rx="10" fill="#F8E8C8" stroke="#A8781E" stroke-width="1.5"/>
+  <rect x="544" y="124" width="12" height="12" rx="3" fill="#A8781E"/>
+  <text x="566" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Normalized CSV</text>
+  <line x1="544" y1="150" x2="940" y2="150" stroke="#A8781E" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="566" y="176" font-size="12" fill="#263238" text-anchor="start">One row per SNR point: totals, errors,</text>
+  <text x="566" y="200" font-size="12" fill="#263238" text-anchor="start">BER, BLER, CI bounds, stop reason, hash.</text>
+
+  <rect x="990" y="110" width="430" height="160" rx="10" fill="#E3DCF2" stroke="#59419C" stroke-width="1.5"/>
+  <rect x="1004" y="124" width="12" height="12" rx="3" fill="#59419C"/>
+  <text x="1026" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Curve Builder</text>
+  <line x1="1004" y1="150" x2="1400" y2="150" stroke="#59419C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1026" y="176" font-size="12" fill="#263238" text-anchor="start">Read CSV only; draw log-scale BLER/BER</text>
+  <text x="1026" y="200" font-size="12" fill="#263238" text-anchor="start">curves with confidence intervals, labels.</text>
+
+  <rect x="1450" y="110" width="430" height="160" rx="10" fill="#CFE9E2" stroke="#15705C" stroke-width="1.5"/>
+  <rect x="1464" y="124" width="12" height="12" rx="3" fill="#15705C"/>
+  <text x="1486" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Report Package</text>
+  <line x1="1464" y1="150" x2="1860" y2="150" stroke="#15705C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1486" y="176" font-size="12" fill="#263238" text-anchor="start">Save PNG/PDF, data CSV, command, protocol</text>
+  <text x="1486" y="200" font-size="12" fill="#263238" text-anchor="start">anchors, failure table and replay pointers.</text>
+
+  <!-- ============ 左侧：metrics.csv Required Columns 表格 ============ -->
+  <rect x="70" y="340" width="830" height="560" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="100" y="374" font-size="16" font-weight="700" fill="#152033" text-anchor="start">metrics.csv Required Columns</text>
+  <line x1="90" y1="386" x2="880" y2="386" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- 表头 400..440 -->
+  <rect x="80" y="400" width="200" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="180" y="425" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Group</text>
+  <rect x="280" y="400" width="320" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="440" y="425" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Columns</text>
+  <rect x="600" y="400" width="300" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="750" y="425" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Why it matters</text>
+  <!-- 行 1 440..512 -->
+  <rect x="80" y="440" width="200" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="180" y="476" font-size="12" fill="#263238" text-anchor="middle">Identity</text>
+  <rect x="280" y="440" width="320" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="440" y="476" font-size="12" fill="#263238" text-anchor="middle">run_id, decoder, channel, config_hash</text>
+  <rect x="600" y="440" width="300" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="750" y="476" font-size="12" fill="#263238" text-anchor="middle">compare only like-for-like curves</text>
+  <!-- 行 2 512..584 -->
+  <rect x="80" y="512" width="200" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="180" y="548" font-size="12" fill="#263238" text-anchor="middle">Protocol</text>
+  <rect x="280" y="512" width="320" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="440" y="548" font-size="12" fill="#263238" text-anchor="middle">TB/CB/Polar params, CRC mode, rate def.</text>
+  <rect x="600" y="512" width="300" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="750" y="548" font-size="12" fill="#263238" text-anchor="middle">tie BLER to protocol objects</text>
+  <!-- 行 3 584..656 -->
+  <rect x="80" y="584" width="200" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="180" y="620" font-size="12" fill="#263238" text-anchor="middle">Counts</text>
+  <rect x="280" y="584" width="320" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="440" y="620" font-size="12" fill="#263238" text-anchor="middle">frames, blocks, bits, error counts</text>
+  <rect x="600" y="584" width="300" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="750" y="620" font-size="12" fill="#263238" text-anchor="middle">raw evidence before ratios</text>
+  <!-- 行 4 656..728 -->
+  <rect x="80" y="656" width="200" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="180" y="692" font-size="12" fill="#263238" text-anchor="middle">Ratios</text>
+  <rect x="280" y="656" width="320" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="440" y="692" font-size="12" fill="#263238" text-anchor="middle">BER, BLER, FER, false-pass</text>
+  <rect x="600" y="656" width="300" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="750" y="692" font-size="12" fill="#263238" text-anchor="middle">report values and diagnostics</text>
+  <!-- 行 5 728..800 -->
+  <rect x="80" y="728" width="200" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="180" y="764" font-size="12" fill="#263238" text-anchor="middle">Confidence</text>
+  <rect x="280" y="728" width="320" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="440" y="764" font-size="12" fill="#263238" text-anchor="middle">ci_method, ci_low, ci_high</text>
+  <rect x="600" y="728" width="300" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="750" y="764" font-size="12" fill="#263238" text-anchor="middle">show statistical uncertainty</text>
+  <!-- 行 6 800..872 -->
+  <rect x="80" y="800" width="200" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="180" y="836" font-size="12" fill="#263238" text-anchor="middle">Stopping</text>
+  <rect x="280" y="800" width="320" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="440" y="836" font-size="12" fill="#263238" text-anchor="middle">min frames, min errors, max frames,</text>
+  <text x="440" y="860" font-size="12" fill="#263238" text-anchor="middle">stop reason</text>
+  <rect x="600" y="800" width="300" height="72" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="750" y="836" font-size="12" fill="#263238" text-anchor="middle">avoid false zero-BLER claims</text>
+
+  <!-- ============ 右侧：Report-Ready BLER Curve 示意曲线 ============ -->
+  <rect x="940" y="340" width="920" height="560" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="970" y="374" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Report-Ready BLER Curve</text>
+  <line x1="960" y1="386" x2="1840" y2="386" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- 坐标轴（结构线，终点在面板内） -->
+  <g stroke="#263238" stroke-width="2">
+    <line x1="1060" y1="800" x2="1780" y2="800"/>
+    <line x1="1060" y1="420" x2="1060" y2="800"/>
+  </g>
+  <g stroke="#263238" stroke-width="2">
+    <line x1="1060" y1="800" x2="1060" y2="808"/>
+    <line x1="1240" y1="800" x2="1240" y2="808"/>
+    <line x1="1420" y1="800" x2="1420" y2="808"/>
+    <line x1="1600" y1="800" x2="1600" y2="808"/>
+    <line x1="1780" y1="800" x2="1780" y2="808"/>
+  </g>
+  <g font-size="12" fill="#263238" text-anchor="middle">
+    <text x="1060" y="832">0</text>
+    <text x="1240" y="832">1</text>
+    <text x="1420" y="832">2</text>
+    <text x="1600" y="832">3</text>
+    <text x="1780" y="832">4</text>
+  </g>
+  <g stroke="#263238" stroke-width="2">
+    <line x1="1052" y1="420" x2="1060" y2="420"/>
+    <line x1="1052" y1="610" x2="1060" y2="610"/>
+    <line x1="1052" y1="800" x2="1060" y2="800"/>
+  </g>
+  <g font-size="12" fill="#263238" text-anchor="end">
+    <text x="1038" y="424">1e-1</text>
+    <text x="1038" y="614">1e-2</text>
+    <text x="1038" y="804">1e-3</text>
+  </g>
+  <polyline points="1060,436 1175,478 1290,544 1405,625 1770,782" fill="none" stroke="#1B6E8F" stroke-width="5"/>
+  <g stroke="#1B6E8F" stroke-width="2">
+    <line x1="1060" y1="414" x2="1060" y2="458"/>
+    <line x1="1050" y1="414" x2="1070" y2="414"/>
+    <line x1="1050" y1="458" x2="1070" y2="458"/>
+    <line x1="1175" y1="456" x2="1175" y2="500"/>
+    <line x1="1165" y1="456" x2="1185" y2="456"/>
+    <line x1="1165" y1="500" x2="1185" y2="500"/>
+    <line x1="1290" y1="522" x2="1290" y2="566"/>
+    <line x1="1280" y1="522" x2="1300" y2="522"/>
+    <line x1="1280" y1="566" x2="1300" y2="566"/>
+    <line x1="1405" y1="603" x2="1405" y2="647"/>
+    <line x1="1395" y1="603" x2="1415" y2="603"/>
+    <line x1="1395" y1="647" x2="1415" y2="647"/>
+    <line x1="1770" y1="760" x2="1770" y2="804"/>
+    <line x1="1760" y1="760" x2="1780" y2="760"/>
+    <line x1="1760" y1="804" x2="1780" y2="804"/>
+  </g>
+  <g fill="#1B6E8F">
+    <circle cx="1060" cy="436" r="6"/>
+    <circle cx="1175" cy="478" r="6"/>
+    <circle cx="1290" cy="544" r="6"/>
+    <circle cx="1405" cy="625" r="6"/>
+    <circle cx="1770" cy="782" r="6"/>
+  </g>
+  <text x="1420" y="878" font-size="12.5" fill="#263238" text-anchor="middle">Eb/N0 (dB)</text>
+  <text x="1120" y="404" font-size="12.5" fill="#263238" text-anchor="middle">BLER (log scale)</text>
+
+  <!-- ============ 底部：Failure Diagnosis Closure ============ -->
+  <rect x="70" y="1010" width="1790" height="44" rx="10" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+  <rect x="84" y="1024" width="12" height="12" rx="3" fill="#B24A33"/>
+  <text x="106" y="1038" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Failure Diagnosis Closure</text>
+  <!-- 五张诊断卡 1070..1160 -->
+  <g fill="#263238">
+    <rect x="110" y="1070" width="320" height="90" rx="8" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+    <text x="140" y="1096" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Curve anomaly</text>
+    <text x="140" y="1122" font-size="12" text-anchor="start">non-monotonic BLER, zero-error point,</text>
+    <text x="140" y="1146" font-size="12" text-anchor="start">wide CI, algorithm gap</text>
+
+    <rect x="455" y="1070" width="320" height="90" rx="8" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+    <text x="485" y="1096" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Locate SNR row</text>
+    <text x="485" y="1122" font-size="12" text-anchor="start">config hash, seed range, stop reason,</text>
+    <text x="485" y="1146" font-size="12" text-anchor="start">confidence_limited flag</text>
+
+    <rect x="800" y="1070" width="320" height="90" rx="8" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+    <text x="830" y="1096" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Open failures</text>
+    <text x="830" y="1122" font-size="12" text-anchor="start">frames.jsonl, first mismatch, CRC status,</text>
+    <text x="830" y="1146" font-size="12" text-anchor="start">syndrome or PM trace</text>
+
+    <rect x="1145" y="1070" width="320" height="90" rx="8" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+    <text x="1175" y="1096" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Replay vector</text>
+    <text x="1175" y="1122" font-size="12" text-anchor="start">vector.json, input_llr.npy, descriptor,</text>
+    <text x="1175" y="1146" font-size="12" text-anchor="start">protocol evidence anchors</text>
+
+    <rect x="1490" y="1070" width="320" height="90" rx="8" fill="#F9DDD5" stroke="#B24A33" stroke-width="1.5"/>
+    <text x="1520" y="1096" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Classify root cause</text>
+    <text x="1520" y="1122" font-size="12" text-anchor="start">LLR sign, rate recovery, CRC boundary,</text>
+    <text x="1520" y="1146" font-size="12" text-anchor="start">decoder algorithm, quantization</text>
+  </g>
+  <!-- 底线规则 -->
+  <rect x="70" y="1188" width="1790" height="44" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="965" y="1216" font-size="12.5" fill="#37474F" text-anchor="middle">Never report BLER=0 without an upper bound or confidence note; every plotted point must link back to CSV, seeds, command and protocol anchors.</text>
+
+  <!-- ============ 箭头 ============ -->
+  <g stroke="#5B6B82" stroke-width="2" fill="none">
+    <path d="M 500 190 L 530 190" marker-end="url(#arrow)"/>
+    <path d="M 960 190 L 990 190" marker-end="url(#arrow)"/>
+    <path d="M 1420 190 L 1450 190" marker-end="url(#arrow)"/>
+    <path d="M 430 1115 L 455 1115" marker-end="url(#arrow)"/>
+    <path d="M 775 1115 L 800 1115" marker-end="url(#arrow)"/>
+    <path d="M 1120 1115 L 1145 1115" marker-end="url(#arrow)"/>
+    <path d="M 1465 1115 L 1490 1115" marker-end="url(#arrow)"/>
+  </g>
+</svg>

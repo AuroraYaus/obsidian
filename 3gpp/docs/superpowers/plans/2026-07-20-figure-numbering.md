@@ -42,7 +42,7 @@ source_spec: "docs/superpowers/plans/2026-07-20-figure-numbering.md"
 ### Task 1: 手动修复 T2.1 已有的 2 张 SVG 嵌入（加图编号）
 
 **Files:**
-- Modify: `docs/L1/T2.1_AWGN_noise_scaling.md:178,193`
+- Modify: `docs/L1_基础/T2.1_AWGN_noise_scaling.md:178,193`
 
 **说明:** T2.1 是目前唯一有实际 `![]()` 图片嵌入的文件，2 张 SVG 已有描述性 alt text 但缺编号。
 
@@ -73,7 +73,7 @@ source_spec: "docs/superpowers/plans/2026-07-20-figure-numbering.md"
 - [ ] **Step 3: 验证**
 
 ```bash
-grep -n '图 [0-9]' docs/L1/T2.1_AWGN_noise_scaling.md
+grep -n '图 [0-9]' docs/L1_基础/T2.1_AWGN_noise_scaling.md
 ```
 预期输出：两行，分别显示 `图 1` 和 `图 2`。
 
@@ -83,7 +83,7 @@ grep -n '图 [0-9]' docs/L1/T2.1_AWGN_noise_scaling.md
 
 **Files:**
 - Create: `/tmp/embed_figures.py`（临时脚本）
-- Modify: ~40 个 `docs/L1/*.md`, `docs/L2_协议算法/*.md`, `docs/L3/*.md`
+- Modify: ~40 个 `docs/L1_基础/*.md`, `docs/L2_协议算法/*.md`, `docs/L3_工程实现/*.md`
 
 **说明:** 脚本遍历 L1/L2/L3 的 assets/ 目录，将每张图片嵌入对应讲义，放在 `## 图示` 节中（节位于 `## 执行与证据记录` 之前）。
 
@@ -246,7 +246,7 @@ grep -A2 '## 图示' docs/L2_协议算法/T10.1_NR_Polar_decoder_chain_overview.
 grep -A10 '## 图示' docs/L2_协议算法/T8.3_NR_LDPC_lifting_QC_matrix.md
 
 # 抽查 L3 文件
-grep -A2 '## 图示' docs/L3/T19.1_LTE_Turbo_RTL_microarchitecture.md
+grep -A2 '## 图示' docs/L3_工程实现/T19.1_LTE_Turbo_RTL_microarchitecture.md
 ```
 
 预期：每个文件都有 `## 图示` 节，图片从 `图 1` 开始编号，路径为 `assets/xxx.png`。
@@ -258,7 +258,7 @@ grep -A2 '## 图示' docs/L3/T19.1_LTE_Turbo_RTL_microarchitecture.md
 - [ ] **Step 1: 统计所有图示节**
 
 ```bash
-grep -rn '## 图示' docs/L1/ docs/L2_协议算法/ docs/L3/ --include="*.md" | wc -l
+grep -rn '## 图示' docs/L1_基础/ docs/L2_协议算法/ docs/L3_工程实现/ --include="*.md" | wc -l
 ```
 
 - [ ] **Step 2: 检查是否有遗漏资产（asset 存在但未嵌入）**
@@ -337,7 +337,7 @@ git diff --stat
 - [ ] **Step 2: 提交**
 
 ```bash
-git add docs/L1/ docs/L2_协议算法/ docs/L3/ docs/superpowers/plans/2026-07-20-figure-numbering.md
+git add docs/L1_基础/ docs/L2_协议算法/ docs/L3_工程实现/ docs/superpowers/plans/2026-07-20-figure-numbering.md
 git commit -m "docs: 全项目图片嵌入与图编号 — 65 张图片嵌入 40+ 篇讲义，统一图 N 编号体系"
 ```
 

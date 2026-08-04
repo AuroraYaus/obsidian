@@ -123,7 +123,7 @@ def png_mtimes(project_root: Path) -> dict[Path, int]:
     @param  project_root  项目根目录。
     @return               路径到修改时间（ns）的映射，用于前后对比发现新生成的文件。
     @note   使用纳秒级 mtime 确保高精度对比，避免秒级精度漏报快速生成的同秒文件。"""
-    roots = [project_root / "docs/L1/assets", project_root / "docs/L2_协议算法/assets", project_root / "docs/L3/assets", project_root / "assets"]
+    roots = [project_root / "docs/L1_基础/assets", project_root / "docs/L2_协议算法/assets", project_root / "docs/L3_工程实现/assets", project_root / "assets"]
     mtimes: dict[Path, int] = {}
     for root in roots:
         if root.exists():

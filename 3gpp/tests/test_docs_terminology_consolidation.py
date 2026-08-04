@@ -7,7 +7,7 @@ import unittest
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DOCS = PROJECT_ROOT / 'docs'
-LESSON_ROOTS = [DOCS / 'L1', DOCS / 'L2_协议算法', DOCS / 'L3']
+LESSON_ROOTS = [DOCS / 'L1_基础', DOCS / 'L2_协议算法', DOCS / 'L3_工程实现']
 
 
 class DocsTerminologyConsolidationTest(unittest.TestCase):
@@ -15,7 +15,7 @@ class DocsTerminologyConsolidationTest(unittest.TestCase):
 
     def test_glossary_exists_with_core_terms(self):
         """ @brief 验证 L0 全局术语表存在且包含 3GPP、LTE、NR、LLR、CRC、HARQ、LDPC、Turbo、Polar 等核心术语。 """
-        glossary = DOCS / 'L0' / 'L0_terminology_glossary.md'
+        glossary = DOCS / 'L0_协议阅读引导' / 'L0_terminology_glossary.md'
         text = glossary.read_text(encoding='utf-8')
         for term in ['3GPP', 'LTE', 'NR', 'LLR', 'CRC', 'HARQ', 'LDPC', 'Turbo', 'Polar']:
             self.assertIn(f'| {term} |', text)

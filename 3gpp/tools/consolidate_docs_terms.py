@@ -14,9 +14,9 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DOCS_ROOT = PROJECT_ROOT / "docs"
-LESSON_ROOTS = [DOCS_ROOT / "L1", DOCS_ROOT / "L2_协议算法", DOCS_ROOT / "L3"]
-GLOSSARY_PATH = DOCS_ROOT / "L0" / "L0_terminology_glossary.md"
-READING_MAP = DOCS_ROOT / "L1" / "T0.1_LTE_NR_decoder_protocol_reading_map.md"
+LESSON_ROOTS = [DOCS_ROOT / "L1_基础", DOCS_ROOT / "L2_协议算法", DOCS_ROOT / "L3_工程实现"]
+GLOSSARY_PATH = DOCS_ROOT / "L0_协议阅读引导" / "L0_terminology_glossary.md"
+READING_MAP = DOCS_ROOT / "L1_基础" / "T0.1_LTE_NR_decoder_protocol_reading_map.md"
 
 GLOSSARY_GROUPS: list[tuple[str, list[tuple[str, str, str]]]] = [
     (
@@ -383,13 +383,13 @@ def update_reading_map_link(text: str) -> str:
     @return 插入术语入口段落后（或已存在时不动）的文本。
     @note 幂等操作：如果链接已存在则跳过，防止重复插入。
     """
-    if "../L0/L0_terminology_glossary.md" in text:
+    if "../L0_协议阅读引导/L0_terminology_glossary.md" in text:
         return text
     marker = "## 前置知识检查\n"
     note = (
         "## 全局术语入口\n\n"
         "全项目重复使用的术语、缩写和简要解释集中在 "
-        "[译码讲义术语总表](../L0/L0_terminology_glossary.md)。本节和后续讲义默认直接使用这些简称，正文只在需要讲解概念本身时补充上下文。\n\n"
+        "[译码讲义术语总表](../L0_协议阅读引导/L0_terminology_glossary.md)。本节和后续讲义默认直接使用这些简称，正文只在需要讲解概念本身时补充上下文。\n\n"
     )
     if marker in text:
         return text.replace(marker, note + marker, 1)

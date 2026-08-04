@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T3.2_circular_buffer_decision3.svg
+  @brief   图 3：决策三示意图 —— 同一环形结构 circular buffer w（K_w = 3K_Π）
+           在 E < K_w 与 E > K_w 下分别表现为打孔与重复两种速率匹配策略
+  @date    2026-08-04
+  @note    视觉设计依据 docs/L1_基础/T3.2_transport_code_block_filler_bits.md 语义
+           （环形读取窗口 [k₀, k₀+E−1] 模 K_w、RV 表、接收端被打孔位置 LLR 填 0），
+           不参考旧脚本渲染图：
+           单环双轨布局——w 环按 15 个位置分段着色（w₀ 起点在正上方，前 5 位
+           系统段 + 10 位校验交替段），外轨 = 打孔场景（E = 8：玫瑰窗口覆盖
+           w₀..w₇，灰色虚线弧标出 w₈..w₁₄ 未读取段），内轨 = 重复场景
+           （E = 20：紫色环表示整圈读取，右上高亮弧表示绕回后再读 w₀..w₄）。
+           色系（新）：系统段 青绿 / 校验 v¹ 靛蓝 / 校验 v² 琥珀 / 打孔窗 玫瑰 /
+           重复窗 紫；扁平工程图风格（直角、无阴影、细描边）。替代原脚本渲染
+           PNG（脚本与 PNG 已随迁移删除，git 可恢复）。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="730" viewBox="0 0 1080 730" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>决策三：同一环形结构 w — 打孔（E &lt; K_w）与重复（E &gt; K_w）</title>
+
+  <!-- ============ 标题区 ============ -->
+  <text x="540" y="46" text-anchor="middle" font-size="20" font-weight="700" fill="#0F172A" class="free">
+    决策三：同一环形结构 w — 打孔（E &lt; K_w）与重复（E &gt; K_w）
+  </text>
+  <text x="540" y="76" text-anchor="middle" font-size="12.5" fill="#64748B" class="free">
+    circular buffer w（K_w = 3K_Π = 15，K_Π = 5）：速率匹配从 RV 起点 k₀ = 0 沿环读取 E 个比特，位置编号沿环递增
+  </text>
+
+  <!-- ============ w 环：15 个位置分段（前 5 位系统段 + 10 位校验交替段） ============ -->
+  <g font-family="inherit">
+    <!-- 系统段：w₀..w₄ -->
+    <path d="M 540.0 180.0 A 200.0 200.0 0 0 1 621.3 197.3 l -24.4 54.8 A 140.0 140.0 0 0 0 540.0 240.0 Z" fill="#CCFBF1" stroke="#0F766E" stroke-width="2"/>
+    <path d="M 621.3 197.3 A 200.0 200.0 0 0 1 688.6 246.2 l -44.6 40.1 A 140.0 140.0 0 0 0 596.9 252.1 Z" fill="#CCFBF1" stroke="#0F766E" stroke-width="2"/>
+    <path d="M 688.6 246.2 A 200.0 200.0 0 0 1 730.2 318.2 l -57.1 18.5 A 140.0 140.0 0 0 0 644.0 286.3 Z" fill="#CCFBF1" stroke="#0F766E" stroke-width="2"/>
+    <path d="M 730.2 318.2 A 200.0 200.0 0 0 1 738.9 400.9 l -59.7 -6.3 A 140.0 140.0 0 0 0 673.1 336.7 Z" fill="#CCFBF1" stroke="#0F766E" stroke-width="2"/>
+    <path d="M 738.9 400.9 A 200.0 200.0 0 0 1 713.2 480.0 l -52.0 -30.0 A 140.0 140.0 0 0 0 679.2 394.6 Z" fill="#CCFBF1" stroke="#0F766E" stroke-width="2"/>
+    <!-- 校验段：偶偏移位置（K_Π+2k）→ v¹ -->
+    <path d="M 713.2 480.0 A 200.0 200.0 0 0 1 657.6 541.8 l -35.3 -48.5 A 140.0 140.0 0 0 0 661.2 450.0 Z" fill="#E0E7FF" stroke="#4338CA" stroke-width="2"/>
+    <path d="M 581.6 575.6 A 200.0 200.0 0 0 1 498.4 575.6 l 12.5 -58.7 A 140.0 140.0 0 0 0 569.1 516.9 Z" fill="#E0E7FF" stroke="#4338CA" stroke-width="2"/>
+    <path d="M 422.4 541.8 A 200.0 200.0 0 0 1 366.8 480.0 l 52.0 -30.0 A 140.0 140.0 0 0 0 457.7 493.3 Z" fill="#E0E7FF" stroke="#4338CA" stroke-width="2"/>
+    <path d="M 341.1 400.9 A 200.0 200.0 0 0 1 349.8 318.2 l 57.1 18.5 A 140.0 140.0 0 0 0 400.8 394.6 Z" fill="#E0E7FF" stroke="#4338CA" stroke-width="2"/>
+    <path d="M 391.4 246.2 A 200.0 200.0 0 0 1 458.7 197.3 l 24.4 54.8 A 140.0 140.0 0 0 0 436.0 286.3 Z" fill="#E0E7FF" stroke="#4338CA" stroke-width="2"/>
+    <!-- 校验段：奇偏移位置（K_Π+2k+1）→ v² -->
+    <path d="M 657.6 541.8 A 200.0 200.0 0 0 1 581.6 575.6 l -12.5 -58.7 A 140.0 140.0 0 0 0 622.3 493.3 Z" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+    <path d="M 498.4 575.6 A 200.0 200.0 0 0 1 422.4 541.8 l 35.3 -48.5 A 140.0 140.0 0 0 0 510.9 516.9 Z" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+    <path d="M 366.8 480.0 A 200.0 200.0 0 0 1 341.1 400.9 l 59.7 -6.3 A 140.0 140.0 0 0 0 418.8 450.0 Z" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+    <path d="M 349.8 318.2 A 200.0 200.0 0 0 1 391.4 246.2 l 44.6 40.1 A 140.0 140.0 0 0 0 406.9 336.7 Z" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+    <path d="M 458.7 197.3 A 200.0 200.0 0 0 1 540.0 180.0 l 0.0 60.0 A 140.0 140.0 0 0 0 483.1 252.1 Z" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+  </g>
+
+  <!-- ============ 位置编号（w₀..w₁₄） ============ -->
+  <g font-size="10.5" text-anchor="middle" dominant-baseline="central">
+    <text x="575.3" y="213.7" fill="#134E4A" class="free">w₀</text>
+    <text x="639.9" y="242.5" fill="#134E4A" class="free">w₁</text>
+    <text x="687.2" y="295.0" fill="#134E4A" class="free">w₂</text>
+    <text x="709.1" y="362.2" fill="#134E4A" class="free">w₃</text>
+    <text x="701.7" y="432.5" fill="#134E4A" class="free">w₄</text>
+    <text x="666.3" y="493.8" fill="#3730A3" class="free">w₅</text>
+    <text x="609.1" y="535.3" fill="#78350F" class="free">w₆</text>
+    <text x="540.0" y="550.0" fill="#3730A3" class="free">w₇</text>
+    <text x="470.9" y="535.3" fill="#78350F" class="free">w₈</text>
+    <text x="413.7" y="493.8" fill="#3730A3" class="free">w₉</text>
+    <text x="378.3" y="432.5" fill="#78350F" class="free">w₁₀</text>
+    <text x="370.9" y="362.2" fill="#3730A3" class="free">w₁₁</text>
+    <text x="392.8" y="295.0" fill="#78350F" class="free">w₁₂</text>
+    <text x="440.1" y="242.5" fill="#3730A3" class="free">w₁₃</text>
+    <text x="504.7" y="213.7" fill="#78350F" class="free">w₁₄</text>
+  </g>
+
+  <!-- ============ 外轨：打孔场景（E = 8 < K_w，读取 w₀..w₇） ============ -->
+  <path d="M 540.0 148.0 A 232.0 232.0 0 1 1 491.8 606.9 l 4.5 -21.5 A 210.0 210.0 0 1 0 540.0 170.0 Z" fill="#BE185D" fill-opacity="0.12" stroke="#BE185D" stroke-width="2"/>
+  <path d="M 494.1 596.2 A 221.0 221.0 0 0 1 540.0 159.0" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <polygon points="494.1,596.2 491.4,584.4 501.2,586.5" fill="#BE185D"/>
+
+  <!-- ============ 内轨：重复场景（E = 20 > K_w，整圈读取 + 绕回再读 w₀..w₄） ============ -->
+  <circle cx="540" cy="380" r="117" fill="none" stroke="#6D28D9" stroke-width="22" opacity="0.10"/>
+  <path d="M 540.0 252.0 A 128.0 128.0 0 0 1 650.9 444.0 l -19.1 -11.0 A 106.0 106.0 0 0 0 540.0 274.0 Z" fill="#6D28D9" fill-opacity="0.25" stroke="#6D28D9" stroke-width="1.5"/>
+  <polygon points="641.3,438.5 629.3,437.3 634.3,428.7" fill="#6D28D9"/>
+
+  <!-- ============ RV 起点标记 ============ -->
+  <circle cx="540.0" cy="177.0" r="5" fill="#0F172A"/>
+  <text x="540" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#0F172A" class="free">RV 0 起点（k₀ = 0）</text>
+  <polygon points="716.7,476.0 723.7,482.0 716.7,488.0 709.7,482.0" fill="#0F172A"/>
+  <text x="754.8" y="504" font-size="10.5" font-weight="700" fill="#0F172A" class="free">RV 1（校验段）</text>
+
+  <!-- ============ 环心芯片：总长 ============ -->
+  <rect x="445" y="364" width="190" height="32" rx="2" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.25"/>
+  <text x="540" y="385" text-anchor="middle" font-size="12.5" fill="#334155">K<tspan font-size="9" dy="2">w</tspan> = 3K<tspan font-size="9" dy="2">Π</tspan> = 15（K_Π = 5）</text>
+
+  <!-- ============ 场景标注 ============ -->
+  <text x="694" y="168" text-anchor="middle" font-size="11" fill="#BE185D" class="free">① 打孔（E = 8 &lt; K_w = 15）：窗口内比特被读取发送</text>
+  <text x="366.4" y="586.8" text-anchor="middle" font-size="11" fill="#64748B" class="free">w₈..w₁₄ 未被读取 → 打孔（不发送）</text>
+  <text x="295.7" y="468.9" text-anchor="middle" font-size="11" fill="#6D28D9" class="free">② 重复（E = 20 &gt; K_w = 15）：绕回后从头再读</text>
+  <text x="616.2" y="336" text-anchor="middle" font-size="10.5" fill="#6D28D9" class="free">第二圈再读 w₀..w₄</text>
+
+  <!-- ============ 图例第一行：流段配色 ============ -->
+  <g font-size="12.5" fill="#334155">
+    <rect x="135" y="620" width="250" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
+    <rect x="147" y="626" width="16" height="16" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.25"/>
+    <text x="171" y="634" dominant-baseline="central">v⁽⁰⁾ 系统段（前 5 位）</text>
+    <rect x="415" y="620" width="250" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
+    <rect x="427" y="626" width="16" height="16" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.25"/>
+    <text x="451" y="634" dominant-baseline="central">v⁽¹⁾ 校验流（偶位置）</text>
+    <rect x="695" y="620" width="250" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
+    <rect x="707" y="626" width="16" height="16" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.25"/>
+    <text x="731" y="634" dominant-baseline="central">v⁽²⁾ 校验流（奇位置）</text>
+  </g>
+
+  <!-- ============ 图例第二行：窗口与起点 ============ -->
+  <g font-size="12.5" fill="#334155">
+    <rect x="129" y="660" width="190" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
+    <rect x="141" y="666" width="16" height="16" rx="2" fill="#BE185D" fill-opacity="0.25" stroke="#BE185D" stroke-width="1.25"/>
+    <text x="165" y="674" dominant-baseline="central">① 打孔窗口（E = 8）</text>
+    <rect x="349" y="660" width="190" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
+    <rect x="361" y="666" width="16" height="16" rx="2" fill="#6D28D9" fill-opacity="0.25" stroke="#6D28D9" stroke-width="1.25"/>
+    <text x="385" y="674" dominant-baseline="central">② 重复窗口（E = 20）</text>
+    <rect x="569" y="660" width="170" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
+    <circle cx="585" cy="674" r="6" fill="#0F172A"/>
+    <text x="601" y="674" dominant-baseline="central">RV 0 起点（k₀ = 0）</text>
+    <rect x="769" y="660" width="200" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
+    <rect x="781" y="666" width="16" height="16" rx="2" fill="#6D28D9" fill-opacity="0.25" stroke="#6D28D9" stroke-width="1.25" stroke-dasharray="2,2"/>
+    <text x="805" y="674" dominant-baseline="central">第二圈（w₀..w₄ 再读）</text>
+  </g>
+
+  <!-- ============ 底部说明 ============ -->
+  <text x="540" y="712" text-anchor="middle" font-size="12" fill="#64748B" class="free">
+    E 由物理资源块数量 × 调制阶数决定；接收端按相同读取窗口把 LLR 填入 w，被打孔位置填 0（无信道观测）
+  </text>
+</svg>

@@ -23,8 +23,8 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-DOC_ROOTS = (Path("docs/L1"), Path("docs/L2_协议算法"), Path("docs/L3"))
-ASSET_ROOTS = (Path("docs/L1/assets"), Path("docs/L2_协议算法/assets"), Path("docs/L3/assets"))
+DOC_ROOTS = (Path("docs/L1_基础"), Path("docs/L2_协议算法"), Path("docs/L3_工程实现"))
+ASSET_ROOTS = (Path("docs/L1_基础/assets"), Path("docs/L2_协议算法/assets"), Path("docs/L3_工程实现/assets"))
 INVENTORY_PATH = Path("docs/audits/image_asset_inventory.md")
 MIGRATION_PATH = Path("docs/audits/python_figure_to_body_content_migration.md")
 IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+\.png)\)")

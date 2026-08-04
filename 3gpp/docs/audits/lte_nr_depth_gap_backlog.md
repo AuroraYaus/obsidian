@@ -12,7 +12,7 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 用途：记录从 `/home/yys/ClaudeCode/ldpc` 和 `/home/yys/ClaudeCode/LDPC_Basics` 对照得到的深度缺口。后续扩写现有章节或新增少量专题章节时，以本台账为执行清单；完成一项必须勾选并在“完成记录”追加证据。
 
-范围：当前项目 `docs/L1`、`docs/L2_协议算法`、`docs/L3` 共 94 篇讲义，以及必要的 `tools/figures`、`docs/audits`、路线图和全局规则。
+范围：当前项目 `docs/L1_基础`、`docs/L2_协议算法`、`docs/L3_工程实现` 共 94 篇讲义，以及必要的 `tools/figures`、`docs/audits`、路线图和全局规则。
 
 原则：
 
@@ -91,7 +91,7 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 | B4-01 | `T1.6_information_theory_minimum_for_decoding.md` | 深度、突出 | `ldpc/docs/L1_理论基础/T1.4_信息论与信道容量.md` | 补 BSC/BEC/BI-AWGN 的直觉；解释容量、码率、容量差距、瀑布区、错误平层；说明这些不是协议门槛，而是性能分析语言。 | 建议 Python 图：容量边界、瀑布区、错误平层三段曲线。 |
 | B3-01 | `T2.7_AWGN_noise_scaling.md` | 深度、工程 | `ldpc/docs/L1_理论基础/T1.6_AWGN信道模型与噪声特性.md` | 补实基带和复基带噪声方差差异；补 `N0/2`、Eb/N0、Es/N0、码率、调制阶数换算；列四类 LLR scaling bug。 | 增加噪声缩放错误诊断表；可选 Python 曲线图。 |
 | B3-02 | `T2.9_QAM_Max_Log_MAP_demapping.md` | 深度、协议 | `ldpc/docs/L1_理论基础/T1.5_数字调制BPSK_QPSK_QAM.md` | 补 QAM 星座能量归一化、Gray 映射、1024QAM 复杂度、bit-channel 可靠性；核验 TS 36.211/38.211 调制入口。 | 若引用 1024QAM，必须记录 Rel-19 本地路径；建议补星座和 bit-channel 图。 |
-| B4-02 | `T4.5_decoder_performance_metrics.md` | 深度、图表 | `ldpc/docs/L2_协议算法_算法实现/T5.8_错误平层与陷阱集.md` | 在 BER/BLER 指标外补曲线读法：waterfall、error-floor、iteration saturation、confidence interval；补高 SNR 统计成本。 | Python 性能曲线图必须标注教学示意，不得伪装真实仿真结果。 |
+| B4-02 | `T4.5_decoder_performance_metrics.md` | 深度、图表 | `ldpc/docs/L2_算法实现/T5.8_错误平层与陷阱集.md` | 在 BER/BLER 指标外补曲线读法：waterfall、error-floor、iteration saturation、confidence interval；补高 SNR 统计成本。 | Python 性能曲线图必须标注教学示意，不得伪装真实仿真结果。 |
 | B1-03 | `T5.2_memory_banking_buffering_basics.md` | 工程 | `ldpc/docs/L1_理论基础/T1.2_编码线性代数.md`、`ldpc/docs/L3_硬件实现/T11.2_存储器架构设计.md` | 补稀疏矩阵存储、edge-major/layer-major、bank conflict 与译码器数据结构关系；连接 LDPC layered、Turbo interleaver、Polar path memory。 | 建议补统一 memory layout 对比表。 |
 
 ### LTE Turbo 章节
@@ -102,12 +102,12 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 | C1-02 | `T11.1_Turbo_LDPC_Polar_algorithm_comparison.md` | 突出 | `LDPC_Basics/LDPC.md`、`ldpc/docs/L1_理论基础/T3.1_LDPC码发明与历史.md` | 增加“NR 为什么没有继续用 LTE Turbo 作为数据信道主码”的详细段落；维度包括吞吐、并行度、QC 矩阵、IR-HARQ、错误平层、功耗。 | 横向比较图要避免把 Turbo 写成过时无价值。 |
 | C2-01 | `T6.2_RSC_code_foundation.md` | 深度 | `ldpc/docs/L1_理论基础/T3.2_Tanner图与因子图.md` | 补 RSC 编码器从卷积码到递归系统结构的动机；解释 systematic/parity/feedback/feedforward；增加 trellis 状态例子。 | 可补状态转移图；协议证据回链 TS 36.212 Turbo 编码结构。 |
 | C2-02 | `T6.5_BCJR_MAP_decoding_intuition.md` | 深度 | `ldpc/docs/L1_理论基础/T1.3_概率与LLR基础.md` | 补路径概率、边缘化、前向 alpha、后向 beta、分支 gamma 的逐步来源；用小 trellis 手算一拍。 | 建议 Python 图：trellis 上 alpha/beta/gamma 的方向和含义。 |
-| C2-03 | `T6.6_Log_MAP_Max_Log_MAP_Turbo.md` | 深度、工程 | `ldpc/docs/L2_协议算法_算法实现/T5.3_BP算法对数域推导.md` | 补 log-domain 转换、Jacobian logarithm、max-star、Max-Log 近似误差、定点修正查表策略。 | 增加公式前后的符号解释；LaTeX 全检。 |
-| C2-04 | `T6.7_Turbo_iteration_extrinsic_stopping.md` | 深度、工程 | `ldpc/docs/L2_协议算法_算法实现/T9.4_早停策略比较.md` | 补外信息非回声原则、相关性积累、振荡、CRC early stop 风险、iteration cap 与功耗关系。 | 可补迭代轨迹示意图。 |
+| C2-03 | `T6.6_Log_MAP_Max_Log_MAP_Turbo.md` | 深度、工程 | `ldpc/docs/L2_算法实现/T5.3_BP算法对数域推导.md` | 补 log-domain 转换、Jacobian logarithm、max-star、Max-Log 近似误差、定点修正查表策略。 | 增加公式前后的符号解释；LaTeX 全检。 |
+| C2-04 | `T6.7_Turbo_iteration_extrinsic_stopping.md` | 深度、工程 | `ldpc/docs/L2_算法实现/T9.4_早停策略比较.md` | 补外信息非回声原则、相关性积累、振荡、CRC early stop 风险、iteration cap 与功耗关系。 | 可补迭代轨迹示意图。 |
 | C3-01 | `T7.1_LTE_Turbo_de_rate_matching_overview.md` | 协议、深度 | `LDPC_Basics/RateMatching_Detailed.md` | 补 LTE rate matching 与 NR rate matching 的共同抽象：母码、实际发送长度、puncturing、repetition、LLR 初始化；再落回 TS 36.212 Turbo 细节。 | 增加 LTE de-rate matching 接收侧逆流程表。 |
 | C3-02 | `T7.2_LTE_subblock_deinterleaver_circular_buffer.md` | 图表、协议 | `LDPC_Basics/RateMatching_Detailed.md` | 补 sub-block interleaver 的动机和接收端 deinterleaver；说明 circular buffer 读写顺序、NULL、punctured、repeated 的状态差异。 | 必须有循环缓存图，标明 NULL、unknown、known、repeated。 |
 | C3-03 | `T7.3_LTE_HARQ_soft_buffer_RV.md` | 深度、图表 | `LDPC_Basics/RateMatching_Detailed.md` | 在现有 ring buffer 基础上补 Chase Combining 与 Incremental Redundancy 的概率证据差异；补定点饱和和 same-bit LLR accumulation。 | 图中四个 RV 位置必须清晰，读图顺序和工程检测点保持间距。 |
-| C3-04 | `T7.6_LTE_Turbo_decoder_edge_cases.md` | 工程、突出 | `ldpc/docs/L2_协议算法_算法实现/T5.8_错误平层与陷阱集.md` | 增加高 SNR 仍失败、error floor、RV mismatch、NULL 与 punctured 混淆、LLR sign 反转、K+/K- 顺序错误的定位流程。 | 增加 failure bundle 字段表。 |
+| C3-04 | `T7.6_LTE_Turbo_decoder_edge_cases.md` | 工程、突出 | `ldpc/docs/L2_算法实现/T5.8_错误平层与陷阱集.md` | 增加高 SNR 仍失败、error floor、RV mismatch、NULL 与 punctured 混淆、LLR sign 反转、K+/K- 顺序错误的定位流程。 | 增加 failure bundle 字段表。 |
 
 ### NR LDPC 章节
 
@@ -119,12 +119,12 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 | D2-01 | `T8.3_NR_LDPC_lifting_QC_matrix.md` | 缺失、图表 | `LDPC_Basics/LDPC.md` | 新增 BG 五子矩阵 A/B/C/D/E 的结构角色；解释核心 parity、扩展 parity、双对角/近似双对角和 Raptor-like 结构。 | 必须生成 Python 图：BG 子矩阵区域、非零位置、QC lifting、decoder memory 视角。 |
 | D2-02 | `T8.3_NR_LDPC_lifting_QC_matrix.md` | 深度、协议 | `LDPC_Basics/LDPC.md` | 补 `V_ij` 查表、`P_ij = V_ij mod Zc`、循环移位单位阵和全零子矩阵的逐步例子。 | 小矩阵例子必须能手算；图要标明 `Zc` 和 shift。 |
 | D3-01 | `T8.4_LDPC_Tanner_graph_message_passing.md` | 深度 | `ldpc/docs/L1_理论基础/T3.2_Tanner图与因子图.md` | 补 variable node、check node、edge、cycle、girth、短环、消息相关性；说明短环为什么影响 BP。 | 增加 Tanner 图和短环高亮图。 |
-| D3-02 | `T8.5_LDPC_sum_product_BP.md` | 深度 | `ldpc/docs/L2_协议算法_算法实现/T5.2_BP算法概率域推导.md` | 从因子分解和边缘化推导 probability-domain BP；再转到 LLR-domain BP；每个公式前说明回答的问题。 | 增加一个 3 VN/2 CN 小图手算一轮消息。 |
-| D3-03 | `T8.6_LDPC_MS_NMS_OMS.md` | 深度、工程 | `ldpc/docs/L2_协议算法_算法实现/T5.4_最小和与改进变体.md` | 补 MS 为什么高估可靠度、NMS alpha、OMS beta、定点饱和、trapping set 与 error floor 风险。 | 补参数扫描模板，不写真实最优 alpha/beta。 |
-| D3-04 | `T8.7_layered_LDPC_decoding_schedule.md` | 深度、工程 | `ldpc/docs/L2_协议算法_算法实现/T5.5_调度策略洪泛与分层.md` | 补 flooding、layered、shuffled 的对比；说明 layered 为什么收敛快、为什么需要 read-modify-write、为什么容易有 bank conflict。 | 增加调度时序图或 layer-major memory 图。 |
-| D4-01 | `T8.5_LDPC_sum_product_BP.md` | 缺失 | `ldpc/docs/L2_协议算法_算法实现/T5.7_密度进化与译码阈值.md` | 增加 DE 作为 LDPC 收敛分析方法的入门段；用 BEC 简化递推说明阈值概念。 | 明确 DE/EXIT 不是 3GPP 协议结果。 |
-| D4-02 | `T17.3_NR_LDPC_float_sim_plan.md` | 工程 | `ldpc/docs/L2_协议算法_算法实现/T9.1_密度进化与EXIT图仿真.md` | 增加 DE/EXIT 仿真模板、输入参数、输出文件、随机种子或确定性网格、证据标签。 | 无真实日志时标为模板。 |
-| D4-03 | `T20.2_protocol_vector_corner_case_suite.md` | 工程、缺失 | `ldpc/docs/L2_协议算法_算法实现/T9.2_错误平层仿真与陷阱集搜索.md` | 补高 SNR failure dump、错误比特子图、trapping set 搜索、directed vector 生成方法。 | 增加 failure bundle schema。 |
+| D3-02 | `T8.5_LDPC_sum_product_BP.md` | 深度 | `ldpc/docs/L2_算法实现/T5.2_BP算法概率域推导.md` | 从因子分解和边缘化推导 probability-domain BP；再转到 LLR-domain BP；每个公式前说明回答的问题。 | 增加一个 3 VN/2 CN 小图手算一轮消息。 |
+| D3-03 | `T8.6_LDPC_MS_NMS_OMS.md` | 深度、工程 | `ldpc/docs/L2_算法实现/T5.4_最小和与改进变体.md` | 补 MS 为什么高估可靠度、NMS alpha、OMS beta、定点饱和、trapping set 与 error floor 风险。 | 补参数扫描模板，不写真实最优 alpha/beta。 |
+| D3-04 | `T8.7_layered_LDPC_decoding_schedule.md` | 深度、工程 | `ldpc/docs/L2_算法实现/T5.5_调度策略洪泛与分层.md` | 补 flooding、layered、shuffled 的对比；说明 layered 为什么收敛快、为什么需要 read-modify-write、为什么容易有 bank conflict。 | 增加调度时序图或 layer-major memory 图。 |
+| D4-01 | `T8.5_LDPC_sum_product_BP.md` | 缺失 | `ldpc/docs/L2_算法实现/T5.7_密度进化与译码阈值.md` | 增加 DE 作为 LDPC 收敛分析方法的入门段；用 BEC 简化递推说明阈值概念。 | 明确 DE/EXIT 不是 3GPP 协议结果。 |
+| D4-02 | `T17.3_NR_LDPC_float_sim_plan.md` | 工程 | `ldpc/docs/L2_算法实现/T9.1_密度进化与EXIT图仿真.md` | 增加 DE/EXIT 仿真模板、输入参数、输出文件、随机种子或确定性网格、证据标签。 | 无真实日志时标为模板。 |
+| D4-03 | `T20.2_protocol_vector_corner_case_suite.md` | 工程、缺失 | `ldpc/docs/L2_算法实现/T9.2_错误平层仿真与陷阱集搜索.md` | 补高 SNR failure dump、错误比特子图、trapping set 搜索、directed vector 生成方法。 | 增加 failure bundle schema。 |
 | D5-01 | `T9.1_NR_LDPC_rate_recovery_overview.md` | 深度、协议 | `LDPC_Basics/RateMatching_Detailed.md` | 补 rate matching 的三种基本操作：puncturing、shortening、repetition；明确接收端 LLR 初始化规则。 | 增加操作到 LLR 状态映射表。 |
 | D5-02 | `T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md` | 深度、协议 | `LDPC_Basics/RateMatching.md` | 补 `Ncb`、LBRM、`k0` 表、RV 起点和循环缓存地址空间；强调 `Ncb` 变小时 RV 覆盖区域变化。 | 必须有 NR LDPC circular buffer/RV 图。 |
 | D5-03 | `T9.4_NR_LDPC_bit_deinterleaving.md` | 突出、深度 | `LDPC_Basics/RateMatching_Detailed.md` | 补 bit interleaving 与 Qm、调制 bit-channel 不均衡的关系；说明接收端 deinterleaving 错误如何污染 LLR。 | 与 T2.3 回链，必要时增加高阶 QAM bit reliability 图。 |
@@ -146,11 +146,11 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 | 编号 | 当前章节 | 缺口类型 | 参考来源 | 具体补写动作 | 图表与验收 |
 |:---|:---|:---|:---|:---|:---|
-| H1-01 | `T11.1_Turbo_LDPC_Polar_algorithm_comparison.md` | 深度、图表 | `LDPC_Basics/LDPC.md`、`ldpc/docs/L2_协议算法_算法实现/T5.8_错误平层与陷阱集.md` | 加强三类码的历史、协议角色、图结构、译码算法、并行度、错误平层、硬件瓶颈对比。 | 现有比较图连线端点必须复检；表格字体不小于规则阈值。 |
+| H1-01 | `T11.1_Turbo_LDPC_Polar_algorithm_comparison.md` | 深度、图表 | `LDPC_Basics/LDPC.md`、`ldpc/docs/L2_算法实现/T5.8_错误平层与陷阱集.md` | 加强三类码的历史、协议角色、图结构、译码算法、并行度、错误平层、硬件瓶颈对比。 | 现有比较图连线端点必须复检；表格字体不小于规则阈值。 |
 | H1-02 | `T11.2_LTE_NR_rate_matching_comparison.md` | 深度、协议 | `LDPC_Basics/RateMatching_Detailed.md` | 补 LTE sub-block interleaver、NR LDPC `k0/Zc/Ncb`、Polar bit selection、LBRM、bit-channel interleaving 的对照。 | 表格与上方框图间距要足够；文本居中。 |
 | H1-03 | `T11.3_HARQ_soft_buffer_comparison.md` | 深度、工程 | `LDPC_Basics/RateMatching_Detailed.md` | 补 Chase vs IR-HARQ、same-bit LLR accumulation、soft buffer key、CBG 部分重传、定点饱和。 | 必须同时覆盖 LTE 和 NR。 |
-| F1-01 | `T17.2/T17.3/T17.4` | 工程 | `ldpc/docs/L2_协议算法_算法实现/T9.5_仿真阶段总结报告.md` | 三类译码器都补实验矩阵、seed、输出字段、失败 dump、曲线报告、无真实结果边界。 | 运行单篇深度和 LaTeX 审计。 |
-| F1-02 | `T18.1-T18.6` | 工程 | `ldpc/docs/L2_协议算法_算法实现/T7.3_定点仿真与量化分析.md` | 补位宽扫描模板、clip/scale/saturation 统计、BLER 损失预算、bit-exact mismatch 定位。 | 不写真实最优位宽；所有建议标为候选。 |
+| F1-01 | `T17.2/T17.3/T17.4` | 工程 | `ldpc/docs/L2_算法实现/T9.5_仿真阶段总结报告.md` | 三类译码器都补实验矩阵、seed、输出字段、失败 dump、曲线报告、无真实结果边界。 | 运行单篇深度和 LaTeX 审计。 |
+| F1-02 | `T18.1-T18.6` | 工程 | `ldpc/docs/L2_算法实现/T7.3_定点仿真与量化分析.md` | 补位宽扫描模板、clip/scale/saturation 统计、BLER 损失预算、bit-exact mismatch 定位。 | 不写真实最优位宽；所有建议标为候选。 |
 | F2-01 | `T19.1-T19.5` | 工程、图表 | `ldpc/docs/L3_硬件实现/T11.1_ASIC架构概述与选择.md`、`T11.3_分层NMS译码器微架构.md` | LTE Turbo、NR LDPC、NR Polar 都补硬件瓶颈：SISO、CNU/VNU、sorter、soft buffer、banking、DMA。 | 微架构图必须逐图复检箭头和文本框。 |
 | F2-02 | `T20.4_DC_synthesis_flow_decoders.md` | 工程、深度 | `ldpc/docs/L3_硬件实现/T19.2_Design_Compiler综合指南.md` | 补 DC Tcl 逐命令解释、库设置、analyze/elaborate/link、compile、report、网表/SDF/SDC 输出。 | 明确当前环境没有真实 DC 运行。 |
 | F2-03 | `T20.5_timing_closure_decoder_critical_paths.md` | 工程、深度 | `ldpc/docs/L3_硬件实现/T19.5_静态时序分析STA.md` | 补 setup/hold、多角、OCV/AOCV/POCV、report 字段、cell 级关键路径模板。 | 不声称真实 STA 收敛。 |
@@ -230,8 +230,8 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 影响章节：
 
-- `docs/L1/T1.1_GF2_binary_arithmetic_for_decoders.md`
-- `docs/L1/T1.3_GF2_vectors_matrices.md`
+- `docs/L1_基础/T1.1_GF2_binary_arithmetic_for_decoders.md`
+- `docs/L1_基础/T1.3_GF2_vectors_matrices.md`
 - `docs/L2_协议算法/T8.4_LDPC_Tanner_graph_message_passing.md`
 
 任务：
@@ -254,8 +254,8 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 影响章节：
 
-- `docs/L1/T1.4_probability_bayes_soft_decoding.md`
-- `docs/L1/T1.5_LLR_soft_decision.md`
+- `docs/L1_基础/T1.4_probability_bayes_soft_decoding.md`
+- `docs/L1_基础/T1.5_LLR_soft_decision.md`
 - `docs/L2_协议算法/T6.5_BCJR_MAP_decoding_intuition.md`
 - `docs/L2_协议算法/T8.5_LDPC_sum_product_BP.md`
 - `docs/L2_协议算法/T10.4_Polar_SC_decoding.md`
@@ -280,9 +280,9 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 影响章节：
 
-- `docs/L1/T2.7_AWGN_noise_scaling.md`
-- `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md`
-- `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md`
+- `docs/L1_基础/T2.7_AWGN_noise_scaling.md`
+- `docs/L1_基础/T2.8_BPSK_QPSK_soft_demapping.md`
+- `docs/L1_基础/T2.9_QAM_Max_Log_MAP_demapping.md`
 - `docs/L2_协议算法/T9.4_NR_LDPC_bit_deinterleaving.md`
 - `docs/L2_协议算法/T11.2_LTE_NR_rate_matching_comparison.md`
 
@@ -301,13 +301,13 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 参考来源：
 
 - `/home/yys/ClaudeCode/ldpc/docs/L1_理论基础/T1.4_信息论与信道容量.md`
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T5.8_错误平层与陷阱集.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T5.8_错误平层与陷阱集.md`
 
 影响章节：
 
-- `docs/L1/T1.6_information_theory_minimum_for_decoding.md`
-- `docs/L1/T4.5_decoder_performance_metrics.md`
-- `docs/L3/T17.5_BER_BLER_curve_reporting.md`
+- `docs/L1_基础/T1.6_information_theory_minimum_for_decoding.md`
+- `docs/L1_基础/T4.5_decoder_performance_metrics.md`
+- `docs/L3_工程实现/T17.5_BER_BLER_curve_reporting.md`
 - `docs/L2_协议算法/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md`
 
 任务：
@@ -426,7 +426,7 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 影响章节：
 
 - `docs/L2_协议算法/T8.3_NR_LDPC_lifting_QC_matrix.md`
-- `docs/L3/T19.2_NR_LDPC_RTL_microarchitecture.md`
+- `docs/L3_工程实现/T19.2_NR_LDPC_RTL_microarchitecture.md`
 
 任务：
 
@@ -443,11 +443,11 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 参考来源：
 
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T5.1_消息传递算法概述.md`
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T5.2_BP算法概率域推导.md`
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T5.3_BP算法对数域推导.md`
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T5.4_最小和与改进变体.md`
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T5.5_调度策略洪泛与分层.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T5.1_消息传递算法概述.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T5.2_BP算法概率域推导.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T5.3_BP算法对数域推导.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T5.4_最小和与改进变体.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T5.5_调度策略洪泛与分层.md`
 
 影响章节：
 
@@ -472,18 +472,18 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 参考来源：
 
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T5.7_密度进化与译码阈值.md`
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T5.8_错误平层与陷阱集.md`
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T9.1_密度进化与EXIT图仿真.md`
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T9.2_错误平层仿真与陷阱集搜索.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T5.7_密度进化与译码阈值.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T5.8_错误平层与陷阱集.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T9.1_密度进化与EXIT图仿真.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T9.2_错误平层仿真与陷阱集搜索.md`
 
 影响章节：
 
 - `docs/L2_协议算法/T8.5_LDPC_sum_product_BP.md`
 - `docs/L2_协议算法/T8.7_layered_LDPC_decoding_schedule.md`
 - `docs/L2_协议算法/T8.8_NR_LDPC_decoder_numeric_walkthrough.md`
-- `docs/L3/T17.3_NR_LDPC_float_sim_plan.md`
-- `docs/L3/T20.2_protocol_vector_corner_case_suite.md`
+- `docs/L3_工程实现/T17.3_NR_LDPC_float_sim_plan.md`
+- `docs/L3_工程实现/T20.2_protocol_vector_corner_case_suite.md`
 
 任务：
 
@@ -510,7 +510,7 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 - `docs/L2_协议算法/T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md`
 - `docs/L2_协议算法/T9.4_NR_LDPC_bit_deinterleaving.md`
 - `docs/L2_协议算法/T11.2_LTE_NR_rate_matching_comparison.md`
-- `docs/L3/T19.5_soft_buffer_HARQ_memory_architecture.md`
+- `docs/L3_工程实现/T19.5_soft_buffer_HARQ_memory_architecture.md`
 
 任务：
 
@@ -535,7 +535,7 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 影响章节：
 
-- `docs/L1/T3.5_NR_Polar_segmentation_crc.md`
+- `docs/L1_基础/T3.5_NR_Polar_segmentation_crc.md`
 - `docs/L2_协议算法/T10.1_NR_Polar_decoder_chain_overview.md`
 - `docs/L2_协议算法/T10.2_channel_polarization_frozen_bits.md`
 - `docs/L2_协议算法/T10.3_NR_Polar_reliability_sequence.md`
@@ -562,8 +562,8 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 - `docs/L2_协议算法/T10.4_Polar_SC_decoding.md`
 - `docs/L2_协议算法/T10.5_Polar_SCL_decoding.md`
 - `docs/L2_协议算法/T10.6_CRC_aided_SCL_control_reliability.md`
-- `docs/L3/T18.4_NR_Polar_fixed_point_model_plan.md`
-- `docs/L3/T19.3_NR_Polar_RTL_microarchitecture.md`
+- `docs/L3_工程实现/T18.4_NR_Polar_fixed_point_model_plan.md`
+- `docs/L3_工程实现/T19.3_NR_Polar_RTL_microarchitecture.md`
 
 任务：
 
@@ -604,19 +604,19 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 参考来源：
 
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T7.3_定点仿真与量化分析.md`
-- `/home/yys/ClaudeCode/ldpc/docs/L2_协议算法_算法实现/T9.5_仿真阶段总结报告.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T7.3_定点仿真与量化分析.md`
+- `/home/yys/ClaudeCode/ldpc/docs/L2_算法实现/T9.5_仿真阶段总结报告.md`
 
 影响章节：
 
-- `docs/L3/T17.2_LTE_Turbo_float_sim_plan.md`
-- `docs/L3/T17.3_NR_LDPC_float_sim_plan.md`
-- `docs/L3/T17.4_NR_Polar_float_sim_plan.md`
-- `docs/L3/T18.1_fixed_point_decoder_requirements.md`
-- `docs/L3/T18.2_LTE_Turbo_fixed_point_model_plan.md`
-- `docs/L3/T18.3_NR_LDPC_fixed_point_model_plan.md`
-- `docs/L3/T18.4_NR_Polar_fixed_point_model_plan.md`
-- `docs/L3/T18.6_bit_exact_regression_harness.md`
+- `docs/L3_工程实现/T17.2_LTE_Turbo_float_sim_plan.md`
+- `docs/L3_工程实现/T17.3_NR_LDPC_float_sim_plan.md`
+- `docs/L3_工程实现/T17.4_NR_Polar_float_sim_plan.md`
+- `docs/L3_工程实现/T18.1_fixed_point_decoder_requirements.md`
+- `docs/L3_工程实现/T18.2_LTE_Turbo_fixed_point_model_plan.md`
+- `docs/L3_工程实现/T18.3_NR_LDPC_fixed_point_model_plan.md`
+- `docs/L3_工程实现/T18.4_NR_Polar_fixed_point_model_plan.md`
+- `docs/L3_工程实现/T18.6_bit_exact_regression_harness.md`
 
 任务：
 
@@ -639,13 +639,13 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 影响章节：
 
-- `docs/L3/T19.1_LTE_Turbo_RTL_microarchitecture.md`
-- `docs/L3/T19.2_NR_LDPC_RTL_microarchitecture.md`
-- `docs/L3/T19.3_NR_Polar_RTL_microarchitecture.md`
-- `docs/L3/T19.4_unified_decoder_subsystem_architecture.md`
-- `docs/L3/T19.5_soft_buffer_HARQ_memory_architecture.md`
-- `docs/L3/T20.4_DC_synthesis_flow_decoders.md`
-- `docs/L3/T20.5_timing_closure_decoder_critical_paths.md`
+- `docs/L3_工程实现/T19.1_LTE_Turbo_RTL_microarchitecture.md`
+- `docs/L3_工程实现/T19.2_NR_LDPC_RTL_microarchitecture.md`
+- `docs/L3_工程实现/T19.3_NR_Polar_RTL_microarchitecture.md`
+- `docs/L3_工程实现/T19.4_unified_decoder_subsystem_architecture.md`
+- `docs/L3_工程实现/T19.5_soft_buffer_HARQ_memory_architecture.md`
+- `docs/L3_工程实现/T20.4_DC_synthesis_flow_decoders.md`
+- `docs/L3_工程实现/T20.5_timing_closure_decoder_critical_paths.md`
 
 任务：
 
@@ -669,10 +669,10 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 
 影响章节：
 
-- `docs/L3/T20.1_decoder_testbench_architecture.md`
-- `docs/L3/T20.3_coverage_regression_strategy.md`
-- `docs/L3/T20.4_DC_synthesis_flow_decoders.md`
-- `docs/L3/T20.6_final_decoder_verification_evidence_report.md`
+- `docs/L3_工程实现/T20.1_decoder_testbench_architecture.md`
+- `docs/L3_工程实现/T20.3_coverage_regression_strategy.md`
+- `docs/L3_工程实现/T20.4_DC_synthesis_flow_decoders.md`
+- `docs/L3_工程实现/T20.6_final_decoder_verification_evidence_report.md`
 
 任务：
 
@@ -696,10 +696,10 @@ source_spec: "docs/audits/lte_nr_depth_gap_backlog.md"
 验收命令：
 
 ```bash
-python3 tools/audit_lesson_terms.py docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md
-python3 tools/audit_markdown_headings.py docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md
-python3 tools/audit_lesson_depth.py --strict docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md
-python3 tools/audit_latex_render.py docs/L1/T*.md docs/L2_协议算法/T*.md docs/L3/T*.md
+python3 tools/audit_lesson_terms.py docs/L1_基础/T*.md docs/L2_协议算法/T*.md docs/L3_工程实现/T*.md
+python3 tools/audit_markdown_headings.py docs/L1_基础/T*.md docs/L2_协议算法/T*.md docs/L3_工程实现/T*.md
+python3 tools/audit_lesson_depth.py --strict docs/L1_基础/T*.md docs/L2_协议算法/T*.md docs/L3_工程实现/T*.md
+python3 tools/audit_latex_render.py docs/L1_基础/T*.md docs/L2_协议算法/T*.md docs/L3_工程实现/T*.md
 python3 tools/audit_figure_geometry.py tools/figures
 python3 tools/audit_figure_readability.py tools/figures
 PYTHONDONTWRITEBYTECODE=1 python3 -m py_compile tools/audit_figure_geometry.py tools/audit_figure_readability.py tests/test_audit_figure_geometry.py tools/figures/*.py
@@ -711,16 +711,16 @@ python3 -m unittest tests/test_audit_figure_geometry.py
 | 日期 | 项目 | 证据 |
 |:---|:---|:---|
 | 2026-06-21 | 建立 LTE/NR 深度缺口专项台账 | 新增 `docs/audits/lte_nr_depth_gap_backlog.md`；依据 `/home/yys/ClaudeCode/ldpc` 与 `/home/yys/ClaudeCode/LDPC_Basics` 的对比，将缺失、深度不足、突出不足、协议精读不足、图表不足和工程闭环不足拆为 A-G 七类任务；同步在 `合规与遵从.md` 增加 LTE/NR 双侧深度补齐规则。 |
-| 2026-06-21 | D1-D5 NR LDPC 主线补齐 | 修改 `docs/L2_协议算法/T8.1_NR_LDPC_decoder_chain_overview.md`、`docs/L2_协议算法/T8.2_NR_LDPC_base_graph_selection.md`、`docs/L2_协议算法/T8.3_NR_LDPC_lifting_QC_matrix.md`、`docs/L2_协议算法/T8.4_LDPC_Tanner_graph_message_passing.md`、`docs/L2_协议算法/T8.5_LDPC_sum_product_BP.md`、`docs/L2_协议算法/T8.6_LDPC_MS_NMS_OMS.md`、`docs/L2_协议算法/T8.7_layered_LDPC_decoding_schedule.md`、`docs/L2_协议算法/T9.1_NR_LDPC_rate_recovery_overview.md`、`docs/L2_协议算法/T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md`、`docs/L2_协议算法/T9.4_NR_LDPC_bit_deinterleaving.md`、`docs/L3/T20.2_protocol_vector_corner_case_suite.md`；新增/更新 `tools/figures/render_nr_ldpc_lifting_qc_matrix.py` 输出 `docs/L2_协议算法/assets/T8.3_NR_LDPC_BG_regions_QC_receiver.png`。覆盖 D1 术语和数据/控制链路边界，D2 BG 五区和 Raptor-like/QC 图，D3 BP/MS/layered 理论链，D4 DE/EXIT/BEC 和高 SNR failure dump，D5 mother code/LBRM/IR-HARQ/bit-channel/RM-deRM toy。D2/D4/D5 原影响章节中 `docs/L3/T19.2_NR_LDPC_RTL_microarchitecture.md`、`docs/L2_协议算法/T8.8_NR_LDPC_decoder_numeric_walkthrough.md`、`docs/L3/T17.3_NR_LDPC_float_sim_plan.md`、`docs/L2_协议算法/T9.2_NR_LDPC_circular_buffer_states.md`、`docs/L2_协议算法/T11.2_LTE_NR_rate_matching_comparison.md`、`docs/L3/T19.5_soft_buffer_HARQ_memory_architecture.md` 不在本轮用户负责文件范围内，未修改；本轮只在允许文件中补协议/算法/工程边界和 T20.2 failure schema。图片审计：`FIGURE_GEOMETRY_AUDIT_OK`、`FIGURE_READABILITY_AUDIT_OK`；最终文档审计输出见本轮执行日志。 |
+| 2026-06-21 | D1-D5 NR LDPC 主线补齐 | 修改 `docs/L2_协议算法/T8.1_NR_LDPC_decoder_chain_overview.md`、`docs/L2_协议算法/T8.2_NR_LDPC_base_graph_selection.md`、`docs/L2_协议算法/T8.3_NR_LDPC_lifting_QC_matrix.md`、`docs/L2_协议算法/T8.4_LDPC_Tanner_graph_message_passing.md`、`docs/L2_协议算法/T8.5_LDPC_sum_product_BP.md`、`docs/L2_协议算法/T8.6_LDPC_MS_NMS_OMS.md`、`docs/L2_协议算法/T8.7_layered_LDPC_decoding_schedule.md`、`docs/L2_协议算法/T9.1_NR_LDPC_rate_recovery_overview.md`、`docs/L2_协议算法/T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0.md`、`docs/L2_协议算法/T9.4_NR_LDPC_bit_deinterleaving.md`、`docs/L3_工程实现/T20.2_protocol_vector_corner_case_suite.md`；新增/更新 `tools/figures/render_nr_ldpc_lifting_qc_matrix.py` 输出 `docs/L2_协议算法/assets/T8.3_NR_LDPC_BG_regions_QC_receiver.png`。覆盖 D1 术语和数据/控制链路边界，D2 BG 五区和 Raptor-like/QC 图，D3 BP/MS/layered 理论链，D4 DE/EXIT/BEC 和高 SNR failure dump，D5 mother code/LBRM/IR-HARQ/bit-channel/RM-deRM toy。D2/D4/D5 原影响章节中 `docs/L3_工程实现/T19.2_NR_LDPC_RTL_microarchitecture.md`、`docs/L2_协议算法/T8.8_NR_LDPC_decoder_numeric_walkthrough.md`、`docs/L3_工程实现/T17.3_NR_LDPC_float_sim_plan.md`、`docs/L2_协议算法/T9.2_NR_LDPC_circular_buffer_states.md`、`docs/L2_协议算法/T11.2_LTE_NR_rate_matching_comparison.md`、`docs/L3_工程实现/T19.5_soft_buffer_HARQ_memory_architecture.md` 不在本轮用户负责文件范围内，未修改；本轮只在允许文件中补协议/算法/工程边界和 T20.2 failure schema。图片审计：`FIGURE_GEOMETRY_AUDIT_OK`、`FIGURE_READABILITY_AUDIT_OK`；最终文档审计输出见本轮执行日志。 |
 | 2026-06-21 | B 批次共同理论基础补齐 | 完成 B1-B4 中本批负责文件：`T1.1` 补信道编码需要 GF(2) 的二元约束动机；`T1.3` 补 G/H、行空间/零空间、系统形式、`GH^T=0` 与小型线性分组码闭环；`T1.4`/`T1.5` 补联合概率、条件独立、边缘化、MAP/ML、LLR 概率互转、LLR 加法和多观测合并；`T2.1`/`T2.3` 补实/复 AWGN 方差、`N0/2`、LLR scaling 诊断、QAM 能量归一化、Gray 映射、1024QAM 边界和 bit-channel 可靠性；`T1.6`/`T4.5`/`T17.5`/`T11.1` 补容量差距、编码增益、瀑布区、错误平层、统计成本和失败机制；`T6.5`/`T8.5`/`T10.4` 加概率底座回链。未修改未授权的 `T8.4`、`T9.4`、`T11.2`，因此其专属细项仍留给对应负责人。 |
-| 2026-06-21 | F1 L3 仿真/定点工程模板补齐 | 核对并保留 `docs/L3/T17.2_LTE_Turbo_float_sim_plan.md`、`T17.3_NR_LDPC_float_sim_plan.md`、`T17.4_NR_Polar_float_sim_plan.md` 的实验矩阵、输出字段、分层 seed、失败 dump/replay 和验收阈值；核对 `T18.1-T18.4` 的位宽扫描、clip/scale/saturation 统计、BLER 损失预算和 bit-exact mismatch 模板；所有章节均明确当前无真实 campaign 或最优位宽，只能作为模板/待生成证据。文档审计输出：`LESSON_TERM_AUDIT_OK`、`MARKDOWN_HEADING_AUDIT_OK`、`LESSON_DEPTH_AUDIT_OK`、`LATEX_RENDER_AUDIT_OK formulas=587`。 |
-| 2026-06-21 | F2 DC/STA/PPA/低功耗方法补齐 | 扩写 `docs/L3/T20.4_DC_synthesis_flow_decoders.md`：新增 DC Tcl 逐命令解释、report/write 输出边界、PPA 优化矩阵覆盖 CNU、sorter、SISO、memory、barrel shifter、banking、clock gating，并补 clock gating、operand isolation、SRAM sleep、Multi-Vt、DVFS、早停功耗模板；扩写 `docs/L3/T20.5_timing_closure_decoder_critical_paths.md`：新增 setup/hold、多角、OCV/AOCV/POCV、timing report 字段和 cell 级路径模板。明确当前无真实 DC/STA/PPA/功耗签核。 |
-| 2026-06-21 | F3 gate-level/Formality/最终报告边界补齐 | 扩写 `docs/L3/T20.6_final_decoder_verification_evidence_report.md`：新增最终设计报告与最终证据报告区分、gate-level simulation、SDF back-annotation、glitch、X propagation、timing check、Formality/等价验证流程、脚本骨架和失败分类；sign-off 状态继续保持 `hold`，直到真实 BLER、定点、RTL、coverage、DC/STA、gate/formal 证据生成。 |
-| 2026-06-21 | G 点名图片风险复核与库存更新 | 重生成 `docs/L3/assets/T17.1_golden_model_project_layout.png`、`T17.2_LTE_Turbo_float_sim_flow.png`、`T17.3_NR_LDPC_float_sim_flow.png`、`T17.4_NR_Polar_float_sim_flow.png`、`T17.5_BER_BLER_curve_reporting.png`、`T18.1_fixed_point_decoder_requirements.png`、`T18.2_LTE_Turbo_fixed_point_model.png`、`T18.3_NR_LDPC_fixed_point_model.png`、`T18.4_NR_Polar_fixed_point_model.png`、`T18.5_SIMD_memory_layout_decoders.png`、`T18.6_bit_exact_regression_harness.png`、`T19.4_unified_decoder_subsystem_architecture.png`，以及 `docs/L2_协议算法/assets/T10.4_NR_Polar_SC_N4_tree.png`、`T11.3_HARQ_soft_buffer_comparison.png`、`T11.5_decoder_selection_by_channel_type.png`、`T7.3_LTE_HARQ_RV_windows.png`；更新 `docs/audits/image_asset_inventory.md`，修正 T17.5 axis font 与 LTE HARQ ring index 均已为 24px。图形审计输出：相关脚本 `FIGURE_GEOMETRY_AUDIT_OK`、`FIGURE_READABILITY_AUDIT_OK`；`PYTHONDONTWRITEBYTECODE=1 python3 -m py_compile ...` 对相关脚本无输出且退出码 0。 |
+| 2026-06-21 | F1 L3 仿真/定点工程模板补齐 | 核对并保留 `docs/L3_工程实现/T17.2_LTE_Turbo_float_sim_plan.md`、`T17.3_NR_LDPC_float_sim_plan.md`、`T17.4_NR_Polar_float_sim_plan.md` 的实验矩阵、输出字段、分层 seed、失败 dump/replay 和验收阈值；核对 `T18.1-T18.4` 的位宽扫描、clip/scale/saturation 统计、BLER 损失预算和 bit-exact mismatch 模板；所有章节均明确当前无真实 campaign 或最优位宽，只能作为模板/待生成证据。文档审计输出：`LESSON_TERM_AUDIT_OK`、`MARKDOWN_HEADING_AUDIT_OK`、`LESSON_DEPTH_AUDIT_OK`、`LATEX_RENDER_AUDIT_OK formulas=587`。 |
+| 2026-06-21 | F2 DC/STA/PPA/低功耗方法补齐 | 扩写 `docs/L3_工程实现/T20.4_DC_synthesis_flow_decoders.md`：新增 DC Tcl 逐命令解释、report/write 输出边界、PPA 优化矩阵覆盖 CNU、sorter、SISO、memory、barrel shifter、banking、clock gating，并补 clock gating、operand isolation、SRAM sleep、Multi-Vt、DVFS、早停功耗模板；扩写 `docs/L3_工程实现/T20.5_timing_closure_decoder_critical_paths.md`：新增 setup/hold、多角、OCV/AOCV/POCV、timing report 字段和 cell 级路径模板。明确当前无真实 DC/STA/PPA/功耗签核。 |
+| 2026-06-21 | F3 gate-level/Formality/最终报告边界补齐 | 扩写 `docs/L3_工程实现/T20.6_final_decoder_verification_evidence_report.md`：新增最终设计报告与最终证据报告区分、gate-level simulation、SDF back-annotation、glitch、X propagation、timing check、Formality/等价验证流程、脚本骨架和失败分类；sign-off 状态继续保持 `hold`，直到真实 BLER、定点、RTL、coverage、DC/STA、gate/formal 证据生成。 |
+| 2026-06-21 | G 点名图片风险复核与库存更新 | 重生成 `docs/L3_工程实现/assets/T17.1_golden_model_project_layout.png`、`T17.2_LTE_Turbo_float_sim_flow.png`、`T17.3_NR_LDPC_float_sim_flow.png`、`T17.4_NR_Polar_float_sim_flow.png`、`T17.5_BER_BLER_curve_reporting.png`、`T18.1_fixed_point_decoder_requirements.png`、`T18.2_LTE_Turbo_fixed_point_model.png`、`T18.3_NR_LDPC_fixed_point_model.png`、`T18.4_NR_Polar_fixed_point_model.png`、`T18.5_SIMD_memory_layout_decoders.png`、`T18.6_bit_exact_regression_harness.png`、`T19.4_unified_decoder_subsystem_architecture.png`，以及 `docs/L2_协议算法/assets/T10.4_NR_Polar_SC_N4_tree.png`、`T11.3_HARQ_soft_buffer_comparison.png`、`T11.5_decoder_selection_by_channel_type.png`、`T7.3_LTE_HARQ_RV_windows.png`；更新 `docs/audits/image_asset_inventory.md`，修正 T17.5 axis font 与 LTE HARQ ring index 均已为 24px。图形审计输出：相关脚本 `FIGURE_GEOMETRY_AUDIT_OK`、`FIGURE_READABILITY_AUDIT_OK`；`PYTHONDONTWRITEBYTECODE=1 python3 -m py_compile ...` 对相关脚本无输出且退出码 0。 |
 | 2026-06-21 | C1-C3 LTE Turbo 主线补齐 | 修改 `docs/L2_协议算法/T6.1_LTE_Turbo_decoder_chain_overview.md`、`docs/L2_协议算法/T6.5_BCJR_MAP_decoding_intuition.md`、`docs/L2_协议算法/T6.6_Log_MAP_Max_Log_MAP_Turbo.md`、`docs/L2_协议算法/T6.7_Turbo_iteration_extrinsic_stopping.md`、`docs/L2_协议算法/T7.1_LTE_Turbo_de_rate_matching_overview.md`、`docs/L2_协议算法/T7.2_LTE_subblock_deinterleaver_circular_buffer.md`、`docs/L2_协议算法/T7.3_LTE_HARQ_soft_buffer_RV.md`、`docs/L2_协议算法/T7.6_LTE_Turbo_decoder_edge_cases.md`、`docs/L2_协议算法/T11.1_Turbo_LDPC_Polar_algorithm_comparison.md`、`docs/L2_协议算法/T11.2_LTE_NR_rate_matching_comparison.md`；覆盖 C1 历史/协议角色/NR 取代原因、C2 BCJR/Log-MAP/外信息理论链、C3 LTE rate recovery/HARQ/边界案例。协议证据使用本地 TS 36.212 `3GPP_Rel19/processed/TS_36.212_36212-j30`、TS 38.212 `3GPP_Rel19/processed/TS_38.212_38212-j30` 及既有 TS 36.213/36.321 HARQ/MAC 锚点；完成后按用户指定运行术语、标题、深度和 LaTeX 审计。 |
-| 2026-06-21 | E1-E3 NR Polar 主线补齐 | 覆盖 `docs/L2_协议算法/T10.1_NR_Polar_decoder_chain_overview.md`、`docs/L2_协议算法/T10.2_channel_polarization_frozen_bits.md`、`docs/L2_协议算法/T10.3_NR_Polar_reliability_sequence.md`、`docs/L2_协议算法/T10.4_Polar_SC_decoding.md`、`docs/L2_协议算法/T10.5_Polar_SCL_decoding.md`、`docs/L2_协议算法/T10.6_CRC_aided_SCL_control_reliability.md`、`docs/L2_协议算法/T10.7_NR_Polar_rate_recovery.md`、`docs/L2_协议算法/T10.8_NR_Polar_decoder_edge_cases.md`、`docs/L2_协议算法/T11.2_LTE_NR_rate_matching_comparison.md`、`docs/L3/T18.4_NR_Polar_fixed_point_model_plan.md`、`docs/L3/T19.3_NR_Polar_RTL_microarchitecture.md`。补齐控制信道角色与 LDPC 数据链路边界、`N=2` 到 `N=4` 极化解释、可靠性序列与 CRC/information/frozen 关系、SC/SCL/CA-SCL 推导、Polar rate recovery、small block 边界、PM 饱和、sorter、lazy copy 和 RTL 瓶颈；本轮重新运行术语、标题、深度和 LaTeX 审计。 |
-| 2026-06-21 | A1-A3 协议地图和系统级 descriptor 入口补齐 | 新增 `docs/L1/T0.1_LTE_NR_decoder_protocol_reading_map.md`、`docs/L2_协议算法/T8.0_TS38212_chapter5_decoder_side_map.md`、`docs/L2_协议算法/T9.0_TS38214_MCS_TBS_decoder_descriptor.md`；新增图片 `docs/L1/assets/T0.1_LTE_NR_decoder_protocol_reading_map.png` 和脚本 `tools/figures/render_t0_1_lte_nr_decoder_protocol_map.py`。覆盖 LTE/NR 双侧协议阅读地图、CRC/TB/CB/filler/Turbo/LDPC/Polar/rate matching/HARQ/MCS/TBS/soft buffer/descriptor/验证证据问题提纲、TS 38.212 Chapter 5 接收侧逆流程、small block 边界、TS 38.214 MCS/TBS 到 decoder descriptor、1024QAM Table 5.1.3.1-4 核验和 descriptor 字段分类。审计输出：`LESSON_TERM_AUDIT_OK`、`MARKDOWN_HEADING_AUDIT_OK`、`LESSON_DEPTH_AUDIT_OK`、`LATEX_RENDER_AUDIT_OK formulas=81`；图片审计输出：`FIGURE_GEOMETRY_AUDIT_OK`、`FIGURE_READABILITY_AUDIT_OK`。 |
+| 2026-06-21 | E1-E3 NR Polar 主线补齐 | 覆盖 `docs/L2_协议算法/T10.1_NR_Polar_decoder_chain_overview.md`、`docs/L2_协议算法/T10.2_channel_polarization_frozen_bits.md`、`docs/L2_协议算法/T10.3_NR_Polar_reliability_sequence.md`、`docs/L2_协议算法/T10.4_Polar_SC_decoding.md`、`docs/L2_协议算法/T10.5_Polar_SCL_decoding.md`、`docs/L2_协议算法/T10.6_CRC_aided_SCL_control_reliability.md`、`docs/L2_协议算法/T10.7_NR_Polar_rate_recovery.md`、`docs/L2_协议算法/T10.8_NR_Polar_decoder_edge_cases.md`、`docs/L2_协议算法/T11.2_LTE_NR_rate_matching_comparison.md`、`docs/L3_工程实现/T18.4_NR_Polar_fixed_point_model_plan.md`、`docs/L3_工程实现/T19.3_NR_Polar_RTL_microarchitecture.md`。补齐控制信道角色与 LDPC 数据链路边界、`N=2` 到 `N=4` 极化解释、可靠性序列与 CRC/information/frozen 关系、SC/SCL/CA-SCL 推导、Polar rate recovery、small block 边界、PM 饱和、sorter、lazy copy 和 RTL 瓶颈；本轮重新运行术语、标题、深度和 LaTeX 审计。 |
+| 2026-06-21 | A1-A3 协议地图和系统级 descriptor 入口补齐 | 新增 `docs/L1_基础/T0.1_LTE_NR_decoder_protocol_reading_map.md`、`docs/L2_协议算法/T8.0_TS38212_chapter5_decoder_side_map.md`、`docs/L2_协议算法/T9.0_TS38214_MCS_TBS_decoder_descriptor.md`；新增图片 `docs/L1_基础/assets/T0.1_LTE_NR_decoder_protocol_reading_map.png` 和脚本 `tools/figures/render_t0_1_lte_nr_decoder_protocol_map.py`。覆盖 LTE/NR 双侧协议阅读地图、CRC/TB/CB/filler/Turbo/LDPC/Polar/rate matching/HARQ/MCS/TBS/soft buffer/descriptor/验证证据问题提纲、TS 38.212 Chapter 5 接收侧逆流程、small block 边界、TS 38.214 MCS/TBS 到 decoder descriptor、1024QAM Table 5.1.3.1-4 核验和 descriptor 字段分类。审计输出：`LESSON_TERM_AUDIT_OK`、`MARKDOWN_HEADING_AUDIT_OK`、`LESSON_DEPTH_AUDIT_OK`、`LATEX_RENDER_AUDIT_OK formulas=81`；图片审计输出：`FIGURE_GEOMETRY_AUDIT_OK`、`FIGURE_READABILITY_AUDIT_OK`。 |
 | 2026-06-21 | B/D 交界遗留项补齐 | 扩写 `docs/L2_协议算法/T8.4_LDPC_Tanner_graph_message_passing.md`，新增稀疏矩阵存储、edge list、CSR、CSC、QC-LDPC `Zc` 局部地址和 bank conflict 关系；扩写 `docs/L2_协议算法/T11.2_LTE_NR_rate_matching_comparison.md`，补高阶 QAM bit-channel 不均衡与 NR LDPC `Qm` bit deinterleaving 的横向对比，并回链 `docs/L2_协议算法/T9.4_NR_LDPC_bit_deinterleaving.md`。同步修正 T8.4 公式编号顺序。审计输出：`LESSON_TERM_AUDIT_OK`、`MARKDOWN_HEADING_AUDIT_OK`、`LESSON_DEPTH_AUDIT_OK`、`LATEX_RENDER_AUDIT_OK formulas=400`。 |
-| 2026-06-21 | Depth backlog 全部任务关闭 | A-G 批次全部完成并回写。当前实物计数：`find docs/L1 docs/L2_协议算法 docs/L3 -maxdepth 1 -name 'T*.md' | wc -l` -> `94`，其中 L1 `28`、L2 `43`、L3 `23`；`find docs/L1/assets docs/L2_协议算法/assets docs/L3/assets -name '*.png' | wc -l` -> `61`；`find tools/figures -maxdepth 1 -name '*.py' | wc -l` -> `56`。G 项中难理解主题已有 Python 图或正文内图表承接：协议地图 `T0.1`，BG/QC 图 `T8.3`，IR-HARQ/RV/circular buffer `T7.3/T9.3`，Polar tree/list pruning `T10.2/T10.4/T10.5`，PPA/STA 路径 `T20.4/T20.5`，DE/EXIT/trapping set 在 `T8.5/T17.3/T20.2` 以方法/模板和 failure schema 承接，未伪造真实仿真结果。全项目审计：术语 `LESSON_TERM_AUDIT_OK`，标题 `MARKDOWN_HEADING_AUDIT_OK`，深度 `LESSON_DEPTH_AUDIT_OK`，LaTeX 分段全检通过：L1 `2036`、L2 `3444`、L3 `948`，合计 `6428`；图片几何/可读性 `FIGURE_GEOMETRY_AUDIT_OK`、`FIGURE_READABILITY_AUDIT_OK`；脚本 py_compile 退出码 0；`python3 -m unittest tests/test_audit_figure_geometry.py` -> `Ran 13 tests OK`；引用重建候选刷新为 `1320` 行，候选不是硬失败。 |
-| 2026-06-21 | 继续收尾：覆盖矩阵和图片资产清单一致性复核 | 复核 `docs/audits/prompt_coverage_matrix.md` 覆盖当前 94 个 `docs/L1/L2/L3/T*.md` 文件：`comm -23` 无缺失；反向多出的 21 项均为矩阵摘要中的通配符模式，不是具体讲义。当日图片清单仍采用后续已更正的旧计数口径；再次运行图片审计和脚本测试：`FIGURE_GEOMETRY_AUDIT_OK`、`FIGURE_READABILITY_AUDIT_OK`，py_compile 退出码 0，`python3 -m unittest tests/test_audit_figure_geometry.py` -> `Ran 13 tests OK`。 |
+| 2026-06-21 | Depth backlog 全部任务关闭 | A-G 批次全部完成并回写。当前实物计数：`find docs/L1_基础 docs/L2_协议算法 docs/L3_工程实现 -maxdepth 1 -name 'T*.md' | wc -l` -> `94`，其中 L1 `28`、L2 `43`、L3 `23`；`find docs/L1_基础/assets docs/L2_协议算法/assets docs/L3_工程实现/assets -name '*.png' | wc -l` -> `61`；`find tools/figures -maxdepth 1 -name '*.py' | wc -l` -> `56`。G 项中难理解主题已有 Python 图或正文内图表承接：协议地图 `T0.1`，BG/QC 图 `T8.3`，IR-HARQ/RV/circular buffer `T7.3/T9.3`，Polar tree/list pruning `T10.2/T10.4/T10.5`，PPA/STA 路径 `T20.4/T20.5`，DE/EXIT/trapping set 在 `T8.5/T17.3/T20.2` 以方法/模板和 failure schema 承接，未伪造真实仿真结果。全项目审计：术语 `LESSON_TERM_AUDIT_OK`，标题 `MARKDOWN_HEADING_AUDIT_OK`，深度 `LESSON_DEPTH_AUDIT_OK`，LaTeX 分段全检通过：L1 `2036`、L2 `3444`、L3 `948`，合计 `6428`；图片几何/可读性 `FIGURE_GEOMETRY_AUDIT_OK`、`FIGURE_READABILITY_AUDIT_OK`；脚本 py_compile 退出码 0；`python3 -m unittest tests/test_audit_figure_geometry.py` -> `Ran 13 tests OK`；引用重建候选刷新为 `1320` 行，候选不是硬失败。 |
+| 2026-06-21 | 继续收尾：覆盖矩阵和图片资产清单一致性复核 | 复核 `docs/audits/prompt_coverage_matrix.md` 覆盖当前 94 个 `docs/L1_基础/L2/L3/T*.md` 文件：`comm -23` 无缺失；反向多出的 21 项均为矩阵摘要中的通配符模式，不是具体讲义。当日图片清单仍采用后续已更正的旧计数口径；再次运行图片审计和脚本测试：`FIGURE_GEOMETRY_AUDIT_OK`、`FIGURE_READABILITY_AUDIT_OK`，py_compile 退出码 0，`python3 -m unittest tests/test_audit_figure_geometry.py` -> `Ran 13 tests OK`。 |
 | 2026-06-22 | 图片资产计数和一致性审计口径更正 | 后续 T8.3/T8.8 分片正文图暴露 2026-06-21 的 61/56 口径已过时。当前实物为 68 张 PNG、58 个 Python 文件（57 个 `render_*.py` 绘图脚本和 1 个 helper），正文 PNG 引用为 66 个、唯一正文引用 PNG 为 65 个，另有 3 个完整拼接/兼容图作为 evidence/compatibility 保留。新增 `tools/audit_project_image_inventory.py` 后输出 `PROJECT_IMAGE_INVENTORY_AUDIT_OK`，用于防止资产目录、正文引用、资产清单和迁移台账再次脱节；该审计不替代 68 张 PNG 原尺寸逐图目检。 |

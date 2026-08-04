@@ -18,7 +18,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DOC_ROOTS = [ROOT / "docs/L1", ROOT / "docs/L2_协议算法", ROOT / "docs/L3"]
+DOC_ROOTS = [ROOT / "docs/L1_基础", ROOT / "docs/L2_协议算法", ROOT / "docs/L3_工程实现"]
 IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+\.png)\)")
 SCRIPT_RE = re.compile(r"tools/figures/[\w./-]+\.py")
 MARKER_RE = re.compile(r"图片内容正文等价：(?:Mermaid 等价图|Markdown 等价表)")
@@ -400,7 +400,7 @@ def main() -> int:
         nargs="*",
         type=Path,
         default=DOC_ROOTS,
-        help="directories or files to process (default: docs/L1 docs/L2_协议算法 docs/L3)",
+        help="directories or files to process (default: docs/L1_基础 docs/L2_协议算法 docs/L3_工程实现)",
     )
     args = parser.parse_args()
 
@@ -428,7 +428,7 @@ def main() -> int:
 # @brief 通过 AST 解析渲染脚本刷新讲义中的 Python 图片正文等价块。
 # @usage python tools/refresh_python_figure_body_equivalents.py [--dry-run] [PATHS...]
 # @args --dry-run  仅打印变更摘要，不写入文件。
-# @args PATHS      要处理的目录或 .md 文件列表，默认 docs/L1 docs/L2_协议算法 docs/L3。
+# @args PATHS      要处理的目录或 .md 文件列表，默认 docs/L1_基础 docs/L2_协议算法 docs/L3_工程实现。
 # @exit_code 0 正常完成。
 if __name__ == "__main__":
     raise SystemExit(main())

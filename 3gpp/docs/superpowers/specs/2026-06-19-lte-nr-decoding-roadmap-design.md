@@ -246,7 +246,7 @@ Decoder-family coverage:
 | `编号` | T1.1 |
 | `前置` | None |
 | `Prompt` | Write a zero-basis Chinese article explaining finite field GF(2) for LTE/NR decoders. Cover XOR as addition, AND as multiplication, polynomial representation, why binary channel codes use GF(2), and how CRC and parity checks depend on these operations. Include plain-language intuition before symbols, truth tables, two hand-calculation examples, and a small Python verification snippet with fixed inputs. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T1.1_GF2_binary_arithmetic_for_decoders.md` |
+| `产出` | `docs/L1_基础/T1.1_GF2_binary_arithmetic_for_decoders.md` |
 | `验收` | Learner can hand-calculate GF(2) addition, multiplication, polynomial addition, and one polynomial division step used by CRC. |
 | `3GPP/证据` | Background task. Protocol linkage to TS 36.212 Rel-19 `36212-j30` §5.1.1 and TS 38.212 Rel-19 `38212-j30` §5.1 must be cited when motivating CRC, with local paths listed below. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -257,7 +257,7 @@ Decoder-family coverage:
 | `编号` | T1.2 |
 | `前置` | T1.1 |
 | `Prompt` | Explain GF(2) polynomial long division as the arithmetic core of cyclic redundancy check. Start from ordinary integer division analogy, then show why subtraction equals XOR in GF(2). Include one 8-bit message plus CRC-4 teaching example and one LTE/NR-motivated example that references CRC generator polynomials without reproducing unchecked Word formulas. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T1.2_GF2_polynomials_crc_remainders.md` |
+| `产出` | `docs/L1_基础/T1.2_GF2_polynomials_crc_remainders.md` |
 | `验收` | Learner can compute a short CRC remainder manually and explain why a zero syndrome indicates no detected error. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` §5.1.1; TS 38.212 Rel-19 `38212-j30` §5.1; local processed directories; formula details must be checked in raw artifacts before final reproduction. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -268,7 +268,7 @@ Decoder-family coverage:
 | `编号` | T1.3 |
 | `前置` | T1.1 |
 | `Prompt` | Teach vectors, matrices, transpose, multiplication, rank intuition, and sparse matrices over GF(2) for decoding. Use small parity-check examples and connect them to LDPC parity-check matrices. Include a 3-by-6 example, hand multiplication, and a Python check. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T1.3_GF2_vectors_matrices.md` |
+| `产出` | `docs/L1_基础/T1.3_GF2_vectors_matrices.md` |
 | `验收` | Learner can multiply a binary vector by a parity-check matrix and interpret a non-zero syndrome. |
 | `3GPP/证据` | Background task. Connect to TS 38.212 Rel-19 `38212-j30` §5.3.2, Table 5.3.2-1/2/3, local path `3GPP_Rel19/processed/TS_38.212_38212-j30`. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -279,7 +279,7 @@ Decoder-family coverage:
 | `编号` | T1.4 |
 | `前置` | None |
 | `Prompt` | Teach probability, conditional probability, prior probability, likelihood, posterior probability, evidence, and Bayes formula for a learner who has not studied probability. Use Chinese term first with English in parentheses. Tie the concepts to deciding whether a received noisy bit was 0 or 1. Include two numeric examples and no unsupported shortcut language. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T1.4_probability_bayes_soft_decoding.md` |
+| `产出` | `docs/L1_基础/T1.4_probability_bayes_soft_decoding.md` |
 | `验收` | Learner can calculate a simple posterior probability and explain what likelihood means in demapping. |
 | `3GPP/证据` | Background task. Cite TS 36.211 Rel-19 `36211-j30_*` / TS 38.211 Rel-19 `38211-j30` only as later soft-information source, exact modulation anchors `待核验`. Local evidence path(s): TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (exact part `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -290,7 +290,7 @@ Decoder-family coverage:
 | `编号` | T1.5 |
 | `前置` | T1.4 |
 | `Prompt` | Explain hard decision, soft decision, and log-likelihood ratio (LLR) from probability ratios. Derive the sign and magnitude meaning of LLR step by step. Show why decoders prefer LLR over raw probability, including numerical stability and addition of independent evidence. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T1.5_LLR_soft_decision.md` |
+| `产出` | `docs/L1_基础/T1.5_LLR_soft_decision.md` |
 | `验收` | Learner can convert probabilities to LLR and interpret positive, negative, zero, large, and saturated LLR values. |
 | `3GPP/证据` | Background task. Link to demapper outputs from TS 36.211 Rel-19 `36211-j30_*` / TS 38.211 Rel-19 `38211-j30` with exact anchors `待核验`. Local evidence path(s): TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (exact part `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -301,7 +301,7 @@ Decoder-family coverage:
 | `编号` | T1.6 |
 | `前置` | T1.4, T1.5 |
 | `Prompt` | Explain entropy, mutual information, channel capacity, code rate, coding gain, and why Turbo/LDPC/Polar codes matter. Keep this as a decoding-motivated minimum set rather than a full information theory course. Include a BSC example and an AWGN intuition example. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T1.6_information_theory_minimum_for_decoding.md` |
+| `产出` | `docs/L1_基础/T1.6_information_theory_minimum_for_decoding.md` |
 | `验收` | Learner can explain code rate, capacity intuition, and why iterative soft decoding improves reliability. |
 | `3GPP/证据` | Background task. Connect to LTE Turbo and NR LDPC/Polar channel coding usage in TS 36.212 Rel-19 `36212-j30` and TS 38.212 Rel-19 `38212-j30`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -314,7 +314,7 @@ Decoder-family coverage:
 | `编号` | T2.1 |
 | `前置` | T1.4, T1.5 |
 | `Prompt` | Explain additive white Gaussian noise (AWGN), Gaussian random variables, SNR, Eb/N0, Es/N0, code rate, modulation order, and noise variance scaling. Include derivation for BPSK LLR in AWGN and a reproducible Python simulation with seed. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T2.1_AWGN_noise_scaling.md` |
+| `产出` | `docs/L1_基础/T2.1_AWGN_noise_scaling.md` |
 | `验收` | Learner can compute noise variance for a given code rate, modulation order, and Eb/N0, and generate reproducible noisy BPSK samples. |
 | `3GPP/证据` | Background task. Modulation order linkage to TS 38.214 Rel-19 `38214-j30` §5.1.3/§6.1.4 and LTE equivalent anchors `待核验`. Local evidence path(s): TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`. |
 
@@ -325,7 +325,7 @@ Decoder-family coverage:
 | `编号` | T2.2 |
 | `前置` | T1.5, T2.1 |
 | `Prompt` | Teach BPSK and QPSK constellation mapping, Gray mapping, received sample model, exact LLR for BPSK, and bit-wise LLR for QPSK. Include diagrams in Mermaid where possible and a small numerical demapper example. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T2.2_BPSK_QPSK_soft_demapping.md` |
+| `产出` | `docs/L1_基础/T2.2_BPSK_QPSK_soft_demapping.md` |
 | `验收` | Learner can derive BPSK LLR and compute QPSK bit LLRs for one received symbol. |
 | `3GPP/证据` | TS 36.211 Rel-19 `36211-j30_*` modulation clauses `待核验`; TS 38.211 Rel-19 `38211-j30` modulation clauses `待核验`. Local evidence path(s): TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (exact part `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -336,7 +336,7 @@ Decoder-family coverage:
 | `编号` | T2.3 |
 | `前置` | T2.2 |
 | `Prompt` | Explain 16QAM, 64QAM, 256QAM bit mapping, exact bit LLR, and Max-Log-MAP approximation. Show why practical decoders use approximation and lookup/nearest-distance simplifications. Include one 16QAM worked example and one failure case where LLR sign is inverted. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T2.3_QAM_Max_Log_MAP_demapping.md` |
+| `产出` | `docs/L1_基础/T2.3_QAM_Max_Log_MAP_demapping.md` |
 | `验收` | Learner can compute approximate bit LLR for a 16QAM symbol and explain complexity growth for higher QAM. |
 | `3GPP/证据` | TS 38.214 Rel-19 `38214-j30` MCS modulation order sections §5.1.3/§6.1.4; TS 38.211 modulation clauses `待核验`; LTE anchors `待核验`. Local evidence path(s): TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -347,7 +347,7 @@ Decoder-family coverage:
 | `编号` | T2.4 |
 | `前置` | T2.1, T2.2 |
 | `Prompt` | Explain Rayleigh/Rician fading at decoder input level, channel equalization output, and how channel gain changes LLR reliability. Keep the focus on what the decoder sees: soft bits plus reliability. Include one single-tap fading example. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T2.4_fading_channel_LLR_reliability.md` |
+| `产出` | `docs/L1_基础/T2.4_fading_channel_LLR_reliability.md` |
 | `验收` | Learner can explain why equalized symbols with low channel gain should have smaller LLR magnitude. |
 | `3GPP/证据` | Background task. Link to physical channel and demodulation context in TS 36.211 Rel-19 `36211-j30_*` / TS 38.211 Rel-19 `38211-j30`, exact anchors `待核验`. Local evidence path(s): TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (exact part `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -358,7 +358,7 @@ Decoder-family coverage:
 | `编号` | T2.5 |
 | `前置` | T1.5, T2.1 |
 | `Prompt` | Introduce LLR clipping, scaling, quantization, saturation, and why fixed-point decoders cannot keep infinite precision. Include examples of overconfident LLR, under-scaled LLR, and sign error. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T2.5_LLR_clipping_scaling_quantization.md` |
+| `产出` | `docs/L1_基础/T2.5_LLR_clipping_scaling_quantization.md` |
 | `验收` | Learner can explain why LLR magnitude saturation changes decoder behavior and identify a likely LLR sign convention bug. |
 | `3GPP/证据` | No direct 3GPP citation required for the quantization concept. Downstream decoder-family articles must cite their own Rel-19 protocol evidence. |
 
@@ -371,7 +371,7 @@ Decoder-family coverage:
 | `编号` | T3.1 |
 | `前置` | T1.2 |
 | `Prompt` | Explain LTE/NR CRC families used in decoding, including CRC purpose, generator polynomial concept, TB CRC, CB CRC, and control-channel CRC. Do not reproduce polynomial formulas until raw artifacts are verified. Include a small executable CRC example. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T3.1_LTE_NR_CRC_families.md` |
+| `产出` | `docs/L1_基础/T3.1_LTE_NR_CRC_families.md` |
 | `验收` | Learner can distinguish TB CRC, CB CRC, and control CRC roles in decoder pass/fail decisions. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` §5.1.1, §5.2.2.1, §5.3.2.1; TS 38.212 Rel-19 `38212-j30` §5.1, §6.2.1, §7.2.1, §7.3.2; local paths listed below. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -382,7 +382,7 @@ Decoder-family coverage:
 | `编号` | T3.2 |
 | `前置` | T3.1 |
 | `Prompt` | Explain transport block, code block, segmentation, filler bits, and why large TBs are split before Turbo/LDPC decoding. Include LTE and NR side-by-side terminology and one small segmentation example. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T3.2_transport_code_block_filler_bits.md` |
+| `产出` | `docs/L1_基础/T3.2_transport_code_block_filler_bits.md` |
 | `验收` | Learner can explain why decoder works per code block but final pass/fail is per transport block. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` §5.1.2; TS 38.212 Rel-19 `38212-j30` §5.2.1/§5.2.2; local paths listed below. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -393,7 +393,7 @@ Decoder-family coverage:
 | `编号` | T3.3 |
 | `前置` | T3.1, T3.2 |
 | `Prompt` | Teach LTE Turbo-specific code block segmentation and code block CRC attachment from the receive-side perspective. Explain maximum code block size, filler bits, CB CRC, and how segmentation affects parallel decoding. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T3.3_LTE_Turbo_segmentation_rules.md` |
+| `产出` | `docs/L1_基础/T3.3_LTE_Turbo_segmentation_rules.md` |
 | `验收` | Learner can map one LTE TB size to code block count and identify where CB CRC is checked. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30`, §5.1.2, §5.2.2.2, §5.3.2.2; local path listed below. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`. |
 
@@ -404,7 +404,7 @@ Decoder-family coverage:
 | `编号` | T3.4 |
 | `前置` | T3.1, T3.2 |
 | `Prompt` | Explain NR LDPC code block segmentation, base-graph-dependent maximum block size, lifting-size interaction, and CB CRC. Include one example showing why base graph selection affects segmentation. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T3.4_NR_LDPC_segmentation_rules.md` |
+| `产出` | `docs/L1_基础/T3.4_NR_LDPC_segmentation_rules.md` |
 | `验收` | Learner can explain the relationship among TB size, code blocks, base graph, lifting size, and CB CRC. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30`, §5.2.2, §6.2.2, §6.2.3, §7.2.2, §7.2.3; local path listed below. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -415,7 +415,7 @@ Decoder-family coverage:
 | `编号` | T3.5 |
 | `前置` | T3.1, T3.2 |
 | `Prompt` | Explain NR Polar segmentation and CRC attachment for control information. Cover why control-channel payloads have different CRC and segmentation behavior than LDPC transport blocks. Include PUCCH/PUSCH UCI context and DCI context without expanding into a full control-channel course. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T3.5_NR_Polar_segmentation_crc.md` |
+| `产出` | `docs/L1_基础/T3.5_NR_Polar_segmentation_crc.md` |
 | `验收` | Learner can explain when Polar-coded control information gets CRC and how CRC supports SCL path selection. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.2.1, §6.3.1.2.1, §6.3.2.2.1, §7.3.2; local path listed below. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -428,7 +428,7 @@ Decoder-family coverage:
 | `编号` | T4.1 |
 | `前置` | T1.5 |
 | `Prompt` | Explain iterative decoding, intrinsic information, extrinsic information, and why Turbo and LDPC decoders refine beliefs over iterations. Use a simple two-check example and avoid assuming graph theory. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T4.1_iterative_decoding_extrinsic_information.md` |
+| `产出` | `docs/L1_基础/T4.1_iterative_decoding_extrinsic_information.md` |
 | `验收` | Learner can distinguish channel LLR, a priori information, extrinsic information, and posterior LLR. |
 | `3GPP/证据` | Algorithm background. Connect to LTE Turbo and NR LDPC tasks; no direct 3GPP formula claim. |
 
@@ -439,7 +439,7 @@ Decoder-family coverage:
 | `编号` | T4.2 |
 | `前置` | T1.3, T4.1 |
 | `Prompt` | Explain factor graph, Tanner graph, and trellis using decoder-friendly intuition. Contrast Turbo trellis-based decoding with LDPC graph-based decoding and Polar tree-based decoding. Include Mermaid diagrams. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T4.2_graphs_trellises_trees_for_decoding.md` |
+| `产出` | `docs/L1_基础/T4.2_graphs_trellises_trees_for_decoding.md` |
 | `验收` | Learner can identify which graphical model belongs to Turbo, LDPC, and Polar decoding. |
 | `3GPP/证据` | Algorithm background. Link to TS 36.212 Rel-19 `36212-j30` §5.1.3.2 Figure 5.1.3-2 and TS 38.212 Rel-19 `38212-j30` §5.3.2 Table 5.3.2-1/2/3. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -450,7 +450,7 @@ Decoder-family coverage:
 | `编号` | T4.3 |
 | `前置` | T1.5, T2.5 |
 | `Prompt` | Explain hybrid automatic repeat request (HARQ), redundancy version, soft buffer, Chase combining vs incremental redundancy intuition, and why decoder input accumulates LLRs across transmissions. Include one soft-combining numeric example. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T4.3_HARQ_soft_combining_basics.md` |
+| `产出` | `docs/L1_基础/T4.3_HARQ_soft_combining_basics.md` |
 | `验收` | Learner can explain why retransmission LLRs are added or placed into a circular-buffer-derived soft buffer. |
 | `3GPP/证据` | LTE TS 36.212 Rel-19 `36212-j30` §5.1.4.1 and TS 36.213 HARQ/RV anchors `待核验`; NR TS 38.212 Rel-19 `38212-j30` §5.4.2 and TS 38.214 Rel-19 `38214-j30` §5.1.3/§6.1.4/§5.1.7/§6.1.5. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`; TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 36.213 -> `3GPP_Rel19/processed/TS_36.213_*` (exact part `待核验`). |
 
@@ -461,7 +461,7 @@ Decoder-family coverage:
 | `编号` | T4.4 |
 | `前置` | T3.1, T4.1 |
 | `Prompt` | Explain decoder early stopping using parity checks and CRC checks. Compare Turbo CRC-gated stopping, LDPC syndrome/CRC stopping, and Polar CRC-aided list selection. Include failure case of false CRC pass probability as a qualitative risk. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T4.4_early_stopping_crc_gated_control.md` |
+| `产出` | `docs/L1_基础/T4.4_early_stopping_crc_gated_control.md` |
 | `验收` | Learner can design a high-level stop condition for Turbo, LDPC, and Polar decoders. |
 | `3GPP/证据` | CRC anchors from TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`; algorithmic stopping is implementation guidance unless directly cited. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -472,7 +472,7 @@ Decoder-family coverage:
 | `编号` | T4.5 |
 | `前置` | T1.6, T2.1 |
 | `Prompt` | Explain BER, BLER, FER, throughput, latency, iteration count, energy per bit, and area-throughput tradeoff. Include how to plot BLER vs Eb/N0 and how many frames are needed for confidence. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T4.5_decoder_performance_metrics.md` |
+| `产出` | `docs/L1_基础/T4.5_decoder_performance_metrics.md` |
 | `验收` | Learner can define BLER and explain why decoder studies usually focus on BLER for transport blocks. |
 | `3GPP/证据` | Engineering background. Link to transport block CRC pass/fail in TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -483,7 +483,7 @@ Decoder-family coverage:
 | `编号` | T4.6 |
 | `前置` | T3.2, T4.3 |
 | `Prompt` | Define common decoder interfaces: input LLR stream, code block metadata, redundancy version, HARQ process ID, output bits, CRC status, iteration count, and error flags. Include a neutral interface table usable for Turbo, LDPC, and Polar. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T4.6_decoder_interface_contracts.md` |
+| `产出` | `docs/L1_基础/T4.6_decoder_interface_contracts.md` |
 | `验收` | Learner can specify a decoder input/output contract independent of algorithm internals. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30` code block and rate matching anchors; TS 38.214/TS 36.213 HARQ/RV context. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`; TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 36.213 -> `3GPP_Rel19/processed/TS_36.213_*` (exact part `待核验`). |
 
@@ -496,7 +496,7 @@ Decoder-family coverage:
 | `编号` | T5.1 |
 | `前置` | T2.5 |
 | `Prompt` | Teach signed fixed-point representation, two's complement, integer/fraction split, saturation, rounding, and clipping for decoder LLR processing. Include Q-format examples and Python bit-level checks. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T5.1_fixed_point_numbers_for_LLR.md` |
+| `产出` | `docs/L1_基础/T5.1_fixed_point_numbers_for_LLR.md` |
 | `验收` | Learner can encode and decode signed fixed-point LLR values and explain saturation. |
 | `3GPP/证据` | No direct 3GPP citation required. The article must explicitly state this is an implementation foundation and point to downstream protocol tasks for normative evidence. |
 
@@ -507,7 +507,7 @@ Decoder-family coverage:
 | `编号` | T5.2 |
 | `前置` | T4.6 |
 | `Prompt` | Explain SRAM, register file, ping-pong buffer, circular buffer, memory banking, and bank conflict using decoder examples. Include Turbo interleaver memory, LDPC layered memory, and Polar path memory as previews. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T5.2_memory_banking_buffering_basics.md` |
+| `产出` | `docs/L1_基础/T5.2_memory_banking_buffering_basics.md` |
 | `验收` | Learner can explain why parallel decoders need banked memory and identify one bank conflict scenario. |
 | `3GPP/证据` | Engineering background plus protocol context: LTE circular-buffer rate matching from TS 36.212 Rel-19 `36212-j30` §5.1.4.1, local path `3GPP_Rel19/processed/TS_36.212_36212-j30`; NR LDPC rate matching context from TS 38.212 Rel-19 `38212-j30` §5.4.2 and NR Polar rate matching context from TS 38.212 Rel-19 `38212-j30` §5.4.1, local path `3GPP_Rel19/processed/TS_38.212_38212-j30`. Exact table/figure details remain `待核验` before reproduction. |
 
@@ -518,7 +518,7 @@ Decoder-family coverage:
 | `编号` | T5.3 |
 | `前置` | T4.5 |
 | `Prompt` | Explain decoder throughput, latency, initiation interval, clock frequency, parallelism, and iteration impact. Include formulas with defined symbols and examples for Turbo, LDPC, and Polar at a high level. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T5.3_throughput_latency_parallelism.md` |
+| `产出` | `docs/L1_基础/T5.3_throughput_latency_parallelism.md` |
 | `验收` | Learner can estimate bits per second from block size, cycles, iterations, and clock frequency. |
 | `3GPP/证据` | Engineering background. Connect to TS 38.214 Rel-19 `38214-j30` processing/HARQ context where relevant; exact anchors `待核验`. Local evidence path(s): TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`. |
 
@@ -529,7 +529,7 @@ Decoder-family coverage:
 | `编号` | T5.4 |
 | `前置` | T4.6 |
 | `Prompt` | Explain RTL module interfaces, valid/ready handshake, finite-state machine, reset strategy, and clock domain basics for decoder blocks. Use Mermaid `stateDiagram-v2` and SystemVerilog-style interface snippets. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T5.4_RTL_state_machine_handshake_basics.md` |
+| `产出` | `docs/L1_基础/T5.4_RTL_state_machine_handshake_basics.md` |
 | `验收` | Learner can draw a decoder controller FSM with idle, load, decode, check, output, and error states. |
 | `3GPP/证据` | No direct 3GPP citation required. The article must explicitly state this is an implementation foundation and point to downstream protocol tasks for normative evidence. |
 
@@ -540,7 +540,7 @@ Decoder-family coverage:
 | `编号` | T5.5 |
 | `前置` | T4.5, T5.1 |
 | `Prompt` | Teach golden model, bit-exact comparison, constrained random testing, corner cases, coverage, regression, and waveform debugging for decoders. Include how CRC pass/fail becomes an observable verification result. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L1/T5.5_decoder_hardware_verification_mindset.md` |
+| `产出` | `docs/L1_基础/T5.5_decoder_hardware_verification_mindset.md` |
 | `验收` | Learner can list a minimum verification plan for a code block decoder. |
 | `3GPP/证据` | Engineering background with CRC anchors from TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1020,7 +1020,7 @@ Decoder-family coverage:
 | `编号` | T17.1 |
 | `前置` | T4.6, T5.5 |
 | `Prompt` | Specify a Python golden-model project layout for LTE Turbo, NR LDPC, and NR Polar decoders. Include package structure, config files, vector files, random seeds, logging, and reproducible command examples. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T17.1_python_golden_model_project_layout.md` |
+| `产出` | `docs/L3_工程实现/T17.1_python_golden_model_project_layout.md` |
 | `验收` | Learner can scaffold a reproducible decoder simulation project. |
 | `3GPP/证据` | Engineering task; protocol vector generation later cites TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1031,7 +1031,7 @@ Decoder-family coverage:
 | `编号` | T17.2 |
 | `前置` | T6.7, T7.4, T17.1 |
 | `Prompt` | Define the LTE Turbo floating-point simulation plan: encoder reference, AWGN channel, de-rate matching, Log-MAP/Max-Log-MAP decoder, CRC checks, BLER curve, seed, outputs, and thresholds. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T17.2_LTE_Turbo_float_sim_plan.md` |
+| `产出` | `docs/L3_工程实现/T17.2_LTE_Turbo_float_sim_plan.md` |
 | `验收` | Learner can run or implement a plan that produces LTE Turbo BLER curves and decoder traces. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` §5.1.1-§5.1.4.1; TS 36.213 MCS/TBS anchors `待核验`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 36.213 -> `3GPP_Rel19/processed/TS_36.213_*` (exact part `待核验`). |
 
@@ -1042,7 +1042,7 @@ Decoder-family coverage:
 | `编号` | T17.3 |
 | `前置` | T8.8, T9.5, T17.1 |
 | `Prompt` | Define the NR LDPC floating-point simulation plan: base graph selection, lifting, rate matching/recovery, Min-Sum variants, CRC checks, BLER curves, seeds, outputs, and thresholds. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T17.3_NR_LDPC_float_sim_plan.md` |
+| `产出` | `docs/L3_工程实现/T17.3_NR_LDPC_float_sim_plan.md` |
 | `验收` | Learner can specify a reproducible NR LDPC BLER simulation and compare BP/MS/NMS/OMS. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.2.2/§5.3.2/§5.4.2/§6.2/§7.2; TS 38.214 Rel-19 `38214-j30` §5.1.3/§6.1.4. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`; TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`. |
 
@@ -1053,7 +1053,7 @@ Decoder-family coverage:
 | `编号` | T17.4 |
 | `前置` | T10.6, T10.7, T17.1 |
 | `Prompt` | Define the NR Polar floating-point simulation plan: reliability sequence, rate recovery, SC/SCL/CA-SCL decoder, list size sweep, CRC checks, latency proxy metrics, seeds, outputs, and thresholds. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T17.4_NR_Polar_float_sim_plan.md` |
+| `产出` | `docs/L3_工程实现/T17.4_NR_Polar_float_sim_plan.md` |
 | `验收` | Learner can specify a reproducible CA-SCL performance experiment with list-size comparison. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.2.1/§5.3.1/§5.4.1/§6.3/§7.3. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1064,7 +1064,7 @@ Decoder-family coverage:
 | `编号` | T17.5 |
 | `前置` | T17.2, T17.3, T17.4 |
 | `Prompt` | Teach how to generate, store, plot, and interpret BER/BLER curves. Include confidence limits, minimum frame count, early stopping criteria for simulations, CSV/PNG output naming, and failure diagnostics. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T17.5_BER_BLER_curve_reporting.md` |
+| `产出` | `docs/L3_工程实现/T17.5_BER_BLER_curve_reporting.md` |
 | `验收` | Learner can produce a report-ready BLER curve with reproducible seeds and metadata. |
 | `3GPP/证据` | Engineering task; transport block CRC anchors from TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1077,7 +1077,7 @@ Decoder-family coverage:
 | `编号` | T18.1 |
 | `前置` | T5.1, T17.1 |
 | `Prompt` | Define fixed-point decoder requirements: LLR width, internal message width, saturation rules, rounding, scaling, performance loss budget, and bit-exact comparison policy. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T18.1_fixed_point_decoder_requirements.md` |
+| `产出` | `docs/L3_工程实现/T18.1_fixed_point_decoder_requirements.md` |
 | `验收` | Learner can write fixed-point requirements for one decoder block and identify comparison tolerances. |
 | `3GPP/证据` | No direct 3GPP citation required for fixed-point methodology. Any protocol-specific fixed-point requirement must cite upstream Rel-19 evidence from T7, T9, T10, and related simulation/vector tasks. |
 
@@ -1088,7 +1088,7 @@ Decoder-family coverage:
 | `编号` | T18.2 |
 | `前置` | T6.6, T7.3, T18.1 |
 | `Prompt` | Plan a C/C++ fixed-point LTE Turbo decoder model: branch metrics, alpha/beta metrics, extrinsic scaling, interleaver addresses, saturation, max-log correction option, and bit-exact tests against Python. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T18.2_LTE_Turbo_fixed_point_model_plan.md` |
+| `产出` | `docs/L3_工程实现/T18.2_LTE_Turbo_fixed_point_model_plan.md` |
 | `验收` | Learner can specify C/C++ structures and tests for a fixed-point Turbo decoder. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` §5.1.3.2/§5.1.4.1; algorithm implementation evidence. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`. |
 
@@ -1099,7 +1099,7 @@ Decoder-family coverage:
 | `编号` | T18.3 |
 | `前置` | T8.6, T9.3, T18.1 |
 | `Prompt` | Plan a C/C++ fixed-point NR LDPC decoder model: LLR/message widths, min/second-min storage, normalization/offset, layered schedule, saturation, syndrome checks, and bit-exact tests. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T18.3_NR_LDPC_fixed_point_model_plan.md` |
+| `产出` | `docs/L3_工程实现/T18.3_NR_LDPC_fixed_point_model_plan.md` |
 | `验收` | Learner can define fixed-point NMS/OMS experiments and compare BLER loss to floating point. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.3.2/§5.4.2; algorithm implementation evidence. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1110,7 +1110,7 @@ Decoder-family coverage:
 | `编号` | T18.4 |
 | `前置` | T10.5, T10.6, T18.1 |
 | `Prompt` | Plan a C/C++ fixed-point NR Polar decoder model: f/g functions, path metric width, partial sums, list pruning, sorter effects, CRC-aided selection, and bit-exact tests. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T18.4_NR_Polar_fixed_point_model_plan.md` |
+| `产出` | `docs/L3_工程实现/T18.4_NR_Polar_fixed_point_model_plan.md` |
 | `验收` | Learner can specify fixed-point CA-SCL data structures and path metric saturation checks. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.3.1/§5.4.1; algorithm implementation evidence. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1121,7 +1121,7 @@ Decoder-family coverage:
 | `编号` | T18.5 |
 | `前置` | T18.2, T18.3, T18.4 |
 | `Prompt` | Explain C/C++ memory layout, alignment, SIMD-friendly arrays, cache locality, and vectorization opportunities for Turbo, LDPC, and Polar decoders. Include profiling plan and failure case of non-coalesced memory. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T18.5_SIMD_memory_layout_decoders.md` |
+| `产出` | `docs/L3_工程实现/T18.5_SIMD_memory_layout_decoders.md` |
 | `验收` | Learner can propose an array layout for one decoder and justify cache/SIMD behavior. |
 | `3GPP/证据` | No direct 3GPP citation required for this engineering method. The article must cite upstream protocol-vector tasks when it uses generated LTE/NR vectors. |
 
@@ -1132,7 +1132,7 @@ Decoder-family coverage:
 | `编号` | T18.6 |
 | `前置` | T18.2, T18.3, T18.4 |
 | `Prompt` | Design a bit-exact regression harness comparing Python floating/fixed reference, C/C++ fixed model, and later RTL outputs. Include vector format, metadata, seed tracking, tolerances, pass/fail policy, and CI command. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T18.6_bit_exact_regression_harness.md` |
+| `产出` | `docs/L3_工程实现/T18.6_bit_exact_regression_harness.md` |
 | `验收` | Learner can define a regression vector format and pass/fail policy for all three decoders. |
 | `3GPP/证据` | Engineering task; protocol vectors link to TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1145,7 +1145,7 @@ Decoder-family coverage:
 | `编号` | T19.1 |
 | `前置` | T5.2, T5.4, T18.2 |
 | `Prompt` | Design an LTE Turbo RTL microarchitecture: SISO datapath, alpha/beta memory, extrinsic memory, interleaver/deinterleaver address generator, ping-pong iteration control, CRC early stop, clock/reset strategy, and throughput estimate. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T19.1_LTE_Turbo_RTL_microarchitecture.md` |
+| `产出` | `docs/L3_工程实现/T19.1_LTE_Turbo_RTL_microarchitecture.md` |
 | `验收` | Learner can draw the Turbo decoder block diagram and FSM and estimate memory size. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` §5.1.3.2/§5.1.4.1; RTL design is implementation guidance. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`. |
 
@@ -1156,7 +1156,7 @@ Decoder-family coverage:
 | `编号` | T19.2 |
 | `前置` | T5.2, T5.4, T18.3 |
 | `Prompt` | Design an NR LDPC RTL microarchitecture: layered schedule controller, check-node units, variable-node update, min/second-min datapath, message memory, LLR memory, bank conflict handling, syndrome/CRC early stop, and throughput estimate. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T19.2_NR_LDPC_RTL_microarchitecture.md` |
+| `产出` | `docs/L3_工程实现/T19.2_NR_LDPC_RTL_microarchitecture.md` |
 | `验收` | Learner can draw a layered LDPC decoder architecture and identify memory banking constraints. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.3.2 table-driven QC structure; RTL design is implementation guidance. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1167,7 +1167,7 @@ Decoder-family coverage:
 | `编号` | T19.3 |
 | `前置` | T5.2, T5.4, T18.4 |
 | `Prompt` | Design an NR Polar RTL microarchitecture: SC/SCL tree traversal, LLR memory, partial-sum memory, path memory, path metric update, sorter/pruner, CRC checker, and low-latency control. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T19.3_NR_Polar_RTL_microarchitecture.md` |
+| `产出` | `docs/L3_工程实现/T19.3_NR_Polar_RTL_microarchitecture.md` |
 | `验收` | Learner can draw a CA-SCL decoder architecture and explain sorter bottleneck. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.3.1/§5.4.1; RTL design is implementation guidance. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1178,7 +1178,7 @@ Decoder-family coverage:
 | `编号` | T19.4 |
 | `前置` | T19.1, T19.2, T19.3 |
 | `Prompt` | Design a unified decoder subsystem containing Turbo, LDPC, and Polar engines, shared input/output DMA, soft buffer, configuration registers, interrupt/status, and error handling. Define clean boundaries so each engine remains independently testable. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T19.4_unified_decoder_subsystem_architecture.md` |
+| `产出` | `docs/L3_工程实现/T19.4_unified_decoder_subsystem_architecture.md` |
 | `验收` | Learner can define top-level registers and dataflow for a multi-decoder accelerator. |
 | `3GPP/证据` | Context evidence only, not a source for specific register-field claims until verified: LTE configuration inputs from TS 36.213 Rel-19 `36213-j30_*`, TS 36.321 Rel-19 `36321-j20`, TS 36.331 Rel-19 `36331-j21`; NR configuration inputs from TS 38.214 Rel-19 `38214-j30`, TS 38.321 Rel-19 `38321-j20`, TS 38.331 Rel-19 `38331-j20`. Local paths: `3GPP_Rel19/processed/TS_36.213_*` (`待核验` exact part), `3GPP_Rel19/processed/TS_36.321_36321-j20`, `3GPP_Rel19/processed/TS_36.331_36331-j21`, `3GPP_Rel19/processed/TS_38.214_38214-j30`, `3GPP_Rel19/processed/TS_38.321_38321-j20`, `3GPP_Rel19/processed/TS_38.331_38331-j20`. |
 
@@ -1189,7 +1189,7 @@ Decoder-family coverage:
 | `编号` | T19.5 |
 | `前置` | T7.3, T9.3, T19.4 |
 | `Prompt` | Design soft buffer and HARQ memory architecture: process ID, TB/CB/CBG indexing, RV placement, saturation, memory bank partition, eviction, and recovery after failed CRC. Include LTE and NR differences. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T19.5_soft_buffer_HARQ_memory_architecture.md` |
+| `产出` | `docs/L3_工程实现/T19.5_soft_buffer_HARQ_memory_architecture.md` |
 | `验收` | Learner can propose a soft-buffer address map for LTE Turbo and NR LDPC. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` §5.1.4.1; TS 38.212 Rel-19 `38212-j30` §5.4.2; TS 38.214 Rel-19 `38214-j30` §5.1.7/§6.1.5; TS 36.213 anchors `待核验`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`; TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 36.213 -> `3GPP_Rel19/processed/TS_36.213_*` (exact part `待核验`). |
 
@@ -1200,7 +1200,7 @@ Decoder-family coverage:
 | `编号` | T19.6 |
 | `前置` | T4.6, T19.4 |
 | `Prompt` | Define a decoder register map and configuration flow: algorithm select, block size, code rate, BG, Zc, RV, Qm, HARQ ID, list size, iteration limit, start/status/error interrupts. Trace which fields come from PHY/MAC/RRC. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T19.6_decoder_register_map_configuration_flow.md` |
+| `产出` | `docs/L3_工程实现/T19.6_decoder_register_map_configuration_flow.md` |
 | `验收` | Learner can map high-level protocol parameters to hardware registers. |
 | `3GPP/证据` | Context evidence only, not a source for specific register-field claims until verified: decoder algorithm parameters from TS 36.212 Rel-19 `36212-j30` and TS 38.212 Rel-19 `38212-j30`; scheduling/HARQ context from TS 36.213 Rel-19 `36213-j30_*` and TS 38.214 Rel-19 `38214-j30`; MAC/RRC configuration context from TS 36.321 Rel-19 `36321-j20`, TS 36.331 Rel-19 `36331-j21`, TS 38.321 Rel-19 `38321-j20`, TS 38.331 Rel-19 `38331-j20`. Exact RRC/MAC fields remain `待核验`. Local paths: `3GPP_Rel19/processed/TS_36.212_36212-j30`, `3GPP_Rel19/processed/TS_38.212_38212-j30`, `3GPP_Rel19/processed/TS_36.213_*` (`待核验` exact part), `3GPP_Rel19/processed/TS_38.214_38214-j30`, `3GPP_Rel19/processed/TS_36.321_36321-j20`, `3GPP_Rel19/processed/TS_36.331_36331-j21`, `3GPP_Rel19/processed/TS_38.321_38321-j20`, `3GPP_Rel19/processed/TS_38.331_38331-j20`. |
 
@@ -1213,7 +1213,7 @@ Decoder-family coverage:
 | `编号` | T20.1 |
 | `前置` | T18.6, T19.1-T19.3 |
 | `Prompt` | Design a SystemVerilog testbench architecture for Turbo, LDPC, and Polar decoder engines. Include driver, monitor, scoreboard, reference vector loader, assertions, reset tests, and timeout policy. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T20.1_decoder_testbench_architecture.md` |
+| `产出` | `docs/L3_工程实现/T20.1_decoder_testbench_architecture.md` |
 | `验收` | Learner can write a testbench plan that compares RTL output to golden vectors. |
 | `3GPP/证据` | No direct 3GPP citation required for testbench methodology. Generated vectors must cite upstream Rel-19 evidence from T7, T9, T10, and T20.2. |
 
@@ -1224,7 +1224,7 @@ Decoder-family coverage:
 | `编号` | T20.2 |
 | `前置` | T7.6, T9.6, T10.8, T18.6 |
 | `Prompt` | Define protocol vector and corner-case suite for LTE Turbo, NR LDPC, and NR Polar: minimum/maximum sizes, filler, CRC fail, RV mismatch, CBG, list-size stress, LLR saturation, and reset mid-operation. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T20.2_protocol_vector_corner_case_suite.md` |
+| `产出` | `docs/L3_工程实现/T20.2_protocol_vector_corner_case_suite.md` |
 | `验收` | Learner can list required directed tests for all three decoders and explain what each catches. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30` anchors for sizes/rate matching/CRC; exact corner tables must be verified. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1235,7 +1235,7 @@ Decoder-family coverage:
 | `编号` | T20.3 |
 | `前置` | T20.1, T20.2 |
 | `Prompt` | Define functional coverage, code coverage, regression tiers, random seeds, nightly runs, failure triage, and sign-off criteria for decoder verification. Include coverage points for algorithm family, block size, RV, Qm, CRC status, and reset. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T20.3_coverage_regression_strategy.md` |
+| `产出` | `docs/L3_工程实现/T20.3_coverage_regression_strategy.md` |
 | `验收` | Learner can define coverage bins and regression pass criteria for a decoder subsystem. |
 | `3GPP/证据` | No direct 3GPP citation required for coverage methodology. Coverage bins that depend on protocol parameters must reference upstream Rel-19 evidence from T7/T9/T10/T20.2. |
 
@@ -1246,7 +1246,7 @@ Decoder-family coverage:
 | `编号` | T20.4 |
 | `前置` | T19.1-T19.6 |
 | `Prompt` | Teach a Synopsys Design Compiler synthesis flow for decoder RTL: file list, clock constraints, reset assumptions, compile strategy, timing report, area report, power estimate, and common decoder critical paths. State tool availability limitations if DC is not installed. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T20.4_DC_synthesis_flow_decoders.md` |
+| `产出` | `docs/L3_工程实现/T20.4_DC_synthesis_flow_decoders.md` |
 | `验收` | Learner can prepare a DC script skeleton and interpret timing/area reports. |
 | `3GPP/证据` | No direct 3GPP citation required for this engineering method. The article must cite upstream protocol-vector tasks when it uses generated LTE/NR vectors. |
 
@@ -1257,7 +1257,7 @@ Decoder-family coverage:
 | `编号` | T20.5 |
 | `前置` | T20.4 |
 | `Prompt` | Explain timing closure for decoder RTL: critical path identification, LDPC check-node min tree, Polar sorter, Turbo ACS/metric update, pipelining, retiming, register duplication, and area/timing tradeoff. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T20.5_timing_closure_decoder_critical_paths.md` |
+| `产出` | `docs/L3_工程实现/T20.5_timing_closure_decoder_critical_paths.md` |
 | `验收` | Learner can diagnose one plausible timing violation and propose a pipeline or architecture fix. |
 | `3GPP/证据` | No direct 3GPP citation required for this engineering method. The article must cite upstream protocol-vector tasks when it uses generated LTE/NR vectors. |
 
@@ -1268,7 +1268,7 @@ Decoder-family coverage:
 | `编号` | T20.6 |
 | `前置` | T20.1-T20.5 |
 | `Prompt` | Define the final verification and evidence report format: protocol evidence table, simulation summary, fixed-point loss, RTL regression, coverage, synthesis timing/area/power, known limitations, and sign-off checklist. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T20.6_final_decoder_verification_evidence_report.md` |
+| `产出` | `docs/L3_工程实现/T20.6_final_decoder_verification_evidence_report.md` |
 | `验收` | Learner can assemble an audit-ready final report for LTE Turbo, NR LDPC, and NR Polar decoder work. |
 | `3GPP/证据` | Aggregates exact Rel-19 evidence from all protocol tasks. Final report must list concrete TS package names, sections, table/figure/formula anchors when applicable, and `3GPP_Rel19/processed/...` local paths rather than using aggregate wording. |
 
@@ -1283,7 +1283,7 @@ Required fields:
 | `编号` | Stable task identifier such as `T8.4` |
 | `前置` | Earlier task identifiers needed before this task |
 | `Prompt` | Detailed task-specific writing instruction plus the short binding sentence that points to `单节工程讲义统一骨架`. The full article skeleton must be written once globally, not repeated in every task card. |
-| `产出` | Markdown path under `docs/L1`, `docs/L2_协议算法`, or `docs/L3` |
+| `产出` | Markdown path under `docs/L1_基础`, `docs/L2_协议算法`, or `docs/L3_工程实现` |
 | `验收` | Concrete learning, simulation, or implementation acceptance criteria |
 | `3GPP/证据` | TS number, Rel-19 package, section, table/figure/formula when applicable, and local path. If an anchor is not verified, mark `待核验`; final publication is blocked until verified. |
 

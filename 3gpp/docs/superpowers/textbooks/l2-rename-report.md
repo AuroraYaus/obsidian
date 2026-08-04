@@ -32,5 +32,5 @@
 ## 注意事项（concerns）
 
 1. **`.obsidian/graph.json`（6 处）与 `.obsidian/workspace.json`（16 处）仍含旧路径**（如 `path:3gpp/docs/L2/T6.` 图谱查询、打开面板的文件路径）。这两个文件是 Obsidian 应用状态，按脚本范围（`3gpp/`）未改动，也未纳入本次提交；Obsidian 重新打开/刷新后会自愈或需手动更新查询。
-2. 本次提交按指令 `git add -A 3gpp/` 执行，**包含 1 处非本次任务的既有修改**：`3gpp/docs/L1/T2.0_OFDM_system_overview.md`（T2 系列文案补 OFDM 全称，与改名无关）。
-3. `regression_command_plan.md:43` 中 `docs/L1/L2/L3/assets` 为讲义层级简写（非真实路径，不包含 `docs/L2` 子串），保持原样未改。
+2. 本次提交按指令 `git add -A 3gpp/` 执行，**包含 1 处非本次任务的既有修改**：`3gpp/docs/L1_基础/T2.0_OFDM_system_overview.md`（T2 系列文案补 OFDM 全称，与改名无关）。
+3. `regression_command_plan.md:43` 中 `docs/L1_基础/L2/L3/assets` 为讲义层级简写（非真实路径，不包含 `docs/L2` 子串），保持原样未改。

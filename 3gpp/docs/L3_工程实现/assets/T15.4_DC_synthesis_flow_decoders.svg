@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T15.4_DC_synthesis_flow_decoders.svg
+  @brief   Design Compiler 综合流程（v2 手绘 SVG）：之字形五段流程（RTL 输入→DC 设置→SDC 约束→编译→报告）+ 风险检查与路径族表
+  @date    2026-08-04
+  @note    语义与 docs/L3_工程实现/T20.4_DC_synthesis_flow_decoders.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计。六项几何审计 + cairosvg 渲染验证通过。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="2480" viewBox="0 0 3000 2480" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T15.4_DC_synthesis_flow_decoders</title>
+  <defs>
+    <filter id="soft" x="-8%" y="-8%" width="120%" height="130%">      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A3B2A" flood-opacity="0.09"/>    </filter>
+    <marker id="m6E7A8C" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#6E7A8C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m94A3B8" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m6D4FBF" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#6D4FBF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m8A6B46" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#8A6B46" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m3F51C4" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#3F51C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m0E7A67" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#0E7A67" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="mB76E00" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#B76E00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="mB4405B" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#B4405B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m4A5A6A" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#4A5A6A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="3000" height="2480" fill="#FBF9F3"/>
+  <path d="M 88 56 l 9 9 l -9 9 l -9 -9 z" fill="#3F51C4" stroke="none"/>
+  <text class="title-main" x="116" y="68" font-size="40" font-weight="700" fill="#262B33">T15.4 Design Compiler Synthesis Flow for Decoders</text>
+  <text class="subtitle" x="116" y="108" font-size="20.5" fill="#5B6472">Synthesis turns RTL into a technology-mapped netlist, then reports timing, area, power and structural risks.</text>
+  <line x1="80" y1="130" x2="2920" y2="130" stroke="#D8D2C6" stroke-width="2"/>
+  <g class="card" id="c0">
+    <rect class="body" x="90" y="190" width="480" height="210" rx="12" fill="#FFFFFF" stroke="#3F51C4" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 102 190 H 558 Q 570 190 570 202 V 236 H 90 V 202 Q 90 190 102 190 Z" fill="#3F51C4" stroke="none"/>
+    <text class="title" x="330.0" y="220" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">RTL Inputs</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="330.0" y="291.0">filelist, top module, decoder family, libraries,</tspan>
+      <tspan x="330.0" y="317.0">memory wrappers and design parameters.</tspan>
+    </text>
+  </g>
+  <g class="card" id="c1">
+    <rect class="body" x="640" y="240" width="480" height="210" rx="12" fill="#FFFFFF" stroke="#0E7A67" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 652 240 H 1108 Q 1120 240 1120 252 V 286 H 640 V 252 Q 640 240 652 240 Z" fill="#0E7A67" stroke="none"/>
+    <text class="title" x="880.0" y="270" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">DC Setup</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="880.0" y="341.0">analyze, elaborate, link, uniquify, check_design</tspan>
+      <tspan x="880.0" y="367.0">and compile environment snapshot.</tspan>
+    </text>
+  </g>
+  <g class="card" id="c2">
+    <rect class="body" x="1190" y="190" width="480" height="210" rx="12" fill="#FFFFFF" stroke="#B76E00" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1202 190 H 1658 Q 1670 190 1670 202 V 236 H 1190 V 202 Q 1190 190 1202 190 Z" fill="#B76E00" stroke="none"/>
+    <text class="title" x="1430.0" y="220" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">SDC Constraints</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1430.0" y="291.0">clock, reset, input/output delay, false paths,</tspan>
+      <tspan x="1430.0" y="317.0">multicycle paths and load model.</tspan>
+    </text>
+  </g>
+  <g class="card" id="c3">
+    <rect class="body" x="1740" y="240" width="480" height="210" rx="12" fill="#FFFFFF" stroke="#6D4FBF" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1752 240 H 2208 Q 2220 240 2220 252 V 286 H 1740 V 252 Q 1740 240 1752 240 Z" fill="#6D4FBF" stroke="none"/>
+    <text class="title" x="1980.0" y="270" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Compile</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1980.0" y="341.0">compile or compile_ultra, mapping, optimization,</tspan>
+      <tspan x="1980.0" y="367.0">hierarchy policy and incremental compile.</tspan>
+    </text>
+  </g>
+  <g class="card" id="c4">
+    <rect class="body" x="2290" y="190" width="480" height="210" rx="12" fill="#FFFFFF" stroke="#B4405B" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 2302 190 H 2758 Q 2770 190 2770 202 V 236 H 2290 V 202 Q 2290 190 2302 190 Z" fill="#B4405B" stroke="none"/>
+    <text class="title" x="2530.0" y="220" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Reports</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="2530.0" y="291.0">timing, area, power, constraint violations,</tspan>
+      <tspan x="2530.0" y="317.0">unmapped cells, DRC and netlist handoff.</tspan>
+    </text>
+  </g>
+  <path class="link" data-src="c0" data-dst="c1" d="M 570.0 295.0 L 640.0 345.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="c1" data-dst="c2" d="M 1120.0 345.0 L 1190.0 295.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="c2" data-dst="c3" d="M 1670.0 295.0 L 1740.0 345.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="c3" data-dst="c4" d="M 2220.0 345.0 L 2290.0 295.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <g class="foot" id="band">
+    <rect class="body" x="140" y="560" width="2720" height="190" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <rect class="footbar" x="140" y="560" width="7" height="190" fill="#4A5A6A" stroke="none"/>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1500.0" y="663.5">Tool boundary: if dc_shell is not installed, only the script skeleton and report interpretation can be verified locally. Protocol vectors do not drive synthesis, but post-synthesis sanity and sign-off reports must link back to T15.1-T15.3 evidence.</tspan>
+    </text>
+  </g>
+  <g class="tbl" id="t1">
+    <rect class="tblouter" x="120" y="860" width="2760" height="524" rx="10" fill="#3F51C4" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <g class="cellg" id="t1_0_0" data-tbl="t1">
+      <rect class="cell" x="120" y="860" width="420" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="330.0" y="887.0">Artifact</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_1" data-tbl="t1">
+      <rect class="cell" x="540" y="860" width="760" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="920.0" y="887.0">Decoder-specific risk</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_2" data-tbl="t1">
+      <rect class="cell" x="1300" y="860" width="760" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="1680.0" y="887.0">DC check or report</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_3" data-tbl="t1">
+      <rect class="cell" x="2060" y="860" width="820" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="2470.0" y="887.0">Evidence to archive</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_0" data-tbl="t1">
+      <rect class="cell" x="120" y="904" width="420" height="120" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="330.0" y="969.0">filelist</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_1" data-tbl="t1">
+      <rect class="cell" x="540" y="904" width="760" height="120" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="920.0" y="969.0">missing engine file, duplicate package, wrong top</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_2" data-tbl="t1">
+      <rect class="cell" x="1300" y="904" width="760" height="120" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1680.0" y="969.0">analyze/elaborate/link/check_design</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_3" data-tbl="t1">
+      <rect class="cell" x="2060" y="904" width="820" height="120" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2470.0" y="969.0">filelist, top, git hash, log</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_0" data-tbl="t1">
+      <rect class="cell" x="120" y="1024" width="420" height="120" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="330.0" y="1089.0">clock/reset</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_1" data-tbl="t1">
+      <rect class="cell" x="540" y="1024" width="760" height="120" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="920.0" y="1089.0">async reset assumption, missing generated clock</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_2" data-tbl="t1">
+      <rect class="cell" x="1300" y="1024" width="760" height="120" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1680.0" y="1089.0">report_clock, report_timing, check_timing</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_3" data-tbl="t1">
+      <rect class="cell" x="2060" y="1024" width="820" height="120" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2470.0" y="1089.0">SDC, reset note, unconstrained paths</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_0" data-tbl="t1">
+      <rect class="cell" x="120" y="1144" width="420" height="120" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="330.0" y="1209.0">compile plan</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_1" data-tbl="t1">
+      <rect class="cell" x="540" y="1144" width="760" height="120" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="920.0" y="1209.0">flattening breaks debug, over-optimizing trace, memory wrapper mismatch</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_2" data-tbl="t1">
+      <rect class="cell" x="1300" y="1144" width="760" height="120" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1680.0" y="1209.0">compile log, report_qor, report_resources</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_3" data-tbl="t1">
+      <rect class="cell" x="2060" y="1144" width="820" height="120" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2470.0" y="1209.0">compile options and hierarchy policy</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_0" data-tbl="t1">
+      <rect class="cell" x="120" y="1264" width="420" height="120" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="330.0" y="1329.0">reports</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_1" data-tbl="t1">
+      <rect class="cell" x="540" y="1264" width="760" height="120" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="920.0" y="1329.0">negative slack, large area, high power, unmapped cells</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_2" data-tbl="t1">
+      <rect class="cell" x="1300" y="1264" width="760" height="120" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1680.0" y="1329.0">timing/area/power/constraint/DRC</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_3" data-tbl="t1">
+      <rect class="cell" x="2060" y="1264" width="820" height="120" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2470.0" y="1329.0">reports directory and issue triage</tspan>
+      </text>
+    </g>
+    <line x1="122" y1="1024" x2="2878" y2="1024" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="1144" x2="2878" y2="1144" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="1264" x2="2878" y2="1264" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="540" y1="906" x2="540" y2="1382" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="880" y1="906" x2="880" y2="1382" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="880" y1="906" x2="880" y2="1382" stroke="#E0DACA" stroke-width="1"/>
+  </g>
+  <g class="tbl" id="t2">
+    <rect class="tblouter" x="120" y="1460" width="2760" height="532" rx="10" fill="#3F51C4" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <g class="cellg" id="t2_0_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1460" width="380" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="310.0" y="1487.0">Path family</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_0_1" data-tbl="t2">
+      <rect class="cell" x="500" y="1460" width="880" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="940.0" y="1487.0">Likely critical logic</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_0_2" data-tbl="t2">
+      <rect class="cell" x="1380" y="1460" width="760" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="1760.0" y="1487.0">First action</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_0_3" data-tbl="t2">
+      <rect class="cell" x="2140" y="1460" width="740" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="2510.0" y="1487.0">Do not hide</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1504" width="380" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="310.0" y="1570.0">LTE Turbo</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_1" data-tbl="t2">
+      <rect class="cell" x="500" y="1504" width="880" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="940.0" y="1570.0">ACS/branch metric, alpha-beta recursion, interleaver address</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_2" data-tbl="t2">
+      <rect class="cell" x="1380" y="1504" width="760" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1760.0" y="1570.0">check max delay and pipeline candidates</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_3" data-tbl="t2">
+      <rect class="cell" x="2140" y="1504" width="740" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2510.0" y="1570.0">wrong K/f1/f2 or rate-recovery metadata</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1626" width="380" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="310.0" y="1692.0">NR LDPC</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_1" data-tbl="t2">
+      <rect class="cell" x="500" y="1626" width="880" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="940.0" y="1692.0">check-node min tree, layered message RAM mux, bank conflict logic</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_2" data-tbl="t2">
+      <rect class="cell" x="1380" y="1626" width="760" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1760.0" y="1692.0">separate combinational tree from memory path</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_3" data-tbl="t2">
+      <rect class="cell" x="2140" y="1626" width="740" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2510.0" y="1692.0">BG/Zc schedule or CBG control errors</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1748" width="380" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="310.0" y="1814.0">NR Polar</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_1" data-tbl="t2">
+      <rect class="cell" x="500" y="1748" width="880" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="940.0" y="1814.0">SCL sorter, path-metric update, lazy-copy mux, CRC selector</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_2" data-tbl="t2">
+      <rect class="cell" x="1380" y="1748" width="760" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1760.0" y="1814.0">inspect sorter depth and list-size scaling</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_3" data-tbl="t2">
+      <rect class="cell" x="2140" y="1748" width="740" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2510.0" y="1814.0">CRC/RNTI or frozen-mask mistakes</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1870" width="380" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="310.0" y="1936.0">Unified subsystem</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_1" data-tbl="t2">
+      <rect class="cell" x="500" y="1870" width="880" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="940.0" y="1936.0">dispatcher, soft-buffer key compare, DMA arbitration, IRQ/status fan-in</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_2" data-tbl="t2">
+      <rect class="cell" x="1380" y="1870" width="760" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1760.0" y="1936.0">split data path and control path reports</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_3" data-tbl="t2">
+      <rect class="cell" x="2140" y="1870" width="740" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2510.0" y="1936.0">reset/abort half-commit behavior</tspan>
+      </text>
+    </g>
+    <line x1="122" y1="1626" x2="2878" y2="1626" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="1748" x2="2878" y2="1748" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="1870" x2="2878" y2="1870" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="500" y1="1506" x2="500" y2="1990" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="1000" y1="1506" x2="1000" y2="1990" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="880" y1="1506" x2="880" y2="1990" stroke="#E0DACA" stroke-width="1"/>
+  </g>
+  <g class="foot" id="foot">
+    <rect class="body" x="120" y="2080" width="2760" height="320" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <rect class="footbar" x="120" y="2080" width="7" height="320" fill="#B76E00" stroke="none"/>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1500.0" y="2248.5">Read order: RTL inputs -&gt; DC setup -&gt; constraints -&gt; compile -&gt; reports -&gt; triage -&gt; verification handoff. A timing report is not a functional proof: failing or passing synthesis must be tied back to regression, coverage and known protocol-derived parameters.</tspan>
+    </text>
+  </g>
+</svg>

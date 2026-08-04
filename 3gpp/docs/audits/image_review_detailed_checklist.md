@@ -11,7 +11,7 @@ source_spec: "docs/audits/image_review_detailed_checklist.md"
 # 图片逐图审核详细清单
 
 审查时间：2026-06-20  
-适用范围：`docs/L1/assets/*.png`、`docs/L2_协议算法/assets/*.png`、`docs/L3/assets/*.png`、`tools/figures/*.py`，以及后续新增的 Python/PIL/Matplotlib/Mermaid 转图片资产。
+适用范围：`docs/L1_基础/assets/*.png`、`docs/L2_协议算法/assets/*.png`、`docs/L3_工程实现/assets/*.png`、`tools/figures/*.py`，以及后续新增的 Python/PIL/Matplotlib/Mermaid 转图片资产。
 
 ## 审核目标
 

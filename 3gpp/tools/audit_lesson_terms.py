@@ -21,7 +21,7 @@ from _md_utils import iter_markdown, line_for_offset, strip_code_fences
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-GLOSSARY_PATH = PROJECT_ROOT / "docs" / "L0" / "L0_terminology_glossary.md"
+GLOSSARY_PATH = PROJECT_ROOT / "docs" / "L0_协议阅读引导" / "L0_terminology_glossary.md"
 
 TECH_TERMS = {
     "3GPP": "第三代合作伙伴计划（3rd Generation Partnership Project, 3GPP）",

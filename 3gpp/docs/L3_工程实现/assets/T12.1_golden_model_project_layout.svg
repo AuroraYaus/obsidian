@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T12.1_golden_model_project_layout.svg
+  @brief   T12.1 黄金模型（Golden Model）项目布局图：从协议证据、配置模式、种子注册到
+           仿真运行、产物扇出（模型/向量/日志/归档）的完整工程流。
+  @date    2026-08-04
+  @note    本次重绘自定语义色（不沿用 PIL 脚本色系）：
+           protocol 钢蓝 / config 琥珀 / seed 翠绿 / runner 紫罗兰 / bus 石板灰 /
+           models 玫红 / vectors 青绿 / logs 橄榄绿 / archive 冷灰 / 说明框白底灰边。
+           布局为双栏重设计：左栏三输入纵向直连 -> 底部全宽 Runner -> Artifact Fanout 宽框
+           -> 四输出扇出（关于 Runner 中线对称）-> 读图顺序说明框。
+           内容（节点、文本、箭头关系、说明四行）与 docs/L3_工程实现/T17.1 讲义及原 PIL 图语义一致；
+           替代 docs/L3_工程实现/assets/T12.1_golden_model_project_layout.png。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1460" height="1380" viewBox="0 0 1460 1380" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T12.1 Python Golden Model Project Layout</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5B6B82"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 标题带 ============ -->
+  <rect x="40" y="18" width="1380" height="64" rx="10" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="730" y="42" font-size="20" font-weight="700" fill="#152033" text-anchor="middle">T12.1 Python Golden Model Project Layout</text>
+  <text x="730" y="68" font-size="12.5" fill="#455A64" text-anchor="middle">From 3GPP evidence and fixed seeds to reproducible decoder simulation artifacts</text>
+
+  <!-- ============ 左栏：三输入卡片（纵向直连） ============ -->
+  <!-- Protocol Evidence -->
+  <rect x="70" y="110" width="550" height="130" rx="10" fill="#D9E7F6" stroke="#2F5E94" stroke-width="1.5"/>
+  <rect x="84" y="124" width="12" height="12" rx="3" fill="#2F5E94"/>
+  <text x="106" y="138" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Protocol Evidence</text>
+  <line x1="84" y1="150" x2="600" y2="150" stroke="#2F5E94" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="176" font-size="12.5" fill="#263238" text-anchor="start">TS 36.212 and TS 38.212 sections, tables, formulas,</text>
+  <text x="106" y="200" font-size="12.5" fill="#263238" text-anchor="start">local paths, extraction notes.</text>
+
+  <!-- Config Schema -->
+  <rect x="70" y="280" width="550" height="130" rx="10" fill="#F8E8C8" stroke="#A8781E" stroke-width="1.5"/>
+  <rect x="84" y="294" width="12" height="12" rx="3" fill="#A8781E"/>
+  <text x="106" y="308" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Config Schema</text>
+  <line x1="84" y1="320" x2="600" y2="320" stroke="#A8781E" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="346" font-size="12.5" fill="#263238" text-anchor="start">family, channel, block length, CRC, rate matching,</text>
+  <text x="106" y="370" font-size="12.5" fill="#263238" text-anchor="start">HARQ/RV, algorithm knobs.</text>
+
+  <!-- Seed Registry -->
+  <rect x="70" y="450" width="550" height="130" rx="10" fill="#D3EBDD" stroke="#177A5A" stroke-width="1.5"/>
+  <rect x="84" y="464" width="12" height="12" rx="3" fill="#177A5A"/>
+  <text x="106" y="478" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Seed Registry</text>
+  <line x1="84" y1="490" x2="600" y2="490" stroke="#177A5A" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="516" font-size="12.5" fill="#263238" text-anchor="start">global seed, per-stage seed, vector id, rerun command,</text>
+  <text x="106" y="540" font-size="12.5" fill="#263238" text-anchor="start">deterministic failure replay.</text>
+
+  <!-- ============ Simulation Runner（全宽） ============ -->
+  <rect x="70" y="660" width="1320" height="130" rx="10" fill="#E3DCF2" stroke="#59419C" stroke-width="1.5"/>
+  <rect x="84" y="674" width="12" height="12" rx="3" fill="#59419C"/>
+  <text x="106" y="688" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Simulation Runner</text>
+  <line x1="84" y1="700" x2="1370" y2="700" stroke="#59419C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="726" font-size="12.5" fill="#263238" text-anchor="start">load config, build vectors, dispatch LTE Turbo / NR LDPC / NR Polar golden models,</text>
+  <text x="106" y="750" font-size="12.5" fill="#263238" text-anchor="start">collect metrics.</text>
+
+  <!-- ============ Artifact Fanout（宽聚合框） ============ -->
+  <rect x="70" y="850" width="1320" height="100" rx="10" fill="#D8E0E8" stroke="#3E4F63" stroke-width="1.5"/>
+  <rect x="84" y="864" width="12" height="12" rx="3" fill="#3E4F63"/>
+  <text x="106" y="878" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Artifact Fanout</text>
+  <line x1="84" y1="890" x2="1370" y2="890" stroke="#3E4F63" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="922" font-size="12.5" fill="#263238" text-anchor="start">one run produces model results, reusable vectors, metrics/logs, and a reproducible evidence package.</text>
+
+  <!-- ============ 第四行：四输出扇出（关于 x=730 对称） ============ -->
+  <!-- Golden Models -->
+  <rect x="90" y="1010" width="290" height="140" rx="10" fill="#F6DEE3" stroke="#A8425C" stroke-width="1.5"/>
+  <rect x="104" y="1024" width="12" height="12" rx="3" fill="#A8425C"/>
+  <text x="126" y="1038" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Golden Models</text>
+  <line x1="104" y1="1050" x2="360" y2="1050" stroke="#A8425C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="126" y="1076" font-size="12" fill="#263238" text-anchor="start">lte_turbo, nr_ldpc, nr_polar</text>
+  <text x="126" y="1100" font-size="12" fill="#263238" text-anchor="start">packages share descriptor,</text>
+  <text x="126" y="1124" font-size="12" fill="#263238" text-anchor="start">status, error, debug contracts.</text>
+
+  <!-- Vector Store -->
+  <rect x="420" y="1010" width="290" height="140" rx="10" fill="#CFE9E2" stroke="#15705C" stroke-width="1.5"/>
+  <rect x="434" y="1024" width="12" height="12" rx="3" fill="#15705C"/>
+  <text x="456" y="1038" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Vector Store</text>
+  <line x1="434" y1="1050" x2="690" y2="1050" stroke="#15705C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="456" y="1076" font-size="12" fill="#263238" text-anchor="start">input LLR, expected bits, protocol</text>
+  <text x="456" y="1100" font-size="12" fill="#263238" text-anchor="start">metadata, trace checkpoints,</text>
+  <text x="456" y="1124" font-size="12" fill="#263238" text-anchor="start">failure dumps.</text>
+
+  <!-- Metrics and Logs -->
+  <rect x="750" y="1010" width="290" height="140" rx="10" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+  <rect x="764" y="1024" width="12" height="12" rx="3" fill="#5E7A24"/>
+  <text x="786" y="1038" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Metrics and Logs</text>
+  <line x1="764" y1="1050" x2="1020" y2="1050" stroke="#5E7A24" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="786" y="1076" font-size="12" fill="#263238" text-anchor="start">BER/BLER, iteration count, CRC</text>
+  <text x="786" y="1100" font-size="12" fill="#263238" text-anchor="start">result, syndrome, path metric,</text>
+  <text x="786" y="1124" font-size="12" fill="#263238" text-anchor="start">timing proxy, CSV/JSONL.</text>
+
+  <!-- Evidence Archive -->
+  <rect x="1080" y="1010" width="290" height="140" rx="10" fill="#EDF1F5" stroke="#6B7A8A" stroke-width="1.5"/>
+  <rect x="1094" y="1024" width="12" height="12" rx="3" fill="#6B7A8A"/>
+  <text x="1116" y="1038" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Evidence Archive</text>
+  <line x1="1094" y1="1050" x2="1350" y2="1050" stroke="#6B7A8A" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1116" y="1076" font-size="12" fill="#263238" text-anchor="start">plots, CSV, configs, seeds, git</text>
+  <text x="1116" y="1100" font-size="12" fill="#263238" text-anchor="start">hash, command line, audit notes</text>
+  <text x="1116" y="1124" font-size="12" fill="#263238" text-anchor="start">for exact reproduction.</text>
+
+  <!-- ============ 说明框：Read Order and Engineering Checks ============ -->
+  <rect x="70" y="1205" width="1320" height="145" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="106" y="1231" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Read Order and Engineering Checks</text>
+  <line x1="84" y1="1243" x2="1370" y2="1243" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="1"/>
+  <g fill="#37474F">
+    <text x="106" y="1271" font-size="12.5" text-anchor="start">1. Protocol evidence and config schema define what the model is allowed to simulate.</text>
+    <text x="106" y="1295" font-size="12.5" text-anchor="start">2. Seed registry and runner make every failed frame replayable.</text>
+    <text x="106" y="1319" font-size="12.5" text-anchor="start">3. Vector store, logs and archive preserve enough evidence for bit-exact and RTL comparison later.</text>
+    <text x="106" y="1343" font-size="12.5" text-anchor="start">4. Flow arrows use edge midpoints; Artifact Fanout outputs are symmetric around the bottom midpoint.</text>
+  </g>
+
+  <!-- ============ 箭头（8 条，path 终点落在盒边上） ============ -->
+  <g stroke="#5B6B82" stroke-width="2" fill="none">
+    <path d="M 345 240 L 345 280" marker-end="url(#arrow)"/>
+    <path d="M 345 410 L 345 450" marker-end="url(#arrow)"/>
+    <path d="M 345 580 L 345 660" marker-end="url(#arrow)"/>
+    <path d="M 730 790 L 730 850" marker-end="url(#arrow)"/>
+    <path d="M 235 950 L 235 1010" marker-end="url(#arrow)"/>
+    <path d="M 565 950 L 565 1010" marker-end="url(#arrow)"/>
+    <path d="M 895 950 L 895 1010" marker-end="url(#arrow)"/>
+    <path d="M 1225 950 L 1225 1010" marker-end="url(#arrow)"/>
+  </g>
+</svg>

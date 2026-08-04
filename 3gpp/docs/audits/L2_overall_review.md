@@ -40,7 +40,7 @@ source_spec: "docs/audits/L2_overall_review.md"
 | 检查项 | 结果 |
 |:---|:---|
 | 图片脚本重生成 | `tools/figures/*.py` 共 32 个脚本全部运行成功。 |
-| PNG 边界检查 | 仅确认 `docs/L1/assets/*.png` 与 `docs/L2_协议算法/assets/*.png` 共 36 张 PNG 的 top/bottom/left/right 非白边界计数均为 0；该项不等于局部视觉审计通过。 |
+| PNG 边界检查 | 仅确认 `docs/L1_基础/assets/*.png` 与 `docs/L2_协议算法/assets/*.png` 共 36 张 PNG 的 top/bottom/left/right 非白边界计数均为 0；该项不等于局部视觉审计通过。 |
 | T11 新增图片 | T11.1-T11.5 五张图均重生成成功，边界检查通过；用户指出过的局部几何问题已修复并记录。 |
 | 全局视觉规则 | 规则已写入总纲、roadmap 和台账；这是后续逐图审计依据，不是 36 张图永久通过证明。 |
 | T6.3 底部说明框复修 | 用户指出 `T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.png` 底部“接收端读图顺序”说明框纵向布局不协调。已修复脚本为 bbox-based 分区居中布局，重新生成图片，边界检查 `IMAGE_EDGE_CHECK (1800, 1280) {'top': 0, 'bottom': 0, 'left': 0, 'right': 0}`。 |

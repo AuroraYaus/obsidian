@@ -20,7 +20,7 @@ from tools.audit_python_figure_body_equivalents import RETAINED_ASSET_RE, has_ma
 
 
 OUT = Path("docs/audits/python_figure_to_body_content_migration.md")
-DOC_ROOTS = [Path("docs/L1"), Path("docs/L2_协议算法"), Path("docs/L3")]
+DOC_ROOTS = [Path("docs/L1_基础"), Path("docs/L2_协议算法"), Path("docs/L3_工程实现")]
 IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+\.png)\)")
 SCRIPT_RE = re.compile(r"tools/figures/[\w./-]+\.py")
 EVIDENCE_STATUS_TOKENS = ("evidence_only", "compatibility_retained", "not_current_body_reference", "not_applicable")
@@ -72,7 +72,7 @@ def main() -> int:
     @brief 扫描所有讲义中的 PNG 图片引用，结合附近 40 行内是否存在等价标记，
            生成一张完整的图片到正文内容迁移总账表格。
     @return 0 表示生成成功（或干运行完毕）；非 0 表示内部逻辑异常（当前实现始终返回 0）。
-    @note 扫描 docs/L1、docs/L2_协议算法、docs/L3 下所有 .md 文件；
+    @note 扫描 docs/L1_基础、docs/L2_协议算法、docs/L3_工程实现 下所有 .md 文件；
           既存证据行通过 existing_evidence_rows() 保留合并，防止重复审核。
     """
     import argparse

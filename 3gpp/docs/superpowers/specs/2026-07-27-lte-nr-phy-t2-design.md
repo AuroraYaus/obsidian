@@ -16,7 +16,7 @@ source_spec: "docs/superpowers/specs/2026-07-27-lte-nr-phy-t2-design.md"
 | 项目 | 内容 |
 |:---|:---|
 | 设计日期 | 2026-07-27 |
-| 范围 | `docs/L1/` 中新增 6 篇 T2.x 前置讲义（LTE/NR 物理层时频资源系统背景 + MCS），现有 T2.1–T2.5 整体后移 +6 |
+| 范围 | `docs/L1_基础/` 中新增 6 篇 T2.x 前置讲义（LTE/NR 物理层时频资源系统背景 + MCS），现有 T2.1–T2.5 整体后移 +6 |
 | 参考源 | TS 38.211 §4（NR 物理信道与调制）、TS 36.211 §4/§6（LTE 帧结构与资源网格）、《5G移动通信系统设计与标准详解》（王映民 & 孙韶辉, 人民邮电出版社, 2020, `references/`）第 4 章 |
 | 优先级规则 | 与 TS 38.211/36.211 冲突时以协议为准，讲义中需标注差异 |
 | 风格 | 技术手册体，避免教学腔 |
@@ -39,21 +39,21 @@ source_spec: "docs/superpowers/specs/2026-07-27-lte-nr-phy-t2-design.md"
 
 | 文件 | 引用了 |
 |:---|:---|
-| `docs/L1/T1.4_probability_bayes_soft_decoding.md` | T2.2→T2.8, T2.3→T2.9 |
-| `docs/L1/T1.5_LLR_soft_decision.md` | T2.2→T2.8, T2.3→T2.9 |
-| `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md` | T2.1→T2.7 |
-| `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md` | T2.1→T2.7, T2.2→T2.8, T2.5→T2.11 |
-| `docs/L1/T2.10_fading_channel_LLR_reliability.md` | T2.1→T2.7, T2.2→T2.8, T2.3→T2.9 |
-| `docs/L1/T2.11_LLR_clipping_scaling_quantization.md` | T2.1→T2.7, T2.4→T2.10 |
-| `docs/L1/T3.4_NR_LDPC_segmentation_rules.md` | T2.5→T2.11 |
-| `docs/L1/T3.5_NR_Polar_segmentation_crc.md` | T2.5→T2.11 |
-| `docs/L1/T4.5_decoder_performance_metrics.md` | T2.1→T2.7 |
+| `docs/L1_基础/T1.4_probability_bayes_soft_decoding.md` | T2.2→T2.8, T2.3→T2.9 |
+| `docs/L1_基础/T1.5_LLR_soft_decision.md` | T2.2→T2.8, T2.3→T2.9 |
+| `docs/L1_基础/T2.8_BPSK_QPSK_soft_demapping.md` | T2.1→T2.7 |
+| `docs/L1_基础/T2.9_QAM_Max_Log_MAP_demapping.md` | T2.1→T2.7, T2.2→T2.8, T2.5→T2.11 |
+| `docs/L1_基础/T2.10_fading_channel_LLR_reliability.md` | T2.1→T2.7, T2.2→T2.8, T2.3→T2.9 |
+| `docs/L1_基础/T2.11_LLR_clipping_scaling_quantization.md` | T2.1→T2.7, T2.4→T2.10 |
+| `docs/L1_基础/T3.4_NR_LDPC_segmentation_rules.md` | T2.5→T2.11 |
+| `docs/L1_基础/T3.5_NR_Polar_segmentation_crc.md` | T2.5→T2.11 |
+| `docs/L1_基础/T4.5_decoder_performance_metrics.md` | T2.1→T2.7 |
 | `docs/L2_协议算法/T9.1_NR_LDPC_rate_recovery_overview.md` | T2.5→T2.11 |
 | `docs/L2_协议算法/T9.2_NR_LDPC_circular_buffer_states.md` | T2.5→T2.11 |
 | `docs/L2_协议算法/T9.4_NR_LDPC_bit_deinterleaving.md` | T2.2→T2.8, T2.3→T2.9, T2.5→T2.11 |
 | `docs/L2_协议算法/T10.7_NR_Polar_rate_recovery.md` | T2.5→T2.11 |
-| `docs/L3/T17.2_LTE_Turbo_float_sim_plan.md` | T2.2→T2.8 |
-| `docs/L3/T18.1_fixed_point_decoder_requirements.md` | T2.5→T2.11 |
+| `docs/L3_工程实现/T17.2_LTE_Turbo_float_sim_plan.md` | T2.2→T2.8 |
+| `docs/L3_工程实现/T18.1_fixed_point_decoder_requirements.md` | T2.5→T2.11 |
 
 ---
 

@@ -163,7 +163,7 @@ graph TD
 | `编号` | 稳定任务编号，例如 `T8.4`。 |
 | `前置` | 开始本任务前应完成的任务编号。 |
 | `Prompt` | 任务专属写作指令，并以短约束指向 `单节讲义弹性审计清单`。审计清单只在本文全局写一次，不在 91 张卡片内重复。 |
-| `产出` | 未来讲义 Markdown 路径，位于 `docs/L1`、`docs/L2_协议算法` 或 `docs/L3`。 |
+| `产出` | 未来讲义 Markdown 路径，位于 `docs/L1_基础`、`docs/L2_协议算法` 或 `docs/L3_工程实现`。 |
 | `验收` | 具体学习、仿真或实现验收标准。 |
 | `3GPP/证据` | TS 编号、Rel-19 包名、章节、表/图/公式号和本地路径；未核验锚点必须标记 `待核验`。 |
 
@@ -209,7 +209,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T1.1 |
 | **前置** | 无 |
 | **Prompt** | 请为通信新手讲解有限域 GF(2) 如何支撑 LTE/NR 译码器中的二元运算，覆盖异或加法、与乘法、多项式表示、二进制信道编码为什么依赖 GF(2)，以及 CRC 与奇偶校验如何使用这些运算。要求先给白话直觉，再给真值表、两个手算例子和一个固定输入的 Python 校验片段。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T1.1_GF2_binary_arithmetic_for_decoders.md` |
+| **产出** | `docs/L1_基础/T1.1_GF2_binary_arithmetic_for_decoders.md` |
 | **验收** | Learner can hand-calculate GF(2) addition, multiplication, polynomial addition, and one polynomial division step used by CRC. |
 | **3GPP/证据** | 背景任务。 Protocol linkage to TS 36.212 Rel-19 `36212-j30` §5.1.1 and TS 38.212 Rel-19 `38212-j30` §5.1 must be cited when motivating CRC, with 本地路径如下。 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -220,7 +220,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T1.2 |
 | **前置** | T1.1 |
 | **Prompt** | 请讲解 GF(2) 多项式长除法为什么是循环冗余校验（CRC）的算术核心，从普通整数除法类比开始，说明 GF(2) 中减法等于异或。包含一个 8 bit 消息加 CRC-4 的教学例子，以及一个只引用、暂不复现 LTE/NR CRC 生成多项式的协议动机例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T1.2_GF2_polynomials_crc_remainders.md` |
+| **产出** | `docs/L1_基础/T1.2_GF2_polynomials_crc_remainders.md` |
 | **验收** | Learner can compute a short CRC remainder manually and explain why a zero syndrome indicates no detected error. |
 | **3GPP/证据** | TS 36.212 Rel-19 `36212-j30` §5.1.1; TS 38.212 Rel-19 `38212-j30` §5.1; local processed directories; formula details 必须核验 in raw artifacts before final reproduction. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -231,7 +231,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T1.3 |
 | **前置** | T1.1 |
 | **Prompt** | 请讲解译码所需的 GF(2) 向量、矩阵、转置、乘法、秩的直觉和稀疏矩阵，用小型校验矩阵连接到 LDPC 奇偶校验矩阵。包含一个 3x6 矩阵例子、手算综合校验子和 Python 校验。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T1.3_GF2_vectors_matrices.md` |
+| **产出** | `docs/L1_基础/T1.3_GF2_vectors_matrices.md` |
 | **验收** | Learner can multiply a binary vector by a parity-check matrix and interpret a non-zero syndrome. |
 | **3GPP/证据** | 背景任务。 Connect to TS 38.212 Rel-19 `38212-j30` §5.3.2, Table 5.3.2-1/2/3, local path `3GPP_Rel19/processed/TS_38.212_38212-j30`. 本地证据路径： TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -242,7 +242,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T1.4 |
 | **前置** | 无 |
 | **Prompt** | 请面向没有概率论基础的学习者讲解概率、条件概率、先验概率、似然、后验概率、证据和贝叶斯公式，首次出现英文术语必须中文在前。用“收到一个有噪声的比特后判断它原来是 0 还是 1”的译码场景贯穿，给出两个数值例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T1.4_probability_bayes_soft_decoding.md` |
+| **产出** | `docs/L1_基础/T1.4_probability_bayes_soft_decoding.md` |
 | **验收** | Learner can calculate a simple posterior probability and explain what likelihood means in demapping. |
 | **3GPP/证据** | 背景任务。 Cite TS 36.211 Rel-19 `36211-j30_*` / TS 38.211 Rel-19 `38211-j30` only as later soft-information source, exact modulation anchors `待核验`. 本地证据路径： TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (精确分册 `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -253,7 +253,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T1.5 |
 | **前置** | T1.4 |
 | **Prompt** | 请从概率比值推导硬判决、软判决和对数似然比（LLR），逐步解释 LLR 的正负号和绝对值含义。说明译码器为什么使用 LLR 而不是原始概率，覆盖数值稳定性、独立证据相加和饱和值含义。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T1.5_LLR_soft_decision.md` |
+| **产出** | `docs/L1_基础/T1.5_LLR_soft_decision.md` |
 | **验收** | Learner can convert probabilities to LLR and interpret positive, negative, zero, large, and saturated LLR values. |
 | **3GPP/证据** | 背景任务。 Link to demapper outputs from TS 36.211 Rel-19 `36211-j30_*` / TS 38.211 Rel-19 `38211-j30` with 精确锚点 `待核验`. 本地证据路径： TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (精确分册 `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -264,7 +264,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T1.6 |
 | **前置** | T1.4, T1.5 |
 | **Prompt** | 请讲解译码必须掌握的信息论最小集：熵、互信息、信道容量、码率、编码增益，以及 Turbo/LDPC/Polar 为什么重要。控制范围，不写成完整信息论课程；包含一个二元对称信道（BSC）例子和一个 AWGN 直觉例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T1.6_information_theory_minimum_for_decoding.md` |
+| **产出** | `docs/L1_基础/T1.6_information_theory_minimum_for_decoding.md` |
 | **验收** | Learner can explain code rate, capacity intuition, and why iterative soft decoding improves reliability. |
 | **3GPP/证据** | 背景任务。 Connect to LTE Turbo and NR LDPC/Polar channel coding usage in TS 36.212 Rel-19 `36212-j30` and TS 38.212 Rel-19 `38212-j30`. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -279,7 +279,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T2.1 |
 | **前置** | T1.4, T1.5 |
 | **Prompt** | 请讲解加性白高斯噪声（AWGN）、高斯随机变量、SNR、Eb/N0、Es/N0、码率、调制阶数和噪声方差缩放。推导 BPSK 在 AWGN 下的 LLR，并给出固定随机种子的可复现实验。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T2.7_AWGN_noise_scaling.md` |
+| **产出** | `docs/L1_基础/T2.7_AWGN_noise_scaling.md` |
 | **验收** | Learner can compute noise variance for a given code rate, modulation order, and Eb/N0, and generate reproducible noisy BPSK samples. |
 | **3GPP/证据** | 背景任务。 Modulation order linkage to TS 38.214 Rel-19 `38214-j30` §5.1.3/§6.1.4 and LTE equivalent anchors `待核验`. 本地证据路径： TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`. |
 
@@ -290,7 +290,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T2.2 |
 | **前置** | T1.5, T2.1 |
 | **Prompt** | 请讲解 BPSK 和 QPSK 星座映射、Gray 映射、接收采样模型、BPSK 精确 LLR 和 QPSK 逐比特 LLR。包含可用 Mermaid 表达的星座/流程图和一个小型数值软解调例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T2.8_BPSK_QPSK_soft_demapping.md` |
+| **产出** | `docs/L1_基础/T2.8_BPSK_QPSK_soft_demapping.md` |
 | **验收** | Learner can derive BPSK LLR and compute QPSK bit LLRs for one received symbol. |
 | **3GPP/证据** | TS 36.211 Rel-19 `36211-j30_*` modulation clauses `待核验`; TS 38.211 Rel-19 `38211-j30` modulation clauses `待核验`. 本地证据路径： TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (精确分册 `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -301,7 +301,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T2.3 |
 | **前置** | T2.2 |
 | **Prompt** | 请讲解 16QAM、64QAM、256QAM 的比特映射、精确比特 LLR 与 Max-Log-MAP 近似，说明实际译码器为什么使用近似、查表或最近距离简化。包含一个 16QAM 手算例子和一个 LLR 符号反转失败案例。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T2.9_QAM_Max_Log_MAP_demapping.md` |
+| **产出** | `docs/L1_基础/T2.9_QAM_Max_Log_MAP_demapping.md` |
 | **验收** | Learner can compute approximate bit LLR for a 16QAM symbol and explain complexity growth for higher QAM. |
 | **3GPP/证据** | TS 38.214 Rel-19 `38214-j30` MCS modulation order sections §5.1.3/§6.1.4; TS 38.211 modulation clauses `待核验`; LTE anchors `待核验`. 本地证据路径： TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -312,7 +312,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T2.4 |
 | **前置** | T2.1, T2.2 |
 | **Prompt** | 请从译码器输入视角讲解 Rayleigh/Rician 衰落、均衡器输出和信道增益如何改变 LLR 可靠度。聚焦译码器看到的软比特与可靠度，不展开完整信道估计课程；包含一个单抽头衰落例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T2.10_fading_channel_LLR_reliability.md` |
+| **产出** | `docs/L1_基础/T2.10_fading_channel_LLR_reliability.md` |
 | **验收** | Learner can explain why equalized symbols with low channel gain should have smaller LLR magnitude. |
 | **3GPP/证据** | 背景任务。 Link to physical channel and demodulation context in TS 36.211 Rel-19 `36211-j30_*` / TS 38.211 Rel-19 `38211-j30`, 精确锚点 `待核验`. 本地证据路径： TS 36.211 -> `3GPP_Rel19/processed/TS_36.211_*` (精确分册 `待核验`); TS 38.211 -> `3GPP_Rel19/processed/TS_38.211_38211-j30`. |
 
@@ -323,7 +323,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T2.5 |
 | **前置** | T1.5, T2.1 |
 | **Prompt** | 请引入 LLR 裁剪、缩放、量化、饱和，以及定点译码器为什么不能保留无限精度。包含过度自信 LLR、缩放不足 LLR 和符号错误三个例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T2.11_LLR_clipping_scaling_quantization.md` |
+| **产出** | `docs/L1_基础/T2.11_LLR_clipping_scaling_quantization.md` |
 | **验收** | Learner can explain why LLR magnitude saturation changes decoder behavior and identify a likely LLR sign convention bug. |
 | **3GPP/证据** | 无需直接 3GPP 引用 for the quantization concept. Downstream decoder-family articles must cite their own Rel-19 protocol evidence. |
 
@@ -338,7 +338,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T3.1 |
 | **前置** | T1.2 |
 | **Prompt** | 请讲解 LTE/NR 译码中使用的 CRC 家族，包括 CRC 目的、生成多项式概念、传输块 CRC、码块 CRC 和控制信道 CRC。必须复现已经由本地制品核验的协议生成多项式；若某制式的多项式在当前抽取件中缺失，必须明确标成待核验并记录关闭条件，不能凭记忆补写。包含一个可执行的小型 CRC 例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T3.1_LTE_NR_CRC_families.md` |
+| **产出** | `docs/L1_基础/T3.1_LTE_NR_CRC_families.md` |
 | **验收** | Learner can distinguish TB CRC, CB CRC, and control CRC roles in decoder pass/fail decisions. |
 | **3GPP/证据** | TS 36.212 Rel-19 `36212-j30` §5.1.1, §5.2.2.1, §5.3.2.1; TS 38.212 Rel-19 `38212-j30` §5.1, §6.2.1, §7.2.1, §7.3.2; 本地路径如下。 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -349,7 +349,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T3.2 |
 | **前置** | T3.1 |
 | **Prompt** | 请讲解传输块、码块、分段、填充位，以及大传输块为什么要在 Turbo/LDPC 译码前拆成码块。并列说明 LTE 与 NR 术语，给出一个小型分段例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T3.2_transport_code_block_filler_bits.md` |
+| **产出** | `docs/L1_基础/T3.2_transport_code_block_filler_bits.md` |
 | **验收** | Learner can explain why decoder works per code block but final pass/fail is per transport block. |
 | **3GPP/证据** | TS 36.212 Rel-19 `36212-j30` §5.1.2; TS 38.212 Rel-19 `38212-j30` §5.2.1/§5.2.2; 本地路径如下。 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -360,7 +360,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T3.3 |
 | **前置** | T3.1, T3.2 |
 | **Prompt** | 请从接收侧视角讲解 LTE Turbo 专用码块分段和码块 CRC 附加，说明最大码块大小、填充位、CB CRC 以及分段如何影响并行译码。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T3.3_LTE_Turbo_segmentation_rules.md` |
+| **产出** | `docs/L1_基础/T3.3_LTE_Turbo_segmentation_rules.md` |
 | **验收** | Learner can map one LTE TB size to code block count and identify where CB CRC is checked. |
 | **3GPP/证据** | TS 36.212 Rel-19 `36212-j30`, §5.1.2, §5.2.2.2, §5.3.2.2; 本地路径如下。 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`. |
 
@@ -371,7 +371,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T3.4 |
 | **前置** | T3.1, T3.2 |
 | **Prompt** | 请讲解 NR LDPC 码块分段、基图相关最大块长、提升大小交互和 CB CRC。包含一个说明基图选择为什么影响分段的小例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T3.4_NR_LDPC_segmentation_rules.md` |
+| **产出** | `docs/L1_基础/T3.4_NR_LDPC_segmentation_rules.md` |
 | **验收** | Learner can explain the relationship among TB size, code blocks, base graph, lifting size, and CB CRC. |
 | **3GPP/证据** | TS 38.212 Rel-19 `38212-j30`, §5.2.2, §6.2.2, §6.2.3, §7.2.2, §7.2.3; 本地路径如下。 本地证据路径： TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -382,7 +382,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T3.5 |
 | **前置** | T3.1, T3.2 |
 | **Prompt** | 请讲解 NR Polar 控制信息的分段与 CRC 附加，说明控制信道负载为什么不同于 LDPC 传输块。覆盖 PUCCH/PUSCH UCI 和 DCI 背景，但不扩展成控制信道课程。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T3.5_NR_Polar_segmentation_crc.md` |
+| **产出** | `docs/L1_基础/T3.5_NR_Polar_segmentation_crc.md` |
 | **验收** | Learner can explain when Polar-coded control information gets CRC and how CRC supports SCL path selection. |
 | **3GPP/证据** | TS 38.212 Rel-19 `38212-j30` §5.2.1, §6.3.1.2.1, §6.3.2.2.1, §7.3.2; 本地路径如下。 本地证据路径： TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -397,7 +397,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T4.1 |
 | **前置** | T1.5 |
 | **Prompt** | 请讲解迭代译码、本征信息、外信息，以及 Turbo 和 LDPC 译码器为什么通过多次迭代修正置信度。使用一个两个校验关系的小例子，不默认学习者懂图论。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T4.1_iterative_decoding_extrinsic_information.md` |
+| **产出** | `docs/L1_基础/T4.1_iterative_decoding_extrinsic_information.md` |
 | **验收** | Learner can distinguish channel LLR, a priori information, extrinsic information, and posterior LLR. |
 | **3GPP/证据** | 算法背景。 Connect to LTE Turbo and NR LDPC tasks; no direct 3GPP formula claim. |
 
@@ -408,7 +408,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T4.2 |
 | **前置** | T1.3, T4.1 |
 | **Prompt** | 请用译码友好的直觉讲解因子图、Tanner 图和网格图，对比 Turbo 的网格译码、LDPC 的图译码和 Polar 的树译码。要求使用 Mermaid 图。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T4.2_graphs_trellises_trees_for_decoding.md` |
+| **产出** | `docs/L1_基础/T4.2_graphs_trellises_trees_for_decoding.md` |
 | **验收** | Learner can identify which graphical model belongs to Turbo, LDPC, and Polar decoding. |
 | **3GPP/证据** | 算法背景。 Link to TS 36.212 Rel-19 `36212-j30` §5.1.3.2 Figure 5.1.3-2 and TS 38.212 Rel-19 `38212-j30` §5.3.2 Table 5.3.2-1/2/3. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -419,7 +419,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T4.3 |
 | **前置** | T1.5, T2.5 |
 | **Prompt** | 请讲解混合自动重传请求（HARQ）、冗余版本、软缓存、Chase 合并与增量冗余直觉，以及为什么译码器输入会跨重传累积 LLR。包含一个软合并数值例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T4.3_HARQ_soft_combining_basics.md` |
+| **产出** | `docs/L1_基础/T4.3_HARQ_soft_combining_basics.md` |
 | **验收** | Learner can explain why retransmission LLRs are added or placed into a circular-buffer-derived soft buffer. |
 | **3GPP/证据** | LTE TS 36.212 Rel-19 `36212-j30` §5.1.4.1 and TS 36.213 HARQ/RV anchors `待核验`; NR TS 38.212 Rel-19 `38212-j30` §5.4.2 and TS 38.214 Rel-19 `38214-j30` §5.1.3/§6.1.4/§5.1.7/§6.1.5. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`; TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 36.213 -> `3GPP_Rel19/processed/TS_36.213_*` (精确分册 `待核验`). |
 
@@ -430,7 +430,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T4.4 |
 | **前置** | T3.1, T4.1 |
 | **Prompt** | 请讲解利用奇偶校验和 CRC 的译码早停控制，对比 Turbo 的 CRC 门控停止、LDPC 的 syndrome/CRC 停止和 Polar 的 CRC 辅助路径选择。包含 CRC 误通过风险的定性失败案例。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T4.4_early_stopping_crc_gated_control.md` |
+| **产出** | `docs/L1_基础/T4.4_early_stopping_crc_gated_control.md` |
 | **验收** | Learner can design a high-level stop condition for Turbo, LDPC, and Polar decoders. |
 | **3GPP/证据** | CRC anchors from TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`; algorithmic stopping is implementation guidance unless directly cited. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -441,7 +441,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T4.5 |
 | **前置** | T1.6, T2.1 |
 | **Prompt** | 请讲解 BER、BLER、FER、吞吐、延迟、迭代次数、每比特能耗和面积吞吐取舍。说明如何绘制 BLER vs Eb/N0 曲线，以及为置信度需要多少帧。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T4.5_decoder_performance_metrics.md` |
+| **产出** | `docs/L1_基础/T4.5_decoder_performance_metrics.md` |
 | **验收** | Learner can define BLER and explain why decoder studies usually focus on BLER for transport blocks. |
 | **3GPP/证据** | 工程背景。 Link to transport block CRC pass/fail in TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -452,7 +452,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T4.6 |
 | **前置** | T3.2, T4.3 |
 | **Prompt** | 请定义 Turbo、LDPC、Polar 可共用的译码器接口：输入 LLR 流、码块元数据、冗余版本、HARQ 进程 ID、输出比特、CRC 状态、迭代次数和错误标志。包含中立接口表。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T4.6_decoder_interface_contracts.md` |
+| **产出** | `docs/L1_基础/T4.6_decoder_interface_contracts.md` |
 | **验收** | Learner can specify a decoder input/output contract independent of algorithm internals. |
 | **3GPP/证据** | TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30` code block and rate matching anchors; TS 38.214/TS 36.213 HARQ/RV context. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`; TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 36.213 -> `3GPP_Rel19/processed/TS_36.213_*` (精确分册 `待核验`). |
 
@@ -467,7 +467,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T5.1 |
 | **前置** | T2.5 |
 | **Prompt** | 请讲解译码 LLR 处理中使用的有符号定点表示、二进制补码、整数/小数划分、饱和、舍入和裁剪。包含 Q 格式例子和 Python 位级检查。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T5.1_fixed_point_numbers_for_LLR.md` |
+| **产出** | `docs/L1_基础/T5.1_fixed_point_numbers_for_LLR.md` |
 | **验收** | Learner can encode and decode signed fixed-point LLR values and explain saturation. |
 | **3GPP/证据** | 无需直接 3GPP 引用. The article must explicitly state this is an implementation foundation and point to downstream protocol tasks for normative evidence. |
 
@@ -478,7 +478,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T5.2 |
 | **前置** | T4.6 |
 | **Prompt** | 请用译码器例子讲解 SRAM、寄存器文件、乒乓缓存、循环缓存、存储分 bank 和 bank 冲突。预览 Turbo 交织器存储、LDPC layered 存储和 Polar 路径存储。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T5.2_memory_banking_buffering_basics.md` |
+| **产出** | `docs/L1_基础/T5.2_memory_banking_buffering_basics.md` |
 | **验收** | Learner can explain why parallel decoders need banked memory and identify one bank conflict scenario. |
 | **3GPP/证据** | Engineering background plus protocol context: LTE circular-buffer rate matching from TS 36.212 Rel-19 `36212-j30` §5.1.4.1, local path `3GPP_Rel19/processed/TS_36.212_36212-j30`; NR LDPC rate matching context from TS 38.212 Rel-19 `38212-j30` §5.4.2 and NR Polar rate matching context from TS 38.212 Rel-19 `38212-j30` §5.4.1, local path `3GPP_Rel19/processed/TS_38.212_38212-j30`. Exact table/figure details remain `待核验` 复现前. |
 
@@ -489,7 +489,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T5.3 |
 | **前置** | T4.5 |
 | **Prompt** | 请讲解译码器吞吐、延迟、启动间隔、时钟频率、并行度和迭代次数影响。给出符号定义清楚的公式，并分别给出 Turbo、LDPC、Polar 的高层例子。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T5.3_throughput_latency_parallelism.md` |
+| **产出** | `docs/L1_基础/T5.3_throughput_latency_parallelism.md` |
 | **验收** | Learner can estimate bits per second from block size, cycles, iterations, and clock frequency. |
 | **3GPP/证据** | 工程背景。 Connect to TS 38.214 Rel-19 `38214-j30` processing/HARQ context where relevant; 精确锚点 `待核验`. 本地证据路径： TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`. |
 
@@ -500,7 +500,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T5.4 |
 | **前置** | T4.6 |
 | **Prompt** | 请讲解译码模块 RTL 接口、valid/ready 握手、有限状态机、复位方案和时钟域基础。使用 Mermaid stateDiagram-v2 和 SystemVerilog 风格接口片段。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T5.4_RTL_state_machine_handshake_basics.md` |
+| **产出** | `docs/L1_基础/T5.4_RTL_state_machine_handshake_basics.md` |
 | **验收** | Learner can draw a decoder controller FSM with idle, load, decode, check, output, and error states. |
 | **3GPP/证据** | 无需直接 3GPP 引用. The article must explicitly state this is an implementation foundation and point to downstream protocol tasks for normative evidence. |
 
@@ -511,7 +511,7 @@ GF(2)、矩阵、概率、贝叶斯、对数似然比和信息论最小集。
 | **编号** | T5.5 |
 | **前置** | T4.5, T5.1 |
 | **Prompt** | 请讲解译码器验证中的 golden model、bit-exact 对比、约束随机、边界案例、覆盖率、回归和波形调试，并说明 CRC 通过/失败如何成为可观察验证结果。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L1/T5.5_decoder_hardware_verification_mindset.md` |
+| **产出** | `docs/L1_基础/T5.5_decoder_hardware_verification_mindset.md` |
 | **验收** | Learner can list a minimum verification plan for a code block decoder. |
 | **3GPP/证据** | Engineering background with CRC anchors from TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1021,7 +1021,7 @@ Python/MATLAB golden model、BLER 曲线、随机种子、输出文件和阈值�
 | **编号** | T17.1 |
 | **前置** | T4.6, T5.5 |
 | **Prompt** | 请规定 LTE Turbo、NR LDPC、NR Polar Python golden model 的工程布局，包括包结构、配置文件、向量文件、随机种子、日志和可复现命令示例。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T17.1_python_golden_model_project_layout.md` |
+| **产出** | `docs/L3_工程实现/T17.1_python_golden_model_project_layout.md` |
 | **验收** | Learner can scaffold a reproducible decoder simulation project. |
 | **3GPP/证据** | 工程任务； protocol vector generation later cites TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1032,7 +1032,7 @@ Python/MATLAB golden model、BLER 曲线、随机种子、输出文件和阈值�
 | **编号** | T17.2 |
 | **前置** | T6.7, T7.4, T17.1 |
 | **Prompt** | 请定义 LTE Turbo 浮点仿真计划：编码器参考、AWGN 信道、解速率匹配、Log-MAP/Max-Log-MAP 译码、CRC 检查、BLER 曲线、随机种子、输出和阈值。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T17.2_LTE_Turbo_float_sim_plan.md` |
+| **产出** | `docs/L3_工程实现/T17.2_LTE_Turbo_float_sim_plan.md` |
 | **验收** | Learner can run or implement a plan that produces LTE Turbo BLER curves and decoder traces. |
 | **3GPP/证据** | TS 36.212 Rel-19 `36212-j30` §5.1.1-§5.1.4.1; TS 36.213 MCS/TBS anchors `待核验`. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 36.213 -> `3GPP_Rel19/processed/TS_36.213_*` (精确分册 `待核验`). |
 
@@ -1043,7 +1043,7 @@ Python/MATLAB golden model、BLER 曲线、随机种子、输出文件和阈值�
 | **编号** | T17.3 |
 | **前置** | T8.8, T9.5, T17.1 |
 | **Prompt** | 请定义 NR LDPC 浮点仿真计划：基图选择、提升、速率匹配/恢复、Min-Sum 变体、CRC 检查、BLER 曲线、随机种子、输出和阈值。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T17.3_NR_LDPC_float_sim_plan.md` |
+| **产出** | `docs/L3_工程实现/T17.3_NR_LDPC_float_sim_plan.md` |
 | **验收** | Learner can specify a reproducible NR LDPC BLER simulation and compare BP/MS/NMS/OMS. |
 | **3GPP/证据** | TS 38.212 Rel-19 `38212-j30` §5.2.2/§5.3.2/§5.4.2/§6.2/§7.2; TS 38.214 Rel-19 `38214-j30` §5.1.3/§6.1.4. 本地证据路径： TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`; TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`. |
 
@@ -1054,7 +1054,7 @@ Python/MATLAB golden model、BLER 曲线、随机种子、输出文件和阈值�
 | **编号** | T17.4 |
 | **前置** | T10.6, T10.7, T17.1 |
 | **Prompt** | 请定义 NR Polar 浮点仿真计划：可靠性序列、速率恢复、SC/SCL/CA-SCL、列表大小扫描、CRC 检查、延迟代理指标、随机种子、输出和阈值。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T17.4_NR_Polar_float_sim_plan.md` |
+| **产出** | `docs/L3_工程实现/T17.4_NR_Polar_float_sim_plan.md` |
 | **验收** | Learner can specify a reproducible CA-SCL performance experiment with list-size comparison. |
 | **3GPP/证据** | TS 38.212 Rel-19 `38212-j30` §5.2.1/§5.3.1/§5.4.1/§6.3/§7.3. 本地证据路径： TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1065,7 +1065,7 @@ Python/MATLAB golden model、BLER 曲线、随机种子、输出文件和阈值�
 | **编号** | T17.5 |
 | **前置** | T17.2, T17.3, T17.4 |
 | **Prompt** | 请讲解如何生成、保存、绘制和解读 BER/BLER 曲线，包含置信区间、最小帧数、仿真早停、CSV/PNG 命名和失败诊断。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T17.5_BER_BLER_curve_reporting.md` |
+| **产出** | `docs/L3_工程实现/T17.5_BER_BLER_curve_reporting.md` |
 | **验收** | Learner can produce a report-ready BLER curve with reproducible seeds and metadata. |
 | **3GPP/证据** | 工程任务； transport block CRC anchors from TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1080,7 +1080,7 @@ LLR 位宽、饱和、缩放、SIMD 布局和 bit-exact 回归。
 | **编号** | T18.1 |
 | **前置** | T5.1, T17.1 |
 | **Prompt** | 请定义定点译码器需求：LLR 位宽、内部消息位宽、饱和规则、舍入、缩放、性能损失预算和 bit-exact 对比方案。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T18.1_fixed_point_decoder_requirements.md` |
+| **产出** | `docs/L3_工程实现/T18.1_fixed_point_decoder_requirements.md` |
 | **验收** | Learner can write fixed-point requirements for one decoder block and identify comparison tolerances. |
 | **3GPP/证据** | 无需直接 3GPP 引用 for fixed-point methodology. Any protocol-specific fixed-point requirement must cite upstream Rel-19 evidence from T7, T9, T10, and related simulation/vector tasks. |
 
@@ -1091,7 +1091,7 @@ LLR 位宽、饱和、缩放、SIMD 布局和 bit-exact 回归。
 | **编号** | T18.2 |
 | **前置** | T6.6, T7.3, T18.1 |
 | **Prompt** | 请规划 C/C++ 定点 LTE Turbo 译码器模型：分支度量、alpha/beta 度量、外信息缩放、交织器地址、饱和、max-log 修正选项和对 Python 的 bit-exact 测试。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T18.2_LTE_Turbo_fixed_point_model_plan.md` |
+| **产出** | `docs/L3_工程实现/T18.2_LTE_Turbo_fixed_point_model_plan.md` |
 | **验收** | Learner can specify C/C++ structures and tests for a fixed-point Turbo decoder. |
 | **3GPP/证据** | TS 36.212 Rel-19 `36212-j30` §5.1.3.2/§5.1.4.1; algorithm implementation evidence. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`. |
 
@@ -1102,7 +1102,7 @@ LLR 位宽、饱和、缩放、SIMD 布局和 bit-exact 回归。
 | **编号** | T18.3 |
 | **前置** | T8.6, T9.3, T18.1 |
 | **Prompt** | 请规划 C/C++ 定点 NR LDPC 译码器模型：LLR/消息位宽、最小/次小存储、归一化/偏移、layered 调度、饱和、syndrome 检查和 bit-exact 测试。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T18.3_NR_LDPC_fixed_point_model_plan.md` |
+| **产出** | `docs/L3_工程实现/T18.3_NR_LDPC_fixed_point_model_plan.md` |
 | **验收** | Learner can define fixed-point NMS/OMS experiments and compare BLER loss to floating point. |
 | **3GPP/证据** | TS 38.212 Rel-19 `38212-j30` §5.3.2/§5.4.2; algorithm implementation evidence. 本地证据路径： TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1113,7 +1113,7 @@ LLR 位宽、饱和、缩放、SIMD 布局和 bit-exact 回归。
 | **编号** | T18.4 |
 | **前置** | T10.5, T10.6, T18.1 |
 | **Prompt** | 请规划 C/C++ 定点 NR Polar 译码器模型：f/g 函数、路径度量位宽、部分和、列表剪枝、排序器影响、CRC 辅助选择和 bit-exact 测试。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T18.4_NR_Polar_fixed_point_model_plan.md` |
+| **产出** | `docs/L3_工程实现/T18.4_NR_Polar_fixed_point_model_plan.md` |
 | **验收** | Learner can specify fixed-point CA-SCL data structures and path metric saturation checks. |
 | **3GPP/证据** | TS 38.212 Rel-19 `38212-j30` §5.3.1/§5.4.1; algorithm implementation evidence. 本地证据路径： TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1124,7 +1124,7 @@ LLR 位宽、饱和、缩放、SIMD 布局和 bit-exact 回归。
 | **编号** | T18.5 |
 | **前置** | T18.2, T18.3, T18.4 |
 | **Prompt** | 请讲解 Turbo、LDPC、Polar C/C++ 译码器的内存布局、对齐、SIMD 友好数组、缓存局部性和向量化机会。包含 profiling 计划和非合并访存失败案例。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T18.5_SIMD_memory_layout_decoders.md` |
+| **产出** | `docs/L3_工程实现/T18.5_SIMD_memory_layout_decoders.md` |
 | **验收** | Learner can propose an array layout for one decoder and justify cache/SIMD behavior. |
 | **3GPP/证据** | 无需直接 3GPP 引用 for this engineering method. The article must cite upstream protocol-vector tasks when it uses generated LTE/NR vectors. |
 
@@ -1135,7 +1135,7 @@ LLR 位宽、饱和、缩放、SIMD 布局和 bit-exact 回归。
 | **编号** | T18.6 |
 | **前置** | T18.2, T18.3, T18.4 |
 | **Prompt** | 请设计 bit-exact 回归框架，对比 Python 浮点/定点参考、C/C++ 定点模型和后续 RTL 输出。包含向量格式、元数据、种子追踪、容差、通过/失败方案和 CI 命令。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T18.6_bit_exact_regression_harness.md` |
+| **产出** | `docs/L3_工程实现/T18.6_bit_exact_regression_harness.md` |
 | **验收** | Learner can define a regression vector format and pass/fail policy for all three decoders. |
 | **3GPP/证据** | 工程任务； protocol vectors link to TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1150,7 +1150,7 @@ Turbo、LDPC、Polar 微架构、统一子系统、软缓存和寄存器配置�
 | **编号** | T19.1 |
 | **前置** | T5.2, T5.4, T18.2 |
 | **Prompt** | 请设计 LTE Turbo RTL 微架构：SISO 数据通路、alpha/beta 存储、外信息存储、交织/解交织地址生成器、乒乓迭代控制、CRC 早停、时钟/复位方案和吞吐估算。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T19.1_LTE_Turbo_RTL_microarchitecture.md` |
+| **产出** | `docs/L3_工程实现/T19.1_LTE_Turbo_RTL_microarchitecture.md` |
 | **验收** | Learner can draw the Turbo decoder block diagram and FSM and estimate memory size. |
 | **3GPP/证据** | TS 36.212 Rel-19 `36212-j30` §5.1.3.2/§5.1.4.1; RTL design is implementation guidance. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`. |
 
@@ -1161,7 +1161,7 @@ Turbo、LDPC、Polar 微架构、统一子系统、软缓存和寄存器配置�
 | **编号** | T19.2 |
 | **前置** | T5.2, T5.4, T18.3 |
 | **Prompt** | 请设计 NR LDPC RTL 微架构：layered 调度控制器、校验节点单元、变量节点更新、最小/次小数据通路、消息存储、LLR 存储、bank 冲突处理、syndrome/CRC 早停和吞吐估算。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T19.2_NR_LDPC_RTL_microarchitecture.md` |
+| **产出** | `docs/L3_工程实现/T19.2_NR_LDPC_RTL_microarchitecture.md` |
 | **验收** | Learner can draw a layered LDPC decoder architecture and identify memory banking constraints. |
 | **3GPP/证据** | TS 38.212 Rel-19 `38212-j30` §5.3.2 table-driven QC structure; RTL design is implementation guidance. 本地证据路径： TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1172,7 +1172,7 @@ Turbo、LDPC、Polar 微架构、统一子系统、软缓存和寄存器配置�
 | **编号** | T19.3 |
 | **前置** | T5.2, T5.4, T18.4 |
 | **Prompt** | 请设计 NR Polar RTL 微架构：SC/SCL 树遍历、LLR 存储、部分和存储、路径存储、路径度量更新、排序/剪枝器、CRC 检查器和低延迟控制。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T19.3_NR_Polar_RTL_microarchitecture.md` |
+| **产出** | `docs/L3_工程实现/T19.3_NR_Polar_RTL_microarchitecture.md` |
 | **验收** | Learner can draw a CA-SCL decoder architecture and explain sorter bottleneck. |
 | **3GPP/证据** | TS 38.212 Rel-19 `38212-j30` §5.3.1/§5.4.1; RTL design is implementation guidance. 本地证据路径： TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1183,7 +1183,7 @@ Turbo、LDPC、Polar 微架构、统一子系统、软缓存和寄存器配置�
 | **编号** | T19.4 |
 | **前置** | T19.1, T19.2, T19.3 |
 | **Prompt** | 请设计统一译码子系统，包含 Turbo、LDPC、Polar 引擎、共享输入/输出 DMA、软缓存、配置寄存器、中断/状态和错误处理。边界必须清晰，使每个引擎可独立测试。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T19.4_unified_decoder_subsystem_architecture.md` |
+| **产出** | `docs/L3_工程实现/T19.4_unified_decoder_subsystem_architecture.md` |
 | **验收** | Learner can define top-level registers and dataflow for a multi-decoder accelerator. |
 | **3GPP/证据** | Context evidence only, not a source for specific register-field claims until verified: LTE configuration inputs from TS 36.213 Rel-19 `36213-j30_*`, TS 36.321 Rel-19 `36321-j20`, TS 36.331 Rel-19 `36331-j21`; NR configuration inputs from TS 38.214 Rel-19 `38214-j30`, TS 38.321 Rel-19 `38321-j20`, TS 38.331 Rel-19 `38331-j20`. Local paths: `3GPP_Rel19/processed/TS_36.213_*` (`待核验` 精确分册), `3GPP_Rel19/processed/TS_36.321_36321-j20`, `3GPP_Rel19/processed/TS_36.331_36331-j21`, `3GPP_Rel19/processed/TS_38.214_38214-j30`, `3GPP_Rel19/processed/TS_38.321_38321-j20`, `3GPP_Rel19/processed/TS_38.331_38331-j20`. |
 
@@ -1194,7 +1194,7 @@ Turbo、LDPC、Polar 微架构、统一子系统、软缓存和寄存器配置�
 | **编号** | T19.5 |
 | **前置** | T7.3, T9.3, T19.4 |
 | **Prompt** | 请设计软缓存与 HARQ 存储架构：进程 ID、TB/CB/CBG 索引、RV 放置、饱和、存储 bank 划分、淘汰方案和 CRC 失败后的恢复。包含 LTE 与 NR 差异。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T19.5_soft_buffer_HARQ_memory_architecture.md` |
+| **产出** | `docs/L3_工程实现/T19.5_soft_buffer_HARQ_memory_architecture.md` |
 | **验收** | Learner can propose a soft-buffer address map for LTE Turbo and NR LDPC. |
 | **3GPP/证据** | TS 36.212 Rel-19 `36212-j30` §5.1.4.1; TS 38.212 Rel-19 `38212-j30` §5.4.2; TS 38.214 Rel-19 `38214-j30` §5.1.7/§6.1.5; TS 36.213 anchors `待核验`. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`; TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 36.213 -> `3GPP_Rel19/processed/TS_36.213_*` (精确分册 `待核验`). |
 
@@ -1205,7 +1205,7 @@ Turbo、LDPC、Polar 微架构、统一子系统、软缓存和寄存器配置�
 | **编号** | T19.6 |
 | **前置** | T4.6, T19.4 |
 | **Prompt** | 请定义译码器寄存器表和配置流：算法选择、块长、码率、BG、Zc、RV、Qm、HARQ ID、列表大小、迭代上限、start/status/error 中断，并追踪字段来自 PHY/MAC/RRC 的哪里。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T19.6_decoder_register_map_configuration_flow.md` |
+| **产出** | `docs/L3_工程实现/T19.6_decoder_register_map_configuration_flow.md` |
 | **验收** | Learner can map high-level protocol parameters to hardware registers. |
 | **3GPP/证据** | Context evidence only, not a source for specific register-field claims until verified: decoder algorithm parameters from TS 36.212 Rel-19 `36212-j30` and TS 38.212 Rel-19 `38212-j30`; scheduling/HARQ context from TS 36.213 Rel-19 `36213-j30_*` and TS 38.214 Rel-19 `38214-j30`; MAC/RRC configuration context from TS 36.321 Rel-19 `36321-j20`, TS 36.331 Rel-19 `36331-j21`, TS 38.321 Rel-19 `38321-j20`, TS 38.331 Rel-19 `38331-j20`. Exact RRC/MAC fields remain `待核验`. Local paths: `3GPP_Rel19/processed/TS_36.212_36212-j30`, `3GPP_Rel19/processed/TS_38.212_38212-j30`, `3GPP_Rel19/processed/TS_36.213_*` (`待核验` 精确分册), `3GPP_Rel19/processed/TS_38.214_38214-j30`, `3GPP_Rel19/processed/TS_36.321_36321-j20`, `3GPP_Rel19/processed/TS_36.331_36331-j21`, `3GPP_Rel19/processed/TS_38.321_38321-j20`, `3GPP_Rel19/processed/TS_38.331_38331-j20`. |
 
@@ -1220,7 +1220,7 @@ SystemVerilog testbench、协议向量、覆盖率、DC 综合、时序收敛和
 | **编号** | T20.1 |
 | **前置** | T18.6, T19.1-T19.3 |
 | **Prompt** | 请设计 Turbo、LDPC、Polar 译码引擎的 SystemVerilog testbench 架构，包含 driver、monitor、scoreboard、参考向量加载器、断言、复位测试和超时方案。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T20.1_decoder_testbench_architecture.md` |
+| **产出** | `docs/L3_工程实现/T20.1_decoder_testbench_architecture.md` |
 | **验收** | Learner can write a testbench plan that compares RTL output to golden vectors. |
 | **3GPP/证据** | 无需直接 3GPP 引用 for testbench methodology. Generated vectors must cite upstream Rel-19 evidence from T7, T9, T10, and T20.2. |
 
@@ -1231,7 +1231,7 @@ SystemVerilog testbench、协议向量、覆盖率、DC 综合、时序收敛和
 | **编号** | T20.2 |
 | **前置** | T7.6, T9.6, T10.8, T18.6 |
 | **Prompt** | 请定义 LTE Turbo、NR LDPC、NR Polar 的协议向量和边界案例套件：最小/最大大小、填充位、CRC 失败、RV 不匹配、CBG、列表大小压力、LLR 饱和和运行中复位。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T20.2_protocol_vector_corner_case_suite.md` |
+| **产出** | `docs/L3_工程实现/T20.2_protocol_vector_corner_case_suite.md` |
 | **验收** | Learner can list required directed tests for all three decoders and explain what each catches. |
 | **3GPP/证据** | TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30` anchors for sizes/rate matching/CRC; exact corner tables must be verified. 本地证据路径： TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
@@ -1242,7 +1242,7 @@ SystemVerilog testbench、协议向量、覆盖率、DC 综合、时序收敛和
 | **编号** | T20.3 |
 | **前置** | T20.1, T20.2 |
 | **Prompt** | 请定义译码验证的功能覆盖率、代码覆盖率、回归层级、随机种子、夜间运行、失败分诊和 sign-off 标准。覆盖点包括算法家族、块长、RV、Qm、CRC 状态和复位。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T20.3_coverage_regression_strategy.md` |
+| **产出** | `docs/L3_工程实现/T20.3_coverage_regression_strategy.md` |
 | **验收** | Learner can define coverage bins and regression pass criteria for a decoder subsystem. |
 | **3GPP/证据** | 无需直接 3GPP 引用 for coverage methodology. Coverage bins that depend on protocol parameters must reference upstream Rel-19 evidence from T7/T9/T10/T20.2. |
 
@@ -1253,7 +1253,7 @@ SystemVerilog testbench、协议向量、覆盖率、DC 综合、时序收敛和
 | **编号** | T20.4 |
 | **前置** | T19.1-T19.6 |
 | **Prompt** | 请讲解译码 RTL 的 Synopsys Design Compiler 综合流程：文件列表、时钟约束、复位假设、compile 方案、时序报告、面积报告、功耗估算和常见关键路径。若未安装 DC，必须说明工具可用性限制。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T20.4_DC_synthesis_flow_decoders.md` |
+| **产出** | `docs/L3_工程实现/T20.4_DC_synthesis_flow_decoders.md` |
 | **验收** | Learner can prepare a DC script skeleton and interpret timing/area reports. |
 | **3GPP/证据** | 无需直接 3GPP 引用 for this engineering method. The article must cite upstream protocol-vector tasks when it uses generated LTE/NR vectors. |
 
@@ -1264,7 +1264,7 @@ SystemVerilog testbench、协议向量、覆盖率、DC 综合、时序收敛和
 | **编号** | T20.5 |
 | **前置** | T20.4 |
 | **Prompt** | 请讲解译码 RTL 时序收敛：关键路径识别、LDPC check-node min tree、Polar sorter、Turbo ACS/度量更新、流水线、retiming、寄存器复制和面积/时序取舍。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T20.5_timing_closure_decoder_critical_paths.md` |
+| **产出** | `docs/L3_工程实现/T20.5_timing_closure_decoder_critical_paths.md` |
 | **验收** | Learner can diagnose one plausible timing violation and propose a pipeline or architecture fix. |
 | **3GPP/证据** | 无需直接 3GPP 引用 for this engineering method. The article must cite upstream protocol-vector tasks when it uses generated LTE/NR vectors. |
 
@@ -1275,7 +1275,7 @@ SystemVerilog testbench、协议向量、覆盖率、DC 综合、时序收敛和
 | **编号** | T20.6 |
 | **前置** | T20.1-T20.5 |
 | **Prompt** | 请定义最终验证与证据报告格式：协议证据表、仿真摘要、定点损失、RTL 回归、覆盖率、综合时序/面积/功耗、已知限制和 sign-off 清单。写作时参考本文“单节讲义弹性审计清单”，按本节性质取舍：基础课重理论概念、解释和推导；协议课重 3GPP 前因后果和接收侧流程；工程课重仿真、定点、RTL/ASIC、验证和证据记录。 |
-| **产出** | `docs/L3/T20.6_final_decoder_verification_evidence_report.md` |
+| **产出** | `docs/L3_工程实现/T20.6_final_decoder_verification_evidence_report.md` |
 | **验收** | Learner can assemble an audit-ready final report for LTE Turbo, NR LDPC, and NR Polar decoder work. |
 | **3GPP/证据** | Aggregates exact Rel-19 evidence from all protocol tasks. Final report must list concrete TS package names, sections, table/figure/formula anchors when applicable, and `3GPP_Rel19/processed/...` local paths rather than using aggregate wording. |
 

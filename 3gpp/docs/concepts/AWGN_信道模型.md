@@ -28,7 +28,7 @@ AWGN 信道模型是最基本的通信信道：接收信号 y = x + n，其中 n
 ## 协议锚点
 
 - 调制与物理信道：TS 36.211/TS 38.211 定义调制方案和资源映射，不定义信道模型但暗含 AWGN 性能参考假设。
-- 本地锚点：`docs/L1/T2.7_AWGN_noise_scaling.md`
+- 本地锚点：`docs/L1_基础/T2.7_AWGN_noise_scaling.md`
 
 ## 图谱关联
 

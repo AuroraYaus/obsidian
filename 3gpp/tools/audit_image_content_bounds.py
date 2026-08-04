@@ -20,7 +20,7 @@ from pathlib import Path
 from PIL import Image, ImageChops
 
 
-DEFAULT_PATHS = [Path("docs/L1/assets"), Path("docs/L2_协议算法/assets"), Path("docs/L3/assets")]
+DEFAULT_PATHS = [Path("docs/L1_基础/assets"), Path("docs/L2_协议算法/assets"), Path("docs/L3_工程实现/assets")]
 DEFAULT_MAX_BOTTOM_PIXELS = 160
 DEFAULT_MAX_BOTTOM_RATIO = 0.10
 
@@ -133,7 +133,7 @@ def main(argv: list[str] | None = None) -> int:
     @usage   python audit_image_content_bounds.py [paths...]
              [--max-bottom-pixels N] [--max-bottom-ratio R]
     @args    paths               待审计的图像文件路径或目录，
-                                 默认为 docs/L1/assets docs/L2_协议算法/assets docs/L3/assets。
+                                 默认为 docs/L1_基础/assets docs/L2_协议算法/assets docs/L3_工程实现/assets。
              --max-bottom-pixels  允许的最大底部空白像素数，默认 160。
              --max-bottom-ratio   允许的最大底部空白比例（0.0-1.0），默认 0.10。
     @exit_code  0 = 无发现，1 = 存在底部空白过量的图像。

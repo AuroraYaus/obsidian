@@ -287,4 +287,4 @@ def render_svg(output_path: str = "") -> str:
 
 
 if __name__ == "__main__":
-    render_svg("/home/yys/AGENT/3gpp/docs/L1/assets/T3.2_trellis_termination_shuffle.svg")
+    render_svg("/home/yys/AGENT/3gpp/docs/L1_基础/assets/T3.2_trellis_termination_shuffle.svg")

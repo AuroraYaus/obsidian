@@ -20,7 +20,7 @@ if str(ROOT) not in sys.path:
 from tools.audit_python_figure_body_equivalents import MARKERS, has_marker_near
 
 
-DOC_ROOTS = [Path("docs/L1"), Path("docs/L2_协议算法"), Path("docs/L3")]
+DOC_ROOTS = [Path("docs/L1_基础"), Path("docs/L2_协议算法"), Path("docs/L3_工程实现")]
 IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+\.png)\)")
 SCRIPT_RE = re.compile(r"`?(tools/figures/[\w./-]+\.py)`?")
 STOP_RE = re.compile(r"^(##+ |\| |!\[|```)")
@@ -315,7 +315,7 @@ def main() -> int:
         nargs="*",
         type=Path,
         default=DOC_ROOTS,
-        help="directories or files to process (default: docs/L1 docs/L2_协议算法 docs/L3)",
+        help="directories or files to process (default: docs/L1_基础 docs/L2_协议算法 docs/L3_工程实现)",
     )
     args = parser.parse_args()
 
@@ -343,7 +343,7 @@ def main() -> int:
 # @brief 在讲义中自动插入 Python 图片的正文等价块（Mermaid 图或 Markdown 表）。
 # @usage python tools/insert_python_figure_body_equivalents.py [--dry-run] [PATHS...]
 # @args --dry-run  仅打印变更摘要，不写入文件。
-# @args PATHS      要处理的目录或 .md 文件列表，默认 docs/L1 docs/L2_协议算法 docs/L3。
+# @args PATHS      要处理的目录或 .md 文件列表，默认 docs/L1_基础 docs/L2_协议算法 docs/L3_工程实现。
 # @exit_code 0 正常完成。
 if __name__ == "__main__":
     raise SystemExit(main())

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T15.5_timing_closure_critical_paths.svg
+  @brief   时序收敛与关键路径调试（v2 手绘 SVG）：之字形五段闭环（报告→分类→架构修复→回归→权衡）+ 关键路径与优化技术表
+  @date    2026-08-04
+  @note    语义与 docs/L3_工程实现/T20.5_timing_closure_decoder_critical_paths.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计。六项几何审计 + cairosvg 渲染验证通过。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="2560" viewBox="0 0 3000 2560" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T15.5_timing_closure_critical_paths</title>
+  <defs>
+    <filter id="soft" x="-8%" y="-8%" width="120%" height="130%">      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A3B2A" flood-opacity="0.09"/>    </filter>
+    <marker id="m6E7A8C" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#6E7A8C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m94A3B8" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m6D4FBF" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#6D4FBF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m8A6B46" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#8A6B46" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m3F51C4" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#3F51C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m0E7A67" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#0E7A67" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="mB76E00" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#B76E00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="mB4405B" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#B4405B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m4A5A6A" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#4A5A6A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="3000" height="2560" fill="#FBF9F3"/>
+  <path d="M 88 56 l 9 9 l -9 9 l -9 -9 z" fill="#3F51C4" stroke="none"/>
+  <text class="title-main" x="116" y="68" font-size="40" font-weight="700" fill="#262B33">T15.5 Timing Closure and Decoder Critical Paths</text>
+  <text class="subtitle" x="116" y="108" font-size="20.5" fill="#5B6472">Timing closure is a controlled loop: classify the path, change architecture, then re-run regression evidence.</text>
+  <line x1="80" y1="130" x2="2920" y2="130" stroke="#D8D2C6" stroke-width="2"/>
+  <g class="card" id="c0">
+    <rect class="body" x="90" y="190" width="480" height="210" rx="12" fill="#FFFFFF" stroke="#3F51C4" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 102 190 H 558 Q 570 190 570 202 V 236 H 90 V 202 Q 90 190 102 190 Z" fill="#3F51C4" stroke="none"/>
+    <text class="title" x="330.0" y="220" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Timing Report</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="330.0" y="291.0">startpoint, endpoint, slack, logic depth, cell list</tspan>
+      <tspan x="330.0" y="317.0">and hierarchy context.</tspan>
+    </text>
+  </g>
+  <g class="card" id="c1">
+    <rect class="body" x="640" y="240" width="480" height="210" rx="12" fill="#FFFFFF" stroke="#0E7A67" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 652 240 H 1108 Q 1120 240 1120 252 V 286 H 640 V 252 Q 640 240 652 240 Z" fill="#0E7A67" stroke="none"/>
+    <text class="title" x="880.0" y="270" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Classify Path</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="880.0" y="341.0">Turbo ACS, LDPC min tree, Polar sorter,</tspan>
+      <tspan x="880.0" y="367.0">soft-buffer merge or top-level fan-in.</tspan>
+    </text>
+  </g>
+  <g class="card" id="c2">
+    <rect class="body" x="1190" y="190" width="480" height="210" rx="12" fill="#FFFFFF" stroke="#B76E00" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1202 190 H 1658 Q 1670 190 1670 202 V 236 H 1190 V 202 Q 1190 190 1202 190 Z" fill="#B76E00" stroke="none"/>
+    <text class="title" x="1430.0" y="220" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Architecture Fix</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1430.0" y="291.0">pipeline, retiming, register duplication, tree split,</tspan>
+      <tspan x="1430.0" y="317.0">banking or hierarchy change.</tspan>
+    </text>
+  </g>
+  <g class="card" id="c3">
+    <rect class="body" x="1740" y="240" width="480" height="210" rx="12" fill="#FFFFFF" stroke="#6D4FBF" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1752 240 H 2208 Q 2220 240 2220 252 V 286 H 1740 V 252 Q 1740 240 1752 240 Z" fill="#6D4FBF" stroke="none"/>
+    <text class="title" x="1980.0" y="270" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Regression</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1980.0" y="341.0">rerun directed vectors, checkpoint alignment,</tspan>
+      <tspan x="1980.0" y="367.0">reset/abort and coverage bins.</tspan>
+    </text>
+  </g>
+  <g class="card" id="c4">
+    <rect class="body" x="2290" y="190" width="480" height="210" rx="12" fill="#FFFFFF" stroke="#B4405B" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 2302 190 H 2758 Q 2770 190 2770 202 V 236 H 2290 V 202 Q 2290 190 2302 190 Z" fill="#B4405B" stroke="none"/>
+    <text class="title" x="2530.0" y="220" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Tradeoff</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="2530.0" y="291.0">area, latency, power, debug trace, throughput</tspan>
+      <tspan x="2530.0" y="317.0">and sign-off risk.</tspan>
+    </text>
+  </g>
+  <path class="link" data-src="c0" data-dst="c1" d="M 570.0 295.0 L 640.0 345.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="c1" data-dst="c2" d="M 1120.0 345.0 L 1190.0 295.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="c2" data-dst="c3" d="M 1670.0 295.0 L 1740.0 345.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="c3" data-dst="c4" d="M 2220.0 345.0 L 2290.0 295.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <g class="foot" id="band">
+    <rect class="body" x="140" y="560" width="2720" height="190" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <rect class="footbar" x="140" y="560" width="7" height="190" fill="#4A5A6A" stroke="none"/>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1500.0" y="663.5">Do not close timing by hiding paths. Every false path, multicycle path, retiming change or added pipeline register needs verification evidence. The safest fix is the one that improves slack while preserving protocol-derived ordering, reset behavior and scoreboard checkpoints.</tspan>
+    </text>
+  </g>
+  <g class="tbl" id="t1">
+    <rect class="tblouter" x="120" y="860" width="2760" height="532" rx="10" fill="#3F51C4" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <g class="cellg" id="t1_0_0" data-tbl="t1">
+      <rect class="cell" x="120" y="860" width="380" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="310.0" y="887.0">Path</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_1" data-tbl="t1">
+      <rect class="cell" x="500" y="860" width="780" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="890.0" y="887.0">Why it is slow</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_2" data-tbl="t1">
+      <rect class="cell" x="1280" y="860" width="720" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="1640.0" y="887.0">Candidate fix</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_3" data-tbl="t1">
+      <rect class="cell" x="2000" y="860" width="880" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="2440.0" y="887.0">Regression focus</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_0" data-tbl="t1">
+      <rect class="cell" x="120" y="904" width="380" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="310.0" y="970.0">Turbo ACS</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_1" data-tbl="t1">
+      <rect class="cell" x="500" y="904" width="780" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="890.0" y="970.0">branch metric plus add-compare-select plus saturation</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_2" data-tbl="t1">
+      <rect class="cell" x="1280" y="904" width="720" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1640.0" y="970.0">pipeline metric update or split window</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_3" data-tbl="t1">
+      <rect class="cell" x="2000" y="904" width="880" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2440.0" y="970.0">iteration trace, extrinsic alignment</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_0" data-tbl="t1">
+      <rect class="cell" x="120" y="1026" width="380" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="310.0" y="1092.0">LDPC min tree</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_1" data-tbl="t1">
+      <rect class="cell" x="500" y="1026" width="780" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="890.0" y="1092.0">min1/min2 compare tree, sign parity, bank mux</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_2" data-tbl="t1">
+      <rect class="cell" x="1280" y="1026" width="720" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1640.0" y="1092.0">split compare tree and register bank select</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_3" data-tbl="t1">
+      <rect class="cell" x="2000" y="1026" width="880" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2440.0" y="1092.0">layer schedule and syndrome</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_0" data-tbl="t1">
+      <rect class="cell" x="120" y="1148" width="380" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="310.0" y="1214.0">Polar sorter</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_1" data-tbl="t1">
+      <rect class="cell" x="500" y="1148" width="780" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="890.0" y="1214.0">path metric update, compare/swap network, lazy-copy mux</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_2" data-tbl="t1">
+      <rect class="cell" x="1280" y="1148" width="720" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1640.0" y="1214.0">partial sort or staged sorter</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_3" data-tbl="t1">
+      <rect class="cell" x="2000" y="1148" width="880" height="122" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2440.0" y="1214.0">PM tie-break and CRC selector</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_0" data-tbl="t1">
+      <rect class="cell" x="120" y="1270" width="380" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="310.0" y="1336.0">Soft buffer</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_1" data-tbl="t1">
+      <rect class="cell" x="500" y="1270" width="780" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="890.0" y="1336.0">key compare, RV address, saturating add, CBG mask merge</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_2" data-tbl="t1">
+      <rect class="cell" x="1280" y="1270" width="720" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1640.0" y="1336.0">early key hash, pipeline merge</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_3" data-tbl="t1">
+      <rect class="cell" x="2000" y="1270" width="880" height="122" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2440.0" y="1336.0">HARQ reset/abort, held CBG</tspan>
+      </text>
+    </g>
+    <line x1="122" y1="1026" x2="2878" y2="1026" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="1148" x2="2878" y2="1148" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="1270" x2="2878" y2="1270" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="500" y1="906" x2="500" y2="1390" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="900" y1="906" x2="900" y2="1390" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="840" y1="906" x2="840" y2="1390" stroke="#E0DACA" stroke-width="1"/>
+  </g>
+  <g class="tbl" id="t2">
+    <rect class="tblouter" x="120" y="1470" width="2760" height="634" rx="10" fill="#3F51C4" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <g class="cellg" id="t2_0_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1470" width="420" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="330.0" y="1497.0">Technique</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_0_1" data-tbl="t2">
+      <rect class="cell" x="540" y="1470" width="620" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="850.0" y="1497.0">Improves</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_0_2" data-tbl="t2">
+      <rect class="cell" x="1160" y="1470" width="760" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="1540.0" y="1497.0">Cost</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_0_3" data-tbl="t2">
+      <rect class="cell" x="1920" y="1470" width="960" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="2400.0" y="1497.0">When to use</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1514" width="420" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="330.0" y="1578.0">Pipeline</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_1" data-tbl="t2">
+      <rect class="cell" x="540" y="1514" width="620" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="850.0" y="1578.0">setup slack and frequency</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_2" data-tbl="t2">
+      <rect class="cell" x="1160" y="1514" width="760" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1540.0" y="1578.0">latency, trace alignment, extra registers</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_3" data-tbl="t2">
+      <rect class="cell" x="1920" y="1514" width="960" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2400.0" y="1578.0">long arithmetic or compare tree</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1632" width="420" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="330.0" y="1696.0">Retiming</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_1" data-tbl="t2">
+      <rect class="cell" x="540" y="1632" width="620" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="850.0" y="1696.0">register placement without RTL rewrite</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_2" data-tbl="t2">
+      <rect class="cell" x="1160" y="1632" width="760" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1540.0" y="1696.0">reset/scan/equivalence complexity</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_3" data-tbl="t2">
+      <rect class="cell" x="1920" y="1632" width="960" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2400.0" y="1696.0">clean synchronous datapath</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1750" width="420" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="330.0" y="1814.0">Register duplication</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_1" data-tbl="t2">
+      <rect class="cell" x="540" y="1750" width="620" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="850.0" y="1814.0">fanout and route delay</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_2" data-tbl="t2">
+      <rect class="cell" x="1160" y="1750" width="760" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1540.0" y="1814.0">area and coherency checks</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_3" data-tbl="t2">
+      <rect class="cell" x="1920" y="1750" width="960" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2400.0" y="1814.0">status fan-out or shared enables</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1868" width="420" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="330.0" y="1932.0">Hierarchy/banking</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_1" data-tbl="t2">
+      <rect class="cell" x="540" y="1868" width="620" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="850.0" y="1932.0">memory mux depth and route congestion</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_2" data-tbl="t2">
+      <rect class="cell" x="1160" y="1868" width="760" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1540.0" y="1932.0">control complexity</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_3" data-tbl="t2">
+      <rect class="cell" x="1920" y="1868" width="960" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2400.0" y="1932.0">LDPC/soft-buffer memory paths</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_5_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1986" width="420" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="330.0" y="2050.0">Algorithmic change</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_5_1" data-tbl="t2">
+      <rect class="cell" x="540" y="1986" width="620" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="850.0" y="2050.0">large structural bottlenecks</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_5_2" data-tbl="t2">
+      <rect class="cell" x="1160" y="1986" width="760" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1540.0" y="2050.0">BLER/area/power tradeoff</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_5_3" data-tbl="t2">
+      <rect class="cell" x="1920" y="1986" width="960" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2400.0" y="2050.0">sorter width, min-sum variant, parallelism</tspan>
+      </text>
+    </g>
+    <line x1="122" y1="1632" x2="2878" y2="1632" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="1750" x2="2878" y2="1750" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="1868" x2="2878" y2="1868" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="1986" x2="2878" y2="1986" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="540" y1="1516" x2="540" y2="2102" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="740" y1="1516" x2="740" y2="2102" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="880" y1="1516" x2="880" y2="2102" stroke="#E0DACA" stroke-width="1"/>
+  </g>
+  <g class="foot" id="foot">
+    <rect class="body" x="120" y="2190" width="2760" height="320" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <rect class="footbar" x="120" y="2190" width="7" height="320" fill="#B76E00" stroke="none"/>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1500.0" y="2358.5">Example diagnostic: slack -0.31 ns in polar_sorter means the first fix candidate is sorter staging, not a protocol workaround. Every timing fix must update latency assumptions, trace checkpoints, coverage bins and failure bundles before sign-off.</tspan>
+    </text>
+  </g>
+</svg>
