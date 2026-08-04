@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T9.2_NR_LDPC_circular_buffer_states.svg
+  @brief   NR LDPC Circular Buffer 状态对比教学图（手绘 SVG V2：布局与配色依据 T9.2 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：12 位置 toy circular buffer 采用环形排布（文档语义"同一条 circular
+           buffer"），pos 0-11 的 LLR 值与 new/punct/short/rep/unk 状态、三个图例
+           （punctured/unknown、shortened/filler、repeated）、接收端动作链四步
+           （addr stream -> mask check -> LLR action -> LDPC input）、错误对照四行表
+           （正确处理/典型错误/可观测检测点）与读图结论均与讲义 T9.2 正文一致。
+           视觉设计：环形 buffer + 中心徽章；动作链带步骤号；错误表用风险色表头。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1260" viewBox="0 0 1500 1260" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>NR LDPC Circular Buffer 状态对比</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">NR LDPC Circular Buffer 状态对比</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">目标：把 punctured/unknown、shortened/filler、repeated 三类位置放到同一条母码 circular buffer 上看清楚。接收端的关键不是只填一个 LLR 数组，而是同时维护 unknown_mask、known_mask 和 repeat/saturation 计数。</text>
+
+  <!-- ============ 面板 A：环形 buffer + 图例 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="460" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="154" width="10" height="10" rx="3" fill="#6C7A2E"/>
+  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">同一条 circular buffer 上的三类状态（环形视图）</text>
+
+  <!-- 环形 12 格：cx=330 cy=350 r=150 -->
+  <g font-size="11" fill="#23272E">
+    <rect x="308" y="178" width="44" height="34" rx="6" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <text x="330" y="194" text-anchor="middle" font-weight="700">0</text>
+    <text x="330" y="208" text-anchor="middle" fill="#646B76">+1.2</text>
+    <rect x="383" y="196" width="44" height="34" rx="6" fill="#EBEEF2" stroke="#5C6B7C" stroke-width="1.5"/>
+    <text x="405" y="212" text-anchor="middle" font-weight="700">1</text>
+    <text x="405" y="226" text-anchor="middle" fill="#646B76">0</text>
+    <rect x="438" y="233" width="44" height="34" rx="6" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="460" y="249" text-anchor="middle" font-weight="700">2</text>
+    <text x="460" y="263" text-anchor="middle" fill="#646B76">+8.0</text>
+    <rect x="458" y="328" width="44" height="34" rx="6" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="480" y="344" text-anchor="middle" font-weight="700">3</text>
+    <text x="480" y="358" text-anchor="middle" fill="#646B76">-2.3</text>
+    <rect x="438" y="423" width="44" height="34" rx="6" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <text x="460" y="439" text-anchor="middle" font-weight="700">4</text>
+    <text x="460" y="453" text-anchor="middle" fill="#646B76">+0.4</text>
+    <rect x="383" y="460" width="44" height="34" rx="6" fill="#EBEEF2" stroke="#5C6B7C" stroke-width="1.5"/>
+    <text x="405" y="476" text-anchor="middle" font-weight="700">5</text>
+    <text x="405" y="490" text-anchor="middle" fill="#646B76">0</text>
+    <rect x="308" y="478" width="44" height="34" rx="6" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="330" y="494" text-anchor="middle" font-weight="700">6</text>
+    <text x="330" y="508" text-anchor="middle" fill="#646B76">+8.0</text>
+    <rect x="233" y="460" width="44" height="34" rx="6" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <text x="255" y="476" text-anchor="middle" font-weight="700">7</text>
+    <text x="255" y="490" text-anchor="middle" fill="#646B76">-0.6</text>
+    <rect x="178" y="423" width="44" height="34" rx="6" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="200" y="439" text-anchor="middle" font-weight="700">8</text>
+    <text x="200" y="453" text-anchor="middle" fill="#646B76">+3.1</text>
+    <rect x="158" y="328" width="44" height="34" rx="6" fill="#EBEEF2" stroke="#5C6B7C" stroke-width="1.5"/>
+    <text x="180" y="344" text-anchor="middle" font-weight="700">9</text>
+    <text x="180" y="358" text-anchor="middle" fill="#646B76">0</text>
+    <rect x="178" y="233" width="44" height="34" rx="6" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <text x="200" y="249" text-anchor="middle" font-weight="700">10</text>
+    <text x="200" y="263" text-anchor="middle" fill="#646B76">+0.9</text>
+    <rect x="233" y="196" width="44" height="34" rx="6" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <text x="255" y="212" text-anchor="middle" font-weight="700">11</text>
+    <text x="255" y="226" text-anchor="middle" fill="#646B76">-1.4</text>
+  </g>
+  <circle cx="330" cy="350" r="70" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  <text x="330" y="342" font-size="12" text-anchor="middle" font-weight="700" fill="#23272E">circular</text>
+  <text x="330" y="360" font-size="12" text-anchor="middle" font-weight="700" fill="#23272E">buffer</text>
+
+  <!-- 图例 3 张（右栏） -->
+  <g font-size="12" fill="#23272E">
+    <rect x="540" y="180" width="860" height="118" rx="10" fill="#EBEEF2" stroke="#5C6B7C" stroke-width="1"/>
+    <text x="560" y="208" font-weight="700">punctured / unknown</text>
+    <text x="560" y="234" fill="#646B76">没有空口观测：LLR=0，unknown_mask=1，不是业务 0</text>
+    <text x="560" y="258" fill="#646B76">错误后果：填 +MAX 当作业务 0 -> unknown_count / CRC fail</text>
+    <rect x="540" y="312" width="860" height="118" rx="10" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1"/>
+    <text x="560" y="340" font-weight="700">shortened / filler</text>
+    <text x="560" y="366" fill="#646B76">协议已知约束：强 0 LLR 或 known_mask 固定</text>
+    <text x="560" y="390" fill="#646B76">错误后果：填 0 当 unknown -> known_count / syndrome 收敛慢</text>
+    <rect x="540" y="444" width="860" height="118" rx="10" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1"/>
+    <text x="560" y="472" font-weight="700">repeated</text>
+    <text x="560" y="498" fill="#646B76">同一母码位置多次观测：旧 LLR + 新 LLR，定点需饱和</text>
+    <text x="560" y="522" fill="#646B76">错误后果：覆盖 old LLR -> repeat_count / saturation_count</text>
+  </g>
+
+  <!-- ============ 面板 B：接收端动作链 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="620" width="1380" height="210" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="644" width="10" height="10" rx="3" fill="#8E3B5E"/>
+  <text x="108" y="653" font-size="17" font-weight="700" fill="#23272E">接收端动作链</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <rect x="80" y="686" width="315" height="118" rx="12" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <circle cx="104" cy="712" r="13" fill="#8E3B5E"/>
+    <text x="104" y="717" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="237" y="720" font-size="13.5" font-weight="700" text-anchor="middle">addr stream</text>
+    <text x="98" y="752" fill="#646B76">RV/k0/Ncb 产生候选地址</text>
+    <text x="98" y="774" fill="#646B76">（地址流是后续一切的基础）</text>
+    <rect x="413" y="686" width="315" height="118" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <circle cx="437" cy="712" r="13" fill="#2F6E71"/>
+    <text x="437" y="717" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="570" y="720" font-size="13.5" font-weight="700" text-anchor="middle">mask check</text>
+    <text x="431" y="752" fill="#646B76">punctured / shortened / observed</text>
+    <text x="431" y="774" fill="#646B76">（三类掩码不可互换）</text>
+    <rect x="746" y="686" width="315" height="118" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <circle cx="770" cy="712" r="13" fill="#6C7A2E"/>
+    <text x="770" y="717" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="903" y="720" font-size="13.5" font-weight="700" text-anchor="middle">LLR action</text>
+    <text x="764" y="752" fill="#646B76">0 / strong known / sat_add</text>
+    <text x="764" y="774" fill="#646B76">（未知=中性，已知=强约束）</text>
+    <rect x="1079" y="686" width="315" height="118" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <circle cx="1103" cy="712" r="13" fill="#B06F2B"/>
+    <text x="1103" y="717" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="1236" y="720" font-size="13.5" font-weight="700" text-anchor="middle">LDPC input</text>
+    <text x="1097" y="752" fill="#646B76">ldpc_llr + unknown/known mask</text>
+    <text x="1097" y="774" fill="#646B76">（数值与掩码必须成对）</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 395 745 H 413" marker-end="url(#arrow)"/>
+    <path d="M 728 745 H 746" marker-end="url(#arrow)"/>
+    <path d="M 1061 745 H 1079" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 面板 C：错误对照与工程检测点 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="860" width="1380" height="360" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="884" width="10" height="10" rx="3" fill="#A6403C"/>
+  <text x="108" y="893" font-size="17" font-weight="700" fill="#23272E">错误对照与工程检测点</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="918" width="160" height="36" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="160" y="941" text-anchor="middle" font-weight="700">状态</text>
+    <rect x="240" y="918" width="330" height="36" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="405" y="941" text-anchor="middle" font-weight="700">正确处理</text>
+    <rect x="570" y="918" width="350" height="36" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="745" y="941" text-anchor="middle" font-weight="700">典型错误</text>
+    <rect x="920" y="918" width="420" height="36" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="1130" y="941" text-anchor="middle" font-weight="700">可观测检测点</text>
+
+    <rect x="80" y="954" width="160" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="160" y="977" text-anchor="middle">punctured</text>
+    <rect x="240" y="954" width="330" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="405" y="977" text-anchor="middle">LLR=0, unknown=1</text>
+    <rect x="570" y="954" width="350" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="745" y="977" text-anchor="middle">填 +MAX 当作业务 0</text>
+    <rect x="920" y="954" width="420" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1130" y="977" text-anchor="middle">unknown_count / CRC fail</text>
+
+    <rect x="80" y="990" width="160" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="160" y="1013" text-anchor="middle">shortened</text>
+    <rect x="240" y="990" width="330" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="405" y="1013" text-anchor="middle">+Known 或 known=1</text>
+    <rect x="570" y="990" width="350" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="745" y="1013" text-anchor="middle">填 0 当 unknown</text>
+    <rect x="920" y="990" width="420" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1130" y="1013" text-anchor="middle">known_count / syndrome 收敛慢</text>
+
+    <rect x="80" y="1026" width="160" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="160" y="1049" text-anchor="middle">repeated</text>
+    <rect x="240" y="1026" width="330" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="405" y="1049" text-anchor="middle">sat(old + new)</text>
+    <rect x="570" y="1026" width="350" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="745" y="1049" text-anchor="middle">覆盖 old LLR</text>
+    <rect x="920" y="1026" width="420" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1130" y="1049" text-anchor="middle">repeat_count / saturation_count</text>
+
+    <rect x="80" y="1062" width="160" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="160" y="1085" text-anchor="middle">skip/null</text>
+    <rect x="240" y="1062" width="330" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="405" y="1085" text-anchor="middle">不消耗 rx LLR</text>
+    <rect x="570" y="1062" width="350" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="745" y="1085" text-anchor="middle">消耗一个 LLR</text>
+    <rect x="920" y="1062" width="420" height="36" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1130" y="1085" text-anchor="middle">write_count != E</text>
+  </g>
+
+  <text x="90" y="1168" font-size="13" font-weight="700" class="free" fill="#A6403C">读图结论：unknown 表示没有证据，known 表示协议已知约束，repeat 表示多次证据累加。三者不能互相替代。</text>
+</svg>

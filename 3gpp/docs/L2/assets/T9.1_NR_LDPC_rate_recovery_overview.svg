@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T9.1_NR_LDPC_rate_recovery_overview.svg
+  @brief   NR LDPC 接收侧速率恢复总览（手绘 SVG V2：布局与配色依据 T9.1 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：五节点主链路（Demapper LLR -> Bit deinterleaver -> Circular restore
+           -> Soft combine -> LDPC core）、12 位置 toy circular buffer（new/repeat/short/
+           unknown 四态及 LLR 值）、descriptor 五字段表（来源/错误后果）、六个最小覆盖率
+           计数器，均与讲义 T9.1 正文及图 T9.1-1 语义一致。
+           视觉设计：暖纸画布 + 角色色系（流程=莓红、协议=青瓷、LLR 状态=橄榄、
+           校验=赭金、风险=石榴）；主链路带步骤号徽章，buffer 按 2x6 两行排布。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1180" viewBox="0 0 1500 1180" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>NR LDPC Rate Recovery 接收侧总览</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">NR LDPC Rate Recovery 接收侧总览</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">目标：把顺序接收 LLR 流恢复成 LDPC decoder 需要的母码位置软信息。发送端 rate matching 是选择和交织；接收端 rate recovery 是反交织、按 RV 起点放回、软合并和 mask 初始化。</text>
+
+  <!-- ============ 面板 A：主链路（五步带序号） ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="210" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="154" width="10" height="10" rx="3" fill="#8E3B5E"/>
+  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">接收侧 rate recovery 主链路</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <rect x="80" y="196" width="256" height="122" rx="12" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <circle cx="104" cy="222" r="13" fill="#8E3B5E"/>
+    <text x="104" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="220" y="230" font-size="13.5" font-weight="700" text-anchor="middle">Demapper LLR</text>
+    <text x="98" y="266" fill="#646B76">顺序软信息 rx_llr[0:E-1]</text>
+    <rect x="352" y="196" width="256" height="122" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <circle cx="376" cy="222" r="13" fill="#2F6E71"/>
+    <text x="376" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="492" y="230" font-size="13.5" font-weight="700" text-anchor="middle">Bit deinterleaver</text>
+    <text x="370" y="266" fill="#646B76">按 Qm 反交织，恢复 bit 顺序</text>
+    <rect x="624" y="196" width="256" height="122" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <circle cx="648" cy="222" r="13" fill="#6C7A2E"/>
+    <text x="648" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="764" y="230" font-size="13.5" font-weight="700" text-anchor="middle">Circular restore</text>
+    <text x="642" y="266" fill="#646B76">按 RV 起点扫描 Ncb，</text>
+    <text x="642" y="288" fill="#646B76">跳过空位，写回母码位置</text>
+    <rect x="896" y="196" width="256" height="122" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <circle cx="920" cy="222" r="13" fill="#B06F2B"/>
+    <text x="920" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="1036" y="230" font-size="13.5" font-weight="700" text-anchor="middle">Soft combine</text>
+    <text x="914" y="266" fill="#646B76">重复位 LLR 累加，未发送位保持未知</text>
+    <rect x="1168" y="196" width="256" height="122" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
+    <circle cx="1192" cy="222" r="13" fill="#A6403C"/>
+    <text x="1192" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">5</text>
+    <text x="1308" y="230" font-size="13.5" font-weight="700" text-anchor="middle">LDPC core</text>
+    <text x="1186" y="266" fill="#646B76">输出 ldpc_llr[0:N-1] 给 BG/Zc/H</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 336 257 H 352" marker-end="url(#arrow)"/>
+    <path d="M 608 257 H 624" marker-end="url(#arrow)"/>
+    <path d="M 880 257 H 896" marker-end="url(#arrow)"/>
+    <path d="M 1152 257 H 1168" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 面板 B：descriptor 表 + 验证计数器 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="370" width="1380" height="340" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="394" width="10" height="10" rx="3" fill="#2F6E71"/>
+  <text x="108" y="403" font-size="17" font-weight="700" fill="#23272E">descriptor 字段与验证计数器</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="428" width="150" height="34" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="155" y="450" text-anchor="middle" font-weight="700">字段</text>
+    <rect x="230" y="428" width="280" height="34" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="370" y="450" text-anchor="middle" font-weight="700">来源</text>
+    <rect x="510" y="428" width="260" height="34" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="640" y="450" text-anchor="middle" font-weight="700">错误后果</text>
+
+    <rect x="80" y="462" width="150" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="155" y="484" text-anchor="middle">BG/Zc/iLS</text>
+    <rect x="230" y="462" width="280" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="370" y="484" text-anchor="middle">TS 38.212 §5.3.2</text>
+    <rect x="510" y="462" width="260" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="640" y="484" text-anchor="middle">H 尺寸和地址周期错</text>
+
+    <rect x="80" y="496" width="150" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="155" y="518" text-anchor="middle">rvidx/k0</text>
+    <rect x="230" y="496" width="280" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="370" y="518" text-anchor="middle">TS 38.212 §5.4.2.1</text>
+    <rect x="510" y="496" width="260" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="640" y="518" text-anchor="middle">RV 窗口错</text>
+
+    <rect x="80" y="530" width="150" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="155" y="552" text-anchor="middle">E/Ncb/N</text>
+    <rect x="230" y="530" width="280" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="370" y="552" text-anchor="middle">TS 38.212 §5.4.2.1</text>
+    <rect x="510" y="530" width="260" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="640" y="552" text-anchor="middle">写入数量或缓存长度错</text>
+
+    <rect x="80" y="564" width="150" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="155" y="586" text-anchor="middle">Qm</text>
+    <rect x="230" y="564" width="280" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="370" y="586" text-anchor="middle">TS 38.214 MCS</text>
+    <rect x="510" y="564" width="260" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="640" y="586" text-anchor="middle">解交织顺序错</text>
+
+    <rect x="80" y="598" width="150" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="155" y="620" text-anchor="middle">cb_id/HARQ id</text>
+    <rect x="230" y="598" width="280" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="370" y="620" text-anchor="middle">调度与 HARQ 上下文</text>
+    <rect x="510" y="598" width="260" height="34" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="640" y="620" text-anchor="middle">软缓存污染</text>
+  </g>
+
+  <text x="820" y="446" font-size="13" font-weight="700" fill="#23272E">最小覆盖率统计</text>
+  <g font-size="12" fill="#646B76">
+    <rect x="820" y="464" width="290" height="32" rx="7" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="836" y="486">new_write_count</text>
+    <rect x="820" y="504" width="290" height="32" rx="7" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="836" y="526">repeat_accum_count</text>
+    <rect x="820" y="544" width="290" height="32" rx="7" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="836" y="566">unknown_count</text>
+    <rect x="820" y="584" width="290" height="32" rx="7" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="836" y="606">shortened_count</text>
+    <rect x="1120" y="464" width="290" height="32" rx="7" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1136" y="486">saturation_count</text>
+    <rect x="1120" y="504" width="290" height="32" rx="7" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1136" y="526">deinterleave_perm_ok</text>
+  </g>
+
+  <!-- ============ 面板 C：小型 circular buffer 例子（2x6） ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="740" width="1380" height="400" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="764" width="10" height="10" rx="3" fill="#6C7A2E"/>
+  <text x="108" y="773" font-size="17" font-weight="700" fill="#23272E">小型 circular buffer 例子：新写入、重复、未知和 shortened</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="796" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="187" y="815" text-anchor="middle" font-weight="700">pos 0</text>
+    <rect x="303" y="796" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="410" y="815" text-anchor="middle" font-weight="700">pos 1</text>
+    <rect x="526" y="796" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="633" y="815" text-anchor="middle" font-weight="700">pos 2</text>
+    <rect x="749" y="796" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="856" y="815" text-anchor="middle" font-weight="700">pos 3</text>
+    <rect x="972" y="796" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1079" y="815" text-anchor="middle" font-weight="700">pos 4</text>
+    <rect x="1195" y="796" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1302" y="815" text-anchor="middle" font-weight="700">pos 5</text>
+
+    <rect x="80" y="824" width="215" height="58" fill="#F7E9EF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="187" y="848" text-anchor="middle" font-weight="700">+1.0</text>
+    <text x="187" y="870" text-anchor="middle" fill="#646B76">new</text>
+    <rect x="303" y="824" width="215" height="58" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="410" y="848" text-anchor="middle" font-weight="700">-1.4</text>
+    <text x="410" y="870" text-anchor="middle" fill="#646B76">repeat</text>
+    <rect x="526" y="824" width="215" height="58" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="633" y="848" text-anchor="middle" font-weight="700">+8.0</text>
+    <text x="633" y="870" text-anchor="middle" fill="#646B76">short</text>
+    <rect x="749" y="824" width="215" height="58" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="856" y="848" text-anchor="middle" font-weight="700">0</text>
+    <text x="856" y="870" text-anchor="middle" fill="#646B76">unknown</text>
+    <rect x="972" y="824" width="215" height="58" fill="#F7E9EF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1079" y="848" text-anchor="middle" font-weight="700">+0.2</text>
+    <text x="1079" y="870" text-anchor="middle" fill="#646B76">new</text>
+    <rect x="1195" y="824" width="215" height="58" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1302" y="848" text-anchor="middle" font-weight="700">-1.5</text>
+    <text x="1302" y="870" text-anchor="middle" fill="#646B76">repeat</text>
+
+    <rect x="80" y="898" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="187" y="917" text-anchor="middle" font-weight="700">pos 6</text>
+    <rect x="303" y="898" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="410" y="917" text-anchor="middle" font-weight="700">pos 7</text>
+    <rect x="526" y="898" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="633" y="917" text-anchor="middle" font-weight="700">pos 8</text>
+    <rect x="749" y="898" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="856" y="917" text-anchor="middle" font-weight="700">pos 9</text>
+    <rect x="972" y="898" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1079" y="917" text-anchor="middle" font-weight="700">pos 10</text>
+    <rect x="1195" y="898" width="215" height="28" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1302" y="917" text-anchor="middle" font-weight="700">pos 11</text>
+
+    <rect x="80" y="926" width="215" height="58" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="187" y="950" text-anchor="middle" font-weight="700">?</text>
+    <text x="187" y="972" text-anchor="middle" fill="#646B76">unknown</text>
+    <rect x="303" y="926" width="215" height="58" fill="#F7E9EF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="410" y="950" text-anchor="middle" font-weight="700">+1.4</text>
+    <text x="410" y="972" text-anchor="middle" fill="#646B76">new</text>
+    <rect x="526" y="926" width="215" height="58" fill="#F7E9EF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="633" y="950" text-anchor="middle" font-weight="700">-0.8</text>
+    <text x="633" y="972" text-anchor="middle" fill="#646B76">new</text>
+    <rect x="749" y="926" width="215" height="58" fill="#F7E9EF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="856" y="950" text-anchor="middle" font-weight="700">+0.6</text>
+    <text x="856" y="972" text-anchor="middle" fill="#646B76">new</text>
+    <rect x="972" y="926" width="215" height="58" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1079" y="950" text-anchor="middle" font-weight="700">?</text>
+    <text x="1079" y="972" text-anchor="middle" fill="#646B76">unknown</text>
+    <rect x="1195" y="926" width="215" height="58" fill="#F7E9EF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1302" y="950" text-anchor="middle" font-weight="700">+0.9</text>
+    <text x="1302" y="972" text-anchor="middle" fill="#646B76">new</text>
+  </g>
+
+  <!-- 图例 4 张 -->
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="1012" width="322" height="92" rx="9" fill="#F7E9EF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="96" y="1038" font-weight="700">new</text>
+    <text x="96" y="1060" fill="#646B76">首次写入：rx LLR 放入该母码位置</text>
+    <rect x="414" y="1012" width="322" height="92" rx="9" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="430" y="1038" font-weight="700">repeat</text>
+    <text x="430" y="1060" fill="#646B76">重复观测：与旧 LLR 饱和相加</text>
+    <rect x="748" y="1012" width="322" height="92" rx="9" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="764" y="1038" font-weight="700">short</text>
+    <text x="764" y="1060" fill="#646B76">shortened/filler：强已知 0 或掩码固定</text>
+    <rect x="1082" y="1012" width="322" height="92" rx="9" fill="#EBEEF2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1098" y="1038" font-weight="700">unknown</text>
+    <text x="1098" y="1060" fill="#646B76">未发送：中性 LLR，等待校验或重传</text>
+  </g>
+</svg>

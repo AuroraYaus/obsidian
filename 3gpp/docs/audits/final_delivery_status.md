@@ -19,7 +19,7 @@ source_spec: "docs/audits/final_delivery_status.md"
 |:---|:---|---:|:---|:---|
 | L1 | T0.1-T5.5 | 28 | 已完成并纳入全项目审计。 | 术语、标题、深度、LaTeX 全检通过；Prompt 覆盖矩阵已纳入。 |
 | L2 | T6-T11，含 T8.0/T9.0 专题 | 43 | 已完成并纳入 L2 总体审查。 | `docs/audits/L2_overall_review.md`；T6-T11 与新增专题已进入 Prompt 覆盖矩阵和图片资产清单。 |
-| L3 | T12-T15 | 23 | 已完成 T12.1-T15.6；性质为 golden model、定点、RTL/ASIC 架构、验证/综合/证据报告讲义与工程规划。 | `docs/audits/prompt_coverage_matrix.md`；`docs/audits/image_asset_inventory.md`；T15.6 最终报告明确真实工程签核状态为 `hold`。 |
+| L3 | T12-T15 | 23 | 已完成 T17.1-T20.6；性质为 golden model、定点、RTL/ASIC 架构、验证/综合/证据报告讲义与工程规划。 | `docs/audits/prompt_coverage_matrix.md`；`docs/audits/image_asset_inventory.md`；T20.6 最终报告明确真实工程签核状态为 `hold`。 |
 
 合计：94 篇讲义，其中 L1 28 篇、L2 43 篇、L3 23 篇。
 
@@ -66,16 +66,16 @@ Prompt 是最低覆盖线，不是写作上限。当前矩阵记录每篇的 roa
 
 ## 真实工程证据边界
 
-L3 已完成的是学习讲义、工程规划、图形化架构和证据报告模板，不是已完成真实芯片工程签核。当前仓库仍没有真实完整 BLER campaign、真实定点损失 campaign、真实 SystemVerilog RTL regression、真实 coverage database、真实 Design Compiler mapped netlist，也没有真实 timing/area/power 报告。T15.6 已明确最终工程签核状态应保持 `hold`，直到这些外部工程证据实际生成并归档。
+L3 已完成的是学习讲义、工程规划、图形化架构和证据报告模板，不是已完成真实芯片工程签核。当前仓库仍没有真实完整 BLER campaign、真实定点损失 campaign、真实 SystemVerilog RTL regression、真实 coverage database、真实 Design Compiler mapped netlist，也没有真实 timing/area/power 报告。T20.6 已明确最终工程签核状态应保持 `hold`，直到这些外部工程证据实际生成并归档。
 
 ## 当前遗留风险
 
 | 优先级 | 项目 | 当前状态 | 关闭条件 |
 |:---|:---|:---|:---|
 | Important | TS 38.214 MCS/TBS 具体表值 | 当前作为调度背景和 HARQ/CBG 上下文，不从表中生成真实 conformance 向量。 | 进入系统级 bit-exact 或 conformance 向量阶段时，按实际使用范围复现表格子集并记录输入 CSV/HTML、脚本、输出资产和正文位置。 |
-| Important | 真实工程签核证据 | T12-T15 给出模型、定点、RTL/ASIC、验证、综合和最终报告方法，但真实工具链未运行。 | 生成真实仿真、定点、RTL、coverage、综合、STA 和功耗证据后，按 T15.6 schema 回填。 |
+| Important | 真实工程签核证据 | T12-T15 给出模型、定点、RTL/ASIC、验证、综合和最终报告方法，但真实工具链未运行。 | 生成真实仿真、定点、RTL、coverage、综合、STA 和功耗证据后，按 T20.6 schema 回填。 |
 | 持续控制 | Python 图片局部视觉审计 | 已形成静态审计和资产清单，但历史多次证明不能只靠边界检查。 | 任一图片修改后逐图复查并更新资产清单。 |
 
 ## 最终结论
 
-截至 2026-06-21，文档交付范围内的 94 篇 LTE/NR 译码学习讲义已全部存在，并通过当前已完成的术语、标题、深度和 LaTeX 全检。最终状态文件、全项目审查和合规审查已同步到 L1/L2/L3 当前范围；真实工程 sign-off 仍按 T15.6 的 `hold` 口径处理。
+截至 2026-06-21，文档交付范围内的 94 篇 LTE/NR 译码学习讲义已全部存在，并通过当前已完成的术语、标题、深度和 LaTeX 全检。最终状态文件、全项目审查和合规审查已同步到 L1/L2/L3 当前范围；真实工程 sign-off 仍按 T20.6 的 `hold` 口径处理。

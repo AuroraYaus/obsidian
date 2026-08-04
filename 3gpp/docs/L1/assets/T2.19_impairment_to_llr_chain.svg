@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @file  -->
+<!-- @brief T2.12–T2.18 失真源到 LLR 错误的传播链 -->
+<!-- @date 2026-08-04 -->
+<!-- @note 手绘教学 SVG：坐标程序化计算，已通过 y 扫描/bbox 审计/cairosvg 渲染验证 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" width="900" height="720">
+<rect width="900" height="720" fill="#ffffff"/>
+<style>
+.title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 19px; font-weight: bold; fill: #111; }
+.sub { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #555; }
+.ptitle { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 14px; font-weight: bold; fill: #111; }
+.label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 13px; fill: #222; }
+.small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 11.5px; fill: #555; }
+.mono { font-family: monospace; font-size: 13px; fill: #333; }
+.axis { stroke: #444; stroke-width: 1.4; }
+.grid { stroke: #d8d8d8; stroke-width: 1; }
+.bound { stroke: #999; stroke-width: 1.2; stroke-dasharray: 6,5; }
+.box { fill: #f7f9fc; stroke: #444; stroke-width: 1.3; rx: 6; }
+</style>
+<text x="450.0" y="30" text-anchor="middle" class="title">T2.12–T2.18 失真源到 LLR 错误的传播链</text>
+<text x="450.0" y="56" text-anchor="middle" class="sub">每个前端模块的残留误差都折叠进 soft demapper 的输入（z、σ²eq、CSI/SINR），最终表现为四类 LLR 失真</text>
+<rect x="28" y="78" width="240" height="56" class="box"/>
+<text x="40" y="102" class="label" font-weight="bold">T2.12 定时同步</text>
+<text x="40" y="126" class="small">FFT 窗口错位 → 相位斜率 / ISI / ICI</text>
+<rect x="28" y="148" width="240" height="56" class="box"/>
+<text x="40" y="172" class="label" font-weight="bold">T2.13 CFO / SFO</text>
+<text x="40" y="196" class="small">残余旋转 → 星座整体旋转</text>
+<rect x="28" y="218" width="240" height="56" class="box"/>
+<text x="40" y="242" class="label" font-weight="bold">T2.14 DM-RS 信道估计</text>
+<text x="40" y="266" class="small">Ĥ 幅相偏差 → 均衡偏置</text>
+<rect x="28" y="288" width="240" height="56" class="box"/>
+<text x="40" y="312" class="label" font-weight="bold">T2.15 均衡</text>
+<text x="40" y="336" class="small">噪声增强 / 残留干扰</text>
+<rect x="28" y="358" width="240" height="56" class="box"/>
+<text x="40" y="382" class="label" font-weight="bold">T2.16 MIMO 检测</text>
+<text x="40" y="406" class="small">残留层间干扰</text>
+<rect x="28" y="428" width="240" height="56" class="box"/>
+<text x="40" y="452" class="label" font-weight="bold">T2.17 PAPR / PA</text>
+<text x="40" y="476" class="small">削峰与非线性 → EVM、压缩</text>
+<rect x="28" y="498" width="240" height="56" class="box"/>
+<text x="40" y="522" class="label" font-weight="bold">T2.18 窗口 / 滤波</text>
+<text x="40" y="546" class="small">边缘子载波失真</text>
+<rect x="380" y="150" width="260" height="104" fill="#E0F2F1" stroke="#00796B" stroke-width="1.6" rx="6"/>
+<text x="392" y="172" class="label" font-weight="bold" fill="#00796B">soft demapper 输入</text>
+<text x="392" y="199" class="small">均衡后符号 z（位置与旋转）</text>
+<text x="392" y="224" class="small">等效噪声方差 σ²eq（含残留干扰）</text>
+<text x="392" y="249" class="small">CSI / SINR 与调制映射（TS 38.211 §5.1）</text>
+<rect x="380" y="330" width="260" height="58" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="1.6" rx="6"/>
+<text x="392" y="355" class="label" font-weight="bold" fill="#6A1B9A">逐比特 LLR 生成</text>
+<text x="392" y="380" class="small">判决边界来自协议星座：0、±2a、±4a…</text>
+<rect x="720" y="96" width="160" height="54" fill="#FFF3E0" stroke="#E65100" stroke-width="1.5" rx="6"/>
+<text x="800" y="120" text-anchor="middle" class="label" font-weight="bold" fill="#E65100">符号错误</text>
+<text x="800" y="146" text-anchor="middle" class="small">正负写反</text>
+<rect x="720" y="214" width="160" height="54" fill="#FFF3E0" stroke="#455A64" stroke-width="1.5" rx="6"/>
+<text x="800" y="238" text-anchor="middle" class="label" font-weight="bold" fill="#455A64">幅度错误</text>
+<text x="800" y="264" text-anchor="middle" class="small">过强 / 过弱</text>
+<rect x="720" y="332" width="160" height="54" fill="#FFF3E0" stroke="#6A1B9A" stroke-width="1.5" rx="6"/>
+<text x="800" y="356" text-anchor="middle" class="label" font-weight="bold" fill="#6A1B9A">相关性错误</text>
+<text x="800" y="382" text-anchor="middle" class="small">观测不再独立</text>
+<rect x="720" y="450" width="160" height="54" fill="#FFF3E0" stroke="#37474F" stroke-width="1.5" rx="6"/>
+<text x="800" y="474" text-anchor="middle" class="label" font-weight="bold" fill="#37474F">裁剪 / 量化</text>
+<text x="800" y="500" text-anchor="middle" class="small">极值饱和、翻符号</text>
+<rect x="240" y="620" width="420" height="58" fill="#FDECEA" stroke="#E65100" stroke-width="1.8" rx="6"/>
+<text x="450" y="646" text-anchor="middle" class="label" font-weight="bold" fill="#E65100">译码器输入质量恶化 → BLER 相对 AWGN 上界回退</text>
+<text x="450" y="671" text-anchor="middle" class="small">译码器无法从 LLR 反推是哪个前端模块出错 → 必须保留前端证据</text>
+<path d="M 268 106 H 330 V 198 H 380" fill="none" stroke="#00796B" stroke-width="1.6"/>
+<path d="M 268 176 H 330 V 198 H 380" fill="none" stroke="#00796B" stroke-width="1.6"/>
+<path d="M 268 246 H 330 V 198 H 380" fill="none" stroke="#00796B" stroke-width="1.6"/>
+<path d="M 268 316 H 330 V 198 H 380" fill="none" stroke="#00796B" stroke-width="1.6"/>
+<path d="M 268 386 H 330 V 198 H 380" fill="none" stroke="#00796B" stroke-width="1.6"/>
+<path d="M 268 456 H 330 V 198 H 380" fill="none" stroke="#00796B" stroke-width="1.6"/>
+<path d="M 268 526 H 330 V 198 H 380" fill="none" stroke="#00796B" stroke-width="1.6"/>
+<path d="M 510 250 V 330" fill="none" stroke="#6A1B9A" stroke-width="1.8"/>
+<polygon points="504,320 510,336 516,320" fill="#6A1B9A"/>
+<path d="M 640 350 H 700 V 123 H 720" fill="none" stroke="#6A1B9A" stroke-width="1.6"/>
+<path d="M 640 350 H 700 V 241 H 720" fill="none" stroke="#6A1B9A" stroke-width="1.6"/>
+<path d="M 640 350 H 700 V 359 H 720" fill="none" stroke="#6A1B9A" stroke-width="1.6"/>
+<path d="M 640 350 H 700 V 477 H 720" fill="none" stroke="#6A1B9A" stroke-width="1.6"/>
+<path d="M 780 123 V 649 H 660" fill="none" stroke="#E65100" stroke-width="1.6"/>
+<path d="M 780 241 V 649 H 660" fill="none" stroke="#E65100" stroke-width="1.6"/>
+<path d="M 780 359 V 649 H 660" fill="none" stroke="#E65100" stroke-width="1.6"/>
+<path d="M 780 477 V 649 H 660" fill="none" stroke="#E65100" stroke-width="1.6"/>
+<text x="450" y="712" text-anchor="middle" class="small">收束关系：失真源 → 输入变量被污染 → LLR 四类错误 → 译码性能（机制见图 2 与图 3）</text>
+</svg>

@@ -1,0 +1,126 @@
+<!--
+@file    T2.15_freq_selective_constellation_equalize.svg
+@brief   频选信道下均衡前后 QPSK 星座点云：三个子载波（平坦 |H|=1 经 ZF、
+         深衰落 |H|=0.2 经 ZF、深衰落 |H|=0.2 经 MMSE）均衡前后的
+         散点形态、簇分离程度与状态徽章
+@date    2026-08-04
+@note    数据口径：噪声 σ²=0.04（σ=0.2）；均衡前 B/C 列四簇重叠；
+         均衡后 A 恢复（14 dB）、B 的 ZF 把噪声扩散到 σ_eq=1.0（0 dB）、
+         C 的 MMSE 原始输出 0.5× 有偏、σ=0.5（MSE=0.5）。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 660" width="960" height="660">
+<rect width="960" height="660" fill="#ffffff"/>
+<style>
+.title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 19px; font-weight: bold; fill: #1A237E; }
+.label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 14px; fill: #222; }
+.small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #546E7A; }
+.mono { font-family: "DejaVu Sans Mono", monospace; font-size: 13px; fill: #37474F; }
+.card { fill: #FFFFFF; stroke: #9FA8DA; stroke-width: 1.2; }
+.head-a { fill: #E8F5E9; stroke: #1B5E20; stroke-width: 1.4; }
+.head-b { fill: #FBE9E7; stroke: #B71C1C; stroke-width: 1.4; }
+.head-c { fill: #EDE7F6; stroke: #6A1B9A; stroke-width: 1.4; }
+.badge-a { fill: #E8F5E9; stroke: #1B5E20; stroke-width: 1.2; }
+.badge-b { fill: #FBE9E7; stroke: #B71C1C; stroke-width: 1.2; }
+.badge-c { fill: #EDE7F6; stroke: #6A1B9A; stroke-width: 1.2; }
+.axis { stroke: #CFD8DC; stroke-width: 1; stroke-dasharray: 4,3; }
+.dot { fill: #283593; }
+.dot-zf { fill: #B71C1C; }
+.dot-mmse { fill: #6A1B9A; }
+.dot-ok { fill: #1B5E20; }
+.arrow { stroke: #455A64; stroke-width: 1.6; fill: none; }
+</style>
+
+<text x="480" y="30" text-anchor="middle" class="title">频选信道下均衡前后 QPSK 星座点云</text>
+<text x="480" y="54" text-anchor="middle" class="small">同一符号周期内三个子载波：平坦（|H|=1）与深衰落（|H|=0.2）；噪声 σ²=0.04；深衰落子载波分别观察 ZF 与 MMSE</text>
+
+<defs>
+<g id="c1"><circle cx="-6" cy="-4" r="2.6"/><circle cx="7" cy="5" r="2.6"/><circle cx="-6" cy="6" r="2.6"/><circle cx="6" cy="-5" r="2.6"/><circle cx="0" cy="-8" r="2.6"/><circle cx="3" cy="3" r="2.6"/></g>
+<g id="c2"><circle cx="-14" cy="-9" r="2.6"/><circle cx="13" cy="11" r="2.6"/><circle cx="-12" cy="13" r="2.6"/><circle cx="14" cy="-10" r="2.6"/><circle cx="-2" cy="-17" r="2.6"/><circle cx="4" cy="4" r="2.6"/></g>
+<g id="c3"><circle cx="-28" cy="-20" r="2.6"/><circle cx="27" cy="22" r="2.6"/><circle cx="-25" cy="24" r="2.6"/><circle cx="28" cy="-19" r="2.6"/><circle cx="-4" cy="-34" r="2.6"/><circle cx="8" cy="8" r="2.6"/></g>
+</defs>
+
+<rect x="60" y="80" width="250" height="480" rx="10" class="card"/>
+<rect x="60" y="80" width="250" height="46" rx="10" class="head-a"/>
+<text x="185" y="98" text-anchor="middle" class="label" fill="#1B5E20">子载波 A：平坦 |H|=1</text>
+<text x="185" y="116" text-anchor="middle" class="small" fill="#1B5E20">均衡器：ZF</text>
+
+<text x="185" y="152" text-anchor="middle" class="small">均衡前：Y=X+n</text>
+<line x1="120" y1="210" x2="250" y2="210" class="axis"/>
+<line x1="185" y1="145" x2="185" y2="275" class="axis"/>
+<use href="#c1" transform="translate(149,174)" class="dot"/>
+<use href="#c1" transform="translate(221,174)" class="dot"/>
+<use href="#c1" transform="translate(149,246)" class="dot"/>
+<use href="#c1" transform="translate(221,246)" class="dot"/>
+<text x="185" y="300" text-anchor="middle" class="small">四簇清晰可区分</text>
+
+<text x="185" y="330" text-anchor="middle" class="small">均衡后：X̂=Y/1.0</text>
+<line x1="120" y1="388" x2="250" y2="388" class="axis"/>
+<line x1="185" y1="323" x2="185" y2="453" class="axis"/>
+<use href="#c1" transform="translate(149,352)" class="dot-ok"/>
+<use href="#c1" transform="translate(221,352)" class="dot-ok"/>
+<use href="#c1" transform="translate(149,424)" class="dot-ok"/>
+<use href="#c1" transform="translate(221,424)" class="dot-ok"/>
+<text x="185" y="478" text-anchor="middle" class="small">恢复理想位置，噪声不变</text>
+<rect x="95" y="494" width="180" height="28" rx="14" class="badge-a"/>
+<text x="185" y="513" text-anchor="middle" class="small" fill="#1B5E20">可判决 · 14 dB</text>
+<rect x="95" y="532" width="180" height="24" rx="12" class="badge-a"/>
+<text x="185" y="549" text-anchor="middle" class="small" fill="#1B5E20">LLR 正常缩放</text>
+
+<rect x="355" y="80" width="250" height="480" rx="10" class="card"/>
+<rect x="355" y="80" width="250" height="46" rx="10" class="head-b"/>
+<text x="480" y="98" text-anchor="middle" class="label" fill="#B71C1C">子载波 B：深衰落 |H|=0.2</text>
+<text x="480" y="116" text-anchor="middle" class="small" fill="#B71C1C">均衡器：ZF</text>
+
+<text x="480" y="152" text-anchor="middle" class="small">均衡前：Y=0.2X+n</text>
+<line x1="415" y1="210" x2="545" y2="210" class="axis"/>
+<line x1="480" y1="145" x2="480" y2="275" class="axis"/>
+<use href="#c2" transform="translate(473,203)" class="dot"/>
+<use href="#c2" transform="translate(487,203)" class="dot"/>
+<use href="#c2" transform="translate(473,217)" class="dot"/>
+<use href="#c2" transform="translate(487,217)" class="dot"/>
+<text x="480" y="300" text-anchor="middle" class="small">信号被压到 0.2×，四簇重叠</text>
+
+<text x="480" y="330" text-anchor="middle" class="small">均衡后：X̂=Y/0.2</text>
+<line x1="415" y1="388" x2="545" y2="388" class="axis"/>
+<line x1="480" y1="323" x2="480" y2="453" class="axis"/>
+<use href="#c3" transform="translate(444,352)" class="dot-zf"/>
+<use href="#c3" transform="translate(516,352)" class="dot-zf"/>
+<use href="#c3" transform="translate(444,424)" class="dot-zf"/>
+<use href="#c3" transform="translate(516,424)" class="dot-zf"/>
+<text x="480" y="478" text-anchor="middle" class="small">位置回正，但噪声扩散到 σ_eq=1.0</text>
+<rect x="390" y="494" width="180" height="28" rx="14" class="badge-b"/>
+<text x="480" y="513" text-anchor="middle" class="small" fill="#B71C1C">0 dB · 簇仍重叠</text>
+<rect x="390" y="532" width="180" height="24" rx="12" class="badge-b"/>
+<text x="480" y="549" text-anchor="middle" class="small" fill="#B71C1C">LLR 必须收缩</text>
+
+<rect x="650" y="80" width="250" height="480" rx="10" class="card"/>
+<rect x="650" y="80" width="250" height="46" rx="10" class="head-c"/>
+<text x="775" y="98" text-anchor="middle" class="label" fill="#6A1B9A">子载波 C：深衰落 |H|=0.2</text>
+<text x="775" y="116" text-anchor="middle" class="small" fill="#6A1B9A">均衡器：MMSE</text>
+
+<text x="775" y="152" text-anchor="middle" class="small">均衡前：Y=0.2X+n</text>
+<line x1="710" y1="210" x2="840" y2="210" class="axis"/>
+<line x1="775" y1="145" x2="775" y2="275" class="axis"/>
+<use href="#c2" transform="translate(768,203)" class="dot-mmse"/>
+<use href="#c2" transform="translate(782,203)" class="dot-mmse"/>
+<use href="#c2" transform="translate(768,217)" class="dot-mmse"/>
+<use href="#c2" transform="translate(782,217)" class="dot-mmse"/>
+<text x="775" y="300" text-anchor="middle" class="small">与 B 相同的接收起点</text>
+
+<text x="775" y="330" text-anchor="middle" class="small">均衡后：X̂=2.5Y</text>
+<line x1="710" y1="388" x2="840" y2="388" class="axis"/>
+<line x1="775" y1="323" x2="775" y2="453" class="axis"/>
+<use href="#c2" transform="translate(757,370)" class="dot-mmse"/>
+<use href="#c2" transform="translate(793,370)" class="dot-mmse"/>
+<use href="#c2" transform="translate(757,406)" class="dot-mmse"/>
+<use href="#c2" transform="translate(793,406)" class="dot-mmse"/>
+<text x="775" y="478" text-anchor="middle" class="small">0.5× 有偏、σ=0.5，总 MSE 更小</text>
+<rect x="690" y="494" width="180" height="28" rx="14" class="badge-c"/>
+<text x="775" y="513" text-anchor="middle" class="small" fill="#6A1B9A">有偏 · MSE 0.5</text>
+<rect x="690" y="532" width="180" height="24" rx="12" class="badge-c"/>
+<text x="775" y="549" text-anchor="middle" class="small" fill="#6A1B9A">归一化后噪声还原</text>
+
+<rect x="60" y="580" width="840" height="64" rx="10" fill="#ECEFF1" stroke="#78909C" stroke-width="1.2"/>
+<text x="480" y="604" text-anchor="middle" class="label">结论：均衡只解决“位置”，不解决“可靠度”——深衰落 RE 均衡后星座仍重叠，</text>
+<text x="480" y="626" text-anchor="middle" class="label">可靠度必须由 CSI/SINR 传递给软解调，LLR 才不会被过度放大。</text>
+</svg>

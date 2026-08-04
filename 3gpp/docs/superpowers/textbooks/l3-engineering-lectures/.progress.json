@@ -1,0 +1,24 @@
+{
+  "textbook_name": "L3 接收链路工程讲义系列",
+  "subject": "3GPP 接收链路 Modem 工程预算（周期/存储/面积/位宽）",
+  "created_at": "2026-08-04",
+  "updated_at": "2026-08-04",
+  "current_stage": 5,
+  "gates": {
+    "stage2_ubd_confirmed": true,
+    "stage3_outline_confirmed": true
+  },
+  "chapters": {
+    "total": 6,
+    "done": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "next": 7
+  },
+  "stage5_passed": true
+}

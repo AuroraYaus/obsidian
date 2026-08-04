@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.svg
+  @brief   TS 36.212 Figure 5.1.3-2 重建：LTE rate 1/3 Turbo 编码器结构（手绘 SVG）
+  @date    2026-08-04
+  @note    依据 TS 36.212 Rel-19 §5.1.3.2.1/§5.1.3.2.2 与 media/image79.wmf 重建。
+           布局按讲义语义重排：左侧输入沿系统脊线右行至三路母码流，两个组成编码器
+           分支挂在脊线上下；下方网格终止路径用虚线尾比特。语义配色：
+           蓝=系统路、绿=两路校验、琥珀=内部交织器、紫=母码流、红=终止路径。
+           字号符合合规 Rule 23：标题 18px、主体 13-14px、辅助 11-12px。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="840" viewBox="0 0 1000 840" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>TS 36.212 Figure 5.1.3-2 重建：LTE rate 1/3 Turbo 编码器结构</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5D6B80"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3B6FB5"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3E9E74"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#D18A2F"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A6BBE"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 标题 ============ -->
+  <text x="40" y="34" font-size="18" font-weight="700" fill="#1B2433">TS 36.212 Figure 5.1.3-2 重建：LTE rate 1/3 Turbo 编码器结构</text>
+  <text x="40" y="58" font-size="12" fill="#5D6B80">依据 TS 36.212 Rel-19 §5.1.3.2.1/§5.1.3.2.2 和本地 media/image79.wmf 重建。</text>
+  <text x="40" y="74" font-size="12" fill="#5D6B80">实线表示信息编码阶段；虚线表示网格终止阶段使用的尾比特路径。</text>
+
+  <!-- ============ 分支 1：第一组成编码器（脊线上方） ============ -->
+  <g filter="url(#soft)">
+    <rect x="255" y="95" width="195" height="90" rx="12" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
+  </g>
+  <text x="352" y="125" font-size="14" font-weight="700" fill="#1B2433" text-anchor="middle">第一 8 状态组成编码器</text>
+  <text x="352" y="153" font-size="12" fill="#5D6B80" text-anchor="middle">原始顺序输入；产生第一校验路</text>
+
+  <g filter="url(#soft)">
+    <rect x="490" y="120" width="120" height="40" rx="10" fill="#3E9E74" stroke="#3E9E74" stroke-width="1.5"/>
+  </g>
+  <text x="550" y="147" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">第一校验 d(1)</text>
+
+  <!-- ============ 系统脊线：码块输入 -> 系统路 -> 三路母码流 ============ -->
+  <g filter="url(#soft)">
+    <rect x="40" y="185" width="170" height="85" rx="12" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+  </g>
+  <text x="125" y="217" font-size="14" font-weight="700" fill="#1B2433" text-anchor="middle">码块输入</text>
+  <text x="125" y="245" font-size="13" fill="#5D6B80" text-anchor="middle">c0...cK-1</text>
+
+  <g filter="url(#soft)">
+    <rect x="255" y="205" width="135" height="40" rx="10" fill="#3B6FB5" stroke="#3B6FB5" stroke-width="1.5"/>
+  </g>
+  <text x="322" y="232" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">系统路 d(0)</text>
+
+  <g filter="url(#soft)">
+    <rect x="700" y="130" width="260" height="125" rx="12" fill="#F0EBF9" stroke="#8A6BBE" stroke-width="1.5"/>
+  </g>
+  <text x="830" y="163" font-size="15" font-weight="700" fill="#1B2433" text-anchor="middle">三路母码流</text>
+  <text x="830" y="193" font-size="13" fill="#1B2433" text-anchor="middle">d(0), d(1), d(2)；</text>
+  <text x="830" y="215" font-size="13" fill="#1B2433" text-anchor="middle">每路长度 D=K+4</text>
+
+  <!-- ============ 分支 2：交织器 + 第二组成编码器（脊线下方） ============ -->
+  <g filter="url(#soft)">
+    <rect x="255" y="315" width="195" height="90" rx="12" fill="#FAF0DC" stroke="#D18A2F" stroke-width="1.5"/>
+  </g>
+  <text x="352" y="345" font-size="14" font-weight="700" fill="#1B2433" text-anchor="middle">Turbo 内部交织器</text>
+  <text x="352" y="373" font-size="12" fill="#5D6B80" text-anchor="middle">同一组输入比特重排后</text>
+  <text x="352" y="389" font-size="12" fill="#5D6B80" text-anchor="middle">送入第二编码器</text>
+
+  <g filter="url(#soft)">
+    <rect x="490" y="315" width="190" height="90" rx="12" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
+  </g>
+  <text x="585" y="345" font-size="14" font-weight="700" fill="#1B2433" text-anchor="middle">第二 8 状态组成编码器</text>
+  <text x="585" y="373" font-size="12" fill="#5D6B80" text-anchor="middle">交织后顺序输入；产生第二校验路</text>
+
+  <g filter="url(#soft)">
+    <rect x="720" y="340" width="110" height="40" rx="10" fill="#3E9E74" stroke="#3E9E74" stroke-width="1.5"/>
+  </g>
+  <text x="775" y="367" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">第二校验 d(2)</text>
+
+  <!-- ============ 信息编码阶段箭头（实线） ============ -->
+  <g stroke-width="1.8" fill="none">
+    <path d="M 210 225 H 255" stroke="#3B6FB5" marker-end="url(#arrow-blue)"/>
+    <path d="M 390 225 L 700 195" stroke="#3B6FB5" marker-end="url(#arrow-blue)"/>
+    <path d="M 130 185 L 300 185" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
+    <path d="M 150 270 L 280 315" stroke="#D18A2F" marker-end="url(#arrow-amber)"/>
+    <path d="M 450 140 H 490" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
+    <path d="M 450 360 H 490" stroke="#D18A2F" marker-end="url(#arrow-amber)"/>
+    <path d="M 680 360 H 720" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
+    <path d="M 610 140 L 700 205" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
+    <path d="M 830 380 L 790 255" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
+  </g>
+
+  <!-- ============ 网格终止路径 ============ -->
+  <g filter="url(#soft)">
+    <rect x="40" y="440" width="920" height="250" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="60" y="468" font-size="15" font-weight="700" fill="#1B2433">网格终止路径</text>
+  <text x="60" y="490" font-size="12" fill="#5D6B80">全部信息比特编码完成后，从移位寄存器反馈取尾比特。前 3 个尾比特终止第一组成编码器，同时第二组成编码器关闭；</text>
+  <text x="60" y="506" font-size="12" fill="#5D6B80">后 3 个尾比特终止第二组成编码器，同时第一组成编码器关闭。接收端必须为这些尾比特准备软输入，否则末端状态边界会被破坏。</text>
+
+  <g filter="url(#soft)">
+    <rect x="60" y="530" width="155" height="80" rx="10" fill="#FFFFFF" stroke="#C4553D" stroke-width="1.5"/>
+  </g>
+  <text x="137" y="560" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">反馈取尾比特</text>
+  <text x="137" y="586" font-size="12" fill="#5D6B80" text-anchor="middle">来自组成编码器反馈端</text>
+
+  <g filter="url(#soft)">
+    <rect x="255" y="510" width="185" height="80" rx="10" fill="#FFFFFF" stroke="#3E9E74" stroke-width="1.5"/>
+  </g>
+  <text x="347" y="540" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">前 3 个尾比特</text>
+  <text x="347" y="562" font-size="12" fill="#5D6B80" text-anchor="middle">upper switch lower</text>
+  <text x="347" y="578" font-size="12" fill="#5D6B80" text-anchor="middle">position；终止第一编码器</text>
+
+  <g filter="url(#soft)">
+    <rect x="255" y="600" width="185" height="70" rx="10" fill="#FFFFFF" stroke="#3E9E74" stroke-width="1.5"/>
+  </g>
+  <text x="347" y="628" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">后 3 个尾比特</text>
+  <text x="347" y="650" font-size="12" fill="#5D6B80" text-anchor="middle">lower switch lower</text>
+  <text x="347" y="666" font-size="12" fill="#5D6B80" text-anchor="middle">position；终止第二编码器</text>
+
+  <g filter="url(#soft)">
+    <rect x="485" y="540" width="215" height="95" rx="10" fill="#FFFFFF" stroke="#8A6BBE" stroke-width="1.5"/>
+  </g>
+  <text x="592" y="570" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">尾比特输出排列</text>
+  <text x="592" y="594" font-size="12" fill="#5D6B80" text-anchor="middle">进入三路母码流尾部，使每路长度</text>
+  <text x="592" y="610" font-size="12" fill="#5D6B80" text-anchor="middle">从 K 变为 D=K+4</text>
+
+  <g filter="url(#soft)">
+    <rect x="745" y="560" width="135" height="45" rx="10" fill="#8A6BBE" stroke="#8A6BBE" stroke-width="1.5"/>
+  </g>
+  <text x="812" y="589" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">尾部软输入</text>
+
+  <!-- 虚线：尾比特路径 -->
+  <g stroke-width="1.8" stroke-dasharray="6 5" fill="none">
+    <path d="M 215 560 L 255 555" stroke="#C4553D" marker-end="url(#arrow)"/>
+    <path d="M 215 605 L 255 630" stroke="#C4553D" marker-end="url(#arrow)"/>
+    <path d="M 440 555 L 485 570" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
+    <path d="M 440 640 L 485 620" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
+    <path d="M 700 585 H 745" stroke="#8A6BBE" marker-end="url(#arrow-purple)"/>
+  </g>
+
+  <!-- ============ 接收端读图顺序 ============ -->
+  <g filter="url(#soft)">
+    <rect x="40" y="710" width="920" height="115" rx="12" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="60" y="742" font-size="14" font-weight="700" fill="#1B2433">接收端读图顺序</text>
+  <g font-size="12" fill="#5D6B80">
+    <text x="60" y="768">1. d(0) 是系统路，d(1)/d(2) 是两路组成编码器校验。</text>
+    <text x="60" y="796">2. 内部交织器只改变第二编码器看到的输入顺序，不产生新的信息比特。</text>
+    <text x="540" y="768">3. 虚线路径只在 trellis termination 阶段生效，</text>
+    <text x="556" y="781">影响尾比特和 D=K+4。</text>
+    <text x="540" y="796">4. Turbo 译码器的三路 LLR、终止状态和尾部地址必须与该结构一致。</text>
+  </g>
+</svg>

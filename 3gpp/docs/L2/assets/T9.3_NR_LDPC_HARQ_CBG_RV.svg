@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T9.3_NR_LDPC_HARQ_CBG_RV.svg
+  @brief   NR LDPC HARQ Soft Buffer、RV 与 CBG 部分重传综合教学图（手绘 SVG V2：布局与配色依据 T9.3 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：TB/CBG/CB 三级层级（TB0: harq_id=5, NDI=old, RV=2, CBGTI=[0,1],
+           CBGFI=1）、双 circular buffer 环形视图（CB0/CBG0 保持 RV0；CB2/CBG1 RV2
+           覆盖 addr 4/5/6、addr3 饱和累加）、接收端写回规则五条、最小调试 dump 与
+           风险检查五卡，均与讲义 T9.3 正文及图 T9.3-1 语义一致。
+           视觉设计：层级区自上而下三带；双环保留环形语义但改用角色色
+           （RV0 历史=青瓷、RV2 新覆盖=橄榄、重复=赭金、未覆盖=石板）。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1700" viewBox="0 0 1500 1700" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>NR LDPC HARQ Soft Buffer、RV 与 CBG 部分重传</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">NR LDPC HARQ Soft Buffer、RV 与 CBG 部分重传</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">目标：把 RV/k0 地址选择、HARQ soft buffer 合并、CBG partial retransmission 放在同一张图里。CBGTI 只选择哪些 CBG 本次出现；CBGFI 决定重传 CBG 能否与旧实例合并；RV 决定 CBG 内部 CB 的 circular-buffer 起点；soft buffer 按地址保持、写入、累加和饱和。</text>
+
+  <!-- ============ 面板 A：TB / CBG / CB 层级 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="440" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="154" width="10" height="10" rx="3" fill="#2F6E71"/>
+  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">TB / CBG / CB 层级与本次重传 mask</text>
+
+  <g filter="url(#soft)">
+    <rect x="90" y="190" width="1320" height="56" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+  </g>
+  <text x="750" y="225" font-size="14" font-weight="700" text-anchor="middle" fill="#23272E">TB0: harq_id=5, tb_id=0, NDI=old data, RV=2, CBGTI=[0,1], CBGFI=1</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <rect x="110" y="286" width="620" height="126" rx="12" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="138" y="316" font-weight="700" fill="#7A6E8E">CBG0</text>
+    <text x="138" y="342">CB0, CB1</text>
+    <text x="138" y="372" fill="#646B76">mask bit=0: 本次不重传，soft buffer 保持</text>
+    <rect x="770" y="286" width="620" height="126" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="798" y="316" font-weight="700" fill="#6C7A2E">CBG1</text>
+    <text x="798" y="342">CB2, CB3</text>
+    <text x="798" y="372" fill="#646B76">mask bit=1: 本次重传，按 RV2/k0 写回</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 420 246 V 286" marker-end="url(#arrow)"/>
+    <path d="M 1080 246 V 286" marker-end="url(#arrow)"/>
+  </g>
+
+  <g font-size="13" fill="#23272E">
+    <rect x="150" y="452" width="260" height="60" rx="10" fill="#FFFFFF" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="280" y="489" text-anchor="middle" font-weight="700">CB0</text>
+    <rect x="470" y="452" width="260" height="60" rx="10" fill="#FFFFFF" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="600" y="489" text-anchor="middle" font-weight="700">CB1</text>
+    <rect x="810" y="452" width="260" height="60" rx="10" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="940" y="489" text-anchor="middle" font-weight="700">CB2</text>
+    <rect x="1130" y="452" width="260" height="60" rx="10" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="1260" y="489" text-anchor="middle" font-weight="700">CB3</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 420 412 V 452" marker-end="url(#arrow)"/>
+    <path d="M 600 412 V 452" marker-end="url(#arrow)"/>
+    <path d="M 940 412 V 452" marker-end="url(#arrow)"/>
+    <path d="M 1260 412 V 452" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 面板 B：双环 + 写回规则 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="600" width="1380" height="620" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="624" width="10" height="10" rx="3" fill="#6C7A2E"/>
+  <text x="108" y="633" font-size="17" font-weight="700" fill="#23272E">RV 起点、部分重传与 soft buffer 动作</text>
+
+  <!-- 左环 CB0/CBG0：cx=330 cy=950 r=130 -->
+  <text x="150" y="700" font-size="13.5" font-weight="700" fill="#23272E">CB0 / CBG0: 未被 CBGTI 调度</text>
+  <g font-size="11" fill="#23272E">
+    <rect x="312" y="798" width="36" height="30" rx="6" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="330" y="819" text-anchor="middle" font-weight="700">0</text>
+    <rect x="383" y="812" width="36" height="30" rx="6" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="401" y="833" text-anchor="middle" font-weight="700">1</text>
+    <rect x="435" y="853" width="36" height="30" rx="6" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="453" y="874" text-anchor="middle" font-weight="700">2</text>
+    <rect x="452" y="935" width="36" height="30" rx="6" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="470" y="956" text-anchor="middle" font-weight="700">3</text>
+    <rect x="435" y="1017" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="453" y="1038" text-anchor="middle" font-weight="700">4</text>
+    <rect x="383" y="1058" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="401" y="1079" text-anchor="middle" font-weight="700">5</text>
+    <rect x="312" y="1072" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="330" y="1093" text-anchor="middle" font-weight="700">6</text>
+    <rect x="241" y="1058" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="259" y="1079" text-anchor="middle" font-weight="700">7</text>
+    <rect x="189" y="1017" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="207" y="1038" text-anchor="middle" font-weight="700">8</text>
+    <rect x="172" y="935" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="190" y="956" text-anchor="middle" font-weight="700">9</text>
+    <rect x="189" y="853" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="207" y="874" text-anchor="middle" font-weight="700">10</text>
+    <rect x="241" y="812" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="259" y="833" text-anchor="middle" font-weight="700">11</text>
+  </g>
+  <circle cx="330" cy="935" r="58" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  <text x="330" y="929" font-size="11" text-anchor="middle" font-weight="700" fill="#23272E">CB0</text>
+  <text x="330" y="945" font-size="11" text-anchor="middle" font-weight="700" fill="#23272E">保持</text>
+  <text x="150" y="1130" font-size="12" class="free" fill="#2F6E71">RV0 history: addr 0-3</text>
+  <text x="150" y="1154" font-size="12" class="free" fill="#646B76">本次无新 LLR，保持 RV0 结果</text>
+
+  <!-- 右环 CB2/CBG1：cx=820 cy=950 r=130 -->
+  <text x="640" y="700" font-size="13.5" font-weight="700" fill="#23272E">CB2 / CBG1: RV2 部分重传</text>
+  <g font-size="11" fill="#23272E">
+    <rect x="802" y="798" width="36" height="30" rx="6" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="820" y="819" text-anchor="middle" font-weight="700">0</text>
+    <rect x="873" y="812" width="36" height="30" rx="6" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="891" y="833" text-anchor="middle" font-weight="700">1</text>
+    <rect x="925" y="853" width="36" height="30" rx="6" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="943" y="874" text-anchor="middle" font-weight="700">2</text>
+    <rect x="942" y="935" width="36" height="30" rx="6" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="960" y="956" text-anchor="middle" font-weight="700">3</text>
+    <rect x="925" y="1017" width="36" height="30" rx="6" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="943" y="1038" text-anchor="middle" font-weight="700">4</text>
+    <rect x="873" y="1058" width="36" height="30" rx="6" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="891" y="1079" text-anchor="middle" font-weight="700">5</text>
+    <rect x="802" y="1072" width="36" height="30" rx="6" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="820" y="1093" text-anchor="middle" font-weight="700">6</text>
+    <rect x="731" y="1058" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="749" y="1079" text-anchor="middle" font-weight="700">7</text>
+    <rect x="679" y="1017" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="697" y="1038" text-anchor="middle" font-weight="700">8</text>
+    <rect x="662" y="935" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="680" y="956" text-anchor="middle" font-weight="700">9</text>
+    <rect x="679" y="853" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="697" y="874" text-anchor="middle" font-weight="700">10</text>
+    <rect x="731" y="812" width="36" height="30" rx="6" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="749" y="833" text-anchor="middle" font-weight="700">11</text>
+  </g>
+  <circle cx="820" cy="935" r="58" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  <text x="820" y="929" font-size="11" text-anchor="middle" font-weight="700" fill="#23272E">CB2</text>
+  <text x="820" y="945" font-size="11" text-anchor="middle" font-weight="700" fill="#23272E">重传</text>
+  <text x="640" y="1130" font-size="12" class="free" fill="#2F6E71">RV0 history: addr 0-3</text>
+  <text x="640" y="1154" font-size="12" class="free" fill="#6C7A2E">RV2 now: addr 3-6, addr3 repeats（饱和累加）</text>
+
+  <!-- 接收端写回规则 -->
+  <g filter="url(#soft)">
+    <rect x="1060" y="640" width="360" height="560" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  </g>
+  <text x="1088" y="680" font-size="15" font-weight="700" fill="#23272E">接收端写回规则</text>
+  <g font-size="12" fill="#23272E">
+    <rect x="1080" y="708" width="320" height="70" rx="8" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1100" y="736" font-weight="700">CBG0 mask=0</text>
+    <text x="1100" y="758" fill="#646B76">不消费本组 LLR；缓存不变</text>
+    <rect x="1080" y="790" width="320" height="70" rx="8" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1100" y="818" font-weight="700">CBG1 mask=1</text>
+    <text x="1100" y="840" fill="#646B76">CBGFI=1；CB2/CB3 合并</text>
+    <rect x="1080" y="872" width="320" height="70" rx="8" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1100" y="900" font-weight="700">new coverage</text>
+    <text x="1100" y="922" fill="#646B76">addr 4/5/6 首次写入</text>
+    <rect x="1080" y="954" width="320" height="70" rx="8" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1100" y="982" font-weight="700">repeat</text>
+    <text x="1100" y="1004" fill="#646B76">addr 3 饱和累加</text>
+    <rect x="1080" y="1036" width="320" height="70" rx="8" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1100" y="1064" font-weight="700">key</text>
+    <text x="1100" y="1086" fill="#646B76">harq/tb/cbg/cb/addr 定位</text>
+  </g>
+
+  <!-- ============ 面板 C：最小调试 dump 与风险检查 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="1250" width="1380" height="410" rx="14" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="1274" width="10" height="10" rx="3" fill="#7A6E8E"/>
+  <text x="108" y="1283" font-size="17" font-weight="700" fill="#23272E">最小调试 dump 与风险检查</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="1320" width="256" height="180" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="208" y="1352" text-anchor="middle" font-weight="700">CBGTI/CBGFI</text>
+    <text x="100" y="1388" fill="#646B76">mask 顺序正确；</text>
+    <text x="100" y="1412" fill="#646B76">刷新/合并语义正确</text>
+    <rect x="348" y="1320" width="256" height="180" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="476" y="1352" text-anchor="middle" font-weight="700">RV / k0</text>
+    <text x="368" y="1388" fill="#646B76">rvidx、BG、Ncb、E</text>
+    <text x="368" y="1412" fill="#646B76">和地址窗口一致</text>
+    <rect x="616" y="1320" width="256" height="180" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="744" y="1352" text-anchor="middle" font-weight="700">CB status</text>
+    <text x="636" y="1388" fill="#646B76">CB CRC、CBG 状态、</text>
+    <text x="636" y="1412" fill="#646B76">未重传 CBG 保持</text>
+    <rect x="884" y="1320" width="256" height="180" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1012" y="1352" text-anchor="middle" font-weight="700">TB CRC</text>
+    <text x="904" y="1388" fill="#646B76">TB 失败保留缓存，</text>
+    <text x="904" y="1412" fill="#646B76">成功释放上下文</text>
+    <rect x="1152" y="1320" width="256" height="180" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1280" y="1352" text-anchor="middle" font-weight="700">saturation</text>
+    <text x="1172" y="1388" fill="#646B76">记录 old/new/sat_sum</text>
+    <text x="1172" y="1412" fill="#646B76">和饱和次数</text>
+  </g>
+</svg>

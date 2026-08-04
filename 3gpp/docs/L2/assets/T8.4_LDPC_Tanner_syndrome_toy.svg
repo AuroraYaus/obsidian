@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T8.4_LDPC_Tanner_syndrome_toy.svg
+  @brief   LDPC Tanner 图、syndrome 计算与消息流入口（手绘 SVG）
+  @date    2026-08-04
+  @note    教学 H=[[1,1,0,1,0,0],[0,1,1,0,1,0],[1,0,1,0,0,1]]。
+           布局按讲义语义重排：上排左小型校验矩阵 H（表头行/列并入网格）、
+           上排中 Tanner 图（6 变量节点 + 3 校验节点 + 9 条边）、
+           上排右一轮消息流入口（四步流程芯片 + 箭头）；
+           下排 GF(2) syndrome 手算例子（三条校验方程 + 翻转 x5 反例）。
+           语义配色：矩阵蓝 / 图绿 / 流程琥珀 / 通过绿 / 反例红；字号符合合规 Rule 23。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="630" viewBox="0 0 1000 630" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>LDPC Tanner 图、syndrome 与消息流</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5D6B80"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 标题 ============ -->
+  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433">LDPC Tanner 图、syndrome 与消息流</text>
+  <text x="35" y="60" font-size="12" fill="#5B6877">小校验矩阵用于教学，不是 NR conformance vector。真实 NR 的 H 由 TS 38.212 的 BG、Zc、iLS 和 shift table 生成，</text>
+  <text x="35" y="78" font-size="12" fill="#5B6877">但 Tanner 图和 syndrome 的解释完全相同。</text>
+
+  <!-- ============ 小型校验矩阵 H ============ -->
+  <g filter="url(#soft)">
+    <rect x="35" y="95" width="295" height="185" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="55" y="122" font-size="15" font-weight="700" fill="#3B6FB5">小型校验矩阵 H</text>
+
+  <g font-size="11" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <rect x="95" y="140" width="28" height="28" fill="#DDE7F3"/>
+    <text x="109" y="159">v0</text>
+    <rect x="125" y="140" width="30" height="28" fill="#DDE7F3"/>
+    <text x="140" y="159">v1</text>
+    <rect x="155" y="140" width="30" height="28" fill="#DDE7F3"/>
+    <text x="170" y="159">v2</text>
+    <rect x="185" y="140" width="30" height="28" fill="#DDE7F3"/>
+    <text x="200" y="159">v3</text>
+    <rect x="215" y="140" width="30" height="28" fill="#DDE7F3"/>
+    <text x="230" y="159">v4</text>
+    <rect x="245" y="140" width="30" height="28" fill="#DDE7F3"/>
+    <text x="260" y="159">v5</text>
+  </g>
+  <g font-size="12.5" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <rect x="67" y="168" width="28" height="30" fill="#DDE7F3"/>
+    <text x="81" y="188">c0</text>
+    <rect x="67" y="198" width="28" height="30" fill="#DDE7F3"/>
+    <text x="81" y="218">c1</text>
+    <rect x="67" y="228" width="28" height="30" fill="#DDE7F3"/>
+    <text x="81" y="248">c2</text>
+    <rect x="95" y="168" width="30" height="30" fill="#DCE7F6"/>
+    <text x="110" y="189">1</text>
+    <rect x="125" y="168" width="30" height="30" fill="#DCE7F6"/>
+    <text x="140" y="189">1</text>
+    <rect x="155" y="168" width="30" height="30" fill="#FFFFFF"/>
+    <text x="170" y="189">0</text>
+    <rect x="185" y="168" width="30" height="30" fill="#DCE7F6"/>
+    <text x="200" y="189">1</text>
+    <rect x="215" y="168" width="30" height="30" fill="#FFFFFF"/>
+    <text x="230" y="189">0</text>
+    <rect x="245" y="168" width="30" height="30" fill="#FFFFFF"/>
+    <text x="260" y="189">0</text>
+    <rect x="95" y="198" width="30" height="30" fill="#FFFFFF"/>
+    <text x="110" y="219">0</text>
+    <rect x="125" y="198" width="30" height="30" fill="#DCE7F6"/>
+    <text x="140" y="219">1</text>
+    <rect x="155" y="198" width="30" height="30" fill="#DCE7F6"/>
+    <text x="170" y="219">1</text>
+    <rect x="185" y="198" width="30" height="30" fill="#FFFFFF"/>
+    <text x="200" y="219">0</text>
+    <rect x="215" y="198" width="30" height="30" fill="#DCE7F6"/>
+    <text x="230" y="219">1</text>
+    <rect x="245" y="198" width="30" height="30" fill="#FFFFFF"/>
+    <text x="260" y="219">0</text>
+    <rect x="95" y="228" width="30" height="30" fill="#DCE7F6"/>
+    <text x="110" y="249">1</text>
+    <rect x="125" y="228" width="30" height="30" fill="#FFFFFF"/>
+    <text x="140" y="249">0</text>
+    <rect x="155" y="228" width="30" height="30" fill="#DCE7F6"/>
+    <text x="170" y="249">1</text>
+    <rect x="185" y="228" width="30" height="30" fill="#FFFFFF"/>
+    <text x="200" y="249">0</text>
+    <rect x="215" y="228" width="30" height="30" fill="#FFFFFF"/>
+    <text x="230" y="249">0</text>
+    <rect x="245" y="228" width="30" height="30" fill="#DCE7F6"/>
+    <text x="260" y="249">1</text>
+  </g>
+
+  <!-- ============ Tanner 图 ============ -->
+  <g filter="url(#soft)">
+    <rect x="350" y="95" width="330" height="265" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="370" y="122" font-size="15" font-weight="700" fill="#3E9E74">Tanner 图</text>
+
+  <!-- 边（H 中的 1） -->
+  <g stroke="#9FB0C3" stroke-width="1.5">
+    <line x1="380" y1="191" x2="420" y2="286"/>
+    <line x1="428" y1="191" x2="420" y2="286"/>
+    <line x1="476" y1="191" x2="420" y2="286"/>
+    <line x1="428" y1="191" x2="500" y2="286"/>
+    <line x1="476" y1="191" x2="500" y2="286"/>
+    <line x1="524" y1="191" x2="500" y2="286"/>
+    <line x1="380" y1="191" x2="580" y2="286"/>
+    <line x1="476" y1="191" x2="580" y2="286"/>
+    <line x1="620" y1="191" x2="580" y2="286"/>
+  </g>
+
+  <!-- 6 个变量节点（圆） -->
+  <g font-size="10.5" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <circle cx="380" cy="175" r="16" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="380" y="179">v0</text>
+    <circle cx="428" cy="175" r="16" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="428" y="179">v1</text>
+    <circle cx="476" cy="175" r="16" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="476" y="179">v2</text>
+    <circle cx="524" cy="175" r="16" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="524" y="179">v3</text>
+    <circle cx="572" cy="175" r="16" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="572" y="179">v4</text>
+    <circle cx="620" cy="175" r="16" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="620" y="179">v5</text>
+  </g>
+
+  <!-- 3 个校验节点（方） -->
+  <g font-size="11" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <rect x="392" y="272" width="56" height="28" rx="8" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="420" y="291">c0</text>
+    <rect x="472" y="272" width="56" height="28" rx="8" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="500" y="291">c1</text>
+    <rect x="552" y="272" width="56" height="28" rx="8" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="580" y="291">c2</text>
+  </g>
+
+  <text x="370" y="340" font-size="11.5" fill="#5B6877">H 中每个 1 对应一条边：变量节点 vj 连接</text>
+  <text x="370" y="356" font-size="11.5" fill="#5B6877">到校验节点 ci。</text>
+
+  <!-- ============ 一轮消息流入口 ============ -->
+  <g filter="url(#soft)">
+    <rect x="700" y="95" width="265" height="265" rx="14" fill="#FAF5E4" stroke="#D9C179" stroke-width="1.5"/>
+  </g>
+  <text x="720" y="122" font-size="15" font-weight="700" fill="#D18A2F">一轮消息流入口</text>
+
+  <g filter="url(#soft)">
+    <rect x="720" y="150" width="225" height="44" rx="9" fill="#FFFFFF" stroke="#D18A2F" stroke-width="1.2"/>
+  </g>
+  <g font-size="11" fill="#5B6877">
+    <text x="734" y="171">1. 变量节点先带着 channel LLR</text>
+    <text x="734" y="187">给相邻校验节点。</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="720" y="204" width="225" height="44" rx="9" fill="#FFFFFF" stroke="#D18A2F" stroke-width="1.2"/>
+  </g>
+  <g font-size="11" fill="#5B6877">
+    <text x="734" y="225">2. 校验节点根据其他相邻变量的消息</text>
+    <text x="734" y="241">生成外信息。</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="720" y="258" width="225" height="44" rx="9" fill="#FFFFFF" stroke="#D18A2F" stroke-width="1.2"/>
+  </g>
+  <g font-size="11" fill="#5B6877">
+    <text x="734" y="279">3. 变量节点汇总 channel LLR</text>
+    <text x="734" y="295">和校验消息得到 posterior LLR。</text>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="720" y="312" width="225" height="44" rx="9" fill="#FFFFFF" stroke="#D18A2F" stroke-width="1.2"/>
+  </g>
+  <g font-size="11" fill="#5B6877">
+    <text x="734" y="333">4. hard decision 后算 syndrome</text>
+    <text x="734" y="349">并在全零时早停。</text>
+  </g>
+
+  <g stroke="#D18A2F" stroke-width="1.6" fill="none">
+    <path d="M 832 194 V 204" marker-end="url(#arrow)"/>
+    <path d="M 832 248 V 258" marker-end="url(#arrow)"/>
+    <path d="M 832 302 V 312" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ GF(2) syndrome 手算例子 ============ -->
+  <g filter="url(#soft)">
+    <rect x="35" y="380" width="930" height="235" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="55" y="408" font-size="15" font-weight="700" fill="#1B2433">GF(2) syndrome 手算例子</text>
+  <text x="55" y="432" font-size="12" fill="#5B6877">取硬判决 x=[1,0,1,1,1,0]。每一行是一条奇偶校验方程；在 GF(2) 中求和就是异或。</text>
+
+  <g font-size="12.5">
+    <rect x="55" y="455" width="890" height="40" fill="#FFFFFF"/>
+    <text x="75" y="481" font-weight="700" fill="#3B6FB5">s0 = x0 xor x1 xor x3</text>
+    <text x="400" y="481" fill="#1B2433">1 xor 0 xor 1 = 0</text>
+    <rect x="740" y="461" width="70" height="28" rx="8" fill="#3E9E74"/>
+    <text x="775" y="480" font-weight="700" fill="#FFFFFF" text-anchor="middle">通过</text>
+    <rect x="55" y="495" width="890" height="40" fill="#EDF2F8"/>
+    <text x="75" y="521" font-weight="700" fill="#3B6FB5">s1 = x1 xor x2 xor x4</text>
+    <text x="400" y="521" fill="#1B2433">0 xor 1 xor 1 = 0</text>
+    <rect x="740" y="501" width="70" height="28" rx="8" fill="#3E9E74"/>
+    <text x="775" y="520" font-weight="700" fill="#FFFFFF" text-anchor="middle">通过</text>
+    <rect x="55" y="535" width="890" height="40" fill="#FFFFFF"/>
+    <text x="75" y="561" font-weight="700" fill="#3B6FB5">s2 = x0 xor x2 xor x5</text>
+    <text x="400" y="561" fill="#1B2433">1 xor 1 xor 0 = 0</text>
+    <rect x="740" y="541" width="70" height="28" rx="8" fill="#3E9E74"/>
+    <text x="775" y="560" font-weight="700" fill="#FFFFFF" text-anchor="middle">通过</text>
+  </g>
+  <text x="55" y="596" font-size="12" font-weight="700" fill="#C4553D">若翻转 x5 得到 x'=[1,0,1,1,1,1]，第三行变成 1 xor 1 xor 1 = 1，syndrome 非零，说明当前硬判决不满足 LDPC 校验。</text>
+</svg>

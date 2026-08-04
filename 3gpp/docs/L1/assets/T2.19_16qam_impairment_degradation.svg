@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @file  -->
+<!-- @brief 同一 16QAM 星座在四种失真下的退化 -->
+<!-- @date 2026-08-04 -->
+<!-- @note 手绘教学 SVG：坐标程序化计算，已通过 y 扫描/bbox 审计/cairosvg 渲染验证 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" width="900" height="720">
+<rect width="900" height="720" fill="#ffffff"/>
+<style>
+.title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 19px; font-weight: bold; fill: #111; }
+.sub { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #555; }
+.ptitle { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 14px; font-weight: bold; fill: #111; }
+.label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 13px; fill: #222; }
+.small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 11.5px; fill: #555; }
+.mono { font-family: monospace; font-size: 13px; fill: #333; }
+.axis { stroke: #444; stroke-width: 1.4; }
+.grid { stroke: #d8d8d8; stroke-width: 1; }
+.bound { stroke: #999; stroke-width: 1.2; stroke-dasharray: 6,5; }
+.box { fill: #f7f9fc; stroke: #444; stroke-width: 1.3; rx: 6; }
+</style>
+<text x="450.0" y="30" text-anchor="middle" class="title">同一 16QAM 星座在四种失真下的退化</text>
+<text x="450.0" y="56" text-anchor="middle" class="sub">协议映射（TS 38.211 §5.1.4）定义干净星座；同步、信道与发射失真分别改变点的位置、尺度与散布</text>
+<text x="32" y="98" class="ptitle">① 干净星座：协议 16 点</text>
+<line x1="248.0" y1="108" x2="248.0" y2="360" class="axis"/>
+<line x1="311.2" y1="108" x2="311.2" y2="360" class="bound"/>
+<text x="311.2" y="366" text-anchor="middle" class="label">+2a</text>
+<line x1="184.8" y1="108" x2="184.8" y2="360" class="bound"/>
+<text x="184.8" y="366" text-anchor="middle" class="label">−2a</text>
+<line x1="279.6" y1="108" x2="279.6" y2="360" class="grid"/>
+<line x1="342.9" y1="108" x2="342.9" y2="360" class="grid"/>
+<line x1="216.4" y1="108" x2="216.4" y2="360" class="grid"/>
+<line x1="153.1" y1="108" x2="153.1" y2="360" class="grid"/>
+<line x1="98" y1="234.0" x2="398" y2="234.0" class="axis"/>
+<text x="402" y="238.0" class="small">I</text>
+<text x="72" y="126" class="small">Q</text>
+<circle cx="153.1" cy="328.9" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="153.1" cy="265.6" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="153.1" cy="202.4" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="153.1" cy="139.1" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="216.4" cy="328.9" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="216.4" cy="265.6" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="216.4" cy="202.4" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="216.4" cy="139.1" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="279.6" cy="328.9" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="279.6" cy="265.6" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="279.6" cy="202.4" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="279.6" cy="139.1" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="342.9" cy="328.9" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="342.9" cy="265.6" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="342.9" cy="202.4" r="4.2" fill="#00796B" opacity="0.9"/>
+<circle cx="342.9" cy="139.1" r="4.2" fill="#00796B" opacity="0.9"/>
+<text x="32" y="390" class="small">点坐标 = (1/√10)(1−2b)·(2−(1−2b′))，判决边界在 0 与 ±2a</text>
+<text x="464" y="98" class="ptitle">② 相位噪声 / 残余 CFO：整体旋转</text>
+<line x1="680.0" y1="108" x2="680.0" y2="360" class="axis"/>
+<line x1="743.2" y1="108" x2="743.2" y2="360" class="bound"/>
+<text x="743.2" y="366" text-anchor="middle" class="label">+2a</text>
+<line x1="616.8" y1="108" x2="616.8" y2="360" class="bound"/>
+<text x="616.8" y="366" text-anchor="middle" class="label">−2a</text>
+<line x1="711.6" y1="108" x2="711.6" y2="360" class="grid"/>
+<line x1="774.9" y1="108" x2="774.9" y2="360" class="grid"/>
+<line x1="648.4" y1="108" x2="648.4" y2="360" class="grid"/>
+<line x1="585.1" y1="108" x2="585.1" y2="360" class="grid"/>
+<line x1="530" y1="234.0" x2="830" y2="234.0" class="axis"/>
+<text x="834" y="238.0" class="small">I</text>
+<text x="504" y="126" class="small">Q</text>
+<circle cx="585.1" cy="328.9" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="585.1" cy="265.6" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="585.1" cy="202.4" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="585.1" cy="139.1" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="648.4" cy="328.9" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="648.4" cy="265.6" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="648.4" cy="202.4" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="648.4" cy="139.1" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="711.6" cy="328.9" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="711.6" cy="265.6" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="711.6" cy="202.4" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="711.6" cy="139.1" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="774.9" cy="328.9" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="774.9" cy="265.6" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="774.9" cy="202.4" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="774.9" cy="139.1" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="558.4" cy="290.7" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="580.0" cy="231.3" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="601.7" cy="171.8" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="623.3" cy="112.4" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="617.8" cy="312.3" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="639.5" cy="252.9" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="661.1" cy="193.5" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="682.7" cy="134.0" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="677.3" cy="334.0" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="698.9" cy="274.5" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="720.5" cy="215.1" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="742.2" cy="155.7" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="736.7" cy="355.6" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="758.3" cy="296.2" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="780.0" cy="236.7" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="801.6" cy="177.3" r="4.2" fill="#E65100" opacity="0.9"/>
+<path d="M 713.6227766016838 198.3772233983162 A 46 46 0 0 0 697.6227766016838 230.3772233983162" fill="none" stroke="#E65100" stroke-width="1.8"/>
+<text x="725.6" y="192.4" class="small" fill="#E65100">旋转 −20°</text>
+<text x="464" y="390" class="small">每个符号旋转同一角度 θ → 全部点到判决边界的裕量改变</text>
+<text x="32" y="424" class="ptitle">③ PA 非线性 / 削峰：外层点压缩内收</text>
+<line x1="248.0" y1="434" x2="248.0" y2="686" class="axis"/>
+<line x1="311.2" y1="434" x2="311.2" y2="686" class="bound"/>
+<text x="311.2" y="692" text-anchor="middle" class="label">+2a</text>
+<line x1="184.8" y1="434" x2="184.8" y2="686" class="bound"/>
+<text x="184.8" y="692" text-anchor="middle" class="label">−2a</text>
+<line x1="279.6" y1="434" x2="279.6" y2="686" class="grid"/>
+<line x1="342.9" y1="434" x2="342.9" y2="686" class="grid"/>
+<line x1="216.4" y1="434" x2="216.4" y2="686" class="grid"/>
+<line x1="153.1" y1="434" x2="153.1" y2="686" class="grid"/>
+<line x1="98" y1="560.0" x2="398" y2="560.0" class="axis"/>
+<text x="402" y="564.0" class="small">I</text>
+<text x="72" y="452" class="small">Q</text>
+<circle cx="153.1" cy="654.9" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="153.1" cy="591.6" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="153.1" cy="528.4" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="153.1" cy="465.1" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="216.4" cy="654.9" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="216.4" cy="591.6" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="216.4" cy="528.4" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="216.4" cy="465.1" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="279.6" cy="654.9" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="279.6" cy="591.6" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="279.6" cy="528.4" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="279.6" cy="465.1" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="342.9" cy="654.9" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="342.9" cy="591.6" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="342.9" cy="528.4" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="342.9" cy="465.1" r="2.6" fill="#00796B" opacity="0.35"/>
+<circle cx="191.1" cy="616.9" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="174.2" cy="584.6" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="174.2" cy="535.4" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="191.1" cy="503.1" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="223.4" cy="633.8" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="217.8" cy="590.2" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="217.8" cy="529.8" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="223.4" cy="486.2" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="272.6" cy="633.8" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="278.2" cy="590.2" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="278.2" cy="529.8" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="272.6" cy="486.2" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="304.9" cy="616.9" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="321.8" cy="584.6" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="321.8" cy="535.4" r="4.2" fill="#E65100" opacity="0.9"/>
+<circle cx="304.9" cy="503.1" r="4.2" fill="#E65100" opacity="0.9"/>
+<text x="334.9" y="479.1" class="small" fill="#AD1457">外点压缩 40%</text>
+<text x="275.6" y="522.4" class="small">内点几乎不动</text>
+<text x="32" y="716" class="small">幅度越大压缩越强 → 外层比特的判决边界裕量最先消失</text>
+<text x="464" y="424" class="ptitle">④ 噪声与干扰：点散布为团簇</text>
+<line x1="680.0" y1="434" x2="680.0" y2="686" class="axis"/>
+<line x1="743.2" y1="434" x2="743.2" y2="686" class="bound"/>
+<text x="743.2" y="692" text-anchor="middle" class="label">+2a</text>
+<line x1="616.8" y1="434" x2="616.8" y2="686" class="bound"/>
+<text x="616.8" y="692" text-anchor="middle" class="label">−2a</text>
+<line x1="711.6" y1="434" x2="711.6" y2="686" class="grid"/>
+<line x1="774.9" y1="434" x2="774.9" y2="686" class="grid"/>
+<line x1="648.4" y1="434" x2="648.4" y2="686" class="grid"/>
+<line x1="585.1" y1="434" x2="585.1" y2="686" class="grid"/>
+<line x1="530" y1="560.0" x2="830" y2="560.0" class="axis"/>
+<text x="834" y="564.0" class="small">I</text>
+<text x="504" y="452" class="small">Q</text>
+<circle cx="585.1" cy="654.9" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="583.1" cy="657.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="583.6" cy="645.0" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="583.3" cy="675.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="589.8" cy="658.6" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="582.1" cy="653.2" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="588.4" cy="638.6" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="585.1" cy="591.6" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="594.3" cy="590.1" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="574.8" cy="605.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="588.6" cy="573.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="585.7" cy="593.1" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="592.6" cy="612.0" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="580.8" cy="584.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="585.1" cy="528.4" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="597.4" cy="531.7" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="590.4" cy="524.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="596.1" cy="544.0" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="593.1" cy="549.6" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="560.0" cy="536.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="572.3" cy="516.1" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="585.1" cy="465.1" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="594.4" cy="482.2" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="597.0" cy="479.2" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="583.9" cy="469.2" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="586.7" cy="453.7" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="594.1" cy="460.2" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="594.2" cy="458.4" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="648.4" cy="654.9" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="639.6" cy="664.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="641.8" cy="647.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="644.9" cy="622.2" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="636.9" cy="670.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="659.1" cy="635.0" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="655.5" cy="643.2" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="648.4" cy="591.6" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="668.3" cy="592.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="628.5" cy="599.1" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="661.7" cy="611.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="648.8" cy="588.1" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="644.0" cy="581.5" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="656.5" cy="559.1" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="648.4" cy="528.4" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="657.1" cy="536.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="640.5" cy="540.0" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="661.7" cy="536.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="647.4" cy="517.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="638.2" cy="532.5" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="622.6" cy="543.5" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="648.4" cy="465.1" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="640.4" cy="459.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="665.1" cy="465.4" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="652.0" cy="462.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="663.6" cy="452.6" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="652.2" cy="479.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="661.0" cy="459.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="711.6" cy="654.9" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="728.8" cy="655.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="739.0" cy="659.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="733.9" cy="653.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="704.4" cy="670.7" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="709.5" cy="634.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="723.1" cy="645.2" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="711.6" cy="591.6" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="678.4" cy="581.7" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="719.4" cy="599.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="702.8" cy="591.7" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="735.8" cy="606.4" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="705.6" cy="572.6" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="705.4" cy="596.7" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="711.6" cy="528.4" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="713.0" cy="545.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="714.7" cy="545.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="724.0" cy="528.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="743.6" cy="524.4" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="730.7" cy="546.6" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="709.9" cy="523.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="711.6" cy="465.1" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="736.1" cy="488.7" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="725.5" cy="456.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="733.1" cy="455.2" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="712.4" cy="472.4" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="694.1" cy="462.4" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="708.9" cy="440.0" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="774.9" cy="654.9" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="766.3" cy="650.4" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="752.9" cy="660.4" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="778.5" cy="643.3" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="795.1" cy="655.5" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="759.2" cy="648.5" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="782.1" cy="648.0" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="774.9" cy="591.6" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="765.1" cy="575.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="776.1" cy="581.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="792.7" cy="583.1" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="778.9" cy="561.5" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="778.3" cy="595.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="776.4" cy="570.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="774.9" cy="528.4" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="776.5" cy="521.1" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="791.6" cy="535.6" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="750.7" cy="524.2" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="778.1" cy="536.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="787.1" cy="519.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="760.9" cy="521.1" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="774.9" cy="465.1" r="2.4" fill="#00796B" opacity="0.8"/>
+<circle cx="772.1" cy="485.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="781.2" cy="465.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="764.4" cy="457.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="781.7" cy="473.2" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="780.5" cy="450.9" r="2.0" fill="#00796B" opacity="0.35"/>
+<circle cx="764.9" cy="459.8" r="2.0" fill="#00796B" opacity="0.35"/>
+<text x="464" y="716" class="small">散布尺度由等效噪声方差 σ²eq 决定 → 直接压低 LLR 幅度（σ≈0.14 即 σ²eq≈0.02）</text>
+</svg>

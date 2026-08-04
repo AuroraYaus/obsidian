@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T9.4_NR_LDPC_bit_deinterleaving.svg
+  @brief   NR LDPC bit deinterleaving 与 LLR 放置流程教学图（手绘 SVG V2：布局与配色依据 T9.4 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：四步流程（demapper LLR -> deinterleaver（TS 38.212 §5.4.2.2 反向置换）
+           -> rate recovery -> LDPC input）、QPSK (Qm=2, S=4) 与 16QAM (Qm=4, S=3) 的
+           demapper order f 与 rate-recovery order e 矩阵（e[bS+s] = f[b+sQm]）、五个工程
+           检测点（Qm 来源/bit order/buffer/bank conflict/failure），均与讲义 T9.4 正文
+           及图 T9.4-1 语义一致。
+           视觉设计：流程带步骤号徽章；f/e 矩阵用 lane 标签 + 双向箭头标注 inverse；
+           矩阵底色：f=协议青瓷浅底、e=橄榄浅底。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1420" viewBox="0 0 1500 1420" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>NR LDPC Bit Deinterleaving 与 LLR 放置</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">NR LDPC Bit Deinterleaving 与 LLR 放置</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">TS 38.212 §5.4.2.2 的 bit interleaver 按 Qm 把 rate-matching 输出 e 重排成调制映射输入 f。接收端从 demapper 得到符号顺序 LLR 后，必须反向恢复 e 顺序，再交给 RV/k0 地址生成器。</text>
+
+  <!-- ============ 面板 A：流程四步 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="210" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="154" width="10" height="10" rx="3" fill="#8E3B5E"/>
+  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">接收端 bit deinterleaving 流程</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <rect x="80" y="196" width="315" height="122" rx="12" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <circle cx="104" cy="222" r="13" fill="#8E3B5E"/>
+    <text x="104" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="237" y="230" font-size="13.5" font-weight="700" text-anchor="middle">demapper LLR</text>
+    <text x="98" y="266" fill="#646B76">按调制符号输出：每符号 Qm 个 LLR</text>
+    <text x="98" y="288" fill="#646B76">symbol order 展平</text>
+    <rect x="413" y="196" width="315" height="122" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <circle cx="437" cy="222" r="13" fill="#2F6E71"/>
+    <text x="437" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="570" y="230" font-size="13.5" font-weight="700" text-anchor="middle">deinterleaver</text>
+    <text x="431" y="266" fill="#646B76">按 TS 38.212 §5.4.2.2</text>
+    <text x="431" y="288" fill="#646B76">反向置换恢复 e 序列</text>
+    <rect x="746" y="196" width="315" height="122" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <circle cx="770" cy="222" r="13" fill="#6C7A2E"/>
+    <text x="770" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="903" y="230" font-size="13.5" font-weight="700" text-anchor="middle">rate recovery</text>
+    <text x="764" y="266" fill="#646B76">恢复 e 序列后按 RV/k0</text>
+    <text x="764" y="288" fill="#646B76">写回 soft_buffer[addr]</text>
+    <rect x="1079" y="196" width="315" height="122" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <circle cx="1103" cy="222" r="13" fill="#B06F2B"/>
+    <text x="1103" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="1236" y="230" font-size="13.5" font-weight="700" text-anchor="middle">LDPC input</text>
+    <text x="1097" y="266" fill="#646B76">按母码位置排列的 CB LLR</text>
+    <text x="1097" y="288" fill="#646B76">LLR + mask</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 395 257 H 413" marker-end="url(#arrow)"/>
+    <path d="M 728 257 H 746" marker-end="url(#arrow)"/>
+    <path d="M 1061 257 H 1079" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 面板 B：QPSK 矩阵 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="370" width="1380" height="440" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="400" font-size="16" font-weight="700" fill="#23272E">QPSK: Qm=2，每个 symbol 两个 LLR（S=4, E=8）</text>
+  <text x="140" y="448" font-size="13" font-weight="700" fill="#2F6E71">demapper order f</text>
+  <text x="620" y="448" font-size="13" font-weight="700" fill="#6C7A2E">rate-recovery input e</text>
+
+  <g font-size="11.5" fill="#646B76">
+    <text x="140" y="472" text-anchor="middle">bit0</text>
+    <text x="240" y="472" text-anchor="middle">bit1</text>
+    <text x="88" y="514">sym0</text>
+    <text x="88" y="570">sym1</text>
+    <text x="88" y="626">sym2</text>
+    <text x="88" y="682">sym3</text>
+  </g>
+  <g font-size="12" fill="#23272E">
+    <rect x="120" y="480" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="170" y="514" text-anchor="middle" font-weight="700">f0</text>
+    <rect x="220" y="480" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="270" y="514" text-anchor="middle" font-weight="700">f1</text>
+    <rect x="120" y="536" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="170" y="570" text-anchor="middle" font-weight="700">f2</text>
+    <rect x="220" y="536" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="270" y="570" text-anchor="middle" font-weight="700">f3</text>
+    <rect x="120" y="592" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="170" y="626" text-anchor="middle" font-weight="700">f4</text>
+    <rect x="220" y="592" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="270" y="626" text-anchor="middle" font-weight="700">f5</text>
+    <rect x="120" y="648" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="170" y="682" text-anchor="middle" font-weight="700">f6</text>
+    <rect x="220" y="648" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="270" y="682" text-anchor="middle" font-weight="700">f7</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 340 606 L 410 606" marker-end="url(#arrow)"/>
+  </g>
+  <rect x="352" y="578" width="76" height="28" rx="6" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1"/>
+  <text x="390" y="597" font-size="12" font-weight="700" text-anchor="middle" fill="#8E3B5E">inverse</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="440" y="480" width="100" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="490" y="504" text-anchor="middle" font-weight="700">e0</text>
+    <text x="490" y="524" text-anchor="middle" fill="#646B76">=f0</text>
+    <rect x="540" y="480" width="100" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="590" y="504" text-anchor="middle" font-weight="700">e1</text>
+    <text x="590" y="524" text-anchor="middle" fill="#646B76">=f2</text>
+    <rect x="640" y="480" width="100" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="690" y="504" text-anchor="middle" font-weight="700">e2</text>
+    <text x="690" y="524" text-anchor="middle" fill="#646B76">=f4</text>
+    <rect x="740" y="480" width="100" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="790" y="504" text-anchor="middle" font-weight="700">e3</text>
+    <text x="790" y="524" text-anchor="middle" fill="#646B76">=f6</text>
+    <rect x="440" y="536" width="100" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="490" y="560" text-anchor="middle" font-weight="700">e4</text>
+    <text x="490" y="580" text-anchor="middle" fill="#646B76">=f1</text>
+    <rect x="540" y="536" width="100" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="590" y="560" text-anchor="middle" font-weight="700">e5</text>
+    <text x="590" y="580" text-anchor="middle" fill="#646B76">=f3</text>
+    <rect x="640" y="536" width="100" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="690" y="560" text-anchor="middle" font-weight="700">e6</text>
+    <text x="690" y="580" text-anchor="middle" fill="#646B76">=f5</text>
+    <rect x="740" y="536" width="100" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="790" y="560" text-anchor="middle" font-weight="700">e7</text>
+    <text x="790" y="580" text-anchor="middle" fill="#646B76">=f7</text>
+  </g>
+
+  <!-- ============ 面板 C：16QAM 矩阵 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="840" width="1380" height="330" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="870" font-size="16" font-weight="700" fill="#23272E">16QAM: Qm=4，每个 symbol 四个 LLR（S=3, E=12）</text>
+  <text x="140" y="916" font-size="13" font-weight="700" fill="#2F6E71">demapper order f</text>
+  <text x="700" y="916" font-size="13" font-weight="700" fill="#6C7A2E">rate-recovery input e</text>
+
+  <g font-size="11.5" fill="#646B76">
+    <text x="140" y="938" text-anchor="middle">bit0</text>
+    <text x="240" y="938" text-anchor="middle">bit1</text>
+    <text x="340" y="938" text-anchor="middle">bit2</text>
+    <text x="440" y="938" text-anchor="middle">bit3</text>
+    <text x="88" y="980">sym0</text>
+    <text x="88" y="1036">sym1</text>
+    <text x="88" y="1092">sym2</text>
+  </g>
+  <g font-size="12" fill="#23272E">
+    <rect x="120" y="946" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="170" y="980" text-anchor="middle" font-weight="700">f0</text>
+    <rect x="220" y="946" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="270" y="980" text-anchor="middle" font-weight="700">f1</text>
+    <rect x="320" y="946" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="370" y="980" text-anchor="middle" font-weight="700">f2</text>
+    <rect x="420" y="946" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="470" y="980" text-anchor="middle" font-weight="700">f3</text>
+    <rect x="120" y="1002" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="170" y="1036" text-anchor="middle" font-weight="700">f4</text>
+    <rect x="220" y="1002" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="270" y="1036" text-anchor="middle" font-weight="700">f5</text>
+    <rect x="320" y="1002" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="370" y="1036" text-anchor="middle" font-weight="700">f6</text>
+    <rect x="420" y="1002" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="470" y="1036" text-anchor="middle" font-weight="700">f7</text>
+    <rect x="120" y="1058" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="170" y="1092" text-anchor="middle" font-weight="700">f8</text>
+    <rect x="220" y="1058" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="270" y="1092" text-anchor="middle" font-weight="700">f9</text>
+    <rect x="320" y="1058" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="370" y="1092" text-anchor="middle" font-weight="700">f10</text>
+    <rect x="420" y="1058" width="100" height="52" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="470" y="1092" text-anchor="middle" font-weight="700">f11</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 540 1062 L 610 1062" marker-end="url(#arrow)"/>
+  </g>
+  <rect x="552" y="1034" width="76" height="28" rx="6" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1"/>
+  <text x="590" y="1053" font-size="12" font-weight="700" text-anchor="middle" fill="#8E3B5E">inverse</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="640" y="946" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="679" y="970" text-anchor="middle" font-weight="700">e0</text>
+    <text x="679" y="990" text-anchor="middle" fill="#646B76">=f0</text>
+    <rect x="718" y="946" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="757" y="970" text-anchor="middle" font-weight="700">e1</text>
+    <text x="757" y="990" text-anchor="middle" fill="#646B76">=f4</text>
+    <rect x="796" y="946" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="835" y="970" text-anchor="middle" font-weight="700">e2</text>
+    <text x="835" y="990" text-anchor="middle" fill="#646B76">=f8</text>
+    <rect x="874" y="946" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="913" y="970" text-anchor="middle" font-weight="700">e3</text>
+    <text x="913" y="990" text-anchor="middle" fill="#646B76">=f1</text>
+    <rect x="952" y="946" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="991" y="970" text-anchor="middle" font-weight="700">e4</text>
+    <text x="991" y="990" text-anchor="middle" fill="#646B76">=f5</text>
+    <rect x="1030" y="946" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1069" y="970" text-anchor="middle" font-weight="700">e5</text>
+    <text x="1069" y="990" text-anchor="middle" fill="#646B76">=f9</text>
+    <rect x="1108" y="946" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1147" y="970" text-anchor="middle" font-weight="700">e6</text>
+    <text x="1147" y="990" text-anchor="middle" fill="#646B76">=f2</text>
+    <rect x="1186" y="946" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="970" text-anchor="middle" font-weight="700">e7</text>
+    <text x="1225" y="990" text-anchor="middle" fill="#646B76">=f6</text>
+    <rect x="640" y="1002" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="679" y="1026" text-anchor="middle" font-weight="700">e8</text>
+    <text x="679" y="1046" text-anchor="middle" fill="#646B76">=f10</text>
+    <rect x="718" y="1002" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="757" y="1026" text-anchor="middle" font-weight="700">e9</text>
+    <text x="757" y="1046" text-anchor="middle" fill="#646B76">=f3</text>
+    <rect x="796" y="1002" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="835" y="1026" text-anchor="middle" font-weight="700">e10</text>
+    <text x="835" y="1046" text-anchor="middle" fill="#646B76">=f7</text>
+    <rect x="874" y="1002" width="78" height="52" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="913" y="1026" text-anchor="middle" font-weight="700">e11</text>
+    <text x="913" y="1046" text-anchor="middle" fill="#646B76">=f11</text>
+  </g>
+
+  <!-- ============ 面板 D：工程检测点 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="1200" width="1380" height="190" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="1224" width="10" height="10" rx="3" fill="#B06F2B"/>
+  <text x="108" y="1233" font-size="16" font-weight="700" fill="#23272E">工程检测点</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="1268" width="252" height="92" rx="9" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="206" y="1296" text-anchor="middle" font-weight="700">Qm 来源</text>
+    <text x="96" y="1324" fill="#646B76">TS 38.214 MCS 决定 Qm；</text>
+    <text x="96" y="1346" fill="#646B76">descriptor 不能写死。</text>
+    <rect x="352" y="1268" width="252" height="92" rx="9" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="478" y="1296" text-anchor="middle" font-weight="700">bit order</text>
+    <text x="368" y="1324" fill="#646B76">固定 LLR pattern 检查：</text>
+    <text x="368" y="1346" fill="#646B76">e[bS+s] = f[b+sQm]</text>
+    <rect x="624" y="1268" width="252" height="92" rx="9" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="750" y="1296" text-anchor="middle" font-weight="700">buffer</text>
+    <text x="640" y="1324" fill="#646B76">写 demapper order，</text>
+    <text x="640" y="1346" fill="#646B76">读 rate-recovery order。</text>
+    <rect x="896" y="1268" width="252" height="92" rx="9" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1022" y="1296" text-anchor="middle" font-weight="700">bank conflict</text>
+    <text x="912" y="1324" fill="#646B76">Qm=4/6/8 时同拍</text>
+    <text x="912" y="1346" fill="#646B76">多读写可能撞 bank。</text>
+    <rect x="1168" y="1268" width="252" height="92" rx="9" fill="#F8E9E7" stroke="#A6403C" stroke-width="1"/>
+    <text x="1294" y="1296" text-anchor="middle" font-weight="700">failure</text>
+    <text x="1184" y="1324" fill="#646B76">高 SNR 仍 CRC fail，</text>
+    <text x="1184" y="1346" fill="#646B76">先查 Qm/order/codeword。</text>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+/*
+ * Obsidian readable line width.
+ * Adjust this value to customize the page width while keeping readable line length enabled.
+ */
+body {
+  --custom-readable-line-width: 1600px;
+  --file-line-width: var(--custom-readable-line-width);
+}

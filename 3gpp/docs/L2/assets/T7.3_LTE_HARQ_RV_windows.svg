@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T7.3_LTE_HARQ_RV_windows.svg
+  @brief   LTE HARQ 四个冗余版本在循环缓存（ring buffer）上的窗口位置（手绘 SVG）
+  @date    2026-08-04
+  @note    教学参数：环长 Kw=32，每个 RV 读取 E=11 个非 NULL 位置。
+           布局按讲义语义重排：左上环图（RV 标签芯片在环外四方位、k0 起点引导线、
+           环内读图注记、图例独立于环面板下方）；右上 LLR 流地址芯片（3 行网格）；
+           中带 soft buffer 更新表（全宽）；下部四轮传输模型与底部检查点。
+           语义配色：rv0 蓝 / rv1 绿 / rv2 琥珀 / rv3 紫；黄色=重复命中地址（LLR 饱和累加）。
+           字号符合合规 Rule 23：标题 18px、主体 13-15px、辅助 11-12px。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="1820" viewBox="0 0 1040 1820" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>LTE HARQ 冗余版本在循环缓存中的位置</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3E9E74"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 标题 ============ -->
+  <text x="34" y="36" font-size="18" font-weight="700" fill="#1B2433">LTE HARQ 冗余版本在循环缓存中的位置</text>
+  <text x="34" y="64" font-size="12" fill="#5D6B80">图 T7.3-1：四个 RV 共享同一个 rate-matching ring buffer；接收端按相同环地址写回 HARQ soft buffer。</text>
+  <text x="34" y="82" font-size="12" fill="#5D6B80">教学参数：环长 Kw=32，每个 RV 读取 E=11 个非 NULL 位置。四个起点 k0 示意为 0、8、16、24，突出 RV 是同一环上的窗口选择。</text>
+  <line x1="34" y1="96" x2="1006" y2="96" stroke="#D5DFEA" stroke-width="1.5"/>
+
+  <!-- ============ 左上：环缓冲区与四个 RV 窗口 ============ -->
+  <g filter="url(#soft)">
+    <rect x="30" y="110" width="540" height="410" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+
+  <!-- 环圈 -->
+  <circle cx="300" cy="300" r="110" fill="none" stroke="#C9D4E0" stroke-width="2"/>
+
+  <!-- RV 窗口圆弧：r=122/130/138/146 -->
+  <g fill="none" stroke-width="7" stroke-linecap="round">
+    <path d="M 300.0 178.0 A 122 122 0 0 1 401.4 367.8" stroke="#3B6FB5"/>
+    <path d="M 430.0 300.0 A 130 130 0 0 1 227.8 408.1" stroke="#3E9E74"/>
+    <path d="M 300.0 438.0 A 138 138 0 0 1 185.3 223.3" stroke="#D18A2F"/>
+    <path d="M 154.0 300.0 A 146 146 0 0 1 381.1 178.6" stroke="#8A6BBE"/>
+  </g>
+
+  <!-- k0 起点引导线（画在弧上、圆点下） -->
+  <g stroke-width="2">
+    <line x1="300" y1="154" x2="300" y2="178" stroke="#3B6FB5"/>
+    <line x1="465" y1="300" x2="422" y2="300" stroke="#3E9E74"/>
+    <line x1="300" y1="456" x2="300" y2="438" stroke="#D18A2F"/>
+    <line x1="135" y1="300" x2="154" y2="300" stroke="#8A6BBE"/>
+  </g>
+
+  <!-- 32 个环地址圆点 -->
+  <g>
+    <circle cx="300.0" cy="190.0" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="321.5" cy="192.1" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="342.1" cy="198.4" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="361.1" cy="208.5" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="377.8" cy="222.2" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="391.5" cy="238.9" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="401.6" cy="257.9" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="407.9" cy="278.5" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="410.0" cy="300.0" r="11" fill="#FBEECB" stroke="#C9972E" stroke-width="1.5"/>
+    <circle cx="407.9" cy="321.5" r="11" fill="#FBEECB" stroke="#C9972E" stroke-width="1.5"/>
+    <circle cx="401.6" cy="342.1" r="11" fill="#FBEECB" stroke="#C9972E" stroke-width="1.5"/>
+    <circle cx="391.5" cy="361.1" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="377.8" cy="377.8" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="361.1" cy="391.5" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="342.1" cy="401.6" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="321.5" cy="407.9" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="300.0" cy="410.0" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="278.5" cy="407.9" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="257.9" cy="401.6" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="238.9" cy="391.5" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="222.2" cy="377.8" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="208.5" cy="361.1" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="198.4" cy="342.1" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="192.1" cy="321.5" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="190.0" cy="300.0" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="192.1" cy="278.5" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="198.4" cy="257.9" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="208.5" cy="238.9" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="222.2" cy="222.2" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="238.9" cy="208.5" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="257.9" cy="198.4" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+    <circle cx="278.5" cy="192.1" r="11" fill="#E7EFF9" stroke="#3B6FB5" stroke-width="1.5"/>
+  </g>
+  <g font-size="10" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <text x="300.0" y="193.5">0</text><text x="321.5" y="195.5">1</text><text x="342.1" y="202">2</text>
+    <text x="361.1" y="212">3</text><text x="377.8" y="226">4</text><text x="391.5" y="242.5">5</text>
+    <text x="401.6" y="261.5">6</text><text x="407.9" y="282.5">7</text><text x="410.0" y="303.5">8</text>
+    <text x="407.9" y="325">9</text><text x="401.6" y="346">10</text><text x="391.5" y="364.5">11</text>
+    <text x="377.8" y="381.5">12</text><text x="361.1" y="395">13</text><text x="342.1" y="405.5">14</text>
+    <text x="321.5" y="411.5">15</text><text x="300.0" y="413.5">16</text><text x="278.5" y="411.5">17</text>
+    <text x="257.9" y="405.5">18</text><text x="238.9" y="395">19</text><text x="222.2" y="381.5">20</text>
+    <text x="208.5" y="364.5">21</text><text x="198.4" y="346">22</text><text x="192.1" y="325">23</text>
+    <text x="190.0" y="303.5">24</text><text x="192.1" y="282.5">25</text><text x="198.4" y="261.5">26</text>
+    <text x="208.5" y="242.5">27</text><text x="222.2" y="226">28</text><text x="238.9" y="212">29</text>
+    <text x="257.9" y="202">30</text><text x="278.5" y="195.5">31</text>
+  </g>
+
+  <!-- 环心注记 -->
+  <text x="300" y="282" font-size="14" font-weight="700" fill="#1B2433" text-anchor="middle">ring buffer</text>
+  <text x="300" y="312" font-size="12" fill="#5D6B80" text-anchor="middle">地址递增到末尾后回到 0</text>
+
+  <!-- RV 标签芯片（环外四方位） -->
+  <g font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+    <rect x="255" y="122" width="90" height="32" rx="9" fill="#3B6FB5"/>
+    <text x="300" y="144">RV0 k0=0</text>
+    <rect x="465" y="284" width="90" height="32" rx="9" fill="#3E9E74"/>
+    <text x="510" y="306">RV1 k0=8</text>
+    <rect x="255" y="456" width="90" height="32" rx="9" fill="#D18A2F"/>
+    <text x="300" y="478">RV2 k0=16</text>
+    <rect x="45" y="284" width="90" height="32" rx="9" fill="#8A6BBE"/>
+    <text x="90" y="306">RV3 k0=24</text>
+  </g>
+
+  <!-- 图例（环面板下方独立区） -->
+  <g font-size="12" fill="#1B2433">
+    <rect x="55" y="540" width="24" height="15" rx="4" fill="#3B6FB5"/>
+    <text x="90" y="552">RV0 窗口：初传常见起点</text>
+    <rect x="55" y="568" width="24" height="15" rx="4" fill="#3E9E74"/>
+    <text x="90" y="580">RV1 窗口：从另一段开始</text>
+    <rect x="55" y="596" width="24" height="15" rx="4" fill="#D18A2F"/>
+    <text x="90" y="608">RV2 窗口：继续覆盖新区</text>
+    <rect x="55" y="624" width="24" height="15" rx="4" fill="#8A6BBE"/>
+    <text x="90" y="636">RV3 窗口：可跨越环尾回到 0</text>
+    <rect x="55" y="652" width="24" height="15" rx="4" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="90" y="664">重叠地址：不是覆盖旧值，而是 LLR 累加</text>
+  </g>
+
+  <!-- ============ 右上：本次重传示例 RV1 输出 LLR 流 ============ -->
+  <g filter="url(#soft)">
+    <rect x="600" y="110" width="400" height="315" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="620" y="140" font-size="15" font-weight="700" fill="#1B2433">本次重传示例：RV1 输出 LLR 流</text>
+  <text x="620" y="164" font-size="12" fill="#5D6B80">发送端从 RV1 起点开始扫描环，跳过 &lt;NULL&gt;，取到 E 个编码比特；</text>
+  <text x="620" y="182" font-size="12" fill="#5D6B80">接收端收到的是 L0...L10 这串软信息，但写回时必须恢复</text>
+  <text x="620" y="200" font-size="12" fill="#5D6B80">到环地址 a=8...18。</text>
+  <g font-weight="700" text-anchor="middle">
+    <rect x="620" y="210" width="88" height="48" rx="9" fill="#FBEECB" stroke="#C9972E" stroke-width="1.5"/>
+    <text x="664" y="233" font-size="13" fill="#1B2433">L0</text>
+    <text x="664" y="253" font-size="12" fill="#1B2433">a=8</text>
+    <rect x="718" y="210" width="88" height="48" rx="9" fill="#FBEECB" stroke="#C9972E" stroke-width="1.5"/>
+    <text x="762" y="233" font-size="13" fill="#1B2433">L1</text>
+    <text x="762" y="253" font-size="12" fill="#1B2433">a=9</text>
+    <rect x="816" y="210" width="88" height="48" rx="9" fill="#FBEECB" stroke="#C9972E" stroke-width="1.5"/>
+    <text x="860" y="233" font-size="13" fill="#1B2433">L2</text>
+    <text x="860" y="253" font-size="12" fill="#1B2433">a=10</text>
+    <rect x="914" y="210" width="88" height="48" rx="9" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="958" y="233" font-size="13" fill="#1B2433">L3</text>
+    <text x="958" y="253" font-size="12" fill="#1B2433">a=11</text>
+    <rect x="620" y="268" width="88" height="48" rx="9" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="664" y="291" font-size="13" fill="#1B2433">L4</text>
+    <text x="664" y="311" font-size="12" fill="#1B2433">a=12</text>
+    <rect x="718" y="268" width="88" height="48" rx="9" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="762" y="291" font-size="13" fill="#1B2433">L5</text>
+    <text x="762" y="311" font-size="12" fill="#1B2433">a=13</text>
+    <rect x="816" y="268" width="88" height="48" rx="9" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="860" y="291" font-size="13" fill="#1B2433">L6</text>
+    <text x="860" y="311" font-size="12" fill="#1B2433">a=14</text>
+    <rect x="914" y="268" width="88" height="48" rx="9" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="958" y="291" font-size="13" fill="#1B2433">L7</text>
+    <text x="958" y="311" font-size="12" fill="#1B2433">a=15</text>
+    <rect x="620" y="326" width="88" height="48" rx="9" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="664" y="349" font-size="13" fill="#1B2433">L8</text>
+    <text x="664" y="369" font-size="12" fill="#1B2433">a=16</text>
+    <rect x="718" y="326" width="88" height="48" rx="9" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="762" y="349" font-size="13" fill="#1B2433">L9</text>
+    <text x="762" y="369" font-size="12" fill="#1B2433">a=17</text>
+    <rect x="816" y="326" width="88" height="48" rx="9" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="860" y="349" font-size="13" fill="#1B2433">L10</text>
+    <text x="860" y="369" font-size="12" fill="#1B2433">a=18</text>
+  </g>
+  <text x="620" y="398" font-size="12" fill="#1B2433">黄色：RV0 已命中过的地址，本次执行饱和累加；</text>
+  <text x="620" y="414" font-size="12" fill="#1B2433">绿色：RV1 首次补充的地址。</text>
+
+  <!-- 环 -> LLR 流 关系箭头 -->
+  <g stroke="#3E9E74" stroke-width="1.8" fill="none">
+    <path d="M 570 300 L 600 240" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 中带：接收端 HARQ soft buffer 更新（全宽） ============ -->
+  <g filter="url(#soft)">
+    <rect x="30" y="680" width="970" height="300" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="55" y="708" font-size="15" font-weight="700" fill="#1B2433">接收端 HARQ soft buffer 更新</text>
+  <g font-size="13" fill="#1B2433" text-anchor="middle">
+    <rect x="55" y="733" width="110" height="32" fill="#1F3A5F"/>
+    <text x="110" y="755" font-weight="700" fill="#FFFFFF">环地址</text>
+    <rect x="165" y="733" width="230" height="32" fill="#1F3A5F"/>
+    <text x="280" y="755" font-weight="700" fill="#FFFFFF">状态</text>
+    <rect x="395" y="733" width="175" height="32" fill="#1F3A5F"/>
+    <text x="482" y="755" font-weight="700" fill="#FFFFFF">写回动作</text>
+    <rect x="570" y="733" width="140" height="32" fill="#1F3A5F"/>
+    <text x="640" y="755" font-weight="700" fill="#FFFFFF">含义</text>
+    <rect x="55" y="765" width="110" height="42" fill="#FFFFFF"/>
+    <text x="110" y="791">a=8..10</text>
+    <rect x="165" y="765" width="230" height="42" fill="#FFFFFF"/>
+    <text x="280" y="791">RV0 已有旧 LLR，RV1 再命中</text>
+    <rect x="395" y="765" width="175" height="42" fill="#FFFFFF"/>
+    <text x="482" y="791">sat(L_old + L_rx)</text>
+    <rect x="570" y="765" width="140" height="42" fill="#FFFFFF"/>
+    <text x="640" y="791">重复覆盖</text>
+    <rect x="55" y="807" width="110" height="42" fill="#EDF2F8"/>
+    <text x="110" y="833">a=11..18</text>
+    <rect x="165" y="807" width="230" height="42" fill="#EDF2F8"/>
+    <text x="280" y="833">之前未知，RV1 首次命中</text>
+    <rect x="395" y="807" width="175" height="42" fill="#EDF2F8"/>
+    <text x="482" y="833">0 + L_rx</text>
+    <rect x="570" y="807" width="140" height="42" fill="#EDF2F8"/>
+    <text x="640" y="833">增量冗余</text>
+    <rect x="55" y="849" width="110" height="42" fill="#FFFFFF"/>
+    <text x="110" y="875">a=19..31</text>
+    <rect x="165" y="849" width="230" height="42" fill="#FFFFFF"/>
+    <text x="280" y="875">本次 RV1 未命中</text>
+    <rect x="395" y="849" width="175" height="42" fill="#FFFFFF"/>
+    <text x="482" y="875">保持旧值或中性 0</text>
+    <rect x="570" y="849" width="140" height="42" fill="#FFFFFF"/>
+    <text x="640" y="875">未观测</text>
+    <rect x="55" y="891" width="110" height="42" fill="#EDF2F8"/>
+    <text x="110" y="917">&lt;NULL&gt;</text>
+    <rect x="165" y="891" width="230" height="42" fill="#EDF2F8"/>
+    <text x="280" y="917">协议补入的空位置</text>
+    <rect x="395" y="891" width="175" height="42" fill="#EDF2F8"/>
+    <text x="482" y="917">跳过，不消费 LLR</text>
+    <rect x="570" y="891" width="140" height="42" fill="#EDF2F8"/>
+    <text x="640" y="917">非编码比特</text>
+  </g>
+  <text x="55" y="958" font-size="13" fill="#1B2433">核心公式：同一环地址 a 上的独立观测在 LLR 域相加，硬件实现用饱和加法。</text>
+
+  <!-- LLR 流 -> soft buffer 箭头 -->
+  <g stroke="#3E9E74" stroke-width="1.8" fill="none">
+    <path d="M 800 425 V 680" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 下部：四个冗余版本的传输与接收模型 ============ -->
+  <g filter="url(#soft)">
+    <rect x="30" y="1000" width="970" height="600" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="55" y="1028" font-size="16" font-weight="700" fill="#1B2433">四个冗余版本的传输与接收模型</text>
+  <text x="55" y="1053" font-size="12" fill="#5D6B80">每一行表示一次 HARQ 传输。发送端按 RV 起点读环；接收端按同一环地址写回 soft buffer，并区分新覆盖、重复覆盖和仍未知位置。</text>
+
+  <!-- 表头 -->
+  <g font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+    <rect x="30" y="1080" width="65" height="34" fill="#1F3A5F"/>
+    <text x="62" y="1103">传输</text>
+    <rect x="95" y="1080" width="215" height="34" fill="#1F3A5F"/>
+    <text x="202" y="1103">发送端读取窗口</text>
+    <rect x="310" y="1080" width="240" height="34" fill="#1F3A5F"/>
+    <text x="430" y="1103">LLR 流地址</text>
+    <rect x="550" y="1080" width="215" height="34" fill="#1F3A5F"/>
+    <text x="657" y="1103">接收端写回动作</text>
+    <rect x="765" y="1080" width="205" height="34" fill="#1F3A5F"/>
+    <text x="867" y="1103">传输后累计状态</text>
+  </g>
+
+  <!-- RV0 行 -->
+  <g font-size="12" fill="#1B2433">
+    <rect x="30" y="1114" width="940" height="110" fill="#FFFFFF"/>
+    <text x="62" y="1168" font-size="14" font-weight="700" fill="#3B6FB5" text-anchor="middle">RV0</text>
+    <text x="111" y="1136">k0=0，顺时针扫描，跳过</text>
+    <text x="111" y="1154">&lt;NULL&gt;，取 E=11 个有效编码比特。</text>
+    <text x="566" y="1136">初次覆盖 11 个地址；</text>
+    <text x="566" y="1154">soft buffer 原值由中性</text>
+    <text x="566" y="1172">0 变为接收 LLR。</text>
+    <text x="781" y="1136">已覆盖 11/32；仍未知 21/32。</text>
+    <text x="781" y="1154">CRC 失败则保留缓存，</text>
+    <text x="781" y="1172">等待下一 RV。</text>
+  </g>
+  <g font-size="10.5" fill="#1B2433" text-anchor="middle">
+    <rect x="320" y="1130" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3B6FB5" stroke-width="1.2"/>
+    <text x="337" y="1149" font-weight="700">a=0</text>
+    <rect x="358" y="1130" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3B6FB5" stroke-width="1.2"/>
+    <text x="375" y="1149" font-weight="700">a=1</text>
+    <rect x="396" y="1130" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3B6FB5" stroke-width="1.2"/>
+    <text x="413" y="1149" font-weight="700">a=2</text>
+    <rect x="434" y="1130" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3B6FB5" stroke-width="1.2"/>
+    <text x="451" y="1149" font-weight="700">a=3</text>
+    <rect x="472" y="1130" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3B6FB5" stroke-width="1.2"/>
+    <text x="489" y="1149" font-weight="700">a=4</text>
+    <rect x="510" y="1130" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3B6FB5" stroke-width="1.2"/>
+    <text x="527" y="1149" font-weight="700">a=5</text>
+    <rect x="320" y="1161" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3B6FB5" stroke-width="1.2"/>
+    <text x="337" y="1180" font-weight="700">a=6</text>
+    <rect x="358" y="1161" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3B6FB5" stroke-width="1.2"/>
+    <text x="375" y="1180" font-weight="700">a=7</text>
+    <rect x="396" y="1161" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3B6FB5" stroke-width="1.2"/>
+    <text x="413" y="1180" font-weight="700">a=8</text>
+    <rect x="434" y="1161" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3B6FB5" stroke-width="1.2"/>
+    <text x="451" y="1180" font-weight="700">a=9</text>
+    <rect x="472" y="1161" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3B6FB5" stroke-width="1.2"/>
+    <text x="489" y="1180" font-weight="700">a=10</text>
+    <text x="415" y="1206" fill="#5D6B80" font-weight="400">黄色=重复命中；浅底=首次命中新地址</text>
+  </g>
+
+  <!-- RV1 行 -->
+  <g font-size="12" fill="#1B2433">
+    <rect x="30" y="1224" width="940" height="110" fill="#EDF2F8"/>
+    <text x="62" y="1278" font-size="14" font-weight="700" fill="#3E9E74" text-anchor="middle">RV1</text>
+    <text x="111" y="1246">k0=8，顺时针扫描，跳过</text>
+    <text x="111" y="1264">&lt;NULL&gt;，取 E=11 个有效编码比特。</text>
+    <text x="566" y="1246">新覆盖 8 个地址；重复 3 个地址</text>
+    <text x="566" y="1264">执行饱和累加。</text>
+    <text x="781" y="1246">已覆盖 19/32；仍未知 13/32。</text>
+    <text x="781" y="1264">CRC 失败则保留缓存，</text>
+    <text x="781" y="1282">等待下一 RV。</text>
+  </g>
+  <g font-size="10.5" fill="#1B2433" text-anchor="middle">
+    <rect x="320" y="1240" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="337" y="1259" font-weight="700">a=8</text>
+    <rect x="358" y="1240" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="375" y="1259" font-weight="700">a=9</text>
+    <rect x="396" y="1240" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="413" y="1259" font-weight="700">a=10</text>
+    <rect x="434" y="1240" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.2"/>
+    <text x="451" y="1259" font-weight="700">a=11</text>
+    <rect x="472" y="1240" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.2"/>
+    <text x="489" y="1259" font-weight="700">a=12</text>
+    <rect x="510" y="1240" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.2"/>
+    <text x="527" y="1259" font-weight="700">a=13</text>
+    <rect x="320" y="1271" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.2"/>
+    <text x="337" y="1290" font-weight="700">a=14</text>
+    <rect x="358" y="1271" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.2"/>
+    <text x="375" y="1290" font-weight="700">a=15</text>
+    <rect x="396" y="1271" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.2"/>
+    <text x="413" y="1290" font-weight="700">a=16</text>
+    <rect x="434" y="1271" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.2"/>
+    <text x="451" y="1290" font-weight="700">a=17</text>
+    <rect x="472" y="1271" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.2"/>
+    <text x="489" y="1290" font-weight="700">a=18</text>
+    <text x="415" y="1316" fill="#5D6B80" font-weight="400">黄色=重复命中；浅底=首次命中新地址</text>
+  </g>
+
+  <!-- RV2 行 -->
+  <g font-size="12" fill="#1B2433">
+    <rect x="30" y="1334" width="940" height="110" fill="#FFFFFF"/>
+    <text x="62" y="1388" font-size="14" font-weight="700" fill="#D18A2F" text-anchor="middle">RV2</text>
+    <text x="111" y="1356">k0=16，顺时针扫描，跳过</text>
+    <text x="111" y="1374">&lt;NULL&gt;，取 E=11 个有效编码比特。</text>
+    <text x="566" y="1356">新覆盖 8 个地址；重复 3 个地址</text>
+    <text x="566" y="1374">执行饱和累加。</text>
+    <text x="781" y="1356">已覆盖 27/32；仍未知 5/32。</text>
+    <text x="781" y="1374">CRC 失败则保留缓存，</text>
+    <text x="781" y="1392">等待下一 RV。</text>
+  </g>
+  <g font-size="10.5" fill="#1B2433" text-anchor="middle">
+    <rect x="320" y="1350" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="337" y="1369" font-weight="700">a=16</text>
+    <rect x="358" y="1350" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="375" y="1369" font-weight="700">a=17</text>
+    <rect x="396" y="1350" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="413" y="1369" font-weight="700">a=18</text>
+    <rect x="434" y="1350" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#D18A2F" stroke-width="1.2"/>
+    <text x="451" y="1369" font-weight="700">a=19</text>
+    <rect x="472" y="1350" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#D18A2F" stroke-width="1.2"/>
+    <text x="489" y="1369" font-weight="700">a=20</text>
+    <rect x="510" y="1350" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#D18A2F" stroke-width="1.2"/>
+    <text x="527" y="1369" font-weight="700">a=21</text>
+    <rect x="320" y="1381" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#D18A2F" stroke-width="1.2"/>
+    <text x="337" y="1400" font-weight="700">a=22</text>
+    <rect x="358" y="1381" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#D18A2F" stroke-width="1.2"/>
+    <text x="375" y="1400" font-weight="700">a=23</text>
+    <rect x="396" y="1381" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#D18A2F" stroke-width="1.2"/>
+    <text x="413" y="1400" font-weight="700">a=24</text>
+    <rect x="434" y="1381" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#D18A2F" stroke-width="1.2"/>
+    <text x="451" y="1400" font-weight="700">a=25</text>
+    <rect x="472" y="1381" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#D18A2F" stroke-width="1.2"/>
+    <text x="489" y="1400" font-weight="700">a=26</text>
+    <text x="415" y="1426" fill="#5D6B80" font-weight="400">黄色=重复命中；浅底=首次命中新地址</text>
+  </g>
+
+  <!-- RV3 行 -->
+  <g font-size="12" fill="#1B2433">
+    <rect x="30" y="1444" width="940" height="110" fill="#EDF2F8"/>
+    <text x="62" y="1498" font-size="14" font-weight="700" fill="#8A6BBE" text-anchor="middle">RV3</text>
+    <text x="111" y="1466">k0=24，顺时针扫描，跳过</text>
+    <text x="111" y="1484">&lt;NULL&gt;，取 E=11 个有效编码比特。</text>
+    <text x="566" y="1466">新覆盖 5 个地址；重复 6 个地址</text>
+    <text x="566" y="1484">执行饱和累加。</text>
+    <text x="781" y="1466">已覆盖 32/32；仍未知 0/32。</text>
+    <text x="781" y="1484">CRC 失败则保留缓存，</text>
+    <text x="781" y="1502">等待下一 RV。</text>
+  </g>
+  <g font-size="10.5" fill="#1B2433" text-anchor="middle">
+    <rect x="320" y="1460" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="337" y="1479" font-weight="700">a=24</text>
+    <rect x="358" y="1460" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="375" y="1479" font-weight="700">a=25</text>
+    <rect x="396" y="1460" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="413" y="1479" font-weight="700">a=26</text>
+    <rect x="434" y="1460" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="451" y="1479" font-weight="700">a=27</text>
+    <rect x="472" y="1460" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="489" y="1479" font-weight="700">a=28</text>
+    <rect x="510" y="1460" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="527" y="1479" font-weight="700">a=29</text>
+    <rect x="320" y="1491" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="337" y="1510" font-weight="700">a=30</text>
+    <rect x="358" y="1491" width="35" height="28" rx="6" fill="#FBEECB" stroke="#C9972E" stroke-width="1.2"/>
+    <text x="375" y="1510" font-weight="700">a=31</text>
+    <rect x="396" y="1491" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#8A6BBE" stroke-width="1.2"/>
+    <text x="413" y="1510" font-weight="700">a=0</text>
+    <rect x="434" y="1491" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#8A6BBE" stroke-width="1.2"/>
+    <text x="451" y="1510" font-weight="700">a=1</text>
+    <rect x="472" y="1491" width="35" height="28" rx="6" fill="#E5F4ED" stroke="#8A6BBE" stroke-width="1.2"/>
+    <text x="489" y="1510" font-weight="700">a=2</text>
+    <text x="415" y="1536" fill="#5D6B80" font-weight="400">黄色=重复命中；浅底=首次命中新地址</text>
+  </g>
+
+  <!-- ============ 底部读图顺序与工程检查点 ============ -->
+  <g filter="url(#soft)">
+    <rect x="30" y="1620" width="970" height="160" rx="14" fill="#FAF5E4" stroke="#D9C179" stroke-width="1.5"/>
+  </g>
+  <text x="55" y="1648" font-size="14" font-weight="700" fill="#6B5420">读图顺序与工程检查点</text>
+  <g font-size="12" fill="#1B2433">
+    <text x="55" y="1676">1. 左侧同一个环：RV0、RV1、RV2、RV3 是读取窗口，不是四套编码器。</text>
+    <text x="55" y="1704">2. 右上 LLR 流：按 RV 起点映射回环地址，不能按流序号合并。</text>
+    <text x="520" y="1676">3. 右下 soft buffer：首次命中写入，重复命中累加，</text>
+    <text x="536" y="1689">未命中保持，&lt;NULL&gt; 跳过。</text>
+    <text x="520" y="1704">4. 验证记录：k0、E、命中地址、新覆盖数、重复覆盖数、饱和次数和 CRC 结果。</text>
+  </g>
+
+  <text x="34" y="1810" font-size="11" fill="#6B7684">教学参数非规范向量；协议依据见正文证据表。</text>
+</svg>

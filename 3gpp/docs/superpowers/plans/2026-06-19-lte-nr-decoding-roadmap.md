@@ -37,7 +37,7 @@ source_spec: "docs/superpowers/plans/2026-06-19-lte-nr-decoding-roadmap.md"
 | Area | Required Handling |
 |:---|:---|
 | Scope | Focus on LTE Turbo decoding, NR LDPC decoding, and NR Polar decoding. Do not turn the roadmap into a broad LTE/NR protocol-stack course. |
-| Card count | Exactly 91 task cards, `T1.1` through `T15.6`, with module counts from the approved spec. |
+| Card count | Exactly 91 task cards, `T1.1` through `T20.6`, with module counts from the approved spec. |
 | Card fields | Every card has `编号`, `前置`, `Prompt`, `产出`, `验收`, and `3GPP/证据`. |
 | Prompt depth | The final roadmap defines the full article skeleton once in `任务卡片统一写作要求`. Each task-card `Prompt` then contains the task-specific writing instruction plus this short binding sentence: `写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。` Do not repeat the full 18-section skeleton in all 91 cards. |
 | Evidence | Every protocol-derived claim cites TS number, Rel-19 package, section/table/figure/formula when applicable, and local path. Unverified anchors remain marked `待核验`. |
@@ -433,24 +433,24 @@ Add Chinese headings and one summary table for:
 
 | Module | Count | Range |
 |:---|---:|:---|
-| M12 浮点仿真 | 5 | T12.1-T12.5 |
-| M13 定点 C/C++ 模型 | 6 | T13.1-T13.6 |
-| M14 RTL/ASIC 译码器架构 | 6 | T14.1-T14.6 |
-| M15 综合与验证 | 6 | T15.1-T15.6 |
+| M12 浮点仿真 | 5 | T17.1-T17.5 |
+| M13 定点 C/C++ 模型 | 6 | T18.1-T18.6 |
+| M14 RTL/ASIC 译码器架构 | 6 | T19.1-T19.6 |
+| M15 综合与验证 | 6 | T20.1-T20.6 |
 
-- [ ] **Step 2: Add M12 floating-point simulation cards T12.1-T12.5**
+- [ ] **Step 2: Add M12 floating-point simulation cards T17.1-T17.5**
 
 Convert every approved M12 card into Chinese. Keep reproducible seeds, commands, outputs, thresholds, BER/BLER reporting, and protocol-vector provenance requirements.
 
-- [ ] **Step 3: Add M13 fixed-point C/C++ cards T13.1-T13.6**
+- [ ] **Step 3: Add M13 fixed-point C/C++ cards T18.1-T18.6**
 
 Convert every approved M13 card into Chinese. Emphasize bit-exact interfaces, LLR/message width, saturation, SIMD layout, regression harness, and upstream protocol evidence.
 
-- [ ] **Step 4: Add M14 RTL/ASIC architecture cards T14.1-T14.6**
+- [ ] **Step 4: Add M14 RTL/ASIC architecture cards T19.1-T19.6**
 
 Convert every approved M14 card into Chinese. Preserve Turbo, LDPC, Polar, unified subsystem, soft-buffer/HARQ memory, and register-map/configuration-flow coverage.
 
-- [ ] **Step 5: Add M15 synthesis and verification cards T15.1-T15.6**
+- [ ] **Step 5: Add M15 synthesis and verification cards T20.1-T20.6**
 
 Convert every approved M15 card into Chinese. Keep SystemVerilog testbench, protocol vectors, coverage/regression, DC synthesis, timing closure, and final evidence-report coverage.
 
@@ -500,7 +500,7 @@ Expected:
 
 ```text
 23
-T12.1 T15.6
+T17.1 T20.6
 ```
 
 - [ ] **Step 9: Commit L3 cards and closing rules**
@@ -542,7 +542,7 @@ Expected:
 ```text
 91
 ['T1.1', 'T1.2', 'T1.3']
-['T15.4', 'T15.5', 'T15.6']
+['T20.4', 'T20.5', 'T20.6']
 duplicates []
 ```
 

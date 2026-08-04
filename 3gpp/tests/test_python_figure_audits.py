@@ -512,9 +512,9 @@ class PythonFigureDirectExecutionTests(unittest.TestCase):
     """ @brief 测试渲染脚本的直接执行——验证模块导入路径和等价内容质量审计。 """
 
     def test_shared_text_fit_helper_imports_when_script_is_executed_by_path(self):
-        """ @brief 验证 render_lte_harq_rv_windows.py 通过 subprocess 直接执行时不出现 ModuleNotFoundError。 """
+        """ @brief 验证 render_lte_turbo_interleaver_table.py 通过 subprocess 直接执行时不出现 ModuleNotFoundError。 """
         root = Path(__file__).resolve().parents[1]
-        script = root / "tools/figures/render_lte_harq_rv_windows.py"
+        script = root / "tools/figures/render_lte_turbo_interleaver_table.py"
 
         proc = subprocess.run(
             [sys.executable, str(script)],

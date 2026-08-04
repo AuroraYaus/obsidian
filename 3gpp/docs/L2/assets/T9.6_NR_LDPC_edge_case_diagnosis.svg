@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T9.6_NR_LDPC_edge_case_diagnosis.svg
+  @brief   NR LDPC Decoder Edge Case Diagnosis 排查流程图（手绘 SVG V2：布局与配色依据 T9.6 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：四阶段排查流程（Descriptor -> Rate recovery -> LDPC core ->
+           CRC/reassembly，每阶段圆点检查项）、八类典型边界案例网格（4x2，标题/首查
+           字段/典型现象）、排查原则面板与六个调试字段标签，均与讲义 T9.6 正文、
+           诊断流程图及案例总表语义一致。
+           视觉设计：排查流程改为纵向阶梯（序号徽章 1-4 逐级下行）；案例卡按
+           风险色表头 + 协议字段青色标注。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1380" viewBox="0 0 1500 1380" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>NR LDPC Decoder Edge Case Diagnosis</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">NR LDPC Decoder Edge Case Diagnosis</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">失败排查按协议链路从左到右推进：先 descriptor，再 rate recovery，再 LDPC core，最后 CRC 和重组。每一步都必须有可复现字段和最小 dump。</text>
+
+  <!-- ============ 面板 A：四阶段排查阶梯（纵向） ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="290" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="154" width="10" height="10" rx="3" fill="#8E3B5E"/>
+  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">四阶段排查流程（纵向阶梯，从入口症状向下）</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <rect x="80" y="196" width="300" height="190" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
+    <circle cx="104" cy="222" r="13" fill="#A6403C"/>
+    <text x="104" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="230" y="228" font-size="13.5" font-weight="700">Descriptor</text>
+    <circle cx="108" cy="266" r="4" fill="#A6403C"/>
+    <text x="122" y="271">BG, Zc, K/Kb, C</text>
+    <circle cx="108" cy="294" r="4" fill="#A6403C"/>
+    <text x="122" y="299">Qm, E, Ncb, RV</text>
+    <circle cx="108" cy="322" r="4" fill="#A6403C"/>
+    <text x="122" y="327">CBG mask, NDI, HARQ id</text>
+
+    <rect x="410" y="196" width="300" height="190" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <circle cx="434" cy="222" r="13" fill="#2F6E71"/>
+    <text x="434" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="560" y="228" font-size="13.5" font-weight="700">Rate recovery</text>
+    <circle cx="438" cy="266" r="4" fill="#2F6E71"/>
+    <text x="452" y="271">bit deinterleaving</text>
+    <circle cx="438" cy="294" r="4" fill="#2F6E71"/>
+    <text x="452" y="299">RV/k0 address trace</text>
+    <circle cx="438" cy="322" r="4" fill="#2F6E71"/>
+    <text x="452" y="327">unknown / shortened / repeat</text>
+
+    <rect x="740" y="196" width="300" height="190" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <circle cx="764" cy="222" r="13" fill="#6C7A2E"/>
+    <text x="764" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="890" y="228" font-size="13.5" font-weight="700">LDPC core</text>
+    <circle cx="768" cy="266" r="4" fill="#6C7A2E"/>
+    <text x="782" y="271">layer/edge schedule</text>
+    <circle cx="768" cy="294" r="4" fill="#6C7A2E"/>
+    <text x="782" y="299">LLR sign and saturation</text>
+    <circle cx="768" cy="322" r="4" fill="#6C7A2E"/>
+    <text x="782" y="327">syndrome curve</text>
+
+    <rect x="1070" y="196" width="300" height="190" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <circle cx="1094" cy="222" r="13" fill="#B06F2B"/>
+    <text x="1094" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="1220" y="228" font-size="13.5" font-weight="700">CRC/reassembly</text>
+    <circle cx="1098" cy="266" r="4" fill="#B06F2B"/>
+    <text x="1112" y="271">filler and CB CRC strip</text>
+    <circle cx="1098" cy="294" r="4" fill="#B06F2B"/>
+    <text x="1112" y="299">CB concat order</text>
+    <circle cx="1098" cy="322" r="4" fill="#B06F2B"/>
+    <text x="1112" y="327">TB CRC and HARQ feedback</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 380 290 H 410" marker-end="url(#arrow)"/>
+    <path d="M 710 290 H 740" marker-end="url(#arrow)"/>
+    <path d="M 1040 290 H 1070" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 面板 B：八类典型边界案例 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="450" width="1380" height="580" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="480" font-size="16" font-weight="700" fill="#23272E">典型边界案例与首查字段</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <rect x="80" y="506" width="320" height="124" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="98" y="534" font-weight="700">BG boundary</text>
+    <text x="98" y="562" fill="#2F6E71">字段：A/R -&gt; BG</text>
+    <text x="98" y="588" fill="#646B76">现象：syndrome 不收敛，CB CRC fail</text>
+    <rect x="412" y="506" width="320" height="124" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="430" y="534" font-weight="700">Zc boundary</text>
+    <text x="430" y="562" fill="#2F6E71">字段：iLS/Zc/table</text>
+    <text x="430" y="588" fill="#646B76">现象：矩阵尺寸或地址错位</text>
+    <rect x="744" y="506" width="320" height="124" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="762" y="534" font-weight="700">filler</text>
+    <text x="762" y="562" fill="#2F6E71">字段：filler ranges</text>
+    <text x="762" y="588" fill="#646B76">现象：TB CRC fail 或长度异常</text>
+    <rect x="1076" y="506" width="320" height="124" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1094" y="534" font-weight="700">RV mismatch</text>
+    <text x="1094" y="562" fill="#2F6E71">字段：rvid/k0/Ncb</text>
+    <text x="1094" y="588" fill="#646B76">现象：soft buffer 命中区域异常</text>
+
+    <rect x="80" y="650" width="320" height="124" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="98" y="678" font-weight="700">CBG mismatch</text>
+    <text x="98" y="706" fill="#2F6E71">字段：CBGTI/CBGFI</text>
+    <text x="98" y="732" fill="#646B76">现象：held CBG 被覆盖或未更新</text>
+    <rect x="412" y="650" width="320" height="124" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="430" y="678" font-weight="700">LLR saturation</text>
+    <text x="430" y="706" fill="#2F6E71">字段：sat_count/range</text>
+    <text x="430" y="732" fill="#646B76">现象：syndrome 曲线停滞</text>
+    <rect x="744" y="650" width="320" height="124" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="762" y="678" font-weight="700">syndrome vs CRC</text>
+    <text x="762" y="706" fill="#2F6E71">字段：hard bits/ranges</text>
+    <text x="762" y="732" fill="#646B76">现象：syndrome pass 但 CRC fail</text>
+    <rect x="1076" y="650" width="320" height="124" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1094" y="678" font-weight="700">upper assembly</text>
+    <text x="1094" y="706" fill="#2F6E71">字段：tb_id/cw_id/MAC</text>
+    <text x="1094" y="732" fill="#646B76">现象：CRC pass 但上层组包失败</text>
+  </g>
+
+  <!-- ============ 面板 C：排查原则 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="1060" width="1380" height="290" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="1092" font-size="16" font-weight="700" fill="#23272E">排查原则：不要优先怀疑 LDPC core</text>
+  <text x="90" y="1126" font-size="12.5" fill="#646B76">先确认 descriptor、rate recovery 和重组边界。如果 BG/Zc/RV/CBG/filler/order 错，LDPC core 即使完全正确也会输出失败。只有在输入边界和地址轨迹被固定 pattern 证明正确后，再排查 Min-Sum、layer schedule、定点饱和和 syndrome checker。</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <rect x="80" y="1176" width="205" height="40" rx="7" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="182" y="1202" text-anchor="middle" font-weight="700">descriptor_dump</text>
+    <rect x="295" y="1176" width="205" height="40" rx="7" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="397" y="1202" text-anchor="middle" font-weight="700">addr_trace</text>
+    <rect x="510" y="1176" width="205" height="40" rx="7" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="612" y="1202" text-anchor="middle" font-weight="700">llr_range</text>
+    <rect x="725" y="1176" width="205" height="40" rx="7" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="827" y="1202" text-anchor="middle" font-weight="700">syndrome_curve</text>
+    <rect x="940" y="1176" width="205" height="40" rx="7" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1042" y="1202" text-anchor="middle" font-weight="700">crc_ranges</text>
+    <rect x="1155" y="1176" width="205" height="40" rx="7" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1257" y="1202" text-anchor="middle" font-weight="700">harq_state</text>
+  </g>
+</svg>

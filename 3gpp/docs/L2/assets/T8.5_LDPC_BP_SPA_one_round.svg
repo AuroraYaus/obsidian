@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T8.5_LDPC_BP_SPA_one_round.svg
+  @brief   LDPC BP/SPA 单轮消息传递教学图（手绘 SVG）
+  @date    2026-08-04
+  @note    教学 H=[[1,1,1,0],[0,1,1,1]]，channel LLR=[2.0,-1.0,0.7,1.2]。
+           布局按讲义语义重排：上排左玩具 Tanner 图（4 变量节点 + 2 校验节点 + 6 条边，
+           节点上方标注 Lch）、上排右一轮数值结果（CN 外信息表 / VN posterior 表 /
+           check 表 + 早停注记）；中排 SPA 更新的三个对象（公式条带）；
+           下排读图顺序与工程检测点四卡片。图中数值用于解释算法，不是
+           NR conformance vector；字号符合合规 Rule 23。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="820" viewBox="0 0 1040 820" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>LDPC BP/SPA 一轮消息传递</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5D6B80"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 标题 ============ -->
+  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433">LDPC BP/SPA 一轮消息传递</text>
+  <text x="35" y="60" font-size="12" fill="#5B6877">教学矩阵 H=[[1,1,1,0],[0,1,1,1]]，初始 channel LLR=[2.0,-1.0,0.7,1.2]。</text>
+  <text x="35" y="78" font-size="12" fill="#5B6877">图中数值用于解释算法，不是 NR conformance vector。</text>
+
+  <!-- ============ 玩具 Tanner 图 ============ -->
+  <g filter="url(#soft)">
+    <rect x="35" y="95" width="445" height="280" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="55" y="122" font-size="15" font-weight="700" fill="#3B6FB5">玩具 Tanner 图</text>
+
+  <!-- 边 -->
+  <g stroke="#9FB0C3" stroke-width="1.5">
+    <line x1="85" y1="203" x2="155" y2="272"/>
+    <line x1="175" y1="203" x2="155" y2="272"/>
+    <line x1="265" y1="203" x2="155" y2="272"/>
+    <line x1="175" y1="203" x2="355" y2="272"/>
+    <line x1="265" y1="203" x2="355" y2="272"/>
+    <line x1="355" y1="203" x2="355" y2="272"/>
+  </g>
+
+  <!-- 变量节点 + Lch 标注 -->
+  <g font-size="11.5" fill="#5B6877" text-anchor="middle">
+    <text x="85" y="142">Lch=2.0</text>
+    <text x="175" y="142">Lch=-1.0</text>
+    <text x="265" y="142">Lch=0.7</text>
+    <text x="355" y="142">Lch=1.2</text>
+  </g>
+  <g font-size="11" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <circle cx="85" cy="185" r="18" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="85" y="189">v0</text>
+    <circle cx="175" cy="185" r="18" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="175" y="189">v1</text>
+    <circle cx="265" cy="185" r="18" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="265" y="189">v2</text>
+    <circle cx="355" cy="185" r="18" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="355" y="189">v3</text>
+  </g>
+
+  <!-- 校验节点 -->
+  <g font-size="12" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <rect x="125" y="272" width="60" height="30" rx="8" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="155" y="292">c0</text>
+    <rect x="325" y="272" width="60" height="30" rx="8" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.5"/>
+    <text x="355" y="292">c1</text>
+  </g>
+
+  <text x="55" y="345" font-size="11.5" fill="#5B6877">第一轮：变量节点先把 channel LLR 发到相邻校验节点；</text>
+  <text x="55" y="361" font-size="11.5" fill="#5B6877">校验节点只用"其他边"的消息计算外信息。</text>
+
+  <!-- ============ 一轮数值结果 ============ -->
+  <g filter="url(#soft)">
+    <rect x="500" y="95" width="525" height="340" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="520" y="122" font-size="15" font-weight="700" fill="#3E9E74">一轮数值结果</text>
+
+  <!-- CN 外信息表 -->
+  <g font-size="12.5" text-anchor="middle">
+    <rect x="520" y="145" width="130" height="30" fill="#DDE7F3"/>
+    <text x="585" y="165" font-weight="700" fill="#1B2433">CN 外信息</text>
+    <rect x="650" y="145" width="90" height="30" fill="#DDE7F3"/>
+    <text x="695" y="165" font-weight="700" fill="#1B2433">LLR</text>
+    <rect x="520" y="175" width="130" height="30" fill="#FFFFFF"/>
+    <text x="585" y="196" fill="#1B2433">r0-&gt;v0</text>
+    <rect x="650" y="175" width="90" height="30" fill="#FFFFFF"/>
+    <text x="695" y="196" fill="#1B2433">-0.313</text>
+    <rect x="520" y="205" width="130" height="30" fill="#EDF2F8"/>
+    <text x="585" y="226" fill="#1B2433">r0-&gt;v1</text>
+    <rect x="650" y="205" width="90" height="30" fill="#EDF2F8"/>
+    <text x="695" y="226" fill="#1B2433">+0.524</text>
+    <rect x="520" y="235" width="130" height="30" fill="#FFFFFF"/>
+    <text x="585" y="256" fill="#1B2433">r0-&gt;v2</text>
+    <rect x="650" y="235" width="90" height="30" fill="#FFFFFF"/>
+    <text x="695" y="256" fill="#1B2433">-0.735</text>
+    <rect x="520" y="265" width="130" height="30" fill="#EDF2F8"/>
+    <text x="585" y="286" fill="#1B2433">r1-&gt;v1</text>
+    <rect x="650" y="265" width="90" height="30" fill="#EDF2F8"/>
+    <text x="695" y="286" fill="#1B2433">+0.365</text>
+    <rect x="520" y="295" width="130" height="30" fill="#FFFFFF"/>
+    <text x="585" y="316" fill="#1B2433">r1-&gt;v2</text>
+    <rect x="650" y="295" width="90" height="30" fill="#FFFFFF"/>
+    <text x="695" y="316" fill="#1B2433">-0.507</text>
+    <rect x="520" y="325" width="130" height="30" fill="#EDF2F8"/>
+    <text x="585" y="346" fill="#1B2433">r1-&gt;v3</text>
+    <rect x="650" y="325" width="90" height="30" fill="#EDF2F8"/>
+    <text x="695" y="346" fill="#1B2433">-0.313</text>
+  </g>
+
+  <!-- VN posterior 表 -->
+  <g font-size="12.5" text-anchor="middle">
+    <rect x="760" y="145" width="75" height="30" fill="#DDE7F3"/>
+    <text x="797" y="165" font-weight="700" fill="#1B2433">VN</text>
+    <rect x="835" y="145" width="100" height="30" fill="#DDE7F3"/>
+    <text x="885" y="165" font-weight="700" fill="#1B2433">Lpost</text>
+    <rect x="935" y="145" width="75" height="30" fill="#DDE7F3"/>
+    <text x="972" y="165" font-weight="700" fill="#1B2433">hard</text>
+    <rect x="760" y="175" width="75" height="30" fill="#FFFFFF"/>
+    <text x="797" y="196" fill="#1B2433">v0</text>
+    <rect x="835" y="175" width="100" height="30" fill="#FFFFFF"/>
+    <text x="885" y="196" fill="#1B2433">+1.687</text>
+    <rect x="935" y="175" width="75" height="30" fill="#FFFFFF"/>
+    <text x="972" y="196" fill="#1B2433">0</text>
+    <rect x="760" y="205" width="75" height="30" fill="#EDF2F8"/>
+    <text x="797" y="226" fill="#1B2433">v1</text>
+    <rect x="835" y="205" width="100" height="30" fill="#EDF2F8"/>
+    <text x="885" y="226" fill="#1B2433">-0.111</text>
+    <rect x="935" y="205" width="75" height="30" fill="#EDF2F8"/>
+    <text x="972" y="226" fill="#1B2433">1</text>
+    <rect x="760" y="235" width="75" height="30" fill="#FFFFFF"/>
+    <text x="797" y="256" fill="#1B2433">v2</text>
+    <rect x="835" y="235" width="100" height="30" fill="#FFFFFF"/>
+    <text x="885" y="256" fill="#1B2433">-0.542</text>
+    <rect x="935" y="235" width="75" height="30" fill="#FFFFFF"/>
+    <text x="972" y="256" fill="#1B2433">1</text>
+    <rect x="760" y="265" width="75" height="30" fill="#EDF2F8"/>
+    <text x="797" y="286" fill="#1B2433">v3</text>
+    <rect x="835" y="265" width="100" height="30" fill="#EDF2F8"/>
+    <text x="885" y="286" fill="#1B2433">+0.887</text>
+    <rect x="935" y="265" width="75" height="30" fill="#EDF2F8"/>
+    <text x="972" y="286" fill="#1B2433">0</text>
+  </g>
+
+  <!-- check 表 + 早停注记 -->
+  <g font-size="12.5" text-anchor="middle">
+    <rect x="760" y="305" width="80" height="30" fill="#DDE7F3"/>
+    <text x="800" y="325" font-weight="700" fill="#1B2433">check</text>
+    <rect x="840" y="305" width="125" height="30" fill="#DDE7F3"/>
+    <text x="902" y="325" font-weight="700" fill="#1B2433">GF(2)</text>
+    <rect x="965" y="305" width="50" height="30" fill="#DDE7F3"/>
+    <text x="990" y="325" font-weight="700" fill="#1B2433">s</text>
+    <rect x="760" y="335" width="80" height="30" fill="#FFFFFF"/>
+    <text x="800" y="356" fill="#1B2433">c0</text>
+    <rect x="840" y="335" width="125" height="30" fill="#FFFFFF"/>
+    <text x="902" y="356" fill="#1B2433">0 xor 1 xor 1</text>
+    <rect x="965" y="335" width="50" height="30" fill="#FFFFFF"/>
+    <text x="990" y="356" fill="#1B2433">0</text>
+    <rect x="760" y="365" width="80" height="30" fill="#EDF2F8"/>
+    <text x="800" y="386" fill="#1B2433">c1</text>
+    <rect x="840" y="365" width="125" height="30" fill="#EDF2F8"/>
+    <text x="902" y="386" fill="#1B2433">1 xor 1 xor 0</text>
+    <rect x="965" y="365" width="50" height="30" fill="#EDF2F8"/>
+    <text x="990" y="386" fill="#1B2433">0</text>
+  </g>
+  <text x="760" y="410" font-size="11.5" font-weight="700" fill="#C4553D">syndrome=[0,0]，该 toy 例子第一轮可早停；</text>
+  <text x="760" y="426" font-size="11.5" font-weight="700" fill="#C4553D">真实接收机仍需按协议边界执行 CRC。</text>
+
+  <!-- ============ SPA 更新的三个对象 ============ -->
+  <g filter="url(#soft)">
+    <rect x="35" y="455" width="990" height="190" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="55" y="483" font-size="15" font-weight="700" fill="#1B2433">SPA 更新的三个对象</text>
+
+  <g font-size="12.5">
+    <rect x="55" y="505" width="130" height="30" rx="8" fill="#3B6FB5"/>
+    <text x="120" y="525" font-weight="700" fill="#FFFFFF" text-anchor="middle">VN -&gt; CN</text>
+    <text x="200" y="525" fill="#1B2433">q[j-&gt;i] = Lch[j] + 其他校验节点给 vj 的消息</text>
+    <rect x="55" y="555" width="130" height="30" rx="8" fill="#3B6FB5"/>
+    <text x="120" y="575" font-weight="700" fill="#FFFFFF" text-anchor="middle">CN -&gt; VN</text>
+    <text x="200" y="575" fill="#1B2433">r[i-&gt;j] = 2 atanh( ∏ tanh(q[k-&gt;i]/2) ), k != j</text>
+    <rect x="55" y="605" width="130" height="30" rx="8" fill="#3B6FB5"/>
+    <text x="120" y="625" font-weight="700" fill="#FFFFFF" text-anchor="middle">Posterior</text>
+    <text x="200" y="625" fill="#1B2433">Lpost[j] = Lch[j] + 所有相邻校验节点消息</text>
+  </g>
+
+  <!-- ============ 读图顺序与工程检测点 ============ -->
+  <g filter="url(#soft)">
+    <rect x="35" y="665" width="990" height="140" rx="14" fill="#FAF5E4" stroke="#D9C179" stroke-width="1.5"/>
+  </g>
+  <text x="55" y="693" font-size="15" font-weight="700" fill="#1B2433">读图顺序与工程检测点</text>
+  <g font-size="11.5">
+    <rect x="55" y="710" width="230" height="80" rx="9" fill="#FFFFFF" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="70" y="732" font-weight="700" fill="#3B6FB5">1. 外信息</text>
+    <text x="70" y="754" fill="#5B6877">给某条边回消息时，不能把这条边自己</text>
+    <text x="70" y="770" fill="#5B6877">刚送来的证据带回去。</text>
+    <rect x="297" y="710" width="230" height="80" rx="9" fill="#FFFFFF" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="312" y="732" font-weight="700" fill="#3B6FB5">2. 非线性</text>
+    <text x="312" y="754" fill="#5B6877">校验节点使用 tanh/atanh 把</text>
+    <text x="312" y="770" fill="#5B6877">"偶校验约束"转成 LLR 外信息。</text>
+    <rect x="539" y="710" width="230" height="80" rx="9" fill="#FFFFFF" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="554" y="732" font-weight="700" fill="#3B6FB5">3. 定点风险</text>
+    <text x="554" y="754" fill="#5B6877">atanh 接近 1 时数值会变大，硬件通常</text>
+    <text x="554" y="770" fill="#5B6877">要裁剪、查表或近似。</text>
+    <rect x="781" y="710" width="230" height="80" rx="9" fill="#FFFFFF" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="796" y="732" font-weight="700" fill="#3B6FB5">4. 停止边界</text>
+    <text x="796" y="754" fill="#5B6877">syndrome 可做 LDPC 早停；</text>
+    <text x="796" y="770" fill="#5B6877">CRC 决定 CB/TB 是否可信。</text>
+  </g>
+</svg>

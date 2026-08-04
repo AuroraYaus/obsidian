@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T15.2_protocol_vector_corner_case_suite.svg
+  @brief   协议向量与边界用例套件（v2 手绘 SVG）：Rel-19 证据 → 套件清单 → 三族向量通道 → 通过/失败策略与失败束 + 分级表
+  @date    2026-08-04
+  @note    语义与 docs/L3/T20.2_protocol_vector_corner_case_suite.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计。六项几何审计 + cairosvg 渲染验证通过。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="2700" viewBox="0 0 3000 2700" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T15.2_protocol_vector_corner_case_suite</title>
+  <defs>
+    <filter id="soft" x="-8%" y="-8%" width="120%" height="130%">      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A3B2A" flood-opacity="0.09"/>    </filter>
+    <marker id="m6E7A8C" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#6E7A8C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m94A3B8" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m6D4FBF" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#6D4FBF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m8A6B46" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#8A6B46" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m3F51C4" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#3F51C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m0E7A67" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#0E7A67" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="mB76E00" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#B76E00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="mB4405B" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#B4405B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m4A5A6A" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#4A5A6A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="3000" height="2700" fill="#FBF9F3"/>
+  <path d="M 88 56 l 9 9 l -9 9 l -9 -9 z" fill="#3F51C4" stroke="none"/>
+  <text class="title-main" x="116" y="68" font-size="40" font-weight="700" fill="#262B33">T15.2 Protocol Vector and Corner-Case Suite</text>
+  <text class="subtitle" x="116" y="108" font-size="20.5" fill="#5B6472">Directed vectors turn Rel-19 clauses and decoder edge cases into replayable pass/fail evidence.</text>
+  <line x1="80" y1="130" x2="2920" y2="130" stroke="#D8D2C6" stroke-width="2"/>
+  <g class="card" id="t0">
+    <rect class="body" x="80" y="160" width="540" height="240" rx="12" fill="#FFFFFF" stroke="#3F51C4" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 92 160 H 608 Q 620 160 620 172 V 206 H 80 V 172 Q 80 160 92 160 Z" fill="#3F51C4" stroke="none"/>
+    <text class="title" x="350.0" y="190" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Rel-19 Evidence</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="350.0" y="276.0">TS section, table, formula, local path, extraction note</tspan>
+      <tspan x="350.0" y="302.0">and upstream lesson link.</tspan>
+    </text>
+  </g>
+  <g class="card" id="t1">
+    <rect class="body" x="700" y="160" width="540" height="240" rx="12" fill="#FFFFFF" stroke="#0E7A67" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 712 160 H 1228 Q 1240 160 1240 172 V 206 H 700 V 172 Q 700 160 712 160 Z" fill="#0E7A67" stroke="none"/>
+    <text class="title" x="970.0" y="190" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Suite Manifest</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="970.0" y="276.0">schema version, vector id, family, seed, expected status,</tspan>
+      <tspan x="970.0" y="302.0">dump policy and hash list.</tspan>
+    </text>
+  </g>
+  <g class="card" id="t2">
+    <rect class="body" x="1320" y="160" width="460" height="240" rx="12" fill="#FFFFFF" stroke="#B76E00" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1332 160 H 1768 Q 1780 160 1780 172 V 206 H 1320 V 172 Q 1320 160 1332 160 Z" fill="#B76E00" stroke="none"/>
+    <text class="title" x="1550.0" y="190" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">LTE Turbo Lane</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1550.0" y="276.0">segmentation, filler, interleaver, RV window,</tspan>
+      <tspan x="1550.0" y="302.0">soft combine, CB/TB CRC and timeout.</tspan>
+    </text>
+  </g>
+  <g class="card" id="t3">
+    <rect class="body" x="1860" y="160" width="460" height="240" rx="12" fill="#FFFFFF" stroke="#6D4FBF" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1872 160 H 2308 Q 2320 160 2320 172 V 206 H 1860 V 172 Q 1860 160 1872 160 Z" fill="#6D4FBF" stroke="none"/>
+    <text class="title" x="2090.0" y="190" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">NR LDPC Lane</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="2090.0" y="276.0">BG/Zc, filler, puncture, limited buffer, RV/k0,</tspan>
+      <tspan x="2090.0" y="302.0">CBG, syndrome and CRC.</tspan>
+    </text>
+  </g>
+  <g class="card" id="t4">
+    <rect class="body" x="2400" y="160" width="520" height="240" rx="12" fill="#FFFFFF" stroke="#B4405B" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 2412 160 H 2908 Q 2920 160 2920 172 V 206 H 2400 V 172 Q 2400 160 2412 160 Z" fill="#B4405B" stroke="none"/>
+    <text class="title" x="2660.0" y="190" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">NR Polar Lane</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="2660.0" y="276.0">small block, CRC length, frozen mask, rate recovery,</tspan>
+      <tspan x="2660.0" y="302.0">list pressure, RNTI selector.</tspan>
+    </text>
+  </g>
+  <path class="link" data-src="t0" data-dst="t1" d="M 620.0 280.0 L 700.0 280.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="t1" data-dst="t2" d="M 1240.0 280.0 L 1320.0 280.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="t2" data-dst="t3" d="M 1780.0 280.0 L 1860.0 280.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="t3" data-dst="t4" d="M 2320.0 280.0 L 2400.0 280.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <g class="card" id="o0">
+    <rect class="body" x="700" y="540" width="520" height="240" rx="12" fill="#FFFFFF" stroke="#0E7A67" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 712 540 H 1208 Q 1220 540 1220 552 V 586 H 700 V 552 Q 700 540 712 540 Z" fill="#0E7A67" stroke="none"/>
+    <text class="title" x="960.0" y="570" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Pass / Fail Policy</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="960.0" y="643.0">positive vectors require exact payload and</tspan>
+      <tspan x="960.0" y="669.0">checkpoints; negative vectors require expected fail</tspan>
+      <tspan x="960.0" y="695.0">class.</tspan>
+    </text>
+  </g>
+  <g class="card" id="o1">
+    <rect class="body" x="1340" y="540" width="520" height="240" rx="12" fill="#FFFFFF" stroke="#3F51C4" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1352 540 H 1848 Q 1860 540 1860 552 V 586 H 1340 V 552 Q 1340 540 1352 540 Z" fill="#3F51C4" stroke="none"/>
+    <text class="title" x="1600.0" y="570" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Expected Outcome</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1600.0" y="656.0">payload, CRC/syndrome, status, trace checkpoints,</tspan>
+      <tspan x="1600.0" y="682.0">latency bound and saturation counters.</tspan>
+    </text>
+  </g>
+  <g class="card" id="o2">
+    <rect class="body" x="1980" y="540" width="520" height="240" rx="12" fill="#FFFFFF" stroke="#B76E00" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1992 540 H 2488 Q 2500 540 2500 552 V 586 H 1980 V 552 Q 1980 540 1992 540 Z" fill="#B76E00" stroke="none"/>
+    <text class="title" x="2240.0" y="570" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Failure Bundle</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="2240.0" y="656.0">descriptor, address trace, LLR snapshot, first</tspan>
+      <tspan x="2240.0" y="682.0">mismatch, replay command and protocol evidence.</tspan>
+    </text>
+  </g>
+  <path class="link" data-src="t1" data-dst="o0" d="M 970.0 400.0 L 960.0 540.0" fill="none" stroke="#6E7A8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="t3" data-dst="o1" d="M 2090.0 400.0 L 1600.0 540.0" fill="none" stroke="#6E7A8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="o0" data-dst="o1" d="M 1220.0 660.0 L 1340.0 660.0" fill="none" stroke="#6E7A8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="o1" data-dst="o2" d="M 1860.0 660.0 L 1980.0 660.0" fill="none" stroke="#6E7A8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <g class="foot" id="band">
+    <rect class="body" x="140" y="900" width="2720" height="160" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <rect class="footbar" x="140" y="900" width="7" height="160" fill="#4A5A6A" stroke="none"/>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1500.0" y="988.5">Cross-family directed vectors: no-noise smoke, min/max sizes, LLR sign and saturation, CRC fail, expected-fail classification, mid-run reset, timeout and replay. Protocol-derived fields live in vector.json; implementation policies live in suite_policy.json and checkpoint_manifest.</tspan>
+    </text>
+  </g>
+  <g class="tbl" id="t1">
+    <rect class="tblouter" x="120" y="1140" width="2760" height="556" rx="10" fill="#3F51C4" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <g class="cellg" id="t1_0_0" data-tbl="t1">
+      <rect class="cell" x="120" y="1140" width="300" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="270.0" y="1167.0">Family</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_1" data-tbl="t1">
+      <rect class="cell" x="420" y="1140" width="760" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="800.0" y="1167.0">Directed vector cases</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_2" data-tbl="t1">
+      <rect class="cell" x="1180" y="1140" width="740" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="1550.0" y="1167.0">Bug caught</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_3" data-tbl="t1">
+      <rect class="cell" x="1920" y="1140" width="960" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="2400.0" y="1167.0">Minimum dump fields</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_0" data-tbl="t1">
+      <rect class="cell" x="120" y="1184" width="300" height="128" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="270.0" y="1253.0">LTE Turbo</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_1" data-tbl="t1">
+      <rect class="cell" x="420" y="1184" width="760" height="128" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="800.0" y="1253.0">small B, F&gt;0, &lt;NULL&gt;, puncture/repetition, max C, Ncb&lt;Kw, RV mismatch</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_2" data-tbl="t1">
+      <rect class="cell" x="1180" y="1184" width="740" height="128" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1550.0" y="1253.0">filler leaked into TB, wrong k0, soft combine overwrite, descriptor overflow</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_3" data-tbl="t1">
+      <rect class="cell" x="1920" y="1184" width="960" height="128" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2400.0" y="1253.0">B,C,r,K,F,E,Ncb,Kw,rv,k0, masks, soft before/after, CB/TB CRC</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_0" data-tbl="t1">
+      <rect class="cell" x="120" y="1312" width="300" height="128" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="270.0" y="1381.0">NR LDPC</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_1" data-tbl="t1">
+      <rect class="cell" x="420" y="1312" width="760" height="128" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="800.0" y="1381.0">BG/Zc boundary, filler, punctured systematic, limited buffer, RV, CBG, saturation</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_2" data-tbl="t1">
+      <rect class="cell" x="1180" y="1312" width="740" height="128" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1550.0" y="1369.0">wrong H shape, wrong circular-buffer address, held CBG corruption, syndrome/CRC</tspan>
+        <tspan x="1550.0" y="1393.0">mismatch</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_3" data-tbl="t1">
+      <rect class="cell" x="1920" y="1312" width="960" height="128" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2400.0" y="1381.0">A,R,BG,Zc,iLS,C,E,Ncb,rv,k0,CBGTI,CBGFI, syndrome, sat count</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_0" data-tbl="t1">
+      <rect class="cell" x="120" y="1440" width="300" height="128" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="270.0" y="1509.0">NR Polar</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_1" data-tbl="t1">
+      <rect class="cell" x="420" y="1440" width="760" height="128" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="800.0" y="1497.0">small block/no CRC, CRC length, list pressure, PM tie, puncture/shorten, frozen mask,</tspan>
+        <tspan x="800.0" y="1521.0">RNTI</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_2" data-tbl="t1">
+      <rect class="cell" x="1180" y="1440" width="740" height="128" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1550.0" y="1509.0">wrong branch, wrong selector, path pruned, unstable tie-break, mask index error</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_3" data-tbl="t1">
+      <rect class="cell" x="1920" y="1440" width="960" height="128" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2400.0" y="1509.0">context,A,K,E,N,crc_len,RNTI,info/frozen hash, L, PM list, selector result</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_0" data-tbl="t1">
+      <rect class="cell" x="120" y="1568" width="300" height="128" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="270.0" y="1637.0">Cross-family</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_1" data-tbl="t1">
+      <rect class="cell" x="420" y="1568" width="760" height="128" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="800.0" y="1637.0">LLR sign, saturation, reset/abort, timeout, expected fail, schema/hash mismatch</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_2" data-tbl="t1">
+      <rect class="cell" x="1180" y="1568" width="740" height="128" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1550.0" y="1625.0">wrong soft-information convention, half commit, deadlock, false pass, non-replayable</tspan>
+        <tspan x="1550.0" y="1649.0">vector</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_3" data-tbl="t1">
+      <rect class="cell" x="1920" y="1568" width="960" height="128" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2400.0" y="1637.0">seed, llr format, quant profile, status/error, first mismatch, replay command</tspan>
+      </text>
+    </g>
+    <line x1="122" y1="1312" x2="2878" y2="1312" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="1440" x2="2878" y2="1440" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="1568" x2="2878" y2="1568" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="420" y1="1186" x2="420" y2="1694" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="880" y1="1186" x2="880" y2="1694" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="860" y1="1186" x2="860" y2="1694" stroke="#E0DACA" stroke-width="1"/>
+  </g>
+  <g class="tbl" id="t2">
+    <rect class="tblouter" x="120" y="1780" width="2760" height="516" rx="10" fill="#3F51C4" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <g class="cellg" id="t2_0_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1780" width="360" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="300.0" y="1807.0">Suite tier</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_0_1" data-tbl="t2">
+      <rect class="cell" x="480" y="1780" width="700" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="830.0" y="1807.0">Purpose</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_0_2" data-tbl="t2">
+      <rect class="cell" x="1180" y="1780" width="840" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="1600.0" y="1807.0">Examples</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_0_3" data-tbl="t2">
+      <rect class="cell" x="2020" y="1780" width="860" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="2450.0" y="1807.0">Pass criteria</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1824" width="360" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="300.0" y="1888.0">smoke</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_1" data-tbl="t2">
+      <rect class="cell" x="480" y="1824" width="700" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="830.0" y="1888.0">prove harness and sign convention</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_2" data-tbl="t2">
+      <rect class="cell" x="1180" y="1824" width="840" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1600.0" y="1888.0">no-noise LTE/LDPC/Polar, single CB, fixed seed</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_1_3" data-tbl="t2">
+      <rect class="cell" x="2020" y="1824" width="860" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2450.0" y="1888.0">payload and basic checkpoints pass</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_0" data-tbl="t2">
+      <rect class="cell" x="120" y="1942" width="360" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="300.0" y="2006.0">directed positive</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_1" data-tbl="t2">
+      <rect class="cell" x="480" y="1942" width="700" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="830.0" y="2006.0">prove protocol boundaries that should decode</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_2" data-tbl="t2">
+      <rect class="cell" x="1180" y="1942" width="840" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1600.0" y="2006.0">valid filler, valid RV sequence, valid CBG hold, valid RNTI</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_2_3" data-tbl="t2">
+      <rect class="cell" x="2020" y="1942" width="860" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2450.0" y="2006.0">payload/status/checkpoints match</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_0" data-tbl="t2">
+      <rect class="cell" x="120" y="2060" width="360" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="300.0" y="2124.0">directed negative</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_1" data-tbl="t2">
+      <rect class="cell" x="480" y="2060" width="700" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="830.0" y="2124.0">prove errors are detected and classified</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_2" data-tbl="t2">
+      <rect class="cell" x="1180" y="2060" width="840" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1600.0" y="2124.0">RV mismatch, wrong CRC length, wrong frozen mask, bad descriptor hash</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_3_3" data-tbl="t2">
+      <rect class="cell" x="2020" y="2060" width="860" height="118" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2450.0" y="2124.0">expected fail class and dump fields match</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_0" data-tbl="t2">
+      <rect class="cell" x="120" y="2178" width="360" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="300.0" y="2242.0">stress/replay</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_1" data-tbl="t2">
+      <rect class="cell" x="480" y="2178" width="700" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="830.0" y="2242.0">prove robustness and reproducibility</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_2" data-tbl="t2">
+      <rect class="cell" x="1180" y="2178" width="840" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1600.0" y="2242.0">max sizes, saturation, timeout, mid-run reset, random seed replay</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t2_4_3" data-tbl="t2">
+      <rect class="cell" x="2020" y="2178" width="860" height="118" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="2450.0" y="2242.0">no silent pass; replay reproduces first mismatch</tspan>
+      </text>
+    </g>
+    <line x1="122" y1="1942" x2="2878" y2="1942" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="2060" x2="2878" y2="2060" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="122" y1="2178" x2="2878" y2="2178" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="480" y1="1826" x2="480" y2="2294" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="820" y1="1826" x2="820" y2="2294" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="960" y1="1826" x2="960" y2="2294" stroke="#E0DACA" stroke-width="1"/>
+  </g>
+  <g class="foot" id="foot">
+    <rect class="body" x="120" y="2380" width="2760" height="240" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <rect class="footbar" x="120" y="2380" width="7" height="240" fill="#B76E00" stroke="none"/>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1500.0" y="2494.0">Read order: evidence -&gt; manifest -&gt; family lane -&gt; expected outcome -&gt; failure bundle -&gt; regression tier. Engineering check: every vector must say whether it is protocol-derived, implementation-policy-derived, or negative expected-fail. Visual check: tables use 24px text and 122px+ row height; arrows use</tspan>
+      <tspan x="1500.0" y="2523.0">edge midpoints and vector-derived arrowheads.</tspan>
+    </text>
+  </g>
+</svg>

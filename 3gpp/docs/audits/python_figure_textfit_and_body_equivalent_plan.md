@@ -33,10 +33,10 @@ source_spec: "docs/audits/python_figure_textfit_and_body_equivalent_plan.md"
 
 | 根因 | 影响 | 首批处理对象 |
 |:---|:---|:---|
-| 固定文本框或固定表格行高，只按宽度换行，不校验高度。 | 文字可能贴上/下边框，或被框外裁剪。 | T10.6、T10.7、T11.1、T12.1、T14/T15 模板族。 |
+| 固定文本框或固定表格行高，只按宽度换行，不校验高度。 | 文字可能贴上/下边框，或被框外裁剪。 | T10.6、T10.7、T11.1、T17.1、T14/T15 模板族。 |
 | 直接 `draw.text()` 写长句，不 wrap，不检查右边界。 | 中文长句、英文长 token 或协议字段可能越界。 | T10.2、T11.2、T14/T15 标题/说明。 |
 | 表格单元格静默截断。 | 文本被直接删除，读者无法知道缺失内容。 | `tools/figures/render_lte_nr_rate_matching_comparison.py` 中 `lines[:2]`。 |
-| `wrap()` 只按空格拆词。 | 中文无空格、路径名、字段名、`CRC/RNTI`、`alpha_beta_snapshot` 等 token 不可靠。 | T14/T15 模板、T12.1、T10/T11 图。 |
+| `wrap()` 只按空格拆词。 | 中文无空格、路径名、字段名、`CRC/RNTI`、`alpha_beta_snapshot` 等 token 不可靠。 | T14/T15 模板、T17.1、T10/T11 图。 |
 | 普通正文大面积加粗。 | 增加文字宽度和高度压力，使固定框更容易拥挤。 | T10.7、T11.1、T14/T15 表格正文。 |
 
 ## 新增全局规则
@@ -61,7 +61,7 @@ source_spec: "docs/audits/python_figure_textfit_and_body_equivalent_plan.md"
 | P1 | `tools/figures/render_nr_polar_ca_scl_selector.py` | `box()`、表格和说明框增加高度校验；普通正文改 regular；表格支持 wrap。 | T10.6 图片重生成并复核候选行和 selector 表。 |
 | P1 | `tools/figures/render_nr_polar_rate_recovery_flow.py` | `draw_centered_lines()` 增加溢出断言；表格按 wrap 布局；说明框长句 wrap。 | T10.7 图片重生成并复核 LLR 初始化说明和表格单元格。 |
 | P1 | `tools/figures/render_turbo_ldpc_polar_algorithm_comparison.py` | 对比矩阵单元格 wrap；正文 regular；每格 bbox 校验。 | T11.1 图片重生成并复核矩阵、箭头和说明框。 |
-| P2 | `tools/figures/render_t12_1_golden_model_layout.py` | `centered_lines()` 使用真实 bbox 高度；note 区 wrap；超框时报错。 | T12.1 图片重生成并复核 fanout、note 和箭头。 |
+| P2 | `tools/figures/render_t12_1_golden_model_layout.py` | `centered_lines()` 使用真实 bbox 高度；note 区 wrap；超框时报错。 | T17.1 图片重生成并复核 fanout、note 和箭头。 |
 | P2 | T14/T15 模板族 | `centered()`/`table()` 增加文本 bbox 校验；中文/长 token wrap；表格正文 regular。 | 重点脚本重生成；全项目几何/可读性审计通过。 |
 
 ## 正文等价块迁移队列
@@ -103,7 +103,7 @@ source_spec: "docs/audits/python_figure_textfit_and_body_equivalent_plan.md"
 | 2026-06-21 | 当日旧口径下的 Python PNG 正文引用已补 `图片内容正文等价` 块，L1/L2/L3 等价块经人工/子代理清理，移除自动生成的截断节点和脚本路径占位。2026-06-22 已更正为 66 个 Markdown PNG 正文引用、65 个唯一正文引用 PNG 和 3 个 evidence/compatibility 保留 PNG。 | 2026-06-21 当日 `python3 tools/audit_python_figure_body_equivalents.py` 输出 `PYTHON_FIGURE_BODY_EQUIVALENT_AUDIT_OK`；2026-06-22 迁移台账已升级为 `present_quality_pass; body_referenced` 与 `evidence_only; compatibility_retained; not_current_body_reference` 状态，并由 `python3 tools/audit_project_image_inventory.py` 输出 `PROJECT_IMAGE_INVENTORY_AUDIT_OK` 校验。 |
 | 2026-06-21 | 文本适配静态审计阻断项清零，剩余固定行高/长标题风险作为 advisory，继续由几何/可读性审计和人工目检兜底。 | `python3 tools/audit_figure_text_fit_static.py tools/figures` 退出码 0，输出 `FIGURE_TEXT_FIT_STATIC_AUDIT_OK advisory=56`。 |
 | 2026-06-21 | T8 全图复查发现原有审计仍漏掉泛化 Mermaid/表格、长表截图正文尺度不可读、单图信息过载和图内红色说明压表等问题。 | 已新增低质量 pipeline 等价块审计用例；T8.1-T8.8 正文等价块重写；T8.3 长表改正文分片展示并保留完整拼接图证据；T8.8 数值图拆为 part1/part2；全项目图片审核已追加为计划 Task 8，尚需全项目逐图闭环记录。 |
-| 2026-06-22 | 全项目正文等价质量失败项清零。上一轮 `audit_python_figure_body_equivalents.py` 暴露 25 条非 T8 低质量等价块，涉及 L1/T3.3、T3.4，L2/T6.4、T7.5、T9.3-T9.6、T10.2、T10.3，L3/T12.1；本轮已替换为具体 Mermaid/Markdown 表格等价内容。 | `python3 tools/audit_python_figure_body_equivalents.py` 输出 `PYTHON_FIGURE_BODY_EQUIVALENT_AUDIT_OK`；`python3 tools/audit_figure_text_fit_static.py tools/figures` 输出 `FIGURE_TEXT_FIT_STATIC_AUDIT_OK`；`python3 tools/audit_figure_geometry.py tools/figures` 输出 `FIGURE_GEOMETRY_AUDIT_OK`；`python3 tools/audit_figure_readability.py tools/figures` 输出 `FIGURE_READABILITY_AUDIT_OK`；`python3 -m unittest tests.test_python_figure_audits -v` 输出 `Ran 11 tests ... OK`；`python3 -m unittest tests.test_audit_figure_geometry -v` 输出 `Ran 13 tests ... OK`；`git diff --check` 退出码 0。 |
+| 2026-06-22 | 全项目正文等价质量失败项清零。上一轮 `audit_python_figure_body_equivalents.py` 暴露 25 条非 T8 低质量等价块，涉及 L1/T3.3、T3.4，L2/T6.4、T7.5、T9.3-T9.6、T10.2、T10.3，L3/T17.1；本轮已替换为具体 Mermaid/Markdown 表格等价内容。 | `python3 tools/audit_python_figure_body_equivalents.py` 输出 `PYTHON_FIGURE_BODY_EQUIVALENT_AUDIT_OK`；`python3 tools/audit_figure_text_fit_static.py tools/figures` 输出 `FIGURE_TEXT_FIT_STATIC_AUDIT_OK`；`python3 tools/audit_figure_geometry.py tools/figures` 输出 `FIGURE_GEOMETRY_AUDIT_OK`；`python3 tools/audit_figure_readability.py tools/figures` 输出 `FIGURE_READABILITY_AUDIT_OK`；`python3 -m unittest tests.test_python_figure_audits -v` 输出 `Ran 11 tests ... OK`；`python3 -m unittest tests.test_audit_figure_geometry -v` 输出 `Ran 13 tests ... OK`；`git diff --check` 退出码 0。 |
 | 2026-06-22 | T8.4 图片返工。用户复查指出 `T8.4_LDPC_Tanner_syndrome_toy.png` 仍有文字覆盖和越框；本轮确认旧图中矩阵标题压列标、Tanner 标题贴变量节点、右侧消息流第 4 条越出面板且英文断词。 | 已修改 `tools/figures/render_ldpc_tanner_syndrome.py`：矩阵/Tanner 上部布局下移，右侧消息流面板增高，混合中英文 wrap 尽量保留英文 token，新增标题/节点间距和面板底部留白断言；PNG 重生成后尺寸 `(1600, 1180)`。`python3 tools/audit_figure_geometry.py tools/figures/render_ldpc_tanner_syndrome.py`、`python3 tools/audit_figure_readability.py tools/figures/render_ldpc_tanner_syndrome.py`、`python3 tools/audit_figure_text_fit_static.py tools/figures/render_ldpc_tanner_syndrome.py` 均输出 OK；同时把该脚本加入 `audit_figure_geometry.py --focus-only` 历史重点范围并新增回归测试。 |
 | 2026-06-22 | 全项目 Python 绘图脚本按最新规则重审并修正审计层漏项。新增阻断规则 `character_wrap` 和 `wrapped_without_layout_guard`，新增共享 token-aware helper `tools/figures/figure_text_fit.py`，替换旧的按字符换行逻辑；新增直接执行回归测试，修复共享 helper 在 `python tools/figures/render_*.py` 下导入失败的问题。 | `python3 -m py_compile tools/figures/*.py tools/figures/figure_text_fit.py` 退出码 0；`python3 tools/audit_figure_text_fit_static.py tools/figures` 输出 `FIGURE_TEXT_FIT_STATIC_AUDIT_OK`；`python3 tools/audit_figure_geometry.py --focus-only tools/figures` 和 `python3 tools/audit_figure_geometry.py tools/figures` 均输出 `FIGURE_GEOMETRY_AUDIT_OK`；`python3 tools/audit_figure_readability.py tools/figures` 输出 `FIGURE_READABILITY_AUDIT_OK`；逐个执行 58 个 Python 文件结果 `FIGURE_SCRIPT_RUNS total=58 failures=0`。 |
 | 2026-06-22 | 新增项目级图片一致性审计，关闭“资产目录全量 vs 正文引用 vs 清单登记 vs 迁移台账”漏层。初次审计发现 T8.3 的 5 张长表分片和 T8.8 的 2 张数值走读分片未进入资产清单/迁移台账，且 3 张完整拼接/兼容图未标注非正文引用状态。 | 新增 `tools/audit_project_image_inventory.py` 和单元测试；补登 7 张正文分片图；把 3 张完整图标为 `evidence_only; compatibility_retained; not_current_body_reference`。`python3 tools/audit_project_image_inventory.py` 输出 `PROJECT_IMAGE_INVENTORY_AUDIT_OK`。该结果证明台账一致，不等于 68 张 PNG 原尺寸逐图目检完成。 |

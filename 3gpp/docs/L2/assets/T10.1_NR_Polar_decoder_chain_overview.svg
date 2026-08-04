@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T10.1_NR_Polar_decoder_chain_overview.svg
+  @brief   NR Polar 控制信息接收侧译码链路总览（手绘 SVG V2：布局与配色依据 T10.1 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：六节点主链路（Demapper LLR -> Rate recovery -> Polar decoder ->
+           Path list -> CRC aided select -> Control bits，每节点输入/输出/协议锚点语义）、
+           UCI 与 DCI 共同主链路和差异字段表（UCI on PUCCH / UCI on PUSCH /
+           DCI on PDCCH / General Polar）、小型控制块流程例子（N=8 LLR、frozen mask、
+           L=2 paths、CRC check、payload）、最小 Polar decoder descriptor 八字段标签、
+           底部工程检查点，均与讲义 T10.1 正文及图 T10.1-1 语义一致。
+           视觉设计：主链路带步骤号徽章；差异表按 UCI/DCI 语义分栏。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1180" viewBox="0 0 1500 1180" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>NR Polar 控制信息接收侧译码链路总览</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">NR Polar 控制信息接收侧译码链路总览</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">读图顺序从左到右：解调器给出控制信道 LLR；接收端恢复 Polar 码字位置；SC/SCL 生成候选路径；CRC 辅助选择最终控制比特。UCI 与 DCI 共用 Polar 主链路，但 CRC、RNTI 和上下文字段不同。</text>
+
+  <!-- ============ 面板 A：六节点主链路 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="230" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="154" width="10" height="10" rx="3" fill="#8E3B5E"/>
+  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">UCI/DCI 共用主链路</text>
+
+  <g font-size="11.5" fill="#23272E">
+    <rect x="80" y="196" width="210" height="140" rx="12" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <circle cx="100" cy="220" r="12" fill="#8E3B5E"/>
+    <text x="100" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="185" y="224" font-size="13" font-weight="700" text-anchor="middle">Demapper LLR</text>
+    <text x="96" y="256" fill="#646B76">PUCCH/PUSCH/PDCCH</text>
+    <text x="96" y="276" fill="#646B76">解调后软信息</text>
+    <text x="96" y="296" fill="#646B76">符号到 bit LLR</text>
+    <rect x="310" y="196" width="210" height="140" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <circle cx="330" cy="220" r="12" fill="#2F6E71"/>
+    <text x="330" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="415" y="224" font-size="13" font-weight="700" text-anchor="middle">Rate recovery</text>
+    <text x="326" y="256" fill="#646B76">反速率匹配、反交织、</text>
+    <text x="326" y="276" fill="#646B76">恢复 N 位码字 LLR</text>
+    <text x="326" y="296" fill="#646B76">TS 38.212 §5.4.1</text>
+    <rect x="540" y="196" width="210" height="140" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <circle cx="560" cy="220" r="12" fill="#6C7A2E"/>
+    <text x="560" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="645" y="224" font-size="13" font-weight="700" text-anchor="middle">Polar decoder</text>
+    <text x="556" y="256" fill="#646B76">SC 或 SCL 树遍历；</text>
+    <text x="556" y="276" fill="#646B76">使用 frozen mask</text>
+    <text x="556" y="296" fill="#646B76">§5.3.1/§5.3.1.2</text>
+    <rect x="770" y="196" width="210" height="140" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <circle cx="790" cy="220" r="12" fill="#B06F2B"/>
+    <text x="790" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="875" y="224" font-size="13" font-weight="700" text-anchor="middle">Path list</text>
+    <text x="786" y="256" fill="#646B76">多条候选路径、PM、</text>
+    <text x="786" y="276" fill="#646B76">partial sums</text>
+    <text x="786" y="296" fill="#646B76">sorter / copy network</text>
+    <rect x="1000" y="196" width="210" height="140" rx="12" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <circle cx="1020" cy="220" r="12" fill="#7A6E8E"/>
+    <text x="1020" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">5</text>
+    <text x="1105" y="224" font-size="13" font-weight="700" text-anchor="middle">CRC aided select</text>
+    <text x="1016" y="256" fill="#646B76">CRC 过滤路径；</text>
+    <text x="1016" y="276" fill="#646B76">DCI 还涉及 RNTI</text>
+    <text x="1016" y="296" fill="#646B76">多路径 CRC checker</text>
+    <rect x="1230" y="196" width="210" height="140" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
+    <circle cx="1250" cy="220" r="12" fill="#A6403C"/>
+    <text x="1250" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">6</text>
+    <text x="1335" y="224" font-size="13" font-weight="700" text-anchor="middle">Control bits</text>
+    <text x="1246" y="256" fill="#646B76">输出 UCI 或 DCI</text>
+    <text x="1246" y="276" fill="#646B76">payload 与状态</text>
+    <text x="1246" y="296" fill="#646B76">PHY-to-MAC 交付</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 290 266 H 310" marker-end="url(#arrow)"/>
+    <path d="M 520 266 H 540" marker-end="url(#arrow)"/>
+    <path d="M 750 266 H 770" marker-end="url(#arrow)"/>
+    <path d="M 980 266 H 1000" marker-end="url(#arrow)"/>
+    <path d="M 1210 266 H 1230" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 面板 B：UCI 与 DCI 差异字段 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="390" width="1380" height="270" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="414" width="10" height="10" rx="3" fill="#7A6E8E"/>
+  <text x="108" y="423" font-size="17" font-weight="700" fill="#23272E">UCI 与 DCI 的共同主链路和差异字段</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <text x="90" y="466" font-weight="700" fill="#7A6E8E">UCI on PUCCH</text>
+    <text x="320" y="466">TS 38.212 §6.3.1</text>
+    <text x="560" y="466" fill="#646B76">可能使用 6/11 bit CRC；E 来自 PUCCH 资源与 UCI 类型</text>
+    <line x1="90" y1="484" x2="1420" y2="484" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="90" y="522" font-weight="700" fill="#7A6E8E">UCI on PUSCH</text>
+    <text x="320" y="522">TS 38.212 §6.3.2</text>
+    <text x="560" y="522" fill="#646B76">复用到 PUSCH；仍按 UCI Polar 链路编码与速率匹配</text>
+    <line x1="90" y1="540" x2="1420" y2="540" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="90" y="578" font-weight="700" fill="#8E3B5E">DCI on PDCCH</text>
+    <text x="320" y="578">TS 38.212 §7.3</text>
+    <text x="560" y="578" fill="#646B76">24 bit CRC，CRC parity bits 与对应 RNTI 相关</text>
+    <line x1="90" y1="596" x2="1420" y2="596" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="90" y="634" font-weight="700" fill="#6C7A2E">General Polar</text>
+    <text x="320" y="634">TS 38.212 §5.2.1/§5.3.1/§5.4.1</text>
+    <text x="560" y="634" fill="#646B76">分段/CRC、Polar 编码、速率匹配的通用规则</text>
+  </g>
+
+  <!-- ============ 面板 C：左流程例子 + 右 descriptor ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="690" width="680" height="400" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="722" font-size="16" font-weight="700" fill="#23272E">小型控制块流程例子</text>
+  <text x="90" y="756" font-size="12.5" fill="#646B76">假设一个教学 DCI 候选经过速率恢复得到 N=8 个 LLR。SCL 保留 L=2 条路径，</text>
+  <text x="90" y="776" font-size="12.5" fill="#646B76">最终不是简单选择 PM 最优路径，而是先检查路径 CRC/RNTI 边界，再在通过者中选 PM 最优。</text>
+
+  <g font-size="12" fill="#FFFFFF">
+    <rect x="90" y="830" width="110" height="36" rx="9" fill="#8E3B5E"/>
+    <text x="145" y="853" text-anchor="middle" font-weight="700">N=8 LLR</text>
+    <rect x="212" y="830" width="130" height="36" rx="9" fill="#2F6E71"/>
+    <text x="277" y="853" text-anchor="middle" font-weight="700">frozen mask</text>
+    <rect x="354" y="830" width="118" height="36" rx="9" fill="#6C7A2E"/>
+    <text x="413" y="853" text-anchor="middle" font-weight="700">L=2 paths</text>
+    <rect x="484" y="830" width="116" height="36" rx="9" fill="#7A6E8E"/>
+    <text x="542" y="853" text-anchor="middle" font-weight="700">CRC check</text>
+    <rect x="612" y="830" width="98" height="36" rx="9" fill="#A6403C"/>
+    <text x="661" y="853" text-anchor="middle" font-weight="700">payload</text>
+  </g>
+  <text x="90" y="920" font-size="12.5" class="free" fill="#646B76">顺序：N=8 LLR -> frozen mask -> L=2 paths -> CRC check -> payload</text>
+
+  <g filter="url(#soft)">
+    <rect x="760" y="690" width="680" height="400" rx="14" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+  </g>
+  <text x="790" y="722" font-size="16" font-weight="700" fill="#23272E">最小 Polar decoder descriptor</text>
+  <text x="790" y="756" font-size="12.5" fill="#646B76">这些字段共同决定接收端反操作和路径选择。缺少任一字段，错误常表现为</text>
+  <text x="790" y="776" font-size="12.5" fill="#646B76">CRC fail、盲检误通过或路径列表全部淘汰。</text>
+
+  <g font-size="12" fill="#FFFFFF">
+    <rect x="790" y="830" width="104" height="36" rx="9" fill="#2F6E71"/>
+    <text x="842" y="853" text-anchor="middle" font-weight="700">A/K/E/N</text>
+    <rect x="906" y="830" width="104" height="36" rx="9" fill="#7A6E8E"/>
+    <text x="958" y="853" text-anchor="middle" font-weight="700">CRC len</text>
+    <rect x="1022" y="830" width="118" height="36" rx="9" fill="#6C7A2E"/>
+    <text x="1081" y="853" text-anchor="middle" font-weight="700">IB/IL flag</text>
+    <rect x="1152" y="830" width="88" height="36" rx="9" fill="#A6403C"/>
+    <text x="1196" y="853" text-anchor="middle" font-weight="700">RNTI</text>
+    <rect x="1252" y="830" width="60" height="36" rx="9" fill="#B06F2B"/>
+    <text x="1282" y="853" text-anchor="middle" font-weight="700">L</text>
+    <rect x="790" y="882" width="104" height="36" rx="9" fill="#5C6B7C"/>
+    <text x="842" y="905" text-anchor="middle" font-weight="700">UCI/DCI</text>
+    <rect x="906" y="882" width="104" height="36" rx="9" fill="#6C7A2E"/>
+    <text x="958" y="905" text-anchor="middle" font-weight="700">info set</text>
+    <rect x="1022" y="882" width="118" height="36" rx="9" fill="#2F6E71"/>
+    <text x="1081" y="905" text-anchor="middle" font-weight="700">frozen set</text>
+  </g>
+  <text x="790" y="960" font-size="12.5" class="free" fill="#646B76">缺少任一字段：CRC fail / 盲检误通过 / 路径列表全部淘汰</text>
+
+  <!-- ============ 底部工程检查点 ============ -->
+  <text x="70" y="1132" font-size="13.5" font-weight="700" class="free" fill="#A6403C">工程检查点：LLR 顺序、E/N/K、interleaver flag、frozen mask、path metric 方向、CRC/RNTI 边界、最终 selector。</text>
+</svg>

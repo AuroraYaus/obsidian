@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- @file    T2.16_rank_throughput_tradeoff.svg -->
+<!-- @brief   秩（层数）与吞吐/鲁棒性的权衡：rank2 在强信道、高 SNR 下吞吐接近翻倍，
+             在低秩或低 SNR 信道下弱层 SINR 极低反而拖累整体；rank1 稳健但吞吐封顶。 -->
+<!-- @date    2026-08-04 -->
+<!-- @note    教学示意图：曲线为简化示意（非协议数值）；层数由 gNB 依据 UE 上报的
+             RI/PMI/CQI 决定（TS 38.214 §5.2），检测算法是接收机实现自由度。
+             语义色系（本节自定）：rank2 强信道=紫，rank1=青绿，rank2 弱信道=灰虚线，
+             强信道卡=靛蓝，低秩警示卡=橙。 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="960" height="620">
+<rect width="960" height="620" fill="#ffffff"/>
+<style>
+.title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 19px; font-weight: bold; fill: #111; }
+.label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 14px; fill: #222; }
+.small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #555; }
+.mono { font-family: monospace; font-size: 13px; fill: #333; }
+.axis { stroke: #444; stroke-width: 1.2; }
+.grid { stroke: #d0d0d0; stroke-width: 1; stroke-dasharray: 5,5; }
+.line_rank2 { stroke: #6A1B9A; stroke-width: 2.6; fill: none; }
+.line_rank1 { stroke: #00796B; stroke-width: 2.6; fill: none; }
+.line_rank2weak { stroke: #90A4AE; stroke-width: 2.2; fill: none; stroke-dasharray: 7,5; }
+.card { rx: 8; }
+</style>
+
+<text x="480" y="30" text-anchor="middle" class="title">秩（层数）与吞吐、鲁棒性的权衡</text>
+<text x="480" y="54" text-anchor="middle" class="small">rank2 在满秩强信道下吞吐接近翻倍，但低秩/低 SNR 时弱层 SINR 极低；rank1 稳健但吞吐封顶</text>
+
+<!-- 面板 A：折线图 -->
+<rect x="40" y="80" width="500" height="360" fill="#FAFAFA" stroke="#ddd" rx="6"/>
+<text x="60" y="100" class="label">面板 A：归一化吞吐 vs SNR（示意）</text>
+
+<line x1="100" y1="400" x2="500" y2="400" class="axis"/>
+<line x1="100" y1="120" x2="100" y2="400" class="axis"/>
+<line x1="100" y1="330" x2="500" y2="330" class="grid"/>
+<line x1="100" y1="260" x2="500" y2="260" class="grid"/>
+<line x1="100" y1="190" x2="500" y2="190" class="grid"/>
+<line x1="200" y1="120" x2="200" y2="400" class="grid"/>
+<line x1="300" y1="120" x2="300" y2="400" class="grid"/>
+<line x1="400" y1="120" x2="400" y2="400" class="grid"/>
+<text x="100" y="418" text-anchor="middle" class="small">0</text>
+<text x="200" y="418" text-anchor="middle" class="small">5</text>
+<text x="300" y="418" text-anchor="middle" class="small">10</text>
+<text x="400" y="418" text-anchor="middle" class="small">15</text>
+<text x="500" y="418" text-anchor="middle" class="small">20</text>
+<text x="300" y="446" text-anchor="middle" class="small">SNR (dB)</text>
+<text x="86" y="400" text-anchor="end" class="small">0</text>
+<text x="86" y="330" text-anchor="end" class="small">0.5</text>
+<text x="86" y="260" text-anchor="end" class="small">1.0</text>
+<text x="86" y="190" text-anchor="end" class="small">1.5</text>
+<text x="86" y="124" text-anchor="end" class="small">2.0</text>
+
+<!-- 曲线：rank2 强信道（紫）：(0,0.25)(5,0.65)(10,1.25)(15,1.75)(20,1.95)
+     y: 400-0.25/2*280=365; 309; 225; 155; 127 -->
+<path class="line_rank2" d="M100,365 L200,309 L300,225 L400,155 L500,127"/>
+<!-- rank1（青绿）：(0,0.4)(5,0.75)(10,0.95)(15,1.0)(20,1.0) -->
+<path class="line_rank1" d="M100,344 L200,295 L300,267 L400,260 L500,260"/>
+<!-- rank2 弱信道（灰虚线）：(0,0.1)(5,0.3)(10,0.6)(15,0.9)(20,1.1) -->
+<path class="line_rank2weak" d="M100,386 L200,358 L300,316 L400,274 L500,246"/>
+
+<circle cx="243" cy="283" r="4.5" fill="none" stroke="#111" stroke-width="1.4"/>
+<text x="243" y="276" text-anchor="middle" class="small">交叉点≈7 dB</text>
+<text x="150" y="352" text-anchor="middle" class="small">rank1（青绿）</text>
+<text x="400" y="143" text-anchor="middle" class="small" fill="#6A1B9A">rank2 强信道</text>
+<text x="352" y="380" text-anchor="middle" class="small" fill="#78909C">rank2 弱信道</text>
+
+<!-- 面板 B：对比卡 -->
+<rect x="580" y="80" width="340" height="360" fill="#FAFAFA" stroke="#ddd" rx="6"/>
+<text x="600" y="100" class="label">面板 B：rank1 vs rank2 对比卡</text>
+
+<rect x="600" y="122" width="300" height="140" fill="#E8EAF6" stroke="#3949AB" class="card"/>
+<text x="750" y="146" text-anchor="middle" class="label" fill="#3949AB">强信道（满秩，如奇异值比小）</text>
+<text x="620" y="176" class="small" fill="#3949AB">rank2：吞吐≈2 倍，弱层 SINR 仍够用</text>
+<text x="620" y="200" class="small" fill="#3949AB">rank1：吞吐 1 倍，鲁棒性高</text>
+<text x="620" y="230" class="small">结论：高 SNR 选 rank2，吞吐翻倍</text>
+
+<rect x="600" y="278" width="300" height="140" fill="#FFE0B2" stroke="#EF6C00" class="card"/>
+<text x="750" y="302" text-anchor="middle" class="label" fill="#E65100">低秩信道（如条件数≈382 的病态例）</text>
+<text x="620" y="332" class="small" fill="#E65100">rank2：弱层 SINR 极低，ZF 噪声放大</text>
+<text x="620" y="356" class="small" fill="#E65100">约 42 dB，LLR 不可靠、拖累整体</text>
+<text x="620" y="386" class="small">结论：选 rank1，用分集/波束成形换可靠</text>
+
+<text x="480" y="480" text-anchor="middle" class="small">层数决策闭环（协议）：UE 上报 RI/PMI/CQI（TS 38.214 §5.2）→ gNB 决定层数与预编码 → DCI 的 Antenna ports 字段指示 DM-RS 端口数 = 层数</text>
+<text x="480" y="504" text-anchor="middle" class="small">检测算法（ZF/MMSE/IRC/ML/球面）是接收机实现自由度；协议只约束发射侧层映射、端口与预编码指示</text>
+<text x="480" y="528" text-anchor="middle" class="small">曲线为教学简化示意，非协议数值；"交叉点"位置随信道实现、码率与接收机能力变化</text>
+</svg>

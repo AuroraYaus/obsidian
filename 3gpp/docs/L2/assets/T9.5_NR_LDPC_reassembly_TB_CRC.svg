@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T9.5_NR_LDPC_reassembly_TB_CRC.svg
+  @brief   NR LDPC 码块重组与 TB CRC 流程图（手绘 SVG V2：布局与配色依据 T9.5 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：四步流程（LDPC decoder -> CB CRC gate -> strip local fields ->
+           TB CRC gate）、两个 CB 的重组边界（filler 去除、CB CRC 剥离、按 r 顺序拼接为
+           payload0 || payload1 || TB CRC）、CBG 部分重传与重组状态四卡（mask=0 保持 /
+           mask=1 刷新 / reassembly / feedback）、五个验证观察点，均与讲义 T9.5 正文
+           及图 T9.5-1 语义一致。
+           视觉设计：流程带步骤号；重组条带按语义着色（filler=风险、payload=橄榄、
+           CB CRC=灰紫、TB CRC=赭金）；CBG 四卡 2x2 排布。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1360" viewBox="0 0 1500 1360" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>NR LDPC Code Block Reassembly 与 TB CRC</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">NR LDPC Code Block Reassembly 与 TB CRC</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">接收端在 LDPC 译码之后，先按每个 CB 的协议边界去除 filler 和可选 CB CRC，再按 CB 编号顺序拼接成 TB candidate，最后由 TB CRC 决定交付和 HARQ 状态。</text>
+
+  <!-- ============ 面板 A：四步流程 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="210" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="154" width="10" height="10" rx="3" fill="#8E3B5E"/>
+  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">译码后 CB 到 TB 的四步处理流程</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <rect x="80" y="196" width="315" height="122" rx="12" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <circle cx="104" cy="222" r="13" fill="#8E3B5E"/>
+    <text x="104" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="237" y="230" font-size="13.5" font-weight="700" text-anchor="middle">LDPC decoder</text>
+    <text x="98" y="266" fill="#646B76">输出比特、校验子、迭代状态</text>
+    <rect x="413" y="196" width="315" height="122" rx="12" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <circle cx="437" cy="222" r="13" fill="#7A6E8E"/>
+    <text x="437" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="570" y="230" font-size="13.5" font-weight="700" text-anchor="middle">CB CRC gate</text>
+    <text x="431" y="266" fill="#646B76">逐块 CRC；无 CB CRC 标记 skip</text>
+    <rect x="746" y="196" width="315" height="122" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <circle cx="770" cy="222" r="13" fill="#6C7A2E"/>
+    <text x="770" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="903" y="230" font-size="13.5" font-weight="700" text-anchor="middle">strip local fields</text>
+    <text x="764" y="266" fill="#646B76">去填充和 CB CRC，保留 TB 候选</text>
+    <rect x="1079" y="196" width="315" height="122" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <circle cx="1103" cy="222" r="13" fill="#B06F2B"/>
+    <text x="1103" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="1236" y="230" font-size="13.5" font-weight="700" text-anchor="middle">TB CRC gate</text>
+    <text x="1097" y="266" fill="#646B76">检查 TB CRC，决定交付与反馈</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 395 257 H 413" marker-end="url(#arrow)"/>
+    <path d="M 728 257 H 746" marker-end="url(#arrow)"/>
+    <path d="M 1061 257 H 1079" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 面板 B：两个 CB 的重组边界 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="370" width="1380" height="350" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="400" font-size="16" font-weight="700" fill="#23272E">两个 CB 的重组边界：先清理每个 CB，再按 r 顺序拼接</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <text x="90" y="462" font-weight="700">CB0</text>
+    <rect x="160" y="438" width="100" height="48" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
+    <text x="210" y="467" text-anchor="middle">filler</text>
+    <rect x="260" y="438" width="240" height="48" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="380" y="467" text-anchor="middle">payload0</text>
+    <rect x="500" y="438" width="120" height="48" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="560" y="467" text-anchor="middle">CB CRC0</text>
+
+    <text x="90" y="552" font-weight="700">CB1</text>
+    <rect x="160" y="528" width="300" height="48" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="310" y="557" text-anchor="middle">payload1</text>
+    <rect x="460" y="528" width="120" height="48" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="520" y="557" text-anchor="middle">CB CRC1</text>
+
+    <text x="90" y="620" fill="#646B76">CB CRC pass 后仅保留 payload；输出按 r 顺序拼接。</text>
+  </g>
+
+  <g stroke="#6C7A2E" stroke-width="2" fill="none">
+    <path d="M 600 576 L 700 576" marker-end="url(#arrow)"/>
+  </g>
+  <rect x="572" y="548" width="110" height="26" rx="5" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1"/>
+  <text x="627" y="566" font-size="12" font-weight="700" text-anchor="middle" fill="#6C7A2E">concat by r</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <rect x="730" y="528" width="250" height="52" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="855" y="560" text-anchor="middle">payload0</text>
+    <rect x="980" y="528" width="300" height="52" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="1130" y="560" text-anchor="middle">payload1</text>
+    <rect x="1280" y="528" width="130" height="52" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="1345" y="560" text-anchor="middle">TB CRC</text>
+    <text x="730" y="620" fill="#646B76">TB CRC 覆盖整个 TB candidate；拼接顺序只按 CB 编号。</text>
+  </g>
+
+  <!-- ============ 面板 C：CBG 部分重传与重组状态 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="750" width="1380" height="290" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="774" width="10" height="10" rx="3" fill="#7A6E8E"/>
+  <text x="108" y="783" font-size="17" font-weight="700" fill="#23272E">CBG 部分重传与重组状态</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <rect x="80" y="820" width="645" height="180" rx="12" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="402" y="854" text-anchor="middle" font-weight="700" fill="#7A6E8E">CBG0 mask=0</text>
+    <text x="402" y="890" text-anchor="middle" fill="#646B76">未传输：保持历史结果</text>
+    <text x="402" y="914" text-anchor="middle" fill="#646B76">不清零、不覆盖</text>
+    <rect x="755" y="820" width="645" height="180" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="1077" y="854" text-anchor="middle" font-weight="700" fill="#6C7A2E">CBG1 mask=1</text>
+    <text x="1077" y="890" text-anchor="middle" fill="#646B76">新 LLR：译码并刷新</text>
+    <text x="1077" y="914" text-anchor="middle" fill="#646B76">CB2/CB3 参与 TB 重组</text>
+  </g>
+  <g font-size="12.5" fill="#23272E">
+    <rect x="80" y="920" width="645" height="90" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="402" y="958" text-anchor="middle" font-weight="700" fill="#2F6E71">reassembly</text>
+    <text x="402" y="984" text-anchor="middle" fill="#646B76">同一 HARQ/TB 的最新 CB 结果</text>
+    <rect x="755" y="920" width="645" height="90" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
+    <text x="1077" y="958" text-anchor="middle" font-weight="700" fill="#A6403C">feedback</text>
+    <text x="1077" y="984" text-anchor="middle" fill="#646B76">fail-&gt;NACK；pass-&gt;释放上下文</text>
+  </g>
+
+  <!-- ============ 面板 D：验证观察点 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="1070" width="1380" height="260" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="1094" width="10" height="10" rx="3" fill="#2F6E71"/>
+  <text x="108" y="1103" font-size="17" font-weight="700" fill="#23272E">验证观察点</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="1140" width="252" height="150" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="206" y="1172" text-anchor="middle" font-weight="700">cb_crc_present</text>
+    <text x="98" y="1210" fill="#646B76">无 CB CRC 时</text>
+    <text x="98" y="1234" fill="#646B76">标记 skip</text>
+    <rect x="352" y="1140" width="252" height="150" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="478" y="1172" text-anchor="middle" font-weight="700">strip ranges</text>
+    <text x="370" y="1210" fill="#646B76">去除范围</text>
+    <text x="370" y="1234" fill="#646B76">可 dump</text>
+    <rect x="624" y="1140" width="252" height="150" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="750" y="1172" text-anchor="middle" font-weight="700">concat_order</text>
+    <text x="642" y="1210" fill="#646B76">按 r 顺序</text>
+    <text x="642" y="1234" fill="#646B76">拼接</text>
+    <rect x="896" y="1140" width="252" height="150" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1022" y="1172" text-anchor="middle" font-weight="700">tb_crc_input</text>
+    <text x="914" y="1210" fill="#646B76">payload 与 TB CRC</text>
+    <text x="914" y="1234" fill="#646B76">边界</text>
+    <rect x="1168" y="1140" width="252" height="150" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1294" y="1172" text-anchor="middle" font-weight="700">harq_feedback</text>
+    <text x="1186" y="1210" fill="#646B76">区分 CB/TB/CBG</text>
+    <text x="1186" y="1234" fill="#646B76">held</text>
+  </g>
+</svg>

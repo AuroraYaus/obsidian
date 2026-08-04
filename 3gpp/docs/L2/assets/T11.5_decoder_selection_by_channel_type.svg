@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T11.5_decoder_selection_by_channel_type.svg
+  @brief   按信道和信息类型选择 LTE/NR 译码器的决策流程图（手绘 SVG V2：布局与配色依据 T11.5 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：协议映射速查表六行（LTE DL-SCH/UL-SCH -> Turbo；LTE DCI/UCI ->
+           TBCC/Block/Repetition；NR DL-SCH/UL-SCH/PCH -> LDPC；NR DCI -> Polar；NR UCI
+           -> Polar/small-block，含协议锚点与接收端判定要点）、接收端 descriptor 选择
+           逻辑分支（RAT -> 信道类型 -> decoder_type 四落点：Turbo / TBCC / Polar / LDPC）、
+           边界情况四卡（小 payload / UCI on PUSCH / DCI CRC-RNTI / NR CBG）、读图顺序
+           说明条，均与讲义 T11.5 正文及图 T11.5-1 语义一致。
+           视觉设计：速查表按制式分栏（LTE=赭金、NR=橄榄、控制=青瓷、风险=石榴）；
+           分支图按 RAT 分区着色。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1960" viewBox="0 0 1500 1960" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T11.5 按信道和信息类型选择译码器</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">T11.5 按信道和信息类型选择译码器</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">协议先决定编码对象，接收端 descriptor 再选择 Turbo、LDPC、Polar 或 LTE 控制类译码器。</text>
+
+  <!-- ============ 协议映射速查表 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="120" width="1380" height="700" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="152" font-size="16" font-weight="700" fill="#23272E">协议映射速查表</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="75" y="178" width="160" height="44" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="155" y="206" text-anchor="middle" font-weight="700">制式</text>
+    <rect x="235" y="178" width="290" height="44" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="380" y="206" text-anchor="middle" font-weight="700">信道 / 信息类型</text>
+    <rect x="525" y="178" width="220" height="44" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="635" y="206" text-anchor="middle" font-weight="700">译码器家族</text>
+    <rect x="745" y="178" width="290" height="44" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="890" y="206" text-anchor="middle" font-weight="700">协议锚点</text>
+    <rect x="1035" y="178" width="380" height="44" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="206" text-anchor="middle" font-weight="700">接收端判定要点</text>
+
+    <rect x="75" y="222" width="160" height="92" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="155" y="266" text-anchor="middle" font-weight="700">LTE</text>
+    <rect x="235" y="222" width="290" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="380" y="248" text-anchor="middle">DL-SCH / UL-SCH</text>
+    <rect x="525" y="222" width="220" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="635" y="266" text-anchor="middle" font-weight="700">Turbo</text>
+    <rect x="745" y="222" width="290" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="890" y="248" text-anchor="middle">TS 36.212 §5.1.3,</text>
+    <text x="890" y="270" text-anchor="middle">§5.2.2.3</text>
+    <rect x="1035" y="222" width="380" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="248" text-anchor="middle">数据 TB/CB 主线；HARQ soft buffer 与</text>
+    <text x="1225" y="270" text-anchor="middle">Turbo rate recovery 后进入 Turbo core</text>
+
+    <rect x="75" y="314" width="160" height="92" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="155" y="358" text-anchor="middle" font-weight="700">LTE</text>
+    <rect x="235" y="314" width="290" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="380" y="340" text-anchor="middle">DCI / UCI 等控制</text>
+    <rect x="525" y="314" width="220" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="635" y="340" text-anchor="middle">TBCC / Block /</text>
+    <text x="635" y="362" text-anchor="middle">Repetition</text>
+    <rect x="745" y="314" width="290" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="890" y="358" text-anchor="middle">TS 36.212 Table 5.1.3-2</text>
+    <rect x="1035" y="314" width="380" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="340" text-anchor="middle">不是 NR Polar；不要用 Polar 解释</text>
+    <text x="1225" y="362" text-anchor="middle">LTE 控制译码</text>
+
+    <rect x="75" y="406" width="160" height="92" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="155" y="450" text-anchor="middle" font-weight="700">NR</text>
+    <rect x="235" y="406" width="290" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="380" y="432" text-anchor="middle">DL-SCH / UL-SCH / PCH</text>
+    <rect x="525" y="406" width="220" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="635" y="450" text-anchor="middle" font-weight="700">LDPC</text>
+    <rect x="745" y="406" width="290" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="890" y="432" text-anchor="middle">TS 38.212 Table 5.3-1,</text>
+    <text x="890" y="454" text-anchor="middle">§6.2.4</text>
+    <rect x="1035" y="406" width="380" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="432" text-anchor="middle">数据 TB/CB 主线；BG、Zc、CBG、</text>
+    <text x="1225" y="454" text-anchor="middle">HARQ context 决定 LDPC descriptor</text>
+
+    <rect x="75" y="498" width="160" height="92" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="155" y="542" text-anchor="middle" font-weight="700">NR</text>
+    <rect x="235" y="498" width="290" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="380" y="542" text-anchor="middle">DCI</text>
+    <rect x="525" y="498" width="220" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="635" y="542" text-anchor="middle" font-weight="700">Polar</text>
+    <rect x="745" y="498" width="290" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="890" y="524" text-anchor="middle">TS 38.212 Table 5.3-2,</text>
+    <text x="890" y="546" text-anchor="middle">§7.3.3</text>
+    <rect x="1035" y="498" width="380" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="524" text-anchor="middle">PDCCH 盲检；CRC/RNTI 背景与</text>
+    <text x="1225" y="546" text-anchor="middle">CA-SCL final selector 绑定</text>
+
+    <rect x="75" y="590" width="160" height="92" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="155" y="634" text-anchor="middle" font-weight="700">NR</text>
+    <rect x="235" y="590" width="290" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="380" y="616" text-anchor="middle">UCI</text>
+    <rect x="525" y="590" width="220" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="635" y="616" text-anchor="middle">Polar / small-block</text>
+    <rect x="745" y="590" width="290" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="890" y="616" text-anchor="middle">TS 38.212 §6.3.1, §6.3.2</text>
+    <rect x="1035" y="590" width="380" height="92" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="616" text-anchor="middle">PUCCH/PUSCH 皆可能承载 UCI；小负载</text>
+    <text x="1225" y="638" text-anchor="middle">可能走 small-block，不等于 LDPC</text>
+  </g>
+
+  <!-- ============ 接收端 descriptor 选择逻辑 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="850" width="1380" height="660" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="882" font-size="16" font-weight="700" fill="#23272E">接收端 descriptor 选择逻辑</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="90" y="930" width="300" height="130" rx="18" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="240" y="968" text-anchor="middle" font-weight="700">descriptor</text>
+    <text x="240" y="996" text-anchor="middle">rat, channel_type,</text>
+    <text x="240" y="1020" text-anchor="middle">payload_type</text>
+
+    <rect x="460" y="905" width="300" height="105" rx="18" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="610" y="956" text-anchor="middle" font-weight="700">RAT = LTE</text>
+    <rect x="460" y="1085" width="300" height="105" rx="18" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="610" y="1136" text-anchor="middle" font-weight="700">RAT = NR</text>
+
+    <rect x="830" y="905" width="320" height="112" rx="18" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="990" y="950" text-anchor="middle" font-weight="700">TrCH = DL-SCH / UL-SCH</text>
+    <rect x="830" y="1033" width="320" height="112" rx="18" fill="#FFFFFF" stroke="#A6403C" stroke-width="1.5"/>
+    <text x="990" y="1078" text-anchor="middle" font-weight="700">control info</text>
+    <rect x="830" y="1205" width="320" height="112" rx="18" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="990" y="1250" text-anchor="middle" font-weight="700">UCI / DCI</text>
+    <rect x="830" y="1330" width="320" height="112" rx="18" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="990" y="1375" text-anchor="middle" font-weight="700">TrCH = DL-SCH / UL-SCH</text>
+
+    <rect x="1220" y="905" width="170" height="112" rx="18" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="1305" y="938" text-anchor="middle" font-weight="700">decoder_type</text>
+    <text x="1305" y="958" text-anchor="middle" font-weight="700">= Turbo</text>
+    <text x="1305" y="978" text-anchor="middle">crc_type =</text>
+    <text x="1305" y="998" text-anchor="middle">TB/CB CRC</text>
+    <rect x="1220" y="1033" width="170" height="112" rx="18" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
+    <text x="1305" y="1062" text-anchor="middle" font-weight="700">decoder_type</text>
+    <text x="1305" y="1082" text-anchor="middle" font-weight="700">= TBCC / block</text>
+    <text x="1305" y="1102" text-anchor="middle">LTE control</text>
+    <text x="1305" y="1122" text-anchor="middle">context</text>
+    <rect x="1220" y="1205" width="170" height="112" rx="18" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="1305" y="1234" text-anchor="middle" font-weight="700">decoder_type</text>
+    <text x="1305" y="1254" text-anchor="middle" font-weight="700">= Polar /</text>
+    <text x="1305" y="1274" text-anchor="middle">small-block</text>
+    <text x="1305" y="1294" text-anchor="middle">control_context</text>
+    <rect x="1220" y="1330" width="170" height="112" rx="18" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="1305" y="1359" text-anchor="middle" font-weight="700">decoder_type</text>
+    <text x="1305" y="1379" text-anchor="middle" font-weight="700">= LDPC</text>
+    <text x="1305" y="1399" text-anchor="middle">harq_context</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 390 995 L 460 960" marker-end="url(#arrow)"/>
+    <path d="M 390 995 L 460 1140" marker-end="url(#arrow)"/>
+    <path d="M 760 960 H 830" marker-end="url(#arrow)"/>
+    <path d="M 760 960 V 1089 H 830" marker-end="url(#arrow)"/>
+    <path d="M 760 1140 V 1261 H 830" marker-end="url(#arrow)"/>
+    <path d="M 760 1140 V 1386 H 830" marker-end="url(#arrow)"/>
+    <path d="M 1150 960 H 1220" marker-end="url(#arrow)"/>
+    <path d="M 1150 1089 H 1220" marker-end="url(#arrow)"/>
+    <path d="M 1150 1261 H 1220" marker-end="url(#arrow)"/>
+    <path d="M 1150 1386 H 1220" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 边界情况与工程检测点 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="1540" width="1380" height="270" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="1572" font-size="16" font-weight="700" fill="#23272E">边界情况与工程检测点</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="70" y="1600" width="320" height="160" rx="18" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="230" y="1632" text-anchor="middle" font-weight="700" fill="#B06F2B">小 payload</text>
+    <text x="96" y="1670">NR UCI 可能 small-block；</text>
+    <text x="96" y="1694">不要因为是控制信息就</text>
+    <text x="96" y="1718">无条件进入 Polar SCL。</text>
+    <rect x="410" y="1600" width="320" height="160" rx="18" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="570" y="1632" text-anchor="middle" font-weight="700" fill="#2F6E71">UCI on PUSCH</text>
+    <text x="436" y="1670">PUSCH 可同时有 UL-SCH 和 UCI；</text>
+    <text x="436" y="1694">UL-SCH 数据仍进 LDPC，UCI</text>
+    <text x="436" y="1718">按控制分支处理。</text>
+    <rect x="750" y="1600" width="320" height="160" rx="18" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="910" y="1632" text-anchor="middle" font-weight="700" fill="#2F6E71">DCI CRC/RNTI</text>
+    <text x="776" y="1670">DCI 不只是 payload CRC；</text>
+    <text x="776" y="1694">CRC parity 与 RNTI 背景绑定，</text>
+    <text x="776" y="1718">影响盲检和 final selector。</text>
+    <rect x="1090" y="1600" width="320" height="160" rx="18" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="1250" y="1632" text-anchor="middle" font-weight="700" fill="#6C7A2E">NR CBG</text>
+    <text x="1116" y="1670">CBG 改变 LDPC HARQ 软缓存</text>
+    <text x="1116" y="1694">粒度；数据主线仍是</text>
+    <text x="1116" y="1718">LDPC。</text>
+  </g>
+
+  <!-- ============ 读图顺序说明 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="1840" width="1380" height="90" rx="14" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="1874" font-size="12.5" fill="#23272E">读图顺序：先看协议速查表，再看 descriptor 分支。</text>
+  <text x="90" y="1898" font-size="12.5" fill="#23272E">工程检测点：每个任务必须同时记录 rat、channel_type、payload_type、decoder_type、crc_type、harq_context 和 control_context。</text>
+</svg>

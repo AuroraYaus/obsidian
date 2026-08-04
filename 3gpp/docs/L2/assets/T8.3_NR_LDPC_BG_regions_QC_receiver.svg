@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T8.3_NR_LDPC_BG_regions_QC_receiver.svg
+  @brief   NR LDPC BG 子矩阵区域、QC lifting 与接收端用途（手绘 SVG）
+  @date    2026-08-04
+  @note    布局按讲义语义重排：上排左 BG 五区 A/B/C/D/E（表头分带 + 网格 + 稀疏 1 标记）、
+           上排右接收端五步 descriptor 链路；下排 QC lifting 流程（BG edge ->
+           P_ij=V_ij mod Zc -> Zc=5 shift=2 循环移位子矩阵）。A/B/C/D/E 是教学分区名，
+           协议证据仍是 TS 38.212 Table 5.3.2-2/3 的 row/column/iLS/shift values。
+           语义配色：A 蓝 / B 绿 / C 琥珀 / D 紫 / E 红、接收端紫蓝交替；
+           字号符合合规 Rule 23。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>NR LDPC BG 子矩阵区域、QC lifting 与接收端用途</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#D18A2F"/>
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5D6B80"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 标题 ============ -->
+  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433">NR LDPC BG 子矩阵区域、QC lifting 与接收端用途</text>
+  <text x="35" y="60" font-size="12" fill="#5B6877">A/B/C/D/E 是工程教学分区，用来理解核心 parity、扩展 parity、近似双对角结构和 Raptor-like 扩展。</text>
+  <text x="35" y="78" font-size="12" fill="#5B6877">协议依据仍是 TS 38.212 Table 5.3.2-2/3 的 row、column、iLS 和 shift values。</text>
+
+  <!-- ============ 1. BG 五区结构 ============ -->
+  <g filter="url(#soft)">
+    <rect x="35" y="95" width="545" height="405" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="58" y="122" font-size="15" font-weight="700" fill="#3B6FB5">1. BG 五区结构</text>
+
+  <!-- 列头分带 -->
+  <g font-size="10.5" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <rect x="58" y="140" width="128" height="26" rx="6" fill="#DDE7F3"/>
+    <text x="122" y="158">systematic columns</text>
+    <rect x="186" y="140" width="64" height="26" rx="6" fill="#DDE7F3"/>
+    <text x="218" y="152" font-size="10">core</text>
+    <text x="218" y="164" font-size="10">parity</text>
+    <rect x="250" y="140" width="128" height="26" rx="6" fill="#DDE7F3"/>
+    <text x="314" y="158">extension parity</text>
+  </g>
+
+  <!-- 五个区域色块 -->
+  <rect x="58" y="172" width="128" height="104" fill="#DCE7F6"/>
+  <rect x="186" y="172" width="64" height="104" fill="#E2F2E9"/>
+  <rect x="58" y="276" width="128" height="104" fill="#F8EED9"/>
+  <rect x="186" y="276" width="64" height="104" fill="#EEE7F8"/>
+  <rect x="250" y="172" width="128" height="208" fill="#F9E3E0"/>
+
+  <!-- 网格线（描边，非矩形区域） -->
+  <g stroke="#FFFFFF" stroke-width="1.2">
+    <path d="M 58 172 V 380 M 90 172 V 380 M 122 172 V 380 M 154 172 V 380 M 186 172 V 380 M 218 172 V 380 M 250 172 V 380 M 282 172 V 380 M 314 172 V 380 M 346 172 V 380 M 378 172 V 380"/>
+    <path d="M 58 172 H 378 M 58 198 H 378 M 58 224 H 378 M 58 250 H 378 M 58 276 H 378 M 58 302 H 378 M 58 328 H 378 M 58 354 H 378 M 58 380 H 378"/>
+  </g>
+
+  <!-- 区域描边 -->
+  <g fill="none" stroke="#1B2433" stroke-width="1.5">
+    <rect x="58" y="172" width="128" height="104"/>
+    <rect x="186" y="172" width="64" height="104"/>
+    <rect x="58" y="276" width="128" height="104"/>
+    <rect x="186" y="276" width="64" height="104"/>
+    <rect x="250" y="172" width="128" height="208"/>
+  </g>
+
+  <!-- 稀疏非零标记（教学示意，非真实 BG 表） -->
+  <g fill="#1B2433">
+    <circle cx="80" cy="185" r="3.5"/><circle cx="176" cy="185" r="3.5"/><circle cx="240" cy="185" r="3.5"/><circle cx="304" cy="185" r="3.5"/>
+    <circle cx="112" cy="211" r="3.5"/><circle cx="176" cy="211" r="3.5"/><circle cx="240" cy="211" r="3.5"/><circle cx="336" cy="211" r="3.5"/>
+    <circle cx="112" cy="237" r="3.5"/><circle cx="176" cy="237" r="3.5"/><circle cx="272" cy="237" r="3.5"/><circle cx="336" cy="237" r="3.5"/>
+    <circle cx="112" cy="263" r="3.5"/><circle cx="208" cy="263" r="3.5"/><circle cx="272" cy="263" r="3.5"/><circle cx="336" cy="263" r="3.5"/>
+    <circle cx="144" cy="289" r="3.5"/><circle cx="208" cy="289" r="3.5"/><circle cx="272" cy="289" r="3.5"/><circle cx="368" cy="289" r="3.5"/>
+    <circle cx="80" cy="315" r="3.5"/><circle cx="144" cy="315" r="3.5"/><circle cx="208" cy="315" r="3.5"/><circle cx="304" cy="315" r="3.5"/><circle cx="368" cy="315" r="3.5"/>
+    <circle cx="80" cy="341" r="3.5"/><circle cx="144" cy="341" r="3.5"/><circle cx="240" cy="341" r="3.5"/><circle cx="304" cy="341" r="3.5"/><circle cx="368" cy="341" r="3.5"/>
+    <circle cx="80" cy="367" r="3.5"/><circle cx="176" cy="367" r="3.5"/><circle cx="240" cy="367" r="3.5"/><circle cx="304" cy="367" r="3.5"/>
+  </g>
+
+  <!-- 区域字母（避开稀疏非零标记） -->
+  <g font-size="18" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <text x="130" y="235">A</text>
+    <text x="218" y="224">B</text>
+    <text x="122" y="312">C</text>
+    <text x="228" y="306">D</text>
+    <text x="314" y="276">E</text>
+  </g>
+
+  <text x="58" y="406" font-size="12" font-weight="700" fill="#5B6877">rows: upper=core, lower=extension</text>
+  <text x="58" y="434" font-size="12" fill="#5B6877">B/E 区的双对角或近似双对角形状降低编码求解复杂度；</text>
+  <text x="58" y="452" font-size="12" fill="#5B6877">C/D/E 让更多 parity 逐步加入，形成 Raptor-like 扩展。</text>
+
+  <!-- ============ 3. 接收端用途 ============ -->
+  <g filter="url(#soft)">
+    <rect x="610" y="95" width="355" height="405" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="635" y="122" font-size="15" font-weight="700" fill="#8A6BBE">3. 接收端用途</text>
+
+  <g filter="url(#soft)">
+    <rect x="625" y="145" width="325" height="55" rx="10" fill="#FFFFFF" stroke="#3B6FB5" stroke-width="1.5"/>
+  </g>
+  <text x="640" y="172" font-size="13" font-weight="700" fill="#1B2433">Descriptor</text>
+  <text x="640" y="193" font-size="12" fill="#5B6877">BG, Zc, iLS, N, Ncb, RV</text>
+
+  <g filter="url(#soft)">
+    <rect x="625" y="212" width="325" height="55" rx="10" fill="#FFFFFF" stroke="#8A6BBE" stroke-width="1.5"/>
+  </g>
+  <text x="640" y="239" font-size="13" font-weight="700" fill="#1B2433">Shift ROM</text>
+  <text x="640" y="260" font-size="12" fill="#5B6877">row group, column group, shift</text>
+
+  <g filter="url(#soft)">
+    <rect x="625" y="279" width="325" height="55" rx="10" fill="#FFFFFF" stroke="#3B6FB5" stroke-width="1.5"/>
+  </g>
+  <text x="640" y="306" font-size="13" font-weight="700" fill="#1B2433">Rate recovery</text>
+  <text x="640" y="327" font-size="12" fill="#5B6877">mother-code LLR and masks</text>
+
+  <g filter="url(#soft)">
+    <rect x="625" y="346" width="325" height="55" rx="10" fill="#FFFFFF" stroke="#8A6BBE" stroke-width="1.5"/>
+  </g>
+  <text x="640" y="373" font-size="13" font-weight="700" fill="#1B2433">Layered core</text>
+  <text x="640" y="394" font-size="12" fill="#5B6877">RMW LLR and message memory</text>
+
+  <g filter="url(#soft)">
+    <rect x="625" y="413" width="325" height="55" rx="10" fill="#FFFFFF" stroke="#3B6FB5" stroke-width="1.5"/>
+  </g>
+  <text x="640" y="440" font-size="13" font-weight="700" fill="#1B2433">HARQ view</text>
+  <text x="640" y="461" font-size="12" fill="#5B6877">new/repeated/unknown parity coverage</text>
+
+  <g stroke="#5D6B80" stroke-width="1.6" fill="none">
+    <path d="M 787 202 V 212" marker-end="url(#arrow-gray)"/>
+    <path d="M 787 269 V 279" marker-end="url(#arrow-gray)"/>
+    <path d="M 787 336 V 346" marker-end="url(#arrow-gray)"/>
+    <path d="M 787 403 V 413" marker-end="url(#arrow-gray)"/>
+  </g>
+
+  <!-- ============ 2. QC lifting（下排全宽） ============ -->
+  <g filter="url(#soft)">
+    <rect x="35" y="520" width="930" height="140" rx="14" fill="#FAF5E4" stroke="#D9C179" stroke-width="1.5"/>
+  </g>
+  <text x="58" y="548" font-size="15" font-weight="700" fill="#D18A2F">2. QC lifting</text>
+
+  <g filter="url(#soft)">
+    <rect x="58" y="570" width="242" height="80" rx="10" fill="#FFFFFF" stroke="#D18A2F" stroke-width="1.5"/>
+  </g>
+  <text x="74" y="595" font-size="13" font-weight="700" fill="#1B2433">BG edge</text>
+  <text x="74" y="617" font-size="11.5" fill="#5B6877">row i, column j, iLS selects</text>
+  <text x="74" y="633" font-size="11.5" fill="#5B6877">shift value V_ij</text>
+
+  <g stroke="#D18A2F" stroke-width="1.8" fill="none">
+    <path d="M 300 610 H 340" marker-end="url(#arrow)"/>
+  </g>
+
+  <g filter="url(#soft)">
+    <rect x="340" y="570" width="240" height="80" rx="10" fill="#FFFFFF" stroke="#3E9E74" stroke-width="1.5"/>
+  </g>
+  <text x="460" y="595" font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">P_ij = V_ij mod Zc</text>
+  <text x="356" y="617" font-size="11.5" fill="#5B6877">0 is a valid shift; missing</text>
+  <text x="356" y="633" font-size="11.5" fill="#5B6877">BG entries become all-zero blocks</text>
+
+  <g stroke="#D18A2F" stroke-width="1.8" fill="none">
+    <path d="M 580 610 H 640" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Zc=5 shift=2 循环移位子矩阵 -->
+  <g filter="url(#soft)">
+    <rect x="640" y="570" width="80" height="80" fill="#FFFFFF" stroke="#C9D4E0" stroke-width="1.2"/>
+  </g>
+  <g stroke="#C9D4E0" stroke-width="1">
+    <path d="M 656 570 V 650 M 672 570 V 650 M 688 570 V 650 M 704 570 V 650 M 720 570 V 650"/>
+    <path d="M 640 586 H 720 M 640 602 H 720 M 640 618 H 720 M 640 634 H 720"/>
+  </g>
+  <g fill="#3E9E74">
+    <rect x="672" y="570" width="16" height="16"/>
+    <rect x="688" y="586" width="16" height="16"/>
+    <rect x="704" y="602" width="16" height="16"/>
+    <rect x="640" y="618" width="16" height="16"/>
+    <rect x="656" y="634" width="16" height="16"/>
+  </g>
+  <text x="740" y="596" font-size="13" font-weight="700" fill="#1B2433">Zc=5, shift=2</text>
+  <text x="740" y="622" font-size="11.5" fill="#5B6877">Receiver address:</text>
+  <text x="740" y="638" font-size="11.5" fill="#5B6877">base(column)+(local+shift)</text>
+  <text x="740" y="654" font-size="11.5" fill="#5B6877">mod Zc.</text>
+</svg>

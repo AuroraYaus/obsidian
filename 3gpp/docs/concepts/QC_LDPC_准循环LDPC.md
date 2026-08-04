@@ -28,5 +28,5 @@ QC-LDPC 是 NR LDPC 实现形式：基图元素→Zc×Zc 循环移位子矩阵�
 - [[Base_Graph_基图]]
 - [[LDPC_低密度奇偶校验码]]
 - [[T8.3_NR_LDPC_lifting_QC_matrix]]
-- [[T14.2_NR_LDPC_RTL_microarchitecture]]
+- [[T19.2_NR_LDPC_RTL_microarchitecture]]
 - 关系语义：Zc 提升决定码长、校验矩阵尺寸和硬件并行度。

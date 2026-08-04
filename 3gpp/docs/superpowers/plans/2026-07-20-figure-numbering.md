@@ -246,7 +246,7 @@ grep -A2 '## 图示' docs/L2/T10.1_NR_Polar_decoder_chain_overview.md
 grep -A10 '## 图示' docs/L2/T8.3_NR_LDPC_lifting_QC_matrix.md
 
 # 抽查 L3 文件
-grep -A2 '## 图示' docs/L3/T14.1_LTE_Turbo_RTL_microarchitecture.md
+grep -A2 '## 图示' docs/L3/T19.1_LTE_Turbo_RTL_microarchitecture.md
 ```
 
 预期：每个文件都有 `## 图示` 节，图片从 `图 1` 开始编号，路径为 `assets/xxx.png`。

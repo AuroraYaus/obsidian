@@ -27,5 +27,5 @@ source_spec: "Algorithmic; hardware implementation of LDPC decoding"
 - [[Sum_Product_Algorithm_和积算法]]
 - [[Min_Sum_Algorithm_最小和算法]]
 - [[T8.7_layered_LDPC_decoding_schedule]]
-- [[T14.2_NR_LDPC_RTL_microarchitecture]]
+- [[T19.2_NR_LDPC_RTL_microarchitecture]]
 - 关系语义：分层调度是 LDPC 硬件关键优化。

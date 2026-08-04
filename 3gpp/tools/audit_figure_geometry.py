@@ -21,23 +21,10 @@ from pathlib import Path
 DEFAULT_PATHS = [Path("tools/figures")]
 
 HISTORICAL_FOCUS = {
-    "render_lte_turbo_encoder_structure.py",
-    "render_lte_dl_ul_decoder_context.py",
-    "render_nr_polar_channel_polarization.py",
-    "render_nr_polar_rate_recovery_flow.py",
-    "render_nr_polar_sc_decoding_tree.py",
-    "render_turbo_ldpc_polar_algorithm_comparison.py",
-    "render_lte_nr_rate_matching_comparison.py",
-    "render_nr_ldpc_decoder_chain_overview.py",
-    "render_nr_ldpc_base_graph_selection.py",
-    "render_nr_ldpc_lifting_qc_matrix.py",
-    "render_ldpc_tanner_syndrome.py",
-    "render_harq_soft_buffer_comparison.py",
-    "render_t12_1_golden_model_layout.py",
-    "render_t14_1_lte_turbo_rtl_microarchitecture.py",
-    "render_t14_2_nr_ldpc_rtl_microarchitecture.py",
-    "render_t14_3_nr_polar_rtl_microarchitecture.py",
-    "render_t14_4_unified_decoder_subsystem.py",
+    # T6.3/T7.5/T8.1/T8.2/T8.3/T8.4 的 PIL 渲染脚本已删除：图已改为手绘 SVG
+    # docs/L2/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.svg 等
+    # render_t12_1_golden_model_layout.py 已删除：图已改为手绘 SVG
+    # docs/L3/assets/T12.1_golden_model_project_layout.svg
 }
 
 GEOMETRY_HELPERS = (

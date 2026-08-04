@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T10.2_NR_Polar_N4_transform_frozen_mask.svg
+  @brief   N=4 Polar 极化变换与 frozen mask 教学图（手绘 SVG V2：布局与配色依据 T10.2 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：N=4 蝶形变换 u=[0,0,a,b] -> x0..x3（x0=a⊕b、x1=b、x2=a⊕b、x3=b），
+           frozen set={0,1} / information set={2,3} 互补语义、四条 G4 方程、接收端 mask
+           语义（F∩I=空集、F∪I={0,1,2,3}）与工程检查点，均与讲义 T10.2 正文及图 T10.2-1
+           语义一致。
+           视觉设计：蝶形连线按 G4 列结构分组；frozen 位=协议青瓷、information 位=橄榄；
+           XOR 节点带 ⊕ 标记；mask 语义标签用徽章排布。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1100" viewBox="0 0 1500 1100" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>N=4 Polar 极化变换与 frozen mask</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">N=4 Polar 极化变换与 frozen mask</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">左侧是编码前位置 u0-u3；右侧是编码输出 x0-x3。frozen 位置为协议已知约束（u0,u1），information 位置承载信息（u2,u3）。</text>
+
+  <!-- ============ 蝶形图 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="570" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="165" font-size="16" font-weight="700" fill="#23272E">蝶形直觉：信息位经过异或扩散到多个输出位置</text>
+
+  <!-- 左侧输入 u0-u3 -->
+  <g font-size="12.5" fill="#23272E">
+    <rect x="110" y="228" width="130" height="44" rx="22" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="175" y="255" text-anchor="middle" font-weight="700">u0=0 frozen</text>
+    <rect x="110" y="328" width="130" height="44" rx="22" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="175" y="355" text-anchor="middle" font-weight="700">u1=0 frozen</text>
+    <rect x="110" y="428" width="140" height="44" rx="22" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="180" y="455" text-anchor="middle" font-weight="700">u2=a info</text>
+    <rect x="110" y="528" width="140" height="44" rx="22" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="180" y="555" text-anchor="middle" font-weight="700">u3=b info</text>
+  </g>
+
+  <!-- XOR 节点 -->
+  <g stroke="#8E3B5E" stroke-width="1.5" fill="#FBFAF6">
+    <circle cx="600" cy="250" r="19"/>
+    <circle cx="600" cy="350" r="19"/>
+    <circle cx="600" cy="450" r="19"/>
+    <circle cx="600" cy="550" r="19"/>
+  </g>
+  <g stroke="#8E3B5E" stroke-width="1.5">
+    <line x1="586" y1="250" x2="614" y2="250"/>
+    <line x1="600" y1="236" x2="600" y2="264"/>
+    <line x1="586" y1="350" x2="614" y2="350"/>
+    <line x1="600" y1="336" x2="600" y2="364"/>
+    <line x1="586" y1="450" x2="614" y2="450"/>
+    <line x1="600" y1="436" x2="600" y2="464"/>
+    <line x1="586" y1="550" x2="614" y2="550"/>
+    <line x1="600" y1="536" x2="600" y2="564"/>
+  </g>
+
+  <!-- 右侧输出 x0-x3 -->
+  <g font-size="12.5" fill="#23272E">
+    <rect x="950" y="228" width="120" height="44" rx="22" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="1010" y="255" text-anchor="middle" font-weight="700">x0</text>
+    <rect x="950" y="328" width="120" height="44" rx="22" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="1010" y="355" text-anchor="middle" font-weight="700">x1</text>
+    <rect x="950" y="428" width="120" height="44" rx="22" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="1010" y="455" text-anchor="middle" font-weight="700">x2</text>
+    <rect x="950" y="528" width="120" height="44" rx="22" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="1010" y="555" text-anchor="middle" font-weight="700">x3</text>
+  </g>
+
+  <!-- 连线：G4 列结构（x0 全连；x1<-u1,u3；x2<-u2,u3；x3<-u3） -->
+  <g stroke="#8A8375" stroke-width="1.5" fill="none">
+    <path d="M 240 250 H 580"/>
+    <path d="M 240 350 H 580"/>
+    <path d="M 240 450 H 580"/>
+    <path d="M 240 550 H 580"/>
+  </g>
+  <g stroke="#8A8375" stroke-width="1.5" fill="none">
+    <path d="M 250 350 V 350 H 580"/>
+    <path d="M 250 550 V 350 H 580"/>
+    <path d="M 250 450 H 580"/>
+    <path d="M 250 550 V 450 H 580"/>
+    <path d="M 250 550 H 580"/>
+  </g>
+  <g stroke="#8A8375" stroke-width="1.5" fill="none">
+    <path d="M 619 250 H 950"/>
+    <path d="M 619 350 H 950"/>
+    <path d="M 619 450 H 950"/>
+    <path d="M 619 550 H 950"/>
+  </g>
+
+  <!-- 右侧方程 -->
+  <g font-size="12.5" fill="#646B76">
+    <text x="1120" y="255">x0 = u0 ⊕ u1 ⊕ u2 ⊕ u3 = a ⊕ b</text>
+    <text x="1120" y="355">x1 = u1 ⊕ u3 = b</text>
+    <text x="1120" y="455">x2 = u2 ⊕ u3 = a ⊕ b</text>
+    <text x="1120" y="555">x3 = u3 = b</text>
+  </g>
+
+  <!-- ============ 接收端 mask 语义 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="730" width="1380" height="330" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="765" font-size="16" font-weight="700" fill="#23272E">接收端 mask 语义</text>
+  <text x="90" y="800" font-size="12.5" fill="#646B76">frozen set 和 information set 必须互补。frozen 位不是 punctured，也不是低可靠 LLR；它是译码树上的已知约束。</text>
+
+  <g font-size="12" fill="#FFFFFF">
+    <rect x="90" y="840" width="104" height="38" rx="8" fill="#2F6E71"/>
+    <text x="142" y="864" text-anchor="middle" font-weight="700">F = {0,1}</text>
+    <rect x="206" y="840" width="104" height="38" rx="8" fill="#6C7A2E"/>
+    <text x="258" y="864" text-anchor="middle" font-weight="700">I = {2,3}</text>
+    <rect x="322" y="840" width="160" height="38" rx="8" fill="#2F6E71"/>
+    <text x="402" y="864" text-anchor="middle" font-weight="700">u0,u1 强制为 0</text>
+    <rect x="494" y="840" width="160" height="38" rx="8" fill="#6C7A2E"/>
+    <text x="574" y="864" text-anchor="middle" font-weight="700">u2,u3 承载 a,b</text>
+    <rect x="666" y="840" width="118" height="38" rx="8" fill="#B06F2B"/>
+    <text x="725" y="864" text-anchor="middle" font-weight="700">F ∩ I = 空集</text>
+    <rect x="796" y="840" width="170" height="38" rx="8" fill="#B06F2B"/>
+    <text x="881" y="864" text-anchor="middle" font-weight="700">F ∪ I = {0,1,2,3}</text>
+  </g>
+
+  <text x="90" y="958" font-size="13" font-weight="700" class="free" fill="#A6403C">工程检查点：info/frozen mask 方向、0-based index、bit-reversal 边界、frozen 与 rate-matching punctured 的区别。</text>
+</svg>

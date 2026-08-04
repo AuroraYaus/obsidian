@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T10.4_NR_Polar_SC_N4_tree.svg
+  @brief   N=4 Polar SC 逐次抵消译码树教学图（手绘 SVG V2：布局与配色依据 T10.4 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：LLR 输入 L=[-0.7, 2.1, -1.4, 1.8]；f 进入左半树（a0=+0.7, a1=+1.8）；
+           frozen 判决 u0,u1=0（βL=[0,0]）；partial sum 回传；g 进入右半树
+           （b0=-2.1, b1=+3.9）；information 判决 u2=1, u3=0（βR=[1,0]）；合成
+           β=[1,0,1,0]、û=[0,0,1,0]、x̂=[1,0,1,0]；函数约定 f/g，均与讲义 T10.4
+           正文及图 T10.4-1 语义一致。
+           视觉设计：按 SC 读图顺序 1-6 沿路径标注步骤徽章；左半树=青瓷、右半树=橄榄、
+           frozen 判决=风险、合成=赭金。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1060" viewBox="0 0 1500 1060" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T10.4 N=4 Polar SC 译码树：f/g、判决与 partial sum</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">T10.4 N=4 Polar SC 译码树：f/g、判决与 partial sum</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">LLR 输入 L=[-0.7, 2.1, -1.4, 1.8]；f 使用 min-sum 近似；frozen set={0,1}，information set={2,3}。</text>
+
+  <!-- ============ 译码树主体 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="720" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="154" width="10" height="10" rx="3" fill="#8E3B5E"/>
+  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">SC 树遍历：通道 LLR 到叶子判决</text>
+
+  <!-- 步骤 1：通道 LLR（左） -->
+  <g filter="url(#soft)">
+    <rect x="90" y="210" width="300" height="150" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <circle cx="120" cy="240" r="14" fill="#8E3B5E"/>
+  <text x="120" y="245" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+  <g font-size="12.5" fill="#23272E">
+    <text x="250" y="248" text-anchor="middle" font-weight="700">通道 LLR</text>
+    <text x="250" y="280" text-anchor="middle">L0=-0.7  L1=2.1</text>
+    <text x="250" y="304" text-anchor="middle">L2=-1.4  L3=1.8</text>
+  </g>
+
+  <!-- 步骤 2：f 进入左半树 -->
+  <g filter="url(#soft)">
+    <rect x="480" y="190" width="330" height="130" rx="14" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+  </g>
+  <circle cx="510" cy="220" r="14" fill="#2F6E71"/>
+  <text x="510" y="225" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+  <g font-size="12.5" fill="#23272E">
+    <text x="640" y="228" text-anchor="middle" font-weight="700" fill="#2F6E71">左半树输入</text>
+    <text x="640" y="258" text-anchor="middle">a0=f(L0,L2)=+0.7</text>
+    <text x="640" y="282" text-anchor="middle">a1=f(L1,L3)=+1.8</text>
+  </g>
+
+  <!-- 步骤 3：先译 u0,u1 -->
+  <g filter="url(#soft)">
+    <rect x="900" y="150" width="440" height="180" rx="14" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
+  </g>
+  <circle cx="930" cy="180" r="14" fill="#A6403C"/>
+  <text x="930" y="185" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+  <g font-size="12.5" fill="#23272E">
+    <text x="1110" y="188" text-anchor="middle" font-weight="700" fill="#A6403C">先译 u0,u1（frozen 强制判决）</text>
+    <text x="1110" y="222" text-anchor="middle">u0 frozen -&gt; 0</text>
+    <text x="1110" y="246" text-anchor="middle">u1 frozen -&gt; 0</text>
+    <text x="1110" y="270" text-anchor="middle">βL=[u0⊕u1,u1]=[0,0]</text>
+  </g>
+
+  <!-- 步骤 4：g 进入右半树 -->
+  <g filter="url(#soft)">
+    <rect x="480" y="400" width="330" height="150" rx="14" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+  </g>
+  <circle cx="510" cy="430" r="14" fill="#6C7A2E"/>
+  <text x="510" y="435" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+  <g font-size="12.5" fill="#23272E">
+    <text x="640" y="438" text-anchor="middle" font-weight="700" fill="#6C7A2E">右半树输入</text>
+    <text x="640" y="468" text-anchor="middle">b0=g(L0,L2,βL0)=-2.1</text>
+    <text x="640" y="492" text-anchor="middle">b1=g(L1,L3,βL1)=+3.9</text>
+  </g>
+
+  <!-- 步骤 5：再译 u2,u3 -->
+  <g filter="url(#soft)">
+    <rect x="900" y="390" width="440" height="160" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  </g>
+  <circle cx="930" cy="420" r="14" fill="#B06F2B"/>
+  <text x="930" y="425" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">5</text>
+  <g font-size="12.5" fill="#23272E">
+    <text x="1110" y="428" text-anchor="middle" font-weight="700" fill="#B06F2B">再译 u2,u3（information 判决）</text>
+    <text x="1110" y="462" text-anchor="middle">u2: f(b0,b1)=-2.1 -&gt; 1</text>
+    <text x="1110" y="486" text-anchor="middle">u3: g(b0,b1,u2)=+6.0 -&gt; 0</text>
+    <text x="1110" y="510" text-anchor="middle">βR=[u2⊕u3,u3]=[1,0]</text>
+  </g>
+
+  <!-- 步骤 6：partial sum 回传与合成 -->
+  <g filter="url(#soft)">
+    <rect x="480" y="640" width="860" height="130" rx="14" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+  </g>
+  <circle cx="510" cy="670" r="14" fill="#7A6E8E"/>
+  <text x="510" y="675" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">6</text>
+  <g font-size="12.5" fill="#23272E">
+    <text x="900" y="678" text-anchor="middle" font-weight="700" fill="#7A6E8E">partial sum 回传与合成</text>
+    <text x="900" y="708" text-anchor="middle">β=[βL⊕βR, βR]=[1,0,1,0]</text>
+    <text x="900" y="732" text-anchor="middle">叶子判决 û=[0,0,1,0]，硬编码输出估计 x̂=[1,0,1,0]</text>
+  </g>
+
+  <!-- 函数约定（左下） -->
+  <g filter="url(#soft)">
+    <rect x="90" y="430" width="300" height="120" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <g font-size="12.5" fill="#23272E">
+    <text x="240" y="466" text-anchor="middle" font-weight="700">函数约定</text>
+    <text x="240" y="494" text-anchor="middle" fill="#646B76">f(a,b)≈sign(a)sign(b)min(|a|,|b|)</text>
+    <text x="240" y="518" text-anchor="middle" fill="#646B76">g(a,b,s)=b+(1-2s)a</text>
+  </g>
+
+  <!-- ============ 箭头 ============ -->
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 390 285 L 480 255" marker-end="url(#arrow)"/>
+    <path d="M 810 255 L 900 240" marker-end="url(#arrow)"/>
+    <path d="M 645 320 V 400" marker-end="url(#arrow)"/>
+    <path d="M 810 475 L 900 475" marker-end="url(#arrow)"/>
+    <path d="M 1120 550 V 640" marker-end="url(#arrow)"/>
+  </g>
+  <!-- partial sum 回传折线：左判决底 -> 右半树输入 -->
+  <g stroke="#6C7A2E" stroke-width="2" fill="none">
+    <path d="M 920 330 H 440 V 460 H 480" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- 读图顺序条 -->
+  <text x="90" y="930" font-size="12.5" font-weight="700" class="free" fill="#23272E">读图顺序：1 输入通道 LLR  2 f 进入左半树  3 frozen 强制判决  4 g 进入右半树  5 information 判决  6 partial sum 回传</text>
+</svg>

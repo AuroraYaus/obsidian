@@ -106,7 +106,7 @@ Target scale:
 - Around 1000 to 1400 lines.
 - Around 3 stages.
 - Around 15 modules.
-- Exactly 91 task cards in the initial approved inventory: `T1.1` through `T15.6`.
+- Exactly 91 task cards in the initial approved inventory: `T1.1` through `T20.6`.
 
 Any change to the task count requires explicit review before the final roadmap is written.
 
@@ -221,19 +221,19 @@ Task-count summary:
 | M9 | 6 | T9.1-T9.6 |
 | M10 | 8 | T10.1-T10.8 |
 | M11 | 5 | T11.1-T11.5 |
-| M12 | 5 | T12.1-T12.5 |
-| M13 | 6 | T13.1-T13.6 |
-| M14 | 6 | T14.1-T14.6 |
-| M15 | 6 | T15.1-T15.6 |
-| Total | 91 | T1.1-T15.6 |
+| M12 | 5 | T17.1-T17.5 |
+| M13 | 6 | T18.1-T18.6 |
+| M14 | 6 | T19.1-T19.6 |
+| M15 | 6 | T20.1-T20.6 |
+| Total | 91 | T1.1-T20.6 |
 
 Decoder-family coverage:
 
 | Family | Theory/Protocol | Receive Chain | Simulation | Fixed-Point | RTL/ASIC | Verification |
 |:---|:---|:---|:---|:---|:---|:---|
-| LTE Turbo | T6.1-T6.8 | T7.1-T7.6 | T12.2 | T13.2 | T14.1, T14.4-T14.6 | T15.1-T15.6 |
-| NR LDPC | T8.1-T8.8 | T9.1-T9.6 | T12.3 | T13.3 | T14.2, T14.4-T14.6 | T15.1-T15.6 |
-| NR Polar | T10.1-T10.8 | T10.7-T10.8 | T12.4 | T13.4 | T14.3-T14.6 | T15.1-T15.6 |
+| LTE Turbo | T6.1-T6.8 | T7.1-T7.6 | T17.2 | T18.2 | T19.1, T19.4-T19.6 | T20.1-T20.6 |
+| NR LDPC | T8.1-T8.8 | T9.1-T9.6 | T17.3 | T18.3 | T19.2, T19.4-T19.6 | T20.1-T20.6 |
+| NR Polar | T10.1-T10.8 | T10.7-T10.8 | T17.4 | T18.4 | T19.3-T19.6 | T20.1-T20.6 |
 
 ### L1 Beginner Stage
 
@@ -1013,262 +1013,262 @@ Decoder-family coverage:
 
 #### M12 Floating-Point Simulation
 
-##### T12.1 Python Golden Model Project Layout
+##### T17.1 Python Golden Model Project Layout
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T12.1 |
+| `编号` | T17.1 |
 | `前置` | T4.6, T5.5 |
 | `Prompt` | Specify a Python golden-model project layout for LTE Turbo, NR LDPC, and NR Polar decoders. Include package structure, config files, vector files, random seeds, logging, and reproducible command examples. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T12.1_python_golden_model_project_layout.md` |
+| `产出` | `docs/L3/T17.1_python_golden_model_project_layout.md` |
 | `验收` | Learner can scaffold a reproducible decoder simulation project. |
 | `3GPP/证据` | Engineering task; protocol vector generation later cites TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
-##### T12.2 LTE Turbo Floating-Point Simulation Plan
+##### T17.2 LTE Turbo Floating-Point Simulation Plan
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T12.2 |
-| `前置` | T6.7, T7.4, T12.1 |
+| `编号` | T17.2 |
+| `前置` | T6.7, T7.4, T17.1 |
 | `Prompt` | Define the LTE Turbo floating-point simulation plan: encoder reference, AWGN channel, de-rate matching, Log-MAP/Max-Log-MAP decoder, CRC checks, BLER curve, seed, outputs, and thresholds. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T12.2_LTE_Turbo_float_sim_plan.md` |
+| `产出` | `docs/L3/T17.2_LTE_Turbo_float_sim_plan.md` |
 | `验收` | Learner can run or implement a plan that produces LTE Turbo BLER curves and decoder traces. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` §5.1.1-§5.1.4.1; TS 36.213 MCS/TBS anchors `待核验`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 36.213 -> `3GPP_Rel19/processed/TS_36.213_*` (exact part `待核验`). |
 
-##### T12.3 NR LDPC Floating-Point Simulation Plan
+##### T17.3 NR LDPC Floating-Point Simulation Plan
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T12.3 |
-| `前置` | T8.8, T9.5, T12.1 |
+| `编号` | T17.3 |
+| `前置` | T8.8, T9.5, T17.1 |
 | `Prompt` | Define the NR LDPC floating-point simulation plan: base graph selection, lifting, rate matching/recovery, Min-Sum variants, CRC checks, BLER curves, seeds, outputs, and thresholds. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T12.3_NR_LDPC_float_sim_plan.md` |
+| `产出` | `docs/L3/T17.3_NR_LDPC_float_sim_plan.md` |
 | `验收` | Learner can specify a reproducible NR LDPC BLER simulation and compare BP/MS/NMS/OMS. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.2.2/§5.3.2/§5.4.2/§6.2/§7.2; TS 38.214 Rel-19 `38214-j30` §5.1.3/§6.1.4. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`; TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`. |
 
-##### T12.4 NR Polar Floating-Point Simulation Plan
+##### T17.4 NR Polar Floating-Point Simulation Plan
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T12.4 |
-| `前置` | T10.6, T10.7, T12.1 |
+| `编号` | T17.4 |
+| `前置` | T10.6, T10.7, T17.1 |
 | `Prompt` | Define the NR Polar floating-point simulation plan: reliability sequence, rate recovery, SC/SCL/CA-SCL decoder, list size sweep, CRC checks, latency proxy metrics, seeds, outputs, and thresholds. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T12.4_NR_Polar_float_sim_plan.md` |
+| `产出` | `docs/L3/T17.4_NR_Polar_float_sim_plan.md` |
 | `验收` | Learner can specify a reproducible CA-SCL performance experiment with list-size comparison. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.2.1/§5.3.1/§5.4.1/§6.3/§7.3. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
-##### T12.5 BER/BLER Curve Generation and Reporting
+##### T17.5 BER/BLER Curve Generation and Reporting
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T12.5 |
-| `前置` | T12.2, T12.3, T12.4 |
+| `编号` | T17.5 |
+| `前置` | T17.2, T17.3, T17.4 |
 | `Prompt` | Teach how to generate, store, plot, and interpret BER/BLER curves. Include confidence limits, minimum frame count, early stopping criteria for simulations, CSV/PNG output naming, and failure diagnostics. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T12.5_BER_BLER_curve_reporting.md` |
+| `产出` | `docs/L3/T17.5_BER_BLER_curve_reporting.md` |
 | `验收` | Learner can produce a report-ready BLER curve with reproducible seeds and metadata. |
 | `3GPP/证据` | Engineering task; transport block CRC anchors from TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
 #### M13 Fixed-Point C/C++ Models
 
-##### T13.1 Fixed-Point Decoder Requirements
+##### T18.1 Fixed-Point Decoder Requirements
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T13.1 |
-| `前置` | T5.1, T12.1 |
+| `编号` | T18.1 |
+| `前置` | T5.1, T17.1 |
 | `Prompt` | Define fixed-point decoder requirements: LLR width, internal message width, saturation rules, rounding, scaling, performance loss budget, and bit-exact comparison policy. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T13.1_fixed_point_decoder_requirements.md` |
+| `产出` | `docs/L3/T18.1_fixed_point_decoder_requirements.md` |
 | `验收` | Learner can write fixed-point requirements for one decoder block and identify comparison tolerances. |
 | `3GPP/证据` | No direct 3GPP citation required for fixed-point methodology. Any protocol-specific fixed-point requirement must cite upstream Rel-19 evidence from T7, T9, T10, and related simulation/vector tasks. |
 
-##### T13.2 LTE Turbo Fixed-Point Model Plan
+##### T18.2 LTE Turbo Fixed-Point Model Plan
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T13.2 |
-| `前置` | T6.6, T7.3, T13.1 |
+| `编号` | T18.2 |
+| `前置` | T6.6, T7.3, T18.1 |
 | `Prompt` | Plan a C/C++ fixed-point LTE Turbo decoder model: branch metrics, alpha/beta metrics, extrinsic scaling, interleaver addresses, saturation, max-log correction option, and bit-exact tests against Python. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T13.2_LTE_Turbo_fixed_point_model_plan.md` |
+| `产出` | `docs/L3/T18.2_LTE_Turbo_fixed_point_model_plan.md` |
 | `验收` | Learner can specify C/C++ structures and tests for a fixed-point Turbo decoder. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` §5.1.3.2/§5.1.4.1; algorithm implementation evidence. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`. |
 
-##### T13.3 NR LDPC Fixed-Point Model Plan
+##### T18.3 NR LDPC Fixed-Point Model Plan
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T13.3 |
-| `前置` | T8.6, T9.3, T13.1 |
+| `编号` | T18.3 |
+| `前置` | T8.6, T9.3, T18.1 |
 | `Prompt` | Plan a C/C++ fixed-point NR LDPC decoder model: LLR/message widths, min/second-min storage, normalization/offset, layered schedule, saturation, syndrome checks, and bit-exact tests. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T13.3_NR_LDPC_fixed_point_model_plan.md` |
+| `产出` | `docs/L3/T18.3_NR_LDPC_fixed_point_model_plan.md` |
 | `验收` | Learner can define fixed-point NMS/OMS experiments and compare BLER loss to floating point. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.3.2/§5.4.2; algorithm implementation evidence. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
-##### T13.4 NR Polar Fixed-Point Model Plan
+##### T18.4 NR Polar Fixed-Point Model Plan
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T13.4 |
-| `前置` | T10.5, T10.6, T13.1 |
+| `编号` | T18.4 |
+| `前置` | T10.5, T10.6, T18.1 |
 | `Prompt` | Plan a C/C++ fixed-point NR Polar decoder model: f/g functions, path metric width, partial sums, list pruning, sorter effects, CRC-aided selection, and bit-exact tests. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T13.4_NR_Polar_fixed_point_model_plan.md` |
+| `产出` | `docs/L3/T18.4_NR_Polar_fixed_point_model_plan.md` |
 | `验收` | Learner can specify fixed-point CA-SCL data structures and path metric saturation checks. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.3.1/§5.4.1; algorithm implementation evidence. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
-##### T13.5 SIMD and Memory Layout for C/C++ Decoders
+##### T18.5 SIMD and Memory Layout for C/C++ Decoders
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T13.5 |
-| `前置` | T13.2, T13.3, T13.4 |
+| `编号` | T18.5 |
+| `前置` | T18.2, T18.3, T18.4 |
 | `Prompt` | Explain C/C++ memory layout, alignment, SIMD-friendly arrays, cache locality, and vectorization opportunities for Turbo, LDPC, and Polar decoders. Include profiling plan and failure case of non-coalesced memory. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T13.5_SIMD_memory_layout_decoders.md` |
+| `产出` | `docs/L3/T18.5_SIMD_memory_layout_decoders.md` |
 | `验收` | Learner can propose an array layout for one decoder and justify cache/SIMD behavior. |
 | `3GPP/证据` | No direct 3GPP citation required for this engineering method. The article must cite upstream protocol-vector tasks when it uses generated LTE/NR vectors. |
 
-##### T13.6 Bit-Exact Regression Harness
+##### T18.6 Bit-Exact Regression Harness
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T13.6 |
-| `前置` | T13.2, T13.3, T13.4 |
+| `编号` | T18.6 |
+| `前置` | T18.2, T18.3, T18.4 |
 | `Prompt` | Design a bit-exact regression harness comparing Python floating/fixed reference, C/C++ fixed model, and later RTL outputs. Include vector format, metadata, seed tracking, tolerances, pass/fail policy, and CI command. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T13.6_bit_exact_regression_harness.md` |
+| `产出` | `docs/L3/T18.6_bit_exact_regression_harness.md` |
 | `验收` | Learner can define a regression vector format and pass/fail policy for all three decoders. |
 | `3GPP/证据` | Engineering task; protocol vectors link to TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
 #### M14 RTL/ASIC Decoder Architecture
 
-##### T14.1 LTE Turbo RTL Microarchitecture
+##### T19.1 LTE Turbo RTL Microarchitecture
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T14.1 |
-| `前置` | T5.2, T5.4, T13.2 |
+| `编号` | T19.1 |
+| `前置` | T5.2, T5.4, T18.2 |
 | `Prompt` | Design an LTE Turbo RTL microarchitecture: SISO datapath, alpha/beta memory, extrinsic memory, interleaver/deinterleaver address generator, ping-pong iteration control, CRC early stop, clock/reset strategy, and throughput estimate. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T14.1_LTE_Turbo_RTL_microarchitecture.md` |
+| `产出` | `docs/L3/T19.1_LTE_Turbo_RTL_microarchitecture.md` |
 | `验收` | Learner can draw the Turbo decoder block diagram and FSM and estimate memory size. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` §5.1.3.2/§5.1.4.1; RTL design is implementation guidance. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`. |
 
-##### T14.2 NR LDPC RTL Microarchitecture
+##### T19.2 NR LDPC RTL Microarchitecture
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T14.2 |
-| `前置` | T5.2, T5.4, T13.3 |
+| `编号` | T19.2 |
+| `前置` | T5.2, T5.4, T18.3 |
 | `Prompt` | Design an NR LDPC RTL microarchitecture: layered schedule controller, check-node units, variable-node update, min/second-min datapath, message memory, LLR memory, bank conflict handling, syndrome/CRC early stop, and throughput estimate. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T14.2_NR_LDPC_RTL_microarchitecture.md` |
+| `产出` | `docs/L3/T19.2_NR_LDPC_RTL_microarchitecture.md` |
 | `验收` | Learner can draw a layered LDPC decoder architecture and identify memory banking constraints. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.3.2 table-driven QC structure; RTL design is implementation guidance. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
-##### T14.3 NR Polar RTL Microarchitecture
+##### T19.3 NR Polar RTL Microarchitecture
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T14.3 |
-| `前置` | T5.2, T5.4, T13.4 |
+| `编号` | T19.3 |
+| `前置` | T5.2, T5.4, T18.4 |
 | `Prompt` | Design an NR Polar RTL microarchitecture: SC/SCL tree traversal, LLR memory, partial-sum memory, path memory, path metric update, sorter/pruner, CRC checker, and low-latency control. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T14.3_NR_Polar_RTL_microarchitecture.md` |
+| `产出` | `docs/L3/T19.3_NR_Polar_RTL_microarchitecture.md` |
 | `验收` | Learner can draw a CA-SCL decoder architecture and explain sorter bottleneck. |
 | `3GPP/证据` | TS 38.212 Rel-19 `38212-j30` §5.3.1/§5.4.1; RTL design is implementation guidance. Local evidence path(s): TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
-##### T14.4 Unified Decoder Subsystem Architecture
+##### T19.4 Unified Decoder Subsystem Architecture
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T14.4 |
-| `前置` | T14.1, T14.2, T14.3 |
+| `编号` | T19.4 |
+| `前置` | T19.1, T19.2, T19.3 |
 | `Prompt` | Design a unified decoder subsystem containing Turbo, LDPC, and Polar engines, shared input/output DMA, soft buffer, configuration registers, interrupt/status, and error handling. Define clean boundaries so each engine remains independently testable. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T14.4_unified_decoder_subsystem_architecture.md` |
+| `产出` | `docs/L3/T19.4_unified_decoder_subsystem_architecture.md` |
 | `验收` | Learner can define top-level registers and dataflow for a multi-decoder accelerator. |
 | `3GPP/证据` | Context evidence only, not a source for specific register-field claims until verified: LTE configuration inputs from TS 36.213 Rel-19 `36213-j30_*`, TS 36.321 Rel-19 `36321-j20`, TS 36.331 Rel-19 `36331-j21`; NR configuration inputs from TS 38.214 Rel-19 `38214-j30`, TS 38.321 Rel-19 `38321-j20`, TS 38.331 Rel-19 `38331-j20`. Local paths: `3GPP_Rel19/processed/TS_36.213_*` (`待核验` exact part), `3GPP_Rel19/processed/TS_36.321_36321-j20`, `3GPP_Rel19/processed/TS_36.331_36331-j21`, `3GPP_Rel19/processed/TS_38.214_38214-j30`, `3GPP_Rel19/processed/TS_38.321_38321-j20`, `3GPP_Rel19/processed/TS_38.331_38331-j20`. |
 
-##### T14.5 Soft Buffer and HARQ Memory Architecture
+##### T19.5 Soft Buffer and HARQ Memory Architecture
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T14.5 |
-| `前置` | T7.3, T9.3, T14.4 |
+| `编号` | T19.5 |
+| `前置` | T7.3, T9.3, T19.4 |
 | `Prompt` | Design soft buffer and HARQ memory architecture: process ID, TB/CB/CBG indexing, RV placement, saturation, memory bank partition, eviction, and recovery after failed CRC. Include LTE and NR differences. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T14.5_soft_buffer_HARQ_memory_architecture.md` |
+| `产出` | `docs/L3/T19.5_soft_buffer_HARQ_memory_architecture.md` |
 | `验收` | Learner can propose a soft-buffer address map for LTE Turbo and NR LDPC. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` §5.1.4.1; TS 38.212 Rel-19 `38212-j30` §5.4.2; TS 38.214 Rel-19 `38214-j30` §5.1.7/§6.1.5; TS 36.213 anchors `待核验`. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`; TS 38.214 -> `3GPP_Rel19/processed/TS_38.214_38214-j30`; TS 36.213 -> `3GPP_Rel19/processed/TS_36.213_*` (exact part `待核验`). |
 
-##### T14.6 Decoder Register Map and Configuration Flow
+##### T19.6 Decoder Register Map and Configuration Flow
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T14.6 |
-| `前置` | T4.6, T14.4 |
+| `编号` | T19.6 |
+| `前置` | T4.6, T19.4 |
 | `Prompt` | Define a decoder register map and configuration flow: algorithm select, block size, code rate, BG, Zc, RV, Qm, HARQ ID, list size, iteration limit, start/status/error interrupts. Trace which fields come from PHY/MAC/RRC. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T14.6_decoder_register_map_configuration_flow.md` |
+| `产出` | `docs/L3/T19.6_decoder_register_map_configuration_flow.md` |
 | `验收` | Learner can map high-level protocol parameters to hardware registers. |
 | `3GPP/证据` | Context evidence only, not a source for specific register-field claims until verified: decoder algorithm parameters from TS 36.212 Rel-19 `36212-j30` and TS 38.212 Rel-19 `38212-j30`; scheduling/HARQ context from TS 36.213 Rel-19 `36213-j30_*` and TS 38.214 Rel-19 `38214-j30`; MAC/RRC configuration context from TS 36.321 Rel-19 `36321-j20`, TS 36.331 Rel-19 `36331-j21`, TS 38.321 Rel-19 `38321-j20`, TS 38.331 Rel-19 `38331-j20`. Exact RRC/MAC fields remain `待核验`. Local paths: `3GPP_Rel19/processed/TS_36.212_36212-j30`, `3GPP_Rel19/processed/TS_38.212_38212-j30`, `3GPP_Rel19/processed/TS_36.213_*` (`待核验` exact part), `3GPP_Rel19/processed/TS_38.214_38214-j30`, `3GPP_Rel19/processed/TS_36.321_36321-j20`, `3GPP_Rel19/processed/TS_36.331_36331-j21`, `3GPP_Rel19/processed/TS_38.321_38321-j20`, `3GPP_Rel19/processed/TS_38.331_38331-j20`. |
 
 #### M15 Synthesis and Verification
 
-##### T15.1 Decoder Testbench Architecture
+##### T20.1 Decoder Testbench Architecture
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T15.1 |
-| `前置` | T13.6, T14.1-T14.3 |
+| `编号` | T20.1 |
+| `前置` | T18.6, T19.1-T19.3 |
 | `Prompt` | Design a SystemVerilog testbench architecture for Turbo, LDPC, and Polar decoder engines. Include driver, monitor, scoreboard, reference vector loader, assertions, reset tests, and timeout policy. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T15.1_decoder_testbench_architecture.md` |
+| `产出` | `docs/L3/T20.1_decoder_testbench_architecture.md` |
 | `验收` | Learner can write a testbench plan that compares RTL output to golden vectors. |
-| `3GPP/证据` | No direct 3GPP citation required for testbench methodology. Generated vectors must cite upstream Rel-19 evidence from T7, T9, T10, and T15.2. |
+| `3GPP/证据` | No direct 3GPP citation required for testbench methodology. Generated vectors must cite upstream Rel-19 evidence from T7, T9, T10, and T20.2. |
 
-##### T15.2 Protocol Vector and Corner-Case Suite
+##### T20.2 Protocol Vector and Corner-Case Suite
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T15.2 |
-| `前置` | T7.6, T9.6, T10.8, T13.6 |
+| `编号` | T20.2 |
+| `前置` | T7.6, T9.6, T10.8, T18.6 |
 | `Prompt` | Define protocol vector and corner-case suite for LTE Turbo, NR LDPC, and NR Polar: minimum/maximum sizes, filler, CRC fail, RV mismatch, CBG, list-size stress, LLR saturation, and reset mid-operation. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T15.2_protocol_vector_corner_case_suite.md` |
+| `产出` | `docs/L3/T20.2_protocol_vector_corner_case_suite.md` |
 | `验收` | Learner can list required directed tests for all three decoders and explain what each catches. |
 | `3GPP/证据` | TS 36.212 Rel-19 `36212-j30` / TS 38.212 Rel-19 `38212-j30` anchors for sizes/rate matching/CRC; exact corner tables must be verified. Local evidence path(s): TS 36.212 -> `3GPP_Rel19/processed/TS_36.212_36212-j30`; TS 38.212 -> `3GPP_Rel19/processed/TS_38.212_38212-j30`. |
 
-##### T15.3 Coverage and Regression Strategy
+##### T20.3 Coverage and Regression Strategy
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T15.3 |
-| `前置` | T15.1, T15.2 |
+| `编号` | T20.3 |
+| `前置` | T20.1, T20.2 |
 | `Prompt` | Define functional coverage, code coverage, regression tiers, random seeds, nightly runs, failure triage, and sign-off criteria for decoder verification. Include coverage points for algorithm family, block size, RV, Qm, CRC status, and reset. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T15.3_coverage_regression_strategy.md` |
+| `产出` | `docs/L3/T20.3_coverage_regression_strategy.md` |
 | `验收` | Learner can define coverage bins and regression pass criteria for a decoder subsystem. |
-| `3GPP/证据` | No direct 3GPP citation required for coverage methodology. Coverage bins that depend on protocol parameters must reference upstream Rel-19 evidence from T7/T9/T10/T15.2. |
+| `3GPP/证据` | No direct 3GPP citation required for coverage methodology. Coverage bins that depend on protocol parameters must reference upstream Rel-19 evidence from T7/T9/T10/T20.2. |
 
-##### T15.4 Synopsys Design Compiler Synthesis Flow
+##### T20.4 Synopsys Design Compiler Synthesis Flow
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T15.4 |
-| `前置` | T14.1-T14.6 |
+| `编号` | T20.4 |
+| `前置` | T19.1-T19.6 |
 | `Prompt` | Teach a Synopsys Design Compiler synthesis flow for decoder RTL: file list, clock constraints, reset assumptions, compile strategy, timing report, area report, power estimate, and common decoder critical paths. State tool availability limitations if DC is not installed. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T15.4_DC_synthesis_flow_decoders.md` |
+| `产出` | `docs/L3/T20.4_DC_synthesis_flow_decoders.md` |
 | `验收` | Learner can prepare a DC script skeleton and interpret timing/area reports. |
 | `3GPP/证据` | No direct 3GPP citation required for this engineering method. The article must cite upstream protocol-vector tasks when it uses generated LTE/NR vectors. |
 
-##### T15.5 Timing Closure and Critical Path Debug
+##### T20.5 Timing Closure and Critical Path Debug
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T15.5 |
-| `前置` | T15.4 |
+| `编号` | T20.5 |
+| `前置` | T20.4 |
 | `Prompt` | Explain timing closure for decoder RTL: critical path identification, LDPC check-node min tree, Polar sorter, Turbo ACS/metric update, pipelining, retiming, register duplication, and area/timing tradeoff. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T15.5_timing_closure_decoder_critical_paths.md` |
+| `产出` | `docs/L3/T20.5_timing_closure_decoder_critical_paths.md` |
 | `验收` | Learner can diagnose one plausible timing violation and propose a pipeline or architecture fix. |
 | `3GPP/证据` | No direct 3GPP citation required for this engineering method. The article must cite upstream protocol-vector tasks when it uses generated LTE/NR vectors. |
 
-##### T15.6 Final Decoder Verification and Evidence Report
+##### T20.6 Final Decoder Verification and Evidence Report
 
 | Item | Requirement |
 |:---|:---|
-| `编号` | T15.6 |
-| `前置` | T15.1-T15.5 |
+| `编号` | T20.6 |
+| `前置` | T20.1-T20.5 |
 | `Prompt` | Define the final verification and evidence report format: protocol evidence table, simulation summary, fixed-point loss, RTL regression, coverage, synthesis timing/area/power, known limitations, and sign-off checklist. 写作时必须套用本文“单节工程讲义统一骨架”；若协议、接收流程、仿真、定点或 RTL 部分不适用，必须说明原因并保留验收与证据记录。 |
-| `产出` | `docs/L3/T15.6_final_decoder_verification_evidence_report.md` |
+| `产出` | `docs/L3/T20.6_final_decoder_verification_evidence_report.md` |
 | `验收` | Learner can assemble an audit-ready final report for LTE Turbo, NR LDPC, and NR Polar decoder work. |
 | `3GPP/证据` | Aggregates exact Rel-19 evidence from all protocol tasks. Final report must list concrete TS package names, sections, table/figure/formula anchors when applicable, and `3GPP_Rel19/processed/...` local paths rather than using aggregate wording. |
 

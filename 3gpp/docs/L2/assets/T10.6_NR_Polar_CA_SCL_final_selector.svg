@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T10.6_NR_Polar_CA_SCL_final_selector.svg
+  @brief   CRC 辅助 SCL（CA-SCL）最终路径选择教学图（手绘 SVG V2：布局与配色依据 T10.6 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：四盒流程（SCL 输出候选 L=4 -> 并行 CRC/RNTI 检查 P0 fail/P1 pass/
+           P2 fail/P3 pass -> Final selector 先过滤再按 PM 选最小 selected: P1 -> 输出
+           P1 bits status=valid）、完整路径选择表七列四行（rank/path bits/PM/CRC/RNTI/
+           selector view/result，P1 selected、P3 kept as backup）、工程检测点三条，均与
+           讲义 T10.6 正文及图 T10.6-1 语义一致。
+           视觉设计：流程盒带序号；表格行按结果着色（selected=橄榄、fail=风险、
+           backup=赭金）。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1180" viewBox="0 0 1500 1180" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T10.6 CRC-aided SCL：PM 排名与 CRC/RNTI 最终选择</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">T10.6 CRC-aided SCL：PM 排名与 CRC/RNTI 最终选择</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">例子展示最佳 PM 路径 CRC fail，次优路径 CRC pass；最终输出不是 PM 最小路径，而是通过 CRC/RNTI 的最佳候选。</text>
+
+  <!-- ============ 面板 A：四盒流程 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="260" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="154" width="10" height="10" rx="3" fill="#8E3B5E"/>
+  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">从 SCL 候选到最终输出</text>
+
+  <g font-size="12.5" fill="#23272E">
+    <rect x="80" y="196" width="315" height="170" rx="12" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+    <circle cx="104" cy="222" r="13" fill="#5C6B7C"/>
+    <text x="104" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="237" y="226" text-anchor="middle" font-weight="700">SCL 输出候选</text>
+    <text x="237" y="256" text-anchor="middle">L=4 paths</text>
+    <text x="237" y="280" text-anchor="middle">每条含 bits、PM</text>
+    <text x="237" y="304" text-anchor="middle">每条含 CRC/RNTI context</text>
+    <text x="237" y="328" text-anchor="middle">PM 越小越好</text>
+    <rect x="413" y="196" width="315" height="170" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <circle cx="437" cy="222" r="13" fill="#2F6E71"/>
+    <text x="437" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="570" y="226" text-anchor="middle" font-weight="700">并行 CRC/RNTI 检查</text>
+    <text x="570" y="256" text-anchor="middle">P0: PM=0.8 -&gt; fail</text>
+    <text x="570" y="280" text-anchor="middle">P1: PM=1.3 -&gt; pass</text>
+    <text x="570" y="304" text-anchor="middle">P2: PM=2.0 -&gt; fail</text>
+    <text x="570" y="328" text-anchor="middle">P3: PM=3.6 -&gt; pass</text>
+    <rect x="746" y="196" width="315" height="170" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <circle cx="770" cy="222" r="13" fill="#6C7A2E"/>
+    <text x="770" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="903" y="226" text-anchor="middle" font-weight="700">Final selector</text>
+    <text x="903" y="256" text-anchor="middle">先过滤 CRC/RNTI pass</text>
+    <text x="903" y="280" text-anchor="middle">再按 PM 选最小</text>
+    <text x="903" y="304" text-anchor="middle">selected: P1</text>
+    <text x="903" y="328" text-anchor="middle">输出 payload</text>
+    <rect x="1079" y="196" width="315" height="170" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <circle cx="1103" cy="222" r="13" fill="#6C7A2E"/>
+    <text x="1103" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="1236" y="226" text-anchor="middle" font-weight="700">输出</text>
+    <text x="1236" y="256" text-anchor="middle">P1 bits</text>
+    <text x="1236" y="280" text-anchor="middle">status=valid</text>
+    <text x="1236" y="304" text-anchor="middle">context match</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 395 280 H 413" marker-end="url(#arrow)"/>
+    <path d="M 728 280 H 746" marker-end="url(#arrow)"/>
+    <path d="M 1061 280 H 1079" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 面板 B：完整路径选择表 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="420" width="1380" height="430" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="452" font-size="16" font-weight="700" fill="#23272E">完整路径选择表：CRC 是路径选择辅助，不是替代 SCL 的树译码</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="90" y="480" width="110" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="145" y="504" text-anchor="middle" font-weight="700">rank</text>
+    <rect x="200" y="480" width="240" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="320" y="504" text-anchor="middle" font-weight="700">path bits</text>
+    <rect x="440" y="480" width="110" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="495" y="504" text-anchor="middle" font-weight="700">PM</text>
+    <rect x="550" y="480" width="120" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="610" y="504" text-anchor="middle" font-weight="700">CRC</text>
+    <rect x="670" y="480" width="120" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="730" y="504" text-anchor="middle" font-weight="700">RNTI</text>
+    <rect x="790" y="480" width="200" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="890" y="504" text-anchor="middle" font-weight="700">selector view</text>
+    <rect x="990" y="480" width="250" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1115" y="504" text-anchor="middle" font-weight="700">result</text>
+  </g>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="90" y="518" width="110" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="145" y="542" text-anchor="middle">1</text>
+    <rect x="200" y="518" width="240" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="320" y="542" text-anchor="middle">P0: 101011</text>
+    <rect x="440" y="518" width="110" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="495" y="542" text-anchor="middle">0.8</text>
+    <rect x="550" y="518" width="120" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="610" y="542" text-anchor="middle" font-weight="700">fail</text>
+    <rect x="670" y="518" width="120" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="730" y="542" text-anchor="middle">n/a</text>
+    <rect x="790" y="518" width="200" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="890" y="542" text-anchor="middle" font-weight="700">discard</text>
+    <rect x="990" y="518" width="250" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1115" y="542" text-anchor="middle">best PM but invalid</text>
+
+    <rect x="90" y="556" width="110" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="145" y="580" text-anchor="middle">2</text>
+    <rect x="200" y="556" width="240" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="320" y="580" text-anchor="middle">P1: 101001</text>
+    <rect x="440" y="556" width="110" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="495" y="580" text-anchor="middle">1.3</text>
+    <rect x="550" y="556" width="120" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="610" y="580" text-anchor="middle" font-weight="700">pass</text>
+    <rect x="670" y="556" width="120" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="730" y="580" text-anchor="middle" font-weight="700">match</text>
+    <rect x="790" y="556" width="200" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="890" y="580" text-anchor="middle" font-weight="700">candidate #1</text>
+    <rect x="990" y="556" width="250" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1115" y="580" text-anchor="middle" font-weight="700">selected</text>
+
+    <rect x="90" y="594" width="110" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="145" y="618" text-anchor="middle">3</text>
+    <rect x="200" y="594" width="240" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="320" y="618" text-anchor="middle">P2: 001001</text>
+    <rect x="440" y="594" width="110" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="495" y="618" text-anchor="middle">2.0</text>
+    <rect x="550" y="594" width="120" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="610" y="618" text-anchor="middle" font-weight="700">fail</text>
+    <rect x="670" y="594" width="120" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="730" y="618" text-anchor="middle">n/a</text>
+    <rect x="790" y="594" width="200" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="890" y="618" text-anchor="middle" font-weight="700">discard</text>
+    <rect x="990" y="594" width="250" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1115" y="618" text-anchor="middle">invalid</text>
+
+    <rect x="90" y="632" width="110" height="38" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="145" y="656" text-anchor="middle">4</text>
+    <rect x="200" y="632" width="240" height="38" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="320" y="656" text-anchor="middle">P3: 111001</text>
+    <rect x="440" y="632" width="110" height="38" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="495" y="656" text-anchor="middle">3.6</text>
+    <rect x="550" y="632" width="120" height="38" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="610" y="656" text-anchor="middle" font-weight="700">pass</text>
+    <rect x="670" y="632" width="120" height="38" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="730" y="656" text-anchor="middle" font-weight="700">match</text>
+    <rect x="790" y="632" width="200" height="38" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="890" y="656" text-anchor="middle" font-weight="700">candidate #2</text>
+    <rect x="990" y="632" width="250" height="38" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1115" y="656" text-anchor="middle">kept as backup</text>
+  </g>
+
+  <!-- ============ 工程检测点 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="880" width="1380" height="260" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="912" font-size="16" font-weight="700" fill="#23272E">工程检测点</text>
+  <text x="90" y="952" font-size="12.5" fill="#23272E">1. 只选 PM 最小会误选 P0；只看 CRC pass 不排序会在 P1/P3 之间不稳定。</text>
+  <text x="90" y="992" font-size="12.5" fill="#23272E">2. DCI blind detection 必须带 RNTI context；CRC pass 但 RNTI 不匹配仍不能输出。</text>
+  <text x="90" y="1032" font-size="12.5" fill="#23272E">3. 多路径 CRC checker 要和 path reorder 同步，否则 CRC 结果可能贴到错误路径。</text>
+</svg>

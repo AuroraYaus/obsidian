@@ -343,16 +343,14 @@ def draw_note(draw):
 
             self.assertEqual(files, [existing])
 
-    def test_recently_reported_ldpc_scripts_are_historical_focus(self) -> None:
-        """ @brief 验证 HISTORICAL_FOCUS 集合包含近期报告的 LDPC 渲染脚本（regression check）。 """
-        expected = {
-            "render_nr_ldpc_decoder_chain_overview.py",
-            "render_nr_ldpc_base_graph_selection.py",
-            "render_nr_ldpc_lifting_qc_matrix.py",
-            "render_ldpc_tanner_syndrome.py",
-        }
-
-        self.assertLessEqual(expected, audit.HISTORICAL_FOCUS)
+    def test_historical_focus_scripts_still_exist(self) -> None:
+        """ @brief 验证 HISTORICAL_FOCUS 集合中不再包含已删除的 T6-T8 渲染脚本（regression check）。 """
+        root = Path(__file__).resolve().parents[1]
+        for name in audit.HISTORICAL_FOCUS:
+            self.assertTrue(
+                (root / "tools/figures" / name).exists(),
+                f"HISTORICAL_FOCUS 中的 {name} 已不存在",
+            )
 
 
 if __name__ == "__main__":

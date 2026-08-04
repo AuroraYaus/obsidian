@@ -1,163 +1,160 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 868 370" width="868" height="370">
-<style>
-  text { font-family: "DejaVu Sans", "Noto Sans", sans-serif; }
-  .title    { font-size: 15px; font-weight: bold; fill: #263238; }
-  .subtitle { font-size: 12px; fill: #546E7A; }
-  .small    { font-size: 10px; fill: #78909C; text-anchor: middle; }
-  .cell-txt { font-size: 11px; text-anchor: middle; dominant-baseline: central; }
-  .legend   { font-size: 11px; fill: #37474F; }
-</style>
-<text x="434" y="24" class="title" text-anchor="middle">
-  circular buffer w 的交错写入  (K<sub>Π</sub>=5,  K<sub>w</sub>=15)
-</text>
-<text x="185" y="48" class="subtitle" text-anchor="middle">系统流 v<sup>(0)</sup></text>
-<text x="560" y="48" class="subtitle" text-anchor="middle">parity 流 v<sup>(1)</sup> / v<sup>(2)</sup>  逐比特交替</text>
-<rect x="60" y="68" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
-<text x="84" y="79" class="cell-txt" fill="#1565C0">v⁰</text>
-<rect x="110" y="68" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
-<text x="134" y="79" class="cell-txt" fill="#1565C0">v⁰</text>
-<rect x="160" y="68" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
-<text x="184" y="79" class="cell-txt" fill="#1565C0">v⁰</text>
-<rect x="210" y="68" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
-<text x="234" y="79" class="cell-txt" fill="#1565C0">v⁰</text>
-<rect x="260" y="68" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
-<text x="284" y="79" class="cell-txt" fill="#1565C0">v⁰</text>
-<rect x="310" y="68" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
-<text x="334" y="79" class="cell-txt" fill="#E65100">v¹</text>
-<rect x="360" y="68" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
-<text x="384" y="79" class="cell-txt" fill="#2E7D32">v²</text>
-<rect x="410" y="68" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
-<text x="434" y="79" class="cell-txt" fill="#E65100">v¹</text>
-<rect x="460" y="68" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
-<text x="484" y="79" class="cell-txt" fill="#2E7D32">v²</text>
-<rect x="510" y="68" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
-<text x="534" y="79" class="cell-txt" fill="#E65100">v¹</text>
-<rect x="560" y="68" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
-<text x="584" y="79" class="cell-txt" fill="#2E7D32">v²</text>
-<rect x="610" y="68" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
-<text x="634" y="79" class="cell-txt" fill="#E65100">v¹</text>
-<rect x="660" y="68" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
-<text x="684" y="79" class="cell-txt" fill="#2E7D32">v²</text>
-<rect x="710" y="68" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
-<text x="734" y="79" class="cell-txt" fill="#E65100">v¹</text>
-<rect x="760" y="68" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
-<text x="784" y="79" class="cell-txt" fill="#2E7D32">v²</text>
-<rect x="60" y="102" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
-<text x="84" y="113" class="cell-txt" fill="#1565C0">0</text>
-<rect x="110" y="102" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
-<text x="134" y="113" class="cell-txt" fill="#1565C0">1</text>
-<rect x="160" y="102" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
-<text x="184" y="113" class="cell-txt" fill="#1565C0">2</text>
-<rect x="210" y="102" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
-<text x="234" y="113" class="cell-txt" fill="#1565C0">3</text>
-<rect x="260" y="102" width="48" height="22" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
-<text x="284" y="113" class="cell-txt" fill="#1565C0">4</text>
-<rect x="310" y="102" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
-<text x="334" y="113" class="cell-txt" fill="#E65100">0</text>
-<rect x="360" y="102" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
-<text x="384" y="113" class="cell-txt" fill="#2E7D32">0</text>
-<rect x="410" y="102" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
-<text x="434" y="113" class="cell-txt" fill="#E65100">1</text>
-<rect x="460" y="102" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
-<text x="484" y="113" class="cell-txt" fill="#2E7D32">1</text>
-<rect x="510" y="102" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
-<text x="534" y="113" class="cell-txt" fill="#E65100">2</text>
-<rect x="560" y="102" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
-<text x="584" y="113" class="cell-txt" fill="#2E7D32">2</text>
-<rect x="610" y="102" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
-<text x="634" y="113" class="cell-txt" fill="#E65100">3</text>
-<rect x="660" y="102" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
-<text x="684" y="113" class="cell-txt" fill="#2E7D32">3</text>
-<rect x="710" y="102" width="48" height="22" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
-<text x="734" y="113" class="cell-txt" fill="#E65100">4</text>
-<rect x="760" y="102" width="48" height="22" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
-<text x="784" y="113" class="cell-txt" fill="#2E7D32">4</text>
-<text x="434" y="146" class="subtitle" text-anchor="middle">
-  ↓ sub-block interleaving 后，按 bit collection 规则写入 ↓
-</text>
-<line x1="84" y1="162" x2="84" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="134" y1="162" x2="134" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="184" y1="162" x2="184" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="234" y1="162" x2="234" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="284" y1="162" x2="284" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="334" y1="162" x2="334" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="384" y1="162" x2="384" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="434" y1="162" x2="434" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="484" y1="162" x2="484" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="534" y1="162" x2="534" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="584" y1="162" x2="584" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="634" y1="162" x2="634" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="684" y1="162" x2="684" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="734" y1="162" x2="734" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<line x1="784" y1="162" x2="784" y2="198" stroke="#90A4AE" stroke-width="1" stroke-dasharray="3,2"/>
-<text x="185" y="212" class="subtitle" text-anchor="middle">[0, K<sub>Π</sub>−1]</text>
-<text x="560" y="212" class="subtitle" text-anchor="middle">[K<sub>Π</sub>, 3K<sub>Π</sub>−1]</text>
-<line x1="309" y1="210" x2="309" y2="302" stroke="#37474F" stroke-width="1.8" stroke-dasharray="6,3"/>
-<rect x="60" y="230" width="48" height="44" rx="4" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
-<text x="84" y="246" class="cell-txt" fill="#1565C0" font-weight="bold">v⁰</text>
-<text x="84" y="261" class="small">_0</text>
-<text x="84" y="290" class="small">w<sub>0</sub></text>
-<rect x="110" y="230" width="48" height="44" rx="4" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
-<text x="134" y="246" class="cell-txt" fill="#1565C0" font-weight="bold">v⁰</text>
-<text x="134" y="261" class="small">_1</text>
-<text x="134" y="290" class="small">w<sub>1</sub></text>
-<rect x="160" y="230" width="48" height="44" rx="4" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
-<text x="184" y="246" class="cell-txt" fill="#1565C0" font-weight="bold">v⁰</text>
-<text x="184" y="261" class="small">_2</text>
-<text x="184" y="290" class="small">w<sub>2</sub></text>
-<rect x="210" y="230" width="48" height="44" rx="4" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
-<text x="234" y="246" class="cell-txt" fill="#1565C0" font-weight="bold">v⁰</text>
-<text x="234" y="261" class="small">_3</text>
-<text x="234" y="290" class="small">w<sub>3</sub></text>
-<rect x="260" y="230" width="48" height="44" rx="4" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.5"/>
-<text x="284" y="246" class="cell-txt" fill="#1565C0" font-weight="bold">v⁰</text>
-<text x="284" y="261" class="small">_4</text>
-<text x="284" y="290" class="small">w<sub>4</sub></text>
-<rect x="310" y="230" width="48" height="44" rx="4" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
-<text x="334" y="246" class="cell-txt" fill="#E65100" font-weight="bold">v¹</text>
-<text x="334" y="261" class="small">_0</text>
-<text x="334" y="290" class="small">w<sub>5</sub></text>
-<rect x="360" y="230" width="48" height="44" rx="4" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
-<text x="384" y="246" class="cell-txt" fill="#2E7D32" font-weight="bold">v²</text>
-<text x="384" y="261" class="small">_0</text>
-<text x="384" y="290" class="small">w<sub>6</sub></text>
-<rect x="410" y="230" width="48" height="44" rx="4" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
-<text x="434" y="246" class="cell-txt" fill="#E65100" font-weight="bold">v¹</text>
-<text x="434" y="261" class="small">_1</text>
-<text x="434" y="290" class="small">w<sub>7</sub></text>
-<rect x="460" y="230" width="48" height="44" rx="4" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
-<text x="484" y="246" class="cell-txt" fill="#2E7D32" font-weight="bold">v²</text>
-<text x="484" y="261" class="small">_1</text>
-<text x="484" y="290" class="small">w<sub>8</sub></text>
-<rect x="510" y="230" width="48" height="44" rx="4" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
-<text x="534" y="246" class="cell-txt" fill="#E65100" font-weight="bold">v¹</text>
-<text x="534" y="261" class="small">_2</text>
-<text x="534" y="290" class="small">w<sub>9</sub></text>
-<rect x="560" y="230" width="48" height="44" rx="4" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
-<text x="584" y="246" class="cell-txt" fill="#2E7D32" font-weight="bold">v²</text>
-<text x="584" y="261" class="small">_2</text>
-<text x="584" y="290" class="small">w<sub>10</sub></text>
-<rect x="610" y="230" width="48" height="44" rx="4" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
-<text x="634" y="246" class="cell-txt" fill="#E65100" font-weight="bold">v¹</text>
-<text x="634" y="261" class="small">_3</text>
-<text x="634" y="290" class="small">w<sub>11</sub></text>
-<rect x="660" y="230" width="48" height="44" rx="4" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
-<text x="684" y="246" class="cell-txt" fill="#2E7D32" font-weight="bold">v²</text>
-<text x="684" y="261" class="small">_3</text>
-<text x="684" y="290" class="small">w<sub>12</sub></text>
-<rect x="710" y="230" width="48" height="44" rx="4" fill="#FFE0B2" stroke="#E65100" stroke-width="1.5"/>
-<text x="734" y="246" class="cell-txt" fill="#E65100" font-weight="bold">v¹</text>
-<text x="734" y="261" class="small">_4</text>
-<text x="734" y="290" class="small">w<sub>13</sub></text>
-<rect x="760" y="230" width="48" height="44" rx="4" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
-<text x="784" y="246" class="cell-txt" fill="#2E7D32" font-weight="bold">v²</text>
-<text x="784" y="261" class="small">_4</text>
-<text x="784" y="290" class="small">w<sub>14</sub></text>
-<text x="434" y="312" class="subtitle" text-anchor="middle">w 总长 K<sub>w</sub> = 3 × K<sub>Π</sub> = 15</text>
-<rect x="60" y="338" width="14" height="14" rx="3" fill="#BBDEFB" stroke="#1565C0" stroke-width="1.2"/>
-<text x="78" y="349" class="legend" fill="#1565C0">v⁽⁰⁾  系统流</text>
-<rect x="235" y="338" width="14" height="14" rx="3" fill="#FFE0B2" stroke="#E65100" stroke-width="1.2"/>
-<text x="253" y="349" class="legend" fill="#E65100">v⁽¹⁾  parity 1</text>
-<rect x="410" y="338" width="14" height="14" rx="3" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.2"/>
-<text x="428" y="349" class="legend" fill="#2E7D32">v⁽²⁾  parity 2</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T3.2_circular_buffer_interleaving.svg
+  @brief   图 2：circular buffer w 的交错写入布局（K_Π = 5 示例，15 个位置）——
+           三路 sub-block interleaver 输出按 TS 36.212 §5.1.4.1.2 bit collection
+           规则填入 w：前半段 v⁽⁰⁾ 独占，后半段 v⁽¹⁾/v⁽²⁾ 逐比特交替
+  @date    2026-08-04
+  @note    视觉设计依据 docs/L1/T3.2_transport_code_block_filler_bits.md 语义
+           （§5.1.4.1.2 公式、决策一/二），不参考旧脚本渲染图：
+           对齐式映射布局——上方三路子块交织输出（每路 K_Π = 5 个带下标格子）
+           经同色竖线逐位下落，汇入下方 w 的 15 个位置（每格标 w 下标）；
+           段标签 [0, K_Π−1] / [K_Π, 3K_Π−1] 与公式芯片给出 bit collection 规则。
+           色系（新）：系统流 v⁽⁰⁾ 青绿 / 校验流 v⁽¹⁾ 靛蓝 / 校验流 v⁽²⁾ 琥珀；
+           扁平工程图风格（直角、无阴影、细描边）。替代原脚本渲染 PNG
+           （脚本与 PNG 已随迁移删除，git 可恢复）。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="530" viewBox="0 0 1000 530" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>circular buffer w 的交错写入布局（K_Π=5，K_w=15）</title>
+
+  <!-- ============ 标题区 ============ -->
+  <text x="500" y="38" text-anchor="middle" font-size="19" font-weight="700" fill="#0F172A">
+    circular buffer w 的交错写入（bit collection）
+  </text>
+  <text x="500" y="66" text-anchor="middle" font-size="12.5" fill="#64748B">
+    三路子块交织输出 v⁽⁰⁾/v⁽¹⁾/v⁽²⁾（各 K_Π = 5 比特）按 TS 36.212 §5.1.4.1.2 收集为 w：系统流在前、校验流逐比特交替在后（K_w = 3K_Π = 15）
+  </text>
+
+  <!-- ============ 源流行标签（左侧） ============ -->
+  <g font-size="12.5" fill="#334155">
+    <text x="40" y="113">v⁽⁰⁾ 系统流（systematic）</text>
+    <text x="40" y="155">v⁽¹⁾ 校验流一（parity 1）</text>
+    <text x="40" y="197">v⁽²⁾ 校验流二（parity 2）</text>
+  </g>
+
+  <!-- ============ 子块交织输出：三路各 5 格（按 K_Π=5 示例） ============ -->
+  <g font-family="inherit">
+    <!-- v⁽⁰⁾ 系统流：第 0..4 比特 -->
+    <rect x="220" y="96"  width="44" height="34" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="242" y="113" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#134E4A">v⁰₀</text>
+    <rect x="268" y="96"  width="44" height="34" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="290" y="113" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#134E4A">v⁰₁</text>
+    <rect x="316" y="96"  width="44" height="34" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="338" y="113" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#134E4A">v⁰₂</text>
+    <rect x="364" y="96"  width="44" height="34" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="386" y="113" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#134E4A">v⁰₃</text>
+    <rect x="412" y="96"  width="44" height="34" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="434" y="113" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#134E4A">v⁰₄</text>
+    <!-- v⁽¹⁾ 校验流一：偶数偏移位置（K_Π+2k） -->
+    <rect x="460" y="138" width="44" height="34" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
+    <text x="482" y="155" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#3730A3">v¹₀</text>
+    <rect x="556" y="138" width="44" height="34" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
+    <text x="578" y="155" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#3730A3">v¹₁</text>
+    <rect x="652" y="138" width="44" height="34" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
+    <text x="674" y="155" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#3730A3">v¹₂</text>
+    <rect x="748" y="138" width="44" height="34" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
+    <text x="770" y="155" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#3730A3">v¹₃</text>
+    <rect x="844" y="138" width="44" height="34" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
+    <text x="866" y="155" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#3730A3">v¹₄</text>
+    <!-- v⁽²⁾ 校验流二：奇数偏移位置（K_Π+2k+1） -->
+    <rect x="508" y="180" width="44" height="34" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+    <text x="530" y="197" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#78350F">v²₀</text>
+    <rect x="604" y="180" width="44" height="34" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+    <text x="626" y="197" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#78350F">v²₁</text>
+    <rect x="700" y="180" width="44" height="34" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+    <text x="722" y="197" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#78350F">v²₂</text>
+    <rect x="796" y="180" width="44" height="34" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+    <text x="818" y="197" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#78350F">v²₃</text>
+    <rect x="892" y="180" width="44" height="34" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+    <text x="914" y="197" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#78350F">v²₄</text>
+  </g>
+
+  <!-- ============ 逐位映射竖线（每格一根，同色指向 w 对应位置） ============ -->
+  <g stroke-width="1.25">
+    <line x1="242" y1="130" x2="242" y2="278" stroke="#0F766E"/>
+    <line x1="290" y1="130" x2="290" y2="278" stroke="#0F766E"/>
+    <line x1="338" y1="130" x2="338" y2="278" stroke="#0F766E"/>
+    <line x1="386" y1="130" x2="386" y2="278" stroke="#0F766E"/>
+    <line x1="434" y1="130" x2="434" y2="278" stroke="#0F766E"/>
+    <line x1="482" y1="172" x2="482" y2="278" stroke="#4338CA"/>
+    <line x1="530" y1="214" x2="530" y2="278" stroke="#B45309"/>
+    <line x1="578" y1="172" x2="578" y2="278" stroke="#4338CA"/>
+    <line x1="626" y1="214" x2="626" y2="278" stroke="#B45309"/>
+    <line x1="674" y1="172" x2="674" y2="278" stroke="#4338CA"/>
+    <line x1="722" y1="214" x2="722" y2="278" stroke="#B45309"/>
+    <line x1="770" y1="172" x2="770" y2="278" stroke="#4338CA"/>
+    <line x1="818" y1="214" x2="818" y2="278" stroke="#B45309"/>
+    <line x1="866" y1="172" x2="866" y2="278" stroke="#4338CA"/>
+    <line x1="914" y1="214" x2="914" y2="278" stroke="#B45309"/>
+  </g>
+
+  <!-- ============ 系统段 / 校验段分隔虚线 ============ -->
+  <path d="M 458 96 L 458 336" stroke="#64748B" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+  <!-- ============ 目标：circular buffer w 的 15 个位置 ============ -->
+  <g font-family="inherit">
+    <rect x="220" y="278" width="44" height="36" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="242" y="296" text-anchor="middle" font-size="13" fill="#134E4A">w₀</text>
+    <rect x="268" y="278" width="44" height="36" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="290" y="296" text-anchor="middle" font-size="13" fill="#134E4A">w₁</text>
+    <rect x="316" y="278" width="44" height="36" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="338" y="296" text-anchor="middle" font-size="13" fill="#134E4A">w₂</text>
+    <rect x="364" y="278" width="44" height="36" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="386" y="296" text-anchor="middle" font-size="13" fill="#134E4A">w₃</text>
+    <rect x="412" y="278" width="44" height="36" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="434" y="296" text-anchor="middle" font-size="13" fill="#134E4A">w₄</text>
+    <rect x="460" y="278" width="44" height="36" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
+    <text x="482" y="296" text-anchor="middle" font-size="13" fill="#3730A3">w₅</text>
+    <rect x="508" y="278" width="44" height="36" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+    <text x="530" y="296" text-anchor="middle" font-size="13" fill="#78350F">w₆</text>
+    <rect x="556" y="278" width="44" height="36" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
+    <text x="578" y="296" text-anchor="middle" font-size="13" fill="#3730A3">w₇</text>
+    <rect x="604" y="278" width="44" height="36" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+    <text x="626" y="296" text-anchor="middle" font-size="13" fill="#78350F">w₈</text>
+    <rect x="652" y="278" width="44" height="36" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
+    <text x="674" y="296" text-anchor="middle" font-size="13" fill="#3730A3">w₉</text>
+    <rect x="700" y="278" width="44" height="36" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+    <text x="722" y="296" text-anchor="middle" font-size="13" fill="#78350F">w₁₀</text>
+    <rect x="748" y="278" width="44" height="36" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
+    <text x="770" y="296" text-anchor="middle" font-size="13" fill="#3730A3">w₁₁</text>
+    <rect x="796" y="278" width="44" height="36" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+    <text x="818" y="296" text-anchor="middle" font-size="13" fill="#78350F">w₁₂</text>
+    <rect x="844" y="278" width="44" height="36" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
+    <text x="866" y="296" text-anchor="middle" font-size="13" fill="#3730A3">w₁₃</text>
+    <rect x="892" y="278" width="44" height="36" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
+    <text x="914" y="296" text-anchor="middle" font-size="13" fill="#78350F">w₁₄</text>
+  </g>
+
+  <!-- ============ 段标签 ============ -->
+  <text x="338" y="338" text-anchor="middle" font-size="12" fill="#334155">系统段 [0, K<tspan font-size="9" dy="2">Π</tspan>−1]</text>
+  <text x="698" y="338" text-anchor="middle" font-size="12" fill="#334155">校验段 [K<tspan font-size="9" dy="2">Π</tspan>, 3K<tspan font-size="9" dy="2">Π</tspan>−1]（偶→v¹ 奇→v²）</text>
+
+  <!-- ============ bit collection 公式芯片 ============ -->
+  <rect x="250" y="368" width="500" height="40" rx="2" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.25"/>
+  <text x="500" y="392" text-anchor="middle" font-size="12.5" fill="#334155">
+    bit collection 规则：w<tspan font-size="9" dy="2">k</tspan> = v⁽⁰⁾<tspan font-size="9" dy="2">k</tspan>（k = 0 … K_Π−1）；w<tspan font-size="9" dy="2">K_Π+2k</tspan> = v⁽¹⁾<tspan font-size="9" dy="2">k</tspan>、w<tspan font-size="9" dy="2">K_Π+2k+1</tspan> = v⁽²⁾<tspan font-size="9" dy="2">k</tspan>
+  </text>
+
+  <!-- ============ 设计语义说明 ============ -->
+  <text x="500" y="430" text-anchor="middle" font-size="12" fill="#64748B">
+    设计语义：系统比特居前 → RV 0 首发优先（决策一）；校验流逐比特交替 → 任意连续读取窗口两路校验数量差 ≤ 1（决策二）
+  </text>
+
+  <!-- ============ 图例 ============ -->
+  <g font-size="12.5" fill="#334155">
+    <rect x="125" y="456" width="230" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
+    <rect x="137" y="462" width="16" height="16" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.25"/>
+    <text x="161" y="470" dominant-baseline="central">v⁽⁰⁾ 系统流（systematic）</text>
+    <rect x="385" y="456" width="230" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
+    <rect x="397" y="462" width="16" height="16" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.25"/>
+    <text x="421" y="470" dominant-baseline="central">v⁽¹⁾ 校验流一（parity 1）</text>
+    <rect x="645" y="456" width="230" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
+    <rect x="657" y="462" width="16" height="16" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.25"/>
+    <text x="681" y="470" dominant-baseline="central">v⁽²⁾ 校验流二（parity 2）</text>
+  </g>
+
+  <!-- ============ 读图说明 ============ -->
+  <text x="500" y="504" text-anchor="middle" font-size="12" fill="#64748B">
+    w 格内标位置编号；同色竖线从源流指向 w 对应位置（如 w₅ ← v¹₀），表示该位来自哪一路的第几个比特
+  </text>
 </svg>

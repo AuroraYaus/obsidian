@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T14.5_soft_buffer_HARQ_memory_architecture.svg
+  @brief   软缓冲与 HARQ 存储架构（v2 手绘 SVG）：上下文/地址行走汇入管理器与事务日志 + 存储体行 + 生命周期 FSM 泳道
+  @date    2026-08-04
+  @note    语义与 docs/L3/T19.5_soft_buffer_HARQ_memory_architecture.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计。六项几何审计 + cairosvg 渲染验证通过。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="2400" viewBox="0 0 2600 2400" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T14.5_soft_buffer_HARQ_memory_architecture</title>
+  <defs>
+    <filter id="soft" x="-8%" y="-8%" width="120%" height="130%">      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A3B2A" flood-opacity="0.09"/>    </filter>
+    <marker id="m6E7A8C" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#6E7A8C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m94A3B8" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m6D4FBF" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#6D4FBF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m8A6B46" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#8A6B46" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m3F51C4" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#3F51C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m0E7A67" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#0E7A67" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="mB76E00" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#B76E00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="mB4405B" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#B4405B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+    <marker id="m4A5A6A" viewBox="0 0 20 20" refX="16" refY="10" markerWidth="11" markerHeight="11" orient="auto-start-reverse">      <path d="M 2 2 L 18 10 L 2 18" fill="none" stroke="#4A5A6A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="2600" height="2400" fill="#FBF9F3"/>
+  <path d="M 88 56 l 9 9 l -9 9 l -9 -9 z" fill="#3F51C4" stroke="none"/>
+  <text class="title-main" x="116" y="68" font-size="40" font-weight="700" fill="#262B33">T14.5 Soft Buffer and HARQ Memory Architecture</text>
+  <text class="subtitle" x="116" y="108" font-size="20.5" fill="#5B6472">Protocol identity selects the logical evidence store; implementation maps it to banks, transactions and lifecycle states.</text>
+  <line x1="80" y1="130" x2="2520" y2="130" stroke="#D8D2C6" stroke-width="2"/>
+  <g class="card" id="c0">
+    <rect class="body" x="80" y="160" width="620" height="300" rx="12" fill="#FFFFFF" stroke="#3F51C4" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 92 160 H 688 Q 700 160 700 172 V 206 H 80 V 172 Q 80 160 92 160 Z" fill="#3F51C4" stroke="none"/>
+    <text class="title" x="390.0" y="190" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">LTE Turbo context</text>
+  </g>
+  <g class="card" id="k0">
+    <rect class="body" x="110" y="232" width="560" height="44" rx="9" fill="#EEF1FE" stroke="#3F51C4" stroke-width="1.8"/>
+    <text class="title" x="390.0" y="260.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">Key: harq_id, codeword,</text>
+  </g>
+  <g class="card" id="k1">
+    <rect class="body" x="110" y="288" width="560" height="44" rx="9" fill="#EEF1FE" stroke="#3F51C4" stroke-width="1.8"/>
+    <text class="title" x="390.0" y="316.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">TB epoch and CB id</text>
+  </g>
+  <g class="card" id="k2">
+    <rect class="body" x="110" y="344" width="560" height="44" rx="9" fill="#EEF1FE" stroke="#3F51C4" stroke-width="1.8"/>
+    <text class="title" x="390.0" y="372.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">RV = access transaction</text>
+  </g>
+  <g class="card" id="k3">
+    <rect class="body" x="110" y="400" width="560" height="44" rx="9" fill="#EEF1FE" stroke="#3F51C4" stroke-width="1.8"/>
+    <text class="title" x="390.0" y="428.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">not a separate cache copy</text>
+  </g>
+  <g class="card" id="c1">
+    <rect class="body" x="1900" y="160" width="620" height="300" rx="12" fill="#FFFFFF" stroke="#0E7A67" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1912 160 H 2508 Q 2520 160 2520 172 V 206 H 1900 V 172 Q 1900 160 1912 160 Z" fill="#0E7A67" stroke="none"/>
+    <text class="title" x="2210.0" y="190" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">NR LDPC context</text>
+  </g>
+  <g class="card" id="q0">
+    <rect class="body" x="1930" y="240" width="560" height="52" rx="9" fill="#ECF8F5" stroke="#0E7A67" stroke-width="1.8"/>
+    <text class="title" x="2210.0" y="272.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">Key + CBG id</text>
+  </g>
+  <g class="card" id="q1">
+    <rect class="body" x="1930" y="304" width="560" height="52" rx="9" fill="#ECF8F5" stroke="#0E7A67" stroke-width="1.8"/>
+    <text class="title" x="2210.0" y="336.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">CBGTI/CBGFI policy</text>
+  </g>
+  <g class="card" id="q2">
+    <rect class="body" x="1930" y="368" width="560" height="52" rx="9" fill="#ECF8F5" stroke="#0E7A67" stroke-width="1.8"/>
+    <text class="title" x="2210.0" y="400.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">unscheduled CBG: old evidence</text>
+  </g>
+  <g class="card" id="c2">
+    <rect class="body" x="820" y="180" width="960" height="260" rx="12" fill="#FFFFFF" stroke="#B76E00" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 832 180 H 1768 Q 1780 180 1780 192 V 226 H 820 V 192 Q 820 180 832 180 Z" fill="#B76E00" stroke="none"/>
+    <text class="title" x="1300.0" y="210" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Soft Buffer Manager</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1300.0" y="306.0">Looks up logical evidence, opens read-modify-write transactions, applies NDI/epoch/CRC policy and</tspan>
+      <tspan x="1300.0" y="332.0">owns release decisions.</tspan>
+    </text>
+  </g>
+  <path class="link" data-src="c0" data-dst="c2" d="M 700.0 310.0 L 820.0 310.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="c1" data-dst="c2" d="M 1900.0 310.0 L 1780.0 310.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <g class="card" id="c3">
+    <rect class="body" x="80" y="540" width="620" height="300" rx="12" fill="#FFFFFF" stroke="#3F51C4" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 92 540 H 688 Q 700 540 700 552 V 586 H 80 V 552 Q 80 540 92 540 Z" fill="#3F51C4" stroke="none"/>
+    <text class="title" x="390.0" y="570" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">LTE address walk</text>
+  </g>
+  <g class="card" id="w0">
+    <rect class="body" x="110" y="610" width="560" height="48" rx="9" fill="#EEF1FE" stroke="#3F51C4" stroke-width="1.8"/>
+    <text class="title" x="390.0" y="640.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">TS 36.212: per-CB circular buffer</text>
+  </g>
+  <g class="card" id="w1">
+    <rect class="body" x="110" y="670" width="560" height="48" rx="9" fill="#EEF1FE" stroke="#3F51C4" stroke-width="1.8"/>
+    <text class="title" x="390.0" y="700.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">NIR/Ncb, E, rvidx</text>
+  </g>
+  <g class="card" id="w2">
+    <rect class="body" x="110" y="730" width="560" height="48" rx="9" fill="#EEF1FE" stroke="#3F51C4" stroke-width="1.8"/>
+    <text class="title" x="390.0" y="760.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">NULL positions are skipped</text>
+  </g>
+  <g class="card" id="c4">
+    <rect class="body" x="1900" y="540" width="620" height="300" rx="12" fill="#FFFFFF" stroke="#0E7A67" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 1912 540 H 2508 Q 2520 540 2520 552 V 586 H 1900 V 552 Q 1900 540 1912 540 Z" fill="#0E7A67" stroke="none"/>
+    <text class="title" x="2210.0" y="570" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">NR address walk</text>
+  </g>
+  <g class="card" id="n0">
+    <rect class="body" x="1930" y="610" width="560" height="48" rx="9" fill="#ECF8F5" stroke="#0E7A67" stroke-width="1.8"/>
+    <text class="title" x="2210.0" y="640.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">TS 38.212/38.214: per-CB k0/RV</text>
+  </g>
+  <g class="card" id="n1">
+    <rect class="body" x="1930" y="670" width="560" height="48" rx="9" fill="#ECF8F5" stroke="#0E7A67" stroke-width="1.8"/>
+    <text class="title" x="2210.0" y="700.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">E_r, CBGTI mask</text>
+  </g>
+  <g class="card" id="n2">
+    <rect class="body" x="1930" y="730" width="560" height="48" rx="9" fill="#ECF8F5" stroke="#0E7A67" stroke-width="1.8"/>
+    <text class="title" x="2210.0" y="760.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">optional CBGFI flush/combine</text>
+  </g>
+  <g class="card" id="c5">
+    <rect class="body" x="820" y="560" width="960" height="260" rx="12" fill="#FFFFFF" stroke="#6D4FBF" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 832 560 H 1768 Q 1780 560 1780 572 V 606 H 820 V 572 Q 820 560 832 560 Z" fill="#6D4FBF" stroke="none"/>
+    <text class="title" x="1300.0" y="590" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Transaction Journal</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1300.0" y="686.0">prepare -&gt; write-combine -&gt; commit. Reset, timeout or abort rolls back partial writes or marks them</tspan>
+      <tspan x="1300.0" y="712.0">invalid.</tspan>
+    </text>
+  </g>
+  <path class="link" data-src="c3" data-dst="c5" d="M 700.0 690.0 L 820.0 690.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="c4" data-dst="c5" d="M 1900.0 690.0 L 1780.0 690.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="c2" data-dst="c5" d="M 1300.0 440.0 L 1300.0 560.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="c5" data-dst="c7" d="M 1300.0 820.0 L 1300.0 860.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <g class="card" id="c6">
+    <rect class="body" x="80" y="860" width="350" height="240" rx="12" fill="#FFFFFF" stroke="#B4405B" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 92 860 H 418 Q 430 860 430 872 V 906 H 80 V 872 Q 80 860 92 860 Z" fill="#B4405B" stroke="none"/>
+    <text class="title" x="255.0" y="890" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Saturation Unit</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="255.0" y="963.0">Same code-bit address: old LLR +</tspan>
+      <tspan x="255.0" y="989.0">new LLR, then clamp to configured</tspan>
+      <tspan x="255.0" y="1015.0">signed range and count sat events.</tspan>
+    </text>
+  </g>
+  <g class="card" id="c7">
+    <rect class="body" x="520" y="860" width="1560" height="240" rx="12" fill="#FFFFFF" stroke="#8A7F6E" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 532 860 H 2068 Q 2080 860 2080 872 V 906 H 520 V 872 Q 520 860 532 860 Z" fill="#8A7F6E" stroke="none"/>
+    <text class="title" x="1300.0" y="890" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Banked LLR SRAM</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1300.0" y="989.0">Example mapping: bank = hash(harq, cb, addr) mod B; row = floor(addr / (B * lanes)); lane = addr mod lanes.</tspan>
+    </text>
+  </g>
+  <g class="card" id="c8">
+    <rect class="body" x="2170" y="860" width="350" height="240" rx="12" fill="#FFFFFF" stroke="#4A5A6A" stroke-width="2.5" filter="url(#soft)"/>
+    <path d="M 2182 860 H 2508 Q 2520 860 2520 872 V 906 H 2170 V 872 Q 2170 860 2182 860 Z" fill="#4A5A6A" stroke="none"/>
+    <text class="title" x="2345.0" y="890" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Masks and Status</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="2345.0" y="963.0">observed, valid, null, scheduled</tspan>
+      <tspan x="2345.0" y="989.0">CBG, CB CRC, TB CRC, stale epoch</tspan>
+      <tspan x="2345.0" y="1015.0">and release eligibility.</tspan>
+    </text>
+  </g>
+  <path class="link" data-src="c6" data-dst="c7" d="M 430.0 980.0 L 520.0 980.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="c8" data-dst="c7" d="M 2170.0 980.0 L 2080.0 980.0" fill="none" stroke="#6E7A8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <g class="panel" id="life">
+    <rect class="panel" x="80" y="1240" width="2440" height="250" rx="14" fill="#F0F2F5" stroke="#D8D2C6" stroke-width="1.5"/>
+    <text class="title" x="104" y="1270" font-size="20" font-weight="700" fill="#4A5A6A">Lifecycle FSM</text>
+  </g>
+  <g class="card" id="s0">
+    <rect class="body" x="130" y="1310" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="310.0" y="1364.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">EMPTY</text>
+  </g>
+  <g class="card" id="s1">
+    <rect class="body" x="502" y="1310" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="682.0" y="1364.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">ACTIVE_NEW</text>
+  </g>
+  <g class="card" id="s2">
+    <rect class="body" x="874" y="1310" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="1054.0" y="1364.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">ACCUMULATING</text>
+  </g>
+  <g class="card" id="s3">
+    <rect class="body" x="1246" y="1310" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="1426.0" y="1364.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">CRC_FAIL_RETAIN</text>
+  </g>
+  <g class="card" id="s4">
+    <rect class="body" x="1618" y="1310" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="1798.0" y="1364.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">RELEASED</text>
+  </g>
+  <g class="card" id="s5">
+    <rect class="body" x="1990" y="1310" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
+    <text class="title" x="2170.0" y="1364.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">ABORT_ROLLBACK</text>
+  </g>
+  <path class="link" data-src="s0" data-dst="s1" d="M 490.0 1358.0 L 502.0 1358.0" fill="none" stroke="#6E7A8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="s1" data-dst="s2" d="M 862.0 1358.0 L 874.0 1358.0" fill="none" stroke="#6E7A8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="s2" data-dst="s3" d="M 1234.0 1358.0 L 1246.0 1358.0" fill="none" stroke="#6E7A8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="s3" data-dst="s4" d="M 1606.0 1358.0 L 1618.0 1358.0" fill="none" stroke="#6E7A8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link" data-src="s4" data-dst="s5" d="M 1978.0 1358.0 L 1990.0 1358.0" fill="none" stroke="#6E7A8C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m6E7A8C)"/>
+  <path class="link detour" data-src="s2" data-dst="s5" data-note="abort/rollback：ACCUMULATING 下方绕行至 ABORT_ROLLBACK，不穿其余状态盒" d="M 1020.0 1406.0 L 1020.0 1460.0 L 2100.0 1460.0 L 2100.0 1406.0" fill="none" stroke="#8A6B46" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m8A6B46)"/>
+  <path class="link detour" data-src="life" data-dst="c7" data-note="release 路径：自 Lifecycle FSM 顶部上行绕开 sat/masks，从 Banked LLR SRAM 底边进入" d="M 2050.0 1240.0 L 2050.0 1180.0 L 1800.0 1180.0 L 1790.0 1100.0" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#m94A3B8)"/>
+  <g class="tbl" id="t1">
+    <rect class="tblouter" x="80" y="1580" width="2260" height="434" rx="10" fill="#3F51C4" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <g class="cellg" id="t1_0_0" data-tbl="t1">
+      <rect class="cell" x="80" y="1580" width="360" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="260.0" y="1607.0">Layer</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_1" data-tbl="t1">
+      <rect class="cell" x="440" y="1580" width="560" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="720.0" y="1607.0">LTE Turbo</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_2" data-tbl="t1">
+      <rect class="cell" x="1000" y="1580" width="600" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="1300.0" y="1607.0">NR LDPC</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_0_3" data-tbl="t1">
+      <rect class="cell" x="1600" y="1580" width="740" height="44" fill="none" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">
+        <tspan x="1970.0" y="1607.0">Hardware rule</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_0" data-tbl="t1">
+      <rect class="cell" x="80" y="1624" width="360" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="260.0" y="1668.0">Logical key</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_1" data-tbl="t1">
+      <rect class="cell" x="440" y="1624" width="560" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="720.0" y="1668.0">harq, codeword, TB epoch, CB</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_2" data-tbl="t1">
+      <rect class="cell" x="1000" y="1624" width="600" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1300.0" y="1668.0">harq, codeword, TB epoch, CBG, CB</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_1_3" data-tbl="t1">
+      <rect class="cell" x="1600" y="1624" width="740" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1970.0" y="1668.0">key selects evidence owner</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_0" data-tbl="t1">
+      <rect class="cell" x="80" y="1702" width="360" height="78" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="260.0" y="1746.0">RV placement</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_1" data-tbl="t1">
+      <rect class="cell" x="440" y="1702" width="560" height="78" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="720.0" y="1746.0">rvidx chooses LTE circular-buffer walk</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_2" data-tbl="t1">
+      <rect class="cell" x="1000" y="1702" width="600" height="78" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1300.0" y="1746.0">rv chooses k0; CBGTI may set E_r = 0</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_2_3" data-tbl="t1">
+      <rect class="cell" x="1600" y="1702" width="740" height="78" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1970.0" y="1746.0">RV is access metadata</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_0" data-tbl="t1">
+      <rect class="cell" x="80" y="1780" width="360" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="260.0" y="1824.0">Combine</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_1" data-tbl="t1">
+      <rect class="cell" x="440" y="1780" width="560" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="720.0" y="1824.0">same address accumulates LLR</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_2" data-tbl="t1">
+      <rect class="cell" x="1000" y="1780" width="600" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1300.0" y="1824.0">same address accumulates unless CBGFI flushes</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_3_3" data-tbl="t1">
+      <rect class="cell" x="1600" y="1780" width="740" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1970.0" y="1824.0">saturating add + sat counter</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_0" data-tbl="t1">
+      <rect class="cell" x="80" y="1858" width="360" height="78" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="260.0" y="1902.0">CRC fail</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_1" data-tbl="t1">
+      <rect class="cell" x="440" y="1858" width="560" height="78" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="720.0" y="1902.0">retain CB/TB evidence for retransmission</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_2" data-tbl="t1">
+      <rect class="cell" x="1000" y="1858" width="600" height="78" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1300.0" y="1902.0">retain scheduled CBG/CB evidence by policy</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_4_3" data-tbl="t1">
+      <rect class="cell" x="1600" y="1858" width="740" height="78" fill="#F7F3EA" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1970.0" y="1902.0">never release on partial fail</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_5_0" data-tbl="t1">
+      <rect class="cell" x="80" y="1936" width="360" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="260.0" y="1980.0">Eviction</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_5_1" data-tbl="t1">
+      <rect class="cell" x="440" y="1936" width="560" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="720.0" y="1980.0">release on TB pass or new epoch</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_5_2" data-tbl="t1">
+      <rect class="cell" x="1000" y="1936" width="600" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1300.0" y="1980.0">release on TB pass, CBG flush or new epoch</tspan>
+      </text>
+    </g>
+    <g class="cellg" id="t1_5_3" data-tbl="t1">
+      <rect class="cell" x="1600" y="1936" width="740" height="78" fill="#FFFFFF" stroke="none"/>
+      <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
+        <tspan x="1970.0" y="1980.0">reclaim invalid/released only</tspan>
+      </text>
+    </g>
+    <line x1="82" y1="1702" x2="2338" y2="1702" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="82" y1="1780" x2="2338" y2="1780" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="82" y1="1858" x2="2338" y2="1858" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="82" y1="1936" x2="2338" y2="1936" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="440" y1="1626" x2="440" y2="2012" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="640" y1="1626" x2="640" y2="2012" stroke="#E0DACA" stroke-width="1"/>
+    <line x1="680" y1="1626" x2="680" y2="2012" stroke="#E0DACA" stroke-width="1"/>
+  </g>
+  <g class="foot" id="note">
+    <rect class="body" x="80" y="2110" width="2440" height="220" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
+    <rect class="footbar" x="80" y="2110" width="7" height="220" fill="#0E7A67" stroke="none"/>
+    <text class="title" x="110" y="2144.0" font-size="20" font-weight="700" fill="#262B33">Read Order and Checks</text>
+    <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
+      <tspan x="1300.0" y="2233.0">1. 3GPP identities determine the logical evidence space; bank formula is an implementation example. 2. RV, rvidx, k0 and CBGTI describe one access, while the main cache key names the TB/CB/CBG owner. 3. CRC failure retains evidence; TB pass, CBG flush, new epoch</tspan>
+      <tspan x="1300.0" y="2262.0">or abort decides release/rollback.</tspan>
+    </text>
+  </g>
+</svg>

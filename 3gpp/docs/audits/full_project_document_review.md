@@ -20,7 +20,7 @@ source_spec: "docs/audits/full_project_document_review.md"
 |:---|---:|:---|:---|
 | L1 | 28 | T0.1-T5.5 | 已纳入审查。 |
 | L2 | 43 | T6.1-T11.5，含 T8.0/T9.0 专题 | 已纳入审查；历史 L2 总体状态由 `docs/audits/L2_overall_review.md` 承接。 |
-| L3 | 23 | T12.1-T15.6 | 已纳入审查；内容为 golden model、定点、RTL/ASIC 架构、验证、综合、时序和最终证据报告讲义。 |
+| L3 | 23 | T17.1-T20.6 | 已纳入审查；内容为 golden model、定点、RTL/ASIC 架构、验证、综合、时序和最终证据报告讲义。 |
 
 ## 自动审计基线
 
@@ -37,7 +37,7 @@ source_spec: "docs/audits/full_project_document_review.md"
 
 当前 94 篇讲义具备统一的教学和审计结构：学习目标、前置知识检查、理论解释、协议依据或边界、接收端/工程位置、公式或算法推导、伪代码或 Python 片段、验证方法、自测题与参考答案、执行与证据记录、协议证据表或协议边界、参考文献基本齐全。L1 侧重零基础理论和协议阅读入口，L2 侧重 LTE Turbo、NR LDPC、NR Polar 协议精读和接收端流程，L3 侧重 golden model、定点、RTL/ASIC 和验证证据框架。
 
-全项目当前没有 Critical 或 Important 级文档缺口。必须保留的边界是：L3 的综合、时序、覆盖率、RTL regression、BLER campaign 和最终 sign-off 是讲义和模板，不是真实工程已通过证据；T15.6 已把最终签核状态明确为 `hold`。
+全项目当前没有 Critical 或 Important 级文档缺口。必须保留的边界是：L3 的综合、时序、覆盖率、RTL regression、BLER campaign 和最终 sign-off 是讲义和模板，不是真实工程已通过证据；T20.6 已把最终签核状态明确为 `hold`。
 
 ## 问题清单
 
@@ -49,7 +49,7 @@ source_spec: "docs/audits/full_project_document_review.md"
 
 | 问题 | 状态 | 处理 |
 |:---|:---|:---|
-| 真实 BLER/定点/RTL/coverage/DC/STA 证据未生成 | 非文档缺口，是工程证据边界。 | T15.6 已明确 `hold`，不得宣称真实签核完成。 |
+| 真实 BLER/定点/RTL/coverage/DC/STA 证据未生成 | 非文档缺口，是工程证据边界。 | T20.6 已明确 `hold`，不得宣称真实签核完成。 |
 | TS 38.214 MCS/TBS 具体表值未形成系统级 bit-exact 表驱动闭环 | 当前未用于真实 conformance 向量。 | 进入系统级向量阶段后按实际查表范围复现。 |
 
 ### Minor
@@ -69,9 +69,9 @@ source_spec: "docs/audits/full_project_document_review.md"
 | L2 T8-T9 | 已纳入矩阵 | NR LDPC BG、lifting、BP/MS、rate recovery、CBG/HARQ 已扩展 | TS 38.212/38.214 相关锚点已记录 | BG/lifting、rate recovery、CBG/RV 图表已生成 | 术语/标题/深度/LaTeX 通过 | 通过 |
 | L2 T10-T11 | 已纳入矩阵 | NR Polar 与三类译码器对比已扩展 | TS 38.212 Polar 序列和 rate recovery 表已复现或回链 | Polar reliability sequence、rate recovery、对比图已生成 | 术语/标题/深度/LaTeX 通过 | 通过 |
 | L3 T12-T13 | 已纳入矩阵 | Python golden model、浮点仿真、定点模型、bit-exact harness 已扩展 | 通过上游 T7/T9/T10 和 Rel-19 路径回链 | 相关工程流程图已生成 | 术语/标题/深度/LaTeX 通过 | 通过 |
-| L3 T14-T15 | 已纳入矩阵 | RTL/ASIC、寄存器、soft buffer、testbench、coverage、DC、时序、最终报告已扩展 | 具体 TS 包名、章节、表/图/公式和本地路径在 T15.6 汇总 | T14/T15 架构和证据图已生成 | 术语/标题/深度/LaTeX 通过 | 通过，真实工程签核为 `hold` |
+| L3 T14-T15 | 已纳入矩阵 | RTL/ASIC、寄存器、soft buffer、testbench、coverage、DC、时序、最终报告已扩展 | 具体 TS 包名、章节、表/图/公式和本地路径在 T20.6 汇总 | T14/T15 架构和证据图已生成 | 术语/标题/深度/LaTeX 通过 | 通过，真实工程签核为 `hold` |
 
 ## 后续队列
 
 1. active audit/status 文件已同步到当前范围：94 篇讲义、68 张 PNG、58 个 Python 文件和 6428 条已通过渲染的 LaTeX 公式；图片项目级一致性审计已覆盖资产目录、正文引用、资产清单和迁移台账。
-2. 真实工程阶段按 T15.6 schema 补齐 BLER、定点、RTL、coverage、DC、STA 和功耗证据后，再更新最终 sign-off 状态。
+2. 真实工程阶段按 T20.6 schema 补齐 BLER、定点、RTL、coverage、DC、STA 和功耗证据后，再更新最终 sign-off 状态。

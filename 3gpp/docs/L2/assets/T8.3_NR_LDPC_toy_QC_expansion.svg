@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T8.3_NR_LDPC_toy_QC_expansion.svg
+  @brief   QC-LDPC 玩具基矩阵展开示例（手绘 SVG）
+  @date    2026-08-04
+  @note    布局按讲义语义重排：上排左基矩阵 B（2x3，-1 为零矩阵、非负数为循环移位值）、
+           上排右展开后的 H（Zc=4，8x12，每 4x4 子块按移位值填充循环 1，标签 P^p / zero）；
+           下排"读图要点"横带收纳五条要点。绿色圆点表示子块内的 1（教学示意），
+           0 是有效移位值；字号符合合规 Rule 23。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="420" viewBox="0 0 860 420" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>QC-LDPC 玩具基矩阵展开示例</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- ============ 标题 ============ -->
+  <text x="35" y="30" font-size="18" font-weight="700" fill="#1B2433">QC-LDPC 玩具基矩阵展开示例</text>
+  <text x="35" y="56" font-size="12" fill="#5B6877">基矩阵元素 -1 表示零矩阵；非负数 p 表示把 Zc x Zc 单位矩阵向右循环移位 p 次。</text>
+  <text x="35" y="74" font-size="12" fill="#5B6877">这里取 Zc=4，把 2x3 基矩阵展开为 8x12 的完整奇偶校验矩阵 H。</text>
+
+  <!-- ============ 基矩阵 B ============ -->
+  <text x="40" y="110" font-size="14" font-weight="700" fill="#3B6FB5">基矩阵 B</text>
+  <g font-size="13" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <rect x="40" y="122" width="52" height="38" fill="#FAF0DC" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="66" y="147">0</text>
+    <rect x="92" y="122" width="52" height="38" fill="#EDF1F6" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="118" y="147">-1</text>
+    <rect x="144" y="122" width="52" height="38" fill="#FAF0DC" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="170" y="147">2</text>
+    <rect x="40" y="160" width="52" height="38" fill="#FAF0DC" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="66" y="185">1</text>
+    <rect x="92" y="160" width="52" height="38" fill="#FAF0DC" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="118" y="185">0</text>
+    <rect x="144" y="160" width="52" height="38" fill="#EDF1F6" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="170" y="185">-1</text>
+  </g>
+
+  <!-- ============ 展开后的 H ============ -->
+  <text x="240" y="110" font-size="14" font-weight="700" fill="#3E9E74">展开后的 H</text>
+
+  <!-- 六个 4x4 子块（每块一个矩形 + 网格描边） -->
+  <g fill="none" stroke-width="1.5">
+    <rect x="240" y="122" width="48" height="48" fill="#FFFFFF" stroke="#D18A2F"/>
+    <rect x="288" y="122" width="48" height="48" fill="#FFFFFF" stroke="#C4553D"/>
+    <rect x="336" y="122" width="48" height="48" fill="#FFFFFF" stroke="#D18A2F"/>
+    <rect x="240" y="170" width="48" height="48" fill="#FFFFFF" stroke="#D18A2F"/>
+    <rect x="288" y="170" width="48" height="48" fill="#FFFFFF" stroke="#D18A2F"/>
+    <rect x="336" y="170" width="48" height="48" fill="#FFFFFF" stroke="#C4553D"/>
+  </g>
+  <g stroke="#D4DEE8" stroke-width="1">
+    <path d="M 252 122 V 170 M 264 122 V 170 M 276 122 V 170 M 252 134 H 288 M 252 146 H 288 M 252 158 H 288"/>
+    <path d="M 300 122 V 170 M 312 122 V 170 M 324 122 V 170 M 300 134 H 336 M 300 146 H 336 M 300 158 H 336"/>
+    <path d="M 348 122 V 170 M 360 122 V 170 M 372 122 V 170 M 348 134 H 384 M 348 146 H 384 M 348 158 H 384"/>
+    <path d="M 252 170 V 218 M 264 170 V 218 M 276 170 V 218 M 252 182 H 288 M 252 194 H 288 M 252 206 H 288"/>
+    <path d="M 300 170 V 218 M 312 170 V 218 M 324 170 V 218 M 300 182 H 336 M 300 194 H 336 M 300 206 H 336"/>
+    <path d="M 348 170 V 218 M 360 170 V 218 M 372 170 V 218 M 348 182 H 384 M 348 194 H 384 M 348 206 H 384"/>
+  </g>
+
+  <!-- 循环移位 1 标记（圆点） -->
+  <g fill="#3E9E74">
+    <circle cx="246" cy="128" r="4"/><circle cx="258" cy="140" r="4"/><circle cx="270" cy="152" r="4"/><circle cx="282" cy="164" r="4"/>
+    <circle cx="366" cy="128" r="4"/><circle cx="378" cy="140" r="4"/><circle cx="342" cy="152" r="4"/><circle cx="354" cy="164" r="4"/>
+    <circle cx="258" cy="176" r="4"/><circle cx="270" cy="188" r="4"/><circle cx="282" cy="200" r="4"/><circle cx="246" cy="212" r="4"/>
+    <circle cx="294" cy="176" r="4"/><circle cx="306" cy="188" r="4"/><circle cx="318" cy="200" r="4"/><circle cx="330" cy="212" r="4"/>
+  </g>
+
+  <!-- 子块标签（白底胶囊；避开本块内的 1 标记位置） -->
+  <g font-size="8.5" font-weight="700" text-anchor="middle">
+    <rect x="266" y="125" width="19" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="275.5" y="136" fill="#D18A2F">P^0</text>
+    <rect x="311" y="125" width="25" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="323.5" y="136" fill="#C4553D">zero</text>
+    <rect x="337" y="125" width="19" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="346.5" y="136" fill="#D18A2F">P^2</text>
+    <rect x="262" y="170" width="19" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="271.5" y="181" fill="#D18A2F">P^1</text>
+    <rect x="314" y="173" width="19" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="323.5" y="184" fill="#D18A2F">P^0</text>
+    <rect x="360" y="173" width="23" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="371.5" y="184" fill="#C4553D">zero</text>
+  </g>
+
+  <!-- ============ 读图要点（下排横带） ============ -->
+  <g filter="url(#soft)">
+    <rect x="35" y="250" width="790" height="150" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="58" y="278" font-size="15" font-weight="700" fill="#1B2433">读图要点</text>
+  <g font-size="12" fill="#5B6877">
+    <text x="58" y="306">-1 不是 shift=-1，而是整个 Zc x Zc 子块全为 0。</text>
+    <text x="430" y="306">0 是有效 shift value，表示不移位的单位矩阵。</text>
+    <text x="58" y="336">p=2 表示每一行的 1 向右循环移动 2 格。</text>
+    <text x="330" y="336">真实 NR 不保存完整 H，而保存 BG 表、iLS、Zc 和移位值。</text>
+    <text x="58" y="366">地址生成器只需做模 Zc 加法，即可找到循环移位后的列地址。</text>
+  </g>
+</svg>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T8.6_LDPC_MS_NMS_OMS_compare.svg
+  @brief   LDPC Min-Sum、NMS 与 OMS 校验节点更新对比图（手绘 SVG）
+  @date    2026-08-04
+  @note    教学输入 q=[+2.4,-0.9,+1.6,-3.1]。
+           布局按讲义语义重排：上排左 Check-node 输入图（4 输入 + 中心 CN）、
+           上排右 min1/min2 机制说明；中排同一组输入下的三种输出对比表（全宽）；
+           下排工程取舍四卡片。语义配色：输入蓝 / CN 绿 / min1 绿 / min2 琥珀 /
+           SPA 蓝 / MS 绿 / NMS 琥珀 / OMS 红；字号符合合规 Rule 23。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="870" viewBox="0 0 1000 870" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>LDPC Min-Sum、NMS 与 OMS 校验节点更新</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- ============ 标题 ============ -->
+  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433">LDPC Min-Sum、NMS 与 OMS 校验节点更新</text>
+  <text x="35" y="60" font-size="12" fill="#5B6877">教学输入 q=[+2.4,-0.9,+1.6,-3.1]。图中展示 check-node 输出给每条边时如何排除自身输入，</text>
+  <text x="35" y="78" font-size="12" fill="#5B6877">并比较 Min-Sum、Normalized Min-Sum 和 Offset Min-Sum。</text>
+
+  <!-- ============ Check-node 输入 ============ -->
+  <g filter="url(#soft)">
+    <rect x="35" y="95" width="465" height="325" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="55" y="122" font-size="15" font-weight="700" fill="#3B6FB5">Check-node 输入</text>
+
+  <!-- 边 -->
+  <g stroke="#9FB0C3" stroke-width="1.8">
+    <line x1="95" y1="185" x2="255" y2="250"/>
+    <line x1="95" y1="315" x2="255" y2="250"/>
+    <line x1="415" y1="185" x2="255" y2="250"/>
+    <line x1="415" y1="315" x2="255" y2="250"/>
+  </g>
+
+  <!-- 中心 CN -->
+  <g filter="url(#soft)">
+    <rect x="223" y="232" width="64" height="36" rx="10" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.5"/>
+  </g>
+  <text x="255" y="256" font-size="14" font-weight="700" fill="#1B2433" text-anchor="middle">CN</text>
+
+  <!-- 4 个输入 -->
+  <g font-size="12" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <circle cx="95" cy="185" r="28" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="95" y="189">q0=+2.4</text>
+    <circle cx="95" cy="315" r="28" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="95" y="319">q1=-0.9</text>
+    <circle cx="415" cy="185" r="28" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="415" y="189">q2=+1.6</text>
+    <circle cx="415" cy="315" r="28" fill="#DCE7F6" stroke="#3B6FB5" stroke-width="1.5"/>
+    <text x="415" y="319">q3=-3.1</text>
+  </g>
+
+  <text x="55" y="382" font-size="11.5" fill="#5B6877">给某条边输出时，只看其他输入：符号取其他输入符号乘积，</text>
+  <text x="55" y="398" font-size="11.5" fill="#5B6877">幅度取其他输入绝对值的最小值。</text>
+
+  <!-- ============ min1/min2 机制 ============ -->
+  <g filter="url(#soft)">
+    <rect x="520" y="95" width="445" height="325" rx="14" fill="#FAF5E4" stroke="#D9C179" stroke-width="1.5"/>
+  </g>
+  <text x="540" y="122" font-size="15" font-weight="700" fill="#D18A2F">min1/min2 机制</text>
+  <text x="540" y="150" font-size="12" fill="#5B6877">输入绝对值为 [2.4, 0.9, 1.6, 3.1]。</text>
+  <text x="540" y="168" font-size="12" fill="#5B6877">min1=0.9 来自 q1，min2=1.6 来自 q2。</text>
+  <text x="540" y="186" font-size="12" fill="#5B6877">输出给 q1 时不能用 q1 自己的 min1，因此改用 min2；</text>
+  <text x="540" y="204" font-size="12" fill="#5B6877">其他输出使用 min1。</text>
+
+  <!-- 绝对值排序示意芯片 -->
+  <g font-size="11.5" font-weight="700" fill="#1B2433" text-anchor="middle">
+    <rect x="540" y="220" width="62" height="26" rx="8" fill="#EDF1F6" stroke="#72839B" stroke-width="1.2"/>
+    <text x="571" y="237">|q0|=2.4</text>
+    <rect x="612" y="220" width="62" height="26" rx="8" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.2"/>
+    <text x="643" y="237">|q1|=0.9</text>
+    <rect x="684" y="220" width="62" height="26" rx="8" fill="#FAF0DC" stroke="#D18A2F" stroke-width="1.2"/>
+    <text x="715" y="237">|q2|=1.6</text>
+    <rect x="756" y="220" width="62" height="26" rx="8" fill="#EDF1F6" stroke="#72839B" stroke-width="1.2"/>
+    <text x="787" y="237">|q3|=3.1</text>
+  </g>
+  <g font-size="12" font-weight="700" fill="#1B2433">
+    <rect x="540" y="270" width="120" height="28" rx="8" fill="#3E9E74"/>
+    <text x="600" y="289" fill="#FFFFFF" text-anchor="middle">min1=0.9</text>
+    <text x="672" y="289" fill="#5B6877" font-weight="400">来自 q1（绿色）</text>
+    <rect x="540" y="308" width="120" height="28" rx="8" fill="#D18A2F"/>
+    <text x="600" y="327" fill="#FFFFFF" text-anchor="middle">min2=1.6</text>
+    <text x="672" y="327" fill="#5B6877" font-weight="400">来自 q2（琥珀）</text>
+  </g>
+
+  <!-- ============ 同一组输入下的三种输出 ============ -->
+  <g filter="url(#soft)">
+    <rect x="35" y="440" width="930" height="250" rx="14" fill="#F5F7FA" stroke="#C9D4E0" stroke-width="1.5"/>
+  </g>
+  <text x="55" y="468" font-size="15" font-weight="700" fill="#3E9E74">同一组输入下的三种输出</text>
+
+  <g font-size="12.5" text-anchor="middle">
+    <rect x="55" y="495" width="110" height="32" fill="#DDE7F3"/>
+    <text x="110" y="516" font-weight="700" fill="#1B2433">输出边</text>
+    <rect x="165" y="495" width="80" height="32" fill="#DDE7F3"/>
+    <text x="205" y="516" font-weight="700" fill="#1B2433">符号</text>
+    <rect x="245" y="495" width="90" height="32" fill="#DDE7F3"/>
+    <text x="290" y="516" font-weight="700" fill="#1B2433">幅度</text>
+    <rect x="335" y="495" width="110" height="32" fill="#DDE7F3"/>
+    <text x="390" y="516" font-weight="700" fill="#1B2433">MS</text>
+    <rect x="445" y="495" width="140" height="32" fill="#DDE7F3"/>
+    <text x="515" y="516" font-weight="700" fill="#1B2433">NMS α=.75</text>
+    <rect x="585" y="495" width="140" height="32" fill="#DDE7F3"/>
+    <text x="655" y="516" font-weight="700" fill="#1B2433">OMS β=.4</text>
+    <rect x="55" y="527" width="110" height="36" fill="#FFFFFF"/>
+    <text x="110" y="550">to q0</text>
+    <rect x="165" y="527" width="80" height="36" fill="#FFFFFF"/>
+    <text x="205" y="550">+</text>
+    <rect x="245" y="527" width="90" height="36" fill="#FFFFFF"/>
+    <text x="290" y="550">0.9</text>
+    <rect x="335" y="527" width="110" height="36" fill="#FFFFFF"/>
+    <text x="390" y="550">+0.900</text>
+    <rect x="445" y="527" width="140" height="36" fill="#FFFFFF"/>
+    <text x="515" y="550">+0.675</text>
+    <rect x="585" y="527" width="140" height="36" fill="#FFFFFF"/>
+    <text x="655" y="550">+0.500</text>
+    <rect x="55" y="563" width="110" height="36" fill="#EDF2F8"/>
+    <text x="110" y="586">to q1</text>
+    <rect x="165" y="563" width="80" height="36" fill="#EDF2F8"/>
+    <text x="205" y="586">-</text>
+    <rect x="245" y="563" width="90" height="36" fill="#EDF2F8"/>
+    <text x="290" y="586">1.6</text>
+    <rect x="335" y="563" width="110" height="36" fill="#EDF2F8"/>
+    <text x="390" y="586">-1.600</text>
+    <rect x="445" y="563" width="140" height="36" fill="#EDF2F8"/>
+    <text x="515" y="586">-1.200</text>
+    <rect x="585" y="563" width="140" height="36" fill="#EDF2F8"/>
+    <text x="655" y="586">-1.200</text>
+    <rect x="55" y="599" width="110" height="36" fill="#FFFFFF"/>
+    <text x="110" y="622">to q2</text>
+    <rect x="165" y="599" width="80" height="36" fill="#FFFFFF"/>
+    <text x="205" y="622">+</text>
+    <rect x="245" y="599" width="90" height="36" fill="#FFFFFF"/>
+    <text x="290" y="622">0.9</text>
+    <rect x="335" y="599" width="110" height="36" fill="#FFFFFF"/>
+    <text x="390" y="622">+0.900</text>
+    <rect x="445" y="599" width="140" height="36" fill="#FFFFFF"/>
+    <text x="515" y="622">+0.675</text>
+    <rect x="585" y="599" width="140" height="36" fill="#FFFFFF"/>
+    <text x="655" y="622">+0.500</text>
+    <rect x="55" y="635" width="110" height="36" fill="#EDF2F8"/>
+    <text x="110" y="658">to q3</text>
+    <rect x="165" y="635" width="80" height="36" fill="#EDF2F8"/>
+    <text x="205" y="658">-</text>
+    <rect x="245" y="635" width="90" height="36" fill="#EDF2F8"/>
+    <text x="290" y="658">0.9</text>
+    <rect x="335" y="635" width="110" height="36" fill="#EDF2F8"/>
+    <text x="390" y="658">-0.900</text>
+    <rect x="445" y="635" width="140" height="36" fill="#EDF2F8"/>
+    <text x="515" y="658">-0.675</text>
+    <rect x="585" y="635" width="140" height="36" fill="#EDF2F8"/>
+    <text x="655" y="658">-0.500</text>
+  </g>
+
+  <!-- ============ 工程取舍 ============ -->
+  <g filter="url(#soft)">
+    <rect x="35" y="710" width="930" height="140" rx="14" fill="#FAF5E4" stroke="#D9C179" stroke-width="1.5"/>
+  </g>
+  <text x="55" y="738" font-size="15" font-weight="700" fill="#1B2433">工程取舍</text>
+  <g font-size="11.5">
+    <rect x="55" y="755" width="230" height="80" rx="9" fill="#FFFFFF" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="70" y="779" font-weight="700" fill="#3B6FB5">SPA</text>
+    <text x="70" y="801" fill="#5B6877">tanh/atanh 精确但昂贵，需要 LUT</text>
+    <text x="70" y="817" fill="#5B6877">或函数近似。</text>
+    <rect x="297" y="755" width="230" height="80" rx="9" fill="#FFFFFF" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="312" y="779" font-weight="700" fill="#3E9E74">Min-Sum</text>
+    <text x="312" y="801" fill="#5B6877">只需符号异或和 min1/min2，复杂度低</text>
+    <text x="312" y="817" fill="#5B6877">但偏乐观。</text>
+    <rect x="539" y="755" width="230" height="80" rx="9" fill="#FFFFFF" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="554" y="779" font-weight="700" fill="#D18A2F">NMS</text>
+    <text x="554" y="801" fill="#5B6877">乘 α&lt;1 降低过度自信，性能通常</text>
+    <text x="554" y="817" fill="#5B6877">优于纯 MS。</text>
+    <rect x="781" y="755" width="230" height="80" rx="9" fill="#FFFFFF" stroke="#C9D4E0" stroke-width="1.2"/>
+    <text x="796" y="779" font-weight="700" fill="#C4553D">OMS</text>
+    <text x="796" y="801" fill="#5B6877">减 β 后截零，弱消息压为 0；</text>
+    <text x="796" y="817" fill="#5B6877">β 过大会损失信息。</text>
+  </g>
+</svg>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T10.7_NR_Polar_rate_recovery_flow.svg
+  @brief   NR Polar 速率恢复反操作流程与 LLR 放回教学图（手绘 SVG V2：布局与配色依据 T10.7 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：五节点链路（demapper LLR -> coded-bit deinterleave -> bit selection
+           reverse -> sub-block deinterleave -> Polar decoder input）、N=8, E=10 小型
+           循环缓存例子（pos 0/1 punctured、pos 3 shortened、pos 6/7 repeated 累加，
+           其余 received，含 LLR 值）、LLR 初始化规则四条、NR Polar/NR LDPC/LTE Turbo
+           对比表（母码对象/交织/重复处理），均与讲义 T10.7 正文及图 T10.7-1 语义一致。
+           视觉设计：链路带步骤号徽章；缓存格按状态着色（punctured=风险、shortened=赭金、
+           repeated=橄榄、received=青瓷）。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1380" viewBox="0 0 1500 1380" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T10.7 NR Polar 速率恢复：接收端反操作与 LLR 放回</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">T10.7 NR Polar 速率恢复：接收端反操作与 LLR 放回</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">发送端：sub-block interleaving -&gt; bit collection/selection -&gt; optional coded-bit interleaving。接收端按相反方向恢复 LLR。</text>
+
+  <!-- ============ 面板 A：五节点链路 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="250" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="154" width="10" height="10" rx="3" fill="#8E3B5E"/>
+  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">接收端反向流程</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="196" width="256" height="160" rx="12" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <circle cx="100" cy="220" r="12" fill="#8E3B5E"/>
+    <text x="100" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="208" y="224" text-anchor="middle" font-size="13" font-weight="700">demapper LLR</text>
+    <text x="208" y="256" text-anchor="middle">rx_llr[0:E-1]</text>
+    <text x="208" y="280" text-anchor="middle">Qm bit order</text>
+    <text x="208" y="304" text-anchor="middle">soft values</text>
+    <rect x="352" y="196" width="256" height="160" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <circle cx="372" cy="220" r="12" fill="#2F6E71"/>
+    <text x="372" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="480" y="224" text-anchor="middle" font-size="13" font-weight="700">coded-bit deinterleave</text>
+    <text x="480" y="256" text-anchor="middle">if enabled</text>
+    <text x="480" y="280" text-anchor="middle">undo bit interleaving</text>
+    <text x="480" y="304" text-anchor="middle">recover e-order</text>
+    <rect x="624" y="196" width="256" height="160" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <circle cx="644" cy="220" r="12" fill="#6C7A2E"/>
+    <text x="644" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="752" y="224" text-anchor="middle" font-size="13" font-weight="700">bit selection reverse</text>
+    <text x="752" y="256" text-anchor="middle">place into buffer</text>
+    <text x="752" y="280" text-anchor="middle">punctured=unknown</text>
+    <text x="752" y="304" text-anchor="middle">shortened=strong known</text>
+    <text x="752" y="328" text-anchor="middle">repeated=accumulate</text>
+    <rect x="896" y="196" width="256" height="160" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <circle cx="916" cy="220" r="12" fill="#2F6E71"/>
+    <text x="916" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="1024" y="224" text-anchor="middle" font-size="13" font-weight="700">sub-block deinterleave</text>
+    <text x="1024" y="256" text-anchor="middle">undo 32-block pattern</text>
+    <text x="1024" y="280" text-anchor="middle">table 5.4.1.1-1</text>
+    <text x="1024" y="304" text-anchor="middle">restore codeword order</text>
+    <rect x="1168" y="196" width="256" height="160" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <circle cx="1188" cy="220" r="12" fill="#6C7A2E"/>
+    <text x="1188" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">5</text>
+    <text x="1296" y="224" text-anchor="middle" font-size="13" font-weight="700">Polar decoder input</text>
+    <text x="1296" y="256" text-anchor="middle">L[0:N-1]</text>
+    <text x="1296" y="280" text-anchor="middle">SC/SCL/CA-SCL</text>
+    <text x="1296" y="304" text-anchor="middle">frozen mask</text>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 336 276 H 352" marker-end="url(#arrow)"/>
+    <path d="M 608 276 H 624" marker-end="url(#arrow)"/>
+    <path d="M 880 276 H 896" marker-end="url(#arrow)"/>
+    <path d="M 1152 276 H 1168" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 面板 B：N=8 E=10 缓存例子 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="410" width="1380" height="250" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="440" font-size="16" font-weight="700" fill="#23272E">小型循环缓存例子：N=8, E=10，位置 0/1 punctured，位置 6/7 repeated，位置 3 shortened</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="470" width="155" height="140" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
+    <text x="157" y="502" text-anchor="middle" font-weight="700">pos 0</text>
+    <text x="157" y="526" text-anchor="middle">punctured</text>
+    <text x="157" y="550" text-anchor="middle">LLR=0</text>
+    <rect x="245" y="470" width="155" height="140" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
+    <text x="322" y="502" text-anchor="middle" font-weight="700">pos 1</text>
+    <text x="322" y="526" text-anchor="middle">punctured</text>
+    <text x="322" y="550" text-anchor="middle">LLR=0</text>
+    <rect x="410" y="470" width="155" height="140" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="487" y="502" text-anchor="middle" font-weight="700">pos 2</text>
+    <text x="487" y="526" text-anchor="middle">received</text>
+    <text x="487" y="550" text-anchor="middle">+1.2</text>
+    <rect x="575" y="470" width="155" height="140" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="652" y="502" text-anchor="middle" font-weight="700">pos 3</text>
+    <text x="652" y="526" text-anchor="middle">shortened</text>
+    <text x="652" y="550" text-anchor="middle">+31</text>
+    <rect x="740" y="470" width="155" height="140" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="817" y="502" text-anchor="middle" font-weight="700">pos 4</text>
+    <text x="817" y="526" text-anchor="middle">received</text>
+    <text x="817" y="550" text-anchor="middle">-0.7</text>
+    <rect x="905" y="470" width="155" height="140" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="982" y="502" text-anchor="middle" font-weight="700">pos 5</text>
+    <text x="982" y="526" text-anchor="middle">received</text>
+    <text x="982" y="550" text-anchor="middle">+2.0</text>
+    <rect x="1070" y="470" width="155" height="140" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="1147" y="502" text-anchor="middle" font-weight="700">pos 6</text>
+    <text x="1147" y="526" text-anchor="middle">repeated</text>
+    <text x="1147" y="550" text-anchor="middle">-1.0 + -0.5</text>
+    <rect x="1235" y="470" width="155" height="140" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="1312" y="502" text-anchor="middle" font-weight="700">pos 7</text>
+    <text x="1312" y="526" text-anchor="middle">repeated</text>
+    <text x="1312" y="550" text-anchor="middle">+0.6 + +0.8</text>
+  </g>
+
+  <!-- ============ 面板 C：LLR 初始化规则 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="690" width="1380" height="230" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="722" font-size="16" font-weight="700" fill="#23272E">LLR 初始化规则</text>
+  <g font-size="12.5" fill="#23272E">
+    <text x="90" y="762">punctured / not transmitted: unknown -&gt; neutral LLR 0</text>
+    <text x="90" y="802">shortened / known zero: strong positive LLR, saturated to implementation max</text>
+    <text x="90" y="842">repetition: same mother-code position receives multiple LLRs -&gt; accumulate with saturation</text>
+    <text x="90" y="882">sub-block deinterleaving changes positions, not LLR sign convention</text>
+  </g>
+
+  <!-- ============ 面板 D：对比表 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="950" width="1380" height="400" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="982" font-size="16" font-weight="700" fill="#23272E">NR Polar / NR LDPC / LTE Turbo 速率恢复对比</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="1010" width="170" height="46" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="165" y="1038" text-anchor="middle" font-weight="700">对象</text>
+    <rect x="250" y="1010" width="380" height="46" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="440" y="1038" text-anchor="middle" font-weight="700">NR Polar</text>
+    <rect x="630" y="1010" width="380" height="46" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="820" y="1038" text-anchor="middle" font-weight="700">NR LDPC</text>
+    <rect x="1010" y="1010" width="380" height="46" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1200" y="1038" text-anchor="middle" font-weight="700">LTE Turbo</text>
+
+    <rect x="80" y="1056" width="170" height="52" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="165" y="1088" text-anchor="middle" font-weight="700">母码对象</text>
+    <rect x="250" y="1056" width="380" height="52" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="440" y="1088" text-anchor="middle">Polar codeword N</text>
+    <rect x="630" y="1056" width="380" height="52" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="820" y="1088" text-anchor="middle">LDPC circular buffer Ncb</text>
+    <rect x="1010" y="1056" width="380" height="52" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1200" y="1088" text-anchor="middle">Turbo circular buffer Kw</text>
+
+    <rect x="80" y="1108" width="170" height="52" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="165" y="1140" text-anchor="middle" font-weight="700">interleaving</text>
+    <rect x="250" y="1108" width="380" height="52" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="440" y="1140" text-anchor="middle">sub-block + optional coded-bit</text>
+    <rect x="630" y="1108" width="380" height="52" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="820" y="1140" text-anchor="middle">bit interleaving by Qm</text>
+    <rect x="1010" y="1108" width="380" height="52" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1200" y="1140" text-anchor="middle">sub-block + bit collection</text>
+
+    <rect x="80" y="1160" width="170" height="52" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="165" y="1192" text-anchor="middle" font-weight="700">重复处理</text>
+    <rect x="250" y="1160" width="380" height="52" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="440" y="1192" text-anchor="middle">LLR accumulate</text>
+    <rect x="630" y="1160" width="380" height="52" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="820" y="1192" text-anchor="middle">LLR accumulate</text>
+    <rect x="1010" y="1160" width="380" height="52" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1200" y="1192" text-anchor="middle">HARQ soft combine</text>
+  </g>
+</svg>

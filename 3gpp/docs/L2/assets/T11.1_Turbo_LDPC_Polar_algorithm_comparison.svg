@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T11.1_Turbo_LDPC_Polar_algorithm_comparison.svg
+  @brief   Turbo / LDPC / Polar 三大译码算法对比图（手绘 SVG V2：布局与配色依据 T11.1 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：三个并排算法面板（LTE Turbo trellis+SISO 迭代、NR LDPC Tanner 图+
+           消息传递、NR Polar 译码树+SCL 路径，各含软信息语义与瓶颈）、五维对比矩阵
+           （协议主场/核心行为/停止边界/并行性/硬件瓶颈）、工程结论两条，均与讲义
+           T11.1 正文、图模型总览及算法行为对比表语义一致。
+           视觉设计：算法面板按协议主场着色（Turbo=赭金、LDPC=橄榄、Polar=青瓷）；
+           矩阵表头按语义角色着色。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1420" viewBox="0 0 1500 1420" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T11.1 Turbo, LDPC, Polar Decoder Algorithm Comparison</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">T11.1 Turbo, LDPC, Polar Decoder Algorithm Comparison</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">Same LLR input, but three decoder families differ in graph model, soft info semantics, stop criteria, and hardware bottleneck.</text>
+
+  <!-- ============ 三个算法面板 ============ -->
+  <!-- Turbo -->
+  <g filter="url(#soft)">
+    <rect x="65" y="130" width="430" height="620" rx="16" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  </g>
+  <text x="89" y="162" font-size="15" font-weight="700" fill="#23272E">LTE Turbo: trellis + SISO iteration</text>
+  <g font-size="12.5" fill="#23272E">
+    <rect x="105" y="232" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="133" y="254" text-anchor="middle" font-weight="700">S0</text>
+    <rect x="193" y="232" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="221" y="254" text-anchor="middle" font-weight="700">S1</text>
+    <rect x="281" y="232" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="309" y="254" text-anchor="middle" font-weight="700">S2</text>
+    <rect x="369" y="232" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="397" y="254" text-anchor="middle" font-weight="700">S3</text>
+    <rect x="105" y="322" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="133" y="344" text-anchor="middle" font-weight="700">S0</text>
+    <rect x="193" y="322" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="221" y="344" text-anchor="middle" font-weight="700">S1</text>
+    <rect x="281" y="322" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="309" y="344" text-anchor="middle" font-weight="700">S2</text>
+    <rect x="369" y="322" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="397" y="344" text-anchor="middle" font-weight="700">S3</text>
+  </g>
+  <g stroke="#B06F2B" stroke-width="1.5" fill="none">
+    <path d="M 161 249 H 193" marker-end="url(#arrow)"/>
+    <path d="M 249 249 H 281" marker-end="url(#arrow)"/>
+    <path d="M 337 249 H 369" marker-end="url(#arrow)"/>
+    <path d="M 161 339 H 193" marker-end="url(#arrow)"/>
+    <path d="M 249 339 H 281" marker-end="url(#arrow)"/>
+    <path d="M 337 339 H 369" marker-end="url(#arrow)"/>
+  </g>
+  <g stroke="#CFC8B8" stroke-width="1.5">
+    <line x1="133" y1="266" x2="133" y2="322"/>
+    <line x1="221" y1="266" x2="221" y2="322"/>
+    <line x1="309" y1="266" x2="309" y2="322"/>
+    <line x1="397" y1="266" x2="397" y2="322"/>
+  </g>
+  <text x="280" y="434" font-size="12.5" text-anchor="middle" fill="#23272E">Soft info semantics: channel LLR</text>
+  <text x="280" y="456" font-size="12.5" text-anchor="middle" fill="#23272E">+ extrinsic information</text>
+  <text x="280" y="492" font-size="12.5" text-anchor="middle" fill="#646B76">Bottleneck: forward/backward metric,</text>
+  <text x="280" y="514" font-size="12.5" text-anchor="middle" fill="#646B76">interleaver address, iteration latency</text>
+
+  <!-- LDPC -->
+  <g filter="url(#soft)">
+    <rect x="525" y="130" width="430" height="620" rx="16" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+  </g>
+  <text x="549" y="162" font-size="15" font-weight="700" fill="#23272E">NR LDPC: Tanner graph + message passing</text>
+  <g font-size="12.5" fill="#23272E">
+    <rect x="570" y="256" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="598" y="278" text-anchor="middle" font-weight="700">v0</text>
+    <rect x="651" y="256" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="679" y="278" text-anchor="middle" font-weight="700">v1</text>
+    <rect x="732" y="256" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="760" y="278" text-anchor="middle" font-weight="700">v2</text>
+    <rect x="813" y="256" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="841" y="278" text-anchor="middle" font-weight="700">v3</text>
+    <rect x="615" y="360" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="643" y="382" text-anchor="middle" font-weight="700">c0</text>
+    <rect x="735" y="360" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="763" y="382" text-anchor="middle" font-weight="700">c1</text>
+    <rect x="855" y="360" width="56" height="34" rx="17" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="883" y="382" text-anchor="middle" font-weight="700">c2</text>
+  </g>
+  <g stroke="#CFC8B8" stroke-width="1.5">
+    <line x1="598" y1="290" x2="643" y2="360"/>
+    <line x1="679" y1="290" x2="643" y2="360"/>
+    <line x1="679" y1="290" x2="763" y2="360"/>
+    <line x1="760" y1="290" x2="763" y2="360"/>
+    <line x1="760" y1="290" x2="883" y2="360"/>
+    <line x1="841" y1="290" x2="883" y2="360"/>
+    <line x1="598" y1="290" x2="883" y2="360"/>
+  </g>
+  <text x="740" y="434" font-size="12.5" text-anchor="middle" fill="#23272E">Soft info semantics: VN/CN messages</text>
+  <text x="740" y="456" font-size="12.5" text-anchor="middle" fill="#23272E">+ posterior LLR</text>
+  <text x="740" y="492" font-size="12.5" text-anchor="middle" fill="#646B76">Bottleneck: message memory / bank conflict</text>
+  <text x="740" y="514" font-size="12.5" text-anchor="middle" fill="#646B76">layered schedule</text>
+
+  <!-- Polar -->
+  <g filter="url(#soft)">
+    <rect x="985" y="130" width="430" height="620" rx="16" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+  </g>
+  <text x="1009" y="162" font-size="15" font-weight="700" fill="#23272E">NR Polar: decoding tree + SCL path</text>
+  <g font-size="12.5" fill="#23272E">
+    <rect x="1045" y="295" width="70" height="34" rx="17" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="1080" y="317" text-anchor="middle" font-weight="700">root</text>
+    <rect x="1185" y="248" width="46" height="34" rx="17" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="1208" y="270" text-anchor="middle" font-weight="700">f</text>
+    <rect x="1185" y="342" width="46" height="34" rx="17" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="1208" y="364" text-anchor="middle" font-weight="700">g</text>
+    <rect x="1320" y="218" width="70" height="34" rx="17" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="1355" y="240" text-anchor="middle" font-weight="700">u0 F</text>
+    <rect x="1320" y="275" width="70" height="34" rx="17" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="1355" y="297" text-anchor="middle" font-weight="700">u1 F</text>
+    <rect x="1320" y="332" width="70" height="34" rx="17" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="1355" y="354" text-anchor="middle" font-weight="700">u2 I</text>
+    <rect x="1320" y="389" width="70" height="34" rx="17" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="1355" y="411" text-anchor="middle" font-weight="700">u3 I</text>
+  </g>
+  <g stroke="#2F6E71" stroke-width="1.5" fill="none">
+    <path d="M 1080 295 L 1185 265" marker-end="url(#arrow)"/>
+    <path d="M 1080 295 L 1185 359" marker-end="url(#arrow)"/>
+    <path d="M 1208 248 L 1320 235" marker-end="url(#arrow)"/>
+    <path d="M 1208 248 L 1320 292" marker-end="url(#arrow)"/>
+    <path d="M 1208 342 L 1320 349" marker-end="url(#arrow)"/>
+    <path d="M 1208 342 L 1320 406" marker-end="url(#arrow)"/>
+  </g>
+  <text x="1200" y="434" font-size="12.5" text-anchor="middle" fill="#23272E">Soft info semantics: path metric</text>
+  <text x="1200" y="456" font-size="12.5" text-anchor="middle" fill="#23272E">+ frozen constraint + CRC</text>
+  <text x="1200" y="492" font-size="12.5" text-anchor="middle" fill="#646B76">Bottleneck: sorter, path memory</text>
+  <text x="1200" y="514" font-size="12.5" text-anchor="middle" fill="#646B76">partial sum, low latency</text>
+
+  <!-- ============ 五维对比矩阵 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="790" width="1380" height="420" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="822" font-size="16" font-weight="700" fill="#23272E">五维对比矩阵</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="75" y="848" width="200" height="46" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="175" y="877" text-anchor="middle" font-weight="700">Dimension</text>
+    <rect x="275" y="848" width="380" height="46" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="465" y="877" text-anchor="middle" font-weight="700">LTE Turbo</text>
+    <rect x="655" y="848" width="380" height="46" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="845" y="877" text-anchor="middle" font-weight="700">NR LDPC</text>
+    <rect x="1035" y="848" width="380" height="46" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="877" text-anchor="middle" font-weight="700">NR Polar</text>
+
+    <rect x="75" y="894" width="200" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="175" y="928" text-anchor="middle" font-weight="700">Protocol Home</text>
+    <rect x="275" y="894" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="465" y="928" text-anchor="middle">LTE data channel</text>
+    <rect x="655" y="894" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="845" y="928" text-anchor="middle">NR data channel</text>
+    <rect x="1035" y="894" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="928" text-anchor="middle">NR control channel</text>
+
+    <rect x="75" y="950" width="200" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="175" y="984" text-anchor="middle" font-weight="700">Core Behavior</text>
+    <rect x="275" y="950" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="465" y="984" text-anchor="middle">two SISOs exchange extrinsic info</text>
+    <rect x="655" y="950" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="845" y="984" text-anchor="middle">VN/CN message iteration</text>
+    <rect x="1035" y="950" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="984" text-anchor="middle">SC/SCL path search</text>
+
+    <rect x="75" y="1006" width="200" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="175" y="1040" text-anchor="middle" font-weight="700">Stop Boundary</text>
+    <rect x="275" y="1006" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="465" y="1040" text-anchor="middle">iteration count + CRC</text>
+    <rect x="655" y="1006" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="845" y="1040" text-anchor="middle">syndrome/iteration + CRC</text>
+    <rect x="1035" y="1006" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="1040" text-anchor="middle">CRC/RNTI aided select</text>
+
+    <rect x="75" y="1062" width="200" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="175" y="1096" text-anchor="middle" font-weight="700">Parallelism</text>
+    <rect x="275" y="1062" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="465" y="1096" text-anchor="middle">limited by trellis order and interleaver</text>
+    <rect x="655" y="1062" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="845" y="1096" text-anchor="middle">QC/layered high parallelism</text>
+    <rect x="1035" y="1062" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="1096" text-anchor="middle">path sorting limits low latency</text>
+
+    <rect x="75" y="1118" width="200" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="175" y="1152" text-anchor="middle" font-weight="700">HW Bottleneck</text>
+    <rect x="275" y="1118" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="465" y="1152" text-anchor="middle">alpha/beta/extrinsic RAM</text>
+    <rect x="655" y="1118" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="845" y="1152" text-anchor="middle">message memory/bank</text>
+    <rect x="1035" y="1118" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
+    <text x="1225" y="1152" text-anchor="middle">sorter/path memory</text>
+  </g>
+
+  <!-- ============ 工程结论 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="1240" width="1380" height="150" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="1272" font-size="15" font-weight="700" fill="#23272E">Engineering conclusion</text>
+  <text x="90" y="1306" font-size="12.5" fill="#23272E">It is meaningless to say one code family is better without specifying protocol generation, block length, channel type, throughput target, and hardware resources.</text>
+  <text x="90" y="1330" font-size="12.5" fill="#23272E">Large data blocks prioritize throughput and parallelism; short control blocks prioritize low latency, misdetection boundaries, and path selection.</text>
+  <text x="90" y="1362" font-size="12.5" class="free" fill="#646B76">Turbo 协议主场=LTE 数据；LDPC=NR 数据；Polar=NR 控制（DCI/部分 UCI）</text>
+</svg>

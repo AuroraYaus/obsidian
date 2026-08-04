@@ -51,5 +51,5 @@ soft buffer 像一张证据表。每个格子对应一个编码位置。第一�
 - [[CBG_码块组]]
 - [[Rate_Matching_速率匹配]]
 - [[T4.3_HARQ_soft_combining_basics]]
-- [[T14.5_soft_buffer_HARQ_memory_architecture]]
+- [[T19.5_soft_buffer_HARQ_memory_architecture]]
 - 关系语义：soft buffer 把跨重传 LLR 证据按 RV、CB、CBG 和 HARQ process 组织起来。

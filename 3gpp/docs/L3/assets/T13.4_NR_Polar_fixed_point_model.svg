@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T13.4_NR_Polar_fixed_point_model.svg
+  @brief   T13.4 NR Polar 定点化模型数据流图：f/g LLR 树、路径度量饱和、部分和与 CRC 辅助选择的
+           证据链路，含 Polar 定点检查点表格和位宽/状态对象选项卡。
+  @date    2026-08-04
+  @note    本次重绘自定语义色（不沿用 PIL 脚本色系）：
+           Protocol Vector 钢蓝 / Rate Recovery 青绿 / Quantizer 琥珀 / SC/SCL Core 紫罗兰 /
+           PM Sort/Prune 橄榄 / CRC/RNTI Selector 玫红 / 检查点白底表格 /
+           状态对象五卡橄榄绿。布局：标题带 -> 六卡数据通路 -> Polar Fixed-Point
+           Checkpoints 表格 -> Bitwidth and State Objects 五卡 -> 底线规则。
+           内容（节点、数值、连线关系）与 docs/L3/T18.4 讲义及原 PIL 图语义一致；
+           替代 docs/L3/assets/T13.4_NR_Polar_fixed_point_model.png。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="1240" viewBox="0 0 1960 1240" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T13.4 NR Polar Fixed-Point Model Plan</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#334155" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5B6B82"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 标题带 ============ -->
+  <rect x="40" y="18" width="1880" height="64" rx="10" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="980" y="42" font-size="20" font-weight="700" fill="#152033" text-anchor="middle">T13.4 NR Polar Fixed-Point Model Plan</text>
+  <text x="980" y="68" font-size="12.5" fill="#455A64" text-anchor="middle">f/g LLRs, path metric saturation, partial sums, sorter pruning and CRC-aided selection</text>
+
+  <!-- ============ 顶部：六卡数据通路 ============ -->
+  <rect x="70" y="110" width="300" height="170" rx="10" fill="#D9E7F6" stroke="#2F5E94" stroke-width="1.5"/>
+  <rect x="84" y="124" width="12" height="12" rx="3" fill="#2F5E94"/>
+  <text x="106" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Protocol Vector</text>
+  <line x1="84" y1="150" x2="350" y2="150" stroke="#2F5E94" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="106" y="176" font-size="12" fill="#263238" text-anchor="start">A, K, E, N, CRC, RNTI, info/frozen</text>
+  <text x="106" y="200" font-size="12" fill="#263238" text-anchor="start">masks and TS 38.212 evidence. L</text>
+  <text x="106" y="224" font-size="12" fill="#263238" text-anchor="start">belongs to fixed config.</text>
+
+  <rect x="400" y="110" width="300" height="170" rx="10" fill="#CFE9E2" stroke="#15705C" stroke-width="1.5"/>
+  <rect x="414" y="124" width="12" height="12" rx="3" fill="#15705C"/>
+  <text x="436" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Rate Recovery</text>
+  <line x1="414" y1="150" x2="680" y2="150" stroke="#15705C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="436" y="176" font-size="12" fill="#263238" text-anchor="start">Restore codeword-order LLR with</text>
+  <text x="436" y="200" font-size="12" fill="#263238" text-anchor="start">punctured, shortened and repeated</text>
+  <text x="436" y="224" font-size="12" fill="#263238" text-anchor="start">position masks.</text>
+
+  <rect x="730" y="110" width="300" height="170" rx="10" fill="#F8E8C8" stroke="#A8781E" stroke-width="1.5"/>
+  <rect x="744" y="124" width="12" height="12" rx="3" fill="#A8781E"/>
+  <text x="766" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">Quantizer</text>
+  <line x1="744" y1="150" x2="1010" y2="150" stroke="#A8781E" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="766" y="176" font-size="12" fill="#263238" text-anchor="start">Apply LLR width, Q format, clipping,</text>
+  <text x="766" y="200" font-size="12" fill="#263238" text-anchor="start">strong known-zero and saturation</text>
+  <text x="766" y="224" font-size="12" fill="#263238" text-anchor="start">rules.</text>
+
+  <rect x="1060" y="110" width="300" height="170" rx="10" fill="#E3DCF2" stroke="#59419C" stroke-width="1.5"/>
+  <rect x="1074" y="124" width="12" height="12" rx="3" fill="#59419C"/>
+  <text x="1096" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">SC/SCL Core</text>
+  <line x1="1074" y1="150" x2="1340" y2="150" stroke="#59419C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1096" y="176" font-size="12" fill="#263238" text-anchor="start">Compute f/g node LLRs and 1-bit</text>
+  <text x="1096" y="200" font-size="12" fill="#263238" text-anchor="start">partial sums for every active</text>
+  <text x="1096" y="224" font-size="12" fill="#263238" text-anchor="start">path.</text>
+
+  <rect x="1390" y="110" width="300" height="170" rx="10" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+  <rect x="1404" y="124" width="12" height="12" rx="3" fill="#5E7A24"/>
+  <text x="1426" y="138" font-size="15" font-weight="700" fill="#152033" text-anchor="start">PM Sort/Prune</text>
+  <line x1="1404" y1="150" x2="1670" y2="150" stroke="#5E7A24" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1426" y="176" font-size="12" fill="#263238" text-anchor="start">Update PM, normalize or saturate,</text>
+  <text x="1426" y="200" font-size="12" fill="#263238" text-anchor="start">sort 2L candidates and remap path</text>
+  <text x="1426" y="224" font-size="12" fill="#263238" text-anchor="start">state.</text>
+
+  <rect x="1720" y="110" width="240" height="170" rx="10" fill="#F6DEE3" stroke="#A8425C" stroke-width="1.5"/>
+  <rect x="1734" y="124" width="12" height="12" rx="3" fill="#A8425C"/>
+  <text x="1756" y="138" font-size="14" font-weight="700" fill="#152033" text-anchor="start">CRC/RNTI Selector</text>
+  <line x1="1734" y1="150" x2="1940" y2="150" stroke="#A8425C" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1756" y="176" font-size="12" fill="#263238" text-anchor="start">Filter CRC/RNTI pass paths,</text>
+  <text x="1756" y="200" font-size="12" fill="#263238" text-anchor="start">select best PM path, emit</text>
+  <text x="1756" y="224" font-size="12" fill="#263238" text-anchor="start">valid/fail and replay trace.</text>
+
+  <!-- ============ Polar Fixed-Point Checkpoints 表格 ============ -->
+  <rect x="80" y="340" width="1800" height="560" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="110" y="374" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Polar Fixed-Point Checkpoints</text>
+  <line x1="100" y1="386" x2="1860" y2="386" stroke="#94A3B8" stroke-opacity="0.25" stroke-width="1"/>
+  <!-- 表头 400..440 -->
+  <rect x="110" y="400" width="260" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="240" y="425" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Stage</text>
+  <rect x="370" y="400" width="460" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="600" y="425" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Integer Object</text>
+  <rect x="830" y="400" width="460" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="1060" y="425" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Compare Field</text>
+  <rect x="1290" y="400" width="560" height="40" fill="#E3E9F0" stroke="#8A97A6" stroke-width="1"/>
+  <text x="1570" y="425" font-size="12.5" font-weight="700" fill="#102027" text-anchor="middle">Failure Signal</text>
+  <!-- 行 1 440..528 -->
+  <rect x="110" y="440" width="260" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="240" y="484" font-size="12" fill="#263238" text-anchor="middle">Rate recovery</text>
+  <rect x="370" y="440" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="600" y="484" font-size="12" fill="#263238" text-anchor="middle">LLR, masks, repetition</text>
+  <rect x="830" y="440" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1060" y="484" font-size="12" fill="#263238" text-anchor="middle">rate_llr_trace</text>
+  <rect x="1290" y="440" width="560" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1570" y="484" font-size="12" fill="#263238" text-anchor="middle">puncture/shorten mix</text>
+  <!-- 行 2 528..616 -->
+  <rect x="110" y="528" width="260" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="240" y="572" font-size="12" fill="#263238" text-anchor="middle">f/g tree</text>
+  <rect x="370" y="528" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="600" y="572" font-size="12" fill="#263238" text-anchor="middle">node LLR and stage</text>
+  <rect x="830" y="528" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1060" y="572" font-size="12" fill="#263238" text-anchor="middle">fg_llr_trace</text>
+  <rect x="1290" y="528" width="560" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1570" y="572" font-size="12" fill="#263238" text-anchor="middle">wrong sign or min</text>
+  <!-- 行 3 616..704 -->
+  <rect x="110" y="616" width="260" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="240" y="660" font-size="12" fill="#263238" text-anchor="middle">Partial sum</text>
+  <rect x="370" y="616" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="600" y="660" font-size="12" fill="#263238" text-anchor="middle">path beta memory</text>
+  <rect x="830" y="616" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1060" y="660" font-size="12" fill="#263238" text-anchor="middle">partial_sum_trace</text>
+  <rect x="1290" y="616" width="560" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1570" y="660" font-size="12" fill="#263238" text-anchor="middle">bad g input</text>
+  <!-- 行 4 704..792 -->
+  <rect x="110" y="704" width="260" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="240" y="748" font-size="12" fill="#263238" text-anchor="middle">Split/prune</text>
+  <rect x="370" y="704" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="600" y="748" font-size="12" fill="#263238" text-anchor="middle">PM, path id, sorter</text>
+  <rect x="830" y="704" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1060" y="748" font-size="12" fill="#263238" text-anchor="middle">candidate_pm, sort_order</text>
+  <rect x="1290" y="704" width="560" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1570" y="748" font-size="12" fill="#263238" text-anchor="middle">unstable path</text>
+  <!-- 行 5 792..880 -->
+  <rect x="110" y="792" width="260" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="240" y="836" font-size="12" fill="#263238" text-anchor="middle">CRC/RNTI</text>
+  <rect x="370" y="792" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="600" y="836" font-size="12" fill="#263238" text-anchor="middle">pass mask, selected path</text>
+  <rect x="830" y="792" width="460" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1060" y="836" font-size="12" fill="#263238" text-anchor="middle">crc_pass_vec, selected_path</text>
+  <rect x="1290" y="792" width="560" height="88" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+  <text x="1570" y="836" font-size="12" fill="#263238" text-anchor="middle">invalid output</text>
+
+  <!-- ============ Bitwidth and State Objects ============ -->
+  <rect x="80" y="960" width="1800" height="44" rx="10" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+  <rect x="94" y="974" width="12" height="12" rx="3" fill="#5E7A24"/>
+  <text x="116" y="988" font-size="16" font-weight="700" fill="#152033" text-anchor="start">Bitwidth and State Objects</text>
+  <!-- 五张选项卡 1020..1130 -->
+  <g fill="#263238">
+    <rect x="110" y="1020" width="330" height="110" rx="8" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+    <text x="140" y="1048" font-size="14" font-weight="700" fill="#152033" text-anchor="start">f/g LLR</text>
+    <text x="140" y="1076" font-size="12" text-anchor="start">min-sum f, signed g, guard bits</text>
+    <text x="140" y="1100" font-size="12" text-anchor="start">and node-stage trace</text>
+
+    <rect x="465" y="1020" width="330" height="110" rx="8" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+    <text x="495" y="1048" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Partial Sum</text>
+    <text x="495" y="1076" font-size="12" text-anchor="start">1-bit GF(2) beta memory per path</text>
+    <text x="495" y="1100" font-size="12" text-anchor="start">or lazy-copy state</text>
+
+    <rect x="820" y="1020" width="330" height="110" rx="8" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+    <text x="850" y="1048" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Path Metric</text>
+    <text x="850" y="1076" font-size="12" text-anchor="start">PM increment, width, normalization,</text>
+    <text x="850" y="1100" font-size="12" text-anchor="start">saturation and tie-break</text>
+
+    <rect x="1175" y="1020" width="330" height="110" rx="8" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+    <text x="1205" y="1048" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Sorter</text>
+    <text x="1205" y="1076" font-size="12" text-anchor="start">2L candidates to L survivors,</text>
+    <text x="1205" y="1100" font-size="12" text-anchor="start">stable path id remap</text>
+
+    <rect x="1530" y="1020" width="330" height="110" rx="8" fill="#E5EDD1" stroke="#5E7A24" stroke-width="1.5"/>
+    <text x="1560" y="1048" font-size="14" font-weight="700" fill="#152033" text-anchor="start">Selector</text>
+    <text x="1560" y="1076" font-size="12" text-anchor="start">CRC/RNTI pass mask before PM</text>
+    <text x="1560" y="1100" font-size="12" text-anchor="start">comparison</text>
+  </g>
+  <!-- 底线规则 -->
+  <rect x="80" y="1168" width="1800" height="44" rx="10" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="980" y="1196" font-size="12.5" fill="#37474F" text-anchor="middle">Requirement rule: integer-exact comparison must preserve path id, LLR tree state, partial sums, PM, CRC/RNTI pass mask and selected path.</text>
+
+  <!-- ============ 箭头 ============ -->
+  <g stroke="#5B6B82" stroke-width="2" fill="none">
+    <path d="M 370 195 L 400 195" marker-end="url(#arrow)"/>
+    <path d="M 700 195 L 730 195" marker-end="url(#arrow)"/>
+    <path d="M 1030 195 L 1060 195" marker-end="url(#arrow)"/>
+    <path d="M 1360 195 L 1390 195" marker-end="url(#arrow)"/>
+    <path d="M 1690 195 L 1720 195" marker-end="url(#arrow)"/>
+    <path d="M 440 1075 L 465 1075" marker-end="url(#arrow)"/>
+    <path d="M 795 1075 L 820 1075" marker-end="url(#arrow)"/>
+    <path d="M 1150 1075 L 1175 1075" marker-end="url(#arrow)"/>
+    <path d="M 1505 1075 L 1530 1075" marker-end="url(#arrow)"/>
+  </g>
+</svg>

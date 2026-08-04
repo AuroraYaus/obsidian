@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T10.8_NR_Polar_edge_case_diagnosis.svg
+  @brief   NR Polar 译码边界案例诊断：定位路径与最小证据包（手绘 SVG V2：布局与配色依据 T10.8 讲义正文语义重设计）
+  @date    2026-08-04
+  @note    内容保真：五层诊断链路（descriptor -> rate recovery -> mask generator ->
+           SC/SCL core -> CRC/RNTI select，每层检查项）、八个典型故障注入点（无 CRC
+           小负载 / CRC 长度错 / L 太小 / PM 并列 / puncture/shorten 错 / frozen mask 错 /
+           UCI/DCI mismatch / RNTI 边界错）、最小 dump 包五层清单、工程定位原则，
+           均与讲义 T10.8 正文及图 T10.8-1 语义一致。
+           视觉设计：五层改为纵向分层横带（自上而下逐层下探），层号徽章沿左侧；
+           故障卡按语义着色。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1500" viewBox="0 0 1500 1500" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T10.8 NR Polar 译码边界案例：定位路径与最小证据包</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">T10.8 NR Polar 译码边界案例：定位路径与最小证据包</text>
+  <text x="70" y="74" font-size="13" class="free" fill="#646B76">读图顺序：先固定 descriptor，再逐层排查 rate recovery、mask、SC/SCL、CRC/RNTI selector。</text>
+
+  <!-- ============ 面板 A：五层诊断链路（纵向） ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="130" width="1380" height="430" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <rect x="88" y="154" width="10" height="10" rx="3" fill="#8E3B5E"/>
+  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">五层诊断链路（自上而下逐层下探）</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="192" width="1340" height="56" rx="10" fill="#FBFAF6" stroke="#5C6B7C" stroke-width="1.5"/>
+    <circle cx="108" cy="220" r="13" fill="#5C6B7C"/>
+    <text x="108" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="140" y="224" font-weight="700">descriptor</text>
+    <text x="330" y="224">context: UCI/DCI；A/K/E/N, crc_len；i_il, i_bil, L；RNTI context</text>
+    <rect x="80" y="260" width="1340" height="56" rx="10" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <circle cx="108" cy="288" r="13" fill="#2F6E71"/>
+    <text x="108" y="292" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="140" y="292" font-weight="700">rate recovery</text>
+    <text x="330" y="292">sub-block reverse；bit selection reverse；punctured=0；shortened=+Lmax</text>
+    <rect x="80" y="328" width="1340" height="56" rx="10" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <circle cx="108" cy="356" r="13" fill="#6C7A2E"/>
+    <text x="108" y="360" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="140" y="360" font-weight="700">mask generator</text>
+    <text x="330" y="360">reliability slice；info set；frozen set；index base</text>
+    <rect x="80" y="396" width="1340" height="56" rx="10" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <circle cx="108" cy="424" r="13" fill="#7A6E8E"/>
+    <text x="108" y="428" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">4</text>
+    <text x="140" y="428" font-weight="700">SC/SCL core</text>
+    <text x="330" y="428">f/g tree；path split/prune；PM list；partial sums</text>
+    <rect x="80" y="464" width="1340" height="56" rx="10" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <circle cx="108" cy="492" r="13" fill="#B06F2B"/>
+    <text x="108" y="496" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">5</text>
+    <text x="140" y="496" font-weight="700">CRC/RNTI select</text>
+    <text x="330" y="496">CRC type；pass vector；PM tie-break；selected path</text>
+  </g>
+
+  <!-- ============ 面板 B：典型故障注入点 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="590" width="1380" height="480" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="620" font-size="16" font-weight="700" fill="#23272E">典型故障注入点</text>
+
+  <g font-size="12" fill="#23272E">
+    <rect x="80" y="644" width="320" height="108" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="98" y="672" font-weight="700" fill="#B06F2B">无 CRC 小负载</text>
+    <text x="98" y="700">selector 没有 CRC 约束</text>
+    <text x="98" y="722">必须靠分支和 PM 策略记录原因</text>
+    <rect x="412" y="644" width="320" height="108" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
+    <text x="430" y="672" font-weight="700" fill="#A6403C">CRC 长度错</text>
+    <text x="430" y="700">UCI 6/11 bit 或 DCI 24 bit 用错</text>
+    <text x="430" y="722">候选全 fail 或误 pass</text>
+    <rect x="744" y="644" width="320" height="108" rx="12" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="762" y="672" font-weight="700" fill="#7A6E8E">L 太小</text>
+    <text x="762" y="700">正确路径在中途被剪掉</text>
+    <text x="762" y="722">末端 CRC 无法恢复</text>
+    <rect x="1076" y="644" width="320" height="108" rx="12" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="1094" y="672" font-weight="700" fill="#7A6E8E">PM 并列</text>
+    <text x="1094" y="700">排序不稳定</text>
+    <text x="1094" y="722">回归同种子结果漂移</text>
+
+    <rect x="80" y="772" width="320" height="108" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="98" y="800" font-weight="700" fill="#2F6E71">puncture/shorten 错</text>
+    <text x="98" y="828">unknown 与 known-zero 互换</text>
+    <text x="98" y="850">高 SNR 仍失败</text>
+    <rect x="412" y="772" width="320" height="108" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="430" y="800" font-weight="700" fill="#6C7A2E">frozen mask 错</text>
+    <text x="430" y="828">信息位被强制或冻结位被分裂</text>
+    <text x="430" y="850">路径系统性偏移</text>
+    <rect x="744" y="772" width="320" height="108" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
+    <text x="762" y="800" font-weight="700" fill="#A6403C">UCI/DCI mismatch</text>
+    <text x="762" y="828">context 错导致 crc_len、RNTI、E</text>
+    <text x="762" y="850">或输出解释错误</text>
+    <rect x="1076" y="772" width="320" height="108" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="1094" y="800" font-weight="700" fill="#B06F2B">RNTI 边界错</text>
+    <text x="1094" y="828">DCI 盲检</text>
+    <text x="1094" y="850">误通过或漏检</text>
+  </g>
+
+  <!-- ============ 面板 C：最小 dump 包 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="1100" width="1380" height="280" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="1132" font-size="16" font-weight="700" fill="#23272E">最小 dump 包</text>
+  <g font-size="12.5" fill="#23272E">
+    <text x="90" y="1172">descriptor: context_type, A, K, E, N, crc_len, crc_poly_id, rnti_context, i_il, i_bil, list_size</text>
+    <text x="90" y="1212">sets: reliability_slice, info_set, frozen_set, frozen_mask_hash, info_mask_hash</text>
+    <text x="90" y="1252">rate recovery: punctured_set, shortened_set, repeated_addr, llr_init_snapshot, saturation_count</text>
+    <text x="90" y="1292">SCL: path_bits, PM list, sort_order, tie_break_key, prune_stage, partial_sum_hash</text>
+    <text x="90" y="1332">selector: CRC input range, CRC results, RNTI check, selected_path, fail_reason</text>
+  </g>
+
+  <!-- ============ 工程定位原则 ============ -->
+  <g filter="url(#soft)">
+    <rect x="60" y="1410" width="1380" height="70" rx="14" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+  </g>
+  <text x="90" y="1453" font-size="13" font-weight="700" fill="#23272E">工程定位原则：先证明输入和索引坐标正确，再怀疑 SC/SCL core；CRC fail 是现象，不是根因分类。</text>
+</svg>
