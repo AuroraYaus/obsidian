@@ -1,39 +1,49 @@
-# obsidian
+# obsidian — 3GPP LTE/NR 译码链路全栈教学知识库
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+3GPP LTE/NR 译码链路的全栈教学 Obsidian 知识库：从数学基础、物理层链路、信道编码算法，到浮点仿真、定点模型、RTL 微架构与验证，打通"理论推导 → 算法 → 硬件实现"的完整路径。
 
-#### 软件架构
-软件架构说明
+## 仓库结构
 
+```
+├── 3gpp/                    # 核心知识库（讲义/概念/审计/工具）
+│   ├── docs/L0_协议阅读引导/  # 协议阅读地图、术语总表（155 术语 + 71 概念索引）
+│   ├── docs/L1_基础/         # 数学基础、OFDM 与软解调、CRC/分段、译码理论、硬件基础
+│   ├── docs/L2_协议算法/     # 译码协议算法（Turbo/LDPC/Polar）、MIMO 接收、概率整形
+│   ├── docs/L3_工程实现/     # 译码器工程（仿真/定点/RTL/验证）、接收链路工程预算
+│   ├── docs/concepts/        # 概念图谱（71+ 概念笔记）
+│   ├── docs/audits/          # 审计台账与评审
+│   ├── sim/ tools/ tests/    # Python 仿真、审计工具链、单元测试
+│   ├── CLAUDE.md             # 会话硬性规则
+│   ├── 合规与遵从.md          # 22 条 Hard Constraints
+│   ├── 项目规则与记忆索引.md   # 规则/写作规范/同步清单一处总览
+│   └── README.md             # 知识库详细说明
+├── .obsidian/               # Obsidian 应用配置
+└── 3gpp/3GPP_Rel19/         # Rel-19 协议原文与结构化抽取
+```
 
-#### 安装教程
+## 快速开始
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. **详细说明**：见 [`3gpp/README.md`](3gpp/README.md)（知识库结构/讲义体系/阅读路径/质量体系）
+2. **阅读总入口**：`3gpp/docs/3GPP_讲义入口.md`
+3. **术语速查**：`3gpp/docs/L0_协议阅读引导/L0_terminology_glossary.md`
+4. **讲义体系**：L1 基础（T1-T5）→ L2 协议算法（M6-M13）→ L3 工程实现（T17-T21），全部完成 ✅
 
-#### 使用说明
+## 质量体系
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+- 合规基线：22 条 Hard Constraints（`3gpp/合规与遵从.md`）
+- SVG 图强制验证：几何审计 R1-R7（含边界间距 ≥8px、重叠禁止）
+- 讲义审计：术语配对 / LaTeX 渲染 / 深度 / 标题
+- 代码注释：DOXYGEN 风格强制
+- 全库同步：术语/入口/编号/资产/路径/台账八类同步清单（`3gpp/项目规则与记忆索引.md` 第六节）
 
-#### 参与贡献
+## 使用说明
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+- 推荐以 Obsidian 打开本仓库（vault），通过 `[[wikilink]]` 图谱导航
+- 讲义正文包含内嵌 numpy 验证代码，可独立运行复现数值结论
+- 概念层与讲义层双向链接，概念笔记为独立可读的六段式教学单元
 
+## 参与贡献
 
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1. 新增内容（概念笔记/讲义/术语）必须对照同步清单逐项完成
+2. 代码必须 DOXYGEN 注释 + 测试通过
+3. 提交后推送（gitee 2FA 账号需私人令牌）
