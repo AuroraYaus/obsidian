@@ -38,7 +38,26 @@
 
 ## 使用说明
 
-- 推荐以 Obsidian 打开本仓库（vault），通过 `[[wikilink]]` 图谱导航
+- 本仓库是一个 **Obsidian 知识库（vault）**，推荐用 Obsidian 打开以获得完整体验（`[[wikilink]]` 图谱导航、双链跳转、关系图谱）
+
+### Obsidian 下载与安装
+
+| 平台 | 下载方式 |
+|---|---|
+| **官网（推荐）** | 访问 [obsidian.md](https://obsidian.md/) → 页面右侧 **Download** 按钮；或直接打开 [obsidian.md/download](https://obsidian.md/download) 按平台选择 |
+| Windows | 官网下载 `.exe` 安装包（或 Microsoft Store 搜索 "Obsidian"） |
+| macOS | 官网下载 `.dmg`（或 App Store 搜索 "Obsidian"） |
+| Linux | 官网提供 AppImage / Snap / Flatpak / deb / rpm（Debian/Ubuntu 可用 `snap install obsidian`） |
+| iOS / Android | App Store / Google Play 搜索 "Obsidian"（移动端可同步阅读） |
+
+> Obsidian 个人使用**免费**（商用需订阅）；vault 就是一个普通文件夹，克隆本仓库后**直接"打开文件夹作为仓库"**即可，无需额外配置。
+
+### 打开本知识库
+
+1. 克隆仓库：`git clone https://gitee.com/aurorayaus/obsidian.git`
+2. 打开 Obsidian → **Open folder as vault** → 选择克隆下来的 `obsidian` 文件夹
+3. 从 `3gpp/docs/3GPP_讲义入口.md` 开始阅读；左侧文件树按 `L0_协议阅读引导 → L1_基础 → L2_协议算法 → L3_工程实现` 层级浏览
+
 - 讲义正文包含内嵌 numpy 验证代码，可独立运行复现数值结论
 - 概念层与讲义层双向链接，概念笔记为独立可读的六段式教学单元
 
