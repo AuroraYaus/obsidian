@@ -2,87 +2,87 @@
 <rect width="900" height="310" fill="white"/>
 <text x="450.0" y="20" text-anchor="middle" font-size="15" fill="#1565c0" font-weight="bold">微时隙 vs 普通时隙调度对比</text>
 <text x="84" y="81.0" text-anchor="end" font-size="13" fill="#2e7d32" font-weight="bold">普通时隙</text>
+<text x="446" y="41" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">14 符号整时隙调度</text>
 <rect x="100" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="121.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">0</text>
-<rect x="144" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="165.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">1</text>
-<rect x="188" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="209.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">2</text>
-<rect x="232" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="253.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">3</text>
-<rect x="276" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="297.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">4</text>
-<rect x="320" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="341.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">5</text>
-<rect x="364" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="385.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">6</text>
-<rect x="408" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="429.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">7</text>
-<rect x="452" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="473.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">8</text>
-<rect x="496" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="517.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">9</text>
-<rect x="540" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="561.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">10</text>
-<rect x="584" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="605.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">11</text>
-<rect x="628" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="649.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">12</text>
-<rect x="672" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="693.0" y="59" text-anchor="middle" font-size="8" fill="#2e7d32">13</text>
-<rect x="100" y="65" width="614" height="38" rx="3" fill="none" stroke="#2e7d32" stroke-width="2"/>
-<text x="408" y="49" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">14 符号整时隙调度</text>
+<text x="121.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">0</text>
+<rect x="150" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="171.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">1</text>
+<rect x="200" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="221.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">2</text>
+<rect x="250" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="271.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">3</text>
+<rect x="300" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="321.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">4</text>
+<rect x="350" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="371.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">5</text>
+<rect x="400" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="421.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">6</text>
+<rect x="450" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="471.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">7</text>
+<rect x="500" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="521.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">8</text>
+<rect x="550" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="571.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">9</text>
+<rect x="600" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="621.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">10</text>
+<rect x="650" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="671.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">11</text>
+<rect x="700" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="721.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">12</text>
+<rect x="750" y="65" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="771.0" y="56" text-anchor="middle" font-size="8" fill="#2e7d32">13</text>
+<rect x="100" y="65" width="692" height="38" rx="3" fill="none" stroke="#2e7d32" stroke-width="2"/>
 <text x="84" y="166.0" text-anchor="end" font-size="13" fill="#c62828" font-weight="bold">uRLLC 抢占</text>
 <rect x="100" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="121.0" y="144" text-anchor="middle" font-size="8" fill="#2e7d32">0</text>
-<rect x="144" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="165.0" y="144" text-anchor="middle" font-size="8" fill="#2e7d32">1</text>
-<rect x="188" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="209.0" y="144" text-anchor="middle" font-size="8" fill="#2e7d32">2</text>
-<rect x="232" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="253.0" y="144" text-anchor="middle" font-size="8" fill="#2e7d32">3</text>
-<rect x="276" y="150" width="42" height="38" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="0.8"/>
-<text x="297.0" y="144" text-anchor="middle" font-size="8" fill="#c62828">4</text>
-<rect x="320" y="150" width="42" height="38" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="0.8"/>
-<text x="341.0" y="144" text-anchor="middle" font-size="8" fill="#c62828">5</text>
-<rect x="364" y="150" width="42" height="38" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="0.8"/>
-<text x="385.0" y="144" text-anchor="middle" font-size="8" fill="#c62828">6</text>
-<rect x="408" y="150" width="42" height="38" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="0.8"/>
-<text x="429.0" y="144" text-anchor="middle" font-size="8" fill="#c62828">7</text>
-<rect x="452" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="473.0" y="144" text-anchor="middle" font-size="8" fill="#2e7d32">8</text>
-<rect x="496" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="517.0" y="144" text-anchor="middle" font-size="8" fill="#2e7d32">9</text>
-<rect x="540" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="561.0" y="144" text-anchor="middle" font-size="8" fill="#2e7d32">10</text>
-<rect x="584" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="605.0" y="144" text-anchor="middle" font-size="8" fill="#2e7d32">11</text>
-<rect x="628" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="649.0" y="144" text-anchor="middle" font-size="8" fill="#2e7d32">12</text>
-<rect x="672" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
-<text x="693.0" y="144" text-anchor="middle" font-size="8" fill="#2e7d32">13</text>
-<rect x="276" y="150" width="174" height="38" rx="3" fill="none" stroke="#c62828" stroke-width="2"/>
-<text x="363.0" y="134" text-anchor="middle" font-size="10" fill="#c62828" font-weight="bold">微时隙 符号4-7 长度4</text>
+<text x="121.0" y="141" text-anchor="middle" font-size="8" fill="#2e7d32">0</text>
+<rect x="150" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="171.0" y="141" text-anchor="middle" font-size="8" fill="#2e7d32">1</text>
+<rect x="200" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="221.0" y="141" text-anchor="middle" font-size="8" fill="#2e7d32">2</text>
+<rect x="250" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="271.0" y="141" text-anchor="middle" font-size="8" fill="#2e7d32">3</text>
+<rect x="300" y="150" width="42" height="38" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="0.8"/>
+<text x="321.0" y="141" text-anchor="middle" font-size="8" fill="#c62828">4</text>
+<rect x="350" y="150" width="42" height="38" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="0.8"/>
+<text x="371.0" y="141" text-anchor="middle" font-size="8" fill="#c62828">5</text>
+<rect x="400" y="150" width="42" height="38" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="0.8"/>
+<text x="421.0" y="141" text-anchor="middle" font-size="8" fill="#c62828">6</text>
+<rect x="450" y="150" width="42" height="38" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="0.8"/>
+<text x="471.0" y="141" text-anchor="middle" font-size="8" fill="#c62828">7</text>
+<rect x="500" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="521.0" y="141" text-anchor="middle" font-size="8" fill="#2e7d32">8</text>
+<rect x="550" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="571.0" y="141" text-anchor="middle" font-size="8" fill="#2e7d32">9</text>
+<rect x="600" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="621.0" y="141" text-anchor="middle" font-size="8" fill="#2e7d32">10</text>
+<rect x="650" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="671.0" y="141" text-anchor="middle" font-size="8" fill="#2e7d32">11</text>
+<rect x="700" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="721.0" y="141" text-anchor="middle" font-size="8" fill="#2e7d32">12</text>
+<rect x="750" y="150" width="42" height="38" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.8"/>
+<text x="771.0" y="141" text-anchor="middle" font-size="8" fill="#2e7d32">13</text>
+<rect x="300" y="150" width="192" height="38" rx="3" fill="none" stroke="#c62828" stroke-width="2"/>
+<text x="396" y="126" text-anchor="middle" font-size="10" fill="#c62828" font-weight="bold">微时隙 符号4-7 长度4</text>
 <text x="84" y="251.0" text-anchor="end" font-size="13" fill="#6a1b9a" font-weight="bold">波束 TDM</text>
-<rect x="100" y="235" width="174" height="38" rx="3" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.2"/>
-<text x="187.0" y="259.0" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">波束1</text>
-<text x="121.0" y="229" text-anchor="middle" font-size="8" fill="#1565c0">0</text>
-<text x="165.0" y="229" text-anchor="middle" font-size="8" fill="#1565c0">1</text>
-<text x="209.0" y="229" text-anchor="middle" font-size="8" fill="#1565c0">2</text>
-<text x="253.0" y="229" text-anchor="middle" font-size="8" fill="#1565c0">3</text>
-<rect x="276" y="235" width="218" height="38" rx="3" fill="#fff3e0" stroke="#e65100" stroke-width="1.2"/>
-<text x="385.0" y="259.0" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">波束2</text>
-<text x="297.0" y="229" text-anchor="middle" font-size="8" fill="#e65100">0</text>
-<text x="341.0" y="229" text-anchor="middle" font-size="8" fill="#e65100">1</text>
-<text x="385.0" y="229" text-anchor="middle" font-size="8" fill="#e65100">2</text>
-<text x="429.0" y="229" text-anchor="middle" font-size="8" fill="#e65100">3</text>
-<text x="473.0" y="229" text-anchor="middle" font-size="8" fill="#e65100">4</text>
-<rect x="496" y="235" width="218" height="38" rx="3" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.2"/>
-<text x="605.0" y="259.0" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">波束3</text>
-<text x="517.0" y="229" text-anchor="middle" font-size="8" fill="#2e7d32">0</text>
-<text x="561.0" y="229" text-anchor="middle" font-size="8" fill="#2e7d32">1</text>
-<text x="605.0" y="229" text-anchor="middle" font-size="8" fill="#2e7d32">2</text>
-<text x="649.0" y="229" text-anchor="middle" font-size="8" fill="#2e7d32">3</text>
-<text x="693.0" y="229" text-anchor="middle" font-size="8" fill="#2e7d32">4</text>
+<rect x="100" y="235" width="192" height="38" rx="3" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.2"/>
+<text x="196.0" y="259.0" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">波束1</text>
+<text x="121.0" y="226" text-anchor="middle" font-size="8" fill="#1565c0">0</text>
+<text x="171.0" y="226" text-anchor="middle" font-size="8" fill="#1565c0">1</text>
+<text x="221.0" y="226" text-anchor="middle" font-size="8" fill="#1565c0">2</text>
+<text x="271.0" y="226" text-anchor="middle" font-size="8" fill="#1565c0">3</text>
+<rect x="300" y="235" width="242" height="38" rx="3" fill="#fff3e0" stroke="#e65100" stroke-width="1.2"/>
+<text x="421.0" y="259.0" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">波束2</text>
+<text x="321.0" y="226" text-anchor="middle" font-size="8" fill="#e65100">0</text>
+<text x="371.0" y="226" text-anchor="middle" font-size="8" fill="#e65100">1</text>
+<text x="421.0" y="226" text-anchor="middle" font-size="8" fill="#e65100">2</text>
+<text x="471.0" y="226" text-anchor="middle" font-size="8" fill="#e65100">3</text>
+<text x="521.0" y="226" text-anchor="middle" font-size="8" fill="#e65100">4</text>
+<rect x="550" y="235" width="242" height="38" rx="3" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.2"/>
+<text x="671.0" y="259.0" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">波束3</text>
+<text x="571.0" y="226" text-anchor="middle" font-size="8" fill="#2e7d32">0</text>
+<text x="621.0" y="226" text-anchor="middle" font-size="8" fill="#2e7d32">1</text>
+<text x="671.0" y="226" text-anchor="middle" font-size="8" fill="#2e7d32">2</text>
+<text x="721.0" y="226" text-anchor="middle" font-size="8" fill="#2e7d32">3</text>
+<text x="771.0" y="226" text-anchor="middle" font-size="8" fill="#2e7d32">4</text>
 <text x="450.0" y="298" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">微时隙：时隙内任意符号起始，长度 2/4/7（下行），用于 uRLLC 抢占、波束 TDM、NR-U</text>
 </svg>

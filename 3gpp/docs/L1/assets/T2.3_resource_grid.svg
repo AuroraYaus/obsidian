@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
-<rect width="900" height="300" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="340" viewBox="0 0 940 340">
+<rect width="940" height="340" fill="white"/>
 <text x="450.0" y="22" text-anchor="middle" font-size="15" fill="#1565c0" font-weight="bold">NR 时频二维资源网格：1 PRB = 12 子载波 × 14 符号 = 168 RE</text>
 <rect x="100" y="65" width="42" height="18" fill="#f8fafc" stroke="#ddd" stroke-width="0.5"/>
 <rect x="142" y="65" width="42" height="18" fill="#f8fafc" stroke="#ddd" stroke-width="0.5"/>
@@ -171,18 +171,18 @@
 <rect x="646" y="263" width="42" height="18" fill="#f8fafc" stroke="#ddd" stroke-width="0.5"/>
 <rect x="100" y="65" width="588" height="216" fill="none" stroke="#1565c0" stroke-width="2.5" rx="2"/>
 <rect x="226" y="155" width="42" height="18" fill="#e65100" opacity="0.4" stroke="#e65100" stroke-width="2"/>
-<text x="274" y="171" font-size="10" fill="#c62828" font-weight="bold">1 RE</text>
-<text x="94" y="78.0" text-anchor="end" font-size="9" fill="#555">k=0</text>
-<text x="94" y="132.0" text-anchor="end" font-size="9" fill="#555">k=3</text>
-<text x="94" y="186.0" text-anchor="end" font-size="9" fill="#555">k=6</text>
-<text x="94" y="240.0" text-anchor="end" font-size="9" fill="#555">k=9</text>
-<text x="121.0" y="293" text-anchor="middle" font-size="9" fill="#555">l=0</text>
-<text x="247.0" y="293" text-anchor="middle" font-size="9" fill="#555">l=3</text>
-<text x="373.0" y="293" text-anchor="middle" font-size="9" fill="#555">l=6</text>
-<text x="499.0" y="293" text-anchor="middle" font-size="9" fill="#555">l=9</text>
-<text x="625.0" y="293" text-anchor="middle" font-size="9" fill="#555">l=12</text>
-<text x="394.0" y="313" text-anchor="middle" font-size="13" fill="black">时域 → l = 0,...,13（OFDM 符号）</text>
-<text x="28" y="177.0" text-anchor="middle" font-size="13" fill="black" transform="rotate(-90,28,177.0)">频域 → k</text>
+<text x="696" y="164" font-size="10" fill="#c62828" font-weight="bold">1 RE</text>
+<text x="90" y="78.0" text-anchor="end" font-size="9" fill="#555">k=0</text>
+<text x="90" y="132.0" text-anchor="end" font-size="9" fill="#555">k=3</text>
+<text x="90" y="186.0" text-anchor="end" font-size="9" fill="#555">k=6</text>
+<text x="90" y="240.0" text-anchor="end" font-size="9" fill="#555">k=9</text>
+<text x="121.0" y="297" text-anchor="middle" font-size="9" fill="#555">l=0</text>
+<text x="247.0" y="297" text-anchor="middle" font-size="9" fill="#555">l=3</text>
+<text x="373.0" y="297" text-anchor="middle" font-size="9" fill="#555">l=6</text>
+<text x="499.0" y="297" text-anchor="middle" font-size="9" fill="#555">l=9</text>
+<text x="625.0" y="297" text-anchor="middle" font-size="9" fill="#555">l=12</text>
+<text x="394.0" y="316" text-anchor="middle" font-size="13" fill="black">时域 → l = 0,...,13（OFDM 符号）</text>
+<text x="46" y="177.0" text-anchor="middle" font-size="13" fill="black" transform="rotate(-90,46,177.0)">频域 → k</text>
 <text x="712" y="291" font-size="12" fill="#333" font-weight="">1 RE=1子载波×1符号·Q_m bit/RE</text>
 <text x="712" y="313" font-size="12" fill="#1565c0" font-weight="bold">1 PRB=12子载波(纯频域)·NR解耦时隙</text>
 <text x="712" y="335" font-size="11" fill="#555" font-weight="">LTE PRB=12SC×1slot 时频绑定</text>
