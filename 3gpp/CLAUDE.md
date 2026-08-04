@@ -61,10 +61,13 @@ source_spec: "Local project instructions"
 
 验证步骤：
 1. **Y 坐标扫描**（必须）：提取所有 `<text>`、`<rect>`、`<line>` 的 y 坐标，逐层核对间距 ≥ 8 px
-2. **PNG 预览**（推荐）：`cairosvg` 或 ImageMagick `convert` 转 PNG，肉眼确认无交叠
-3. 确认通过后才能写入 `docs/L1/assets/` 并在正文引用
+2. **边界间距检查**（必须，可用 `tools/audit_svg_layout.py` 的 R6 规则）：文本框边界与**框外文字**（含 class="free" 的框外标注）及其他文本框边界保持适当距离（投影间距 ≥ 8 px）——文字不能紧贴其他文本框的边
+3. **PNG 预览**（推荐）：`cairosvg` 或 ImageMagick `convert` 转 PNG，肉眼确认无交叠
+4. 确认通过后才能写入 `docs/L1/assets/` 并在正文引用
 
-**教训来源**：2026-07-23 生成的 circular buffer 交错图因未做坐标扫描，箭头说明文字、分隔标签、目标格子挤在 4 px 范围内，用户立即发现文字交叠。详见 `memory/svg-render-verify-before-commit.md`。
+**教训来源**：
+- 2026-07-23 生成的 circular buffer 交错图因未做坐标扫描，箭头说明文字、分隔标签、目标格子挤在 4 px 范围内，用户立即发现文字交叠。详见 `memory/svg-render-verify-before-commit.md`。
+- 2026-08-04 T2.14 图 3 的"仿真验证：同时跑"文字与上方文本框边界仅约 2 px——框外文字必须与文本框边界留出 ≥ 8 px 间距，已固化为审计工具 R6 规则。
 
 ### 5. 合规基线
 

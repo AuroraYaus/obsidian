@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 """@file audit_svg_layout.py
-@brief 手绘教学 SVG 的布局几何审计工具：检查文字宿主、越界、重叠与箭头落点。
+@brief 手绘教学 SVG 的布局几何审计工具：检查文字宿主、越界、重叠、箭头落点与边界间距。
 @date 2026-08-04
 @note 服务 docs/L2/assets 手绘 SVG（PIL PNG 迁移项目）。
-     规则（对应任务几何审计五条）：
+     规则（对应任务几何审计六条）：
      (1) 每个 text 必须完整落在某个 rect 内（class="free" 的页级标题/箭头标注豁免，仅查重叠）；
      (2) text 不与任何非宿主 rect 相交；
      (3) 文字宽度不超出所在宿主 rect（内边距 4px）；
      (4) text-text 无重叠；
-     (5) 箭头 path 终点落在某条盒边上（容差 2px）。
+     (5) 箭头 path 终点落在某条盒边上（容差 2px）；
+     (6) 文本框边界与框外文字/其他文本框保持适当距离（投影间距 ≥ 8px，
+         含 class="free" 的框外文字——教训来源 2026-08-04 T2.14 图 3
+         "仿真验证"文字与上方 rect 下边界仅约 2px）。
      字体测量用系统 Noto Sans CJK（Regular/Bold），与 SVG font-family 栈首项一致。
 @usage python3 tools/audit_svg_layout.py <svg 文件...>
 @exit_code 0 = 全部 PASS，1 = 存在 FAIL
@@ -76,14 +79,20 @@ def parse_svg(path: Path) -> tuple[list[dict], list[dict], list[dict]]:
     texts: list[dict] = []
     paths: list[dict] = []
 
-    def walk(el: ET.Element) -> None:
-        """@brief 递归遍历 SVG 元素树，跳过 defs 子树。
+    def walk(el: ET.Element, inherit: dict | None = None) -> None:
+        """@brief 递归遍历 SVG 元素树，跳过 defs 子树；继承 <g> 上的
+        font-size / font-weight / text-anchor 属性（消除存量 SVG 假阳性）。
         @param el 当前 XML 元素
+        @param inherit 祖先 <g> 继承的属性字典
         @return None"""
         nonlocal rects, texts, paths
         if strip_ns(el.tag) == "defs":
             return
         tag = strip_ns(el.tag)
+        inh = dict(inherit or {})
+        for attr in ("font-size", "font-weight", "text-anchor"):
+            if el.get(attr) is not None:
+                inh[attr] = el.get(attr)
         if tag == "rect":
             x = float(el.get("x", "0"))
             y = float(el.get("y", "0"))
@@ -105,17 +114,38 @@ def parse_svg(path: Path) -> tuple[list[dict], list[dict], list[dict]]:
             content = "".join(el.itertext()).strip()
             if not content:
                 return
-            size = float(el.get("font-size", "12"))
-            bold = "700" in (el.get("font-weight") or "") or "bold" in (el.get("font-weight") or "").lower()
+            size = float(inh.get("font-size") or el.get("font-size") or "12")
+            fw = inh.get("font-weight") or el.get("font-weight") or ""
+            bold = "700" in fw or "bold" in fw.lower()
+            anchor = inh.get("text-anchor") or el.get("text-anchor") or "start"
+            # 多行文本：优先取子 tspan 的 (x, y, 文本) 行列表（父 text 常无 x/y 仅作容器）；
+            # 无 tspan 时用自身 x/y 作为单行。
+            lines: list[tuple[float, float, str]] = []
+            tx = float(el.get("x", "0"))
+            ty = float(el.get("y", "0"))
+            has_own_xy = el.get("x") is not None and el.get("y") is not None
+            for child in el.iter():
+                if strip_ns(child.tag) != "tspan":
+                    continue
+                t = "".join(child.itertext()).strip()
+                if not t:
+                    continue
+                cx = float(child.get("x", tx))
+                cy = float(child.get("y", ty))
+                lines.append((cx, cy, t))
+            if not lines:
+                lines = [(tx, ty, content)]
             texts.append(
                 {
-                    "x": float(el.get("x", "0")),
-                    "y": float(el.get("y", "0")),
+                    "x": lines[0][0],
+                    "y": lines[0][1],
                     "size": size,
                     "bold": bold,
                     "cls": el.get("class", ""),
                     "text": content,
-                    "anchor": el.get("text-anchor", "start"),
+                    "anchor": anchor,
+                    "lines": lines,
+                    "own_xy": has_own_xy,
                 }
             )
         elif tag == "path":
@@ -141,7 +171,7 @@ def parse_svg(path: Path) -> tuple[list[dict], list[dict], list[dict]]:
                 return
             paths.append({"pts": pts})
         for child in el:
-            walk(child)
+            walk(child, inh)
 
     walk(root)
     return rects, texts, paths
@@ -183,17 +213,25 @@ def boxes_overlap(
 
 
 def text_box(t: dict) -> tuple[float, float, float, float]:
-    """@brief 计算文字包围盒（x,y 为基线起点，向上偏移 0.8em 估算字框）。
+    """@brief 计算文字包围盒（x,y 为基线起点，向上偏移 0.9em 估算字框）。
+    支持多行（tspan）文本：包围盒为所有行包围盒的并集。
     @param t 文字字典
     @return (x0, y0, x1, y1)"""
-    w, h = text_metrics(t["text"], t["size"], t["bold"])
-    if t["anchor"] == "middle":
-        x0 = t["x"] - w / 2
-    elif t["anchor"] == "end":
-        x0 = t["x"] - w
-    else:
-        x0 = t["x"]
-    return (x0, t["y"] - h * 0.9, x0 + w, t["y"] + h * 0.1)
+    lines = t.get("lines") or [(t["x"], t["y"], t["text"])]
+    xs0, ys0, xs1, ys1 = [], [], [], []
+    for lx, ly, ltxt in lines:
+        w, h = text_metrics(ltxt, t["size"], t["bold"])
+        if t["anchor"] == "middle":
+            x0 = lx - w / 2
+        elif t["anchor"] == "end":
+            x0 = lx - w
+        else:
+            x0 = lx
+        xs0.append(x0)
+        ys0.append(ly - h * 0.9)
+        xs1.append(x0 + w)
+        ys1.append(ly + h * 0.1)
+    return (min(xs0), min(ys0), max(xs1), max(ys1))
 
 
 def audit_file(path: Path) -> tuple[bool, list[str]]:
@@ -250,6 +288,58 @@ def audit_file(path: Path) -> tuple[bool, list[str]]:
         )
         if not hit:
             fail("R5", f"path[{k}] 终点 ({ex},{ey}) 未落在任何盒边上")
+
+    # (6) 文本框边界与框外文字/其他文本框保持适当距离（投影间距 ≥ 8px）
+    MIN_GAP = 8.0
+    # 6a: rect 边界 vs 外部 text（含 class="free" 的框外文字；宿主文字跳过）
+    for i, r in enumerate(rects):
+        rb = (r["x"], r["y"], r["x"] + r["w"], r["y"] + r["h"])
+        for j, t in enumerate(texts):
+            tb = text_box(t)
+            if inside(tb[0] + 1, tb[1] + 1, r) and inside(tb[2] - 1, tb[3] - 1, r):
+                continue  # 宿主文字，间距规则不适用
+            dx = max(rb[0] - tb[2], tb[0] - rb[2], 0.0)
+            dy = max(rb[1] - tb[3], tb[1] - rb[3], 0.0)
+            if (dx > 0 or dy > 0) and dx < MIN_GAP and dy < MIN_GAP:
+                fail(
+                    "R6",
+                    f"rect[{i}] ({r['x']:.0f},{r['y']:.0f},{r['w']:.0f}x{r['h']:.0f}) 边界与外部 "
+                    f"text[{j}] '{t['text'][:18]}' 间距不足（投影间距 {max(dx, dy):.1f}px < {MIN_GAP}px）",
+                )
+    # 6b: rect-rect 边界间距（嵌套/相接的矩形跳过）
+    for i in range(len(rects)):
+        ra = (rects[i]["x"], rects[i]["y"], rects[i]["x"] + rects[i]["w"], rects[i]["y"] + rects[i]["h"])
+        for j in range(i + 1, len(rects)):
+            rb = (rects[j]["x"], rects[j]["y"], rects[j]["x"] + rects[j]["w"], rects[j]["y"] + rects[j]["h"])
+            if boxes_overlap(ra, rb, 0.0):
+                continue  # 重叠或相接（嵌套容器等）不查间距
+            dx = max(ra[0] - rb[2], rb[0] - ra[2], 0.0)
+            dy = max(ra[1] - rb[3], rb[1] - ra[3], 0.0)
+            if (dx > 0 or dy > 0) and dx < MIN_GAP and dy < MIN_GAP:
+                fail(
+                    "R6",
+                    f"rect[{i}] 与 rect[{j}] 边界间距不足"
+                    f"（投影间距 {max(dx, dy):.1f}px < {MIN_GAP}px）",
+                )
+
+    # (7) 任何形式的重叠都不允许：rect 部分重叠（完全嵌套的容器除外）
+    #     判据：两矩形相交，但既非 A 完全包含 B、也非 B 完全包含 A。
+    for i in range(len(rects)):
+        ra = (rects[i]["x"], rects[i]["y"], rects[i]["x"] + rects[i]["w"], rects[i]["y"] + rects[i]["h"])
+        for j in range(i + 1, len(rects)):
+            rb = (rects[j]["x"], rects[j]["y"], rects[j]["x"] + rects[j]["w"], rects[j]["y"] + rects[j]["h"])
+            if not boxes_overlap(ra, rb, 0.0):
+                continue
+            a_contains_b = ra[0] <= rb[0] and ra[1] <= rb[1] and ra[2] >= rb[2] and ra[3] >= rb[3]
+            b_contains_a = rb[0] <= ra[0] and rb[1] <= ra[1] and rb[2] >= ra[2] and rb[3] >= ra[3]
+            if a_contains_b or b_contains_a:
+                continue  # 嵌套容器为合法设计
+            fail(
+                "R7",
+                f"rect[{i}] 与 rect[{j}] 部分重叠（任何形式的重叠不允许）"
+                f"：A=({ra[0]:.0f},{ra[1]:.0f},{ra[2]:.0f}x{ra[3]:.0f}) "
+                f"B=({rb[0]:.0f},{rb[1]:.0f},{rb[2]:.0f}x{rb[3]:.0f})",
+            )
 
     return ok, findings
 
