@@ -29,6 +29,7 @@ source_spec: "Engineering methodology; decoder verification"
 - [[Fixed_Point_Numbers_定点数]]
 - [[RTL_Microarchitecture_RTL微架构]]
 - [[T5.5_decoder_hardware_verification_mindset]]
-- [[T13.6_bit_exact_regression_harness]]
-- [[T15.1_decoder_testbench_architecture]]
+- [[T18.6_bit_exact_regression_harness]]
+- [[T20.1_decoder_testbench_architecture]]
+- [[T21.6_throughput_and_full_link_roi]]
 - 关系语义：Bit-Exact 是验收标准——所有层级必须一致。

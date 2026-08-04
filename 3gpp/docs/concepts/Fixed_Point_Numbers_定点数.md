@@ -26,5 +26,6 @@ source_spec: "Engineering methodology; TS 36.212/38.212 decoder requirements"
 - [[LLR_对数似然比]]
 - [[LLR_Quantization_LLR量化]]
 - [[T5.1_fixed_point_numbers_for_LLR]]
-- [[T13.1_fixed_point_decoder_requirements]]
+- [[T18.1_fixed_point_decoder_requirements]]
+- [[T21.2_bitwidth_tracking_methodology]]
 - 关系语义：定点数是浮点算法到硬件整数运算的桥梁。

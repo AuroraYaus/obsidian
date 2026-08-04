@@ -27,5 +27,6 @@ SIMD 一条指令同时处理多数据。译码器 CN/VN 并行更新天然适�
 
 - [[Fixed_Point_Numbers_定点数]]
 - [[RTL_Microarchitecture_RTL微架构]]
-- [[T13.5_SIMD_memory_layout_decoders]]
+- [[T18.5_SIMD_memory_layout_decoders]]
+- [[T21.5_storage_and_area_estimation]]
 - 关系语义：SIMD 优化决定定点模型实际吞吐。
