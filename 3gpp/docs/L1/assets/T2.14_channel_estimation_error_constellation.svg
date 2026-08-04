@@ -8,7 +8,7 @@
 ③ 空心圆 = 发送星座参考位置；实心点 = 均衡后接收点；
 ④ 底部：256QAM 敏感性与接收机诊断字段。
 -->
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="640" viewBox="0 0 900 640" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 640" role="img">
 <title>信道估计误差对均衡后星座的影响</title>
 <rect width="900" height="640" fill="#ffffff"/>
 <style>
@@ -101,5 +101,5 @@
 <text x="496" y="566" font-size="13" text-anchor="start" class="free">pilot residual 与 data EVM 分开记录</text>
 <text x="496" y="590" font-size="13" text-anchor="start" class="free">Ĥ 幅相 heatmap：按 PRB × 符号展开</text>
 <text x="496" y="612" font-size="13" text-anchor="start" class="free">频域条纹 → 插值问题；时域条纹 → Doppler</text>
-<text x="450" y="634" font-size="12" text-anchor="middle" class="free">仿真验证：同时跑 perfect 与 practical 两条曲线，差值即信道估计损失</text>
+<text x="450" y="642" font-size="12" text-anchor="middle" class="free">仿真验证：同时跑 perfect 与 practical 两条曲线，差值即信道估计损失</text>
 </svg>
