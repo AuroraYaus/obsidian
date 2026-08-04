@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T21.2_bitwidth_waterfall.svg
+  @brief   T21.2 位宽追踪瀑布图：TX 14 级 + RX 18 级共 32 级，柱高 = HW 建议位宽，
+          细线 = HW 最坏；关键行标记 🔴 Rhh 24-bit real / ⚡ MMSE 归一化 ∞ / ✅ LLR ±31。
+  @date    2026-08-04
+  @note    口径：素材 PHY01 §7.2 全链路位宽表（52PRB 峰值配置 1024QAM+PS+4 层）。
+          布局：标题带 -> 图例 -> TX/RX 带标 -> 32 级柱（槽宽 48px，y 比例 9px/bit）
+          -> 水平 x 轴标签 -> 注脚。文字层级间距 >= 8px。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="1660" height="620" viewBox="0 0 1660 620" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>T21.2 Bitwidth Waterfall: TX 14 + RX 18 Stages</title>
+  <rect x="40" y="16" width="1580" height="58" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="830" y="42" font-size="19" font-weight="700" fill="#152033" text-anchor="middle">T21.2 位宽追踪瀑布图：TX 14 级 + RX 18 级（HW 建议位宽）</text>
+  <text x="830" y="68" font-size="12.5" fill="#455A64" text-anchor="middle">柱高 = HW 建议位宽（bit）；细线 = HW 最坏；🔴 最大确定性位宽 / ⚡ 无界危险点 / ✅ 安全裁剪点</text>
+  <text x="90" y="104" font-size="12" fill="#334155" text-anchor="start" class="free">🔴 Rhh 24-bit real（最大确定性位宽）</text>
+  <text x="480" y="104" font-size="12" fill="#334155" text-anchor="start" class="free">⚡ MMSE 归一化 ∞（无界危险点）</text>
+  <text x="840" y="104" font-size="12" fill="#334155" text-anchor="start" class="free">✅ LLR ±31（安全裁剪点）</text>
+  <text x="1150" y="104" font-size="12" fill="#334155" text-anchor="start" class="free">细线 = HW 最坏</text>
+  <text x="402" y="130" font-size="13" font-weight="700" fill="#1D4ED8" text-anchor="middle" class="free">TX 14 级</text>
+  <text x="1218" y="130" font-size="13" font-weight="700" fill="#B45309" text-anchor="middle" class="free">RX 18 级</text>
+  <line x1="762" y1="170" x2="762" y2="440" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <line x1="90" y1="440" x2="1630" y2="440" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="74" y="443" font-size="10.5" fill="#334155" text-anchor="end" class="free">0</text>
+  <line x1="90" y1="386" x2="1630" y2="386" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="74" y="389" font-size="10.5" fill="#334155" text-anchor="end" class="free">6</text>
+  <line x1="90" y1="332" x2="1630" y2="332" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="74" y="335" font-size="10.5" fill="#334155" text-anchor="end" class="free">12</text>
+  <line x1="90" y1="278" x2="1630" y2="278" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="74" y="281" font-size="10.5" fill="#334155" text-anchor="end" class="free">18</text>
+  <line x1="90" y1="224" x2="1630" y2="224" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="74" y="227" font-size="10.5" fill="#334155" text-anchor="end" class="free">24</text>
+  <line x1="90" y1="170" x2="1630" y2="170" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="74" y="173" font-size="10.5" fill="#334155" text-anchor="end" class="free">30</text>
+  <line x1="90" y1="440" x2="1630" y2="440" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="97" y="431" width="34" height="9" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <rect x="145" y="431" width="34" height="9" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <rect x="193" y="431" width="34" height="9" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <rect x="241" y="431" width="34" height="9" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <rect x="289" y="431" width="34" height="9" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <rect x="337" y="296" width="34" height="144" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <text x="354" y="308" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">16</text>
+  <line x1="371" y1="296" x2="371" y2="278" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="367" y1="278" x2="375" y2="278" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="385" y="296" width="34" height="144" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <text x="402" y="308" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">16</text>
+  <rect x="433" y="269" width="34" height="171" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <text x="450" y="281" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">19</text>
+  <line x1="467" y1="269" x2="467" y2="260" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="463" y1="260" x2="471" y2="260" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="481" y="260" width="34" height="180" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <text x="498" y="272" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">20</text>
+  <line x1="515" y1="260" x2="515" y2="251" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="511" y1="251" x2="519" y2="251" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="529" y="260" width="34" height="180" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 2"/>
+  <rect x="577" y="296" width="34" height="144" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <text x="594" y="308" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">16</text>
+  <line x1="611" y1="296" x2="611" y2="278" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="607" y1="278" x2="615" y2="278" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="625" y="260" width="34" height="180" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <text x="642" y="272" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">20</text>
+  <line x1="659" y1="260" x2="659" y2="188" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="655" y1="188" x2="663" y2="188" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="673" y="296" width="34" height="144" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <text x="690" y="308" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">16</text>
+  <line x1="707" y1="296" x2="707" y2="278" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="703" y1="278" x2="711" y2="278" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="721" y="314" width="34" height="126" fill="#3B82F6" stroke="#3B82F6" stroke-width="1"/>
+  <text x="738" y="326" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">14</text>
+  <line x1="755" y1="314" x2="755" y2="296" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="751" y1="296" x2="759" y2="296" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="769" y="314" width="34" height="126" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="786" y="326" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">14</text>
+  <line x1="803" y1="314" x2="803" y2="296" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="799" y1="296" x2="807" y2="296" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="817" y="278" width="34" height="162" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="834" y="290" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">18</text>
+  <line x1="851" y1="278" x2="851" y2="242" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="847" y1="242" x2="855" y2="242" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="865" y="296" width="34" height="144" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="882" y="308" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">16</text>
+  <line x1="899" y1="296" x2="899" y2="260" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="895" y1="260" x2="903" y2="260" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="913" y="260" width="34" height="180" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="930" y="272" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">20</text>
+  <line x1="947" y1="260" x2="947" y2="224" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="943" y1="224" x2="951" y2="224" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="961" y="278" width="34" height="162" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="978" y="290" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">18</text>
+  <line x1="995" y1="278" x2="995" y2="242" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="991" y1="242" x2="999" y2="242" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="1009" y="278" width="34" height="162" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1" stroke-dasharray="3 2"/>
+  <rect x="1057" y="224" width="34" height="216" fill="#DC2626" stroke="#DC2626" stroke-width="1"/>
+  <text x="1074" y="236" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">24</text>
+  <line x1="1091" y1="224" x2="1091" y2="188" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="1087" y1="188" x2="1095" y2="188" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="1105" y="260" width="34" height="180" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="1122" y="272" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">20</text>
+  <line x1="1139" y1="260" x2="1139" y2="224" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="1135" y1="224" x2="1143" y2="224" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="1153" y="278" width="34" height="162" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="1170" y="290" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">18</text>
+  <line x1="1187" y1="278" x2="1187" y2="242" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="1183" y1="242" x2="1191" y2="242" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="1201" y="296" width="34" height="144" fill="#475569" stroke="#475569" stroke-width="1"/>
+  <text x="1218" y="308" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">16</text>
+  <rect x="1249" y="368" width="34" height="72" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="1266" y="380" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">8</text>
+  <line x1="1283" y1="368" x2="1283" y2="296" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="1279" y1="296" x2="1287" y2="296" stroke="#64748B" stroke-width="1.5"/>
+  <rect x="1297" y="386" width="34" height="54" fill="#16A34A" stroke="#16A34A" stroke-width="1"/>
+  <rect x="1345" y="386" width="34" height="54" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="1362" y="398" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <rect x="1393" y="386" width="34" height="54" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="1410" y="398" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <rect x="1441" y="386" width="34" height="54" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="1458" y="398" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+  <rect x="1489" y="368" width="34" height="72" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="1506" y="380" font-size="10" font-weight="700" fill="#FFFFFF" text-anchor="middle">8</text>
+  <rect x="1537" y="431" width="34" height="9" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <rect x="1585" y="431" width="34" height="9" fill="#F59E0B" stroke="#F59E0B" stroke-width="1"/>
+  <text x="1074" y="180" font-size="11.5" font-weight="700" fill="#DC2626" text-anchor="middle" class="free">🔴 24-bit real</text>
+  <line x1="1218" y1="296" x2="1218" y2="168" stroke="#B91C1C" stroke-width="1.2" stroke-dasharray="3 2"/>
+  <text x="1218" y="158" font-size="13" font-weight="700" fill="#B91C1C" text-anchor="middle" class="free">⚡ ∞</text>
+  <text x="1314" y="372" font-size="11.5" font-weight="700" fill="#16A34A" text-anchor="middle" class="free">✅±31</text>
+  <text x="642" y="180" font-size="10.5" font-weight="700" fill="#B45309" text-anchor="middle" class="free">28-bit 上界</text>
+  <text x="114" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">源比特</text>
+  <text x="162" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">ESS编码</text>
+  <text x="210" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">LDPC编码</text>
+  <text x="258" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">速率匹配</text>
+  <text x="306" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">加扰</text>
+  <text x="354" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">QAM映射</text>
+  <text x="402" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">层映射</text>
+  <text x="450" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">PS缩放</text>
+  <text x="498" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">预编码</text>
+  <text x="546" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">DMRS</text>
+  <text x="594" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">IFFT√N</text>
+  <text x="642" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">IFFT无缩</text>
+  <text x="690" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">CP</text>
+  <text x="738" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">DAC</text>
+  <text x="786" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">ADC</text>
+  <text x="834" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">FFT√N</text>
+  <text x="882" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">CH完美</text>
+  <text x="930" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">CH实践</text>
+  <text x="978" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">天线层H</text>
+  <text x="1026" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">RE提取</text>
+  <text x="1074" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">Rhh</text>
+  <text x="1122" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">Cholesky</text>
+  <text x="1170" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">MMSE均衡</text>
+  <text x="1218" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">MMSE归一</text>
+  <text x="1266" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">LLR未裁</text>
+  <text x="1314" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">LLR±31</text>
+  <text x="1362" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">CSI加权</text>
+  <text x="1410" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">解扰</text>
+  <text x="1458" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">LDPC输入</text>
+  <text x="1506" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">LDPC内部</text>
+  <text x="1554" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">ESS解码</text>
+  <text x="1602" y="458" font-size="10" fill="#334155" text-anchor="middle" class="free">TB输出</text>
+  <text x="90" y="510" font-size="11" fill="#455A64" text-anchor="start" class="free">注：柱高 = HW 建议位宽（TX 蓝 / RX 橙，52PRB 峰值配置）；细线 = HW 最坏；1-bit 打包行与无增长直通级（DMRS/RE 提取）不标值</text>
+  <text x="90" y="532" font-size="11" fill="#455A64" text-anchor="start" class="free">口径：素材 PHY01 §7.2 全链路位宽表；🔴 最大确定性位宽 Rhh 24-bit real / ⚡ 无界危险点 MMSE ∞ / ✅ 安全裁剪点 LLR ±31（推导见 T21.2 正文）</text>
+</svg>
