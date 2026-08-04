@@ -10,10 +10,10 @@
   </defs>
 
   <!-- 标题区 -->
-  <text x="500" y="38" text-anchor="middle" font-size="24" font-weight="bold" fill="#17212F">16QAM 单符号软解调：LLR 先验偏置示意</text>
-  <text x="500" y="64" text-anchor="middle" font-size="16" fill="#3A4658">接收点 y=(2.2, 0.5)/√10 落在内、外圈之间而更靠外圈——均匀先验判外圈，MB 先验判内圈</text>
-  <text x="500" y="92" text-anchor="middle" font-size="14" fill="#3A4658">圆大小 ∝ MB 先验权重 P(s) ∝ e^(−ν̃|s|²)：内圈 0.776 / 边点 0.281 / 角点 0.102（ν=0.127，即 ν̃=1.27）</text>
-  <text x="500" y="114" text-anchor="middle" font-size="14" fill="#3A4658">★ 接收点 y（幅度坐标）　灰色虚线箭头：均匀先验 LLR 方向（判外圈 b2=1）　蓝色实线箭头：MB 先验修正方向（判内圈 b2=0）</text>
+  <text x="500" y="38" text-anchor="middle" font-size="24" font-weight="bold" fill="#17212F" class="free">16QAM 单符号软解调：LLR 先验偏置示意</text>
+  <text x="500" y="64" text-anchor="middle" font-size="16" fill="#3A4658" class="free">接收点 y=(2.2, 0.5)/√10 落在内、外圈之间而更靠外圈——均匀先验判外圈，MB 先验判内圈</text>
+  <text x="500" y="92" text-anchor="middle" font-size="14" fill="#3A4658" class="free">圆大小 ∝ MB 先验权重 P(s) ∝ e^(−ν̃|s|²)：内圈 0.776 / 边点 0.281 / 角点 0.102（ν=0.127，即 ν̃=1.27）</text>
+  <text x="500" y="114" text-anchor="middle" font-size="14" fill="#3A4658" class="free">★ 接收点 y（幅度坐标）　灰色虚线箭头：均匀先验 LLR 方向（判外圈 b2=1）　蓝色实线箭头：MB 先验修正方向（判内圈 b2=0）</text>
 
   <!-- 坐标轴（幅度坐标 ±1, ±3，比例 62 px/单位，原点 (500,400)） -->
   <line x1="314" y1="400" x2="686" y2="400" stroke="#D8DEE6" stroke-width="1"/>
@@ -41,9 +41,9 @@
   <circle cx="686" cy="586" r="5.5" fill="#F2F6FC" stroke="#8AA6C4" stroke-width="1.2"/>
 
   <!-- 接收点 y=(2.2, 0.5)/√10 → (636, 369) -->
-  <path d="M636,355 L641,365 L652,365 L643,371 L646,382 L636,376 L626,382 L629,371 L620,365 L631,365 Z"
+  <polygon points="636,355 641,365 652,365 643,371 646,382 636,376 626,382 629,371 620,365 631,365"
         fill="#D64541" stroke="#B03530" stroke-width="1"/>
-  <text x="646" y="392" font-size="13" fill="#B03530">y</text>
+  <text x="646" y="392" font-size="13" fill="#B03530" class="free">y</text>
 
   <!-- 均匀先验 LLR 方向：指向外圈边点 (3,1)/√10 = (686,338) -->
   <line x1="630" y1="366" x2="678" y2="344" stroke="#8A8F98" stroke-width="2.2"
@@ -53,12 +53,12 @@
         marker-end="url(#arrowBlue)"/>
 
   <!-- 箭头说明（画布左右两侧空白区） -->
-  <text x="708" y="300" font-size="14" fill="#5A6070">均匀先验：距离主导</text>
-  <text x="708" y="320" font-size="14" fill="#5A6070">外圈被判更可信（LLR −0.39）</text>
-  <text x="150" y="300" font-size="14" fill="#2F6DB3">MB 先验：外圈权重被压低</text>
-  <text x="150" y="320" font-size="14" fill="#2F6DB3">LLR 回摆判内圈（+0.63）</text>
+  <text x="708" y="300" font-size="14" fill="#5A6070" class="free">均匀先验：距离主导</text>
+  <text x="708" y="320" font-size="14" fill="#5A6070" class="free">外圈被判更可信（LLR −0.39）</text>
+  <text x="150" y="300" font-size="14" fill="#2F6DB3" class="free">MB 先验：外圈权重被压低</text>
+  <text x="150" y="320" font-size="14" fill="#2F6DB3" class="free">LLR 回摆判内圈（+0.63）</text>
 
   <!-- 底部结论区 -->
-  <text x="500" y="640" text-anchor="middle" font-size="14" fill="#17212F">幅度位 b2（位 3）：均匀先验 LLR = −0.39（判外圈）→ MB 先验 +0.63（判内圈）；先验偏置 ΔLLR = +1.016 nats = 8ν（与接收点无关）</text>
-  <text x="500" y="662" text-anchor="middle" font-size="14" fill="#3A4658">sign 位近似不变：b1 偏移仅 −0.03 nats（先验只依赖幅度，± 镜像候选权重相同）——修正集中在幅度位</text>
+  <text x="500" y="640" text-anchor="middle" font-size="14" fill="#17212F" class="free">幅度位 b2（位 3）：均匀先验 LLR = −0.39（判外圈）→ MB 先验 +0.63（判内圈）；先验偏置 ΔLLR = +1.016 nats = 8ν（与接收点无关）</text>
+  <text x="500" y="662" text-anchor="middle" font-size="14" fill="#3A4658" class="free">sign 位近似不变：b1 偏移仅 −0.03 nats（先验只依赖幅度，± 镜像候选权重相同）——修正集中在幅度位</text>
 </svg>

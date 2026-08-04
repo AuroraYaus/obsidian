@@ -83,7 +83,7 @@
 
   <!-- ============ 中部：LTE RV 环 vs NR CBG 粒度 ============ -->
   <g filter="url(#soft)">
-    <rect x="60" y="630" width="1380" height="640" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+    <rect x="60" y="630" width="1400" height="640" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
   </g>
   <text x="90" y="662" font-size="16" font-weight="700" fill="#23272E">LTE: RV 是同一 ring buffer 的窗口</text>
   <text x="770" y="662" font-size="16" font-weight="700" fill="#23272E">NR: CBG mask 改变重传粒度</text>

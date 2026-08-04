@@ -10,8 +10,8 @@
   </defs>
 
   <!-- 标题区 -->
-  <text x="550" y="40" text-anchor="middle" font-size="26" font-weight="bold" fill="#17212F">整形增益的 ROI 账本：增益侧 vs 代价侧</text>
-  <text x="550" y="70" text-anchor="middle" font-size="15" fill="#3A4658">评估 PS 的价值必须把增益与代价放进同一个账本、按场景算账——不是只看 dB（U8）</text>
+  <text x="550" y="40" text-anchor="middle" font-size="26" font-weight="bold" fill="#17212F" class="free">整形增益的 ROI 账本：增益侧 vs 代价侧</text>
+  <text x="550" y="70" text-anchor="middle" font-size="15" fill="#3A4658" class="free">评估 PS 的价值必须把增益与代价放进同一个账本、按场景算账——不是只看 dB（U8）</text>
 
   <!-- 左栏：增益侧 -->
   <rect x="60" y="100" width="450" height="46" rx="6" fill="#2F6DB3"/>
@@ -55,8 +55,8 @@
   <line x1="550" y1="170" x2="550" y2="510" stroke="#B8C2CF" stroke-width="1.5" stroke-dasharray="6,5"/>
   <line x1="518" y1="300" x2="582" y2="300" stroke="#8A8F98" stroke-width="2.2"
         marker-start="url(#arrowLeft)" marker-end="url(#arrowRight)"/>
-  <text x="550" y="336" text-anchor="middle" font-size="15" fill="#5A6070">对 账</text>
-  <text x="550" y="360" text-anchor="middle" font-size="15" fill="#5A6070">核 算</text>
+  <text x="550" y="336" text-anchor="middle" font-size="15" fill="#5A6070" class="free">对 账</text>
+  <text x="550" y="360" text-anchor="middle" font-size="15" fill="#5A6070" class="free">核 算</text>
 
   <!-- 底部 ROI 结论条 -->
   <rect x="60" y="560" width="980" height="120" rx="8" fill="#F5F7FA" stroke="#C9D6E4" stroke-width="1.5"/>
@@ -65,6 +65,6 @@
   <text x="550" y="652" text-anchor="middle" font-size="15" fill="#B04A2E">TDL 衰落：0.3–0.6 dB ≈ 账单（+55% gates 不变）→ ROI 谨慎，需按部署场景核算</text>
 
   <!-- 页脚 -->
-  <text x="550" y="712" text-anchor="middle" font-size="13" fill="#8A8F98">素材口径：PS01 §7.2 实测区间与 §7.3 衰落三机制；理论清单 G 节（gates/SRAM/功耗、61,440 预算、486,720 cycles、存储占比、7–14×、PA back-off）</text>
-  <text x="550" y="738" text-anchor="middle" font-size="13" fill="#8A8F98">T13.6 ROI 账本图——增益侧（蓝）与代价侧（橙）同账；公平口径四要素是审计任何 PS 报告的第一步</text>
+  <text x="550" y="712" text-anchor="middle" font-size="13" fill="#8A8F98" class="free">素材口径：PS01 §7.2 实测区间与 §7.3 衰落三机制；理论清单 G 节（gates/SRAM/功耗、61,440 预算、486,720 cycles、存储占比、7–14×、PA back-off）</text>
+  <text x="550" y="738" text-anchor="middle" font-size="13" fill="#8A8F98" class="free">T13.6 ROI 账本图——增益侧（蓝）与代价侧（橙）同账；公平口径四要素是审计任何 PS 报告的第一步</text>
 </svg>

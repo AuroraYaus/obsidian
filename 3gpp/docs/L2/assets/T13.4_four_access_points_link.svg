@@ -7,8 +7,8 @@
   </defs>
 
   <!-- 标题 -->
-  <text x="780" y="36" font-size="22" font-weight="bold" text-anchor="middle" fill="#1F3B57">图 1：PS 嵌入 NR 的四个接入点——NR spine 复用，四处替换</text>
-  <text x="780" y="62" font-size="13" text-anchor="middle" fill="#5A6B7C">蓝色为 NR spine（全部复用不改）；橙色为 PS 专属替换点；数据路径各级只认长度与统计约定、不认内容语义</text>
+  <text x="780" y="36" font-size="22" font-weight="bold" text-anchor="middle" fill="#1F3B57" class="free">图 1：PS 嵌入 NR 的四个接入点——NR spine 复用，四处替换</text>
+  <text x="780" y="62" font-size="13" text-anchor="middle" fill="#5A6B7C" class="free">蓝色为 NR spine（全部复用不改）；橙色为 PS 专属替换点；数据路径各级只认长度与统计约定、不认内容语义</text>
 
   <!-- 接入点 1、2 标签（上方）与竖直引线 -->
   <g>
@@ -42,8 +42,8 @@
 
     <!-- 信道（非 spine 组件，灰色） -->
     <ellipse cx="720" cy="212" rx="80" ry="32" fill="#EEEEEE" stroke="#888888" stroke-width="1.5" stroke-dasharray="5 3"/>
-    <text x="720" y="190" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">无线信道</text>
-    <text x="720" y="236" font-size="12" text-anchor="middle" fill="#777777">TX → RX</text>
+    <text x="720" y="190" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555" class="free">无线信道</text>
+    <text x="720" y="236" font-size="12" text-anchor="middle" fill="#777777" class="free">TX → RX</text>
 
     <line x1="800" y1="212" x2="828" y2="212" stroke="#2E6DA4" stroke-width="2.5" marker-end="url(#arrow)"/>
 
@@ -86,14 +86,14 @@
   <line x1="1390" y1="290" x2="1390" y2="212" stroke="#C55A11" stroke-width="1.5" stroke-dasharray="4 3"/>
 
   <!-- 图例 -->
-  <text x="60" y="445" font-size="15" font-weight="bold" fill="#1F3B57">图例</text>
+  <text x="60" y="445" font-size="15" font-weight="bold" fill="#1F3B57" class="free">图例</text>
 
   <rect x="60" y="462" width="18" height="10" rx="2" fill="#D6E9F8" stroke="#2E6DA4" stroke-width="1"/>
-  <text x="90" y="480" font-size="13" fill="#333333">NR spine：nrDLSCH / OFDM-QAM / 检测器 / nrDLSCHDecoder 全部复用不改（协议行为原样执行）</text>
+  <text x="90" y="480" font-size="13" fill="#333333" class="free">NR spine：nrDLSCH / OFDM-QAM / 检测器 / nrDLSCHDecoder 全部复用不改（协议行为原样执行）</text>
 
   <rect x="60" y="492" width="18" height="10" rx="2" fill="#FCE4D6" stroke="#C55A11" stroke-width="1"/>
-  <text x="90" y="510" font-size="13" fill="#333333">接入点：PS 专属替换（4 处），TX/RX 严格对称——接入点 2 ↔ 接入点 3 后半段（解扰）</text>
+  <text x="90" y="510" font-size="13" fill="#333333" class="free">接入点：PS 专属替换（4 处），TX/RX 严格对称——接入点 2 ↔ 接入点 3 后半段（解扰）</text>
 
   <rect x="60" y="522" width="18" height="10" rx="2" fill="#EEEEEE" stroke="#888888" stroke-width="1"/>
-  <text x="90" y="540" font-size="13" fill="#333333">根基：各级只认长度与统计约定、不认内容语义——任何破坏约定（长度、均匀性）的改动都会撑破架构</text>
+  <text x="90" y="540" font-size="13" fill="#333333" class="free">根基：各级只认长度与统计约定、不认内容语义——任何破坏约定（长度、均匀性）的改动都会撑破架构</text>
 </svg>

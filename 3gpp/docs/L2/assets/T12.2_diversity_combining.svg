@@ -58,7 +58,7 @@
 <rect x="680" y="220" width="160" height="64" rx="8" ry="8" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5"/>
 <text x="760" y="255" text-anchor="middle" font-size="20" font-weight="700" fill="#db2777" class="lat">ŝ</text>
 <text x="760" y="273" text-anchor="middle" font-size="10" fill="#9d174d" class="cjk">合并符号估计</text>
-<text x="760" y="305" text-anchor="middle" font-size="13" fill="#1e293b" class="lat">SNR_out = ‖h‖²/σ²</text>
+<text x="760" y="310" text-anchor="middle" font-size="13" fill="#1e293b" class="lat">SNR_out = ‖h‖²/σ²</text>
 <text x="760" y="330" text-anchor="middle" font-size="11" fill="#475569" class="cjk">输出 SNR 等于各支路 SNR 之和</text>
 
 <!-- 底部结论行 -->
