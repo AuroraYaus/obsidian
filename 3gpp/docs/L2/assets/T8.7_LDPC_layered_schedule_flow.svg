@@ -28,9 +28,9 @@
   </defs>
 
   <!-- ============ 标题 ============ -->
-  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433">LDPC Flooding 与 Layered 译码调度</text>
-  <text x="35" y="60" font-size="12" fill="#5B6877">Layered schedule 不是新的码结构，而是按 TS 38.212 的 BG row group / QC-LDPC 连接顺序组织消息更新。</text>
-  <text x="35" y="78" font-size="12" fill="#5B6877">核心差异是同一 iteration 内是否立即使用刚更新的变量节点值。</text>
+  <text x="35" y="34" font-size="18" font-weight="700" class="free" fill="#1B2433">LDPC Flooding 与 Layered 译码调度</text>
+  <text x="35" y="60" font-size="12" class="free" fill="#5B6877">Layered schedule 不是新的码结构，而是按 TS 38.212 的 BG row group / QC-LDPC 连接顺序组织消息更新。</text>
+  <text x="35" y="78" font-size="12" class="free" fill="#5B6877">核心差异是同一 iteration 内是否立即使用刚更新的变量节点值。</text>
 
   <!-- ============ Flooding 与 Layered 时序差异 ============ -->
   <g filter="url(#soft)">
@@ -41,16 +41,16 @@
   <!-- Flooding 行 -->
   <g font-size="12.5" font-weight="700" fill="#1B2433" text-anchor="middle">
     <rect x="55" y="145" width="135" height="80" rx="10" fill="#EDF1F6" stroke="#72839B" stroke-width="1.2"/>
-    <text x="122" y="172">CN all rows</text>
-    <text x="122" y="196" font-size="11.5" font-weight="400" fill="#5B6877">先用旧变量消息计算</text>
-    <text x="122" y="212" font-size="11.5" font-weight="400" fill="#5B6877">所有校验节点。</text>
+    <text x="122" y="172" text-anchor="middle">CN all rows</text>
+    <text x="122" y="196" font-size="11.5" font-weight="400" fill="#5B6877" text-anchor="middle">先用旧变量消息计算</text>
+    <text x="122" y="212" font-size="11.5" font-weight="400" fill="#5B6877" text-anchor="middle">所有校验节点。</text>
     <rect x="215" y="145" width="135" height="80" rx="10" fill="#EDF1F6" stroke="#72839B" stroke-width="1.2"/>
-    <text x="282" y="172">VN all cols</text>
-    <text x="282" y="196" font-size="11.5" font-weight="400" fill="#5B6877">再统一更新所有</text>
-    <text x="282" y="212" font-size="11.5" font-weight="400" fill="#5B6877">变量节点。</text>
+    <text x="282" y="172" text-anchor="middle">VN all cols</text>
+    <text x="282" y="196" font-size="11.5" font-weight="400" fill="#5B6877" text-anchor="middle">再统一更新所有</text>
+    <text x="282" y="212" font-size="11.5" font-weight="400" fill="#5B6877" text-anchor="middle">变量节点。</text>
     <rect x="375" y="145" width="135" height="80" rx="10" fill="#EDF1F6" stroke="#72839B" stroke-width="1.2"/>
-    <text x="442" y="172">Syndrome</text>
-    <text x="442" y="196" font-size="11.5" font-weight="400" fill="#5B6877">整轮结束后检查。</text>
+    <text x="442" y="172" text-anchor="middle">Syndrome</text>
+    <text x="442" y="196" font-size="11.5" font-weight="400" fill="#5B6877" text-anchor="middle">整轮结束后检查。</text>
   </g>
   <g stroke="#5D6B80" stroke-width="1.8" fill="none">
     <path d="M 190 185 H 215" marker-end="url(#arrow)"/>
@@ -61,16 +61,16 @@
   <!-- Layered 行 -->
   <g font-size="12.5" font-weight="700" fill="#1B2433" text-anchor="middle">
     <rect x="55" y="290" width="135" height="80" rx="10" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.2"/>
-    <text x="122" y="317">Layer 0</text>
-    <text x="122" y="341" font-size="11.5" font-weight="400" fill="#5B6877">更新行组 0，立即</text>
-    <text x="122" y="357" font-size="11.5" font-weight="400" fill="#5B6877">写回软值。</text>
+    <text x="122" y="317" text-anchor="middle">Layer 0</text>
+    <text x="122" y="341" font-size="11.5" font-weight="400" fill="#5B6877" text-anchor="middle">更新行组 0，立即</text>
+    <text x="122" y="357" font-size="11.5" font-weight="400" fill="#5B6877" text-anchor="middle">写回软值。</text>
     <rect x="215" y="290" width="135" height="80" rx="10" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.2"/>
-    <text x="282" y="317">Layer 1</text>
-    <text x="282" y="341" font-size="11.5" font-weight="400" fill="#5B6877">读到前层的</text>
-    <text x="282" y="357" font-size="11.5" font-weight="400" fill="#5B6877">新软值。</text>
+    <text x="282" y="317" text-anchor="middle">Layer 1</text>
+    <text x="282" y="341" font-size="11.5" font-weight="400" fill="#5B6877" text-anchor="middle">读到前层的</text>
+    <text x="282" y="357" font-size="11.5" font-weight="400" fill="#5B6877" text-anchor="middle">新软值。</text>
     <rect x="375" y="290" width="135" height="80" rx="10" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.2"/>
-    <text x="442" y="317">Layer 2</text>
-    <text x="442" y="341" font-size="11.5" font-weight="400" fill="#5B6877">继续 RMW 更新。</text>
+    <text x="442" y="317" text-anchor="middle">Layer 2</text>
+    <text x="442" y="341" font-size="11.5" font-weight="400" fill="#5B6877" text-anchor="middle">继续 RMW 更新。</text>
   </g>
   <g stroke="#3E9E74" stroke-width="1.8" fill="none">
     <path d="M 190 330 H 215" marker-end="url(#arrow-green)"/>
@@ -86,37 +86,37 @@
 
   <g font-size="11.5" text-anchor="middle">
     <rect x="640" y="145" width="50" height="28" fill="#DDE7F3"/>
-    <text x="665" y="164" font-weight="700" fill="#1B2433">layer</text>
+    <text x="665" y="163" text-anchor="middle" font-weight="700" fill="#1B2433">layer</text>
     <rect x="690" y="145" width="45" height="28" fill="#DDE7F3"/>
-    <text x="712" y="164" font-weight="700" fill="#1B2433">row</text>
+    <text x="712" y="163" text-anchor="middle" font-weight="700" fill="#1B2433">row</text>
     <rect x="735" y="145" width="100" height="28" fill="#DDE7F3"/>
-    <text x="785" y="164" font-weight="700" fill="#1B2433" font-size="11">connected cols</text>
+    <text x="785" y="163" text-anchor="middle" font-weight="700" fill="#1B2433" font-size="11">connected cols</text>
     <rect x="835" y="145" width="130" height="28" fill="#DDE7F3"/>
-    <text x="900" y="164" font-weight="700" fill="#1B2433" font-size="11">read-modify-write</text>
+    <text x="900" y="163" text-anchor="middle" font-weight="700" fill="#1B2433" font-size="11">read-modify-write</text>
     <rect x="640" y="173" width="50" height="32" fill="#FFFFFF"/>
     <text x="665" y="193">0</text>
     <rect x="690" y="173" width="45" height="32" fill="#FFFFFF"/>
     <text x="712" y="193">c0</text>
     <rect x="735" y="173" width="100" height="32" fill="#FFFFFF"/>
-    <text x="785" y="193">v0,v1,v3</text>
+    <text x="785" y="193" text-anchor="middle">v0,v1,v3</text>
     <rect x="835" y="173" width="130" height="32" fill="#FFFFFF"/>
-    <text x="900" y="193">更新 L0,L1,L3</text>
+    <text x="900" y="195" text-anchor="middle">更新 L0,L1,L3</text>
     <rect x="640" y="205" width="50" height="32" fill="#EDF2F8"/>
     <text x="665" y="225">1</text>
     <rect x="690" y="205" width="45" height="32" fill="#EDF2F8"/>
     <text x="712" y="225">c1</text>
     <rect x="735" y="205" width="100" height="32" fill="#EDF2F8"/>
-    <text x="785" y="225">v1,v2,v4</text>
+    <text x="785" y="225" text-anchor="middle">v1,v2,v4</text>
     <rect x="835" y="205" width="130" height="32" fill="#EDF2F8"/>
-    <text x="900" y="225">使用新 L1</text>
+    <text x="900" y="227" text-anchor="middle">使用新 L1</text>
     <rect x="640" y="237" width="50" height="32" fill="#FFFFFF"/>
     <text x="665" y="257">2</text>
     <rect x="690" y="237" width="45" height="32" fill="#FFFFFF"/>
     <text x="712" y="257">c2</text>
     <rect x="735" y="237" width="100" height="32" fill="#FFFFFF"/>
-    <text x="785" y="257">v0,v2,v5</text>
+    <text x="785" y="257" text-anchor="middle">v0,v2,v5</text>
     <rect x="835" y="237" width="130" height="32" fill="#FFFFFF"/>
-    <text x="900" y="257">使用新 L0/L2</text>
+    <text x="900" y="259" text-anchor="middle">使用新 L0/L2</text>
   </g>
 
   <text x="640" y="300" font-size="11.5" fill="#5B6877">真实 NR 中一个 layer 通常对应 BG 的一个 row group；</text>
@@ -138,20 +138,20 @@
 
   <g font-size="12.5" font-weight="700" fill="#1B2433" text-anchor="middle">
     <rect x="442" y="530" width="115" height="50" rx="10" fill="#FFFFFF" stroke="#D18A2F" stroke-width="1.5"/>
-    <text x="499" y="554">iteration loop</text>
-    <text x="499" y="574" font-size="10.5" font-weight="400" fill="#5B6877">iter &lt; max_iter</text>
+    <text x="499" y="554" text-anchor="middle">iteration loop</text>
+    <text x="499" y="574" font-size="10.5" font-weight="400" fill="#5B6877" text-anchor="middle">iter &lt; max_iter</text>
     <rect x="585" y="615" width="115" height="50" rx="10" fill="#FFFFFF" stroke="#D18A2F" stroke-width="1.5"/>
-    <text x="642" y="639">layer loop</text>
-    <text x="642" y="659" font-size="10.5" font-weight="400" fill="#5B6877">row group order</text>
+    <text x="642" y="639" text-anchor="middle">layer loop</text>
+    <text x="642" y="659" font-size="10.5" font-weight="400" fill="#5B6877" text-anchor="middle">row group order</text>
     <rect x="442" y="710" width="115" height="50" rx="10" fill="#FFFFFF" stroke="#D18A2F" stroke-width="1.5"/>
-    <text x="499" y="734">CN update</text>
-    <text x="499" y="754" font-size="10.5" font-weight="400" fill="#5B6877">current layer</text>
+    <text x="499" y="734" text-anchor="middle">CN update</text>
+    <text x="499" y="754" font-size="10.5" font-weight="400" fill="#5B6877" text-anchor="middle">current layer</text>
     <rect x="300" y="615" width="115" height="50" rx="10" fill="#FFFFFF" stroke="#D18A2F" stroke-width="1.5"/>
-    <text x="357" y="639">VN update</text>
-    <text x="357" y="659" font-size="10.5" font-weight="400" fill="#5B6877">write soft value</text>
+    <text x="357" y="639" text-anchor="middle">VN update</text>
+    <text x="357" y="659" font-size="10.5" font-weight="400" fill="#5B6877" text-anchor="middle">write soft value</text>
     <rect x="300" y="530" width="115" height="50" rx="10" fill="#FFFFFF" stroke="#D18A2F" stroke-width="1.5"/>
-    <text x="357" y="554">syndrome</text>
-    <text x="357" y="574" font-size="10.5" font-weight="400" fill="#5B6877">check schedule</text>
+    <text x="357" y="554" text-anchor="middle">syndrome</text>
+    <text x="357" y="574" font-size="10.5" font-weight="400" fill="#5B6877" text-anchor="middle">check schedule</text>
   </g>
 
   <g stroke="#D18A2F" stroke-width="1.8" fill="none">

@@ -19,9 +19,9 @@
   </defs>
 
   <!-- ============ 标题 ============ -->
-  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433">Toy LDPC Min-Sum 数值走读</text>
-  <text x="35" y="60" font-size="12" fill="#5B6877">教学例子，不是 NR conformance vector。目标是把 channel LLR、H、CN 消息、posterior LLR、</text>
-  <text x="35" y="78" font-size="12" fill="#5B6877">hard decision、syndrome 与 early stop 串成可复现路径。</text>
+  <text x="35" y="34" font-size="18" font-weight="700" class="free" fill="#1B2433">Toy LDPC Min-Sum 数值走读</text>
+  <text x="35" y="60" font-size="12" class="free" fill="#5B6877">教学例子，不是 NR conformance vector。目标是把 channel LLR、H、CN 消息、posterior LLR、</text>
+  <text x="35" y="78" font-size="12" class="free" fill="#5B6877">hard decision、syndrome 与 early stop 串成可复现路径。</text>
 
   <!-- ============ 左：Toy H 与初始判决 ============ -->
   <g filter="url(#soft)">
@@ -30,108 +30,108 @@
   <text x="55" y="122" font-size="15" font-weight="700" fill="#3B6FB5">Toy H 与初始判决</text>
 
   <g font-size="10.5" font-weight="700" fill="#1B2433" text-anchor="middle">
-    <rect x="45" y="140" width="24" height="22" fill="#DDE7F3"/>
-    <text x="57" y="156">v0</text>
-    <rect x="69" y="140" width="24" height="22" fill="#DDE7F3"/>
-    <text x="81" y="156">v1</text>
-    <rect x="93" y="140" width="24" height="22" fill="#DDE7F3"/>
-    <text x="105" y="156">v2</text>
-    <rect x="117" y="140" width="24" height="22" fill="#DDE7F3"/>
-    <text x="129" y="156">v3</text>
-    <rect x="141" y="140" width="24" height="22" fill="#DDE7F3"/>
-    <text x="153" y="156">v4</text>
-    <rect x="165" y="140" width="24" height="22" fill="#DDE7F3"/>
-    <text x="177" y="156">v5</text>
+    <rect x="53" y="140" width="32" height="22" fill="#DDE7F3"/>
+    <text x="69" y="152" text-anchor="middle">v0</text>
+    <rect x="85" y="140" width="32" height="22" fill="#DDE7F3"/>
+    <text x="101" y="152" text-anchor="middle">v1</text>
+    <rect x="117" y="140" width="32" height="22" fill="#DDE7F3"/>
+    <text x="133" y="152" text-anchor="middle">v2</text>
+    <rect x="181" y="140" width="32" height="22" fill="#DDE7F3"/>
+    <text x="165" y="152" text-anchor="middle">v3</text>
+    <rect x="181" y="140" width="32" height="22" fill="#DDE7F3"/>
+    <text x="197" y="152" text-anchor="middle">v4</text>
+    <rect x="213" y="140" width="32" height="22" fill="#DDE7F3"/>
+    <text x="229" y="152" text-anchor="middle">v5</text>
   </g>
   <g font-size="11.5" font-weight="700" fill="#1B2433" text-anchor="middle">
-    <rect x="21" y="162" width="24" height="24" fill="#DDE7F3"/>
-    <text x="33" y="179">c0</text>
-    <rect x="21" y="186" width="24" height="24" fill="#DDE7F3"/>
-    <text x="33" y="203">c1</text>
-    <rect x="21" y="210" width="24" height="24" fill="#DDE7F3"/>
-    <text x="33" y="227">c2</text>
-    <rect x="45" y="162" width="24" height="24" fill="#DCE7F6"/>
-    <text x="57" y="179">1</text>
-    <rect x="69" y="162" width="24" height="24" fill="#DCE7F6"/>
-    <text x="81" y="179">1</text>
-    <rect x="93" y="162" width="24" height="24" fill="#FFFFFF"/>
-    <text x="105" y="179">0</text>
-    <rect x="117" y="162" width="24" height="24" fill="#DCE7F6"/>
-    <text x="129" y="179">1</text>
-    <rect x="141" y="162" width="24" height="24" fill="#FFFFFF"/>
-    <text x="153" y="179">0</text>
-    <rect x="165" y="162" width="24" height="24" fill="#FFFFFF"/>
-    <text x="177" y="179">0</text>
-    <rect x="45" y="186" width="24" height="24" fill="#FFFFFF"/>
-    <text x="57" y="203">0</text>
-    <rect x="69" y="186" width="24" height="24" fill="#DCE7F6"/>
-    <text x="81" y="203">1</text>
-    <rect x="93" y="186" width="24" height="24" fill="#DCE7F6"/>
-    <text x="105" y="203">1</text>
-    <rect x="117" y="186" width="24" height="24" fill="#FFFFFF"/>
-    <text x="129" y="203">0</text>
-    <rect x="141" y="186" width="24" height="24" fill="#DCE7F6"/>
-    <text x="153" y="203">1</text>
-    <rect x="165" y="186" width="24" height="24" fill="#FFFFFF"/>
-    <text x="177" y="203">0</text>
-    <rect x="45" y="210" width="24" height="24" fill="#DCE7F6"/>
-    <text x="57" y="227">1</text>
-    <rect x="69" y="210" width="24" height="24" fill="#FFFFFF"/>
-    <text x="81" y="227">0</text>
-    <rect x="93" y="210" width="24" height="24" fill="#DCE7F6"/>
-    <text x="105" y="227">1</text>
-    <rect x="117" y="210" width="24" height="24" fill="#FFFFFF"/>
-    <text x="129" y="227">0</text>
-    <rect x="141" y="210" width="24" height="24" fill="#FFFFFF"/>
-    <text x="153" y="227">0</text>
-    <rect x="165" y="210" width="24" height="24" fill="#DCE7F6"/>
-    <text x="177" y="227">1</text>
+    <rect x="21" y="162" width="32" height="24" fill="#DDE7F3"/>
+    <text x="37" y="179" text-anchor="middle">c0</text>
+    <rect x="21" y="194" width="32" height="24" fill="#DDE7F3"/>
+    <text x="37" y="203" text-anchor="middle">c1</text>
+    <rect x="21" y="226" width="32" height="24" fill="#DDE7F3"/>
+    <text x="37" y="235" text-anchor="middle">c2</text>
+    <rect x="53" y="162" width="24" height="24" fill="#DCE7F6"/>
+    <text x="65" y="179" text-anchor="middle">1</text>
+    <rect x="77" y="162" width="24" height="24" fill="#DCE7F6"/>
+    <text x="89" y="179" text-anchor="middle">1</text>
+    <rect x="101" y="162" width="24" height="24" fill="#FFFFFF"/>
+    <text x="113" y="179" text-anchor="middle">0</text>
+    <rect x="125" y="162" width="24" height="24" fill="#DCE7F6"/>
+    <text x="137" y="179" text-anchor="middle">1</text>
+    <rect x="149" y="162" width="24" height="24" fill="#FFFFFF"/>
+    <text x="161" y="179" text-anchor="middle">0</text>
+    <rect x="173" y="162" width="24" height="24" fill="#FFFFFF"/>
+    <text x="185" y="179" text-anchor="middle">0</text>
+    <rect x="53" y="194" width="24" height="24" fill="#FFFFFF"/>
+    <text x="65" y="203" text-anchor="middle">0</text>
+    <rect x="77" y="194" width="24" height="24" fill="#DCE7F6"/>
+    <text x="89" y="203" text-anchor="middle">1</text>
+    <rect x="101" y="194" width="24" height="24" fill="#DCE7F6"/>
+    <text x="113" y="203" text-anchor="middle">1</text>
+    <rect x="125" y="194" width="24" height="24" fill="#FFFFFF"/>
+    <text x="137" y="203" text-anchor="middle">0</text>
+    <rect x="149" y="194" width="24" height="24" fill="#DCE7F6"/>
+    <text x="161" y="203" text-anchor="middle">1</text>
+    <rect x="173" y="194" width="24" height="24" fill="#FFFFFF"/>
+    <text x="185" y="203" text-anchor="middle">0</text>
+    <rect x="53" y="226" width="24" height="24" fill="#DCE7F6"/>
+    <text x="65" y="235" text-anchor="middle">1</text>
+    <rect x="77" y="226" width="24" height="24" fill="#FFFFFF"/>
+    <text x="89" y="235" text-anchor="middle">0</text>
+    <rect x="101" y="226" width="24" height="24" fill="#DCE7F6"/>
+    <text x="113" y="235" text-anchor="middle">1</text>
+    <rect x="125" y="226" width="24" height="24" fill="#FFFFFF"/>
+    <text x="137" y="235" text-anchor="middle">0</text>
+    <rect x="149" y="226" width="24" height="24" fill="#FFFFFF"/>
+    <text x="161" y="235" text-anchor="middle">0</text>
+    <rect x="173" y="226" width="24" height="24" fill="#DCE7F6"/>
+    <text x="185" y="235" text-anchor="middle">1</text>
   </g>
 
   <!-- 初始 LLR 与硬判决表 -->
   <g font-size="12.5" text-anchor="middle">
-    <rect x="45" y="244" width="50" height="26" fill="#DDE7F3"/>
-    <text x="70" y="262" font-weight="700" fill="#1B2433"></text>
-    <rect x="95" y="244" width="44" height="26" fill="#DDE7F3"/>
-    <text x="117" y="262" font-weight="700" fill="#1B2433">v0</text>
-    <rect x="139" y="244" width="44" height="26" fill="#DDE7F3"/>
-    <text x="161" y="262" font-weight="700" fill="#1B2433">v1</text>
-    <rect x="183" y="244" width="44" height="26" fill="#DDE7F3"/>
-    <text x="205" y="262" font-weight="700" fill="#1B2433">v2</text>
-    <rect x="227" y="244" width="44" height="26" fill="#DDE7F3"/>
-    <text x="249" y="262" font-weight="700" fill="#1B2433">v3</text>
-    <rect x="271" y="244" width="44" height="26" fill="#DDE7F3"/>
-    <text x="293" y="262" font-weight="700" fill="#1B2433">v4</text>
-    <rect x="315" y="244" width="44" height="26" fill="#DDE7F3"/>
-    <text x="337" y="262" font-weight="700" fill="#1B2433">v5</text>
-    <rect x="45" y="270" width="50" height="30" fill="#FFFFFF"/>
-    <text x="70" y="290" font-weight="700">LLR</text>
-    <rect x="95" y="270" width="44" height="30" fill="#FFFFFF"/>
-    <text x="117" y="290">+0.9</text>
-    <rect x="139" y="270" width="44" height="30" fill="#FFFFFF"/>
-    <text x="161" y="290">-0.8</text>
-    <rect x="183" y="270" width="44" height="30" fill="#FFFFFF"/>
-    <text x="205" y="290">+0.4</text>
-    <rect x="227" y="270" width="44" height="30" fill="#FFFFFF"/>
-    <text x="249" y="290">-0.6</text>
-    <rect x="271" y="270" width="44" height="30" fill="#FFFFFF"/>
-    <text x="293" y="290">+0.7</text>
-    <rect x="315" y="270" width="44" height="30" fill="#FFFFFF"/>
-    <text x="337" y="290">-0.5</text>
-    <rect x="45" y="300" width="50" height="30" fill="#EDF2F8"/>
-    <text x="70" y="320" font-weight="700">hard0</text>
-    <rect x="95" y="300" width="44" height="30" fill="#EDF2F8"/>
-    <text x="117" y="320">0</text>
-    <rect x="139" y="300" width="44" height="30" fill="#EDF2F8"/>
-    <text x="161" y="320">1</text>
-    <rect x="183" y="300" width="44" height="30" fill="#EDF2F8"/>
-    <text x="205" y="320">0</text>
-    <rect x="227" y="300" width="44" height="30" fill="#EDF2F8"/>
-    <text x="249" y="320">1</text>
-    <rect x="271" y="300" width="44" height="30" fill="#EDF2F8"/>
-    <text x="293" y="320">0</text>
-    <rect x="315" y="300" width="44" height="30" fill="#EDF2F8"/>
-    <text x="337" y="320">1</text>
+    <rect x="53" y="258" width="50" height="26" fill="#DDE7F3"/>
+    <text x="70" y="275" text-anchor="middle" font-weight="700" fill="#1B2433"></text>
+    <rect x="103" y="258" width="44" height="26" fill="#DDE7F3"/>
+    <text x="125" y="275" text-anchor="middle" font-weight="700" fill="#1B2433">v0</text>
+    <rect x="147" y="258" width="44" height="26" fill="#DDE7F3"/>
+    <text x="169" y="275" text-anchor="middle" font-weight="700" fill="#1B2433">v1</text>
+    <rect x="191" y="258" width="44" height="26" fill="#DDE7F3"/>
+    <text x="213" y="275" text-anchor="middle" font-weight="700" fill="#1B2433">v2</text>
+    <rect x="235" y="258" width="44" height="26" fill="#DDE7F3"/>
+    <text x="257" y="275" text-anchor="middle" font-weight="700" fill="#1B2433">v3</text>
+    <rect x="279" y="258" width="44" height="26" fill="#DDE7F3"/>
+    <text x="301" y="275" text-anchor="middle" font-weight="700" fill="#1B2433">v4</text>
+    <rect x="323" y="258" width="44" height="26" fill="#DDE7F3"/>
+    <text x="345" y="275" text-anchor="middle" font-weight="700" fill="#1B2433">v5</text>
+    <rect x="53" y="284" width="50" height="30" fill="#FFFFFF"/>
+    <text x="78" y="304" text-anchor="middle" font-weight="700">LLR</text>
+    <rect x="103" y="284" width="44" height="30" fill="#FFFFFF"/>
+    <text x="125" y="304" text-anchor="middle">+0.9</text>
+    <rect x="147" y="284" width="44" height="30" fill="#FFFFFF"/>
+    <text x="169" y="304" text-anchor="middle">-0.8</text>
+    <rect x="191" y="284" width="44" height="30" fill="#FFFFFF"/>
+    <text x="213" y="304" text-anchor="middle">+0.4</text>
+    <rect x="235" y="284" width="44" height="30" fill="#FFFFFF"/>
+    <text x="257" y="304" text-anchor="middle">-0.6</text>
+    <rect x="279" y="284" width="44" height="30" fill="#FFFFFF"/>
+    <text x="301" y="304" text-anchor="middle">+0.7</text>
+    <rect x="323" y="284" width="44" height="30" fill="#FFFFFF"/>
+    <text x="345" y="304" text-anchor="middle">-0.5</text>
+    <rect x="53" y="314" width="50" height="30" fill="#EDF2F8"/>
+    <text x="77" y="334" text-anchor="middle" font-weight="700">hard0</text>
+    <rect x="103" y="314" width="44" height="30" fill="#EDF2F8"/>
+    <text x="125" y="334" text-anchor="middle">0</text>
+    <rect x="147" y="314" width="44" height="30" fill="#EDF2F8"/>
+    <text x="169" y="334" text-anchor="middle">1</text>
+    <rect x="191" y="314" width="44" height="30" fill="#EDF2F8"/>
+    <text x="213" y="334" text-anchor="middle">0</text>
+    <rect x="235" y="314" width="44" height="30" fill="#EDF2F8"/>
+    <text x="257" y="334" text-anchor="middle">1</text>
+    <rect x="279" y="314" width="44" height="30" fill="#EDF2F8"/>
+    <text x="301" y="334" text-anchor="middle">0</text>
+    <rect x="323" y="314" width="44" height="30" fill="#EDF2F8"/>
+    <text x="345" y="334" text-anchor="middle">1</text>
   </g>
   <text x="45" y="368" font-size="12.5" font-weight="700" fill="#C4553D">初始 syndrome=[0,1,1]，weight=2，说明 c1 和 c2 校验失败。</text>
 
@@ -143,32 +143,32 @@
 
   <g font-size="12.5" font-weight="700" fill="#1B2433" text-anchor="middle">
     <rect x="520" y="140" width="110" height="46" rx="9" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.3"/>
-    <text x="575" y="162">r0-&gt;v0</text>
-    <text x="575" y="181" font-weight="400">+0.6</text>
+    <text x="575" y="162" text-anchor="middle">r0-&gt;v0</text>
+    <text x="575" y="181" text-anchor="middle" font-weight="400">+0.6</text>
     <rect x="640" y="140" width="110" height="46" rx="9" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.3"/>
-    <text x="695" y="162">r0-&gt;v1</text>
-    <text x="695" y="181" font-weight="400">-0.6</text>
+    <text x="695" y="162" text-anchor="middle">r0-&gt;v1</text>
+    <text x="695" y="181" text-anchor="middle" font-weight="400">-0.6</text>
     <rect x="760" y="140" width="110" height="46" rx="9" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.3"/>
-    <text x="815" y="162">r0-&gt;v3</text>
-    <text x="815" y="181" font-weight="400">-0.8</text>
+    <text x="815" y="162" text-anchor="middle">r0-&gt;v3</text>
+    <text x="815" y="181" text-anchor="middle" font-weight="400">-0.8</text>
     <rect x="520" y="196" width="110" height="46" rx="9" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.3"/>
-    <text x="575" y="218">r1-&gt;v1</text>
-    <text x="575" y="237" font-weight="400">+0.4</text>
+    <text x="575" y="218" text-anchor="middle">r1-&gt;v1</text>
+    <text x="575" y="237" text-anchor="middle" font-weight="400">+0.4</text>
     <rect x="640" y="196" width="110" height="46" rx="9" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.3"/>
-    <text x="695" y="218">r1-&gt;v2</text>
-    <text x="695" y="237" font-weight="400">-0.7</text>
+    <text x="695" y="218" text-anchor="middle">r1-&gt;v2</text>
+    <text x="695" y="237" text-anchor="middle" font-weight="400">-0.7</text>
     <rect x="760" y="196" width="110" height="46" rx="9" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.3"/>
-    <text x="815" y="218">r1-&gt;v4</text>
-    <text x="815" y="237" font-weight="400">-0.4</text>
+    <text x="815" y="218" text-anchor="middle">r1-&gt;v4</text>
+    <text x="815" y="237" text-anchor="middle" font-weight="400">-0.4</text>
     <rect x="520" y="252" width="110" height="46" rx="9" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.3"/>
-    <text x="575" y="274">r2-&gt;v0</text>
-    <text x="575" y="293" font-weight="400">-0.4</text>
+    <text x="575" y="274" text-anchor="middle">r2-&gt;v0</text>
+    <text x="575" y="293" text-anchor="middle" font-weight="400">-0.4</text>
     <rect x="640" y="252" width="110" height="46" rx="9" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.3"/>
-    <text x="695" y="274">r2-&gt;v2</text>
-    <text x="695" y="293" font-weight="400">-0.5</text>
+    <text x="695" y="274" text-anchor="middle">r2-&gt;v2</text>
+    <text x="695" y="293" text-anchor="middle" font-weight="400">-0.5</text>
     <rect x="760" y="252" width="110" height="46" rx="9" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.3"/>
-    <text x="815" y="274">r2-&gt;v5</text>
-    <text x="815" y="293" font-weight="400">+0.4</text>
+    <text x="815" y="274" text-anchor="middle">r2-&gt;v5</text>
+    <text x="815" y="293" text-anchor="middle" font-weight="400">+0.4</text>
   </g>
 
   <text x="520" y="330" font-size="12" fill="#5B6877">例：r1-&gt;v2 排除 v2，只看 v1=-0.8 与 v4=+0.7；</text>

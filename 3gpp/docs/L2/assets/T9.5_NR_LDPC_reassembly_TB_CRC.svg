@@ -89,7 +89,7 @@
   <g stroke="#6C7A2E" stroke-width="2" fill="none">
     <path d="M 600 576 L 700 576" marker-end="url(#arrow)"/>
   </g>
-  <rect x="572" y="548" width="110" height="26" rx="5" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1"/>
+  <rect x="590" y="548" width="110" height="26" rx="5" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1"/>
   <text x="627" y="566" font-size="12" font-weight="700" text-anchor="middle" fill="#6C7A2E">concat by r</text>
 
   <g font-size="12.5" fill="#23272E">
@@ -110,14 +110,14 @@
   <text x="108" y="783" font-size="17" font-weight="700" fill="#23272E">CBG 部分重传与重组状态</text>
 
   <g font-size="12.5" fill="#23272E">
-    <rect x="80" y="820" width="645" height="180" rx="12" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <rect x="80" y="820" width="645" height="100" rx="12" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
     <text x="402" y="854" text-anchor="middle" font-weight="700" fill="#7A6E8E">CBG0 mask=0</text>
     <text x="402" y="890" text-anchor="middle" fill="#646B76">未传输：保持历史结果</text>
-    <text x="402" y="914" text-anchor="middle" fill="#646B76">不清零、不覆盖</text>
-    <rect x="755" y="820" width="645" height="180" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="402" y="910" text-anchor="middle" fill="#646B76">不清零、不覆盖</text>
+    <rect x="755" y="820" width="645" height="100" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
     <text x="1077" y="854" text-anchor="middle" font-weight="700" fill="#6C7A2E">CBG1 mask=1</text>
     <text x="1077" y="890" text-anchor="middle" fill="#646B76">新 LLR：译码并刷新</text>
-    <text x="1077" y="914" text-anchor="middle" fill="#646B76">CB2/CB3 参与 TB 重组</text>
+    <text x="1077" y="910" text-anchor="middle" fill="#646B76">CB2/CB3 参与 TB 重组</text>
   </g>
   <g font-size="12.5" fill="#23272E">
     <rect x="80" y="920" width="645" height="90" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>

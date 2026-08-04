@@ -18,9 +18,9 @@
   </defs>
 
   <!-- ============ 标题 ============ -->
-  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433">Posterior、早停与调试字段</text>
-  <text x="35" y="60" font-size="12" fill="#5B6877">第二张图承接第一张的 9 条 CN 消息，展示 VN posterior 合成、更新后 hard decision、</text>
-  <text x="35" y="78" font-size="12" fill="#5B6877">syndrome early stop 和最小 dump 字段。</text>
+  <text x="35" y="34" font-size="18" font-weight="700" class="free" fill="#1B2433">Posterior、早停与调试字段</text>
+  <text x="35" y="60" font-size="12" class="free" fill="#5B6877">第二张图承接第一张的 9 条 CN 消息，展示 VN posterior 合成、更新后 hard decision、</text>
+  <text x="35" y="78" font-size="12" class="free" fill="#5B6877">syndrome early stop 和最小 dump 字段。</text>
 
   <!-- ============ 左：Posterior、硬判决与早停 ============ -->
   <g filter="url(#soft)">
@@ -30,61 +30,61 @@
 
   <g font-size="12.5" text-anchor="middle">
     <rect x="55" y="145" width="70" height="30" fill="#DDE7F3"/>
-    <text x="90" y="165" font-weight="700" fill="#1B2433">VN</text>
+    <text x="90" y="165" text-anchor="middle" font-weight="700" fill="#1B2433">VN</text>
     <rect x="125" y="145" width="220" height="30" fill="#DDE7F3"/>
-    <text x="235" y="165" font-weight="700" fill="#1B2433">sum</text>
+    <text x="235" y="165" text-anchor="middle" font-weight="700" fill="#1B2433">sum</text>
     <rect x="345" y="145" width="95" height="30" fill="#DDE7F3"/>
-    <text x="392" y="165" font-weight="700" fill="#1B2433">Lpost</text>
+    <text x="392" y="165" text-anchor="middle" font-weight="700" fill="#1B2433">Lpost</text>
     <rect x="440" y="145" width="75" height="30" fill="#DDE7F3"/>
-    <text x="477" y="165" font-weight="700" fill="#1B2433">hard1</text>
+    <text x="477" y="165" text-anchor="middle" font-weight="700" fill="#1B2433">hard1</text>
     <rect x="55" y="175" width="70" height="34" fill="#FFFFFF"/>
-    <text x="90" y="197">v0</text>
+    <text x="90" y="197" text-anchor="middle">v0</text>
     <rect x="125" y="175" width="220" height="34" fill="#FFFFFF"/>
-    <text x="235" y="197">+0.9+0.6-0.4</text>
+    <text x="235" y="197" text-anchor="middle">+0.9+0.6-0.4</text>
     <rect x="345" y="175" width="95" height="34" fill="#FFFFFF"/>
-    <text x="392" y="197">+1.1</text>
+    <text x="392" y="197" text-anchor="middle">+1.1</text>
     <rect x="440" y="175" width="75" height="34" fill="#FFFFFF"/>
-    <text x="477" y="197">0</text>
+    <text x="477" y="197" text-anchor="middle">0</text>
     <rect x="55" y="209" width="70" height="34" fill="#EDF2F8"/>
-    <text x="90" y="231">v1</text>
+    <text x="90" y="231" text-anchor="middle">v1</text>
     <rect x="125" y="209" width="220" height="34" fill="#EDF2F8"/>
-    <text x="235" y="231">-0.8-0.6+0.4</text>
+    <text x="235" y="231" text-anchor="middle">-0.8-0.6+0.4</text>
     <rect x="345" y="209" width="95" height="34" fill="#EDF2F8"/>
-    <text x="392" y="231">-1.0</text>
+    <text x="392" y="231" text-anchor="middle">-1.0</text>
     <rect x="440" y="209" width="75" height="34" fill="#EDF2F8"/>
-    <text x="477" y="231">1</text>
+    <text x="477" y="231" text-anchor="middle">1</text>
     <rect x="55" y="243" width="70" height="34" fill="#FFFFFF"/>
-    <text x="90" y="265">v2</text>
+    <text x="90" y="265" text-anchor="middle">v2</text>
     <rect x="125" y="243" width="220" height="34" fill="#FFFFFF"/>
-    <text x="235" y="265">+0.4-0.7-0.5</text>
+    <text x="235" y="265" text-anchor="middle">+0.4-0.7-0.5</text>
     <rect x="345" y="243" width="95" height="34" fill="#FFFFFF"/>
-    <text x="392" y="265">-0.8</text>
+    <text x="392" y="265" text-anchor="middle">-0.8</text>
     <rect x="440" y="243" width="75" height="34" fill="#FFFFFF"/>
-    <text x="477" y="265">1</text>
+    <text x="477" y="265" text-anchor="middle">1</text>
     <rect x="55" y="277" width="70" height="34" fill="#EDF2F8"/>
-    <text x="90" y="299">v3</text>
+    <text x="90" y="299" text-anchor="middle">v3</text>
     <rect x="125" y="277" width="220" height="34" fill="#EDF2F8"/>
-    <text x="235" y="299">-0.6-0.8</text>
+    <text x="235" y="299" text-anchor="middle">-0.6-0.8</text>
     <rect x="345" y="277" width="95" height="34" fill="#EDF2F8"/>
-    <text x="392" y="299">-1.4</text>
+    <text x="392" y="299" text-anchor="middle">-1.4</text>
     <rect x="440" y="277" width="75" height="34" fill="#EDF2F8"/>
-    <text x="477" y="299">1</text>
+    <text x="477" y="299" text-anchor="middle">1</text>
     <rect x="55" y="311" width="70" height="34" fill="#FFFFFF"/>
-    <text x="90" y="333">v4</text>
+    <text x="90" y="333" text-anchor="middle">v4</text>
     <rect x="125" y="311" width="220" height="34" fill="#FFFFFF"/>
-    <text x="235" y="333">+0.7-0.4</text>
+    <text x="235" y="333" text-anchor="middle">+0.7-0.4</text>
     <rect x="345" y="311" width="95" height="34" fill="#FFFFFF"/>
-    <text x="392" y="333">+0.3</text>
+    <text x="392" y="333" text-anchor="middle">+0.3</text>
     <rect x="440" y="311" width="75" height="34" fill="#FFFFFF"/>
-    <text x="477" y="333">0</text>
+    <text x="477" y="333" text-anchor="middle">0</text>
     <rect x="55" y="345" width="70" height="34" fill="#EDF2F8"/>
-    <text x="90" y="367">v5</text>
+    <text x="90" y="367" text-anchor="middle">v5</text>
     <rect x="125" y="345" width="220" height="34" fill="#EDF2F8"/>
-    <text x="235" y="367">-0.5+0.4</text>
+    <text x="235" y="367" text-anchor="middle">-0.5+0.4</text>
     <rect x="345" y="345" width="95" height="34" fill="#EDF2F8"/>
-    <text x="392" y="367">-0.1</text>
+    <text x="392" y="367" text-anchor="middle">-0.1</text>
     <rect x="440" y="345" width="75" height="34" fill="#EDF2F8"/>
-    <text x="477" y="367">1</text>
+    <text x="477" y="367" text-anchor="middle">1</text>
   </g>
 
   <!-- ============ 右：更新后判决与早停 ============ -->
@@ -98,19 +98,19 @@
 
   <g font-size="11.5" font-weight="700" fill="#1B2433" text-anchor="middle">
     <rect x="625" y="200" width="46" height="26" rx="8" fill="#EDF1F6" stroke="#72839B" stroke-width="1.2"/>
-    <text x="648" y="218">v0=0</text>
+    <text x="648" y="218" text-anchor="middle">v0=0</text>
     <rect x="679" y="200" width="46" height="26" rx="8" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.2"/>
-    <text x="702" y="218">v1=1</text>
+    <text x="702" y="218" text-anchor="middle">v1=1</text>
     <rect x="733" y="200" width="46" height="26" rx="8" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.2"/>
-    <text x="756" y="218">v2=1</text>
+    <text x="756" y="218" text-anchor="middle">v2=1</text>
     <rect x="787" y="200" width="46" height="26" rx="8" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.2"/>
-    <text x="810" y="218">v3=1</text>
+    <text x="810" y="218" text-anchor="middle">v3=1</text>
     <rect x="841" y="200" width="46" height="26" rx="8" fill="#EDF1F6" stroke="#72839B" stroke-width="1.2"/>
-    <text x="864" y="218">v4=0</text>
+    <text x="864" y="218" text-anchor="middle">v4=0</text>
     <rect x="895" y="200" width="46" height="26" rx="8" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.2"/>
-    <text x="918" y="218">v5=1</text>
+    <text x="918" y="218" text-anchor="middle">v5=1</text>
     <rect x="625" y="250" width="155" height="28" rx="8" fill="#3E9E74"/>
-    <text x="702" y="269" fill="#FFFFFF">syndrome=[0,0,0]</text>
+    <text x="702" y="269" text-anchor="middle" fill="#FFFFFF">syndrome=[0,0,0]</text>
   </g>
   <text x="625" y="310" font-size="11.5" fill="#5B6877">hard 逐位取自 Lpost 的符号；syndrome 全零表示</text>
   <text x="625" y="326" font-size="11.5" fill="#5B6877">当前硬判决满足 LDPC 校验约束。</text>
@@ -123,34 +123,34 @@
 
   <g font-size="12.5" text-anchor="middle">
     <rect x="55" y="465" width="200" height="30" fill="#DDE7F3"/>
-    <text x="155" y="485" font-weight="700" fill="#1B2433">field</text>
+    <text x="155" y="485" text-anchor="middle" font-weight="700" fill="#1B2433">field</text>
     <rect x="255" y="465" width="180" height="30" fill="#DDE7F3"/>
-    <text x="345" y="485" font-weight="700" fill="#1B2433">toy value</text>
+    <text x="345" y="485" text-anchor="middle" font-weight="700" fill="#1B2433">toy value</text>
     <rect x="435" y="465" width="510" height="30" fill="#DDE7F3"/>
-    <text x="690" y="485" font-weight="700" fill="#1B2433">meaning</text>
+    <text x="690" y="485" text-anchor="middle" font-weight="700" fill="#1B2433">meaning</text>
     <rect x="55" y="495" width="200" height="36" fill="#FFFFFF"/>
-    <text x="155" y="518">iteration</text>
+    <text x="155" y="518" text-anchor="middle">iteration</text>
     <rect x="255" y="495" width="180" height="36" fill="#FFFFFF"/>
-    <text x="345" y="518">0 -&gt; 1</text>
+    <text x="345" y="518" text-anchor="middle">0 -&gt; 1</text>
     <rect x="435" y="495" width="510" height="36" fill="#FFFFFF"/>
-    <text x="690" y="518" fill="#5B6877">本例只跑一轮 Min-Sum。</text>
+    <text x="690" y="518" text-anchor="middle" fill="#5B6877">本例只跑一轮 Min-Sum。</text>
     <rect x="55" y="531" width="200" height="36" fill="#EDF2F8"/>
-    <text x="155" y="554">edge messages</text>
+    <text x="155" y="554" text-anchor="middle">edge messages</text>
     <rect x="255" y="531" width="180" height="36" fill="#EDF2F8"/>
-    <text x="345" y="554">9 条 r</text>
+    <text x="345" y="554" text-anchor="middle">9 条 r</text>
     <rect x="435" y="531" width="510" height="36" fill="#EDF2F8"/>
-    <text x="690" y="554" fill="#5B6877">真实 NR 由 BG/Zc/shift 生成大量边。</text>
+    <text x="690" y="554" text-anchor="middle" fill="#5B6877">真实 NR 由 BG/Zc/shift 生成大量边。</text>
     <rect x="55" y="567" width="200" height="36" fill="#FFFFFF"/>
-    <text x="155" y="590">posterior LLR</text>
+    <text x="155" y="590" text-anchor="middle">posterior LLR</text>
     <rect x="255" y="567" width="180" height="36" fill="#FFFFFF"/>
-    <text x="345" y="590">6 个</text>
+    <text x="345" y="590" text-anchor="middle">6 个</text>
     <rect x="435" y="567" width="510" height="36" fill="#FFFFFF"/>
-    <text x="690" y="590" fill="#5B6877">真实 NR 是 68Zc 或 52Zc 个 H 列位置。</text>
+    <text x="690" y="590" text-anchor="middle" fill="#5B6877">真实 NR 是 68Zc 或 52Zc 个 H 列位置。</text>
     <rect x="55" y="603" width="200" height="36" fill="#EDF2F8"/>
-    <text x="155" y="626">syndrome weight</text>
+    <text x="155" y="626" text-anchor="middle">syndrome weight</text>
     <rect x="255" y="603" width="180" height="36" fill="#EDF2F8"/>
-    <text x="345" y="626">2 -&gt; 0</text>
+    <text x="345" y="626" text-anchor="middle">2 -&gt; 0</text>
     <rect x="435" y="603" width="510" height="36" fill="#EDF2F8"/>
-    <text x="690" y="626" fill="#5B6877">早停只说明 LDPC 约束通过。</text>
+    <text x="690" y="626" text-anchor="middle" fill="#5B6877">早停只说明 LDPC 约束通过。</text>
   </g>
 </svg>

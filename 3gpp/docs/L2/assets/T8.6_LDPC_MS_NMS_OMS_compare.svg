@@ -9,7 +9,7 @@
            下排工程取舍四卡片。语义配色：输入蓝 / CN 绿 / min1 绿 / min2 琥珀 /
            SPA 蓝 / MS 绿 / NMS 琥珀 / OMS 红；字号符合合规 Rule 23。
 -->
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="870" viewBox="0 0 1000 870" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="870" viewBox="0 0 1040 870" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
   <title>LDPC Min-Sum、NMS 与 OMS 校验节点更新</title>
 
   <defs>
@@ -19,9 +19,9 @@
   </defs>
 
   <!-- ============ 标题 ============ -->
-  <text x="35" y="34" font-size="18" font-weight="700" fill="#1B2433">LDPC Min-Sum、NMS 与 OMS 校验节点更新</text>
-  <text x="35" y="60" font-size="12" fill="#5B6877">教学输入 q=[+2.4,-0.9,+1.6,-3.1]。图中展示 check-node 输出给每条边时如何排除自身输入，</text>
-  <text x="35" y="78" font-size="12" fill="#5B6877">并比较 Min-Sum、Normalized Min-Sum 和 Offset Min-Sum。</text>
+  <text x="35" y="34" font-size="18" font-weight="700" class="free" fill="#1B2433">LDPC Min-Sum、NMS 与 OMS 校验节点更新</text>
+  <text x="35" y="60" font-size="12" class="free" fill="#5B6877">教学输入 q=[+2.4,-0.9,+1.6,-3.1]。图中展示 check-node 输出给每条边时如何排除自身输入，</text>
+  <text x="35" y="78" font-size="12" class="free" fill="#5B6877">并比较 Min-Sum、Normalized Min-Sum 和 Offset Min-Sum。</text>
 
   <!-- ============ Check-node 输入 ============ -->
   <g filter="url(#soft)">
@@ -71,13 +71,13 @@
   <!-- 绝对值排序示意芯片 -->
   <g font-size="11.5" font-weight="700" fill="#1B2433" text-anchor="middle">
     <rect x="540" y="220" width="62" height="26" rx="8" fill="#EDF1F6" stroke="#72839B" stroke-width="1.2"/>
-    <text x="571" y="237">|q0|=2.4</text>
+    <text x="571" y="237" text-anchor="middle">|q0|=2.4</text>
     <rect x="612" y="220" width="62" height="26" rx="8" fill="#E2F2E9" stroke="#3E9E74" stroke-width="1.2"/>
-    <text x="643" y="237">|q1|=0.9</text>
+    <text x="643" y="237" text-anchor="middle">|q1|=0.9</text>
     <rect x="684" y="220" width="62" height="26" rx="8" fill="#FAF0DC" stroke="#D18A2F" stroke-width="1.2"/>
-    <text x="715" y="237">|q2|=1.6</text>
+    <text x="715" y="237" text-anchor="middle">|q2|=1.6</text>
     <rect x="756" y="220" width="62" height="26" rx="8" fill="#EDF1F6" stroke="#72839B" stroke-width="1.2"/>
-    <text x="787" y="237">|q3|=3.1</text>
+    <text x="787" y="237" text-anchor="middle">|q3|=3.1</text>
   </g>
   <g font-size="12" font-weight="700" fill="#1B2433">
     <rect x="540" y="270" width="120" height="28" rx="8" fill="#3E9E74"/>
@@ -104,7 +104,7 @@
     <rect x="335" y="495" width="110" height="32" fill="#DDE7F3"/>
     <text x="390" y="516" font-weight="700" fill="#1B2433">MS</text>
     <rect x="445" y="495" width="140" height="32" fill="#DDE7F3"/>
-    <text x="515" y="516" font-weight="700" fill="#1B2433">NMS α=.75</text>
+    <text x="515" y="516" text-anchor="middle" font-weight="700" fill="#1B2433">NMS α=.75</text>
     <rect x="585" y="495" width="140" height="32" fill="#DDE7F3"/>
     <text x="655" y="516" font-weight="700" fill="#1B2433">OMS β=.4</text>
     <rect x="55" y="527" width="110" height="36" fill="#FFFFFF"/>
@@ -159,7 +159,7 @@
 
   <!-- ============ 工程取舍 ============ -->
   <g filter="url(#soft)">
-    <rect x="35" y="710" width="930" height="140" rx="14" fill="#FAF5E4" stroke="#D9C179" stroke-width="1.5"/>
+    <rect x="35" y="710" width="976" height="140" rx="14" fill="#FAF5E4" stroke="#D9C179" stroke-width="1.5"/>
   </g>
   <text x="55" y="738" font-size="15" font-weight="700" fill="#1B2433">工程取舍</text>
   <g font-size="11.5">
