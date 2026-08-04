@@ -63,12 +63,12 @@
 <text x="185" y="478" text-anchor="middle" class="small">恢复理想位置，噪声不变</text>
 <rect x="95" y="494" width="180" height="28" rx="14" class="badge-a"/>
 <text x="185" y="513" text-anchor="middle" class="small" fill="#1B5E20">可判决 · 14 dB</text>
-<rect x="95" y="532" width="180" height="24" rx="12" class="badge-a"/>
+<rect x="95" y="530" width="180" height="28" rx="12" class="badge-a"/>
 <text x="185" y="549" text-anchor="middle" class="small" fill="#1B5E20">LLR 正常缩放</text>
 
 <rect x="355" y="80" width="250" height="480" rx="10" class="card"/>
 <rect x="355" y="80" width="250" height="46" rx="10" class="head-b"/>
-<text x="480" y="98" text-anchor="middle" class="label" fill="#B71C1C">子载波 B：深衰落 |H|=0.2</text>
+<text x="480" y="101" text-anchor="middle" class="label" fill="#B71C1C">子载波 B：深衰落 |H|=0.2</text>
 <text x="480" y="116" text-anchor="middle" class="small" fill="#B71C1C">均衡器：ZF</text>
 
 <text x="480" y="152" text-anchor="middle" class="small">均衡前：Y=0.2X+n</text>
@@ -90,12 +90,12 @@
 <text x="480" y="478" text-anchor="middle" class="small">位置回正，但噪声扩散到 σ_eq=1.0</text>
 <rect x="390" y="494" width="180" height="28" rx="14" class="badge-b"/>
 <text x="480" y="513" text-anchor="middle" class="small" fill="#B71C1C">0 dB · 簇仍重叠</text>
-<rect x="390" y="532" width="180" height="24" rx="12" class="badge-b"/>
+<rect x="390" y="530" width="180" height="28" rx="12" class="badge-b"/>
 <text x="480" y="549" text-anchor="middle" class="small" fill="#B71C1C">LLR 必须收缩</text>
 
 <rect x="650" y="80" width="250" height="480" rx="10" class="card"/>
 <rect x="650" y="80" width="250" height="46" rx="10" class="head-c"/>
-<text x="775" y="98" text-anchor="middle" class="label" fill="#6A1B9A">子载波 C：深衰落 |H|=0.2</text>
+<text x="775" y="101" text-anchor="middle" class="label" fill="#6A1B9A">子载波 C：深衰落 |H|=0.2</text>
 <text x="775" y="116" text-anchor="middle" class="small" fill="#6A1B9A">均衡器：MMSE</text>
 
 <text x="775" y="152" text-anchor="middle" class="small">均衡前：Y=0.2X+n</text>

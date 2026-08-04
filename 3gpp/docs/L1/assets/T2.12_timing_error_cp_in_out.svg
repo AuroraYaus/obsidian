@@ -27,9 +27,10 @@
 <rect x="60" y="116" width="32" height="40" fill="#E0F2F1" stroke="#00897B" stroke-width="1.5"/>
 <rect x="92" y="116" width="256" height="40" fill="#EDE7F6" stroke="#5E35B1" stroke-width="1.5"/>
 <rect x="348" y="116" width="32" height="40" fill="#F5F5F5" stroke="#9E9E9E" stroke-width="1.2"/>
-<rect x="84" y="116" width="256" height="40" fill="#E0F2F1" opacity="0.55" stroke="#00897B" stroke-width="2.5" stroke-dasharray="7,3"/>
+<rect x="84" y="116" width="8" height="40" fill="#E0F2F1" opacity="0.55" stroke="#00897B" stroke-width="2.5" stroke-dasharray="7,3"/>
+<rect x="92" y="116" width="248" height="40" fill="#E0F2F1" opacity="0.55" stroke="#00897B" stroke-width="2.5" stroke-dasharray="7,3"/>
 
-<text x="60" y="176" class="small" font-size="12" fill="#333">窗口起点 m0−4（CP 内）：取 4 个 CP 采样补足一个完整循环周期</text>
+<text x="60" y="178" class="small" font-size="12" fill="#333">窗口起点 m0−4（CP 内）：取 4 个 CP 采样补足一个完整循环周期</text>
 
 <text x="680" y="100" text-anchor="middle" class="label" font-size="15" font-weight="bold" fill="#5E35B1">频域观测：线性相位斜率</text>
 <rect x="460" y="115" width="440" height="140" fill="#FAFAFA" stroke="#444" stroke-width="1.2"/>
@@ -51,7 +52,8 @@
 <rect x="60" y="420" width="32" height="40" fill="#E0F2F1" stroke="#00897B" stroke-width="1.5"/>
 <rect x="92" y="420" width="256" height="40" fill="#EDE7F6" stroke="#5E35B1" stroke-width="1.5"/>
 <rect x="348" y="420" width="32" height="40" fill="#F5F5F5" stroke="#9E9E9E" stroke-width="1.2"/>
-<rect x="116" y="420" width="256" height="40" fill="#FBE9E7" opacity="0.55" stroke="#E64A19" stroke-width="2.5" stroke-dasharray="7,3"/>
+<rect x="116" y="420" width="232" height="40" fill="#FBE9E7" opacity="0.55" stroke="#E64A19" stroke-width="2.5" stroke-dasharray="7,3"/>
+<rect x="348" y="420" width="24" height="40" fill="#FBE9E7" opacity="0.55" stroke="#E64A19" stroke-width="2.5" stroke-dasharray="7,3"/>
 <rect x="348" y="420" width="24" height="40" fill="#FFCCBC" stroke="#E64A19" stroke-width="1.5"/>
 
 <text x="60" y="482" class="small" font-size="12" fill="#333">窗口起点 m0+12：尾部 12 个采样越过边界，取自符号 N+1</text>
@@ -64,7 +66,7 @@
 <text x="540" y="440" text-anchor="middle" class="small" font-size="11" fill="#444">k−1</text>
 <text x="580" y="440" text-anchor="middle" class="small" font-size="11" fill="#444">k</text>
 <text x="620" y="440" text-anchor="middle" class="small" font-size="11" fill="#444">k+1</text>
-<text x="580" y="586" text-anchor="middle" class="small" font-size="11" fill="#D84315">其他子载波能量泄漏进来（ICI）</text>
+<text x="580" y="590" text-anchor="middle" class="small" font-size="11" fill="#D84315">其他子载波能量泄漏进来（ICI）</text>
 
 <text x="810" y="400" text-anchor="middle" class="label" font-size="12" font-weight="bold" fill="#D84315">均衡后星座散点</text>
 <rect x="720" y="420" width="180" height="150" fill="#FAFAFA" stroke="#444" stroke-width="1.2"/>

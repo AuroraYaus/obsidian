@@ -28,7 +28,7 @@
 <text x="480" y="30" text-anchor="middle" class="title">CSI 测量→报告→调度闭环</text>
 <text x="480" y="54" text-anchor="middle" class="small">链路自适应：CSI-RS 测量 → SINR/CQI 计算 → PUCCH/PUSCH 上报 → gNB 调度 MCS → 下一次 PDSCH</text>
 
-<rect x="395" y="86" width="170" height="78" rx="12" class="node"/>
+<rect x="386" y="86" width="188" height="78" rx="12" class="node"/>
 <text x="480" y="110" text-anchor="middle" class="label">① gNB 发送 CSI-RS</text>
 <text x="480" y="130" text-anchor="middle" class="small">TS 38.211 §7.4.1.5</text>
 <text x="480" y="148" text-anchor="middle" class="small">序列 r(m)、端口 3000+、密度 ρ</text>

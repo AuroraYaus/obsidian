@@ -190,13 +190,13 @@
 <rect x="400" y="276" width="20" height="20" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
 <rect x="400" y="296" width="20" height="20" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
 <rect x="400" y="316" width="20" height="20" rx="0" fill="#FAFAFA" stroke="#E4E4E4" stroke-width="0.8"/>
-<text x="134" y="111" font-size="11" text-anchor="end" class="free">k=0</text>
-<text x="134" y="151" font-size="11" text-anchor="end" class="free">k=2</text>
-<text x="134" y="191" font-size="11" text-anchor="end" class="free">k=4</text>
-<text x="134" y="231" font-size="11" text-anchor="end" class="free">k=6</text>
-<text x="134" y="271" font-size="11" text-anchor="end" class="free">k=8</text>
-<text x="134" y="311" font-size="11" text-anchor="end" class="free">k=10</text>
-<text x="112" y="216" font-size="13" text-anchor="start" class="free" transform="rotate(-90,112,216)">频域 → k（子载波；1 PRB = 12 个子载波）</text>
+<text x="132" y="108" font-size="11" text-anchor="end" class="free">k=0</text>
+<text x="132" y="148" font-size="11" text-anchor="end" class="free">k=2</text>
+<text x="132" y="188" font-size="11" text-anchor="end" class="free">k=4</text>
+<text x="132" y="228" font-size="11" text-anchor="end" class="free">k=6</text>
+<text x="132" y="268" font-size="11" text-anchor="end" class="free">k=8</text>
+<text x="132" y="308" font-size="11" text-anchor="end" class="free">k=10</text>
+<text x="113" y="218" font-size="13" text-anchor="start" class="free" transform="rotate(-90,113,218)">频域 → k（子载波；1 PRB = 12 个子载波）</text>
 <text x="150" y="360" font-size="11" text-anchor="middle" class="free">l=0</text>
 <text x="190" y="360" font-size="11" text-anchor="middle" class="free">l=2</text>
 <text x="230" y="360" font-size="11" text-anchor="middle" class="free">l=4</text>
