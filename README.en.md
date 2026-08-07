@@ -38,7 +38,7 @@ A full-stack teaching Obsidian knowledge base for the 3GPP LTE/NR decoding chain
 
 ## Usage
 
-This repository is an **Obsidian vault**. Open it with Obsidian for the full experience (`[[wikilink]]` graph navigation, backlinks, relationship graphs).
+This repository is an **Obsidian vault**. Open it with Obsidian for the full experience (`[ [wikilink]]` graph navigation, backlinks, relationship graphs).
 
 ### Downloading & Installing Obsidian
 

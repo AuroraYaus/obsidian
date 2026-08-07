@@ -17,7 +17,7 @@
 - 合规红线：Rule 10（英文术语首现"中文（English）"）、Rule 16（标题口语化禁止）、Rule 20（LaTeX 可渲染）、Rule 8（每篇至少 1 个生活类比）
 - 协议锚点：TS 38.211 §7.3.1.3（层映射/单码字≤4层）、§5.1（星座）、§7.4.1.1（DMRS）；TS 38.214 §5.1.3（MCS/TBS）；本地锚点 `3GPP_Rel19/processed/TS_38.211_38211-j30/content.md`
 - 文件名：`T12.x_<english_snake_case>.md`；wikilink 全部可解析（新讲义引用的概念笔记/T2.x 均存在）
-- 每篇 图谱衔接：讲义内 `[[概念笔记]]` 链接 + 概念笔记侧回链由 Task 6 统一补
+- 每篇 图谱衔接：讲义内 `[ [概念笔记]]` 链接 + 概念笔记侧回链由 Task 6 统一补
 
 ---
 
@@ -98,7 +98,7 @@ for Nt, Nl in [(2,1),(2,2),(4,2),(4,4)]:
 ```bash
 wc -l 3gpp/docs/L2_协议算法/T12.1_mimo_receiver_chain_overview.md          # 预期 500-800
 grep -c "^## " 3gpp/docs/L2_协议算法/T12.1_mimo_receiver_chain_overview.md # 预期 ≥6（学习目标/前置检查/各章节/小结）
-# 死链：讲义内全部 [[...]] 链接目标必须存在
+# 死链：讲义内全部 [ [...]] 链接目标必须存在
 grep -oE "\[\[[^]]+\]\]" 3gpp/docs/L2_协议算法/T12.1_mimo_receiver_chain_overview.md | sed 's/\[\[//;s/\]\]//;s/|.*//' | while read -r l; do
   find 3gpp -name "${l}.md" | grep -q . || echo "DEAD: $l"; done; echo "link check done"
 ```

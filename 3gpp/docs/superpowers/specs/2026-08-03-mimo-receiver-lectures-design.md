@@ -43,7 +43,7 @@
 
 - `docs/L2_协议算法/L2_协议算法入口.md` 新增 `## M12 MIMO 接收机与检测器` 章节（在 M11 之后），挂 5 篇链接，与既有条目格式一致
 - `概念图谱入口.md` 不改动（概念笔记已在图谱）
-- 相关概念笔记补充指向讲义的图谱关联（可选，随讲义实施一并做）：Detector_Comparison/Diversity_Combining/Channel_Estimation/MMSE_均衡/Sphere_Decoding/CSI_SINR 各加 `[[T12.x_...]]` 链接
+- 相关概念笔记补充指向讲义的图谱关联（可选，随讲义实施一并做）：Detector_Comparison/Diversity_Combining/Channel_Estimation/MMSE_均衡/Sphere_Decoding/CSI_SINR 各加 `[ [T12.x_...]]` 链接
 
 ## 验收标准
 

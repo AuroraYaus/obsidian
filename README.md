@@ -38,7 +38,7 @@
 
 ## 使用说明
 
-- 本仓库是一个 **Obsidian 知识库（vault）**，推荐用 Obsidian 打开以获得完整体验（`[[wikilink]]` 图谱导航、双链跳转、关系图谱）
+- 本仓库是一个 **Obsidian 知识库（vault）**，推荐用 Obsidian 打开以获得完整体验（`[ [wikilink]]` 图谱导航、双链跳转、关系图谱）
 
 ### Obsidian 下载与安装
 

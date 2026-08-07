@@ -24,7 +24,7 @@
 1. 目录完整性：`ls 3gpp/docs/L2_协议算法/` → 54 篇 T* 讲义 + 51 assets + 入口 + 术语表 ✓
 2. 残留检查：`grep -rl "docs/L2[^_]" 3gpp/ --include="*.md" --include="*.py"` → 无输出 ✓（.json/.sh/.txt 同样复检为 0）
 3. `docs/L2` 全部出现均为 `docs/L2_协议算法`：`grep -rn "docs/L2" ... | grep -vc "L2_协议算法"` → 0 ✓
-4. 入口文件 `L2_协议算法入口.md`：frontmatter `source_spec` 已更新为 `"3gpp/docs/L2_协议算法"`；内部 wikilink 均为相对链接（`[[T6.1_...]]`），不受影响 ✓
+4. 入口文件 `L2_协议算法入口.md`：frontmatter `source_spec` 已更新为 `"3gpp/docs/L2_协议算法"`；内部 wikilink 均为相对链接（`[ [T6.1_...]]`），不受影响 ✓
 5. Python 语法：两个手工修改文件 `py_compile` 通过 ✓
 6. 功能测试：`python3 -m unittest tests.test_docs_terminology_consolidation` → 2 个测试 OK（遍历改名后目录）✓
 7. 提交后工作树干净 ✓

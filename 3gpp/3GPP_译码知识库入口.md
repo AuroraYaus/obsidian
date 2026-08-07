@@ -15,7 +15,7 @@ source_spec: "Local vault index"
 
 ## 入口
 
-- [[3gpp/Obsidian图谱标准化-执行结果]]
+- [[Obsidian图谱标准化]]
 - [[3gpp/3GPP_Rel19_资料入口总览]]
 - [[3gpp/docs/concepts/概念图谱入口]]
 - Rel-19 协议下载清单：`3gpp/3GPP_Rel19/Rel19_协议下载清单.md`

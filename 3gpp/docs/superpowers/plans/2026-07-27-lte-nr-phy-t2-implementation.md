@@ -97,11 +97,11 @@ sed -i '1s/^# T2\.5 /# T2.11 /' docs/L1_基础/T2.11_LLR_clipping_scaling_quanti
 - [ ] **Step 2: 逐文件更新正文内的交叉引用**
 
 对每个文件，使用 Edit 工具精确替换：
-- wikilink `[[T2.1_AWGN...]]` → `[[T2.7_AWGN...]]`
+- wikilink `[ [T2.1_AWGN...]]` → `[ [T2.7_AWGN...]]`
 - 正文引用 `T2.1`（在非文件名的上下文中）→ `T2.7`
 - 同理处理 T2.2→T2.8, T2.3→T2.9, T2.4→T2.10, T2.5→T2.11
 
-**重点注意：** 外部文件中的 wikilink 以旧文件名匹配（如 `[[T2.1_AWGN_noise_scaling]]`），需要替换为目标文件名。
+**重点注意：** 外部文件中的 wikilink 以旧文件名匹配（如 `[ [T2.1_AWGN_noise_scaling]]`），需要替换为目标文件名。
 
 - [ ] **Step 3: 全文扫描验证**
 

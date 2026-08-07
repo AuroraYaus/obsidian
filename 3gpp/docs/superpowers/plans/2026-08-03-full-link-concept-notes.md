@@ -17,7 +17,7 @@
 - 来源可溯：协议锚点引用 TS/TR 小节号 + 本地锚点 `3GPP_Rel19/processed/TS_38.211_38211-j30/content.md`；非标准项显式标注"非 3GPP 标准"
 - 增强规则：Channel_Estimation、Probabilistic_Shaping 只追加不重构；LLR_Quantization 整篇重建（保留现有内容）
 - 每篇 图谱关联 必须含 `[[概念图谱入口]]` + 上下游笔记
-- 死链规则：全部 `[[链接]]` 必须能在仓库内找到对应文件
+- 死链规则：全部 `[ [链接]]` 必须能在仓库内找到对应文件
 
 ---
 
