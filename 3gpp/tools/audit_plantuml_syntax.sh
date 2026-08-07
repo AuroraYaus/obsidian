@@ -25,10 +25,12 @@ if [ ! -f "$JAR" ]; then
     exit 2
 fi
 
-# 提取全部 plantuml 块
+# 提取全部 plantuml 块（root 不存在视为扫描异常，0 块视为正常）
 python3 - "$ROOT/$SCOPE" "$TMP" <<'PYEOF'
 import re, glob, sys, os
 root, tmp = sys.argv[1], sys.argv[2]
+if not os.path.isdir(root):
+    sys.exit(1)
 lst = []
 for f in glob.glob(os.path.join(root, "**", "*.md"), recursive=True):
     t = open(f, encoding="utf-8").read()
@@ -42,8 +44,8 @@ with open(os.path.join(tmp, "list.txt"), "w") as fh:
 print(f"提取 {len(lst)} 个 plantuml 块")
 PYEOF
 if [ ! -s "$TMP/list.txt" ]; then
-    echo "ERROR: plantuml 块提取失败或为空——扫描未执行，不视为通过" >&2
-    exit 1
+    echo "共 0 块, 失败 0（全库无 plantuml 块，正常）"
+    exit 0
 fi
 
 fail=0; total=0
