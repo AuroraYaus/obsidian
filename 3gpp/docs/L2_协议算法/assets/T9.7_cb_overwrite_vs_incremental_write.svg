@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T9.7_cb_overwrite_vs_incremental_write.svg
+  @brief   译码侧 HARQ CB 缓存两种操作模式对比：覆盖写（NDI=1）与增量写（NDI=0）
+  @date    2026-08-07
+  @note    语义色：新数据=橄榄（NDI=1 覆盖写）、重传=石榴（NDI=0 增量写累加）、
+           缓存历史=石板。依据 T2.1 基准图规格（960 宽、字号层级、Noto CJK 字体栈）。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 580" width="960" height="580" role="img">
+  <title>CB 缓存覆盖写与增量写对比</title>
+  <rect width="960" height="580" fill="#ffffff"/>
+  <style>
+    .title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 18px; font-weight: bold; fill: #111; }
+    .label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 14px; fill: #222; }
+    .small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #555; }
+    .mono { font-family: monospace; font-size: 13px; fill: #333; }
+  </style>
+  <text x="480" y="30" text-anchor="middle" class="title">HARQ CB 缓存的两种操作模式：覆盖写与增量写</text>
+  <text x="480" y="52" text-anchor="middle" class="small">同一 HARQ 进程的同一 CB：新数据（NDI=1）清空写入；重传（NDI=0 且 CBGTI 命中）不清空、LLR 累加</text>
+
+  <!-- ============ 左面板：覆盖写（NDI=1） ============ -->
+  <rect x="60" y="72" width="400" height="460" rx="10" fill="#F5F8F2" stroke="#6C7A2E" stroke-width="1.5"/>
+  <text x="82" y="100" class="label" font-weight="bold" fill="#525F1F">覆盖写（Overwrite）：NDI=1 新 TB</text>
+  <text x="82" y="122" class="small">NDI 翻转 = 新数据 → 全部 CB 缓存清空后完整写入本次 LLR</text>
+  <!-- 缓存格：清空 -> 写入 -->
+  <text x="120" y="158" class="small" font-weight="bold" fill="#525F1F">① 清空</text>
+  <rect x="100" y="168" width="34" height="34" fill="#F0F0F0" stroke="#B0BEC5" stroke-width="1.2"/>
+  <rect x="144" y="168" width="34" height="34" fill="#F0F0F0" stroke="#B0BEC5" stroke-width="1.2"/>
+  <rect x="188" y="168" width="34" height="34" fill="#F0F0F0" stroke="#B0BEC5" stroke-width="1.2"/>
+  <rect x="232" y="168" width="34" height="34" fill="#F0F0F0" stroke="#B0BEC5" stroke-width="1.2"/>
+  <rect x="276" y="168" width="34" height="34" fill="#F0F0F0" stroke="#B0BEC5" stroke-width="1.2"/>
+  <rect x="320" y="168" width="34" height="34" fill="#F0F0F0" stroke="#B0BEC5" stroke-width="1.2"/>
+  <text x="260" y="216" text-anchor="middle" class="small" fill="#78909C">旧 LLR 全部丢弃（上轮失败证据不留）</text>
+  <text x="120" y="252" class="small" font-weight="bold" fill="#525F1F">② 完整写入</text>
+  <rect x="100" y="262" width="34" height="34" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.4"/>
+  <rect x="144" y="262" width="34" height="34" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.4"/>
+  <rect x="188" y="262" width="34" height="34" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.4"/>
+  <rect x="232" y="262" width="34" height="34" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.4"/>
+  <rect x="276" y="262" width="34" height="34" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.4"/>
+  <rect x="320" y="262" width="34" height="34" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.4"/>
+  <text x="260" y="310" text-anchor="middle" class="small">写入本次全部接收 LLR（本次 E 个软值）</text>
+  <text x="120" y="344" class="small" font-weight="bold" fill="#525F1F">③ 译码与反馈</text>
+  <text x="120" y="366" class="small">译码成功 → ACK，缓存可释放；失败 → NACK，缓存保留</text>
+  <text x="120" y="398" class="small" fill="#525F1F">缓存内 = 本次 LLR（无历史叠加）</text>
+  <rect x="100" y="412" width="248" height="30" rx="5" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.2"/>
+  <text x="224" y="432" text-anchor="middle" class="mono">缓存 = L_本次</text>
+
+  <!-- ============ 右面板：增量写（NDI=0） ============ -->
+  <rect x="500" y="72" width="400" height="460" rx="10" fill="#FDF5F4" stroke="#A6403C" stroke-width="1.5"/>
+  <text x="522" y="100" class="label" font-weight="bold" fill="#8C332F">增量写（Incremental Write）：NDI=0 且 CBGTI 命中</text>
+  <text x="522" y="122" class="small">仅 CBGTI 命中的 CBG 内 CB 走增量写，未命中 CB 缓存不动</text>
+  <text x="560" y="158" class="small" font-weight="bold" fill="#8C332F">① 保留历史</text>
+  <rect x="540" y="168" width="34" height="34" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.2"/>
+  <rect x="584" y="168" width="34" height="34" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.2"/>
+  <rect x="628" y="168" width="34" height="34" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.2"/>
+  <rect x="672" y="168" width="34" height="34" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.2"/>
+  <rect x="716" y="168" width="34" height="34" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.2"/>
+  <rect x="760" y="168" width="34" height="34" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.2"/>
+  <text x="700" y="216" text-anchor="middle" class="small" fill="#78909C">缓存内已有上轮 LLR（历史证据）</text>
+  <text x="560" y="252" class="small" font-weight="bold" fill="#8C332F">② 本次重传 LLR 累加</text>
+  <rect x="540" y="262" width="34" height="34" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.4"/>
+  <rect x="584" y="262" width="34" height="34" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.4"/>
+  <rect x="628" y="262" width="34" height="34" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.4"/>
+  <rect x="672" y="262" width="34" height="34" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.4"/>
+  <rect x="716" y="262" width="34" height="34" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.4"/>
+  <rect x="760" y="262" width="34" height="34" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.4"/>
+  <text x="700" y="310" text-anchor="middle" class="small">本次重传接收 LLR（可能只覆盖部分地址，按 RV 起点）</text>
+  <text x="560" y="344" class="small" font-weight="bold" fill="#8C332F">③ 逐地址叠加</text>
+  <text x="560" y="366" class="small">同位置：新 LLR + 历史 LLR（软合并），处理饱和与覆盖</text>
+  <text x="560" y="398" class="small" fill="#8C332F">缓存内 = 历史 + 本次（证据逐轮累积）</text>
+  <rect x="540" y="412" width="248" height="30" rx="5" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.2"/>
+  <text x="664" y="432" text-anchor="middle" class="mono">缓存 = L_历史 + L_本次</text>
+  <text x="700" y="468" text-anchor="middle" class="small" fill="#8C332F">等效码率随重传下降，译码成功率逐轮提升</text>
+  <text x="700" y="490" text-anchor="middle" class="small">未传输 CBG 的缓存：保持不动（不清零）</text>
+
+  <text x="480" y="556" text-anchor="middle" class="small">读图：左列"清空再写"、右列"保留再累"——区别只在 NDI 与 CBGTI 联合判定后，对同一 CB 缓存执行哪种操作</text>
+</svg>
