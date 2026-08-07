@@ -23,7 +23,7 @@
   <text x="82" y="100" class="label" font-weight="bold" fill="#525F1F">覆盖写（Overwrite）：NDI=1 新 TB</text>
   <text x="82" y="122" class="small">NDI 翻转 = 新数据 → 全部 CB 缓存清空后完整写入本次 LLR</text>
   <!-- 缓存格：清空 -> 写入 -->
-  <text x="120" y="158" class="small" font-weight="bold" fill="#525F1F">① 清空</text>
+  <text x="120" y="158" class="small" font-weight="bold" fill="#525F1F">1) 清空</text>
   <rect x="100" y="168" width="34" height="34" fill="#F0F0F0" stroke="#B0BEC5" stroke-width="1.2"/>
   <rect x="144" y="168" width="34" height="34" fill="#F0F0F0" stroke="#B0BEC5" stroke-width="1.2"/>
   <rect x="188" y="168" width="34" height="34" fill="#F0F0F0" stroke="#B0BEC5" stroke-width="1.2"/>
@@ -31,7 +31,7 @@
   <rect x="276" y="168" width="34" height="34" fill="#F0F0F0" stroke="#B0BEC5" stroke-width="1.2"/>
   <rect x="320" y="168" width="34" height="34" fill="#F0F0F0" stroke="#B0BEC5" stroke-width="1.2"/>
   <text x="260" y="216" text-anchor="middle" class="small" fill="#78909C">旧 LLR 全部丢弃（上轮失败证据不留）</text>
-  <text x="120" y="252" class="small" font-weight="bold" fill="#525F1F">② 完整写入</text>
+  <text x="120" y="252" class="small" font-weight="bold" fill="#525F1F">2) 完整写入</text>
   <rect x="100" y="262" width="34" height="34" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.4"/>
   <rect x="144" y="262" width="34" height="34" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.4"/>
   <rect x="188" y="262" width="34" height="34" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.4"/>
@@ -39,7 +39,7 @@
   <rect x="276" y="262" width="34" height="34" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.4"/>
   <rect x="320" y="262" width="34" height="34" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.4"/>
   <text x="260" y="310" text-anchor="middle" class="small">写入本次全部接收 LLR（本次 E 个软值）</text>
-  <text x="120" y="344" class="small" font-weight="bold" fill="#525F1F">③ 译码与反馈</text>
+  <text x="120" y="344" class="small" font-weight="bold" fill="#525F1F">3) 译码与反馈</text>
   <text x="120" y="366" class="small">译码成功 → ACK，缓存可释放；失败 → NACK，缓存保留</text>
   <text x="120" y="398" class="small" fill="#525F1F">缓存内 = 本次 LLR（无历史叠加）</text>
   <rect x="100" y="412" width="248" height="30" rx="5" fill="#E8F5E9" stroke="#6C7A2E" stroke-width="1.2"/>
@@ -49,7 +49,7 @@
   <rect x="500" y="72" width="400" height="460" rx="10" fill="#FDF5F4" stroke="#A6403C" stroke-width="1.5"/>
   <text x="522" y="100" class="label" font-weight="bold" fill="#8C332F">增量写（Incremental Write）：NDI=0 且 CBGTI 命中</text>
   <text x="522" y="122" class="small">仅 CBGTI 命中的 CBG 内 CB 走增量写，未命中 CB 缓存不动</text>
-  <text x="560" y="158" class="small" font-weight="bold" fill="#8C332F">① 保留历史</text>
+  <text x="560" y="158" class="small" font-weight="bold" fill="#8C332F">1) 保留历史</text>
   <rect x="540" y="168" width="34" height="34" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.2"/>
   <rect x="584" y="168" width="34" height="34" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.2"/>
   <rect x="628" y="168" width="34" height="34" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.2"/>
@@ -57,7 +57,7 @@
   <rect x="716" y="168" width="34" height="34" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.2"/>
   <rect x="760" y="168" width="34" height="34" fill="#ECEFF1" stroke="#90A4AE" stroke-width="1.2"/>
   <text x="700" y="216" text-anchor="middle" class="small" fill="#78909C">缓存内已有上轮 LLR（历史证据）</text>
-  <text x="560" y="252" class="small" font-weight="bold" fill="#8C332F">② 本次重传 LLR 累加</text>
+  <text x="560" y="252" class="small" font-weight="bold" fill="#8C332F">2) 本次重传 LLR 累加</text>
   <rect x="540" y="262" width="34" height="34" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.4"/>
   <rect x="584" y="262" width="34" height="34" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.4"/>
   <rect x="628" y="262" width="34" height="34" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.4"/>
@@ -65,7 +65,7 @@
   <rect x="716" y="262" width="34" height="34" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.4"/>
   <rect x="760" y="262" width="34" height="34" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.4"/>
   <text x="700" y="310" text-anchor="middle" class="small">本次重传接收 LLR（可能只覆盖部分地址，按 RV 起点）</text>
-  <text x="560" y="344" class="small" font-weight="bold" fill="#8C332F">③ 逐地址叠加</text>
+  <text x="560" y="344" class="small" font-weight="bold" fill="#8C332F">3) 逐地址叠加</text>
   <text x="560" y="366" class="small">同位置：新 LLR + 历史 LLR（软合并），处理饱和与覆盖</text>
   <text x="560" y="398" class="small" fill="#8C332F">缓存内 = 历史 + 本次（证据逐轮累积）</text>
   <rect x="540" y="412" width="248" height="30" rx="5" fill="#FFEBEE" stroke="#A6403C" stroke-width="1.2"/>
