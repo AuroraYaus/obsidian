@@ -57,7 +57,7 @@ source_spec: "Local project instructions"
 
 ### 4. SVG 图生成后强制视觉验证
 
-**任何 SVG 图（含手写、Python 生成、Mermaid/PlantUML 渲染）生成后，必须先验证再嵌入文档，禁止直接提交。**
+**任何 SVG 图（含手写、Mermaid/PlantUML 渲染）生成后，必须先验证再嵌入文档，禁止直接提交。**
 
 验证步骤：
 1. **Y 坐标扫描**（必须）：提取所有 `<text>`、`<rect>`、`<line>` 的 y 坐标，逐层核对间距 ≥ 8 px
