@@ -67,21 +67,21 @@
   <text x="192" y="384" font-size="20" font-weight="700" fill="#152033">接收端对象</text>
   <g font-size="12.5" fill="#152033">
     <rect x="184" y="408" width="35"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
-    <text x="192" y="425">LLR</text>
-    <rect x="225" y="408" width="35"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
-    <text x="233" y="425">CRC</text>
-    <rect x="266" y="408" width="47"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
-    <text x="274" y="425">TB/CB</text>
-    <rect x="319" y="408" width="54"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
-    <text x="327" y="425">filler</text>
-    <rect x="379" y="408" width="29"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
-    <text x="387" y="425">RV</text>
-    <rect x="414" y="408" width="85"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
-    <text x="422" y="425">soft buffer</text>
-    <rect x="505" y="408" width="79"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
-    <text x="513" y="425">descriptor</text>
-    <rect x="590" y="408" width="66"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
-    <text x="598" y="425">evidence</text>
+    <text x="190.4" y="425">LLR</text>
+    <rect x="228" y="408" width="35"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+    <text x="233.1" y="425">CRC</text>
+    <rect x="272" y="408" width="47"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+    <text x="276.5" y="425">TB/CB</text>
+    <rect x="328" y="408" width="54"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+    <text x="341.4" y="425">filler</text>
+    <rect x="391" y="408" width="29"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+    <text x="397.6" y="425">RV</text>
+    <rect x="429" y="408" width="85"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+    <text x="440.4" y="425">soft buffer</text>
+    <rect x="523" y="408" width="79"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+    <text x="531.6" y="425">descriptor</text>
+    <rect x="611" y="408" width="66"  height="24" rx="6" fill="#FFFFFF" stroke="#C7D0DB" stroke-width="1"/>
+    <text x="617" y="425">evidence</text>
   </g>
 
   <!-- ============ 第三层：三条译码主线 ============ -->
@@ -165,7 +165,7 @@
 
   <!-- ============ 箭头语义标注（白描边防压线） ============ -->
   <g font-size="12" fill="#5B6B82" stroke="#FFFFFF" stroke-width="5" paint-order="stroke">
-    <text x="432" y="302">翻译为接收端对象</text>
-    <text x="560" y="470" text-anchor="middle">按对象选择 decoder core</text>
+    <text x="432" y="302" class="free">翻译为接收端对象</text>
+    <text x="560" y="470" text-anchor="middle" class="free">按对象选择 decoder core</text>
   </g>
 </svg>

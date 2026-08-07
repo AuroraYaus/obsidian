@@ -105,6 +105,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | 分集 | diversity | 多份独立衰落的拷贝合并，把深衰落概率指数压低；MRC 是最优线性合并方式。→ [[Diversity_Combining_分集与合并]] |
 | H_eff | 等效信道矩阵 | Effective Channel Matrix；层映射与预编码后的等效信道，DMRS 估计直接给出，接收端无需知道预编码矩阵 P。 |
 | Rhh | 信道相关矩阵 | HᴴH correlation matrix；PS 正则化的 Gram 矩阵，是 Cholesky 分解的输入。 |
+| 导频 | pilot / 参考信号 | 收发双方都已知的参考符号（NR 中称参考信号 Reference Signal），接收端用它估计信道；DMRS/CSI-RS/PTRS/SRS 是其具体类型。→ [[Pilot_导频]] |
 | DMRS | 解调参考信号 | Demodulation Reference Signal；接收端估计数据符号附近信道的参考信号（与数据同走预编码）。→ [[DMRS_解调参考信号]] |
 | CSI-RS | 信道状态信息参考信号 | Channel State Information Reference Signal；用于信道状态测量、报告和相关接收过程。 |
 | RSRP | 参考信号接收功率 | Reference Signal Received Power；描述参考信号功率强弱。 |
@@ -216,6 +217,8 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[Layer_Mapping_层映射]] | 把一个码字的 QAM 符号分发到一个或多个空间层的步骤；层数就是空间复用的维度，层不是天线。 |
 | [[Precoding_预编码]] | 把层上的 QAM 符号通过矩阵 P 映射到天线端口的发射链路步骤，接收端不需要知道预编码矩阵。 |
 | [[DMRS_解调参考信号]] | 收发双方都已知的参考符号，接收端用它估计信道，才能解调数据。 |
+| [[Pilot_导频]] | 收发双方都已知的参考符号（NR 中称参考信号）；从序列生成、资源映射到接收端提取、估计、插值、使用的完整链路。 |
+
 | [[Gold_序列加扰]] | 用两个 m 序列逐位异或生成的伪随机序列对编码 bit 流做 XOR，把数据"白化"。 |
 | [[HARQ_混合自动重传请求]] | 把前向纠错和自动重传结合，CRC 失败后保留同一 process 的软信息，按 RV 和调度上下文补充接收证据。 |
 | [[RV_冗余版本]] | 描述一次传输选取哪一部分编码冗余，是 HARQ soft combining 的"地址语义"。 |
