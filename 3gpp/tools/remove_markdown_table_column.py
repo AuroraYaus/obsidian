@@ -112,6 +112,11 @@ def remove_column(text: str, column_name: str) -> tuple[str, int]:
 def main() -> int:
     """
     @brief 脚本入口：按列名批量删除指定文件（支持 glob 模式）中所有 Markdown 表格的目标列。
+    @usage python tools/remove_markdown_table_column.py COLUMN_NAME PATHS...
+    @args COLUMN_NAME  要删除的列名（表头精确匹配）。
+    @args PATHS        文件路径（支持 * ? [] glob 模式）。
+    @env  无外部依赖（仅标准库）
+    @exit_code 0 正常完成。
     @return 0 正常完成。
     """
     parser = argparse.ArgumentParser()
@@ -134,10 +139,5 @@ def main() -> int:
     return 0
 
 
-# @brief 按列名批量删除 Markdown 管道表格中的指定列。
-# @usage python tools/remove_markdown_table_column.py COLUMN_NAME PATHS...
-# @args COLUMN_NAME  要删除的列名（表头精确匹配）。
-# @args PATHS        文件路径（支持 * ? [] glob 模式）。
-# @exit_code 0 正常完成。
 if __name__ == "__main__":
     raise SystemExit(main())

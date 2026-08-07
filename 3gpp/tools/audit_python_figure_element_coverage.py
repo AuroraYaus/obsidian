@@ -270,27 +270,27 @@ def term_present(term: str, lesson_text: str) -> bool:
 
 
 def candidate_present(term: str, lesson_text: str) -> bool:
-    """@brief  \u5e95\u5c42\u8bcd\u6761\u5b58\u5728\u6027\u68c0\u67e5\u2014\u2014\u533a\u5206\u4e2d\u82f1\u6587\u7684\u5339\u914d\u7b56\u7565
+    """@brief  底层词条存在性检查——区分中英文的匹配策略
 
-    @param  term         \u5019\u9009\u8bcd\u6761\uff08\u539f\u8bcd\u6216\u522b\u540d\uff09
-    @param  lesson_text  \u8bb2\u4e49\u5168\u6587\u6587\u672c
-    @return              True \u8868\u793a\u8bcd\u6761\u5728\u8bb2\u4e49\u4e2d\u88ab\u627e\u5230
-    @note   \u4e2d\u6587\u4f7f\u7528\u5b50\u4e32\u5339\u914d\uff08\u4e2d\u6587\u8bcd\u8fb9\u754c\u5929\u7136\u660e\u786e\uff09\uff1b
-             \u82f1\u6587\u4f7f\u7528\u5b8c\u6574\u7684\u8bcd\u8fb9\u754c\u6b63\u5219\uff08\u9632\u6b62 "re" \u8bef\u5339\u914d "request"\uff09"""
+    @param  term         候选词条（原词或别名）
+    @param  lesson_text  讲义全文文本
+    @return              True 表示词条在讲义中被找到
+    @note   中文使用子串匹配（中文词边界天然明确）；
+             英文使用完整的词边界正则（防止 "re" 误匹配 "request"）"""
     if re.search(r"[\u4e00-\u9fff]", term):
         return term in lesson_text
     return re.search(rf"(?<![A-Za-z0-9_]){re.escape(term)}(?![A-Za-z0-9_])", lesson_text, re.IGNORECASE) is not None
 
 
 def element_covered(element: Element, lesson_text: str) -> bool:
-    """@brief  \u5224\u65ad\u4e00\u4e2a\u53ef\u89c1\u6587\u672c\u5143\u7d20\u662f\u5426\u88ab\u8bb2\u4e49\u6b63\u6587\u8986\u76d6
+    """@brief  判断一个可见文本元素是否被讲义正文覆盖
 
-    \u82e5\u5143\u7d20\u5168\u6587\u76f4\u63a5\u51fa\u73b0\u5728\u8bb2\u4e49\u4e2d\u5219\u76f4\u63a5\u901a\u8fc7\uff0c\u5426\u5219\u5c06\u5176\u62c6\u5206\u4e3a\u8bcd\u6761\uff0c
-    \u6309"\u81f3\u5c11 1 \u4e2a\u6709\u6548 term \u88ab\u8986\u76d6\uff08\u4e0a\u9650 4 \u4e2a\uff09"\u7684\u5bbd\u677e\u7b56\u7565\u5224\u5b9a\u3002
+    若元素全文直接出现在讲义中则直接通过，否则将其拆分为词条，
+    按"至少 1 个有效 term 被覆盖（上限 4 个）"的宽松策略判定。
 
-    @param  element      \u5f85\u68c0\u67e5\u7684\u53ef\u89c1\u6587\u672c\u5143\u7d20
-    @param  lesson_text  \u8bb2\u4e49\u5168\u6587\u6587\u672c
-    @return              True \u8868\u793a\u5143\u7d20\u5df2\u88ab\u6b63\u6587\u8986\u76d6"""
+    @param  element      待检查的可见文本元素
+    @param  lesson_text  讲义全文文本
+    @return              True 表示元素已被正文覆盖"""
     text = element.text
     if text in lesson_text:
         return True
@@ -371,6 +371,7 @@ def main(argv: list[str] | None = None) -> int:
     @args     SCRIPT LESSON  显式指定 (脚本, 讲义) 对进行单对审计。
     @args     --ledger <path>  迁移台账路径（默认 docs/audits/python_figure_to_body_content_migration.md）。
     @args     --summary        按讲义路径分组汇总输出。
+    @env      无外部依赖（仅标准库）
     @exit_code                 0 = 全覆盖；1 = 存在未覆盖元素。"""
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", help="Optional explicit script/lesson pair: SCRIPT LESSON")

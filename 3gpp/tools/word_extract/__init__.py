@@ -1,7 +1,7 @@
 """
 @file __init__.py
 @brief word_extract 包 — 3GPP Word 文档结构化抽取
-@date 2025
+@date 2026-07-19
 
 提供 DOCX 解析引擎，用于从 3GPP 协议 Word 文档（.docx）中提取：
 - 段落文本（含样式、标题识别）

@@ -1,7 +1,7 @@
 """
 @file docx_parser.py
 @brief 3GPP DOCX 文档解析引擎 — 段落、表格、公式、媒体的结构化提取
-@date 2025
+@date 2026-07-19
 
 从 Word .docx（Office Open XML / WordprocessingML）容器中提取：
 - Paragraph  — 段落文本、样式名、是否标题候选

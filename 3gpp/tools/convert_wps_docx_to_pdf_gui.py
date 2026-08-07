@@ -558,6 +558,15 @@ def main() -> int:
     """
     @brief 脚本入口：收集所有待导出文档，逐一通过 WPS GUI 导出为 PDF，
            记录状态和页数到 TSV 报告文件，遇到失败立即停止。
+    @usage python tools/convert_wps_docx_to_pdf_gui.py [--root PATH] [--limit N] [--dry-run] [--report PATH]
+    @args --root     搜索根目录，默认 3GPP_Rel19/processed。
+    @args --limit    最多处理文件数，0 表示不限制。
+    @args --dry-run  不执行导出，仅收集列表。
+    @args --report   报告输出路径，默认 docs/audits/wps_pdf_conversion_report.tsv。
+    @env  需要运行中的 X11/Wayland 会话，且已安装 WPS（/usr/bin/wps）、
+         xdotool、wmctrl、xwininfo、import（ImageMagick）、tesseract（chi_sim+eng）、
+         pdfinfo（poppler-utils）、PIL/Pillow。
+    @exit_code 0 全部成功或干运行完毕；1 有文件导出失败。
     @return 0 表示全部成功或干运行完毕；1 表示至少一个文档导出失败。
     @note 现有 PDF 自动跳过（幂等导出）；
           报告输出路径默认为 docs/audits/wps_pdf_conversion_report.tsv。
@@ -589,12 +598,5 @@ def main() -> int:
     return 0
 
 
-# @brief 通过 WPS GUI 批量导出 3GPP Word 文件为 PDF。
-# @usage python tools/convert_wps_docx_to_pdf_gui.py [--root PATH] [--limit N] [--dry-run] [--report PATH]
-# @args --root     搜索根目录，默认 3GPP_Rel19/processed。
-# @args --limit    最多处理文件数，0 表示不限制。
-# @args --dry-run  不执行导出，仅收集列表。
-# @args --report   报告输出路径，默认 docs/audits/wps_pdf_conversion_report.tsv。
-# @exit_code 0 全部成功或干运行；1 有文件导出失败。
 if __name__ == "__main__":
     raise SystemExit(main())

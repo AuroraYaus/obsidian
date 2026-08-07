@@ -5,11 +5,17 @@
 """
 
 import sys, re
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def text_width_estimate(text: str, font_size: float) -> float:
     """
     @brief 估算文本渲染宽度 (像素)
+    @param text       待估算的文本字符串
+    @param font_size  字号（像素）
+    @return           估算的像素宽度
     @note  中文字符 ≈ font_size px; ASCII/数字 ≈ font_size * 0.6 px; 上下标 ≈ font_size * 0.4 px
     """
     w = 0.0
@@ -287,4 +293,9 @@ def render_svg(output_path: str = "") -> str:
 
 
 if __name__ == "__main__":
+    """@brief 脚本入口：生成 T3.2 网格终止跨流重排 SVG 并运行双向自检。
+    @usage python3 tools/figures/render_t3.2_trellis_termination_shuffle.py
+    @args  无参数（输出路径固定为 docs/L1_基础/assets/T3.2_trellis_termination_shuffle.svg）
+    @env   无外部依赖（纯标准库，输出 SVG 文本）
+    @exit_code 0 = 生成成功且自检通过；非 0 = 自检失败（SystemExit）"""
     render_svg(str(ROOT / "docs/L1_基础/assets/T3.2_trellis_termination_shuffle.svg"))

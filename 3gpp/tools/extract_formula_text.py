@@ -191,6 +191,7 @@ def main() -> int:
     @usage python3 extract_formula_text.py --dir media_svg --output formula_text.json
     @args --dir     SVG 目录（默认 media_svg）。
     @args --output  输出 JSON 路径（默认打印汇总）。
+    @env   输入为 LibreOffice 导出的公式 SVG（含 <text>/<tspan>）；无第三方库依赖。
     @exit_code 0 = 成功。
     """
     parser = argparse.ArgumentParser(description="Extract formula text from formula SVGs")

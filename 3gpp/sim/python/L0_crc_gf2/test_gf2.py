@@ -1,7 +1,7 @@
 """
 @file test_gf2.py
 @brief GF(2) 线性代数运算的单元测试
-@date 2025
+@date 2026-07-19
 
 测试 gf2.py 中所有公开函数的正确性：
 - GF(2) 加法（gf2_add = XOR）

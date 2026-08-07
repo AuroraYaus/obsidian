@@ -24,7 +24,9 @@ from pathlib import Path
 
 RISK_PATTERNS = [
     ("unverified", re.compile(r"未核验|待核验|不复现|不展开|抽取不完整")),
-    ("table_or_figure", re.compile(r"\bTable\b|\bFigure\b|表\s*\d|图\s*\d|图表")),
+    # 表/图引用加词边界：前非数字/字母/汉字（排除"代表2""量表3"等词内子串），
+    # 后非数字（排除"表123"这类长数字段）
+    ("table_or_figure", re.compile(r"\bTable\b|\bFigure\b|(?<![0-9A-Za-z一-鿿])表\s*\d(?![0-9])|图\s*\d|图表")),
     ("paper_citation", re.compile(r"\[[A-Z][A-Za-z]+(?:\s+and\s+[A-Z][A-Za-z]+|\s+et\s+al\.)?,\s*\d{4}\]")),
     ("formula_ref", re.compile(r"公式|方程|equation|多项式|生成多项式|算法框图")),
 ]
@@ -51,6 +53,7 @@ def main() -> int:
     @args     paths            一个或多个 Markdown 文件或目录路径。
     @args     --context-safe   同时输出安全边界提示行（背景阅读等），
                                默认跳过这些行以减少噪音。
+    @env      无外部依赖（仅标准库）
     @exit_code                 始终返回 0（分诊工具，不做硬阻断）。
     @note    输出格式：`<file>:<line>: [<risk_type>] <content>`。"""
     parser = argparse.ArgumentParser()

@@ -2,7 +2,7 @@
 """
 @file figure_text_fit.py
 @brief PIL 教学图渲染的文本排版工具 — 自动换行、CJK 检测、字体加载
-@date 2025
+@date 2026-07-19
 
 为 tools/figures/render_*.py 提供文本排版基础能力：
 - wrap_text()    — 按像素宽度自动换行（支持中英文混排、超长 token 拆分）
@@ -41,7 +41,7 @@ class TextMeasure(Protocol):
         ...
 
 
-# 将文本拆分为 token 的���则（英文单词、空格、换行、单字符）
+# 将文本拆分为 token 的规则（英文单词、空格、换行、单字符）
 TOKEN_RE = re.compile(r"[A-Za-z0-9_./'()+\[\]=:;-]+|[ \t]+|\n|.")
 
 # 检测 CJK 字符的正则（Unicode 中日韩统一表意文字区间）

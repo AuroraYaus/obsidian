@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """@file render_nr_polar_reliability_sequence.py
 @brief 渲染 TS 38.212 Table 5.3.1.2-1 Polar 可靠性序列本地复现表格，展示 rank 与 Q(rank) 的完整映射关系。
-@date 2025
+@date 2026-07-19
 """
 
 from __future__ import annotations
@@ -73,6 +73,11 @@ def read_pairs() -> list[tuple[int, int]]:
 
 def main() -> None:
     """@brief 脚本入口：生成 TS 38.212 Table 5.3.1.2-1 Polar 可靠性序列本地复现表格 T10.3_TS38.212_Table_5.3.1.2-1_Polar_sequence.png。
+    @usage python3 tools/figures/render_nr_polar_reliability_sequence.py
+    @args  无参数
+    @env  需要 PIL/Pillow、系统 Noto Sans CJK 字体（figure_text_fit 加载）、
+         TS 38.212 抽取件 table_0012.csv（3GPP_Rel19/processed/TS_38.212_38212-j30/tables/）
+    @exit_code 0 = 成功；非 0 = 数据校验失败（AssertionError）
     @note 表格按 8 组、每组 128 行的格式展示 1024 对 (rank, Q(rank)) 映射。
     每组两列：rank（可靠性升序位置）和 Q(rank)（编码前 bit index）。
     检查点：Q(0)=0, Q(1)=1, Q(2)=2, Q(3)=4, Q(1023)=1023。

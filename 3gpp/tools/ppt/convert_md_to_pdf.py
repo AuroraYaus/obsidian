@@ -70,7 +70,12 @@ MathJax = {{
 
 
 def md_to_html(text: str) -> str:
-    """Convert project Markdown to basic HTML with table/blockquote/code support."""
+    """@brief 将项目 Markdown 讲义转换为基本 HTML。
+    @param text  讲义 Markdown 全文。
+    @return      转换后的 HTML 字符串（含 table/blockquote/code 支持）。
+    @note  支持标题、段落、表格、引用块、代码围栏、行内公式透传、
+          图片/链接/双链转义；Mermaid/text 图表块被整体跳过（PDF 截图不需要）。
+    @see   行内格式转换由 inline() 完成，表格输出由 flush() 完成。"""
     lines = text.split("\n")
     out = []
     in_code = False
@@ -78,6 +83,9 @@ def md_to_html(text: str) -> str:
     table_rows = []
 
     def flush():
+        """@brief 将累积的表格行渲染为 <table> 并追加到输出。
+        @note 首行作为表头（<th>），分隔行（:- 等）被跳过，其余行作为 <td>；
+              无分隔行时同样按首行表头处理。"""
         nonlocal table_rows
         if not table_rows: return
         sep_idx = None
@@ -97,9 +105,18 @@ def md_to_html(text: str) -> str:
         out.append("".join(html))
         table_rows.clear()
 
-    def esc(s): return s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
+    def esc(s):
+        """@brief 对文本做 HTML 转义（& < >）。
+        @param s  原始文本。
+        @return   转义后的安全 HTML 文本。"""
+        return s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
 
     def inline(s):
+        """@brief 将单行文本中的 Markdown 行内语法转为 HTML。
+        @param s  行内 Markdown 文本。
+        @return   转换后的 HTML 片段。
+        @note 依次处理加粗、斜体、行内代码、图片、双链（渲染为 <em>）、外链；
+              公式 $$...$$ 与 $...$ 保持原样交由 MathJax 渲染。"""
         s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
         s = re.sub(r"\*(.+?)\*", r"<em>\1</em>", s)
         s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)
@@ -192,6 +209,13 @@ def md_to_html(text: str) -> str:
 
 
 def convert_one(md_path: Path, out_dir: Path) -> bool:
+    """@brief 将单个 Markdown 讲义转换为 PDF。
+    @param md_path 讲义 .md 文件路径。
+    @param out_dir 输出目录（HTML/PDF/临时 JS 均写入此处）。
+    @return True 表示转换成功；False 表示 node/Puppeteer 渲染失败。
+    @note 转换流程：md_to_html → 套 HTML_TPL 模板 → 修正图片绝对路径 →
+          生成临时 Puppeteer JS → node 执行（等待 MathJax 排版）→ 输出 A4 PDF；
+          临时 JS 在运行后删除。"""
     name = md_path.stem
     html_path = out_dir / f"{name}.html"
     pdf_path  = out_dir / f"{name}.pdf"
@@ -240,7 +264,14 @@ const fs = require('fs');
     return True
 
 
-def main():
+def main() -> int:
+    """@brief 将 FILES 列表中的 T2.1-T3.5 讲义批量转换为 PDF。
+    @usage python3 tools/ppt/convert_md_to_pdf.py
+    @args  无参数（讲义清单与输出目录均为脚本内常量）
+    @env  需要 node、本地 puppeteer（PUPPETEER 常量路径，来自 @mermaid-js/mermaid-cli）、
+         MathJax CDN（排版需联网）、Noto Sans CJK / DejaVu Sans 字体。
+    @exit_code 0 = 全部成功或部分跳过；非 0 = node 子进程异常（由 subprocess 传播）。
+    @note 输出目录 ~/Downloads/3GPP_PPT_Screenshots/，文件缺失时打印 SKIP 跳过。"""
     os.makedirs(OUT_DIR, exist_ok=True)
     ok = 0
     print(f"Output: {OUT_DIR}\n")
@@ -252,7 +283,8 @@ def main():
         if convert_one(p, OUT_DIR):
             ok += 1
     print(f"\nDone: {ok}/{len(FILES)}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

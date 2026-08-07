@@ -71,6 +71,11 @@ def main() -> int:
     """
     @brief 扫描所有讲义中的 PNG 图片引用，结合附近 40 行内是否存在等价标记，
            生成一张完整的图片到正文内容迁移总账表格。
+    @usage python tools/build_python_figure_migration_ledger.py [--dry-run] [--output PATH]
+    @args --dry-run  仅打印摘要，不写入输出文件。
+    @args --output   指定输出文件路径，默认 docs/audits/python_figure_to_body_content_migration.md。
+    @env  无外部依赖（仅标准库）
+    @exit_code 0 正常完成（或干运行完毕）；非 0 表示内部异常。
     @return 0 表示生成成功（或干运行完毕）；非 0 表示内部逻辑异常（当前实现始终返回 0）。
     @note 扫描 docs/L1_基础、docs/L2_协议算法、docs/L3_工程实现 下所有 .md 文件；
           既存证据行通过 existing_evidence_rows() 保留合并，防止重复审核。
@@ -141,10 +146,5 @@ def main() -> int:
     return 0
 
 
-# @brief 构建 Python 图片到正文等价内容迁移总账。
-# @usage python tools/build_python_figure_migration_ledger.py [--dry-run] [--output PATH]
-# @args --dry-run  仅打印摘要，不写入输出文件。
-# @args --output   指定输出文件路径，默认 docs/audits/python_figure_to_body_content_migration.md。
-# @exit_code 0 正常完成；非 0 表示内部异常。
 if __name__ == "__main__":
     raise SystemExit(main())

@@ -2,7 +2,7 @@
 """ @file convert_foreignobject_to_text.py
     @brief   将 Mermaid SVG 中的 foreignObject 元素转换为原生 SVG <text> 元素，
              解决浏览器缩放时 foreignObject 内 HTML 文字不跟随缩放的问题。
-    @date    2025 """
+    @date    2026-07-19 """
 
 import re
 import sys
@@ -242,14 +242,15 @@ def convert(svg_content):
     return cluster_fo.sub(_cluster_repl, result)
 
 
-if __name__ == "__main__":
+def main() -> int:
     """ @brief     命令行入口：读取输入 SVG 文件，将所有 foreignObject 转换为原生 <text>，
                    输出结果并打印转换统计。
         @usage     python3 convert_foreignobject_to_text.py input.svg output.svg
         @args      input.svg   输入 SVG 文件路径（Mermaid/mmdc 导出的原始 SVG）
         @args      output.svg  输出 SVG 文件路径（转换后的原生 text SVG）
-        @exit_code 0  转换成功
-        @exit_code 1  参数不足、文件不存在或解析异常 """
+        @env       无外部依赖（仅标准库）
+        @exit_code 0  转换成功；1  参数不足、文件不存在或解析异常
+        @note      参数不足时由 IndexError 自然传播（退出码 1）。"""
     inp, outp = sys.argv[1], sys.argv[2]
     svg = open(inp).read()
     result = convert(svg)
@@ -261,3 +262,8 @@ if __name__ == "__main__":
     print(f"foreignObject: {fo_before} → {fo_after}")
     print(f"native <text>:  {text_before} → {text_after}")
     print(f"Output: {outp}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

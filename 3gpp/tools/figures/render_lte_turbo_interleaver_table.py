@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """@file render_lte_turbo_interleaver_table.py
 @brief 渲染 TS 36.212 Table 5.1.3-3：LTE Turbo 内部交织器参数的完整教学表格
-@date 2025
+@date 2026-07-19
 @note 设计意图：以四个分面展示 188 条 (i,K,f1,f2) 参数，黄色高亮 B=10001 手算用到的 K=4992/5056
   和最大块长 K=6144，确保 Markdown 缩放后仍可逐行核验。
 @see docs/L1_基础/T3.3_TS36.212_Table_5.1.3-3_interleaver.md
@@ -165,6 +165,11 @@ def draw_group(
 
 def main() -> None:
     """@brief 渲染 TS 36.212 Table 5.1.3-3 完整交织器参数表
+    @usage python3 tools/figures/render_lte_turbo_interleaver_table.py
+    @args  无参数
+    @env  需要 PIL/Pillow、系统 Noto Sans CJK 字体（figure_text_fit 加载）、
+         TS 36.212 抽取件 table_0009.csv（3GPP_Rel19/processed/TS_36.212_36212-j30/tables/）
+    @exit_code 0 = 成功；1 = CSV 解析后条目数不为 188
     @note 输出文件: docs/L1_基础/assets/T3.3_TS36.212_Table_5.1.3-3.png
     @note 四个分面按 i 范围 (1-47, 48-94, 95-141, 142-188) 布局，
       高亮色标注教学关键 K 值，底部附证据链说明

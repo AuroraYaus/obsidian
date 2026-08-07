@@ -331,6 +331,8 @@ def main() -> int:
             --output processed/TS_38.212_38212-j30/full.md
     @args --source  源 .docx 路径（必填）。
     @args --output  输出路径（默认 <source 目录>/<stem>.full.md）。
+    @env  需要同目录 omml2latex.py 与 extract_formula_text.py（随仓库分发）；
+         源 .docx 取自 3GPP_Rel19/processed。
     @exit_code 0 = 成功；1 = 参数错误或解析失败。
     """
     parser = argparse.ArgumentParser(description="Build agent-friendly full.md from 3GPP docx")

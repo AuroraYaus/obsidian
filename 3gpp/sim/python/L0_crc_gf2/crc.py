@@ -1,7 +1,7 @@
 """
 @file crc.py
 @brief GF(2) 上的多项式长除法 — 循环冗余校验（CRC）核心实现
-@date 2025
+@date 2026-07-19
 
 在 GF(2) 上实现 CRC 的四个核心操作：
 1. poly_div_mod2  — GF(2) 多项式长除法（求余式）

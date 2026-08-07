@@ -239,8 +239,9 @@ def main(argv: list[str] | None = None) -> int:
     @args     paths            待审计的脚本文件或目录（默认 tools/figures）。
     @args     --project-root   项目根目录（脚本执行的工作目录）。
     @args     --timeout        单个脚本执行超时秒数（默认 60）。
-    @exit_code                 0 = 所有脚本通过；1 = 存在问题。
-    @note    需要 PIL/Pillow 库和可执行的 Python 环境（脚本在子进程中运行）。"""
+    @env      需要 PIL/Pillow；被审计的渲染脚本在子进程中执行，
+             依赖其自身运行环境（字体、CSV 抽取件等）。
+    @exit_code                 0 = 所有脚本通过；1 = 存在问题。"""
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", type=Path, default=DEFAULT_PATHS)
     parser.add_argument("--project-root", type=Path, default=Path.cwd())

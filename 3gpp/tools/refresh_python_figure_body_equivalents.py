@@ -383,6 +383,12 @@ def refresh_file(path: Path) -> bool:
 def main() -> int:
     """
     @brief 脚本入口：遍历指定讲义目录或文件，通过 AST 解析渲染脚本刷新每个 PNG 图片的等价块。
+    @usage python tools/refresh_python_figure_body_equivalents.py [--dry-run] [PATHS...]
+    @args --dry-run  仅打印变更摘要，不写入文件。
+    @args PATHS      要处理的目录或 .md 文件列表，
+                     默认 docs/L1_基础 docs/L2_协议算法 docs/L3_工程实现。
+    @env  无外部依赖（仅标准库）
+    @exit_code 0 正常完成。
     @return 0 正常完成。
     """
     import argparse
@@ -425,10 +431,5 @@ def main() -> int:
     return 0
 
 
-# @brief 通过 AST 解析渲染脚本刷新讲义中的 Python 图片正文等价块。
-# @usage python tools/refresh_python_figure_body_equivalents.py [--dry-run] [PATHS...]
-# @args --dry-run  仅打印变更摘要，不写入文件。
-# @args PATHS      要处理的目录或 .md 文件列表，默认 docs/L1_基础 docs/L2_协议算法 docs/L3_工程实现。
-# @exit_code 0 正常完成。
 if __name__ == "__main__":
     raise SystemExit(main())

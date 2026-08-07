@@ -101,6 +101,10 @@ def main() -> int:
     """
     @brief 脚本入口：对指定文件列表逐一执行缩写表格规范化，
            输出每文件新增行数和总计统计。
+    @usage python tools/normalize_abbreviation_tables.py FILE...
+    @args FILE...  要处理的一个或多个 .md 文件路径。
+    @env  无外部依赖（仅标准库）
+    @exit_code 0 正常完成。
     @return 0 正常完成。
     """
     parser = argparse.ArgumentParser()
@@ -121,9 +125,5 @@ def main() -> int:
     return 0
 
 
-# @brief 规范化讲义缩写说明表格：检测正文使用的术语并补充到"本节缩写说明"表格中。
-# @usage python tools/normalize_abbreviation_tables.py FILE...
-# @args FILE...  要处理的一个或多个 .md 文件路径。
-# @exit_code 0 正常完成。
 if __name__ == "__main__":
     raise SystemExit(main())

@@ -225,8 +225,8 @@ def audit_project(root: Path = Path(".")) -> list[Finding]:
              交叉校验 Markdown 引用、磁盘文件、资产清单和迁移台账四源数据。
     @param  root  项目根目录（默认当前目录）。
     @return       所有不一致 Findings 的列表；空列表表示四源数据完全一致。
-    @note   五项检查：缺失文件、缺失清单行、缺失迁移行、资产无清单备案、资产无分类状态、
-             迁移台账中的孤儿资产、有资产但无分类状态。"""
+    @note   七项检查：缺失文件、缺失清单行、缺失迁移行、资产无清单备案、
+             资产无分类状态、迁移台账中的孤儿资产、有资产但无分类状态。"""
     root = root.resolve()
     refs = collect_markdown_references(root)
     assets = collect_assets(root)
@@ -293,6 +293,7 @@ def main(argv: list[str] | None = None) -> int:
     @param    argv  命令行参数列表（sys.argv）。
     @usage    python audit_project_image_inventory.py [--root <dir>]
     @args     --root  项目根目录路径（默认当前目录）。
+    @env      无外部依赖（仅标准库）
     @exit_code        0 = 四源数据一致；1 = 发现不一致问题。"""
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=Path("."))

@@ -1,7 +1,7 @@
 """
 @file test_crc.py
 @brief CRC（循环冗余校验）多项式长除法的单元测试
-@date 2025
+@date 2026-07-19
 
 测试 crc.py 中所有公开函数的正确性：
 - poly_div_mod2 — 多项式长除法（手算验证）

@@ -1,7 +1,7 @@
 """
 @file exporter.py
 @brief 将 ParsedDocx 结构化内容导出为文件目录
-@date 2025
+@date 2026-07-19
 
 将 docx_parser 解析得到的 ParsedDocx 对象导出为可浏览的目录结构：
 - source.docx           — 源文件副本

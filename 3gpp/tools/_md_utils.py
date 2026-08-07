@@ -2,7 +2,7 @@
 """
 @file _md_utils.py
 @brief Markdown 审计脚本的共享工具函数
-@date 2025
+@date 2026-07-19
 
 提供 Markdown 文件遍历、代码块剥离、字符偏移到行号的转换等基础能力，
 被 tools/ 下所有审计脚本复用。

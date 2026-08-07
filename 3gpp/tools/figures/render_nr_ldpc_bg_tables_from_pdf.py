@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """@file render_nr_ldpc_bg_tables_from_pdf.py
 @brief 从 TS 38.212 本地渲染 PDF 中裁剪拼接 LDPC BG1/BG2 移位表图片
-@date 2025
+@date 2026-07-19
 @note 设计意图：使用 pdftoppm 将 PDF 源文件的第 21-24 页光栅化，然后按预定坐标裁剪、
   拼接表格片段，输出完整移位表（给 L1 讲义）和分段清晰表（给 L2 讲义）。
 @see docs/L1_基础/T3.4_TS38.212_BG_shift_tables.md
@@ -142,6 +142,11 @@ def save_split_table_images(tmpdir: Path, key: str) -> None:
 
 def main() -> None:
     """@brief 从 TS 38.212 PDF 中提取并拼接 BG1/BG2 移位表图片
+    @usage python3 tools/figures/render_nr_ldpc_bg_tables_from_pdf.py
+    @args  无参数
+    @env  需要 PIL/Pillow、pdftoppm（poppler-utils）、
+         TS 38.212 本地渲染 PDF source.pdf（3GPP_Rel19/processed/TS_38.212_38212-j30/）
+    @exit_code 0 = 成功；非 0 = pdftoppm 渲染失败（由 check=True 传播）
     @note 输出产物：对 BG1 和 BG2 各生成一张完整拼接图和若干张分段清晰图，
       分别放入 docs/L1_基础/assets/ 和 docs/L2_协议算法/assets/
     @throws subprocess.CalledProcessError pdftoppm 渲染失败时由 check=True 传播"""
