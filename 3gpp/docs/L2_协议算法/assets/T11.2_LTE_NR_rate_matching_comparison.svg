@@ -1,307 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   @file    T11.2_LTE_NR_rate_matching_comparison.svg
-  @brief   LTE Turbo / NR LDPC / NR Polar 三协议速率匹配与速率恢复对比图（手绘 SVG V2：布局与配色依据 T11.2 讲义正文语义重设计）
+  @brief   LTE Turbo 与 NR LDPC 速率匹配结构对比：两个环形缓存窗口示意 + 关键差异
   @date    2026-08-04
-  @note    内容保真：三个并排接收端反向流程面板（LTE Turbo / NR LDPC / NR Polar 各五步）、
-           七行差异对比表（恢复目标/核心长度/交织/RV/未发送/已知空洞/重复）、小型循环
-           缓存例子（12 位置 new/repeat/unsent/short 四态 + 写回序列 rx0-rx8 地址
-           8,9,11,0,1,3,5,7,1，其中 a=1 故意重复以检查 repeat 路径 + 三条注释）、
-           读图顺序与工程检查点四条，均与讲义 T11.2 正文及图 T11.2-1 语义一致。
-           视觉设计：三流程面板按协议主场着色（Turbo=赭金、LDPC=橄榄、Polar=青瓷）；
-           循环缓存按语义着色（unsent=石板、repeat=赭金、short=灰紫、new=橄榄）。
+  @note    v2 重绘：原版"统一字段对比表格"与讲义 Markdown 表格重复，已删除；本图
+           补充表格之外的拓扑/结构信息：环形缓存窗口的几何语义、交织与空洞语义的
+           空间关系。对比数据仍由讲义 Markdown 表格承载。
+           语义色：Turbo=赭金 #B06F2B、LDPC=橄榄 #6C7A2E、Polar=青瓷 #2F6E71、
+           中性=石板 #5C6B7C、风险=石榴 #A6403C；浅色填充深色描边。
+           依据 T2.1 基准图规格（960 宽、字号层级、Noto CJK 字体栈）。
 -->
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="2260" viewBox="0 0 1500 2260" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
-  <title>T11.2 LTE/NR 速率匹配与速率恢复对比</title>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 710" width="960" height="710" role="img">
+  <title>LTE/NR 速率匹配结构对比：环形缓存窗口与空洞语义</title>
+  <rect width="960" height="710" fill="#ffffff"/>
   <defs>
-    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
-    </filter>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    <marker id="ah-turbo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#B06F2B"/>
+    </marker>
+    <marker id="ah-ldpc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6C7A2E"/>
     </marker>
   </defs>
+  <style>
+    .title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 18px; font-weight: bold; fill: #111; }
+    .label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 14px; fill: #222; }
+    .small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #555; }
+    .mono { font-family: monospace; font-size: 13px; fill: #333; }
+  </style>
+  <text x="480" y="30" text-anchor="middle" class="title">LTE / NR 速率匹配结构对比：环形缓存窗口与空洞语义</text>
+  <text x="480" y="54" text-anchor="middle" class="small">接收端共同目标：把空口 LLR 流按地址写回母码坐标并合并；差异在交织时机、窗口起点与空洞语义——对比数据见讲义表</text>
 
-  <!-- ============ 页头 ============ -->
-  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">T11.2 LTE/NR 速率匹配与速率恢复对比</text>
-  <text x="70" y="74" font-size="13" class="free" fill="#646B76">共同目标：把线性接收 LLR 流恢复为译码器母码位置软信息；差异在协议坐标系、交织和空洞语义。</text>
+  <!-- ============ 左：LTE Turbo 环形缓存 ============ -->
+  <rect x="40" y="78" width="435" height="422" rx="10" fill="#FDF8F1" stroke="#B06F2B" stroke-width="1.5"/>
+  <text x="62" y="104" class="small" font-weight="bold" fill="#8D5A1E">LTE Turbo：rvidx 窗口环形缓存</text>
+  <rect x="70" y="120" width="210" height="34" rx="6" fill="#FFFFFF" stroke="#C98F4E" stroke-width="1.2"/>
+  <text x="175" y="141" text-anchor="middle" class="small">空口 rx_llr → 按 rvidx 写回</text>
+  <path d="M 175 154 L 175 172" stroke="#B06F2B" stroke-width="1.5" fill="none" marker-end="url(#ah-turbo)"/>
+  <rect x="70" y="172" width="230" height="34" rx="6" fill="#FFFFFF" stroke="#C98F4E" stroke-width="1.2"/>
+  <text x="185" y="193" text-anchor="middle" class="small">&lt;NULL&gt; 跳过 + 饱和累加</text>
+  <path d="M 185 206 L 200 245" stroke="#B06F2B" stroke-width="1.5" fill="none" marker-end="url(#ah-turbo)"/>
+  <!-- 环形缓存本体 -->
+  <ellipse cx="200" cy="330" rx="120" ry="85" fill="none" stroke="#B06F2B" stroke-width="2.5"/>
+  <line x1="200" y1="245" x2="200" y2="255" stroke="#B06F2B" stroke-width="1.5"/>
+  <line x1="264.7" y1="269.7" x2="278.5" y2="257.3" stroke="#B06F2B" stroke-width="1.5"/>
+  <line x1="304.6" y1="303.7" x2="316.4" y2="300.6" stroke="#B06F2B" stroke-width="1.5"/>
+  <line x1="304.6" y1="356.3" x2="316.4" y2="359.4" stroke="#B06F2B" stroke-width="1.5"/>
+  <line x1="264.7" y1="399.7" x2="278.5" y2="411.9" stroke="#B06F2B" stroke-width="1.5"/>
+  <line x1="200" y1="415" x2="200" y2="425" stroke="#B06F2B" stroke-width="1.5"/>
+  <line x1="129.5" y1="399.7" x2="115.7" y2="411.9" stroke="#B06F2B" stroke-width="1.5"/>
+  <line x1="85.9" y1="356.3" x2="74.1" y2="359.4" stroke="#B06F2B" stroke-width="1.5"/>
+  <line x1="85.9" y1="303.7" x2="74.1" y2="300.6" stroke="#B06F2B" stroke-width="1.5"/>
+  <line x1="129.5" y1="261.2" x2="115.7" y2="249.0" stroke="#B06F2B" stroke-width="1.5"/>
+  <!-- RV 窗口弧 -->
+  <path d="M 200 245 A 120 85 0 0 1 314.1 303.7" stroke="#C98F4E" stroke-width="7" fill="none" opacity="0.9"/>
+  <text x="312" y="276" class="small" fill="#8D5A1E">rvidx 窗口</text>
+  <line x1="318" y1="304" x2="382" y2="304" stroke="#B06F2B" stroke-width="1.5"/>
+  <text x="386" y="308" class="small" fill="#8D5A1E">空口 E bit</text>
+  <!-- <NULL> 结构空洞标记 -->
+  <rect x="118" y="389" width="22" height="20" rx="3" fill="#FFFFFF" stroke="#A6403C" stroke-width="1.2"/>
+  <text x="129" y="401" text-anchor="middle" class="small" fill="#A6403C">×</text>
+  <rect x="75" y="294" width="22" height="20" rx="3" fill="#FFFFFF" stroke="#A6403C" stroke-width="1.2"/>
+  <text x="86" y="306" text-anchor="middle" class="small" fill="#A6403C">×</text>
+  <!-- 环心说明 -->
+  <text x="200" y="318" text-anchor="middle" class="small" fill="#8D5A1E">circular buffer (K_w)</text>
+  <text x="200" y="338" text-anchor="middle" class="small" fill="#8D5A1E">三路流收集 + rvidx 选窗</text>
+  <!-- 输出 -->
+  <rect x="60" y="432" width="360" height="36" rx="6" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.2"/>
+  <text x="240" y="454" text-anchor="middle" class="small">拆回三路流 → 32 列反置换 → Turbo 三路 LLR</text>
+  <path d="M 200 415 L 200 432" stroke="#B06F2B" stroke-width="1.5" fill="none" marker-end="url(#ah-turbo)"/>
 
-  <!-- ============ 三个接收端反向流程面板 ============ -->
-  <!-- LTE Turbo -->
-  <g filter="url(#soft)">
-    <rect x="65" y="130" width="430" height="460" rx="16" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-  </g>
-  <text x="89" y="162" font-size="15" font-weight="700" fill="#23272E">LTE Turbo</text>
-  <g font-size="12" fill="#23272E">
-    <rect x="95" y="210" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="280" y="234" text-anchor="middle" font-weight="700">Demapper LLR</text>
-    <text x="280" y="254" text-anchor="middle" fill="#646B76">rx_llr[0:E-1]</text>
-    <rect x="95" y="278" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="280" y="302" text-anchor="middle" font-weight="700">RV / K_w</text>
-    <text x="280" y="322" text-anchor="middle" fill="#646B76">写回循环软缓存</text>
-    <rect x="95" y="346" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="280" y="370" text-anchor="middle" font-weight="700">拆成三路流</text>
-    <text x="280" y="390" text-anchor="middle" fill="#646B76">systematic / parity1 / parity2</text>
-    <rect x="95" y="414" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="280" y="438" text-anchor="middle" font-weight="700">sub-block 解交织</text>
-    <text x="280" y="458" text-anchor="middle" fill="#646B76">删除 &lt;NULL&gt;</text>
-    <rect x="95" y="482" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="280" y="506" text-anchor="middle" font-weight="700">Turbo decoder</text>
-    <text x="280" y="526" text-anchor="middle" fill="#646B76">三路 LLR 输入</text>
-  </g>
-  <g stroke="#B06F2B" stroke-width="2" fill="none">
-    <path d="M 280 266 V 278" marker-end="url(#arrow)"/>
-    <path d="M 280 334 V 346" marker-end="url(#arrow)"/>
-    <path d="M 280 402 V 414" marker-end="url(#arrow)"/>
-    <path d="M 280 470 V 482" marker-end="url(#arrow)"/>
-  </g>
+  <!-- ============ 右：NR LDPC 环形缓存 ============ -->
+  <rect x="485" y="78" width="435" height="422" rx="10" fill="#F5F8F2" stroke="#6C7A2E" stroke-width="1.5"/>
+  <text x="507" y="104" class="small" font-weight="bold" fill="#525F1F">NR LDPC：RV/k0 起点环形缓存</text>
+  <rect x="525" y="120" width="270" height="34" rx="6" fill="#FFFFFF" stroke="#93A95A" stroke-width="1.2"/>
+  <text x="660" y="141" text-anchor="middle" class="small">空口 rx_llr → 先 Q_m 反交织</text>
+  <path d="M 650 154 L 660 172" stroke="#6C7A2E" stroke-width="1.5" fill="none" marker-end="url(#ah-ldpc)"/>
+  <rect x="525" y="172" width="270" height="34" rx="6" fill="#FFFFFF" stroke="#93A95A" stroke-width="1.2"/>
+  <text x="660" y="193" text-anchor="middle" class="small">RV/k0 + N_cb 取模 + CBG mask</text>
+  <path d="M 660 206 L 700 245" stroke="#6C7A2E" stroke-width="1.5" fill="none" marker-end="url(#ah-ldpc)"/>
+  <!-- 环形缓存本体 -->
+  <ellipse cx="700" cy="330" rx="120" ry="85" fill="none" stroke="#6C7A2E" stroke-width="2.5"/>
+  <line x1="700" y1="245" x2="700" y2="255" stroke="#6C7A2E" stroke-width="1.5"/>
+  <line x1="764.7" y1="269.7" x2="778.5" y2="257.3" stroke="#6C7A2E" stroke-width="1.5"/>
+  <line x1="804.6" y1="303.7" x2="816.4" y2="300.6" stroke="#6C7A2E" stroke-width="1.5"/>
+  <line x1="804.6" y1="356.3" x2="816.4" y2="359.4" stroke="#6C7A2E" stroke-width="1.5"/>
+  <line x1="764.7" y1="399.7" x2="778.5" y2="411.9" stroke="#6C7A2E" stroke-width="1.5"/>
+  <line x1="700" y1="415" x2="700" y2="425" stroke="#6C7A2E" stroke-width="1.5"/>
+  <line x1="629.5" y1="399.7" x2="615.7" y2="411.9" stroke="#6C7A2E" stroke-width="1.5"/>
+  <line x1="585.9" y1="356.3" x2="574.1" y2="359.4" stroke="#6C7A2E" stroke-width="1.5"/>
+  <line x1="585.9" y1="303.7" x2="574.1" y2="300.6" stroke="#6C7A2E" stroke-width="1.5"/>
+  <line x1="629.5" y1="261.2" x2="615.7" y2="249.0" stroke="#6C7A2E" stroke-width="1.5"/>
+  <!-- RV/k0 窗口弧与起点 -->
+  <path d="M 770.5 398.8 A 120 85 0 0 1 585.9 356.3" stroke="#93A95A" stroke-width="7" fill="none" opacity="0.9"/>
+  <circle cx="770.5" cy="398.8" r="5" fill="#6C7A2E"/>
+  <text x="784" y="414" class="small" fill="#525F1F">k0 起点</text>
+  <line x1="663" y1="393" x2="663" y2="407" stroke="#6C7A2E" stroke-width="1.2"/>
+  <text x="650" y="390" class="small" fill="#525F1F">RV 窗口</text>
+  <!-- filler/shortened 已知约束标记 -->
+  <rect x="759" y="251" width="22" height="20" rx="3" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.2"/>
+  <text x="770" y="263" text-anchor="middle" class="small" fill="#6C7A2E">K</text>
+  <rect x="619" y="251" width="22" height="20" rx="3" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.2"/>
+  <text x="630" y="263" text-anchor="middle" class="small" fill="#6C7A2E">K</text>
+  <!-- 环心说明 -->
+  <text x="700" y="318" text-anchor="middle" class="small" fill="#525F1F">circular buffer (N_cb)</text>
+  <text x="700" y="338" text-anchor="middle" class="small" fill="#525F1F">k0 起点 + mask 控空洞</text>
+  <!-- 输出 -->
+  <rect x="540" y="432" width="370" height="36" rx="6" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.2"/>
+  <text x="725" y="454" text-anchor="middle" class="small">母码位置 LLR → LDPC core（filler/shortened 走 mask）</text>
+  <path d="M 700 415 L 700 432" stroke="#6C7A2E" stroke-width="1.5" fill="none" marker-end="url(#ah-ldpc)"/>
 
-  <!-- NR LDPC -->
-  <g filter="url(#soft)">
-    <rect x="525" y="130" width="430" height="460" rx="16" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
-  </g>
-  <text x="549" y="162" font-size="15" font-weight="700" fill="#23272E">NR LDPC</text>
-  <g font-size="12" fill="#23272E">
-    <rect x="555" y="210" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
-    <text x="740" y="234" text-anchor="middle" font-weight="700">Demapper LLR</text>
-    <text x="740" y="254" text-anchor="middle" fill="#646B76">rx_llr[0:E-1]</text>
-    <rect x="555" y="278" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
-    <text x="740" y="302" text-anchor="middle" font-weight="700">bit deinterleaver</text>
-    <text x="740" y="322" text-anchor="middle" fill="#646B76">按 Q_m 反交织</text>
-    <rect x="555" y="346" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
-    <text x="740" y="370" text-anchor="middle" font-weight="700">RV / N_cb / k0</text>
-    <text x="740" y="390" text-anchor="middle" fill="#646B76">写回 soft buffer</text>
-    <rect x="555" y="414" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
-    <text x="740" y="438" text-anchor="middle" font-weight="700">mask / combine</text>
-    <text x="740" y="458" text-anchor="middle" fill="#646B76">unknown + repeated</text>
-    <rect x="555" y="482" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
-    <text x="740" y="506" text-anchor="middle" font-weight="700">LDPC decoder</text>
-    <text x="740" y="526" text-anchor="middle" fill="#646B76">母码位置 LLR</text>
-  </g>
-  <g stroke="#6C7A2E" stroke-width="2" fill="none">
-    <path d="M 740 266 V 278" marker-end="url(#arrow)"/>
-    <path d="M 740 334 V 346" marker-end="url(#arrow)"/>
-    <path d="M 740 402 V 414" marker-end="url(#arrow)"/>
-    <path d="M 740 470 V 482" marker-end="url(#arrow)"/>
-  </g>
+  <!-- ============ 底部：关键差异三卡片（结构语义，非表格） ============ -->
+  <rect x="40" y="525" width="285" height="125" rx="10" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
+  <text x="58" y="552" class="small" font-weight="bold" fill="#8D5A1E">空洞语义三态（不混用）</text>
+  <rect x="56" y="572" width="16" height="16" rx="3" fill="#B06F2B"/>
+  <text x="82" y="585" class="small">× = &lt;NULL&gt;：删除 / 跳过（结构占位）</text>
+  <rect x="56" y="596" width="16" height="16" rx="3" fill="#6C7A2E"/>
+  <text x="82" y="609" class="small">punctured：unknown，中性 LLR</text>
+  <rect x="56" y="620" width="16" height="16" rx="3" fill="#2F6E71"/>
+  <text x="82" y="633" class="small">shortened：强已知约束 / mask</text>
 
-  <!-- NR Polar -->
-  <g filter="url(#soft)">
-    <rect x="985" y="130" width="430" height="460" rx="16" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
-  </g>
-  <text x="1009" y="162" font-size="15" font-weight="700" fill="#23272E">NR Polar</text>
-  <g font-size="12" fill="#23272E">
-    <rect x="1015" y="210" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
-    <text x="1200" y="234" text-anchor="middle" font-weight="700">Demapper LLR</text>
-    <text x="1200" y="254" text-anchor="middle" fill="#646B76">rx_llr[0:E-1]</text>
-    <rect x="1015" y="278" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
-    <text x="1200" y="302" text-anchor="middle" font-weight="700">coded-bit 反交织</text>
-    <text x="1200" y="322" text-anchor="middle" fill="#646B76">按配置启用</text>
-    <rect x="1015" y="346" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
-    <text x="1200" y="370" text-anchor="middle" font-weight="700">bit selection reverse</text>
-    <text x="1200" y="390" text-anchor="middle" fill="#646B76">puncture / shorten / repeat</text>
-    <rect x="1015" y="414" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
-    <text x="1200" y="438" text-anchor="middle" font-weight="700">sub-block 解交织</text>
-    <text x="1200" y="458" text-anchor="middle" fill="#646B76">32 sub-block 反置换</text>
-    <rect x="1015" y="482" width="370" height="56" rx="12" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
-    <text x="1200" y="506" text-anchor="middle" font-weight="700">SC/SCL decoder</text>
-    <text x="1200" y="526" text-anchor="middle" fill="#646B76">codeword LLR</text>
-  </g>
-  <g stroke="#2F6E71" stroke-width="2" fill="none">
-    <path d="M 1200 266 V 278" marker-end="url(#arrow)"/>
-    <path d="M 1200 334 V 346" marker-end="url(#arrow)"/>
-    <path d="M 1200 402 V 414" marker-end="url(#arrow)"/>
-    <path d="M 1200 470 V 482" marker-end="url(#arrow)"/>
-  </g>
+  <rect x="345" y="525" width="285" height="125" rx="10" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
+  <text x="363" y="552" class="small" font-weight="bold" fill="#525F1F">交织时机（先后相反）</text>
+  <rect x="361" y="572" width="16" height="16" rx="3" fill="#B06F2B"/>
+  <text x="387" y="585" class="small">LTE：子块交织 → 入环 → 选窗</text>
+  <rect x="361" y="596" width="16" height="16" rx="3" fill="#6C7A2E"/>
+  <text x="387" y="609" class="small">NR：选窗 → bit 交织 → 调制</text>
+  <rect x="361" y="620" width="16" height="16" rx="3" fill="#5C6B7C"/>
+  <text x="387" y="633" class="small">接收端顺序相反：先反交织</text>
 
-  <!-- ============ 七行差异对比表 ============ -->
-  <g filter="url(#soft)">
-    <rect x="60" y="630" width="1380" height="570" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
-  </g>
-  <text x="90" y="662" font-size="16" font-weight="700" fill="#23272E">三协议速率恢复差异对比表</text>
+  <rect x="650" y="525" width="285" height="125" rx="10" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="668" y="552" class="small" font-weight="bold" fill="#1E4E50">RV 语义（窗口选择）</text>
+  <rect x="666" y="572" width="16" height="16" rx="3" fill="#B06F2B"/>
+  <text x="692" y="585" class="small">rvidx：环上窗口选择（非重传次数）</text>
+  <rect x="666" y="596" width="16" height="16" rx="3" fill="#6C7A2E"/>
+  <text x="692" y="609" class="small">RV/k0：起点 + N_cb 取模，依 BG</text>
+  <rect x="666" y="620" width="16" height="16" rx="3" fill="#2F6E71"/>
+  <text x="692" y="633" class="small">Polar 控制：通常非数据 HARQ 语义</text>
 
-  <g font-size="12" fill="#23272E">
-    <rect x="75" y="688" width="170" height="46" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="160" y="717" text-anchor="middle" font-weight="700">对象</text>
-    <rect x="245" y="688" width="380" height="46" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="435" y="717" text-anchor="middle" font-weight="700">LTE Turbo</text>
-    <rect x="625" y="688" width="380" height="46" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="815" y="717" text-anchor="middle" font-weight="700">NR LDPC</text>
-    <rect x="1005" y="688" width="380" height="46" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1195" y="717" text-anchor="middle" font-weight="700">NR Polar</text>
-
-    <rect x="75" y="734" width="170" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="160" y="768" text-anchor="middle" font-weight="700">恢复目标</text>
-    <rect x="245" y="734" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="435" y="768" text-anchor="middle">三路 Turbo LLR</text>
-    <rect x="625" y="734" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="815" y="768" text-anchor="middle">LDPC 母码位置 LLR</text>
-    <rect x="1005" y="734" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1195" y="768" text-anchor="middle">Polar codeword LLR</text>
-
-    <rect x="75" y="790" width="170" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="160" y="824" text-anchor="middle" font-weight="700">核心长度</text>
-    <rect x="245" y="790" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="435" y="824" text-anchor="middle">E, K_w</text>
-    <rect x="625" y="790" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="815" y="824" text-anchor="middle">E, N_cb, N</text>
-    <rect x="1005" y="790" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1195" y="824" text-anchor="middle">E, N</text>
-
-    <rect x="75" y="846" width="170" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="160" y="880" text-anchor="middle" font-weight="700">交织</text>
-    <rect x="245" y="846" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="435" y="880" text-anchor="middle">三路 sub-block</text>
-    <rect x="625" y="846" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="815" y="880" text-anchor="middle">bit interleaving</text>
-    <rect x="1005" y="846" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1195" y="880" text-anchor="middle">sub-block + coded-bit</text>
-
-    <rect x="75" y="902" width="170" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="160" y="936" text-anchor="middle" font-weight="700">RV</text>
-    <rect x="245" y="902" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="435" y="936" text-anchor="middle">rvidx 选窗口</text>
-    <rect x="625" y="902" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="815" y="936" text-anchor="middle">RV/k0 选窗口</text>
-    <rect x="1005" y="902" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1195" y="936" text-anchor="middle">通常非数据 HARQ 语义</text>
-
-    <rect x="75" y="958" width="170" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="160" y="992" text-anchor="middle" font-weight="700">未发送</text>
-    <rect x="245" y="958" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="435" y="992" text-anchor="middle">unknown LLR</text>
-    <rect x="625" y="958" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="815" y="992" text-anchor="middle">unknown LLR</text>
-    <rect x="1005" y="958" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1195" y="992" text-anchor="middle">punctured unknown</text>
-
-    <rect x="75" y="1014" width="170" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="160" y="1048" text-anchor="middle" font-weight="700">已知空洞</text>
-    <rect x="245" y="1014" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="435" y="1048" text-anchor="middle">&lt;NULL&gt; 删除</text>
-    <rect x="625" y="1014" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="815" y="1048" text-anchor="middle">filler/shortened mask</text>
-    <rect x="1005" y="1014" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1195" y="1048" text-anchor="middle">shortened strong known</text>
-
-    <rect x="75" y="1070" width="170" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="160" y="1104" text-anchor="middle" font-weight="700">重复</text>
-    <rect x="245" y="1070" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="435" y="1104" text-anchor="middle">soft buffer 累加</text>
-    <rect x="625" y="1070" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="815" y="1104" text-anchor="middle">soft buffer 累加</text>
-    <rect x="1005" y="1070" width="380" height="56" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1195" y="1104" text-anchor="middle">同位置 LLR 累加</text>
-  </g>
-
-  <!-- ============ 小型循环缓存例子 ============ -->
-  <g filter="url(#soft)">
-    <rect x="60" y="1230" width="1390" height="720" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
-  </g>
-  <text x="90" y="1262" font-size="16" font-weight="700" fill="#23272E">小型循环缓存例子：含未发送、重复和已知位置</text>
-
-  <!-- 环：cx=330 cy=1590 r=200 -->
-  <g font-size="11.5" fill="#23272E">
-    <rect x="306" y="1366" width="48" height="40" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="330" y="1386" text-anchor="middle" font-weight="700">0</text>
-    <text x="330" y="1400" text-anchor="middle" fill="#646B76">new</text>
-    <rect x="410" y="1394" width="48" height="40" fill="#F8EEDC" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="434" y="1414" text-anchor="middle" font-weight="700">1</text>
-    <text x="434" y="1428" text-anchor="middle" fill="#646B76">repeat</text>
-    <rect x="485" y="1469" width="48" height="40" fill="#EBEEF2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="509" y="1489" text-anchor="middle" font-weight="700">2</text>
-    <text x="509" y="1503" text-anchor="middle" fill="#646B76">unsent</text>
-    <rect x="513" y="1587" width="48" height="40" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="537" y="1607" text-anchor="middle" font-weight="700">3</text>
-    <text x="537" y="1621" text-anchor="middle" fill="#646B76">new</text>
-    <rect x="485" y="1705" width="48" height="40" fill="#F0EEF4" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="509" y="1725" text-anchor="middle" font-weight="700">4</text>
-    <text x="509" y="1739" text-anchor="middle" fill="#646B76">short</text>
-    <rect x="410" y="1780" width="48" height="40" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="434" y="1800" text-anchor="middle" font-weight="700">5</text>
-    <text x="434" y="1814" text-anchor="middle" fill="#646B76">new</text>
-    <rect x="306" y="1798" width="48" height="40" fill="#EBEEF2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="330" y="1818" text-anchor="middle" font-weight="700">6</text>
-    <text x="330" y="1832" text-anchor="middle" fill="#646B76">unsent</text>
-    <rect x="204" y="1780" width="48" height="40" fill="#F8EEDC" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="228" y="1800" text-anchor="middle" font-weight="700">7</text>
-    <text x="228" y="1814" text-anchor="middle" fill="#646B76">repeat</text>
-    <rect x="129" y="1705" width="48" height="40" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="153" y="1725" text-anchor="middle" font-weight="700">8</text>
-    <text x="153" y="1739" text-anchor="middle" fill="#646B76">new</text>
-    <rect x="101" y="1587" width="48" height="40" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="125" y="1607" text-anchor="middle" font-weight="700">9</text>
-    <text x="125" y="1621" text-anchor="middle" fill="#646B76">new</text>
-    <rect x="129" y="1469" width="48" height="40" fill="#EBEEF2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="153" y="1489" text-anchor="middle" font-weight="700">10</text>
-    <text x="153" y="1503" text-anchor="middle" fill="#646B76">unsent</text>
-    <rect x="204" y="1394" width="48" height="40" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="228" y="1414" text-anchor="middle" font-weight="700">11</text>
-    <text x="228" y="1428" text-anchor="middle" fill="#646B76">new</text>
-  </g>
-  <circle cx="330" cy="1590" r="105" fill="none" stroke="#CFC8B8" stroke-width="2"/>
-
-  <!-- 示例写回序列 -->
-  <text x="640" y="1350" font-size="15" font-weight="700" fill="#23272E">示例写回序列（a=1 故意出现两次检查 repeat）</text>
-  <g font-size="11.5" fill="#23272E">
-    <rect x="640" y="1370" width="82" height="54" rx="10" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="681" y="1392" text-anchor="middle" font-weight="700">rx0</text>
-    <text x="681" y="1412" text-anchor="middle">a=8</text>
-    <rect x="730" y="1370" width="82" height="54" rx="10" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="771" y="1392" text-anchor="middle" font-weight="700">rx1</text>
-    <text x="771" y="1412" text-anchor="middle">a=9</text>
-    <rect x="820" y="1370" width="82" height="54" rx="10" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="861" y="1392" text-anchor="middle" font-weight="700">rx2</text>
-    <text x="861" y="1412" text-anchor="middle">a=11</text>
-    <rect x="910" y="1370" width="82" height="54" rx="10" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="951" y="1392" text-anchor="middle" font-weight="700">rx3</text>
-    <text x="951" y="1412" text-anchor="middle">a=0</text>
-    <rect x="1000" y="1370" width="82" height="54" rx="10" fill="#F8EEDC" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="1041" y="1392" text-anchor="middle" font-weight="700">rx4</text>
-    <text x="1041" y="1412" text-anchor="middle">a=1</text>
-    <rect x="1090" y="1370" width="82" height="54" rx="10" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="1131" y="1392" text-anchor="middle" font-weight="700">rx5</text>
-    <text x="1131" y="1412" text-anchor="middle">a=3</text>
-    <rect x="1180" y="1370" width="82" height="54" rx="10" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="1221" y="1392" text-anchor="middle" font-weight="700">rx6</text>
-    <text x="1221" y="1412" text-anchor="middle">a=5</text>
-    <rect x="1270" y="1370" width="82" height="54" rx="10" fill="#EFF1E2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="1311" y="1392" text-anchor="middle" font-weight="700">rx7</text>
-    <text x="1311" y="1412" text-anchor="middle">a=7</text>
-    <rect x="1360" y="1370" width="82" height="54" rx="10" fill="#F8EEDC" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="1401" y="1392" text-anchor="middle" font-weight="700">rx8</text>
-    <text x="1401" y="1412" text-anchor="middle">a=1</text>
-  </g>
-  <g stroke="#5C6B7C" stroke-width="1.5" fill="none">
-    <path d="M 722 1397 H 730" marker-end="url(#arrow)"/>
-    <path d="M 812 1397 H 820" marker-end="url(#arrow)"/>
-    <path d="M 902 1397 H 910" marker-end="url(#arrow)"/>
-    <path d="M 992 1397 H 1000" marker-end="url(#arrow)"/>
-    <path d="M 1082 1397 H 1090" marker-end="url(#arrow)"/>
-    <path d="M 1172 1397 H 1180" marker-end="url(#arrow)"/>
-    <path d="M 1262 1397 H 1270" marker-end="url(#arrow)"/>
-    <path d="M 1352 1397 H 1360" marker-end="url(#arrow)"/>
-  </g>
-
-  <g font-size="12" fill="#23272E">
-    <rect x="640" y="1490" width="800" height="44" rx="10" fill="#EBEEF2" stroke="#5C6B7C" stroke-width="1.5"/>
-    <text x="660" y="1518">unsent: 中性 LLR，不等于业务 0</text>
-    <rect x="640" y="1546" width="800" height="44" rx="10" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="660" y="1574">repeat: 同地址 LLR 相加，定点需饱和</text>
-    <rect x="640" y="1602" width="800" height="44" rx="10" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
-    <text x="660" y="1630">short: 已知 0/约束位，不能当 unknown</text>
-  </g>
-
-  <!-- ============ 读图顺序与工程检查点 ============ -->
-  <g filter="url(#soft)">
-    <rect x="60" y="1980" width="1380" height="250" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-  </g>
-  <text x="90" y="2012" font-size="16" font-weight="700" fill="#23272E">读图顺序与工程检查点</text>
-  <g font-size="12.5" fill="#23272E">
-    <text x="90" y="2052">1. 先看三条接收端反向流程：空口 LLR 不是 decoder input，必须先恢复到母码位置。</text>
-    <text x="90" y="2092">2. 再看字段表：E 是收到长度，K_w/N_cb/N 是不同坐标系，不能混写。</text>
-    <text x="90" y="2132">3. 最后看循环缓存：未发送保持 unknown，重复位置累加，shortened/known 位置按强约束或 mask 处理。</text>
-    <text x="90" y="2172">4. RTL 可共享 address generator/mask RAM 抽象，但不能共享三类协议规则和 interleaver 表。</text>
-  </g>
+  <text x="480" y="696" text-anchor="middle" class="small">协议锚点：TS 36.212 §5.1.4.1 / TS 38.212 §5.4.2.1；接收端恢复是工程反向，非协议逐行强制</text>
 </svg>

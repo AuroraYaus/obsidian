@@ -15,8 +15,8 @@ text { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", "Helvetica Neue",
 </defs>
 <rect width="1000" height="690" fill="#ffffff"/>
 
-<!-- ① 使用概率：均匀 vs 整形（16QAM 每维幅度 {1,3}） -->
-<text x="30" y="24" font-size="15" font-weight="700" fill="#111827">① 使用概率：整形只改概率、不改星座坐标</text>
+<!-- (1) 使用概率：均匀 vs 整形（16QAM 每维幅度 {1,3}） -->
+<text x="30" y="24" font-size="15" font-weight="700" fill="#111827">(1) 使用概率：整形只改概率、不改星座坐标</text>
 <text x="80" y="56" font-size="13" font-weight="700" fill="#374151">均匀使用（ν=0）：P(1)=P(3)=0.500</text>
 <text x="330" y="56" font-size="13" font-weight="700" fill="#374151">整形使用（ν=0.127）：内圈多用、外圈少用</text>
 <rect x="60" y="145" width="70" height="65" rx="3" fill="#cbd5e1" stroke="#64748b" stroke-width="1"/>
@@ -34,8 +34,8 @@ text { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", "Helvetica Neue",
 <text x="475" y="232" text-anchor="middle" font-size="12" fill="#475569">幅度 3</text>
 <text x="50" y="252" font-size="12" fill="#475569">16QAM 每维幅度 {1,3}；符号位必须保持均匀（第 4 章展开）</text>
 
-<!-- ② 能量账本：E_uniform=5.00 → E_MB=3.13 → ΔP≈2.04 dB -->
-<text x="560" y="24" font-size="15" font-weight="700" fill="#111827">② 能量账本：概率改变 → 平均能量下降</text>
+<!-- (2) 能量账本：E_uniform=5.00 → E_MB=3.13 → ΔP≈2.04 dB -->
+<text x="560" y="24" font-size="15" font-weight="700" fill="#111827">(2) 能量账本：概率改变 → 平均能量下降</text>
 <rect x="560" y="84" width="200" height="52" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
 <text x="660" y="104" text-anchor="middle" font-size="12" fill="#374151">均匀平均能量</text>
 <text x="660" y="128" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">E_uniform = 5.00</text>
@@ -43,38 +43,38 @@ text { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", "Helvetica Neue",
 <rect x="790" y="84" width="190" height="52" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"/>
 <text x="885" y="104" text-anchor="middle" font-size="12" fill="#374151">整形平均能量</text>
 <text x="885" y="128" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">E_MB(ν=0.127) = 3.13</text>
-<rect x="680" y="188" width="240" height="56" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+<rect x="670" y="188" width="262" height="56" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
 <text x="800" y="206" text-anchor="middle" font-size="11" fill="#854d0e">功率节省（同分布比功率，未扣速率损失）</text>
 <text x="800" y="225" text-anchor="middle" font-size="13" font-weight="700" fill="#a16207">ΔP = 10·log10(5.00/3.13) ≈ 2.04 dB</text>
 <line x1="885" y1="136" x2="885" y2="188" stroke="#ca8a04" stroke-width="2" marker-end="url(#arrowAmber)"/>
 
-<!-- ③ 理论天花板：1.53 dB（πe/6） -->
-<text x="30" y="280" font-size="15" font-weight="700" fill="#111827">③ 理论天花板：整形增益的香农式上限（Forney 1974）</text>
+<!-- (3) 理论天花板：1.53 dB（πe/6） -->
+<text x="30" y="280" font-size="15" font-weight="700" fill="#111827">(3) 理论天花板：整形增益的香农式上限（Forney 1974）</text>
 <line x1="800" y1="244" x2="800" y2="296" stroke="#9333ea" stroke-width="2" marker-end="url(#arrowViolet)"/>
 <rect x="200" y="296" width="620" height="64" rx="8" fill="#faf5ff" stroke="#9333ea" stroke-width="1.5"/>
 <text x="510" y="320" text-anchor="middle" font-size="14" font-weight="700" fill="#6b21a8">1.53 dB = 10·log10(πe/6)，πe/6 ≈ 1.423</text>
 <text x="510" y="344" text-anchor="middle" font-size="12" fill="#581c87">无限星座 · 无限块长 · 高 SNR 极限 —— 上限不是收益，永远追不满</text>
 
-<!-- ④ 三处打折 -->
-<text x="30" y="400" font-size="15" font-weight="700" fill="#111827">④ 三处打折：从理想极限到工程现实</text>
+<!-- (4) 三处打折 -->
+<text x="30" y="400" font-size="15" font-weight="700" fill="#111827">(4) 三处打折：从理想极限到工程现实</text>
 <line x1="200" y1="360" x2="200" y2="418" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="500" y1="360" x2="500" y2="418" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="800" y1="360" x2="800" y2="418" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 <rect x="60" y="418" width="280" height="88" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
-<text x="200" y="442" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">折扣①：有限星座</text>
+<text x="200" y="442" text-anchor="middle" font-size="13" font-weight="700" fill="#1d4ed8">折扣(1)：有限星座</text>
 <text x="200" y="464" text-anchor="middle" font-size="12" fill="#374151">16QAM 每维仅 2 个幅度级 {1,3}</text>
 <text x="200" y="486" text-anchor="middle" font-size="12" fill="#374151">离散 MB 只能在离散点上逼近高斯</text>
 <rect x="360" y="418" width="280" height="88" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
-<text x="500" y="442" text-anchor="middle" font-size="13" font-weight="700" fill="#15803d">折扣②：有限块长</text>
+<text x="500" y="442" text-anchor="middle" font-size="13" font-weight="700" fill="#15803d">折扣(2)：有限块长</text>
 <text x="500" y="464" text-anchor="middle" font-size="12" fill="#374151">组成约束损失 ~(1/2n)·log2 n</text>
 <text x="500" y="486" text-anchor="middle" font-size="12" fill="#374151">n=128 时实测 0.0307 bit/符号</text>
 <rect x="660" y="418" width="280" height="88" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
-<text x="800" y="442" text-anchor="middle" font-size="13" font-weight="700" fill="#c2410c">折扣③：有限 SNR</text>
+<text x="800" y="442" text-anchor="middle" font-size="13" font-weight="700" fill="#c2410c">折扣(3)：有限 SNR</text>
 <text x="800" y="464" text-anchor="middle" font-size="12" fill="#374151">低 SNR 时均匀输入已接近最优</text>
 <text x="800" y="486" text-anchor="middle" font-size="12" fill="#374151">整形空间在高 SNR 才显著打开</text>
 
-<!-- ⑤ 实测区间 -->
-<text x="30" y="530" font-size="15" font-weight="700" fill="#111827">⑤ 实测区间：BLER=10⁻² 仿真实测（AWGN 与 TDL-A）</text>
+<!-- (5) 实测区间 -->
+<text x="30" y="530" font-size="15" font-weight="700" fill="#111827">(5) 实测区间：BLER=10⁻² 仿真实测（AWGN 与 TDL-A）</text>
 <line x1="200" y1="506" x2="200" y2="548" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="500" y1="506" x2="500" y2="548" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
 <line x1="800" y1="506" x2="800" y2="548" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>

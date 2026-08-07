@@ -36,26 +36,26 @@
 
   <g font-size="12.5" fill="#23272E">
     <rect x="80" y="196" width="315" height="122" rx="12" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
-    <circle cx="104" cy="222" r="13" fill="#8E3B5E"/>
-    <text x="104" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+    <circle cx="106" cy="222" r="13" fill="#8E3B5E"/>
+    <text x="106" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
     <text x="237" y="230" font-size="13.5" font-weight="700" text-anchor="middle">demapper LLR</text>
     <text x="98" y="266" fill="#646B76">按调制符号输出：每符号 Qm 个 LLR</text>
     <text x="98" y="288" fill="#646B76">symbol order 展平</text>
     <rect x="413" y="196" width="315" height="122" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
-    <circle cx="437" cy="222" r="13" fill="#2F6E71"/>
-    <text x="437" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+    <circle cx="439" cy="222" r="13" fill="#2F6E71"/>
+    <text x="439" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
     <text x="570" y="230" font-size="13.5" font-weight="700" text-anchor="middle">deinterleaver</text>
     <text x="431" y="266" fill="#646B76">按 TS 38.212 §5.4.2.2</text>
     <text x="431" y="288" fill="#646B76">反向置换恢复 e 序列</text>
     <rect x="746" y="196" width="315" height="122" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
-    <circle cx="770" cy="222" r="13" fill="#6C7A2E"/>
-    <text x="770" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+    <circle cx="772" cy="222" r="13" fill="#6C7A2E"/>
+    <text x="772" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
     <text x="903" y="230" font-size="13.5" font-weight="700" text-anchor="middle">rate recovery</text>
     <text x="764" y="266" fill="#646B76">恢复 e 序列后按 RV/k0</text>
     <text x="764" y="288" fill="#646B76">写回 soft_buffer[addr]</text>
     <rect x="1079" y="196" width="315" height="122" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-    <circle cx="1103" cy="222" r="13" fill="#B06F2B"/>
-    <text x="1103" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+    <circle cx="1105" cy="222" r="13" fill="#B06F2B"/>
+    <text x="1105" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
     <text x="1236" y="230" font-size="13.5" font-weight="700" text-anchor="middle">LDPC input</text>
     <text x="1097" y="266" fill="#646B76">按母码位置排列的 CB LLR</text>
     <text x="1097" y="288" fill="#646B76">LLR + mask</text>

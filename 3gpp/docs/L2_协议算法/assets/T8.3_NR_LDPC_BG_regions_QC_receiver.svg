@@ -83,11 +83,11 @@
 
   <!-- 区域字母（避开稀疏非零标记） -->
   <g font-size="18" font-weight="700" fill="#1B2433" text-anchor="middle">
-    <text x="130" y="235" font-size="18" font-weight="700" text-anchor="middle">A</text>
-    <text x="218" y="224" font-size="18" font-weight="700" text-anchor="middle">B</text>
-    <text x="122" y="312" font-size="18" font-weight="700" text-anchor="middle">C</text>
-    <text x="228" y="306" font-size="18" font-weight="700" text-anchor="middle">D</text>
-    <text x="314" y="276" font-size="18" font-weight="700" text-anchor="middle">E</text>
+    <text x="138" y="242" font-size="14" font-weight="700" text-anchor="middle">A</text>
+    <text x="202" y="216" font-size="14" font-weight="700" text-anchor="middle">B</text>
+    <text x="106" y="320" font-size="14" font-weight="700" text-anchor="middle">C</text>
+    <text x="234" y="320" font-size="14" font-weight="700" text-anchor="middle">D</text>
+    <text x="298" y="268" font-size="14" font-weight="700" text-anchor="middle">E</text>
   </g>
 
   <text x="58" y="406" font-size="12" font-weight="700" fill="#5B6877">rows: upper=core, lower=extension</text>

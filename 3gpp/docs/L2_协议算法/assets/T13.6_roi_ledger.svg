@@ -27,16 +27,16 @@
   <text x="80" y="346" font-size="16" fill="#33404F">参考：1 dB @3.5 GHz ≈ 20–25% 覆盖半径</text>
   <line x1="80" y1="364" x2="490" y2="364" stroke="#C9D6E4" stroke-width="1"/>
   <text x="80" y="392" font-size="16" font-weight="bold" fill="#17212F">公平口径四要素（先查后比）</text>
-  <text x="80" y="418" font-size="15" fill="#33404F">① TBS 匹配 ±1%（同 payload 比能量）</text>
-  <text x="80" y="444" font-size="15" fill="#33404F">② 功率归一（√psPowerScaling）</text>
-  <text x="80" y="470" font-size="15" fill="#33404F">③ 固定 MCS</text>
-  <text x="80" y="496" font-size="15" fill="#33404F">④ AWGN / 衰落分别报告</text>
+  <text x="80" y="418" font-size="15" fill="#33404F">(1) TBS 匹配 ±1%（同 payload 比能量）</text>
+  <text x="80" y="444" font-size="15" fill="#33404F">(2) 功率归一（√psPowerScaling）</text>
+  <text x="80" y="470" font-size="15" fill="#33404F">(3) 固定 MCS</text>
+  <text x="80" y="496" font-size="15" fill="#33404F">(4) AWGN / 衰落分别报告</text>
 
   <!-- 右栏：代价侧 -->
   <rect x="590" y="100" width="450" height="46" rx="6" fill="#B04A2E"/>
   <text x="610" y="130" font-size="19" font-weight="bold" fill="#FFFFFF">代价侧（账单不随信道场景变化）</text>
 
-  <rect x="590" y="160" width="450" height="355" rx="6" fill="#FCF5F1" stroke="#B04A2E" stroke-width="1.5"/>
+  <rect x="590" y="160" width="454" height="355" rx="6" fill="#FCF5F1" stroke="#B04A2E" stroke-width="1.5"/>
   <text x="610" y="196" font-size="16" font-weight="bold" fill="#B04A2E">硬件：+55% gates / +45% SRAM / +28% 功耗</text>
   <text x="610" y="222" font-size="16" fill="#33404F">ESS 编解码 20K / 10K gates（Cholesky 90K 最大单项）</text>
   <text x="610" y="248" font-size="16" fill="#33404F">调度：8 路并行 Cholesky</text>

@@ -36,23 +36,23 @@
 
   <g font-size="12.5" fill="#23272E">
     <rect x="80" y="196" width="315" height="122" rx="12" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
-    <circle cx="104" cy="222" r="13" fill="#8E3B5E"/>
-    <text x="104" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+    <circle cx="106" cy="222" r="13" fill="#8E3B5E"/>
+    <text x="106" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
     <text x="237" y="230" font-size="13.5" font-weight="700" text-anchor="middle">LDPC decoder</text>
     <text x="98" y="266" fill="#646B76">输出比特、校验子、迭代状态</text>
     <rect x="413" y="196" width="315" height="122" rx="12" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
-    <circle cx="437" cy="222" r="13" fill="#7A6E8E"/>
-    <text x="437" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+    <circle cx="439" cy="222" r="13" fill="#7A6E8E"/>
+    <text x="439" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
     <text x="570" y="230" font-size="13.5" font-weight="700" text-anchor="middle">CB CRC gate</text>
     <text x="431" y="266" fill="#646B76">逐块 CRC；无 CB CRC 标记 skip</text>
     <rect x="746" y="196" width="315" height="122" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
-    <circle cx="770" cy="222" r="13" fill="#6C7A2E"/>
-    <text x="770" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+    <circle cx="772" cy="222" r="13" fill="#6C7A2E"/>
+    <text x="772" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
     <text x="903" y="230" font-size="13.5" font-weight="700" text-anchor="middle">strip local fields</text>
     <text x="764" y="266" fill="#646B76">去填充和 CB CRC，保留 TB 候选</text>
     <rect x="1079" y="196" width="315" height="122" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-    <circle cx="1103" cy="222" r="13" fill="#B06F2B"/>
-    <text x="1103" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+    <circle cx="1105" cy="222" r="13" fill="#B06F2B"/>
+    <text x="1105" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
     <text x="1236" y="230" font-size="13.5" font-weight="700" text-anchor="middle">TB CRC gate</text>
     <text x="1097" y="266" fill="#646B76">检查 TB CRC，决定交付与反馈</text>
   </g>
@@ -90,7 +90,7 @@
     <path d="M 600 576 L 700 576" marker-end="url(#arrow)"/>
   </g>
   <rect x="590" y="548" width="110" height="26" rx="5" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1"/>
-  <text x="627" y="566" font-size="12" font-weight="700" text-anchor="middle" fill="#6C7A2E">concat by r</text>
+  <text x="645" y="566" font-size="12" font-weight="700" text-anchor="middle" fill="#6C7A2E">concat by r</text>
 
   <g font-size="12.5" fill="#23272E">
     <rect x="730" y="528" width="250" height="52" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>

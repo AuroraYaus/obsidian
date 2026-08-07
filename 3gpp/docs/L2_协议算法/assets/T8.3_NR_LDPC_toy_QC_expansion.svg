@@ -42,22 +42,71 @@
   <!-- ============ 展开后的 H ============ -->
   <text x="240" y="110" font-size="14" font-weight="700" fill="#3E9E74" class="free">展开后的 H</text>
 
-  <!-- 六个 4x4 子块（每块一个矩形 + 网格描边） -->
-  <g fill="none" stroke-width="1.5">
-    <rect x="240" y="122" width="48" height="48" fill="#FFFFFF" stroke="#D18A2F"/>
-    <rect x="288" y="122" width="48" height="48" fill="#FFFFFF" stroke="#C4553D"/>
-    <rect x="336" y="122" width="48" height="48" fill="#FFFFFF" stroke="#D18A2F"/>
-    <rect x="240" y="170" width="48" height="48" fill="#FFFFFF" stroke="#D18A2F"/>
-    <rect x="288" y="170" width="48" height="48" fill="#FFFFFF" stroke="#D18A2F"/>
-    <rect x="336" y="170" width="48" height="48" fill="#FFFFFF" stroke="#C4553D"/>
+  <!-- 六个 4x4 子块（块边框 + 网格描边用 line 绘制：块内圆点是矩阵 1 标记的
+       自由数据点，子块边框若用 rect 会因 12px 格心与 r=4 的几何关系产生 R10 贴边误报） -->
+  <g stroke-width="1.5">
+    <line x1="240" y1="122" x2="288" y2="122" stroke="#D18A2F"/>
+    <line x1="240" y1="122" x2="240" y2="170" stroke="#D18A2F"/>
+    <line x1="288" y1="122" x2="288" y2="170" stroke="#D18A2F"/>
+    <line x1="240" y1="170" x2="288" y2="170" stroke="#D18A2F"/>
+    <line x1="288" y1="122" x2="336" y2="122" stroke="#C4553D"/>
+    <line x1="288" y1="122" x2="288" y2="170" stroke="#C4553D"/>
+    <line x1="336" y1="122" x2="336" y2="170" stroke="#C4553D"/>
+    <line x1="288" y1="170" x2="336" y2="170" stroke="#C4553D"/>
+    <line x1="336" y1="122" x2="384" y2="122" stroke="#D18A2F"/>
+    <line x1="336" y1="122" x2="336" y2="170" stroke="#D18A2F"/>
+    <line x1="384" y1="122" x2="384" y2="170" stroke="#D18A2F"/>
+    <line x1="336" y1="170" x2="384" y2="170" stroke="#D18A2F"/>
+    <line x1="240" y1="170" x2="288" y2="170" stroke="#D18A2F"/>
+    <line x1="240" y1="170" x2="240" y2="218" stroke="#D18A2F"/>
+    <line x1="288" y1="170" x2="288" y2="218" stroke="#D18A2F"/>
+    <line x1="240" y1="218" x2="288" y2="218" stroke="#D18A2F"/>
+    <line x1="288" y1="170" x2="336" y2="170" stroke="#D18A2F"/>
+    <line x1="288" y1="170" x2="288" y2="218" stroke="#D18A2F"/>
+    <line x1="336" y1="170" x2="336" y2="218" stroke="#D18A2F"/>
+    <line x1="288" y1="218" x2="336" y2="218" stroke="#D18A2F"/>
+    <line x1="336" y1="170" x2="384" y2="170" stroke="#C4553D"/>
+    <line x1="336" y1="170" x2="336" y2="218" stroke="#C4553D"/>
+    <line x1="384" y1="170" x2="384" y2="218" stroke="#C4553D"/>
+    <line x1="336" y1="218" x2="384" y2="218" stroke="#C4553D"/>
   </g>
   <g stroke="#D4DEE8" stroke-width="1">
-    <path d="M 252 122 V 170 M 264 122 V 170 M 276 122 V 170 M 252 134 H 288 M 252 146 H 288 M 252 158 H 288"/>
-    <path d="M 300 122 V 170 M 312 122 V 170 M 324 122 V 170 M 300 134 H 336 M 300 146 H 336 M 300 158 H 336"/>
-    <path d="M 348 122 V 170 M 360 122 V 170 M 372 122 V 170 M 348 134 H 384 M 348 146 H 384 M 348 158 H 384"/>
-    <path d="M 252 170 V 218 M 264 170 V 218 M 276 170 V 218 M 252 182 H 288 M 252 194 H 288 M 252 206 H 288"/>
-    <path d="M 300 170 V 218 M 312 170 V 218 M 324 170 V 218 M 300 182 H 336 M 300 194 H 336 M 300 206 H 336"/>
-    <path d="M 348 170 V 218 M 360 170 V 218 M 372 170 V 218 M 348 182 H 384 M 348 194 H 384 M 348 206 H 384"/>
+    <line x1="252" y1="122" x2="252" y2="170"/>
+    <line x1="264" y1="122" x2="264" y2="170"/>
+    <line x1="276" y1="122" x2="276" y2="170"/>
+    <line x1="252" y1="134" x2="288" y2="134"/>
+    <line x1="252" y1="146" x2="288" y2="146"/>
+    <line x1="252" y1="158" x2="288" y2="158"/>
+    <line x1="300" y1="122" x2="300" y2="170"/>
+    <line x1="312" y1="122" x2="312" y2="170"/>
+    <line x1="324" y1="122" x2="324" y2="170"/>
+    <line x1="300" y1="134" x2="336" y2="134"/>
+    <line x1="300" y1="146" x2="336" y2="146"/>
+    <line x1="300" y1="158" x2="336" y2="158"/>
+    <line x1="348" y1="122" x2="348" y2="170"/>
+    <line x1="360" y1="122" x2="360" y2="170"/>
+    <line x1="372" y1="122" x2="372" y2="170"/>
+    <line x1="348" y1="134" x2="384" y2="134"/>
+    <line x1="348" y1="146" x2="384" y2="146"/>
+    <line x1="348" y1="158" x2="384" y2="158"/>
+    <line x1="252" y1="170" x2="252" y2="218"/>
+    <line x1="264" y1="170" x2="264" y2="218"/>
+    <line x1="276" y1="170" x2="276" y2="218"/>
+    <line x1="252" y1="182" x2="288" y2="182"/>
+    <line x1="252" y1="194" x2="288" y2="194"/>
+    <line x1="252" y1="206" x2="288" y2="206"/>
+    <line x1="300" y1="170" x2="300" y2="218"/>
+    <line x1="312" y1="170" x2="312" y2="218"/>
+    <line x1="324" y1="170" x2="324" y2="218"/>
+    <line x1="300" y1="182" x2="336" y2="182"/>
+    <line x1="300" y1="194" x2="336" y2="194"/>
+    <line x1="300" y1="206" x2="336" y2="206"/>
+    <line x1="348" y1="170" x2="348" y2="218"/>
+    <line x1="360" y1="170" x2="360" y2="218"/>
+    <line x1="372" y1="170" x2="372" y2="218"/>
+    <line x1="348" y1="182" x2="384" y2="182"/>
+    <line x1="348" y1="194" x2="384" y2="194"/>
+    <line x1="348" y1="206" x2="384" y2="206"/>
   </g>
 
   <!-- 循环移位 1 标记（圆点） -->
@@ -76,8 +125,8 @@
     <text x="314.5" y="136" fill="#C4553D" font-size="8.5" font-weight="700" text-anchor="middle">zero</text>
     <rect x="344" y="132" width="25" height="14" rx="3" fill="#FFFFFF"/>
     <text x="356.5" y="143" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^2</text>
-    <rect x="255" y="178" width="25" height="14" rx="3" fill="#FFFFFF"/>
-    <text x="267.5" y="189" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^1</text>
+    <rect x="252" y="194" width="25" height="14" rx="3" fill="#FFFFFF"/>
+    <text x="264.5" y="205" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^1</text>
     <rect x="303" y="181" width="25" height="14" rx="3" fill="#FFFFFF"/>
     <text x="315.5" y="192" fill="#D18A2F" font-size="8.5" font-weight="700" text-anchor="middle">P^0</text>
     <rect x="357" y="181" width="27" height="14" rx="3" fill="#FFFFFF"/>

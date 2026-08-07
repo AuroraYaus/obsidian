@@ -1,194 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   @file    T10.5_NR_Polar_SCL_N4_L2_paths.svg
-  @brief   N=4, L=2 Polar SCL 路径分裂、PM 排序与剪枝教学图（手绘 SVG V2：布局与配色依据 T10.5 讲义正文语义重设计）
+  @brief   N=4, L=2 Polar SCL 解码树、阶段流程与剪枝检查点（重绘版）
   @date    2026-08-04
-  @note    内容保真：五个阶段（初始 -> u0/u1 frozen no split -> u2 information keep both
-           -> u3 information sort by PM keep best L=2）、路径表六行（after u2 两条 kept；
-           after u3 四条候选两条 pruned 两条 kept）、工程检测点（剪枝必须同步复制
-           path bit、LLR memory 指针、partial sum memory 和 CRC 状态），均与讲义
-           T10.5 正文及图 T10.5-1 语义一致。
-           视觉设计：阶段卡带序号徽章；frozen=风险色、information=橄榄色；
-           路径表 kept 行=橄榄浅底、pruned 行=风险浅底。
+  @note    重绘原因：旧版含"路径表"六行数值表格（step/candidate path/u2 PM/
+           u3 PM/total PM/status）；按项目原则数值由讲义 Markdown 承载
+           （T10.5 正文已有叶子 LLR 表、u2 分裂表、u3 排序表），本图只画结构：
+           N=4 解码树（frozen 位单支、information 位分裂、L=2 存活路径加粗）、
+           五阶段流程卡、剪枝必须同步复制的路径数据四件套。PM 约定越小越好。
+           语义配色：Polar 青瓷 #2F6E71，剪枝风险石榴 #A6403C。
+           依据 T2.1 基准图规格。
 -->
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1180" viewBox="0 0 1500 1180" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
-  <title>T10.5 N=4, L=2 Polar SCL 路径分裂、排序与剪枝</title>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 700" width="960" height="700" role="img">
+  <title>N=4, L=2 Polar SCL 解码树与剪枝</title>
+  <rect width="960" height="700" fill="#ffffff"/>
   <defs>
-    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
-    </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2F6E71"/>
     </marker>
   </defs>
+  <style>
+    .title {{ font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 18px; font-weight: bold; fill: #111; }}
+    .label {{ font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 14px; font-weight: bold; fill: #222; }}
+    .small {{ font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #333; }}
+    .note  {{ font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 11px; fill: #5C6B7C; }}
+    .leaf  {{ font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 10px; font-weight: bold; fill: #333; }}
+  </style>
+  <text x="40" y="28" class="title">N=4, L=2 Polar SCL：解码树、路径分裂与剪枝</text>
+  <text x="40" y="50" class="small">叶子 LLR、u2/u3 的 PM 数值与排序表由讲义 T10.5 表格承载；PM 越小越好</text>
+  <line x1="40" y1="62" x2="920" y2="62" stroke="#9FC4C6" stroke-width="1.5"/>
 
-  <!-- ============ 页头 ============ -->
-  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">T10.5 N=4, L=2 Polar SCL 路径分裂、排序与剪枝</text>
-  <text x="70" y="74" font-size="13" class="free" fill="#646B76">约定 path metric 越小越好；frozen 位不分裂，information 位分裂 0/1，超过 L 条后按 PM 排序保留前 L 条。</text>
+  <!-- ============ 面板 1：N=4 解码树 ============ -->
+  <rect x="40" y="72" width="560" height="380" rx="10" fill="#F2F7F7" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="58" y="96" class="label">N=4 解码树：frozen 单支、information 分裂</text>
+  <line x1="150" y1="299" x2="180" y2="299" stroke="#7FA6A8" stroke-width="1.6"/>
+  <line x1="250" y1="299" x2="300" y2="214" stroke="#7FA6A8" stroke-width="1.6"/>
+  <line x1="250" y1="299" x2="300" y2="384" stroke="#7FA6A8" stroke-width="1.6"/>
+  <line x1="370" y1="214" x2="440" y2="130" stroke="#7FA6A8" stroke-width="1.6"/>
+  <line x1="370" y1="214" x2="440" y2="200" stroke="#7FA6A8" stroke-width="1.6"/>
+  <line x1="370" y1="384" x2="440" y2="270" stroke="#7FA6A8" stroke-width="1.6"/>
+  <line x1="370" y1="384" x2="440" y2="340" stroke="#7FA6A8" stroke-width="1.6"/>
+  <line x1="150" y1="299" x2="180" y2="299" stroke="#2F6E71" stroke-width="3"/>
+  <line x1="250" y1="299" x2="300" y2="214" stroke="#2F6E71" stroke-width="3"/>
+  <line x1="250" y1="299" x2="300" y2="384" stroke="#2F6E71" stroke-width="3"/>
+  <line x1="370" y1="214" x2="440" y2="130" stroke="#2F6E71" stroke-width="3"/>
+  <line x1="370" y1="384" x2="440" y2="270" stroke="#2F6E71" stroke-width="3"/>
+  <rect x="80" y="285" width="70" height="28" rx="6" fill="#2F6E71"/>
+  <text x="115" y="304" text-anchor="middle" class="small" fill="#FFFFFF">u0 frozen</text>
+  <rect x="180" y="285" width="70" height="28" rx="6" fill="#2F6E71"/>
+  <text x="215" y="304" text-anchor="middle" class="small" fill="#FFFFFF">u1 frozen</text>
+  <rect x="300" y="200" width="70" height="28" rx="6" fill="#DCEBEC" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="335" y="219" text-anchor="middle" class="small">u2=0</text>
+  <rect x="300" y="370" width="70" height="28" rx="6" fill="#DCEBEC" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="335" y="389" text-anchor="middle" class="small">u2=1</text>
+  <rect x="440" y="110" width="100" height="40" rx="6" fill="#DCEBEC" stroke="#2F6E71" stroke-width="2"/>
+  <text x="490" y="126" text-anchor="middle" class="leaf">[0000]</text>
+  <text x="490" y="142" text-anchor="middle" class="leaf">保留</text>
+  <rect x="440" y="180" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#A6403C" stroke-width="1.4"/>
+  <text x="490" y="196" text-anchor="middle" class="leaf">[0001]</text>
+  <text x="490" y="212" text-anchor="middle" class="leaf">剪枝</text>
+  <rect x="440" y="250" width="100" height="40" rx="6" fill="#DCEBEC" stroke="#2F6E71" stroke-width="2"/>
+  <text x="490" y="266" text-anchor="middle" class="leaf">[0010]</text>
+  <text x="490" y="282" text-anchor="middle" class="leaf">保留</text>
+  <rect x="440" y="320" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#A6403C" stroke-width="1.4"/>
+  <text x="490" y="336" text-anchor="middle" class="leaf">[0011]</text>
+  <text x="490" y="352" text-anchor="middle" class="leaf">剪枝</text>
+  <text x="58" y="416" class="note">frozen 位强制 0 不分裂；information 位分裂 0/1</text>
+  <text x="58" y="438" class="note">加粗 = L=2 存活路径；PM 数值与排序见讲义路径表</text>
 
-  <!-- ============ 面板 A：五个阶段 ============ -->
-  <g filter="url(#soft)">
-    <rect x="60" y="130" width="1380" height="260" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
-  </g>
-  <rect x="88" y="154" width="10" height="10" rx="3" fill="#8E3B5E"/>
-  <text x="108" y="163" font-size="17" font-weight="700" fill="#23272E">SCL 路径分裂与剪枝流程</text>
+  <!-- ============ 面板 2：五阶段流程 ============ -->
+  <rect x="620" y="72" width="300" height="380" rx="10" fill="#F2F7F7" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="638" y="96" class="label">五阶段流程</text>
+  <rect x="640" y="110" width="260" height="48" rx="8" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.3"/>
+  <text x="656" y="132" class="small">初始：空路径</text>
+  <text x="656" y="150" class="note">active 路径数为 1</text>
+  <path d="M 770 158 L 770 172" stroke="#2F6E71" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <rect x="640" y="172" width="260" height="48" rx="8" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.3"/>
+  <text x="656" y="194" class="small">u0 / u1 frozen：强制 0</text>
+  <text x="656" y="212" class="note">不分裂，PM 不变</text>
+  <path d="M 770 220 L 770 234" stroke="#2F6E71" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <rect x="640" y="234" width="260" height="48" rx="8" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.3"/>
+  <text x="656" y="256" class="small">u2 information：分裂 0/1</text>
+  <text x="656" y="274" class="note">L=2，两条都保留</text>
+  <path d="M 770 282 L 770 296" stroke="#2F6E71" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <rect x="640" y="296" width="260" height="48" rx="8" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.3"/>
+  <text x="656" y="318" class="small">u3 information：四条候选</text>
+  <text x="656" y="336" class="note">每条路径各分裂一次</text>
+  <path d="M 770 344 L 770 358" stroke="#2F6E71" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <rect x="640" y="358" width="260" height="48" rx="8" fill="#DCEBEC" stroke="#2F6E71" stroke-width="1.4"/>
+  <text x="656" y="380" class="small">按 PM 排序，保留前 L=2</text>
+  <text x="656" y="398" class="note">其余两条剪枝</text>
+  <text x="638" y="436" class="note">候选路径、PM 与保留/剪枝状态见讲义排序表</text>
 
-  <g font-size="12" fill="#23272E">
-    <rect x="80" y="196" width="256" height="168" rx="12" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
-    <circle cx="104" cy="222" r="13" fill="#5C6B7C"/>
-    <text x="104" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">0</text>
-    <text x="208" y="226" text-anchor="middle" font-weight="700">初始</text>
-    <text x="98" y="260">path: []</text>
-    <text x="98" y="284">PM=0.00</text>
-    <text x="98" y="308">active=1</text>
-    <rect x="356" y="196" width="256" height="168" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
-    <circle cx="380" cy="222" r="13" fill="#A6403C"/>
-    <text x="380" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
-    <text x="484" y="226" text-anchor="middle" font-weight="700">u0 frozen</text>
-    <text x="374" y="260">force 0</text>
-    <text x="374" y="284">path: [0]</text>
-    <text x="374" y="308">PM=0.00</text>
-    <text x="374" y="332">no split</text>
-    <rect x="632" y="196" width="256" height="168" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
-    <circle cx="656" cy="222" r="13" fill="#A6403C"/>
-    <text x="656" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
-    <text x="760" y="226" text-anchor="middle" font-weight="700">u1 frozen</text>
-    <text x="650" y="260">force 0</text>
-    <text x="650" y="284">path: [0,0]</text>
-    <text x="650" y="308">PM=0.00</text>
-    <text x="650" y="332">no split</text>
-    <rect x="908" y="196" width="256" height="168" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
-    <circle cx="932" cy="222" r="13" fill="#6C7A2E"/>
-    <text x="932" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
-    <text x="1036" y="226" text-anchor="middle" font-weight="700">u2 information</text>
-    <text x="926" y="260">split to 0/1</text>
-    <text x="926" y="284">u2=0: PM=2.2</text>
-    <text x="926" y="308">u2=1: PM=0.0</text>
-    <text x="926" y="332">keep both</text>
-    <rect x="1184" y="196" width="256" height="168" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
-    <circle cx="1208" cy="222" r="13" fill="#6C7A2E"/>
-    <text x="1208" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
-    <text x="1312" y="226" text-anchor="middle" font-weight="700">u3 information</text>
-    <text x="1202" y="260">split each path</text>
-    <text x="1202" y="284">4 candidates</text>
-    <text x="1202" y="308">sort by PM</text>
-    <text x="1202" y="332">keep best L=2</text>
-  </g>
-  <g stroke="#8A8375" stroke-width="2" fill="none">
-    <path d="M 336 280 H 356" marker-end="url(#arrow)"/>
-    <path d="M 612 280 H 632" marker-end="url(#arrow)"/>
-    <path d="M 888 280 H 908" marker-end="url(#arrow)"/>
-    <path d="M 1164 280 H 1184" marker-end="url(#arrow)"/>
-  </g>
-
-  <!-- ============ 面板 B：路径表 ============ -->
-  <g filter="url(#soft)">
-    <rect x="60" y="420" width="1380" height="430" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
-  </g>
-  <text x="90" y="452" font-size="16" font-weight="700" fill="#23272E">路径表：每次分裂后必须复制 bits、PM、LLR state 和 partial sums</text>
-
-  <g font-size="12" fill="#23272E">
-    <rect x="90" y="480" width="130" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="155" y="504" text-anchor="middle" font-weight="700">step</text>
-    <rect x="220" y="480" width="230" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="335" y="504" text-anchor="middle" font-weight="700">candidate path</text>
-    <rect x="450" y="480" width="130" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="515" y="504" text-anchor="middle" font-weight="700">u2 PM</text>
-    <rect x="580" y="480" width="130" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="645" y="504" text-anchor="middle" font-weight="700">u3 PM</text>
-    <rect x="710" y="480" width="130" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="775" y="504" text-anchor="middle" font-weight="700">total PM</text>
-    <rect x="840" y="480" width="200" height="38" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="940" y="504" text-anchor="middle" font-weight="700">status</text>
-  </g>
-
-  <g font-size="12" fill="#23272E">
-    <rect x="90" y="518" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="155" y="542" text-anchor="middle">after u2</text>
-    <rect x="220" y="518" width="230" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="335" y="542" text-anchor="middle">[0,0,0]</text>
-    <rect x="450" y="518" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="515" y="542" text-anchor="middle">+2.2</text>
-    <rect x="580" y="518" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="645" y="542" text-anchor="middle">-</text>
-    <rect x="710" y="518" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="775" y="542" text-anchor="middle">2.2</text>
-    <rect x="840" y="518" width="200" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="940" y="542" text-anchor="middle" font-weight="700">kept</text>
-
-    <rect x="90" y="556" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="155" y="580" text-anchor="middle">after u2</text>
-    <rect x="220" y="556" width="230" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="335" y="580" text-anchor="middle">[0,0,1]</text>
-    <rect x="450" y="556" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="515" y="580" text-anchor="middle">+0.0</text>
-    <rect x="580" y="556" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="645" y="580" text-anchor="middle">-</text>
-    <rect x="710" y="556" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="775" y="580" text-anchor="middle">0.0</text>
-    <rect x="840" y="556" width="200" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="940" y="580" text-anchor="middle" font-weight="700">kept</text>
-
-    <rect x="90" y="594" width="130" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="155" y="618" text-anchor="middle">after u3</text>
-    <rect x="220" y="594" width="230" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="335" y="618" text-anchor="middle">[0,0,0,0]</text>
-    <rect x="450" y="594" width="130" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="515" y="618" text-anchor="middle">2.2</text>
-    <rect x="580" y="594" width="130" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="645" y="618" text-anchor="middle">+0.0</text>
-    <rect x="710" y="594" width="130" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="775" y="618" text-anchor="middle">2.2</text>
-    <rect x="840" y="594" width="200" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="940" y="618" text-anchor="middle" font-weight="700">pruned</text>
-
-    <rect x="90" y="632" width="130" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="155" y="656" text-anchor="middle">after u3</text>
-    <rect x="220" y="632" width="230" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="335" y="656" text-anchor="middle">[0,0,0,1]</text>
-    <rect x="450" y="632" width="130" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="515" y="656" text-anchor="middle">2.2</text>
-    <rect x="580" y="632" width="130" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="645" y="656" text-anchor="middle">+1.1</text>
-    <rect x="710" y="632" width="130" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="775" y="656" text-anchor="middle">3.3</text>
-    <rect x="840" y="632" width="200" height="38" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="940" y="656" text-anchor="middle" font-weight="700">pruned</text>
-
-    <rect x="90" y="670" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="155" y="694" text-anchor="middle">after u3</text>
-    <rect x="220" y="670" width="230" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="335" y="694" text-anchor="middle">[0,0,1,0]</text>
-    <rect x="450" y="670" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="515" y="694" text-anchor="middle">0.0</text>
-    <rect x="580" y="670" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="645" y="694" text-anchor="middle">+0.0</text>
-    <rect x="710" y="670" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="775" y="694" text-anchor="middle">0.0</text>
-    <rect x="840" y="670" width="200" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="940" y="694" text-anchor="middle" font-weight="700">kept #1</text>
-
-    <rect x="90" y="708" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="155" y="732" text-anchor="middle">after u3</text>
-    <rect x="220" y="708" width="230" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="335" y="732" text-anchor="middle">[0,0,1,1]</text>
-    <rect x="450" y="708" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="515" y="732" text-anchor="middle">0.0</text>
-    <rect x="580" y="708" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="645" y="732" text-anchor="middle">+6.0</text>
-    <rect x="710" y="708" width="130" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="775" y="732" text-anchor="middle">6.0</text>
-    <rect x="840" y="708" width="200" height="38" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="940" y="732" text-anchor="middle" font-weight="700">kept #2</text>
-  </g>
-
-  <!-- ============ 工程检测点 ============ -->
-  <g filter="url(#soft)">
-    <rect x="60" y="880" width="1380" height="260" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-  </g>
-  <text x="90" y="912" font-size="16" font-weight="700" fill="#23272E">工程检测点</text>
-  <text x="90" y="952" font-size="12.5" fill="#23272E">排序器只比较 PM 不足够：剪枝时必须同步复制路径 bit、LLR memory 指针、partial sum memory 和 CRC 状态。</text>
-  <text x="90" y="992" font-size="12.5" fill="#23272E">若只复制 bit 而漏复制 partial sum，下一次 g 函数会使用错误历史，PM 看似合理但候选路径不可复现。</text>
-  <text x="90" y="1032" font-size="12.5" class="free" fill="#646B76">路径数据四件套：bits / PM / LLR state / partial sums，剪枝时缺一不可</text>
+  <!-- ============ 面板 3：工程检测点 ============ -->
+  <rect x="40" y="472" width="880" height="210" rx="10" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  <text x="58" y="496" class="label">剪枝必须同步复制：路径数据四件套</text>
+  <rect x="56" y="514" width="196" height="60" rx="8" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.3"/>
+  <text x="72" y="538" class="small">path bits</text>
+  <text x="72" y="560" class="note">已判决前缀</text>
+  <rect x="276" y="514" width="196" height="60" rx="8" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.3"/>
+  <text x="292" y="538" class="small">PM</text>
+  <text x="292" y="560" class="note">累计不一致惩罚</text>
+  <rect x="496" y="514" width="196" height="60" rx="8" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.3"/>
+  <text x="512" y="538" class="small">LLR state</text>
+  <text x="512" y="560" class="note">树节点中间 LLR</text>
+  <rect x="716" y="514" width="196" height="60" rx="8" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.3"/>
+  <text x="732" y="538" class="small">partial sums</text>
+  <text x="732" y="560" class="note">硬判决回传值</text>
+  <text x="58" y="608" class="small">若只复制 bit 而漏复制 partial sum，下一次 g 函数会使用错误历史，候选路径不可复现</text>
+  <text x="58" y="632" class="note">CRC-aided SCL（T10.6）还需同步 CRC 状态；PM 最小路径不一定是最终输出</text>
+  <text x="58" y="656" class="note">u2/u3 的叶子 LLR 与 PM 增量数值由讲义路径表承载</text>
 </svg>

@@ -78,10 +78,10 @@
   <text x="352" y="389" font-size="12" fill="#5D6B80" text-anchor="middle">送入第二编码器</text>
 
   <g filter="url(#soft)">
-    <rect x="490" y="315" width="190" height="90" rx="12" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
+    <rect x="490" y="315" width="206" height="90" rx="12" fill="#E5F4ED" stroke="#3E9E74" stroke-width="1.5"/>
   </g>
-  <text x="585" y="345" font-size="14" font-weight="700" fill="#1B2433" text-anchor="middle">第二 8 状态组成编码器</text>
-  <text x="585" y="373" font-size="12" fill="#5D6B80" text-anchor="middle">交织后顺序输入；产生第二校验路</text>
+  <text x="593" y="345" font-size="14" font-weight="700" fill="#1B2433" text-anchor="middle">第二 8 状态组成编码器</text>
+  <text x="593" y="373" font-size="12" fill="#5D6B80" text-anchor="middle">交织后顺序输入；产生第二校验路</text>
 
   <g filter="url(#soft)">
     <rect x="720" y="340" width="110" height="40" rx="10" fill="#3E9E74" stroke="#3E9E74" stroke-width="1.5"/>
@@ -96,7 +96,7 @@
     <path d="M 150 270 L 280 315" stroke="#D18A2F" marker-end="url(#arrow-amber)"/>
     <path d="M 450 140 H 490" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
     <path d="M 450 360 H 490" stroke="#D18A2F" marker-end="url(#arrow-amber)"/>
-    <path d="M 680 360 H 720" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
+    <path d="M 696 360 H 720" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
     <path d="M 610 140 L 700 205" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
     <path d="M 830 380 L 790 255" stroke="#3E9E74" marker-end="url(#arrow-green)"/>
   </g>

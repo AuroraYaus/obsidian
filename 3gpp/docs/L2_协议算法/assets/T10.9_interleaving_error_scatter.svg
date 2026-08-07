@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T10.9_interleaving_error_scatter.svg
+  @brief   三角交织的作用：连续错误摊平成孤立错误（G=10 教学例）
+  @date    2026-08-04
+  @note    与 T10.9_triangular_interleaver.svg 同一教学例（输出序列
+           g0,g4,g7,g9,g1,g5,g8,g2,g6,g3）。依据 T2.1 基准图规格。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" role="img">
+  <title>交织把连续错误摊平成孤立错误</title>
+  <rect width="960" height="640" fill="#ffffff"/>
+  <style>
+    .title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 18px; font-weight: bold; fill: #111; }
+    .label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 14px; fill: #222; }
+    .small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #555; }
+    .mono { font-family: monospace; font-size: 13px; fill: #333; }
+  </style>
+  <text x="480" y="32" text-anchor="middle" class="title">交织的作用：把连续错误摊平成孤立错误（G=10 例）</text>
+  <text x="480" y="54" text-anchor="middle" class="small">深衰落/打孔连续破坏 3 个 RE：不交织丢相邻 3 个输入比特；三角交织后 3 个输入比特各自孤立</text>
+
+  <rect x="60" y="80" width="410" height="290" rx="8" fill="#FDF6F4" stroke="#C62828" stroke-width="1.3"/>
+  <text x="82" y="108" class="label" font-weight="bold" fill="#B71C1C">不交织：g_0…g_9 按顺序映射到 RE</text>
+<rect x="80" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="95" y="195" text-anchor="middle" class="mono">g0</text>
+<rect x="118" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="133" y="195" text-anchor="middle" class="mono">g1</text>
+<rect x="156" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="171" y="195" text-anchor="middle" class="mono">g2</text>
+<rect x="194" y="170" width="30" height="40" rx="3" fill="#FFEBEE" stroke="#C62828" stroke-width="1.4"/>
+<text x="209" y="195" text-anchor="middle" class="mono">g3</text>
+<rect x="232" y="170" width="30" height="40" rx="3" fill="#FFEBEE" stroke="#C62828" stroke-width="1.4"/>
+<text x="247" y="195" text-anchor="middle" class="mono">g4</text>
+<rect x="270" y="170" width="30" height="40" rx="3" fill="#FFEBEE" stroke="#C62828" stroke-width="1.4"/>
+<text x="285" y="195" text-anchor="middle" class="mono">g5</text>
+<rect x="308" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="323" y="195" text-anchor="middle" class="mono">g6</text>
+<rect x="346" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="361" y="195" text-anchor="middle" class="mono">g7</text>
+<rect x="384" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="399" y="195" text-anchor="middle" class="mono">g8</text>
+<rect x="422" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="437" y="195" text-anchor="middle" class="mono">g9</text>
+<text x="265" y="150" text-anchor="middle" class="small">RE 映射顺序（无交织）</text>
+<text x="190" y="240" text-anchor="middle" class="small" fill="#C62828">深衰落打掉 3 个连续 RE</text>
+<text x="265" y="270" text-anchor="middle" class="label" font-weight="bold" fill="#C62828">丢失 g3、g4、g5 —— 连续 3 个输入比特</text>
+<text x="265" y="300" text-anchor="middle" class="small">3 个相邻输入比特一起丢失，纠错码要修复一整段</text>
+
+  <rect x="500" y="80" width="400" height="290" rx="8" fill="#F2F9F7" stroke="#00897B" stroke-width="1.3"/>
+  <text x="522" y="108" class="label" font-weight="bold" fill="#00695C">三角交织后：g0,g4,g7,g9,g1,g5,g8,g2,g6,g3</text>
+<rect x="510" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="525" y="187" text-anchor="middle" class="small" fill="#546E7A">f0</text>
+<text x="525" y="202" text-anchor="middle" class="mono">g0</text>
+<rect x="548" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="563" y="187" text-anchor="middle" class="small" fill="#546E7A">f1</text>
+<text x="563" y="202" text-anchor="middle" class="mono">g4</text>
+<rect x="586" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="601" y="187" text-anchor="middle" class="small" fill="#546E7A">f2</text>
+<text x="601" y="202" text-anchor="middle" class="mono">g7</text>
+<rect x="624" y="170" width="30" height="40" rx="3" fill="#FFEBEE" stroke="#C62828" stroke-width="1.4"/>
+<text x="639" y="187" text-anchor="middle" class="small" fill="#546E7A">f3</text>
+<text x="639" y="202" text-anchor="middle" class="mono">g9</text>
+<rect x="662" y="170" width="30" height="40" rx="3" fill="#FFEBEE" stroke="#C62828" stroke-width="1.4"/>
+<text x="677" y="187" text-anchor="middle" class="small" fill="#546E7A">f4</text>
+<text x="677" y="202" text-anchor="middle" class="mono">g1</text>
+<rect x="700" y="170" width="30" height="40" rx="3" fill="#FFEBEE" stroke="#C62828" stroke-width="1.4"/>
+<text x="715" y="187" text-anchor="middle" class="small" fill="#546E7A">f5</text>
+<text x="715" y="202" text-anchor="middle" class="mono">g5</text>
+<rect x="738" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="753" y="187" text-anchor="middle" class="small" fill="#546E7A">f6</text>
+<text x="753" y="202" text-anchor="middle" class="mono">g8</text>
+<rect x="776" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="791" y="187" text-anchor="middle" class="small" fill="#546E7A">f7</text>
+<text x="791" y="202" text-anchor="middle" class="mono">g2</text>
+<rect x="814" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="829" y="187" text-anchor="middle" class="small" fill="#546E7A">f8</text>
+<text x="829" y="202" text-anchor="middle" class="mono">g6</text>
+<rect x="852" y="170" width="30" height="40" rx="3" fill="#FFFFFF" stroke="#90A4AE" stroke-width="1.4"/>
+<text x="867" y="187" text-anchor="middle" class="small" fill="#546E7A">f9</text>
+<text x="867" y="202" text-anchor="middle" class="mono">g3</text>
+<text x="705" y="150" text-anchor="middle" class="small">三角交织后的映射顺序</text>
+<text x="680" y="240" text-anchor="middle" class="small" fill="#C62828">同样打掉 3 个连续 RE</text>
+<text x="705" y="270" text-anchor="middle" class="label" font-weight="bold" fill="#00695C">丢失 g9、g1、g8 —— 分散的输入比特</text>
+<text x="705" y="300" text-anchor="middle" class="small">每个输入比特只损失 1 个输出位，纠错码可以分别救回</text>
+
+  <text x="480" y="412" text-anchor="middle" class="label" font-weight="bold">对比结论</text>
+  <text x="150" y="440" class="small">不交织：3 个相邻输入比特 g3,g4,g5 同时丢失——纠错码面对一整段连续错误（最容易超越纠错能力）；</text>
+  <text x="150" y="460" class="small">交织后：丢失的是 f3,f4,f5，对应输入 g9、g1、g8——三个分散的孤立错误，每个单独修复即可。</text>
+  <text x="150" y="492" class="small">这正是 UCI（HARQ-ACK 等关键控制比特）必须交织的原因：</text>
+  <text x="150" y="512" class="small">一个深衰落符号可能打掉整列 RE，不交织时 HARQ-ACK 可能整段丢失，交织后只有零星比特受损，可被纠错恢复。</text>
+
+  <text x="480" y="610" text-anchor="middle" class="small">读图：上下两行 RE 布局相同、打孔位置相同，区别只在"哪个输入比特被伤到"——交织不减少错误数，只改变错误的分布</text>
+</svg>

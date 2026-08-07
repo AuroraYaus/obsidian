@@ -1,246 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   @file    T11.4_decoder_hardware_tradeoff_comparison.svg
-  @brief   Turbo/LDPC/Polar 三种译码器硬件架构取舍对比图（手绘 SVG V2：布局与配色依据 T11.4 讲义正文语义重设计）
+  @brief   Turbo/LDPC/Polar 三种译码器硬件取舍对比：数据通路形状 + 瓶颈 + 共享边界
   @date    2026-08-04
-  @note    内容保真：三条硬件数据通路（Turbo：LLR RAM -> SISO/BCJR -> alpha/beta memory
-           -> interleaver -> extrinsic RAM -> iteration controller；LDPC：layered
-           schedule 与消息存储；Polar：SCL 路径管理与排序，各含瓶颈说明）、统一译码
-           子系统"可共享 vs 不宜共享"分类表（输入输出/控制/计算/存储）、工程决策矩阵
-           六维（并行度/延迟/吞吐/面积功耗/验证难度）、底部三卡（周期估算/验证重点/
-           设计结论），均与讲义 T11.4 正文及图 T11.4-1 语义一致。
-           视觉设计：数据通路按协议主场着色（Turbo=赭金、LDPC=橄榄、Polar=青瓷）；
-           共享表"可以共享"列=橄榄、"不宜共享"列=风险浅底。
+  @note    v2 重绘：原版"工程决策矩阵表格"与讲义 Markdown 表格重复，已删除；本图
+           补充表格之外的拓扑/结构信息：三类数据依赖形状（trellis / 稀疏图 / 树）、
+           计算-存储流水结构以及可共享/不宜共享子系统的边界。决策矩阵数据仍由
+           讲义 Markdown 表格承载。
+           语义色：Turbo=赭金 #B06F2B、LDPC=橄榄 #6C7A2E、Polar=青瓷 #2F6E71、
+           中性=石板 #5C6B7C、风险=石榴 #A6403C；浅色填充深色描边。
+           依据 T2.1 基准图规格（960 宽、字号层级、Noto CJK 字体栈）。
 -->
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="2620" viewBox="0 0 1500 2620" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
-  <title>T11.4 Turbo / LDPC / Polar 硬件架构取舍</title>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 710" width="960" height="710" role="img">
+  <title>Turbo / LDPC / Polar 硬件取舍：数据通路形状决定瓶颈</title>
+  <rect width="960" height="710" fill="#ffffff"/>
   <defs>
-    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
-    </filter>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    <marker id="ah-turbo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#B06F2B"/>
+    </marker>
+    <marker id="ah-ldpc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6C7A2E"/>
+    </marker>
+    <marker id="ah-polar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2F6E71"/>
     </marker>
   </defs>
+  <style>
+    .title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 18px; font-weight: bold; fill: #111; }
+    .label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 14px; fill: #222; }
+    .small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #555; }
+    .mono { font-family: monospace; font-size: 13px; fill: #333; }
+  </style>
+  <text x="480" y="30" text-anchor="middle" class="title">Turbo / LDPC / Polar 硬件取舍：数据通路形状决定瓶颈</text>
+  <text x="480" y="54" text-anchor="middle" class="small">先看依赖形状（递推 / 图 / 树），再看存储、排序与迭代——决策矩阵数据见讲义表</text>
 
-  <!-- ============ 页头 ============ -->
-  <text x="70" y="44" font-size="22" font-weight="700" class="free" fill="#23272E">T11.4 Turbo / LDPC / Polar 硬件架构取舍</text>
-  <text x="70" y="74" font-size="13" class="free" fill="#646B76">对比并行度、存储访问、排序、迭代/列表深度、延迟、吞吐、功耗和验证风险。</text>
+  <!-- ============ 列 1：Turbo ============ -->
+  <rect x="40" y="78" width="285" height="470" rx="10" fill="#FDF8F1" stroke="#B06F2B" stroke-width="1.5"/>
+  <text x="62" y="100" class="small" font-weight="bold" fill="#8D5A1E">LTE Turbo：trellis 递推</text>
+  <circle cx="100" cy="150" r="6" fill="#B06F2B"/>
+  <circle cx="100" cy="180" r="6" fill="#B06F2B"/>
+  <circle cx="100" cy="210" r="6" fill="#B06F2B"/>
+  <circle cx="220" cy="150" r="6" fill="#B06F2B"/>
+  <circle cx="220" cy="180" r="6" fill="#B06F2B"/>
+  <circle cx="220" cy="210" r="6" fill="#B06F2B"/>
+  <line x1="100" y1="150" x2="220" y2="150" stroke="#C98F4E" stroke-width="1.3"/>
+  <line x1="100" y1="150" x2="220" y2="180" stroke="#C98F4E" stroke-width="1.3"/>
+  <line x1="100" y1="180" x2="220" y2="150" stroke="#C98F4E" stroke-width="1.3"/>
+  <line x1="100" y1="180" x2="220" y2="210" stroke="#C98F4E" stroke-width="1.3"/>
+  <line x1="100" y1="210" x2="220" y2="180" stroke="#C98F4E" stroke-width="1.3"/>
+  <line x1="100" y1="210" x2="220" y2="210" stroke="#C98F4E" stroke-width="1.3"/>
+  <text x="160" y="250" text-anchor="middle" class="small">α/β 前后向递推（时间依赖）</text>
+  <rect x="65" y="290" width="190" height="28" rx="6" fill="#FFFFFF" stroke="#C98F4E" stroke-width="1.2"/>
+  <text x="160" y="308" text-anchor="middle" class="small">LLR RAM（三路流）</text>
+  <path d="M 160 318 L 160 338" stroke="#B06F2B" stroke-width="1.5" fill="none" marker-end="url(#ah-turbo)"/>
+  <rect x="65" y="338" width="190" height="28" rx="6" fill="#FFFFFF" stroke="#C98F4E" stroke-width="1.2"/>
+  <text x="160" y="356" text-anchor="middle" class="small">SISO/BCJR：αβ 递推</text>
+  <path d="M 160 366 L 160 386" stroke="#B06F2B" stroke-width="1.5" fill="none" marker-end="url(#ah-turbo)"/>
+  <rect x="65" y="386" width="190" height="44" rx="6" fill="#FFFFFF" stroke="#C98F4E" stroke-width="1.2"/>
+  <text x="160" y="404" text-anchor="middle" class="small">interleaver + extrinsic</text>
+  <text x="160" y="422" text-anchor="middle" class="small">×I 迭代 + early stop</text>
+  <rect x="55" y="455" width="220" height="90" rx="8" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.3"/>
+  <text x="75" y="480" class="small" font-weight="bold" fill="#8D5A1E">瓶颈</text>
+  <text x="75" y="502" class="small">trellis 前后向递推</text>
+  <text x="75" y="522" class="small">顺序依赖 + 交织随机访问</text>
+  <text x="75" y="538" class="small">迭代放大最坏延迟</text>
 
-  <!-- ============ 三条硬件数据通路 ============ -->
-  <!-- Turbo -->
-  <g filter="url(#soft)">
-    <rect x="60" y="130" width="1380" height="380" rx="16" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-  </g>
-  <text x="84" y="162" font-size="15" font-weight="700" fill="#23272E">Turbo 硬件数据通路：顺序 SISO 与交织外信息</text>
-  <g font-size="12" fill="#23272E">
-    <rect x="84" y="200" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="179" y="244" text-anchor="middle" font-weight="700">LLR RAM</text>
-    <rect x="290" y="200" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="385" y="244" text-anchor="middle" font-weight="700">SISO / BCJR</text>
-    <rect x="496" y="200" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="591" y="244" text-anchor="middle" font-weight="700">alpha/beta memory</text>
-    <rect x="702" y="200" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="797" y="244" text-anchor="middle" font-weight="700">interleaver</text>
-    <rect x="908" y="200" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="1003" y="244" text-anchor="middle" font-weight="700">extrinsic RAM</text>
-    <rect x="1114" y="200" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#B06F2B" stroke-width="1.5"/>
-    <text x="1209" y="244" text-anchor="middle" font-weight="700">iteration controller</text>
-  </g>
-  <g stroke="#B06F2B" stroke-width="2" fill="none">
-    <path d="M 274 240 H 290" marker-end="url(#arrow)"/>
-    <path d="M 480 240 H 496" marker-end="url(#arrow)"/>
-    <path d="M 686 240 H 702" marker-end="url(#arrow)"/>
-    <path d="M 892 240 H 908" marker-end="url(#arrow)"/>
-    <path d="M 1098 240 H 1114" marker-end="url(#arrow)"/>
-  </g>
-  <rect x="84" y="320" width="1312" height="60" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-  <text x="740" y="344" font-size="12" text-anchor="middle" fill="#646B76">瓶颈：trellis 前后向递推有顺序依赖；interleaver/deinterleaver 造成外信息 RAM 随机访问；迭代次数直接放大最坏延迟。</text>
+  <!-- ============ 列 2：LDPC ============ -->
+  <rect x="345" y="78" width="285" height="470" rx="10" fill="#F5F8F2" stroke="#6C7A2E" stroke-width="1.5"/>
+  <text x="367" y="100" class="small" font-weight="bold" fill="#525F1F">NR LDPC：QC 稀疏图分层</text>
+  <circle cx="415" cy="145" r="6" fill="#6C7A2E"/>
+  <circle cx="465" cy="145" r="6" fill="#6C7A2E"/>
+  <circle cx="515" cy="145" r="6" fill="#6C7A2E"/>
+  <circle cx="565" cy="145" r="6" fill="#6C7A2E"/>
+  <circle cx="425" cy="215" r="6" fill="#6C7A2E"/>
+  <circle cx="490" cy="215" r="6" fill="#6C7A2E"/>
+  <circle cx="555" cy="215" r="6" fill="#6C7A2E"/>
+  <line x1="415" y1="145" x2="425" y2="215" stroke="#93A95A" stroke-width="1.3"/>
+  <line x1="465" y1="145" x2="425" y2="215" stroke="#93A95A" stroke-width="1.3"/>
+  <line x1="465" y1="145" x2="490" y2="215" stroke="#93A95A" stroke-width="1.3"/>
+  <line x1="515" y1="145" x2="490" y2="215" stroke="#93A95A" stroke-width="1.3"/>
+  <line x1="515" y1="145" x2="555" y2="215" stroke="#93A95A" stroke-width="1.3"/>
+  <line x1="565" y1="145" x2="555" y2="215" stroke="#93A95A" stroke-width="1.3"/>
+  <text x="487" y="250" text-anchor="middle" class="small">VN/CN 消息沿边迭代（QC 并行）</text>
+  <rect x="392" y="290" width="190" height="28" rx="6" fill="#FFFFFF" stroke="#93A95A" stroke-width="1.2"/>
+  <text x="487" y="308" text-anchor="middle" class="small">LLR RAM（后验 LLR）</text>
+  <path d="M 487 318 L 487 338" stroke="#6C7A2E" stroke-width="1.5" fill="none" marker-end="url(#ah-ldpc)"/>
+  <rect x="392" y="338" width="190" height="28" rx="6" fill="#FFFFFF" stroke="#93A95A" stroke-width="1.2"/>
+  <text x="487" y="356" text-anchor="middle" class="small">CN/VN 阵列 + min1/min2</text>
+  <path d="M 487 366 L 487 386" stroke="#6C7A2E" stroke-width="1.5" fill="none" marker-end="url(#ah-ldpc)"/>
+  <rect x="392" y="386" width="190" height="44" rx="6" fill="#FFFFFF" stroke="#93A95A" stroke-width="1.2"/>
+  <text x="487" y="404" text-anchor="middle" class="small">message memory / bank</text>
+  <text x="487" y="422" text-anchor="middle" class="small">layered RMW 读改写</text>
+  <rect x="360" y="455" width="220" height="90" rx="8" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.3"/>
+  <text x="380" y="480" class="small" font-weight="bold" fill="#525F1F">瓶颈</text>
+  <text x="380" y="502" class="small">消息 RMW / bank conflict</text>
+  <text x="380" y="522" class="small">算力够，存储带宽不足</text>
+  <text x="380" y="538" class="small">layer stall 拖尾延迟</text>
 
-  <!-- LDPC -->
-  <g filter="url(#soft)">
-    <rect x="60" y="540" width="1380" height="380" rx="16" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
-  </g>
-  <text x="84" y="572" font-size="15" font-weight="700" fill="#23272E">LDPC 硬件数据通路：layered schedule 与消息存储</text>
-  <g font-size="12" fill="#23272E">
-    <rect x="84" y="610" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
-    <text x="179" y="654" text-anchor="middle" font-weight="700">LLR RAM</text>
-    <rect x="290" y="610" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
-    <text x="385" y="654" text-anchor="middle" font-weight="700">layered controller</text>
-    <rect x="496" y="610" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
-    <text x="591" y="654" text-anchor="middle" font-weight="700">check-node unit</text>
-    <rect x="702" y="610" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
-    <text x="797" y="654" text-anchor="middle" font-weight="700">variable-node update</text>
-    <rect x="908" y="610" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
-    <text x="1003" y="654" text-anchor="middle" font-weight="700">message memory</text>
-    <rect x="1114" y="610" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#6C7A2E" stroke-width="1.5"/>
-    <text x="1209" y="654" text-anchor="middle" font-weight="700">bank conflict guard</text>
-  </g>
-  <g stroke="#6C7A2E" stroke-width="2" fill="none">
-    <path d="M 274 650 H 290" marker-end="url(#arrow)"/>
-    <path d="M 480 650 H 496" marker-end="url(#arrow)"/>
-    <path d="M 686 650 H 702" marker-end="url(#arrow)"/>
-    <path d="M 892 650 H 908" marker-end="url(#arrow)"/>
-    <path d="M 1098 650 H 1114" marker-end="url(#arrow)"/>
-  </g>
-  <rect x="84" y="730" width="1312" height="60" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-  <text x="740" y="754" font-size="12" text-anchor="middle" fill="#646B76">优势：QC-LDPC 的 row/column group 适合并行；瓶颈：message memory、read-modify-write、bank conflict 和 pipeline stall。</text>
+  <!-- ============ 列 3：Polar SCL ============ -->
+  <rect x="650" y="78" width="285" height="470" rx="10" fill="#F2F7F7" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="672" y="100" class="small" font-weight="bold" fill="#1E4E50">NR Polar：SCL 树 + 路径</text>
+  <circle cx="792" cy="135" r="6" fill="#2F6E71"/>
+  <circle cx="752" cy="190" r="6" fill="#2F6E71"/>
+  <circle cx="832" cy="190" r="6" fill="#2F6E71"/>
+  <circle cx="692" cy="245" r="6" fill="#2F6E71"/>
+  <circle cx="752" cy="245" r="6" fill="#2F6E71"/>
+  <circle cx="832" cy="245" r="6" fill="#2F6E71"/>
+  <circle cx="892" cy="245" r="6" fill="#2F6E71"/>
+  <line x1="792" y1="135" x2="752" y2="190" stroke="#7FA6A8" stroke-width="1.3"/>
+  <line x1="792" y1="135" x2="832" y2="190" stroke="#7FA6A8" stroke-width="1.3"/>
+  <line x1="752" y1="190" x2="692" y2="245" stroke="#7FA6A8" stroke-width="1.3"/>
+  <line x1="752" y1="190" x2="752" y2="245" stroke="#7FA6A8" stroke-width="1.3"/>
+  <line x1="832" y1="190" x2="832" y2="245" stroke="#7FA6A8" stroke-width="1.3"/>
+  <line x1="832" y1="190" x2="892" y2="245" stroke="#7FA6A8" stroke-width="1.3"/>
+  <line x1="792" y1="135" x2="752" y2="190" stroke="#2F6E71" stroke-width="2.2"/>
+  <line x1="752" y1="190" x2="692" y2="245" stroke="#2F6E71" stroke-width="2.2"/>
+  <line x1="792" y1="135" x2="832" y2="190" stroke="#2F6E71" stroke-width="2.2"/>
+  <line x1="832" y1="190" x2="832" y2="245" stroke="#2F6E71" stroke-width="2.2"/>
+  <text x="792" y="268" text-anchor="middle" class="small">SC/SCL：L 条路径扩展 + 剪枝</text>
+  <rect x="697" y="290" width="190" height="28" rx="6" fill="#FFFFFF" stroke="#7FA6A8" stroke-width="1.2"/>
+  <text x="792" y="308" text-anchor="middle" class="small">LLR memory（树节点）</text>
+  <path d="M 792 318 L 792 338" stroke="#2F6E71" stroke-width="1.5" fill="none" marker-end="url(#ah-polar)"/>
+  <rect x="697" y="338" width="190" height="28" rx="6" fill="#FFFFFF" stroke="#7FA6A8" stroke-width="1.2"/>
+  <text x="792" y="356" text-anchor="middle" class="small">f/g 遍历 + path split</text>
+  <path d="M 792 366 L 792 386" stroke="#2F6E71" stroke-width="1.5" fill="none" marker-end="url(#ah-polar)"/>
+  <rect x="697" y="386" width="190" height="44" rx="6" fill="#FFFFFF" stroke="#7FA6A8" stroke-width="1.2"/>
+  <text x="792" y="404" text-anchor="middle" class="small">sorter + path memory</text>
+  <text x="792" y="422" text-anchor="middle" class="small">partial sum + CRC 选择</text>
+  <rect x="665" y="455" width="220" height="90" rx="8" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.3"/>
+  <text x="685" y="480" class="small" font-weight="bold" fill="#1E4E50">瓶颈</text>
+  <text x="685" y="502" class="small">information bit → 2L 候选</text>
+  <text x="685" y="522" class="small">sorter 排序 + 状态同步复制</text>
+  <text x="685" y="538" class="small">控制时限内难隐藏延迟</text>
 
-  <!-- Polar -->
-  <g filter="url(#soft)">
-    <rect x="60" y="950" width="1380" height="380" rx="16" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
-  </g>
-  <text x="84" y="982" font-size="15" font-weight="700" fill="#23272E">Polar 硬件数据通路：SCL 路径管理与排序</text>
-  <g font-size="12" fill="#23272E">
-    <rect x="84" y="1020" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
-    <text x="179" y="1064" text-anchor="middle" font-weight="700">LLR memory</text>
-    <rect x="290" y="1020" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
-    <text x="385" y="1064" text-anchor="middle" font-weight="700">SC/SCL tree controller</text>
-    <rect x="496" y="1020" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
-    <text x="591" y="1064" text-anchor="middle" font-weight="700">partial sum memory</text>
-    <rect x="702" y="1020" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
-    <text x="797" y="1064" text-anchor="middle" font-weight="700">path memory</text>
-    <rect x="908" y="1020" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
-    <text x="1003" y="1064" text-anchor="middle" font-weight="700">sorter</text>
-    <rect x="1114" y="1020" width="190" height="80" rx="12" fill="#FFFFFF" stroke="#2F6E71" stroke-width="1.5"/>
-    <text x="1209" y="1064" text-anchor="middle" font-weight="700">CRC selector</text>
-  </g>
-  <g stroke="#2F6E71" stroke-width="2" fill="none">
-    <path d="M 274 1060 H 290" marker-end="url(#arrow)"/>
-    <path d="M 480 1060 H 496" marker-end="url(#arrow)"/>
-    <path d="M 686 1060 H 702" marker-end="url(#arrow)"/>
-    <path d="M 892 1060 H 908" marker-end="url(#arrow)"/>
-    <path d="M 1098 1060 H 1114" marker-end="url(#arrow)"/>
-  </g>
-  <rect x="84" y="1140" width="1312" height="60" rx="10" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-  <text x="740" y="1164" font-size="12" text-anchor="middle" fill="#646B76">瓶颈：information bit 分裂产生 2L 候选；sorter、path copy、partial sum 和 CRC state 必须同步重映射，控制延迟敏感。</text>
+  <!-- ============ 底部：统一译码子系统的共享边界 ============ -->
+  <rect x="40" y="585" width="435" height="115" rx="10" fill="#F4F6F8" stroke="#5C6B7C" stroke-width="1.5"/>
+  <text x="60" y="608" class="small" font-weight="bold" fill="#3C4A5C">可共享：外层接口与算术</text>
+  <text x="60" y="630" class="small">DMA / LLR buffer / FIFO / 寄存器 / 中断</text>
+  <text x="60" y="652" class="small">CRC wrapper / 饱和加法 / 比较器</text>
+  <text x="60" y="674" class="small">SRAM allocator / bank 监控 / trace</text>
 
-  <!-- ============ 统一译码子系统：可共享与不宜共享 ============ -->
-  <g filter="url(#soft)">
-    <rect x="60" y="1370" width="1380" height="420" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
-  </g>
-  <text x="90" y="1402" font-size="16" font-weight="700" fill="#23272E">统一译码子系统：可共享与不宜共享</text>
-
-  <g font-size="12" fill="#23272E">
-    <rect x="75" y="1428" width="280" height="50" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="215" y="1458" text-anchor="middle" font-weight="700">类别</text>
-    <rect x="355" y="1428" width="520" height="50" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="615" y="1458" text-anchor="middle" font-weight="700">可以共享</text>
-    <rect x="875" y="1428" width="520" height="50" fill="#F8E9E7" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1135" y="1458" text-anchor="middle" font-weight="700">不宜共享</text>
-
-    <rect x="75" y="1478" width="280" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="215" y="1516" text-anchor="middle" font-weight="700">输入输出</text>
-    <rect x="355" y="1478" width="520" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="615" y="1512" text-anchor="middle">DMA、输入 LLR buffer、输出 hard bits FIFO、状态/中断寄存器</text>
-    <rect x="875" y="1478" width="520" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1135" y="1512" text-anchor="middle">codec-specific decoder input layout</text>
-
-    <rect x="75" y="1554" width="280" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="215" y="1592" text-anchor="middle" font-weight="700">控制</text>
-    <rect x="355" y="1554" width="520" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="615" y="1588" text-anchor="middle">descriptor FIFO、配置寄存器、CRC checker wrapper</text>
-    <rect x="875" y="1554" width="520" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1135" y="1588" text-anchor="middle">Turbo iteration、LDPC layer、Polar path schedule</text>
-
-    <rect x="75" y="1630" width="280" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="215" y="1668" text-anchor="middle" font-weight="700">计算</text>
-    <rect x="355" y="1630" width="520" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="615" y="1664" text-anchor="middle">饱和加法、比较器、CRC 多项式单元的封装</text>
-    <rect x="875" y="1630" width="520" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1135" y="1664" text-anchor="middle">Turbo SISO、LDPC CN/VN、Polar sorter/path memory</text>
-
-    <rect x="75" y="1706" width="280" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="215" y="1744" text-anchor="middle" font-weight="700">存储</text>
-    <rect x="355" y="1706" width="520" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="615" y="1740" text-anchor="middle">顶层 SRAM allocator、bank 监控、trace buffer</text>
-    <rect x="875" y="1706" width="520" height="76" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1135" y="1740" text-anchor="middle">interleaver RAM、message memory、path copy memory</text>
-  </g>
-
-  <!-- ============ 工程决策矩阵 ============ -->
-  <g filter="url(#soft)">
-    <rect x="60" y="1830" width="1380" height="440" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
-  </g>
-  <text x="90" y="1862" font-size="16" font-weight="700" fill="#23272E">工程决策矩阵</text>
-
-  <g font-size="12" fill="#23272E">
-    <rect x="75" y="1888" width="200" height="42" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="175" y="1914" text-anchor="middle" font-weight="700">维度</text>
-    <rect x="275" y="1888" width="380" height="42" fill="#F8EEDC" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="465" y="1914" text-anchor="middle" font-weight="700">Turbo</text>
-    <rect x="655" y="1888" width="380" height="42" fill="#EFF1E2" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="845" y="1914" text-anchor="middle" font-weight="700">LDPC</text>
-    <rect x="1035" y="1888" width="380" height="42" fill="#E6F0F0" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1225" y="1914" text-anchor="middle" font-weight="700">Polar SCL</text>
-
-    <rect x="75" y="1930" width="200" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="175" y="1962" text-anchor="middle" font-weight="700">并行度</text>
-    <rect x="275" y="1930" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="465" y="1962" text-anchor="middle">受 trellis 顺序依赖限制</text>
-    <rect x="655" y="1930" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="845" y="1962" text-anchor="middle">layer/edge/local index 并行友好</text>
-    <rect x="1035" y="1930" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1225" y="1962" text-anchor="middle">路径并行受 sorter 限制</text>
-
-    <rect x="75" y="1992" width="200" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="175" y="2024" text-anchor="middle" font-weight="700">延迟</text>
-    <rect x="275" y="1992" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="465" y="2024" text-anchor="middle">迭代次数放大最坏延迟</text>
-    <rect x="655" y="1992" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="845" y="2024" text-anchor="middle">高吞吐但轮数和 stall 影响尾延迟</text>
-    <rect x="1035" y="1992" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1225" y="2024" text-anchor="middle">短块低延迟，排序关键路径敏感</text>
-
-    <rect x="75" y="2054" width="200" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="175" y="2086" text-anchor="middle" font-weight="700">吞吐</text>
-    <rect x="275" y="2054" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="465" y="2086" text-anchor="middle">多 SISO 或多 CB 并行提升</text>
-    <rect x="655" y="2054" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="845" y="2086" text-anchor="middle">最适合宽并行数据业务</text>
-    <rect x="1035" y="2054" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1225" y="2086" text-anchor="middle">控制块吞吐够用，非长块主力</text>
-
-    <rect x="75" y="2116" width="200" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="175" y="2148" text-anchor="middle" font-weight="700">面积/功耗</text>
-    <rect x="275" y="2116" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="465" y="2148" text-anchor="middle">SISO 和外信息 RAM 主导</text>
-    <rect x="655" y="2116" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="845" y="2148" text-anchor="middle">CN/VN 阵列和 message RAM 主导</text>
-    <rect x="1035" y="2116" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1225" y="2148" text-anchor="middle">path memory、sorter、copy network 主导</text>
-
-    <rect x="75" y="2178" width="200" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="175" y="2210" text-anchor="middle" font-weight="700">验证难度</text>
-    <rect x="275" y="2178" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="465" y="2210" text-anchor="middle">外信息/交织/迭代早停</text>
-    <rect x="655" y="2178" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="845" y="2210" text-anchor="middle">bank conflict、message RMW、syndrome/CRC</text>
-    <rect x="1035" y="2178" width="380" height="62" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
-    <text x="1225" y="2210" text-anchor="middle">PM 排序、路径复制、CRC selector</text>
-  </g>
-
-  <!-- ============ 底部三卡 ============ -->
-  <g filter="url(#soft)">
-    <rect x="70" y="2300" width="420" height="260" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-    <rect x="510" y="2300" width="420" height="260" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-    <rect x="950" y="2300" width="420" height="260" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-  </g>
-  <g font-size="12" fill="#23272E">
-    <text x="280" y="2334" text-anchor="middle" font-size="14" font-weight="700">周期估算</text>
-    <text x="100" y="2378">吞吐约等于 block_bits / cycles；</text>
-    <text x="100" y="2402">Turbo cycles 随 2*SISO*iteration 增长，</text>
-    <text x="100" y="2426">LDPC cycles 随 layers*iterations+stall 增长，</text>
-    <text x="100" y="2450">Polar cycles 受 tree steps 和 sorter stages 影响。</text>
-    <text x="720" y="2334" text-anchor="middle" font-size="14" font-weight="700">验证重点</text>
-    <text x="540" y="2378">不要只比计算单元：必须同时 dump</text>
-    <text x="540" y="2402">地址、bank、message/path 状态、</text>
-    <text x="540" y="2426">CRC/syndrome/PM、flush/reset 和</text>
-    <text x="540" y="2450">backpressure。</text>
-    <text x="1160" y="2334" text-anchor="middle" font-size="14" font-weight="700">设计结论</text>
-    <text x="980" y="2378">LDPC 高吞吐友好来自稀疏图和 QC 规律；</text>
-    <text x="980" y="2402">Polar SCL 延迟敏感来自 2L 候选排序</text>
-    <text x="980" y="2426">和路径状态同步。</text>
-  </g>
+  <rect x="485" y="585" width="435" height="115" rx="10" fill="#FBF1EF" stroke="#A6403C" stroke-width="1.5"/>
+  <text x="505" y="608" class="small" font-weight="bold" fill="#8A2F2B">不宜共享：算法核心与状态存储</text>
+  <text x="505" y="630" class="small">Turbo SISO / interleaver / extrinsic</text>
+  <text x="505" y="652" class="small">LDPC message memory / CN-VN</text>
+  <text x="505" y="674" class="small">Polar sorter / path / partial sum</text>
 </svg>

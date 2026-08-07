@@ -35,29 +35,29 @@
 
   <g font-size="12.5" fill="#23272E">
     <rect x="80" y="196" width="256" height="122" rx="12" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
-    <circle cx="104" cy="222" r="13" fill="#8E3B5E"/>
-    <text x="104" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+    <circle cx="106" cy="222" r="13" fill="#8E3B5E"/>
+    <text x="106" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
     <text x="220" y="230" font-size="13.5" font-weight="700" text-anchor="middle">Demapper LLR</text>
     <text x="98" y="266" fill="#646B76">顺序软信息 rx_llr[0:E-1]</text>
     <rect x="352" y="196" width="256" height="122" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
-    <circle cx="376" cy="222" r="13" fill="#2F6E71"/>
-    <text x="376" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+    <circle cx="378" cy="222" r="13" fill="#2F6E71"/>
+    <text x="378" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
     <text x="492" y="230" font-size="13.5" font-weight="700" text-anchor="middle">Bit deinterleaver</text>
     <text x="370" y="266" fill="#646B76">按 Qm 反交织，恢复 bit 顺序</text>
     <rect x="624" y="196" width="256" height="122" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
-    <circle cx="648" cy="222" r="13" fill="#6C7A2E"/>
-    <text x="648" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+    <circle cx="650" cy="222" r="13" fill="#6C7A2E"/>
+    <text x="650" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
     <text x="764" y="230" font-size="13.5" font-weight="700" text-anchor="middle">Circular restore</text>
     <text x="642" y="266" fill="#646B76">按 RV 起点扫描 Ncb，</text>
     <text x="642" y="288" fill="#646B76">跳过空位，写回母码位置</text>
     <rect x="896" y="196" width="256" height="122" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-    <circle cx="920" cy="222" r="13" fill="#B06F2B"/>
-    <text x="920" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+    <circle cx="922" cy="222" r="13" fill="#B06F2B"/>
+    <text x="922" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
     <text x="1036" y="230" font-size="13.5" font-weight="700" text-anchor="middle">Soft combine</text>
     <text x="914" y="266" fill="#646B76">重复位 LLR 累加，未发送位保持未知</text>
     <rect x="1168" y="196" width="256" height="122" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
-    <circle cx="1192" cy="222" r="13" fill="#A6403C"/>
-    <text x="1192" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">5</text>
+    <circle cx="1194" cy="222" r="13" fill="#A6403C"/>
+    <text x="1194" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">5</text>
     <text x="1308" y="230" font-size="13.5" font-weight="700" text-anchor="middle">LDPC core</text>
     <text x="1186" y="266" fill="#646B76">输出 ldpc_llr[0:N-1] 给 BG/Zc/H</text>
   </g>

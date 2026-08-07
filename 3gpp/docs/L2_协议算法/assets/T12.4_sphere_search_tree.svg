@@ -25,8 +25,8 @@
 <circle cx="136" cy="177" r="13" fill="#ffffff" stroke="#334155" stroke-width="2"/>
 <rect x="109" y="192" width="54" height="14" rx="3" ry="3" fill="#ffffff"/>
 <text x="136" y="204" text-anchor="middle" font-size="10" fill="#334155" class="lat">s1=+1+j</text>
-<rect x="113" y="214" width="46" height="14" rx="3" ry="3" fill="#ffffff"/>
-<text x="136" y="226" text-anchor="middle" font-size="10" fill="#334155" class="lat">d1=1.63</text>
+<rect x="113" y="214" width="50" height="14" rx="3" ry="3" fill="#ffffff"/>
+<text x="137" y="226" text-anchor="middle" font-size="10" fill="#334155" class="lat">d1=1.63</text>
 
 <!-- 节点 B：s1=+1−j，d1=3.26，被剪枝（灰显虚线） -->
 <line x1="344" y1="190" x2="266" y2="309" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5 4"/>
@@ -36,8 +36,8 @@
 <circle cx="344" cy="177" r="13" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 4"/>
 <rect x="321" y="192" width="46" height="14" rx="3" ry="3" fill="#ffffff"/>
 <text x="344" y="204" text-anchor="middle" font-size="10" fill="#9ca3af" class="lat">s1=+1−j</text>
-<rect x="321" y="214" width="46" height="14" rx="3" ry="3" fill="#ffffff"/>
-<text x="344" y="226" text-anchor="middle" font-size="10" fill="#9ca3af" class="lat">d1=3.26</text>
+<rect x="321" y="214" width="50" height="14" rx="3" ry="3" fill="#ffffff"/>
+<text x="345" y="226" text-anchor="middle" font-size="10" fill="#9ca3af" class="lat">d1=3.26</text>
 <rect x="277" y="236.5" width="134" height="14" rx="3" ry="3" fill="#ffffff"/>
 <text x="344" y="248" text-anchor="middle" font-size="10" fill="#6b7280" class="lat">pruned: d1&gt;r²=1.8</text>
 
@@ -49,8 +49,8 @@
 <circle cx="552" cy="177" r="13" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
 <rect x="525" y="192" width="54" height="14" rx="3" ry="3" fill="#ffffff"/>
 <text x="552" y="204" text-anchor="middle" font-size="10" fill="#16a34a" class="lat">s1=−1+j</text>
-<rect x="526" y="214" width="52" height="14" rx="3" ry="3" fill="#ffffff"/>
-<text x="552" y="226" text-anchor="middle" font-size="10" fill="#16a34a" class="lat">d1=0.014</text>
+<rect x="526" y="214" width="56" height="14" rx="3" ry="3" fill="#ffffff"/>
+<text x="553" y="226" text-anchor="middle" font-size="10" fill="#16a34a" class="lat">d1=0.014</text>
 
 <!-- 节点 D：s1=−1−j，d1=1.64 -->
 <line x1="760" y1="190" x2="682" y2="309" stroke="#cbd5e1" stroke-width="1.5"/>
@@ -60,8 +60,8 @@
 <circle cx="760" cy="177" r="13" fill="#ffffff" stroke="#334155" stroke-width="2"/>
 <rect x="733" y="192" width="54" height="14" rx="3" ry="3" fill="#ffffff"/>
 <text x="760" y="204" text-anchor="middle" font-size="10" fill="#334155" class="lat">s1=−1−j</text>
-<rect x="737" y="214" width="46" height="14" rx="3" ry="3" fill="#ffffff"/>
-<text x="760" y="226" text-anchor="middle" font-size="10" fill="#334155" class="lat">d1=1.64</text>
+<rect x="737" y="214" width="50" height="14" rx="3" ry="3" fill="#ffffff"/>
+<text x="761" y="226" text-anchor="middle" font-size="10" fill="#334155" class="lat">d1=1.64</text>
 
 <!-- 第二层：s0 叶子（16 个） -->
 <!-- 子树 A（s1=+1+j）：累积距离 4.32 / 2.38 / 3.95 / 2.02 -->
@@ -122,9 +122,9 @@
 
 <!-- 底部说明框 -->
 <rect x="24" y="378" width="852" height="132" rx="6" ry="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-<text x="42" y="398" font-size="11" fill="#334155" class="cjk">① 树结构：根（y）→ 第一层 4 个 s1 候选（标注部分距离 d1）→ 第二层 16 个 s0 叶子（标注累积距离 d1+d2）</text>
-<text x="42" y="420" font-size="11" fill="#334155" class="cjk">② 剪枝：d1=3.26 &gt; r²=1.8 → s1=+1−j 的整棵子树（4 个叶子）灰显跳过，不再访问其 s0 候选</text>
-<text x="42" y="442" font-size="11" fill="#334155" class="cjk">③ 最优路径（绿色加粗）：s1=−1+j → s0=+1−j，累积距离 d1+d2=0.028；半径 r 由初始 1.8 收缩至 0.028</text>
-<text x="42" y="464" font-size="11" fill="#334155" class="cjk">④ 数值实例：2×2 实信道 H=[[1,0.4],[0.3,1]]，噪声 σ²≈0.014；QPSK 符号按单位能量归一化（除以 √2）</text>
-<text x="42" y="486" font-size="11" fill="#334155" class="cjk">⑤ 图例：绿色加粗线=最优路径（ML 解）｜灰色虚线=因 d1&gt;r² 被整体剪枝的子树｜白色节点=被访问但累积距离超半径而终止</text>
+<text x="42" y="398" font-size="11" fill="#334155" class="cjk">(1) 树结构：根（y）→ 第一层 4 个 s1 候选（标注部分距离 d1）→ 第二层 16 个 s0 叶子（标注累积距离 d1+d2）</text>
+<text x="42" y="420" font-size="11" fill="#334155" class="cjk">(2) 剪枝：d1=3.26 &gt; r²=1.8 → s1=+1−j 的整棵子树（4 个叶子）灰显跳过，不再访问其 s0 候选</text>
+<text x="42" y="442" font-size="11" fill="#334155" class="cjk">(3) 最优路径（绿色加粗）：s1=−1+j → s0=+1−j，累积距离 d1+d2=0.028；半径 r 由初始 1.8 收缩至 0.028</text>
+<text x="42" y="464" font-size="11" fill="#334155" class="cjk">(4) 数值实例：2×2 实信道 H=[[1,0.4],[0.3,1]]，噪声 σ²≈0.014；QPSK 符号按单位能量归一化（除以 √2）</text>
+<text x="42" y="486" font-size="11" fill="#334155" class="cjk">(5) 图例：绿色加粗线=最优路径（ML 解）｜灰色虚线=因 d1&gt;r² 被整体剪枝的子树｜白色节点=被访问但累积距离超半径而终止</text>
 </svg>

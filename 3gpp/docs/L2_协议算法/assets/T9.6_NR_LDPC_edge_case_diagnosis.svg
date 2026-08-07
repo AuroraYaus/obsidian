@@ -35,8 +35,8 @@
 
   <g font-size="12.5" fill="#23272E">
     <rect x="80" y="196" width="300" height="190" rx="12" fill="#F8E9E7" stroke="#A6403C" stroke-width="1.5"/>
-    <circle cx="104" cy="222" r="13" fill="#A6403C"/>
-    <text x="104" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
+    <circle cx="106" cy="222" r="13" fill="#A6403C"/>
+    <text x="106" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">1</text>
     <text x="230" y="228" font-size="13.5" font-weight="700">Descriptor</text>
     <circle cx="108" cy="266" r="4" fill="#A6403C"/>
     <text x="122" y="271">BG, Zc, K/Kb, C</text>
@@ -46,8 +46,8 @@
     <text x="122" y="327">CBG mask, NDI, HARQ id</text>
 
     <rect x="410" y="196" width="300" height="190" rx="12" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
-    <circle cx="434" cy="222" r="13" fill="#2F6E71"/>
-    <text x="434" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
+    <circle cx="436" cy="222" r="13" fill="#2F6E71"/>
+    <text x="436" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">2</text>
     <text x="560" y="228" font-size="13.5" font-weight="700">Rate recovery</text>
     <circle cx="438" cy="266" r="4" fill="#2F6E71"/>
     <text x="452" y="271">bit deinterleaving</text>
@@ -57,8 +57,8 @@
     <text x="452" y="327">unknown / shortened / repeat</text>
 
     <rect x="740" y="196" width="300" height="190" rx="12" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
-    <circle cx="764" cy="222" r="13" fill="#6C7A2E"/>
-    <text x="764" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
+    <circle cx="766" cy="222" r="13" fill="#6C7A2E"/>
+    <text x="766" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">3</text>
     <text x="890" y="228" font-size="13.5" font-weight="700">LDPC core</text>
     <circle cx="768" cy="266" r="4" fill="#6C7A2E"/>
     <text x="782" y="271">layer/edge schedule</text>
@@ -68,8 +68,8 @@
     <text x="782" y="327">syndrome curve</text>
 
     <rect x="1070" y="196" width="300" height="190" rx="12" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
-    <circle cx="1094" cy="222" r="13" fill="#B06F2B"/>
-    <text x="1094" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
+    <circle cx="1096" cy="222" r="13" fill="#B06F2B"/>
+    <text x="1096" y="227" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">4</text>
     <text x="1220" y="228" font-size="13.5" font-weight="700">CRC/reassembly</text>
     <circle cx="1098" cy="266" r="4" fill="#B06F2B"/>
     <text x="1112" y="271">filler and CB CRC strip</text>
@@ -131,7 +131,11 @@
     <rect x="60" y="1060" width="1380" height="290" rx="14" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
   </g>
   <text x="90" y="1092" font-size="16" font-weight="700" fill="#23272E">排查原则：不要优先怀疑 LDPC core</text>
-  <text x="90" y="1126" font-size="12.5" fill="#646B76">先确认 descriptor、rate recovery 和重组边界。如果 BG/Zc/RV/CBG/filler/order 错，LDPC core 即使完全正确也会输出失败。只有在输入边界和地址轨迹被固定 pattern 证明正确后，再排查 Min-Sum、layer schedule、定点饱和和 syndrome checker。</text>
+  <text x="90" y="1126" font-size="12.5" fill="#646B76">
+    <tspan x="90" y="1115">先确认 descriptor、rate recovery 和重组边界。</tspan>
+    <tspan x="90" y="1133">如果 BG/Zc/RV/CBG/filler/order 错，LDPC core 即使完全正确也会输出失败。</tspan>
+    <tspan x="90" y="1151">只有在输入边界和地址轨迹被固定 pattern 证明正确后，再排查 Min-Sum、layer schedule、定点饱和和 syndrome checker。</tspan>
+  </text>
 
   <g font-size="12.5" fill="#23272E">
     <rect x="80" y="1176" width="205" height="40" rx="7" fill="#FFFFFF" stroke="#CFC8B8" stroke-width="1"/>
