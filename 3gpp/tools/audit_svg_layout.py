@@ -40,6 +40,26 @@ FONT_REG = "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"
 FONT_BOLD = "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"
 FONT_INDEX = 2  # Noto Sans CJK SC 在 ttc 中的索引（0=JP,1=KR,2=SC,3=HK,4=TC）
 
+def _resolve_font_path() -> str:
+    """@brief 解析 Noto Sans CJK 字体路径（换机器时用 fc-match 兜底）。
+    @note 2026-08-07 L4 修复：硬编码路径在无 Noto 的机器上导致整工具崩溃；
+          先查标准路径，缺失时尝试 fc-match 定位，仍缺失返回空串（调用方优雅报错）。"""
+    import shutil
+    from pathlib import Path
+    for cand in (Path(FONT_REG), Path("/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc")):
+        if cand.exists():
+            return str(cand)
+    if shutil.which("fc-match"):
+        try:
+            out = __import__("subprocess").run(
+                ["fc-match", "-f", "%{file}", "Noto Sans CJK SC"],
+                capture_output=True, text=True, timeout=5).stdout.strip()
+            if out and Path(out).exists():
+                return out
+        except Exception:
+            pass
+    return ""
+
 _cache: dict[tuple[bool, int], ImageFont.FreeTypeFont] = {}
 
 
@@ -50,7 +70,10 @@ def _font(bold: bool, size: float) -> ImageFont.FreeTypeFont:
     @return PIL 字体对象"""
     key = (bold, int(size))
     if key not in _cache:
-        _cache[key] = ImageFont.truetype(FONT_BOLD if bold else FONT_REG, int(size), index=FONT_INDEX)
+        path = _resolve_font_path()
+        if not path:
+            raise OSError("FONT_MISSING: Noto Sans CJK 字体未找到（audit_svg_layout.py 依赖中文字体度量）")
+        _cache[key] = ImageFont.truetype(FONT_BOLD if bold else path, int(size), index=FONT_INDEX)
     return _cache[key]
 
 
