@@ -306,6 +306,7 @@ def main(argv: list[str] | None = None) -> int:
     @param   argv  命令行参数列表（sys.argv）。
     @usage   python audit_figure_text_fit_static.py [paths...]
     @args    paths  待审计的 .py 文件或目录路径，默认为 tools/figures。
+    @env     无外部依赖（仅标准库）
     @exit_code  0 = 无阻断性发现（可能仍有建议性发现），1 = 存在阻断性发现
                 （静默截断、语法错误、长文本、固定高度、字符换行、无守卫换行）。
     @note    发现分为阻断性 (blocking) 和建议性 (advisory) 两类。

@@ -98,6 +98,7 @@ def main() -> int:
     """@brief    脚本入口：审计讲义的 Markdown 标题是否满足正式工程写作规范。
     @usage    python audit_markdown_headings.py <path> [<path> ...]
     @args     paths  一个或多个 Markdown 文件或目录路径。
+    @env      无外部依赖（仅标准库）
     @exit_code        0 = 所有标题合规；1 = 发现口语化标题或格式违规。
     @note    排除 `.git`、`3GPP_Rel19`、`docs/archive` 等非讲义路径。"""
     parser = argparse.ArgumentParser()

@@ -104,6 +104,7 @@ def main() -> int:
     """@brief    脚本入口：扫描指定路径下的 Markdown 文件，执行术语首现规则审计。
     @usage    python audit_lesson_terms.py <path> [<path> ...]
     @args     paths  一个或多个 Markdown 文件或目录路径。
+    @env      无外部依赖（仅标准库）
     @exit_code       0 = 所有文件通过审计；1 = 发现违规或术语表缺失。
     @note    审计失败时将输出详细错误行号和违规内容，便于定位修复点。"""
     parser = argparse.ArgumentParser()

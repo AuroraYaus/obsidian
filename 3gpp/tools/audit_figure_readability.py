@@ -140,6 +140,7 @@ def main() -> int:
     @brief   图可读性审计入口——检测渲染脚本中字体大小和表格行高的可读性风险。
     @usage   python audit_figure_readability.py [paths...]
     @args    paths  待审计的 .py 文件或目录路径，默认为 tools/figures。
+    @env     无外部依赖（仅标准库）
     @exit_code  0 = 无发现或仅有建议，1 = 存在可读性风险。
     @note    输出包含格式化发现列表和聚合状态行。
              表格检测仅在脚本包含 TABLE_HINT_RE 标记时才激活，

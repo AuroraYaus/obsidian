@@ -16,4 +16,4 @@
 4. **文字右缘余量 ≥ 10px**、两行行距 ≥ 16px、图注与图形间距 ≥ 8px
 5. **交付前检查**：审计 ALL_PASS + 渲染 + （可用时）像素级质心/对称性验证；工具盲区未覆盖的维度（居中、密度）必须手工坐标核算
 
-相关：[[svg-audit-blind-spots]]、[[svg-css-class-font-metric-lessons]]、[[error-fix-must-solidify]]
+相关：[[lesson-svg-audit-blind-spots]]、[[lesson-svg-css-class-font-metric-lessons]]、[[lesson-error-fix-must-solidify]]

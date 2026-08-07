@@ -19,7 +19,7 @@
 ├── tests/                   # 单元测试
 ├── 3GPP_Rel19/              # 协议原始资料与结构化抽取
 ├── CLAUDE.md                # 会话硬性规则（SKILL 优先/DOXYGEN/SVG 验证/合规基线）
-├── 合规与遵从.md            # 22 条 Hard Constraints
+├── 合规与遵从.md            # 23 条 Hard Constraints
 ├── 项目规则与记忆索引.md     # 规则/写作规范/同步清单一处总览
 └── 3GPP_讲义入口.md          # 讲义总入口
 ```
@@ -46,8 +46,8 @@
 
 ## 质量体系
 
-- **合规基线**：`合规与遵从.md` 22 条 Hard Constraints（英文术语首现中英配对、标题口语化禁止、LaTeX 可渲染、零基础保护等）
-- **SVG 图强制验证**：`tools/audit_svg_layout.py` R1-R7（文字宿主/越界/重叠/箭头落点/**边界间距 ≥8px**/**部分重叠禁止**），Y 扫描 + 渲染预览
+- **合规基线**：`合规与遵从.md` 23 条 Hard Constraints（英文术语首现中英配对、标题口语化禁止、LaTeX 可渲染、零基础保护、SVG T2.1 基准等）
+- **SVG 图强制验证**：`tools/audit_svg_layout.py` R1-R11（文字宿主/越界/重叠/箭头落点/边界间距/free 文字重叠/箭头三角/曲线贴字/circle 贴边等），Y 扫描 + 渲染预览
 - **讲义审计**：`tools/audit_lesson_*.py`（术语配对/LaTeX 渲染/深度/标题）
 - **代码注释**：所有 Python/Shell 必须 DOXYGEN 风格（细则见 `.claude/rules/documentation.md`）
 - **写作规范**：讲义正文不含代码中间运行结果；概念首现必须讲解；新术语必须登记术语总表（同步清单见 `项目规则与记忆索引.md` 第六节）

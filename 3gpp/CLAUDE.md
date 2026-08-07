@@ -41,7 +41,7 @@ source_spec: "Local project instructions"
 ### 2. 项目背景
 
 本项目是 3GPP LTE/NR 译码链路的全栈教学工程，包含：
-- `docs/` — 94 篇讲义（L1 基础 → L2 协议/算法 → L3 工程）
+- `docs/` — 128 篇讲义（L1 基础 42 → L2 协议/算法 57 → L3 工程 29）
 - `sim/` — Python 仿真（CRC/GF(2) 等）
 - `tools/` — 审计/抽取/渲染工具链
 - `3GPP_Rel19/` — 协议原始资料和结构化抽取
@@ -122,7 +122,7 @@ source_spec: "Local project instructions"
 
 ### 11. 合规基线
 
-所有讲义和代码必须遵守 `合规与遵从.md` 中的 22 条 Hard Constraints。关键规则：
+所有讲义和代码必须遵守 `合规与遵从.md` 中的 23 条 Hard Constraints（含 Rule 23 SVG T2.1 基准）。关键规则：
 - 标题口语化禁止（Rule 16）
 - 英文术语不能裸奔，首现必须"中文（English）"（Rule 10）
 - 3GPP/LTE/NR 不机械重复全称（Rule 15）

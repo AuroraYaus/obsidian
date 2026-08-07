@@ -16,4 +16,4 @@
 
 **工具状态**：audit_svg_layout.py 现支持 CSS class 解析（含 px 单位）、+8% 宽度安全系数；R1-R9 规则见文件头。
 
-相关：[[svg-audit-blind-spots]]（同类"工具盲区未识别就采信 PASS"教训）
+相关：[[lesson-svg-audit-blind-spots]]（同类"工具盲区未识别就采信 PASS"教训）

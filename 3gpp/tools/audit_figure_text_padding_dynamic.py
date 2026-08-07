@@ -315,9 +315,10 @@ def main(argv: list[str] | None = None) -> int:
              --include-containers 同时检查大型容器框的 padding（默认仅检查标签框）。
              --min-tag-pad-x      水平方向最小要求 padding（像素），默认 8.0。
              --min-tag-pad-y      垂直方向最小要求 padding（像素），默认 4.0。
+    @env     需要 PIL/Pillow；被审计的渲染脚本需在其自身环境可执行。
     @exit_code  0 = 无 padding 不足发现，1 = 存在 padding 不足。
     @note    本脚本会实际执行渲染脚本，但 Image.save() 被 patch 为 no-op，
-             不会产生输出文件。需要 PIL/Pillow 已安装。
+             不会产生输出文件。
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", type=Path, default=DEFAULT_PATHS)

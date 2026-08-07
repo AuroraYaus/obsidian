@@ -47,9 +47,9 @@ class Finding:
 
 def iter_image_files(paths: list[Path]) -> list[Path]:
     """
-    @brief   从路径列表中收集所有 PNG 图像文件。
-             遍历目录下的 .png 文件（也支持 .jpg/.jpeg），
-             过滤掉非图像文件以专注于已渲染产物的审计。
+    @brief   从路径列表中收集图像文件。
+             目录扫描只收集 *.png（本项目渲染产物统一为 PNG）；
+             直接传入的单个文件支持 .png/.jpg/.jpeg。
     @param   paths  路径列表，可混合目录和文件。
     @return  去重排序后的图像文件路径列表。
     """
@@ -136,8 +136,9 @@ def main(argv: list[str] | None = None) -> int:
                                  默认为 docs/L1_基础/assets docs/L2_协议算法/assets docs/L3_工程实现/assets。
              --max-bottom-pixels  允许的最大底部空白像素数，默认 160。
              --max-bottom-ratio   允许的最大底部空白比例（0.0-1.0），默认 0.10。
+    @env     需要 PIL/Pillow。
     @exit_code  0 = 无发现，1 = 存在底部空白过量的图像。
-    @note    需要 Pillow 库已安装。空白检测基于左上角像素颜色作为背景色，
+    @note    空白检测基于左上角像素颜色作为背景色，
              适用于本项目纯色背景的教学图。
     """
     parser = argparse.ArgumentParser()

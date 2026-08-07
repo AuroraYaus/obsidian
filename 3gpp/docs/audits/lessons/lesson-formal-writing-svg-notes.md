@@ -9,4 +9,4 @@
 2. 禁止口语化/对话式表达："画…出的""…不出的"、语气词、口头禅（与 Rule 16 标题正式化同源的正文要求）
 3. 子代理任务书必须包含此要求（2026-08-04 T11.2-11.5 重绘代理已同步）
 
-相关：[[lecture-writing-no-intermediate-results]]（正文书面严谨同系列）
+相关：[[lesson-lecture-writing-no-intermediate-results]]（正文书面严谨同系列）

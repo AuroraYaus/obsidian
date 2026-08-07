@@ -40,9 +40,9 @@ for f in glob.glob(os.path.join(root, "**", "*.md"), recursive=True):
     for i, m in enumerate(re.finditer(r'```mermaid\n(.*?)```', t, re.S), 1):
         with open(os.path.join(tmp, f"b_{len(lst)}.mmd"), "w", encoding="utf-8") as fh:
             fh.write(m.group(1))
-        lst.append(f"{f}\t{len(lst)-1}")
+        lst.append(f"{f}\t{len(lst)}")
 with open(os.path.join(tmp, "list.txt"), "w") as fh:
-    fh.write("\n".join(lst))
+    fh.write("\n".join(lst) + "\n")
 print(f"提取 {len(lst)} 个 mermaid 块")
 PYEOF
 if [ ! -s "$TMP/list.txt" ]; then
@@ -55,7 +55,7 @@ while IFS=$'\t' read -r file bidx; do
     total=$((total+1))
     if ! timeout 40 mmdc -p "$PPTR" -i "$TMP/b_$bidx.mmd" -o "$TMP/out_$bidx.svg" >/dev/null 2>"$TMP/err.txt"; then
         fail=$((fail+1))
-        echo "FAIL $file 块$((bidx+1)): $(grep -iE 'error|parse' "$TMP/err.txt" | head -1 | cut -c1-180)"
+        echo "FAIL $file 块$((bidx+1)): $(head -c 180 "$TMP/err.txt" | tr "\n" " ")"
     fi
 done < "$TMP/list.txt"
 echo "共 $total 块, 失败 $fail"

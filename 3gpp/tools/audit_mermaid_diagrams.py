@@ -274,6 +274,8 @@ def main(argv: list[str] | None = None) -> int:
     @usage    python audit_mermaid_diagrams.py [paths...] [--no-render]
     @args     paths       可选的文件或目录路径（默认扫描 docs/ 和 roadmap）。
     @args     --no-render  跳过 mmdc 渲染，仅执行静态规则检查。
+    @env      渲染验证需要 mmdc（@mermaid-js/mermaid-cli）与 puppeteer
+              Chromium（headless shell）；缺失时降级为静态检查并告警。
     @exit_code             0 = 全部通过；1 = 发现问题。"""
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", type=Path, default=DEFAULT_PATHS)

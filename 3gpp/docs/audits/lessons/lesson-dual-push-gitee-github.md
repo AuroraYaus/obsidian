@@ -16,4 +16,4 @@
 2. 新建仓库/换机器时：配置 origin 双 pushurl + ssh config（github.com → ssh.github.com:443）+ 公钥
 3. 全量首次同步走 GitHub Import，不要本地直推大仓库
 
-相关：[[error-fix-must-solidify]]
+相关：[[lesson-error-fix-must-solidify]]

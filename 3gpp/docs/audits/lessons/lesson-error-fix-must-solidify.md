@@ -18,4 +18,4 @@
 
 **检查清单**：每次用户指出错误后，回复中必须包含"已固化"部分（指向规则/记忆/工具的具体条目）；发现遗漏固化要主动补齐。
 
-相关：[[svg-audit-blind-spots]]、[[circled-digits-forbidden]]、[[mermaid-parse-error-lessons]]
+相关：[[lesson-svg-audit-blind-spots]]、[[lesson-circled-digits-forbidden]]、[[lesson-mermaid-parse-error-lessons]]

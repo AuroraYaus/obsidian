@@ -12,4 +12,4 @@
 3. **编号唯一性确认**：跨目录同编号（如 T12.x 在 L2 和 L3 都出现过）要先列清单，避免误判"资产无对应讲义"
 4. 重命名只改编号前缀，保留语义名；SVG @file 头同步
 
-相关：[[error-fix-must-solidify]]、[[svg-audit-blind-spots]]（同类"修一类问题必须全库同类扫描"教训）
+相关：[[lesson-error-fix-must-solidify]]、[[lesson-svg-audit-blind-spots]]（同类"修一类问题必须全库同类扫描"教训）

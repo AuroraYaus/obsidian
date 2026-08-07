@@ -131,9 +131,10 @@ def main() -> int:
     @args    paths         必选，待审计的 Markdown 文件或目录路径。
              --katex-bin   KaTeX CLI 二进制路径，默认为 "katex"。
              --syntax-only 跳过 KaTeX 渲染验证，仅检查定界符/标签/提取。
+    @env     渲染验证需要 katex CLI 可执行文件（默认在 PATH 中，
+             可用 --katex-bin 指定路径）；--syntax-only 模式无需 katex。
     @exit_code  0 = 无错误，1 = 存在定界符不平衡、标签不连续或渲染失败。
-    @note    需要 katex CLI 二进制文件已安装在 PATH 中。
-             --syntax-only 模式可用于快速 CI 预检（不需要完整 LaTeX 环境）。
+    @note    --syntax-only 模式可用于快速 CI 预检（不需要完整 LaTeX 环境）。
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="+", type=Path)

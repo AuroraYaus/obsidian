@@ -20,34 +20,6 @@ from pathlib import Path
 
 DEFAULT_PATHS = [Path("tools/figures")]
 
-HISTORICAL_FOCUS = {
-    # T6.3/T7.5/T8.1/T8.2/T8.3/T8.4 的 PIL 渲染脚本已删除：图已改为手绘 SVG
-    # docs/L2_协议算法/assets/T6.3_TS36.212_Figure_5.1.3-2_turbo_encoder_rebuild.svg 等
-    # render_t12_1_golden_model_layout.py 已删除：图已改为手绘 SVG
-    # docs/L3_工程实现/assets/T12.1_golden_model_project_layout.svg
-}
-
-GEOMETRY_HELPERS = (
-    "boundary_point",
-    "connect_arrow",
-    "draw_centered",
-    "draw_centered_lines",
-    "draw_wrapped_centered",
-    "center_text",
-    "text_center",
-    "anchor=\"mm\"",
-    "anchor='mm'",
-)
-
-MIN_GAP_HINTS = (
-    "flow_to_table",
-    "title_to_node",
-    "bottom_margin",
-    "spacing",
-    "gap",
-    "min_top",
-)
-
 LEFT_TOP_TEXT_RE = re.compile(
     r"draw\.text\(\(\s*(?:x|cx|box\[0\]|b\[0\]|cell\[0\])\s*[+,-]\s*\d+"
     r"\s*,\s*(?:y|cy|box\[1\]|b\[1\]|cell\[1\])\s*[+,-]\s*\d+"
@@ -274,8 +246,6 @@ def audit_file(path: Path) -> list[str]:
     @param   path  待审计的 .py 文件路径。
     @return  该文件的所有几何审计发现列表。
     @note    每个发现字符串格式为 "path:line: 问题描述"。
-             历史关注文件（HISTORICAL_FOCUS）有额外的强制性检查，
-             因为这些文件曾出现过几何问题。
     """
     text = path.read_text(encoding="utf-8")
     lines = text.splitlines()
@@ -327,17 +297,6 @@ def audit_file(path: Path) -> list[str]:
         findings.append(
             f"{path}:{line}: arrow/polyline path uses joint='curve'; "
             "ordinary flow and avoidance routes must render as explicit straight segments unless a curved connector is justified"
-        )
-
-    is_focus = path.name in HISTORICAL_FOCUS
-    if is_focus and not has_any(text, GEOMETRY_HELPERS):
-        findings.append(
-            f"{path}: historical focus figure lacks recognized centering/boundary helpers"
-        )
-
-    if is_focus and not has_any(text, MIN_GAP_HINTS):
-        findings.append(
-            f"{path}: historical focus figure lacks explicit gap/bottom-margin assertion hints"
         )
 
     function_starts = [m.start() for m in FUNCTION_RE.finditer(text)]
@@ -432,25 +391,17 @@ def audit_file(path: Path) -> list[str]:
 def main() -> int:
     """
     @brief   图几何审计入口——扫描渲染脚本中的箭头连接、弯曲路径和向量一致性。
-    @usage   python audit_figure_geometry.py [paths...] [--focus-only]
-    @args    paths        待审计的 .py 文件或目录路径，默认为 tools/figures。
-             --focus-only 仅审计 HISTORICAL_FOCUS 中的历史高风险脚本。
+    @usage   python audit_figure_geometry.py [paths...]
+    @args    paths  待审计的 .py 文件或目录路径，默认为 tools/figures。
+    @env     无外部依赖（仅标准库）
     @exit_code  0 = 通过审计，1 = 存在几何风险发现。
     @note    输出包含格式化的发现列表（按 path:line 定位）和聚合状态行。
-             历史关注脚本有更严格的检查，因为其几何复杂度更高。
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", type=Path, default=DEFAULT_PATHS)
-    parser.add_argument(
-        "--focus-only",
-        action="store_true",
-        help="audit only scripts with known historical visual-geometry risks",
-    )
     args = parser.parse_args()
 
     files = collect_files(args.paths)
-    if args.focus_only:
-        files = [path for path in files if path.name in HISTORICAL_FOCUS]
 
     findings: list[str] = []
     for path in files:

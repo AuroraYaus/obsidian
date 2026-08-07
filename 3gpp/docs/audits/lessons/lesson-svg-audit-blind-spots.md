@@ -25,7 +25,7 @@
 
 **工具升级成果**：audit_svg_layout.py 新增 R8（free 文字 vs 任意 rect 重叠）、R9（polygon 箭头三角侵入，1px 采样面积阈值 15px² 豁免贴边）；R6 补重叠/接触分支；宿主文字（完全在 rect 内）豁免 R6；背景底板 rect（≥95% 画布）豁免 R6/R8/R9。升级后全库回归发现并修复 T2.8/T2.11/T2.19/T2.3 等历史遗留遮盖。
 
-相关：[[svg-render-verify-before-commit]]（更早的坐标扫描教训）
+相关：[[lesson-svg-render-verify-before-commit]]（更早的坐标扫描教训）
 
 **补充（2026-08-05）**：
 - **path 曲线 vs 文字盲区（第 4 个图形元素盲区）**：T2.0 图 1 时域波形曲线（y 105-184）与注释文字重叠 9px 未检出——R4/R8 只查 text-text 与 text-rect。已固化工具 R11（曲线逐线段与文字 bbox 最近距离 <4px 报；bbox 整体判据会因曲线包围盒虚大误报——T8.3 五区边界线教训，改用逐线段判定）。

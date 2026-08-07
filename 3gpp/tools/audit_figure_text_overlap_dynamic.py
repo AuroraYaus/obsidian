@@ -235,10 +235,10 @@ def main(argv: list[str] | None = None) -> int:
     @args    paths       待审计的渲染脚本路径或目录，默认为 tools/figures。
              --min-area  报告的最小重叠面积（像素^2），默认 80.0。
                          低于此阈值的微小接触（如字体衬线）不会被报告。
+    @env     需要 PIL/Pillow；被审计的渲染脚本需在其自身环境可执行。
     @exit_code  0 = 无重叠发现，1 = 存在文本 bbox 重叠。
     @note    本脚本会实际执行渲染脚本（通过 runpy），但所有 Image.save()
              调用被 monkey-patch 为 no-op，不会产生任何输出文件。
-             需要 PIL/Pillow 已安装。
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", type=Path, default=DEFAULT_PATHS)

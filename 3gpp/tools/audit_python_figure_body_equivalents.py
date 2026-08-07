@@ -380,6 +380,7 @@ def main(argv: list[str] | None = None) -> int:
     @args     --allow-body-image-embeds   允许正文嵌入图片（过渡期选项）。
     @args     --allow-meta-labels         允许正文出现等价元标签（过渡期选项）。
     @args     --allow-image-prose         允许正文出现图片生成/审计描述（过渡期选项）。
+    @env      无外部依赖（仅标准库）
     @exit_code                            0 = 全部通过；1 = 发现问题。"""
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", type=Path, default=DEFAULT_DOC_ROOTS)

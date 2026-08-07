@@ -18,8 +18,9 @@ import re
 import sys
 from pathlib import Path
 
-# 全部圈号变体：U+2460-U+2473（circled 1-20）、U+3251-U+325F、U+32B1-U+32BF
-CIRCLED = re.compile(r"[\u2460-\u2473\u3251-\u325F\u32B1-\u32BF]")
+# 全部圈号变体：U+2460-U+2473（circled 1-20）、U+24EA（circled 0）、
+# U+2474-U+247E（parenthesized 1-11）、U+3251-U+325F、U+32B1-U+32BF
+CIRCLED = re.compile(r"[\u2460-\u2473\u24EA\u2474-\u247E\u3251-\u325F\u32B1-\u32BF]")
 
 
 def scan(path: Path) -> list[tuple[int, str]]:
@@ -43,6 +44,7 @@ def main() -> int:
     """@brief 审计入口。
     @usage python3 tools/audit_circled_digits.py
     @args  可选路径列表（默认 docs tools sim）
+    @env   无外部依赖（仅标准库）
     @exit_code 0 = 通过，1 = 存在残留"""
     roots = [Path(p) for p in sys.argv[1:]] or [Path("docs"), Path("tools"), Path("sim")]
     exts = {".md", ".svg", ".py", ".sh", ".json", ".yaml", ".yml"}

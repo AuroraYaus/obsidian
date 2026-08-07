@@ -8,6 +8,8 @@ tags:
   - audit
 source_spec: "docs/audits/prompt_coverage_matrix.md"
 ---
+> ⚠️ 本档案为 2026-06-21 快照（基于旧编号与 PNG 时代状态），内容已过期，仅作历史参考；当前状态以审计工具实时输出与 `image_asset_inventory.md` 为准。
+
 # Prompt Coverage Matrix
 
 审计时间：2026-06-21  
