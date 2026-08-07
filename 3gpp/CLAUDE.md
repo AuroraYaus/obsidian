@@ -128,3 +128,16 @@ source_spec: "Local project instructions"
 - 3GPP/LTE/NR 不机械重复全称（Rule 15）
 - LaTeX 公式必须可渲染（Rule 20）
 - 零基础保护（Rule 8）
+
+### 13. 绘图政策（2026-08-07 用户确立）
+
+**禁止新写 Python 绘图脚本（PIL/matplotlib 等）生成图片资产。** 存量 Python 绘图工具已归档至 `tools/archive_python_drawing/`（不再使用；git 可恢复）。协议原文截图类 PNG 资产保留。
+
+绘图工具分工：
+- **复杂图（默认）→ 手绘 SVG**：精确布局类（网格/信道映射/内存布局/星座/框图等），沿用第 4/5/9 条验证流程（audit_svg_layout.py R1-R11 + 目检）。
+- **特别大型图 → PlantUML**：完整解码链路全景、超大流程/时序/结构图等手绘成本过高的场景。源码以 ````plantuml` 代码块（或 .puml 资产）保存，渲染产物（SVG/PNG）嵌入讲义正文。
+- **简单流程/结构图 → Mermaid**（第 6 条规则不变）。
+
+PlantUML 强制验证（新增/修改任何 plantuml 块后）：`bash tools/audit_plantuml_syntax.sh`（真实渲染全库扫描，依赖 java + plantuml.jar，默认 `~/.local/bin/plantuml.jar`）；工具缺失必须显式声明验证缺口，不得默认通过（同第 6 条 Mermaid 规则）。
+
+**新增图片资产前必须查 `docs/audits/image_asset_inventory.md` 台账是否已有同源资产**（教训：2026-08-07 T3.3 与 T3.2 重复生成同一张 TS 36.212 Table 5.1.3-3 协议表截图——已去重共用 T3.2 资产）。

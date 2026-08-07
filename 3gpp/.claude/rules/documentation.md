@@ -111,10 +111,18 @@ source_spec: "docs/L<层>_<语义名>/<文件名>.md"
 - 图片资产登记台账：`docs/audits/image_asset_inventory.md` + migration 台账
 - SVG 文件由脚本生成时：脚本路径登记台账；SVG 内容内嵌文字同时随目录改名更新（sed 覆盖 svg 内嵌说明）
 
+### 4.1 PlantUML 资产（2026-08-07 绘图政策）
+
+- **适用场景**：特别大型图（完整解码链路全景、超大流程/时序/状态/结构图等手绘成本过高的场景）；其余复杂图一律手绘 SVG，简单流程/结构图用 Mermaid。**禁止新写 Python 绘图脚本**（存量已归档 `tools/archive_python_drawing/`，git 可恢复）。
+- **源码保存**：` ```plantuml ` 代码块嵌入讲义，或资产 `T<编号>_<主题>.puml` 存入对应层 `assets/`
+- **渲染与嵌入**：`java -jar ~/.local/bin/plantuml.jar -tsvg <源>` 渲染产物（SVG/PNG）嵌入正文，命名 `T<编号>_<主题>.svg`；渲染产物与源文件都登记 `docs/audits/image_asset_inventory.md`
+- **强制验证**：新增/修改后 `bash tools/audit_plantuml_syntax.sh`（真实渲染全库扫描）；工具缺失（java / plantuml.jar）显式声明验证缺口，不得默认通过
+- **新增资产查重**：任何新图（SVG/PlantUML/协议截图）嵌入前先查台账是否已有同源资产（教训：2026-08-07 T3.3 与 T3.2 重复生成 Table 5.1.3-3 截图）
+
 ## 五、术语与同步
 
 - **新术语首现即登记** L0 术语总表（`docs/L0_协议阅读引导/L0_terminology_glossary.md`），不批量积压
-- 教材工作区术语表（`docs/superpowers/textbooks/*/术语表.md`）在教材完成时**合并进 L0 术语总表**
+- 教材术语表在教材完成时**合并进 L0 术语总表**（教材工作区已清理，2026-08-07）
 - 全库九类同步清单见 `3gpp/项目规则与记忆索引.md` 第六节（术语/入口/编号/资产/路径/台账/Obsidian/README 双语）
 - 清单文件（`3GPP全流程_缩写概念理论清单.md`）与知识库覆盖状态保持回流
 
