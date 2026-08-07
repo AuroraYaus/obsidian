@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="580" viewBox="0 0 1240 580" font-family="sans-serif">
+  <defs><style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style></defs>
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">SIMD 与缓存：译码器内存布局（T18.5）</text>
+  <rect x="120" y="130" width="1039" height="44" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+  <line x1="152.5" y1="130" x2="152.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="185.0" y1="130" x2="185.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="217.5" y1="130" x2="217.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="250.0" y1="130" x2="250.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="282.5" y1="130" x2="282.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="315.0" y1="130" x2="315.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="347.5" y1="130" x2="347.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="380.0" y1="130" x2="380.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="412.5" y1="130" x2="412.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="445.0" y1="130" x2="445.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="477.5" y1="130" x2="477.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="510.0" y1="130" x2="510.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="542.5" y1="130" x2="542.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="575.0" y1="130" x2="575.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="607.5" y1="130" x2="607.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="640.0" y1="130" x2="640.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="672.5" y1="130" x2="672.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="705.0" y1="130" x2="705.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="737.5" y1="130" x2="737.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="770.0" y1="130" x2="770.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="802.5" y1="130" x2="802.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="835.0" y1="130" x2="835.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="867.5" y1="130" x2="867.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="900.0" y1="130" x2="900.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="932.5" y1="130" x2="932.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="965.0" y1="130" x2="965.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="997.5" y1="130" x2="997.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="1030.0" y1="130" x2="1030.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="1062.5" y1="130" x2="1062.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="1095.0" y1="130" x2="1095.0" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="1127.5" y1="130" x2="1127.5" y2="174" stroke="#93c5fd" stroke-width="0.8"/>
+  <text x="140" y="152" text-anchor="start" dominant-baseline="central" class="node-text">64 byte cache line = 32 × int16 LLR（连续访问）</text>
+  <rect x="293" y="230" width="655" height="44" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.2"/>
+  <line x1="334" y1="230" x2="334" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="375" y1="230" x2="375" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="416" y1="230" x2="416" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="457" y1="230" x2="457" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="498" y1="230" x2="498" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="539" y1="230" x2="539" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="580" y1="230" x2="580" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="621" y1="230" x2="621" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="662" y1="230" x2="662" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="703" y1="230" x2="703" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="744" y1="230" x2="744" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="785" y1="230" x2="785" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="826" y1="230" x2="826" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="867" y1="230" x2="867" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <line x1="908" y1="230" x2="908" y2="274" stroke="#93c5fd" stroke-width="0.8"/>
+  <rect x="785" y="230" width="163" height="44" rx="4" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.2"/>
+  <text x="313" y="252" text-anchor="start" dominant-baseline="central" class="node-text">256-bit SIMD = 16 × 16-bit lane（lane 0-11 有效）</text>
+  <text x="866" y="252" text-anchor="middle" dominant-baseline="central" class="node-text">padding</text>
+  <rect x="330" y="310" width="580" height="36" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="328" text-anchor="middle" dominant-baseline="central" class="note">无效 lane 浪费向量吞吐：16 个 lane 只有 12 个参与计算</text>
+  <g><rect x="60" y="370" width="560" height="110" rx="8" fill="#ecfdf5" stroke="#334155" stroke-width="1.5"/>
+    <text x="340" y="398" text-anchor="middle" dominant-baseline="central" class="node-title">好布局</text>
+    <text x="340" y="422" text-anchor="middle" dominant-baseline="central" class="node-text">连续 load · 预取器跟上 · stride=1</text>
+    <text x="340" y="438" text-anchor="middle" dominant-baseline="central" class="node-text">lane 全有效 · 同一类计算</text>
+    <text x="340" y="454" text-anchor="middle" dominant-baseline="central" class="node-text">hot/cold 分离 · 无 false sharing</text></g>
+  <g><rect x="640" y="370" width="560" height="110" rx="8" fill="#fef2f2" stroke="#334155" stroke-width="1.5"/>
+    <text x="920" y="398" text-anchor="middle" dominant-baseline="central" class="node-title">坏布局</text>
+    <text x="920" y="422" text-anchor="middle" dominant-baseline="central" class="node-text">随机 gather · cache line 利用率低</text>
+    <text x="920" y="438" text-anchor="middle" dominant-baseline="central" class="node-text">大量 padding · 无效 path</text>
+    <text x="920" y="454" text-anchor="middle" dominant-baseline="central" class="node-text">debug trace 与热数组同 cache line</text></g>
+  <rect x="330" y="520" width="580" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="542" text-anchor="middle" dominant-baseline="central" class="note">SoA 优先：同字段连续排列，便于 SIMD load 与 cache 预取</text>
+</svg>

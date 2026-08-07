@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="560" viewBox="0 0 1240 560" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style>
+  </defs>
+
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">定点译码器位宽需求总览（T18.1）</text>
+
+  <!-- 主链 4 节点：y 80..180 -->
+  <g>
+    <rect x="35" y="80" width="270" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="170" y="112" text-anchor="middle" dominant-baseline="central" class="node-title">Float Baseline</text>
+    <text x="170" y="136" text-anchor="middle" dominant-baseline="central" class="node-text">LLR 直方图 · 失败样本</text>
+    <text x="170" y="152" text-anchor="middle" dominant-baseline="central" class="node-text">T17 浮点基线</text>
+  </g>
+  <g>
+    <rect x="335" y="80" width="270" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="470" y="112" text-anchor="middle" dominant-baseline="central" class="node-title">Quantization Contract</text>
+    <text x="470" y="136" text-anchor="middle" dominant-baseline="central" class="node-text">LLR width · frac · clip</text>
+    <text x="470" y="152" text-anchor="middle" dominant-baseline="central" class="node-text">round · saturation · scale</text>
+  </g>
+  <g>
+    <rect x="635" y="80" width="270" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="770" y="112" text-anchor="middle" dominant-baseline="central" class="node-title">Fixed Model</text>
+    <text x="770" y="136" text-anchor="middle" dominant-baseline="central" class="node-text">整数运算 · 饱和</text>
+    <text x="770" y="152" text-anchor="middle" dominant-baseline="central" class="node-text">bit-exact 检查点</text>
+  </g>
+  <g>
+    <rect x="935" y="80" width="270" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="1070" y="112" text-anchor="middle" dominant-baseline="central" class="node-title">Regression Evidence</text>
+    <text x="1070" y="136" text-anchor="middle" dominant-baseline="central" class="node-text">BLER 损失 · CI</text>
+    <text x="1070" y="152" text-anchor="middle" dominant-baseline="central" class="node-text">replay bundle 写回</text>
+  </g>
+  <line x1="305" y1="130" x2="331" y2="130" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="605" y1="130" x2="631" y2="130" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="905" y1="130" x2="931" y2="130" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 需求块 5 个：y 230..330，每块 4 行 -->
+  <g>
+    <rect x="38" y="230" width="215" height="100" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="145" y="262" text-anchor="middle" dominant-baseline="central" class="node-title">LLR format</text>
+    <text x="145" y="286" text-anchor="middle" dominant-baseline="central" class="node-text">width·frac·sign·clip</text>
+    <text x="145" y="302" text-anchor="middle" dominant-baseline="central" class="node-text">直方图+无噪向量</text>
+    <text x="145" y="318" text-anchor="middle" dominant-baseline="central" class="node-text">错误硬判决</text>
+  </g>
+  <g>
+    <rect x="275" y="230" width="215" height="100" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="382" y="262" text-anchor="middle" dominant-baseline="central" class="node-title">Internal messages</text>
+    <text x="382" y="286" text-anchor="middle" dominant-baseline="central" class="node-text">metric width·guard·scale</text>
+    <text x="382" y="302" text-anchor="middle" dominant-baseline="central" class="node-text">per-stage max/min</text>
+    <text x="382" y="318" text-anchor="middle" dominant-baseline="central" class="node-text">迭代饱和</text>
+  </g>
+  <g>
+    <rect x="512" y="230" width="215" height="100" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="619" y="262" text-anchor="middle" dominant-baseline="central" class="node-title">Arithmetic</text>
+    <text x="619" y="286" text-anchor="middle" dominant-baseline="central" class="node-text">rounding·saturation·extend</text>
+    <text x="619" y="302" text-anchor="middle" dominant-baseline="central" class="node-text">edge-codeword 测试</text>
+    <text x="619" y="318" text-anchor="middle" dominant-baseline="central" class="node-text">wraparound 符号翻转</text>
+  </g>
+  <g>
+    <rect x="749" y="230" width="215" height="100" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="856" y="262" text-anchor="middle" dominant-baseline="central" class="node-title">Loss budget</text>
+    <text x="856" y="286" text-anchor="middle" dominant-baseline="central" class="node-text">float baseline·budget·CI</text>
+    <text x="856" y="302" text-anchor="middle" dominant-baseline="central" class="node-text">BER/BLER 报告</text>
+    <text x="856" y="318" text-anchor="middle" dominant-baseline="central" class="node-text">不可证性能声明</text>
+  </g>
+  <g>
+    <rect x="986" y="230" width="215" height="100" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="1093" y="262" text-anchor="middle" dominant-baseline="central" class="node-title">Compare policy</text>
+    <text x="1093" y="286" text-anchor="middle" dominant-baseline="central" class="node-text">bit-exact·tolerance</text>
+    <text x="1093" y="302" text-anchor="middle" dominant-baseline="central" class="node-text">replay bundle</text>
+    <text x="1093" y="318" text-anchor="middle" dominant-baseline="central" class="node-text">C/RTL mismatch triage</text>
+  </g>
+
+  <!-- 检查位置条 -->
+  <g>
+    <rect x="120" y="380" width="1000" height="68" rx="8" fill="#f0fdf4" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="406" text-anchor="start" dominant-baseline="central" class="node-title">检查位置（三类译码器通用）</text>
+    <text x="140" y="432" text-anchor="start" dominant-baseline="central" class="node-text">Input LLR · Soft Buffer HARQ accumulation · saturation count · repeat merge</text>
+  </g>
+
+  <rect x="330" y="500" width="580" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="522" text-anchor="middle" dominant-baseline="central" class="note">每块三行 = Required Fields / Evidence / Failure if Missing</text>
+</svg>

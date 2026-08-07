@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="690" viewBox="0 0 1240 690" font-family="sans-serif">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#334155"/></marker><style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style></defs>
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">T18.6 Bit-Exact Regression Harness</text>
+  <g><rect x="38" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="145" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Protocol Vector</text>
+    <text x="145" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">TS evidence·seed·LLR·RV</text>
+    <text x="145" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">descriptor hashes</text></g>
+  <g><rect x="275" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="382" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Python Float</text>
+    <text x="382" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">数值参考</text>
+    <text x="382" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">BLER 曲线·算法 sanity</text></g>
+  <g><rect x="512" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="619" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Python Fixed</text>
+    <text x="619" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">整数参考</text>
+    <text x="619" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">同 rounding/saturation schema</text></g>
+  <g><rect x="749" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="856" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">C/C++ Fixed</text>
+    <text x="856" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">生产式定点模型</text>
+    <text x="856" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">layout version·checkpoint dump</text></g>
+  <g><rect x="986" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="1093" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">RTL Output</text>
+    <text x="1093" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">cycle-aligned 输出</text>
+    <text x="1093" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">trace + waveform</text></g>
+  <line x1="253" y1="140" x2="271" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="490" y1="140" x2="508" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="727" y1="140" x2="745" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="964" y1="140" x2="982" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="382" y1="190" x2="382" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="619" y1="190" x2="619" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="856" y1="190" x2="856" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="1093" y1="190" x2="1093" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <g><rect x="120" y="250" width="1000" height="70" rx="8" fill="#f0fdf4" stroke="#334155" stroke-width="1.5"/>
+    <text x="620" y="268" text-anchor="middle" dominant-baseline="central" class="node-title">Compare Core</text>
+    <text x="620" y="296" text-anchor="middle" dominant-baseline="central" class="node-text">先验证 metadata/hash，再比较 checkpoint · final bits · CRC/syndrome · saturation counts · BLER budget</text></g>
+  <line x1="185" y1="320" x2="185" y2="386" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="475" y1="320" x2="475" y2="386" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="765" y1="320" x2="765" y2="386" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="1055" y1="320" x2="1055" y2="386" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <g><rect x="50" y="390" width="270" height="80" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="185" y="414" text-anchor="middle" dominant-baseline="central" class="node-title">Float vs fixed</text>
+    <text x="185" y="446" text-anchor="middle" dominant-baseline="central" class="node-text">tolerance / BLER budget</text></g>
+  <g><rect x="340" y="390" width="270" height="80" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="475" y="414" text-anchor="middle" dominant-baseline="central" class="node-title">Py fixed vs C/C++</text>
+    <text x="475" y="446" text-anchor="middle" dominant-baseline="central" class="node-text">exact integer equality</text></g>
+  <g><rect x="630" y="390" width="270" height="80" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="765" y="414" text-anchor="middle" dominant-baseline="central" class="node-title">C/C++ vs RTL</text>
+    <text x="765" y="446" text-anchor="middle" dominant-baseline="central" class="node-text">exact with latency align</text></g>
+  <g><rect x="920" y="390" width="270" height="80" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="1055" y="414" text-anchor="middle" dominant-baseline="central" class="node-title">Metadata</text>
+    <text x="1055" y="446" text-anchor="middle" dominant-baseline="central" class="node-text">hash equality required</text></g>
+  <g><rect x="80" y="530" width="500" height="80" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="330" y="554" text-anchor="middle" dominant-baseline="central" class="node-title">CI Gate</text>
+    <text x="330" y="586" text-anchor="middle" dominant-baseline="central" class="node-text">smoke · directed · random · nightly · replay</text></g>
+  <g><rect x="660" y="530" width="500" height="80" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="910" y="554" text-anchor="middle" dominant-baseline="central" class="node-title">Failure Bundle</text>
+    <text x="910" y="586" text-anchor="middle" dominant-baseline="central" class="node-text">manifest · vector · inputs · traces · diff · waveform</text></g>
+  <rect x="330" y="636" width="580" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="658" text-anchor="middle" dominant-baseline="central" class="note">回归外壳：固定 seeds + frozen policy 版本，失败首 mismatch 可回放</text>
+</svg>

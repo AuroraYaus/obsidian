@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="560" viewBox="0 0 1240 560" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style>
+  </defs>
+
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">LTE Turbo 定点数据通路（T18.2）</text>
+
+  <!-- 主链 5 节点：y 90..190 -->
+  <g>
+    <rect x="38" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="145" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Protocol Vector</text>
+    <text x="145" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">K·f1/f2·RV·E·Ncb</text>
+    <text x="145" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">d0/d1/d2 三路流</text>
+  </g>
+  <g>
+    <rect x="275" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="382" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">LLR Quantizer</text>
+    <text x="382" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">T18.1 位宽·缩放·舍入</text>
+    <text x="382" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">sys/parity LLR 饱和</text>
+  </g>
+  <g>
+    <rect x="512" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="619" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">SISO Core</text>
+    <text x="619" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">branch·alpha·beta</text>
+    <text x="619" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">posterior·extrinsic</text>
+  </g>
+  <g>
+    <rect x="749" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="856" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Iterative Exchange</text>
+    <text x="856" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">交织/解交织外信息</text>
+    <text x="856" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">LLR 更新</text>
+  </g>
+  <g>
+    <rect x="986" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="1093" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">CRC/Report</text>
+    <text x="1093" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">hard bits·CB/TB CRC</text>
+    <text x="1093" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">早停·replay</text>
+  </g>
+  <line x1="253" y1="140" x2="271" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="490" y1="140" x2="508" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="727" y1="140" x2="745" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="964" y1="140" x2="982" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- checkpoint 虚线 -->
+  <line x1="145" y1="190" x2="145" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="382" y1="190" x2="382" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="619" y1="190" x2="619" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="856" y1="190" x2="856" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="1093" y1="190" x2="1093" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+
+  <!-- checkpoint 5 节点：y 250..310 -->
+  <g>
+    <rect x="38" y="250" width="215" height="72" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="145" y="274" text-anchor="middle" dominant-baseline="central" class="node-title">Rate recovery</text>
+    <text x="145" y="298" text-anchor="middle" dominant-baseline="central" class="node-text">RV/address mismatch</text>
+  </g>
+  <g>
+    <rect x="275" y="250" width="215" height="72" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="382" y="274" text-anchor="middle" dominant-baseline="central" class="node-title">Branch metric</text>
+    <text x="382" y="298" text-anchor="middle" dominant-baseline="central" class="node-text">stream/sign/scale</text>
+  </g>
+  <g>
+    <rect x="512" y="250" width="215" height="72" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="619" y="274" text-anchor="middle" dominant-baseline="central" class="node-title">Forward/backward</text>
+    <text x="619" y="298" text-anchor="middle" dominant-baseline="central" class="node-text">normalization/sat</text>
+  </g>
+  <g>
+    <rect x="749" y="250" width="215" height="72" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="856" y="274" text-anchor="middle" dominant-baseline="central" class="node-title">Extrinsic</text>
+    <text x="856" y="298" text-anchor="middle" dominant-baseline="central" class="node-text">repeated evidence</text>
+  </g>
+  <g>
+    <rect x="986" y="250" width="215" height="72" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="1093" y="274" text-anchor="middle" dominant-baseline="central" class="node-title">CRC gate</text>
+    <text x="1093" y="298" text-anchor="middle" dominant-baseline="central" class="node-text">late first mismatch</text>
+  </g>
+
+  <!-- 选项条 -->
+  <g>
+    <rect x="120" y="380" width="1000" height="68" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="406" text-anchor="start" dominant-baseline="central" class="node-title">Bitwidth and Algorithm Options</text>
+    <text x="140" y="432" text-anchor="start" dominant-baseline="central" class="node-text">LLR width · metric width · posterior/extrinsic width · Log-MAP/Max-Log-MAP · max-star · 归一化 · 饱和计数</text>
+  </g>
+
+  <rect x="330" y="500" width="580" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="522" text-anchor="middle" dominant-baseline="central" class="note">验收：定点与浮点 bit-exact 对比，BLER 损失在预算内</text>
+</svg>
