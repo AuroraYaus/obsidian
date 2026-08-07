@@ -1,6 +1,6 @@
 {
   "collapse-filter": true,
-  "search": "-path:3gpp/3GPP_Rel19",
+  "search": "path:3gpp/docs -path:3gpp/docs/audits/lessons -path:3gpp/3GPP_Rel19",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
@@ -270,6 +270,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.6666666666666666,
+  "scale": 1,
   "close": true
 }
