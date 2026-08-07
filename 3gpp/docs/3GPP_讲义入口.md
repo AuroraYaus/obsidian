@@ -22,8 +22,7 @@ source_spec: "3gpp/docs"
 | L2 协议与算法 | [[3gpp/docs/L2_协议算法/L2_协议算法入口]] |
 | L3 工程实现 | [[3gpp/docs/L3_工程实现/L3_工程实现入口]] |
 | 审计 | [[3gpp/docs/audits/审计入口]] |
-| 规划设计 | [[3gpp/docs/superpowers/规划设计入口]] |
 
 ## 说明
 
-这里先放总入口，后面再按 L1/L2/L3/audits/superpowers 分别补子入口页。
+这里先放总入口，后面再按 L1/L2/L3/audits 分别补子入口页。
