@@ -27,7 +27,7 @@
 <text x="480" y="30" text-anchor="middle" class="title">深衰落 h=0.2 下 ZF 与 MMSE 均衡的数值对比</text>
 <text x="480" y="54" text-anchor="middle" class="small">单径信道 σ²=0.04、BPSK X=+1：同一接收符号 Y=0.2+n，两种均衡器给出不同的噪声、偏置与总误差</text>
 
-<text x="60" y="82" class="stitle">① 信号链</text>
+<text x="60" y="82" class="stitle">(1) 信号链</text>
 <rect x="60" y="92" width="120" height="48" rx="8" class="node"/>
 <text x="120" y="112" text-anchor="middle" class="label">发送</text>
 <text x="120" y="130" text-anchor="middle" class="mono">X=+1</text>
@@ -48,11 +48,11 @@
 <text x="597" y="130" text-anchor="middle" class="mono">ZF 5 / MMSE 2.5</text>
 <line x1="666" y1="116" x2="692" y2="116" class="arrow"/>
 <polygon points="696,116 686,111 686,121" fill="#455A64"/>
-<rect x="696" y="92" width="120" height="48" rx="8" class="node"/>
+<rect x="696" y="92" width="128" height="48" rx="8" class="node"/>
 <text x="756" y="112" text-anchor="middle" class="label">输出</text>
-<text x="756" y="130" text-anchor="middle" class="mono">X̂ 噪声/偏置不同</text>
+<text x="758" y="130" text-anchor="middle" class="mono">X̂ 噪声/偏置不同</text>
 
-<text x="60" y="196" class="stitle">② 噪声方差放大对比（输入 σ²=0.04）</text>
+<text x="60" y="196" class="stitle">(2) 噪声方差放大对比（输入 σ²=0.04）</text>
 <text x="60" y="226" class="label">ZF 均衡</text>
 <rect x="170" y="212" width="64" height="26" rx="5" fill="#ECEFF1" stroke="#455A64" stroke-width="1.2"/>
 <text x="202" y="230" text-anchor="middle" class="mono">0.04</text>
@@ -77,7 +77,7 @@
 <text x="805" y="290" text-anchor="middle" class="mono" fill="#6A1B9A">MSE=0.5</text>
 <text x="60" y="320" class="small">MMSE 权重 w=2.5 被 σ² 压住：输出有偏 g=0.5，原始噪声仅 0.25，总 MSE 减半</text>
 
-<text x="60" y="352" class="stitle">③ 同一 σ²=0.04 下的双列数值对比</text>
+<text x="60" y="352" class="stitle">(3) 同一 σ²=0.04 下的双列数值对比</text>
 <rect x="60" y="368" width="400" height="178" rx="10" class="card"/>
 <text x="76" y="394" class="label" fill="#B71C1C">深衰落 |h|=0.2</text>
 <rect x="336" y="375" width="110" height="28" rx="12" class="badge-red"/>
@@ -117,7 +117,7 @@
 <text x="884" y="528" text-anchor="end" class="mono" fill="#1B5E20">14 dB</text>
 
 <rect x="60" y="576" width="840" height="92" rx="10" fill="#ECEFF1" stroke="#78909C" stroke-width="1.2"/>
-<text x="76" y="600" class="stitle">④ 结论</text>
+<text x="76" y="600" class="stitle">(4) 结论</text>
 <text x="76" y="624" class="label">ZF：位置回正但噪声 ×25；MMSE：原始 MSE 减半（0.5 &lt; 1.0）但有偏 g=0.5；</text>
 <text x="76" y="646" class="label">无偏化 z=X̂/g 后噪声回到 1.0——两者 post-eq SINR 相同（0 dB vs 14 dB），可靠度必须与位置分开传递。</text>
 </svg>

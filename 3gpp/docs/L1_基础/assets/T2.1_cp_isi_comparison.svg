@@ -24,7 +24,7 @@
 <rect x="436" y="304" width="200" height="96" fill="none" stroke="#2e7d32" stroke-width="2.5" rx="3"/>
 <text x="536.0" y="292" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">FFT 积分窗口（去 CP 后）</text>
 <rect x="378.0" y="394" width="58.0" height="66" fill="#4caf50" opacity="0.25"/>
-<text x="407.5" y="432" text-anchor="middle" font-size="11" fill="#1b5e20">落入 CP ✓</text>
+<text x="407.5" y="432" text-anchor="middle" font-size="11" fill="#1b5e20">落入 CP</text>
 <text x="450.0" y="488" text-anchor="middle" font-size="13" fill="#2e7d32">✓ 延迟副本只侵入符号 n 的 CP 区间 → FFT 窗口内无 ISI</text>
 <text x="450.0" y="538" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">前提条件：τ_max ≤ T_CP → CP 吸收跨符号尾巴，去 CP 后的 FFT 窗口不受污染</text>
 </svg>

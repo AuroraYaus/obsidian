@@ -34,10 +34,10 @@
 <line x1="380" y1="136" x2="420" y2="136" class="axis"/>
 <line x1="560" y1="136" x2="600" y2="136" class="axis"/>
 <line x1="740" y1="136" x2="780" y2="136" class="axis"/>
-<polygon points="240,131 252,136 240,141" fill="#444"/>
-<polygon points="420,131 432,136 420,141" fill="#444"/>
-<polygon points="600,131 612,136 600,141" fill="#444"/>
-<polygon points="780,131 792,136 780,141" fill="#444"/>
+<polygon points="228,131 240,136 228,141" fill="#444"/>
+<polygon points="408,131 420,136 408,141" fill="#444"/>
+<polygon points="588,131 600,136 588,141" fill="#444"/>
+<polygon points="768,131 780,136 768,141" fill="#444"/>
 
 <text x="120" y="130" text-anchor="middle" class="label" fill="#7B1FA2">发射窗/滤波</text>
 <text x="120" y="152" text-anchor="middle" class="mono">17 阶 FIR</text>

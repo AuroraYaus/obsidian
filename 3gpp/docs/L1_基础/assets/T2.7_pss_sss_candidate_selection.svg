@@ -26,7 +26,7 @@
 <line x1="120" y1="286" x2="880" y2="286" stroke="#9E9E9E" stroke-width="1.2" stroke-dasharray="3,4"/>
 <path d="M215,212 L207,250 L223,250 Z" fill="#00897B"/>
 <path d="M500,150 L488,250 L512,250 Z" fill="#5E35B1"/>
-<text x="140" y="296" class="small" font-size="11" fill="#757575">噪声底</text>
+<text x="140" y="330" class="small" font-size="11" fill="#757575">噪声底</text>
 <text x="876" y="262" text-anchor="end" class="small" font-size="11" fill="#D84315">判决门限</text>
 <text x="215" y="196" text-anchor="middle" class="small" font-size="12" fill="#00695C">最早路径峰（d≈10）</text>
 <text x="500" y="130" text-anchor="middle" class="small" font-size="12" fill="#4527A0">最强路径峰（d≈40，相关最大）</text>
@@ -39,14 +39,14 @@
 <text x="120" y="384" class="label" font-size="15" font-weight="bold" fill="#4527A0">峰位置 → FFT 起点：两种候选选择（延迟扩展超过 CP 时的工程折中）</text>
 
 <rect x="140" y="410" width="340" height="230" rx="6" fill="#FBE9E7" stroke="#E64A19" stroke-width="1.8"/>
-<text x="156" y="436" class="label" font-size="13" font-weight="bold" fill="#BF360C">方案①：锁最强路径峰（相关最大）</text>
+<text x="156" y="436" class="label" font-size="13" font-weight="bold" fill="#BF360C">方案(1)：锁最强路径峰（相关最大）</text>
 <text x="156" y="486" class="label" font-size="13" fill="#333">窗口起点对齐最强峰（晚 30）</text>
 <text x="156" y="530" class="label" font-size="13" fill="#333">相对最早路径偏移 30 &gt; N_CP 16</text>
 <text x="156" y="574" class="label" font-size="13" fill="#333">窗口前段混入前一符号数据</text>
 <text x="156" y="618" class="label" font-size="13" font-weight="bold" fill="#BF360C">结果：ISI/ICI，EVM 全面劣化</text>
 
 <rect x="520" y="410" width="340" height="230" rx="6" fill="#E0F2F1" stroke="#00897B" stroke-width="1.8"/>
-<text x="536" y="436" class="label" font-size="13" font-weight="bold" fill="#00695C">方案②：锁最早路径 + 余量（推荐）</text>
+<text x="536" y="436" class="label" font-size="13" font-weight="bold" fill="#00695C">方案(2)：锁最早路径 + 余量（推荐）</text>
 <text x="536" y="486" class="label" font-size="13" fill="#333">窗口起点 = 最早峰 + 提前量</text>
 <text x="536" y="530" class="label" font-size="13" fill="#333">延迟扩展超 CP：无完美窗口</text>
 <text x="536" y="574" class="label" font-size="13" fill="#333">对准主要能量，残余 ISI 最小</text>

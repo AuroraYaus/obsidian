@@ -6,8 +6,8 @@
 <rect x="110" y="68" width="700" height="30" rx="4" fill="#eceff1" stroke="#90a4ae" stroke-width="2"/>
 <rect x="110" y="68" width="40" height="30" fill="#ffcdd2" opacity="0.45" rx="4"/>
 <rect x="770" y="68" width="40" height="30" fill="#ffcdd2" opacity="0.45" rx="4"/>
-<text x="130.0" y="88.0" text-anchor="middle" font-size="10" fill="#c62828">保护带</text>
-<text x="790.0" y="88.0" text-anchor="middle" font-size="10" fill="#c62828">保护带</text>
+<text x="130.0" y="88.0" text-anchor="middle" font-size="9" fill="#c62828">保护带</text>
+<text x="790.0" y="88.0" text-anchor="middle" font-size="9" fill="#c62828">保护带</text>
 <text x="110" y="118" text-anchor="start" font-size="10" fill="#546e7a">f_low（分配下界）</text>
 <text x="810" y="118" text-anchor="end" font-size="10" fill="#546e7a">f_high（分配上界）</text>
 <text x="460.0" y="138" text-anchor="middle" font-size="12" fill="#37474f" font-weight="bold">B_channel = 20 MHz（运营商频谱牌照）</text>

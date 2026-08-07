@@ -4,7 +4,7 @@
 <rect x="100" y="80" width="680" height="26" fill="#f0f4f8" stroke="#888" stroke-width="1.5" rx="3"/>
 <text x="80" y="74" text-anchor="end" font-size="13" fill="black" font-weight="bold">Point A</text>
 <line x1="100" y1="66" x2="100" y2="80" stroke="black" stroke-width="1.5"/>
-<polygon points="100,80 94,90 106,90" fill="black"/>
+<polygon points="100,80 94,70 106,70" fill="black"/>
 <text x="796" y="98.0" text-anchor="start" font-size="12" fill="#555">频率 →</text>
 <line x1="100.0" y1="80" x2="100.0" y2="74" stroke="#555" stroke-width="1"/>
 <text x="100.0" y="70" text-anchor="middle" font-size="10" fill="#555">CRB0</text>

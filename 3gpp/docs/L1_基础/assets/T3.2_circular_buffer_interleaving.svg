@@ -27,24 +27,24 @@
 
   <!-- ============ 源流行标签（左侧） ============ -->
   <g font-size="12.5" fill="#334155">
-    <text x="40" y="113" class="free">v⁽⁰⁾ 系统流（systematic）</text>
-    <text x="40" y="155" class="free">v⁽¹⁾ 校验流一（parity 1）</text>
-    <text x="40" y="197" class="free">v⁽²⁾ 校验流二（parity 2）</text>
+    <text x="30" y="113" class="free">v⁽⁰⁾ 系统流（systematic）</text>
+    <text x="30" y="155" class="free">v⁽¹⁾ 校验流一（parity 1）</text>
+    <text x="30" y="197" class="free">v⁽²⁾ 校验流二（parity 2）</text>
   </g>
 
   <!-- ============ 子块交织输出：三路各 5 格（按 K_Π=5 示例） ============ -->
   <g font-family="inherit">
     <!-- v⁽⁰⁾ 系统流：第 0..4 比特 -->
     <rect x="220" y="96"  width="40" height="34" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
-    <text x="240" y="113" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#134E4A">v⁰₀</text>
+    <text x="240" y="113" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#134E4A">v⁰₀</text>
     <rect x="268" y="96"  width="40" height="34" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
-    <text x="288" y="113" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#134E4A">v⁰₁</text>
+    <text x="288" y="113" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#134E4A">v⁰₁</text>
     <rect x="316" y="96"  width="40" height="34" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
-    <text x="336" y="113" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#134E4A">v⁰₂</text>
+    <text x="336" y="113" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#134E4A">v⁰₂</text>
     <rect x="364" y="96"  width="40" height="34" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
-    <text x="384" y="113" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#134E4A">v⁰₃</text>
+    <text x="384" y="113" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#134E4A">v⁰₃</text>
     <rect x="412" y="96"  width="40" height="34" rx="2" fill="#CCFBF1" stroke="#0F766E" stroke-width="1.5"/>
-    <text x="432" y="113" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#134E4A">v⁰₄</text>
+    <text x="432" y="113" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#134E4A">v⁰₄</text>
     <!-- v⁽¹⁾ 校验流一：偶数偏移位置（K_Π+2k） -->
     <rect x="460" y="138" width="44" height="34" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
     <text x="482" y="155" text-anchor="middle" dominant-baseline="central" font-size="12.5" fill="#3730A3">v¹₀</text>
@@ -114,15 +114,15 @@
     <rect x="652" y="278" width="40" height="36" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
     <text x="674" y="296" text-anchor="middle" font-size="13" fill="#3730A3">w₉</text>
     <rect x="700" y="278" width="40" height="36" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
-    <text x="720" y="296" text-anchor="middle" font-size="11" fill="#78350F">w₁₀</text>
+    <text x="720" y="296" text-anchor="middle" font-size="10" fill="#78350F">w₁₀</text>
     <rect x="748" y="278" width="40" height="36" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
-    <text x="768" y="296" text-anchor="middle" font-size="11" fill="#3730A3">w₁₁</text>
+    <text x="768" y="296" text-anchor="middle" font-size="10" fill="#3730A3">w₁₁</text>
     <rect x="796" y="278" width="40" height="36" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
-    <text x="816" y="296" text-anchor="middle" font-size="11" fill="#78350F">w₁₂</text>
+    <text x="816" y="296" text-anchor="middle" font-size="10" fill="#78350F">w₁₂</text>
     <rect x="844" y="278" width="40" height="36" rx="2" fill="#E0E7FF" stroke="#4338CA" stroke-width="1.5"/>
-    <text x="864" y="296" text-anchor="middle" font-size="11" fill="#3730A3">w₁₃</text>
+    <text x="864" y="296" text-anchor="middle" font-size="10" fill="#3730A3">w₁₃</text>
     <rect x="892" y="278" width="40" height="36" rx="2" fill="#FEF3C7" stroke="#B45309" stroke-width="1.5"/>
-    <text x="912" y="296" text-anchor="middle" font-size="11" fill="#78350F">w₁₄</text>
+    <text x="912" y="296" text-anchor="middle" font-size="10" fill="#78350F">w₁₄</text>
   </g>
 
   <!-- ============ 段标签 ============ -->

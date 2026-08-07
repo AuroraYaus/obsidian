@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T2.0_time_frequency_four_views.svg
+  @brief   同一 OFDM 符号的四种视角：频域线谱 / 时域波形 / 星座 / 资源网格
+  @date    2026-08-04
+  @note    N=4、QPSK 教学例（X_k = {1+j, -1-j, 1-j, -1+j}）。四个面板描述同一组
+           复数符号 X_k 的不同投影：线谱看幅度、波形看叠加、星座看复数位置、
+           资源网格看时间×频率的二维承载。依据 T2.1 基准图规格。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" role="img">
+  <title>同一 OFDM 符号的四种视角</title>
+  <rect width="960" height="640" fill="#ffffff"/>
+  <style>
+    .title { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 18px; font-weight: bold; fill: #111; }
+    .label { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 14px; fill: #222; }
+    .small { font-family: "Noto Sans CJK SC", "Droid Sans Fallback", sans-serif; font-size: 12px; fill: #555; }
+    .mono { font-family: monospace; font-size: 12px; fill: #333; }
+    .axis { stroke: #444; stroke-width: 1.2; }
+  </style>
+  <text x="480" y="30" text-anchor="middle" class="title">同一 OFDM 符号的四种视角（N=4、QPSK）</text>
+  <text x="480" y="52" text-anchor="middle" class="small">X_k = {1+j, -1-j, 1-j, -1+j}：四种视角看的是同一组符号，只是投影不同</text>
+
+  <!-- 面板 A：频域线谱（左 60..470, 75..350） -->
+  <rect x="60" y="75" width="400" height="275" rx="8" fill="#F4FAF8" stroke="#00897B" stroke-width="1.3"/>
+  <text x="82" y="102" class="label" font-weight="bold" fill="#00695C">A 频域：X(k) 每个子载波一个符号</text>
+  <text x="82" y="122" class="small">线谱高度 = 幅度 |X_k|（QPSK 全相等）；颜色 = 符号所在象限</text>
+  <line x1="100" y1="310" x2="440" y2="310" stroke="#90A4AE" stroke-width="1.2"/>
+  <line x1="150" y1="260" x2="150" y2="310" stroke="#00897B" stroke-width="14"/>
+  <line x1="220" y1="260" x2="220" y2="310" stroke="#7B1FA2" stroke-width="14"/>
+  <line x1="290" y1="260" x2="290" y2="310" stroke="#B65B2E" stroke-width="14"/>
+  <line x1="360" y1="260" x2="360" y2="310" stroke="#C2185B" stroke-width="14"/>
+  <text x="150" y="250" text-anchor="middle" class="mono">1+j</text>
+  <text x="220" y="250" text-anchor="middle" class="mono">-1-j</text>
+  <text x="290" y="250" text-anchor="middle" class="mono">1-j</text>
+  <text x="360" y="250" text-anchor="middle" class="mono">-1+j</text>
+  <text x="150" y="326" text-anchor="middle" class="small">f₀</text>
+  <text x="220" y="326" text-anchor="middle" class="small">f₁</text>
+  <text x="290" y="326" text-anchor="middle" class="small">f₂</text>
+  <text x="360" y="326" text-anchor="middle" class="small">f₃</text>
+  <text x="265" y="342" text-anchor="middle" class="small">频率 f</text>
+
+  <!-- 面板 B：时域波形（右 490..900, 75..350） -->
+  <rect x="500" y="75" width="400" height="275" rx="8" fill="#F4F6FA" stroke="#1565C0" stroke-width="1.3"/>
+  <text x="512" y="102" class="label" font-weight="bold" fill="#0D47A1">B 时域：x(t) 全部子载波叠加的波形（IFFT 合成）</text>
+  <text x="512" y="122" class="small">IFFT 合成（实部）：每个时刻是全部 X_k 的叠加，实际发射的波形</text>
+  <line x1="520" y1="310" x2="880" y2="310" class="axis"/>
+  <line x1="520" y1="100" x2="520" y2="310" class="axis"/>
+  <polyline points="520.0,180.0 521.5,180.0 523.0,179.9 524.5,179.8 526.0,179.6 527.5,179.4 529.0,179.2 530.5,178.8 532.0,178.5 533.5,178.0 535.0,177.6 536.5,177.0 538.0,176.4 539.5,175.8 541.0,175.1 542.5,174.3 544.0,173.5 545.5,172.7 547.0,171.8 548.5,170.9 550.0,170.0 551.5,169.0 553.0,168.1 554.5,167.0 556.0,166.0 557.5,165.0 559.0,164.0 560.5,163.0 562.0,162.0 563.5,161.0 565.0,160.0 566.5,159.1 568.0,158.1 569.5,157.3 571.0,156.4 572.5,155.7 574.0,154.9 575.5,154.3 577.0,153.7 578.5,153.1 580.0,152.7 581.5,152.3 583.0,152.0 584.5,151.7 586.0,151.6 587.5,151.5 589.0,151.5 590.5,151.6 592.0,151.8 593.5,152.1 595.0,152.4 596.5,152.9 598.0,153.4 599.5,154.0 601.0,154.7 602.5,155.4 604.0,156.2 605.5,157.1 607.0,158.0 608.5,159.0 610.0,160.0 611.5,161.1 613.0,162.2 614.5,163.3 616.0,164.4 617.5,165.6 619.0,166.8 620.5,168.0 622.0,169.1 623.5,170.3 625.0,171.4 626.5,172.5 628.0,173.6 629.5,174.6 631.0,175.6 632.5,176.5 634.0,177.3 635.5,178.1 637.0,178.8 638.5,179.5 640.0,180.0 641.5,180.5 643.0,180.8 644.5,181.1 646.0,181.2 647.5,181.3 649.0,181.2 650.5,181.1 652.0,180.8 653.5,180.5 655.0,180.0 656.5,179.4 658.0,178.7 659.5,178.0 661.0,177.1 662.5,176.1 664.0,175.1 665.5,173.9 667.0,172.7 668.5,171.4 670.0,170.0 671.5,168.6 673.0,167.1 674.5,165.5 676.0,164.0 677.5,162.3 679.0,160.7 680.5,159.1 682.0,157.4 683.5,155.7 685.0,154.1 686.5,152.5 688.0,150.9 689.5,149.3 691.0,147.8 692.5,146.3 694.0,144.9 695.5,143.5 697.0,142.3 698.5,141.1 700.0,140.0 701.5,139.0 703.0,138.1 704.5,137.3 706.0,136.6 707.5,136.1 709.0,135.6 710.5,135.3 712.0,135.1 713.5,135.1 715.0,135.1 716.5,135.3 718.0,135.6 719.5,136.1 721.0,136.7 722.5,137.4 724.0,138.2 725.5,139.2 727.0,140.2 728.5,141.4 730.0,142.7 731.5,144.1 733.0,145.5 734.5,147.1 736.0,148.8 737.5,150.5 739.0,152.3 740.5,154.1 742.0,156.1 743.5,158.0 745.0,160.0 746.5,162.0 748.0,164.1 749.5,166.1 751.0,168.1 752.5,170.2 754.0,172.2 755.5,174.2 757.0,176.2 758.5,178.1 760.0,180.0 761.5,181.8 763.0,183.6 764.5,185.3 766.0,186.9 767.5,188.5 769.0,189.9 770.5,191.3 772.0,192.6 773.5,193.8 775.0,194.9 776.5,195.9 778.0,196.7 779.5,197.5 781.0,198.2 782.5,198.7 784.0,199.2 785.5,199.6 787.0,199.8 788.5,200.0 790.0,200.0 791.5,200.0 793.0,199.8 794.5,199.6 796.0,199.3 797.5,198.9 799.0,198.4 800.5,197.9 802.0,197.3 803.5,196.6 805.0,195.9 806.5,195.2 808.0,194.4 809.5,193.5 811.0,192.7 812.5,191.8 814.0,190.9 815.5,190.0 817.0,189.1 818.5,188.2 820.0,187.3 821.5,186.4 823.0,185.6 824.5,184.8 826.0,184.0 827.5,183.2 829.0,182.5 830.5,181.8 832.0,181.1 833.5,180.5 835.0,180.0 836.5,179.5 838.0,179.1 839.5,178.7 841.0,178.3 842.5,178.0 844.0,177.8 845.5,177.6 847.0,177.5 848.5,177.4 850.0,177.3 851.5,177.3 853.0,177.3 854.5,177.4 856.0,177.5 857.5,177.7 859.0,177.8 860.5,178.0 862.0,178.2 863.5,178.4 865.0,178.6 866.5,178.8 868.0,179.0 869.5,179.2 871.0,179.4 872.5,179.6 874.0,179.7 875.5,179.8 877.0,179.9 878.5,180.0 880.0,180.0" fill="none" stroke="#1565C0" stroke-width="2.0"/>
+    <text x="520" y="326" text-anchor="middle" class="small">t=0</text>
+  <text x="870" y="326" text-anchor="middle" class="small">t=T_u</text>
+  <text x="700" y="342" text-anchor="middle" class="small">时间 t</text>
+
+  <!-- 面板 C：星座（左 60..470, 370..610） -->
+  <rect x="60" y="370" width="400" height="240" rx="8" fill="#FDF8F4" stroke="#B65B2E" stroke-width="1.3"/>
+  <text x="82" y="397" class="label" font-weight="bold" fill="#BF360C">C 复平面：每个 X_k 是一个复数点</text>
+  <text x="82" y="417" class="small">X_k 的位置（幅度+相位）决定它在时域波形里的贡献</text>
+  <line x1="130" y1="505" x2="400" y2="505" stroke="#B0BEC5" stroke-width="1"/>
+  <line x1="265" y1="430" x2="265" y2="580" stroke="#B0BEC5" stroke-width="1"/>
+  <line x1="130" y1="505" x2="400" y2="505" stroke="#B0BEC5" stroke-width="1" stroke-dasharray="5,5"/>
+  <line x1="265" y1="430" x2="265" y2="580" stroke="#B0BEC5" stroke-width="1" stroke-dasharray="5,5"/>
+  <circle cx="310" cy="455" r="5" fill="#00897B"/>
+  <circle cx="220" cy="555" r="5" fill="#7B1FA2"/>
+  <circle cx="310" cy="555" r="5" fill="#B65B2E"/>
+  <circle cx="220" cy="455" r="5" fill="#C2185B"/>
+  <text x="322" y="452" class="mono">X₀=1+j</text>
+  <text x="198" y="572" class="mono">X₁=-1-j</text>
+  <text x="322" y="572" class="mono">X₂=1-j</text>
+  <text x="186" y="452" class="mono">X₃=-1+j</text>
+  <text x="265" y="598" text-anchor="middle" class="small">实部 I（同相）／虚部 Q（正交）</text>
+
+  <!-- 面板 D：资源网格（右 490..900, 370..610） -->
+  <rect x="500" y="370" width="400" height="240" rx="8" fill="#F8F4FD" stroke="#7B1FA2" stroke-width="1.3"/>
+  <text x="512" y="397" class="label" font-weight="bold" fill="#4A148C">D 资源网格：时间 × 频率的二维承载</text>
+  <text class="small"><tspan x="512" y="417">横轴 = 符号（时间）、纵轴 = 子载波（频率）</tspan><tspan x="512" y="436">每格一个 RE 装一个 X_k</tspan></text>
+  <g>
+    <rect x="540" y="470" width="30" height="24" fill="#E0F2F1" stroke="#00897B" stroke-width="1"/>
+    <rect x="570" y="470" width="30" height="24" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1"/>
+    <rect x="600" y="470" width="30" height="24" fill="#FFF3E0" stroke="#B65B2E" stroke-width="1"/>
+    <rect x="630" y="470" width="30" height="24" fill="#FCE4EC" stroke="#C2185B" stroke-width="1"/>
+    <rect x="540" y="494" width="30" height="24" fill="#E0F2F1" stroke="#00897B" stroke-width="1"/>
+    <rect x="570" y="494" width="30" height="24" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1"/>
+    <rect x="600" y="494" width="30" height="24" fill="#FFF3E0" stroke="#B65B2E" stroke-width="1"/>
+    <rect x="630" y="494" width="30" height="24" fill="#FCE4EC" stroke="#C2185B" stroke-width="1"/>
+    <rect x="540" y="518" width="30" height="24" fill="#E0F2F1" stroke="#00897B" stroke-width="1"/>
+    <rect x="570" y="518" width="30" height="24" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1"/>
+    <rect x="600" y="518" width="30" height="24" fill="#FFF3E0" stroke="#B65B2E" stroke-width="1"/>
+    <rect x="630" y="518" width="30" height="24" fill="#FCE4EC" stroke="#C2185B" stroke-width="1"/>
+    <rect x="540" y="542" width="30" height="24" fill="#E0F2F1" stroke="#00897B" stroke-width="1"/>
+    <rect x="570" y="542" width="30" height="24" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="1"/>
+    <rect x="600" y="542" width="30" height="24" fill="#FFF3E0" stroke="#B65B2E" stroke-width="1"/>
+    <rect x="630" y="542" width="30" height="24" fill="#FCE4EC" stroke="#C2185B" stroke-width="1"/>
+  </g>
+  <text x="555" y="487" text-anchor="middle" class="mono">X₀</text>
+  <text x="585" y="487" text-anchor="middle" class="mono">X₁</text>
+  <text x="615" y="487" text-anchor="middle" class="mono">X₂</text>
+  <text x="645" y="487" text-anchor="middle" class="mono">X₃</text>
+  <text x="555" y="511" text-anchor="middle" class="mono">X₃</text>
+  <text x="585" y="511" text-anchor="middle" class="mono">X₀</text>
+  <text x="615" y="511" text-anchor="middle" class="mono">X₁</text>
+  <text x="645" y="511" text-anchor="middle" class="mono">X₂</text>
+  <text x="555" y="535" text-anchor="middle" class="mono">X₂</text>
+  <text x="585" y="535" text-anchor="middle" class="mono">X₃</text>
+  <text x="615" y="535" text-anchor="middle" class="mono">X₀</text>
+  <text x="645" y="535" text-anchor="middle" class="mono">X₁</text>
+  <text x="555" y="559" text-anchor="middle" class="mono">X₁</text>
+  <text x="585" y="559" text-anchor="middle" class="mono">X₂</text>
+  <text x="615" y="559" text-anchor="middle" class="mono">X₃</text>
+  <text x="645" y="559" text-anchor="middle" class="mono">X₀</text>
+  <text x="700" y="598" text-anchor="middle" class="small">符号 l（时间）→；子载波 k（频率）↓</text>
+
+  <!-- 面板间连接箭头 -->
+  <line x1="470" y1="212" x2="490" y2="212" stroke="#5B6B82" stroke-width="1.6"/>
+  <polygon points="490,212 482,208 482,216"/>
+  <polygon points="470,212 478,208 478,216"/>
+  <line x1="265" y1="352" x2="265" y2="366" stroke="#5B6B82" stroke-width="1.6"/>
+  <polygon points="265,366 261,358 269,358"/>
+  <line x1="695" y1="352" x2="695" y2="366" stroke="#5B6B82" stroke-width="1.6"/>
+  <polygon points="695,366 691,358 699,358"/>
+
+  <text x="480" y="634" text-anchor="middle" class="small">读图：A/B 是同一信号的两种表示（IFFT/FFT 互译）；C 是 A 中每个符号的复数位置；D 是这些符号在时间×频率网格上的安放</text>
+</svg>

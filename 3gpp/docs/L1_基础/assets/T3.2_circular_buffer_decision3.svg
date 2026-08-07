@@ -88,9 +88,9 @@
   <text x="540" y="385" text-anchor="middle" font-size="12.5" fill="#334155">K<tspan font-size="9" dy="2">w</tspan> = 3K<tspan font-size="9" dy="2">Π</tspan> = 15（K_Π = 5）</text>
 
   <!-- ============ 场景标注 ============ -->
-  <text x="694" y="168" text-anchor="middle" font-size="11" fill="#BE185D" class="free">① 打孔（E = 8 &lt; K_w = 15）：窗口内比特被读取发送</text>
+  <text x="694" y="168" text-anchor="middle" font-size="11" fill="#BE185D" class="free">(1) 打孔（E = 8 &lt; K_w = 15）：窗口内比特被读取发送</text>
   <text x="366.4" y="586.8" text-anchor="middle" font-size="11" fill="#64748B" class="free">w₈..w₁₄ 未被读取 → 打孔（不发送）</text>
-  <text x="295.7" y="468.9" text-anchor="middle" font-size="11" fill="#6D28D9" class="free">② 重复（E = 20 &gt; K_w = 15）：绕回后从头再读</text>
+  <text x="295.7" y="468.9" text-anchor="middle" font-size="11" fill="#6D28D9" class="free">(2) 重复（E = 20 &gt; K_w = 15）：绕回后从头再读</text>
   <text x="616.2" y="336" text-anchor="middle" font-size="10.5" fill="#6D28D9" class="free">第二圈再读 w₀..w₄</text>
 
   <!-- ============ 图例第一行：流段配色 ============ -->
@@ -110,10 +110,10 @@
   <g font-size="12.5" fill="#334155">
     <rect x="129" y="660" width="190" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
     <rect x="141" y="666" width="16" height="16" rx="2" fill="#BE185D" fill-opacity="0.25" stroke="#BE185D" stroke-width="1.25"/>
-    <text x="165" y="674" dominant-baseline="central">① 打孔窗口（E = 8）</text>
+    <text x="165" y="674" dominant-baseline="central">(1) 打孔窗口（E = 8）</text>
     <rect x="349" y="660" width="190" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
     <rect x="361" y="666" width="16" height="16" rx="2" fill="#6D28D9" fill-opacity="0.25" stroke="#6D28D9" stroke-width="1.25"/>
-    <text x="385" y="674" dominant-baseline="central">② 重复窗口（E = 20）</text>
+    <text x="385" y="674" dominant-baseline="central">(2) 重复窗口（E = 20）</text>
     <rect x="569" y="660" width="170" height="28" rx="2" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.25"/>
     <circle cx="585" cy="674" r="6" fill="#0F172A"/>
     <text x="601" y="674" dominant-baseline="central">RV 0 起点（k₀ = 0）</text>

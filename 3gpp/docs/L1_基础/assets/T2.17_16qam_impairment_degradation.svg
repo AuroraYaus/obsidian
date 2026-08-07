@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- @file  -->
-<!-- @brief 同一 16QAM 星座在四种失真下的退化 -->
-<!-- @date 2026-08-04 -->
-<!-- @note 手绘教学 SVG：坐标程序化计算，已通过 y 扫描/bbox 审计/cairosvg 渲染验证 -->
+<!--
+  @file    T2.17_16qam_impairment_degradation.svg
+  @brief 同一 16QAM 星座在四种失真下的退化
+  @date 2026-08-04
+  @note 手绘教学 SVG：坐标程序化计算，已通过 y 扫描/bbox 审计/cairosvg 渲染验证
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" width="900" height="720">
 <rect width="900" height="720" fill="#ffffff"/>
 <style>
@@ -19,7 +21,7 @@
 </style>
 <text x="450.0" y="30" text-anchor="middle" class="title">同一 16QAM 星座在四种失真下的退化</text>
 <text x="450.0" y="56" text-anchor="middle" class="sub">协议映射（TS 38.211 §5.1.4）定义干净星座；同步、信道与发射失真分别改变点的位置、尺度与散布</text>
-<text x="32" y="98" class="ptitle">① 干净星座：协议 16 点</text>
+<text x="32" y="98" class="ptitle">(1) 干净星座：协议 16 点</text>
 <line x1="248.0" y1="108" x2="248.0" y2="360" class="axis"/>
 <line x1="311.2" y1="108" x2="311.2" y2="360" class="bound"/>
 <text x="311.2" y="366" text-anchor="middle" class="label">+2a</text>
@@ -49,7 +51,7 @@
 <circle cx="342.9" cy="202.4" r="4.2" fill="#00796B" opacity="0.9"/>
 <circle cx="342.9" cy="139.1" r="4.2" fill="#00796B" opacity="0.9"/>
 <text x="32" y="390" class="small">点坐标 = (1/√10)(1−2b)·(2−(1−2b′))，判决边界在 0 与 ±2a</text>
-<text x="464" y="98" class="ptitle">② 相位噪声 / 残余 CFO：整体旋转</text>
+<text x="464" y="98" class="ptitle">(2) 相位噪声 / 残余 CFO：整体旋转</text>
 <line x1="680.0" y1="108" x2="680.0" y2="360" class="axis"/>
 <line x1="743.2" y1="108" x2="743.2" y2="360" class="bound"/>
 <text x="743.2" y="366" text-anchor="middle" class="label">+2a</text>
@@ -97,7 +99,7 @@
 <path d="M 713.6227766016838 198.3772233983162 A 46 46 0 0 0 697.6227766016838 230.3772233983162" fill="none" stroke="#E65100" stroke-width="1.8"/>
 <text x="725.6" y="192.4" class="small" fill="#E65100">旋转 −20°</text>
 <text x="464" y="390" class="small">每个符号旋转同一角度 θ → 全部点到判决边界的裕量改变</text>
-<text x="32" y="424" class="ptitle">③ PA 非线性 / 削峰：外层点压缩内收</text>
+<text x="32" y="424" class="ptitle">(3) PA 非线性 / 削峰：外层点压缩内收</text>
 <line x1="248.0" y1="434" x2="248.0" y2="686" class="axis"/>
 <line x1="311.2" y1="434" x2="311.2" y2="686" class="bound"/>
 <text x="311.2" y="692" text-anchor="middle" class="label">+2a</text>
@@ -145,7 +147,7 @@
 <text x="334.9" y="479.1" class="small" fill="#AD1457">外点压缩 40%</text>
 <text x="275.6" y="522.4" class="small">内点几乎不动</text>
 <text x="32" y="716" class="small">幅度越大压缩越强 → 外层比特的判决边界裕量最先消失</text>
-<text x="464" y="424" class="ptitle">④ 噪声与干扰：点散布为团簇</text>
+<text x="464" y="424" class="ptitle">(4) 噪声与干扰：点散布为团簇</text>
 <line x1="680.0" y1="434" x2="680.0" y2="686" class="axis"/>
 <line x1="743.2" y1="434" x2="743.2" y2="686" class="bound"/>
 <text x="743.2" y="692" text-anchor="middle" class="label">+2a</text>

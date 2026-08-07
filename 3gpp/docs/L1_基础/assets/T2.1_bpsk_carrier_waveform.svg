@@ -24,7 +24,7 @@
 <line x1="74" y1="315" x2="80" y2="315" class="tick"/>
 <text x="70" y="319" text-anchor="end" class="label" fill="#C62828">-1 (bit 1)</text>
 <text x="440" y="389" text-anchor="middle" class="label">时间</text>
-<text x="18" y="220" text-anchor="middle" class="label" transform="rotate(-90,18,220)">幅度</text>
+<text x="20" y="220" text-anchor="middle" class="label" transform="rotate(-90,20,220)">幅度</text>
 
 <line x1="80" y1="75" x2="80" y2="365" class="boundary"/>
 <line x1="200" y1="75" x2="200" y2="365" class="boundary"/>

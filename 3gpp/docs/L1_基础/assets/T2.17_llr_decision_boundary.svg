@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- @file  -->
-<!-- @brief 16QAM 一维判决边界与 LLR 软输出曲线 -->
-<!-- @date 2026-08-04 -->
-<!-- @note 手绘教学 SVG：坐标程序化计算，已通过 y 扫描/bbox 审计/cairosvg 渲染验证 -->
+<!--
+  @file    T2.17_llr_decision_boundary.svg
+  @brief 16QAM 一维判决边界与 LLR 软输出曲线
+  @date 2026-08-04
+  @note 手绘教学 SVG：坐标程序化计算，已通过 y 扫描/bbox 审计/cairosvg 渲染验证
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" width="900" height="720">
 <rect width="900" height="720" fill="#ffffff"/>
 <style>

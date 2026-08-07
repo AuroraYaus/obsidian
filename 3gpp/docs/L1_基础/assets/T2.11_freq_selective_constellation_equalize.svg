@@ -41,7 +41,7 @@
 
 <rect x="60" y="80" width="250" height="480" rx="10" class="card"/>
 <rect x="60" y="80" width="250" height="46" rx="10" class="head-a"/>
-<text x="185" y="98" text-anchor="middle" class="label" fill="#1B5E20">子载波 A：平坦 |H|=1</text>
+<text x="185" y="101" text-anchor="middle" class="label" fill="#1B5E20">子载波 A：平坦 |H|=1</text>
 <text x="185" y="116" text-anchor="middle" class="small" fill="#1B5E20">均衡器：ZF</text>
 
 <text x="185" y="152" text-anchor="middle" class="small">均衡前：Y=X+n</text>

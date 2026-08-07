@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- @file  -->
-<!-- @brief T2.7–T2.19 失真源到 LLR 错误的传播链 -->
-<!-- @date 2026-08-04 -->
-<!-- @note 手绘教学 SVG：坐标程序化计算，已通过 y 扫描/bbox 审计/cairosvg 渲染验证 -->
+<!--
+  @file    T2.17_impairment_to_llr_chain.svg
+  @brief T2.7–T2.19 失真源到 LLR 错误的传播链
+  @date 2026-08-04
+  @note 手绘教学 SVG：坐标程序化计算，已通过 y 扫描/bbox 审计/cairosvg 渲染验证
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" width="900" height="720">
 <rect width="900" height="720" fill="#ffffff"/>
 <style>

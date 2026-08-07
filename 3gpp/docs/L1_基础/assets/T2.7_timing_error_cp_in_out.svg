@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- @file T2.7_timing_error_cp_in_out.svg
      @brief CP 内误差 vs CP 外误差对比图：
-            场景①窗口起点在 CP 内（提前 4 采样）→ 循环卷积成立，仅频域线性相位（可被信道估计吸收）；
-            场景②窗口起点越出 CP（延后 12 采样）→ 循环卷积破坏，ISI/ICI 污染（子载波泄漏 + 星座 EVM 劣化）。
+            场景(1)窗口起点在 CP 内（提前 4 采样）→ 循环卷积成立，仅频域线性相位（可被信道估计吸收）；
+            场景(2)窗口起点越出 CP（延后 12 采样）→ 循环卷积破坏，ISI/ICI 污染（子载波泄漏 + 星座 EVM 劣化）。
      @date 2026-08-04
      @note 左列时间条带（比例 2 px/采样），右列频域相位与星座观测；
-            场景②窗口尾部 12 个采样取自符号 N+1（橙红加深区）。
+            场景(2)窗口尾部 12 个采样取自符号 N+1（橙红加深区）。
             语义色系（按本节讲义自定）：有用数据=紫罗兰、CP/保护=深青、
             污染/越界=橙红、中性=灰。 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 660" width="940" height="660">
@@ -19,7 +19,7 @@
 <text x="470" y="32" text-anchor="middle" class="title" font-size="19" font-weight="bold" fill="#111">CP 内误差与 CP 外误差：两种截然不同的后果</text>
 <text x="470" y="56" text-anchor="middle" class="small" font-size="12" fill="#555">左列：FFT 窗口在符号条带上的位置；右列：对应的频域相位 / 子载波泄漏与星座观测</text>
 
-<text x="60" y="80" class="label" font-size="15" font-weight="bold" fill="#00695C">场景 ①：FFT 起点落在 CP 内（提前 4 采样）—— 循环卷积成立，仅相位参考平移</text>
+<text x="60" y="80" class="label" font-size="15" font-weight="bold" fill="#00695C">场景 (1)：FFT 起点落在 CP 内（提前 4 采样）—— 循环卷积成立，仅相位参考平移</text>
 <text x="70" y="104" text-anchor="middle" class="small" font-size="12" fill="#333">CP</text>
 <text x="200" y="104" text-anchor="middle" class="small" font-size="12" fill="#333">T_u（N = 128）</text>
 <text x="368" y="104" text-anchor="middle" class="small" font-size="12" fill="#333">符号 N+1</text>
@@ -44,7 +44,7 @@
 
 <line x1="60" y1="360" x2="880" y2="360" stroke="#9E9E9E" stroke-width="1.2"/>
 
-<text x="60" y="384" class="label" font-size="15" font-weight="bold" fill="#D84315">场景 ②：FFT 起点越出 CP（延后 12 采样）—— 循环卷积破坏，ISI + ICI</text>
+<text x="60" y="384" class="label" font-size="15" font-weight="bold" fill="#D84315">场景 (2)：FFT 起点越出 CP（延后 12 采样）—— 循环卷积破坏，ISI + ICI</text>
 <text x="70" y="408" text-anchor="middle" class="small" font-size="12" fill="#333">CP</text>
 <text x="200" y="408" text-anchor="middle" class="small" font-size="12" fill="#333">T_u（N = 128）</text>
 <text x="368" y="408" text-anchor="middle" class="small" font-size="12" fill="#333">符号 N+1</text>
