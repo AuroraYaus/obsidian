@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="740" viewBox="0 0 1240 740" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style>
+  </defs>
+
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">LTE Turbo 浮点仿真链路（T17.2）</text>
+
+  <!-- 发送侧 4 节点：y 90..190，中心 y=140 -->
+  <g>
+    <rect x="75" y="90" width="250" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="200" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Protocol Config</text>
+    <text x="200" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">TS 36.212 refs · TB size</text>
+    <text x="200" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">CRC · K/f1/f2 · RV · max_iter</text>
+  </g>
+  <g>
+    <rect x="355" y="90" width="250" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="480" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">TB/CB Builder</text>
+    <text x="480" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">Payload · TB CRC · CB 分段</text>
+    <text x="480" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">filler · CB CRC metadata</text>
+  </g>
+  <g>
+    <rect x="635" y="90" width="250" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="760" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Turbo Encoder</text>
+    <text x="760" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">RSC pair · 内部交织器</text>
+    <text x="760" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">系统/校验/尾比特流</text>
+  </g>
+  <g>
+    <rect x="915" y="90" width="250" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="1040" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Rate Matching + RV</text>
+    <text x="1040" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">子块交织 · 循环缓存</text>
+    <text x="1040" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">rvidx · E · 接收位置</text>
+  </g>
+
+  <!-- 发送链箭头 -->
+  <line x1="325" y1="140" x2="351" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="605" y1="140" x2="631" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="885" y1="140" x2="911" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Rate Matching → AWGN 折线 -->
+  <polyline points="1040,190 1040,240 620,240 620,276" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- AWGN + LLR：y 280..360，中心 y=320 -->
+  <g>
+    <rect x="420" y="280" width="400" height="80" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="620" y="310" text-anchor="middle" dominant-baseline="central" class="node-title">AWGN + LLR</text>
+    <text x="620" y="332" text-anchor="middle" dominant-baseline="central" class="node-text">Eb/N0 扫描 · 噪声 seed</text>
+    <text x="620" y="348" text-anchor="middle" dominant-baseline="central" class="node-text">BPSK/QPSK 软解调</text>
+  </g>
+
+  <!-- AWGN → Decoder 垂直箭头 -->
+  <line x1="620" y1="360" x2="620" y2="416" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Decoder：y 420..520，中心 y=470 -->
+  <g>
+    <rect x="370" y="420" width="500" height="100" rx="8" fill="#f0fdf4" stroke="#334155" stroke-width="1.5"/>
+    <text x="620" y="452" text-anchor="middle" dominant-baseline="central" class="node-title">Decoder</text>
+    <text x="620" y="476" text-anchor="middle" dominant-baseline="central" class="node-text">rate recovery · HARQ 软合并</text>
+    <text x="620" y="492" text-anchor="middle" dominant-baseline="central" class="node-text">Log-MAP / Max-Log-MAP · CB/TB CRC</text>
+  </g>
+
+  <!-- Decoder → 三路输出折线 -->
+  <polyline points="620,520 620,550 250,550 250,576" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="620" y1="520" x2="620" y2="576" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <polyline points="620,520 620,550 990,550 990,576" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 三路输出：y 580..680 -->
+  <g>
+    <rect x="80" y="580" width="340" height="100" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="250" y="606" text-anchor="middle" dominant-baseline="central" class="node-title">Decoder Trace</text>
+    <text x="250" y="636" text-anchor="middle" dominant-baseline="central" class="node-text">frame_id · cb_index · K·K±·filler</text>
+    <text x="250" y="660" text-anchor="middle" dominant-baseline="central" class="node-text">rv · iter_used · crc_pass · mismatch</text>
+  </g>
+  <g>
+    <rect x="450" y="580" width="340" height="100" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="620" y="606" text-anchor="middle" dominant-baseline="central" class="node-title">BLER/BER 输出</text>
+    <text x="620" y="636" text-anchor="middle" dominant-baseline="central" class="node-text">metrics.csv</text>
+    <text x="620" y="660" text-anchor="middle" dominant-baseline="central" class="node-text">snr_db · frames · BLER · avg_iter</text>
+  </g>
+  <g>
+    <rect x="820" y="580" width="340" height="100" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="990" y="606" text-anchor="middle" dominant-baseline="central" class="node-title">可复现归档</text>
+    <text x="990" y="636" text-anchor="middle" dominant-baseline="central" class="node-text">config · command · seeds</text>
+    <text x="990" y="660" text-anchor="middle" dominant-baseline="central" class="node-text">frames.jsonl · failures · evidence</text>
+  </g>
+
+  <rect x="330" y="688" width="580" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="710" text-anchor="middle" dominant-baseline="central" class="note">工程验收边界：BLER 阈值是项目验收线，不是 3GPP 协议门限</text>
+</svg>

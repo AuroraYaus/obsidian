@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="700" viewBox="0 0 1240 700" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style>
+  </defs>
+
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">BER/BLER 曲线报告总览（T17.5）</text>
+
+  <!-- 上链 4 节点：y 90..190，中心 y=140 -->
+  <g>
+    <rect x="75" y="90" width="250" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="200" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Simulation Runs</text>
+    <text x="200" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">Turbo · LDPC · Polar 仿真</text>
+    <text x="200" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">metrics.csv · frames.jsonl · seed</text>
+  </g>
+  <g>
+    <rect x="355" y="90" width="250" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="480" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Normalized CSV</text>
+    <text x="480" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">统一字段口径</text>
+    <text x="480" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">raw counts 先于比值</text>
+  </g>
+  <g>
+    <rect x="635" y="90" width="250" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="760" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Curve Builder</text>
+    <text x="760" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">只读 CSV 与证据路径</text>
+    <text x="760" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">不手工改点</text>
+  </g>
+  <g>
+    <rect x="915" y="90" width="250" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="1040" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Report Package</text>
+    <text x="1040" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">曲线图 · 原始 CSV · 命令</text>
+    <text x="1040" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">协议锚点 · 失败 replay</text>
+  </g>
+
+  <!-- 上链箭头 -->
+  <line x1="325" y1="140" x2="351" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="605" y1="140" x2="631" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="885" y1="140" x2="911" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- N4 → 曲线面板 -->
+  <polyline points="1040,190 1040,225 620,225 620,246" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 曲线面板：y 250..480 -->
+  <g>
+    <rect x="320" y="250" width="600" height="230" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="1.5"/>
+    <text x="620" y="272" text-anchor="middle" dominant-baseline="central" class="node-title">Report-Ready BLER Curve</text>
+    <!-- y 轴 x=400，x 轴 y=440 -->
+    <line x1="400" y1="295" x2="400" y2="440" stroke="#64748b" stroke-width="1.2"/>
+    <line x1="400" y1="440" x2="860" y2="440" stroke="#64748b" stroke-width="1.2"/>
+    <text x="392" y="300" text-anchor="end" dominant-baseline="central" class="node-text">1e-1</text>
+    <text x="392" y="350" text-anchor="end" dominant-baseline="central" class="node-text">1e-2</text>
+    <text x="392" y="400" text-anchor="end" dominant-baseline="central" class="node-text">1e-3</text>
+    <text x="450" y="456" text-anchor="middle" dominant-baseline="central" class="node-text">1.0</text>
+    <text x="620" y="456" text-anchor="middle" dominant-baseline="central" class="node-text">2.0</text>
+    <text x="790" y="456" text-anchor="middle" dominant-baseline="central" class="node-text">3.0</text>
+    <!-- 曲线：BLER 随 Eb/N0 单调下降 -->
+    <path d="M410,298 C 480,312 560,330 640,348 C 720,372 800,408 852,432" fill="none" stroke="#2563eb" stroke-width="2"/>
+    <!-- 异常点 -->
+    <circle cx="700" cy="358" r="5" fill="#dc2626"/>
+    <text x="700" y="338" text-anchor="middle" dominant-baseline="central" class="node-text">anomaly</text>
+    <text x="620" y="470" text-anchor="middle" dominant-baseline="central" class="note">横轴 Eb/N0 (dB) · 纵轴 BLER（log scale，1e-1 ~ 1e-3）</text>
+  </g>
+
+  <!-- 面板 → 诊断链 -->
+  <polyline points="620,480 620,465 250,465 250,496" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 诊断链 3 节点：y 500..600 -->
+  <g>
+    <rect x="80" y="500" width="340" height="100" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="250" y="526" text-anchor="middle" dominant-baseline="central" class="node-title">曲线异常定位</text>
+    <text x="250" y="556" text-anchor="middle" dominant-baseline="central" class="node-text">non-monotonic · 零错误点</text>
+    <text x="250" y="580" text-anchor="middle" dominant-baseline="central" class="node-text">wide CI · algorithm gap</text>
+  </g>
+  <g>
+    <rect x="450" y="500" width="340" height="100" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="620" y="526" text-anchor="middle" dominant-baseline="central" class="node-title">SNR row 展开</text>
+    <text x="620" y="556" text-anchor="middle" dominant-baseline="central" class="node-text">按 metrics.csv 行定位</text>
+    <text x="620" y="580" text-anchor="middle" dominant-baseline="central" class="node-text">错误块统计 · 保存标志</text>
+  </g>
+  <g>
+    <rect x="820" y="500" width="340" height="100" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="990" y="526" text-anchor="middle" dominant-baseline="central" class="node-title">失败样本 Replay</text>
+    <text x="990" y="556" text-anchor="middle" dominant-baseline="central" class="node-text">打开完整 dump</text>
+    <text x="990" y="580" text-anchor="middle" dominant-baseline="central" class="node-text">replay 命令复现</text>
+  </g>
+
+  <!-- 诊断链箭头 -->
+  <line x1="420" y1="550" x2="446" y2="550" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="790" y1="550" x2="816" y2="550" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="330" y="640" width="580" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="662" text-anchor="middle" dominant-baseline="central" class="note">统计口径：min frames · min errors · max frames · stop reason 必须写入报告</text>
+</svg>

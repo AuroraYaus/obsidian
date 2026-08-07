@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="740" viewBox="0 0 1240 740" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style>
+  </defs>
+
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">NR Polar 浮点仿真链路（T17.4）</text>
+
+  <!-- 发送侧 5 节点：y 90..190，中心 y=140 -->
+  <g>
+    <rect x="38" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="145" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Protocol Config</text>
+    <text x="145" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">TS 38.212 refs · 信道</text>
+    <text x="145" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">A/K/E/N · CRC/RNTI · L · seed</text>
+  </g>
+  <g>
+    <rect x="275" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="382" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">UCI/DCI Builder</text>
+    <text x="382" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">payload · CRC bits</text>
+    <text x="382" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">RNTI mask · field metadata</text>
+  </g>
+  <g>
+    <rect x="512" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="619" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Polar Constructor</text>
+    <text x="619" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">reliability sequence</text>
+    <text x="619" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">information/frozen set · PC</text>
+  </g>
+  <g>
+    <rect x="749" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="856" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Polar Encoder</text>
+    <text x="856" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">Polar 变换参考</text>
+    <text x="856" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">bit order · codeword 位置</text>
+  </g>
+  <g>
+    <rect x="986" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="1093" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Rate Match</text>
+    <text x="1093" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">sub-block 交织 · 选择</text>
+    <text x="1093" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">puncture/shorten/repeat</text>
+  </g>
+
+  <!-- 发送链箭头 -->
+  <line x1="253" y1="140" x2="271" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="490" y1="140" x2="508" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="727" y1="140" x2="745" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="964" y1="140" x2="982" y2="140" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Rate Match → AWGN 折线 -->
+  <polyline points="1093,190 1093,225 620,225 620,276" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- AWGN + LLR -->
+  <g>
+    <rect x="420" y="280" width="400" height="80" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="620" y="310" text-anchor="middle" dominant-baseline="central" class="node-title">AWGN + LLR</text>
+    <text x="620" y="332" text-anchor="middle" dominant-baseline="central" class="node-text">Eb/N0 扫描 · POS_ZERO</text>
+    <text x="620" y="348" text-anchor="middle" dominant-baseline="central" class="node-text">effective rate · seeds</text>
+  </g>
+
+  <!-- AWGN → Decoder -->
+  <line x1="620" y1="360" x2="620" y2="416" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Decoder Sweep -->
+  <g>
+    <rect x="340" y="420" width="560" height="100" rx="8" fill="#f0fdf4" stroke="#334155" stroke-width="1.5"/>
+    <text x="620" y="452" text-anchor="middle" dominant-baseline="central" class="node-title">Decoder Sweep</text>
+    <text x="620" y="476" text-anchor="middle" dominant-baseline="central" class="node-text">SC / SCL / CA-SCL</text>
+    <text x="620" y="492" text-anchor="middle" dominant-baseline="central" class="node-text">L = 1·2·4·8·16 · PM 与 node 统计</text>
+  </g>
+
+  <!-- Decoder → 两路输出 -->
+  <polyline points="620,520 620,550 330,550 330,576" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <polyline points="620,520 620,550 910,550 910,576" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 两路输出：y 580..680 -->
+  <g>
+    <rect x="80" y="580" width="500" height="100" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="330" y="606" text-anchor="middle" dominant-baseline="central" class="node-title">CRC/RNTI + Metrics</text>
+    <text x="330" y="636" text-anchor="middle" dominant-baseline="central" class="node-text">candidate CRC · RNTI check</text>
+    <text x="330" y="660" text-anchor="middle" dominant-baseline="central" class="node-text">selected path · BLER · avg list ops</text>
+  </g>
+  <g>
+    <rect x="660" y="580" width="500" height="100" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="910" y="606" text-anchor="middle" dominant-baseline="central" class="node-title">Failure Replay Archive</text>
+    <text x="910" y="636" text-anchor="middle" dominant-baseline="central" class="node-text">config · seeds · vector.json · LLR</text>
+    <text x="910" y="660" text-anchor="middle" dominant-baseline="central" class="node-text">path traces · CRC evidence · plots</text>
+  </g>
+
+  <rect x="330" y="688" width="580" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="710" text-anchor="middle" dominant-baseline="central" class="note">Engineering Checks：list sweep 必须使用相同 payload/noise seeds；latency proxy 是工程目标</text>
+</svg>
