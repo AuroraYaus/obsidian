@@ -12,7 +12,7 @@ source_spec: "docs/audits/image_asset_inventory.md"
 
 审查时间：2026-06-21  
 范围：`docs/L1_基础/assets/*.png`、`docs/L2_协议算法/assets/*.png`、`docs/L3_工程实现/assets/*.png`、`tools/archive_python_drawing/figures/*.py`。  
-结论：当前 `docs/L1_基础/L2/L3/assets` 共有 68 张 PNG，其中 L1 5 张、L2 40 张、L3 23 张；`tools/figures` 共有 58 个 Python 文件，其中 57 个 `render_*.py` 绘图脚本和 1 个共享 helper `figure_text_fit.py`。只读边界检查只能证明文件没有明显贴边裁切，不能证明局部视觉审计通过；本清单记录资产、脚本、来源和历史风险，后续修改任一图片时仍必须逐图执行 `合规与遵从.md` 的 Python 图片视觉审计规则，并按 `docs/audits/python_figure_visual_geometry_checklist.md` 记录局部几何证据。
+结论：当前 `docs/L1_基础/L2/L3/assets` 共有 68 张 PNG，其中 L1 5 张、L2 40 张、L3 23 张；`tools/figures` 共有 58 个 Python 文件，其中 57 个 `render_*.py` 绘图脚本和 1 个共享 helper `figure_text_fit.py`。只读边界检查只能证明文件没有明显贴边裁切，不能证明视觉审计通过；本清单记录资产、脚本、来源和历史风险。2026-08-07 绘图政策变更：Python 绘图工具已归档 `tools/archive_python_drawing/`，视觉验证统一走 `tools/audit_svg_layout.py`（SVG）与 `tools/audit_plantuml_syntax.sh`（PlantUML 渲染）。
 
 当前加严标准：表格正文、表头、首列、图例和说明框教学文字原则上不低于 24px，表格行高原则上不低于 56px；20-23px 只允许作为坐标轴刻度、码位小标签、环形缓存短索引等辅助标注，并必须有更大字号的说明区补偿。旧的 20px/48px 记录只作为历史快照，不再作为当前验收门槛。
 
