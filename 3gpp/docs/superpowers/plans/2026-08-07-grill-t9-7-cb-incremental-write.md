@@ -14,7 +14,7 @@ _Locked via grill — by Claude + 用户_
    - 新增地址级覆盖演化表格例子（6 地址 × 3 轮，展示"未覆盖→中性 LLR"）
    - 学习目标 7 → 6 条（第 7 条改为触发视角）
    - 自测题：第 5 题（CBG 分组手算）移除，补 1 道覆盖演化题
-2. **新建 T9.8_CBG 讲义**（docs/L2_协议算法/T9.8_CBG_码块组系统讲解.md）：引入动机（R15）、配置参数、分组公式与 C=10/N=4 推导、CBGTI/CBGFI 完整语义、反馈流程、与 TB 粒度 HARQ 对比表
+2. **新建 T9.8_CBG 讲义**（docs/L2_协议算法/T9.8_CBG_code_block_group.md）：引入动机（R15）、配置参数、分组公式与 C=10/N=4 推导、CBGTI/CBGFI 完整语义、反馈流程、与 TB 粒度 HARQ 对比表
 3. **验证**：latex 审计、标题审计、Mermaid 可渲染、T9.7 图审计（已有图不动）
 4. **提交双推**（git push origin master）
 
