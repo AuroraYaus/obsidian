@@ -118,7 +118,7 @@ source_spec: "Local project instructions"
 1. **使用时机**：遇到用户纠错、新问题、或规则未覆盖的场景，**先查经验库**（grep `docs/audits/lessons/` 关键字）是否已有同类教训——避免重复踩坑（每一条 lesson 都对应一次真实返工）。
 2. **维护流程**（配合第 7 条纠错固化元规则）：新教训 → 写入 `docs/audits/lessons/lesson-<主题>.md`（含根因 + How to apply）→ 更新 `项目规则与记忆索引.md` 第七节登记表 → `git push origin master`（自动双推 Gitee+GitHub）。
 3. **规则的可执行形态**：CLAUDE.md 各条、`合规与遵从.md`、`tools/audit_*.py`（审计工具即规则）均为经验的落地；经验库记录的是"为什么"。
-4. **本地-云端双写机制**：`~/.claude/projects/<项目>/memory/` 是 auto-memory 工作层（会话自动加载，保留不动）；新经验**双写**——本地 memory + 项目仓库 `docs/audits/lessons/`（或 ic/docs/lessons、workspace-memory），映射关系见 `docs/audits/lessons/同步映射表-本地与云端.md`。删除本地 projects 目录不影响云端。
+4. **本地-云端双写机制**：`~/.claude/projects/<项目>/memory/` 是 auto-memory 工作层（会话自动加载，保留不动）；新经验**双写**——本地 memory + 项目仓库 `docs/audits/lessons/`（或 ic/docs/lessons、workspace-memory）。删除本地 projects 目录不影响云端。
 
 ### 11. 合规基线
 
