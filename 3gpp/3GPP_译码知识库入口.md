@@ -20,7 +20,6 @@ source_spec: "Local vault index"
 - [[3gpp/docs/concepts/概念图谱入口]]
 - Rel-19 协议下载清单：`3gpp/3GPP_Rel19/Rel19_协议下载清单.md`
 - [[3gpp/docs/3GPP_讲义入口]]
-- [[3gpp/2026-06-19-lte-nr-decoding-learning-roadmap]]
 - [[3gpp/sim/python/L0_crc_gf2/L0_CRC_GF2_仿真入口]]
 - [[3gpp/CLAUDE]]
 - [[3gpp/合规与遵从]]
