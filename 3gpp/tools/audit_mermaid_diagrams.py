@@ -204,13 +204,18 @@ def render_block(block: MermaidBlock, mmdc: str, puppeteer_config: Path, out_dir
     source = out_dir / f"{block.path.name}.{block.index}.mmd"
     output = out_dir / f"{block.path.name}.{block.index}.svg"
     source.write_text(block.text + "\n", encoding="utf-8")
-    proc = subprocess.run(
-        [mmdc, "-p", str(puppeteer_config), "-i", str(source), "-o", str(output), "-b", "transparent"],
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        timeout=45,
-    )
+    try:
+        proc = subprocess.run(
+            [mmdc, "-p", str(puppeteer_config), "-i", str(source), "-o", str(output), "-b", "transparent"],
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=45,
+        )
+    except subprocess.TimeoutExpired:
+        return Finding(block.path, block.line, "render_failed", "mmdc render timed out (45s)")
+    except FileNotFoundError:
+        return Finding(block.path, block.line, "render_failed", "mmdc binary not found")
     if proc.returncode == 0 and output.exists() and output.stat().st_size > 0:
         return None
     detail = (proc.stdout + proc.stderr).strip().splitlines()

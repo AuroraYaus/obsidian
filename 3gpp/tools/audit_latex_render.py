@@ -108,7 +108,12 @@ def render_with_katex(formula: Formula, katex_bin: str) -> str | None:
         cmd = [katex_bin, "--input", str(input_path)]
         if formula.display:
             cmd.append("--display-mode")
-        proc = subprocess.run(cmd, text=True, capture_output=True, timeout=10)
+        try:
+            proc = subprocess.run(cmd, text=True, capture_output=True, timeout=10)
+        except subprocess.TimeoutExpired:
+            return f"{formula.path}:{formula.line}: KaTeX render timed out (10s)"
+        except FileNotFoundError:
+            return f"{formula.path}:{formula.line}: KaTeX binary not found: {katex_bin}"
         if proc.returncode != 0:
             snippet = " ".join(formula.body.split())[:160]
             detail = (proc.stderr or proc.stdout).strip().splitlines()

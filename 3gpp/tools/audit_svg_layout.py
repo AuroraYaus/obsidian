@@ -68,6 +68,17 @@ def text_metrics(text: str, size: float, bold: bool) -> tuple[float, float]:
     return w, h
 
 
+def _safe_float(val, default):
+    """@brief 安全转 float：解析失败返回默认值（防 font-size 带 pt/em/!important 等崩溃）。
+    @param val 输入字符串
+    @param default 失败默认值
+    @return float"""
+    try:
+        return float(str(val).split("!")[0].strip())
+    except (TypeError, ValueError):
+        return default
+
+
 def strip_ns(tag: str) -> str:
     """@brief 去除 XML 命名空间前缀。
     @param tag 原始标签名
@@ -78,7 +89,7 @@ def strip_ns(tag: str) -> str:
 def parse_svg(path: Path) -> tuple[list[dict], list[dict], list[dict], list[dict]]:
     """@brief 解析 SVG：收集矩形、文字、箭头 path、箭头三角 polygon。
     @param path SVG 文件路径
-    @return (rects, texts, paths, polygons) 四个列表，元素为几何字典
+    @return (rects, texts, paths, polygons, circles, W, H) 七个值，前四个为几何字典列表
     @note rect 元素含 x/y/w/h/rx；text 元素含 x/y/size/bold/class/text；
      path 元素只收集含 M/L 且以 L 结尾、用作箭头的路径（忽略纯装饰 path）；
      polygon 元素收集包围盒（箭头三角），供 R9 检查。
@@ -139,7 +150,7 @@ def parse_svg(path: Path) -> tuple[list[dict], list[dict], list[dict], list[dict
             )
         elif tag == "polygon":
             pts_txt = el.get("points", "")
-            nums = [float(v) for v in re.findall(r"[\d.]+", pts_txt)]
+            nums = [float(v) for v in re.findall(r"[-+]?(?:\d+\.?\d*|\.\d+)", pts_txt)]
             if len(nums) >= 6:  # 至少一个三角形
                 xs = nums[0::2]
                 ys = nums[1::2]
@@ -153,10 +164,10 @@ def parse_svg(path: Path) -> tuple[list[dict], list[dict], list[dict], list[dict
                     }
                 )
         elif tag == "rect":
-            x = float(el.get("x", "0"))
-            y = float(el.get("y", "0"))
-            w = float(el.get("width", "0"))
-            h = float(el.get("height", "0"))
+            x = _safe_float(el.get("x", "0"), 0)
+            y = _safe_float(el.get("y", "0"), 0)
+            w = _safe_float(el.get("width", "0"), 0)
+            h = _safe_float(el.get("height", "0"), 0)
             if w <= 0 or h <= 0:
                 return
             rects.append(
@@ -176,7 +187,7 @@ def parse_svg(path: Path) -> tuple[list[dict], list[dict], list[dict], list[dict
             cls_style = css_classes.get(el.get("class", ""), {})
             css_size = cls_style.get("font-size", "")
             css_fw = cls_style.get("font-weight", "")
-            size = float((inh.get("font-size") or el.get("font-size") or css_size or "12").replace("px", ""))
+            size = _safe_float((inh.get("font-size") or el.get("font-size") or css_size or "12").replace("px", ""), 12)
             fw = inh.get("font-weight") or el.get("font-weight") or css_fw or ""
             bold = "700" in fw or "bold" in fw.lower()
             # tspan 局部加粗：任一行加粗则整 text 按 bold 度量（保守，防低估超边）
@@ -220,7 +231,7 @@ def parse_svg(path: Path) -> tuple[list[dict], list[dict], list[dict], list[dict
         elif tag == "path":
             d = el.get("d", "")
             # 支持 M/L/H/V 命令的简单路径（手绘 SVG 箭头只用这四种）
-            tok_re = re.compile(r"([MLHV])\s*([-\d.]+)?[,\s]*([-\d.]+)?")
+            tok_re = re.compile(r"([MLHVmlhv])\s*([-+]?(?:\d+\.?\d*|\.\d+))?[,\s]*([-+]?(?:\d+\.?\d*|\.\d+))?")
             pts: list[tuple[float, float]] = []
             move_idx: list[int] = []  # M 起点索引（子路径分段点）
             cur: tuple[float, float] | None = None
@@ -317,7 +328,7 @@ def text_box(t: dict) -> tuple[float, float, float, float]:
 
 
 def audit_file(path: Path) -> tuple[bool, list[str]]:
-    """@brief 审计单个 SVG 文件的九条几何规则。
+    """@brief 审计单个 SVG 文件的 R1-R11 几何规则。
     @param path SVG 文件路径
     @return (是否全部通过, 发现列表)
     @note 每条发现格式 "规则编号: 描述"；R8/R9 教训来源见文件头 @note。
@@ -369,6 +380,8 @@ def audit_file(path: Path) -> tuple[bool, list[str]]:
 
     # (5) 箭头 path 终点落在某条盒边上（用未缩进矩形 + 容差，圆角内缩不适用边缘点）
     for k, p in enumerate(paths):
+        if len(p["pts"]) >= 8:
+            continue  # 曲线（波形等）终点无需落盒边——2026-08-07 S1 修复
         ex, ey = p["pts"][-1]
         hit = any(
             (r["x"] - 2.5 <= ex <= r["x"] + r["w"] + 2.5 and r["y"] - 2.5 <= ey <= r["y"] + r["h"] + 2.5)
@@ -605,7 +618,16 @@ def main() -> int:
             print(f"{p}: FILE_MISSING")
             all_ok = False
             continue
-        ok, findings = audit_file(p)
+        try:
+            ok, findings = audit_file(p)
+        except ET.ParseError as e:
+            all_ok = False
+            print(f"{p}: XML_PARSE_ERROR ({e})")
+            continue
+        except Exception as e:
+            all_ok = False
+            print(f"{p}: AUDIT_ERROR ({type(e).__name__}: {e})")
+            continue
         if ok:
             print(f"{p}: SVG_LAYOUT_AUDIT_PASS")
         else:

@@ -45,6 +45,10 @@ with open(os.path.join(tmp, "list.txt"), "w") as fh:
     fh.write("\n".join(lst))
 print(f"提取 {len(lst)} 个 mermaid 块")
 PYEOF
+if [ ! -s "$TMP/list.txt" ]; then
+    echo "ERROR: mermaid 块提取失败或为空——扫描未执行，不视为通过" >&2
+    exit 1
+fi
 
 fail=0; total=0
 while IFS=$'\t' read -r file bidx; do
