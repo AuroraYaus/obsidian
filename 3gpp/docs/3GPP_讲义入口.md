@@ -21,7 +21,6 @@ source_spec: "3gpp/docs"
 | L1 基础 | [[3gpp/docs/L1_基础/L1_基础入口]] |
 | L2 协议与算法 | [[3gpp/docs/L2_协议算法/L2_协议算法入口]] |
 | L3 工程实现 | [[3gpp/docs/L3_工程实现/L3_工程实现入口]] |
-| 审计 | [[3gpp/docs/audits/审计入口]] |
 
 ## 说明
 
