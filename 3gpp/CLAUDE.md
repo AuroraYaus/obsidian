@@ -111,6 +111,14 @@ source_spec: "Local project instructions"
 2. **审计命令**：`python3 tools/audit_circled_digits.py`（默认扫 docs/tools/sim；发现即 FAIL）。新增/修改任何文档、SVG、代码后运行；全库回归在阶段验收时运行。
 3. **教训来源**：2026-08-04 用户两次要求消除圈号——第一次替换 323 处后未固化规则，子代理写新内容又引入 186 处。一次性替换不是治理，检查规则才是。
 
+### 12. 经验教训库（项目永久存储）
+
+**每次会话开始即知**：本项目经验教训的权威副本在 `docs/audits/lessons/lesson-*.md`（10 条，随 git 双推保存，与 `~/.claude/projects/*/memory/` 的 auto-memory 同步维护，**以项目副本为准**）。
+
+1. **使用时机**：遇到用户纠错、新问题、或规则未覆盖的场景，**先查经验库**（grep `docs/audits/lessons/` 关键字）是否已有同类教训——避免重复踩坑（每一条 lesson 都对应一次真实返工）。
+2. **维护流程**（配合第 7 条纠错固化元规则）：新教训 → 写入 `docs/audits/lessons/lesson-<主题>.md`（含根因 + How to apply）→ 更新 `项目规则与记忆索引.md` 第七节登记表 → `git push origin master`（自动双推 Gitee+GitHub）。
+3. **规则的可执行形态**：CLAUDE.md 各条、`合规与遵从.md`、`tools/audit_*.py`（审计工具即规则）均为经验的落地；经验库记录的是"为什么"。
+
 ### 11. 合规基线
 
 所有讲义和代码必须遵守 `合规与遵从.md` 中的 22 条 Hard Constraints。关键规则：

@@ -24,3 +24,10 @@ source_spec: "Local vault index"
 - [[3gpp/sim/python/L0_crc_gf2/L0_CRC_GF2_仿真入口]]
 - [[3gpp/CLAUDE]]
 - [[3gpp/合规与遵从]]
+
+## 项目经验与规则在哪
+
+- **规则**（每次会话自动加载）：`CLAUDE.md`（11+ 条硬性规则）、`合规与遵从.md`（22 条硬约束）、`.claude/rules/documentation.md`（DOXYGEN 与讲义规范）。
+- **经验教训库**：`docs/audits/lessons/lesson-*.md`（10 条历史返工教训：SVG 审计盲区、字体度量、圈号禁令、Mermaid 引号节点、批量替换作用域、双推等）——随 git 双推永久保存，删除任何本地目录不影响。
+- **可执行规则**：`tools/audit_svg_layout.py`（R1-R11 几何审计）、`tools/audit_circled_digits.py`、`tools/audit_mermaid_syntax.sh`。
+- **索引**：`项目规则与记忆索引.md`（规则文件/经验库/同步清单/编号约定）。
