@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="560" viewBox="0 0 1240 560" font-family="sans-serif">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#334155"/></marker><style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style></defs>
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">译码器 Testbench 总体架构（T20.1）</text>
+  <g><rect x="18" y="90" width="185" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="110" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Reference Vectors</text>
+    <text x="110" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">vector.json·LLR·exp bits</text>
+    <text x="110" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">checkpoints·seed·Rel19</text></g>
+  <g><rect x="223" y="90" width="185" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="316" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Vector Loader</text>
+    <text x="316" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">parse·validate hashes</text>
+    <text x="316" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">descriptor·preload</text></g>
+  <g><rect x="428" y="90" width="185" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="520" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">SV Driver</text>
+    <text x="520" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">reset·regs·LLR 流</text>
+    <text x="520" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">backpressure·start</text></g>
+  <g><rect x="633" y="90" width="185" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="726" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Decoder DUT</text>
+    <text x="726" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">Turbo/LDPC/Polar</text>
+    <text x="726" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">reg·DMA·soft-buffer</text></g>
+  <g><rect x="838" y="90" width="185" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="930" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">SV Monitor</text>
+    <text x="930" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">采样 status·IRQ</text>
+    <text x="930" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">trace·counters·assert</text></g>
+  <g><rect x="1043" y="90" width="185" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="1136" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Scoreboard</text>
+    <text x="1136" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">descriptor hash·payload</text>
+    <text x="1136" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">CRC·checkpoint·latency</text></g>
+  <line x1="203" y1="140.0" x2="223" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="408" y1="140.0" x2="428" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="613" y1="140.0" x2="633" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="818" y1="140.0" x2="838" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="1023" y1="140.0" x2="1043" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="110.5" y1="190" x2="110.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="315.5" y1="190" x2="315.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="520.5" y1="190" x2="520.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="725.5" y1="190" x2="725.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="930.5" y1="190" x2="930.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="1135.5" y1="190" x2="1135.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <g><rect x="120" y="250" width="1000" height="68" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="276" text-anchor="start" dominant-baseline="central" class="node-title">Assertions</text>
+    <text x="140" y="302" text-anchor="start" dominant-baseline="central" class="node-text">协议无关硬件不变量：valid 数据稳定 · BUSY 期间禁写 · engine 所有权 one-hot</text></g>
+  <g><rect x="120" y="380" width="1000" height="68" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="406" text-anchor="start" dominant-baseline="central" class="node-title">Failure Bundle</text>
+    <text x="140" y="432" text-anchor="start" dominant-baseline="central" class="node-text">first mismatch · vector id · waveform 指针 · trace 切片 · register dump · replay command</text></g>
+  <rect x="330" y="500" width="580" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="522" text-anchor="middle" dominant-baseline="central" class="note">对齐后比较：descriptor hash → payload → CRC/syndrome → checkpoints → latency</text>
+</svg>

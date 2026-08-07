@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="560" viewBox="0 0 1240 560" font-family="sans-serif">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#334155"/></marker><style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style></defs>
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">最终译码器验证证据报告（T20.6）</text>
+  <g><rect x="38" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="146" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Protocol Evidence</text>
+    <text x="146" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">TS package·section·table</text>
+    <text x="146" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">公式·本地路径·边界·owner</text></g>
+  <g><rect x="275" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="382" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Model Evidence</text>
+    <text x="382" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">浮点·定点·bit-exact trace</text>
+    <text x="382" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">seeds·hashes·thresholds</text></g>
+  <g><rect x="512" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="620" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">RTL Regression</text>
+    <text x="620" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">directed·assertions·reset</text>
+    <text x="620" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">timeout·failure bundle·replay</text></g>
+  <g><rect x="749" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="856" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Synthesis Boundary</text>
+    <text x="856" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">DC 可用性·timing·area</text>
+    <text x="856" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">power·constraints·waivers</text></g>
+  <g><rect x="986" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="1094" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Sign-off Report</text>
+    <text x="1094" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">pass/fail gate·known limits</text>
+    <text x="1094" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">waivers·证据索引·发布决策</text></g>
+  <line x1="253" y1="140.0" x2="275" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="490" y1="140.0" x2="512" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="727" y1="140.0" x2="749" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="964" y1="140.0" x2="986" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="145.5" y1="190" x2="145.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="382.5" y1="190" x2="382.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="619.5" y1="190" x2="619.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="856.5" y1="190" x2="856.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="1093.5" y1="190" x2="1093.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <g><rect x="120" y="250" width="1000" height="68" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="276" text-anchor="start" dominant-baseline="central" class="node-title">四类摘要汇总</text>
+    <text x="140" y="302" text-anchor="start" dominant-baseline="central" class="node-text">仿真摘要 · 定点损失摘要 · RTL 回归摘要 · 覆盖率摘要（格式固定，逐项填写）</text></g>
+  <g><rect x="120" y="380" width="1000" height="68" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="406" text-anchor="start" dominant-baseline="central" class="node-title">证据索引与发布决策</text>
+    <text x="140" y="432" text-anchor="start" dominant-baseline="central" class="node-text">protocol → model → rtl → synth → signoff 五级证据链完整；未运行项显式声明</text></g>
+  <rect x="330" y="500" width="580" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="522" text-anchor="middle" dominant-baseline="central" class="note">Gate-Level Simulation 与 SDF 为可选扩展；报告必须区分实测证据与模板</text>
+</svg>

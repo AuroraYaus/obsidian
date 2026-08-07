@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="560" viewBox="0 0 1240 560" font-family="sans-serif">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#334155"/></marker><style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style></defs>
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">协议向量套件总体架构（T20.2）</text>
+  <g><rect x="38" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="146" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Rel-19 Evidence</text>
+    <text x="146" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">TS section·table·formula</text>
+    <text x="146" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">本地路径·抽取说明·上游讲义</text></g>
+  <g><rect x="512" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="620" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">Suite Manifest</text>
+    <text x="620" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">schema version·vector id</text>
+    <text x="620" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">family·seed·status·hash</text></g>
+  <line x1="253" y1="140.0" x2="512" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="145.5" y1="190" x2="145.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="619.5" y1="190" x2="619.5" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <g><rect x="100" y="250" width="340" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="290" y="282" text-anchor="middle" dominant-baseline="central" class="node-title">LTE Turbo Lane</text>
+    <text x="290" y="306" text-anchor="middle" dominant-baseline="central" class="node-text">分段·filler·交织器</text>
+    <text x="290" y="322" text-anchor="middle" dominant-baseline="central" class="node-text">RV 窗·软合并·CB/TB CRC</text></g>
+  <g><rect x="470" y="250" width="340" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="632" y="282" text-anchor="middle" dominant-baseline="central" class="node-title">NR LDPC Lane</text>
+    <text x="632" y="306" text-anchor="middle" dominant-baseline="central" class="node-text">BG/Zc·filler·puncture</text>
+    <text x="632" y="322" text-anchor="middle" dominant-baseline="central" class="node-text">受限缓冲·RV/k0·CBG·syndrome</text></g>
+  <g><rect x="840" y="250" width="340" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="974" y="282" text-anchor="middle" dominant-baseline="central" class="node-title">NR Polar Lane</text>
+    <text x="974" y="306" text-anchor="middle" dominant-baseline="central" class="node-text">小块·CRC 长度·frozen</text>
+    <text x="974" y="322" text-anchor="middle" dominant-baseline="central" class="node-text">rate recovery·list pressure·RNTI</text></g>
+  <line x1="253" y1="190" x2="270" y2="246" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="619" y1="190" x2="640" y2="246" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="725" y1="190" x2="1010" y2="246" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <g><rect x="120" y="380" width="1000" height="68" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="406" text-anchor="start" dominant-baseline="central" class="node-title">Pass / Fail Policy</text>
+    <text x="140" y="432" text-anchor="start" dominant-baseline="central" class="node-text">正向量要求 payload 与 checkpoints 完全一致；负向量要求预期 fail 类别</text></g>
+  <g><rect x="120" y="480" width="1000" height="68" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="506" text-anchor="start" dominant-baseline="central" class="node-title">Expected Outcome + Failure Bundle</text>
+    <text x="140" y="532" text-anchor="start" dominant-baseline="central" class="node-text">payload · CRC/syndrome · status · trace checkpoints · latency bound · saturation counters；失败时保存 descriptor·LLR 快照·first mismatch·replay 命令</text></g>
+</svg>
