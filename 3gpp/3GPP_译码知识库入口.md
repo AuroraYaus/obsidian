@@ -25,7 +25,7 @@ source_spec: "Local vault index"
 - [[3gpp/CLAUDE]]
 - [[3gpp/合规与遵从]]
 
-## 项目经验与规则在哪
+## 项目规则与经验库（存储与索引）
 
 - **规则**（每次会话自动加载）：`CLAUDE.md`（11+ 条硬性规则）、`合规与遵从.md`（22 条硬约束）、`.claude/rules/documentation.md`（DOXYGEN 与讲义规范）。
 - **经验教训库**：`docs/audits/lessons/lesson-*.md`（10 条历史返工教训：SVG 审计盲区、字体度量、圈号禁令、Mermaid 引号节点、批量替换作用域、双推等）——随 git 双推永久保存，删除任何本地目录不影响。
