@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T15.1_decoder_testbench_architecture.svg
+  @file    T20.1_decoder_testbench_architecture.svg
   @brief   译码器 SystemVerilog 测试平台架构（v2 手绘 SVG）：golden 向量驱动 RTL 顶行 + scoreboard/断言/失败束 + 复位/超时序列 + 两张对照表
   @date    2026-08-04
   @note    语义与 docs/L3_工程实现/T20.1_decoder_testbench_architecture.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计；scoreboard->failure bundle 折线沿 Assertions 下方走廊绕行，不穿框。六项几何审计 + cairosvg 渲染验证通过。
@@ -87,8 +87,8 @@
     <path d="M 1292 560 H 1848 Q 1860 560 1860 572 V 606 H 1280 V 572 Q 1280 560 1292 560 Z" fill="#B76E00" stroke="none"/>
     <text class="title" x="1570.0" y="590" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Assertions</text>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="1570.0" y="666.0">protocol-free hardware invariants: stable valid data, no write</tspan>
-      <tspan x="1570.0" y="692.0">while busy, one-hot engine ownership.</tspan>
+      <tspan x="1570.0" y="666.0">protocol-free hardware invariants: stable valid data,</tspan>
+      <tspan x="1570.0" y="692.0">no write while busy, one-hot engine ownership.</tspan>
     </text>
   </g>
   <g class="card" id="m2">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T14.3_NR_Polar_RTL_microarchitecture.svg
+  @file    T19.3_NR_Polar_RTL_microarchitecture.svg
   @brief   NR Polar 译码器 RTL 微架构（v2 手绘 SVG）：输入/掩码两卡 + CA-SCL 树流水线 + 路径状态存储带 + 低延迟 FSM 泳道
   @date    2026-08-04
   @note    语义与 docs/L3_工程实现/T19.3_NR_Polar_RTL_microarchitecture.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计。六项几何审计 + cairosvg 渲染验证通过。
@@ -125,8 +125,8 @@
     <path d="M 1282 1020 H 1798 Q 1810 1020 1810 1032 V 1066 H 1270 V 1032 Q 1270 1020 1282 1020 Z" fill="#8A7F6E" stroke="none"/>
     <text class="title" x="1540.0" y="1050" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">PM / Path State</text>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="1540.0" y="1126.0">Path bits, PM, CRC state, valid flags, parent id and remap</tspan>
-      <tspan x="1540.0" y="1152.0">table.</tspan>
+      <tspan x="1540.0" y="1126.0">Path bits, PM, CRC state, valid flags, parent id,</tspan>
+      <tspan x="1540.0" y="1152.0">remap table.</tspan>
     </text>
   </g>
   <g class="card" id="m3">
@@ -156,7 +156,7 @@
     <rect class="body" x="130" y="1490" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
     <text class="title" x="310.0" y="1526.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">LOAD</text>
     <text class="lines" text-anchor="middle" font-size="15" fill="#5B6472">
-      <tspan x="310.0" y="1552.0">Latch descriptor, masks and rate-recovered LLR.</tspan>
+      <tspan x="310.0" y="1552.0">Latch descriptor, masks, rate-recovered LLR.</tspan>
     </text>
   </g>
   <g class="card" id="f1">
@@ -336,8 +336,9 @@
     <rect class="body" x="130" y="2230" width="2240" height="170" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
     <rect class="footbar" x="130" y="2230" width="7" height="170" fill="#B76E00" stroke="none"/>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="1250.0" y="2309.0">Protocol evidence fixes Polar construction inputs: reliability sequence, information/frozen/PC sets, CRC/RNTI context and rate recovery. RTL choices such as list size implementation, lazy copy, sorter topology, PM normalization and pipeline cuts</tspan>
-      <tspan x="1250.0" y="2338.0">are implementation strategy and must be closed by bit-exact path traces.</tspan>
+      <tspan x="1250.0" y="2303.0">Protocol evidence fixes Polar construction inputs: reliability sequence, information/frozen/PC sets, CRC/RNTI context.</tspan>
+      <tspan x="1250.0" y="2332.0">RTL choices (list size, lazy copy, sorter topology, PM normalization, pipeline cuts) are implementation strategy</tspan>
+      <tspan x="1250.0" y="2361.0">and must be closed by bit-exact path traces.</tspan>
     </text>
   </g>
 </svg>

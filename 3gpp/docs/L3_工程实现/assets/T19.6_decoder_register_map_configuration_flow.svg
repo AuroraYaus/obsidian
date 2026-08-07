@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T14.6_decoder_register_map_configuration_flow.svg
+  @file    T19.6_decoder_register_map_configuration_flow.svg
   @brief   译码器寄存器映射与配置流程（v2 手绘 SVG）：字段来源四卡 → 寄存器组七卡 → LOCK_DESCRIPTOR FSM 泳道 + 两张字段表
   @date    2026-08-04
   @note    语义与 docs/L3_工程实现/T19.6_decoder_register_map_configuration_flow.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计。六项几何审计 + cairosvg 渲染验证通过。
@@ -48,7 +48,7 @@
     <text class="title" x="1790.0" y="190" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">MAC / RRC</text>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
       <tspan x="1790.0" y="266.0">Configured limits: HARQ process count, CBG capability, MCS</tspan>
-      <tspan x="1790.0" y="292.0">tables and serving-cell context. Exact fields pending where noted.</tspan>
+      <tspan x="1790.0" y="292.0">tables and serving-cell context. Exact fields pending.</tspan>
     </text>
   </g>
   <g class="card" id="s3">

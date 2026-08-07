@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T12.3_NR_LDPC_float_sim_flow.svg
+  @file    T17.3_NR_LDPC_float_sim_flow.svg
   @brief   T12.3 NR LDPC 浮点仿真流程图：从 BG/Zc 协议参数、LDPC 编码、速率匹配到 AWGN+LLR
            的仿真管线，以及译码器变体（BP/MS/NMS/OMS）对比、实验矩阵和工程检测点。
   @date    2026-08-04

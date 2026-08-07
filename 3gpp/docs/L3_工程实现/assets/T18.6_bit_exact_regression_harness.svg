@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T13.6_bit_exact_regression_harness.svg
+  @file    T18.6_bit_exact_regression_harness.svg
   @brief   T13.6 位精确回归测试框架管道图：Python 浮点/定点、C/C++ 定点、RTL 输出与
            CI/失败回放闭环，含对比规则表与译码器检查点清单。
   @date    2026-08-04

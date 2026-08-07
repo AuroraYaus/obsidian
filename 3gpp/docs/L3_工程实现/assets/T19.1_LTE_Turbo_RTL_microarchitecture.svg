@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T14.1_LTE_Turbo_RTL_microarchitecture.svg
+  @file    T19.1_LTE_Turbo_RTL_microarchitecture.svg
   @brief   LTE Turbo 译码器 RTL 微架构（v2 手绘 SVG）：左列描述/状态卡 + 中央 SISO 数据通路管线 + 存储/指标表 + 迭代控制 FSM 泳道
   @date    2026-08-04
   @note    语义与 docs/L3_工程实现/T19.1_LTE_Turbo_RTL_microarchitecture.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计（不再复用原脚本布局坐标与色系）。六项几何审计 + cairosvg 渲染验证通过。
@@ -383,8 +383,9 @@
     <rect class="body" x="80" y="2110" width="2280" height="170" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
     <rect class="footbar" x="80" y="2110" width="7" height="170" fill="#B76E00" stroke="none"/>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="1220.0" y="2189.0">Protocol evidence fixes K, interleaver parameters, tail bits, rate-recovery inputs and CRC boundaries. RTL choices such as window size, SRAM banking, early-stop policy, clock gating and reset sequencing are implementation strategy and must be</tspan>
-      <tspan x="1220.0" y="2218.0">verified with bit-exact traces.</tspan>
+      <tspan x="1220.0" y="2183.0">Protocol evidence fixes K, interleaver parameters, tail bits, rate-recovery inputs and CRC boundaries.</tspan>
+      <tspan x="1220.0" y="2212.0">RTL choices (window size, SRAM banking, early-stop, clock gating, reset sequencing) are implementation strategy</tspan>
+      <tspan x="1220.0" y="2241.0">and must be verified with bit-exact traces.</tspan>
     </text>
   </g>
 </svg>

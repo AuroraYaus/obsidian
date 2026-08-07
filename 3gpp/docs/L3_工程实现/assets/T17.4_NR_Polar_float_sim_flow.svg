@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T12.4_NR_Polar_float_sim_flow.svg
+  @file    T17.4_NR_Polar_float_sim_flow.svg
   @brief   T12.4 NR Polar 浮点仿真流程图：从可靠性序列、UCI/DCI 构造、Polar 编码、速率匹配到
            AWGN+LLR 的仿真管线，以及 SC/SCL/CA-SCL 列表大小扫描、实验矩阵和工程检测点。
   @date    2026-08-04

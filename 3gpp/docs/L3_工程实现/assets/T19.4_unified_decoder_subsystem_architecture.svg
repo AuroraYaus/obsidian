@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T14.4_unified_decoder_subsystem_architecture.svg
+  @file    T19.4_unified_decoder_subsystem_architecture.svg
   @brief   统一译码子系统架构（v2 手绘 SVG）：顶部配置/调度/DMA/IRQ 流 + 三引擎 + 共享软缓冲/仲裁/跟踪 + 寄存器与顶层 FSM 表
   @date    2026-08-04
   @note    语义与 docs/L3_工程实现/T19.4_unified_decoder_subsystem_architecture.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计；Integration Rules 置为底部整宽说明框，消除旧版侧栏与表格重叠缺陷。六项几何审计 + cairosvg 渲染验证通过。
@@ -38,8 +38,8 @@
     <path d="M 632 175 H 1068 Q 1080 175 1080 187 V 221 H 620 V 187 Q 620 175 632 175 Z" fill="#0E7A67" stroke="none"/>
     <text class="title" x="850.0" y="205" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Descriptor Dispatcher</text>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="850.0" y="283.5">Checks common fields, selects Turbo / LDPC /</tspan>
-      <tspan x="850.0" y="309.5">Polar engine and locks immutable task context.</tspan>
+      <tspan x="850.0" y="283.5">Checks common fields, selects Turbo/LDPC/</tspan>
+      <tspan x="850.0" y="309.5">Polar engine and locks immutable context.</tspan>
     </text>
   </g>
   <g class="card" id="t2">
@@ -438,8 +438,9 @@
     <rect class="footbar" x="80" y="2310" width="7" height="190" fill="#6D4FBF" stroke="none"/>
     <text class="title" x="110" y="2344.0" font-size="20" font-weight="700" fill="#262B33">Integration Rules</text>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="1300.0" y="2418.0">3GPP specs define task context, not this register map. Each engine can run with private mock DMA and private trace. Shared resources never own algorithm state. Soft-buffer writes are atomic per transaction. Trace uses T13.6 checkpoint names. IRQ summarizes status;</tspan>
-      <tspan x="1300.0" y="2447.0">debug keeps evidence.</tspan>
+      <tspan x="1300.0" y="2412.0">3GPP specs define task context, not this register map. Each engine can run with private mock DMA and private trace.</tspan>
+      <tspan x="1300.0" y="2441.0">Shared resources never own algorithm state. Soft-buffer writes are atomic per transaction. Trace uses T13.6 checkpoint names.</tspan>
+      <tspan x="1300.0" y="2470.0">IRQ summarizes status; debug keeps evidence.</tspan>
     </text>
   </g>
 </svg>

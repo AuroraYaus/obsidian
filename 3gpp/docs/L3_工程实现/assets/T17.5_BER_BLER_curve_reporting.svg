@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T12.5_BER_BLER_curve_reporting.svg
+  @file    T17.5_BER_BLER_curve_reporting.svg
   @brief   T12.5 BER/BLER 曲线报告流程图：从仿真运行到标准化 CSV、曲线绘制和失败诊断的完整报告管线，
            含 metrics.csv 必需列定义、示意性 BLER 曲线和失败诊断闭环。
   @date    2026-08-04

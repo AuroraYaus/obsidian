@@ -6,7 +6,7 @@
            以及三条互锁箭头（位宽×元素数=容量、串行÷预算=并行度=面积、存储带宽制约并行度）。
   @date    2026-08-04
   @note    语义色：位宽账 钢蓝 / 周期账 琥珀 / 存储面积账 翠绿 / 互锁箭头 灰蓝 / 底线 浅灰。
-           布局：标题带 -> 顶部互锁① -> 三账横排（锚点 + 账内关键行 + 推导链盒）-> 底部互锁②③
+           布局：标题带 -> 顶部互锁(1) -> 三账横排（锚点 + 账内关键行 + 推导链盒）-> 底部互锁(2)(3)
            -> 同账核算底线。文字行距 ≥ 8px（同行基线差 24px，跨层差 ≥ 12px）。
            内容（节点、数值、连线关系）与 docs/L3_工程实现/T21.1 讲义及素材 PHY01 §7-10 / analysis 06 一致。
 -->
@@ -27,9 +27,9 @@
   <text x="980" y="46" font-size="20" font-weight="700" fill="#152033" text-anchor="middle">T21.1 工程预算总览：位宽 / 周期 / 存储 三本账</text>
   <text x="980" y="70" font-size="12.5" fill="#455A64" text-anchor="middle">三本账互锁锚点图 —— 24-bit real / 61,440 cycles / 6.1 MB ≈ 4.0 mm²</text>
 
-  <!-- ============ 顶部互锁①：位宽账 -> 存储面积账 ============ -->
+  <!-- ============ 顶部互锁(1)：位宽账 -> 存储面积账 ============ -->
   <line x1="640" y1="86" x2="1318" y2="86" stroke="#5B6B82" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="980" y="108" font-size="12" fill="#334155" text-anchor="middle" class="free">互锁① 位宽 × 元素数 = 容量：6-bit LLR 把 14-bit 动态范围压进 48-bit 字装 8 个的 4% 缓冲</text>
+  <text x="980" y="108" font-size="12" fill="#334155" text-anchor="middle" class="free">互锁(1) 位宽 × 元素数 = 容量：6-bit LLR 把 14-bit 动态范围压进 48-bit 字装 8 个的 4% 缓冲</text>
 
   <!-- ============ 面板 1：位宽账 ============ -->
   <rect x="70" y="120" width="560" height="580" rx="10" fill="#D9E7F6" stroke="#2F5E94" stroke-width="1.5"/>
@@ -103,11 +103,11 @@
   <text x="1366" y="584" font-size="12" fill="#263238" text-anchor="start">逻辑：7.4M gates ÷ 3 M gates/mm² ≈ 2.47 mm²</text>
   <text x="1366" y="608" font-size="12" fill="#263238" text-anchor="start">合计 ≈ 4.1 → 素材汇总口径 ≈ 4.0 mm²（40% / 60%）</text>
 
-  <!-- ============ 底部互锁②③：周期账 <-> 存储面积账 ============ -->
+  <!-- ============ 底部互锁(2)(3)：周期账 <-> 存储面积账 ============ -->
   <line x1="900" y1="716" x2="1318" y2="716" stroke="#5B6B82" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1115" y="736" font-size="12" fill="#334155" text-anchor="middle" class="free">互锁② 串行 cycles ÷ 61,440 = 并行度 = 面积（81× → 3.0M gates → 1.5 mm²）</text>
+  <text x="1115" y="736" font-size="12" fill="#334155" text-anchor="middle" class="free">互锁(2) 串行 cycles ÷ 61,440 = 并行度 = 面积（81× → 3.0M gates → 1.5 mm²）</text>
   <line x1="1318" y1="752" x2="900" y2="752" stroke="#5B6B82" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1115" y="772" font-size="12" fill="#334155" text-anchor="middle" class="free">互锁③ 存储带宽制约并行度：LDPC 受迭代依赖 + 消息存储带宽双重制约</text>
+  <text x="1115" y="772" font-size="12" fill="#334155" text-anchor="middle" class="free">互锁(3) 存储带宽制约并行度：LDPC 受迭代依赖 + 消息存储带宽双重制约</text>
 
   <!-- ============ 同账核算底线 ============ -->
   <rect x="70" y="806" width="1820" height="64" rx="10" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>

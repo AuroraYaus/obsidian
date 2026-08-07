@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T15.2_protocol_vector_corner_case_suite.svg
+  @file    T20.2_protocol_vector_corner_case_suite.svg
   @brief   协议向量与边界用例套件（v2 手绘 SVG）：Rel-19 证据 → 套件清单 → 三族向量通道 → 通过/失败策略与失败束 + 分级表
   @date    2026-08-04
   @note    语义与 docs/L3_工程实现/T20.2_protocol_vector_corner_case_suite.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计。六项几何审计 + cairosvg 渲染验证通过。
@@ -38,8 +38,8 @@
     <path d="M 712 160 H 1228 Q 1240 160 1240 172 V 206 H 700 V 172 Q 700 160 712 160 Z" fill="#0E7A67" stroke="none"/>
     <text class="title" x="970.0" y="190" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Suite Manifest</text>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="970.0" y="276.0">schema version, vector id, family, seed, expected status,</tspan>
-      <tspan x="970.0" y="302.0">dump policy and hash list.</tspan>
+      <tspan x="970.0" y="276.0">schema version, vector id, family, seed,</tspan>
+      <tspan x="970.0" y="302.0">expected status, dump policy and hash list.</tspan>
     </text>
   </g>
   <g class="card" id="t2">
@@ -177,7 +177,7 @@
     <g class="cellg" id="t1_2_2" data-tbl="t1">
       <rect class="cell" x="1180" y="1312" width="740" height="128" fill="#F7F3EA" stroke="none"/>
       <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
-        <tspan x="1550.0" y="1369.0">wrong H shape, wrong circular-buffer address, held CBG corruption, syndrome/CRC</tspan>
+        <tspan x="1550.0" y="1369.0">wrong H shape, circular-buffer address, held CBG corruption, syndrome/CRC</tspan>
         <tspan x="1550.0" y="1393.0">mismatch</tspan>
       </text>
     </g>
@@ -196,8 +196,8 @@
     <g class="cellg" id="t1_3_1" data-tbl="t1">
       <rect class="cell" x="420" y="1440" width="760" height="128" fill="#FFFFFF" stroke="none"/>
       <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
-        <tspan x="800.0" y="1497.0">small block/no CRC, CRC length, list pressure, PM tie, puncture/shorten, frozen mask,</tspan>
-        <tspan x="800.0" y="1521.0">RNTI</tspan>
+        <tspan x="800.0" y="1497.0">small block/no CRC, CRC length, list pressure, PM tie, puncture/shorten,</tspan>
+        <tspan x="800.0" y="1521.0">frozen mask, RNTI</tspan>
       </text>
     </g>
     <g class="cellg" id="t1_3_2" data-tbl="t1">
@@ -227,7 +227,7 @@
     <g class="cellg" id="t1_4_2" data-tbl="t1">
       <rect class="cell" x="1180" y="1568" width="740" height="128" fill="#F7F3EA" stroke="none"/>
       <text class="tcell" text-anchor="middle" font-size="18" font-weight="400" fill="#262B33">
-        <tspan x="1550.0" y="1625.0">wrong soft-information convention, half commit, deadlock, false pass, non-replayable</tspan>
+        <tspan x="1550.0" y="1625.0">wrong soft-info convention, half commit, deadlock, false pass, non-replayable</tspan>
         <tspan x="1550.0" y="1649.0">vector</tspan>
       </text>
     </g>
@@ -377,8 +377,9 @@
     <rect class="body" x="120" y="2380" width="2760" height="240" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
     <rect class="footbar" x="120" y="2380" width="7" height="240" fill="#B76E00" stroke="none"/>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="1500.0" y="2494.0">Read order: evidence -&gt; manifest -&gt; family lane -&gt; expected outcome -&gt; failure bundle -&gt; regression tier. Engineering check: every vector must say whether it is protocol-derived, implementation-policy-derived, or negative expected-fail. Visual check: tables use 24px text and 122px+ row height; arrows use</tspan>
-      <tspan x="1500.0" y="2523.0">edge midpoints and vector-derived arrowheads.</tspan>
+      <tspan x="1500.0" y="2488.0">Read order: evidence -&gt; manifest -&gt; family lane -&gt; expected outcome -&gt; failure bundle -&gt; regression tier.</tspan>
+      <tspan x="1500.0" y="2517.0">Engineering check: every vector must state whether it is protocol-derived, implementation-policy-derived, or negative expected-fail.</tspan>
+      <tspan x="1500.0" y="2546.0">Visual check: tables use 24px text and 122px+ row height; arrows use edge midpoints and vector-derived arrowheads.</tspan>
     </text>
   </g>
 </svg>

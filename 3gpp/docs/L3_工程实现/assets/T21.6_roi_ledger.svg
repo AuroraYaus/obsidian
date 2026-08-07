@@ -64,8 +64,8 @@
   <text x="830" y="618" font-size="16" font-weight="bold" fill="#0c4a6e">LLR 缓冲裕量 = 6.8×</text>
   <text x="830" y="644" font-size="12" fill="#64748b">243.4 KB = 324,480×6 bit = 1.95 Mbit</text>
   <line x1="330" y1="624" x2="440" y2="624" stroke="#0369a1" stroke-width="2"/>
-  <polygon points="440,624 428,618 428,630" fill="#0369a1"/>
+  <path d="M 440 624 L 428 618 L 428 630 Z" fill="#0369a1"/>
   <line x1="690" y1="624" x2="800" y2="624" stroke="#0369a1" stroke-width="2"/>
-  <polygon points="800,624 788,618 788,630" fill="#0369a1"/>
+  <path d="M 800 624 L 788 618 L 788 630 Z" fill="#0369a1"/>
   <text x="60" y="682" font-size="13" fill="#334155">检验三条：TBS×2000 = 吞吐 · 缓冲 ≥ G×6 bit · 裕量 ≥ 6×；任何一条对不上 → 拍脑袋数字</text>
 </svg>

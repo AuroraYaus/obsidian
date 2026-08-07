@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T14.5_soft_buffer_HARQ_memory_architecture.svg
+  @file    T19.5_soft_buffer_HARQ_memory_architecture.svg
   @brief   软缓冲与 HARQ 存储架构（v2 手绘 SVG）：上下文/地址行走汇入管理器与事务日志 + 存储体行 + 生命周期 FSM 泳道
   @date    2026-08-04
   @note    语义与 docs/L3_工程实现/T19.5_soft_buffer_HARQ_memory_architecture.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计。六项几何审计 + cairosvg 渲染验证通过。
@@ -67,7 +67,7 @@
     <path d="M 832 180 H 1768 Q 1780 180 1780 192 V 226 H 820 V 192 Q 820 180 832 180 Z" fill="#B76E00" stroke="none"/>
     <text class="title" x="1300.0" y="210" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Soft Buffer Manager</text>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="1300.0" y="306.0">Looks up logical evidence, opens read-modify-write transactions, applies NDI/epoch/CRC policy and</tspan>
+      <tspan x="1300.0" y="306.0">Looks up logical evidence, opens read-modify-write transactions, applies NDI/epoch/CRC policy;</tspan>
       <tspan x="1300.0" y="332.0">owns release decisions.</tspan>
     </text>
   </g>
@@ -344,8 +344,9 @@
     <rect class="footbar" x="80" y="2110" width="7" height="220" fill="#0E7A67" stroke="none"/>
     <text class="title" x="110" y="2144.0" font-size="20" font-weight="700" fill="#262B33">Read Order and Checks</text>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="1300.0" y="2233.0">1. 3GPP identities determine the logical evidence space; bank formula is an implementation example. 2. RV, rvidx, k0 and CBGTI describe one access, while the main cache key names the TB/CB/CBG owner. 3. CRC failure retains evidence; TB pass, CBG flush, new epoch</tspan>
-      <tspan x="1300.0" y="2262.0">or abort decides release/rollback.</tspan>
+      <tspan x="1300.0" y="2227.0">1. 3GPP identities determine the logical evidence space; bank formula is an implementation example.</tspan>
+      <tspan x="1300.0" y="2256.0">2. RV, rvidx, k0 and CBGTI describe one access; the main cache key names the TB/CB/CBG owner.</tspan>
+      <tspan x="1300.0" y="2285.0">3. CRC failure retains evidence; TB pass, CBG flush, new epoch or abort decides release/rollback.</tspan>
     </text>
   </g>
 </svg>

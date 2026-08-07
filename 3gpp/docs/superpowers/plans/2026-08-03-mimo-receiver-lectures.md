@@ -25,7 +25,7 @@
 
 **Files:**
 - Create: `3gpp/docs/L2_协议算法/T12.1_mimo_receiver_chain_overview.md`（500-800 行）
-- Create: `3gpp/docs/L2_协议算法/assets/T12.1_mimo_receiver_chain.svg`（SVG 图）
+- Create: `3gpp/docs/L2_协议算法/assets/T17.1_mimo_receiver_chain.svg`（SVG 图）
 
 **Interfaces:**
 - Produces: T12.1 讲义与 SVG；T12.2-12.5 引用其总览概念（每 RE 模型、H_eff、功率归一化），文件名/标题不得更改
@@ -51,7 +51,7 @@
 # (1) Y 坐标扫描（必须）
 python3 - <<'EOF'
 import re
-svg = open('3gpp/docs/L2_协议算法/assets/T12.1_mimo_receiver_chain.svg').read()
+svg = open('3gpp/docs/L2_协议算法/assets/T17.1_mimo_receiver_chain.svg').read()
 ys = []
 for tag in ('text','rect','line'):
     for m in re.finditer(r'<%s[^>]*\by="([0-9.]+)"' % tag, svg):
@@ -62,7 +62,7 @@ print(f"{len(ys)} 个 y 元素；最小间距 = {min(b[1]-a[1] for a,b in zip(ys
 print("间距<8px:", gaps if gaps else "无 ✓")
 EOF
 # (2) PNG 预览（必须肉眼检查）
-cairosvg 3gpp/docs/L2_协议算法/assets/T12.1_mimo_receiver_chain.svg -o /tmp/t12_1_preview.png
+cairosvg 3gpp/docs/L2_协议算法/assets/T17.1_mimo_receiver_chain.svg -o /tmp/t12_1_preview.png
 ```
 然后用 Read 工具打开 `/tmp/t12_1_preview.png` 肉眼确认无文字交叠、无元素重叠；把 PNG 检查结论写入报告。若 Y 扫描或肉眼发现交叠，修复 SVG 后重新验证，直到通过。
 
@@ -107,7 +107,7 @@ grep -oE "\[\[[^]]+\]\]" 3gpp/docs/L2_协议算法/T12.1_mimo_receiver_chain_ove
 - [ ] **Step 5: Commit**
 
 ```bash
-git add 3gpp/docs/L2_协议算法/T12.1_mimo_receiver_chain_overview.md 3gpp/docs/L2_协议算法/assets/T12.1_mimo_receiver_chain.svg
+git add 3gpp/docs/L2_协议算法/T12.1_mimo_receiver_chain_overview.md 3gpp/docs/L2_协议算法/assets/T17.1_mimo_receiver_chain.svg
 git commit -m "docs(lectures): T12.1 MIMO 接收链路总览（含 SVG 图与功率守恒验证）"
 ```
 
@@ -117,7 +117,7 @@ git commit -m "docs(lectures): T12.1 MIMO 接收链路总览（含 SVG 图与功
 
 **Files:**
 - Create: `3gpp/docs/L2_协议算法/T12.2_diversity_combining_mrc.md`（500-800 行）
-- Create: `3gpp/docs/L2_协议算法/assets/T12.2_diversity_combining.svg`（SVG 图）
+- Create: `3gpp/docs/L2_协议算法/assets/T17.2_diversity_combining.svg`（SVG 图）
 
 **Interfaces:**
 - Consumes: T12.1 的总览模型（y=H·P·x+n、层域概念）
@@ -161,7 +161,7 @@ for N in [1, 2, 4]:
 - [ ] **Step 5: Commit**
 
 ```bash
-git add 3gpp/docs/L2_协议算法/T12.2_diversity_combining_mrc.md 3gpp/docs/L2_协议算法/assets/T12.2_diversity_combining.svg
+git add 3gpp/docs/L2_协议算法/T12.2_diversity_combining_mrc.md 3gpp/docs/L2_协议算法/assets/T17.2_diversity_combining.svg
 git commit -m "docs(lectures): T12.2 分集与合并（MRC/分集阶数/蒙特卡洛验证）"
 ```
 
@@ -171,7 +171,7 @@ git commit -m "docs(lectures): T12.2 分集与合并（MRC/分集阶数/蒙特�
 
 **Files:**
 - Create: `3gpp/docs/L2_协议算法/T12.3_linear_detectors_mf_zf_mmse.md`（500-800 行）
-- Create: `3gpp/docs/L2_协议算法/assets/T12.3_detector_sinr_comparison.svg`（SVG 图）
+- Create: `3gpp/docs/L2_协议算法/assets/T17.3_detector_sinr_comparison.svg`（SVG 图）
 
 **Interfaces:**
 - Consumes: T12.1（每 RE 模型）、T12.2（MMSE=正则化 MRC 单层情形）
@@ -222,7 +222,7 @@ print("匹配:", np.allclose(csi, 1+np.array(sinr), rtol=1e-6))
 - [ ] **Step 5: Commit**
 
 ```bash
-git add 3gpp/docs/L2_协议算法/T12.3_linear_detectors_mf_zf_mmse.md 3gpp/docs/L2_协议算法/assets/T12.3_detector_sinr_comparison.svg
+git add 3gpp/docs/L2_协议算法/T12.3_linear_detectors_mf_zf_mmse.md 3gpp/docs/L2_协议算法/assets/T17.3_detector_sinr_comparison.svg
 git commit -m "docs(lectures): T12.3 线性检测器 MF/ZF/MMSE（推导/SINR 验证/csi≥1）"
 ```
 
@@ -232,7 +232,7 @@ git commit -m "docs(lectures): T12.3 线性检测器 MF/ZF/MMSE（推导/SINR �
 
 **Files:**
 - Create: `3gpp/docs/L2_协议算法/T12.4_sphere_detection_detector_selection.md`（500-800 行）
-- Create: `3gpp/docs/L2_协议算法/assets/T12.4_sphere_search_tree.svg`（SVG 图）
+- Create: `3gpp/docs/L2_协议算法/assets/T17.4_sphere_search_tree.svg`（SVG 图）
 
 **Interfaces:**
 - Consumes: T12.3（MMSE 基线）、T12.1（每 RE 模型）
@@ -294,7 +294,7 @@ print("200 次随机实例：半径剪枝枚举与穷举 ML 结果完全一致 �
 - [ ] **Step 5: Commit**
 
 ```bash
-git add 3gpp/docs/L2_协议算法/T12.4_sphere_detection_detector_selection.md 3gpp/docs/L2_协议算法/assets/T12.4_sphere_search_tree.svg
+git add 3gpp/docs/L2_协议算法/T12.4_sphere_detection_detector_selection.md 3gpp/docs/L2_协议算法/assets/T17.4_sphere_search_tree.svg
 git commit -m "docs(lectures): T12.4 球面检测与检测器选择（QR 树/剪枝一致性验证）"
 ```
 
@@ -304,7 +304,7 @@ git commit -m "docs(lectures): T12.4 球面检测与检测器选择（QR 树/剪
 
 **Files:**
 - Create: `3gpp/docs/L2_协议算法/T12.5_channel_estimation_llr_reliability.md`（500-800 行）
-- Create: `3gpp/docs/L2_协议算法/assets/T12.5_ls_wiener_mse.svg`（SVG 图）
+- Create: `3gpp/docs/L2_协议算法/assets/T17.5_ls_wiener_mse.svg`（SVG 图）
 
 **Interfaces:**
 - Consumes: T12.3（无偏化归一化、CSI 加权）、T12.1（H_eff）
@@ -354,7 +354,7 @@ for snr in snr_db:
 - [ ] **Step 5: Commit**
 
 ```bash
-git add 3gpp/docs/L2_协议算法/T12.5_channel_estimation_llr_reliability.md 3gpp/docs/L2_协议算法/assets/T12.5_ls_wiener_mse.svg
+git add 3gpp/docs/L2_协议算法/T12.5_channel_estimation_llr_reliability.md 3gpp/docs/L2_协议算法/assets/T17.5_ls_wiener_mse.svg
 git commit -m "docs(lectures): T12.5 信道估计与 LLR 可靠度（LS/维纳/MSE 验证）"
 ```
 

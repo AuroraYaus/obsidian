@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T12.2_LTE_Turbo_float_sim_flow.svg
+  @file    T17.2_LTE_Turbo_float_sim_flow.svg
   @brief   T12.2 LTE Turbo 浮点仿真流程图：从协议参数、TB/CB 构造、Turbo 编码、速率匹配、
            AWGN 加噪到译码器输出的完整仿真管线，含实验矩阵表格与工程检测点。
   @date    2026-08-04

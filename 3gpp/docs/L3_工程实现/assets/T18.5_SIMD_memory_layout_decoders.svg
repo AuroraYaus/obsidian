@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T13.5_SIMD_memory_layout_decoders.svg
+  @file    T18.5_SIMD_memory_layout_decoders.svg
   @brief   T13.5 三种译码器（Turbo/LDPC/Polar）的 SIMD 通道映射与存储布局对比图：
            通道示例条带、lane 映射卡、布局对比表格与非合并访问失败案例。
   @date    2026-08-04

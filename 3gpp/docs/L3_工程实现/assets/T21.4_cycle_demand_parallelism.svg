@@ -24,8 +24,8 @@
   <text x="158" y="402.6" font-size="12" fill="#334155" text-anchor="end" class="free">100K</text>
   <text x="158" y="268.3" font-size="12" fill="#334155" text-anchor="end" class="free">1M</text>
   <text x="158" y="134.0" font-size="12" fill="#334155" text-anchor="end" class="free">10M</text>
-  <text x="1230" y="380" font-size="13" fill="#B45309" text-anchor="end" class="free">▲ 超预算区：柱顶高于预算线 → 需并行化</text>
-  <text x="172" y="520" font-size="13" fill="#1D4ED8" class="free">▼ 预算内区：单实例即可在时隙内完成</text>
+  <text x="1230" y="146" font-size="13" fill="#B45309" text-anchor="end" class="free">▲ 超预算区：柱顶高于预算线 → 需并行化</text>
+  <text x="172" y="455" font-size="13" fill="#1D4ED8" class="free">▼ 预算内区：单实例即可在时隙内完成</text>
   <line x1="170" y1="427.0" x2="1230" y2="427.0" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="6 4"/>
   <text x="172" y="417.0" font-size="13" font-weight="700" fill="#DC2626" class="free">61,440 预算线（硬时限）</text>
   <line x1="170" y1="130.0" x2="1230" y2="130.0" stroke="#374151" stroke-width="1.5"/>

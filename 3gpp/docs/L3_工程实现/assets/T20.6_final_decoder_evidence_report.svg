@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T15.6_final_decoder_evidence_report.svg
+  @file    T20.6_final_decoder_evidence_report.svg
   @brief   最终译码器验证证据报告（v2 手绘 SVG）：之字形五段证据链（协议→模型→RTL→综合→签核）+ 证据领域与签核门表
   @date    2026-08-04
   @note    语义与 docs/L3_工程实现/T20.6_final_decoder_verification_evidence_report.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计。六项几何审计 + cairosvg 渲染验证通过。
@@ -38,8 +38,8 @@
     <path d="M 652 240 H 1108 Q 1120 240 1120 252 V 286 H 640 V 252 Q 640 240 652 240 Z" fill="#0E7A67" stroke="none"/>
     <text class="title" x="880.0" y="270" text-anchor="middle" font-size="21" font-weight="700" fill="#FFFFFF">Model Evidence</text>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="880.0" y="341.0">floating-point, fixed-point, bit-exact traces, seeds,</tspan>
-      <tspan x="880.0" y="367.0">hashes and thresholds.</tspan>
+      <tspan x="880.0" y="341.0">floating-point, fixed-point, bit-exact traces,</tspan>
+      <tspan x="880.0" y="367.0">seeds, hashes and thresholds.</tspan>
     </text>
   </g>
   <g class="card" id="c2">

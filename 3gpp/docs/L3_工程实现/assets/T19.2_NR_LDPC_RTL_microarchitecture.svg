@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  @file    T14.2_NR_LDPC_RTL_microarchitecture.svg
+  @file    T19.2_NR_LDPC_RTL_microarchitecture.svg
   @brief   NR LDPC 译码器 RTL 微架构（v2 手绘 SVG）：输入/QC ROM/停止跟踪三卡 + 分层数据通路 + 存储体与 QC 寻址 + 分层 FSM 泳道
   @date    2026-08-04
   @note    语义与 docs/L3_工程实现/T19.2_NR_LDPC_RTL_microarchitecture.md 图示一致；内容取自原渲染脚本数据，构图与配色为 v2 全新设计。六项几何审计 + cairosvg 渲染验证通过。
@@ -162,7 +162,7 @@
     <rect class="body" x="874" y="1550" width="360" height="96" rx="9" fill="#F0F2F5" stroke="#4A5A6A" stroke-width="1.8"/>
     <text class="title" x="1054.0" y="1586.0" text-anchor="middle" font-size="18" font-weight="700" fill="#262B33">CN UPDATE</text>
     <text class="lines" text-anchor="middle" font-size="15" fill="#5B6472">
-      <tspan x="1054.0" y="1612.0">Compute sign, min1, min2 and scaled message.</tspan>
+      <tspan x="1054.0" y="1612.0">sign, min1, min2 and scaled message.</tspan>
     </text>
   </g>
   <g class="card" id="f3">
@@ -326,8 +326,9 @@
     <rect class="body" x="130" y="2250" width="2240" height="170" rx="12" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="1.5" filter="url(#soft)"/>
     <rect class="footbar" x="130" y="2250" width="7" height="170" fill="#B76E00" stroke="none"/>
     <text class="lines" text-anchor="middle" font-size="19.5" fill="#5B6472">
-      <tspan x="1250.0" y="2329.0">Protocol evidence fixes the QC-LDPC matrix identity: BG, Zc, lifting set and shift tables. RTL choices such as layered order, CN lane count, memory banking, stall policy, NMS/OMS constants and early-stop timing are implementation strategy and</tspan>
-      <tspan x="1250.0" y="2358.0">must be closed by bit-exact checkpoint traces.</tspan>
+      <tspan x="1250.0" y="2323.0">Protocol evidence fixes the QC-LDPC matrix identity: BG, Zc, lifting set and shift tables.</tspan>
+      <tspan x="1250.0" y="2352.0">RTL choices (layered order, CN lane count, memory banking, stall policy, NMS/OMS constants) are implementation strategy</tspan>
+      <tspan x="1250.0" y="2381.0">and must be closed by bit-exact checkpoint traces.</tspan>
     </text>
   </g>
 </svg>
