@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="560" viewBox="0 0 1240 560" font-family="sans-serif">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#334155"/></marker><style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style></defs>
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">译码器寄存器映射与配置流（T19.6）</text>
+  <g><rect x="38" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="146" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">协议算法参数</text>
+    <text x="146" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">K·E·RV·CRC·BG/Zc</text>
+    <text x="146" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">list size 默认</text></g>
+  <g><rect x="275" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="382" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">调度/HARQ 上下文</text>
+    <text x="382" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">task id·harq id·CBG</text>
+    <text x="382" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">soft buffer key</text></g>
+  <g><rect x="512" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="620" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">MAC/RRC 配置</text>
+    <text x="620" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">channel·direction·policy</text>
+    <text x="620" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">MCS 相关字段</text></g>
+  <g><rect x="749" y="90" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="856" y="122" text-anchor="middle" dominant-baseline="central" class="node-title">实现策略</text>
+    <text x="856" y="146" text-anchor="middle" dominant-baseline="central" class="node-text">max_iterations·trace mask</text>
+    <text x="856" y="162" text-anchor="middle" dominant-baseline="central" class="node-text">位宽 profile·超时</text></g>
+  <line x1="253" y1="140.0" x2="275" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="490" y1="140.0" x2="512" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="727" y1="140.0" x2="749" y2="140.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="145" y1="190" x2="145" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="382" y1="190" x2="382" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="619" y1="190" x2="619" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="856" y1="190" x2="856" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="1093" y1="190" x2="1093" y2="246" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <g><rect x="120" y="250" width="1000" height="68" rx="8" fill="#f5f3ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="276" text-anchor="start" dominant-baseline="central" class="node-title">寄存器组 CTRL / STATUS</text>
+    <text x="140" y="302" text-anchor="start" dominant-baseline="central" class="node-text">start · abort · busy · pass/fail · error code · IRQ；LOCK_DESCRIPTOR 后写入忽略或报 ERR_WRITE_WHILE_BUSY</text></g>
+  <g><rect x="120" y="380" width="1000" height="68" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="406" text-anchor="start" dominant-baseline="central" class="node-title">配置状态机</text>
+    <text x="140" y="432" text-anchor="start" dominant-baseline="central" class="node-text">IDLE → LOAD → LOCK → RUN → DONE/ERROR；BUSY 期间写 = ERR_WRITE_WHILE_BUSY</text></g>
+  <rect x="330" y="500" width="580" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="522" text-anchor="middle" dominant-baseline="central" class="note">list_size / max_iterations 是实现策略，不是 3GPP 强制值；每个任务记录 descriptor hash</text>
+</svg>

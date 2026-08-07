@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="660" viewBox="0 0 1240 660" font-family="sans-serif">
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#334155"/></marker><style>
+      .title { font-size: 20px; font-weight: bold; fill: #1e293b; }
+      .node-title { font-size: 15px; font-weight: bold; fill: #1e293b; }
+      .node-text { font-size: 12px; fill: #334155; }
+      .note { font-size: 12px; fill: #64748b; }
+    </style></defs>
+  <rect x="400" y="8" width="440" height="56" rx="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="36" text-anchor="middle" dominant-baseline="central" class="title">统一译码器子系统微架构（T19.4）</text>
+  <g><rect x="120" y="78" width="1000" height="68" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="104" text-anchor="start" dominant-baseline="central" class="node-title">Config Registers</text>
+    <text x="140" y="130" text-anchor="start" dominant-baseline="central" class="node-text">family · task id · length · soft-buffer key · bitwidth profile · start · timeout · trace mask</text></g>
+  <line x1="620" y1="146" x2="620" y2="172" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <g><rect x="120" y="176" width="1000" height="68" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="202" text-anchor="start" dominant-baseline="central" class="node-title">Descriptor Dispatcher</text>
+    <text x="140" y="228" text-anchor="start" dominant-baseline="central" class="node-text">检查 common 字段 · 选择 Turbo/LDPC/Polar 引擎 · 锁存不可变任务上下文</text></g>
+  <line x1="620" y1="244" x2="620" y2="266" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <g><rect x="18" y="270" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="126" y="302" text-anchor="middle" dominant-baseline="central" class="node-title">Input DMA</text>
+    <text x="126" y="326" text-anchor="middle" dominant-baseline="central" class="node-text">LLR 块/rate-recovered 向量</text>
+    <text x="126" y="342" text-anchor="middle" dominant-baseline="central" class="node-text">valid masks·byte-lane tags</text></g>
+  <g><rect x="248" y="270" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="356" y="302" text-anchor="middle" dominant-baseline="central" class="node-title">LTE Turbo Engine</text>
+    <text x="356" y="326" text-anchor="middle" dominant-baseline="central" class="node-text">SISO A/B·alpha/beta·extrinsic</text>
+    <text x="356" y="342" text-anchor="middle" dominant-baseline="central" class="node-text">交织地址·CRC 早停</text></g>
+  <g><rect x="478" y="270" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="586" y="302" text-anchor="middle" dominant-baseline="central" class="node-title">NR LDPC Engine</text>
+    <text x="586" y="326" text-anchor="middle" dominant-baseline="central" class="node-text">QC ROM·layered controller</text>
+    <text x="586" y="342" text-anchor="middle" dominant-baseline="central" class="node-text">CN min1/min2·VN RMW</text></g>
+  <g><rect x="708" y="270" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="816" y="302" text-anchor="middle" dominant-baseline="central" class="node-title">NR Polar Engine</text>
+    <text x="816" y="326" text-anchor="middle" dominant-baseline="central" class="node-text">SC/SCL 树·LLR/partial-sum</text>
+    <text x="816" y="342" text-anchor="middle" dominant-baseline="central" class="node-text">PM sorter·path remap</text></g>
+  <g><rect x="938" y="270" width="215" height="100" rx="8" fill="#eef2ff" stroke="#334155" stroke-width="1.5"/>
+    <text x="1046" y="302" text-anchor="middle" dominant-baseline="central" class="node-title">Output DMA</text>
+    <text x="1046" y="326" text-anchor="middle" dominant-baseline="central" class="node-text">payload·CB status</text>
+    <text x="1046" y="342" text-anchor="middle" dominant-baseline="central" class="node-text">selected path·result desc</text></g>
+  <line x1="233" y1="320.0" x2="248" y2="320.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="463" y1="320.0" x2="478" y2="320.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="693" y1="320.0" x2="708" y2="320.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="923" y1="320.0" x2="938" y2="320.0" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="125" y1="370" x2="125" y2="426" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="355" y1="370" x2="355" y2="426" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="585" y1="370" x2="585" y2="426" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="815" y1="370" x2="815" y2="426" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <line x1="1045" y1="370" x2="1045" y2="426" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,4"/>
+  <g><rect x="120" y="430" width="1000" height="68" rx="8" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="456" text-anchor="start" dominant-baseline="central" class="node-title">HARQ Soft Buffer Manager · Shared Memory/DMA Arbiter</text>
+    <text x="140" y="482" text-anchor="start" dominant-baseline="central" class="node-text">按 carrier/HARQ/TB epoch/CB/family 键控；RV 属于访问事务；调度输入、输出、软缓存 RMW 与引擎本地访问</text></g>
+  <line x1="620" y1="498" x2="620" y2="526" stroke="#334155" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <g><rect x="120" y="530" width="1000" height="68" rx="8" fill="#f0fdf4" stroke="#334155" stroke-width="1.5"/>
+    <text x="140" y="556" text-anchor="start" dominant-baseline="central" class="node-title">Status / IRQ</text>
+    <text x="140" y="582" text-anchor="start" dominant-baseline="central" class="node-text">done · fail · error code · stop reason · counter snapshot · interrupt moderation；trace FIFO/failure bundle 保存 checkpoint</text></g>
+  <rect x="330" y="610" width="580" height="44" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+  <text x="620" y="632" text-anchor="middle" dominant-baseline="central" class="note">三类引擎只通过统一边界连接共享资源；内部算法状态归各 engine 所有</text>
+</svg>
