@@ -419,7 +419,7 @@ CDMA 多址 = 扩频 + 正交码分工：每个用户分配**不同的正交码*
 | 方式 | 原理 | 代表 |
 |:---|:---|:---|
 | 直接序列 DSSS | 码片序列直接相乘（本笔记主角） | WCDMA、GPS |
-| 跳频 FHSS（跳频扩频，Frequency Hopping Spread Spectrum） | 载波频率按伪随机序列跳变 | 蓝牙、军事抗干扰 |
+| FHSS（跳频扩频，Frequency Hopping Spread Spectrum） | 载波频率按伪随机序列跳变 | 蓝牙、军事抗干扰 |
 | 跳时 THSS | 发射时刻按序列跳变 | 军事 |
 
 ## 直观模型
