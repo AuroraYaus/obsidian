@@ -88,7 +88,7 @@ source_spec: "TS 36.212 Rel-19 §5.1.2; TS 36.211 Rel-19 §6.8"
 
 ## 独立解释任务
 
-任务目标：讲清 TBCC 的咬尾机制与普通卷积码（含收尾）的区别、编码结构与译码方式（Viterbi/BCJR），说明它在 LTE 控制信道中的位置，以及与 Turbo 分量码 RSC 的关系与区别。
+任务目标：讲清 TBCC 的咬尾机制与普通卷积码（含收尾）的区别、编码结构与译码方式（Viterbi/BCJR），说明它在 LTE 控制信道中的位置，以及与 Turbo 分量码递归系统卷积码（Recursive Systematic Convolutional Code, RSC）的关系与区别。
 
 ## 科学定义
 
@@ -218,7 +218,7 @@ LTE（TS 36.211 §6.11）：PSS 用 Zadoff-Chu 序列（62 长），SSS 用两�
 
 ### SSB 时频结构（NR）
 
-- SSB = PSS + SSS + PBCH + PBCH DM-RS，占 4 个符号 × 240 子载波（20 RB）。
+- SSB = PSS + SSS + PBCH + PBCH DM-RS（解调参考信号，Demodulation Reference Signal），占 4 个符号 × 240 子载波（20 RB）。
 - 频域位置由同步栅格（GSCN）决定（TS 38.101-1 §5.4.3.1，见 [[Spectrum_and_Frequency_Point_频谱与频点]]）；时域按 SSB 突发集（SSB burst set）周期性发送（5/10/20 ms 等）。
 - SSB 索引（SSB index）隐含在 DM-RS 序列/PBCH 内容中，用于多波束场景区分波束。
 
@@ -236,7 +236,7 @@ flowchart LR
 
 ## 直观模型
 
-小区搜索像"深夜在陌生城市找电台"：先按频率表（同步栅格）扫一圈找到有信号的频道（PSS 相关峰），再听台呼（SSS 确认是哪个台），最后听报站信息（PBCH/MIB）确定频道内容。
+小区搜索像"深夜在陌生城市找电台"：先按频率表（同步栅格）扫一圈找到有信号的频道（PSS 相关峰），再听台呼（SSS 确认是哪个台），最后听报站信息（PBCH/MIB（主信息块，Master Information Block））确定频道内容。
 
 ## 常见误解
 
@@ -329,7 +329,7 @@ PBCH（物理广播信道，Physical Broadcast Channel）承载 MIB（主信息�
 | subCarrierSpacingCommon | SIB1/PRACH 的公共子载波间隔 | 接入配置 |
 | ssb-SubcarrierOffset | SSB 与资源网格的频域偏移 | 网格对齐 |
 | dmrs-TypeA-Position | DMRS Type A 位置 | PDSCH 解调配置 |
-| pdcch-ConfigSIB1 | SIB1 的 PDCCH 调度配置（CORESET 0 + 搜索空间 0） | 指向 SIB1 |
+| pdcch-ConfigSIB1 | SIB1 的 PDCCH 调度配置（CORESET（控制资源集，Control Resource Set）0 + 搜索空间 0） | 指向 SIB1 |
 
 ### PBCH 编码与加扰
 
@@ -419,7 +419,7 @@ source_spec: "TS 38.213 Rel-19 §10; TS 38.211 Rel-19 §7.3.2"
 
 # PDCCH 物理下行控制信道
 
-PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载 DCI（下行控制信息，Downlink Control Information）——基站调度指令的载体。UE 在每个监测时机（monitor occasion）对一组候选 PDCCH 做盲检测（blind decoding）：不知道 DCI 发给谁、多大、放在哪，就按聚合等级逐个试，用 CRC 加扰的 RNTI 判断"这是不是给我的"。盲检是全链路调度入口的核心机制，也是控制面最独特的工程问题。
+PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载 DCI（下行控制信息，Downlink Control Information）——基站调度指令的载体。UE 在每个监测时机（monitor occasion）对一组候选 PDCCH 做盲检测（blind decoding）：不知道 DCI 发给谁、多大、放在哪，就按聚合等级逐个试，用 CRC 加扰的 RNTI（无线网络临时标识，Radio Network Temporary Identifier）判断"这是不是给我的"。盲检是全链路调度入口的核心机制，也是控制面最独特的工程问题。
 
 ## 独立解释任务
 
@@ -536,7 +536,7 @@ DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 
 
 ## 独立解释任务
 
-任务目标：讲清 DCI 的格式体系（0_0/0_1/1_0/1_1/2_x）、核心字段语义（资源分配/MCS/HARQ/NDI/RV/TPC）、CRC 与 RNTI 加扰，以及 DCI 解析如何映射到译码器 descriptor（与 T9.0 衔接）。
+任务目标：讲清 DCI 的格式体系（0_0/0_1/1_0/1_1/2_x）、核心字段语义（资源分配/MCS/HARQ/NDI/RV/TPC）、CRC 与 RNTI（无线网络临时标识，Radio Network Temporary Identifier）加扰，以及 DCI 解析如何映射到译码器 descriptor（与 T9.0 衔接）。
 
 ## 科学定义
 
@@ -544,8 +544,8 @@ DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 
 
 | 格式 | 用途 | 关键差异 |
 |:---|:---|:---|
-| 0_0 / 0_1 | 上行调度（UL grant） | 0_1 支持更多配置（波束/CBG/多载波） |
-| 1_0 / 1_1 | 下行调度（DL assignment） | 1_1 支持更多配置 |
+| 0_0 / 0_1 | UL grant（上行授权） | 0_1 支持更多配置（波束/CBG/多载波） |
+| 1_0 / 1_1 | DL assignment（下行调度分配） | 1_1 支持更多配置 |
 | 2_0/2_1/2_2/2_3 | 组公共（Group Common） | 时隙格式/抢占指示/功率控制，发给一组 UE |
 
 ### 核心字段语义（以 DL assignment 1_x 为例）
@@ -562,7 +562,7 @@ DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 
 
 ### CRC 与 RNTI
 
-DCI 附 CRC（NR 24 bit / LTE 16 bit），CRC 用 RNTI 加扰（XOR）——盲检时 UE 用候选 RNTI 解扰，CRC 通过即匹配。不同 RNTI（C-RNTI/SI-RNTI/RA-RNTI/TC-RNTI 等）区分 DCI 发给谁/给什么用（详见 [[PDCCH_物理下行控制信道]] 与 T10.6）。
+DCI 附 CRC（NR 24 bit / LTE 16 bit），CRC 用 RNTI 加扰（XOR，异或，Exclusive OR）——盲检时 UE 用候选 RNTI 解扰，CRC 通过即匹配。不同 RNTI（C-RNTI/SI-RNTI/RA-RNTI/TC-RNTI 等）区分 DCI 发给谁/给什么用（详见 [[PDCCH_物理下行控制信道]] 与 T10.6）。
 
 ### DCI → Descriptor 映射（与 T9.0 衔接）
 
@@ -645,11 +645,11 @@ source_spec: "TS 38.213 Rel-19 §9; TS 38.212 §6.3"
 
 # PUCCH 上行控制信道与UCI
 
-PUCCH（物理上行控制信道，Physical Uplink Control Channel）承载 UCI（上行控制信息，Uplink Control Information）——UE 回传给基站的控制反馈：HARQ-ACK（下行数据收没收对）、SR（调度请求，Scheduling Request，申请上行资源）与 CSI（信道状态信息，Channel State Information，报告信道质量）。PUCCH 是下行译码链路的"回执"，没有它 HARQ 重传无法闭环。
+PUCCH（物理上行控制信道，Physical Uplink Control Channel）承载 UCI（上行控制信息，Uplink Control Information）——UE 回传给基站的控制反馈：HARQ-ACK（混合自动重传请求确认，Hybrid Automatic Repeat Request Acknowledgment，即下行数据收没收对的回执）、SR（调度请求，Scheduling Request，申请上行资源）与 CSI（信道状态信息，Channel State Information，报告信道质量）。PUCCH 是下行译码链路的"回执"，没有它 HARQ 重传无法闭环。
 
 ## 独立解释任务
 
-任务目标：讲清 UCI 三兄弟（HARQ-ACK/SR/CSI）的内容、PUCCH format 0-4 的划分逻辑（短/长格式、承载容量）、UCI 在 PUCCH 与 PUSCH 间的承载选择，以及 HARQ-ACK 时序（k1）如何与下行译码的 HARQ 进程衔接。
+任务目标：讲清 UCI 三兄弟（HARQ-ACK/SR/CSI）的内容、PUCCH format 0-4 的划分逻辑（短/长格式、承载容量）、UCI 在 PUCCH 与 PUSCH（物理上行共享信道，Physical Uplink Shared Channel）间的承载选择，以及 HARQ-ACK 时序（k1）如何与下行译码的 HARQ 进程衔接。
 
 ## 科学定义
 

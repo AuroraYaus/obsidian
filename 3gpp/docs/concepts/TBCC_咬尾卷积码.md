@@ -18,7 +18,7 @@ source_spec: "TS 36.212 Rel-19 §5.1.2; TS 36.211 Rel-19 §6.8"
 
 ## 独立解释任务
 
-任务目标：讲清 TBCC 的咬尾机制与普通卷积码（含收尾）的区别、编码结构与译码方式（Viterbi/BCJR），说明它在 LTE 控制信道中的位置，以及与 Turbo 分量码 RSC 的关系与区别。
+任务目标：讲清 TBCC 的咬尾机制与普通卷积码（含收尾）的区别、编码结构与译码方式（Viterbi/BCJR），说明它在 LTE 控制信道中的位置，以及与 Turbo 分量码递归系统卷积码（Recursive Systematic Convolutional Code, RSC）的关系与区别。
 
 ## 科学定义
 
