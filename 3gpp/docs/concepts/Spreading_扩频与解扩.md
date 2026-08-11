@@ -43,7 +43,7 @@ $$
 G_p = 10 \log_{10} \frac{R_c}{R_d} \quad \text{dB}
 $$
 
-处理增益是扩频体制的核心指标：解扩时目标信号相干累加（幅度按 SF 增加），窄带干扰非相干摊平——信噪比改善约 $G_p$ dB。例：WCDMA 语音 12.2 kbps（AMR 编码后符号速率约 30 kbps）、码片 3.84 Mcps（兆码片每秒，megachips per second），扩频因子 SF = 3.84 Mcps / 30 kbps = 128，处理增益 $10\log_{10}(128) \approx 21$ dB。
+处理增益是扩频体制的核心指标：解扩时目标信号相干累加（幅度按 SF 增加），窄带干扰非相干摊平——信噪比改善约 $G_p$ dB。例：WCDMA 语音 12.2 kbps（AMR（自适应多速率编码，Adaptive Multi-Rate）编码后信道速率约 30 kbps）、码片 3.84 Mcps（兆码片每秒，megachips per second），扩频因子 SF = 3.84 Mcps / 30 kbps = 128，处理增益 $10\log_{10}(128) \approx 21$ dB。
 
 ### 解扩：相关器
 
@@ -85,7 +85,7 @@ CDMA 多址 = 扩频 + 正交码分工：每个用户分配**不同的正交码*
 
 | 方式 | 原理 | 代表 |
 |:---|:---|:---|
-| 直接序列 DSSS | 码片序列直接相乘（本笔记主角） | WCDMA、GPS |
+| 直接序列 DSSS | 码片序列直接相乘（本笔记主角） | WCDMA、GPS（全球定位系统，Global Positioning System） |
 | FHSS（跳频扩频，Frequency Hopping Spread Spectrum） | 载波频率按伪随机序列跳变 | 蓝牙、军事抗干扰 |
 | THSS（跳时扩频，Time Hopping Spread Spectrum） | 发射时刻按序列跳变 | 军事 |
 

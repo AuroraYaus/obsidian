@@ -29,7 +29,7 @@ source_spec: "TS 38.211 Rel-19 §4/§5; TS 36.211; 教材背景知识"
 ### FDMA：频分多址（Frequency Division Multiple Access）
 
 - 原理：把可用频带切成互不重叠的频率信道，每用户独占一个信道，相邻信道间留保护间隔（guard band）防串扰。
-- 代表系统：1G 模拟蜂窝（AMPS）、GSM（全球移动通信系统，Global System for Mobile Communications）的频段划分部分。
+- 代表系统：1G 模拟蜂窝（AMPS（高级移动电话系统，Advanced Mobile Phone System））、GSM（全球移动通信系统，Global System for Mobile Communications）的频段划分部分。
 - 优点：实现简单（滤波即可）、用户间无同步要求。
 - 缺点：频谱利用率低（保护带浪费）、频点规划复杂（同频干扰要间隔复用距离）。
 
@@ -43,7 +43,7 @@ source_spec: "TS 38.211 Rel-19 §4/§5; TS 36.211; 教材背景知识"
 ### CDMA：码分多址（Code Division Multiple Access）
 
 - 原理：所有用户同时同频发射，用不同的扩频码区分——每个用户的数据比特被乘以各自的正交/准正交码片序列，接收端用同一码做相关解扩，把目标用户信号"捞"出来，其他用户的码间干扰被解扩过程抑制。
-- 代表系统：3G 的 WCDMA（宽带码分多址）与 cdma2000（码分多址 2000）。WCDMA 码片速率 3.84 Mcps，载波带宽 5 MHz。
+- 代表系统：3G 的 WCDMA（宽带码分多址，Wideband Code Division Multiple Access）与 cdma2000（码分多址 2000）。WCDMA 码片速率 3.84 Mcps，载波带宽 5 MHz。
 - 优点：抗窄带干扰/抗多径能力强；软切换；蜂窝间复用因子可为 1（无需频率规划）。
 - 缺点：**远近效应**——近处强用户会淹没远处弱用户，必须快速功率控制；多用户干扰随用户数增长（呼吸效应）；正交码数量有限，容量受干扰而非受带宽约束。
 

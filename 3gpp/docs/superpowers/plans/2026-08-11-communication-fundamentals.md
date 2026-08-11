@@ -49,7 +49,7 @@ source_spec: "TS 38.211 Rel-19 §4/§5; TS 36.211; 教材背景知识"
 
 # Multiple Access 多址接入
 
-多址接入（Multiple Access）解决"多个用户如何共享同一段无线频谱"的问题。历史上出现过四类主流方案：FDMA（频分多址）、TDMA（时分多址）、CDMA（码分多址）、OFDMA（正交频分多址）——它们分别在频率、时间、码、子载波四个维度上给用户划分互不干扰的资源。LTE/NR 最终选择了 OFDMA（下行）/SC-FDMA（单载波频分多址，Single Carrier Frequency Division Multiple Access）（上行），这个选择是 1G 到 5G 演进的技术收敛。
+多址接入（Multiple Access）解决"多个用户如何共享同一段无线频谱"的问题。历史上出现过四类主流方案：FDMA（频分多址）、TDMA（时分多址）、CDMA（码分多址）、OFDMA（正交频分多址）——它们分别在频率、时间、码、子载波四个维度上给用户划分互不干扰的资源。LTE/NR 最终选择了 OFDMA（下行）/SC-FDMA（上行，单载波频分多址，Single Carrier Frequency Division Multiple Access），这个选择是 1G 到 5G 演进的技术收敛。
 
 ## 独立解释任务
 
@@ -376,7 +376,7 @@ $$
 G_p = 10 \log_{10} \frac{R_c}{R_d} \quad \text{dB}
 $$
 
-处理增益是扩频体制的核心指标：解扩时目标信号相干累加（幅度按 SF 增加），窄带干扰非相干摊平——信噪比改善约 $G_p$ dB。例：WCDMA 语音 12.2 kbps（AMR 编码后符号速率约 30 kbps）、码片 3.84 Mcps（兆码片每秒，Mega chips per second），扩频因子 SF = 3.84 Mcps / 30 kbps = 128，处理增益 $10\log_{10}(128) \approx 21$ dB。
+处理增益是扩频体制的核心指标：解扩时目标信号相干累加（幅度按 SF 增加），窄带干扰非相干摊平——信噪比改善约 $G_p$ dB。例：WCDMA 语音 12.2 kbps（AMR 编码后符号速率约 30 kbps）、码片 3.84 Mcps（兆码片每秒，megachips per second），扩频因子 SF = 3.84 Mcps / 30 kbps = 128，处理增益 $10\log_{10}(128) \approx 21$ dB。
 
 ### 解扩：相关器
 

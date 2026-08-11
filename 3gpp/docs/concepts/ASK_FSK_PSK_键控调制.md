@@ -56,7 +56,7 @@ $$
 
 | 维度 | ASK | FSK | PSK（BPSK 为代表） |
 |:---|:---|:---|:---|
-| 带宽效率 | 低（抗噪差迫使低速率） | 最低（占用 2 个频点） | 中 |
+| 带宽效率 | 中（与 PSK 相当，实际速率受抗噪限制） | 最低（占用 2 个频点） | 中 |
 | 功率效率/抗噪 | 差（幅度易受衰落干扰） | 中 | 最好（星座点距离最大） |
 | 解调复杂度 | 低（包络检波） | 中（鉴频） | 高（需载波相位同步） |
 | 星座几何 | 同轴两点（A=0 与 A=A） | 两个频率点 | 圆上两点（0° 与 180°） |
@@ -66,7 +66,7 @@ AWGN（加性白高斯噪声，Additive White Gaussian Noise）下误码性能�
 
 ### 家族演进：从 PSK 到 QAM
 
-- BPSK（1 bit/符号）→ QPSK（2 bit/符号，四相位）→ 8PSK（3 bit/符号）→ QAM（幅度+相位联合键控，16QAM 4 bit/符号、64QAM 6 bit/符号、256QAM 8 bit/符号）。
+- BPSK（1 bit/符号）→ QPSK（2 bit/符号，四相位）→ 8PSK（八进制相移键控，3 bit/符号）→ QAM（幅度+相位联合键控，16QAM 4 bit/符号、64QAM 6 bit/符号、256QAM 8 bit/符号）。
 - LTE/NR 数据信道用 QAM 家族、控制信道用 BPSK/QPSK（可靠性优先）；QPSK 在星座上即"四个正交相位"，可视为 PSK 家族的最高带宽效率形态之一，再往上加星座点需联合调幅度——这就是 QAM。
 - 知识库衔接：软解调/LLR（对数似然比，Log-Likelihood Ratio）计算见 T2.13（BPSK/QPSK）与 T2.14（QAM Max-Log-MAP）；星座几何见 Modulation_Constellations_调制星座。
 
