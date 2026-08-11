@@ -12,7 +12,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 ---
 # 译码讲义术语总表
 
-本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（74 篇），可经 wikilink 跳转阅读。
+本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（77 篇），可经 wikilink 跳转阅读。
 
 ## 系统与协议
 
@@ -36,6 +36,17 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | PDCP | 分组数据汇聚协议 | Packet Data Convergence Protocol；层2 子层，负责加解密、头压缩与重排序。 |
 | SDAP | 服务数据适配协议 | Service Data Adaptation Protocol；NR 层2 子层，QoS 流到无线承载映射。 |
 | 数据链路层 | 数据链路层 | Data Link Layer；OSI 第二层，负责相邻节点成帧与差错控制；与 3GPP 层2 功能对应。 |
+| FDMA | 频分多址 | Frequency Division Multiple Access；按频率划分用户信道，1G AMPS 代表。→ [[Multiple_Access_多址接入]] |
+| TDMA | 时分多址 | Time Division Multiple Access；按时隙划分用户，GSM = FDMA+TDMA。 |
+| CDMA | 码分多址 | Code Division Multiple Access；按正交扩频码区分用户，3G WCDMA 代表。 |
+| OFDMA | 正交频分多址 | Orthogonal Frequency Division Multiple Access；子载波分组（RB）分配用户，LTE/NR 多址方式。 |
+| WCDMA | 宽带码分多址 | Wideband Code Division Multiple Access；3G 制式（TS 25 系列，本地无资料）。 |
+| ASK | 幅度键控 | Amplitude Shift Keying；用载波幅度承载比特，OOK 是其特例。→ [[ASK_FSK_PSK_键控调制]] |
+| FSK | 频移键控 | Frequency Shift Keying；用载波频率承载比特，GMSK（GSM）是其连续相位变体。 |
+| PSK | 相移键控 | Phase Shift Keying；用载波相位承载比特，BPSK/QPSK 是其成员。 |
+| DSSS | 直接序列扩频 | Direct Sequence Spread Spectrum；码片序列直接相乘的扩频方式。→ [[Spreading_扩频与解扩]] |
+| 扩频 | 扩频 | Spread Spectrum；窄带信号扩展到宽频带传输的技术。 |
+| 解扩 | 解扩 | De-spreading；接收端用同步码片序列把宽带信号恢复为窄带。 |
 | UL-SCH | 上行共享信道 | Uplink Shared Channel；上行数据传输信道。 |
 | DL-SCH | 下行共享信道 | Downlink Shared Channel；下行数据传输信道。 |
 | UCI | 上行控制信息 | Uplink Control Information；NR Polar 或 small block coding 的常见控制负载来源。 |
@@ -221,7 +232,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（74 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（77 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -252,6 +263,9 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[QAM1024_1024QAM]] | 32×32 星座、每符号 10 bit 的"最后一档"调制，给接收与 RF 带来 SNR/EVM/PA 线性度挑战。 |
 | [[Protocol_Stack_协议栈]] | 3GPP L1/L2/L3 分层与 OSI 七层模型对照。 |
 | [[Spectrum_and_Frequency_Point_频谱与频点]] | 频谱→频段→频点→ARFCN→栅格定位链。 |
+| [[Multiple_Access_多址接入]] | FDMA/TDMA/CDMA/OFDMA 四种多址方式详细对比。 |
+| [[ASK_FSK_PSK_键控调制]] | ASK/FSK/PSK 键控调制家族与到 QAM 的演进。 |
+| [[Spreading_扩频与解扩]] | DSSS 扩频-解扩机制、处理增益与 CDMA 关系。 |
 
 ### 译码算法
 
