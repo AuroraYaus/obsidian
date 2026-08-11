@@ -468,7 +468,7 @@ PDCCH 盲检像"信箱没有门牌号的集体邮箱"：邮差（基站）把信
 
 ## 协议锚点
 
-- PDCCH 监测与搜索空间：TS 38.213（Rel-19 j20）§10，本地 `3GPP_Rel19/processed/TS_38.213_38213-j30`。
+- PDCCH 监测与搜索空间：TS 38.213（Rel-19 j30）§10，本地 `3GPP_Rel19/processed/TS_38.213_38213-j30`。
 - PDCCH 结构与 CCE/REG：TS 38.211（Rel-19 j30）§7.3.2，本地 `TS_38.211_38211-j30`。
 - RNTI 类型：TS 38.321（Rel-19 j20）§7.1（RNTI 值表），本地 `3GPP_Rel19/processed/TS_38.321_38321-j20`。
 - LTE PDCCH：TS 36.211 §6.8（物理结构）、TS 36.212 §5.3.3（DCI 编码 TBCC），本地 `TS_36.211_*`/`TS_36.212_36212-j30`。
@@ -696,7 +696,7 @@ PUCCH 像"收货确认单"：收到货（PDSCH）后回一张单子（UCI），�
 
 ## 协议锚点
 
-- PUCCH 格式与资源：TS 38.213（Rel-19 j20）§9，本地 `3GPP_Rel19/processed/TS_38.213_38213-j30`。
+- PUCCH 格式与资源：TS 38.213（Rel-19 j30）§9，本地 `3GPP_Rel19/processed/TS_38.213_38213-j30`。
 - UCI 编码：TS 38.212（Rel-19 j30）§6.3（PUCCH 上 UCI 的 Reed-Muller/极化分段），本地 `TS_38.212_38212-j30`。
 - UCI 在 PUSCH 的复用与交织：T10.9（`docs/L2_协议算法/T10.9_NR_UCI_interleaving_triangular.md`）。
 - LTE PUCCH：TS 36.211 §5.4（物理结构）、TS 36.212 §5.2.3（UCI 编码）。
