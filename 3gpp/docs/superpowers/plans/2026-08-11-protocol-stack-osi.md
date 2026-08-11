@@ -406,7 +406,7 @@ Expected: 输出含 Gitee 与 GitHub 两处 `master -> master`（或 `Everything
 ## 自审记录（writing-plans 内置 + grill-me 拷问合并）
 
 - 规格覆盖：设计文档 §4（概念笔记）→ Task 1；§5（T0.1 补节）→ Task 2；§6（同步清单）→ Task 3；§7（验证）→ Task 5；§8-9（验收/提交）→ Task 6。设计 §6 未显式列「术语表概念笔记索引」更新，已在 Task 3 Step 3 补入。
-- **grill-me 拷问修复（2026-08-11，见 PLAN.md）**：① MAC 中文名统一「媒体接入控制层」（全库标准）；② 概念笔记索引区 2 列格式 + 「### 协议、信道与信号」分区；③ 图注注明 NR/LTE 差异（LTE 无 SDAP）；④ 补节开头加译码主线桥接句；⑤ TECH_TERMS 扩展 OSI/PDCP/SDAP/RLC + T2.14/T9.6 连带修复（Task 4）。
+- **grill-me 拷问修复（2026-08-11，见 PLAN.md）**：(1) MAC 中文名统一「媒体接入控制层」（全库标准）；(2) 概念笔记索引区 2 列格式 + 「### 协议、信道与信号」分区；(3) 图注注明 NR/LTE 差异（LTE 无 SDAP）；(4) 补节开头加译码主线桥接句；(5) TECH_TERMS 扩展 OSI/PDCP/SDAP/RLC + T2.14/T9.6 连带修复（Task 4）。
 - 占位符：无 TBD/TODO；所有 Markdown 内容全文写入任务步骤。
 - 一致性：wikilink 目标 `Protocol_Stack_协议栈` 在 Task 1 创建后于 Task 2/3 引用；Mermaid 源码两处一致（Task 1 直观模型 + Task 2 补节）；术语表 5 行与设计 §6.2 一致。
 - 双链：概念笔记 ↔ T0.1（Task 1 图谱关联 `[[T0.1_LTE_NR_decoder_protocol_reading_map]]` + Task 2 补节 `[[Protocol_Stack_协议栈]]`）闭环。
