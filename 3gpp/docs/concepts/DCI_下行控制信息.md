@@ -14,11 +14,11 @@ source_spec: "TS 38.212 Rel-19 §7.3; TS 36.212 §5.3.3"
 
 # DCI 下行控制信息
 
-DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 的调度指令——"这次传输给你什么、在哪、怎么收"。它由 PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载（[[PDCCH_物理下行控制信道]] 盲检获得），解析出的字段直接生成译码器的 descriptor（T9.0）：MCS（调制与编码方案，Modulation and Coding Scheme）、资源分配、HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程号、NDI、RV 等。DCI 是控制面与译码链路的接口——不理解 DCI 字段，就不知道 LLR（对数似然比，Log-Likelihood Ratio）从哪来、译码结果交给谁。
+DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 的调度指令——"这次传输给你什么、在哪、怎么收"。它由 PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载（[[PDCCH_物理下行控制信道]] 盲检获得），解析出的字段直接生成译码器的 descriptor（T9.0）：MCS（调制与编码方案，Modulation and Coding Scheme）、资源分配、HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程号、NDI（新数据指示，New Data Indicator）、RV（冗余版本，Redundancy Version）等。DCI 是控制面与译码链路的接口——不理解 DCI 字段，就不知道 LLR（对数似然比，Log-Likelihood Ratio）从哪来、译码结果交给谁。
 
 ## 独立解释任务
 
-任务目标：讲清 DCI 的格式体系（0_0/0_1/1_0/1_1/2_x）、核心字段语义（资源分配/MCS/HARQ/NDI/RV/TPC）、CRC 与 RNTI（无线网络临时标识，Radio Network Temporary Identifier）加扰，以及 DCI 解析如何映射到译码器 descriptor（与 T9.0 衔接）。
+任务目标：讲清 DCI 的格式体系（0_0/0_1/1_0/1_1/2_x）、核心字段语义（资源分配/MCS/HARQ/NDI/RV/TPC（发射功率控制命令，Transmit Power Control Command））、CRC 与 RNTI（无线网络临时标识，Radio Network Temporary Identifier）加扰，以及 DCI 解析如何映射到译码器 descriptor（与 T9.0 衔接）。
 
 ## 科学定义
 
