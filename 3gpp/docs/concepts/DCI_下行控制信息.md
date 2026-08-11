@@ -14,7 +14,7 @@ source_spec: "TS 38.212 Rel-19 §7.3; TS 36.212 §5.3.3"
 
 # DCI 下行控制信息
 
-DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 的调度指令——"这次传输给你什么、在哪、怎么收"。它由 PDCCH 承载（[[PDCCH_物理下行控制信道]] 盲检获得），解析出的字段直接生成译码器的 descriptor（T9.0）：MCS（调制与编码方案，Modulation and Coding Scheme）、资源分配、HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程号、NDI、RV 等。DCI 是控制面与译码链路的接口——不理解 DCI 字段，就不知道 LLR 从哪来、译码结果交给谁。
+DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 的调度指令——"这次传输给你什么、在哪、怎么收"。它由 PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载（[[PDCCH_物理下行控制信道]] 盲检获得），解析出的字段直接生成译码器的 descriptor（T9.0）：MCS（调制与编码方案，Modulation and Coding Scheme）、资源分配、HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程号、NDI、RV 等。DCI 是控制面与译码链路的接口——不理解 DCI 字段，就不知道 LLR（对数似然比，Log-Likelihood Ratio）从哪来、译码结果交给谁。
 
 ## 独立解释任务
 
@@ -26,7 +26,7 @@ DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 
 
 | 格式 | 用途 | 关键差异 |
 |:---|:---|:---|
-| 0_0 / 0_1 | UL grant（上行授权） | 0_1 支持更多配置（波束/CBG/多载波） |
+| 0_0 / 0_1 | UL grant（上行授权） | 0_1 支持更多配置（波束/CBG（码块组，Code Block Group）/多载波） |
 | 1_0 / 1_1 | DL assignment（下行调度分配） | 1_1 支持更多配置 |
 | 2_0/2_1/2_2/2_3 | 组公共（Group Common） | 时隙格式/抢占指示/功率控制，发给一组 UE |
 
@@ -34,7 +34,7 @@ DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 
 
 | 字段 | 语义 | 与译码链路的关系 |
 |:---|:---|:---|
-| 频域资源分配 | RB 分配位图/起始 RB+长度 | 决定 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）在网格哪里（T2.3） |
+| 频域资源分配 | RB（资源块，Resource Block）分配位图/起始 RB+长度 | 决定 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）在网格哪里（T2.3） |
 | 时域资源分配 | 时域资源索引 → 起始符号+长度 | 决定符号位置 |
 | MCS | 调制阶数 + 目标码率（T2.5/T9.0） | 直接进 descriptor |
 | HARQ 进程号 | 进程索引（0-N） | 软缓存地址（T9.3） |
@@ -48,7 +48,7 @@ DCI 附 CRC（循环冗余校验，Cyclic Redundancy Check；NR 24 bit / LTE 16 
 
 ### DCI → Descriptor 映射（与 T9.0 衔接）
 
-DCI 解析不是译码算法的一部分，但它生产译码器消费的元数据：T9.0 的 descriptor（MCS/Qm/R/TBS/RV/CBG）几乎全部来自 DCI 字段 + RRC 配置。接收链路：PDCCH 盲检 → DCI 解析 → descriptor 生成 → PDSCH 软解调 → 译码。
+DCI 解析不是译码算法的一部分，但它生产译码器消费的元数据：T9.0 的 descriptor（MCS/Qm/R/TBS（传输块大小，Transport Block Size）/RV/CBG）几乎全部来自 DCI 字段 + RRC（无线资源控制，Radio Resource Control）配置。接收链路：PDCCH 盲检 → DCI 解析 → descriptor 生成 → PDSCH 软解调 → 译码。
 
 ## 直观模型
 
