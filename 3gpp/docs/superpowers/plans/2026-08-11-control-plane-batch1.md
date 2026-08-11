@@ -873,7 +873,7 @@ Expected: Gitee 与 GitHub 两处 `master -> master`；单远端失败必须报�
 
 - 规格覆盖：拷问决策 4 项全部落地——范围（控制面 6 篇）→ Task C1-C6；工具（只扩 TBCC）→ Task C8；结构修复（Pilot+T0.1）→ Task C0；同步清单 → Task C7。
 - 占位符：无 TBD/TODO；六篇笔记全文写入任务步骤。
-- 一致性：wikilink 创建顺序正确（TBCC C1、PSS_SSS C2 先建，PBCH C3/PDCCH C4 引用已存在目标；T0.1 补节 C0 的 6 个前瞻链接在 C7 后闭合）；术语配对完整三件套（A1/B1/B2 教训——C1-C6 内容已按「中文（English Full Name, ABBR）」写定）；数值自洽（小区 ID 1008=3×336+3；聚合等级 1/2/4/8/16）。
+- 一致性：wikilink 创建顺序正确（TBCC C1、PSS_SSS C2 先建，PBCH C3/PDCCH C4 引用已存在目标；T0.1 补节 C0 的 6 个前瞻链接在 C7 后闭合）；术语配对完整三件套（A1/B1/B2 教训——C1-C6 内容已按「中文（English Full Name, ABBR）」写定）；数值自洽（小区 ID 1008=336×3；聚合等级 1/2/4/8/16）。
 - 双链：PDCCH↔DCI（C4/C5 互链）、PBCH↔PSS_SSS（C3/C2 互链）、PUCCH↔DCI/HARQ（C6 双向）；协议锚点 TS 38.213 §9/§10、TS 38.212 §6.3/§7.3 均本地存在（38.213 在 `TS_38.213_38213-j30`、38.212 在 `TS_38.212_38212-j30`）。
 - 阶段 2 前置登记：PDCCH（13 篇未配对）/PUCCH（13 篇）/PBCH（6 篇）TECH_TERMS 全库治理。
 
