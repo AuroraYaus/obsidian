@@ -22,6 +22,11 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | LTE | 长期演进 | Long Term Evolution；4G 蜂窝系统，本项目关注其 Turbo 数据译码链路。 |
 | NR | 新空口 | New Radio；5G 空口系统，本项目关注其 LDPC 数据译码和 Polar 控制译码链路。 |
 | MAC | 媒体接入控制层 | Medium Access Control；调度、HARQ process 和上层交付上下文来源。 |
+| OSI | 开放式系统互联参考模型 | Open Systems Interconnection Reference Model；七层参考模型。3GPP 分层与之是功能类比而非同一体系。 |
+| 协议栈 | 协议栈 | Protocol Stack；无线接口 L1/L2/L3 分层体系，层2 = MAC/RLC/PDCP（NR 加 SDAP）。→ [[Protocol_Stack_协议栈]] |
+| PDCP | 分组数据汇聚协议 | Packet Data Convergence Protocol；层2 子层，负责加解密、头压缩与重排序。 |
+| SDAP | 服务数据适配协议 | Service Data Adaptation Protocol；NR 层2 子层，QoS 流到无线承载映射。 |
+| 数据链路层 | 数据链路层 | Data Link Layer；OSI 第二层，负责相邻节点成帧与差错控制；与 3GPP 层2 功能对应。 |
 | UL-SCH | 上行共享信道 | Uplink Shared Channel；上行数据传输信道。 |
 | DL-SCH | 下行共享信道 | Downlink Shared Channel；下行数据传输信道。 |
 | UCI | 上行控制信息 | Uplink Control Information；NR Polar 或 small block coding 的常见控制负载来源。 |
@@ -236,6 +241,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[MCS_Table_Effective_Code_Rate_MCS表与有效码率]] | MCS 表把调度索引映射为调制阶数与目标码率（PS 表还含 ν），R_eff 是实际 payload 折算的真实码率。 |
 | [[CSI_SINR]] | CSI 是接收端对信道质量的度量，SINR 是其中核心标量，影响译码器输入 LLR。 |
 | [[QAM1024_1024QAM]] | 32×32 星座、每符号 10 bit 的"最后一档"调制，给接收与 RF 带来 SNR/EVM/PA 线性度挑战。 |
+| [[Protocol_Stack_协议栈]] | 3GPP L1/L2/L3 分层与 OSI 七层模型对照。 |
 
 ### 译码算法
 
