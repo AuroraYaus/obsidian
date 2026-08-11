@@ -43,7 +43,7 @@ $$
 G_p = 10 \log_{10} \frac{R_c}{R_d} \quad \text{dB}
 $$
 
-处理增益是扩频体制的核心指标：解扩时目标信号相干累加（幅度按 SF 增加），窄带干扰非相干摊平——信噪比改善约 $G_p$ dB。例：WCDMA 语音 12.2 kbps、码片 3.84 Mcps（兆码片每秒，megachips per second）、SF=128，处理增益约 21 dB。
+处理增益是扩频体制的核心指标：解扩时目标信号相干累加（幅度按 SF 增加），窄带干扰非相干摊平——信噪比改善约 $G_p$ dB。例：WCDMA 语音 12.2 kbps（AMR 编码后符号速率约 30 kbps）、码片 3.84 Mcps（兆码片每秒，megachips per second），扩频因子 SF = 3.84 Mcps / 30 kbps = 128，处理增益 $10\log_{10}(128) \approx 21$ dB。
 
 ### 解扩：相关器
 
@@ -79,7 +79,7 @@ CDMA 多址 = 扩频 + 正交码分工：每个用户分配**不同的正交码*
 
 ### 4G/5G 弃用 CDMA/扩频的原因
 
-(1) 多用户干扰限制容量——正交码在真实信道（多径、频偏）下不再严格正交，容量受限；(2) 全带宽共享使频率选择性调度不可行，MIMO（多输入多输出，Multiple Input Multiple Output）波束成形也难以按用户频域分配；(3) OFDMA（正交频分多址）在调度器层面规避干扰，接收机更简单、容量更高。扩频思想仍在抗干扰军事通信、GNSS、以及 NB-IoT（窄带物联网，Narrowband IoT）的窄带设计对照中存在。
+(1) 多用户干扰限制容量——正交码在真实信道（多径、频偏）下不再严格正交，容量受限；(2) 全带宽共享使频率选择性调度不可行，MIMO（多输入多输出，Multiple Input Multiple Output）波束成形也难以按用户频域分配；(3) OFDMA（正交频分多址，Orthogonal Frequency Division Multiple Access）在调度器层面规避干扰，接收机更简单、容量更高。扩频思想仍在抗干扰军事通信、GNSS、以及 NB-IoT（窄带物联网，Narrowband IoT）的窄带设计对照中存在。
 
 ### 其他扩频方式（对比）
 
