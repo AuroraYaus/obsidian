@@ -29,14 +29,14 @@ PBCH（物理广播信道，Physical Broadcast Channel）承载 MIB（主信息�
 | systemFrameNumber | 系统帧号（System Frame Number, SFN）高 6 位 | 帧定时（低 4 位由 PBCH 载荷附加位携带） |
 | subCarrierSpacingCommon | SIB1/PRACH（物理随机接入信道，Physical Random Access Channel）的公共子载波间隔 | 接入配置 |
 | ssb-SubcarrierOffset | SSB 与资源网格的频域偏移 | 网格对齐 |
-| dmrs-TypeA-Position | DMRS（解调参考信号，Demodulation Reference Signal）Type A 位置 | PDSCH（物理下行共享信道，Physical Downlink Shared Channel）解调配置 |
+| dmrs-TypeA-Position | DM-RS（解调参考信号，Demodulation Reference Signal）Type A 位置 | PDSCH（物理下行共享信道，Physical Downlink Shared Channel）解调配置 |
 | pdcch-ConfigSIB1 | SIB1 的 PDCCH（物理下行控制信道，Physical Downlink Control Channel）调度配置（CORESET（控制资源集，Control Resource Set）0 + 搜索空间 0） | 指向 SIB1 |
 
 ### PBCH 编码与加扰
 
-- NR：PBCH 载荷 32 bit（MIB 24 bit + 8 bit SSB 索引/半帧指示等额外位），加 16 bit CRC 后 Polar 编码（与 PDCCH 同族，见 [[Polar_码]] 与 [[PDCCH_物理下行控制信道]]）；加扰序列初始化仅依赖物理小区 ID，半帧指示位与 SSB 索引位属载荷比特；承载于 SSB 内 PBCH 符号。
+- NR：PBCH 载荷 32 bit（MIB 24 bit（传输块口径；TS 38.331 ASN.1 为 23 bit 含备用位）+ 8 bit 额外位（SFN 低 4 位、半帧位及 Lmax 相关的 SSB 索引/k_SSB 位）），加 24 bit CRC（gCRC24C）后 Polar 编码（与 PDCCH 同族，见 [[Polar_码]] 与 [[PDCCH_物理下行控制信道]]）；加扰序列初始化仅依赖物理小区 ID，半帧指示位与 SSB 索引位属载荷比特；承载于 SSB 内 PBCH 符号。
 - LTE：MIB（14 bit 含 10 bit 保护间隔）→ TBCC 编码（见 [[TBCC_咬尾卷积码]]），40 ms 周期（4 帧），承载于 PBCH 资源（传输信道为 BCH）。
-- 接收端：解 PBCH 需要先有小区 ID（PSS/SSS 给出，用于解扰）与信道估计（PBCH DM-RS（解调参考信号，Demodulation Reference Signal））。
+- 接收端：解 PBCH 需要先有小区 ID（PSS/SSS 给出，用于解扰）与信道估计（PBCH DM-RS）。
 
 ### MIB → SIB1 衔接
 
