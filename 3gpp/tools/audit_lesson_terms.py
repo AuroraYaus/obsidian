@@ -46,6 +46,8 @@ TECH_TERMS = {
     "TBS": "传输块大小（Transport Block Size, TBS）",
     "SRAM": "静态随机存取存储器（Static Random-Access Memory, SRAM）",
     "MAC": "媒体接入控制层（Medium Access Control, MAC）",
+    "ARFCN": "绝对射频信道号（Absolute Radio Frequency Channel Number, ARFCN）",
+    "GSCN": "全球同步信道号（Global Synchronization Channel Number, GSCN）",
     "OSI": "开放式系统互联参考模型（Open Systems Interconnection Reference Model, OSI）",
     "PDCP": "分组数据汇聚协议（Packet Data Convergence Protocol, PDCP）",
     "SDAP": "服务数据适配协议（Service Data Adaptation Protocol, SDAP）",
