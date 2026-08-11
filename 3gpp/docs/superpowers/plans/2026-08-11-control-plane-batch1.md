@@ -79,7 +79,7 @@ tags:
   - concepts
   - coding
   - l2
-source_spec: "TS 36.212 Rel-19 §5.1.2; TS 36.211 Rel-19 §6.8"
+source_spec: "TS 36.212 Rel-19 §5.1.3.1; TS 36.211 Rel-19 §6.8"
 ---
 
 # TBCC 咬尾卷积码
@@ -96,11 +96,11 @@ source_spec: "TS 36.212 Rel-19 §5.1.2; TS 36.211 Rel-19 §6.8"
 
 卷积码是有限状态机（约束长度 K 的移位寄存器），编码输出依赖当前输入与寄存器状态。一个信息块编码结束时，寄存器停在哪个状态不确定——若把寄存器清零（zero termination）需要追加收尾比特，浪费码率且引入额外约束。咬尾（tail-biting）的解法：**让初始状态 = 信息比特末尾（最后 K-1 个比特）对应的状态**，编码结束后寄存器自然回到初始状态，网格首尾相连成环——零收尾开销。
 
-### LTE TBCC 结构（TS 36.212 §5.1.2）
+### LTE TBCC 结构（TS 36.212 §5.1.3.1）
 
-- 约束长度 K = 7（6 级移位寄存器），生成多项式 g0 = 133（八进制）、g1 = 171（八进制），码率 1/2（每信息比特输出 2 个校验比特）。
+- 约束长度 K = 7（6 级移位寄存器），生成多项式 g0 = 133、g1 = 171、g2 = 165（八进制），码率 1/3（每信息比特输出 3 个校验比特）。
 - 咬尾初始化：寄存器初态 = 输入信息比特的最后 6 比特对应的状态。
-- 输出两路：g0 路（原样输出）与 g1 路（校验输出），交织后送入速率匹配（LTE 控制信道速率匹配与数据信道不同，见 TS 36.212 §5.1.4.2 的三路交织）。
+- 输出三路：g0 路、g1 路、g2 路（三条校验比特流），交织后送入速率匹配（LTE 控制信道速率匹配与数据信道不同，见 TS 36.212 §5.1.4.2 的三路交织）。
 
 ### 与 RSC/Turbo 的关系（易混淆点）
 
@@ -127,12 +127,12 @@ source_spec: "TS 36.212 Rel-19 §5.1.2; TS 36.211 Rel-19 §6.8"
 |:---|:---|
 | TBCC 是 Turbo 的一种 | TBCC 是普通卷积码（非递归、无迭代），Turbo 是 RSC 双分量迭代码——两者编码结构不同 |
 | 咬尾 = 零收尾（zero termination） | 零收尾是"补尾比特归零"，咬尾是"初态=末态无尾比特"，机制不同、码率开销不同 |
-| LTE 控制信道也用 Turbo | 数据信道用 Turbo，PDCCH/PBCH 用 TBCC（码率 1/2、短块、无迭代） |
+| LTE 控制信道也用 Turbo | 数据信道用 Turbo，PDCCH/PBCH 用 TBCC（码率 1/3、短块、无迭代） |
 | TBCC 译码和 Turbo 一样要迭代 | TBCC 单程 Viterbi/BCJR 即可，无外信息交换 |
 
 ## 协议锚点
 
-- TBCC 编码：TS 36.212（Rel-19 j30）§5.1.2，本地 `3GPP_Rel19/processed/TS_36.212_36212-j30`。
+- TBCC 编码：TS 36.212（Rel-19 j30）§5.1.3.1，本地 `3GPP_Rel19/processed/TS_36.212_36212-j30`。
 - PDCCH 物理处理：TS 36.211（Rel-19 j30）§6.8，本地 `TS_36.211_*`。
 - 控制信道速率匹配：TS 36.212 §5.1.4.2（三路交织）。
 - 注意：NR 的 PDCCH/PBCH 用 Polar 编码（见 [[Polar_码]] 与 [[PDCCH_物理下行控制信道]]），TBCC 是 LTE 专属——不要把两代控制编码混为一谈。
@@ -313,11 +313,11 @@ source_spec: "TS 38.331 Rel-19 §6.2.2; TS 38.212 §7.1; TS 36.211 §6.6"
 
 # PBCH MIB 广播信道
 
-PBCH（物理广播信道，Physical Broadcast Channel）承载 MIB（主信息块，Master Information Block）——小区搜索的最后一步：UE 解出 PSS/SSS 拿到小区 ID 后，再解 PBCH 读出 MIB，MIB 里给出接入小区所需的最少系统参数，并指向 SIB1（系统信息块 1，System Information Block 1）的调度位置。NR 的 PBCH 用 Polar（极化码，Polar Code）编码、LTE 的 PBCH 用 TBCC（咬尾卷积码，Tail Biting Convolutional Code）编码——两代广播信道编码不同，但"MIB → SIB1 → 其他 SIB"的层级结构一致。
+PBCH（物理广播信道，Physical Broadcast Channel）承载 MIB（主信息块，Master Information Block）——小区搜索的最后一步：UE 解出 PSS/SSS（主同步信号/辅同步信号，Primary/Secondary Synchronization Signal）拿到小区 ID 后，再解 PBCH 读出 MIB，MIB 里给出接入小区所需的最少系统参数，并指向 SIB1（系统信息块 1，System Information Block 1）的调度位置。NR 的 PBCH 用 Polar（极化码，Polar Code）编码、LTE 的 PBCH 用 TBCC（咬尾卷积码，Tail Biting Convolutional Code）编码——两代广播信道编码不同，但"MIB → SIB1 → 其他 SIB"的层级结构一致。
 
 ## 独立解释任务
 
-任务目标：讲清 MIB 承载哪些字段、PBCH 的编码与加扰（NR Polar / LTE TBCC）、MIB 如何指向 SIB1，以及 PBCH 在 SSB 内的位置与接收端解调流程。
+任务目标：讲清 MIB 承载哪些字段、PBCH 的编码与加扰（NR Polar / LTE TBCC）、MIB 如何指向 SIB1，以及 PBCH 在 SSB（同步信号块，Synchronization Signal Block）内的位置与接收端解调流程。
 
 ## 科学定义
 
@@ -325,17 +325,17 @@ PBCH（物理广播信道，Physical Broadcast Channel）承载 MIB（主信息�
 
 | 字段 | 含义 | 用途 |
 |:---|:---|:---|
-| systemFrameNumber | 系统帧号（System Frame Number, SFN）高 6 位 | 帧定时（低 4 位由 PBCH 承载时序隐含） |
-| subCarrierSpacingCommon | SIB1/PRACH 的公共子载波间隔 | 接入配置 |
+| systemFrameNumber | 系统帧号（System Frame Number, SFN）高 6 位 | 帧定时（低 4 位由 PBCH 载荷附加位携带） |
+| subCarrierSpacingCommon | SIB1/PRACH（物理随机接入信道，Physical Random Access Channel）的公共子载波间隔 | 接入配置 |
 | ssb-SubcarrierOffset | SSB 与资源网格的频域偏移 | 网格对齐 |
-| dmrs-TypeA-Position | DMRS Type A 位置 | PDSCH 解调配置 |
-| pdcch-ConfigSIB1 | SIB1 的 PDCCH 调度配置（CORESET（控制资源集，Control Resource Set）0 + 搜索空间 0） | 指向 SIB1 |
+| dmrs-TypeA-Position | DMRS（解调参考信号，Demodulation Reference Signal）Type A 位置 | PDSCH（物理下行共享信道，Physical Downlink Shared Channel）解调配置 |
+| pdcch-ConfigSIB1 | SIB1 的 PDCCH（物理下行控制信道，Physical Downlink Control Channel）调度配置（CORESET（控制资源集，Control Resource Set）0 + 搜索空间 0） | 指向 SIB1 |
 
 ### PBCH 编码与加扰
 
-- NR：MIB（32 bit 含 CRC）→ Polar 编码（与 PDCCH 同族，见 [[Polar_码]] 与 [[PDCCH_物理下行控制信道]]），加扰与半帧指示（SSB 索引低 1 位）相关，承载于 SSB 内 PBCH 符号。
-- LTE：MIB（14 bit 含 10 bit 保护间隔）→ TBCC 编码（见 [[TBCC_咬尾卷积码]]），40 ms 周期（4 帧），承载于 P-BCH 资源。
-- 接收端：解 PBCH 需要先有小区 ID（PSS/SSS 给出，用于解扰）与信道估计（PBCH DM-RS）。
+- NR：PBCH 载荷 32 bit（MIB 24 bit + 8 bit SSB 索引/半帧指示等额外位），加 16 bit CRC 后 Polar 编码（与 PDCCH 同族，见 [[Polar_码]] 与 [[PDCCH_物理下行控制信道]]）；加扰序列初始化仅依赖物理小区 ID，半帧指示位与 SSB 索引位属载荷比特；承载于 SSB 内 PBCH 符号。
+- LTE：MIB（14 bit 含 10 bit 保护间隔）→ TBCC 编码（见 [[TBCC_咬尾卷积码]]），40 ms 周期（4 帧），承载于 PBCH 资源（传输信道为 BCH）。
+- 接收端：解 PBCH 需要先有小区 ID（PSS/SSS 给出，用于解扰）与信道估计（PBCH DM-RS（解调参考信号，Demodulation Reference Signal））。
 
 ### MIB → SIB1 衔接
 
@@ -359,8 +359,8 @@ MIB 像"电台的频率报时"：报出频道号（SFN）、信号制式（子�
 - MIB 字段：TS 38.331（Rel-19 j20）§6.2.2，本地 `3GPP_Rel19/processed/TS_38.331_38331-j20`。
 - PBCH 编码（Polar）：TS 38.212（Rel-19 j30）§7.1，本地 `TS_38.212_38212-j30`。
 - PBCH 物理结构与位置：TS 38.211（Rel-19 j30）§7.3.3/§7.4.3，本地 `TS_38.211_38211-j30`。
-- LTE PBCH：TS 36.211（Rel-19 j30）§6.6（物理结构）、TS 36.212 §5.1.2（TBCC），本地 `TS_36.211_*`/`TS_36.212_*`。
-- SIB 调度：TS 38.321（MAC 层系统信息调度）。
+- LTE PBCH：TS 36.211（Rel-19 j30）§6.6（物理结构）、TS 36.212 §5.1.3.1（TBCC 咬尾卷积编码），本地 `TS_36.211_*`/`TS_36.212_*`。
+- SIB 调度：TS 38.321（Rel-19 j20）§5.3.1（MAC 层系统信息调度），本地 `3GPP_Rel19/processed/TS_38.321_38321-j20`。
 
 ## 图谱关联
 
@@ -470,7 +470,7 @@ PDCCH 盲检像"信箱没有门牌号的集体邮箱"：邮差（基站）把信
 
 - PDCCH 监测与搜索空间：TS 38.213（Rel-19 j20）§10，本地 `3GPP_Rel19/processed/TS_38.213_38213-j30`。
 - PDCCH 结构与 CCE/REG：TS 38.211（Rel-19 j30）§7.3.2，本地 `TS_38.211_38211-j30`。
-- RNTI 类型：TS 38.321（MAC 层）。
+- RNTI 类型：TS 38.321（Rel-19 j20）§7.1（RNTI 值表），本地 `3GPP_Rel19/processed/TS_38.321_38321-j20`。
 - LTE PDCCH：TS 36.211 §6.8（物理结构）、TS 36.212 §5.3.3（DCI 编码 TBCC），本地 `TS_36.211_*`/`TS_36.212_36212-j30`。
 - 与译码衔接：Polar 控制译码的 CRC/RNTI 边界见 T10.6/T10.8（`docs/L2_协议算法/`）。
 
@@ -552,7 +552,7 @@ DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 
 
 | 字段 | 语义 | 与译码链路的关系 |
 |:---|:---|:---|
-| 频域资源分配 | RB 分配位图/起始 RB+长度 | 决定 PDSCH 在网格哪里（T2.3） |
+| 频域资源分配 | RB 分配位图/起始 RB+长度 | 决定 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）在网格哪里（T2.3） |
 | 时域资源分配 | 时域资源索引 → 起始符号+长度 | 决定符号位置 |
 | MCS | 调制阶数 + 目标码率（T2.5/T9.0） | 直接进 descriptor |
 | HARQ 进程号 | 进程索引（0-N） | 软缓存地址（T9.3） |
@@ -586,7 +586,7 @@ DCI 像"运单"：收货人（RNTI）、货物规格（MCS/TBS）、发车时间
 - NR DCI 格式：TS 38.212（Rel-19 j30）§7.3，本地 `3GPP_Rel19/processed/TS_38.212_38212-j30`。
 - LTE DCI 格式：TS 36.212（Rel-19 j30）§5.3.3，本地 `TS_36.212_36212-j30`。
 - descriptor 生成：T9.0（`docs/L2_协议算法/T9.0_TS38214_MCS_TBS_decoder_descriptor.md`）。
-- RNTI 定义：TS 38.321（MAC 层）。
+- RNTI 定义：TS 38.321（Rel-19 j20）§7.1（RNTI 值表），本地 `3GPP_Rel19/processed/TS_38.321_38321-j20`。
 
 ## 图谱关联
 
@@ -667,7 +667,7 @@ PUCCH（物理上行控制信道，Physical Uplink Control Channel）承载 UCI�
 |:---|:---|:---|:---|
 | 0 | 短（1-2 符号） | ≤2 bit | HARQ-ACK/SR（序列选择编码） |
 | 1 | 长（4-14 符号） | ≤2 bit | HARQ-ACK/SR（低速率扩展） |
-| 2 | 短 | >2 bit | 多 bit CSI/UCI（DMRS 辅助相干解调） |
+| 2 | 短 | >2 bit | 多 bit CSI/UCI（DMRS（解调参考信号，Demodulation Reference Signal）辅助相干解调） |
 | 3 | 长 | 中等 | 多 bit UCI |
 | 4 | 长 | 较大（多 PRB） | 大 UCI（含 DFT-s-OFDM（离散傅里叶变换扩展正交频分复用，Discrete Fourier Transform Spread OFDM）预编码） |
 
@@ -675,7 +675,7 @@ PUCCH（物理上行控制信道，Physical Uplink Control Channel）承载 UCI�
 
 - UCI 少且无 PUSCH → PUCCH；UCI 多或有 PUSCH → 搭 PUSCH 传输（PUSCH 内 UCI 复用，交织见 T10.9 三角交织器）。
 - HARQ-ACK/SR/CSI 同时存在时按优先级与容量复用进同一 PUCCH 资源。
-- HARQ-ACK 时序：下行 PDSCH 在 slot n 收到 → UCI 在 slot n+k1 的 PUCCH 上报（k1 由 DCI 时域字段指示）——这就是下行译码到上行反馈的时延链路。
+- HARQ-ACK 时序：下行 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）在 slot n 收到 → UCI 在 slot n+k1 的 PUCCH 上报（k1 由 DCI 时域字段指示）——这就是下行译码到上行反馈的时延链路。
 
 ### PUCCH 资源分配
 
