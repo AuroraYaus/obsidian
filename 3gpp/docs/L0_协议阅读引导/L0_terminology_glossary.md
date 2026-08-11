@@ -21,6 +21,15 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | 3GPP | 第三代合作伙伴计划 | 3rd Generation Partnership Project；LTE/NR 协议规范来源。 |
 | LTE | 长期演进 | Long Term Evolution；4G 蜂窝系统，本项目关注其 Turbo 数据译码链路。 |
 | NR | 新空口 | New Radio；5G 空口系统，本项目关注其 LDPC 数据译码和 Polar 控制译码链路。 |
+| 频谱 | 频谱 | Frequency Spectrum；电磁波按频率的连续范围，3GPP 划分 FR1/FR2 频段。→ [[Spectrum_and_Frequency_Point_频谱与频点]] |
+| 频段 | 频段 | Frequency Band；3GPP 对频谱的划分块（NR n1-n104、LTE 1-105），如 n78 = 3300-3800 MHz。 |
+| 频点 | 频点 | Frequency Point；频段内具体载波中心频率，用 ARFCN 整数编号表达。 |
+| FR1 | 频率范围 1 | Frequency Range 1；450 MHz-6 GHz 中低频段。 |
+| FR2 | 频率范围 2 | Frequency Range 2；24.25-52.6 GHz 毫米波频段。 |
+| ARFCN | 绝对射频信道号 | Absolute Radio Frequency Channel Number；频点的整数编号：NR-ARFCN（TS 38.101-1 §5.4.2.1）/ E-UTRA ARFCN（TS 36.101 §5.7.3）。 |
+| GSCN | 全球同步信道号 | Global Synchronization Channel Number；同步栅格上 SSB 参考位置编号（TS 38.101-1 §5.4.3.1）。 |
+| 信道栅格 | 信道栅格 | Channel Raster；频点合法放置的离散位置集，步长 ΔF_Global（TS 38.104 §5.4.2）。 |
+| 同步栅格 | 同步栅格 | Synchronization Raster；SSB 中心可放置的更稀疏位置集，用 GSCN 编号，UE 盲检搜索位置。 |
 | MAC | 媒体接入控制层 | Medium Access Control；调度、HARQ process 和上层交付上下文来源。 |
 | OSI | 开放式系统互联参考模型 | Open Systems Interconnection Reference Model；七层参考模型。3GPP 分层与之是功能类比而非同一体系。 |
 | 协议栈 | 协议栈 | Protocol Stack；无线接口 L1/L2/L3 分层体系，层2 = MAC/RLC/PDCP（NR 加 SDAP）。→ [[Protocol_Stack_协议栈]] |
@@ -242,6 +251,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[CSI_SINR]] | CSI 是接收端对信道质量的度量，SINR 是其中核心标量，影响译码器输入 LLR。 |
 | [[QAM1024_1024QAM]] | 32×32 星座、每符号 10 bit 的"最后一档"调制，给接收与 RF 带来 SNR/EVM/PA 线性度挑战。 |
 | [[Protocol_Stack_协议栈]] | 3GPP L1/L2/L3 分层与 OSI 七层模型对照。 |
+| [[Spectrum_and_Frequency_Point_频谱与频点]] | 频谱→频段→频点→ARFCN→栅格定位链。 |
 
 ### 译码算法
 
