@@ -49,7 +49,7 @@ source_spec: "TS 38.211 Rel-19 §4/§5; TS 36.211; 教材背景知识"
 
 # Multiple Access 多址接入
 
-多址接入（Multiple Access）解决"多个用户如何共享同一段无线频谱"的问题。历史上出现过四类主流方案：FDMA（频分多址）、TDMA（时分多址）、CDMA（码分多址）、OFDMA（正交频分多址）——它们分别在频率、时间、码、子载波四个维度上给用户划分互不干扰的资源。LTE/NR 最终选择了 OFDMA（下行）/SC-FDMA（上行），这个选择是 1G 到 5G 演进的技术收敛。
+多址接入（Multiple Access）解决"多个用户如何共享同一段无线频谱"的问题。历史上出现过四类主流方案：FDMA（频分多址）、TDMA（时分多址）、CDMA（码分多址）、OFDMA（正交频分多址）——它们分别在频率、时间、码、子载波四个维度上给用户划分互不干扰的资源。LTE/NR 最终选择了 OFDMA（下行）/SC-FDMA（单载波频分多址，Single Carrier Frequency Division Multiple Access）（上行），这个选择是 1G 到 5G 演进的技术收敛。
 
 ## 独立解释任务
 
@@ -64,7 +64,7 @@ source_spec: "TS 38.211 Rel-19 §4/§5; TS 36.211; 教材背景知识"
 ### FDMA：频分多址（Frequency Division Multiple Access）
 
 - 原理：把可用频带切成互不重叠的频率信道，每用户独占一个信道，相邻信道间留保护间隔（guard band）防串扰。
-- 代表系统：1G 模拟蜂窝（AMPS）、GSM 的频段划分部分。
+- 代表系统：1G 模拟蜂窝（AMPS）、GSM（全球移动通信系统，Global System for Mobile Communications）的频段划分部分。
 - 优点：实现简单（滤波即可）、用户间无同步要求。
 - 缺点：频谱利用率低（保护带浪费）、频点规划复杂（同频干扰要间隔复用距离）。
 
@@ -78,15 +78,15 @@ source_spec: "TS 38.211 Rel-19 §4/§5; TS 36.211; 教材背景知识"
 ### CDMA：码分多址（Code Division Multiple Access）
 
 - 原理：所有用户同时同频发射，用不同的扩频码区分——每个用户的数据比特被乘以各自的正交/准正交码片序列，接收端用同一码做相关解扩，把目标用户信号"捞"出来，其他用户的码间干扰被解扩过程抑制。
-- 代表系统：3G 的 WCDMA（宽带码分多址）与 cdma2000。WCDMA 码片速率 3.84 Mcps，载波带宽 5 MHz。
+- 代表系统：3G 的 WCDMA（宽带码分多址）与 cdma2000（码分多址 2000）。WCDMA 码片速率 3.84 Mcps，载波带宽 5 MHz。
 - 优点：抗窄带干扰/抗多径能力强；软切换；蜂窝间复用因子可为 1（无需频率规划）。
 - 缺点：**远近效应**——近处强用户会淹没远处弱用户，必须快速功率控制；多用户干扰随用户数增长（呼吸效应）；正交码数量有限，容量受干扰而非受带宽约束。
 
 ### OFDMA：正交频分多址（Orthogonal Frequency Division Multiple Access）
 
-- 原理：OFDM 把宽带信道分成大量正交子载波（相邻子载波间隔 Δf = 15 kHz 等），OFDMA 把子载波按资源块（RB，12 子载波）分组分配给不同用户——频域上的"粒度化 FDMA"，但子载波间正交重叠、无需保护带。
-- 代表系统：LTE/NR 下行（DL）用 OFDMA；上行（UL）用 SC-FDMA（DFT 预编码 OFDM，降低峰均比 PAPR）。
-- 优点：频谱效率高（正交子载波无保护带浪费）；资源分配粒度细（RB 级调度，可频率选择性调度把用户放到信道好的子载波）；天然支持 MIMO 与频率分集。
+- 原理：OFDM（正交频分复用，Orthogonal Frequency Division Multiplexing）把宽带信道分成大量正交子载波（相邻子载波间隔 Δf = 15 kHz 等），OFDMA 把子载波按资源块（RB，12 子载波）分组分配给不同用户——频域上的"粒度化 FDMA"，但子载波间正交重叠、无需保护带。
+- 代表系统：LTE/NR 下行（DL）用 OFDMA；上行（UL）用 SC-FDMA（DFT（离散傅里叶变换，Discrete Fourier Transform）预编码 OFDM，降低峰均比 PAPR）。
+- 优点：频谱效率高（正交子载波无保护带浪费）；资源分配粒度细（RB 级调度，可频率选择性调度把用户放到信道好的子载波）；天然支持 MIMO（多输入多输出，Multiple Input Multiple Output）与频率分集。
 - 缺点：对频偏（CFO）敏感（破坏正交性→载波间干扰 ICI）；峰均比 PAPR 高（上行用 SC-FDMA 缓解）。
 
 ### 资源划分示意
@@ -107,7 +107,7 @@ flowchart TB
 |:---|:---|:---|:---|:---|
 | 划分维度 | 频率 | 时间 | 码 | 子载波（频+时） |
 | 用户间隔离 | 频率不重叠 | 时隙不重叠 | 码正交（理想） | 子载波正交 |
-| 同步要求 | 无 | 全网同步 | 码同步 | 时频同步（CP 内） |
+| 同步要求 | 无 | 全网同步 | 码同步 | 时频同步（CP（循环前缀，Cyclic Prefix）内） |
 | 频谱效率 | 低（保护带） | 中 | 中高（干扰受限） | 高 |
 | 远近效应 | 无 | 无 | 严重（需功率控制） | 轻微（调度缓解） |
 | 代表系统 | AMPS（1G） | GSM（2G） | WCDMA/cdma2000（3G） | LTE/NR（4G/5G） |
@@ -201,7 +201,7 @@ source_spec: "TS 38.211 Rel-19 §5.1; 通信原理教材背景知识"
 
 # ASK FSK PSK 键控调制
 
-数字调制把二进制比特"画"到载波上。正弦载波有三个可变的参数——幅度 A、频率 f、相位 φ——键控调制（Keying）就是分别用比特去控制这三个参数：ASK 控幅度、FSK 控频率、PSK 控相位。LTE/NR 实际使用的是 PSK 家族的 BPSK/QPSK 以及 QAM，但 ASK/FSK 是理解"为什么是 PSK 胜出"的对照基础。
+数字调制把二进制比特"画"到载波上。正弦载波有三个可变的参数——幅度 A、频率 f、相位 φ——键控调制（Keying）就是分别用比特去控制这三个参数：ASK（幅度键控）控幅度、FSK（频移键控）控频率、PSK（相移键控）控相位。LTE/NR 实际使用的是 PSK 家族的 BPSK（二进制相移键控）/QPSK（正交相移键控）以及 QAM（正交幅度调制，Quadrature Amplitude Modulation），但 ASK/FSK 是理解"为什么是 PSK 胜出"的对照基础。
 
 ## 独立解释任务
 
@@ -247,15 +247,15 @@ $$
 | 功率效率/抗噪 | 差（幅度易受衰落干扰） | 中 | 最好（星座点距离最大） |
 | 解调复杂度 | 低（包络检波） | 中（鉴频） | 高（需载波相位同步） |
 | 星座几何 | 同轴两点（A=0 与 A=A） | 两个频率点 | 圆上两点（0° 与 180°） |
-| 代表应用 | 早期电报/光通信 OOK | GSM 的 GMSK（FSK 的连续相位变体） | LTE/NR 控制信道 BPSK/QPSK |
+| 代表应用 | 早期电报/光通信 OOK（通断键控，On-Off Keying） | GSM（全球移动通信系统，Global System for Mobile Communications）的 GMSK（高斯最小频移键控，Gaussian Minimum Shift Keying，FSK 的连续相位变体） | LTE/NR 控制信道 BPSK/QPSK |
 
-AWGN 下误码性能定性：**PSK 优于 FSK 优于 ASK**——星座点间欧氏距离 PSK 最大；ASK 的一个点落在原点（幅度为 0），衰落信道下极易被淹没；FSK 占两个频率位置，带宽代价高。
+AWGN（加性白高斯噪声，Additive White Gaussian Noise）下误码性能定性：**PSK 优于 FSK 优于 ASK**——星座点间欧氏距离 PSK 最大；ASK 的一个点落在原点（幅度为 0），衰落信道下极易被淹没；FSK 占两个频率位置，带宽代价高。
 
 ### 家族演进：从 PSK 到 QAM
 
 - BPSK（1 bit/符号）→ QPSK（2 bit/符号，四相位）→ 8PSK（3 bit/符号）→ QAM（幅度+相位联合键控，16QAM 4 bit/符号、64QAM 6 bit/符号、256QAM 8 bit/符号）。
 - LTE/NR 数据信道用 QAM 家族、控制信道用 BPSK/QPSK（可靠性优先）；QPSK 在星座上即"四个正交相位"，可视为 PSK 家族的最高带宽效率形态之一，再往上加星座点需联合调幅度——这就是 QAM。
-- 知识库衔接：软解调/LLR 计算见 T2.13（BPSK/QPSK）与 T2.14（QAM Max-Log-MAP）；星座几何见 Modulation_Constellations_调制星座。
+- 知识库衔接：软解调/LLR（对数似然比，Log-Likelihood Ratio）计算见 T2.13（BPSK/QPSK）与 T2.14（QAM Max-Log-MAP）；星座几何见 Modulation_Constellations_调制星座。
 
 ### 调制家族分类树
 
@@ -264,7 +264,7 @@ AWGN 下误码性能定性：**PSK 优于 FSK 优于 ASK**——星座点间欧�
 flowchart TB
     DM["数字调制<br/>比特 → 载波参数"]
     DM --> ASK["ASK 幅度键控<br/>OOK（光通信）"]
-    DM --> FSK["FSK 频移键控<br/>→ MSK/GMSK（GSM）"]
+    DM --> FSK["FSK 频移键控<br/>→ MSK（最小频移键控，Minimum Shift Keying）/GMSK（GSM）"]
     DM --> PSK["PSK 相移键控"]
     PSK --> BPSK["BPSK<br/>1 bit/符号"]
     PSK --> QPSK["QPSK<br/>2 bit/符号"]
@@ -348,7 +348,7 @@ source_spec: "WCDMA 背景（TS 25.213，本地无资料）; 通信原理教材�
 
 # Spreading 扩频与解扩
 
-扩频（Spread Spectrum）把窄带数据信号有意地扩展到很宽的频带上去传输——做法是用高速率的码片序列（PN 码）去调制数据比特。解扩（De-spreading）是接收端用同一码片序列做相关运算，把宽频信号"挤回"窄带，同时把窄带干扰"摊开"。扩频是 CDMA 多址的技术基石：3G 的 WCDMA 用不同正交码区分用户；4G/5G 弃用 CDMA，但扩频的抗干扰思想仍在抗干扰通信、GNSS 等领域活跃。
+扩频（Spread Spectrum）把窄带数据信号有意地扩展到很宽的频带上去传输——做法是用高速率的码片序列（PN 码，伪随机序列，Pseudo-Noise）去调制数据比特。解扩（De-spreading）是接收端用同一码片序列做相关运算，把宽频信号"挤回"窄带，同时把窄带干扰"摊开"。扩频是 CDMA（码分多址）的技术基石：3G 的 WCDMA（宽带码分多址）用不同正交码区分用户；4G/5G 弃用 CDMA，但扩频的抗干扰思想仍在抗干扰通信、GNSS（全球导航卫星系统，Global Navigation Satellite System）等领域活跃。
 
 ## 独立解释任务
 
@@ -408,18 +408,18 @@ flowchart LR
 
 ### 与 CDMA 的关系
 
-CDMA 多址 = 扩频 + 正交码分工：每个用户分配**不同的正交码**（WCDMA 用 OVSF 码，Walsh 码是其基础），所有用户同时同频发射，接收端用目标用户的码解扩——其他用户的信号因码不正交（严格说非目标码与目标码相关为 0 或很低）而"解扩不出来"，等效为摊平的干扰。远近效应与功率控制因此成为 CDMA 的命门（详见 [[Multiple_Access_多址接入]]）。
+CDMA 多址 = 扩频 + 正交码分工：每个用户分配**不同的正交码**（WCDMA 用 OVSF 码（正交可变扩频因子码，Orthogonal Variable Spreading Factor），Walsh 码（沃尔什码）是其基础），所有用户同时同频发射，接收端用目标用户的码解扩——其他用户的信号因码不正交（严格说非目标码与目标码相关为 0 或很低）而"解扩不出来"，等效为摊平的干扰。远近效应与功率控制因此成为 CDMA 的命门（详见 [[Multiple_Access_多址接入]]）。
 
 ### 4G/5G 弃用 CDMA/扩频的原因
 
-(1) 多用户干扰限制容量——正交码在真实信道（多径、频偏）下不再严格正交，容量受限；(2) 全带宽共享使频率选择性调度不可行，MIMO 波束成形也难以按用户频域分配；(3) OFDMA 在调度器层面规避干扰，接收机更简单、容量更高。扩频思想仍在抗干扰军事通信、GNSS、以及 NB-IoT 的窄带设计对照中存在。
+(1) 多用户干扰限制容量——正交码在真实信道（多径、频偏）下不再严格正交，容量受限；(2) 全带宽共享使频率选择性调度不可行，MIMO（多输入多输出，Multiple Input Multiple Output）波束成形也难以按用户频域分配；(3) OFDMA（正交频分多址）在调度器层面规避干扰，接收机更简单、容量更高。扩频思想仍在抗干扰军事通信、GNSS、以及 NB-IoT（窄带物联网，Narrowband IoT）的窄带设计对照中存在。
 
 ### 其他扩频方式（对比）
 
 | 方式 | 原理 | 代表 |
 |:---|:---|:---|
 | 直接序列 DSSS | 码片序列直接相乘（本笔记主角） | WCDMA、GPS |
-| 跳频 FHSS | 载波频率按伪随机序列跳变 | 蓝牙、军事抗干扰 |
+| 跳频 FHSS（跳频扩频，Frequency Hopping Spread Spectrum） | 载波频率按伪随机序列跳变 | 蓝牙、军事抗干扰 |
 | 跳时 THSS | 发射时刻按序列跳变 | 军事 |
 
 ## 直观模型
@@ -439,7 +439,7 @@ CDMA 多址 = 扩频 + 正交码分工：每个用户分配**不同的正交码*
 
 - WCDMA 扩频与调制：TS 25.213——**本地 3GPP_Rel19 无 TS 25 系列资料，锚点仅指标准，不核验**（3G 制式，Rel-19 收录范围之外）。
 - LTE/NR 无扩频体制：上行 DFT-s-OFDM 与 OFDMA 见 TS 38.211 §5.3/§5.4（本地 `TS_38.211_38211-j30`）。
-- 扩频因子概念对照：NR 的 SCS/CP 结构（TS 38.211 §5.3）与扩频无关，勿混淆。
+- 扩频因子概念对照：NR 的 SCS（子载波间隔，Subcarrier Spacing）/CP（循环前缀，Cyclic Prefix）结构（TS 38.211 §5.3）与扩频无关，勿混淆。
 
 ## 图谱关联
 
