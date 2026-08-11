@@ -194,7 +194,7 @@ source_spec: "TS 38.211 Rel-19 §7.4.2/§7.4.3; TS 36.211 §6.11"
 
 # PSS SSS 同步信号与小区搜索
 
-同步信号（PSS/SSS）是 UE 开机后第一个要找的东西：PSS（主同步信号，Primary Synchronization Signal）与 SSS（辅同步信号，Secondary Synchronization Signal）一起让 UE 完成符号/帧定时、频率粗同步并推导物理小区 ID，随后才能解 PBCH 拿到系统信息。小区搜索（Cell Search）就是"沿同步栅格扫频 → 找 PSS/SSS → 推小区 ID → 读 PBCH"的完整流程——它是全链路的第一步，也是 [[Spectrum_and_Frequency_Point_频谱与频点]] 中同步栅格设计的落地场景。
+同步信号（PSS/SSS）是 UE 开机后第一个要找的东西：PSS（主同步信号，Primary Synchronization Signal）与 SSS（辅同步信号，Secondary Synchronization Signal）一起让 UE 完成符号/帧定时、频率粗同步并推导物理小区 ID，随后才能解 PBCH（物理广播信道，Physical Broadcast Channel）拿到系统信息。小区搜索（Cell Search）就是"沿同步栅格扫频 → 找 PSS/SSS → 推小区 ID → 读 PBCH"的完整流程——它是全链路的第一步，也是 [[Spectrum_and_Frequency_Point_频谱与频点]] 中同步栅格设计的落地场景。
 
 ## 独立解释任务
 
@@ -202,15 +202,15 @@ source_spec: "TS 38.211 Rel-19 §7.4.2/§7.4.3; TS 36.211 §6.11"
 
 ## 科学定义
 
-### 为什么需要 PSS/SSS
+### PSS/SSS 的必要性
 
-UE 开机时不知道小区频率、定时、小区 ID 的任何信息。PSS/SSS 提供三个功能：(1) 粗定时（符号级/帧级）——相关峰给出边界；(2) 粗频偏估计——相关峰的位置与相位含 CFO 信息（T2.8 利用 PSS/SSS 相关）；(3) 小区 ID 推导。
+UE 开机时不知道小区频率、定时、小区 ID 的任何信息。PSS/SSS 提供三个功能：(1) 粗定时（符号级/帧级）——相关峰给出边界；(2) 粗频偏估计——相关峰的位置与相位含 CFO（载波频偏，Carrier Frequency Offset）信息（T2.8 利用 PSS/SSS 相关）；(3) 小区 ID 推导。
 
 ### 序列结构与小区 ID
 
 NR（TS 38.211 §7.4.2）：
 
-- PSS：长度 127 的 m 序列（BPSK 调制），3 个取值对应 $N_{\mathrm{ID}}^{(2)} \in \{0,1,2\}$。
+- PSS：长度 127 的 m 序列（BPSK（二进制相移键控，Binary Phase Shift Keying）调制），3 个取值对应 $N_{\mathrm{ID}}^{(2)} \in \{0,1,2\}$。
 - SSS：两个 m 序列交织（长度 127），携带 $N_{\mathrm{ID}}^{(1)} \in \{0,\ldots,335\}$。
 - 物理小区 ID：$N_{\mathrm{ID}}^{\mathrm{cell}} = 3 N_{\mathrm{ID}}^{(1)} + N_{\mathrm{ID}}^{(2)}$（共 1008 个）。
 
@@ -244,7 +244,7 @@ flowchart LR
 |:---|:---|
 | PSS 就能完成同步 | PSS 只给符号级粗定时与粗频偏，帧定时要 SSS，精细同步靠 T2.7/T2.8 的跟踪环路 |
 | 同步信号是数据信号 | PSS/SSS 是固定序列的参考信号，不承载用户数据，仅用于同步与 ID |
-| 小区 ID 从 PBCH 读 | 小区 ID 由 PSS+SSS 直接推导（3×336+3），PBCH 只给帧号等系统信息 |
+| 小区 ID 从 PBCH 读 | 小区 ID 由 PSS+SSS 直接推导（$N_{\mathrm{ID}}^{(1)}$ 有 336 个取值、$N_{\mathrm{ID}}^{(2)}$ 有 3 个取值，共 336×3=1008 个），PBCH 只给帧号等系统信息 |
 | SSB = PSS + SSS | SSB 还含 PBCH 与 PBCH DM-RS——同步与广播是一体的 |
 
 ## 协议锚点
@@ -313,7 +313,7 @@ source_spec: "TS 38.331 Rel-19 §6.2.2; TS 38.212 §7.1; TS 36.211 §6.6"
 
 # PBCH MIB 广播信道
 
-PBCH（物理广播信道，Physical Broadcast Channel）承载 MIB（主信息块，Master Information Block）——小区搜索的最后一步：UE 解出 PSS/SSS 拿到小区 ID 后，再解 PBCH 读出 MIB，MIB 里给出接入小区所需的最少系统参数，并指向 SIB1（系统信息块 1，System Information Block 1）的调度位置。NR 的 PBCH 用 Polar 编码、LTE 的 PBCH 用 TBCC 编码——两代广播信道编码不同，但"MIB → SIB1 → 其他 SIB"的层级结构一致。
+PBCH（物理广播信道，Physical Broadcast Channel）承载 MIB（主信息块，Master Information Block）——小区搜索的最后一步：UE 解出 PSS/SSS 拿到小区 ID 后，再解 PBCH 读出 MIB，MIB 里给出接入小区所需的最少系统参数，并指向 SIB1（系统信息块 1，System Information Block 1）的调度位置。NR 的 PBCH 用 Polar（极化码，Polar Code）编码、LTE 的 PBCH 用 TBCC（咬尾卷积码，Tail Biting Convolutional Code）编码——两代广播信道编码不同，但"MIB → SIB1 → 其他 SIB"的层级结构一致。
 
 ## 独立解释任务
 
@@ -325,7 +325,7 @@ PBCH（物理广播信道，Physical Broadcast Channel）承载 MIB（主信息�
 
 | 字段 | 含义 | 用途 |
 |:---|:---|:---|
-| systemFrameNumber | 系统帧号（SFN）高 6 位 | 帧定时（低 4 位由 PBCH 承载时序隐含） |
+| systemFrameNumber | 系统帧号（System Frame Number, SFN）高 6 位 | 帧定时（低 4 位由 PBCH 承载时序隐含） |
 | subCarrierSpacingCommon | SIB1/PRACH 的公共子载波间隔 | 接入配置 |
 | ssb-SubcarrierOffset | SSB 与资源网格的频域偏移 | 网格对齐 |
 | dmrs-TypeA-Position | DMRS Type A 位置 | PDSCH 解调配置 |
@@ -419,11 +419,11 @@ source_spec: "TS 38.213 Rel-19 §10; TS 38.211 Rel-19 §7.3.2"
 
 # PDCCH 物理下行控制信道
 
-PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载 DCI（下行控制信息，Downlink Control Information）——基站调度指令的载体。UE 在每个监测时机（monitor occasion）对一组候选 PDCCH 做盲检测（blind decoding）：不知道 DCI 发给谁、多大、放在哪，就按聚合等级逐个试，用 CRC 加扰的 RNTI（无线网络临时标识，Radio Network Temporary Identifier）判断"这是不是给我的"。盲检是全链路调度入口的核心机制，也是控制面最独特的工程问题。
+PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载 DCI（下行控制信息，Downlink Control Information）——基站调度指令的载体。UE 在每个监测时机（monitor occasion）对一组候选 PDCCH 做盲检测（blind decoding）：不知道 DCI 发给谁、多大、放在哪，就按聚合等级逐个试，用 CRC（循环冗余校验，Cyclic Redundancy Check）加扰的 RNTI（无线网络临时标识，Radio Network Temporary Identifier）判断"这是不是给我的"。盲检是全链路调度入口的核心机制，也是控制面最独特的工程问题。
 
 ## 独立解释任务
 
-任务目标：讲清 PDCCH 的时频结构（CORESET/REG/CCE/聚合等级）、搜索空间、盲检流程与 RNTI 机制，说明为什么控制信道需要盲检而数据信道不需要，并与 Polar 控制译码（T10.6）和 DCI 解析（[[DCI_下行控制信息]]）衔接。
+任务目标：讲清 PDCCH 的时频结构（CORESET/REG/CCE/聚合等级）、搜索空间、盲检流程与 RNTI 机制，说明为什么控制信道需要盲检而数据信道不需要，并与 Polar（极化码，Polar Code）控制译码（T10.6）和 DCI 解析（[[DCI_下行控制信息]]）衔接。
 
 ## 科学定义
 
@@ -444,7 +444,7 @@ PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载 DC
 3. DCI 大小（payload 长度）预先由配置限定（多个 DCI 格式候选），盲检在不同 DCI 大小间也需尝试。
 4. 复杂度：候选数 × RNTI 数 × DCI 大小数——这就是"盲"的代价，工程上用搜索空间配置与聚合等级限制候选总数（UE 能力约束盲检次数上限）。
 
-### 为什么盲检
+### 盲检的必要性
 
 UE 没有专用寻址信道，DCI 也没有显式"收件人地址"——收件人信息藏在 CRC 加扰的 RNTI 里。协议选择盲检换取信令简洁：不做"先分配再通知"的两步过程，UE 自己试错。代价是接收复杂度，收益是控制信令零配置开销。
 
@@ -532,7 +532,7 @@ source_spec: "TS 38.212 Rel-19 §7.3; TS 36.212 §5.3.3"
 
 # DCI 下行控制信息
 
-DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 的调度指令——"这次传输给你什么、在哪、怎么收"。它由 PDCCH 承载（[[PDCCH_物理下行控制信道]] 盲检获得），解析出的字段直接生成译码器的 descriptor（T9.0）：MCS、资源分配、HARQ 进程号、NDI、RV 等。DCI 是控制面与译码链路的接口——不理解 DCI 字段，就不知道 LLR 从哪来、译码结果交给谁。
+DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 的调度指令——"这次传输给你什么、在哪、怎么收"。它由 PDCCH 承载（[[PDCCH_物理下行控制信道]] 盲检获得），解析出的字段直接生成译码器的 descriptor（T9.0）：MCS（调制与编码方案，Modulation and Coding Scheme）、资源分配、HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程号、NDI、RV 等。DCI 是控制面与译码链路的接口——不理解 DCI 字段，就不知道 LLR 从哪来、译码结果交给谁。
 
 ## 独立解释任务
 
@@ -562,7 +562,7 @@ DCI（下行控制信息，Downlink Control Information）是基站下发给 UE 
 
 ### CRC 与 RNTI
 
-DCI 附 CRC（NR 24 bit / LTE 16 bit），CRC 用 RNTI 加扰（XOR，异或，Exclusive OR）——盲检时 UE 用候选 RNTI 解扰，CRC 通过即匹配。不同 RNTI（C-RNTI/SI-RNTI/RA-RNTI/TC-RNTI 等）区分 DCI 发给谁/给什么用（详见 [[PDCCH_物理下行控制信道]] 与 T10.6）。
+DCI 附 CRC（循环冗余校验，Cyclic Redundancy Check；NR 24 bit / LTE 16 bit），CRC 用 RNTI 加扰（XOR，异或，Exclusive OR）——盲检时 UE 用候选 RNTI 解扰，CRC 通过即匹配。不同 RNTI（C-RNTI/SI-RNTI/RA-RNTI/TC-RNTI 等）区分 DCI 发给谁/给什么用（详见 [[PDCCH_物理下行控制信道]] 与 T10.6）。
 
 ### DCI → Descriptor 映射（与 T9.0 衔接）
 
@@ -657,7 +657,7 @@ PUCCH（物理上行控制信道，Physical Uplink Control Channel）承载 UCI�
 
 | 类型 | 内容 | 大小量级 |
 |:---|:---|:---|
-| HARQ-ACK | 每个 TB/CBG 的 ACK/NACK | 1-2 bit（TB）/多 bit（CBG） |
+| HARQ-ACK | 每个 TB（传输块，Transport Block）/CBG（码块组，Code Block Group）的 ACK/NACK | 1-2 bit（TB）/多 bit（CBG） |
 | SR | 是否有上行数据要发（0/1 bit） | 1 bit |
 | CSI | CQI/PMI/RI（信道质量/预编码/秩） | 数 bit-数十 bit |
 
@@ -669,7 +669,7 @@ PUCCH（物理上行控制信道，Physical Uplink Control Channel）承载 UCI�
 | 1 | 长（4-14 符号） | ≤2 bit | HARQ-ACK/SR（低速率扩展） |
 | 2 | 短 | >2 bit | 多 bit CSI/UCI（DMRS 辅助相干解调） |
 | 3 | 长 | 中等 | 多 bit UCI |
-| 4 | 长 | 较大（多 PRB） | 大 UCI（含 DFT-s-OFDM 预编码） |
+| 4 | 长 | 较大（多 PRB） | 大 UCI（含 DFT-s-OFDM（离散傅里叶变换扩展正交频分复用，Discrete Fourier Transform Spread OFDM）预编码） |
 
 ### 承载选择与复用
 
