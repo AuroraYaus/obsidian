@@ -201,7 +201,7 @@ source_spec: "TS 38.211 Rel-19 §5.1; 通信原理教材背景知识"
 
 # ASK FSK PSK 键控调制
 
-数字调制把二进制比特"画"到载波上。正弦载波有三个可变的参数——幅度 A、频率 f、相位 φ——键控调制（Keying）就是分别用比特去控制这三个参数：ASK（幅度键控）控幅度、FSK（频移键控）控频率、PSK（相移键控）控相位。LTE/NR 实际使用的是 PSK 家族的 BPSK（二进制相移键控）/QPSK（正交相移键控）以及 QAM（正交幅度调制，Quadrature Amplitude Modulation），但 ASK/FSK 是理解"为什么是 PSK 胜出"的对照基础。
+数字调制把二进制比特"画"到载波上。正弦载波有三个可变的参数——幅度 A、频率 f、相位 φ——键控调制（Keying）就是分别用比特去控制这三个参数：ASK（幅度键控，Amplitude Shift Keying）控幅度、FSK（频移键控，Frequency Shift Keying）控频率、PSK（相移键控，Phase Shift Keying）控相位。LTE/NR 实际使用的是 PSK 家族的 BPSK（二进制相移键控，Binary Phase Shift Keying）/QPSK（正交相移键控，Quadrature Phase Shift Keying）以及 QAM（正交幅度调制，Quadrature Amplitude Modulation），但 ASK/FSK 是理解"为什么是 PSK 胜出"的对照基础。
 
 ## 独立解释任务
 
@@ -215,9 +215,9 @@ source_spec: "TS 38.211 Rel-19 §5.1; 通信原理教材背景知识"
 
 | 调制 | 键控参数 | 比特 → 参数映射 | 解调方式 |
 |:---|:---|:---|:---|
-| ASK（幅度键控） | A | 1 → A₁（有载波），0 → A₀（或 0） | 包络检波（非相干）或相干 |
-| FSK（频移键控） | f | 1 → f₁，0 → f₂ | 鉴频/包络检波（非相干）或相干 |
-| PSK（相移键控） | φ | 1 → 0°，0 → 180° | 相干解调（需要本地参考相位） |
+| ASK（幅度键控，Amplitude Shift Keying） | A | 1 → A₁（有载波），0 → A₀（或 0） | 包络检波（非相干）或相干 |
+| FSK（频移键控，Frequency Shift Keying） | f | 1 → f₁，0 → f₂ | 鉴频/包络检波（非相干）或相干 |
+| PSK（相移键控，Phase Shift Keying） | φ | 1 → 0°，0 → 180° | 相干解调（需要本地参考相位） |
 
 ### 三种键控的信号表达式（二进制）
 
@@ -348,11 +348,11 @@ source_spec: "WCDMA 背景（TS 25.213，本地无资料）; 通信原理教材�
 
 # Spreading 扩频与解扩
 
-扩频（Spread Spectrum）把窄带数据信号有意地扩展到很宽的频带上去传输——做法是用高速率的码片序列（PN 码，伪随机序列，Pseudo-Noise）去调制数据比特。解扩（De-spreading）是接收端用同一码片序列做相关运算，把宽频信号"挤回"窄带，同时把窄带干扰"摊开"。扩频是 CDMA（码分多址）的技术基石：3G 的 WCDMA（宽带码分多址）用不同正交码区分用户；4G/5G 弃用 CDMA，但扩频的抗干扰思想仍在抗干扰通信、GNSS（全球导航卫星系统，Global Navigation Satellite System）等领域活跃。
+扩频（Spread Spectrum）把窄带数据信号有意地扩展到很宽的频带上去传输——做法是用高速率的码片序列（PN 码，伪随机序列，Pseudo-Noise）去调制数据比特。解扩（De-spreading）是接收端用同一码片序列做相关运算，把宽频信号"挤回"窄带，同时把窄带干扰"摊开"。扩频是 CDMA（码分多址，Code Division Multiple Access）的技术基石：3G 的 WCDMA（宽带码分多址，Wideband Code Division Multiple Access）用不同正交码区分用户；4G/5G 弃用 CDMA，但扩频的抗干扰思想仍在抗干扰通信、GNSS（全球导航卫星系统，Global Navigation Satellite System）等领域活跃。
 
 ## 独立解释任务
 
-任务目标：讲清直接序列扩频（DSSS）的扩频-解扩机制、处理增益公式、抗干扰原理，说明扩频与 CDMA 多址的关系，以及为什么 LTE/NR 不再使用扩频体制。
+任务目标：讲清直接序列扩频（Direct Sequence Spread Spectrum，DSSS）的扩频-解扩机制、处理增益公式、抗干扰原理，说明扩频与 CDMA 多址的关系，以及为什么 LTE/NR 不再使用扩频体制。
 
 ## 科学定义
 
@@ -376,7 +376,7 @@ $$
 G_p = 10 \log_{10} \frac{R_c}{R_d} \quad \text{dB}
 $$
 
-处理增益是扩频体制的核心指标：解扩时目标信号相干累加（幅度按 SF 增加），窄带干扰非相干摊平——信噪比改善约 $G_p$ dB。例：WCDMA 语音 12.2 kbps、码片 3.84 Mcps、SF=128，处理增益约 21 dB。
+处理增益是扩频体制的核心指标：解扩时目标信号相干累加（幅度按 SF 增加），窄带干扰非相干摊平——信噪比改善约 $G_p$ dB。例：WCDMA 语音 12.2 kbps、码片 3.84 Mcps（兆码片每秒，Mega chips per second）、SF=128，处理增益约 21 dB。
 
 ### 解扩：相关器
 
@@ -408,7 +408,7 @@ flowchart LR
 
 ### 与 CDMA 的关系
 
-CDMA 多址 = 扩频 + 正交码分工：每个用户分配**不同的正交码**（WCDMA 用 OVSF 码（正交可变扩频因子码，Orthogonal Variable Spreading Factor），Walsh 码（沃尔什码）是其基础），所有用户同时同频发射，接收端用目标用户的码解扩——其他用户的信号因码不正交（严格说非目标码与目标码相关为 0 或很低）而"解扩不出来"，等效为摊平的干扰。远近效应与功率控制因此成为 CDMA 的命门（详见 [[Multiple_Access_多址接入]]）。
+CDMA 多址 = 扩频 + 正交码分工：每个用户分配**不同的正交码**（WCDMA 用 OVSF 码（正交可变扩频因子码，Orthogonal Variable Spreading Factor），Walsh 码（沃尔什码，Walsh code）是其基础），所有用户同时同频发射，接收端用目标用户的码解扩——其他用户的信号因码不正交（严格说非目标码与目标码相关为 0 或很低）而"解扩不出来"，等效为摊平的干扰。远近效应与功率控制因此成为 CDMA 的命门（详见 [[Multiple_Access_多址接入]]）。
 
 ### 4G/5G 弃用 CDMA/扩频的原因
 
@@ -420,7 +420,7 @@ CDMA 多址 = 扩频 + 正交码分工：每个用户分配**不同的正交码*
 |:---|:---|:---|
 | 直接序列 DSSS | 码片序列直接相乘（本笔记主角） | WCDMA、GPS |
 | FHSS（跳频扩频，Frequency Hopping Spread Spectrum） | 载波频率按伪随机序列跳变 | 蓝牙、军事抗干扰 |
-| 跳时 THSS | 发射时刻按序列跳变 | 军事 |
+| THSS（跳时扩频，Time Hopping Spread Spectrum） | 发射时刻按序列跳变 | 军事 |
 
 ## 直观模型
 

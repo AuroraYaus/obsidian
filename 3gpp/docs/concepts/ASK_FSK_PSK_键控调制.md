@@ -14,7 +14,7 @@ source_spec: "TS 38.211 Rel-19 §5.1; 通信原理教材背景知识"
 
 # ASK FSK PSK 键控调制
 
-数字调制把二进制比特"画"到载波上。正弦载波有三个可变的参数——幅度 A、频率 f、相位 φ——键控调制（Keying）就是分别用比特去控制这三个参数：ASK（幅度键控）控幅度、FSK（频移键控）控频率、PSK（相移键控）控相位。LTE/NR 实际使用的是 PSK 家族的 BPSK（二进制相移键控）/QPSK（正交相移键控）以及 QAM（正交幅度调制，Quadrature Amplitude Modulation），但 ASK/FSK 是理解"为什么是 PSK 胜出"的对照基础。
+数字调制把二进制比特"画"到载波上。正弦载波有三个可变的参数——幅度 A、频率 f、相位 φ——键控调制（Keying）就是分别用比特去控制这三个参数：ASK（幅度键控，Amplitude Shift Keying）控幅度、FSK（频移键控，Frequency Shift Keying）控频率、PSK（相移键控，Phase Shift Keying）控相位。LTE/NR 实际使用的是 PSK 家族的 BPSK（二进制相移键控，Binary Phase Shift Keying）/QPSK（正交相移键控，Quadrature Phase Shift Keying）以及 QAM（正交幅度调制，Quadrature Amplitude Modulation），但 ASK/FSK 是理解"为什么是 PSK 胜出"的对照基础。
 
 ## 独立解释任务
 
@@ -28,9 +28,9 @@ source_spec: "TS 38.211 Rel-19 §5.1; 通信原理教材背景知识"
 
 | 调制 | 键控参数 | 比特 → 参数映射 | 解调方式 |
 |:---|:---|:---|:---|
-| ASK（幅度键控） | A | 1 → A₁（有载波），0 → A₀（或 0） | 包络检波（非相干）或相干 |
-| FSK（频移键控） | f | 1 → f₁，0 → f₂ | 鉴频/包络检波（非相干）或相干 |
-| PSK（相移键控） | φ | 1 → 0°，0 → 180° | 相干解调（需要本地参考相位） |
+| ASK（幅度键控，Amplitude Shift Keying） | A | 1 → A₁（有载波），0 → A₀（或 0） | 包络检波（非相干）或相干 |
+| FSK（频移键控，Frequency Shift Keying） | f | 1 → f₁，0 → f₂ | 鉴频/包络检波（非相干）或相干 |
+| PSK（相移键控，Phase Shift Keying） | φ | 1 → 0°，0 → 180° | 相干解调（需要本地参考相位） |
 
 ### 三种键控的信号表达式（二进制）
 
