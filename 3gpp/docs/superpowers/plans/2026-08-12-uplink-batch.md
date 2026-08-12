@@ -400,14 +400,14 @@ SRS（探测参考信号，Sounding Reference Signal）是 UE 发给基站的「
 
 ### SRS 的用途
 
-1. 上行信道探测：基站从 SRS 估计每 RB 的上行 SINR（信干噪比，Signal-to-Interference-plus-Noise Ratio）——频选调度（把好 RB 分给 UE）与链路自适应的输入。
+1. 上行信道探测：基站从 SRS 估计每 RB（资源块，Resource Block）的上行 SINR（信干噪比，Signal-to-Interference-plus-Noise Ratio）——频选调度（把好 RB 分给 UE）与链路自适应的输入。
 2. 上行波束管理：多波束场景下基站测各波束质量。
 3. **TDD 互易性**：TDD 上下行同频，信道互易——基站用上行 SRS 估计信道，反推下行预编码（无需 UE 报 PMI（预编码矩阵指示，Precoding Matrix Indicator），省反馈开销；见 [[Link_Adaptation_链路自适应与CQI]] 的 TDD 互易性）。
 
 ### 时频结构（TS 38.211 §6.4.1）
 
 - 梳状（comb）：SRS 只在每 N 个子载波上发一个（comb 2/4/8）——多个 UE 可交错复用同一符号资源（comb 交错 + 循环移位正交）。
-- 时域：1-4（-14）个符号，可配周期（1-320 ms，RRC 配置）+ 非周期触发（DCI 触发）。
+- 时域：1/2/4（可配至 14）个符号，可配周期（1-320 ms，RRC（无线资源控制，Radio Resource Control）配置）+ 非周期触发（DCI 触发）。
 - 频域：可宽带（覆盖整个 BWP（带宽部分，Bandwidth Part））或部分带宽（跳频探测）。
 
 ### 资源配置
