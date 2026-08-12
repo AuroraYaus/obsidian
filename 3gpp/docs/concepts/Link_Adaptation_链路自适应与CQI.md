@@ -66,7 +66,7 @@ CQI 是 UE 的「预测」——测量误差、信道变化、干扰波动都会
 |:---|:---|
 | CQI 越高越好 | CQI 反映可支持的 MCS 上限，调度器还要结合资源/QoS（服务质量，Quality of Service）选实际 MCS |
 | CQI 就是 SINR | CQI 是 SINR 按 BLER 目标折算后的索引——同样的 SINR 可对应不同 CQI（不同 BLER 目标） |
-| PMI/RI 只影响下行 | 上行也用 SRS（探测参考信号，Sounding Reference Signal）与 PMI/RI 相关反馈（TDD（时分双工，Time Division Duplex）互易性/码本） |
+| PMI/RI 只影响下行 | 上行也用 SRS（探测参考信号，Sounding Reference Signal）与 PMI/RI 相关反馈（TDD（时分双工，Time Division Duplexing）互易性/码本） |
 | 一次上报就够了 | CQI 会过时，周期/非周期上报持续跟踪信道变化 |
 
 ## 协议锚点
