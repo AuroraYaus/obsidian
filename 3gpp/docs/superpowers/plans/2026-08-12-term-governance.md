@@ -12,7 +12,7 @@
 
 - 所有命令在仓库根 `/home/yys/AGENT/obsidian` 下以 `cd 3gpp && …` 运行。
 - 配对格式统一「ABBR（中文，English Full Name）」（用户拍板 2026-08-12；与本会话 104 篇概念笔记及既有讲义正文一致；TECH_TERMS 字典值为查阅口径「中文全称（English Full Name, ABBR）」，非正文配对格式）；中文全称以 `docs/L0_协议阅读引导/L0_terminology_glossary.md` 术语表为准（如 MAC=媒体接入控制层，非介质访问控制）。
-- **只加配对、不改内容**：修复仅插入三件套于首现处，不得改写句子、不得动代码块内文本（代码块内缩写豁免惯例）、不得删改既有配对。
+- **只加配对、不改内容**：修复仅插入三件套于首现处，不得改写句子语义、不得动代码块内文本（代码块内缩写豁免惯例）、不得删改既有配对。允许的排版操作：插入时吸收 ABBR 后原空格（「MAC 调度器」→「MAC（…）调度器」）、直引号统一为弯引号（G1c 先例）。
 - 特殊处理清单（防误配）：CA-SCL 不得匹配 CA；Max_Log_MAP 不得匹配 MAP；Qm.n 定点格式不得匹配 Qm；SCL 与 CA-SCL 独立词条；DM-RS 与 DMRS 按术语表别名方案统一。
 - 带圈数字禁令（第 10 条）；标题正式化（Rule 16）。
 - 工具缺失显式声明验证缺口。
@@ -278,7 +278,7 @@ Co-Authored-By: Claude <noreply@anthropic.com>"
 2. 每篇讲义：对**每个**在 TECH_TERMS 105 项中的缩写，定位**首次出现处**（词边界），插入「中文（English Full Name, ABBR）」三件套——中文全称从术语表行取（与 T2 登记的 TECH_TERMS 条目一致）。
 3. 只加配对：不改写句子、不删改既有内容、不动代码块内文本（代码块豁免）、不动 LaTeX/表格结构（表格单元格内首现可用紧凑形式）。
 4. 防混淆清单：CA-SCL/Max_Log_MAP/Qm.n/SCL 按 T3 结论处理（独立词条各自配对，不互相误配）。
-5. 每轮验证：`python3 tools/audit_lesson_terms.py <轮范围路径>`（若支持路径）+ headings + circled；修复后该范围术语审计应 PASS（或仅剩假阳性）。
+5. 每轮验证：`python3 tools/audit_lesson_terms.py docs` + headings + circled；**必跑程序化首现终验**（TECH_TERM_RE 剔除 frontmatter/标题/wikilink/代码块后扫首现配对，G1c 教训——7 处人工漏配由此捕获）——若工具未内置则子任务自写一次性脚本（G1c 先例）。
 6. 每轮提交（每子任务 1-2 个 commit，按篇分批提交便于审查）。
 
 **轮次定义**（篇数按实施时 ls 实测为准，编号区间为盘点时参考）：

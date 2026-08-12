@@ -25,6 +25,10 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | 频段 | 频段 | Frequency Band；3GPP 对频谱的划分块（NR n1-n104、LTE 1-105），如 n78 = 3300-3800 MHz。 |
 | 频点 | 频点 | Frequency Point；频段内具体载波中心频率，用 ARFCN 整数编号表达。 |
 | FR1 | 频率范围 1 | Frequency Range 1；450 MHz-6 GHz 中低频段。 |
+| CFO | 载波频偏 | Carrier Frequency Offset；本地振荡器与载波频率之差，破坏子载波正交性。 |
+| SFO | 采样频偏 | Sampling Frequency Offset；收发采样时钟偏差，引起相位旋转。 |
+| SCS | 子载波间隔 | Subcarrier Spacing；相邻子载波频域距离，NR 支持 15/30/60/120/240 kHz。 |
+| ICI | 载波间干扰 | Inter-Carrier Interference；子载波正交性破坏导致的串扰。 |
 | FR2 | 频率范围 2 | Frequency Range 2；24.25-52.6 GHz 毫米波频段。 |
 | ARFCN | 绝对射频信道号 | Absolute Radio Frequency Channel Number；频点的整数编号：NR-ARFCN（TS 38.101-1 §5.4.2.1）/ E-UTRA ARFCN（TS 36.101 §5.7.3）。 |
 | GSCN | 全球同步信道号 | Global Synchronization Channel Number；同步栅格上 SSB 参考位置编号（TS 38.101-1 §5.4.3.1）。 |
