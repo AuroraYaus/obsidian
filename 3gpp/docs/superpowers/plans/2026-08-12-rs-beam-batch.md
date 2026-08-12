@@ -141,7 +141,7 @@ tags:
   - concepts
   - physical-layer
   - l2
-source_spec: "TS 38.211 Rel-19 §7.4.1.4/§6.4.1.2; TS 38.214 Rel-19 §5.1.6.3/§6.2.3"
+source_spec: "TS 38.211 Rel-19 §7.4.1.2/§6.4.1.2; TS 38.214 Rel-19 §5.1.6.3/§6.2.3"
 ---
 
 # PTRS 相位跟踪参考信号
@@ -156,7 +156,7 @@ PTRS（相位跟踪参考信号，Phase Tracking Reference Signal）解决高频
 
 ### 相位噪声与 CPE
 
-高频段（FR2 毫米波）本地振荡器相位噪声显著：所有子载波共享同一相位误差（公共相位误差 CPE）——星座整体旋转，且随符号变化。CPE 若不补偿，256QAM（正交幅度调制，Quadrature Amplitude Modulation）等高阶调制的星座点距小、误码率急剧上升。
+高频段（FR2（频率范围 2，Frequency Range 2）毫米波）本地振荡器相位噪声显著：所有子载波共享同一相位误差（公共相位误差 CPE）——星座整体旋转，且随符号变化。CPE 若不补偿，256QAM（正交幅度调制，Quadrature Amplitude Modulation）等高阶调制的星座点距小、误码率急剧上升。
 
 ### PTRS 补偿原理
 
@@ -166,13 +166,13 @@ PTRS 是与数据同传的已知序列：接收端估计 PTRS 位置的相位偏
 
 | 维度 | 规则 |
 |:---|:---|
-| 频域密度 | 每 K 个 RB 一个 PTRS RE——SCS 越大 K 越大（大 SCS 相位噪声更小，可更稀疏） |
+| 频域密度 | 每 K 个 RB 一个 PTRS RE——调度带宽越大 K 越大（NRB 阈值决定 K=2/4，默认 2） |
 | 时域密度 | 每 L 个符号一个 PTRS——调制阶数越高 L 越小（高阶调制对相位更敏感，需更密） |
 | 存在条件 | 仅配置了 PTRS 且调度资源足够时发送；未配置则无（data 传输照常） |
 
 ### DL/UL 差异
 
-- DL PTRS：随 PDSCH 发送（TS 38.211 §7.4.1.4），与 DMRS 端口关联。
+- DL PTRS：随 PDSCH 发送（TS 38.211 §7.4.1.2），与 DMRS 端口关联。
 - UL PTRS：随 PUSCH 发送（TS 38.211 §6.4.1.2），DFT-s-OFDM 波形下与变换预编码交互（见 [[DFT_sOFDM_上行波形]]）。
 
 ## 直观模型
@@ -190,7 +190,7 @@ PTRS 像「画框上的水平仪」：画家（发送端）画完后给一条已
 
 ## 协议锚点
 
-- DL PTRS：TS 38.211（Rel-19 j30）§7.4.1.4，本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`。
+- DL PTRS：TS 38.211（Rel-19 j30）§7.4.1.2，本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`。
 - UL PTRS：TS 38.211 §6.4.1.2，本地同卷。
 - 密度参数（timeDensity/frequencyDensity）：TS 38.214（Rel-19 j30）§5.1.6.3/§6.2.3，本地 `TS_38.214_38214-j30`。
 - 相位噪声背景：T2.17（`docs/L1_基础/T2.17_OFDM_impairments_to_LLR.md` 手算例子提及）。
