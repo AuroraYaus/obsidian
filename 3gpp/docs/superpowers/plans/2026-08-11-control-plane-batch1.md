@@ -699,7 +699,7 @@ PUCCH 像"收货确认单"：收到货（PDSCH）后回一张单子（UCI），�
 - PUCCH 格式与资源：TS 38.213（Rel-19 j30）§9，本地 `3GPP_Rel19/processed/TS_38.213_38213-j30`。
 - UCI 编码：TS 38.212（Rel-19 j30）§6.3（PUCCH 上 UCI 的 Reed-Muller/极化分段），本地 `TS_38.212_38212-j30`。
 - UCI 在 PUSCH 的复用与交织：T10.9（`docs/L2_协议算法/T10.9_NR_UCI_interleaving_triangular.md`）。
-- LTE PUCCH：TS 36.211 §5.4（物理结构）、TS 36.212 §5.2.3（UCI 编码）。
+- LTE PUCCH：TS 36.211 §5.4（物理结构）、TS 36.212 §5.2.3（UCI 编码），本地 `3GPP_Rel19/processed/TS_36.211_*`/`TS_36.212_36212-j30`。
 - HARQ 反馈语义：T9.3/T9.8（HARQ 软缓存与 CBG 反馈）。
 
 ## 图谱关联
@@ -709,7 +709,7 @@ PUCCH 像"收货确认单"：收到货（PDSCH）后回一张单子（UCI），�
 - [[HARQ_混合自动重传请求]]
 - [[DCI_下行控制信息]]
 - [[PDCCH_物理下行控制信道]]
-- 关系语义：PUCCH 是下行译码链路的回执通道——HARQ-ACK 由译码结果（T7.4/T9.5 的 CRC 判决）驱动，按 DCI 指示的 k1 时序上报，UCI 编码与交织挂到 T10.9；与 PDCCH（下行指令）构成控制面双向闭环。
+- 关系语义：PUCCH 是下行译码链路的回执通道——HARQ-ACK 由译码结果（T7.4/T9.5 的 CRC 判决）驱动，按 DCI 指示的 k1 时序上报，UCI 编码与交织挂到 T10.9；与 PDCCH（物理下行控制信道，Physical Downlink Control Channel）构成控制面双向闭环。
 ```
 
 - [ ] **Step 2: 验证结构、LaTeX、圈号**
