@@ -271,7 +271,7 @@ BWP（带宽部分，Bandwidth Part）是载波内的子带：UE 只在激活 BW
 
 ### BWP 是什么
 
-- 定义：载波内的一段连续频域资源（子载波集合），有独立 numerology（子载波间隔/CP 配置）。
+- 定义：载波内的一段连续频域资源（子载波集合），有独立 numerology（子载波间隔/CP（循环前缀，Cyclic Prefix）配置）。
 - UE 在任意时刻只在一个激活 BWP 内工作（收发 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel））——UE 不需要支持整个载波带宽。
 
 ### 作用
@@ -282,13 +282,13 @@ BWP（带宽部分，Bandwidth Part）是载波内的子带：UE 只在激活 BW
 
 ### BWP 配置与切换
 
-- 初始 BWP：UE 初始接入用的默认配置（SIB1 提供，见 [[PBCH_MIB_广播信道]] 的 pdcch-ConfigSIB1 关联）。
+- 初始 BWP：UE 初始接入用的默认配置（SIB1（系统信息块 1，System Information Block 1）提供，见 [[PBCH_MIB_广播信道]] 的 pdcch-ConfigSIB1 关联）。
 - 默认/激活 BWP：RRC 配置多个候选 BWP，激活一个；DCI 的 BWP 指示字段或 bwp-InactivityTimer（不活动定时器）触发切换。
 - 切换含时延（TS 38.213 §12 给出切换时间）——切换期间不调度。
 
 ### 与 CA 的层级
 
-载波聚合（[[Carrier_Aggregation_载波聚合]]）是载波级聚合（多 CC），BWP 是载波内子带（每 CC 内独立配置）——两级频域组织：CC 决定"聚几个载波"，BWP 决定"每个载波内用多宽"。
+载波聚合（[[Carrier_Aggregation_载波聚合]]）是载波级聚合（多 CC（分量载波，Component Carrier）），BWP 是载波内子带（每 CC 内独立配置）——两级频域组织：CC 决定"聚几个载波"，BWP 决定"每个载波内用多宽"。
 
 ## 直观模型
 
