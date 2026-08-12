@@ -290,7 +290,7 @@ source_spec: "TS 38.211 Rel-19 §6.3.3; TS 38.213 Rel-19 §8; TS 38.321 Rel-19 �
 ### 前导（preamble）与 PRACH 物理结构
 
 - 前导：基于 ZC（Zadoff-Chu）序列生成——LTE 长前导 839 长、NR 长前导 139 长（TS 38.211 §6.3.3.1）；同一小区用同一根序列的不同循环移位生成多前导（UE 随机选一个，冲突即竞争）。
-- PRACH 时频资源：专用时隙/频域位置（由 SIB1 的 prach-ConfigurationIndex 配置，见 [[PBCH_MIB_广播信道]] 的 SIB1 衔接）；频域有 4-8 个前导资源块（PRB，物理资源块，Physical Resource Block）宽。
+- PRACH 时频资源：专用时隙/频域位置（由 SIB1 的 prach-ConfigurationIndex 配置，见 [[PBCH_MIB_广播信道]] 的 SIB1 衔接）；频域上 NR 前导（139 子载波）占约 12 个 PRB（物理资源块，Physical Resource Block），LTE 长前导（839 子载波）占 6 个 PRB；频域 occasion 数（msg1-FDM）可配 1/2/4/8。
 - 用途：(1) 检测——基站相关检测识别「有 UE 接入」与哪个前导（竞争解决的基础）；(2) TA 估计——前导到达时间相对期望位置的偏移即 TA，基站随后用 RAR（随机接入响应，Random Access Response）告知 UE 调整发射定时（上行同步）。
 
 ### 四步随机接入（Contention-based，CBRA）
@@ -339,7 +339,7 @@ MsgA = 前导 + PUSCH 载荷一步发出，MsgB 合并 RAR 与竞争解决——
 - [[PBCH_MIB_广播信道]]
 - [[DCI_下行控制信息]]
 - [[PDCCH_物理下行控制信道]]
-- 关系语义：随机接入是小区搜索的下一环——PSS/SSS/PBCH 让 UE 找到小区并读到 SIB1（含 PRACH 配置），Msg2/Msg4 经 PDCCH（RA-RNTI）与 PDSCH 下发，TA 与 UL grant 建立上行同步与首个上行传输（Msg3），接入后进入调度（Scheduler）主导的数据传输。
+- 关系语义：随机接入是小区搜索的下一环——PSS/SSS/PBCH 让 UE 找到小区并读到 SIB1（含 PRACH 配置），Msg2/Msg4 经 PDCCH（RA-RNTI（随机接入无线网络临时标识，Random Access Radio Network Temporary Identifier））与 PDSCH 下发，TA 与 UL grant 建立上行同步与首个上行传输（Msg3），接入后进入调度（Scheduler）主导的数据传输。
 ```
 
 - [ ] **Step 2: 验证结构、LaTeX、圈号**
