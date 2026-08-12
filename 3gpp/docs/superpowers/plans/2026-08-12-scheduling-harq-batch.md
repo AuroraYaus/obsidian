@@ -48,7 +48,7 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 
 # Scheduler MAC 调度器与资源分配
 
-调度器（Scheduler）是 MAC 层每时隙（slot）都要做一次的核心决策单元：决定哪个用户（UE，用户设备，User Equipment）在哪个时频资源上、用多大 MCS（调制与编码方案，Modulation and Coding Scheme）、发多少数据。它把「信道质量（CQI）、业务优先级、QoS 需求、缓冲区状态」综合成资源分配（Resource Allocation）指令，经 DCI（下行控制信息，Downlink Control Information）下发。调度是「从协议到物理资源」的决策层——不理解调度器，就无法理解 DCI 资源字段为什么长那样、descriptor（T9.0）从哪来。
+调度器（Scheduler）是 MAC 层每时隙（slot）都要做一次的核心决策单元：决定哪个用户（UE，用户设备，User Equipment）在哪个时频资源上、用多大 MCS（调制与编码方案，Modulation and Coding Scheme）、发多少数据。它把「信道质量（CQI）、业务优先级、QoS（服务质量，Quality of Service）需求、缓冲区状态」综合成资源分配（Resource Allocation）指令，经 DCI（下行控制信息，Downlink Control Information）下发。调度是「从协议到物理资源」的决策层——不理解调度器，就无法理解 DCI 资源字段为什么长那样、descriptor（T9.0）从哪来。
 
 ## 独立解释任务
 
@@ -63,10 +63,10 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 ### 资源分配的单位体系：RBG 与 VRB
 
 - **PRB（物理资源块，Physical Resource Block）**：网格上的实际频域单位（12 子载波，见 [[Spectrum_and_Frequency_Point_频谱与频点]] 与 T2.3）。
-- **RBG（资源块组，Resource Block Group）**：频域分配的最小粒度——一组 PRB（尺寸 P 由 BWP 带宽查表，TS 38.214 §6.1.2.2），位图分配时每 bit 对应一个 RBG。
-- **VRB（虚拟资源块，Virtual Resource Block）**：调度器分配的「虚拟编号」，经交织映射到物理 PRB——交织（interleaved VRB 映射，TS 38.214 §6.1.2.3）把连续的虚拟编号打散到不同 PRB，获得频率分集。
+- **RBG（资源块组，Resource Block Group）**：频域分配的最小粒度——一组 PRB（尺寸 P 由 BWP 带宽查表（Table 5.1.2.2.1-1 DL/Table 6.1.2.2.1-1 UL，TS 38.214）），位图分配时每 bit 对应一个 RBG。
+- **VRB（虚拟资源块，Virtual Resource Block）**：调度器分配的「虚拟编号」，经交织映射到物理 PRB——交织（interleaved VRB 映射，TS 38.214 §5.1.2.2.2，下行特性）把连续的虚拟编号打散到不同 PRB，获得频率分集。
 
-### 资源分配类型（NR，TS 38.214 §5.1.2）
+### 资源分配类型（NR，TS 38.214 §5.1.2.2）
 
 | 类型 | 机制 | 使用 |
 |:---|:---|:---|
@@ -77,7 +77,7 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 ### 频域与时域调度
 
 - 频域调度：把信道质量好的 RB 分给相应 UE（频率选择性调度）——PF（比例公平，Proportional Fair）调度器在「吞吐最大化」与「用户公平」间折中：$P_{i,k}$ 分数 = 瞬时速率/平均速率，取分最高的配对。
-- 时域调度：NR 支持 slot 级调度与 mini-slot（1-13 符号）低时延调度；DCI 的时域资源分配字段（TDRA，时域资源分配，Time Domain Resource Allocation）从高层配置表索引出起始符号+长度。
+- 时域调度：NR 支持 slot 级调度与 mini-slot（短于 slot 的符号级调度粒度，常见 2-13 符号）低时延调度；DCI 的时域资源分配字段（TDRA，时域资源分配，Time Domain Resource Allocation）从高层配置表索引出起始符号+长度。
 
 ### 逻辑信道优先级（LCP）与 MAC 复用
 
@@ -98,8 +98,8 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 
 ## 协议锚点
 
-- 资源分配类型：TS 38.214（Rel-19 j30）§5.1.2，本地 `3GPP_Rel19/processed/TS_38.214_38214-j30`。
-- RBG 尺寸与 VRB 交织：TS 38.214 §6.1.2.2/§6.1.2.3，本地同卷。
+- 资源分配类型：TS 38.214（Rel-19 j30）§5.1.2.2，本地 `3GPP_Rel19/processed/TS_38.214_38214-j30`。
+- RBG 尺寸：TS 38.214 §5.1.2.2.1（DL）/§6.1.2.2.1（UL）；VRB 交织（下行）：§5.1.2.2.2，本地同卷。
 - 调度与优先级处理：TS 38.321（Rel-19 j20）§5.4/§6.1，本地 `TS_38.321_38321-j20`。
 - descriptor 衔接：T9.0（`docs/L2_协议算法/T9.0_TS38214_MCS_TBS_decoder_descriptor.md`）。
 - 与 MCS/TBS 关系：[[MCS_Table_Effective_Code_Rate_MCS表与有效码率]]。
