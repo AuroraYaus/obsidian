@@ -47,7 +47,7 @@ source_spec: "TS 38.211 Rel-19 §7.4.1.5; TS 38.214 Rel-19 §5.2"
 
 # CSI-RS 信道状态信息参考信号
 
-CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）是下行测量参考信号：基站周期性/按需发送已知序列，UE 测量它得到下行信道状态，进而生成 CSI（信道状态信息，Channel State Information）报告（CQI/PMI/RI，见 [[Link_Adaptation_链路自适应与CQI]]）。它是链路自适应闭环的测量源，同时服务波束管理（[[Beam_Management_波束管理]]）与时频跟踪（[[TRS_跟踪参考信号]]）。
+CSI-RS（信道状态信息参考信号，Channel State Information Reference Signal）是下行测量参考信号：基站周期性/按需发送已知序列，UE 测量它得到下行信道状态，进而生成 CSI（信道状态信息，Channel State Information）报告（CQI（信道质量指示，Channel Quality Indicator）/PMI（预编码矩阵指示，Precoding Matrix Indicator）/RI（秩指示，Rank Indicator），见 [[Link_Adaptation_链路自适应与CQI]]）。它是链路自适应闭环的测量源，同时服务波束管理（[[Beam_Management_波束管理]]）与时频跟踪（[[TRS_跟踪参考信号]]）。
 
 ## 独立解释任务
 
@@ -63,13 +63,13 @@ CSI-RS（信道状态信息参考信号，Channel State Information Reference Si
 
 ### 时频结构与配置
 
-- 端口数：1/2/4/8/16/32（协议表给出每端口密度组合）；密度：0.5/1/2/3/4 RE/PRB/端口。
+- 端口数：1/2/4/8/12/16/24/32（协议表给出每端口密度组合）；密度：0.5/1/3 RE（资源元素，Resource Element）/PRB（物理资源块，Physical Resource Block）/端口。
 - 配置：NZP-CSI-RS（非零功率 CSI-RS，Non-Zero-Power CSI-RS）资源由 RRC（无线资源控制，Radio Resource Control）配置（CSI-ResourceConfig，TS 38.331），周期/半持续/非周期三类（非周期由 DCI（下行控制信息，Downlink Control Information）触发）。
-- 与 DMRS 分工：DMRS 用于 PDSCH/PUSCH 解调（与数据同传、UE 专用），CSI-RS 用于测量（独立发送、可多用户共用）——一个服务于"这包数据怎么解"，一个服务于"下次传输怎么配"。
+- 与 DMRS 分工：DMRS 用于 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel）解调（与数据同传、UE 专用），CSI-RS 用于测量（独立发送、可多用户共用）——一个服务于"这包数据怎么解"，一个服务于"下次传输怎么配"。
 
 ## 直观模型
 
-CSI-RS 像「体检中心的检测设备」：定期体检（周期发送）或临时加检（非周期触发），体检报告（CSI 报告）决定下次饮食方案（MCS/波束配置）；DMRS 是"吃饭时的试菜"（解调当次数据），CSI-RS 是"定期的营养评估"（规划后续传输）。
+CSI-RS 像「体检中心的检测设备」：定期体检（周期发送）或临时加检（非周期触发），体检报告（CSI 报告）决定下次饮食方案（MCS（调制与编码方案，Modulation and Coding Scheme）/波束配置）；DMRS 是"吃饭时的试菜"（解调当次数据），CSI-RS 是"定期的营养评估"（规划后续传输）。
 
 ## 常见误解
 
@@ -83,8 +83,8 @@ CSI-RS 像「体检中心的检测设备」：定期体检（周期发送）或�
 ## 协议锚点
 
 - CSI-RS 结构与配置：TS 38.211（Rel-19 j30）§7.4.1.5，本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`。
-- CSI 报告：TS 38.214（Rel-19 j30）§5.2，本地 `TS_38.214_38214-j30`。
-- 配置参数：TS 38.331（Rel-19 j20）§6.3.2（CSI-ResourceConfig），本地 `TS_38.331_38331-j20`。
+- CSI 报告：TS 38.214（Rel-19 j30）§5.2，本地 `3GPP_Rel19/processed/TS_38.214_38214-j30`。
+- 配置参数：TS 38.331（Rel-19 j20）§6.3.2（CSI-ResourceConfig），本地 `3GPP_Rel19/processed/TS_38.331_38331-j20`。
 - 测量衔接：[[CSI_SINR]]、T2.11（`docs/L1_基础/`）。
 
 ## 图谱关联
