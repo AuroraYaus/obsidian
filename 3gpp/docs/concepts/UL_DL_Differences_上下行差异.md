@@ -14,7 +14,7 @@ source_spec: "TS 38.211/38.213 综合; T7.5 先例对照"
 
 # UL DL Differences 上下行差异
 
-上行（UL，上行链路，Uplink）与下行（DL，下行链路，Downlink）共享同一套译码核心（Turbo/LDPC/Polar、软解调、HARQ），但物理层与协议机制差异显著：波形（OFDMA 下行 vs DFT-s-OFDM 上行可选）、功率（下行固定 vs 上行闭环功控）、定时（下行同步 vs 上行 TA 定时提前）、参考信号（下行 CSI-RS/DMRS vs 上行 SRS/DMRS）、调度（DL assignment vs UL grant）、反馈方向（HARQ-ACK/CSI 全部上行承载）。理解这些差异是「全链路」视角的收束——LTE 有 T7.5（译码差异）先例，本篇做 NR 物理层/协议层全景对照。
+上行（UL，上行链路，Uplink）与下行（DL，下行链路，Downlink）共享同一套译码核心（Turbo/LDPC/Polar、软解调、HARQ），但物理层与协议机制差异显著：波形（OFDMA 下行 vs DFT-s-OFDM 上行可选）、功率（下行固定 vs 上行闭环功控）、定时（下行同步 vs 上行 TA（定时提前，Timing Advance））、参考信号（下行 CSI-RS/DMRS vs 上行 SRS/DMRS）、调度（DL assignment vs UL grant）、反馈方向（HARQ-ACK/CSI 全部上行承载）。理解这些差异是「全链路」视角的收束——LTE 有 T7.5（译码差异）先例，本篇做 NR 物理层/协议层全景对照。
 
 ## 独立解释任务
 
