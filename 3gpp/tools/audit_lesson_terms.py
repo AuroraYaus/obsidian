@@ -23,6 +23,16 @@ from _md_utils import iter_markdown, line_for_offset, strip_code_fences
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 GLOSSARY_PATH = PROJECT_ROOT / "docs" / "L0_协议阅读引导" / "L0_terminology_glossary.md"
 
+# 整文件豁免（禁自建术语表检查）：术语表文件 + 概念清单索引（docs/concepts/ 下，
+# 非讲义，其 `| 缩写 | 全称 |` 表头是清单自身的表格骨架，不构成"讲义自建术语表"）。
+# 排除策略边界：同形/独立登记复合词（Log-MAP、CA-SCL、Qm.n、DM-RS）用
+# _PRE/_POST_GUARDS 按词形排除；概念清单索引属整文件语义豁免——仅非讲义文件
+# 且表头属自身骨架时才允许整文件豁免，讲义正文一律不得豁免（见 _TERM_POST_GUARDS 注释）。
+EXEMPT_TERM_TABLE_FILES = {
+    GLOSSARY_PATH.resolve(),
+    (PROJECT_ROOT / "docs" / "concepts" / "3GPP全流程_缩写概念理论清单.md").resolve(),
+}
+
 TECH_TERMS = {
     "3GPP": "第三代合作伙伴计划（3rd Generation Partnership Project, 3GPP）",
     "LTE": "长期演进（Long Term Evolution, LTE）",
@@ -187,9 +197,11 @@ def audit_technical_first_use(path: Path) -> list[str]:
     """@brief  检查单份讲义是否残留了自建术语表（分散的术语定义违反集中管理原则）。
     @param  path  待审计的 Markdown 文件路径。
     @return       违规列表；空列表表示该文件未违反术语集中化规则。
-    @note  术语表文件本身不检查，因为它是唯一的合法定义源。"""
+    @note  豁免文件见 EXEMPT_TERM_TABLE_FILES：术语表是唯一合法定义源；
+          概念清单索引（3GPP全流程_缩写概念理论清单.md）非讲义，其表格骨架
+          不触发禁自建术语表检查（T4 裁定，2026-08-12）。"""
     errors: list[str] = []
-    if path.resolve() == GLOSSARY_PATH.resolve():
+    if path.resolve() in EXEMPT_TERM_TABLE_FILES:
         return errors
 
     text = strip_code_fences(path.read_text(encoding="utf-8"))
