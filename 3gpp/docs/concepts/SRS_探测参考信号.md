@@ -18,7 +18,7 @@ SRS（探测参考信号，Sounding Reference Signal）是 UE 发给基站的「
 
 ## 独立解释任务
 
-任务目标：讲清 SRS 的用途（上行探测/频选调度/波束/TDD 互易性）、时频结构（梳状 comb 与符号数）、资源配置（RRC 周期 + DCI 触发非周期），以及它与上行链路自适应（Link_Adaptation）的关系。
+任务目标：讲清 SRS 的用途（上行探测/频选调度/波束/TDD 互易性）、时频结构（梳状 comb 与符号数）、资源配置（RRC 周期 + DCI 触发非周期），以及它与上行链路自适应（[[Link_Adaptation_链路自适应与CQI]]）的关系。
 
 ## 科学定义
 

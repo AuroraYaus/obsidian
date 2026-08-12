@@ -32,7 +32,7 @@ source_spec: "TS 38.213 Rel-19 §7; TS 38.321 Rel-19 §5.4.6"
 - 开环（open-loop）：UE 测量下行路损（PL，路径损耗，Path Loss，从 RS 功率与实测接收功率推算），按 `P0 + α·PL` 补偿——粗略对齐，无反馈。
 - 闭环（closed-loop）：基站根据实际接收 SINR（信干噪比，Signal-to-Interference-plus-Noise Ratio）发 TPC 命令（+1/-1 dB 等），UE 累计调整（f 累计项）——精细校正。
 
-### 功控公式（PUSCH 为例，TS 38.213 §7.1）
+### 功控公式（PUSCH 为例，TS 38.213 §7.1 简化式——省略带宽/子载波间隔项与闭环进程索引）
 
 $$
 P_{\mathrm{PUSCH}} = P_0 + \alpha \cdot PL + \Delta_{\mathrm{TF}} + f(\mathrm{TPC})
