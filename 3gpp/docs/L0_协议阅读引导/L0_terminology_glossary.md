@@ -102,6 +102,16 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | CA-SCL | CRC 辅助 SCL | CRC-aided SCL；用 CRC 在 Polar SCL 候选路径中辅助最终选择。→ [[CA_SCL_CRC辅助SCL]] |
 | k0 | 速率匹配起点 | Rate matching starting position；由 RV 决定的循环缓存起始位置，是 rate recovery 的坐标语义。→ [[Rate_Matching_速率匹配]] |
 | 迭代译码 | iterative decoding | 多个软输入软输出译码器反复交换外信息、逐步提升比特置信度的译码范式。→ [[Iterative_Decoding_迭代译码]] |
+| SC | 逐次消除 | Successive Cancellation；Polar 译码的基础策略，逐比特依次译码，是 SCL/CA-SCL 的基础。→ [[Polar_码]] |
+| RSC | 递归系统卷积码 | Recursive Systematic Convolutional Code；Turbo 码的组成编码器，含反馈回路，LTE 用两个 8-state RSC 并行级联。→ [[RSC_Code_递归系统卷积码]] |
+| BG | 基图 | Base Graph；NR LDPC 码的模板矩阵，BG1 用于大 TB 高吞吐、BG2 用于小 TB 低延迟。→ [[Base_Graph_基图]] |
+| QC-LDPC | 准循环低密度奇偶校验码 | Quasi-Cyclic Low-Density Parity-Check Code；基图元素→Zc×Zc 循环移位子矩阵的 LDPC 实现形式，硬件友好。→ [[QC_LDPC_准循环LDPC]] |
+| BP | 置信传播 | Belief Propagation；在 Tanner 图上节点间迭代传递消息的通用译码/推理范式，LDPC 与迭代译码的基础。 |
+| SPA | 和积算法 | Sum-Product Algorithm；LDPC 译码标准算法，VN 和 CN 之间迭代传递 LLR 消息。→ [[Sum_Product_Algorithm_和积算法]] |
+| MS | 最小和 | Min-Sum；SPA 的硬件友好简化，CN 更新用 min 替代 tanh/atanh，高估可靠度 1-3 dB。→ [[Min_Sum_Algorithm_最小和算法]] |
+| NMS | 归一化最小和 | Normalized Min-Sum；MS 的改进：最小和值乘归一化因子（<1）补偿可靠性高估。 |
+| OMS | 偏移最小和 | Offset Min-Sum；MS 的改进：最小和值减偏移量补偿可靠性高估。 |
+| Tanner | Tanner 图 | Tanner Graph；LDPC 码的二部图表示，VN/CN 两类节点交替迭代消息。 |
 
 ## 调制、信道与性能
 
@@ -184,7 +194,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | PAS | 概率幅度整形 | Probabilistic Amplitude Shaping；amplitude/sign 分工：只整形幅度、符号保持均匀。→ [[PAS_概率幅度整形]] |
 | DM | 分布匹配器 | Distribution Matcher；把均匀 bit 可逆映射为非均匀幅度的映射引擎。→ [[Distribution_Matching_分布匹配]] |
 | ESS | 枚举球面整形 | Enumerative Sphere Shaping；DM 的一种实现：能量球约束 + DP 计数表。→ [[ESS_枚举球面整形]] |
-| MB | 麦克斯韦-玻尔兹曼分布 | Maxwell-Boltzmann；P(a)∝e^(−νa²) 的目标概率分布，ν=0 退化为均匀。→ [[MB_Distribution_MB分布]] |
+| MB | 麦克斯韦-玻尔兹曼分布 | Maxwell-Boltzmann Distribution；概率整形目标分布。另作兆字节（Megabyte）存储单位（T21 系列语境）。→ [[MB_Distribution_MB分布]] |
 | SBPM | 整形比特位置映射 | Shaped Bit Position Mapping；把 shaped bits 放到 QAM label 幅度位上的置换（4^k 块组织）。→ [[SBPM_整形比特位置映射]] |
 | GS | 几何整形 | Geometric Shaping；改星座点位置（非 PS），因标准兼容性差是 PS 的对照路线。→ [[Geometric_Shaping_几何整形]] |
 | R_eff | 有效码率 | Effective Code Rate；=payloadTBS/(N_RE·Qm)，PS 公平比较口径，与目标码率 R 脱钩。→ [[MCS_Table_Effective_Code_Rate_MCS表与有效码率]] |
@@ -222,7 +232,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | LFSR | 线性反馈移位寄存器 | Linear Feedback Shift Register；Gold 序列等伪随机序列的生成硬件。→ [[Gold_序列加扰]] |
 | Gold 序列 | Gold 序列 | Gold Sequence；两个 m 序列逐位异或的加扰序列，周期 2³¹−1，初态由 c_init 决定。→ [[Gold_序列加扰]] |
 | FP | Fincke-Pohst 策略 | Fincke-Pohst；球面枚举策略，按星座顺序区间搜索。→ [[Sphere_Decoding_球面检测]] |
-| SE | Schnorr-Euchner 策略 | Schnorr-Euchner；球面枚举策略，按部分距离排序搜索。→ [[Sphere_Decoding_球面检测]] |
+| SE | Schnorr-Euchner 策略 | Schnorr-Euchner；球面枚举策略，按部分距离排序搜索。另作频谱效率（Spectral Efficiency, SE，L3 T21 系列语境）。→ [[Sphere_Decoding_球面检测]] |
 | MACs | 乘累加操作 | Multiply-Accumulate；硬件复杂度（面积/周期）的常用度量。 |
 | ROM | 只读存储器 | Read-Only Memory；存常量表（如星座、CRC 表）。 |
 | O(n) | 复杂度记号 | Big-O notation；算法复杂度随规模 n 的增长阶。 |

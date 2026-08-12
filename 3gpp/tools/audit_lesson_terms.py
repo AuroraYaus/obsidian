@@ -51,6 +51,16 @@ TECH_TERMS = {
     "LDPC": "低密度奇偶校验码（Low-Density Parity-Check Code, LDPC）",
     "Turbo": "Turbo 码（Turbo Code）",
     "Polar": "极化码（Polar Code）",
+    "SC": "逐次消除（Successive Cancellation, SC）",
+    "RSC": "递归系统卷积码（Recursive Systematic Convolutional Code, RSC）",
+    "BG": "基图（Base Graph, BG）",
+    "QC-LDPC": "准循环低密度奇偶校验码（Quasi-Cyclic Low-Density Parity-Check Code, QC-LDPC）",
+    "BP": "置信传播（Belief Propagation, BP）",
+    "SPA": "和积算法（Sum-Product Algorithm, SPA）",
+    "MS": "最小和（Min-Sum, MS）",
+    "NMS": "归一化最小和（Normalized Min-Sum, NMS）",
+    "OMS": "偏移最小和（Offset Min-Sum, OMS）",
+    "Tanner": "Tanner 图（Tanner Graph, Tanner）",
     "BLER": "块错误率（Block Error Rate, BLER）",
     "MCS": "调制与编码方案（Modulation and Coding Scheme, MCS）",
     "TBS": "传输块大小（Transport Block Size, TBS）",
@@ -158,6 +168,10 @@ TECH_TERMS = {
     "PA": "功率放大器（Power Amplifier, PA）",
     "LUT": "查找表（Look-Up Table, LUT）",
     "CORDIC": "坐标旋转数字计算（Coordinate Rotation Digital Computer, CORDIC）",
+    # SE 双义登记（G0 统一轮，2026-08-12）：SE 含两个同形义项，术语表为权威口径——
+    # 本字典取频谱效率（Spectral Efficiency，L3 T21 系列语境）；另一义项 Schnorr-
+    # Euchner 策略（球面检测枚举策略）已在 L0 术语表 SE 行登记
+    # 「另作频谱效率（Spectral Efficiency, SE，L3 T21 系列语境）」。两义按语境区分。
     "SE": "频谱效率（Spectral Efficiency, SE）",
     "MACs": "乘加运算（Multiply-Accumulate operations, MACs）",
     "ROM": "只读存储器（Read-Only Memory, ROM）",
