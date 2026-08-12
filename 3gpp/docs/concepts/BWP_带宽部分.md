@@ -22,7 +22,7 @@ BWP（带宽部分，Bandwidth Part）是载波内的子带：UE 只在激活 BW
 
 ## 科学定义
 
-### BWP 是什么
+### BWP 的定义
 
 - 定义：载波内的一段连续频域资源（子载波集合），有独立 numerology（子载波间隔/CP（循环前缀，Cyclic Prefix）配置）。
 - UE 在任意时刻只在一个激活 BWP 内工作（收发 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel））——UE 不需要支持整个载波带宽。
