@@ -273,7 +273,7 @@ source_spec: "TS 38.321 Rel-19 §5.3; TS 38.214 Rel-19 §5.1"
 
 # HARQ Process HARQ 进程管理
 
-HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程管理解决「重传怎么组织」：每次传输属于哪个进程、是新传还是重传、软缓存写哪个地址、何时反馈——这些语义由 DCI（下行控制信息，Downlink Control Information）里的 HARQ 进程号与 NDI（新数据指示，New Data Indicator）字段驱动。它是软合并（T4.3/T7.3/T9.3）的调度侧伴侣：没有进程管理，软缓存就不知道把 LLR 累加到哪。
+HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程管理解决「重传怎么组织」：每次传输属于哪个进程、是新传还是重传、软缓存写哪个地址、何时反馈——这些语义由 DCI（下行控制信息，Downlink Control Information）里的 HARQ 进程号与 NDI（新数据指示，New Data Indicator）字段驱动。它是软合并（T4.3/T7.3/T9.3）的调度侧伴侣：没有进程管理，软缓存就不知道把 LLR（对数似然比，Log-Likelihood Ratio）累加到哪。
 
 ## 独立解释任务
 
@@ -305,16 +305,18 @@ DCI 时域资源分配字段（TDRA，时域资源分配，Time Domain Resource 
 ```
 slot n: PDCCH(DCI) ──k0──→ PDSCH (DL assignment)
 slot n+k0: PDSCH 接收与译码
-slot n+k0+k1: PUCCH HARQ-ACK 上报（k1 在 DCI 中指示，见 [[PUCCH_上行控制信道与UCI]]）
+slot n+k0+k1: PUCCH HARQ-ACK 上报（k1 在 DCI 中指示）
 slot n: PDCCH(UL grant) ──k2──→ PUSCH
 ```
+
+HARQ-ACK 上报承载于 PUCCH（物理上行控制信道，Physical Uplink Control Channel）[[PUCCH_上行控制信道与UCI]]。
 
 默认值：k0=0、k1=1、k2=0（未配置表时）。
 
 ### 重传限制与失败
 
 - maxHARQ-Tx：同一进程最大传输次数（超过后停止重传，数据交上层处理）。
-- HARQ 失败 ≠ 数据丢失：RLC（无线链路控制层）层还有 ARQ 重传兜底（见 [[Protocol_Stack_协议栈]] 的层2 结构）。
+- HARQ 失败 ≠ 数据丢失：RLC（无线链路控制层，Radio Link Control）层还有 ARQ（自动重传请求，Automatic Repeat Request）重传兜底（见 [[Protocol_Stack_协议栈]] 的层2 结构）。
 
 ## 直观模型
 
@@ -327,7 +329,7 @@ HARQ 进程像「快递单号」：每个包裹（TB）一个单号（进程号�
 | NDI 翻转就一定新传 | 必须结合 HARQ 进程号——同进程内比较才有意义 |
 | 进程数 = 软缓存数 | 软缓存按进程×TB 分配（T9.3），但进程数是协议概念、软缓存大小是工程概念 |
 | NR 也是同步 HARQ | LTE 是同步（固定 8 ms），NR 是异步（调度自由安排，进程号显式携带） |
-| HARQ 失败 = 数据丢失 | 层2 的 RLC ARQ 在 HARQ 之上兜底（AM 模式） |
+| HARQ 失败 = 数据丢失 | 层2 的 RLC ARQ 在 HARQ 之上兜底（AM（确认模式，Acknowledged Mode）模式） |
 
 ## 协议锚点
 
