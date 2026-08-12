@@ -12,7 +12,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 ---
 # 译码讲义术语总表
 
-本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（100 篇），可经 wikilink 跳转阅读。
+本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（104 篇），可经 wikilink 跳转阅读。
 
 ## 系统与协议
 
@@ -113,6 +113,12 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | TRS | 跟踪参考信号 | Tracking Reference Signal；时频跟踪用，CSI-RS 的 trs-Info 子集。→ [[TRS_跟踪参考信号]] |
 | CRS | 小区特定参考信号 | Cell-specific Reference Signal；LTE 专属广播式下行参考信号。→ [[CRS_小区特定参考信号]] |
 | BFR | 波束失败恢复 | Beam Failure Recovery；波束失效检测与恢复过程。→ [[Beam_Management_波束管理]] |
+| CA | 载波聚合 | Carrier Aggregation；多 CC 聚合提升带宽。→ [[Carrier_Aggregation_载波聚合]] |
+| CC | 分量载波 | Component Carrier；CA 中被聚合的单个载波。 |
+| PCell | 主小区 | Primary Cell；CA 中承载连接与移动性的主载波小区。 |
+| SCell | 辅小区 | Secondary Cell；CA 中纯数据承载的辅载波小区。 |
+| LCID | 逻辑信道标识 | Logical Channel Identity；MAC PDU 子头中标识逻辑信道的字段。→ [[MAC_Layer_Mapping_MAC层映射]] |
+| AGC | 自动增益控制 | Automatic Gain Control；射频前端增益调节，防 ADC 饱和。→ [[RF_Frontend_射频前端]] |
 | MCS | 调制与编码方案 | Modulation and Coding Scheme；调度侧选择调制阶数和目标码率的索引。→ [[MCS_Table_Effective_Code_Rate_MCS表与有效码率]] |
 | TBS | 传输块大小 | Transport Block Size；调度侧得到的 TB 比特规模。 |
 | SNR | 信噪比 | Signal-to-Noise Ratio；信号功率与噪声功率的比值。 |
@@ -253,7 +259,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（100 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（104 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -310,6 +316,10 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[TRS_跟踪参考信号]] | CSI-RS 的 trs-Info 子集，时频跟踪。 |
 | [[CRS_小区特定参考信号]] | LTE 专属广播式参考信号（解调/测量/同步）。 |
 | [[Beam_Management_波束管理]] | 波束测量/报告/指示/BFR 四步闭环。 |
+| [[MAC_Layer_Mapping_MAC层映射]] | 逻辑→传输→物理三层信道映射与 MAC PDU 复用。 |
+| [[Carrier_Aggregation_载波聚合]] | 多 CC 聚合、PCell/SCell 分工与跨载波调度。 |
+| [[BWP_带宽部分]] | 载波内激活工作子带（适配/省电/切换）。 |
+| [[RF_Frontend_射频前端]] | LNA/AGC/ADC/IQ/相位噪声，非协议强制。 |
 
 ### 译码算法
 
