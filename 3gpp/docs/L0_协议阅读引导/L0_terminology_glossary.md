@@ -12,7 +12,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 ---
 # 译码讲义术语总表
 
-本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（77 篇），可经 wikilink 跳转阅读。
+本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（83 篇），可经 wikilink 跳转阅读。
 
 ## 系统与协议
 
@@ -36,6 +36,10 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | PDCP | 分组数据汇聚协议 | Packet Data Convergence Protocol；层2 子层，负责加解密、头压缩与重排序。 |
 | SDAP | 服务数据适配协议 | Service Data Adaptation Protocol；NR 层2 子层，QoS 流到无线承载映射。 |
 | 数据链路层 | 数据链路层 | Data Link Layer；OSI 第二层，负责相邻节点成帧与差错控制；与 3GPP 层2 功能对应。 |
+| PBCH | 物理广播信道 | Physical Broadcast Channel；承载 MIB，NR 用 Polar 编码、LTE 用 TBCC 编码。→ [[PBCH_MIB_广播信道]] |
+| MIB | 主信息块 | Master Information Block；小区接入最少系统参数（SFN/公共子载波间隔/PDCCH-ConfigSIB1 等）。 |
+| SIB | 系统信息块 | System Information Block；SIB1 由 MIB 指向，其余 SIB 由 SIB1 调度。 |
+| TBCC | 咬尾卷积码 | Tail Biting Convolutional Code；LTE PDCCH/PBCH 信道编码，非递归无迭代。→ [[TBCC_咬尾卷积码]] |
 | FDMA | 频分多址 | Frequency Division Multiple Access；按频率划分用户信道，1G AMPS 代表。→ [[Multiple_Access_多址接入]] |
 | TDMA | 时分多址 | Time Division Multiple Access；按时隙划分用户，GSM = FDMA+TDMA。 |
 | CDMA | 码分多址 | Code Division Multiple Access；按正交扩频码区分用户，3G WCDMA 代表。 |
@@ -232,7 +236,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（77 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（83 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -266,6 +270,12 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[Multiple_Access_多址接入]] | FDMA/TDMA/CDMA/OFDMA 四种多址方式详细对比。 |
 | [[ASK_FSK_PSK_键控调制]] | ASK/FSK/PSK 键控调制家族与到 QAM 的演进。 |
 | [[Spreading_扩频与解扩]] | DSSS 扩频-解扩机制、处理增益与 CDMA 关系。 |
+| [[TBCC_咬尾卷积码]] | LTE 控制信道编码（PDCCH/PBCH），咬尾网格零码率损失。 |
+| [[PSS_SSS_同步信号与小区搜索]] | 小区搜索流程：同步栅格→PSS/SSS→小区 ID→SSB。 |
+| [[PBCH_MIB_广播信道]] | MIB 字段与 PBCH 编码（NR Polar / LTE TBCC）。 |
+| [[PDCCH_物理下行控制信道]] | CORESET/CCE/聚合等级/搜索空间与盲检机制。 |
+| [[DCI_下行控制信息]] | DCI 格式体系与字段语义，调度指令本体。 |
+| [[PUCCH_上行控制信道与UCI]] | UCI 三兄弟与 PUCCH format 0-4。 |
 
 ### 译码算法
 
