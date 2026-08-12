@@ -15,7 +15,7 @@ source_spec: "教材背景知识; TS 38.101 射频要求（本地 TS_38.101_3810
 
 # RF Frontend 射频前端
 
-射频前端（RF Frontend）是天线到数字基带之间的模拟/混合信号链路：天线 → LNA（低噪声放大器，Low Noise Amplifier）→ 混频（下变频）→ AGC（自动增益控制，Automatic Gain Control）→ ADC（模数转换器，Analog-to-Digital Converter）→ 数字基带。它的损伤（增益失配、量化噪声、IQ 不平衡、相位噪声）会以不同的方式退化后续的 LLR（对数似然比，Log-Likelihood Ratio）质量——射频前端是"天线到译码器"链路的物理入口，但其实现细节**非 3GPP 协议强制**（协议只定义射频要求指标，见 TS 38.101）。
+射频前端（RF Frontend）是天线到数字基带之间的模拟/混合信号链路：天线 → LNA（低噪声放大器，Low Noise Amplifier）→ 混频（下变频）→ AGC（自动增益控制，Automatic Gain Control）→ ADC（模数转换器，Analog-to-Digital Converter）→ 数字基带。它的损伤（增益失配、量化噪声、IQ（同相/正交，In-phase/Quadrature）不平衡、相位噪声）会以不同的方式退化后续的 LLR（对数似然比，Log-Likelihood Ratio）质量——射频前端是"天线到译码器"链路的物理入口，但其实现细节**非 3GPP 协议强制**（协议只定义射频要求指标，见 TS 38.101）。
 
 ## 独立解释任务
 
@@ -34,7 +34,7 @@ source_spec: "教材背景知识; TS 38.101 射频要求（本地 TS_38.101_3810
 
 1. 增益误差/AGC 不理想：信号幅度缩放偏差 → LLR 缩放错误（需按实际增益校准，衔接 T2.16 的 LLR 缩放）。
 2. 量化噪声：ADC 位宽有限 → 量化噪声叠加（位宽不足则量化噪声显著——衔接 [[Fixed_Point_Numbers_定点数]] 与 T2.16 量化）。
-3. IQ 不平衡：I/Q 两路增益/相位失配 → 镜像干扰（镜像频率的信号泄漏）→ 星座畸变。
+3. IQ 不平衡：I/Q 两路增益/相位失配 → 镜像干扰（镜像频率的信号泄漏）→ 星座畸变 → LLR 退化。
 4. 相位噪声：本地振荡器抖动 → CPE（公共相位误差，Common Phase Error）→ 星座旋转（由 [[PTRS_相位跟踪参考信号]] 补偿）。
 
 ### 与接收链路的衔接
