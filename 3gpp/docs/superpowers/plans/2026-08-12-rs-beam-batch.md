@@ -456,7 +456,7 @@ source_spec: "TS 38.213 Rel-19 §6; TS 38.331 Rel-19 §6.3.2"
 
 # Beam Management 波束管理
 
-波束管理（Beam Management）管理高频段（FR2）的定向传输：基站与 UE 用窄波束收发，需要先找到最佳波束对（beam pair），并在波束失效时快速恢复。流程分四步——波束测量（SSB/CSI-RS 波束的 L1-RSRP）、波束报告（UE 上报最佳波束）、波束指示（TCI 状态切换下行波束）、波束失败恢复（BFR，Beam Failure Recovery，检测+恢复）。它是 FR2 可靠性的核心机制，与 [[PSS_SSS_同步信号与小区搜索]]（SSB 波束扫描）、[[CSI_RS_信道状态信息参考信号]]（波束测量源）、[[PRACH_随机接入]]（BFR 专用前导）紧密衔接。
+波束管理（Beam Management）管理高频段（FR2（频率范围 2，Frequency Range 2））的定向传输：基站与 UE 用窄波束收发，需要先找到最佳波束对（beam pair），并在波束失效时快速恢复。流程分四步——波束测量（SSB/CSI-RS 波束的 L1-RSRP（层 1 参考信号接收功率，Layer 1 Reference Signal Received Power））、波束报告（UE 上报最佳波束）、波束指示（TCI（传输配置指示，Transmission Configuration Indication）状态切换下行波束）、波束失败恢复（BFR，Beam Failure Recovery，检测+恢复）。它是 FR2 可靠性的核心机制，与 [[PSS_SSS_同步信号与小区搜索]]（SSB 波束扫描）、[[CSI_RS_信道状态信息参考信号]]（波束测量源）、[[PRACH_随机接入]]（BFR 专用前导）紧密衔接。
 
 ## 独立解释任务
 
@@ -471,7 +471,7 @@ FR2 毫米波路径损耗大，需窄波束定向增益；但窄波束意味着�
 ### 四步流程
 
 1. 波束测量：基站周期发 SSB 波束（同步栅格扫描，见 [[PSS_SSS_同步信号与小区搜索]]）与 CSI-RS 波束（[[CSI_RS_信道状态信息参考信号]]）——UE 测各波束的 L1-RSRP（层 1 参考信号接收功率，Layer 1 Reference Signal Received Power）。
-2. 波束报告：UE 上报最佳波束（SSBRI/CRI（CSI-RS 资源指示，CSI-RS Resource Indicator）+ L1-RSRP）。
+2. 波束报告：UE 上报最佳波束（SSBRI（SSB 资源指示，SSB Resource Indicator）/CRI（CSI-RS 资源指示，CSI-RS Resource Indicator）+ L1-RSRP）。
 3. 波束指示：基站用 TCI（传输配置指示，Transmission Configuration Indication）状态切换 PDSCH/PDCCH 的准共址（QCL，Quasi Co-Location）假设——「这次传输与哪个参考信号同方向」。
 4. 波束失败恢复（BFR）：波束失败检测（下行参考信号质量低于门限）→ UE 用专用 PRACH 前导（或免竞争资源）发恢复请求 → 基站配置新波束（TCI 更新）——与随机接入（[[PRACH_随机接入]]）的 BFR 触发场景衔接。
 
