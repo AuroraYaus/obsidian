@@ -4,14 +4,14 @@
 
 **Goal:** 全量治理技术缩写首现配对缺口：工具层（G0：术语表补 9 + TECH_TERMS 登记 105 + 正则防混淆）+ 文件层（G1-G6：124 篇讲义 855 处修复，分 6 轮 SDD）。完成后 Rule 10 逐文件自足全库达标、审计工具全绿（仅清单假阳性）。
 
-**Architecture:** 按拷问锁定版 `docs/superpowers/plans/PLAN-term-governance.md` 执行。阶段 G0（工具层 4 任务）+ 阶段 G1-G6（文件层 6 轮，每轮 3-4 个子任务）。**修复规范**（全局约束）：每篇讲义对每个治理缩写**首次出现处**补「中文（English Full Name, ABBR）」三件套；中文全称以 L0 术语表为统一口径；只加配对不改其他内容；概念笔记不在治理范围。
+**Architecture:** 按拷问锁定版 `docs/superpowers/plans/PLAN-term-governance.md` 执行。阶段 G0（工具层 4 任务）+ 阶段 G1-G6（文件层 6 轮，每轮 3-4 个子任务）。**修复规范**（全局约束）：每篇讲义对每个治理缩写**首次出现处**补「ABBR（中文，English Full Name）」三件套（用户拍板 2026-08-12，同 :14）；中文全称以 L0 术语表为统一口径；只加配对不改其他内容；概念笔记不在治理范围。
 
 **Tech Stack:** Markdown + Python（audit_lesson_terms.py）+ 项目 audit 工具链。
 
 ## Global Constraints
 
 - 所有命令在仓库根 `/home/yys/AGENT/obsidian` 下以 `cd 3gpp && …` 运行。
-- 配对格式统一「ABBR（中文，English Full Name）」（用户拍板 2026-08-12；与本会话 104 篇概念笔记及 TECH_TERMS 登记格式一致）；中文全称以 `docs/L0_协议阅读引导/L0_terminology_glossary.md` 术语表为准（如 MAC=媒体接入控制层，非介质访问控制）。
+- 配对格式统一「ABBR（中文，English Full Name）」（用户拍板 2026-08-12；与本会话 104 篇概念笔记及既有讲义正文一致；TECH_TERMS 字典值为查阅口径「中文全称（English Full Name, ABBR）」，非正文配对格式）；中文全称以 `docs/L0_协议阅读引导/L0_terminology_glossary.md` 术语表为准（如 MAC=媒体接入控制层，非介质访问控制）。
 - **只加配对、不改内容**：修复仅插入三件套于首现处，不得改写句子、不得动代码块内文本（代码块内缩写豁免惯例）、不得删改既有配对。
 - 特殊处理清单（防误配）：CA-SCL 不得匹配 CA；Max_Log_MAP 不得匹配 MAP；Qm.n 定点格式不得匹配 Qm；SCL 与 CA-SCL 独立词条；DM-RS 与 DMRS 按术语表别名方案统一。
 - 带圈数字禁令（第 10 条）；标题正式化（Rule 16）。
