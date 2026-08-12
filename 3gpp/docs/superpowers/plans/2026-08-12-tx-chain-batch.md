@@ -175,7 +175,7 @@ source_spec: "TS 38.211 Rel-19 §6.3.4/§6.4/§7.4.1"
 ### PDSCH/PUSCH 差异
 
 - 下行 PDSCH：DMRS 占符号 2/3 等固定位置（front-loaded），CSI-RS 按配置插入；映射后经 OFDM 生成（多载波）。
-- 上行 PUSCH：DMRS 位置由配置（映射类型 A/B）决定；DFT-s-OFDM 波形下映射在预编码前完成（见 [[DFT_sOFDM_上行波形]]）。
+- 上行 PUSCH：DMRS 位置由配置（映射类型 A/B）决定；DFT-s-OFDM 波形下先做变换预编码（DFT）再映射到连续子载波（见 [[DFT_sOFDM_上行波形]]）。
 
 ## 直观模型
 
