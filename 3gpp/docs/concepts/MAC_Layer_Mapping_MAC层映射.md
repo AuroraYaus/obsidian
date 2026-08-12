@@ -31,19 +31,19 @@ MAC 层映射（MAC Layer Mapping）是信道三层体系的连接机制：逻�
 | DCCH（专用控制信道，Dedicated Control Channel） | DL-SCH / UL-SCH | PDSCH / PUSCH |
 | CCCH（公共控制信道，Common Control Channel） | DL-SCH / UL-SCH | PDSCH / PUSCH |
 | BCCH（广播控制信道，Broadcast Control Channel） | BCH（广播信道，Broadcast Channel）/ DL-SCH | PBCH（物理广播信道，Physical Broadcast Channel）/ PDSCH |
-| PCCH（寻呼控制信道，Paging Control Channel） | PCH（寻呼信道，Paging Channel） | PDSCH（寻呼调度经 PDCCH） |
+| PCCH（寻呼控制信道，Paging Control Channel） | PCH（寻呼信道，Paging Channel） | PDSCH（寻呼调度经 PDCCH（物理下行控制信道，Physical Downlink Control Channel）） |
 
 MAC 层职责：逻辑信道 → 传输信道的映射与复用；传输信道 → 物理信道由物理层完成（MAC 经传输块 TB（传输块，Transport Block）接口交付）。
 
 ### MAC PDU 组装
 
-- MAC PDU = MAC 头（一个或多个子头）+ MAC SDU（服务数据单元，Service Data Unit）们。
+- MAC PDU = MAC 头（一个或多个子头）+ 若干 MAC SDU（服务数据单元，Service Data Unit）。
 - 子头含 LCID（逻辑信道标识，Logical Channel Identity）——接收端凭 LCID 知道这段数据属于哪个逻辑信道（哪些数据归哪个业务/信令）。
 - 复用：一个 MAC PDU 可含多个逻辑信道的数据（按 LCP 优先级组装，见 [[Scheduler_MAC调度器与资源分配]] 的 LCP 规则）——高优先级信令先装，PBR（优先级比特率，Prioritized Bit Rate）约束防饿死。
 
 ### 特殊映射
 
-BCCH→BCH→PBCH 是"最小系统信息"专用路径（MIB 不经 MAC 复用，见 [[PBCH_MIB_广播信道]]）；PCCH→PCH 走寻呼流程（寻呼时机由 PDCCH 指示）。
+BCCH→BCH→PBCH 是"最小系统信息"专用路径（MIB（主信息块，Master Information Block）不经 MAC 复用，见 [[PBCH_MIB_广播信道]]）；PCCH→PCH 走寻呼流程（寻呼时机由 PDCCH 指示）。
 
 ## 直观模型
 
@@ -61,7 +61,7 @@ MAC 层映射像「邮局分拣」：信件按类型贴不同标签（逻辑信�
 ## 协议锚点
 
 - 信道结构与映射：TS 38.300（Rel-19 j20）§5-§6，本地 `3GPP_Rel19/processed/TS_38.300_38300-j20`。
-- MAC PDU 与复用：TS 38.321（Rel-19 j20）§4-§6，本地 `TS_38.321_38321-j20`。
+- MAC PDU 与复用：TS 38.321（Rel-19 j20）§4-§6，本地 `3GPP_Rel19/processed/TS_38.321_38321-j20`。
 - LCP 规则：TS 38.321 §5.4.3，本地同卷。
 - 物理承载：[[Physical_Channels_物理信道]]、[[PBCH_MIB_广播信道]]。
 
