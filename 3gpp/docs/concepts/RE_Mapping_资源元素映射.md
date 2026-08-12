@@ -9,7 +9,7 @@ tags:
   - concepts
   - physical-layer
   - l2
-source_spec: "TS 38.211 Rel-19 §6.3.4/§6.4/§7.4.1"
+source_spec: "TS 38.211 Rel-19 §6.3.1.6/§7.3.1.5/§7.4.1"
 ---
 
 # RE Mapping 资源元素映射
@@ -52,8 +52,8 @@ RE 映射像「考场排座」：座位（RE）按行列（频域×时域）编�
 
 ## 协议锚点
 
-- PDSCH RE 映射：TS 38.211（Rel-19 j30）§6.3.4，本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`。
-- PUSCH RE 映射：TS 38.211 §6.4，本地同卷。
+- PDSCH RE 映射：TS 38.211（Rel-19 j30）§7.3.1.5，本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`。
+- PUSCH RE 映射：TS 38.211 §6.3.1.6，本地同卷。
 - 参考信号位置：TS 38.211 §7.4.1（DMRS/CSI-RS/PTRS 位置表），本地同卷。
 - 网格坐标基础：T2.3（`docs/L1_基础/T2.3_NR_frequency_resource_grid.md`）。
 

@@ -60,7 +60,7 @@ QPSK 是 [[ASK_FSK_PSK_键控调制]] 家族 PSK 的 2 bit/符号形态；16QAM 
 
 ## 协议锚点
 
-- 调制映射表：TS 38.211（Rel-19 j30）§5.1（Table 5.1-1 起，QPSK 为 Table 5.1-3），本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`。
+- 调制映射表：TS 38.211（Rel-19 j30）§5.1（V19.3.0 中为 5.1.x 公式形式，表号对应历史版本编号——Table 5.1-1 起，QPSK 为 Table 5.1-3），本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`。
 - MCS/Qm 关系：TS 38.214（Rel-19 j30）§5.1.3（MCS 表），本地 `TS_38.214_38214-j30`。
 - 软解调镜像：T2.13（BPSK/QPSK）/T2.14（QAM Max-Log-MAP），`docs/L1_基础/`。
 
