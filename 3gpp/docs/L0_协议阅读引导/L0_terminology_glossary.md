@@ -12,7 +12,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 ---
 # 译码讲义术语总表
 
-本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（83 篇），可经 wikilink 跳转阅读。
+本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（87 篇），可经 wikilink 跳转阅读。
 
 ## 系统与协议
 
@@ -40,6 +40,14 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | MIB | 主信息块 | Master Information Block；小区接入最少系统参数（SFN/公共子载波间隔/PDCCH-ConfigSIB1 等）。 |
 | SIB | 系统信息块 | System Information Block；SIB1 由 MIB 指向，其余 SIB 由 SIB1 调度。 |
 | TBCC | 咬尾卷积码 | Tail Biting Convolutional Code；LTE PDCCH/PBCH 信道编码，非递归无迭代。→ [[TBCC_咬尾卷积码]] |
+| 调度器 | 调度器 | Scheduler；MAC 层每 slot 决策用户/资源/MCS 的单元。→ [[Scheduler_MAC调度器与资源分配]] |
+| RBG | 资源块组 | Resource Block Group；频域分配最小粒度，位图分配单位。 |
+| VRB | 虚拟资源块 | Virtual Resource Block；调度分配单位，经交织映射到 PRB。 |
+| CQI | 信道质量指示 | Channel Quality Indicator；4-bit 索引映射 MCS/码率，BLER 目标约束。→ [[Link_Adaptation_链路自适应与CQI]] |
+| PMI | 预编码矩阵指示 | Precoding Matrix Indicator；期望预编码矩阵的码本索引。 |
+| RI | 秩指示 | Rank Indicator；建议的传输层数。 |
+| NDI | 新数据指示 | New Data Indicator；同进程内翻转=新传、不翻转=重传。→ [[HARQ_Process_HARQ进程管理]] |
+| SPS | 半静态调度 | Semi-Persistent Scheduling；周期资源免逐次 DCI 的调度机制。 |
 | FDMA | 频分多址 | Frequency Division Multiple Access；按频率划分用户信道，1G AMPS 代表。→ [[Multiple_Access_多址接入]] |
 | TDMA | 时分多址 | Time Division Multiple Access；按时隙划分用户，GSM = FDMA+TDMA。 |
 | CDMA | 码分多址 | Code Division Multiple Access；按正交扩频码区分用户，3G WCDMA 代表。 |
@@ -236,7 +244,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（83 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（87 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -276,6 +284,10 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[PDCCH_物理下行控制信道]] | CORESET/CCE/聚合等级/搜索空间与盲检机制。 |
 | [[DCI_下行控制信息]] | DCI 格式体系与字段语义，调度指令本体。 |
 | [[PUCCH_上行控制信道与UCI]] | UCI 三兄弟与 PUCCH format 0-4。 |
+| [[Scheduler_MAC调度器与资源分配]] | MAC 调度器决策与 RBG/VRB/Type 0-1 资源分配。 |
+| [[Scheduling_Grant_调度与授权]] | 动态授权与 SPS/configured grant 机制。 |
+| [[HARQ_Process_HARQ进程管理]] | HARQ 进程状态机、NDI 翻转与 k0/k1/k2 时序。 |
+| [[Link_Adaptation_链路自适应与CQI]] | CQI/PMI/RI 反馈闭环与 outer loop 校准。 |
 
 ### 译码算法
 
