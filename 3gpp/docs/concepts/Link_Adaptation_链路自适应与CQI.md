@@ -52,7 +52,7 @@ UE 测 CSI-RS SINR（T2.11）→ 折算 CQI（满足 BLER≤10% 的最大可支�
 | 触发 | 周期（RRC（无线资源控制，Radio Resource Control）配置周期）/ 非周期（DCI（下行控制信息，Downlink Control Information）触发） | 周期走 PUCCH，非周期走 PUSCH（容量大） |
 | 频域粒度 | 宽带（一个 CQI 覆盖全带宽）/ 子带（每子带一个 CQI） | 宽带省开销、子带支持频率选择性调度 |
 
-### 为什么需要 outer loop
+### outer loop 的修正原理
 
 CQI 是 UE 的「预测」——测量误差、信道变化、干扰波动都会让它偏乐观/悲观。outer loop 用真实传输结果（ACK/NACK）修正：NACK 说明 CQI 偏乐观（降低折算 SINR 偏置），连续 ACK 说明偏悲观（上调）——把实际 BLER（块错误率，Block Error Rate）拉回目标值（10%）。它是闭环的自校准层。
 
