@@ -12,7 +12,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 ---
 # 译码讲义术语总表
 
-本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（95 篇），可经 wikilink 跳转阅读。
+本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（100 篇），可经 wikilink 跳转阅读。
 
 ## 系统与协议
 
@@ -109,6 +109,10 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | QAM | 正交幅度调制 | Quadrature Amplitude Modulation；用幅度和相位承载多比特信息的调制家族。 |
 | 1024QAM | 1024 阶正交幅度调制 | 32×32 星座、每符号 10 bit 的最后一档调制，对 SNR/EVM/PA 线性度要求苛刻。→ [[QAM1024_1024QAM]] |
 | Qm | 调制阶数 | Modulation order；每个调制符号承载的比特数。 |
+| PTRS | 相位跟踪参考信号 | Phase Tracking Reference Signal；补偿相位噪声 CPE，随数据同传。→ [[PTRS_相位跟踪参考信号]] |
+| TRS | 跟踪参考信号 | Tracking Reference Signal；时频跟踪用，CSI-RS 的 trs-Info 子集。→ [[TRS_跟踪参考信号]] |
+| CRS | 小区特定参考信号 | Cell-specific Reference Signal；LTE 专属广播式下行参考信号。→ [[CRS_小区特定参考信号]] |
+| BFR | 波束失败恢复 | Beam Failure Recovery；波束失效检测与恢复过程。→ [[Beam_Management_波束管理]] |
 | MCS | 调制与编码方案 | Modulation and Coding Scheme；调度侧选择调制阶数和目标码率的索引。→ [[MCS_Table_Effective_Code_Rate_MCS表与有效码率]] |
 | TBS | 传输块大小 | Transport Block Size；调度侧得到的 TB 比特规模。 |
 | SNR | 信噪比 | Signal-to-Noise Ratio；信号功率与噪声功率的比值。 |
@@ -249,7 +253,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（95 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（100 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -301,6 +305,11 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[Modulation_Mapping_调制映射]] | TS 38.211 §5.1 星座表与归一化因子。 |
 | [[RE_Mapping_资源元素映射]] | 符号到网格的填充规则与参考信号避让。 |
 | [[TX_Chain_发送端处理链总览]] | 发送端 11 环处理链全景（阶段 1 收官）。 |
+| [[CSI_RS_信道状态信息参考信号]] | 下行测量参考信号（CSI 测量/波束/跟踪三用途）。 |
+| [[PTRS_相位跟踪参考信号]] | 相位噪声 CPE 补偿，随数据同传。 |
+| [[TRS_跟踪参考信号]] | CSI-RS 的 trs-Info 子集，时频跟踪。 |
+| [[CRS_小区特定参考信号]] | LTE 专属广播式参考信号（解调/测量/同步）。 |
+| [[Beam_Management_波束管理]] | 波束测量/报告/指示/BFR 四步闭环。 |
 
 ### 译码算法
 
