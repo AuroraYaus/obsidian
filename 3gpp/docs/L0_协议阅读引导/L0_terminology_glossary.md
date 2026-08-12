@@ -199,6 +199,15 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | ADC | 模数转换器 | Analog-to-Digital Converter；接收链路前端把模拟信号数字化。 |
 | DAC | 数模转换器 | Digital-to-Analog Converter；发射链路把数字信号转模拟。 |
 | PAPR | 峰均功率比 | Peak-to-Average Power Ratio；信号峰值与平均功率之比，影响 PA 回退。 |
+| OFDM | 正交频分复用 | Orthogonal Frequency Division Multiplexing；多载波调制，子载波正交重叠。→ [[DFT_sOFDM_上行波形]] |
+| CP | 循环前缀 | Cyclic Prefix；OFDM 符号前部冗余，消除 ISI/ICI。 |
+| FFT | 快速傅里叶变换 | Fast Fourier Transform；OFDM 接收端时频变换。 |
+| IFFT | 逆快速傅里叶变换 | Inverse Fast Fourier Transform；OFDM 发送端频时变换。 |
+| SSB | 同步信号块 | Synchronization Signal Block；PSS+SSS+PBCH 一体。→ [[PSS_SSS_同步信号与小区搜索]] |
+| SRS | 探测参考信号 | Sounding Reference Signal；上行信道探测。→ [[SRS_探测参考信号]] |
+| CORESET | 控制资源集 | Control Resource Set；PDCCH 可占用的时频资源块。→ [[PDCCH_物理下行控制信道]] |
+| CCE | 控制信道单元 | Control Channel Element；PDCCH 分配最小单位（6 REG）。 |
+| REG | 资源元素组 | Resource Element Group；1 PRB × 1 符号。 |
 | EVM | 误差矢量幅度 | Error Vector Magnitude；发射信号相对理想星座点的误差度量。 |
 | PA | 功率放大器 | Power Amplifier；发射链路末端放大，PAPR 与线性度决定其回退量。 |
 | Cholesky | 乔列斯基分解 | Cholesky Decomposition；正定矩阵的三角分解，用于 PS 正则化 Rhh 的预处理。 |
