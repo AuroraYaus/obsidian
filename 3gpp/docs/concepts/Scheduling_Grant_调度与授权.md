@@ -27,7 +27,7 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1; TS 38.321 Rel-19 §5.4"
 ### 动态调度与授权流程
 
 1. 调度器决策（见 [[Scheduler_MAC调度器与资源分配]]）→ 生成 DCI（0_x 上行/1_x 下行，见 [[DCI_下行控制信息]]）→ PDCCH 盲检下发。
-2. UE 在搜索空间盲检到 DCI（RNTI 匹配）→ 解析资源分配字段（频域/时域/MCS/HARQ 进程号/NDI/RV/TPC）→ 按字段在对应 slot 收（DL assignment 指示 PDSCH）或发（UL grant 指示 PUSCH）。
+2. UE 在搜索空间盲检到 DCI（RNTI（无线网络临时标识，Radio Network Temporary Identifier）匹配）→ 解析资源分配字段（频域/时域/MCS/HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程号/NDI（新数据指示，New Data Indicator）/RV（冗余版本，Redundancy Version）/TPC（发射功率控制命令，Transmit Power Control Command））→ 按字段在对应 slot 收（DL assignment 指示 PDSCH（物理下行共享信道，Physical Downlink Shared Channel））或发（UL grant 指示 PUSCH（物理上行共享信道，Physical Uplink Shared Channel））。
 3. 时序由 DCI 时域字段的 k0（PDSCH 相对 PDCCH 的 slot 偏移）/k1（HARQ-ACK 相对 PDSCH 的 slot 偏移）/k2（PUSCH 相对 PDCCH 的 slot 偏移）决定（见 [[HARQ_Process_HARQ进程管理]]）。
 
 ### 半静态授权：SPS 与 configured grant
@@ -38,12 +38,12 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1; TS 38.321 Rel-19 §5.4"
 | configured grant Type 1 | — | PUSCH 周期资源 | RRC 配置全部参数（周期/时频/MCS），无需 DCI |
 | configured grant Type 2 | — | PUSCH 周期资源 | RRC 配置半参 + DCI 激活 |
 
-用途：VoIP 周期小包、URLLC 低时延——省去每包一次 PDCCH 盲检与 DCI 开销。激活/释放都经 DCI（CS-RNTI 加扰）确认。
+用途：VoIP（IP 语音，Voice over IP）周期小包、URLLC（超可靠低时延通信，Ultra-Reliable Low-Latency Communication）低时延——省去每包一次 PDCCH 盲检与 DCI 开销。SPS 与 configured grant Type 2 的激活/释放经 DCI（CS-RNTI（配置调度 RNTI，Configured Scheduling RNTI）加扰）确认；Type 1 纯 RRC 配置，无 DCI。
 
 ### 免授权（grant-free）与多用户调度
 
 - 免授权：configured grant 的扩展——UE 按配置直接发，无需等 grant（URLLC 时延关键场景）；冲突时靠 HARQ 重传与免授权资源池管理。
-- MU-MIMO（多用户 MIMO，Multi-User MIMO）配对：调度器把同一 RB 分给多个 UE 的不同层（依赖 PMI/RI，见 [[Link_Adaptation_链路自适应与CQI]]）——一个 DCI 只对一个 UE，但一个 RB 可承载多个 UE 的层。
+- MU-MIMO（多用户 MIMO，Multi-User MIMO）配对：调度器把同一 RB 分给多个 UE 的不同层（依赖 PMI（预编码矩阵指示，Precoding Matrix Indicator）/RI（秩指示，Rank Indicator），见 [[Link_Adaptation_链路自适应与CQI]]）——一个 DCI 只对一个 UE，但一个 RB 可承载多个 UE 的层。
 
 ## 直观模型
 

@@ -78,4 +78,6 @@ PUCCH 像"收货确认单"：收到货（PDSCH）后回一张单子（UCI），�
 - [[HARQ_混合自动重传请求]]
 - [[DCI_下行控制信息]]
 - [[PDCCH_物理下行控制信道]]
+- [[Link_Adaptation_链路自适应与CQI]]
+- [[HARQ_Process_HARQ进程管理]]
 - 关系语义：PUCCH 是下行译码链路的回执通道——HARQ-ACK 由译码结果（T7.4/T9.5 的 CRC（循环冗余校验，Cyclic Redundancy Check）判决）驱动，按 DCI 指示的 k1 时序上报，UCI 编码与交织挂到 T10.9；与 PDCCH（物理下行控制信道，Physical Downlink Control Channel）构成控制面双向闭环。

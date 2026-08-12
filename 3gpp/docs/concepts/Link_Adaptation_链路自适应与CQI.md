@@ -33,7 +33,7 @@ UE 测 CSI-RS SINR（T2.11）→ 折算 CQI（满足 BLER≤10% 的最大可支�
 → outer loop：连续 NACK 下调 SINR 折算偏置、连续 ACK 上调（校准 CQI 误差）
 ```
 
-其中 CSI 上报与 HARQ-ACK 反馈均经 PUCCH（物理上行控制信道，Physical Uplink Control Channel）[[PUCCH_上行控制信道与UCI]]/PUSCH（物理上行共享信道，Physical Uplink Shared Channel）承载，MCS 选择与资源分配决策见 [[Scheduler_MAC调度器与资源分配]]。
+其中 CSI 上报与 HARQ-ACK 反馈均经 PUCCH（物理上行控制信道，Physical Uplink Control Channel）[[PUCCH_上行控制信道与UCI]]/PUSCH（物理上行共享信道，Physical Uplink Shared Channel）承载；gNB（5G 基站，gNodeB）的 MCS 选择与资源分配决策见 [[Scheduler_MAC调度器与资源分配]]。
 
 ### CQI/PMI/RI 三件报告
 
@@ -66,7 +66,7 @@ CQI 是 UE 的「预测」——测量误差、信道变化、干扰波动都会
 |:---|:---|
 | CQI 越高越好 | CQI 反映可支持的 MCS 上限，调度器还要结合资源/QoS（服务质量，Quality of Service）选实际 MCS |
 | CQI 就是 SINR | CQI 是 SINR 按 BLER 目标折算后的索引——同样的 SINR 可对应不同 CQI（不同 BLER 目标） |
-| PMI/RI 只影响下行 | 上行也用 SRS（探测参考信号，Sounding Reference Signal）与 PMI/RI 相关反馈（TDD（时分双工，Time Division Duplexing）互易性/码本） |
+| PMI/RI 只影响下行 | 上行用 SRS（探测参考信号，Sounding Reference Signal）探测与 TPMI（传输预编码矩阵指示，Transmitted Precoding Matrix Indicator）指示（TDD（时分双工，Time Division Duplexing）互易性/码本） |
 | 一次上报就够了 | CQI 会过时，周期/非周期上报持续跟踪信道变化 |
 
 ## 协议锚点

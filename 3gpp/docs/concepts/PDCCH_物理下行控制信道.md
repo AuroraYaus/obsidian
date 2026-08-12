@@ -77,4 +77,6 @@ PDCCH 盲检像"信箱没有门牌号的集体邮箱"：邮差（基站）把信
 - [[Polar_码]]
 - [[Physical_Channels_物理信道]]
 - [[PBCH_MIB_广播信道]]
+- [[Scheduling_Grant_调度与授权]]
+- [[Scheduler_MAC调度器与资源分配]]
 - 关系语义：PDCCH 是控制面调度入口——盲检拿到 DCI（下行控制信息）→ 解析出 descriptor 字段（T9.0）；其编码随制式（NR Polar/LTE TBCC）挂到两个编码家族；MIB 的 pdcch-ConfigSIB1 把广播信道接到这里的 CORESET 0 盲检。

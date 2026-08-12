@@ -48,7 +48,7 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 
 # Scheduler MAC 调度器与资源分配
 
-调度器（Scheduler）是 MAC 层每时隙（slot）都要做一次的核心决策单元：决定哪个用户（UE，用户设备，User Equipment）在哪个时频资源上、用多大 MCS（调制与编码方案，Modulation and Coding Scheme）、发多少数据。它把「信道质量（CQI）、业务优先级、QoS（服务质量，Quality of Service）需求、缓冲区状态」综合成资源分配（Resource Allocation）指令，经 DCI（下行控制信息，Downlink Control Information）下发。调度是「从协议到物理资源」的决策层——不理解调度器，就无法理解 DCI 资源字段为什么长那样、descriptor（T9.0）从哪来。
+调度器（Scheduler）是 MAC（媒体接入控制层，Medium Access Control）层每时隙（slot）都要做一次的核心决策单元：决定哪个用户（UE，用户设备，User Equipment）在哪个时频资源上、用多大 MCS（调制与编码方案，Modulation and Coding Scheme）、发多少数据。它把「信道质量（CQI）、业务优先级、QoS（服务质量，Quality of Service）需求、缓冲区状态」综合成资源分配（Resource Allocation）指令，经 DCI（下行控制信息，Downlink Control Information）下发。调度是「从协议到物理资源」的决策层——不理解调度器，就无法理解 DCI 资源字段为什么长那样、descriptor（T9.0）从哪来。
 
 ## 独立解释任务
 
@@ -58,13 +58,13 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 
 ### 调度器角色与决策输入
 
-调度器在 MAC 层、每个 slot 运行一次，输入四类信息：(1) 信道质量——每个 UE 上报的 CQI（信道质量指示，Channel Quality Indicator）/PMI/RI（见 [[Link_Adaptation_链路自适应与CQI]]）；(2) 缓冲区状态——UE 通过 BSR（缓冲区状态报告，Buffer Status Report）告知上行数据量；(3) QoS 需求——逻辑信道的优先级与时延预算；(4) 可用资源——RB（资源块，Resource Block）总数与干扰情况。输出：资源分配 + MCS 选择 + HARQ 进程分配（见 [[HARQ_Process_HARQ进程管理]]）。
+调度器在 MAC 层、每个 slot 运行一次，输入四类信息：(1) 信道质量——每个 UE 上报的 CQI（信道质量指示，Channel Quality Indicator）/PMI/RI（见 [[Link_Adaptation_链路自适应与CQI]]）；(2) 缓冲区状态——UE 通过 BSR（缓冲区状态报告，Buffer Status Report）告知上行数据量；(3) QoS 需求——逻辑信道的优先级与时延预算；(4) 可用资源——RB（资源块，Resource Block）总数与干扰情况。输出：资源分配 + MCS 选择 + HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程分配（见 [[HARQ_Process_HARQ进程管理]]）。
 
 ### 资源分配的单位体系：RBG 与 VRB
 
 - **PRB（物理资源块，Physical Resource Block）**：网格上的实际频域单位（12 子载波，见 [[Spectrum_and_Frequency_Point_频谱与频点]] 与 T2.3）。
-- **RBG（资源块组，Resource Block Group）**：频域分配的最小粒度——一组 PRB（尺寸 P 由 BWP 带宽查表（Table 5.1.2.2.1-1 DL/Table 6.1.2.2.1-1 UL，TS 38.214）），位图分配时每 bit 对应一个 RBG。
-- **VRB（虚拟资源块，Virtual Resource Block）**：调度器分配的「虚拟编号」，经交织映射到物理 PRB——交织（interleaved VRB 映射，TS 38.214 §5.1.2.2.2，下行特性）把连续的虚拟编号打散到不同 PRB，获得频率分集。
+- **RBG（资源块组，Resource Block Group）**：频域分配的最小粒度——一组 PRB（尺寸 P 由 BWP（带宽部分，Bandwidth Part）带宽查表（Table 5.1.2.2.1-1 DL/Table 6.1.2.2.1-1 UL，TS 38.214）），位图分配时每 bit 对应一个 RBG。
+- **VRB（虚拟资源块，Virtual Resource Block）**：调度器分配的「虚拟编号」，经（可配的）交织或非交织映射到物理 PRB——交织（interleaved VRB 映射，TS 38.214 §5.1.2.2.2，下行特性）把连续的虚拟编号打散到不同 PRB，获得频率分集。
 
 ### 资源分配类型（NR，TS 38.214 §5.1.2.2）
 
@@ -81,7 +81,7 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 
 ### 逻辑信道优先级（LCP）与 MAC 复用
 
-一个 UE 的上行数据可能来自多个逻辑信道（数据/信令），MAC 复用器按 LCP（逻辑信道优先级，Logical Channel Prioritization）规则组装 MAC PDU：先装高优先级逻辑信道，受优先级比特率（PBR，Prioritized Bit Rate）约束——保证控制信令不被大流量数据饿死。
+一个 UE 的上行数据可能来自多个逻辑信道（数据/信令），MAC 复用器按 LCP（逻辑信道优先级，Logical Channel Prioritization）规则组装 MAC PDU（协议数据单元，Protocol Data Unit）：先装高优先级逻辑信道，受优先级比特率（PBR，Prioritized Bit Rate）约束——保证控制信令不被大流量数据饿死。
 
 ## 直观模型
 
@@ -92,7 +92,7 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 | 误解 | 正确理解 |
 |:---|:---|
 | 调度器在物理层 | 调度器在 MAC 层，PHY 只负责执行 DCI 指定的参数 |
-| VRB 就是 PRB | VRB 是虚拟分配单位，经交织映射到 PRB——两者编号不同 |
+| VRB 就是 PRB | VRB 是虚拟分配单位，经（可配的）交织/非交织映射到 PRB——两者编号不同 |
 | Type 0 一定优于 Type 1 | Type 0 位图灵活但 DCI 开销大、粒度粗（RBG）；Type 1 紧凑（RIV）——按场景选 |
 | 调度只看信道质量 | 还看 QoS 优先级、公平性、缓冲区状态、功率约束——多目标优化 |
 
@@ -111,7 +111,7 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 - [[PDCCH_物理下行控制信道]]
 - [[HARQ_Process_HARQ进程管理]]
 - [[Link_Adaptation_链路自适应与CQI]]
-- 关系语义：调度器是控制面与数据面的汇合点——它消费 CQI（链路自适应）产出 DCI（PDCCH 盲检的对象），决定 HARQ 进程与 RV（进程管理），最终生成译码器 descriptor（T9.0）的源头。
+- 关系语义：调度器是控制面与数据面的汇合点——它消费 CQI（链路自适应）产出 DCI（PDCCH 盲检的对象），决定 HARQ 进程与 RV（冗余版本，Redundancy Version）（进程管理），最终生成译码器 descriptor（T9.0）的源头。
 ```
 
 - [ ] **Step 2: 验证结构、LaTeX、圈号**
@@ -176,7 +176,7 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1; TS 38.321 Rel-19 §5.4"
 ### 动态调度与授权流程
 
 1. 调度器决策（见 [[Scheduler_MAC调度器与资源分配]]）→ 生成 DCI（0_x 上行/1_x 下行，见 [[DCI_下行控制信息]]）→ PDCCH 盲检下发。
-2. UE 在搜索空间盲检到 DCI（RNTI 匹配）→ 解析资源分配字段（频域/时域/MCS/HARQ 进程号/NDI/RV/TPC）→ 按字段在对应 slot 收（DL assignment 指示 PDSCH）或发（UL grant 指示 PUSCH）。
+2. UE 在搜索空间盲检到 DCI（RNTI（无线网络临时标识，Radio Network Temporary Identifier）匹配）→ 解析资源分配字段（频域/时域/MCS/HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程号/NDI（新数据指示，New Data Indicator）/RV（冗余版本，Redundancy Version）/TPC（发射功率控制命令，Transmit Power Control Command））→ 按字段在对应 slot 收（DL assignment 指示 PDSCH（物理下行共享信道，Physical Downlink Shared Channel））或发（UL grant 指示 PUSCH（物理上行共享信道，Physical Uplink Shared Channel））。
 3. 时序由 DCI 时域字段的 k0（PDSCH 相对 PDCCH 的 slot 偏移）/k1（HARQ-ACK 相对 PDSCH 的 slot 偏移）/k2（PUSCH 相对 PDCCH 的 slot 偏移）决定（见 [[HARQ_Process_HARQ进程管理]]）。
 
 ### 半静态授权：SPS 与 configured grant
@@ -187,12 +187,12 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1; TS 38.321 Rel-19 §5.4"
 | configured grant Type 1 | — | PUSCH 周期资源 | RRC 配置全部参数（周期/时频/MCS），无需 DCI |
 | configured grant Type 2 | — | PUSCH 周期资源 | RRC 配置半参 + DCI 激活 |
 
-用途：VoIP 周期小包、URLLC 低时延——省去每包一次 PDCCH 盲检与 DCI 开销。激活/释放都经 DCI（CS-RNTI 加扰）确认。
+用途：VoIP（IP 语音，Voice over IP）周期小包、URLLC（超可靠低时延通信，Ultra-Reliable Low-Latency Communication）低时延——省去每包一次 PDCCH 盲检与 DCI 开销。SPS 与 configured grant Type 2 的激活/释放经 DCI（CS-RNTI（配置调度 RNTI，Configured Scheduling RNTI）加扰）确认；Type 1 纯 RRC 配置，无 DCI。
 
 ### 免授权（grant-free）与多用户调度
 
 - 免授权：configured grant 的扩展——UE 按配置直接发，无需等 grant（URLLC 时延关键场景）；冲突时靠 HARQ 重传与免授权资源池管理。
-- MU-MIMO（多用户 MIMO，Multi-User MIMO）配对：调度器把同一 RB 分给多个 UE 的不同层（依赖 PMI/RI，见 [[Link_Adaptation_链路自适应与CQI]]）——一个 DCI 只对一个 UE，但一个 RB 可承载多个 UE 的层。
+- MU-MIMO（多用户 MIMO，Multi-User MIMO）配对：调度器把同一 RB 分给多个 UE 的不同层（依赖 PMI（预编码矩阵指示，Precoding Matrix Indicator）/RI（秩指示，Rank Indicator），见 [[Link_Adaptation_链路自适应与CQI]]）——一个 DCI 只对一个 UE，但一个 RB 可承载多个 UE 的层。
 
 ## 直观模型
 
@@ -289,7 +289,7 @@ HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程管理
 
 | 制式 | DL 进程数 | UL 进程数 | 时序 |
 |:---|:---|:---|:---|
-| LTE | 8（固定） | 8（FDD）/更多（TDD） | 同步 HARQ（固定时序） |
+| LTE | FDD 8（TDD 4-15） | FDD 8（TDD 1-7） | 同步 HARQ（固定时序） |
 | NR | 2-16（高层配置，常见 16） | 2-16 | 异步 HARQ（灵活时序） |
 
 同步 HARQ：重传在固定时间（如 8 ms 后）发生，进程号可由时间推导；异步 HARQ：重传时间由调度器自由安排，进程号必须显式携带——NR 用异步换调度灵活性。
@@ -300,7 +300,7 @@ NDI（新数据指示，New Data Indicator）是 DCI 里 1 bit：与**同一进�
 
 ### k0/k1/k2 时序链
 
-DCI 时域资源分配字段（TDRA，时域资源分配，Time Domain Resource Allocation）从高层配置表索引出三个偏移（TS 38.214 §5.1.2.1，slot 粒度）：
+DCI 时域资源分配字段（TDRA，时域资源分配，Time Domain Resource Allocation）从高层配置表索引出 k0 与起始符号/时长，k1 由独立 DCI 字段指示（TS 38.214 §5.1.2.1，slot 粒度）：
 
 ```
 slot n: PDCCH(DCI) ──k0──→ PDSCH (DL assignment)
@@ -309,9 +309,9 @@ slot n+k0+k1: PUCCH HARQ-ACK 上报（k1 在 DCI 中指示）
 slot n: PDCCH(UL grant) ──k2──→ PUSCH
 ```
 
-HARQ-ACK 上报承载于 PUCCH（物理上行控制信道，Physical Uplink Control Channel）[[PUCCH_上行控制信道与UCI]]。
+HARQ-ACK 上报承载于 PUCCH（物理上行控制信道，Physical Uplink Control Channel）[[PUCCH_上行控制信道与UCI]]，或随 PUSCH 捎带（piggyback）。
 
-默认值：k0=0、k1=1、k2=0（未配置表时）。
+默认值：k0=0（默认 PDSCH 表 A 首行）；k2=j（默认 PUSCH 表 A，15/30 kHz 下 j=1）；k1 无固定默认——由 DCI 字段或 RRC（无线资源控制，Radio Resource Control）的 dl-DataToUL-ACK 指示。
 
 ### 重传限制与失败
 
@@ -320,7 +320,7 @@ HARQ-ACK 上报承载于 PUCCH（物理上行控制信道，Physical Uplink Cont
 
 ## 直观模型
 
-HARQ 进程像「快递单号」：每个包裹（TB）一个单号（进程号），「是否换新包裹」看单子上的标记翻转（NDI）——同一个单号（同进程）不翻转就是补发（重传合并），翻转就是新包裹（新传清缓存）。快递员（调度器）可以自由安排补发时间（异步）或固定时间补发（同步）。
+HARQ 进程像「快递单号」：每个包裹（TB（传输块，Transport Block））一个单号（进程号），「是否换新包裹」看单子上的标记翻转（NDI）——同一个单号（同进程）不翻转就是补发（重传合并），翻转就是新包裹（新传清缓存）。快递员（调度器）可以自由安排补发时间（异步）或固定时间补发（同步）。
 
 ## 常见误解
 
@@ -345,7 +345,7 @@ HARQ 进程像「快递单号」：每个包裹（TB）一个单号（进程号�
 - [[DCI_下行控制信息]]
 - [[PUCCH_上行控制信道与UCI]]
 - [[Chase_Combining_Chase合并]]
-- 关系语义：HARQ 进程管理是软合并的调度侧语义——DCI 的进程号/NDI/RV 决定软缓存地址与读写模式（T9.7 覆盖写 vs 增量写），k1 决定 HARQ-ACK 反馈时序（PUCCH），是下行译码闭环到上行反馈的关键一环。
+- 关系语义：HARQ 进程管理是软合并的调度侧语义——DCI 的进程号/NDI/RV（冗余版本，Redundancy Version）决定软缓存地址与读写模式（T9.7 覆盖写 vs 增量写），k1 决定 HARQ-ACK 反馈时序（PUCCH），是下行译码闭环到上行反馈的关键一环。
 ```
 
 - [ ] **Step 2: 验证结构、LaTeX、圈号**
@@ -415,6 +415,8 @@ UE 测 CSI-RS SINR（T2.11）→ 折算 CQI（满足 BLER≤10% 的最大可支�
 → outer loop：连续 NACK 下调 SINR 折算偏置、连续 ACK 上调（校准 CQI 误差）
 ```
 
+其中 CSI 上报与 HARQ-ACK 反馈均经 PUCCH（物理上行控制信道，Physical Uplink Control Channel）[[PUCCH_上行控制信道与UCI]]/PUSCH（物理上行共享信道，Physical Uplink Shared Channel）承载；gNB（5G 基站，gNodeB）的 MCS 选择与资源分配决策见 [[Scheduler_MAC调度器与资源分配]]。
+
 ### CQI/PMI/RI 三件报告
 
 | 报告 | 内容 | 作用 |
@@ -446,7 +448,7 @@ CQI 是 UE 的「预测」——测量误差、信道变化、干扰波动都会
 |:---|:---|
 | CQI 越高越好 | CQI 反映可支持的 MCS 上限，调度器还要结合资源/QoS 选实际 MCS |
 | CQI 就是 SINR | CQI 是 SINR 按 BLER 目标折算后的索引——同样的 SINR 可对应不同 CQI（不同 BLER 目标） |
-| PMI/RI 只影响下行 | 上行也用 SRS 与 PMI/RI 相关反馈（TDD 互易性/码本） |
+| PMI/RI 只影响下行 | 上行用 SRS（探测参考信号，Sounding Reference Signal）探测与 TPMI（传输预编码矩阵指示，Transmitted Precoding Matrix Indicator）指示（TDD（时分双工，Time Division Duplexing）互易性/码本） |
 | 一次上报就够了 | CQI 会过时，周期/非周期上报持续跟踪信道变化 |
 
 ## 协议锚点

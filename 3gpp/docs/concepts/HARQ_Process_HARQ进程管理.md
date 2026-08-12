@@ -31,7 +31,7 @@ HARQ（混合自动重传请求，Hybrid Automatic Repeat Request）进程管理
 
 | 制式 | DL 进程数 | UL 进程数 | 时序 |
 |:---|:---|:---|:---|
-| LTE | 8（固定） | 8（FDD）/更多（TDD） | 同步 HARQ（固定时序） |
+| LTE | FDD 8（TDD 4-15） | FDD 8（TDD 1-7） | 同步 HARQ（固定时序） |
 | NR | 2-16（高层配置，常见 16） | 2-16 | 异步 HARQ（灵活时序） |
 
 同步 HARQ：重传在固定时间（如 8 ms 后）发生，进程号可由时间推导；异步 HARQ：重传时间由调度器自由安排，进程号必须显式携带——NR 用异步换调度灵活性。
@@ -42,7 +42,7 @@ NDI（新数据指示，New Data Indicator）是 DCI 里 1 bit：与**同一进�
 
 ### k0/k1/k2 时序链
 
-DCI 时域资源分配字段（TDRA，时域资源分配，Time Domain Resource Allocation）从高层配置表索引出三个偏移（TS 38.214 §5.1.2.1，slot 粒度）：
+DCI 时域资源分配字段（TDRA，时域资源分配，Time Domain Resource Allocation）从高层配置表索引出 k0 与起始符号/时长，k1 由独立 DCI 字段指示（TS 38.214 §5.1.2.1，slot 粒度）：
 
 ```
 slot n: PDCCH(DCI) ──k0──→ PDSCH (DL assignment)
@@ -51,9 +51,9 @@ slot n+k0+k1: PUCCH HARQ-ACK 上报（k1 在 DCI 中指示）
 slot n: PDCCH(UL grant) ──k2──→ PUSCH
 ```
 
-HARQ-ACK 上报承载于 PUCCH（物理上行控制信道，Physical Uplink Control Channel）[[PUCCH_上行控制信道与UCI]]。
+HARQ-ACK 上报承载于 PUCCH（物理上行控制信道，Physical Uplink Control Channel）[[PUCCH_上行控制信道与UCI]]，或随 PUSCH 捎带（piggyback）。
 
-默认值：k0=0、k1=1、k2=0（未配置表时）。
+默认值：k0=0（默认 PDSCH 表 A 首行）；k2=j（默认 PUSCH 表 A，15/30 kHz 下 j=1）；k1 无固定默认——由 DCI 字段或 RRC（无线资源控制，Radio Resource Control）的 dl-DataToUL-ACK 指示。
 
 ### 重传限制与失败
 
@@ -62,7 +62,7 @@ HARQ-ACK 上报承载于 PUCCH（物理上行控制信道，Physical Uplink Cont
 
 ## 直观模型
 
-HARQ 进程像「快递单号」：每个包裹（TB）一个单号（进程号），「是否换新包裹」看单子上的标记翻转（NDI）——同一个单号（同进程）不翻转就是补发（重传合并），翻转就是新包裹（新传清缓存）。快递员（调度器）可以自由安排补发时间（异步）或固定时间补发（同步）。
+HARQ 进程像「快递单号」：每个包裹（TB（传输块，Transport Block））一个单号（进程号），「是否换新包裹」看单子上的标记翻转（NDI）——同一个单号（同进程）不翻转就是补发（重传合并），翻转就是新包裹（新传清缓存）。快递员（调度器）可以自由安排补发时间（异步）或固定时间补发（同步）。
 
 ## 常见误解
 
@@ -87,4 +87,4 @@ HARQ 进程像「快递单号」：每个包裹（TB）一个单号（进程号�
 - [[DCI_下行控制信息]]
 - [[PUCCH_上行控制信道与UCI]]
 - [[Chase_Combining_Chase合并]]
-- 关系语义：HARQ 进程管理是软合并的调度侧语义——DCI 的进程号/NDI/RV 决定软缓存地址与读写模式（T9.7 覆盖写 vs 增量写），k1 决定 HARQ-ACK 反馈时序（PUCCH），是下行译码闭环到上行反馈的关键一环。
+- 关系语义：HARQ 进程管理是软合并的调度侧语义——DCI 的进程号/NDI/RV（冗余版本，Redundancy Version）决定软缓存地址与读写模式（T9.7 覆盖写 vs 增量写），k1 决定 HARQ-ACK 反馈时序（PUCCH），是下行译码闭环到上行反馈的关键一环。

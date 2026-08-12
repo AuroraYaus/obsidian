@@ -59,4 +59,6 @@ HARQ 不是“错了重做一遍”，更像“第一次证据不够，第二次
 - [[T7.3_LTE_HARQ_soft_buffer_RV]]
 - [[T9.3_NR_LDPC_HARQ_soft_buffer_RV_k0]]
 - [[T11.3_HARQ_soft_buffer_comparison]]
+- [[HARQ_Process_HARQ进程管理]]
+- [[Scheduler_MAC调度器与资源分配]]
 - 关系语义：HARQ 使用 CRC 结果决定保留、释放或继续合并 soft buffer，RV 决定重传证据对应的编码位置。
