@@ -119,7 +119,7 @@ TECH_TERMS = {
     "FER": "误帧率（Frame Error Rate, FER）",
     "TDL": "抽头时延线（Tapped Delay Line, TDL）",
     "OCC": "正交覆盖码（Orthogonal Cover Code, OCC）",
-    "SIMO": "单输入多输出（Single-Input Multiple-Output, SIMO）",
+    "SIMO": "单入多出（Single-Input Multiple-Output, SIMO）",
     "SISO": "软入软出（Soft-Input Soft-Output, SISO）",
     "CSI": "信道状态信息（Channel State Information, CSI）",
     "MMSE": "最小均方误差（Minimum Mean Square Error, MMSE）",
@@ -128,6 +128,7 @@ TECH_TERMS = {
     "MRC": "最大比合并（Maximum Ratio Combining, MRC）",
     "ML": "最大似然（Maximum Likelihood, ML）",
     "DMRS": "解调参考信号（Demodulation Reference Signal, DMRS）",
+    "DM-RS": "解调参考信号（Demodulation Reference Signal, DM-RS）",
     "RSRP": "参考信号接收功率（Reference Signal Received Power, RSRP）",
     "PS": "概率整形（Probabilistic Shaping, PS）",
     "DM": "分布匹配（Distribution Matching, DM）",
@@ -150,7 +151,7 @@ TECH_TERMS = {
     "SE": "频谱效率（Spectral Efficiency, SE）",
     "MACs": "乘加运算（Multiply-Accumulate operations, MACs）",
     "ROM": "只读存储器（Read-Only Memory, ROM）",
-    "Hadamard": "哈达玛（Hadamard）",
+    "Hadamard": "阿达玛矩阵（Hadamard Matrix, Hadamard）",
     "Cholesky": "乔列斯基分解（Cholesky Decomposition, Cholesky）",
     "FR1": "频率范围 1（Frequency Range 1, FR1）",
     "FR2": "频率范围 2（Frequency Range 2, FR2）",
@@ -158,8 +159,26 @@ TECH_TERMS = {
     "SC-FDMA": "单载波频分多址（Single Carrier Frequency Division Multiple Access, SC-FDMA）",
 }
 
+# 防混淆守卫（负向断言）：登记缩写是更长复合词/独立词条的子串时，排除子串误匹配——
+#   MAP：排除 Log_MAP/Log-MAP 前缀（Max_Log_MAP、Log-MAP 是独立复合算法名，讲义正文与
+#        wikilink 均有使用）；Qm：排除 Qm.n 后缀（定点 Q 格式，术语表独立登记）；
+#   SCL：排除 CA-SCL 前缀（CA-SCL 已独立登记，其内 SCL 子串不重复计数）。
+# CA（载波聚合）未登记 TECH_TERMS（讲义零使用，仅术语表有行）；将来登记时必须加
+#   "CA": r"(?!-)" 守卫，否则 "CA-SCL" 会被 CA 误匹配（连字符不阻断词边界）。
+_TERM_PRE_GUARDS = {
+    "MAP": r"(?<!Log[-_])",
+    "SCL": r"(?<!-)",
+}
+_TERM_POST_GUARDS = {
+    "Qm": r"(?!\.)",   # Qm.n（定点 Q 格式）不是调制阶数
+    "DM": r"(?!-)",    # DM-RS 的 DM 是解调（DeModulation），不是分布匹配（Distribution Matching）
+}
+
 TECH_TERM_RE = {
-    abbr: re.compile(rf"(?<![A-Za-z0-9]){re.escape(abbr)}(?![A-Za-z0-9])")
+    abbr: re.compile(
+        rf"(?<![A-Za-z0-9]){_TERM_PRE_GUARDS.get(abbr, '')}{re.escape(abbr)}"
+        rf"(?![A-Za-z0-9]){_TERM_POST_GUARDS.get(abbr, '')}"
+    )
     for abbr in TECH_TERMS
 }
 

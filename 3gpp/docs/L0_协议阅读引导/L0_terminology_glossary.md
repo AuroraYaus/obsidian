@@ -152,7 +152,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 |:---|:---|:---|
 | MIMO | 多输入多输出 | Multiple-Input Multiple-Output；收发多天线的传输形态，基带模型 y=HPx+n。→ [[MIMO_多天线系统]] |
 | SIMO | 单入多出 | Single-Input Multiple-Output；单发多收，是分集接收的形态。 |
-| SISO | 单入单出 | Single-Input Single-Output；单发单收的基准形态。 |
+| SISO | 单入单出 | Single-Input Single-Output；单发单收的基准形态。译码器语境另指软入软出（Soft-Input Soft-Output）。 |
 | CSI | 信道状态信息 | Channel State Information；接收端对信道质量的度量，SINR 是其中的核心标量。→ [[CSI_SINR]] |
 | MMSE | 最小均方误差 | Minimum Mean Square Error；均衡器设计准则，W=Hᴴ(HHᴴ+σ²I)⁻¹。→ [[MMSE_均衡]] |
 | ZF | 迫零均衡 | Zero Forcing；σ²→0 时 MMSE 的退化极限，消除干扰但放大噪声。→ [[MMSE_均衡]] |
@@ -168,6 +168,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | Rhh | 信道相关矩阵 | HᴴH correlation matrix；PS 正则化的 Gram 矩阵，是 Cholesky 分解的输入。 |
 | 导频 | pilot / 参考信号 | 收发双方都已知的参考符号（NR 中称参考信号 Reference Signal），接收端用它估计信道；DMRS/CSI-RS/PTRS/SRS 是其具体类型。→ [[Pilot_导频]] |
 | DMRS | 解调参考信号 | Demodulation Reference Signal；接收端估计数据符号附近信道的参考信号（与数据同走预编码）。→ [[DMRS_解调参考信号]] |
+| DM-RS | 解调参考信号 | Demodulation Reference Signal；DMRS 连字符变体。→ [[DMRS_解调参考信号]] |
 | CSI-RS | 信道状态信息参考信号 | Channel State Information Reference Signal；用于信道状态测量、报告和相关接收过程。 |
 | RSRP | 参考信号接收功率 | Reference Signal Received Power；描述参考信号功率强弱。 |
 
