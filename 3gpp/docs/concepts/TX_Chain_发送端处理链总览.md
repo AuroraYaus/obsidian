@@ -41,7 +41,7 @@ TB → CRC 附着（TB CRC）→ 码块分段（+CB（码块，Code Block）CRC�
 
 各环节专项笔记：加扰见 [[Gold_序列加扰]]；调制映射见 [[Modulation_Mapping_调制映射]]；层映射见 [[Layer_Mapping_层映射]]；预编码见 [[Precoding_预编码]]；RE 映射见 [[RE_Mapping_资源元素映射]]。
 
-接收端镜像：解扰（T2.6 的逆）、软解调 LLR（T2.13/T2.14）、MIMO（多输入多输出，Multiple Input Multiple Output）检测（T12/T2.12）、解映射、FFT/同步（T2.7/T2.8）。
+接收端镜像：解扰（T2.6 的逆）、软解调 LLR（T2.13/T2.14）、MIMO（多输入多输出，Multiple-Input Multiple-Output）检测（T12/T2.12）、解映射、FFT/同步（T2.7/T2.8）。
 
 ### 与接收端译码链路的关系
 
