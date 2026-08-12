@@ -11,7 +11,7 @@
 ## Global Constraints
 
 - 所有命令在仓库根 `/home/yys/AGENT/obsidian` 下以 `cd 3gpp && …` 运行。
-- 配对格式统一「中文（English Full Name, ABBR）」；中文全称以 `docs/L0_协议阅读引导/L0_terminology_glossary.md` 术语表为准（如 MAC=媒体接入控制层，非介质访问控制）。
+- 配对格式统一「ABBR（中文，English Full Name）」（用户拍板 2026-08-12；与本会话 104 篇概念笔记及 TECH_TERMS 登记格式一致）；中文全称以 `docs/L0_协议阅读引导/L0_terminology_glossary.md` 术语表为准（如 MAC=媒体接入控制层，非介质访问控制）。
 - **只加配对、不改内容**：修复仅插入三件套于首现处，不得改写句子、不得动代码块内文本（代码块内缩写豁免惯例）、不得删改既有配对。
 - 特殊处理清单（防误配）：CA-SCL 不得匹配 CA；Max_Log_MAP 不得匹配 MAP；Qm.n 定点格式不得匹配 Qm；SCL 与 CA-SCL 独立词条；DM-RS 与 DMRS 按术语表别名方案统一。
 - 带圈数字禁令（第 10 条）；标题正式化（Rule 16）。
