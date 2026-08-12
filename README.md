@@ -10,7 +10,7 @@
 │   ├── docs/L1_基础/         # 数学基础、OFDM 与软解调、CRC/分段、译码理论、硬件基础
 │   ├── docs/L2_协议算法/     # 译码协议算法（Turbo/LDPC/Polar）、MIMO 接收、概率整形
 │   ├── docs/L3_工程实现/     # 译码器工程（仿真/定点/RTL/验证）、接收链路工程预算
-│   ├── docs/concepts/        # 概念图谱（71+ 概念笔记）
+│   ├── docs/concepts/        # 概念图谱（104 概念笔记）
 │   ├── docs/audits/          # 审计台账与评审
 │   ├── sim/ tools/ tests/    # Python 仿真、审计工具链、单元测试
 │   ├── CLAUDE.md             # 会话硬性规则

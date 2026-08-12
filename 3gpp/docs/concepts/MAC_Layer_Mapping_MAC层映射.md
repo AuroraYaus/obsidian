@@ -15,7 +15,7 @@ source_spec: "TS 38.321 Rel-19 §4-§6; TS 38.300 Rel-19 §5-§6"
 
 # MAC Layer Mapping MAC 层映射
 
-MAC 层映射（MAC Layer Mapping）是信道三层体系的连接机制：逻辑信道（Logical Channel，按内容类型分，如数据/信令）→ 传输信道（Transport Channel，按传输方式分，如 DL-SCH（下行共享信道，Downlink Shared Channel）/UL-SCH（上行共享信道，Uplink Shared Channel））→ 物理信道（Physical Channel，空口承载，如 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel））。MAC 层在中间做映射与复用：把多个逻辑信道的数据按优先级组装进 MAC PDU（协议数据单元，Protocol Data Unit），交给传输信道。
+MAC（媒体接入控制层，Medium Access Control）层映射（MAC Layer Mapping）是信道三层体系的连接机制：逻辑信道（Logical Channel，按内容类型分，如数据/信令）→ 传输信道（Transport Channel，按传输方式分，如 DL-SCH（下行共享信道，Downlink Shared Channel）/UL-SCH（上行共享信道，Uplink Shared Channel））→ 物理信道（Physical Channel，空口承载，如 PDSCH（物理下行共享信道，Physical Downlink Shared Channel）/PUSCH（物理上行共享信道，Physical Uplink Shared Channel））。MAC 层在中间做映射与复用：把多个逻辑信道的数据按优先级组装进 MAC PDU（协议数据单元，Protocol Data Unit），交给传输信道。
 
 ## 独立解释任务
 
