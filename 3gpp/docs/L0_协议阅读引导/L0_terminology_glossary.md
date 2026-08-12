@@ -12,7 +12,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 ---
 # 译码讲义术语总表
 
-本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（87 篇），可经 wikilink 跳转阅读。
+本章集中收纳 `docs/` 作者讲义中反复出现的术语、缩写和简要解释。其他讲义正文默认直接使用这些简称；只有当某一节正在讲解概念本身时，才在正文中补充上下文说明。条目合并自既有术语表与 `docs/concepts/3GPP全流程_缩写概念理论清单.md` 缩写清单；末尾「概念笔记索引」收录 `docs/concepts/` 全部概念笔记（92 篇），可经 wikilink 跳转阅读。
 
 ## 系统与协议
 
@@ -48,6 +48,11 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | RI | 秩指示 | Rank Indicator；建议的传输层数。 |
 | NDI | 新数据指示 | New Data Indicator；同进程内翻转=新传、不翻转=重传。→ [[HARQ_Process_HARQ进程管理]] |
 | SPS | 半静态调度 | Semi-Persistent Scheduling；周期资源免逐次 DCI 的调度机制。 |
+| DFT-s-OFDM | 离散傅里叶变换扩展正交频分复用 | Discrete Fourier Transform Spread OFDM；NR 上行可选波形（低 PAPR）。→ [[DFT_sOFDM_上行波形]] |
+| SC-FDMA | 单载波频分多址 | Single Carrier Frequency Division Multiple Access；LTE 上行波形，DFT-s-OFDM 前身。 |
+| TPC | 发射功率控制命令 | Transmit Power Control Command；DCI 携带的闭环功控命令。→ [[Power_Control_上行功率控制]] |
+| PHR | 功率余量报告 | Power Headroom Report；UE 上报功率余量，MAC 层。 |
+| TA | 定时提前 | Timing Advance；UE 上行发射定时调整，RACH 建立。→ [[PRACH_随机接入]] |
 | FDMA | 频分多址 | Frequency Division Multiple Access；按频率划分用户信道，1G AMPS 代表。→ [[Multiple_Access_多址接入]] |
 | TDMA | 时分多址 | Time Division Multiple Access；按时隙划分用户，GSM = FDMA+TDMA。 |
 | CDMA | 码分多址 | Code Division Multiple Access；按正交扩频码区分用户，3G WCDMA 代表。 |
@@ -244,7 +249,7 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 
 ## 概念笔记索引
 
-> `docs/concepts/` 全部概念笔记（87 篇），按主题分组；每条一句话取自笔记首段。
+> `docs/concepts/` 全部概念笔记（92 篇），按主题分组；每条一句话取自笔记首段。
 
 ### 协议、信道与信号
 
@@ -288,6 +293,11 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | [[Scheduling_Grant_调度与授权]] | 动态授权与 SPS/configured grant 机制。 |
 | [[HARQ_Process_HARQ进程管理]] | HARQ 进程状态机、NDI 翻转与 k0/k1/k2 时序。 |
 | [[Link_Adaptation_链路自适应与CQI]] | CQI/PMI/RI 反馈闭环与 outer loop 校准。 |
+| [[DFT_sOFDM_上行波形]] | NR 上行 DFT-s-OFDM 波形原理与低 PAPR 优势。 |
+| [[Power_Control_上行功率控制]] | 开环/闭环功控、TPC 与 PHR。 |
+| [[PRACH_随机接入]] | 前导、四步/两步随机接入过程。 |
+| [[SRS_探测参考信号]] | 上行探测、comb 结构与 TDD 互易性。 |
+| [[UL_DL_Differences_上下行差异]] | 上下行七维度全景对照。 |
 
 ### 译码算法
 
