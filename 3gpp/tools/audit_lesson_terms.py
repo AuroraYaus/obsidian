@@ -57,6 +57,7 @@ TECH_TERMS = {
     "FSK": "频移键控（Frequency Shift Keying, FSK）",
     "PSK": "相移键控（Phase Shift Keying, PSK）",
     "DSSS": "直接序列扩频（Direct Sequence Spread Spectrum, DSSS）",
+    "TBCC": "咬尾卷积码（Tail Biting Convolutional Code, TBCC）",
     "OSI": "开放式系统互联参考模型（Open Systems Interconnection Reference Model, OSI）",
     "PDCP": "分组数据汇聚协议（Packet Data Convergence Protocol, PDCP）",
     "SDAP": "服务数据适配协议（Service Data Adaptation Protocol, SDAP）",
