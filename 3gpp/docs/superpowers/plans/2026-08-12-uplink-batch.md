@@ -190,7 +190,7 @@ $$
 | P0 | 目标接收功率基准 | RRC 配置（开环偏置） |
 | α | 路损补偿系数（0-1，部分补偿省干扰） | RRC 配置 |
 | PL | 下行路径损耗估计 | UE 测量 |
-| ΔTF | 传输格式补偿（MCS 相关） | 按 MCS 查表 |
+| ΔTF | 传输格式补偿（MCS（调制与编码方案，Modulation and Coding Scheme）相关） | 按 MCS 查表 |
 | f(TPC) | 闭环累计项（TPC 命令累加，含饱和） | DCI 的 TPC 字段（见 [[DCI_下行控制信息]]） |
 
 PUCCH（物理上行控制信道，Physical Uplink Control Channel）/SRS（探测参考信号，Sounding Reference Signal）/PRACH（物理随机接入信道，Physical Random Access Channel）各有独立功控参数集（TS 38.213 §7.2/§7.3/§7.4）。
@@ -227,7 +227,7 @@ PUCCH（物理上行控制信道，Physical Uplink Control Channel）/SRS（探�
 - [[Scheduler_MAC调度器与资源分配]]
 - [[Multiple_Access_多址接入]]
 - [[PUCCH_上行控制信道与UCI]]
-- 关系语义：上行功控是链路自适应（Link_Adaptation）的上行镜像——TPC 命令经 DCI 闭环微调，PHR 反馈给调度器（Scheduler）决定资源，PUCCH/SRS/PRACH 各有功控参数集，是上行链路「功率维度」的完整闭环。
+- 关系语义：上行功控是链路自适应（[[Link_Adaptation_链路自适应与CQI]]）的上行镜像——TPC 命令经 DCI 闭环微调，PHR 反馈给调度器（[[Scheduler_MAC调度器与资源分配]]）决定资源，PUCCH/SRS/PRACH 各有功控参数集，是上行链路「功率维度」的完整闭环。
 ```
 
 - [ ] **Step 2: 验证结构、LaTeX、圈号**
