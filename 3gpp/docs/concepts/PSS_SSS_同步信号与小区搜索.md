@@ -40,7 +40,7 @@ LTE（TS 36.211 §6.11）：PSS 用 Zadoff-Chu 序列（62 长），SSS 用两�
 ### SSB 时频结构（NR）
 
 - SSB = PSS + SSS + PBCH + PBCH DM-RS（解调参考信号，Demodulation Reference Signal），占 4 个符号 × 240 子载波（20 RB）。
-- 频域位置由同步栅格（GSCN）决定（TS 38.101-1 §5.4.3.1，见 [[Spectrum_and_Frequency_Point_频谱与频点]]）；时域按 SSB 突发集（SSB burst set）周期性发送（5/10/20 ms 等）。
+- 频域位置由同步栅格（GSCN（全球同步信道号，Global Synchronization Channel Number））决定（TS 38.101-1 §5.4.3.1，见 [[Spectrum_and_Frequency_Point_频谱与频点]]）；时域按 SSB 突发集（SSB burst set）周期性发送（5/10/20 ms 等）。
 - SSB 索引（SSB index）隐含在 DM-RS 序列/PBCH 内容中，用于多波束场景区分波束。
 
 ### 小区搜索流程

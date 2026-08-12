@@ -107,7 +107,7 @@ source_spec: "TS 36.212 Rel-19 §5.1.3.1; TS 36.211 Rel-19 §6.8"
 | 维度 | TBCC | Turbo 分量码（RSC） |
 |:---|:---|:---|
 | 网格收尾 | 咬尾（初态=末态，无尾比特） | 网格终止（trellis termination，12 个尾比特归零） |
-| 迭代 | 无（单次网格译码） | 有（双 SISO 迭代交换外信息） |
+| 迭代 | 无（单次网格译码） | 有（双 SISO（软入软出，Soft-Input Soft-Output）迭代交换外信息） |
 | 反馈 | 非递归（生成多项式无反馈项） | 递归（RSC 有反馈，是 Turbo 成立的前提） |
 | 用途 | LTE PDCCH/PBCH | LTE 数据信道（Turbo 分量） |
 
@@ -219,7 +219,7 @@ LTE（TS 36.211 §6.11）：PSS 用 Zadoff-Chu 序列（62 长），SSS 用两�
 ### SSB 时频结构（NR）
 
 - SSB = PSS + SSS + PBCH + PBCH DM-RS（解调参考信号，Demodulation Reference Signal），占 4 个符号 × 240 子载波（20 RB）。
-- 频域位置由同步栅格（GSCN）决定（TS 38.101-1 §5.4.3.1，见 [[Spectrum_and_Frequency_Point_频谱与频点]]）；时域按 SSB 突发集（SSB burst set）周期性发送（5/10/20 ms 等）。
+- 频域位置由同步栅格（GSCN（全球同步信道号，Global Synchronization Channel Number））决定（TS 38.101-1 §5.4.3.1，见 [[Spectrum_and_Frequency_Point_频谱与频点]]）；时域按 SSB 突发集（SSB burst set）周期性发送（5/10/20 ms 等）。
 - SSB 索引（SSB index）隐含在 DM-RS 序列/PBCH 内容中，用于多波束场景区分波束。
 
 ### 小区搜索流程
@@ -334,7 +334,7 @@ PBCH（物理广播信道，Physical Broadcast Channel）承载 MIB（主信息�
 ### PBCH 编码与加扰
 
 - NR：PBCH 载荷 32 bit（MIB 24 bit（传输块口径；TS 38.331 ASN.1 为 23 bit 含备用位）+ 8 bit 额外位（SFN 低 4 位、半帧位及 Lmax 相关的 SSB 索引/k_SSB 位）），加 24 bit CRC（gCRC24C）后 Polar 编码（与 PDCCH 同族，见 [[Polar_码]] 与 [[PDCCH_物理下行控制信道]]）；加扰序列初始化仅依赖物理小区 ID，半帧指示位与 SSB 索引位属载荷比特；承载于 SSB 内 PBCH 符号。
-- LTE：MIB（14 bit 含 10 bit 保护间隔）→ TBCC 编码（见 [[TBCC_咬尾卷积码]]），40 ms 周期（4 帧），承载于 PBCH 资源（传输信道为 BCH）。
+- LTE：MIB 24 bit（14 bit 信息 + 10 bit 备用）→ TBCC 编码（见 [[TBCC_咬尾卷积码]]），40 ms 周期（4 帧），承载于 PBCH 资源（传输信道为 BCH（广播信道，Broadcast Channel））。
 - 接收端：解 PBCH 需要先有小区 ID（PSS/SSS 给出，用于解扰）与信道估计（PBCH DM-RS）。
 
 ### MIB → SIB1 衔接
@@ -432,8 +432,8 @@ PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载 DC
 | 概念 | 定义 |
 |:---|:---|
 | CORESET | 控制资源集（Control Resource Set）：PDCCH 可占用的时频资源块（频域 RB 集 + 时域 1-3 符号） |
-| REG | 资源元素组（Resource Element Group）：1 个 PRB × 1 个 OFDM 符号 |
-| CCE | 控制信道单元（Control Channel Element）：6 个 REG（NR 常用 3 REG 一组交织），CCE 是 PDCCH 分配的最小单位 |
+| REG | 资源元素组（Resource Element Group）：1 个 PRB（物理资源块，Physical Resource Block） × 1 个 OFDM 符号 |
+| CCE | 控制信道单元（Control Channel Element）：6 个 REG（REG 束大小 L∈{2,6}，3 符号 CORESET 可为 3），CCE 是 PDCCH 分配的最小单位 |
 | 聚合等级 | 1/2/4/8/16——一个 PDCCH 占用的 CCE 数，决定编码率（聚合越大码率越低越可靠） |
 | 搜索空间 | 一组候选 PDCCH 位置（monitor occasion + 聚合等级组合），分 CSS（公共搜索空间，Common Search Space）与 USS（UE 专用搜索空间，UE-specific Search Space） |
 

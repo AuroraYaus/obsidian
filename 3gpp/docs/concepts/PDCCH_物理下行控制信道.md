@@ -27,8 +27,8 @@ PDCCH（物理下行控制信道，Physical Downlink Control Channel）承载 DC
 | 概念 | 定义 |
 |:---|:---|
 | CORESET | 控制资源集（Control Resource Set）：PDCCH 可占用的时频资源块（频域 RB 集 + 时域 1-3 符号） |
-| REG | 资源元素组（Resource Element Group）：1 个 PRB × 1 个 OFDM 符号 |
-| CCE | 控制信道单元（Control Channel Element）：6 个 REG（NR 常用 3 REG 一组交织），CCE 是 PDCCH 分配的最小单位 |
+| REG | 资源元素组（Resource Element Group）：1 个 PRB（物理资源块，Physical Resource Block） × 1 个 OFDM 符号 |
+| CCE | 控制信道单元（Control Channel Element）：6 个 REG（REG 束大小 L∈{2,6}，3 符号 CORESET 可为 3），CCE 是 PDCCH 分配的最小单位 |
 | 聚合等级 | 1/2/4/8/16——一个 PDCCH 占用的 CCE 数，决定编码率（聚合越大码率越低越可靠） |
 | 搜索空间 | 一组候选 PDCCH 位置（monitor occasion + 聚合等级组合），分 CSS（公共搜索空间，Common Search Space）与 USS（UE 专用搜索空间，UE-specific Search Space） |
 

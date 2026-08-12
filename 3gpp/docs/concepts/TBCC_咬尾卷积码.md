@@ -37,7 +37,7 @@ source_spec: "TS 36.212 Rel-19 §5.1.3.1; TS 36.211 Rel-19 §6.8"
 | 维度 | TBCC | Turbo 分量码（RSC） |
 |:---|:---|:---|
 | 网格收尾 | 咬尾（初态=末态，无尾比特） | 网格终止（trellis termination，12 个尾比特归零） |
-| 迭代 | 无（单次网格译码） | 有（双 SISO 迭代交换外信息） |
+| 迭代 | 无（单次网格译码） | 有（双 SISO（软入软出，Soft-Input Soft-Output）迭代交换外信息） |
 | 反馈 | 非递归（生成多项式无反馈项） | 递归（RSC 有反馈，是 Turbo 成立的前提） |
 | 用途 | LTE PDCCH/PBCH | LTE 数据信道（Turbo 分量） |
 
