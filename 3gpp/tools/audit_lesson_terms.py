@@ -126,7 +126,7 @@ TECH_TERMS = {
     "SNR": "信噪比（Signal-to-Noise Ratio, SNR）",
     "SINR": "信干噪比（Signal-to-Interference-plus-Noise Ratio, SINR）",
     "BER": "比特错误率（Bit Error Rate, BER）",
-    "FER": "误帧率（Frame Error Rate, FER）",
+    "FER": "帧错误率（Frame Error Rate, FER）",
     "TDL": "抽头时延线（Tapped Delay Line, TDL）",
     "OCC": "正交覆盖码（Orthogonal Cover Code, OCC）",
     "SIMO": "单入多出（Single-Input Multiple-Output, SIMO）",
