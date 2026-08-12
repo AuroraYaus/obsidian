@@ -24,7 +24,7 @@ source_spec: "TS 38.211 Rel-19 §5.1"
 
 ### 协议结构（TS 38.211 §5.1）
 
-比特流按调制阶数 Qm 分组（QPSK:2、16QAM:4、64QAM:6、256QAM:8 比特/符号），每组映射为一个复数符号 $d = I + jQ$，星座点取值由协议表给出（Table 5.1-1 起：QPSK 4 点、16QAM 16 点、64QAM 64 点、256QAM 256 点）。
+比特流按调制阶数 Qm 分组（QPSK:2、16QAM:4、64QAM:6、256QAM:8 比特/符号），每组映射为一个复数符号 $d = I + jQ$，星座点取值由协议表给出（QPSK 为 Table 5.1-3，16QAM 为 5.1-4、64QAM 为 5.1-5、256QAM 为 5.1-6；表 5.1-1 起还含 π/2-BPSK、BPSK 与 1024QAM）。
 
 ### 星座与归一化因子
 
@@ -60,7 +60,7 @@ QPSK 是 [[ASK_FSK_PSK_键控调制]] 家族 PSK 的 2 bit/符号形态；16QAM 
 
 ## 协议锚点
 
-- 调制映射表：TS 38.211（Rel-19 j30）§5.1（Table 5.1-1 起），本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`。
+- 调制映射表：TS 38.211（Rel-19 j30）§5.1（Table 5.1-1 起，QPSK 为 Table 5.1-3），本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`。
 - MCS/Qm 关系：TS 38.214（Rel-19 j30）§5.1.3（MCS 表），本地 `TS_38.214_38214-j30`。
 - 软解调镜像：T2.13（BPSK/QPSK）/T2.14（QAM Max-Log-MAP），`docs/L1_基础/`。
 

@@ -286,7 +286,7 @@ flowchart TB
 
 ## 协议锚点
 
-- NR 调制映射：TS 38.211 §5.1（BPSK/QPSK/16QAM/64QAM/256QAM 星座表 Table 5.1-1 起，本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`）。
+- NR 调制映射：TS 38.211 §5.1（星座表自 Table 5.1-1（π/2-BPSK）起，QPSK 为 Table 5.1-3，本地 `3GPP_Rel19/processed/TS_38.211_38211-j30`）。
 - LTE 调制映射：TS 36.211 §7.1（本地 `TS_36.211_*`）。
 - GMSK 为 GSM（2G）调制：**非 3GPP LTE/NR 制式，本地无 GSM 资料，仅作背景对照**。
 - 误码率理论：AWGN 下 BPSK 误比特率 $P_b = Q(\sqrt{2E_b/N_0})$（通信原理教材背景，非协议强制）。
