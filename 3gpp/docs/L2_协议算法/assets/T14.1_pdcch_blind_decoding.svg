@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T14.1_pdcch_blind_decoding.svg
+  @brief   PDCCH 盲检流程教学图：监测时机 -> 候选循环（LLR 提取 / Polar 译码 /
+           CRC/RNTI 校验）-> 输出 DCI 或候选耗尽（TS 38.213 §10.1）
+  @date    2026-08-13
+  @note    与讲义 T14.1 正文语义一致：候选驱动试错；右侧注解列给出候选数来源、
+           DCI 大小试错与盲检复杂度公式；底部注记给出 UE 盲检预算锚点
+           （表 10.1-2/10.1-3）。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="760" viewBox="0 0 940 760" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>PDCCH 盲检流程：候选驱动的试错译码</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="60" y="40" font-size="20" font-weight="700" class="free" fill="#23272E">PDCCH 盲检流程：候选驱动的试错译码</text>
+  <text x="60" y="66" font-size="12.5" class="free" fill="#646B76">TS 38.213 §10：每个监测时机按搜索空间候选集逐个译码，CRC/RNTI 校验决定 DCI 归属</text>
+
+  <!-- ============ 主面板 ============ -->
+  <g filter="url(#soft)">
+    <rect x="40" y="92" width="870" height="600" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="64" y="116" font-size="15" font-weight="700" fill="#23272E">盲检 = 候选驱动的试错译码（TS 38.213 §10.1）</text>
+
+  <!-- 左列主流程 -->
+  <g font-size="13" fill="#23272E">
+    <rect x="320" y="140" width="320" height="62" rx="10" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <text x="480" y="164" font-size="13.5" font-weight="700" text-anchor="middle">1 监测时机（monitor occasion）</text>
+    <text x="480" y="186" font-size="11.5" text-anchor="middle" fill="#646B76">收到 CORESET 时频观测，进入该搜索空间的候选集</text>
+
+    <rect x="320" y="232" width="320" height="62" rx="10" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="480" y="256" font-size="13.5" font-weight="700" text-anchor="middle">2 候选 LLR 提取</text>
+    <text x="480" y="278" font-size="11.5" text-anchor="middle" fill="#646B76">解扰 + QPSK 软解调，输出编码比特 LLR</text>
+
+    <rect x="320" y="324" width="320" height="62" rx="10" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="480" y="348" font-size="13.5" font-weight="700" text-anchor="middle">3 Polar 译码（CA-SCL）</text>
+    <text x="480" y="370" font-size="11.5" text-anchor="middle" fill="#646B76">rate recovery + SCL 候选路径（T10.6）</text>
+
+    <rect x="320" y="416" width="320" height="62" rx="10" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="480" y="440" font-size="13.5" font-weight="700" text-anchor="middle">4 CRC/RNTI 校验</text>
+    <text x="480" y="462" font-size="11.5" text-anchor="middle" fill="#646B76">用当前 RNTI 解扰 CRC，校验通过？</text>
+
+    <rect x="320" y="508" width="320" height="62" rx="10" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="480" y="532" font-size="13.5" font-weight="700" text-anchor="middle">6 候选耗尽？</text>
+    <text x="480" y="554" font-size="11.5" text-anchor="middle" fill="#646B76">是 → 本监测时机无 DCI；否 → 返回 2</text>
+  </g>
+
+  <!-- 通过分支 -->
+  <g font-size="13" fill="#23272E">
+    <rect x="676" y="416" width="224" height="62" rx="10" fill="#E8F6EF" stroke="#237A57" stroke-width="1.5"/>
+    <text x="788" y="440" font-size="13.5" font-weight="700" text-anchor="middle">5 CRC pass 且 RNTI 匹配</text>
+    <text x="788" y="462" font-size="11.5" text-anchor="middle" fill="#646B76">输出 DCI payload</text>
+  </g>
+
+  <!-- 右侧注解列 -->
+  <g font-size="13" fill="#23272E">
+    <rect x="676" y="232" width="224" height="62" rx="10" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="788" y="256" font-size="13" font-weight="700" text-anchor="middle">每个候选做一次完整译码</text>
+    <text x="788" y="278" font-size="11.5" text-anchor="middle" fill="#646B76">候选数 = 各聚合等级候选之和</text>
+
+    <rect x="676" y="324" width="224" height="62" rx="10" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="788" y="348" font-size="13" font-weight="700" text-anchor="middle">同一候选可对应多个 DCI 大小</text>
+    <text x="788" y="370" font-size="11.5" text-anchor="middle" fill="#646B76">DCI 格式与尺寸试错（T14.2）</text>
+
+    <rect x="676" y="508" width="224" height="62" rx="10" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+    <text x="788" y="532" font-size="11.5" font-weight="700" text-anchor="middle">盲检次数 = 候选 × RNTI × DCI 大小</text>
+    <text x="788" y="554" font-size="11.5" text-anchor="middle" fill="#646B76">受 UE 盲检预算约束（§10.1 表）</text>
+  </g>
+
+  <!-- 连线 -->
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 480 202 V 232" marker-end="url(#arrow)"/>
+    <path d="M 480 294 V 324" marker-end="url(#arrow)"/>
+    <path d="M 480 386 V 416" marker-end="url(#arrow)"/>
+    <path d="M 480 478 V 508" marker-end="url(#arrow)"/>
+    <path d="M 640 447 H 676" marker-end="url(#arrow)"/>
+  </g>
+  <g stroke="#8A8375" stroke-width="2" fill="none" stroke-dasharray="6 5">
+    <path d="M 320 539 H 252 V 263 H 320" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- ============ 底部注记 ============ -->
+  <text x="60" y="720" font-size="12.5" class="free" fill="#646B76">聚合等级 1/2/4/8/16 的候选数由 RRC 配置或协议表给出；总译码次数 = 候选数 × RNTI 数 × DCI 大小数</text>
+</svg>
