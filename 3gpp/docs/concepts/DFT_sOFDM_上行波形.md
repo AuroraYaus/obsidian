@@ -73,7 +73,7 @@ OFDM 像「多车道并排运输」：每车道（子载波）一辆车（符号
 ## 图谱关联
 
 - [[概念图谱入口]]
-- [[T15.1_uplink_waveform_DFT_sOFDM|T15.1 上行波形讲义]]
+- [[T15.5_NR_DL_UL_differences|T15.5 波形维度深化]]
 - [[Multiple_Access_多址接入]]
 - [[PUCCH_上行控制信道与UCI]]
 - [[Spectrum_and_Frequency_Point_频谱与频点]]
