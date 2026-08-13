@@ -32,6 +32,8 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | FR2 | 频率范围 2 | Frequency Range 2；24.25-52.6 GHz 毫米波频段。 |
 | ARFCN | 绝对射频信道号 | Absolute Radio Frequency Channel Number；频点的整数编号：NR-ARFCN（TS 38.101-1 §5.4.2.1）/ E-UTRA ARFCN（TS 36.101 §5.7.3）。 |
 | GSCN | 全球同步信道号 | Global Synchronization Channel Number；同步栅格上 SSB 参考位置编号（TS 38.101-1 §5.4.3.1）。 |
+| Massive MIMO | 超大规模 MIMO | Massive Multiple-Input Multiple-Output；天线数远大于流数/用户数的多天线系统，阵列增益/信道硬化/干扰消失三效应。→ [[Massive_MIMO_超大规模MIMO]] |
+| Beam Coherence | 波束相干 | Beam Coherence；角度域信道二阶统计的相干函数（角度扩展决定波束相干角），与信道相干带宽/时间对偶。→ [[Beam_Coherence_波束相干理论]] |
 | 信道栅格 | 信道栅格 | Channel Raster；频点合法放置的离散位置集，步长 ΔF_Global（TS 38.104 §5.4.2）。 |
 | 同步栅格 | 同步栅格 | Synchronization Raster；SSB 中心可放置的更稀疏位置集，用 GSCN 编号，UE 盲检搜索位置。 |
 | MAC | 媒体接入控制层 | Medium Access Control；调度、HARQ process 和上层交付上下文来源。 |
