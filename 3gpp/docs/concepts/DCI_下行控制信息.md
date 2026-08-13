@@ -74,10 +74,12 @@ DCI 像"运单"：收货人（RNTI）、货物规格（MCS/TBS）、发车时间
 
 - [[概念图谱入口]]
 - [[PDCCH_物理下行控制信道]]
+- [[T14.1_PDCCH_blind_decoding|T14.1 PDCCH 盲检]]
+- [[T14.2_DCI_format_detailed|T14.2 DCI 格式精读]]
 - [[MCS_Table_Effective_Code_Rate_MCS表与有效码率]]
 - [[HARQ_混合自动重传请求]]
 - [[RV_冗余版本]]
 - [[Scheduling_Grant_调度与授权]]
 - [[HARQ_Process_HARQ进程管理]]
 - [[Link_Adaptation_链路自适应与CQI]]
-- 关系语义：DCI 是控制面与译码链路的接口——PDCCH 盲检产出 DCI，DCI 字段解析产出 descriptor（T9.0），MCS/HARQ/RV 字段分别挂到调度表、HARQ 合并与速率恢复的知识节点。
+- 关系语义：DCI 是控制面与译码链路的接口——PDCCH 盲检（T14.1）产出 DCI，DCI 字段解析（T14.2）产出 descriptor（T9.0），MCS/HARQ/RV 字段分别挂到调度表、HARQ 合并与速率恢复的知识节点。
