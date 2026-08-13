@@ -59,7 +59,8 @@ TDD（时分双工，Time Division Duplexing）下上下行同频，可用上行
 
 ## 图谱关联
 
-- [[概念图谱入口]]
+- - [[M16.2_beam_management|M16.2 波束管理讲义]]
+[[概念图谱入口]]
 - [[PSS_SSS_同步信号与小区搜索]]
 - [[CSI_RS_信道状态信息参考信号]]
 - [[PRACH_随机接入]]
