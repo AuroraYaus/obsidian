@@ -69,5 +69,6 @@ QPSK 是 [[ASK_FSK_PSK_键控调制]] 家族 PSK 的 2 bit/符号形态；16QAM 
 - [[概念图谱入口]]
 - [[ASK_FSK_PSK_键控调制]]
 - [[MCS_Table_Effective_Code_Rate_MCS表与有效码率]]
+- [[TX1_modulation_mapping|TX1 调制映射讲义]]
 - [[RE_Mapping_资源元素映射]]
 - 关系语义：调制映射是发送端物理信道处理的第二环（加扰后）——比特变符号，星座表是收发一致的契约；Qm 由 MCS 决定（调度），符号能量归一化保证功率口径，接收端软解调（T2.13/T2.14）是它的精确镜像。

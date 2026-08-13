@@ -59,5 +59,6 @@ $$c(n) = (x_1(n) + x_2(n)) \bmod 2$$
 - [[概念图谱入口]]
 - [[Selective_Scrambling_选择性加扰]]
 - [[T2.1_OFDM_subcarrier_spacing_basics]]
+- [[TX2_scrambling_interleaving|TX2 加扰与交织讲义]]
 - [[T2.6_from_resource_grid_to_decoder_LLR]]
 - 关系语义：加扰位于"编码 → 调制"之间，是接收端解扰（LLR 符号翻转）的发射端对应；Gold 序列的互相关特性保证小区间干扰近似随机。

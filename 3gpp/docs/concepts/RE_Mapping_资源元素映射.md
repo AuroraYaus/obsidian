@@ -63,5 +63,6 @@ RE 映射像「考场排座」：座位（RE）按行列（频域×时域）编�
 - [[Spectrum_and_Frequency_Point_频谱与频点]]
 - [[DMRS_解调参考信号]]
 - [[Scheduler_MAC调度器与资源分配]]
+- [[TX4_re_mapping_resource_grid|TX4 RE 映射与资源格讲义]]
 - [[Modulation_Mapping_调制映射]]
 - 关系语义：RE 映射是符号流到网格的最后一跳——填充规则（先频后时）与参考信号避让（rate matching around RS）决定接收端 LLR 提取顺序（T2.6）；调度器分配的 RB 集是映射范围，调制映射（批内）产出待映射符号。

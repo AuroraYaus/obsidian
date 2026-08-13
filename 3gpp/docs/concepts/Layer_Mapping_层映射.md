@@ -56,5 +56,6 @@ source_spec: "TS 38.211 Rel-19 §7.3.1.3"
 - [[概念图谱入口]]
 - [[MIMO_多天线系统]]
 - [[Precoding_预编码]]
+- [[TX3_layer_mapping_precoding|TX3 层映射与预编码讲义]]
 - [[DMRS_解调参考信号]]
 - 关系语义：层映射（数据分发）→ 预编码（端口加权）→ RE 映射，是 MIMO 发射链的三连步；每层配一个 DMRS 端口用于接收端解调。

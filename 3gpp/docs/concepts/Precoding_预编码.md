@@ -60,5 +60,6 @@ $$\mathbf{y}_{\text{port}} = \mathbf{P} \cdot \mathbf{x}_{\text{layer}}$$
 - [[概念图谱入口]]
 - [[MIMO_多天线系统]]
 - [[Layer_Mapping_层映射]]
+- [[TX3_layer_mapping_precoding|TX3 层映射与预编码讲义]]
 - [[DMRS_解调参考信号]]
 - 关系语义：预编码是 MIMO 基带模型 y=HPx+n 中的 P；层映射（数据分发）→ 预编码（天线加权）→ RE 映射是 MIMO 发射链的三连步。

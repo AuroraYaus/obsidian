@@ -73,5 +73,6 @@ TB → CRC 附着（TB CRC）→ 码块分段（+CB（码块，Code Block）CRC�
 - [[Modulation_Mapping_调制映射]]
 - [[Layer_Mapping_层映射]]
 - [[Precoding_预编码]]
+- [[TX5_tx_chain_overview|TX5 发送链总览讲义]]
 - [[RE_Mapping_资源元素映射]]
 - 关系语义：发送端处理链是全链路的上半身——传输信道处理（编码链）与物理信道处理（波形链）两段共 11 环，每环都有接收端镜像（译码链路/软解调/MIMO 检测），与 T0.1 的「发送端规则→接收端逆流程」翻译表互为表里，至此「发送端→接收端」全链路知识闭环。
