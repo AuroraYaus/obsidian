@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T14.2_dci_field_layout.svg
+  @brief   DCI 格式 1_1 教学配置位宽清单：21 个字段按位流顺序排列，
+           合计 59 位 payload + 24 位 CRC = 83 位（TS 38.212 §7.3.1.2.2）
+  @date    2026-08-13
+  @note    字段位宽全部来自 §7.3.1.2.2 原文（固定位宽或 RRC 配置取值）；
+           本图使用正文"教学位宽实例"的配置假设，位宽随配置变化
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>DCI 格式 1_1 教学配置位宽清单（59 位）</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="40" y="40" font-size="20" font-weight="700" class="free" fill="#23272E">DCI 格式 1_1 教学配置位宽清单（合计 59 位）</text>
+  <text x="40" y="66" font-size="12.5" class="free" fill="#646B76">TS 38.212 §7.3.1.2.2：字段按位流顺序排列，位宽由 RRC 配置决定（正文"教学位宽实例"假设）</text>
+
+  <!-- ============ 主面板 ============ -->
+  <g filter="url(#soft)">
+    <rect x="40" y="92" width="860" height="416" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="58" y="116" font-size="15" font-weight="700" fill="#23272E">格式 1_1 的 21 个字段（每格 = 一个字段，格内给出名称与位宽）</text>
+
+  <!-- ============ 字段网格（3 行 x 7 列） ============ -->
+  <!-- 格尺寸 110 x 64，行 y：140 / 224 / 308，列 x：58 + k*(110+9) -->
+
+  <!-- 行 1：标识/上下文 + 资源分配前段 -->
+  <rect x="58"  y="140" width="110" height="64" rx="8" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+  <text x="113" y="166" font-size="12" text-anchor="middle" fill="#23272E">格式标识</text>
+  <text x="113" y="186" font-size="11.5" text-anchor="middle" fill="#646B76">1 位</text>
+
+  <rect x="177" y="140" width="110" height="64" rx="8" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+  <text x="232" y="166" font-size="12" text-anchor="middle" fill="#23272E">载波指示</text>
+  <text x="232" y="186" font-size="11.5" text-anchor="middle" fill="#646B76">3 位</text>
+
+  <rect x="296" y="140" width="110" height="64" rx="8" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+  <text x="351" y="166" font-size="12" text-anchor="middle" fill="#23272E">BWP 指示</text>
+  <text x="351" y="186" font-size="11.5" text-anchor="middle" fill="#646B76">2 位</text>
+
+  <rect x="415" y="140" width="110" height="64" rx="8" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="470" y="166" font-size="12" text-anchor="middle" fill="#23272E">频域资源分配</text>
+  <text x="470" y="186" font-size="11.5" text-anchor="middle" fill="#646B76">11 位</text>
+
+  <rect x="534" y="140" width="110" height="64" rx="8" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="589" y="166" font-size="12" text-anchor="middle" fill="#23272E">时域资源分配</text>
+  <text x="589" y="186" font-size="11.5" text-anchor="middle" fill="#646B76">4 位</text>
+
+  <rect x="653" y="140" width="110" height="64" rx="8" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="708" y="166" font-size="12" text-anchor="middle" fill="#23272E">VRB→PRB</text>
+  <text x="708" y="186" font-size="11.5" text-anchor="middle" fill="#646B76">1 位</text>
+
+  <rect x="772" y="140" width="110" height="64" rx="8" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="827" y="166" font-size="12" text-anchor="middle" fill="#23272E">PRB 捆绑</text>
+  <text x="827" y="186" font-size="11.5" text-anchor="middle" fill="#646B76">1 位</text>
+
+  <!-- 行 2：资源分配后段 + TB 参数 + HARQ 前段 -->
+  <rect x="58"  y="224" width="110" height="64" rx="8" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="113" y="250" font-size="12" text-anchor="middle" fill="#23272E">速率匹配</text>
+  <text x="113" y="270" font-size="11.5" text-anchor="middle" fill="#646B76">2 位</text>
+
+  <rect x="177" y="224" width="110" height="64" rx="8" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="232" y="250" font-size="12" text-anchor="middle" fill="#23272E">ZP CSI-RS</text>
+  <text x="232" y="270" font-size="11.5" text-anchor="middle" fill="#646B76">2 位</text>
+
+  <rect x="296" y="224" width="110" height="64" rx="8" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+  <text x="351" y="250" font-size="12" text-anchor="middle" fill="#23272E">MCS</text>
+  <text x="351" y="270" font-size="11.5" text-anchor="middle" fill="#646B76">5 位</text>
+
+  <rect x="415" y="224" width="110" height="64" rx="8" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+  <text x="470" y="250" font-size="12" text-anchor="middle" fill="#23272E">NDI</text>
+  <text x="470" y="270" font-size="11.5" text-anchor="middle" fill="#646B76">1 位</text>
+
+  <rect x="534" y="224" width="110" height="64" rx="8" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+  <text x="589" y="250" font-size="12" text-anchor="middle" fill="#23272E">RV</text>
+  <text x="589" y="270" font-size="11.5" text-anchor="middle" fill="#646B76">2 位</text>
+
+  <rect x="653" y="224" width="110" height="64" rx="8" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  <text x="708" y="250" font-size="12" text-anchor="middle" fill="#23272E">HARQ 进程号</text>
+  <text x="708" y="270" font-size="11.5" text-anchor="middle" fill="#646B76">4 位</text>
+
+  <rect x="772" y="224" width="110" height="64" rx="8" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  <text x="827" y="250" font-size="12" text-anchor="middle" fill="#23272E">DAI</text>
+  <text x="827" y="270" font-size="11.5" text-anchor="middle" fill="#646B76">2 位</text>
+
+  <!-- 行 3：HARQ 后段 + 参考信号/波束 -->
+  <rect x="58"  y="308" width="110" height="64" rx="8" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  <text x="113" y="334" font-size="12" text-anchor="middle" fill="#23272E">TPC</text>
+  <text x="113" y="354" font-size="11.5" text-anchor="middle" fill="#646B76">2 位</text>
+
+  <rect x="177" y="308" width="110" height="64" rx="8" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  <text x="232" y="334" font-size="12" text-anchor="middle" fill="#23272E">PUCCH 资源</text>
+  <text x="232" y="354" font-size="11.5" text-anchor="middle" fill="#646B76">3 位</text>
+
+  <rect x="296" y="308" width="110" height="64" rx="8" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  <text x="351" y="334" font-size="12" text-anchor="middle" fill="#23272E">HARQ 时序</text>
+  <text x="351" y="354" font-size="11.5" text-anchor="middle" fill="#646B76">3 位</text>
+
+  <rect x="415" y="308" width="110" height="64" rx="8" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+  <text x="470" y="334" font-size="12" text-anchor="middle" fill="#23272E">天线端口</text>
+  <text x="470" y="354" font-size="11.5" text-anchor="middle" fill="#646B76">4 位</text>
+
+  <rect x="534" y="308" width="110" height="64" rx="8" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+  <text x="589" y="334" font-size="12" text-anchor="middle" fill="#23272E">TCI</text>
+  <text x="589" y="354" font-size="11.5" text-anchor="middle" fill="#646B76">3 位</text>
+
+  <rect x="653" y="308" width="110" height="64" rx="8" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+  <text x="708" y="334" font-size="12" text-anchor="middle" fill="#23272E">SRS 请求</text>
+  <text x="708" y="354" font-size="11.5" text-anchor="middle" fill="#646B76">2 位</text>
+
+  <rect x="772" y="308" width="110" height="64" rx="8" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+  <text x="827" y="334" font-size="12" text-anchor="middle" fill="#23272E">DMRS 序列</text>
+  <text x="827" y="354" font-size="11.5" text-anchor="middle" fill="#646B76">1 位</text>
+
+  <!-- ============ 合计条 ============ -->
+  <rect x="58" y="392" width="824" height="48" rx="8" fill="#23272E" stroke="#23272E" stroke-width="1.5"/>
+  <text x="470" y="414" font-size="13" font-weight="700" text-anchor="middle" fill="#FFFFFF">合计 59 位 payload + 24 位 CRC = 83 位 → Polar 编码链路</text>
+  <text x="470" y="432" font-size="11.5" text-anchor="middle" fill="#E8E4D8">聚合等级 4 时有效码率 = 83 / (144 x 4) ≈ 0.144（T14.1 公式 (1)）</text>
+
+  <!-- ============ 图例 ============ -->
+  <text x="58" y="464" font-size="12" font-weight="700" fill="#23272E">字段组图例：</text>
+
+  <rect x="140" y="476" width="18" height="18" rx="4" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+  <text x="166" y="490" font-size="12" fill="#23272E">标识/上下文</text>
+
+  <rect x="300" y="476" width="18" height="18" rx="4" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+  <text x="326" y="490" font-size="12" fill="#23272E">资源分配</text>
+
+  <rect x="460" y="476" width="18" height="18" rx="4" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+  <text x="486" y="490" font-size="12" fill="#23272E">TB 参数</text>
+
+  <rect x="620" y="476" width="18" height="18" rx="4" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+  <text x="646" y="490" font-size="12" fill="#23272E">HARQ/反馈</text>
+
+  <rect x="780" y="476" width="18" height="18" rx="4" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+  <text x="806" y="490" font-size="12" fill="#23272E">参考信号/波束</text>
+
+  <!-- ============ 底部注记 ============ -->
+  <text x="40" y="536" font-size="12.5" class="free" fill="#646B76">位宽标注：固定位宽字段（格式标识/MCS/NDI/RV/TPC 等）与配置字段（其余）均见 TS 38.212 §7.3.1.2.2 原文；配置不同位宽随之变化</text>
+</svg>

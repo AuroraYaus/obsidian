@@ -77,6 +77,19 @@ source_spec: "docs/L0_协议阅读引导/L0_terminology_glossary.md"
 | PUSCH | 物理上行共享信道 | Physical Uplink Shared Channel；上行数据承载信道。 |
 | PUCCH | 物理上行控制信道 | Physical Uplink Control Channel；承载 UCI 的上行控制信道。 |
 | PRACH | 物理随机接入信道 | Physical Random Access Channel；承载随机接入前导的信道。 |
+| DAI | 下行分配索引 | Downlink Assignment Index；动态 HARQ-ACK 码本下计数被调度的 PDSCH（1_1 中 2/4/6 位）。 |
+| RIV | 资源指示值 | Resource Indication Value；RA type 1 把起始 RB 与连续长度编码为单值（TS 38.214 §5.1.2.2.2）。 |
+| CBGTI | 码块组传输信息 | Code Block Group Transmission Information；指示本次调度哪些 CBG 有新数据。→ [[CBG_码块组]] |
+| CBGFI | 码块组冲刷指示 | Code Block Group Flushing Out Information；指示软缓存中哪些 CBG 的旧 LLR 清空。→ [[CBG_码块组]] |
+| SFI | 时隙格式指示 | Slot Format Indicator；DCI 2_0 通知一组 UE 的上下行符号划分。 |
+| TCI | 传输配置指示 | Transmission Configuration Indication；DCI 中指示 QCL 关系与参考信号来源。 |
+| QCL | 准共址 | Quasi-Co-Location；两个参考信号共享信道统计特性（多普勒/时延/平均方向）的假设。 |
+| SUL | 补充上行 | Supplementary Uplink；低频段补充上行载波，扩展上行覆盖。 |
+| URLLC | 超可靠低时延通信 | Ultra-Reliable and Low-Latency Communication；5G 三大场景之一，低时延高可靠。 |
+| eMBB | 增强移动宽带 | Enhanced Mobile Broadband；5G 三大场景之一，大带宽高速率。 |
+| TDD | 时分双工 | Time Division Duplex；上下行分时复用同一载波，NR 主要双工方式。 |
+| DRX | 非连续接收 | Discontinuous Reception；UE 按周期休眠/唤醒以省电。 |
+| COT | 信道占用时间 | Channel Occupancy Time；共享频谱场景下信道接入后允许持续占用的时长。 |
 | RLC | 无线链路控制层 | Radio Link Control；无线链路控制层，有 TM/UM/AM 三模式。 |
 | RNTI | 无线网络临时标识 | Radio Network Temporary Identifier；UE 在小区内用于寻址/加扰的临时身份。 |
 | UE | 用户设备 | User Equipment；协议与链路仿真的收端主体。 |

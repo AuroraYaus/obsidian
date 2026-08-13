@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  @file    T14.2_dci_to_descriptor.svg
+  @brief   DCI 字段到译码器 descriptor 的映射流程：左列 DCI 字段（TS 38.212
+           §7.3.1.2.2），右列 T9.0 descriptor 字段，中间标注映射方式
+           （直接搬运 / 查表 / 计算 / 盲检试错）
+  @date    2026-08-13
+  @note    与 T9.0 descriptor 字段名一致（mcs_table_id/mcs_index/Qm/R_x1024/
+           rv/harq_id/ndi/cbg_mask/cbgfi/TBS/A/K/E/N）；Polar 控制面与
+           LDPC 数据面共用同一 DCI 位流来源
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="680" viewBox="0 0 940 680" role="img" font-family="'Noto Sans CJK SC','Source Han Sans SC','PingFang SC','Microsoft YaHei',system-ui,sans-serif">
+  <title>DCI 字段到译码器 Descriptor 的映射</title>
+
+  <defs>
+    <filter id="soft" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#4A4438" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8A8375"/>
+    </marker>
+  </defs>
+
+  <!-- ============ 页头 ============ -->
+  <text x="40" y="40" font-size="20" font-weight="700" class="free" fill="#23272E">DCI 字段到译码器 Descriptor 的映射</text>
+  <text x="40" y="66" font-size="12.5" class="free" fill="#646B76">左列：DCI 格式 1_1 字段（TS 38.212 §7.3.1.2.2）；右列：T9.0 descriptor 字段；中间：映射方式</text>
+
+  <!-- ============ 主面板 ============ -->
+  <g filter="url(#soft)">
+    <rect x="40" y="92" width="860" height="540" rx="14" fill="#FBFAF6" stroke="#CFC8B8" stroke-width="1.5"/>
+  </g>
+  <text x="64" y="116" font-size="15" font-weight="700" fill="#23272E">LDPC 数据面：DCI 字段 → TBS / 调度边界 → 译码任务（T9.0 深化）</text>
+
+  <!-- 左列：DCI 字段（x=64, w=300, h=48；行 y：140/204/268/332/396/460/524） -->
+  <g font-size="12" fill="#23272E">
+    <rect x="64" y="140" width="300" height="48" rx="8" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="80" y="162" font-size="12.5" font-weight="700">MCS 字段（5 位）</text>
+    <text x="80" y="178" font-size="11.5" fill="#646B76">I_MCS 查 MCS 表（§5.1.3.1）</text>
+
+    <rect x="64" y="204" width="300" height="48" rx="8" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="80" y="226" font-size="12.5" font-weight="700">RV 字段（2 位）</text>
+    <text x="80" y="242" font-size="11.5" fill="#646B76">冗余版本 0-3（表 7.3.1.1.1-2）</text>
+
+    <rect x="64" y="268" width="300" height="48" rx="8" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="80" y="290" font-size="12.5" font-weight="700">HARQ 进程号（4/5 位）</text>
+    <text x="80" y="306" font-size="11.5" fill="#646B76">进程索引 0-31</text>
+
+    <rect x="64" y="332" width="300" height="48" rx="8" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="80" y="354" font-size="12.5" font-weight="700">NDI 字段（1 位）</text>
+    <text x="80" y="370" font-size="11.5" fill="#646B76">与上次比较：翻转 = 新传</text>
+
+    <rect x="64" y="396" width="300" height="48" rx="8" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="80" y="418" font-size="12.5" font-weight="700">CBGTI / CBGFI（0-8 位）</text>
+    <text x="80" y="434" font-size="11.5" fill="#646B76">CBG 粒度部分重传控制</text>
+
+    <rect x="64" y="460" width="300" height="48" rx="8" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="80" y="482" font-size="12.5" font-weight="700">FDRA + TDRA + MCS + 层数</text>
+    <text x="80" y="498" font-size="11.5" fill="#646B76">资源与调制联合输入</text>
+
+    <rect x="64" y="524" width="300" height="48" rx="8" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <text x="80" y="546" font-size="12.5" font-weight="700">DCI 尺寸 + RNTI（控制面）</text>
+    <text x="80" y="562" font-size="11.5" fill="#646B76">Polar 译码试错参数（T14.1）</text>
+  </g>
+
+  <!-- 右列：descriptor 字段（x=576, w=300, h=48） -->
+  <g font-size="12" fill="#23272E">
+    <rect x="576" y="140" width="300" height="48" rx="8" fill="#E6F0F0" stroke="#2F6E71" stroke-width="1.5"/>
+    <text x="592" y="162" font-size="12" font-weight="700">mcs_table_id / mcs_index</text>
+    <text x="592" y="178" font-size="11.5" fill="#646B76">Qm / R_x1024（查表）</text>
+
+    <rect x="576" y="204" width="300" height="48" rx="8" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="592" y="226" font-size="12.5" font-weight="700">rv / rvidx</text>
+    <text x="592" y="242" font-size="11.5" fill="#646B76">循环缓存读取起点</text>
+
+    <rect x="576" y="268" width="300" height="48" rx="8" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="592" y="290" font-size="12.5" font-weight="700">harq_id</text>
+    <text x="592" y="306" font-size="11.5" fill="#646B76">软缓存地址（T9.3）</text>
+
+    <rect x="576" y="332" width="300" height="48" rx="8" fill="#F8EEDC" stroke="#B06F2B" stroke-width="1.5"/>
+    <text x="592" y="354" font-size="12.5" font-weight="700">ndi</text>
+    <text x="592" y="370" font-size="11.5" fill="#646B76">新传/重传判定（需进程上下文）</text>
+
+    <rect x="576" y="396" width="300" height="48" rx="8" fill="#F0EEF4" stroke="#7A6E8E" stroke-width="1.5"/>
+    <text x="592" y="418" font-size="12.5" font-weight="700">cbg_mask / cbgfi</text>
+    <text x="592" y="434" font-size="11.5" fill="#646B76">软缓存读写粒度控制</text>
+
+    <rect x="576" y="460" width="300" height="48" rx="8" fill="#EFF1E2" stroke="#6C7A2E" stroke-width="1.5"/>
+    <text x="592" y="482" font-size="12.5" font-weight="700">TBS</text>
+    <text x="592" y="498" font-size="11.5" fill="#646B76">§5.1.3.2 计算（公式 (4)-(8)）</text>
+
+    <rect x="576" y="524" width="300" height="48" rx="8" fill="#F7E9EF" stroke="#8E3B5E" stroke-width="1.5"/>
+    <text x="592" y="546" font-size="12.5" font-weight="700">A / K / E / N / crc_len</text>
+    <text x="592" y="562" font-size="11.5" fill="#646B76">rnti_context（Polar 控制面）</text>
+  </g>
+
+  <!-- 连线与映射方式标注 -->
+  <g stroke="#8A8375" stroke-width="2" fill="none">
+    <path d="M 364 164 H 576" marker-end="url(#arrow)"/>
+    <path d="M 364 228 H 576" marker-end="url(#arrow)"/>
+    <path d="M 364 292 H 576" marker-end="url(#arrow)"/>
+    <path d="M 364 356 H 576" marker-end="url(#arrow)"/>
+    <path d="M 364 420 H 576" marker-end="url(#arrow)"/>
+    <path d="M 364 484 H 576" marker-end="url(#arrow)"/>
+    <path d="M 364 548 H 576" marker-end="url(#arrow)"/>
+  </g>
+  <g font-size="11.5" fill="#646B76" text-anchor="middle">
+    <text x="470" y="184">查表</text>
+    <text x="470" y="248">直接搬运</text>
+    <text x="470" y="312">直接搬运</text>
+    <text x="470" y="376">直接搬运 + 上下文</text>
+    <text x="470" y="440">直接搬运</text>
+    <text x="470" y="504">计算</text>
+    <text x="470" y="568">盲检试错</text>
+  </g>
+
+  <!-- ============ 底部注记 ============ -->
+  <text x="64" y="604" font-size="12.5" fill="#23272E">映射不改变字段值，只改变解释与落点；同一 DCI 位流同时服务 LDPC 数据面（TBS/资源/E_r）与 Polar 控制面（A/K/E/N）</text>
+</svg>
