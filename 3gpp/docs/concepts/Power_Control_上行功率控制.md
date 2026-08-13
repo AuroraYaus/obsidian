@@ -77,6 +77,7 @@ PUCCH（物理上行控制信道，Physical Uplink Control Channel）/SRS（探�
 
 - [[概念图谱入口]]
 - [[DCI_下行控制信息]]
+- [[T15.4_uplink_power_control|T15.4 上行功控讲义]]
 - [[Scheduler_MAC调度器与资源分配]]
 - [[Multiple_Access_多址接入]]
 - [[PUCCH_上行控制信道与UCI]]

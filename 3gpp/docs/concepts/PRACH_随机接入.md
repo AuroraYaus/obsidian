@@ -74,5 +74,6 @@ MsgA = 前导 + PUSCH 载荷一步发出，MsgB 合并 RAR 与竞争解决——
 - [[PSS_SSS_同步信号与小区搜索]]
 - [[PBCH_MIB_广播信道]]
 - [[DCI_下行控制信息]]
+- [[T15.2_PRACH_random_access|T15.2 随机接入讲义]]
 - [[PDCCH_物理下行控制信道]]
 - 关系语义：随机接入是小区搜索的下一环——PSS/SSS/PBCH 让 UE 找到小区并读到 SIB1（含 PRACH 配置），Msg2/Msg4 经 PDCCH（RA-RNTI（随机接入无线网络临时标识，Random Access Radio Network Temporary Identifier））与 PDSCH 下发，TA 与 UL grant 建立上行同步与首个上行传输（Msg3），接入后进入调度（Scheduler）主导的数据传输。
