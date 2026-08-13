@@ -82,5 +82,6 @@ flowchart LR
 - [[Spectrum_and_Frequency_Point_频谱与频点]]
 - [[Timing_Sync_定时同步]]
 - [[Gold_序列加扰]]
+- [[T14.4_PBCH_cell_search_system_info|T14.4 小区搜索与系统信息]]
 - [[PBCH_MIB_广播信道]]
 - 关系语义：小区搜索是接收链路的第一个环节——同步栅格决定搜哪里（频谱与频点），PSS/SSS 给定时与 ID（T2.7/T2.8 的输入），PBCH 把搜索流程接到系统信息获取（广播信道）。

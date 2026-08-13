@@ -72,5 +72,6 @@ source_spec: "TS 36.212 Rel-19 §5.1.3.1; TS 36.211 Rel-19 §6.8"
 - [[概念图谱入口]]
 - [[Turbo_码]]
 - [[RSC_Code_递归系统卷积码]]
+- [[T14.5_TBCC_decoding|T14.5 TBCC 译码]]
 - [[PDCCH_物理下行控制信道]]
 - 关系语义：TBCC 是 LTE 控制信道（PDCCH/PBCH）的编码，与 Turbo（数据）在同一套卷积码家族里分工；理解它需要 RSC/网格基础（Turbo 组），又为 PDCCH 盲检（控制信道组）提供编码侧知识。

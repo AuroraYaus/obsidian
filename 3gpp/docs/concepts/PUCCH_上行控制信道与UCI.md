@@ -38,7 +38,7 @@ PUCCH（物理上行控制信道，Physical Uplink Control Channel）承载 UCI�
 | 1 | 长（4-14 符号） | ≤2 bit | HARQ-ACK/SR（低速率扩展） |
 | 2 | 短 | >2 bit | 多 bit CSI/UCI（DMRS（解调参考信号，Demodulation Reference Signal）辅助相干解调） |
 | 3 | 长 | 中等 | 多 bit UCI |
-| 4 | 长 | 较大（多 PRB（物理资源块，Physical Resource Block）） | 大 UCI（含 DFT-s-OFDM（离散傅里叶变换扩展正交频分复用，Discrete Fourier Transform Spread OFDM）预编码） |
+| 4 | 长 | 单 PRB（物理资源块，Physical Resource Block）+ OCC（正交覆盖码，Orthogonal Cover Code）复用 | 大 UCI（含 DFT-s-OFDM（离散傅里叶变换扩展正交频分复用，Discrete Fourier Transform Spread OFDM）预编码；OCC 支持 2/4 UE 共用资源） |
 
 ### 承载选择与复用
 
@@ -76,6 +76,7 @@ PUCCH 像"收货确认单"：收到货（PDSCH）后回一张单子（UCI），�
 - [[概念图谱入口]]
 - [[Physical_Channels_物理信道]]
 - [[HARQ_混合自动重传请求]]
+- [[T14.3_PUCCH_UCI_formats|T14.3 PUCCH 与 UCI]]
 - [[DCI_下行控制信息]]
 - [[PDCCH_物理下行控制信道]]
 - [[Link_Adaptation_链路自适应与CQI]]
