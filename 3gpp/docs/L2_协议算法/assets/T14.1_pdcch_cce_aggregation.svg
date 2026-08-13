@@ -121,7 +121,7 @@
   </g>
 
   <!-- ============ 右区：聚合等级与码率 ============ -->
-  <g filter="url(#soft)">
+  <g>
     <rect x="640" y="104" width="260" height="400" rx="14" fill="#F1EDE4" stroke="#CFC8B8" stroke-width="1.5"/>
   </g>
   <text x="668" y="130" font-size="14.5" font-weight="700" fill="#23272E">聚合等级与码率</text>
