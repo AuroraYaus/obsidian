@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** 按全链路规划阶段 5（G3+G7+G8+G9 讲义级）：M16 系列 4 篇完整讲义（M16.1-M16.4，每篇内容充实即可——≥500 为下限参考、上限不限、深度不足合并），调度/HARQ/波束/CA/MAC 从概念笔记升级为完整讲义。
+**Goal:** 按全链路规划阶段 5（G3+G7+G8+G9 讲义级）：M16 系列 4 篇完整讲义（T16.1-T16.4，每篇内容充实即可——≥500 为下限参考、上限不限、深度不足合并），调度/HARQ/波束/CA/MAC 从概念笔记升级为完整讲义。
 
-**Architecture:** 依拷问锁定版 `docs/superpowers/specs/2026-08-11-full-link-knowledge-map.md` 阶段 5 执行（G3/G7/G8/G9 落 L2 M14+）。**批次构成：4 篇讲义一轮（用户裁定，2026-08-13）**——G6 参考信号与 G10 射频的概念笔记已齐（核对确认），本批仅讲义。8 任务：M16.1-M16.4（4 篇讲义）+ M16.5（同步清单）+ M16.6（全量验证）+ M16.7（双推）。子代理配额已尽——主会话直接创作 + 自审（用户已批准）。
+**Architecture:** 依拷问锁定版 `docs/superpowers/specs/2026-08-11-full-link-knowledge-map.md` 阶段 5 执行（G3/G7/G8/G9 落 L2 M14+）。**批次构成：4 篇讲义一轮（用户裁定，2026-08-13）**——G6 参考信号与 G10 射频的概念笔记已齐（核对确认），本批仅讲义。8 任务：T16.1-T16.4（4 篇讲义）+ M16.5（同步清单）+ M16.6（全量验证）+ M16.7（双推）。子代理配额已尽——主会话直接创作 + 自审（用户已批准）。
 
 ## Global Constraints
 
@@ -15,21 +15,21 @@
 - **写作规范**：正文无中间过程叙述；概念首现讲解 + wikilink 概念笔记；手算与 numpy 一致；每篇 ≥1 生活类比；英文术语首现「ABBR（中文，English Full Name）」（audit_term_first_use 全绿硬验收）；带圈数字禁令；标题正式化（禁"为什么/怎么"口语词）；wikilink 管道用普通 `|`；习题插入按编号顺序。
 - **每篇硬件要求**：≥1 教学图（复杂图手绘 SVG 过 audit_svg_layout R1-R11 + cairosvg；简单流程 Mermaid 过 audit_mermaid_syntax.sh，节点带括号用引号节点）；1 个内嵌 numpy 验证（实跑断言通过后原样贴入输出，禁止编造）。
 - **概念笔记底座**：11 篇相关概念笔记（Scheduler/HARQ_Process/Beam_Management/Carrier_Aggregation/BWP/MAC_Layer_Mapping 等）已齐——讲义与笔记双向链接。
-- **前置讲义锚点**：M16.1 锚 T14.2（DCI 字段）/T15.3（SRS 频选）/T15.4（PHR 调度联动）；M16.2 锚 T14.4（SSB 波束）/T15.3（SRS 波束）；M16.3 锚 T14.1（跨载波调度）/T14.2（载波指示字段）；M16.4 锚 T9.0（descriptor）/T14.2（DCI 到 MAC 的衔接）。
+- **前置讲义锚点**：T16.1 锚 T14.2（DCI 字段）/T15.3（SRS 频选）/T15.4（PHR 调度联动）；T16.2 锚 T14.4（SSB 波束）/T15.3（SRS 波束）；T16.3 锚 T14.1（跨载波调度）/T14.2（载波指示字段）；T16.4 锚 T9.0（descriptor）/T14.2（DCI 到 MAC 的衔接）。
 - **协议锚点**：TS 38.214 §5.1.2（RBG/资源分配）、§5.1.3（MCS/TBS）；TS 38.321 §5.3（HARQ 进程）、§6.1（MAC PDU）；TS 38.213 §5.2（波束管理）；TS 38.331（CA/BWP 配置）——数值对照本地 `3GPP_Rel19/processed/` 原文。
 - 提交后 `git push origin master`（双推，阶段收尾统一执行）。
 
 ---
 
-### Task M16.1: 讲义 M16.1 调度与 HARQ 进程
+### Task T16.1: 讲义 T16.1 调度与 HARQ 进程
 
 **Files:**
-- Create: `3gpp/docs/L2_协议算法/M16.1_scheduler_HARQ_process.md`
-- Create（如用图）: `3gpp/docs/L2_协议算法/assets/M16.1_*.svg` 或 Mermaid 内嵌
+- Create: `3gpp/docs/L2_协议算法/T16.1_scheduler_HARQ_process.md`
+- Create（如用图）: `3gpp/docs/L2_协议算法/assets/T16.1_*.svg` 或 Mermaid 内嵌
 
 **Interfaces:**
 - Consumes: `[[Scheduler_MAC调度器与资源分配]]`、`[[HARQ_Process_HARQ进程管理]]`、T14.2（DCI 字段）、T15.3（SRS 频选）。
-- Produces: 讲义全文，M16.4 的前置。
+- Produces: 讲义全文，T16.4 的前置。
 
 **Step 1: 创作**——结构要求：
 - 学习目标：MAC 调度器的工作原理（资源分配 RBG/VRB、MCS 选择、频选/功控联动）、HARQ 进程状态机（NDI/k0/k1/k2、进程数与软合并）
@@ -43,10 +43,10 @@
 
 ---
 
-### Task M16.2: 讲义 M16.2 波束管理
+### Task T16.2: 讲义 T16.2 波束管理
 
 **Files:**
-- Create: `3gpp/docs/L2_协议算法/M16.2_beam_management.md`
+- Create: `3gpp/docs/L2_协议算法/T16.2_beam_management.md`
 
 **Interfaces:**
 - Consumes: `[[Beam_Management_波束管理]]`、`[[Beam_Coherence_波束相干理论]]`、T14.4（SSB 波束）、T15.3（SRS 波束）。
@@ -64,10 +64,10 @@
 
 ---
 
-### Task M16.3: 讲义 M16.3 载波聚合与 BWP
+### Task T16.3: 讲义 T16.3 载波聚合与 BWP
 
 **Files:**
-- Create: `3gpp/docs/L2_协议算法/M16.3_CA_BWP.md`
+- Create: `3gpp/docs/L2_协议算法/T16.3_CA_BWP.md`
 
 **Interfaces:**
 - Consumes: `[[Carrier_Aggregation_载波聚合]]`、`[[BWP_带宽部分]]`、T14.1（跨载波调度）、T14.2（载波指示/BWP 指示字段）。
@@ -85,10 +85,10 @@
 
 ---
 
-### Task M16.4: 讲义 M16.4 MAC 层映射
+### Task T16.4: 讲义 T16.4 MAC 层映射
 
 **Files:**
-- Create: `3gpp/docs/L2_协议算法/M16.4_MAC_layer_mapping.md`
+- Create: `3gpp/docs/L2_协议算法/T16.4_MAC_layer_mapping.md`
 
 **Interfaces:**
 - Consumes: `[[MAC_Layer_Mapping_MAC层映射]]`、T9.0（descriptor）、T14.2（DCI 到 MAC 衔接）。

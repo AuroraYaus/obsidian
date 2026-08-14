@@ -82,7 +82,7 @@ HARQ 进程像「快递单号」：每个包裹（TB（传输块，Transport Blo
 
 ## 图谱关联
 
-- - [[M16.1_scheduler_HARQ_process|M16.1 调度与 HARQ 讲义]]
+- - [[T16.1_scheduler_HARQ_process|T16.1 调度与 HARQ 讲义]]
 [[概念图谱入口]]
 - [[HARQ_混合自动重传请求]]
 - [[DCI_下行控制信息]]

@@ -65,7 +65,7 @@ BWP 像「商场里的移动电梯」：商场（载波）很大，但你只站�
 
 ## 图谱关联
 
-- - [[M16.3_CA_BWP|M16.3 载波聚合与 BWP 讲义]]
+- - [[T16.3_CA_BWP|T16.3 载波聚合与 BWP 讲义]]
 [[概念图谱入口]]
 - [[Carrier_Aggregation_载波聚合]]
 - [[Spectrum_and_Frequency_Point_频谱与频点]]

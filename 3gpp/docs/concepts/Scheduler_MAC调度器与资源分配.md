@@ -73,7 +73,7 @@ source_spec: "TS 38.214 Rel-19 §5.1/§6.1.2; TS 38.321 Rel-19 §5.4/§6.1"
 
 ## 图谱关联
 
-- - [[M16.1_scheduler_HARQ_process|M16.1 调度与 HARQ 讲义]]
+- - [[T16.1_scheduler_HARQ_process|T16.1 调度与 HARQ 讲义]]
 [[概念图谱入口]]
 - [[DCI_下行控制信息]]
 - [[PDCCH_物理下行控制信道]]

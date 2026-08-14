@@ -67,7 +67,7 @@ MAC 层映射像「邮局分拣」：信件按类型贴不同标签（逻辑信�
 
 ## 图谱关联
 
-- - [[M16.4_MAC_layer_mapping|M16.4 MAC 层映射讲义]]
+- - [[T16.4_MAC_layer_mapping|T16.4 MAC 层映射讲义]]
 [[概念图谱入口]]
 - [[Scheduler_MAC调度器与资源分配]]
 - [[Protocol_Stack_协议栈]]
