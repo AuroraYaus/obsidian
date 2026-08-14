@@ -512,20 +512,28 @@ class PythonFigureDirectExecutionTests(unittest.TestCase):
     """ @brief 测试渲染脚本的直接执行——验证模块导入路径和等价内容质量审计。 """
 
     def test_shared_text_fit_helper_imports_when_script_is_executed_by_path(self):
-        """ @brief 验证 render_lte_turbo_interleaver_table.py 通过 subprocess 直接执行时不出现 ModuleNotFoundError。 """
+        """ @brief 验证 render_lte_turbo_interleaver_table.py 通过 subprocess 直接执行时不出现 ModuleNotFoundError。
+        @note 该脚本会真实写出 T3.3 PNG 资产（2026-08-07 去重后已从库中删除，
+              与 T3.2 共用 Table 5.1.3-3 截图）——测试执行后清理产物，
+              避免污染 vault 与图片资产台账（2026-08-14 教训）。"""
         root = Path(__file__).resolve().parents[1]
         script = root / "tools/archive_python_drawing/figures/render_lte_turbo_interleaver_table.py"
+        out_png = root / "docs/L1_基础/assets/T3.3_TS36.212_Table_5.1.3-3.png"
 
-        proc = subprocess.run(
-            [sys.executable, str(script)],
-            cwd=root,
-            text=True,
-            capture_output=True,
-            timeout=30,
-        )
+        try:
+            proc = subprocess.run(
+                [sys.executable, str(script)],
+                cwd=root,
+                text=True,
+                capture_output=True,
+                timeout=30,
+            )
 
-        self.assertNotIn("ModuleNotFoundError: No module named 'tools'", proc.stderr)
-        self.assertEqual(0, proc.returncode, proc.stderr[-2000:])
+            self.assertNotIn("ModuleNotFoundError: No module named 'tools'", proc.stderr)
+            self.assertEqual(0, proc.returncode, proc.stderr[-2000:])
+        finally:
+            if out_png.exists():
+                out_png.unlink()
 
     def test_rejects_generic_table_equivalent(self):
         """ @brief 验证审计能检测到等价表中使用通用模板文字（如"图片中的关键字段、流程或矩阵含义由正文表格化承接"）而非具体内容。 """
