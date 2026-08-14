@@ -41,7 +41,7 @@ source_spec: "Local project instructions"
 ### 2. 项目背景
 
 本项目是 3GPP LTE/NR 译码链路的全栈教学工程，包含：
-- `docs/` — 153 篇讲义（L0 阅读引导 1 → L1 基础 46 → L2 协议/算法 70 → L3 工程 36；口径 = 仅 `type: algorithm` 讲义，另含入口/术语总表等 spec 文件 6 个，2026-08-14 审核统一口径）
+- `docs/` — 153 篇讲义（L0 阅读引导 1 → L1 基础 46 → L2 协议/算法 70 → L3 工程 36；口径 = T/TX 编号正文讲义；另含入口/术语总表等文件 6 个；frontmatter `type` 字段现存误标（67 篇讲义标 definition/spec），分类治理另立议题，2026-08-14 审核统一口径）
 - `sim/` — Python 仿真（CRC/GF(2) 等）
 - `tools/` — 审计/抽取/渲染工具链
 - `3GPP_Rel19/` — 协议原始资料和结构化抽取（2026-08-14 已拆分至独立数据仓 `gitee.com/aurorayaus/3gpp_docs`，本地目录为可选 clone 复原，主仓不再跟踪）
@@ -122,7 +122,7 @@ source_spec: "Local project instructions"
 
 ### 12. 经验教训库（项目永久存储）
 
-**每次会话开始即知**：本项目经验教训的权威副本在 `docs/audits/lessons/lesson-*.md`（21 条，随 git 双推保存，与 `~/.claude/projects/*/memory/` 的 auto-memory 同步维护，**以项目副本为准**）。
+**每次会话开始即知**：本项目经验教训的权威副本在 `docs/audits/lessons/lesson-*.md`（22 条，随 git 双推保存，与 `~/.claude/projects/*/memory/` 的 auto-memory 同步维护，**以项目副本为准**）。
 
 1. **使用时机**：遇到用户纠错、新问题、或规则未覆盖的场景，**先查经验库**（grep `docs/audits/lessons/` 关键字）是否已有同类教训——避免重复踩坑（每一条 lesson 都对应一次真实返工）。
 2. **维护流程**（配合第 7 条纠错固化元规则）：新教训 → 写入 `docs/audits/lessons/lesson-<主题>.md`（含根因 + How to apply）→ 更新 `项目规则与记忆索引.md` 第七节登记表 → `git push origin master`（自动双推 Gitee+GitHub）。
