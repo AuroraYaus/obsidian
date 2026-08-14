@@ -1,5 +1,5 @@
 ---
-type: algorithm
+type: definition
 aliases:
   - Polar
   - Polar Code

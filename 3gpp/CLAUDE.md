@@ -41,7 +41,7 @@ source_spec: "Local project instructions"
 ### 2. 项目背景
 
 本项目是 3GPP LTE/NR 译码链路的全栈教学工程，包含：
-- `docs/` — 153 篇讲义（L0 阅读引导 1 → L1 基础 46 → L2 协议/算法 70 → L3 工程 36；口径 = T/TX 编号正文讲义；另含入口/术语总表等文件 6 个；frontmatter `type` 字段现存误标（67 篇讲义标 definition/spec），分类治理另立议题，2026-08-14 审核统一口径）
+- `docs/` — 153 篇讲义（L0 阅读引导 1 → L1 基础 46 → L2 协议/算法 70 → L3 工程 36；口径 = T/TX 编号正文讲义；另含入口/术语总表等文件 6 个；frontmatter `type` 一致性由 `tools/audit_frontmatter_types.py` 强制，2026-08-14 审核统一口径）
 - `sim/` — Python 仿真（CRC/GF(2) 等）
 - `tools/` — 审计/抽取/渲染工具链
 - `3GPP_Rel19/` — 协议原始资料和结构化抽取（2026-08-14 已拆分至独立数据仓 `gitee.com/aurorayaus/3gpp_docs`，本地目录为可选 clone 复原，主仓不再跟踪）

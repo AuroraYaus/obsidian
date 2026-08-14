@@ -1,5 +1,5 @@
 ---
-type: algorithm
+type: definition
 aliases:
   - Iterative Decoding
   - 迭代译码

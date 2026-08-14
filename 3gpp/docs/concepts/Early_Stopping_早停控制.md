@@ -1,5 +1,5 @@
 ---
-type: algorithm
+type: definition
 aliases:
   - Early Stopping
   - 早停控制

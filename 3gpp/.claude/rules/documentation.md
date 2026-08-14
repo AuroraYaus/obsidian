@@ -69,7 +69,7 @@ def main() -> int:
 
 ```yaml
 ---
-type: algorithm          # algorithm | definition | spec
+type: algorithm          # 分类语义（2026-08-14 写死）：algorithm = 讲义（T/TX 编号正文）；definition = 概念笔记（English_中文 六段式）；spec = 导航入口/规则/术语表。一致性由 `tools/audit_frontmatter_types.py` 强制（曾 76 篇误标，治理教训见 lessons/lesson-audit-governance-2026-08-14）
 aliases:
   - <编号> <英文标题>
 tags:

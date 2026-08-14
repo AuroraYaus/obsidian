@@ -1,5 +1,5 @@
 ---
-type: algorithm
+type: definition
 aliases:
   - LDPC
   - Low-Density Parity-Check Code

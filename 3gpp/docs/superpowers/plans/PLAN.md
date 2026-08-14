@@ -89,3 +89,7 @@ _Locked via grill — by Claude + AuroraYaus（2026-08-14）_
 - T23.1-3 合并（明确不做，主题独立）。
 - 概念笔记薄篇（TB/Turbo 码/TDL 等）补写（本次不动，仅登记观察）。
 - Python 绘图政策、SVG 资产调整（本次整改不触及图片资产）。
+
+## 追加批次：frontmatter type 治理（2026-08-14 下午 grill 锁定）
+
+**决策（2 问收敛）**：全库规范化 + 工具化防复发——76 篇误标修正（L1 41 篇 definition→algorithm、L3 24 篇 spec→algorithm、L2 T9.8/T10.9 两篇 spec→algorithm、9 个概念笔记 algorithm→definition）；新建 `tools/audit_frontmatter_types.py`（讲义 T/TX=algorithm / 概念 English_中文=definition / 入口规则术语表=spec，audits/superpowers/清单豁免）；documentation.md §2.1 语义写死；映射表登记。

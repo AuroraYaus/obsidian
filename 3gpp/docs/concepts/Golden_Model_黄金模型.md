@@ -1,5 +1,5 @@
 ---
-type: algorithm
+type: definition
 aliases:
   - Golden Model
   - 黄金模型

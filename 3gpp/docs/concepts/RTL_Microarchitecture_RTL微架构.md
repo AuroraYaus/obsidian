@@ -1,5 +1,5 @@
 ---
-type: algorithm
+type: definition
 aliases:
   - RTL Microarchitecture
   - RTL 微架构

@@ -1,5 +1,5 @@
 ---
-type: algorithm
+type: definition
 aliases:
   - Rate Matching
   - Rate Recovery

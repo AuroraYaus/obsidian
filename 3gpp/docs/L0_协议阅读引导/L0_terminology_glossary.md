@@ -1,5 +1,5 @@
 ---
-type: definition
+type: spec
 aliases:
   - 译码讲义术语总表
   - 3GPP 译码术语总表
