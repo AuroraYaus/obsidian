@@ -20,6 +20,11 @@
       (e) 术语表文件整文件豁免（L0_terminology_glossary.md + 登记扩展）
       (f) 同句早位 token 遮蔽：行内存在配对即整行判 PAIRED（不要求窗口内）
       (g) 「中文（ABBR, English Full Name）」三件套识别（与拍板形态并列）
+      (h) T0.1 阅读地图整文件豁免（2026-08-14 审核：type: spec 导航索引）
+      (i) docs/concepts/ 概念笔记整目录豁免（2026-08-14 审核：术语定义文件本体）
+      (j) docs/superpowers/、docs/audits/ 计划/设计文档与台账整目录豁免
+          （2026-08-14 审核：内部工作文档）
+      验收口径（2026-08-14）：L1/L2/L3 讲义层必须 PASS，全库 FAIL 不阻断。
 """
 
 from __future__ import annotations
@@ -94,6 +99,31 @@ EXEMPT_GLOSSARY_FILES = {
     (PROJECT_ROOT / "docs" / "L0_协议阅读引导" / "L0_terminology_glossary.md").resolve(),
     (PROJECT_ROOT / "docs" / "L2_协议算法" / "术语表.md").resolve(),
 }
+
+# 非讲义豁免区（h/i/j，2026-08-14 审核裁定）——这些文档不是"讲义"，
+# 术语首现配对规则（Rule 10 单篇缩写首现）的教学语境不适用于它们：
+#   (h) T0.1 阅读地图：type: spec 导航索引，逐词条配对无教学意义；
+#   (i) docs/concepts/ 概念笔记：文件名即 English_中文，是术语定义文件本体，
+#       要求内部配对是"自己给自己配"的怪文；
+#   (j) docs/superpowers/ 计划与设计文档、docs/audits/ 台账：内部工作文档。
+# 验收口径：L1/L2/L3 讲义层必须 PASS；全库 FAIL 不再作为阻断。
+EXEMPT_NON_LESSON_FILES = {
+    (PROJECT_ROOT / "docs" / "L0_协议阅读引导" / "T0.1_LTE_NR_decoder_protocol_reading_map.md").resolve(),
+}
+EXEMPT_NON_LESSON_DIRS = ("docs/concepts", "docs/superpowers", "docs/audits")
+
+
+def is_exempt_non_lesson(path: Path) -> bool:
+    """@brief 判断文件是否属非讲义豁免区（h/i/j，2026-08-14 审核裁定）。
+    @param path 待判断的 Markdown 文件路径。
+    @return 属阅读地图/概念笔记/superpowers 计划设计文档/audits 台账时返回 True。
+    @note 判据用 resolve() 后与 PROJECT_ROOT 的相对路径前缀比较，与
+          EXEMPT_GLOSSARY_FILES 的整文件判据并列——两者都命中即跳过整文件。"""
+    rp = path.resolve()
+    if rp in EXEMPT_NON_LESSON_FILES:
+        return True
+    rel = str(rp.relative_to(PROJECT_ROOT.resolve()))
+    return any(rel.startswith(d) for d in EXEMPT_NON_LESSON_DIRS)
 
 # 汉字范围（豁免判据与配对判据共用）
 _CN_RE = re.compile(r"[一-鿿]")
@@ -358,7 +388,7 @@ def audit_file(path: Path) -> tuple[list[str], list[str]]:
          的伪报（如 T2.3 ARFCN「频点 → ARFCN」链条…协议用 ARFCN（绝对射频
          信道号，Absolute Radio Frequency Channel Number）…」）。"""
     resolved = path.resolve()
-    if resolved in EXEMPT_GLOSSARY_FILES:
+    if resolved in EXEMPT_GLOSSARY_FILES or is_exempt_non_lesson(path):
         return [], []
     raw = path.read_text(encoding="utf-8")
     text, line_map = strip_protected_lines(raw)

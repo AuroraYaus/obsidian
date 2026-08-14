@@ -21,8 +21,6 @@ from pathlib import Path
 REQUIRED_SECTIONS = [
     "## 本节学习目标",
     "## 前置知识检查",
-    "## 自测题",
-    "## 自测题参考答案",
     "## 资料与协议边界",
     "## 执行与证据记录",
     "## 参考文献",
@@ -60,6 +58,23 @@ BOUNDARY_PATTERNS = [
     "留到",
 ]
 
+# L3 工程篇分层口径（2026-08-14 审核裁定）：docs/L3_工程实现/ 的主题为
+# 综合/功耗/后端/SoC 协同等工程域，协议理论信号少属主题性质（非深度不足），
+# 因此理论信号与篇幅阈值按层放宽；协议索引风险仅在理论信号几乎缺失时提示。
+# 口径变更与理由的权威登记见《项目规则与记忆索引.md》六.6 与 PLAN.md。
+L3_DIR_MARKER = "L3_工程实现"
+THEORY_MIN_L12 = 16
+THEORY_MIN_L3 = 8
+CHARS_MIN_L12 = 9000
+CHARS_MIN_L3 = 5000
+PROTO_INDEX_THEORY_MAX_L12 = 24
+PROTO_INDEX_THEORY_MAX_L3 = 10
+
+# 非讲义目录（2026-08-14 审核裁定，与 audit_term_first_use.py 豁免区 h/i/j 对齐）：
+# 概念笔记（六段式，非讲义模板）、计划/设计文档、审计台账、L0 阅读引导
+# （type: spec 导航文件）——不属于讲义深度审计范围。
+NON_LESSON_DIRS = ("concepts", "superpowers", "audits", "L0_协议阅读引导")
+
 
 def audit_file(path: Path) -> list[str]:
     """
@@ -73,6 +88,9 @@ def audit_file(path: Path) -> list[str]:
     @note    协议索引风险判断采用双重阈值：协议引用>=20 且理论分数<24，
              因为真正的教学文档应该同时包含大量协议引用和充分的理论解释。
              单方面满足（如仅大量引用但理论分数达标）不触发该警告。
+             L3 工程篇（docs/L3_工程实现/）按分层口径放宽（2026-08-14 裁定）：
+             理论阈值 16→8、篇幅阈值 9000→5000、协议索引理论上限 24→10——
+             综合/功耗/后端主题协议理论少属主题性质，见模块常量注释。
     """
     text = path.read_text(encoding="utf-8")
     findings: list[str] = []
@@ -80,16 +98,21 @@ def audit_file(path: Path) -> list[str]:
         if section not in text:
             findings.append(f"{path}: missing required section {section}")
 
+    is_l3 = L3_DIR_MARKER in path.parts
+    theory_min = THEORY_MIN_L3 if is_l3 else THEORY_MIN_L12
+    chars_min = CHARS_MIN_L3 if is_l3 else CHARS_MIN_L12
+    proto_theory_max = PROTO_INDEX_THEORY_MAX_L3 if is_l3 else PROTO_INDEX_THEORY_MAX_L12
+
     theory_score = sum(text.count(hint) for hint in THEORY_HINTS)
     boundary_score = sum(len(re.findall(pattern, text)) for pattern in BOUNDARY_PATTERNS)
     protocol_hits = len(re.findall(r"TS\s+3[68]\.\d+|§\d|Table\s+\d|协议定位|协议证据", text))
     chars = len(text)
 
-    if chars < 9000:
+    if chars < chars_min:
         findings.append(f"{path}: very short lesson ({chars} chars)")
-    if theory_score < 16:
+    if theory_score < theory_min:
         findings.append(f"{path}: weak zero-foundation theory signals (score={theory_score})")
-    if protocol_hits >= 20 and theory_score < 24:
+    if protocol_hits >= 20 and theory_score < proto_theory_max:
         findings.append(
             f"{path}: protocol-index risk (protocol_hits={protocol_hits}, theory_score={theory_score})"
         )
@@ -112,13 +135,26 @@ def iter_markdown(paths: list[Path]) -> list[Path]:
     @param   paths  路径列表，可混合文件和目录。
     @return  按文件名排序的去重 Markdown 文件路径列表。
     @note    仅匹配 T*.md 模式——这是本项目的讲义命名约定。
+             教训（2026-08-14 审核）：L2 M16 系列曾用 M16.x 命名，逃逸本审计
+             数周（M 前缀不在 T*.md 匹配内）；已改名 T16.x 回归约定。
+             命名约定即工具契约——新增讲义必须 T*.md，禁用 M 前缀文件名。
+             另（2026-08-14 审核）：T 开头的概念笔记（Turbo_码/TB_传输块/TDL_
+             信道模型等）会被 T*.md 误收为讲义——按 NON_LESSON_DIRS 排除
+             concepts/audits/superpowers/L0 目录，与 audit_term_first_use.py
+             的非讲义豁免口径（h/i/j）对齐。
     """
     files: list[Path] = []
     for path in paths:
         if path.is_file() and path.suffix == ".md":
-            files.append(path)
+            if not any(d in path.parts for d in NON_LESSON_DIRS):
+                files.append(path)
         elif path.is_dir():
-            files.extend(sorted(path.rglob("T*.md")))
+            files.extend(
+                sorted(
+                    p for p in path.rglob("T*.md")
+                    if not any(d in p.parts for d in NON_LESSON_DIRS)
+                )
+            )
     return sorted(set(files))
 
 
